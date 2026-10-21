@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/style_lab.py"
 type: "rationale"
-community: "Invention Slots"
+community: "Invention Slots (2)"
 location: "L117"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Invention_Slots
+  - community/Invention_Slots_2
 ---
 
 # Rule breaks a compiler can't see in an AI-invented style component (see…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[lint_style_code()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Invention_Slots
+#graphify/rationale #graphify/EXTRACTED #community/Invention_Slots_2

@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "Local AI Jobs & Clips"
+community: "Local AI Jobs & Clips (2)"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Local_AI_Jobs__Clips
+  - community/Local_AI_Jobs__Clips_2
 ---
 
 # hashlib
@@ -19,4 +19,4 @@ tags:
 - [[pixabay_films()]] - `calls` [EXTRACTED]
 - [[pool_folder()]] - `calls` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Local_AI_Jobs__Clips
+#graphify/concept #graphify/EXTRACTED #community/Local_AI_Jobs__Clips_2

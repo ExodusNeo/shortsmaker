@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/review.py"
 type: "rationale"
-community: "AI Calls & Quota Fallback (3)"
-location: "L96"
+community: "Story Sounds & Credits (2)"
+location: "L148"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/AI_Calls__Quota_Fallback_3
+  - community/Story_Sounds__Credits_2
 ---
 
 # The automatic fixes after a render's review (up to AUTO_REPAINT_MAX scenes per…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[apply_review_fixes()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/AI_Calls__Quota_Fallback_3
+#graphify/rationale #graphify/EXTRACTED #community/Story_Sounds__Credits_2

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/config.py"
 type: "code"
-community: "Channel Profiles & CLI"
+community: "Channel Profiles & CLI (2)"
 location: "L72"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Channel_Profiles__CLI
+  - community/Channel_Profiles__CLI_2
 ---
 
 # luminance()
@@ -15,4 +15,4 @@ tags:
 - [[config.py]] - `contains` [EXTRACTED]
 - [[hex_rgb()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Channel_Profiles__CLI
+#graphify/code #graphify/EXTRACTED #community/Channel_Profiles__CLI_2

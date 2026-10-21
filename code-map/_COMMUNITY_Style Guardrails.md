@@ -22,8 +22,8 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 1 edge to [[_COMMUNITY_Picture List Catalog]]
-- 1 edge to [[_COMMUNITY_Channel Profiles & CLI]]
-- 1 edge to [[_COMMUNITY_Style Tests]]
+- 1 edge to [[_COMMUNITY_Full-Scene Rescue & Plan Cleaning]]
+- 1 edge to [[_COMMUNITY_Library Candidate Tests]]
 
 ## Top bridge nodes
 - [[limit_style()]] - degree 4, connects to 2 communities

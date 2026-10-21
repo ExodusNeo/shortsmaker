@@ -1,18 +1,24 @@
 ---
 type: community
-members: 5
+members: 11
 ---
 
 # Scene Cues & Word Timing (2)
 
-**Members:** 5 nodes
+**Members:** 11 nodes
 
 ## Members
-- [[The sound file for a story sound the owner's own file in…]] - rationale - shortsmaker/audio_mix.py
-- [[_tone_wav()]] - code - tests/test_full_scenes.py
-- [[fetch()]] - code - tests/test_full_scenes.py
-- [[story_sound()]] - code - shortsmaker/audio_mix.py
-- [[test_story_sound_library()]] - code - tests/test_full_scenes.py
+- [[Downloads the real photos the picker chose for evidence boards, custom scenes…]] - rationale - shortsmaker/picker.py
+- [[Sound design each timed visual gets a matching sound. Candidates are kept by…]] - rationale - shortsmaker/audio_mix.py
+- [[_board()]] - code - tests/test_full_scenes.py
+- [[full_pictures()]] - code - shortsmaker/picker.py
+- [[pick()]] - code - shortsmaker/audio_mix.py
+- [[sc()]] - code - tests/test_style.py
+- [[sfx_events()]] - code - shortsmaker/audio_mix.py
+- [[test_board_pictures_attached()]] - code - tests/test_full_scenes.py
+- [[test_sfx_full()]] - code - tests/test_full_scenes.py
+- [[test_story_sound_wins_its_moment()]] - code - tests/test_full_scenes.py
+- [[test_style_sounds()]] - code - tests/test_style.py
 
 ## Live Query (requires Dataview plugin)
 
@@ -22,14 +28,18 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 2 edges to [[_COMMUNITY_Channel Profiles & CLI]]
-- 1 edge to [[_COMMUNITY_Local AI Jobs & Clips (2)]]
-- 1 edge to [[_COMMUNITY_Story Sounds & Credits]]
-- 1 edge to [[_COMMUNITY_Entry Point, Logbook & Sounds]]
+- 4 edges to [[_COMMUNITY_AI Calls & Quota Fallback (4)]]
+- 2 edges to [[_COMMUNITY_Channel Profiles & CLI (2)]]
+- 1 edge to [[_COMMUNITY_Local AI Jobs & Clips]]
+- 1 edge to [[_COMMUNITY_Picture List Catalog (3)]]
 - 1 edge to [[_COMMUNITY_Captions & TTS]]
-- 1 edge to [[_COMMUNITY_Footage Downloads & Crops (2)]]
+- 1 edge to [[_COMMUNITY_Channel Profiles & CLI]]
+- 1 edge to [[_COMMUNITY_Scene Cues & Word Timing (3)]]
+- 1 edge to [[_COMMUNITY_Library Candidate Tests]]
 
 ## Top bridge nodes
-- [[story_sound()]] - degree 7, connects to 5 communities
-- [[test_story_sound_library()]] - degree 3, connects to 1 community
-- [[_tone_wav()]] - degree 2, connects to 1 community
+- [[full_pictures()]] - degree 5, connects to 3 communities
+- [[sfx_events()]] - degree 8, connects to 2 communities
+- [[_board()]] - degree 4, connects to 2 communities
+- [[test_board_pictures_attached()]] - degree 3, connects to 1 community
+- [[test_sfx_full()]] - degree 3, connects to 1 community

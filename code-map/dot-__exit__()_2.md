@@ -1,18 +1,18 @@
 ---
 source_file: "tests/test_pictures_first.py"
 type: "code"
-community: "Test Patching Helper"
-location: "L211"
+community: "Pool Gathering"
+location: "L51"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Test_Patching_Helper
+  - community/Pool_Gathering
 ---
 
 # .__exit__()
 
 ## Connections
 - [[owner()]] - `calls` [EXTRACTED]
-- [[planning]] - `method` [EXTRACTED]
+- [[stubbed]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Test_Patching_Helper
+#graphify/code #graphify/EXTRACTED #community/Pool_Gathering

@@ -1,17 +1,21 @@
 ---
 source_file: ""
 type: "code"
-community: "Photo Cleanup"
+community: "Python Frame Renderer"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Photo_Cleanup
+  - community/Python_Frame_Renderer
 ---
 
 # Image
 
 ## Connections
-- [[is_stereo()]] - `references` [EXTRACTED]
-- [[trim_borders()]] - `references` [EXTRACTED]
+- [[dot-at()]] - `references` [EXTRACTED]
+- [[draw_card()]] - `references` [EXTRACTED]
+- [[draw_graphic()]] - `references` [EXTRACTED]
+- [[graphic_overlay()]] - `references` [EXTRACTED]
+- [[person_card()]] - `references` [EXTRACTED]
+- [[shot()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Photo_Cleanup
+#graphify/code #graphify/EXTRACTED #community/Python_Frame_Renderer

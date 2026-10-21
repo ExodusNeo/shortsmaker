@@ -10,8 +10,8 @@ members: 11
 ## Members
 - [[dot-__enter__()_2]] - code - tests/test_pictures_first.py
 - [[dot-__enter__()_3]] - code - tests/test_pictures_first.py
-- [[dot-__exit__()_1]] - code - tests/test_pictures_first.py
-- [[dot-__init__()_3]] - code - tests/test_pictures_first.py
+- [[dot-__exit__()_3]] - code - tests/test_pictures_first.py
+- [[dot-__init__()_4]] - code - tests/test_pictures_first.py
 - [[Canned replies for every planning step of write_scripts().]] - rationale - tests/test_pictures_first.py
 - [[ask_ai replaced by `reply` (a dict, None, or a function of the prompt);…]] - rationale - tests/test_pictures_first.py
 - [[fake_ai]] - code - tests/test_pictures_first.py
@@ -28,12 +28,11 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 6 edges to [[_COMMUNITY_Picture List Catalog (2)]]
-- 4 edges to [[_COMMUNITY_Picture List Catalog (3)]]
+- 8 edges to [[_COMMUNITY_Picture List Catalog (2)]]
 - 2 edges to [[_COMMUNITY_Picture List Catalog]]
-- 1 edge to [[_COMMUNITY_Pool Gathering]]
+- 2 edges to [[_COMMUNITY_Pool Gathering]]
+- 2 edges to [[_COMMUNITY_Picture List Catalog (2) (2)]]
 - 1 edge to [[_COMMUNITY_Entry Point, Logbook & Sounds]]
-- 1 edge to [[_COMMUNITY_Test Patching Helper]]
 
 ## Top bridge nodes
 - [[fake_ai]] - degree 14, connects to 3 communities

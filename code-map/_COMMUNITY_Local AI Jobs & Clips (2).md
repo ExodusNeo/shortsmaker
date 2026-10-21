@@ -1,29 +1,35 @@
 ---
 type: community
-members: 16
+members: 22
 ---
 
 # Local AI Jobs & Clips (2)
 
-**Members:** 16 nodes
+**Members:** 22 nodes
 
 ## Members
-- [[Fill a 916 frame with the picture (centre crop), for the AI video model's…]] - rationale - shortsmaker/gpu.py
-- [[Final H.264 encode NVENC on the GPU when available (frees the CPU), else x264.]] - rationale - shortsmaker/media_tools.py
-- [[Image-to-video prompt for an animate scene (LTX on this PC, or Veo in Flow by…]] - rationale - shortsmaker/gpu.py
-- [[Paint the AI images with Gemini (agy's built-in image generator, ~2 min each, 3…]] - rationale - shortsmaker/gpu.py
-- [[Path_7]] - code
-- [[Pause the batch write each animate scene's start picture + Veo prompt to…]] - rationale - shortsmaker/gpu.py
-- [[Real motion for every scene with a picture scenes Claude matched to archival…]] - rationale - shortsmaker/gpu.py
-- [[cover_crop()]] - code - shortsmaker/gpu.py
-- [[ffmpeg()]] - code - shortsmaker/media_tools.py
-- [[gemini_images()]] - code - shortsmaker/gpu.py
-- [[local_clips()]] - code - shortsmaker/gpu.py
-- [[motion_prompt()]] - code - shortsmaker/gpu.py
-- [[one()_1]] - code - shortsmaker/gpu.py
-- [[test_encoder_cache_lives_with_video_encoder()]] - code - tests/test_package.py
-- [[veo_handoff()]] - code - shortsmaker/gpu.py
-- [[video_encoder()]] - code - shortsmaker/media_tools.py
+- [[Comfy-Org's official MOSS-Image text-to-image template (25 steps, CFG 2.5,…]] - rationale - shortsmaker/gpu.py
+- [[CompletedProcess]] - code
+- [[Download ~14s of film around the chosen moment (cropped with FILM_CROP to…]] - rationale - shortsmaker/footage.py
+- [[Match FILM_CROP on downloaded thumbnail JPEGs (cut top 6%, bottom 20%, and 4%…]] - rationale - shortsmaker/footage.py
+- [[Paint on this PC with MOSS-Image in ComfyUI (owner's pick 2026-10-20 over SDXL-…]] - rationale - shortsmaker/gpu.py
+- [[Path_3]] - code
+- [[Pixabay stock video free to use in videos, no credit needed (Pixabay Content…]] - rationale - shortsmaker/footage.py
+- [[Real film clips (Commons, Internet Archive, NASA, Pixabay) and their ffmpeg…]] - rationale - shortsmaker/footage.py
+- [[comfy_call()]] - code - shortsmaker/gpu.py
+- [[crop_film_bytes()]] - code - shortsmaker/footage.py
+- [[ffmpeg reading a film over HTTP. Wikimedia gets the contact User-Agent, the…]] - rationale - shortsmaker/image_sources.py
+- [[film_ffmpeg()]] - code - shortsmaker/image_sources.py
+- [[film_frames()]] - code - shortsmaker/footage.py
+- [[film_piece()]] - code - shortsmaker/footage.py
+- [[footage.py]] - code - shortsmaker/footage.py
+- [[hashlib]] - concept
+- [[io]] - concept
+- [[moss_graph()]] - code - shortsmaker/gpu.py
+- [[moss_images()]] - code - shortsmaker/gpu.py
+- [[n moments spread through a film, for the contact sheets (with FILM_CROP applied…]] - rationale - shortsmaker/footage.py
+- [[pixabay_films()]] - code - shortsmaker/footage.py
+- [[time]] - concept
 
 ## Live Query (requires Dataview plugin)
 
@@ -33,20 +39,29 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
+- 15 edges to [[_COMMUNITY_Footage Downloads & Crops (2)]]
+- 10 edges to [[_COMMUNITY_Channel Profiles & CLI]]
 - 9 edges to [[_COMMUNITY_Local AI Jobs & Clips]]
-- 6 edges to [[_COMMUNITY_Footage Downloads & Crops (2)]]
-- 4 edges to [[_COMMUNITY_Story Sounds & Credits]]
-- 1 edge to [[_COMMUNITY_AI Calls & Quota Fallback]]
-- 1 edge to [[_COMMUNITY_Gemini Image Painting]]
+- 6 edges to [[_COMMUNITY_Footage Downloads & Crops]]
+- 6 edges to [[_COMMUNITY_Entry Point, Logbook & Sounds]]
+- 6 edges to [[_COMMUNITY_Channel Profiles & CLI (2)]]
+- 3 edges to [[_COMMUNITY_Captions & TTS]]
+- 2 edges to [[_COMMUNITY_Voice Worker (qwen_voice)]]
+- 2 edges to [[_COMMUNITY_Full-Scene Rescue & Plan Cleaning]]
+- 2 edges to [[_COMMUNITY_Picture List Catalog (2)]]
 - 1 edge to [[_COMMUNITY_Python Frame Renderer]]
-- 1 edge to [[_COMMUNITY_Channel Profiles & CLI]]
-- 1 edge to [[_COMMUNITY_Scene Cues & Word Timing (2)]]
 - 1 edge to [[_COMMUNITY_Story Sounds & Credits (2)]]
-- 1 edge to [[_COMMUNITY_Motion Previews & Render Tests]]
+- 1 edge to [[_COMMUNITY_Picture List Catalog (3)]]
+- 1 edge to [[_COMMUNITY_AI Calls & Quota Fallback]]
+- 1 edge to [[_COMMUNITY_Library Candidate Tests]]
+- 1 edge to [[_COMMUNITY_Picture List Catalog (2) (2)]]
+- 1 edge to [[_COMMUNITY_Photo Cleanup]]
+- 1 edge to [[_COMMUNITY_GPU Worker (gen.py)]]
+- 1 edge to [[_COMMUNITY_Invention Slots]]
 
 ## Top bridge nodes
-- [[ffmpeg()]] - degree 9, connects to 5 communities
-- [[local_clips()]] - degree 12, connects to 4 communities
-- [[gemini_images()]] - degree 6, connects to 3 communities
-- [[veo_handoff()]] - degree 9, connects to 2 communities
-- [[video_encoder()]] - degree 7, connects to 2 communities
+- [[time]] - degree 22, connects to 12 communities
+- [[io]] - degree 14, connects to 10 communities
+- [[footage.py]] - degree 28, connects to 9 communities
+- [[moss_images()]] - degree 12, connects to 3 communities
+- [[hashlib]] - degree 7, connects to 3 communities

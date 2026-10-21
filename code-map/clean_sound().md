@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/audio_mix.py"
 type: "code"
-community: "Full-Scene Rescue & Plan Cleaning"
+community: "Full-Scene Rescue & Plan Cleaning (2)"
 location: "L93"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Full-Scene_Rescue__Plan_Cleaning
+  - community/Full-Scene_Rescue__Plan_Cleaning_2
 ---
 
 # clean_sound()
@@ -20,4 +20,4 @@ tags:
 - [[words_of()]] - `calls` [EXTRACTED]
 - [[write_scripts()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Full-Scene_Rescue__Plan_Cleaning
+#graphify/code #graphify/EXTRACTED #community/Full-Scene_Rescue__Plan_Cleaning_2

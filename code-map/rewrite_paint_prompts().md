@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/review.py"
 type: "code"
-community: "AI Calls & Quota Fallback (4)"
-location: "L155"
+community: "Story Sounds & Credits (2)"
+location: "L215"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AI_Calls__Quota_Fallback_4
+  - community/Story_Sounds__Credits_2
 ---
 
 # rewrite_paint_prompts()
@@ -20,4 +20,4 @@ tags:
 - [[review.py]] - `contains` [EXTRACTED]
 - [[test_rewrite_paint_prompts()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AI_Calls__Quota_Fallback_4
+#graphify/code #graphify/EXTRACTED #community/Story_Sounds__Credits_2

@@ -2,7 +2,7 @@
 source_file: "shortsmaker/review.py"
 type: "code"
 community: "Story Sounds & Credits (2)"
-location: "L122"
+location: "L182"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[One mid-scene frame per scene from the finished video, labeled with its…]] - `rationale_for` [EXTRACTED]
-- [[Path_14]] - `references` [EXTRACTED]
+- [[Path_2]] - `references` [EXTRACTED]
 - [[clock()]] - `calls` [EXTRACTED]
 - [[io]] - `calls` [EXTRACTED]
 - [[render()_2]] - `calls` [EXTRACTED]

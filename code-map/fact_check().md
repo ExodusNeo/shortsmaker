@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/writing.py"
 type: "code"
-community: "Commons & Archive Sources"
-location: "L523"
+community: "AI Calls & Quota Fallback"
+location: "L527"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Commons__Archive_Sources
+  - community/AI_Calls__Quota_Fallback
 ---
 
 # fact_check()
@@ -21,4 +21,4 @@ tags:
 - [[write_scripts()]] - `calls` [EXTRACTED]
 - [[writing.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Commons__Archive_Sources
+#graphify/code #graphify/EXTRACTED #community/AI_Calls__Quota_Fallback

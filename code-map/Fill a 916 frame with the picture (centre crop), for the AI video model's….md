@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/gpu.py"
 type: "rationale"
-community: "Local AI Jobs & Clips (2)"
+community: "Footage Downloads & Crops (2)"
 location: "L271"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Local_AI_Jobs__Clips_2
+  - community/Footage_Downloads__Crops_2
 ---
 
 # Fill a 9:16 frame with the picture (centre crop), for the AI video model's…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[cover_crop()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Local_AI_Jobs__Clips_2
+#graphify/rationale #graphify/EXTRACTED #community/Footage_Downloads__Crops_2

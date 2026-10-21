@@ -1,45 +1,48 @@
 ---
 type: community
-members: 32
+members: 35
 ---
 
 # Footage Downloads & Crops (2)
 
-**Members:** 32 nodes
+**Members:** 35 nodes
 
 ## Members
-- [[CompletedProcess]] - code
-- [[Download ~14s of film around the chosen moment (cropped with FILM_CROP to…]] - rationale - shortsmaker/footage.py
-- [[Mike's Thinking Music (-22 LUFS) vanished under the voice with the old fixed…]] - rationale - tests/test_full_scenes.py
-- [[One CC0 (no credit, any use) sound for `name` from Freesound's official API…]] - rationale - shortsmaker/audio_mix.py
-- [[Path]] - code
-- [[Path_1]] - code
+- [[Fill a 916 frame with the picture (centre crop), for the AI video model's…]] - rationale - shortsmaker/gpu.py
+- [[Final H.264 encode NVENC on the GPU when available (frees the CPU), else x264.]] - rationale - shortsmaker/media_tools.py
+- [[Free VoiceStudio's GPU memory the 8 GB card is needed next for SDXL, LTX and…]] - rationale - shortsmaker/gpu.py
+- [[Image-to-video prompt for an animate scene (LTX on this PC, or Veo in Flow by…]] - rationale - shortsmaker/gpu.py
+- [[Local AI on the owner's GPU and helpers ComfyUIMOSS, VoiceStudio, Gemini…]] - rationale - shortsmaker/gpu.py
+- [[Path_15]] - code
+- [[Path_16]] - code
+- [[Pause the batch write each animate scene's start picture + Veo prompt to…]] - rationale - shortsmaker/gpu.py
+- [[Real motion for every scene with a picture scenes Claude matched to archival…]] - rationale - shortsmaker/gpu.py
 - [[Render one full-screen motion graphic test scene through the real Short…]] - rationale - tests/render_full.py
+- [[Run a batch on this PC's GPU through a local_ai worker (gen.py, or…]] - rationale - shortsmaker/gpu.py
 - [[Small shared helpers downloads, ffmpeg, video encoder choice, durations, JSON…]] - rationale - shortsmaker/media_tools.py
 - [[Start and end of the camera shot containing time `at` (newsreels cut to title…]] - rationale - shortsmaker/footage.py
-- [[Voice, captions, sound effects, story sounds and music levels.]] - rationale - shortsmaker/audio_mix.py
-- [[Volume factor that brings this track's loudness (first 60 s) to MUSIC_LUFS;…]] - rationale - shortsmaker/audio_mix.py
-- [[White camera-flash curve snaps up over the 2 frames before the cut, then…]] - rationale - shortsmaker/frame_render.py
-- [[Write via a temp file, so an interrupted run never leaves a half-written file…]] - rationale - shortsmaker/media_tools.py
-- [[audio_mix.py]] - code - shortsmaker/audio_mix.py
+- [[Voice every scene on the GPU CosyVoice (aiden, documentary) for the whole…]] - rationale - shortsmaker/gpu.py
+- [[VoiceStudio's backend answers, starting the app (and waiting up to 2 min) if it…]] - rationale - shortsmaker/gpu.py
+- [[cover_crop()]] - code - shortsmaker/gpu.py
 - [[duration()]] - code - shortsmaker/media_tools.py
-- [[ffmpeg reading a film over HTTP. Wikimedia gets the contact User-Agent, the…]] - rationale - shortsmaker/image_sources.py
-- [[film_ffmpeg()]] - code - shortsmaker/image_sources.py
-- [[film_piece()]] - code - shortsmaker/footage.py
-- [[flash_alpha()]] - code - shortsmaker/frame_render.py
-- [[freesound_fetch()]] - code - shortsmaker/audio_mix.py
-- [[main()]] - code - tests/render_full.py
-- [[math]] - concept
+- [[ffmpeg()]] - code - shortsmaker/media_tools.py
+- [[gpu.py]] - code - shortsmaker/gpu.py
+- [[local_clips()]] - code - shortsmaker/gpu.py
+- [[local_job()]] - code - shortsmaker/gpu.py
+- [[local_voice()]] - code - shortsmaker/gpu.py
+- [[main()_3]] - code - tests/render_full.py
 - [[media_tools.py]] - code - shortsmaker/media_tools.py
-- [[music_gain()]] - code - shortsmaker/audio_mix.py
+- [[motion_prompt()]] - code - shortsmaker/gpu.py
 - [[props_for()]] - code - tests/render_full.py
 - [[render_full.py]] - code - tests/render_full.py
 - [[shot_span()]] - code - shortsmaker/footage.py
 - [[subprocess]] - concept
-- [[test_music_gain_evens_out_tracks()]] - code - tests/test_full_scenes.py
+- [[up()]] - code - shortsmaker/gpu.py
 - [[urllib_request]] - concept
-- [[wave]] - concept
-- [[write_json()]] - code - shortsmaker/media_tools.py
+- [[veo_handoff()]] - code - shortsmaker/gpu.py
+- [[video_encoder()]] - code - shortsmaker/media_tools.py
+- [[voicestudio_unload()]] - code - shortsmaker/gpu.py
+- [[voicestudio_up()]] - code - shortsmaker/gpu.py
 
 ## Live Query (requires Dataview plugin)
 
@@ -49,31 +52,27 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 28 edges to [[_COMMUNITY_Channel Profiles & CLI]]
-- 24 edges to [[_COMMUNITY_Local AI Jobs & Clips]]
-- 9 edges to [[_COMMUNITY_Captions & TTS]]
-- 8 edges to [[_COMMUNITY_Entry Point, Logbook & Sounds]]
-- 6 edges to [[_COMMUNITY_Local AI Jobs & Clips (2)]]
-- 4 edges to [[_COMMUNITY_AI Calls & Quota Fallback]]
-- 3 edges to [[_COMMUNITY_Story Sounds & Credits]]
-- 3 edges to [[_COMMUNITY_Story Sounds & Credits (2)]]
-- 3 edges to [[_COMMUNITY_Motion Previews & Render Tests]]
-- 2 edges to [[_COMMUNITY_Full-Scene Rescue & Plan Cleaning]]
-- 2 edges to [[_COMMUNITY_Python Frame Renderer]]
-- 2 edges to [[_COMMUNITY_Voice Worker (qwen_voice)]]
-- 2 edges to [[_COMMUNITY_Story Sounds & Credits (3)]]
-- 1 edge to [[_COMMUNITY_Picture List Catalog (3)]]
+- 22 edges to [[_COMMUNITY_Channel Profiles & CLI (2)]]
+- 19 edges to [[_COMMUNITY_Channel Profiles & CLI]]
+- 15 edges to [[_COMMUNITY_Local AI Jobs & Clips (2)]]
+- 9 edges to [[_COMMUNITY_Entry Point, Logbook & Sounds]]
+- 7 edges to [[_COMMUNITY_AI Calls & Quota Fallback]]
+- 6 edges to [[_COMMUNITY_Captions & TTS]]
+- 5 edges to [[_COMMUNITY_Local AI Jobs & Clips]]
+- 4 edges to [[_COMMUNITY_Story Sounds & Credits (2)]]
+- 3 edges to [[_COMMUNITY_Picture List Catalog (2) (2)]]
+- 2 edges to [[_COMMUNITY_Python Frame Renderer (2)]]
+- 2 edges to [[_COMMUNITY_Footage Downloads & Crops]]
+- 2 edges to [[_COMMUNITY_AI Calls & Quota Fallback (4)]]
 - 1 edge to [[_COMMUNITY_Skins & Remotion Render]]
-- 1 edge to [[_COMMUNITY_Picture List Catalog (2)]]
-- 1 edge to [[_COMMUNITY_Picture List Catalog (4)]]
-- 1 edge to [[_COMMUNITY_Scene Cues & Word Timing (2)]]
-- 1 edge to [[_COMMUNITY_Scene Cues & Word Timing]]
-- 1 edge to [[_COMMUNITY_Style Tests]]
+- 1 edge to [[_COMMUNITY_Scene Cues & Word Timing (3)_1]]
+- 1 edge to [[_COMMUNITY_Voice Worker (qwen_voice)]]
+- 1 edge to [[_COMMUNITY_Entry Point, Logbook & Sounds (2)]]
 - 1 edge to [[_COMMUNITY_Split Script (tools)]]
 
 ## Top bridge nodes
-- [[audio_mix.py]] - degree 37, connects to 10 communities
-- [[subprocess]] - degree 34, connects to 10 communities
-- [[media_tools.py]] - degree 24, connects to 7 communities
+- [[subprocess]] - degree 34, connects to 12 communities
+- [[media_tools.py]] - degree 25, connects to 11 communities
+- [[gpu.py]] - degree 37, connects to 8 communities
+- [[ffmpeg()]] - degree 10, connects to 4 communities
 - [[duration()]] - degree 8, connects to 4 communities
-- [[render_full.py]] - degree 8, connects to 3 communities

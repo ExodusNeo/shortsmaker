@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/media_tools.py"
 type: "rationale"
-community: "Local AI Jobs & Clips (2)"
+community: "Footage Downloads & Crops (2)"
 location: "L31"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Local_AI_Jobs__Clips_2
+  - community/Footage_Downloads__Crops_2
 ---
 
 # Final H.264 encode: NVENC on the GPU when available (frees the CPU), else x264.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[video_encoder()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Local_AI_Jobs__Clips_2
+#graphify/rationale #graphify/EXTRACTED #community/Footage_Downloads__Crops_2

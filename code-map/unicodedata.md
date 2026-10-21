@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "Voice Worker (qwen_voice)"
+community: "Full-Scene Rescue & Plan Cleaning"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Voice_Worker_qwen_voice
+  - community/Full-Scene_Rescue__Plan_Cleaning
 ---
 
 # unicodedata
@@ -16,4 +16,4 @@ tags:
 - [[qwen_voice.py]] - `imports` [EXTRACTED]
 - [[words_of()]] - `calls` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Voice_Worker_qwen_voice
+#graphify/concept #graphify/EXTRACTED #community/Full-Scene_Rescue__Plan_Cleaning

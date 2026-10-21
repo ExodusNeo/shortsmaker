@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/style_lab.py"
 type: "rationale"
-community: "Style Lab & Edit Plan Text"
+community: "Look & Transition Cleaning"
 location: "L15"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Style_Lab__Edit_Plan_Text
+  - community/Look__Transition_Cleaning
 ---
 
 # The style library (remotion/src/style/library.json): [{name, kind, description,…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[style_library()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Style_Lab__Edit_Plan_Text
+#graphify/rationale #graphify/EXTRACTED #community/Look__Transition_Cleaning

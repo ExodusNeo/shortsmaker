@@ -1,53 +1,41 @@
 ---
 type: community
-members: 40
+members: 28
 ---
 
 # Local AI Jobs & Clips
 
-**Members:** 40 nodes
+**Members:** 28 nodes
 
 ## Members
-- [[Comfy-Org's official MOSS-Image text-to-image template (25 steps, CFG 2.5,…]] - rationale - shortsmaker/gpu.py
-- [[Free VoiceStudio's GPU memory the 8 GB card is needed next for SDXL, LTX and…]] - rationale - shortsmaker/gpu.py
-- [[Local AI on the owner's GPU and helpers ComfyUIMOSS, VoiceStudio, Gemini…]] - rationale - shortsmaker/gpu.py
-- [[Match FILM_CROP on downloaded thumbnail JPEGs (cut top 6%, bottom 20%, and 4%…]] - rationale - shortsmaker/footage.py
+- [[GET from Openverse, spaced to its anonymous limit (20 requests a minute). None…]] - rationale - shortsmaker/image_sources.py
+- [[GET from Wikimedia, spaced `gap` seconds apart, with a short backoff on rate…]] - rationale - shortsmaker/image_sources.py
+- [[Images from museums, archives and photographers through Openverse (no key),…]] - rationale - shortsmaker/image_sources.py
+- [[Keep titles that share at least one meaningful word (including 2-3 letter terms…]] - rationale - shortsmaker/image_sources.py
+- [[NASA photos (public domain), when the story touches space, flight or science.]] - rationale - shortsmaker/image_sources.py
 - [[NASA videos (public domain), as their mediumsmall MP4 renditions.]] - rationale - shortsmaker/footage.py
-- [[Paint on this PC with MOSS-Image in ComfyUI (owner's pick 2026-10-20 over SDXL-…]] - rationale - shortsmaker/gpu.py
 - [[Pictures from Wikimedia Commons, Openverse, NASA and the Internet Archive, with…]] - rationale - shortsmaker/image_sources.py
-- [[Pixabay stock video free to use in videos, no credit needed (Pixabay Content…]] - rationale - shortsmaker/footage.py
-- [[Real film clips (Commons, Internet Archive, NASA, Pixabay) and their ffmpeg…]] - rationale - shortsmaker/footage.py
-- [[Run a batch on this PC's GPU through a local_ai worker (gen.py, or…]] - rationale - shortsmaker/gpu.py
+- [[Still images, magazinemanual scans, art and archival photos from the Internet…]] - rationale - shortsmaker/image_sources.py
+- [[The on-screen credit tag kind, a short name and the licence (Photo E. Mariz…]] - rationale - shortsmaker/image_sources.py
 - [[Videos across the entire Internet Archive (historical film, retro gaming,…]] - rationale - shortsmaker/footage.py
-- [[Voice every scene on the GPU CosyVoice (aiden, documentary) for the whole…]] - rationale - shortsmaker/gpu.py
-- [[VoiceStudio's backend answers, starting the app (and waiting up to 2 min) if it…]] - rationale - shortsmaker/gpu.py
+- [[Videos on Wikimedia Commons, as their 480p-720p WebM transcodes (seekable).]] - rationale - shortsmaker/footage.py
+- [[Wikimedia files via wm_get() (contact User-Agent, spacing, cache), Openverse…]] - rationale - shortsmaker/image_sources.py
 - [[archive_films()]] - code - shortsmaker/footage.py
-- [[comfy_call()]] - code - shortsmaker/gpu.py
-- [[concurrent_futures]] - concept
-- [[crop_film_bytes()]] - code - shortsmaker/footage.py
-- [[fetch()_1]] - code - shortsmaker/media_tools.py
-- [[film_frames()]] - code - shortsmaker/footage.py
-- [[footage.py]] - code - shortsmaker/footage.py
-- [[gpu.py]] - code - shortsmaker/gpu.py
-- [[hashlib]] - concept
+- [[archive_images()]] - code - shortsmaker/image_sources.py
+- [[commons_films()]] - code - shortsmaker/footage.py
+- [[fetch()]] - code - shortsmaker/media_tools.py
+- [[get_image()]] - code - shortsmaker/image_sources.py
 - [[image_sources.py]] - code - shortsmaker/image_sources.py
-- [[io]] - concept
-- [[json]] - concept
-- [[local_job()]] - code - shortsmaker/gpu.py
-- [[local_voice()]] - code - shortsmaker/gpu.py
-- [[moss_graph()]] - code - shortsmaker/gpu.py
-- [[moss_images()]] - code - shortsmaker/gpu.py
-- [[n moments spread through a film, for the contact sheets (with FILM_CROP applied…]] - rationale - shortsmaker/footage.py
 - [[nasa_films()]] - code - shortsmaker/footage.py
+- [[nasa_images()]] - code - shortsmaker/image_sources.py
 - [[nasa_search()]] - code - shortsmaker/image_sources.py
-- [[pixabay_films()]] - code - shortsmaker/footage.py
+- [[on_topic()]] - code - shortsmaker/image_sources.py
+- [[openverse_images()]] - code - shortsmaker/image_sources.py
+- [[ov_get()]] - code - shortsmaker/image_sources.py
+- [[short_credit()]] - code - shortsmaker/image_sources.py
 - [[threading]] - concept
-- [[time]] - concept
-- [[up()]] - code - shortsmaker/gpu.py
 - [[urllib_error]] - concept
-- [[urllib_parse]] - concept
-- [[voicestudio_unload()]] - code - shortsmaker/gpu.py
-- [[voicestudio_up()]] - code - shortsmaker/gpu.py
+- [[wm_get()]] - code - shortsmaker/image_sources.py
 
 ## Live Query (requires Dataview plugin)
 
@@ -57,37 +45,26 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 52 edges to [[_COMMUNITY_Channel Profiles & CLI]]
-- 24 edges to [[_COMMUNITY_Footage Downloads & Crops (2)]]
-- 18 edges to [[_COMMUNITY_Entry Point, Logbook & Sounds]]
-- 17 edges to [[_COMMUNITY_Commons & Archive Sources]]
 - 9 edges to [[_COMMUNITY_Local AI Jobs & Clips (2)]]
-- 8 edges to [[_COMMUNITY_Full-Scene Rescue & Plan Cleaning]]
-- 6 edges to [[_COMMUNITY_Story Sounds & Credits]]
-- 5 edges to [[_COMMUNITY_Picture List Catalog (3)]]
-- 4 edges to [[_COMMUNITY_AI Calls & Quota Fallback]]
-- 4 edges to [[_COMMUNITY_Library Candidate Tests]]
-- 4 edges to [[_COMMUNITY_Voice Worker (qwen_voice)]]
-- 3 edges to [[_COMMUNITY_Picture List Catalog (4)]]
-- 2 edges to [[_COMMUNITY_Picture List Catalog]]
-- 2 edges to [[_COMMUNITY_Invention Slots]]
-- 2 edges to [[_COMMUNITY_Style Lab & Edit Plan Text]]
-- 2 edges to [[_COMMUNITY_Gemini Image Painting]]
-- 2 edges to [[_COMMUNITY_Python Frame Renderer]]
-- 2 edges to [[_COMMUNITY_GPU Worker (gen.py)]]
-- 1 edge to [[_COMMUNITY_Picture List Catalog (2)]]
-- 1 edge to [[_COMMUNITY_Captions & TTS]]
+- 7 edges to [[_COMMUNITY_Entry Point, Logbook & Sounds]]
+- 7 edges to [[_COMMUNITY_Commons & Archive Sources]]
+- 5 edges to [[_COMMUNITY_Footage Downloads & Crops (2)]]
+- 5 edges to [[_COMMUNITY_Channel Profiles & CLI]]
+- 4 edges to [[_COMMUNITY_Full-Scene Rescue & Plan Cleaning]]
+- 3 edges to [[_COMMUNITY_Pool Gathering]]
+- 3 edges to [[_COMMUNITY_Channel Profiles & CLI (2)]]
+- 1 edge to [[_COMMUNITY_Picture List Catalog (3)]]
+- 1 edge to [[_COMMUNITY_Scene Cues & Word Timing (2)]]
 - 1 edge to [[_COMMUNITY_Story Sounds & Credits (2)]]
-- 1 edge to [[_COMMUNITY_AI Calls & Quota Fallback (3)]]
-- 1 edge to [[_COMMUNITY_Photo Cleanup]]
-- 1 edge to [[_COMMUNITY_AI Calls & Quota Fallback (4)]]
+- 1 edge to [[_COMMUNITY_Python Frame Renderer (2)]]
+- 1 edge to [[_COMMUNITY_Captions & TTS]]
 - 1 edge to [[_COMMUNITY_Footage Downloads & Crops]]
-- 1 edge to [[_COMMUNITY_Scene Cues & Word Timing (3)]]
-- 1 edge to [[_COMMUNITY_Style Tests]]
+- 1 edge to [[_COMMUNITY_AI Calls & Quota Fallback (4)]]
+- 1 edge to [[_COMMUNITY_Picture List Catalog (2)]]
 
 ## Top bridge nodes
-- [[json]] - degree 62, connects to 19 communities
-- [[image_sources.py]] - degree 38, connects to 8 communities
-- [[time]] - degree 22, connects to 8 communities
-- [[io]] - degree 14, connects to 6 communities
-- [[footage.py]] - degree 28, connects to 5 communities
+- [[image_sources.py]] - degree 38, connects to 12 communities
+- [[fetch()]] - degree 11, connects to 3 communities
+- [[archive_films()]] - degree 7, connects to 3 communities
+- [[nasa_films()]] - degree 7, connects to 3 communities
+- [[commons_films()]] - degree 6, connects to 3 communities

@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "Footage Downloads & Crops (2)"
+community: "Captions & TTS"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Footage_Downloads__Crops_2
+  - community/Captions__TTS
 ---
 
 # math
@@ -16,4 +16,4 @@ tags:
 - [[frame_render.py]] - `imports` [EXTRACTED]
 - [[make_sfx()]] - `calls` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Footage_Downloads__Crops_2
+#graphify/concept #graphify/EXTRACTED #community/Captions__TTS

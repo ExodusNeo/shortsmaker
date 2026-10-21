@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/llm.py"
 type: "rationale"
-community: "Commons & Archive Sources"
+community: "AI Calls & Quota Fallback"
 location: "L61"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Commons__Archive_Sources
+  - community/AI_Calls__Quota_Fallback
 ---
 
 # One headless Gemini turn. agy only takes the prompt inline on its command line…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[run_agy()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Commons__Archive_Sources
+#graphify/rationale #graphify/EXTRACTED #community/AI_Calls__Quota_Fallback

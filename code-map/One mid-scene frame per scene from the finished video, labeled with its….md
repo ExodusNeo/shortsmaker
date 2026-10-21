@@ -2,7 +2,7 @@
 source_file: "shortsmaker/review.py"
 type: "rationale"
 community: "Story Sounds & Credits (2)"
-location: "L123"
+location: "L183"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED

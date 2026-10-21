@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "Local AI Jobs & Clips"
+community: "Footage Downloads & Crops"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Local_AI_Jobs__Clips
+  - community/Footage_Downloads__Crops
 ---
 
 # concurrent_futures
@@ -14,4 +14,4 @@ tags:
 - [[gpu.py]] - `imports_from` [EXTRACTED]
 - [[picture_pool.py]] - `imports_from` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Local_AI_Jobs__Clips
+#graphify/concept #graphify/EXTRACTED #community/Footage_Downloads__Crops

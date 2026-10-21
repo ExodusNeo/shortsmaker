@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/image_sources.py"
 type: "code"
-community: "Full-Scene Rescue & Plan Cleaning"
+community: "Local AI Jobs & Clips"
 location: "L233"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Full-Scene_Rescue__Plan_Cleaning
+  - community/Local_AI_Jobs__Clips
 ---
 
 # on_topic()
@@ -21,4 +21,4 @@ tags:
 - [[nasa_images()]] - `calls` [EXTRACTED]
 - [[words_of()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Full-Scene_Rescue__Plan_Cleaning
+#graphify/code #graphify/EXTRACTED #community/Local_AI_Jobs__Clips

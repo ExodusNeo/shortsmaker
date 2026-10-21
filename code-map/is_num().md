@@ -15,6 +15,7 @@ tags:
 - [[clean_full()]] - `calls` [EXTRACTED]
 - [[clean_graphic()]] - `calls` [EXTRACTED]
 - [[coords()]] - `calls` [EXTRACTED]
+- [[first_second_check()]] - `calls` [EXTRACTED]
 - [[number_figures()]] - `calls` [EXTRACTED]
 - [[plan_rules.py]] - `contains` [EXTRACTED]
 - [[review_fixes()]] - `calls` [EXTRACTED]

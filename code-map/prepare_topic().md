@@ -1,19 +1,19 @@
 ---
 source_file: "shortsmaker/picture_pool.py"
 type: "code"
-community: "Picture List Catalog (4)"
+community: "Footage Downloads & Crops"
 location: "L49"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Picture_List_Catalog_4
+  - community/Footage_Downloads__Crops
 ---
 
 # prepare_topic()
 
 ## Connections
 - [[Before writing the topic's Wikipedia research (`_texts`; fact_check() reuses…]] - `rationale_for` [EXTRACTED]
-- [[Path_12]] - `references` [EXTRACTED]
+- [[Path_1]] - `references` [EXTRACTED]
 - [[article_text()]] - `calls` [EXTRACTED]
 - [[catalog_pool()]] - `calls` [EXTRACTED]
 - [[gather_pool()]] - `calls` [EXTRACTED]
@@ -26,4 +26,4 @@ tags:
 - [[usable()]] - `calls` [EXTRACTED]
 - [[write_scripts()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Picture_List_Catalog_4
+#graphify/code #graphify/EXTRACTED #community/Footage_Downloads__Crops

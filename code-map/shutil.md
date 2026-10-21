@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "Entry Point, Logbook & Sounds"
+community: "Channel Profiles & CLI (2)"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Entry_Point_Logbook__Sounds
+  - community/Channel_Profiles__CLI_2
 ---
 
 # shutil
@@ -14,13 +14,14 @@ tags:
 - [[approve_candidate()]] - `calls` [EXTRACTED]
 - [[cli.py]] - `imports` [EXTRACTED]
 - [[code_custom_scenes()]] - `calls` [EXTRACTED]
+- [[first_second_check()]] - `calls` [EXTRACTED]
 - [[full_props()]] - `calls` [EXTRACTED]
 - [[gpu.py]] - `imports` [EXTRACTED]
 - [[invent_component()]] - `calls` [EXTRACTED]
 - [[llm.py]] - `imports` [EXTRACTED]
 - [[logbook.py]] - `imports` [EXTRACTED]
-- [[main()_1]] - `calls` [EXTRACTED]
-- [[main()]] - `calls` [EXTRACTED]
+- [[main()_4]] - `calls` [EXTRACTED]
+- [[main()_3]] - `calls` [EXTRACTED]
 - [[motion.py]] - `imports` [EXTRACTED]
 - [[paint_instead()]] - `calls` [EXTRACTED]
 - [[picture_pool.py]] - `imports` [EXTRACTED]
@@ -47,4 +48,4 @@ tags:
 - [[write_scripts()]] - `calls` [EXTRACTED]
 - [[writing.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Entry_Point_Logbook__Sounds
+#graphify/concept #graphify/EXTRACTED #community/Channel_Profiles__CLI_2

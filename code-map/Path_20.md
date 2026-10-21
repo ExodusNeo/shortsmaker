@@ -1,20 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Python Frame Renderer"
+community: "AI Calls & Quota Fallback (4)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Python_Frame_Renderer
+  - community/AI_Calls__Quota_Fallback_4
 ---
 
 # Path
 
 ## Connections
-- [[dot-__init__()_5]] - `references` [EXTRACTED]
-- [[fills_frame()]] - `references` [EXTRACTED]
-- [[frame_maker()]] - `references` [EXTRACTED]
-- [[graphic_low()]] - `references` [EXTRACTED]
-- [[thumbnail()]] - `references` [EXTRACTED]
+- [[_review_state()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Python_Frame_Renderer
+#graphify/code #graphify/EXTRACTED #community/AI_Calls__Quota_Fallback_4

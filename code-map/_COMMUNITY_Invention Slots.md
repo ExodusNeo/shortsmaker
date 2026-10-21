@@ -1,38 +1,31 @@
 ---
 type: community
-members: 25
+members: 18
 ---
 
 # Invention Slots
 
-**Members:** 25 nodes
+**Members:** 18 nodes
 
 ## Members
 - [[(props, start, end) of a small preview where an invention is used its scene,…]] - rationale - shortsmaker/style_lab.py
+- [[Adds a candidate to the library (component file, library.json entry,…]] - rationale - shortsmaker/style_lab.py
 - [[Codes this Short's inventions (look  transition  overlay) into their slots; a…]] - rationale - shortsmaker/style_lab.py
-- [[Path_3]] - code
-- [[Puts the empty placeholders back into remotionsrcstylegenerated (after a…]] - rationale - shortsmaker/style_lab.py
-- [[Rule breaks a compiler can't see in an AI-invented style component (see…]] - rationale - shortsmaker/style_lab.py
-- [[Runs fn() with ask_ai answering `codes` in turn, tsc_check returning `tsc`, and…]] - rationale - tests/test_style.py
+- [[Path_8]] - code
 - [[The AI invents a new style component (`spec` = {title, brief, fallback}) for…]] - rationale - shortsmaker/style_lab.py
-- [[The empty invention slots (remotionsrcstyleplaceholders.json), by slot name.]] - rationale - shortsmaker/style_lab.py
-- [[attempt()]] - code - shortsmaker/style_lab.py
+- [[The code from an AI reply (code fences removed); None unless it exports the…]] - rationale - shortsmaker/style_lab.py
+- [[The rules every invented component of `kind` follows, with the library's…]] - rationale - shortsmaker/style_lab.py
+- [[The style library invented looks, overlays and scene changes, candidates and…]] - rationale - shortsmaker/style_lab.py
+- [[approve_candidate()]] - code - shortsmaker/style_lab.py
+- [[clean_style_code()]] - code - shortsmaker/style_lab.py
 - [[invent_component()]] - code - shortsmaker/style_lab.py
 - [[invent_styles()]] - code - shortsmaker/style_lab.py
-- [[lint_style_code()]] - code - shortsmaker/style_lab.py
-- [[restore_style_slots()]] - code - shortsmaker/style_lab.py
-- [[run()]] - code - tests/test_style.py
-- [[run()_1]] - code - tests/test_style.py
-- [[style_placeholders()]] - code - shortsmaker/style_lab.py
+- [[library.bat the owner watches each invention the AI made for a Short and adds…]] - rationale - shortsmaker/style_lab.py
+- [[library_menu()]] - code - shortsmaker/style_lab.py
+- [[reject_candidate()]] - code - shortsmaker/style_lab.py
+- [[style_lab.py]] - code - shortsmaker/style_lab.py
 - [[style_preview()]] - code - shortsmaker/style_lab.py
-- [[test_failed_invention_keeps_the_others()]] - code - tests/test_style.py
-- [[test_good_look_check_skips_the_extra_compile()]] - code - tests/test_style.py
-- [[test_invention_compile_failure_uses_fallback()]] - code - tests/test_style.py
-- [[test_invention_lint_failure_uses_fallback()]] - code - tests/test_style.py
-- [[test_invention_passes_into_slot()]] - code - tests/test_style.py
-- [[test_placeholders_match_the_slots()]] - code - tests/test_style.py
-- [[test_slots_restored_after_render()]] - code - tests/test_style.py
-- [[with_fakes()]] - code - tests/test_style.py
+- [[style_rules()]] - code - shortsmaker/style_lab.py
 
 ## Live Query (requires Dataview plugin)
 
@@ -42,20 +35,21 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 8 edges to [[_COMMUNITY_Style Tests]]
-- 6 edges to [[_COMMUNITY_Channel Profiles & CLI]]
+- 13 edges to [[_COMMUNITY_Channel Profiles & CLI]]
+- 9 edges to [[_COMMUNITY_Invention Slots (2)]]
+- 7 edges to [[_COMMUNITY_Library Candidate Tests]]
+- 7 edges to [[_COMMUNITY_Entry Point, Logbook & Sounds]]
+- 6 edges to [[_COMMUNITY_Channel Profiles & CLI (2)]]
+- 5 edges to [[_COMMUNITY_Look & Transition Cleaning]]
+- 4 edges to [[_COMMUNITY_AI Calls & Quota Fallback]]
 - 4 edges to [[_COMMUNITY_Skins & Remotion Render]]
-- 4 edges to [[_COMMUNITY_Library Candidate Tests]]
-- 3 edges to [[_COMMUNITY_Entry Point, Logbook & Sounds]]
-- 2 edges to [[_COMMUNITY_Local AI Jobs & Clips]]
-- 2 edges to [[_COMMUNITY_Test Patching Helper]]
-- 1 edge to [[_COMMUNITY_AI Calls & Quota Fallback]]
-- 1 edge to [[_COMMUNITY_Style Lab & Edit Plan Text]]
-- 1 edge to [[_COMMUNITY_Commons & Archive Sources]]
+- 1 edge to [[_COMMUNITY_Style Tests (2)]]
+- 1 edge to [[_COMMUNITY_Full-Scene Rescue & Plan Cleaning]]
+- 1 edge to [[_COMMUNITY_Local AI Jobs & Clips (2)]]
 
 ## Top bridge nodes
-- [[invent_component()]] - degree 17, connects to 6 communities
-- [[style_placeholders()]] - degree 10, connects to 3 communities
-- [[restore_style_slots()]] - degree 8, connects to 2 communities
-- [[with_fakes()]] - degree 8, connects to 2 communities
-- [[invent_styles()]] - degree 6, connects to 2 communities
+- [[style_lab.py]] - degree 38, connects to 11 communities
+- [[approve_candidate()]] - degree 12, connects to 5 communities
+- [[invent_component()]] - degree 17, connects to 4 communities
+- [[library_menu()]] - degree 8, connects to 2 communities
+- [[reject_candidate()]] - degree 5, connects to 2 communities

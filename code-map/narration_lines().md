@@ -2,7 +2,7 @@
 source_file: "shortsmaker/writing.py"
 type: "code"
 community: "Picture List Catalog"
-location: "L257"
+location: "L261"
 tags:
   - graphify/code
   - graphify/EXTRACTED

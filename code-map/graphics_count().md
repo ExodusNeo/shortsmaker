@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/motion.py"
 type: "code"
-community: "Story Sounds & Credits"
+community: "AI Calls & Quota Fallback"
 location: "L15"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Story_Sounds__Credits
+  - community/AI_Calls__Quota_Fallback
 ---
 
 # graphics_count()
@@ -15,4 +15,4 @@ tags:
 - [[motion.py]] - `contains` [EXTRACTED]
 - [[render()_2]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Story_Sounds__Credits
+#graphify/code #graphify/EXTRACTED #community/AI_Calls__Quota_Fallback

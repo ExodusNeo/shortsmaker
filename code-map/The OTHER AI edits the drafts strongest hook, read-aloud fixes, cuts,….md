@@ -2,7 +2,7 @@
 source_file: "shortsmaker/writing.py"
 type: "rationale"
 community: "Picture List Catalog"
-location: "L264"
+location: "L268"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED

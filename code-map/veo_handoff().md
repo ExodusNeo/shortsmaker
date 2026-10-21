@@ -1,18 +1,18 @@
 ---
 source_file: "shortsmaker/gpu.py"
 type: "code"
-community: "Local AI Jobs & Clips (2)"
+community: "Footage Downloads & Crops (2)"
 location: "L288"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Local_AI_Jobs__Clips_2
+  - community/Footage_Downloads__Crops_2
 ---
 
 # veo_handoff()
 
 ## Connections
-- [[Path_7]] - `references` [EXTRACTED]
+- [[Path_15]] - `references` [EXTRACTED]
 - [[Pause the batch write each animate scene's start picture + Veo prompt to…]] - `rationale_for` [EXTRACTED]
 - [[cover_crop()]] - `calls` [EXTRACTED]
 - [[ffmpeg()]] - `calls` [EXTRACTED]
@@ -22,4 +22,4 @@ tags:
 - [[os]] - `calls` [EXTRACTED]
 - [[video_encoder()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Local_AI_Jobs__Clips_2
+#graphify/code #graphify/EXTRACTED #community/Footage_Downloads__Crops_2

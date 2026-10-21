@@ -1,19 +1,19 @@
 ---
 source_file: "shortsmaker/style_lab.py"
 type: "code"
-community: "Library Candidate Tests"
+community: "Invention Slots"
 location: "L267"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Library_Candidate_Tests
+  - community/Invention_Slots
 ---
 
 # approve_candidate()
 
 ## Connections
 - [[Adds a candidate to the library (component file, library.json entry,…]] - `rationale_for` [EXTRACTED]
-- [[Path_3]] - `references` [EXTRACTED]
+- [[Path_8]] - `references` [EXTRACTED]
 - [[json]] - `calls` [EXTRACTED]
 - [[library_menu()]] - `calls` [EXTRACTED]
 - [[shutil]] - `calls` [EXTRACTED]
@@ -25,4 +25,4 @@ tags:
 - [[tsc_check()]] - `calls` [EXTRACTED]
 - [[write_style_index()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Library_Candidate_Tests
+#graphify/code #graphify/EXTRACTED #community/Invention_Slots

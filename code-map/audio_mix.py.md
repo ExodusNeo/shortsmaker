@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/audio_mix.py"
 type: "code"
-community: "Footage Downloads & Crops (2)"
+community: "Captions & TTS"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Footage_Downloads__Crops_2
+  - community/Captions__TTS
 ---
 
 # audio_mix.py
@@ -37,17 +37,17 @@ tags:
 - [[session.py]] - `imports_from` [EXTRACTED]
 - [[sfx_events()]] - `contains` [EXTRACTED]
 - [[short_render.py]] - `imports_from` [EXTRACTED]
-- [[speak()_1]] - `contains` [EXTRACTED]
+- [[speak()]] - `contains` [EXTRACTED]
 - [[story_sound()]] - `contains` [EXTRACTED]
 - [[subprocess]] - `imports` [EXTRACTED]
 - [[test_full_scenes.py]] - `imports_from` [EXTRACTED]
 - [[test_package.py]] - `imports_from` [EXTRACTED]
 - [[test_style.py]] - `imports_from` [EXTRACTED]
 - [[time]] - `imports` [EXTRACTED]
-- [[tts()_1]] - `contains` [EXTRACTED]
+- [[tts()]] - `contains` [EXTRACTED]
 - [[urllib_parse]] - `imports` [EXTRACTED]
 - [[urllib_request]] - `imports` [EXTRACTED]
 - [[wave]] - `imports` [EXTRACTED]
 - [[writing.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Footage_Downloads__Crops_2
+#graphify/code #graphify/EXTRACTED #community/Captions__TTS

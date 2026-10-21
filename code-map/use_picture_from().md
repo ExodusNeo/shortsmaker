@@ -12,7 +12,7 @@ tags:
 # use_picture_from()
 
 ## Connections
-- [[Path_11]] - `references` [EXTRACTED]
+- [[Path_13]] - `references` [EXTRACTED]
 - [[cli.py]] - `contains` [EXTRACTED]
 - [[fix scene i shows scene k's picture. A real photofilm is a picture choice; an…]] - `rationale_for` [EXTRACTED]
 - [[fix_short()]] - `calls` [EXTRACTED]

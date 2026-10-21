@@ -12,7 +12,7 @@ tags:
 # props_for()
 
 ## Connections
-- [[main()]] - `calls` [EXTRACTED]
+- [[main()_3]] - `calls` [EXTRACTED]
 - [[render_full.py]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Footage_Downloads__Crops_2

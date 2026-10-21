@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/audio_mix.py"
 type: "code"
-community: "Story Sounds & Credits (3)"
+community: "Captions & TTS"
 location: "L180"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Story_Sounds__Credits_3
+  - community/Captions__TTS
 ---
 
 # noise()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[make_sfx()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Story_Sounds__Credits_3
+#graphify/code #graphify/EXTRACTED #community/Captions__TTS

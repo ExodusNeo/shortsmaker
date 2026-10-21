@@ -1,17 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "Entry Point, Logbook & Sounds"
+community: "AI Calls & Quota Fallback"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Entry_Point_Logbook__Sounds
+  - community/AI_Calls__Quota_Fallback
 ---
 
 # Path
 
 ## Connections
-- [[log_short()]] - `references` [EXTRACTED]
-- [[vault_page()]] - `references` [EXTRACTED]
+- [[ask_ai()]] - `references` [EXTRACTED]
+- [[run_agy()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Entry_Point_Logbook__Sounds
+#graphify/code #graphify/EXTRACTED #community/AI_Calls__Quota_Fallback

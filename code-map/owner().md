@@ -1,12 +1,12 @@
 ---
 source_file: "tests/patching.py"
 type: "code"
-community: "Test Patching Helper"
+community: "Pool Gathering"
 location: "L17"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Test_Patching_Helper
+  - community/Pool_Gathering
 ---
 
 # owner()
@@ -14,8 +14,8 @@ tags:
 ## Connections
 - [[dot-__enter__()_3]] - `calls` [EXTRACTED]
 - [[dot-__enter__()_1]] - `calls` [EXTRACTED]
+- [[dot-__exit__()_1]] - `calls` [EXTRACTED]
 - [[dot-__exit__()_2]] - `calls` [EXTRACTED]
-- [[dot-__exit__()_3]] - `calls` [EXTRACTED]
 - [[The module that defines function `name` (KeyError for anything else).]] - `rationale_for` [EXTRACTED]
 - [[_fake_planning()]] - `calls` [EXTRACTED]
 - [[patching.py]] - `contains` [EXTRACTED]
@@ -26,4 +26,4 @@ tags:
 - [[test_style.py]] - `imports` [EXTRACTED]
 - [[with_fakes()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Test_Patching_Helper
+#graphify/code #graphify/EXTRACTED #community/Pool_Gathering

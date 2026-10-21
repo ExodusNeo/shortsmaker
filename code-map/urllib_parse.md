@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "Local AI Jobs & Clips"
+community: "Captions & TTS"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Local_AI_Jobs__Clips
+  - community/Captions__TTS
 ---
 
 # urllib_parse
@@ -18,4 +18,4 @@ tags:
 - [[seo.py]] - `imports` [EXTRACTED]
 - [[writing.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Local_AI_Jobs__Clips
+#graphify/concept #graphify/EXTRACTED #community/Captions__TTS

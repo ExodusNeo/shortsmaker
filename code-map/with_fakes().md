@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_style.py"
 type: "code"
-community: "Invention Slots"
+community: "Invention Slots (2)"
 location: "L226"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Invention_Slots
+  - community/Invention_Slots_2
 ---
 
 # with_fakes()
@@ -21,4 +21,4 @@ tags:
 - [[test_invention_passes_into_slot()]] - `calls` [EXTRACTED]
 - [[test_style.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Invention_Slots
+#graphify/code #graphify/EXTRACTED #community/Invention_Slots_2

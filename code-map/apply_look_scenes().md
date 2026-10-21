@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/style_lab.py"
 type: "code"
-community: "Style Tests"
+community: "Style Tests (2)"
 location: "L47"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Style_Tests
+  - community/Style_Tests_2
 ---
 
 # apply_look_scenes()
@@ -17,4 +17,4 @@ tags:
 - [[style_lab.py]] - `contains` [EXTRACTED]
 - [[test_apply_look_scenes()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Style_Tests
+#graphify/code #graphify/EXTRACTED #community/Style_Tests_2

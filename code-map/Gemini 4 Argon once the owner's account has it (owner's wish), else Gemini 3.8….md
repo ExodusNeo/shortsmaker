@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/llm.py"
 type: "rationale"
-community: "Commons & Archive Sources"
+community: "AI Calls & Quota Fallback"
 location: "L22"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Commons__Archive_Sources
+  - community/AI_Calls__Quota_Fallback
 ---
 
 # Gemini 4 Argon once the owner's account has it (owner's wish), else Gemini 3.8…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[gemini_model()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Commons__Archive_Sources
+#graphify/rationale #graphify/EXTRACTED #community/AI_Calls__Quota_Fallback

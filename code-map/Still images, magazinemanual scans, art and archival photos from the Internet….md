@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/image_sources.py"
 type: "rationale"
-community: "Full-Scene Rescue & Plan Cleaning"
+community: "Local AI Jobs & Clips"
 location: "L241"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Full-Scene_Rescue__Plan_Cleaning
+  - community/Local_AI_Jobs__Clips
 ---
 
 # Still images, magazine/manual scans, art and archival photos from the Internet…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[archive_images()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Full-Scene_Rescue__Plan_Cleaning
+#graphify/rationale #graphify/EXTRACTED #community/Local_AI_Jobs__Clips
