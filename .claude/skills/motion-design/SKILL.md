@@ -8,7 +8,7 @@ description: Taste rules for ShortsMaker's Remotion motion graphics (remotion/sr
 Adapted from whaleyxbt/claude-motion (MIT, see ../LICENSE-claude-motion.txt) for 1080x1920 Shorts. Remotion's own
 skills (remotion/.agents/skills) teach the API; this is the taste. Treat the numbers as defaults you leave on purpose.
 
-The pipeline's AI coder gets a condensed copy of these rules as rule 9 of `custom_rules()` in make_shorts.py. Keep
+The pipeline's AI coder gets a condensed copy of these rules as rule 9 of `custom_rules()` in shortsmaker/motion.py. Keep
 the two in step when you change one.
 
 ## Time

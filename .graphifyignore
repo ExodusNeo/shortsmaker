@@ -1,4 +1,4 @@
-# graphify code map (2026-10-21): only the program's code: make_shorts.py, local_ai/*.py, remotion/src, tests
+# graphify code map (2026-10-21): only the program's code: make_shorts.py (entry), shortsmaker/, local_ai/*.py, remotion/src, tests, tools
 .npm-cache/
 .superpowers/
 .venv/

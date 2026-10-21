@@ -9,7 +9,7 @@ Adapted from whaleyxbt/claude-motion (MIT, see ../LICENSE-claude-motion.txt). Yo
 look at frames. Never report a visual change as done without looking at a contact sheet of the current render.
 
 The pipeline already does this on its own for AI-coded scenes: `look_and_fix()` -> `preview_custom()` ->
-`preview_sheet()` in make_shorts.py (40 % render, 8 frames tiled 4x2, one rewrite if something is wrong). Use the
+`preview_sheet()` in shortsmaker/motion.py (40 % render, 8 frames tiled 4x2, one rewrite if something is wrong). Use the
 same helpers by hand.
 
 ## Loop
