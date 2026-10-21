@@ -9,7 +9,7 @@ from pathlib import Path
 
 REPO = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(REPO))
-from shortsmaker import cli, config, llm, motion, session  # noqa: E402
+from shortsmaker import audio_mix, cli, config, llm, media_tools, motion, session  # noqa: E402
 
 
 def test_root():
@@ -49,6 +49,16 @@ def test_fake_reaches_callers():
     finally:
         llm.ask_ai = old_ask
         gen.write_bytes(saved)
+
+
+def test_encoder_cache_lives_with_video_encoder():
+    assert not hasattr(audio_mix, "_encoder"), "the encoder cache belongs to media_tools"
+    old = list(media_tools._encoder)
+    media_tools._encoder[:] = ["-c:v", "cached"]
+    try:
+        assert media_tools.video_encoder() == ["-c:v", "cached"]  # chosen once per run, ffmpeg isn't asked again
+    finally:
+        media_tools._encoder[:] = old
 
 
 def test_entry_point():

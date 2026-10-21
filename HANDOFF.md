@@ -543,7 +543,7 @@ All three were built 2026-10-18 at the owner's request, after reviewing the Emu 
 
 ## How to verify changes
 - `.venv\Scripts\python.exe -m compileall -q make_shorts.py shortsmaker`; Remotion: `cd remotion && npx tsc -p .`
-- Tests (no AI usage, no rendering): `.venv\Scripts\python.exe tests\test_package.py` (5: ROOT, ffmpeg on PATH, shared session, fakes reach callers, entry point),
+- Tests (no AI usage, no rendering): `.venv\Scripts\python.exe tests\test_package.py` (6: ROOT, ffmpeg on PATH, shared session, fakes reach callers, encoder cache, entry point),
   `.venv\Scripts\python.exe tests\test_full_scenes.py` (43 on 2026-10-21), `.venv\Scripts\python.exe tests\test_pictures_first.py` (36: pool, picture list, topic check, `pic`, picker, review fixes) and
   `.venv\Scripts\python.exe tests\test_style.py` (29: style library, guardrails, inventions, candidates),
   `.venv\Scripts\python.exe tests\run_ts_tests.py` (6 guarded + 13 style: arrow routing, layouts, card fitting, travel speed, registry, transitions) and

@@ -5,8 +5,6 @@ import subprocess
 import urllib.request
 from pathlib import Path
 
-from shortsmaker import audio_mix
-
 
 def fetch(url: str, timeout: int = 60, ua: str = "ShortsMaker/1.0 (personal video script)") -> bytes:
     req = urllib.request.Request(url, headers={"User-Agent": ua})
@@ -26,13 +24,16 @@ def duration(path: Path) -> float:
                                  "-of", "csv=p=0", str(path)], capture_output=True, text=True).stdout)
 
 
+_encoder: list[str] = []
+
+
 def video_encoder() -> list[str]:
     """Final H.264 encode: NVENC on the GPU when available (frees the CPU), else x264."""
-    if not audio_mix._encoder:
+    if not _encoder:
         out = subprocess.run(["ffmpeg", "-hide_banner", "-encoders"], capture_output=True, text=True).stdout
-        audio_mix._encoder.extend(["-c:v", "h264_nvenc", "-preset", "p5", "-cq", "20", "-b:v", "0"] if "h264_nvenc" in out
+        _encoder.extend(["-c:v", "h264_nvenc", "-preset", "p5", "-cq", "20", "-b:v", "0"] if "h264_nvenc" in out
                         else ["-c:v", "libx264", "-preset", "veryfast", "-crf", "20"])
-    return audio_mix._encoder
+    return _encoder
 
 
 def ffmpeg(*args: str, cwd: Path) -> None:

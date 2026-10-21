@@ -44,9 +44,6 @@ async def tts(text: str, voice: str, path: Path) -> list[tuple[float, float, str
     return words
 
 
-_encoder: list[str] = []
-
-
 def ass_time(t: float) -> str:
     return f"{int(t // 3600)}:{int(t % 3600 // 60):02}:{t % 60:05.2f}"
 
