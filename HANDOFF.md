@@ -535,6 +535,21 @@ All three were built 2026-10-18 at the owner's request, after reviewing the Emu 
 - Not taken: `sound-design` (its own stdlib synth engine; ours is `sfx_events()` + the SFX library) and `web-sims` (three.js
   simulations, not this niche).
 
+## First-second check + honest logbook lessons (2026-10-21, owner asked after the logbook review)
+The 12 posted strange-history Shorts showed: views split ~1,000-1,350 / ~350 / under 60 (one feed test, none broke
+past ~1,350); the three flops were hoax/group stories with no main character; pushed Shorts still lost 4-8 of 10
+viewers in the first second (stayed to watch 21-59%); the shorter recent Shorts did not hold attention better.
+- `review.first_second_check()` (in `render()`, after `visual_review()`): 4 frames of the first 2 s + the storyboard;
+  the AI scores 1-10 "would a scroller stop and need to stay?". Below `HOOK_MIN_SCORE` (7) it writes a
+  `FIRST SECOND: n/10: why` CHECK line and may name a later scene whose REAL photo/film would open better; the fix
+  loop then swaps the two pictures (`swap_pictures()`, never a painting or motion graphic), once per Short
+  (`opener_swapped`). The hook words are not rewritten (that would mean a new voice and timings).
+- `logbook.logbook_results()`: entries under `JUDGE_MIN_VIEWS` (100) get "Too few views to judge" so the planner
+  stops learning from Cardiff's 81% stayed (28 views). The planner's lesson text names the first second as the weak
+  spot and asks it to compare hooks/opening pictures of high- vs low-stay Shorts.
+- Topic prompt evidence updated (Hiroo, Mike = character-led and pushed; Ghost Army stalled). The rule stays soft.
+- Length unchanged: 40-50 s default, 25-30 s stays the owner's optional test.
+
 ## Ideas offered, not built
 - Voice cloning (owner's own voice), SFX on the music's beat, YouTube Audio Library tracks for the somber/epic moods.
 - Logbook extras from the Reach/Engagement tabs (drop-off times, search terms, shown in feed, likes/shares): offered
@@ -544,6 +559,7 @@ All three were built 2026-10-18 at the owner's request, after reviewing the Emu 
 ## How to verify changes
 - `.venv\Scripts\python.exe -m compileall -q make_shorts.py shortsmaker`; Remotion: `cd remotion && npx tsc -p .`
 - Tests (no AI usage, no rendering): `.venv\Scripts\python.exe tests\test_package.py` (6: ROOT, ffmpeg on PATH, shared session, fakes reach callers, encoder cache, entry point),
+  `.venv\Scripts\python.exe tests\test_first_second.py` (6: first-second check, opener swap, logbook small-sample note),
   `.venv\Scripts\python.exe tests\test_full_scenes.py` (43 on 2026-10-21), `.venv\Scripts\python.exe tests\test_pictures_first.py` (36: pool, picture list, topic check, `pic`, picker, review fixes) and
   `.venv\Scripts\python.exe tests\test_style.py` (29: style library, guardrails, inventions, candidates),
   `.venv\Scripts\python.exe tests\run_ts_tests.py` (6 guarded + 13 style: arrow routing, layouts, card fitting, travel speed, registry, transitions) and

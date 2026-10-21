@@ -266,6 +266,10 @@ def render(short: dict, ch: dict, folder: Path, state: dict | None = None, fix_r
     print(f"  {session.BRAIN.capitalize()} is watching the finished Short for problems...")
     found, fixes = review.visual_review(folder / "short.mp4", short, bounds, sources, work)
     issues += found
+    found, opener = review.first_second_check(folder / "short.mp4", short, choices, folder / "storyboard.jpg", work)
+    issues += found
+    if short.get("opener_swapped"):  # once per Short: a later round mustn't swap it back
+        opener = None
     print("  quality check: " + (f"{len(issues)} thing(s) to look at before uploading:" if issues else "OK, nothing to fix"))
     for issue in issues:
         print(f"    CHECK: {issue}")
@@ -303,13 +307,13 @@ def render(short: dict, ch: dict, folder: Path, state: dict | None = None, fix_r
     save_state(work, short, choices, music, by_gemini)  # work/ stays KEEP_WORK_DAYS for fix.bat
     # Fix and re-render while the review finds fixable scenes, capped: an AI reviewer nearly always finds
     # something, so an uncapped loop could repaint forever. fix.bat re-renders (state, round 0) stay manual.
-    if fixes and (not state or fix_round) and fix_round < AUTO_FIX_ROUNDS:
+    if (fixes or opener) and (not state or fix_round) and fix_round < AUTO_FIX_ROUNDS:
         st = load_state(work)
         st["short"]["research"] = short.get("research")  # not in state.json; the motion-graphic rescue reads it
         print(f"  fix round {fix_round + 1}/{AUTO_FIX_ROUNDS}: the review found {min(len(fixes), AUTO_REPAINT_MAX)} "
-              "scene(s) to fix: fixing them and re-rendering...")
+              f"scene(s) to fix{' and a weak opening' if opener else ''}: fixing them and re-rendering...")
         st["short"]["auto_fixed"] = (st["short"].get("auto_fixed") or []) + [
-            f"round {fix_round + 1}: {note}" for note in review.apply_review_fixes(st, work, fixes)]
+            f"round {fix_round + 1}: {note}" for note in review.apply_review_fixes(st, work, fixes, opener)]
         render(st["short"], ch, folder, st, fix_round + 1)
-    elif fixes and fix_round:
+    elif (fixes or opener) and fix_round:
         print(f"  stopped fixing after {AUTO_FIX_ROUNDS} rounds: the CHECK lines above are left for you")

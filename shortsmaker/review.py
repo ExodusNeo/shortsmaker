@@ -92,18 +92,78 @@ def review_fixes(data, n_scenes: int) -> tuple[list[str], dict[int, tuple[str, s
     return found[:8], fixes
 
 
-def apply_review_fixes(st: dict, work: Path, fixes: dict[int, tuple[str, str]]) -> list[str]:
-    """The automatic fixes after a render's review (up to AUTO_REPAINT_MAX scenes per round): "graphic" scenes
-    become a full-screen motion graphic when one fits their line, a custom motion graphic that looked wrong is
-    redrawn by its coder, the rest get a new painted picture.
+HOOK_MIN_SCORE = 7  # first-second score (1-10) below which the opening gets fixed
+
+
+def first_second_check(video: Path, short: dict, choices: list[dict], board: Path,
+                       work: Path) -> tuple[list[str], tuple[int, str] | None]:
+    """Would a stranger scrolling the Shorts feed stop here? Stayed-to-watch is decided in the first second (Byron
+    21%, Jack 28.6% vs Norton 58.6%, logbook 2026-10-21) and visual_review only hunts defects. The AI sees the first
+    2 seconds and the storyboard; below HOOK_MIN_SCORE it may name a later scene whose real photo or film would open
+    better (no painting: the opening wants a real picture). Returns (CHECK lines, (scene index, why) or None);
+    failure means ([], None)."""
+    folder = work / "hook"
+    shutil.rmtree(folder, ignore_errors=True)
+    folder.mkdir()
+    try:
+        media_tools.ffmpeg("-t", "2", "-i", str(video), "-vf", "fps=2,scale=360:-2,tile=4x1", "-frames:v", "1",
+                           "first.jpg", cwd=folder)
+        shutil.copy(board, folder / "storyboard.jpg")
+    except (subprocess.CalledProcessError, OSError):
+        return [], None
+    scenes = short["scenes"]
+    real = [j for j in range(1, len(scenes)) if choices[j].get("bg") and not scenes[j].get("full")]
+    first = re.split(r"(?<=[.!?])\s", scenes[0]["narration"].strip())[0]
+    data = llm.ask_ai(f"""You judge the first two seconds of a YouTube Short the way a stranger scrolling the Shorts feed would.
+Open {folder / 'first.jpg'}: frames at 0, 0.5, 1 and 1.5 seconds, left to right (the big title on them is the hook title).
+The narrator's first sentence: "{first}". The Short: "{short['title']}"; how it ends: "{scenes[-1]['narration']}".
+Score 1-10: would they stop scrolling AND need to stay for the answer? Score lower when the picture already shows the
+answer or the whole story (with the first sentence, nothing is left to wonder about), when there is no single clear
+subject, when it is dark, busy or hard to read at phone size, or when nothing on screen is strange or surprising.
+Below {HOOK_MIN_SCORE}, check whether another scene's picture would open better: the main character or the strange
+situation, without giving the twist away. {folder / 'storyboard.jpg'} shows one frame per scene, in order; you may
+only pick these scenes (they have real photos or film): {[j + 1 for j in real]}. Otherwise use null.
+Reply with ONLY JSON: {{"score": 6, "why": "one short reason", "open_with_scene": 4}}""", fatal=False, read_dir=folder)
+    score = data.get("score") if isinstance(data, dict) else None
+    if not plan_rules.is_num(score) or not 1 <= score < HOOK_MIN_SCORE:  # also drops 0, negatives and NaN
+        return [], None
+    why = str(data.get("why") or "weak opening").strip()[:160]
+    k = data.get("open_with_scene")
+    opener = (k - 1, why) if isinstance(k, int) and not isinstance(k, bool) and k - 1 in real else None
+    return [f"FIRST SECOND: {score:g}/10: {why}"], opener
+
+
+def swap_pictures(state: dict, i: int, k: int) -> None:
+    """Scenes i and k trade their real photos/films (paintings and motion graphics are never swapped)."""
+    ch, scenes = state["choices"], state["short"]["scenes"]
+    ch[i], ch[k] = {**ch[k], "person": ch[i]["person"]}, {**ch[i], "person": ch[k]["person"]}
+    for j in (i, k):
+        scenes[j]["animate"] = False  # its AI motion was written for the old picture
+        if (scenes[j].get("graphic") or {}).get("style") == "mark":  # it circled a detail of the old picture
+            scenes[j]["graphic"] = None
+
+
+def apply_review_fixes(st: dict, work: Path, fixes: dict[int, tuple[str, str]],
+                       opener: tuple[int, str] | None = None) -> list[str]:
+    """The automatic fixes after a render's review (up to AUTO_REPAINT_MAX scenes per round): a weak opening
+    (`opener`, from first_second_check) swaps scene 1's picture with a better real one, once per Short; "graphic"
+    scenes become a full-screen motion graphic when one fits their line, a custom motion graphic that looked
+    wrong is redrawn by its coder, the rest get a new painted picture.
     Returns the edit-plan notes."""
+    notes = []
+    if opener and not st["short"].get("opener_swapped"):
+        k, why = opener
+        swap_pictures(st, 0, k)
+        st["short"]["opener_swapped"] = True  # later fix rounds can't swap it back
+        notes.append(f"scene 1 now opens on scene {k + 1}'s picture (first second: {why})")
+        fixes = {i: f for i, f in fixes.items() if i not in (0, k)}  # both pictures just changed
     fixed = list(fixes.items())[:short_render.AUTO_REPAINT_MAX]
     want = [i for i, (kind, _) in fixed if kind == "graphic"]
     got = set(picker.rescue_graphics(st["short"], want, {i: why for i, (_, why) in fixed})) if want else set()
     # Same slot numbering as render_remotion (the k-th custom scene uses slot k).
     # shortcut: a rescue that adds a custom scene before this one shifts the slots and the redraw is re-coded fresh.
     customs = [k for k, sc in enumerate(st["short"]["scenes"]) if (sc.get("full") or {}).get("type") == "custom"]
-    notes, repaint = [], {}
+    repaint = {}
     for i, (_, why) in fixed:
         if i in customs and remotion_render.redraw_custom(st["short"], i, min(3, customs.index(i)), why, work):
             notes.append(f"scene {i + 1}'s motion graphic was redrawn ({why})")

@@ -90,9 +90,21 @@ def vault_refresh() -> None:
                 print(f"  page: {log.stem} / {e.splitlines()[0][:60]}")
 
 
+JUDGE_MIN_VIEWS = 100  # below this, a Short's watch percentages come from a handful of viewers
+
+
 def logbook_results() -> str:
-    """The logbook entries the owner has filled in (Views written down), at most the last 30."""
+    """The logbook entries the owner has filled in (Views written down), at most the last 30. Entries under
+    JUDGE_MIN_VIEWS get a note, or the planner learns from noise (Cardiff's 81% stayed-to-watch was 28 views)."""
     if not session.LOG.exists():
         return ""
-    entries = session.LOG.read_text(encoding="utf-8-sig").split("\n## ")[1:]
-    return "\n\n".join(["## " + e.strip() for e in entries if re.search(r"^Views:[ \t]*\d", e, re.M)][-30:])
+    out = []
+    for e in session.LOG.read_text(encoding="utf-8-sig").split("\n## ")[1:]:
+        views = re.search(r"^Views:[ \t]*(\d[\d,]*)", e, re.M)
+        if not views:
+            continue
+        entry = "## " + e.strip()
+        if int(views.group(1).replace(",", "")) < JUDGE_MIN_VIEWS:
+            entry += "\n(Too few views to judge: its Stayed to watch and Average % viewed come from a handful of viewers.)"
+        out.append(entry)
+    return "\n\n".join(out[-30:])

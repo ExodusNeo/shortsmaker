@@ -45,7 +45,10 @@ Learn from these before choosing topics and writing. "Stayed to watch" shows whe
 (topic, hook line, opening picture) stopped the scroll; "Average % viewed" shows whether the story held
 to the end (over 100% means rewatches). Do more of what the best ones share (kinds of topic, hook
 patterns, story shapes) and less of what the weakest share; read the owner's notes too. With only a
-few Shorts, treat this as hints, not rules.
+few Shorts, treat this as hints, not rules. Judge only entries with enough views (the ones marked "Too few
+views to judge" say little). The weak spot so far is the first second: Shorts the feed pushed still lost
+4-8 of every 10 viewers there, so compare the hook lines and opening pictures of the Shorts that kept the
+most viewers with those that kept the fewest.
 """
     if topics:
         what = f"Use exactly these {len(topics)} topics, in this order: {topics}"
@@ -65,8 +68,9 @@ Viewers decide in one second whether to swipe, so pick stories whose single most
 said in 8 words or fewer that a stranger understands instantly (e.g. "A dead man won this horse race.").
 Every Short needs a MAIN CHARACTER: one named person or animal the story follows, with a real photo or
 portrait of them. Our Shorts built around one strange person or animal (Jack the baboon, Violet Jessop,
-Emperor Norton, Lord Byron and his bear, the emus) were all pushed by YouTube; the ones about a thing, an
-event or a group (a smell, a newspaper hoax, a fake statue, an army unit) all stalled. This does not
+Emperor Norton, Lord Byron and his bear, Hiroo Onoda, Mike the headless chicken, the emus) were all pushed by
+YouTube, and the named characters brought nearly all our subscribers; the ones about a thing, an event or a
+group (a smell, a newspaper hoax, a fake statue, the WW2 Ghost Army) stalled, some under 60 views. This does not
 narrow the topics: tell an event through the person at its center (the Great Stink through engineer Joseph
 Bazalgette, the Cardiff Giant through George Hull who carved it). Choose an event with nobody to follow
 only when nothing better is left.
