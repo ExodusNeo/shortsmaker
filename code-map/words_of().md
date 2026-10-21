@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/plan_rules.py"
 type: "code"
-community: "Full-Scene Rescue & Plan Cleaning"
+community: "Local AI Jobs & Clips"
 location: "L302"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Full-Scene_Rescue__Plan_Cleaning
+  - community/Local_AI_Jobs__Clips
 ---
 
 # words_of()
@@ -31,4 +31,4 @@ tags:
 - [[word()]] - `calls` [EXTRACTED]
 - [[write_scripts()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Full-Scene_Rescue__Plan_Cleaning
+#graphify/code #graphify/EXTRACTED #community/Local_AI_Jobs__Clips

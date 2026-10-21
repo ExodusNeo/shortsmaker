@@ -1,17 +1,20 @@
 ---
 source_file: ""
 type: "code"
-community: "Entry Point, Logbook & Sounds"
+community: "Python Frame Renderer"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Entry_Point_Logbook__Sounds
+  - community/Python_Frame_Renderer
 ---
 
 # Path
 
 ## Connections
-- [[log_short()]] - `references` [EXTRACTED]
-- [[vault_page()]] - `references` [EXTRACTED]
+- [[dot-__init__()_5]] - `references` [EXTRACTED]
+- [[fills_frame()]] - `references` [EXTRACTED]
+- [[frame_maker()]] - `references` [EXTRACTED]
+- [[graphic_low()]] - `references` [EXTRACTED]
+- [[thumbnail()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Entry_Point_Logbook__Sounds
+#graphify/code #graphify/EXTRACTED #community/Python_Frame_Renderer

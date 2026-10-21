@@ -1,12 +1,12 @@
 ---
 source_file: "tests/run_ts_tests.py"
 type: "code"
-community: "Channel Profiles & CLI (2)"
+community: "Voice Worker (qwen_voice)"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Channel_Profiles__CLI_2
+  - community/Voice_Worker_qwen_voice
 ---
 
 # run_ts_tests.py
@@ -19,4 +19,4 @@ tags:
 - [[sys]] - `imports` [EXTRACTED]
 - [[tempfile]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Channel_Profiles__CLI_2
+#graphify/code #graphify/EXTRACTED #community/Voice_Worker_qwen_voice

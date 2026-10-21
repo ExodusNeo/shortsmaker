@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_full_scenes.py"
 type: "code"
-community: "Channel Profiles & CLI (2)"
+community: "Story Sounds & Credits (2)"
 location: "L251"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Channel_Profiles__CLI_2
+  - community/Story_Sounds__Credits_2
 ---
 
 # test_state_roundtrip_full_pics()
@@ -16,4 +16,4 @@ tags:
 - [[save_state()]] - `calls` [EXTRACTED]
 - [[test_full_scenes.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Channel_Profiles__CLI_2
+#graphify/code #graphify/EXTRACTED #community/Story_Sounds__Credits_2

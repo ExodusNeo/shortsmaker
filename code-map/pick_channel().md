@@ -15,7 +15,7 @@ tags:
 - [[Ask which channel this batch is for (Enter = the one used last time), or set up…]] - `rationale_for` [EXTRACTED]
 - [[channel_profiles.py]] - `contains` [EXTRACTED]
 - [[json]] - `calls` [EXTRACTED]
-- [[main()_4]] - `calls` [EXTRACTED]
+- [[main()_3]] - `calls` [EXTRACTED]
 - [[new_channel()]] - `calls` [EXTRACTED]
 - [[re]] - `calls` [EXTRACTED]
 - [[use_channel()]] - `calls` [EXTRACTED]

@@ -12,11 +12,11 @@ tags:
 # local_voice()
 
 ## Connections
-- [[Path_15]] - `references` [EXTRACTED]
+- [[Path]] - `references` [EXTRACTED]
 - [[Voice every scene on the GPU CosyVoice (aiden, documentary) for the whole…]] - `rationale_for` [EXTRACTED]
 - [[gpu.py]] - `contains` [EXTRACTED]
 - [[local_job()]] - `calls` [EXTRACTED]
-- [[render()_2]] - `calls` [EXTRACTED]
+- [[render()]] - `calls` [EXTRACTED]
 - [[voicestudio_unload()]] - `calls` [EXTRACTED]
 - [[voicestudio_up()]] - `calls` [EXTRACTED]
 

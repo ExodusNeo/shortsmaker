@@ -1,22 +1,22 @@
 ---
 source_file: "shortsmaker/short_render.py"
 type: "code"
-community: "Channel Profiles & CLI (2)"
+community: "Story Sounds & Credits (2)"
 location: "L46"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Channel_Profiles__CLI_2
+  - community/Story_Sounds__Credits_2
 ---
 
 # load_state()
 
 ## Connections
-- [[Path_18]] - `references` [EXTRACTED]
+- [[Path_6]] - `references` [EXTRACTED]
 - [[fix_short()]] - `calls` [EXTRACTED]
 - [[json]] - `calls` [EXTRACTED]
-- [[render()_2]] - `calls` [EXTRACTED]
+- [[render()]] - `calls` [EXTRACTED]
 - [[short_render.py]] - `contains` [EXTRACTED]
 - [[test_state_roundtrip_full_pics()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Channel_Profiles__CLI_2
+#graphify/code #graphify/EXTRACTED #community/Story_Sounds__Credits_2

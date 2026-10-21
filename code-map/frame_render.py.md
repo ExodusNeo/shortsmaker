@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/frame_render.py"
 type: "code"
-community: "Channel Profiles & CLI"
+community: "Python Frame Renderer"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Channel_Profiles__CLI
+  - community/Python_Frame_Renderer
 ---
 
 # frame_render.py
@@ -41,4 +41,4 @@ tags:
 - [[thumbnail()]] - `contains` [EXTRACTED]
 - [[write_frames()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Channel_Profiles__CLI
+#graphify/code #graphify/EXTRACTED #community/Python_Frame_Renderer

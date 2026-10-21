@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[Cut plain strips (white mounts, black plate edges) off the sides, at most 15%…]] - `rationale_for` [EXTRACTED]
-- [[Image_2]] - `references` [EXTRACTED]
+- [[Image_1]] - `references` [EXTRACTED]
 - [[border()]] - `contains` [EXTRACTED]
 - [[clean_photo()]] - `calls` [EXTRACTED]
 - [[photo_prep.py]] - `contains` [EXTRACTED]

@@ -1,21 +1,21 @@
 ---
-source_file: "local_ai/gen.py"
+source_file: "tests/render_full.py"
 type: "code"
-community: "GPU Worker (gen.py)"
-location: "L200"
+community: "Footage Downloads & Crops (2) (2)"
+location: "L28"
 tags:
   - graphify/code
-  - graphify/INFERRED
-  - community/GPU_Worker_genpy
+  - graphify/EXTRACTED
+  - community/Footage_Downloads__Crops_2_2
 ---
 
 # main()
 
 ## Connections
-- [[gen.py]] - `contains` [EXTRACTED]
-- [[images()]] - `indirect_call` [INFERRED]
-- [[parallax()]] - `indirect_call` [INFERRED]
-- [[tts()_1]] - `indirect_call` [INFERRED]
-- [[video()]] - `indirect_call` [INFERRED]
+- [[json]] - `calls` [EXTRACTED]
+- [[props_for()]] - `calls` [EXTRACTED]
+- [[render_full.py]] - `contains` [EXTRACTED]
+- [[shutil]] - `calls` [EXTRACTED]
+- [[subprocess]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/GPU_Worker_genpy
+#graphify/code #graphify/EXTRACTED #community/Footage_Downloads__Crops_2_2

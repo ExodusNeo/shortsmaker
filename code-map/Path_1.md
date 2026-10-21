@@ -1,21 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "Footage Downloads & Crops"
+community: "AI Calls & Quota Fallback"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Footage_Downloads__Crops
+  - community/AI_Calls__Quota_Fallback
 ---
 
 # Path
 
 ## Connections
-- [[catalog_pool()]] - `references` [EXTRACTED]
-- [[contact_sheets()]] - `references` [EXTRACTED]
-- [[load_pool()]] - `references` [EXTRACTED]
-- [[pool_folder()]] - `references` [EXTRACTED]
-- [[prepare_topic()]] - `references` [EXTRACTED]
-- [[save_pool()]] - `references` [EXTRACTED]
+- [[ask_ai()]] - `references` [EXTRACTED]
+- [[run_agy()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Footage_Downloads__Crops
+#graphify/code #graphify/EXTRACTED #community/AI_Calls__Quota_Fallback

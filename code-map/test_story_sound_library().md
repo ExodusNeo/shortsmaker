@@ -12,7 +12,7 @@ tags:
 # test_story_sound_library()
 
 ## Connections
-- [[fetch()_1]] - `indirect_call` [INFERRED]
+- [[fetch()]] - `indirect_call` [INFERRED]
 - [[story_sound()]] - `calls` [EXTRACTED]
 - [[test_full_scenes.py]] - `contains` [EXTRACTED]
 

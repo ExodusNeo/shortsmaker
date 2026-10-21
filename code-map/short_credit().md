@@ -14,6 +14,6 @@ tags:
 ## Connections
 - [[The on-screen credit tag kind, a short name and the licence (Photo E. Mariz…]] - `rationale_for` [EXTRACTED]
 - [[image_sources.py]] - `contains` [EXTRACTED]
-- [[render()_2]] - `calls` [EXTRACTED]
+- [[render()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Local_AI_Jobs__Clips

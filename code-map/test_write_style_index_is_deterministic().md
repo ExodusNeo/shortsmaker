@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_style.py"
 type: "code"
-community: "Look & Transition Cleaning"
+community: "Invention Slots"
 location: "L30"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Look__Transition_Cleaning
+  - community/Invention_Slots
 ---
 
 # test_write_style_index_is_deterministic()
@@ -16,4 +16,4 @@ tags:
 - [[test_style.py]] - `contains` [EXTRACTED]
 - [[write_style_index()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Look__Transition_Cleaning
+#graphify/code #graphify/EXTRACTED #community/Invention_Slots

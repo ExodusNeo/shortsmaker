@@ -27,16 +27,16 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 5 edges to [[_COMMUNITY_AI Calls & Quota Fallback (4)]]
-- 3 edges to [[_COMMUNITY_AI Calls & Quota Fallback]]
-- 2 edges to [[_COMMUNITY_Channel Profiles & CLI (2)]]
-- 1 edge to [[_COMMUNITY_Skins & Remotion Render]]
+- 6 edges to [[_COMMUNITY_AI Calls & Quota Fallback (4)]]
+- 3 edges to [[_COMMUNITY_AI Calls & Quota Fallback (2)]]
+- 1 edge to [[_COMMUNITY_Story Sounds & Credits (2)]]
 - 1 edge to [[_COMMUNITY_Scene Cues & Word Timing]]
-- 1 edge to [[_COMMUNITY_Scene Cues & Word Timing (2)]]
+- 1 edge to [[_COMMUNITY_Skins & Remotion Render]]
+- 1 edge to [[_COMMUNITY_Footage Downloads & Crops (2) (2)]]
 
 ## Top bridge nodes
 - [[full_props()]] - degree 9, connects to 3 communities
 - [[full_summary()]] - degree 5, connects to 2 communities
 - [[test_custom_cues_props_and_pictures()]] - degree 4, connects to 2 communities
-- [[test_remotion_props_full()]] - degree 4, connects to 2 communities
+- [[test_remotion_props_full()]] - degree 4, connects to 1 community
 - [[_jpg()]] - degree 3, connects to 1 community

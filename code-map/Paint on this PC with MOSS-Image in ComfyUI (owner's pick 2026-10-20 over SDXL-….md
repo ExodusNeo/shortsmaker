@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/gpu.py"
 type: "rationale"
-community: "Local AI Jobs & Clips (2)"
+community: "Footage Downloads & Crops (2)"
 location: "L214"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Local_AI_Jobs__Clips_2
+  - community/Footage_Downloads__Crops_2
 ---
 
 # Paint on this PC with MOSS-Image in ComfyUI (owner's pick 2026-10-20 over SDXL-…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[moss_images()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Local_AI_Jobs__Clips_2
+#graphify/rationale #graphify/EXTRACTED #community/Footage_Downloads__Crops_2

@@ -1,21 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Python Frame Renderer"
+community: "Local AI Jobs & Clips"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Python_Frame_Renderer
+  - community/Local_AI_Jobs__Clips
 ---
 
 # Image
 
 ## Connections
-- [[dot-at()]] - `references` [EXTRACTED]
-- [[draw_card()]] - `references` [EXTRACTED]
-- [[draw_graphic()]] - `references` [EXTRACTED]
-- [[graphic_overlay()]] - `references` [EXTRACTED]
-- [[person_card()]] - `references` [EXTRACTED]
-- [[shot()]] - `references` [EXTRACTED]
+- [[credit_tag_image()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Python_Frame_Renderer
+#graphify/code #graphify/EXTRACTED #community/Local_AI_Jobs__Clips

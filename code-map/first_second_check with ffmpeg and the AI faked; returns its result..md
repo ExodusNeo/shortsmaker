@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_first_second.py"
 type: "rationale"
-community: "Entry Point, Logbook & Sounds (2)"
+community: "Voice Worker (qwen_voice)"
 location: "L24"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Entry_Point_Logbook__Sounds_2
+  - community/Voice_Worker_qwen_voice
 ---
 
 # first_second_check with ffmpeg and the AI faked; returns its result.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[run_check()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Entry_Point_Logbook__Sounds_2
+#graphify/rationale #graphify/EXTRACTED #community/Voice_Worker_qwen_voice

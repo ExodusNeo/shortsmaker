@@ -550,6 +550,15 @@ viewers in the first second (stayed to watch 21-59%); the shorter recent Shorts 
 - Topic prompt evidence updated (Hiroo, Mike = character-led and pushed; Ghost Army stalled). The rule stays soft.
 - Length unchanged: 40-50 s default, 25-30 s stays the owner's optional test.
 
+## AI models and effort per task (2026-10-21, owner: quality first, but high is the highest Claude effort the plan allows)
+- Claude: every `ask_ai` call is pinned to `--model opus --effort high` (`llm.CLAUDE_MODEL`, `CLAUDE_EFFORT`). The lean
+  call skips the owner's settings, so before this the model/effort were whatever the CLI defaulted to (Opus 5.5 on
+  2026-10-21; effort unknown). `test_package.py` fails if either drops below Opus / high. Don't raise effort to
+  xhigh/max: the owner's plan doesn't have the usage.
+- Gemini: text tasks and the review-type picture jobs (first-second check, visual review, look-and-fix, detail marks,
+  style previews) use `gemini_model()` (Argon high, Flash when its weekly quota runs out). Only `bulk=True` picture
+  jobs that read dozens of images stay on Flash: `catalog_pool()` and `choose_images()`.
+
 ## Ideas offered, not built
 - Voice cloning (owner's own voice), SFX on the music's beat, YouTube Audio Library tracks for the somber/epic moods.
 - Logbook extras from the Reach/Engagement tabs (drop-off times, search terms, shown in feed, likes/shares): offered
@@ -558,7 +567,7 @@ viewers in the first second (stayed to watch 21-59%); the shorter recent Shorts 
 
 ## How to verify changes
 - `.venv\Scripts\python.exe -m compileall -q make_shorts.py shortsmaker`; Remotion: `cd remotion && npx tsc -p .`
-- Tests (no AI usage, no rendering): `.venv\Scripts\python.exe tests\test_package.py` (6: ROOT, ffmpeg on PATH, shared session, fakes reach callers, encoder cache, entry point),
+- Tests (no AI usage, no rendering): `.venv\Scripts\python.exe tests\test_package.py` (8: ROOT, ffmpeg on PATH, shared session, fakes reach callers, Opus/high pin, Gemini bulk vs review models, encoder cache, entry point),
   `.venv\Scripts\python.exe tests\test_first_second.py` (6: first-second check, opener swap, logbook small-sample note),
   `.venv\Scripts\python.exe tests\test_full_scenes.py` (43 on 2026-10-21), `.venv\Scripts\python.exe tests\test_pictures_first.py` (36: pool, picture list, topic check, `pic`, picker, review fixes) and
   `.venv\Scripts\python.exe tests\test_style.py` (29: style library, guardrails, inventions, candidates),

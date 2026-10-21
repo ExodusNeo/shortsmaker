@@ -1,18 +1,18 @@
 ---
 source_file: "shortsmaker/footage.py"
 type: "code"
-community: "Footage Downloads & Crops (2)"
+community: "Footage Downloads & Crops (2) (3)"
 location: "L218"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Footage_Downloads__Crops_2
+  - community/Footage_Downloads__Crops_2_3
 ---
 
 # shot_span()
 
 ## Connections
-- [[Path_3]] - `references` [EXTRACTED]
+- [[Path_9]] - `references` [EXTRACTED]
 - [[Start and end of the camera shot containing time `at` (newsreels cut to title…]] - `rationale_for` [EXTRACTED]
 - [[duration()]] - `calls` [EXTRACTED]
 - [[footage.py]] - `contains` [EXTRACTED]
@@ -20,4 +20,4 @@ tags:
 - [[re]] - `calls` [EXTRACTED]
 - [[subprocess]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Footage_Downloads__Crops_2
+#graphify/code #graphify/EXTRACTED #community/Footage_Downloads__Crops_2_3

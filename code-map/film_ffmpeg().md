@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/image_sources.py"
 type: "code"
-community: "Local AI Jobs & Clips (2)"
+community: "Local AI Jobs & Clips"
 location: "L273"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Local_AI_Jobs__Clips_2
+  - community/Local_AI_Jobs__Clips
 ---
 
 # film_ffmpeg()
@@ -18,4 +18,4 @@ tags:
 - [[film_piece()]] - `calls` [EXTRACTED]
 - [[image_sources.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Local_AI_Jobs__Clips_2
+#graphify/code #graphify/EXTRACTED #community/Local_AI_Jobs__Clips

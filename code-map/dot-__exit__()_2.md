@@ -1,18 +1,18 @@
 ---
 source_file: "tests/test_pictures_first.py"
 type: "code"
-community: "Pool Gathering"
-location: "L51"
+community: "Picture List Catalog (2) (2)"
+location: "L211"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pool_Gathering
+  - community/Picture_List_Catalog_2_2
 ---
 
 # .__exit__()
 
 ## Connections
 - [[owner()]] - `calls` [EXTRACTED]
-- [[stubbed]] - `method` [EXTRACTED]
+- [[planning]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pool_Gathering
+#graphify/code #graphify/EXTRACTED #community/Picture_List_Catalog_2_2

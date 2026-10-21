@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/short_render.py"
 type: "code"
-community: "Channel Profiles & CLI (2)"
+community: "Channel Profiles & CLI"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Channel_Profiles__CLI_2
+  - community/Channel_Profiles__CLI
 ---
 
 # short_render.py
@@ -35,7 +35,7 @@ tags:
 - [[random]] - `imports` [EXTRACTED]
 - [[re]] - `imports` [EXTRACTED]
 - [[remotion_render.py]] - `imports_from` [EXTRACTED]
-- [[render()_2]] - `contains` [EXTRACTED]
+- [[render()]] - `contains` [EXTRACTED]
 - [[review.py]] - `imports_from` [EXTRACTED]
 - [[save_state()]] - `contains` [EXTRACTED]
 - [[seo.py]] - `imports_from` [EXTRACTED]
@@ -46,4 +46,4 @@ tags:
 - [[test_full_scenes.py]] - `imports_from` [EXTRACTED]
 - [[time]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Channel_Profiles__CLI_2
+#graphify/code #graphify/EXTRACTED #community/Channel_Profiles__CLI

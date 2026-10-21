@@ -1,22 +1,22 @@
 ---
 source_file: "shortsmaker/media_tools.py"
 type: "code"
-community: "Picture List Catalog (2) (2)"
+community: "Footage Downloads & Crops"
 location: "L15"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Picture_List_Catalog_2_2
+  - community/Footage_Downloads__Crops
 ---
 
 # write_json()
 
 ## Connections
-- [[Path_16]] - `references` [EXTRACTED]
+- [[Path_10]] - `references` [EXTRACTED]
 - [[Write via a temp file, so an interrupted run never leaves a half-written file…]] - `rationale_for` [EXTRACTED]
 - [[catalog_pool()]] - `calls` [EXTRACTED]
 - [[json]] - `calls` [EXTRACTED]
 - [[media_tools.py]] - `contains` [EXTRACTED]
 - [[save_pool()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Picture_List_Catalog_2_2
+#graphify/code #graphify/EXTRACTED #community/Footage_Downloads__Crops

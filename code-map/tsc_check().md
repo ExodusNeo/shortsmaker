@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/motion.py"
 type: "code"
-community: "AI Calls & Quota Fallback"
+community: "AI Calls & Quota Fallback (2)"
 location: "L308"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AI_Calls__Quota_Fallback
+  - community/AI_Calls__Quota_Fallback_2
 ---
 
 # tsc_check()
@@ -20,4 +20,4 @@ tags:
 - [[shutil]] - `calls` [EXTRACTED]
 - [[subprocess]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AI_Calls__Quota_Fallback
+#graphify/code #graphify/EXTRACTED #community/AI_Calls__Quota_Fallback_2

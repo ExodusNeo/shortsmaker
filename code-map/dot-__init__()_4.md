@@ -1,17 +1,17 @@
 ---
-source_file: "tests/test_pictures_first.py"
+source_file: "tools/split_make_shorts.py"
 type: "code"
-community: "Picture List Catalog (5)"
-location: "L111"
+community: "Split Script (tools)"
+location: "L385"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Picture_List_Catalog_5
+  - community/Split_Script_tools
 ---
 
 # .__init__()
 
 ## Connections
-- [[fake_ai]] - `method` [EXTRACTED]
+- [[Unqualify]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Picture_List_Catalog_5
+#graphify/code #graphify/EXTRACTED #community/Split_Script_tools

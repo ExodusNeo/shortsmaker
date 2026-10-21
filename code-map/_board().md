@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_full_scenes.py"
 type: "code"
-community: "Scene Cues & Word Timing (2)"
+community: "AI Calls & Quota Fallback (4)"
 location: "L197"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Scene_Cues__Word_Timing_2
+  - community/AI_Calls__Quota_Fallback_4
 ---
 
 # _board()
@@ -17,4 +17,4 @@ tags:
 - [[test_remotion_props_full()]] - `calls` [EXTRACTED]
 - [[test_sfx_full()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Scene_Cues__Word_Timing_2
+#graphify/code #graphify/EXTRACTED #community/AI_Calls__Quota_Fallback_4

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/audio_mix.py"
 type: "code"
-community: "Captions & TTS"
+community: "Captions & TTS (3)"
 location: "L161"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Captions__TTS
+  - community/Captions__TTS_3
 ---
 
 # make_sfx()
@@ -17,7 +17,7 @@ tags:
 - [[math]] - `calls` [EXTRACTED]
 - [[noise()_1]] - `contains` [EXTRACTED]
 - [[random]] - `calls` [EXTRACTED]
-- [[render()_2]] - `calls` [EXTRACTED]
+- [[render()]] - `calls` [EXTRACTED]
 - [[save()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Captions__TTS
+#graphify/code #graphify/EXTRACTED #community/Captions__TTS_3

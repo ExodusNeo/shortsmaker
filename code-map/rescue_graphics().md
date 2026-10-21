@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/picker.py"
 type: "code"
-community: "Story Sounds & Credits (2)"
+community: "AI Calls & Quota Fallback"
 location: "L225"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Story_Sounds__Credits_2
+  - community/AI_Calls__Quota_Fallback
 ---
 
 # rescue_graphics()
@@ -20,8 +20,8 @@ tags:
 - [[fix_short()]] - `calls` [EXTRACTED]
 - [[json]] - `calls` [EXTRACTED]
 - [[picker.py]] - `contains` [EXTRACTED]
-- [[render()_2]] - `calls` [EXTRACTED]
+- [[render()]] - `calls` [EXTRACTED]
 - [[test_rescue_respects_caps()]] - `calls` [EXTRACTED]
 - [[words_of()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Story_Sounds__Credits_2
+#graphify/code #graphify/EXTRACTED #community/AI_Calls__Quota_Fallback

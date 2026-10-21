@@ -1,20 +1,21 @@
 ---
 source_file: ""
 type: "code"
-community: "Invention Slots"
+community: "Footage Downloads & Crops"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Invention_Slots
+  - community/Footage_Downloads__Crops
 ---
 
 # Path
 
 ## Connections
-- [[approve_candidate()]] - `references` [EXTRACTED]
-- [[invent_component()]] - `references` [EXTRACTED]
-- [[invent_styles()]] - `references` [EXTRACTED]
-- [[reject_candidate()]] - `references` [EXTRACTED]
-- [[save_candidate()]] - `references` [EXTRACTED]
+- [[catalog_pool()]] - `references` [EXTRACTED]
+- [[contact_sheets()]] - `references` [EXTRACTED]
+- [[load_pool()]] - `references` [EXTRACTED]
+- [[pool_folder()]] - `references` [EXTRACTED]
+- [[prepare_topic()]] - `references` [EXTRACTED]
+- [[save_pool()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Invention_Slots
+#graphify/code #graphify/EXTRACTED #community/Footage_Downloads__Crops

@@ -1,17 +1,17 @@
 ---
-source_file: "tests/render_style.py"
+source_file: "shortsmaker/picture_pool.py"
 type: "code"
-community: "Look & Transition Cleaning"
-location: "L22"
+community: "Local AI Jobs & Clips"
+location: "L108"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Look__Transition_Cleaning
+  - community/Local_AI_Jobs__Clips
 ---
 
 # add()
 
 ## Connections
-- [[build()]] - `contains` [EXTRACTED]
+- [[gather_pool()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Look__Transition_Cleaning
+#graphify/code #graphify/EXTRACTED #community/Local_AI_Jobs__Clips

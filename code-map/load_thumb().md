@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/picture_pool.py"
 type: "code"
-community: "Pool Gathering"
+community: "Local AI Jobs & Clips"
 location: "L131"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/Pool_Gathering
+  - community/Local_AI_Jobs__Clips
 ---
 
 # load_thumb()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[gather_pool()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/INFERRED #community/Pool_Gathering
+#graphify/code #graphify/INFERRED #community/Local_AI_Jobs__Clips

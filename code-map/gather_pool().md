@@ -1,19 +1,19 @@
 ---
 source_file: "shortsmaker/picture_pool.py"
 type: "code"
-community: "Pool Gathering"
+community: "Local AI Jobs & Clips"
 location: "L99"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pool_Gathering
+  - community/Local_AI_Jobs__Clips
 ---
 
 # gather_pool()
 
 ## Connections
 - [[Candidate pictures (with preview `thumb` bytes) and sampled real-film frames…]] - `rationale_for` [EXTRACTED]
-- [[add()_1]] - `contains` [EXTRACTED]
+- [[add()]] - `contains` [EXTRACTED]
 - [[archive_images()]] - `calls` [EXTRACTED]
 - [[article_images()]] - `calls` [EXTRACTED]
 - [[choose_images()]] - `calls` [EXTRACTED]
@@ -30,4 +30,4 @@ tags:
 - [[test_pool_roundtrip()]] - `calls` [EXTRACTED]
 - [[words_of()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pool_Gathering
+#graphify/code #graphify/EXTRACTED #community/Local_AI_Jobs__Clips

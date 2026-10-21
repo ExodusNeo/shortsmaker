@@ -22,7 +22,7 @@ SORT file.name ASC
 ## Connections to other communities
 - 1 edge to [[_COMMUNITY_Picture List Catalog (3)]]
 - 1 edge to [[_COMMUNITY_Invention Slots]]
-- 1 edge to [[_COMMUNITY_Library Candidate Tests]]
+- 1 edge to [[_COMMUNITY_Style Tests]]
 
 ## Top bridge nodes
 - [[apply_look_scenes()]] - degree 4, connects to 2 communities

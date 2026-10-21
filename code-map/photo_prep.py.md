@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/photo_prep.py"
 type: "code"
-community: "Channel Profiles & CLI (2)"
+community: "Photo Cleanup"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Channel_Profiles__CLI_2
+  - community/Photo_Cleanup
 ---
 
 # photo_prep.py
@@ -25,4 +25,4 @@ tags:
 - [[to_vertical()]] - `contains` [EXTRACTED]
 - [[trim_borders()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Channel_Profiles__CLI_2
+#graphify/code #graphify/EXTRACTED #community/Photo_Cleanup

@@ -16,6 +16,6 @@ tags:
 - [[flash_alpha()]] - `calls` [EXTRACTED]
 - [[frame()]] - `calls` [EXTRACTED]
 - [[frame_render.py]] - `contains` [EXTRACTED]
-- [[render()_2]] - `calls` [EXTRACTED]
+- [[render()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Python_Frame_Renderer

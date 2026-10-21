@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/writing.py"
 type: "code"
-community: "Story Sounds & Credits (2)"
+community: "AI Calls & Quota Fallback"
 location: "L519"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Story_Sounds__Credits_2
+  - community/AI_Calls__Quota_Fallback
 ---
 
 # article_text()
@@ -20,4 +20,4 @@ tags:
 - [[wm_get()]] - `calls` [EXTRACTED]
 - [[writing.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Story_Sounds__Credits_2
+#graphify/code #graphify/EXTRACTED #community/AI_Calls__Quota_Fallback

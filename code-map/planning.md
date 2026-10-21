@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[dot-__enter__()_3]] - `method` [EXTRACTED]
-- [[dot-__exit__()_1]] - `method` [EXTRACTED]
+- [[dot-__exit__()_2]] - `method` [EXTRACTED]
 - [[dot-__init__()_1]] - `method` [EXTRACTED]
 - [[test_all_weak_returns_empty()]] - `calls` [EXTRACTED]
 - [[test_both_mode_pools_follow_reply_position()]] - `calls` [EXTRACTED]

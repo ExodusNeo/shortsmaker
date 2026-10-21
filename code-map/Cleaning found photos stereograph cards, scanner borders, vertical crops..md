@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/photo_prep.py"
 type: "rationale"
-community: "Channel Profiles & CLI (2)"
+community: "Photo Cleanup"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Channel_Profiles__CLI_2
+  - community/Photo_Cleanup
 ---
 
 # Cleaning found photos: stereograph cards, scanner borders, vertical crops.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[photo_prep.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Channel_Profiles__CLI_2
+#graphify/rationale #graphify/EXTRACTED #community/Photo_Cleanup

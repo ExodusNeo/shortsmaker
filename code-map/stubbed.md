@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[dot-__enter__()]] - `calls` [EXTRACTED]
 - [[dot-__enter__()_1]] - `method` [EXTRACTED]
-- [[dot-__exit__()_2]] - `method` [EXTRACTED]
+- [[dot-__exit__()_3]] - `method` [EXTRACTED]
 - [[dot-__init__()_3]] - `method` [EXTRACTED]
 - [[Replaces the network functions for one test; `calls` records the search queries.]] - `rationale_for` [EXTRACTED]
 - [[test_gather_pool_shape()]] - `calls` [EXTRACTED]

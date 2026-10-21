@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/style_lab.py"
 type: "rationale"
-community: "Library Candidate Tests"
+community: "Invention Slots"
 location: "L246"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Library_Candidate_Tests
+  - community/Invention_Slots
 ---
 
 # Saves an invention that made it into a finished Short as a candidate for the…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[save_candidate()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Library_Candidate_Tests
+#graphify/rationale #graphify/EXTRACTED #community/Invention_Slots

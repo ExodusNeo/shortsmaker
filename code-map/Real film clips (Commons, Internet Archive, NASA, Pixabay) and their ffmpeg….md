@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/footage.py"
 type: "rationale"
-community: "Local AI Jobs & Clips (2)"
+community: "Channel Profiles & CLI"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Local_AI_Jobs__Clips_2
+  - community/Channel_Profiles__CLI
 ---
 
 # Real film clips (Commons, Internet Archive, NASA, Pixabay) and their ffmpeg…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[footage.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Local_AI_Jobs__Clips_2
+#graphify/rationale #graphify/EXTRACTED #community/Channel_Profiles__CLI

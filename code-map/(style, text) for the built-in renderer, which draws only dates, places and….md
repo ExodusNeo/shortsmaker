@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/plan_rules.py"
 type: "rationale"
-community: "Full-Scene Rescue & Plan Cleaning"
+community: "Python Frame Renderer"
 location: "L291"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Full-Scene_Rescue__Plan_Cleaning
+  - community/Python_Frame_Renderer
 ---
 
 # (style, text) for the built-in renderer, which draws only dates, places and…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[fallback_graphic()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Full-Scene_Rescue__Plan_Cleaning
+#graphify/rationale #graphify/EXTRACTED #community/Python_Frame_Renderer

@@ -2,7 +2,7 @@
 source_file: "shortsmaker/llm.py"
 type: "code"
 community: "AI Calls & Quota Fallback"
-location: "L60"
+location: "L63"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[One headless Gemini turn. agy only takes the prompt inline on its command line…]] - `rationale_for` [EXTRACTED]
-- [[Path_4]] - `references` [EXTRACTED]
+- [[Path_1]] - `references` [EXTRACTED]
 - [[ask_ai()]] - `calls` [EXTRACTED]
 - [[gemini_model()]] - `calls` [EXTRACTED]
 - [[llm.py]] - `contains` [EXTRACTED]

@@ -12,7 +12,7 @@ tags:
 # full_props()
 
 ## Connections
-- [[Path_5]] - `references` [EXTRACTED]
+- [[Path_2]] - `references` [EXTRACTED]
 - [[The `full` object Remotion draws for scene i the plan's data, its word…]] - `rationale_for` [EXTRACTED]
 - [[motion.py]] - `contains` [EXTRACTED]
 - [[put()]] - `contains` [EXTRACTED]

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/audio_mix.py"
 type: "code"
-community: "Scene Cues & Word Timing (2)"
+community: "AI Calls & Quota Fallback (4)"
 location: "L265"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Scene_Cues__Word_Timing_2
+  - community/AI_Calls__Quota_Fallback_4
 ---
 
 # sfx_events()
@@ -16,9 +16,9 @@ tags:
 - [[audio_mix.py]] - `contains` [EXTRACTED]
 - [[pick()]] - `contains` [EXTRACTED]
 - [[random]] - `calls` [EXTRACTED]
-- [[render()_2]] - `calls` [EXTRACTED]
+- [[render()]] - `calls` [EXTRACTED]
 - [[test_sfx_full()]] - `calls` [EXTRACTED]
 - [[test_story_sound_wins_its_moment()]] - `calls` [EXTRACTED]
 - [[test_style_sounds()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Scene_Cues__Word_Timing_2
+#graphify/code #graphify/EXTRACTED #community/AI_Calls__Quota_Fallback_4

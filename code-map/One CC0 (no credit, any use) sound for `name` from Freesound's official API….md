@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/audio_mix.py"
 type: "rationale"
-community: "Captions & TTS"
+community: "Invention Slots"
 location: "L112"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Captions__TTS
+  - community/Invention_Slots
 ---
 
 # One CC0 (no credit, any use) sound for `name` from Freesound's official API:…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[freesound_fetch()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Captions__TTS
+#graphify/rationale #graphify/EXTRACTED #community/Invention_Slots

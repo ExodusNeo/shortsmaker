@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/review.py"
 type: "rationale"
-community: "Channel Profiles & CLI (2)"
+community: "Channel Profiles & CLI"
 location: "L100"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Channel_Profiles__CLI_2
+  - community/Channel_Profiles__CLI
 ---
 
 # Would a stranger scrolling the Shorts feed stop here? Stayed-to-watch is…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[first_second_check()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Channel_Profiles__CLI_2
+#graphify/rationale #graphify/EXTRACTED #community/Channel_Profiles__CLI

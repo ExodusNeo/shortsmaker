@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/motion.py"
 type: "code"
-community: "AI Calls & Quota Fallback"
+community: "AI Calls & Quota Fallback (2)"
 location: "L198"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AI_Calls__Quota_Fallback
+  - community/AI_Calls__Quota_Fallback_2
 ---
 
 # custom_rules()
@@ -18,4 +18,4 @@ tags:
 - [[motion.py]] - `contains` [EXTRACTED]
 - [[redraw_custom()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AI_Calls__Quota_Fallback
+#graphify/code #graphify/EXTRACTED #community/AI_Calls__Quota_Fallback_2

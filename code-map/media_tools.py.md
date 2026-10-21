@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/media_tools.py"
 type: "code"
-community: "Footage Downloads & Crops (2)"
+community: "Channel Profiles & CLI"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Footage_Downloads__Crops_2
+  - community/Channel_Profiles__CLI
 ---
 
 # media_tools.py
@@ -17,7 +17,7 @@ tags:
 - [[clock()]] - `contains` [EXTRACTED]
 - [[duration()]] - `contains` [EXTRACTED]
 - [[editplan.py]] - `imports_from` [EXTRACTED]
-- [[fetch()]] - `contains` [EXTRACTED]
+- [[fetch()_1]] - `contains` [EXTRACTED]
 - [[ffmpeg()]] - `contains` [EXTRACTED]
 - [[footage.py]] - `imports_from` [EXTRACTED]
 - [[gpu.py]] - `imports_from` [EXTRACTED]
@@ -38,4 +38,4 @@ tags:
 - [[video_encoder()]] - `contains` [EXTRACTED]
 - [[write_json()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Footage_Downloads__Crops_2
+#graphify/code #graphify/EXTRACTED #community/Channel_Profiles__CLI

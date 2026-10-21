@@ -17,7 +17,7 @@ tags:
 - [[gc]] - `imports` [EXTRACTED]
 - [[images()]] - `contains` [EXTRACTED]
 - [[json]] - `imports` [EXTRACTED]
-- [[main()_1]] - `contains` [EXTRACTED]
+- [[main()]] - `contains` [EXTRACTED]
 - [[numpy]] - `imports` [EXTRACTED]
 - [[parallax()]] - `contains` [EXTRACTED]
 - [[pathlib]] - `imports_from` [EXTRACTED]
@@ -27,7 +27,7 @@ tags:
 - [[t5_encoder()]] - `contains` [EXTRACTED]
 - [[time]] - `imports` [EXTRACTED]
 - [[torch]] - `imports` [EXTRACTED]
-- [[tts()_1]] - `contains` [EXTRACTED]
+- [[tts()]] - `contains` [EXTRACTED]
 - [[video()]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/GPU_Worker_genpy

@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "Captions & TTS"
+community: "Channel Profiles & CLI"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Captions__TTS
+  - community/Channel_Profiles__CLI
 ---
 
 # urllib_parse
@@ -18,4 +18,4 @@ tags:
 - [[seo.py]] - `imports` [EXTRACTED]
 - [[writing.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Captions__TTS
+#graphify/concept #graphify/EXTRACTED #community/Channel_Profiles__CLI

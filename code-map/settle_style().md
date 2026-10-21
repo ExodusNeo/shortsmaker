@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/plan_rules.py"
 type: "code"
-community: "Look & Transition Cleaning"
+community: "Look & Transition Cleaning (2)"
 location: "L197"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Look__Transition_Cleaning
+  - community/Look__Transition_Cleaning_2
 ---
 
 # settle_style()
@@ -18,4 +18,4 @@ tags:
 - [[plan_rules.py]] - `contains` [EXTRACTED]
 - [[write_scripts()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Look__Transition_Cleaning
+#graphify/code #graphify/EXTRACTED #community/Look__Transition_Cleaning_2

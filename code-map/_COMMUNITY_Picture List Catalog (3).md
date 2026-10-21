@@ -8,10 +8,10 @@ members: 17
 **Members:** 17 nodes
 
 ## Members
-- [[dot-__exit__()]] - code - tests/test_pictures_first.py
+- [[dot-__exit__()_1]] - code - tests/test_pictures_first.py
 - [[dot-__init__()_2]] - code - tests/test_pictures_first.py
 - [[Build a broad multi-source pool of images and real video footage (per-scene…]] - rationale - shortsmaker/picker.py
-- [[Path_9]] - code
+- [[Path_7]] - code
 - [[choose_images()]] - code - shortsmaker/picker.py
 - [[choose_images() with network stubbed; gather_pool returns `extra` (and records…]] - rationale - tests/test_pictures_first.py
 - [[picking]] - code - tests/test_pictures_first.py
@@ -34,23 +34,21 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 15 edges to [[_COMMUNITY_Picture List Catalog (2)]]
-- 3 edges to [[_COMMUNITY_Pool Gathering]]
-- 2 edges to [[_COMMUNITY_Entry Point, Logbook & Sounds]]
-- 1 edge to [[_COMMUNITY_Local AI Jobs & Clips]]
-- 1 edge to [[_COMMUNITY_Footage Downloads & Crops]]
-- 1 edge to [[_COMMUNITY_Local AI Jobs & Clips (2)]]
+- 14 edges to [[_COMMUNITY_Picture List Catalog (2)]]
+- 3 edges to [[_COMMUNITY_Local AI Jobs & Clips]]
+- 3 edges to [[_COMMUNITY_Footage Downloads & Crops]]
+- 2 edges to [[_COMMUNITY_Pool Gathering]]
+- 2 edges to [[_COMMUNITY_Invention Slots]]
 - 1 edge to [[_COMMUNITY_AI Calls & Quota Fallback]]
-- 1 edge to [[_COMMUNITY_Look & Transition Cleaning]]
-- 1 edge to [[_COMMUNITY_Scene Cues & Word Timing (2)]]
+- 1 edge to [[_COMMUNITY_Story Sounds & Credits (2)]]
+- 1 edge to [[_COMMUNITY_Footage Downloads & Crops (2) (3)]]
 - 1 edge to [[_COMMUNITY_Style Tests (2)]]
-- 1 edge to [[_COMMUNITY_Picture List Catalog (2) (2)]]
-- 1 edge to [[_COMMUNITY_Channel Profiles & CLI (2)]]
+- 1 edge to [[_COMMUNITY_Entry Point, Logbook & Sounds]]
 - 1 edge to [[_COMMUNITY_Channel Profiles & CLI]]
 
 ## Top bridge nodes
-- [[choose_images()]] - degree 22, connects to 12 communities
+- [[choose_images()]] - degree 22, connects to 9 communities
 - [[picking]] - degree 12, connects to 2 communities
+- [[planned_short()]] - degree 10, connects to 2 communities
 - [[still()]] - degree 5, connects to 2 communities
-- [[planned_short()]] - degree 10, connects to 1 community
 - [[scene()]] - degree 8, connects to 1 community

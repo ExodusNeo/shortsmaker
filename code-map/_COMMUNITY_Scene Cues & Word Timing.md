@@ -31,16 +31,16 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 4 edges to [[_COMMUNITY_Full-Scene Rescue & Plan Cleaning]]
+- 4 edges to [[_COMMUNITY_Channel Profiles & CLI]]
 - 4 edges to [[_COMMUNITY_AI Calls & Quota Fallback (4)]]
+- 1 edge to [[_COMMUNITY_Story Sounds & Credits (2)]]
+- 1 edge to [[_COMMUNITY_Local AI Jobs & Clips]]
 - 1 edge to [[_COMMUNITY_Python Frame Renderer]]
-- 1 edge to [[_COMMUNITY_Channel Profiles & CLI (2)]]
-- 1 edge to [[_COMMUNITY_Channel Profiles & CLI]]
 - 1 edge to [[_COMMUNITY_Scene Cues & Word Timing (3)]]
 
 ## Top bridge nodes
 - [[scene_cues()]] - degree 7, connects to 3 communities
 - [[full_cues()]] - degree 10, connects to 2 communities
+- [[spoken_span()]] - degree 5, connects to 2 communities
 - [[spoken_at()]] - degree 5, connects to 1 community
-- [[spoken_span()]] - degree 5, connects to 1 community
 - [[test_full_cues_leave_time_to_finish()]] - degree 3, connects to 1 community

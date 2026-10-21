@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "Local AI Jobs & Clips (2)"
+community: "Footage Downloads & Crops (2)"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Local_AI_Jobs__Clips_2
+  - community/Footage_Downloads__Crops_2
 ---
 
 # io
@@ -26,4 +26,4 @@ tags:
 - [[review.py]] - `imports` [EXTRACTED]
 - [[storyboard()]] - `calls` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Local_AI_Jobs__Clips_2
+#graphify/concept #graphify/EXTRACTED #community/Footage_Downloads__Crops_2

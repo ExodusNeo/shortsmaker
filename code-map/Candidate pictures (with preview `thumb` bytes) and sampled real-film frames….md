@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/picture_pool.py"
 type: "rationale"
-community: "Pool Gathering"
+community: "Local AI Jobs & Clips"
 location: "L101"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Pool_Gathering
+  - community/Local_AI_Jobs__Clips
 ---
 
 # Candidate pictures (with preview `thumb` bytes) and sampled real-film frames…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[gather_pool()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Pool_Gathering
+#graphify/rationale #graphify/EXTRACTED #community/Local_AI_Jobs__Clips

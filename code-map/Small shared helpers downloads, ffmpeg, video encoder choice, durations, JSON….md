@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/media_tools.py"
 type: "rationale"
-community: "Footage Downloads & Crops (2)"
+community: "Channel Profiles & CLI"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Footage_Downloads__Crops_2
+  - community/Channel_Profiles__CLI
 ---
 
 # Small shared helpers: downloads, ffmpeg, video encoder choice, durations, JSON…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[media_tools.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Footage_Downloads__Crops_2
+#graphify/rationale #graphify/EXTRACTED #community/Channel_Profiles__CLI

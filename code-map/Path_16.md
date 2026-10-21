@@ -1,18 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Footage Downloads & Crops (2)"
+community: "Channel Profiles & CLI (2)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Footage_Downloads__Crops_2
+  - community/Channel_Profiles__CLI_2
 ---
 
 # Path
 
 ## Connections
-- [[duration()]] - `references` [EXTRACTED]
-- [[ffmpeg()]] - `references` [EXTRACTED]
-- [[write_json()]] - `references` [EXTRACTED]
+- [[to_vertical()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Footage_Downloads__Crops_2
+#graphify/code #graphify/EXTRACTED #community/Channel_Profiles__CLI_2

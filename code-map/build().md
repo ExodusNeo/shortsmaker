@@ -1,20 +1,20 @@
 ---
 source_file: "tests/render_style.py"
 type: "code"
-community: "Look & Transition Cleaning"
+community: "Footage Downloads & Crops (2) (2)"
 location: "L19"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Look__Transition_Cleaning
+  - community/Footage_Downloads__Crops_2_2
 ---
 
 # build()
 
 ## Connections
-- [[add()]] - `contains` [EXTRACTED]
-- [[main()]] - `calls` [EXTRACTED]
+- [[add()_1]] - `contains` [EXTRACTED]
+- [[main()_2]] - `calls` [EXTRACTED]
 - [[render_style.py]] - `contains` [EXTRACTED]
 - [[style_library()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Look__Transition_Cleaning
+#graphify/code #graphify/EXTRACTED #community/Footage_Downloads__Crops_2_2

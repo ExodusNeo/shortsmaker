@@ -15,7 +15,7 @@ tags:
 - [[Final H.264 encode NVENC on the GPU when available (frees the CPU), else x264.]] - `rationale_for` [EXTRACTED]
 - [[local_clips()]] - `calls` [EXTRACTED]
 - [[media_tools.py]] - `contains` [EXTRACTED]
-- [[render()_2]] - `calls` [EXTRACTED]
+- [[render()]] - `calls` [EXTRACTED]
 - [[subprocess]] - `calls` [EXTRACTED]
 - [[test_encoder_cache_lives_with_video_encoder()]] - `calls` [EXTRACTED]
 - [[veo_handoff()]] - `calls` [EXTRACTED]

@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_pictures_first.py"
 type: "code"
-community: "Footage Downloads & Crops"
+community: "Picture List Catalog (2)"
 location: "L79"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Footage_Downloads__Crops
+  - community/Picture_List_Catalog_2
 ---
 
 # test_prune_cache_handles_pools()
@@ -15,4 +15,4 @@ tags:
 - [[prune_cache()]] - `calls` [EXTRACTED]
 - [[test_pictures_first.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Footage_Downloads__Crops
+#graphify/code #graphify/EXTRACTED #community/Picture_List_Catalog_2

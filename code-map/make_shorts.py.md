@@ -14,6 +14,6 @@ tags:
 ## Connections
 - [[Make ready-to-upload YouTube Shorts with no API keys. Claude Code (headless)…]] - `rationale_for` [EXTRACTED]
 - [[cli.py]] - `imports_from` [EXTRACTED]
-- [[main()_4]] - `imports` [EXTRACTED]
+- [[main()_3]] - `imports` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Entry_Point_Logbook__Sounds

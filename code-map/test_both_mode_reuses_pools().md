@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_pictures_first.py"
 type: "code"
-community: "Picture List Catalog (2)"
+community: "Picture List Catalog"
 location: "L264"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Picture_List_Catalog_2
+  - community/Picture_List_Catalog
 ---
 
 # test_both_mode_reuses_pools()
@@ -20,4 +20,4 @@ tags:
 - [[test_pictures_first.py]] - `contains` [EXTRACTED]
 - [[write_scripts()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Picture_List_Catalog_2
+#graphify/code #graphify/EXTRACTED #community/Picture_List_Catalog

@@ -2,7 +2,7 @@
 source_file: "shortsmaker/llm.py"
 type: "rationale"
 community: "AI Calls & Quota Fallback"
-location: "L95"
+location: "L99"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED

@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "Entry Point, Logbook & Sounds"
+community: "Channel Profiles & CLI"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Entry_Point_Logbook__Sounds
+  - community/Channel_Profiles__CLI
 ---
 
 # re
@@ -31,7 +31,7 @@ tags:
 - [[log_short()]] - `calls` [EXTRACTED]
 - [[logbook.py]] - `imports` [EXTRACTED]
 - [[logbook_results()]] - `calls` [EXTRACTED]
-- [[main()_4]] - `calls` [EXTRACTED]
+- [[main()_3]] - `calls` [EXTRACTED]
 - [[mark_details()]] - `calls` [EXTRACTED]
 - [[motion.py]] - `imports` [EXTRACTED]
 - [[music_gain()]] - `calls` [EXTRACTED]
@@ -39,7 +39,7 @@ tags:
 - [[plan_rules.py]] - `imports` [EXTRACTED]
 - [[quality_check()]] - `calls` [EXTRACTED]
 - [[qwen_voice.py]] - `imports` [EXTRACTED]
-- [[render()_2]] - `calls` [EXTRACTED]
+- [[render()]] - `calls` [EXTRACTED]
 - [[review.py]] - `imports` [EXTRACTED]
 - [[save_candidate()]] - `calls` [EXTRACTED]
 - [[seo.py]] - `imports` [EXTRACTED]
@@ -55,4 +55,4 @@ tags:
 - [[vault_refresh()]] - `calls` [EXTRACTED]
 - [[words_of()]] - `calls` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Entry_Point_Logbook__Sounds
+#graphify/concept #graphify/EXTRACTED #community/Channel_Profiles__CLI

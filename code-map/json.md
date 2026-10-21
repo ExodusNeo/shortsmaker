@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "Entry Point, Logbook & Sounds"
+community: "Invention Slots"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Entry_Point_Logbook__Sounds
+  - community/Invention_Slots
 ---
 
 # json
@@ -37,8 +37,8 @@ tags:
 - [[load_pool()]] - `calls` [EXTRACTED]
 - [[load_state()]] - `calls` [EXTRACTED]
 - [[local_job()]] - `calls` [EXTRACTED]
-- [[main()_2]] - `calls` [EXTRACTED]
-- [[main()_3]] - `calls` [EXTRACTED]
+- [[main()_4]] - `calls` [EXTRACTED]
+- [[main()_1]] - `calls` [EXTRACTED]
 - [[media_tools.py]] - `imports` [EXTRACTED]
 - [[moss_images()]] - `calls` [EXTRACTED]
 - [[motion.py]] - `imports` [EXTRACTED]
@@ -74,4 +74,4 @@ tags:
 - [[write_style_index()]] - `calls` [EXTRACTED]
 - [[writing.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Entry_Point_Logbook__Sounds
+#graphify/concept #graphify/EXTRACTED #community/Invention_Slots

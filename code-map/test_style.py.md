@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_style.py"
 type: "code"
-community: "Library Candidate Tests"
+community: "Style Tests"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Library_Candidate_Tests
+  - community/Style_Tests
 ---
 
 # test_style.py
@@ -67,4 +67,4 @@ tags:
 - [[with_fakes()]] - `contains` [EXTRACTED]
 - [[writing.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Library_Candidate_Tests
+#graphify/code #graphify/EXTRACTED #community/Style_Tests

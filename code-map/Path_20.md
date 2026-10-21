@@ -1,16 +1,20 @@
 ---
 source_file: ""
 type: "code"
-community: "AI Calls & Quota Fallback (4)"
+community: "Invention Slots"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AI_Calls__Quota_Fallback_4
+  - community/Invention_Slots
 ---
 
 # Path
 
 ## Connections
-- [[_review_state()]] - `references` [EXTRACTED]
+- [[approve_candidate()]] - `references` [EXTRACTED]
+- [[invent_component()]] - `references` [EXTRACTED]
+- [[invent_styles()]] - `references` [EXTRACTED]
+- [[reject_candidate()]] - `references` [EXTRACTED]
+- [[save_candidate()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AI_Calls__Quota_Fallback_4
+#graphify/code #graphify/EXTRACTED #community/Invention_Slots

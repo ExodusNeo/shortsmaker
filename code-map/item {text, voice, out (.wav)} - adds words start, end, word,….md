@@ -12,6 +12,6 @@ tags:
 # item: {"text", "voice", "out" (.wav)} -> adds "words": [[start, end, word],…
 
 ## Connections
-- [[tts()_1]] - `rationale_for` [EXTRACTED]
+- [[tts()]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/GPU_Worker_genpy

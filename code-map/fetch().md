@@ -1,27 +1,18 @@
 ---
-source_file: "shortsmaker/media_tools.py"
+source_file: "tests/test_full_scenes.py"
 type: "code"
-community: "Local AI Jobs & Clips"
-location: "L9"
+community: "AI Calls & Quota Fallback (4)"
+location: "L768"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Local_AI_Jobs__Clips
+  - community/AI_Calls__Quota_Fallback_4
 ---
 
 # fetch()
 
 ## Connections
-- [[archive_films()]] - `calls` [EXTRACTED]
-- [[archive_images()]] - `calls` [EXTRACTED]
-- [[film_frames()]] - `calls` [EXTRACTED]
-- [[get_image()]] - `calls` [EXTRACTED]
-- [[media_tools.py]] - `contains` [EXTRACTED]
-- [[nasa_films()]] - `calls` [EXTRACTED]
-- [[nasa_search()]] - `calls` [EXTRACTED]
-- [[ov_get()]] - `calls` [EXTRACTED]
-- [[pixabay_films()]] - `calls` [EXTRACTED]
-- [[search_suggestions()]] - `calls` [EXTRACTED]
-- [[wm_get()]] - `calls` [EXTRACTED]
+- [[_tone_wav()]] - `calls` [EXTRACTED]
+- [[test_story_sound_library()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/Local_AI_Jobs__Clips
+#graphify/code #graphify/EXTRACTED #community/AI_Calls__Quota_Fallback_4

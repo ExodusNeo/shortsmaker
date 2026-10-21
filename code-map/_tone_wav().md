@@ -12,7 +12,7 @@ tags:
 # _tone_wav()
 
 ## Connections
-- [[fetch()_1]] - `calls` [EXTRACTED]
+- [[fetch()]] - `calls` [EXTRACTED]
 - [[test_full_scenes.py]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/AI_Calls__Quota_Fallback_4

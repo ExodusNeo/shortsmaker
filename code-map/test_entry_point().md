@@ -2,7 +2,7 @@
 source_file: "tests/test_package.py"
 type: "code"
 community: "AI Calls & Quota Fallback"
-location: "L64"
+location: "L95"
 tags:
   - graphify/code
   - graphify/EXTRACTED

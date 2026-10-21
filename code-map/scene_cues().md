@@ -16,7 +16,7 @@ tags:
 - [[editplan.py]] - `contains` [EXTRACTED]
 - [[full_cues()]] - `calls` [EXTRACTED]
 - [[person_card()]] - `calls` [EXTRACTED]
-- [[render()_2]] - `calls` [EXTRACTED]
+- [[render()]] - `calls` [EXTRACTED]
 - [[spoken_at()]] - `calls` [EXTRACTED]
 - [[test_counter_finishes_before_it_leaves()]] - `calls` [EXTRACTED]
 

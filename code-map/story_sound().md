@@ -12,12 +12,12 @@ tags:
 # story_sound()
 
 ## Connections
-- [[Path]] - `references` [EXTRACTED]
+- [[Path_12]] - `references` [EXTRACTED]
 - [[The sound file for a story sound the owner's own file in…]] - `rationale_for` [EXTRACTED]
 - [[audio_mix.py]] - `contains` [EXTRACTED]
 - [[ffmpeg()]] - `calls` [EXTRACTED]
 - [[re]] - `calls` [EXTRACTED]
-- [[render()_2]] - `calls` [EXTRACTED]
+- [[render()]] - `calls` [EXTRACTED]
 - [[test_story_sound_library()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Captions__TTS

@@ -1,21 +1,20 @@
 ---
 source_file: ""
 type: "code"
-community: "Story Sounds & Credits (2)"
+community: "AI Calls & Quota Fallback (2)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Story_Sounds__Credits_2
+  - community/AI_Calls__Quota_Fallback_2
 ---
 
 # Path
 
 ## Connections
-- [[apply_review_fixes()]] - `references` [EXTRACTED]
-- [[first_second_check()]] - `references` [EXTRACTED]
-- [[paint_new()]] - `references` [EXTRACTED]
-- [[quality_check()]] - `references` [EXTRACTED]
-- [[storyboard()]] - `references` [EXTRACTED]
-- [[visual_review()]] - `references` [EXTRACTED]
+- [[code_custom_scenes()]] - `references` [EXTRACTED]
+- [[full_props()]] - `references` [EXTRACTED]
+- [[look_and_fix()]] - `references` [EXTRACTED]
+- [[preview_custom()]] - `references` [EXTRACTED]
+- [[preview_sheet()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Story_Sounds__Credits_2
+#graphify/code #graphify/EXTRACTED #community/AI_Calls__Quota_Fallback_2

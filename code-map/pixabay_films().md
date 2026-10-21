@@ -1,22 +1,22 @@
 ---
 source_file: "shortsmaker/footage.py"
 type: "code"
-community: "Local AI Jobs & Clips (2)"
+community: "Footage Downloads & Crops (2) (2)"
 location: "L54"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Local_AI_Jobs__Clips_2
+  - community/Footage_Downloads__Crops_2_2
 ---
 
 # pixabay_films()
 
 ## Connections
 - [[Pixabay stock video free to use in videos, no credit needed (Pixabay Content…]] - `rationale_for` [EXTRACTED]
-- [[fetch()]] - `calls` [EXTRACTED]
+- [[fetch()_1]] - `calls` [EXTRACTED]
 - [[footage.py]] - `contains` [EXTRACTED]
 - [[hashlib]] - `calls` [EXTRACTED]
 - [[json]] - `calls` [EXTRACTED]
 - [[time]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Local_AI_Jobs__Clips_2
+#graphify/code #graphify/EXTRACTED #community/Footage_Downloads__Crops_2_2

@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Library Candidate Tests"
+community: "Picture List Catalog (3)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Library_Candidate_Tests
+  - community/Picture_List_Catalog_3
 ---
 
 # Path
 
 ## Connections
-- [[candidate_in()]] - `references` [EXTRACTED]
+- [[choose_images()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Library_Candidate_Tests
+#graphify/code #graphify/EXTRACTED #community/Picture_List_Catalog_3

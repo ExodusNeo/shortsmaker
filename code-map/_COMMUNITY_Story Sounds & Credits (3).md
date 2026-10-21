@@ -9,7 +9,7 @@ members: 4
 
 ## Members
 - [[Exact-narration caption file to upload in YouTube Studio (searchable, unlike…]] - rationale - shortsmaker/seo.py
-- [[Path_14]] - code
+- [[Path_18]] - code
 - [[srt()]] - code - shortsmaker/seo.py
 - [[ts()]] - code - shortsmaker/seo.py
 
@@ -21,7 +21,7 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 1 edge to [[_COMMUNITY_Channel Profiles & CLI (2)]]
+- 1 edge to [[_COMMUNITY_Story Sounds & Credits (2)]]
 - 1 edge to [[_COMMUNITY_Channel Profiles & CLI]]
 
 ## Top bridge nodes

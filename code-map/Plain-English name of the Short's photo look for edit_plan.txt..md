@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/editplan.py"
 type: "rationale"
-community: "Story Sounds & Credits (4)"
+community: "Invention Slots"
 location: "L10"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Story_Sounds__Credits_4
+  - community/Invention_Slots
 ---
 
 # Plain-English name of the Short's photo look for edit_plan.txt.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[look_text()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Story_Sounds__Credits_4
+#graphify/rationale #graphify/EXTRACTED #community/Invention_Slots

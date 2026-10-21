@@ -1,17 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Local AI Jobs & Clips (2)"
+community: "Story Sounds & Credits (2)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Local_AI_Jobs__Clips_2
+  - community/Story_Sounds__Credits_2
 ---
 
 # Path
 
 ## Connections
-- [[film_piece()]] - `references` [EXTRACTED]
-- [[shot_span()]] - `references` [EXTRACTED]
+- [[edit_plan()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Local_AI_Jobs__Clips_2
+#graphify/code #graphify/EXTRACTED #community/Story_Sounds__Credits_2

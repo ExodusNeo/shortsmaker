@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/audio_mix.py"
 type: "rationale"
-community: "Full-Scene Rescue & Plan Cleaning (2)"
+community: "Channel Profiles & CLI"
 location: "L94"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Full-Scene_Rescue__Plan_Cleaning_2
+  - community/Channel_Profiles__CLI
 ---
 
 # A planned story sound {"word", "sound"}, validated: the word must be spoken in…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[clean_sound()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Full-Scene_Rescue__Plan_Cleaning_2
+#graphify/rationale #graphify/EXTRACTED #community/Channel_Profiles__CLI

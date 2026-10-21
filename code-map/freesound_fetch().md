@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/audio_mix.py"
 type: "code"
-community: "Captions & TTS"
+community: "Invention Slots"
 location: "L111"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Captions__TTS
+  - community/Invention_Slots
 ---
 
 # freesound_fetch()
@@ -16,4 +16,4 @@ tags:
 - [[audio_mix.py]] - `contains` [EXTRACTED]
 - [[json]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Captions__TTS
+#graphify/code #graphify/EXTRACTED #community/Invention_Slots

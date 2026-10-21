@@ -12,7 +12,7 @@ tags:
 # shot()
 
 ## Connections
-- [[Image]] - `references` [EXTRACTED]
+- [[Image_2]] - `references` [EXTRACTED]
 - [[One frame of slow Ken Burns motion; affine sampling is sub-pixel so it never…]] - `rationale_for` [EXTRACTED]
 - [[frame()]] - `calls` [EXTRACTED]
 - [[frame_render.py]] - `contains` [EXTRACTED]

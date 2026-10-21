@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/channel_profiles.py"
 type: "code"
-community: "Channel Profiles & CLI"
+community: "Entry Point, Logbook & Sounds"
 location: "L54"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Channel_Profiles__CLI
+  - community/Entry_Point_Logbook__Sounds
 ---
 
 # ask_number()
@@ -18,4 +18,4 @@ tags:
 - [[fix_short()]] - `calls` [EXTRACTED]
 - [[library_menu()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Channel_Profiles__CLI
+#graphify/code #graphify/EXTRACTED #community/Entry_Point_Logbook__Sounds

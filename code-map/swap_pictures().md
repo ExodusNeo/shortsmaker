@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/review.py"
 type: "code"
-community: "Story Sounds & Credits (2)"
+community: "AI Calls & Quota Fallback (4) (2)"
 location: "L136"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Story_Sounds__Credits_2
+  - community/AI_Calls__Quota_Fallback_4_2
 ---
 
 # swap_pictures()
@@ -17,4 +17,4 @@ tags:
 - [[review.py]] - `contains` [EXTRACTED]
 - [[test_swap_pictures_trades_real_pictures()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Story_Sounds__Credits_2
+#graphify/code #graphify/EXTRACTED #community/AI_Calls__Quota_Fallback_4_2

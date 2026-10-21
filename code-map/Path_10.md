@@ -1,20 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: "Python Frame Renderer (2)"
+community: "Footage Downloads & Crops (2) (3)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Python_Frame_Renderer_2
+  - community/Footage_Downloads__Crops_2_3
 ---
 
 # Path
 
 ## Connections
-- [[dot-__init__()]] - `references` [EXTRACTED]
-- [[fills_frame()]] - `references` [EXTRACTED]
-- [[frame_maker()]] - `references` [EXTRACTED]
-- [[graphic_low()]] - `references` [EXTRACTED]
-- [[thumbnail()]] - `references` [EXTRACTED]
+- [[duration()]] - `references` [EXTRACTED]
+- [[ffmpeg()]] - `references` [EXTRACTED]
+- [[write_json()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Python_Frame_Renderer_2
+#graphify/code #graphify/EXTRACTED #community/Footage_Downloads__Crops_2_3

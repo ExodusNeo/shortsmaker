@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/picture_pool.py"
 type: "rationale"
-community: "Footage Downloads & Crops"
+community: "Channel Profiles & CLI"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Footage_Downloads__Crops
+  - community/Channel_Profiles__CLI
 ---
 
 # The pictures gathered for a topic before writing, their catalog, cache and…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[picture_pool.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Footage_Downloads__Crops
+#graphify/rationale #graphify/EXTRACTED #community/Channel_Profiles__CLI

@@ -1,11 +1,11 @@
 ---
 type: community
-members: 18
+members: 19
 ---
 
 # Invention Slots (2)
 
-**Members:** 18 nodes
+**Members:** 19 nodes
 
 ## Members
 - [[Puts the empty placeholders back into remotionsrcstylegenerated (after a…]] - rationale - shortsmaker/style_lab.py
@@ -18,6 +18,7 @@ members: 18
 - [[run()]] - code - tests/test_style.py
 - [[run()_1]] - code - tests/test_style.py
 - [[style_placeholders()]] - code - shortsmaker/style_lab.py
+- [[test_candidate_names_unique_across_kinds()]] - code - tests/test_style.py
 - [[test_failed_invention_keeps_the_others()]] - code - tests/test_style.py
 - [[test_good_look_check_skips_the_extra_compile()]] - code - tests/test_style.py
 - [[test_invention_compile_failure_uses_fallback()]] - code - tests/test_style.py
@@ -35,14 +36,15 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 9 edges to [[_COMMUNITY_Library Candidate Tests]]
-- 9 edges to [[_COMMUNITY_Invention Slots]]
-- 2 edges to [[_COMMUNITY_Entry Point, Logbook & Sounds]]
+- 11 edges to [[_COMMUNITY_Invention Slots]]
+- 9 edges to [[_COMMUNITY_Style Tests]]
 - 2 edges to [[_COMMUNITY_Skins & Remotion Render]]
-- 2 edges to [[_COMMUNITY_Pool Gathering]]
+- 2 edges to [[_COMMUNITY_Picture List Catalog (2) (2)]]
+- 1 edge to [[_COMMUNITY_Channel Profiles & CLI]]
+- 1 edge to [[_COMMUNITY_Library Candidate Tests]]
 
 ## Top bridge nodes
-- [[style_placeholders()]] - degree 10, connects to 3 communities
+- [[test_candidate_names_unique_across_kinds()]] - degree 4, connects to 3 communities
 - [[test_good_look_check_skips_the_extra_compile()]] - degree 4, connects to 3 communities
 - [[restore_style_slots()]] - degree 8, connects to 2 communities
 - [[with_fakes()]] - degree 8, connects to 2 communities

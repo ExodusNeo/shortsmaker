@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "Picture List Catalog (2) (2)"
+community: "Voice Worker (qwen_voice)"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Picture_List_Catalog_2_2
+  - community/Voice_Worker_qwen_voice
 ---
 
 # sys
@@ -29,4 +29,4 @@ tags:
 - [[test_qwen_voice.py]] - `imports` [EXTRACTED]
 - [[test_style.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Picture_List_Catalog_2_2
+#graphify/concept #graphify/EXTRACTED #community/Voice_Worker_qwen_voice

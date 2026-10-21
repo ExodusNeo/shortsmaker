@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "Channel Profiles & CLI (2)"
+community: "Channel Profiles & CLI"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Channel_Profiles__CLI_2
+  - community/Channel_Profiles__CLI
 ---
 
 # pil
@@ -25,4 +25,4 @@ tags:
 - [[short_render.py]] - `imports_from` [EXTRACTED]
 - [[test_full_scenes.py]] - `imports_from` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Channel_Profiles__CLI_2
+#graphify/concept #graphify/EXTRACTED #community/Channel_Profiles__CLI

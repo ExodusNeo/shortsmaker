@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/image_sources.py"
 type: "rationale"
-community: "Commons & Archive Sources"
+community: "Local AI Jobs & Clips"
 location: "L85"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Commons__Archive_Sources
+  - community/Local_AI_Jobs__Clips
 ---
 
 # (ok, credit). Public domain/CC0 need no credit; all other Wikimedia/Wikipedia…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[usable_license()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Commons__Archive_Sources
+#graphify/rationale #graphify/EXTRACTED #community/Local_AI_Jobs__Clips

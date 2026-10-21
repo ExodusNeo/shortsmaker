@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_style.py"
 type: "code"
-community: "Scene Cues & Word Timing (2)"
+community: "Style Tests"
 location: "L176"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Scene_Cues__Word_Timing_2
+  - community/Style_Tests
 ---
 
 # sc()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[test_style_sounds()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Scene_Cues__Word_Timing_2
+#graphify/code #graphify/EXTRACTED #community/Style_Tests

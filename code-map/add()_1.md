@@ -1,17 +1,17 @@
 ---
-source_file: "shortsmaker/picture_pool.py"
+source_file: "tests/render_style.py"
 type: "code"
-community: "Pool Gathering"
-location: "L108"
+community: "Footage Downloads & Crops (2) (2)"
+location: "L22"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pool_Gathering
+  - community/Footage_Downloads__Crops_2_2
 ---
 
 # add()
 
 ## Connections
-- [[gather_pool()]] - `contains` [EXTRACTED]
+- [[build()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pool_Gathering
+#graphify/code #graphify/EXTRACTED #community/Footage_Downloads__Crops_2_2

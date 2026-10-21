@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "Channel Profiles & CLI"
+community: "Invention Slots"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Channel_Profiles__CLI
+  - community/Invention_Slots
 ---
 
 # os
@@ -22,4 +22,4 @@ tags:
 - [[test_pictures_first.py]] - `imports` [EXTRACTED]
 - [[veo_handoff()]] - `calls` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Channel_Profiles__CLI
+#graphify/concept #graphify/EXTRACTED #community/Invention_Slots

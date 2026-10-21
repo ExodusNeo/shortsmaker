@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/config.py"
 type: "code"
-community: "Skins & Remotion Render"
+community: "Full-Scene Rescue & Plan Cleaning"
 location: "L99"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Skins__Remotion_Render
+  - community/Full-Scene_Rescue__Plan_Cleaning
 ---
 
 # short_skin()
@@ -18,4 +18,4 @@ tags:
 - [[render_remotion()]] - `calls` [EXTRACTED]
 - [[test_clean_full_custom_and_skin()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Skins__Remotion_Render
+#graphify/code #graphify/EXTRACTED #community/Full-Scene_Rescue__Plan_Cleaning

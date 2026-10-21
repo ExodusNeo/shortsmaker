@@ -2,20 +2,17 @@
 source_file: "tests/test_pictures_first.py"
 type: "code"
 community: "Picture List Catalog"
-location: "L218"
+location: "L456"
 tags:
   - graphify/code
-  - graphify/INFERRED
+  - graphify/EXTRACTED
   - community/Picture_List_Catalog
 ---
 
 # prepare()
 
 ## Connections
-- [[passing()]] - `indirect_call` [INFERRED]
-- [[test_both_mode_pools_follow_reply_position()]] - `indirect_call` [INFERRED]
-- [[test_dropped_topic_pool_removed()]] - `indirect_call` [INFERRED]
-- [[test_prompts_carry_picture_list()]] - `indirect_call` [INFERRED]
-- [[test_weak_topic_swapped_for_backup()]] - `indirect_call` [INFERRED]
+- [[passing()]] - `calls` [EXTRACTED]
+- [[test_both_mode_pools_follow_reply_position()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/Picture_List_Catalog
+#graphify/code #graphify/EXTRACTED #community/Picture_List_Catalog

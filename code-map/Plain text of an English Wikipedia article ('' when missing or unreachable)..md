@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/writing.py"
 type: "rationale"
-community: "Story Sounds & Credits (2)"
+community: "AI Calls & Quota Fallback"
 location: "L520"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Story_Sounds__Credits_2
+  - community/AI_Calls__Quota_Fallback
 ---
 
 # Plain text of an English Wikipedia article ('' when missing or unreachable).
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[article_text()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Story_Sounds__Credits_2
+#graphify/rationale #graphify/EXTRACTED #community/AI_Calls__Quota_Fallback

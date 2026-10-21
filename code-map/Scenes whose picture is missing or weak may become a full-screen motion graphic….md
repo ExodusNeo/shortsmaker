@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/picker.py"
 type: "rationale"
-community: "Story Sounds & Credits (2)"
+community: "AI Calls & Quota Fallback"
 location: "L226"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Story_Sounds__Credits_2
+  - community/AI_Calls__Quota_Fallback
 ---
 
 # Scenes whose picture is missing or weak may become a full-screen motion graphic…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[rescue_graphics()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Story_Sounds__Credits_2
+#graphify/rationale #graphify/EXTRACTED #community/AI_Calls__Quota_Fallback

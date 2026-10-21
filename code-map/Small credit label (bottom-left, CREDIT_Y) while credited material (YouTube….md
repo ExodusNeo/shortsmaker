@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/image_sources.py"
 type: "rationale"
-community: "Python Frame Renderer (2)"
+community: "Local AI Jobs & Clips"
 location: "L223"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Python_Frame_Renderer_2
+  - community/Local_AI_Jobs__Clips
 ---
 
 # Small credit label (bottom-left, CREDIT_Y) while credited material (YouTube…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[credit_tag_image()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Python_Frame_Renderer_2
+#graphify/rationale #graphify/EXTRACTED #community/Local_AI_Jobs__Clips

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/channel_profiles.py"
 type: "code"
-community: "AI Calls & Quota Fallback"
+community: "Entry Point, Logbook & Sounds"
 location: "L132"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AI_Calls__Quota_Fallback
+  - community/Entry_Point_Logbook__Sounds
 ---
 
 # seed_ideas()
@@ -17,4 +17,4 @@ tags:
 - [[channel_profiles.py]] - `contains` [EXTRACTED]
 - [[trend_research()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AI_Calls__Quota_Fallback
+#graphify/code #graphify/EXTRACTED #community/Entry_Point_Logbook__Sounds

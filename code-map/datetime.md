@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "Channel Profiles & CLI"
+community: "Entry Point, Logbook & Sounds"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Channel_Profiles__CLI
+  - community/Entry_Point_Logbook__Sounds
 ---
 
 # datetime
@@ -14,4 +14,4 @@ tags:
 - [[channel_profiles.py]] - `imports_from` [EXTRACTED]
 - [[cli.py]] - `imports_from` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Channel_Profiles__CLI
+#graphify/concept #graphify/EXTRACTED #community/Entry_Point_Logbook__Sounds

@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "Entry Point, Logbook & Sounds (2)"
+community: "Voice Worker (qwen_voice)"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Entry_Point_Logbook__Sounds_2
+  - community/Voice_Worker_qwen_voice
 ---
 
 # tempfile
@@ -17,4 +17,4 @@ tags:
 - [[test_package.py]] - `imports` [EXTRACTED]
 - [[test_pictures_first.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Entry_Point_Logbook__Sounds_2
+#graphify/concept #graphify/EXTRACTED #community/Voice_Worker_qwen_voice

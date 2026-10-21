@@ -2,7 +2,7 @@
 source_file: "shortsmaker/llm.py"
 type: "code"
 community: "AI Calls & Quota Fallback"
-location: "L94"
+location: "L97"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[Headless planner call (BRAIN, or `brain` Claude or Gemini) that returns parsed…]] - `rationale_for` [EXTRACTED]
-- [[Path_4]] - `references` [EXTRACTED]
+- [[Path_1]] - `references` [EXTRACTED]
 - [[catalog_pool()]] - `calls` [EXTRACTED]
 - [[choose_images()]] - `calls` [EXTRACTED]
 - [[code_custom_scenes()]] - `calls` [EXTRACTED]
@@ -33,6 +33,8 @@ tags:
 - [[run_agy()]] - `calls` [EXTRACTED]
 - [[seed_ideas()]] - `calls` [EXTRACTED]
 - [[seo_pass()]] - `calls` [EXTRACTED]
+- [[test_claude_pinned_to_opus_high()]] - `calls` [EXTRACTED]
+- [[test_gemini_reviews_get_the_main_model_bulk_pictures_flash()]] - `calls` [EXTRACTED]
 - [[test_quota_fallback_both_ways()]] - `calls` [EXTRACTED]
 - [[test_session_shared()]] - `calls` [EXTRACTED]
 - [[visual_review()]] - `calls` [EXTRACTED]

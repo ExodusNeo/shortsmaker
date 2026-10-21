@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "Captions & TTS"
+community: "Python Frame Renderer"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Captions__TTS
+  - community/Python_Frame_Renderer
 ---
 
 # math
@@ -16,4 +16,4 @@ tags:
 - [[frame_render.py]] - `imports` [EXTRACTED]
 - [[make_sfx()]] - `calls` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Captions__TTS
+#graphify/concept #graphify/EXTRACTED #community/Python_Frame_Renderer

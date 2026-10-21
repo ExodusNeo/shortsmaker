@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/picker.py"
 type: "code"
-community: "Scene Cues & Word Timing (2)"
+community: "Local AI Jobs & Clips"
 location: "L182"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Scene_Cues__Word_Timing_2
+  - community/Local_AI_Jobs__Clips
 ---
 
 # full_pictures()
@@ -18,4 +18,4 @@ tags:
 - [[picker.py]] - `contains` [EXTRACTED]
 - [[test_board_pictures_attached()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Scene_Cues__Word_Timing_2
+#graphify/code #graphify/EXTRACTED #community/Local_AI_Jobs__Clips

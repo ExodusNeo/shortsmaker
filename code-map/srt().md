@@ -13,8 +13,8 @@ tags:
 
 ## Connections
 - [[Exact-narration caption file to upload in YouTube Studio (searchable, unlike…]] - `rationale_for` [EXTRACTED]
-- [[Path_14]] - `references` [EXTRACTED]
-- [[render()_2]] - `calls` [EXTRACTED]
+- [[Path_18]] - `references` [EXTRACTED]
+- [[render()]] - `calls` [EXTRACTED]
 - [[seo.py]] - `contains` [EXTRACTED]
 - [[ts()]] - `contains` [EXTRACTED]
 

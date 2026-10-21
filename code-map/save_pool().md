@@ -1,18 +1,18 @@
 ---
 source_file: "shortsmaker/picture_pool.py"
 type: "code"
-community: "Picture List Catalog (2)"
+community: "Footage Downloads & Crops"
 location: "L170"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Picture_List_Catalog_2
+  - community/Footage_Downloads__Crops
 ---
 
 # save_pool()
 
 ## Connections
-- [[Path_1]] - `references` [EXTRACTED]
+- [[Path_8]] - `references` [EXTRACTED]
 - [[pic_short()]] - `calls` [EXTRACTED]
 - [[picture_pool.py]] - `contains` [EXTRACTED]
 - [[planned_short()]] - `calls` [EXTRACTED]
@@ -26,4 +26,4 @@ tags:
 - [[test_prompts_carry_picture_list()]] - `calls` [EXTRACTED]
 - [[write_json()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Picture_List_Catalog_2
+#graphify/code #graphify/EXTRACTED #community/Footage_Downloads__Crops

@@ -1,20 +1,20 @@
 ---
 source_file: ""
 type: "code"
-community: "Gemini Image Painting"
+community: "Captions & TTS"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Gemini_Image_Painting
+  - community/Captions__TTS
 ---
 
 # Path
 
 ## Connections
-- [[ink_silhouette()]] - `references` [EXTRACTED]
-- [[make_paper()]] - `references` [EXTRACTED]
-- [[paint_instead()]] - `references` [EXTRACTED]
-- [[redraw_custom()]] - `references` [EXTRACTED]
-- [[render_remotion()]] - `references` [EXTRACTED]
+- [[captions()_1]] - `references` [EXTRACTED]
+- [[music_gain()]] - `references` [EXTRACTED]
+- [[speak()]] - `references` [EXTRACTED]
+- [[story_sound()]] - `references` [EXTRACTED]
+- [[tts()_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Gemini_Image_Painting
+#graphify/code #graphify/EXTRACTED #community/Captions__TTS

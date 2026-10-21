@@ -13,11 +13,11 @@ tags:
 
 ## Connections
 - [[Automatic checks on the finished Short, using ffmpeg's own detectors in one…]] - `rationale_for` [EXTRACTED]
-- [[Path_2]] - `references` [EXTRACTED]
+- [[Path_5]] - `references` [EXTRACTED]
 - [[clock()]] - `calls` [EXTRACTED]
 - [[length_plan()]] - `calls` [EXTRACTED]
 - [[re]] - `calls` [EXTRACTED]
-- [[render()_2]] - `calls` [EXTRACTED]
+- [[render()]] - `calls` [EXTRACTED]
 - [[review.py]] - `contains` [EXTRACTED]
 - [[subprocess]] - `calls` [EXTRACTED]
 - [[where()]] - `contains` [EXTRACTED]

@@ -2,7 +2,7 @@
 source_file: "shortsmaker/llm.py"
 type: "code"
 community: "AI Calls & Quota Fallback"
-location: "L54"
+location: "L57"
 tags:
   - graphify/code
   - graphify/EXTRACTED

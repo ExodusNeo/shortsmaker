@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/style_lab.py"
 type: "code"
-community: "Look & Transition Cleaning"
+community: "Invention Slots"
 location: "L14"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Look__Transition_Cleaning
+  - community/Invention_Slots
 ---
 
 # style_library()
@@ -23,7 +23,7 @@ tags:
 - [[direct_scripts()]] - `calls` [EXTRACTED]
 - [[json]] - `calls` [EXTRACTED]
 - [[look_text()]] - `calls` [EXTRACTED]
-- [[main()_4]] - `calls` [EXTRACTED]
+- [[main()_3]] - `calls` [EXTRACTED]
 - [[save_candidate()]] - `calls` [EXTRACTED]
 - [[style_lab.py]] - `contains` [EXTRACTED]
 - [[style_rules()]] - `calls` [EXTRACTED]
@@ -33,4 +33,4 @@ tags:
 - [[test_write_style_index_is_deterministic()]] - `calls` [EXTRACTED]
 - [[write_style_index()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Look__Transition_Cleaning
+#graphify/code #graphify/EXTRACTED #community/Invention_Slots

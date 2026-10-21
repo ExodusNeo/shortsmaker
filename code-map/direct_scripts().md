@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/writing.py"
 type: "code"
-community: "Footage Downloads & Crops"
+community: "Invention Slots"
 location: "L354"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Footage_Downloads__Crops
+  - community/Invention_Slots
 ---
 
 # direct_scripts()
@@ -20,4 +20,4 @@ tags:
 - [[write_scripts()]] - `calls` [EXTRACTED]
 - [[writing.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Footage_Downloads__Crops
+#graphify/code #graphify/EXTRACTED #community/Invention_Slots

@@ -12,7 +12,7 @@ tags:
 # local_clips()
 
 ## Connections
-- [[Path_15]] - `references` [EXTRACTED]
+- [[Path]] - `references` [EXTRACTED]
 - [[Real motion for every scene with a picture scenes Claude matched to archival…]] - `rationale_for` [EXTRACTED]
 - [[cover_crop()]] - `calls` [EXTRACTED]
 - [[ffmpeg()]] - `calls` [EXTRACTED]
@@ -20,7 +20,7 @@ tags:
 - [[gpu.py]] - `contains` [EXTRACTED]
 - [[local_job()]] - `calls` [EXTRACTED]
 - [[motion_prompt()]] - `calls` [EXTRACTED]
-- [[render()_2]] - `calls` [EXTRACTED]
+- [[render()]] - `calls` [EXTRACTED]
 - [[shot_span()]] - `calls` [EXTRACTED]
 - [[veo_handoff()]] - `calls` [EXTRACTED]
 - [[video_encoder()]] - `calls` [EXTRACTED]

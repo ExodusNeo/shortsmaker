@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "Captions & TTS"
+community: "Channel Profiles & CLI"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Captions__TTS
+  - community/Channel_Profiles__CLI
 ---
 
 # wave
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[audio_mix.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Captions__TTS
+#graphify/concept #graphify/EXTRACTED #community/Channel_Profiles__CLI
