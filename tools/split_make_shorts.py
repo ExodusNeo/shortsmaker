@@ -474,28 +474,29 @@ def prove(src: str, mods: dict[str, str], ranges, overrides, session, line_overr
 
 # ---- commands -----------------------------------------------------------------------------------------------------
 
-def original() -> str:
-    return subprocess.run(["git", "show", f"{BASELINE}:make_shorts.py"], cwd=ROOT, capture_output=True, text=True,
+def original(path: str = "make_shorts.py") -> str:
+    return subprocess.run(["git", "show", f"{BASELINE}:{path}"], cwd=ROOT, capture_output=True, text=True,
                           encoding="utf-8", check=True).stdout
 
 
 def split() -> None:
     src = original()
     mods = split_source(src, RANGES, OVERRIDES, SESSION, LINE_OVERRIDES, fix_root=True, continued=CONTINUED)
-    tests = [(ROOT / "tests" / f).read_text(encoding="utf-8") for f in TEST_FILES]
+    tests = [original(f"tests/{f}") for f in TEST_FILES]  # as they were: the rewritten ones use the module names
     problems = prove(src, mods, RANGES, OVERRIDES, SESSION, LINE_OVERRIDES, tests)
     if problems:
         print("\n".join(problems))
         raise SystemExit(f"{len(problems)} problem(s); nothing written")
     PKG.mkdir(exist_ok=True)
+    lf = {"encoding": "utf-8", "newline": "\n"}  # LF like the rest of the project (Windows would write CRLF)
     (PKG / "__init__.py").write_text('"""ShortsMaker: make ready-to-upload YouTube Shorts. Entry point: make_shorts.py."""\n',
-                                     encoding="utf-8")
+                                     **lf)
     for m, s in mods.items():
-        (PKG / f"{m}.py").write_text(s, encoding="utf-8")
+        (PKG / f"{m}.py").write_text(s, **lf)
     doc = ast.get_docstring(ast.parse(src))
     (ROOT / "make_shorts.py").write_text(
         f'"""{doc}\n\nThe code lives in the shortsmaker/ package; this file is what run.bat, fix.bat and library.bat run.\n"""\n'
-        "from shortsmaker.cli import main\n\nif __name__ == \"__main__\":\n    main()\n", encoding="utf-8")
+        "from shortsmaker.cli import main\n\nif __name__ == \"__main__\":\n    main()\n", **lf)
     for m in sorted(mods, key=lambda k: -len(mods[k].splitlines())):
         print(f"  {m + '.py':<22}{len(mods[m].splitlines()):>5} lines")
     print(f"proofs OK: {len(mods)} modules written")
@@ -545,7 +546,7 @@ def rewrite_tests() -> None:
     if bad:
         raise SystemExit("\n".join(bad))
     for path, s in out.items():
-        path.write_text(s, encoding="utf-8")
+        path.write_text(s, encoding="utf-8", newline="\n")
 
 
 TOY = '''import json
