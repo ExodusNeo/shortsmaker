@@ -13,6 +13,9 @@ from shortsmaker import session
 from shortsmaker.config import ROOT
 
 
+# Pinned, not left to the CLI's defaults (the lean call skips the owner's settings), so no task can quietly get a
+# weaker model. High is the highest effort the owner's Claude plan allows (owner, 2026-10-21).
+CLAUDE_MODEL, CLAUDE_EFFORT = "opus", "high"
 GEMINI_FALLBACK = "gemini-3.8-flash-high"
 _gemini_model: str | None = None
 _argon_exhausted: bool = False  # set True for the rest of this run if Argon returns RESOURCE_EXHAUSTED
@@ -91,11 +94,13 @@ def run_agy(prompt: str, folder: Path, timeout: int = 900, model: str | None = N
     return r.stdout or said
 
 
-def ask_ai(prompt: str, fatal: bool = True, read_dir: Path | None = None, brain: str | None = None) -> dict | None:
+def ask_ai(prompt: str, fatal: bool = True, read_dir: Path | None = None, brain: str | None = None,
+           bulk: bool = False) -> dict | None:
     """Headless planner call (BRAIN, or `brain`: Claude or Gemini) that returns parsed JSON; with fatal=False, None
     on failure. Either agent automatically falls back to the other on failure or when out of credits/quota
     (and remembers exhausted quota in NO_QUOTA so later steps don't wait on the empty account). With read_dir,
-    the AI may look at the images in that folder."""
+    the AI may look at the images in that folder; `bulk` marks a job reading dozens of them, which Gemini runs on
+    Flash (on Argon it would spend the small weekly quota in one Short)."""
     first = brain or session.BRAIN
     second = "gemini" if first == "claude" else "claude"
     order = [w for w in (first, second) if w not in session.NO_QUOTA] or [first, second]
@@ -107,12 +112,13 @@ def ask_ai(prompt: str, fatal: bool = True, read_dir: Path | None = None, brain:
             continue
         for attempt in range(2):
             if who == "gemini":
-                out = run_agy(prompt, read_dir or ROOT / "agy_tasks", model=GEMINI_FALLBACK if read_dir else None)  # pictures: Flash
+                out = run_agy(prompt, read_dir or ROOT / "agy_tasks", model=GEMINI_FALLBACK if bulk else None)
             else:
                 # Lean call: no personal plugins, hooks or skill list (the owner's interactive setup has ~20
                 # plugins/skills and output-rewriting hooks; a JSON-only planner call needs none of them), always
                 # started in ROOT so per-Short work folders don't each become a Claude Code project.
-                cmd = [exe, "-p", "--setting-sources", "project,local", "--disable-slash-commands"] + (
+                cmd = [exe, "-p", "--setting-sources", "project,local", "--disable-slash-commands",
+                       "--model", CLAUDE_MODEL, "--effort", CLAUDE_EFFORT] + (
                     ["--allowedTools", "Read", "--add-dir", str(read_dir)] if read_dir else [])
                 try:
                     r = subprocess.run(cmd, input=prompt, capture_output=True, text=True, encoding="utf-8",

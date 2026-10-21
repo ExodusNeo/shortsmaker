@@ -123,7 +123,7 @@ are moved out of the subject's way.
 The candidates are numbered on these contact sheets. Open and look at every sheet:
 {sheet_list}
 For reference, their file titles: {json.dumps(titles, ensure_ascii=False)}""",
-                      fatal=False, read_dir=work / "sheets")
+                      fatal=False, read_dir=work / "sheets", bulk=True)
     if data is None:
         print("    visual check failed, picking by file title instead")
         data = llm.ask_ai(f"{rules}\nCandidates (number: file title): {json.dumps(titles, ensure_ascii=False)}",

@@ -36,7 +36,7 @@ def test_session_shared():
 def test_fake_reaches_callers():
     gen = config.REMOTION / "src" / "full" / "generated" / "Custom0.tsx"
     saved, old_ask, calls = gen.read_bytes(), llm.ask_ai, []  # bytes: put it back exactly (git sees CRLF changes)
-    llm.ask_ai = lambda prompt, fatal=True, read_dir=None, brain=None: calls.append(prompt) or {"code": None}
+    llm.ask_ai = lambda prompt, fatal=True, read_dir=None, brain=None, bulk=False: calls.append(prompt) or {"code": None}
     try:
         with tempfile.TemporaryDirectory() as d:
             short = {"title": "T", "scenes": [{"narration": "One, then two, then three.",
@@ -49,6 +49,37 @@ def test_fake_reaches_callers():
     finally:
         llm.ask_ai = old_ask
         gen.write_bytes(saved)
+
+
+def test_claude_pinned_to_opus_high():
+    import subprocess
+    assert llm.CLAUDE_MODEL == "opus" and llm.CLAUDE_EFFORT in ("high", "xhigh", "max"), "never below Opus at high"
+    old = session.BRAIN, set(session.NO_QUOTA), subprocess.run, shutil.which
+    seen = []
+    session.BRAIN, session.NO_QUOTA = "claude", set()
+    subprocess.run = lambda cmd, **kw: seen.append(cmd) or type("R", (), {"stdout": '{"ok": 1}', "stderr": ""})()
+    shutil.which = lambda name: name
+    try:
+        assert llm.ask_ai("plan this") == {"ok": 1}
+    finally:
+        session.BRAIN, session.NO_QUOTA, subprocess.run, shutil.which = old
+    cmd = seen[0]
+    assert cmd[cmd.index("--model") + 1] == "opus" and cmd[cmd.index("--effort") + 1] == "high", cmd
+
+
+def test_gemini_reviews_get_the_main_model_bulk_pictures_flash():
+    old = session.BRAIN, set(session.NO_QUOTA), llm.run_agy, shutil.which
+    models = []
+    session.BRAIN, session.NO_QUOTA = "gemini", set()
+    llm.run_agy = lambda prompt, folder, timeout=900, model=None: models.append(model) or '{"ok": 1}'
+    shutil.which = lambda name: name
+    try:
+        with tempfile.TemporaryDirectory() as d:
+            llm.ask_ai("review these frames", read_dir=Path(d))
+            llm.ask_ai("pick from 40 pictures", read_dir=Path(d), bulk=True)
+    finally:
+        session.BRAIN, session.NO_QUOTA, llm.run_agy, shutil.which = old
+    assert models == [None, llm.GEMINI_FALLBACK], models  # None = gemini_model(): Argon when the account has it
 
 
 def test_encoder_cache_lives_with_video_encoder():

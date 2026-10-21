@@ -104,7 +104,7 @@ def plan_with(director_reply: dict) -> tuple[dict, str]:
     """write_scripts with every AI/network step faked; the director answers `director_reply`. Returns (short, prompt)."""
     seen = {}
 
-    def ask(prompt, fatal=True, read_dir=None, brain=None):
+    def ask(prompt, fatal=True, read_dir=None, brain=None, bulk=False):
         if "You choose stories" in prompt:
             return {"shorts": [{"topic": "Emu War", "subject": "Emu War", "wiki_articles": ["Emu War"], "search_terms": []}]}
         if "You write YouTube Shorts narration" in prompt:
@@ -194,7 +194,7 @@ def test_fact_check_sees_new_graphics():
                     "graphic": {"style": "kinetic", "text": "THREE SOLDIERS", "trigger": "three"}}]}
     seen = {}
 
-    def ask(prompt, fatal=True, read_dir=None, brain=None):
+    def ask(prompt, fatal=True, read_dir=None, brain=None, bulk=False):
         seen["p"] = prompt
         return {"fixes": [{"scene": 2, "drop_graphic": True, "why": "it was two soldiers"}]}
 
@@ -227,7 +227,7 @@ def with_fakes(codes: list, tsc=None, fn=None):
     """Runs fn() with ask_ai answering `codes` in turn, tsc_check returning `tsc`, and no preview render."""
     replies = iter(codes)
     saved = {k: getattr(owner(k), k) for k in ("ask_ai", "tsc_check", "preview_sheet")}
-    llm.ask_ai = lambda prompt, fatal=True, read_dir=None, brain=None: {"code": next(replies, None)}
+    llm.ask_ai = lambda prompt, fatal=True, read_dir=None, brain=None, bulk=False: {"code": next(replies, None)}
     motion.tsc_check, motion.preview_sheet = (lambda: tsc), (lambda *a, **k: None)
     try:
         return fn()

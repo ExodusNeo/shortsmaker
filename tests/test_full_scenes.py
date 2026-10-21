@@ -143,7 +143,7 @@ def _fake_planning(monkey_reply_full):
     lines[1:6] = [x.rstrip(".") + " on the old line near the station that year." for x in lines[1:6]]  # long enough for a full
     seen = {}
 
-    def ask(prompt, fatal=True, read_dir=None, brain=None):
+    def ask(prompt, fatal=True, read_dir=None, brain=None, bulk=False):
         if "You choose stories" in prompt:
             return {"shorts": [{"topic": "Jack", "subject": "Jack", "wiki_articles": ["Jack (baboon)"], "search_terms": []}]}
         if "You write YouTube Shorts narration" in prompt:
@@ -183,7 +183,7 @@ def test_fact_check_drops_full():
                     {"narration": "Jack stayed.", "graphic": None, "person": None,
                      "full": {"type": "number", "value": 5, "label": "YEARS"}}]}
     saved = llm.ask_ai
-    llm.ask_ai = lambda prompt, fatal=True, read_dir=None, brain=None: (
+    llm.ask_ai = lambda prompt, fatal=True, read_dir=None, brain=None, bulk=False: (
         {"story_holds": True, "fixes": [{"scene": 1, "narration": "Wide went to Uitenhage.", "drop_full": True, "why": "no"},
                                         {"scene": 2, "full_fix": {"type": "number", "value": 9, "label": "YEARS"}, "why": "9"}]}
         if '"full"' in prompt else {})
@@ -225,7 +225,7 @@ def test_rescue_respects_caps():
     short["scenes"][2]["full"] = j(2)
     short["scenes"][5]["full"] = j(5)
     saved = llm.ask_ai
-    llm.ask_ai = lambda prompt, fatal=True, read_dir=None, brain=None: {"scenes": [
+    llm.ask_ai = lambda prompt, fatal=True, read_dir=None, brain=None, bulk=False: {"scenes": [
         {"scene": 4, "full": j(4)},  # next to scene 3 (index 2): refused
         {"scene": 1, "full": j(1)},  # the hook: refused
         {"scene": 7, "full": {"type": "board", "items": [], "links": []}},  # boards need photos: refused
@@ -239,7 +239,7 @@ def test_rescue_respects_caps():
         sc["full"] = None
     short["scenes"][1]["full"], short["scenes"][3]["full"] = j(1), j(3)
     short["scenes"][5]["graphic"] = {"style": "date", "text": "1881"}
-    llm.ask_ai = lambda prompt, fatal=True, read_dir=None, brain=None: {"scenes": [{"scene": 6, "full": j(6)}, {"scene": 7, "full": j(7)}]}
+    llm.ask_ai = lambda prompt, fatal=True, read_dir=None, brain=None, bulk=False: {"scenes": [{"scene": 6, "full": j(6)}, {"scene": 7, "full": j(7)}]}
     try:
         got = picker.rescue_graphics(short, [5, 6], {})
     finally:
@@ -372,7 +372,7 @@ def test_auto_fix_graphic():
             return [2]
 
         saved = picker.rescue_graphics, llm.ask_ai
-        picker.rescue_graphics, llm.ask_ai = fake_rescue, (lambda prompt, fatal=True, read_dir=None, brain=None: None)
+        picker.rescue_graphics, llm.ask_ai = fake_rescue, (lambda prompt, fatal=True, read_dir=None, brain=None, bulk=False: None)
         try:
             notes = review.apply_review_fixes(st, work, {2: ("graphic", "weak"), 4: ("repaint", "blurry"), 5: ("graphic", "dull"),
                                                     6: ("repaint", "a"), 1: ("repaint", "b")})
@@ -391,7 +391,7 @@ def test_rewrite_paint_prompts():
     short = {"topic": "Mike the headless chicken", "scenes": scenes}
     seen = []
 
-    def ask(prompt, fatal=True, read_dir=None, brain=None):
+    def ask(prompt, fatal=True, read_dir=None, brain=None, bulk=False):
         seen.append(prompt)
         return {"prompts": [{"scene": 2, "ai_image": "A newsboy holds up a magazine reading \"LIFE\", gouache."},
                             {"scene": 3, "ai_image": "old 2"},  # unchanged: refused
@@ -460,7 +460,7 @@ def test_code_custom_scenes_fallback():
         scenes = [{"start": 4.0, "end": 9.0, "full": {"type": "custom", "slot": 0, "kind": "flow", "skin": "hud",
                                                       "seed": 1, "title": "THE LOOPHOLE", "cues": [4.5, 6.0, 7.5], "photos": []}}]
         old_ask = llm.ask_ai
-        llm.ask_ai = lambda prompt, fatal=True, read_dir=None, brain=None: {"code": "not valid typescript"}
+        llm.ask_ai = lambda prompt, fatal=True, read_dir=None, brain=None, bulk=False: {"code": "not valid typescript"}
         try:
             motion.code_custom_scenes(short, scenes, work)
             assert (work / "Custom0.tsx").exists()
@@ -524,7 +524,7 @@ def test_review_redraws_custom():
         st = _review_state(work)
         prompts = []
 
-        def ask(prompt, fatal=True, read_dir=None, brain=None):
+        def ask(prompt, fatal=True, read_dir=None, brain=None, bulk=False):
             prompts.append(prompt)
             if "were rejected" in prompt:
                 return {"prompts": [{"scene": 6, "ai_image": "A sharper new picture, charcoal drawing on toned paper."}]}
@@ -550,7 +550,7 @@ def test_redraw_failure_paints():
         work = Path(d)
         st = _review_state(work)
         saved = llm.ask_ai, motion.tsc_check
-        llm.ask_ai, motion.tsc_check = (lambda prompt, fatal=True, read_dir=None, brain=None: {"code": "export const Custom1 = (;"}), \
+        llm.ask_ai, motion.tsc_check = (lambda prompt, fatal=True, read_dir=None, brain=None, bulk=False: {"code": "export const Custom1 = (;"}), \
             (lambda: "error TS1109: Expression expected.")
         try:
             notes = review.apply_review_fixes(st, work, {3: ("repaint", "broken")})
@@ -619,7 +619,7 @@ def test_look_check_fixes_code():
         Image.new("RGB", (10, 10)).save(sheet)
         asked = []
 
-        def ask(prompt, fatal=True, read_dir=None, brain=None):
+        def ask(prompt, fatal=True, read_dir=None, brain=None, bulk=False):
             asked.append((prompt, read_dir))
             return {"ok": False, "problems": ["the stamp covers card 3"], "code": GOOD_TSX}
 
@@ -628,9 +628,9 @@ def test_look_check_fixes_code():
         try:
             fixed = motion.look_and_fix({"title": "T", "palette": "gold"}, {"start": 0, "end": 5, "full": {}}, 0, GOOD_TSX.replace("'X'", "'Y'"), work)
             assert fixed == GOOD_TSX and asked[0][1] == sheet.parent and "the stage" in asked[0][0].lower()
-            llm.ask_ai = lambda prompt, fatal=True, read_dir=None, brain=None: {"ok": True}
+            llm.ask_ai = lambda prompt, fatal=True, read_dir=None, brain=None, bulk=False: {"ok": True}
             assert motion.look_and_fix({"title": "T", "palette": "gold"}, {"start": 0, "end": 5, "full": {}}, 0, "CODE", work) == "CODE"
-            llm.ask_ai = lambda prompt, fatal=True, read_dir=None, brain=None: {"ok": False, "code": GOOD_TSX.replace("'../toolkit'", "'fs'")}
+            llm.ask_ai = lambda prompt, fatal=True, read_dir=None, brain=None, bulk=False: {"ok": False, "code": GOOD_TSX.replace("'../toolkit'", "'fs'")}
             assert motion.look_and_fix({"title": "T", "palette": "gold"}, {"start": 0, "end": 5, "full": {}}, 0, "CODE", work) == "CODE"  # a rule-breaking fix is refused
             motion.preview_custom = lambda short, sc, slot, work: None  # preview failed: nothing to look at, code unchanged
             assert motion.look_and_fix({"title": "T", "palette": "gold"}, {"start": 0, "end": 5, "full": {}}, 0, "CODE", work) == "CODE"

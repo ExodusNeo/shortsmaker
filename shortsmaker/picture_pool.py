@@ -230,12 +230,12 @@ For EVERY number give:
   6% and bottom 20% cropped); a printed caption naming a different event, place or person.
 For reference, their file titles: {json.dumps(titles, ensure_ascii=False)}
 Reply with ONLY JSON: {{"pictures": [{{"n": 1, "what": "...", "era_ok": true, "sharp": 3, "hook": false, "reject": null}}]}}"""
-    data = llm.ask_ai(prompt, fatal=False, read_dir=folder / "sheets")
+    data = llm.ask_ai(prompt, fatal=False, read_dir=folder / "sheets", bulk=True)
     out = catalog_entries(data, len(cands))
     if data is not None and not out:  # valid JSON but no usable entry: ask_ai only falls back on broken JSON
         other = "gemini" if session.LAST_AI == "claude" else "claude"
         print(f"  {session.LAST_AI.capitalize()}'s picture list was empty, asking {other.capitalize()} instead")
-        out = catalog_entries(llm.ask_ai(prompt, fatal=False, read_dir=folder / "sheets", brain=other), len(cands))
+        out = catalog_entries(llm.ask_ai(prompt, fatal=False, read_dir=folder / "sheets", brain=other, bulk=True), len(cands))
     if not out:
         sys.exit(f'Stopped: no picture list for "{s["topic"]}". Neither Claude nor Gemini gave a usable answer '
                  "(their messages are above). Run again later.")

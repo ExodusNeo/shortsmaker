@@ -24,7 +24,7 @@ def run_check(reply, n=4):
     """first_second_check with ffmpeg and the AI faked; returns its result."""
     old_ff, old_ask = media_tools.ffmpeg, llm.ask_ai
     media_tools.ffmpeg = lambda *a, cwd: (Path(cwd) / a[-1]).write_bytes(b"jpg")
-    llm.ask_ai = lambda prompt, fatal=True, read_dir=None, brain=None: reply
+    llm.ask_ai = lambda prompt, fatal=True, read_dir=None, brain=None, bulk=False: reply
     try:
         with tempfile.TemporaryDirectory() as d:
             board = Path(d) / "storyboard.jpg"
