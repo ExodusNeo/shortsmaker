@@ -70,12 +70,12 @@ Made: older ShortsMaker version, before the logbook (folder no longer kept) | Le
 Topic: Violet Jessop, "Miss Unsinkable": the stewardess on the Olympic collision, the Titanic and the Britannic mine | Story shape: -
 
 Posted on: 2026-10-13
-Views: 1,316
+Views: 1,315
 Likes: 21
 Comments: 1
 Subscribers gained: 3
-Stayed to watch (%): 50.1
-Average % viewed: 52.3
+Stayed to watch (%): 50.2
+Average % viewed: 52.2
 My notes: Read from YouTube Studio by Claude on 2026-10-19. Avg view time 0:28 of 0:54. 4 views in the last 48h: feed stopped.
 
 ## Lord Byron's Pet Bear: How He Outsmarted Cambridge
@@ -83,7 +83,7 @@ Made: older ShortsMaker version, before the logbook (folder no longer kept) | Le
 Topic: Lord Byron kept a tame bear at Trinity College, Cambridge in 1807 because the rules only banned dogs | Story shape: -
 
 Posted on: 2026-10-14
-Views: 1,302
+Views: 1,294
 Likes: 10
 Comments: 1
 Subscribers gained: 0
@@ -110,7 +110,7 @@ Topic: The Great Stink of 1858: London's sewage-filled Thames smelled so bad tha
 Hook line: "Parliament considered fleeing London over one smell." | Hook title: SO BAD THEY ALMOST LEFT
 
 Posted on: 2026-10-15
-Views: 346
+Views: 344
 Likes: 7
 Comments: 1
 Subscribers gained: 2
@@ -166,11 +166,11 @@ Topic: In 1859 Joshua Norton, a San Francisco businessman ruined by a failed bet
 Hook line: "A broke man crowned himself Emperor of America." | Hook title: EVEN THE POLICE SALUTED HIM
 
 Posted on: 2026-10-16
-Views: 1,223
+Views: 1,219
 Likes: 14
 Comments: 1
 Subscribers gained: 0
-Stayed to watch (%): 58.5
+Stayed to watch (%): 58.6
 Average % viewed: 88.9
 My notes: Read from YouTube Studio by Claude on 2026-10-19. Avg view time 0:44 of 0:50, still the best hold at 1,000+ views. Feed has stopped: 3 views in the last 48h, all from search.
 
@@ -180,10 +180,10 @@ Topic: Jack the baboon, who worked as a railway signalman in South Africa in the
 Hook line: "A railway once hired a baboon." | Hook title: PAID IN BEER
 
 Posted on: 2026-10-17
-Views: 1,353
+Views: 1,354
 Likes: 15
 Comments: 0
-Subscribers gained: 2
+Subscribers gained: 3
 Stayed to watch (%): 28.6
 Average % viewed: 43.3
 My notes: Read from YouTube Studio by Claude on 2026-10-19. Avg view time 0:16 of 0:37. 160 views in the last 48h (slowing). Shorts feed 89.4%, search 10.0%. Likes went 16 -> 15.
@@ -208,12 +208,12 @@ Topic: The 1932 Great Emu War: Australia sent soldiers with machine guns to driv
 Hook line: "Australia's army once lost a war to birds." | Hook title: SOLDIERS RETREATED
 
 Posted on: 2026-10-18
-Views: 971
-Likes: 12
+Views: 975
+Likes: 13
 Comments: 0
 Subscribers gained: 0
-Stayed to watch (%): 32.5
-Average % viewed: 44.1
+Stayed to watch (%): 33.7
+Average % viewed: 44.2
 My notes: Read from YouTube Studio by Claude on 2026-10-20. Avg view time 0:17 of 0:41. 923 of its views came in the first 5 hours, then it slowed (18 more in a day). Shorts feed 96.8%, search 2.8%. Studio: a part kept viewers watching longer than usual.
 
 ## The Titanic Baker Saved by One Drink
@@ -264,13 +264,13 @@ Topic: The Ghost Army of WWII: about 1,100 American artists, designers and sound
 Hook line: "Germany feared an army that didn't exist." | Hook title: FAKE GHOST DIVISIONS
 
 Posted on: 2026-10-19
-Views: 23
-Likes: 0
+Views: 34
+Likes: 2
 Comments: 0
 Subscribers gained: 0
-Stayed to watch (%):
-Average % viewed: 41.8
-My notes: Read from YouTube Studio by Claude on 2026-10-20. The feed never picked it up: 23 views in its first day, more from search (56.5%) than the Shorts feed (43.5%). Retention still processing. Opened on a museum's inflatable tank (see HANDOFF opening-picture rule).
+Stayed to watch (%): 52.0
+Average % viewed: 52.5
+My notes: Read from YouTube Studio by Claude on 2026-10-20. The feed never picked it up: 23 views in its first day, more from search (56.5%) than the Shorts feed (43.5%). Opened on a museum's inflatable tank (see HANDOFF opening-picture rule).
 
 ## Hiroo Onoda Was Found by a Yeti Hunter
 Made: 2026-10-19 | Written by: Claude | Length: 0:44.1 | Folder: output\strange-history\2026-10-19_hiroo-onoda-was-found-by-a-yeti-hunter
@@ -278,13 +278,13 @@ Topic: Hiroo Onoda, a Japanese intelligence officer, kept hiding in the jungle o
 Hook line: "This soldier's World War Two lasted until 1974." | Hook title: STILL FIGHTING DECADES LATER?
 
 Posted on: 2026-10-19
-Views: 1,207
+Views: 1,217
 Likes: 11
 Comments: 0
 Subscribers gained: 3
-Stayed to watch (%):
-Average % viewed: 47.7
-My notes: Read from YouTube Studio by Claude on 2026-10-20. Its feed push took it from 317 to 1,207 views in its first day; +3 subscribers, the most of any Short so far. Shorts feed 97.1%, search 2.2%. Stayed-to-watch still processing.
+Stayed to watch (%): 44.5
+Average % viewed: 47.4
+My notes: Read from YouTube Studio by Claude on 2026-10-20. Its feed push took it from 317 to 1,207 views in its first day; +3 subscribers, the most of any Short so far. Shorts feed 97.1%, search 2.2%.
 
 ## Great Molasses Flood: The Leak They Hid
 Made: 2026-10-19 | Written by: Claude | Length: 0:44.5 | Folder: output\strange-history\2026-10-19_great-molasses-flood-the-leak-they-hid
@@ -305,25 +305,25 @@ Made: 2026-10-20 | Written by: Claude | Length: 0:32.3 | Folder: output\strange-
 Topic: Wojtek, a Syrian brown bear cub adopted by Polish soldiers in 1942, grew up drinking beer and wrestling his comrades. The army wouldn't let pets onto its transport ship, so he was officially enlisted as a private with a rank and serial number. At Monte Cassino he helped carry heavy ammunition crates. The twist is that he spent his retirement in Edinburgh Zoo, where old Polish veterans climbed into his enclosure to visit and tossed him cigarettes, which he ate. | Story shape: chain of unlikely events
 Hook line: "One ship rule forced this bear to enlist." | Hook title: WHY MAKE HIM A PRIVATE?
 
-Posted on:
-Views:
-Likes:
-Comments:
+Posted on: 2026-10-20
+Views: 358
+Likes: 5
+Comments: 0
 Subscribers gained:
-Stayed to watch (%):
-Average % viewed:
-My notes:
+Stayed to watch (%): 40.7
+Average % viewed: 59.8
+My notes: Read from YouTube Studio by Claude on 2026-10-21. Numbers cover its first day (Studio's table runs through Oct 20); subscribers not reported yet.
 
 ## Mike the Headless Chicken Died of This, Not the Axe
 Made: 2026-10-21 | Written by: Claude | Length: 0:36.6 | Folder: output\strange-history\2026-10-21_mike-the-headless-chicken-died-of-this-not-the-axe
 Topic: In September 1945 Colorado farmer Lloyd Olsen chopped the head off a chicken for dinner, but Mike kept walking, pecking and even trying to crow. The axe had missed his brainstem, so Olsen fed him milk and water with an eyedropper, and Mike toured America as a sideshow star for 18 months, earning a fortune and a spread in Life magazine. The twist is that Mike didn't die of the missing head: he choked one night in a Phoenix motel because his owners had left his feeding syringe at the sideshow. | Story shape: rise and fall
 Hook line: "This chicken lived 18 months without a head." | Hook title: HOW IS HE ALIVE?
 
-Posted on:
-Views:
-Likes:
-Comments:
-Subscribers gained:
+Posted on: 2026-10-21
+Views: 1,178
+Likes: 28
+Comments: 0
+Subscribers gained: 3
 Stayed to watch (%):
-Average % viewed:
-My notes:
+Average % viewed: 51.7
+My notes: Read from YouTube Studio by Claude on 2026-10-21, its first day: 1,178 views and +3 subscribers; average % viewed is from the first 4 hours; stayed-to-watch still processing.
