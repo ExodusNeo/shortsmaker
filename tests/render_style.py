@@ -10,7 +10,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
-import make_shorts as m  # noqa: E402
+from shortsmaker import config, style_lab  # noqa: E402
 
 OUT = ROOT / "test_renders"
 PHOTOS = ["job/jack0.jpg", "job/stink4.jpg"]  # Jack the Baboon (outdoor photo) and The Great Stink (wide interior)
@@ -30,26 +30,26 @@ def build() -> dict:
                           "line": len(scenes)})
         t += dur
 
-    for e in m.style_library("look"):
+    for e in style_lab.style_library("look"):
         for k, photo in enumerate(PHOTOS):
             add(f"{e['name'].upper()} LOOK", 3, image=photo, look=e["name"], lookSeed=k + 1)
-    for e in m.style_library("overlay"):
+    for e in style_lab.style_library("overlay"):
         text = {"question": "WHY DID THEY KEEP HIM?", "kinetic": "THREE SOLDIERS"}.get(e["name"], e["name"].upper())
         add(f"{e['name'].upper()} OVERLAY", 3.5, graphic={"style": e["name"], "text": text, "at": t + 0.4})
     add("TRANSITIONS NEXT", 1.5, image=PHOTOS[1])
-    for k, e in enumerate(m.style_library("transition")):
+    for k, e in enumerate(style_lab.style_library("transition")):
         add(f"{e['name'].upper()} CUT", 2.5, early=0.7, image=PHOTOS[k % 2], transition=e["name"])
         if e["name"] == "flash":
             flashes.append(scenes[-1]["start"])
-    palette = m.PALETTES[next(iter(m.PALETTES))]
+    palette = config.PALETTES[next(iter(config.PALETTES))]
     return {"fps": 30, "total": round(t, 3), "xfade": 0.3, "hook": "", "palette": palette, "scenes": scenes,
             "flashes": flashes, "words": words, "cta": None, "ctaLine": ""}
 
 
 def main() -> None:
-    job = m.REMOTION / "public" / "job"
+    job = config.REMOTION / "public" / "job"
     shutil.rmtree(job, ignore_errors=True)
-    shutil.copytree(m.REMOTION / "test_props" / "media", job)
+    shutil.copytree(config.REMOTION / "test_props" / "media", job)
     OUT.mkdir(exist_ok=True)
     props = OUT / "STYLE_PREVIEW_props.json"
     props.write_text(json.dumps(build()), encoding="utf-8")
@@ -58,7 +58,7 @@ def main() -> None:
     try:
         subprocess.run([shutil.which("npx"), "remotion", "render", "src/index.ts", "Short", str(out), f"--props={props}",
                         "--log=error", "--gl=angle", "--concurrency=4", "--x264-preset=ultrafast", "--crf=14"],
-                       cwd=m.REMOTION, check=True)
+                       cwd=config.REMOTION, check=True)
     finally:
         shutil.rmtree(job, ignore_errors=True)
     print(f"{out} rendered in {time.time() - start:.0f}s")

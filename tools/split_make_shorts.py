@@ -18,6 +18,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 PKG = ROOT / "shortsmaker"
+BASELINE = "54a1d70"  # the commit with the original single-file make_shorts.py
 TEST_FILES = ["test_full_scenes.py", "test_pictures_first.py", "test_style.py", "render_style.py"]
 
 # Start line of each top-level statement in the original -> module (plan, Task 2).
@@ -474,7 +475,7 @@ def prove(src: str, mods: dict[str, str], ranges, overrides, session, line_overr
 # ---- commands -----------------------------------------------------------------------------------------------------
 
 def original() -> str:
-    return subprocess.run(["git", "show", "HEAD:make_shorts.py"], cwd=ROOT, capture_output=True, text=True,
+    return subprocess.run(["git", "show", f"{BASELINE}:make_shorts.py"], cwd=ROOT, capture_output=True, text=True,
                           encoding="utf-8", check=True).stdout
 
 
@@ -510,30 +511,41 @@ def owners() -> dict[str, str]:
 
 
 def rewrite_tests() -> None:
-    owner, bad = owners(), []
+    """`m.name` -> `owner.name`; `m.subprocess` and other stdlib modules reached through m -> a plain import
+    (patching `subprocess.run` patches the same module object). Writes nothing if any file has a problem."""
+    owner, bad, out = owners(), [], {}
+    stdlib = {b for _, binds, _ in import_lines(ast.parse(original())) for b in binds}
     for f in TEST_FILES:
         path = ROOT / "tests" / f
         s = path.read_text(encoding="utf-8")
-        used = set()
+        used, plain = set(), set()
 
         def sub(mt):
             name = mt.group(1)
-            if name not in owner:
-                bad.append(f"{f}: m.{name}")
-                return mt.group(0)
-            used.add(owner[name])
-            return f"{owner[name]}.{name}"
+            if name in owner:
+                used.add(owner[name])
+                return f"{owner[name]}.{name}"
+            if name in stdlib:
+                plain.add(name)
+                return name
+            bad.append(f"{f}: m.{name}")
+            return mt.group(0)
         s = re.sub(r"(?<![\w.])m\.([A-Za-z_]\w*)", sub, s)
         s = s.replace("import make_shorts as m  # noqa: E402",
                       f"from shortsmaker import {', '.join(sorted(used))}  # noqa: E402", 1)
-        local = {x.id for x in ast.walk(ast.parse(s)) if isinstance(x, ast.Name) and isinstance(x.ctx, ast.Store)}
-        local |= {x.arg for x in ast.walk(ast.parse(s)) if isinstance(x, ast.arg)}
+        extra = "".join(f"import {x}\n" for x in sorted(plain) if not re.search(rf"^import {x}$", s, re.M))
+        s = s.replace("\nsys.path.insert(", f"\n{extra}sys.path.insert(", 1) if extra else s
+        tree = ast.parse(s)
+        local = {x.id for x in ast.walk(tree) if isinstance(x, ast.Name) and isinstance(x.ctx, ast.Store)}
+        local |= {x.arg for x in ast.walk(tree) if isinstance(x, ast.arg)}
         if used & local:
             bad.append(f"{f}: module names used as variables: {sorted(used & local)}")
-        path.write_text(s, encoding="utf-8")
-        print(f"  {f}: {len(used)} modules")
+        out[path] = s
+        print(f"  {f}: {len(used)} modules{', plain imports: ' + ', '.join(sorted(plain)) if plain else ''}")
     if bad:
         raise SystemExit("\n".join(bad))
+    for path, s in out.items():
+        path.write_text(s, encoding="utf-8")
 
 
 TOY = '''import json
