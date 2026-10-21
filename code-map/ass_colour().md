@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[ASS subtitle colour (&H00BBGGRR&), optionally darkened (for an outline).]] - `rationale_for` [EXTRACTED]
 - [[audio_mix.py]] - `imports` [EXTRACTED]
-- [[captions()]] - `calls` [EXTRACTED]
+- [[captions()_1]] - `calls` [EXTRACTED]
 - [[config.py]] - `contains` [EXTRACTED]
 - [[styled()]] - `calls` [EXTRACTED]
 

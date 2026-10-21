@@ -2,7 +2,7 @@
 source_file: "shortsmaker/audio_mix.py"
 type: "rationale"
 community: "Captions & TTS"
-location: "L55"
+location: "L52"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED

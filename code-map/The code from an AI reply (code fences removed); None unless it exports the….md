@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/style_lab.py"
 type: "rationale"
-community: "Style Lab & Edit Plan Text"
+community: "Entry Point, Logbook & Sounds"
 location: "L131"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Style_Lab__Edit_Plan_Text
+  - community/Entry_Point_Logbook__Sounds
 ---
 
 # The code from an AI reply (code fences removed); None unless it exports the…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[clean_style_code()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Style_Lab__Edit_Plan_Text
+#graphify/rationale #graphify/EXTRACTED #community/Entry_Point_Logbook__Sounds

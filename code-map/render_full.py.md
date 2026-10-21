@@ -1,12 +1,12 @@
 ---
 source_file: "tests/render_full.py"
 type: "code"
-community: "Motion Previews & Render Tests"
+community: "Footage Downloads & Crops (2)"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Motion_Previews__Render_Tests
+  - community/Footage_Downloads__Crops_2
 ---
 
 # render_full.py
@@ -14,11 +14,11 @@ tags:
 ## Connections
 - [[Render one full-screen motion graphic test scene through the real Short…]] - `rationale_for` [EXTRACTED]
 - [[json]] - `imports` [EXTRACTED]
-- [[main()_1]] - `contains` [EXTRACTED]
+- [[main()]] - `contains` [EXTRACTED]
 - [[pathlib]] - `imports_from` [EXTRACTED]
 - [[props_for()]] - `contains` [EXTRACTED]
 - [[shutil]] - `imports` [EXTRACTED]
 - [[subprocess]] - `imports` [EXTRACTED]
 - [[sys]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Motion_Previews__Render_Tests
+#graphify/code #graphify/EXTRACTED #community/Footage_Downloads__Crops_2

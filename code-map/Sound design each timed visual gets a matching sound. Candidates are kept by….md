@@ -2,7 +2,7 @@
 source_file: "shortsmaker/audio_mix.py"
 type: "rationale"
 community: "Scene Cues & Word Timing"
-location: "L269"
+location: "L266"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED

@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "Commons & Archive Sources"
+community: "Photo Cleanup"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Commons__Archive_Sources
+  - community/Photo_Cleanup
 ---
 
 # Image
 
 ## Connections
-- [[credit_tag_image()]] - `references` [EXTRACTED]
+- [[is_stereo()]] - `references` [EXTRACTED]
+- [[trim_borders()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Commons__Archive_Sources
+#graphify/code #graphify/EXTRACTED #community/Photo_Cleanup

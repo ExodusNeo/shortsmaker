@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/style_lab.py"
 type: "code"
-community: "Style Lab & Edit Plan Text"
+community: "Library Candidate Tests"
 location: "L299"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Style_Lab__Edit_Plan_Text
+  - community/Library_Candidate_Tests
 ---
 
 # library_menu()
@@ -16,9 +16,9 @@ tags:
 - [[ask_number()]] - `calls` [EXTRACTED]
 - [[json]] - `calls` [EXTRACTED]
 - [[library.bat the owner watches each invention the AI made for a Short and adds…]] - `rationale_for` [EXTRACTED]
-- [[main()]] - `calls` [EXTRACTED]
+- [[main()_1]] - `calls` [EXTRACTED]
 - [[os]] - `calls` [EXTRACTED]
 - [[reject_candidate()]] - `calls` [EXTRACTED]
 - [[style_lab.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Style_Lab__Edit_Plan_Text
+#graphify/code #graphify/EXTRACTED #community/Library_Candidate_Tests

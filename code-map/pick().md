@@ -2,7 +2,7 @@
 source_file: "shortsmaker/audio_mix.py"
 type: "code"
 community: "Scene Cues & Word Timing"
-location: "L275"
+location: "L272"
 tags:
   - graphify/code
   - graphify/EXTRACTED

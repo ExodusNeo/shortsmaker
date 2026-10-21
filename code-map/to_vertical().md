@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/photo_prep.py"
 type: "code"
-community: "Gemini Image Painting"
+community: "Story Sounds & Credits"
 location: "L84"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Gemini_Image_Painting
+  - community/Story_Sounds__Credits
 ---
 
 # to_vertical()
@@ -18,4 +18,4 @@ tags:
 - [[photo_prep.py]] - `contains` [EXTRACTED]
 - [[render()_2]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Gemini_Image_Painting
+#graphify/code #graphify/EXTRACTED #community/Story_Sounds__Credits

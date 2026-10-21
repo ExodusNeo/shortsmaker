@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/writing.py"
 type: "code"
-community: "Style Lab & Edit Plan Text"
+community: "Footage Downloads & Crops"
 location: "L350"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Style_Lab__Edit_Plan_Text
+  - community/Footage_Downloads__Crops
 ---
 
 # direct_scripts()
@@ -20,4 +20,4 @@ tags:
 - [[write_scripts()]] - `calls` [EXTRACTED]
 - [[writing.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Style_Lab__Edit_Plan_Text
+#graphify/code #graphify/EXTRACTED #community/Footage_Downloads__Crops

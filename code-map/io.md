@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "Channel Profiles & CLI"
+community: "Local AI Jobs & Clips"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Channel_Profiles__CLI
+  - community/Local_AI_Jobs__Clips
 ---
 
 # io
@@ -26,4 +26,4 @@ tags:
 - [[review.py]] - `imports` [EXTRACTED]
 - [[storyboard()]] - `calls` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Channel_Profiles__CLI
+#graphify/concept #graphify/EXTRACTED #community/Local_AI_Jobs__Clips

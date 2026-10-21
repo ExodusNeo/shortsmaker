@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Library Candidate Tests"
+community: "AI Calls & Quota Fallback (3)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Library_Candidate_Tests
+  - community/AI_Calls__Quota_Fallback_3
 ---
 
 # Path
 
 ## Connections
-- [[candidate_in()]] - `references` [EXTRACTED]
+- [[_review_state()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Library_Candidate_Tests
+#graphify/code #graphify/EXTRACTED #community/AI_Calls__Quota_Fallback_3

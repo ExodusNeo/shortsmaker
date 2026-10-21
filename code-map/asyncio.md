@@ -12,6 +12,6 @@ tags:
 
 ## Connections
 - [[audio_mix.py]] - `imports` [EXTRACTED]
-- [[speak()]] - `calls` [EXTRACTED]
+- [[speak()_1]] - `calls` [EXTRACTED]
 
 #graphify/concept #graphify/EXTRACTED #community/Captions__TTS

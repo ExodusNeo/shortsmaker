@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/llm.py"
 type: "code"
-community: "AI Calls & Quota Fallback (2)"
+community: "Commons & Archive Sources"
 location: "L54"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AI_Calls__Quota_Fallback_2
+  - community/Commons__Archive_Sources
 ---
 
 # quota_exhausted()
@@ -17,4 +17,4 @@ tags:
 - [[llm.py]] - `contains` [EXTRACTED]
 - [[run_agy()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AI_Calls__Quota_Fallback_2
+#graphify/code #graphify/EXTRACTED #community/Commons__Archive_Sources

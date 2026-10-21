@@ -1,20 +1,20 @@
 ---
 source_file: "tests/render_style.py"
 type: "code"
-community: "Motion Previews & Render Tests"
+community: "Style Lab & Edit Plan Text"
 location: "L19"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Motion_Previews__Render_Tests
+  - community/Style_Lab__Edit_Plan_Text
 ---
 
 # build()
 
 ## Connections
 - [[add()]] - `contains` [EXTRACTED]
-- [[main()_2]] - `calls` [EXTRACTED]
+- [[main()_4]] - `calls` [EXTRACTED]
 - [[render_style.py]] - `contains` [EXTRACTED]
 - [[style_library()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Motion_Previews__Render_Tests
+#graphify/code #graphify/EXTRACTED #community/Style_Lab__Edit_Plan_Text

@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "Style Lab & Edit Plan Text"
+community: "Channel Profiles & CLI"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Style_Lab__Edit_Plan_Text
+  - community/Channel_Profiles__CLI
 ---
 
 # os
@@ -22,4 +22,4 @@ tags:
 - [[test_pictures_first.py]] - `imports` [EXTRACTED]
 - [[veo_handoff()]] - `calls` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Style_Lab__Edit_Plan_Text
+#graphify/concept #graphify/EXTRACTED #community/Channel_Profiles__CLI

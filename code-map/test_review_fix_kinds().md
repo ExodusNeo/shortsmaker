@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_full_scenes.py"
 type: "code"
-community: "Story Sounds & Credits"
+community: "Story Sounds & Credits (2)"
 location: "L350"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Story_Sounds__Credits
+  - community/Story_Sounds__Credits_2
 ---
 
 # test_review_fix_kinds()
@@ -15,4 +15,4 @@ tags:
 - [[review_fixes()]] - `calls` [EXTRACTED]
 - [[test_full_scenes.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Story_Sounds__Credits
+#graphify/code #graphify/EXTRACTED #community/Story_Sounds__Credits_2

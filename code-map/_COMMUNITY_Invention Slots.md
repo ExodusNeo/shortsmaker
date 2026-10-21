@@ -1,24 +1,30 @@
 ---
 type: community
-members: 19
+members: 25
 ---
 
 # Invention Slots
 
-**Members:** 19 nodes
+**Members:** 25 nodes
 
 ## Members
+- [[(props, start, end) of a small preview where an invention is used its scene,…]] - rationale - shortsmaker/style_lab.py
+- [[Codes this Short's inventions (look  transition  overlay) into their slots; a…]] - rationale - shortsmaker/style_lab.py
+- [[Path_3]] - code
 - [[Puts the empty placeholders back into remotionsrcstylegenerated (after a…]] - rationale - shortsmaker/style_lab.py
 - [[Rule breaks a compiler can't see in an AI-invented style component (see…]] - rationale - shortsmaker/style_lab.py
 - [[Runs fn() with ask_ai answering `codes` in turn, tsc_check returning `tsc`, and…]] - rationale - tests/test_style.py
+- [[The AI invents a new style component (`spec` = {title, brief, fallback}) for…]] - rationale - shortsmaker/style_lab.py
 - [[The empty invention slots (remotionsrcstyleplaceholders.json), by slot name.]] - rationale - shortsmaker/style_lab.py
 - [[attempt()]] - code - shortsmaker/style_lab.py
+- [[invent_component()]] - code - shortsmaker/style_lab.py
+- [[invent_styles()]] - code - shortsmaker/style_lab.py
 - [[lint_style_code()]] - code - shortsmaker/style_lab.py
 - [[restore_style_slots()]] - code - shortsmaker/style_lab.py
 - [[run()]] - code - tests/test_style.py
 - [[run()_1]] - code - tests/test_style.py
 - [[style_placeholders()]] - code - shortsmaker/style_lab.py
-- [[test_candidate_names_unique_across_kinds()]] - code - tests/test_style.py
+- [[style_preview()]] - code - shortsmaker/style_lab.py
 - [[test_failed_invention_keeps_the_others()]] - code - tests/test_style.py
 - [[test_good_look_check_skips_the_extra_compile()]] - code - tests/test_style.py
 - [[test_invention_compile_failure_uses_fallback()]] - code - tests/test_style.py
@@ -36,16 +42,20 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 11 edges to [[_COMMUNITY_Style Lab & Edit Plan Text]]
-- 9 edges to [[_COMMUNITY_Style Tests]]
-- 2 edges to [[_COMMUNITY_Skins & Remotion Render]]
+- 8 edges to [[_COMMUNITY_Style Tests]]
+- 6 edges to [[_COMMUNITY_Channel Profiles & CLI]]
+- 4 edges to [[_COMMUNITY_Skins & Remotion Render]]
+- 4 edges to [[_COMMUNITY_Library Candidate Tests]]
+- 3 edges to [[_COMMUNITY_Entry Point, Logbook & Sounds]]
+- 2 edges to [[_COMMUNITY_Local AI Jobs & Clips]]
 - 2 edges to [[_COMMUNITY_Test Patching Helper]]
-- 1 edge to [[_COMMUNITY_Entry Point, Logbook & Sounds]]
-- 1 edge to [[_COMMUNITY_Library Candidate Tests]]
+- 1 edge to [[_COMMUNITY_AI Calls & Quota Fallback]]
+- 1 edge to [[_COMMUNITY_Style Lab & Edit Plan Text]]
+- 1 edge to [[_COMMUNITY_Commons & Archive Sources]]
 
 ## Top bridge nodes
-- [[test_candidate_names_unique_across_kinds()]] - degree 4, connects to 3 communities
-- [[test_good_look_check_skips_the_extra_compile()]] - degree 4, connects to 3 communities
+- [[invent_component()]] - degree 17, connects to 6 communities
+- [[style_placeholders()]] - degree 10, connects to 3 communities
 - [[restore_style_slots()]] - degree 8, connects to 2 communities
 - [[with_fakes()]] - degree 8, connects to 2 communities
-- [[lint_style_code()]] - degree 6, connects to 2 communities
+- [[invent_styles()]] - degree 6, connects to 2 communities

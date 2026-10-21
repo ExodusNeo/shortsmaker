@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/audio_mix.py"
 type: "rationale"
-community: "Style Lab & Edit Plan Text"
-location: "L115"
+community: "Footage Downloads & Crops (2)"
+location: "L112"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Style_Lab__Edit_Plan_Text
+  - community/Footage_Downloads__Crops_2
 ---
 
 # One CC0 (no credit, any use) sound for `name` from Freesound's official API:…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[freesound_fetch()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Style_Lab__Edit_Plan_Text
+#graphify/rationale #graphify/EXTRACTED #community/Footage_Downloads__Crops_2

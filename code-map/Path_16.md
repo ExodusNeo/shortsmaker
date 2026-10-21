@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Channel Profiles & CLI"
+community: "Story Sounds & Credits (3)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Channel_Profiles__CLI
+  - community/Story_Sounds__Credits_3
 ---
 
 # Path
 
 ## Connections
-- [[mark_details()]] - `references` [EXTRACTED]
+- [[srt()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Channel_Profiles__CLI
+#graphify/code #graphify/EXTRACTED #community/Story_Sounds__Credits_3

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/writing.py"
 type: "code"
-community: "Quality Check & Script Editing"
+community: "Channel Profiles & CLI"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Quality_Check__Script_Editing
+  - community/Channel_Profiles__CLI
 ---
 
 # writing.py
@@ -42,4 +42,4 @@ tags:
 - [[urllib_parse]] - `imports` [EXTRACTED]
 - [[write_scripts()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Quality_Check__Script_Editing
+#graphify/code #graphify/EXTRACTED #community/Channel_Profiles__CLI

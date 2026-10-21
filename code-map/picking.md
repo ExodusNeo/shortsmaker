@@ -1,19 +1,19 @@
 ---
 source_file: "tests/test_pictures_first.py"
 type: "code"
-community: "Picture List Catalog"
+community: "Picture List Catalog (3)"
 location: "L328"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Picture_List_Catalog
+  - community/Picture_List_Catalog_3
 ---
 
 # picking
 
 ## Connections
-- [[dot-__enter__()_1]] - `method` [EXTRACTED]
-- [[dot-__exit__()_1]] - `method` [EXTRACTED]
+- [[dot-__enter__()]] - `method` [EXTRACTED]
+- [[dot-__exit__()]] - `method` [EXTRACTED]
 - [[dot-__init__()_1]] - `method` [EXTRACTED]
 - [[choose_images() with network stubbed; gather_pool returns `extra` (and records…]] - `rationale_for` [EXTRACTED]
 - [[test_choose_extra_gather_is_bounded()]] - `calls` [EXTRACTED]
@@ -25,4 +25,4 @@ tags:
 - [[test_plan_note_already_used()]] - `calls` [EXTRACTED]
 - [[test_planned_full_pictures_not_sent_when_empty()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Picture_List_Catalog
+#graphify/code #graphify/EXTRACTED #community/Picture_List_Catalog_3

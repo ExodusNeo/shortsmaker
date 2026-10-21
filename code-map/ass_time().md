@@ -2,7 +2,7 @@
 source_file: "shortsmaker/audio_mix.py"
 type: "code"
 community: "Captions & TTS"
-location: "L50"
+location: "L47"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -13,6 +13,6 @@ tags:
 
 ## Connections
 - [[audio_mix.py]] - `contains` [EXTRACTED]
-- [[captions()]] - `calls` [EXTRACTED]
+- [[captions()_1]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Captions__TTS

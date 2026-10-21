@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "Motion Previews & Render Tests"
+community: "Channel Profiles & CLI"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Motion_Previews__Render_Tests
+  - community/Channel_Profiles__CLI
 ---
 
 # sys
@@ -28,4 +28,4 @@ tags:
 - [[test_qwen_voice.py]] - `imports` [EXTRACTED]
 - [[test_style.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Motion_Previews__Render_Tests
+#graphify/concept #graphify/EXTRACTED #community/Channel_Profiles__CLI

@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_full_scenes.py"
 type: "code"
-community: "Commons & Archive Sources (2)"
+community: "Scene Cues & Word Timing"
 location: "L201"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Commons__Archive_Sources_2
+  - community/Scene_Cues__Word_Timing
 ---
 
 # test_board_pictures_attached()
@@ -16,4 +16,4 @@ tags:
 - [[full_pictures()]] - `calls` [EXTRACTED]
 - [[test_full_scenes.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Commons__Archive_Sources_2
+#graphify/code #graphify/EXTRACTED #community/Scene_Cues__Word_Timing

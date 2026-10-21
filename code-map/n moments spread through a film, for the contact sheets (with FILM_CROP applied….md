@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/footage.py"
 type: "rationale"
-community: "Channel Profiles & CLI"
+community: "Local AI Jobs & Clips"
 location: "L168"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Channel_Profiles__CLI
+  - community/Local_AI_Jobs__Clips
 ---
 
 # n moments spread through a film, for the contact sheets (with FILM_CROP applied…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[film_frames()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Channel_Profiles__CLI
+#graphify/rationale #graphify/EXTRACTED #community/Local_AI_Jobs__Clips

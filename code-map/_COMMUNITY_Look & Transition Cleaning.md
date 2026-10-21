@@ -31,7 +31,7 @@ SORT file.name ASC
 - 4 edges to [[_COMMUNITY_Channel Profiles & CLI]]
 - 3 edges to [[_COMMUNITY_Style Lab & Edit Plan Text]]
 - 3 edges to [[_COMMUNITY_Style Tests]]
-- 2 edges to [[_COMMUNITY_Quality Check & Script Editing]]
+- 2 edges to [[_COMMUNITY_Picture List Catalog]]
 
 ## Top bridge nodes
 - [[clean_transition()]] - degree 5, connects to 3 communities

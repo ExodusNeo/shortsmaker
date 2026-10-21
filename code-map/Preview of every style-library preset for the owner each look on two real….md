@@ -1,12 +1,12 @@
 ---
 source_file: "tests/render_style.py"
 type: "rationale"
-community: "Motion Previews & Render Tests"
+community: "Channel Profiles & CLI"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Motion_Previews__Render_Tests
+  - community/Channel_Profiles__CLI
 ---
 
 # Preview of every style-library preset for the owner: each look on two real…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[render_style.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Motion_Previews__Render_Tests
+#graphify/rationale #graphify/EXTRACTED #community/Channel_Profiles__CLI

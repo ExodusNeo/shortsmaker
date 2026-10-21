@@ -21,7 +21,7 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 1 edge to [[_COMMUNITY_Quality Check & Script Editing]]
+- 1 edge to [[_COMMUNITY_Picture List Catalog]]
 - 1 edge to [[_COMMUNITY_Channel Profiles & CLI]]
 - 1 edge to [[_COMMUNITY_Style Tests]]
 

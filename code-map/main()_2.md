@@ -1,18 +1,21 @@
 ---
-source_file: "tests/render_style.py"
+source_file: "local_ai/gen.py"
 type: "code"
-community: "Motion Previews & Render Tests"
-location: "L49"
+community: "GPU Worker (gen.py)"
+location: "L200"
 tags:
   - graphify/code
-  - graphify/EXTRACTED
-  - community/Motion_Previews__Render_Tests
+  - graphify/INFERRED
+  - community/GPU_Worker_genpy
 ---
 
 # main()
 
 ## Connections
-- [[build()]] - `calls` [EXTRACTED]
-- [[render_style.py]] - `contains` [EXTRACTED]
+- [[gen.py]] - `contains` [EXTRACTED]
+- [[images()]] - `indirect_call` [INFERRED]
+- [[parallax()]] - `indirect_call` [INFERRED]
+- [[tts()]] - `indirect_call` [INFERRED]
+- [[video()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/Motion_Previews__Render_Tests
+#graphify/code #graphify/INFERRED #community/GPU_Worker_genpy

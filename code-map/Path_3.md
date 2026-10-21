@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Style Lab & Edit Plan Text"
+community: "Invention Slots"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Style_Lab__Edit_Plan_Text
+  - community/Invention_Slots
 ---
 
 # Path
@@ -17,4 +17,4 @@ tags:
 - [[reject_candidate()]] - `references` [EXTRACTED]
 - [[save_candidate()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Style_Lab__Edit_Plan_Text
+#graphify/code #graphify/EXTRACTED #community/Invention_Slots

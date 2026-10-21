@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_full_scenes.py"
 type: "code"
-community: "Scene Cues & Word Timing"
+community: "Picture List Catalog"
 location: "L88"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Scene_Cues__Word_Timing
+  - community/Picture_List_Catalog
 ---
 
 # test_limit_full()
@@ -15,4 +15,4 @@ tags:
 - [[limit_full()]] - `calls` [EXTRACTED]
 - [[test_full_scenes.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Scene_Cues__Word_Timing
+#graphify/code #graphify/EXTRACTED #community/Picture_List_Catalog

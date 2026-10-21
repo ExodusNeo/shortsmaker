@@ -2,7 +2,7 @@
 source_file: "shortsmaker/media_tools.py"
 type: "code"
 community: "Footage Downloads & Crops (2)"
-location: "L24"
+location: "L22"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,7 +12,7 @@ tags:
 # duration()
 
 ## Connections
-- [[Path]] - `references` [EXTRACTED]
+- [[Path_1]] - `references` [EXTRACTED]
 - [[log_short()]] - `calls` [EXTRACTED]
 - [[media_tools.py]] - `contains` [EXTRACTED]
 - [[nasa_films()]] - `calls` [EXTRACTED]

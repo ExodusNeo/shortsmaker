@@ -1,140 +1,70 @@
 {
   "colorGroups": [
     {
-      "query": "tag:#community/Picture_List_Catalog",
-      "color": {
-        "a": 1,
-        "rgb": 5142951
-      }
-    },
-    {
       "query": "tag:#community/Style_Library_Inventions_TS",
       "color": {
         "a": 1,
-        "rgb": 15896107
+        "rgb": 5142951
       }
     },
     {
       "query": "tag:#community/Remotion_Short_Composition",
       "color": {
         "a": 1,
-        "rgb": 14767961
-      }
-    },
-    {
-      "query": "tag:#community/AI_Calls__Quota_Fallback",
-      "color": {
-        "a": 1,
-        "rgb": 7780274
-      }
-    },
-    {
-      "query": "tag:#community/Scene_Cues__Word_Timing",
-      "color": {
-        "a": 1,
-        "rgb": 5873999
-      }
-    },
-    {
-      "query": "tag:#community/Custom_Scene_Toolkit__Examples",
-      "color": {
-        "a": 1,
-        "rgb": 15583560
-      }
-    },
-    {
-      "query": "tag:#community/Split_Script_tools",
-      "color": {
-        "a": 1,
-        "rgb": 11565729
-      }
-    },
-    {
-      "query": "tag:#community/Channel_Profiles__CLI",
-      "color": {
-        "a": 1,
-        "rgb": 16752039
-      }
-    },
-    {
-      "query": "tag:#community/Story_Sounds__Credits",
-      "color": {
-        "a": 1,
-        "rgb": 10253663
-      }
-    },
-    {
-      "query": "tag:#community/Python_Frame_Renderer",
-      "color": {
-        "a": 1,
-        "rgb": 12234924
-      }
-    },
-    {
-      "query": "tag:#community/Local_AI_Jobs__Clips",
-      "color": {
-        "a": 1,
-        "rgb": 5142951
-      }
-    },
-    {
-      "query": "tag:#community/Style_Lab__Edit_Plan_Text",
-      "color": {
-        "a": 1,
         "rgb": 15896107
-      }
-    },
-    {
-      "query": "tag:#community/Paper__Evidence_Board_Scenes",
-      "color": {
-        "a": 1,
-        "rgb": 14767961
-      }
-    },
-    {
-      "query": "tag:#community/Captions__TTS",
-      "color": {
-        "a": 1,
-        "rgb": 7780274
       }
     },
     {
       "query": "tag:#community/Entry_Point_Logbook__Sounds",
       "color": {
         "a": 1,
+        "rgb": 14767961
+      }
+    },
+    {
+      "query": "tag:#community/Custom_Scene_Toolkit__Examples",
+      "color": {
+        "a": 1,
+        "rgb": 7780274
+      }
+    },
+    {
+      "query": "tag:#community/Channel_Profiles__CLI",
+      "color": {
+        "a": 1,
         "rgb": 5873999
       }
     },
     {
-      "query": "tag:#community/Guarded_Layout_cards_arrows",
+      "query": "tag:#community/Split_Script_tools",
       "color": {
         "a": 1,
         "rgb": 15583560
       }
     },
     {
-      "query": "tag:#community/Map_Journey_Scene",
+      "query": "tag:#community/Local_AI_Jobs__Clips",
       "color": {
         "a": 1,
         "rgb": 11565729
       }
     },
     {
-      "query": "tag:#community/Big_Number_Scene",
+      "query": "tag:#community/Commons__Archive_Sources",
       "color": {
         "a": 1,
         "rgb": 16752039
       }
     },
     {
-      "query": "tag:#community/Motion_Previews__Render_Tests",
+      "query": "tag:#community/Python_Frame_Renderer",
       "color": {
         "a": 1,
         "rgb": 10253663
       }
     },
     {
-      "query": "tag:#community/Commons__Archive_Sources",
+      "query": "tag:#community/Scene_Cues__Word_Timing",
       "color": {
         "a": 1,
         "rgb": 12234924
@@ -148,76 +78,6 @@
       }
     },
     {
-      "query": "tag:#community/GPU_Worker_genpy",
-      "color": {
-        "a": 1,
-        "rgb": 15896107
-      }
-    },
-    {
-      "query": "tag:#community/Entry_Point_Logbook__Sounds_2",
-      "color": {
-        "a": 1,
-        "rgb": 14767961
-      }
-    },
-    {
-      "query": "tag:#community/Footage_Downloads__Crops",
-      "color": {
-        "a": 1,
-        "rgb": 7780274
-      }
-    },
-    {
-      "query": "tag:#community/Invention_Slots",
-      "color": {
-        "a": 1,
-        "rgb": 5873999
-      }
-    },
-    {
-      "query": "tag:#community/Voice_Worker_qwen_voice",
-      "color": {
-        "a": 1,
-        "rgb": 15583560
-      }
-    },
-    {
-      "query": "tag:#community/AI_Calls__Quota_Fallback_2",
-      "color": {
-        "a": 1,
-        "rgb": 11565729
-      }
-    },
-    {
-      "query": "tag:#community/Style_Tests",
-      "color": {
-        "a": 1,
-        "rgb": 16752039
-      }
-    },
-    {
-      "query": "tag:#community/Quality_Check__Script_Editing",
-      "color": {
-        "a": 1,
-        "rgb": 10253663
-      }
-    },
-    {
-      "query": "tag:#community/Gemini_Image_Painting",
-      "color": {
-        "a": 1,
-        "rgb": 12234924
-      }
-    },
-    {
-      "query": "tag:#community/Skins__Remotion_Render",
-      "color": {
-        "a": 1,
-        "rgb": 5142951
-      }
-    },
-    {
       "query": "tag:#community/Footage_Downloads__Crops_2",
       "color": {
         "a": 1,
@@ -225,80 +85,262 @@
       }
     },
     {
-      "query": "tag:#community/Footage_Downloads__Crops_3",
+      "query": "tag:#community/Paper__Evidence_Board_Scenes",
       "color": {
         "a": 1,
         "rgb": 14767961
       }
     },
     {
-      "query": "tag:#community/Channel_Profiles__CLI_2",
+      "query": "tag:#community/Picture_List_Catalog",
       "color": {
         "a": 1,
         "rgb": 7780274
       }
     },
     {
-      "query": "tag:#community/Photo_Cleanup",
+      "query": "tag:#community/AI_Calls__Quota_Fallback",
       "color": {
         "a": 1,
         "rgb": 5873999
       }
     },
     {
-      "query": "tag:#community/Look__Transition_Cleaning",
+      "query": "tag:#community/Invention_Slots",
       "color": {
         "a": 1,
         "rgb": 15583560
       }
     },
     {
-      "query": "tag:#community/Pool_Gathering",
+      "query": "tag:#community/Guarded_Layout_cards_arrows",
       "color": {
         "a": 1,
         "rgb": 11565729
       }
     },
     {
-      "query": "tag:#community/Library_Candidate_Tests",
+      "query": "tag:#community/Map_Journey_Scene",
       "color": {
         "a": 1,
         "rgb": 16752039
       }
     },
     {
-      "query": "tag:#community/Commons__Archive_Sources_2",
+      "query": "tag:#community/Big_Number_Scene",
       "color": {
         "a": 1,
         "rgb": 10253663
       }
     },
     {
-      "query": "tag:#community/Test_Patching_Helper",
+      "query": "tag:#community/Picture_List_Catalog_2",
       "color": {
         "a": 1,
         "rgb": 12234924
       }
     },
     {
-      "query": "tag:#community/Story_Sound_Limits",
+      "query": "tag:#community/Picture_List_Catalog_3",
       "color": {
         "a": 1,
         "rgb": 5142951
       }
     },
     {
-      "query": "tag:#community/Style_Guardrails",
+      "query": "tag:#community/GPU_Worker_genpy",
       "color": {
         "a": 1,
         "rgb": 15896107
       }
     },
     {
-      "query": "tag:#community/Remotion_Decision",
+      "query": "tag:#community/Library_Candidate_Tests",
       "color": {
         "a": 1,
         "rgb": 14767961
+      }
+    },
+    {
+      "query": "tag:#community/Voice_Worker_qwen_voice",
+      "color": {
+        "a": 1,
+        "rgb": 7780274
+      }
+    },
+    {
+      "query": "tag:#community/Skins__Remotion_Render",
+      "color": {
+        "a": 1,
+        "rgb": 5873999
+      }
+    },
+    {
+      "query": "tag:#community/Local_AI_Jobs__Clips_2",
+      "color": {
+        "a": 1,
+        "rgb": 15583560
+      }
+    },
+    {
+      "query": "tag:#community/Story_Sounds__Credits",
+      "color": {
+        "a": 1,
+        "rgb": 11565729
+      }
+    },
+    {
+      "query": "tag:#community/Style_Lab__Edit_Plan_Text",
+      "color": {
+        "a": 1,
+        "rgb": 16752039
+      }
+    },
+    {
+      "query": "tag:#community/Captions__TTS",
+      "color": {
+        "a": 1,
+        "rgb": 10253663
+      }
+    },
+    {
+      "query": "tag:#community/AI_Calls__Quota_Fallback_2",
+      "color": {
+        "a": 1,
+        "rgb": 12234924
+      }
+    },
+    {
+      "query": "tag:#community/Picture_List_Catalog_4",
+      "color": {
+        "a": 1,
+        "rgb": 5142951
+      }
+    },
+    {
+      "query": "tag:#community/Style_Tests",
+      "color": {
+        "a": 1,
+        "rgb": 15896107
+      }
+    },
+    {
+      "query": "tag:#community/Gemini_Image_Painting",
+      "color": {
+        "a": 1,
+        "rgb": 14767961
+      }
+    },
+    {
+      "query": "tag:#community/Story_Sounds__Credits_2",
+      "color": {
+        "a": 1,
+        "rgb": 7780274
+      }
+    },
+    {
+      "query": "tag:#community/AI_Calls__Quota_Fallback_3",
+      "color": {
+        "a": 1,
+        "rgb": 5873999
+      }
+    },
+    {
+      "query": "tag:#community/Pool_Gathering",
+      "color": {
+        "a": 1,
+        "rgb": 15583560
+      }
+    },
+    {
+      "query": "tag:#community/Photo_Cleanup",
+      "color": {
+        "a": 1,
+        "rgb": 11565729
+      }
+    },
+    {
+      "query": "tag:#community/Look__Transition_Cleaning",
+      "color": {
+        "a": 1,
+        "rgb": 16752039
+      }
+    },
+    {
+      "query": "tag:#community/AI_Calls__Quota_Fallback_4",
+      "color": {
+        "a": 1,
+        "rgb": 10253663
+      }
+    },
+    {
+      "query": "tag:#community/Picture_List_Catalog_5",
+      "color": {
+        "a": 1,
+        "rgb": 12234924
+      }
+    },
+    {
+      "query": "tag:#community/Motion_Previews__Render_Tests",
+      "color": {
+        "a": 1,
+        "rgb": 5142951
+      }
+    },
+    {
+      "query": "tag:#community/Footage_Downloads__Crops",
+      "color": {
+        "a": 1,
+        "rgb": 15896107
+      }
+    },
+    {
+      "query": "tag:#community/Test_Patching_Helper",
+      "color": {
+        "a": 1,
+        "rgb": 14767961
+      }
+    },
+    {
+      "query": "tag:#community/Story_Sounds__Credits_3",
+      "color": {
+        "a": 1,
+        "rgb": 7780274
+      }
+    },
+    {
+      "query": "tag:#community/Story_Sounds__Credits_4",
+      "color": {
+        "a": 1,
+        "rgb": 5873999
+      }
+    },
+    {
+      "query": "tag:#community/Scene_Cues__Word_Timing_2",
+      "color": {
+        "a": 1,
+        "rgb": 15583560
+      }
+    },
+    {
+      "query": "tag:#community/Style_Guardrails",
+      "color": {
+        "a": 1,
+        "rgb": 11565729
+      }
+    },
+    {
+      "query": "tag:#community/Scene_Cues__Word_Timing_3",
+      "color": {
+        "a": 1,
+        "rgb": 16752039
+      }
+    },
+    {
+      "query": "tag:#community/Scene_Cues__Word_Timing_4",
+      "color": {
+        "a": 1,
+        "rgb": 10253663
       }
     }
   ]

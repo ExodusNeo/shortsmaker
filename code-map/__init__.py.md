@@ -23,7 +23,6 @@ tags:
 - [[image_sources.py]] - `imports_from` [EXTRACTED]
 - [[llm.py]] - `imports_from` [EXTRACTED]
 - [[logbook.py]] - `imports_from` [EXTRACTED]
-- [[media_tools.py]] - `imports_from` [EXTRACTED]
 - [[motion.py]] - `imports_from` [EXTRACTED]
 - [[patching.py]] - `imports` [EXTRACTED]
 - [[picker.py]] - `imports_from` [EXTRACTED]

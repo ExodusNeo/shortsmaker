@@ -1,21 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: "Picture List Catalog"
+community: "Footage Downloads & Crops (2)"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Picture_List_Catalog
+  - community/Footage_Downloads__Crops_2
 ---
 
 # Path
 
 ## Connections
-- [[catalog_pool()]] - `references` [EXTRACTED]
-- [[contact_sheets()]] - `references` [EXTRACTED]
-- [[load_pool()]] - `references` [EXTRACTED]
-- [[pool_folder()]] - `references` [EXTRACTED]
-- [[prepare_topic()]] - `references` [EXTRACTED]
-- [[save_pool()]] - `references` [EXTRACTED]
+- [[duration()]] - `references` [EXTRACTED]
+- [[ffmpeg()]] - `references` [EXTRACTED]
+- [[write_json()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Picture_List_Catalog
+#graphify/code #graphify/EXTRACTED #community/Footage_Downloads__Crops_2

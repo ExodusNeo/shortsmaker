@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/media_tools.py"
 type: "rationale"
-community: "Picture List Catalog"
-location: "L18"
+community: "Footage Downloads & Crops (2)"
+location: "L16"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Picture_List_Catalog
+  - community/Footage_Downloads__Crops_2
 ---
 
 # Write via a temp file, so an interrupted run never leaves a half-written file…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[write_json()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Picture_List_Catalog
+#graphify/rationale #graphify/EXTRACTED #community/Footage_Downloads__Crops_2

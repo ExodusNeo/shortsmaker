@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/editplan.py"
 type: "code"
-community: "Story Sounds & Credits"
+community: "Style Lab & Edit Plan Text"
 location: "L9"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Story_Sounds__Credits
+  - community/Style_Lab__Edit_Plan_Text
 ---
 
 # look_text()
@@ -17,4 +17,4 @@ tags:
 - [[editplan.py]] - `contains` [EXTRACTED]
 - [[style_library()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Story_Sounds__Credits
+#graphify/code #graphify/EXTRACTED #community/Style_Lab__Edit_Plan_Text

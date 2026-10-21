@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/media_tools.py"
 type: "code"
-community: "Local AI Jobs & Clips"
-location: "L29"
+community: "Local AI Jobs & Clips (2)"
+location: "L30"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Local_AI_Jobs__Clips
+  - community/Local_AI_Jobs__Clips_2
 ---
 
 # video_encoder()
@@ -17,6 +17,7 @@ tags:
 - [[media_tools.py]] - `contains` [EXTRACTED]
 - [[render()_2]] - `calls` [EXTRACTED]
 - [[subprocess]] - `calls` [EXTRACTED]
+- [[test_encoder_cache_lives_with_video_encoder()]] - `calls` [EXTRACTED]
 - [[veo_handoff()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Local_AI_Jobs__Clips
+#graphify/code #graphify/EXTRACTED #community/Local_AI_Jobs__Clips_2

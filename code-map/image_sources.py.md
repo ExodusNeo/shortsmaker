@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/image_sources.py"
 type: "code"
-community: "Commons & Archive Sources"
+community: "Local AI Jobs & Clips"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Commons__Archive_Sources
+  - community/Local_AI_Jobs__Clips
 ---
 
 # image_sources.py
@@ -51,4 +51,4 @@ tags:
 - [[wm_get()]] - `contains` [EXTRACTED]
 - [[writing.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Commons__Archive_Sources
+#graphify/code #graphify/EXTRACTED #community/Local_AI_Jobs__Clips

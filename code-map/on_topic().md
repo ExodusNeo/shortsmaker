@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/image_sources.py"
 type: "code"
-community: "Footage Downloads & Crops (3)"
+community: "Full-Scene Rescue & Plan Cleaning"
 location: "L233"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Footage_Downloads__Crops_3
+  - community/Full-Scene_Rescue__Plan_Cleaning
 ---
 
 # on_topic()
@@ -21,4 +21,4 @@ tags:
 - [[nasa_images()]] - `calls` [EXTRACTED]
 - [[words_of()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Footage_Downloads__Crops_3
+#graphify/code #graphify/EXTRACTED #community/Full-Scene_Rescue__Plan_Cleaning

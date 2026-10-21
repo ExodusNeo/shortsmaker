@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/style_lab.py"
 type: "code"
-community: "Style Lab & Edit Plan Text"
+community: "Invention Slots"
 location: "L201"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Style_Lab__Edit_Plan_Text
+  - community/Invention_Slots
 ---
 
 # style_preview()
@@ -16,4 +16,4 @@ tags:
 - [[invent_component()]] - `calls` [EXTRACTED]
 - [[style_lab.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Style_Lab__Edit_Plan_Text
+#graphify/code #graphify/EXTRACTED #community/Invention_Slots

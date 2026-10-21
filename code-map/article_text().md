@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/writing.py"
 type: "code"
-community: "Quality Check & Script Editing"
+community: "Commons & Archive Sources"
 location: "L515"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Quality_Check__Script_Editing
+  - community/Commons__Archive_Sources
 ---
 
 # article_text()
@@ -20,4 +20,4 @@ tags:
 - [[wm_get()]] - `calls` [EXTRACTED]
 - [[writing.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Quality_Check__Script_Editing
+#graphify/code #graphify/EXTRACTED #community/Commons__Archive_Sources

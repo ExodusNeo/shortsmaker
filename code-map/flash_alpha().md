@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/frame_render.py"
 type: "code"
-community: "Python Frame Renderer"
+community: "Footage Downloads & Crops (2)"
 location: "L264"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Python_Frame_Renderer
+  - community/Footage_Downloads__Crops_2
 ---
 
 # flash_alpha()
@@ -17,4 +17,4 @@ tags:
 - [[math]] - `calls` [EXTRACTED]
 - [[write_frames()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Python_Frame_Renderer
+#graphify/code #graphify/EXTRACTED #community/Footage_Downloads__Crops_2

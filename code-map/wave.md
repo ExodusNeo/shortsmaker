@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "Captions & TTS"
+community: "Footage Downloads & Crops (2)"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Captions__TTS
+  - community/Footage_Downloads__Crops_2
 ---
 
 # wave
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[audio_mix.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Captions__TTS
+#graphify/concept #graphify/EXTRACTED #community/Footage_Downloads__Crops_2

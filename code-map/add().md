@@ -1,12 +1,12 @@
 ---
 source_file: "tests/render_style.py"
 type: "code"
-community: "Motion Previews & Render Tests"
+community: "Style Lab & Edit Plan Text"
 location: "L22"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Motion_Previews__Render_Tests
+  - community/Style_Lab__Edit_Plan_Text
 ---
 
 # add()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[build()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Motion_Previews__Render_Tests
+#graphify/code #graphify/EXTRACTED #community/Style_Lab__Edit_Plan_Text

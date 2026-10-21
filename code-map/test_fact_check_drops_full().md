@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_full_scenes.py"
 type: "code"
-community: "Scene Cues & Word Timing"
+community: "Commons & Archive Sources"
 location: "L179"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Scene_Cues__Word_Timing
+  - community/Commons__Archive_Sources
 ---
 
 # test_fact_check_drops_full()
@@ -15,4 +15,4 @@ tags:
 - [[fact_check()]] - `calls` [EXTRACTED]
 - [[test_full_scenes.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Scene_Cues__Word_Timing
+#graphify/code #graphify/EXTRACTED #community/Commons__Archive_Sources

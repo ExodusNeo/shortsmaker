@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/picture_pool.py"
 type: "code"
-community: "Picture List Catalog"
+community: "Footage Downloads & Crops"
 location: "L262"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Picture_List_Catalog
+  - community/Footage_Downloads__Crops
 ---
 
 # is_usable()
@@ -17,4 +17,4 @@ tags:
 - [[picture_pool.py]] - `contains` [EXTRACTED]
 - [[usable()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/Picture_List_Catalog
+#graphify/code #graphify/EXTRACTED #community/Footage_Downloads__Crops

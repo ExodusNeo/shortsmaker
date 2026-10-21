@@ -12,7 +12,7 @@ tags:
 # shot_span()
 
 ## Connections
-- [[Path_14]] - `references` [EXTRACTED]
+- [[Path]] - `references` [EXTRACTED]
 - [[Start and end of the camera shot containing time `at` (newsreels cut to title…]] - `rationale_for` [EXTRACTED]
 - [[duration()]] - `calls` [EXTRACTED]
 - [[footage.py]] - `contains` [EXTRACTED]

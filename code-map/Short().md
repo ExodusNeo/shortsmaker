@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[Background()]] - `calls` [EXTRACTED]
-- [[Captions()_1]] - `calls` [EXTRACTED]
+- [[Captions()]] - `calls` [EXTRACTED]
 - [[GraphicFor()]] - `calls` [EXTRACTED]
 - [[HookTitle()]] - `calls` [EXTRACTED]
 - [[PersonCard()]] - `calls` [EXTRACTED]

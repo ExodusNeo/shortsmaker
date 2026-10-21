@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "Motion Previews & Render Tests"
+community: "Entry Point, Logbook & Sounds"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Motion_Previews__Render_Tests
+  - community/Entry_Point_Logbook__Sounds
 ---
 
 # shutil
@@ -19,8 +19,8 @@ tags:
 - [[invent_component()]] - `calls` [EXTRACTED]
 - [[llm.py]] - `imports` [EXTRACTED]
 - [[logbook.py]] - `imports` [EXTRACTED]
-- [[main()]] - `calls` [EXTRACTED]
 - [[main()_1]] - `calls` [EXTRACTED]
+- [[main()]] - `calls` [EXTRACTED]
 - [[motion.py]] - `imports` [EXTRACTED]
 - [[paint_instead()]] - `calls` [EXTRACTED]
 - [[picture_pool.py]] - `imports` [EXTRACTED]
@@ -47,4 +47,4 @@ tags:
 - [[write_scripts()]] - `calls` [EXTRACTED]
 - [[writing.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Motion_Previews__Render_Tests
+#graphify/concept #graphify/EXTRACTED #community/Entry_Point_Logbook__Sounds

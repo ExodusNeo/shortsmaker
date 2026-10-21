@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "Style Lab & Edit Plan Text"
+community: "Local AI Jobs & Clips"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Style_Lab__Edit_Plan_Text
+  - community/Local_AI_Jobs__Clips
 ---
 
 # json
@@ -37,8 +37,8 @@ tags:
 - [[load_pool()]] - `calls` [EXTRACTED]
 - [[load_state()]] - `calls` [EXTRACTED]
 - [[local_job()]] - `calls` [EXTRACTED]
-- [[main()_4]] - `calls` [EXTRACTED]
-- [[main()_1]] - `calls` [EXTRACTED]
+- [[main()_3]] - `calls` [EXTRACTED]
+- [[main()]] - `calls` [EXTRACTED]
 - [[media_tools.py]] - `imports` [EXTRACTED]
 - [[moss_images()]] - `calls` [EXTRACTED]
 - [[motion.py]] - `imports` [EXTRACTED]
@@ -74,4 +74,4 @@ tags:
 - [[write_style_index()]] - `calls` [EXTRACTED]
 - [[writing.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Style_Lab__Edit_Plan_Text
+#graphify/concept #graphify/EXTRACTED #community/Local_AI_Jobs__Clips

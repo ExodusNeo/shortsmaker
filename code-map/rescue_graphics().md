@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/picker.py"
 type: "code"
-community: "Channel Profiles & CLI (2)"
+community: "AI Calls & Quota Fallback (3)"
 location: "L225"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Channel_Profiles__CLI_2
+  - community/AI_Calls__Quota_Fallback_3
 ---
 
 # rescue_graphics()
@@ -24,4 +24,4 @@ tags:
 - [[test_rescue_respects_caps()]] - `calls` [EXTRACTED]
 - [[words_of()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Channel_Profiles__CLI_2
+#graphify/code #graphify/EXTRACTED #community/AI_Calls__Quota_Fallback_3

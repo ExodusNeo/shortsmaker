@@ -1,20 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "Captions & TTS"
+community: "Entry Point, Logbook & Sounds"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Captions__TTS
+  - community/Entry_Point_Logbook__Sounds
 ---
 
 # Path
 
 ## Connections
-- [[captions()]] - `references` [EXTRACTED]
-- [[music_gain()]] - `references` [EXTRACTED]
-- [[speak()]] - `references` [EXTRACTED]
-- [[story_sound()]] - `references` [EXTRACTED]
-- [[tts()]] - `references` [EXTRACTED]
+- [[log_short()]] - `references` [EXTRACTED]
+- [[vault_page()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Captions__TTS
+#graphify/code #graphify/EXTRACTED #community/Entry_Point_Logbook__Sounds

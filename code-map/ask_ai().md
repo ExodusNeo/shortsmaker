@@ -1,19 +1,19 @@
 ---
 source_file: "shortsmaker/llm.py"
 type: "code"
-community: "AI Calls & Quota Fallback (2)"
+community: "Commons & Archive Sources"
 location: "L94"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AI_Calls__Quota_Fallback_2
+  - community/Commons__Archive_Sources
 ---
 
 # ask_ai()
 
 ## Connections
 - [[Headless planner call (BRAIN, or `brain` Claude or Gemini) that returns parsed…]] - `rationale_for` [EXTRACTED]
-- [[Path_7]] - `references` [EXTRACTED]
+- [[Path_18]] - `references` [EXTRACTED]
 - [[catalog_pool()]] - `calls` [EXTRACTED]
 - [[choose_images()]] - `calls` [EXTRACTED]
 - [[code_custom_scenes()]] - `calls` [EXTRACTED]
@@ -37,4 +37,4 @@ tags:
 - [[visual_review()]] - `calls` [EXTRACTED]
 - [[write_scripts()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AI_Calls__Quota_Fallback_2
+#graphify/code #graphify/EXTRACTED #community/Commons__Archive_Sources

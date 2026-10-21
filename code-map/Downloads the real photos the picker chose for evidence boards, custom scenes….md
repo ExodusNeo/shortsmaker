@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/picker.py"
 type: "rationale"
-community: "Commons & Archive Sources (2)"
+community: "Scene Cues & Word Timing"
 location: "L183"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Commons__Archive_Sources_2
+  - community/Scene_Cues__Word_Timing
 ---
 
 # Downloads the real photos the picker chose for evidence boards, custom scenes…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[full_pictures()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Commons__Archive_Sources_2
+#graphify/rationale #graphify/EXTRACTED #community/Scene_Cues__Word_Timing

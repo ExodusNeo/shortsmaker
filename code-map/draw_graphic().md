@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[Animate the callout in, hold it, fade it out before the scene ends.]] - `rationale_for` [EXTRACTED]
-- [[Image_2]] - `references` [EXTRACTED]
+- [[Image_1]] - `references` [EXTRACTED]
 - [[frame()]] - `calls` [EXTRACTED]
 - [[frame_render.py]] - `contains` [EXTRACTED]
 

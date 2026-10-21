@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Gemini Image Painting"
+community: "Story Sounds & Credits"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Gemini_Image_Painting
+  - community/Story_Sounds__Credits
 ---
 
 # Path
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[to_vertical()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Gemini_Image_Painting
+#graphify/code #graphify/EXTRACTED #community/Story_Sounds__Credits

@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_full_scenes.py"
 type: "code"
-community: "Story Sound Limits"
+community: "Full-Scene Rescue & Plan Cleaning"
 location: "L740"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Story_Sound_Limits
+  - community/Full-Scene_Rescue__Plan_Cleaning
 ---
 
 # test_clean_sound()
@@ -17,4 +17,4 @@ tags:
 - [[test_full_scenes.py]] - `contains` [EXTRACTED]
 - [[words_of()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Story_Sound_Limits
+#graphify/code #graphify/EXTRACTED #community/Full-Scene_Rescue__Plan_Cleaning

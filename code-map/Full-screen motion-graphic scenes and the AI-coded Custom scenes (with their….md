@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/motion.py"
 type: "rationale"
-community: "Channel Profiles & CLI"
+community: "AI Calls & Quota Fallback"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Channel_Profiles__CLI
+  - community/AI_Calls__Quota_Fallback
 ---
 
 # Full-screen motion-graphic scenes and the AI-coded Custom scenes (with their…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[motion.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Channel_Profiles__CLI
+#graphify/rationale #graphify/EXTRACTED #community/AI_Calls__Quota_Fallback

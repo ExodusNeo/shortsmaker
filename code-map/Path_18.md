@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "Story Sounds & Credits"
+community: "Commons & Archive Sources"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Story_Sounds__Credits
+  - community/Commons__Archive_Sources
 ---
 
 # Path
 
 ## Connections
-- [[srt()]] - `references` [EXTRACTED]
+- [[ask_ai()]] - `references` [EXTRACTED]
+- [[run_agy()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Story_Sounds__Credits
+#graphify/code #graphify/EXTRACTED #community/Commons__Archive_Sources

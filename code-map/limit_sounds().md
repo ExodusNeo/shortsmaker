@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/audio_mix.py"
 type: "code"
-community: "Story Sound Limits"
-location: "L104"
+community: "Full-Scene Rescue & Plan Cleaning"
+location: "L101"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Story_Sound_Limits
+  - community/Full-Scene_Rescue__Plan_Cleaning
 ---
 
 # limit_sounds()
@@ -17,4 +17,4 @@ tags:
 - [[test_clean_sound()]] - `calls` [EXTRACTED]
 - [[write_scripts()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Story_Sound_Limits
+#graphify/code #graphify/EXTRACTED #community/Full-Scene_Rescue__Plan_Cleaning

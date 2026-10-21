@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "Commons & Archive Sources"
+community: "Local AI Jobs & Clips"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Commons__Archive_Sources
+  - community/Local_AI_Jobs__Clips
 ---
 
 # threading
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[image_sources.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Commons__Archive_Sources
+#graphify/concept #graphify/EXTRACTED #community/Local_AI_Jobs__Clips

@@ -1,12 +1,12 @@
 ---
 source_file: "make_shorts.py"
 type: "code"
-community: "Channel Profiles & CLI (2)"
+community: "Entry Point, Logbook & Sounds"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Channel_Profiles__CLI_2
+  - community/Entry_Point_Logbook__Sounds
 ---
 
 # make_shorts.py
@@ -14,6 +14,6 @@ tags:
 ## Connections
 - [[Make ready-to-upload YouTube Shorts with no API keys. Claude Code (headless)…]] - `rationale_for` [EXTRACTED]
 - [[cli.py]] - `imports_from` [EXTRACTED]
-- [[main()]] - `imports` [EXTRACTED]
+- [[main()_1]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Channel_Profiles__CLI_2
+#graphify/code #graphify/EXTRACTED #community/Entry_Point_Logbook__Sounds

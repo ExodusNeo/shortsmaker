@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/writing.py"
 type: "rationale"
-community: "Style Lab & Edit Plan Text"
+community: "Footage Downloads & Crops"
 location: "L351"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Style_Lab__Edit_Plan_Text
+  - community/Footage_Downloads__Crops
 ---
 
 # The planner plans the edit (footage searches, shots, camera, graphics, person…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[direct_scripts()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Style_Lab__Edit_Plan_Text
+#graphify/rationale #graphify/EXTRACTED #community/Footage_Downloads__Crops

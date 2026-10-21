@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/plan_rules.py"
 type: "rationale"
-community: "Channel Profiles & CLI"
+community: "Commons & Archive Sources"
 location: "L244"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Channel_Profiles__CLI
+  - community/Commons__Archive_Sources
 ---
 
 # Let Claude circle (or point an arrow at) a detail in up to 2 chosen pictures.…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[mark_details()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Channel_Profiles__CLI
+#graphify/rationale #graphify/EXTRACTED #community/Commons__Archive_Sources

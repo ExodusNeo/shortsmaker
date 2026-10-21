@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/editplan.py"
 type: "code"
-community: "Story Sounds & Credits"
+community: "Story Sounds & Credits (4)"
 location: "L38"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Story_Sounds__Credits
+  - community/Story_Sounds__Credits_4
 ---
 
 # edit_plan()
@@ -21,4 +21,4 @@ tags:
 - [[picture_line()]] - `calls` [EXTRACTED]
 - [[render()_2]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Story_Sounds__Credits
+#graphify/code #graphify/EXTRACTED #community/Story_Sounds__Credits_4

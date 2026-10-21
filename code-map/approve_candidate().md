@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/style_lab.py"
 type: "code"
-community: "Style Lab & Edit Plan Text"
+community: "Library Candidate Tests"
 location: "L267"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Style_Lab__Edit_Plan_Text
+  - community/Library_Candidate_Tests
 ---
 
 # approve_candidate()
@@ -25,4 +25,4 @@ tags:
 - [[tsc_check()]] - `calls` [EXTRACTED]
 - [[write_style_index()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Style_Lab__Edit_Plan_Text
+#graphify/code #graphify/EXTRACTED #community/Library_Candidate_Tests

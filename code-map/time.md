@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "Footage Downloads & Crops"
+community: "Local AI Jobs & Clips"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Footage_Downloads__Crops
+  - community/Local_AI_Jobs__Clips
 ---
 
 # time
@@ -18,7 +18,7 @@ tags:
 - [[gpu.py]] - `imports` [EXTRACTED]
 - [[image_sources.py]] - `imports` [EXTRACTED]
 - [[llm.py]] - `imports` [EXTRACTED]
-- [[main()_4]] - `calls` [EXTRACTED]
+- [[main()_3]] - `calls` [EXTRACTED]
 - [[moss_images()]] - `calls` [EXTRACTED]
 - [[picture_pool.py]] - `imports` [EXTRACTED]
 - [[pixabay_films()]] - `calls` [EXTRACTED]
@@ -28,10 +28,10 @@ tags:
 - [[render_style.py]] - `imports` [EXTRACTED]
 - [[save_candidate()]] - `calls` [EXTRACTED]
 - [[short_render.py]] - `imports` [EXTRACTED]
-- [[speak()]] - `calls` [EXTRACTED]
+- [[speak()_1]] - `calls` [EXTRACTED]
 - [[style_lab.py]] - `imports` [EXTRACTED]
 - [[test_pictures_first.py]] - `imports` [EXTRACTED]
 - [[trend_research()]] - `calls` [EXTRACTED]
 - [[voicestudio_up()]] - `calls` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Footage_Downloads__Crops
+#graphify/concept #graphify/EXTRACTED #community/Local_AI_Jobs__Clips

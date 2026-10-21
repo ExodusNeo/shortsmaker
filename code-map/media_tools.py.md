@@ -1,24 +1,23 @@
 ---
 source_file: "shortsmaker/media_tools.py"
 type: "code"
-community: "Channel Profiles & CLI"
+community: "Footage Downloads & Crops (2)"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Channel_Profiles__CLI
+  - community/Footage_Downloads__Crops_2
 ---
 
 # media_tools.py
 
 ## Connections
 - [[Small shared helpers downloads, ffmpeg, video encoder choice, durations, JSON…]] - `rationale_for` [EXTRACTED]
-- [[__init__.py]] - `imports_from` [EXTRACTED]
 - [[audio_mix.py]] - `imports_from` [EXTRACTED]
 - [[clock()]] - `contains` [EXTRACTED]
 - [[duration()]] - `contains` [EXTRACTED]
 - [[editplan.py]] - `imports_from` [EXTRACTED]
-- [[fetch()]] - `contains` [EXTRACTED]
+- [[fetch()_1]] - `contains` [EXTRACTED]
 - [[ffmpeg()]] - `contains` [EXTRACTED]
 - [[footage.py]] - `imports_from` [EXTRACTED]
 - [[gpu.py]] - `imports_from` [EXTRACTED]
@@ -33,8 +32,9 @@ tags:
 - [[seo.py]] - `imports_from` [EXTRACTED]
 - [[short_render.py]] - `imports_from` [EXTRACTED]
 - [[subprocess]] - `imports` [EXTRACTED]
+- [[test_package.py]] - `imports_from` [EXTRACTED]
 - [[urllib_request]] - `imports` [EXTRACTED]
 - [[video_encoder()]] - `contains` [EXTRACTED]
 - [[write_json()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Channel_Profiles__CLI
+#graphify/code #graphify/EXTRACTED #community/Footage_Downloads__Crops_2

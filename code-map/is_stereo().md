@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[A stereograph card two near-identical photos side by side. Compares the…]] - `rationale_for` [EXTRACTED]
-- [[Image_1]] - `references` [EXTRACTED]
+- [[Image]] - `references` [EXTRACTED]
 - [[clean_photo()]] - `calls` [EXTRACTED]
 - [[detail()]] - `contains` [EXTRACTED]
 - [[photo_prep.py]] - `contains` [EXTRACTED]

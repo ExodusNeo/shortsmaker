@@ -59,10 +59,9 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
+- 2 edges to [[_COMMUNITY_Channel Profiles & CLI]]
 - 1 edge to [[_COMMUNITY_Entry Point, Logbook & Sounds]]
 - 1 edge to [[_COMMUNITY_Footage Downloads & Crops (2)]]
-- 1 edge to [[_COMMUNITY_Motion Previews & Render Tests]]
-- 1 edge to [[_COMMUNITY_Channel Profiles & CLI]]
 
 ## Top bridge nodes
-- [[split_make_shorts.py]] - degree 26, connects to 4 communities
+- [[split_make_shorts.py]] - degree 26, connects to 3 communities

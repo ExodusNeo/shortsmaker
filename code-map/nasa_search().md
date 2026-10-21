@@ -1,20 +1,20 @@
 ---
 source_file: "shortsmaker/image_sources.py"
 type: "code"
-community: "Footage Downloads & Crops (3)"
+community: "Local AI Jobs & Clips"
 location: "L179"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Footage_Downloads__Crops_3
+  - community/Local_AI_Jobs__Clips
 ---
 
 # nasa_search()
 
 ## Connections
-- [[fetch()]] - `calls` [EXTRACTED]
+- [[fetch()_1]] - `calls` [EXTRACTED]
 - [[image_sources.py]] - `contains` [EXTRACTED]
 - [[nasa_films()]] - `calls` [EXTRACTED]
 - [[nasa_images()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Footage_Downloads__Crops_3
+#graphify/code #graphify/EXTRACTED #community/Local_AI_Jobs__Clips

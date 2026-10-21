@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/style_lab.py"
 type: "rationale"
-community: "Style Lab & Edit Plan Text"
+community: "Invention Slots"
 location: "L223"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Style_Lab__Edit_Plan_Text
+  - community/Invention_Slots
 ---
 
 # Codes this Short's inventions (look / transition / overlay) into their slots; a…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[invent_styles()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Style_Lab__Edit_Plan_Text
+#graphify/rationale #graphify/EXTRACTED #community/Invention_Slots

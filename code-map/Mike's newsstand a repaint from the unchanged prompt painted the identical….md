@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_full_scenes.py"
 type: "rationale"
-community: "AI Calls & Quota Fallback"
+community: "AI Calls & Quota Fallback (4)"
 location: "L388"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/AI_Calls__Quota_Fallback
+  - community/AI_Calls__Quota_Fallback_4
 ---
 
 # Mike's newsstand: a repaint from the unchanged prompt painted the identical…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[test_rewrite_paint_prompts()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/AI_Calls__Quota_Fallback
+#graphify/rationale #graphify/EXTRACTED #community/AI_Calls__Quota_Fallback_4
