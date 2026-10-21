@@ -1,18 +1,13 @@
 ---
 type: community
-cohesion: 0.18
-members: 13
+members: 10
 ---
 
 # Pool Gathering
 
-**Cohesion:** 0.18 - loosely connected
-**Members:** 13 nodes
+**Members:** 10 nodes
 
 ## Members
-- [[dot-__enter__()]] - code - tests/test_pictures_first.py
-- [[dot-__enter__()_1]] - code - tests/test_pictures_first.py
-- [[dot-__exit__()_2]] - code - tests/test_pictures_first.py
 - [[dot-__init__()_3]] - code - tests/test_pictures_first.py
 - [[Candidate pictures (with preview `thumb` bytes) and sampled real-film frames…]] - rationale - shortsmaker/picture_pool.py
 - [[Replaces the network functions for one test; `calls` records the search queries.]] - rationale - tests/test_pictures_first.py
@@ -32,18 +27,19 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 6 edges to [[_COMMUNITY_Picture List Catalog]]
-- 3 edges to [[_COMMUNITY_Picture Picker]]
-- 3 edges to [[_COMMUNITY_Commons & Archive Sources]]
+- 8 edges to [[_COMMUNITY_Picture List Catalog]]
 - 3 edges to [[_COMMUNITY_Footage Downloads & Crops]]
-- 3 edges to [[_COMMUNITY_Pool Storage & Contact Sheets]]
-- 2 edges to [[_COMMUNITY_Full-Scene Rescue & Plan Cleaning]]
-- 2 edges to [[_COMMUNITY_Test Patching Helper]]
-- 1 edge to [[_COMMUNITY_Visual Review Sheets]]
+- 2 edges to [[_COMMUNITY_Commons & Archive Sources]]
+- 2 edges to [[_COMMUNITY_Footage Downloads & Crops (3)]]
+- 1 edge to [[_COMMUNITY_Test Patching Helper]]
+- 1 edge to [[_COMMUNITY_Full-Scene Rescue & Plan Cleaning]]
+- 1 edge to [[_COMMUNITY_Story Sound Limits]]
+- 1 edge to [[_COMMUNITY_Commons & Archive Sources (2)]]
+- 1 edge to [[_COMMUNITY_Story Sounds & Credits]]
 
 ## Top bridge nodes
-- [[gather_pool()]] - degree 17, connects to 6 communities
-- [[dot-__enter__()_1]] - degree 4, connects to 3 communities
+- [[gather_pool()]] - degree 17, connects to 8 communities
+- [[stubbed]] - degree 9, connects to 2 communities
 - [[test_pool_roundtrip()]] - degree 5, connects to 2 communities
-- [[dot-__enter__()]] - degree 3, connects to 2 communities
-- [[stubbed]] - degree 9, connects to 1 community
+- [[test_gather_pool_shape()]] - degree 3, connects to 1 community
+- [[test_gather_pool_skip_and_limits()]] - degree 3, connects to 1 community

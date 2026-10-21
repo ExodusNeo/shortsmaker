@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "SFX Events & Full Pictures"
+community: "Channel Profiles & CLI"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/SFX_Events__Full_Pictures
+  - community/Channel_Profiles__CLI
 ---
 
 # random
@@ -20,4 +20,4 @@ tags:
 - [[short_render.py]] - `imports` [EXTRACTED]
 - [[test_full_scenes.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/SFX_Events__Full_Pictures
+#graphify/concept #graphify/EXTRACTED #community/Channel_Profiles__CLI

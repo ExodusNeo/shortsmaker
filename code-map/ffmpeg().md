@@ -12,7 +12,7 @@ tags:
 # ffmpeg()
 
 ## Connections
-- [[Path_5]] - `references` [EXTRACTED]
+- [[Path]] - `references` [EXTRACTED]
 - [[local_clips()]] - `calls` [EXTRACTED]
 - [[media_tools.py]] - `contains` [EXTRACTED]
 - [[preview_sheet()]] - `calls` [EXTRACTED]

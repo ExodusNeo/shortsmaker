@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/seo.py"
 type: "code"
-community: "SRT Captions File"
+community: "Story Sounds & Credits"
 location: "L72"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SRT_Captions_File
+  - community/Story_Sounds__Credits
 ---
 
 # ts()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[srt()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SRT_Captions_File
+#graphify/code #graphify/EXTRACTED #community/Story_Sounds__Credits

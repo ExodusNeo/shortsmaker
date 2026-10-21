@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/frame_render.py"
 type: "rationale"
-community: "SFX Synthesis"
+community: "Python Frame Renderer"
 location: "L265"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/SFX_Synthesis
+  - community/Python_Frame_Renderer
 ---
 
 # White camera-flash curve: snaps up over the 2 frames before the cut, then…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[flash_alpha()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/SFX_Synthesis
+#graphify/rationale #graphify/EXTRACTED #community/Python_Frame_Renderer

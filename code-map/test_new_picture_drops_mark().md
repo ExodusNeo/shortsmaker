@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_full_scenes.py"
 type: "code"
-community: "fix.bat Picture Swaps"
+community: "AI Calls & Quota Fallback"
 location: "L564"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/fixbat_Picture_Swaps
+  - community/AI_Calls__Quota_Fallback
 ---
 
 # test_new_picture_drops_mark()
@@ -17,4 +17,4 @@ tags:
 - [[test_full_scenes.py]] - `contains` [EXTRACTED]
 - [[use_picture_from()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/fixbat_Picture_Swaps
+#graphify/code #graphify/EXTRACTED #community/AI_Calls__Quota_Fallback

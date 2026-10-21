@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "Music & Freesound"
+community: "Captions & TTS"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Music__Freesound
+  - community/Captions__TTS
 ---
 
 # urllib_request
@@ -15,4 +15,4 @@ tags:
 - [[gpu.py]] - `imports` [EXTRACTED]
 - [[media_tools.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Music__Freesound
+#graphify/concept #graphify/EXTRACTED #community/Captions__TTS

@@ -2,7 +2,7 @@
 source_file: "tools/split_make_shorts.py"
 type: "code"
 community: "Split Script (tools)"
-location: "L411"
+location: "L412"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -14,7 +14,6 @@ tags:
 ## Connections
 - [[Problems found (empty = proven) names, clashes, undefined names, AST identity,…]] - `rationale_for` [EXTRACTED]
 - [[Unqualify]] - `calls` [EXTRACTED]
-- [[ast]] - `calls` [EXTRACTED]
 - [[chunks_of()]] - `calls` [EXTRACTED]
 - [[defined_names()]] - `calls` [EXTRACTED]
 - [[global_names()]] - `calls` [EXTRACTED]

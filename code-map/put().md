@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/motion.py"
 type: "code"
-community: "Full-Scene Props"
+community: "Scene Cues & Word Timing"
 location: "L49"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Full-Scene_Props
+  - community/Scene_Cues__Word_Timing
 ---
 
 # put()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[full_props()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Full-Scene_Props
+#graphify/code #graphify/EXTRACTED #community/Scene_Cues__Word_Timing

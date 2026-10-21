@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/audio_mix.py"
 type: "code"
-community: "SFX Events & Full Pictures"
+community: "Scene Cues & Word Timing"
 location: "L268"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SFX_Events__Full_Pictures
+  - community/Scene_Cues__Word_Timing
 ---
 
 # sfx_events()
@@ -21,4 +21,4 @@ tags:
 - [[test_story_sound_wins_its_moment()]] - `calls` [EXTRACTED]
 - [[test_style_sounds()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SFX_Events__Full_Pictures
+#graphify/code #graphify/EXTRACTED #community/Scene_Cues__Word_Timing

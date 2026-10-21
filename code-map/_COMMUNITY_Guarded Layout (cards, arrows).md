@@ -1,12 +1,10 @@
 ---
 type: community
-cohesion: 0.14
 members: 24
 ---
 
 # Guarded Layout (cards, arrows)
 
-**Cohesion:** 0.14 - loosely connected
 **Members:** 24 nodes
 
 ## Members
@@ -18,7 +16,7 @@ members: 24
 - [[SIDES]] - code - remotion/src/full/guarded.tsx
 - [[Side]] - code - remotion/src/full/guarded.tsx
 - [[boxAt()]] - code - remotion/src/full/guarded.tsx
-- [[clamp_7]] - code - remotion/src/full/guarded.tsx
+- [[clamp_3]] - code - remotion/src/full/guarded.tsx
 - [[crosses()]] - code - tests/guarded.test.ts
 - [[fitCard()]] - code - remotion/src/full/guarded.tsx
 - [[guarded.test.ts]] - code - tests/guarded.test.ts
@@ -28,11 +26,11 @@ members: 24
 - [[layoutColumn()]] - code - remotion/src/full/guarded.tsx
 - [[layoutGrid()]] - code - remotion/src/full/guarded.tsx
 - [[layoutRow()]] - code - remotion/src/full/guarded.tsx
-- [[ok()_1]] - code - tests/guarded.test.ts
+- [[ok()]] - code - tests/guarded.test.ts
 - [[port()]] - code - remotion/src/full/guarded.tsx
 - [[range()]] - code - remotion/src/full/guarded.tsx
 - [[routeArrow()]] - code - remotion/src/full/guarded.tsx
-- [[test()_1]] - code - tests/guarded.test.ts
+- [[test()]] - code - tests/guarded.test.ts
 - [[travel()]] - code - remotion/src/full/guarded.tsx
 
 ## Live Query (requires Dataview plugin)

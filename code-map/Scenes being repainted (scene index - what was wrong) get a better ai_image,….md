@@ -1,12 +1,12 @@
 ---
-source_file: "shortsmaker/cli.py"
+source_file: "shortsmaker/review.py"
 type: "rationale"
-community: "Entry Point, Logbook & Sounds"
-location: "L123"
+community: "AI Calls & Quota Fallback (2)"
+location: "L156"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Entry_Point_Logbook__Sounds
+  - community/AI_Calls__Quota_Fallback_2
 ---
 
 # Scenes being repainted (scene index -> what was wrong) get a better ai_image,…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[rewrite_paint_prompts()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Entry_Point_Logbook__Sounds
+#graphify/rationale #graphify/EXTRACTED #community/AI_Calls__Quota_Fallback_2

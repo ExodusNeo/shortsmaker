@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/motion.py"
 type: "rationale"
-community: "Motion Previews & Render Tests"
+community: "AI Calls & Quota Fallback"
 location: "L257"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Motion_Previews__Render_Tests
+  - community/AI_Calls__Quota_Fallback
 ---
 
 # Renders seconds start..end of a small Short (`props`; its pictures already in…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[preview_sheet()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Motion_Previews__Render_Tests
+#graphify/rationale #graphify/EXTRACTED #community/AI_Calls__Quota_Fallback

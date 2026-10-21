@@ -2,7 +2,7 @@
 source_file: "tools/split_make_shorts.py"
 type: "code"
 community: "Split Script (tools)"
-location: "L120"
+location: "L121"
 tags:
   - graphify/code
   - graphify/EXTRACTED

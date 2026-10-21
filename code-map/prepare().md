@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_pictures_first.py"
 type: "code"
-community: "Script Writing Pipeline"
+community: "Picture List Catalog"
 location: "L218"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/Script_Writing_Pipeline
+  - community/Picture_List_Catalog
 ---
 
 # prepare()
@@ -18,4 +18,4 @@ tags:
 - [[test_prompts_carry_picture_list()]] - `indirect_call` [INFERRED]
 - [[test_weak_topic_swapped_for_backup()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/INFERRED #community/Script_Writing_Pipeline
+#graphify/code #graphify/INFERRED #community/Picture_List_Catalog

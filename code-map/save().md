@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/audio_mix.py"
 type: "code"
-community: "SFX Synthesis"
+community: "Captions & TTS"
 location: "L170"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SFX_Synthesis
+  - community/Captions__TTS
 ---
 
 # save()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[make_sfx()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SFX_Synthesis
+#graphify/code #graphify/EXTRACTED #community/Captions__TTS

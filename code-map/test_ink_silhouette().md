@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_full_scenes.py"
 type: "code"
-community: "Ink Silhouettes"
+community: "Gemini Image Painting"
 location: "L697"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Ink_Silhouettes
+  - community/Gemini_Image_Painting
 ---
 
 # test_ink_silhouette()
@@ -16,4 +16,4 @@ tags:
 - [[ink_silhouette()]] - `calls` [EXTRACTED]
 - [[test_full_scenes.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Ink_Silhouettes
+#graphify/code #graphify/EXTRACTED #community/Gemini_Image_Painting

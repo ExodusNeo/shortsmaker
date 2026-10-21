@@ -1,12 +1,10 @@
 ---
 type: community
-cohesion: 0.18
 members: 45
 ---
 
 # Custom Scene Toolkit & Examples
 
-**Cohesion:** 0.18 - loosely connected
 **Members:** 45 nodes
 
 ## Members

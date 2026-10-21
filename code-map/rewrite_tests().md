@@ -2,7 +2,7 @@
 source_file: "tools/split_make_shorts.py"
 type: "code"
 community: "Split Script (tools)"
-location: "L513"
+location: "L518"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -13,11 +13,9 @@ tags:
 
 ## Connections
 - [[`m.name` - `owner.name`; `m.subprocess` and other stdlib modules reached…]] - `rationale_for` [EXTRACTED]
-- [[ast]] - `calls` [EXTRACTED]
 - [[import_lines()]] - `calls` [EXTRACTED]
 - [[original()]] - `calls` [EXTRACTED]
 - [[owners()]] - `calls` [EXTRACTED]
-- [[re]] - `calls` [EXTRACTED]
 - [[split_make_shorts.py]] - `indirect_call` [INFERRED]
 - [[sub()]] - `indirect_call` [INFERRED]
 

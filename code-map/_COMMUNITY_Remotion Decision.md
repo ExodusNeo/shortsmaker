@@ -1,12 +1,10 @@
 ---
 type: community
-cohesion: 0.67
 members: 3
 ---
 
 # Remotion Decision
 
-**Cohesion:** 0.67 - moderately connected
 **Members:** 3 nodes
 
 ## Members
@@ -23,7 +21,7 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 1 edge to [[_COMMUNITY_Story Sounds & Credits]]
-- 1 edge to [[_COMMUNITY_Motion Previews & Render Tests]]
+- 1 edge to [[_COMMUNITY_Channel Profiles & CLI]]
 - 1 edge to [[_COMMUNITY_Style Tests]]
 
 ## Top bridge nodes

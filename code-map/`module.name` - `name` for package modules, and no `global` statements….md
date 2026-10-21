@@ -2,7 +2,7 @@
 source_file: "tools/split_make_shorts.py"
 type: "rationale"
 community: "Split Script (tools)"
-location: "L382"
+location: "L383"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED

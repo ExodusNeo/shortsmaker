@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/image_sources.py"
 type: "code"
-community: "Commons & Archive Sources"
+community: "Commons & Archive Sources (2)"
 location: "L146"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Commons__Archive_Sources
+  - community/Commons__Archive_Sources_2
 ---
 
 # get_image()
@@ -20,4 +20,4 @@ tags:
 - [[ov_get()]] - `calls` [EXTRACTED]
 - [[wm_get()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Commons__Archive_Sources
+#graphify/code #graphify/EXTRACTED #community/Commons__Archive_Sources_2

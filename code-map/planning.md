@@ -1,20 +1,20 @@
 ---
 source_file: "tests/test_pictures_first.py"
 type: "code"
-community: "Script Writing Pipeline"
+community: "Picture List Catalog"
 location: "L194"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Script_Writing_Pipeline
+  - community/Picture_List_Catalog
 ---
 
 # planning
 
 ## Connections
-- [[dot-__enter__()_3]] - `method` [EXTRACTED]
-- [[dot-__exit__()_3]] - `method` [EXTRACTED]
-- [[dot-__init__()_1]] - `method` [EXTRACTED]
+- [[dot-__enter__()_2]] - `method` [EXTRACTED]
+- [[dot-__exit__()_2]] - `method` [EXTRACTED]
+- [[dot-__init__()_2]] - `method` [EXTRACTED]
 - [[test_all_weak_returns_empty()]] - `calls` [EXTRACTED]
 - [[test_both_mode_pools_follow_reply_position()]] - `calls` [EXTRACTED]
 - [[test_both_mode_reuses_pools()]] - `calls` [EXTRACTED]
@@ -27,4 +27,4 @@ tags:
 - [[test_weak_topic_swapped_for_backup()]] - `calls` [EXTRACTED]
 - [[write_scripts() with every AI step canned and `prepare` standing in for…]] - `rationale_for` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Script_Writing_Pipeline
+#graphify/code #graphify/EXTRACTED #community/Picture_List_Catalog

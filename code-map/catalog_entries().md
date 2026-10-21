@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/picture_pool.py"
 type: "code"
-community: "Picture List Parsing"
+community: "Picture List Catalog"
 location: "L247"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Picture_List_Parsing
+  - community/Picture_List_Catalog
 ---
 
 # catalog_entries()
@@ -16,4 +16,4 @@ tags:
 - [[catalog_pool()]] - `calls` [EXTRACTED]
 - [[picture_pool.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Picture_List_Parsing
+#graphify/code #graphify/EXTRACTED #community/Picture_List_Catalog

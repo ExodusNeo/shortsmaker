@@ -2,7 +2,7 @@
 source_file: "tools/split_make_shorts.py"
 type: "code"
 community: "Split Script (tools)"
-location: "L579"
+location: "L584"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -13,6 +13,7 @@ tags:
 
 ## Connections
 - [[prove()]] - `calls` [EXTRACTED]
+- [[split()]] - `calls` [EXTRACTED]
 - [[split_make_shorts.py]] - `indirect_call` [INFERRED]
 - [[split_source()]] - `calls` [EXTRACTED]
 

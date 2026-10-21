@@ -1,17 +1,20 @@
 ---
 source_file: ""
 type: "code"
-community: "fix.bat Picture Swaps"
+community: "AI Calls & Quota Fallback"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/fixbat_Picture_Swaps
+  - community/AI_Calls__Quota_Fallback
 ---
 
 # Path
 
 ## Connections
-- [[paint_new()]] - `references` [EXTRACTED]
-- [[use_picture_from()]] - `references` [EXTRACTED]
+- [[code_custom_scenes()]] - `references` [EXTRACTED]
+- [[full_props()]] - `references` [EXTRACTED]
+- [[look_and_fix()]] - `references` [EXTRACTED]
+- [[preview_custom()]] - `references` [EXTRACTED]
+- [[preview_sheet()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/fixbat_Picture_Swaps
+#graphify/code #graphify/EXTRACTED #community/AI_Calls__Quota_Fallback

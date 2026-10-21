@@ -1,12 +1,10 @@
 ---
 type: community
-cohesion: 0.50
 members: 4
 ---
 
 # Style Guardrails
 
-**Cohesion:** 0.50 - moderately connected
 **Members:** 4 nodes
 
 ## Members
@@ -23,7 +21,7 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 1 edge to [[_COMMUNITY_Script Writing Pipeline]]
+- 1 edge to [[_COMMUNITY_Quality Check & Script Editing]]
 - 1 edge to [[_COMMUNITY_Channel Profiles & CLI]]
 - 1 edge to [[_COMMUNITY_Style Tests]]
 

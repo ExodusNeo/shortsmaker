@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/plan_rules.py"
 type: "code"
-community: "Invention Validation"
+community: "Look & Transition Cleaning"
 location: "L187"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Invention_Validation
+  - community/Look__Transition_Cleaning
 ---
 
 # clean_invention()
@@ -18,4 +18,4 @@ tags:
 - [[settle_style()]] - `calls` [EXTRACTED]
 - [[style_library()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Invention_Validation
+#graphify/code #graphify/EXTRACTED #community/Look__Transition_Cleaning

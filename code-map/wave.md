@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "Music & Freesound"
+community: "Captions & TTS"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Music__Freesound
+  - community/Captions__TTS
 ---
 
 # wave
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[audio_mix.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Music__Freesound
+#graphify/concept #graphify/EXTRACTED #community/Captions__TTS

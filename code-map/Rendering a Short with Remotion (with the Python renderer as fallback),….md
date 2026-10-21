@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/remotion_render.py"
 type: "rationale"
-community: "Motion Previews & Render Tests"
+community: "Channel Profiles & CLI"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Motion_Previews__Render_Tests
+  - community/Channel_Profiles__CLI
 ---
 
 # Rendering a Short with Remotion (with the Python renderer as fallback),…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[remotion_render.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Motion_Previews__Render_Tests
+#graphify/rationale #graphify/EXTRACTED #community/Channel_Profiles__CLI

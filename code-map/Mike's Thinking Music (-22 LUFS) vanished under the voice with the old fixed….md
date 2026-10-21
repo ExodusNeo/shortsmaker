@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_full_scenes.py"
 type: "rationale"
-community: "Full-Scene Limits & Director Tests"
+community: "Captions & TTS"
 location: "L682"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Full-Scene_Limits__Director_Tests
+  - community/Captions__TTS
 ---
 
 # Mike's Thinking Music (-22 LUFS) vanished under the voice with the old fixed…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[test_music_gain_evens_out_tracks()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Full-Scene_Limits__Director_Tests
+#graphify/rationale #graphify/EXTRACTED #community/Captions__TTS

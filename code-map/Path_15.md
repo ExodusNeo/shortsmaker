@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "SRT Captions File"
+community: "Library Candidate Tests"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SRT_Captions_File
+  - community/Library_Candidate_Tests
 ---
 
 # Path
 
 ## Connections
-- [[srt()]] - `references` [EXTRACTED]
+- [[candidate_in()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SRT_Captions_File
+#graphify/code #graphify/EXTRACTED #community/Library_Candidate_Tests

@@ -2,7 +2,7 @@
 source_file: "shortsmaker/cli.py"
 type: "rationale"
 community: "Entry Point, Logbook & Sounds"
-location: "L151"
+location: "L106"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED

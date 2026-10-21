@@ -1,18 +1,18 @@
 ---
 source_file: "shortsmaker/motion.py"
 type: "code"
-community: "Motion Previews & Render Tests"
+community: "AI Calls & Quota Fallback"
 location: "L256"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Motion_Previews__Render_Tests
+  - community/AI_Calls__Quota_Fallback
 ---
 
 # preview_sheet()
 
 ## Connections
-- [[Path_18]] - `references` [EXTRACTED]
+- [[Path_11]] - `references` [EXTRACTED]
 - [[Renders seconds start..end of a small Short (`props`; its pictures already in…]] - `rationale_for` [EXTRACTED]
 - [[ffmpeg()]] - `calls` [EXTRACTED]
 - [[invent_component()]] - `calls` [EXTRACTED]
@@ -22,4 +22,4 @@ tags:
 - [[shutil]] - `calls` [EXTRACTED]
 - [[subprocess]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Motion_Previews__Render_Tests
+#graphify/code #graphify/EXTRACTED #community/AI_Calls__Quota_Fallback

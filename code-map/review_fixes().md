@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/review.py"
 type: "code"
-community: "Visual Review Sheets"
-location: "L77"
+community: "Story Sounds & Credits"
+location: "L79"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Visual_Review_Sheets
+  - community/Story_Sounds__Credits
 ---
 
 # review_fixes()
@@ -19,4 +19,4 @@ tags:
 - [[test_review_fix_kinds()]] - `calls` [EXTRACTED]
 - [[visual_review()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Visual_Review_Sheets
+#graphify/code #graphify/EXTRACTED #community/Story_Sounds__Credits

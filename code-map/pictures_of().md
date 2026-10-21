@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/picture_pool.py"
 type: "code"
-community: "Usable Picture Filter"
+community: "Footage Downloads & Crops"
 location: "L18"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Usable_Picture_Filter
+  - community/Footage_Downloads__Crops
 ---
 
 # pictures_of()
@@ -20,4 +20,4 @@ tags:
 - [[picture_pool.py]] - `contains` [EXTRACTED]
 - [[write_scripts()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Usable_Picture_Filter
+#graphify/code #graphify/EXTRACTED #community/Footage_Downloads__Crops

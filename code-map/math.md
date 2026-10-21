@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "SFX Synthesis"
+community: "Python Frame Renderer"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/SFX_Synthesis
+  - community/Python_Frame_Renderer
 ---
 
 # math
@@ -16,4 +16,4 @@ tags:
 - [[frame_render.py]] - `imports` [EXTRACTED]
 - [[make_sfx()]] - `calls` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/SFX_Synthesis
+#graphify/concept #graphify/EXTRACTED #community/Python_Frame_Renderer

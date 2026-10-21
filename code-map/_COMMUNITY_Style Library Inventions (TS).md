@@ -1,12 +1,10 @@
 ---
 type: community
-cohesion: 0.09
 members: 69
 ---
 
 # Style Library Inventions (TS)
 
-**Cohesion:** 0.09 - loosely connected
 **Members:** 69 nodes
 
 ## Members

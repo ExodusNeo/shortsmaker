@@ -1,12 +1,10 @@
 ---
 type: community
-cohesion: 0.16
 members: 22
 ---
 
 # Big Number Scene
 
-**Cohesion:** 0.16 - loosely connected
 **Members:** 22 nodes
 
 ## Members
@@ -26,7 +24,7 @@ members: 22
 - [[JourneyFull]] - code - remotion/src/full/types.ts
 - [[NumberFull]] - code - remotion/src/full/types.ts
 - [[SHAPES]] - code - remotion/src/full/icons.tsx
-- [[clamp_9]] - code - remotion/src/full/BigNumber.tsx
+- [[clamp_5]] - code - remotion/src/full/BigNumber.tsx
 - [[counter()]] - code - remotion/src/full/BigNumber.tsx
 - [[fmt()]] - code - remotion/src/full/BigNumber.tsx
 - [[fulltypes.ts]] - code - remotion/src/full/types.ts

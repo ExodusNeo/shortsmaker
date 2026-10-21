@@ -1,12 +1,10 @@
 ---
 type: community
-cohesion: 0.09
 members: 42
 ---
 
 # Split Script (tools)
 
-**Cohesion:** 0.09 - loosely connected
 **Members:** 42 nodes
 
 ## Members
@@ -61,12 +59,10 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 3 edges to [[_COMMUNITY_Motion Previews & Render Tests]]
-- 3 edges to [[_COMMUNITY_Entry Point, Logbook & Sounds]]
+- 1 edge to [[_COMMUNITY_Entry Point, Logbook & Sounds]]
+- 1 edge to [[_COMMUNITY_Footage Downloads & Crops (2)]]
+- 1 edge to [[_COMMUNITY_Motion Previews & Render Tests]]
 - 1 edge to [[_COMMUNITY_Channel Profiles & CLI]]
 
 ## Top bridge nodes
-- [[split_make_shorts.py]] - degree 26, connects to 3 communities
-- [[split_source()]] - degree 14, connects to 1 community
-- [[rewrite_tests()]] - degree 8, connects to 1 community
-- [[original()]] - degree 4, connects to 1 community
+- [[split_make_shorts.py]] - degree 26, connects to 4 communities

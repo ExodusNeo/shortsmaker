@@ -2,7 +2,7 @@
 source_file: "tools/split_make_shorts.py"
 type: "code"
 community: "Split Script (tools)"
-location: "L263"
+location: "L264"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,7 +12,6 @@ tags:
 # split_source()
 
 ## Connections
-- [[ast]] - `calls` [EXTRACTED]
 - [[chunks_of()]] - `calls` [EXTRACTED]
 - [[defined_names()]] - `calls` [EXTRACTED]
 - [[global_names()]] - `calls` [EXTRACTED]
@@ -20,7 +19,6 @@ tags:
 - [[is_main_guard()]] - `calls` [EXTRACTED]
 - [[merge_from()]] - `calls` [EXTRACTED]
 - [[module_for()]] - `calls` [EXTRACTED]
-- [[re]] - `calls` [EXTRACTED]
 - [[selftest()]] - `calls` [EXTRACTED]
 - [[split()]] - `calls` [EXTRACTED]
 - [[split_make_shorts.py]] - `contains` [EXTRACTED]

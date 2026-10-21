@@ -1,12 +1,10 @@
 ---
 type: community
-cohesion: 0.15
 members: 29
 ---
 
 # Paper & Evidence Board Scenes
 
-**Cohesion:** 0.15 - loosely connected
 **Members:** 29 nodes
 
 ## Members
@@ -30,8 +28,8 @@ members: 29
 - [[Skin]] - code - remotion/src/full/Paper.tsx
 - [[SkinName]] - code - remotion/src/full/types.ts
 - [[TYPE]] - code - remotion/src/full/Paper.tsx
-- [[clamp_5]] - code - remotion/src/full/Board.tsx
-- [[clamp_6]] - code - remotion/src/full/Document.tsx
+- [[clamp_1]] - code - remotion/src/full/Board.tsx
+- [[clamp_2]] - code - remotion/src/full/Document.tsx
 - [[layout()]] - code - remotion/src/full/Board.tsx
 - [[lerp()]] - code - remotion/src/full/Board.tsx
 - [[popIn()]] - code - remotion/src/full/toolkit.tsx

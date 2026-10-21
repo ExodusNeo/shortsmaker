@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_style.py"
 type: "code"
-community: "Invention Lint"
+community: "Invention Slots"
 location: "L268"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Invention_Lint
+  - community/Invention_Slots
 ---
 
 # test_invention_lint_failure_uses_fallback()
@@ -17,4 +17,4 @@ tags:
 - [[test_style.py]] - `contains` [EXTRACTED]
 - [[with_fakes()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Invention_Lint
+#graphify/code #graphify/EXTRACTED #community/Invention_Slots

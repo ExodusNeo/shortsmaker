@@ -1,20 +1,21 @@
 ---
-source_file: "local_ai/qwen_voice.py"
+source_file: "local_ai/gen.py"
 type: "code"
-community: "Voice Worker (qwen_voice)"
-location: "L134"
+community: "GPU Worker (gen.py)"
+location: "L200"
 tags:
   - graphify/code
-  - graphify/EXTRACTED
-  - community/Voice_Worker_qwen_voice
+  - graphify/INFERRED
+  - community/GPU_Worker_genpy
 ---
 
 # main()
 
 ## Connections
-- [[align()]] - `calls` [EXTRACTED]
-- [[json]] - `calls` [EXTRACTED]
-- [[qwen_voice.py]] - `contains` [EXTRACTED]
-- [[time]] - `calls` [EXTRACTED]
+- [[gen.py]] - `contains` [EXTRACTED]
+- [[images()]] - `indirect_call` [INFERRED]
+- [[parallax()]] - `indirect_call` [INFERRED]
+- [[tts()_1]] - `indirect_call` [INFERRED]
+- [[video()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/Voice_Worker_qwen_voice
+#graphify/code #graphify/INFERRED #community/GPU_Worker_genpy

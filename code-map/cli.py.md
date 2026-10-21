@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/cli.py"
 type: "code"
-community: "Channel Profiles & CLI"
+community: "Channel Profiles & CLI (2)"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Channel_Profiles__CLI
+  - community/Channel_Profiles__CLI_2
 ---
 
 # cli.py
@@ -18,20 +18,16 @@ tags:
 - [[config.py]] - `imports_from` [EXTRACTED]
 - [[datetime]] - `imports_from` [EXTRACTED]
 - [[fix_short()]] - `contains` [EXTRACTED]
-- [[gpu.py]] - `imports_from` [EXTRACTED]
-- [[json]] - `imports` [EXTRACTED]
 - [[llm.py]] - `imports_from` [EXTRACTED]
 - [[logbook.py]] - `imports_from` [EXTRACTED]
-- [[main()_4]] - `contains` [EXTRACTED]
+- [[main()]] - `contains` [EXTRACTED]
 - [[make_shorts.py]] - `imports_from` [EXTRACTED]
 - [[os]] - `imports` [EXTRACTED]
-- [[paint_new()]] - `contains` [EXTRACTED]
 - [[pathlib]] - `imports_from` [EXTRACTED]
 - [[picker.py]] - `imports_from` [EXTRACTED]
 - [[picture_pool.py]] - `imports_from` [EXTRACTED]
 - [[re]] - `imports` [EXTRACTED]
 - [[review.py]] - `imports_from` [EXTRACTED]
-- [[rewrite_paint_prompts()]] - `contains` [EXTRACTED]
 - [[seo.py]] - `imports_from` [EXTRACTED]
 - [[session.py]] - `imports_from` [EXTRACTED]
 - [[short_render.py]] - `imports_from` [EXTRACTED]
@@ -43,4 +39,4 @@ tags:
 - [[use_picture_from()]] - `contains` [EXTRACTED]
 - [[writing.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Channel_Profiles__CLI
+#graphify/code #graphify/EXTRACTED #community/Channel_Profiles__CLI_2

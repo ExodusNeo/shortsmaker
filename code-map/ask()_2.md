@@ -1,17 +1,20 @@
 ---
 source_file: "tests/test_full_scenes.py"
 type: "code"
-community: "Review Fixes"
-location: "L527"
+community: "AI Calls & Quota Fallback"
+location: "L146"
 tags:
   - graphify/code
-  - graphify/EXTRACTED
-  - community/Review_Fixes
+  - graphify/INFERRED
+  - community/AI_Calls__Quota_Fallback
 ---
 
 # ask()
 
 ## Connections
-- [[test_review_redraws_custom()]] - `contains` [EXTRACTED]
+- [[_fake_planning()]] - `indirect_call` [INFERRED]
+- [[test_look_check_fixes_code()]] - `indirect_call` [INFERRED]
+- [[test_review_redraws_custom()]] - `indirect_call` [INFERRED]
+- [[test_rewrite_paint_prompts()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/Review_Fixes
+#graphify/code #graphify/INFERRED #community/AI_Calls__Quota_Fallback

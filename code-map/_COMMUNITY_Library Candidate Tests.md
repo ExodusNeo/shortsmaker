@@ -1,16 +1,14 @@
 ---
 type: community
-cohesion: 0.29
 members: 10
 ---
 
 # Library Candidate Tests
 
-**Cohesion:** 0.29 - loosely connected
 **Members:** 10 nodes
 
 ## Members
-- [[Path_9]] - code
+- [[Path_15]] - code
 - [[The library files a candidate test may touch, to put back afterwards.]] - rationale - tests/test_style.py
 - [[candidate_in()]] - code - tests/test_style.py
 - [[library_snapshot()]] - code - tests/test_style.py

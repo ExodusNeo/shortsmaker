@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/seo.py"
 type: "rationale"
-community: "SRT Captions File"
+community: "Story Sounds & Credits"
 location: "L71"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/SRT_Captions_File
+  - community/Story_Sounds__Credits
 ---
 
 # Exact-narration caption file to upload in YouTube Studio (searchable, unlike…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[srt()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/SRT_Captions_File
+#graphify/rationale #graphify/EXTRACTED #community/Story_Sounds__Credits

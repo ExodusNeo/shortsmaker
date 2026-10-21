@@ -1,19 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Visual Review Sheets"
+community: "AI Calls & Quota Fallback"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Visual_Review_Sheets
+  - community/AI_Calls__Quota_Fallback
 ---
 
 # Path
 
 ## Connections
-- [[apply_review_fixes()]] - `references` [EXTRACTED]
-- [[quality_check()]] - `references` [EXTRACTED]
-- [[storyboard()]] - `references` [EXTRACTED]
-- [[visual_review()]] - `references` [EXTRACTED]
+- [[use_picture_from()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Visual_Review_Sheets
+#graphify/code #graphify/EXTRACTED #community/AI_Calls__Quota_Fallback

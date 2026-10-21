@@ -12,7 +12,7 @@ tags:
 # catalog_pool()
 
 ## Connections
-- [[Path_6]] - `references` [EXTRACTED]
+- [[Path_1]] - `references` [EXTRACTED]
 - [[The picture list the writer, editor and director plan with the AI looks at the…]] - `rationale_for` [EXTRACTED]
 - [[ask_ai()]] - `calls` [EXTRACTED]
 - [[catalog_entries()]] - `calls` [EXTRACTED]

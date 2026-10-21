@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/cli.py"
 type: "rationale"
-community: "fix.bat Picture Swaps"
-location: "L91"
+community: "AI Calls & Quota Fallback"
+location: "L90"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/fixbat_Picture_Swaps
+  - community/AI_Calls__Quota_Fallback
 ---
 
 # fix: scene i shows scene k's picture. A real photo/film is a picture choice; an…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[use_picture_from()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/fixbat_Picture_Swaps
+#graphify/rationale #graphify/EXTRACTED #community/AI_Calls__Quota_Fallback

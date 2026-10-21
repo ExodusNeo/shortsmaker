@@ -1,12 +1,10 @@
 ---
 type: community
-cohesion: 0.16
 members: 18
 ---
 
 # Voice Worker (qwen_voice)
 
-**Cohesion:** 0.16 - loosely connected
 **Members:** 18 nodes
 
 ## Members
@@ -17,11 +15,11 @@ members: 18
 - [[Word matching for the Qwen voice's captions (no GPU, no models). Run…]] - rationale - tests/test_qwen_voice.py
 - [[align()]] - code - local_ai/qwen_voice.py
 - [[align_words()]] - code - local_ai/qwen_voice.py
-- [[main()_3]] - code - local_ai/qwen_voice.py
-- [[one()]] - code - local_ai/qwen_voice.py
+- [[main()_4]] - code - local_ai/qwen_voice.py
+- [[one()_1]] - code - local_ai/qwen_voice.py
 - [[qwen_voice.py]] - code - local_ai/qwen_voice.py
 - [[say_number()]] - code - local_ai/qwen_voice.py
-- [[speak()]] - code - local_ai/qwen_voice.py
+- [[speak()_1]] - code - local_ai/qwen_voice.py
 - [[studio_speak()]] - code - local_ai/qwen_voice.py
 - [[test_caption_words_keep_what_is_written()]] - code - tests/test_qwen_voice.py
 - [[test_every_aligned_word_is_in_the_aligner_alphabet()]] - code - tests/test_qwen_voice.py
@@ -37,16 +35,17 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 4 edges to [[_COMMUNITY_Motion Previews & Render Tests]]
 - 3 edges to [[_COMMUNITY_Entry Point, Logbook & Sounds]]
 - 3 edges to [[_COMMUNITY_Style Lab & Edit Plan Text]]
 - 3 edges to [[_COMMUNITY_Channel Profiles & CLI]]
 - 2 edges to [[_COMMUNITY_Footage Downloads & Crops]]
-- 1 edge to [[_COMMUNITY_Full-Scene Rescue & Plan Cleaning]]
+- 2 edges to [[_COMMUNITY_Footage Downloads & Crops (2)]]
+- 2 edges to [[_COMMUNITY_Motion Previews & Render Tests]]
+- 1 edge to [[_COMMUNITY_Story Sound Limits]]
 
 ## Top bridge nodes
-- [[qwen_voice.py]] - degree 16, connects to 5 communities
+- [[qwen_voice.py]] - degree 16, connects to 6 communities
 - [[test_qwen_voice.py]] - degree 7, connects to 2 communities
 - [[studio_speak()]] - degree 5, connects to 2 communities
-- [[main()_3]] - degree 4, connects to 2 communities
+- [[main()_4]] - degree 4, connects to 2 communities
 - [[unicodedata]] - degree 4, connects to 2 communities

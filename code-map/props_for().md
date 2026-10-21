@@ -12,7 +12,7 @@ tags:
 # props_for()
 
 ## Connections
-- [[main()]] - `calls` [EXTRACTED]
+- [[main()_1]] - `calls` [EXTRACTED]
 - [[render_full.py]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Motion_Previews__Render_Tests

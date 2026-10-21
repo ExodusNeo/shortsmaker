@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/audio_mix.py"
 type: "code"
-community: "SFX Events & Full Pictures"
+community: "Scene Cues & Word Timing"
 location: "L275"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SFX_Events__Full_Pictures
+  - community/Scene_Cues__Word_Timing
 ---
 
 # pick()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[sfx_events()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SFX_Events__Full_Pictures
+#graphify/code #graphify/EXTRACTED #community/Scene_Cues__Word_Timing

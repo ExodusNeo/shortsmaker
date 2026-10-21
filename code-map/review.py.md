@@ -12,14 +12,17 @@ tags:
 # review.py
 
 ## Connections
-- [[Automatic checks on a finished Short, the AI visual review and its fixes, the…]] - `rationale_for` [EXTRACTED]
+- [[Automatic checks on a finished Short, the AI visual review and its fixes (incl.…]] - `rationale_for` [EXTRACTED]
 - [[__init__.py]] - `imports_from` [EXTRACTED]
 - [[apply_review_fixes()]] - `contains` [EXTRACTED]
 - [[cli.py]] - `imports_from` [EXTRACTED]
 - [[config.py]] - `imports_from` [EXTRACTED]
+- [[gpu.py]] - `imports_from` [EXTRACTED]
 - [[io]] - `imports` [EXTRACTED]
+- [[json]] - `imports` [EXTRACTED]
 - [[llm.py]] - `imports_from` [EXTRACTED]
 - [[media_tools.py]] - `imports_from` [EXTRACTED]
+- [[paint_new()]] - `contains` [EXTRACTED]
 - [[pathlib]] - `imports_from` [EXTRACTED]
 - [[picker.py]] - `imports_from` [EXTRACTED]
 - [[pil]] - `imports_from` [EXTRACTED]
@@ -28,6 +31,7 @@ tags:
 - [[re]] - `imports` [EXTRACTED]
 - [[remotion_render.py]] - `imports_from` [EXTRACTED]
 - [[review_fixes()]] - `contains` [EXTRACTED]
+- [[rewrite_paint_prompts()]] - `contains` [EXTRACTED]
 - [[session.py]] - `imports_from` [EXTRACTED]
 - [[short_render.py]] - `imports_from` [EXTRACTED]
 - [[shutil]] - `imports` [EXTRACTED]

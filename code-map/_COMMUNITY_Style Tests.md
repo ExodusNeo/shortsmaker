@@ -1,18 +1,16 @@
 ---
 type: community
-cohesion: 0.18
 members: 14
 ---
 
 # Style Tests
 
-**Cohesion:** 0.18 - loosely connected
 **Members:** 14 nodes
 
 ## Members
 - [[Tests for the style library looks, overlays, transitions, inventions (plain…]] - rationale - tests/test_style.py
-- [[ask()_4]] - code - tests/test_style.py
-- [[ask()_5]] - code - tests/test_style.py
+- [[ask()]] - code - tests/test_style.py
+- [[ask()_1]] - code - tests/test_style.py
 - [[inspect]] - concept
 - [[plan_with()]] - code - tests/test_style.py
 - [[sc()]] - code - tests/test_style.py
@@ -33,28 +31,27 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 8 edges to [[_COMMUNITY_Channel Profiles & CLI]]
+- 9 edges to [[_COMMUNITY_Invention Slots]]
 - 7 edges to [[_COMMUNITY_Library Candidate Tests]]
 - 6 edges to [[_COMMUNITY_Style Lab & Edit Plan Text]]
-- 6 edges to [[_COMMUNITY_Invention Slots]]
-- 4 edges to [[_COMMUNITY_Test Patching Helper]]
+- 6 edges to [[_COMMUNITY_Channel Profiles & CLI]]
+- 3 edges to [[_COMMUNITY_Test Patching Helper]]
+- 3 edges to [[_COMMUNITY_Quality Check & Script Editing]]
 - 3 edges to [[_COMMUNITY_Skins & Remotion Render]]
 - 3 edges to [[_COMMUNITY_Look & Transition Cleaning]]
-- 3 edges to [[_COMMUNITY_Motion Previews & Render Tests]]
-- 2 edges to [[_COMMUNITY_Invention Lint]]
+- 2 edges to [[_COMMUNITY_Footage Downloads & Crops]]
+- 2 edges to [[_COMMUNITY_Entry Point, Logbook & Sounds]]
 - 1 edge to [[_COMMUNITY_Full-Scene Rescue & Plan Cleaning]]
-- 1 edge to [[_COMMUNITY_Commons & Archive Sources]]
-- 1 edge to [[_COMMUNITY_Script Writing Pipeline]]
-- 1 edge to [[_COMMUNITY_SFX Events & Full Pictures]]
+- 1 edge to [[_COMMUNITY_Scene Cues & Word Timing]]
 - 1 edge to [[_COMMUNITY_Style Guardrails]]
 - 1 edge to [[_COMMUNITY_Remotion Decision]]
-- 1 edge to [[_COMMUNITY_Look Scenes]]
-- 1 edge to [[_COMMUNITY_Footage Downloads & Crops]]
-- 1 edge to [[_COMMUNITY_Entry Point, Logbook & Sounds]]
-- 1 edge to [[_COMMUNITY_Music & Freesound]]
+- 1 edge to [[_COMMUNITY_Captions & TTS]]
+- 1 edge to [[_COMMUNITY_Entry Point, Logbook & Sounds (2)]]
+- 1 edge to [[_COMMUNITY_AI Calls & Quota Fallback (2)]]
+- 1 edge to [[_COMMUNITY_Motion Previews & Render Tests]]
 
 ## Top bridge nodes
-- [[test_style.py]] - degree 54, connects to 16 communities
+- [[test_style.py]] - degree 54, connects to 17 communities
 - [[plan_with()]] - degree 7, connects to 2 communities
 - [[test_fact_check_sees_new_graphics()]] - degree 4, connects to 1 community
 - [[test_director_prompt_lists_library()]] - degree 3, connects to 1 community

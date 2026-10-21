@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/audio_mix.py"
 type: "code"
-community: "Music & Freesound"
+community: "Style Lab & Edit Plan Text"
 location: "L114"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Music__Freesound
+  - community/Style_Lab__Edit_Plan_Text
 ---
 
 # freesound_fetch()
@@ -16,4 +16,4 @@ tags:
 - [[audio_mix.py]] - `contains` [EXTRACTED]
 - [[json]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Music__Freesound
+#graphify/code #graphify/EXTRACTED #community/Style_Lab__Edit_Plan_Text

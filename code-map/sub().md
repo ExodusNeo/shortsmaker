@@ -2,7 +2,7 @@
 source_file: "tools/split_make_shorts.py"
 type: "code"
 community: "Split Script (tools)"
-location: "L523"
+location: "L528"
 tags:
   - graphify/code
   - graphify/INFERRED

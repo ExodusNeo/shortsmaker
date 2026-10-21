@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/review.py"
 type: "rationale"
-community: "Visual Review Sheets"
-location: "L121"
+community: "Story Sounds & Credits"
+location: "L123"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Visual_Review_Sheets
+  - community/Story_Sounds__Credits
 ---
 
 # One mid-scene frame per scene from the finished video, labeled with its…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[storyboard()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Visual_Review_Sheets
+#graphify/rationale #graphify/EXTRACTED #community/Story_Sounds__Credits

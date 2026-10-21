@@ -1,20 +1,18 @@
 ---
-source_file: "tests/test_full_scenes.py"
+source_file: "tests/test_style.py"
 type: "code"
-community: "Review Fixes"
-location: "L146"
+community: "Style Tests"
+location: "L107"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/Review_Fixes
+  - community/Style_Tests
 ---
 
 # ask()
 
 ## Connections
-- [[_fake_planning()]] - `indirect_call` [INFERRED]
-- [[test_look_check_fixes_code()]] - `indirect_call` [INFERRED]
-- [[test_review_redraws_custom()]] - `indirect_call` [INFERRED]
-- [[test_rewrite_paint_prompts()]] - `indirect_call` [INFERRED]
+- [[plan_with()]] - `indirect_call` [INFERRED]
+- [[test_fact_check_sees_new_graphics()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/INFERRED #community/Review_Fixes
+#graphify/code #graphify/INFERRED #community/Style_Tests

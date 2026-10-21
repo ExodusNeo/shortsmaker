@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/media_tools.py"
 type: "code"
-community: "Visual Review Sheets"
+community: "Story Sounds & Credits"
 location: "L42"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Visual_Review_Sheets
+  - community/Story_Sounds__Credits
 ---
 
 # clock()
@@ -22,4 +22,4 @@ tags:
 - [[storyboard()]] - `calls` [EXTRACTED]
 - [[visual_review()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Visual_Review_Sheets
+#graphify/code #graphify/EXTRACTED #community/Story_Sounds__Credits

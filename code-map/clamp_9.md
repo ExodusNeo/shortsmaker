@@ -1,17 +1,17 @@
 ---
-source_file: "remotion/src/full/BigNumber.tsx"
+source_file: "remotion/src/MapCard.tsx"
 type: "code"
-community: "Big Number Scene"
-location: "L7"
+community: "Remotion Short Composition"
+location: "L16"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Big_Number_Scene
+  - community/Remotion_Short_Composition
 ---
 
 # clamp
 
 ## Connections
-- [[BigNumber.tsx]] - `contains` [EXTRACTED]
+- [[MapCard.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Big_Number_Scene
+#graphify/code #graphify/EXTRACTED #community/Remotion_Short_Composition

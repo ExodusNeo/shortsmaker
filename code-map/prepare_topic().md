@@ -1,19 +1,19 @@
 ---
 source_file: "shortsmaker/picture_pool.py"
 type: "code"
-community: "Pool Storage & Contact Sheets"
+community: "Picture List Catalog"
 location: "L49"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pool_Storage__Contact_Sheets
+  - community/Picture_List_Catalog
 ---
 
 # prepare_topic()
 
 ## Connections
 - [[Before writing the topic's Wikipedia research (`_texts`; fact_check() reuses…]] - `rationale_for` [EXTRACTED]
-- [[Path_6]] - `references` [EXTRACTED]
+- [[Path_1]] - `references` [EXTRACTED]
 - [[article_text()]] - `calls` [EXTRACTED]
 - [[catalog_pool()]] - `calls` [EXTRACTED]
 - [[gather_pool()]] - `calls` [EXTRACTED]
@@ -26,4 +26,4 @@ tags:
 - [[usable()]] - `calls` [EXTRACTED]
 - [[write_scripts()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pool_Storage__Contact_Sheets
+#graphify/code #graphify/EXTRACTED #community/Picture_List_Catalog

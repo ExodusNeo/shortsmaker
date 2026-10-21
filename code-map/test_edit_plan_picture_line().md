@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_pictures_first.py"
 type: "code"
-community: "Edit Plan"
+community: "Story Sounds & Credits"
 location: "L387"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Edit_Plan
+  - community/Story_Sounds__Credits
 ---
 
 # test_edit_plan_picture_line()
@@ -15,4 +15,4 @@ tags:
 - [[picture_line()]] - `calls` [EXTRACTED]
 - [[test_pictures_first.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Edit_Plan
+#graphify/code #graphify/EXTRACTED #community/Story_Sounds__Credits

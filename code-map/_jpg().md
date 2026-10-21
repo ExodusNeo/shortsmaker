@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_full_scenes.py"
 type: "code"
-community: "Full-Scene Props"
+community: "Scene Cues & Word Timing"
 location: "L263"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Full-Scene_Props
+  - community/Scene_Cues__Word_Timing
 ---
 
 # _jpg()
@@ -16,4 +16,4 @@ tags:
 - [[test_full_scenes.py]] - `contains` [EXTRACTED]
 - [[test_remotion_props_full()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Full-Scene_Props
+#graphify/code #graphify/EXTRACTED #community/Scene_Cues__Word_Timing

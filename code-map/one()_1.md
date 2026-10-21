@@ -1,17 +1,17 @@
 ---
-source_file: "shortsmaker/gpu.py"
+source_file: "local_ai/qwen_voice.py"
 type: "code"
-community: "Gemini Image Painting"
-location: "L157"
+community: "Voice Worker (qwen_voice)"
+location: "L30"
 tags:
   - graphify/code
-  - graphify/INFERRED
-  - community/Gemini_Image_Painting
+  - graphify/EXTRACTED
+  - community/Voice_Worker_qwen_voice
 ---
 
 # one()
 
 ## Connections
-- [[gemini_images()]] - `indirect_call` [INFERRED]
+- [[say_number()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/Gemini_Image_Painting
+#graphify/code #graphify/EXTRACTED #community/Voice_Worker_qwen_voice

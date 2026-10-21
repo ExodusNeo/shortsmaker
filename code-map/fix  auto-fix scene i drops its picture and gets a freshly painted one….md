@@ -1,12 +1,12 @@
 ---
-source_file: "shortsmaker/cli.py"
+source_file: "shortsmaker/review.py"
 type: "rationale"
-community: "fix.bat Picture Swaps"
-location: "L107"
+community: "AI Calls & Quota Fallback"
+location: "L140"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/fixbat_Picture_Swaps
+  - community/AI_Calls__Quota_Fallback
 ---
 
 # fix / auto-fix: scene i drops its picture and gets a freshly painted one…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[paint_new()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/fixbat_Picture_Swaps
+#graphify/rationale #graphify/EXTRACTED #community/AI_Calls__Quota_Fallback

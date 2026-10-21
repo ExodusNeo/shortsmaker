@@ -1,12 +1,10 @@
 ---
 type: community
-cohesion: 0.13
 members: 22
 ---
 
 # Map Journey Scene
 
-**Cohesion:** 0.13 - loosely connected
 **Members:** 22 nodes
 
 ## Members
@@ -18,7 +16,7 @@ members: 22
 - [[Rect]] - code - remotion/src/full/Journey.tsx
 - [[SAFE_1]] - code - remotion/src/full/Journey.tsx
 - [[View]] - code - remotion/src/full/Journey.tsx
-- [[clamp_8]] - code - remotion/src/full/Journey.tsx
+- [[clamp_4]] - code - remotion/src/full/Journey.tsx
 - [[fitPoints()]] - code - remotion/src/full/Journey.tsx
 - [[graticule]] - code - remotion/src/full/Journey.tsx
 - [[level()]] - code - remotion/src/full/Journey.tsx

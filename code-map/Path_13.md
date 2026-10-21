@@ -1,20 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Ink Silhouettes"
+community: "AI Calls & Quota Fallback"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Ink_Silhouettes
+  - community/AI_Calls__Quota_Fallback
 ---
 
 # Path
 
 ## Connections
-- [[ink_silhouette()]] - `references` [EXTRACTED]
-- [[make_paper()]] - `references` [EXTRACTED]
-- [[paint_instead()]] - `references` [EXTRACTED]
-- [[redraw_custom()]] - `references` [EXTRACTED]
-- [[render_remotion()]] - `references` [EXTRACTED]
+- [[_review_state()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Ink_Silhouettes
+#graphify/code #graphify/EXTRACTED #community/AI_Calls__Quota_Fallback

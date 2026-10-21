@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/frame_render.py"
 type: "code"
-community: "SFX Synthesis"
+community: "Python Frame Renderer"
 location: "L271"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SFX_Synthesis
+  - community/Python_Frame_Renderer
 ---
 
 # write_frames()
@@ -18,4 +18,4 @@ tags:
 - [[frame_render.py]] - `contains` [EXTRACTED]
 - [[render()_2]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SFX_Synthesis
+#graphify/code #graphify/EXTRACTED #community/Python_Frame_Renderer

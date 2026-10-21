@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_pictures_first.py"
 type: "code"
-community: "Script Writing Pipeline"
+community: "Picture List Catalog"
 location: "L456"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Script_Writing_Pipeline
+  - community/Picture_List_Catalog
 ---
 
 # prepare()
@@ -15,4 +15,4 @@ tags:
 - [[passing()]] - `calls` [EXTRACTED]
 - [[test_both_mode_pools_follow_reply_position()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Script_Writing_Pipeline
+#graphify/code #graphify/EXTRACTED #community/Picture_List_Catalog

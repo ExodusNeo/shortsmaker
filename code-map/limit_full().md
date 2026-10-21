@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/plan_rules.py"
 type: "code"
-community: "Full-Scene Limits & Director Tests"
+community: "Scene Cues & Word Timing"
 location: "L227"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Full-Scene_Limits__Director_Tests
+  - community/Scene_Cues__Word_Timing
 ---
 
 # limit_full()
@@ -17,4 +17,4 @@ tags:
 - [[test_limit_full()]] - `calls` [EXTRACTED]
 - [[write_scripts()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Full-Scene_Limits__Director_Tests
+#graphify/code #graphify/EXTRACTED #community/Scene_Cues__Word_Timing

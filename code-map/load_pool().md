@@ -1,18 +1,18 @@
 ---
 source_file: "shortsmaker/picture_pool.py"
 type: "code"
-community: "Pool Storage & Contact Sheets"
+community: "Footage Downloads & Crops"
 location: "L179"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pool_Storage__Contact_Sheets
+  - community/Footage_Downloads__Crops
 ---
 
 # load_pool()
 
 ## Connections
-- [[Path_6]] - `references` [EXTRACTED]
+- [[Path_1]] - `references` [EXTRACTED]
 - [[The saved pool (None if missing or unreadable it is gathered again);…]] - `rationale_for` [EXTRACTED]
 - [[choose_images()]] - `calls` [EXTRACTED]
 - [[json]] - `calls` [EXTRACTED]
@@ -24,4 +24,4 @@ tags:
 - [[test_pool_rows_without_thumbs()]] - `calls` [EXTRACTED]
 - [[write_scripts()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pool_Storage__Contact_Sheets
+#graphify/code #graphify/EXTRACTED #community/Footage_Downloads__Crops

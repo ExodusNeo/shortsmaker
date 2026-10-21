@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/picker.py"
 type: "rationale"
-community: "SFX Events & Full Pictures"
+community: "Commons & Archive Sources (2)"
 location: "L183"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/SFX_Events__Full_Pictures
+  - community/Commons__Archive_Sources_2
 ---
 
 # Downloads the real photos the picker chose for evidence boards, custom scenes…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[full_pictures()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/SFX_Events__Full_Pictures
+#graphify/rationale #graphify/EXTRACTED #community/Commons__Archive_Sources_2

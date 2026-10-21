@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/editplan.py"
 type: "rationale"
-community: "Style Lab & Edit Plan Text"
+community: "Story Sounds & Credits"
 location: "L19"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Style_Lab__Edit_Plan_Text
+  - community/Story_Sounds__Credits
 ---
 
 # Plain-English scene change for edit_plan.txt.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[cut_text()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Style_Lab__Edit_Plan_Text
+#graphify/rationale #graphify/EXTRACTED #community/Story_Sounds__Credits

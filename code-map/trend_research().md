@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/channel_profiles.py"
 type: "code"
-community: "YouTube Research"
+community: "Entry Point, Logbook & Sounds (2)"
 location: "L143"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/YouTube_Research
+  - community/Entry_Point_Logbook__Sounds_2
 ---
 
 # trend_research()
@@ -23,4 +23,4 @@ tags:
 - [[write_scripts()]] - `calls` [EXTRACTED]
 - [[yt_list()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/YouTube_Research
+#graphify/code #graphify/EXTRACTED #community/Entry_Point_Logbook__Sounds_2

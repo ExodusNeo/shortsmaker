@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[Caption lines of up to 3 words and about 16 letters a long word (SIXTY-THREE-…]] - `rationale_for` [EXTRACTED]
 - [[audio_mix.py]] - `contains` [EXTRACTED]
-- [[captions()_1]] - `calls` [EXTRACTED]
+- [[captions()]] - `calls` [EXTRACTED]
 - [[render_remotion()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Captions__TTS

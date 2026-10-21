@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "Footage Downloads & Crops"
+community: "Channel Profiles & CLI"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Footage_Downloads__Crops
+  - community/Channel_Profiles__CLI
 ---
 
 # io
@@ -26,4 +26,4 @@ tags:
 - [[review.py]] - `imports` [EXTRACTED]
 - [[storyboard()]] - `calls` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Footage_Downloads__Crops
+#graphify/concept #graphify/EXTRACTED #community/Channel_Profiles__CLI

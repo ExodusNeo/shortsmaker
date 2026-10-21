@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/picture_pool.py"
 type: "code"
-community: "Usable Picture Filter"
+community: "Picture List Catalog"
 location: "L262"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Usable_Picture_Filter
+  - community/Picture_List_Catalog
 ---
 
 # is_usable()
@@ -17,4 +17,4 @@ tags:
 - [[picture_pool.py]] - `contains` [EXTRACTED]
 - [[usable()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/Usable_Picture_Filter
+#graphify/code #graphify/EXTRACTED #community/Picture_List_Catalog

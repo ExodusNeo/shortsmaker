@@ -9,7 +9,7 @@ tags:
   - community/Channel_Profiles__CLI
 ---
 
-# Automatic checks on a finished Short, the AI visual review and its fixes, the…
+# Automatic checks on a finished Short, the AI visual review and its fixes (incl.…
 
 ## Connections
 - [[review.py]] - `rationale_for` [EXTRACTED]

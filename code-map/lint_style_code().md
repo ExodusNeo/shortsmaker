@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/style_lab.py"
 type: "code"
-community: "Invention Lint"
+community: "Invention Slots"
 location: "L116"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Invention_Lint
+  - community/Invention_Slots
 ---
 
 # lint_style_code()
@@ -19,4 +19,4 @@ tags:
 - [[test_invention_lint_failure_uses_fallback()]] - `calls` [EXTRACTED]
 - [[test_placeholders_match_the_slots()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Invention_Lint
+#graphify/code #graphify/EXTRACTED #community/Invention_Slots
