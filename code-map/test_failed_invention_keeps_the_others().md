@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_style.py"
 type: "code"
-community: "Style Invention Coding"
-location: "L306"
+community: "Invention Slots"
+location: "L311"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Style_Invention_Coding
+  - community/Invention_Slots
 ---
 
 # test_failed_invention_keeps_the_others()
@@ -18,4 +18,4 @@ tags:
 - [[test_style.py]] - `contains` [EXTRACTED]
 - [[with_fakes()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Style_Invention_Coding
+#graphify/code #graphify/EXTRACTED #community/Invention_Slots

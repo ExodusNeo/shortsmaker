@@ -1,12 +1,12 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/picture_pool.py"
 type: "rationale"
-community: "Director Picture Context"
-location: "L2272"
+community: "Usable Picture Filter"
+location: "L267"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Director_Picture_Context
+  - community/Usable_Picture_Filter
 ---
 
 # Usable list entries for the topic check: all frames of one video count once…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[usable()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Director_Picture_Context
+#graphify/rationale #graphify/EXTRACTED #community/Usable_Picture_Filter

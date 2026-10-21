@@ -1,12 +1,12 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/picture_pool.py"
 type: "rationale"
-community: "Picture List & Contact Sheets"
-location: "L2205"
+community: "Picture List Catalog"
+location: "L200"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Picture_List__Contact_Sheets
+  - community/Picture_List_Catalog
 ---
 
 # The picture list the writer, editor and director plan with: the AI looks at the…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[catalog_pool()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Picture_List__Contact_Sheets
+#graphify/rationale #graphify/EXTRACTED #community/Picture_List_Catalog

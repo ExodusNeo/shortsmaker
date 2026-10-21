@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/full/toolkit.tsx"
 type: "code"
-community: "Full-Screen Motion Graphics"
+community: "Custom Scene Toolkit & Examples"
 location: "L310"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Full-Screen_Motion_Graphics
+  - community/Custom_Scene_Toolkit__Examples
 ---
 
 # ClockDial()
@@ -17,4 +17,4 @@ tags:
 - [[skinOf()]] - `calls` [EXTRACTED]
 - [[toolkit.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Full-Screen_Motion_Graphics
+#graphify/code #graphify/EXTRACTED #community/Custom_Scene_Toolkit__Examples

@@ -1,12 +1,12 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/picture_pool.py"
 type: "rationale"
-community: "Director Picture Context"
-location: "L2281"
+community: "Usable Picture Filter"
+location: "L276"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Director_Picture_Context
+  - community/Usable_Picture_Filter
 ---
 
 # The usable pictures as prompt lines: "#12 film: 1944 newsreel of rubber tanks…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[catalog_text()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Director_Picture_Context
+#graphify/rationale #graphify/EXTRACTED #community/Usable_Picture_Filter

@@ -1,8 +1,8 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/frame_render.py"
 type: "code"
 community: "Python Frame Renderer"
-location: "L3197"
+location: "L291"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,9 +12,9 @@ tags:
 # thumbnail()
 
 ## Connections
-- [[Path]] - `references` [EXTRACTED]
+- [[Path_20]] - `references` [EXTRACTED]
 - [[fit_font()]] - `calls` [EXTRACTED]
-- [[make_shorts.py]] - `contains` [EXTRACTED]
+- [[frame_render.py]] - `contains` [EXTRACTED]
 - [[render()_2]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Python_Frame_Renderer

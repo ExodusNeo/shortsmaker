@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_full_scenes.py"
 type: "code"
-community: "Music Loudness"
-location: "L674"
+community: "Full-Scene Limits & Director Tests"
+location: "L681"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Music_Loudness
+  - community/Full-Scene_Limits__Director_Tests
 ---
 
 # test_music_gain_evens_out_tracks()
@@ -16,4 +16,4 @@ tags:
 - [[music_gain()]] - `calls` [EXTRACTED]
 - [[test_full_scenes.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Music_Loudness
+#graphify/code #graphify/EXTRACTED #community/Full-Scene_Limits__Director_Tests

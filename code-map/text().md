@@ -1,12 +1,12 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/plan_rules.py"
 type: "code"
-community: "Full-Scene Validation"
-location: "L1228"
+community: "Full-Scene Rescue & Plan Cleaning"
+location: "L102"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Full-Scene_Validation
+  - community/Full-Scene_Rescue__Plan_Cleaning
 ---
 
 # text()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[clean_full()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Full-Scene_Validation
+#graphify/code #graphify/EXTRACTED #community/Full-Scene_Rescue__Plan_Cleaning

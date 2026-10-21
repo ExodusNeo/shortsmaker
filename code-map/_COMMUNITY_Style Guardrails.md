@@ -10,8 +10,8 @@ members: 4
 **Members:** 4 nodes
 
 ## Members
-- [[Guardrails for the style library (STYLE_CAPS) the hook keeps only its title…]] - rationale - make_shorts.py
-- [[limit_style()]] - code - make_shorts.py
+- [[Guardrails for the style library (STYLE_CAPS) the hook keeps only its title…]] - rationale - shortsmaker/plan_rules.py
+- [[limit_style()]] - code - shortsmaker/plan_rules.py
 - [[scene()_1]] - code - tests/test_style.py
 - [[test_limit_style_caps()]] - code - tests/test_style.py
 
@@ -23,9 +23,9 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 1 edge to [[_COMMUNITY_Script Team (WriteEditDirect)]]
-- 1 edge to [[_COMMUNITY_Shared Imports & Downloads]]
-- 1 edge to [[_COMMUNITY_Look Scene Picking]]
+- 1 edge to [[_COMMUNITY_Script Writing Pipeline]]
+- 1 edge to [[_COMMUNITY_Channel Profiles & CLI]]
+- 1 edge to [[_COMMUNITY_Style Tests]]
 
 ## Top bridge nodes
 - [[limit_style()]] - degree 4, connects to 2 communities

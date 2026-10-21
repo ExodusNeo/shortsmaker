@@ -1,19 +1,19 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/plan_rules.py"
 type: "code"
-community: "Spoken-Word Cue Timing"
-location: "L1461"
+community: "Scene Cues & Word Timing"
+location: "L335"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Spoken-Word_Cue_Timing
+  - community/Scene_Cues__Word_Timing
 ---
 
 # full_cues()
 
 ## Connections
 - [[When each element of a full-screen motion graphic appears (absolute seconds)…]] - `rationale_for` [EXTRACTED]
-- [[make_shorts.py]] - `contains` [EXTRACTED]
+- [[plan_rules.py]] - `contains` [EXTRACTED]
 - [[scene_cues()]] - `calls` [EXTRACTED]
 - [[spoken_at()]] - `calls` [EXTRACTED]
 - [[spoken_span()]] - `calls` [EXTRACTED]
@@ -23,4 +23,4 @@ tags:
 - [[test_full_cues_fallback()]] - `calls` [EXTRACTED]
 - [[test_full_cues_leave_time_to_finish()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Spoken-Word_Cue_Timing
+#graphify/code #graphify/EXTRACTED #community/Scene_Cues__Word_Timing

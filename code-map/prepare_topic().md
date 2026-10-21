@@ -1,24 +1,24 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/picture_pool.py"
 type: "code"
-community: "Pictures-First Pool"
-location: "L791"
+community: "Pool Storage & Contact Sheets"
+location: "L49"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pictures-First_Pool
+  - community/Pool_Storage__Contact_Sheets
 ---
 
 # prepare_topic()
 
 ## Connections
 - [[Before writing the topic's Wikipedia research (`_texts`; fact_check() reuses…]] - `rationale_for` [EXTRACTED]
-- [[Path]] - `references` [EXTRACTED]
+- [[Path_6]] - `references` [EXTRACTED]
 - [[article_text()]] - `calls` [EXTRACTED]
 - [[catalog_pool()]] - `calls` [EXTRACTED]
 - [[gather_pool()]] - `calls` [EXTRACTED]
 - [[load_pool()]] - `calls` [EXTRACTED]
-- [[make_shorts.py]] - `contains` [EXTRACTED]
+- [[picture_pool.py]] - `contains` [EXTRACTED]
 - [[pool_folder()]] - `calls` [EXTRACTED]
 - [[save_pool()]] - `calls` [EXTRACTED]
 - [[test_empty_pool_drops_topic_without_ai()]] - `calls` [EXTRACTED]
@@ -26,4 +26,4 @@ tags:
 - [[usable()]] - `calls` [EXTRACTED]
 - [[write_scripts()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pictures-First_Pool
+#graphify/code #graphify/EXTRACTED #community/Pool_Storage__Contact_Sheets

@@ -1,22 +1,22 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/gpu.py"
 type: "code"
-community: "AI Painters (MOSS & Gemini)"
-location: "L4468"
+community: "Gemini Image Painting"
+location: "L154"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AI_Painters_MOSS__Gemini
+  - community/Gemini_Image_Painting
 ---
 
 # gemini_images()
 
 ## Connections
 - [[Paint the AI images with Gemini (agy's built-in image generator, ~2 min each, 3…]] - `rationale_for` [EXTRACTED]
-- [[Path]] - `references` [EXTRACTED]
-- [[make_shorts.py]] - `contains` [EXTRACTED]
-- [[one()]] - `indirect_call` [INFERRED]
+- [[Path_2]] - `references` [EXTRACTED]
+- [[gpu.py]] - `contains` [EXTRACTED]
+- [[one()_1]] - `indirect_call` [INFERRED]
 - [[paint_instead()]] - `calls` [EXTRACTED]
 - [[render()_2]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AI_Painters_MOSS__Gemini
+#graphify/code #graphify/EXTRACTED #community/Gemini_Image_Painting

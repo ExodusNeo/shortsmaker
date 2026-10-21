@@ -1,12 +1,12 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/frame_render.py"
 type: "rationale"
-community: "Shared Imports & Downloads"
-location: "L3178"
+community: "SFX Synthesis"
+location: "L272"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Shared_Imports__Downloads
+  - community/SFX_Synthesis
 ---
 
 # Stream every frame to ffmpeg. Cuts in `flashes` are hard cuts under a white…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[write_frames()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Shared_Imports__Downloads
+#graphify/rationale #graphify/EXTRACTED #community/SFX_Synthesis

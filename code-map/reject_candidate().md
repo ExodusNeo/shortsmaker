@@ -1,20 +1,21 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/style_lab.py"
 type: "code"
-community: "Library Menu & Candidates"
-location: "L3953"
+community: "Style Lab & Edit Plan Text"
+location: "L295"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Library_Menu__Candidates
+  - community/Style_Lab__Edit_Plan_Text
 ---
 
 # reject_candidate()
 
 ## Connections
-- [[Path]] - `references` [EXTRACTED]
+- [[Path_16]] - `references` [EXTRACTED]
 - [[library_menu()]] - `calls` [EXTRACTED]
-- [[make_shorts.py]] - `contains` [EXTRACTED]
+- [[shutil]] - `calls` [EXTRACTED]
+- [[style_lab.py]] - `contains` [EXTRACTED]
 - [[test_reject_deletes()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Library_Menu__Candidates
+#graphify/code #graphify/EXTRACTED #community/Style_Lab__Edit_Plan_Text

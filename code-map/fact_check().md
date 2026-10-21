@@ -1,12 +1,12 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/writing.py"
 type: "code"
-community: "Wikipedia & Wikimedia Research"
-location: "L1075"
+community: "Commons & Archive Sources"
+location: "L523"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Wikipedia__Wikimedia_Research
+  - community/Commons__Archive_Sources
 ---
 
 # fact_check()
@@ -15,9 +15,10 @@ tags:
 - [[Check every line against the story's Wikipedia articles and rewrite what they…]] - `rationale_for` [EXTRACTED]
 - [[article_text()]] - `calls` [EXTRACTED]
 - [[ask_ai()]] - `calls` [EXTRACTED]
-- [[make_shorts.py]] - `contains` [EXTRACTED]
+- [[json]] - `calls` [EXTRACTED]
 - [[test_fact_check_drops_full()]] - `calls` [EXTRACTED]
 - [[test_fact_check_sees_new_graphics()]] - `calls` [EXTRACTED]
 - [[write_scripts()]] - `calls` [EXTRACTED]
+- [[writing.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Wikipedia__Wikimedia_Research
+#graphify/code #graphify/EXTRACTED #community/Commons__Archive_Sources

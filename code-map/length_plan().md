@@ -1,12 +1,12 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/writing.py"
 type: "code"
-community: "Script Team (Write/Edit/Direct)"
-location: "L519"
+community: "Quality Check & Script Editing"
+location: "L16"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Script_Team_Write/Edit/Direct
+  - community/Quality_Check__Script_Editing
 ---
 
 # length_plan()
@@ -14,8 +14,8 @@ tags:
 ## Connections
 - [[(min words, max words, min scenes, max scenes, seconds) for this batch's…]] - `rationale_for` [EXTRACTED]
 - [[edit_scripts()]] - `calls` [EXTRACTED]
-- [[make_shorts.py]] - `contains` [EXTRACTED]
 - [[quality_check()]] - `calls` [EXTRACTED]
 - [[write_scripts()]] - `calls` [EXTRACTED]
+- [[writing.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Script_Team_Write/Edit/Direct
+#graphify/code #graphify/EXTRACTED #community/Quality_Check__Script_Editing

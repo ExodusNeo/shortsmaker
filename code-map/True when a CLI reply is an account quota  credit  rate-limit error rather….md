@@ -1,12 +1,12 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/llm.py"
 type: "rationale"
-community: "AI Planner Calls & Quota"
-location: "L194"
+community: "AI Calls & Quota Fallback"
+location: "L55"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/AI_Planner_Calls__Quota
+  - community/AI_Calls__Quota_Fallback
 ---
 
 # True when a CLI reply is an account quota / credit / rate-limit error rather…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[quota_exhausted()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/AI_Planner_Calls__Quota
+#graphify/rationale #graphify/EXTRACTED #community/AI_Calls__Quota_Fallback

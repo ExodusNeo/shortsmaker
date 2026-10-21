@@ -1,12 +1,12 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/motion.py"
 type: "rationale"
-community: "Custom Scene Coder"
-location: "L3534"
+community: "AI Calls & Quota Fallback"
+location: "L116"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Custom_Scene_Coder
+  - community/AI_Calls__Quota_Fallback
 ---
 
 # Extract clean TypeScript/React code exporting Custom{slot} from an AI reply.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[clean_tsx_code()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Custom_Scene_Coder
+#graphify/rationale #graphify/EXTRACTED #community/AI_Calls__Quota_Fallback

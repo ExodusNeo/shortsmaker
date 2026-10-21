@@ -1,12 +1,12 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/footage.py"
 type: "rationale"
-community: "State & Logbook Helpers"
-location: "L2061"
+community: "Footage Downloads & Crops"
+location: "L219"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/State__Logbook_Helpers
+  - community/Footage_Downloads__Crops
 ---
 
 # Start and end of the camera shot containing time `at` (newsreels cut to title…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[shot_span()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/State__Logbook_Helpers
+#graphify/rationale #graphify/EXTRACTED #community/Footage_Downloads__Crops

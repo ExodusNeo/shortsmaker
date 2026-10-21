@@ -1,12 +1,12 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/remotion_render.py"
 type: "rationale"
-community: "Custom Scene Coder"
-location: "L3996"
+community: "AI Calls & Quota Fallback"
+location: "L40"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Custom_Scene_Coder
+  - community/AI_Calls__Quota_Fallback
 ---
 
 # The review saw custom scene i look wrong: its coder gets the complaint and its…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[redraw_custom()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Custom_Scene_Coder
+#graphify/rationale #graphify/EXTRACTED #community/AI_Calls__Quota_Fallback

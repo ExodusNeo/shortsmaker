@@ -1,12 +1,12 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/review.py"
 type: "rationale"
-community: "Quality Checks & Captions"
-location: "L3283"
+community: "Visual Review Sheets"
+location: "L78"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Quality_Checks__Captions
+  - community/Visual_Review_Sheets
 ---
 
 # The review's reply -> (CHECK lines, scene -> ("repaint" | "graphic", why)).…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[review_fixes()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Quality_Checks__Captions
+#graphify/rationale #graphify/EXTRACTED #community/Visual_Review_Sheets

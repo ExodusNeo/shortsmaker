@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_pictures_first.py"
 type: "code"
-community: "Script Team (Write/Edit/Direct)"
-location: "L213"
+community: "Script Writing Pipeline"
+location: "L217"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Script_Team_Write/Edit/Direct
+  - community/Script_Writing_Pipeline
 ---
 
 # passing()
@@ -20,4 +20,4 @@ tags:
 - [[test_pictures_first.py]] - `contains` [EXTRACTED]
 - [[test_topic_prompt_asks_backups_and_visuals()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Script_Team_Write/Edit/Direct
+#graphify/code #graphify/EXTRACTED #community/Script_Writing_Pipeline

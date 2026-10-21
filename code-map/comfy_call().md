@@ -1,18 +1,19 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/gpu.py"
 type: "code"
-community: "AI Painters (MOSS & Gemini)"
-location: "L4498"
+community: "Footage Downloads & Crops"
+location: "L184"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AI_Painters_MOSS__Gemini
+  - community/Footage_Downloads__Crops
 ---
 
 # comfy_call()
 
 ## Connections
-- [[make_shorts.py]] - `contains` [EXTRACTED]
+- [[gpu.py]] - `contains` [EXTRACTED]
+- [[json]] - `calls` [EXTRACTED]
 - [[moss_images()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AI_Painters_MOSS__Gemini
+#graphify/code #graphify/EXTRACTED #community/Footage_Downloads__Crops

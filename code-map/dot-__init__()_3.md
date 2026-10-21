@@ -1,18 +1,17 @@
 ---
-source_file: "make_shorts.py"
+source_file: "tests/test_pictures_first.py"
 type: "code"
-community: "Python Frame Renderer"
-location: "L3105"
+community: "Pool Gathering"
+location: "L33"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Python_Frame_Renderer
+  - community/Pool_Gathering
 ---
 
 # .__init__()
 
 ## Connections
-- [[ClipReader]] - `method` [EXTRACTED]
-- [[Path]] - `references` [EXTRACTED]
+- [[stubbed]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Python_Frame_Renderer
+#graphify/code #graphify/EXTRACTED #community/Pool_Gathering

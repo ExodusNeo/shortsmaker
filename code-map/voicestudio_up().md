@@ -1,20 +1,22 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/gpu.py"
 type: "code"
-community: "Voice Pipeline (VoiceStudio)"
-location: "L4405"
+community: "Footage Downloads & Crops"
+location: "L91"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Voice_Pipeline_VoiceStudio
+  - community/Footage_Downloads__Crops
 ---
 
 # voicestudio_up()
 
 ## Connections
 - [[VoiceStudio's backend answers, starting the app (and waiting up to 2 min) if it…]] - `rationale_for` [EXTRACTED]
+- [[gpu.py]] - `contains` [EXTRACTED]
 - [[local_voice()]] - `calls` [EXTRACTED]
-- [[make_shorts.py]] - `contains` [EXTRACTED]
+- [[subprocess]] - `calls` [EXTRACTED]
+- [[time]] - `calls` [EXTRACTED]
 - [[up()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Voice_Pipeline_VoiceStudio
+#graphify/code #graphify/EXTRACTED #community/Footage_Downloads__Crops

@@ -1,19 +1,19 @@
 ---
 source_file: "remotion/src/style/overlays/QuestionBeat.tsx"
 type: "code"
-community: "Style Library Looks & Transitions"
+community: "Style Library Inventions (TS)"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Style_Library_Looks__Transitions
+  - community/Style_Library_Inventions_TS
 ---
 
 # QuestionBeat.tsx
 
 ## Connections
 - [[CAPTION_TOP]] - `imports` [EXTRACTED]
-- [[CLAMP_5]] - `imports` [EXTRACTED]
+- [[CLAMP]] - `imports` [EXTRACTED]
 - [[FONT]] - `imports` [EXTRACTED]
 - [[Overlay]] - `imports` [EXTRACTED]
 - [[QuestionBeat()]] - `contains` [EXTRACTED]
@@ -27,4 +27,4 @@ tags:
 - [[styletypes.ts]] - `imports_from` [EXTRACTED]
 - [[theme]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Style_Library_Looks__Transitions
+#graphify/code #graphify/EXTRACTED #community/Style_Library_Inventions_TS

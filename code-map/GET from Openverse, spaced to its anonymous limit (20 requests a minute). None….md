@@ -1,12 +1,12 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/image_sources.py"
 type: "rationale"
-community: "Archive Picture & Film Sources"
-location: "L1717"
+community: "Commons & Archive Sources"
+location: "L134"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Archive_Picture__Film_Sources
+  - community/Commons__Archive_Sources
 ---
 
 # GET from Openverse, spaced to its anonymous limit (20 requests a minute). None…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[ov_get()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Archive_Picture__Film_Sources
+#graphify/rationale #graphify/EXTRACTED #community/Commons__Archive_Sources

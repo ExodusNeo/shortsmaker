@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/full/icons.tsx"
 type: "code"
-community: "Full-Screen Motion Graphics"
+community: "Big Number Scene"
 location: "L160"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Full-Screen_Motion_Graphics
+  - community/Big_Number_Scene
 ---
 
 # InkIcon()
@@ -16,4 +16,4 @@ tags:
 - [[Figure()]] - `calls` [EXTRACTED]
 - [[icons.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Full-Screen_Motion_Graphics
+#graphify/code #graphify/EXTRACTED #community/Big_Number_Scene

@@ -1,12 +1,12 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/style_lab.py"
 type: "rationale"
-community: "TypeScript Checks"
-location: "L3775"
+community: "Invention Lint"
+location: "L117"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/TypeScript_Checks
+  - community/Invention_Lint
 ---
 
 # Rule breaks a compiler can't see in an AI-invented style component (see…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[lint_style_code()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/TypeScript_Checks
+#graphify/rationale #graphify/EXTRACTED #community/Invention_Lint

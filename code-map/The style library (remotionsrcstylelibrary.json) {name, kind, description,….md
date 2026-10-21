@@ -1,12 +1,12 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/style_lab.py"
 type: "rationale"
-community: "Style Library Approval"
-location: "L492"
+community: "Style Lab & Edit Plan Text"
+location: "L15"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Style_Library_Approval
+  - community/Style_Lab__Edit_Plan_Text
 ---
 
 # The style library (remotion/src/style/library.json): [{name, kind, description,…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[style_library()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Style_Library_Approval
+#graphify/rationale #graphify/EXTRACTED #community/Style_Lab__Edit_Plan_Text

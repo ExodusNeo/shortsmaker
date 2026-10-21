@@ -1,12 +1,12 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/footage.py"
 type: "code"
-community: "Archive Picture & Film Sources"
-location: "L1996"
+community: "Footage Downloads & Crops"
+location: "L154"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Archive_Picture__Film_Sources
+  - community/Footage_Downloads__Crops
 ---
 
 # crop_film_bytes()
@@ -14,6 +14,7 @@ tags:
 ## Connections
 - [[Match FILM_CROP on downloaded thumbnail JPEGs (cut top 6%, bottom 20%, and 4%…]] - `rationale_for` [EXTRACTED]
 - [[film_frames()]] - `calls` [EXTRACTED]
-- [[make_shorts.py]] - `contains` [EXTRACTED]
+- [[footage.py]] - `contains` [EXTRACTED]
+- [[io]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Archive_Picture__Film_Sources
+#graphify/code #graphify/EXTRACTED #community/Footage_Downloads__Crops

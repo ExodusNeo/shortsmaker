@@ -1,12 +1,12 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/plan_rules.py"
 type: "rationale"
-community: "Callout & Sound Validation"
-location: "L1429"
+community: "Full-Scene Rescue & Plan Cleaning"
+location: "L303"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Callout__Sound_Validation
+  - community/Full-Scene_Rescue__Plan_Cleaning
 ---
 
 # Lowercase, accent-free word tokens, for matching names against spoken words.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[words_of()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Callout__Sound_Validation
+#graphify/rationale #graphify/EXTRACTED #community/Full-Scene_Rescue__Plan_Cleaning

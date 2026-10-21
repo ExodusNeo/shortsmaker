@@ -1,8 +1,8 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/frame_render.py"
 type: "code"
 community: "Python Frame Renderer"
-location: "L2945"
+location: "L39"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -13,8 +13,8 @@ tags:
 
 ## Connections
 - [[FreeTypeFont]] - `references` [EXTRACTED]
+- [[frame_render.py]] - `contains` [EXTRACTED]
 - [[graphic_overlay()]] - `calls` [EXTRACTED]
-- [[make_shorts.py]] - `contains` [EXTRACTED]
 - [[person_card()]] - `calls` [EXTRACTED]
 - [[thumbnail()]] - `calls` [EXTRACTED]
 

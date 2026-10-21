@@ -1,12 +1,12 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/motion.py"
 type: "rationale"
-community: "Custom Scene Coder"
-location: "L3504"
+community: "AI Calls & Quota Fallback"
+location: "L86"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Custom_Scene_Coder
+  - community/AI_Calls__Quota_Fallback
 ---
 
 # Guaranteed-valid Remotion component for slot 0..3 if the AI coder fails or…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[fallback_custom_tsx()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Custom_Scene_Coder
+#graphify/rationale #graphify/EXTRACTED #community/AI_Calls__Quota_Fallback

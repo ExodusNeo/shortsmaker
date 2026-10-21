@@ -1,12 +1,12 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/style_lab.py"
 type: "code"
-community: "Style Invention Coding"
-location: "L3859"
+community: "Style Lab & Edit Plan Text"
+location: "L201"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Style_Invention_Coding
+  - community/Style_Lab__Edit_Plan_Text
 ---
 
 # style_preview()
@@ -14,6 +14,6 @@ tags:
 ## Connections
 - [[(props, start, end) of a small preview where an invention is used its scene,…]] - `rationale_for` [EXTRACTED]
 - [[invent_component()]] - `calls` [EXTRACTED]
-- [[make_shorts.py]] - `contains` [EXTRACTED]
+- [[style_lab.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Style_Invention_Coding
+#graphify/code #graphify/EXTRACTED #community/Style_Lab__Edit_Plan_Text

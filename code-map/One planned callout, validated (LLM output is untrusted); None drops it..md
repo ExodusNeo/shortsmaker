@@ -1,12 +1,12 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/plan_rules.py"
 type: "rationale"
-community: "Callout Validation"
-location: "L1152"
+community: "Full-Scene Rescue & Plan Cleaning"
+location: "L26"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Callout_Validation
+  - community/Full-Scene_Rescue__Plan_Cleaning
 ---
 
 # One planned callout, validated (LLM output is untrusted); None drops it.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[clean_graphic()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Callout_Validation
+#graphify/rationale #graphify/EXTRACTED #community/Full-Scene_Rescue__Plan_Cleaning

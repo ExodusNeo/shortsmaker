@@ -1,12 +1,12 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/remotion_render.py"
 type: "rationale"
-community: "Quality Checks & Captions"
-location: "L2456"
+community: "Remotion Decision"
+location: "L16"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Quality_Checks__Captions
+  - community/Remotion_Decision
 ---
 
 # Remotion renders when the plan is graphics-heavy or uses anything only it can…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[wants_remotion()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Quality_Checks__Captions
+#graphify/rationale #graphify/EXTRACTED #community/Remotion_Decision

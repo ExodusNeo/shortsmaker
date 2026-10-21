@@ -1,8 +1,8 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/image_sources.py"
 type: "rationale"
 community: "Python Frame Renderer"
-location: "L1857"
+location: "L223"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED

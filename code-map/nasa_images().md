@@ -1,12 +1,12 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/image_sources.py"
 type: "code"
-community: "Archive Picture & Film Sources"
-location: "L1771"
+community: "Footage Downloads & Crops"
+location: "L188"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Archive_Picture__Film_Sources
+  - community/Footage_Downloads__Crops
 ---
 
 # nasa_images()
@@ -14,8 +14,8 @@ tags:
 ## Connections
 - [[NASA photos (public domain), when the story touches space, flight or science.]] - `rationale_for` [EXTRACTED]
 - [[gather_pool()]] - `calls` [EXTRACTED]
-- [[make_shorts.py]] - `contains` [EXTRACTED]
+- [[image_sources.py]] - `contains` [EXTRACTED]
 - [[nasa_search()]] - `calls` [EXTRACTED]
 - [[on_topic()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Archive_Picture__Film_Sources
+#graphify/code #graphify/EXTRACTED #community/Footage_Downloads__Crops

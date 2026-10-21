@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_full_scenes.py"
 type: "rationale"
-community: "Music Loudness"
-location: "L675"
+community: "Full-Scene Limits & Director Tests"
+location: "L682"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Music_Loudness
+  - community/Full-Scene_Limits__Director_Tests
 ---
 
 # Mike's Thinking Music (-22 LUFS) vanished under the voice with the old fixed…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[test_music_gain_evens_out_tracks()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Music_Loudness
+#graphify/rationale #graphify/EXTRACTED #community/Full-Scene_Limits__Director_Tests

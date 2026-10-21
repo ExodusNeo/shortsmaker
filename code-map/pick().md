@@ -1,12 +1,12 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/audio_mix.py"
 type: "code"
-community: "Motion Graphics Tests"
-location: "L3349"
+community: "SFX Events & Full Pictures"
+location: "L275"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Motion_Graphics_Tests
+  - community/SFX_Events__Full_Pictures
 ---
 
 # pick()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[sfx_events()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Motion_Graphics_Tests
+#graphify/code #graphify/EXTRACTED #community/SFX_Events__Full_Pictures

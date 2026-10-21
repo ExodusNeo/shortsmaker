@@ -1,12 +1,12 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/writing.py"
 type: "code"
-community: "Script Team (Write/Edit/Direct)"
-location: "L815"
+community: "Quality Check & Script Editing"
+location: "L263"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Script_Team_Write/Edit/Direct
+  - community/Quality_Check__Script_Editing
 ---
 
 # edit_scripts()
@@ -14,10 +14,11 @@ tags:
 ## Connections
 - [[The OTHER AI edits the drafts strongest hook, read-aloud fixes, cuts,…]] - `rationale_for` [EXTRACTED]
 - [[ask_ai()]] - `calls` [EXTRACTED]
+- [[json]] - `calls` [EXTRACTED]
 - [[length_plan()]] - `calls` [EXTRACTED]
-- [[make_shorts.py]] - `contains` [EXTRACTED]
 - [[narration_lines()]] - `calls` [EXTRACTED]
 - [[pictures_of()]] - `calls` [EXTRACTED]
 - [[write_scripts()]] - `calls` [EXTRACTED]
+- [[writing.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Script_Team_Write/Edit/Direct
+#graphify/code #graphify/EXTRACTED #community/Quality_Check__Script_Editing

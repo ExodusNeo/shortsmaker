@@ -1,12 +1,12 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/review.py"
 type: "rationale"
-community: "Quality Checks & Captions"
-location: "L3326"
+community: "Visual Review Sheets"
+location: "L121"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Quality_Checks__Captions
+  - community/Visual_Review_Sheets
 ---
 
 # One mid-scene frame per scene from the finished video, labeled with its…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[storyboard()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Quality_Checks__Captions
+#graphify/rationale #graphify/EXTRACTED #community/Visual_Review_Sheets

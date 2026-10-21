@@ -1,21 +1,21 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/frame_render.py"
 type: "code"
-community: "State & Logbook Helpers"
-location: "L3008"
+community: "Python Frame Renderer"
+location: "L102"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/State__Logbook_Helpers
+  - community/Python_Frame_Renderer
 ---
 
 # graphic_low()
 
 ## Connections
-- [[Path]] - `references` [EXTRACTED]
+- [[Path_20]] - `references` [EXTRACTED]
 - [[True when the picture's subject would land under the top callouts (y ~180-680…]] - `rationale_for` [EXTRACTED]
 - [[fills_frame()]] - `calls` [EXTRACTED]
-- [[make_shorts.py]] - `contains` [EXTRACTED]
+- [[frame_render.py]] - `contains` [EXTRACTED]
 - [[render()_2]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/State__Logbook_Helpers
+#graphify/code #graphify/EXTRACTED #community/Python_Frame_Renderer

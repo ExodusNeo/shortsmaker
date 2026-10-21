@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_full_scenes.py"
 type: "code"
-community: "Full-Scene Validation"
-location: "L66"
+community: "Full-Scene Rescue & Plan Cleaning"
+location: "L73"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Full-Scene_Validation
+  - community/Full-Scene_Rescue__Plan_Cleaning
 ---
 
 # test_number_scaling()
@@ -17,4 +17,4 @@ tags:
 - [[show_number()]] - `calls` [EXTRACTED]
 - [[test_full_scenes.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Full-Scene_Validation
+#graphify/code #graphify/EXTRACTED #community/Full-Scene_Rescue__Plan_Cleaning

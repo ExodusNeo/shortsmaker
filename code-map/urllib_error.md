@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "concept"
-community: "Shared Imports & Downloads"
+community: "Footage Downloads & Crops"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Shared_Imports__Downloads
+  - community/Footage_Downloads__Crops
 ---
 
 # urllib_error
 
 ## Connections
-- [[make_shorts.py]] - `imports` [EXTRACTED]
+- [[gpu.py]] - `imports` [EXTRACTED]
+- [[image_sources.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Shared_Imports__Downloads
+#graphify/concept #graphify/EXTRACTED #community/Footage_Downloads__Crops

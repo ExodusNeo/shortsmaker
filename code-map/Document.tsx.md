@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/full/Document.tsx"
 type: "code"
-community: "Full-Screen Motion Graphics"
+community: "Paper & Evidence Board Scenes"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Full-Screen_Motion_Graphics
+  - community/Paper__Evidence_Board_Scenes
 ---
 
 # Document.tsx
@@ -23,10 +23,10 @@ tags:
 - [[RED]] - `imports` [EXTRACTED]
 - [[SERIF]] - `imports` [EXTRACTED]
 - [[TYPE]] - `imports` [EXTRACTED]
-- [[clamp_2]] - `contains` [EXTRACTED]
+- [[clamp_6]] - `contains` [EXTRACTED]
 - [[fulltypes.ts]] - `imports_from` [EXTRACTED]
 - [[ref_remotion]] - `imports_from` [EXTRACTED]
 - [[rng()]] - `imports` [EXTRACTED]
 - [[wrapText()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Full-Screen_Motion_Graphics
+#graphify/code #graphify/EXTRACTED #community/Paper__Evidence_Board_Scenes

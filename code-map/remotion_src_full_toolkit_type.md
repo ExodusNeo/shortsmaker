@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "Full-Screen Motion Graphics"
+community: "Custom Scene Toolkit & Examples"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Full-Screen_Motion_Graphics
+  - community/Custom_Scene_Toolkit__Examples
 ---
 
 # remotion_src_full_toolkit_type
@@ -14,4 +14,4 @@ tags:
 - [[Custom0.tsx]] - `imports` [EXTRACTED]
 - [[Custom3.tsx]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Full-Screen_Motion_Graphics
+#graphify/concept #graphify/EXTRACTED #community/Custom_Scene_Toolkit__Examples

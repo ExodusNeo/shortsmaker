@@ -1,12 +1,12 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/writing.py"
 type: "rationale"
-community: "Script Team (Write/Edit/Direct)"
-location: "L525"
+community: "Script Writing Pipeline"
+location: "L22"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Script_Team_Write/Edit/Direct
+  - community/Script_Writing_Pipeline
 ---
 
 # Plan n Shorts on new topics, or on exactly `topics` (comparison runs: the other…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[write_scripts()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Script_Team_Write/Edit/Direct
+#graphify/rationale #graphify/EXTRACTED #community/Script_Writing_Pipeline

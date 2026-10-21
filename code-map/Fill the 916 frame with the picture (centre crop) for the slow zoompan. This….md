@@ -1,12 +1,12 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/photo_prep.py"
 type: "rationale"
-community: "AI Painters (MOSS & Gemini)"
-location: "L2651"
+community: "Gemini Image Painting"
+location: "L85"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/AI_Painters_MOSS__Gemini
+  - community/Gemini_Image_Painting
 ---
 
 # Fill the 9:16 frame with the picture (centre crop) for the slow zoom/pan. This…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[to_vertical()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/AI_Painters_MOSS__Gemini
+#graphify/rationale #graphify/EXTRACTED #community/Gemini_Image_Painting

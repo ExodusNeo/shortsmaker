@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/full/examples/ExampleEvidence.tsx"
 type: "code"
-community: "Full-Screen Motion Graphics"
+community: "Custom Scene Toolkit & Examples"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Full-Screen_Motion_Graphics
+  - community/Custom_Scene_Toolkit__Examples
 ---
 
 # ExampleEvidence.tsx
@@ -39,4 +39,4 @@ tags:
 - [[skinOf()]] - `imports` [EXTRACTED]
 - [[toolkit.tsx]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Full-Screen_Motion_Graphics
+#graphify/code #graphify/EXTRACTED #community/Custom_Scene_Toolkit__Examples

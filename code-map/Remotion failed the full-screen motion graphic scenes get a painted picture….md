@@ -1,12 +1,12 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/remotion_render.py"
 type: "rationale"
-community: "AI Painters (MOSS & Gemini)"
-location: "L4028"
+community: "Gemini Image Painting"
+location: "L72"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/AI_Painters_MOSS__Gemini
+  - community/Gemini_Image_Painting
 ---
 
 # Remotion failed: the full-screen motion graphic scenes get a painted picture…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[paint_instead()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/AI_Painters_MOSS__Gemini
+#graphify/rationale #graphify/EXTRACTED #community/Gemini_Image_Painting

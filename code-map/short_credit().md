@@ -1,19 +1,19 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/image_sources.py"
 type: "code"
-community: "Quality Checks & Captions"
-location: "L1841"
+community: "Story Sounds & Credits"
+location: "L207"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Quality_Checks__Captions
+  - community/Story_Sounds__Credits
 ---
 
 # short_credit()
 
 ## Connections
 - [[The on-screen credit tag kind, a short name and the licence (Photo E. Mariz…]] - `rationale_for` [EXTRACTED]
-- [[make_shorts.py]] - `contains` [EXTRACTED]
+- [[image_sources.py]] - `contains` [EXTRACTED]
 - [[render()_2]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Quality_Checks__Captions
+#graphify/code #graphify/EXTRACTED #community/Story_Sounds__Credits

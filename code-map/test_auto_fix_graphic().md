@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_full_scenes.py"
 type: "code"
-community: "Automatic Review Fixes"
-location: "L355"
+community: "Review Fixes"
+location: "L362"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Automatic_Review_Fixes
+  - community/Review_Fixes
 ---
 
 # test_auto_fix_graphic()
@@ -16,4 +16,4 @@ tags:
 - [[fake_rescue()]] - `indirect_call` [INFERRED]
 - [[test_full_scenes.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Automatic_Review_Fixes
+#graphify/code #graphify/EXTRACTED #community/Review_Fixes

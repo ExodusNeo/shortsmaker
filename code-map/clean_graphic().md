@@ -1,12 +1,12 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/plan_rules.py"
 type: "code"
-community: "Callout Validation"
-location: "L1151"
+community: "Full-Scene Rescue & Plan Cleaning"
+location: "L25"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Callout_Validation
+  - community/Full-Scene_Rescue__Plan_Cleaning
 ---
 
 # clean_graphic()
@@ -16,9 +16,10 @@ tags:
 - [[contains()]] - `calls` [EXTRACTED]
 - [[coords()]] - `calls` [EXTRACTED]
 - [[is_num()]] - `calls` [EXTRACTED]
-- [[make_shorts.py]] - `contains` [EXTRACTED]
+- [[plan_rules.py]] - `contains` [EXTRACTED]
+- [[re]] - `calls` [EXTRACTED]
 - [[test_clean_question_and_kinetic()]] - `calls` [EXTRACTED]
 - [[words_of()]] - `calls` [EXTRACTED]
 - [[write_scripts()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Callout_Validation
+#graphify/code #graphify/EXTRACTED #community/Full-Scene_Rescue__Plan_Cleaning

@@ -1,12 +1,12 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/picture_pool.py"
 type: "code"
-community: "Director Picture Context"
-location: "L760"
+community: "Usable Picture Filter"
+location: "L18"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Director_Picture_Context
+  - community/Usable_Picture_Filter
 ---
 
 # pictures_of()
@@ -17,7 +17,7 @@ tags:
 - [[direct_scripts()]] - `calls` [EXTRACTED]
 - [[edit_scripts()]] - `calls` [EXTRACTED]
 - [[load_pool()]] - `calls` [EXTRACTED]
-- [[make_shorts.py]] - `contains` [EXTRACTED]
+- [[picture_pool.py]] - `contains` [EXTRACTED]
 - [[write_scripts()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Director_Picture_Context
+#graphify/code #graphify/EXTRACTED #community/Usable_Picture_Filter

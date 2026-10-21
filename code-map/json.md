@@ -1,24 +1,77 @@
 ---
 source_file: ""
 type: "concept"
-community: "Local GPU Workers"
+community: "Style Lab & Edit Plan Text"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Local_GPU_Workers
+  - community/Style_Lab__Edit_Plan_Text
 ---
 
 # json
 
 ## Connections
+- [[approve_candidate()]] - `calls` [EXTRACTED]
+- [[archive_films()]] - `calls` [EXTRACTED]
+- [[article_text()]] - `calls` [EXTRACTED]
+- [[audio_mix.py]] - `imports` [EXTRACTED]
+- [[catalog_pool()]] - `calls` [EXTRACTED]
+- [[channel_profiles.py]] - `imports` [EXTRACTED]
+- [[choose_images()]] - `calls` [EXTRACTED]
+- [[cli.py]] - `imports` [EXTRACTED]
+- [[code_custom_scenes()]] - `calls` [EXTRACTED]
+- [[comfy_call()]] - `calls` [EXTRACTED]
+- [[commons_films()]] - `calls` [EXTRACTED]
+- [[direct_scripts()]] - `calls` [EXTRACTED]
+- [[edit_scripts()]] - `calls` [EXTRACTED]
+- [[fact_check()]] - `calls` [EXTRACTED]
+- [[fallback_custom_tsx()]] - `calls` [EXTRACTED]
+- [[footage.py]] - `imports` [EXTRACTED]
+- [[freesound_fetch()]] - `calls` [EXTRACTED]
 - [[gen.py]] - `imports` [EXTRACTED]
-- [[main()_1]] - `calls` [EXTRACTED]
-- [[main()_2]] - `calls` [EXTRACTED]
-- [[make_shorts.py]] - `imports` [EXTRACTED]
+- [[gpu.py]] - `imports` [EXTRACTED]
+- [[image_sources.py]] - `imports` [EXTRACTED]
+- [[invent_component()]] - `calls` [EXTRACTED]
+- [[library_menu()]] - `calls` [EXTRACTED]
+- [[llm.py]] - `imports` [EXTRACTED]
+- [[load_channel()]] - `calls` [EXTRACTED]
+- [[load_pool()]] - `calls` [EXTRACTED]
+- [[load_state()]] - `calls` [EXTRACTED]
+- [[local_job()]] - `calls` [EXTRACTED]
+- [[main()_3]] - `calls` [EXTRACTED]
+- [[main()]] - `calls` [EXTRACTED]
+- [[media_tools.py]] - `imports` [EXTRACTED]
+- [[moss_images()]] - `calls` [EXTRACTED]
+- [[motion.py]] - `imports` [EXTRACTED]
+- [[nasa_films()]] - `calls` [EXTRACTED]
+- [[pick_channel()]] - `calls` [EXTRACTED]
+- [[picker.py]] - `imports` [EXTRACTED]
+- [[picture_pool.py]] - `imports` [EXTRACTED]
+- [[pixabay_films()]] - `calls` [EXTRACTED]
+- [[preview_sheet()]] - `calls` [EXTRACTED]
 - [[qwen_voice.py]] - `imports` [EXTRACTED]
+- [[remotion_render.py]] - `imports` [EXTRACTED]
 - [[render_full.py]] - `imports` [EXTRACTED]
 - [[render_style.py]] - `imports` [EXTRACTED]
+- [[rescue_graphics()]] - `calls` [EXTRACTED]
+- [[rewrite_paint_prompts()]] - `calls` [EXTRACTED]
+- [[save_candidate()]] - `calls` [EXTRACTED]
+- [[save_channel()]] - `calls` [EXTRACTED]
+- [[save_state()]] - `calls` [EXTRACTED]
+- [[search_suggestions()]] - `calls` [EXTRACTED]
+- [[seo.py]] - `imports` [EXTRACTED]
+- [[seo_pass()]] - `calls` [EXTRACTED]
+- [[short_render.py]] - `imports` [EXTRACTED]
+- [[style_lab.py]] - `imports` [EXTRACTED]
+- [[style_library()]] - `calls` [EXTRACTED]
+- [[style_placeholders()]] - `calls` [EXTRACTED]
 - [[test_pictures_first.py]] - `imports` [EXTRACTED]
 - [[test_style.py]] - `imports` [EXTRACTED]
+- [[trend_research()]] - `calls` [EXTRACTED]
+- [[voicestudio_unload()]] - `calls` [EXTRACTED]
+- [[write_json()]] - `calls` [EXTRACTED]
+- [[write_scripts()]] - `calls` [EXTRACTED]
+- [[write_style_index()]] - `calls` [EXTRACTED]
+- [[writing.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Local_GPU_Workers
+#graphify/concept #graphify/EXTRACTED #community/Style_Lab__Edit_Plan_Text

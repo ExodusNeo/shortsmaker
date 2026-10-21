@@ -1,12 +1,12 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/style_lab.py"
 type: "rationale"
-community: "Style Library Approval"
-location: "L3926"
+community: "Style Lab & Edit Plan Text"
+location: "L268"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Style_Library_Approval
+  - community/Style_Lab__Edit_Plan_Text
 ---
 
 # Adds a candidate to the library (component file, library.json entry,…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[approve_candidate()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Style_Library_Approval
+#graphify/rationale #graphify/EXTRACTED #community/Style_Lab__Edit_Plan_Text

@@ -1,17 +1,17 @@
 ---
-source_file: "remotion/src/Cards.tsx"
+source_file: "remotion/src/full/guarded.tsx"
 type: "code"
-community: "Remotion Cards & Captions"
-location: "L5"
+community: "Guarded Layout (cards, arrows)"
+location: "L17"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Remotion_Cards__Captions
+  - community/Guarded_Layout_cards_arrows
 ---
 
 # clamp
 
 ## Connections
-- [[Cards.tsx]] - `contains` [EXTRACTED]
+- [[guarded.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Remotion_Cards__Captions
+#graphify/code #graphify/EXTRACTED #community/Guarded_Layout_cards_arrows

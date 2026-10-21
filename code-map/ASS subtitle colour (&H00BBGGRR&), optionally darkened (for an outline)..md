@@ -1,12 +1,12 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/config.py"
 type: "rationale"
-community: "Shared Imports & Downloads"
-location: "L141"
+community: "Captions & TTS"
+location: "L112"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Shared_Imports__Downloads
+  - community/Captions__TTS
 ---
 
 # ASS subtitle colour (&H00BBGGRR&), optionally darkened (for an outline).
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[ass_colour()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Shared_Imports__Downloads
+#graphify/rationale #graphify/EXTRACTED #community/Captions__TTS

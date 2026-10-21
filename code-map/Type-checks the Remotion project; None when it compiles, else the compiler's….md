@@ -1,12 +1,12 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/motion.py"
 type: "rationale"
-community: "TypeScript Checks"
-location: "L3719"
+community: "Motion Previews & Render Tests"
+location: "L309"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/TypeScript_Checks
+  - community/Motion_Previews__Render_Tests
 ---
 
 # Type-checks the Remotion project; None when it compiles, else the compiler's…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[tsc_check()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/TypeScript_Checks
+#graphify/rationale #graphify/EXTRACTED #community/Motion_Previews__Render_Tests

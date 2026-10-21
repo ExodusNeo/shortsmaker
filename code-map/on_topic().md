@@ -1,12 +1,12 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/image_sources.py"
 type: "code"
-community: "Archive Picture & Film Sources"
-location: "L1867"
+community: "Footage Downloads & Crops"
+location: "L233"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Archive_Picture__Film_Sources
+  - community/Footage_Downloads__Crops
 ---
 
 # on_topic()
@@ -16,9 +16,9 @@ tags:
 - [[archive_films()]] - `calls` [EXTRACTED]
 - [[archive_images()]] - `calls` [EXTRACTED]
 - [[commons_films()]] - `calls` [EXTRACTED]
-- [[make_shorts.py]] - `contains` [EXTRACTED]
+- [[image_sources.py]] - `contains` [EXTRACTED]
 - [[nasa_films()]] - `calls` [EXTRACTED]
 - [[nasa_images()]] - `calls` [EXTRACTED]
 - [[words_of()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Archive_Picture__Film_Sources
+#graphify/code #graphify/EXTRACTED #community/Footage_Downloads__Crops

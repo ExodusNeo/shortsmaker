@@ -1,12 +1,12 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/image_sources.py"
 type: "code"
-community: "Wikipedia & Wikimedia Research"
-location: "L1651"
+community: "Commons & Archive Sources"
+location: "L84"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Wikipedia__Wikimedia_Research
+  - community/Commons__Archive_Sources
 ---
 
 # usable_license()
@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[(ok, credit). Public domainCC0 need no credit; all other WikimediaWikipedia…]] - `rationale_for` [EXTRACTED]
 - [[commons_films()]] - `calls` [EXTRACTED]
-- [[make_shorts.py]] - `contains` [EXTRACTED]
+- [[image_sources.py]] - `contains` [EXTRACTED]
 - [[wm_files()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Wikipedia__Wikimedia_Research
+#graphify/code #graphify/EXTRACTED #community/Commons__Archive_Sources

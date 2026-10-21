@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "concept"
-community: "Shared Imports & Downloads"
+community: "Captions & TTS"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Shared_Imports__Downloads
+  - community/Captions__TTS
 ---
 
 # asyncio
 
 ## Connections
-- [[make_shorts.py]] - `imports` [EXTRACTED]
+- [[audio_mix.py]] - `imports` [EXTRACTED]
+- [[speak()_1]] - `calls` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Shared_Imports__Downloads
+#graphify/concept #graphify/EXTRACTED #community/Captions__TTS

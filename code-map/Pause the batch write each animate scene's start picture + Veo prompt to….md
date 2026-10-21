@@ -1,12 +1,12 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/gpu.py"
 type: "rationale"
-community: "AI Video Clips & Encoding"
-location: "L4606"
+community: "Local AI Jobs & Clips"
+location: "L289"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/AI_Video_Clips__Encoding
+  - community/Local_AI_Jobs__Clips
 ---
 
 # Pause the batch: write each animate scene's start picture + Veo prompt to…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[veo_handoff()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/AI_Video_Clips__Encoding
+#graphify/rationale #graphify/EXTRACTED #community/Local_AI_Jobs__Clips

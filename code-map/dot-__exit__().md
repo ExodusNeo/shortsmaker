@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_pictures_first.py"
 type: "code"
-community: "Picture List & Contact Sheets"
-location: "L116"
+community: "Picture List Catalog"
+location: "L120"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Picture_List__Contact_Sheets
+  - community/Picture_List_Catalog
 ---
 
 # .__exit__()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[fake_ai]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Picture_List__Contact_Sheets
+#graphify/code #graphify/EXTRACTED #community/Picture_List_Catalog

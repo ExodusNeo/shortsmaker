@@ -1,24 +1,23 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/llm.py"
 type: "code"
-community: "AI Planner Calls & Quota"
-location: "L199"
+community: "AI Calls & Quota Fallback"
+location: "L60"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AI_Planner_Calls__Quota
+  - community/AI_Calls__Quota_Fallback
 ---
 
 # run_agy()
 
 ## Connections
 - [[One headless Gemini turn. agy only takes the prompt inline on its command line…]] - `rationale_for` [EXTRACTED]
-- [[Path]] - `references` [EXTRACTED]
+- [[Path_17]] - `references` [EXTRACTED]
 - [[ask_ai()]] - `calls` [EXTRACTED]
 - [[gemini_model()]] - `calls` [EXTRACTED]
-- [[make_shorts.py]] - `contains` [EXTRACTED]
-- [[one()]] - `calls` [EXTRACTED]
+- [[llm.py]] - `contains` [EXTRACTED]
 - [[quota_exhausted()]] - `calls` [EXTRACTED]
 - [[run_agy()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AI_Planner_Calls__Quota
+#graphify/code #graphify/EXTRACTED #community/AI_Calls__Quota_Fallback

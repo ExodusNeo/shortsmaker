@@ -1,12 +1,12 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/short_render.py"
 type: "rationale"
-community: "Quality Checks & Captions"
-location: "L4756"
+community: "Story Sounds & Credits"
+location: "L66"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Quality_Checks__Captions
+  - community/Story_Sounds__Credits
 ---
 
 # Make one Short. With `state` (fix.bat or an automatic fix round), reuse its…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[render()_2]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Quality_Checks__Captions
+#graphify/rationale #graphify/EXTRACTED #community/Story_Sounds__Credits

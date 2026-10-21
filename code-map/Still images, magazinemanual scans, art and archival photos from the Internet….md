@@ -1,12 +1,12 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/image_sources.py"
 type: "rationale"
-community: "Archive Picture & Film Sources"
-location: "L1944"
+community: "Footage Downloads & Crops"
+location: "L241"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Archive_Picture__Film_Sources
+  - community/Footage_Downloads__Crops
 ---
 
 # Still images, magazine/manual scans, art and archival photos from the Internet…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[archive_images()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Archive_Picture__Film_Sources
+#graphify/rationale #graphify/EXTRACTED #community/Footage_Downloads__Crops

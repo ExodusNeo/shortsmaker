@@ -1,12 +1,12 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/llm.py"
 type: "rationale"
-community: "AI Planner Calls & Quota"
-location: "L237"
+community: "AI Calls & Quota Fallback"
+location: "L95"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/AI_Planner_Calls__Quota
+  - community/AI_Calls__Quota_Fallback
 ---
 
 # Headless planner call (BRAIN, or `brain`: Claude or Gemini) that returns parsed…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[ask_ai()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/AI_Planner_Calls__Quota
+#graphify/rationale #graphify/EXTRACTED #community/AI_Calls__Quota_Fallback

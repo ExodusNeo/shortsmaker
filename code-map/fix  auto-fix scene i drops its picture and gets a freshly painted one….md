@@ -1,12 +1,12 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/cli.py"
 type: "rationale"
-community: "Repaint & Scene Swap"
-location: "L5190"
+community: "fix.bat Picture Swaps"
+location: "L107"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Repaint__Scene_Swap
+  - community/fixbat_Picture_Swaps
 ---
 
 # fix / auto-fix: scene i drops its picture and gets a freshly painted one…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[paint_new()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Repaint__Scene_Swap
+#graphify/rationale #graphify/EXTRACTED #community/fixbat_Picture_Swaps

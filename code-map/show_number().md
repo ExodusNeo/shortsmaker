@@ -1,12 +1,12 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/plan_rules.py"
 type: "code"
-community: "Full-Scene Validation"
-location: "L1206"
+community: "Full-Scene Rescue & Plan Cleaning"
+location: "L80"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Full-Scene_Validation
+  - community/Full-Scene_Rescue__Plan_Cleaning
 ---
 
 # show_number()
@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[How the big-number scene prints a value 30,000  1.5 MILLION  2 BILLION  0.3.]] - `rationale_for` [EXTRACTED]
 - [[clean_full()]] - `calls` [EXTRACTED]
-- [[make_shorts.py]] - `contains` [EXTRACTED]
+- [[plan_rules.py]] - `contains` [EXTRACTED]
 - [[test_number_scaling()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Full-Scene_Validation
+#graphify/code #graphify/EXTRACTED #community/Full-Scene_Rescue__Plan_Cleaning

@@ -1,12 +1,12 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/photo_prep.py"
 type: "code"
-community: "Archive Photo Cleanup"
-location: "L2601"
+community: "Photo Cleanup"
+location: "L35"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Archive_Photo_Cleanup
+  - community/Photo_Cleanup
 ---
 
 # trim_borders()
@@ -16,7 +16,7 @@ tags:
 - [[Image]] - `references` [EXTRACTED]
 - [[border()]] - `contains` [EXTRACTED]
 - [[clean_photo()]] - `calls` [EXTRACTED]
-- [[make_shorts.py]] - `contains` [EXTRACTED]
+- [[photo_prep.py]] - `contains` [EXTRACTED]
 - [[plain()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Archive_Photo_Cleanup
+#graphify/code #graphify/EXTRACTED #community/Photo_Cleanup

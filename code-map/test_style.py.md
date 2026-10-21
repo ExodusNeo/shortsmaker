@@ -1,26 +1,39 @@
 ---
 source_file: "tests/test_style.py"
 type: "code"
-community: "Look Scene Picking"
+community: "Style Tests"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Look_Scene_Picking
+  - community/Style_Tests
 ---
 
 # test_style.py
 
 ## Connections
 - [[Tests for the style library looks, overlays, transitions, inventions (plain…]] - `rationale_for` [EXTRACTED]
+- [[__init__.py]] - `imports_from` [EXTRACTED]
+- [[audio_mix.py]] - `imports_from` [EXTRACTED]
 - [[candidate_in()]] - `contains` [EXTRACTED]
+- [[channel_profiles.py]] - `imports_from` [EXTRACTED]
+- [[config.py]] - `imports_from` [EXTRACTED]
+- [[inspect]] - `imports` [EXTRACTED]
 - [[json]] - `imports` [EXTRACTED]
 - [[library_snapshot()]] - `contains` [EXTRACTED]
-- [[make_shorts.py]] - `imports` [EXTRACTED]
+- [[llm.py]] - `imports_from` [EXTRACTED]
+- [[logbook.py]] - `imports_from` [EXTRACTED]
+- [[motion.py]] - `imports_from` [EXTRACTED]
+- [[owner()]] - `imports` [EXTRACTED]
+- [[patching.py]] - `imports_from` [EXTRACTED]
 - [[pathlib]] - `imports_from` [EXTRACTED]
+- [[picture_pool.py]] - `imports_from` [EXTRACTED]
+- [[plan_rules.py]] - `imports_from` [EXTRACTED]
 - [[plan_with()]] - `contains` [EXTRACTED]
 - [[re]] - `imports` [EXTRACTED]
+- [[remotion_render.py]] - `imports_from` [EXTRACTED]
 - [[restore_library()]] - `contains` [EXTRACTED]
+- [[style_lab.py]] - `imports_from` [EXTRACTED]
 - [[sys]] - `imports` [EXTRACTED]
 - [[test_apply_look_scenes()]] - `contains` [EXTRACTED]
 - [[test_approve_adds_to_library()]] - `contains` [EXTRACTED]
@@ -52,5 +65,6 @@ tags:
 - [[test_unknown_names_fall_back()]] - `contains` [EXTRACTED]
 - [[test_write_style_index_is_deterministic()]] - `contains` [EXTRACTED]
 - [[with_fakes()]] - `contains` [EXTRACTED]
+- [[writing.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Look_Scene_Picking
+#graphify/code #graphify/EXTRACTED #community/Style_Tests

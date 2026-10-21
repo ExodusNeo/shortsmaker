@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/full/toolkit.tsx"
 type: "code"
-community: "Full-Screen Motion Graphics"
+community: "Paper & Evidence Board Scenes"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Full-Screen_Motion_Graphics
+  - community/Paper__Evidence_Board_Scenes
 ---
 
 # toolkit.tsx
@@ -38,7 +38,7 @@ tags:
 - [[TYPE]] - `imports` [EXTRACTED]
 - [[TitleBanner()]] - `contains` [EXTRACTED]
 - [[appear()]] - `contains` [EXTRACTED]
-- [[clamp_4]] - `contains` [EXTRACTED]
+- [[clamp_10]] - `contains` [EXTRACTED]
 - [[cueAt()]] - `contains` [EXTRACTED]
 - [[focusCam()]] - `contains` [EXTRACTED]
 - [[fulltypes.ts]] - `re_exports` [EXTRACTED]
@@ -49,4 +49,4 @@ tags:
 - [[rng()]] - `imports` [EXTRACTED]
 - [[skinOf()]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Full-Screen_Motion_Graphics
+#graphify/code #graphify/EXTRACTED #community/Paper__Evidence_Board_Scenes

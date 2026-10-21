@@ -1,12 +1,12 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/style_lab.py"
 type: "rationale"
-community: "Remotion Render Prep"
-location: "L3881"
+community: "Style Lab & Edit Plan Text"
+location: "L223"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Remotion_Render_Prep
+  - community/Style_Lab__Edit_Plan_Text
 ---
 
 # Codes this Short's inventions (look / transition / overlay) into their slots; a…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[invent_styles()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Remotion_Render_Prep
+#graphify/rationale #graphify/EXTRACTED #community/Style_Lab__Edit_Plan_Text

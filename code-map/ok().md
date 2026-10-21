@@ -1,17 +1,17 @@
 ---
-source_file: "tests/guarded.test.ts"
+source_file: "tests/style.test.ts"
 type: "code"
-community: "Full-Screen Motion Graphics"
-location: "L16"
+community: "Remotion Short Composition"
+location: "L17"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Full-Screen_Motion_Graphics
+  - community/Remotion_Short_Composition
 ---
 
 # ok()
 
 ## Connections
-- [[guarded.test.ts]] - `contains` [EXTRACTED]
+- [[style.test.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Full-Screen_Motion_Graphics
+#graphify/code #graphify/EXTRACTED #community/Remotion_Short_Composition

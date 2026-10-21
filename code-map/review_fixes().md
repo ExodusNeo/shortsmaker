@@ -1,12 +1,12 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/review.py"
 type: "code"
-community: "Quality Checks & Captions"
-location: "L3282"
+community: "Visual Review Sheets"
+location: "L77"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Quality_Checks__Captions
+  - community/Visual_Review_Sheets
 ---
 
 # review_fixes()
@@ -15,8 +15,8 @@ tags:
 - [[The review's reply - (CHECK lines, scene - (repaint  graphic, why)).…]] - `rationale_for` [EXTRACTED]
 - [[clock()]] - `calls` [EXTRACTED]
 - [[is_num()]] - `calls` [EXTRACTED]
-- [[make_shorts.py]] - `contains` [EXTRACTED]
+- [[review.py]] - `contains` [EXTRACTED]
 - [[test_review_fix_kinds()]] - `calls` [EXTRACTED]
 - [[visual_review()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Quality_Checks__Captions
+#graphify/code #graphify/EXTRACTED #community/Visual_Review_Sheets

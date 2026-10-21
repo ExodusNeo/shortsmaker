@@ -1,12 +1,12 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/plan_rules.py"
 type: "rationale"
-community: "Spoken-Word Cue Timing"
-location: "L1462"
+community: "Scene Cues & Word Timing"
+location: "L336"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Spoken-Word_Cue_Timing
+  - community/Scene_Cues__Word_Timing
 ---
 
 # When each element of a full-screen motion graphic appears (absolute seconds):…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[full_cues()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Spoken-Word_Cue_Timing
+#graphify/rationale #graphify/EXTRACTED #community/Scene_Cues__Word_Timing

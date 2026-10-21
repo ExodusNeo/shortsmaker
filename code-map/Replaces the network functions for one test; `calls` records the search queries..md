@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_pictures_first.py"
 type: "rationale"
-community: "Archive Picture & Film Sources"
-location: "L28"
+community: "Pool Gathering"
+location: "L32"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Archive_Picture__Film_Sources
+  - community/Pool_Gathering
 ---
 
 # Replaces the network functions for one test; `calls` records the search queries.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[stubbed]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Archive_Picture__Film_Sources
+#graphify/rationale #graphify/EXTRACTED #community/Pool_Gathering

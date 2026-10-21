@@ -1,12 +1,12 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/style_lab.py"
 type: "code"
-community: "Style Invention Coding"
-location: "L3788"
+community: "Style Lab & Edit Plan Text"
+location: "L130"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Style_Invention_Coding
+  - community/Style_Lab__Edit_Plan_Text
 ---
 
 # clean_style_code()
@@ -14,6 +14,7 @@ tags:
 ## Connections
 - [[The code from an AI reply (code fences removed); None unless it exports the…]] - `rationale_for` [EXTRACTED]
 - [[invent_component()]] - `calls` [EXTRACTED]
-- [[make_shorts.py]] - `contains` [EXTRACTED]
+- [[re]] - `calls` [EXTRACTED]
+- [[style_lab.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Style_Invention_Coding
+#graphify/code #graphify/EXTRACTED #community/Style_Lab__Edit_Plan_Text

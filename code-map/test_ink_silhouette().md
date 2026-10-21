@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_full_scenes.py"
 type: "code"
-community: "Figure Silhouettes"
-location: "L690"
+community: "Ink Silhouettes"
+location: "L697"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Figure_Silhouettes
+  - community/Ink_Silhouettes
 ---
 
 # test_ink_silhouette()
@@ -16,4 +16,4 @@ tags:
 - [[ink_silhouette()]] - `calls` [EXTRACTED]
 - [[test_full_scenes.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Figure_Silhouettes
+#graphify/code #graphify/EXTRACTED #community/Ink_Silhouettes

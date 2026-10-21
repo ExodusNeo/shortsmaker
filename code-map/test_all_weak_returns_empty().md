@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_pictures_first.py"
 type: "code"
-community: "Script Team (Write/Edit/Direct)"
-location: "L242"
+community: "Script Writing Pipeline"
+location: "L246"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Script_Team_Write/Edit/Direct
+  - community/Script_Writing_Pipeline
 ---
 
 # test_all_weak_returns_empty()
@@ -17,4 +17,4 @@ tags:
 - [[test_pictures_first.py]] - `contains` [EXTRACTED]
 - [[write_scripts()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Script_Team_Write/Edit/Direct
+#graphify/code #graphify/EXTRACTED #community/Script_Writing_Pipeline

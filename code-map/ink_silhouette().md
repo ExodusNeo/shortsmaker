@@ -1,21 +1,21 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/remotion_render.py"
 type: "code"
-community: "Figure Silhouettes"
-location: "L4058"
+community: "Ink Silhouettes"
+location: "L102"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Figure_Silhouettes
+  - community/Ink_Silhouettes
 ---
 
 # ink_silhouette()
 
 ## Connections
 - [[A painted figure (dark ink on light paper) - a cropped RGBA silhouette (dark…]] - `rationale_for` [EXTRACTED]
-- [[Path]] - `references` [EXTRACTED]
-- [[make_shorts.py]] - `contains` [EXTRACTED]
+- [[Path_13]] - `references` [EXTRACTED]
+- [[remotion_render.py]] - `contains` [EXTRACTED]
 - [[render()_2]] - `calls` [EXTRACTED]
 - [[test_ink_silhouette()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Figure_Silhouettes
+#graphify/code #graphify/EXTRACTED #community/Ink_Silhouettes

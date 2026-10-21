@@ -2,7 +2,7 @@
 source_file: "tests/test_style.py"
 type: "code"
 community: "Style Guardrails"
-location: "L79"
+location: "L84"
 tags:
   - graphify/code
   - graphify/EXTRACTED

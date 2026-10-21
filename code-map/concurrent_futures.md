@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "concept"
-community: "Shared Imports & Downloads"
+community: "Footage Downloads & Crops"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Shared_Imports__Downloads
+  - community/Footage_Downloads__Crops
 ---
 
 # concurrent_futures
 
 ## Connections
-- [[make_shorts.py]] - `imports_from` [EXTRACTED]
+- [[gpu.py]] - `imports_from` [EXTRACTED]
+- [[picture_pool.py]] - `imports_from` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Shared_Imports__Downloads
+#graphify/concept #graphify/EXTRACTED #community/Footage_Downloads__Crops

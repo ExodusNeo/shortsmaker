@@ -1,21 +1,23 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/style_lab.py"
 type: "code"
-community: "Style Library Approval"
-location: "L3925"
+community: "Style Lab & Edit Plan Text"
+location: "L267"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Style_Library_Approval
+  - community/Style_Lab__Edit_Plan_Text
 ---
 
 # approve_candidate()
 
 ## Connections
 - [[Adds a candidate to the library (component file, library.json entry,…]] - `rationale_for` [EXTRACTED]
-- [[Path]] - `references` [EXTRACTED]
+- [[Path_16]] - `references` [EXTRACTED]
+- [[json]] - `calls` [EXTRACTED]
 - [[library_menu()]] - `calls` [EXTRACTED]
-- [[make_shorts.py]] - `contains` [EXTRACTED]
+- [[shutil]] - `calls` [EXTRACTED]
+- [[style_lab.py]] - `contains` [EXTRACTED]
 - [[style_library()]] - `calls` [EXTRACTED]
 - [[test_approve_adds_to_library()]] - `calls` [EXTRACTED]
 - [[test_approve_rolls_back_on_tsc_failure()]] - `calls` [EXTRACTED]
@@ -23,4 +25,4 @@ tags:
 - [[tsc_check()]] - `calls` [EXTRACTED]
 - [[write_style_index()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Style_Library_Approval
+#graphify/code #graphify/EXTRACTED #community/Style_Lab__Edit_Plan_Text

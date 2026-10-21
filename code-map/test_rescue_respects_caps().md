@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_full_scenes.py"
 type: "code"
-community: "Callout & Sound Validation"
-location: "L214"
+community: "Full-Scene Rescue & Plan Cleaning"
+location: "L221"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Callout__Sound_Validation
+  - community/Full-Scene_Rescue__Plan_Cleaning
 ---
 
 # test_rescue_respects_caps()
@@ -15,4 +15,4 @@ tags:
 - [[rescue_graphics()]] - `calls` [EXTRACTED]
 - [[test_full_scenes.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Callout__Sound_Validation
+#graphify/code #graphify/EXTRACTED #community/Full-Scene_Rescue__Plan_Cleaning

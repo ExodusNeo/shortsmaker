@@ -1,19 +1,19 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/gpu.py"
 type: "code"
-community: "AI Painters (MOSS & Gemini)"
-location: "L4505"
+community: "Footage Downloads & Crops"
+location: "L191"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AI_Painters_MOSS__Gemini
+  - community/Footage_Downloads__Crops
 ---
 
 # moss_graph()
 
 ## Connections
 - [[Comfy-Org's official MOSS-Image text-to-image template (25 steps, CFG 2.5,…]] - `rationale_for` [EXTRACTED]
-- [[make_shorts.py]] - `contains` [EXTRACTED]
+- [[gpu.py]] - `contains` [EXTRACTED]
 - [[moss_images()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AI_Painters_MOSS__Gemini
+#graphify/code #graphify/EXTRACTED #community/Footage_Downloads__Crops

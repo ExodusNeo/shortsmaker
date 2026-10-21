@@ -1,12 +1,12 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/seo.py"
 type: "code"
-community: "Run Menu & Channel Setup"
-location: "L1517"
+community: "Entry Point, Logbook & Sounds"
+location: "L21"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Run_Menu__Channel_Setup
+  - community/Entry_Point_Logbook__Sounds
 ---
 
 # seo_pass()
@@ -14,12 +14,14 @@ tags:
 ## Connections
 - [[Rewrite titledescriptiontags around real YouTube search phrases; add a pinned…]] - `rationale_for` [EXTRACTED]
 - [[ask_ai()]] - `calls` [EXTRACTED]
+- [[json]] - `calls` [EXTRACTED]
 - [[load_channel()]] - `calls` [EXTRACTED]
 - [[logbook_results()]] - `calls` [EXTRACTED]
 - [[main()_4]] - `calls` [EXTRACTED]
-- [[make_shorts.py]] - `contains` [EXTRACTED]
+- [[re]] - `calls` [EXTRACTED]
 - [[search_suggestions()]] - `calls` [EXTRACTED]
+- [[seo.py]] - `contains` [EXTRACTED]
 - [[test_seo_pass_empty_no_ai()]] - `calls` [EXTRACTED]
 - [[trend_research()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Run_Menu__Channel_Setup
+#graphify/code #graphify/EXTRACTED #community/Entry_Point_Logbook__Sounds

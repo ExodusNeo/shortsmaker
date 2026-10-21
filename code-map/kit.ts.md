@@ -1,19 +1,19 @@
 ---
 source_file: "remotion/src/style/kit.ts"
 type: "code"
-community: "Style Library Looks & Transitions"
+community: "Style Library Inventions (TS)"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Style_Library_Looks__Transitions
+  - community/Style_Library_Inventions_TS
 ---
 
 # kit.ts
 
 ## Connections
 - [[CAPTION_TOP]] - `contains` [EXTRACTED]
-- [[CLAMP_5]] - `contains` [EXTRACTED]
+- [[CLAMP]] - `contains` [EXTRACTED]
 - [[Engraving.tsx]] - `imports_from` [EXTRACTED]
 - [[FILL]] - `contains` [EXTRACTED]
 - [[FONT]] - `re_exports` [EXTRACTED]
@@ -53,4 +53,4 @@ tags:
 - [[theme]] - `re_exports` [EXTRACTED]
 - [[useOnceCanvas()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Style_Library_Looks__Transitions
+#graphify/code #graphify/EXTRACTED #community/Style_Library_Inventions_TS

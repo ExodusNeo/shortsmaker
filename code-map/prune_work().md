@@ -1,12 +1,12 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/short_render.py"
 type: "code"
-community: "Run Menu & Channel Setup"
-location: "L4733"
+community: "Entry Point, Logbook & Sounds"
+location: "L59"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Run_Menu__Channel_Setup
+  - community/Entry_Point_Logbook__Sounds
 ---
 
 # prune_work()
@@ -14,6 +14,8 @@ tags:
 ## Connections
 - [[fix_short()]] - `calls` [EXTRACTED]
 - [[main()_4]] - `calls` [EXTRACTED]
-- [[make_shorts.py]] - `contains` [EXTRACTED]
+- [[short_render.py]] - `contains` [EXTRACTED]
+- [[shutil]] - `calls` [EXTRACTED]
+- [[time]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Run_Menu__Channel_Setup
+#graphify/code #graphify/EXTRACTED #community/Entry_Point_Logbook__Sounds

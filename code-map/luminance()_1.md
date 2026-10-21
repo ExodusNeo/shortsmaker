@@ -1,18 +1,18 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/config.py"
 type: "code"
-community: "Shared Imports & Downloads"
-location: "L101"
+community: "Channel Profiles & CLI"
+location: "L72"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Shared_Imports__Downloads
+  - community/Channel_Profiles__CLI
 ---
 
 # luminance()
 
 ## Connections
+- [[config.py]] - `contains` [EXTRACTED]
 - [[hex_rgb()]] - `calls` [EXTRACTED]
-- [[make_shorts.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Shared_Imports__Downloads
+#graphify/code #graphify/EXTRACTED #community/Channel_Profiles__CLI

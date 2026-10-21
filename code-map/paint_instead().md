@@ -1,25 +1,26 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/remotion_render.py"
 type: "code"
-community: "AI Painters (MOSS & Gemini)"
-location: "L4027"
+community: "Gemini Image Painting"
+location: "L71"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AI_Painters_MOSS__Gemini
+  - community/Gemini_Image_Painting
 ---
 
 # paint_instead()
 
 ## Connections
-- [[Path]] - `references` [EXTRACTED]
+- [[Path_13]] - `references` [EXTRACTED]
 - [[Remotion failed the full-screen motion graphic scenes get a painted picture…]] - `rationale_for` [EXTRACTED]
 - [[gemini_images()]] - `calls` [EXTRACTED]
 - [[local_job()]] - `calls` [EXTRACTED]
-- [[make_shorts.py]] - `contains` [EXTRACTED]
 - [[moss_images()]] - `calls` [EXTRACTED]
+- [[remotion_render.py]] - `contains` [EXTRACTED]
 - [[render()_2]] - `calls` [EXTRACTED]
+- [[shutil]] - `calls` [EXTRACTED]
 - [[test_remotion_failure_paints()]] - `calls` [EXTRACTED]
 - [[to_vertical()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AI_Painters_MOSS__Gemini
+#graphify/code #graphify/EXTRACTED #community/Gemini_Image_Painting

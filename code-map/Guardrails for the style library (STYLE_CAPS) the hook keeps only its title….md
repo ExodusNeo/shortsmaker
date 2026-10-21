@@ -1,8 +1,8 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/plan_rules.py"
 type: "rationale"
 community: "Style Guardrails"
-location: "L1337"
+location: "L211"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED

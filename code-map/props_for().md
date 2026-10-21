@@ -1,18 +1,18 @@
 ---
 source_file: "tests/render_full.py"
 type: "code"
-community: "Local GPU Workers"
+community: "Motion Previews & Render Tests"
 location: "L16"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Local_GPU_Workers
+  - community/Motion_Previews__Render_Tests
 ---
 
 # props_for()
 
 ## Connections
-- [[main()_2]] - `calls` [EXTRACTED]
+- [[main()]] - `calls` [EXTRACTED]
 - [[render_full.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Local_GPU_Workers
+#graphify/code #graphify/EXTRACTED #community/Motion_Previews__Render_Tests

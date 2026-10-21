@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_full_scenes.py"
 type: "code"
-community: "AI Painters (MOSS & Gemini)"
-location: "L283"
+community: "Gemini Image Painting"
+location: "L290"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AI_Painters_MOSS__Gemini
+  - community/Gemini_Image_Painting
 ---
 
 # test_remotion_failure_paints()
@@ -17,4 +17,4 @@ tags:
 - [[paint_instead()]] - `calls` [EXTRACTED]
 - [[test_full_scenes.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AI_Painters_MOSS__Gemini
+#graphify/code #graphify/EXTRACTED #community/Gemini_Image_Painting

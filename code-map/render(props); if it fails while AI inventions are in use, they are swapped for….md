@@ -1,12 +1,12 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/remotion_render.py"
 type: "rationale"
-community: "Invention Fallback Render"
-location: "L3980"
+community: "Skins & Remotion Render"
+location: "L24"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Invention_Fallback_Render
+  - community/Skins__Remotion_Render
 ---
 
 # render(props); if it fails while AI inventions are in use, they are swapped for…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[run_remotion_with_fallback()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Invention_Fallback_Render
+#graphify/rationale #graphify/EXTRACTED #community/Skins__Remotion_Render

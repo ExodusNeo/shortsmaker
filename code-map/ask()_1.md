@@ -1,17 +1,17 @@
 ---
-source_file: "tests/test_style.py"
+source_file: "tests/test_full_scenes.py"
 type: "code"
-community: "Look Scene Picking"
-location: "L192"
+community: "Review Fixes"
+location: "L622"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Look_Scene_Picking
+  - community/Review_Fixes
 ---
 
 # ask()
 
 ## Connections
-- [[test_fact_check_sees_new_graphics()]] - `contains` [EXTRACTED]
+- [[test_look_check_fixes_code()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Look_Scene_Picking
+#graphify/code #graphify/EXTRACTED #community/Review_Fixes

@@ -1,8 +1,8 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/frame_render.py"
 type: "code"
 community: "Python Frame Renderer"
-location: "L3101"
+location: "L195"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,11 +12,11 @@ tags:
 # ClipReader
 
 ## Connections
-- [[dot-__init__()_3]] - `method` [EXTRACTED]
+- [[dot-__init__()_5]] - `method` [EXTRACTED]
 - [[dot-at()]] - `method` [EXTRACTED]
 - [[dot-close()]] - `method` [EXTRACTED]
 - [[Streams a clip's frames in order. Decoding a whole 1080x1920 clip up front…]] - `rationale_for` [EXTRACTED]
 - [[frame()]] - `calls` [EXTRACTED]
-- [[make_shorts.py]] - `contains` [EXTRACTED]
+- [[frame_render.py]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Python_Frame_Renderer

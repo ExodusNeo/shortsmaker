@@ -1,12 +1,12 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/picture_pool.py"
 type: "code"
-community: "Director Picture Context"
-location: "L2271"
+community: "Usable Picture Filter"
+location: "L266"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Director_Picture_Context
+  - community/Usable_Picture_Filter
 ---
 
 # usable()
@@ -14,8 +14,8 @@ tags:
 ## Connections
 - [[Usable list entries for the topic check all frames of one video count once…]] - `rationale_for` [EXTRACTED]
 - [[is_usable()]] - `indirect_call` [INFERRED]
-- [[make_shorts.py]] - `contains` [EXTRACTED]
+- [[picture_pool.py]] - `contains` [EXTRACTED]
 - [[prepare_topic()]] - `calls` [EXTRACTED]
 - [[test_usable_counts_film_once()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Director_Picture_Context
+#graphify/code #graphify/EXTRACTED #community/Usable_Picture_Filter

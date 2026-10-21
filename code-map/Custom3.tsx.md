@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/full/generated/Custom3.tsx"
 type: "code"
-community: "Full-Screen Motion Graphics"
+community: "Custom Scene Toolkit & Examples"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Full-Screen_Motion_Graphics
+  - community/Custom_Scene_Toolkit__Examples
 ---
 
 # Custom3.tsx
@@ -24,7 +24,7 @@ tags:
 - [[TYPE]] - `imports` [EXTRACTED]
 - [[TitleBanner()]] - `imports` [EXTRACTED]
 - [[appear()]] - `imports` [EXTRACTED]
-- [[clamp_4]] - `imports` [EXTRACTED]
+- [[clamp_10]] - `imports` [EXTRACTED]
 - [[cueAt()]] - `imports` [EXTRACTED]
 - [[focusCam()]] - `imports` [EXTRACTED]
 - [[ref_react]] - `imports_from` [EXTRACTED]
@@ -39,4 +39,4 @@ tags:
 - [[skinOf()]] - `imports` [EXTRACTED]
 - [[toolkit.tsx]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Full-Screen_Motion_Graphics
+#graphify/code #graphify/EXTRACTED #community/Custom_Scene_Toolkit__Examples

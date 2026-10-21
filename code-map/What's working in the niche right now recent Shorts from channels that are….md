@@ -1,12 +1,12 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/channel_profiles.py"
 type: "rationale"
-community: "YouTube Trend Research"
-location: "L427"
+community: "YouTube Research"
+location: "L144"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/YouTube_Trend_Research
+  - community/YouTube_Research
 ---
 
 # What's working in the niche right now: recent Shorts from channels that are…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[trend_research()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/YouTube_Trend_Research
+#graphify/rationale #graphify/EXTRACTED #community/YouTube_Research

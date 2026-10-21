@@ -1,12 +1,12 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/image_sources.py"
 type: "rationale"
-community: "Archive Picture & Film Sources"
-location: "L1744"
+community: "Commons & Archive Sources"
+location: "L161"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Archive_Picture__Film_Sources
+  - community/Commons__Archive_Sources
 ---
 
 # Images from museums, archives and photographers through Openverse (no key),…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[openverse_images()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Archive_Picture__Film_Sources
+#graphify/rationale #graphify/EXTRACTED #community/Commons__Archive_Sources

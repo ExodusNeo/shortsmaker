@@ -1,12 +1,12 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/audio_mix.py"
 type: "rationale"
-community: "SFX & Preview Sheets"
-location: "L2802"
+community: "Story Sounds & Credits"
+location: "L138"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/SFX__Preview_Sheets
+  - community/Story_Sounds__Credits
 ---
 
 # The sound file for a story sound: the owner's own file in…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[story_sound()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/SFX__Preview_Sheets
+#graphify/rationale #graphify/EXTRACTED #community/Story_Sounds__Credits

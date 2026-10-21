@@ -1,12 +1,12 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/picture_pool.py"
 type: "rationale"
-community: "Director Picture Context"
-location: "L761"
+community: "Usable Picture Filter"
+location: "L19"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Director_Picture_Context
+  - community/Usable_Picture_Filter
 ---
 
 # The topic's usable pictures as prompt lines ("" without a picture list).
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[pictures_of()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Director_Picture_Context
+#graphify/rationale #graphify/EXTRACTED #community/Usable_Picture_Filter

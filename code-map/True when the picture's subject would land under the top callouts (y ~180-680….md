@@ -1,12 +1,12 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/frame_render.py"
 type: "rationale"
-community: "State & Logbook Helpers"
-location: "L3009"
+community: "Python Frame Renderer"
+location: "L103"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/State__Logbook_Helpers
+  - community/Python_Frame_Renderer
 ---
 
 # True when the picture's subject would land under the top callouts (y ~180-680…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[graphic_low()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/State__Logbook_Helpers
+#graphify/rationale #graphify/EXTRACTED #community/Python_Frame_Renderer

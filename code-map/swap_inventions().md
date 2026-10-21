@@ -1,12 +1,12 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/style_lab.py"
 type: "code"
-community: "Invention Fallback Render"
-location: "L3869"
+community: "Skins & Remotion Render"
+location: "L211"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Invention_Fallback_Render
+  - community/Skins__Remotion_Render
 ---
 
 # swap_inventions()
@@ -14,8 +14,8 @@ tags:
 ## Connections
 - [[Replaces every use of an invention in the Remotion props by its library…]] - `rationale_for` [EXTRACTED]
 - [[invent_styles()]] - `calls` [EXTRACTED]
-- [[make_shorts.py]] - `contains` [EXTRACTED]
 - [[run_remotion_with_fallback()]] - `calls` [EXTRACTED]
+- [[style_lab.py]] - `contains` [EXTRACTED]
 - [[test_swap_inventions()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Invention_Fallback_Render
+#graphify/code #graphify/EXTRACTED #community/Skins__Remotion_Render

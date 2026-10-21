@@ -1,12 +1,12 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/writing.py"
 type: "code"
-community: "Director Picture Context"
-location: "L902"
+community: "Style Lab & Edit Plan Text"
+location: "L350"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Director_Picture_Context
+  - community/Style_Lab__Edit_Plan_Text
 ---
 
 # direct_scripts()
@@ -14,9 +14,10 @@ tags:
 ## Connections
 - [[The planner plans the edit (footage searches, shots, camera, graphics, person…]] - `rationale_for` [EXTRACTED]
 - [[ask_ai()]] - `calls` [EXTRACTED]
-- [[make_shorts.py]] - `contains` [EXTRACTED]
+- [[json]] - `calls` [EXTRACTED]
 - [[pictures_of()]] - `calls` [EXTRACTED]
 - [[style_library()]] - `calls` [EXTRACTED]
 - [[write_scripts()]] - `calls` [EXTRACTED]
+- [[writing.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Director_Picture_Context
+#graphify/code #graphify/EXTRACTED #community/Style_Lab__Edit_Plan_Text

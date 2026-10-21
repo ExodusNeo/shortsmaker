@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/Short.tsx"
 type: "code"
-community: "Remotion Cards & Captions"
+community: "Remotion Short Composition"
 location: "L77"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Remotion_Cards__Captions
+  - community/Remotion_Short_Composition
 ---
 
 # Background()
@@ -20,4 +20,4 @@ tags:
 - [[transitionFor()]] - `calls` [EXTRACTED]
 - [[transitionWindow()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Remotion_Cards__Captions
+#graphify/code #graphify/EXTRACTED #community/Remotion_Short_Composition

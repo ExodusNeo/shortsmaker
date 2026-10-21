@@ -1,12 +1,12 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/style_lab.py"
 type: "rationale"
-community: "Style Invention Coding"
-location: "L3799"
+community: "Style Lab & Edit Plan Text"
+location: "L141"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Style_Invention_Coding
+  - community/Style_Lab__Edit_Plan_Text
 ---
 
 # The AI invents a new style component (`spec` = {title, brief, fallback}) for…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[invent_component()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Style_Invention_Coding
+#graphify/rationale #graphify/EXTRACTED #community/Style_Lab__Edit_Plan_Text

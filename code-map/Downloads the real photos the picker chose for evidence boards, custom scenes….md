@@ -1,12 +1,12 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/picker.py"
 type: "rationale"
-community: "Motion Graphics Tests"
-location: "L2489"
+community: "SFX Events & Full Pictures"
+location: "L183"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Motion_Graphics_Tests
+  - community/SFX_Events__Full_Pictures
 ---
 
 # Downloads the real photos the picker chose for evidence boards, custom scenes…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[full_pictures()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Motion_Graphics_Tests
+#graphify/rationale #graphify/EXTRACTED #community/SFX_Events__Full_Pictures

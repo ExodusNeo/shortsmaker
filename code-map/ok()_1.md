@@ -1,17 +1,17 @@
 ---
-source_file: "tests/style.test.ts"
+source_file: "tests/guarded.test.ts"
 type: "code"
-community: "Remotion Cards & Captions"
-location: "L17"
+community: "Guarded Layout (cards, arrows)"
+location: "L16"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Remotion_Cards__Captions
+  - community/Guarded_Layout_cards_arrows
 ---
 
 # ok()
 
 ## Connections
-- [[style.test.ts]] - `contains` [EXTRACTED]
+- [[guarded.test.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Remotion_Cards__Captions
+#graphify/code #graphify/EXTRACTED #community/Guarded_Layout_cards_arrows

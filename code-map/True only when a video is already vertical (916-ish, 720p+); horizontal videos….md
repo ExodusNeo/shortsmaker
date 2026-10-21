@@ -1,12 +1,12 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/frame_render.py"
 type: "rationale"
-community: "State & Logbook Helpers"
-location: "L2687"
+community: "Python Frame Renderer"
+location: "L15"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/State__Logbook_Helpers
+  - community/Python_Frame_Renderer
 ---
 
 # True only when a video is already vertical (9:16-ish, 720p+); horizontal videos…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[fills_frame()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/State__Logbook_Helpers
+#graphify/rationale #graphify/EXTRACTED #community/Python_Frame_Renderer

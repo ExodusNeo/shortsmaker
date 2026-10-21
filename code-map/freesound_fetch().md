@@ -1,18 +1,19 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/audio_mix.py"
 type: "code"
-community: "Shared Imports & Downloads"
-location: "L2778"
+community: "Music & Freesound"
+location: "L114"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Shared_Imports__Downloads
+  - community/Music__Freesound
 ---
 
 # freesound_fetch()
 
 ## Connections
 - [[One CC0 (no credit, any use) sound for `name` from Freesound's official API…]] - `rationale_for` [EXTRACTED]
-- [[make_shorts.py]] - `contains` [EXTRACTED]
+- [[audio_mix.py]] - `contains` [EXTRACTED]
+- [[json]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Shared_Imports__Downloads
+#graphify/code #graphify/EXTRACTED #community/Music__Freesound

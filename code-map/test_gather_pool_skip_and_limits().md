@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_pictures_first.py"
 type: "code"
-community: "Archive Picture & Film Sources"
-location: "L470"
+community: "Pool Gathering"
+location: "L474"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Archive_Picture__Film_Sources
+  - community/Pool_Gathering
 ---
 
 # test_gather_pool_skip_and_limits()
@@ -16,4 +16,4 @@ tags:
 - [[stubbed]] - `calls` [EXTRACTED]
 - [[test_pictures_first.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Archive_Picture__Film_Sources
+#graphify/code #graphify/EXTRACTED #community/Pool_Gathering

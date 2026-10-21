@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_style.py"
 type: "code"
-community: "Look Scene Picking"
-location: "L171"
+community: "Style Tests"
+location: "L176"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Look_Scene_Picking
+  - community/Style_Tests
 ---
 
 # sc()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[test_style_sounds()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Look_Scene_Picking
+#graphify/code #graphify/EXTRACTED #community/Style_Tests

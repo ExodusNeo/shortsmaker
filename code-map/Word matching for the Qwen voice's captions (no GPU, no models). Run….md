@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_qwen_voice.py"
 type: "rationale"
-community: "Local GPU Workers"
+community: "Voice Worker (qwen_voice)"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Local_GPU_Workers
+  - community/Voice_Worker_qwen_voice
 ---
 
 # Word matching for the Qwen voice's captions (no GPU, no models). Run:…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[test_qwen_voice.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Local_GPU_Workers
+#graphify/rationale #graphify/EXTRACTED #community/Voice_Worker_qwen_voice

@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_style.py"
 type: "code"
-community: "Look Scene Picking"
-location: "L124"
+community: "Style Tests"
+location: "L129"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Look_Scene_Picking
+  - community/Style_Tests
 ---
 
 # test_director_prompt_lists_library()
@@ -16,4 +16,4 @@ tags:
 - [[style_library()]] - `calls` [EXTRACTED]
 - [[test_style.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Look_Scene_Picking
+#graphify/code #graphify/EXTRACTED #community/Style_Tests

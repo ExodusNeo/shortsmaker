@@ -1,25 +1,25 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/remotion_render.py"
 type: "code"
-community: "Custom Scene Coder"
-location: "L3995"
+community: "AI Calls & Quota Fallback"
+location: "L39"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Custom_Scene_Coder
+  - community/AI_Calls__Quota_Fallback
 ---
 
 # redraw_custom()
 
 ## Connections
-- [[Path]] - `references` [EXTRACTED]
+- [[Path_13]] - `references` [EXTRACTED]
 - [[The review saw custom scene i look wrong its coder gets the complaint and its…]] - `rationale_for` [EXTRACTED]
 - [[apply_review_fixes()]] - `calls` [EXTRACTED]
 - [[ask_ai()]] - `calls` [EXTRACTED]
 - [[clean_tsx_code()]] - `calls` [EXTRACTED]
 - [[custom_rules()]] - `calls` [EXTRACTED]
 - [[lint_custom_code()]] - `calls` [EXTRACTED]
-- [[make_shorts.py]] - `contains` [EXTRACTED]
+- [[remotion_render.py]] - `contains` [EXTRACTED]
 - [[tsc_check()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Custom_Scene_Coder
+#graphify/code #graphify/EXTRACTED #community/AI_Calls__Quota_Fallback

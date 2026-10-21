@@ -1,12 +1,12 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/editplan.py"
 type: "code"
-community: "Edit Plan Writer"
-location: "L4176"
+community: "Style Lab & Edit Plan Text"
+location: "L18"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Edit_Plan_Writer
+  - community/Style_Lab__Edit_Plan_Text
 ---
 
 # cut_text()
@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[Plain-English scene change for edit_plan.txt.]] - `rationale_for` [EXTRACTED]
 - [[edit_plan()]] - `calls` [EXTRACTED]
-- [[make_shorts.py]] - `contains` [EXTRACTED]
+- [[editplan.py]] - `contains` [EXTRACTED]
 - [[style_library()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Edit_Plan_Writer
+#graphify/code #graphify/EXTRACTED #community/Style_Lab__Edit_Plan_Text

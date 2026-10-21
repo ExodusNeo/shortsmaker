@@ -1,12 +1,12 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/llm.py"
 type: "rationale"
-community: "Run Menu & Channel Setup"
-location: "L160"
+community: "Entry Point, Logbook & Sounds"
+location: "L22"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Run_Menu__Channel_Setup
+  - community/Entry_Point_Logbook__Sounds
 ---
 
 # Gemini 4 Argon once the owner's account has it (owner's wish), else Gemini 3.8…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[gemini_model()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Run_Menu__Channel_Setup
+#graphify/rationale #graphify/EXTRACTED #community/Entry_Point_Logbook__Sounds

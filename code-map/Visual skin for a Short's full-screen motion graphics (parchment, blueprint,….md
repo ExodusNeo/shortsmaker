@@ -1,12 +1,12 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/config.py"
 type: "rationale"
-community: "Remotion Render Prep"
-location: "L129"
+community: "Skins & Remotion Render"
+location: "L100"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Remotion_Render_Prep
+  - community/Skins__Remotion_Render
 ---
 
 # Visual skin for a Short's full-screen motion graphics (parchment, blueprint,…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[short_skin()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Remotion_Render_Prep
+#graphify/rationale #graphify/EXTRACTED #community/Skins__Remotion_Render

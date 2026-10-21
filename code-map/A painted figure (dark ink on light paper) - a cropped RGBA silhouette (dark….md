@@ -1,12 +1,12 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/remotion_render.py"
 type: "rationale"
-community: "Figure Silhouettes"
-location: "L4059"
+community: "Ink Silhouettes"
+location: "L103"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Figure_Silhouettes
+  - community/Ink_Silhouettes
 ---
 
 # A painted figure (dark ink on light paper) -> a cropped RGBA silhouette (dark…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[ink_silhouette()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Figure_Silhouettes
+#graphify/rationale #graphify/EXTRACTED #community/Ink_Silhouettes

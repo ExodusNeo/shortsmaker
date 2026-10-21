@@ -1,12 +1,12 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/gpu.py"
 type: "rationale"
-community: "AI Video Clips & Encoding"
-location: "L4647"
+community: "Local AI Jobs & Clips"
+location: "L330"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/AI_Video_Clips__Encoding
+  - community/Local_AI_Jobs__Clips
 ---
 
 # Real motion for every scene with a picture: scenes Claude matched to archival…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[local_clips()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/AI_Video_Clips__Encoding
+#graphify/rationale #graphify/EXTRACTED #community/Local_AI_Jobs__Clips

@@ -1,17 +1,17 @@
 ---
-source_file: "tests/test_full_scenes.py"
+source_file: "tests/test_style.py"
 type: "code"
-community: "Planning Test Fakes"
-location: "L387"
+community: "Style Tests"
+location: "L197"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Planning_Test_Fakes
+  - community/Style_Tests
 ---
 
 # ask()
 
 ## Connections
-- [[test_rewrite_paint_prompts()]] - `contains` [EXTRACTED]
+- [[test_fact_check_sees_new_graphics()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Planning_Test_Fakes
+#graphify/code #graphify/EXTRACTED #community/Style_Tests

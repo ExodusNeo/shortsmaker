@@ -1,12 +1,12 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/image_sources.py"
 type: "rationale"
-community: "Wikipedia & Wikimedia Research"
-location: "L1652"
+community: "Commons & Archive Sources"
+location: "L85"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Wikipedia__Wikimedia_Research
+  - community/Commons__Archive_Sources
 ---
 
 # (ok, credit). Public domain/CC0 need no credit; all other Wikimedia/Wikipedia…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[usable_license()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Wikipedia__Wikimedia_Research
+#graphify/rationale #graphify/EXTRACTED #community/Commons__Archive_Sources

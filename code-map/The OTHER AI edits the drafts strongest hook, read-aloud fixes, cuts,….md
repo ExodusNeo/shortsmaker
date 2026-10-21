@@ -1,12 +1,12 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/writing.py"
 type: "rationale"
-community: "Script Team (Write/Edit/Direct)"
-location: "L816"
+community: "Quality Check & Script Editing"
+location: "L264"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Script_Team_Write/Edit/Direct
+  - community/Quality_Check__Script_Editing
 ---
 
 # The OTHER AI edits the drafts: strongest hook, read-aloud fixes, cuts,…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[edit_scripts()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Script_Team_Write/Edit/Direct
+#graphify/rationale #graphify/EXTRACTED #community/Quality_Check__Script_Editing

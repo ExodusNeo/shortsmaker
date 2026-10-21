@@ -1,12 +1,12 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/style_lab.py"
 type: "rationale"
-community: "Library Menu & Candidates"
-location: "L3904"
+community: "Style Lab & Edit Plan Text"
+location: "L246"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Library_Menu__Candidates
+  - community/Style_Lab__Edit_Plan_Text
 ---
 
 # Saves an invention that made it into a finished Short as a candidate for the…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[save_candidate()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Library_Menu__Candidates
+#graphify/rationale #graphify/EXTRACTED #community/Style_Lab__Edit_Plan_Text

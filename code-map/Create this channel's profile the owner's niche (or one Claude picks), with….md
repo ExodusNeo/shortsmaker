@@ -1,12 +1,12 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/channel_profiles.py"
 type: "rationale"
-community: "Run Menu & Channel Setup"
-location: "L364"
+community: "Entry Point, Logbook & Sounds"
+location: "L84"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Run_Menu__Channel_Setup
+  - community/Entry_Point_Logbook__Sounds
 ---
 
 # Create this channel's profile: the owner's niche (or one Claude picks), with…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[new_channel()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Run_Menu__Channel_Setup
+#graphify/rationale #graphify/EXTRACTED #community/Entry_Point_Logbook__Sounds

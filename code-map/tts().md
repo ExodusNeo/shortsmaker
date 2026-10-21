@@ -1,19 +1,19 @@
 ---
-source_file: "make_shorts.py"
+source_file: "local_ai/gen.py"
 type: "code"
-community: "State & Logbook Helpers"
-location: "L2669"
+community: "GPU Worker (gen.py)"
+location: "L28"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/State__Logbook_Helpers
+  - community/GPU_Worker_genpy
 ---
 
 # tts()
 
 ## Connections
-- [[Path]] - `references` [EXTRACTED]
-- [[make_shorts.py]] - `contains` [EXTRACTED]
-- [[speak()]] - `calls` [EXTRACTED]
+- [[gen.py]] - `contains` [EXTRACTED]
+- [[item {text, voice, out (.wav)} - adds words start, end, word,…]] - `rationale_for` [EXTRACTED]
+- [[main()_2]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/State__Logbook_Helpers
+#graphify/code #graphify/EXTRACTED #community/GPU_Worker_genpy

@@ -1,16 +1,22 @@
 ---
 source_file: ""
 type: "concept"
-community: "Shared Imports & Downloads"
+community: "Footage Downloads & Crops"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Shared_Imports__Downloads
+  - community/Footage_Downloads__Crops
 ---
 
 # hashlib
 
 ## Connections
-- [[make_shorts.py]] - `imports` [EXTRACTED]
+- [[footage.py]] - `imports` [EXTRACTED]
+- [[gpu.py]] - `imports` [EXTRACTED]
+- [[image_sources.py]] - `imports` [EXTRACTED]
+- [[moss_images()]] - `calls` [EXTRACTED]
+- [[picture_pool.py]] - `imports` [EXTRACTED]
+- [[pixabay_films()]] - `calls` [EXTRACTED]
+- [[pool_folder()]] - `calls` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Shared_Imports__Downloads
+#graphify/concept #graphify/EXTRACTED #community/Footage_Downloads__Crops

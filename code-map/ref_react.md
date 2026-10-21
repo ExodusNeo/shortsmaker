@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "Full-Screen Motion Graphics"
+community: "Style Library Inventions (TS)"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Full-Screen_Motion_Graphics
+  - community/Style_Library_Inventions_TS
 ---
 
 # ref_react
@@ -36,4 +36,4 @@ tags:
 - [[styletypes.ts]] - `imports_from` [EXTRACTED]
 - [[toolkit.tsx]] - `imports_from` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Full-Screen_Motion_Graphics
+#graphify/concept #graphify/EXTRACTED #community/Style_Library_Inventions_TS

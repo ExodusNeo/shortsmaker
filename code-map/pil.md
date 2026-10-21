@@ -1,18 +1,28 @@
 ---
 source_file: ""
 type: "concept"
-community: "Local GPU Workers"
+community: "Footage Downloads & Crops"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Local_GPU_Workers
+  - community/Footage_Downloads__Crops
 ---
 
 # pil
 
 ## Connections
+- [[footage.py]] - `imports_from` [EXTRACTED]
+- [[frame_render.py]] - `imports_from` [EXTRACTED]
 - [[gen.py]] - `imports_from` [EXTRACTED]
-- [[make_shorts.py]] - `imports_from` [EXTRACTED]
+- [[gpu.py]] - `imports_from` [EXTRACTED]
+- [[image_sources.py]] - `imports_from` [EXTRACTED]
+- [[motion.py]] - `imports_from` [EXTRACTED]
+- [[photo_prep.py]] - `imports_from` [EXTRACTED]
+- [[picture_pool.py]] - `imports_from` [EXTRACTED]
+- [[plan_rules.py]] - `imports_from` [EXTRACTED]
+- [[remotion_render.py]] - `imports_from` [EXTRACTED]
+- [[review.py]] - `imports_from` [EXTRACTED]
+- [[short_render.py]] - `imports_from` [EXTRACTED]
 - [[test_full_scenes.py]] - `imports_from` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Local_GPU_Workers
+#graphify/concept #graphify/EXTRACTED #community/Footage_Downloads__Crops

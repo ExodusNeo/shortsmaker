@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "concept"
-community: "Shared Imports & Downloads"
+community: "Channel Profiles & CLI"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Shared_Imports__Downloads
+  - community/Channel_Profiles__CLI
 ---
 
 # datetime
 
 ## Connections
-- [[make_shorts.py]] - `imports_from` [EXTRACTED]
+- [[channel_profiles.py]] - `imports_from` [EXTRACTED]
+- [[cli.py]] - `imports_from` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Shared_Imports__Downloads
+#graphify/concept #graphify/EXTRACTED #community/Channel_Profiles__CLI

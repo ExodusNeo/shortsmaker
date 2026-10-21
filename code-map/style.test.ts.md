@@ -1,12 +1,12 @@
 ---
 source_file: "tests/style.test.ts"
 type: "code"
-community: "Remotion Cards & Captions"
+community: "Remotion Short Composition"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Remotion_Cards__Captions
+  - community/Remotion_Short_Composition
 ---
 
 # style.test.ts
@@ -19,13 +19,13 @@ tags:
 - [[kit.ts]] - `imports_from` [EXTRACTED]
 - [[lookFor()]] - `imports` [EXTRACTED]
 - [[noise()]] - `imports` [EXTRACTED]
-- [[ok()_1]] - `contains` [EXTRACTED]
+- [[ok()]] - `contains` [EXTRACTED]
 - [[overlayFor()]] - `imports` [EXTRACTED]
 - [[shown()]] - `contains` [EXTRACTED]
 - [[styleindex.ts]] - `imports_from` [EXTRACTED]
-- [[test()_1]] - `contains` [EXTRACTED]
+- [[test()]] - `contains` [EXTRACTED]
 - [[transitionFor()]] - `imports` [EXTRACTED]
 - [[transitionWindow()]] - `imports` [EXTRACTED]
 - [[window.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Remotion_Cards__Captions
+#graphify/code #graphify/EXTRACTED #community/Remotion_Short_Composition

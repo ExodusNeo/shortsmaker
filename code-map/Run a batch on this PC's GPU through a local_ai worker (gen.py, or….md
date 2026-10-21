@@ -1,12 +1,12 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/gpu.py"
 type: "rationale"
-community: "Voice Pipeline (VoiceStudio)"
-location: "L4376"
+community: "Local AI Jobs & Clips"
+location: "L62"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Voice_Pipeline_VoiceStudio
+  - community/Local_AI_Jobs__Clips
 ---
 
 # Run a batch on this PC's GPU through a local_ai worker (gen.py, or…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[local_job()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Voice_Pipeline_VoiceStudio
+#graphify/rationale #graphify/EXTRACTED #community/Local_AI_Jobs__Clips

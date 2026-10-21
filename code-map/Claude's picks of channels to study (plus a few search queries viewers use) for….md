@@ -1,12 +1,12 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/channel_profiles.py"
 type: "rationale"
-community: "YouTube Trend Research"
-location: "L416"
+community: "YouTube Research"
+location: "L133"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/YouTube_Trend_Research
+  - community/YouTube_Research
 ---
 
 # Claude's picks of channels to study (plus a few search queries viewers use) for…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[seed_ideas()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/YouTube_Trend_Research
+#graphify/rationale #graphify/EXTRACTED #community/YouTube_Research

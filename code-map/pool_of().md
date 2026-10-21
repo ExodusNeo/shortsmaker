@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_pictures_first.py"
 type: "code"
-community: "Usable Picture Catalog"
-location: "L95"
+community: "Picture List Catalog"
+location: "L99"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Usable_Picture_Catalog
+  - community/Picture_List_Catalog
 ---
 
 # pool_of()
@@ -32,4 +32,4 @@ tags:
 - [[test_small_pool_skips_ai()]] - `calls` [EXTRACTED]
 - [[test_usable_counts_film_once()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Usable_Picture_Catalog
+#graphify/code #graphify/EXTRACTED #community/Picture_List_Catalog

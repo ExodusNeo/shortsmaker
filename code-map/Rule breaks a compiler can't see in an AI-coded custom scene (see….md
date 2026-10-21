@@ -1,12 +1,12 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/motion.py"
 type: "rationale"
-community: "Custom Scene Coder"
-location: "L3645"
+community: "AI Calls & Quota Fallback"
+location: "L234"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Custom_Scene_Coder
+  - community/AI_Calls__Quota_Fallback
 ---
 
 # Rule breaks a compiler can't see in an AI-coded custom scene (see…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[lint_custom_code()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Custom_Scene_Coder
+#graphify/rationale #graphify/EXTRACTED #community/AI_Calls__Quota_Fallback

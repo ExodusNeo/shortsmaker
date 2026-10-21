@@ -1,18 +1,20 @@
 ---
-source_file: "tests/render_style.py"
+source_file: "local_ai/qwen_voice.py"
 type: "code"
-community: "Local GPU Workers"
-location: "L49"
+community: "Voice Worker (qwen_voice)"
+location: "L134"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Local_GPU_Workers
+  - community/Voice_Worker_qwen_voice
 ---
 
 # main()
 
 ## Connections
-- [[build()]] - `calls` [EXTRACTED]
-- [[render_style.py]] - `contains` [EXTRACTED]
+- [[align()]] - `calls` [EXTRACTED]
+- [[json]] - `calls` [EXTRACTED]
+- [[qwen_voice.py]] - `contains` [EXTRACTED]
+- [[time]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Local_GPU_Workers
+#graphify/code #graphify/EXTRACTED #community/Voice_Worker_qwen_voice

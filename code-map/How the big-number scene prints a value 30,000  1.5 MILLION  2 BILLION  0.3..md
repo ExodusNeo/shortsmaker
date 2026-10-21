@@ -1,12 +1,12 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/plan_rules.py"
 type: "rationale"
-community: "Full-Scene Validation"
-location: "L1207"
+community: "Full-Scene Rescue & Plan Cleaning"
+location: "L81"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Full-Scene_Validation
+  - community/Full-Scene_Rescue__Plan_Cleaning
 ---
 
 # How the big-number scene prints a value: 30,000 / 1.5 MILLION / 2 BILLION / 0.3.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[show_number()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Full-Scene_Validation
+#graphify/rationale #graphify/EXTRACTED #community/Full-Scene_Rescue__Plan_Cleaning

@@ -1,18 +1,20 @@
 ---
-source_file: "tests/test_style.py"
+source_file: "tests/test_full_scenes.py"
 type: "code"
-community: "Look Scene Picking"
-location: "L102"
+community: "Review Fixes"
+location: "L146"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/Look_Scene_Picking
+  - community/Review_Fixes
 ---
 
 # ask()
 
 ## Connections
-- [[plan_with()]] - `indirect_call` [INFERRED]
-- [[test_fact_check_sees_new_graphics()]] - `indirect_call` [INFERRED]
+- [[_fake_planning()]] - `indirect_call` [INFERRED]
+- [[test_look_check_fixes_code()]] - `indirect_call` [INFERRED]
+- [[test_review_redraws_custom()]] - `indirect_call` [INFERRED]
+- [[test_rewrite_paint_prompts()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/INFERRED #community/Look_Scene_Picking
+#graphify/code #graphify/INFERRED #community/Review_Fixes

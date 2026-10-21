@@ -1,12 +1,12 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/style_lab.py"
 type: "code"
-community: "Style Library Approval"
-location: "L3757"
+community: "Style Lab & Edit Plan Text"
+location: "L99"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Style_Library_Approval
+  - community/Style_Lab__Edit_Plan_Text
 ---
 
 # style_rules()
@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[The rules every invented component of `kind` follows, with the library's…]] - `rationale_for` [EXTRACTED]
 - [[invent_component()]] - `calls` [EXTRACTED]
-- [[make_shorts.py]] - `contains` [EXTRACTED]
+- [[style_lab.py]] - `contains` [EXTRACTED]
 - [[style_library()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Style_Library_Approval
+#graphify/code #graphify/EXTRACTED #community/Style_Lab__Edit_Plan_Text

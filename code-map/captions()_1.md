@@ -1,23 +1,24 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/audio_mix.py"
 type: "code"
-community: "Shared Imports & Downloads"
-location: "L2730"
+community: "Captions & TTS"
+location: "L66"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Shared_Imports__Downloads
+  - community/Captions__TTS
 ---
 
 # captions()
 
 ## Connections
 - [[ASS captions, one caption_lines() line at a time; the spoken word turns yellow.…]] - `rationale_for` [EXTRACTED]
-- [[Path]] - `references` [EXTRACTED]
+- [[Path_4]] - `references` [EXTRACTED]
+- [[ass_colour()]] - `calls` [EXTRACTED]
 - [[ass_time()]] - `calls` [EXTRACTED]
+- [[audio_mix.py]] - `contains` [EXTRACTED]
 - [[caption_lines()]] - `calls` [EXTRACTED]
-- [[make_shorts.py]] - `contains` [EXTRACTED]
 - [[render()_2]] - `calls` [EXTRACTED]
 - [[styled()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Shared_Imports__Downloads
+#graphify/code #graphify/EXTRACTED #community/Captions__TTS

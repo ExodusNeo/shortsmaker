@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_style.py"
 type: "rationale"
-community: "Look Scene Picking"
-location: "L99"
+community: "Style Tests"
+location: "L104"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Look_Scene_Picking
+  - community/Style_Tests
 ---
 
 # write_scripts with every AI/network step faked; the director answers…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[plan_with()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Look_Scene_Picking
+#graphify/rationale #graphify/EXTRACTED #community/Style_Tests

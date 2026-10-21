@@ -1,12 +1,12 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/picture_pool.py"
 type: "code"
-community: "Archive Picture & Film Sources"
-location: "L2106"
+community: "Pool Gathering"
+location: "L108"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Archive_Picture__Film_Sources
+  - community/Pool_Gathering
 ---
 
 # add()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[gather_pool()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Archive_Picture__Film_Sources
+#graphify/code #graphify/EXTRACTED #community/Pool_Gathering

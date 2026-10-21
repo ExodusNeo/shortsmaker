@@ -1,19 +1,18 @@
 ---
 source_file: "tests/test_pictures_first.py"
 type: "code"
-community: "Image Choosing"
-location: "L329"
+community: "Planning Fakes (tests)"
+location: "L114"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Image_Choosing
+  - community/Planning_Fakes_tests
 ---
 
 # .__enter__()
 
 ## Connections
-- [[fake_ai]] - `calls` [EXTRACTED]
-- [[picking]] - `method` [EXTRACTED]
-- [[stubbed]] - `calls` [EXTRACTED]
+- [[fake_ai]] - `method` [EXTRACTED]
+- [[reply()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Image_Choosing
+#graphify/code #graphify/EXTRACTED #community/Planning_Fakes_tests

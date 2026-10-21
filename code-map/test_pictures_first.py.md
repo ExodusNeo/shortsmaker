@@ -1,33 +1,46 @@
 ---
 source_file: "tests/test_pictures_first.py"
 type: "code"
-community: "Usable Picture Catalog"
+community: "Picture List Catalog"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Usable_Picture_Catalog
+  - community/Picture_List_Catalog
 ---
 
 # test_pictures_first.py
 
 ## Connections
 - [[Tests for pictures-first planning (gather the pool, the AI picture list, topic…]] - `rationale_for` [EXTRACTED]
+- [[__init__.py]] - `imports_from` [EXTRACTED]
+- [[channel_profiles.py]] - `imports_from` [EXTRACTED]
+- [[editplan.py]] - `imports_from` [EXTRACTED]
 - [[entry()]] - `contains` [EXTRACTED]
 - [[fake_ai]] - `contains` [EXTRACTED]
 - [[film()]] - `contains` [EXTRACTED]
+- [[footage.py]] - `imports_from` [EXTRACTED]
+- [[image_sources.py]] - `imports_from` [EXTRACTED]
 - [[json]] - `imports` [EXTRACTED]
-- [[make_shorts.py]] - `imports` [EXTRACTED]
+- [[llm.py]] - `imports_from` [EXTRACTED]
+- [[logbook.py]] - `imports_from` [EXTRACTED]
 - [[os]] - `imports` [EXTRACTED]
+- [[owner()]] - `imports` [EXTRACTED]
 - [[passing()]] - `contains` [EXTRACTED]
+- [[patching.py]] - `imports_from` [EXTRACTED]
 - [[pathlib]] - `imports_from` [EXTRACTED]
 - [[pic_short()]] - `contains` [EXTRACTED]
+- [[picker.py]] - `imports_from` [EXTRACTED]
 - [[picking]] - `contains` [EXTRACTED]
+- [[picture_pool.py]] - `imports_from` [EXTRACTED]
+- [[plan_rules.py]] - `imports_from` [EXTRACTED]
 - [[planned_short()]] - `contains` [EXTRACTED]
 - [[planning]] - `contains` [EXTRACTED]
 - [[planning_ai()]] - `contains` [EXTRACTED]
 - [[pool_of()]] - `contains` [EXTRACTED]
 - [[scene()]] - `contains` [EXTRACTED]
+- [[seo.py]] - `imports_from` [EXTRACTED]
+- [[session.py]] - `imports_from` [EXTRACTED]
 - [[still()]] - `contains` [EXTRACTED]
 - [[stubbed]] - `contains` [EXTRACTED]
 - [[sys]] - `imports` [EXTRACTED]
@@ -70,5 +83,6 @@ tags:
 - [[test_weak_topic_swapped_for_backup()]] - `contains` [EXTRACTED]
 - [[time]] - `imports` [EXTRACTED]
 - [[traceback]] - `imports` [EXTRACTED]
+- [[writing.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Usable_Picture_Catalog
+#graphify/code #graphify/EXTRACTED #community/Picture_List_Catalog

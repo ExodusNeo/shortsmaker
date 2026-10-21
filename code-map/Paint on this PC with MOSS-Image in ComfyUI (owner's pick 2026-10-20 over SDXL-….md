@@ -1,12 +1,12 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/gpu.py"
 type: "rationale"
-community: "AI Painters (MOSS & Gemini)"
-location: "L4528"
+community: "Footage Downloads & Crops"
+location: "L214"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/AI_Painters_MOSS__Gemini
+  - community/Footage_Downloads__Crops
 ---
 
 # Paint on this PC with MOSS-Image in ComfyUI (owner's pick 2026-10-20 over SDXL-…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[moss_images()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/AI_Painters_MOSS__Gemini
+#graphify/rationale #graphify/EXTRACTED #community/Footage_Downloads__Crops

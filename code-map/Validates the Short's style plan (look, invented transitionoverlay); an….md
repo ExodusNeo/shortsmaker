@@ -1,12 +1,12 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/plan_rules.py"
 type: "rationale"
-community: "Style Plan Validation"
-location: "L1324"
+community: "Invention Validation"
+location: "L198"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Style_Plan_Validation
+  - community/Invention_Validation
 ---
 
 # Validates the Short's style plan (look, invented transition/overlay); an…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[settle_style()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Style_Plan_Validation
+#graphify/rationale #graphify/EXTRACTED #community/Invention_Validation

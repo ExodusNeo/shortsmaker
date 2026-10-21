@@ -1,21 +1,22 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/picture_pool.py"
 type: "code"
-community: "Picture List & Contact Sheets"
-location: "L2069"
+community: "Pool Storage & Contact Sheets"
+location: "L71"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Picture_List__Contact_Sheets
+  - community/Pool_Storage__Contact_Sheets
 ---
 
 # contact_sheets()
 
 ## Connections
 - [[Numbered thumbnail grids (6x4) so Claude can look at every candidate at once.]] - `rationale_for` [EXTRACTED]
-- [[Path]] - `references` [EXTRACTED]
+- [[Path_6]] - `references` [EXTRACTED]
 - [[catalog_pool()]] - `calls` [EXTRACTED]
 - [[choose_images()]] - `calls` [EXTRACTED]
-- [[make_shorts.py]] - `contains` [EXTRACTED]
+- [[io]] - `calls` [EXTRACTED]
+- [[picture_pool.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Picture_List__Contact_Sheets
+#graphify/code #graphify/EXTRACTED #community/Pool_Storage__Contact_Sheets

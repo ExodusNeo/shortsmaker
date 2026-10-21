@@ -1,12 +1,12 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/plan_rules.py"
 type: "code"
-community: "Style Plan Validation"
-location: "L1323"
+community: "Invention Validation"
+location: "L197"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Style_Plan_Validation
+  - community/Invention_Validation
 ---
 
 # settle_style()
@@ -15,7 +15,7 @@ tags:
 - [[Validates the Short's style plan (look, invented transitionoverlay); an…]] - `rationale_for` [EXTRACTED]
 - [[clean_invention()]] - `calls` [EXTRACTED]
 - [[clean_look()]] - `calls` [EXTRACTED]
-- [[make_shorts.py]] - `contains` [EXTRACTED]
+- [[plan_rules.py]] - `contains` [EXTRACTED]
 - [[write_scripts()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Style_Plan_Validation
+#graphify/code #graphify/EXTRACTED #community/Invention_Validation

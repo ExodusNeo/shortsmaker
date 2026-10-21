@@ -1,18 +1,25 @@
 ---
 source_file: ""
 type: "concept"
-community: "Local GPU Workers"
+community: "Style Lab & Edit Plan Text"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Local_GPU_Workers
+  - community/Style_Lab__Edit_Plan_Text
 ---
 
 # os
 
 ## Connections
-- [[make_shorts.py]] - `imports` [EXTRACTED]
+- [[cli.py]] - `imports` [EXTRACTED]
+- [[config.py]] - `imports` [EXTRACTED]
+- [[gpu.py]] - `imports` [EXTRACTED]
+- [[library_menu()]] - `calls` [EXTRACTED]
+- [[llm.py]] - `imports` [EXTRACTED]
 - [[qwen_voice.py]] - `imports` [EXTRACTED]
+- [[style_lab.py]] - `imports` [EXTRACTED]
+- [[test_package.py]] - `imports` [EXTRACTED]
 - [[test_pictures_first.py]] - `imports` [EXTRACTED]
+- [[veo_handoff()]] - `calls` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Local_GPU_Workers
+#graphify/concept #graphify/EXTRACTED #community/Style_Lab__Edit_Plan_Text

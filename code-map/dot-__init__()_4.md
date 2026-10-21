@@ -1,17 +1,17 @@
 ---
-source_file: "tests/test_pictures_first.py"
+source_file: "tools/split_make_shorts.py"
 type: "code"
-community: "Script Team (Write/Edit/Direct)"
-location: "L192"
+community: "Split Script (tools)"
+location: "L384"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Script_Team_Write/Edit/Direct
+  - community/Split_Script_tools
 ---
 
 # .__init__()
 
 ## Connections
-- [[planning]] - `method` [EXTRACTED]
+- [[Unqualify]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Script_Team_Write/Edit/Direct
+#graphify/code #graphify/EXTRACTED #community/Split_Script_tools

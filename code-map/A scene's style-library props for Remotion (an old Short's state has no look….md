@@ -1,12 +1,12 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/style_lab.py"
 type: "rationale"
-community: "Style Props for Remotion"
-location: "L2464"
+community: "Skins & Remotion Render"
+location: "L43"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Style_Props_for_Remotion
+  - community/Skins__Remotion_Render
 ---
 
 # A scene's style-library props for Remotion (an old Short's state has no look:…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[style_props()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Style_Props_for_Remotion
+#graphify/rationale #graphify/EXTRACTED #community/Skins__Remotion_Render

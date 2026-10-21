@@ -1,12 +1,12 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/cli.py"
 type: "rationale"
-community: "Run Menu & Channel Setup"
-location: "L5234"
+community: "Entry Point, Logbook & Sounds"
+location: "L151"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Run_Menu__Channel_Setup
+  - community/Entry_Point_Logbook__Sounds
 ---
 
 # fix.bat: re-render a recent Short with one scene changed, keeping its pictures,…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[fix_short()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Run_Menu__Channel_Setup
+#graphify/rationale #graphify/EXTRACTED #community/Entry_Point_Logbook__Sounds

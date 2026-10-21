@@ -1,12 +1,12 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/footage.py"
 type: "rationale"
-community: "Archive Picture & Film Sources"
-location: "L1804"
+community: "Footage Downloads & Crops"
+location: "L55"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Archive_Picture__Film_Sources
+  - community/Footage_Downloads__Crops
 ---
 
 # Pixabay stock video: free to use in videos, no credit needed (Pixabay Content…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[pixabay_films()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Archive_Picture__Film_Sources
+#graphify/rationale #graphify/EXTRACTED #community/Footage_Downloads__Crops

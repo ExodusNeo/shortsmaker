@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "concept"
-community: "Shared Imports & Downloads"
+community: "Music & Freesound"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Shared_Imports__Downloads
+  - community/Music__Freesound
 ---
 
 # wave
 
 ## Connections
-- [[make_shorts.py]] - `imports` [EXTRACTED]
+- [[audio_mix.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Shared_Imports__Downloads
+#graphify/concept #graphify/EXTRACTED #community/Music__Freesound

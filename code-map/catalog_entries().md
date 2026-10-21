@@ -1,12 +1,12 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/picture_pool.py"
 type: "code"
-community: "Shared Imports & Downloads"
-location: "L2252"
+community: "Picture List Parsing"
+location: "L247"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Shared_Imports__Downloads
+  - community/Picture_List_Parsing
 ---
 
 # catalog_entries()
@@ -14,6 +14,6 @@ tags:
 ## Connections
 - [[The valid entries of a picture-list reply (LLM output is untrusted).]] - `rationale_for` [EXTRACTED]
 - [[catalog_pool()]] - `calls` [EXTRACTED]
-- [[make_shorts.py]] - `contains` [EXTRACTED]
+- [[picture_pool.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Shared_Imports__Downloads
+#graphify/code #graphify/EXTRACTED #community/Picture_List_Parsing

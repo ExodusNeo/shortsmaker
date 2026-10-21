@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/full/Board.tsx"
 type: "code"
-community: "Full-Screen Motion Graphics"
+community: "Paper & Evidence Board Scenes"
 location: "L17"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Full-Screen_Motion_Graphics
+  - community/Paper__Evidence_Board_Scenes
 ---
 
 # layout()
@@ -16,4 +16,4 @@ tags:
 - [[Board.tsx]] - `contains` [EXTRACTED]
 - [[rng()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Full-Screen_Motion_Graphics
+#graphify/code #graphify/EXTRACTED #community/Paper__Evidence_Board_Scenes

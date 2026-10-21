@@ -1,17 +1,21 @@
 ---
-source_file: "remotion/src/MapCard.tsx"
+source_file: "remotion/src/full/toolkit.tsx"
 type: "code"
-community: "Remotion Cards & Captions"
-location: "L16"
+community: "Custom Scene Toolkit & Examples"
+location: "L10"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Remotion_Cards__Captions
+  - community/Custom_Scene_Toolkit__Examples
 ---
 
 # clamp
 
 ## Connections
-- [[MapCard.tsx]] - `contains` [EXTRACTED]
+- [[Custom0.tsx]] - `imports` [EXTRACTED]
+- [[Custom1.tsx]] - `imports` [EXTRACTED]
+- [[Custom2.tsx]] - `imports` [EXTRACTED]
+- [[Custom3.tsx]] - `imports` [EXTRACTED]
+- [[toolkit.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Remotion_Cards__Captions
+#graphify/code #graphify/EXTRACTED #community/Custom_Scene_Toolkit__Examples

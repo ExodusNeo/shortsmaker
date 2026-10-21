@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_pictures_first.py"
 type: "code"
-community: "Callout & Sound Validation"
-location: "L312"
+community: "Full-Scene Rescue & Plan Cleaning"
+location: "L316"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Callout__Sound_Validation
+  - community/Full-Scene_Rescue__Plan_Cleaning
 ---
 
 # test_clean_full_keeps_board_pic()
@@ -16,4 +16,4 @@ tags:
 - [[test_pictures_first.py]] - `contains` [EXTRACTED]
 - [[words_of()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Callout__Sound_Validation
+#graphify/code #graphify/EXTRACTED #community/Full-Scene_Rescue__Plan_Cleaning

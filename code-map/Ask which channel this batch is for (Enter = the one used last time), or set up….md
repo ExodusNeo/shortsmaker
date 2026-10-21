@@ -1,12 +1,12 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/channel_profiles.py"
 type: "rationale"
-community: "Run Menu & Channel Setup"
-location: "L301"
+community: "Entry Point, Logbook & Sounds"
+location: "L21"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Run_Menu__Channel_Setup
+  - community/Entry_Point_Logbook__Sounds
 ---
 
 # Ask which channel this batch is for (Enter = the one used last time), or set up…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[pick_channel()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Run_Menu__Channel_Setup
+#graphify/rationale #graphify/EXTRACTED #community/Entry_Point_Logbook__Sounds

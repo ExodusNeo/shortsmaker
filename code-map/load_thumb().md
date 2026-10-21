@@ -1,18 +1,17 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/picture_pool.py"
 type: "code"
-community: "Archive Picture & Film Sources"
-location: "L2129"
+community: "Pool Gathering"
+location: "L131"
 tags:
   - graphify/code
-  - graphify/EXTRACTED
-  - community/Archive_Picture__Film_Sources
+  - graphify/INFERRED
+  - community/Pool_Gathering
 ---
 
 # load_thumb()
 
 ## Connections
 - [[gather_pool()]] - `indirect_call` [INFERRED]
-- [[get_image()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Archive_Picture__Film_Sources
+#graphify/code #graphify/INFERRED #community/Pool_Gathering

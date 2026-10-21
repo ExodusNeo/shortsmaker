@@ -1,12 +1,12 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/image_sources.py"
 type: "rationale"
-community: "Wikipedia & Wikimedia Research"
-location: "L1640"
+community: "Commons & Archive Sources"
+location: "L73"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Wikipedia__Wikimedia_Research
+  - community/Commons__Archive_Sources
 ---
 
 # URL of a standard-size Wikimedia thumbnail: the largest allowed step that fits…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[thumb_url()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Wikipedia__Wikimedia_Research
+#graphify/rationale #graphify/EXTRACTED #community/Commons__Archive_Sources

@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/full/FullScene.tsx"
 type: "code"
-community: "Full-Screen Motion Graphics"
+community: "Big Number Scene"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Full-Screen_Motion_Graphics
+  - community/Big_Number_Scene
 ---
 
 # FullScene.tsx
@@ -28,4 +28,4 @@ tags:
 - [[Short.tsx]] - `imports_from` [EXTRACTED]
 - [[fulltypes.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Full-Screen_Motion_Graphics
+#graphify/code #graphify/EXTRACTED #community/Big_Number_Scene

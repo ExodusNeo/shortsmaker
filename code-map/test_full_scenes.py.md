@@ -1,26 +1,48 @@
 ---
 source_file: "tests/test_full_scenes.py"
 type: "code"
-community: "Full-Scene Validation"
+community: "Full-Scene Limits & Director Tests"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Full-Scene_Validation
+  - community/Full-Scene_Limits__Director_Tests
 ---
 
 # test_full_scenes.py
 
 ## Connections
 - [[Tests for the full-screen motion graphic scenes. No AI usage, no rendering.…]] - `rationale_for` [EXTRACTED]
+- [[__init__.py]] - `imports_from` [EXTRACTED]
 - [[_board()]] - `contains` [EXTRACTED]
 - [[_fake_planning()]] - `contains` [EXTRACTED]
 - [[_jpg()]] - `contains` [EXTRACTED]
 - [[_review_state()]] - `contains` [EXTRACTED]
 - [[_tone_wav()]] - `contains` [EXTRACTED]
-- [[make_shorts.py]] - `imports` [EXTRACTED]
+- [[audio_mix.py]] - `imports_from` [EXTRACTED]
+- [[channel_profiles.py]] - `imports_from` [EXTRACTED]
+- [[cli.py]] - `imports_from` [EXTRACTED]
+- [[config.py]] - `imports_from` [EXTRACTED]
+- [[editplan.py]] - `imports_from` [EXTRACTED]
+- [[gpu.py]] - `imports_from` [EXTRACTED]
+- [[image_sources.py]] - `imports_from` [EXTRACTED]
+- [[llm.py]] - `imports_from` [EXTRACTED]
+- [[logbook.py]] - `imports_from` [EXTRACTED]
+- [[motion.py]] - `imports_from` [EXTRACTED]
+- [[owner()]] - `imports` [EXTRACTED]
+- [[patching.py]] - `imports_from` [EXTRACTED]
 - [[pathlib]] - `imports_from` [EXTRACTED]
+- [[picker.py]] - `imports_from` [EXTRACTED]
+- [[picture_pool.py]] - `imports_from` [EXTRACTED]
 - [[pil]] - `imports_from` [EXTRACTED]
+- [[plan_rules.py]] - `imports_from` [EXTRACTED]
+- [[random]] - `imports` [EXTRACTED]
+- [[remotion_render.py]] - `imports_from` [EXTRACTED]
+- [[review.py]] - `imports_from` [EXTRACTED]
+- [[session.py]] - `imports_from` [EXTRACTED]
+- [[short_render.py]] - `imports_from` [EXTRACTED]
+- [[shutil]] - `imports` [EXTRACTED]
+- [[subprocess]] - `imports` [EXTRACTED]
 - [[sys]] - `imports` [EXTRACTED]
 - [[tempfile]] - `imports` [EXTRACTED]
 - [[test_auto_fix_graphic()]] - `contains` [EXTRACTED]
@@ -67,5 +89,6 @@ tags:
 - [[test_story_sound_library()]] - `contains` [EXTRACTED]
 - [[test_story_sound_wins_its_moment()]] - `contains` [EXTRACTED]
 - [[traceback]] - `imports` [EXTRACTED]
+- [[writing.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Full-Scene_Validation
+#graphify/code #graphify/EXTRACTED #community/Full-Scene_Limits__Director_Tests

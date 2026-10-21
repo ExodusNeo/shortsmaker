@@ -1,23 +1,24 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/media_tools.py"
 type: "code"
-community: "State & Logbook Helpers"
-location: "L2681"
+community: "Footage Downloads & Crops"
+location: "L24"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/State__Logbook_Helpers
+  - community/Footage_Downloads__Crops
 ---
 
 # duration()
 
 ## Connections
-- [[Path]] - `references` [EXTRACTED]
+- [[Path_5]] - `references` [EXTRACTED]
 - [[log_short()]] - `calls` [EXTRACTED]
-- [[make_shorts.py]] - `contains` [EXTRACTED]
+- [[media_tools.py]] - `contains` [EXTRACTED]
 - [[nasa_films()]] - `calls` [EXTRACTED]
 - [[render()_2]] - `calls` [EXTRACTED]
 - [[render_remotion()]] - `calls` [EXTRACTED]
 - [[shot_span()]] - `calls` [EXTRACTED]
+- [[subprocess]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/State__Logbook_Helpers
+#graphify/code #graphify/EXTRACTED #community/Footage_Downloads__Crops

@@ -1,12 +1,12 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/footage.py"
 type: "code"
-community: "Film Clip Download"
-location: "L2040"
+community: "Footage Downloads & Crops"
+location: "L198"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Film_Clip_Download
+  - community/Footage_Downloads__Crops
 ---
 
 # film_piece()
@@ -16,6 +16,7 @@ tags:
 - [[Path]] - `references` [EXTRACTED]
 - [[choose_images()]] - `calls` [EXTRACTED]
 - [[film_ffmpeg()]] - `calls` [EXTRACTED]
-- [[make_shorts.py]] - `contains` [EXTRACTED]
+- [[footage.py]] - `contains` [EXTRACTED]
+- [[subprocess]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Film_Clip_Download
+#graphify/code #graphify/EXTRACTED #community/Footage_Downloads__Crops

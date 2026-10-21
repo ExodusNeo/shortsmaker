@@ -1,12 +1,12 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/short_render.py"
 type: "rationale"
-community: "State & Logbook Helpers"
-location: "L4700"
+community: "Story Sounds & Credits"
+location: "L26"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/State__Logbook_Helpers
+  - community/Story_Sounds__Credits
 ---
 
 # What a fix re-render needs to reproduce this Short without new AI picks: the…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[save_state()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/State__Logbook_Helpers
+#graphify/rationale #graphify/EXTRACTED #community/Story_Sounds__Credits

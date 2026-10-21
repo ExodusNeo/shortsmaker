@@ -1,12 +1,12 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/style_lab.py"
 type: "code"
-community: "TypeScript Checks"
-location: "L3815"
+community: "Invention Lint"
+location: "L157"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/TypeScript_Checks
+  - community/Invention_Lint
 ---
 
 # attempt()
@@ -14,6 +14,5 @@ tags:
 ## Connections
 - [[invent_component()]] - `contains` [EXTRACTED]
 - [[lint_style_code()]] - `calls` [EXTRACTED]
-- [[tsc_check()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/TypeScript_Checks
+#graphify/code #graphify/EXTRACTED #community/Invention_Lint

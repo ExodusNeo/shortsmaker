@@ -1,12 +1,12 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/motion.py"
 type: "rationale"
-community: "SFX & Preview Sheets"
-location: "L3668"
+community: "Motion Previews & Render Tests"
+location: "L257"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/SFX__Preview_Sheets
+  - community/Motion_Previews__Render_Tests
 ---
 
 # Renders seconds start..end of a small Short (`props`; its pictures already in…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[preview_sheet()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/SFX__Preview_Sheets
+#graphify/rationale #graphify/EXTRACTED #community/Motion_Previews__Render_Tests

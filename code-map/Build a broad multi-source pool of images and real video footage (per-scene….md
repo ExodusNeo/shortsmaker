@@ -1,12 +1,12 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/picker.py"
 type: "rationale"
-community: "Image Choosing"
-location: "L2286"
+community: "Picture Picker"
+location: "L13"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Image_Choosing
+  - community/Picture_Picker
 ---
 
 # Build a broad multi-source pool of images and real video footage (per-scene…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[choose_images()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Image_Choosing
+#graphify/rationale #graphify/EXTRACTED #community/Picture_Picker

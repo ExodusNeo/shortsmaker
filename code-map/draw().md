@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/style/looks/Engraving.tsx"
 type: "code"
-community: "Style Library Looks & Transitions"
+community: "Style Library Inventions (TS)"
 location: "L36"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Style_Library_Looks__Transitions
+  - community/Style_Library_Inventions_TS
 ---
 
 # draw()
@@ -17,4 +17,4 @@ tags:
 - [[hatch()]] - `calls` [EXTRACTED]
 - [[luminance()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Style_Library_Looks__Transitions
+#graphify/code #graphify/EXTRACTED #community/Style_Library_Inventions_TS

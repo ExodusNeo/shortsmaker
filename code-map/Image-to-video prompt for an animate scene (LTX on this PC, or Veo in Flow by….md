@@ -1,12 +1,12 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/gpu.py"
 type: "rationale"
-community: "AI Video Clips & Encoding"
-location: "L4595"
+community: "Local AI Jobs & Clips"
+location: "L281"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/AI_Video_Clips__Encoding
+  - community/Local_AI_Jobs__Clips
 ---
 
 # Image-to-video prompt for an animate scene (LTX on this PC, or Veo in Flow by…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[motion_prompt()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/AI_Video_Clips__Encoding
+#graphify/rationale #graphify/EXTRACTED #community/Local_AI_Jobs__Clips

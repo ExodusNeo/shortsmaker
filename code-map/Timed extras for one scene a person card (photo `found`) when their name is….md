@@ -1,12 +1,12 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/editplan.py"
 type: "rationale"
-community: "Spoken-Word Cue Timing"
-location: "L4299"
+community: "Scene Cues & Word Timing"
+location: "L141"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Spoken-Word_Cue_Timing
+  - community/Scene_Cues__Word_Timing
 ---
 
 # Timed extras for one scene: a person card (photo `found`) when their name is…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[scene_cues()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Spoken-Word_Cue_Timing
+#graphify/rationale #graphify/EXTRACTED #community/Scene_Cues__Word_Timing

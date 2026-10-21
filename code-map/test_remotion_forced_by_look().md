@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_style.py"
 type: "code"
-community: "Quality Checks & Captions"
-location: "L161"
+community: "Remotion Decision"
+location: "L166"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Quality_Checks__Captions
+  - community/Remotion_Decision
 ---
 
 # test_remotion_forced_by_look()
@@ -15,4 +15,4 @@ tags:
 - [[test_style.py]] - `contains` [EXTRACTED]
 - [[wants_remotion()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Quality_Checks__Captions
+#graphify/code #graphify/EXTRACTED #community/Remotion_Decision

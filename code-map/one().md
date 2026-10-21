@@ -1,19 +1,17 @@
 ---
-source_file: "make_shorts.py"
+source_file: "local_ai/qwen_voice.py"
 type: "code"
-community: "AI Planner Calls & Quota"
-location: "L4471"
+community: "Voice Worker (qwen_voice)"
+location: "L30"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AI_Planner_Calls__Quota
+  - community/Voice_Worker_qwen_voice
 ---
 
 # one()
 
 ## Connections
-- [[gemini_images()]] - `indirect_call` [INFERRED]
-- [[quota_exhausted()]] - `calls` [EXTRACTED]
-- [[run_agy()]] - `calls` [EXTRACTED]
+- [[say_number()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AI_Planner_Calls__Quota
+#graphify/code #graphify/EXTRACTED #community/Voice_Worker_qwen_voice

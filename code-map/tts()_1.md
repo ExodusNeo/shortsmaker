@@ -1,19 +1,20 @@
 ---
-source_file: "local_ai/gen.py"
+source_file: "shortsmaker/audio_mix.py"
 type: "code"
-community: "Local GPU Workers"
-location: "L28"
+community: "Captions & TTS"
+location: "L35"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Local_GPU_Workers
+  - community/Captions__TTS
 ---
 
 # tts()
 
 ## Connections
-- [[gen.py]] - `contains` [EXTRACTED]
-- [[item {text, voice, out (.wav)} - adds words start, end, word,…]] - `rationale_for` [EXTRACTED]
-- [[main()]] - `indirect_call` [INFERRED]
+- [[Path_4]] - `references` [EXTRACTED]
+- [[audio_mix.py]] - `contains` [EXTRACTED]
+- [[edge_tts]] - `calls` [EXTRACTED]
+- [[speak()_1]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Local_GPU_Workers
+#graphify/code #graphify/EXTRACTED #community/Captions__TTS

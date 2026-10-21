@@ -1,12 +1,12 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/writing.py"
 type: "code"
-community: "Wikipedia & Wikimedia Research"
-location: "L1067"
+community: "Commons & Archive Sources"
+location: "L515"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Wikipedia__Wikimedia_Research
+  - community/Commons__Archive_Sources
 ---
 
 # article_text()
@@ -14,9 +14,10 @@ tags:
 ## Connections
 - [[Plain text of an English Wikipedia article ('' when missing or unreachable).]] - `rationale_for` [EXTRACTED]
 - [[fact_check()]] - `calls` [EXTRACTED]
-- [[make_shorts.py]] - `contains` [EXTRACTED]
+- [[json]] - `calls` [EXTRACTED]
 - [[prepare_topic()]] - `calls` [EXTRACTED]
 - [[rescue_graphics()]] - `calls` [EXTRACTED]
 - [[wm_get()]] - `calls` [EXTRACTED]
+- [[writing.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Wikipedia__Wikimedia_Research
+#graphify/code #graphify/EXTRACTED #community/Commons__Archive_Sources

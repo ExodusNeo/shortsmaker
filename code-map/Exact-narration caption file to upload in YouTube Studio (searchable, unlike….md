@@ -1,12 +1,12 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/seo.py"
 type: "rationale"
-community: "Quality Checks & Captions"
-location: "L1567"
+community: "SRT Captions File"
+location: "L71"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Quality_Checks__Captions
+  - community/SRT_Captions_File
 ---
 
 # Exact-narration caption file to upload in YouTube Studio (searchable, unlike…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[srt()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Quality_Checks__Captions
+#graphify/rationale #graphify/EXTRACTED #community/SRT_Captions_File

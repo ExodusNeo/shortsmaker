@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_full_scenes.py"
 type: "code"
-community: "Custom Scene Coder"
-location: "L589"
+community: "AI Calls & Quota Fallback"
+location: "L596"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Custom_Scene_Coder
+  - community/AI_Calls__Quota_Fallback
 ---
 
 # test_lint_custom_code()
@@ -15,4 +15,4 @@ tags:
 - [[lint_custom_code()]] - `calls` [EXTRACTED]
 - [[test_full_scenes.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Custom_Scene_Coder
+#graphify/code #graphify/EXTRACTED #community/AI_Calls__Quota_Fallback

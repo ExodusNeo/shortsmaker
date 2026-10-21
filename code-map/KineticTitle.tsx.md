@@ -1,18 +1,18 @@
 ---
 source_file: "remotion/src/style/overlays/KineticTitle.tsx"
 type: "code"
-community: "Style Library Looks & Transitions"
+community: "Style Library Inventions (TS)"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Style_Library_Looks__Transitions
+  - community/Style_Library_Inventions_TS
 ---
 
 # KineticTitle.tsx
 
 ## Connections
-- [[CLAMP_5]] - `imports` [EXTRACTED]
+- [[CLAMP]] - `imports` [EXTRACTED]
 - [[FONT]] - `imports` [EXTRACTED]
 - [[KineticTitle()]] - `contains` [EXTRACTED]
 - [[Overlay]] - `imports` [EXTRACTED]
@@ -25,4 +25,4 @@ tags:
 - [[styletypes.ts]] - `imports_from` [EXTRACTED]
 - [[theme]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Style_Library_Looks__Transitions
+#graphify/code #graphify/EXTRACTED #community/Style_Library_Inventions_TS

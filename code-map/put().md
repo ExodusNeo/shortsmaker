@@ -1,8 +1,8 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/motion.py"
 type: "code"
 community: "Full-Scene Props"
-location: "L3467"
+location: "L49"
 tags:
   - graphify/code
   - graphify/EXTRACTED

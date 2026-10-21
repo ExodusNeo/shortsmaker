@@ -1,12 +1,12 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/audio_mix.py"
 type: "code"
-community: "SFX & Preview Sheets"
-location: "L2847"
+community: "SFX Synthesis"
+location: "L183"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SFX__Preview_Sheets
+  - community/SFX_Synthesis
 ---
 
 # noise()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[make_sfx()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SFX__Preview_Sheets
+#graphify/code #graphify/EXTRACTED #community/SFX_Synthesis

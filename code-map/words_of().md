@@ -1,12 +1,12 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/plan_rules.py"
 type: "code"
-community: "Callout & Sound Validation"
-location: "L1428"
+community: "Full-Scene Rescue & Plan Cleaning"
+location: "L302"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Callout__Sound_Validation
+  - community/Full-Scene_Rescue__Plan_Cleaning
 ---
 
 # words_of()
@@ -19,14 +19,16 @@ tags:
 - [[clean_graphic()]] - `calls` [EXTRACTED]
 - [[clean_sound()]] - `calls` [EXTRACTED]
 - [[gather_pool()]] - `calls` [EXTRACTED]
-- [[make_shorts.py]] - `contains` [EXTRACTED]
 - [[on_topic()]] - `calls` [EXTRACTED]
+- [[plan_rules.py]] - `contains` [EXTRACTED]
+- [[re]] - `calls` [EXTRACTED]
 - [[rescue_graphics()]] - `calls` [EXTRACTED]
 - [[spoken_span()]] - `calls` [EXTRACTED]
 - [[test_clean_full_keeps_board_pic()]] - `calls` [EXTRACTED]
 - [[test_clean_sound()]] - `calls` [EXTRACTED]
+- [[unicodedata]] - `calls` [EXTRACTED]
 - [[wm_files()]] - `calls` [EXTRACTED]
 - [[word()]] - `calls` [EXTRACTED]
 - [[write_scripts()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Callout__Sound_Validation
+#graphify/code #graphify/EXTRACTED #community/Full-Scene_Rescue__Plan_Cleaning

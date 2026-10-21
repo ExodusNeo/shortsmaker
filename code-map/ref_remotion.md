@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "Remotion Cards & Captions"
+community: "Remotion Short Composition"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Remotion_Cards__Captions
+  - community/Remotion_Short_Composition
 ---
 
 # ref_remotion
@@ -29,4 +29,4 @@ tags:
 - [[srcindex.ts]] - `imports_from` [EXTRACTED]
 - [[toolkit.tsx]] - `imports_from` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Remotion_Cards__Captions
+#graphify/concept #graphify/EXTRACTED #community/Remotion_Short_Composition

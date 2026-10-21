@@ -1,19 +1,19 @@
 ---
 source_file: "local_ai/qwen_voice.py"
 type: "code"
-community: "Local GPU Workers"
+community: "Voice Worker (qwen_voice)"
 location: "L110"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Local_GPU_Workers
+  - community/Voice_Worker_qwen_voice
 ---
 
 # align()
 
 ## Connections
 - [[align_words()]] - `calls` [EXTRACTED]
-- [[main()_1]] - `calls` [EXTRACTED]
+- [[main()_3]] - `calls` [EXTRACTED]
 - [[qwen_voice.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Local_GPU_Workers
+#graphify/code #graphify/EXTRACTED #community/Voice_Worker_qwen_voice

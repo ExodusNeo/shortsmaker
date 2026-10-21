@@ -1,18 +1,18 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/remotion_render.py"
 type: "code"
-community: "Remotion Render Prep"
-location: "L4104"
+community: "Skins & Remotion Render"
+location: "L148"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Remotion_Render_Prep
+  - community/Skins__Remotion_Render
 ---
 
 # render_remotion()
 
 ## Connections
-- [[Path]] - `references` [EXTRACTED]
+- [[Path_13]] - `references` [EXTRACTED]
 - [[Render the silent video (with captions) through the Remotion project; returns…]] - `rationale_for` [EXTRACTED]
 - [[caption_lines()]] - `calls` [EXTRACTED]
 - [[code_custom_scenes()]] - `calls` [EXTRACTED]
@@ -20,12 +20,13 @@ tags:
 - [[full_props()]] - `calls` [EXTRACTED]
 - [[invent_styles()]] - `calls` [EXTRACTED]
 - [[make_paper()]] - `calls` [EXTRACTED]
-- [[make_shorts.py]] - `contains` [EXTRACTED]
-- [[render()]] - `contains` [EXTRACTED]
-- [[render()_2]] - `indirect_call` [INFERRED]
+- [[remotion_render.py]] - `contains` [EXTRACTED]
+- [[render()_2]] - `calls` [EXTRACTED]
+- [[render()]] - `indirect_call` [INFERRED]
 - [[restore_style_slots()]] - `calls` [EXTRACTED]
 - [[run_remotion_with_fallback()]] - `calls` [EXTRACTED]
 - [[short_skin()]] - `calls` [EXTRACTED]
+- [[shutil]] - `calls` [EXTRACTED]
 - [[style_props()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Remotion_Render_Prep
+#graphify/code #graphify/EXTRACTED #community/Skins__Remotion_Render

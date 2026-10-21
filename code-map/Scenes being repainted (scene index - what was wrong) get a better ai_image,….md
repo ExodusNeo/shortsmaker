@@ -1,12 +1,12 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/cli.py"
 type: "rationale"
-community: "Automatic Review Fixes"
-location: "L5206"
+community: "Entry Point, Logbook & Sounds"
+location: "L123"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Automatic_Review_Fixes
+  - community/Entry_Point_Logbook__Sounds
 ---
 
 # Scenes being repainted (scene index -> what was wrong) get a better ai_image,…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[rewrite_paint_prompts()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Automatic_Review_Fixes
+#graphify/rationale #graphify/EXTRACTED #community/Entry_Point_Logbook__Sounds

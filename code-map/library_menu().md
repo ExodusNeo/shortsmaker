@@ -1,12 +1,12 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/style_lab.py"
 type: "code"
-community: "Library Menu & Candidates"
-location: "L3957"
+community: "Style Lab & Edit Plan Text"
+location: "L299"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Library_Menu__Candidates
+  - community/Style_Lab__Edit_Plan_Text
 ---
 
 # library_menu()
@@ -14,9 +14,11 @@ tags:
 ## Connections
 - [[approve_candidate()]] - `calls` [EXTRACTED]
 - [[ask_number()]] - `calls` [EXTRACTED]
+- [[json]] - `calls` [EXTRACTED]
 - [[library.bat the owner watches each invention the AI made for a Short and adds…]] - `rationale_for` [EXTRACTED]
 - [[main()_4]] - `calls` [EXTRACTED]
-- [[make_shorts.py]] - `contains` [EXTRACTED]
+- [[os]] - `calls` [EXTRACTED]
 - [[reject_candidate()]] - `calls` [EXTRACTED]
+- [[style_lab.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Library_Menu__Candidates
+#graphify/code #graphify/EXTRACTED #community/Style_Lab__Edit_Plan_Text

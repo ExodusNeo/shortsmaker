@@ -1,12 +1,12 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/image_sources.py"
 type: "code"
-community: "Film Clip Download"
-location: "L1976"
+community: "Footage Downloads & Crops"
+location: "L273"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Film_Clip_Download
+  - community/Footage_Downloads__Crops
 ---
 
 # film_ffmpeg()
@@ -16,6 +16,6 @@ tags:
 - [[ffmpeg reading a film over HTTP. Wikimedia gets the contact User-Agent, the…]] - `rationale_for` [EXTRACTED]
 - [[film_frames()]] - `calls` [EXTRACTED]
 - [[film_piece()]] - `calls` [EXTRACTED]
-- [[make_shorts.py]] - `contains` [EXTRACTED]
+- [[image_sources.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Film_Clip_Download
+#graphify/code #graphify/EXTRACTED #community/Footage_Downloads__Crops

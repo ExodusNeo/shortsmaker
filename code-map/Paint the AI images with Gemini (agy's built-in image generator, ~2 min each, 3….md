@@ -1,12 +1,12 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/gpu.py"
 type: "rationale"
-community: "AI Painters (MOSS & Gemini)"
-location: "L4469"
+community: "Gemini Image Painting"
+location: "L155"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/AI_Painters_MOSS__Gemini
+  - community/Gemini_Image_Painting
 ---
 
 # Paint the AI images with Gemini (agy's built-in image generator, ~2 min each, 3…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[gemini_images()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/AI_Painters_MOSS__Gemini
+#graphify/rationale #graphify/EXTRACTED #community/Gemini_Image_Painting

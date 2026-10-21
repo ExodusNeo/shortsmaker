@@ -1,22 +1,23 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/logbook.py"
 type: "code"
-community: "State & Logbook Helpers"
-location: "L5022"
+community: "Entry Point, Logbook & Sounds"
+location: "L24"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/State__Logbook_Helpers
+  - community/Entry_Point_Logbook__Sounds
 ---
 
 # log_short()
 
 ## Connections
 - [[Add a finished Short to this channel's logbook, with empty lines for its…]] - `rationale_for` [EXTRACTED]
-- [[Path]] - `references` [EXTRACTED]
+- [[Path_14]] - `references` [EXTRACTED]
 - [[clock()]] - `calls` [EXTRACTED]
 - [[duration()]] - `calls` [EXTRACTED]
+- [[logbook.py]] - `contains` [EXTRACTED]
 - [[main()_4]] - `calls` [EXTRACTED]
-- [[make_shorts.py]] - `contains` [EXTRACTED]
+- [[re]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/State__Logbook_Helpers
+#graphify/code #graphify/EXTRACTED #community/Entry_Point_Logbook__Sounds

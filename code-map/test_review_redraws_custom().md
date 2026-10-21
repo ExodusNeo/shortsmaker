@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_full_scenes.py"
 type: "code"
-community: "Planning Test Fakes"
-location: "L514"
+community: "Review Fixes"
+location: "L521"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Planning_Test_Fakes
+  - community/Review_Fixes
 ---
 
 # test_review_redraws_custom()
@@ -14,8 +14,8 @@ tags:
 ## Connections
 - [[_review_state()]] - `calls` [EXTRACTED]
 - [[apply_review_fixes()]] - `calls` [EXTRACTED]
-- [[ask()_4]] - `contains` [EXTRACTED]
-- [[ask()_2]] - `indirect_call` [INFERRED]
+- [[ask()_2]] - `contains` [EXTRACTED]
+- [[ask()]] - `indirect_call` [INFERRED]
 - [[test_full_scenes.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Planning_Test_Fakes
+#graphify/code #graphify/EXTRACTED #community/Review_Fixes

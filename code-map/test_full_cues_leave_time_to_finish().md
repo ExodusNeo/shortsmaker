@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_full_scenes.py"
 type: "code"
-community: "Spoken-Word Cue Timing"
-location: "L109"
+community: "Scene Cues & Word Timing"
+location: "L116"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Spoken-Word_Cue_Timing
+  - community/Scene_Cues__Word_Timing
 ---
 
 # test_full_cues_leave_time_to_finish()
@@ -16,4 +16,4 @@ tags:
 - [[full_cues()]] - `calls` [EXTRACTED]
 - [[test_full_scenes.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Spoken-Word_Cue_Timing
+#graphify/code #graphify/EXTRACTED #community/Scene_Cues__Word_Timing

@@ -1,12 +1,12 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/picture_pool.py"
 type: "code"
-community: "Run Menu & Channel Setup"
-location: "L2193"
+community: "Footage Downloads & Crops"
+location: "L188"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Run_Menu__Channel_Setup
+  - community/Footage_Downloads__Crops
 ---
 
 # prune_cache()
@@ -14,7 +14,9 @@ tags:
 ## Connections
 - [[Drop cached downloads and topic pools older than 30 days.]] - `rationale_for` [EXTRACTED]
 - [[main()_4]] - `calls` [EXTRACTED]
-- [[make_shorts.py]] - `contains` [EXTRACTED]
+- [[picture_pool.py]] - `contains` [EXTRACTED]
+- [[shutil]] - `calls` [EXTRACTED]
 - [[test_prune_cache_handles_pools()]] - `calls` [EXTRACTED]
+- [[time]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Run_Menu__Channel_Setup
+#graphify/code #graphify/EXTRACTED #community/Footage_Downloads__Crops

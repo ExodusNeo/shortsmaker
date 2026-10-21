@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/full/guarded.tsx"
 type: "code"
-community: "Full-Screen Motion Graphics"
+community: "Guarded Layout (cards, arrows)"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Full-Screen_Motion_Graphics
+  - community/Guarded_Layout_cards_arrows
 ---
 
 # guarded.tsx
@@ -27,7 +27,7 @@ tags:
 - [[SkinName]] - `imports` [EXTRACTED]
 - [[TYPE]] - `imports` [EXTRACTED]
 - [[boxAt()]] - `contains` [EXTRACTED]
-- [[clamp_3]] - `contains` [EXTRACTED]
+- [[clamp_7]] - `contains` [EXTRACTED]
 - [[fitCard()]] - `contains` [EXTRACTED]
 - [[fulltypes.ts]] - `imports_from` [EXTRACTED]
 - [[guarded.test.ts]] - `imports_from` [EXTRACTED]
@@ -45,4 +45,4 @@ tags:
 - [[toolkit.tsx]] - `re_exports` [EXTRACTED]
 - [[travel()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Full-Screen_Motion_Graphics
+#graphify/code #graphify/EXTRACTED #community/Guarded_Layout_cards_arrows

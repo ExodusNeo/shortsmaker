@@ -1,12 +1,12 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/editplan.py"
 type: "rationale"
-community: "Edit Plan Writer"
-location: "L4189"
+community: "Edit Plan"
+location: "L31"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Edit_Plan_Writer
+  - community/Edit_Plan
 ---
 
 # edit_plan.txt: what the pictures-first check found (None for a plan made before…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[picture_line()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Edit_Plan_Writer
+#graphify/rationale #graphify/EXTRACTED #community/Edit_Plan

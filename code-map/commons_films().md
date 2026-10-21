@@ -1,22 +1,22 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/footage.py"
 type: "code"
-community: "Wikipedia & Wikimedia Research"
-location: "L1874"
+community: "Commons & Archive Sources"
+location: "L85"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Wikipedia__Wikimedia_Research
+  - community/Commons__Archive_Sources
 ---
 
 # commons_films()
 
 ## Connections
 - [[Videos on Wikimedia Commons, as their 480p-720p WebM transcodes (seekable).]] - `rationale_for` [EXTRACTED]
-- [[gather_pool()]] - `indirect_call` [INFERRED]
-- [[make_shorts.py]] - `contains` [EXTRACTED]
+- [[footage.py]] - `contains` [EXTRACTED]
+- [[json]] - `calls` [EXTRACTED]
 - [[on_topic()]] - `calls` [EXTRACTED]
 - [[usable_license()]] - `calls` [EXTRACTED]
 - [[wm_get()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Wikipedia__Wikimedia_Research
+#graphify/code #graphify/EXTRACTED #community/Commons__Archive_Sources

@@ -1,12 +1,12 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/audio_mix.py"
 type: "code"
-community: "Shared Imports & Downloads"
-location: "L2745"
+community: "Captions & TTS"
+location: "L81"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Shared_Imports__Downloads
+  - community/Captions__TTS
 ---
 
 # styled()
@@ -15,4 +15,4 @@ tags:
 - [[ass_colour()]] - `calls` [EXTRACTED]
 - [[captions()_1]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Shared_Imports__Downloads
+#graphify/code #graphify/EXTRACTED #community/Captions__TTS

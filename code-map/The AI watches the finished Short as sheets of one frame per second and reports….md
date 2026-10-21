@@ -1,12 +1,12 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/review.py"
 type: "rationale"
-community: "Quality Checks & Captions"
-location: "L3249"
+community: "Visual Review Sheets"
+location: "L44"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Quality_Checks__Captions
+  - community/Visual_Review_Sheets
 ---
 
 # The AI watches the finished Short as sheets of one frame per second and reports…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[visual_review()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Quality_Checks__Captions
+#graphify/rationale #graphify/EXTRACTED #community/Visual_Review_Sheets

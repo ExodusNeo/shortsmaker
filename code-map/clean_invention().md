@@ -1,12 +1,12 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/plan_rules.py"
 type: "code"
-community: "Style Plan Validation"
-location: "L1313"
+community: "Invention Validation"
+location: "L187"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Style_Plan_Validation
+  - community/Invention_Validation
 ---
 
 # clean_invention()
@@ -14,8 +14,8 @@ tags:
 ## Connections
 - [[A planned invention {title, brief, fallback library name of that…]] - `rationale_for` [EXTRACTED]
 - [[clean_look()]] - `calls` [EXTRACTED]
-- [[make_shorts.py]] - `contains` [EXTRACTED]
+- [[plan_rules.py]] - `contains` [EXTRACTED]
 - [[settle_style()]] - `calls` [EXTRACTED]
 - [[style_library()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Style_Plan_Validation
+#graphify/code #graphify/EXTRACTED #community/Invention_Validation

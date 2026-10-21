@@ -1,12 +1,12 @@
 ---
 source_file: "tests/guarded.test.ts"
 type: "code"
-community: "Full-Screen Motion Graphics"
+community: "Guarded Layout (cards, arrows)"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Full-Screen_Motion_Graphics
+  - community/Guarded_Layout_cards_arrows
 ---
 
 # guarded.test.ts
@@ -23,9 +23,9 @@ tags:
 - [[layoutColumn()]] - `imports` [EXTRACTED]
 - [[layoutGrid()]] - `imports` [EXTRACTED]
 - [[layoutRow()]] - `imports` [EXTRACTED]
-- [[ok()]] - `contains` [EXTRACTED]
+- [[ok()_1]] - `contains` [EXTRACTED]
 - [[routeArrow()]] - `imports` [EXTRACTED]
-- [[test()]] - `contains` [EXTRACTED]
+- [[test()_1]] - `contains` [EXTRACTED]
 - [[travel()]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Full-Screen_Motion_Graphics
+#graphify/code #graphify/EXTRACTED #community/Guarded_Layout_cards_arrows

@@ -1,12 +1,12 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/gpu.py"
 type: "rationale"
-community: "Voice Pipeline (VoiceStudio)"
-location: "L4406"
+community: "Footage Downloads & Crops"
+location: "L92"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Voice_Pipeline_VoiceStudio
+  - community/Footage_Downloads__Crops
 ---
 
 # VoiceStudio's backend answers, starting the app (and waiting up to 2 min) if it…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[voicestudio_up()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Voice_Pipeline_VoiceStudio
+#graphify/rationale #graphify/EXTRACTED #community/Footage_Downloads__Crops

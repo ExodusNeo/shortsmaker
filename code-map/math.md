@@ -1,16 +1,19 @@
 ---
 source_file: ""
 type: "concept"
-community: "Shared Imports & Downloads"
+community: "SFX Synthesis"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Shared_Imports__Downloads
+  - community/SFX_Synthesis
 ---
 
 # math
 
 ## Connections
-- [[make_shorts.py]] - `imports` [EXTRACTED]
+- [[audio_mix.py]] - `imports` [EXTRACTED]
+- [[flash_alpha()]] - `calls` [EXTRACTED]
+- [[frame_render.py]] - `imports` [EXTRACTED]
+- [[make_sfx()]] - `calls` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Shared_Imports__Downloads
+#graphify/concept #graphify/EXTRACTED #community/SFX_Synthesis

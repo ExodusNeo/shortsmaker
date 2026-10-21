@@ -1,22 +1,22 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/style_lab.py"
 type: "code"
-community: "Remotion Render Prep"
-location: "L3880"
+community: "Style Lab & Edit Plan Text"
+location: "L222"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Remotion_Render_Prep
+  - community/Style_Lab__Edit_Plan_Text
 ---
 
 # invent_styles()
 
 ## Connections
 - [[Codes this Short's inventions (look  transition  overlay) into their slots; a…]] - `rationale_for` [EXTRACTED]
-- [[Path]] - `references` [EXTRACTED]
+- [[Path_16]] - `references` [EXTRACTED]
 - [[invent_component()]] - `calls` [EXTRACTED]
-- [[make_shorts.py]] - `contains` [EXTRACTED]
 - [[render_remotion()]] - `calls` [EXTRACTED]
+- [[style_lab.py]] - `contains` [EXTRACTED]
 - [[swap_inventions()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Remotion_Render_Prep
+#graphify/code #graphify/EXTRACTED #community/Style_Lab__Edit_Plan_Text

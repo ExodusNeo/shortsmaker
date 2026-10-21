@@ -1,21 +1,21 @@
 ---
-source_file: "local_ai/gen.py"
+source_file: "tests/render_full.py"
 type: "code"
-community: "Local GPU Workers"
-location: "L200"
+community: "Motion Previews & Render Tests"
+location: "L28"
 tags:
   - graphify/code
-  - graphify/INFERRED
-  - community/Local_GPU_Workers
+  - graphify/EXTRACTED
+  - community/Motion_Previews__Render_Tests
 ---
 
 # main()
 
 ## Connections
-- [[gen.py]] - `contains` [EXTRACTED]
-- [[images()]] - `indirect_call` [INFERRED]
-- [[parallax()]] - `indirect_call` [INFERRED]
-- [[tts()_1]] - `indirect_call` [INFERRED]
-- [[video()]] - `indirect_call` [INFERRED]
+- [[json]] - `calls` [EXTRACTED]
+- [[props_for()]] - `calls` [EXTRACTED]
+- [[render_full.py]] - `contains` [EXTRACTED]
+- [[shutil]] - `calls` [EXTRACTED]
+- [[subprocess]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/Local_GPU_Workers
+#graphify/code #graphify/EXTRACTED #community/Motion_Previews__Render_Tests

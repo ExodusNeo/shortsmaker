@@ -1,12 +1,12 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/channel_profiles.py"
 type: "code"
-community: "Run Menu & Channel Setup"
-location: "L334"
+community: "Entry Point, Logbook & Sounds"
+location: "L54"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Run_Menu__Channel_Setup
+  - community/Entry_Point_Logbook__Sounds
 ---
 
 # ask_number()
@@ -14,8 +14,8 @@ tags:
 ## Connections
 - [[Ask for a number 1..n (Enter = default, when there is one).]] - `rationale_for` [EXTRACTED]
 - [[ask_brain()]] - `calls` [EXTRACTED]
+- [[channel_profiles.py]] - `contains` [EXTRACTED]
 - [[fix_short()]] - `calls` [EXTRACTED]
 - [[library_menu()]] - `calls` [EXTRACTED]
-- [[make_shorts.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Run_Menu__Channel_Setup
+#graphify/code #graphify/EXTRACTED #community/Entry_Point_Logbook__Sounds

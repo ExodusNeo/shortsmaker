@@ -1,12 +1,12 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/gpu.py"
 type: "code"
-community: "Voice Pipeline (VoiceStudio)"
-location: "L4407"
+community: "Footage Downloads & Crops"
+location: "L93"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Voice_Pipeline_VoiceStudio
+  - community/Footage_Downloads__Crops
 ---
 
 # up()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[voicestudio_up()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Voice_Pipeline_VoiceStudio
+#graphify/code #graphify/EXTRACTED #community/Footage_Downloads__Crops

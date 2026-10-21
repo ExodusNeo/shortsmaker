@@ -1,12 +1,12 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/plan_rules.py"
 type: "code"
-community: "Spoken-Word Cue Timing"
-location: "L1469"
+community: "Scene Cues & Word Timing"
+location: "L343"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Spoken-Word_Cue_Timing
+  - community/Scene_Cues__Word_Timing
 ---
 
 # squeeze()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[full_cues()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Spoken-Word_Cue_Timing
+#graphify/code #graphify/EXTRACTED #community/Scene_Cues__Word_Timing

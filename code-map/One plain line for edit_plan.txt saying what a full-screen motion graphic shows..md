@@ -1,8 +1,8 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/motion.py"
 type: "rationale"
 community: "Full-Scene Props"
-location: "L3439"
+location: "L21"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED

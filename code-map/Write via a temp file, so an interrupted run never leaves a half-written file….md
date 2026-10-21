@@ -1,12 +1,12 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/media_tools.py"
 type: "rationale"
-community: "Picture List & Contact Sheets"
-location: "L2169"
+community: "Pool Storage & Contact Sheets"
+location: "L18"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Picture_List__Contact_Sheets
+  - community/Pool_Storage__Contact_Sheets
 ---
 
 # Write via a temp file, so an interrupted run never leaves a half-written file…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[write_json()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Picture_List__Contact_Sheets
+#graphify/rationale #graphify/EXTRACTED #community/Pool_Storage__Contact_Sheets

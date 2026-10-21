@@ -1,12 +1,12 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/style_lab.py"
 type: "rationale"
-community: "Style Invention Coding"
-location: "L3789"
+community: "Style Lab & Edit Plan Text"
+location: "L131"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Style_Invention_Coding
+  - community/Style_Lab__Edit_Plan_Text
 ---
 
 # The code from an AI reply (code fences removed); None unless it exports the…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[clean_style_code()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Style_Invention_Coding
+#graphify/rationale #graphify/EXTRACTED #community/Style_Lab__Edit_Plan_Text

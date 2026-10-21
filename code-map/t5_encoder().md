@@ -1,12 +1,12 @@
 ---
 source_file: "local_ai/gen.py"
 type: "code"
-community: "Local GPU Workers"
+community: "GPU Worker (gen.py)"
 location: "L72"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Local_GPU_Workers
+  - community/GPU_Worker_genpy
 ---
 
 # t5_encoder()
@@ -16,4 +16,4 @@ tags:
 - [[gen.py]] - `contains` [EXTRACTED]
 - [[video()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Local_GPU_Workers
+#graphify/code #graphify/EXTRACTED #community/GPU_Worker_genpy

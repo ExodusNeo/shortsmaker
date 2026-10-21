@@ -1,12 +1,12 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/media_tools.py"
 type: "code"
-community: "AI Video Clips & Encoding"
-location: "L2701"
+community: "Local AI Jobs & Clips"
+location: "L29"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AI_Video_Clips__Encoding
+  - community/Local_AI_Jobs__Clips
 ---
 
 # video_encoder()
@@ -14,8 +14,9 @@ tags:
 ## Connections
 - [[Final H.264 encode NVENC on the GPU when available (frees the CPU), else x264.]] - `rationale_for` [EXTRACTED]
 - [[local_clips()]] - `calls` [EXTRACTED]
-- [[make_shorts.py]] - `contains` [EXTRACTED]
+- [[media_tools.py]] - `contains` [EXTRACTED]
 - [[render()_2]] - `calls` [EXTRACTED]
+- [[subprocess]] - `calls` [EXTRACTED]
 - [[veo_handoff()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AI_Video_Clips__Encoding
+#graphify/code #graphify/EXTRACTED #community/Local_AI_Jobs__Clips

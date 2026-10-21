@@ -1,12 +1,12 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/plan_rules.py"
 type: "rationale"
-community: "Motion Graphic Limits"
-location: "L1354"
+community: "Full-Scene Limits & Director Tests"
+location: "L228"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Motion_Graphic_Limits
+  - community/Full-Scene_Limits__Director_Tests
 ---
 
 # Never scene 1 (real footage keeps the hook), never two in a row, never a scene…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[limit_full()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Motion_Graphic_Limits
+#graphify/rationale #graphify/EXTRACTED #community/Full-Scene_Limits__Director_Tests

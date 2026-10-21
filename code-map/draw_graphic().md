@@ -1,8 +1,8 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/frame_render.py"
 type: "code"
 community: "Python Frame Renderer"
-location: "L3029"
+location: "L123"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -13,8 +13,8 @@ tags:
 
 ## Connections
 - [[Animate the callout in, hold it, fade it out before the scene ends.]] - `rationale_for` [EXTRACTED]
-- [[Image]] - `references` [EXTRACTED]
+- [[Image_1]] - `references` [EXTRACTED]
 - [[frame()]] - `calls` [EXTRACTED]
-- [[make_shorts.py]] - `contains` [EXTRACTED]
+- [[frame_render.py]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Python_Frame_Renderer

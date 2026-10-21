@@ -1,12 +1,12 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/writing.py"
 type: "rationale"
-community: "Director Picture Context"
-location: "L903"
+community: "Style Lab & Edit Plan Text"
+location: "L351"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Director_Picture_Context
+  - community/Style_Lab__Edit_Plan_Text
 ---
 
 # The planner plans the edit (footage searches, shots, camera, graphics, person…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[direct_scripts()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Director_Picture_Context
+#graphify/rationale #graphify/EXTRACTED #community/Style_Lab__Edit_Plan_Text

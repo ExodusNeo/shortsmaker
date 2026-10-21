@@ -1,28 +1,18 @@
 ---
-source_file: "make_shorts.py"
+source_file: "tests/test_full_scenes.py"
 type: "code"
-community: "Archive Picture & Film Sources"
-location: "L1578"
+community: "Full-Scene Limits & Director Tests"
+location: "L768"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Archive_Picture__Film_Sources
+  - community/Full-Scene_Limits__Director_Tests
 ---
 
 # fetch()
 
 ## Connections
-- [[archive_films()]] - `calls` [EXTRACTED]
-- [[archive_images()]] - `calls` [EXTRACTED]
-- [[film_frames()]] - `calls` [EXTRACTED]
-- [[get_image()]] - `calls` [EXTRACTED]
-- [[make_shorts.py]] - `contains` [EXTRACTED]
-- [[nasa_films()]] - `calls` [EXTRACTED]
-- [[nasa_search()]] - `calls` [EXTRACTED]
-- [[ov_get()]] - `calls` [EXTRACTED]
-- [[pixabay_films()]] - `calls` [EXTRACTED]
-- [[search_suggestions()]] - `calls` [EXTRACTED]
-- [[story_sound()]] - `calls` [EXTRACTED]
-- [[wm_get()]] - `calls` [EXTRACTED]
+- [[_tone_wav()]] - `calls` [EXTRACTED]
+- [[test_story_sound_library()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/Archive_Picture__Film_Sources
+#graphify/code #graphify/EXTRACTED #community/Full-Scene_Limits__Director_Tests

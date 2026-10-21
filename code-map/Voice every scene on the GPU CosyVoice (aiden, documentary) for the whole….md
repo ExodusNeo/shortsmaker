@@ -1,12 +1,12 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/gpu.py"
 type: "rationale"
-community: "Voice Pipeline (VoiceStudio)"
-location: "L4442"
+community: "Local AI Jobs & Clips"
+location: "L128"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Voice_Pipeline_VoiceStudio
+  - community/Local_AI_Jobs__Clips
 ---
 
 # Voice every scene on the GPU: CosyVoice (aiden, documentary) for the whole…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[local_voice()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Voice_Pipeline_VoiceStudio
+#graphify/rationale #graphify/EXTRACTED #community/Local_AI_Jobs__Clips

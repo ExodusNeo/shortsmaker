@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_full_scenes.py"
 type: "code"
-community: "Voice Pipeline (VoiceStudio)"
-location: "L655"
+community: "LTX Crash Retry Test"
+location: "L662"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/Voice_Pipeline_VoiceStudio
+  - community/LTX_Crash_Retry_Test
 ---
 
 # fake_run()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[test_local_job_retries_a_hard_crash()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/INFERRED #community/Voice_Pipeline_VoiceStudio
+#graphify/code #graphify/INFERRED #community/LTX_Crash_Retry_Test

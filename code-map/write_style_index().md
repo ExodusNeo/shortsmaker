@@ -1,12 +1,12 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/style_lab.py"
 type: "code"
-community: "Style Library Approval"
-location: "L496"
+community: "Style Lab & Edit Plan Text"
+location: "L19"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Style_Library_Approval
+  - community/Style_Lab__Edit_Plan_Text
 ---
 
 # write_style_index()
@@ -14,8 +14,9 @@ tags:
 ## Connections
 - [[Regenerates remotionsrcstyleindex.ts from library.json Remotion's bundle…]] - `rationale_for` [EXTRACTED]
 - [[approve_candidate()]] - `calls` [EXTRACTED]
-- [[make_shorts.py]] - `contains` [EXTRACTED]
+- [[json]] - `calls` [EXTRACTED]
+- [[style_lab.py]] - `contains` [EXTRACTED]
 - [[style_library()]] - `calls` [EXTRACTED]
 - [[test_write_style_index_is_deterministic()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Style_Library_Approval
+#graphify/code #graphify/EXTRACTED #community/Style_Lab__Edit_Plan_Text

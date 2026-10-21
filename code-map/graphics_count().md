@@ -1,18 +1,18 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/motion.py"
 type: "code"
-community: "Quality Checks & Captions"
-location: "L3433"
+community: "Story Sounds & Credits"
+location: "L15"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Quality_Checks__Captions
+  - community/Story_Sounds__Credits
 ---
 
 # graphics_count()
 
 ## Connections
-- [[make_shorts.py]] - `contains` [EXTRACTED]
+- [[motion.py]] - `contains` [EXTRACTED]
 - [[render()_2]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Quality_Checks__Captions
+#graphify/code #graphify/EXTRACTED #community/Story_Sounds__Credits

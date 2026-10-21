@@ -1,12 +1,12 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/image_sources.py"
 type: "code"
-community: "Wikipedia & Wikimedia Research"
-location: "L1665"
+community: "Commons & Archive Sources"
+location: "L98"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Wikipedia__Wikimedia_Research
+  - community/Commons__Archive_Sources
 ---
 
 # wm_files()
@@ -15,10 +15,10 @@ tags:
 - [[Usable images from a WikimediaWikipedia API query photos, screenshots,…]] - `rationale_for` [EXTRACTED]
 - [[article_images()]] - `calls` [EXTRACTED]
 - [[commons_search()]] - `calls` [EXTRACTED]
-- [[make_shorts.py]] - `contains` [EXTRACTED]
+- [[image_sources.py]] - `contains` [EXTRACTED]
 - [[thumb_url()]] - `calls` [EXTRACTED]
 - [[usable_license()]] - `calls` [EXTRACTED]
 - [[wm_get()]] - `calls` [EXTRACTED]
 - [[words_of()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Wikipedia__Wikimedia_Research
+#graphify/code #graphify/EXTRACTED #community/Commons__Archive_Sources

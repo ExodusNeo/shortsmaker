@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_pictures_first.py"
 type: "rationale"
-community: "Usable Picture Catalog"
+community: "Picture List Catalog"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Usable_Picture_Catalog
+  - community/Picture_List_Catalog
 ---
 
 # Tests for pictures-first planning (gather the pool, the AI picture list, topic…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[test_pictures_first.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Usable_Picture_Catalog
+#graphify/rationale #graphify/EXTRACTED #community/Picture_List_Catalog

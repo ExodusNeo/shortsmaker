@@ -1,12 +1,12 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/picker.py"
 type: "code"
-community: "Callout & Sound Validation"
-location: "L2531"
+community: "Full-Scene Rescue & Plan Cleaning"
+location: "L225"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Callout__Sound_Validation
+  - community/Full-Scene_Rescue__Plan_Cleaning
 ---
 
 # rescue_graphics()
@@ -18,9 +18,10 @@ tags:
 - [[ask_ai()]] - `calls` [EXTRACTED]
 - [[clean_full()]] - `calls` [EXTRACTED]
 - [[fix_short()]] - `calls` [EXTRACTED]
-- [[make_shorts.py]] - `contains` [EXTRACTED]
+- [[json]] - `calls` [EXTRACTED]
+- [[picker.py]] - `contains` [EXTRACTED]
 - [[render()_2]] - `calls` [EXTRACTED]
 - [[test_rescue_respects_caps()]] - `calls` [EXTRACTED]
 - [[words_of()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Callout__Sound_Validation
+#graphify/code #graphify/EXTRACTED #community/Full-Scene_Rescue__Plan_Cleaning

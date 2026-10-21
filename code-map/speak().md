@@ -1,21 +1,17 @@
 ---
-source_file: "make_shorts.py"
+source_file: "local_ai/qwen_voice.py"
 type: "code"
-community: "State & Logbook Helpers"
-location: "L2657"
+community: "Voice Worker (qwen_voice)"
+location: "L58"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/State__Logbook_Helpers
+  - community/Voice_Worker_qwen_voice
 ---
 
 # speak()
 
 ## Connections
-- [[Path]] - `references` [EXTRACTED]
-- [[TTS with retries Microsoft's free Edge voice service drops a request now and…]] - `rationale_for` [EXTRACTED]
-- [[make_shorts.py]] - `contains` [EXTRACTED]
-- [[render()_2]] - `calls` [EXTRACTED]
-- [[tts()]] - `calls` [EXTRACTED]
+- [[qwen_voice.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/State__Logbook_Helpers
+#graphify/code #graphify/EXTRACTED #community/Voice_Worker_qwen_voice

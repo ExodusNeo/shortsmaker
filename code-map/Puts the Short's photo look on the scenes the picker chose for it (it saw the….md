@@ -1,12 +1,12 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/style_lab.py"
 type: "rationale"
-community: "Look Scene Picking"
-location: "L2469"
+community: "Look Scenes"
+location: "L48"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Look_Scene_Picking
+  - community/Look_Scenes
 ---
 
 # Puts the Short's photo look on the scenes the picker chose for it (it saw the…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[apply_look_scenes()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Look_Scene_Picking
+#graphify/rationale #graphify/EXTRACTED #community/Look_Scenes

@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_pictures_first.py"
 type: "code"
-community: "Edit Plan Writer"
-location: "L383"
+community: "Edit Plan"
+location: "L387"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Edit_Plan_Writer
+  - community/Edit_Plan
 ---
 
 # test_edit_plan_picture_line()
@@ -15,4 +15,4 @@ tags:
 - [[picture_line()]] - `calls` [EXTRACTED]
 - [[test_pictures_first.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Edit_Plan_Writer
+#graphify/code #graphify/EXTRACTED #community/Edit_Plan

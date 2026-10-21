@@ -1,12 +1,12 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/plan_rules.py"
 type: "rationale"
-community: "Spoken-Word Cue Timing"
-location: "L1451"
+community: "Scene Cues & Word Timing"
+location: "L325"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Spoken-Word_Cue_Timing
+  - community/Scene_Cues__Word_Timing
 ---
 
 # Start time of the first time `phrase` is spoken, from TTS word timings.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[spoken_at()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Spoken-Word_Cue_Timing
+#graphify/rationale #graphify/EXTRACTED #community/Scene_Cues__Word_Timing

@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/style/looks/Miniature.tsx"
 type: "code"
-community: "Style Library Looks & Transitions"
+community: "Style Library Inventions (TS)"
 location: "L9"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Style_Library_Looks__Transitions
+  - community/Style_Library_Inventions_TS
 ---
 
 # draw()
@@ -16,4 +16,4 @@ tags:
 - [[Miniature.tsx]] - `contains` [EXTRACTED]
 - [[drawCover()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Style_Library_Looks__Transitions
+#graphify/code #graphify/EXTRACTED #community/Style_Library_Inventions_TS

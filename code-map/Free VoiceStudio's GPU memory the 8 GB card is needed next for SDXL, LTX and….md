@@ -1,12 +1,12 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/gpu.py"
 type: "rationale"
-community: "Voice Pipeline (VoiceStudio)"
-location: "L4427"
+community: "Style Lab & Edit Plan Text"
+location: "L113"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Voice_Pipeline_VoiceStudio
+  - community/Style_Lab__Edit_Plan_Text
 ---
 
 # Free VoiceStudio's GPU memory: the 8 GB card is needed next for SDXL, LTX and…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[voicestudio_unload()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Voice_Pipeline_VoiceStudio
+#graphify/rationale #graphify/EXTRACTED #community/Style_Lab__Edit_Plan_Text

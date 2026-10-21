@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_pictures_first.py"
 type: "code"
-community: "Picture List & Contact Sheets"
-location: "L439"
+community: "Picture List Catalog"
+location: "L443"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Picture_List__Contact_Sheets
+  - community/Picture_List_Catalog
 ---
 
 # test_seo_pass_empty_no_ai()
@@ -16,4 +16,4 @@ tags:
 - [[seo_pass()]] - `calls` [EXTRACTED]
 - [[test_pictures_first.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Picture_List__Contact_Sheets
+#graphify/code #graphify/EXTRACTED #community/Picture_List_Catalog

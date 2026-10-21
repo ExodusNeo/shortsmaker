@@ -1,20 +1,20 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/picture_pool.py"
 type: "code"
-community: "Pictures-First Pool"
-location: "L2175"
+community: "Pool Storage & Contact Sheets"
+location: "L170"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pictures-First_Pool
+  - community/Pool_Storage__Contact_Sheets
 ---
 
 # save_pool()
 
 ## Connections
-- [[Path]] - `references` [EXTRACTED]
-- [[make_shorts.py]] - `contains` [EXTRACTED]
+- [[Path_6]] - `references` [EXTRACTED]
 - [[pic_short()]] - `calls` [EXTRACTED]
+- [[picture_pool.py]] - `contains` [EXTRACTED]
 - [[planned_short()]] - `calls` [EXTRACTED]
 - [[pool.json (the candidates without bytes) + thumbk.jpg; list positions are the…]] - `rationale_for` [EXTRACTED]
 - [[prepare_topic()]] - `calls` [EXTRACTED]
@@ -26,4 +26,4 @@ tags:
 - [[test_prompts_carry_picture_list()]] - `calls` [EXTRACTED]
 - [[write_json()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pictures-First_Pool
+#graphify/code #graphify/EXTRACTED #community/Pool_Storage__Contact_Sheets

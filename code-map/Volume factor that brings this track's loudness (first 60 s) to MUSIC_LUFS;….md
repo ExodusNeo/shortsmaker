@@ -1,12 +1,12 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/audio_mix.py"
 type: "rationale"
-community: "Music Loudness"
-location: "L4746"
+community: "Music & Freesound"
+location: "L366"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Music_Loudness
+  - community/Music__Freesound
 ---
 
 # Volume factor that brings this track's loudness (first 60 s) to MUSIC_LUFS;…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[music_gain()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Music_Loudness
+#graphify/rationale #graphify/EXTRACTED #community/Music__Freesound

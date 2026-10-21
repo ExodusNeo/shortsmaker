@@ -1,12 +1,12 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/audio_mix.py"
 type: "rationale"
-community: "Motion Graphics Tests"
-location: "L3343"
+community: "SFX Events & Full Pictures"
+location: "L269"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Motion_Graphics_Tests
+  - community/SFX_Events__Full_Pictures
 ---
 
 # Sound design: each timed visual gets a matching sound. Candidates are kept by…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[sfx_events()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Motion_Graphics_Tests
+#graphify/rationale #graphify/EXTRACTED #community/SFX_Events__Full_Pictures

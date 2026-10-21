@@ -1,21 +1,23 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/plan_rules.py"
 type: "code"
-community: "AI Planner Calls & Quota"
-location: "L1369"
+community: "AI Calls & Quota Fallback"
+location: "L243"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AI_Planner_Calls__Quota
+  - community/AI_Calls__Quota_Fallback
 ---
 
 # mark_details()
 
 ## Connections
 - [[Let Claude circle (or point an arrow at) a detail in up to 2 chosen pictures.…]] - `rationale_for` [EXTRACTED]
-- [[Path]] - `references` [EXTRACTED]
+- [[Path_19]] - `references` [EXTRACTED]
 - [[ask_ai()]] - `calls` [EXTRACTED]
-- [[make_shorts.py]] - `contains` [EXTRACTED]
+- [[io]] - `calls` [EXTRACTED]
+- [[plan_rules.py]] - `contains` [EXTRACTED]
+- [[re]] - `calls` [EXTRACTED]
 - [[render()_2]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AI_Planner_Calls__Quota
+#graphify/code #graphify/EXTRACTED #community/AI_Calls__Quota_Fallback

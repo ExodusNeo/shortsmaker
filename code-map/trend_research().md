@@ -1,24 +1,26 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/channel_profiles.py"
 type: "code"
-community: "YouTube Trend Research"
-location: "L426"
+community: "YouTube Research"
+location: "L143"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/YouTube_Trend_Research
+  - community/YouTube_Research
 ---
 
 # trend_research()
 
 ## Connections
 - [[What's working in the niche right now recent Shorts from channels that are…]] - `rationale_for` [EXTRACTED]
+- [[channel_profiles.py]] - `contains` [EXTRACTED]
 - [[channel_url()]] - `calls` [EXTRACTED]
-- [[make_shorts.py]] - `contains` [EXTRACTED]
+- [[json]] - `calls` [EXTRACTED]
 - [[save_channel()]] - `calls` [EXTRACTED]
 - [[seed_ideas()]] - `calls` [EXTRACTED]
 - [[seo_pass()]] - `calls` [EXTRACTED]
+- [[time]] - `calls` [EXTRACTED]
 - [[write_scripts()]] - `calls` [EXTRACTED]
 - [[yt_list()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/YouTube_Trend_Research
+#graphify/code #graphify/EXTRACTED #community/YouTube_Research

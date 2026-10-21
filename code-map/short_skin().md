@@ -1,20 +1,21 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/config.py"
 type: "code"
-community: "Remotion Render Prep"
-location: "L128"
+community: "Skins & Remotion Render"
+location: "L99"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Remotion_Render_Prep
+  - community/Skins__Remotion_Render
 ---
 
 # short_skin()
 
 ## Connections
 - [[Visual skin for a Short's full-screen motion graphics (parchment, blueprint,…]] - `rationale_for` [EXTRACTED]
-- [[make_shorts.py]] - `contains` [EXTRACTED]
+- [[config.py]] - `contains` [EXTRACTED]
+- [[remotion_render.py]] - `imports` [EXTRACTED]
 - [[render_remotion()]] - `calls` [EXTRACTED]
 - [[test_clean_full_custom_and_skin()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Remotion_Render_Prep
+#graphify/code #graphify/EXTRACTED #community/Skins__Remotion_Render

@@ -1,12 +1,12 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/motion.py"
 type: "code"
-community: "TypeScript Checks"
-location: "L3718"
+community: "Motion Previews & Render Tests"
+location: "L308"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/TypeScript_Checks
+  - community/Motion_Previews__Render_Tests
 ---
 
 # tsc_check()
@@ -14,9 +14,10 @@ tags:
 ## Connections
 - [[Type-checks the Remotion project; None when it compiles, else the compiler's…]] - `rationale_for` [EXTRACTED]
 - [[approve_candidate()]] - `calls` [EXTRACTED]
-- [[attempt()]] - `calls` [EXTRACTED]
 - [[code_custom_scenes()]] - `calls` [EXTRACTED]
-- [[make_shorts.py]] - `contains` [EXTRACTED]
+- [[motion.py]] - `contains` [EXTRACTED]
 - [[redraw_custom()]] - `calls` [EXTRACTED]
+- [[shutil]] - `calls` [EXTRACTED]
+- [[subprocess]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/TypeScript_Checks
+#graphify/code #graphify/EXTRACTED #community/Motion_Previews__Render_Tests

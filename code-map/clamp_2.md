@@ -1,17 +1,17 @@
 ---
-source_file: "remotion/src/full/Document.tsx"
+source_file: "remotion/src/Extras.tsx"
 type: "code"
-community: "Full-Screen Motion Graphics"
+community: "Remotion Short Composition"
 location: "L5"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Full-Screen_Motion_Graphics
+  - community/Remotion_Short_Composition
 ---
 
 # clamp
 
 ## Connections
-- [[Document.tsx]] - `contains` [EXTRACTED]
+- [[Extras.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Full-Screen_Motion_Graphics
+#graphify/code #graphify/EXTRACTED #community/Remotion_Short_Composition

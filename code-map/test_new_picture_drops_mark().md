@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_full_scenes.py"
 type: "code"
-community: "Repaint & Scene Swap"
-location: "L557"
+community: "fix.bat Picture Swaps"
+location: "L564"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Repaint__Scene_Swap
+  - community/fixbat_Picture_Swaps
 ---
 
 # test_new_picture_drops_mark()
@@ -17,4 +17,4 @@ tags:
 - [[test_full_scenes.py]] - `contains` [EXTRACTED]
 - [[use_picture_from()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Repaint__Scene_Swap
+#graphify/code #graphify/EXTRACTED #community/fixbat_Picture_Swaps

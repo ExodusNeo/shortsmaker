@@ -1,21 +1,23 @@
 ---
-source_file: "make_shorts.py"
+source_file: "shortsmaker/review.py"
 type: "code"
-community: "Quality Checks & Captions"
-location: "L3325"
+community: "Visual Review Sheets"
+location: "L120"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Quality_Checks__Captions
+  - community/Visual_Review_Sheets
 ---
 
 # storyboard()
 
 ## Connections
 - [[One mid-scene frame per scene from the finished video, labeled with its…]] - `rationale_for` [EXTRACTED]
-- [[Path]] - `references` [EXTRACTED]
+- [[Path_10]] - `references` [EXTRACTED]
 - [[clock()]] - `calls` [EXTRACTED]
-- [[make_shorts.py]] - `contains` [EXTRACTED]
+- [[io]] - `calls` [EXTRACTED]
 - [[render()_2]] - `calls` [EXTRACTED]
+- [[review.py]] - `contains` [EXTRACTED]
+- [[subprocess]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Quality_Checks__Captions
+#graphify/code #graphify/EXTRACTED #community/Visual_Review_Sheets

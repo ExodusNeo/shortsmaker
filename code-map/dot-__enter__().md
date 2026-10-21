@@ -1,18 +1,19 @@
 ---
 source_file: "tests/test_pictures_first.py"
 type: "code"
-community: "Picture List & Contact Sheets"
-location: "L110"
+community: "Pool Gathering"
+location: "L333"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Picture_List__Contact_Sheets
+  - community/Pool_Gathering
 ---
 
 # .__enter__()
 
 ## Connections
-- [[fake_ai]] - `method` [EXTRACTED]
-- [[reply()]] - `calls` [EXTRACTED]
+- [[fake_ai]] - `calls` [EXTRACTED]
+- [[picking]] - `method` [EXTRACTED]
+- [[stubbed]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Picture_List__Contact_Sheets
+#graphify/code #graphify/EXTRACTED #community/Pool_Gathering
