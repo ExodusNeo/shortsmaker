@@ -2,6 +2,7 @@
 
 Usage (from D:\\ShortsMaker, with the project venv):
     python tools/split_make_shorts.py split      write shortsmaker/*.py + the new make_shorts.py, then prove them
+                                                 (refuses if shortsmaker/ exists; --force regenerates it from baseline)
     python tools/split_make_shorts.py tests      point the tests' `m.name` at the owning module
     python tools/split_make_shorts.py selftest   check the rewriter on a toy file
 
@@ -480,6 +481,9 @@ def original(path: str = "make_shorts.py") -> str:
 
 
 def split() -> None:
+    if PKG.exists() and "--force" not in sys.argv:  # the package is edited by hand after the split
+        raise SystemExit(f"{PKG} already exists: re-splitting would overwrite every edit made since. "
+                         "Pass --force only to regenerate it from the baseline on purpose.")
     src = original()
     mods = split_source(src, RANGES, OVERRIDES, SESSION, LINE_OVERRIDES, fix_root=True, continued=CONTINUED)
     tests = [original(f"tests/{f}") for f in TEST_FILES]  # as they were: the rewritten ones use the module names
@@ -596,6 +600,15 @@ def selftest() -> None:
     broken = dict(mods, writing=mods["writing"].replace("llm.ask()", "llm.asked()"))
     assert any("undefined" in p for p in prove(TOY, broken, [(4, 10, "config"), (11, 17, "llm"), (18, 99, "writing")],
                                                 {}, {"BRAIN"}, {})), "a broken reference must be caught"
+    global PKG
+    saved, PKG = PKG, Path(__file__)  # an existing path: the package is already there
+    try:
+        split()
+        raise AssertionError("split must refuse to overwrite an existing shortsmaker/")
+    except SystemExit as e:
+        assert "already exists" in str(e), e
+    finally:
+        PKG = saved
     print("selftest OK")
 
 
