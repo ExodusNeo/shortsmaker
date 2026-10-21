@@ -35,7 +35,7 @@ def test_session_shared():
 
 def test_fake_reaches_callers():
     gen = config.REMOTION / "src" / "full" / "generated" / "Custom0.tsx"
-    saved, old_ask, calls = gen.read_text(encoding="utf-8"), llm.ask_ai, []
+    saved, old_ask, calls = gen.read_bytes(), llm.ask_ai, []  # bytes: put it back exactly (git sees CRLF changes)
     llm.ask_ai = lambda prompt, fatal=True, read_dir=None, brain=None: calls.append(prompt) or {"code": None}
     try:
         with tempfile.TemporaryDirectory() as d:
@@ -48,7 +48,7 @@ def test_fake_reaches_callers():
             assert "THREE STEP CHAIN" in (Path(d) / "Custom0.tsx").read_text(encoding="utf-8")  # the fallback scene
     finally:
         llm.ask_ai = old_ask
-        gen.write_text(saved, encoding="utf-8")
+        gen.write_bytes(saved)
 
 
 def test_entry_point():
