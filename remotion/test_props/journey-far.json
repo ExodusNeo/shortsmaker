@@ -1,0 +1,3 @@
+{"total": 6, "narration": "The ship left London, stopped at Cape Town, and reached Sydney months later.",
+ "scenes": [{"start": 0, "end": 6, "full": {"type": "journey", "seed": 5,
+  "stops": [{"name": "London", "lat": 51.51, "lon": -0.13, "at": 1.2}, {"name": "Cape Town", "lat": -33.92, "lon": 18.42, "at": 2.6}, {"name": "Sydney", "lat": -33.87, "lon": 151.21, "at": 4.4}]}}]}

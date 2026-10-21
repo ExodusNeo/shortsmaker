@@ -1,0 +1,4 @@
+{"total": 6, "narration": "Yet the records show two different cats. One photo, two answers.",
+ "scenes": [{"start": 0, "end": 6, "full": {"type": "custom", "slot": 0, "kind": "collage", "skin": "dossier", "seed": 9,
+  "title": "TWO CATS CALLED OSCAR", "cues": [0.5, 2.0, 3.4],
+  "photos": [{"image": "job/jack.jpg", "aspect": 1.556, "label": "SHIP'S CAT, 1941", "at": 0.5}]}}]}

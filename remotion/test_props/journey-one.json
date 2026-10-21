@@ -1,0 +1,2 @@
+{"total": 4, "narration": "It all happened in a small town called Uitenhage.",
+ "scenes": [{"start": 0, "end": 4, "full": {"type": "journey", "seed": 8, "stops": [{"name": "Uitenhage", "lat": -33.76, "lon": 25.40, "at": 2.2}]}}]}

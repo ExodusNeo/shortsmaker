@@ -1,0 +1,31 @@
+---
+source_file: "make_shorts.py"
+type: "code"
+community: "Picture List & Contact Sheets"
+location: "L2204"
+tags:
+  - graphify/code
+  - graphify/EXTRACTED
+  - community/Picture_List__Contact_Sheets
+---
+
+# catalog_pool()
+
+## Connections
+- [[Path]] - `references` [EXTRACTED]
+- [[The picture list the writer, editor and director plan with the AI looks at the…]] - `rationale_for` [EXTRACTED]
+- [[ask_ai()]] - `calls` [EXTRACTED]
+- [[catalog_entries()]] - `calls` [EXTRACTED]
+- [[contact_sheets()]] - `calls` [EXTRACTED]
+- [[make_shorts.py]] - `contains` [EXTRACTED]
+- [[prepare_topic()]] - `calls` [EXTRACTED]
+- [[test_catalog_both_empty_stops_uncached()]] - `calls` [EXTRACTED]
+- [[test_catalog_empty_pool_no_ai()]] - `calls` [EXTRACTED]
+- [[test_catalog_empty_reply_asks_other_ai()]] - `calls` [EXTRACTED]
+- [[test_catalog_failure_stops()]] - `calls` [EXTRACTED]
+- [[test_catalog_junk()]] - `calls` [EXTRACTED]
+- [[test_catalog_redone_when_missing()]] - `calls` [EXTRACTED]
+- [[test_corrupt_pool_and_catalog_redone()]] - `calls` [EXTRACTED]
+- [[write_json()]] - `calls` [EXTRACTED]
+
+#graphify/code #graphify/EXTRACTED #community/Picture_List__Contact_Sheets

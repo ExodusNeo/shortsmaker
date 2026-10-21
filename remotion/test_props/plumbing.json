@@ -1,0 +1,5 @@
+{"total": 6, "narration": "Twenty thousand emus invaded the wheat farms and the army sent three soldiers to stop them",
+ "scenes": [
+  {"image": "job/baboon.jpg", "start": 0, "end": 2, "move": "in", "transition": "fade"},
+  {"image": "job/emu1.jpg", "start": 2, "end": 4, "move": "left", "transition": "fade", "graphic": {"style": "fact", "text": "20,000 EMUS", "at": 2.3}},
+  {"image": "job/emu4.jpg", "start": 4, "end": 6, "move": "out", "transition": "flash"}]}

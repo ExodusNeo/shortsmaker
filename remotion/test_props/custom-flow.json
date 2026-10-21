@@ -1,0 +1,19 @@
+{
+  "total": 5.5,
+  "narration": "San Diego promised Hatfield ten thousand dollars for rain a massive flood hit and he walked away with nothing",
+  "scenes": [
+    {
+      "start": 0,
+      "end": 5.5,
+      "full": {
+        "type": "custom",
+        "slot": 2,
+        "kind": "flow",
+        "skin": "hud",
+        "seed": 3,
+        "title": "THE RAINMAKER LOOPHOLE (1916)",
+        "cues": [0.5, 1.9, 3.3]
+      }
+    }
+  ]
+}

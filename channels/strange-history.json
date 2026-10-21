@@ -1,0 +1,88 @@
+{
+  "niche": "Strange-but-true history: short, surprising stories about real people, places, inventions and events from history, each built around one hook and a twist ending (avoiding graphic violence and anything political)",
+  "channel_name_ideas": [
+    "History Unboxed",
+    "Wait, That Happened?",
+    "Odd Chapters",
+    "The Footnote Files",
+    "Forgotten in Time",
+    "History's Plot Twists"
+  ],
+  "audience": "Curious viewers aged 18 to 45, mainly in the US, UK, Canada and Australia, who like trivia, documentaries and \"I never knew that\" facts and watch Shorts while scrolling",
+  "tone": "Like a friend telling a gripping story: it opens with a hook in the first second, moves fast with short punchy sentences, builds curiosity and ends on a twist or payoff line that makes people rewatch or comment",
+  "voice": "en-US-AndrewNeural",
+  "done_topics": [
+    "The 1911 theft of the Mona Lisa that made it the world's most famous painting",
+    "The 1835 Great Moon Hoax, when a New York newspaper convinced readers that astronomer John Herschel had found life on the Moon",
+    "Victor Lustig, the con man who sold the Eiffel Tower to a scrap metal dealer in 1925 and then came back to try the same scam again",
+    "Violet Jessop, the stewardess who lived through the Olympic crash, the Titanic sinking and the Britannic sinking, all on sister ships",
+    "Lord Byron kept a tame bear at Trinity College, Cambridge in 1807 because the rules only banned dogs, then joked it should sit for a fellowship",
+    "The Cottingley Fairies, the 1917 paper-fairy photos that fooled Arthur Conan Doyle until the cousins confessed in 1983, though Frances insisted one photo was real",
+    "The 1876 Kentucky meat shower, when chunks of raw meat fell from a clear sky in Bath County, most likely vomited up by vultures",
+    "The 1815 eruption of Mount Tambora caused the 1816 Year Without a Summer, which trapped Lord Byron's guests indoors at Villa Diodati and led to Frankenstein and The Vampyre",
+    "Frank Hayes, the stable hand who died of a heart attack mid-race at Belmont Park in 1923 and still won on the long shot Sweet Kiss, becoming the only known jockey to win a race after death",
+    "Timothy Dexter, the 18th-century Massachusetts merchant who said he got rich from joke advice (bed warmers to the Caribbean, coal to Newcastle), then wrote a book with no punctuation and later added a page of punctuation marks so readers could pepper and salt it as they pleased",
+    "The Dancing Plague of 1518, when hundreds of people in Strasbourg danced for weeks and the city's cure was to make them dance even more",
+    "The 1859 Carrington Event, when a solar storm made telegraph wires spark, set off auroras as far south as the Caribbean, and let Boston and Portland operators unplug their batteries and keep sending messages on power from the storm",
+    "Walter Arnold, fined in 1896 for driving 8 mph in a 2 mph zone after a policeman chased him on a bicycle. Months later the speed limit rose to 14 mph, and the London to Brighton run that celebrated it still happens every year",
+    "Annie Edson Taylor, the widowed teacher who in 1901, on her 63rd birthday, became the first person to survive going over Niagara Falls in a barrel. A cat went over first to test it, her manager later ran off with the barrel, and she had told reporters she was in her forties.",
+    "Roy Sullivan, the Shenandoah park ranger hit by lightning seven times between 1942 and 1977. He survived every strike, and after the seventh, while he was fishing, a bear tried to steal his trout and he drove it off with a tree branch",
+    "The 1869 Cardiff Giant hoax, when a fake ten-foot petrified giant fooled America until P.T. Barnum built a fake copy of the fake",
+    "The Great Stink of 1858: London's sewage-filled Thames smelled so bad that Parliament rushed through Joseph Bazalgette's sewer plan in 18 days. They built it to stop the 'bad air' they wrongly blamed for cholera, but the sewers ended London's cholera epidemics anyway by keeping filth out of the drinking water",
+    "Charles Hatfield, the self-taught rainmaker hired by San Diego in 1915 for $10,000 to end a drought, whose January 1916 chemical tower preceded torrential storms that filled Morena Reservoir, caused $3.5 million in flood damage, and left him unpaid when the city demanded he take liability for the lawsuits",
+    "The 1628 sinking of the Swedish warship Vasa, which failed a stability test before launch, sank less than a mile into its maiden voyage after a light gust of wind, and was raised nearly intact 333 years later in 1961",
+    "Wilhelm Voigt, the Captain of Köpenick: on 16 October 1906 a jobless ex-convict shoemaker in a second-hand captain's uniform commandeered about ten real soldiers, took a train to Köpenick, occupied the town hall, had the mayor taken away under guard and seized 4,002 marks (writing a receipt). He was caught ten days later, became a press sensation and was pardoned early by Kaiser Wilhelm II in 1908. His likely goal was a passport, but Köpenick town hall had no passport office",
+    "In 1859 Joshua Norton, a San Francisco businessman ruined by a failed bet on rice, declared himself Emperor of the United States. Instead of laughing him off, the city played along: restaurants fed him for free, shops took the money he printed himself, and about 30,000 people came to his funeral. The twist is that one of his 'crazy' decrees, ordering a bridge across the bay to Oakland, really was built decades later as the Bay Bridge.",
+    "Jack the baboon, who worked as a railway signalman in South Africa in the 1880s. A signalman named James Wide lost both legs and trained his pet chacha baboon to pull the signal levers. A passenger complained, so the railway tested Jack instead of firing him. He passed, was officially hired at 20 cents a day plus half a bottle of beer a week, and worked for nine years without a single mistake.",
+    "Unsinkable Sam, a ship's cat said to have survived three sinkings in 1941: Germany's battleship Bismarck, then HMS Cossack, the British destroyer that picked him up, then the aircraft carrier HMS Ark Royal. After that the Navy sent him to live out his life on land in Belfast. The twist is that historians doubt the story, and the only surviving portrait may show a different cat.",
+    "The 1932 Great Emu War: Australia sent soldiers with machine guns to drive about 20,000 emus off wheat farms in Western Australia, and the birds won. The emus scattered into small groups, soaked up bullets and kept running, so the army pulled out after about a month. The twist is that the commander, Major Meredith, praised the birds, saying an army with their bullet-carrying capacity could face any army in the world.",
+    "Charles Joughin, the Titanic's chief baker, drank whiskey while the ship sank, threw deck chairs overboard for people to float on, then rode the stern down as it went under. He said he stepped off into the freezing Atlantic with his head barely wet and stayed in the water about two hours before he reached an overturned lifeboat and survived. Experts are still not sure whether the alcohol helped him or nearly killed him. The twist is that he later survived a second shipwreck, when the SS Oregon sank off New York in 1946.",
+    "The 1904 St. Louis Olympic marathon, the strangest race in Olympic history: the first man to cross the finish line, Fred Lorz, had ridden about 11 miles of it in a car, and was nearly given the gold medal before he was caught. The twist is that the real winner, Thomas Hicks, was kept going by his trainers with doses of strychnine (rat poison) mixed with brandy, and Cuban mailman Félix Carvajal stopped to eat rotten apples, took a nap mid-race and still finished fourth.",
+    "The Ghost Army of WWII: about 1,100 American artists, designers and sound engineers fooled German forces with inflatable rubber tanks, fake radio chatter and loudspeakers that blasted recorded tank noises, pretending to be whole divisions that weren't there. The twist is that the unit included future fashion icon Bill Blass and painter Ellsworth Kelly, and the whole thing stayed classified for about 50 years, until 1996, so even their families never knew.",
+    "Hiroo Onoda, a Japanese intelligence officer, kept hiding in the jungle of Lubang Island in the Philippines for 29 years because he refused to believe World War II was over. He brushed off leaflets, newspapers and family letters as enemy tricks. The twist is that in 1974 a young Japanese traveller, Norio Suzuki, set out to find 'Lieutenant Onoda, a panda and the Abominable Snowman', in that order, and found him. Even then Onoda would only surrender when his old commander, who was by then a bookseller, flew out and read him his orders in person.",
+    "On 15 January 1919 a giant tank of molasses burst in Boston's North End, sending a sticky wave about 25 feet high through the streets at roughly 35 mph. It flattened buildings and bent elevated railway girders, and rescuers spent days wading through syrup. The twist is that the company blamed anarchist bombers, but a years-long court case found the tank had been badly built and never properly tested; it leaked so much that it was painted brown to hide the leaks. Locals said the North End still smelled of molasses on hot days for decades.",
+    "Wojtek, a Syrian brown bear cub adopted by Polish soldiers in 1942, grew up drinking beer and wrestling his comrades. The army wouldn't let pets onto its transport ship, so he was officially enlisted as a private with a rank and serial number. At Monte Cassino he helped carry heavy ammunition crates. The twist is that he spent his retirement in Edinburgh Zoo, where old Polish veterans climbed into his enclosure to visit and tossed him cigarettes, which he ate.",
+    "In September 1945 Colorado farmer Lloyd Olsen chopped the head off a chicken for dinner, but Mike kept walking, pecking and even trying to crow. The axe had missed his brainstem, so Olsen fed him milk and water with an eyedropper, and Mike toured America as a sideshow star for 18 months, earning a fortune and a spread in Life magazine. The twist is that Mike didn't die of the missing head: he choked one night in a Phoenix motel because his owners had left his feeding syringe at the sideshow."
+  ],
+  "research_seeds": {
+    "handles": [
+      "@TodayIFoundOut",
+      "@Thoughty2",
+      "@HistoryMatters",
+      "@TheHistoryGuyChannel",
+      "@HISTORY",
+      "@Biographics",
+      "@mentalfloss",
+      "@TEDEd",
+      "@SmithsonianChannel",
+      "@SimpleHistory",
+      "@TheInfographicsShow",
+      "@HistoryBypass"
+    ],
+    "queries": [
+      "weird history facts",
+      "strange but true history",
+      "history facts you didn't know",
+      "crazy history stories shorts"
+    ],
+    "dropped": [
+      "@WeirdHistory",
+      "@historyhit",
+      "@UsefulCharts",
+      "@BrightSide"
+    ]
+  },
+  "cta_line": "for more strange history",
+  "recent_shapes": [
+    "mystery solved",
+    "chain of unlikely events",
+    "rise and fall"
+  ],
+  "brain": "claude",
+  "veo": true,
+  "short_form": true,
+  "recent_looks": [
+    "riso",
+    "silent"
+  ]
+}

@@ -1,0 +1,106 @@
+[
+  {
+    "name": "cut",
+    "kind": "transition",
+    "description": "hard cut, the new scene replaces the old one instantly",
+    "fits": "keeping energy up between beats of the same moment",
+    "file": "transitions/Cut.tsx",
+    "origin": "preset"
+  },
+  {
+    "name": "fade",
+    "kind": "transition",
+    "description": "0.3 s crossfade",
+    "fits": "time jumps, calm or sad moments",
+    "file": "transitions/Fade.tsx",
+    "origin": "preset"
+  },
+  {
+    "name": "flash",
+    "kind": "transition",
+    "description": "white camera-flash hard cut with a flash sound",
+    "fits": "a shocking reveal or impact (2-3 per Short at most)",
+    "file": "transitions/Flash.tsx",
+    "origin": "preset"
+  },
+  {
+    "name": "wipe",
+    "kind": "transition",
+    "description": "a grid of ink dots grows over the frame and shrinks away (0.44 s)",
+    "fits": "the halftone or riso look; switching to a new chapter of the story",
+    "file": "transitions/Wipe.tsx",
+    "origin": "preset"
+  },
+  {
+    "name": "whip",
+    "kind": "transition",
+    "description": "fast sideways whip pan with motion blur (0.25 s), a quiet whoosh",
+    "fits": "action beats: a chase, an attack, things happening fast",
+    "file": "transitions/Whip.tsx",
+    "origin": "preset"
+  },
+  {
+    "name": "leak",
+    "kind": "transition",
+    "description": "a warm film light-leak burn over the cut (0.5 s)",
+    "fits": "the silent-film or engraving look; nostalgia, memories, 'years later'",
+    "file": "transitions/Leak.tsx",
+    "origin": "preset"
+  },
+  {
+    "name": "halftone",
+    "kind": "look",
+    "description": "retro print: the photo rebuilt from overprinted ink dots on cream paper, slightly off register",
+    "fits": "hoaxes, crimes, scandals, newspapers, propaganda",
+    "file": "looks/Halftone.tsx",
+    "origin": "preset"
+  },
+  {
+    "name": "engraving",
+    "kind": "look",
+    "description": "copperplate engraving: the photo drawn as fine sepia hatching lines on cream paper",
+    "fits": "1500s-1800s stories, old institutions, explorers",
+    "file": "looks/Engraving.tsx",
+    "origin": "preset"
+  },
+  {
+    "name": "riso",
+    "kind": "look",
+    "description": "risograph print: two flat inks with grain and a slight misprint",
+    "fits": "1900s-1960s stories, quirky or absurd ones",
+    "file": "looks/Riso.tsx",
+    "origin": "preset"
+  },
+  {
+    "name": "miniature",
+    "kind": "look",
+    "description": "tilt-shift: blurred top and bottom bands and rich colour make the scene look like a toy model",
+    "fits": "wide or aerial shots of towns, crowds, armies, ships only",
+    "file": "looks/Miniature.tsx",
+    "origin": "preset"
+  },
+  {
+    "name": "silent",
+    "kind": "look",
+    "description": "1920s silent film: sepia, vignette, flicker, grain and scratches",
+    "fits": "1890s-1930s stories",
+    "file": "looks/Silent.tsx",
+    "origin": "preset"
+  },
+  {
+    "name": "question",
+    "kind": "overlay",
+    "description": "the picture dims and a big question (up to 6 words) pops up and holds",
+    "fits": "a cliffhanger / open-loop moment the script answers later (1 per Short)",
+    "file": "overlays/QuestionBeat.tsx",
+    "origin": "preset"
+  },
+  {
+    "name": "kinetic",
+    "kind": "overlay",
+    "description": "a spoken 1-4 word phrase whose letters drop in one by one and squash as they land",
+    "fits": "a key phrase that should hit hard (2 per Short at most)",
+    "file": "overlays/KineticTitle.tsx",
+    "origin": "preset"
+  }
+]

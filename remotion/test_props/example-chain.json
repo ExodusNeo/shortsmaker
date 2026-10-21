@@ -1,0 +1,3 @@
+{"total": 6, "narration": "Trouble followed Oscar. A torpedo struck his next ship, then the Ark Royal went down too.",
+ "scenes": [{"start": 0, "end": 6, "full": {"type": "custom", "slot": 0, "kind": "flow", "skin": "blueprint", "seed": 4,
+  "title": "ONE CAT, THREE SHIPS", "cues": [0.6, 2.2, 3.8]}}]}

@@ -1,0 +1,22 @@
+ARCHIVE ODDITIES: channel text to paste into YouTube Studio
+=========================================================
+
+WHERE: YouTube Studio -> Customization -> Profile
+  Picture:  profile_picture.jpg
+  Banner:   banner.jpg  (the editor shows the phone-safe box; the title and tagline already sit inside it)
+  Description: paste the block below
+
+DESCRIPTION (the first sentence is what search results show, so the search words are up front):
+
+Strange but true history in under a minute: real people, real events, and the weird details your history class skipped.
+
+Con artists, accidental heroes, impossible survivors, animals with day jobs, and plans that went spectacularly wrong. Every Short follows one real person or animal through one true story with a twist at the end, checked against the historical record.
+
+We use real archival photos and film wherever they exist, and painted illustrations where history left no picture.
+
+New weird history Shorts every week. Subscribe if you like stories that sound made up but aren't.
+
+
+KEYWORDS: Studio -> Settings -> Channel -> Basic info -> Keywords (paste the whole line)
+
+strange history, weird history, true stories, history facts, history shorts, unbelievable history, forgotten history, bizarre history, history mysteries, strange but true, odd history facts, history you didn't learn in school, real history stories, archive oddities

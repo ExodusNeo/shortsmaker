@@ -1,0 +1,1 @@
+{"total": 5, "narration": "Twenty thousand emus invaded Western Australian wheat farms in 1932.", "scenes": [{"start": 0, "end": 5, "full": {"type": "number", "seed": 2, "value": 20000, "show": "20,000", "label": "EMUS", "icon": "bird", "each": 1000, "figures": 20, "at": 0.6, "skin": "parchment"}}]}

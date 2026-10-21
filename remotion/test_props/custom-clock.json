@@ -1,0 +1,22 @@
+{
+  "total": 5.5,
+  "narration": "For nine years Jack pulled every track lever on schedule through the day without a single mistake",
+  "scenes": [
+    {
+      "start": 0,
+      "end": 5.5,
+      "full": {
+        "type": "custom",
+        "slot": 3,
+        "kind": "clock",
+        "skin": "parchment",
+        "seed": 4,
+        "title": "UITENHAGE SIGNAL BOX · 9 YEARS",
+        "cues": [0.6, 1.8, 3.0],
+        "photos": [
+          {"image": "job/jack.jpg", "aspect": 0.72, "label": "SIGNALMAN JACK", "at": 0.6}
+        ]
+      }
+    }
+  ]
+}

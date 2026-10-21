@@ -1,0 +1,3 @@
+{"total": 4, "narration": "", "scenes": [
+ {"image": "job/jack0.jpg", "start": 0, "end": 2, "move": "in", "transition": "fade", "look": "miniature", "lookSeed": 1},
+ {"image": "job/stink4.jpg", "start": 2, "end": 4, "move": "in", "transition": "cut", "look": "miniature", "lookSeed": 2}]}

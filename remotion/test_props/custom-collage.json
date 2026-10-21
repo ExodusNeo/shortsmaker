@@ -1,0 +1,24 @@
+{
+  "total": 5.5,
+  "narration": "Wide bought Jack at a market trained him on the station levers and the railway put him on the payroll",
+  "scenes": [
+    {
+      "start": 0,
+      "end": 5.5,
+      "full": {
+        "type": "custom",
+        "slot": 1,
+        "kind": "collage",
+        "skin": "dossier",
+        "seed": 2,
+        "title": "CASE FILE · SIGNALMAN JACK",
+        "cues": [0.5, 1.9, 3.3],
+        "photos": [
+          {"image": "job/baboon.jpg", "aspect": 1.33, "label": "1. CHACMA BABOON", "at": 0.5},
+          {"image": "job/station.jpg", "aspect": 1.38, "label": "2. UITENHAGE BOX", "at": 1.9},
+          {"image": "job/jack.jpg", "aspect": 0.72, "label": "3. AT THE LEVERS", "at": 3.3}
+        ]
+      }
+    }
+  ]
+}

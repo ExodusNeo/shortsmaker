@@ -1,0 +1,5 @@
+{"total": 3, "narration": "A baboon, an emperor and a station.",
+ "scenes": [{"start": 0, "end": 3, "full": {"type": "board", "seed": 12, "links": [[0, 2]],
+  "items": [{"image": "job/jack.jpg", "aspect": 1.556, "label": "JACK", "at": 0.2},
+            {"image": "job/norton2.jpg", "aspect": 0.816, "label": "THE DECREE", "at": 0.9},
+            {"image": "job/station.jpg", "aspect": 1.527, "label": "STATION", "at": 1.6}]}}]}

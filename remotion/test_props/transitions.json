@@ -1,0 +1,5 @@
+{"total": 8, "narration": "", "scenes": [
+  {"image": "job/baboon.jpg", "start": 0, "end": 2, "move": "in", "transition": "fade"},
+  {"image": "job/emu1.jpg", "start": 2, "end": 4, "move": "in", "transition": "wipe"},
+  {"image": "job/emu4.jpg", "start": 4, "end": 6, "move": "in", "transition": "whip"},
+  {"image": "job/baboon.jpg", "start": 6, "end": 8, "move": "in", "transition": "leak"}]}

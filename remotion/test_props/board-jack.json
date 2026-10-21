@@ -1,0 +1,6 @@
+{"total": 6, "narration": "Jack, a wild baboon, the signal box at Uitenhage, and one railway that tied them together.",
+ "scenes": [{"start": 0, "end": 6, "full": {"type": "board", "seed": 11, "links": [[0, 1], [1, 2], [2, 3]],
+  "items": [{"image": "job/jack.jpg", "aspect": 1.556, "label": "JACK, 1890", "at": 0.3},
+            {"image": "job/baboon.jpg", "aspect": 0.824, "label": "CHACMA BABOON", "at": 1.4},
+            {"image": "job/window.jpg", "aspect": 0.699, "label": "SIGNAL BOX", "at": 2.5},
+            {"image": "job/station.jpg", "aspect": 1.527, "label": "UITENHAGE", "at": 3.6}]}}]}

@@ -1,0 +1,2 @@
+{"total": 5, "narration": "About thirty thousand people lined the streets for his funeral.",
+ "scenes": [{"start": 0, "end": 5, "full": {"type": "number", "seed": 2, "value": 30000, "show": "30,000", "label": "MOURNERS", "icon": "person", "each": 1000, "figures": 30, "at": 0.6}}]}

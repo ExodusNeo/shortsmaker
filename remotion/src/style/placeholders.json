@@ -1,0 +1,5 @@
+{
+ "InventedLook": "// Placeholder: make_shorts.py writes an AI-invented look here for one Short and restores this file after rendering.\nimport React from 'react';\nimport {Img} from '../kit';\nimport type {Look} from '../types';\n\nexport const InventedLook: Look = ({src}) => <Img src={src} style={{width: '100%', height: '100%', objectFit: 'cover'}} />;\n",
+ "InventedOverlay": "// Placeholder: make_shorts.py writes an AI-invented overlay here for one Short and restores this file after rendering.\nimport type {Overlay} from '../types';\n\nexport const InventedOverlay: Overlay = () => null;\n",
+ "InventedTransition": "// Placeholder: make_shorts.py writes an AI-invented transition here for one Short and restores this file after rendering.\nimport type {Transition} from '../types';\n\nexport const InventedTransition: Transition = {duration: 0.3, render: (p) => ({to: {opacity: p}})};\n"
+}

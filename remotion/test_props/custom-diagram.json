@@ -1,0 +1,19 @@
+{
+  "total": 5.5,
+  "narration": "A sudden gust heeled the top-heavy warship twenty degrees water poured into the open lower gunports and she sank",
+  "scenes": [
+    {
+      "start": 0,
+      "end": 5.5,
+      "full": {
+        "type": "custom",
+        "slot": 0,
+        "kind": "diagram",
+        "skin": "blueprint",
+        "seed": 1,
+        "title": "VASA · CROSS-SECTION (1628)",
+        "cues": [0.7, 2.2, 3.8]
+      }
+    }
+  ]
+}

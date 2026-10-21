@@ -1,0 +1,55 @@
+{
+  "niche": "Gaming facts, trivia and lore: hidden secrets, development history, cut content, record-breaking moments and the backstories behind iconic video games",
+  "channel_name_ideas": [
+    "Respawn Facts",
+    "Lore Drop",
+    "Hidden Level",
+    "Patch Notes History",
+    "Save Point Stories",
+    "Easter Egg Archive",
+    "Continue Screen",
+    "Game Over Facts"
+  ],
+  "audience": "Gamers aged 13-34 who scroll Shorts between sessions: console, PC and retro fans who love 'wait, really?' moments, dev secrets, speedrun oddities and deep lore from franchises like Zelda, Mario, Pokémon, Halo, Elden Ring and GTA",
+  "tone": "Fast, punchy and curious, like a friend who knows every secret. It opens with a hook in the first second, gives tight facts with a hint of humor and awe, keeps a quick rhythm with no filler, and ends on a payoff or twist",
+  "voice": "en-US-BrianNeural",
+  "cta_line": "for more gaming facts & lore",
+  "done_topics": [
+    "Atari's secret 1983 burial of E.T. cartridges in a New Mexico landfill, dug up in 2014",
+    "Nintendo began in 1889 as a Kyoto shop selling hand-painted hanafuda playing cards. After card sales collapsed, it ran a taxi company and sold instant rice. A worker's homemade toy arm then steered it into toys and video games."
+  ],
+  "research_seeds": {
+    "handles": [
+      "@GameTheory",
+      "@SummoningSalt",
+      "@StopSkeletonsFromFighting",
+      "@PeanutButterGamer",
+      "@GameSpot",
+      "@BoundaryBreak",
+      "@GVMERS",
+      "@IndigoGaming",
+      "@GameXplain",
+      "@UpIsNotJump",
+      "@IGN",
+      "@Nerrel"
+    ],
+    "queries": [
+      "video game secrets",
+      "gaming facts you didn't know",
+      "cut content in games",
+      "video game easter eggs"
+    ],
+    "dropped": [
+      "@DidYouKnowGaming",
+      "@gameranxTV",
+      "@KarlJobst",
+      "@MentalCheckpoint",
+      "@GamingHistorian",
+      "@CeaveGaming",
+      "@Arlo"
+    ]
+  },
+  "recent_shapes": [
+    "chain of unlikely events"
+  ]
+}

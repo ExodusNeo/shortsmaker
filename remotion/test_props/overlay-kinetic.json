@@ -1,0 +1,1 @@
+{"total": 4, "narration": "The army sent three soldiers with two machine guns", "scenes": [{"image": "job/emu1.jpg", "start": 0, "end": 4, "move": "in", "transition": "fade", "graphic": {"style": "kinetic", "text": "THREE SOLDIERS", "at": 0.5, "trigger": "three"}}]}

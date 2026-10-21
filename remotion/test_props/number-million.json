@@ -1,0 +1,2 @@
+{"total": 4.5, "narration": "The bank lost one and a half million dollars in a single night.",
+ "scenes": [{"start": 0, "end": 4.5, "full": {"type": "number", "seed": 4, "value": 1500000, "show": "1.5 MILLION", "label": "DOLLARS LOST", "icon": "coin", "each": 50000, "figures": 30, "at": 0.9}}]}

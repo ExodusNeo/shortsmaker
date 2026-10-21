@@ -1,0 +1,27 @@
+---
+source_file: "remotion/src/full/examples/ExampleChain.tsx"
+type: "code"
+community: "Full-Screen Motion Graphics"
+location: "L7"
+tags:
+  - graphify/code
+  - graphify/EXTRACTED
+  - community/Full-Screen_Motion_Graphics
+---
+
+# ExampleChain()
+
+## Connections
+- [[Card()]] - `calls` [EXTRACTED]
+- [[Connect()]] - `calls` [EXTRACTED]
+- [[ExampleChain.tsx]] - `contains` [EXTRACTED]
+- [[Paper()]] - `calls` [EXTRACTED]
+- [[StampBadge()]] - `calls` [EXTRACTED]
+- [[TitleBanner()]] - `calls` [EXTRACTED]
+- [[cueAt()]] - `calls` [EXTRACTED]
+- [[focusCam()]] - `calls` [EXTRACTED]
+- [[layoutColumn()]] - `calls` [EXTRACTED]
+- [[skinOf()]] - `calls` [EXTRACTED]
+- [[travel()]] - `calls` [EXTRACTED]
+
+#graphify/code #graphify/EXTRACTED #community/Full-Screen_Motion_Graphics

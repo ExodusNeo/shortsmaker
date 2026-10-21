@@ -1,0 +1,3 @@
+{"total": 5.5, "palette": null, "narration": "Wide worked the line from Port Elizabeth up to Uitenhage in 1881.",
+ "scenes": [{"start": 0, "end": 5.5, "full": {"type": "journey", "seed": 3, "note": "1881 · 32 km", "noteAt": 3.9,
+  "stops": [{"name": "Port Elizabeth", "lat": -33.96, "lon": 25.60, "at": 1.9}, {"name": "Uitenhage", "lat": -33.76, "lon": 25.40, "at": 3.6}]}}]}
