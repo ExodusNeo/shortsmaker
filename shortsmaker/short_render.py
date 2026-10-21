@@ -1,0 +1,315 @@
+"""A Short's saved work state and `render()`, which turns a written Short into the finished video."""
+
+import json
+import random
+import re
+import shutil
+import subprocess
+import time
+from pathlib import Path
+
+from PIL import Image
+
+from shortsmaker import (
+    audio_mix, editplan, frame_render, gpu, image_sources, media_tools, motion, photo_prep, picker, plan_rules,
+    remotion_render, review, seo, session, style_lab,
+)
+from shortsmaker.config import FPS, H, MUSIC, OUTPUT, PALETTES, SFX, SRC, STYLE_SLOTS, W, hex_rgb
+
+
+KEEP_WORK_DAYS = 7  # a finished Short keeps its work/ folder this long, so fix.bat can re-render one scene
+AUTO_REPAINT_MAX = 4  # scenes the automatic review may repaint per fix round
+AUTO_FIX_ROUNDS = 3  # review -> fix -> re-render rounds after the first render (each ~1 AI review + a render)
+
+
+def save_state(work: Path, short: dict, choices: list[dict], music: Path | None, by_gemini: set[str]) -> None:
+    """What a fix re-render needs to reproduce this Short without new AI picks: the final plan, the chosen
+    pictures (bytes as files) and the music."""
+    rows = []
+    for i, c in enumerate(choices):
+        row = {k: v for k, v in c.items() if k not in ("bg", "person", "full_pics")}
+        for kind in ("bg", "person"):
+            row[kind] = None
+            if c[kind]:
+                (work / f"keep_{i}_{kind}.bin").write_bytes(c[kind][0])
+                row[kind] = [c[kind][1], c[kind][2]]
+        if c.get("full_pics"):  # evidence-board photos / document scan
+            for k, p in enumerate(c["full_pics"]):
+                (work / f"keep_{i}_full{k}.bin").write_bytes(p[0])
+            row["full_pics"] = [list(p[1:]) for p in c["full_pics"]]
+        rows.append(row)
+    short = {k: v for k, v in short.items() if k != "research"}  # Wikipedia text: re-read when needed
+    (work / "state.json").write_text(json.dumps({"short": short, "choices": rows, "music": music.relative_to(MUSIC).as_posix() if music else None,
+                                                 "by_gemini": sorted(by_gemini)}, default=str), encoding="utf-8")
+
+
+def load_state(work: Path) -> dict:
+    st = json.loads((work / "state.json").read_text(encoding="utf-8"))
+    for i, row in enumerate(st["choices"]):
+        for kind in ("bg", "person"):
+            if row[kind]:
+                row[kind] = ((work / f"keep_{i}_{kind}.bin").read_bytes(), *row[kind])
+        if row.get("film"):
+            row["film"]["path"] = Path(row["film"]["path"])
+        if row.get("full_pics"):
+            row["full_pics"] = [((work / f"keep_{i}_full{k}.bin").read_bytes(), *p) for k, p in enumerate(row["full_pics"])]
+    return st
+
+
+def prune_work() -> None:
+    for w in OUTPUT.glob("*/*/work"):
+        if time.time() - w.stat().st_mtime > KEEP_WORK_DAYS * 86400:
+            shutil.rmtree(w, ignore_errors=True)
+
+
+def render(short: dict, ch: dict, folder: Path, state: dict | None = None, fix_round: int = 0) -> None:
+    """Make one Short. With `state` (fix.bat or an automatic fix round), reuse its pictures and music instead of
+    new AI picks. `fix_round` counts the automatic review-and-fix re-renders (up to AUTO_FIX_ROUNDS)."""
+    work = folder / "work"
+    work.mkdir(parents=True, exist_ok=True)
+    all_words, bounds, images, sources, cues, audio = [], [0.0], [], [], [], []
+    short["cta_line"] = ch.get("cta_line") or "for more stories like this"
+    if short.get("palette") not in PALETTES:  # planner gave none (or an old plan): a random one
+        short["palette"] = random.choice(list(PALETTES))
+    session.YELLOW, session.EMPHASIS = (hex_rgb(PALETTES[short["palette"]][k]) for k in ("accent", "emphasis"))
+    if state:
+        choices = state["choices"]
+    else:
+        choices = picker.choose_images(short, work, ch)
+        # real footage first, then a full-screen motion graphic, and only then an AI painting
+        weak = [i for i, c in enumerate(choices) if not c["bg"] and not short["scenes"][i].get("full")]
+        picker.rescue_graphics(short, weak, {i: "no fitting picture was found" for i in weak})
+        plan_rules.mark_details(short, choices, work)
+    for i, sc in enumerate(short["scenes"]):  # an evidence board needs its real photos (3 or more)
+        if (sc.get("full") or {}).get("type") == "board" and len(choices[i].get("full_pics") or []) < 3:
+            sc["full"] = None
+    print("  voice, gap images and thumbnail art on this PC...")
+    voices = gpu.local_voice(short, ch, work)
+    gen = [{"prompt": sc["ai_image"], "out": str(work / f"ai{i}.jpg")}
+           for i, sc in enumerate(short["scenes"]) if not choices[i]["bg"] and sc["ai_image"] and not sc.get("full")]
+    figs = {i: sc["full"]["thing"] for i, sc in enumerate(short["scenes"])
+            if (sc.get("full") or {}).get("type") == "number" and sc["full"].get("thing") and not sc["full"].get("compare")}
+    gen += [{"prompt": remotion_render.FIGURE_PROMPT.format(thing=thing), "out": str(work / f"figraw{i}.jpg")} for i, thing in figs.items()]
+    if short["thumbnail_prompt"]:
+        gen.append({"prompt": short["thumbnail_prompt"], "out": str(work / "thumb_art.jpg")})
+    have = {it["out"] for it in gen if Path(it["out"]).exists()}  # a fix re-render keeps the pictures already painted
+    gen = [it for it in gen if it["out"] not in have]
+    by_gemini = set(state["by_gemini"]) if state else set()
+    # Painter order (owner, 2026-10-21, to test MOSS's range): MOSS-Image on this PC, then Gemini, then SDXL
+    by_moss = gpu.moss_images(gen, work)
+    by_gemini |= gpu.gemini_images([it for it in gen if it["out"] not in by_moss], work) if shutil.which("agy") else set()
+    rest = [it for it in gen if it["out"] not in by_gemini | by_moss]
+    generated = have | by_gemini | by_moss | {it["out"] for it in (gpu.local_job("images", rest, work, timeout=900) if rest else None) or []
+                                              if it.get("ok")}
+    for i in figs:  # the counted thing as a figure; a failed or messy painting leaves the built-in icon
+        fig, raw = work / f"fig{i}.png", work / f"figraw{i}.jpg"
+        if fig.exists() or (raw.exists() and remotion_render.ink_silhouette(raw, fig)):
+            short["scenes"][i]["full"]["figure"] = str(fig)
+    for i, sc in enumerate(short["scenes"]):
+        print(f"  scene {i + 1}/{len(short['scenes'])}: image + voice")
+        sc["credit_tag"] = None
+        img, ai = work / f"{i}.jpg", work / f"ai{i}.jpg"
+        if choices[i]["bg"]:  # film scenes play the clip; their still only stands in if the cut fails
+            img.write_bytes(choices[i]["bg"][0] if choices[i].get("film") else photo_prep.clean_photo(choices[i]["bg"][0]))
+            shutil.copy(img, work / f"{i}_raw.jpg")  # original framing, for the GPU camera moves
+            photo_prep.to_vertical(img)
+            film, site, credit = choices[i].get("film"), choices[i].get("site", "Wikimedia Commons"), choices[i]["bg"][2]
+            licence = credit or ("Pixabay license, no credit needed" if site == "Pixabay" else "public domain")
+            source = (f"{site}, {licence}: {choices[i]['bg'][1]}"
+                      + (f" (real film from {media_tools.clock(film['t'])})" if film else ""))
+            if credit:  # a short tag on screen while it shows; the full credit goes in upload.txt
+                sc["credit_tag"] = image_sources.short_credit(credit, film=bool(film))
+        elif str(ai) in generated:  # no real photo fit: AI image made on this PC
+            shutil.copy(ai, img)
+            shutil.copy(ai, work / f"{i}_raw.jpg")
+            photo_prep.to_vertical(img)
+            # a fix re-render keeps earlier paintings without knowing which local painter made them
+            maker = ("by Gemini" if str(ai) in by_gemini else "on this PC (MOSS-Image)" if str(ai) in by_moss
+                     else "on this PC")
+            source = f"AI-GENERATED {maker}: \"{sc['ai_image']}\""
+        elif i:  # reuse an earlier image; its different camera move keeps it from looking repeated
+            print("    no fitting image, reusing an earlier one")
+            k = random.randrange(i)
+            shutil.copy(work / f"{k}.jpg", img)
+            shutil.copy(work / f"{k}_raw.jpg", work / f"{i}_raw.jpg")
+            source = f"reused from scene {k + 1} (nothing fit \"{sc['image_search']}\")"
+            sc["credit_tag"] = short["scenes"][k]["credit_tag"]
+        else:
+            print("    no fitting image, using a plain frame")
+            Image.new("RGB", (int(W * SRC), int(H * SRC)), (18, 18, 24)).save(img)
+            source = f"PLAIN FRAME (nothing fit \"{sc['image_search']}\"), replace before uploading"
+        if sc.get("full"):  # drawn by Remotion instead of the picture (the picture stays as a fallback)
+            pics = choices[i].get("full_pics") or []
+            credited = [p for p in pics if p[2]]
+            sc["credit_tag"] = None
+            if credited:
+                sc["credit_tag"] = image_sources.short_credit(credited[0][2]) + (f" +{len(credited) - 1}" if len(credited) > 1 else "")
+            source = (f"{motion.full_summary(sc['full'])} ("
+                      + (f"rescued: {sc['full_rescued']}" if sc.get("full_rescued") else "planned") + ")"
+                      + "".join(f" | photo: {p[3]}, {p[2] or 'public domain'}: {p[1]}" for p in pics))
+        if choices[i].get("plan_note"):
+            source += f" | {choices[i]['plan_note']}"
+        sources.append(source)
+        if voices[i]:
+            sound, words = voices[i]
+        else:  # local voice unavailable: Microsoft's free Edge voice
+            sound = work / f"{i}.mp3"
+            words = audio_mix.speak(sc["narration"], ch["voice"], sound)
+        if i == 0 and words and words[0][0] > 0.1:  # speak on the first frame: trim the voice's lead-in silence
+            cut = words[0][0] - 0.05
+            trimmed = work / f"0_start{sound.suffix}"
+            media_tools.ffmpeg("-ss", f"{cut:.3f}", "-i", str(sound), trimmed.name, cwd=work)
+            sound, words = trimmed, [(a - cut, b - cut, w) for a, b, w in words]
+        audio.append(sound)
+        all_words += [(s + bounds[-1], e + bounds[-1], t) for s, e, t in words]
+        bounds.append(bounds[-1] + media_tools.duration(sound))
+        images.append(Image.open(img).convert("RGB"))
+        cues.append(editplan.scene_cues(sc, words, bounds[-2], bounds[-1], i, choices[i]["person"]))
+    total = bounds[-1] + 0.6  # small tail so the last word isn't clipped
+    bounds[-1] = total
+    cues[-1]["cta"] = max(bounds[-2] + 0.3, total - 3.0)  # silent subscribe button: keeps the rewatch loop
+    clips = gpu.local_clips(short, work, sources, bounds, {i: c["film"] for i, c in enumerate(choices)
+                                                         if c.get("film") and not short["scenes"][i].get("full")})
+    for i, sc in enumerate(short["scenes"]):  # keep text callouts off the subject's face (maps and marks are full cards)
+        if sc["graphic"] and sc["graphic"]["style"] != "mark":
+            film = choices[i]["film"]["path"] if clips.get(i) == work / f"film{i}.mp4" else None
+            sc["graphic"]["low"] = frame_render.graphic_low(choices[i], work / f"{i}_raw.jpg", film)
+    (work / "list.txt").write_text("".join(f"file '{a.name}'\n" for a in audio))
+    media_tools.ffmpeg("-f", "concat", "-i", "list.txt", "-ar", "44100", "-ac", "2", "voice.wav", cwd=work)
+    emphasis = {c["emphasis"] for c in cues if c.get("emphasis") is not None}
+    flashes = {bounds[i] for i, sc in enumerate(short["scenes"]) if sc["transition"] == "flash"}
+    audio_mix.captions(all_words, work / "captions.ass", emphasis)
+    seo.srt(all_words, folder / "captions.srt")
+    if not all((SFX / f"{name}.wav").exists() for name in audio_mix.SFX_FILES):
+        audio_mix.make_sfx()
+
+    # Renderer: Remotion when the plan is graphics-heavy (animated maps, spring motion), otherwise the
+    # faster built-in Python renderer. Remotion failing never loses the Short: it falls back.
+    renderer, n_graphics, video_in = "python", motion.graphics_count(short, cues), ["-f", "rawvideo", "-pix_fmt", "rgb24",
+                                                                            "-s", f"{W}x{H}", "-r", str(FPS), "-i", "-"]
+    if remotion_render.wants_remotion(short["scenes"], n_graphics):
+        print(f"  rendering with Remotion ({n_graphics} motion graphics)...")
+        try:
+            video_in = ["-i", str(remotion_render.render_remotion(short, cues, bounds, total, all_words, work, emphasis, flashes,
+                                                  clips, {i: c.get("full_pics") for i, c in enumerate(choices)}))]
+            renderer = "remotion"
+            for kind, spec in ({} if state else short.get("inventions") or {}).items():  # once, on the first render
+                slot = STYLE_SLOTS[kind]
+                folder_c = style_lab.save_candidate(kind, spec["title"], spec["brief"], f'stories like "{short["title"]}"',
+                                          (work / f"{slot}.tsx").read_text(encoding="utf-8"), work / f"{slot}_preview.mp4",
+                                          short["title"])
+                print(f"    the invented {kind} \"{spec['title']}\" is waiting for your OK in library.bat ({folder_c.name})")
+        except Exception as e:
+            print(f"    Remotion failed ({e}), using the built-in renderer")
+            full = [i for i, sc in enumerate(short["scenes"]) if sc.get("full")]
+            if full:
+                print(f"    painting {len(full)} scene(s) that were full-screen motion graphics...")
+                by_gemini |= remotion_render.paint_instead(short, work, full, images, sources)
+
+    # Audio: voice + music ducked under the voice + the sound-design cue sheet.
+    tracks = sorted(MUSIC.rglob("*.mp3"))  # music/<mood>/*.mp3; the planner picks the Short's mood
+    fitting = [t for t in tracks if t.parent.name == short.get("music_mood")]
+    music = random.choice(fitting or tracks) if tracks else None
+    if state and state.get("music") and (MUSIC / state["music"]).exists():
+        music = MUSIC / state["music"]
+    for i, sc in enumerate(short["scenes"]):  # the story's own sounds: owner's file, else fetched once from Freesound
+        if sc.get("sound") and not sc["sound"].get("file"):
+            found = audio_mix.story_sound(sc["sound"]["sound"])
+            if found:
+                sc["sound"]["file"] = found.relative_to(SFX).as_posix()
+            else:
+                print(f"    no sound found for \"{sc['sound']['sound']}\" (scene {i + 1}), skipping it")
+                sc["sound"] = None
+    events = audio_mix.sfx_events(short, cues, bounds, renderer == "remotion")
+    fmt = "aformat=sample_rates=44100:channel_layouts=stereo"
+    graph = ["[0:v]null[v]" if renderer == "remotion" else "[0:v]subtitles=captions.ass[v]",  # Remotion draws its own captions
+             f"[1:a]{fmt},asplit=2[voice][key]" if music else f"[1:a]{fmt}[voice]"]
+    mix = ["[voice]"]
+    inputs = ["-i", "voice.wav"]
+    if music:
+        inputs += ["-stream_loop", "-1", "-i", str(music)]
+        graph += [f"[2:a]{fmt},volume={audio_mix.music_gain(music):.4f},afade=t=in:d=0.1,afade=t=out:st={total - 2:.2f}:d=2[m]",
+                  "[m][key]sidechaincompress=threshold=0.03:ratio=6:attack=15:release=400[music]"]
+        mix.append("[music]")
+    for e in events:
+        k = 1 + inputs.count("-i")  # ffmpeg input index; input 0 is the video
+        src = SFX / e["sound"]
+        inputs += ["-i", str(src if src.suffix else src.with_suffix(".wav"))]
+        graph.append(f"[{k}:a]{fmt},volume={e['gain']},adelay={int(e['t'] * 1000)}:all=1[s{k}]")
+        mix.append(f"[s{k}]")
+    graph.append("".join(mix) + f"amix=inputs={len(mix)}:normalize=0,"
+                 "loudnorm=I=-14:TP=-1.5:LRA=11,"  # -14 LUFS = YouTube's playback level
+                 # one-pass loudnorm overshoots (an Atari Short peaked at -0.1 dB): a 4x-oversampled limiter
+                 # also catches in-between peaks, so the AAC file stays under -1.5 dB (tested: -1.8)
+                 "aresample=176400,alimiter=limit=0.79:level=false,aresample=44100[a]")
+
+    if renderer == "python":
+        print("  rendering video...")
+    proc = subprocess.Popen(
+        ["ffmpeg", "-y", "-loglevel", "error", *video_in, *inputs,
+         "-filter_complex", ";".join(graph), "-map", "[v]", "-map", "[a]",
+         *media_tools.video_encoder(), "-pix_fmt", "yuv420p",
+         "-c:a", "aac", "-b:a", "192k", "-t", f"{total:.2f}", "-movflags", "+faststart",
+         "../short.mp4"], stdin=subprocess.PIPE if renderer == "python" else None, cwd=work)
+    if renderer == "python":
+        frame = frame_render.frame_maker(images, short["scenes"], short["hook_text"], short["cta_line"], bounds, cues, clips)
+        frame_render.write_frames(frame, len(images), bounds, total, proc.stdin, flashes)
+        frame.close()
+        proc.stdin.close()
+    if proc.wait() != 0:
+        raise RuntimeError("ffmpeg failed while rendering")
+    review.storyboard(folder / "short.mp4", bounds, folder / "storyboard.jpg")
+    editplan.edit_plan(short, bounds, sources, cues, events, music, folder / "edit_plan.txt",
+              f"{'Remotion' if renderer == 'remotion' else 'built-in (Python)'}, {n_graphics} motion graphics",
+              clips)
+    issues = review.quality_check(folder / "short.mp4", bounds, sources)
+    print(f"  {session.BRAIN.capitalize()} is watching the finished Short for problems...")
+    found, fixes = review.visual_review(folder / "short.mp4", short, bounds, sources, work)
+    issues += found
+    print("  quality check: " + (f"{len(issues)} thing(s) to look at before uploading:" if issues else "OK, nothing to fix"))
+    for issue in issues:
+        print(f"    CHECK: {issue}")
+    with open(folder / "edit_plan.txt", "a", encoding="utf-8") as f:
+        f.write("\n\nQUALITY CHECK (automatic, on the finished video)\n" + ("\n".join(f"  CHECK: {i}" for i in issues) or
+                "  OK: no black or frozen stretches, loudness on target, every scene has a picture") + "\n")
+
+    art = work / "thumb_art.jpg"  # Claude's thumbnail plan, painted on this PC; else the first scene
+    frame_render.thumbnail(art if art.exists() else work / "0.jpg", short.get("thumbnail_text", short["title"]),
+              folder / "thumbnail.jpg")
+    synthetic = any(c.name.startswith("clip") for c in clips.values()) or any(s.startswith("AI-GENERATED") for s in sources)
+    credit = music.with_name(music.name + ".txt") if music else None
+    credit_text = f"\n\nMusic:\n{credit.read_text(encoding='utf-8').strip()}" if credit and credit.exists() else ""
+    image_credits = []  # credited material (CC, Internet Archive, Openverse); public domain needs nothing
+    for sc, c in zip(short["scenes"], choices):
+        for _, title, who, site in (c.get("full_pics") or []) if sc.get("full") else []:
+            if who:
+                image_credits.append(f"{re.sub(r'[.](jpe?g|png|tiff?|gif|svg)$', '', title.removeprefix('File:'), flags=re.I)} by {who} ({site})")
+        for kind in ("bg", "person"):
+            if c[kind] and c[kind][2] and not (kind == "bg" and sc.get("full")):
+                name = re.sub(r"\.(jpe?g|png|tiff?|gif|webm|ogv|svg)$", "", c[kind][1].removeprefix("File:"), flags=re.I)
+                site = c.get("site", "Wikimedia Commons") if kind == "bg" else "Wikimedia Commons"
+                image_credits.append(f"{name} by {c[kind][2]} ({site})")
+    if image_credits:
+        credit_text += "\n\nFootage and image credits:\n" + "\n".join(dict.fromkeys(image_credits))
+    (folder / "upload.txt").write_text(
+        f"TITLE:\n{short['title'][:100]}\n\nDESCRIPTION:\n{short.get('description', '')}{credit_text}\n\n"
+        f"TAGS (paste into Tags box):\n{', '.join(short.get('tags', []))[:500]}\n\n"
+        f"PINNED COMMENT (post it, then pin it):\n{short.get('pinned_comment', '')}\n\n"
+        "SETTINGS: Category = Education. Language = English. "
+        "Subtitles -> Add language -> Upload file -> captions.srt (with timing)\n"
+        + ("ALTERED OR SYNTHETIC CONTENT: Yes. This Short contains AI-generated images or motion that look "
+           "like real footage (see edit_plan.txt), and YouTube requires the label.\n" if synthetic else ""),
+        encoding="utf-8")
+    save_state(work, short, choices, music, by_gemini)  # work/ stays KEEP_WORK_DAYS for fix.bat
+    # Fix and re-render while the review finds fixable scenes, capped: an AI reviewer nearly always finds
+    # something, so an uncapped loop could repaint forever. fix.bat re-renders (state, round 0) stay manual.
+    if fixes and (not state or fix_round) and fix_round < AUTO_FIX_ROUNDS:
+        st = load_state(work)
+        st["short"]["research"] = short.get("research")  # not in state.json; the motion-graphic rescue reads it
+        print(f"  fix round {fix_round + 1}/{AUTO_FIX_ROUNDS}: the review found {min(len(fixes), AUTO_REPAINT_MAX)} "
+              "scene(s) to fix: fixing them and re-rendering...")
+        st["short"]["auto_fixed"] = (st["short"].get("auto_fixed") or []) + [
+            f"round {fix_round + 1}: {note}" for note in review.apply_review_fixes(st, work, fixes)]
+        render(st["short"], ch, folder, st, fix_round + 1)
+    elif fixes and fix_round:
+        print(f"  stopped fixing after {AUTO_FIX_ROUNDS} rounds: the CHECK lines above are left for you")

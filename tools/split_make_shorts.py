@@ -14,8 +14,6 @@ import builtins
 import re
 import subprocess
 import sys
-import tokenize
-from io import StringIO
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -23,20 +21,23 @@ PKG = ROOT / "shortsmaker"
 TEST_FILES = ["test_full_scenes.py", "test_pictures_first.py", "test_style.py", "render_style.py"]
 
 # Start line of each top-level statement in the original -> module (plan, Task 2).
-RANGES = [(35, 150, "config"), (151, 291, "llm"), (292, 490, "channel_profiles"), (491, 518, "styles"),
-          (519, 759, "writing"), (760, 808, "picture_pool"), (809, 1142, "writing"), (1143, 1506, "planning"),
+RANGES = [(35, 150, "config"), (151, 291, "llm"), (292, 490, "channel_profiles"), (491, 518, "style_lab"),
+          (519, 759, "writing"), (760, 808, "picture_pool"), (809, 1142, "writing"), (1143, 1506, "plan_rules"),
           (1507, 1577, "seo"), (1578, 1695, "image_sources"), (1696, 1715, "footage"), (1716, 1782, "image_sources"),
           (1783, 1833, "footage"), (1834, 1873, "image_sources"), (1874, 1942, "footage"),
           (1943, 1975, "image_sources"), (1976, 2068, "footage"), (2069, 2284, "picture_pool"),
-          (2285, 2454, "picker"), (2455, 2462, "remotion_render"), (2463, 2487, "styles"), (2488, 2577, "picker"),
+          (2285, 2454, "picker"), (2455, 2462, "remotion_render"), (2463, 2487, "style_lab"), (2488, 2577, "picker"),
           (2578, 2656, "photo_prep"), (2657, 2931, "audio_mix"), (2932, 3215, "frame_render"), (3216, 3341, "review"),
-          (3342, 3432, "audio_mix"), (3433, 3732, "motion"), (3733, 3986, "styles"), (3987, 4174, "remotion_render"),
+          (3342, 3432, "audio_mix"), (3433, 3732, "motion"), (3733, 3986, "style_lab"), (3987, 4174, "remotion_render"),
           (4175, 4343, "editplan"), (4344, 4701, "gpu"), (4702, 5016, "short_render"), (5017, 5106, "logbook"),
           (5107, 5292, "cli")]
 OVERRIDES = {"fetch": "media_tools", "write_json": "media_tools", "duration": "media_tools",
              "video_encoder": "media_tools", "ffmpeg": "media_tools", "clock": "media_tools",
-             "POOLS": "picture_pool", "MIN_USABLE": "picture_pool", "TOPIC_BACKUPS": "picture_pool",
-             "fills_frame": "frame_render", "MUSIC_LUFS": "audio_mix", "music_gain": "audio_mix"}
+             "MIN_USABLE": "picture_pool", "TOPIC_BACKUPS": "picture_pool",
+             "fills_frame": "frame_render", "MUSIC_LUFS": "audio_mix", "music_gain": "audio_mix",
+             "_last_ov": "image_sources", "_ov_lock": "image_sources",
+             "film_ffmpeg": "image_sources"}  # shares wm_get's private Wikimedia rate-limit clock (_last_wm)
+CONTINUED = {151}  # BRAIN's trailing comment runs on over the next lines
 LINE_OVERRIDES = {393: "config"}  # the PIL warning filter must run on import, like the other config side effects
 SESSION = {"CHANNEL", "RESEARCH", "LOG", "YELLOW", "EMPHASIS", "BRAIN", "NO_QUOTA", "LAST_AI", "SHORT_FORM",
            "VEO_HANDOFF"}
@@ -49,7 +50,7 @@ DOCS = {
            "runs out of quota.",
     "channel_profiles": "Channel profiles (channels/<name>.json), the run.bat menus, and YouTube/trend research.",
     "writing": "Topics -> Wikipedia research -> writer -> editor -> director -> fact check.",
-    "planning": "Cleaning and validating the planner's JSON (graphics, full-screen scenes, styles) and word timings.",
+    "plan_rules": "Cleaning and validating the planner's JSON (graphics, full-screen scenes, styles) and word timings.",
     "seo": "Titles, descriptions and tags from YouTube autocomplete; the .srt captions file.",
     "image_sources": "Pictures from Wikimedia Commons, Openverse, NASA and the Internet Archive, with licences and\n"
                      "on-screen credits.",
@@ -61,7 +62,7 @@ DOCS = {
     "frame_render": "The Python renderer: camera moves, graphic overlays, person cards, clip reading, thumbnail.",
     "review": "Automatic checks on a finished Short, the AI visual review and its fixes, the storyboard.",
     "motion": "Full-screen motion-graphic scenes and the AI-coded Custom scenes (with their look-and-fix check).",
-    "styles": "The style library: invented looks, overlays and scene changes, candidates and the library menu.",
+    "style_lab": "The style library: invented looks, overlays and scene changes, candidates and the library menu.",
     "remotion_render": "Rendering a Short with Remotion (with the Python renderer as fallback), redraws, paper and ink.",
     "editplan": "edit_plan.txt (the timestamped edit list) and per-scene cue timing.",
     "gpu": "Local AI on the owner's GPU and helpers: ComfyUI/MOSS, VoiceStudio, Gemini images, LTX clips, Veo hand-off.",
@@ -175,7 +176,16 @@ def defined_names(node) -> set[str]:
     if isinstance(node, (ast.FunctionDef, ast.AsyncFunctionDef, ast.ClassDef)):
         return {node.name}
     targets = node.targets if isinstance(node, ast.Assign) else [node.target] if isinstance(node, ast.AnnAssign) else []
-    return {t.id for tg in targets for t in ast.walk(tg) if isinstance(t, ast.Name)}
+    names, todo = set(), list(targets)
+    while todo:  # plain names and unpacking only: `X.attr = ...` / `X[k] = ...` define nothing
+        t = todo.pop()
+        if isinstance(t, ast.Name):
+            names.add(t.id)
+        elif isinstance(t, (ast.Tuple, ast.List)):
+            todo += t.elts
+        elif isinstance(t, ast.Starred):
+            todo.append(t.value)
+    return names
 
 
 def is_main_guard(node) -> bool:
@@ -199,22 +209,19 @@ def module_for(node, ranges, overrides, session, line_overrides) -> str:
     raise SystemExit(f"line {node.lineno}: no module for {ast.unparse(node)[:60]!r}")
 
 
-def chunks_of(src: str, tree: ast.Module) -> list[tuple[ast.stmt, int, int]]:
-    """(statement, first line, last line) with the comments above it; comment lines right under a statement that
-    ends in a comment continue that comment and stay with it."""
+def chunks_of(src: str, tree: ast.Module, continued=frozenset()) -> list[tuple[ast.stmt, int, int]]:
+    """(statement, first line, last line) with the comments above it. For a statement ending on a line in
+    `continued`, the comment lines right under it finish its trailing comment and stay with it."""
     lines = src.splitlines()
-    comment_end = {t.start[0] for t in tokenize.generate_tokens(StringIO(src).readline) if t.type == tokenize.COMMENT}
     body = [n for n in tree.body if not isinstance(n, (ast.Import, ast.ImportFrom))
             and not (isinstance(n, ast.Expr) and isinstance(n.value, ast.Constant) and n is tree.body[0])]
     out, prev_end = [], max((n.end_lineno for n in tree.body if isinstance(n, (ast.Import, ast.ImportFrom))), default=0)
     for node in body:
-        start = min([node.lineno] + [d.lineno for d in getattr(node, "decorator_list", [])])
-        end = node.end_lineno
-        out.append([node, prev_end + 1, end])
-        prev_end = end
-    for i in range(len(out) - 1):  # hand continuation comments back to the statement above
+        out.append([node, prev_end + 1, node.end_lineno])
+        prev_end = node.end_lineno
+    for i in range(len(out) - 1):
         node, a, end = out[i]
-        if end in comment_end and lines[end - 1].lstrip()[:1] != "#":
+        if end in continued:
             nxt = end + 1
             while nxt < out[i + 1][0].lineno and lines[nxt - 1].lstrip().startswith("#"):
                 nxt += 1
@@ -253,11 +260,11 @@ def wrap_import(prefix: str, names: list[str]) -> str:
 
 
 def split_source(src: str, ranges, overrides: dict, session: set, line_overrides: dict | None = None,
-                 fix_root: bool = False) -> dict[str, str]:
+                 fix_root: bool = False, continued=frozenset()) -> dict[str, str]:
     """{module: source} for the package (see the module docstring for the rules)."""
     line_overrides = line_overrides or {}
     tree = ast.parse(src)
-    chunks = [c for c in chunks_of(src, tree) if not is_main_guard(c[0])]
+    chunks = [c for c in chunks_of(src, tree, continued) if not is_main_guard(c[0])]
     owner: dict[str, str] = {}
     mod_of: dict[int, str] = {}
     for node, _, _ in chunks:
@@ -473,7 +480,7 @@ def original() -> str:
 
 def split() -> None:
     src = original()
-    mods = split_source(src, RANGES, OVERRIDES, SESSION, LINE_OVERRIDES, fix_root=True)
+    mods = split_source(src, RANGES, OVERRIDES, SESSION, LINE_OVERRIDES, fix_root=True, continued=CONTINUED)
     tests = [(ROOT / "tests" / f).read_text(encoding="utf-8") for f in TEST_FILES]
     problems = prove(src, mods, RANGES, OVERRIDES, SESSION, LINE_OVERRIDES, tests)
     if problems:
