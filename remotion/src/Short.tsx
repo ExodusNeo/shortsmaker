@@ -68,12 +68,12 @@ export type ShortProps = {
 	words: Word[];
 	cta: number | null; // when the silent subscribe button appears
 	ctaLine: string;
-	palette?: typeof theme; // this Short's colours (make_shorts.py PALETTES)
+	palette?: typeof theme; // this Short's colours (shortsmaker/config.py PALETTES)
 };
 
 const ZMAX = 1.12;
 
-// All timing is in absolute seconds (`t`), matching the edit plan make_shorts.py writes.
+// All timing is in absolute seconds (`t`), matching the edit plan shortsmaker/editplan.py writes.
 const Background: React.FC<{scene: Scene; next?: Scene; t: number; xfade: number; first: boolean; span: number; inks: Inks}> = ({
 	scene, next, t, xfade, first, span, inks,
 }) => {

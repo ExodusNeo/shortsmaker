@@ -1,0 +1,3 @@
+# The pipeline and tests write some tracked files (Custom*.tsx, library.json, vault pages) with Windows line
+# endings; store and check out everything as LF so those runs never show up as changes.
+* text=auto eol=lf

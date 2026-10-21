@@ -1,6 +1,8 @@
-"""Automatic checks on a finished Short, the AI visual review and its fixes, the storyboard."""
+"""Automatic checks on a finished Short, the AI visual review and its fixes (incl. repainting a scene, also used by
+fix.bat), the storyboard."""
 
 import io
+import json
 import re
 import shutil
 import subprocess
@@ -8,7 +10,7 @@ from pathlib import Path
 
 from PIL import Image, ImageDraw, ImageFont
 
-from shortsmaker import cli, llm, media_tools, picker, plan_rules, remotion_render, session, short_render, writing
+from shortsmaker import gpu, llm, media_tools, picker, plan_rules, remotion_render, session, short_render, writing
 from shortsmaker.config import FONT
 
 
@@ -108,9 +110,9 @@ def apply_review_fixes(st: dict, work: Path, fixes: dict[int, tuple[str, str]]) 
         elif i in got:  # the picture stays in the plan: it is the fallback if Remotion fails
             notes.append(f"scene {i + 1} became a motion graphic ({why})")
         else:
-            cli.paint_new(work, st, i)
+            paint_new(work, st, i)
             repaint[i] = why
-    rewritten = cli.rewrite_paint_prompts(st["short"], repaint) if repaint else []
+    rewritten = rewrite_paint_prompts(st["short"], repaint) if repaint else []
     for i, why in repaint.items():
         how = "a rewritten prompt" if i in rewritten else "its old prompt, seen from a new angle"
         notes.append(f"scene {i + 1} got a new painted picture from {how} ({why})")
@@ -132,3 +134,47 @@ def storyboard(video: Path, bounds: list[float], path: Path) -> None:
             sheet.paste(Image.open(io.BytesIO(still)).convert("RGB"), (x, y))
         d.text((x, y + th + 8), f"{i + 1}  {media_tools.clock(bounds[i])}-{media_tools.clock(bounds[i + 1])}", font=font, fill="white")
     sheet.save(path, quality=88)
+
+
+def paint_new(work: Path, state: dict, i: int) -> None:
+    """fix / auto-fix: scene i drops its picture and gets a freshly painted one (Gemini, else SDXL
+    on this PC) from its ai_image prompt, or one built from its shot note, in the same never-a-photo style."""
+    sc = state["short"]["scenes"][i]
+    sc["full"] = None  # a painting replaces whatever the scene showed, motion graphic included
+    if (sc.get("graphic") or {}).get("style") == "mark":  # it circled a detail of the old picture
+        sc["graphic"] = None
+    state["choices"][i] = {"bg": None, "person": state["choices"][i]["person"]}
+    old = work / f"ai{i}.jpg"
+    old.unlink(missing_ok=True)  # render() only paints what's missing
+    state["by_gemini"] = [p for p in state["by_gemini"] if p != str(old)]
+    if not sc.get("ai_image"):
+        sc["ai_image"] = f"{sc.get('shot') or sc['narration']} {gpu.PAINT_FALLBACK}"
+    sc["animate"] = False
+
+
+def rewrite_paint_prompts(short: dict, why: dict[int, str]) -> list[int]:
+    """Scenes being repainted (scene index -> what was wrong) get a better ai_image, not the same one again: MOSS
+    seeds from the prompt text, so an unchanged prompt painted the identical picture (Mike's garbled newsstand came
+    back, 2026-10-21; owner asked for a rewrite on every repaint). One AI call for all of them; a scene it doesn't
+    answer gets a new angle so the picture still changes. Returns the scenes the AI rewrote."""
+    scenes = short["scenes"]
+    rows = [{"scene": i + 1, "narration": scenes[i]["narration"], "shot": scenes[i].get("shot"),
+             "old_prompt": scenes[i].get("ai_image"), "problem": why[i]} for i in why]
+    data = llm.ask_ai(f"""Some AI paintings in a YouTube Short were rejected and will be painted again. Story: {short.get('topic') or short.get('title')}
+For each scene write a NEW painting prompt that fixes its problem and is better than the old prompt. Don't repeat
+what failed: if the old subject can't work (it shows what must not be shown, or the painter keeps getting it wrong),
+pick another subject that still shows the narration. Rules for a prompt:
+{writing.AI_IMAGE_RULE}
+Scenes: {json.dumps(rows, ensure_ascii=False)}
+Reply with ONLY JSON: {{"prompts": [{{"scene": 3, "ai_image": "..."}}]}}""", fatal=False) or {}
+    done = []
+    for p in data.get("prompts") or []:
+        i = p.get("scene") - 1 if isinstance(p, dict) and isinstance(p.get("scene"), int) else None
+        text = str(p.get("ai_image") or "").strip() if i is not None else ""
+        if i in why and i not in done and text and text != scenes[i].get("ai_image") and "photograph" not in text.lower():
+            scenes[i]["ai_image"] = text[:700]
+            done.append(i)
+    for i in why:
+        if i not in done:
+            scenes[i]["ai_image"] = f"{scenes[i]['ai_image']} Seen from a different angle, in different light."
+    return done

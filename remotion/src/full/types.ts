@@ -1,5 +1,5 @@
 // Full-screen motion graphic scenes (archival parchment, dark blueprint, dark crimson dossier, or dark HUD).
-// make_shorts.py validates the AI's plan (clean_full), times every element to the spoken words (full_cues),
+// shortsmaker/plan_rules.py validates the AI's plan (clean_full), times every element to the spoken words (full_cues),
 // codes any custom scene (code_custom_scenes), and sends one of these per scene.
 // All times are absolute seconds, like the other graphics.
 

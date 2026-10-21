@@ -32,7 +32,7 @@ export const MapCard: React.FC<{graphic: Graphic; t: number; start: number; end:
 		return {center, zoom: Math.min(10, Math.max(1, fit.scale() / (MW / (2 * Math.PI))))};
 	}, [from, lon, lat]);
 	if (!visible) return null;
-	// Animation beat (seconds at full speed) -> time; make_shorts.py sets `pace` < 1 for short scenes.
+	// Animation beat (seconds at full speed) -> time; shortsmaker/editplan.py (scene_cues) sets `pace` < 1 for short scenes.
 	const at = (sec: number) => tIn + sec * (graphic.pace ?? 1);
 
 	const fly = interpolate(t, [at(0.15), at(1.5)], [0, 1], {...clamp, easing: Easing.bezier(0.65, 0, 0.35, 1)});

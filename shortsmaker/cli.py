@@ -1,6 +1,5 @@
 """Command-line entry: making a batch (`main`), fix.bat's one-scene re-render, `library`, `notes`."""
 
-import json
 import os
 import re
 import shutil
@@ -9,7 +8,7 @@ from datetime import date
 from pathlib import Path
 
 from shortsmaker import (
-    channel_profiles, gpu, llm, logbook, picker, picture_pool, seo, session, short_render, style_lab, writing,
+    channel_profiles, llm, logbook, picker, picture_pool, review, seo, session, short_render, style_lab, writing,
 )
 from shortsmaker.config import OUTPUT
 
@@ -103,50 +102,6 @@ def use_picture_from(work: Path, state: dict, i: int, k: int) -> None:
     scenes[i]["animate"] = False  # its AI motion was written for the old picture
 
 
-def paint_new(work: Path, state: dict, i: int) -> None:
-    """fix / auto-fix: scene i drops its picture and gets a freshly painted one (Gemini, else SDXL
-    on this PC) from its ai_image prompt, or one built from its shot note, in the same never-a-photo style."""
-    sc = state["short"]["scenes"][i]
-    sc["full"] = None  # a painting replaces whatever the scene showed, motion graphic included
-    if (sc.get("graphic") or {}).get("style") == "mark":  # it circled a detail of the old picture
-        sc["graphic"] = None
-    state["choices"][i] = {"bg": None, "person": state["choices"][i]["person"]}
-    old = work / f"ai{i}.jpg"
-    old.unlink(missing_ok=True)  # render() only paints what's missing
-    state["by_gemini"] = [p for p in state["by_gemini"] if p != str(old)]
-    if not sc.get("ai_image"):
-        sc["ai_image"] = f"{sc.get('shot') or sc['narration']} {gpu.PAINT_FALLBACK}"
-    sc["animate"] = False
-
-
-def rewrite_paint_prompts(short: dict, why: dict[int, str]) -> list[int]:
-    """Scenes being repainted (scene index -> what was wrong) get a better ai_image, not the same one again: MOSS
-    seeds from the prompt text, so an unchanged prompt painted the identical picture (Mike's garbled newsstand came
-    back, 2026-10-21; owner asked for a rewrite on every repaint). One AI call for all of them; a scene it doesn't
-    answer gets a new angle so the picture still changes. Returns the scenes the AI rewrote."""
-    scenes = short["scenes"]
-    rows = [{"scene": i + 1, "narration": scenes[i]["narration"], "shot": scenes[i].get("shot"),
-             "old_prompt": scenes[i].get("ai_image"), "problem": why[i]} for i in why]
-    data = llm.ask_ai(f"""Some AI paintings in a YouTube Short were rejected and will be painted again. Story: {short.get('topic') or short.get('title')}
-For each scene write a NEW painting prompt that fixes its problem and is better than the old prompt. Don't repeat
-what failed: if the old subject can't work (it shows what must not be shown, or the painter keeps getting it wrong),
-pick another subject that still shows the narration. Rules for a prompt:
-{writing.AI_IMAGE_RULE}
-Scenes: {json.dumps(rows, ensure_ascii=False)}
-Reply with ONLY JSON: {{"prompts": [{{"scene": 3, "ai_image": "..."}}]}}""", fatal=False) or {}
-    done = []
-    for p in data.get("prompts") or []:
-        i = p.get("scene") - 1 if isinstance(p, dict) and isinstance(p.get("scene"), int) else None
-        text = str(p.get("ai_image") or "").strip() if i is not None else ""
-        if i in why and i not in done and text and text != scenes[i].get("ai_image") and "photograph" not in text.lower():
-            scenes[i]["ai_image"] = text[:700]
-            done.append(i)
-    for i in why:
-        if i not in done:
-            scenes[i]["ai_image"] = f"{scenes[i]['ai_image']} Seen from a different angle, in different light."
-    return done
-
-
 def fix_short() -> None:
     """fix.bat: re-render a recent Short with one scene changed, keeping its pictures, voice and music
     (a few minutes instead of a new Short). Only Shorts made in the last KEEP_WORK_DAYS days still have
@@ -183,8 +138,8 @@ def fix_short() -> None:
         sc["graphic"], sc["full"] = None, None
     elif what == 4:
         why = input("What's wrong with the picture? (Enter to skip): ").strip()
-        paint_new(folder / "work", state, i)
-        rewrite_paint_prompts(short, {i: why or "the owner wants a different, better picture"})
+        review.paint_new(folder / "work", state, i)
+        review.rewrite_paint_prompts(short, {i: why or "the owner wants a different, better picture"})
         print(f"  new prompt: {sc['ai_image']}")
     else:
         old = sc.get("full")

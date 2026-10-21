@@ -1,7 +1,7 @@
 import {AbsoluteFill, Easing, Img, interpolate, spring, staticFile, useVideoConfig} from 'remotion';
 import type {Card, Graphic} from './Short';
 
-/** This Short's colours: Short sets them from props.palette (make_shorts.py PALETTES) before anything draws. */
+/** This Short's colours: Short sets them from props.palette (shortsmaker/config.py PALETTES) before anything draws. */
 export const theme = {accent: '#FFD400', emphasis: '#FF7A1A', panel: '#0d1320', land: '#333843', border: '#4b5871'};
 export const FONT = 'Impact, "Arial Black", sans-serif';
 const clamp = {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'} as const;

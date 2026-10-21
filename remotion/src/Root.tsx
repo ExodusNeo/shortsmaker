@@ -1,7 +1,7 @@
 import {CalculateMetadataFunction, Composition} from 'remotion';
 import {Short, ShortProps} from './Short';
 
-// make_shorts.py writes the props (scene timings, images, graphics, words); duration and fps come from them.
+// shortsmaker/remotion_render.py (render_remotion) writes the props (scene timings, images, graphics, words); duration and fps come from them.
 const calculateMetadata: CalculateMetadataFunction<ShortProps> = ({props}) => ({
 	fps: props.fps,
 	durationInFrames: Math.max(1, Math.ceil(props.total * props.fps)),

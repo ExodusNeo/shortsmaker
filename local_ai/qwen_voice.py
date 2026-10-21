@@ -138,7 +138,7 @@ def main() -> None:
     try:
         (studio_speak if job["items"][0].get("engine") else speak)(job["items"])
         align(job["items"])
-    except Exception as e:  # items without "ok" fall back to Kokoro in make_shorts.local_voice()
+    except Exception as e:  # items without "ok" fall back to Kokoro in shortsmaker/gpu.py local_voice()
         job["error"] = f"{type(e).__name__}: {e}"
     job["seconds"] = round(time.time() - t, 1)
     path.write_text(json.dumps(job, ensure_ascii=False), encoding="utf-8")

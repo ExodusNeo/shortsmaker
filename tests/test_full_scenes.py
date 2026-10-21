@@ -401,7 +401,7 @@ def test_rewrite_paint_prompts():
     saved = llm.ask_ai
     llm.ask_ai = ask
     try:
-        done = cli.rewrite_paint_prompts(short, {1: "garbled lettering", 2: "dull", 3: "wrong era"})
+        done = review.rewrite_paint_prompts(short, {1: "garbled lettering", 2: "dull", 3: "wrong era"})
     finally:
         llm.ask_ai = saved
     assert done == [1] and scenes[1]["ai_image"].startswith("A newsboy")
@@ -415,7 +415,7 @@ def test_paint_new_clears_full():
         st = {"short": {"scenes": [{"narration": "a", "full": None, "ai_image": "p", "animate": True},
                                    {"narration": "b", "full": {"type": "number"}, "ai_image": "p", "animate": False}]},
               "choices": [{"bg": (b"x", "t", None), "person": None}, {"bg": None, "person": None}], "by_gemini": []}
-        cli.paint_new(Path(d), st, 1)
+        review.paint_new(Path(d), st, 1)
         assert st["short"]["scenes"][1]["full"] is None
         st["short"]["scenes"][1]["full"] = {"type": "number"}
         cli.use_picture_from(Path(d), st, 1, 0)
@@ -569,12 +569,12 @@ def test_new_picture_drops_mark():
         st = {"short": {"scenes": [{"narration": "a", "full": None, "ai_image": "p", "animate": False, "graphic": dict(date)},
                                    {"narration": "b", "full": None, "ai_image": "p", "animate": False, "graphic": dict(mark)}]},
               "choices": [{"bg": (b"x", "t", None), "person": None}, {"bg": (b"y", "t", None), "person": None}], "by_gemini": []}
-        cli.paint_new(Path(d), st, 1)
+        review.paint_new(Path(d), st, 1)
         assert st["short"]["scenes"][1]["graphic"] is None
         st["short"]["scenes"][1]["graphic"] = dict(mark)
         cli.use_picture_from(Path(d), st, 1, 0)
         assert st["short"]["scenes"][1]["graphic"] is None
-        cli.paint_new(Path(d), st, 0)
+        review.paint_new(Path(d), st, 0)
         assert st["short"]["scenes"][0]["graphic"] == date  # other graphics don't depend on the picture
 
 

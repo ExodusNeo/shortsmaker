@@ -68,7 +68,8 @@ Gemini. Real archival/online footage is the main material; AI fills gaps.
 
 The project is a local git repo since 2026-10-21 (`master`; nothing pushed anywhere): commits replace the old
 `backup/make_shorts_*.py` copies. Function names did not change in the split, so every function named in this file
-still exists; find it with `grep -n "def <name>" shortsmaker/*.py`.
+still exists; find it with `grep -n "def <name>" shortsmaker/*.py`. Line endings: everything is stored and checked out
+as LF (`.gitattributes`); the pipeline and tests may write CRLF on Windows, which git ignores.
 
 | Module | Job |
 |---|---|
@@ -86,7 +87,7 @@ still exists; find it with `grep -n "def <name>" shortsmaker/*.py`.
 | `photo_prep.py` | Stereograph cards, border trimming, vertical crops |
 | `audio_mix.py` | `speak()`, captions, SFX (`make_sfx()`, `sfx_events()`), story sounds, music gain |
 | `frame_render.py` | Python renderer: shots, overlays, person cards, `ClipReader`, thumbnail |
-| `review.py` | Quality check, visual review, review fixes, storyboard |
+| `review.py` | Quality check, visual review, review fixes, storyboard; repainting a scene (`paint_new()`, `rewrite_paint_prompts()`, also used by fix.bat) |
 | `motion.py` | Full-screen scene props, AI-coded Custom scenes, `custom_rules()` (rule 9 TASTE), `look_and_fix()` |
 | `style_lab.py` | Style library: inventions, candidates, `library_menu()` |
 | `remotion_render.py` | `render_remotion()`, fallback, redraws, paper/ink figures |
