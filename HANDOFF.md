@@ -567,7 +567,7 @@ viewers in the first second (stayed to watch 21-59%); the shorter recent Shorts 
 
 ## How to verify changes
 - `.venv\Scripts\python.exe -m compileall -q make_shorts.py shortsmaker`; Remotion: `cd remotion && npx tsc -p .`
-- Tests (no AI usage, no rendering): `.venv\Scripts\python.exe tests\test_package.py` (8: ROOT, ffmpeg on PATH, shared session, fakes reach callers, Opus/high pin, Gemini bulk vs review models, encoder cache, entry point),
+- Tests (no AI usage, no rendering): `.venv\Scripts\python.exe tests\test_package.py` (9: ROOT, ffmpeg on PATH, shared session, fakes reach callers, Opus/high pin, Gemini bulk vs review models, Argon->Flash on quota, encoder cache, entry point),
   `.venv\Scripts\python.exe tests\test_first_second.py` (6: first-second check, opener swap, logbook small-sample note),
   `.venv\Scripts\python.exe tests\test_full_scenes.py` (43 on 2026-10-21), `.venv\Scripts\python.exe tests\test_pictures_first.py` (36: pool, picture list, topic check, `pic`, picker, review fixes) and
   `.venv\Scripts\python.exe tests\test_style.py` (29: style library, guardrails, inventions, candidates),

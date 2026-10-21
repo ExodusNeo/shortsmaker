@@ -82,6 +82,28 @@ def test_gemini_reviews_get_the_main_model_bulk_pictures_flash():
     assert models == [None, llm.GEMINI_FALLBACK], models  # None = gemini_model(): Argon when the account has it
 
 
+def test_argon_out_of_quota_switches_to_flash():
+    import subprocess
+    old = (llm._gemini_model, llm._argon_exhausted, subprocess.run, shutil.which, session.BRAIN, set(session.NO_QUOTA))
+    asked = []
+
+    def fake_run(cmd, **kw):
+        model = cmd[cmd.index("--model") + 1]
+        asked.append(model)
+        out = "RESOURCE_EXHAUSTED: weekly quota" if model != llm.GEMINI_FALLBACK else '{"ok": 1}'
+        return type("R", (), {"stdout": out, "stderr": ""})()
+    llm._gemini_model, llm._argon_exhausted = "gemini-4-argon-high", False
+    subprocess.run, shutil.which = fake_run, (lambda name: name)
+    session.BRAIN, session.NO_QUOTA = "gemini", set()
+    try:
+        with tempfile.TemporaryDirectory() as d:
+            assert llm.ask_ai("review these frames", read_dir=Path(d)) == {"ok": 1}  # a review picture job, on Argon first
+        assert asked == ["gemini-4-argon-high", llm.GEMINI_FALLBACK], asked
+        assert llm.gemini_model() == llm.GEMINI_FALLBACK  # the rest of the run stays on Flash
+    finally:
+        llm._gemini_model, llm._argon_exhausted, subprocess.run, shutil.which, session.BRAIN, session.NO_QUOTA = old
+
+
 def test_encoder_cache_lives_with_video_encoder():
     assert not hasattr(audio_mix, "_encoder"), "the encoder cache belongs to media_tools"
     old = list(media_tools._encoder)
