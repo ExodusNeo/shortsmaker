@@ -67,6 +67,50 @@ def test_truss_build_and_zoom_frames():
     assert count(wide, RED) < 400  # nothing is red before the zoom
 
 
+STEEL, CONCRETE = (0x9E, 0xA8, 0xB3), (0xE3, 0xDC, 0xCD)
+
+
+def changed(a: Image.Image, b: Image.Image) -> float:
+    """Share of pixels that differ clearly between two frames."""
+    x, y = a.convert("L").resize((270, 480)), b.convert("L").resize((270, 480))
+    return sum(abs(p - q) > 25 for p, q in zip(x.getdata(), y.getdata())) / (270 * 480)
+
+
+def test_each_failure_changes_the_focus():
+    # the same peak frame with and without the failure ("none": Blender ignores it; the plan checker never sends it)
+    def peak(kind):
+        plan = plan_with(["build", "zoom", "failure"])
+        plan["failure"]["kind"] = kind
+        return render(plan, [1.0, 1.5, 2.0], [136], peaks={2: 4.1})[136]
+    still = peak("none")
+    for kind in ("bend", "crack", "shear", "sway"):
+        need = 0.002 if kind == "crack" else 0.02  # a crack is a line: it changes few pixels
+        assert changed(still, peak(kind)) >= need, (kind, changed(still, peak(kind)))
+
+
+def test_collapse_moves_the_span_down():
+    def after(then):
+        plan = plan_with(["build", "zoom", "failure", "aftermath"])
+        plan["failure"]["then"] = then
+        return render(plan, [1.0, 1.0, 1.0, 2.5], [165], peaks={2: 2.6})[165]
+    standing, fallen = after("none"), after("collapse_span")
+    assert count(fallen, STEEL, 20) < count(standing, STEEL, 20) * 0.8, (count(standing, STEEL, 20), count(fallen, STEEL, 20))
+
+
+def test_every_template_renders():
+    for template in ("girder_bridge", "suspension_bridge", "cable_stayed_bridge", "eyebar_chain_bridge"):
+        plan = plan_with(["build", "wide"])
+        plan["structure"] = {**plan["structure"], "template": template, "spans": 3}
+        (wide,) = render(plan, [1.0, 1.0], [60]).values()
+        assert count(wide, STEEL, 20) + count(wide, CONCRETE, 12) >= 0.03 * 1080 * 1920, template  # bridges are slender: 3.4-4.8% in a wide shot
+
+
+def test_failure_preview_cuts_to_an_empty_site():
+    plan = plan_with(["failure_preview", "wide", "build", "zoom"])
+    hook, site = render(plan, [1.5, 1.0, 1.0, 1.0], [45, 46]).values()
+    assert count(site, STEEL, 20) < count(hook, STEEL, 20) * 0.5, (count(hook, STEEL, 20), count(site, STEEL, 20))
+
+
 if __name__ == "__main__":
     if not config.BLENDER.exists():
         print(f"SKIPPED: no Blender at {config.BLENDER}")

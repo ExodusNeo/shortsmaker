@@ -14,6 +14,7 @@ import bpy
 from mathutils import Vector
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
+import failures  # noqa: E402
 import look  # noqa: E402
 import parts  # noqa: E402
 import templates  # noqa: E402
@@ -42,7 +43,7 @@ class Shots:
 
     def __init__(self, b, focus):
         self.center, self.focus = b.center, focus.location.copy()  # matrix_world is stale until a depsgraph update
-        self.far = max(b.length * 0.8, b.H * 5, 60.0)
+        self.far = max(b.length * 0.6, b.H * 5, 60.0)
         self.near = max(parts.bbox_size(focus) * 5, 6.0)
 
     def wide(self, k=1.0, yaw=-62.0, pitch=16.0):
@@ -57,7 +58,7 @@ class Shots:
                 "orbit": (self.wide(1.0, -70), self.wide(1.0, -40)),
                 "build": (self.wide(0.95, -66), self.wide(0.85, -56)),
                 "zoom": (self.wide(0.85, -56), self.close(1.0)),
-                "failure": (self.close(1.4), self.close(1.7)),
+                "failure": (self.close(1.0), self.close(1.2)),
                 "aftermath": (self.close(3.0), self.wide(1.0, -58)),
                 "failure_preview": (self.close(2.2), self.close(1.6))}[name]
 
@@ -92,7 +93,8 @@ def main() -> None:
     red.location, red.rotation_mode = focus.location.copy(), focus.rotation_mode
     red.rotation_euler, red.rotation_quaternion = focus.rotation_euler.copy(), focus.rotation_quaternion.copy()
     red.scale = focus.scale * 1.04
-    details = [red] + parts.fastener(plan["structure"]["fastener"], focus.name, focus, side_y, b.col)
+    fasteners = parts.fastener(plan["structure"]["fastener"], focus.name, focus, side_y, b.col)
+    details = [red] + fasteners
     if plan["focus"].get("label"):
         at = shots.focus + Vector((0, side_y * shots.near * 0.1, shots.near * 0.3))  # centred above the part
         details += parts.label(plan["focus"]["label"], shots.focus, at, shots.near * 0.045, cam)
@@ -101,6 +103,10 @@ def main() -> None:
     scene.frame_start, scene.frame_end = 1, total
     preview_end = scenes[0]["last"] if beats[0] == "failure_preview" else 0
     story = preview_end + 1
+    fail = failures.Failure(b, plan, focus, red, fasteners)
+    if preview_end:  # the hook shows the failure on the finished bridge, then the story starts over
+        fail.play(1, min(scenes[0]["peak_frame"], preview_end - 4))
+        fail.reset(story)
     build_frames = [f for sc, beat in zip(scenes, beats) if beat == "build" for f in range(sc["first"], sc["last"] + 1)]
     for o in b.stages["piers"]:  # the site: piers stand before the steel arrives
         keyvis(o, 1, True)
@@ -129,6 +135,9 @@ def main() -> None:
         keyvis(o, story, False)
         keyvis(o, shown, True)
 
+    hit = next((sc for sc, beat in zip(scenes, beats) if beat == "failure"), None)
+    if hit:
+        fail.play(hit["first"], min(max(hit["peak_frame"], hit["first"]), hit["last"]))
     for i, (sc, beat) in enumerate(zip(scenes, beats)):
         start, end = shots.beat(beat)
         if i == 0 or sc["first"] == story:  # the story's first shot (a cut after the hook)

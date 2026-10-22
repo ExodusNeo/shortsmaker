@@ -96,7 +96,112 @@ def truss_bridge(st: dict) -> Bridge:
     return b
 
 
-TEMPLATES = {"truss_bridge": truss_bridge}
+def _edge_girders(b: Bridge, s: int, depth: float) -> None:
+    """The deck's two edge girders (named like truss bottom chords) with splice plates at every panel point."""
+    for side in ("left", "right"):
+        for i in range(b.P):
+            a, c = b.node(s, i, "bottom", side), b.node(s, i + 1, "bottom", side)
+            b.add("members", parts.member(f"span{s}_panel{i + 1}_bottom_{side}_chord", a - Vector((0, 0, depth / 2)),
+                                          c - Vector((0, 0, depth / 2)), b.th, "steel", b.col, depth=depth), s)
+        for i in range(b.P + 1):
+            b.add("details", parts.gusset_plate(f"span{s}_node{i}_bottom_{side}_gusset",
+                                                b.node(s, i, "bottom", side) - Vector((0, 0, depth / 2)), depth * 0.9,
+                                                -1 if side == "left" else 1, b.col), s)
+
+
+def girder_bridge(st: dict) -> Bridge:
+    """Deck on deep plate girders (four lines of them), spliced at every panel point."""
+    b = Bridge(st)
+    _piers_and_deck(b)
+    depth = min(max(b.L / 18, 1.5), max(b.H, 1.5))
+    for s in range(1, b.spans + 1):
+        _edge_girders(b, s, depth)
+        for y in (-0.15, 0.15):
+            b.add("members", parts.member(f"span{s}_inner_girder_{y}", Vector((b.x0(s), y * b.W, b.deck_z - depth / 2)),
+                                          Vector((b.x0(s) + b.L, y * b.W, b.deck_z - depth / 2)), b.th, "steel", b.col,
+                                          depth=depth), s)
+    return b
+
+
+def _towers(b: Bridge, height: float, at: list[float]) -> list[tuple[float, float]]:
+    tops = []
+    for k, x in enumerate(at):
+        b.add("members", parts.tower(f"tower{k}", x, b.deck_z - 1, height + 1, b.W * 1.1, b.col))
+        tops.append((x, b.deck_z + height))
+    return tops
+
+
+def _sag_points(x0: float, x1: float, z_top: float, z_low: float, n: int, y: float) -> list[Vector]:
+    xm, half = (x0 + x1) / 2, (x1 - x0) / 2
+    return [Vector((x0 + (x1 - x0) * k / n, y, z_top - (z_top - z_low) * (1 - ((x0 + (x1 - x0) * k / n - xm) / half) ** 2)))
+            for k in range(n + 1)]
+
+
+def _hung_deck(b: Bridge, tower_h: float, link: str) -> Bridge:
+    """Suspension or eyebar-chain bridge: towers at the piers, a main cable (or a chain of eyebars on pins) sagging
+    between them, hangers down to the deck's edge girders at every panel point."""
+    _piers_and_deck(b)
+    at = [-b.length / 2 + k * b.L for k in range(b.spans + 1)]
+    tops = dict(_towers(b, tower_h, at[1:-1] if b.spans > 2 else at))
+    for s in range(1, b.spans + 1):
+        _edge_girders(b, s, max(b.L / 60, 1.2))
+        x0, x1 = b.x0(s), b.x0(s) + b.L
+        z0 = tops.get(x0, b.deck_z + tower_h * 0.25)
+        z1 = tops.get(x1, b.deck_z + tower_h * 0.25)
+        for side in ("left", "right"):
+            y = (-1 if side == "left" else 1) * b.W / 2
+            pts = _sag_points(x0, x1, max(z0, z1), b.deck_z + tower_h * 0.12, b.P, y)
+            if z0 != z1:  # a side span: straight-ish from the tower down to the anchorage
+                pts = [Vector((p.x, y, z0 + (z1 - z0) * k / b.P - tower_h * 0.1 * (1 - abs(2 * k / b.P - 1))))
+                       for k, p in enumerate(pts)]
+            for p in range(b.P):
+                if link == "eyebar":
+                    b.add("members", parts.eyebar(f"span{s}_panel{p + 1}_{side}_eyebar", pts[p], pts[p + 1], b.th * 2, b.col), s)
+                else:
+                    b.add("members", parts.main_cable(f"span{s}_panel{p + 1}_{side}_cable", [pts[p], pts[p + 1]], b.th * 0.6, b.col), s)
+            for i in range(b.P + 1):
+                if link == "eyebar":
+                    b.add("details", parts.cylinder(f"span{s}_node{i}_{side}_pin", pts[i] - Vector((0, 0.9, 0)),
+                                                    pts[i] + Vector((0, 0.9, 0)), b.th * 0.8, "dark", b.col), s)
+                if 0 < i < b.P:
+                    b.add("details", parts.hanger(f"span{s}_node{i}_{side}_hanger", pts[i], b.node(s, i, "bottom", side),
+                                                  b.th * 0.18, b.col), s)
+    return b
+
+
+def suspension_bridge(st: dict) -> Bridge:
+    b = Bridge(st)
+    return _hung_deck(b, max(b.H, b.L * 0.11), "cable")
+
+
+def eyebar_chain_bridge(st: dict) -> Bridge:
+    b = Bridge(st)
+    return _hung_deck(b, max(b.H, b.L * 0.11), "eyebar")
+
+
+def cable_stayed_bridge(st: dict) -> Bridge:
+    """A tower at each inner pier (one in the middle for a single span) with stays fanning down to the deck edges."""
+    b = Bridge(st)
+    _piers_and_deck(b)
+    tower_h = max(b.H, b.L * 0.22)
+    at = [-b.length / 2 + k * b.L for k in range(1, b.spans)] or [0.0]
+    _towers(b, tower_h, at)
+    for s in range(1, b.spans + 1):
+        _edge_girders(b, s, max(b.L / 60, 1.2))
+        for side in ("left", "right"):
+            y = (-1 if side == "left" else 1) * b.W / 2
+            for i in range(b.P + 1):
+                deck_pt = b.node(s, i, "bottom", side)
+                x = min(at, key=lambda t: abs(t - deck_pt.x))
+                if abs(x - deck_pt.x) < 1e-6:
+                    continue
+                top = Vector((x, y * 0.8, b.deck_z + tower_h * (0.55 + 0.4 * min(abs(x - deck_pt.x) / b.L, 1))))
+                b.add("members", parts.main_cable(f"span{s}_panel{max(i, 1)}_{side}_cable_{i}", [top, deck_pt], b.th * 0.35, b.col), s)
+    return b
+
+
+TEMPLATES = {"truss_bridge": truss_bridge, "girder_bridge": girder_bridge, "suspension_bridge": suspension_bridge,
+             "cable_stayed_bridge": cable_stayed_bridge, "eyebar_chain_bridge": eyebar_chain_bridge}
 
 
 def build(st: dict) -> Bridge:
@@ -110,7 +215,12 @@ def focus_object(b: Bridge, focus: dict):
     names = {"gusset_plate": f"span{s}_node{p}_{chord}_{side}_gusset",
              "chord": f"span{s}_panel{p}_{chord}_{side}_chord",
              "diagonal": f"span{s}_panel{p}_{side}_diagonal",
-             "vertical": f"span{s}_node{p}_{side}_vertical"}
+             "vertical": f"span{s}_node{p}_{side}_vertical",
+             "eyebar": f"span{s}_panel{p}_{side}_eyebar",
+             "pin_joint": f"span{s}_node{p}_{side}_pin",
+             "hanger": f"span{s}_node{p}_{side}_hanger",
+             "cable": f"span{s}_panel{p}_{side}_cable_0",
+             "pier": f"pier{s}"}
     for name in (names.get(focus["part"]), f"span{s}_node{p}_{chord}_{side}_gusset", f"span{s}_node{p}_bottom_{side}_gusset"):
         if name and name in b.objects:
             return b.objects[name]
