@@ -16,6 +16,7 @@ VAULT = ROOT / "vault"
 LOGBOOK = VAULT / "Logbook"  # <channel>.md: each Short made, with the YouTube numbers the owner fills in
 OUTPUT = ROOT / "output"  # each channel's Shorts go in output/<name>/
 REMOTION = ROOT / "remotion"  # React/Remotion renderer for motion-graphics-heavy plans
+BLENDER = Path(r"D:\Blender\blender.exe")  # headless Blender for channels with visuals: blender (blender/build_scene.py)
 SHOTCUT = Path(r"D:\Shotcut\shotcut.exe")  # open-source editor for fixing by hand what the fix rounds left (edit.mlt)
 # Style library (2026-10-19): photo looks, overlays and transitions, presets + owner-approved AI inventions
 STYLE_DIR = REMOTION / "src" / "style"
