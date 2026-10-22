@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[parse_rules()]] - `calls` [EXTRACTED]
 - [[test_bad_min_pictures_stops()]] - `calls` [EXTRACTED]
-- [[test_blender_stops()]] - `calls` [EXTRACTED]
+- [[test_blender_needs_a_build_plan_section()]] - `calls` [EXTRACTED]
 - [[test_draft_stops()]] - `calls` [EXTRACTED]
 - [[test_draft_writes_tagged_draft_file()]] - `calls` [EXTRACTED]
 - [[test_duplicate_heading_stops()]] - `calls` [EXTRACTED]

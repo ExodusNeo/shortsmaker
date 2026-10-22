@@ -11,6 +11,8 @@ tags:
 # hashlib
 
 ## Connections
+- [[blender_render.py]] - `imports` [EXTRACTED]
+- [[code_version()]] - `calls` [EXTRACTED]
 - [[footage.py]] - `imports` [EXTRACTED]
 - [[gpu.py]] - `imports` [EXTRACTED]
 - [[image_sources.py]] - `imports` [EXTRACTED]

@@ -12,13 +12,14 @@ tags:
 # ffmpeg()
 
 ## Connections
-- [[Path_14]] - `references` [EXTRACTED]
+- [[Path_18]] - `references` [EXTRACTED]
 - [[caption_layer()]] - `calls` [EXTRACTED]
 - [[first_second_check()]] - `calls` [EXTRACTED]
 - [[local_clips()]] - `calls` [EXTRACTED]
 - [[media_tools.py]] - `contains` [EXTRACTED]
 - [[preview_sheet()]] - `calls` [EXTRACTED]
-- [[render()]] - `calls` [EXTRACTED]
+- [[render()_1]] - `calls` [EXTRACTED]
+- [[render_clips()]] - `calls` [EXTRACTED]
 - [[short_folder()]] - `calls` [EXTRACTED]
 - [[split_takes()]] - `calls` [EXTRACTED]
 - [[story_sound()]] - `calls` [EXTRACTED]

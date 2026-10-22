@@ -1,17 +1,19 @@
 ---
 source_file: ""
 type: "concept"
-community: "audio_mix.py"
+community: "json"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/audio_mixpy
+  - community/json
 ---
 
 # subprocess
 
 ## Connections
+- [[_run()]] - `calls` [EXTRACTED]
 - [[audio_mix.py]] - `imports` [EXTRACTED]
+- [[blender_render.py]] - `imports` [EXTRACTED]
 - [[duration()]] - `calls` [EXTRACTED]
 - [[edit_project.py]] - `imports` [EXTRACTED]
 - [[ffmpeg()]] - `calls` [EXTRACTED]
@@ -23,7 +25,7 @@ tags:
 - [[image_sources.py]] - `imports` [EXTRACTED]
 - [[llm.py]] - `imports` [EXTRACTED]
 - [[local_job()]] - `calls` [EXTRACTED]
-- [[main()]] - `calls` [EXTRACTED]
+- [[main()_5]] - `calls` [EXTRACTED]
 - [[master_gain()]] - `calls` [EXTRACTED]
 - [[media_tools.py]] - `imports` [EXTRACTED]
 - [[moss_images()]] - `calls` [EXTRACTED]
@@ -33,7 +35,7 @@ tags:
 - [[quality_check()]] - `calls` [EXTRACTED]
 - [[qwen_voice.py]] - `imports` [EXTRACTED]
 - [[remotion_render.py]] - `imports` [EXTRACTED]
-- [[render()]] - `calls` [EXTRACTED]
+- [[render()_1]] - `calls` [EXTRACTED]
 - [[render_full.py]] - `imports` [EXTRACTED]
 - [[render_style.py]] - `imports` [EXTRACTED]
 - [[review.py]] - `imports` [EXTRACTED]
@@ -43,10 +45,11 @@ tags:
 - [[split_make_shorts.py]] - `imports` [EXTRACTED]
 - [[storyboard()]] - `calls` [EXTRACTED]
 - [[studio_speak()]] - `calls` [EXTRACTED]
+- [[test_blender_scene.py]] - `imports` [EXTRACTED]
 - [[test_edit_project.py]] - `imports` [EXTRACTED]
 - [[test_full_scenes.py]] - `imports` [EXTRACTED]
 - [[tsc_check()]] - `calls` [EXTRACTED]
 - [[video_encoder()]] - `calls` [EXTRACTED]
 - [[voicestudio_up()]] - `calls` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/audio_mixpy
+#graphify/concept #graphify/EXTRACTED #community/json

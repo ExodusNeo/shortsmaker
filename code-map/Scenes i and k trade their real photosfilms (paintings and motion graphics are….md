@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/review.py"
 type: "rationale"
-community: "test_first_second.py"
-location: "L139"
+community: "run_check"
+location: "L144"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/test_first_secondpy
+  - community/run_check
 ---
 
 # Scenes i and k trade their real photos/films (paintings and motion graphics are…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[swap_pictures()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/test_first_secondpy
+#graphify/rationale #graphify/EXTRACTED #community/run_check

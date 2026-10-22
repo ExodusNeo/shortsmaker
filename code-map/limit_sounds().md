@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/audio_mix.py"
 type: "code"
-community: "limit_sounds"
+community: "clean_full"
 location: "L101"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/limit_sounds
+  - community/clean_full
 ---
 
 # limit_sounds()
@@ -17,4 +17,4 @@ tags:
 - [[test_clean_sound()]] - `calls` [EXTRACTED]
 - [[write_scripts()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/limit_sounds
+#graphify/code #graphify/EXTRACTED #community/clean_full

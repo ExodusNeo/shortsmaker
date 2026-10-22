@@ -1,21 +1,21 @@
 ---
-source_file: "tests/render_full.py"
+source_file: "local_ai/gen.py"
 type: "code"
-community: "audio_mix.py"
-location: "L28"
+community: "gen.py"
+location: "L200"
 tags:
   - graphify/code
-  - graphify/EXTRACTED
-  - community/audio_mixpy
+  - graphify/INFERRED
+  - community/genpy
 ---
 
 # main()
 
 ## Connections
-- [[json]] - `calls` [EXTRACTED]
-- [[props_for()]] - `calls` [EXTRACTED]
-- [[render_full.py]] - `contains` [EXTRACTED]
-- [[shutil]] - `calls` [EXTRACTED]
-- [[subprocess]] - `calls` [EXTRACTED]
+- [[gen.py]] - `contains` [EXTRACTED]
+- [[images()]] - `indirect_call` [INFERRED]
+- [[parallax()]] - `indirect_call` [INFERRED]
+- [[tts()]] - `indirect_call` [INFERRED]
+- [[video()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/audio_mixpy
+#graphify/code #graphify/INFERRED #community/genpy

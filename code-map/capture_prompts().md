@@ -1,27 +1,27 @@
 ---
 source_file: "tests/test_rules.py"
 type: "code"
-community: "test_rules.py"
+community: "capture_prompts"
 location: "L61"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_rulespy
+  - community/capture_prompts
 ---
 
 # capture_prompts()
 
 ## Connections
 - [[Every prompt strange-history's writer, editor, director, fact check, picture…]] - `rationale_for` [EXTRACTED]
-- [[ask()]] - `indirect_call` [INFERRED]
+- [[ask()_9]] - `indirect_call` [INFERRED]
 - [[catalog_pool()]] - `calls` [EXTRACTED]
 - [[choose_images()]] - `calls` [EXTRACTED]
 - [[first_second_check()]] - `calls` [EXTRACTED]
 - [[load_rules()]] - `calls` [EXTRACTED]
-- [[prepare()]] - `indirect_call` [INFERRED]
+- [[prepare()_5]] - `indirect_call` [INFERRED]
 - [[rewrite_paint_prompts()]] - `calls` [EXTRACTED]
 - [[test_rules.py]] - `contains` [EXTRACTED]
 - [[test_strange_history_prompts_unchanged()]] - `calls` [EXTRACTED]
 - [[write_scripts()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_rulespy
+#graphify/code #graphify/EXTRACTED #community/capture_prompts

@@ -650,8 +650,41 @@ stops the run with the file and heading named. Never a fallback to another chann
   waiting for the owner's review.
 - `tests/test_rules.py`: `tests/golden/prompts.json` holds every prompt strange-history sent before the move; the
   golden test proves they are still identical. Re-save it (`--save-golden`) only when a prompt change is intended.
-- Next (planned): the engineering-failures channel drawn in Blender (`visuals: blender`), its planning rules only in
-  its own rules file.
+- `visuals: blender` channels: see "Blender channels"; their engineer instructions are the `## Build plan` section.
+
+## Blender channels (2026-10-22, owner asked; first: engineering-failures)
+A channel whose rules say `visuals: blender` is drawn entirely in Blender (`D:\Blender\blender.exe`, 5.2.1, run
+headless): every scene is a 3D "ink manual" drawing (flat colours, paper sky, ink outlines, the failing part
+red); the only real photo is the thumbnail (one archival photo of the real structure). Owner's choices: bridges only
+at launch; failures crack / bend / shear / sway, optionally then collapse_span; fasteners rivet / bolt / pin / weld
+(never screws); no painting or photo fall-back. Spec/plan: `docs/superpowers/specs|plans/2026-10-22-blender-*`.
+- Engineer step (`blender_plan.plan_builds`, end of `write_scripts`): one AI call writes each Short's build plan
+  (template, sizes, focus part + label, failure, scale, one beat per scene) from the channel's `## Build plan`
+  rules; `clean_build` checks every value (tables at the top of `blender_plan.py`), fills missing beats and always
+  puts a zoom before a failure; an unusable plan is asked for once more, then `default_build` (generic truss bridge,
+  CHECK line). Scenes get no motion graphics, callouts or person cards.
+- Render (`short_render.render`, `drawn = bool(short.get("build"))`): no picture picking or painting; after the
+  voice, `blender_render.render_clips` writes `work/build.json` and runs `blender/build_scene.py`; frames go to
+  `work/blender_frames/`, one clip per scene `work/blender{i}.mp4` (played like real film). Same build.json + all
+  frames present = no redraw (build.json carries a fingerprint of `blender/*.py`, so a code update redraws). Blender failing twice raises `BlenderFailed`: cli keeps that Short's folder and goes on.
+  The review is told the drawings are deliberate; its findings stay CHECK lines (no automatic fix rounds).
+  Thumbnail: `drawn_thumbnail` (pool opener photo, else the zoom frame + CHECK).
+- Blender side (`blender/`, plain bpy, not imported by the package): `look.py` (colours, flat materials, ink
+  outlines from a GPU compositor: Sobel edges of the normal pass + the flat colours; Freestyle was 3-7 s a frame on
+  a full bridge), `parts.py` (parts kit; linked-duplicate meshes; labels with leader lines face the camera),
+  `templates.py` (truss, girder, suspension, cable-stayed, eyebar-chain; part names like
+  `span2_node3_bottom_left_gusset`), `failures.py` (bend = subdivided plate warped in its plane + sag; crack = ink
+  segments; shear = fasteners pop + slip; sway = growing twist; collapse = span pivot drops), `build_scene.py`
+  (piers stand from the start; the bridge stands finished until the first build scene, which cuts to the empty
+  site and drops the parts in; the hook shows the part failing without the collapse, peaking by 1.5 s; the label
+  falls with its span and close shots after the failure aim at the fallen part; renders PNG frames).
+  Blender 5.2 gotchas: no video file format (render PNG, join with ffmpeg); a new material's node tree needs a fresh
+  Output node; `matrix_world` is stale until a depsgraph update (use `.location`); a SimpleDeform needs a subdivided
+  mesh. About 0.3 s per 1080x1920 frame on this PC (a 45 s Short: ~7 min of Blender).
+- Sample: `output/_blender_sample/i35w/` (hand-written I-35W script, real render path, 2026-10-22). Its review left
+  content notes the kit can't show yet (no gravel, crews or equipment on the deck) and a 6/10 first second.
+- Tests: `tests/test_blender_plan.py`, `test_blender_render.py` (fake Blender), `test_blender_run.py`,
+  `test_blender_scene.py` (real headless Blender, a few minutes).
 
 ## Ideas offered, not built
 - Voice cloning (owner's own voice), SFX on the music's beat, YouTube Audio Library tracks for the somber/epic moods.

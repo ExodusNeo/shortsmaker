@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[gen.py]] - `contains` [EXTRACTED]
 - [[item {image, prompt, out (.mp4), frames} - image-to-video clip at…]] - `rationale_for` [EXTRACTED]
-- [[main()_1]] - `indirect_call` [INFERRED]
+- [[main()]] - `indirect_call` [INFERRED]
 - [[t5_encoder()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/genpy

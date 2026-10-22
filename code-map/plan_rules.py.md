@@ -15,6 +15,7 @@ tags:
 - [[Cleaning and validating the planner's JSON (graphics, full-screen scenes,…]] - `rationale_for` [EXTRACTED]
 - [[__init__.py]] - `imports_from` [EXTRACTED]
 - [[audio_mix.py]] - `imports_from` [EXTRACTED]
+- [[blender_render.py]] - `imports_from` [EXTRACTED]
 - [[channel_profiles.py]] - `imports_from` [EXTRACTED]
 - [[clean_full()]] - `contains` [EXTRACTED]
 - [[clean_graphic()]] - `contains` [EXTRACTED]

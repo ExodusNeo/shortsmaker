@@ -14,6 +14,7 @@ tags:
 ## Connections
 - [[Start time of the first time `phrase` is spoken, from TTS word timings.]] - `rationale_for` [EXTRACTED]
 - [[full_cues()]] - `calls` [EXTRACTED]
+- [[peaks()]] - `calls` [EXTRACTED]
 - [[plan_rules.py]] - `contains` [EXTRACTED]
 - [[scene_cues()]] - `calls` [EXTRACTED]
 - [[spoken_span()]] - `calls` [EXTRACTED]

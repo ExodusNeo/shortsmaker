@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "film_piece"
+community: "pool_pictures"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/film_piece
+  - community/pool_pictures
 ---
 
 # Path
@@ -14,4 +14,4 @@ tags:
 - [[film_piece()]] - `references` [EXTRACTED]
 - [[shot_span()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/film_piece
+#graphify/code #graphify/EXTRACTED #community/pool_pictures

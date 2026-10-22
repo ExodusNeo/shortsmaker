@@ -1,17 +1,19 @@
 ---
 source_file: ""
 type: "concept"
-community: "plan_rules.py"
+community: "test_full_scenes.py"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/plan_rulespy
+  - community/test_full_scenespy
 ---
 
 # pathlib
 
 ## Connections
 - [[audio_mix.py]] - `imports_from` [EXTRACTED]
+- [[blender_render.py]] - `imports_from` [EXTRACTED]
+- [[build_scene.py]] - `imports_from` [EXTRACTED]
 - [[cli.py]] - `imports_from` [EXTRACTED]
 - [[config.py]] - `imports_from` [EXTRACTED]
 - [[edit_project.py]] - `imports_from` [EXTRACTED]
@@ -41,6 +43,10 @@ tags:
 - [[short_render.py]] - `imports_from` [EXTRACTED]
 - [[split_make_shorts.py]] - `imports_from` [EXTRACTED]
 - [[style_lab.py]] - `imports_from` [EXTRACTED]
+- [[test_blender_plan.py]] - `imports_from` [EXTRACTED]
+- [[test_blender_render.py]] - `imports_from` [EXTRACTED]
+- [[test_blender_run.py]] - `imports_from` [EXTRACTED]
+- [[test_blender_scene.py]] - `imports_from` [EXTRACTED]
 - [[test_edit_project.py]] - `imports_from` [EXTRACTED]
 - [[test_first_second.py]] - `imports_from` [EXTRACTED]
 - [[test_full_scenes.py]] - `imports_from` [EXTRACTED]
@@ -52,4 +58,4 @@ tags:
 - [[test_style.py]] - `imports_from` [EXTRACTED]
 - [[writing.py]] - `imports_from` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/plan_rulespy
+#graphify/concept #graphify/EXTRACTED #community/test_full_scenespy

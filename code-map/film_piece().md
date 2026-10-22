@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/footage.py"
 type: "code"
-community: "film_piece"
+community: "pool_pictures"
 location: "L198"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/film_piece
+  - community/pool_pictures
 ---
 
 # film_piece()
@@ -20,4 +20,4 @@ tags:
 - [[pool_pictures()]] - `calls` [EXTRACTED]
 - [[subprocess]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/film_piece
+#graphify/code #graphify/EXTRACTED #community/pool_pictures

@@ -23,6 +23,8 @@ tags:
 - [[remotion_render.py]] - `imports_from` [EXTRACTED]
 - [[review.py]] - `imports_from` [EXTRACTED]
 - [[short_render.py]] - `imports_from` [EXTRACTED]
+- [[test_blender_run.py]] - `imports_from` [EXTRACTED]
+- [[test_blender_scene.py]] - `imports_from` [EXTRACTED]
 - [[test_full_scenes.py]] - `imports_from` [EXTRACTED]
 
 #graphify/concept #graphify/EXTRACTED #community/plan_rulespy

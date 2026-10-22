@@ -2,7 +2,7 @@
 source_file: "shortsmaker/config.py"
 type: "code"
 community: "plan_rules.py"
-location: "L69"
+location: "L70"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -16,7 +16,7 @@ tags:
 - [[luminance()_1]] - `calls` [EXTRACTED]
 - [[make_paper()]] - `calls` [EXTRACTED]
 - [[remotion_render.py]] - `imports` [EXTRACTED]
-- [[render()]] - `calls` [EXTRACTED]
+- [[render()_1]] - `calls` [EXTRACTED]
 - [[short_render.py]] - `imports` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/plan_rulespy

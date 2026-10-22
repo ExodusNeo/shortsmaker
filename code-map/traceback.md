@@ -1,16 +1,20 @@
 ---
 source_file: ""
 type: "concept"
-community: "test_first_second.py"
+community: "test_full_scenes.py"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/test_first_secondpy
+  - community/test_full_scenespy
 ---
 
 # traceback
 
 ## Connections
+- [[test_blender_plan.py]] - `imports` [EXTRACTED]
+- [[test_blender_render.py]] - `imports` [EXTRACTED]
+- [[test_blender_run.py]] - `imports` [EXTRACTED]
+- [[test_blender_scene.py]] - `imports` [EXTRACTED]
 - [[test_edit_project.py]] - `imports` [EXTRACTED]
 - [[test_first_second.py]] - `imports` [EXTRACTED]
 - [[test_full_scenes.py]] - `imports` [EXTRACTED]
@@ -19,4 +23,4 @@ tags:
 - [[test_rules.py]] - `imports` [EXTRACTED]
 - [[test_story.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/test_first_secondpy
+#graphify/concept #graphify/EXTRACTED #community/test_full_scenespy

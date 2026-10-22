@@ -14,6 +14,7 @@ tags:
 ## Connections
 - [[Small shared helpers downloads, ffmpeg, video encoder choice, durations, JSON…]] - `rationale_for` [EXTRACTED]
 - [[audio_mix.py]] - `imports_from` [EXTRACTED]
+- [[blender_render.py]] - `imports_from` [EXTRACTED]
 - [[clock()_1]] - `contains` [EXTRACTED]
 - [[duration()]] - `contains` [EXTRACTED]
 - [[edit_project.py]] - `imports_from` [EXTRACTED]
@@ -33,6 +34,8 @@ tags:
 - [[seo.py]] - `imports_from` [EXTRACTED]
 - [[short_render.py]] - `imports_from` [EXTRACTED]
 - [[subprocess]] - `imports` [EXTRACTED]
+- [[test_blender_render.py]] - `imports_from` [EXTRACTED]
+- [[test_blender_run.py]] - `imports_from` [EXTRACTED]
 - [[test_edit_project.py]] - `imports_from` [EXTRACTED]
 - [[test_first_second.py]] - `imports_from` [EXTRACTED]
 - [[test_package.py]] - `imports_from` [EXTRACTED]

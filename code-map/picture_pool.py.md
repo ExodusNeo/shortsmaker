@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/picture_pool.py"
 type: "code"
-community: "plan_rules.py"
+community: "test_full_scenes.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/plan_rulespy
+  - community/test_full_scenespy
 ---
 
 # picture_pool.py
@@ -14,6 +14,7 @@ tags:
 ## Connections
 - [[The pictures gathered for a topic before writing, their catalog, cache and…]] - `rationale_for` [EXTRACTED]
 - [[__init__.py]] - `imports_from` [EXTRACTED]
+- [[blender_plan.py]] - `imports_from` [EXTRACTED]
 - [[catalog_entries()]] - `contains` [EXTRACTED]
 - [[catalog_pool()]] - `contains` [EXTRACTED]
 - [[catalog_text()]] - `contains` [EXTRACTED]
@@ -44,8 +45,10 @@ tags:
 - [[rules.py]] - `imports_from` [EXTRACTED]
 - [[save_pool()]] - `contains` [EXTRACTED]
 - [[session.py]] - `imports_from` [EXTRACTED]
+- [[short_render.py]] - `imports_from` [EXTRACTED]
 - [[shutil]] - `imports` [EXTRACTED]
 - [[sys]] - `imports` [EXTRACTED]
+- [[test_blender_run.py]] - `imports_from` [EXTRACTED]
 - [[test_full_scenes.py]] - `imports_from` [EXTRACTED]
 - [[test_pictures_first.py]] - `imports_from` [EXTRACTED]
 - [[test_rules.py]] - `imports_from` [EXTRACTED]
@@ -54,4 +57,4 @@ tags:
 - [[usable()]] - `contains` [EXTRACTED]
 - [[writing.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/plan_rulespy
+#graphify/code #graphify/EXTRACTED #community/test_full_scenespy

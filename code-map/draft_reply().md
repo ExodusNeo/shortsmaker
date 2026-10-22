@@ -1,17 +1,18 @@
 ---
 source_file: "tests/test_rules.py"
 type: "code"
-community: "test_rules.py"
-location: "L214"
+community: "run_draft"
+location: "L230"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_rulespy
+  - community/run_draft
 ---
 
 # draft_reply()
 
 ## Connections
+- [[test_draft_blender_channel_needs_build_plan()]] - `calls` [EXTRACTED]
 - [[test_draft_keeps_ai_headings_inside_their_section()]] - `calls` [EXTRACTED]
 - [[test_draft_never_overwrites()]] - `calls` [EXTRACTED]
 - [[test_draft_retries_once_then_stops()]] - `calls` [EXTRACTED]
@@ -20,4 +21,4 @@ tags:
 - [[test_missing_rules_file_is_drafted()]] - `calls` [EXTRACTED]
 - [[test_rules.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_rulespy
+#graphify/code #graphify/EXTRACTED #community/run_draft

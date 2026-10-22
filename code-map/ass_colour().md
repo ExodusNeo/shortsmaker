@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/config.py"
 type: "code"
-community: "captions"
-location: "L112"
+community: "render_remotion"
+location: "L113"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/captions
+  - community/render_remotion
 ---
 
 # ass_colour()
@@ -14,8 +14,8 @@ tags:
 ## Connections
 - [[ASS subtitle colour (&H00BBGGRR&), optionally darkened (for an outline).]] - `rationale_for` [EXTRACTED]
 - [[audio_mix.py]] - `imports` [EXTRACTED]
-- [[captions()_1]] - `calls` [EXTRACTED]
+- [[captions()]] - `calls` [EXTRACTED]
 - [[config.py]] - `contains` [EXTRACTED]
 - [[styled()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/captions
+#graphify/code #graphify/EXTRACTED #community/render_remotion

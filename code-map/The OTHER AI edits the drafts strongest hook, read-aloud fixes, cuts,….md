@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/writing.py"
 type: "rationale"
-community: "test_story.py"
-location: "L226"
+community: "write_scripts"
+location: "L229"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/test_storypy
+  - community/write_scripts
 ---
 
 # The OTHER AI edits the drafts: strongest hook, read-aloud fixes, cuts,…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[edit_scripts()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/test_storypy
+#graphify/rationale #graphify/EXTRACTED #community/write_scripts

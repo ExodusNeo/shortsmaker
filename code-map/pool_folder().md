@@ -12,7 +12,7 @@ tags:
 # pool_folder()
 
 ## Connections
-- [[Path_3]] - `references` [EXTRACTED]
+- [[Path_2]] - `references` [EXTRACTED]
 - [[hashlib]] - `calls` [EXTRACTED]
 - [[picture_pool.py]] - `contains` [EXTRACTED]
 - [[prepare_topic()]] - `calls` [EXTRACTED]

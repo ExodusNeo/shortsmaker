@@ -12,9 +12,10 @@ tags:
 # load_pool()
 
 ## Connections
-- [[Path_3]] - `references` [EXTRACTED]
+- [[Path_2]] - `references` [EXTRACTED]
 - [[The saved pool (None if missing or unreadable it is gathered again);…]] - `rationale_for` [EXTRACTED]
 - [[choose_images()]] - `calls` [EXTRACTED]
+- [[drawn_thumbnail()]] - `calls` [EXTRACTED]
 - [[json]] - `calls` [EXTRACTED]
 - [[picture_pool.py]] - `contains` [EXTRACTED]
 - [[pictures_of()]] - `calls` [EXTRACTED]

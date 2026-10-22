@@ -1,18 +1,18 @@
 ---
 source_file: "tests/render_full.py"
 type: "code"
-community: "audio_mix.py"
+community: "json"
 location: "L16"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/audio_mixpy
+  - community/json
 ---
 
 # props_for()
 
 ## Connections
-- [[main()]] - `calls` [EXTRACTED]
+- [[main()_5]] - `calls` [EXTRACTED]
 - [[render_full.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/audio_mixpy
+#graphify/code #graphify/EXTRACTED #community/json

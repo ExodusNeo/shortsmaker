@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_style.py"
 type: "code"
-community: "approve_candidate"
+community: "test_style.py"
 location: "L370"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/approve_candidate
+  - community/test_stylepy
 ---
 
 # library_snapshot()
@@ -18,4 +18,4 @@ tags:
 - [[test_approve_rolls_back_when_the_check_crashes()]] - `calls` [EXTRACTED]
 - [[test_style.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/approve_candidate
+#graphify/code #graphify/EXTRACTED #community/test_stylepy

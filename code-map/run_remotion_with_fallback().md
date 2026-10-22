@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[remotion_render.py]] - `contains` [EXTRACTED]
-- [[render()_1]] - `calls` [EXTRACTED]
+- [[render()_2]] - `calls` [EXTRACTED]
 - [[render(props); if it fails while AI inventions are in use, they are swapped for…]] - `rationale_for` [EXTRACTED]
 - [[render_remotion()]] - `calls` [EXTRACTED]
 - [[restore_style_slots()]] - `calls` [EXTRACTED]

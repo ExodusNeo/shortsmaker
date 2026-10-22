@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_rules.py"
 type: "rationale"
-community: "test_rules.py"
+community: "capture_prompts"
 location: "L62"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/test_rulespy
+  - community/capture_prompts
 ---
 
 # Every prompt strange-history's writer, editor, director, fact check, picture…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[capture_prompts()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/test_rulespy
+#graphify/rationale #graphify/EXTRACTED #community/capture_prompts

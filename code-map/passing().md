@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[prepare()_2]] - `calls` [EXTRACTED]
 - [[prepare()_3]] - `calls` [EXTRACTED]
-- [[prepare()_5]] - `calls` [EXTRACTED]
+- [[prepare()_4]] - `calls` [EXTRACTED]
 - [[prepare()_1]] - `indirect_call` [INFERRED]
 - [[test_all_weak_returns_empty()]] - `calls` [EXTRACTED]
 - [[test_pictures_first.py]] - `contains` [EXTRACTED]

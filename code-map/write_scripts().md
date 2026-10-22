@@ -2,7 +2,7 @@
 source_file: "shortsmaker/writing.py"
 type: "code"
 community: "write_scripts"
-location: "L29"
+location: "L30"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -32,10 +32,11 @@ tags:
 - [[limit_style()]] - `calls` [EXTRACTED]
 - [[load_pool()]] - `calls` [EXTRACTED]
 - [[logbook_results()]] - `calls` [EXTRACTED]
-- [[main()_4]] - `calls` [EXTRACTED]
+- [[main()_3]] - `calls` [EXTRACTED]
 - [[narration_lines()]] - `calls` [EXTRACTED]
 - [[pictures_of()]] - `calls` [EXTRACTED]
-- [[plan_with()]] - `calls` [EXTRACTED]
+- [[plan_builds()]] - `calls` [EXTRACTED]
+- [[plan_with()_1]] - `calls` [EXTRACTED]
 - [[prepare_topic()]] - `calls` [EXTRACTED]
 - [[save_channel()]] - `calls` [EXTRACTED]
 - [[settle_style()]] - `calls` [EXTRACTED]

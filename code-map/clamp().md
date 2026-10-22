@@ -1,0 +1,19 @@
+---
+source_file: "shortsmaker/blender_plan.py"
+type: "code"
+community: "test_blender_scene.py"
+location: "L32"
+tags:
+  - graphify/code
+  - graphify/EXTRACTED
+  - community/test_blender_scenepy
+---
+
+# clamp()
+
+## Connections
+- [[A number in lo, hi (whole numbers stay whole), or the default for anything…]] - `rationale_for` [EXTRACTED]
+- [[blender_plan.py]] - `contains` [EXTRACTED]
+- [[clean_build()]] - `calls` [EXTRACTED]
+
+#graphify/code #graphify/EXTRACTED #community/test_blender_scenepy

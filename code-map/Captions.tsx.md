@@ -12,7 +12,7 @@ tags:
 # Captions.tsx
 
 ## Connections
-- [[Captions()]] - `contains` [EXTRACTED]
+- [[Captions()_1]] - `contains` [EXTRACTED]
 - [[FONT]] - `imports` [EXTRACTED]
 - [[Graphics.tsx]] - `imports_from` [EXTRACTED]
 - [[Short.tsx]] - `imports_from` [EXTRACTED]

@@ -12,7 +12,7 @@ tags:
 # render_remotion()
 
 ## Connections
-- [[Path_19]] - `references` [EXTRACTED]
+- [[Path_24]] - `references` [EXTRACTED]
 - [[Render the silent video (with captions) through the Remotion project; returns…]] - `rationale_for` [EXTRACTED]
 - [[caption_lines()]] - `calls` [EXTRACTED]
 - [[code_custom_scenes()]] - `calls` [EXTRACTED]
@@ -22,8 +22,8 @@ tags:
 - [[make_paper()]] - `calls` [EXTRACTED]
 - [[remotion()]] - `contains` [EXTRACTED]
 - [[remotion_render.py]] - `contains` [EXTRACTED]
-- [[render()]] - `calls` [EXTRACTED]
-- [[render()_1]] - `indirect_call` [INFERRED]
+- [[render()_1]] - `calls` [EXTRACTED]
+- [[render()_2]] - `indirect_call` [INFERRED]
 - [[restore_style_slots()]] - `calls` [EXTRACTED]
 - [[run_remotion_with_fallback()]] - `calls` [EXTRACTED]
 - [[short_skin()]] - `calls` [EXTRACTED]

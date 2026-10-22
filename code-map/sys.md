@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "concept"
-community: "audio_mix.py"
+community: "test_full_scenes.py"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/audio_mixpy
+  - community/test_full_scenespy
 ---
 
 # sys
 
 ## Connections
+- [[build_scene.py]] - `imports` [EXTRACTED]
 - [[catalog_pool()]] - `calls` [EXTRACTED]
 - [[channel_profiles.py]] - `imports` [EXTRACTED]
 - [[cli.py]] - `imports` [EXTRACTED]
@@ -24,6 +25,10 @@ tags:
 - [[render_style.py]] - `imports` [EXTRACTED]
 - [[run_ts_tests.py]] - `imports` [EXTRACTED]
 - [[split_make_shorts.py]] - `imports` [EXTRACTED]
+- [[test_blender_plan.py]] - `imports` [EXTRACTED]
+- [[test_blender_render.py]] - `imports` [EXTRACTED]
+- [[test_blender_run.py]] - `imports` [EXTRACTED]
+- [[test_blender_scene.py]] - `imports` [EXTRACTED]
 - [[test_edit_project.py]] - `imports` [EXTRACTED]
 - [[test_first_second.py]] - `imports` [EXTRACTED]
 - [[test_full_scenes.py]] - `imports` [EXTRACTED]
@@ -34,4 +39,4 @@ tags:
 - [[test_story.py]] - `imports` [EXTRACTED]
 - [[test_style.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/audio_mixpy
+#graphify/concept #graphify/EXTRACTED #community/test_full_scenespy

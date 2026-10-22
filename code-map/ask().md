@@ -1,18 +1,17 @@
 ---
-source_file: "tests/test_rules.py"
+source_file: "shortsmaker/blender_plan.py"
 type: "code"
-community: "test_rules.py"
-location: "L68"
+community: "test_blender_scene.py"
+location: "L111"
 tags:
   - graphify/code
-  - graphify/INFERRED
-  - community/test_rulespy
+  - graphify/EXTRACTED
+  - community/test_blender_scenepy
 ---
 
 # ask()
 
 ## Connections
-- [[capture_prompts()]] - `indirect_call` [INFERRED]
-- [[run_draft()]] - `indirect_call` [INFERRED]
+- [[plan_builds()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/test_rulespy
+#graphify/code #graphify/EXTRACTED #community/test_blender_scenepy

@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[FullScene()]] - `calls` [EXTRACTED]
 - [[Look]] - `calls` [EXTRACTED]
-- [[Short()]] - `calls` [EXTRACTED]
+- [[Short()_1]] - `calls` [EXTRACTED]
 - [[Short.tsx]] - `contains` [EXTRACTED]
 - [[lookFor()]] - `calls` [EXTRACTED]
 - [[transitionFor()]] - `calls` [EXTRACTED]

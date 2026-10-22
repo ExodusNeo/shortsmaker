@@ -1,23 +1,23 @@
 ---
 source_file: "shortsmaker/audio_mix.py"
 type: "code"
-community: "render"
+community: "speak"
 location: "L134"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/render
+  - community/speak
 ---
 
 # story_sound()
 
 ## Connections
-- [[Path_18]] - `references` [EXTRACTED]
+- [[Path_20]] - `references` [EXTRACTED]
 - [[The sound file for a story sound the owner's own file in…]] - `rationale_for` [EXTRACTED]
 - [[audio_mix.py]] - `contains` [EXTRACTED]
 - [[ffmpeg()]] - `calls` [EXTRACTED]
 - [[re]] - `calls` [EXTRACTED]
-- [[render()]] - `calls` [EXTRACTED]
+- [[render()_1]] - `calls` [EXTRACTED]
 - [[test_story_sound_library()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/render
+#graphify/code #graphify/EXTRACTED #community/speak
