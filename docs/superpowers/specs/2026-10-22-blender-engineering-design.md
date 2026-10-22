@@ -139,7 +139,7 @@ Plain Blender Python run headless; not imported by the package.
 ## Testing
 
 - Python (no Blender, no AI): `clean_build` (every field: bad values replaced or dropped, beats filled in,
-  Blender-share limits, missing scenes), beat timing math (frame ranges from bounds, failure peak on the emphasis
+  zoom and failure beats guaranteed, missing scenes), beat timing math (frame ranges from bounds, failure peak on the emphasis
   word), clip cutting, cache reuse, fallback with Blender faked to fail / time out / be missing, the
   `## Build plan` requirement, `visuals: blender` accepted, `default_build` after two bad replies, the thumbnail
   photo choice (opener first, none -> zoom frame), a failed Blender render ending only that Short.
