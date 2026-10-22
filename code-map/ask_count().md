@@ -1,18 +1,18 @@
 ---
 source_file: "shortsmaker/channel_profiles.py"
 type: "code"
-community: "Entry Point & Channel Menus"
-location: "L47"
+community: "re"
+location: "L50"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Entry_Point__Channel_Menus
+  - community/re
 ---
 
 # ask_count()
 
 ## Connections
 - [[channel_profiles.py]] - `contains` [EXTRACTED]
-- [[main()_2]] - `calls` [EXTRACTED]
+- [[main()_3]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Entry_Point__Channel_Menus
+#graphify/code #graphify/EXTRACTED #community/re

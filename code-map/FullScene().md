@@ -1,17 +1,18 @@
 ---
 source_file: "remotion/src/full/FullScene.tsx"
 type: "code"
-community: "Big Number Scenes"
+community: "full/types.ts"
 location: "L9"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Big_Number_Scenes
+  - community/full/typests
 ---
 
 # FullScene()
 
 ## Connections
+- [[Background()]] - `calls` [EXTRACTED]
 - [[BigNumber()]] - `calls` [EXTRACTED]
 - [[Board()]] - `calls` [EXTRACTED]
 - [[CustomScene()]] - `calls` [EXTRACTED]
@@ -20,4 +21,4 @@ tags:
 - [[Journey()]] - `calls` [EXTRACTED]
 - [[Short.tsx]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Big_Number_Scenes
+#graphify/code #graphify/EXTRACTED #community/full/typests

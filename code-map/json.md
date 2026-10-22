@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "Freesound & Picture Swaps"
+community: "json"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Freesound__Picture_Swaps
+  - community/json
 ---
 
 # json
@@ -22,6 +22,7 @@ tags:
 - [[comfy_call()]] - `calls` [EXTRACTED]
 - [[commons_films()]] - `calls` [EXTRACTED]
 - [[direct_scripts()]] - `calls` [EXTRACTED]
+- [[draft_rules()]] - `calls` [EXTRACTED]
 - [[edit_scripts()]] - `calls` [EXTRACTED]
 - [[fact_check()]] - `calls` [EXTRACTED]
 - [[fallback_custom_tsx()]] - `calls` [EXTRACTED]
@@ -37,7 +38,7 @@ tags:
 - [[load_pool()]] - `calls` [EXTRACTED]
 - [[load_state()]] - `calls` [EXTRACTED]
 - [[local_job()]] - `calls` [EXTRACTED]
-- [[main()_1]] - `calls` [EXTRACTED]
+- [[main()_2]] - `calls` [EXTRACTED]
 - [[main()_4]] - `calls` [EXTRACTED]
 - [[media_tools.py]] - `imports` [EXTRACTED]
 - [[moss_images()]] - `calls` [EXTRACTED]
@@ -56,6 +57,7 @@ tags:
 - [[rescue_graphics()]] - `calls` [EXTRACTED]
 - [[review.py]] - `imports` [EXTRACTED]
 - [[rewrite_paint_prompts()]] - `calls` [EXTRACTED]
+- [[rules.py]] - `imports` [EXTRACTED]
 - [[save_candidate()]] - `calls` [EXTRACTED]
 - [[save_channel()]] - `calls` [EXTRACTED]
 - [[save_state()]] - `calls` [EXTRACTED]
@@ -68,6 +70,7 @@ tags:
 - [[style_placeholders()]] - `calls` [EXTRACTED]
 - [[test_full_scenes.py]] - `imports` [EXTRACTED]
 - [[test_pictures_first.py]] - `imports` [EXTRACTED]
+- [[test_rules.py]] - `imports` [EXTRACTED]
 - [[test_story.py]] - `imports` [EXTRACTED]
 - [[test_style.py]] - `imports` [EXTRACTED]
 - [[trend_research()]] - `calls` [EXTRACTED]
@@ -77,4 +80,4 @@ tags:
 - [[write_style_index()]] - `calls` [EXTRACTED]
 - [[writing.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Freesound__Picture_Swaps
+#graphify/concept #graphify/EXTRACTED #community/json

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/cli.py"
 type: "code"
-community: "Entry Point & Channel Menus"
-location: "L105"
+community: "re"
+location: "L106"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Entry_Point__Channel_Menus
+  - community/re
 ---
 
 # fix_short()
@@ -16,8 +16,9 @@ tags:
 - [[cli.py]] - `contains` [EXTRACTED]
 - [[fix.bat re-render a recent Short with one scene changed, keeping its pictures,…]] - `rationale_for` [EXTRACTED]
 - [[load_channel()]] - `calls` [EXTRACTED]
+- [[load_rules()]] - `calls` [EXTRACTED]
 - [[load_state()]] - `calls` [EXTRACTED]
-- [[main()_2]] - `calls` [EXTRACTED]
+- [[main()_3]] - `calls` [EXTRACTED]
 - [[paint_new()]] - `calls` [EXTRACTED]
 - [[prune_work()]] - `calls` [EXTRACTED]
 - [[render()]] - `calls` [EXTRACTED]
@@ -26,4 +27,4 @@ tags:
 - [[use_channel()]] - `calls` [EXTRACTED]
 - [[use_picture_from()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Entry_Point__Channel_Menus
+#graphify/code #graphify/EXTRACTED #community/re

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/logbook.py"
 type: "code"
-community: "Entry Point & Channel Menus"
+community: "test_full_scenes.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Entry_Point__Channel_Menus
+  - community/test_full_scenespy
 ---
 
 # logbook.py
@@ -27,9 +27,10 @@ tags:
 - [[test_first_second.py]] - `imports_from` [EXTRACTED]
 - [[test_full_scenes.py]] - `imports_from` [EXTRACTED]
 - [[test_pictures_first.py]] - `imports_from` [EXTRACTED]
+- [[test_rules.py]] - `imports_from` [EXTRACTED]
 - [[test_style.py]] - `imports_from` [EXTRACTED]
 - [[vault_page()]] - `contains` [EXTRACTED]
 - [[vault_refresh()]] - `contains` [EXTRACTED]
 - [[writing.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Entry_Point__Channel_Menus
+#graphify/code #graphify/EXTRACTED #community/test_full_scenespy

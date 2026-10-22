@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/gpu.py"
 type: "rationale"
-community: "Sentence Voice Takes"
+community: "test_package.py"
 location: "L130"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Sentence_Voice_Takes
+  - community/test_packagepy
 ---
 
 # Runs of scenes that together make whole sentences. A sentence may run across…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[sentence_groups()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Sentence_Voice_Takes
+#graphify/rationale #graphify/EXTRACTED #community/test_packagepy

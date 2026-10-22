@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/plan_rules.py"
 type: "code"
-community: "Scene Cues & Image Search"
+community: "clean_full"
 location: "L102"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Scene_Cues__Image_Search
+  - community/clean_full
 ---
 
 # text()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[clean_full()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Scene_Cues__Image_Search
+#graphify/code #graphify/EXTRACTED #community/clean_full

@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "Entry Point & Channel Menus"
+community: "re"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Entry_Point__Channel_Menus
+  - community/re
 ---
 
 # re
@@ -33,7 +33,7 @@ tags:
 - [[log_short()]] - `calls` [EXTRACTED]
 - [[logbook.py]] - `imports` [EXTRACTED]
 - [[logbook_results()]] - `calls` [EXTRACTED]
-- [[main()_2]] - `calls` [EXTRACTED]
+- [[main()_3]] - `calls` [EXTRACTED]
 - [[mark_details()]] - `calls` [EXTRACTED]
 - [[master_gain()]] - `calls` [EXTRACTED]
 - [[motion.py]] - `imports` [EXTRACTED]
@@ -45,6 +45,7 @@ tags:
 - [[qwen_voice.py]] - `imports` [EXTRACTED]
 - [[render()]] - `calls` [EXTRACTED]
 - [[review.py]] - `imports` [EXTRACTED]
+- [[rules.py]] - `imports` [EXTRACTED]
 - [[save_candidate()]] - `calls` [EXTRACTED]
 - [[sentence_groups()]] - `calls` [EXTRACTED]
 - [[seo.py]] - `imports` [EXTRACTED]
@@ -64,4 +65,4 @@ tags:
 - [[words_of()]] - `calls` [EXTRACTED]
 - [[writing.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Entry_Point__Channel_Menus
+#graphify/concept #graphify/EXTRACTED #community/re

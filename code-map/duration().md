@@ -1,22 +1,27 @@
 ---
 source_file: "shortsmaker/media_tools.py"
 type: "code"
-community: "Audio Mix & Music Gain"
+community: "ffmpeg"
 location: "L22"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Audio_Mix__Music_Gain
+  - community/ffmpeg
 ---
 
 # duration()
 
 ## Connections
-- [[Path_1]] - `references` [EXTRACTED]
+- [[Path_14]] - `references` [EXTRACTED]
 - [[log_short()]] - `calls` [EXTRACTED]
 - [[media_tools.py]] - `contains` [EXTRACTED]
 - [[nasa_films()]] - `calls` [EXTRACTED]
+- [[render()]] - `calls` [EXTRACTED]
+- [[render_remotion()]] - `calls` [EXTRACTED]
 - [[shot_span()]] - `calls` [EXTRACTED]
+- [[split_takes()]] - `calls` [EXTRACTED]
 - [[subprocess]] - `calls` [EXTRACTED]
+- [[test_a_take_is_cut_between_the_scenes_words()]] - `calls` [EXTRACTED]
+- [[test_melt_plays_it_with_the_captions_on_top()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Audio_Mix__Music_Gain
+#graphify/code #graphify/EXTRACTED #community/ffmpeg

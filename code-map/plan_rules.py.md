@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/plan_rules.py"
 type: "code"
-community: "Scene Cues & Image Search"
+community: "test_full_scenes.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Scene_Cues__Image_Search
+  - community/test_full_scenespy
 ---
 
 # plan_rules.py
@@ -57,4 +57,4 @@ tags:
 - [[words_of()]] - `contains` [EXTRACTED]
 - [[writing.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Scene_Cues__Image_Search
+#graphify/code #graphify/EXTRACTED #community/test_full_scenespy

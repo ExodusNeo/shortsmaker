@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/remotion_render.py"
 type: "code"
-community: "Config & Palettes"
+community: "test_full_scenes.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Config__Palettes
+  - community/test_full_scenespy
 ---
 
 # remotion_render.py
@@ -42,4 +42,4 @@ tags:
 - [[test_style.py]] - `imports_from` [EXTRACTED]
 - [[wants_remotion()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Config__Palettes
+#graphify/code #graphify/EXTRACTED #community/test_full_scenespy

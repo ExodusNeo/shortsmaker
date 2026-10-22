@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_pictures_first.py"
 type: "code"
-community: "Pictures-First Tests"
-location: "L124"
+community: "test_pictures_first.py"
+location: "L127"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pictures-First_Tests
+  - community/test_pictures_firstpy
 ---
 
 # entry()
@@ -27,4 +27,4 @@ tags:
 - [[test_prompts_carry_picture_list()]] - `calls` [EXTRACTED]
 - [[test_usable_counts_film_once()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pictures-First_Tests
+#graphify/code #graphify/EXTRACTED #community/test_pictures_firstpy

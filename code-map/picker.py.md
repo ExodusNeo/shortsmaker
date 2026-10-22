@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/picker.py"
 type: "code"
-community: "CLI & Pixabay Films"
+community: "test_full_scenes.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CLI__Pixabay_Films
+  - community/test_full_scenespy
 ---
 
 # picker.py
@@ -35,4 +35,4 @@ tags:
 - [[test_pictures_first.py]] - `imports_from` [EXTRACTED]
 - [[writing.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CLI__Pixabay_Films
+#graphify/code #graphify/EXTRACTED #community/test_full_scenespy

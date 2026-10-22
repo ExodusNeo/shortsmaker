@@ -1,12 +1,12 @@
 ---
 source_file: "local_ai/gen.py"
 type: "rationale"
-community: "GPU Image Worker"
+community: "gen.py"
 location: "L132"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/GPU_Image_Worker
+  - community/genpy
 ---
 
 # NVENC (the GPU's video encoder) when ffmpeg has it, else CPU x264.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[encoder_args()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/GPU_Image_Worker
+#graphify/rationale #graphify/EXTRACTED #community/genpy

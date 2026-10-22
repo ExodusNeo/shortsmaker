@@ -1,17 +1,17 @@
 ---
-source_file: "tests/test_pictures_first.py"
+source_file: "tests/test_rules.py"
 type: "code"
-community: "Pictures-First Tests"
-location: "L281"
+community: "test_rules.py"
+location: "L67"
 tags:
   - graphify/code
-  - graphify/EXTRACTED
-  - community/Pictures-First_Tests
+  - graphify/INFERRED
+  - community/test_rulespy
 ---
 
 # prepare()
 
 ## Connections
-- [[test_prompts_carry_picture_list()]] - `contains` [EXTRACTED]
+- [[capture_prompts()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/Pictures-First_Tests
+#graphify/code #graphify/INFERRED #community/test_rulespy

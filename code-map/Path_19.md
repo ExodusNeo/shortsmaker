@@ -1,20 +1,20 @@
 ---
 source_file: ""
 type: "code"
-community: "Subject Position Checks"
+community: "captions"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Subject_Position_Checks
+  - community/captions
 ---
 
 # Path
 
 ## Connections
-- [[dot-__init__()_5]] - `references` [EXTRACTED]
-- [[fills_frame()]] - `references` [EXTRACTED]
-- [[frame_maker()]] - `references` [EXTRACTED]
-- [[graphic_low()]] - `references` [EXTRACTED]
-- [[thumbnail()]] - `references` [EXTRACTED]
+- [[captions()_1]] - `references` [EXTRACTED]
+- [[music_gain()]] - `references` [EXTRACTED]
+- [[speak()_1]] - `references` [EXTRACTED]
+- [[story_sound()]] - `references` [EXTRACTED]
+- [[tts()_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Subject_Position_Checks
+#graphify/code #graphify/EXTRACTED #community/captions

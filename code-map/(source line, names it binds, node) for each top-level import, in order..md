@@ -1,12 +1,12 @@
 ---
 source_file: "tools/split_make_shorts.py"
 type: "rationale"
-community: "Package Split Tool"
+community: "split_make_shorts.py"
 location: "L235"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Package_Split_Tool
+  - community/split_make_shortspy
 ---
 
 # (source line, names it binds, node) for each top-level import, in order.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[import_lines()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Package_Split_Tool
+#graphify/rationale #graphify/EXTRACTED #community/split_make_shortspy

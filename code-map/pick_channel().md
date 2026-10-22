@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/channel_profiles.py"
 type: "code"
-community: "Entry Point & Channel Menus"
-location: "L20"
+community: "re"
+location: "L21"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Entry_Point__Channel_Menus
+  - community/re
 ---
 
 # pick_channel()
@@ -14,10 +14,13 @@ tags:
 ## Connections
 - [[Ask which channel this batch is for (Enter = the one used last time), or set up…]] - `rationale_for` [EXTRACTED]
 - [[channel_profiles.py]] - `contains` [EXTRACTED]
+- [[draft_rules()]] - `calls` [EXTRACTED]
 - [[json]] - `calls` [EXTRACTED]
-- [[main()_2]] - `calls` [EXTRACTED]
+- [[main()_3]] - `calls` [EXTRACTED]
 - [[new_channel()]] - `calls` [EXTRACTED]
 - [[re]] - `calls` [EXTRACTED]
+- [[sys]] - `calls` [EXTRACTED]
+- [[test_new_channel_stops_for_review()]] - `calls` [EXTRACTED]
 - [[use_channel()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Entry_Point__Channel_Menus
+#graphify/code #graphify/EXTRACTED #community/re

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/channel_profiles.py"
 type: "code"
-community: "Entry Point & Channel Menus"
-location: "L83"
+community: "re"
+location: "L86"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Entry_Point__Channel_Menus
+  - community/re
 ---
 
 # new_channel()
@@ -18,4 +18,4 @@ tags:
 - [[pick_channel()]] - `calls` [EXTRACTED]
 - [[save_channel()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Entry_Point__Channel_Menus
+#graphify/code #graphify/EXTRACTED #community/re

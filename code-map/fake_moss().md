@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_full_scenes.py"
 type: "code"
-community: "Remotion Failure Test"
-location: "L299"
+community: "paint_instead"
+location: "L302"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/Remotion_Failure_Test
+  - community/paint_instead
 ---
 
 # fake_moss()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[test_remotion_failure_paints()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/INFERRED #community/Remotion_Failure_Test
+#graphify/code #graphify/INFERRED #community/paint_instead

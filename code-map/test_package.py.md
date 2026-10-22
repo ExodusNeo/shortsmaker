@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_package.py"
 type: "code"
-community: "Package & TS Tests"
+community: "test_package.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Package__TS_Tests
+  - community/test_packagepy
 ---
 
 # test_package.py
@@ -37,4 +37,4 @@ tags:
 - [[test_session_shared()]] - `contains` [EXTRACTED]
 - [[traceback]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Package__TS_Tests
+#graphify/code #graphify/EXTRACTED #community/test_packagepy

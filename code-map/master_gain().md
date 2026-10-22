@@ -1,22 +1,22 @@
 ---
 source_file: "shortsmaker/edit_project.py"
 type: "code"
-community: "Shotcut Timeline"
+community: "subprocess"
 location: "L23"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Shotcut_Timeline
+  - community/subprocess
 ---
 
 # master_gain()
 
 ## Connections
-- [[Path_3]] - `references` [EXTRACTED]
+- [[Path_4]] - `references` [EXTRACTED]
 - [[dB that brings the tracks played together to LUFS, like the final mix's…]] - `rationale_for` [EXTRACTED]
 - [[edit_project.py]] - `contains` [EXTRACTED]
 - [[make()]] - `calls` [EXTRACTED]
 - [[re]] - `calls` [EXTRACTED]
 - [[subprocess]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Shotcut_Timeline
+#graphify/code #graphify/EXTRACTED #community/subprocess

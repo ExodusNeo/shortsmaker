@@ -1,17 +1,18 @@
 ---
 source_file: "remotion/src/MapCard.tsx"
 type: "code"
-community: "Remotion Captions & Cards"
+community: "Graphics.tsx"
 location: "L20"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Remotion_Captions__Cards
+  - community/Graphicstsx
 ---
 
 # MapCard()
 
 ## Connections
+- [[BuiltInGraphic()]] - `calls` [EXTRACTED]
 - [[MapCard.tsx]] - `contains` [EXTRACTED]
 - [[Pin()]] - `calls` [EXTRACTED]
 - [[Short.tsx]] - `imports` [EXTRACTED]
@@ -19,4 +20,4 @@ tags:
 - [[moveIn()]] - `calls` [EXTRACTED]
 - [[useWindow()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Remotion_Captions__Cards
+#graphify/code #graphify/EXTRACTED #community/Graphicstsx

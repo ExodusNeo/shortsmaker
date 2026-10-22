@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/plan_rules.py"
 type: "rationale"
-community: "Scene Cues & Image Search"
+community: "clean_full"
 location: "L26"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Scene_Cues__Image_Search
+  - community/clean_full
 ---
 
 # One planned callout, validated (LLM output is untrusted); None drops it.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[clean_graphic()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Scene_Cues__Image_Search
+#graphify/rationale #graphify/EXTRACTED #community/clean_full

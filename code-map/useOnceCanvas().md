@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/style/kit.ts"
 type: "code"
-community: "Style Library Components"
+community: "Halftone.tsx"
 location: "L63"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Style_Library_Components
+  - community/Halftonetsx
 ---
 
 # useOnceCanvas()
@@ -24,4 +24,4 @@ tags:
 - [[Silent.tsx]] - `imports` [EXTRACTED]
 - [[kit.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Style_Library_Components
+#graphify/code #graphify/EXTRACTED #community/Halftonetsx

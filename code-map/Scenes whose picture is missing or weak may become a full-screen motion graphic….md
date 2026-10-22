@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/picker.py"
 type: "rationale"
-community: "Scene Cues & Image Search"
+community: "apply_review_fixes"
 location: "L226"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Scene_Cues__Image_Search
+  - community/apply_review_fixes
 ---
 
 # Scenes whose picture is missing or weak may become a full-screen motion graphic…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[rescue_graphics()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Scene_Cues__Image_Search
+#graphify/rationale #graphify/EXTRACTED #community/apply_review_fixes

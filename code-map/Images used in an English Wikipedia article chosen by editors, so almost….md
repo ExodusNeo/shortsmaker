@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/image_sources.py"
 type: "rationale"
-community: "Scene Cues & Image Search"
+community: "gather_pool"
 location: "L123"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Scene_Cues__Image_Search
+  - community/gather_pool
 ---
 
 # Images used in an English Wikipedia article: chosen by editors, so almost…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[article_images()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Scene_Cues__Image_Search
+#graphify/rationale #graphify/EXTRACTED #community/gather_pool

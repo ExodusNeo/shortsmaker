@@ -1,20 +1,20 @@
 ---
 source_file: "tests/render_style.py"
 type: "code"
-community: "Style Registry"
+community: "test_package.py"
 location: "L19"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Style_Registry
+  - community/test_packagepy
 ---
 
 # build()
 
 ## Connections
-- [[add()_1]] - `contains` [EXTRACTED]
-- [[main()_3]] - `calls` [EXTRACTED]
+- [[add()]] - `contains` [EXTRACTED]
+- [[main()_1]] - `calls` [EXTRACTED]
 - [[render_style.py]] - `contains` [EXTRACTED]
 - [[style_library()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Style_Registry
+#graphify/code #graphify/EXTRACTED #community/test_packagepy

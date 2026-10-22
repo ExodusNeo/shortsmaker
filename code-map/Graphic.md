@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/Short.tsx"
 type: "code"
-community: "Remotion Captions & Cards"
+community: "Graphics.tsx"
 location: "L15"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Remotion_Captions__Cards
+  - community/Graphicstsx
 ---
 
 # Graphic
@@ -19,4 +19,4 @@ tags:
 - [[Short.tsx]] - `contains` [EXTRACTED]
 - [[styletypes.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Remotion_Captions__Cards
+#graphify/code #graphify/EXTRACTED #community/Graphicstsx

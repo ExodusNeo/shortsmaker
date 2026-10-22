@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/frame_render.py"
 type: "rationale"
-community: "Frame Maker & Credit Tags"
+community: "frame_maker"
 location: "L226"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Frame_Maker__Credit_Tags
+  - community/frame_maker
 ---
 
 # Returns frame(i, t): scene i at time t with camera move and graphics applied.…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[frame_maker()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Frame_Maker__Credit_Tags
+#graphify/rationale #graphify/EXTRACTED #community/frame_maker

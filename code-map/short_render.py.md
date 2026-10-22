@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/short_render.py"
 type: "code"
-community: "Config & Palettes"
+community: "test_full_scenes.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Config__Palettes
+  - community/test_full_scenespy
 ---
 
 # short_render.py
@@ -47,4 +47,4 @@ tags:
 - [[test_full_scenes.py]] - `imports_from` [EXTRACTED]
 - [[time]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Config__Palettes
+#graphify/code #graphify/EXTRACTED #community/test_full_scenespy

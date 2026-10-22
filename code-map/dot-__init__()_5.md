@@ -1,18 +1,17 @@
 ---
-source_file: "shortsmaker/frame_render.py"
+source_file: "tools/split_make_shorts.py"
 type: "code"
-community: "Subject Position Checks"
-location: "L199"
+community: "split_make_shorts.py"
+location: "L385"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Subject_Position_Checks
+  - community/split_make_shortspy
 ---
 
 # .__init__()
 
 ## Connections
-- [[ClipReader]] - `method` [EXTRACTED]
-- [[Path_19]] - `references` [EXTRACTED]
+- [[Unqualify]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Subject_Position_Checks
+#graphify/code #graphify/EXTRACTED #community/split_make_shortspy

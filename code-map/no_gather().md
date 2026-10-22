@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_pictures_first.py"
 type: "code"
-community: "Pictures-First Tests"
-location: "L265"
+community: "test_pictures_first.py"
+location: "L268"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/Pictures-First_Tests
+  - community/test_pictures_firstpy
 ---
 
 # no_gather()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[test_both_mode_reuses_pools()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/INFERRED #community/Pictures-First_Tests
+#graphify/code #graphify/INFERRED #community/test_pictures_firstpy

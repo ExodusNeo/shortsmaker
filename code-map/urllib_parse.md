@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "CLI & Pixabay Films"
+community: "json"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/CLI__Pixabay_Films
+  - community/json
 ---
 
 # urllib_parse
@@ -18,4 +18,4 @@ tags:
 - [[seo.py]] - `imports` [EXTRACTED]
 - [[writing.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/CLI__Pixabay_Films
+#graphify/concept #graphify/EXTRACTED #community/json

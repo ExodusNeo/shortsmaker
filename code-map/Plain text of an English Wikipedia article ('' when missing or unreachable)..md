@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/writing.py"
 type: "rationale"
-community: "Fact Check"
-location: "L572"
+community: "ask_ai"
+location: "L472"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Fact_Check
+  - community/ask_ai
 ---
 
 # Plain text of an English Wikipedia article ('' when missing or unreachable).
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[article_text()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Fact_Check
+#graphify/rationale #graphify/EXTRACTED #community/ask_ai

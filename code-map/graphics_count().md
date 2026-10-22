@@ -1,17 +1,18 @@
 ---
 source_file: "shortsmaker/motion.py"
 type: "code"
-community: "AI-Coded Motion Scenes"
+community: "render"
 location: "L15"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AI-Coded_Motion_Scenes
+  - community/render
 ---
 
 # graphics_count()
 
 ## Connections
 - [[motion.py]] - `contains` [EXTRACTED]
+- [[render()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AI-Coded_Motion_Scenes
+#graphify/code #graphify/EXTRACTED #community/render

@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/Cards.tsx"
 type: "code"
-community: "Remotion Captions & Cards"
+community: "Graphics.tsx"
 location: "L35"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Remotion_Captions__Cards
+  - community/Graphicstsx
 ---
 
 # DotGrid()
@@ -15,4 +15,4 @@ tags:
 - [[Cards.tsx]] - `contains` [EXTRACTED]
 - [[StatCard()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Remotion_Captions__Cards
+#graphify/code #graphify/EXTRACTED #community/Graphicstsx

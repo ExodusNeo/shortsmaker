@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/image_sources.py"
 type: "rationale"
-community: "Film Frames & Crops"
+community: "film_frames"
 location: "L274"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Film_Frames__Crops
+  - community/film_frames
 ---
 
 # ffmpeg reading a film over HTTP. Wikimedia gets the contact User-Agent, the…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[film_ffmpeg()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Film_Frames__Crops
+#graphify/rationale #graphify/EXTRACTED #community/film_frames

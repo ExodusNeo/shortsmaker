@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/picture_pool.py"
 type: "code"
-community: "Usable Picture Checks"
-location: "L262"
+community: "clean_pics"
+location: "L253"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Usable_Picture_Checks
+  - community/clean_pics
 ---
 
 # is_usable()
@@ -15,6 +15,7 @@ tags:
 - [[catalog_text()]] - `calls` [EXTRACTED]
 - [[clean_pics()]] - `calls` [EXTRACTED]
 - [[picture_pool.py]] - `contains` [EXTRACTED]
+- [[pool_pictures()]] - `calls` [EXTRACTED]
 - [[usable()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/Usable_Picture_Checks
+#graphify/code #graphify/EXTRACTED #community/clean_pics

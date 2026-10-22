@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "GPU Voice & Painters"
+community: "json"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/GPU_Voice__Painters
+  - community/json
 ---
 
 # urllib_error
@@ -14,4 +14,4 @@ tags:
 - [[gpu.py]] - `imports` [EXTRACTED]
 - [[image_sources.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/GPU_Voice__Painters
+#graphify/concept #graphify/EXTRACTED #community/json

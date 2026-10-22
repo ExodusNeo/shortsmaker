@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/audio_mix.py"
 type: "rationale"
-community: "Scene Cues & Image Search"
+community: "audio_mix.py"
 location: "L94"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Scene_Cues__Image_Search
+  - community/audio_mixpy
 ---
 
 # A planned story sound {"word", "sound"}, validated: the word must be spoken in…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[clean_sound()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Scene_Cues__Image_Search
+#graphify/rationale #graphify/EXTRACTED #community/audio_mixpy

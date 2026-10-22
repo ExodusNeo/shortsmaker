@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_pictures_first.py"
 type: "code"
-community: "Picture Picker"
-location: "L347"
+community: "choose_images"
+location: "L350"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Picture_Picker
+  - community/choose_images
 ---
 
 # planned_short()
@@ -23,4 +23,4 @@ tags:
 - [[test_plan_note_already_used()]] - `calls` [EXTRACTED]
 - [[test_planned_full_pictures_not_sent_when_empty()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Picture_Picker
+#graphify/code #graphify/EXTRACTED #community/choose_images

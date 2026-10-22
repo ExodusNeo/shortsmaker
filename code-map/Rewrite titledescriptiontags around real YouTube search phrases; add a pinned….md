@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/seo.py"
 type: "rationale"
-community: "Entry Point & Channel Menus"
+community: "re"
 location: "L22"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Entry_Point__Channel_Menus
+  - community/re
 ---
 
 # Rewrite title/description/tags around real YouTube search phrases; add a pinned…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[seo_pass()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Entry_Point__Channel_Menus
+#graphify/rationale #graphify/EXTRACTED #community/re

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/gpu.py"
 type: "rationale"
-community: "GPU Voice & Painters"
+community: "json"
 location: "L235"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/GPU_Voice__Painters
+  - community/json
 ---
 
 # Comfy-Org's official MOSS-Image text-to-image template (25 steps, CFG 2.5,…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[moss_graph()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/GPU_Voice__Painters
+#graphify/rationale #graphify/EXTRACTED #community/json

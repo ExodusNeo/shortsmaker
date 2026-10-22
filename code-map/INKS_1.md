@@ -1,12 +1,12 @@
 ---
 source_file: "tests/style.test.ts"
 type: "code"
-community: "Style Library Components"
+community: "Short.tsx"
 location: "L58"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Style_Library_Components
+  - community/Shorttsx
 ---
 
 # INKS
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[style.test.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Style_Library_Components
+#graphify/code #graphify/EXTRACTED #community/Shorttsx

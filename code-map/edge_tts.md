@@ -1,17 +1,17 @@
 ---
 source_file: ""
 type: "concept"
-community: "Audio Mix & Music Gain"
+community: "captions"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Audio_Mix__Music_Gain
+  - community/captions
 ---
 
 # edge_tts
 
 ## Connections
 - [[audio_mix.py]] - `imports` [EXTRACTED]
-- [[tts()]] - `calls` [EXTRACTED]
+- [[tts()_1]] - `calls` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Audio_Mix__Music_Gain
+#graphify/concept #graphify/EXTRACTED #community/captions

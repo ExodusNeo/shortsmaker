@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/motion.py"
 type: "code"
-community: "Freesound & Picture Swaps"
+community: "test_full_scenes.py"
 location: "L308"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Freesound__Picture_Swaps
+  - community/test_full_scenespy
 ---
 
 # tsc_check()
@@ -16,7 +16,8 @@ tags:
 - [[approve_candidate()]] - `calls` [EXTRACTED]
 - [[code_custom_scenes()]] - `calls` [EXTRACTED]
 - [[motion.py]] - `contains` [EXTRACTED]
+- [[redraw_custom()]] - `calls` [EXTRACTED]
 - [[shutil]] - `calls` [EXTRACTED]
 - [[subprocess]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Freesound__Picture_Swaps
+#graphify/code #graphify/EXTRACTED #community/test_full_scenespy

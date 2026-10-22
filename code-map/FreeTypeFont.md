@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Frame Overlays & Fonts"
+community: "frame_maker"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Frame_Overlays__Fonts
+  - community/frame_maker
 ---
 
 # FreeTypeFont
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[fit_font()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Frame_Overlays__Fonts
+#graphify/code #graphify/EXTRACTED #community/frame_maker

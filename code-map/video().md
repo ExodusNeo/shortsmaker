@@ -1,12 +1,12 @@
 ---
 source_file: "local_ai/gen.py"
 type: "code"
-community: "GPU Image Worker"
+community: "gen.py"
 location: "L89"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/GPU_Image_Worker
+  - community/genpy
 ---
 
 # video()
@@ -17,4 +17,4 @@ tags:
 - [[main()]] - `indirect_call` [INFERRED]
 - [[t5_encoder()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/GPU_Image_Worker
+#graphify/code #graphify/EXTRACTED #community/genpy

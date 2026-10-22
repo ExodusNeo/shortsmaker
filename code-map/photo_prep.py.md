@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/photo_prep.py"
 type: "code"
-community: "Config & Palettes"
+community: "test_full_scenes.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Config__Palettes
+  - community/test_full_scenespy
 ---
 
 # photo_prep.py
@@ -25,4 +25,4 @@ tags:
 - [[to_vertical()]] - `contains` [EXTRACTED]
 - [[trim_borders()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Config__Palettes
+#graphify/code #graphify/EXTRACTED #community/test_full_scenespy

@@ -1,17 +1,23 @@
 ---
-source_file: "local_ai/qwen_voice.py"
+source_file: "shortsmaker/audio_mix.py"
 type: "code"
-community: "Qwen/CosyVoice Worker"
-location: "L58"
+community: "captions"
+location: "L23"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Qwen/CosyVoice_Worker
+  - community/captions
 ---
 
 # speak()
 
 ## Connections
-- [[qwen_voice.py]] - `contains` [EXTRACTED]
+- [[Path_19]] - `references` [EXTRACTED]
+- [[TTS with retries Microsoft's free Edge voice service drops a request now and…]] - `rationale_for` [EXTRACTED]
+- [[asyncio]] - `calls` [EXTRACTED]
+- [[audio_mix.py]] - `contains` [EXTRACTED]
+- [[render()]] - `calls` [EXTRACTED]
+- [[time]] - `calls` [EXTRACTED]
+- [[tts()_1]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Qwen/CosyVoice_Worker
+#graphify/code #graphify/EXTRACTED #community/captions

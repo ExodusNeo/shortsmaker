@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/writing.py"
 type: "code"
-community: "Fact Check"
-location: "L571"
+community: "ask_ai"
+location: "L471"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Fact_Check
+  - community/ask_ai
 ---
 
 # article_text()
@@ -17,6 +17,7 @@ tags:
 - [[json]] - `calls` [EXTRACTED]
 - [[prepare_topic()]] - `calls` [EXTRACTED]
 - [[rescue_graphics()]] - `calls` [EXTRACTED]
+- [[wm_get()]] - `calls` [EXTRACTED]
 - [[writing.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Fact_Check
+#graphify/code #graphify/EXTRACTED #community/ask_ai

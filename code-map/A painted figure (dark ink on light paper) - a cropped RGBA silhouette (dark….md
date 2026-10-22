@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/remotion_render.py"
 type: "rationale"
-community: "Remotion Render & Figures"
+community: "paint_instead"
 location: "L103"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Remotion_Render__Figures
+  - community/paint_instead
 ---
 
 # A painted figure (dark ink on light paper) -> a cropped RGBA silhouette (dark…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[ink_silhouette()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Remotion_Render__Figures
+#graphify/rationale #graphify/EXTRACTED #community/paint_instead

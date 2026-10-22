@@ -1,12 +1,12 @@
 ---
 source_file: "tests/run_ts_tests.py"
 type: "rationale"
-community: "Package & TS Tests"
+community: "test_package.py"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Package__TS_Tests
+  - community/test_packagepy
 ---
 
 # Runs the TypeScript tests (tests/*.test.ts): bundles each with Remotion's own…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[run_ts_tests.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Package__TS_Tests
+#graphify/rationale #graphify/EXTRACTED #community/test_packagepy

@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "GPU Image Worker"
+community: "gen.py"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/GPU_Image_Worker
+  - community/genpy
 ---
 
 # torch
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[gen.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/GPU_Image_Worker
+#graphify/concept #graphify/EXTRACTED #community/genpy

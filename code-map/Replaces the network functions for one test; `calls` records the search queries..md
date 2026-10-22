@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_pictures_first.py"
 type: "rationale"
-community: "Test Patching Helpers"
-location: "L32"
+community: "owner"
+location: "L35"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Test_Patching_Helpers
+  - community/owner
 ---
 
 # Replaces the network functions for one test; `calls` records the search queries.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[stubbed]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Test_Patching_Helpers
+#graphify/rationale #graphify/EXTRACTED #community/owner

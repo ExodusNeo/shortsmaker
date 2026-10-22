@@ -46,6 +46,7 @@ Gemini. Real archival/online footage is the main material; AI fills gaps.
 | `shortsmaker/` | The pipeline, 25 modules by job (split from the old 5,300-line `make_shorts.py` on 2026-10-21) |
 | `tools/split_make_shorts.py` | The one-off script that did the split and proved it (kept for the record; reads the baseline commit; refuses to overwrite `shortsmaker/` unless given `--force`, so don't) |
 | `channels/<name>.json` | Profile: niche, audience, tone, voice, `done_topics`, `research_seeds`, `cta_line`, `brain`, `veo`, `short_form`, `recent_shapes`, `myths`. `<name>.research.json` = daily trend cache, `last.txt` = default |
+| `channels/<name>.rules.md` | The channel's own rules (since 2026-10-22, see "Rules per channel"): topic, story, picture, directing and AI-painting rules the prompts read by heading |
 | `vault/` | **Obsidian vault** (owner, 2026-10-21; open this folder in Obsidian): `Logbook/<name>.md` = the owner's results log (see "Logbook"; moved from `logbook/`), `Shorts/<channel>/<folder>.md` = one page per Short (thumbnail, storyboard, logbook lines, upload text, links) written by `vault_page()` after each Short, `Home.md`. `make_shorts.py notes` rebuilds every page from the logbooks |
 | `code-map/`, `graphify-out/`, `.graphifyignore` | **graphify code map** (owner, 2026-10-21): `code-map/` is a second Obsidian vault (one note per function/component, ~40-60 labeled groups (the count shifts a little per rebuild), `graph.canvas`; rebuilt 2026-10-21 after the package split); `graphify-out/graph.html` the interactive graph, `GRAPH_REPORT.md` the summary. Code only (85 files: make_shorts.py, shortsmaker/, tools/, local_ai/*.py, remotion/src, tests), scoped by `.graphifyignore`; built structurally, no AI tokens. Stale after code changes: rebuild with `/graphify D:\ShortsMaker --obsidian --obsidian-dir D:\ShortsMaker\code-map` (or `--update`) |
 | `branding/` | Channel profile picture + banner (`make_branding.py`, run with local_ai/.venv: printed-paper look, halftoned public-domain Commons photos in `src/`, no AI imagery at the owner's request 2026-10-19) and `channel_text.txt` (description + keywords to paste) |
@@ -74,9 +75,10 @@ as LF (`.gitattributes`); the pipeline and tests may write CRLF on Windows, whic
 | Module | Job |
 |---|---|
 | `config.py` | Paths, fixed settings, palettes, style/skin tables. Importing it puts ffmpeg on PATH and checks caption contrast |
-| `session.py` | Settings that change during a run: `BRAIN`, `NO_QUOTA`, `LAST_AI`, `CHANNEL`/`RESEARCH`/`LOG`, `SHORT_FORM`, `VEO_HANDOFF`, `YELLOW`, `EMPHASIS` |
+| `session.py` | Settings that change during a run: `BRAIN`, `NO_QUOTA`, `LAST_AI`, `CHANNEL`/`RESEARCH`/`LOG`, `RULES`/`RULE_SETTINGS`, `SHORT_FORM`, `VEO_HANDOFF`, `YELLOW`, `EMPHASIS` |
 | `llm.py` | `ask_ai()`, `run_agy()`, quota detection, Gemini model pick |
 | `channel_profiles.py` | Profiles, run.bat menus, YouTube and trend research |
+| `rules.py` | Reads and checks `channels/<name>.rules.md` into `session.RULES`; drafts rules for new profiles (`draft_rules`) |
 | `writing.py` | Topics -> research -> writer -> editor -> director -> fact check (`write_scripts()`) |
 | `plan_rules.py` | Cleaning/validating the planner's JSON, word timings, full-scene cues |
 | `seo.py` | `seo_pass()`, autocomplete, `srt()` |
@@ -129,7 +131,7 @@ Rules that keep it working:
    `docs/superpowers/specs/2026-10-19-pictures-first-design.md`): the planner picks n + `TOPIC_BACKUPS` (2) topics, each
    with `visual_terms` and `people`; `prepare_topic()` per topic, in order until n pass: Wikipedia (`_texts`), the pool
    (`gather_pool()`: the same sources/caps the picture step always used, cached in `cache/pools/`), the AI picture list
-   (`catalog_pool()`: what/era_ok/sharp/hook/reject per number), the check (`usable()` >= `MIN_USABLE` (6); frames of one
+   (`catalog_pool()`: what/era_ok/sharp/hook/reject per number), the check (`usable()` >= the rules file's `min_real_pictures` (6 for strange-history); frames of one
    video count once). A weak topic is skipped (never added to done_topics; "Skipped ..." lines, `dropped_topics`).
    **If neither AI returns the picture list, the run stops** (owner's decision). Writer, editor and director see
    `pictures_of()` (usable entries, `[opener]` marks); the director gives scenes and board items `pic` (`clean_pics()`:
@@ -234,7 +236,7 @@ Rules that keep it working:
    (`review.pool_pictures()`, 2026-10-22, owner asked why so many AI pictures: Togo painted over 4 rejected real pictures
    while ~20 usable pool pictures sat unused; one AI call matches the rejected scenes to usable pool pictures nothing in
    the Short shows, by their picture-list text; a picture the review rejected goes in `review_rejected` and is never
-   offered again; on Togo's real data it replaced 2 of 6 paintings, the other 4 had no photo), or get repainted with `paint_new()` + `rewrite_paint_prompts()` (one AI call rewrites every rejected painting's prompt from the old prompt + the complaint, with `AI_IMAGE_RULE`; 2026-10-21), and the Short
+   offered again; on Togo's real data it replaced 2 of 6 paintings, the other 4 had no photo), or get repainted with `paint_new()` + `rewrite_paint_prompts()` (one AI call rewrites every rejected painting's prompt from the old prompt + the complaint, with the rules file's `## AI paintings`, formerly `AI_IMAGE_RULE`; 2026-10-21), and the Short
    re-renders automatically; each re-render is reviewed again and fixed again while fixable problems remain, up to
    `AUTO_FIX_ROUNDS` (3) rounds (owner asked 2026-10-20; was one round). The cap exists because an AI reviewer
    almost always finds something. Notes in edit_plan.txt are prefixed "round N:". fix.bat re-renders never loop. A flagged **custom** motion graphic is first sent back to its coder with the
@@ -613,7 +615,7 @@ inside the strangest moment (not a summary claim), link beats with but / so / yo
 background only as "you see" answers, use few dates/names, save the answer for the last line and stop, flow in full
 sentences, and have a dry voice; length is not the lever; very famous topics (Emu War) flopped on both channels.
 Built (owner approved all 4 points):
-- `writing.STORY_RULES` (writer + editor, one constant; includes our own example script, Jack retold; never paste
+- `## Story rules` in `channels/strange-history.rules.md` (was `writing.STORY_RULES`; writer + editor; includes our own example script, Jack retold; never paste
   other channels' scripts) and `SCENE_CUTS`. First sentence up to 12 words (was 8; topic picker still asks for an
   8-word fact). Old rules gone: confirmation beat, separate callback line, "never background".
 - Editor reports `payoff_scene` and `list_like`; `story_problems()` flags: answer before the last two scenes, a line
@@ -627,6 +629,27 @@ Built (owner approved all 4 points):
   sentences", which drove the fragments). Lessons text in the planner prompt updated.
 - Not changed: lengths (40-50 s / 25-30 s), SCENE_WORDS 10 per picture, niche. Not yet seen in a real run: check the
   next Shorts' retention curves (Studio overview -> "Key moments for audience retention"; read by screenshot).
+
+## Rules per channel (2026-10-22, owner asked)
+Each channel has its own `channels/<name>.rules.md`, so a new channel never changes another's Shorts (the gaming
+profile had silently used strange-history's rules). Plain Markdown, read by `##` heading (case and spaces don't
+matter; `###` stays inside a section; a `<!-- tag -->` first line is stripped): `Settings` (`status: draft|ready`,
+`visuals: photos|blender`, `min_real_pictures`), `Topic picking`, `Story rules` (was `writing.STORY_RULES`), `Writing
+for the picture`, `Lessons from our numbers`, `Opening picture` (picture list), `Directing`, `First-second check`,
+`AI paintings` (was `writing.AI_IMAGE_RULE`). `rules.load_rules()` runs at the start of a batch and of fix.bat; a
+missing/empty/repeated section, `status: draft`, `visuals: blender` (not built yet) or a bad `min_real_pictures`
+stops the run with the file and heading named. Never a fallback to another channel's rules.
+- What stays in the code, shared: lengths, scene cuts, fact rules, reply formats, `story_problems()`, the picture
+  `reject:` safety list, the evidence-board/document/graphic format examples in the director prompt.
+- New profile (run.bat "+ New channel"): after the profile JSON, `rules.draft_rules()` has the AI copy the sections
+  of existing rules files that fit, adapt or write the rest, tagged `copied from` / `adapted from ...: what changed` /
+  `new`; Settings are written by the code with `status: draft`; one retry on a bad reply, never overwrites. run.bat
+  then stops until the owner sets `status: ready`. `channels/gaming.rules.md` was drafted this way 2026-10-22 and is
+  waiting for the owner's review.
+- `tests/test_rules.py`: `tests/golden/prompts.json` holds every prompt strange-history sent before the move; the
+  golden test proves they are still identical. Re-save it (`--save-golden`) only when a prompt change is intended.
+- Next (planned): the engineering-failures channel drawn in Blender (`visuals: blender`), its planning rules only in
+  its own rules file.
 
 ## Ideas offered, not built
 - Voice cloning (owner's own voice), SFX on the music's beat, YouTube Audio Library tracks for the somber/epic moods.

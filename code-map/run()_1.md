@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_style.py"
 type: "code"
-community: "Invention Slots"
-location: "L254"
+community: "style_placeholders"
+location: "L257"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/Invention_Slots
+  - community/style_placeholders
 ---
 
 # run()
@@ -15,4 +15,4 @@ tags:
 - [[test_failed_invention_keeps_the_others()]] - `indirect_call` [INFERRED]
 - [[test_invention_passes_into_slot()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/INFERRED #community/Invention_Slots
+#graphify/code #graphify/INFERRED #community/style_placeholders

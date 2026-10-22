@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/logbook.py"
 type: "rationale"
-community: "Entry Point & Channel Menus"
+community: "re"
 location: "L97"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Entry_Point__Channel_Menus
+  - community/re
 ---
 
 # The logbook entries the owner has filled in (Views written down), at most the…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[logbook_results()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Entry_Point__Channel_Menus
+#graphify/rationale #graphify/EXTRACTED #community/re

@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_full_scenes.py"
 type: "rationale"
-community: "Figure Silhouette Test"
-location: "L740"
+community: "paint_instead"
+location: "L743"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Figure_Silhouette_Test
+  - community/paint_instead
 ---
 
 # A painted figure (black ink on white) becomes a cropped, transparent…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[test_ink_silhouette()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Figure_Silhouette_Test
+#graphify/rationale #graphify/EXTRACTED #community/paint_instead

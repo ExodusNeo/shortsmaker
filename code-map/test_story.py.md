@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_story.py"
 type: "code"
-community: "Sentence Voice Takes"
+community: "test_package.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Sentence_Voice_Takes
+  - community/test_packagepy
 ---
 
 # test_story.py
@@ -19,6 +19,7 @@ tags:
 - [[llm.py]] - `imports_from` [EXTRACTED]
 - [[media_tools.py]] - `imports_from` [EXTRACTED]
 - [[pathlib]] - `imports_from` [EXTRACTED]
+- [[rules.py]] - `imports_from` [EXTRACTED]
 - [[scenes()]] - `contains` [EXTRACTED]
 - [[session.py]] - `imports_from` [EXTRACTED]
 - [[sys]] - `imports` [EXTRACTED]
@@ -33,4 +34,4 @@ tags:
 - [[traceback]] - `imports` [EXTRACTED]
 - [[writing.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Sentence_Voice_Takes
+#graphify/code #graphify/EXTRACTED #community/test_packagepy

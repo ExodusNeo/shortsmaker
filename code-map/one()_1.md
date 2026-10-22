@@ -1,17 +1,17 @@
 ---
-source_file: "local_ai/qwen_voice.py"
+source_file: "shortsmaker/gpu.py"
 type: "code"
-community: "Qwen/CosyVoice Worker"
-location: "L30"
+community: "paint_instead"
+location: "L200"
 tags:
   - graphify/code
-  - graphify/EXTRACTED
-  - community/Qwen/CosyVoice_Worker
+  - graphify/INFERRED
+  - community/paint_instead
 ---
 
 # one()
 
 ## Connections
-- [[say_number()]] - `contains` [EXTRACTED]
+- [[gemini_images()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/Qwen/CosyVoice_Worker
+#graphify/code #graphify/INFERRED #community/paint_instead

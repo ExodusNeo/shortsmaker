@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_style.py"
 type: "code"
-community: "Style Candidates"
+community: "test_style.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Style_Candidates
+  - community/test_stylepy
 ---
 
 # test_style.py
@@ -33,6 +33,7 @@ tags:
 - [[re]] - `imports` [EXTRACTED]
 - [[remotion_render.py]] - `imports_from` [EXTRACTED]
 - [[restore_library()]] - `contains` [EXTRACTED]
+- [[rules.py]] - `imports_from` [EXTRACTED]
 - [[style_lab.py]] - `imports_from` [EXTRACTED]
 - [[sys]] - `imports` [EXTRACTED]
 - [[test_apply_look_scenes()]] - `contains` [EXTRACTED]
@@ -67,4 +68,4 @@ tags:
 - [[with_fakes()]] - `contains` [EXTRACTED]
 - [[writing.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Style_Candidates
+#graphify/code #graphify/EXTRACTED #community/test_stylepy

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/channel_profiles.py"
 type: "rationale"
-community: "Entry Point & Channel Menus"
+community: "re"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Entry_Point__Channel_Menus
+  - community/re
 ---
 
 # Channel profiles (channels/<name>.json), the run.bat menus, and YouTube/trend…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[channel_profiles.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Entry_Point__Channel_Menus
+#graphify/rationale #graphify/EXTRACTED #community/re

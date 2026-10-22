@@ -1,22 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Review Fixes & Pool Swaps"
+community: "choose_images"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Review_Fixes__Pool_Swaps
+  - community/choose_images
 ---
 
 # Path
 
 ## Connections
-- [[apply_review_fixes()]] - `references` [EXTRACTED]
-- [[first_second_check()]] - `references` [EXTRACTED]
-- [[paint_new()]] - `references` [EXTRACTED]
-- [[pool_pictures()]] - `references` [EXTRACTED]
-- [[quality_check()]] - `references` [EXTRACTED]
-- [[storyboard()]] - `references` [EXTRACTED]
-- [[visual_review()]] - `references` [EXTRACTED]
+- [[choose_images()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Review_Fixes__Pool_Swaps
+#graphify/code #graphify/EXTRACTED #community/choose_images

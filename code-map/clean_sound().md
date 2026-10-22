@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/audio_mix.py"
 type: "code"
-community: "Scene Cues & Image Search"
+community: "audio_mix.py"
 location: "L93"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Scene_Cues__Image_Search
+  - community/audio_mixpy
 ---
 
 # clean_sound()
@@ -16,6 +16,8 @@ tags:
 - [[audio_mix.py]] - `contains` [EXTRACTED]
 - [[contains()]] - `calls` [EXTRACTED]
 - [[re]] - `calls` [EXTRACTED]
+- [[test_clean_sound()]] - `calls` [EXTRACTED]
 - [[words_of()]] - `calls` [EXTRACTED]
+- [[write_scripts()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Scene_Cues__Image_Search
+#graphify/code #graphify/EXTRACTED #community/audio_mixpy

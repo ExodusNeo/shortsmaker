@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/writing.py"
 type: "code"
-community: "CLI & Pixabay Films"
+community: "test_full_scenes.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CLI__Pixabay_Films
+  - community/test_full_scenespy
 ---
 
 # writing.py
@@ -40,9 +40,10 @@ tags:
 - [[style_lab.py]] - `imports_from` [EXTRACTED]
 - [[test_full_scenes.py]] - `imports_from` [EXTRACTED]
 - [[test_pictures_first.py]] - `imports_from` [EXTRACTED]
+- [[test_rules.py]] - `imports_from` [EXTRACTED]
 - [[test_story.py]] - `imports_from` [EXTRACTED]
 - [[test_style.py]] - `imports_from` [EXTRACTED]
 - [[urllib_parse]] - `imports` [EXTRACTED]
 - [[write_scripts()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CLI__Pixabay_Films
+#graphify/code #graphify/EXTRACTED #community/test_full_scenespy

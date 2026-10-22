@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/gpu.py"
 type: "rationale"
-community: "GPU Voice & Painters"
+community: "json"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/GPU_Voice__Painters
+  - community/json
 ---
 
 # Local AI on the owner's GPU and helpers: ComfyUI/MOSS, VoiceStudio, Gemini…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[gpu.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/GPU_Voice__Painters
+#graphify/rationale #graphify/EXTRACTED #community/json

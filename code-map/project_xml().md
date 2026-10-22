@@ -1,18 +1,18 @@
 ---
 source_file: "shortsmaker/edit_project.py"
 type: "code"
-community: "Shotcut Timeline"
+community: "make"
 location: "L33"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Shotcut_Timeline
+  - community/make
 ---
 
 # project_xml()
 
 ## Connections
-- [[Path_3]] - `references` [EXTRACTED]
+- [[Path_4]] - `references` [EXTRACTED]
 - [[The video tracks bottom-up (pictures, then graphics drawn over them), each cut…]] - `rationale_for` [EXTRACTED]
 - [[chain()]] - `contains` [EXTRACTED]
 - [[clock()]] - `contains` [EXTRACTED]
@@ -21,4 +21,4 @@ tags:
 - [[prop()]] - `contains` [EXTRACTED]
 - [[re]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Shotcut_Timeline
+#graphify/code #graphify/EXTRACTED #community/make

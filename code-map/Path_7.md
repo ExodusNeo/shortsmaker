@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Picture Picker"
+community: "style_library"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Picture_Picker
+  - community/style_library
 ---
 
 # Path
 
 ## Connections
-- [[choose_images()]] - `references` [EXTRACTED]
+- [[candidate_in()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Picture_Picker
+#graphify/code #graphify/EXTRACTED #community/style_library

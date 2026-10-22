@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/gpu.py"
 type: "rationale"
-community: "GPU Voice & Painters"
+community: "json"
 location: "L257"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/GPU_Voice__Painters
+  - community/json
 ---
 
 # Paint on this PC with MOSS-Image in ComfyUI (owner's pick 2026-10-20 over SDXL-…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[moss_images()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/GPU_Voice__Painters
+#graphify/rationale #graphify/EXTRACTED #community/json

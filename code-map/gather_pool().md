@@ -1,19 +1,19 @@
 ---
 source_file: "shortsmaker/picture_pool.py"
 type: "code"
-community: "Scene Cues & Image Search"
-location: "L99"
+community: "gather_pool"
+location: "L98"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Scene_Cues__Image_Search
+  - community/gather_pool
 ---
 
 # gather_pool()
 
 ## Connections
 - [[Candidate pictures (with preview `thumb` bytes) and sampled real-film frames…]] - `rationale_for` [EXTRACTED]
-- [[add()]] - `contains` [EXTRACTED]
+- [[add()_1]] - `contains` [EXTRACTED]
 - [[archive_images()]] - `calls` [EXTRACTED]
 - [[article_images()]] - `calls` [EXTRACTED]
 - [[choose_images()]] - `calls` [EXTRACTED]
@@ -30,4 +30,4 @@ tags:
 - [[test_pool_roundtrip()]] - `calls` [EXTRACTED]
 - [[words_of()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Scene_Cues__Image_Search
+#graphify/code #graphify/EXTRACTED #community/gather_pool

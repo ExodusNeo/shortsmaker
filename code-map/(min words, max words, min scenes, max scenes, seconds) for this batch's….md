@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/writing.py"
 type: "rationale"
-community: "Script Editor & Story Checks"
-location: "L65"
+community: "edit_scripts"
+location: "L25"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Script_Editor__Story_Checks
+  - community/edit_scripts
 ---
 
 # (min words, max words, min scenes, max scenes, seconds) for this batch's…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[length_plan()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Script_Editor__Story_Checks
+#graphify/rationale #graphify/EXTRACTED #community/edit_scripts

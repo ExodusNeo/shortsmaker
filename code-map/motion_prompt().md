@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/gpu.py"
 type: "code"
-community: "Local Clips & GPU Jobs"
+community: "local_clips"
 location: "L323"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Local_Clips__GPU_Jobs
+  - community/local_clips
 ---
 
 # motion_prompt()
@@ -17,4 +17,4 @@ tags:
 - [[local_clips()]] - `calls` [EXTRACTED]
 - [[veo_handoff()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Local_Clips__GPU_Jobs
+#graphify/code #graphify/EXTRACTED #community/local_clips

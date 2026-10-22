@@ -1,22 +1,17 @@
 ---
-source_file: "shortsmaker/audio_mix.py"
+source_file: "local_ai/qwen_voice.py"
 type: "code"
-community: "Audio Mix & Music Gain"
-location: "L23"
+community: "qwen_voice.py"
+location: "L58"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Audio_Mix__Music_Gain
+  - community/qwen_voicepy
 ---
 
 # speak()
 
 ## Connections
-- [[Path]] - `references` [EXTRACTED]
-- [[TTS with retries Microsoft's free Edge voice service drops a request now and…]] - `rationale_for` [EXTRACTED]
-- [[asyncio]] - `calls` [EXTRACTED]
-- [[audio_mix.py]] - `contains` [EXTRACTED]
-- [[time]] - `calls` [EXTRACTED]
-- [[tts()]] - `calls` [EXTRACTED]
+- [[qwen_voice.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Audio_Mix__Music_Gain
+#graphify/code #graphify/EXTRACTED #community/qwen_voicepy

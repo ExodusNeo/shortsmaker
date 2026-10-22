@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_pictures_first.py"
 type: "code"
-community: "Picture Pool & Catalog"
-location: "L489"
+community: "test_pictures_first.py"
+location: "L492"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Picture_Pool__Catalog
+  - community/test_pictures_firstpy
 ---
 
 # test_corrupt_pool_and_catalog_redone()
@@ -20,4 +20,4 @@ tags:
 - [[save_pool()]] - `calls` [EXTRACTED]
 - [[test_pictures_first.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Picture_Pool__Catalog
+#graphify/code #graphify/EXTRACTED #community/test_pictures_firstpy

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/image_sources.py"
 type: "rationale"
-community: "Scene Cues & Image Search"
+community: "wm_files"
 location: "L99"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Scene_Cues__Image_Search
+  - community/wm_files
 ---
 
 # Usable images from a Wikimedia/Wikipedia API query: photos, screenshots,…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[wm_files()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Scene_Cues__Image_Search
+#graphify/rationale #graphify/EXTRACTED #community/wm_files

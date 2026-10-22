@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/gpu.py"
 type: "code"
-community: "Sentence Voice Takes"
+community: "test_package.py"
 location: "L129"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Sentence_Voice_Takes
+  - community/test_packagepy
 ---
 
 # sentence_groups()
@@ -18,4 +18,4 @@ tags:
 - [[re]] - `calls` [EXTRACTED]
 - [[test_sentences_running_across_cuts_are_one_take()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Sentence_Voice_Takes
+#graphify/code #graphify/EXTRACTED #community/test_packagepy

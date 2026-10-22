@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/Root.tsx"
 type: "code"
-community: "Remotion Captions & Cards"
+community: "Short.tsx"
 location: "L5"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Remotion_Captions__Cards
+  - community/Shorttsx
 ---
 
 # calculateMetadata()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[Root.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Remotion_Captions__Cards
+#graphify/code #graphify/EXTRACTED #community/Shorttsx

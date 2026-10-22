@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/config.py"
 type: "code"
-community: "Caption Lines (ASS)"
+community: "captions"
 location: "L112"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Caption_Lines_ASS
+  - community/captions
 ---
 
 # ass_colour()
@@ -18,4 +18,4 @@ tags:
 - [[config.py]] - `contains` [EXTRACTED]
 - [[styled()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Caption_Lines_ASS
+#graphify/code #graphify/EXTRACTED #community/captions

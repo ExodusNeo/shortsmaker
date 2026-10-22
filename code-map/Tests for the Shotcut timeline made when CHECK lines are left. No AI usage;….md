@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_edit_project.py"
 type: "rationale"
-community: "Shotcut Timeline"
+community: "test_package.py"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Shotcut_Timeline
+  - community/test_packagepy
 ---
 
 # Tests for the Shotcut timeline made when CHECK lines are left. No AI usage;…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[test_edit_project.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Shotcut_Timeline
+#graphify/rationale #graphify/EXTRACTED #community/test_packagepy

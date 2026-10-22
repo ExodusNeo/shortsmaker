@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/image_sources.py"
 type: "code"
-community: "CLI & Pixabay Films"
+community: "render"
 location: "L207"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CLI__Pixabay_Films
+  - community/render
 ---
 
 # short_credit()
@@ -14,5 +14,6 @@ tags:
 ## Connections
 - [[The on-screen credit tag kind, a short name and the licence (Photo E. Mariz…]] - `rationale_for` [EXTRACTED]
 - [[image_sources.py]] - `contains` [EXTRACTED]
+- [[render()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CLI__Pixabay_Films
+#graphify/code #graphify/EXTRACTED #community/render

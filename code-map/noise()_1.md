@@ -1,17 +1,24 @@
 ---
-source_file: "shortsmaker/audio_mix.py"
+source_file: "remotion/src/style/kit.ts"
 type: "code"
-community: "SFX Synthesis"
-location: "L180"
+community: "Halftone.tsx"
+location: "L27"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SFX_Synthesis
+  - community/Halftonetsx
 ---
 
 # noise()
 
 ## Connections
-- [[make_sfx()]] - `contains` [EXTRACTED]
+- [[Halftone.tsx]] - `imports` [EXTRACTED]
+- [[Riso.tsx]] - `imports` [EXTRACTED]
+- [[Silent()]] - `calls` [EXTRACTED]
+- [[Silent.tsx]] - `imports` [EXTRACTED]
+- [[draw()_1]] - `calls` [EXTRACTED]
+- [[draw()_3]] - `calls` [EXTRACTED]
+- [[kit.ts]] - `contains` [EXTRACTED]
+- [[style.test.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SFX_Synthesis
+#graphify/code #graphify/EXTRACTED #community/Halftonetsx

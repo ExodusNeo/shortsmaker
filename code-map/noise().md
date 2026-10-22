@@ -1,24 +1,17 @@
 ---
-source_file: "remotion/src/style/kit.ts"
+source_file: "shortsmaker/audio_mix.py"
 type: "code"
-community: "Style Library Components"
-location: "L27"
+community: "audio_mix.py"
+location: "L180"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Style_Library_Components
+  - community/audio_mixpy
 ---
 
 # noise()
 
 ## Connections
-- [[Halftone.tsx]] - `imports` [EXTRACTED]
-- [[Riso.tsx]] - `imports` [EXTRACTED]
-- [[Silent()]] - `calls` [EXTRACTED]
-- [[Silent.tsx]] - `imports` [EXTRACTED]
-- [[draw()_1]] - `calls` [EXTRACTED]
-- [[draw()_3]] - `calls` [EXTRACTED]
-- [[kit.ts]] - `contains` [EXTRACTED]
-- [[style.test.ts]] - `imports` [EXTRACTED]
+- [[make_sfx()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Style_Library_Components
+#graphify/code #graphify/EXTRACTED #community/audio_mixpy

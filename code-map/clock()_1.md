@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/media_tools.py"
 type: "code"
-community: "Edit Plan Text"
+community: "render"
 location: "L43"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Edit_Plan_Text
+  - community/render
 ---
 
 # clock()
@@ -16,5 +16,10 @@ tags:
 - [[gather_pool()]] - `calls` [EXTRACTED]
 - [[log_short()]] - `calls` [EXTRACTED]
 - [[media_tools.py]] - `contains` [EXTRACTED]
+- [[quality_check()]] - `calls` [EXTRACTED]
+- [[render()]] - `calls` [EXTRACTED]
+- [[review_fixes()]] - `calls` [EXTRACTED]
+- [[storyboard()]] - `calls` [EXTRACTED]
+- [[visual_review()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Edit_Plan_Text
+#graphify/code #graphify/EXTRACTED #community/render

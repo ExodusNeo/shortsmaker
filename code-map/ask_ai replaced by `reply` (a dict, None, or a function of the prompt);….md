@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_pictures_first.py"
 type: "rationale"
-community: "Fake AI Helpers"
-location: "L110"
+community: "test_pictures_first.py"
+location: "L113"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Fake_AI_Helpers
+  - community/test_pictures_firstpy
 ---
 
 # ask_ai replaced by `reply` (a dict, None, or a function of the prompt);…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[fake_ai]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Fake_AI_Helpers
+#graphify/rationale #graphify/EXTRACTED #community/test_pictures_firstpy

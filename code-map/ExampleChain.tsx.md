@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/full/examples/ExampleChain.tsx"
 type: "code"
-community: "Custom Scene Examples"
+community: "skinOf"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Custom_Scene_Examples
+  - community/skinOf
 ---
 
 # ExampleChain.tsx
@@ -36,4 +36,4 @@ tags:
 - [[toolkit.tsx]] - `imports_from` [EXTRACTED]
 - [[travel()]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Custom_Scene_Examples
+#graphify/code #graphify/EXTRACTED #community/skinOf

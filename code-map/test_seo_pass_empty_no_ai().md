@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_pictures_first.py"
 type: "code"
-community: "Fake AI Helpers"
-location: "L443"
+community: "test_pictures_first.py"
+location: "L446"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Fake_AI_Helpers
+  - community/test_pictures_firstpy
 ---
 
 # test_seo_pass_empty_no_ai()
@@ -16,4 +16,4 @@ tags:
 - [[seo_pass()]] - `calls` [EXTRACTED]
 - [[test_pictures_first.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Fake_AI_Helpers
+#graphify/code #graphify/EXTRACTED #community/test_pictures_firstpy

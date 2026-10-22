@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_style.py"
 type: "code"
-community: "Style Candidates"
-location: "L441"
+community: "style_library"
+location: "L444"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Style_Candidates
+  - community/style_library
 ---
 
 # test_approve_rolls_back_when_the_check_crashes()
@@ -19,4 +19,4 @@ tags:
 - [[test_style.py]] - `contains` [EXTRACTED]
 - [[timeout()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/Style_Candidates
+#graphify/code #graphify/EXTRACTED #community/style_library

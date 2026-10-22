@@ -1,18 +1,20 @@
 ---
 source_file: ""
 type: "code"
-community: "Gemini Painting & Renderer Choice"
+community: "frame_maker"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Gemini_Painting__Renderer_Choice
+  - community/frame_maker
 ---
 
 # Path
 
 ## Connections
-- [[load_state()]] - `references` [EXTRACTED]
-- [[render()]] - `references` [EXTRACTED]
-- [[save_state()]] - `references` [EXTRACTED]
+- [[dot-__init__()_4]] - `references` [EXTRACTED]
+- [[fills_frame()]] - `references` [EXTRACTED]
+- [[frame_maker()]] - `references` [EXTRACTED]
+- [[graphic_low()]] - `references` [EXTRACTED]
+- [[thumbnail()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Gemini_Painting__Renderer_Choice
+#graphify/code #graphify/EXTRACTED #community/frame_maker

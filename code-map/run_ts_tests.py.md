@@ -1,12 +1,12 @@
 ---
 source_file: "tests/run_ts_tests.py"
 type: "code"
-community: "Package & TS Tests"
+community: "test_package.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Package__TS_Tests
+  - community/test_packagepy
 ---
 
 # run_ts_tests.py
@@ -19,4 +19,4 @@ tags:
 - [[sys]] - `imports` [EXTRACTED]
 - [[tempfile]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Package__TS_Tests
+#graphify/code #graphify/EXTRACTED #community/test_packagepy

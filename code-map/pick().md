@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/audio_mix.py"
 type: "code"
-community: "Sound Cue Sheet"
+community: "full_cues"
 location: "L272"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Sound_Cue_Sheet
+  - community/full_cues
 ---
 
 # pick()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[sfx_events()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Sound_Cue_Sheet
+#graphify/code #graphify/EXTRACTED #community/full_cues

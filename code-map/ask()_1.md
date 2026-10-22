@@ -1,17 +1,18 @@
 ---
-source_file: "tests/test_full_scenes.py"
+source_file: "tests/test_rules.py"
 type: "code"
-community: "Planning Test Fakes"
-location: "L664"
+community: "test_rules.py"
+location: "L62"
 tags:
   - graphify/code
-  - graphify/EXTRACTED
-  - community/Planning_Test_Fakes
+  - graphify/INFERRED
+  - community/test_rulespy
 ---
 
 # ask()
 
 ## Connections
-- [[test_look_check_fixes_code()]] - `contains` [EXTRACTED]
+- [[capture_prompts()]] - `indirect_call` [INFERRED]
+- [[run_draft()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/Planning_Test_Fakes
+#graphify/code #graphify/INFERRED #community/test_rulespy

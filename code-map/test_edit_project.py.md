@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_edit_project.py"
 type: "code"
-community: "Shotcut Timeline"
+community: "test_package.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Shotcut_Timeline
+  - community/test_packagepy
 ---
 
 # test_edit_project.py
@@ -29,4 +29,4 @@ tags:
 - [[videos()]] - `contains` [EXTRACTED]
 - [[xml_etree_elementtree]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Shotcut_Timeline
+#graphify/code #graphify/EXTRACTED #community/test_packagepy

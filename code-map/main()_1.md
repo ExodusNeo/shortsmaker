@@ -1,20 +1,18 @@
 ---
-source_file: "local_ai/qwen_voice.py"
+source_file: "tests/render_style.py"
 type: "code"
-community: "Qwen/CosyVoice Worker"
-location: "L134"
+community: "test_package.py"
+location: "L49"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Qwen/CosyVoice_Worker
+  - community/test_packagepy
 ---
 
 # main()
 
 ## Connections
-- [[align()]] - `calls` [EXTRACTED]
-- [[json]] - `calls` [EXTRACTED]
-- [[qwen_voice.py]] - `contains` [EXTRACTED]
-- [[time]] - `calls` [EXTRACTED]
+- [[build()]] - `calls` [EXTRACTED]
+- [[render_style.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Qwen/CosyVoice_Worker
+#graphify/code #graphify/EXTRACTED #community/test_packagepy

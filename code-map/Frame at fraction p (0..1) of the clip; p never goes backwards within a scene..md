@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/frame_render.py"
 type: "rationale"
-community: "Python Frame Renderer"
+community: "frame_maker"
 location: "L209"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Python_Frame_Renderer
+  - community/frame_maker
 ---
 
 # Frame at fraction p (0..1) of the clip; p never goes backwards within a scene.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[dot-at()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Python_Frame_Renderer
+#graphify/rationale #graphify/EXTRACTED #community/frame_maker

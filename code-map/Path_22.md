@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Freesound & Picture Swaps"
+community: "paint_instead"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Freesound__Picture_Swaps
+  - community/paint_instead
 ---
 
 # Path
 
 ## Connections
-- [[use_picture_from()]] - `references` [EXTRACTED]
+- [[to_vertical()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Freesound__Picture_Swaps
+#graphify/code #graphify/EXTRACTED #community/paint_instead

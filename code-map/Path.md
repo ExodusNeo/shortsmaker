@@ -1,20 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "Audio Mix & Music Gain"
+community: "ask_ai"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Audio_Mix__Music_Gain
+  - community/ask_ai
 ---
 
 # Path
 
 ## Connections
-- [[captions()_1]] - `references` [EXTRACTED]
-- [[music_gain()]] - `references` [EXTRACTED]
-- [[speak()]] - `references` [EXTRACTED]
-- [[story_sound()]] - `references` [EXTRACTED]
-- [[tts()]] - `references` [EXTRACTED]
+- [[ask_ai()]] - `references` [EXTRACTED]
+- [[run_agy()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Audio_Mix__Music_Gain
+#graphify/code #graphify/EXTRACTED #community/ask_ai

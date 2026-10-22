@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/footage.py"
 type: "rationale"
-community: "Audio Mix & Music Gain"
+community: "film_piece"
 location: "L219"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Audio_Mix__Music_Gain
+  - community/film_piece
 ---
 
 # Start and end of the camera shot containing time `at` (newsreels cut to title…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[shot_span()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Audio_Mix__Music_Gain
+#graphify/rationale #graphify/EXTRACTED #community/film_piece

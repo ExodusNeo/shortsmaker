@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/photo_prep.py"
 type: "rationale"
-community: "Photo Cleanup"
+community: "clean_photo"
 location: "L36"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Photo_Cleanup
+  - community/clean_photo
 ---
 
 # Cut plain strips (white mounts, black plate edges) off the sides, at most 15%…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[trim_borders()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Photo_Cleanup
+#graphify/rationale #graphify/EXTRACTED #community/clean_photo

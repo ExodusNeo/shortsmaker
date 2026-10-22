@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/llm.py"
 type: "code"
-community: "CLI & Pixabay Films"
+community: "test_full_scenes.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CLI__Pixabay_Films
+  - community/test_full_scenespy
 ---
 
 # llm.py
@@ -30,6 +30,7 @@ tags:
 - [[quota_exhausted()]] - `contains` [EXTRACTED]
 - [[remotion_render.py]] - `imports_from` [EXTRACTED]
 - [[review.py]] - `imports_from` [EXTRACTED]
+- [[rules.py]] - `imports_from` [EXTRACTED]
 - [[run_agy()]] - `contains` [EXTRACTED]
 - [[seo.py]] - `imports_from` [EXTRACTED]
 - [[session.py]] - `imports_from` [EXTRACTED]
@@ -41,9 +42,10 @@ tags:
 - [[test_full_scenes.py]] - `imports_from` [EXTRACTED]
 - [[test_package.py]] - `imports_from` [EXTRACTED]
 - [[test_pictures_first.py]] - `imports_from` [EXTRACTED]
+- [[test_rules.py]] - `imports_from` [EXTRACTED]
 - [[test_story.py]] - `imports_from` [EXTRACTED]
 - [[test_style.py]] - `imports_from` [EXTRACTED]
 - [[time]] - `imports` [EXTRACTED]
 - [[writing.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CLI__Pixabay_Films
+#graphify/code #graphify/EXTRACTED #community/test_full_scenespy

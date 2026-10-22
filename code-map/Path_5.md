@@ -1,21 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "Picture Pool & Catalog"
+community: "make"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Picture_Pool__Catalog
+  - community/make
 ---
 
 # Path
 
 ## Connections
-- [[catalog_pool()]] - `references` [EXTRACTED]
-- [[contact_sheets()]] - `references` [EXTRACTED]
-- [[load_pool()]] - `references` [EXTRACTED]
-- [[pool_folder()]] - `references` [EXTRACTED]
-- [[prepare_topic()]] - `references` [EXTRACTED]
-- [[save_pool()]] - `references` [EXTRACTED]
+- [[short_folder()]] - `references` [EXTRACTED]
+- [[videos()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Picture_Pool__Catalog
+#graphify/code #graphify/EXTRACTED #community/make

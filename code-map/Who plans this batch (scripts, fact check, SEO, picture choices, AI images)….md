@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/channel_profiles.py"
 type: "rationale"
-community: "Entry Point & Channel Menus"
-location: "L71"
+community: "re"
+location: "L74"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Entry_Point__Channel_Menus
+  - community/re
 ---
 
 # Who plans this batch (scripts, fact check, SEO, picture choices, AI images):…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[ask_brain()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Entry_Point__Channel_Menus
+#graphify/rationale #graphify/EXTRACTED #community/re

@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_pictures_first.py"
 type: "code"
-community: "Fake AI Helpers"
-location: "L114"
+community: "planning_ai"
+location: "L117"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Fake_AI_Helpers
+  - community/planning_ai
 ---
 
 # .__enter__()
@@ -15,4 +15,4 @@ tags:
 - [[fake_ai]] - `method` [EXTRACTED]
 - [[reply()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Fake_AI_Helpers
+#graphify/code #graphify/EXTRACTED #community/planning_ai

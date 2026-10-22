@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_full_scenes.py"
 type: "code"
-community: "Full Scene Tests"
+community: "test_full_scenes.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Full_Scene_Tests
+  - community/test_full_scenespy
 ---
 
 # test_full_scenes.py
@@ -30,6 +30,7 @@ tags:
 - [[llm.py]] - `imports_from` [EXTRACTED]
 - [[logbook.py]] - `imports_from` [EXTRACTED]
 - [[motion.py]] - `imports_from` [EXTRACTED]
+- [[owner()]] - `imports` [EXTRACTED]
 - [[patching.py]] - `imports_from` [EXTRACTED]
 - [[pathlib]] - `imports_from` [EXTRACTED]
 - [[picker.py]] - `imports_from` [EXTRACTED]
@@ -39,6 +40,7 @@ tags:
 - [[random]] - `imports` [EXTRACTED]
 - [[remotion_render.py]] - `imports_from` [EXTRACTED]
 - [[review.py]] - `imports_from` [EXTRACTED]
+- [[rules.py]] - `imports_from` [EXTRACTED]
 - [[session.py]] - `imports_from` [EXTRACTED]
 - [[short_render.py]] - `imports_from` [EXTRACTED]
 - [[shutil]] - `imports` [EXTRACTED]
@@ -92,4 +94,4 @@ tags:
 - [[traceback]] - `imports` [EXTRACTED]
 - [[writing.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Full_Scene_Tests
+#graphify/code #graphify/EXTRACTED #community/test_full_scenespy

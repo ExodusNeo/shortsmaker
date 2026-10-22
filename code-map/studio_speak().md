@@ -1,12 +1,12 @@
 ---
 source_file: "local_ai/qwen_voice.py"
 type: "code"
-community: "Qwen/CosyVoice Worker"
+community: "qwen_voice.py"
 location: "L78"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Qwen/CosyVoice_Worker
+  - community/qwen_voicepy
 ---
 
 # studio_speak()
@@ -18,4 +18,4 @@ tags:
 - [[say_number()]] - `calls` [EXTRACTED]
 - [[subprocess]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Qwen/CosyVoice_Worker
+#graphify/code #graphify/EXTRACTED #community/qwen_voicepy

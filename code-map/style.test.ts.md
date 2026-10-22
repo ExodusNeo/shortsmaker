@@ -1,12 +1,12 @@
 ---
 source_file: "tests/style.test.ts"
 type: "code"
-community: "Style Library Components"
+community: "Short.tsx"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Style_Library_Components
+  - community/Shorttsx
 ---
 
 # style.test.ts
@@ -18,14 +18,14 @@ tags:
 - [[inksOf()]] - `imports` [EXTRACTED]
 - [[kit.ts]] - `imports_from` [EXTRACTED]
 - [[lookFor()]] - `imports` [EXTRACTED]
-- [[noise()]] - `imports` [EXTRACTED]
-- [[ok()]] - `contains` [EXTRACTED]
+- [[noise()_1]] - `imports` [EXTRACTED]
+- [[ok()_1]] - `contains` [EXTRACTED]
 - [[overlayFor()]] - `imports` [EXTRACTED]
 - [[shown()]] - `contains` [EXTRACTED]
 - [[styleindex.ts]] - `imports_from` [EXTRACTED]
-- [[test()]] - `contains` [EXTRACTED]
+- [[test()_1]] - `contains` [EXTRACTED]
 - [[transitionFor()]] - `imports` [EXTRACTED]
 - [[transitionWindow()]] - `imports` [EXTRACTED]
 - [[window.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Style_Library_Components
+#graphify/code #graphify/EXTRACTED #community/Shorttsx

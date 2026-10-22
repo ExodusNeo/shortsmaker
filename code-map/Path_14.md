@@ -1,23 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: "Local Clips & GPU Jobs"
+community: "ffmpeg"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Local_Clips__GPU_Jobs
+  - community/ffmpeg
 ---
 
 # Path
 
 ## Connections
-- [[cover_crop()]] - `references` [EXTRACTED]
-- [[gemini_images()]] - `references` [EXTRACTED]
-- [[local_clips()]] - `references` [EXTRACTED]
-- [[local_job()]] - `references` [EXTRACTED]
-- [[local_voice()]] - `references` [EXTRACTED]
-- [[moss_images()]] - `references` [EXTRACTED]
-- [[split_takes()]] - `references` [EXTRACTED]
-- [[veo_handoff()]] - `references` [EXTRACTED]
+- [[duration()]] - `references` [EXTRACTED]
+- [[ffmpeg()]] - `references` [EXTRACTED]
+- [[write_json()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Local_Clips__GPU_Jobs
+#graphify/code #graphify/EXTRACTED #community/ffmpeg

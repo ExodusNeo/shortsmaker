@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/remotion_render.py"
 type: "rationale"
-community: "Gemini Painting & Renderer Choice"
+community: "paint_instead"
 location: "L72"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Gemini_Painting__Renderer_Choice
+  - community/paint_instead
 ---
 
 # Remotion failed: the full-screen motion graphic scenes get a painted picture…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[paint_instead()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Gemini_Painting__Renderer_Choice
+#graphify/rationale #graphify/EXTRACTED #community/paint_instead

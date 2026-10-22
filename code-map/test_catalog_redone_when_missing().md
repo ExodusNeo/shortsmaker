@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_pictures_first.py"
 type: "code"
-community: "Pictures-First Tests"
-location: "L148"
+community: "test_pictures_first.py"
+location: "L151"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pictures-First_Tests
+  - community/test_pictures_firstpy
 ---
 
 # test_catalog_redone_when_missing()
@@ -19,4 +19,4 @@ tags:
 - [[save_pool()]] - `calls` [EXTRACTED]
 - [[test_pictures_first.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pictures-First_Tests
+#graphify/code #graphify/EXTRACTED #community/test_pictures_firstpy

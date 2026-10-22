@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/review.py"
 type: "rationale"
-community: "Review Fixes & Pool Swaps"
-location: "L140"
+community: "run_check"
+location: "L139"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Review_Fixes__Pool_Swaps
+  - community/run_check
 ---
 
 # Scenes i and k trade their real photos/films (paintings and motion graphics are…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[swap_pictures()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Review_Fixes__Pool_Swaps
+#graphify/rationale #graphify/EXTRACTED #community/run_check

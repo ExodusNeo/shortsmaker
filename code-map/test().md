@@ -1,17 +1,17 @@
 ---
-source_file: "tests/style.test.ts"
+source_file: "tests/guarded.test.ts"
 type: "code"
-community: "Style Library Components"
-location: "L8"
+community: "guarded.tsx"
+location: "L7"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Style_Library_Components
+  - community/guardedtsx
 ---
 
 # test()
 
 ## Connections
-- [[style.test.ts]] - `contains` [EXTRACTED]
+- [[guarded.test.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Style_Library_Components
+#graphify/code #graphify/EXTRACTED #community/guardedtsx

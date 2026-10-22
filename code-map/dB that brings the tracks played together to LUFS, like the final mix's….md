@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/edit_project.py"
 type: "rationale"
-community: "Shotcut Timeline"
+community: "subprocess"
 location: "L24"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Shotcut_Timeline
+  - community/subprocess
 ---
 
 # dB that brings the tracks played together to LUFS, like the final mix's…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[master_gain()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Shotcut_Timeline
+#graphify/rationale #graphify/EXTRACTED #community/subprocess

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/motion.py"
 type: "rationale"
-community: "AI-Coded Motion Scenes"
+community: "ask_ai"
 location: "L199"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/AI-Coded_Motion_Scenes
+  - community/ask_ai
 ---
 
 # The rules every custom motion-graphic scene follows, plus two worked examples…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[custom_rules()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/AI-Coded_Motion_Scenes
+#graphify/rationale #graphify/EXTRACTED #community/ask_ai

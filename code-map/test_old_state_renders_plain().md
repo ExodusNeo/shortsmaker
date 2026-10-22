@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_style.py"
 type: "code"
-community: "Photo Look Scenes"
-location: "L211"
+community: "render_remotion"
+location: "L214"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Photo_Look_Scenes
+  - community/render_remotion
 ---
 
 # test_old_state_renders_plain()
@@ -15,4 +15,4 @@ tags:
 - [[style_props()]] - `calls` [EXTRACTED]
 - [[test_style.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Photo_Look_Scenes
+#graphify/code #graphify/EXTRACTED #community/render_remotion

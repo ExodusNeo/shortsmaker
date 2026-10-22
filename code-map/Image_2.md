@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "Frame Maker & Credit Tags"
+community: "clean_photo"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Frame_Maker__Credit_Tags
+  - community/clean_photo
 ---
 
 # Image
 
 ## Connections
-- [[credit_tag_image()]] - `references` [EXTRACTED]
+- [[is_stereo()]] - `references` [EXTRACTED]
+- [[trim_borders()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Frame_Maker__Credit_Tags
+#graphify/code #graphify/EXTRACTED #community/clean_photo

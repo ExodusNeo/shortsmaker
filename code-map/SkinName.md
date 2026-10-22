@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/full/types.ts"
 type: "code"
-community: "Evidence Board Scenes"
+community: "toolkit.tsx"
 location: "L6"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Evidence_Board_Scenes
+  - community/toolkittsx
 ---
 
 # SkinName
@@ -17,4 +17,4 @@ tags:
 - [[guarded.tsx]] - `imports` [EXTRACTED]
 - [[toolkit.tsx]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Evidence_Board_Scenes
+#graphify/code #graphify/EXTRACTED #community/toolkittsx

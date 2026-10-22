@@ -1,17 +1,18 @@
 ---
 source_file: "remotion/src/style/types.ts"
 type: "code"
-community: "Style Library Components"
+community: "Halftone.tsx"
 location: "L10"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Style_Library_Components
+  - community/Halftonetsx
 ---
 
 # Look
 
 ## Connections
+- [[Background()]] - `calls` [EXTRACTED]
 - [[Engraving.tsx]] - `imports` [EXTRACTED]
 - [[Halftone.tsx]] - `imports` [EXTRACTED]
 - [[InventedLook.tsx]] - `imports` [EXTRACTED]
@@ -22,4 +23,4 @@ tags:
 - [[styleindex.ts]] - `imports` [EXTRACTED]
 - [[styletypes.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Style_Library_Components
+#graphify/code #graphify/EXTRACTED #community/Halftonetsx

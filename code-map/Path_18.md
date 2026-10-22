@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "Detail Marks & Storyboard"
+community: "re"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Detail_Marks__Storyboard
+  - community/re
 ---
 
 # Path
 
 ## Connections
-- [[mark_details()]] - `references` [EXTRACTED]
+- [[log_short()]] - `references` [EXTRACTED]
+- [[vault_page()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Detail_Marks__Storyboard
+#graphify/code #graphify/EXTRACTED #community/re

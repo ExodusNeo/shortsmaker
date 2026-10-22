@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/picture_pool.py"
 type: "rationale"
-community: "Scene Cues & Image Search"
-location: "L101"
+community: "gather_pool"
+location: "L100"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Scene_Cues__Image_Search
+  - community/gather_pool
 ---
 
 # Candidate pictures (with preview `thumb` bytes) and sampled real-film frames…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[gather_pool()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Scene_Cues__Image_Search
+#graphify/rationale #graphify/EXTRACTED #community/gather_pool

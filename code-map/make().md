@@ -1,18 +1,18 @@
 ---
 source_file: "shortsmaker/edit_project.py"
 type: "code"
-community: "Shotcut Timeline"
+community: "make"
 location: "L93"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Shotcut_Timeline
+  - community/make
 ---
 
 # make()
 
 ## Connections
-- [[Path_3]] - `references` [EXTRACTED]
+- [[Path_4]] - `references` [EXTRACTED]
 - [[caption_layer()]] - `calls` [EXTRACTED]
 - [[edit_project.py]] - `contains` [EXTRACTED]
 - [[folderedit.mlt + edit_in_shotcut.bat for a finished Short. `videos` = (track…]] - `rationale_for` [EXTRACTED]
@@ -22,4 +22,4 @@ tags:
 - [[test_melt_plays_it_with_the_captions_on_top()]] - `calls` [EXTRACTED]
 - [[test_timeline_has_scenes_captions_sound_and_markers()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Shotcut_Timeline
+#graphify/code #graphify/EXTRACTED #community/make

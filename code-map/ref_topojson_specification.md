@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "Map Journey Scenes"
+community: "Journey.tsx"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Map_Journey_Scenes
+  - community/Journeytsx
 ---
 
 # ref_topojson_specification
@@ -14,4 +14,4 @@ tags:
 - [[Journey.tsx]] - `imports_from` [EXTRACTED]
 - [[MapCard.tsx]] - `imports_from` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Map_Journey_Scenes
+#graphify/concept #graphify/EXTRACTED #community/Journeytsx

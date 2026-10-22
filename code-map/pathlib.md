@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "Config & Palettes"
+community: "test_full_scenes.py"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Config__Palettes
+  - community/test_full_scenespy
 ---
 
 # pathlib
@@ -34,6 +34,7 @@ tags:
 - [[render_full.py]] - `imports_from` [EXTRACTED]
 - [[render_style.py]] - `imports_from` [EXTRACTED]
 - [[review.py]] - `imports_from` [EXTRACTED]
+- [[rules.py]] - `imports_from` [EXTRACTED]
 - [[run_ts_tests.py]] - `imports_from` [EXTRACTED]
 - [[seo.py]] - `imports_from` [EXTRACTED]
 - [[session.py]] - `imports_from` [EXTRACTED]
@@ -46,8 +47,9 @@ tags:
 - [[test_package.py]] - `imports_from` [EXTRACTED]
 - [[test_pictures_first.py]] - `imports_from` [EXTRACTED]
 - [[test_qwen_voice.py]] - `imports_from` [EXTRACTED]
+- [[test_rules.py]] - `imports_from` [EXTRACTED]
 - [[test_story.py]] - `imports_from` [EXTRACTED]
 - [[test_style.py]] - `imports_from` [EXTRACTED]
 - [[writing.py]] - `imports_from` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Config__Palettes
+#graphify/concept #graphify/EXTRACTED #community/test_full_scenespy

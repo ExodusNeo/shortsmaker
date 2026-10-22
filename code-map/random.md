@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "Config & Palettes"
+community: "audio_mix.py"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Config__Palettes
+  - community/audio_mixpy
 ---
 
 # random
@@ -20,4 +20,4 @@ tags:
 - [[short_render.py]] - `imports` [EXTRACTED]
 - [[test_full_scenes.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Config__Palettes
+#graphify/concept #graphify/EXTRACTED #community/audio_mixpy

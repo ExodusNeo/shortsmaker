@@ -1,18 +1,18 @@
 ---
 source_file: "tests/test_pictures_first.py"
 type: "code"
-community: "Script Writing Pipeline"
-location: "L433"
+community: "write_scripts"
+location: "L459"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Script_Writing_Pipeline
+  - community/write_scripts
 ---
 
 # prepare()
 
 ## Connections
 - [[passing()]] - `calls` [EXTRACTED]
-- [[test_dropped_topic_pool_removed()]] - `contains` [EXTRACTED]
+- [[test_both_mode_pools_follow_reply_position()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Script_Writing_Pipeline
+#graphify/code #graphify/EXTRACTED #community/write_scripts

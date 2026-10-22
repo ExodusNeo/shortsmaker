@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_first_second.py"
 type: "code"
-community: "First-Second Check Tests"
+community: "test_full_scenes.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/First-Second_Check_Tests
+  - community/test_full_scenespy
 ---
 
 # test_first_second.py
@@ -20,6 +20,7 @@ tags:
 - [[pathlib]] - `imports_from` [EXTRACTED]
 - [[real()]] - `contains` [EXTRACTED]
 - [[review.py]] - `imports_from` [EXTRACTED]
+- [[rules.py]] - `imports_from` [EXTRACTED]
 - [[run_check()]] - `contains` [EXTRACTED]
 - [[session.py]] - `imports_from` [EXTRACTED]
 - [[state()]] - `contains` [EXTRACTED]
@@ -33,4 +34,4 @@ tags:
 - [[test_swap_pictures_trades_real_pictures()]] - `contains` [EXTRACTED]
 - [[traceback]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/First-Second_Check_Tests
+#graphify/code #graphify/EXTRACTED #community/test_full_scenespy

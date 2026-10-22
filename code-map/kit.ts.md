@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/style/kit.ts"
 type: "code"
-community: "Style Library Components"
+community: "style/index.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Style_Library_Components
+  - community/style/indexts
 ---
 
 # kit.ts
@@ -41,8 +41,8 @@ tags:
 - [[clamp01()]] - `contains` [EXTRACTED]
 - [[drawCover()]] - `contains` [EXTRACTED]
 - [[inksOf()]] - `contains` [EXTRACTED]
-- [[luminance()]] - `contains` [EXTRACTED]
-- [[noise()]] - `contains` [EXTRACTED]
+- [[luminance()_1]] - `contains` [EXTRACTED]
+- [[noise()_1]] - `contains` [EXTRACTED]
 - [[outline()]] - `re_exports` [EXTRACTED]
 - [[ref_react]] - `imports_from` [EXTRACTED]
 - [[ref_remotion]] - `imports_from` [EXTRACTED]
@@ -53,4 +53,4 @@ tags:
 - [[theme]] - `re_exports` [EXTRACTED]
 - [[useOnceCanvas()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Style_Library_Components
+#graphify/code #graphify/EXTRACTED #community/style/indexts

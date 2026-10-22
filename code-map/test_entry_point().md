@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_package.py"
 type: "code"
-community: "Package & TS Tests"
+community: "test_package.py"
 location: "L117"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Package__TS_Tests
+  - community/test_packagepy
 ---
 
 # test_entry_point()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[test_package.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Package__TS_Tests
+#graphify/code #graphify/EXTRACTED #community/test_packagepy

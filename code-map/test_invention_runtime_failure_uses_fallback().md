@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_style.py"
 type: "code"
-community: "Remotion Render & Figures"
-location: "L289"
+community: "render_remotion"
+location: "L292"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Remotion_Render__Figures
+  - community/render_remotion
 ---
 
 # test_invention_runtime_failure_uses_fallback()
@@ -16,4 +16,4 @@ tags:
 - [[run_remotion_with_fallback()]] - `calls` [EXTRACTED]
 - [[test_style.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Remotion_Render__Figures
+#graphify/code #graphify/EXTRACTED #community/render_remotion

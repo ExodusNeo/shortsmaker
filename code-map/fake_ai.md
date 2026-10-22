@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_pictures_first.py"
 type: "code"
-community: "Fake AI Helpers"
-location: "L109"
+community: "test_pictures_first.py"
+location: "L112"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Fake_AI_Helpers
+  - community/test_pictures_firstpy
 ---
 
 # fake_ai
@@ -15,8 +15,8 @@ tags:
 - [[dot-__enter__()]] - `calls` [EXTRACTED]
 - [[dot-__enter__()_3]] - `calls` [EXTRACTED]
 - [[dot-__enter__()_2]] - `method` [EXTRACTED]
-- [[dot-__exit__()_3]] - `method` [EXTRACTED]
-- [[dot-__init__()_3]] - `method` [EXTRACTED]
+- [[dot-__exit__()]] - `method` [EXTRACTED]
+- [[dot-__init__()]] - `method` [EXTRACTED]
 - [[ask_ai replaced by `reply` (a dict, None, or a function of the prompt);…]] - `rationale_for` [EXTRACTED]
 - [[test_catalog_both_empty_stops_uncached()]] - `calls` [EXTRACTED]
 - [[test_catalog_empty_pool_no_ai()]] - `calls` [EXTRACTED]
@@ -27,4 +27,4 @@ tags:
 - [[test_pictures_first.py]] - `contains` [EXTRACTED]
 - [[test_seo_pass_empty_no_ai()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Fake_AI_Helpers
+#graphify/code #graphify/EXTRACTED #community/test_pictures_firstpy

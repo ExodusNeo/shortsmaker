@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/image_sources.py"
 type: "code"
-community: "Scene Cues & Image Search"
+community: "gather_pool"
 location: "L160"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Scene_Cues__Image_Search
+  - community/gather_pool
 ---
 
 # openverse_images()
@@ -17,4 +17,4 @@ tags:
 - [[image_sources.py]] - `contains` [EXTRACTED]
 - [[ov_get()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Scene_Cues__Image_Search
+#graphify/code #graphify/EXTRACTED #community/gather_pool

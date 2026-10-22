@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_pictures_first.py"
 type: "rationale"
-community: "Picture Picker"
-location: "L329"
+community: "choose_images"
+location: "L332"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Picture_Picker
+  - community/choose_images
 ---
 
 # choose_images() with network stubbed; gather_pool returns `extra` (and records…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[picking]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Picture_Picker
+#graphify/rationale #graphify/EXTRACTED #community/choose_images

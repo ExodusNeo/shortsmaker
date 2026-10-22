@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/footage.py"
 type: "code"
-community: "Film Frames & Crops"
+community: "json"
 location: "L154"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Film_Frames__Crops
+  - community/json
 ---
 
 # crop_film_bytes()
@@ -17,4 +17,4 @@ tags:
 - [[footage.py]] - `contains` [EXTRACTED]
 - [[io]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Film_Frames__Crops
+#graphify/code #graphify/EXTRACTED #community/json

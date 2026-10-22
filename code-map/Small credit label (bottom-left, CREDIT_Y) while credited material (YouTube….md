@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/image_sources.py"
 type: "rationale"
-community: "Frame Maker & Credit Tags"
+community: "frame_maker"
 location: "L223"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Frame_Maker__Credit_Tags
+  - community/frame_maker
 ---
 
 # Small credit label (bottom-left, CREDIT_Y) while credited material (YouTube…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[credit_tag_image()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Frame_Maker__Credit_Tags
+#graphify/rationale #graphify/EXTRACTED #community/frame_maker

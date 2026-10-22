@@ -1,12 +1,12 @@
 ---
 source_file: "tools/split_make_shorts.py"
 type: "code"
-community: "Package Split Tool"
+community: "split_make_shorts.py"
 location: "L264"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Package_Split_Tool
+  - community/split_make_shortspy
 ---
 
 # split_source()
@@ -25,4 +25,4 @@ tags:
 - [[wrap_import()]] - `calls` [EXTRACTED]
 - [[{module source} for the package (see the module docstring for the rules).]] - `rationale_for` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Package_Split_Tool
+#graphify/code #graphify/EXTRACTED #community/split_make_shortspy

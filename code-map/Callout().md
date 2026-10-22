@@ -1,17 +1,18 @@
 ---
 source_file: "remotion/src/Graphics.tsx"
 type: "code"
-community: "Remotion Captions & Cards"
+community: "Graphics.tsx"
 location: "L78"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Remotion_Captions__Cards
+  - community/Graphicstsx
 ---
 
 # Callout()
 
 ## Connections
+- [[BuiltInGraphic()]] - `calls` [EXTRACTED]
 - [[Graphics.tsx]] - `contains` [EXTRACTED]
 - [[Pin()]] - `calls` [EXTRACTED]
 - [[Short.tsx]] - `imports` [EXTRACTED]
@@ -20,4 +21,4 @@ tags:
 - [[slot()]] - `calls` [EXTRACTED]
 - [[useWindow()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Remotion_Captions__Cards
+#graphify/code #graphify/EXTRACTED #community/Graphicstsx

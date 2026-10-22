@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/motion.py"
 type: "rationale"
-community: "AI-Coded Motion Scenes"
+community: "ask_ai"
 location: "L257"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/AI-Coded_Motion_Scenes
+  - community/ask_ai
 ---
 
 # Renders seconds start..end of a small Short (`props`; its pictures already in…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[preview_sheet()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/AI-Coded_Motion_Scenes
+#graphify/rationale #graphify/EXTRACTED #community/ask_ai

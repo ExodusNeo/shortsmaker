@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "Style Candidates"
+community: "test_style.py"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Style_Candidates
+  - community/test_stylepy
 ---
 
 # inspect
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[test_style.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Style_Candidates
+#graphify/concept #graphify/EXTRACTED #community/test_stylepy

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/footage.py"
 type: "rationale"
-community: "Film Frames & Crops"
+community: "film_piece"
 location: "L199"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Film_Frames__Crops
+  - community/film_piece
 ---
 
 # Download ~14s of film around the chosen moment (cropped with FILM_CROP to…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[film_piece()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Film_Frames__Crops
+#graphify/rationale #graphify/EXTRACTED #community/film_piece

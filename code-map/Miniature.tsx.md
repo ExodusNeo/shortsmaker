@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/style/looks/Miniature.tsx"
 type: "code"
-community: "Style Library Components"
+community: "Halftone.tsx"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Style_Library_Components
+  - community/Halftonetsx
 ---
 
 # Miniature.tsx
@@ -24,4 +24,4 @@ tags:
 - [[styletypes.ts]] - `imports_from` [EXTRACTED]
 - [[useOnceCanvas()]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Style_Library_Components
+#graphify/code #graphify/EXTRACTED #community/Halftonetsx

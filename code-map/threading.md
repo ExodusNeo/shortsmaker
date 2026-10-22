@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "CLI & Pixabay Films"
+community: "json"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/CLI__Pixabay_Films
+  - community/json
 ---
 
 # threading
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[image_sources.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/CLI__Pixabay_Films
+#graphify/concept #graphify/EXTRACTED #community/json

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/plan_rules.py"
 type: "code"
-community: "Scene Cues & Image Search"
+community: "full_cues"
 location: "L335"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Scene_Cues__Image_Search
+  - community/full_cues
 ---
 
 # full_cues()
@@ -18,5 +18,9 @@ tags:
 - [[spoken_at()]] - `calls` [EXTRACTED]
 - [[spoken_span()]] - `calls` [EXTRACTED]
 - [[squeeze()]] - `contains` [EXTRACTED]
+- [[test_custom_cues_props_and_pictures()]] - `calls` [EXTRACTED]
+- [[test_full_cues_document()]] - `calls` [EXTRACTED]
+- [[test_full_cues_fallback()]] - `calls` [EXTRACTED]
+- [[test_full_cues_leave_time_to_finish()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Scene_Cues__Image_Search
+#graphify/code #graphify/EXTRACTED #community/full_cues

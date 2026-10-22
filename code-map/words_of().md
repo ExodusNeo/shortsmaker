@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/plan_rules.py"
 type: "code"
-community: "Scene Cues & Image Search"
+community: "words_of"
 location: "L302"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Scene_Cues__Image_Search
+  - community/words_of
 ---
 
 # words_of()
@@ -25,8 +25,10 @@ tags:
 - [[rescue_graphics()]] - `calls` [EXTRACTED]
 - [[spoken_span()]] - `calls` [EXTRACTED]
 - [[test_clean_full_keeps_board_pic()]] - `calls` [EXTRACTED]
+- [[test_clean_sound()]] - `calls` [EXTRACTED]
 - [[unicodedata]] - `calls` [EXTRACTED]
 - [[wm_files()]] - `calls` [EXTRACTED]
 - [[word()]] - `calls` [EXTRACTED]
+- [[write_scripts()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Scene_Cues__Image_Search
+#graphify/code #graphify/EXTRACTED #community/words_of

@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/style/looks/Halftone.tsx"
 type: "code"
-community: "Style Library Components"
+community: "Halftone.tsx"
 location: "L36"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Style_Library_Components
+  - community/Halftonetsx
 ---
 
 # draw()
@@ -14,10 +14,10 @@ tags:
 ## Connections
 - [[Halftone()]] - `calls` [EXTRACTED]
 - [[Halftone.tsx]] - `contains` [EXTRACTED]
-- [[luminance()]] - `calls` [EXTRACTED]
-- [[noise()]] - `calls` [EXTRACTED]
+- [[luminance()_1]] - `calls` [EXTRACTED]
+- [[noise()_1]] - `calls` [EXTRACTED]
 - [[rgb()]] - `calls` [EXTRACTED]
 - [[screen()]] - `calls` [EXTRACTED]
 - [[stretch()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Style_Library_Components
+#graphify/code #graphify/EXTRACTED #community/Halftonetsx

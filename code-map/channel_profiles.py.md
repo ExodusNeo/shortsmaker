@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/channel_profiles.py"
 type: "code"
-community: "Entry Point & Channel Menus"
+community: "re"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Entry_Point__Channel_Menus
+  - community/re
 ---
 
 # channel_profiles.py
@@ -31,13 +31,16 @@ tags:
 - [[picker.py]] - `imports_from` [EXTRACTED]
 - [[plan_rules.py]] - `imports_from` [EXTRACTED]
 - [[re]] - `imports` [EXTRACTED]
+- [[rules.py]] - `imports_from` [EXTRACTED]
 - [[save_channel()]] - `contains` [EXTRACTED]
 - [[seed_ideas()]] - `contains` [EXTRACTED]
 - [[seo.py]] - `imports_from` [EXTRACTED]
 - [[session.py]] - `imports_from` [EXTRACTED]
 - [[style_lab.py]] - `imports_from` [EXTRACTED]
+- [[sys]] - `imports` [EXTRACTED]
 - [[test_full_scenes.py]] - `imports_from` [EXTRACTED]
 - [[test_pictures_first.py]] - `imports_from` [EXTRACTED]
+- [[test_rules.py]] - `imports_from` [EXTRACTED]
 - [[test_style.py]] - `imports_from` [EXTRACTED]
 - [[time]] - `imports` [EXTRACTED]
 - [[trend_research()]] - `contains` [EXTRACTED]
@@ -45,4 +48,4 @@ tags:
 - [[writing.py]] - `imports_from` [EXTRACTED]
 - [[yt_list()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Entry_Point__Channel_Menus
+#graphify/code #graphify/EXTRACTED #community/re

@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "GPU Voice & Painters"
+community: "json"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/GPU_Voice__Painters
+  - community/json
 ---
 
 # concurrent_futures
@@ -14,4 +14,4 @@ tags:
 - [[gpu.py]] - `imports_from` [EXTRACTED]
 - [[picture_pool.py]] - `imports_from` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/GPU_Voice__Painters
+#graphify/concept #graphify/EXTRACTED #community/json

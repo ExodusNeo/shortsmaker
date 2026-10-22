@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/media_tools.py"
 type: "code"
-community: "Audio Mix & Music Gain"
+community: "json"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Audio_Mix__Music_Gain
+  - community/json
 ---
 
 # media_tools.py
@@ -36,9 +36,10 @@ tags:
 - [[test_edit_project.py]] - `imports_from` [EXTRACTED]
 - [[test_first_second.py]] - `imports_from` [EXTRACTED]
 - [[test_package.py]] - `imports_from` [EXTRACTED]
+- [[test_rules.py]] - `imports_from` [EXTRACTED]
 - [[test_story.py]] - `imports_from` [EXTRACTED]
 - [[urllib_request]] - `imports` [EXTRACTED]
 - [[video_encoder()]] - `contains` [EXTRACTED]
 - [[write_json()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Audio_Mix__Music_Gain
+#graphify/code #graphify/EXTRACTED #community/json

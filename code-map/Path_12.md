@@ -1,20 +1,22 @@
 ---
 source_file: ""
 type: "code"
-community: "Remotion Render & Figures"
+community: "render"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Remotion_Render__Figures
+  - community/render
 ---
 
 # Path
 
 ## Connections
-- [[ink_silhouette()]] - `references` [EXTRACTED]
-- [[make_paper()]] - `references` [EXTRACTED]
-- [[paint_instead()]] - `references` [EXTRACTED]
-- [[redraw_custom()]] - `references` [EXTRACTED]
-- [[render_remotion()]] - `references` [EXTRACTED]
+- [[apply_review_fixes()]] - `references` [EXTRACTED]
+- [[first_second_check()]] - `references` [EXTRACTED]
+- [[paint_new()]] - `references` [EXTRACTED]
+- [[pool_pictures()]] - `references` [EXTRACTED]
+- [[quality_check()]] - `references` [EXTRACTED]
+- [[storyboard()]] - `references` [EXTRACTED]
+- [[visual_review()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Remotion_Render__Figures
+#graphify/code #graphify/EXTRACTED #community/render

@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/style/kit.ts"
 type: "code"
-community: "Style Library Components"
+community: "style/index.ts"
 location: "L14"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Style_Library_Components
+  - community/style/indexts
 ---
 
 # W
@@ -15,4 +15,4 @@ tags:
 - [[Wipe.tsx]] - `imports` [EXTRACTED]
 - [[kit.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Style_Library_Components
+#graphify/code #graphify/EXTRACTED #community/style/indexts

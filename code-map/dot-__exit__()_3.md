@@ -1,17 +1,18 @@
 ---
 source_file: "tests/test_pictures_first.py"
 type: "code"
-community: "Fake AI Helpers"
-location: "L120"
+community: "owner"
+location: "L54"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Fake_AI_Helpers
+  - community/owner
 ---
 
 # .__exit__()
 
 ## Connections
-- [[fake_ai]] - `method` [EXTRACTED]
+- [[owner()]] - `calls` [EXTRACTED]
+- [[stubbed]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Fake_AI_Helpers
+#graphify/code #graphify/EXTRACTED #community/owner

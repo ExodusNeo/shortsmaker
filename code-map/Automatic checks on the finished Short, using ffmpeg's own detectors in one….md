@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/review.py"
 type: "rationale"
-community: "Review Fixes & Pool Swaps"
+community: "render"
 location: "L21"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Review_Fixes__Pool_Swaps
+  - community/render
 ---
 
 # Automatic checks on the finished Short, using ffmpeg's own detectors in one…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[quality_check()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Review_Fixes__Pool_Swaps
+#graphify/rationale #graphify/EXTRACTED #community/render

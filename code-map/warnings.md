@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "Config & Palettes"
+community: "test_full_scenes.py"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Config__Palettes
+  - community/test_full_scenespy
 ---
 
 # warnings
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[config.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Config__Palettes
+#graphify/concept #graphify/EXTRACTED #community/test_full_scenespy

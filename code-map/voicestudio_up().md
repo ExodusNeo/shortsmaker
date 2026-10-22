@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/gpu.py"
 type: "code"
-community: "GPU Voice & Painters"
+community: "json"
 location: "L93"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/GPU_Voice__Painters
+  - community/json
 ---
 
 # voicestudio_up()
@@ -19,4 +19,4 @@ tags:
 - [[time]] - `calls` [EXTRACTED]
 - [[up()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/GPU_Voice__Painters
+#graphify/code #graphify/EXTRACTED #community/json

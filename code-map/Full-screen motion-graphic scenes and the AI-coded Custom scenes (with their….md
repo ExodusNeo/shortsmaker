@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/motion.py"
 type: "rationale"
-community: "AI-Coded Motion Scenes"
+community: "test_full_scenes.py"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/AI-Coded_Motion_Scenes
+  - community/test_full_scenespy
 ---
 
 # Full-screen motion-graphic scenes and the AI-coded Custom scenes (with their…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[motion.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/AI-Coded_Motion_Scenes
+#graphify/rationale #graphify/EXTRACTED #community/test_full_scenespy

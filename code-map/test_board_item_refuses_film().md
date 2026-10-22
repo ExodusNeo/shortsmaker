@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_pictures_first.py"
 type: "code"
-community: "Pictures-First Tests"
-location: "L465"
+community: "test_pictures_first.py"
+location: "L468"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pictures-First_Tests
+  - community/test_pictures_firstpy
 ---
 
 # test_board_item_refuses_film()
@@ -18,4 +18,4 @@ tags:
 - [[pool_of()]] - `calls` [EXTRACTED]
 - [[test_pictures_first.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pictures-First_Tests
+#graphify/code #graphify/EXTRACTED #community/test_pictures_firstpy

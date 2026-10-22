@@ -1,23 +1,25 @@
 ---
 source_file: "shortsmaker/gpu.py"
 type: "code"
-community: "Local Clips & GPU Jobs"
+community: "local_clips"
 location: "L331"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Local_Clips__GPU_Jobs
+  - community/local_clips
 ---
 
 # veo_handoff()
 
 ## Connections
-- [[Path_14]] - `references` [EXTRACTED]
+- [[Path_17]] - `references` [EXTRACTED]
 - [[Pause the batch write each animate scene's start picture + Veo prompt to…]] - `rationale_for` [EXTRACTED]
 - [[cover_crop()]] - `calls` [EXTRACTED]
+- [[ffmpeg()]] - `calls` [EXTRACTED]
 - [[gpu.py]] - `contains` [EXTRACTED]
 - [[local_clips()]] - `calls` [EXTRACTED]
 - [[motion_prompt()]] - `calls` [EXTRACTED]
 - [[os]] - `calls` [EXTRACTED]
+- [[video_encoder()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Local_Clips__GPU_Jobs
+#graphify/code #graphify/EXTRACTED #community/local_clips

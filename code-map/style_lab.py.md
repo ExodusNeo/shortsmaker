@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/style_lab.py"
 type: "code"
-community: "Freesound & Picture Swaps"
+community: "test_full_scenes.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Freesound__Picture_Swaps
+  - community/test_full_scenespy
 ---
 
 # style_lab.py
@@ -46,9 +46,10 @@ tags:
 - [[style_props()]] - `contains` [EXTRACTED]
 - [[style_rules()]] - `contains` [EXTRACTED]
 - [[swap_inventions()]] - `contains` [EXTRACTED]
+- [[test_rules.py]] - `imports_from` [EXTRACTED]
 - [[test_style.py]] - `imports_from` [EXTRACTED]
 - [[time]] - `imports` [EXTRACTED]
 - [[write_style_index()]] - `contains` [EXTRACTED]
 - [[writing.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Freesound__Picture_Swaps
+#graphify/code #graphify/EXTRACTED #community/test_full_scenespy

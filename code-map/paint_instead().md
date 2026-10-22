@@ -1,18 +1,18 @@
 ---
 source_file: "shortsmaker/remotion_render.py"
 type: "code"
-community: "Gemini Painting & Renderer Choice"
+community: "paint_instead"
 location: "L71"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Gemini_Painting__Renderer_Choice
+  - community/paint_instead
 ---
 
 # paint_instead()
 
 ## Connections
-- [[Path_12]] - `references` [EXTRACTED]
+- [[Path_23]] - `references` [EXTRACTED]
 - [[Remotion failed the full-screen motion graphic scenes get a painted picture…]] - `rationale_for` [EXTRACTED]
 - [[gemini_images()]] - `calls` [EXTRACTED]
 - [[local_job()]] - `calls` [EXTRACTED]
@@ -20,5 +20,7 @@ tags:
 - [[remotion_render.py]] - `contains` [EXTRACTED]
 - [[render()]] - `calls` [EXTRACTED]
 - [[shutil]] - `calls` [EXTRACTED]
+- [[test_remotion_failure_paints()]] - `calls` [EXTRACTED]
+- [[to_vertical()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Gemini_Painting__Renderer_Choice
+#graphify/code #graphify/EXTRACTED #community/paint_instead

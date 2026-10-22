@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/full/Board.tsx"
 type: "code"
-community: "Evidence Board Scenes"
+community: "toolkit.tsx"
 location: "L15"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Evidence_Board_Scenes
+  - community/toolkittsx
 ---
 
 # Print
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[Board.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Evidence_Board_Scenes
+#graphify/code #graphify/EXTRACTED #community/toolkittsx

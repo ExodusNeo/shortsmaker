@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/gpu.py"
 type: "code"
-community: "GPU Voice & Painters"
+community: "json"
 location: "L234"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/GPU_Voice__Painters
+  - community/json
 ---
 
 # moss_graph()
@@ -16,4 +16,4 @@ tags:
 - [[gpu.py]] - `contains` [EXTRACTED]
 - [[moss_images()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/GPU_Voice__Painters
+#graphify/code #graphify/EXTRACTED #community/json

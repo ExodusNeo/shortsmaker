@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/config.py"
 type: "rationale"
-community: "Config & Palettes"
+community: "render_remotion"
 location: "L101"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Config__Palettes
+  - community/render_remotion
 ---
 
 # Visual skin for a Short's full-screen motion graphics (parchment, blueprint,…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[short_skin()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Config__Palettes
+#graphify/rationale #graphify/EXTRACTED #community/render_remotion

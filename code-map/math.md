@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "SFX Synthesis"
+community: "audio_mix.py"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/SFX_Synthesis
+  - community/audio_mixpy
 ---
 
 # math
@@ -16,4 +16,4 @@ tags:
 - [[frame_render.py]] - `imports` [EXTRACTED]
 - [[make_sfx()]] - `calls` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/SFX_Synthesis
+#graphify/concept #graphify/EXTRACTED #community/audio_mixpy

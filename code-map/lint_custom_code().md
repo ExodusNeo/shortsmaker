@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/motion.py"
 type: "code"
-community: "AI-Coded Motion Scenes"
+community: "ask_ai"
 location: "L233"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AI-Coded_Motion_Scenes
+  - community/ask_ai
 ---
 
 # lint_custom_code()
@@ -17,5 +17,8 @@ tags:
 - [[look_and_fix()]] - `calls` [EXTRACTED]
 - [[motion.py]] - `contains` [EXTRACTED]
 - [[re]] - `calls` [EXTRACTED]
+- [[redraw_custom()]] - `calls` [EXTRACTED]
+- [[test_fallback_custom_is_clean()]] - `calls` [EXTRACTED]
+- [[test_lint_custom_code()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AI-Coded_Motion_Scenes
+#graphify/code #graphify/EXTRACTED #community/ask_ai

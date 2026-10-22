@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/media_tools.py"
 type: "rationale"
-community: "Audio Mix & Music Gain"
+community: "json"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Audio_Mix__Music_Gain
+  - community/json
 ---
 
 # Small shared helpers: downloads, ffmpeg, video encoder choice, durations, JSON…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[media_tools.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Audio_Mix__Music_Gain
+#graphify/rationale #graphify/EXTRACTED #community/json

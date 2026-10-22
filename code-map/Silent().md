@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/style/looks/Silent.tsx"
 type: "code"
-community: "Style Library Components"
+community: "Halftone.tsx"
 location: "L19"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Style_Library_Components
+  - community/Halftonetsx
 ---
 
 # Silent()
@@ -14,8 +14,8 @@ tags:
 ## Connections
 - [[Silent.tsx]] - `contains` [EXTRACTED]
 - [[draw()_4]] - `indirect_call` [INFERRED]
-- [[noise()]] - `calls` [EXTRACTED]
+- [[noise()_1]] - `calls` [EXTRACTED]
 - [[styleindex.ts]] - `indirect_call` [INFERRED]
 - [[useOnceCanvas()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Style_Library_Components
+#graphify/code #graphify/EXTRACTED #community/Halftonetsx

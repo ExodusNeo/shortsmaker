@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/logbook.py"
 type: "rationale"
-community: "Entry Point & Channel Menus"
+community: "test_full_scenes.py"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Entry_Point__Channel_Menus
+  - community/test_full_scenespy
 ---
 
 # The owner's logbook and the Obsidian vault pages.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[logbook.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Entry_Point__Channel_Menus
+#graphify/rationale #graphify/EXTRACTED #community/test_full_scenespy

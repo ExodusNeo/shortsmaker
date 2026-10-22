@@ -1,19 +1,20 @@
 ---
 source_file: "shortsmaker/frame_render.py"
 type: "code"
-community: "Frame Overlays & Fonts"
+community: "frame_maker"
 location: "L291"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Frame_Overlays__Fonts
+  - community/frame_maker
 ---
 
 # thumbnail()
 
 ## Connections
-- [[Path_19]] - `references` [EXTRACTED]
+- [[Path_10]] - `references` [EXTRACTED]
 - [[fit_font()]] - `calls` [EXTRACTED]
 - [[frame_render.py]] - `contains` [EXTRACTED]
+- [[render()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Frame_Overlays__Fonts
+#graphify/code #graphify/EXTRACTED #community/frame_maker

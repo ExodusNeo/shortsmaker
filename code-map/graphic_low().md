@@ -1,20 +1,21 @@
 ---
 source_file: "shortsmaker/frame_render.py"
 type: "code"
-community: "Subject Position Checks"
+community: "frame_maker"
 location: "L102"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Subject_Position_Checks
+  - community/frame_maker
 ---
 
 # graphic_low()
 
 ## Connections
-- [[Path_19]] - `references` [EXTRACTED]
+- [[Path_10]] - `references` [EXTRACTED]
 - [[True when the picture's subject would land under the top callouts (y ~180-680…]] - `rationale_for` [EXTRACTED]
 - [[fills_frame()]] - `calls` [EXTRACTED]
 - [[frame_render.py]] - `contains` [EXTRACTED]
+- [[render()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Subject_Position_Checks
+#graphify/code #graphify/EXTRACTED #community/frame_maker

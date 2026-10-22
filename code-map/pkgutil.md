@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "Test Patching Helpers"
+community: "test_package.py"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Test_Patching_Helpers
+  - community/test_packagepy
 ---
 
 # pkgutil
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[patching.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Test_Patching_Helpers
+#graphify/concept #graphify/EXTRACTED #community/test_packagepy

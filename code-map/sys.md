@@ -1,21 +1,23 @@
 ---
 source_file: ""
 type: "concept"
-community: "CLI & Pixabay Films"
+community: "test_package.py"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/CLI__Pixabay_Films
+  - community/test_packagepy
 ---
 
 # sys
 
 ## Connections
 - [[catalog_pool()]] - `calls` [EXTRACTED]
+- [[channel_profiles.py]] - `imports` [EXTRACTED]
 - [[cli.py]] - `imports` [EXTRACTED]
 - [[gen.py]] - `imports` [EXTRACTED]
 - [[llm.py]] - `imports` [EXTRACTED]
 - [[patching.py]] - `imports` [EXTRACTED]
+- [[pick_channel()]] - `calls` [EXTRACTED]
 - [[picture_pool.py]] - `imports` [EXTRACTED]
 - [[qwen_voice.py]] - `imports` [EXTRACTED]
 - [[render_full.py]] - `imports` [EXTRACTED]
@@ -28,7 +30,8 @@ tags:
 - [[test_package.py]] - `imports` [EXTRACTED]
 - [[test_pictures_first.py]] - `imports` [EXTRACTED]
 - [[test_qwen_voice.py]] - `imports` [EXTRACTED]
+- [[test_rules.py]] - `imports` [EXTRACTED]
 - [[test_story.py]] - `imports` [EXTRACTED]
 - [[test_style.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/CLI__Pixabay_Films
+#graphify/concept #graphify/EXTRACTED #community/test_packagepy

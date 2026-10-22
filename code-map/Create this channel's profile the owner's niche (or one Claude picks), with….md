@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/channel_profiles.py"
 type: "rationale"
-community: "Entry Point & Channel Menus"
-location: "L84"
+community: "re"
+location: "L87"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Entry_Point__Channel_Menus
+  - community/re
 ---
 
 # Create this channel's profile: the owner's niche (or one Claude picks), with…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[new_channel()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Entry_Point__Channel_Menus
+#graphify/rationale #graphify/EXTRACTED #community/re

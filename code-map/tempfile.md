@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "Package & TS Tests"
+community: "test_package.py"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Package__TS_Tests
+  - community/test_packagepy
 ---
 
 # tempfile
@@ -17,6 +17,7 @@ tags:
 - [[test_full_scenes.py]] - `imports` [EXTRACTED]
 - [[test_package.py]] - `imports` [EXTRACTED]
 - [[test_pictures_first.py]] - `imports` [EXTRACTED]
+- [[test_rules.py]] - `imports` [EXTRACTED]
 - [[test_story.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Package__TS_Tests
+#graphify/concept #graphify/EXTRACTED #community/test_packagepy

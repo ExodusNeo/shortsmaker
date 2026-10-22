@@ -1,12 +1,12 @@
 ---
 source_file: "local_ai/gen.py"
 type: "rationale"
-community: "GPU Image Worker"
+community: "gen.py"
 location: "L90"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/GPU_Image_Worker
+  - community/genpy
 ---
 
 # item: {"image", "prompt", "out" (.mp4), "frames"} -> image-to-video clip at…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[video()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/GPU_Image_Worker
+#graphify/rationale #graphify/EXTRACTED #community/genpy

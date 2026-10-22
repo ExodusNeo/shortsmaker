@@ -1,17 +1,17 @@
 ---
 source_file: "tests/test_pictures_first.py"
 type: "code"
-community: "Picture Picker"
-location: "L330"
+community: "test_pictures_first.py"
+location: "L114"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Picture_Picker
+  - community/test_pictures_firstpy
 ---
 
 # .__init__()
 
 ## Connections
-- [[picking]] - `method` [EXTRACTED]
+- [[fake_ai]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Picture_Picker
+#graphify/code #graphify/EXTRACTED #community/test_pictures_firstpy

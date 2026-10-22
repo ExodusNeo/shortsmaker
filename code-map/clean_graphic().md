@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/plan_rules.py"
 type: "code"
-community: "Scene Cues & Image Search"
+community: "clean_full"
 location: "L25"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Scene_Cues__Image_Search
+  - community/clean_full
 ---
 
 # clean_graphic()
@@ -20,5 +20,6 @@ tags:
 - [[re]] - `calls` [EXTRACTED]
 - [[test_clean_question_and_kinetic()]] - `calls` [EXTRACTED]
 - [[words_of()]] - `calls` [EXTRACTED]
+- [[write_scripts()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Scene_Cues__Image_Search
+#graphify/code #graphify/EXTRACTED #community/clean_full

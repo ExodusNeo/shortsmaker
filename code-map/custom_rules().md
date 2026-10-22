@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/motion.py"
 type: "code"
-community: "AI-Coded Motion Scenes"
+community: "ask_ai"
 location: "L198"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AI-Coded_Motion_Scenes
+  - community/ask_ai
 ---
 
 # custom_rules()
@@ -16,5 +16,6 @@ tags:
 - [[code_custom_scenes()]] - `calls` [EXTRACTED]
 - [[look_and_fix()]] - `calls` [EXTRACTED]
 - [[motion.py]] - `contains` [EXTRACTED]
+- [[redraw_custom()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AI-Coded_Motion_Scenes
+#graphify/code #graphify/EXTRACTED #community/ask_ai
