@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/short_render.py"
 type: "code"
-community: "Entry Point & Run Menus"
+community: "Entry Point & Channel Menus"
 location: "L59"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Entry_Point__Run_Menus
+  - community/Entry_Point__Channel_Menus
 ---
 
 # prune_work()
@@ -18,4 +18,4 @@ tags:
 - [[shutil]] - `calls` [EXTRACTED]
 - [[time]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Entry_Point__Run_Menus
+#graphify/code #graphify/EXTRACTED #community/Entry_Point__Channel_Menus

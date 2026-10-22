@@ -1,12 +1,12 @@
 ---
 source_file: "make_shorts.py"
 type: "code"
-community: "Entry Point & Run Menus"
+community: "Entry Point & Channel Menus"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Entry_Point__Run_Menus
+  - community/Entry_Point__Channel_Menus
 ---
 
 # make_shorts.py
@@ -16,4 +16,4 @@ tags:
 - [[cli.py]] - `imports_from` [EXTRACTED]
 - [[main()_2]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Entry_Point__Run_Menus
+#graphify/code #graphify/EXTRACTED #community/Entry_Point__Channel_Menus

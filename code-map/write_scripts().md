@@ -13,7 +13,6 @@ tags:
 
 ## Connections
 - [[Plan n Shorts on new topics, or on exactly `topics` (comparison runs the other…]] - `rationale_for` [EXTRACTED]
-- [[_fake_planning()]] - `calls` [EXTRACTED]
 - [[direct_scripts()]] - `calls` [EXTRACTED]
 - [[edit_scripts()]] - `calls` [EXTRACTED]
 - [[fact_check()]] - `calls` [EXTRACTED]

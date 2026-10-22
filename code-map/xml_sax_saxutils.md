@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "Media Tools & Shot Spans"
+community: "Config & Palettes"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Media_Tools__Shot_Spans
+  - community/Config__Palettes
 ---
 
 # xml_sax_saxutils
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[edit_project.py]] - `imports_from` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Media_Tools__Shot_Spans
+#graphify/concept #graphify/EXTRACTED #community/Config__Palettes

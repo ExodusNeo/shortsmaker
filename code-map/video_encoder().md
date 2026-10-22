@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/media_tools.py"
 type: "code"
-community: "Media Tools & Shot Spans"
+community: "Audio Mix & Music Gain"
 location: "L30"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Media_Tools__Shot_Spans
+  - community/Audio_Mix__Music_Gain
 ---
 
 # video_encoder()
@@ -16,4 +16,4 @@ tags:
 - [[media_tools.py]] - `contains` [EXTRACTED]
 - [[subprocess]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Media_Tools__Shot_Spans
+#graphify/code #graphify/EXTRACTED #community/Audio_Mix__Music_Gain

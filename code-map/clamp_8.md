@@ -1,0 +1,21 @@
+---
+source_file: "remotion/src/full/toolkit.tsx"
+type: "code"
+community: "Custom Scene Examples"
+location: "L10"
+tags:
+  - graphify/code
+  - graphify/EXTRACTED
+  - community/Custom_Scene_Examples
+---
+
+# clamp
+
+## Connections
+- [[Custom0.tsx]] - `imports` [EXTRACTED]
+- [[Custom1.tsx]] - `imports` [EXTRACTED]
+- [[Custom2.tsx]] - `imports` [EXTRACTED]
+- [[Custom3.tsx]] - `imports` [EXTRACTED]
+- [[toolkit.tsx]] - `contains` [EXTRACTED]
+
+#graphify/code #graphify/EXTRACTED #community/Custom_Scene_Examples

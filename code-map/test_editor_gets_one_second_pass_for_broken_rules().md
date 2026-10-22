@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_story.py"
 type: "code"
-community: "Quality & Visual Review"
+community: "Script Editor & Story Checks"
 location: "L65"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Quality__Visual_Review
+  - community/Script_Editor__Story_Checks
 ---
 
 # test_editor_gets_one_second_pass_for_broken_rules()
@@ -16,4 +16,4 @@ tags:
 - [[fake()]] - `indirect_call` [INFERRED]
 - [[test_story.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Quality__Visual_Review
+#graphify/code #graphify/EXTRACTED #community/Script_Editor__Story_Checks

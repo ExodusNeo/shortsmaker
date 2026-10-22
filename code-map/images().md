@@ -14,6 +14,6 @@ tags:
 ## Connections
 - [[gen.py]] - `contains` [EXTRACTED]
 - [[item {prompt, out, width, height} - 4-step SDXL-Lightning image.]] - `rationale_for` [EXTRACTED]
-- [[main()_1]] - `indirect_call` [INFERRED]
+- [[main()]] - `indirect_call` [INFERRED]
 
 #graphify/code #graphify/EXTRACTED #community/GPU_Image_Worker

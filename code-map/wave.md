@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "Sound Effects & Story Sounds"
+community: "Audio Mix & Music Gain"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Sound_Effects__Story_Sounds
+  - community/Audio_Mix__Music_Gain
 ---
 
 # wave
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[audio_mix.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Sound_Effects__Story_Sounds
+#graphify/concept #graphify/EXTRACTED #community/Audio_Mix__Music_Gain

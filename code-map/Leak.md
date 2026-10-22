@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/style/transitions/Leak.tsx"
 type: "code"
-community: "Transitions & Overlays"
+community: "Style Library Components"
 location: "L6"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Transitions__Overlays
+  - community/Style_Library_Components
 ---
 
 # Leak
@@ -15,4 +15,4 @@ tags:
 - [[Leak.tsx]] - `contains` [EXTRACTED]
 - [[styleindex.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Transitions__Overlays
+#graphify/code #graphify/EXTRACTED #community/Style_Library_Components

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/footage.py"
 type: "rationale"
-community: "Archive Film & Downloads"
+community: "CLI & Pixabay Films"
 location: "L55"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Archive_Film__Downloads
+  - community/CLI__Pixabay_Films
 ---
 
 # Pixabay stock video: free to use in videos, no credit needed (Pixabay Content…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[pixabay_films()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Archive_Film__Downloads
+#graphify/rationale #graphify/EXTRACTED #community/CLI__Pixabay_Films

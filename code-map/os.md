@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "Channel Profiles & Menus"
+community: "Freesound & Picture Swaps"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Channel_Profiles__Menus
+  - community/Freesound__Picture_Swaps
 ---
 
 # os
@@ -22,4 +22,4 @@ tags:
 - [[test_pictures_first.py]] - `imports` [EXTRACTED]
 - [[veo_handoff()]] - `calls` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Channel_Profiles__Menus
+#graphify/concept #graphify/EXTRACTED #community/Freesound__Picture_Swaps

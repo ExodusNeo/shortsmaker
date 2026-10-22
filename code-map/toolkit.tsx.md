@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/full/toolkit.tsx"
 type: "code"
-community: "Custom Scene Slots"
+community: "Evidence Board Scenes"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Custom_Scene_Slots
+  - community/Evidence_Board_Scenes
 ---
 
 # toolkit.tsx
@@ -38,7 +38,7 @@ tags:
 - [[TYPE]] - `imports` [EXTRACTED]
 - [[TitleBanner()]] - `contains` [EXTRACTED]
 - [[appear()]] - `contains` [EXTRACTED]
-- [[clamp_10]] - `contains` [EXTRACTED]
+- [[clamp_8]] - `contains` [EXTRACTED]
 - [[cueAt()]] - `contains` [EXTRACTED]
 - [[focusCam()]] - `contains` [EXTRACTED]
 - [[fulltypes.ts]] - `re_exports` [EXTRACTED]
@@ -49,4 +49,4 @@ tags:
 - [[rng()]] - `imports` [EXTRACTED]
 - [[skinOf()]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Custom_Scene_Slots
+#graphify/code #graphify/EXTRACTED #community/Evidence_Board_Scenes

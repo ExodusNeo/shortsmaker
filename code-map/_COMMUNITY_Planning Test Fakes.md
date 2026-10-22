@@ -1,20 +1,29 @@
 ---
 type: community
-cohesion: 0.40
-members: 5
+cohesion: 0.14
+members: 14
 ---
 
 # Planning Test Fakes
 
-**Cohesion:** 0.40 - moderately connected
-**Members:** 5 nodes
+**Cohesion:** 0.14 - loosely connected
+**Members:** 14 nodes
 
 ## Members
-- [[dot-__enter__()_2]] - code - tests/test_pictures_first.py
-- [[dot-__enter__()_3]] - code - tests/test_pictures_first.py
-- [[Canned replies for every planning step of write_scripts().]] - rationale - tests/test_pictures_first.py
-- [[planning_ai()]] - code - tests/test_pictures_first.py
-- [[reply()]] - code - tests/test_pictures_first.py
+- [[Mike's newsstand a repaint from the unchanged prompt painted the identical…]] - rationale - tests/test_full_scenes.py
+- [[Path_11]] - code
+- [[Runs write_scripts with every AInetwork step replaced by canned answers;…]] - rationale - tests/test_full_scenes.py
+- [[_fake_planning()]] - code - tests/test_full_scenes.py
+- [[_review_state()]] - code - tests/test_full_scenes.py
+- [[ask()]] - code - tests/test_full_scenes.py
+- [[ask()_1]] - code - tests/test_full_scenes.py
+- [[ask()_2]] - code - tests/test_full_scenes.py
+- [[ask()_3]] - code - tests/test_full_scenes.py
+- [[test_director_prompt_mentions_full()]] - code - tests/test_full_scenes.py
+- [[test_look_check_fixes_code()]] - code - tests/test_full_scenes.py
+- [[test_redraw_failure_paints()]] - code - tests/test_full_scenes.py
+- [[test_review_redraws_custom()]] - code - tests/test_full_scenes.py
+- [[test_rewrite_paint_prompts()]] - code - tests/test_full_scenes.py
 
 ## Live Query (requires Dataview plugin)
 
@@ -24,12 +33,14 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 3 edges to [[_COMMUNITY_Picture Catalog]]
-- 2 edges to [[_COMMUNITY_Script Writing Pipeline]]
-- 1 edge to [[_COMMUNITY_Test Patching Helpers]]
+- 7 edges to [[_COMMUNITY_Full Scene Tests]]
+- 2 edges to [[_COMMUNITY_Review Fixes & Pool Swaps]]
+- 1 edge to [[_COMMUNITY_Pool Swap Test]]
+- 1 edge to [[_COMMUNITY_Freesound & Picture Swaps]]
 
 ## Top bridge nodes
-- [[dot-__enter__()_3]] - degree 4, connects to 3 communities
-- [[planning_ai()]] - degree 4, connects to 1 community
-- [[reply()]] - degree 3, connects to 1 community
-- [[dot-__enter__()_2]] - degree 2, connects to 1 community
+- [[test_review_redraws_custom()]] - degree 5, connects to 2 communities
+- [[test_rewrite_paint_prompts()]] - degree 5, connects to 2 communities
+- [[test_redraw_failure_paints()]] - degree 3, connects to 2 communities
+- [[ask()]] - degree 5, connects to 1 community
+- [[_fake_planning()]] - degree 4, connects to 1 community

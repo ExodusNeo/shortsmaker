@@ -16,7 +16,7 @@ members: 12
 - [[Local voice worker for ShortsMaker CosyVoice 3 through VoiceStudio (items with…]] - rationale - local_ai/qwen_voice.py
 - [[align()]] - code - local_ai/qwen_voice.py
 - [[align_words()]] - code - local_ai/qwen_voice.py
-- [[main()_3]] - code - local_ai/qwen_voice.py
+- [[main()_1]] - code - local_ai/qwen_voice.py
 - [[one()_1]] - code - local_ai/qwen_voice.py
 - [[qwen_voice.py]] - code - local_ai/qwen_voice.py
 - [[say_number()]] - code - local_ai/qwen_voice.py
@@ -31,15 +31,16 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 4 edges to [[_COMMUNITY_Archive Film & Downloads]]
-- 3 edges to [[_COMMUNITY_Sound Effects & Story Sounds]]
-- 2 edges to [[_COMMUNITY_Graphics Rescue & Validation]]
-- 2 edges to [[_COMMUNITY_Media Tools & Shot Spans]]
-- 2 edges to [[_COMMUNITY_Word Counts & Test Utils]]
-- 2 edges to [[_COMMUNITY_Channel Profiles & Menus]]
+- 3 edges to [[_COMMUNITY_Entry Point & Channel Menus]]
+- 3 edges to [[_COMMUNITY_Freesound & Picture Swaps]]
+- 3 edges to [[_COMMUNITY_CLI & Pixabay Films]]
+- 2 edges to [[_COMMUNITY_Scene Cues & Image Search]]
+- 2 edges to [[_COMMUNITY_Audio Mix & Music Gain]]
+- 1 edge to [[_COMMUNITY_Config & Palettes]]
+- 1 edge to [[_COMMUNITY_Voice Word Tests]]
 
 ## Top bridge nodes
-- [[qwen_voice.py]] - degree 16, connects to 6 communities
+- [[qwen_voice.py]] - degree 16, connects to 7 communities
 - [[align_words()]] - degree 6, connects to 2 communities
 - [[studio_speak()]] - degree 5, connects to 2 communities
-- [[main()_3]] - degree 4, connects to 1 community
+- [[main()_1]] - degree 4, connects to 2 communities

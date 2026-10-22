@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/review.py"
 type: "code"
-community: "Channel Profiles & Menus"
+community: "CLI & Pixabay Films"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Channel_Profiles__Menus
+  - community/CLI__Pixabay_Films
 ---
 
 # review.py
@@ -18,7 +18,9 @@ tags:
 - [[cli.py]] - `imports_from` [EXTRACTED]
 - [[config.py]] - `imports_from` [EXTRACTED]
 - [[first_second_check()]] - `contains` [EXTRACTED]
+- [[footage.py]] - `imports_from` [EXTRACTED]
 - [[gpu.py]] - `imports_from` [EXTRACTED]
+- [[image_sources.py]] - `imports_from` [EXTRACTED]
 - [[io]] - `imports` [EXTRACTED]
 - [[json]] - `imports` [EXTRACTED]
 - [[llm.py]] - `imports_from` [EXTRACTED]
@@ -26,8 +28,10 @@ tags:
 - [[paint_new()]] - `contains` [EXTRACTED]
 - [[pathlib]] - `imports_from` [EXTRACTED]
 - [[picker.py]] - `imports_from` [EXTRACTED]
+- [[picture_pool.py]] - `imports_from` [EXTRACTED]
 - [[pil]] - `imports_from` [EXTRACTED]
 - [[plan_rules.py]] - `imports_from` [EXTRACTED]
+- [[pool_pictures()]] - `contains` [EXTRACTED]
 - [[quality_check()]] - `contains` [EXTRACTED]
 - [[re]] - `imports` [EXTRACTED]
 - [[remotion_render.py]] - `imports_from` [EXTRACTED]
@@ -44,4 +48,4 @@ tags:
 - [[visual_review()]] - `contains` [EXTRACTED]
 - [[writing.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Channel_Profiles__Menus
+#graphify/code #graphify/EXTRACTED #community/CLI__Pixabay_Films

@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_package.py"
 type: "code"
-community: "Word Counts & Test Utils"
+community: "Package & TS Tests"
 location: "L85"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Word_Counts__Test_Utils
+  - community/Package__TS_Tests
 ---
 
 # test_argon_out_of_quota_switches_to_flash()
@@ -15,4 +15,4 @@ tags:
 - [[fake_run()]] - `indirect_call` [INFERRED]
 - [[test_package.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Word_Counts__Test_Utils
+#graphify/code #graphify/EXTRACTED #community/Package__TS_Tests

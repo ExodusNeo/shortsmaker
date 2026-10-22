@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/gpu.py"
 type: "code"
-community: "Archive Film & Downloads"
+community: "GPU Voice & Painters"
 location: "L95"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Archive_Film__Downloads
+  - community/GPU_Voice__Painters
 ---
 
 # up()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[voicestudio_up()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Archive_Film__Downloads
+#graphify/code #graphify/EXTRACTED #community/GPU_Voice__Painters

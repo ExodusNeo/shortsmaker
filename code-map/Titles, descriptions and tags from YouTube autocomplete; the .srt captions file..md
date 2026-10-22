@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/seo.py"
 type: "rationale"
-community: "Channel Profiles & Menus"
+community: "CLI & Pixabay Films"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Channel_Profiles__Menus
+  - community/CLI__Pixabay_Films
 ---
 
 # Titles, descriptions and tags from YouTube autocomplete; the .srt captions file.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[seo.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Channel_Profiles__Menus
+#graphify/rationale #graphify/EXTRACTED #community/CLI__Pixabay_Films

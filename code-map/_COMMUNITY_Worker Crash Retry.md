@@ -22,8 +22,7 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 1 edge to [[_COMMUNITY_Local Voice & Clips]]
 - 1 edge to [[_COMMUNITY_Full Scene Tests]]
 
 ## Top bridge nodes
-- [[test_local_job_retries_a_hard_crash()]] - degree 4, connects to 2 communities
+- [[test_local_job_retries_a_hard_crash()]] - degree 3, connects to 1 community

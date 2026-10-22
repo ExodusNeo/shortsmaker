@@ -1,20 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: "AI Calls & Trend Seeds"
+community: "Audio Mix & Music Gain"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AI_Calls__Trend_Seeds
+  - community/Audio_Mix__Music_Gain
 ---
 
 # Path
 
 ## Connections
-- [[code_custom_scenes()]] - `references` [EXTRACTED]
-- [[full_props()]] - `references` [EXTRACTED]
-- [[look_and_fix()]] - `references` [EXTRACTED]
-- [[preview_custom()]] - `references` [EXTRACTED]
-- [[preview_sheet()]] - `references` [EXTRACTED]
+- [[duration()]] - `references` [EXTRACTED]
+- [[ffmpeg()]] - `references` [EXTRACTED]
+- [[write_json()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AI_Calls__Trend_Seeds
+#graphify/code #graphify/EXTRACTED #community/Audio_Mix__Music_Gain

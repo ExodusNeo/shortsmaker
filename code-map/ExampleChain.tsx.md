@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/full/examples/ExampleChain.tsx"
 type: "code"
-community: "Guarded Scene Layout"
+community: "Custom Scene Examples"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Guarded_Scene_Layout
+  - community/Custom_Scene_Examples
 ---
 
 # ExampleChain.tsx
@@ -36,4 +36,4 @@ tags:
 - [[toolkit.tsx]] - `imports_from` [EXTRACTED]
 - [[travel()]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Guarded_Scene_Layout
+#graphify/code #graphify/EXTRACTED #community/Custom_Scene_Examples

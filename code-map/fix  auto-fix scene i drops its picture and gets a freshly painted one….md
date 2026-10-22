@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/review.py"
 type: "rationale"
-community: "Fix.bat Picture Swaps"
-location: "L200"
+community: "Review Fixes & Pool Swaps"
+location: "L264"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Fixbat_Picture_Swaps
+  - community/Review_Fixes__Pool_Swaps
 ---
 
 # fix / auto-fix: scene i drops its picture and gets a freshly painted one…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[paint_new()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Fixbat_Picture_Swaps
+#graphify/rationale #graphify/EXTRACTED #community/Review_Fixes__Pool_Swaps

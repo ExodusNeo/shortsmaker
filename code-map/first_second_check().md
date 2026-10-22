@@ -1,25 +1,22 @@
 ---
 source_file: "shortsmaker/review.py"
 type: "code"
-community: "Media Tools & Shot Spans"
-location: "L98"
+community: "Freesound & Picture Swaps"
+location: "L101"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Media_Tools__Shot_Spans
+  - community/Freesound__Picture_Swaps
 ---
 
 # first_second_check()
 
 ## Connections
-- [[Path_5]] - `references` [EXTRACTED]
+- [[Path_8]] - `references` [EXTRACTED]
 - [[Would a stranger scrolling the Shorts feed stop here Stayed-to-watch is…]] - `rationale_for` [EXTRACTED]
-- [[ask_ai()]] - `calls` [EXTRACTED]
-- [[ffmpeg()]] - `calls` [EXTRACTED]
-- [[is_num()]] - `calls` [EXTRACTED]
 - [[re]] - `calls` [EXTRACTED]
 - [[review.py]] - `contains` [EXTRACTED]
 - [[run_check()]] - `calls` [EXTRACTED]
 - [[shutil]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Media_Tools__Shot_Spans
+#graphify/code #graphify/EXTRACTED #community/Freesound__Picture_Swaps

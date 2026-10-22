@@ -1,23 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Local Voice & Clips"
+community: "Edit Plan Text"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Local_Voice__Clips
+  - community/Edit_Plan_Text
 ---
 
 # Path
 
 ## Connections
-- [[cover_crop()]] - `references` [EXTRACTED]
-- [[gemini_images()]] - `references` [EXTRACTED]
-- [[local_clips()]] - `references` [EXTRACTED]
-- [[local_job()]] - `references` [EXTRACTED]
-- [[local_voice()]] - `references` [EXTRACTED]
-- [[moss_images()]] - `references` [EXTRACTED]
-- [[split_takes()]] - `references` [EXTRACTED]
-- [[veo_handoff()]] - `references` [EXTRACTED]
+- [[edit_plan()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Local_Voice__Clips
+#graphify/code #graphify/EXTRACTED #community/Edit_Plan_Text

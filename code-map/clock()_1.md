@@ -1,17 +1,20 @@
 ---
-source_file: "shortsmaker/edit_project.py"
+source_file: "shortsmaker/media_tools.py"
 type: "code"
-community: "Shotcut Timeline"
-location: "L52"
+community: "Edit Plan Text"
+location: "L43"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Shotcut_Timeline
+  - community/Edit_Plan_Text
 ---
 
 # clock()
 
 ## Connections
-- [[project_xml()]] - `contains` [EXTRACTED]
+- [[edit_plan()]] - `calls` [EXTRACTED]
+- [[gather_pool()]] - `calls` [EXTRACTED]
+- [[log_short()]] - `calls` [EXTRACTED]
+- [[media_tools.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Shotcut_Timeline
+#graphify/code #graphify/EXTRACTED #community/Edit_Plan_Text

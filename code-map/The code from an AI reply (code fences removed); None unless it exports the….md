@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/style_lab.py"
 type: "rationale"
-community: "Sound Effects & Story Sounds"
+community: "Freesound & Picture Swaps"
 location: "L131"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Sound_Effects__Story_Sounds
+  - community/Freesound__Picture_Swaps
 ---
 
 # The code from an AI reply (code fences removed); None unless it exports the…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[clean_style_code()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Sound_Effects__Story_Sounds
+#graphify/rationale #graphify/EXTRACTED #community/Freesound__Picture_Swaps

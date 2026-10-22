@@ -1,18 +1,17 @@
 ---
 source_file: "tests/test_full_scenes.py"
 type: "code"
-community: "Scene & Graphic Timing"
-location: "L104"
+community: "Full Scene Tests"
+location: "L105"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Scene__Graphic_Timing
+  - community/Full_Scene_Tests
 ---
 
 # test_full_cues_fallback()
 
 ## Connections
-- [[full_cues()]] - `calls` [EXTRACTED]
 - [[test_full_scenes.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Scene__Graphic_Timing
+#graphify/code #graphify/EXTRACTED #community/Full_Scene_Tests

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/seo.py"
 type: "code"
-community: "Channel Profiles & Menus"
+community: "CLI & Pixabay Films"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Channel_Profiles__Menus
+  - community/CLI__Pixabay_Films
 ---
 
 # seo.py
@@ -30,4 +30,4 @@ tags:
 - [[test_pictures_first.py]] - `imports_from` [EXTRACTED]
 - [[urllib_parse]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Channel_Profiles__Menus
+#graphify/code #graphify/EXTRACTED #community/CLI__Pixabay_Films

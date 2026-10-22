@@ -1,12 +1,12 @@
 ---
 source_file: "tests/run_ts_tests.py"
 type: "code"
-community: "Word Counts & Test Utils"
+community: "Package & TS Tests"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Word_Counts__Test_Utils
+  - community/Package__TS_Tests
 ---
 
 # run_ts_tests.py
@@ -19,4 +19,4 @@ tags:
 - [[sys]] - `imports` [EXTRACTED]
 - [[tempfile]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Word_Counts__Test_Utils
+#graphify/code #graphify/EXTRACTED #community/Package__TS_Tests

@@ -1,22 +1,21 @@
 ---
 source_file: "shortsmaker/audio_mix.py"
 type: "code"
-community: "Sound Effects & Story Sounds"
+community: "Audio Mix & Music Gain"
 location: "L134"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Sound_Effects__Story_Sounds
+  - community/Audio_Mix__Music_Gain
 ---
 
 # story_sound()
 
 ## Connections
-- [[Path_3]] - `references` [EXTRACTED]
+- [[Path]] - `references` [EXTRACTED]
 - [[The sound file for a story sound the owner's own file in…]] - `rationale_for` [EXTRACTED]
 - [[audio_mix.py]] - `contains` [EXTRACTED]
 - [[ffmpeg()]] - `calls` [EXTRACTED]
 - [[re]] - `calls` [EXTRACTED]
-- [[test_story_sound_library()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Sound_Effects__Story_Sounds
+#graphify/code #graphify/EXTRACTED #community/Audio_Mix__Music_Gain

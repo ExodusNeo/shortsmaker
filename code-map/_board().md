@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_full_scenes.py"
 type: "code"
-community: "Sound Cue Sheet"
-location: "L197"
+community: "Full Scene Tests"
+location: "L198"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Sound_Cue_Sheet
+  - community/Full_Scene_Tests
 ---
 
 # _board()
@@ -17,4 +17,4 @@ tags:
 - [[test_remotion_props_full()]] - `calls` [EXTRACTED]
 - [[test_sfx_full()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Sound_Cue_Sheet
+#graphify/code #graphify/EXTRACTED #community/Full_Scene_Tests

@@ -29,9 +29,9 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 5 edges to [[_COMMUNITY_Picture Catalog]]
-- 5 edges to [[_COMMUNITY_Archive Film & Downloads]]
-- 2 edges to [[_COMMUNITY_Picture Pool Prep]]
+- 5 edges to [[_COMMUNITY_Pictures-First Tests]]
+- 5 edges to [[_COMMUNITY_CLI & Pixabay Films]]
+- 2 edges to [[_COMMUNITY_Picture Pool & Catalog]]
 
 ## Top bridge nodes
 - [[usable()]] - degree 5, connects to 3 communities

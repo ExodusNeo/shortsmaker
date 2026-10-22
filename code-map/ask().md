@@ -1,17 +1,21 @@
 ---
 source_file: "tests/test_full_scenes.py"
 type: "code"
-community: "Review Auto Fixes"
-location: "L527"
+community: "Planning Test Fakes"
+location: "L147"
 tags:
   - graphify/code
-  - graphify/EXTRACTED
-  - community/Review_Auto_Fixes
+  - graphify/INFERRED
+  - community/Planning_Test_Fakes
 ---
 
 # ask()
 
 ## Connections
-- [[test_review_redraws_custom()]] - `contains` [EXTRACTED]
+- [[_fake_planning()]] - `indirect_call` [INFERRED]
+- [[test_look_check_fixes_code()]] - `indirect_call` [INFERRED]
+- [[test_review_redraws_custom()]] - `indirect_call` [INFERRED]
+- [[test_review_uses_unused_pool_pictures_before_painting()]] - `indirect_call` [INFERRED]
+- [[test_rewrite_paint_prompts()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/Review_Auto_Fixes
+#graphify/code #graphify/INFERRED #community/Planning_Test_Fakes

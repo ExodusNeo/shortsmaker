@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/motion.py"
 type: "rationale"
-community: "AI Calls & Trend Seeds"
+community: "AI-Coded Motion Scenes"
 location: "L86"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/AI_Calls__Trend_Seeds
+  - community/AI-Coded_Motion_Scenes
 ---
 
 # Guaranteed-valid Remotion component for slot 0..3 if the AI coder fails or…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[fallback_custom_tsx()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/AI_Calls__Trend_Seeds
+#graphify/rationale #graphify/EXTRACTED #community/AI-Coded_Motion_Scenes

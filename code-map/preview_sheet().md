@@ -1,18 +1,18 @@
 ---
 source_file: "shortsmaker/motion.py"
 type: "code"
-community: "AI Calls & Trend Seeds"
+community: "AI-Coded Motion Scenes"
 location: "L256"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AI_Calls__Trend_Seeds
+  - community/AI-Coded_Motion_Scenes
 ---
 
 # preview_sheet()
 
 ## Connections
-- [[Path_1]] - `references` [EXTRACTED]
+- [[Path_2]] - `references` [EXTRACTED]
 - [[Renders seconds start..end of a small Short (`props`; its pictures already in…]] - `rationale_for` [EXTRACTED]
 - [[ffmpeg()]] - `calls` [EXTRACTED]
 - [[invent_component()]] - `calls` [EXTRACTED]
@@ -22,4 +22,4 @@ tags:
 - [[shutil]] - `calls` [EXTRACTED]
 - [[subprocess]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AI_Calls__Trend_Seeds
+#graphify/code #graphify/EXTRACTED #community/AI-Coded_Motion_Scenes

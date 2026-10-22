@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_story.py"
 type: "code"
-community: "Quality & Visual Review"
+community: "Script Editor & Story Checks"
 location: "L48"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Quality__Visual_Review
+  - community/Script_Editor__Story_Checks
 ---
 
 # test_story_problems()
@@ -15,4 +15,4 @@ tags:
 - [[story_problems()]] - `calls` [EXTRACTED]
 - [[test_story.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Quality__Visual_Review
+#graphify/code #graphify/EXTRACTED #community/Script_Editor__Story_Checks

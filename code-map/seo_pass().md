@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/seo.py"
 type: "code"
-community: "Entry Point & Run Menus"
+community: "Entry Point & Channel Menus"
 location: "L21"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Entry_Point__Run_Menus
+  - community/Entry_Point__Channel_Menus
 ---
 
 # seo_pass()
@@ -24,4 +24,4 @@ tags:
 - [[test_seo_pass_empty_no_ai()]] - `calls` [EXTRACTED]
 - [[trend_research()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Entry_Point__Run_Menus
+#graphify/code #graphify/EXTRACTED #community/Entry_Point__Channel_Menus

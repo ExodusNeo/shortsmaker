@@ -1,17 +1,17 @@
 ---
-source_file: "remotion/src/full/Document.tsx"
+source_file: "remotion/src/full/guarded.tsx"
 type: "code"
-community: "Evidence Board & Documents"
-location: "L5"
+community: "Guarded Scene Layout"
+location: "L17"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Evidence_Board__Documents
+  - community/Guarded_Scene_Layout
 ---
 
 # clamp
 
 ## Connections
-- [[Document.tsx]] - `contains` [EXTRACTED]
+- [[guarded.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Evidence_Board__Documents
+#graphify/code #graphify/EXTRACTED #community/Guarded_Scene_Layout

@@ -1,17 +1,18 @@
 ---
-source_file: "remotion/src/full/Journey.tsx"
+source_file: "remotion/src/full/guarded.tsx"
 type: "code"
-community: "Map Journey Scenes"
-location: "L31"
+community: "Guarded Scene Layout"
+location: "L11"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Map_Journey_Scenes
+  - community/Guarded_Scene_Layout
 ---
 
 # SAFE
 
 ## Connections
-- [[Journey.tsx]] - `contains` [EXTRACTED]
+- [[guarded.test.ts]] - `imports` [EXTRACTED]
+- [[guarded.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Map_Journey_Scenes
+#graphify/code #graphify/EXTRACTED #community/Guarded_Scene_Layout

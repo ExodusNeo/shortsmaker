@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/picker.py"
 type: "rationale"
-community: "Sound Cue Sheet"
+community: "Film Archive Sources"
 location: "L183"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Sound_Cue_Sheet
+  - community/Film_Archive_Sources
 ---
 
 # Downloads the real photos the picker chose for evidence boards, custom scenes…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[full_pictures()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Sound_Cue_Sheet
+#graphify/rationale #graphify/EXTRACTED #community/Film_Archive_Sources

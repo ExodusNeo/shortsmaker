@@ -27,8 +27,8 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 5 edges to [[_COMMUNITY_Sound Effects & Story Sounds]]
-- 1 edge to [[_COMMUNITY_Channel Profiles & Menus]]
+- 5 edges to [[_COMMUNITY_Audio Mix & Music Gain]]
+- 1 edge to [[_COMMUNITY_Config & Palettes]]
 
 ## Top bridge nodes
 - [[ass_colour()]] - degree 5, connects to 2 communities

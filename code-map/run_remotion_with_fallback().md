@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/remotion_render.py"
 type: "code"
-community: "Remotion Render & Skins"
+community: "Remotion Render & Figures"
 location: "L23"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Remotion_Render__Skins
+  - community/Remotion_Render__Figures
 ---
 
 # run_remotion_with_fallback()
@@ -18,4 +18,4 @@ tags:
 - [[render_remotion()]] - `calls` [EXTRACTED]
 - [[test_invention_runtime_failure_uses_fallback()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Remotion_Render__Skins
+#graphify/code #graphify/EXTRACTED #community/Remotion_Render__Figures

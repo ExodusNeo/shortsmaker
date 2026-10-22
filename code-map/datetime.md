@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "Channel Profiles & Menus"
+community: "Entry Point & Channel Menus"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Channel_Profiles__Menus
+  - community/Entry_Point__Channel_Menus
 ---
 
 # datetime
@@ -14,4 +14,4 @@ tags:
 - [[channel_profiles.py]] - `imports_from` [EXTRACTED]
 - [[cli.py]] - `imports_from` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Channel_Profiles__Menus
+#graphify/concept #graphify/EXTRACTED #community/Entry_Point__Channel_Menus

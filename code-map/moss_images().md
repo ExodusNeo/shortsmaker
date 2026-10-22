@@ -1,19 +1,19 @@
 ---
 source_file: "shortsmaker/gpu.py"
 type: "code"
-community: "Archive Film & Downloads"
+community: "GPU Voice & Painters"
 location: "L256"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Archive_Film__Downloads
+  - community/GPU_Voice__Painters
 ---
 
 # moss_images()
 
 ## Connections
 - [[Paint on this PC with MOSS-Image in ComfyUI (owner's pick 2026-10-20 over SDXL-…]] - `rationale_for` [EXTRACTED]
-- [[Path_13]] - `references` [EXTRACTED]
+- [[Path_14]] - `references` [EXTRACTED]
 - [[comfy_call()]] - `calls` [EXTRACTED]
 - [[gpu.py]] - `contains` [EXTRACTED]
 - [[hashlib]] - `calls` [EXTRACTED]
@@ -25,4 +25,4 @@ tags:
 - [[subprocess]] - `calls` [EXTRACTED]
 - [[time]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Archive_Film__Downloads
+#graphify/code #graphify/EXTRACTED #community/GPU_Voice__Painters

@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "Sound Effects & Story Sounds"
+community: "Entry Point & Channel Menus"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Sound_Effects__Story_Sounds
+  - community/Entry_Point__Channel_Menus
 ---
 
 # re
@@ -64,4 +64,4 @@ tags:
 - [[words_of()]] - `calls` [EXTRACTED]
 - [[writing.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Sound_Effects__Story_Sounds
+#graphify/concept #graphify/EXTRACTED #community/Entry_Point__Channel_Menus

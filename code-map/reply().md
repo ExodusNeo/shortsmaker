@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_pictures_first.py"
 type: "code"
-community: "Planning Test Fakes"
+community: "Fake AI Helpers"
 location: "L450"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Planning_Test_Fakes
+  - community/Fake_AI_Helpers
 ---
 
 # reply()
@@ -16,4 +16,4 @@ tags:
 - [[planning_ai()]] - `calls` [EXTRACTED]
 - [[test_both_mode_pools_follow_reply_position()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/Planning_Test_Fakes
+#graphify/code #graphify/EXTRACTED #community/Fake_AI_Helpers

@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/Graphics.tsx"
 type: "code"
-community: "Shared Graphics Kit"
+community: "Remotion Captions & Cards"
 location: "L10"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Shared_Graphics_Kit
+  - community/Remotion_Captions__Cards
 ---
 
 # outline()
@@ -27,4 +27,4 @@ tags:
 - [[TimelineCard()]] - `calls` [EXTRACTED]
 - [[kit.ts]] - `re_exports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Shared_Graphics_Kit
+#graphify/code #graphify/EXTRACTED #community/Remotion_Captions__Cards

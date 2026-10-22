@@ -2,7 +2,7 @@
 source_file: "tests/test_full_scenes.py"
 type: "code"
 community: "Worker Crash Retry"
-location: "L656"
+location: "L698"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -14,7 +14,6 @@ tags:
 ## Connections
 - [[Mike the Headless Chicken, fix round 3 the LTX worker died without writing…]] - `rationale_for` [EXTRACTED]
 - [[fake_run()_1]] - `indirect_call` [INFERRED]
-- [[local_job()]] - `calls` [EXTRACTED]
 - [[test_full_scenes.py]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Worker_Crash_Retry

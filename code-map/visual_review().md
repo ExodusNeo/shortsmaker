@@ -1,24 +1,21 @@
 ---
 source_file: "shortsmaker/review.py"
 type: "code"
-community: "Quality & Visual Review"
-location: "L45"
+community: "Visual Review"
+location: "L48"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Quality__Visual_Review
+  - community/Visual_Review
 ---
 
 # visual_review()
 
 ## Connections
-- [[Path_5]] - `references` [EXTRACTED]
+- [[Path_8]] - `references` [EXTRACTED]
 - [[The AI watches the finished Short as sheets of one frame per second and reports…]] - `rationale_for` [EXTRACTED]
-- [[ask_ai()]] - `calls` [EXTRACTED]
-- [[clock()]] - `calls` [EXTRACTED]
-- [[ffmpeg()]] - `calls` [EXTRACTED]
 - [[review.py]] - `contains` [EXTRACTED]
 - [[review_fixes()]] - `calls` [EXTRACTED]
 - [[shutil]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Quality__Visual_Review
+#graphify/code #graphify/EXTRACTED #community/Visual_Review

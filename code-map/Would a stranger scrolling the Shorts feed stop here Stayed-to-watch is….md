@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/review.py"
 type: "rationale"
-community: "Media Tools & Shot Spans"
-location: "L100"
+community: "Freesound & Picture Swaps"
+location: "L103"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Media_Tools__Shot_Spans
+  - community/Freesound__Picture_Swaps
 ---
 
 # Would a stranger scrolling the Shorts feed stop here? Stayed-to-watch is…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[first_second_check()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Media_Tools__Shot_Spans
+#graphify/rationale #graphify/EXTRACTED #community/Freesound__Picture_Swaps

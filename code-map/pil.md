@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "Channel Profiles & Menus"
+community: "CLI & Pixabay Films"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Channel_Profiles__Menus
+  - community/CLI__Pixabay_Films
 ---
 
 # pil
@@ -25,4 +25,4 @@ tags:
 - [[short_render.py]] - `imports_from` [EXTRACTED]
 - [[test_full_scenes.py]] - `imports_from` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Channel_Profiles__Menus
+#graphify/concept #graphify/EXTRACTED #community/CLI__Pixabay_Films

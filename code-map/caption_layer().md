@@ -12,7 +12,7 @@ tags:
 # caption_layer()
 
 ## Connections
-- [[Path_9]] - `references` [EXTRACTED]
+- [[Path_3]] - `references` [EXTRACTED]
 - [[edit_project.py]] - `contains` [EXTRACTED]
 - [[make()]] - `calls` [EXTRACTED]
 - [[workcaptions.mov the captions alone on a see-through background, from the…]] - `rationale_for` [EXTRACTED]

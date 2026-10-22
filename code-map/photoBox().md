@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/full/guarded.tsx"
 type: "code"
-community: "Guarded Scene Layout"
+community: "Custom Scene Examples"
 location: "L33"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Guarded_Scene_Layout
+  - community/Custom_Scene_Examples
 ---
 
 # photoBox()
@@ -16,4 +16,4 @@ tags:
 - [[ExampleEvidence.tsx]] - `imports` [EXTRACTED]
 - [[guarded.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Guarded_Scene_Layout
+#graphify/code #graphify/EXTRACTED #community/Custom_Scene_Examples

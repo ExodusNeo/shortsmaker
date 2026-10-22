@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/picture_pool.py"
 type: "rationale"
-community: "Picture Catalog"
+community: "Picture Pool & Catalog"
 location: "L200"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Picture_Catalog
+  - community/Picture_Pool__Catalog
 ---
 
 # The picture list the writer, editor and director plan with: the AI looks at the…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[catalog_pool()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Picture_Catalog
+#graphify/rationale #graphify/EXTRACTED #community/Picture_Pool__Catalog

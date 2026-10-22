@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/style_lab.py"
 type: "code"
-community: "Style Inventions"
+community: "Invention Slots"
 location: "L93"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Style_Inventions
+  - community/Invention_Slots
 ---
 
 # restore_style_slots()
@@ -19,4 +19,4 @@ tags:
 - [[test_slots_restored_after_render()]] - `calls` [EXTRACTED]
 - [[with_fakes()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Style_Inventions
+#graphify/code #graphify/EXTRACTED #community/Invention_Slots

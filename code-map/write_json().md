@@ -1,22 +1,22 @@
 ---
 source_file: "shortsmaker/media_tools.py"
 type: "code"
-community: "Picture Pool Prep"
+community: "Picture Pool & Catalog"
 location: "L15"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Picture_Pool_Prep
+  - community/Picture_Pool__Catalog
 ---
 
 # write_json()
 
 ## Connections
-- [[Path_8]] - `references` [EXTRACTED]
+- [[Path_1]] - `references` [EXTRACTED]
 - [[Write via a temp file, so an interrupted run never leaves a half-written file…]] - `rationale_for` [EXTRACTED]
 - [[catalog_pool()]] - `calls` [EXTRACTED]
 - [[json]] - `calls` [EXTRACTED]
 - [[media_tools.py]] - `contains` [EXTRACTED]
 - [[save_pool()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Picture_Pool_Prep
+#graphify/code #graphify/EXTRACTED #community/Picture_Pool__Catalog

@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "Graphics Rescue & Validation"
+community: "Scene Cues & Image Search"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Graphics_Rescue__Validation
+  - community/Scene_Cues__Image_Search
 ---
 
 # unicodedata
@@ -18,4 +18,4 @@ tags:
 - [[spoken_count()]] - `calls` [EXTRACTED]
 - [[words_of()]] - `calls` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Graphics_Rescue__Validation
+#graphify/concept #graphify/EXTRACTED #community/Scene_Cues__Image_Search

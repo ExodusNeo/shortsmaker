@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/session.py"
 type: "code"
-community: "Channel Profiles & Menus"
+community: "CLI & Pixabay Films"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Channel_Profiles__Menus
+  - community/CLI__Pixabay_Films
 ---
 
 # session.py
@@ -34,4 +34,4 @@ tags:
 - [[test_story.py]] - `imports_from` [EXTRACTED]
 - [[writing.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Channel_Profiles__Menus
+#graphify/code #graphify/EXTRACTED #community/CLI__Pixabay_Films

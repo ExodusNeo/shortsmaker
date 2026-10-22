@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/logbook.py"
 type: "code"
-community: "Logbook & Vault Pages"
+community: "Entry Point & Channel Menus"
 location: "L83"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Logbook__Vault_Pages
+  - community/Entry_Point__Channel_Menus
 ---
 
 # vault_refresh()
@@ -18,4 +18,4 @@ tags:
 - [[re]] - `calls` [EXTRACTED]
 - [[vault_page()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Logbook__Vault_Pages
+#graphify/code #graphify/EXTRACTED #community/Entry_Point__Channel_Menus

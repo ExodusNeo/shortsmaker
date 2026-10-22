@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/frame_render.py"
 type: "code"
-community: "Channel Profiles & Menus"
+community: "Frame Overlays & Fonts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Channel_Profiles__Menus
+  - community/Frame_Overlays__Fonts
 ---
 
 # frame_render.py
@@ -41,4 +41,4 @@ tags:
 - [[thumbnail()]] - `contains` [EXTRACTED]
 - [[write_frames()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Channel_Profiles__Menus
+#graphify/code #graphify/EXTRACTED #community/Frame_Overlays__Fonts

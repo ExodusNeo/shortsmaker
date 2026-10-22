@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_full_scenes.py"
 type: "code"
-community: "Review Auto Fixes"
-location: "L548"
+community: "Planning Test Fakes"
+location: "L590"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Review_Auto_Fixes
+  - community/Planning_Test_Fakes
 ---
 
 # test_redraw_failure_paints()
@@ -16,4 +16,4 @@ tags:
 - [[apply_review_fixes()]] - `calls` [EXTRACTED]
 - [[test_full_scenes.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Review_Auto_Fixes
+#graphify/code #graphify/EXTRACTED #community/Planning_Test_Fakes

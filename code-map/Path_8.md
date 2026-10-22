@@ -1,18 +1,22 @@
 ---
 source_file: ""
 type: "code"
-community: "Media Tools & Shot Spans"
+community: "Review Fixes & Pool Swaps"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Media_Tools__Shot_Spans
+  - community/Review_Fixes__Pool_Swaps
 ---
 
 # Path
 
 ## Connections
-- [[duration()]] - `references` [EXTRACTED]
-- [[ffmpeg()]] - `references` [EXTRACTED]
-- [[write_json()]] - `references` [EXTRACTED]
+- [[apply_review_fixes()]] - `references` [EXTRACTED]
+- [[first_second_check()]] - `references` [EXTRACTED]
+- [[paint_new()]] - `references` [EXTRACTED]
+- [[pool_pictures()]] - `references` [EXTRACTED]
+- [[quality_check()]] - `references` [EXTRACTED]
+- [[storyboard()]] - `references` [EXTRACTED]
+- [[visual_review()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Media_Tools__Shot_Spans
+#graphify/code #graphify/EXTRACTED #community/Review_Fixes__Pool_Swaps

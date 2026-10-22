@@ -13,7 +13,7 @@ members: 11
 - [[A stereograph card two near-identical photos side by side. Compares the…]] - rationale - shortsmaker/photo_prep.py
 - [[Archive scans look broken on screen with their extras a stereograph card keeps…]] - rationale - shortsmaker/photo_prep.py
 - [[Cut plain strips (white mounts, black plate edges) off the sides, at most 15%…]] - rationale - shortsmaker/photo_prep.py
-- [[Image]] - code
+- [[Image_1]] - code
 - [[border()]] - code - shortsmaker/photo_prep.py
 - [[clean_photo()]] - code - shortsmaker/photo_prep.py
 - [[detail()]] - code - shortsmaker/photo_prep.py
@@ -30,8 +30,8 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 4 edges to [[_COMMUNITY_Channel Profiles & Menus]]
-- 1 edge to [[_COMMUNITY_Archive Film & Downloads]]
+- 4 edges to [[_COMMUNITY_Config & Palettes]]
+- 1 edge to [[_COMMUNITY_Detail Marks & Storyboard]]
 
 ## Top bridge nodes
 - [[clean_photo()]] - degree 5, connects to 2 communities

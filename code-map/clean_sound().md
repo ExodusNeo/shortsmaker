@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/audio_mix.py"
 type: "code"
-community: "Sound Effects & Story Sounds"
+community: "Scene Cues & Image Search"
 location: "L93"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Sound_Effects__Story_Sounds
+  - community/Scene_Cues__Image_Search
 ---
 
 # clean_sound()
@@ -16,7 +16,6 @@ tags:
 - [[audio_mix.py]] - `contains` [EXTRACTED]
 - [[contains()]] - `calls` [EXTRACTED]
 - [[re]] - `calls` [EXTRACTED]
-- [[test_clean_sound()]] - `calls` [EXTRACTED]
 - [[words_of()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Sound_Effects__Story_Sounds
+#graphify/code #graphify/EXTRACTED #community/Scene_Cues__Image_Search

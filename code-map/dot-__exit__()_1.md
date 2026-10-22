@@ -1,17 +1,18 @@
 ---
 source_file: "tests/test_pictures_first.py"
 type: "code"
-community: "Picture Picker"
-location: "L341"
+community: "Test Patching Helpers"
+location: "L211"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Picture_Picker
+  - community/Test_Patching_Helpers
 ---
 
 # .__exit__()
 
 ## Connections
-- [[picking]] - `method` [EXTRACTED]
+- [[owner()]] - `calls` [EXTRACTED]
+- [[planning]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Picture_Picker
+#graphify/code #graphify/EXTRACTED #community/Test_Patching_Helpers

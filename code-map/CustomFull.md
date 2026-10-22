@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/full/types.ts"
 type: "code"
-community: "Custom Scene Slots"
+community: "Custom Scene Examples"
 location: "L56"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Custom_Scene_Slots
+  - community/Custom_Scene_Examples
 ---
 
 # CustomFull
@@ -22,4 +22,4 @@ tags:
 - [[fulltypes.ts]] - `contains` [EXTRACTED]
 - [[toolkit.tsx]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Custom_Scene_Slots
+#graphify/code #graphify/EXTRACTED #community/Custom_Scene_Examples

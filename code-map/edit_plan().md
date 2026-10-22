@@ -12,9 +12,9 @@ tags:
 # edit_plan()
 
 ## Connections
-- [[Path_16]] - `references` [EXTRACTED]
+- [[Path_13]] - `references` [EXTRACTED]
 - [[Timestamped edit decision list of exactly what was rendered, plus the sound-…]] - `rationale_for` [EXTRACTED]
-- [[clock()]] - `calls` [EXTRACTED]
+- [[clock()_1]] - `calls` [EXTRACTED]
 - [[cut_text()]] - `calls` [EXTRACTED]
 - [[editplan.py]] - `contains` [EXTRACTED]
 - [[look_text()]] - `calls` [EXTRACTED]

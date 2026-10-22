@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/picture_pool.py"
 type: "rationale"
-community: "Archive Film & Downloads"
+community: "CLI & Pixabay Films"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Archive_Film__Downloads
+  - community/CLI__Pixabay_Films
 ---
 
 # The pictures gathered for a topic before writing, their catalog, cache and…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[picture_pool.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Archive_Film__Downloads
+#graphify/rationale #graphify/EXTRACTED #community/CLI__Pixabay_Films

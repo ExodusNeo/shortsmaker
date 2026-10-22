@@ -1,22 +1,21 @@
 ---
 source_file: "shortsmaker/review.py"
 type: "code"
-community: "Quality & Visual Review"
-location: "L182"
+community: "Detail Marks & Storyboard"
+location: "L246"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Quality__Visual_Review
+  - community/Detail_Marks__Storyboard
 ---
 
 # storyboard()
 
 ## Connections
 - [[One mid-scene frame per scene from the finished video, labeled with its…]] - `rationale_for` [EXTRACTED]
-- [[Path_5]] - `references` [EXTRACTED]
-- [[clock()]] - `calls` [EXTRACTED]
+- [[Path_8]] - `references` [EXTRACTED]
 - [[io]] - `calls` [EXTRACTED]
 - [[review.py]] - `contains` [EXTRACTED]
 - [[subprocess]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Quality__Visual_Review
+#graphify/code #graphify/EXTRACTED #community/Detail_Marks__Storyboard

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/llm.py"
 type: "code"
-community: "AI Calls & Trend Seeds"
+community: "AI Calls & Quota"
 location: "L57"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AI_Calls__Trend_Seeds
+  - community/AI_Calls__Quota
 ---
 
 # quota_exhausted()
@@ -17,4 +17,4 @@ tags:
 - [[llm.py]] - `contains` [EXTRACTED]
 - [[run_agy()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AI_Calls__Trend_Seeds
+#graphify/code #graphify/EXTRACTED #community/AI_Calls__Quota

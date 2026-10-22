@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/footage.py"
 type: "code"
-community: "Archive Film & Downloads"
+community: "CLI & Pixabay Films"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Archive_Film__Downloads
+  - community/CLI__Pixabay_Films
 ---
 
 # footage.py
@@ -35,10 +35,11 @@ tags:
 - [[pixabay_films()]] - `contains` [EXTRACTED]
 - [[plan_rules.py]] - `imports_from` [EXTRACTED]
 - [[re]] - `imports` [EXTRACTED]
+- [[review.py]] - `imports_from` [EXTRACTED]
 - [[shot_span()]] - `contains` [EXTRACTED]
 - [[subprocess]] - `imports` [EXTRACTED]
 - [[test_pictures_first.py]] - `imports_from` [EXTRACTED]
 - [[time]] - `imports` [EXTRACTED]
 - [[urllib_parse]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Archive_Film__Downloads
+#graphify/code #graphify/EXTRACTED #community/CLI__Pixabay_Films

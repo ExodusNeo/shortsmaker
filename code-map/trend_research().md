@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/channel_profiles.py"
 type: "code"
-community: "Trend Research & New Channel"
+community: "Entry Point & Channel Menus"
 location: "L143"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Trend_Research__New_Channel
+  - community/Entry_Point__Channel_Menus
 ---
 
 # trend_research()
@@ -22,4 +22,4 @@ tags:
 - [[time]] - `calls` [EXTRACTED]
 - [[yt_list()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Trend_Research__New_Channel
+#graphify/code #graphify/EXTRACTED #community/Entry_Point__Channel_Menus

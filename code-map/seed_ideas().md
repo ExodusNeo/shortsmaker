@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/channel_profiles.py"
 type: "code"
-community: "AI Calls & Trend Seeds"
+community: "Entry Point & Channel Menus"
 location: "L132"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AI_Calls__Trend_Seeds
+  - community/Entry_Point__Channel_Menus
 ---
 
 # seed_ideas()
@@ -17,4 +17,4 @@ tags:
 - [[channel_profiles.py]] - `contains` [EXTRACTED]
 - [[trend_research()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AI_Calls__Trend_Seeds
+#graphify/code #graphify/EXTRACTED #community/Entry_Point__Channel_Menus

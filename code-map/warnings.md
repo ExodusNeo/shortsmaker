@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "Channel Profiles & Menus"
+community: "Config & Palettes"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Channel_Profiles__Menus
+  - community/Config__Palettes
 ---
 
 # warnings
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[config.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Channel_Profiles__Menus
+#graphify/concept #graphify/EXTRACTED #community/Config__Palettes

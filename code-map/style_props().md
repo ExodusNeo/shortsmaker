@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/style_lab.py"
 type: "code"
-community: "Style Candidates"
+community: "Photo Look Scenes"
 location: "L42"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Style_Candidates
+  - community/Photo_Look_Scenes
 ---
 
 # style_props()
@@ -16,4 +16,4 @@ tags:
 - [[style_lab.py]] - `contains` [EXTRACTED]
 - [[test_old_state_renders_plain()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Style_Candidates
+#graphify/code #graphify/EXTRACTED #community/Photo_Look_Scenes

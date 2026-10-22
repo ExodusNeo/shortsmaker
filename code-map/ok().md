@@ -1,12 +1,12 @@
 ---
 source_file: "tests/style.test.ts"
 type: "code"
-community: "Style Registry"
+community: "Style Library Components"
 location: "L17"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Style_Registry
+  - community/Style_Library_Components
 ---
 
 # ok()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[style.test.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Style_Registry
+#graphify/code #graphify/EXTRACTED #community/Style_Library_Components

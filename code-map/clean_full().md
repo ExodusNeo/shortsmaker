@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/plan_rules.py"
 type: "code"
-community: "Graphics Rescue & Validation"
+community: "Scene Cues & Image Search"
 location: "L96"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Graphics_Rescue__Validation
+  - community/Scene_Cues__Image_Search
 ---
 
 # clean_full()
@@ -21,16 +21,9 @@ tags:
 - [[re]] - `calls` [EXTRACTED]
 - [[rescue_graphics()]] - `calls` [EXTRACTED]
 - [[show_number()]] - `calls` [EXTRACTED]
-- [[test_clean_full_board()]] - `calls` [EXTRACTED]
-- [[test_clean_full_custom_and_skin()]] - `calls` [EXTRACTED]
-- [[test_clean_full_document()]] - `calls` [EXTRACTED]
-- [[test_clean_full_journey()]] - `calls` [EXTRACTED]
 - [[test_clean_full_keeps_board_pic()]] - `calls` [EXTRACTED]
-- [[test_clean_full_keeps_thing()]] - `calls` [EXTRACTED]
-- [[test_clean_full_limits()]] - `calls` [EXTRACTED]
-- [[test_number_scaling()]] - `calls` [EXTRACTED]
 - [[text()]] - `contains` [EXTRACTED]
 - [[word()]] - `contains` [EXTRACTED]
 - [[words_of()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Graphics_Rescue__Validation
+#graphify/code #graphify/EXTRACTED #community/Scene_Cues__Image_Search

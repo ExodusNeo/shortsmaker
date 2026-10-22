@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/style/looks/Miniature.tsx"
 type: "code"
-community: "Photo Looks Library"
+community: "Style Library Components"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Photo_Looks_Library
+  - community/Style_Library_Components
 ---
 
 # Miniature.tsx
@@ -24,4 +24,4 @@ tags:
 - [[styletypes.ts]] - `imports_from` [EXTRACTED]
 - [[useOnceCanvas()]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Photo_Looks_Library
+#graphify/code #graphify/EXTRACTED #community/Style_Library_Components

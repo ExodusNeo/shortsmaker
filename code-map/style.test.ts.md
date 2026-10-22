@@ -1,12 +1,12 @@
 ---
 source_file: "tests/style.test.ts"
 type: "code"
-community: "Style Registry"
+community: "Style Library Components"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Style_Registry
+  - community/Style_Library_Components
 ---
 
 # style.test.ts
@@ -18,7 +18,7 @@ tags:
 - [[inksOf()]] - `imports` [EXTRACTED]
 - [[kit.ts]] - `imports_from` [EXTRACTED]
 - [[lookFor()]] - `imports` [EXTRACTED]
-- [[noise()_1]] - `imports` [EXTRACTED]
+- [[noise()]] - `imports` [EXTRACTED]
 - [[ok()]] - `contains` [EXTRACTED]
 - [[overlayFor()]] - `imports` [EXTRACTED]
 - [[shown()]] - `contains` [EXTRACTED]
@@ -28,4 +28,4 @@ tags:
 - [[transitionWindow()]] - `imports` [EXTRACTED]
 - [[window.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Style_Registry
+#graphify/code #graphify/EXTRACTED #community/Style_Library_Components

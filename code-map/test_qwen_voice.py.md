@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_qwen_voice.py"
 type: "code"
-community: "Word Counts & Test Utils"
+community: "Voice Word Tests"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Word_Counts__Test_Utils
+  - community/Voice_Word_Tests
 ---
 
 # test_qwen_voice.py
@@ -22,4 +22,4 @@ tags:
 - [[test_numbers()]] - `contains` [EXTRACTED]
 - [[test_story.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Word_Counts__Test_Utils
+#graphify/code #graphify/EXTRACTED #community/Voice_Word_Tests

@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[choose_images()]] - `calls` [EXTRACTED]
 - [[picking]] - `calls` [EXTRACTED]
-- [[scene()]] - `calls` [EXTRACTED]
+- [[scene()_1]] - `calls` [EXTRACTED]
 - [[still()]] - `calls` [EXTRACTED]
 - [[test_pictures_first.py]] - `contains` [EXTRACTED]
 

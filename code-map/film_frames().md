@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/footage.py"
 type: "code"
-community: "Archive Film & Downloads"
+community: "Film Frames & Crops"
 location: "L167"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Archive_Film__Downloads
+  - community/Film_Frames__Crops
 ---
 
 # film_frames()
@@ -18,4 +18,4 @@ tags:
 - [[footage.py]] - `contains` [EXTRACTED]
 - [[n moments spread through a film, for the contact sheets (with FILM_CROP applied…]] - `rationale_for` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Archive_Film__Downloads
+#graphify/code #graphify/EXTRACTED #community/Film_Frames__Crops

@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "Sound Effects & Story Sounds"
+community: "Shotcut Timeline"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Sound_Effects__Story_Sounds
+  - community/Shotcut_Timeline
 ---
 
 # Path
 
 ## Connections
-- [[mark_details()]] - `references` [EXTRACTED]
+- [[short_folder()]] - `references` [EXTRACTED]
+- [[videos()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Sound_Effects__Story_Sounds
+#graphify/code #graphify/EXTRACTED #community/Shotcut_Timeline

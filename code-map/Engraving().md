@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/style/looks/Engraving.tsx"
 type: "code"
-community: "Photo Looks Library"
+community: "Style Library Components"
 location: "L44"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Photo_Looks_Library
+  - community/Style_Library_Components
 ---
 
 # Engraving()
@@ -17,4 +17,4 @@ tags:
 - [[styleindex.ts]] - `indirect_call` [INFERRED]
 - [[useOnceCanvas()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Photo_Looks_Library
+#graphify/code #graphify/EXTRACTED #community/Style_Library_Components

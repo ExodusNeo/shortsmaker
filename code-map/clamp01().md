@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/style/kit.ts"
 type: "code"
-community: "Photo Looks Library"
+community: "Style Library Components"
 location: "L32"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Photo_Looks_Library
+  - community/Style_Library_Components
 ---
 
 # clamp01()
@@ -18,4 +18,4 @@ tags:
 - [[kit.ts]] - `contains` [EXTRACTED]
 - [[stretch()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Photo_Looks_Library
+#graphify/code #graphify/EXTRACTED #community/Style_Library_Components

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/channel_profiles.py"
 type: "rationale"
-community: "Run Questions"
+community: "Entry Point & Channel Menus"
 location: "L55"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Run_Questions
+  - community/Entry_Point__Channel_Menus
 ---
 
 # Ask for a number 1..n (Enter = default, when there is one).
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[ask_number()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Run_Questions
+#graphify/rationale #graphify/EXTRACTED #community/Entry_Point__Channel_Menus

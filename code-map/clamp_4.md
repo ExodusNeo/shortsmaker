@@ -1,17 +1,17 @@
 ---
-source_file: "remotion/src/full/Board.tsx"
+source_file: "remotion/src/MapCard.tsx"
 type: "code"
-community: "Evidence Board & Documents"
-location: "L6"
+community: "Remotion Captions & Cards"
+location: "L16"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Evidence_Board__Documents
+  - community/Remotion_Captions__Cards
 ---
 
 # clamp
 
 ## Connections
-- [[Board.tsx]] - `contains` [EXTRACTED]
+- [[MapCard.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Evidence_Board__Documents
+#graphify/code #graphify/EXTRACTED #community/Remotion_Captions__Cards

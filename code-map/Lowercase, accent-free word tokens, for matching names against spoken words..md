@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/plan_rules.py"
 type: "rationale"
-community: "Graphics Rescue & Validation"
+community: "Scene Cues & Image Search"
 location: "L303"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Graphics_Rescue__Validation
+  - community/Scene_Cues__Image_Search
 ---
 
 # Lowercase, accent-free word tokens, for matching names against spoken words.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[words_of()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Graphics_Rescue__Validation
+#graphify/rationale #graphify/EXTRACTED #community/Scene_Cues__Image_Search

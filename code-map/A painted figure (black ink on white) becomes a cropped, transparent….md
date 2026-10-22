@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_full_scenes.py"
 type: "rationale"
-community: "Figure Silhouettes & Redraws"
-location: "L698"
+community: "Figure Silhouette Test"
+location: "L740"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Figure_Silhouettes__Redraws
+  - community/Figure_Silhouette_Test
 ---
 
 # A painted figure (black ink on white) becomes a cropped, transparent…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[test_ink_silhouette()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Figure_Silhouettes__Redraws
+#graphify/rationale #graphify/EXTRACTED #community/Figure_Silhouette_Test

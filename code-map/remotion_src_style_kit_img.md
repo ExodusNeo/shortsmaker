@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "Photo Looks Library"
+community: "Style Library Components"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Photo_Looks_Library
+  - community/Style_Library_Components
 ---
 
 # remotion_src_style_kit_img
@@ -18,4 +18,4 @@ tags:
 - [[Riso.tsx]] - `imports` [EXTRACTED]
 - [[Silent.tsx]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Photo_Looks_Library
+#graphify/concept #graphify/EXTRACTED #community/Style_Library_Components

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/plan_rules.py"
 type: "code"
-community: "Motion Graphic Limits"
+community: "Scene Cues & Image Search"
 location: "L227"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Motion_Graphic_Limits
+  - community/Scene_Cues__Image_Search
 ---
 
 # limit_full()
@@ -14,6 +14,5 @@ tags:
 ## Connections
 - [[Never scene 1 (real footage keeps the hook), never two in a row, never a scene…]] - `rationale_for` [EXTRACTED]
 - [[plan_rules.py]] - `contains` [EXTRACTED]
-- [[test_limit_full()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Motion_Graphic_Limits
+#graphify/code #graphify/EXTRACTED #community/Scene_Cues__Image_Search

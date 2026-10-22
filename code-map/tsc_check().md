@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/motion.py"
 type: "code"
-community: "Channel Profiles & Menus"
+community: "Freesound & Picture Swaps"
 location: "L308"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Channel_Profiles__Menus
+  - community/Freesound__Picture_Swaps
 ---
 
 # tsc_check()
@@ -19,4 +19,4 @@ tags:
 - [[shutil]] - `calls` [EXTRACTED]
 - [[subprocess]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Channel_Profiles__Menus
+#graphify/code #graphify/EXTRACTED #community/Freesound__Picture_Swaps

@@ -1,17 +1,18 @@
 ---
-source_file: "tests/test_full_scenes.py"
+source_file: "tests/test_style.py"
 type: "code"
-community: "Repaint Prompt Rewrites"
-location: "L622"
+community: "Photo Look Scenes"
+location: "L107"
 tags:
   - graphify/code
-  - graphify/EXTRACTED
-  - community/Repaint_Prompt_Rewrites
+  - graphify/INFERRED
+  - community/Photo_Look_Scenes
 ---
 
 # ask()
 
 ## Connections
-- [[test_look_check_fixes_code()]] - `contains` [EXTRACTED]
+- [[plan_with()]] - `indirect_call` [INFERRED]
+- [[test_fact_check_sees_new_graphics()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/Repaint_Prompt_Rewrites
+#graphify/code #graphify/INFERRED #community/Photo_Look_Scenes

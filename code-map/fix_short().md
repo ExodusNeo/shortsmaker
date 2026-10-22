@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/cli.py"
 type: "code"
-community: "Entry Point & Run Menus"
+community: "Entry Point & Channel Menus"
 location: "L105"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Entry_Point__Run_Menus
+  - community/Entry_Point__Channel_Menus
 ---
 
 # fix_short()
@@ -26,4 +26,4 @@ tags:
 - [[use_channel()]] - `calls` [EXTRACTED]
 - [[use_picture_from()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Entry_Point__Run_Menus
+#graphify/code #graphify/EXTRACTED #community/Entry_Point__Channel_Menus

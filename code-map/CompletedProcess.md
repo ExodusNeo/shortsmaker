@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Film Footage Sources"
+community: "Film Frames & Crops"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Film_Footage_Sources
+  - community/Film_Frames__Crops
 ---
 
 # CompletedProcess
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[film_ffmpeg()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Film_Footage_Sources
+#graphify/code #graphify/EXTRACTED #community/Film_Frames__Crops

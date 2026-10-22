@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "Photo Looks Library"
+community: "Style Library Components"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Photo_Looks_Library
+  - community/Style_Library_Components
 ---
 
 # ref_react
@@ -36,4 +36,4 @@ tags:
 - [[styletypes.ts]] - `imports_from` [EXTRACTED]
 - [[toolkit.tsx]] - `imports_from` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Photo_Looks_Library
+#graphify/concept #graphify/EXTRACTED #community/Style_Library_Components

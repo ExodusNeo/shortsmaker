@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/style/kit.ts"
 type: "code"
-community: "Photo Looks Library"
+community: "Style Library Components"
 location: "L35"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Photo_Looks_Library
+  - community/Style_Library_Components
 ---
 
 # drawCover()
@@ -17,6 +17,6 @@ tags:
 - [[draw()_2]] - `calls` [EXTRACTED]
 - [[draw()_4]] - `calls` [EXTRACTED]
 - [[kit.ts]] - `contains` [EXTRACTED]
-- [[luminance()_1]] - `calls` [EXTRACTED]
+- [[luminance()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Photo_Looks_Library
+#graphify/code #graphify/EXTRACTED #community/Style_Library_Components

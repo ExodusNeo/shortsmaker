@@ -1,17 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Logbook & Vault Pages"
+community: "Detail Marks & Storyboard"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Logbook__Vault_Pages
+  - community/Detail_Marks__Storyboard
 ---
 
 # Path
 
 ## Connections
-- [[log_short()]] - `references` [EXTRACTED]
-- [[vault_page()]] - `references` [EXTRACTED]
+- [[mark_details()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Logbook__Vault_Pages
+#graphify/code #graphify/EXTRACTED #community/Detail_Marks__Storyboard

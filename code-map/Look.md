@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/style/types.ts"
 type: "code"
-community: "Photo Looks Library"
+community: "Style Library Components"
 location: "L10"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Photo_Looks_Library
+  - community/Style_Library_Components
 ---
 
 # Look
@@ -22,4 +22,4 @@ tags:
 - [[styleindex.ts]] - `imports` [EXTRACTED]
 - [[styletypes.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Photo_Looks_Library
+#graphify/code #graphify/EXTRACTED #community/Style_Library_Components

@@ -1,18 +1,18 @@
 ---
 source_file: "shortsmaker/frame_render.py"
 type: "code"
-community: "Python Frame Renderer"
+community: "Frame Maker & Credit Tags"
 location: "L225"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Python_Frame_Renderer
+  - community/Frame_Maker__Credit_Tags
 ---
 
 # frame_maker()
 
 ## Connections
-- [[Path_22]] - `references` [EXTRACTED]
+- [[Path_19]] - `references` [EXTRACTED]
 - [[Returns frame(i, t) scene i at time t with camera move and graphics applied.…]] - `rationale_for` [EXTRACTED]
 - [[credit_tag_image()]] - `calls` [EXTRACTED]
 - [[fallback_graphic()]] - `calls` [EXTRACTED]
@@ -20,4 +20,4 @@ tags:
 - [[frame_render.py]] - `contains` [EXTRACTED]
 - [[graphic_overlay()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Python_Frame_Renderer
+#graphify/code #graphify/EXTRACTED #community/Frame_Maker__Credit_Tags

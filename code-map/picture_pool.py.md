@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/picture_pool.py"
 type: "code"
-community: "Archive Film & Downloads"
+community: "CLI & Pixabay Films"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Archive_Film__Downloads
+  - community/CLI__Pixabay_Films
 ---
 
 # picture_pool.py
@@ -40,6 +40,7 @@ tags:
 - [[pool_folder()]] - `contains` [EXTRACTED]
 - [[prepare_topic()]] - `contains` [EXTRACTED]
 - [[prune_cache()]] - `contains` [EXTRACTED]
+- [[review.py]] - `imports_from` [EXTRACTED]
 - [[save_pool()]] - `contains` [EXTRACTED]
 - [[session.py]] - `imports_from` [EXTRACTED]
 - [[shutil]] - `imports` [EXTRACTED]
@@ -51,4 +52,4 @@ tags:
 - [[usable()]] - `contains` [EXTRACTED]
 - [[writing.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Archive_Film__Downloads
+#graphify/code #graphify/EXTRACTED #community/CLI__Pixabay_Films

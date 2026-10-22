@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/motion.py"
 type: "rationale"
-community: "Channel Profiles & Menus"
+community: "Freesound & Picture Swaps"
 location: "L309"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Channel_Profiles__Menus
+  - community/Freesound__Picture_Swaps
 ---
 
 # Type-checks the Remotion project; None when it compiles, else the compiler's…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[tsc_check()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Channel_Profiles__Menus
+#graphify/rationale #graphify/EXTRACTED #community/Freesound__Picture_Swaps

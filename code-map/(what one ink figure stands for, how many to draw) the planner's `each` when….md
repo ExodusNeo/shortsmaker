@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/plan_rules.py"
 type: "rationale"
-community: "Graphics Rescue & Validation"
+community: "Scene Cues & Image Search"
 location: "L89"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Graphics_Rescue__Validation
+  - community/Scene_Cues__Image_Search
 ---
 
 # (what one ink figure stands for, how many to draw): the planner's `each` when…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[number_figures()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Graphics_Rescue__Validation
+#graphify/rationale #graphify/EXTRACTED #community/Scene_Cues__Image_Search

@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_style.py"
 type: "code"
-community: "Edit Plan Text"
+community: "Style Registry"
 location: "L30"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Edit_Plan_Text
+  - community/Style_Registry
 ---
 
 # test_write_style_index_is_deterministic()
@@ -16,4 +16,4 @@ tags:
 - [[test_style.py]] - `contains` [EXTRACTED]
 - [[write_style_index()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Edit_Plan_Text
+#graphify/code #graphify/EXTRACTED #community/Style_Registry

@@ -2,7 +2,7 @@
 source_file: "tests/test_full_scenes.py"
 type: "code"
 community: "Worker Crash Retry"
-location: "L662"
+location: "L704"
 tags:
   - graphify/code
   - graphify/INFERRED

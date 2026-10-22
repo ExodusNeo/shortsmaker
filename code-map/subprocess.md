@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "Media Tools & Shot Spans"
+community: "Audio Mix & Music Gain"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Media_Tools__Shot_Spans
+  - community/Audio_Mix__Music_Gain
 ---
 
 # subprocess
@@ -23,7 +23,7 @@ tags:
 - [[image_sources.py]] - `imports` [EXTRACTED]
 - [[llm.py]] - `imports` [EXTRACTED]
 - [[local_job()]] - `calls` [EXTRACTED]
-- [[main()]] - `calls` [EXTRACTED]
+- [[main()_4]] - `calls` [EXTRACTED]
 - [[master_gain()]] - `calls` [EXTRACTED]
 - [[media_tools.py]] - `imports` [EXTRACTED]
 - [[moss_images()]] - `calls` [EXTRACTED]
@@ -49,4 +49,4 @@ tags:
 - [[video_encoder()]] - `calls` [EXTRACTED]
 - [[voicestudio_up()]] - `calls` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Media_Tools__Shot_Spans
+#graphify/concept #graphify/EXTRACTED #community/Audio_Mix__Music_Gain

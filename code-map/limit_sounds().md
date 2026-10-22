@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/audio_mix.py"
 type: "code"
-community: "Sound Effects & Story Sounds"
+community: "Audio Mix & Music Gain"
 location: "L101"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Sound_Effects__Story_Sounds
+  - community/Audio_Mix__Music_Gain
 ---
 
 # limit_sounds()
@@ -14,6 +14,5 @@ tags:
 ## Connections
 - [[At most MAX_STORY_SOUNDS story sounds per Short (the first ones), so each one…]] - `rationale_for` [EXTRACTED]
 - [[audio_mix.py]] - `contains` [EXTRACTED]
-- [[test_clean_sound()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Sound_Effects__Story_Sounds
+#graphify/code #graphify/EXTRACTED #community/Audio_Mix__Music_Gain

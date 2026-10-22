@@ -1,18 +1,17 @@
 ---
 source_file: "tests/test_full_scenes.py"
 type: "code"
-community: "Motion Graphic Limits"
-location: "L88"
+community: "Full Scene Tests"
+location: "L89"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Motion_Graphic_Limits
+  - community/Full_Scene_Tests
 ---
 
 # test_limit_full()
 
 ## Connections
-- [[limit_full()]] - `calls` [EXTRACTED]
 - [[test_full_scenes.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Motion_Graphic_Limits
+#graphify/code #graphify/EXTRACTED #community/Full_Scene_Tests

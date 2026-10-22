@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/style/generated/InventedLook.tsx"
 type: "code"
-community: "Photo Looks Library"
+community: "Style Library Components"
 location: "L6"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Photo_Looks_Library
+  - community/Style_Library_Components
 ---
 
 # InventedLook()
@@ -15,4 +15,4 @@ tags:
 - [[InventedLook.tsx]] - `contains` [EXTRACTED]
 - [[styleindex.ts]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/Photo_Looks_Library
+#graphify/code #graphify/EXTRACTED #community/Style_Library_Components

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/plan_rules.py"
 type: "rationale"
-community: "Sound Effects & Story Sounds"
+community: "Detail Marks & Storyboard"
 location: "L244"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Sound_Effects__Story_Sounds
+  - community/Detail_Marks__Storyboard
 ---
 
 # Let Claude circle (or point an arrow at) a detail in up to 2 chosen pictures.…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[mark_details()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Sound_Effects__Story_Sounds
+#graphify/rationale #graphify/EXTRACTED #community/Detail_Marks__Storyboard

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/motion.py"
 type: "code"
-community: "AI Calls & Trend Seeds"
+community: "AI-Coded Motion Scenes"
 location: "L85"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AI_Calls__Trend_Seeds
+  - community/AI-Coded_Motion_Scenes
 ---
 
 # fallback_custom_tsx()
@@ -17,6 +17,5 @@ tags:
 - [[json]] - `calls` [EXTRACTED]
 - [[motion.py]] - `contains` [EXTRACTED]
 - [[re]] - `calls` [EXTRACTED]
-- [[test_fallback_custom_is_clean()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AI_Calls__Trend_Seeds
+#graphify/code #graphify/EXTRACTED #community/AI-Coded_Motion_Scenes

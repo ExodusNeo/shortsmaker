@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/channel_profiles.py"
 type: "code"
-community: "Run Questions"
+community: "Entry Point & Channel Menus"
 location: "L70"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Run_Questions
+  - community/Entry_Point__Channel_Menus
 ---
 
 # ask_brain()
@@ -17,4 +17,4 @@ tags:
 - [[channel_profiles.py]] - `contains` [EXTRACTED]
 - [[main()_2]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Run_Questions
+#graphify/code #graphify/EXTRACTED #community/Entry_Point__Channel_Menus

@@ -1,24 +1,17 @@
 ---
-source_file: "remotion/src/style/kit.ts"
+source_file: "shortsmaker/audio_mix.py"
 type: "code"
-community: "Photo Looks Library"
-location: "L27"
+community: "SFX Synthesis"
+location: "L180"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Photo_Looks_Library
+  - community/SFX_Synthesis
 ---
 
 # noise()
 
 ## Connections
-- [[Halftone.tsx]] - `imports` [EXTRACTED]
-- [[Riso.tsx]] - `imports` [EXTRACTED]
-- [[Silent()]] - `calls` [EXTRACTED]
-- [[Silent.tsx]] - `imports` [EXTRACTED]
-- [[draw()_1]] - `calls` [EXTRACTED]
-- [[draw()_3]] - `calls` [EXTRACTED]
-- [[kit.ts]] - `contains` [EXTRACTED]
-- [[style.test.ts]] - `imports` [EXTRACTED]
+- [[make_sfx()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Photo_Looks_Library
+#graphify/code #graphify/EXTRACTED #community/SFX_Synthesis

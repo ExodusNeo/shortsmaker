@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/image_sources.py"
 type: "code"
-community: "Film Footage Sources"
+community: "Film Archive Sources"
 location: "L233"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Film_Footage_Sources
+  - community/Film_Archive_Sources
 ---
 
 # on_topic()
@@ -21,4 +21,4 @@ tags:
 - [[nasa_images()]] - `calls` [EXTRACTED]
 - [[words_of()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Film_Footage_Sources
+#graphify/code #graphify/EXTRACTED #community/Film_Archive_Sources

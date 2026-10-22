@@ -1,24 +1,17 @@
 ---
-source_file: "shortsmaker/media_tools.py"
+source_file: "shortsmaker/edit_project.py"
 type: "code"
-community: "Quality & Visual Review"
-location: "L43"
+community: "Shotcut Timeline"
+location: "L52"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Quality__Visual_Review
+  - community/Shotcut_Timeline
 ---
 
 # clock()
 
 ## Connections
-- [[edit_plan()]] - `calls` [EXTRACTED]
-- [[gather_pool()]] - `calls` [EXTRACTED]
-- [[log_short()]] - `calls` [EXTRACTED]
-- [[media_tools.py]] - `contains` [EXTRACTED]
-- [[quality_check()]] - `calls` [EXTRACTED]
-- [[review_fixes()]] - `calls` [EXTRACTED]
-- [[storyboard()]] - `calls` [EXTRACTED]
-- [[visual_review()]] - `calls` [EXTRACTED]
+- [[project_xml()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Quality__Visual_Review
+#graphify/code #graphify/EXTRACTED #community/Shotcut_Timeline

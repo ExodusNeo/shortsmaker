@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/full/examples/ExampleChain.tsx"
 type: "code"
-community: "Guarded Scene Layout"
+community: "Custom Scene Examples"
 location: "L7"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Guarded_Scene_Layout
+  - community/Custom_Scene_Examples
 ---
 
 # ExampleChain()
@@ -24,4 +24,4 @@ tags:
 - [[skinOf()]] - `calls` [EXTRACTED]
 - [[travel()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Guarded_Scene_Layout
+#graphify/code #graphify/EXTRACTED #community/Custom_Scene_Examples

@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "Archive Film & Downloads"
+community: "GPU Voice & Painters"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Archive_Film__Downloads
+  - community/GPU_Voice__Painters
 ---
 
 # concurrent_futures
@@ -14,4 +14,4 @@ tags:
 - [[gpu.py]] - `imports_from` [EXTRACTED]
 - [[picture_pool.py]] - `imports_from` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Archive_Film__Downloads
+#graphify/concept #graphify/EXTRACTED #community/GPU_Voice__Painters

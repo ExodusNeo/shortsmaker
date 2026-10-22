@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/image_sources.py"
 type: "code"
-community: "Film Footage Sources"
+community: "Film Archive Sources"
 location: "L84"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Film_Footage_Sources
+  - community/Film_Archive_Sources
 ---
 
 # usable_license()
@@ -17,4 +17,4 @@ tags:
 - [[image_sources.py]] - `contains` [EXTRACTED]
 - [[wm_files()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Film_Footage_Sources
+#graphify/code #graphify/EXTRACTED #community/Film_Archive_Sources

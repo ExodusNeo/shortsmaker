@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/plan_rules.py"
 type: "code"
-community: "Graphics Rescue & Validation"
+community: "Scene Cues & Image Search"
 location: "L17"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Graphics_Rescue__Validation
+  - community/Scene_Cues__Image_Search
 ---
 
 # is_num()
@@ -15,9 +15,7 @@ tags:
 - [[clean_full()]] - `calls` [EXTRACTED]
 - [[clean_graphic()]] - `calls` [EXTRACTED]
 - [[coords()]] - `calls` [EXTRACTED]
-- [[first_second_check()]] - `calls` [EXTRACTED]
 - [[number_figures()]] - `calls` [EXTRACTED]
 - [[plan_rules.py]] - `contains` [EXTRACTED]
-- [[review_fixes()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Graphics_Rescue__Validation
+#graphify/code #graphify/EXTRACTED #community/Scene_Cues__Image_Search

@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "Remotion Captions & Cards"
+community: "Map Journey Scenes"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Remotion_Captions__Cards
+  - community/Map_Journey_Scenes
 ---
 
 # ref_d3_geo
@@ -14,4 +14,4 @@ tags:
 - [[Journey.tsx]] - `imports_from` [EXTRACTED]
 - [[MapCard.tsx]] - `imports_from` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Remotion_Captions__Cards
+#graphify/concept #graphify/EXTRACTED #community/Map_Journey_Scenes

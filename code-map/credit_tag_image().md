@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/image_sources.py"
 type: "code"
-community: "Python Frame Renderer"
+community: "Frame Maker & Credit Tags"
 location: "L222"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Python_Frame_Renderer
+  - community/Frame_Maker__Credit_Tags
 ---
 
 # credit_tag_image()
@@ -17,4 +17,4 @@ tags:
 - [[frame_maker()]] - `calls` [EXTRACTED]
 - [[image_sources.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Python_Frame_Renderer
+#graphify/code #graphify/EXTRACTED #community/Frame_Maker__Credit_Tags

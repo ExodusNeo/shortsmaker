@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/picture_pool.py"
 type: "code"
-community: "Film Footage Sources"
+community: "Scene Cues & Image Search"
 location: "L99"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Film_Footage_Sources
+  - community/Scene_Cues__Image_Search
 ---
 
 # gather_pool()
@@ -17,7 +17,7 @@ tags:
 - [[archive_images()]] - `calls` [EXTRACTED]
 - [[article_images()]] - `calls` [EXTRACTED]
 - [[choose_images()]] - `calls` [EXTRACTED]
-- [[clock()]] - `calls` [EXTRACTED]
+- [[clock()_1]] - `calls` [EXTRACTED]
 - [[commons_search()]] - `calls` [EXTRACTED]
 - [[contains()]] - `calls` [EXTRACTED]
 - [[load_thumb()]] - `indirect_call` [INFERRED]
@@ -30,4 +30,4 @@ tags:
 - [[test_pool_roundtrip()]] - `calls` [EXTRACTED]
 - [[words_of()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Film_Footage_Sources
+#graphify/code #graphify/EXTRACTED #community/Scene_Cues__Image_Search

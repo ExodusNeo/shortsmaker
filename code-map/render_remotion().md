@@ -1,18 +1,18 @@
 ---
 source_file: "shortsmaker/remotion_render.py"
 type: "code"
-community: "Remotion Render & Skins"
+community: "Remotion Render & Figures"
 location: "L148"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Remotion_Render__Skins
+  - community/Remotion_Render__Figures
 ---
 
 # render_remotion()
 
 ## Connections
-- [[Path_19]] - `references` [EXTRACTED]
+- [[Path_12]] - `references` [EXTRACTED]
 - [[Render the silent video (with captions) through the Remotion project; returns…]] - `rationale_for` [EXTRACTED]
 - [[make_paper()]] - `calls` [EXTRACTED]
 - [[remotion()]] - `contains` [EXTRACTED]
@@ -23,4 +23,4 @@ tags:
 - [[short_skin()]] - `calls` [EXTRACTED]
 - [[shutil]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Remotion_Render__Skins
+#graphify/code #graphify/EXTRACTED #community/Remotion_Render__Figures

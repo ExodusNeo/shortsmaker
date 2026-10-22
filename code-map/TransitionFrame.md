@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/style/types.ts"
 type: "code"
-community: "Photo Looks Library"
+community: "Style Library Components"
 location: "L18"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Photo_Looks_Library
+  - community/Style_Library_Components
 ---
 
 # TransitionFrame
@@ -15,4 +15,4 @@ tags:
 - [[kit.ts]] - `re_exports` [EXTRACTED]
 - [[styletypes.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Photo_Looks_Library
+#graphify/code #graphify/EXTRACTED #community/Style_Library_Components

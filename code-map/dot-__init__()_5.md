@@ -1,18 +1,18 @@
 ---
 source_file: "shortsmaker/frame_render.py"
 type: "code"
-community: "Python Frame Renderer"
+community: "Subject Position Checks"
 location: "L199"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Python_Frame_Renderer
+  - community/Subject_Position_Checks
 ---
 
 # .__init__()
 
 ## Connections
 - [[ClipReader]] - `method` [EXTRACTED]
-- [[Path_22]] - `references` [EXTRACTED]
+- [[Path_19]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Python_Frame_Renderer
+#graphify/code #graphify/EXTRACTED #community/Subject_Position_Checks

@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_style.py"
 type: "code"
-community: "Edit Plan Text"
+community: "Style Validation"
 location: "L70"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Edit_Plan_Text
+  - community/Style_Validation
 ---
 
 # test_recent_looks_blocked()
@@ -15,4 +15,4 @@ tags:
 - [[clean_look()]] - `calls` [EXTRACTED]
 - [[test_style.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Edit_Plan_Text
+#graphify/code #graphify/EXTRACTED #community/Style_Validation

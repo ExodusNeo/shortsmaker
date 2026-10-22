@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/frame_render.py"
 type: "rationale"
-community: "Python Frame Renderer"
+community: "Frame Overlays & Fonts"
 location: "L48"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Python_Frame_Renderer
+  - community/Frame_Overlays__Fonts
 ---
 
 # Pre-render a callout as a small transparent image (animated per frame later).
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[graphic_overlay()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Python_Frame_Renderer
+#graphify/rationale #graphify/EXTRACTED #community/Frame_Overlays__Fonts

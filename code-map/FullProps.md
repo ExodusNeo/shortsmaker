@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/full/types.ts"
 type: "code"
-community: "Big Number Scenes"
+community: "Custom Scene Examples"
 location: "L12"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Big_Number_Scenes
+  - community/Custom_Scene_Examples
 ---
 
 # FullProps
@@ -27,4 +27,4 @@ tags:
 - [[fulltypes.ts]] - `contains` [EXTRACTED]
 - [[toolkit.tsx]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Big_Number_Scenes
+#graphify/code #graphify/EXTRACTED #community/Custom_Scene_Examples

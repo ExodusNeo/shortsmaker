@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/style/looks/Riso.tsx"
 type: "code"
-community: "Photo Looks Library"
+community: "Style Library Components"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Photo_Looks_Library
+  - community/Style_Library_Components
 ---
 
 # Riso.tsx
@@ -18,8 +18,8 @@ tags:
 - [[Riso()]] - `contains` [EXTRACTED]
 - [[draw()_3]] - `contains` [EXTRACTED]
 - [[kit.ts]] - `imports_from` [EXTRACTED]
-- [[luminance()_1]] - `imports` [EXTRACTED]
-- [[noise()_1]] - `imports` [EXTRACTED]
+- [[luminance()]] - `imports` [EXTRACTED]
+- [[noise()]] - `imports` [EXTRACTED]
 - [[ref_react]] - `imports_from` [EXTRACTED]
 - [[remotion_src_style_kit_img]] - `imports` [EXTRACTED]
 - [[rgb()_1]] - `contains` [EXTRACTED]
@@ -27,4 +27,4 @@ tags:
 - [[styletypes.ts]] - `imports_from` [EXTRACTED]
 - [[useOnceCanvas()]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Photo_Looks_Library
+#graphify/code #graphify/EXTRACTED #community/Style_Library_Components

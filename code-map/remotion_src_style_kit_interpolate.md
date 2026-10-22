@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "Shared Graphics Kit"
+community: "Style Library Components"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Shared_Graphics_Kit
+  - community/Style_Library_Components
 ---
 
 # remotion_src_style_kit_interpolate
@@ -14,4 +14,4 @@ tags:
 - [[KineticTitle.tsx]] - `imports` [EXTRACTED]
 - [[QuestionBeat.tsx]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Shared_Graphics_Kit
+#graphify/concept #graphify/EXTRACTED #community/Style_Library_Components

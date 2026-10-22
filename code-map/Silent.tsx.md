@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/style/looks/Silent.tsx"
 type: "code"
-community: "Photo Looks Library"
+community: "Style Library Components"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Photo_Looks_Library
+  - community/Style_Library_Components
 ---
 
 # Silent.tsx
@@ -18,7 +18,7 @@ tags:
 - [[draw()_4]] - `contains` [EXTRACTED]
 - [[drawCover()]] - `imports` [EXTRACTED]
 - [[kit.ts]] - `imports_from` [EXTRACTED]
-- [[noise()_1]] - `imports` [EXTRACTED]
+- [[noise()]] - `imports` [EXTRACTED]
 - [[ref_react]] - `imports_from` [EXTRACTED]
 - [[ref_remotion]] - `imports_from` [EXTRACTED]
 - [[remotion_src_style_kit_img]] - `imports` [EXTRACTED]
@@ -26,4 +26,4 @@ tags:
 - [[styletypes.ts]] - `imports_from` [EXTRACTED]
 - [[useOnceCanvas()]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Photo_Looks_Library
+#graphify/code #graphify/EXTRACTED #community/Style_Library_Components

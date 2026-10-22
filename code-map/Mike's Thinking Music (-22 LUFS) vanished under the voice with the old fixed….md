@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_full_scenes.py"
 type: "rationale"
-community: "Full Scene Tests"
-location: "L682"
+community: "Music Gain Test"
+location: "L724"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Full_Scene_Tests
+  - community/Music_Gain_Test
 ---
 
 # Mike's Thinking Music (-22 LUFS) vanished under the voice with the old fixed…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[test_music_gain_evens_out_tracks()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Full_Scene_Tests
+#graphify/rationale #graphify/EXTRACTED #community/Music_Gain_Test

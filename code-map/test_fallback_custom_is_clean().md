@@ -1,19 +1,17 @@
 ---
 source_file: "tests/test_full_scenes.py"
 type: "code"
-community: "AI Calls & Trend Seeds"
-location: "L609"
+community: "Full Scene Tests"
+location: "L651"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AI_Calls__Trend_Seeds
+  - community/Full_Scene_Tests
 ---
 
 # test_fallback_custom_is_clean()
 
 ## Connections
-- [[fallback_custom_tsx()]] - `calls` [EXTRACTED]
-- [[lint_custom_code()]] - `calls` [EXTRACTED]
 - [[test_full_scenes.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AI_Calls__Trend_Seeds
+#graphify/code #graphify/EXTRACTED #community/Full_Scene_Tests

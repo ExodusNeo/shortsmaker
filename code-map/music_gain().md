@@ -1,22 +1,21 @@
 ---
 source_file: "shortsmaker/audio_mix.py"
 type: "code"
-community: "Sound Effects & Story Sounds"
+community: "Audio Mix & Music Gain"
 location: "L362"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Sound_Effects__Story_Sounds
+  - community/Audio_Mix__Music_Gain
 ---
 
 # music_gain()
 
 ## Connections
-- [[Path_3]] - `references` [EXTRACTED]
+- [[Path]] - `references` [EXTRACTED]
 - [[Volume factor that brings this track's loudness (first 60 s) to MUSIC_LUFS;…]] - `rationale_for` [EXTRACTED]
 - [[audio_mix.py]] - `contains` [EXTRACTED]
 - [[re]] - `calls` [EXTRACTED]
 - [[subprocess]] - `calls` [EXTRACTED]
-- [[test_music_gain_evens_out_tracks()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Sound_Effects__Story_Sounds
+#graphify/code #graphify/EXTRACTED #community/Audio_Mix__Music_Gain

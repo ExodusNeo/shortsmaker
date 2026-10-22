@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "Guarded Scene Layout"
+community: "Custom Scene Examples"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Guarded_Scene_Layout
+  - community/Custom_Scene_Examples
 ---
 
 # remotion_src_full_toolkit_card
@@ -14,4 +14,4 @@ tags:
 - [[ExampleChain.tsx]] - `imports` [EXTRACTED]
 - [[ExampleEvidence.tsx]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Guarded_Scene_Layout
+#graphify/concept #graphify/EXTRACTED #community/Custom_Scene_Examples

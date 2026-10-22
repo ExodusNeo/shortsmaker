@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/motion.py"
 type: "rationale"
-community: "Full Scene Props"
+community: "AI-Coded Motion Scenes"
 location: "L40"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Full_Scene_Props
+  - community/AI-Coded_Motion_Scenes
 ---
 
 # The `full` object Remotion draws for scene i: the plan's data, its word…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[full_props()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Full_Scene_Props
+#graphify/rationale #graphify/EXTRACTED #community/AI-Coded_Motion_Scenes

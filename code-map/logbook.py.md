@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/logbook.py"
 type: "code"
-community: "Channel Profiles & Menus"
+community: "Entry Point & Channel Menus"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Channel_Profiles__Menus
+  - community/Entry_Point__Channel_Menus
 ---
 
 # logbook.py
@@ -32,4 +32,4 @@ tags:
 - [[vault_refresh()]] - `contains` [EXTRACTED]
 - [[writing.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Channel_Profiles__Menus
+#graphify/code #graphify/EXTRACTED #community/Entry_Point__Channel_Menus

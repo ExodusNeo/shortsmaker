@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/edit_project.py"
 type: "rationale"
-community: "Media Tools & Shot Spans"
+community: "Config & Palettes"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Media_Tools__Shot_Spans
+  - community/Config__Palettes
 ---
 
 # A Shotcut timeline of a finished Short, for fixing by hand what the automatic…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[edit_project.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Media_Tools__Shot_Spans
+#graphify/rationale #graphify/EXTRACTED #community/Config__Palettes

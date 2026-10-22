@@ -1,17 +1,17 @@
 ---
-source_file: "remotion/src/full/BigNumber.tsx"
+source_file: "remotion/src/full/Journey.tsx"
 type: "code"
-community: "Big Number Scenes"
-location: "L7"
+community: "Map Journey Scenes"
+location: "L27"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Big_Number_Scenes
+  - community/Map_Journey_Scenes
 ---
 
 # clamp
 
 ## Connections
-- [[BigNumber.tsx]] - `contains` [EXTRACTED]
+- [[Journey.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Big_Number_Scenes
+#graphify/code #graphify/EXTRACTED #community/Map_Journey_Scenes

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/picture_pool.py"
 type: "code"
-community: "Film Footage Sources"
+community: "Scene Cues & Image Search"
 location: "L131"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/Film_Footage_Sources
+  - community/Scene_Cues__Image_Search
 ---
 
 # load_thumb()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[gather_pool()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/INFERRED #community/Film_Footage_Sources
+#graphify/code #graphify/INFERRED #community/Scene_Cues__Image_Search

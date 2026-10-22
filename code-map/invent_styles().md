@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[Codes this Short's inventions (look  transition  overlay) into their slots; a…]] - `rationale_for` [EXTRACTED]
-- [[Path_2]] - `references` [EXTRACTED]
+- [[Path_9]] - `references` [EXTRACTED]
 - [[invent_component()]] - `calls` [EXTRACTED]
 - [[style_lab.py]] - `contains` [EXTRACTED]
 - [[swap_inventions()]] - `calls` [EXTRACTED]

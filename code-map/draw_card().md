@@ -12,7 +12,7 @@ tags:
 # draw_card()
 
 ## Connections
-- [[Image_1]] - `references` [EXTRACTED]
+- [[Image]] - `references` [EXTRACTED]
 - [[Pop the card in with a slight overshoot over a dimmed background, then shrink…]] - `rationale_for` [EXTRACTED]
 - [[frame()]] - `calls` [EXTRACTED]
 - [[frame_render.py]] - `contains` [EXTRACTED]

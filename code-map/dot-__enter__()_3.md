@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_pictures_first.py"
 type: "code"
-community: "Planning Test Fakes"
+community: "Fake AI Helpers"
 location: "L199"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Planning_Test_Fakes
+  - community/Fake_AI_Helpers
 ---
 
 # .__enter__()
@@ -17,4 +17,4 @@ tags:
 - [[planning]] - `method` [EXTRACTED]
 - [[planning_ai()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/Planning_Test_Fakes
+#graphify/code #graphify/EXTRACTED #community/Fake_AI_Helpers

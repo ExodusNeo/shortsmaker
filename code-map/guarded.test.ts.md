@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[Box]] - `imports` [EXTRACTED]
 - [[MIN_MOVE]] - `imports` [EXTRACTED]
-- [[SAFE_1]] - `imports` [EXTRACTED]
+- [[SAFE]] - `imports` [EXTRACTED]
 - [[boxAt()]] - `imports` [EXTRACTED]
 - [[crosses()]] - `contains` [EXTRACTED]
 - [[fitCard()]] - `imports` [EXTRACTED]

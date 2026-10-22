@@ -1,21 +1,17 @@
 ---
-source_file: "remotion/src/full/toolkit.tsx"
+source_file: "remotion/src/full/Document.tsx"
 type: "code"
-community: "Custom Scene Slots"
-location: "L10"
+community: "Evidence Board Scenes"
+location: "L5"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Custom_Scene_Slots
+  - community/Evidence_Board_Scenes
 ---
 
 # clamp
 
 ## Connections
-- [[Custom0.tsx]] - `imports` [EXTRACTED]
-- [[Custom1.tsx]] - `imports` [EXTRACTED]
-- [[Custom2.tsx]] - `imports` [EXTRACTED]
-- [[Custom3.tsx]] - `imports` [EXTRACTED]
-- [[toolkit.tsx]] - `contains` [EXTRACTED]
+- [[Document.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Custom_Scene_Slots
+#graphify/code #graphify/EXTRACTED #community/Evidence_Board_Scenes

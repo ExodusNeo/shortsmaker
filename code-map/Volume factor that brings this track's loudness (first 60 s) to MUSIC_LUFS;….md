@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/audio_mix.py"
 type: "rationale"
-community: "Sound Effects & Story Sounds"
+community: "Audio Mix & Music Gain"
 location: "L363"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Sound_Effects__Story_Sounds
+  - community/Audio_Mix__Music_Gain
 ---
 
 # Volume factor that brings this track's loudness (first 60 s) to MUSIC_LUFS;…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[music_gain()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Sound_Effects__Story_Sounds
+#graphify/rationale #graphify/EXTRACTED #community/Audio_Mix__Music_Gain

@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "Word Counts & Test Utils"
+community: "Sentence Voice Takes"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Word_Counts__Test_Utils
+  - community/Sentence_Voice_Takes
 ---
 
 # traceback
@@ -18,4 +18,4 @@ tags:
 - [[test_pictures_first.py]] - `imports` [EXTRACTED]
 - [[test_story.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Word_Counts__Test_Utils
+#graphify/concept #graphify/EXTRACTED #community/Sentence_Voice_Takes

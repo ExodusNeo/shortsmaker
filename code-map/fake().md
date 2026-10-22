@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_story.py"
 type: "code"
-community: "Quality & Visual Review"
+community: "Script Editor & Story Checks"
 location: "L76"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/Quality__Visual_Review
+  - community/Script_Editor__Story_Checks
 ---
 
 # fake()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[test_editor_gets_one_second_pass_for_broken_rules()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/INFERRED #community/Quality__Visual_Review
+#graphify/code #graphify/INFERRED #community/Script_Editor__Story_Checks

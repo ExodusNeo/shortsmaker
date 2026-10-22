@@ -2,7 +2,7 @@
 source_file: "tests/test_full_scenes.py"
 type: "rationale"
 community: "Worker Crash Retry"
-location: "L657"
+location: "L699"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED

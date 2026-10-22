@@ -23,7 +23,7 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 1 edge to [[_COMMUNITY_Channel Profiles & Menus]]
+- 1 edge to [[_COMMUNITY_CLI & Pixabay Films]]
 
 ## Top bridge nodes
 - [[srt()]] - degree 4, connects to 1 community

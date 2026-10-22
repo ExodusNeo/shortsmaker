@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[Build a broad multi-source pool of images and real video footage (per-scene…]] - `rationale_for` [EXTRACTED]
-- [[Path_11]] - `references` [EXTRACTED]
+- [[Path_7]] - `references` [EXTRACTED]
 - [[apply_look_scenes()]] - `calls` [EXTRACTED]
 - [[ask_ai()]] - `calls` [EXTRACTED]
 - [[contact_sheets()]] - `calls` [EXTRACTED]

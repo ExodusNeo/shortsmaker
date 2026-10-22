@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/full/toolkit.tsx"
 type: "code"
-community: "Custom Scene Slots"
+community: "Custom Scene Examples"
 location: "L13"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Custom_Scene_Slots
+  - community/Custom_Scene_Examples
 ---
 
 # appear()
@@ -23,4 +23,4 @@ tags:
 - [[TitleBanner()]] - `calls` [EXTRACTED]
 - [[toolkit.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Custom_Scene_Slots
+#graphify/code #graphify/EXTRACTED #community/Custom_Scene_Examples

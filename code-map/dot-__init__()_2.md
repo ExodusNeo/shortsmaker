@@ -1,17 +1,17 @@
 ---
 source_file: "tests/test_pictures_first.py"
 type: "code"
-community: "Script Writing Pipeline"
-location: "L196"
+community: "Test Patching Helpers"
+location: "L33"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Script_Writing_Pipeline
+  - community/Test_Patching_Helpers
 ---
 
 # .__init__()
 
 ## Connections
-- [[planning]] - `method` [EXTRACTED]
+- [[stubbed]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Script_Writing_Pipeline
+#graphify/code #graphify/EXTRACTED #community/Test_Patching_Helpers

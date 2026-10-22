@@ -1,20 +1,17 @@
 ---
 source_file: "tests/test_full_scenes.py"
 type: "code"
-community: "Repaint Prompt Rewrites"
-location: "L146"
+community: "Planning Test Fakes"
+location: "L436"
 tags:
   - graphify/code
-  - graphify/INFERRED
-  - community/Repaint_Prompt_Rewrites
+  - graphify/EXTRACTED
+  - community/Planning_Test_Fakes
 ---
 
 # ask()
 
 ## Connections
-- [[_fake_planning()]] - `indirect_call` [INFERRED]
-- [[test_look_check_fixes_code()]] - `indirect_call` [INFERRED]
-- [[test_review_redraws_custom()]] - `indirect_call` [INFERRED]
-- [[test_rewrite_paint_prompts()]] - `indirect_call` [INFERRED]
+- [[test_rewrite_paint_prompts()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/Repaint_Prompt_Rewrites
+#graphify/code #graphify/EXTRACTED #community/Planning_Test_Fakes

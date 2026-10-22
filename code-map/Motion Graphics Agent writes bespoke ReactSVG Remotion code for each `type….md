@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/motion.py"
 type: "rationale"
-community: "AI Calls & Trend Seeds"
+community: "AI-Coded Motion Scenes"
 location: "L129"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/AI_Calls__Trend_Seeds
+  - community/AI-Coded_Motion_Scenes
 ---
 
 # Motion Graphics Agent: writes bespoke React/SVG Remotion code for each `type:…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[code_custom_scenes()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/AI_Calls__Trend_Seeds
+#graphify/rationale #graphify/EXTRACTED #community/AI-Coded_Motion_Scenes

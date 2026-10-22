@@ -1,28 +1,25 @@
 ---
 type: community
-cohesion: 0.19
-members: 20
+cohesion: 0.25
+members: 17
 ---
 
 # Picture Picker
 
-**Cohesion:** 0.19 - loosely connected
-**Members:** 20 nodes
+**Cohesion:** 0.25 - loosely connected
+**Members:** 17 nodes
 
 ## Members
-- [[dot-__exit__()_1]] - code - tests/test_pictures_first.py
-- [[dot-__init__()_1]] - code - tests/test_pictures_first.py
+- [[dot-__exit__()]] - code - tests/test_pictures_first.py
+- [[dot-__init__()]] - code - tests/test_pictures_first.py
 - [[Build a broad multi-source pool of images and real video footage (per-scene…]] - rationale - shortsmaker/picker.py
-- [[Path_11]] - code
-- [[Puts the Short's photo look on the scenes the picker chose for it (it saw the…]] - rationale - shortsmaker/style_lab.py
-- [[apply_look_scenes()]] - code - shortsmaker/style_lab.py
+- [[Path_7]] - code
 - [[choose_images()]] - code - shortsmaker/picker.py
 - [[choose_images() with network stubbed; gather_pool returns `extra` (and records…]] - rationale - tests/test_pictures_first.py
 - [[picking]] - code - tests/test_pictures_first.py
 - [[planned_short()]] - code - tests/test_pictures_first.py
-- [[scene()]] - code - tests/test_pictures_first.py
+- [[scene()_1]] - code - tests/test_pictures_first.py
 - [[still()]] - code - tests/test_pictures_first.py
-- [[test_apply_look_scenes()]] - code - tests/test_style.py
 - [[test_choose_extra_gather_is_bounded()]] - code - tests/test_pictures_first.py
 - [[test_choose_falls_back_to_plan()]] - code - tests/test_pictures_first.py
 - [[test_choose_keeps_plan_and_appends()]] - code - tests/test_pictures_first.py
@@ -39,21 +36,22 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 14 edges to [[_COMMUNITY_Picture Catalog]]
-- 3 edges to [[_COMMUNITY_Film Footage Sources]]
-- 3 edges to [[_COMMUNITY_Picture Pool Prep]]
+- 14 edges to [[_COMMUNITY_Pictures-First Tests]]
+- 3 edges to [[_COMMUNITY_Picture Pool & Catalog]]
 - 2 edges to [[_COMMUNITY_Test Patching Helpers]]
-- 2 edges to [[_COMMUNITY_Channel Profiles & Menus]]
-- 1 edge to [[_COMMUNITY_AI Calls & Trend Seeds]]
-- 1 edge to [[_COMMUNITY_Archive Film & Downloads]]
-- 1 edge to [[_COMMUNITY_Sound Cue Sheet]]
-- 1 edge to [[_COMMUNITY_Entry Point & Run Menus]]
-- 1 edge to [[_COMMUNITY_Edit Plan Text]]
-- 1 edge to [[_COMMUNITY_Style Candidates]]
+- 2 edges to [[_COMMUNITY_Film Archive Sources]]
+- 1 edge to [[_COMMUNITY_Scene Cues & Image Search]]
+- 1 edge to [[_COMMUNITY_Freesound & Picture Swaps]]
+- 1 edge to [[_COMMUNITY_AI Calls & Quota]]
+- 1 edge to [[_COMMUNITY_Film Frames & Crops]]
+- 1 edge to [[_COMMUNITY_Photo Look Scenes]]
+- 1 edge to [[_COMMUNITY_Entry Point & Channel Menus]]
+- 1 edge to [[_COMMUNITY_Style Registry]]
+- 1 edge to [[_COMMUNITY_CLI & Pixabay Films]]
 
 ## Top bridge nodes
-- [[choose_images()]] - degree 21, connects to 8 communities
+- [[choose_images()]] - degree 21, connects to 10 communities
 - [[picking]] - degree 12, connects to 2 communities
 - [[planned_short()]] - degree 10, connects to 2 communities
 - [[still()]] - degree 5, connects to 2 communities
-- [[scene()]] - degree 8, connects to 1 community
+- [[scene()_1]] - degree 8, connects to 1 community

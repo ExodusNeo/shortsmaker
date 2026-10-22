@@ -1,17 +1,17 @@
 ---
-source_file: "tools/split_make_shorts.py"
+source_file: "tests/test_pictures_first.py"
 type: "code"
-community: "Package Split Tool"
-location: "L385"
+community: "Fake AI Helpers"
+location: "L111"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Package_Split_Tool
+  - community/Fake_AI_Helpers
 ---
 
 # .__init__()
 
 ## Connections
-- [[Unqualify]] - `method` [EXTRACTED]
+- [[fake_ai]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Package_Split_Tool
+#graphify/code #graphify/EXTRACTED #community/Fake_AI_Helpers

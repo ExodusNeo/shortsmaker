@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/gpu.py"
 type: "code"
-community: "Word Counts & Test Utils"
+community: "Sentence Voice Takes"
 location: "L141"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Word_Counts__Test_Utils
+  - community/Sentence_Voice_Takes
 ---
 
 # spoken_count()
@@ -19,4 +19,4 @@ tags:
 - [[test_word_counts_match_the_aligner()]] - `calls` [EXTRACTED]
 - [[unicodedata]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Word_Counts__Test_Utils
+#graphify/code #graphify/EXTRACTED #community/Sentence_Voice_Takes

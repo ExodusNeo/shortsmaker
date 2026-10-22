@@ -13,7 +13,7 @@ members: 42
 - [[(local names, names declared global) bound directly in a function body (not in…]] - rationale - tools/split_make_shorts.py
 - [[(source line, names it binds, node) for each top-level import, in order.]] - rationale - tools/split_make_shorts.py
 - [[(statement, first line, last line) with the comments above it. For a statement…]] - rationale - tools/split_make_shorts.py
-- [[dot-__init__()_3]] - code - tools/split_make_shorts.py
+- [[dot-__init__()_4]] - code - tools/split_make_shorts.py
 - [[dot-visit_Attribute()]] - code - tools/split_make_shorts.py
 - [[dot-visit_Global()]] - code - tools/split_make_shorts.py
 - [[Every Name node in `tree_nodes` (top-level statements) that refers to a module-…]] - rationale - tools/split_make_shorts.py
@@ -61,10 +61,10 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 1 edge to [[_COMMUNITY_Sound Effects & Story Sounds]]
-- 1 edge to [[_COMMUNITY_Media Tools & Shot Spans]]
-- 1 edge to [[_COMMUNITY_Word Counts & Test Utils]]
-- 1 edge to [[_COMMUNITY_Channel Profiles & Menus]]
+- 1 edge to [[_COMMUNITY_Entry Point & Channel Menus]]
+- 1 edge to [[_COMMUNITY_Audio Mix & Music Gain]]
+- 1 edge to [[_COMMUNITY_CLI & Pixabay Films]]
+- 1 edge to [[_COMMUNITY_Config & Palettes]]
 
 ## Top bridge nodes
 - [[split_make_shorts.py]] - degree 26, connects to 4 communities

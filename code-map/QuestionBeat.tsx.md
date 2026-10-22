@@ -1,19 +1,19 @@
 ---
 source_file: "remotion/src/style/overlays/QuestionBeat.tsx"
 type: "code"
-community: "Shared Graphics Kit"
+community: "Style Library Components"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Shared_Graphics_Kit
+  - community/Style_Library_Components
 ---
 
 # QuestionBeat.tsx
 
 ## Connections
 - [[CAPTION_TOP]] - `imports` [EXTRACTED]
-- [[CLAMP_8]] - `imports` [EXTRACTED]
+- [[CLAMP]] - `imports` [EXTRACTED]
 - [[FONT]] - `imports` [EXTRACTED]
 - [[Overlay]] - `imports` [EXTRACTED]
 - [[QuestionBeat()]] - `contains` [EXTRACTED]
@@ -27,4 +27,4 @@ tags:
 - [[styletypes.ts]] - `imports_from` [EXTRACTED]
 - [[theme]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Shared_Graphics_Kit
+#graphify/code #graphify/EXTRACTED #community/Style_Library_Components

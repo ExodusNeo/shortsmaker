@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/audio_mix.py"
 type: "code"
-community: "Sound Effects & Story Sounds"
+community: "Freesound & Picture Swaps"
 location: "L111"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Sound_Effects__Story_Sounds
+  - community/Freesound__Picture_Swaps
 ---
 
 # freesound_fetch()
@@ -16,4 +16,4 @@ tags:
 - [[audio_mix.py]] - `contains` [EXTRACTED]
 - [[json]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Sound_Effects__Story_Sounds
+#graphify/code #graphify/EXTRACTED #community/Freesound__Picture_Swaps

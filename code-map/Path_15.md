@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "Review Auto Fixes"
+community: "Entry Point & Channel Menus"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Review_Auto_Fixes
+  - community/Entry_Point__Channel_Menus
 ---
 
 # Path
 
 ## Connections
-- [[_review_state()]] - `references` [EXTRACTED]
+- [[log_short()]] - `references` [EXTRACTED]
+- [[vault_page()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Review_Auto_Fixes
+#graphify/code #graphify/EXTRACTED #community/Entry_Point__Channel_Menus

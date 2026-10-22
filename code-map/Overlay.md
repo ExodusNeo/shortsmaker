@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/style/types.ts"
 type: "code"
-community: "Transitions & Overlays"
+community: "Style Library Components"
 location: "L14"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Transitions__Overlays
+  - community/Style_Library_Components
 ---
 
 # Overlay
@@ -19,4 +19,4 @@ tags:
 - [[styleindex.ts]] - `imports` [EXTRACTED]
 - [[styletypes.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Transitions__Overlays
+#graphify/code #graphify/EXTRACTED #community/Style_Library_Components

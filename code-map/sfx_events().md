@@ -16,8 +16,6 @@ tags:
 - [[audio_mix.py]] - `contains` [EXTRACTED]
 - [[pick()]] - `contains` [EXTRACTED]
 - [[random]] - `calls` [EXTRACTED]
-- [[test_sfx_full()]] - `calls` [EXTRACTED]
-- [[test_story_sound_wins_its_moment()]] - `calls` [EXTRACTED]
 - [[test_style_sounds()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Sound_Cue_Sheet

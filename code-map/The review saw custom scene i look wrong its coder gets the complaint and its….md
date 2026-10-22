@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/remotion_render.py"
 type: "rationale"
-community: "Figure Silhouettes & Redraws"
+community: "Remotion Render & Figures"
 location: "L40"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Figure_Silhouettes__Redraws
+  - community/Remotion_Render__Figures
 ---
 
 # The review saw custom scene i look wrong: its coder gets the complaint and its…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[redraw_custom()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Figure_Silhouettes__Redraws
+#graphify/rationale #graphify/EXTRACTED #community/Remotion_Render__Figures

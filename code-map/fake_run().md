@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_package.py"
 type: "code"
-community: "Word Counts & Test Utils"
+community: "Package & TS Tests"
 location: "L90"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/Word_Counts__Test_Utils
+  - community/Package__TS_Tests
 ---
 
 # fake_run()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[test_argon_out_of_quota_switches_to_flash()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/INFERRED #community/Word_Counts__Test_Utils
+#graphify/code #graphify/INFERRED #community/Package__TS_Tests

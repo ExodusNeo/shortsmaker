@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/writing.py"
 type: "code"
-community: "Quality & Visual Review"
+community: "Script Editor & Story Checks"
 location: "L359"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Quality__Visual_Review
+  - community/Script_Editor__Story_Checks
 ---
 
 # story_problems()
@@ -18,4 +18,4 @@ tags:
 - [[test_story_problems()]] - `calls` [EXTRACTED]
 - [[writing.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Quality__Visual_Review
+#graphify/code #graphify/EXTRACTED #community/Script_Editor__Story_Checks

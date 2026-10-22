@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/session.py"
 type: "rationale"
-community: "Channel Profiles & Menus"
+community: "CLI & Pixabay Films"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Channel_Profiles__Menus
+  - community/CLI__Pixabay_Films
 ---
 
 # Settings that change during a run (who plans, quota-out agents, the channel's…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[session.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Channel_Profiles__Menus
+#graphify/rationale #graphify/EXTRACTED #community/CLI__Pixabay_Films

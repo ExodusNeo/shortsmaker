@@ -1,20 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Python Frame Renderer"
+community: "Freesound & Picture Swaps"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Python_Frame_Renderer
+  - community/Freesound__Picture_Swaps
 ---
 
 # Path
 
 ## Connections
-- [[dot-__init__()_5]] - `references` [EXTRACTED]
-- [[fills_frame()]] - `references` [EXTRACTED]
-- [[frame_maker()]] - `references` [EXTRACTED]
-- [[graphic_low()]] - `references` [EXTRACTED]
-- [[thumbnail()]] - `references` [EXTRACTED]
+- [[use_picture_from()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Python_Frame_Renderer
+#graphify/code #graphify/EXTRACTED #community/Freesound__Picture_Swaps

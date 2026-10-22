@@ -1,21 +1,20 @@
 ---
 source_file: ""
 type: "code"
-community: "Picture Pool Prep"
+community: "Remotion Render & Figures"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Picture_Pool_Prep
+  - community/Remotion_Render__Figures
 ---
 
 # Path
 
 ## Connections
-- [[catalog_pool()]] - `references` [EXTRACTED]
-- [[contact_sheets()]] - `references` [EXTRACTED]
-- [[load_pool()]] - `references` [EXTRACTED]
-- [[pool_folder()]] - `references` [EXTRACTED]
-- [[prepare_topic()]] - `references` [EXTRACTED]
-- [[save_pool()]] - `references` [EXTRACTED]
+- [[ink_silhouette()]] - `references` [EXTRACTED]
+- [[make_paper()]] - `references` [EXTRACTED]
+- [[paint_instead()]] - `references` [EXTRACTED]
+- [[redraw_custom()]] - `references` [EXTRACTED]
+- [[render_remotion()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Picture_Pool_Prep
+#graphify/code #graphify/EXTRACTED #community/Remotion_Render__Figures

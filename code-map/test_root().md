@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_package.py"
 type: "code"
-community: "Word Counts & Test Utils"
+community: "Package & TS Tests"
 location: "L15"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Word_Counts__Test_Utils
+  - community/Package__TS_Tests
 ---
 
 # test_root()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[test_package.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Word_Counts__Test_Utils
+#graphify/code #graphify/EXTRACTED #community/Package__TS_Tests

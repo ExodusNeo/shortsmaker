@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/logbook.py"
 type: "rationale"
-community: "Logbook & Vault Pages"
+community: "Entry Point & Channel Menus"
 location: "L84"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Logbook__Vault_Pages
+  - community/Entry_Point__Channel_Menus
 ---
 
 # make_shorts.py notes: rebuild every Short's vault page from the logbooks (each…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[vault_refresh()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Logbook__Vault_Pages
+#graphify/rationale #graphify/EXTRACTED #community/Entry_Point__Channel_Menus

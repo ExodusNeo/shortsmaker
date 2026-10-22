@@ -2,7 +2,7 @@
 source_file: "tests/test_pictures_first.py"
 type: "code"
 community: "Test Patching Helpers"
-location: "L211"
+location: "L51"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -13,6 +13,6 @@ tags:
 
 ## Connections
 - [[owner()]] - `calls` [EXTRACTED]
-- [[planning]] - `method` [EXTRACTED]
+- [[stubbed]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Test_Patching_Helpers

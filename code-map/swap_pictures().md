@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/review.py"
 type: "code"
-community: "Review Auto Fixes"
-location: "L136"
+community: "Review Fixes & Pool Swaps"
+location: "L139"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Review_Auto_Fixes
+  - community/Review_Fixes__Pool_Swaps
 ---
 
 # swap_pictures()
@@ -17,4 +17,4 @@ tags:
 - [[review.py]] - `contains` [EXTRACTED]
 - [[test_swap_pictures_trades_real_pictures()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Review_Auto_Fixes
+#graphify/code #graphify/EXTRACTED #community/Review_Fixes__Pool_Swaps

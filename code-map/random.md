@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "SFX & Paper Synthesis"
+community: "Config & Palettes"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/SFX__Paper_Synthesis
+  - community/Config__Palettes
 ---
 
 # random
@@ -20,4 +20,4 @@ tags:
 - [[short_render.py]] - `imports` [EXTRACTED]
 - [[test_full_scenes.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/SFX__Paper_Synthesis
+#graphify/concept #graphify/EXTRACTED #community/Config__Palettes

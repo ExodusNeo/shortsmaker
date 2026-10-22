@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/full/Board.tsx"
 type: "code"
-community: "Evidence Board & Documents"
+community: "Evidence Board Scenes"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Evidence_Board__Documents
+  - community/Evidence_Board_Scenes
 ---
 
 # Board.tsx
@@ -24,7 +24,7 @@ tags:
 - [[Paper.tsx]] - `imports_from` [EXTRACTED]
 - [[Print]] - `contains` [EXTRACTED]
 - [[TYPE]] - `imports` [EXTRACTED]
-- [[clamp_4]] - `contains` [EXTRACTED]
+- [[clamp_9]] - `contains` [EXTRACTED]
 - [[fulltypes.ts]] - `imports_from` [EXTRACTED]
 - [[guarded.tsx]] - `imports_from` [EXTRACTED]
 - [[layout()]] - `contains` [EXTRACTED]
@@ -33,4 +33,4 @@ tags:
 - [[rng()]] - `imports` [EXTRACTED]
 - [[skinOf()]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Evidence_Board__Documents
+#graphify/code #graphify/EXTRACTED #community/Evidence_Board_Scenes

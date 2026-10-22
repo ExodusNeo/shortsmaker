@@ -1,24 +1,17 @@
 ---
-source_file: "tests/test_pictures_first.py"
+source_file: "tests/test_style.py"
 type: "code"
-community: "Picture Picker"
-location: "L323"
+community: "Scene Cues & Image Search"
+location: "L85"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Picture_Picker
+  - community/Scene_Cues__Image_Search
 ---
 
 # scene()
 
 ## Connections
-- [[test_choose_extra_gather_is_bounded()]] - `calls` [EXTRACTED]
-- [[test_choose_falls_back_to_plan()]] - `calls` [EXTRACTED]
-- [[test_choose_keeps_plan_and_appends()]] - `calls` [EXTRACTED]
-- [[test_choose_old_path_unchanged()]] - `calls` [EXTRACTED]
-- [[test_choose_swap_note()]] - `calls` [EXTRACTED]
-- [[test_pictures_first.py]] - `contains` [EXTRACTED]
-- [[test_plan_note_already_used()]] - `calls` [EXTRACTED]
-- [[test_planned_full_pictures_not_sent_when_empty()]] - `calls` [EXTRACTED]
+- [[test_limit_style_caps()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Picture_Picker
+#graphify/code #graphify/EXTRACTED #community/Scene_Cues__Image_Search

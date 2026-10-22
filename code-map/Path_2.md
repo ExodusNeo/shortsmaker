@@ -1,20 +1,20 @@
 ---
 source_file: ""
 type: "code"
-community: "Style Inventions"
+community: "AI-Coded Motion Scenes"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Style_Inventions
+  - community/AI-Coded_Motion_Scenes
 ---
 
 # Path
 
 ## Connections
-- [[approve_candidate()]] - `references` [EXTRACTED]
-- [[invent_component()]] - `references` [EXTRACTED]
-- [[invent_styles()]] - `references` [EXTRACTED]
-- [[reject_candidate()]] - `references` [EXTRACTED]
-- [[save_candidate()]] - `references` [EXTRACTED]
+- [[code_custom_scenes()]] - `references` [EXTRACTED]
+- [[full_props()]] - `references` [EXTRACTED]
+- [[look_and_fix()]] - `references` [EXTRACTED]
+- [[preview_custom()]] - `references` [EXTRACTED]
+- [[preview_sheet()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Style_Inventions
+#graphify/code #graphify/EXTRACTED #community/AI-Coded_Motion_Scenes

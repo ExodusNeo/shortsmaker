@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/plan_rules.py"
 type: "code"
-community: "Graphics Rescue & Validation"
+community: "Scene Cues & Image Search"
 location: "L21"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Graphics_Rescue__Validation
+  - community/Scene_Cues__Image_Search
 ---
 
 # coords()
@@ -17,4 +17,4 @@ tags:
 - [[is_num()]] - `calls` [EXTRACTED]
 - [[plan_rules.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Graphics_Rescue__Validation
+#graphify/code #graphify/EXTRACTED #community/Scene_Cues__Image_Search

@@ -1,19 +1,19 @@
 ---
 source_file: "shortsmaker/short_render.py"
 type: "code"
-community: "Painting & Renderer Choice"
+community: "Gemini Painting & Renderer Choice"
 location: "L65"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Painting__Renderer_Choice
+  - community/Gemini_Painting__Renderer_Choice
 ---
 
 # render()
 
 ## Connections
 - [[Make one Short. With `state` (fix.bat or an automatic fix round), reuse its…]] - `rationale_for` [EXTRACTED]
-- [[Path_14]] - `references` [EXTRACTED]
+- [[Path_10]] - `references` [EXTRACTED]
 - [[fix_short()]] - `calls` [EXTRACTED]
 - [[gemini_images()]] - `calls` [EXTRACTED]
 - [[hex_rgb()]] - `calls` [EXTRACTED]
@@ -37,4 +37,4 @@ tags:
 - [[subprocess]] - `calls` [EXTRACTED]
 - [[wants_remotion()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Painting__Renderer_Choice
+#graphify/code #graphify/EXTRACTED #community/Gemini_Painting__Renderer_Choice

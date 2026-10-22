@@ -22,7 +22,7 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 1 edge to [[_COMMUNITY_Channel Profiles & Menus]]
+- 1 edge to [[_COMMUNITY_Config & Palettes]]
 
 ## Top bridge nodes
 - [[to_vertical()]] - degree 3, connects to 1 community

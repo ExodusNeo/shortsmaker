@@ -1,20 +1,19 @@
 ---
 source_file: "shortsmaker/remotion_render.py"
 type: "code"
-community: "Figure Silhouettes & Redraws"
+community: "Remotion Render & Figures"
 location: "L39"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Figure_Silhouettes__Redraws
+  - community/Remotion_Render__Figures
 ---
 
 # redraw_custom()
 
 ## Connections
-- [[Path_19]] - `references` [EXTRACTED]
+- [[Path_12]] - `references` [EXTRACTED]
 - [[The review saw custom scene i look wrong its coder gets the complaint and its…]] - `rationale_for` [EXTRACTED]
-- [[apply_review_fixes()]] - `calls` [EXTRACTED]
 - [[remotion_render.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Figure_Silhouettes__Redraws
+#graphify/code #graphify/EXTRACTED #community/Remotion_Render__Figures

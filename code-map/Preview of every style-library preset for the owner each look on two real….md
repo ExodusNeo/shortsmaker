@@ -1,12 +1,12 @@
 ---
 source_file: "tests/render_style.py"
 type: "rationale"
-community: "Channel Profiles & Menus"
+community: "Freesound & Picture Swaps"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Channel_Profiles__Menus
+  - community/Freesound__Picture_Swaps
 ---
 
 # Preview of every style-library preset for the owner: each look on two real…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[render_style.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Channel_Profiles__Menus
+#graphify/rationale #graphify/EXTRACTED #community/Freesound__Picture_Swaps

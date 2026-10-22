@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/picture_pool.py"
 type: "code"
-community: "Entry Point & Run Menus"
+community: "CLI & Pixabay Films"
 location: "L188"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Entry_Point__Run_Menus
+  - community/CLI__Pixabay_Films
 ---
 
 # prune_cache()
@@ -19,4 +19,4 @@ tags:
 - [[test_prune_cache_handles_pools()]] - `calls` [EXTRACTED]
 - [[time]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Entry_Point__Run_Menus
+#graphify/code #graphify/EXTRACTED #community/CLI__Pixabay_Films

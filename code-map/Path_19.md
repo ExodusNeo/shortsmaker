@@ -1,20 +1,20 @@
 ---
 source_file: ""
 type: "code"
-community: "Figure Silhouettes & Redraws"
+community: "Subject Position Checks"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Figure_Silhouettes__Redraws
+  - community/Subject_Position_Checks
 ---
 
 # Path
 
 ## Connections
-- [[ink_silhouette()]] - `references` [EXTRACTED]
-- [[make_paper()]] - `references` [EXTRACTED]
-- [[paint_instead()]] - `references` [EXTRACTED]
-- [[redraw_custom()]] - `references` [EXTRACTED]
-- [[render_remotion()]] - `references` [EXTRACTED]
+- [[dot-__init__()_5]] - `references` [EXTRACTED]
+- [[fills_frame()]] - `references` [EXTRACTED]
+- [[frame_maker()]] - `references` [EXTRACTED]
+- [[graphic_low()]] - `references` [EXTRACTED]
+- [[thumbnail()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Figure_Silhouettes__Redraws
+#graphify/code #graphify/EXTRACTED #community/Subject_Position_Checks

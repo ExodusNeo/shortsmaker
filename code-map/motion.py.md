@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/motion.py"
 type: "code"
-community: "Channel Profiles & Menus"
+community: "AI-Coded Motion Scenes"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Channel_Profiles__Menus
+  - community/AI-Coded_Motion_Scenes
 ---
 
 # motion.py
@@ -42,4 +42,4 @@ tags:
 - [[test_style.py]] - `imports_from` [EXTRACTED]
 - [[tsc_check()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Channel_Profiles__Menus
+#graphify/code #graphify/EXTRACTED #community/AI-Coded_Motion_Scenes

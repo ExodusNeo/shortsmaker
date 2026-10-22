@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_first_second.py"
 type: "rationale"
-community: "Logbook Lessons & First Second"
+community: "First-Second Check Tests"
 location: "L24"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Logbook_Lessons__First_Second
+  - community/First-Second_Check_Tests
 ---
 
 # first_second_check with ffmpeg and the AI faked; returns its result.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[run_check()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Logbook_Lessons__First_Second
+#graphify/rationale #graphify/EXTRACTED #community/First-Second_Check_Tests

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/edit_project.py"
 type: "code"
-community: "Media Tools & Shot Spans"
+community: "Config & Palettes"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Media_Tools__Shot_Spans
+  - community/Config__Palettes
 ---
 
 # edit_project.py
@@ -28,4 +28,4 @@ tags:
 - [[test_edit_project.py]] - `imports_from` [EXTRACTED]
 - [[xml_sax_saxutils]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Media_Tools__Shot_Spans
+#graphify/code #graphify/EXTRACTED #community/Config__Palettes

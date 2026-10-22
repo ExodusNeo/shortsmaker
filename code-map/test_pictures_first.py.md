@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_pictures_first.py"
 type: "code"
-community: "Picture Catalog"
+community: "Pictures-First Tests"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Picture_Catalog
+  - community/Pictures-First_Tests
 ---
 
 # test_pictures_first.py
@@ -38,7 +38,7 @@ tags:
 - [[planning]] - `contains` [EXTRACTED]
 - [[planning_ai()]] - `contains` [EXTRACTED]
 - [[pool_of()]] - `contains` [EXTRACTED]
-- [[scene()]] - `contains` [EXTRACTED]
+- [[scene()_1]] - `contains` [EXTRACTED]
 - [[seo.py]] - `imports_from` [EXTRACTED]
 - [[session.py]] - `imports_from` [EXTRACTED]
 - [[still()]] - `contains` [EXTRACTED]
@@ -85,4 +85,4 @@ tags:
 - [[traceback]] - `imports` [EXTRACTED]
 - [[writing.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Picture_Catalog
+#graphify/code #graphify/EXTRACTED #community/Pictures-First_Tests

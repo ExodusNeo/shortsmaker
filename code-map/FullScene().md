@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/full/FullScene.tsx"
 type: "code"
-community: "Map Journey Scenes"
+community: "Big Number Scenes"
 location: "L9"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Map_Journey_Scenes
+  - community/Big_Number_Scenes
 ---
 
 # FullScene()
@@ -20,4 +20,4 @@ tags:
 - [[Journey()]] - `calls` [EXTRACTED]
 - [[Short.tsx]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Map_Journey_Scenes
+#graphify/code #graphify/EXTRACTED #community/Big_Number_Scenes

@@ -1,21 +1,21 @@
 ---
-source_file: "tests/render_full.py"
+source_file: "local_ai/gen.py"
 type: "code"
-community: "Media Tools & Shot Spans"
-location: "L28"
+community: "GPU Image Worker"
+location: "L200"
 tags:
   - graphify/code
-  - graphify/EXTRACTED
-  - community/Media_Tools__Shot_Spans
+  - graphify/INFERRED
+  - community/GPU_Image_Worker
 ---
 
 # main()
 
 ## Connections
-- [[json]] - `calls` [EXTRACTED]
-- [[props_for()]] - `calls` [EXTRACTED]
-- [[render_full.py]] - `contains` [EXTRACTED]
-- [[shutil]] - `calls` [EXTRACTED]
-- [[subprocess]] - `calls` [EXTRACTED]
+- [[gen.py]] - `contains` [EXTRACTED]
+- [[images()]] - `indirect_call` [INFERRED]
+- [[parallax()]] - `indirect_call` [INFERRED]
+- [[tts()_1]] - `indirect_call` [INFERRED]
+- [[video()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/Media_Tools__Shot_Spans
+#graphify/code #graphify/INFERRED #community/GPU_Image_Worker

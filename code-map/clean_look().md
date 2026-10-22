@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/plan_rules.py"
 type: "code"
-community: "Edit Plan Text"
+community: "Style Validation"
 location: "L174"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Edit_Plan_Text
+  - community/Style_Validation
 ---
 
 # clean_look()
@@ -21,4 +21,4 @@ tags:
 - [[test_recent_looks_blocked()]] - `calls` [EXTRACTED]
 - [[test_unknown_names_fall_back()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Edit_Plan_Text
+#graphify/code #graphify/EXTRACTED #community/Style_Validation

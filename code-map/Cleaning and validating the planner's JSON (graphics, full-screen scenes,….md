@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/plan_rules.py"
 type: "rationale"
-community: "Graphics Rescue & Validation"
+community: "Scene Cues & Image Search"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Graphics_Rescue__Validation
+  - community/Scene_Cues__Image_Search
 ---
 
 # Cleaning and validating the planner's JSON (graphics, full-screen scenes,…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[plan_rules.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Graphics_Rescue__Validation
+#graphify/rationale #graphify/EXTRACTED #community/Scene_Cues__Image_Search

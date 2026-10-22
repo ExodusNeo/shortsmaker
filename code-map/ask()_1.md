@@ -1,18 +1,17 @@
 ---
-source_file: "tests/test_style.py"
+source_file: "tests/test_full_scenes.py"
 type: "code"
-community: "Edit Plan Text"
-location: "L107"
+community: "Planning Test Fakes"
+location: "L664"
 tags:
   - graphify/code
-  - graphify/INFERRED
-  - community/Edit_Plan_Text
+  - graphify/EXTRACTED
+  - community/Planning_Test_Fakes
 ---
 
 # ask()
 
 ## Connections
-- [[plan_with()]] - `indirect_call` [INFERRED]
-- [[test_fact_check_sees_new_graphics()]] - `indirect_call` [INFERRED]
+- [[test_look_check_fixes_code()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/Edit_Plan_Text
+#graphify/code #graphify/EXTRACTED #community/Planning_Test_Fakes

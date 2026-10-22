@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_story.py"
 type: "rationale"
-community: "Word Counts & Test Utils"
+community: "Sentence Voice Takes"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Word_Counts__Test_Utils
+  - community/Sentence_Voice_Takes
 ---
 
 # Tests for how stories are told (2026-10-22): one voice take per sentence cut…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[test_story.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Word_Counts__Test_Utils
+#graphify/rationale #graphify/EXTRACTED #community/Sentence_Voice_Takes

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/plan_rules.py"
 type: "rationale"
-community: "Graphics Rescue & Validation"
+community: "Scene Cues & Image Search"
 location: "L97"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Graphics_Rescue__Validation
+  - community/Scene_Cues__Image_Search
 ---
 
 # One planned full-screen motion graphic, validated (AI output is untrusted);…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[clean_full()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Graphics_Rescue__Validation
+#graphify/rationale #graphify/EXTRACTED #community/Scene_Cues__Image_Search

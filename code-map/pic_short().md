@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_pictures_first.py"
 type: "code"
-community: "Picture Catalog"
+community: "Pictures-First Tests"
 location: "L292"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Picture_Catalog
+  - community/Pictures-First_Tests
 ---
 
 # pic_short()
@@ -18,4 +18,4 @@ tags:
 - [[test_clean_pics()]] - `calls` [EXTRACTED]
 - [[test_pictures_first.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Picture_Catalog
+#graphify/code #graphify/EXTRACTED #community/Pictures-First_Tests

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/frame_render.py"
 type: "rationale"
-community: "Channel Profiles & Menus"
+community: "Frame Overlays & Fonts"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Channel_Profiles__Menus
+  - community/Frame_Overlays__Fonts
 ---
 
 # The Python renderer: camera moves, graphic overlays, person cards, clip…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[frame_render.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Channel_Profiles__Menus
+#graphify/rationale #graphify/EXTRACTED #community/Frame_Overlays__Fonts

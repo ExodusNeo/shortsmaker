@@ -1,20 +1,19 @@
 ---
 source_file: "tests/test_full_scenes.py"
 type: "code"
-community: "Repaint Prompt Rewrites"
-location: "L614"
+community: "Planning Test Fakes"
+location: "L656"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Repaint_Prompt_Rewrites
+  - community/Planning_Test_Fakes
 ---
 
 # test_look_check_fixes_code()
 
 ## Connections
-- [[ask()_4]] - `contains` [EXTRACTED]
-- [[ask()_3]] - `indirect_call` [INFERRED]
-- [[look_and_fix()]] - `calls` [EXTRACTED]
+- [[ask()_1]] - `contains` [EXTRACTED]
+- [[ask()]] - `indirect_call` [INFERRED]
 - [[test_full_scenes.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Repaint_Prompt_Rewrites
+#graphify/code #graphify/EXTRACTED #community/Planning_Test_Fakes

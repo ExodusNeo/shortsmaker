@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "Word Counts & Test Utils"
+community: "Package & TS Tests"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Word_Counts__Test_Utils
+  - community/Package__TS_Tests
 ---
 
 # tempfile
@@ -19,4 +19,4 @@ tags:
 - [[test_pictures_first.py]] - `imports` [EXTRACTED]
 - [[test_story.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Word_Counts__Test_Utils
+#graphify/concept #graphify/EXTRACTED #community/Package__TS_Tests

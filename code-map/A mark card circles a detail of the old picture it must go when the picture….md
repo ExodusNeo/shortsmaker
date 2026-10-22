@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_full_scenes.py"
 type: "rationale"
-community: "Fix.bat Picture Swaps"
-location: "L565"
+community: "Review Fixes & Pool Swaps"
+location: "L607"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Fixbat_Picture_Swaps
+  - community/Review_Fixes__Pool_Swaps
 ---
 
 # A "mark" card circles a detail of the old picture: it must go when the picture…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[test_new_picture_drops_mark()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Fixbat_Picture_Swaps
+#graphify/rationale #graphify/EXTRACTED #community/Review_Fixes__Pool_Swaps

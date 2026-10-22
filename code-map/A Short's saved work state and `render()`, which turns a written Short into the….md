@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/short_render.py"
 type: "rationale"
-community: "Channel Profiles & Menus"
+community: "Config & Palettes"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Channel_Profiles__Menus
+  - community/Config__Palettes
 ---
 
 # A Short's saved work state and `render()`, which turns a written Short into the…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[short_render.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Channel_Profiles__Menus
+#graphify/rationale #graphify/EXTRACTED #community/Config__Palettes

@@ -1,8 +1,8 @@
 ---
-source_file: "remotion/src/Graphics.tsx"
+source_file: "remotion/src/Extras.tsx"
 type: "code"
 community: "Remotion Captions & Cards"
-location: "L7"
+location: "L5"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,6 +12,6 @@ tags:
 # clamp
 
 ## Connections
-- [[Graphics.tsx]] - `contains` [EXTRACTED]
+- [[Extras.tsx]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Remotion_Captions__Cards

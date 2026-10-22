@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/short_render.py"
 type: "code"
-community: "Channel Profiles & Menus"
+community: "Config & Palettes"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Channel_Profiles__Menus
+  - community/Config__Palettes
 ---
 
 # short_render.py
@@ -47,4 +47,4 @@ tags:
 - [[test_full_scenes.py]] - `imports_from` [EXTRACTED]
 - [[time]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Channel_Profiles__Menus
+#graphify/code #graphify/EXTRACTED #community/Config__Palettes

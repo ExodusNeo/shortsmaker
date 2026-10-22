@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/editplan.py"
 type: "code"
-community: "Scene & Graphic Timing"
+community: "Scene Cues & Image Search"
 location: "L139"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Scene__Graphic_Timing
+  - community/Scene_Cues__Image_Search
 ---
 
 # scene_cues()
@@ -17,6 +17,5 @@ tags:
 - [[full_cues()]] - `calls` [EXTRACTED]
 - [[person_card()]] - `calls` [EXTRACTED]
 - [[spoken_at()]] - `calls` [EXTRACTED]
-- [[test_counter_finishes_before_it_leaves()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Scene__Graphic_Timing
+#graphify/code #graphify/EXTRACTED #community/Scene_Cues__Image_Search

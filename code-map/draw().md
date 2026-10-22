@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/style/looks/Engraving.tsx"
 type: "code"
-community: "Photo Looks Library"
+community: "Style Library Components"
 location: "L36"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Photo_Looks_Library
+  - community/Style_Library_Components
 ---
 
 # draw()
@@ -15,6 +15,6 @@ tags:
 - [[Engraving()]] - `calls` [EXTRACTED]
 - [[Engraving.tsx]] - `contains` [EXTRACTED]
 - [[hatch()]] - `calls` [EXTRACTED]
-- [[luminance()_1]] - `calls` [EXTRACTED]
+- [[luminance()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Photo_Looks_Library
+#graphify/code #graphify/EXTRACTED #community/Style_Library_Components

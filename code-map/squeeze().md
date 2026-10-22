@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/plan_rules.py"
 type: "code"
-community: "Scene & Graphic Timing"
+community: "Scene Cues & Image Search"
 location: "L343"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Scene__Graphic_Timing
+  - community/Scene_Cues__Image_Search
 ---
 
 # squeeze()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[full_cues()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Scene__Graphic_Timing
+#graphify/code #graphify/EXTRACTED #community/Scene_Cues__Image_Search
