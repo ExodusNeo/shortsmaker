@@ -68,8 +68,9 @@ def main() -> None:
             print(f"Making: {short['title']} ({session.BRAIN.capitalize()})")
             try:
                 short_render.render(short, ch, folder)
-            except blender_render.BlenderFailed as e:  # its files stay: running again retries the drawing
-                print(f"  Blender couldn't draw this Short ({e}); its files are kept in {folder}, run again to retry")
+            except blender_render.BlenderFailed as e:  # a re-run writes new scripts: nothing here could be reused
+                print(f"  Blender couldn't draw this Short ({e}); skipping it, run again to make a new one")
+                shutil.rmtree(folder, ignore_errors=True)
                 failed += 1
                 continue
             except Exception as e:  # one bad Short shouldn't kill the whole batch
@@ -125,6 +126,10 @@ def fix_short() -> None:
     rules.require_rules(folder.parent.name)  # a draft or broken rules file stops before any more questions
     state = short_render.load_state(folder / "work")
     short, choices = state["short"], state["choices"]
+    if short.get("build"):  # every scene is a Blender drawing: there is no picture or graphic to swap yet
+        print("This Short is drawn in Blender: fix.bat can't change its scenes. Make a new one with run.bat, or edit\n"
+              f"it by hand with {folder.name}\\edit_in_shotcut.bat when that file is there.")
+        return
     for k, sc in enumerate(short["scenes"], 1):
         print(f"  {k}) {sc['narration'][:80]}")
     i = channel_profiles.ask_number("Which scene?", len(short["scenes"])) - 1

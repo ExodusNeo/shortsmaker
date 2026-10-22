@@ -105,15 +105,23 @@ def test_plan_builds_retries_then_defaults():
                for s in shorts for sc in s["scenes"])
 
 
-def test_thumbnail_photo_prefers_an_opener():
-    usable = {"era_ok": True, "sharp": 2, "reject": None}
-    cat = [{"n": 1, "hook": False, **usable, "sharp": 1}, {"n": 2, "hook": False, **usable},
-           {"n": 5, "hook": True, **usable}]
-    assert blender_plan.thumbnail_photo({"catalog": cat}) == 4
-    assert blender_plan.thumbnail_photo({"catalog": cat[:2]}) == 1
-    assert blender_plan.thumbnail_photo({"catalog": cat[:1]}) is None
-    assert blender_plan.thumbnail_photo({}) is None
+def test_nan_and_infinity_get_defaults():
+    s = dict(EXAMPLE["structure"], span_m=float("nan"), height_m=float("inf"), spans=float("-inf"))
+    b = blender_plan.clean_build(plan(structure=s), 5)
+    assert b["structure"]["span_m"] == 100 and b["structure"]["height_m"] == 15 and b["structure"]["spans"] == 1
 
+
+def test_a_failure_in_scene_one_becomes_the_hook():
+    b = blender_plan.clean_build(plan(scenes=[{"scene": 1, "beat": "failure"}, {"scene": 2, "beat": "wide"},
+                                              {"scene": 3, "beat": "zoom"}, {"scene": 4, "beat": "failure"}]), 4)
+    assert b["beats"][0] == "failure_preview", b["beats"]
+
+
+def test_thumbnail_order_skips_film_and_puts_openers_first():
+    usable = {"era_ok": True, "sharp": 2, "reject": None}
+    cat = [{"n": 1, "hook": False, **usable}, {"n": 2, "hook": True, **usable}, {"n": 3, "hook": True, **usable}]
+    rows = [{"url": "a.jpg"}, {"url": "film.webm#t=3", "film": {"src": "film.webm", "t": 3}}, {"url": "c.jpg"}]
+    assert blender_plan.thumbnail_order({"catalog": cat}, rows) == [2, 0]
 
 if __name__ == "__main__":
     names = [n for n in sorted(globals()) if n.startswith("test_") and (len(sys.argv) < 2 or n in sys.argv[1:])]

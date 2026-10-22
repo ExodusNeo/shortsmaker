@@ -71,29 +71,33 @@ def render_clips(short: dict, bounds: list[float], all_words: list, work: Path, 
                        "peak_frame": round(pk[i] * FPS) + 1} for i, (a, b) in enumerate(ranges)]}
     text = json.dumps(job, ensure_ascii=False, sort_keys=True)
     done = frames / "build.json"
-    have = done.exists() and done.read_text(encoding="utf-8") == text and all(
-        (frames / f"f_{f:04d}.png").exists() for f in range(1, ranges[-1][1] + 1))
-    if not have:
-        frames.mkdir(exist_ok=True)
-        for old in list(frames.glob("f_*.png")) + [done]:
-            old.unlink(missing_ok=True)
-        (work / "build.json").write_text(text, encoding="utf-8")
-        print(f"  Blender: drawing {ranges[-1][1]} frames (about {ranges[-1][1] * 0.3 / 60:.0f} min)...")
-        why = ""
-        for attempt in range(2):
-            why = _run(exe, work / "build.json")
-            missing = [f for f in range(1, ranges[-1][1] + 1) if not (frames / f"f_{f:04d}.png").exists()]
-            if not why and not missing:
-                break
-            why = why or f"{len(missing)} frames missing"
-            print(f"    Blender failed ({why}){', trying once more' if not attempt else ''}")
-        else:
-            raise BlenderFailed(why)
-        done.write_text(text, encoding="utf-8")
-    clips = {}
+    clips = {i: work / f"blender{i}.mp4" for i in range(len(ranges))}
+    ends = sorted({f for pair in ranges for f in pair})  # kept after cutting: each scene's still, the zoom's last frame
+    if done.exists() and done.read_text(encoding="utf-8") == text and all(c.exists() for c in clips.values()) \
+            and all((frames / f"f_{f:04d}.png").exists() for f in ends):
+        return clips
+    frames.mkdir(exist_ok=True)
+    for old in list(frames.glob("f_*.png")) + [done]:
+        old.unlink(missing_ok=True)
+    (work / "build.json").write_text(text, encoding="utf-8")
+    print(f"  Blender: drawing {ranges[-1][1]} frames (about {ranges[-1][1] * 0.3 / 60:.0f} min)...")
+    why = ""
+    for attempt in range(2):
+        why = _run(exe, work / "build.json")
+        missing = [f for f in range(1, ranges[-1][1] + 1) if not (frames / f"f_{f:04d}.png").exists()]
+        if not why and not missing:
+            break
+        why = why or f"{len(missing)} frames missing"
+        print(f"    Blender failed ({why}){', trying once more' if not attempt else ''}")
+    else:
+        raise BlenderFailed(why)
     for i, (a, b) in enumerate(ranges):
-        clips[i] = work / f"blender{i}.mp4"
         media_tools.ffmpeg("-framerate", str(FPS), "-start_number", str(a), "-i", str(frames / "f_%04d.png"),
                            "-frames:v", str(b - a + 1), *media_tools.video_encoder(), "-pix_fmt", "yuv420p",
                            clips[i].name, cwd=work)
+    keep = {f"f_{f:04d}.png" for f in ends}  # ~1.5 GB of PNGs per Short otherwise, kept for KEEP_WORK_DAYS
+    for png in frames.glob("f_*.png"):
+        if png.name not in keep:
+            png.unlink()
+    done.write_text(text, encoding="utf-8")
     return clips

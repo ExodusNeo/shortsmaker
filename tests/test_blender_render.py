@@ -119,6 +119,19 @@ def test_changed_blender_code_redraws():
         assert log.read_text().count("run") == 2
 
 
+def test_frames_are_trimmed_after_the_clips_are_cut():
+    # 1.5 GB of PNGs per Short: only each scene's first and last frame stay (stills, thumbnail), clips are reused
+    with tempfile.TemporaryDirectory() as d:
+        d = Path(d)
+        exe, log = fake_blender(d)
+        bounds = [0.0, 1.0, 2.5, 4.0]
+        blender_render.render_clips(short(3), bounds, [], d / "work", exe)
+        kept = sorted(p.name for p in (d / "work" / "blender_frames").glob("f_*.png"))
+        ends = [f"f_{f:04d}.png" for pair in blender_render.scene_frames(bounds) for f in pair]
+        assert kept == sorted(set(ends)), kept
+        clips = blender_render.render_clips(short(3), bounds, [], d / "work", exe)
+        assert log.read_text().count("run") == 1 and all(c.exists() for c in clips.values())
+
 if __name__ == "__main__":
     names = [n for n in sorted(globals()) if n.startswith("test_") and (len(sys.argv) < 2 or n in sys.argv[1:])]
     failed = 0

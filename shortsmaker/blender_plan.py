@@ -4,6 +4,7 @@ against the tables below; a plan that can't be used is asked for once more, then
 every scene is still drawn. blender/build_scene.py reads the cleaned plan; the tables here are its vocabulary."""
 
 import json
+import math
 
 from shortsmaker import llm, picture_pool, session
 
@@ -31,7 +32,7 @@ def pick(v, allowed: tuple) -> str:
 
 def clamp(v, lo, hi, default):
     """A number in [lo, hi] (whole numbers stay whole), or the default for anything that isn't a number."""
-    if isinstance(v, bool) or not isinstance(v, (int, float)):
+    if isinstance(v, bool) or not isinstance(v, (int, float)) or not math.isfinite(v):  # JSON allows NaN
         return default
     return min(max(v, lo), hi) if isinstance(lo, float) or isinstance(v, int) else min(max(round(v), lo), hi)
 
@@ -80,6 +81,8 @@ def clean_build(raw, n_scenes: int) -> dict | None:
             beats[k - 1] = e["beat"]
     for i in range(n_scenes):
         beats[i] = beats[i] or (beats[i - 1] if i else "failure_preview")
+    if beats and beats[0] == "failure":  # a failure that opens the Short is the hook's preview, not the story's
+        beats[0] = "failure_preview"
     if not ("zoom" in beats and "failure" in beats and beats.index("zoom") < beats.index("failure")):
         tail = ending(n_scenes)
         beats[n_scenes - len(tail):] = tail
@@ -146,9 +149,10 @@ Shorts: {json.dumps(rows, ensure_ascii=False)}
             sc["full"] = sc["graphic"] = sc["person"] = None
 
 
-def thumbnail_photo(short: dict) -> int | None:
-    """The real photo for the thumbnail, as an index into the topic's pool: the first usable picture the picture
-    list marked as an opener, else the first usable one; None without any."""
-    usable = [e for e in short.get("catalog") or [] if picture_pool.is_usable(e)]
-    best = next((e for e in usable if e.get("hook")), usable[0] if usable else None)
-    return best["n"] - 1 if best else None
+def thumbnail_order(short: dict, rows: list[dict]) -> list[int]:
+    """Pool indexes to try for the thumbnail's real photo, best first: usable pictures the picture list marked as
+    openers, then the other usable ones. Film frames are left out (their URL is the video file)."""
+    usable = [e["n"] - 1 for e in short.get("catalog") or [] if picture_pool.is_usable(e)]
+    usable = [k for k in usable if 0 <= k < len(rows) and not rows[k].get("film")]
+    hooks = {e["n"] - 1 for e in short.get("catalog") or [] if e.get("hook")}
+    return [k for k in usable if k in hooks] + [k for k in usable if k not in hooks]

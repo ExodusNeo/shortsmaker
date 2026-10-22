@@ -1,5 +1,6 @@
 """A Short's saved work state and `render()`, which turns a written Short into the finished video."""
 
+import io
 import json
 import random
 import re
@@ -73,11 +74,14 @@ def drawn_choices(short: dict) -> list[dict]:
 def drawn_thumbnail(short: dict, work: Path, bounds: list[float]) -> tuple[Path, str | None, str | None]:
     """(picture, credit line, CHECK line) for a drawn Short's thumbnail: the real photo of the structure from the
     topic's pool (opener first), else the drawing where the zoom arrives, said in a CHECK line."""
-    k = blender_plan.thumbnail_photo(short)
-    pool = picture_pool.load_pool(Path(short["pool_dir"]), thumbs=False) if short.get("pool_dir") else None
-    if k is not None and pool and k < len(pool):
+    pool = (picture_pool.load_pool(Path(short["pool_dir"]), thumbs=False) if short.get("pool_dir") else None) or []
+    for k in blender_plan.thumbnail_order(short, pool):  # the first one that downloads as a real image
         data = image_sources.get_image(pool[k]["url"], "thumbnail photo")
-        if data:
+        try:
+            Image.open(io.BytesIO(data or b"")).verify()
+        except Exception:
+            continue
+        else:
             out = work / "thumb_photo.jpg"
             out.write_bytes(data)
             row = pool[k]

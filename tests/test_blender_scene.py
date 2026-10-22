@@ -139,6 +139,42 @@ def test_hook_keeps_the_part_in_view():
     assert count(hook_end, RED) >= 400, count(hook_end, RED)
 
 
+def manifest(plan: dict) -> dict:
+    """What build_scene built (objects.json next to the frames)."""
+    fps, scenes = 30, [{"start": 0, "end": 1, "first": 1, "last": 30, "peak": 0.7, "peak_frame": 22}]
+    out = Path(tempfile.mkdtemp())
+    plan = {**plan, "beats": plan["beats"][:1]}
+    (out / "build.json").write_text(json.dumps({"plan": plan, "scenes": scenes, "fps": fps, "frames_dir": str(out),
+                                                "only_frames": [15]}), encoding="utf-8")
+    subprocess.run([str(config.BLENDER), "-b", "--factory-startup", "--python", str(ROOT / "blender" / "build_scene.py"),
+                    "--", str(out / "build.json")], capture_output=True, timeout=600)
+    return json.loads((out / "objects.json").read_text(encoding="utf-8"))
+
+
+def test_scale_and_rail_deck_are_drawn():
+    plan = plan_with(["wide"])
+    plan["scale"] = ["car", "people"]
+    names = manifest(plan)["objects"]
+    assert any(n.startswith("car") for n in names) and any(n.startswith("person") for n in names)
+    plan = plan_with(["wide"])
+    plan["structure"] = {**plan["structure"], "deck": "rail"}
+    plan["scale"] = ["train"]
+    names = manifest(plan)["objects"]
+    assert any("rail" in n for n in names) and any(n.startswith("train") for n in names)
+    plan["failure"] = {**plan["failure"], "then": "collapse_span"}
+    plan["scale"] = ["people"]
+    assert not any(n.startswith("person") for n in manifest(plan)["objects"])  # never people on a falling bridge
+
+
+def test_label_only_on_the_part_it_names():
+    plan = plan_with(["wide"])
+    plan["focus"] = {**plan["focus"], "part": "bearing", "label": "BEARING B3"}
+    m = manifest(plan)
+    assert m["exact"] is False and not any(n.startswith("label") for n in m["objects"])
+    plan["focus"] = {**plan["focus"], "part": "gusset_plate", "label": "GUSSET PLATE U10"}
+    m = manifest(plan)
+    assert m["exact"] is True and any(n.startswith("label") for n in m["objects"])
+
 if __name__ == "__main__":
     if not config.BLENDER.exists():
         print(f"SKIPPED: no Blender at {config.BLENDER}")

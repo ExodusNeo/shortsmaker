@@ -87,7 +87,8 @@ def main() -> None:
     con = cam.constraints.new("TRACK_TO")
     con.target, con.track_axis, con.up_axis = target, "TRACK_NEGATIVE_Z", "UP_Y"
 
-    focus = templates.focus_object(b, plan["focus"])
+    templates.dress(b, plan)
+    focus, exact = templates.focus_object(b, plan["focus"])
     shots = Shots(b, focus, plan["focus"]["at"]["chord"])
     side_y = -1 if plan["focus"]["at"]["side"] == "left" else 1
     red = bpy.data.objects.new(f"{focus.name}_red", focus.data)  # the highlighted part, drawn over the steel one
@@ -99,7 +100,7 @@ def main() -> None:
     red.scale = focus.scale * 1.04
     fasteners = parts.fastener(plan["structure"]["fastener"], focus.name, focus, side_y, b.col)
     details = [red] + fasteners
-    if plan["focus"].get("label"):
+    if plan["focus"].get("label") and exact:  # never the AI's name on a stand-in part
         at = shots.focus + Vector((0, side_y * shots.near * 0.1, shots.near * 0.3))  # centred above the part
         label = parts.label(plan["focus"]["label"], shots.focus, at, shots.near * 0.045, cam)
         details += label
@@ -153,6 +154,8 @@ def main() -> None:
 
     out = Path(job["frames_dir"])
     out.mkdir(parents=True, exist_ok=True)
+    (out / "objects.json").write_text(json.dumps({"focus": focus.name, "exact": exact,
+                                                "objects": sorted(o.name for o in bpy.data.objects)}), encoding="utf-8")
     if job.get("only_frames"):
         for f in job["only_frames"]:
             scene.frame_set(f)

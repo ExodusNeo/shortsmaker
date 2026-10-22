@@ -209,7 +209,8 @@ def build(st: dict) -> Bridge:
 
 
 def focus_object(b: Bridge, focus: dict):
-    """The part the Short is about, by the plan's spot; the gusset at that joint when the exact part doesn't exist."""
+    """(part, exact): the part the Short is about, by the plan's spot; the gusset at that joint (exact False) when
+    this bridge has no such part, so the AI's label for it isn't printed on the wrong part."""
     at = focus["at"]
     s, p, chord, side = at["span"], at["panel"], at["chord"], at["side"]
     names = {"gusset_plate": f"span{s}_node{p}_{chord}_{side}_gusset",
@@ -221,7 +222,35 @@ def focus_object(b: Bridge, focus: dict):
              "hanger": f"span{s}_node{p}_{side}_hanger",
              "cable": f"span{s}_panel{p}_{side}_cable_0",
              "pier": f"pier{s}"}
-    for name in (names.get(focus["part"]), f"span{s}_node{p}_{chord}_{side}_gusset", f"span{s}_node{p}_bottom_{side}_gusset"):
-        if name and name in b.objects:
-            return b.objects[name]
-    return next(o for o in b.stages["details"] + b.stages["members"] + b.stages["deck"])
+    if focus["part"] in ("gusset_plate", "fastener_group"):  # the plate is the fastener group's home
+        names[focus["part"]] = f"span{s}_node{p}_{chord}_{side}_gusset"
+    exact = names.get(focus["part"])
+    if focus["part"] == "cable":  # cable-stayed stays are named per deck point: the first one of that panel
+        exact = next((n for n in sorted(b.objects) if n.startswith(f"span{s}_panel{p}_{side}_cable")), exact)
+    if exact in b.objects:
+        return b.objects[exact], True
+    for name in (f"span{s}_node{p}_{chord}_{side}_gusset", f"span{s}_node{p}_bottom_{side}_gusset"):
+        if name in b.objects:
+            return b.objects[name], False
+    return next(o for o in b.stages["details"] + b.stages["members"] + b.stages["deck"]), False
+
+
+def dress(b: Bridge, plan: dict) -> None:
+    """What the plan says was on the bridge: rails on a rail deck, cars or a train for scale (they ride the span
+    they stand on), tiny people on the approach (never on a bridge that falls)."""
+    top = b.deck_z + 0.6
+    for s in range(1, b.spans + 1):
+        x0, x1 = b.x0(s), b.x0(s) + b.L
+        if plan["structure"]["deck"] == "rail":
+            for y in (-0.75, 0.75):
+                b.add("details", parts.member(f"span{s}_rail_{y}", (x0, y, top + 0.1), (x1, y, top + 0.1), 0.15, "dark",
+                                              b.col), s)
+        if "car" in plan["scale"] and plan["structure"]["deck"] == "road":
+            for k, frac in enumerate((0.3, 0.7)):
+                b.add("details", parts.car(f"car_s{s}_{k}", x0 + b.L * frac, top, -1 if k else 1, b.col), s)
+    if "train" in plan["scale"]:
+        s = (b.spans + 1) // 2
+        b.add("details", parts.train(f"train_s{s}", b.x0(s) + b.L * 0.2, b.deck_z + 0.6, b.col), s)
+    if "people" in plan["scale"] and plan["failure"]["then"] != "collapse_span":
+        for k in range(3):
+            b.add("piers", parts.person(f"person{k}", -b.length / 2 - 4 - k * 1.5, -b.W * 0.3, b.deck_z + 0.6, b.col))
