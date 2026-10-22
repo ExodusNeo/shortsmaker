@@ -268,17 +268,19 @@ def flash_alpha(t: float, cut: float) -> float:
     return 0.9 * math.exp(-(t - cut) / 0.11) if cut <= t < cut + 0.5 else 0.0
 
 
-def write_frames(frame, n: int, bounds: list[float], total: float, out, flashes: set[float]) -> None:
-    """Stream every frame to ffmpeg. Cuts in `flashes` are hard cuts under a white flash; the
-    others crossfade for XFADE seconds."""
+def write_frames(frame, n: int, bounds: list[float], total: float, out, flashes: set[float],
+                 cuts: set[float] = frozenset()) -> None:
+    """Stream every frame to ffmpeg. Cuts in `flashes` are hard cuts under a white flash, those in `cuts` plain
+    hard cuts; the others crossfade for XFADE seconds."""
+    hard = flashes | cuts
     white = Image.new("RGB", (W, H), "white")
     for f in range(int(total * FPS)):
         t = f / FPS
         i = min(sum(1 for b in bounds[1:-1] if b <= t), n - 1)
         img = None
-        if i + 1 < n and t >= bounds[i + 1] - XFADE / 2 and bounds[i + 1] not in flashes:
+        if i + 1 < n and t >= bounds[i + 1] - XFADE / 2 and bounds[i + 1] not in hard:
             a, b, cut = i, i + 1, bounds[i + 1]
-        elif i > 0 and t < bounds[i] + XFADE / 2 and bounds[i] not in flashes:
+        elif i > 0 and t < bounds[i] + XFADE / 2 and bounds[i] not in hard:
             a, b, cut = i - 1, i, bounds[i]
         else:
             img = frame(i, t)

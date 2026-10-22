@@ -639,7 +639,7 @@ for the picture`, `Lessons from our numbers`, `Opening picture` (picture list), 
 `picker.py`), `Directing`, `First-second check`,
 `AI paintings` (was `writing.AI_IMAGE_RULE`). `rules.require_rules()` runs at the start of a batch (before `last.txt` changes) and of fix.bat; a channel with no
 rules file yet (a failed draft, a profile copied into `channels/` by hand) gets one drafted and the run stops for review; a
-missing/empty/repeated section, `status: draft`, `visuals: blender` (not built yet) or a bad `min_real_pictures`
+missing/empty/repeated section, `status: draft` or a bad `min_real_pictures`
 stops the run with the file and heading named. Never a fallback to another channel's rules.
 - What stays in the code, shared: lengths, scene cuts, fact rules, reply formats, `story_problems()`, the picture
   `reject:` safety list, the evidence-board/document/graphic format examples in the director prompt.
@@ -669,6 +669,10 @@ at launch; failures crack / bend / shear / sway, optionally then collapse_span; 
   frames present = no redraw (build.json carries a fingerprint of `blender/*.py`, so a code update redraws). Blender failing twice raises `BlenderFailed`: cli skips that Short (its folder is removed; a re-run writes new
   scripts) and goes on. After the clips are cut only each scene's first and last frame stay (~1.5 GB otherwise);
   the cache reuses the clips. fix.bat explains it can't change a drawn Short and stops.
+  Scenes hard-cut (Python renderer, `write_frames(..., cuts)`; edit_plan says "hard cut"): the Blender camera is one
+  continuous move. `plan_builds` also clears the writer's photo look and special transitions (they'd send the Short to
+  Remotion and film effects over the drawings). A failing pier falls with its span (it belongs to no span; once only
+  its red copy fell).
   The review is told the drawings are deliberate; its findings stay CHECK lines (no automatic fix rounds).
   Thumbnail: `drawn_thumbnail` tries `blender_plan.thumbnail_order` (usable openers first, film frames never: their
   URL is the video) and uses the first download that opens as an image, else the zoom frame + CHECK.

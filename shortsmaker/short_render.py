@@ -312,7 +312,8 @@ def render(short: dict, ch: dict, folder: Path, state: dict | None = None, fix_r
         stdin=subprocess.PIPE if renderer == "python" else None, cwd=work)
     if renderer == "python":
         frame = frame_render.frame_maker(images, short["scenes"], short["hook_text"], short["cta_line"], bounds, cues, clips)
-        frame_render.write_frames(frame, len(images), bounds, total, proc.stdin, flashes)
+        # a drawn Short is one continuous Blender camera: crossfades would show it twice
+        frame_render.write_frames(frame, len(images), bounds, total, proc.stdin, flashes, set(bounds[1:-1]) if drawn else set())
         frame.close()
         proc.stdin.close()
     if proc.wait() != 0:

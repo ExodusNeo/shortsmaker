@@ -17,6 +17,8 @@ def look_text(short: dict) -> str:
 
 def cut_text(short: dict, name: str, renderer: str) -> str:
     """Plain-English scene change for edit_plan.txt."""
+    if short.get("build") and not renderer.startswith("Remotion"):
+        return "hard cut (the Blender camera runs on)"
     if name == "fade" or (name != "flash" and not renderer.startswith("Remotion")):
         return f"{XFADE}s crossfade" + ("" if name == "fade" else f" (planned: {name}; the built-in renderer can't draw that cut)")
     if name == "flash":

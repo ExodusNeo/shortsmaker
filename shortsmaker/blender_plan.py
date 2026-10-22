@@ -110,7 +110,7 @@ FORMAT = """Reply with ONLY JSON: {"shorts": [{"index": 0,
 def plan_builds(shorts: list[dict], ch: dict) -> None:
     """The engineer step: one AI call plans every Short's build (s["build"]); Shorts whose plan can't be used are
     asked for once more, then get default_build and a CHECK note (s["build_check"]). Scenes are drawn whole, so
-    they carry no motion graphic, callout or person card."""
+    they carry no motion graphic, callout, person card, photo look or special scene change."""
     def ask(idx: list[int], note: str = "") -> dict:
         rows = [{"index": i, "title": shorts[i]["title"],
                  "scenes": [{"scene": k + 1, "narration": sc["narration"]} for k, sc in enumerate(shorts[i]["scenes"])],
@@ -144,9 +144,11 @@ Shorts: {json.dumps(rows, ensure_ascii=False)}
             break
     for i in todo:
         shorts[i]["build"], shorts[i]["build_check"] = default_build(len(shorts[i]["scenes"])), GENERIC
-    for s in shorts:
+    for s in shorts:  # no photo look or special scene change either: the Python renderer hard-cuts drawn scenes
+        s["look"] = s["invented_transition"] = s["invented_overlay"] = None
         for sc in s["scenes"]:
             sc["full"] = sc["graphic"] = sc["person"] = None
+            sc["transition"] = "fade"
 
 
 def thumbnail_order(short: dict, rows: list[dict]) -> list[int]:

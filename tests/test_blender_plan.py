@@ -91,7 +91,8 @@ def test_plan_builds_retries_then_defaults():
 
     shorts = [{"title": f"T{k}", "research": {"A": "text"},
                "scenes": [{"narration": f"line {j}", "full": {"type": "number"}, "graphic": {"style": "x"},
-                           "person": {"name": "A B"}} for j in range(11)]} for k in range(2)]
+                           "person": {"name": "A B"}, "transition": "wipe"} for j in range(11)],
+               "look": {"name": "sepia"}, "invented_transition": {"title": "x"}, "invented_overlay": None} for k in range(2)]
     old, session.RULES = llm.ask_ai, {"Build plan": "plan bridges well"}
     llm.ask_ai = ask
     try:
@@ -101,8 +102,27 @@ def test_plan_builds_retries_then_defaults():
     assert len(calls) == 2 and "plan bridges well" in calls[0] and "T1" in calls[1] and "T0" not in calls[1]
     assert shorts[0]["build"]["failure"]["kind"] == "bend" and shorts[0]["build_check"] is None
     assert shorts[1]["build"]["generic"] is True and "generic" in shorts[1]["build_check"]
-    assert all(sc["full"] is None and sc["graphic"] is None and sc["person"] is None
+    assert all(sc["full"] is None and sc["graphic"] is None and sc["person"] is None and sc["transition"] == "fade"
                for s in shorts for sc in s["scenes"])
+    assert all(s["look"] is None and s["invented_transition"] is None for s in shorts)  # keeps it on the Python renderer
+
+
+def test_hard_cuts_never_blend_scenes():
+    from shortsmaker import frame_render
+    from shortsmaker.config import FPS
+
+    class Out:
+        frames = []
+
+        def write(self, b):
+            self.frames.append(b)
+
+    def frame(i, t):
+        return frame_render.Image.new("RGB", (frame_render.W, frame_render.H), (0, 0, 0) if i == 0 else (255, 255, 255))
+
+    out, bounds = Out(), [0.0, 0.5, 1.0]
+    frame_render.write_frames(frame, 2, bounds, 1.0, out, set(), {0.5})
+    assert len(out.frames) == FPS and {f[0] for f in out.frames} == {0, 255}  # black, then white: no grey blend
 
 
 def test_nan_and_infinity_get_defaults():

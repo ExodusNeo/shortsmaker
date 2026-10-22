@@ -131,6 +131,29 @@ def test_zoom_after_the_collapse_finds_the_fallen_part():
     assert count(end, RED) >= 400, count(end, RED)
 
 
+def test_a_failing_pier_falls_with_its_red_copy():
+    # a pier belongs to no span: it once stayed standing grey while its red copy fell
+    plan = plan_with(["build", "zoom", "failure", "aftermath"])
+    plan["focus"]["part"] = "pier"
+    plan["failure"].update(kind="crack", then="collapse_span", span=plan["focus"]["at"]["span"])
+    scenes = [{"first": 1, "last": 30, "peak_frame": 20}, {"first": 31, "last": 60, "peak_frame": 50},
+              {"first": 61, "last": 90, "peak_frame": 78}, {"first": 91, "last": 165, "peak_frame": 140}]
+    out = Path(tempfile.mkdtemp())
+    (out / "build.json").write_text(json.dumps({"plan": plan, "scenes": scenes, "fps": 30, "frames_dir": str(out),
+                                                "only_frames": [1]}), encoding="utf-8")
+    check = out / "check.py"
+    check.write_text("import bpy, json, sys\n"
+                     "s = bpy.context.scene; s.frame_set(160)\n"
+                     "obj = json.load(open(sys.argv[-1].replace('build.json', 'objects.json')))['focus']\n"
+                     "a, b = bpy.data.objects[obj], bpy.data.objects[obj + '_red']\n"
+                     "print('PIER', obj, a.matrix_world.translation.z, b.matrix_world.translation.z)\n", encoding="utf-8")
+    r = subprocess.run([str(config.BLENDER), "-b", "--factory-startup", "--python", str(ROOT / "blender" / "build_scene.py"),
+                        "--python", str(check), "--", str(out / "build.json")], capture_output=True, text=True, timeout=900)
+    line = next((ln for ln in r.stdout.splitlines() if ln.startswith("PIER")), None)
+    assert line, r.stdout[-3000:] + r.stderr[-3000:]
+    name, grey, red = line.split()[1], float(line.split()[2]), float(line.split()[3])
+    assert name.startswith("pier") and abs(grey - red) < 1.0 and red < 0, line
+
 def test_hook_keeps_the_part_in_view():
     # the hook shows the part failing, not the span falling out of the shot
     plan = plan_with(["failure_preview", "wide", "build", "zoom", "failure"])

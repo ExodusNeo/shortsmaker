@@ -37,7 +37,7 @@ class Failure:
         inv = Matrix.Translation(self.pivot.location).inverted()
         focus_span = plan["focus"]["at"]["span"]
         members = [o for name, o in b.objects.items() if b.span_of.get(name) == span]
-        members += [red] + fasteners if focus_span == span else []
+        members += [focus, red] + fasteners if focus_span == span else []  # focus too: a pier belongs to no span
         for o in members:
             o.parent, o.matrix_parent_inverse = self.pivot, inv
         self.home = {o.name: o.location.copy() for o in [focus, red] + fasteners}
