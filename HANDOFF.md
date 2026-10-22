@@ -666,14 +666,18 @@ at launch; failures crack / bend / shear / sway, optionally then collapse_span; 
 - Render (`short_render.render`, `drawn = bool(short.get("build"))`): no picture picking or painting; after the
   voice, `blender_render.render_clips` writes `work/build.json` and runs `blender/build_scene.py`; frames go to
   `work/blender_frames/`, one clip per scene `work/blender{i}.mp4` (played like real film). Same build.json + all
-  frames present = no redraw (build.json carries a fingerprint of `blender/*.py`, so a code update redraws). Blender failing twice raises `BlenderFailed`: cli keeps that Short's folder and goes on.
+  frames present = no redraw (build.json carries a fingerprint of `blender/*.py`, so a code update redraws). Blender failing twice raises `BlenderFailed`: cli skips that Short (its folder is removed; a re-run writes new
+  scripts) and goes on. After the clips are cut only each scene's first and last frame stay (~1.5 GB otherwise);
+  the cache reuses the clips. fix.bat explains it can't change a drawn Short and stops.
   The review is told the drawings are deliberate; its findings stay CHECK lines (no automatic fix rounds).
-  Thumbnail: `drawn_thumbnail` (pool opener photo, else the zoom frame + CHECK).
+  Thumbnail: `drawn_thumbnail` tries `blender_plan.thumbnail_order` (usable openers first, film frames never: their
+  URL is the video) and uses the first download that opens as an image, else the zoom frame + CHECK.
 - Blender side (`blender/`, plain bpy, not imported by the package): `look.py` (colours, flat materials, ink
   outlines from a GPU compositor: Sobel edges of the normal pass + the flat colours; Freestyle was 3-7 s a frame on
   a full bridge), `parts.py` (parts kit; linked-duplicate meshes; labels with leader lines face the camera),
   `templates.py` (truss, girder, suspension, cable-stayed, eyebar-chain; part names like
-  `span2_node3_bottom_left_gusset`), `failures.py` (bend = subdivided plate warped in its plane + sag; crack = ink
+  `span2_node3_bottom_left_gusset`; `dress` adds rails, cars, a train, tiny people (never with a collapse);
+  `focus_object` says whether the named part exists, and the AI's label is drawn only then), `failures.py` (bend = subdivided plate warped in its plane + sag; crack = ink
   segments; shear = fasteners pop + slip; sway = growing twist; collapse = span pivot drops), `build_scene.py`
   (piers stand from the start; the bridge stands finished until the first build scene, which cuts to the empty
   site and drops the parts in; the hook shows the part failing without the collapse, peaking by 1.5 s; the label
