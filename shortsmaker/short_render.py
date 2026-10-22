@@ -11,8 +11,8 @@ from pathlib import Path
 from PIL import Image
 
 from shortsmaker import (
-    audio_mix, edit_project, editplan, frame_render, gpu, image_sources, media_tools, motion, photo_prep, picker, plan_rules,
-    remotion_render, review, seo, session, style_lab,
+    audio_mix, blender_plan, blender_render, edit_project, editplan, frame_render, gpu, image_sources, media_tools,
+    motion, photo_prep, picker, picture_pool, plan_rules, remotion_render, review, seo, session, style_lab,
 )
 from shortsmaker.config import FPS, H, MUSIC, OUTPUT, PALETTES, SFX, SRC, STYLE_SLOTS, W, hex_rgb
 
@@ -62,6 +62,34 @@ def prune_work() -> None:
             shutil.rmtree(w, ignore_errors=True)
 
 
+PAPER = (238, 232, 220)  # the Blender look's paper colour, for the stand-in frames before the drawing exists
+
+
+def drawn_choices(short: dict) -> list[dict]:
+    """A drawn Short's picture choices: none (Blender draws every scene)."""
+    return [{"bg": None, "person": None, "film": None} for _ in short["scenes"]]
+
+
+def drawn_thumbnail(short: dict, work: Path, bounds: list[float]) -> tuple[Path, str | None, str | None]:
+    """(picture, credit line, CHECK line) for a drawn Short's thumbnail: the real photo of the structure from the
+    topic's pool (opener first), else the drawing where the zoom arrives, said in a CHECK line."""
+    k = blender_plan.thumbnail_photo(short)
+    pool = picture_pool.load_pool(Path(short["pool_dir"]), thumbs=False) if short.get("pool_dir") else None
+    if k is not None and pool and k < len(pool):
+        data = image_sources.get_image(pool[k]["url"], "thumbnail photo")
+        if data:
+            out = work / "thumb_photo.jpg"
+            out.write_bytes(data)
+            row = pool[k]
+            name = re.sub(r"\.(jpe?g|png|tiff?|gif|svg)$", "", row["title"].removeprefix("File:"), flags=re.I)
+            site = "Wikimedia Commons" if "wikimedia" in row["url"] else row.get("source", "")
+            return out, (f"{name} by {row['credit']} ({site})" if row.get("credit") else None), None
+    zoom = next((i for i, b in enumerate(short["build"]["beats"]) if b == "zoom"), 0)
+    last = blender_render.scene_frames(bounds)[zoom][1]
+    return (work / "blender_frames" / f"f_{last:04d}.png", None,
+            "no real photo of the structure was found: the thumbnail uses a drawing")
+
+
 def render(short: dict, ch: dict, folder: Path, state: dict | None = None, fix_round: int = 0) -> None:
     """Make one Short. With `state` (fix.bat or an automatic fix round), reuse its pictures and music instead of
     new AI picks. `fix_round` counts the automatic review-and-fix re-renders (up to AUTO_FIX_ROUNDS)."""
@@ -72,8 +100,11 @@ def render(short: dict, ch: dict, folder: Path, state: dict | None = None, fix_r
     if short.get("palette") not in PALETTES:  # planner gave none (or an old plan): a random one
         short["palette"] = random.choice(list(PALETTES))
     session.YELLOW, session.EMPHASIS = (hex_rgb(PALETTES[short["palette"]][k]) for k in ("accent", "emphasis"))
+    drawn = bool(short.get("build"))  # a Blender channel: every scene is drawn, nothing is picked or painted
     if state:
         choices = state["choices"]
+    elif drawn:
+        choices = drawn_choices(short)
     else:
         choices = picker.choose_images(short, work, ch)
         # real footage first, then a full-screen motion graphic, and only then an AI painting
@@ -92,6 +123,8 @@ def render(short: dict, ch: dict, folder: Path, state: dict | None = None, fix_r
     gen += [{"prompt": remotion_render.FIGURE_PROMPT.format(thing=thing), "out": str(work / f"figraw{i}.jpg")} for i, thing in figs.items()]
     if short["thumbnail_prompt"]:
         gen.append({"prompt": short["thumbnail_prompt"], "out": str(work / "thumb_art.jpg")})
+    if drawn:
+        gen, figs = [], {}
     have = {it["out"] for it in gen if Path(it["out"]).exists()}  # a fix re-render keeps the pictures already painted
     gen = [it for it in gen if it["out"] not in have]
     by_gemini = set(state["by_gemini"]) if state else set()
@@ -109,7 +142,11 @@ def render(short: dict, ch: dict, folder: Path, state: dict | None = None, fix_r
         print(f"  scene {i + 1}/{len(short['scenes'])}: image + voice")
         sc["credit_tag"] = None
         img, ai = work / f"{i}.jpg", work / f"ai{i}.jpg"
-        if choices[i]["bg"]:  # film scenes play the clip; their still only stands in if the cut fails
+        if drawn:  # Blender draws it once the voice has set the scene lengths; a paper frame until then
+            Image.new("RGB", (int(W * SRC), int(H * SRC)), PAPER).save(img)
+            shutil.copy(img, work / f"{i}_raw.jpg")
+            source = f"drawn in Blender: {short['build']['beats'][i]}"
+        elif choices[i]["bg"]:  # film scenes play the clip; their still only stands in if the cut fails
             img.write_bytes(choices[i]["bg"][0] if choices[i].get("film") else photo_prep.clean_photo(choices[i]["bg"][0]))
             shutil.copy(img, work / f"{i}_raw.jpg")  # original framing, for the GPU camera moves
             photo_prep.to_vertical(img)
@@ -168,8 +205,13 @@ def render(short: dict, ch: dict, folder: Path, state: dict | None = None, fix_r
     total = bounds[-1] + 0.6  # small tail so the last word isn't clipped
     bounds[-1] = total
     cues[-1]["cta"] = max(bounds[-2] + 0.3, total - 3.0)  # silent subscribe button: keeps the rewatch loop
-    clips = gpu.local_clips(short, work, sources, bounds, {i: c["film"] for i, c in enumerate(choices)
-                                                         if c.get("film") and not short["scenes"][i].get("full")})
+    if drawn:  # raises BlenderFailed after a retry: cli keeps this Short's files and goes on
+        clips = blender_render.render_clips(short, bounds, all_words, work)
+        images = [Image.open(work / "blender_frames" / f"f_{a:04d}.png").convert("RGB")
+                  for a, _ in blender_render.scene_frames(bounds)]
+    else:
+        clips = gpu.local_clips(short, work, sources, bounds, {i: c["film"] for i, c in enumerate(choices)
+                                                             if c.get("film") and not short["scenes"][i].get("full")})
     for i, sc in enumerate(short["scenes"]):  # keep text callouts off the subject's face (maps and marks are full cards)
         if sc["graphic"] and sc["graphic"]["style"] != "mark":
             film = choices[i]["film"]["path"] if clips.get(i) == work / f"film{i}.mp4" else None
@@ -277,8 +319,13 @@ def render(short: dict, ch: dict, folder: Path, state: dict | None = None, fix_r
               clips)
     issues = review.quality_check(folder / "short.mp4", bounds, sources)
     print(f"  {session.BRAIN.capitalize()} is watching the finished Short for problems...")
-    found, fixes = review.visual_review(folder / "short.mp4", short, bounds, sources, work)
+    found, fixes = review.visual_review(folder / "short.mp4", short, bounds, sources, work, drawn=drawn)
     issues += found
+    if drawn:  # nothing to repaint or swap in a drawn Short: what the review finds stays a CHECK line
+        fixes = {}
+        issues += [short["build_check"]] if short.get("build_check") else []
+        thumb_pic, thumb_credit, thumb_check = drawn_thumbnail(short, work, bounds)
+        issues += [thumb_check] if thumb_check else []
     found, opener = review.first_second_check(folder / "short.mp4", short, choices, folder / "storyboard.jpg", work)
     issues += found
     if short.get("opener_swapped"):  # once per Short: a later round mustn't swap it back
@@ -291,8 +338,8 @@ def render(short: dict, ch: dict, folder: Path, state: dict | None = None, fix_r
                 "  OK: no black or frozen stretches, loudness on target, every scene has a picture") + "\n")
 
     art = work / "thumb_art.jpg"  # Claude's thumbnail plan, painted on this PC; else the first scene
-    frame_render.thumbnail(art if art.exists() else work / "0.jpg", short.get("thumbnail_text", short["title"]),
-              folder / "thumbnail.jpg")
+    frame_render.thumbnail(thumb_pic if drawn else art if art.exists() else work / "0.jpg",
+                           short.get("thumbnail_text", short["title"]), folder / "thumbnail.jpg")
     synthetic = any(c.name.startswith("clip") for c in clips.values()) or any(s.startswith("AI-GENERATED") for s in sources)
     credit = music.with_name(music.name + ".txt") if music else None
     credit_text = f"\n\nMusic:\n{credit.read_text(encoding='utf-8').strip()}" if credit and credit.exists() else ""
@@ -306,6 +353,8 @@ def render(short: dict, ch: dict, folder: Path, state: dict | None = None, fix_r
                 name = re.sub(r"\.(jpe?g|png|tiff?|gif|webm|ogv|svg)$", "", c[kind][1].removeprefix("File:"), flags=re.I)
                 site = c.get("site", "Wikimedia Commons") if kind == "bg" else "Wikimedia Commons"
                 image_credits.append(f"{name} by {c[kind][2]} ({site})")
+    if drawn and thumb_credit:
+        image_credits.append(f"Thumbnail: {thumb_credit}")
     if image_credits:
         credit_text += "\n\nFootage and image credits:\n" + "\n".join(dict.fromkeys(image_credits))
     (folder / "upload.txt").write_text(

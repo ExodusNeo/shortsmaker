@@ -8,7 +8,8 @@ from datetime import date
 from pathlib import Path
 
 from shortsmaker import (
-    channel_profiles, llm, logbook, picker, picture_pool, review, rules, seo, session, short_render, style_lab, writing,
+    blender_render, channel_profiles, llm, logbook, picker, picture_pool, review, rules, seo, session, short_render,
+    style_lab, writing,
 )
 from shortsmaker.config import OUTPUT
 
@@ -67,6 +68,10 @@ def main() -> None:
             print(f"Making: {short['title']} ({session.BRAIN.capitalize()})")
             try:
                 short_render.render(short, ch, folder)
+            except blender_render.BlenderFailed as e:  # its files stay: running again retries the drawing
+                print(f"  Blender couldn't draw this Short ({e}); its files are kept in {folder}, run again to retry")
+                failed += 1
+                continue
             except Exception as e:  # one bad Short shouldn't kill the whole batch
                 print(f"  FAILED, skipping this one: {type(e).__name__}: {e}")
                 shutil.rmtree(folder, ignore_errors=True)

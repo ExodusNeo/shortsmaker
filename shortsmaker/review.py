@@ -45,7 +45,12 @@ def quality_check(video: Path, bounds: list[float], sources: list[str]) -> list[
     return issues
 
 
-def visual_review(video: Path, short: dict, bounds: list[float], sources: list[str], work: Path) -> tuple[list[str], dict[int, tuple[str, str]]]:
+DRAWN = ("Every scene is a deliberate ink drawing made in Blender, not a photo: don't flag drawings, labels, "
+         "the red part or a missing real photo.\n")
+
+
+def visual_review(video: Path, short: dict, bounds: list[float], sources: list[str], work: Path,
+                  drawn: bool = False) -> tuple[list[str], dict[int, tuple[str, str]]]:
     """The AI watches the finished Short as sheets of one frame per second and reports what a viewer would
     notice (the 2026-10-15 Cardiff review found smoke blobs, an invented face and another trial's caption only
     by eye). One AI call; its findings join the CHECK lines. Failure means no findings."""
@@ -62,7 +67,7 @@ def visual_review(video: Path, short: dict, bounds: list[float], sources: list[s
     data = llm.ask_ai(f"""You are the final reviewer of a YouTube Short: "{short['title']}". Open and look at each sheet:
 {chr(10).join(f"{p} (seconds {30 * k}-{30 * k + 29}, one frame per second, left to right, top to bottom)" for k, p in enumerate(sheets))}
 The plan: {plan}
-Report only problems a viewer would notice: AI artifacts (smoke or fog blobs, melting or warped people,
+{DRAWN if drawn else ''}Report only problems a viewer would notice: AI artifacts (smoke or fog blobs, melting or warped people,
 faces or objects), text or graphics covering a face, a picture that doesn't match its line or shows the
 wrong era/place/person, unreadable, washed-out or nearly blank pictures, printed captions, logos or
 watermarks on a real photo or film, a painted or AI picture standing in for a real person or object as if it
