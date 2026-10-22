@@ -197,6 +197,80 @@ def test_min_pictures_from_settings():
         writing.article_text, picture_pool.load_pool, picture_pool.catalog_pool, session.RULE_SETTINGS = saved
 
 
+def draft_reply(missing=None, **extra):
+    sections = {h: {"tag": "copied from strange-history" if h == "Story rules" else "new", "text": f"{h} for engines"}
+                for h in rules.REQUIRED if h not in ("Settings", missing)}
+    return {"visuals": "photos", "min_real_pictures": 3, "sections": sections, **extra}
+
+
+def run_draft(replies, existing=None):
+    """draft_rules in a temp channels folder holding strange-history's rules; returns (file text or None, calls)."""
+    calls = []
+
+    def ask(prompt, fatal=True, read_dir=None, brain=None, bulk=False):
+        calls.append(prompt)
+        return replies[min(len(calls), len(replies)) - 1]
+
+    with tempfile.TemporaryDirectory() as d:
+        old, old_ask = rules.CHANNELS, llm.ask_ai
+        rules.CHANNELS, llm.ask_ai = Path(d), ask
+        (Path(d) / "strange-history.rules.md").write_text(make(Story_rules="hook first"), encoding="utf-8")
+        if existing is not None:
+            (Path(d) / "engines.rules.md").write_text(existing, encoding="utf-8")
+        try:
+            try:
+                rules.draft_rules({"niche": "engines", "audience": "a", "tone": "t"}, "engines")
+            except SystemExit as e:
+                calls.append(f"STOP {e}")
+            path = Path(d) / "engines.rules.md"
+            return (path.read_text(encoding="utf-8") if path.exists() else None), calls
+        finally:
+            rules.CHANNELS, llm.ask_ai = old, old_ask
+
+
+def test_draft_writes_tagged_draft_file():
+    text, calls = run_draft([draft_reply()])
+    assert "status: draft" in text and "<!-- copied from strange-history -->" in text and "<!-- new -->" in text
+    assert "hook first" in calls[0] and "engines" in calls[0]  # the AI sees the existing rules and the new niche
+    assert stop_text(text).startswith("Stopped: channels/x.rules.md is a draft.")
+    sections, _ = rules.parse_rules(text.replace("status: draft", "status: ready"), LABEL)
+    assert sections["Story rules"] == "Story rules for engines" and "min_real_pictures: 3" in text
+
+
+def test_draft_settings_come_from_code():
+    text, _ = run_draft([draft_reply(status="ready", min_real_pictures="lots", visuals="video")])
+    assert "status: draft" in text and "min_real_pictures: 6" in text and "visuals: photos" in text
+
+
+def test_draft_retries_once_then_stops():
+    text, calls = run_draft([draft_reply(missing="Directing"), draft_reply(missing="Directing")])
+    assert text is None and len(calls) == 3 and "Directing" in calls[-1], calls[-1]
+    assert calls[-1].startswith("STOP Stopped: couldn't draft rules for engines:")
+
+
+def test_draft_never_overwrites():
+    text, calls = run_draft([draft_reply()], existing="mine")
+    assert text == "mine" and calls == ["STOP Stopped: channels/engines.rules.md already exists."]
+
+
+def test_new_channel_stops_for_review():
+    import builtins
+    saved = builtins.input, channel_profiles.new_channel, rules.draft_rules, channel_profiles.use_channel
+    names = sorted(p.stem for p in channel_profiles.CHANNELS.glob("*.json") if not p.stem.endswith(".research"))
+    answers = iter([str(len(names) + 1), "engines", "jet engines"])  # "+ New channel" is the last menu number
+    builtins.input = lambda q="": next(answers)
+    channel_profiles.new_channel = lambda niche: {"niche": niche}
+    rules.draft_rules = lambda ch, name: Path(f"{name}.rules.md")
+    channel_profiles.use_channel = lambda name: None
+    try:
+        channel_profiles.pick_channel()
+        raise AssertionError("pick_channel returned instead of stopping")
+    except SystemExit as e:
+        assert str(e).startswith("Rules drafted: channels/engines.rules.md\n"), str(e)
+    finally:
+        builtins.input, channel_profiles.new_channel, rules.draft_rules, channel_profiles.use_channel = saved
+
+
 def test_strange_history_prompts_unchanged():
     golden = json.loads((HERE / "golden" / "prompts.json").read_text(encoding="utf-8"))
     now = capture_prompts()

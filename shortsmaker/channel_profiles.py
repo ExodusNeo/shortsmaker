@@ -3,10 +3,11 @@
 import json
 import logging
 import re
+import sys
 import time
 from datetime import date
 
-from shortsmaker import llm, session
+from shortsmaker import llm, rules, session
 from shortsmaker.config import CHANNELS, LOGBOOK, VOICES
 
 
@@ -40,8 +41,10 @@ def pick_channel() -> str:
             break
         print("  Needs a name that isn't taken yet.")
     use_channel(name)
-    new_channel(input("Describe its niche in a sentence (or press Enter to let Claude choose): ").strip())
-    return name
+    ch = new_channel(input("Describe its niche in a sentence (or press Enter to let Claude choose): ").strip())
+    path = rules.draft_rules(ch, name)  # nothing is made until the owner has read the drafted rules
+    sys.exit(f"Rules drafted: channels/{path.name}\nRead it, edit anything you want, then change "
+             '"status: draft" to "status: ready" and run again.')
 
 
 def ask_count() -> int:

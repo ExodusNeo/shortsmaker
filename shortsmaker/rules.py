@@ -2,9 +2,11 @@
 rules, read by heading into session.RULES, so a new channel never changes another channel's Shorts. The owner
 can read and edit the file; a draft (status: draft) or a missing section stops the run before anything is made."""
 
+import json
 import re
+from pathlib import Path
 
-from shortsmaker import session
+from shortsmaker import llm, session
 from shortsmaker.config import CHANNELS
 
 REQUIRED = ("Settings", "Topic picking", "Story rules", "Writing for the picture", "Lessons from our numbers",
@@ -51,6 +53,64 @@ def load_rules(name: str) -> None:
     path = CHANNELS / f"{name}.rules.md"
     text = path.read_text(encoding="utf-8-sig") if path.exists() else ""
     session.RULES, session.RULE_SETTINGS = parse_rules(text, f"channels/{name}.rules.md")
+
+
+PURPOSE = {  # what each section is for, told to the AI that drafts a new channel's rules
+    "Topic picking": "how the planner picks topics: what makes a story worth a Short in this niche, who or what it follows",
+    "Story rules": "how a script is told: hook, pacing, how beats link, where the payoff goes, with an example",
+    "Writing for the picture": "how the writer ties lines to what can be shown on screen",
+    "Lessons from our numbers": "what the channel's own YouTube numbers taught (a new channel: what to watch for)",
+    "Opening picture": "the picture checker's rules for a picture's fit (era_ok), sharpness and whether it can open the Short",
+    "Directing": "the director's rules for picking each scene's picture, search queries and shot notes, with examples",
+    "First-second check": "what the first two seconds should show, finishing the sentence 'check whether another "
+                          "scene's picture would open better: ...'",
+    "AI paintings": "how an AI painting prompt is written: subject, setting, light, art medium, what to avoid",
+}
+
+
+def draft_rules(ch: dict, name: str) -> Path:
+    """Draft channels/<name>.rules.md for a new channel: the AI copies the sections of existing channels' rules that
+    fit the niche and adapts or writes the rest, tagging each. Always saved as a draft for the owner to read."""
+    path = CHANNELS / f"{name}.rules.md"
+    if path.exists():
+        raise SystemExit(f"Stopped: channels/{name}.rules.md already exists.")
+    others = {p.name.removesuffix(".rules.md"): p.read_text(encoding="utf-8-sig") for p in sorted(CHANNELS.glob("*.rules.md"))}
+    wanted = [h for h in REQUIRED if h != "Settings"]
+    prompt = f"""You set up the rules for a new faceless YouTube Shorts channel. Niche: {ch.get('niche')}.
+Audience: {ch.get('audience', '')}. Tone: {ch.get('tone', '')}.
+Its scripts, picture choices and edits are planned by AI with these rule sections:
+{chr(10).join(f"- {h}: {PURPOSE[h]}" for h in wanted)}
+Our other channels' rules files: {json.dumps(others, ensure_ascii=False)}
+For every section: when another channel's section fits this niche, copy it word for word (tag "copied from
+<channel>"); when part of it fits, adapt it (tag "adapted from <channel>: <what changed, one line>"); otherwise
+write it new (tag "new"). Keep the same level of detail and examples as the existing rules, about this niche.
+visuals: "photos" (real archival photos and film) or "blender" (3D drawn scenes). min_real_pictures: how many
+usable real pictures a topic needs before it is written (a whole number).
+Reply with ONLY JSON: {{"visuals": "photos", "min_real_pictures": 6,
+"sections": {{"<section heading>": {{"tag": "...", "text": "..."}}}}}}"""
+    reason = ""
+    for _ in range(2):  # one retry on a bad reply
+        data = llm.ask_ai(prompt + (f"\nYour last reply was unusable: {reason}. Send every section." if reason else ""),
+                          fatal=False)
+        got = data.get("sections") if isinstance(data, dict) else None
+        bad = [h for h in wanted if not (isinstance(got, dict) and isinstance(got.get(h), dict)
+                                         and str(got[h].get("text") or "").strip())]
+        if not bad:
+            break
+        reason = "no reply" if got is None else f"missing or empty: {', '.join(bad)}"
+    else:
+        raise SystemExit(f"Stopped: couldn't draft rules for {name}: {reason}")
+    visuals = data.get("visuals") if data.get("visuals") in ("photos", "blender") else "photos"
+    least = data.get("min_real_pictures")
+    least = least if isinstance(least, int) and not isinstance(least, bool) and least > 0 else 6
+    out = [f"# Rules: {name}\n\nEach section is read by its heading; edit the text under it. Change status to ready "
+           "once you've read it.\n",
+           f"## Settings\nstatus: draft\nvisuals: {visuals}\nmin_real_pictures: {least}\n"]
+    for h in wanted:
+        tag = " ".join(str(got[h].get("tag") or "new").replace("--", "-").split())
+        out.append(f"## {h}\n<!-- {tag} -->\n{str(got[h]['text']).strip()}\n")
+    path.write_text("\n".join(out), encoding="utf-8")
+    return path
 
 
 def min_real_pictures() -> int:
