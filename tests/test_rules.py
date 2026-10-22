@@ -285,6 +285,39 @@ def test_new_channel_stops_for_review():
         builtins.input, channel_profiles.new_channel, rules.draft_rules, channel_profiles.use_channel = saved
 
 
+def test_missing_rules_file_is_drafted():
+    with tempfile.TemporaryDirectory() as d:
+        old, old_ask = rules.CHANNELS, llm.ask_ai
+        rules.CHANNELS, llm.ask_ai = Path(d), lambda prompt, fatal=True, read_dir=None, brain=None, bulk=False: draft_reply()
+        (Path(d) / "engines.json").write_text(json.dumps({"niche": "jet engines"}), encoding="utf-8")
+        try:
+            try:
+                rules.require_rules("engines")
+                raise AssertionError("require_rules returned without a rules file")
+            except SystemExit as e:
+                assert str(e).startswith("Rules drafted: channels/engines.rules.md\n"), str(e)
+            assert "status: draft" in (Path(d) / "engines.rules.md").read_text(encoding="utf-8")
+        finally:
+            rules.CHANNELS, llm.ask_ai = old, old_ask
+
+
+def test_a_stopped_run_keeps_the_default_channel():
+    from shortsmaker import cli
+    calls = []
+    saved = sys.argv, rules.require_rules, channel_profiles.use_channel
+    sys.argv = ["make_shorts.py", "1", "engines"]
+    rules.require_rules = lambda name: (_ for _ in ()).throw(SystemExit("stop"))
+    channel_profiles.use_channel = lambda name: calls.append(name)
+    try:
+        try:
+            cli.main()
+        except SystemExit:
+            pass
+        assert calls == [], calls  # use_channel writes last.txt: run.bat's default must not become a stopped channel
+    finally:
+        sys.argv, rules.require_rules, channel_profiles.use_channel = saved
+
+
 def test_strange_history_prompts_unchanged():
     golden = json.loads((HERE / "golden" / "prompts.json").read_text(encoding="utf-8"))
     now = capture_prompts()

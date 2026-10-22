@@ -115,6 +115,18 @@ Reply with ONLY JSON: {{"visuals": "photos", "min_real_pictures": 6,
     return path
 
 
+REVIEW = 'Rules drafted: channels/{}\nRead it, edit anything you want, then change "status: draft" to "status: ready" and run again.'
+
+
+def require_rules(name: str) -> None:
+    """load_rules, but a channel with no rules file yet (a failed draft, a profile copied in by hand) gets one
+    drafted from its profile, and the run stops for the owner to read it."""
+    if not (CHANNELS / f"{name}.rules.md").exists():
+        ch = json.loads((CHANNELS / f"{name}.json").read_text(encoding="utf-8-sig"))
+        raise SystemExit(REVIEW.format(draft_rules(ch, name).name))
+    load_rules(name)
+
+
 def min_real_pictures() -> int:
     """Usable real pictures/clips a topic needs, else a backup topic replaces it."""
     return int(session.RULE_SETTINGS["min_real_pictures"])

@@ -481,7 +481,7 @@ Real Mike photo on the hook, Internet Archive film, map, 2 custom motion graphic
   no need to fix the repaint problem for that Short. Its Studio video ID is not in the logbook yet.
 - FIXED 2026-10-21 (owner asked: change the prompt on every repaint, improving on the first one):
   `rewrite_paint_prompts(short, {scene: complaint})` sends the old prompts, narration, shot notes and complaints in
-  one AI call with `AI_IMAGE_RULE` (the planner's ai_image rules, now one shared constant); answers that are empty,
+  one AI call with the channel's `## AI paintings` rules (the planner's ai_image rules; was `AI_IMAGE_RULE`); answers that are empty,
   unchanged or say "photograph" are refused, and an unanswered scene gets "Seen from a different angle, in different
   light." appended so the seed (and picture) still changes. Used by `apply_review_fixes()` and fix.bat option 4.
   Test `test_rewrite_paint_prompts`; not yet seen in a real run.
@@ -635,8 +635,10 @@ Each channel has its own `channels/<name>.rules.md`, so a new channel never chan
 profile had silently used strange-history's rules). Plain Markdown, read by `##` heading (case and spaces don't
 matter; `###` stays inside a section; a `<!-- tag -->` first line is stripped): `Settings` (`status: draft|ready`,
 `visuals: photos|blender`, `min_real_pictures`), `Topic picking`, `Story rules` (was `writing.STORY_RULES`), `Writing
-for the picture`, `Lessons from our numbers`, `Opening picture` (picture list), `Directing`, `First-second check`,
-`AI paintings` (was `writing.AI_IMAGE_RULE`). `rules.load_rules()` runs at the start of a batch and of fix.bat; a
+for the picture`, `Lessons from our numbers`, `Opening picture` (picture list), `Picture picking` (the visual editor's scene-1 rule in
+`picker.py`), `Directing`, `First-second check`,
+`AI paintings` (was `writing.AI_IMAGE_RULE`). `rules.require_rules()` runs at the start of a batch (before `last.txt` changes) and of fix.bat; a channel with no
+rules file yet (a failed draft, a profile copied into `channels/` by hand) gets one drafted and the run stops for review; a
 missing/empty/repeated section, `status: draft`, `visuals: blender` (not built yet) or a bad `min_real_pictures`
 stops the run with the file and heading named. Never a fallback to another channel's rules.
 - What stays in the code, shared: lengths, scene cuts, fact rules, reply formats, `story_problems()`, the picture

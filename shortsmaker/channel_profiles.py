@@ -43,8 +43,7 @@ def pick_channel() -> str:
     use_channel(name)
     ch = new_channel(input("Describe its niche in a sentence (or press Enter to let Claude choose): ").strip())
     path = rules.draft_rules(ch, name)  # nothing is made until the owner has read the drafted rules
-    sys.exit(f"Rules drafted: channels/{path.name}\nRead it, edit anything you want, then change "
-             '"status: draft" to "status: ready" and run again.')
+    sys.exit(rules.REVIEW.format(path.name))
 
 
 def ask_count() -> int:
