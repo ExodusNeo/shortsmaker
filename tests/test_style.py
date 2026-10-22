@@ -12,6 +12,9 @@ from shortsmaker import (  # noqa: E402
     writing,
 )
 from patching import owner  # noqa: E402
+from shortsmaker import rules  # noqa: E402
+
+rules.load_rules("strange-history")  # the prompts read the channel's rules file
 
 
 def test_library_entries_have_fields():

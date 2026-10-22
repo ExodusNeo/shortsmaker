@@ -55,6 +55,7 @@ KEYS = {"You choose stories": "topics", "You write YouTube Shorts narration": "w
 def capture_prompts() -> dict[str, str]:
     """Every prompt strange-history's writer, editor, director, fact check, picture list, first-second check and
     repaint send, with the AI and everything outside the prompts faked."""
+    rules.load_rules("strange-history")
     got: dict[str, str] = {}
     tmp = tempfile.mkdtemp()
 
@@ -178,6 +179,22 @@ def test_load_rules_sets_session():
             assert rules.min_real_pictures() == 4
         finally:
             rules.CHANNELS = old
+
+
+def test_min_pictures_from_settings():
+    cands = [{"title": f"File:{k}.jpg", "source": "Commons", "url": f"u{k}"} for k in (1, 2)]
+    entries = [{"n": k, "what": "x", "era_ok": True, "sharp": 2, "hook": False, "reject": None} for k in (1, 2)]
+    saved = writing.article_text, picture_pool.load_pool, picture_pool.catalog_pool, dict(session.RULE_SETTINGS)
+    writing.article_text = lambda t: ""
+    picture_pool.load_pool = lambda folder: cands
+    picture_pool.catalog_pool = lambda s, c, folder: entries
+    try:
+        for need, ok in (("2", True), ("3", False)):
+            session.RULE_SETTINGS = {"min_real_pictures": need}
+            s = {"topic": "t", "wiki_articles": ["A"]}
+            assert picture_pool.prepare_topic(s, Path(tempfile.mkdtemp())) is ok, need
+    finally:
+        writing.article_text, picture_pool.load_pool, picture_pool.catalog_pool, session.RULE_SETTINGS = saved
 
 
 def test_strange_history_prompts_unchanged():

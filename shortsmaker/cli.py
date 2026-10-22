@@ -8,7 +8,7 @@ from datetime import date
 from pathlib import Path
 
 from shortsmaker import (
-    channel_profiles, llm, logbook, picker, picture_pool, review, seo, session, short_render, style_lab, writing,
+    channel_profiles, llm, logbook, picker, picture_pool, review, rules, seo, session, short_render, style_lab, writing,
 )
 from shortsmaker.config import OUTPUT
 
@@ -25,6 +25,7 @@ def main() -> None:
         return logbook.vault_refresh()
     name = sys.argv[2] if len(sys.argv) > 2 else channel_profiles.pick_channel()
     channel_profiles.use_channel(name)
+    rules.load_rules(name)  # stops here on a draft or a missing section
     n = int(sys.argv[1]) if len(sys.argv) > 1 else channel_profiles.ask_count()
     ch, failed = channel_profiles.load_channel(), 0
     choice = sys.argv[3] if len(sys.argv) > 3 and sys.argv[3] in channel_profiles.BRAINS else (
@@ -123,6 +124,7 @@ def fix_short() -> None:
     i = channel_profiles.ask_number("Which scene?", len(short["scenes"])) - 1
     sc = short["scenes"][i]
     channel_profiles.use_channel(folder.parent.name)
+    rules.load_rules(folder.parent.name)
     ch = channel_profiles.load_channel()
     session.BRAIN = ch.get("brain") if ch.get("brain") in ("claude", "gemini") else "claude"
     print("What should change?\n  1) No AI motion (a smooth camera move instead)\n"

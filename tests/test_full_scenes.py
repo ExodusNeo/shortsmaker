@@ -16,6 +16,9 @@ from shortsmaker import (  # noqa: E402
 )
 from patching import owner  # noqa: E402
 from PIL import Image  # noqa: E402
+from shortsmaker import rules  # noqa: E402
+
+rules.load_rules("strange-history")  # the prompts read the channel's rules file
 
 
 def test_make_paper():
@@ -449,7 +452,7 @@ def test_rewrite_paint_prompts():
     assert done == [1] and scenes[1]["ai_image"].startswith("A newsboy")
     assert scenes[2]["ai_image"] != "old 2" and scenes[3]["ai_image"].startswith("old 3 Seen from a different angle")
     assert scenes[0]["ai_image"] == "old 0"  # not being repainted: untouched
-    assert writing.AI_IMAGE_RULE in seen[0] and "garbled lettering" in seen[0]
+    assert session.RULES["AI paintings"] in seen[0] and "garbled lettering" in seen[0]
 
 
 def test_paint_new_clears_full():

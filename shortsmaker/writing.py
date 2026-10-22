@@ -14,46 +14,6 @@ from shortsmaker.config import (
 )
 
 
-# How a story is told (2026-10-22, owner asked after average % viewed fell under 50%). From reading the scripts of
-# Shorts that hold viewers (a 2M-view Mike the headless chicken Short on a strange-history channel like ours, Zack
-# D. Films' true stories) against ours: Studio curves showed ours losing most viewers 4-12 s in and sliding to the
-# end, while our two best (Great Stink, Emperor Norton) kept the main question open to the last scene. The writer
-# and the editor both get these rules; story_problems() enforces the checkable ones.
-STORY_RULES = """- How to tell it (learned from the true-story Shorts that hold viewers best; follow it closely):
-  hook (scene 1): viewers decide in one second whether to swipe. OPEN INSIDE THE STORY'S STRANGEST MOMENT, told
-  as it happens, not as a summary: "A passenger looked out the train window and saw a baboon working the
-  signals." / "Halfway through the race, the jockey died, and his horse kept running." It shows WHAT is happening
-  and holds back WHY, so the viewer needs the answer. Weak: a summary that tells the whole story at once ("A
-  railway once hired a baboon.", "Australia's army once lost a war to birds."): once the viewer knows the story,
-  nothing is left to stay for. The first sentence: at most 12 words, understood with no context, never a
-  greeting, a setup, a date or a name nobody knows yet. The opening picture already shows the subject, so the
-  words add what it can't. If the story is famous, open on its least-known moment. Tell it through the
-  main_character ("He...", "This baboon...", their name once they act). Draft 3 first sentences in
-  hook_options, each from a different hook family (in-the-moment scene, result first, stakes, contrarian
-  claim, before/after), then open scene 1 with the strongest.
-  ONE STORY, NOT A LIST OF FACTS: link every beat to the one before with "but", "so" or "you see" (a
-  complication or a consequence), never "and then". If the beats could be reordered without breaking
-  anything, it is a list: rewrite it.
-  scene 2 deepens the mystery or promises something bigger ("But the baboon had a very good reason to be
-  there."), never a date or a recap.
-  background only as the answer to a question the viewer already has, brought in with "you see" right when it
-  explains something ("You see, the signalman had lost both legs..."), never as a timeline ("In 1852, he...",
-  "Japan declared him dead in 1959."). No line starts with a date; a year only when it matters, mid-sentence.
-  Names only for people who act in the story.
-  escalate: each beat stranger or bigger than the last. Concrete, physical details (what people saw, heard,
-  held), told like a friend at a bar, with one or two dry, wry asides that make it fun (never about death or
-  suffering).
-  payoff LAST: the answer to the hook's question (the reveal or twist) is the final scene or the final two,
-  and the Short ends there: no epilogue after it, no "follow for more" (an on-screen subscribe button and the
-  pinned comment handle that). Where it fits, the reveal echoes the hook so the ending loops into a rewatch.
-  Example of the style (a story we already covered; never reuse its wording), one picture per scene:
-  ["A passenger looked out the train window", "and saw a baboon working the railway signals.",
-  "He complained, so the railway sent officials to investigate.", "But the baboon had a very good reason to be there.",
-  "You see, the signalman, James Wide,", "had lost both legs in a fall between two train cars.",
-  "So he bought a baboon named Jack", "and taught him the code: so many whistles, that lever.",
-  "The officials didn't fire Jack. They gave him an exam.", "Whistle after whistle, he never pulled a wrong lever.",
-  "So the railway hired him: twenty cents a day", "and half a bottle of beer every week.",
-  "In nine years on the job, he never made a single mistake."]"""
 # The voice reads each run of scenes that makes whole sentences in one take (gpu.sentence_groups), so a scene may
 # end mid-sentence; before this, 4-10 word scenes forced choppy fragments ("He called them enemy tricks.").
 SCENE_CUTS = """Cut where the picture would change, even in the middle of a
@@ -94,10 +54,7 @@ Learn from these before choosing topics and writing. "Stayed to watch" shows whe
 to the end (over 100% means rewatches). Do more of what the best ones share (kinds of topic, hook
 patterns, story shapes) and less of what the weakest share; read the owner's notes too. With only a
 few Shorts, treat this as hints, not rules. Judge only entries with enough views (the ones marked "Too few
-views to judge" say little). Two weak spots: the first second (Shorts the feed pushed still lost 4-8 of every
-10 viewers there) and what follows it: the retention curves of most Shorts dropped hardest 4-12 seconds in
-and kept sliding to the end, while the two that held best (Great Stink, Emperor Norton: about 90% of the
-video watched) kept their main question open until the last scene and made every beat stranger than the last.
+views to judge" say little). {session.RULES["Lessons from our numbers"]}
 """
     if topics:
         what = f"Use exactly these {len(topics)} topics, in this order: {topics}"
@@ -113,17 +70,7 @@ video watched) kept their main question open until the last scene and made every
 {about}
 {trend_text}
 {what}
-Viewers decide in one second whether to swipe, so pick stories whose single most shocking fact can be
-said in 8 words or fewer that a stranger understands instantly (e.g. "A dead man won this horse race."),
-with a strange moment the Short can open inside of and an answer or twist it can save for the very end.
-Every Short needs a MAIN CHARACTER: one named person or animal the story follows, with a real photo or
-portrait of them. Our Shorts built around one strange person or animal (Jack the baboon, Violet Jessop,
-Emperor Norton, Lord Byron and his bear, Hiroo Onoda, Mike the headless chicken, the emus) were all pushed by
-YouTube, and the named characters brought nearly all our subscribers; the ones about a thing, an event or a
-group (a smell, a newspaper hoax, a fake statue, the WW2 Ghost Army) stalled, some under 60 views. This does not
-narrow the topics: tell an event through the person at its center (the Great Stink through engineer Joseph
-Bazalgette, the Cardiff Giant through George Hull who carved it). Choose an event with nobody to follow
-only when nothing better is left.
+{session.RULES["Topic picking"]}
 For each:
 - topic: 1-2 sentences: the story and the twist that makes it worth telling, told through its main character.
 - character: the main character's name (e.g. "Joseph Bazalgette", "Jack the baboon").
@@ -187,15 +134,9 @@ Reply with ONLY JSON: {{"shorts": [{{"topic": "...", "character": "...", "subjec
 Write one Short on each topic below, using the Wikipedia research given with it.
 Rules for each Short:
 - {lo}-{hi} spoken words (about {secs} seconds), simple words a 5th grader understands.
-{STORY_RULES}
+{session.RULES["Story rules"]}
 - Never repeat yourself: every line adds something new; no phrase of 3+ words may appear twice.
-- Write for the picture: every scene must be about something a camera could show (a person,
-  place, object, document or crowd), never an abstract line like "this changed everything". If a
-  line has nothing to show, rewrite it around a concrete detail.
-- Build on the real pictures: each topic's "pictures" lists the real photos and film found for it (#number,
-  what it shows; [opener] = strong enough to open the Short). Where a strong picture exists, let the story pass
-  through what it shows, and write the hook for an [opener] picture when one fits. The story rules above still
-  come first: never bend a fact or the pacing to fit a picture.
+{session.RULES["Writing for the picture"]}
 - Every fact must be true: take facts from the research; anything else only if you are certain it
   is well documented. No made-up statistics or quotes.
 - shape: the story's shape, one of {SHAPES}. Not one of the channel's last ones
@@ -313,7 +254,7 @@ For each script:
    something new a camera could show. No phrase of 3+ words twice.
 4. Make it follow these rules; reorder and rephrase as much as needed (our retention curves drop hardest
    4-12 seconds in and keep sliding when a script recaps, rewinds to a timeline or answers its question early):
-{STORY_RULES}
+{session.RULES["Story rules"]}
 5. hook_text (big words over the first second), thumbnail_text and title must tease the same story
    without repeating each other's words or the hook sentence; hook_text sharpens the same question as
    the hook sentence (sound-off viewers read it instead), never a separate idea. Fix whichever fails.
@@ -380,27 +321,6 @@ DATE_FIRST = re.compile(r"^\W*(?:(?:in|on|by|from|until|since|during|around)\s+(
                         r"(?:january|february|march|april|june|july|august|september|october|november|december)\b)", re.I)
 
 
-# How an AI painting prompt (ai_image) is written: the director plans them with it and rewrite_paint_prompts()
-# rewrites rejected ones with it. Owner 2026-10-21: paintings looked "way too AI" -> a named period medium.
-AI_IMAGE_RULE = """One or two descriptive sentences, not a keyword list: the subject first with era-accurate details,
-  then the setting, then the light (always name it: "low winter sun", "one oil lamp", "flat overcast daylight"),
-  then a REAL hand-made medium of the story's era named with its physical marks, so it looks made by a person and
-  can't pass for a real photo: "19th-century wood engraving from an illustrated newspaper, dense black hatching on
-  yellowed newsprint"; "hand-colored copperplate etching, fine cross-hatching, faded watercolor washes on foxed
-  paper"; "1940s gouache magazine illustration, flat matte paint, visible brush marks, coarse paper with halftone dots
-  and slightly off-register colors"; "1930s silkscreen poster, three flat inks on grainy paper, misaligned color
-  layers"; "loose oil sketch on canvas board, thick visible brushstrokes, unfinished edges"; "charcoal drawing on
-  toned paper, smudged shading". Never "concept art", "digital illustration", "stylized", "cinematic", "highly
-  detailed", "8k" or "vibrant" (they give the glossy AI look). The artwork fills the whole frame (never a framed
-  poster, card or page with a border). Never "photograph" (a fake photo would pass
-  as real evidence). Never a recognizable real person's face: show places, objects, crowds, hands,
-  silhouettes or figures from behind. Never a close-up of the specific real object the story is about
-  (a famous artifact, statue, building or document): the AI would invent what it looked like; show the
-  setting or the people around it instead. Writing in the painting (a shop sign, a poster, a ship's name,
-  a headline) is allowed when it helps tell the story: put the exact words in double quotes, at most 6,
-  true to the story and its era (no invented names, dates or numbers). Without quotes the painting has no writing,
-  so never paint a subject made of print without quoting its words (a newsstand, magazine rack, newspaper page,
-  poster wall: the painter fills it with gibberish): quote the one cover that matters ("LIFE") or pick another subject."""
 
 
 def direct_scripts(shorts: list[dict], ch: dict) -> None:
@@ -413,27 +333,7 @@ def direct_scripts(shorts: list[dict], ch: dict) -> None:
     recent_looks = ch.get("recent_looks", [])[-2:] or "none"
     data = llm.ask_ai(f"""You are the director of YouTube Shorts for a faceless channel. Niche: {ch['niche']}.
 The narration below is final: never change a word of it. Plan the edit of every scene of every Short.
-- pic = the number of the real picture from that Short's "pictures" list that shows this scene best, or null
-  when none does. Never the same number twice in a Short; at most 2 different frames of one film. Scene 1 gets
-  the most striking fitting one ([opener] first): from the story's own time (never a modern museum,
-  replica or tourist photo), ideally the main character's face, and never a picture that shows the twist
-  or the whole story at once (it must raise the hook's question, not answer it). Write shot from the
-  picture you chose. An evidence board's
-  items may carry "pic" the same way.
-- image_search = a 2-5 word query to find a real photo, screenshot, portrait, artwork, document,
-  place or object for this scene (e.g. "Nintendo Ultra Hand toy", "Lord Byron portrait").
-  video_search = a 2-6 word video search query to find real video footage showing what this
-  scene is about: gameplay, hardware demo, speedrun moment, historical newsreel, documentary clip,
-  experiment or place in motion (e.g. "Super Mario 64 Bowser throw gameplay",
-  "Nintendo Ultra Hand 1966 demonstration", "Niagara Falls barrel 1901 film"). Make each scene's
-  video_search specific to that scene's action or subject so different scenes pull different clips.
-- Edit plan for every scene:
-  shot = the director's note for this scene's visual, one sentence: framing (WIDE, MEDIUM,
-  CLOSE-UP or DETAIL), exactly what is on screen, and what the viewer should notice. E.g.
-  "CLOSE-UP: a player spinning Bowser by the tail in Super Mario 64 and launching him toward a spike bomb."
-  or "CLOSE-UP: a 1500s physician in a long robe examining a dancer's swollen feet; he looks baffled."
-  The visual editor uses it to pick the real video clip or image, so describe something real footage
-  or pictures from this topic's era and niche could show.
+{session.RULES["Directing"]}
   move = camera move that suits the image: "in" (faces, details, tension), "out" (reveals),
   "left"/"right" (wide places, crowds, landscapes), "up"/"down" (tall buildings, full-length
   portraits). Vary them; never the same move twice in a row.
@@ -483,7 +383,7 @@ The narration below is final: never change a word of it. Plan the edit of every 
   and the special ones (wipe, whip, leak, invented) at most 3 per Short, matched to the look. Scene 1's
   transition is ignored.
   ai_image = prompt for a local image generator, used only if no real video clip or photo fits this
-  scene. {AI_IMAGE_RULE}
+  scene. {session.RULES["AI paintings"]}
   sound = a sound of the STORY itself on one spoken word, or null (the usual): {{"word": "jammed", "sound": "gun cock"}}
   (word = spoken in this scene; sound = 1-4 plain words naming a real recordable sound: "gun cock", "ship horn",
   "crowd gasp", "splash", "church bell", "typewriter"). At most 3 per Short, only for concrete moments where the

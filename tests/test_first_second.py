@@ -7,6 +7,9 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from shortsmaker import llm, logbook, media_tools, review, session  # noqa: E402
+from shortsmaker import rules  # noqa: E402
+
+rules.load_rules("strange-history")  # the prompts read the channel's rules file
 
 
 def real(k):

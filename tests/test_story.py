@@ -11,6 +11,9 @@ from shortsmaker import gpu, llm, media_tools, session, writing  # noqa: E402
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from test_qwen_voice import COUNTED  # noqa: E402  (no qwen imports at module level: plain dict)
+from shortsmaker import rules  # noqa: E402
+
+rules.load_rules("strange-history")  # the prompts read the channel's rules file
 
 
 def scenes(*lines):
@@ -93,7 +96,7 @@ def test_editor_gets_one_second_pass_for_broken_rules():
 
 
 def test_writer_prompt_has_the_story_rules_and_cut_rule():
-    text = json.dumps([writing.STORY_RULES, writing.SCENE_CUTS])
+    text = json.dumps([session.RULES["Story rules"], writing.SCENE_CUTS])
     assert "never \\\"and then\\\"" in text and "payoff LAST" in text and "in the middle of a" in text
 
 

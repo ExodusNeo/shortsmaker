@@ -123,8 +123,7 @@ The narrator's first sentence: "{first}". The Short: "{short['title']}"; how it 
 Score 1-10: would they stop scrolling AND need to stay for the answer? Score lower when the picture already shows the
 answer or the whole story (with the first sentence, nothing is left to wonder about), when there is no single clear
 subject, when it is dark, busy or hard to read at phone size, or when nothing on screen is strange or surprising.
-Below {HOOK_MIN_SCORE}, check whether another scene's picture would open better: the main character or the strange
-situation, without giving the twist away. {folder / 'storyboard.jpg'} shows one frame per scene, in order; you may
+Below {HOOK_MIN_SCORE}, check whether another scene's picture would open better: {session.RULES["First-second check"]} {folder / 'storyboard.jpg'} shows one frame per scene, in order; you may
 only pick these scenes (they have real photos or film): {[j + 1 for j in real]}. Otherwise use null.
 Reply with ONLY JSON: {{"score": 6, "why": "one short reason", "open_with_scene": 4}}""", fatal=False, read_dir=folder)
     score = data.get("score") if isinstance(data, dict) else None
@@ -288,7 +287,7 @@ def rewrite_paint_prompts(short: dict, why: dict[int, str]) -> list[int]:
 For each scene write a NEW painting prompt that fixes its problem and is better than the old prompt. Don't repeat
 what failed: if the old subject can't work (it shows what must not be shown, or the painter keeps getting it wrong),
 pick another subject that still shows the narration. Rules for a prompt:
-{writing.AI_IMAGE_RULE}
+{session.RULES["AI paintings"]}
 Scenes: {json.dumps(rows, ensure_ascii=False)}
 Reply with ONLY JSON: {{"prompts": [{{"scene": 3, "ai_image": "..."}}]}}""", fatal=False) or {}
     done = []

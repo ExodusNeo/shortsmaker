@@ -17,6 +17,9 @@ from patching import owner  # noqa: E402
 
 NET = ("article_images", "commons_search", "openverse_images", "archive_images", "nasa_images",
        "archive_films", "commons_films", "pixabay_films", "nasa_films", "get_image", "film_frames")
+from shortsmaker import rules  # noqa: E402
+
+rules.load_rules("strange-history")  # the prompts read the channel's rules file
 
 
 def still(k: int) -> dict:

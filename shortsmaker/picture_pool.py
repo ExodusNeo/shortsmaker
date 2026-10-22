@@ -11,7 +11,7 @@ from pathlib import Path
 
 from PIL import Image, ImageDraw, ImageFont
 
-from shortsmaker import footage, image_sources, llm, media_tools, plan_rules, session, writing
+from shortsmaker import footage, image_sources, llm, media_tools, plan_rules, rules, session, writing
 from shortsmaker.config import FONT
 
 
@@ -48,23 +48,22 @@ def clean_pics(s: dict, cands: list[dict]) -> None:
 
 def prepare_topic(s: dict, folder: Path | None = None) -> bool:
     """Before writing: the topic's Wikipedia research (`_texts`; fact_check() reuses it), its real pictures and
-    footage (a cached pool, else gathered now) and their AI picture list. True when it has MIN_USABLE usable ones."""
+    footage (a cached pool, else gathered now) and their AI picture list. True when it has the channel's min_real_pictures usable ones (rules file)."""
     s["_texts"] = {t: writing.article_text(t)[:15000] for t in s["wiki_articles"][:4]}
     folder = folder or pool_folder(s["topic"])
     cands = load_pool(folder)
     if cands is None:
         cands = gather_pool(s["wiki_articles"], s.get("people", []), s.get("visual_terms", []), s.get("visual_terms", []))
-        if len(cands) < MIN_USABLE:  # can't pass: no AI call, and not cached (a network blip may have caused it)
+        if len(cands) < rules.min_real_pictures():  # can't pass: no AI call, and not cached (a network blip may have caused it)
             s.update(catalog=[], pool_dir=None, picture_check=f"0 usable of {len(cands)}")
             return False
         save_pool(folder, cands)
     s["catalog"] = catalog_pool(s, cands, folder)
     good = usable(cands, s["catalog"])
     s["pool_dir"], s["picture_check"] = str(folder), f"{len(good)} usable of {len(cands)}"
-    return len(good) >= MIN_USABLE
+    return len(good) >= rules.min_real_pictures()
 
 
-MIN_USABLE = 6  # usable real pictures/clips a topic needs, else a backup topic replaces it
 TOPIC_BACKUPS = 2
 
 
@@ -216,15 +215,7 @@ Open and look at every contact sheet:
 {chr(10).join(str(x) for x in sheets)}
 For EVERY number give:
 - what: what it really shows, 12 words or fewer (people, place, object, event; "film:" frames say what moves);
-- era_ok: true if it is from this story's era and place (or shows the real subject), false for a look-alike
-  from another culture/era, a namesake, or something unrelated;
-- sharp: 1 (blurry, tiny, damaged), 2 (usable), 3 (crisp and striking);
-- hook: true only if it could open the Short: striking at a glance, clearly about the story, from the
-  story's own time (never a modern museum display, replica, statue, reenactment, tourist or present-day
-  photo of the place), and it raises a question instead of answering it: it must not show the twist or
-  the whole story at once (a baboon working the signal levers tells the whole baboon-signalman story;
-  a museum's inflatable tank gives away that the army was fake). Best: the main character's face or a
-  strange moment whose explanation the viewer has to wait for;
+{session.RULES["Opening picture"]}
 - reject: null, or why it must never be used: graphic violence, torture, executions, corpses or suffering; a
   watermark or channel logo; burned-in subtitles, captions or "subscribe" text (film frames already had their top
   6% and bottom 20% cropped); a printed caption naming a different event, place or person.
