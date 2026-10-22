@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/image_sources.py"
 type: "code"
-community: "words_of"
+community: "json"
 location: "L233"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/words_of
+  - community/json
 ---
 
 # on_topic()
@@ -21,4 +21,4 @@ tags:
 - [[nasa_images()]] - `calls` [EXTRACTED]
 - [[words_of()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/words_of
+#graphify/code #graphify/EXTRACTED #community/json

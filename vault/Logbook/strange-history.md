@@ -341,3 +341,17 @@ Subscribers gained:
 Stayed to watch (%):
 Average % viewed:
 My notes:
+
+## The Spy Who Fooled Hitler Was a Chicken Farmer
+Made: 2026-10-22 | Written by: Claude | Length: 0:44.6 | Folder: output\strange-history\2026-10-22_the-spy-who-fooled-hitler-was-a-chicken-farmer
+Topic: Juan Pujol García, a Spanish chicken farmer, was turned down by British intelligence, so he became a German spy instead and sent Berlin 'reports from London' that he made up in Lisbon from guidebooks and newsreels, inventing a network of 27 fake agents. Britain then hired him, and his lies helped convince Germany that D-Day in Normandy was only a decoy. The twist is that he was awarded both the German Iron Cross and the British MBE, then faked his own death in Africa and vanished to Venezuela until a historian tracked him down in 1984. | Story shape: one person against the odds
+Hook line: "Germany's star London spy sat in Lisbon," | Hook title: FAKED LONDON FROM LISBON
+
+Posted on:
+Views:
+Likes:
+Comments:
+Subscribers gained:
+Stayed to watch (%):
+Average % viewed:
+My notes:

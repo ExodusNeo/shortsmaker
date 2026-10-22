@@ -12,7 +12,7 @@ tags:
 # load_pool()
 
 ## Connections
-- [[Path_6]] - `references` [EXTRACTED]
+- [[Path_3]] - `references` [EXTRACTED]
 - [[The saved pool (None if missing or unreadable it is gathered again);…]] - `rationale_for` [EXTRACTED]
 - [[choose_images()]] - `calls` [EXTRACTED]
 - [[json]] - `calls` [EXTRACTED]

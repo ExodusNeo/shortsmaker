@@ -1,11 +1,11 @@
 ---
 type: community
-members: 29
+members: 26
 ---
 
 # test_pictures_first.py
 
-**Members:** 29 nodes
+**Members:** 26 nodes
 
 ## Members
 - [[dot-__exit__()]] - code - tests/test_pictures_first.py
@@ -17,13 +17,10 @@ members: 29
 - [[entry()]] - code - tests/test_pictures_first.py
 - [[fake_ai]] - code - tests/test_pictures_first.py
 - [[film()]] - code - tests/test_pictures_first.py
-- [[no_gather()]] - code - tests/test_pictures_first.py
 - [[pic_short()]] - code - tests/test_pictures_first.py
 - [[pool_of()]] - code - tests/test_pictures_first.py
-- [[prepare()_1]] - code - tests/test_pictures_first.py
 - [[test_board_item_pics_cleaned()]] - code - tests/test_pictures_first.py
 - [[test_board_item_refuses_film()]] - code - tests/test_pictures_first.py
-- [[test_both_mode_reuses_pools()]] - code - tests/test_pictures_first.py
 - [[test_catalog_both_empty_stops_uncached()]] - code - tests/test_pictures_first.py
 - [[test_catalog_empty_pool_no_ai()]] - code - tests/test_pictures_first.py
 - [[test_catalog_empty_reply_asks_other_ai()]] - code - tests/test_pictures_first.py
@@ -34,7 +31,7 @@ members: 29
 - [[test_clean_pics()]] - code - tests/test_pictures_first.py
 - [[test_corrupt_pool_and_catalog_redone()]] - code - tests/test_pictures_first.py
 - [[test_pictures_first.py]] - code - tests/test_pictures_first.py
-- [[test_prompts_carry_picture_list()]] - code - tests/test_pictures_first.py
+- [[test_prune_cache_handles_pools()]] - code - tests/test_pictures_first.py
 - [[test_seo_pass_empty_no_ai()]] - code - tests/test_pictures_first.py
 - [[test_usable_counts_film_once()]] - code - tests/test_pictures_first.py
 
@@ -46,25 +43,26 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 15 edges to [[_COMMUNITY_write_scripts]]
+- 16 edges to [[_COMMUNITY_write_scripts]]
 - 14 edges to [[_COMMUNITY_choose_images]]
-- 13 edges to [[_COMMUNITY_prepare_topic]]
-- 13 edges to [[_COMMUNITY_test_full_scenes.py]]
-- 6 edges to [[_COMMUNITY_owner]]
-- 6 edges to [[_COMMUNITY_json]]
-- 5 edges to [[_COMMUNITY_test_package.py]]
+- 13 edges to [[_COMMUNITY_plan_rules.py]]
+- 11 edges to [[_COMMUNITY_prepare_topic]]
+- 7 edges to [[_COMMUNITY_gather_pool]]
+- 7 edges to [[_COMMUNITY_json]]
 - 5 edges to [[_COMMUNITY_clean_pics]]
 - 3 edges to [[_COMMUNITY_planning_ai]]
-- 3 edges to [[_COMMUNITY_re]]
-- 1 edge to [[_COMMUNITY_ask_ai]]
+- 3 edges to [[_COMMUNITY_audio_mix.py]]
+- 2 edges to [[_COMMUNITY_re]]
 - 1 edge to [[_COMMUNITY_test_rules.py]]
+- 1 edge to [[_COMMUNITY_ask_ai]]
 - 1 edge to [[_COMMUNITY_catalog_entries]]
+- 1 edge to [[_COMMUNITY_clean_full]]
 - 1 edge to [[_COMMUNITY_edit_plan]]
-- 1 edge to [[_COMMUNITY_words_of]]
+- 1 edge to [[_COMMUNITY_test_first_second.py]]
 
 ## Top bridge nodes
-- [[test_pictures_first.py]] - degree 73, connects to 11 communities
+- [[test_pictures_first.py]] - degree 73, connects to 12 communities
 - [[catalog_pool()]] - degree 18, connects to 7 communities
 - [[pool_of()]] - degree 19, connects to 3 communities
 - [[fake_ai]] - degree 14, connects to 2 communities
-- [[test_prompts_carry_picture_list()]] - degree 8, connects to 2 communities
+- [[entry()]] - degree 14, connects to 2 communities

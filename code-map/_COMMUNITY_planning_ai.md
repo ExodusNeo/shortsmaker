@@ -24,7 +24,7 @@ SORT file.name ASC
 ## Connections to other communities
 - 3 edges to [[_COMMUNITY_test_pictures_first.py]]
 - 2 edges to [[_COMMUNITY_write_scripts]]
-- 1 edge to [[_COMMUNITY_owner]]
+- 1 edge to [[_COMMUNITY_gather_pool]]
 
 ## Top bridge nodes
 - [[dot-__enter__()_3]] - degree 4, connects to 3 communities

@@ -1,12 +1,12 @@
 ---
 source_file: "tests/patching.py"
 type: "code"
-community: "owner"
+community: "gather_pool"
 location: "L17"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/owner
+  - community/gather_pool
 ---
 
 # owner()
@@ -26,4 +26,4 @@ tags:
 - [[test_style.py]] - `imports` [EXTRACTED]
 - [[with_fakes()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/owner
+#graphify/code #graphify/EXTRACTED #community/gather_pool

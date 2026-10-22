@@ -2,7 +2,7 @@
 source_file: "shortsmaker/channel_profiles.py"
 type: "code"
 community: "re"
-location: "L135"
+location: "L134"
 tags:
   - graphify/code
   - graphify/EXTRACTED

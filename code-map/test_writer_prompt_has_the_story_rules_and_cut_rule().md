@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_story.py"
 type: "code"
-community: "test_package.py"
+community: "test_story.py"
 location: "L98"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_packagepy
+  - community/test_storypy
 ---
 
 # test_writer_prompt_has_the_story_rules_and_cut_rule()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[test_story.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_packagepy
+#graphify/code #graphify/EXTRACTED #community/test_storypy

@@ -8,7 +8,7 @@ members: 6
 **Members:** 6 nodes
 
 ## Members
-- [[Path_16]] - code
+- [[Path_12]] - code
 - [[Timestamped edit decision list of exactly what was rendered, plus the sound-…]] - rationale - shortsmaker/editplan.py
 - [[edit_plan()]] - code - shortsmaker/editplan.py
 - [[edit_plan.txt what the pictures-first check found (None for a plan made before…]] - rationale - shortsmaker/editplan.py
@@ -25,7 +25,7 @@ SORT file.name ASC
 ## Connections to other communities
 - 2 edges to [[_COMMUNITY_style_library]]
 - 2 edges to [[_COMMUNITY_render]]
-- 2 edges to [[_COMMUNITY_test_full_scenes.py]]
+- 2 edges to [[_COMMUNITY_plan_rules.py]]
 - 1 edge to [[_COMMUNITY_test_pictures_first.py]]
 
 ## Top bridge nodes

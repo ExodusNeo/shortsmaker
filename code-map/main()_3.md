@@ -1,40 +1,20 @@
 ---
-source_file: "shortsmaker/cli.py"
+source_file: "local_ai/qwen_voice.py"
 type: "code"
-community: "re"
-location: "L16"
+community: "qwen_voice.py"
+location: "L134"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/re
+  - community/qwen_voicepy
 ---
 
 # main()
 
 ## Connections
-- [[ask_brain()]] - `calls` [EXTRACTED]
-- [[ask_count()]] - `calls` [EXTRACTED]
-- [[ask_yes()]] - `calls` [EXTRACTED]
-- [[cli.py]] - `contains` [EXTRACTED]
-- [[fix_short()]] - `calls` [EXTRACTED]
-- [[gemini_model()]] - `calls` [EXTRACTED]
-- [[library_menu()]] - `calls` [EXTRACTED]
-- [[load_channel()]] - `calls` [EXTRACTED]
-- [[load_rules()]] - `calls` [EXTRACTED]
-- [[log_short()]] - `calls` [EXTRACTED]
-- [[make_shorts.py]] - `imports` [EXTRACTED]
-- [[pick_channel()]] - `calls` [EXTRACTED]
-- [[prune_cache()]] - `calls` [EXTRACTED]
-- [[prune_work()]] - `calls` [EXTRACTED]
-- [[re]] - `calls` [EXTRACTED]
-- [[render()]] - `calls` [EXTRACTED]
-- [[save_channel()]] - `calls` [EXTRACTED]
-- [[seo_pass()]] - `calls` [EXTRACTED]
-- [[shutil]] - `calls` [EXTRACTED]
-- [[style_library()]] - `calls` [EXTRACTED]
-- [[use_channel()]] - `calls` [EXTRACTED]
-- [[vault_page()]] - `calls` [EXTRACTED]
-- [[vault_refresh()]] - `calls` [EXTRACTED]
-- [[write_scripts()]] - `calls` [EXTRACTED]
+- [[align()]] - `calls` [EXTRACTED]
+- [[json]] - `calls` [EXTRACTED]
+- [[qwen_voice.py]] - `contains` [EXTRACTED]
+- [[time]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/re
+#graphify/code #graphify/EXTRACTED #community/qwen_voicepy

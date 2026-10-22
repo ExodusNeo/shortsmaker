@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "test_package.py"
+community: "test_first_second.py"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/test_packagepy
+  - community/test_first_secondpy
 ---
 
 # traceback
@@ -19,4 +19,4 @@ tags:
 - [[test_rules.py]] - `imports` [EXTRACTED]
 - [[test_story.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/test_packagepy
+#graphify/concept #graphify/EXTRACTED #community/test_first_secondpy

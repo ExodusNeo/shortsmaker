@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "audio_mix.py"
+community: "random"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/audio_mixpy
+  - community/random
 ---
 
 # random
@@ -20,4 +20,4 @@ tags:
 - [[short_render.py]] - `imports` [EXTRACTED]
 - [[test_full_scenes.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/audio_mixpy
+#graphify/concept #graphify/EXTRACTED #community/random

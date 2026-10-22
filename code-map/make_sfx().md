@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/audio_mix.py"
 type: "code"
-community: "audio_mix.py"
+community: "random"
 location: "L161"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/audio_mixpy
+  - community/random
 ---
 
 # make_sfx()
@@ -15,9 +15,9 @@ tags:
 - [[Synthesize the sound-effect library once (no downloads, no copyright). Hits,…]] - `rationale_for` [EXTRACTED]
 - [[audio_mix.py]] - `contains` [EXTRACTED]
 - [[math]] - `calls` [EXTRACTED]
-- [[noise()]] - `contains` [EXTRACTED]
+- [[noise()_1]] - `contains` [EXTRACTED]
 - [[random]] - `calls` [EXTRACTED]
 - [[render()]] - `calls` [EXTRACTED]
 - [[save()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/audio_mixpy
+#graphify/code #graphify/EXTRACTED #community/random

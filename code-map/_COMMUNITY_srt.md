@@ -9,7 +9,7 @@ members: 4
 
 ## Members
 - [[Exact-narration caption file to upload in YouTube Studio (searchable, unlike…]] - rationale - shortsmaker/seo.py
-- [[Path_21]] - code
+- [[Path_20]] - code
 - [[srt()]] - code - shortsmaker/seo.py
 - [[ts()]] - code - shortsmaker/seo.py
 

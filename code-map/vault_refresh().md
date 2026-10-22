@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[logbook.py]] - `contains` [EXTRACTED]
-- [[main()_3]] - `calls` [EXTRACTED]
+- [[main()_4]] - `calls` [EXTRACTED]
 - [[make_shorts.py notes rebuild every Short's vault page from the logbooks (each…]] - `rationale_for` [EXTRACTED]
 - [[re]] - `calls` [EXTRACTED]
 - [[vault_page()]] - `calls` [EXTRACTED]

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/style_lab.py"
 type: "code"
-community: "style_placeholders"
+community: "invent_component"
 location: "L93"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/style_placeholders
+  - community/invent_component
 ---
 
 # restore_style_slots()
@@ -21,4 +21,4 @@ tags:
 - [[test_slots_restored_after_render()]] - `calls` [EXTRACTED]
 - [[with_fakes()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/style_placeholders
+#graphify/code #graphify/EXTRACTED #community/invent_component

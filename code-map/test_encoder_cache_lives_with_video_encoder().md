@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_package.py"
 type: "code"
-community: "local_clips"
+community: "ffmpeg"
 location: "L107"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/local_clips
+  - community/ffmpeg
 ---
 
 # test_encoder_cache_lives_with_video_encoder()
@@ -15,4 +15,4 @@ tags:
 - [[test_package.py]] - `contains` [EXTRACTED]
 - [[video_encoder()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/local_clips
+#graphify/code #graphify/EXTRACTED #community/ffmpeg

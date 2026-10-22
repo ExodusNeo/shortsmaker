@@ -1,21 +1,21 @@
 ---
 source_file: "shortsmaker/gpu.py"
 type: "code"
-community: "local_clips"
+community: "ffmpeg"
 location: "L313"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/local_clips
+  - community/ffmpeg
 ---
 
 # cover_crop()
 
 ## Connections
 - [[Fill a 916 frame with the picture (centre crop), for the AI video model's…]] - `rationale_for` [EXTRACTED]
-- [[Path_17]] - `references` [EXTRACTED]
+- [[Path_13]] - `references` [EXTRACTED]
 - [[gpu.py]] - `contains` [EXTRACTED]
 - [[local_clips()]] - `calls` [EXTRACTED]
 - [[veo_handoff()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/local_clips
+#graphify/code #graphify/EXTRACTED #community/ffmpeg

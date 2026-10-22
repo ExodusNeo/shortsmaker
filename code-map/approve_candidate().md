@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/style_lab.py"
 type: "code"
-community: "style_library"
+community: "approve_candidate"
 location: "L267"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/style_library
+  - community/approve_candidate
 ---
 
 # approve_candidate()
@@ -25,4 +25,4 @@ tags:
 - [[tsc_check()]] - `calls` [EXTRACTED]
 - [[write_style_index()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/style_library
+#graphify/code #graphify/EXTRACTED #community/approve_candidate

@@ -2,7 +2,7 @@
 source_file: "tests/test_rules.py"
 type: "code"
 community: "test_rules.py"
-location: "L109"
+location: "L123"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -20,6 +20,8 @@ tags:
 - [[test_duplicate_heading_stops()]] - `calls` [EXTRACTED]
 - [[test_empty_heading_stops()]] - `calls` [EXTRACTED]
 - [[test_missing_heading_stops()]] - `calls` [EXTRACTED]
+- [[test_odd_min_pictures_stop_cleanly()]] - `calls` [EXTRACTED]
 - [[test_rules.py]] - `contains` [EXTRACTED]
+- [[test_unknown_visuals_stop()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/test_rulespy

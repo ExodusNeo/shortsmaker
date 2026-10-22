@@ -2,7 +2,7 @@
 source_file: "tests/test_rules.py"
 type: "code"
 community: "test_rules.py"
-location: "L206"
+location: "L220"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,11 +12,12 @@ tags:
 # run_draft()
 
 ## Connections
-- [[ask()_2]] - `contains` [EXTRACTED]
-- [[ask()_1]] - `indirect_call` [INFERRED]
+- [[ask()_1]] - `contains` [EXTRACTED]
+- [[ask()]] - `indirect_call` [INFERRED]
 - [[draft_rules in a temp channels folder holding strange-history's rules; returns…]] - `rationale_for` [EXTRACTED]
 - [[draft_rules()]] - `calls` [EXTRACTED]
 - [[make()_1]] - `calls` [EXTRACTED]
+- [[test_draft_keeps_ai_headings_inside_their_section()]] - `calls` [EXTRACTED]
 - [[test_draft_never_overwrites()]] - `calls` [EXTRACTED]
 - [[test_draft_retries_once_then_stops()]] - `calls` [EXTRACTED]
 - [[test_draft_settings_come_from_code()]] - `calls` [EXTRACTED]

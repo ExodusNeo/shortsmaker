@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[Download ~14s of film around the chosen moment (cropped with FILM_CROP to…]] - `rationale_for` [EXTRACTED]
-- [[Path_20]] - `references` [EXTRACTED]
+- [[Path_17]] - `references` [EXTRACTED]
 - [[choose_images()]] - `calls` [EXTRACTED]
 - [[film_ffmpeg()]] - `calls` [EXTRACTED]
 - [[footage.py]] - `contains` [EXTRACTED]

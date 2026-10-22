@@ -13,6 +13,6 @@ tags:
 
 ## Connections
 - [[ClipReader]] - `method` [EXTRACTED]
-- [[Path_10]] - `references` [EXTRACTED]
+- [[Path_6]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/frame_maker

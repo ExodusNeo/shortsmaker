@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/frame_render.py"
 type: "rationale"
-community: "frame_maker"
+community: "ClipReader"
 location: "L125"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/frame_maker
+  - community/ClipReader
 ---
 
 # Animate the callout in, hold it, fade it out before the scene ends.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[draw_graphic()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/frame_maker
+#graphify/rationale #graphify/EXTRACTED #community/ClipReader

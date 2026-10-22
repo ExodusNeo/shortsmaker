@@ -10,7 +10,7 @@ members: 14
 ## Members
 - [[Before writing the topic's Wikipedia research (`_texts`; fact_check() reuses…]] - rationale - shortsmaker/picture_pool.py
 - [[Numbered thumbnail grids (6x4) so Claude can look at every candidate at once.]] - rationale - shortsmaker/picture_pool.py
-- [[Path_6]] - code
+- [[Path_3]] - code
 - [[The saved pool (None if missing or unreadable it is gathered again);…]] - rationale - shortsmaker/picture_pool.py
 - [[Write via a temp file, so an interrupted run never leaves a half-written file…]] - rationale - shortsmaker/media_tools.py
 - [[contact_sheets()]] - code - shortsmaker/picture_pool.py
@@ -31,22 +31,23 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 13 edges to [[_COMMUNITY_test_pictures_first.py]]
-- 6 edges to [[_COMMUNITY_test_full_scenes.py]]
+- 11 edges to [[_COMMUNITY_test_pictures_first.py]]
+- 6 edges to [[_COMMUNITY_write_scripts]]
+- 5 edges to [[_COMMUNITY_plan_rules.py]]
 - 4 edges to [[_COMMUNITY_json]]
-- 4 edges to [[_COMMUNITY_write_scripts]]
+- 3 edges to [[_COMMUNITY_gather_pool]]
 - 3 edges to [[_COMMUNITY_choose_images]]
 - 2 edges to [[_COMMUNITY_test_rules.py]]
-- 2 edges to [[_COMMUNITY_clean_pics]]
-- 2 edges to [[_COMMUNITY_gather_pool]]
-- 1 edge to [[_COMMUNITY_owner]]
-- 1 edge to [[_COMMUNITY_ask_ai]]
 - 1 edge to [[_COMMUNITY_ffmpeg]]
+- 1 edge to [[_COMMUNITY_audio_mix.py]]
+- 1 edge to [[_COMMUNITY_test_story.py]]
 - 1 edge to [[_COMMUNITY_apply_review_fixes]]
+- 1 edge to [[_COMMUNITY_wm_files]]
+- 1 edge to [[_COMMUNITY_clean_pics]]
 
 ## Top bridge nodes
 - [[prepare_topic()]] - degree 15, connects to 7 communities
 - [[load_pool()]] - degree 12, connects to 7 communities
-- [[save_pool()]] - degree 13, connects to 3 communities
-- [[write_json()]] - degree 6, connects to 3 communities
-- [[contact_sheets()]] - degree 6, connects to 3 communities
+- [[save_pool()]] - degree 13, connects to 4 communities
+- [[write_json()]] - degree 6, connects to 4 communities
+- [[contact_sheets()]] - degree 6, connects to 4 communities

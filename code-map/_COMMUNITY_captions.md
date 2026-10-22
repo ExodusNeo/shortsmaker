@@ -11,7 +11,7 @@ members: 14
 - [[ASS captions, one caption_lines() line at a time; the spoken word turns yellow.…]] - rationale - shortsmaker/audio_mix.py
 - [[ASS subtitle colour (&H00BBGGRR&), optionally darkened (for an outline).]] - rationale - shortsmaker/config.py
 - [[Caption lines of up to 3 words and about 16 letters a long word (SIXTY-THREE-…]] - rationale - shortsmaker/audio_mix.py
-- [[Path_19]] - code
+- [[Path_18]] - code
 - [[TTS with retries Microsoft's free Edge voice service drops a request now and…]] - rationale - shortsmaker/audio_mix.py
 - [[ass_colour()]] - code - shortsmaker/config.py
 - [[ass_time()]] - code - shortsmaker/audio_mix.py
@@ -31,17 +31,15 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 8 edges to [[_COMMUNITY_audio_mix.py]]
-- 2 edges to [[_COMMUNITY_render]]
-- 1 edge to [[_COMMUNITY_ffmpeg]]
+- 9 edges to [[_COMMUNITY_audio_mix.py]]
+- 3 edges to [[_COMMUNITY_render]]
 - 1 edge to [[_COMMUNITY_render_remotion]]
 - 1 edge to [[_COMMUNITY_json]]
-- 1 edge to [[_COMMUNITY_test_full_scenes.py]]
-- 1 edge to [[_COMMUNITY_subprocess]]
+- 1 edge to [[_COMMUNITY_plan_rules.py]]
 
 ## Top bridge nodes
 - [[speak()_1]] - degree 7, connects to 3 communities
 - [[captions()_1]] - degree 8, connects to 2 communities
 - [[ass_colour()]] - degree 5, connects to 2 communities
-- [[Path_19]] - degree 5, connects to 2 communities
+- [[Path_18]] - degree 5, connects to 2 communities
 - [[caption_lines()]] - degree 4, connects to 2 communities
