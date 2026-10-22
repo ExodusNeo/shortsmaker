@@ -3,7 +3,7 @@
 Each section is read by its heading; edit the text under it. Change status to ready once you've read it.
 
 ## Settings
-status: draft
+status: ready
 visuals: photos
 min_real_pictures: 6
 
