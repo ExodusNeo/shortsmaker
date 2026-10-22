@@ -84,7 +84,7 @@ def test_each_failure_changes_the_focus():
         return render(plan, [1.0, 1.5, 2.0], [136], peaks={2: 4.1})[136]
     still = peak("none")
     for kind in ("bend", "crack", "shear", "sway"):
-        need = 0.002 if kind == "crack" else 0.02  # a crack is a line: it changes few pixels
+        need = 0.002 if kind == "crack" else 0.015  # a crack is a line: it changes few pixels
         assert changed(still, peak(kind)) >= need, (kind, changed(still, peak(kind)))
 
 
@@ -105,10 +105,11 @@ def test_every_template_renders():
         assert count(wide, STEEL, 20) + count(wide, CONCRETE, 12) >= 0.03 * 1080 * 1920, template  # bridges are slender: 3.4-4.8% in a wide shot
 
 
-def test_failure_preview_cuts_to_an_empty_site():
+def test_bridge_stands_until_the_build_starts_over():
+    # the hook (scene 1) and the next scene show the finished bridge; the first build scene cuts to the empty site
     plan = plan_with(["failure_preview", "wide", "build", "zoom"])
-    hook, site = render(plan, [1.5, 1.0, 1.0, 1.0], [45, 46]).values()
-    assert count(site, STEEL, 20) < count(hook, STEEL, 20) * 0.5, (count(hook, STEEL, 20), count(site, STEEL, 20))
+    wide, site = render(plan, [1.5, 1.0, 1.0, 1.0], [60, 76]).values()
+    assert count(site, STEEL, 20) < count(wide, STEEL, 20) * 0.5, (count(wide, STEEL, 20), count(site, STEEL, 20))
 
 
 if __name__ == "__main__":

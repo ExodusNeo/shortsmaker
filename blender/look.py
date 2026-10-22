@@ -35,17 +35,43 @@ def setup(scene: bpy.types.Scene, fps: int = 30) -> None:
     world.use_nodes = True
     bg = next(n for n in world.node_tree.nodes if n.type == "BACKGROUND")
     bg.inputs[0].default_value = linear(COLORS["paper"])
-    scene.render.use_freestyle = True
-    scene.render.line_thickness_mode = "ABSOLUTE"
-    scene.render.line_thickness = 2.2
-    fs = scene.view_layers[0].freestyle_settings
-    ls = fs.linesets[0] if fs.linesets else fs.linesets.new("ink")
-    ls.linestyle = ls.linestyle or bpy.data.linestyles.new("ink")
-    ls.linestyle.color = linear(COLORS["ink"])[:3]
-    ls.linestyle.thickness = 2.2
-    ls.select_by_collection = True
-    ls.collection = collection(scene, NOLINES)
-    ls.collection_negation = "EXCLUSIVE"
+    collection(scene, NOLINES)
+    ink_lines(scene)
+
+
+def ink_lines(scene: bpy.types.Scene) -> None:
+    """Ink outlines drawn on the GPU after each frame: edges where the surface turns (the normal pass) or the flat
+    colour changes (deck against water). Freestyle drew the same look at 3-7 s a frame on a full bridge (one CPU
+    core); this costs a fraction of a second."""
+    vl = scene.view_layers[0]
+    vl.use_pass_normal = True
+    ng = bpy.data.node_groups.new("ink", "CompositorNodeTree")
+    ng.interface.new_socket("Image", in_out="OUTPUT", socket_type="NodeSocketColor")
+    n, link = ng.nodes.new, ng.links.new
+    rl, out = n("CompositorNodeRLayers"), n("NodeGroupOutput")
+
+    def edges(src, threshold: float):
+        sob = n("CompositorNodeFilter")
+        sob.inputs["Type"].default_value = "Sobel"
+        link(src, sob.inputs["Image"])
+        cut = n("ShaderNodeMath")
+        cut.operation = "GREATER_THAN"
+        link(sob.outputs[0], cut.inputs[0])
+        cut.inputs[1].default_value = threshold
+        return cut.outputs[0]
+
+    both = n("ShaderNodeMath")
+    both.operation = "MAXIMUM"
+    link(edges(rl.outputs["Image"], 0.08), both.inputs[0])
+    link(edges(rl.outputs["Normal"], 0.5), both.inputs[1])
+    mix = n("ShaderNodeMix")
+    mix.data_type = "RGBA"
+    link(both.outputs[0], mix.inputs["Factor"])
+    link(rl.outputs["Image"], mix.inputs[6])
+    mix.inputs[7].default_value = linear(COLORS["ink"])
+    link(mix.outputs[2], out.inputs[0])
+    scene.compositing_node_group = ng
+    scene.render.use_compositing = True
 
 
 def collection(scene: bpy.types.Scene, name: str) -> bpy.types.Collection:

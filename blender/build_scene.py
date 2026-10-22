@@ -41,16 +41,17 @@ def direction(yaw: float, pitch: float) -> Vector:
 class Shots:
     """Camera poses (eye, target) for each beat, sized from the bridge and the focus part."""
 
-    def __init__(self, b, focus):
+    def __init__(self, b, focus, chord: str = "bottom"):
         self.center, self.focus = b.center, focus.location.copy()  # matrix_world is stale until a depsgraph update
         self.far = max(b.length * 0.6, b.H * 5, 60.0)
         self.near = max(parts.bbox_size(focus) * 5, 6.0)
+        self.pitch = -6.0 if chord == "bottom" else 12.0  # a part under the deck is seen from below it
 
     def wide(self, k=1.0, yaw=-62.0, pitch=16.0):
         return self.center + direction(yaw, pitch) * self.far * k, self.center
 
-    def close(self, k=1.0, yaw=-25.0, pitch=12.0):
-        return self.focus + direction(yaw, pitch) * self.near * k, self.focus
+    def close(self, k=1.0, yaw=-25.0):
+        return self.focus + direction(yaw, self.pitch) * self.near * k, self.focus
 
     def beat(self, name: str):
         """(start pose, end pose) of a beat."""
@@ -84,7 +85,7 @@ def main() -> None:
     con.target, con.track_axis, con.up_axis = target, "TRACK_NEGATIVE_Z", "UP_Y"
 
     focus = templates.focus_object(b, plan["focus"])
-    shots = Shots(b, focus)
+    shots = Shots(b, focus, plan["focus"]["at"]["chord"])
     side_y = -1 if plan["focus"]["at"]["side"] == "left" else 1
     red = bpy.data.objects.new(f"{focus.name}_red", focus.data)  # the highlighted part, drawn over the steel one
     b.col.objects.link(red)
@@ -112,22 +113,17 @@ def main() -> None:
         keyvis(o, 1, True)
     order = b.stages["deck"] + b.stages["members"] + b.stages["details"]
     drop = Vector((0, 0, b.H * 1.5 + 12))
-    for k, o in enumerate(order):  # parts arrive in assembly order, spread over every build scene
+    first_build = build_frames[0] if build_frames else None
+    for k, o in enumerate(order):  # the bridge stands finished until the build scenes go back to an empty site
         home = o.location.copy()
-        appear = build_frames[k * len(build_frames) // len(order)] if build_frames else story
-        if preview_end:
-            keyvis(o, 1, True)
-            keyloc(o, preview_end, home)
-            keyvis(o, story, appear <= story and not build_frames)
-            keyloc(o, story, home + drop if build_frames else home)
-        else:
-            keyvis(o, 1, False)
-        if build_frames:
-            keyvis(o, appear, True)
+        keyvis(o, 1, True)
+        if first_build:
+            appear = build_frames[k * len(build_frames) // len(order)]
+            keyloc(o, first_build - 1, home)
+            keyvis(o, first_build, appear == first_build)
             keyloc(o, appear, home + drop)
+            keyvis(o, appear, True)
             keyloc(o, appear + DROP_FRAMES, home)
-        else:
-            keyvis(o, story, True)
     zoom = next((sc for sc, beat in zip(scenes, beats) if beat == "zoom"), None)
     shown = zoom["first"] + (zoom["last"] - zoom["first"]) * 2 // 5 if zoom else story
     for o in details:  # red part, fasteners and label: in the hook, then from partway into the zoom on
