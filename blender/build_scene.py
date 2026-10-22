@@ -61,7 +61,7 @@ class Shots:
                 "zoom": (self.wide(0.85, -56), self.close(1.0)),
                 "failure": (self.close(1.0), self.close(1.2)),
                 "aftermath": (self.close(3.0), self.wide(1.0, -58)),
-                "failure_preview": (self.close(2.2), self.close(1.6))}[name]
+                "failure_preview": (self.close(1.4), self.close(1.05))}[name]
 
 
 def main() -> None:
@@ -106,7 +106,8 @@ def main() -> None:
     story = preview_end + 1
     fail = failures.Failure(b, plan, focus, red, fasteners)
     if preview_end:  # the hook shows the failure on the finished bridge, then the story starts over
-        fail.play(1, min(scenes[0]["peak_frame"], preview_end - 4))
+        hook_peak = min(scenes[0]["peak_frame"], preview_end - 4, 1 + fps * 3 // 2)  # it must move in the first 1.5 s
+        fail.play(1, hook_peak, until=preview_end)
         fail.reset(story)
     build_frames = [f for sc, beat in zip(scenes, beats) if beat == "build" for f in range(sc["first"], sc["last"] + 1)]
     for o in b.stages["piers"]:  # the site: piers stand before the steel arrives

@@ -69,7 +69,7 @@ def render_clips(short: dict, bounds: list[float], all_words: list, work: Path, 
         for old in list(frames.glob("f_*.png")) + [done]:
             old.unlink(missing_ok=True)
         (work / "build.json").write_text(text, encoding="utf-8")
-        print(f"  Blender: drawing {ranges[-1][1]} frames (about {ranges[-1][1] * 0.7 / 60:.0f} min)...")
+        print(f"  Blender: drawing {ranges[-1][1]} frames (about {ranges[-1][1] * 0.3 / 60:.0f} min)...")
         why = ""
         for attempt in range(2):
             why = _run(exe, work / "build.json")

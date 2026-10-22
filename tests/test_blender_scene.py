@@ -112,6 +112,17 @@ def test_bridge_stands_until_the_build_starts_over():
     assert count(site, STEEL, 20) < count(wide, STEEL, 20) * 0.5, (count(wide, STEEL, 20), count(site, STEEL, 20))
 
 
+def test_hook_collapse_stays_in_the_hook():
+    # the hook's span collapse must be fully undone when the story starts: scene 2 matches a Short without collapse
+    def scene2(then):
+        plan = plan_with(["failure_preview", "wide", "wide", "build", "zoom", "failure"])
+        plan["failure"]["then"] = then
+        return render(plan, [1.5, 2.0, 2.0, 1.0, 1.0, 1.0], [70, 110], peaks={0: 1.3})
+    calm, after_collapse = scene2("none"), scene2("collapse_span")
+    for f in (70, 110):
+        assert changed(calm[f], after_collapse[f]) < 0.002, (f, changed(calm[f], after_collapse[f]))
+
+
 if __name__ == "__main__":
     if not config.BLENDER.exists():
         print(f"SKIPPED: no Blender at {config.BLENDER}")

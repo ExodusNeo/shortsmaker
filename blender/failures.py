@@ -61,7 +61,8 @@ class Failure:
             key(o, "hide_render", 1, True)
         return segs
 
-    def play(self, t0: int, peak: int) -> None:
+    def play(self, t0: int, peak: int, until: int | None = None) -> None:
+        """The failure from t0 to its peak, then the collapse; `until` (the hook's last frame) cuts it short."""
         peak = max(peak, t0 + 6)
         span = peak - t0
         if self.kind == "bend":
@@ -89,12 +90,13 @@ class Failure:
             for f in range(t0, peak + 1, 2):
                 grow = ((f - t0) / span) ** 1.5  # growing swings, the biggest one on the peak
                 key(self.pivot, "rotation_euler", f, math.radians(12) * grow * math.cos(2 * math.pi * (f - peak) / 16), 0)
-        if self.then == "collapse_span":
+        fall = min(peak + 33, until - 1) if until else peak + 33  # the hook's fall must end before its cut
+        if self.then == "collapse_span" and fall > peak + 6:
             home = self.pivot_home
             key(self.pivot, "location", peak + 3, home)
             key(self.pivot, "rotation_euler", peak + 3, None, 1)
-            key(self.pivot, "location", peak + 33, home + Vector((0, 0, -(self.b.deck_z + self.b.H + 8))))
-            key(self.pivot, "rotation_euler", peak + 33, math.radians(14), 1)
+            key(self.pivot, "location", fall, home + Vector((0, 0, -(self.b.deck_z + self.b.H + 8))))
+            key(self.pivot, "rotation_euler", fall, math.radians(14), 1)
 
     def reset(self, frame: int) -> None:
         """Back to whole: the story after the hook starts from the beginning."""
