@@ -179,7 +179,7 @@ def test_blender_stops():
 
 def test_bad_min_pictures_stops():
     assert stop_text(make(Settings="status: ready\nvisuals: photos\nmin_real_pictures: six")) == (
-        "Stopped: channels/x.rules.md: min_real_pictures must be a whole number.")
+        "Stopped: channels/x.rules.md: min_real_pictures must be a whole number above 0.")
 
 
 def test_load_rules_sets_session():
@@ -316,6 +316,53 @@ def test_a_stopped_run_keeps_the_default_channel():
         assert calls == [], calls  # use_channel writes last.txt: run.bat's default must not become a stopped channel
     finally:
         sys.argv, rules.require_rules, channel_profiles.use_channel = saved
+
+
+def test_odd_min_pictures_stop_cleanly():
+    for bad in ("²", "0", "-1", "6.5"):
+        assert stop_text(make(Settings=f"status: ready\nvisuals: photos\nmin_real_pictures: {bad}")) == (
+            "Stopped: channels/x.rules.md: min_real_pictures must be a whole number above 0."), bad
+
+
+def test_unknown_visuals_stop():
+    assert stop_text(make(Settings="status: ready\nvisuals: photo\nmin_real_pictures: 6")) == (
+        'Stopped: channels/x.rules.md: visuals must be "photos" or "blender", not "photo".')
+
+
+def test_equals_sign_works_like_a_colon():
+    _, settings = rules.parse_rules(make(Settings="Status = ready\nvisuals=photos\nmin_real_pictures = 6"), LABEL)
+    assert settings == {"status": "ready", "visuals": "photos", "min_real_pictures": "6"}
+
+
+def test_draft_keeps_ai_headings_inside_their_section():
+    reply = draft_reply()
+    reply["sections"]["Story rules"]["text"] = "intro\n## Examples\nan example"
+    text, _ = run_draft([reply])
+    sections, _ = rules.parse_rules(text.replace("status: draft", "status: ready"), LABEL)
+    assert sections["Story rules"] == "intro\n### Examples\nan example"
+
+
+def test_fix_checks_rules_before_asking_for_a_scene():
+    from shortsmaker import cli, short_render
+    asked, checked = [], []
+    with tempfile.TemporaryDirectory() as d:
+        work = Path(d) / "out" / "strange-history" / "2026-10-22_x" / "work"
+        work.mkdir(parents=True)
+        (work / "state.json").write_text("{}", encoding="utf-8")
+        saved = cli.OUTPUT, short_render.prune_work, short_render.load_state, channel_profiles.ask_number, rules.require_rules
+        cli.OUTPUT = Path(d) / "out"
+        short_render.prune_work = lambda: None
+        short_render.load_state = lambda w: {"short": {"scenes": [{"narration": "a"}]}, "choices": [{}]}
+        channel_profiles.ask_number = lambda q, n, default=None: asked.append(q) or 1
+        rules.require_rules = lambda name: checked.append(name) or (_ for _ in ()).throw(SystemExit("draft"))
+        try:
+            try:
+                cli.fix_short()
+            except SystemExit:
+                pass
+            assert checked == ["strange-history"] and asked == ["Pick a number"], (checked, asked)
+        finally:
+            cli.OUTPUT, short_render.prune_work, short_render.load_state, channel_profiles.ask_number, rules.require_rules = saved
 
 
 def test_strange_history_prompts_unchanged():

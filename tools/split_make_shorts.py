@@ -35,7 +35,7 @@ RANGES = [(35, 150, "config"), (151, 291, "llm"), (292, 490, "channel_profiles")
           (5107, 5292, "cli")]
 OVERRIDES = {"fetch": "media_tools", "write_json": "media_tools", "duration": "media_tools",
              "video_encoder": "media_tools", "ffmpeg": "media_tools", "clock": "media_tools",
-             "MIN_USABLE": "picture_pool", "TOPIC_BACKUPS": "picture_pool",
+             "TOPIC_BACKUPS": "picture_pool",
              "fills_frame": "frame_render", "MUSIC_LUFS": "audio_mix", "music_gain": "audio_mix",
              "_last_ov": "image_sources", "_ov_lock": "image_sources",
              "film_ffmpeg": "image_sources"}  # shares wm_get's private Wikimedia rate-limit clock (_last_wm)

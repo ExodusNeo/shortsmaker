@@ -35,16 +35,18 @@ def parse_rules(text: str, label: str) -> tuple[dict[str, str], dict[str, str]]:
             raise SystemExit(f'Stopped: {label} has no "## {h}" section.')
     settings = {}
     for line in sections["Settings"].split("\n"):
-        key, sep, value = line.partition(":")
-        if sep:
-            settings[key.strip().lower()] = value.strip().lower()
+        m = re.match(r"\s*([^:=]+?)\s*[:=]\s*(.*?)\s*$", line)  # "status: ready" or "status = ready"
+        if m:
+            settings[m.group(1).lower()] = m.group(2).lower()
     if settings.get("status") != "ready":
         raise SystemExit(f'Stopped: {label} is a draft. Read it, edit anything you want, then change "status: draft" '
                          'to "status: ready".')
     if settings.get("visuals") == "blender":
         raise SystemExit(f"Stopped: {label} asks for Blender visuals, which aren't built yet.")
-    if not settings.get("min_real_pictures", "").isdigit() or int(settings["min_real_pictures"]) < 1:
-        raise SystemExit(f"Stopped: {label}: min_real_pictures must be a whole number.")
+    if settings.get("visuals") != "photos":
+        raise SystemExit(f'Stopped: {label}: visuals must be "photos" or "blender", not "{settings.get("visuals", "")}".')
+    if not re.fullmatch(r"[0-9]+", settings.get("min_real_pictures", "")) or int(settings["min_real_pictures"]) < 1:
+        raise SystemExit(f"Stopped: {label}: min_real_pictures must be a whole number above 0.")
     return sections, settings
 
 
@@ -110,7 +112,8 @@ Reply with ONLY JSON: {{"visuals": "photos", "min_real_pictures": 6,
            f"## Settings\nstatus: draft\nvisuals: {visuals}\nmin_real_pictures: {least}\n"]
     for h in wanted:
         tag = " ".join(str(got[h].get("tag") or "new").replace("--", "-").split())
-        out.append(f"## {h}\n<!-- {tag} -->\n{str(got[h]['text']).strip()}\n")
+        text = re.sub(r"^##(?!#)", "###", str(got[h]["text"]).strip(), flags=re.M)  # its own "## " would split it
+        out.append(f"## {h}\n<!-- {tag} -->\n{text}\n")
     path.write_text("\n".join(out), encoding="utf-8")
     return path
 

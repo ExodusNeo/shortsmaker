@@ -117,6 +117,7 @@ def fix_short() -> None:
     for k, f in enumerate(recent, 1):
         print(f"  {k}) {f.parent.name} / {f.name}")
     folder = recent[channel_profiles.ask_number("Pick a number", len(recent), 1) - 1]
+    rules.require_rules(folder.parent.name)  # a draft or broken rules file stops before any more questions
     state = short_render.load_state(folder / "work")
     short, choices = state["short"], state["choices"]
     for k, sc in enumerate(short["scenes"], 1):
@@ -124,7 +125,6 @@ def fix_short() -> None:
     i = channel_profiles.ask_number("Which scene?", len(short["scenes"])) - 1
     sc = short["scenes"][i]
     channel_profiles.use_channel(folder.parent.name)
-    rules.require_rules(folder.parent.name)
     ch = channel_profiles.load_channel()
     session.BRAIN = ch.get("brain") if ch.get("brain") in ("claude", "gemini") else "claude"
     print("What should change?\n  1) No AI motion (a smooth camera move instead)\n"
