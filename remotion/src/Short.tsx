@@ -69,6 +69,9 @@ export type ShortProps = {
 	cta: number | null; // when the silent subscribe button appears
 	ctaLine: string;
 	palette?: typeof theme; // this Short's colours (shortsmaker/config.py PALETTES)
+	// Shotcut timeline (shortsmaker/edit_project.py): only the pictures, or only what's drawn over them on a
+	// see-through background; unset = the whole Short
+	layer?: 'pictures' | 'graphics';
 };
 
 const ZMAX = 1.12;
@@ -135,7 +138,7 @@ const BuiltInGraphic: React.FC<{graphic: Graphic; t: number; start: number; end:
 		: p.graphic.style === 'stamp' ? <StampCard {...p} />
 		: <Callout {...p} />;
 
-export const Short: React.FC<ShortProps> = ({total, xfade, hook, scenes, flashes, words, cta, ctaLine, palette}) => {
+export const Short: React.FC<ShortProps> = ({total, xfade, hook, scenes, flashes, words, cta, ctaLine, palette, layer}) => {
 	if (palette) Object.assign(theme, palette); // before any child draws: every card reads `theme`
 	const frame = useCurrentFrame();
 	const {fps} = useVideoConfig();
@@ -148,9 +151,11 @@ export const Short: React.FC<ShortProps> = ({total, xfade, hook, scenes, flashes
 	// a transition's cover (a dot wipe, a light leak) is drawn above both scenes while it runs
 	const cut = scenes.find((s, k) => k > 0 && Math.abs(t - s.start) < transitionFor(s.transition).duration / 2);
 	const cover = cut ? transitionFor(cut.transition).render(transitionWindow(cut).p(t), inks, cut.lookSeed ?? 0).cover : null;
+	const pictures = layer !== 'graphics';
+	const graphics = layer !== 'pictures';
 	return (
-		<AbsoluteFill style={{backgroundColor: '#121218'}}>
-			{scenes.map((scene, k) => {
+		<AbsoluteFill style={{backgroundColor: pictures ? '#121218' : undefined}}>
+			{pictures && scenes.map((scene, k) => {
 				const next = scenes[k + 1];
 				const from = k === 0 ? 0 : Math.round((scene.start - transitionWindow(scene).lead) * fps);
 				// stay on screen until the next scene's transition has finished (at least today's xfade/2)
@@ -161,12 +166,12 @@ export const Short: React.FC<ShortProps> = ({total, xfade, hook, scenes, flashes
 					</Sequence>
 				);
 			})}
-			{cover ? <AbsoluteFill>{cover}</AbsoluteFill> : null}
-			{g ? <GraphicFor graphic={g} t={t} start={g.at} end={current.end} variant={variant} /> : null}
-			{current?.card ? <PersonCard card={current.card} t={t} /> : null}
-			{hook ? <HookTitle text={hook} t={t} /> : null}
+			{pictures && cover ? <AbsoluteFill>{cover}</AbsoluteFill> : null}
+			{graphics && g ? <GraphicFor graphic={g} t={t} start={g.at} end={current.end} variant={variant} /> : null}
+			{graphics && current?.card ? <PersonCard card={current.card} t={t} /> : null}
+			{graphics && hook ? <HookTitle text={hook} t={t} /> : null}
 			<Captions words={words} t={t} />
-			{current?.credit && t < current.start + 3.1 && (cta == null || t < cta) ? (
+			{graphics && current?.credit && t < current.start + 3.1 && (cta == null || t < cta) ? (
 				// shown for the first ~2.8 s of the scene, then it fades out of the picture's way
 				<div
 					style={{
@@ -178,8 +183,8 @@ export const Short: React.FC<ShortProps> = ({total, xfade, hook, scenes, flashes
 					{current.credit}
 				</div>
 			) : null}
-			{cta != null ? <SubscribeCta line={ctaLine} t={t} start={cta} end={total} /> : null}
-			<AbsoluteFill style={{backgroundColor: 'white', opacity: Math.max(0, ...flashes.map((c) => flashAlpha(t, c)))}} />
+			{graphics && cta != null ? <SubscribeCta line={ctaLine} t={t} start={cta} end={total} /> : null}
+			{graphics ? <AbsoluteFill style={{backgroundColor: 'white', opacity: Math.max(0, ...flashes.map((c) => flashAlpha(t, c)))}} /> : null}
 		</AbsoluteFill>
 	);
 };

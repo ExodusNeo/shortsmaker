@@ -147,8 +147,10 @@ def make_paper(folder: Path = REMOTION / "public" / "paper") -> None:
 
 def render_remotion(short: dict, cues: list[dict], bounds: list[float], total: float,
                     words: list[tuple[float, float, str]], work: Path, emphasis: set[float],
-                    flashes: set[float], clips: dict[int, Path], full_pics: dict[int, list] | None = None) -> Path:
-    """Render the silent video (with captions) through the Remotion project; returns the mp4."""
+                    flashes: set[float], clips: dict[int, Path], full_pics: dict[int, list] | None = None,
+                    layers: bool = False) -> Path:
+    """Render the silent video (with captions) through the Remotion project; returns the mp4. With `layers` (the
+    Shotcut timeline) it makes work/pictures.mp4 and work/graphics.mov (see-through) instead, without captions."""
     npx = shutil.which("npx")
     if not npx or not (REMOTION / "node_modules" / "remotion").exists():
         raise RuntimeError("Remotion isn't installed")
@@ -187,15 +189,22 @@ def render_remotion(short: dict, cues: list[dict], bounds: list[float], total: f
              "words": [{"start": s, "end": e, "text": t, "emphasis": s in emphasis, "line": g}
                        for g, line in enumerate(audio_mix.caption_lines(words)) for s, e, t in line]}
     out = work / "remotion.mp4"
+    # a quick high-quality intermediate encode: the final pass re-encodes it on the GPU
+    h264 = ("--x264-preset=ultrafast", "--crf=14")
+
+    def remotion(p: dict, to: Path, encode: tuple[str, ...]) -> None:
+        (work / "props.json").write_text(json.dumps(p, ensure_ascii=False), encoding="utf-8")
+        subprocess.run([npx, "remotion", "render", "src/index.ts", "Short", str(to),
+                        f"--props={work / 'props.json'}", "--log=error",
+                        "--gl=angle", "--concurrency=4", *encode],  # GPU drawing in Chrome, fewer tabs (RAM)
+                       cwd=REMOTION, check=True, timeout=3600)
 
     def render(p: dict) -> None:
-        (work / "props.json").write_text(json.dumps(p, ensure_ascii=False), encoding="utf-8")
-        subprocess.run([npx, "remotion", "render", "src/index.ts", "Short", str(out),
-                        f"--props={work / 'props.json'}", "--log=error",
-                        # GPU drawing in Chrome, fewer tabs (RAM), and a quick high-quality intermediate
-                        # encode: the final pass re-encodes it on the GPU.
-                        "--gl=angle", "--concurrency=4", "--x264-preset=ultrafast", "--crf=14"],
-                       cwd=REMOTION, check=True, timeout=3600)
+        if not layers:
+            return remotion(p, out, h264)
+        remotion({**p, "words": [], "layer": "pictures"}, work / "pictures.mp4", h264)
+        remotion({**p, "words": [], "layer": "graphics"}, work / "graphics.mov",  # ProRes 4444 keeps the alpha
+                 ("--codec=prores", "--prores-profile=4444", "--pixel-format=yuva444p10le", "--image-format=png"))
     try:
         motion.code_custom_scenes(short, scenes, work)
         # AI-invented looks/overlays/transitions; a broken one falls back to its library preset
@@ -205,4 +214,4 @@ def render_remotion(short: dict, cues: list[dict], bounds: list[float], total: f
         for p, txt in saved_gen.items():
             p.write_text(txt, encoding="utf-8")
         style_lab.restore_style_slots()
-    return out
+    return work / "pictures.mp4" if layers else out

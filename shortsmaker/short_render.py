@@ -11,7 +11,7 @@ from pathlib import Path
 from PIL import Image
 
 from shortsmaker import (
-    audio_mix, editplan, frame_render, gpu, image_sources, media_tools, motion, photo_prep, picker, plan_rules,
+    audio_mix, edit_project, editplan, frame_render, gpu, image_sources, media_tools, motion, photo_prep, picker, plan_rules,
     remotion_render, review, seo, session, style_lab,
 )
 from shortsmaker.config import FPS, H, MUSIC, OUTPUT, PALETTES, SFX, SRC, STYLE_SLOTS, W, hex_rgb
@@ -222,21 +222,32 @@ def render(short: dict, ch: dict, folder: Path, state: dict | None = None, fix_r
                 sc["sound"] = None
     events = audio_mix.sfx_events(short, cues, bounds, renderer == "remotion")
     fmt = "aformat=sample_rates=44100:channel_layouts=stereo"
-    graph = ["[0:v]null[v]" if renderer == "remotion" else "[0:v]subtitles=captions.ass[v]",  # Remotion draws its own captions
+    # Remotion draws its own captions; the Python video is also kept without them (clean.mp4) for edit_project
+    graph = ["[0:v]null[v]" if renderer == "remotion" else "[0:v]split[raw][clean];[raw]subtitles=captions.ass[v]",
              f"[1:a]{fmt},asplit=2[voice][key]" if music else f"[1:a]{fmt}[voice]"]
     mix = ["[voice]"]
     inputs = ["-i", "voice.wav"]
     if music:
         inputs += ["-stream_loop", "-1", "-i", str(music)]
         graph += [f"[2:a]{fmt},volume={audio_mix.music_gain(music):.4f},afade=t=in:d=0.1,afade=t=out:st={total - 2:.2f}:d=2[m]",
-                  "[m][key]sidechaincompress=threshold=0.03:ratio=6:attack=15:release=400[music]"]
+                  "[m][key]sidechaincompress=threshold=0.03:ratio=6:attack=15:release=400,asplit[music][music_stem]"]
         mix.append("[music]")
+    fx = []
     for e in events:
         k = 1 + inputs.count("-i")  # ffmpeg input index; input 0 is the video
         src = SFX / e["sound"]
         inputs += ["-i", str(src if src.suffix else src.with_suffix(".wav"))]
         graph.append(f"[{k}:a]{fmt},volume={e['gain']},adelay={int(e['t'] * 1000)}:all=1[s{k}]")
-        mix.append(f"[s{k}]")
+        fx.append(f"[s{k}]")
+    if fx:  # summed apart first (same total: amix with normalize=0 only adds) so they can be saved as one track
+        graph.append("".join(fx) + f"amix=inputs={len(fx)}:normalize=0,asplit[fx][fx_stem]")
+        mix.append("[fx]")
+    # music.wav / sfx.wav: the mix's own parts before the final loudness pass, for edit_project's sound tracks
+    stems = []
+    for label, name in (("[music_stem]", "music.wav"), ("[fx_stem]", "sfx.wav")):
+        (work / name).unlink(missing_ok=True)  # a track left from an earlier round mustn't reach the timeline
+        if label in ";".join(graph):
+            stems += ["-map", label, "-c:a", "pcm_f32le", "-t", f"{total:.2f}", name]
     graph.append("".join(mix) + f"amix=inputs={len(mix)}:normalize=0,"
                  "loudnorm=I=-14:TP=-1.5:LRA=11,"  # -14 LUFS = YouTube's playback level
                  # one-pass loudnorm overshoots (an Atari Short peaked at -0.1 dB): a 4x-oversampled limiter
@@ -250,7 +261,9 @@ def render(short: dict, ch: dict, folder: Path, state: dict | None = None, fix_r
          "-filter_complex", ";".join(graph), "-map", "[v]", "-map", "[a]",
          *media_tools.video_encoder(), "-pix_fmt", "yuv420p",
          "-c:a", "aac", "-b:a", "192k", "-t", f"{total:.2f}", "-movflags", "+faststart",
-         "../short.mp4"], stdin=subprocess.PIPE if renderer == "python" else None, cwd=work)
+         "../short.mp4", *(["-map", "[clean]", *media_tools.video_encoder(), "-pix_fmt", "yuv420p", "-t", f"{total:.2f}",
+                            "clean.mp4"] if renderer == "python" else []), *stems],
+        stdin=subprocess.PIPE if renderer == "python" else None, cwd=work)
     if renderer == "python":
         frame = frame_render.frame_maker(images, short["scenes"], short["hook_text"], short["cta_line"], bounds, cues, clips)
         frame_render.write_frames(frame, len(images), bounds, total, proc.stdin, flashes)
@@ -315,5 +328,19 @@ def render(short: dict, ch: dict, folder: Path, state: dict | None = None, fix_r
         st["short"]["auto_fixed"] = (st["short"].get("auto_fixed") or []) + [
             f"round {fix_round + 1}: {note}" for note in review.apply_review_fixes(st, work, fixes, opener)]
         render(st["short"], ch, folder, st, fix_round + 1)
-    elif (fixes or opener) and fix_round:
+        return
+    if (fixes or opener) and fix_round:
         print(f"  stopped fixing after {AUTO_FIX_ROUNDS} rounds: the CHECK lines above are left for you")
+    if not issues:
+        edit_project.remove(folder)  # an older timeline would no longer match this video
+        return
+    try:  # what the fix rounds left: a Shotcut timeline to fix it by hand
+        videos = [("V1", work / "clean.mp4")]  # Python renderer: pictures and graphics stay one video
+        if renderer == "remotion":  # same props from the cached code: pictures and graphics apart, no captions
+            remotion_render.render_remotion(short, cues, bounds, total, [], work, emphasis, flashes, clips,
+                                            {i: c.get("full_pics") for i, c in enumerate(choices)}, layers=True)
+            videos = [("V1 pictures", work / "pictures.mp4"), ("V2 graphics", work / "graphics.mov")]
+        edit_project.make(folder, work, bounds, issues, videos)
+        print(f"  to fix the CHECK lines yourself: double-click {folder.name}\\edit_in_shotcut.bat")
+    except Exception as e:
+        print(f"    couldn't make the Shotcut timeline ({e})")
