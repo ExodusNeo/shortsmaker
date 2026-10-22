@@ -103,6 +103,22 @@ def test_missing_blender_raises():
             assert "not found" in str(e), e
 
 
+def test_changed_blender_code_redraws():
+    # an update to the drawing code must not reuse frames drawn by the old code
+    with tempfile.TemporaryDirectory() as d:
+        d = Path(d)
+        exe, log = fake_blender(d)
+        s, old = short(3), blender_render.code_version
+        try:
+            blender_render.code_version = lambda: "v1"
+            blender_render.render_clips(s, [0.0, 1.0, 2.0, 3.0], [], d / "work", exe)
+            blender_render.code_version = lambda: "v2"
+            blender_render.render_clips(s, [0.0, 1.0, 2.0, 3.0], [], d / "work", exe)
+        finally:
+            blender_render.code_version = old
+        assert log.read_text().count("run") == 2
+
+
 if __name__ == "__main__":
     names = [n for n in sorted(globals()) if n.startswith("test_") and (len(sys.argv) < 2 or n in sys.argv[1:])]
     failed = 0

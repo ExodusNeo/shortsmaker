@@ -3,6 +3,7 @@ plan + each scene's frames and failure peak), run headless Blender on blender/bu
 into one clip per scene (work/blender{i}.mp4) that the renderers play like real film. Unchanged build.json and all
 frames present: the frames are reused (fix rounds, re-runs). Blender failing twice raises BlenderFailed."""
 
+import hashlib
 import json
 import subprocess
 from pathlib import Path
@@ -16,6 +17,14 @@ SCRIPT = config.ROOT / "blender" / "build_scene.py"
 
 class BlenderFailed(RuntimeError):
     """Blender couldn't draw the Short (missing, crashed or timed out twice)."""
+
+
+def code_version() -> str:
+    """A fingerprint of the drawing code (blender/*.py): frames drawn by older code are never reused."""
+    h = hashlib.sha1()
+    for f in sorted(SCRIPT.parent.glob("*.py")):
+        h.update(f.read_bytes())
+    return h.hexdigest()[:12]
 
 
 def scene_frames(bounds: list[float], fps: int = FPS) -> list[tuple[int, int]]:
@@ -57,7 +66,7 @@ def render_clips(short: dict, bounds: list[float], all_words: list, work: Path, 
     work.mkdir(parents=True, exist_ok=True)
     frames = work / "blender_frames"
     ranges, pk = scene_frames(bounds), peaks(short, bounds, all_words)
-    job = {"plan": short["build"], "fps": FPS, "frames_dir": str(frames), "only_frames": None,
+    job = {"plan": short["build"], "code": code_version(), "fps": FPS, "frames_dir": str(frames), "only_frames": None,
            "scenes": [{"start": bounds[i], "end": bounds[i + 1], "first": a, "last": b, "peak": pk[i],
                        "peak_frame": round(pk[i] * FPS) + 1} for i, (a, b) in enumerate(ranges)]}
     text = json.dumps(job, ensure_ascii=False, sort_keys=True)
