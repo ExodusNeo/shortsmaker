@@ -172,9 +172,25 @@ def test_draft_stops():
         '"status: ready".')
 
 
-def test_blender_stops():
-    assert stop_text(make(Settings="status: ready\nvisuals: blender\nmin_real_pictures: 6")) == (
-        "Stopped: channels/x.rules.md asks for Blender visuals, which aren't built yet.")
+def test_blender_needs_a_build_plan_section():
+    blender = "status: ready\nvisuals: blender\nmin_real_pictures: 1"
+    assert stop_text(make(Settings=blender)) == 'Stopped: channels/x.rules.md has no "## Build plan" section.'
+    sections, settings = rules.parse_rules(make(Settings=blender) + "## Build plan\nplan it\n", LABEL)
+    assert settings["visuals"] == "blender" and sections["Build plan"] == "plan it"
+
+
+def test_photo_channels_dont_need_a_build_plan():
+    sections, _ = rules.parse_rules(make(), LABEL)
+    assert "Build plan" not in sections
+
+
+def test_draft_blender_channel_needs_build_plan():
+    text, calls = run_draft([draft_reply(visuals="blender"), draft_reply(visuals="blender")])
+    assert text is None and len(calls) == 3 and "Build plan" in calls[-1], calls[-1]
+    good = draft_reply(visuals="blender")
+    good["sections"]["Build plan"] = {"tag": "new", "text": "pick a template"}
+    text, calls = run_draft([good])
+    assert "## Build plan" in text and "visuals: blender" in text and "pick a template" in text
 
 
 def test_bad_min_pictures_stops():

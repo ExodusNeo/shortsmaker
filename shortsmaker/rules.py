@@ -11,13 +11,14 @@ from shortsmaker.config import CHANNELS
 
 REQUIRED = ("Settings", "Topic picking", "Story rules", "Writing for the picture", "Lessons from our numbers",
             "Opening picture", "Picture picking", "Directing", "First-second check", "AI paintings")
+BLENDER_SECTION = "Build plan"  # the engineer's instructions, needed only with visuals: blender
 HEADING = re.compile(r"^##(?!#)\s*(.*?)\s*$")
 TAG = re.compile(r"^\s*<!--.*?-->\s*", re.S)  # "<!-- copied from strange-history -->": for the owner, not the AI
 
 
 def parse_rules(text: str, label: str) -> tuple[dict[str, str], dict[str, str]]:
     """(sections by canonical heading, settings) of a rules file; `label` names the file in stop messages."""
-    canon = {h.lower(): h for h in REQUIRED}
+    canon = {h.lower(): h for h in REQUIRED + (BLENDER_SECTION,)}
     sections: dict[str, str] = {}
     name, lines = None, []
     for line in text.lstrip("﻿").replace("\r\n", "\n").split("\n") + ["## "]:  # the sentinel closes the last
@@ -30,20 +31,18 @@ def parse_rules(text: str, label: str) -> tuple[dict[str, str], dict[str, str]]:
                 raise SystemExit(f'Stopped: {label} has "## {name}" twice.')
             sections[name] = TAG.sub("", "\n".join(lines), count=1).strip("\n")
         name, lines = canon.get(m.group(1).lower(), m.group(1)), []
-    for h in REQUIRED:
-        if not sections.get(h, "").strip():
-            raise SystemExit(f'Stopped: {label} has no "## {h}" section.')
     settings = {}
-    for line in sections["Settings"].split("\n"):
+    for line in sections.get("Settings", "").split("\n"):
         m = re.match(r"\s*([^:=]+?)\s*[:=]\s*(.*?)\s*$", line)  # "status: ready" or "status = ready"
         if m:
             settings[m.group(1).lower()] = m.group(2).lower()
+    for h in REQUIRED + ((BLENDER_SECTION,) if settings.get("visuals") == "blender" else ()):
+        if not sections.get(h, "").strip():
+            raise SystemExit(f'Stopped: {label} has no "## {h}" section.')
     if settings.get("status") != "ready":
         raise SystemExit(f'Stopped: {label} is a draft. Read it, edit anything you want, then change "status: draft" '
                          'to "status: ready".')
-    if settings.get("visuals") == "blender":
-        raise SystemExit(f"Stopped: {label} asks for Blender visuals, which aren't built yet.")
-    if settings.get("visuals") != "photos":
+    if settings.get("visuals") not in ("photos", "blender"):
         raise SystemExit(f'Stopped: {label}: visuals must be "photos" or "blender", not "{settings.get("visuals", "")}".')
     if not re.fullmatch(r"[0-9]+", settings.get("min_real_pictures", "")) or int(settings["min_real_pictures"]) < 1:
         raise SystemExit(f"Stopped: {label}: min_real_pictures must be a whole number above 0.")
@@ -69,6 +68,8 @@ PURPOSE = {  # what each section is for, told to the AI that drafts a new channe
     "First-second check": "what the first two seconds should show, finishing the sentence 'check whether another "
                           "scene's picture would open better: ...'",
     "AI paintings": "how an AI painting prompt is written: subject, setting, light, art medium, what to avoid",
+    BLENDER_SECTION: "only for visuals blender: how the engineer plans each Short's 3D build (which structure "
+                     "template, the part that failed, the failure, the camera beat per scene, labels)",
 }
 
 
@@ -83,7 +84,7 @@ def draft_rules(ch: dict, name: str) -> Path:
     prompt = f"""You set up the rules for a new faceless YouTube Shorts channel. Niche: {ch.get('niche')}.
 Audience: {ch.get('audience', '')}. Tone: {ch.get('tone', '')}.
 Its scripts, picture choices and edits are planned by AI with these rule sections:
-{chr(10).join(f"- {h}: {PURPOSE[h]}" for h in wanted)}
+{chr(10).join(f"- {h}: {PURPOSE[h]}" for h in wanted + [BLENDER_SECTION])}
 Our other channels' rules files: {json.dumps(others, ensure_ascii=False)}
 For every section: when another channel's section fits this niche, copy it word for word (tag "copied from
 <channel>"); when part of it fits, adapt it (tag "adapted from <channel>: <what changed, one line>"); otherwise
@@ -97,7 +98,8 @@ Reply with ONLY JSON: {{"visuals": "photos", "min_real_pictures": 6,
         data = llm.ask_ai(prompt + (f"\nYour last reply was unusable: {reason}. Send every section." if reason else ""),
                           fatal=False)
         got = data.get("sections") if isinstance(data, dict) else None
-        bad = [h for h in wanted if not (isinstance(got, dict) and isinstance(got.get(h), dict)
+        need = wanted + ([BLENDER_SECTION] if isinstance(data, dict) and data.get("visuals") == "blender" else [])
+        bad = [h for h in need if not (isinstance(got, dict) and isinstance(got.get(h), dict)
                                          and str(got[h].get("text") or "").strip())]
         if not bad:
             break
@@ -110,7 +112,7 @@ Reply with ONLY JSON: {{"visuals": "photos", "min_real_pictures": 6,
     out = [f"# Rules: {name}\n\nEach section is read by its heading; edit the text under it. Change status to ready "
            "once you've read it.\n",
            f"## Settings\nstatus: draft\nvisuals: {visuals}\nmin_real_pictures: {least}\n"]
-    for h in wanted:
+    for h in need:
         tag = " ".join(str(got[h].get("tag") or "new").replace("--", "-").split())
         text = re.sub(r"^##(?!#)", "###", str(got[h]["text"]).strip(), flags=re.M)  # its own "## " would split it
         out.append(f"## {h}\n<!-- {tag} -->\n{text}\n")
