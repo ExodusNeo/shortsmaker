@@ -58,7 +58,7 @@ def plan_with(beats: list[str], **over) -> dict:
 def test_truss_build_and_zoom_frames():
     plan = plan_with(["wide", "build", "build", "zoom"])
     plan["focus"]["label"] = "GUSSET PLATE U10"
-    imgs = list(render(plan, [1.0, 1.0, 1.0, 1.5]).values())
+    imgs = list(render(plan, [1.0, 1.0, 1.0, 1.5], [15, 45, 75, 135]).values())  # the zoom's last frame: arrived
     assert all(im.size == (1080, 1920) for im in imgs)
     wide, build1, build2, zoom = imgs
     assert count(zoom, RED) >= 400, count(zoom, RED)  # the focus part shows red when zoomed in
