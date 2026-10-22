@@ -5,6 +5,8 @@ from pathlib import Path
 
 
 CHANNEL = RESEARCH = LOG = Path()  # this batch's profile files, set by use_channel()
+RULES: dict[str, str] = {}  # this channel's rules file by heading, and its "## Settings" (rules.load_rules)
+RULE_SETTINGS: dict[str, str] = {}
 YELLOW = (255, 221, 0)  # this Short's accent colour: render() sets it from the Short's palette
 EMPHASIS = (255, 160, 0)  # the glowing emphasis word in the captions
 
