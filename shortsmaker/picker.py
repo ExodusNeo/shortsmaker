@@ -75,11 +75,7 @@ cropped off to remove standard bottom subtitles; if a frame STILL has burned-in 
 "subscribe" text visible inside the cropped image, DO NOT pick it (normal in-game UI/HUDs are fine).
 Scene 1 is the hook that decides whether viewers swipe away: give it the single most striking,
 eye-catching candidate that fits the story (REAL FILM first whenever it shows the subject), even when
-another picture matches its words more literally. It must be from the story's own time (never a modern
-museum display, replica, statue, reenactment or present-day photo), ideally the main character's face, and
-must raise the hook's question, not answer it: never a picture that shows the twist or the whole story at
-once (a baboon at the signal levers tells the whole baboon-signalman story; a museum's inflatable tank
-gives away that the army was fake).
+another picture matches its words more literally. {session.RULES["Picture picking"]}
 Candidates whose source says REAL FILM are frames from real video footage (Internet
 Archive, Wikimedia Commons, Pixabay, NASA): picking one plays a clip of that real video in the scene
 and automatically credits the owner on screen. Prefer REAL FILM over still pictures whenever a video

@@ -10,7 +10,7 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE.parent))
 from shortsmaker import (  # noqa: E402
-    channel_profiles, llm, logbook, media_tools, picture_pool, review, rules, session, style_lab, writing,
+    channel_profiles, llm, logbook, media_tools, picker, picture_pool, review, rules, session, style_lab, writing,
 )
 
 # a frozen copy of the strange-history profile: the live file's done_topics grow with every run
@@ -45,11 +45,17 @@ REPLIES = {  # canned AI replies, chosen by the prompt's opening words
                                                      "hook": False, "reject": None}]},
     "You judge the first two seconds": {"score": 8, "why": "strong", "open_with_scene": None},
     "Some AI paintings": {"prompts": []},
+    "You are the visual editor": None,  # the picker stops after its prompt (the rest downloads pictures)
 }
 KEYS = {"You choose stories": "topics", "You write YouTube Shorts narration": "writer",
         "You are the script editor": "editor", "You are the director": "director",
         "You are a strict fact-checker": "fact_check", "You are the picture researcher": "picture_list",
-        "You judge the first two seconds": "first_second", "Some AI paintings": "repaint"}
+        "You judge the first two seconds": "first_second", "Some AI paintings": "repaint",
+        "You are the visual editor": "picker"}
+
+
+class StopPicker(Exception):
+    pass
 
 
 def capture_prompts() -> dict[str, str]:
@@ -62,6 +68,8 @@ def capture_prompts() -> dict[str, str]:
     def ask(prompt, fatal=True, read_dir=None, brain=None, bulk=False):
         start = next(k for k in REPLIES if prompt.startswith(k))
         got.setdefault(KEYS[start], prompt.replace(tmp, "<TMP>").replace(tmp.replace("\\", "/"), "<TMP>"))
+        if REPLIES[start] is None:
+            raise StopPicker
         return json.loads(json.dumps(REPLIES[start]))
 
     def prepare(s, folder=None):
@@ -69,7 +77,7 @@ def capture_prompts() -> dict[str, str]:
         return True
 
     saved = (llm.ask_ai, channel_profiles.trend_research, logbook.logbook_results, picture_pool.prepare_topic,
-             style_lab.style_library, picture_pool.contact_sheets, media_tools.ffmpeg)
+             style_lab.style_library, picture_pool.contact_sheets, media_tools.ffmpeg, picture_pool.gather_pool)
     llm.ask_ai = ask
     channel_profiles.trend_research = lambda ch: [{"title": "T", "views": 1000, "channel": "C"}]
     logbook.logbook_results = lambda: "- Example Short | 1,000 views"
@@ -77,6 +85,7 @@ def capture_prompts() -> dict[str, str]:
     style_lab.style_library = lambda kind=None: [{"name": "silent", "kind": "look", "description": "silent film", "fits": "old stories"}]
     picture_pool.contact_sheets = lambda cands, folder: [Path(tmp) / "sheet1.jpg"]
     media_tools.ffmpeg = lambda *a, cwd: (Path(cwd) / a[-1]).write_bytes(b"jpg")
+    picture_pool.gather_pool = lambda *a, **k: [{"title": "File:Jack.jpg", "source": "Commons", "url": "u1"}]
     try:
         writing.write_scripts(json.loads(json.dumps(CH)), 1)
         picture_pool.catalog_pool({"topic": "Jack the baboon signalman", "subject": "Jack (baboon)"},
@@ -89,9 +98,14 @@ def capture_prompts() -> dict[str, str]:
         short = {"title": "The Baboon Who Worked the Railway", "topic": "Jack the baboon signalman", "scenes": scenes}
         review.first_second_check(Path(tmp) / "short.mp4", short, choices, board, Path(tmp))
         review.rewrite_paint_prompts(short, {2: "garbled sign"})
+        pick_scenes = [dict(sc, person=None, image_search="Jack baboon") for sc in scenes]
+        try:
+            picker.choose_images({"title": short["title"], "scenes": pick_scenes}, Path(tmp), json.loads(json.dumps(CH)))
+        except StopPicker:
+            pass
     finally:
         (llm.ask_ai, channel_profiles.trend_research, logbook.logbook_results, picture_pool.prepare_topic,
-         style_lab.style_library, picture_pool.contact_sheets, media_tools.ffmpeg) = saved
+         style_lab.style_library, picture_pool.contact_sheets, media_tools.ffmpeg, picture_pool.gather_pool) = saved
     return got
 
 

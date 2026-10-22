@@ -85,6 +85,14 @@ Once 20 or more Shorts are out, replace this section with what our own numbers s
   - raise a question instead of answering it. It must not show the twist or the whole story at once: a screenshot of Mew's sprite in its hidden spot tells the whole secret, and a side-by-side of the cut and final versions gives away the reveal.
   Best: the main character's face, or a strange in-game moment whose explanation the viewer has to wait for;
 
+## Picture picking
+<!-- adapted from strange-history by Claude after the code review (this section was added to the rules later): the opener comes from the game itself or its real making -->
+It must come from the game itself or its real making (the right game, version and platform; never a YouTuber's
+thumbnail, a facecam, a watermark, a meme, fan art or a modern merch shot), ideally the main character's face or
+the strange in-game moment, and must raise the hook's question, not answer it: never a picture that shows the
+twist or the whole story at once (Mew's sprite in its hidden spot tells the whole secret; a side-by-side of the
+cut and final versions gives away the reveal).
+
 ## Directing
 <!-- adapted from strange-history: picture bans and search query examples changed to games; no-commentary footage preferred; gaming shot example -->
 - pic = the number of the real picture from that Short's "pictures" list that shows this scene best, or null when none does.

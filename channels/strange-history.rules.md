@@ -89,6 +89,14 @@ video watched) kept their main question open until the last scene and made every
   a museum's inflatable tank gives away that the army was fake). Best: the main character's face or a
   strange moment whose explanation the viewer has to wait for;
 
+## Picture picking
+<!-- strange-history's original rules, moved from the code 2026-10-22 -->
+It must be from the story's own time (never a modern
+museum display, replica, statue, reenactment or present-day photo), ideally the main character's face, and
+must raise the hook's question, not answer it: never a picture that shows the twist or the whole story at
+once (a baboon at the signal levers tells the whole baboon-signalman story; a museum's inflatable tank
+gives away that the army was fake).
+
 ## Directing
 <!-- strange-history's original rules, moved from the code 2026-10-22 -->
 - pic = the number of the real picture from that Short's "pictures" list that shows this scene best, or null

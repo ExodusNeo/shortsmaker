@@ -10,7 +10,7 @@ from shortsmaker import llm, session
 from shortsmaker.config import CHANNELS
 
 REQUIRED = ("Settings", "Topic picking", "Story rules", "Writing for the picture", "Lessons from our numbers",
-            "Opening picture", "Directing", "First-second check", "AI paintings")
+            "Opening picture", "Picture picking", "Directing", "First-second check", "AI paintings")
 HEADING = re.compile(r"^##(?!#)\s*(.*?)\s*$")
 TAG = re.compile(r"^\s*<!--.*?-->\s*", re.S)  # "<!-- copied from strange-history -->": for the owner, not the AI
 
@@ -61,6 +61,8 @@ PURPOSE = {  # what each section is for, told to the AI that drafts a new channe
     "Writing for the picture": "how the writer ties lines to what can be shown on screen",
     "Lessons from our numbers": "what the channel's own YouTube numbers taught (a new channel: what to watch for)",
     "Opening picture": "the picture checker's rules for a picture's fit (era_ok), sharpness and whether it can open the Short",
+    "Picture picking": "what the visual editor wants for scene 1's picture; it follows \"Scene 1 is the hook: give it "
+                       "the single most striking candidate that fits the story\"",
     "Directing": "the director's rules for picking each scene's picture, search queries and shot notes, with examples",
     "First-second check": "what the first two seconds should show, finishing the sentence 'check whether another "
                           "scene's picture would open better: ...'",
