@@ -33,6 +33,18 @@ def test_every_aligned_word_is_in_the_aligner_alphabet():
         assert parts and all(p and set(p) <= allowed for p in parts), parts
 
 
+COUNTED = {  # shortsmaker/gpu.py spoken_count() must give the same counts (tests/test_story.py checks that side)
+    "In 1932, the army didn't win - Köpenick & co.": 9,
+    "Emu War: 'The gun jammed!' 12 kills — 1,000 emus; Meredith's “army”.": 11,
+    "He paid $4,500 - a fortune - in the 1880s.": 8,
+}
+
+
+def test_caption_word_counts_match_the_scene_splitter():
+    for text, n in COUNTED.items():
+        assert len(align_words(text)) == n, (text, len(align_words(text)))
+
+
 if __name__ == "__main__":
     tests = [v for k, v in dict(globals()).items() if k.startswith("test_")]
     for t in tests:

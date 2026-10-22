@@ -1,6 +1,7 @@
 """Topics -> Wikipedia research -> writer -> editor -> director -> fact check."""
 
 import json
+import re
 import shutil
 import urllib.parse
 from pathlib import Path
@@ -11,6 +12,53 @@ from shortsmaker import (
 from shortsmaker.config import (
     CUSTOM_KINDS, DOC_KINDS, FULL_TYPES, ICONS, MAX_FULL_PLANNED, MOODS, MOVES, MOVE_NAMES, PALETTES, SHAPES,
 )
+
+
+# How a story is told (2026-10-22, owner asked after average % viewed fell under 50%). From reading the scripts of
+# Shorts that hold viewers (a 2M-view Mike the headless chicken Short on a strange-history channel like ours, Zack
+# D. Films' true stories) against ours: Studio curves showed ours losing most viewers 4-12 s in and sliding to the
+# end, while our two best (Great Stink, Emperor Norton) kept the main question open to the last scene. The writer
+# and the editor both get these rules; story_problems() enforces the checkable ones.
+STORY_RULES = """- How to tell it (learned from the true-story Shorts that hold viewers best; follow it closely):
+  hook (scene 1): viewers decide in one second whether to swipe. OPEN INSIDE THE STORY'S STRANGEST MOMENT, told
+  as it happens, not as a summary: "A passenger looked out the train window and saw a baboon working the
+  signals." / "Halfway through the race, the jockey died, and his horse kept running." It shows WHAT is happening
+  and holds back WHY, so the viewer needs the answer. Weak: a summary that tells the whole story at once ("A
+  railway once hired a baboon.", "Australia's army once lost a war to birds."): once the viewer knows the story,
+  nothing is left to stay for. The first sentence: at most 12 words, understood with no context, never a
+  greeting, a setup, a date or a name nobody knows yet. The opening picture already shows the subject, so the
+  words add what it can't. If the story is famous, open on its least-known moment. Tell it through the
+  main_character ("He...", "This baboon...", their name once they act). Draft 3 first sentences in
+  hook_options, each from a different hook family (in-the-moment scene, result first, stakes, contrarian
+  claim, before/after), then open scene 1 with the strongest.
+  ONE STORY, NOT A LIST OF FACTS: link every beat to the one before with "but", "so" or "you see" (a
+  complication or a consequence), never "and then". If the beats could be reordered without breaking
+  anything, it is a list: rewrite it.
+  scene 2 deepens the mystery or promises something bigger ("But the baboon had a very good reason to be
+  there."), never a date or a recap.
+  background only as the answer to a question the viewer already has, brought in with "you see" right when it
+  explains something ("You see, the signalman had lost both legs..."), never as a timeline ("In 1852, he...",
+  "Japan declared him dead in 1959."). No line starts with a date; a year only when it matters, mid-sentence.
+  Names only for people who act in the story.
+  escalate: each beat stranger or bigger than the last. Concrete, physical details (what people saw, heard,
+  held), told like a friend at a bar, with one or two dry, wry asides that make it fun (never about death or
+  suffering).
+  payoff LAST: the answer to the hook's question (the reveal or twist) is the final scene or the final two,
+  and the Short ends there: no epilogue after it, no "follow for more" (an on-screen subscribe button and the
+  pinned comment handle that). Where it fits, the reveal echoes the hook so the ending loops into a rewatch.
+  Example of the style (a story we already covered; never reuse its wording), one picture per scene:
+  ["A passenger looked out the train window", "and saw a baboon working the railway signals.",
+  "He complained, so the railway sent officials to investigate.", "But the baboon had a very good reason to be there.",
+  "You see, the signalman, James Wide,", "had lost both legs in a fall between two train cars.",
+  "So he bought a baboon named Jack", "and taught him the code: so many whistles, that lever.",
+  "The officials didn't fire Jack. They gave him an exam.", "Whistle after whistle, he never pulled a wrong lever.",
+  "So the railway hired him: twenty cents a day", "and half a bottle of beer every week.",
+  "In nine years on the job, he never made a single mistake."]"""
+# The voice reads each run of scenes that makes whole sentences in one take (gpu.sentence_groups), so a scene may
+# end mid-sentence; before this, 4-10 word scenes forced choppy fragments ("He called them enemy tricks.").
+SCENE_CUTS = """Cut where the picture would change, even in the middle of a
+  sentence (the narrator reads each sentence in one take across the cuts): at a natural pause, after a comma or
+  before "but", "so", "and" or "who", never between "the" and its noun."""
 
 
 def length_plan() -> tuple[int, int, int, int, str]:
@@ -46,9 +94,10 @@ Learn from these before choosing topics and writing. "Stayed to watch" shows whe
 to the end (over 100% means rewatches). Do more of what the best ones share (kinds of topic, hook
 patterns, story shapes) and less of what the weakest share; read the owner's notes too. With only a
 few Shorts, treat this as hints, not rules. Judge only entries with enough views (the ones marked "Too few
-views to judge" say little). The weak spot so far is the first second: Shorts the feed pushed still lost
-4-8 of every 10 viewers there, so compare the hook lines and opening pictures of the Shorts that kept the
-most viewers with those that kept the fewest.
+views to judge" say little). Two weak spots: the first second (Shorts the feed pushed still lost 4-8 of every
+10 viewers there) and what follows it: the retention curves of most Shorts dropped hardest 4-12 seconds in
+and kept sliding to the end, while the two that held best (Great Stink, Emperor Norton: about 90% of the
+video watched) kept their main question open until the last scene and made every beat stranger than the last.
 """
     if topics:
         what = f"Use exactly these {len(topics)} topics, in this order: {topics}"
@@ -65,7 +114,8 @@ most viewers with those that kept the fewest.
 {trend_text}
 {what}
 Viewers decide in one second whether to swipe, so pick stories whose single most shocking fact can be
-said in 8 words or fewer that a stranger understands instantly (e.g. "A dead man won this horse race.").
+said in 8 words or fewer that a stranger understands instantly (e.g. "A dead man won this horse race."),
+with a strange moment the Short can open inside of and an answer or twist it can save for the very end.
 Every Short needs a MAIN CHARACTER: one named person or animal the story follows, with a real photo or
 portrait of them. Our Shorts built around one strange person or animal (Jack the baboon, Violet Jessop,
 Emperor Norton, Lord Byron and his bear, Hiroo Onoda, Mike the headless chicken, the emus) were all pushed by
@@ -136,42 +186,9 @@ Reply with ONLY JSON: {{"shorts": [{{"topic": "...", "character": "...", "subjec
 {trend_text}
 Write one Short on each topic below, using the Wikipedia research given with it.
 Rules for each Short:
-- {lo}-{hi} spoken words (about {secs} seconds: story Shorts hold viewers best under ~50 s), simple words a 5th grader understands.
-- Structure, written like a documentary editor would cut it:
-  hook (scene 1): viewers decide in one second whether to swipe. Its first sentence is 8 words or
-  fewer: a concrete, surprising claim understood with no context that OPENS A QUESTION the viewer
-  needs answered (how? why? what happened next?). Show the surprise, hold back the explanation.
-  The opening picture already shows the subject, so the words must add what the picture can't: the
-  stakes, the contradiction, the strange part. Good: "Parliament nearly fled London over one smell."
-  (why?), "A broke man crowned himself Emperor of America." (and then?). Weak: "A railway once hired
-  a baboon." over a photo of a baboon at the levers: the line and picture tell the whole story, so
-  nothing is left to stay for (that Short lost 3 of 4 viewers in the first second); better: "This
-  signalman never made one mistake in nine years." over an opening picture that doesn't show the
-  baboon yet (the reveal comes a few scenes later). Never a setup, a greeting,
-  a date first, a name nobody knows yet, or a technical detail. Tell the story through its
-  main_character: the hook is about them ("This man...", "This baboon..."), and the story follows
-  what they did and what happened to them. Draft 3 first sentences in hook_options, each from a
-  different hook family (curiosity gap, result first, stakes, contrarian claim, before/after), then
-  open scene 1 with the strongest. Scene 1 is that sentence plus at most one short line.
-  confirmation (scene 2): one concrete, showable detail that proves the hook's claim is real (a
-  record, a number, a witness, an object), without answering the hook's question.
-  open loop right after: promise a twist ("but that wasn't the strangest part").
-  scenes 2-3 keep moving FORWARD: they are where most viewers leave (on every one of our Shorts the
-  retention curve holds through the hook, then drops hardest 4-12 seconds in, right where the script
-  rewound to background: "In 1852, Joshua Norton tried to corner the rice market.", "James Wide bought
-  Jack at a market."). Our Short that went forward instead ("And that stink hid a far deadlier secret in
-  the same water.") lost the fewest. So after the hook: raise the stakes or show what happened next;
-  never start a sentence with a date or with a name the viewer hasn't met yet; give background only as
-  a half-line at the moment the story needs it.
-  rising tension, drip-fed: every scene adds one new concrete fact, cause then effect, no filler.
-  Answer each small question within a scene or two and raise the next one, so viewers always have
-  one open question; the hook's main question stays open until the payoff.
-  re-hook around the middle: a turn that raises the stakes ("then it got worse").
-  payoff: the twist, then ONE last line that calls back to the hook's words or image, so the
-  ending loops into the opening on a rewatch. End there: no "follow for more", no outro (an
-  on-screen subscribe button and the pinned comment handle engagement).
-- Never repeat yourself: every line adds something new. Apart from that one callback to the hook,
-  no phrase of 3+ words may appear twice, and the callback must not reuse the previous scene's wording.
+- {lo}-{hi} spoken words (about {secs} seconds), simple words a 5th grader understands.
+{STORY_RULES}
+- Never repeat yourself: every line adds something new; no phrase of 3+ words may appear twice.
 - Write for the picture: every scene must be about something a camera could show (a person,
   place, object, document or crowd), never an abstract line like "this changed everything". If a
   line has nothing to show, rewrite it around a concrete detail.
@@ -184,9 +201,9 @@ Rules for each Short:
 - shape: the story's shape, one of {SHAPES}. Not one of the channel's last ones
   ({ch.get('recent_shapes', [])}), and a different one for each Short in this batch.
 - scenes: the narration split into {s_lo}-{s_hi} short scenes of 4-{channel_profiles.SCENE_WORDS} words (about 3 seconds: each
-  scene gets its own picture, and a new picture every ~3 seconds keeps viewers watching), cutting where the
-  picture would naturally change: one image per scene. Only a scene that needs time on one picture (a trip
-  between places, a big number, a document, several things that connect) may run up to {channel_profiles.LONG_SCENE_WORDS} words.
+  scene gets its own picture, and a new picture every ~3 seconds keeps viewers watching). {SCENE_CUTS}
+  Only a scene that needs time on one picture (a trip between places, a big number, a document, several
+  things that connect) may run up to {channel_profiles.LONG_SCENE_WORDS} words.
 - title: draft (refined later with real search data): under 60 characters, main keyword early, no "#shorts".
 - thumbnail_text: 2-4 punchy words.
 - hook_text: 2-4 words shown big over the first second, for viewers watching with the sound off:
@@ -264,12 +281,17 @@ def narration_lines(v) -> list[str]:
     return [t for t in (str((x.get("narration") if isinstance(x, dict) else x) or "").strip() for x in items) if t]
 
 
-def edit_scripts(shorts: list[dict], ch: dict) -> None:
-    """The OTHER AI edits the drafts: strongest hook, read-aloud fixes, cuts, hook/thumbnail/title consistency.
-    A second model catches what the writer can't see in its own text. A failed or malformed reply keeps the draft."""
+def edit_scripts(shorts: list[dict], ch: dict, problems: dict[int, list[str]] | None = None) -> None:
+    """The OTHER AI edits the drafts: strongest hook, read-aloud fixes, cuts, hook/thumbnail/title consistency,
+    the story rules. A second model catches what the writer can't see in its own text. A failed or malformed reply
+    keeps the draft. A script that still breaks a checkable story rule (story_problems) goes back once with
+    `problems` ({index: [problem]}); whatever is left becomes a STILL: line in the editor notes."""
     editor = "gemini" if session.BRAIN == "claude" else "claude"
     lo, hi, s_lo, s_hi, _ = length_plan()
     print(f"{editor.capitalize()} is editing the script(s)...")
+    retry = (f"""SECOND PASS: these scripts still break the story rules. Fix exactly these problems:
+{json.dumps(problems, ensure_ascii=False)}
+""" if problems else "")
     drafts = [{"index": i, "topic": s["topic"], "shape": s.get("shape"), "title": s["title"],
                "hook_text": s.get("hook_text"), "thumbnail_text": s.get("thumbnail_text"),
                "hook_options": s.get("hook_options"), "scenes": s["lines"], "pictures": picture_pool.pictures_of(s) or "none listed"}
@@ -279,36 +301,32 @@ Tone: {ch.get('tone', '')}. Another writer drafted the scripts below; make each 
 About half our viewers swipe away in the first second, so the hook matters most.
 For each script:
 1. Hook: score every candidate first sentence (hook_options and scene 1's first sentence) 1-10 for
-   "would a stranger scrolling past stop, AND need to stay for the answer?". Strong: a concrete,
-   surprising claim, 8 words or fewer, understood with no context, that opens a question (how? why?
-   what next?) the script answers later. Weak: a setup, a name nobody knows, a date first, vague words
-   ("strange", "mysterious", "incredible"), or a line that tells the whole story at once (with the
-   opening picture of the subject, nothing is left to stay for). Open scene 1 with the best one, or a
-   better one you write from the script's own facts.
+   "would a stranger scrolling past stop, AND need to stay for the answer?". Strong: the story's strangest
+   moment told as it happens, at most 12 words, understood with no context, showing what happens and holding
+   back why. Weak: a summary of the whole story, a setup, a name nobody knows, a date first, vague words
+   ("strange", "mysterious", "incredible"). Open scene 1 with the best one, or a better one you write from
+   the script's own facts.
 2. Read every line aloud in your head as the narrator would say it: fix tongue-twisters, sentences over
-   about 14 words, stacked numbers, awkward words for a text-to-speech voice, anything a 5th grader
-   wouldn't get.
-3. Cut filler and empty lines ("this changed everything", "little did they know"): every scene adds one
-   new concrete fact a camera could show. No phrase of 3+ words twice, except one last line that calls
-   back to the hook.
-4. Keep the shape working: scene 2 proves the hook's claim is real with one concrete detail (without
-   answering its question), then an open loop, a re-hook around the middle, the twist,
-   then the callback ending. At every scene the viewer should have one open question: small ones
-   answered within a scene or two, the hook's main question kept open until the payoff. Scenes 2-3 are
-   where most viewers leave (our retention curves drop hardest 4-12 seconds in, where scripts rewound to
-   background): they must move forward or raise the stakes; no sentence there may start with a date or a
-   name the viewer hasn't met; background only as a half-line when the story needs it.
+   about 20 words, stacked numbers, awkward words for a text-to-speech voice, anything a 5th grader
+   wouldn't get. The narration should flow as one story; choppy fragments read like a list.
+3. Cut filler and empty lines ("this changed everything", "little did they know"): every scene adds
+   something new a camera could show. No phrase of 3+ words twice.
+4. Make it follow these rules; reorder and rephrase as much as needed (our retention curves drop hardest
+   4-12 seconds in and keep sliding when a script recaps, rewinds to a timeline or answers its question early):
+{STORY_RULES}
 5. hook_text (big words over the first second), thumbnail_text and title must tease the same story
    without repeating each other's words or the hook sentence; hook_text sharpens the same question as
    the hook sentence (sound-off viewers read it instead), never a separate idea. Fix whichever fails.
 Each script's "pictures" lists the real pictures found for it: keep lines built on them showable.
 Change wording, never claims: add no fact that isn't already in the script. Keep {s_lo}-{s_hi} scenes of 4-{channel_profiles.SCENE_WORDS}
 words each (a new picture every ~3 seconds; only a scene that needs time on one picture may run up to
-{channel_profiles.LONG_SCENE_WORDS}), {lo}-{hi} words in total. Return every scene, changed or not.
+{channel_profiles.LONG_SCENE_WORDS}), {lo}-{hi} words in total. {SCENE_CUTS} Return every scene, changed or not.
 notes: 1-4 short lines: the hook scores and what you changed and why.
-Scripts: {json.dumps(drafts, ensure_ascii=False)}
+payoff_scene: in YOUR final version, the number of the scene where the hook's main question is answered.
+list_like: true if the beats of your final version could be reordered without breaking the story.
+{retry}Scripts: {json.dumps(drafts, ensure_ascii=False)}
 Reply with ONLY JSON: {{"shorts": [{{"index": 0, "scenes": ["...", "..."], "title": "...", "hook_text": "...",
-"thumbnail_text": "...", "notes": ["..."]}}]}}""", fatal=False, brain=editor) or {}
+"thumbnail_text": "...", "notes": ["..."], "payoff_scene": 12, "list_like": false}}]}}""", fatal=False, brain=editor) or {}
     who = session.LAST_AI.capitalize()  # Claude steps in when Gemini fails
     for r in data.get("shorts", []) if isinstance(data.get("shorts"), list) else []:
         i = r.get("index") if isinstance(r, dict) else None
@@ -318,14 +336,48 @@ Reply with ONLY JSON: {{"shorts": [{{"index": 0, "scenes": ["...", "..."], "titl
         words = [len(t.split()) for t in lines]
         notes = [str(x).strip()[:300] for x in r.get("notes") or [] if str(x).strip()][:4] \
             if isinstance(r.get("notes"), list) else []
+        verdict = (r.get("payoff_scene"), r.get("list_like"))
         if s_lo <= len(lines) <= s_hi and max(words) <= channel_profiles.LONG_SCENE_WORDS + 2 and lo - 15 <= sum(words) <= hi + 15:
             s["lines"] = lines
         else:
             notes.append("its scene edit broke the length rules, so the writer's scenes were kept")
+            verdict = (None, None)  # the editor judged its own version, not the one kept
         for k in ("title", "hook_text", "thumbnail_text"):
             if isinstance(r.get(k), str) and r[k].strip():
                 s[k] = r[k].strip()
-        s["editor_notes"] = [f"{who}: {x}" for x in notes] or [f"{who}: no changes"]
+        s["editor_notes"] = (s.get("editor_notes") or [] if problems else []) + ([f"{who}: {x}" for x in notes] or [f"{who}: no changes"])
+        s["_problems"] = story_problems(s["lines"], *verdict)
+    failing = [s for s in shorts if s.get("_problems")]
+    if problems is None and failing:  # once: the editor gets the problems and fixes its version
+        print(f"  {len(failing)} script(s) broke the story rules, sending back to the editor once...")
+        edit_scripts(failing, ch, {i: s["_problems"] for i, s in enumerate(failing)})
+    for s in shorts:
+        if left := s.pop("_problems", None):
+            s["editor_notes"] = (s.get("editor_notes") or []) + [f"STILL: {p}" for p in left]
+
+
+def story_problems(lines: list[str], payoff, list_like) -> list[str]:
+    """The checkable story rules (STORY_RULES): the answer comes last, no line opens with a date, a short first
+    sentence, and the editor's own verdict on whether the beats are a list."""
+    found = []
+    if isinstance(payoff, int) and not isinstance(payoff, bool) and payoff < len(lines) - 1:
+        found.append(f"the hook's question is answered in scene {payoff} of {len(lines)}: the answer must come in the "
+                     "last scene or the last two, and the Short ends there")
+    for k, line in enumerate(lines):
+        if DATE_FIRST.match(line):
+            found.append(f'scene {k + 1} starts with a date ("{line}"): bring the year in mid-sentence, or leave it out')
+    first = re.split(r"(?<=[.!?])\s", " ".join(lines))[0]
+    if len(first.split()) > 12:
+        found.append(f'the first sentence has {len(first.split())} words ("{first}"): at most 12')
+    if list_like is True:
+        found.append('the beats read as a list of facts: link each one to the one before with "but", "so" or "you see"')
+    return found
+
+
+# "In 1932, ...", "By the 1850s", "1974:", "On 16 October", "In October" (STORY_RULES: no line starts with a date)
+DATE_FIRST = re.compile(r"^\W*(?:(?:in|on|by|from|until|since|during|around)\s+(?:the\s+)?)?(?:(?:early|late|mid)[\s-]+)?"
+                        r"(?:\d{3,4}s?\b|\d{1,2}(?:st|nd|rd|th)?\s+(?:jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)|"
+                        r"(?:january|february|march|april|june|july|august|september|october|november|december)\b)", re.I)
 
 
 # How an AI painting prompt (ai_image) is written: the director plans them with it and rewrite_paint_prompts()
@@ -543,8 +595,9 @@ this script and its on-screen text against the Wikipedia articles below.
   disagree or it is a legend, make the line accurate ("legend says", "reports claim") or replace it
   with a supported fact.
 Rewrite only the scenes that need it. Keep each about as long as it was (at most {channel_profiles.LONG_SCENE_WORDS} words) with the same role in the story, scene
-1's first sentence at most 8 words, and every word a graphic or person card pops up on ("trigger")
-when it is still correct. drop_graphic = true when that scene's graphic itself shows a wrong fact.
+1's first sentence at most 12 words, and every word a graphic or person card pops up on ("trigger")
+when it is still correct. A scene may be part of a sentence that runs on into the next scene: keep the
+corrected part joining up with its neighbours. drop_graphic = true when that scene's graphic itself shows a wrong fact.
 "full" is a full-screen motion graphic (map stops, a number, board labels, a document's key line): when any
 of its places, numbers, labels or quoted words is wrong, give full_fix = the same object corrected, or
 drop_full = true when it can't be fixed.

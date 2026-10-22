@@ -4,9 +4,11 @@ import hashlib
 import io
 import json
 import os
+import re
 import shutil
 import subprocess
 import time
+import unicodedata
 import urllib.error
 import urllib.parse
 import urllib.request
@@ -124,24 +126,65 @@ def voicestudio_unload() -> None:
         print(f"    couldn't unload VoiceStudio's models ({type(e).__name__}): close the app if the GPU runs out")
 
 
+def sentence_groups(scenes: list[dict]) -> list[list[int]]:
+    """Runs of scenes that together make whole sentences. A sentence may run across picture cuts (2026-10-22:
+    flowing narration, as in the Shorts that hold viewers best), so each run is voiced in one take."""
+    groups, run = [], []
+    for i, sc in enumerate(scenes):
+        run.append(i)
+        if re.search(r"[.!?][\"')\]]*$", sc["narration"].strip()) or i == len(scenes) - 1:
+            groups.append(run)
+            run = []
+    return groups
+
+
+def spoken_count(text: str) -> int:
+    """Caption words the aligner gives for `text` (qwen_voice.align_words: a token with no letter, digit or "&"
+    sticks to the word before it)."""
+    return sum(1 for tok in text.split()
+               if re.search(r"[A-Za-z0-9&]", unicodedata.normalize("NFKD", tok).encode("ascii", "ignore").decode()))
+
+
+def split_takes(done: list[dict], groups: list[list[int]], scenes: list[dict], work: Path) -> list[tuple[Path, list]] | None:
+    """Cut each take into its scenes halfway through the pause between their words: per scene (wav, words).
+    None if a take's words don't match its scenes."""
+    out = []
+    for it, group in zip(done, groups):
+        take, words = Path(it["out"]), [tuple(w) for w in it["words"]]
+        counts = [spoken_count(scenes[i]["narration"]) for i in group]
+        if sum(counts) != len(words) or 0 in counts:
+            return None
+        k, start, length = 0, 0.0, media_tools.duration(take)
+        for j, (i, c) in enumerate(zip(group, counts)):
+            mine, k = words[k:k + c], k + c
+            end = (mine[-1][1] + words[k][0]) / 2 if j < len(group) - 1 else length
+            path = work / f"{i}.wav"
+            media_tools.ffmpeg("-i", take.name, "-ss", f"{start:.3f}", "-t", f"{end - start:.3f}", path.name, cwd=work)
+            out.append((path, [(a - start, b - start, w) for a, b, w in mine]))
+            start = end
+    return out
+
+
 def local_voice(short: dict, ch: dict, work: Path) -> list[tuple[Path, list] | None]:
     """Voice every scene on the GPU: CosyVoice (aiden, documentary) for the whole Short, else Qwen (aiden),
     else Kokoro; per scene (wav, words) or None to fall back to Edge. A voice counts only if every scene worked,
-    so one Short never mixes voices."""
-    items = [{"text": sc["narration"], "seed": i, "out": str(work / f"{i}.wav")} for i, sc in enumerate(short["scenes"])]
+    so one Short never mixes voices. CosyVoice and Qwen read whole sentences in one take (sentence_groups)."""
+    scenes, groups = short["scenes"], sentence_groups(short["scenes"])
+    items = [{"text": " ".join(scenes[i]["narration"] for i in g), "seed": g[0], "out": str(work / f"take{g[0]}.wav")}
+             for g in groups]
     if COSY_REF.exists() and voicestudio_up():
         ref_text = COSY_REF.with_suffix(".txt").read_text(encoding="utf-8").strip()
         done = local_job("tts", [{**it, "engine": "cosyvoice", "ref": str(COSY_REF), "ref_text": ref_text,
                                   "instruct": COSY_INSTRUCT, "speed": COSY_SPEED} for it in items],
                          work, timeout=1200, worker="qwen_voice.py", venv="qwen_venv") or []
         voicestudio_unload()
-        if done and all(it.get("ok") and it.get("words") for it in done):
-            return [(Path(it["out"]), [tuple(w) for w in it["words"]]) for it in done]
+        if done and all(it.get("ok") and it.get("words") for it in done) and (cut := split_takes(done, groups, scenes, work)):
+            return cut
         print("    CosyVoice failed: using Qwen (aiden)")
     items = [{**it, "speaker": QWEN_SPEAKER} for it in items]
     done = local_job("tts", items, work, timeout=900, worker="qwen_voice.py", venv="qwen_venv") or []
-    if done and all(it.get("ok") and it.get("words") for it in done):
-        return [(Path(it["out"]), [tuple(w) for w in it["words"]]) for it in done]
+    if done and all(it.get("ok") and it.get("words") for it in done) and (cut := split_takes(done, groups, scenes, work)):
+        return cut
     print("    Qwen voice failed: using Kokoro")
     voice = ch.get("local_voice") or KOKORO_VOICES.get(ch["voice"], "am_michael")
     items = [{"text": sc["narration"], "voice": voice, "speed": 1.1, "out": str(work / f"{i}.wav")}
