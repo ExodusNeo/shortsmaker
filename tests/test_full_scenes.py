@@ -1,5 +1,6 @@
 """Tests for the full-screen motion graphic scenes. No AI usage, no rendering.
 Run: .venv\\Scripts\\python.exe tests\\test_full_scenes.py"""
+import json
 import random
 import shutil
 import subprocess
@@ -382,6 +383,47 @@ def test_auto_fix_graphic():
         assert notes[0] == "scene 3 became a motion graphic (weak)"
         assert st["choices"][2]["bg"] is not None  # its picture stays as the fallback
         assert st["choices"][4]["bg"] is None and st["choices"][5]["bg"] is None  # repainted (5: no graphic fit)
+
+
+def test_review_uses_unused_pool_pictures_before_painting():
+    """Togo vs Balto: 4 real pictures the review rejected became paintings while ~20 usable pool pictures sat unused.
+    A rejected scene now gets an unused real one when the AI finds one that fits; only the rest are painted."""
+    with tempfile.TemporaryDirectory() as d:
+        work, pool = Path(d), Path(d) / "pool"
+        pool.mkdir()
+        titles = ["used.jpg", "rejected-before.jpg", "musher.jpg", "blurry.jpg", "ice.jpg"]
+        (pool / "pool.json").write_text(json.dumps([{"title": t, "url": f"http://x/{t}", "credit": None, "source": "test"}
+                                                    for t in titles]), encoding="utf-8")
+        catalog = [{"n": k + 1, "what": t[:-4], "era_ok": True, "sharp": 1 if t == "blurry.jpg" else 3, "hook": False,
+                    "reject": None} for k, t in enumerate(titles)]
+        scenes = [{"narration": f"l{k}", "full": None, "ai_image": "p", "animate": False, "graphic": None} for k in range(3)]
+        scenes[1]["graphic"] = {"style": "mark"}
+        st = {"short": {"title": "Togo", "scenes": scenes, "pool_dir": str(pool), "catalog": catalog,
+                        "review_rejected": ["rejected-before.jpg"]},
+              "choices": [{"bg": (b"x", "used.jpg", None), "person": None}, {"bg": (b"x", "satellite.jpg", None), "person": None},
+                          {"bg": None, "person": None}], "by_gemini": []}
+        prompts = []
+
+        def ask(prompt, fatal=True, read_dir=None, brain=None, bulk=False):
+            prompts.append(prompt)
+            if "haven't used yet" in prompt:  # scene 2 gets #3; scene 3: #1 is on screen already, so it's refused
+                return {"picks": [{"scene": 2, "picture": 3}, {"scene": 3, "picture": 1}]}
+            return None
+        saved = llm.ask_ai, image_sources.get_image
+        llm.ask_ai, image_sources.get_image = ask, (lambda url, why: b"jpg:" + url.encode())
+        try:
+            notes = review.apply_review_fixes(st, work, {1: ("repaint", "modern satellite photo"), 2: ("repaint", "garbled")})
+        finally:
+            llm.ask_ai, image_sources.get_image = saved
+        offered = prompts[0].split("Unused real pictures")[1]
+        assert "#3 photo: musher" in offered and "#5 photo: ice" in offered
+        assert "#1" not in offered and "#2" not in offered and "#4" not in offered  # on screen, rejected before, blurry
+        assert st["choices"][1]["bg"] == (b"jpg:http://x/musher.jpg", "musher.jpg", None)
+        assert st["short"]["scenes"][1]["graphic"] is None  # its mark circled the old picture
+        assert "satellite.jpg" in st["short"]["review_rejected"]
+        assert st["choices"][2]["bg"] is None  # nothing fit: painted
+        assert notes[0].startswith("scene 2 got an unused real picture from the pool (musher)")
+        assert notes[1].startswith("scene 3 got a new painted picture"), notes
 
 
 def test_rewrite_paint_prompts():

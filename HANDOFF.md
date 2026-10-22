@@ -230,7 +230,11 @@ Rules that keep it working:
    routes/underlines), loudnorm -14 LUFS + 4x-oversampled limiter; encode h264_nvenc.
 9. **Checks**: `quality_check()` (black/frozen frames, loudness, peaks, plain frames, > 62 s or > 36 s in short mode) and `visual_review()`
    (the AI watches 1 frame/s sheets). Scenes it flags with `fix: "repaint" | "graphic"` (up to 4, `apply_review_fixes()`)
-   either become a `full` motion graphic via `rescue_graphics()` or get repainted with `paint_new()` + `rewrite_paint_prompts()` (one AI call rewrites every rejected painting's prompt from the old prompt + the complaint, with `AI_IMAGE_RULE`; 2026-10-21), and the Short
+   either become a `full` motion graphic via `rescue_graphics()`, or get an unused real picture from the topic's pool
+   (`review.pool_pictures()`, 2026-10-22, owner asked why so many AI pictures: Togo painted over 4 rejected real pictures
+   while ~20 usable pool pictures sat unused; one AI call matches the rejected scenes to usable pool pictures nothing in
+   the Short shows, by their picture-list text; a picture the review rejected goes in `review_rejected` and is never
+   offered again; on Togo's real data it replaced 2 of 6 paintings, the other 4 had no photo), or get repainted with `paint_new()` + `rewrite_paint_prompts()` (one AI call rewrites every rejected painting's prompt from the old prompt + the complaint, with `AI_IMAGE_RULE`; 2026-10-21), and the Short
    re-renders automatically; each re-render is reviewed again and fixed again while fixable problems remain, up to
    `AUTO_FIX_ROUNDS` (3) rounds (owner asked 2026-10-20; was one round). The cap exists because an AI reviewer
    almost always finds something. Notes in edit_plan.txt are prefixed "round N:". fix.bat re-renders never loop. A flagged **custom** motion graphic is first sent back to its coder with the

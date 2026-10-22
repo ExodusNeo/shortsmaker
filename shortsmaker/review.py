@@ -10,7 +10,10 @@ from pathlib import Path
 
 from PIL import Image, ImageDraw, ImageFont
 
-from shortsmaker import gpu, llm, media_tools, picker, plan_rules, remotion_render, session, short_render, writing
+from shortsmaker import (
+    footage, gpu, image_sources, llm, media_tools, picker, picture_pool, plan_rules, remotion_render, session, short_render,
+    writing,
+)
 from shortsmaker.config import FONT
 
 
@@ -148,7 +151,8 @@ def apply_review_fixes(st: dict, work: Path, fixes: dict[int, tuple[str, str]],
     """The automatic fixes after a render's review (up to AUTO_REPAINT_MAX scenes per round): a weak opening
     (`opener`, from first_second_check) swaps scene 1's picture with a better real one, once per Short; "graphic"
     scenes become a full-screen motion graphic when one fits their line, a custom motion graphic that looked
-    wrong is redrawn by its coder, the rest get a new painted picture.
+    wrong is redrawn by its coder, the rest get an unused real picture from the pool (pool_pictures) where one
+    fits, else a new painted picture.
     Returns the edit-plan notes."""
     notes = []
     if opener and not st["short"].get("opener_swapped"):
@@ -170,13 +174,73 @@ def apply_review_fixes(st: dict, work: Path, fixes: dict[int, tuple[str, str]],
         elif i in got:  # the picture stays in the plan: it is the fallback if Remotion fails
             notes.append(f"scene {i + 1} became a motion graphic ({why})")
         else:
-            paint_new(work, st, i)
             repaint[i] = why
+    # an unused real picture from the topic's pool beats a painting (owner, 2026-10-22)
+    for i, what in pool_pictures(st, work, repaint).items():
+        notes.append(f"scene {i + 1} got an unused real picture from the pool ({what}) ({repaint.pop(i)})")
+    for i in repaint:
+        paint_new(work, st, i)
     rewritten = rewrite_paint_prompts(st["short"], repaint) if repaint else []
     for i, why in repaint.items():
         how = "a rewritten prompt" if i in rewritten else "its old prompt, seen from a new angle"
         notes.append(f"scene {i + 1} got a new painted picture from {how} ({why})")
     return notes
+
+
+def pool_pictures(st: dict, work: Path, why: dict[int, str]) -> dict[int, str]:
+    """Rejected scenes (index -> the review's complaint) that get a real picture from the topic's pool instead of a
+    painting: one AI call matches them to the usable pool pictures nothing in the Short shows and the review never
+    rejected, by their picture-list descriptions. Togo vs Balto (2026-10-22) painted over 4 rejected real pictures
+    while ~20 usable ones sat unused. Returns scene -> what its new picture shows."""
+    short, choices = st["short"], st["choices"]
+    cands = picture_pool.load_pool(Path(short["pool_dir"]), thumbs=False) if why and short.get("pool_dir") else None
+    if not cands or not short.get("catalog"):
+        return {}
+    rejected = short.setdefault("review_rejected", [])
+    rejected += [choices[i]["bg"][1] for i in why if choices[i]["bg"]]  # never offered again, now or in later rounds
+    shown = {c[kind][1] for c in choices for kind in ("bg", "person") if c.get(kind)}
+    shown |= {p[1] for c in choices for p in c.get("full_pics") or [] if p}
+    films = [c["film"]["src"] for c in choices if c.get("film")]
+    free = {e["n"]: e for e in short["catalog"] if picture_pool.is_usable(e) and 1 <= e["n"] <= len(cands)
+            and cands[e["n"] - 1]["title"] not in shown and cands[e["n"] - 1]["title"] not in rejected
+            and films.count((cands[e["n"] - 1].get("film") or {}).get("src")) < 2}  # at most 2 moments of one film
+    if not free:
+        return {}
+    scenes = short["scenes"]
+    rows = [{"scene": i + 1, "narration": scenes[i]["narration"], "shot": scenes[i].get("shot"), "problem": why[i]} for i in why]
+    data = llm.ask_ai(f"""The final review of the YouTube Short "{short.get('title')}" rejected the pictures of the scenes below. Before an
+AI painting is made for them, check the real pictures we found for this story and haven't used yet.
+For each scene pick ONE picture that clearly shows what its narration and shot describe, from the right time and
+place, without the scene's problem; null when none clearly fits (a painting is made then: an unrelated real
+picture is worse than a painting). Never the same picture for two scenes.
+Scenes: {json.dumps(rows, ensure_ascii=False)}
+Unused real pictures (number, photo or film: what it shows):
+{chr(10).join(f"#{n} {'film' if cands[n - 1].get('film') else 'photo'}: {e['what']}" for n, e in free.items())}
+Reply with ONLY JSON: {{"picks": [{{"scene": 3, "picture": 12}}]}}""", fatal=False)
+    got = {}
+    for p in (data or {}).get("picks") or []:  # LLM output is untrusted
+        i, n = (p.get("scene"), p.get("picture")) if isinstance(p, dict) else (None, None)
+        if not (isinstance(i, int) and i - 1 in why and i - 1 not in got and isinstance(n, int) and n in free):
+            continue
+        i, c = i - 1, cands[n - 1]
+        film, img = None, None
+        if c.get("film"):
+            piece = footage.film_piece(c["film"], work / f"film{i}_src.mp4")
+            if piece:
+                img, film = piece[0], {**c["film"], "path": work / f"film{i}_src.mp4", "offset": piece[1]}
+        else:
+            img = image_sources.get_image(c["url"], "image download")
+        if not img:
+            continue
+        choices[i] = {"bg": (img, c["title"], c["credit"]), "person": choices[i]["person"],
+                      "site": c.get("site", "Wikimedia Commons"), "plan_note": f"pool picture #{n}, after the review",
+                      **({"film": film} if film else {})}
+        sc = scenes[i]
+        sc["full"], sc["animate"] = None, False  # the new picture replaces whatever the scene showed
+        if (sc.get("graphic") or {}).get("style") == "mark":  # it circled a detail of the old picture
+            sc["graphic"] = None
+        got[i] = free.pop(n)["what"][:80]
+    return got
 
 
 def storyboard(video: Path, bounds: list[float], path: Path) -> None:
