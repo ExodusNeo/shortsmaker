@@ -51,7 +51,8 @@ def peaks(short: dict, bounds: list[float], all_words: list) -> list[float]:
 def _run(exe: Path, job_path: Path) -> str:
     """'' when Blender finished, else why not."""
     try:
-        r = subprocess.run([str(exe), "-b", "--factory-startup", "--python", str(SCRIPT), "--", str(job_path)],
+        r = subprocess.run([str(exe), "-b", "--factory-startup", "--python-exit-code", "1", "--python", str(SCRIPT),
+                            "--", str(job_path)],
                            capture_output=True, text=True, timeout=TIMEOUT)
     except subprocess.TimeoutExpired:
         return f"timed out after {TIMEOUT // 60} minutes"

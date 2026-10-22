@@ -70,6 +70,8 @@ def edit_plan(short: dict, bounds: list[float], sources: list[str], cues: list[d
             lines.append(f"  CREDIT:  on-screen tag (bottom-left) \"{sc['credit_tag']}\"")
         if sc.get("full"):
             camera = "slow drift and push-in on old paper; each element lands on its spoken word"
+        elif i in clips and clips[i].name.startswith("blender"):
+            camera = "DRAWN IN BLENDER (the camera move of this beat, continuing from the scene before)"
         elif i in clips and clips[i].name.startswith("film"):
             camera = "REAL VIDEO FOOTAGE (one shot; a short shot plays slowed, credited on screen when required)"
         elif i in clips and clips[i].name.endswith("_veo.mp4"):

@@ -1,11 +1,11 @@
-"""The ink-manual look shared by every Blender Short: flat colours, a paper sky, dark ink outlines (Freestyle).
+"""The ink-manual look shared by every Blender Short: flat colours, a paper sky, dark ink outlines (GPU compositor).
 Runs inside Blender (bpy); not imported by the shortsmaker package."""
 
 import bpy
 
 COLORS = {"paper": "#EEE8DC", "steel": "#9EA8B3", "concrete": "#E3DCCD", "water": "#C3D7E5", "red": "#D81F1A",
           "ink": "#141419", "dark": "#7C8894", "ground": "#D9D0BC"}
-NOLINES = "nolines"  # labels and leader lines: already ink, no outline drawn around them
+NOLINES = "nolines"  # labels, leader lines and cracks: kept in their own collection (the outline pass draws them too)
 
 
 def linear(hex_color: str) -> tuple[float, float, float, float]:

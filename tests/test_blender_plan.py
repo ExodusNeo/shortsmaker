@@ -123,6 +123,12 @@ def test_thumbnail_order_skips_film_and_puts_openers_first():
     rows = [{"url": "a.jpg"}, {"url": "film.webm#t=3", "film": {"src": "film.webm", "t": 3}}, {"url": "c.jpg"}]
     assert blender_plan.thumbnail_order({"catalog": cat}, rows) == [2, 0]
 
+def test_tiny_shorts_get_one_beat_per_scene():
+    for n in (1, 2):
+        b = blender_plan.clean_build(plan(scenes=[]), n)
+        assert len(b["beats"]) == n, b["beats"]
+
+
 if __name__ == "__main__":
     names = [n for n in sorted(globals()) if n.startswith("test_") and (len(sys.argv) < 2 or n in sys.argv[1:])]
     failed = 0

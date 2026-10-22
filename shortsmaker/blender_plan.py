@@ -44,7 +44,7 @@ def panels(structure: dict) -> int:
 
 def ending(n: int) -> list[str]:
     """The last part of every Short: zoom in, the failure, what it left behind."""
-    k = max(2, n // 3)
+    k = min(max(2, n // 3), n)  # a 1-scene Short still gets one beat
     part = max(1, k // 3)
     return (["zoom"] * part + ["failure"] * part + ["aftermath"] * k)[:k]
 

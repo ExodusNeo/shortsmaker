@@ -32,10 +32,11 @@ def main() -> None:
     choice = sys.argv[3] if len(sys.argv) > 3 and sys.argv[3] in channel_profiles.BRAINS else (
         channel_profiles.ask_brain(ch.get("brain", "claude")) if len(sys.argv) < 2 else ch.get("brain", "claude"))
     ch["brain"] = choice
-    if len(sys.argv) < 2:  # run.bat: ask; scripted runs never pause
+    if len(sys.argv) < 2 and session.RULE_SETTINGS.get("visuals") != "blender":  # Blender draws every scene
         session.VEO_HANDOFF = channel_profiles.ask_yes("Make the AI video clips yourself in Google Flow (Veo)? The batch pauses at each Short "
                               "until you've saved them", ch.get("veo", False))
         ch["veo"] = session.VEO_HANDOFF
+    if len(sys.argv) < 2:  # run.bat: ask; scripted runs never pause
         session.SHORT_FORM = channel_profiles.ask_yes("Make shorter Shorts, about 25-30 seconds instead of 40-50 (a test)?", ch.get("short_form", False))
         ch["short_form"] = session.SHORT_FORM
     if choice != "claude":
