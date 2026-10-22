@@ -327,3 +327,17 @@ Subscribers gained: 3
 Stayed to watch (%):
 Average % viewed: 51.7
 My notes: Read from YouTube Studio by Claude on 2026-10-21, its first day: 1,178 views and +3 subscribers; average % viewed is from the first 4 hours; stayed-to-watch still processing.
+
+## Togo vs Balto: 261 Miles vs Only 55
+Made: 2026-10-22 | Written by: Claude | Length: 0:49.2 | Folder: output\strange-history\2026-10-22_togo-vs-balto-261-miles-vs-only-55
+Topic: In the 1925 diphtheria outbreak in Nome, Alaska, sled dogs relayed antitoxin serum across about 674 miles of frozen wilderness. Togo, a small 12-year-old husky led by musher Leonhard Seppala, ran the longest and most dangerous leg, about 260 miles there and back, including a crossing of breaking sea ice on Norton Sound in a blizzard. The twist is that the dog who ran the final 55 miles, Balto, got the fame and the statue in New York's Central Park. Balto later ended up in a cheap sideshow until Cleveland schoolchildren raised money to rescue him. | Story shape: myth vs truth
+Hook line: "History gave this dog's glory to another dog." | Hook title: WHO STOLE HIS FAME?
+
+Posted on:
+Views:
+Likes:
+Comments:
+Subscribers gained:
+Stayed to watch (%):
+Average % viewed:
+My notes:
