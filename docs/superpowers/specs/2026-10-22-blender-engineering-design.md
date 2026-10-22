@@ -15,7 +15,9 @@ The owner chose Blender 3D (installed at `D:\Blender`, 5.2.1 LTS) as the default
 - Look: "ink manual" — dark ink outlines, flat muted colours, paper-coloured sky, the failing part red.
 - Model source: a parts kit built in code + an AI-written JSON build plan per Short (the AI never writes Blender
   code).
-- Mix: about 70-80% Blender scenes; real archival photos only as evidence scenes (e.g. the real collapse photo).
+- Mix (owner, after the first spec draft): every scene of the video is drawn in Blender. The only real photo is
+  the thumbnail: one archival photo of the real structure the Short is about. No photo scenes, and never a
+  fall-back to a photo Short.
 - Launch scope: bridges only. Dams, buildings, machines later.
 - Failure kinds at launch: crack, bend/buckle, fastener shear, sway/twist; any can end in a span collapse.
 - Fasteners are era-correct: rivet, bolt (with nut), pin, weld — never screws.
@@ -35,25 +37,35 @@ overlays, credits, upload text, review.
 
 1. **Engineer step** — `blender_plan.plan_builds(shorts, ch)`, one AI call per batch, after the fact check
    inside `writing.write_scripts` (only when `session.RULE_SETTINGS["visuals"] == "blender"`). Input: each Short's
-   final narration, research text and picture list. Output: a build plan per Short (format below), checked by
+   final narration and research text. Output: a build plan per Short (format below), checked by
    `blender_plan.clean_build(raw, n_scenes) -> dict | None`. Its instructions come from the channel's
-   `## Build plan` rules section. Blender scenes get `sc["full"] = None` (no Remotion full-screen graphic on
-   them); their director-planned `ai_image` stays as the fallback.
-2. **Pictures** — unchanged picker. Photo-beat scenes use what it picks; Blender scenes ignore it.
+   `## Build plan` rules section. Every scene gets `sc["full"] = None` (no Remotion full-screen graphics); text
+   callouts and person cards stay off (the drawing and its labels carry the scene).
+   A reply that can't be used is asked for once more; if that fails too, `blender_plan.default_build(n_scenes)`
+   is used (a generic truss bridge, the focus on a mid-span gusset plate, wide -> build -> zoom -> failure ->
+   aftermath), so the Short is still all Blender, with a `CHECK:` line saying the plan is generic.
+2. **Pictures** — no per-scene picture picking for blender channels. The topic's picture pool and AI picture
+   list are still made before writing (the writer reads them as research); from it the thumbnail photo is chosen
+   with no extra AI call: the first usable picture marked `[opener]`, else the first usable picture.
+   `min_real_pictures` for the channel is 1.
 3. **Rendering** — in `short_render.render`, after the voice sets `bounds`, `blender_render.render_clips(short,
-   bounds, work) -> dict[int, Path]` renders the Blender scenes; the result is merged into the `clips` dict from
-   `gpu.local_clips`, so Remotion and the Python renderer treat them like real film (captions, overlays,
-   subscribe button on top).
-4. **Fallback** — no usable build plan, Blender missing, a crash, or a 30-minute timeout: those scenes render as
-   today (the director's AI painting or picked photo), and `edit_plan.txt` gets a `CHECK:` line naming the reason.
-5. **Review** — `review.visual_review` is told which scenes are drawn on purpose so it doesn't flag them as
-   "not a real photo" or "AI-looking".
+   bounds, work) -> dict[int, Path]` renders every scene; the clips take the place of the scene pictures, so
+   Remotion and the Python renderer treat the scenes like real film (captions, emphasis, subscribe button on top).
+4. **Blender failure** — Blender missing, a crash, or a 30-minute timeout: one retry; if it fails again that Short
+   is not finished (no painting or photo fall-back): the batch prints why, keeps `work/` so a re-run can try
+   again, and goes on with the next Short.
+5. **Thumbnail** — `frame_render.thumbnail` gets the chosen real photo (`work/thumb_photo.jpg`) with the usual
+   thumbnail text; its credit goes in `upload.txt`. No real photo in the pool: the zoom frame of the Blender
+   render is used instead, with a `CHECK:` line. Blender drawings are not realistic synthetic media, so they don't
+   set the upload's "altered or synthetic" flag.
+6. **Review** — `review.visual_review` is told every scene is drawn on purpose so it doesn't flag "not a real
+   photo" or "AI-looking".
 
 ## Rules file
 
 - `visuals: blender` becomes valid (the "not built yet" stop is removed).
 - New section `## Build plan`, required only when `visuals: blender`: the engineer's instructions (templates,
-  parts, failure kinds, beats, fastener eras, labels, how many scenes are photos). Missing → the usual
+  parts, failure kinds, beats, fastener eras, labels). Missing → the usual
   `has no "## Build plan" section` stop. `draft_rules` lists it for blender channels.
 - The engineering channel's profile moves from `channel_ideas/` to `channels/`; its rules are drafted by
   `require_rules`, then the owner sets `visuals: blender`, `min_real_pictures: 2`, `status: ready`.
@@ -81,10 +93,11 @@ Allowed values (anything else is replaced by the default in brackets, or dropped
   `label` ≤ 40 characters, upper-cased, or null.
 - `failure.kind`: `crack`, `bend` [default], `shear`, `sway`. `then`: `none` [default], `collapse_span`.
 - `scale`: subset of `car`, `train`, `people` (people only small, never shown hurt).
-- `scenes[].beat`: `wide`, `orbit`, `build`, `zoom`, `failure`, `aftermath`, `failure_preview`, `photo`.
-  Scenes not listed default to `photo`. At least 1 and at most 30% of scenes are `photo`; if fewer than half of
-  all scenes are Blender beats the plan is dropped (the Short is made as a photo Short).
-- The whole plan is dropped (fallback) when it isn't a dict or has no usable `scenes`.
+- `scenes[].beat`: `wide`, `orbit`, `build`, `zoom`, `failure`, `aftermath`, `failure_preview`. A scene not
+  listed or with an unknown beat gets the beat of the scene before it (scene 1: `failure_preview`). The plan must
+  contain at least one `zoom` and one `failure` beat; if not, the last third of the scenes become zoom -> failure
+  -> aftermath.
+- The whole plan is unusable (asked again, then `default_build`) when it isn't a dict or has no usable `structure`.
 
 ## Parts kit and scene building (Blender side, `blender/`)
 
@@ -98,16 +111,15 @@ Plain Blender Python run headless; not imported by the package.
   details).
 - `build_scene.py`: entry point. Reads `build.json` (plan + scene start/end seconds), builds the template, adds
   focus detail (fastener group at the focus, red material, drawn label: leader line + upper-case text),
-  keyframes the beats, renders only frames inside Blender scenes as PNG to `work/blender_frames/`.
+  keyframes the beats, renders every frame of the Short as PNG to `work/blender_frames/`.
 - Beats: `wide` (whole structure), `orbit` (slow turn), `build` (parts arrive in stage order, spread over all
   build scenes), `zoom` (push in to the focus; detail and label fade in), `failure` (the failure animates, its
   peak on the scene's emphasis word time), `aftermath` (pull back to the result), `failure_preview` (the failure
-  for the hook, then the next scene starts the story from the beginning), `photo` (not rendered).
+  for the hook, then the next scene starts the story from the beginning).
 - Failure animations on the focus part: `crack` (a red crack curve grows), `bend` (the part deforms by a bend
   modifier), `shear` (fasteners pop out and the joint slips; pin pulls out of a cracked eyebar; weld seam opens),
   `sway` (deck sways/twists with growing amplitude). `collapse_span` makes that span's parts fall into the water.
-- The camera moves continuously within a run of consecutive Blender scenes; a cut happens at photo scenes and
-  after `failure_preview`.
+- The camera moves continuously from scene to scene; the only cut is after `failure_preview`.
 
 ## Python side (`shortsmaker/`)
 
@@ -116,19 +128,23 @@ Plain Blender Python run headless; not imported by the package.
 - `blender_render.py`: `render_clips(short, bounds, work) -> dict[int, Path]` (writes `build.json`, runs Blender
   with a 30-minute timeout, joins frames per scene with ffmpeg into `work/blender{i}.mp4`, reuses frames when
   `build.json` is unchanged), `blender_exe() -> Path | None` (`config.BLENDER = Path(r"D:\Blender\blender.exe")`).
-- `short_render.render`: merge `render_clips` into `clips`; CHECK line on fallback; sources line per Blender scene
-  ("drawn in Blender: <beat>").
-- `review.visual_review`: Blender scenes listed as drawn on purpose.
+- `short_render.render`: for blender channels `render_clips` provides every scene's clip; a Blender failure after
+  the retry raises, so `cli.main` reports it and goes on with the next Short; a sources line per scene ("drawn in
+  Blender: <beat>"); the thumbnail from `work/thumb_photo.jpg` (else the zoom frame).
+- `picker` / `cli`: blender channels skip `choose_images`; `blender_plan.thumbnail_photo(short) -> tuple | None`
+  picks the thumbnail photo from the pool catalog.
+- `review.visual_review`: every scene listed as drawn on purpose.
 - `rules.py`: `visuals: blender` allowed; `## Build plan` required for it.
 
 ## Testing
 
-- Python (no Blender, no AI): `clean_build` (every field: bad values replaced or dropped, photo-share and
+- Python (no Blender, no AI): `clean_build` (every field: bad values replaced or dropped, beats filled in,
   Blender-share limits, missing scenes), beat timing math (frame ranges from bounds, failure peak on the emphasis
   word), clip cutting, cache reuse, fallback with Blender faked to fail / time out / be missing, the
-  `## Build plan` requirement, `visuals: blender` accepted.
+  `## Build plan` requirement, `visuals: blender` accepted, `default_build` after two bad replies, the thumbnail
+  photo choice (opener first, none -> zoom frame), a failed Blender render ending only that Short.
 - Blender (real headless Blender, seconds): a tiny fixed plan renders 3 frames per beat; frames exist; the zoom
-  frame contains failure-red pixels and label (dark text) pixels; a `photo` beat renders no frames.
+  frame contains failure-red pixels and label (dark text) pixels.
 - Visual check before the first real Short: render a sample Short's key frames, look at them, show the owner.
 - Existing tests keep passing; strange-history's golden prompts stay identical (photo channels untouched).
 
