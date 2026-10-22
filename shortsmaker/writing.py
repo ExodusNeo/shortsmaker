@@ -7,7 +7,8 @@ import urllib.parse
 from pathlib import Path
 
 from shortsmaker import (
-    audio_mix, channel_profiles, image_sources, llm, logbook, picture_pool, plan_rules, session, style_lab,
+    audio_mix, blender_plan, channel_profiles, image_sources, llm, logbook, picture_pool, plan_rules, session,
+    style_lab,
 )
 from shortsmaker.config import (
     CUSTOM_KINDS, DOC_KINDS, FULL_TYPES, ICONS, MAX_FULL_PLANNED, MOODS, MOVES, MOVE_NAMES, PALETTES, SHAPES,
@@ -213,6 +214,8 @@ Reply with ONLY JSON: {{"shorts": [{{"index": 0, "shape": "...", "title": "...",
         plan_rules.settle_style(s, ch)
         plan_rules.limit_style(s["scenes"])
         audio_mix.limit_sounds(s["scenes"])
+    if kept and session.RULE_SETTINGS.get("visuals") == "blender":  # every scene is drawn: the engineer plans it
+        blender_plan.plan_builds(kept, ch)
     return kept
 
 
