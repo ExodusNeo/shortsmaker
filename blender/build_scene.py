@@ -46,21 +46,24 @@ class Shots:
         self.far = max(b.length * 0.6, b.H * 5, 60.0)
         self.near = max(parts.bbox_size(focus) * 5, 6.0)
         self.pitch = -6.0 if chord == "bottom" else 12.0  # a part under the deck is seen from below it
+        self.fallen = None  # where the focus part lies after its span fell (set when it falls)
 
     def wide(self, k=1.0, yaw=-62.0, pitch=16.0):
         return self.center + direction(yaw, pitch) * self.far * k, self.center
 
-    def close(self, k=1.0, yaw=-25.0):
-        return self.focus + direction(yaw, self.pitch) * self.near * k, self.focus
+    def close(self, k=1.0, yaw=-25.0, after=False):
+        target = self.fallen if after and self.fallen is not None else self.focus
+        return target + direction(yaw, self.pitch) * self.near * k, target
 
-    def beat(self, name: str):
-        """(start pose, end pose) of a beat."""
+    def beat(self, name: str, after: bool = False):
+        """(start pose, end pose) of a beat; `after` the collapse, close shots find the fallen part."""
+        close = lambda k: self.close(k, after=after)  # noqa: E731
         return {"wide": (self.wide(1.1), self.wide(1.0)),
                 "orbit": (self.wide(1.0, -70), self.wide(1.0, -40)),
                 "build": (self.wide(0.95, -66), self.wide(0.85, -56)),
-                "zoom": (self.wide(0.85, -56), self.close(1.0)),
-                "failure": (self.close(1.0), self.close(1.2)),
-                "aftermath": (self.close(3.0), self.wide(1.0, -58)),
+                "zoom": (self.wide(0.85, -56), close(1.0)),
+                "failure": (close(1.0), close(1.2)),
+                "aftermath": (close(3.0), self.wide(1.0, -58)),
                 "failure_preview": (self.close(1.4), self.close(1.05))}[name]
 
 
@@ -98,16 +101,20 @@ def main() -> None:
     details = [red] + fasteners
     if plan["focus"].get("label"):
         at = shots.focus + Vector((0, side_y * shots.near * 0.1, shots.near * 0.3))  # centred above the part
-        details += parts.label(plan["focus"]["label"], shots.focus, at, shots.near * 0.045, cam)
+        label = parts.label(plan["focus"]["label"], shots.focus, at, shots.near * 0.045, cam)
+        details += label
 
     total = scenes[-1]["last"]
     scene.frame_start, scene.frame_end = 1, total
     preview_end = scenes[0]["last"] if beats[0] == "failure_preview" else 0
     story = preview_end + 1
     fail = failures.Failure(b, plan, focus, red, fasteners)
+    fail.ride_along([o for o in details if o not in [red] + fasteners])  # the label falls with its part
+    if fail.falls():
+        shots.fallen = fail.fallen(shots.focus)
     if preview_end:  # the hook shows the failure on the finished bridge, then the story starts over
         hook_peak = min(scenes[0]["peak_frame"], preview_end - 4, 1 + fps * 3 // 2)  # it must move in the first 1.5 s
-        fail.play(1, hook_peak, until=preview_end)
+        fail.play(1, hook_peak, until=preview_end, collapse=False)  # the hook keeps the part in view
         fail.reset(story)
     build_frames = [f for sc, beat in zip(scenes, beats) if beat == "build" for f in range(sc["first"], sc["last"] + 1)]
     for o in b.stages["piers"]:  # the site: piers stand before the steel arrives
@@ -135,8 +142,9 @@ def main() -> None:
     hit = next((sc for sc, beat in zip(scenes, beats) if beat == "failure"), None)
     if hit:
         fail.play(hit["first"], min(max(hit["peak_frame"], hit["first"]), hit["last"]))
+    hit_index = beats.index("failure") if "failure" in beats else len(beats)
     for i, (sc, beat) in enumerate(zip(scenes, beats)):
-        start, end = shots.beat(beat)
+        start, end = shots.beat(beat, after=i > hit_index)
         if i == 0 or sc["first"] == story:  # the story's first shot (a cut after the hook)
             keyloc(cam, sc["first"], start[0])
             keyloc(target, sc["first"], start[1])

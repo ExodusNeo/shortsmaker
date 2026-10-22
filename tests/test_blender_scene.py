@@ -123,6 +123,22 @@ def test_hook_collapse_stays_in_the_hook():
         assert changed(calm[f], after_collapse[f]) < 0.002, (f, changed(calm[f], after_collapse[f]))
 
 
+def test_zoom_after_the_collapse_finds_the_fallen_part():
+    # the last zoom comes after the span fell: the camera must find the red plate where it landed
+    plan = plan_with(["build", "zoom", "failure", "aftermath", "zoom"])
+    plan["failure"]["then"] = "collapse_span"
+    (end,) = render(plan, [1.0, 1.0, 1.0, 1.5, 1.5], [180], peaks={2: 2.6}).values()
+    assert count(end, RED) >= 400, count(end, RED)
+
+
+def test_hook_keeps_the_part_in_view():
+    # the hook shows the part failing, not the span falling out of the shot
+    plan = plan_with(["failure_preview", "wide", "build", "zoom", "failure"])
+    plan["failure"]["then"] = "collapse_span"
+    (hook_end,) = render(plan, [1.5, 1.0, 1.0, 1.0, 1.0], [44], peaks={0: 1.0}).values()
+    assert count(hook_end, RED) >= 400, count(hook_end, RED)
+
+
 if __name__ == "__main__":
     if not config.BLENDER.exists():
         print(f"SKIPPED: no Blender at {config.BLENDER}")

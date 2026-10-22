@@ -61,8 +61,8 @@ class Failure:
             key(o, "hide_render", 1, True)
         return segs
 
-    def play(self, t0: int, peak: int, until: int | None = None) -> None:
-        """The failure from t0 to its peak, then the collapse; `until` (the hook's last frame) cuts it short."""
+    def play(self, t0: int, peak: int, until: int | None = None, collapse: bool = True) -> None:
+        """The failure from t0 to its peak, then (collapse) the span falls; `until` (the hook's last frame) cuts it."""
         peak = max(peak, t0 + 6)
         span = peak - t0
         if self.kind == "bend":
@@ -91,12 +91,30 @@ class Failure:
                 grow = ((f - t0) / span) ** 1.5  # growing swings, the biggest one on the peak
                 key(self.pivot, "rotation_euler", f, math.radians(12) * grow * math.cos(2 * math.pi * (f - peak) / 16), 0)
         fall = min(peak + 33, until - 1) if until else peak + 33  # the hook's fall must end before its cut
-        if self.then == "collapse_span" and fall > peak + 6:
+        if collapse and self.then == "collapse_span" and fall > peak + 6:
             home = self.pivot_home
             key(self.pivot, "location", peak + 3, home)
             key(self.pivot, "rotation_euler", peak + 3, None, 1)
             key(self.pivot, "location", fall, home + Vector((0, 0, -(self.b.deck_z + self.b.H + 8))))
-            key(self.pivot, "rotation_euler", fall, math.radians(14), 1)
+            key(self.pivot, "rotation_euler", fall, math.radians(self.DROP_ANGLE), 1)
+
+    DROP_ANGLE = 14  # degrees the fallen span ends up tilted
+
+    def falls(self) -> bool:
+        return self.then == "collapse_span" and self.plan["focus"]["at"]["span"] == self.plan["failure"]["span"]
+
+    def fallen(self, point: Vector) -> Vector:
+        """Where a point on the collapsing span ends up in the water."""
+        drop = Vector((0, 0, -(self.b.deck_z + self.b.H + 8)))
+        turn = Matrix.Rotation(math.radians(self.DROP_ANGLE), 3, "Y")
+        return self.pivot_home + turn @ (point - self.pivot_home) + drop
+
+    def ride_along(self, objs: list) -> None:
+        """Objects that fall with the span (the label on the failing part)."""
+        if self.falls():
+            inv = Matrix.Translation(self.pivot_home).inverted()
+            for o in objs:
+                o.parent, o.matrix_parent_inverse = self.pivot, inv
 
     def reset(self, frame: int) -> None:
         """Back to whole: the story after the hook starts from the beginning."""
