@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/plan_rules.py"
 type: "code"
-community: "Channel Profiles & CLI"
+community: "Graphics Rescue & Validation"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Channel_Profiles__CLI
+  - community/Graphics_Rescue__Validation
 ---
 
 # plan_rules.py
@@ -57,4 +57,4 @@ tags:
 - [[words_of()]] - `contains` [EXTRACTED]
 - [[writing.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Channel_Profiles__CLI
+#graphify/code #graphify/EXTRACTED #community/Graphics_Rescue__Validation

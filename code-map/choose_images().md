@@ -1,19 +1,19 @@
 ---
 source_file: "shortsmaker/picker.py"
 type: "code"
-community: "Picture List Catalog (3)"
+community: "Picture Picker"
 location: "L12"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Picture_List_Catalog_3
+  - community/Picture_Picker
 ---
 
 # choose_images()
 
 ## Connections
 - [[Build a broad multi-source pool of images and real video footage (per-scene…]] - `rationale_for` [EXTRACTED]
-- [[Path_7]] - `references` [EXTRACTED]
+- [[Path_11]] - `references` [EXTRACTED]
 - [[apply_look_scenes()]] - `calls` [EXTRACTED]
 - [[ask_ai()]] - `calls` [EXTRACTED]
 - [[contact_sheets()]] - `calls` [EXTRACTED]
@@ -25,7 +25,6 @@ tags:
 - [[load_channel()]] - `calls` [EXTRACTED]
 - [[load_pool()]] - `calls` [EXTRACTED]
 - [[picker.py]] - `contains` [EXTRACTED]
-- [[render()]] - `calls` [EXTRACTED]
 - [[style_library()]] - `calls` [EXTRACTED]
 - [[test_choose_extra_gather_is_bounded()]] - `calls` [EXTRACTED]
 - [[test_choose_falls_back_to_plan()]] - `calls` [EXTRACTED]
@@ -35,4 +34,4 @@ tags:
 - [[test_plan_note_already_used()]] - `calls` [EXTRACTED]
 - [[test_planned_full_pictures_not_sent_when_empty()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Picture_List_Catalog_3
+#graphify/code #graphify/EXTRACTED #community/Picture_Picker

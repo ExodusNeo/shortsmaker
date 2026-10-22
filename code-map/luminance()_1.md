@@ -1,18 +1,24 @@
 ---
-source_file: "shortsmaker/config.py"
+source_file: "remotion/src/style/kit.ts"
 type: "code"
-community: "Channel Profiles & CLI"
-location: "L72"
+community: "Photo Looks Library"
+location: "L43"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Channel_Profiles__CLI
+  - community/Photo_Looks_Library
 ---
 
 # luminance()
 
 ## Connections
-- [[config.py]] - `contains` [EXTRACTED]
-- [[hex_rgb()]] - `calls` [EXTRACTED]
+- [[Engraving.tsx]] - `imports` [EXTRACTED]
+- [[Halftone.tsx]] - `imports` [EXTRACTED]
+- [[Riso.tsx]] - `imports` [EXTRACTED]
+- [[draw()]] - `calls` [EXTRACTED]
+- [[draw()_1]] - `calls` [EXTRACTED]
+- [[draw()_3]] - `calls` [EXTRACTED]
+- [[drawCover()]] - `calls` [EXTRACTED]
+- [[kit.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Channel_Profiles__CLI
+#graphify/code #graphify/EXTRACTED #community/Photo_Looks_Library

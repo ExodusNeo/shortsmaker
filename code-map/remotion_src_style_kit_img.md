@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "Style Library Inventions (TS)"
+community: "Photo Looks Library"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Style_Library_Inventions_TS
+  - community/Photo_Looks_Library
 ---
 
 # remotion_src_style_kit_img
@@ -18,4 +18,4 @@ tags:
 - [[Riso.tsx]] - `imports` [EXTRACTED]
 - [[Silent.tsx]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Style_Library_Inventions_TS
+#graphify/concept #graphify/EXTRACTED #community/Photo_Looks_Library

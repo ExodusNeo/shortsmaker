@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/full/examples/ExampleEvidence.tsx"
 type: "code"
-community: "Custom Scene Toolkit & Examples"
+community: "Guarded Scene Layout"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Custom_Scene_Toolkit__Examples
+  - community/Guarded_Scene_Layout
 ---
 
 # ExampleEvidence.tsx
@@ -39,4 +39,4 @@ tags:
 - [[skinOf()]] - `imports` [EXTRACTED]
 - [[toolkit.tsx]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Custom_Scene_Toolkit__Examples
+#graphify/code #graphify/EXTRACTED #community/Guarded_Scene_Layout

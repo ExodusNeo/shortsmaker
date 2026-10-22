@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "Footage Downloads & Crops (2) (3)"
+community: "Media Tools & Shot Spans"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Footage_Downloads__Crops_2_3
+  - community/Media_Tools__Shot_Spans
 ---
 
 # subprocess
@@ -13,6 +13,7 @@ tags:
 ## Connections
 - [[audio_mix.py]] - `imports` [EXTRACTED]
 - [[duration()]] - `calls` [EXTRACTED]
+- [[edit_project.py]] - `imports` [EXTRACTED]
 - [[ffmpeg()]] - `calls` [EXTRACTED]
 - [[fills_frame()]] - `calls` [EXTRACTED]
 - [[film_piece()]] - `calls` [EXTRACTED]
@@ -22,7 +23,8 @@ tags:
 - [[image_sources.py]] - `imports` [EXTRACTED]
 - [[llm.py]] - `imports` [EXTRACTED]
 - [[local_job()]] - `calls` [EXTRACTED]
-- [[main()_1]] - `calls` [EXTRACTED]
+- [[main()]] - `calls` [EXTRACTED]
+- [[master_gain()]] - `calls` [EXTRACTED]
 - [[media_tools.py]] - `imports` [EXTRACTED]
 - [[moss_images()]] - `calls` [EXTRACTED]
 - [[motion.py]] - `imports` [EXTRACTED]
@@ -41,9 +43,10 @@ tags:
 - [[split_make_shorts.py]] - `imports` [EXTRACTED]
 - [[storyboard()]] - `calls` [EXTRACTED]
 - [[studio_speak()]] - `calls` [EXTRACTED]
+- [[test_edit_project.py]] - `imports` [EXTRACTED]
 - [[test_full_scenes.py]] - `imports` [EXTRACTED]
 - [[tsc_check()]] - `calls` [EXTRACTED]
 - [[video_encoder()]] - `calls` [EXTRACTED]
 - [[voicestudio_up()]] - `calls` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Footage_Downloads__Crops_2_3
+#graphify/concept #graphify/EXTRACTED #community/Media_Tools__Shot_Spans

@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/style/looks/Silent.tsx"
 type: "code"
-community: "Style Library Inventions (TS)"
+community: "Photo Looks Library"
 location: "L19"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Style_Library_Inventions_TS
+  - community/Photo_Looks_Library
 ---
 
 # Silent()
@@ -14,8 +14,8 @@ tags:
 ## Connections
 - [[Silent.tsx]] - `contains` [EXTRACTED]
 - [[draw()_4]] - `indirect_call` [INFERRED]
-- [[noise()]] - `calls` [EXTRACTED]
+- [[noise()_1]] - `calls` [EXTRACTED]
 - [[styleindex.ts]] - `indirect_call` [INFERRED]
 - [[useOnceCanvas()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Style_Library_Inventions_TS
+#graphify/code #graphify/EXTRACTED #community/Photo_Looks_Library

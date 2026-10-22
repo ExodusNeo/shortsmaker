@@ -12,9 +12,8 @@ tags:
 # thumbnail()
 
 ## Connections
-- [[Path_19]] - `references` [EXTRACTED]
+- [[Path_22]] - `references` [EXTRACTED]
 - [[fit_font()]] - `calls` [EXTRACTED]
 - [[frame_render.py]] - `contains` [EXTRACTED]
-- [[render()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Python_Frame_Renderer

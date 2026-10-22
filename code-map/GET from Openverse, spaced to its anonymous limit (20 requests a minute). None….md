@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/image_sources.py"
 type: "rationale"
-community: "Local AI Jobs & Clips"
+community: "Film Footage Sources"
 location: "L134"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Local_AI_Jobs__Clips
+  - community/Film_Footage_Sources
 ---
 
 # GET from Openverse, spaced to its anonymous limit (20 requests a minute). None…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[ov_get()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Local_AI_Jobs__Clips
+#graphify/rationale #graphify/EXTRACTED #community/Film_Footage_Sources

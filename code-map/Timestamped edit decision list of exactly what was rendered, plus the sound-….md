@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/editplan.py"
 type: "rationale"
-community: "Story Sounds & Credits (2)"
+community: "Edit Plan Text"
 location: "L41"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Story_Sounds__Credits_2
+  - community/Edit_Plan_Text
 ---
 
 # Timestamped edit decision list of exactly what was rendered, plus the sound-…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[edit_plan()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Story_Sounds__Credits_2
+#graphify/rationale #graphify/EXTRACTED #community/Edit_Plan_Text

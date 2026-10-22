@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_pictures_first.py"
 type: "code"
-community: "Full-Scene Rescue & Plan Cleaning"
+community: "Graphics Rescue & Validation"
 location: "L316"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Full-Scene_Rescue__Plan_Cleaning
+  - community/Graphics_Rescue__Validation
 ---
 
 # test_clean_full_keeps_board_pic()
@@ -16,4 +16,4 @@ tags:
 - [[test_pictures_first.py]] - `contains` [EXTRACTED]
 - [[words_of()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Full-Scene_Rescue__Plan_Cleaning
+#graphify/code #graphify/EXTRACTED #community/Graphics_Rescue__Validation

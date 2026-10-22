@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/motion.py"
 type: "rationale"
-community: "AI Calls & Quota Fallback (2)"
+community: "AI Calls & Trend Seeds"
 location: "L199"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/AI_Calls__Quota_Fallback_2
+  - community/AI_Calls__Trend_Seeds
 ---
 
 # The rules every custom motion-graphic scene follows, plus two worked examples…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[custom_rules()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/AI_Calls__Quota_Fallback_2
+#graphify/rationale #graphify/EXTRACTED #community/AI_Calls__Trend_Seeds

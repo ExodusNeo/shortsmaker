@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/motion.py"
 type: "rationale"
-community: "AI Calls & Quota Fallback (2)"
+community: "Channel Profiles & Menus"
 location: "L309"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/AI_Calls__Quota_Fallback_2
+  - community/Channel_Profiles__Menus
 ---
 
 # Type-checks the Remotion project; None when it compiles, else the compiler's…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[tsc_check()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/AI_Calls__Quota_Fallback_2
+#graphify/rationale #graphify/EXTRACTED #community/Channel_Profiles__Menus

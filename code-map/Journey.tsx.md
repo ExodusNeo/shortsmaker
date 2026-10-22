@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/full/Journey.tsx"
 type: "code"
-community: "Map Journey Scene"
+community: "Map Journey Scenes"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Map_Journey_Scene
+  - community/Map_Journey_Scenes
 ---
 
 # Journey.tsx
@@ -22,10 +22,10 @@ tags:
 - [[Paper()]] - `imports` [EXTRACTED]
 - [[Paper.tsx]] - `imports_from` [EXTRACTED]
 - [[Rect]] - `contains` [EXTRACTED]
-- [[SAFE_1]] - `contains` [EXTRACTED]
+- [[SAFE]] - `contains` [EXTRACTED]
 - [[SERIF]] - `imports` [EXTRACTED]
 - [[View]] - `contains` [EXTRACTED]
-- [[clamp_8]] - `contains` [EXTRACTED]
+- [[clamp_7]] - `contains` [EXTRACTED]
 - [[fitPoints()]] - `contains` [EXTRACTED]
 - [[fulltypes.ts]] - `imports_from` [EXTRACTED]
 - [[graticule]] - `contains` [EXTRACTED]
@@ -43,4 +43,4 @@ tags:
 - [[viewOf()]] - `contains` [EXTRACTED]
 - [[wrap()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Map_Journey_Scene
+#graphify/code #graphify/EXTRACTED #community/Map_Journey_Scenes

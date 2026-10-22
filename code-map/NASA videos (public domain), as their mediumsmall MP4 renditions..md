@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/footage.py"
 type: "rationale"
-community: "Local AI Jobs & Clips"
+community: "Film Footage Sources"
 location: "L35"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Local_AI_Jobs__Clips
+  - community/Film_Footage_Sources
 ---
 
 # NASA videos (public domain), as their medium/small MP4 renditions.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[nasa_films()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Local_AI_Jobs__Clips
+#graphify/rationale #graphify/EXTRACTED #community/Film_Footage_Sources

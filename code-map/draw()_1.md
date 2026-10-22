@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/style/looks/Halftone.tsx"
 type: "code"
-community: "Style Library Inventions (TS)"
+community: "Photo Looks Library"
 location: "L36"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Style_Library_Inventions_TS
+  - community/Photo_Looks_Library
 ---
 
 # draw()
@@ -14,10 +14,10 @@ tags:
 ## Connections
 - [[Halftone()]] - `calls` [EXTRACTED]
 - [[Halftone.tsx]] - `contains` [EXTRACTED]
-- [[luminance()]] - `calls` [EXTRACTED]
-- [[noise()]] - `calls` [EXTRACTED]
+- [[luminance()_1]] - `calls` [EXTRACTED]
+- [[noise()_1]] - `calls` [EXTRACTED]
 - [[rgb()]] - `calls` [EXTRACTED]
 - [[screen()]] - `calls` [EXTRACTED]
 - [[stretch()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Style_Library_Inventions_TS
+#graphify/code #graphify/EXTRACTED #community/Photo_Looks_Library

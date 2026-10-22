@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/full/guarded.tsx"
 type: "code"
-community: "Custom Scene Toolkit & Examples"
+community: "Guarded Scene Layout"
 location: "L103"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Custom_Scene_Toolkit__Examples
+  - community/Guarded_Scene_Layout
 ---
 
 # Card()
@@ -20,4 +20,4 @@ tags:
 - [[guarded.tsx]] - `contains` [EXTRACTED]
 - [[skinOf()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Custom_Scene_Toolkit__Examples
+#graphify/code #graphify/EXTRACTED #community/Guarded_Scene_Layout

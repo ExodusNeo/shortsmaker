@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/picture_pool.py"
 type: "code"
-community: "Local AI Jobs & Clips"
+community: "Film Footage Sources"
 location: "L99"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Local_AI_Jobs__Clips
+  - community/Film_Footage_Sources
 ---
 
 # gather_pool()
@@ -30,4 +30,4 @@ tags:
 - [[test_pool_roundtrip()]] - `calls` [EXTRACTED]
 - [[words_of()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Local_AI_Jobs__Clips
+#graphify/code #graphify/EXTRACTED #community/Film_Footage_Sources

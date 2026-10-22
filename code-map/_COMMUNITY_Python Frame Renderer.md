@@ -1,11 +1,13 @@
 ---
 type: community
-members: 37
+cohesion: 0.06
+members: 38
 ---
 
 # Python Frame Renderer
 
-**Members:** 37 nodes
+**Cohesion:** 0.06 - loosely connected
+**Members:** 38 nodes
 
 ## Members
 - [[(style, text) for the built-in renderer, which draws only dates, places and…]] - rationale - shortsmaker/plan_rules.py
@@ -16,19 +18,21 @@ members: 37
 - [[ClipReader]] - code - shortsmaker/frame_render.py
 - [[Frame at fraction p (0..1) of the clip; p never goes backwards within a scene.]] - rationale - shortsmaker/frame_render.py
 - [[FreeTypeFont]] - code
+- [[Image_1]] - code
 - [[Image_2]] - code
 - [[One frame of slow Ken Burns motion; affine sampling is sub-pixel so it never…]] - rationale - shortsmaker/frame_render.py
-- [[Path_19]] - code
+- [[Path_22]] - code
 - [[Pop the card in with a slight overshoot over a dimmed background, then shrink…]] - rationale - shortsmaker/frame_render.py
 - [[Pre-render a callout as a small transparent image (animated per frame later).]] - rationale - shortsmaker/frame_render.py
 - [[Returns frame(i, t) scene i at time t with camera move and graphics applied.…]] - rationale - shortsmaker/frame_render.py
+- [[Small credit label (bottom-left, CREDIT_Y) while credited material (YouTube…]] - rationale - shortsmaker/image_sources.py
 - [[Stream every frame to ffmpeg. Cuts in `flashes` are hard cuts under a white…]] - rationale - shortsmaker/frame_render.py
 - [[Streams a clip's frames in order. Decoding a whole 1080x1920 clip up front…]] - rationale - shortsmaker/frame_render.py
-- [[The Python renderer camera moves, graphic overlays, person cards, clip…]] - rationale - shortsmaker/frame_render.py
 - [[Tilted photo card with a white border, drop shadow and a yellow name banner.]] - rationale - shortsmaker/frame_render.py
 - [[True only when a video is already vertical (916-ish, 720p+); horizontal videos…]] - rationale - shortsmaker/frame_render.py
 - [[True when the picture's subject would land under the top callouts (y ~180-680…]] - rationale - shortsmaker/frame_render.py
 - [[White camera-flash curve snaps up over the 2 frames before the cut, then…]] - rationale - shortsmaker/frame_render.py
+- [[credit_tag_image()]] - code - shortsmaker/image_sources.py
 - [[draw_card()]] - code - shortsmaker/frame_render.py
 - [[draw_graphic()]] - code - shortsmaker/frame_render.py
 - [[fallback_graphic()]] - code - shortsmaker/plan_rules.py
@@ -37,7 +41,6 @@ members: 37
 - [[flash_alpha()]] - code - shortsmaker/frame_render.py
 - [[frame()]] - code - shortsmaker/frame_render.py
 - [[frame_maker()]] - code - shortsmaker/frame_render.py
-- [[frame_render.py]] - code - shortsmaker/frame_render.py
 - [[graphic_low()]] - code - shortsmaker/frame_render.py
 - [[graphic_overlay()]] - code - shortsmaker/frame_render.py
 - [[math]] - concept
@@ -54,17 +57,18 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 11 edges to [[_COMMUNITY_Channel Profiles & CLI]]
-- 4 edges to [[_COMMUNITY_Footage Downloads & Crops (2)]]
-- 4 edges to [[_COMMUNITY_Story Sounds & Credits (2)]]
-- 2 edges to [[_COMMUNITY_Local AI Jobs & Clips]]
-- 2 edges to [[_COMMUNITY_Footage Downloads & Crops (2) (3)]]
-- 1 edge to [[_COMMUNITY_Scene Cues & Word Timing]]
-- 1 edge to [[_COMMUNITY_Captions & TTS (3)]]
+- 14 edges to [[_COMMUNITY_Channel Profiles & Menus]]
+- 1 edge to [[_COMMUNITY_Scene & Graphic Timing]]
+- 1 edge to [[_COMMUNITY_SFX & Paper Synthesis]]
+- 1 edge to [[_COMMUNITY_Media Tools & Shot Spans]]
+- 1 edge to [[_COMMUNITY_Archive Film & Downloads]]
+- 1 edge to [[_COMMUNITY_Film Footage Sources]]
+- 1 edge to [[_COMMUNITY_Graphics Rescue & Validation]]
+- 1 edge to [[_COMMUNITY_Sound Effects & Story Sounds]]
 
 ## Top bridge nodes
-- [[frame_render.py]] - degree 28, connects to 4 communities
-- [[frame_maker()]] - degree 8, connects to 2 communities
-- [[fills_frame()]] - degree 6, connects to 2 communities
-- [[person_card()]] - degree 6, connects to 2 communities
-- [[math]] - degree 4, connects to 2 communities
+- [[person_card()]] - degree 6, connects to 3 communities
+- [[math]] - degree 4, connects to 3 communities
+- [[fills_frame()]] - degree 5, connects to 2 communities
+- [[frame_maker()]] - degree 7, connects to 1 community
+- [[ClipReader]] - degree 6, connects to 1 community

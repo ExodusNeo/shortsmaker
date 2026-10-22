@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_style.py"
 type: "code"
-community: "Style Tests"
+community: "Edit Plan Text"
 location: "L143"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Style_Tests
+  - community/Edit_Plan_Text
 ---
 
 # test_director_inventions_are_kept_with_a_spec()
@@ -15,4 +15,4 @@ tags:
 - [[plan_with()]] - `calls` [EXTRACTED]
 - [[test_style.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Style_Tests
+#graphify/code #graphify/EXTRACTED #community/Edit_Plan_Text

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/short_render.py"
 type: "rationale"
-community: "Story Sounds & Credits (2)"
+community: "Painting & Renderer Choice"
 location: "L66"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Story_Sounds__Credits_2
+  - community/Painting__Renderer_Choice
 ---
 
 # Make one Short. With `state` (fix.bat or an automatic fix round), reuse its…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[render()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Story_Sounds__Credits_2
+#graphify/rationale #graphify/EXTRACTED #community/Painting__Renderer_Choice

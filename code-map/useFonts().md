@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/full/Paper.tsx"
 type: "code"
-community: "Paper & Evidence Board Scenes"
+community: "Evidence Board & Documents"
 location: "L95"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Paper__Evidence_Board_Scenes
+  - community/Evidence_Board__Documents
 ---
 
 # useFonts()
@@ -15,4 +15,4 @@ tags:
 - [[Paper()]] - `calls` [EXTRACTED]
 - [[Paper.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Paper__Evidence_Board_Scenes
+#graphify/code #graphify/EXTRACTED #community/Evidence_Board__Documents

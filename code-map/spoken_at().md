@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/plan_rules.py"
 type: "code"
-community: "Scene Cues & Word Timing"
+community: "Graphics Rescue & Validation"
 location: "L324"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Scene_Cues__Word_Timing
+  - community/Graphics_Rescue__Validation
 ---
 
 # spoken_at()
@@ -18,4 +18,4 @@ tags:
 - [[scene_cues()]] - `calls` [EXTRACTED]
 - [[spoken_span()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Scene_Cues__Word_Timing
+#graphify/code #graphify/EXTRACTED #community/Graphics_Rescue__Validation

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/cli.py"
 type: "code"
-community: "Channel Profiles & CLI"
+community: "Channel Profiles & Menus"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Channel_Profiles__CLI
+  - community/Channel_Profiles__Menus
 ---
 
 # cli.py
@@ -20,7 +20,7 @@ tags:
 - [[fix_short()]] - `contains` [EXTRACTED]
 - [[llm.py]] - `imports_from` [EXTRACTED]
 - [[logbook.py]] - `imports_from` [EXTRACTED]
-- [[main()_3]] - `contains` [EXTRACTED]
+- [[main()_2]] - `contains` [EXTRACTED]
 - [[make_shorts.py]] - `imports_from` [EXTRACTED]
 - [[os]] - `imports` [EXTRACTED]
 - [[pathlib]] - `imports_from` [EXTRACTED]
@@ -39,4 +39,4 @@ tags:
 - [[use_picture_from()]] - `contains` [EXTRACTED]
 - [[writing.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Channel_Profiles__CLI
+#graphify/code #graphify/EXTRACTED #community/Channel_Profiles__Menus

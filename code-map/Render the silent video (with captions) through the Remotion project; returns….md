@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/remotion_render.py"
 type: "rationale"
-community: "Skins & Remotion Render"
-location: "L151"
+community: "Remotion Render & Skins"
+location: "L152"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Skins__Remotion_Render
+  - community/Remotion_Render__Skins
 ---
 
 # Render the silent video (with captions) through the Remotion project; returns…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[render_remotion()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Skins__Remotion_Render
+#graphify/rationale #graphify/EXTRACTED #community/Remotion_Render__Skins

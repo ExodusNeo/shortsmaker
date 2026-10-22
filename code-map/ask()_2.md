@@ -1,17 +1,17 @@
 ---
-source_file: "tests/test_full_scenes.py"
+source_file: "tests/test_style.py"
 type: "code"
-community: "AI Calls & Quota Fallback (4) (2)"
-location: "L527"
+community: "Edit Plan Text"
+location: "L197"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AI_Calls__Quota_Fallback_4_2
+  - community/Edit_Plan_Text
 ---
 
 # ask()
 
 ## Connections
-- [[test_review_redraws_custom()]] - `contains` [EXTRACTED]
+- [[test_fact_check_sees_new_graphics()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AI_Calls__Quota_Fallback_4_2
+#graphify/code #graphify/EXTRACTED #community/Edit_Plan_Text

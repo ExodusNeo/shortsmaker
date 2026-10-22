@@ -1,12 +1,12 @@
 ---
 source_file: "local_ai/gen.py"
 type: "rationale"
-community: "GPU Worker (gen.py)"
+community: "GPU Image Worker"
 location: "L140"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/GPU_Worker_genpy
+  - community/GPU_Image_Worker
 ---
 
 # item: {"image", "out" (.mp4), "seconds", "move", "fps", "width", "height"} ->…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[parallax()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/GPU_Worker_genpy
+#graphify/rationale #graphify/EXTRACTED #community/GPU_Image_Worker

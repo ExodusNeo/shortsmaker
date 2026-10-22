@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "Style Library Inventions (TS)"
+community: "Shared Graphics Kit"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Style_Library_Inventions_TS
+  - community/Shared_Graphics_Kit
 ---
 
 # remotion_src_style_kit_easing
@@ -14,4 +14,4 @@ tags:
 - [[KineticTitle.tsx]] - `imports` [EXTRACTED]
 - [[QuestionBeat.tsx]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Style_Library_Inventions_TS
+#graphify/concept #graphify/EXTRACTED #community/Shared_Graphics_Kit

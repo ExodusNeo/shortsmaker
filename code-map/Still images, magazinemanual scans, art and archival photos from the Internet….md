@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/image_sources.py"
 type: "rationale"
-community: "Local AI Jobs & Clips"
+community: "Film Footage Sources"
 location: "L241"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Local_AI_Jobs__Clips
+  - community/Film_Footage_Sources
 ---
 
 # Still images, magazine/manual scans, art and archival photos from the Internet…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[archive_images()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Local_AI_Jobs__Clips
+#graphify/rationale #graphify/EXTRACTED #community/Film_Footage_Sources

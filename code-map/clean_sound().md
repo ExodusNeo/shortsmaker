@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/audio_mix.py"
 type: "code"
-community: "Channel Profiles & CLI"
+community: "Sound Effects & Story Sounds"
 location: "L93"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Channel_Profiles__CLI
+  - community/Sound_Effects__Story_Sounds
 ---
 
 # clean_sound()
@@ -18,6 +18,5 @@ tags:
 - [[re]] - `calls` [EXTRACTED]
 - [[test_clean_sound()]] - `calls` [EXTRACTED]
 - [[words_of()]] - `calls` [EXTRACTED]
-- [[write_scripts()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Channel_Profiles__CLI
+#graphify/code #graphify/EXTRACTED #community/Sound_Effects__Story_Sounds

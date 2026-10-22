@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/audio_mix.py"
 type: "rationale"
-community: "Captions & TTS (3)"
+community: "SFX & Paper Synthesis"
 location: "L162"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Captions__TTS_3
+  - community/SFX__Paper_Synthesis
 ---
 
 # Synthesize the sound-effect library once (no downloads, no copyright). Hits,…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[make_sfx()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Captions__TTS_3
+#graphify/rationale #graphify/EXTRACTED #community/SFX__Paper_Synthesis

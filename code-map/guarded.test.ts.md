@@ -1,12 +1,12 @@
 ---
 source_file: "tests/guarded.test.ts"
 type: "code"
-community: "Guarded Layout (cards, arrows)"
+community: "Guarded Scene Layout"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Guarded_Layout_cards_arrows
+  - community/Guarded_Scene_Layout
 ---
 
 # guarded.test.ts
@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[Box]] - `imports` [EXTRACTED]
 - [[MIN_MOVE]] - `imports` [EXTRACTED]
-- [[SAFE]] - `imports` [EXTRACTED]
+- [[SAFE_1]] - `imports` [EXTRACTED]
 - [[boxAt()]] - `imports` [EXTRACTED]
 - [[crosses()]] - `contains` [EXTRACTED]
 - [[fitCard()]] - `imports` [EXTRACTED]
@@ -28,4 +28,4 @@ tags:
 - [[test()_1]] - `contains` [EXTRACTED]
 - [[travel()]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Guarded_Layout_cards_arrows
+#graphify/code #graphify/EXTRACTED #community/Guarded_Scene_Layout

@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/Graphics.tsx"
 type: "code"
-community: "Remotion Short Composition"
+community: "Remotion Captions & Cards"
 location: "L123"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Remotion_Short_Composition
+  - community/Remotion_Captions__Cards
 ---
 
 # Pin()
@@ -17,4 +17,4 @@ tags:
 - [[MapCard()]] - `calls` [EXTRACTED]
 - [[MapCard.tsx]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Remotion_Short_Composition
+#graphify/code #graphify/EXTRACTED #community/Remotion_Captions__Cards

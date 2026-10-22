@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/seo.py"
 type: "rationale"
-community: "Entry Point, Logbook & Sounds"
+community: "Archive Film & Downloads"
 location: "L12"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Entry_Point_Logbook__Sounds
+  - community/Archive_Film__Downloads
 ---
 
 # What people actually type into YouTube search (free autocomplete endpoint, no…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[search_suggestions()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Entry_Point_Logbook__Sounds
+#graphify/rationale #graphify/EXTRACTED #community/Archive_Film__Downloads

@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_full_scenes.py"
 type: "code"
-community: "Story Sounds & Credits (2)"
+community: "Painting & Renderer Choice"
 location: "L251"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Story_Sounds__Credits_2
+  - community/Painting__Renderer_Choice
 ---
 
 # test_state_roundtrip_full_pics()
@@ -16,4 +16,4 @@ tags:
 - [[save_state()]] - `calls` [EXTRACTED]
 - [[test_full_scenes.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Story_Sounds__Credits_2
+#graphify/code #graphify/EXTRACTED #community/Painting__Renderer_Choice

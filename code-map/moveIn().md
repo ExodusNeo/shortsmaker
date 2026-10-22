@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/Graphics.tsx"
 type: "code"
-community: "Remotion Short Composition"
+community: "Remotion Captions & Cards"
 location: "L30"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Remotion_Short_Composition
+  - community/Remotion_Captions__Cards
 ---
 
 # moveIn()
@@ -24,4 +24,4 @@ tags:
 - [[StatCard()]] - `calls` [EXTRACTED]
 - [[TimelineCard()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Remotion_Short_Composition
+#graphify/code #graphify/EXTRACTED #community/Remotion_Captions__Cards

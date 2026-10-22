@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/cli.py"
 type: "code"
-community: "Entry Point, Logbook & Sounds"
+community: "Entry Point & Run Menus"
 location: "L105"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Entry_Point_Logbook__Sounds
+  - community/Entry_Point__Run_Menus
 ---
 
 # fix_short()
@@ -17,7 +17,7 @@ tags:
 - [[fix.bat re-render a recent Short with one scene changed, keeping its pictures,…]] - `rationale_for` [EXTRACTED]
 - [[load_channel()]] - `calls` [EXTRACTED]
 - [[load_state()]] - `calls` [EXTRACTED]
-- [[main()_3]] - `calls` [EXTRACTED]
+- [[main()_2]] - `calls` [EXTRACTED]
 - [[paint_new()]] - `calls` [EXTRACTED]
 - [[prune_work()]] - `calls` [EXTRACTED]
 - [[render()]] - `calls` [EXTRACTED]
@@ -26,4 +26,4 @@ tags:
 - [[use_channel()]] - `calls` [EXTRACTED]
 - [[use_picture_from()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Entry_Point_Logbook__Sounds
+#graphify/code #graphify/EXTRACTED #community/Entry_Point__Run_Menus

@@ -1,17 +1,17 @@
 ---
-source_file: "remotion/src/full/BigNumber.tsx"
+source_file: "remotion/src/full/guarded.tsx"
 type: "code"
-community: "Big Number Scene"
-location: "L7"
+community: "Guarded Scene Layout"
+location: "L17"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Big_Number_Scene
+  - community/Guarded_Scene_Layout
 ---
 
 # clamp
 
 ## Connections
-- [[BigNumber.tsx]] - `contains` [EXTRACTED]
+- [[guarded.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Big_Number_Scene
+#graphify/code #graphify/EXTRACTED #community/Guarded_Scene_Layout

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/logbook.py"
 type: "rationale"
-community: "Entry Point, Logbook & Sounds"
+community: "Logbook & Vault Pages"
 location: "L25"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Entry_Point_Logbook__Sounds
+  - community/Logbook__Vault_Pages
 ---
 
 # Add a finished Short to this channel's logbook, with empty lines for its…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[log_short()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Entry_Point_Logbook__Sounds
+#graphify/rationale #graphify/EXTRACTED #community/Logbook__Vault_Pages

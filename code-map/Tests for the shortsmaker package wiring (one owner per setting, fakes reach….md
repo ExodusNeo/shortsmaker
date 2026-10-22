@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_package.py"
 type: "rationale"
-community: "AI Calls & Quota Fallback"
+community: "Word Counts & Test Utils"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/AI_Calls__Quota_Fallback
+  - community/Word_Counts__Test_Utils
 ---
 
 # Tests for the shortsmaker package wiring (one owner per setting, fakes reach…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[test_package.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/AI_Calls__Quota_Fallback
+#graphify/rationale #graphify/EXTRACTED #community/Word_Counts__Test_Utils

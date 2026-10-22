@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/full/toolkit.tsx"
 type: "code"
-community: "Custom Scene Toolkit & Examples"
+community: "Custom Scene Slots"
 location: "L21"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Custom_Scene_Toolkit__Examples
+  - community/Custom_Scene_Slots
 ---
 
 # cueAt()
@@ -26,4 +26,4 @@ tags:
 - [[ExampleEvidence.tsx]] - `imports` [EXTRACTED]
 - [[toolkit.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Custom_Scene_Toolkit__Examples
+#graphify/code #graphify/EXTRACTED #community/Custom_Scene_Slots

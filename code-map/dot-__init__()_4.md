@@ -1,17 +1,17 @@
 ---
-source_file: "tools/split_make_shorts.py"
+source_file: "tests/test_pictures_first.py"
 type: "code"
-community: "Split Script (tools)"
-location: "L385"
+community: "Test Patching Helpers"
+location: "L33"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Split_Script_tools
+  - community/Test_Patching_Helpers
 ---
 
 # .__init__()
 
 ## Connections
-- [[Unqualify]] - `method` [EXTRACTED]
+- [[stubbed]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Split_Script_tools
+#graphify/code #graphify/EXTRACTED #community/Test_Patching_Helpers

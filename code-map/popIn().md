@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/full/toolkit.tsx"
 type: "code"
-community: "Paper & Evidence Board Scenes"
+community: "Custom Scene Slots"
 location: "L17"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Paper__Evidence_Board_Scenes
+  - community/Custom_Scene_Slots
 ---
 
 # popIn()
@@ -16,4 +16,4 @@ tags:
 - [[PhotoCutout()]] - `calls` [EXTRACTED]
 - [[toolkit.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Paper__Evidence_Board_Scenes
+#graphify/code #graphify/EXTRACTED #community/Custom_Scene_Slots

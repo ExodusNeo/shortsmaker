@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/style/looks/Halftone.tsx"
 type: "code"
-community: "Style Library Inventions (TS)"
+community: "Photo Looks Library"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Style_Library_Inventions_TS
+  - community/Photo_Looks_Library
 ---
 
 # Halftone.tsx
@@ -18,8 +18,8 @@ tags:
 - [[Look]] - `imports` [EXTRACTED]
 - [[draw()_1]] - `contains` [EXTRACTED]
 - [[kit.ts]] - `imports_from` [EXTRACTED]
-- [[luminance()]] - `imports` [EXTRACTED]
-- [[noise()]] - `imports` [EXTRACTED]
+- [[luminance()_1]] - `imports` [EXTRACTED]
+- [[noise()_1]] - `imports` [EXTRACTED]
 - [[ref_react]] - `imports_from` [EXTRACTED]
 - [[remotion_src_style_kit_img]] - `imports` [EXTRACTED]
 - [[rgb()]] - `contains` [EXTRACTED]
@@ -29,4 +29,4 @@ tags:
 - [[styletypes.ts]] - `imports_from` [EXTRACTED]
 - [[useOnceCanvas()]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Style_Library_Inventions_TS
+#graphify/code #graphify/EXTRACTED #community/Photo_Looks_Library

@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "Style Library Inventions (TS)"
+community: "Photo Looks Library"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Style_Library_Inventions_TS
+  - community/Photo_Looks_Library
 ---
 
 # ref_react
@@ -36,4 +36,4 @@ tags:
 - [[styletypes.ts]] - `imports_from` [EXTRACTED]
 - [[toolkit.tsx]] - `imports_from` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Style_Library_Inventions_TS
+#graphify/concept #graphify/EXTRACTED #community/Photo_Looks_Library

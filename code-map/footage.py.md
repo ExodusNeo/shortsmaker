@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/footage.py"
 type: "code"
-community: "Channel Profiles & CLI"
+community: "Archive Film & Downloads"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Channel_Profiles__CLI
+  - community/Archive_Film__Downloads
 ---
 
 # footage.py
@@ -41,4 +41,4 @@ tags:
 - [[time]] - `imports` [EXTRACTED]
 - [[urllib_parse]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Channel_Profiles__CLI
+#graphify/code #graphify/EXTRACTED #community/Archive_Film__Downloads

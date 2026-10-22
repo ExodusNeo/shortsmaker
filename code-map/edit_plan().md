@@ -1,24 +1,23 @@
 ---
 source_file: "shortsmaker/editplan.py"
 type: "code"
-community: "Story Sounds & Credits (2)"
+community: "Edit Plan Text"
 location: "L38"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Story_Sounds__Credits_2
+  - community/Edit_Plan_Text
 ---
 
 # edit_plan()
 
 ## Connections
-- [[Path_3]] - `references` [EXTRACTED]
+- [[Path_16]] - `references` [EXTRACTED]
 - [[Timestamped edit decision list of exactly what was rendered, plus the sound-…]] - `rationale_for` [EXTRACTED]
 - [[clock()]] - `calls` [EXTRACTED]
 - [[cut_text()]] - `calls` [EXTRACTED]
 - [[editplan.py]] - `contains` [EXTRACTED]
 - [[look_text()]] - `calls` [EXTRACTED]
 - [[picture_line()]] - `calls` [EXTRACTED]
-- [[render()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Story_Sounds__Credits_2
+#graphify/code #graphify/EXTRACTED #community/Edit_Plan_Text

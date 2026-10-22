@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/full/types.ts"
 type: "code"
-community: "Big Number Scene"
+community: "Big Number Scenes"
 location: "L7"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Big_Number_Scene
+  - community/Big_Number_Scenes
 ---
 
 # FullBase
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[fulltypes.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Big_Number_Scene
+#graphify/code #graphify/EXTRACTED #community/Big_Number_Scenes

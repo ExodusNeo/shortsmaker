@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/audio_mix.py"
 type: "code"
-community: "Channel Profiles & CLI"
+community: "Sound Effects & Story Sounds"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Channel_Profiles__CLI
+  - community/Sound_Effects__Story_Sounds
 ---
 
 # audio_mix.py
@@ -44,10 +44,10 @@ tags:
 - [[test_package.py]] - `imports_from` [EXTRACTED]
 - [[test_style.py]] - `imports_from` [EXTRACTED]
 - [[time]] - `imports` [EXTRACTED]
-- [[tts()_1]] - `contains` [EXTRACTED]
+- [[tts()]] - `contains` [EXTRACTED]
 - [[urllib_parse]] - `imports` [EXTRACTED]
 - [[urllib_request]] - `imports` [EXTRACTED]
 - [[wave]] - `imports` [EXTRACTED]
 - [[writing.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Channel_Profiles__CLI
+#graphify/code #graphify/EXTRACTED #community/Sound_Effects__Story_Sounds

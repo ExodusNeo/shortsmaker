@@ -1,21 +1,19 @@
 ---
 source_file: "shortsmaker/photo_prep.py"
 type: "code"
-community: "Channel Profiles & CLI (2)"
+community: "Vertical Crop"
 location: "L84"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Channel_Profiles__CLI_2
+  - community/Vertical_Crop
 ---
 
 # to_vertical()
 
 ## Connections
 - [[Fill the 916 frame with the picture (centre crop) for the slow zoompan. This…]] - `rationale_for` [EXTRACTED]
-- [[Path_16]] - `references` [EXTRACTED]
-- [[paint_instead()]] - `calls` [EXTRACTED]
+- [[Path_21]] - `references` [EXTRACTED]
 - [[photo_prep.py]] - `contains` [EXTRACTED]
-- [[render()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Channel_Profiles__CLI_2
+#graphify/code #graphify/EXTRACTED #community/Vertical_Crop

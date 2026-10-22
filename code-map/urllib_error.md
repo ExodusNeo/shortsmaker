@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "Local AI Jobs & Clips"
+community: "Film Footage Sources"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Local_AI_Jobs__Clips
+  - community/Film_Footage_Sources
 ---
 
 # urllib_error
@@ -14,4 +14,4 @@ tags:
 - [[gpu.py]] - `imports` [EXTRACTED]
 - [[image_sources.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Local_AI_Jobs__Clips
+#graphify/concept #graphify/EXTRACTED #community/Film_Footage_Sources

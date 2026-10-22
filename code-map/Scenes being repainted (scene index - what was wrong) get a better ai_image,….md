@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/review.py"
 type: "rationale"
-community: "Entry Point, Logbook & Sounds"
+community: "Repaint Prompt Rewrites"
 location: "L216"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Entry_Point_Logbook__Sounds
+  - community/Repaint_Prompt_Rewrites
 ---
 
 # Scenes being repainted (scene index -> what was wrong) get a better ai_image,…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[rewrite_paint_prompts()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Entry_Point_Logbook__Sounds
+#graphify/rationale #graphify/EXTRACTED #community/Repaint_Prompt_Rewrites

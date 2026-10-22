@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/style/transitions/Fade.tsx"
 type: "code"
-community: "Style Library Inventions (TS)"
+community: "Transitions & Overlays"
 location: "L4"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Style_Library_Inventions_TS
+  - community/Transitions__Overlays
 ---
 
 # Fade
@@ -15,4 +15,4 @@ tags:
 - [[Fade.tsx]] - `contains` [EXTRACTED]
 - [[styleindex.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Style_Library_Inventions_TS
+#graphify/code #graphify/EXTRACTED #community/Transitions__Overlays

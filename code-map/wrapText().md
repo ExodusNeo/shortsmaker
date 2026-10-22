@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/full/Document.tsx"
 type: "code"
-community: "Paper & Evidence Board Scenes"
+community: "Evidence Board & Documents"
 location: "L10"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Paper__Evidence_Board_Scenes
+  - community/Evidence_Board__Documents
 ---
 
 # wrapText()
@@ -15,4 +15,4 @@ tags:
 - [[Document.tsx]] - `contains` [EXTRACTED]
 - [[DocumentScene()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Paper__Evidence_Board_Scenes
+#graphify/code #graphify/EXTRACTED #community/Evidence_Board__Documents

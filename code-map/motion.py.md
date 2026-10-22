@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/motion.py"
 type: "code"
-community: "AI Calls & Quota Fallback (2)"
+community: "Channel Profiles & Menus"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AI_Calls__Quota_Fallback_2
+  - community/Channel_Profiles__Menus
 ---
 
 # motion.py
@@ -42,4 +42,4 @@ tags:
 - [[test_style.py]] - `imports_from` [EXTRACTED]
 - [[tsc_check()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AI_Calls__Quota_Fallback_2
+#graphify/code #graphify/EXTRACTED #community/Channel_Profiles__Menus

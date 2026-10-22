@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/plan_rules.py"
 type: "rationale"
-community: "Picture List Catalog (2) (2)"
+community: "Motion Graphic Limits"
 location: "L228"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Picture_List_Catalog_2_2
+  - community/Motion_Graphic_Limits
 ---
 
 # Never scene 1 (real footage keeps the hook), never two in a row, never a scene…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[limit_full()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Picture_List_Catalog_2_2
+#graphify/rationale #graphify/EXTRACTED #community/Motion_Graphic_Limits

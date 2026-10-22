@@ -1,12 +1,12 @@
 ---
 source_file: "local_ai/gen.py"
 type: "code"
-community: "GPU Worker (gen.py)"
+community: "GPU Image Worker"
 location: "L131"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/GPU_Worker_genpy
+  - community/GPU_Image_Worker
 ---
 
 # encoder_args()
@@ -16,4 +16,4 @@ tags:
 - [[gen.py]] - `contains` [EXTRACTED]
 - [[parallax()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/GPU_Worker_genpy
+#graphify/code #graphify/EXTRACTED #community/GPU_Image_Worker

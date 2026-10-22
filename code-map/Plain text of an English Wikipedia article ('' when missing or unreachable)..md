@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/writing.py"
 type: "rationale"
-community: "AI Calls & Quota Fallback"
-location: "L520"
+community: "Graphics Rescue & Validation"
+location: "L572"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/AI_Calls__Quota_Fallback
+  - community/Graphics_Rescue__Validation
 ---
 
 # Plain text of an English Wikipedia article ('' when missing or unreachable).
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[article_text()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/AI_Calls__Quota_Fallback
+#graphify/rationale #graphify/EXTRACTED #community/Graphics_Rescue__Validation

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/motion.py"
 type: "rationale"
-community: "AI Calls & Quota Fallback (2)"
+community: "AI Calls & Trend Seeds"
 location: "L129"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/AI_Calls__Quota_Fallback_2
+  - community/AI_Calls__Trend_Seeds
 ---
 
 # Motion Graphics Agent: writes bespoke React/SVG Remotion code for each `type:…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[code_custom_scenes()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/AI_Calls__Quota_Fallback_2
+#graphify/rationale #graphify/EXTRACTED #community/AI_Calls__Trend_Seeds

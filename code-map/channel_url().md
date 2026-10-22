@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/channel_profiles.py"
 type: "code"
-community: "Entry Point, Logbook & Sounds"
+community: "Trend Research & New Channel"
 location: "L128"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Entry_Point_Logbook__Sounds
+  - community/Trend_Research__New_Channel
 ---
 
 # channel_url()
@@ -15,4 +15,4 @@ tags:
 - [[channel_profiles.py]] - `contains` [EXTRACTED]
 - [[trend_research()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Entry_Point_Logbook__Sounds
+#graphify/code #graphify/EXTRACTED #community/Trend_Research__New_Channel

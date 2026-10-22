@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_full_scenes.py"
 type: "code"
-community: "Full-Scene Rescue & Plan Cleaning"
+community: "Remotion Render & Skins"
 location: "L425"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Full-Scene_Rescue__Plan_Cleaning
+  - community/Remotion_Render__Skins
 ---
 
 # test_clean_full_custom_and_skin()
@@ -16,4 +16,4 @@ tags:
 - [[short_skin()]] - `calls` [EXTRACTED]
 - [[test_full_scenes.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Full-Scene_Rescue__Plan_Cleaning
+#graphify/code #graphify/EXTRACTED #community/Remotion_Render__Skins

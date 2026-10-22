@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "Footage Downloads & Crops (2) (2)"
+community: "Channel Profiles & Menus"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Footage_Downloads__Crops_2_2
+  - community/Channel_Profiles__Menus
 ---
 
 # shutil
@@ -20,8 +20,8 @@ tags:
 - [[invent_component()]] - `calls` [EXTRACTED]
 - [[llm.py]] - `imports` [EXTRACTED]
 - [[logbook.py]] - `imports` [EXTRACTED]
-- [[main()_3]] - `calls` [EXTRACTED]
-- [[main()_1]] - `calls` [EXTRACTED]
+- [[main()_2]] - `calls` [EXTRACTED]
+- [[main()]] - `calls` [EXTRACTED]
 - [[motion.py]] - `imports` [EXTRACTED]
 - [[paint_instead()]] - `calls` [EXTRACTED]
 - [[picture_pool.py]] - `imports` [EXTRACTED]
@@ -48,4 +48,4 @@ tags:
 - [[write_scripts()]] - `calls` [EXTRACTED]
 - [[writing.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Footage_Downloads__Crops_2_2
+#graphify/concept #graphify/EXTRACTED #community/Channel_Profiles__Menus

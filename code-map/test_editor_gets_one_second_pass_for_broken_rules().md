@@ -1,0 +1,19 @@
+---
+source_file: "tests/test_story.py"
+type: "code"
+community: "Quality & Visual Review"
+location: "L65"
+tags:
+  - graphify/code
+  - graphify/EXTRACTED
+  - community/Quality__Visual_Review
+---
+
+# test_editor_gets_one_second_pass_for_broken_rules()
+
+## Connections
+- [[edit_scripts()]] - `calls` [EXTRACTED]
+- [[fake()]] - `indirect_call` [INFERRED]
+- [[test_story.py]] - `contains` [EXTRACTED]
+
+#graphify/code #graphify/EXTRACTED #community/Quality__Visual_Review

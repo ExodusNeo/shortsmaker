@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/full/generated/Custom1.tsx"
 type: "code"
-community: "Custom Scene Toolkit & Examples"
+community: "Custom Scene Slots"
 location: "L21"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Custom_Scene_Toolkit__Examples
+  - community/Custom_Scene_Slots
 ---
 
 # Custom1()
@@ -25,4 +25,4 @@ tags:
 - [[focusCam()]] - `calls` [EXTRACTED]
 - [[skinOf()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Custom_Scene_Toolkit__Examples
+#graphify/code #graphify/EXTRACTED #community/Custom_Scene_Slots

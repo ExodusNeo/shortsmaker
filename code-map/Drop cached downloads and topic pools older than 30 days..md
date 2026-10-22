@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/picture_pool.py"
 type: "rationale"
-community: "Footage Downloads & Crops (2) (2)"
+community: "Entry Point & Run Menus"
 location: "L189"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Footage_Downloads__Crops_2_2
+  - community/Entry_Point__Run_Menus
 ---
 
 # Drop cached downloads and topic pools older than 30 days.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[prune_cache()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Footage_Downloads__Crops_2_2
+#graphify/rationale #graphify/EXTRACTED #community/Entry_Point__Run_Menus

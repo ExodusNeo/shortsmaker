@@ -1,17 +1,17 @@
 ---
-source_file: "remotion/src/full/guarded.tsx"
+source_file: "remotion/src/full/Journey.tsx"
 type: "code"
-community: "Guarded Layout (cards, arrows)"
-location: "L17"
+community: "Map Journey Scenes"
+location: "L27"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Guarded_Layout_cards_arrows
+  - community/Map_Journey_Scenes
 ---
 
 # clamp
 
 ## Connections
-- [[guarded.tsx]] - `contains` [EXTRACTED]
+- [[Journey.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Guarded_Layout_cards_arrows
+#graphify/code #graphify/EXTRACTED #community/Map_Journey_Scenes

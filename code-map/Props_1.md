@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/Extras.tsx"
 type: "code"
-community: "Remotion Short Composition"
+community: "Remotion Captions & Cards"
 location: "L9"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Remotion_Short_Composition
+  - community/Remotion_Captions__Cards
 ---
 
 # Props
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[Extras.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Remotion_Short_Composition
+#graphify/code #graphify/EXTRACTED #community/Remotion_Captions__Cards

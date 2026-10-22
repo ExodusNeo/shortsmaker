@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_full_scenes.py"
 type: "code"
-community: "AI Calls & Quota Fallback (4) (3)"
+community: "Repaint Prompt Rewrites"
 location: "L146"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/AI_Calls__Quota_Fallback_4_3
+  - community/Repaint_Prompt_Rewrites
 ---
 
 # ask()
@@ -17,4 +17,4 @@ tags:
 - [[test_review_redraws_custom()]] - `indirect_call` [INFERRED]
 - [[test_rewrite_paint_prompts()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/INFERRED #community/AI_Calls__Quota_Fallback_4_3
+#graphify/code #graphify/INFERRED #community/Repaint_Prompt_Rewrites

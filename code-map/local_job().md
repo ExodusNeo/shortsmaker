@@ -1,18 +1,18 @@
 ---
 source_file: "shortsmaker/gpu.py"
 type: "code"
-community: "Footage Downloads & Crops (2)"
-location: "L60"
+community: "Local Voice & Clips"
+location: "L62"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Footage_Downloads__Crops_2
+  - community/Local_Voice__Clips
 ---
 
 # local_job()
 
 ## Connections
-- [[Path]] - `references` [EXTRACTED]
+- [[Path_13]] - `references` [EXTRACTED]
 - [[Run a batch on this PC's GPU through a local_ai worker (gen.py, or…]] - `rationale_for` [EXTRACTED]
 - [[gpu.py]] - `contains` [EXTRACTED]
 - [[json]] - `calls` [EXTRACTED]
@@ -23,4 +23,4 @@ tags:
 - [[subprocess]] - `calls` [EXTRACTED]
 - [[test_local_job_retries_a_hard_crash()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Footage_Downloads__Crops_2
+#graphify/code #graphify/EXTRACTED #community/Local_Voice__Clips

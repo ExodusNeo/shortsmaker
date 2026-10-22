@@ -1,24 +1,22 @@
 ---
 source_file: "shortsmaker/media_tools.py"
 type: "code"
-community: "Footage Downloads & Crops (2) (3)"
+community: "Media Tools & Shot Spans"
 location: "L22"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Footage_Downloads__Crops_2_3
+  - community/Media_Tools__Shot_Spans
 ---
 
 # duration()
 
 ## Connections
-- [[Path_10]] - `references` [EXTRACTED]
+- [[Path_8]] - `references` [EXTRACTED]
 - [[log_short()]] - `calls` [EXTRACTED]
 - [[media_tools.py]] - `contains` [EXTRACTED]
 - [[nasa_films()]] - `calls` [EXTRACTED]
-- [[render()]] - `calls` [EXTRACTED]
-- [[render_remotion()]] - `calls` [EXTRACTED]
 - [[shot_span()]] - `calls` [EXTRACTED]
 - [[subprocess]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Footage_Downloads__Crops_2_3
+#graphify/code #graphify/EXTRACTED #community/Media_Tools__Shot_Spans

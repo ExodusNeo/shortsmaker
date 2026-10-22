@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_first_second.py"
 type: "code"
-community: "Voice Worker (qwen_voice)"
+community: "Logbook Lessons & First Second"
 location: "L12"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Voice_Worker_qwen_voice
+  - community/Logbook_Lessons__First_Second
 ---
 
 # real()
@@ -17,4 +17,4 @@ tags:
 - [[test_opener_fix_swaps_once()]] - `calls` [EXTRACTED]
 - [[test_swap_pictures_trades_real_pictures()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Voice_Worker_qwen_voice
+#graphify/code #graphify/EXTRACTED #community/Logbook_Lessons__First_Second

@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_pictures_first.py"
 type: "code"
-community: "Footage Downloads & Crops"
+community: "Picture Pool Prep"
 location: "L252"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Footage_Downloads__Crops
+  - community/Picture_Pool_Prep
 ---
 
 # test_empty_pool_drops_topic_without_ai()
@@ -16,4 +16,4 @@ tags:
 - [[prepare_topic()]] - `calls` [EXTRACTED]
 - [[test_pictures_first.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Footage_Downloads__Crops
+#graphify/code #graphify/EXTRACTED #community/Picture_Pool_Prep

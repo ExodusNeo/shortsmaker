@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/MapCard.tsx"
 type: "code"
-community: "Remotion Short Composition"
+community: "Remotion Captions & Cards"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Remotion_Short_Composition
+  - community/Remotion_Captions__Cards
 ---
 
 # MapCard.tsx
@@ -18,7 +18,7 @@ tags:
 - [[MapCard()]] - `contains` [EXTRACTED]
 - [[Pin()]] - `imports` [EXTRACTED]
 - [[Short.tsx]] - `imports_from` [EXTRACTED]
-- [[clamp_4]] - `contains` [EXTRACTED]
+- [[clamp_3]] - `contains` [EXTRACTED]
 - [[interpolateColor()]] - `contains` [EXTRACTED]
 - [[moveIn()]] - `imports` [EXTRACTED]
 - [[ref_d3_geo]] - `imports_from` [EXTRACTED]
@@ -31,4 +31,4 @@ tags:
 - [[topo]] - `contains` [EXTRACTED]
 - [[useWindow()]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Remotion_Short_Composition
+#graphify/code #graphify/EXTRACTED #community/Remotion_Captions__Cards

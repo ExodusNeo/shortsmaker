@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/frame_render.py"
 type: "rationale"
-community: "Python Frame Renderer"
+community: "Channel Profiles & Menus"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Python_Frame_Renderer
+  - community/Channel_Profiles__Menus
 ---
 
 # The Python renderer: camera moves, graphic overlays, person cards, clip…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[frame_render.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Python_Frame_Renderer
+#graphify/rationale #graphify/EXTRACTED #community/Channel_Profiles__Menus

@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_full_scenes.py"
 type: "code"
-community: "Gemini Image Painting"
+community: "Figure Silhouettes & Redraws"
 location: "L697"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Gemini_Image_Painting
+  - community/Figure_Silhouettes__Redraws
 ---
 
 # test_ink_silhouette()
@@ -16,4 +16,4 @@ tags:
 - [[ink_silhouette()]] - `calls` [EXTRACTED]
 - [[test_full_scenes.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Gemini_Image_Painting
+#graphify/code #graphify/EXTRACTED #community/Figure_Silhouettes__Redraws

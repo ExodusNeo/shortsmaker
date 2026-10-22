@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "Channel Profiles & CLI"
+community: "Sound Effects & Story Sounds"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Channel_Profiles__CLI
+  - community/Sound_Effects__Story_Sounds
 ---
 
 # wave
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[audio_mix.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Channel_Profiles__CLI
+#graphify/concept #graphify/EXTRACTED #community/Sound_Effects__Story_Sounds

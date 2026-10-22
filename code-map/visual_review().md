@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/review.py"
 type: "code"
-community: "Story Sounds & Credits (2)"
+community: "Quality & Visual Review"
 location: "L45"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Story_Sounds__Credits_2
+  - community/Quality__Visual_Review
 ---
 
 # visual_review()
@@ -17,9 +17,8 @@ tags:
 - [[ask_ai()]] - `calls` [EXTRACTED]
 - [[clock()]] - `calls` [EXTRACTED]
 - [[ffmpeg()]] - `calls` [EXTRACTED]
-- [[render()]] - `calls` [EXTRACTED]
 - [[review.py]] - `contains` [EXTRACTED]
 - [[review_fixes()]] - `calls` [EXTRACTED]
 - [[shutil]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Story_Sounds__Credits_2
+#graphify/code #graphify/EXTRACTED #community/Quality__Visual_Review

@@ -1,18 +1,18 @@
 ---
 source_file: "shortsmaker/remotion_render.py"
 type: "code"
-community: "Channel Profiles & CLI (2)"
+community: "Painting & Renderer Choice"
 location: "L71"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Channel_Profiles__CLI_2
+  - community/Painting__Renderer_Choice
 ---
 
 # paint_instead()
 
 ## Connections
-- [[Path_17]] - `references` [EXTRACTED]
+- [[Path_19]] - `references` [EXTRACTED]
 - [[Remotion failed the full-screen motion graphic scenes get a painted picture…]] - `rationale_for` [EXTRACTED]
 - [[gemini_images()]] - `calls` [EXTRACTED]
 - [[local_job()]] - `calls` [EXTRACTED]
@@ -21,6 +21,5 @@ tags:
 - [[render()]] - `calls` [EXTRACTED]
 - [[shutil]] - `calls` [EXTRACTED]
 - [[test_remotion_failure_paints()]] - `calls` [EXTRACTED]
-- [[to_vertical()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Channel_Profiles__CLI_2
+#graphify/code #graphify/EXTRACTED #community/Painting__Renderer_Choice

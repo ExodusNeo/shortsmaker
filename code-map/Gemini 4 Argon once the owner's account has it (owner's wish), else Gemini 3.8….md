@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/llm.py"
 type: "rationale"
-community: "Entry Point, Logbook & Sounds"
+community: "AI Calls & Trend Seeds"
 location: "L25"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Entry_Point_Logbook__Sounds
+  - community/AI_Calls__Trend_Seeds
 ---
 
 # Gemini 4 Argon once the owner's account has it (owner's wish), else Gemini 3.8…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[gemini_model()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Entry_Point_Logbook__Sounds
+#graphify/rationale #graphify/EXTRACTED #community/AI_Calls__Trend_Seeds

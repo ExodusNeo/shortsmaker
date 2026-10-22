@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_style.py"
 type: "code"
-community: "Invention Slots (2)"
+community: "Style Inventions"
 location: "L328"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Invention_Slots_2
+  - community/Style_Inventions
 ---
 
 # test_good_look_check_skips_the_extra_compile()
@@ -17,4 +17,4 @@ tags:
 - [[restore_style_slots()]] - `calls` [EXTRACTED]
 - [[test_style.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Invention_Slots_2
+#graphify/code #graphify/EXTRACTED #community/Style_Inventions

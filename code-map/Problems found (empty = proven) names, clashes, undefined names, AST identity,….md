@@ -1,12 +1,12 @@
 ---
 source_file: "tools/split_make_shorts.py"
 type: "rationale"
-community: "Split Script (tools)"
+community: "Package Split Tool"
 location: "L413"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Split_Script_tools
+  - community/Package_Split_Tool
 ---
 
 # Problems found (empty = proven): names, clashes, undefined names, AST identity,…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[prove()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Split_Script_tools
+#graphify/rationale #graphify/EXTRACTED #community/Package_Split_Tool

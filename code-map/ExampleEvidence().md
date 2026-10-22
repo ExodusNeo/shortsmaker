@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/full/examples/ExampleEvidence.tsx"
 type: "code"
-community: "Custom Scene Toolkit & Examples"
+community: "Guarded Scene Layout"
 location: "L7"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Custom_Scene_Toolkit__Examples
+  - community/Guarded_Scene_Layout
 ---
 
 # ExampleEvidence()
@@ -26,4 +26,4 @@ tags:
 - [[photoBox()]] - `calls` [EXTRACTED]
 - [[skinOf()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Custom_Scene_Toolkit__Examples
+#graphify/code #graphify/EXTRACTED #community/Guarded_Scene_Layout

@@ -1,28 +1,21 @@
 ---
 source_file: "remotion/src/Short.tsx"
 type: "code"
-community: "Remotion Short Composition"
-location: "L138"
+community: "Remotion Captions & Cards"
+location: "L141"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Remotion_Short_Composition
+  - community/Remotion_Captions__Cards
 ---
 
 # Short()
 
 ## Connections
 - [[Background()]] - `calls` [EXTRACTED]
-- [[Captions()]] - `calls` [EXTRACTED]
 - [[GraphicFor()]] - `calls` [EXTRACTED]
-- [[HookTitle()]] - `calls` [EXTRACTED]
-- [[PersonCard()]] - `calls` [EXTRACTED]
 - [[Root.tsx]] - `imports` [EXTRACTED]
 - [[Short.tsx]] - `contains` [EXTRACTED]
-- [[SubscribeCta()]] - `calls` [EXTRACTED]
 - [[flashAlpha()]] - `calls` [EXTRACTED]
-- [[inksOf()]] - `calls` [EXTRACTED]
-- [[transitionFor()]] - `calls` [EXTRACTED]
-- [[transitionWindow()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Remotion_Short_Composition
+#graphify/code #graphify/EXTRACTED #community/Remotion_Captions__Cards

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/plan_rules.py"
 type: "code"
-community: "Full-Scene Rescue & Plan Cleaning"
+community: "Graphics Rescue & Validation"
 location: "L25"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Full-Scene_Rescue__Plan_Cleaning
+  - community/Graphics_Rescue__Validation
 ---
 
 # clean_graphic()
@@ -20,6 +20,5 @@ tags:
 - [[re]] - `calls` [EXTRACTED]
 - [[test_clean_question_and_kinetic()]] - `calls` [EXTRACTED]
 - [[words_of()]] - `calls` [EXTRACTED]
-- [[write_scripts()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Full-Scene_Rescue__Plan_Cleaning
+#graphify/code #graphify/EXTRACTED #community/Graphics_Rescue__Validation

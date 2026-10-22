@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "Custom Scene Toolkit & Examples"
+community: "Custom Scene Slots"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Custom_Scene_Toolkit__Examples
+  - community/Custom_Scene_Slots
 ---
 
 # remotion_src_full_toolkit_interpolate
@@ -16,4 +16,4 @@ tags:
 - [[Custom2.tsx]] - `imports` [EXTRACTED]
 - [[Custom3.tsx]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Custom_Scene_Toolkit__Examples
+#graphify/concept #graphify/EXTRACTED #community/Custom_Scene_Slots

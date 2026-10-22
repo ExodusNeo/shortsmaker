@@ -1,19 +1,17 @@
 ---
 source_file: "remotion/src/style/index.ts"
 type: "code"
-community: "Remotion Short Composition"
+community: "Style Registry"
 location: "L27"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Remotion_Short_Composition
+  - community/Style_Registry
 ---
 
 # transitionFor()
 
 ## Connections
-- [[Background()]] - `calls` [EXTRACTED]
-- [[Short()]] - `calls` [EXTRACTED]
 - [[Short.tsx]] - `imports` [EXTRACTED]
 - [[has()]] - `calls` [EXTRACTED]
 - [[style.test.ts]] - `imports` [EXTRACTED]
@@ -21,4 +19,4 @@ tags:
 - [[transitionWindow()]] - `calls` [EXTRACTED]
 - [[window.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Remotion_Short_Composition
+#graphify/code #graphify/EXTRACTED #community/Style_Registry

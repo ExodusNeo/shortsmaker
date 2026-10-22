@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "Channel Profiles & CLI"
+community: "Media Tools & Shot Spans"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Channel_Profiles__CLI
+  - community/Media_Tools__Shot_Spans
 ---
 
 # urllib_request
@@ -15,4 +15,4 @@ tags:
 - [[gpu.py]] - `imports` [EXTRACTED]
 - [[media_tools.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Channel_Profiles__CLI
+#graphify/concept #graphify/EXTRACTED #community/Media_Tools__Shot_Spans

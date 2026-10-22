@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/motion.py"
 type: "rationale"
-community: "Scene Cues & Word Timing (3)"
+community: "Full Scene Props"
 location: "L21"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Scene_Cues__Word_Timing_3
+  - community/Full_Scene_Props
 ---
 
 # One plain line for edit_plan.txt saying what a full-screen motion graphic shows.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[full_summary()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Scene_Cues__Word_Timing_3
+#graphify/rationale #graphify/EXTRACTED #community/Full_Scene_Props

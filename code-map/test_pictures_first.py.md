@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_pictures_first.py"
 type: "code"
-community: "Picture List Catalog (2)"
+community: "Picture Catalog"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Picture_List_Catalog_2
+  - community/Picture_Catalog
 ---
 
 # test_pictures_first.py
@@ -85,4 +85,4 @@ tags:
 - [[traceback]] - `imports` [EXTRACTED]
 - [[writing.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Picture_List_Catalog_2
+#graphify/code #graphify/EXTRACTED #community/Picture_Catalog

@@ -1,12 +1,12 @@
 ---
 source_file: "tests/style.test.ts"
 type: "code"
-community: "Remotion Short Composition"
+community: "Style Registry"
 location: "L17"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Remotion_Short_Composition
+  - community/Style_Registry
 ---
 
 # ok()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[style.test.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Remotion_Short_Composition
+#graphify/code #graphify/EXTRACTED #community/Style_Registry

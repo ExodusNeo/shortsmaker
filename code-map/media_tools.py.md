@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/media_tools.py"
 type: "code"
-community: "Channel Profiles & CLI"
+community: "Media Tools & Shot Spans"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Channel_Profiles__CLI
+  - community/Media_Tools__Shot_Spans
 ---
 
 # media_tools.py
@@ -16,8 +16,9 @@ tags:
 - [[audio_mix.py]] - `imports_from` [EXTRACTED]
 - [[clock()]] - `contains` [EXTRACTED]
 - [[duration()]] - `contains` [EXTRACTED]
+- [[edit_project.py]] - `imports_from` [EXTRACTED]
 - [[editplan.py]] - `imports_from` [EXTRACTED]
-- [[fetch()_1]] - `contains` [EXTRACTED]
+- [[fetch()]] - `contains` [EXTRACTED]
 - [[ffmpeg()]] - `contains` [EXTRACTED]
 - [[footage.py]] - `imports_from` [EXTRACTED]
 - [[gpu.py]] - `imports_from` [EXTRACTED]
@@ -32,10 +33,12 @@ tags:
 - [[seo.py]] - `imports_from` [EXTRACTED]
 - [[short_render.py]] - `imports_from` [EXTRACTED]
 - [[subprocess]] - `imports` [EXTRACTED]
+- [[test_edit_project.py]] - `imports_from` [EXTRACTED]
 - [[test_first_second.py]] - `imports_from` [EXTRACTED]
 - [[test_package.py]] - `imports_from` [EXTRACTED]
+- [[test_story.py]] - `imports_from` [EXTRACTED]
 - [[urllib_request]] - `imports` [EXTRACTED]
 - [[video_encoder()]] - `contains` [EXTRACTED]
 - [[write_json()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Channel_Profiles__CLI
+#graphify/code #graphify/EXTRACTED #community/Media_Tools__Shot_Spans

@@ -1,12 +1,12 @@
 ---
 source_file: "local_ai/qwen_voice.py"
 type: "code"
-community: "Voice Worker (qwen_voice)"
+community: "Qwen/CosyVoice Worker"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Voice_Worker_qwen_voice
+  - community/Qwen/CosyVoice_Worker
 ---
 
 # qwen_voice.py
@@ -16,7 +16,7 @@ tags:
 - [[align()]] - `contains` [EXTRACTED]
 - [[align_words()]] - `contains` [EXTRACTED]
 - [[json]] - `imports` [EXTRACTED]
-- [[main()_4]] - `contains` [EXTRACTED]
+- [[main()_3]] - `contains` [EXTRACTED]
 - [[os]] - `imports` [EXTRACTED]
 - [[pathlib]] - `imports_from` [EXTRACTED]
 - [[re]] - `imports` [EXTRACTED]
@@ -29,4 +29,4 @@ tags:
 - [[time]] - `imports` [EXTRACTED]
 - [[unicodedata]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Voice_Worker_qwen_voice
+#graphify/code #graphify/EXTRACTED #community/Qwen/CosyVoice_Worker

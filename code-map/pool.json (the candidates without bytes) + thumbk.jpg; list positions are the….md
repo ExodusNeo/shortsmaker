@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/picture_pool.py"
 type: "rationale"
-community: "Footage Downloads & Crops"
+community: "Picture Pool Prep"
 location: "L171"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Footage_Downloads__Crops
+  - community/Picture_Pool_Prep
 ---
 
 # pool.json (the candidates without bytes) + thumb<k>.jpg; list positions are the…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[save_pool()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Footage_Downloads__Crops
+#graphify/rationale #graphify/EXTRACTED #community/Picture_Pool_Prep

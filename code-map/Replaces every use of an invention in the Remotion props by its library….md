@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/style_lab.py"
 type: "rationale"
-community: "Skins & Remotion Render"
+community: "Style Inventions"
 location: "L212"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Skins__Remotion_Render
+  - community/Style_Inventions
 ---
 
 # Replaces every use of an invention in the Remotion props by its library…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[swap_inventions()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Skins__Remotion_Render
+#graphify/rationale #graphify/EXTRACTED #community/Style_Inventions

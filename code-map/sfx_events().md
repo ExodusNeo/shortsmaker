@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/audio_mix.py"
 type: "code"
-community: "AI Calls & Quota Fallback (4)"
+community: "Sound Cue Sheet"
 location: "L265"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AI_Calls__Quota_Fallback_4
+  - community/Sound_Cue_Sheet
 ---
 
 # sfx_events()
@@ -16,9 +16,8 @@ tags:
 - [[audio_mix.py]] - `contains` [EXTRACTED]
 - [[pick()]] - `contains` [EXTRACTED]
 - [[random]] - `calls` [EXTRACTED]
-- [[render()]] - `calls` [EXTRACTED]
 - [[test_sfx_full()]] - `calls` [EXTRACTED]
 - [[test_story_sound_wins_its_moment()]] - `calls` [EXTRACTED]
 - [[test_style_sounds()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AI_Calls__Quota_Fallback_4
+#graphify/code #graphify/EXTRACTED #community/Sound_Cue_Sheet

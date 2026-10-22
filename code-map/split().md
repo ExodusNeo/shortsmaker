@@ -1,12 +1,12 @@
 ---
 source_file: "tools/split_make_shorts.py"
 type: "code"
-community: "Split Script (tools)"
+community: "Package Split Tool"
 location: "L483"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Split_Script_tools
+  - community/Package_Split_Tool
 ---
 
 # split()
@@ -18,4 +18,4 @@ tags:
 - [[split_make_shorts.py]] - `indirect_call` [INFERRED]
 - [[split_source()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Split_Script_tools
+#graphify/code #graphify/EXTRACTED #community/Package_Split_Tool

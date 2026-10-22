@@ -1,23 +1,22 @@
 ---
 source_file: "shortsmaker/image_sources.py"
 type: "code"
-community: "Local AI Jobs & Clips"
+community: "Film Footage Sources"
 location: "L41"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Local_AI_Jobs__Clips
+  - community/Film_Footage_Sources
 ---
 
 # wm_get()
 
 ## Connections
 - [[GET from Wikimedia, spaced `gap` seconds apart, with a short backoff on rate…]] - `rationale_for` [EXTRACTED]
-- [[article_text()]] - `calls` [EXTRACTED]
 - [[commons_films()]] - `calls` [EXTRACTED]
-- [[fetch()_1]] - `calls` [EXTRACTED]
+- [[fetch()]] - `calls` [EXTRACTED]
 - [[get_image()]] - `calls` [EXTRACTED]
 - [[image_sources.py]] - `contains` [EXTRACTED]
 - [[wm_files()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Local_AI_Jobs__Clips
+#graphify/code #graphify/EXTRACTED #community/Film_Footage_Sources

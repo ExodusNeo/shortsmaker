@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/review.py"
 type: "code"
-community: "Entry Point, Logbook & Sounds"
+community: "Repaint Prompt Rewrites"
 location: "L215"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Entry_Point_Logbook__Sounds
+  - community/Repaint_Prompt_Rewrites
 ---
 
 # rewrite_paint_prompts()
@@ -20,4 +20,4 @@ tags:
 - [[review.py]] - `contains` [EXTRACTED]
 - [[test_rewrite_paint_prompts()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Entry_Point_Logbook__Sounds
+#graphify/code #graphify/EXTRACTED #community/Repaint_Prompt_Rewrites

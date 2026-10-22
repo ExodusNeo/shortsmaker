@@ -1,12 +1,12 @@
 ---
 source_file: "tools/split_make_shorts.py"
 type: "rationale"
-community: "Split Script (tools)"
+community: "Package Split Tool"
 location: "L366"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Split_Script_tools
+  - community/Package_Split_Tool
 ---
 
 # Import lines in original order, with `from x import a` lines of one statement…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[merge_from()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Split_Script_tools
+#graphify/rationale #graphify/EXTRACTED #community/Package_Split_Tool

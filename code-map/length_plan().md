@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/writing.py"
 type: "code"
-community: "Picture List Catalog (2)"
-location: "L16"
+community: "Quality & Visual Review"
+location: "L64"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Picture_List_Catalog_2
+  - community/Quality__Visual_Review
 ---
 
 # length_plan()
@@ -18,4 +18,4 @@ tags:
 - [[write_scripts()]] - `calls` [EXTRACTED]
 - [[writing.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Picture_List_Catalog_2
+#graphify/code #graphify/EXTRACTED #community/Quality__Visual_Review

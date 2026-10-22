@@ -1,17 +1,17 @@
 ---
-source_file: "remotion/src/full/Document.tsx"
+source_file: "remotion/src/full/BigNumber.tsx"
 type: "code"
-community: "Paper & Evidence Board Scenes"
-location: "L5"
+community: "Big Number Scenes"
+location: "L7"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Paper__Evidence_Board_Scenes
+  - community/Big_Number_Scenes
 ---
 
 # clamp
 
 ## Connections
-- [[Document.tsx]] - `contains` [EXTRACTED]
+- [[BigNumber.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Paper__Evidence_Board_Scenes
+#graphify/code #graphify/EXTRACTED #community/Big_Number_Scenes

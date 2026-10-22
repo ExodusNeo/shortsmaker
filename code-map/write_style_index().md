@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/style_lab.py"
 type: "code"
-community: "Invention Slots"
+community: "Edit Plan Text"
 location: "L19"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Invention_Slots
+  - community/Edit_Plan_Text
 ---
 
 # write_style_index()
@@ -19,4 +19,4 @@ tags:
 - [[style_library()]] - `calls` [EXTRACTED]
 - [[test_write_style_index_is_deterministic()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Invention_Slots
+#graphify/code #graphify/EXTRACTED #community/Edit_Plan_Text

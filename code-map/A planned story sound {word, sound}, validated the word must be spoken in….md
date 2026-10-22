@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/audio_mix.py"
 type: "rationale"
-community: "Channel Profiles & CLI"
+community: "Sound Effects & Story Sounds"
 location: "L94"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Channel_Profiles__CLI
+  - community/Sound_Effects__Story_Sounds
 ---
 
 # A planned story sound {"word", "sound"}, validated: the word must be spoken in…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[clean_sound()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Channel_Profiles__CLI
+#graphify/rationale #graphify/EXTRACTED #community/Sound_Effects__Story_Sounds

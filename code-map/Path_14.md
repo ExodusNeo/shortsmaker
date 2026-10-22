@@ -1,17 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: "Entry Point, Logbook & Sounds"
+community: "Painting & Renderer Choice"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Entry_Point_Logbook__Sounds
+  - community/Painting__Renderer_Choice
 ---
 
 # Path
 
 ## Connections
-- [[log_short()]] - `references` [EXTRACTED]
-- [[vault_page()]] - `references` [EXTRACTED]
+- [[load_state()]] - `references` [EXTRACTED]
+- [[render()]] - `references` [EXTRACTED]
+- [[save_state()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Entry_Point_Logbook__Sounds
+#graphify/code #graphify/EXTRACTED #community/Painting__Renderer_Choice

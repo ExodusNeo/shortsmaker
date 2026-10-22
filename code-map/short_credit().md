@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/image_sources.py"
 type: "code"
-community: "Local AI Jobs & Clips"
+community: "Film Footage Sources"
 location: "L207"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Local_AI_Jobs__Clips
+  - community/Film_Footage_Sources
 ---
 
 # short_credit()
@@ -14,6 +14,5 @@ tags:
 ## Connections
 - [[The on-screen credit tag kind, a short name and the licence (Photo E. Mariz…]] - `rationale_for` [EXTRACTED]
 - [[image_sources.py]] - `contains` [EXTRACTED]
-- [[render()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Local_AI_Jobs__Clips
+#graphify/code #graphify/EXTRACTED #community/Film_Footage_Sources

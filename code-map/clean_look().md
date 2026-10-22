@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/plan_rules.py"
 type: "code"
-community: "Look & Transition Cleaning"
+community: "Edit Plan Text"
 location: "L174"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Look__Transition_Cleaning
+  - community/Edit_Plan_Text
 ---
 
 # clean_look()
@@ -21,4 +21,4 @@ tags:
 - [[test_recent_looks_blocked()]] - `calls` [EXTRACTED]
 - [[test_unknown_names_fall_back()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Look__Transition_Cleaning
+#graphify/code #graphify/EXTRACTED #community/Edit_Plan_Text

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/style_lab.py"
 type: "code"
-community: "Invention Slots"
+community: "Sound Effects & Story Sounds"
 location: "L130"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Invention_Slots
+  - community/Sound_Effects__Story_Sounds
 ---
 
 # clean_style_code()
@@ -17,4 +17,4 @@ tags:
 - [[re]] - `calls` [EXTRACTED]
 - [[style_lab.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Invention_Slots
+#graphify/code #graphify/EXTRACTED #community/Sound_Effects__Story_Sounds

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/plan_rules.py"
 type: "rationale"
-community: "Channel Profiles & CLI"
+community: "Graphics Rescue & Validation"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Channel_Profiles__CLI
+  - community/Graphics_Rescue__Validation
 ---
 
 # Cleaning and validating the planner's JSON (graphics, full-screen scenes,…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[plan_rules.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Channel_Profiles__CLI
+#graphify/rationale #graphify/EXTRACTED #community/Graphics_Rescue__Validation

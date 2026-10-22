@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "AI Calls & Quota Fallback (2)"
+community: "Review Auto Fixes"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AI_Calls__Quota_Fallback_2
+  - community/Review_Auto_Fixes
 ---
 
 # Path
 
 ## Connections
-- [[use_picture_from()]] - `references` [EXTRACTED]
+- [[_review_state()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AI_Calls__Quota_Fallback_2
+#graphify/code #graphify/EXTRACTED #community/Review_Auto_Fixes

@@ -1,18 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Story Sounds & Credits (2)"
+community: "Style Candidates"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Story_Sounds__Credits_2
+  - community/Style_Candidates
 ---
 
 # Path
 
 ## Connections
-- [[load_state()]] - `references` [EXTRACTED]
-- [[render()]] - `references` [EXTRACTED]
-- [[save_state()]] - `references` [EXTRACTED]
+- [[candidate_in()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Story_Sounds__Credits_2
+#graphify/code #graphify/EXTRACTED #community/Style_Candidates

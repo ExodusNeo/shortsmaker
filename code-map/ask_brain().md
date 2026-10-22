@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/channel_profiles.py"
 type: "code"
-community: "Entry Point, Logbook & Sounds"
+community: "Run Questions"
 location: "L70"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Entry_Point_Logbook__Sounds
+  - community/Run_Questions
 ---
 
 # ask_brain()
@@ -15,6 +15,6 @@ tags:
 - [[Who plans this batch (scripts, fact check, SEO, picture choices, AI images)…]] - `rationale_for` [EXTRACTED]
 - [[ask_number()]] - `calls` [EXTRACTED]
 - [[channel_profiles.py]] - `contains` [EXTRACTED]
-- [[main()_3]] - `calls` [EXTRACTED]
+- [[main()_2]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Entry_Point_Logbook__Sounds
+#graphify/code #graphify/EXTRACTED #community/Run_Questions

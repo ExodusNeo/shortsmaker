@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/style_lab.py"
 type: "rationale"
-community: "Invention Slots"
+community: "Style Inventions"
 location: "L202"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Invention_Slots
+  - community/Style_Inventions
 ---
 
 # (props, start, end) of a small preview where an invention is used: its scene,…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[style_preview()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Invention_Slots
+#graphify/rationale #graphify/EXTRACTED #community/Style_Inventions

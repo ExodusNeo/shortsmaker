@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_pictures_first.py"
 type: "code"
-community: "Pool Gathering"
+community: "Test Patching Helpers"
 location: "L333"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pool_Gathering
+  - community/Test_Patching_Helpers
 ---
 
 # .__enter__()
@@ -16,4 +16,4 @@ tags:
 - [[picking]] - `method` [EXTRACTED]
 - [[stubbed]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pool_Gathering
+#graphify/code #graphify/EXTRACTED #community/Test_Patching_Helpers

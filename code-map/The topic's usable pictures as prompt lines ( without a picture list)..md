@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/picture_pool.py"
 type: "rationale"
-community: "Footage Downloads & Crops (2)"
+community: "Usable Picture Checks"
 location: "L19"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Footage_Downloads__Crops_2
+  - community/Usable_Picture_Checks
 ---
 
 # The topic's usable pictures as prompt lines ("" without a picture list).
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[pictures_of()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Footage_Downloads__Crops_2
+#graphify/rationale #graphify/EXTRACTED #community/Usable_Picture_Checks

@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_full_scenes.py"
 type: "rationale"
-community: "AI Calls & Quota Fallback (4)"
+community: "Full Scene Tests"
 location: "L642"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/AI_Calls__Quota_Fallback_4
+  - community/Full_Scene_Tests
 ---
 
 # On-screen credit tags are short (Emu War review: the long tag covered the emus…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[test_short_credit()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/AI_Calls__Quota_Fallback_4
+#graphify/rationale #graphify/EXTRACTED #community/Full_Scene_Tests

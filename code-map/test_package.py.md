@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_package.py"
 type: "code"
-community: "AI Calls & Quota Fallback"
+community: "Word Counts & Test Utils"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AI_Calls__Quota_Fallback
+  - community/Word_Counts__Test_Utils
 ---
 
 # test_package.py
@@ -26,6 +26,7 @@ tags:
 - [[shutil]] - `imports` [EXTRACTED]
 - [[sys]] - `imports` [EXTRACTED]
 - [[tempfile]] - `imports` [EXTRACTED]
+- [[test_argon_out_of_quota_switches_to_flash()]] - `contains` [EXTRACTED]
 - [[test_claude_pinned_to_opus_high()]] - `contains` [EXTRACTED]
 - [[test_encoder_cache_lives_with_video_encoder()]] - `contains` [EXTRACTED]
 - [[test_entry_point()]] - `contains` [EXTRACTED]
@@ -36,4 +37,4 @@ tags:
 - [[test_session_shared()]] - `contains` [EXTRACTED]
 - [[traceback]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AI_Calls__Quota_Fallback
+#graphify/code #graphify/EXTRACTED #community/Word_Counts__Test_Utils

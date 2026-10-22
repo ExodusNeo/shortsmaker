@@ -12,7 +12,7 @@ tags:
 # person_card()
 
 ## Connections
-- [[Image_2]] - `references` [EXTRACTED]
+- [[Image_1]] - `references` [EXTRACTED]
 - [[Tilted photo card with a white border, drop shadow and a yellow name banner.]] - `rationale_for` [EXTRACTED]
 - [[fit_font()]] - `calls` [EXTRACTED]
 - [[frame_render.py]] - `contains` [EXTRACTED]

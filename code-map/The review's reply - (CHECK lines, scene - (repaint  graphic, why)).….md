@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/review.py"
 type: "rationale"
-community: "Story Sounds & Credits (2) (2)"
+community: "Quality & Visual Review"
 location: "L80"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Story_Sounds__Credits_2_2
+  - community/Quality__Visual_Review
 ---
 
 # The review's reply -> (CHECK lines, scene -> ("repaint" | "graphic", why)).…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[review_fixes()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Story_Sounds__Credits_2_2
+#graphify/rationale #graphify/EXTRACTED #community/Quality__Visual_Review

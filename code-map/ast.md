@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "Split Script (tools)"
+community: "Package Split Tool"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Split_Script_tools
+  - community/Package_Split_Tool
 ---
 
 # ast
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[split_make_shorts.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Split_Script_tools
+#graphify/concept #graphify/EXTRACTED #community/Package_Split_Tool

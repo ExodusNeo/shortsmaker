@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_full_scenes.py"
 type: "code"
-community: "AI Calls & Quota Fallback (4) (2)"
+community: "Review Auto Fixes"
 location: "L362"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AI_Calls__Quota_Fallback_4_2
+  - community/Review_Auto_Fixes
 ---
 
 # test_auto_fix_graphic()
@@ -16,4 +16,4 @@ tags:
 - [[fake_rescue()]] - `indirect_call` [INFERRED]
 - [[test_full_scenes.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AI_Calls__Quota_Fallback_4_2
+#graphify/code #graphify/EXTRACTED #community/Review_Auto_Fixes

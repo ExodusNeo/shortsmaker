@@ -1,12 +1,12 @@
 ---
 source_file: "local_ai/gen.py"
 type: "code"
-community: "GPU Worker (gen.py)"
+community: "GPU Image Worker"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/GPU_Worker_genpy
+  - community/GPU_Image_Worker
 ---
 
 # gen.py
@@ -17,7 +17,7 @@ tags:
 - [[gc]] - `imports` [EXTRACTED]
 - [[images()]] - `contains` [EXTRACTED]
 - [[json]] - `imports` [EXTRACTED]
-- [[main()]] - `contains` [EXTRACTED]
+- [[main()_1]] - `contains` [EXTRACTED]
 - [[numpy]] - `imports` [EXTRACTED]
 - [[parallax()]] - `contains` [EXTRACTED]
 - [[pathlib]] - `imports_from` [EXTRACTED]
@@ -27,7 +27,7 @@ tags:
 - [[t5_encoder()]] - `contains` [EXTRACTED]
 - [[time]] - `imports` [EXTRACTED]
 - [[torch]] - `imports` [EXTRACTED]
-- [[tts()]] - `contains` [EXTRACTED]
+- [[tts()_1]] - `contains` [EXTRACTED]
 - [[video()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/GPU_Worker_genpy
+#graphify/code #graphify/EXTRACTED #community/GPU_Image_Worker

@@ -1,19 +1,19 @@
 ---
 source_file: "shortsmaker/style_lab.py"
 type: "code"
-community: "Invention Slots"
+community: "Channel Profiles & Menus"
 location: "L267"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Invention_Slots
+  - community/Channel_Profiles__Menus
 ---
 
 # approve_candidate()
 
 ## Connections
 - [[Adds a candidate to the library (component file, library.json entry,…]] - `rationale_for` [EXTRACTED]
-- [[Path_20]] - `references` [EXTRACTED]
+- [[Path_2]] - `references` [EXTRACTED]
 - [[json]] - `calls` [EXTRACTED]
 - [[library_menu()]] - `calls` [EXTRACTED]
 - [[shutil]] - `calls` [EXTRACTED]
@@ -25,4 +25,4 @@ tags:
 - [[tsc_check()]] - `calls` [EXTRACTED]
 - [[write_style_index()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Invention_Slots
+#graphify/code #graphify/EXTRACTED #community/Channel_Profiles__Menus

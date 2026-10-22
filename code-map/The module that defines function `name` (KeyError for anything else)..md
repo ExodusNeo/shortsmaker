@@ -1,12 +1,12 @@
 ---
 source_file: "tests/patching.py"
 type: "rationale"
-community: "Picture List Catalog (2) (2)"
+community: "Test Patching Helpers"
 location: "L18"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Picture_List_Catalog_2_2
+  - community/Test_Patching_Helpers
 ---
 
 # The module that defines function `name` (KeyError for anything else).
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[owner()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Picture_List_Catalog_2_2
+#graphify/rationale #graphify/EXTRACTED #community/Test_Patching_Helpers

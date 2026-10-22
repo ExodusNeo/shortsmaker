@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/style_lab.py"
 type: "code"
-community: "Invention Slots"
+community: "Channel Profiles & Menus"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Invention_Slots
+  - community/Channel_Profiles__Menus
 ---
 
 # style_lab.py
@@ -51,4 +51,4 @@ tags:
 - [[write_style_index()]] - `contains` [EXTRACTED]
 - [[writing.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Invention_Slots
+#graphify/code #graphify/EXTRACTED #community/Channel_Profiles__Menus

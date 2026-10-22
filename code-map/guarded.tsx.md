@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/full/guarded.tsx"
 type: "code"
-community: "Guarded Layout (cards, arrows)"
+community: "Guarded Scene Layout"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Guarded_Layout_cards_arrows
+  - community/Guarded_Scene_Layout
 ---
 
 # guarded.tsx
@@ -20,14 +20,14 @@ tags:
 - [[NORMAL]] - `contains` [EXTRACTED]
 - [[Paper.tsx]] - `imports_from` [EXTRACTED]
 - [[Pt]] - `contains` [EXTRACTED]
-- [[SAFE]] - `contains` [EXTRACTED]
+- [[SAFE_1]] - `contains` [EXTRACTED]
 - [[SERIF]] - `imports` [EXTRACTED]
 - [[SIDES]] - `contains` [EXTRACTED]
 - [[Side]] - `contains` [EXTRACTED]
 - [[SkinName]] - `imports` [EXTRACTED]
 - [[TYPE]] - `imports` [EXTRACTED]
 - [[boxAt()]] - `contains` [EXTRACTED]
-- [[clamp_7]] - `contains` [EXTRACTED]
+- [[clamp_9]] - `contains` [EXTRACTED]
 - [[fitCard()]] - `contains` [EXTRACTED]
 - [[fulltypes.ts]] - `imports_from` [EXTRACTED]
 - [[guarded.test.ts]] - `imports_from` [EXTRACTED]
@@ -45,4 +45,4 @@ tags:
 - [[toolkit.tsx]] - `re_exports` [EXTRACTED]
 - [[travel()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Guarded_Layout_cards_arrows
+#graphify/code #graphify/EXTRACTED #community/Guarded_Scene_Layout

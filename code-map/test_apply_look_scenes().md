@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_style.py"
 type: "code"
-community: "Style Tests (2)"
+community: "Picture Picker"
 location: "L152"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Style_Tests_2
+  - community/Picture_Picker
 ---
 
 # test_apply_look_scenes()
@@ -15,4 +15,4 @@ tags:
 - [[apply_look_scenes()]] - `calls` [EXTRACTED]
 - [[test_style.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Style_Tests_2
+#graphify/code #graphify/EXTRACTED #community/Picture_Picker

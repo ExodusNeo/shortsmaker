@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/plan_rules.py"
 type: "rationale"
-community: "Look & Transition Cleaning"
+community: "Edit Plan Text"
 location: "L169"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Look__Transition_Cleaning
+  - community/Edit_Plan_Text
 ---
 
 # A planned scene change: a library transition name or "invented"; anything else…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[clean_transition()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Look__Transition_Cleaning
+#graphify/rationale #graphify/EXTRACTED #community/Edit_Plan_Text

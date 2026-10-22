@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/plan_rules.py"
 type: "code"
-community: "Scene Cues & Word Timing"
+community: "Scene & Graphic Timing"
 location: "L335"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Scene_Cues__Word_Timing
+  - community/Scene__Graphic_Timing
 ---
 
 # full_cues()
@@ -23,4 +23,4 @@ tags:
 - [[test_full_cues_fallback()]] - `calls` [EXTRACTED]
 - [[test_full_cues_leave_time_to_finish()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Scene_Cues__Word_Timing
+#graphify/code #graphify/EXTRACTED #community/Scene__Graphic_Timing

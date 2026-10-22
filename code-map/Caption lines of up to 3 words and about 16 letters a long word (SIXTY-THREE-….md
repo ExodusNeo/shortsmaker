@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/audio_mix.py"
 type: "rationale"
-community: "Captions & TTS (2)"
+community: "Caption Lines (ASS)"
 location: "L52"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Captions__TTS_2
+  - community/Caption_Lines_ASS
 ---
 
 # Caption lines of up to 3 words and about 16 letters: a long word ("SIXTY-THREE-…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[caption_lines()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Captions__TTS_2
+#graphify/rationale #graphify/EXTRACTED #community/Caption_Lines_ASS

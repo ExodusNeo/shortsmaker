@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Split Script (tools)"
+community: "Package Split Tool"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Split_Script_tools
+  - community/Package_Split_Tool
 ---
 
 # arguments
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[arg_names()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Split_Script_tools
+#graphify/code #graphify/EXTRACTED #community/Package_Split_Tool

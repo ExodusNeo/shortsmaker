@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/full/Journey.tsx"
 type: "code"
-community: "Map Journey Scene"
+community: "Map Journey Scenes"
 location: "L91"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Map_Journey_Scene
+  - community/Map_Journey_Scenes
 ---
 
 # Journey()
@@ -23,4 +23,4 @@ tags:
 - [[viewOf()]] - `calls` [EXTRACTED]
 - [[wrap()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Map_Journey_Scene
+#graphify/code #graphify/EXTRACTED #community/Map_Journey_Scenes

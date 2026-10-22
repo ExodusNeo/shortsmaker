@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/gpu.py"
 type: "code"
-community: "Footage Downloads & Crops (2) (3)"
-location: "L93"
+community: "Archive Film & Downloads"
+location: "L95"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Footage_Downloads__Crops_2_3
+  - community/Archive_Film__Downloads
 ---
 
 # up()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[voicestudio_up()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Footage_Downloads__Crops_2_3
+#graphify/code #graphify/EXTRACTED #community/Archive_Film__Downloads

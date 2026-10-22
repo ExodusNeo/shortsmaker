@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Story Sounds & Credits (2)"
+community: "Quality & Visual Review"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Story_Sounds__Credits_2
+  - community/Quality__Visual_Review
 ---
 
 # Path
@@ -18,4 +18,4 @@ tags:
 - [[storyboard()]] - `references` [EXTRACTED]
 - [[visual_review()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Story_Sounds__Credits_2
+#graphify/code #graphify/EXTRACTED #community/Quality__Visual_Review

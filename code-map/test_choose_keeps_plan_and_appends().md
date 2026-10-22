@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_pictures_first.py"
 type: "code"
-community: "Picture List Catalog (3)"
+community: "Picture Picker"
 location: "L352"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Picture_List_Catalog_3
+  - community/Picture_Picker
 ---
 
 # test_choose_keeps_plan_and_appends()
@@ -19,4 +19,4 @@ tags:
 - [[still()]] - `calls` [EXTRACTED]
 - [[test_pictures_first.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Picture_List_Catalog_3
+#graphify/code #graphify/EXTRACTED #community/Picture_Picker

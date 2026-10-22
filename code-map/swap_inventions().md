@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/style_lab.py"
 type: "code"
-community: "Skins & Remotion Render"
+community: "Style Inventions"
 location: "L211"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Skins__Remotion_Render
+  - community/Style_Inventions
 ---
 
 # swap_inventions()
@@ -14,8 +14,7 @@ tags:
 ## Connections
 - [[Replaces every use of an invention in the Remotion props by its library…]] - `rationale_for` [EXTRACTED]
 - [[invent_styles()]] - `calls` [EXTRACTED]
-- [[run_remotion_with_fallback()]] - `calls` [EXTRACTED]
 - [[style_lab.py]] - `contains` [EXTRACTED]
 - [[test_swap_inventions()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Skins__Remotion_Render
+#graphify/code #graphify/EXTRACTED #community/Style_Inventions

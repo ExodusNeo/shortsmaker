@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/Cards.tsx"
 type: "code"
-community: "Remotion Short Composition"
+community: "Remotion Captions & Cards"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Remotion_Short_Composition
+  - community/Remotion_Captions__Cards
 ---
 
 # Cards.tsx
@@ -22,7 +22,7 @@ tags:
 - [[StatCard()]] - `contains` [EXTRACTED]
 - [[TimelineCard()]] - `contains` [EXTRACTED]
 - [[card_1]] - `contains` [EXTRACTED]
-- [[clamp_1]] - `contains` [EXTRACTED]
+- [[clamp]] - `contains` [EXTRACTED]
 - [[moveIn()]] - `imports` [EXTRACTED]
 - [[outline()]] - `imports` [EXTRACTED]
 - [[ref_remotion]] - `imports_from` [EXTRACTED]
@@ -30,4 +30,4 @@ tags:
 - [[theme]] - `imports` [EXTRACTED]
 - [[useWindow()]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Remotion_Short_Composition
+#graphify/code #graphify/EXTRACTED #community/Remotion_Captions__Cards

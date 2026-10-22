@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/style/transitions/Wipe.tsx"
 type: "code"
-community: "Style Library Inventions (TS)"
+community: "Photo Looks Library"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Style_Library_Inventions_TS
+  - community/Photo_Looks_Library
 ---
 
 # Wipe.tsx
@@ -22,4 +22,4 @@ tags:
 - [[styleindex.ts]] - `imports_from` [EXTRACTED]
 - [[styletypes.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Style_Library_Inventions_TS
+#graphify/code #graphify/EXTRACTED #community/Photo_Looks_Library

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/gpu.py"
 type: "rationale"
-community: "Footage Downloads & Crops (2)"
-location: "L128"
+community: "Local Voice & Clips"
+location: "L169"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Footage_Downloads__Crops_2
+  - community/Local_Voice__Clips
 ---
 
 # Voice every scene on the GPU: CosyVoice (aiden, documentary) for the whole…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[local_voice()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Footage_Downloads__Crops_2
+#graphify/rationale #graphify/EXTRACTED #community/Local_Voice__Clips

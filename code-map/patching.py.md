@@ -1,12 +1,12 @@
 ---
 source_file: "tests/patching.py"
 type: "code"
-community: "Picture List Catalog (2) (2)"
+community: "Test Patching Helpers"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Picture_List_Catalog_2_2
+  - community/Test_Patching_Helpers
 ---
 
 # patching.py
@@ -23,4 +23,4 @@ tags:
 - [[test_pictures_first.py]] - `imports_from` [EXTRACTED]
 - [[test_style.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Picture_List_Catalog_2_2
+#graphify/code #graphify/EXTRACTED #community/Test_Patching_Helpers

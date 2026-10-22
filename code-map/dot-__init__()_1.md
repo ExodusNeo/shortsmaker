@@ -1,17 +1,17 @@
 ---
 source_file: "tests/test_pictures_first.py"
 type: "code"
-community: "Picture List Catalog"
-location: "L196"
+community: "Picture Picker"
+location: "L330"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Picture_List_Catalog
+  - community/Picture_Picker
 ---
 
 # .__init__()
 
 ## Connections
-- [[planning]] - `method` [EXTRACTED]
+- [[picking]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Picture_List_Catalog
+#graphify/code #graphify/EXTRACTED #community/Picture_Picker

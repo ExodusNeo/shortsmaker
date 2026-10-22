@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_style.py"
 type: "code"
-community: "Style Tests"
+community: "Sound Cue Sheet"
 location: "L175"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Style_Tests
+  - community/Sound_Cue_Sheet
 ---
 
 # test_style_sounds()
@@ -16,4 +16,4 @@ tags:
 - [[sfx_events()]] - `calls` [EXTRACTED]
 - [[test_style.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Style_Tests
+#graphify/code #graphify/EXTRACTED #community/Sound_Cue_Sheet

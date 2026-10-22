@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/motion.py"
 type: "code"
-community: "AI Calls & Quota Fallback (2)"
+community: "AI Calls & Trend Seeds"
 location: "L233"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AI_Calls__Quota_Fallback_2
+  - community/AI_Calls__Trend_Seeds
 ---
 
 # lint_custom_code()
@@ -17,8 +17,7 @@ tags:
 - [[look_and_fix()]] - `calls` [EXTRACTED]
 - [[motion.py]] - `contains` [EXTRACTED]
 - [[re]] - `calls` [EXTRACTED]
-- [[redraw_custom()]] - `calls` [EXTRACTED]
 - [[test_fallback_custom_is_clean()]] - `calls` [EXTRACTED]
 - [[test_lint_custom_code()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AI_Calls__Quota_Fallback_2
+#graphify/code #graphify/EXTRACTED #community/AI_Calls__Trend_Seeds

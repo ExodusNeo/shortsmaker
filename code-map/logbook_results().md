@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/logbook.py"
 type: "code"
-community: "Voice Worker (qwen_voice)"
+community: "Logbook Lessons & First Second"
 location: "L96"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Voice_Worker_qwen_voice
+  - community/Logbook_Lessons__First_Second
 ---
 
 # logbook_results()
@@ -17,6 +17,5 @@ tags:
 - [[re]] - `calls` [EXTRACTED]
 - [[seo_pass()]] - `calls` [EXTRACTED]
 - [[test_logbook_marks_tiny_samples()]] - `calls` [EXTRACTED]
-- [[write_scripts()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Voice_Worker_qwen_voice
+#graphify/code #graphify/EXTRACTED #community/Logbook_Lessons__First_Second

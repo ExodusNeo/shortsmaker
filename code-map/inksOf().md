@@ -1,20 +1,19 @@
 ---
 source_file: "remotion/src/style/kit.ts"
 type: "code"
-community: "Remotion Short Composition"
+community: "Style Registry"
 location: "L19"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Remotion_Short_Composition
+  - community/Style_Registry
 ---
 
 # inksOf()
 
 ## Connections
-- [[Short()]] - `calls` [EXTRACTED]
 - [[Short.tsx]] - `imports` [EXTRACTED]
 - [[kit.ts]] - `contains` [EXTRACTED]
 - [[style.test.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Remotion_Short_Composition
+#graphify/code #graphify/EXTRACTED #community/Style_Registry

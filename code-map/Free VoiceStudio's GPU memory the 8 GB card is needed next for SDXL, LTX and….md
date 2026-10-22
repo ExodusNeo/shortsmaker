@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/gpu.py"
 type: "rationale"
-community: "Footage Downloads & Crops (2)"
-location: "L113"
+community: "Archive Film & Downloads"
+location: "L115"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Footage_Downloads__Crops_2
+  - community/Archive_Film__Downloads
 ---
 
 # Free VoiceStudio's GPU memory: the 8 GB card is needed next for SDXL, LTX and…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[voicestudio_unload()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Footage_Downloads__Crops_2
+#graphify/rationale #graphify/EXTRACTED #community/Archive_Film__Downloads

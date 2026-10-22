@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Story Sounds & Credits (2)"
+community: "Sound Effects & Story Sounds"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Story_Sounds__Credits_2
+  - community/Sound_Effects__Story_Sounds
 ---
 
 # Path
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[mark_details()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Story_Sounds__Credits_2
+#graphify/code #graphify/EXTRACTED #community/Sound_Effects__Story_Sounds

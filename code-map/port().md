@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/full/guarded.tsx"
 type: "code"
-community: "Guarded Layout (cards, arrows)"
+community: "Guarded Scene Layout"
 location: "L173"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Guarded_Layout_cards_arrows
+  - community/Guarded_Scene_Layout
 ---
 
 # port()
@@ -15,4 +15,4 @@ tags:
 - [[guarded.tsx]] - `contains` [EXTRACTED]
 - [[routeArrow()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Guarded_Layout_cards_arrows
+#graphify/code #graphify/EXTRACTED #community/Guarded_Scene_Layout

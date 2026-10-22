@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/remotion_render.py"
 type: "rationale"
-community: "AI Calls & Quota Fallback (2)"
+community: "Figure Silhouettes & Redraws"
 location: "L40"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/AI_Calls__Quota_Fallback_2
+  - community/Figure_Silhouettes__Redraws
 ---
 
 # The review saw custom scene i look wrong: its coder gets the complaint and its…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[redraw_custom()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/AI_Calls__Quota_Fallback_2
+#graphify/rationale #graphify/EXTRACTED #community/Figure_Silhouettes__Redraws

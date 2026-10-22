@@ -1,20 +1,20 @@
 ---
 source_file: "tests/test_full_scenes.py"
 type: "code"
-community: "AI Calls & Quota Fallback (4)"
+community: "Worker Crash Retry"
 location: "L656"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AI_Calls__Quota_Fallback_4
+  - community/Worker_Crash_Retry
 ---
 
 # test_local_job_retries_a_hard_crash()
 
 ## Connections
 - [[Mike the Headless Chicken, fix round 3 the LTX worker died without writing…]] - `rationale_for` [EXTRACTED]
-- [[fake_run()]] - `indirect_call` [INFERRED]
+- [[fake_run()_1]] - `indirect_call` [INFERRED]
 - [[local_job()]] - `calls` [EXTRACTED]
 - [[test_full_scenes.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AI_Calls__Quota_Fallback_4
+#graphify/code #graphify/EXTRACTED #community/Worker_Crash_Retry

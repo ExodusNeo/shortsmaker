@@ -1,12 +1,12 @@
 ---
 source_file: "tests/render_full.py"
 type: "rationale"
-community: "Footage Downloads & Crops (2) (2)"
+community: "Media Tools & Shot Spans"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Footage_Downloads__Crops_2_2
+  - community/Media_Tools__Shot_Spans
 ---
 
 # Render one full-screen motion graphic test scene through the real Short…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[render_full.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Footage_Downloads__Crops_2_2
+#graphify/rationale #graphify/EXTRACTED #community/Media_Tools__Shot_Spans

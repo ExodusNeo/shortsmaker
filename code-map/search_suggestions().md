@@ -1,21 +1,21 @@
 ---
 source_file: "shortsmaker/seo.py"
 type: "code"
-community: "Entry Point, Logbook & Sounds"
+community: "Archive Film & Downloads"
 location: "L11"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Entry_Point_Logbook__Sounds
+  - community/Archive_Film__Downloads
 ---
 
 # search_suggestions()
 
 ## Connections
 - [[What people actually type into YouTube search (free autocomplete endpoint, no…]] - `rationale_for` [EXTRACTED]
-- [[fetch()_1]] - `calls` [EXTRACTED]
+- [[fetch()]] - `calls` [EXTRACTED]
 - [[json]] - `calls` [EXTRACTED]
 - [[seo.py]] - `contains` [EXTRACTED]
 - [[seo_pass()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Entry_Point_Logbook__Sounds
+#graphify/code #graphify/EXTRACTED #community/Archive_Film__Downloads

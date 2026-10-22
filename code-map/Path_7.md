@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "Picture List Catalog (3)"
+community: "Film Footage Sources"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Picture_List_Catalog_3
+  - community/Film_Footage_Sources
 ---
 
 # Path
 
 ## Connections
-- [[choose_images()]] - `references` [EXTRACTED]
+- [[film_piece()]] - `references` [EXTRACTED]
+- [[shot_span()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Picture_List_Catalog_3
+#graphify/code #graphify/EXTRACTED #community/Film_Footage_Sources

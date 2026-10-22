@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/logbook.py"
 type: "rationale"
-community: "Entry Point, Logbook & Sounds"
+community: "Logbook & Vault Pages"
 location: "L84"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Entry_Point_Logbook__Sounds
+  - community/Logbook__Vault_Pages
 ---
 
 # make_shorts.py notes: rebuild every Short's vault page from the logbooks (each…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[vault_refresh()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Entry_Point_Logbook__Sounds
+#graphify/rationale #graphify/EXTRACTED #community/Logbook__Vault_Pages

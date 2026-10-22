@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_style.py"
 type: "rationale"
-community: "Style Tests"
+community: "Edit Plan Text"
 location: "L104"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Style_Tests
+  - community/Edit_Plan_Text
 ---
 
 # write_scripts with every AI/network step faked; the director answers…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[plan_with()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Style_Tests
+#graphify/rationale #graphify/EXTRACTED #community/Edit_Plan_Text

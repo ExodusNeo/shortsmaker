@@ -1,17 +1,17 @@
 ---
-source_file: "remotion/src/Graphics.tsx"
+source_file: "remotion/src/MapCard.tsx"
 type: "code"
-community: "Remotion Short Composition"
-location: "L7"
+community: "Remotion Captions & Cards"
+location: "L16"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Remotion_Short_Composition
+  - community/Remotion_Captions__Cards
 ---
 
 # clamp
 
 ## Connections
-- [[Graphics.tsx]] - `contains` [EXTRACTED]
+- [[MapCard.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Remotion_Short_Composition
+#graphify/code #graphify/EXTRACTED #community/Remotion_Captions__Cards

@@ -1,22 +1,22 @@
 ---
 source_file: "shortsmaker/gpu.py"
 type: "code"
-community: "Channel Profiles & CLI (2)"
-location: "L154"
+community: "Painting & Renderer Choice"
+location: "L197"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Channel_Profiles__CLI_2
+  - community/Painting__Renderer_Choice
 ---
 
 # gemini_images()
 
 ## Connections
 - [[Paint the AI images with Gemini (agy's built-in image generator, ~2 min each, 3…]] - `rationale_for` [EXTRACTED]
-- [[Path]] - `references` [EXTRACTED]
+- [[Path_13]] - `references` [EXTRACTED]
 - [[gpu.py]] - `contains` [EXTRACTED]
 - [[one()]] - `indirect_call` [INFERRED]
 - [[paint_instead()]] - `calls` [EXTRACTED]
 - [[render()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Channel_Profiles__CLI_2
+#graphify/code #graphify/EXTRACTED #community/Painting__Renderer_Choice

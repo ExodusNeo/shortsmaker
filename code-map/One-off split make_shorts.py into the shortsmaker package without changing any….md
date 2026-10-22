@@ -1,12 +1,12 @@
 ---
 source_file: "tools/split_make_shorts.py"
 type: "rationale"
-community: "Split Script (tools)"
+community: "Package Split Tool"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Split_Script_tools
+  - community/Package_Split_Tool
 ---
 
 # One-off: split make_shorts.py into the shortsmaker package without changing any…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[split_make_shorts.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Split_Script_tools
+#graphify/rationale #graphify/EXTRACTED #community/Package_Split_Tool

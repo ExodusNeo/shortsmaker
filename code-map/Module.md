@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Split Script (tools)"
+community: "Package Split Tool"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Split_Script_tools
+  - community/Package_Split_Tool
 ---
 
 # Module
@@ -14,4 +14,4 @@ tags:
 - [[chunks_of()]] - `references` [EXTRACTED]
 - [[import_lines()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Split_Script_tools
+#graphify/code #graphify/EXTRACTED #community/Package_Split_Tool

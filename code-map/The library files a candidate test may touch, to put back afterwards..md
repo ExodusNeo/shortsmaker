@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_style.py"
 type: "rationale"
-community: "Library Candidate Tests"
+community: "Style Candidates"
 location: "L368"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Library_Candidate_Tests
+  - community/Style_Candidates
 ---
 
 # The library files a candidate test may touch, to put back afterwards.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[library_snapshot()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Library_Candidate_Tests
+#graphify/rationale #graphify/EXTRACTED #community/Style_Candidates

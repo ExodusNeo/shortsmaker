@@ -1,18 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "Footage Downloads & Crops (2) (3)"
+community: "Shotcut Timeline"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Footage_Downloads__Crops_2_3
+  - community/Shotcut_Timeline
 ---
 
 # Path
 
 ## Connections
-- [[duration()]] - `references` [EXTRACTED]
-- [[ffmpeg()]] - `references` [EXTRACTED]
-- [[write_json()]] - `references` [EXTRACTED]
+- [[short_folder()]] - `references` [EXTRACTED]
+- [[videos()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Footage_Downloads__Crops_2_3
+#graphify/code #graphify/EXTRACTED #community/Shotcut_Timeline

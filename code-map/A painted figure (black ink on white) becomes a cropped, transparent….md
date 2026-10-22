@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_full_scenes.py"
 type: "rationale"
-community: "Gemini Image Painting"
+community: "Figure Silhouettes & Redraws"
 location: "L698"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Gemini_Image_Painting
+  - community/Figure_Silhouettes__Redraws
 ---
 
 # A painted figure (black ink on white) becomes a cropped, transparent…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[test_ink_silhouette()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Gemini_Image_Painting
+#graphify/rationale #graphify/EXTRACTED #community/Figure_Silhouettes__Redraws

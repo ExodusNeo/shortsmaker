@@ -1,10 +1,12 @@
 ---
 type: community
+cohesion: 0.50
 members: 4
 ---
 
 # Style Guardrails
 
+**Cohesion:** 0.50 - moderately connected
 **Members:** 4 nodes
 
 ## Members
@@ -21,10 +23,9 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 1 edge to [[_COMMUNITY_Picture List Catalog]]
-- 1 edge to [[_COMMUNITY_Channel Profiles & CLI]]
-- 1 edge to [[_COMMUNITY_Style Tests]]
+- 1 edge to [[_COMMUNITY_Graphics Rescue & Validation]]
+- 1 edge to [[_COMMUNITY_Style Candidates]]
 
 ## Top bridge nodes
-- [[limit_style()]] - degree 4, connects to 2 communities
+- [[limit_style()]] - degree 3, connects to 1 community
 - [[test_limit_style_caps()]] - degree 3, connects to 1 community

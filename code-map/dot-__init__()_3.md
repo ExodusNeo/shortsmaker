@@ -1,17 +1,17 @@
 ---
-source_file: "tests/test_pictures_first.py"
+source_file: "tools/split_make_shorts.py"
 type: "code"
-community: "Pool Gathering"
-location: "L33"
+community: "Package Split Tool"
+location: "L385"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pool_Gathering
+  - community/Package_Split_Tool
 ---
 
 # .__init__()
 
 ## Connections
-- [[stubbed]] - `method` [EXTRACTED]
+- [[Unqualify]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pool_Gathering
+#graphify/code #graphify/EXTRACTED #community/Package_Split_Tool

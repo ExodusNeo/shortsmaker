@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/audio_mix.py"
 type: "code"
-community: "Invention Slots"
+community: "Sound Effects & Story Sounds"
 location: "L111"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Invention_Slots
+  - community/Sound_Effects__Story_Sounds
 ---
 
 # freesound_fetch()
@@ -16,4 +16,4 @@ tags:
 - [[audio_mix.py]] - `contains` [EXTRACTED]
 - [[json]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Invention_Slots
+#graphify/code #graphify/EXTRACTED #community/Sound_Effects__Story_Sounds

@@ -1,12 +1,12 @@
 ---
 source_file: "tests/guarded.test.ts"
 type: "code"
-community: "Guarded Layout (cards, arrows)"
+community: "Guarded Scene Layout"
 location: "L7"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Guarded_Layout_cards_arrows
+  - community/Guarded_Scene_Layout
 ---
 
 # test()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[guarded.test.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Guarded_Layout_cards_arrows
+#graphify/code #graphify/EXTRACTED #community/Guarded_Scene_Layout

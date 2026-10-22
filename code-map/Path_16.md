@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Channel Profiles & CLI (2)"
+community: "Edit Plan Text"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Channel_Profiles__CLI_2
+  - community/Edit_Plan_Text
 ---
 
 # Path
 
 ## Connections
-- [[to_vertical()]] - `references` [EXTRACTED]
+- [[edit_plan()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Channel_Profiles__CLI_2
+#graphify/code #graphify/EXTRACTED #community/Edit_Plan_Text

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/picture_pool.py"
 type: "code"
-community: "Footage Downloads & Crops (2)"
+community: "Usable Picture Checks"
 location: "L275"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Footage_Downloads__Crops_2
+  - community/Usable_Picture_Checks
 ---
 
 # catalog_text()
@@ -18,4 +18,4 @@ tags:
 - [[pictures_of()]] - `calls` [EXTRACTED]
 - [[test_catalog_text()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Footage_Downloads__Crops_2
+#graphify/code #graphify/EXTRACTED #community/Usable_Picture_Checks

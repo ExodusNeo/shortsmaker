@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/plan_rules.py"
 type: "code"
-community: "Story Sounds & Credits (2)"
+community: "Sound Effects & Story Sounds"
 location: "L243"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Story_Sounds__Credits_2
+  - community/Sound_Effects__Story_Sounds
 ---
 
 # mark_details()
@@ -18,6 +18,5 @@ tags:
 - [[io]] - `calls` [EXTRACTED]
 - [[plan_rules.py]] - `contains` [EXTRACTED]
 - [[re]] - `calls` [EXTRACTED]
-- [[render()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Story_Sounds__Credits_2
+#graphify/code #graphify/EXTRACTED #community/Sound_Effects__Story_Sounds

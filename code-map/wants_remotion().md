@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/remotion_render.py"
 type: "code"
-community: "Style Tests"
+community: "Painting & Renderer Choice"
 location: "L15"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Style_Tests
+  - community/Painting__Renderer_Choice
 ---
 
 # wants_remotion()
@@ -17,4 +17,4 @@ tags:
 - [[render()]] - `calls` [EXTRACTED]
 - [[test_remotion_forced_by_look()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Style_Tests
+#graphify/code #graphify/EXTRACTED #community/Painting__Renderer_Choice

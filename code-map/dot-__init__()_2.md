@@ -1,17 +1,17 @@
 ---
 source_file: "tests/test_pictures_first.py"
 type: "code"
-community: "Picture List Catalog (3)"
-location: "L330"
+community: "Script Writing Pipeline"
+location: "L196"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Picture_List_Catalog_3
+  - community/Script_Writing_Pipeline
 ---
 
 # .__init__()
 
 ## Connections
-- [[picking]] - `method` [EXTRACTED]
+- [[planning]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Picture_List_Catalog_3
+#graphify/code #graphify/EXTRACTED #community/Script_Writing_Pipeline

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/audio_mix.py"
 type: "code"
-community: "Captions & TTS (2)"
+community: "Caption Lines (ASS)"
 location: "L51"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Captions__TTS_2
+  - community/Caption_Lines_ASS
 ---
 
 # caption_lines()
@@ -15,6 +15,5 @@ tags:
 - [[Caption lines of up to 3 words and about 16 letters a long word (SIXTY-THREE-…]] - `rationale_for` [EXTRACTED]
 - [[audio_mix.py]] - `contains` [EXTRACTED]
 - [[captions()_1]] - `calls` [EXTRACTED]
-- [[render_remotion()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Captions__TTS_2
+#graphify/code #graphify/EXTRACTED #community/Caption_Lines_ASS

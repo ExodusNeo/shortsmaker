@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/style_lab.py"
 type: "rationale"
-community: "Invention Slots"
+community: "Edit Plan Text"
 location: "L100"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Invention_Slots
+  - community/Edit_Plan_Text
 ---
 
 # The rules every invented component of `kind` follows, with the library's…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[style_rules()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Invention_Slots
+#graphify/rationale #graphify/EXTRACTED #community/Edit_Plan_Text

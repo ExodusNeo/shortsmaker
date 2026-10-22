@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "AI Calls & Quota Fallback (4) (2)"
+community: "Picture Picker"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AI_Calls__Quota_Fallback_4_2
+  - community/Picture_Picker
 ---
 
 # Path
 
 ## Connections
-- [[_review_state()]] - `references` [EXTRACTED]
+- [[choose_images()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AI_Calls__Quota_Fallback_4_2
+#graphify/code #graphify/EXTRACTED #community/Picture_Picker

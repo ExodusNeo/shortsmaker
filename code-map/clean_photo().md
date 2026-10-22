@@ -16,7 +16,6 @@ tags:
 - [[io]] - `calls` [EXTRACTED]
 - [[is_stereo()]] - `calls` [EXTRACTED]
 - [[photo_prep.py]] - `contains` [EXTRACTED]
-- [[render()]] - `calls` [EXTRACTED]
 - [[trim_borders()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Photo_Cleanup

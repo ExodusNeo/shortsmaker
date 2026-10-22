@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/style/overlays/KineticTitle.tsx"
 type: "code"
-community: "Style Library Inventions (TS)"
+community: "Remotion Captions & Cards"
 location: "L10"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Style_Library_Inventions_TS
+  - community/Remotion_Captions__Cards
 ---
 
 # KineticTitle()
@@ -16,4 +16,4 @@ tags:
 - [[slot()]] - `calls` [EXTRACTED]
 - [[styleindex.ts]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/Style_Library_Inventions_TS
+#graphify/code #graphify/EXTRACTED #community/Remotion_Captions__Cards
