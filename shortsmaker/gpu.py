@@ -322,7 +322,7 @@ PEOPLE_CLIP_VF = "scale=232:-2,scale=512:896:flags=bicubic,gblur=sigma=1.1,noise
 
 
 PEOPLE_MOVE = "People move slowly and naturally; bodies, faces and hands stay realistic and intact."
-PEOPLE_STILL = "People, animals and machines stay completely still; only the air, water, smoke or light moves."
+PEOPLE_STILL = "People and animals stay completely still; only water, atmosphere, light or the moving subject moves."
 
 
 def motion_prompt(sc: dict) -> str:
@@ -380,14 +380,14 @@ def h3_prompts(short: dict, folder: Path, scenes: list[int]) -> dict[int, str]:
                 lines.append(f"  Fix last answer: {'; '.join(why)}")
         reply = llm.ask_ai(f"""You write image-to-video prompts for a YouTube Short about "{short['title']}". Each clip
 starts on the given picture, so a prompt that describes something not in the picture wastes the paid generation.
-Open every picture listed below and look at it before writing.
+Open every picture listed below and look at it before writing. Write entirely in English (never use foreign scripts or words).
 
 For each scene give:
-- subject: what is actually in the frame (people, objects, setting, era), so the model keeps it; at least one sentence.
-- motion: ONE main movement only, slow and realistic, that fits the motion idea and the picture.
-- camera: locked-off, or one slow move (slow push-in, slow pan left...). Never several moves.
+- subject: what is actually in the frame (people, objects, setting, era), in one concise sentence. Do NOT list every clothing item or accessory (the model already sees the first frame; over-describing makes faces and objects melt).
+- motion: ONE active physical movement. For water, waves, steam, or smoke, use dynamic motion (e.g. rolling ocean swells, splashing white foam, churning wake, billowing smoke); never weak words like "gentle ripples" or "stationary". Never ask a formal group portrait of multiple people to shift or move (animating multiple faces in a still photo causes uncanny rubbery warping; keep people still).
+- camera: Locked-off / static camera whenever water, smoke, weather, or an object is moving (a panning or moving camera drowns out and freezes water/smoke into a flat 2D slide). Use a slow move (slow push-in) ONLY when the subject is completely stationary.
 - look: match the picture (black-and-white or colour, archival photograph, film grain, lighting, period).
-- avoid: things that would ruin it, e.g. morphing faces, extra fingers, text or captions, modern objects, camera shake,
+- avoid: 3-5 concise items, e.g. morphing faces, extra fingers, text or captions, modern objects, camera shake,
   and colour when the picture is black-and-white.
 
 {chr(10).join(lines)}
