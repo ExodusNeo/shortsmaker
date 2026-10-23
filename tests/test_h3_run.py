@@ -36,6 +36,28 @@ def test_graph_wiring():
     assert plain["BasicScheduler"]["inputs"]["model"][0] == unet and plain["BasicGuider"]["inputs"]["model"][0] == unet
 
 
+def test_save_video_sets_nested_codec():
+    save = next(n for n in h3_run.graph("p", "s", 73, 7, True, "x").values() if n["class_type"] == "SaveVideo")
+    assert save["inputs"]["format"] == "auto" and save["inputs"]["format.codec"] == "auto"  # DynamicCombo child
+
+
+def test_rejected_graph_shows_comfyui_error():
+    import io
+    import urllib.error
+    import urllib.request
+    old = urllib.request.urlopen
+    body = b'{"node_errors": {"save": {"errors": [{"message": "Required input is missing: format.codec"}]}}}'
+    urllib.request.urlopen = lambda req, timeout=60: (_ for _ in ()).throw(
+        urllib.error.HTTPError("http://x/prompt", 400, "Bad Request", {}, io.BytesIO(body)))
+    try:
+        h3_run.call("/prompt", {"prompt": {}})
+        assert False, "should raise"
+    except RuntimeError as e:
+        assert "format.codec" in str(e) and "400" in str(e)
+    finally:
+        urllib.request.urlopen = old
+
+
 def test_fit_start_is_768x1344():
     with tempfile.TemporaryDirectory() as d:
         src, dst = Path(d) / "a.jpg", Path(d) / "b.png"
@@ -59,6 +81,9 @@ def test_notebook_cells():
                    h3_run.AUDIO_VAE, h3_run.TURBO_LORA, "main.py", "8188", "files.upload", "h3_run.main(",
                    "files.download('clips.zip')"):
         assert needle in code, needle
+    run_cell = next(c for c in cells if "h3_run.main(" in c)
+    upload_cell = next(c for c in cells if "files.upload" in c)
+    assert "ONLY =" in run_cell and "ONLY =" not in upload_cell  # changing ONLY must not re-upload / wipe clips
     order = [code.index(s) for s in ("hf_hub_download", "main.py", "files.upload", "h3_run.main(", "files.download")]
     assert order == sorted(order)
     for c, cell in zip(cells, nb["cells"]):  # every code cell at least parses as Python once ! shell lines are dropped

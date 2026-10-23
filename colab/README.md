@@ -13,9 +13,9 @@ Colab every session.
 4. Run the cells top to bottom:
    - Cell 1 installs ComfyUI and downloads H3 (~70 GB, several minutes; skipped if this session already has it).
    - Cell 2 starts ComfyUI.
-   - Cell 3: optionally change `ONLY` (e.g. `[1]` to make just the hook first), `SEED`, `TURBO`; then pick
-     `veo.zip` when it asks.
-   - Cell 4 makes the clips, a few minutes each.
+   - Cell 3: pick `veo.zip` when it asks.
+   - Cell 4 makes the clips, a few minutes each. Its first lines are the settings: `ONLY` (e.g. `[1]` to make just
+     the hook first), `SEED`, `TURBO`.
    - Cell 5 downloads `clips.zip`.
 5. Save `clips.zip` into that same `veo` folder and press Enter in ShortsMaker's black window. Scenes you skipped are
    made on this PC as before.
@@ -25,7 +25,8 @@ For another Short in the same Colab session, run cells 3, 4 and 5 again.
 ## Saving compute units
 
 - `TURBO = True` (default) uses 8 steps instead of 20: cheaper and faster, slightly less detail.
-- `ONLY = [1]` makes just the hook; check it, then run cell 4 again with the other scenes.
+- `ONLY = [1]` in cell 4 makes just the hook; check it, then set `ONLY` to the other scenes and run cell 4 again
+  (don't re-run cell 3: a new upload starts the Short over). clips.zip keeps every clip made so far.
 - Clips are only as long as the Short uses them.
 - When you're done, Runtime > Disconnect and delete runtime, so the A100 stops using units.
 

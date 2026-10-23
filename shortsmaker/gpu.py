@@ -398,9 +398,11 @@ Reply with ONLY JSON: {{"scenes": [{{"scene": 1, "subject": "...", "motion": "..
             input("  >> Neither Claude nor Gemini answered (quota or network). Press Enter to try again. ")
             continue
         got = {}
-        for e in reply.get("scenes") or []:
-            if isinstance(e, dict) and isinstance(e.get("scene"), int):
-                got[e["scene"] - 1] = e
+        for e in reply.get("scenes") if isinstance(reply.get("scenes"), list) else []:
+            try:
+                got[int(str(e.get("scene")).strip()) - 1] = e
+            except (AttributeError, ValueError):
+                pass
         for i in list(problems):
             why = h3_problems(got.get(i))
             if why:
@@ -411,6 +413,9 @@ Reply with ONLY JSON: {{"scenes": [{{"scene": 1, "subject": "...", "motion": "..
         if problems:
             rnd += 1
             print(f"  video prompts: round {rnd}, {len(problems)} scene(s) to fix")
+            if (rnd - 1) % 5 == 0:  # don't spend quota silently on a scene the AI keeps getting wrong
+                stuck = "; ".join(f"scene {i + 1}: {', '.join(w)}" for i, w in problems.items())
+                input(f"  >> The AI still hasn't fixed {stuck}. Press Enter to keep trying. ")
     return done
 
 

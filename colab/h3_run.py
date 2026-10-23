@@ -5,6 +5,7 @@ queues them on the local ComfyUI, and zips the clips into clips.zip for the owne
 import json
 import shutil
 import time
+import urllib.error
 import urllib.request
 import zipfile
 from pathlib import Path
@@ -59,7 +60,7 @@ def graph(prompt: str, image: str, length: int, seed: int, turbo: bool, prefix: 
         "adecode": {"class_type": "VAEDecodeAudio", "inputs": {"samples": ["sample", 0], "vae": ["avae", 0]}},
         "video": {"class_type": "CreateVideo", "inputs": {"images": ["decode", 0], "audio": ["adecode", 0], "fps": FPS}},
         "save": {"class_type": "SaveVideo", "inputs": {
-            "video": ["video", 0], "filename_prefix": prefix, "format": "auto", "codec": "auto"}},
+            "video": ["video", 0], "filename_prefix": prefix, "format": "auto", "format.codec": "auto"}},  # nested input
     }
     if turbo:  # 8-step distilled LoRA: ~2.5x fewer steps than the 20-step default
         g["lora"] = {"class_type": "LoraLoaderModelOnly", "inputs": {
@@ -71,8 +72,11 @@ def graph(prompt: str, image: str, length: int, seed: int, turbo: bool, prefix: 
 def call(path: str, data: dict | None = None) -> dict:
     req = urllib.request.Request(COMFY + path, data=json.dumps(data).encode() if data is not None else None,
                                  headers={"Content-Type": "application/json"})
-    with urllib.request.urlopen(req, timeout=60) as r:
-        return json.loads(r.read())
+    try:
+        with urllib.request.urlopen(req, timeout=60) as r:
+            return json.loads(r.read())
+    except urllib.error.HTTPError as e:  # ComfyUI explains a rejected graph in the body (node_errors)
+        raise RuntimeError(f"ComfyUI said {e.code}: {e.read().decode(errors='replace')[:2000]}") from None
 
 
 def saved_file(history: dict) -> Path | None:

@@ -84,6 +84,24 @@ def test_waits_for_enter_when_no_ai_answers():
     with_fakes(run)
 
 
+def test_scene_number_given_as_text_is_accepted():
+    def run():
+        llm.ask_ai = fake_ai([{"scenes": [{"scene": " 1", **{k: v for k, v in GOOD.items()}}]}])
+        assert set(gpu.h3_prompts(short_with(1), Path(tempfile.gettempdir()), [0])) == {0}
+    with_fakes(run)
+
+
+def test_tells_owner_after_five_failed_rounds():
+    def run():
+        bad = {"scenes": [{"scene": 1, **GOOD, "camera": ""}]}
+        llm.ask_ai = fake_ai([bad] * 5 + [{"scenes": [{"scene": 1, **GOOD}]}])
+        waits = []
+        builtins.input = lambda msg="": waits.append(msg) or ""
+        assert set(gpu.h3_prompts(short_with(1), Path(tempfile.gettempdir()), [0])) == {0}
+        assert len(waits) == 1 and "scene 1" in waits[0] and "no camera line" in waits[0]
+    with_fakes(run)
+
+
 def handoff(tmp: Path, during_pause=lambda folder: None):
     """veo_handoff on 3 marked scenes (scene 2 is a CLOSE-UP) with AI, cropping, Explorer and ffmpeg faked."""
     work = tmp / "short" / "work"
