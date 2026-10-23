@@ -29,8 +29,12 @@ and the picker's `motion` idea, and replies JSON per scene:
 - `prompt`: subject and setting as seen in the frame; ONE main motion; camera (locked-off or one slow move);
   look matching the photo (black-and-white archival, grain, period light); "continues exactly from the first frame".
   `motion_people` rules carry over (false = people, animals, machines stay still).
-- `negative`: morphing faces, extra limbs or fingers, text/captions/watermarks, modern objects, camera shake,
-  colour if the photo is black-and-white.
+- `avoid`: morphing faces, extra limbs or fingers, text/captions/watermarks, modern objects, camera shake,
+  colour if the photo is black-and-white. H3's official graph has no negative prompt (BasicGuider, no CFG), so the
+  avoid list is written into the prompt as its last sentence.
+
+The AI replies in fields (`subject`, `motion`, `camera`, `look`, `avoid`) and the code joins them into the prompt,
+so the check is mechanical (every field present and long enough) and the wording is consistent.
 
 No fallback to the short `motion_prompt()` (owner's rule). Each reply is checked per scene: valid JSON, a prompt that
 names the subject, one motion, a camera and a look, a non-empty negative. Scenes that fail go back to the AI with
@@ -41,9 +45,9 @@ Enter to try again. Only after all prompts pass are `jobs.json`, `veo.zip` and `
 ## B. Hand-off folder (`<Short>/veo/`)
 
 - `start<N>.jpg` (as today).
-- `jobs.json`: `[{"scene": N, "image": "start<N>.jpg", "prompt", "negative", "seconds", "out": "scene<N>.mp4"}]`,
+- `jobs.json`: `[{"scene": N, "image": "start<N>.jpg", "prompt", "seconds", "out": "scene<N>.mp4"}]`,
   hook first. `seconds` = the span the Short uses + `XFADE`.
-- `veo.zip`: `jobs.json` + the start pictures, for uploading to Colab.
+- `veo.zip`: `jobs.json` + the start pictures + `h3_run.py`, for uploading to Colab.
 - `prompts.txt`: Colab steps first, then the Flow steps, each scene's prompt and "avoid" line.
 - On Enter, a `clips.zip` in `veo/` is unpacked there (only `scene*.mp4|mov|webm`, no paths outside the folder),
   then the existing `scene<N>.*` pickup runs unchanged.
@@ -53,15 +57,21 @@ Enter to try again. Only after all prompts pass are `jobs.json`, `veo.zip` and `
 
 1. Notes: Pro account, choose A100 + High-RAM.
 2. Setup, done entirely by the notebook (H3 is not installed anywhere yet; the owner has never set it up): install
-   ComfyUI and download the int8 H3 transformer + text encoder + VAE to local scratch, skipped when already there
-   in the same runtime. If the weights are gated on Hugging Face, the cell explains in plain steps how to accept the
-   licence and paste a token (Colab Secrets). No nvfp4/fp8 builds (A100 has no hardware support). A first-time guide
+   ComfyUI and download from `Comfy-Org/MiniMax-H3` (not gated, checked 2026-10-23) into `/content/ComfyUI/models`
+   (236 GB disk; ~70 GB needed), skipped when already there in the same runtime: transformer
+   `minimax_h3_fl2va_pruned_bf16` (37.5 GB, full precision), text encoder `qwen3vl_32b_minimax_h3_int8_convrot`
+   (25.3 GB), video VAE fp16, audio VAE fp32, and the 8-step turbo LoRA (`lightx2v/Minimax-h3-Turbo`). No nvfp4/fp8
+   builds (A100 has no hardware support for them). A first-time guide
    (`colab/README.md`: open in Colab with the Pro account, pick A100, run cells top to bottom) ships with it.
 3. Start ComfyUI headless; wait until its API answers.
 4. Upload `veo.zip`; unzip.
 5. For each job (or only scenes listed in `ONLY = []`): ComfyUI API graph with `MiniMaxH3ImageToVideo`,
-   `first_frame` = start picture, 768x1344, frames from `seconds` snapped up to H3's frame grid at 24 fps, fixed
-   `SEED`; save `scene<N>.mp4`. Print each clip's time.
+   `first_frame` = start picture centre-cropped to 768x1344 (the node stretches off-aspect frames), frames from
+   `seconds` snapped up to H3's 17k+5 grid at 24 fps (the template's formula), fixed `SEED`, `TURBO = True`
+   (8-step LoRA, ~2.5x fewer steps than the 20-step default; set False for full quality); save `scene<N>.mp4`.
+   The graph logic lives in `colab/h3_run.py`, which the pipeline puts inside every `veo.zip`, so it is unit-tested
+   here and the notebook stays a few short cells. It checks ComfyUI's `/object_info` for every node it uses first
+   and stops with a clear message if one is missing.
 6. Zip the clips into `clips.zip` and download it.
 
 Exact node names, weight file names and the frame grid are checked against docs.comfy.org while building; anything
