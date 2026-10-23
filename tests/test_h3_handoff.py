@@ -84,6 +84,72 @@ def test_waits_for_enter_when_no_ai_answers():
     with_fakes(run)
 
 
+def handoff(tmp: Path, during_pause=lambda folder: None):
+    """veo_handoff on 3 marked scenes (scene 2 is a CLOSE-UP) with AI, cropping, Explorer and ffmpeg faked."""
+    work = tmp / "short" / "work"
+    work.mkdir(parents=True)
+    short = short_with(3)
+    short["scenes"][1]["shot"] = "CLOSE-UP: a hand"
+    old = (gpu.h3_prompts, gpu.cover_crop, gpu.os.startfile, builtins.input, gpu.media_tools.ffmpeg,
+           gpu.media_tools.video_encoder)
+    asked = []
+    gpu.h3_prompts = lambda s, folder, scenes: asked.append(scenes) or {i: f"PROMPT {i + 1}" for i in scenes}
+    gpu.cover_crop = lambda src, out: out.write_bytes(b"jpg")
+    gpu.os.startfile = lambda p: None
+    builtins.input = lambda msg="": during_pause(work.parent / "veo")
+    gpu.media_tools.ffmpeg = lambda *a, cwd: (Path(cwd) / a[-1]).write_bytes(b"mp4")
+    gpu.media_tools.video_encoder = lambda: []
+    try:
+        got = gpu.veo_handoff(short, work, [0.0, 3.0, 5.0, 9.5], [0, 1, 2])
+    finally:
+        (gpu.h3_prompts, gpu.cover_crop, gpu.os.startfile, builtins.input, gpu.media_tools.ffmpeg,
+         gpu.media_tools.video_encoder) = old
+    return got, work.parent / "veo", asked
+
+
+def test_handoff_writes_jobs_and_zip():
+    import json
+    import zipfile
+    with tempfile.TemporaryDirectory() as d:
+        _, folder, asked = handoff(Path(d))
+        assert asked == [[0, 2]]  # no prompt asked for the CLOSE-UP
+        jobs = json.loads((folder / "jobs.json").read_text(encoding="utf-8"))
+        assert jobs == [
+            {"scene": 1, "image": "start1.jpg", "prompt": "PROMPT 1", "seconds": round(3.0 + gpu.XFADE, 2), "out": "scene1.mp4"},
+            {"scene": 3, "image": "start3.jpg", "prompt": "PROMPT 3", "seconds": round(4.5 + gpu.XFADE, 2), "out": "scene3.mp4"}]
+        assert set(zipfile.ZipFile(folder / "veo.zip").namelist()) == {"jobs.json", "start1.jpg", "start3.jpg", "h3_run.py"}
+        notes = (folder / "prompts.txt").read_text(encoding="utf-8")
+        assert "Colab" in notes and "Google Flow" in notes and "PROMPT 1" in notes and "PROMPT 3" in notes
+
+
+def zip_of(path: Path, names):
+    import zipfile
+    with zipfile.ZipFile(path, "w") as z:
+        for n in names:
+            z.writestr(n, b"x")
+
+
+def test_unpack_clips():
+    with tempfile.TemporaryDirectory() as d:
+        folder = Path(d) / "veo"
+        folder.mkdir()
+        zip_of(folder / "clips.zip", ["clips/scene3.mp4", "scene1.MP4", "../evil.mp4", "scene1.mp4.exe", "notes.txt",
+                                      "clips\\scene4.webm"])
+        assert gpu.unpack_clips(folder) == ["scene1.MP4", "scene3.mp4", "scene4.webm"]
+        assert sorted(p.name for p in folder.iterdir()) == ["clips.zip", "scene1.MP4", "scene3.mp4", "scene4.webm"]
+        assert not (Path(d) / "evil.mp4").exists()
+        (folder / "clips.zip").write_bytes(b"not a zip")
+        assert gpu.unpack_clips(folder) == []
+        (folder / "clips.zip").unlink()
+        assert gpu.unpack_clips(folder) == []
+
+
+def test_handoff_picks_up_clips_zip():
+    with tempfile.TemporaryDirectory() as d:
+        got, _, _ = handoff(Path(d), lambda folder: zip_of(folder / "clips.zip", ["scene1.mp4"]))
+        assert list(got) == [0] and got[0].name == "clip0_veo.mp4" and got[0].exists()
+
+
 if __name__ == "__main__":
     names = [n for n in sorted(globals()) if n.startswith("test_") and (len(sys.argv) < 2 or n in sys.argv[1:])]
     failed = 0

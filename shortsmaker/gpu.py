@@ -12,8 +12,9 @@ import unicodedata
 import urllib.error
 import urllib.parse
 import urllib.request
+import zipfile
 from concurrent.futures import ThreadPoolExecutor
-from pathlib import Path
+from pathlib import Path, PurePosixPath
 
 from PIL import Image, ImageOps
 
@@ -413,30 +414,61 @@ Reply with ONLY JSON: {{"scenes": [{{"scene": 1, "subject": "...", "motion": "..
     return done
 
 
+def unpack_clips(folder: Path) -> list[str]:
+    """Unpack scene<N>.mp4/.mov/.webm from folder/clips.zip (the Colab notebook's download) into folder, by bare
+    name only, so nothing lands outside it. Returns the names written."""
+    if not (folder / "clips.zip").exists():
+        return []
+    try:
+        with zipfile.ZipFile(folder / "clips.zip") as z:
+            names = []
+            for member in z.namelist():
+                base = PurePosixPath(member.replace("\\", "/")).name
+                if re.fullmatch(r"scene\d+\.(mp4|mov|webm)", base, re.I):
+                    (folder / base).write_bytes(z.read(member))
+                    names.append(base)
+            return sorted(names)
+    except zipfile.BadZipFile:
+        print("    clips.zip couldn't be opened, using the loose scene files")
+        return []
+
+
 def veo_handoff(short: dict, work: Path, bounds: list[float], marked: list[int]) -> dict[int, Path]:
-    """Pause the batch: write each animate scene's start picture + Veo prompt to <Short>/veo, open it, wait
-    while the owner makes the clips in Google Flow by hand (no automation of Google's apps: account ToS), then
-    take whichever scene<N>.mp4 files are there. Scenes left without a file fall back to LTX."""
+    """Pause the batch: write each animate scene's start picture + detailed prompt to <Short>/veo (with jobs.json and
+    veo.zip for the Colab H3 notebook), open it, wait while the owner makes the clips in Colab or Google Flow by hand
+    (no automation of Google's apps: account ToS), then take clips.zip / whichever scene<N>.mp4 files are there.
+    Scenes left without a file fall back to LTX."""
     folder = work.parent / "veo"
     folder.mkdir(exist_ok=True)
-    notes = ["Make these clips in Google Flow (labs.google/flow), then come back to the black window and press Enter.",
-             "For each scene: Frames to Video -> upload the start picture -> paste the prompt -> portrait 9:16,",
-             "Veo Fast (cheapest credits) -> download -> save it in this folder with the name shown.",
-             "Skip any scene you like (no credits left, or Veo refuses it): this PC's AI video fills it in.", ""]
-    for i in marked:
-        sc = short["scenes"][i]
-        if sc.get("shot", "").startswith("CLOSE-UP:"):
-            continue
+    scenes = [i for i in marked if not short["scenes"][i].get("shot", "").startswith("CLOSE-UP:")]
+    for i in scenes:
         cover_crop(work / f"{i}_raw.jpg", folder / f"start{i + 1}.jpg")
-        notes += [f"SCENE {i + 1}{'  (the hook: if you only make one, make this one)' if i == 0 else ''}",
-                  f"  Start picture: start{i + 1}.jpg    Save as: scene{i + 1}.mp4    "
-                  f"(about {bounds[i + 1] - bounds[i]:.0f} s of it is used)",
-                  f"  Prompt: {motion_prompt(short['scenes'][i])} Vertical 9:16. No text, no captions, no music.", ""]
+    prompts = h3_prompts(short, folder, scenes)
+    jobs = [{"scene": i + 1, "image": f"start{i + 1}.jpg", "prompt": prompts[i],
+             "seconds": round(bounds[i + 1] - bounds[i] + XFADE, 2), "out": f"scene{i + 1}.mp4"} for i in scenes]
+    (folder / "jobs.json").write_text(json.dumps(jobs, indent=1), encoding="utf-8")
+    with zipfile.ZipFile(folder / "veo.zip", "w", zipfile.ZIP_DEFLATED) as z:
+        z.write(folder / "jobs.json", "jobs.json")
+        z.write(ROOT / "colab" / "h3_run.py", "h3_run.py")
+        for j in jobs:
+            z.write(folder / j["image"], j["image"])
+    notes = ["Colab (MiniMax H3): open colab/h3_clips.ipynb in Colab with gutierrezdishann@gmail.com (the Pro account),",
+             "runtime A100 + High-RAM, run the cells top to bottom, upload veo.zip from this folder when asked, then",
+             "download clips.zip into this folder and press Enter in the black window.", "",
+             "Or Google Flow (labs.google/flow): for each scene, Frames to Video -> upload the start picture -> paste the",
+             "prompt -> portrait 9:16, Veo Fast (cheapest credits) -> download -> save it here with the name shown.",
+             "Skip any scene you like: this PC's AI video fills it in.", ""]
+    for j in jobs:
+        n = j["scene"]
+        notes += [f"SCENE {n}{'  (the hook: if you only make one, make this one)' if n == 1 else ''}",
+                  f"  Start picture: {j['image']}    Save as: {j['out']}    (about {j['seconds']:.0f} s of it is used)",
+                  f"  Prompt: {j['prompt']}", ""]
     (folder / "prompts.txt").write_text("\n".join(notes), encoding="utf-8")
     os.startfile(folder)
     os.startfile(folder / "prompts.txt")
-    input(f"\n  >> {len(marked)} AI clip(s) to make in Google Flow: see {folder / 'prompts.txt'}\n"
+    input(f"\n  >> {len(jobs)} AI clip(s) to make in Colab (H3) or Google Flow: see {folder / 'prompts.txt'}\n"
           "  >> Save them in that folder, then press Enter here (skipped ones are made on this PC). ")
+    unpack_clips(folder)
     got = {}
     for i in marked:
         src = next((p for p in sorted(folder.glob(f"scene{i + 1}.*")) if p.suffix.lower() in (".mp4", ".mov", ".webm")), None)
@@ -449,7 +481,7 @@ def veo_handoff(short: dict, work: Path, bounds: list[float], marked: list[int])
             got[i] = out
         except subprocess.CalledProcessError:
             print(f"    scene {i + 1}: couldn't read {src.name}, this PC makes that clip instead")
-    print(f"  using {len(got)} Veo clip(s) from Flow")
+    print(f"  using {len(got)} AI clip(s) you made (Colab H3 / Flow)")
     return got
 
 
