@@ -48,6 +48,24 @@ def test_fit_start_is_768x1344():
         assert out.getpixel((380, 672))[0] > 200 and out.getpixel((388, 672))[2] > 200  # split stays at the centre
 
 
+def test_notebook_cells():
+    import json
+    nb = json.loads((Path(__file__).resolve().parents[1] / "colab" / "h3_clips.ipynb").read_text(encoding="utf-8"))
+    assert nb["nbformat"] == 4
+    cells = ["".join(c["source"]) for c in nb["cells"]]
+    assert nb["cells"][0]["cell_type"] == "markdown" and "gutierrezdishann@gmail.com" in cells[0]
+    code = "\n".join(c for c, cell in zip(cells, nb["cells"]) if cell["cell_type"] == "code")
+    for needle in ("Comfy-Org/MiniMax-H3", "lightx2v/Minimax-h3-Turbo", h3_run.UNET, h3_run.TEXT, h3_run.VIDEO_VAE,
+                   h3_run.AUDIO_VAE, h3_run.TURBO_LORA, "main.py", "8188", "files.upload", "h3_run.main(",
+                   "files.download('clips.zip')"):
+        assert needle in code, needle
+    order = [code.index(s) for s in ("hf_hub_download", "main.py", "files.upload", "h3_run.main(", "files.download")]
+    assert order == sorted(order)
+    for c, cell in zip(cells, nb["cells"]):  # every code cell at least parses as Python once ! shell lines are dropped
+        if cell["cell_type"] == "code":
+            compile("\n".join(l for l in c.splitlines() if not l.lstrip().startswith(("!", "%"))), "cell", "exec")
+
+
 if __name__ == "__main__":
     names = [n for n in sorted(globals()) if n.startswith("test_") and (len(sys.argv) < 2 or n in sys.argv[1:])]
     failed = 0
