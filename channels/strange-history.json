@@ -43,7 +43,8 @@
     "On 15 January 1919 a giant tank of molasses burst in Boston's North End, sending a sticky wave about 25 feet high through the streets at roughly 35 mph. It flattened buildings and bent elevated railway girders, and rescuers spent days wading through syrup. The twist is that the company blamed anarchist bombers, but a years-long court case found the tank had been badly built and never properly tested; it leaked so much that it was painted brown to hide the leaks. Locals said the North End still smelled of molasses on hot days for decades.",
     "Wojtek, a Syrian brown bear cub adopted by Polish soldiers in 1942, grew up drinking beer and wrestling his comrades. The army wouldn't let pets onto its transport ship, so he was officially enlisted as a private with a rank and serial number. At Monte Cassino he helped carry heavy ammunition crates. The twist is that he spent his retirement in Edinburgh Zoo, where old Polish veterans climbed into his enclosure to visit and tossed him cigarettes, which he ate.",
     "In September 1945 Colorado farmer Lloyd Olsen chopped the head off a chicken for dinner, but Mike kept walking, pecking and even trying to crow. The axe had missed his brainstem, so Olsen fed him milk and water with an eyedropper, and Mike toured America as a sideshow star for 18 months, earning a fortune and a spread in Life magazine. The twist is that Mike didn't die of the missing head: he choked one night in a Phoenix motel because his owners had left his feeding syringe at the sideshow.",
-    "In the 1925 diphtheria outbreak in Nome, Alaska, sled dogs relayed antitoxin serum across about 674 miles of frozen wilderness. Togo, a small 12-year-old husky led by musher Leonhard Seppala, ran the longest and most dangerous leg, about 260 miles there and back, including a crossing of breaking sea ice on Norton Sound in a blizzard. The twist is that the dog who ran the final 55 miles, Balto, got the fame and the statue in New York's Central Park. Balto later ended up in a cheap sideshow until Cleveland schoolchildren raised money to rescue him."
+    "In the 1925 diphtheria outbreak in Nome, Alaska, sled dogs relayed antitoxin serum across about 674 miles of frozen wilderness. Togo, a small 12-year-old husky led by musher Leonhard Seppala, ran the longest and most dangerous leg, about 260 miles there and back, including a crossing of breaking sea ice on Norton Sound in a blizzard. The twist is that the dog who ran the final 55 miles, Balto, got the fame and the statue in New York's Central Park. Balto later ended up in a cheap sideshow until Cleveland schoolchildren raised money to rescue him.",
+    "Juan Pujol García, a Spanish chicken farmer, was turned down by British intelligence, so he became a German spy instead and sent Berlin 'reports from London' that he made up in Lisbon from guidebooks and newsreels, inventing a network of 27 fake agents. Britain then hired him, and his lies helped convince Germany that D-Day in Normandy was only a decoy. The twist is that he was awarded both the German Iron Cross and the British MBE, then faked his own death in Africa and vanished to Venezuela until a historian tracked him down in 1984."
   ],
   "research_seeds": {
     "handles": [
@@ -75,15 +76,15 @@
   },
   "cta_line": "for more strange history",
   "recent_shapes": [
-    "chain of unlikely events",
     "rise and fall",
-    "myth vs truth"
+    "myth vs truth",
+    "one person against the odds"
   ],
   "brain": "claude",
-  "veo": true,
+  "veo": false,
   "short_form": false,
   "recent_looks": [
-    "riso",
-    "silent"
+    "silent",
+    "halftone"
   ]
 }
