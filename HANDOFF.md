@@ -1,6 +1,6 @@
 # ShortsMaker: handoff for a new Claude session
 
-Read this first, then the code it points to. Last updated 2026-10-22 (consolidated 2026-10-19; the older, longer notes with
+Read this first, then the code it points to. Last updated 2026-10-24 (consolidated 2026-10-19; the older, longer notes with
 every dated decision are in `HANDOFF_history.md`).
 
 ## What this is
@@ -695,6 +695,30 @@ at launch; failures crack / bend / shear / sway, optionally then collapse_span; 
 - Tests: `tests/test_blender_plan.py`, `test_blender_render.py` (fake Blender), `test_blender_run.py`,
   `test_blender_scene.py` (real headless Blender, a few minutes).
 
+## Motion graphics hold padding, person card timing & pacing (2026-10-24, owner asked)
+Owner: some template motion graphics (like the box with a person's name) ended too abruptly, and even when a graphic had enough time, the scene transitioned too quickly with no room for viewers to process the information, destroying the pacing across both overlay graphics and full-screen scenes.
+- **Root cause**: Each scene's duration was previously locked to raw voice duration (`bounds.append(bounds[-1] + media_tools.duration(sound))`). When narration finished, the scene cut immediately with zero pause or hold time. In `editplan.py`, person cards were capped at `end - 0.15s` and allowed as short as 0.8s on screen (so a name spoken near the end was squeezed into an abrupt sub-second flash), while Remotion/Python shrank and snapped the card away in 0.2s right before the cut. Full-screen motion graphics (`board`, `document`, `journey`, `custom`, `number`) had their last beat finish right before the cut, leaving viewers with no time to read the completed document or map.
+- **Intelligent hold padding (`shortsmaker/short_render.py`)**:
+  - Automatically calculates hold padding per scene and pads audio silence via ffmpeg `apad=pad_dur=...`:
+    - Full-screen scenes: at least 1.1s of hold time after narration ends before transitioning, letting viewers absorb the completed document/map/board.
+    - Person cards: ensures the scene lasts until at least 2.8s after the name is triggered, giving the card ~2.4s of screen time and a 0.4s clean hold before the cut.
+    - Overlay graphics: ensures time for build + 1.5s readable hold + exit + hold before cut.
+  - Padded audio silence naturally extends `bounds`, leaves background music playing uninterrupted, and displays no captions during the pause so viewers focus on the visual.
+  - Total duration is budgeted against the maximum Short length (`58.5s` for standard Shorts, `33.0s` for short form) so videos never exceed platform limits or trigger review issues.
+- **Person card timing (`shortsmaker/editplan.py`)**:
+  - `off = min(on + 2.5, end - 0.35)` with minimum duration threshold raised to 1.2s; the card now finishes exiting at least 0.35s before `end`.
+- **Smooth broadcast exit animations (`remotion/src/Graphics.tsx`, `shortsmaker/frame_render.py`)**:
+  - `PersonCard`: 0.32s cubic-in easing exit, scaling down to 0.75 and smoothly dropping `45px` (`translateY`), eliminating abrupt disappearances.
+  - `useWindow`: exit window extended to 0.28s finishing at `end - 0.32s`, providing a calm half-second buffer before the cut across all template cards (`Stat`, `Timeline`, `Headline`, `Fact`, `Stamp`, etc.).
+  - Python renderer `draw_card()` updated with matching 0.32s smooth exit.
+
+## Gemini review timeout & agy tool loop fix (2026-10-23)
+- **Root cause**: In `visual_review`, Gemini (`agy`) was launched without `--disable-slash-commands` and without tool boundaries. When it saw discrepancies on contact sheets, it autonomously ran shell commands, wrote inline Python scripts to crop tiles, and explored python source files until hitting the 15-minute subprocess timeout twice, falling back to Claude.
+- **Fix (`shortsmaker/llm.py`, `shortsmaker/review.py`)**:
+  - Added `--disable-slash-commands` and explicit prompt instructions in `run_agy` and `visual_review` forbidding shell/script execution or codebase exploration, requiring direct image inspection via `read_file` and immediate JSON return.
+  - Reduced review timeout to 300s (180s for text).
+  - Automatically switches `_argon_exhausted = True` to `gemini-3.8-flash-high` on timeout retry and for the rest of the run.
+
 ## Ideas offered, not built
 - Voice cloning (owner's own voice), SFX on the music's beat, YouTube Audio Library tracks for the somber/epic moods.
 - Logbook extras from the Reach/Engagement tabs (drop-off times, search terms, shown in feed, likes/shares): offered
@@ -703,7 +727,7 @@ at launch; failures crack / bend / shear / sway, optionally then collapse_span; 
 
 ## How to verify changes
 - `.venv\Scripts\python.exe -m compileall -q make_shorts.py shortsmaker`; Remotion: `cd remotion && npx tsc -p .`
-- Tests (no AI usage, no rendering): `.venv\Scripts\python.exe tests\test_package.py` (9: ROOT, ffmpeg on PATH, shared session, fakes reach callers, Opus/high pin, Gemini bulk vs review models, Argon->Flash on quota, encoder cache, entry point),
+- Tests (no AI usage, no rendering): `.venv\Scripts\python.exe tests\test_package.py` (13: ROOT, ffmpeg on PATH, shared session, fakes reach callers, Opus/high pin, Gemini bulk vs review models, Argon->Flash on quota, agy flags and boundaries, Gemini timeout switch to Flash, person card hold and exit gap, scene hold padding, encoder cache, entry point),
   `.venv\Scripts\python.exe tests\test_h3_handoff.py` (15: H3/Flow prompt checks, retries, veo.zip, clips.zip, renamed zips, flow overwrite protection, closeup bypass), `.venv\Scripts\python.exe tests\test_h3_run.py` (7: frame grid, H3 graph, start-frame crop, notebook, 40GB A100 warning, upload cancel),
   `.venv\Scripts\python.exe tests\test_first_second.py` (6: first-second check, opener swap, logbook small-sample note),
   `.venv\Scripts\python.exe tests\test_story.py` (6: word counts match the aligner, sentence takes, cutting a take, story_problems, editor second pass, rules in the prompt),
