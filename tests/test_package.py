@@ -104,6 +104,54 @@ def test_argon_out_of_quota_switches_to_flash():
         llm._gemini_model, llm._argon_exhausted, subprocess.run, shutil.which, session.BRAIN, session.NO_QUOTA = old
 
 
+def test_run_agy_flags_and_boundaries():
+    import subprocess
+    seen = []
+    old_run = subprocess.run
+    old_which = shutil.which
+    subprocess.run = lambda cmd, **kw: seen.append((cmd, kw)) or type("R", (), {"stdout": '{"ok": 1}', "stderr": ""})()
+    shutil.which = lambda name: "agy.cmd" if name == "agy" else name
+    try:
+        with tempfile.TemporaryDirectory() as d:
+            f = Path(d)
+            res = llm.run_agy("test prompt", f, timeout=120, model="gemini-4-argon-high")
+            assert res == '{"ok": 1}'
+    finally:
+        subprocess.run, shutil.which = old_run, old_which
+    assert seen, "subprocess.run should have been called"
+    cmd, kw = seen[0]
+    assert "--disable-slash-commands" in cmd, f"--disable-slash-commands missing from agy cmd: {cmd}"
+    assert "--model" in cmd and cmd[cmd.index("--model") + 1] == "gemini-4-argon-high"
+    assert kw.get("timeout") == 120
+    p_arg = [arg for arg in cmd if arg.startswith("-p=")][0]
+    assert "Do not run any shell commands" in p_arg
+    assert "read_file" in p_arg
+
+
+def test_gemini_timeout_switches_to_flash():
+    import subprocess
+    old = (llm._gemini_model, llm._argon_exhausted, subprocess.run, shutil.which, session.BRAIN, set(session.NO_QUOTA))
+    asked = []
+
+    def fake_run(cmd, **kw):
+        model = cmd[cmd.index("--model") + 1]
+        asked.append(model)
+        if model != llm.GEMINI_FALLBACK:
+            raise subprocess.TimeoutExpired(cmd, kw.get("timeout", 180))
+        return type("R", (), {"stdout": '{"ok": 1}', "stderr": ""})()
+
+    llm._gemini_model, llm._argon_exhausted = "gemini-4-argon-high", False
+    subprocess.run, shutil.which = fake_run, (lambda name: name)
+    session.BRAIN, session.NO_QUOTA = "gemini", set()
+    try:
+        with tempfile.TemporaryDirectory() as d:
+            assert llm.ask_ai("review these frames", read_dir=Path(d)) == {"ok": 1}
+        assert asked == ["gemini-4-argon-high", llm.GEMINI_FALLBACK], asked
+        assert llm.gemini_model() == llm.GEMINI_FALLBACK  # the rest of the run stays on Flash
+    finally:
+        llm._gemini_model, llm._argon_exhausted, subprocess.run, shutil.which, session.BRAIN, session.NO_QUOTA = old
+
+
 def test_encoder_cache_lives_with_video_encoder():
     assert not hasattr(audio_mix, "_encoder"), "the encoder cache belongs to media_tools"
     old = list(media_tools._encoder)

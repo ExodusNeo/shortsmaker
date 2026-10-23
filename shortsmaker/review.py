@@ -79,6 +79,7 @@ artifacts, captions/logos in footage, someone else's AI art posing as real); "gr
 about places, a number, a document, a mechanism, or a cause-and-effect chain and a full-screen motion graphic
 (map journey, big number, document, or custom animated diagram) would show it better than any picture; null
 otherwise (e.g. a graphic covering a face).
+Do not run shell commands, execute scripts, crop images, or inspect other files in the codebase. View the sheet images directly with read_file, evaluate the Short, and immediately output the JSON.
 Reply with ONLY JSON: {{"problems": [{{"second": 12, "scene": 3, "what": "a white smoke cloud covers the statue", "fix": "repaint"}}]}}""",
                   fatal=False, read_dir=folder)
     return review_fixes(data, len(short["scenes"]))

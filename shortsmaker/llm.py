@@ -76,9 +76,11 @@ def run_agy(prompt: str, folder: Path, timeout: int = 900, model: str | None = N
     task = folder / f"task_{os.getpid()}_{time.time_ns()}.txt"
     task.write_text(prompt, encoding="utf-8")
     try:
-        r = subprocess.run([agy, "--model", model, "--effort", "high", "--add-dir", str(folder),
-                            f"-p=Read the file {task} and do exactly what it says. Your whole reply must be "
-                            "what that file asks for, nothing else."],
+        r = subprocess.run([agy, "--model", model, "--effort", "high", "--disable-slash-commands", "--add-dir", str(folder),
+                            f"-p=Read the file {task} and do exactly what it says. Do not run any shell commands, "
+                            "scripts, or inspect other files in the codebase. If files or images are listed in the "
+                            "task, view them directly with read_file and immediately return the requested JSON. "
+                            "Your whole reply must be what that file asks for, nothing else."],
                            capture_output=True, text=True, encoding="utf-8", timeout=timeout, cwd=folder)
     except subprocess.TimeoutExpired:
         return None
@@ -101,6 +103,7 @@ def ask_ai(prompt: str, fatal: bool = True, read_dir: Path | None = None, brain:
     (and remembers exhausted quota in NO_QUOTA so later steps don't wait on the empty account). With read_dir,
     the AI may look at the images in that folder; `bulk` marks a job reading dozens of them, which Gemini runs on
     Flash (on Argon it would spend the small weekly quota in one Short)."""
+    global _argon_exhausted
     first = brain or session.BRAIN
     second = "gemini" if first == "claude" else "claude"
     order = [w for w in (first, second) if w not in session.NO_QUOTA] or [first, second]
@@ -112,7 +115,8 @@ def ask_ai(prompt: str, fatal: bool = True, read_dir: Path | None = None, brain:
             continue
         for attempt in range(2):
             if who == "gemini":
-                out = run_agy(prompt, read_dir or ROOT / "agy_tasks", model=GEMINI_FALLBACK if bulk else None)
+                cur_model = GEMINI_FALLBACK if (bulk or attempt > 0) else None
+                out = run_agy(prompt, read_dir or ROOT / "agy_tasks", timeout=300 if read_dir else 180, model=cur_model)
             else:
                 # Lean call: no personal plugins, hooks or skill list (the owner's interactive setup has ~20
                 # plugins/skills and output-rewriting hooks; a JSON-only planner call needs none of them), always
@@ -127,7 +131,11 @@ def ask_ai(prompt: str, fatal: bool = True, read_dir: Path | None = None, brain:
                 except subprocess.TimeoutExpired:
                     out = None
             if out is None:
-                print(f"  {name} timed out (try {attempt + 1}/2)")
+                if who == "gemini" and not bulk and attempt == 0 and not _argon_exhausted:
+                    _argon_exhausted = True
+                    print(f"  Gemini main model timed out: switching to {GEMINI_FALLBACK} for the rest of this run")
+                else:
+                    print(f"  {name} timed out (try {attempt + 1}/2)")
                 continue
             try:
                 start, end = out.find("{"), out.rfind("}")
