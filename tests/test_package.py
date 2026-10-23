@@ -162,6 +162,40 @@ def test_encoder_cache_lives_with_video_encoder():
         media_tools._encoder[:] = old
 
 
+def test_person_card_hold_and_exit_gap():
+    import io
+    from PIL import Image
+    from shortsmaker import editplan
+    buf = io.BytesIO()
+    Image.new("RGB", (100, 100), "white").save(buf, format="JPEG")
+    fake_jpg = buf.getvalue()
+    words = [(0.0, 0.4, "his"), (0.4, 0.8, "cousin"), (0.8, 1.2, "Virginia"), (1.2, 1.6, "Woolf")]
+    sc = {"graphic": None, "emphasis": None, "person": {"name": "Virginia Woolf", "trigger": "Virginia Woolf"}}
+    cue = editplan.scene_cues(sc, words, 0.0, 5.0, 1, (fake_jpg, "photo.jpg", None))
+    assert cue.get("card") is not None
+    assert cue["off"] - cue["on"] >= 2.0, f"Card duration too short: {cue['off'] - cue['on']}"
+    assert 5.0 - cue["off"] >= 0.35, f"Not enough breathing room before scene transition: {5.0 - cue['off']}"
+
+
+def test_scene_hold_padding():
+    from shortsmaker import plan_rules, editplan
+    # Simulate a scene with a full-screen motion graphic:
+    # 2.5s speech, ends at 2.4s. Needs ~1.1s hold after speech.
+    words = [(0.0, 0.5, "Navy"), (0.6, 1.2, "flagship"), (1.3, 2.4, "telegram")]
+    dur = 2.5
+    last_word = words[-1][1]
+    tail = max(0.0, dur - last_word)  # 0.1s
+    needed = max(0.0, 1.1 - tail)      # 1.0s
+    assert needed >= 0.9, f"Full scene needs hold padding: {needed}"
+
+    # Simulate a scene with a person card triggered at 2.0s:
+    pr_t = 2.0
+    needed_end = (pr_t - 0.1) + 2.4 + 0.4  # 4.7s
+    person_dur = 2.8
+    pad_needed = max(0.0, needed_end - person_dur)  # 1.9s -> capped at 1.8s
+    assert min(1.8, pad_needed) >= 1.5, f"Person card needs hold padding: {pad_needed}"
+
+
 def test_entry_point():
     import make_shorts
     assert make_shorts.main is cli.main

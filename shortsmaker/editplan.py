@@ -168,10 +168,10 @@ def scene_cues(sc: dict, words: list[tuple[float, float, str]], start: float, en
         on = start + t - 0.1
         if i == 0:
             on = max(on, 1.9)  # don't cover the hook title
-        off = min(on + 2.6, end - 0.15)
-        if off - on < 1.2:
-            on = max(start + 0.2, off - 1.2)
-        if off - on >= 0.8:
+        off = min(on + 2.5, end - 0.35)
+        if off - on < 1.4:
+            on = max(start + 0.2, off - 1.4)
+        if off - on >= 1.2:
             cue.update(card=frame_render.person_card(found[0], pr["name"]), photo=found[0], on=on, off=off,
                        card_source=f"Wikimedia Commons, {found[2] or 'public domain'}: {found[1]}")
         else:

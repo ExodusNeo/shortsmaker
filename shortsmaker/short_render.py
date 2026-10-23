@@ -99,7 +99,7 @@ def render(short: dict, ch: dict, folder: Path, state: dict | None = None, fix_r
     new AI picks. `fix_round` counts the automatic review-and-fix re-renders (up to AUTO_FIX_ROUNDS)."""
     work = folder / "work"
     work.mkdir(parents=True, exist_ok=True)
-    all_words, bounds, images, sources, cues, audio = [], [0.0], [], [], [], []
+    all_words, bounds, images, sources, cues, audio, scene_sounds = [], [0.0], [], [], [], [], []
     short["cta_line"] = ch.get("cta_line") or "for more stories like this"
     if short.get("palette") not in PALETTES:  # planner gave none (or an old plan): a random one
         short["palette"] = random.choice(list(PALETTES))
@@ -201,6 +201,51 @@ def render(short: dict, ch: dict, folder: Path, state: dict | None = None, fix_r
             trimmed = work / f"0_start{sound.suffix}"
             media_tools.ffmpeg("-ss", f"{cut:.3f}", "-i", str(sound), trimmed.name, cwd=work)
             sound, words = trimmed, [(a - cut, b - cut, w) for a, b, w in words]
+        scene_sounds.append((sound, words, img))
+
+    # Pacing & hold time: full-screen graphics, person cards and overlay graphics need breathing room
+    # to be read and understood before the scene transitions to the next beat.
+    raw_durs = [media_tools.duration(s) for s, _, _ in scene_sounds]
+    raw_total = sum(raw_durs) + 0.6
+    max_total = 33.0 if session.SHORT_FORM else 58.5
+    budget = max(0.0, max_total - raw_total)
+    pads = []
+    for i, sc in enumerate(short["scenes"]):
+        sound, words, _ = scene_sounds[i]
+        dur = raw_durs[i]
+        needed = 0.0
+        # 1. Full-screen motion graphics need a settle pause after speech finishes so viewers can process it
+        if sc.get("full"):
+            last_word = words[-1][1] if words else dur
+            tail = max(0.0, dur - last_word)
+            needed = max(needed, max(0.0, 1.1 - tail))
+        # 2. Person card needs enough screen time (~2.4s) plus a clean hold before the cut
+        if choices[i].get("person") and sc.get("person"):
+            pr = sc["person"]
+            pr_t = plan_rules.spoken_at(words, pr.get("trigger", ""))
+            if pr_t is not None:
+                needed_end = (pr_t - 0.1) + 2.4 + 0.4
+                needed = max(needed, max(0.0, needed_end - dur))
+        # 3. Graphic overlay needs build time + readable hold + exit + hold before cut
+        if sc.get("graphic"):
+            g = sc["graphic"]
+            g_t = plan_rules.spoken_at(words, g.get("trigger", "")) if "trigger" in g else 0.4
+            g_t = g_t if g_t is not None else 0.4
+            build = 0.6 + 0.035 * len(g.get("text", "")) if g.get("style") == "quote" else editplan.GRAPHIC_BUILD.get(g.get("style"), 0.3)
+            needed_end = (g_t - 0.1) + build + 1.5 + 0.28 + 0.35
+            needed = max(needed, max(0.0, needed_end - dur))
+        pads.append(min(1.8, needed))
+    if sum(pads) > budget and sum(pads) > 0:
+        scale = budget / sum(pads)
+        pads = [p * scale for p in pads]
+
+    for i, sc in enumerate(short["scenes"]):
+        sound, words, img = scene_sounds[i]
+        pad = pads[i]
+        if pad >= 0.08:
+            padded = work / f"{i}_padded{sound.suffix}"
+            media_tools.ffmpeg("-y", "-i", str(sound), "-af", f"apad=pad_dur={pad:.2f}", padded.name, cwd=work)
+            sound = padded
         audio.append(sound)
         all_words += [(s + bounds[-1], e + bounds[-1], t) for s, e, t in words]
         bounds.append(bounds[-1] + media_tools.duration(sound))

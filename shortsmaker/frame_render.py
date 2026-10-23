@@ -181,14 +181,16 @@ def draw_card(frame: Image.Image, card: Image.Image, t: float, on: float, off: f
     c1 = 1.70158  # easeOutBack: overshoots ~6% then settles
     scale = 0.6 + 0.4 * (1 + (c1 + 1) * (a - 1) ** 3 + c1 * (a - 1) ** 2)
     alpha = min(1.0, a * 2)
-    if t > off - 0.2:  # exit
-        e = (off - t) / 0.2
-        scale, alpha = scale * (0.85 + 0.15 * e), alpha * e
+    drop_y = 0
+    if t > off - 0.32:  # exit: smooth sink and fade
+        e = (off - t) / 0.32
+        scale, alpha = scale * (0.75 + 0.25 * e), alpha * (e ** 1.5)
+        drop_y = int(45 * (1 - e))
     frame = frame.point(lambda v: int(v * (1 - 0.35 * alpha)))  # dim the background
     img = card.resize((max(1, int(card.width * scale)), max(1, int(card.height * scale))), Image.BILINEAR)
     if alpha < 1:
         img.putalpha(img.getchannel("A").point(lambda v: int(v * alpha)))
-    frame.paste(img, ((W - img.width) // 2, 680 - img.height // 2), img)  # between top graphics and captions
+    frame.paste(img, ((W - img.width) // 2, 680 - img.height // 2 + drop_y), img)  # between top graphics and captions
     return frame
 
 
