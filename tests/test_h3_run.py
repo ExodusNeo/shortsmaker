@@ -91,6 +91,16 @@ def test_notebook_cells():
             compile("\n".join(l for l in c.splitlines() if not l.lstrip().startswith(("!", "%"))), "cell", "exec")
 
 
+def test_notebook_a100_40gb_warning_and_cancelled_upload():
+    import json
+    nb = json.loads((Path(__file__).resolve().parents[1] / "colab" / "h3_clips.ipynb").read_text(encoding="utf-8"))
+    cells = ["".join(c["source"]) for c in nb["cells"]]
+    setup_cell = cells[1]
+    assert "40 GB A100" in setup_cell and "slower" in setup_cell
+    upload_cell = cells[3]
+    assert "if not up:" in upload_cell and "Upload cancelled" in upload_cell
+
+
 if __name__ == "__main__":
     names = [n for n in sorted(globals()) if n.startswith("test_") and (len(sys.argv) < 2 or n in sys.argv[1:])]
     failed = 0

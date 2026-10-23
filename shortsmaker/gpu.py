@@ -420,22 +420,30 @@ Reply with ONLY JSON: {{"scenes": [{{"scene": 1, "subject": "...", "motion": "..
 
 
 def unpack_clips(folder: Path) -> list[str]:
-    """Unpack scene<N>.mp4/.mov/.webm from folder/clips.zip (the Colab notebook's download) into folder, by bare
+    """Unpack scene<N>.mp4/.mov/.webm from folder/clips*.zip (the Colab notebook's download) into folder, by bare
     name only, so nothing lands outside it. Returns the names written."""
-    if not (folder / "clips.zip").exists():
+    zips = sorted([p for p in folder.glob("*.zip") if p.name.lower().startswith("clips")],
+                  key=lambda p: p.stat().st_mtime, reverse=True)
+    if not zips:
         return []
-    try:
-        with zipfile.ZipFile(folder / "clips.zip") as z:
-            names = []
-            for member in z.namelist():
-                base = PurePosixPath(member.replace("\\", "/")).name
-                if re.fullmatch(r"scene\d+\.(mp4|mov|webm)", base, re.I):
-                    (folder / base).write_bytes(z.read(member))
-                    names.append(base)
-            return sorted(names)
-    except zipfile.BadZipFile:
-        print("    clips.zip couldn't be opened, using the loose scene files")
-        return []
+    written, seen = set(), set()
+    for z_path in zips:
+        try:
+            with zipfile.ZipFile(z_path) as z:
+                for member in z.namelist():
+                    base = PurePosixPath(member.replace("\\", "/")).name
+                    if re.fullmatch(r"scene\d+\.(mp4|mov|webm)", base, re.I):
+                        if base.lower() in seen:
+                            continue
+                        seen.add(base.lower())
+                        dest = folder / base
+                        if dest.exists() and dest.stat().st_mtime > z_path.stat().st_mtime:
+                            continue
+                        dest.write_bytes(z.read(member))
+                        written.add(base)
+        except zipfile.BadZipFile:
+            print(f"    {z_path.name} couldn't be opened, using the loose scene files")
+    return sorted(written)
 
 
 def veo_handoff(short: dict, work: Path, bounds: list[float], marked: list[int]) -> dict[int, Path]:
@@ -446,6 +454,14 @@ def veo_handoff(short: dict, work: Path, bounds: list[float], marked: list[int])
     folder = work.parent / "veo"
     folder.mkdir(exist_ok=True)
     scenes = [i for i in marked if not short["scenes"][i].get("shot", "").startswith("CLOSE-UP:")]
+    if not scenes:
+        return {}
+    for old_zip in folder.glob("*.zip"):
+        if old_zip.name.lower().startswith("clips"):
+            try:
+                old_zip.unlink()
+            except OSError:
+                pass
     for i in scenes:
         cover_crop(work / f"{i}_raw.jpg", folder / f"start{i + 1}.jpg")
     prompts = h3_prompts(short, folder, scenes)

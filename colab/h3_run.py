@@ -117,7 +117,8 @@ def main(only: list[int], seed: int, turbo: bool) -> None:
             print(f"  scene {n} done in {(time.time() - t0) / 60:.1f} min")
         except Exception as e:  # one bad clip shouldn't lose the others
             print(f"  scene {n} failed: {type(e).__name__}: {str(e)[:800]}")
+    video_clips = sorted(p for p in clips.glob("scene*") if p.suffix.lower() in (".mp4", ".mov", ".webm"))
     with zipfile.ZipFile(HERE / "clips.zip", "w") as z:
-        for p in sorted(clips.glob("scene*")):
+        for p in video_clips:
             z.write(p, p.name)
-    print(f"{len(list(clips.glob('scene*')))} clip(s) in clips.zip")
+    print(f"{len(video_clips)} clip(s) in clips.zip")

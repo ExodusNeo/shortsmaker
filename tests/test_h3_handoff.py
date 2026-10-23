@@ -168,6 +168,69 @@ def test_handoff_picks_up_clips_zip():
         assert list(got) == [0] and got[0].name == "clip0_veo.mp4" and got[0].exists()
 
 
+def test_renamed_zip_is_picked_up():
+    with tempfile.TemporaryDirectory() as d:
+        folder = Path(d) / "veo"
+        folder.mkdir()
+        zip_of(folder / "clips (1).zip", ["scene2.mp4"])
+        assert gpu.unpack_clips(folder) == ["scene2.mp4"]
+        assert (folder / "scene2.mp4").exists()
+
+
+def test_old_zip_does_not_overwrite_newer_clip():
+    import os, time
+    with tempfile.TemporaryDirectory() as d:
+        folder = Path(d) / "veo"
+        folder.mkdir()
+        z_file = folder / "clips.zip"
+        zip_of(z_file, ["scene1.mp4"])
+        past = time.time() - 100
+        os.utime(z_file, (past, past))
+        flow_clip = folder / "scene1.mp4"
+        flow_clip.write_bytes(b"newer flow clip")
+        os.utime(flow_clip, (time.time(), time.time()))
+        assert gpu.unpack_clips(folder) == []
+        assert flow_clip.read_bytes() == b"newer flow clip"
+
+
+def test_duplicate_clip_names_deduplicated():
+    with tempfile.TemporaryDirectory() as d:
+        folder = Path(d) / "veo"
+        folder.mkdir()
+        zip_of(folder / "clips.zip", ["clips/scene1.mp4", "scene1.mp4", "clips/scene2.mp4"])
+        assert gpu.unpack_clips(folder) == ["scene1.mp4", "scene2.mp4"]
+
+
+def test_all_closeup_marked_scenes_skip_pause():
+    with tempfile.TemporaryDirectory() as d:
+        work = Path(d) / "short" / "work"
+        work.mkdir(parents=True)
+        short = short_with(2)
+        short["scenes"][0]["shot"] = "CLOSE-UP: face"
+        short["scenes"][1]["shot"] = "CLOSE-UP: hand"
+        old_input = builtins.input
+        waited = []
+        builtins.input = lambda msg="": waited.append(msg) or ""
+        try:
+            got = gpu.veo_handoff(short, work, [0.0, 3.0, 6.0], [0, 1])
+            assert got == {}
+            assert len(waited) == 0  # no pause with 0 clips to make
+            assert not (work.parent / "veo" / "jobs.json").exists()
+        finally:
+            builtins.input = old_input
+
+
+def test_old_zips_cleaned_up_on_handoff_start():
+    with tempfile.TemporaryDirectory() as d:
+        veo = Path(d) / "short" / "veo"
+        veo.mkdir(parents=True)
+        (veo / "clips.zip").write_bytes(b"old")
+        (veo / "clips (1).zip").write_bytes(b"old")
+        handoff(Path(d))
+        assert not (veo / "clips.zip").exists()
+        assert not (veo / "clips (1).zip").exists()
+
+
 if __name__ == "__main__":
     names = [n for n in sorted(globals()) if n.startswith("test_") and (len(sys.argv) < 2 or n in sys.argv[1:])]
     failed = 0

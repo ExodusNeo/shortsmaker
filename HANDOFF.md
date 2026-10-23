@@ -704,7 +704,7 @@ at launch; failures crack / bend / shear / sway, optionally then collapse_span; 
 ## How to verify changes
 - `.venv\Scripts\python.exe -m compileall -q make_shorts.py shortsmaker`; Remotion: `cd remotion && npx tsc -p .`
 - Tests (no AI usage, no rendering): `.venv\Scripts\python.exe tests\test_package.py` (9: ROOT, ffmpeg on PATH, shared session, fakes reach callers, Opus/high pin, Gemini bulk vs review models, Argon->Flash on quota, encoder cache, entry point),
-  `.venv\Scripts\python.exe tests\test_h3_handoff.py` (8: H3/Flow prompt checks and retries, veo.zip, clips.zip), `.venv\Scripts\python.exe tests\test_h3_run.py` (4: frame grid, H3 graph, start-frame crop, notebook),
+  `.venv\Scripts\python.exe tests\test_h3_handoff.py` (15: H3/Flow prompt checks, retries, veo.zip, clips.zip, renamed zips, flow overwrite protection, closeup bypass), `.venv\Scripts\python.exe tests\test_h3_run.py` (7: frame grid, H3 graph, start-frame crop, notebook, 40GB A100 warning, upload cancel),
   `.venv\Scripts\python.exe tests\test_first_second.py` (6: first-second check, opener swap, logbook small-sample note),
   `.venv\Scripts\python.exe tests\test_story.py` (6: word counts match the aligner, sentence takes, cutting a take, story_problems, editor second pass, rules in the prompt),
   `.venv\Scripts\python.exe tests\test_edit_project.py` (2: Shotcut timeline layout (pictures, graphics, captions; 3 sound tracks), output filters, markers; melt renders graphics + captions over the pictures at -14 LUFS),
