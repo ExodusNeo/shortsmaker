@@ -320,12 +320,97 @@ def cover_crop(src: Path, out: Path) -> None:
 PEOPLE_CLIP_VF = "scale=232:-2,scale=512:896:flags=bicubic,gblur=sigma=1.1,noise=alls=14:allf=t+u,vignette=PI/5"
 
 
+PEOPLE_MOVE = "People move slowly and naturally; bodies, faces and hands stay realistic and intact."
+PEOPLE_STILL = "People, animals and machines stay completely still; only the air, water, smoke or light moves."
+
+
 def motion_prompt(sc: dict) -> str:
-    """Image-to-video prompt for an animate scene (LTX on this PC, or Veo in Flow by the owner)."""
+    """Short image-to-video prompt for an animate scene made by LTX on this PC."""
     return (f"{sc['motion']}. Gentle, slow, realistic motion, steady camera, consistent with the original photograph. "
-            + ("People move slowly and naturally; bodies, faces and hands stay realistic and intact."
-               if sc["motion_people"] else  # atmosphere: keep everyone still
-               "People, animals and machines stay completely still; only the air, water, smoke or light moves."))
+            + (PEOPLE_MOVE if sc["motion_people"] else PEOPLE_STILL))  # atmosphere: keep everyone still
+
+
+H3_MIN = {"subject": 40, "motion": 20, "camera": 10, "look": 15}  # shortest acceptable field, in characters
+
+
+def h3_problems(entry: dict | None) -> list[str]:
+    """What is missing from the AI's prompt fields for one scene (empty list = usable)."""
+    if not isinstance(entry, dict):
+        return ["no entry for this scene"]
+    out = []
+    for field, least in H3_MIN.items():
+        text = str(entry.get(field) or "").strip()
+        if not text:
+            out.append(f"no {field} line")
+        elif len(text) < least:
+            out.append(f"{field} too short (describe it in more detail)")
+    avoid = entry.get("avoid")
+    if not isinstance(avoid, list) or len([a for a in avoid if str(a).strip()]) < 3:
+        out.append("avoid list needs at least 3 things")
+    return out
+
+
+def h3_prompt(sc: dict, entry: dict) -> str:
+    """Join checked fields into one image-to-video prompt. H3 has no negative prompt, so the avoid list is its last
+    sentence (Veo in Flow reads it the same way)."""
+    f = {k: str(entry[k]).strip().rstrip(".") for k in H3_MIN}
+    avoid = ", ".join(str(a).strip().rstrip(".") for a in entry["avoid"] if str(a).strip())
+    return (f"{f['subject']}. {f['motion']}. Camera: {f['camera']}. Look: {f['look']}. The video starts exactly on "
+            f"the given first frame and stays consistent with it. {PEOPLE_MOVE if sc['motion_people'] else PEOPLE_STILL}"
+            f" Vertical 9:16. No text, captions or watermarks. Avoid: {avoid}.")
+
+
+def h3_prompts(short: dict, folder: Path, scenes: list[int]) -> dict[int, str]:
+    """Detailed prompts for the owner-made clips (Colab H3 or Flow), written by the AI while it looks at each exact
+    start<N>.jpg in folder. Scenes that fail h3_problems go back with the reasons until every one passes; never the
+    short motion_prompt (owner: a vague prompt wastes paid compute)."""
+    done: dict[int, str] = {}
+    problems = {i: [] for i in scenes}
+    rnd = 1
+    while problems:
+        lines = []
+        for i, why in problems.items():
+            sc = short["scenes"][i]
+            lines += [f"SCENE {i + 1}: open start{i + 1}.jpg",
+                      f"  Narration: {sc['narration']}",
+                      f"  Motion idea: {sc['motion'] or '(none)'}",
+                      f"  Movement is {'people' if sc['motion_people'] else 'atmosphere only (everyone stays still)'}"]
+            if why:
+                lines.append(f"  Fix last answer: {'; '.join(why)}")
+        reply = llm.ask_ai(f"""You write image-to-video prompts for a YouTube Short about "{short['title']}". Each clip
+starts on the given picture, so a prompt that describes something not in the picture wastes the paid generation.
+Open every picture listed below and look at it before writing.
+
+For each scene give:
+- subject: what is actually in the frame (people, objects, setting, era), so the model keeps it; at least one sentence.
+- motion: ONE main movement only, slow and realistic, that fits the motion idea and the picture.
+- camera: locked-off, or one slow move (slow push-in, slow pan left...). Never several moves.
+- look: match the picture (black-and-white or colour, archival photograph, film grain, lighting, period).
+- avoid: things that would ruin it, e.g. morphing faces, extra fingers, text or captions, modern objects, camera shake,
+  and colour when the picture is black-and-white.
+
+{chr(10).join(lines)}
+
+Reply with ONLY JSON: {{"scenes": [{{"scene": 1, "subject": "...", "motion": "...", "camera": "...", "look": "...",
+"avoid": ["...", "...", "..."]}}]}}""", fatal=False, read_dir=folder)
+        if reply is None:
+            input("  >> Neither Claude nor Gemini answered (quota or network). Press Enter to try again. ")
+            continue
+        got = {}
+        for e in reply.get("scenes") or []:
+            if isinstance(e, dict) and isinstance(e.get("scene"), int):
+                got[e["scene"] - 1] = e
+        for i in list(problems):
+            why = h3_problems(got.get(i))
+            if why:
+                problems[i] = why
+            else:
+                done[i] = h3_prompt(short["scenes"][i], got[i])
+                del problems[i]
+        if problems:
+            rnd += 1
+            print(f"  video prompts: round {rnd}, {len(problems)} scene(s) to fix")
+    return done
 
 
 def veo_handoff(short: dict, work: Path, bounds: list[float], marked: list[int]) -> dict[int, Path]:
