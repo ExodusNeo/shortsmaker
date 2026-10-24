@@ -25,26 +25,31 @@ only when nothing better is left.
 ## Story rules
 <!-- strange-history's original rules, moved from the code 2026-10-22 -->
 - How to tell it (learned from the true-story Shorts that hold viewers best; follow it closely):
+  Target length: 95-110 spoken words (35-42 seconds). Every word counts; cut every bit of padding.
   hook (scene 1): viewers decide in one second whether to swipe. OPEN INSIDE THE STORY'S STRANGEST MOMENT, told
   as it happens, not as a summary: "A passenger looked out the train window and saw a baboon working the
-  signals." / "Halfway through the race, the jockey died, and his horse kept running." It shows WHAT is happening
+  signals." / "Halfway through the race, the jockey died, and his horse kept running." Scene 1 must be a
+  complete, punchy stand-alone sentence ending with a period or exclamation mark. It shows WHAT is happening
   and holds back WHY, so the viewer needs the answer. Weak: a summary that tells the whole story at once ("A
   railway once hired a baboon.", "Australia's army once lost a war to birds."): once the viewer knows the story,
-  nothing is left to stay for. The first sentence: at most 12 words, understood with no context, never a
-  greeting, a setup, a date or a name nobody knows yet. The opening picture already shows the subject, so the
-  words add what it can't. If the story is famous, open on its least-known moment. Tell it through the
-  main_character ("He...", "This baboon...", their name once they act). Draft 3 first sentences in
+  nothing is left to stay for. The first sentence: at most 12 words, crystal-clear action understood with no
+  context, never a greeting, a setup, a date or a name nobody knows yet. The opening picture already shows the
+  subject, so the words add what it can't. If the story is famous, open on its least-known moment. Tell it through
+  the main_character ("He...", "This baboon...", their name once they act). Draft 3 first sentences in
   hook_options, each from a different hook family (in-the-moment scene, result first, stakes, contrarian
   claim, before/after), then open scene 1 with the strongest.
   ONE STORY, NOT A LIST OF FACTS: link every beat to the one before with "but", "so" or "you see" (a
   complication or a consequence), never "and then". If the beats could be reordered without breaking
   anything, it is a list: rewrite it.
-  scene 2 deepens the mystery or promises something bigger ("But the baboon had a very good reason to be
-  there."), never a date or a recap.
-  background only as the answer to a question the viewer already has, brought in with "you see" right when it
-  explains something ("You see, the signalman had lost both legs..."), never as a timeline ("In 1852, he...",
-  "Japan declared him dead in 1959."). No line starts with a date; a year only when it matters, mid-sentence.
-  Names only for people who act in the story.
+  scene 2: immediate escalation, complication or stakes ("But the baboon had a very good reason to be
+  there." / "If the navy found out, the crew faced treason."), never a date, setup or recap. Zero backstory yet.
+  scene 3 and 4: context and backstory arrive ONLY AFTER the curiosity is hooked, brought in with "you see"
+  right when it explains something ("You see, the signalman had lost both legs..."), never as a timeline ("In 1852,
+  he...", "Japan declared him dead in 1959."). No line starts with a date; a year only when it matters,
+  mid-sentence. Names only for people who act in the story.
+  Pronunciation for VoiceStudio TTS: write out words phonetically where TTS might stumble: spaced acronyms
+  like "H M S" or "U S S", full words like "World War One", "World War Two", and write years out as spoken words
+  where needed (e.g. "nineteen-oh-six" instead of "1906") so narration never stumbles or reads dates mechanically.
   escalate: each beat stranger or bigger than the last. Concrete, physical details (what people saw, heard,
   held), told like a friend at a bar, with one or two dry, wry asides that make it fun (never about death or
   suffering).
@@ -86,16 +91,18 @@ video watched) kept their main question open until the last scene and made every
   story's own time (never a modern museum display, replica, statue, reenactment, tourist or present-day
   photo of the place), and it raises a question instead of answering it: it must not show the twist or
   the whole story at once (a baboon working the signal levers tells the whole baboon-signalman story;
-  a museum's inflatable tank gives away that the army was fake). Best: the main character's face or a
-  strange moment whose explanation the viewer has to wait for;
+  a museum's inflatable tank gives away that the army was fake). Frame 1 must show the anomaly, disguise,
+  or action described in the hook sentence, never a calm studio portrait taken before the event occurred.
+  Best: the anomaly or disguised subject in action, or a strange moment whose explanation the viewer has to
+  wait for;
 
 ## Picture picking
 <!-- strange-history's original rules, moved from the code 2026-10-22 -->
 It must be from the story's own time (never a modern
-museum display, replica, statue, reenactment or present-day photo), ideally the main character's face, and
-must raise the hook's question, not answer it: never a picture that shows the twist or the whole story at
-once (a baboon at the signal levers tells the whole baboon-signalman story; a museum's inflatable tank
-gives away that the army was fake).
+museum display, replica, statue, reenactment or present-day photo), ideally the main character's face showing
+the hook's anomaly or disguise (never a calm studio portrait before the event), and must raise the hook's
+question, not answer it: never a picture that shows the twist or the whole story at once (a baboon at the
+signal levers tells the whole baboon-signalman story; a museum's inflatable tank gives away that the army was fake).
 
 ## Directing
 <!-- strange-history's original rules, moved from the code 2026-10-22 -->

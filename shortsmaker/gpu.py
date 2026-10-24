@@ -48,9 +48,9 @@ PAINT_TEXT_RULE = ("Any writing in the picture must be exactly the words in doub
 VOICESTUDIO = "http://127.0.0.1:3900"
 VOICESTUDIO_EXE = Path(r"D:\VoiceStudio\app\VoiceStudio.exe")
 COSY_REF = LOCAL_AI / "voices" / "aiden_ref.wav"  # its words are in aiden_ref.txt
-COSY_INSTRUCT = "Speak like a gripping documentary narrator, building suspense."
-# Owner's pick 2026-10-21 for shorter Shorts, by ear from voice_speed_test/ (Mike: 36.0 s at 1.15, 31.9 s at 1.30)
-COSY_SPEED = 1.30
+COSY_INSTRUCT = "Speak with dry wit, curiosity, and building suspense, like a storyteller sharing an incredible secret."
+# Owner's pick 2026-10-24 for natural documentary cadence without breathlessness (at 95-110 words, ~35-42s)
+COSY_SPEED = 1.20
 # Backup voice (owner's pick 2026-10-18 over Chatterbox and Kokoro): Qwen3-TTS "aiden", no style instruction,
 # in its own venv (qwen-tts pins transformers versions that would break gen.py). Then Kokoro, then Edge.
 QWEN_SPEAKER = "aiden"
