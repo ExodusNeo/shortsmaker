@@ -55,7 +55,7 @@ or movies with the same name: ignore those).
   results), the second a different relevant search phrase; 2-3 sentences total; then a line with
   exactly 3 relevant hashtags, #shorts last.
 - tags: 10-15, mixing the relevant real search phrases with broader niche terms.
-- pinned_comment: one short question that invites viewers to reply (opinion or "did you know").
+- pinned_comment: one provocative debate question or moral dilemma about the character's choices or the situation (e.g. "Was the Navy right to let them walk free, or was the prank too humiliating to forgive?", "Would you trust a baboon to run a train line if he never made one mistake?"). Never generic "What do you think?" or "Did you know?" — give viewers an immediate reason to take a side in the comments.
 Shorts: {json.dumps(research, ensure_ascii=False)}
 Reply with ONLY JSON: {{"shorts": [{{"index": 0, "title": "...", "description": "...",
 "tags": ["..."], "pinned_comment": "..."}}]}}""")

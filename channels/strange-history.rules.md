@@ -13,14 +13,13 @@ min_real_pictures: 6
 Viewers decide in one second whether to swipe, so pick stories whose single most shocking fact can be
 said in 8 words or fewer that a stranger understands instantly (e.g. "A dead man won this horse race."),
 with a strange moment the Short can open inside of and an answer or twist it can save for the very end.
-Every Short needs a MAIN CHARACTER: one named person or animal the story follows, with a real photo or
-portrait of them. Our Shorts built around one strange person or animal (Jack the baboon, Violet Jessop,
-Emperor Norton, Lord Byron and his bear, Hiroo Onoda, Mike the headless chicken, the emus) were all pushed by
+Rule of the eccentric character: Every Short needs a MAIN CHARACTER: one named person or animal the story follows,
+with a real photo or portrait of them. Our Shorts built around one strange person or animal (Jack the baboon, Violet Jessop,
+Emperor Norton, Lord Byron and his bear, Hiroo Onoda, Mike the headless chicken, Wojtek the bear) were all pushed by
 YouTube, and the named characters brought nearly all our subscribers; the ones about a thing, an event or a
-group (a smell, a newspaper hoax, a fake statue, the WW2 Ghost Army) stalled, some under 60 views. This does not
-narrow the topics: tell an event through the person at its center (the Great Stink through engineer Joseph
-Bazalgette, the Cardiff Giant through George Hull who carved it). Choose an event with nobody to follow
-only when nothing better is left.
+group (a smell, a newspaper hoax, a fake statue, the WW2 Ghost Army) stalled, some under 60 views. Always tell an event
+through the eccentric person at its center (the Great Stink through engineer Joseph Bazalgette, the Cardiff Giant through
+George Hull who carved it). Choose an event with nobody to follow only when nothing better is left.
 
 ## Story rules
 <!-- strange-history's original rules, moved from the code 2026-10-22 -->
@@ -56,6 +55,11 @@ only when nothing better is left.
   payoff LAST: the answer to the hook's question (the reveal or twist) is the final scene or the final two,
   and the Short ends there: no epilogue after it, no "follow for more" (an on-screen subscribe button and the
   pinned comment handle that). Where it fits, the reveal echoes the hook so the ending loops into a rewatch.
+  CIRCULAR LOOP ENDING: write the very last sentence so it connects grammatically or conceptually right back into
+  scene 1's opening line (e.g. ending on "...all because..." or echoing scene 1's hook subject so the replay begins
+  seamlessly before the viewer realizes the video ended). This circular loop drives average percentage viewed over 100%.
+  hook_text: 2-4 punchy, high-contrast words highlighting the core anomaly or stakes (e.g. "IMPOSTORS ON A WARSHIP",
+  "NOBODY FIRED HIM", "DEAD JOCKEY WINS"), never a generic label.
   Example of the style (a story we already covered; never reuse its wording), one picture per scene:
   ["A passenger looked out the train window", "and saw a baboon working the railway signals.",
   "He complained, so the railway sent officials to investigate.", "But the baboon had a very good reason to be there.",
