@@ -153,7 +153,14 @@ def gather_pool(articles: list[str], people: list[str], image_terms: list[str], 
     if films:
         print(f"  sampling frames from {len(films)} archival/stock videos...")
         with ThreadPoolExecutor(4) as ex:
-            sampled = list(ex.map(footage.film_frames, films))
+            futures = [ex.submit(footage.film_frames, f) for f in films]
+            sampled = []
+            for fut in futures:
+                try:
+                    sampled.append(fut.result())
+                except Exception as e:
+                    print(f"    video sampling failed ({e}), skipping")
+                    sampled.append([])
         for f, frames in zip(films, sampled):
             cands += [{"title": f["title"], "url": f"{f['src']}#t={t:.0f}", "credit": f["credit"], "thumb": jpg,
                        "source": f"REAL FILM ({f['site']}: {f['credit'] or 'no credit needed'}), frame at {media_tools.clock(t)}",

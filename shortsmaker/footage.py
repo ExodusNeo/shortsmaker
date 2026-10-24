@@ -169,30 +169,40 @@ def film_frames(film: dict, n: int = 4) -> list[tuple[float, bytes]]:
     captions and top bars are already cut off): the Internet Archive's own preview frames, or matching
     YouTube chapter timestamps, or single frames fetched by ffmpeg (skipping the first/last 15% on
     longer videos to avoid channel intros and end screens)."""
-    if film.get("thumbs"):
-        picks = [film["thumbs"][round(k * (len(film["thumbs"]) - 1) / max(1, n - 1))] for k in range(n)]
+    try:
+        if film.get("thumbs"):
+            picks = [film["thumbs"][round(k * (len(film["thumbs"]) - 1) / max(1, n - 1))] for k in range(n)]
+            out = []
+            for t, url in dict(picks).items():
+                try:
+                    out.append((float(t), crop_film_bytes(media_tools.fetch(url, 30, FILM_UA))))
+                except Exception:
+                    pass
+            if out:
+                return out
+        dur = film["dur"]
+        times = list(film.get("moments") or [])
+        for k in range(n):
+            if len(times) >= n:
+                break
+            t = dur * (0.15 + 0.70 * k / max(1, n - 1)) if dur > 90 else dur * (k + 0.5) / n
+            if all(abs(t - x) > 4.0 for x in times):
+                times.append(t)
         out = []
-        for t, url in dict(picks).items():
+        for t in sorted(times[:n]):
             try:
-                out.append((float(t), crop_film_bytes(media_tools.fetch(url, 30, FILM_UA))))
-            except Exception:
-                pass
-        if out:
-            return out
-    dur = film["dur"]
-    times = list(film.get("moments") or [])
-    for k in range(n):
-        if len(times) >= n:
-            break
-        t = dur * (0.15 + 0.70 * k / max(1, n - 1)) if dur > 90 else dur * (k + 0.5) / n
-        if all(abs(t - x) > 4.0 for x in times):
-            times.append(t)
-    out = []
-    for t in sorted(times[:n]):
-        r = image_sources.film_ffmpeg(film, ["-ss", f"{t:.1f}"], ["-frames:v", "1", "-vf", FILM_CROP, "-f", "image2pipe", "-vcodec", "mjpeg", "-"], 60)
-        if r.returncode == 0 and r.stdout:
-            out.append((t, r.stdout))
-    return out
+                r = image_sources.film_ffmpeg(film, ["-ss", f"{t:.1f}"], ["-frames:v", "1", "-vf", FILM_CROP, "-f", "image2pipe", "-vcodec", "mjpeg", "-"], 25)
+                if r.returncode == 0 and r.stdout:
+                    out.append((t, r.stdout))
+                elif b"timeout" in (r.stderr or b""):
+                    break
+            except Exception as e:
+                print(f"    frame sampling error ({e})")
+                break
+        return out
+    except Exception as e:
+        print(f"    film sampling skipped ({film.get('site', 'video')}: {e})")
+        return []
 
 
 def film_piece(film: dict, out: Path) -> tuple[bytes, float] | None:

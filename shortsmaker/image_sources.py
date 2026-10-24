@@ -281,8 +281,15 @@ def film_ffmpeg(film: dict, before: list[str], after: list[str], timeout: int) -
                 time.sleep(max(0.0, _last_wm + 1.0 - time.time()))
                 _last_wm = time.time()
         ua = film.get("ua") or (WM_UA if wiki else footage.FILM_UA)  # YouTube streams need yt-dlp's own User-Agent
-        r = subprocess.run(["ffmpeg", "-y", "-loglevel", "error", *before, "-user_agent", ua,
-                            "-i", film["src"], *after], capture_output=True, timeout=timeout)
+        try:
+            r = subprocess.run(["ffmpeg", "-y", "-loglevel", "error", *before, "-user_agent", ua,
+                                "-i", film["src"], *after], capture_output=True, timeout=timeout)
+        except subprocess.TimeoutExpired:
+            print(f"    film fetch timed out after {timeout}s ({film.get('site', 'video')})")
+            return subprocess.CompletedProcess(args=[], returncode=1, stdout=b"", stderr=b"timeout")
+        except Exception as e:
+            print(f"    film fetch error ({e})")
+            return subprocess.CompletedProcess(args=[], returncode=1, stdout=b"", stderr=str(e).encode())
         if b"429" not in r.stderr or attempt == 2:
             return r
         print("    Wikimedia busy, waiting 10s...")
