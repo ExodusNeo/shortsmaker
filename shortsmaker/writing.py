@@ -481,7 +481,11 @@ def article_text(title: str) -> str:
     raw = image_sources.wm_get("https://en.wikipedia.org/w/api.php?action=query&format=json&prop=extracts&explaintext=1"
                  f"&redirects=1&titles={urllib.parse.quote(title)}", f'Wikipedia "{title}" text')
     pages = json.loads(raw).get("query", {}).get("pages", {}) if raw else {}
-    return next((p.get("extract") or "" for p in pages.values()), "")
+    text = next((p.get("extract") or "" for p in pages.values()), "")
+    for marker in ("\n== References ==", "\n== See also ==", "\n== External links ==", "\n== Further reading ==", "\n== Notes =="):
+        if marker in text:
+            text = text.split(marker)[0].strip()
+    return text
 
 
 def fact_check(s: dict) -> bool:

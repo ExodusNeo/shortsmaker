@@ -119,7 +119,7 @@ def ask_ai(prompt: str, fatal: bool = True, read_dir: Path | None = None, brain:
         for attempt in range(2):
             if who == "gemini":
                 cur_model = GEMINI_FALLBACK if (bulk or attempt > 0) else None
-                out = run_agy(prompt, read_dir or ROOT / "agy_tasks", timeout=300 if read_dir else 180, model=cur_model)
+                out = run_agy(prompt, read_dir or ROOT / "agy_tasks", timeout=600 if bulk else 900, model=cur_model)
             else:
                 # Lean call: no personal plugins, hooks or skill list (the owner's interactive setup has ~20
                 # plugins/skills and output-rewriting hooks; a JSON-only planner call needs none of them), always
