@@ -27,10 +27,11 @@ def log_short(short: dict, folder: Path) -> None:
     if not session.LOG.exists():
         session.LOG.write_text(LOG_HEADER.format(name=session.LOG.stem), encoding="utf-8")
     hook = re.split(r"(?<=[.!?])\s+", short["scenes"][0]["narration"].strip())[0]
+    mode_str = " (solo)" if session.SOLO else ""
     with session.LOG.open("a", encoding="utf-8") as f:
         f.write(f"""
 ## {short['title']}
-Made: {folder.name[:10]} | Written by: {session.BRAIN.capitalize()} | Length: {media_tools.clock(media_tools.duration(folder / "short.mp4"))} | Folder: {folder.relative_to(ROOT)}
+Made: {folder.name[:10]} | Written by: {session.BRAIN.capitalize()}{mode_str} | Length: {media_tools.clock(media_tools.duration(folder / "short.mp4"))} | Folder: {folder.relative_to(ROOT)}
 Topic: {short.get('topic') or short['title']} | Story shape: {short.get('shape') or '-'}
 Hook line: "{hook}" | Hook title: {short.get('hook_text') or '-'}
 

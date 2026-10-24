@@ -196,6 +196,95 @@ def test_scene_hold_padding():
     assert min(1.8, pad_needed) >= 1.5, f"Person card needs hold padding: {pad_needed}"
 
 
+def test_solo_brain_selection_options():
+    from shortsmaker import channel_profiles
+    assert channel_profiles.BRAINS == ["claude-only", "gemini-only", "claude", "gemini", "both"]
+
+    # Test number selections 1-5
+    import builtins
+    old_input = builtins.input
+    try:
+        builtins.input = lambda prompt="": "1"
+        assert channel_profiles.ask_brain("claude") == "claude-only"
+        builtins.input = lambda prompt="": "2"
+        assert channel_profiles.ask_brain("claude") == "gemini-only"
+        builtins.input = lambda prompt="": "3"
+        assert channel_profiles.ask_brain("claude") == "claude"
+        builtins.input = lambda prompt="": "4"
+        assert channel_profiles.ask_brain("claude") == "gemini"
+        builtins.input = lambda prompt="": "5"
+        assert channel_profiles.ask_brain("claude") == "both"
+        # Test default Enter preserving last choice
+        builtins.input = lambda prompt="": ""
+        assert channel_profiles.ask_brain("claude-only") == "claude-only"
+        assert channel_profiles.ask_brain("gemini-only") == "gemini-only"
+        assert channel_profiles.ask_brain("claude") == "claude"
+        assert channel_profiles.ask_brain("gemini") == "gemini"
+        assert channel_profiles.ask_brain("both") == "both"
+    finally:
+        builtins.input = old_input
+
+
+def test_solo_edit_scripts_uses_same_ai():
+    from shortsmaker import writing
+    old_ask, old_brain, old_solo, old_rules = llm.ask_ai, session.BRAIN, session.SOLO, dict(session.RULES)
+    session.RULES["Story rules"] = "Be gripping"
+    called_brains = []
+    llm.ask_ai = lambda prompt, fatal=True, read_dir=None, brain=None, bulk=False: called_brains.append(brain) or {
+        "shorts": [{"index": 0, "scenes": ["Scene 1 narration"], "title": "T", "hook_text": "H", "thumbnail_text": "Th", "notes": [], "payoff_scene": 1, "list_like": False}]
+    }
+    try:
+        # Collaborative mode: Claude writer -> Gemini editor
+        session.BRAIN, session.SOLO = "claude", False
+        shorts = [{"topic": "Top", "title": "T", "lines": ["Line 1"], "hook_options": ["Opt 1"]}]
+        writing.edit_scripts(shorts, {"niche": "niche"})
+        assert called_brains[-1] == "gemini", f"Collaborative Claude should use Gemini editor, got: {called_brains[-1]}"
+
+        # Solo Claude mode: Claude writer -> Claude editor
+        session.BRAIN, session.SOLO = "claude", True
+        writing.edit_scripts(shorts, {"niche": "niche"})
+        assert called_brains[-1] == "claude", f"Solo Claude should use Claude editor, got: {called_brains[-1]}"
+
+        # Solo Gemini mode: Gemini writer -> Gemini editor
+        session.BRAIN, session.SOLO = "gemini", True
+        writing.edit_scripts(shorts, {"niche": "niche"})
+        assert called_brains[-1] == "gemini", f"Solo Gemini should use Gemini editor, got: {called_brains[-1]}"
+    finally:
+        llm.ask_ai, session.BRAIN, session.SOLO, session.RULES = old_ask, old_brain, old_solo, old_rules
+
+
+def test_solo_ask_ai_never_falls_back():
+    import subprocess
+    old_run, old_agy, old_brain, old_solo, old_no_quota = subprocess.run, llm.run_agy, session.BRAIN, session.SOLO, set(session.NO_QUOTA)
+    claude_called = []
+    gemini_called = []
+    subprocess.run = lambda cmd, **kw: claude_called.append(cmd) or type("R", (), {"stdout": "invalid json", "stderr": ""})()
+    llm.run_agy = lambda prompt, folder, timeout=900, model=None: gemini_called.append(prompt) or "invalid json"
+    shutil_which = shutil.which
+    shutil.which = lambda name: name
+    try:
+        # Solo Claude: when Claude returns invalid JSON, it retries Claude, never asks Gemini
+        session.BRAIN, session.SOLO, session.NO_QUOTA = "claude", True, set()
+        ans = llm.ask_ai("test prompt", fatal=False)
+        assert ans is None
+        assert len(claude_called) == 2, f"Claude should be retried twice, got: {len(claude_called)}"
+        assert len(gemini_called) == 0, f"Gemini must not be called in solo Claude mode, got: {len(gemini_called)}"
+
+        # Solo Gemini: when Gemini returns invalid JSON, it retries Gemini, never asks Claude
+        claude_called.clear()
+        gemini_called.clear()
+        session.BRAIN, session.SOLO, session.NO_QUOTA = "gemini", True, set()
+        ans = llm.ask_ai("test prompt", fatal=False)
+        assert ans is None
+        assert len(gemini_called) == 2, f"Gemini should be retried twice, got: {len(gemini_called)}"
+        assert len(claude_called) == 0, f"Claude must not be called in solo Gemini mode, got: {len(claude_called)}"
+    finally:
+        subprocess.run, llm.run_agy, session.BRAIN, session.SOLO, session.NO_QUOTA, shutil.which = old_run, old_agy, old_brain, old_solo, old_no_quota, shutil_which
+
+
+
+
+
 def test_entry_point():
     import make_shorts
     assert make_shorts.main is cli.main

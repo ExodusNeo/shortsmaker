@@ -66,16 +66,21 @@ def ask_yes(question: str, default: bool) -> bool:
     return default if not ans else ans.startswith("y")
 
 
-BRAINS = ["claude", "gemini", "both"]
+BRAINS = ["claude-only", "gemini-only", "claude", "gemini", "both"]
 
 
 def ask_brain(last: str) -> str:
     """Who plans this batch (scripts, fact check, SEO, picture choices, AI images): Enter = last time's.
     "both" makes every topic twice, once by each AI, to compare them side by side."""
-    print("Who writes and plans these Shorts? (the other AI edits each script)\n  1) Claude (Gemini edits)\n"
-          "  2) Gemini, Argon when your account has it (Claude edits)\n"
-          "  3) Both, to compare: each topic made once by Claude and once by Gemini (post only the better one)")
-    return BRAINS[ask_number("Pick a number", 3, BRAINS.index(last) + 1 if last in BRAINS else 1) - 1]
+    print("Who writes and plans these Shorts?\n"
+          "  1) Claude only (does the entire thing: writes, edits, plans, reviews)\n"
+          "  2) Gemini only (does the entire thing: writes, edits, plans, reviews)\n"
+          "  3) Claude (Gemini edits each script)\n"
+          "  4) Gemini, Argon when your account has it (Claude edits each script)\n"
+          "  5) Both, to compare: each topic made once by Claude and once by Gemini (post only the better one)")
+    norm = last.lower().replace("_", "-") if last else ""
+    idx = BRAINS.index(norm) + 1 if norm in BRAINS else 1
+    return BRAINS[ask_number("Pick a number", 5, idx) - 1]
 
 
 def load_channel() -> dict:

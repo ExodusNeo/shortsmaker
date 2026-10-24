@@ -8,7 +8,7 @@ from pathlib import Path
 
 from PIL import Image, ImageDraw, ImageFilter, ImageOps
 
-from shortsmaker import audio_mix, gpu, llm, media_tools, motion, photo_prep, style_lab
+from shortsmaker import audio_mix, gpu, llm, media_tools, motion, photo_prep, session, style_lab
 from shortsmaker.config import FPS, PALETTES, REMOTION, REMOTION_MIN_GRAPHICS, REMOTION_ONLY, XFADE, hex_rgb, short_skin
 
 
@@ -75,7 +75,8 @@ def paint_instead(short: dict, work: Path, idx: list[int], images: list, sources
               or f"{short['scenes'][i].get('shot') or short['scenes'][i]['narration']} {gpu.PAINT_FALLBACK}",
               "out": str(work / f"ai{i}.jpg")} for i in idx]
     by_moss = gpu.moss_images(items, work)  # same painter order as render(): MOSS, Gemini, SDXL
-    made = gpu.gemini_images([it for it in items if it["out"] not in by_moss], work) if shutil.which("agy") else set()
+    can_gemini_paint = shutil.which("agy") and not (session.SOLO and session.BRAIN == "claude")
+    made = gpu.gemini_images([it for it in items if it["out"] not in by_moss], work) if can_gemini_paint else set()
     rest = [it for it in items if it["out"] not in made | by_moss]
     if rest:
         gpu.local_job("images", rest, work, timeout=900)

@@ -134,7 +134,8 @@ def render(short: dict, ch: dict, folder: Path, state: dict | None = None, fix_r
     by_gemini = set(state["by_gemini"]) if state else set()
     # Painter order (owner, 2026-10-21, to test MOSS's range): MOSS-Image on this PC, then Gemini, then SDXL
     by_moss = gpu.moss_images(gen, work)
-    by_gemini |= gpu.gemini_images([it for it in gen if it["out"] not in by_moss], work) if shutil.which("agy") else set()
+    can_gemini_paint = shutil.which("agy") and not (session.SOLO and session.BRAIN == "claude")
+    by_gemini |= gpu.gemini_images([it for it in gen if it["out"] not in by_moss], work) if can_gemini_paint else set()
     rest = [it for it in gen if it["out"] not in by_gemini | by_moss]
     generated = have | by_gemini | by_moss | {it["out"] for it in (gpu.local_job("images", rest, work, timeout=900) if rest else None) or []
                                               if it.get("ok")}

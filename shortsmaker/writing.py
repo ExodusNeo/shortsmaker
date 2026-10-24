@@ -226,13 +226,15 @@ def narration_lines(v) -> list[str]:
 
 
 def edit_scripts(shorts: list[dict], ch: dict, problems: dict[int, list[str]] | None = None) -> None:
-    """The OTHER AI edits the drafts: strongest hook, read-aloud fixes, cuts, hook/thumbnail/title consistency,
-    the story rules. A second model catches what the writer can't see in its own text. A failed or malformed reply
-    keeps the draft. A script that still breaks a checkable story rule (story_problems) goes back once with
-    `problems` ({index: [problem]}); whatever is left becomes a STILL: line in the editor notes."""
-    editor = "gemini" if session.BRAIN == "claude" else "claude"
+    """The script editor pass: strongest hook, read-aloud fixes, cuts, hook/thumbnail/title consistency,
+    the story rules. In collaborative mode, the OTHER AI edits the drafts; in solo mode, the same AI
+    critiques and refines its own drafts. A failed or malformed reply keeps the draft. A script that still breaks
+    a checkable story rule (story_problems) goes back once with `problems` ({index: [problem]}); whatever is left
+    becomes a STILL: line in the editor notes."""
+    editor = session.BRAIN if session.SOLO else ("gemini" if session.BRAIN == "claude" else "claude")
     lo, hi, s_lo, s_hi, _ = length_plan()
-    print(f"{editor.capitalize()} is editing the script(s)...")
+    mode_str = " (solo)" if session.SOLO else ""
+    print(f"{editor.capitalize()}{mode_str} is editing the script(s)...")
     retry = (f"""SECOND PASS: these scripts still break the story rules. Fix exactly these problems:
 {json.dumps(problems, ensure_ascii=False)}
 """ if problems else "")
@@ -240,8 +242,11 @@ def edit_scripts(shorts: list[dict], ch: dict, problems: dict[int, list[str]] | 
                "hook_text": s.get("hook_text"), "thumbnail_text": s.get("thumbnail_text"),
                "hook_options": s.get("hook_options"), "scenes": s["lines"], "pictures": picture_pool.pictures_of(s) or "none listed"}
               for i, s in enumerate(shorts)]
+    role_desc = ("You drafted the scripts below; refine and edit each one to make it as gripping as possible."
+                 if session.SOLO else
+                 "Another writer drafted the scripts below; make each one as gripping as possible.")
     data = llm.ask_ai(f"""You are the script editor of a faceless YouTube Shorts channel. Niche: {ch['niche']}.
-Tone: {ch.get('tone', '')}. Another writer drafted the scripts below; make each one as gripping as possible.
+Tone: {ch.get('tone', '')}. {role_desc}
 About half our viewers swipe away in the first second, so the hook matters most.
 For each script:
 1. Hook: score every candidate first sentence (hook_options and scene 1's first sentence) 1-10 for

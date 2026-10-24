@@ -105,8 +105,11 @@ def ask_ai(prompt: str, fatal: bool = True, read_dir: Path | None = None, brain:
     Flash (on Argon it would spend the small weekly quota in one Short)."""
     global _argon_exhausted
     first = brain or session.BRAIN
-    second = "gemini" if first == "claude" else "claude"
-    order = [w for w in (first, second) if w not in session.NO_QUOTA] or [first, second]
+    if session.SOLO:
+        order = [first]
+    else:
+        second = "gemini" if first == "claude" else "claude"
+        order = [w for w in (first, second) if w not in session.NO_QUOTA] or [first, second]
     for idx, who in enumerate(order):
         name, exe = who.capitalize(), shutil.which("agy" if who == "gemini" else "claude")
         fallback = ("gemini" if who == "claude" else "claude").capitalize()
@@ -147,6 +150,9 @@ def ask_ai(prompt: str, fatal: bool = True, read_dir: Path | None = None, brain:
                 pass
             if quota_exhausted(out):
                 session.NO_QUOTA.add(who)
+                if session.SOLO:
+                    print(f"  {name} has no credits/quota left for this solo run.")
+                    break
                 other = "gemini" if who == "claude" else "claude"
                 if session.BRAIN == who and other not in session.NO_QUOTA:
                     session.BRAIN = other

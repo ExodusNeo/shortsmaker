@@ -29,8 +29,12 @@ def main() -> None:
     channel_profiles.use_channel(name)
     n = int(sys.argv[1]) if len(sys.argv) > 1 else channel_profiles.ask_count()
     ch, failed = channel_profiles.load_channel(), 0
-    choice = sys.argv[3] if len(sys.argv) > 3 and sys.argv[3] in channel_profiles.BRAINS else (
-        channel_profiles.ask_brain(ch.get("brain", "claude")) if len(sys.argv) < 2 else ch.get("brain", "claude"))
+    raw_choice = sys.argv[3].lower().replace("_", "-") if len(sys.argv) > 3 else None
+    choice = raw_choice if raw_choice in channel_profiles.BRAINS else (
+        channel_profiles.ask_brain(ch.get("brain", "claude-only")) if len(sys.argv) < 2 else ch.get("brain", "claude-only"))
+    choice = choice.lower().replace("_", "-")
+    if choice not in channel_profiles.BRAINS:
+        choice = "claude-only"
     ch["brain"] = choice
     if len(sys.argv) < 2 and session.RULE_SETTINGS.get("visuals") != "blender":  # Blender draws every scene
         session.VEO_HANDOFF = channel_profiles.ask_yes("Make the AI video clips yourself (Colab H3 or Google Flow)? The batch pauses at each Short "
@@ -39,12 +43,20 @@ def main() -> None:
     if len(sys.argv) < 2:  # run.bat: ask; scripted runs never pause
         session.SHORT_FORM = channel_profiles.ask_yes("Make shorter Shorts, about 25-30 seconds instead of 40-50 (a test)?", ch.get("short_form", False))
         ch["short_form"] = session.SHORT_FORM
-    if choice != "claude":
-        print(f"Gemini: {llm.gemini_model()}, high effort; Claude steps in if Gemini fails")
+    session.SOLO = choice in ("claude-only", "gemini-only")
+    if choice == "claude-only":
+        print("Claude only: Claude Opus, high effort (solo: Claude writes, edits, plans and reviews)")
+    elif choice == "gemini-only":
+        print(f"Gemini only: {llm.gemini_model()}, high effort (solo: Gemini writes, edits, plans and reviews)")
+    elif choice == "gemini":
+        print(f"Gemini: {llm.gemini_model()}, high effort; Claude edits each script and steps in if Gemini fails")
+    elif choice == "claude":
+        print("Claude: Claude Opus, high effort; Gemini edits each script and steps in if Claude fails")
     picture_pool.prune_cache()
     short_render.prune_work()
     topics = pools = None
-    for session.BRAIN in (["claude", "gemini"] if choice == "both" else [choice]):
+    brains = ["claude", "gemini"] if choice == "both" else ["claude" if "claude" in choice else "gemini"]
+    for session.BRAIN in brains:
         if topics == []:  # Claude's half made nothing: nothing to compare
             break
         shorts = writing.write_scripts(ch, n, topics, pools)
@@ -66,7 +78,8 @@ def main() -> None:
         for short in shorts:
             slug = re.sub(r"[^a-z0-9]+", "-", short["title"].lower()).strip("-")[:50]
             folder = OUTPUT / name / f"{date.today()}_{slug}{f'-{session.BRAIN}' if choice == 'both' else ''}"
-            print(f"Making: {short['title']} ({session.BRAIN.capitalize()})")
+            mode_str = " (solo)" if session.SOLO else ""
+            print(f"Making: {short['title']} ({session.BRAIN.capitalize()}{mode_str})")
             try:
                 short_render.render(short, ch, folder)
             except blender_render.BlenderFailed as e:  # a re-run writes new scripts: nothing here could be reused
@@ -137,7 +150,9 @@ def fix_short() -> None:
     sc = short["scenes"][i]
     channel_profiles.use_channel(folder.parent.name)
     ch = channel_profiles.load_channel()
-    session.BRAIN = ch.get("brain") if ch.get("brain") in ("claude", "gemini") else "claude"
+    b = str(ch.get("brain", "claude")).lower().replace("_", "-")
+    session.SOLO = b in ("claude-only", "gemini-only")
+    session.BRAIN = "gemini" if "gemini" in b else "claude" 
     print("What should change?\n  1) No AI motion (a smooth camera move instead)\n"
           "  2) Use the picture from another scene\n  3) Remove its text graphic, map or motion graphic\n"
           "  4) Paint a new picture for it (the AI first writes a better picture prompt)\n"
