@@ -695,21 +695,21 @@ at launch; failures crack / bend / shear / sway, optionally then collapse_span; 
 - Tests: `tests/test_blender_plan.py`, `test_blender_render.py` (fake Blender), `test_blender_run.py`,
   `test_blender_scene.py` (real headless Blender, a few minutes).
 
-## Motion graphics hold padding, person card timing & pacing (2026-10-24, owner asked)
-Owner: some template motion graphics (like the box with a person's name) ended too abruptly, and even when a graphic had enough time, the scene transitioned too quickly with no room for viewers to process the information, destroying the pacing across both overlay graphics and full-screen scenes.
-- **Root cause**: Each scene's duration was previously locked to raw voice duration (`bounds.append(bounds[-1] + media_tools.duration(sound))`). When narration finished, the scene cut immediately with zero pause or hold time. In `editplan.py`, person cards were capped at `end - 0.15s` and allowed as short as 0.8s on screen (so a name spoken near the end was squeezed into an abrupt sub-second flash), while Remotion/Python shrank and snapped the card away in 0.2s right before the cut. Full-screen motion graphics (`board`, `document`, `journey`, `custom`, `number`) had their last beat finish right before the cut, leaving viewers with no time to read the completed document or map.
-- **Intelligent hold padding (`shortsmaker/short_render.py`)**:
-  - Automatically calculates hold padding per scene and pads audio silence via ffmpeg `apad=pad_dur=...`:
-    - Full-screen scenes: at least 1.1s of hold time after narration ends before transitioning, letting viewers absorb the completed document/map/board.
-    - Person cards: ensures the scene lasts until at least 2.8s after the name is triggered, giving the card ~2.4s of screen time and a 0.4s clean hold before the cut.
-    - Overlay graphics: ensures time for build + 1.5s readable hold + exit + hold before cut.
-  - Padded audio silence naturally extends `bounds`, leaves background music playing uninterrupted, and displays no captions during the pause so viewers focus on the visual.
-  - Total duration is budgeted against the maximum Short length (`58.5s` for standard Shorts, `33.0s` for short form) so videos never exceed platform limits or trigger review issues.
-- **Person card timing (`shortsmaker/editplan.py`)**:
-  - `off = min(on + 2.5, end - 0.35)` with minimum duration threshold raised to 1.2s; the card now finishes exiting at least 0.35s before `end`.
+## Motion graphics & person card early-triggering and tight narration pacing (2026-10-24, owner asked)
+Owner: in Douglas Bader (and future Shorts), spoken lines staggered with awkward, prolonged pauses (e.g. after "Douglas Bader", "his captors had good reason", "when he was shot down over France"). This was caused by the earlier hold padding adding up to 1.8s of audio silence after lines when graphics waited for late trigger words near the end of the sentence. Owner asked to start motion graphics earlier so they have enough time during speech without stalling the narrator.
+- **Early visual triggers (`shortsmaker/editplan.py`)**:
+  - Instead of delaying entrance until an end-of-sentence trigger word (`spoken_at - 0.1`):
+    - **Animated maps (`"lat" in g`)**: Start flying on scene entry (`start + 0.2s`) so the camera sweeps across the world during the sentence and drops the pin right as the place name is spoken, with `map_pace` scaling to fit the scene.
+    - **Overlay graphics**: Start on trigger word, or shift earlier if the trigger is late in the scene (`latest = end - 0.25 - need_time`), bounded below by `start + 0.2s`. The graphic builds and holds while the idea is spoken.
+    - **Person cards**: Trigger on the spoken name or earlier if the name comes late (`latest_on = end - 0.25 - 1.8`), with `off = min(on + 2.5, end - 0.25)`. The photo card pops in promptly with the shutter sound, holds center focus as the name is heard, and exits before the cut.
+- **Tight narration pacing (`shortsmaker/short_render.py`)**:
+  - Replaced the large 1.8s dead-air silence padding with tight, natural pacing:
+    - Full-screen scenes get at most a subtle micro-settle (`max(0.0, 0.25 - tail)`).
+    - Very short scenes (< 1.6s) get a micro-breath if needed.
+    - Padding is strictly capped at `<= 0.25s` (`min(0.25, needed)`), completely eliminating line staggering, pauses after spoken names, and dead silence.
 - **Smooth broadcast exit animations (`remotion/src/Graphics.tsx`, `shortsmaker/frame_render.py`)**:
   - `PersonCard`: 0.32s cubic-in easing exit, scaling down to 0.75 and smoothly dropping `45px` (`translateY`), eliminating abrupt disappearances.
-  - `useWindow`: exit window extended to 0.28s finishing at `end - 0.32s`, providing a calm half-second buffer before the cut across all template cards (`Stat`, `Timeline`, `Headline`, `Fact`, `Stamp`, etc.).
+  - `useWindow`: exit window extended to 0.28s finishing at `end - 0.32s`, providing a calm buffer before the cut across all template cards (`Stat`, `Timeline`, `Headline`, `Fact`, `Stamp`, etc.).
   - Python renderer `draw_card()` updated with matching 0.32s smooth exit.
 
 ## Solo AI execution mode & flexible AI selection (2026-10-24, owner asked)

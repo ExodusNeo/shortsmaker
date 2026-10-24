@@ -206,6 +206,7 @@ def render(short: dict, ch: dict, folder: Path, state: dict | None = None, fix_r
 
     # Pacing & hold time: full-screen graphics, person cards and overlay graphics need breathing room
     # to be read and understood before the scene transitions to the next beat.
+    # Keep narration pacing tight: graphics start earlier within speech, avoiding dead air pauses.
     raw_durs = [media_tools.duration(s) for s, _, _ in scene_sounds]
     raw_total = sum(raw_durs) + 0.6
     max_total = 33.0 if session.SHORT_FORM else 58.5
@@ -215,27 +216,18 @@ def render(short: dict, ch: dict, folder: Path, state: dict | None = None, fix_r
         sound, words, _ = scene_sounds[i]
         dur = raw_durs[i]
         needed = 0.0
-        # 1. Full-screen motion graphics need a settle pause after speech finishes so viewers can process it
+        # 1. Full-screen motion graphics: subtle micro-settle (at most 0.25s) after speech so cut is clean
         if sc.get("full"):
             last_word = words[-1][1] if words else dur
             tail = max(0.0, dur - last_word)
-            needed = max(needed, max(0.0, 1.1 - tail))
-        # 2. Person card needs enough screen time (~2.4s) plus a clean hold before the cut
+            needed = max(needed, max(0.0, 0.25 - tail))
+        # 2. Very short scenes (< 1.6s) with a person card or graphic get a tiny breath if needed
         if choices[i].get("person") and sc.get("person"):
-            pr = sc["person"]
-            pr_t = plan_rules.spoken_at(words, pr.get("trigger", ""))
-            if pr_t is not None:
-                needed_end = (pr_t - 0.1) + 2.4 + 0.4
-                needed = max(needed, max(0.0, needed_end - dur))
-        # 3. Graphic overlay needs build time + readable hold + exit + hold before cut
+            needed = max(needed, max(0.0, 1.6 - dur))
         if sc.get("graphic"):
-            g = sc["graphic"]
-            g_t = plan_rules.spoken_at(words, g.get("trigger", "")) if "trigger" in g else 0.4
-            g_t = g_t if g_t is not None else 0.4
-            build = 0.6 + 0.035 * len(g.get("text", "")) if g.get("style") == "quote" else editplan.GRAPHIC_BUILD.get(g.get("style"), 0.3)
-            needed_end = (g_t - 0.1) + build + 1.5 + 0.28 + 0.35
-            needed = max(needed, max(0.0, needed_end - dur))
-        pads.append(min(1.8, needed))
+            needed = max(needed, max(0.0, 1.4 - dur))
+        # Keep narrator voice pacing tight: never stall with dead air pauses
+        pads.append(min(0.25, needed))
     if sum(pads) > budget and sum(pads) > 0:
         scale = budget / sum(pads)
         pads = [p * scale for p in pads]

@@ -148,13 +148,22 @@ def scene_cues(sc: dict, words: list[tuple[float, float, str]], start: float, en
     if sc.get("sound") and plan_rules.spoken_at(words, sc["sound"]["word"]) is not None:
         cue["sound_at"] = start + plan_rules.spoken_at(words, sc["sound"]["word"])
     g = sc["graphic"]
-    if g:  # on its trigger word, but early enough to finish animating
-        t = plan_rules.spoken_at(words, g["trigger"]) if "trigger" in g else None
-        build = 0.6 + 0.035 * len(g["text"]) if g["style"] == "quote" else GRAPHIC_BUILD.get(g["style"], 0.3)
-        latest = end - (MAP_EXIT + MAP_FLY + MAP_HOLD if "lat" in g else max(1.2, build + 0.9))
-        cue["graphic"] = max(start + 0.3, min(start + t - 0.1, latest)) if t is not None else start + 0.3
-        if "lat" in g:  # a short scene plays the fly-in faster, so the place name still gets its hold (owner's report)
+    if g:
+        build = 0.6 + 0.035 * len(g["text"]) if g.get("style") == "quote" else GRAPHIC_BUILD.get(g.get("style"), 0.3)
+        if "lat" in g:
+            # Map fly-ins illustrate the whole setting; start early so the camera travels during speech
+            # and drops the pin as the place is spoken about
+            cue["graphic"] = max(start + 0.2, min(start + 0.25, end - MAP_EXIT - 0.6))
             cue["map_pace"] = round(min(1.0, max(0.4, (end - MAP_EXIT - MAP_HOLD - cue["graphic"]) / MAP_FLY)), 2)
+        else:
+            t = plan_rules.spoken_at(words, g["trigger"]) if "trigger" in g else None
+            need_time = max(1.1, build + 0.7)
+            latest = end - 0.25 - need_time
+            if t is not None:
+                # Start on trigger word, or shift earlier if late in the scene so the graphic has readable hold time
+                cue["graphic"] = max(start + 0.2, min(start + t - 0.1, latest))
+            else:
+                cue["graphic"] = max(start + 0.2, min(start + 0.3, latest))
     if sc["emphasis"]:
         t = plan_rules.spoken_at(words, sc["emphasis"])
         if t is not None:
@@ -165,12 +174,18 @@ def scene_cues(sc: dict, words: list[tuple[float, float, str]], start: float, en
         if t is None or not found:
             cue["card_note"] = f"no photo found for {pr['name']}" if t is not None else "name not heard in voice"
             return cue
-        on = start + t - 0.1
+        # Start when the person's name is spoken, or earlier in the sentence if the name comes late,
+        # so the card has readable hold time without requiring awkward silence padding at the end.
+        need_card = 1.8
+        latest_on = end - 0.25 - need_card
+        on = max(start + 0.2, min(start + t - 0.1, latest_on))
         if i == 0:
             on = max(on, 1.9)  # don't cover the hook title
-        off = min(on + 2.5, end - 0.35)
+        off = min(on + 2.5, end - 0.25)
         if off - on < 1.4:
-            on = max(start + 0.2, off - 1.4)
+            on = max(start + 0.15, off - 1.4)
+            if i == 0:
+                on = max(on, 1.9)
         if off - on >= 1.2:
             cue.update(card=frame_render.person_card(found[0], pr["name"]), photo=found[0], on=on, off=off,
                        card_source=f"Wikimedia Commons, {found[2] or 'public domain'}: {found[1]}")
