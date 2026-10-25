@@ -14,7 +14,7 @@ from shortsmaker import (
     footage, gpu, image_sources, llm, media_tools, picker, picture_pool, plan_rules, remotion_render, session, short_render,
     writing,
 )
-from shortsmaker.config import FONT
+from shortsmaker.config import FONT, GRAPHIC_STYLES
 
 
 def quality_check(video: Path, bounds: list[float], sources: list[str]) -> list[str]:
@@ -49,11 +49,24 @@ DRAWN = ("Every scene is a deliberate ink drawing made in Blender, not a photo: 
          "the red part or a missing real photo.\n")
 
 
+def overlay_notes(sc: dict, cue: dict, end: float) -> str:
+    """What covers or dims scene's picture on purpose, with its times (as edit_plan.txt shows them)."""
+    out = []
+    if sc.get("graphic") and cue.get("graphic") is not None:
+        out.append(f"{GRAPHIC_STYLES.get(sc['graphic']['style'], 'graphic')} \"{sc['graphic'].get('text', '')}\" "
+                   f"{media_tools.clock(cue['graphic'])}-{media_tools.clock(end - 0.25)}")
+    if cue.get("card"):
+        out.append(f"person photo card {media_tools.clock(cue['on'])}-{media_tools.clock(cue['off'])} (background dims)")
+    return f" | on top: {'; '.join(out)}" if out else ""
+
+
 def visual_review(video: Path, short: dict, bounds: list[float], sources: list[str], work: Path,
-                  drawn: bool = False) -> tuple[list[str], dict[int, tuple[str, str]]]:
+                  drawn: bool = False, cues: list[dict] | None = None) -> tuple[list[str], dict[int, tuple[str, str]]]:
     """The AI watches the finished Short as sheets of one frame per second and reports what a viewer would
     notice (the 2026-10-15 Cardiff review found smoke blobs, an invented face and another trial's caption only
-    by eye). One AI call; its findings join the CHECK lines. Failure means no findings."""
+    by eye). One AI call; its findings join the CHECK lines. Failure means no findings. `cues` (render's timed
+    extras) tell it when a graphic dims the picture on purpose: Oxford 2026-10-26 repainted two good pictures
+    3 times as "nearly blank" because a question beat and a kinetic title had dimmed them."""
     folder = work / "review"
     shutil.rmtree(folder, ignore_errors=True)
     folder.mkdir()
@@ -63,10 +76,13 @@ def visual_review(video: Path, short: dict, bounds: list[float], sources: list[s
         return [], {}
     sheets = sorted(folder.glob("sheet*.jpg"), key=lambda p: int(p.stem[5:]))
     plan = "\n".join(f"scene {i + 1} ({media_tools.clock(bounds[i])}-{media_tools.clock(bounds[i + 1])}): \"{sc['narration']}\" | picture: {src[:160]}"
+                     + (overlay_notes(sc, cues[i], bounds[i + 1]) if cues else "")
                      for i, (sc, src) in enumerate(zip(short["scenes"], sources)))
     data = llm.ask_ai(f"""You are the final reviewer of a YouTube Short: "{short['title']}". Open and look at each sheet:
 {chr(10).join(f"{p} (seconds {30 * k}-{30 * k + 29}, one frame per second, left to right, top to bottom)" for k, p in enumerate(sheets))}
 The plan: {plan}
+"On top" items dim, darken or cover the picture on purpose during their times: a dimmed or covered picture there is
+not a blank, washed-out or missing picture. Judge each picture in the seconds when nothing covers it.
 {DRAWN if drawn else ''}Report only problems a viewer would notice: AI artifacts (smoke or fog blobs, melting or warped people,
 faces or objects), text or graphics covering a face, a picture that doesn't match its line or shows the
 wrong era/place/person, unreadable, washed-out or nearly blank pictures, printed captions, logos or
@@ -123,14 +139,27 @@ def first_second_check(video: Path, short: dict, choices: list[dict], board: Pat
     scenes = short["scenes"]
     real = [j for j in range(1, len(scenes)) if choices[j].get("bg") and not scenes[j].get("full")]
     first = re.split(r"(?<=[.!?])\s", scenes[0]["narration"].strip())[0]
+    cands = picture_pool.load_pool(Path(short["pool_dir"]), thumbs=False) if short.get("pool_dir") else None
+    what = {cands[e["n"] - 1]["title"]: e.get("what") for e in short.get("catalog") or []
+            if cands and isinstance(e, dict) and isinstance(e.get("n"), int) and 1 <= e["n"] <= len(cands)}
+    rows = [f"scene {j + 1} says \"{scenes[j]['narration']}\" | its picture: {choices[j]['bg'][1]}"
+            + (f" ({what[choices[j]['bg'][1]]})" if what.get(choices[j]["bg"][1]) else "") for j in [0] + real
+            if choices[j].get("bg")]
     data = llm.ask_ai(f"""You judge the first two seconds of a YouTube Short the way a stranger scrolling the Shorts feed would.
 Open {folder / 'first.jpg'}: frames at 0, 0.5, 1 and 1.5 seconds, left to right (the big title on them is the hook title).
-The narrator's first sentence: "{first}". The Short: "{short['title']}"; how it ends: "{scenes[-1]['narration']}".
+The narrator's first sentence: "{first}". The Short: "{short['title']}"; its main character: {short.get('character') or 'not named'};
+how it ends: "{scenes[-1]['narration']}".
 Score 1-10: would they stop scrolling AND need to stay for the answer? Score lower when the picture already shows the
 answer or the whole story (with the first sentence, nothing is left to wonder about), when there is no single clear
 subject, when it is dark, busy or hard to read at phone size, or when nothing on screen is strange or surprising.
 Below {HOOK_MIN_SCORE}, check whether another scene's picture would open better: {session.RULES["First-second check"]} {folder / 'storyboard.jpg'} shows one frame per scene, in order; you may
 only pick these scenes (they have real photos or film): {[j + 1 for j in real]}. Otherwise use null.
+The two scenes trade pictures, so pick one only when BOTH fit afterwards: the new opening picture shows who or what the
+first sentence is about, and scene 1's old picture fits the other scene's line. Never put a different named person under
+a line about someone else (the editor's portrait under "He mailed ten thousand letters" when "he" is the man who sent
+them). A picture of a place or object with no recognizable person fits whenever the place or object is right.
+The scenes and their pictures:
+{chr(10).join(rows)}
 Reply with ONLY JSON: {{"score": 6, "why": "one short reason", "open_with_scene": 4}}""", fatal=False, read_dir=folder)
     score = data.get("score") if isinstance(data, dict) else None
     if not plan_rules.is_num(score) or not 1 <= score < HOOK_MIN_SCORE:  # also drops 0, negatives and NaN
@@ -142,11 +171,16 @@ Reply with ONLY JSON: {{"score": 6, "why": "one short reason", "open_with_scene"
 
 
 def swap_pictures(state: dict, i: int, k: int) -> None:
-    """Scenes i and k trade their real photos/films (paintings and motion graphics are never swapped)."""
+    """Scenes i and k trade their real photos/films (paintings and motion graphics are never swapped). A clip the
+    owner made goes with its picture (Oxford 2026-10-26 lost a good one when only the picture moved); LTX motion
+    is dropped (it was written for the old picture)."""
     ch, scenes = state["choices"], state["short"]["scenes"]
     ch[i], ch[k] = {**ch[k], "person": ch[i]["person"]}, {**ch[i], "person": ch[k]["person"]}
-    for j in (i, k):
-        scenes[j]["animate"] = False  # its AI motion was written for the old picture
+    moving = [{f: scenes[j].get(f) for f in ("owner_clip", "motion", "motion_people")}
+              if scenes[j].get("animate") and scenes[j].get("owner_clip") else None for j in (k, i)]
+    for j, clip in zip((i, k), moving):
+        scenes[j].update(clip or {"owner_clip": None})
+        scenes[j]["animate"] = bool(clip)
         if (scenes[j].get("graphic") or {}).get("style") == "mark":  # it circled a detail of the old picture
             scenes[j]["graphic"] = None
 

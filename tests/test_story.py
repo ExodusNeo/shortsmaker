@@ -100,6 +100,49 @@ def test_writer_prompt_has_the_story_rules_and_cut_rule():
     assert "never \\\"and then\\\"" in text and "payoff LAST" in text and "in the middle of a" in text
 
 
+def twist_short(topic="Murray found his best volunteer locked in an asylum by surprise."):
+    return {"topic": topic, "subject": "William Chester Minor", "character": "William Chester Minor",
+            "_texts": {"William Chester Minor": "Minor shot George Merrett in 1872. Murray knew of Minor's history."}}
+
+
+def test_twist_check_rewrites_a_legend_before_writing():
+    asked, old = [], llm.ask_ai
+    llm.ask_ai = lambda prompt, fatal=True, read_dir=None, brain=None, bulk=False: asked.append(prompt) or {
+        "stories": [{"index": 0, "topic": "Minor killed a man, then helped write the OED from Broadmoor.",
+                     "why": "the surprise visit is a 1915 legend"}]}
+    try:
+        shorts = [twist_short()]
+        writing.check_twists(shorts)
+    finally:
+        llm.ask_ai = old
+    assert shorts[0]["topic"] == "Minor killed a man, then helped write the OED from Broadmoor."
+    assert "1915 legend" in shorts[0]["twist_check"] and "by surprise" in shorts[0]["twist_check"]
+    assert "George Merrett" in asked[0] and "legend" in asked[0]
+
+
+def test_twist_check_keeps_topics_on_null_or_bad_replies():
+    old = llm.ask_ai
+    for reply in (None, {"stories": [{"index": 0, "topic": None}]}, {"stories": [{"index": 5, "topic": "x"}]},
+                  {"stories": [{"index": True, "topic": "x"}]}, {"stories": "x"}, ["x"]):
+        llm.ask_ai = lambda prompt, fatal=True, read_dir=None, brain=None, bulk=False, r=reply: r
+        try:
+            shorts = [twist_short()]
+            writing.check_twists(shorts)
+        finally:
+            llm.ask_ai = old
+        assert shorts[0]["topic"] == twist_short()["topic"] and "twist_check" not in shorts[0], reply
+
+
+def test_twist_check_needs_wikipedia_text():
+    old, asked = llm.ask_ai, []
+    llm.ask_ai = lambda *a, **k: asked.append(a) or {}
+    try:
+        writing.check_twists([dict(twist_short(), _texts={"X": ""})])
+    finally:
+        llm.ask_ai = old
+    assert asked == []  # nothing to check against: no AI call
+
+
 if __name__ == "__main__":
     names = [n for n in sorted(globals()) if n.startswith("test_") and (len(sys.argv) < 2 or n in sys.argv[1:])]
     failed = 0

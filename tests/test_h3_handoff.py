@@ -102,15 +102,17 @@ def test_tells_owner_after_five_failed_rounds():
     with_fakes(run)
 
 
-def handoff(tmp: Path, during_pause=lambda folder: None):
-    """veo_handoff on 3 marked scenes (scene 2 is a CLOSE-UP) with AI, cropping, Explorer and ffmpeg faked."""
+def handoff(tmp: Path, during_pause=lambda folder: None, flagged=None):
+    """veo_handoff on 3 marked scenes (scene 2 is a CLOSE-UP) with AI, cropping, Explorer and ffmpeg faked;
+    `flagged`: what the start-picture check reports (scene index -> why)."""
     work = tmp / "short" / "work"
     work.mkdir(parents=True)
     short = short_with(3)
     short["scenes"][1]["shot"] = "CLOSE-UP: a hand"
     old = (gpu.h3_prompts, gpu.cover_crop, gpu.os.startfile, builtins.input, gpu.media_tools.ffmpeg,
-           gpu.media_tools.video_encoder)
+           gpu.media_tools.video_encoder, gpu.start_picture_problems)
     asked = []
+    gpu.start_picture_problems = lambda s, folder, scenes: dict(flagged or {})
     gpu.h3_prompts = lambda s, folder, scenes: asked.append(scenes) or {i: f"PROMPT {i + 1}" for i in scenes}
     gpu.cover_crop = lambda src, out: out.write_bytes(b"jpg")
     gpu.os.startfile = lambda p: None
@@ -121,7 +123,8 @@ def handoff(tmp: Path, during_pause=lambda folder: None):
         got = gpu.veo_handoff(short, work, [0.0, 3.0, 5.0, 9.5], [0, 1, 2])
     finally:
         (gpu.h3_prompts, gpu.cover_crop, gpu.os.startfile, builtins.input, gpu.media_tools.ffmpeg,
-         gpu.media_tools.video_encoder) = old
+         gpu.media_tools.video_encoder, gpu.start_picture_problems) = old
+    handoff.short = short  # the tests below read what the hand-off recorded on the scenes
     return got, work.parent / "veo", asked
 
 
@@ -229,6 +232,58 @@ def test_old_zips_cleaned_up_on_handoff_start():
         handoff(Path(d))
         assert not (veo / "clips.zip").exists()
         assert not (veo / "clips (1).zip").exists()
+
+
+def test_flagged_start_picture_is_not_sent():
+    import json
+    with tempfile.TemporaryDirectory() as d:
+        _, folder, asked = handoff(Path(d), flagged={0: "shows a street sign reading SAN PEDRO ST"})
+        assert asked == [[2]]  # scene 1's picture is bad: no prompt, no job, no clip asked for
+        assert [j["scene"] for j in json.loads((folder / "jobs.json").read_text(encoding="utf-8"))] == [3]
+        assert handoff.short["scenes"][0]["animate"] is False
+
+
+def test_all_start_pictures_flagged_skips_pause():
+    with tempfile.TemporaryDirectory() as d:
+        paused = []
+        got, folder, asked = handoff(Path(d), during_pause=paused.append, flagged={0: "garbled text", 2: "wrong city"})
+        assert got == {} and asked == [] and paused == []
+
+
+def test_handoff_records_which_file_made_the_clip():
+    with tempfile.TemporaryDirectory() as d:
+        got, _, _ = handoff(Path(d), during_pause=lambda folder: (folder / "scene3.mp4.mp4").write_bytes(b"mp4"))
+        assert set(got) == {2} and handoff.short["scenes"][2]["owner_clip"] == "scene3.mp4.mp4"
+        assert "owner_clip" not in handoff.short["scenes"][0]
+
+
+def test_owner_clip_is_cut_again_for_the_scene_it_now_sits_in():
+    """After an opener swap moved scene 4's clip to scene 1, the re-render cuts it from the owner's file to scene 1's
+    length; a Short made before owner_clip existed still reuses its old cut clip; nothing is handed off again."""
+    with tempfile.TemporaryDirectory() as d:
+        work = Path(d) / "short" / "work"
+        (work.parent / "veo").mkdir(parents=True)
+        work.mkdir()
+        (work.parent / "veo" / "scene4.mp4").write_bytes(b"mp4")
+        for i in range(3):
+            (work / f"{i}_raw.jpg").write_bytes(b"jpg")
+        (work / "clip1_veo.mp4").write_bytes(b"old")
+        short = short_with(3)
+        short["scenes"][0].update(animate=True, owner_clip="scene4.mp4")
+        short["scenes"][1].update(animate=True)  # older Short: only the cut clip on disk
+        short["scenes"][2].update(animate=False)
+        calls, old = [], (gpu.media_tools.ffmpeg, gpu.media_tools.video_encoder, gpu.session.VEO_HANDOFF)
+        gpu.media_tools.ffmpeg = lambda *a, cwd: calls.append(a) or (Path(cwd) / a[-1]).write_bytes(b"mp4")
+        gpu.media_tools.video_encoder = lambda: []
+        gpu.session.VEO_HANDOFF = True
+        try:
+            clips = gpu.local_clips(short, work, ["photo"] * 3, [0.0, 2.5, 5.0, 8.0], {})
+        finally:
+            gpu.media_tools.ffmpeg, gpu.media_tools.video_encoder, gpu.session.VEO_HANDOFF = old
+        assert clips == {0: work / "clip0_veo.mp4", 1: work / "clip1_veo.mp4"}, clips
+        assert len(calls) == 1 and calls[0][1] == str(work.parent / "veo" / "scene4.mp4")
+        assert calls[0][calls[0].index("-t") + 1] == f"{2.5 + gpu.XFADE:.2f}"
+        assert (work / "clip1_veo.mp4").read_bytes() == b"old"
 
 
 if __name__ == "__main__":

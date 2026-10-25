@@ -477,6 +477,13 @@ def veo_handoff(short: dict, work: Path, bounds: list[float], marked: list[int])
                 pass
     for i in scenes:
         cover_crop(work / f"{i}_raw.jpg", folder / f"start{i + 1}.jpg")
+    flagged = start_picture_problems(short, folder, scenes)
+    for i, why in flagged.items():
+        print(f"    scene {i + 1}: not sent for a clip, its start picture {why} (the review replaces the picture)")
+        short["scenes"][i]["animate"] = False
+    scenes = [i for i in scenes if i not in flagged]
+    if not scenes:
+        return {}
     prompts = h3_prompts(short, folder, scenes)
     jobs = [{"scene": i + 1, "image": f"start{i + 1}.jpg", "prompt": prompts[i],
              "seconds": round(bounds[i + 1] - bounds[i] + XFADE, 2), "out": f"scene{i + 1}.mp4"} for i in scenes]
@@ -504,19 +511,52 @@ def veo_handoff(short: dict, work: Path, bounds: list[float], marked: list[int])
           "  >> Save them in that folder, then press Enter here (skipped ones are made on this PC). ")
     unpack_clips(folder)
     got = {}
-    for i in marked:
+    for i in [i for i in marked if i not in flagged]:
         src = next((p for p in sorted(folder.glob(f"scene{i + 1}.*")) if p.suffix.lower() in (".mp4", ".mov", ".webm")), None)
-        if not src:
-            continue
-        out = work / f"clip{i}_veo.mp4"  # "clip*" name: counts as AI for the synthetic-content label
-        try:  # fill the vertical frame, drop Veo's own sound, keep only what the scene needs
-            media_tools.ffmpeg("-i", str(src), "-t", f"{bounds[i + 1] - bounds[i] + XFADE:.2f}", "-vf", footage.FILL_VF, "-an",
-                   "-r", str(FPS), *media_tools.video_encoder(), out.name, cwd=work)
+        if src and (out := cut_owner_clip(src, i, bounds, work)):
             got[i] = out
-        except subprocess.CalledProcessError:
-            print(f"    scene {i + 1}: couldn't read {src.name}, this PC makes that clip instead")
+            short["scenes"][i]["owner_clip"] = src.name  # the clip belongs to this picture: it moves when the picture does
     print(f"  using {len(got)} AI clip(s) you made (Colab H3 / Flow)")
     return got
+
+
+def cut_owner_clip(src: Path, i: int, bounds: list[float], work: Path) -> Path | None:
+    """The owner's clip `src` cut to scene i's length: fills the vertical frame, drops Veo's own sound."""
+    out = work / f"clip{i}_veo.mp4"  # "clip*" name: counts as AI for the synthetic-content label
+    try:
+        media_tools.ffmpeg("-i", str(src), "-t", f"{bounds[i + 1] - bounds[i] + XFADE:.2f}", "-vf", footage.FILL_VF,
+                           "-an", "-r", str(FPS), *media_tools.video_encoder(), out.name, cwd=work)
+        return out
+    except subprocess.CalledProcessError:
+        print(f"    scene {i + 1}: couldn't read {src.name}, this PC makes that clip instead")
+        return None
+
+
+def start_picture_problems(short: dict, folder: Path, scenes: list[int]) -> dict[int, str]:
+    """Start pictures (folder/start<N>.jpg) the owner shouldn't spend a clip on: a clip keeps every flaw of its first
+    frame (Oxford 2026-10-26: a Los Angeles street label and a page of made-up newspaper text reached the owner,
+    both clips were made and then thrown out with their pictures). One AI call; failure flags nothing.
+    Returns scene index -> what is wrong."""
+    rows = [f"SCENE {i + 1}: open start{i + 1}.jpg | narration: \"{short['scenes'][i]['narration']}\"" for i in scenes]
+    data = llm.ask_ai(f"""These pictures are about to be turned into AI video clips for a YouTube Short: "{short['title']}"
+(story: {short.get('topic') or short['title']}). Open each one and flag only a picture that is wrong for its scene,
+because a clip keeps everything that is in its first frame:
+- another place, country or era than the story and its narration (e.g. an American street in a story set in England);
+- readable labels, street names, captions, watermarks or logos printed on it, or garbled, made-up lettering (a page
+  of fake newspaper text, nonsense signs);
+- AI artifacts: melted or extra faces, hands or limbs, warped buildings;
+- a different person than the one its narration is about.
+Don't flag a picture for being black-and-white, old, grainy or simple.
+{chr(10).join(rows)}
+Reply with ONLY JSON: {{"problems": [{{"scene": 3, "why": "shows a street sign reading SAN PEDRO ST"}}]}}""",
+                      fatal=False, read_dir=folder)
+    found = data.get("problems") if isinstance(data, dict) else None
+    out = {}
+    for p in found if isinstance(found, list) else []:  # LLM output is untrusted
+        n = p.get("scene") if isinstance(p, dict) else None
+        if isinstance(n, int) and not isinstance(n, bool) and n - 1 in scenes and str(p.get("why") or "").strip():
+            out[n - 1] = str(p["why"]).strip()[:160]
+    return out
 
 
 def local_clips(short: dict, work: Path, sources: list[str], bounds: list[float],
@@ -543,13 +583,17 @@ def local_clips(short: dict, work: Path, sources: list[str], bounds: list[float]
         except subprocess.CalledProcessError:
             print(f"    scene {i + 1}: couldn't cut the film clip, using its still instead")
     marked = [i for i in usable if short["scenes"][i]["animate"] and i not in clips]
-    for i in marked:  # Veo clips the owner made in Flow earlier (a fix.bat re-render keeps them)
-        if (work / f"clip{i}_veo.mp4").exists():
+    for i in marked:  # clips the owner made earlier (fix rounds and fix.bat re-renders keep them)
+        own = short["scenes"][i].get("owner_clip")
+        src = work.parent / "veo" / own if own else None
+        if src and src.exists():  # re-cut every render: an opener swap may have moved it to a scene of another length
+            clips.update({i: out} if (out := cut_owner_clip(src, i, bounds, work)) else {})
+        elif not own and (work / f"clip{i}_veo.mp4").exists():  # Shorts made before owner_clip was recorded
             clips[i] = work / f"clip{i}_veo.mp4"
     marked = [i for i in marked if i not in clips]
     if session.VEO_HANDOFF and marked:
         clips.update(veo_handoff(short, work, bounds, marked))
-        marked = [i for i in marked if i not in clips]
+        marked = [i for i in marked if i not in clips and short["scenes"][i]["animate"]]  # rejected start pictures stay stills
     if marked:
         print(f"  animating {len(marked)} scenes with AI video on this PC (a few minutes)...")
         for i in marked:

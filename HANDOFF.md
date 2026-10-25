@@ -761,6 +761,40 @@ Owner: selecting the AI should offer an option where only one AI does the entire
   5. **Cap repeated solo portraits as scene backgrounds (`shortsmaker/picker.py`, `channels/weird-economics.rules.md`)**: Updated `choose_images()` so a solo portrait of the main subject (`is_person_portrait`) is used at most once as a full-screen scene background (`bg`) across the Short (and skipped on later scenes with overlay cards so they use their concrete historical scene illustration instead of putting a `StatCard` or `QuestionBeat` over a repeated headshot).
   6. **Shorts-Feed & Search SEO upgrades (`shortsmaker/seo.py`)**: Expanded autocomplete seed queries to include mechanism/category terms (`search_terms` + channel `research_seeds`), updated `seo_pass()` to lead titles with the scroll-stopping hook/anomaly + broadly famous anchor entity (`NBA`, `Wall Street`, `$800M`) instead of obscure Wikipedia names or pipe suffixes (`| Match King`), placed exact historical proper nouns in Sentence 1 of the description and tags for exact-name search indexing, and replaced dead proper-noun hashtags (`#IvarKreuger`) with active audience-cohort hashtags (`#Economics`, `#WallStreet`, `#SportsBusiness`, `#BusinessHistory`).
 
+## Oxford review fixes (2026-10-26, owner asked after the William Minor Short)
+The Oxford/William Minor Short showed six faults; each was checked against the run's files and real searches first
+(Gemini's list was right on the opener swap, the false "blank" findings, the newspaper paintings and the pool junk; its
+"always keep Veo clips" and "lower FULL_MIN_WORDS / no mid-sentence cuts" were wrong: 2 of 3 clips came from bad start
+pictures, 10 of 14 scenes had 8+ words, and mid-sentence cuts are on purpose, see SCENE_CUTS).
+- **Owner clips (Flow/Colab)**: `gpu.start_picture_problems()` looks at every start picture before the hand-off
+  (wrong place/era, printed or garbled text, AI artifacts, wrong person); flagged scenes get no job and no LTX clip
+  (the review replaces their picture). In a live test it flagged the LA station and the fake newspaper page and passed
+  the good scriptorium picture. `veo_handoff()` records `scene["owner_clip"]` (the file in `<Short>/veo`);
+  `local_clips()` re-cuts it every render (`cut_owner_clip()`), so `review.swap_pictures()` moves a clip WITH its
+  picture (owner_clip, motion, motion_people). Repaints and pool swaps still drop the clip (animate False). Older Shorts
+  without owner_clip keep reusing `clip{i}_veo.mp4`.
+- **Opener swap**: `first_second_check()` lists every candidate scene's line and picture (title + catalog description)
+  and the main character, and only swaps when BOTH scenes fit afterwards (never a different named person under a line
+  about someone else). Live replay of the pre-swap Oxford state: 6/10, no swap (it had swapped Murray in).
+- **Review false "blank" findings**: `visual_review(..., cues=)` adds each scene's graphic and person-card window
+  ("on top: question beat ... 0:04.1-0:05.2") and says dimming there is on purpose (`overlay_notes()`).
+- **Pool relevance** (`image_sources.on_topic`): one shared word that is only part of a story person's name or a
+  `WEAK_WORDS` word ("portrait", "dr") no longer counts; two do. The searches take `names` from `gather_pool`'s people.
+  Pixabay results are now filtered at all, `strict` (two words, or the query's only word): it answers anything with
+  modern stock; only 2 of 18 Shorts ever used a Pixabay clip (Big Ben, Lubang jungle; both still found). Internet
+  Archive films match on their title only (spam stuffs the subject list). Oxford's searches: 18 junk films -> 1 (the
+  film's trailer).
+- **Paintings**: the rules files' example media no longer say "illustrated newspaper/newsprint", "magazine" or
+  "poster" (scene 8 and the thumbnail were whole fake newspaper pages); a line forbids naming the printed carrier.
+- **Twist check** (`writing.check_twists()`, after the picture check, before writing): each topic's twist against its
+  Wikipedia text; a legend becomes "the famous story says X; in fact Y", and a far stronger true fact the topic left
+  out goes in (live: Oxford's topic gained the 1872 killing and the widow who brought Minor books; the visit legend was
+  debunked). Shown in edit_plan.txt as "Twist check". The fact check now also fixes every later line that tells a
+  "legend says" legend as fact (story_holds false when the ending is the legend). Research: the 402K-view Short on this
+  story opened with the murder and ended by debunking the visit legend; other channels' titles all lead with "murderer".
+- Not bugs (checked): Minor's missing name card = the one-portrait-per-Short rule (2026-10-25); his only photo was
+  scene 1's background. Left-over CHECK lines are printed and get a Shotcut timeline (not silent).
+
 ## Ideas offered, not built
 - Voice cloning (owner's own voice), SFX on the music's beat, YouTube Audio Library tracks for the somber/epic moods.
 - Logbook extras from the Reach/Engagement tabs (drop-off times, search terms, shown in feed, likes/shares): offered
@@ -770,11 +804,11 @@ Owner: selecting the AI should offer an option where only one AI does the entire
 ## How to verify changes
 - `.venv\Scripts\python.exe -m compileall -q make_shorts.py shortsmaker`; Remotion: `cd remotion && npx tsc -p .`
 - Tests (no AI usage, no rendering): `.venv\Scripts\python.exe tests\test_package.py` (16: ROOT, ffmpeg on PATH, shared session, fakes reach callers, Opus/high pin, Gemini bulk vs review models, Argon->Flash on quota, agy flags and boundaries, Gemini timeout switch to Flash, person card hold and exit gap, scene hold padding, solo brain selection options, solo edit scripts, solo ask_ai no fallback, encoder cache, entry point),
-  `.venv\Scripts\python.exe tests\test_h3_handoff.py` (15: H3/Flow prompt checks, retries, veo.zip, clips.zip, renamed zips, flow overwrite protection, closeup bypass), `.venv\Scripts\python.exe tests\test_h3_run.py` (7: frame grid, H3 graph, start-frame crop, notebook, 40GB A100 warning, upload cancel),
-  `.venv\Scripts\python.exe tests\test_first_second.py` (6: first-second check, opener swap, logbook small-sample note),
-  `.venv\Scripts\python.exe tests\test_story.py` (6: word counts match the aligner, sentence takes, cutting a take, story_problems, editor second pass, rules in the prompt),
+  `.venv\Scripts\python.exe tests\test_h3_handoff.py` (19: H3/Flow prompt checks, retries, veo.zip, clips.zip, renamed zips, flow overwrite protection, closeup bypass, start-picture check, owner clip recorded and re-cut), `.venv\Scripts\python.exe tests\test_h3_run.py` (7: frame grid, H3 graph, start-frame crop, notebook, 40GB A100 warning, upload cancel),
+  `.venv\Scripts\python.exe tests\test_first_second.py` (10: first-second check, opener swap incl. owner clips and the scene/picture list, review overlay windows, logbook small-sample note),
+  `.venv\Scripts\python.exe tests\test_story.py` (9: word counts match the aligner, sentence takes, cutting a take, story_problems, editor second pass, rules in the prompt, twist check),
   `.venv\Scripts\python.exe tests\test_edit_project.py` (2: Shotcut timeline layout (pictures, graphics, captions; 3 sound tracks), output filters, markers; melt renders graphics + captions over the pictures at -14 LUFS),
-  `.venv\Scripts\python.exe tests\test_full_scenes.py` (43 on 2026-10-21), `.venv\Scripts\python.exe tests\test_pictures_first.py` (36: pool, picture list, topic check, `pic`, picker, review fixes) and
+  `.venv\Scripts\python.exe tests\test_full_scenes.py` (43 on 2026-10-21), `.venv\Scripts\python.exe tests\test_pictures_first.py` (39: pool, picture list, topic check, `pic`, picker, review fixes, relevance filter, Pixabay filter) and
   `.venv\Scripts\python.exe tests\test_style.py` (29: style library, guardrails, inventions, candidates),
   `.venv\Scripts\python.exe tests\run_ts_tests.py` (6 guarded + 13 style: arrow routing, layouts, card fitting, travel speed, registry, transitions) and
   `local_ai\qwen_venv\Scripts\python.exe tests\test_qwen_voice.py` (4: number words, caption words, aligner alphabet, word counts shared with tests/test_story.py).

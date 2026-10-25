@@ -89,6 +89,62 @@ def test_logbook_marks_tiny_samples():
     assert "Unposted" not in out
 
 
+def test_swap_moves_the_owners_clip_with_its_picture():
+    st = state()
+    st["short"]["scenes"][3].update(owner_clip="scene4.mp4", motion="he turns the pages", motion_people=True)
+    review.swap_pictures(st, 0, 3)
+    first, fourth = st["short"]["scenes"][0], st["short"]["scenes"][3]
+    assert first["animate"] is True and first["owner_clip"] == "scene4.mp4" and first["motion"] == "he turns the pages"
+    assert first["motion_people"] is True
+    assert fourth["animate"] is False and fourth["owner_clip"] is None
+
+
+def test_swap_ignores_a_clip_already_dropped():
+    st = state()
+    st["short"]["scenes"][3].update(owner_clip="scene4.mp4", animate=False)  # its picture was repainted earlier
+    review.swap_pictures(st, 0, 3)
+    assert st["short"]["scenes"][0]["animate"] is False and st["short"]["scenes"][0]["owner_clip"] is None
+
+
+def test_opener_prompt_shows_each_scenes_line_and_picture():
+    asked, old_ff, old_ask = [], media_tools.ffmpeg, llm.ask_ai
+    media_tools.ffmpeg = lambda *a, cwd: (Path(cwd) / a[-1]).write_bytes(b"jpg")
+    llm.ask_ai = lambda prompt, fatal=True, read_dir=None, brain=None, bulk=False: asked.append(prompt) or {"score": 8}
+    try:
+        with tempfile.TemporaryDirectory() as d:
+            board = Path(d) / "storyboard.jpg"
+            board.write_bytes(b"jpg")
+            st = state()
+            st["short"]["character"] = "William Chester Minor"
+            review.first_second_check(Path(d) / "short.mp4", st["short"], st["choices"], board, Path(d))
+    finally:
+        media_tools.ffmpeg, llm.ask_ai = old_ff, old_ask
+    assert 'scene 1 says "line 0" | its picture: File:Photo 0.jpg' in asked[0]
+    assert 'scene 4 says "line 3" | its picture: File:Photo 3.jpg' in asked[0]
+    assert "scene 3 says" not in asked[0]  # a painting can't be swapped in
+    assert "main character: William Chester Minor" in asked[0] and "BOTH fit" in asked[0]
+
+
+def test_review_knows_what_dims_a_picture_on_purpose():
+    asked, old_ff, old_ask = [], media_tools.ffmpeg, llm.ask_ai
+    media_tools.ffmpeg = lambda *a, cwd: (Path(cwd) / "sheet1.jpg").write_bytes(b"jpg")
+    llm.ask_ai = lambda prompt, fatal=True, read_dir=None, brain=None, bulk=False: asked.append(prompt) or {"problems": []}
+    short = {"title": "Oxford", "scenes": [
+        {"narration": "But the chief editor had never seen his face.", "graphic": {"style": "question", "text": "WHO WAS HE?"}},
+        {"narration": "the editor, James Murray,", "graphic": None}, {"narration": "needed volunteers", "graphic": None}]}
+    cues = [{"graphic": 4.1}, {"card": True, "on": 5.9, "off": 7.7}, {}]
+    try:
+        with tempfile.TemporaryDirectory() as d:
+            review.visual_review(Path(d) / "v.mp4", short, [3.2, 5.5, 8.0, 11.6], ["photo"] * 3, Path(d), cues=cues)
+            review.visual_review(Path(d) / "v.mp4", short, [3.2, 5.5, 8.0, 11.6], ["photo"] * 3, Path(d))
+    finally:
+        media_tools.ffmpeg, llm.ask_ai = old_ff, old_ask
+    assert 'on top: question beat (picture dims, a big question holds) "WHO WAS HE?" 0:04.1-0:05.2' in asked[0]
+    assert "on top: person photo card 0:05.9-0:07.7 (background dims)" in asked[0]
+    assert '"needed volunteers" | picture: photo' + "\n" in asked[0]  # nothing on top of scene 3
+    assert "| on top:" not in asked[1]  # without cues (fix.bat callers), the plan is as before
+
+
 if __name__ == "__main__":
     names = [n for n in sorted(globals()) if n.startswith("test_") and (len(sys.argv) < 2 or n in sys.argv[1:])]
     failed = 0

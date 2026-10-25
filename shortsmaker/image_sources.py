@@ -204,13 +204,13 @@ def nasa_search(query: str, media: str) -> list[dict]:
         return []
 
 
-def nasa_images(query: str, limit: int = 3) -> list[dict]:
+def nasa_images(query: str, limit: int = 3, names=()) -> list[dict]:
     """NASA photos (public domain), when the story touches space, flight or science."""
     found = []
     for it in nasa_search(query, "image"):
         d = (it.get("data") or [{}])[0]
         preview = next((l["href"] for l in it.get("links", []) if l.get("render") == "image"), None)
-        if preview and on_topic(f"{d.get('title', '')} {str(d.get('description', ''))[:300]}", query):
+        if preview and on_topic(f"{d.get('title', '')} {str(d.get('description', ''))[:300]}", query, names):
             found.append({"title": f"{d.get('title')} (NASA {d.get('nasa_id')})", "url": preview.replace("~thumb", "~large"),
                           "small": preview, "credit": None, "source": "NASA", "site": "NASA"})
     return found[:limit]
@@ -249,14 +249,25 @@ def credit_tag_image(text: str) -> Image.Image:
     return img
 
 
-def on_topic(title: str, query: str) -> bool:
-    """Keep titles that share at least one meaningful word (including 2-3 letter terms like NES, N64,
-    GTA, ET, UFO) with the query; the visual editor still inspects every frame."""
+# Words that say nothing about a search's subject ("William Chester Minor portrait" brought dog portraits, 2026-10-26)
+WEAK_WORDS = frozenset({"portrait", "photo", "photograph", "picture", "footage", "film", "video", "vintage", "historic",
+                        "historical", "antique", "rare", "dr", "mr", "mrs", "sir"})
+
+
+def on_topic(title: str, query: str, names=(), strict: bool = False) -> bool:
+    """Keep titles that share a meaningful word with the query (including 2-3 letter terms like NES, N64, GTA, ET,
+    UFO). One shared word that is only part of a person's name in `names` (the story's people) or a WEAK_WORDS word
+    isn't enough, two shared words are: "James Webb space telescope", "Fort William" and "Murray Mouth" reached a
+    James Murray / William Minor Short (2026-10-26) while "Wojtek bear" must still find bears. `strict` always
+    wants two (or the query's only word): modern stock matched on one word ("hospital") is the wrong era. The
+    visual editor still inspects every frame."""
     q_words = {w for w in plan_rules.words_of(query) if len(w) >= 2 and w not in STOPWORDS} or set(plan_rules.words_of(query))
-    return bool(q_words & set(plan_rules.words_of(title)))
+    shared = q_words & set(plan_rules.words_of(title))
+    weak = WEAK_WORDS | {w for name in names for w in plan_rules.words_of(name)}
+    return bool(shared) and (len(shared) >= min(2, len(q_words)) or (not strict and bool(shared - weak)))
 
 
-def archive_images(query: str, limit: int = 3) -> list[dict]:
+def archive_images(query: str, limit: int = 3, names=()) -> list[dict]:
     """Still images, magazine/manual scans, art and archival photos from the Internet Archive."""
     clean = " ".join(w for w in plan_rules.words_of(query) if w not in STOPWORDS) or re.sub(r"[^\w\s]", " ", query).strip()
     if not clean:
@@ -274,7 +285,7 @@ def archive_images(query: str, limit: int = 3) -> list[dict]:
             if not ident:
                 continue
             title = str(doc.get("title") or ident)
-            if not on_topic(title, query) or JUNK & set(plan_rules.words_of(title)):
+            if not on_topic(title, query, names) or JUNK & set(plan_rules.words_of(title)):
                 continue
             lic = str(doc.get("licenseurl") or "").lower()
             creator = doc.get("creator") or "Internet Archive"

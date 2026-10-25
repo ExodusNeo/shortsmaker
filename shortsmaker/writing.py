@@ -123,6 +123,7 @@ Reply with ONLY JSON: {{"shorts": [{{"topic": "...", "character": "...", "subjec
     if not shorts:
         print("No topic had enough real pictures this time; nothing was made.")
         return []
+    check_twists(shorts)
     research = [{"index": i, "topic": s["topic"], "subject": s["subject"], "main_character": s.get("character") or s["subject"],
                  "wikipedia": {t: x[:8000] for t, x in s["_texts"].items() if x} or "none found: use only facts you are sure of",
                  "pictures": picture_pool.pictures_of(s) or "none listed"}
@@ -502,6 +503,40 @@ def article_text(title: str) -> str:
     return text
 
 
+def check_twists(shorts: list[dict]) -> None:
+    """Before any script is written: each topic's twist against its Wikipedia text. The Oxford Short (2026-10-26)
+    was written around the 1915 legend that Murray found Minor in an asylum by surprise; the fact check, run on
+    the finished script, only patched one line and the ending still told the legend. It also left out what the
+    articles lead with (Minor had killed a man), which the 402K-view Short on the same story opened with.
+    One AI call; a rewritten topic replaces s["topic"] and the reason goes in s["twist_check"] (edit_plan.txt)."""
+    rows = [{"index": i, "topic": s["topic"], "main_character": s.get("character") or s["subject"],
+             "wikipedia": {t: x[:8000] for t, x in (s.get("_texts") or {}).items() if x}} for i, s in enumerate(shorts)]
+    rows = [r for r in rows if r["wikipedia"]]
+    if not rows:
+        return
+    print("Checking each story's twist against Wikipedia...")
+    data = llm.ask_ai(f"""Before the scripts are written, check each story's twist (the surprise it saves for the end) against
+its Wikipedia text.
+- If the articles call the twist a legend, a myth, disputed or wrong, rewrite the topic so the Short tells what really
+  happened: the famous version may set it up, but the ending must be the true one ("the famous story says X; in fact Y").
+- If the articles give the main character a far stronger true fact that the topic leaves out (a crime, a death, a
+  secret that explains the whole story), add it to the topic so the Short can open with it.
+- Otherwise topic = null. A rewritten topic is 1-2 sentences told through the same main character, with the twist
+  that makes it worth telling.
+Stories: {json.dumps(rows, ensure_ascii=False)}
+Reply with ONLY JSON: {{"stories": [{{"index": 0, "topic": null, "why": "one line"}}]}}""", fatal=False)
+    got = data.get("stories") if isinstance(data, dict) else None
+    for r in got if isinstance(got, list) else []:  # LLM output is untrusted
+        i = r.get("index") if isinstance(r, dict) else None
+        if isinstance(i, int) and not isinstance(i, bool) and 0 <= i < len(shorts) \
+                and isinstance(r.get("topic"), str) and r["topic"].strip():
+            s, new = shorts[i], r["topic"].strip()[:600]
+            why = str(r.get("why") or "the twist didn't hold up").strip()[:300]
+            s["twist_check"] = f'topic rewritten ({why}): "{s["topic"]}" -> "{new}"'
+            s["topic"] = new
+            print(f'  "{s["subject"]}": {s["twist_check"][:200]}')
+
+
 def fact_check(s: dict) -> bool:
     """Check every line against the story's Wikipedia articles and rewrite what they don't support.
     Runs before the edit plan is validated, so callouts whose trigger words changed drop out there.
@@ -520,6 +555,8 @@ this script and its on-screen text against the Wikipedia articles below.
 - Not in the articles: keep it only if you are confident it is true and well documented. If sources
   disagree or it is a legend, make the line accurate ("legend says", "reports claim") or replace it
   with a supported fact.
+- A legend stays a legend in every line: when one line tells it as "legend says", fix every later line that
+  tells the same legend (or what follows from it) as fact. When the Short's ending is the legend, story_holds = false.
 Rewrite only the scenes that need it. Keep each about as long as it was (at most {channel_profiles.LONG_SCENE_WORDS} words) with the same role in the story, scene
 1's first sentence at most 12 words, and every word a graphic or person card pops up on ("trigger")
 when it is still correct. A scene may be part of a sentence that runs on into the next scene: keep the

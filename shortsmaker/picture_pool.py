@@ -123,9 +123,9 @@ def gather_pool(articles: list[str], people: list[str], image_terms: list[str], 
         surname = plan_rules.words_of(name)[-1:]
         add([c for c in image_sources.commons_search(f"{name} portrait", 3) if plan_rules.contains(plan_rules.words_of(c["title"]), surname)])
     for q in list(dict.fromkeys(articles[:3] + scene_imgs[:4]))[:6]:  # Openverse (museums/Flickr/archives) + Internet Archive
-        add(image_sources.openverse_images(q, 3) + image_sources.archive_images(q, 3))
+        add(image_sources.openverse_images(q, 3) + image_sources.archive_images(q, 3, names))
     for q in articles[:2]:
-        add(image_sources.nasa_images(q, 2))
+        add(image_sources.nasa_images(q, 2, names))
     cands = [c for c in pool.values() if c["url"] not in skip][:limit]
 
     def load_thumb(c: dict) -> dict | None:
@@ -147,7 +147,7 @@ def gather_pool(articles: list[str], people: list[str], image_terms: list[str], 
         got: dict[str, dict] = {}
         for q in queries:
             if len(got) < cap:
-                got.update({f["src"]: f for f in search(q) if f["src"] not in skip})
+                got.update({f["src"]: f for f in search(q, names=names) if f["src"] not in skip})
         films += list(got.values())[:cap]
     films = films[:film_limit]
 

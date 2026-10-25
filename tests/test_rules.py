@@ -40,6 +40,7 @@ REPLIES = {  # canned AI replies, chosen by the prompt's opening words
                                                        "thumbnail_text": "BABOON SIGNALMAN", "scenes": LINES}]},
     "You are the script editor": {},
     "You are the director": {"shorts": [{"index": 0, "scenes": [{} for _ in LINES]}]},
+    "Before the scripts are written": {"stories": [{"index": 0, "topic": None, "why": "holds up"}]},
     "You are a strict fact-checker": {"story_holds": True, "fixes": []},
     "You are the picture researcher": {"pictures": [{"n": 1, "what": "Jack at the levers", "era_ok": True, "sharp": 3,
                                                      "hook": False, "reject": None}]},
@@ -49,6 +50,7 @@ REPLIES = {  # canned AI replies, chosen by the prompt's opening words
 }
 KEYS = {"You choose stories": "topics", "You write YouTube Shorts narration": "writer",
         "You are the script editor": "editor", "You are the director": "director",
+        "Before the scripts are written": "twist_check",
         "You are a strict fact-checker": "fact_check", "You are the picture researcher": "picture_list",
         "You judge the first two seconds": "first_second", "Some AI paintings": "repaint",
         "You are the visual editor": "picker"}

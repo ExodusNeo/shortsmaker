@@ -373,7 +373,7 @@ def render(short: dict, ch: dict, folder: Path, state: dict | None = None, fix_r
               clips)
     issues = review.quality_check(folder / "short.mp4", bounds, sources)
     print(f"  {session.BRAIN.capitalize()} is watching the finished Short for problems...")
-    found, fixes = review.visual_review(folder / "short.mp4", short, bounds, sources, work, drawn=drawn)
+    found, fixes = review.visual_review(folder / "short.mp4", short, bounds, sources, work, drawn=drawn, cues=cues)
     issues += found
     if drawn:  # nothing to repaint or swap in a drawn Short: what the review finds stays a CHECK line
         fixes = {}

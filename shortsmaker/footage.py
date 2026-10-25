@@ -31,12 +31,12 @@ FILM_VF = (f"split[a][b];[a]scale={W}:{H}:force_original_aspect_ratio=increase,c
 FILL_VF = f"scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},format=yuv420p"
 
 
-def nasa_films(query: str, limit: int = 2) -> list[dict]:
+def nasa_films(query: str, limit: int = 2, names=()) -> list[dict]:
     """NASA videos (public domain), as their medium/small MP4 renditions."""
     found = []
     for it in image_sources.nasa_search(query, "video"):
         d = (it.get("data") or [{}])[0]
-        if len(found) >= limit or not image_sources.on_topic(f"{d.get('title', '')} {str(d.get('description', ''))[:300]}", query):
+        if len(found) >= limit or not image_sources.on_topic(f"{d.get('title', '')} {str(d.get('description', ''))[:300]}", query, names):
             continue
         try:
             files = [a["href"] for a in json.loads(media_tools.fetch(f"https://images-api.nasa.gov/asset/{urllib.parse.quote(d['nasa_id'])}",
@@ -51,7 +51,7 @@ def nasa_films(query: str, limit: int = 2) -> list[dict]:
     return found
 
 
-def pixabay_films(query: str, limit: int = 2) -> list[dict]:
+def pixabay_films(query: str, limit: int = 2, names=()) -> list[dict]:
     """Pixabay stock video: free to use in videos, no credit needed (Pixabay Content License).
     AI-generated clips are skipped (they would pass as real footage). Search replies are cached for
     a day, as Pixabay's API terms ask. [] without a key in pixabay_key.txt."""
@@ -75,14 +75,15 @@ def pixabay_films(query: str, limit: int = 2) -> list[dict]:
     for h in hits:
         tags = str(h.get("tags", "")).lower()
         v = (h.get("videos") or {}).get("small") or {}  # 1920x1080, ~5 MB
-        if "ai generated" in tags or not v.get("url") or not 3 <= (h.get("duration") or 0) <= 120:
+        if ("ai generated" in tags or not v.get("url") or not 3 <= (h.get("duration") or 0) <= 120
+                or not image_sources.on_topic(tags, query, names, strict=True)):  # Pixabay answers anything with modern stock
             continue
         found.append({"title": f"{tags[:60]} (pixabay.com, video {h.get('id')})", "credit": None, "src": v["url"],
                       "dur": float(h["duration"]), "site": "Pixabay"})
     return found[:limit]
 
 
-def commons_films(query: str, limit: int = 2) -> list[dict]:
+def commons_films(query: str, limit: int = 2, names=()) -> list[dict]:
     """Videos on Wikimedia Commons, as their 480p-720p WebM transcodes (seekable)."""
     api = ("https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6"
            f"&gsrlimit=10&gsrsearch={urllib.parse.quote(query + ' filetype:video')}&prop=videoinfo"
@@ -94,13 +95,13 @@ def commons_films(query: str, limit: int = 2) -> list[dict]:
         ok, credit = image_sources.usable_license(info.get("extmetadata", {}))
         webm = [d for d in info.get("derivatives", []) if "/transcoded/" in d.get("src", "")
                 and d.get("type", "").startswith("video/webm") and 0 < d.get("height", 0) <= 720]
-        if ok and webm and 3 <= (info.get("duration") or 0) <= 1800 and image_sources.on_topic(p["title"], query):
+        if ok and webm and 3 <= (info.get("duration") or 0) <= 1800 and image_sources.on_topic(p["title"], query, names):
             found.append({"title": p["title"], "credit": credit, "src": max(webm, key=lambda d: d["height"])["src"],
                           "dur": info["duration"], "site": "Wikimedia Commons"})
     return found[:limit]
 
 
-def archive_films(query: str, limit: int = 2) -> list[dict]:
+def archive_films(query: str, limit: int = 2, names=()) -> list[dict]:
     """Videos across the entire Internet Archive (historical film, retro gaming, commercials, tech,
     broadcasts, documentaries), ranked by downloads. Non-public-domain uploads credit their creator."""
     clean = " ".join(w for w in plan_rules.words_of(query) if w not in image_sources.STOPWORDS) or re.sub(r"[^\w\s]", " ", query).strip()
@@ -124,7 +125,7 @@ def archive_films(query: str, limit: int = 2) -> list[dict]:
             if "youtube" in f"{md.get('collection', '')} {md.get('source', '')} {md.get('originalurl', '')}".lower():
                 continue
             title = str(md.get("title") or doc.get("title") or ident)
-            if not image_sources.on_topic(f"{title} {md.get('subject', '')}", query):
+            if not image_sources.on_topic(title, query, names):  # not the uploader's subject list: spam stuffs it with any words
                 continue
             mp4 = [f for f in meta.get("files", [])
                    if (f.get("format") in ("h.264", "MPEG4", "h.264 IA") or str(f.get("name", "")).lower().endswith(".mp4"))

@@ -578,6 +578,48 @@ def test_pool_rows_without_thumbs():
     assert [r["url"] for r in rows] == [c["url"] for c in pool_of(3)] and all("thumb" not in r for r in rows)
 
 
+def test_on_topic_ignores_a_lone_shared_name():
+    """The Oxford pool (2026-10-26) got stock videos that only shared a first name or "portrait" with the search; animal
+    stories must still find their animal."""
+    minor, murray = ["William Chester Minor", "James Murray"], ["James Murray", "William Chester Minor"]
+    assert not image_sources.on_topic("james webb space telescope, nasa", "James Murray lexicographer", murray)
+    assert not image_sources.on_topic("water, south australia, murray mouth", "James Murray lexicographer", murray)
+    assert not image_sources.on_topic("boat, beech, stranded, scotland, snow, fort, william", "dr william minor", minor)
+    assert not image_sources.on_topic("labrador, dog, pet, animal, portrait", "William Chester Minor portrait", minor)
+    assert not image_sources.on_topic("Jimmy Savile - The Rhodesia Solution", "Broadmoor Hospital", minor)
+    assert image_sources.on_topic("File:Dr. William Chester Minor.jpg", "William Chester Minor portrait", minor)
+    assert image_sources.on_topic("James Murray in a scriptorium", "James Murray lexicographer", murray)
+    assert image_sources.on_topic("bear, brown bear, furry, predator", "Wojtek bear", ["Wojtek"])
+    assert image_sources.on_topic("bird, nandu, emu, plumage", "Emu War", ["G. P. W. Meredith"])
+    assert image_sources.on_topic("Super Mario 64 any% speedrun", "Mario 64")
+    assert image_sources.on_topic("Minecraft creeper", "Minecraft") and not image_sources.on_topic("Terraria", "Minecraft")
+    # strict (Pixabay's modern stock): one ordinary shared word is the wrong era; two words or the only word are fine
+    assert image_sources.on_topic("dialysis, machine, hospital", "Broadmoor Hospital Victorian", minor)
+    assert not image_sources.on_topic("dialysis, machine, hospital", "Broadmoor Hospital Victorian", minor, strict=True)
+    assert image_sources.on_topic("bear, brown, brown bear, nature", "Syrian brown bear", strict=True)
+    assert image_sources.on_topic("emu, bird", "emu", strict=True)
+
+
+def test_pixabay_keeps_only_on_topic_videos():
+    hits = {"hits": [{"id": 1, "tags": "james webb space telescope, nasa", "duration": 10,
+                      "videos": {"small": {"url": "https://x/1.mp4"}}},
+                     {"id": 2, "tags": "steam locomotive, train, smoke", "duration": 10,
+                      "videos": {"small": {"url": "https://x/2.mp4"}}}]}
+    old = (footage.PIXABAY_KEY_FILE, image_sources.CACHE, footage.media_tools.fetch)
+    with tempfile.TemporaryDirectory() as d:
+        footage.PIXABAY_KEY_FILE = Path(d) / "key.txt"
+        footage.PIXABAY_KEY_FILE.write_text("k", encoding="utf-8")
+        image_sources.CACHE = Path(d) / "cache"
+        footage.media_tools.fetch = lambda url, timeout, ua: json.dumps(hits).encode()
+        try:
+            got = footage.pixabay_films("Victorian steam locomotive", 5)
+            named = footage.pixabay_films("James Murray steam train", 5, names=["James Murray"])
+        finally:
+            footage.PIXABAY_KEY_FILE, image_sources.CACHE, footage.media_tools.fetch = old
+    assert [f["src"] for f in got] == ["https://x/2.mp4"], got
+    assert [f["src"] for f in named] == ["https://x/2.mp4"], named
+
+
 if __name__ == "__main__":
     names = [n for n in sorted(globals()) if n.startswith("test_") and (len(sys.argv) < 2 or n in sys.argv[1:])]
     failed = 0

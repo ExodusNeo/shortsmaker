@@ -142,12 +142,14 @@ situation, without giving the twist away.
 One or two descriptive sentences, not a keyword list: the subject first with era-accurate details,
   then the setting, then the light (always name it: "low winter sun", "one oil lamp", "flat overcast daylight"),
   then a REAL hand-made medium of the story's era named with its physical marks, so it looks made by a person and
-  can't pass for a real photo: "19th-century wood engraving from an illustrated newspaper, dense black hatching on
-  yellowed newsprint"; "hand-colored copperplate etching, fine cross-hatching, faded watercolor washes on foxed
-  paper"; "1940s gouache magazine illustration, flat matte paint, visible brush marks, coarse paper with halftone dots
-  and slightly off-register colors"; "1930s silkscreen poster, three flat inks on grainy paper, misaligned color
+  can't pass for a real photo: "19th-century wood engraving, dense black hatching on yellowed paper";
+  "hand-colored copperplate etching, fine cross-hatching, faded watercolor washes on foxed
+  paper"; "1940s gouache illustration, flat matte paint, visible brush marks, coarse paper with halftone dots
+  and slightly off-register colors"; "1930s silkscreen print, three flat inks on grainy paper, misaligned color
   layers"; "loose oil sketch on canvas board, thick visible brushstrokes, unfinished edges"; "charcoal drawing on
-  toned paper, smudged shading". Never "concept art", "digital illustration", "stylized", "cinematic", "highly
+  toned paper, smudged shading". Never name what such a picture was printed in ("newspaper", "newsprint",
+  "magazine", "book page", "poster", "bookplate"): the painter then draws the whole page around the picture,
+  full of made-up text. Never "concept art", "digital illustration", "stylized", "cinematic", "highly
   detailed", "8k" or "vibrant" (they give the glossy AI look). The artwork fills the whole frame (never a framed
   poster, card or page with a border). Never "photograph" (a fake photo would pass
   as real evidence). Never a recognizable real person's face: show places, objects, crowds, hands,
