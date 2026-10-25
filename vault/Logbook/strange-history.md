@@ -355,3 +355,31 @@ Subscribers gained:
 Stayed to watch (%):
 Average % viewed:
 My notes:
+
+## How Virginia Woolf Pranked a Battleship and Her Cousin
+Made: 2026-10-23 | Written by: Gemini | Length: 0:51.5 | Folder: output\strange-history\2026-10-23_how-virginia-woolf-pranked-a-battleship-and-her-co
+Topic: In 1910, British prankster Horace de Vere Cole sent a fake telegram that tricked the Royal Navy into rolling out a red carpet on its top-secret flagship, HMS Dreadnought, for the 'Emperor of Abyssinia'—actually Cole and five friends, including a young Virginia Woolf, in robes and glued-on beards shouting 'Bunga! Bunga!' at the guns while Woolf's own cousin gave them the tour without recognizing her. The twist is that when Cole exposed the stunt in the press, the furious Navy found he had broken no law, and when the real Ethiopian ruler visited England later, crowds yelled 'Bunga! Bunga!' at his carriage and he asked to inspect the Navy's ships too. | Story shape: chain of unlikely events
+Hook line: "Navy officers saluted royal visitors whose beards were glued on." | Hook title: WHO ARE THEY REALLY?
+
+Posted on:
+Views:
+Likes:
+Comments:
+Subscribers gained:
+Stayed to watch (%):
+Average % viewed:
+My notes:
+
+## Douglas Bader: The Daring WW2 Breakout
+Made: 2026-10-24 | Written by: Gemini (solo) | Length: 0:40.7 | Folder: output\strange-history\2026-10-24_douglas-bader-the-daring-ww2-breakout
+Topic: In 1941, Royal Air Force fighter ace Douglas Bader, who flew with two artificial legs after a pre-war crash, was shot down over occupied France and lost one of his prosthetics while escaping the cockpit. The British and Germans arranged a temporary ceasefire so the RAF could parachute a replacement leg into France, but the twist is that Bader strapped it on, immediately used it to escape out a hospital window on a bedsheet rope, and forced the Germans to lock his legs away every night. | Story shape: the hidden reason
+Hook line: "German guards locked this pilot's legs in a drawer every night." | Hook title: DISARMING HIS FEET
+
+Posted on:
+Views:
+Likes:
+Comments:
+Subscribers gained:
+Stayed to watch (%):
+Average % viewed:
+My notes:

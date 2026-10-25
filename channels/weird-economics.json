@@ -1,0 +1,39 @@
+{
+  "niche": "Obscure business autopsies, counter-intuitive money math, and weird economic mechanics: bizarre corporate collapses, unglamorous micro-monopolies, perverse incentives (Cobra Effects), contract loopholes, and freak supply-chain dominos backed by hard numbers (pre-2015 cases preferred; real archival photos, SEC filings, headlines, and company records; no mainstream clichés, no financial advice)",
+  "channel_name_ideas": [
+    "Sunk Math",
+    "Weird Margins",
+    "Paper Losses",
+    "Perverse Incentive",
+    "The Flaw in the Math",
+    "Accidental Monopolies",
+    "Fatal Math"
+  ],
+  "audience": "Curious viewers aged 18 to 45 in the US, UK, Canada, and Australia interested in finance, bizarre business trivia, economics, game theory, and how money really works behind the scenes, watching Shorts while scrolling",
+  "tone": "Like a sharp forensic accountant explaining a wild scandal over drinks: opens inside a shocking dollar figure or fatal paradox, moves fast with tight cause-and-effect beats (so / but / you see), exposes the exact math or incentive loophole, and ends on a seamless grammatical bridge that loops back to the start",
+  "voice": "en-US-AndrewNeural",
+  "cta_line": "for more weird economics",
+  "done_topics": [],
+  "research_seeds": {
+    "handles": [
+      "@EconomicsExplained",
+      "@HowMoneyWorks",
+      "@JakeTran",
+      "@Slidebean",
+      "@ColdFusion"
+    ],
+    "queries": [
+      "weird economics explained",
+      "biggest business loopholes",
+      "perverse incentive cobra effect",
+      "obscure corporate collapse documentary shorts"
+    ],
+    "dropped": [
+      "@PatrickBoyleOnFinance",
+      "@CompanyMan"
+    ]
+  },
+  "brain": "gemini-only",
+  "veo": true,
+  "short_form": false
+}

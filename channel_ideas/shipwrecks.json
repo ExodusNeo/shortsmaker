@@ -1,0 +1,35 @@
+{
+  "niche": "True stories of shipwrecks, lost ships and the sea: why famous and forgotten ships sank, strange survivals, ghost ships, wrecks found decades later and the people aboard, told through one person or ship at the center (pre-2000 events with real archival photos; no graphic deaths, nothing political)",
+  "channel_name_ideas": [
+    "Below the Waterline",
+    "Lost at Sea Files",
+    "Wreck Report",
+    "The Last Voyage",
+    "Davy Jones Archive",
+    "Hull Down"
+  ],
+  "audience": "Curious viewers aged 18 to 54, mainly in the US, UK, Canada and Australia, who like Titanic-style stories, ocean mysteries, WW2 naval history and documentaries, and watch Shorts while scrolling",
+  "tone": "Like a friend telling a gripping story at a bar: it opens inside the strangest moment at sea, moves fast as one flowing story where every beat leads to the next (but / so / you see), with concrete details such as times, depths and names and a dry wit, and saves the answer or twist for the very last line, which makes people rewatch or comment",
+  "voice": "en-US-ChristopherNeural",
+  "cta_line": "for more lost ships",
+  "done_topics": [],
+  "research_seeds": {
+    "handles": [
+      "@oceanxmysteryofficial",
+      "@seaterror310",
+      "@DeepWreckDiver",
+      "@Balticshipspotter",
+      "@BluesBelow",
+      "@HistoryBeyond26",
+      "@RankOld",
+      "@histmyst_official"
+    ],
+    "queries": [
+      "shipwreck story",
+      "ship that vanished",
+      "ghost ship mystery",
+      "wreck found after 100 years shorts"
+    ],
+    "dropped": []
+  }
+}

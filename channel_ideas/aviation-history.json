@@ -1,0 +1,33 @@
+{
+  "niche": "Strange true stories from aviation history: early flight pioneers, WW1 and WW2 pilots, record attempts, impossible survivals, odd inventions and planes that changed everything, told through one pilot or aircraft at the center (pre-1990 events with real archival photos; no modern airline crashes or cockpit recordings, no graphic deaths, nothing political)",
+  "channel_name_ideas": [
+    "Stick and Rudder",
+    "Contrail Files",
+    "Wings of Yesterday",
+    "Open Cockpit",
+    "The Flight Log",
+    "Dead Reckoning"
+  ],
+  "audience": "Curious viewers aged 18 to 54, mainly in the US, UK, Canada and Australia, who like planes, WW2 history, military documentaries and adventure stories, and watch Shorts while scrolling",
+  "tone": "Like a friend telling a gripping story at a bar: it opens in the cockpit at the strangest moment, moves fast as one flowing story where every beat leads to the next (but / so / you see), with concrete details such as altitudes, dates and names and a dry wit, and saves the answer or twist for the very last line, which makes people rewatch or comment",
+  "voice": "en-US-BrianNeural",
+  "cta_line": "for more aviation history",
+  "done_topics": [],
+  "research_seeds": {
+    "handles": [
+      "@HowTheySurvived3D",
+      "@ignitionhistory",
+      "@WarMedals",
+      "@historybufftravels",
+      "@druid_works",
+      "@markhasara"
+    ],
+    "queries": [
+      "aviation history story",
+      "ww2 pilot true story",
+      "early aviation pioneers",
+      "pilot survived impossible shorts"
+    ],
+    "dropped": []
+  }
+}

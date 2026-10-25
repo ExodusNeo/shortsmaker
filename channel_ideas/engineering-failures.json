@@ -1,0 +1,34 @@
+{
+  "niche": "Engineering disasters and near-misses explained: why bridges, dams, buildings, tunnels and machines failed or almost failed, the one small detail that caused it and the person who saw it coming, told as a story with a clear how-it-broke moment (mostly pre-2000 events with real archival photos; no graphic deaths, nothing political)",
+  "channel_name_ideas": [
+    "Load Path",
+    "Stress Fracture",
+    "Fail Point",
+    "One Bolt Short",
+    "The Weak Link",
+    "Why It Broke"
+  ],
+  "audience": "Curious viewers aged 18 to 54, mainly in the US, UK, Canada and Australia, who like engineering, how-things-work and disaster documentaries, including engineers, tradespeople and students, and watch Shorts while scrolling",
+  "tone": "Like an engineer friend telling a gripping story at a bar: it opens on the moment something started to go wrong, moves fast as one flowing story where every beat leads to the next (but / so / you see), explains the cause in plain words with one concrete number, and saves the tiny cause or the twist for the very last line, which makes people rewatch or comment",
+  "voice": "en-US-AndrewNeural",
+  "cta_line": "for more engineering failures",
+  "done_topics": [],
+  "research_seeds": {
+    "handles": [
+      "@MechDisk_ENG",
+      "@machinesthatneversleep",
+      "@ShadowFrame44",
+      "@engineeringmarvels-q8g",
+      "@HowTheyDidIt-YT",
+      "@theb1m",
+      "@PracticalEngineeringChannel"
+    ],
+    "queries": [
+      "engineering disaster explained",
+      "why the bridge collapsed",
+      "dam failure story",
+      "engineering mistake shorts"
+    ],
+    "dropped": []
+  }
+}
