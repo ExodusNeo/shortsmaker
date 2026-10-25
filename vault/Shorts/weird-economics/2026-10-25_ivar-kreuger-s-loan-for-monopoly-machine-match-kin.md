@@ -17,11 +17,11 @@ made: 2026-10-25
 
 ```text
 TITLE:
-Ivar Kreuger's Loan-for-Monopoly Machine | Match King
+How the 'Match King' Bought Countries With Fake Bonds
 
 DESCRIPTION:
 Ivar Kreuger, Sweden's 'Match King', lent huge sums to broke governments like France and Weimar Germany, and each loan bought him a legal national match monopoly. By 1930 he controlled two-thirds of the world's matches, but the empire was a pyramid that needed constant new loans, and when the Great Depression froze lending in 1932 the Kreuger Crash exposed one of history's strangest fraud cases. Price Waterhouse later said basic bookkeeping knowledge was enough to spot the forged bonds.
-#IvarKreuger #BusinessHistory #shorts
+#Economics #BusinessHistory #shorts
 
 Music:
 "Darkling" Kevin MacLeod (incompetech.com)

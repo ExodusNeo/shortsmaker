@@ -17,11 +17,11 @@ made: 2026-10-25
 
 ```text
 TITLE:
-The Piggly Wiggly Short Squeeze Backfire in 1923
+He Cornered 98% of a Stock—So Wall Street Changed the Rules
 
 DESCRIPTION:
 In March 1923, the Piggly Wiggly short squeeze saw founder Clarence Saunders borrow $10 million to buy 196,000 of his company's 200,000 total shares and push the price from $39 to $124. Just when he looked like the man who beat Wall Street, the New York Stock Exchange suspended trading and stretched the 24-hour delivery deadline by five full days to save trapped brokers. Instead of crushing Merrill Lynch and the short sellers, Saunders lost $9 million and his mansion.
-#pigglywiggly #wallstreet #shorts
+#WallStreet #Economics #shorts
 
 Music:
 "Crypto" Kevin MacLeod (incompetech.com)

@@ -383,3 +383,17 @@ Subscribers gained:
 Stayed to watch (%):
 Average % viewed:
 My notes:
+
+## Oxford's Genius Was Locked in an Asylum
+Made: 2026-10-26 | Written by: Gemini (solo) | Length: 0:39.9 | Folder: output\strange-history\2026-10-26_oxford-s-genius-was-locked-in-an-asylum
+Topic: While confined in an asylum, former army surgeon William Chester Minor volunteered for the new Oxford English Dictionary and sent in over ten thousand historical citations, becoming the project's single most prolific contributor. The twist is that editor James Murray spent twenty years believing Minor was a wealthy gentleman scholar, only to discover upon visiting in person that his greatest researcher was an inmate in Broadmoor Criminal Lunatic Asylum. | Story shape: mystery solved
+Hook line: "He mailed ten thousand letters to Oxford from one room." | Hook title: WHO SENT THEM?
+
+Posted on:
+Views:
+Likes:
+Comments:
+Subscribers gained:
+Stayed to watch (%):
+Average % viewed:
+My notes:
