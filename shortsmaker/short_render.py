@@ -257,7 +257,7 @@ def render(short: dict, ch: dict, folder: Path, state: dict | None = None, fix_r
     for i, sc in enumerate(short["scenes"]):  # keep text callouts off the subject's face (maps and marks are full cards)
         if sc["graphic"] and sc["graphic"]["style"] != "mark":
             film = choices[i]["film"]["path"] if clips.get(i) == work / f"film{i}.mp4" else None
-            sc["graphic"]["low"] = frame_render.graphic_low(choices[i], work / f"{i}_raw.jpg", film)
+            sc["graphic"]["low"] = frame_render.graphic_low(choices[i], work / f"{i}_raw.jpg", film, sc)
     (work / "list.txt").write_text("".join(f"file '{a.name}'\n" for a in audio))
     media_tools.ffmpeg("-f", "concat", "-i", "list.txt", "-ar", "44100", "-ac", "2", "voice.wav", cwd=work)
     emphasis = {c["emphasis"] for c in cues if c.get("emphasis") is not None}

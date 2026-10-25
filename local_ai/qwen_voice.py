@@ -19,33 +19,80 @@ HERE = Path(__file__).parent
 os.environ.setdefault("TORCH_HOME", str(HERE / "hf" / "torch"))  # MMS aligner weights live next to the HF models
 QWEN_REPO = "Qwen/Qwen3-TTS-12Hz-1.7B-CustomVoice"
 STUDIO = "http://127.0.0.1:3900"  # VoiceStudio's local backend (D:\VoiceStudio), for CosyVoice items
-NUM = re.compile(r"(\$)?(\d{1,3}(?:,\d{3})+(?:\.\d+)?|\d+(?:\.\d+)?)(%|s|st|nd|rd|th)?", re.I)
+NUM = re.compile(r"(\$)?(\d{1,3}(?:,\d{3})+(?:\.\d+)?|\d+(?:\.\d+)?)(%|s|st|nd|rd|th|m|b|k)?(-(?:hundred|thousand|million|billion|trillion)(?:-dollars?)?)?", re.I)
+SCALE = re.compile(r"^['\"(\[]*(hundred|thousand|million|billion|trillion)(?:-(dollars?))?([,.!?;:'\")\]]*)$", re.I)
+SUFFIX_SCALE = {"k": "thousand", "m": "million", "b": "billion"}
 
 
-def say_number(tok: str) -> str:
+def say_number(tok: str, dollar_word: str | None = None) -> str:
     """How a narrator reads a number token: 1932 -> nineteen thirty-two, 20,000 -> twenty thousand, 1880s ->
-    eighteen eighties, 3rd -> third, $10,000 -> ten thousand dollars, 40% -> forty percent."""
+    eighteen eighties, 3rd -> third, $10,000 -> ten thousand dollars, 40% -> forty percent.
+    When `dollar_word` is "" (because the next token is "million" / "billion"), omits "dollars" here so
+    "$800 million" is read as "eight hundred million dollars" instead of "eight hundred dollars million"."""
     from num2words import num2words
 
     def one(m: re.Match) -> str:
-        dollar, digits, suf = m.group(1), m.group(2).replace(",", ""), (m.group(3) or "").lower()
+        dollar, digits = m.group(1), m.group(2).replace(",", "")
+        suf, hyph = (m.group(3) or "").lower(), (m.group(4) or "").lower()
         n = float(digits) if "." in digits else int(digits)
         if suf in ("st", "nd", "rd", "th"):
             return num2words(n, to="ordinal")
-        year = isinstance(n, int) and "," not in m.group(2) and 1100 <= n <= 2099 and not dollar
+        year = isinstance(n, int) and "," not in m.group(2) and 1100 <= n <= 2099 and not dollar and suf in ("", "s") and not hyph
         words = num2words(n, to="year") if year else num2words(n)
         if suf == "s":  # decades: "eighteen eighty" -> "eighteen eighties"
             words = re.sub(r"y$", "ies", words) if words.endswith("y") else words + "s"
-        return words + (" percent" if suf == "%" else "") + (" dollars" if dollar else "")
+        scale = ""
+        if suf in SUFFIX_SCALE:
+            scale = " " + SUFFIX_SCALE[suf]
+        if hyph:
+            scale += " " + hyph.lstrip("-").replace("-", " ")
+        has_dollar_in_hyph = "dollar" in hyph
+        if dollar and not has_dollar_in_hyph:
+            dw = ("dollar" if n == 1 and not scale else "dollars") if dollar_word is None else dollar_word
+            return words + scale + (" percent" if suf == "%" else "") + (f" {dw}" if dw else "")
+        return words + scale + (" percent" if suf == "%" else "")
     return NUM.sub(lambda m: f" {one(m)} ", tok)
+
+
+def spoken_tokens(text: str) -> list[tuple[str, str]]:
+    """Pair each whitespace token in `text` with how the narrator says it, moving "dollars" after a following
+    scale word ("$800 million," -> ("$800", "eight hundred"), ("million,", "million dollars,"))."""
+    toks = text.split()
+    out: list[tuple[str, str]] = []
+    carry_dollar = False
+    for i, tok in enumerate(toks):
+        if carry_dollar:
+            carry_dollar = False
+            m = SCALE.match(tok)
+            next_is_dollar = i + 1 < len(toks) and re.sub(r"^[^a-zA-Z]+", "", toks[i + 1]).lower().startswith("dollar")
+            if m and not m.group(2) and not next_is_dollar:
+                trail = m.group(3) or ""
+                base = tok[:len(tok) - len(trail)] if trail else tok
+                out.append((tok, f"{base} dollars{trail}"))
+                continue
+        has_dollar = bool(re.search(r"\$\d", tok)) and not bool(re.search(r"(?:k|m|b|hundred|thousand|million|billion|trillion)", tok, re.I))
+        next_tok = toks[i + 1] if i + 1 < len(toks) else ""
+        if has_dollar and SCALE.match(next_tok):
+            carry_dollar = True
+            out.append((tok, say_number(tok, dollar_word="").strip()))
+        elif has_dollar and re.sub(r"^[^a-zA-Z]+", "", next_tok).lower().startswith("dollar"):
+            out.append((tok, say_number(tok, dollar_word="").strip()))
+        else:
+            out.append((tok, say_number(tok).strip()))
+    return out
+
+
+def spoken_sentence(text: str) -> str:
+    """Full spoken string for TTS synthesis, with punctuation attached cleanly."""
+    return re.sub(r"\s+([,.!?;:])", r"\1", " ".join(sp for _, sp in spoken_tokens(text)))
 
 
 def align_words(text: str) -> list[tuple[str, list[str]]]:
     """Caption words (as written, punctuation attached) with the a-z words the aligner listens for.
     A token with nothing to say ("-", "&") sticks to the word before it, like Kokoro's punctuation."""
     out: list[tuple[str, list[str]]] = []
-    for tok in text.split():
-        spoken = unicodedata.normalize("NFKD", say_number(tok).replace("&", " and ")).encode("ascii", "ignore").decode()
+    for tok, spoken_tok in spoken_tokens(text):
+        spoken = unicodedata.normalize("NFKD", spoken_tok.replace("&", " and ")).encode("ascii", "ignore").decode()
         parts = [p for p in re.sub(r"[^a-z']+", " ", spoken.lower().replace("-", " ")).split() if p.strip("'")]
         parts = [p.strip("'") for p in parts]
         if parts:
@@ -66,7 +113,7 @@ def speak(items: list[dict]) -> None:
                                           dtype=torch.bfloat16, attn_implementation="sdpa")
     for it in items:
         torch.manual_seed(int(it.get("seed", 0)))  # same scene, same delivery on a fix.bat re-render
-        wavs, sr = model.generate_custom_voice(text=it["text"], language="English", speaker=it["speaker"])
+        wavs, sr = model.generate_custom_voice(text=spoken_sentence(it["text"]), language="English", speaker=it["speaker"])
         audio = np.asarray(wavs[0], dtype=np.float32)
         if audio.size < sr // 4:
             raise RuntimeError(f"no audio for {it['text'][:40]!r}")
@@ -81,7 +128,7 @@ def studio_speak(items: list[dict]) -> None:
     import urllib.request
     import uuid
     for it in items:
-        spoken = re.sub(r"\s+([,.!?;:])", r"\1", " ".join(say_number(tok).strip() for tok in it["text"].split()))
+        spoken = spoken_sentence(it["text"])
         fields = {"text": spoken, "language": "en",
                   "engine": it["engine"], "ref_text": it["ref_text"], "instruct": it["instruct"],
                   "seed": str(int(it.get("seed", 0)))}

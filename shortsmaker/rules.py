@@ -7,7 +7,7 @@ import re
 from pathlib import Path
 
 from shortsmaker import llm, session
-from shortsmaker.config import CHANNELS
+from shortsmaker.config import CHANNELS, MAX_FULL, MAX_FULL_PLANNED
 
 REQUIRED = ("Settings", "Topic picking", "Story rules", "Writing for the picture", "Lessons from our numbers",
             "Opening picture", "Picture picking", "Directing", "First-second check", "AI paintings")
@@ -135,3 +135,15 @@ def require_rules(name: str) -> None:
 def min_real_pictures() -> int:
     """Usable real pictures/clips a topic needs, else a backup topic replaces it."""
     return int(session.RULE_SETTINGS["min_real_pictures"])
+
+
+def max_full_planned() -> int:
+    """Planned full-screen motion graphics allowed per Short (default MAX_FULL_PLANNED = 2)."""
+    v = session.RULE_SETTINGS.get("max_full_planned", "")
+    return int(v) if re.fullmatch(r"[0-9]+", v) and int(v) > 0 else MAX_FULL_PLANNED
+
+
+def max_full() -> int:
+    """Total full-screen motion graphics (planned + rescued) allowed per Short (default MAX_FULL = 3)."""
+    v = session.RULE_SETTINGS.get("max_full", "")
+    return int(v) if re.fullmatch(r"[0-9]+", v) and int(v) >= max_full_planned() else max(MAX_FULL, max_full_planned() + 1)

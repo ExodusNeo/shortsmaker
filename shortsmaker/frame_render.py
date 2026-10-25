@@ -99,13 +99,23 @@ def graphic_overlay(style: str, text: str) -> Image.Image:
     return img
 
 
-def graphic_low(choice: dict, raw: Path, film: Path | None) -> bool:
+PEOPLE_WORDS = {"man", "men", "woman", "women", "brother", "brothers", "person", "people", "owner", "owners",
+                "lawyer", "lawyers", "founder", "executive", "executives", "player", "players", "portrait",
+                "standing", "seated", "sitting", "face", "faces"}
+
+
+def graphic_low(choice: dict, raw: Path, film: Path | None, sc: dict | None = None) -> bool:
     """True when the picture's subject would land under the top callouts (y ~180-680 of the frame):
     the callout then sits just above the captions instead, so it doesn't cover a face. Maps the photo
     editor's subject row through how the picture is framed: cover crop for photos, parallax, AI clips
     and widescreen film, or the whole film centred (FILM_VF)."""
     y = choice.get("subject_y")
-    if y is None or not raw.exists():
+    if y is None:
+        if sc and not choice.get("bg"):  # AI-painted human subjects usually have heads in the upper half of the frame
+            desc = set(plan_rules.words_of(f"{sc.get('shot', '')} {sc.get('ai_image', '')}"))
+            return bool(desc & PEOPLE_WORDS)
+        return False
+    if not raw.exists():
         return False
     with Image.open(raw) as im:
         aspect = im.width / im.height

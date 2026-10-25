@@ -4,7 +4,7 @@ import json
 from pathlib import Path
 
 from shortsmaker import (
-    channel_profiles, footage, image_sources, llm, picture_pool, plan_rules, session, style_lab, writing,
+    channel_profiles, footage, image_sources, llm, picture_pool, plan_rules, rules, session, style_lab, writing,
 )
 from shortsmaker.config import DOC_KINDS, ICONS, MAX_FULL, MOVE_NAMES, STYLE_CAPS
 
@@ -224,9 +224,11 @@ def rescue_graphics(short: dict, scenes: list[int], why: dict[int, str]) -> list
     One AI call; the same caps as planned ones (MAX_FULL, never scene 1, never two in a row).
     Returns the scenes that got one."""
     scs = short["scenes"]
+    max_full = rules.max_full()
+    min_words = 6 if max_full > MAX_FULL else channel_profiles.FULL_MIN_WORDS
     asked = [i for i in scenes if 0 < i < len(scs) and not scs[i].get("full")
-             and len(scs[i]["narration"].split()) >= channel_profiles.FULL_MIN_WORDS]  # a shorter scene can't play one: it gets a painting
-    if not asked or sum(1 for sc in scs if sc.get("full")) >= MAX_FULL:
+             and len(scs[i]["narration"].split()) >= min_words]  # a shorter scene can't play one: it gets a painting
+    if not asked or sum(1 for sc in scs if sc.get("full")) >= max_full:
         return []
     texts = short.get("research") or {t: writing.article_text(t)[:15000] for t in short.get("wiki_articles", [])[:3]}
     script = [{"scene": i + 1, "narration": sc["narration"],
@@ -257,9 +259,11 @@ Reply with ONLY JSON: {{"scenes": [{{"scene": 3, "full": null}}]}}""", fatal=Fal
         f = r.get("full")
         if i not in asked or not isinstance(f, dict) or f.get("type") == "board":
             continue
+        if f.get("type") == "document" and any((sc.get("full") or {}).get("type") == "document" for sc in scs):
+            continue  # at most one document scene per Short so a rescued slot isn't wasted repeating the same contract
         f = plan_rules.clean_full(f, plan_rules.words_of(scs[i]["narration"]))
         near = any(0 <= k < len(scs) and scs[k].get("full") for k in (i - 1, i + 1))
-        if f and not near and sum(1 for sc in scs if sc.get("full")) < MAX_FULL:
+        if f and not near and sum(1 for sc in scs if sc.get("full")) < max_full:
             scs[i].update(full=f, graphic=None, person=None, animate=False, full_rescued=why.get(i, "the picture was weak"))
             got.append(i)
     return got

@@ -40,6 +40,21 @@ const counter = (show: string, k: number) => {
 
 const fmt = (v: number) => v.toLocaleString('en-US', {maximumFractionDigits: 2});
 
+const fmtBar = (v: number, grow: number, dollar: boolean) => {
+	const prefix = dollar ? '$' : '';
+	if (v >= 1_000_000_000 && v % 10_000_000 === 0) {
+		const b = v / 1_000_000_000;
+		const dec = Number.isInteger(b) ? 0 : b * 10 === Math.floor(b * 10) ? 1 : 2;
+		return `${prefix}${(b * grow).toFixed(dec)}B`;
+	}
+	if (v >= 1_000_000 && v % 10_000 === 0) {
+		const m = v / 1_000_000;
+		const dec = Number.isInteger(m) ? 0 : m * 10 === Math.floor(m * 10) ? 1 : 2;
+		return `${prefix}${(m * grow).toFixed(dec)}M`;
+	}
+	return `${prefix}${fmt(Math.round(v * grow * 100) / 100)}`;
+};
+
 /** A number that is hard to picture: it counts up big, then a field of small ink figures stamps in,
  * each standing for `each` of them. With `compare`, two hatched ink bars grow to scale instead. */
 export const BigNumber: React.FC<FullProps<NumberFull>> = ({full, t, start, end}) => {
@@ -54,7 +69,9 @@ export const BigNumber: React.FC<FullProps<NumberFull>> = ({full, t, start, end}
 	const n = Math.max(1, Math.min(60, full.figures));
 	const {cols, cell} = gridFor(n);
 	const shown = Math.floor(interpolate(t, [fillStart, fillEnd], [0, n], clamp));
-	const big = full.compare ? null : counter(full.show, k);
+	const dollar = full.icon === 'dollar' || /\$|DOLLAR/i.test(full.label);
+	const rawBig = full.compare ? null : counter(full.show, k);
+	const big = rawBig && dollar && !rawBig.startsWith('$') ? `$${rawBig}` : rawBig;
 	const bigSize = big ? Math.min(230, Math.floor(1750 / Math.max(4, big.length))) : 0;
 
 	return (
@@ -70,7 +87,7 @@ export const BigNumber: React.FC<FullProps<NumberFull>> = ({full, t, start, end}
 				</div>
 			</div>
 			{full.compare ? (
-				<Bars compare={full.compare} t={t} at={at + 0.4} until={fillEnd} sk={sk} />
+				<Bars compare={full.compare} t={t} at={at + 0.4} until={fillEnd} sk={sk} dollar={dollar} />
 			) : (
 				<>
 					<div
@@ -80,7 +97,7 @@ export const BigNumber: React.FC<FullProps<NumberFull>> = ({full, t, start, end}
 						}}
 					>
 						<span style={{display: 'inline-flex', alignItems: 'center', gap: 12}}>
-							<Figure full={full} size={50} color={sk.ink} dark={sk.dark} /> = {fmt(full.each)}
+							<Figure full={full} size={50} color={sk.ink} dark={sk.dark} /> = {dollar ? `$${fmt(full.each)}` : fmt(full.each)}
 						</span>
 					</div>
 					<div
@@ -107,16 +124,18 @@ export const BigNumber: React.FC<FullProps<NumberFull>> = ({full, t, start, end}
 	);
 };
 
-const Bars: React.FC<{compare: NonNullable<NumberFull['compare']>; t: number; at: number; until: number; sk: Skin}> = ({compare, t, at, until, sk}) => {
+const Bars: React.FC<{compare: NonNullable<NumberFull['compare']>; t: number; at: number; until: number; sk: Skin; dollar?: boolean}> = ({compare, t, at, until, sk, dollar = false}) => {
 	const max = Math.max(compare.a_value, compare.b_value) || 1;
 	const grow = interpolate(t, [at, Math.max(at + 0.6, until)], [0, 1], {...clamp, easing: Easing.out(Easing.cubic)});
 	const H = 330;
 	const bar = (label: string, value: number, x: number, red: boolean) => {
 		const h = Math.max(8, (H * value) / max) * grow;
+		const text = fmtBar(value, grow, dollar);
+		const fontSize = text.length > 8 ? 50 : 64;
 		return (
 			<div style={{position: 'absolute', left: x, top: 560, width: 300, height: H + 120}}>
-				<div style={{position: 'absolute', bottom: 120 + h + 10, width: '100%', textAlign: 'center', fontFamily: SERIF, fontWeight: 700, fontSize: 64, color: red ? sk.accent : sk.ink}}>
-					{fmt(Math.round(value * grow * 100) / 100)}
+				<div style={{position: 'absolute', bottom: 120 + h + 10, width: '100%', textAlign: 'center', fontFamily: SERIF, fontWeight: 700, fontSize, color: red ? sk.accent : sk.ink}}>
+					{text}
 				</div>
 				<div
 					style={{

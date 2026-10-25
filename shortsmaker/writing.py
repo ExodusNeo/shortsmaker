@@ -7,7 +7,7 @@ import urllib.parse
 from pathlib import Path
 
 from shortsmaker import (
-    audio_mix, blender_plan, channel_profiles, image_sources, llm, logbook, picture_pool, plan_rules, session,
+    audio_mix, blender_plan, channel_profiles, image_sources, llm, logbook, picture_pool, plan_rules, rules, session,
     style_lab,
 )
 from shortsmaker.config import (
@@ -209,7 +209,10 @@ Reply with ONLY JSON: {{"shorts": [{{"index": 0, "shape": "...", "title": "...",
             em = sc.get("emphasis")
             sc["emphasis"] = em.strip() if isinstance(em, str) and plan_rules.contains(said, plan_rules.words_of(em)) else None
             sc["transition"] = plan_rules.clean_transition(sc.get("transition")) if i else "fade"
-        plan_rules.limit_full(s["scenes"], MAX_FULL_PLANNED)
+        max_full_p = rules.max_full_planned()
+        plan_rules.limit_full(s["scenes"], max_full_p)
+        if max_full_p > MAX_FULL_PLANNED:
+            plan_rules.fill_money_graphics(s["scenes"])
         picture_pool.clean_pics(s, (picture_pool.load_pool(Path(s["pool_dir"]), thumbs=False) or []) if s.get("pool_dir") else [])
         plan_rules.settle_style(s, ch)
         plan_rules.limit_style(s["scenes"])

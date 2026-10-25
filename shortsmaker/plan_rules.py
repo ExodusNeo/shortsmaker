@@ -62,7 +62,7 @@ def clean_graphic(g, said: list[str]) -> dict | None:
             out["from"] = {"text": str(f["text"]).strip().upper()[:28], "lat": float(f["lat"]), "lon": float(f["lon"])}
     if g["style"] == "stat":
         v, of = g.get("value"), g.get("of")
-        if not (is_num(v) and 0 < v < 1e9):
+        if not (is_num(v) and 0 < v < 1e12):
             return None
         out["value"] = v
         if isinstance(of, int) and not isinstance(of, bool) and float(v).is_integer() and v <= of <= 200:
@@ -228,16 +228,97 @@ def limit_full(scenes: list[dict], most: int) -> None:
     """Never scene 1 (real footage keeps the hook), never two in a row, never a scene too short to play it
     (FULL_MIN_WORDS), at most `most`; a kept one replaces that scene's overlay graphic and person card (one
     thing on screen at a time)."""
-    kept, last = 0, -2
+    kept, last, has_doc = 0, -2, False
+    min_words = 6 if most > 2 else channel_profiles.FULL_MIN_WORDS
     for i, sc in enumerate(scenes):
         if not sc.get("full"):
             sc["full"] = None
-        elif i == 0 or i == last + 1 or kept >= most or len(sc["narration"].split()) < channel_profiles.FULL_MIN_WORDS:
+        elif (i == 0 or i == last + 1 or kept >= most or len(sc["narration"].split()) < min_words
+              or (most > 2 and sc["full"].get("type") == "document" and has_doc)):
             sc["full"] = None
         else:
             kept, last = kept + 1, i
+            has_doc = has_doc or sc["full"].get("type") == "document"
             sc["graphic"] = sc["person"] = None
             sc["animate"] = False  # no AI clip for a scene nobody will see as a picture
+
+
+MONEY_SCALE = {"hundred": 1e2, "thousand": 1e3, "million": 1e6, "billion": 1e9, "trillion": 1e12,
+               "k": 1e3, "m": 1e6, "b": 1e9}
+MONEY_RE = re.compile(
+    r"\$(?P<num>\d[\d,]*(?:\.\d+)?)(?:[\s-]*(?P<scale>hundred|thousand|million|billion|trillion|[kmb])\b)?",
+    re.I,
+)
+YEAR_RE = re.compile(r"\b(1[7-9]\d\d|20\d\d)\b")
+STOP_LABELS = {
+    "THE", "AND", "BUT", "FOR", "WITH", "FROM", "INTO", "OVER", "ONLY", "JUST", "EVEN", "STILL", "SENT", "PAID",
+    "TOOK", "MADE", "LOST", "COST", "WERE", "WAS", "HAD", "HAS", "THAT", "THIS", "THEY", "THEM", "THEIR", "EACH",
+    "MORE", "THAN", "NEARLY", "ABOUT", "AROUND", "ALMOST", "EVERY", "YEARLY",
+}
+
+
+def parse_scene_money(narration: str) -> tuple[float, str, str, str] | None:
+    """Extract (numeric_value, compact_display, short_label, trigger_phrase) from a scene's dollar figure."""
+    m = MONEY_RE.search(narration)
+    if not m:
+        return None
+    base = float(m.group("num").replace(",", ""))
+    scale = (m.group("scale") or "").lower()
+    val = base * MONEY_SCALE.get(scale, 1.0)
+    if not (0 < val < 1e12):
+        return None
+    suf = {"thousand": "K", "k": "K", "million": "M", "m": "M", "billion": "B", "b": "B", "trillion": "T"}.get(scale, "")
+    if suf:
+        show = f"${m.group('num')}{suf}"
+    elif val >= 1e6 and val % 1e5 == 0:
+        show = f"${val / 1e6:g}M"
+    else:
+        show = f"${int(val):,}" if val.is_integer() else f"${val:,.2f}"
+    trigger = m.group(0).strip()
+    yr = YEAR_RE.search(narration)
+    if yr:
+        label = yr.group(1)
+    elif re.search(r"\byear\s+one\b", narration, re.I):
+        label = "YEAR 1"
+    else:
+        after = [w.upper() for w in re.findall(r"[A-Za-z]+", narration[m.end():]) if len(w) > 2 and w.upper() not in STOP_LABELS]
+        before = [w.upper() for w in re.findall(r"[A-Za-z]+", narration[:m.start()]) if len(w) > 2 and w.upper() not in STOP_LABELS]
+        picks = (after[:2] or before[-2:] or ["TOTAL"])
+        label = " ".join(picks)[:14]
+    return (int(val) if val.is_integer() else val, show[:12], label, trigger)
+
+
+def fill_money_graphics(scenes: list[dict]) -> None:
+    """Ensure money beats in economics/finance Shorts don't go bare when the LLM omits a graphic or fact_check
+    drops one: pair adjacent/nearby dollar scenes into a side-by-side `compare` bar chart, else a `stat` counter."""
+    parsed = [parse_scene_money(sc.get("narration", "")) for sc in scenes]
+    for i, sc in enumerate(scenes):
+        if i == 0 or sc.get("graphic") or sc.get("full") or sc.get("person") or not parsed[i]:
+            continue
+        val, show, label, trigger = parsed[i]
+        prev = next((j for j in range(i - 1, max(0, i - 4) - 1, -1) if parsed[j] and parsed[j][0] != val), None)
+        if prev is not None:
+            p_val, p_show, p_label, _ = parsed[prev]
+            if p_label == label:
+                p_label, label = "BEFORE", "AFTER"
+            sc["graphic"] = {
+                "style": "compare",
+                "text": "THE NUMBERS",
+                "a_label": p_label,
+                "a_value": p_val,
+                "a_show": p_show,
+                "b_label": label,
+                "b_value": val,
+                "b_show": show,
+                "trigger": trigger,
+            }
+        else:
+            sc["graphic"] = {
+                "style": "stat",
+                "value": val,
+                "text": label if label != "TOTAL" else "DOLLARS",
+                "trigger": trigger,
+            }
 
 
 def mark_details(short: dict, choices: list[dict], work: Path) -> None:

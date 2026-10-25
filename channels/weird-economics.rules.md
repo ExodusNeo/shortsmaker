@@ -1,12 +1,14 @@
 # Rules: weird-economics
 
-Each section is read by its heading; edit the text under it. Settings: status (draft | ready), visuals (photos), min_real_pictures.
+Each section is read by its heading; edit the text under it. Settings: status (draft | ready), visuals (photos), min_real_pictures, max_full_planned, max_full.
 
 ## Settings
-<!-- weird-economics rules created 2026-10-25 -->
+<!-- weird-economics rules updated 2026-10-25 -->
 status: ready
 visuals: photos
 min_real_pictures: 6
+max_full_planned: 4
+max_full: 5
 
 ## Topic picking
 <!-- new -->
@@ -33,8 +35,8 @@ Anti-Cliché Negative Constraints (Strictly Forbidden):
 <!-- new -->
 Pacing & Structure (35–50s Shorts, 110–135 spoken words across 11–16 scenes):
 1. Zero Intro Fluff (Scene 1): Open mid-tension on frame 0. Start directly with a staggering dollar figure, an absurd financial contradiction, or a catastrophic calculation error. Never say "Have you ever wondered", "In business history", or "Imagine a world". Scene 1 must be a punchy stand-alone sentence of 12 words or fewer.
-2. Hard Data Density: The script MUST include at least 4 concrete numbers (dollar amounts, profit margins, loss totals, percentages, unit costs, or exact years) that directly drive on-screen Remotion cards.
-3. Fast Micro-Beats: Keep individual scenes to 4–8 words (~1.5–2.5 seconds each) so visuals cut rapidly and hold viewer retention through the dangerous 4–12 second drop-off window.
+2. Hard Data Density: The script MUST include at least 4 concrete numbers (dollar amounts, profit margins, loss totals, percentages, unit costs, or exact years) that directly drive on-screen Remotion cards and bar charts.
+3. Fast Micro-Beats (6–8 words on money/mechanism beats): Keep individual scenes to 5–8 words (~1.8–2.5 seconds each), and make sure every scene that explains a contract clause, money comparison, or financial mechanism has at least 6–8 words so full-screen Remotion motion graphics have time to animate cleanly.
 4. One Flowing Story, Not a List: Link every beat to the previous one using "but", "so", or "you see" (cause and consequence), never "and then".
 5. Infinite Loop Ending (Intentional Circular Bridge):
    - The final sentence must NOT end with a summary, moral, or "subscribe for more".
@@ -45,8 +47,8 @@ Pacing & Structure (35–50s Shorts, 110–135 spoken words across 11–16 scene
 
 ## Writing for the picture
 <!-- new -->
-- Write for the picture: every scene must describe physical assets, documents, or transactions that can be shown visually (a factory floor, a patent diagram, a store shelf, an SEC filing, a check, a newspaper headline, or a warehouse).
-- Ground abstract math in concrete visuals: when explaining margin gaps or loss multipliers, write for a Remotion bar comparison (`compare`) or dynamic stat counter (`stat`).
+- Write for the picture and the chart: every scene must either describe a concrete physical subject (a factory floor, a patent diagram, a product, a founder portrait, a newspaper headline) OR present a crisp financial number/comparison designed for a Remotion bar graph (`compare`), counter (`stat`), or full-screen motion graphic (`full`).
+- Pair numbers for bar charts: structure financial twists as before-vs-after or cost-vs-payout comparisons (e.g. "$2.2 million up front" vs. "$800 million total", or "$521,749 in year one" vs. "$17.45 million a year") so the director can place side-by-side animated bar graphs (`compare`).
 - Name specific companies, founders, products, and currencies so archive searches retrieve authentic historical material.
 - Never write abstract metaphors ("greed consumed them", "money vanished into thin air") that force generic stock footage.
 
@@ -60,24 +62,25 @@ Scene 1 must show the real product, corporate headquarters, founder, or disaster
 
 ## Picture picking
 <!-- new -->
-Visual Balance: ~40% Motion Graphics / ~60% Sourced Archival Media:
+Visual Balance: ~45% Motion Graphics / ~55% Sourced Archival Media:
 - Real Archival Media: Sourced from Wikimedia Commons, Openverse, Internet Archive, and Pixabay. Prioritize vintage company logos, corporate annual reports, factory floor footage, product packaging, and contemporary press clippings.
-- Strict Prohibition: NEVER pick metaphorical stock images (e.g. an actor holding cash, a cartoon piggy bank, or a stressed businessman in a suit). If a real photo cannot be found, route the scene to a Remotion motion graphic or custom diagram.
+- Strict Prohibition: NEVER pick metaphorical stock images (e.g. an actor holding cash, a cartoon piggy bank, or a stressed businessman in a suit). Whenever a scene is about money math, contract clauses, or revenue escalation and lacks an exact archival photo, route it to a Remotion motion graphic (`full` or `compare`/`stat`) rather than an AI painting.
 
 ## Directing
 <!-- new -->
-Directing Weird Economics:
-- Graphics balance: Use 4–7 motion graphics per Short to visualize the financial mechanics.
-  - `compare`: Use for expected cost vs. actual payout, or unit cost vs. retail price (side-by-side animated bars).
-  - `stat`: Use for total dollar damages, profit multipliers, or percentage spikes.
-  - `headline`: Use when newspapers or trade journals broke the scandal.
+Directing Weird Economics (Motion-Graphics Heavy):
+- Every money beat MUST be visualized with a graph or counter: never leave a scene that states a dollar amount, percentage, or financial comparison without a `graphic` (`compare` or `stat`) or a `full` motion graphic!
+- Overlay Graphics (`graphic`): Use on 6–8 scenes per Short:
+  - `compare` (Side-by-Side Bar Graph — PRIORITY): Use at least 2 `compare` bar charts per Short whenever two numbers can be contrasted (e.g. upfront buyout vs. loophole payout, year-1 revenue vs. peak revenue, unit cost vs. sale price, Rival A vs. Rival B). Keep `text` to 1–3 general words (e.g. `"TV PAYOUT"`, `"THE BUYOUT"`) that never contradict the article's exact broadcaster/company names.
+  - `stat` (Animated Money Counter): Use on standalone dollar or percentage scenes (`value` = full number e.g. `1500000`, `trigger` = exact spoken dollar phrase e.g. `"$1.5 million"` so the `$` sign and `M`/`B` suffix render automatically).
+  - `headline`: Use when newspapers or trade journals reported the fallout.
   - `stamp`: Slam down `BANKRUPT`, `LOOPHOLE`, `DENIED`, or `EXPLOITED` at the climax.
-- Full-Screen Remotion Scenes (`full`):
-  1. `custom` (Cobra Effects & Domino Flows): Use `kind: "flow"` or `"diagram"` to map out cause-and-effect domino cascades or Cobra Effect feedback loops (Rule -> Loophole -> Payout Explodes -> Crash).
-  2. `document` (Contract Clause Highlighting): Use `kind: "form"` or `"contract"` or `"newspaper"` to spotlight the exact fine print of the flawed contract or rule, with the animated red ink underline landing on the exact spoken trigger word.
-  3. `number` (Big Number Visuals): Use `BigNumber` with `thing: "dollar"` or `thing: "coin"` when describing millions in unexpected losses.
+- Full-Screen Remotion Scenes (`full` — Plan 3 to 4 per Short, spaced at least 1 scene apart, never two in a row):
+  1. `custom` (`kind: "flow"` or `"diagram"` — REQUIRED in every Short): Build at least 1 bespoke animated diagram or flow chart per Short mapping out the loophole formula, revenue split, or Cobra Effect chain (e.g. `1/7th OF 4 TEAMS = 4/28ths Forever`, or `Bounty -> Breeding -> Release -> Payout Explodes`).
+  2. `number` (`BigNumber` — REQUIRED in every Short): Use at least 1 full-screen `number` graphic with `icon: "dollar"`, `thing: "dollar"`, and either a `compare` bar chart (`"compare": {"a_label": "...", "a_value": ..., "b_label": "...", "b_value": ...}`) or counted figures for the biggest financial disparity in the script.
+  3. `document` (`kind: "contract"` or `"form"` — AT MOST 1 per Short): Use at most ONCE per Short to spotlight the key contract clause or rule with the animated red underline. Never use two `document` scenes in the same Short.
 - Word-Synced Sound Effects (`sc["sound"]`):
-  - Place transaction/consequence SFX on punchy words (`"bankrupt"`, `"penalized"`, `"millions"`, `"payout"`, `"cash"`) to trigger mechanical cash registers, typewriter strikes, gavel hits, or rubber stamp thumps via Freesound.
+  - Place transaction/consequence SFX on punchy words (`"million"`, `"payout"`, `"signed"`, `"forever"`, `"cash"`) to trigger mechanical cash registers, typewriter strikes, gavel hits, or rubber stamp thumps via Freesound.
 - Camera moves: Alternate `in` (on fine print / figures) and `out` (on company headquarters / warehouses).
 - Palette & Music:
   - Palette: Prefer `gold` or `ember` (money/contracts), `crimson` (catastrophic financial loss), or `teal` (modern corporate accounting).
@@ -89,6 +92,7 @@ Check whether another scene's picture would open better: the opening frame must 
 
 ## AI paintings
 <!-- new -->
-Used only as a last resort when zero archival photos exist:
-- Style: Crisp editorial gouache or vintage financial engraving aesthetic.
-- Avoid: Plastic modern 3D renders, generic office stock characters, or distorted currency symbols.
+Used only as a last resort when zero archival photos exist and the scene is not already a full-screen motion graphic:
+- Style: Crisp 1970s editorial gouache illustration or vintage financial engraving aesthetic with bold light-dark contrast.
+- Single Text-Free Focal Subject (Crucial for Visual Review): Prompt for ONE clean physical object or empty architectural space (e.g. stacks of 1970s magnetic broadcast tape reels, an empty mahogany boardroom table, a vintage television camera lens, a brass balance scale, or a quiet industrial warehouse).
+- Strict Prohibitions: NEVER ask the image generator to paint checks, contracts, signs, scoreboards, or currency with written numbers/letters (AI-painted text looks garbled and fails quality review), and avoid crowded sports action or multi-person crowds where background anatomy distorts.

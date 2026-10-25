@@ -9,6 +9,22 @@ const card: React.CSSProperties = {
 };
 type Props = {graphic: Graphic; t: number; start: number; end: number; variant: number};
 
+const formatStat = (value: number, k: number, of?: number, dollar?: boolean) => {
+	const prefix = dollar ? '$' : '';
+	if (!of && value >= 1_000_000_000 && value % 10_000_000 === 0) {
+		const b = value / 1_000_000_000;
+		const dec = Number.isInteger(b) ? 0 : b * 10 === Math.floor(b * 10) ? 1 : 2;
+		return `${prefix}${(b * k).toFixed(dec)}B`;
+	}
+	if (!of && value >= 1_000_000 && value % 10_000 === 0) {
+		const m = value / 1_000_000;
+		const dec = Number.isInteger(m) ? 0 : m * 10 === Math.floor(m * 10) ? 1 : 2;
+		return `${prefix}${(m * k).toFixed(dec)}M`;
+	}
+	const num = Number.isInteger(value) ? Math.round(value * k).toLocaleString('en-US') : (value * k).toFixed(1);
+	return `${prefix}${num}`;
+};
+
 /** A number worth seeing: with `of`, a grid of dots where `value` of them light up one by one;
  * without, a big counter ticking up to `value`. */
 export const StatCard: React.FC<Props> = ({graphic, t, start, end, variant}) => {
@@ -17,12 +33,14 @@ export const StatCard: React.FC<Props> = ({graphic, t, start, end, variant}) => 
 	const value = graphic.value ?? 0;
 	const of = graphic.of;
 	const k = interpolate(t, [tIn + 0.25, Math.min(tIn + 1.25, ready)], [0, 1], {...clamp, easing: Easing.out(Easing.cubic)});
-	const shown = Number.isInteger(value) ? Math.round(value * k).toLocaleString('en-US') : (value * k).toFixed(1);
+	const dollar = !of && ((graphic.trigger ?? '').trim().startsWith('$') || /\bDOLLARS?\b/i.test(graphic.text) || graphic.text.includes('$'));
+	const shown = formatStat(value, k, of, dollar);
+	const fontSize = of ? 110 : shown.length > 9 ? 120 : shown.length > 7 ? 145 : 170;
 	return (
 		<div style={{position: 'absolute', ...slot(graphic, 260), left: 0, right: 0, display: 'flex', justifyContent: 'center', ...moveIn(enter, leave, variant)}}>
 			<div style={{...card, padding: '26px 44px 22px', maxWidth: 920}}>
 				{of ? <DotGrid of={of} lit={Math.round(value * k)} /> : null}
-				<div style={{fontFamily: FONT, fontSize: of ? 110 : 170, lineHeight: 1, color: theme.accent, textShadow: outline(6)}}>
+				<div style={{fontFamily: FONT, fontSize, lineHeight: 1, color: theme.accent, textShadow: outline(6)}}>
 					{shown}
 					{of ? <span style={{color: 'white', fontSize: 70}}> / {of}</span> : null}
 				</div>

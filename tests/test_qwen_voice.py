@@ -4,7 +4,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "local_ai"))
-from qwen_voice import align_words, say_number  # noqa: E402
+from qwen_voice import align_words, say_number, spoken_sentence  # noqa: E402
 
 
 def test_numbers():
@@ -12,9 +12,24 @@ def test_numbers():
     assert say_number("20,000").split() == ["twenty", "thousand"]
     assert say_number("1880s").split() == ["eighteen", "eighties"]
     assert say_number("$10,000").split() == ["ten", "thousand", "dollars"]
+    assert say_number("$1").split() == ["one", "dollar"]
+    assert say_number("$800M").split() == ["eight", "hundred", "million", "dollars"]
+    assert say_number("$800-million").split() == ["eight", "hundred", "million", "dollars"]
     assert say_number("3rd").split() == ["third"]
     assert say_number("40%").split() == ["forty", "percent"]
     assert "point" in say_number("3.5")
+
+
+def test_dollar_scale_word_order():
+    assert spoken_sentence("Two owners made $800 million folding their team.") == (
+        "Two owners made eight hundred million dollars folding their team.")
+    assert spoken_sentence("They paid $1.5 million, buying the club.") == (
+        "They paid one point five million dollars, buying the club.")
+    assert spoken_sentence("TV deals sent $17.45 million yearly.") == (
+        "TV deals sent seventeen point four five million dollars yearly.")
+    got = dict(align_words("Two owners made $800 million folding their team."))
+    assert got["$800"] == ["eight", "hundred"]
+    assert got["million"] == ["million", "dollars"]
 
 
 def test_caption_words_keep_what_is_written():

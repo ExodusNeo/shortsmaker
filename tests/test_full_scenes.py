@@ -847,6 +847,29 @@ def test_counter_finishes_before_it_leaves():
     assert editplan.scene_cues(sc, words, 10.0, 14.0, 4, None)["graphic"] == 12.5  # a plain callout still waits for its word
 
 
+def test_fill_money_graphics_and_caps():
+    from shortsmaker import frame_render
+    scenes = [
+        {"narration": "Two brothers made $800 million from a dead team.", "graphic": None, "full": None, "person": None},
+        {"narration": "Each surviving owner had to pay $3.3 million.", "graphic": None, "full": None, "person": None},
+        {"narration": "Wait, the league offered them $2.2 million to fold.", "graphic": None, "full": None, "person": None},
+        {"narration": "In year one, the check was $521,749,", "graphic": None, "full": None, "person": None},
+        {"narration": "but by 2010, TV deals sent $17.45 million yearly.", "graphic": None, "full": None, "person": None},
+    ]
+    plan_rules.fill_money_graphics(scenes)
+    assert scenes[0]["graphic"] is None  # hook keeps its title
+    assert scenes[1]["graphic"]["style"] == "compare" and scenes[1]["graphic"]["b_show"] == "$3.3M"
+    assert scenes[2]["graphic"]["style"] == "compare" and scenes[2]["graphic"]["a_show"] == "$3.3M" and scenes[2]["graphic"]["b_show"] == "$2.2M"
+    assert scenes[3]["graphic"]["style"] == "compare" and scenes[3]["graphic"]["b_show"] == "$521,749"
+    assert scenes[4]["graphic"]["style"] == "compare" and scenes[4]["graphic"]["a_label"] == "YEAR 1" and scenes[4]["graphic"]["b_label"] == "2010"
+    assert scenes[4]["graphic"]["b_show"] == "$17.45M"
+    # AI-painted human subjects lower the callout so it doesn't cover faces
+    assert frame_render.graphic_low({"subject_y": None, "bg": None}, Path("missing.jpg"), None,
+                                    {"shot": "MEDIUM: two brothers standing", "ai_image": "two men in suits"}) is True
+    assert frame_render.graphic_low({"subject_y": None, "bg": None}, Path("missing.jpg"), None,
+                                    {"shot": "CLOSE-UP: stack of broadcast tapes", "ai_image": "magnetic tape reels"}) is False
+
+
 if __name__ == "__main__":
     names = [n for n in sorted(globals()) if n.startswith("test_") and (len(sys.argv) < 2 or n in sys.argv[1:])]
     failed = 0
