@@ -1,11 +1,11 @@
 # ShortsMaker: handoff for a new Claude session
 
-Read this first, then the code it points to. Last updated 2026-10-24 (consolidated 2026-10-19; the older, longer notes with
+Read this first, then the code it points to. Last updated 2026-10-25 (consolidated 2026-10-19; the older, longer notes with
 every dated decision are in `HANDOFF_history.md`).
 
 ## What this is
 A faceless YouTube Shorts generator for **several channels** (profiles in `channels/`): `strange-history`
-(main, "Plot Twist Archive") and `gaming`. Goal: YouTube Partner Program monetization from a fresh account.
+(main, "Plot Twist Archive"), `gaming`, `engineering-failures`, and `weird-economics` ("Sunk Math" / "Weird Margins"). Goal: YouTube Partner Program monetization from a fresh account.
 The owner runs `run.bat`, reviews each Short and **uploads manually** in YouTube Studio (no API uploads: an
 unaudited API project locks videos to private). The owner is **not a programmer**: explain in plain words.
 
@@ -733,6 +733,26 @@ Owner: selecting the AI should offer an option where only one AI does the entire
   - Added `--disable-slash-commands` and explicit prompt instructions in `run_agy` and `visual_review` forbidding shell/script execution or codebase exploration, requiring direct image inspection via `read_file` and immediate JSON return.
   - Reduced review timeout to 300s (180s for text).
   - Automatically switches `_argon_exhausted = True` to `gemini-3.8-flash-high` on timeout retry and for the rest of the run.
+
+## `weird-economics` profile, dollar-scale TTS fix, money graphs & seamless loop fixes (2026-10-25, owner asked)
+- **New channel profile (`channels/weird-economics.json`, `channels/weird-economics.rules.md`)**:
+  - Niche: Obscure Business Autopsies & Weird Economics (counter-intuitive money math, perverse incentives / Cobra Effects, contract loopholes, bizarre B2B monopolies, unit economics, supply-chain dominoes; bans overused clichés like Enron/WeWork/Blockbuster/FTX/Theranos/Costco hot dogs).
+  - Requires topics anchored by well-illustrated Wikipedia subjects (`min_real_pictures: 6`), 4+ concrete numbers per script, and a full-scene setup bridge on the final beat (4–7 words, no trailing period) that loops seamlessly into Scene 1.
+- **Dollar-scale TTS word order fix (`local_ai/qwen_voice.py`, `tests/test_qwen_voice.py`)**:
+  - Previously, `studio_speak` and `align_words` called `say_number()` token-by-token, turning `"$800 million"` into `"eight hundred dollars million"`.
+  - Added `spoken_tokens()` and `spoken_sentence()` in `qwen_voice.py` to look ahead for scale words (`hundred`, `thousand`, `million`, `billion`, `trillion`), hold `"dollars"` until after the scale word (`"$800 million"` -> `"eight hundred million dollars"`), handle `"$800M"`/`"$2.5B"`/`"$50k"`, and use singular `"one dollar"` for `"$1"`.
+- **Motion-graphics density & money graphs (`shortsmaker/rules.py`, `shortsmaker/plan_rules.py`, `shortsmaker/writing.py`, `shortsmaker/picker.py`, `remotion/src/Cards.tsx`, `remotion/src/full/BigNumber.tsx`)**:
+  - Added optional `max_full_planned` and `max_full` settings in `rules.py` (`weird-economics` uses `max_full_planned: 4`, `max_full: 5`, min 6 words per full scene; `strange-history` stays at `2`/`3` and 7 words so golden prompts are unchanged).
+  - Added `parse_scene_money()` and `fill_money_graphics()` in `plan_rules.py` so any dollar beat left without a graphic (or stripped by `fact_check`) automatically gets a side-by-side `compare` bar chart when paired with a nearby dollar beat, or a `stat` counter.
+  - Capped `document` full-screen scenes at 1 per Short in `limit_full()` and `rescue_graphics()` so rescued slots aren't wasted repeating the same contract clause.
+  - Updated `StatCard` (`Cards.tsx`) and `BigNumber`/`Bars` (`BigNumber.tsx`) to format `$` prefixes and compact `M`/`B` suffixes (`$1.5M`, `$17.45M`), and added `direction: "down"` support on `StatCard` (auto-detected on crash/drop words in `clean_graphic()`) so falling numbers count downward instead of upward from zero.
+- **Infinite loop timing & prosody (`shortsmaker/gpu.py`, `shortsmaker/short_render.py`, `shortsmaker/plan_rules.py`)**:
+  - For loop Shorts (`is_loop_short()`), `local_voice()` appends the first 4 words of Scene 1 to the final TTS take so CosyVoice/Qwen reads the loop bridge with natural mid-sentence continuation pitch instead of a falling period drop; `split_takes()` then slices the audio right after the final scene's last word (`mine[-1][1] + 0.04s`).
+  - `short_render.py` trims trailing silence on the final scene, sets `pads[-1] = 0.0` (no `apad`), reduces `total` tail from `0.6s` to `0.04s`, and uses a `0.12s` music micro-fade so audio flows straight into Frame 0 of Scene 1.
+- **Portrait-on-portrait prevention (`shortsmaker/plan_rules.py`, `shortsmaker/picker.py`, `shortsmaker/writing.py`)**:
+  - Added `is_person_portrait()` so scenes with a floating `PersonCard` never use a solo portrait of that same person as the full-screen background (`bg` automatically swaps to an unused storefront/crowd/context candidate).
+- **Whip transition black-bar fix (`remotion/src/style/transitions/Whip.tsx`, `remotion/src/Short.tsx`)**:
+  - Fixed `Whip.tsx` where `to` had `opacity: 0` during `p < 0.5` while `from` translated `-35%` left, exposing a 35–40% black vertical bar on the right side of the frame (seen at `00:19` in Piggly Wiggly). `from` and `to` now whip simultaneously edge-to-edge across `0 < p <= 1` with slight scale overscan.
 
 ## Ideas offered, not built
 - Voice cloning (owner's own voice), SFX on the music's beat, YouTube Audio Library tracks for the somber/epic moods.

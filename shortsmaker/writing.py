@@ -206,6 +206,10 @@ Reply with ONLY JSON: {{"shorts": [{{"index": 0, "shape": "...", "title": "...",
             sc["person"] = {k: pr[k].strip() for k in ("name", "trigger", "image_search")} if ok else None
             if sc["person"]:
                 sc["graphic"] = None  # one overlay per scene
+                if any(w in sc.get("shot", "").lower() for w in ("portrait", "headshot")):
+                    sc["shot"] = f"Wide view of {s['subject']}: {sc['narration']}"[:300]
+                    if sc["person"]["name"].lower() in sc.get("image_search", "").lower():
+                        sc["image_search"] = s["subject"][:120]
             em = sc.get("emphasis")
             sc["emphasis"] = em.strip() if isinstance(em, str) and plan_rules.contains(said, plan_rules.words_of(em)) else None
             sc["transition"] = plan_rules.clean_transition(sc.get("transition")) if i else "fade"
@@ -213,7 +217,14 @@ Reply with ONLY JSON: {{"shorts": [{{"index": 0, "shape": "...", "title": "...",
         plan_rules.limit_full(s["scenes"], max_full_p)
         if max_full_p > MAX_FULL_PLANNED:
             plan_rules.fill_money_graphics(s["scenes"])
-        picture_pool.clean_pics(s, (picture_pool.load_pool(Path(s["pool_dir"]), thumbs=False) or []) if s.get("pool_dir") else [])
+            if s["scenes"]:
+                s["scenes"][-1]["narration"] = re.sub(r"[.;…]+$", "", s["scenes"][-1]["narration"].strip())
+        pool_cands = (picture_pool.load_pool(Path(s["pool_dir"]), thumbs=False) or []) if s.get("pool_dir") else []
+        picture_pool.clean_pics(s, pool_cands)
+        for sc in s["scenes"]:
+            if sc.get("person") and isinstance(sc.get("pic"), int) and 1 <= sc["pic"] <= len(pool_cands):
+                if plan_rules.is_person_portrait(pool_cands[sc["pic"] - 1], sc["person"]["name"], s.get("catalog"), sc["pic"]):
+                    sc["pic"] = None
         plan_rules.settle_style(s, ch)
         plan_rules.limit_style(s["scenes"])
         audio_mix.limit_sounds(s["scenes"])

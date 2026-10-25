@@ -868,6 +868,23 @@ def test_fill_money_graphics_and_caps():
                                     {"shot": "MEDIUM: two brothers standing", "ai_image": "two men in suits"}) is True
     assert frame_render.graphic_low({"subject_y": None, "bg": None}, Path("missing.jpg"), None,
                                     {"shot": "CLOSE-UP: stack of broadcast tapes", "ai_image": "magnetic tape reels"}) is False
+    # Falling numbers mark stat direction='down' so StatCard counts down instead of up from 0
+    g = plan_rules.clean_graphic({"style": "stat", "text": "SHARE PRICE", "value": 39, "trigger": "$39"},
+                                 plan_rules.words_of("pushing the share price down to $39."))
+    assert g and g.get("direction") == "down"
+    g_up = plan_rules.clean_graphic({"style": "stat", "text": "DIVIDEND %", "value": 11, "trigger": "11%"},
+                                    plan_rules.words_of("So his 1,267 stores paid an 11% dividend."))
+    assert g_up and "direction" not in g_up
+    # Portrait-on-portrait detection filters solo portraits of the PersonCard subject from background candidates
+    cat = [{"n": 1, "what": "Portrait of Clarence Saunders"}, {"n": 2, "what": "Piggly Wiggly grocery store interior"}]
+    assert plan_rules.is_person_portrait({"title": "File:Clarence Saunders.jpg"}, "Clarence Saunders", cat, 1) is True
+    assert plan_rules.is_person_portrait({"title": "File:Clarence Saunders LCCN2014715807.jpg"}, "Clarence Saunders", cat, 1) is True
+    assert plan_rules.is_person_portrait({"title": "File:Interior of Piggly Wiggly store.jpg"}, "Clarence Saunders", cat, 2) is False
+    # Loop bridge detection
+    assert plan_rules.is_loop_short([{"narration": "One grocer borrowed $10 million."},
+                                     {"narration": "so Saunders lost $9 million, all because"}]) is True
+    assert plan_rules.is_loop_short([{"narration": "A passenger looked out."},
+                                     {"narration": "and half a bottle of beer every week."}]) is False
 
 
 if __name__ == "__main__":

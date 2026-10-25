@@ -38,16 +38,16 @@ Pacing & Structure (35–50s Shorts, 110–135 spoken words across 11–16 scene
 2. Hard Data Density: The script MUST include at least 4 concrete numbers (dollar amounts, profit margins, loss totals, percentages, unit costs, or exact years) that directly drive on-screen Remotion cards and bar charts.
 3. Fast Micro-Beats (6–8 words on money/mechanism beats): Keep individual scenes to 5–8 words (~1.8–2.5 seconds each), and make sure every scene that explains a contract clause, money comparison, or financial mechanism has at least 6–8 words so full-screen Remotion motion graphics have time to animate cleanly.
 4. One Flowing Story, Not a List: Link every beat to the previous one using "but", "so", or "you see" (cause and consequence), never "and then".
-5. Infinite Loop Ending (Intentional Circular Bridge):
-   - The final sentence must NOT end with a summary, moral, or "subscribe for more".
-   - Instead, the final scene MUST end on an incomplete grammatical bridge that flows seamlessly right back into Beat 1's opening words when the video loops automatically.
-   - Example Beat 1: "A single pricing glitch in Hoover's free flight promotion..."
-   - Example Final Scene: "...which meant the entire company was ultimately liquidated by..." (loops seamlessly back into "A single pricing glitch...").
-   - NOTE FOR SCRIPT EDITORS (`edit_scripts`): This trailing grammatical bridge on the final scene is an INTENTIONAL circular loop retention device, NOT a truncated or incomplete thought. Do NOT "fix" or delete it into a closed sentence; verify that `[Final Scene] + [Scene 1]` reads as one continuous, grammatically natural sentence.
+5. Infinite Loop Ending (Intentional Full-Scene Setup Bridge):
+   - The final sentence must NOT end with a summary, moral, or "subscribe for more", and NEVER tack a tiny 2-word fragment ("all because") onto the end of a finished sentence.
+   - Instead, the ENTIRE final scene (4–7 words, ending with NO punctuation—never a period) must be an open setup clause that grammaticalizes directly into Scene 1's opening words when the video loops automatically.
+   - Example Final Scene: "and that desperate gamble is why" -> flows seamlessly into Scene 1: "One grocer borrowed $10 million to trap brokers."
+   - Example Final Scene: "which is how a single contract clause let" -> flows seamlessly into Scene 1: "Two brothers make $800 million from a dead team."
+   - NOTE FOR SCRIPT EDITORS (`edit_scripts`): This open grammatical bridge on the final scene (with no trailing period) is an INTENTIONAL circular loop retention device, NOT a truncated or incomplete thought. Do NOT add a period at the end of the final scene or close the sentence; verify that `[Final Scene] + [Scene 1]` reads as one continuous, grammatically natural sentence.
 
 ## Writing for the picture
 <!-- new -->
-- Write for the picture and the chart: every scene must either describe a concrete physical subject (a factory floor, a patent diagram, a product, a founder portrait, a newspaper headline) OR present a crisp financial number/comparison designed for a Remotion bar graph (`compare`), counter (`stat`), or full-screen motion graphic (`full`).
+- Write for the picture and the chart: every scene must either describe a concrete physical subject (a factory floor, a patent diagram, a product, a storefront, a trading floor, a newspaper headline) OR present a crisp financial number/comparison designed for a Remotion bar graph (`compare`), counter (`stat`), or full-screen motion graphic (`full`).
 - Pair numbers for bar charts: structure financial twists as before-vs-after or cost-vs-payout comparisons (e.g. "$2.2 million up front" vs. "$800 million total", or "$521,749 in year one" vs. "$17.45 million a year") so the director can place side-by-side animated bar graphs (`compare`).
 - Name specific companies, founders, products, and currencies so archive searches retrieve authentic historical material.
 - Never write abstract metaphors ("greed consumed them", "money vanished into thin air") that force generic stock footage.
@@ -63,20 +63,23 @@ Scene 1 must show the real product, corporate headquarters, founder, or disaster
 ## Picture picking
 <!-- new -->
 Visual Balance: ~45% Motion Graphics / ~55% Sourced Archival Media:
-- Real Archival Media: Sourced from Wikimedia Commons, Openverse, Internet Archive, and Pixabay. Prioritize vintage company logos, corporate annual reports, factory floor footage, product packaging, and contemporary press clippings.
+- Real Archival Media: Sourced from Wikimedia Commons, Openverse, Internet Archive, and Pixabay. Prioritize vintage company logos, corporate annual reports, factory floor footage, product packaging, storefronts, and contemporary press clippings.
+- NEVER Duplicate Portraits on `person_card_for` Scenes (Crucial): Whenever a scene has `person_card_for` (which pops up a floating `PersonCard` portrait of that person), the scene's background (`bg`) MUST show the **place, storefront, factory, trading floor, or crowd**—NEVER pick a solo portrait of that same person as the background behind their own `PersonCard`.
 - Strict Prohibition: NEVER pick metaphorical stock images (e.g. an actor holding cash, a cartoon piggy bank, or a stressed businessman in a suit). Whenever a scene is about money math, contract clauses, or revenue escalation and lacks an exact archival photo, route it to a Remotion motion graphic (`full` or `compare`/`stat`) rather than an AI painting.
 
 ## Directing
 <!-- new -->
 Directing Weird Economics (Motion-Graphics Heavy):
 - Every money beat MUST be visualized with a graph or counter: never leave a scene that states a dollar amount, percentage, or financial comparison without a `graphic` (`compare` or `stat`) or a `full` motion graphic!
+- No Portrait-on-Portrait Duplication: Whenever a scene triggers a `person` card (`PersonCard`), its `shot` and `image_search` MUST describe the **place, storefront, factory, trading floor, or crowd** (e.g. `"Exterior of a 1920s Piggly Wiggly grocery store"`), NEVER a portrait of that person.
+- Never Use an Upward `stat` Counter for a Falling Number: Standard `stat` counters tick upward from zero—so NEVER use an upward `stat` counter when a stock price, revenue, or metric is *falling, dropping, or crashing* (e.g. `"pushing the share price down to $39"`). Use `compare` (Old Price vs. New Price) or a bold `fact` / `kinetic` callout instead.
 - Overlay Graphics (`graphic`): Use on 6–8 scenes per Short:
-  - `compare` (Side-by-Side Bar Graph — PRIORITY): Use at least 2 `compare` bar charts per Short whenever two numbers can be contrasted (e.g. upfront buyout vs. loophole payout, year-1 revenue vs. peak revenue, unit cost vs. sale price, Rival A vs. Rival B). Keep `text` to 1–3 general words (e.g. `"TV PAYOUT"`, `"THE BUYOUT"`) that never contradict the article's exact broadcaster/company names.
-  - `stat` (Animated Money Counter): Use on standalone dollar or percentage scenes (`value` = full number e.g. `1500000`, `trigger` = exact spoken dollar phrase e.g. `"$1.5 million"` so the `$` sign and `M`/`B` suffix render automatically).
+  - `compare` (Side-by-Side Bar Graph — PRIORITY): Use at least 2 `compare` bar charts per Short whenever two numbers can be contrasted (e.g. upfront buyout vs. loophole payout, old price vs. crashed/squeezed price, year-1 revenue vs. peak revenue, old deadline vs. new deadline). Keep `text` to 1–3 general words (e.g. `"SHARE PRICE"`, `"TV PAYOUT"`, `"THE BUYOUT"`) that never contradict the article's exact names.
+  - `stat` (Animated Money Counter): Use on standalone rising/total dollar or percentage scenes (`value` = full number e.g. `1500000`, `trigger` = exact spoken dollar phrase e.g. `"$1.5 million"` so the `$` sign and `M`/`B` suffix render automatically).
   - `headline`: Use when newspapers or trade journals reported the fallout.
   - `stamp`: Slam down `BANKRUPT`, `LOOPHOLE`, `DENIED`, or `EXPLOITED` at the climax.
 - Full-Screen Remotion Scenes (`full` — Plan 3 to 4 per Short, spaced at least 1 scene apart, never two in a row):
-  1. `custom` (`kind: "flow"` or `"diagram"` — REQUIRED in every Short): Build at least 1 bespoke animated diagram or flow chart per Short mapping out the loophole formula, revenue split, or Cobra Effect chain (e.g. `1/7th OF 4 TEAMS = 4/28ths Forever`, or `Bounty -> Breeding -> Release -> Payout Explodes`).
+  1. `custom` (`kind: "flow"` or `"diagram"` — REQUIRED in every Short): Build at least 1 bespoke animated diagram or flow chart per Short mapping out the loophole formula, cornered float, or Cobra Effect chain.
   2. `number` (`BigNumber` — REQUIRED in every Short): Use at least 1 full-screen `number` graphic with `icon: "dollar"`, `thing: "dollar"`, and either a `compare` bar chart (`"compare": {"a_label": "...", "a_value": ..., "b_label": "...", "b_value": ...}`) or counted figures for the biggest financial disparity in the script.
   3. `document` (`kind: "contract"` or `"form"` — AT MOST 1 per Short): Use at most ONCE per Short to spotlight the key contract clause or rule with the animated red underline. Never use two `document` scenes in the same Short.
 - Word-Synced Sound Effects (`sc["sound"]`):
@@ -92,7 +95,7 @@ Check whether another scene's picture would open better: the opening frame must 
 
 ## AI paintings
 <!-- new -->
-Used only as a last resort when zero archival photos exist and the scene is not already a full-screen motion graphic:
-- Style: Crisp 1970s editorial gouache illustration or vintage financial engraving aesthetic with bold light-dark contrast.
-- Single Text-Free Focal Subject (Crucial for Visual Review): Prompt for ONE clean physical object or empty architectural space (e.g. stacks of 1970s magnetic broadcast tape reels, an empty mahogany boardroom table, a vintage television camera lens, a brass balance scale, or a quiet industrial warehouse).
-- Strict Prohibitions: NEVER ask the image generator to paint checks, contracts, signs, scoreboards, or currency with written numbers/letters (AI-painted text looks garbled and fails quality review), and avoid crowded sports action or multi-person crowds where background anatomy distorts.
+Used only when zero archival photos exist and the scene is not already a full-screen motion graphic:
+- Concrete Historical Scenes with People & Architecture (Crucial): Every `ai_image` prompt MUST depict a **concrete historical scene with people and period architecture** matching the exact era and place of the narration (e.g. *"1920s Wall Street stockbrokers in wool suits shouting around trading posts on the New York Stock Exchange floor"*, or *"1923 New York Stock Exchange governors seated around a dark wood-paneled boardroom table"*).
+- Strict Ban on Symbolic Object Clichés: NEVER prompt for symbolic object metaphors or cliché icons—**NO scales of justice, NO hourglasses, NO clocks, NO piggy banks, NO chess pieces, NO bags of money, and NO crystal balls**.
+- Style & Text Rules: Crisp 1970s editorial gouache illustration or vintage hand-colored lithograph aesthetic with bold light-dark contrast filling the frame edge-to-edge. Keep faces in medium/wide group framing, profile, or three-quarter view, and NEVER include written text, signs, or numbers in the painting.

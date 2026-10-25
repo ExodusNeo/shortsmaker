@@ -69,4 +69,11 @@ for (const [name, duration, covers] of [['wipe', 0.44, true], ['whip', 0.25, fal
 	});
 }
 
+test('whip keeps the incoming scene visible throughout 0 < p <= 1 so no black bar appears on the right', () => {
+	for (const p of [0.1, 0.25, 0.4, 0.5, 0.75, 1.0]) {
+		const frame = TRANSITIONS.whip.render(p, INKS, 1);
+		ok(shown(frame.to), `whip hid incoming scene at p=${p}: ${JSON.stringify(frame.to)}`);
+	}
+});
+
 process.exit(failed ? 1 : 0);

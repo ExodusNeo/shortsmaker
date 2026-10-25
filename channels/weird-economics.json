@@ -13,7 +13,9 @@
   "tone": "Like a sharp forensic accountant explaining a wild scandal over drinks: opens inside a shocking dollar figure or fatal paradox, moves fast with tight cause-and-effect beats (so / but / you see), exposes the exact math or incentive loophole, and ends on a seamless grammatical bridge that loops back to the start",
   "voice": "en-US-AndrewNeural",
   "cta_line": "for more weird economics",
-  "done_topics": [],
+  "done_topics": [
+    "In 1923, after Wall Street short sellers tried to tank his grocery chain Piggly Wiggly, founder Clarence Saunders borrowed $10 million and quietly bought up 198,872 of the company's 200,000 existing shares—cornering 99.4% of the stock and trapping Wall Street for millions until the New York Stock Exchange changed its own rules mid-trade to save its members and bankrupt him."
+  ],
   "research_seeds": {
     "handles": [
       "@EconomicsExplained",
@@ -35,5 +37,11 @@
   },
   "brain": "gemini-only",
   "veo": true,
-  "short_form": false
+  "short_form": false,
+  "recent_shapes": [
+    "one person against the odds"
+  ],
+  "recent_looks": [
+    "halftone"
+  ]
 }

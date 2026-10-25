@@ -130,10 +130,24 @@ For reference, their file titles: {json.dumps(titles, ensure_ascii=False)}""",
     picks = {p.get("scene"): p for p in (data or {}).get("picks", []) if isinstance(p, dict)}
 
     chosen, taken = [], set()
+    catalog = short.get("catalog") or []
+    cat_nums = [e["n"] for e in catalog if isinstance(e, dict) and isinstance(e.get("n"), int) and not e.get("reject")]
     for i in range(len(short["scenes"])):
-        result = {}
-        for kind in ("bg", "person"):
-            num = picks.get(i + 1, {}).get(kind)
+        sc = short["scenes"][i]
+        result = {"bg": None, "person": None}
+        p_pick = picks.get(i + 1) or {}
+        bg_num, per_num = p_pick.get("bg"), p_pick.get("person")
+        if sc.get("person") and isinstance(bg_num, int) and 1 <= bg_num <= len(cands):
+            if plan_rules.is_person_portrait(cands[bg_num - 1], sc["person"]["name"], catalog, bg_num):
+                if not (isinstance(per_num, int) and 1 <= per_num <= len(cands)):
+                    per_num = bg_num
+                bg_num = next(
+                    (n for n in (cat_nums or range(1, len(cands) + 1))
+                     if 1 <= n <= len(cands) and cands[n - 1]["url"] not in taken and n != per_num
+                     and not plan_rules.is_person_portrait(cands[n - 1], sc["person"]["name"], catalog, n)),
+                    None,
+                )
+        for kind, num in (("bg", bg_num), ("person", per_num)):
             c = cands[num - 1] if isinstance(num, int) and 1 <= num <= len(cands) else None
             result[kind] = None
             if c and c.get("film") and kind == "person":
@@ -151,7 +165,6 @@ For reference, their file titles: {json.dumps(titles, ensure_ascii=False)}""",
                     if kind == "bg":
                         result["site"] = c.get("site", "Wikimedia Commons")
                     taken.add(c["url"])
-        sc = short["scenes"][i]
         if pool is not None and sc.get("pic"):
             got, why = picks.get(i + 1, {}).get("bg"), str(picks.get(i + 1, {}).get("swap_why") or "").strip()[:120]
             result["plan_note"] = ("planned picture kept" if got == sc["pic"] and result["bg"] else

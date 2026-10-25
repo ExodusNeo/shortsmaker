@@ -18,7 +18,7 @@ from pathlib import Path, PurePosixPath
 
 from PIL import Image, ImageOps
 
-from shortsmaker import footage, frame_render, llm, media_tools, session
+from shortsmaker import footage, frame_render, llm, media_tools, plan_rules, session
 from shortsmaker.config import FPS, H, ROOT, W, XFADE
 
 
@@ -150,17 +150,24 @@ def split_takes(done: list[dict], groups: list[list[int]], scenes: list[dict], w
     """Cut each take into its scenes halfway through the pause between their words: per scene (wav, words).
     None if a take's words don't match its scenes."""
     out = []
+    loop = plan_rules.is_loop_short(scenes)
     for it, group in zip(done, groups):
         take, words = Path(it["out"]), [tuple(w) for w in it["words"]]
         counts = [spoken_count(scenes[i]["narration"]) for i in group]
-        if sum(counts) != len(words) or 0 in counts:
+        extra = int(it.get("loop_tail") or 0)
+        if len(words) not in (sum(counts), sum(counts) + extra) or 0 in counts:
             return None
         k, start, length = 0, 0.0, media_tools.duration(take)
         for j, (i, c) in enumerate(zip(group, counts)):
             mine, k = words[k:k + c], k + c
-            end = (mine[-1][1] + words[k][0]) / 2 if j < len(group) - 1 else length
+            if j < len(group) - 1:
+                end = (mine[-1][1] + words[k][0]) / 2
+            elif loop and i == len(scenes) - 1:
+                end = min(length, mine[-1][1] + 0.04, (mine[-1][1] + words[k][0]) / 2 if k < len(words) else length)
+            else:
+                end = length
             path = work / f"{i}.wav"
-            media_tools.ffmpeg("-i", take.name, "-ss", f"{start:.3f}", "-t", f"{end - start:.3f}", path.name, cwd=work)
+            media_tools.ffmpeg("-i", take.name, "-ss", f"{start:.3f}", "-t", f"{max(0.05, end - start):.3f}", path.name, cwd=work)
             out.append((path, [(a - start, b - start, w) for a, b, w in mine]))
             start = end
     return out
@@ -173,6 +180,12 @@ def local_voice(short: dict, ch: dict, work: Path) -> list[tuple[Path, list] | N
     scenes, groups = short["scenes"], sentence_groups(short["scenes"])
     items = [{"text": " ".join(scenes[i]["narration"] for i in g), "seed": g[0], "out": str(work / f"take{g[0]}.wav")}
              for g in groups]
+    if items and len(scenes) > 1 and plan_rules.is_loop_short(scenes):
+        tail_words = " ".join(scenes[0]["narration"].split()[:4])
+        tail_n = spoken_count(tail_words)
+        if tail_n > 0:
+            items[-1]["text"] = re.sub(r"[.;…]+$", "", items[-1]["text"].strip()) + " " + tail_words
+            items[-1]["loop_tail"] = tail_n
     if COSY_REF.exists() and voicestudio_up():
         ref_text = COSY_REF.with_suffix(".txt").read_text(encoding="utf-8").strip()
         done = local_job("tts", [{**it, "engine": "cosyvoice", "ref": str(COSY_REF), "ref_text": ref_text,

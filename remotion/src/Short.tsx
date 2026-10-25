@@ -23,6 +23,8 @@ export type Graphic = {
 	from?: {text: string; lat: number; lon: number}; // place: a route line starts here
 	value?: number; // stat
 	of?: number; // stat: dot grid of this many
+	direction?: 'up' | 'down'; // stat: count down from from_value (or 2.5x value) when a metric crashes/drops
+	from_value?: number;
 	start?: string; // timeline ends
 	end?: string;
 	x?: number; // mark: detail position in the picture, 0..1
@@ -82,7 +84,7 @@ const Background: React.FC<{scene: Scene; next?: Scene; t: number; xfade: number
 }) => {
 	const p = Math.min(Math.max((t - scene.start + xfade / 2) / (scene.end - scene.start + xfade), 0), 1);
 	const z = scene.move === 'in' ? 1 + (ZMAX - 1) * p : scene.move === 'out' ? ZMAX - (ZMAX - 1) * p : ZMAX;
-	const max = ((z - 1) / (2 * z)) * 100; // % the image can slide before its edge shows
+	const max = ((z - 1) / (2.2 * z)) * 100; // safe % the image can slide while keeping full cover margin
 	const tx = scene.move === 'right' ? max * (1 - 2 * p) : scene.move === 'left' ? -max * (1 - 2 * p) : 0;
 	const ty = scene.move === 'down' ? max * (1 - 2 * p) : scene.move === 'up' ? -max * (1 - 2 * p) : 0;
 	// this scene's own transition styles it coming in; once the next scene's transition starts, that one styles it

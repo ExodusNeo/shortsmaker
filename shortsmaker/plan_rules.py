@@ -22,6 +22,10 @@ def coords(lat, lon) -> bool:
     return is_num(lat) and is_num(lon) and -85 <= lat <= 85 and -180 <= lon <= 180
 
 
+CRASH_WORDS = {"down", "drop", "dropped", "dropping", "fell", "fall", "falling", "crashed", "crash", "crashing",
+               "plunged", "plunge", "sank", "slashed", "lost", "shrunk", "shrank", "collapsed", "tumbled", "tanked"}
+
+
 def clean_graphic(g, said: list[str]) -> dict | None:
     """One planned callout, validated (LLM output is untrusted); None drops it."""
     if not (isinstance(g, dict) and g.get("style") in PLANNED_STYLES and str(g.get("text", "")).strip()):
@@ -67,6 +71,10 @@ def clean_graphic(g, said: list[str]) -> dict | None:
         out["value"] = v
         if isinstance(of, int) and not isinstance(of, bool) and float(v).is_integer() and v <= of <= 200:
             out["of"] = of
+        elif g.get("direction") == "down" or g.get("isCrash") is True or bool(set(said) & CRASH_WORDS):
+            out["direction"] = "down"
+            if is_num(g.get("from_value")) and g["from_value"] > v:
+                out["from_value"] = g["from_value"]
     if g["style"] == "timeline":
         ends = [str(g.get(k) or "").strip().upper()[:16] for k in ("start", "end")]
         if not all(ends):
@@ -313,12 +321,58 @@ def fill_money_graphics(scenes: list[dict]) -> None:
                 "trigger": trigger,
             }
         else:
+            said_words = set(words_of(sc.get("narration", "")))
             sc["graphic"] = {
                 "style": "stat",
                 "value": val,
                 "text": label if label != "TOTAL" else "DOLLARS",
                 "trigger": trigger,
+                **({"direction": "down"} if said_words & CRASH_WORDS else {}),
             }
+
+
+SCENE_CONTEXT_WORDS = {
+    "store", "stores", "interior", "exterior", "building", "crowd", "crowds", "floor", "aisle", "counter",
+    "register", "turnstile", "street", "newspaper", "headline", "document", "contract", "letter", "map",
+    "factory", "team", "game", "court", "arena", "stadium", "office", "exchange", "bank", "shop",
+}
+
+
+def is_person_portrait(cand: dict, person_name: str, catalog: list[dict] | None = None, cand_num: int | None = None) -> bool:
+    """True when `cand` is a solo portrait/headshot of `person_name` (so a scene that pops up a PersonCard for
+    `person_name` doesn't also use their portrait as the full-screen background behind the card)."""
+    if not cand or cand.get("film") or not person_name:
+        return False
+    p_words = set(words_of(person_name))
+    if not p_words:
+        return False
+    title_raw = re.sub(r"\.(jpe?g|png|tiff?|gif|svg|webm|ogv)$", "", cand.get("title", "").removeprefix("File:"), flags=re.I)
+    title_words = set(words_of(title_raw))
+    rem_words = set(words_of(re.sub(r"\blccn\w+|\b\d+\b", "", title_raw, flags=re.I))) - {
+        "cropped", "bw", "retouched", "photo", "portrait", "headshot", "sir", "mr", "mrs", "dr", "jr", "sr",
+    }
+    what = next((str(e.get("what") or "") for e in (catalog or []) if isinstance(e, dict) and e.get("n") == cand_num), "")
+    what_words = set(words_of(what))
+    if not (p_words & (title_words | what_words)):
+        return False
+    if rem_words and rem_words <= p_words and not (what_words & SCENE_CONTEXT_WORDS):
+        return True
+    if ("portrait" in (title_words | what_words) or "headshot" in (title_words | what_words)) and not ((title_words | what_words) & SCENE_CONTEXT_WORDS):
+        return True
+    return False
+
+
+def is_loop_short(scenes: list[dict]) -> bool:
+    """True when the Short's final scene is an open grammatical loop bridge into scene 1 (either configured via
+    channel rules or ending without sentence-closing punctuation)."""
+    if not scenes:
+        return False
+    last = str(scenes[-1].get("narration") or "").strip()
+    if not last:
+        return False
+    if not re.search(r"[.!?][\"')\]]*$", last):
+        return True
+    return "infinite loop" in (session.RULES.get("Story rules") or "").lower()
 
 
 def mark_details(short: dict, choices: list[dict], work: Path) -> None:

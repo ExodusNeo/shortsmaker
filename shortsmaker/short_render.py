@@ -202,17 +202,27 @@ def render(short: dict, ch: dict, folder: Path, state: dict | None = None, fix_r
             trimmed = work / f"0_start{sound.suffix}"
             media_tools.ffmpeg("-ss", f"{cut:.3f}", "-i", str(sound), trimmed.name, cwd=work)
             sound, words = trimmed, [(a - cut, b - cut, w) for a, b, w in words]
+        if i == len(short["scenes"]) - 1 and plan_rules.is_loop_short(short["scenes"]) and words:
+            end_cut = words[-1][1] + 0.04
+            if media_tools.duration(sound) > end_cut + 0.02:
+                trimmed = work / f"{i}_end{sound.suffix}"
+                media_tools.ffmpeg("-y", "-t", f"{end_cut:.3f}", "-i", str(sound), trimmed.name, cwd=work)
+                sound = trimmed
         scene_sounds.append((sound, words, img))
 
     # Pacing & hold time: full-screen graphics, person cards and overlay graphics need breathing room
     # to be read and understood before the scene transitions to the next beat.
     # Keep narration pacing tight: graphics start earlier within speech, avoiding dead air pauses.
+    loop_short = plan_rules.is_loop_short(short["scenes"])
     raw_durs = [media_tools.duration(s) for s, _, _ in scene_sounds]
-    raw_total = sum(raw_durs) + 0.6
+    raw_total = sum(raw_durs) + (0.04 if loop_short else 0.6)
     max_total = 33.0 if session.SHORT_FORM else 58.5
     budget = max(0.0, max_total - raw_total)
     pads = []
     for i, sc in enumerate(short["scenes"]):
+        if loop_short and i == len(short["scenes"]) - 1:
+            pads.append(0.0)  # infinite loop: zero tail padding on the final scene so it cuts straight into frame 0
+            continue
         sound, words, _ = scene_sounds[i]
         dur = raw_durs[i]
         needed = 0.0
@@ -244,7 +254,7 @@ def render(short: dict, ch: dict, folder: Path, state: dict | None = None, fix_r
         bounds.append(bounds[-1] + media_tools.duration(sound))
         images.append(Image.open(img).convert("RGB"))
         cues.append(editplan.scene_cues(sc, words, bounds[-2], bounds[-1], i, choices[i]["person"]))
-    total = bounds[-1] + 0.6  # small tail so the last word isn't clipped
+    total = bounds[-1] + (0.04 if loop_short else 0.6)  # loop shorts cut immediately after the bridge word; others keep 0.6s tail
     bounds[-1] = total
     cues[-1]["cta"] = max(bounds[-2] + 0.3, total - 3.0)  # silent subscribe button: keeps the rewatch loop
     if drawn:  # raises BlenderFailed after a retry: cli keeps this Short's files and goes on
@@ -312,8 +322,9 @@ def render(short: dict, ch: dict, folder: Path, state: dict | None = None, fix_r
     mix = ["[voice]"]
     inputs = ["-i", "voice.wav"]
     if music:
+        fade_out = 0.12 if loop_short else 2.0
         inputs += ["-stream_loop", "-1", "-i", str(music)]
-        graph += [f"[2:a]{fmt},volume={audio_mix.music_gain(music):.4f},afade=t=in:d=0.1,afade=t=out:st={total - 2:.2f}:d=2[m]",
+        graph += [f"[2:a]{fmt},volume={audio_mix.music_gain(music):.4f},afade=t=in:d=0.1,afade=t=out:st={max(0.0, total - fade_out):.2f}:d={fade_out:.2f}[m]",
                   "[m][key]sidechaincompress=threshold=0.03:ratio=6:attack=15:release=400,asplit[music][music_stem]"]
         mix.append("[music]")
     fx = []

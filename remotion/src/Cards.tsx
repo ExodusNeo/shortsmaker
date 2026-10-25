@@ -26,20 +26,24 @@ const formatStat = (value: number, k: number, of?: number, dollar?: boolean) => 
 };
 
 /** A number worth seeing: with `of`, a grid of dots where `value` of them light up one by one;
- * without, a big counter ticking up to `value`. */
+ * without, a big counter ticking up to `value` (or ticking down to `value` when `direction === 'down'`). */
 export const StatCard: React.FC<Props> = ({graphic, t, start, end, variant}) => {
 	const {visible, enter, leave, tIn, ready} = useWindow(t, start, end);
 	if (!visible) return null;
 	const value = graphic.value ?? 0;
 	const of = graphic.of;
-	const k = interpolate(t, [tIn + 0.25, Math.min(tIn + 1.25, ready)], [0, 1], {...clamp, easing: Easing.out(Easing.cubic)});
+	const p = interpolate(t, [tIn + 0.25, Math.min(tIn + 1.25, ready)], [0, 1], {...clamp, easing: Easing.out(Easing.cubic)});
+	const startRatio = !of && graphic.direction === 'down'
+		? (graphic.from_value && graphic.from_value > value ? graphic.from_value / Math.max(1e-6, value) : 2.5)
+		: 0;
+	const k = startRatio + (1 - startRatio) * p;
 	const dollar = !of && ((graphic.trigger ?? '').trim().startsWith('$') || /\bDOLLARS?\b/i.test(graphic.text) || graphic.text.includes('$'));
 	const shown = formatStat(value, k, of, dollar);
 	const fontSize = of ? 110 : shown.length > 9 ? 120 : shown.length > 7 ? 145 : 170;
 	return (
 		<div style={{position: 'absolute', ...slot(graphic, 260), left: 0, right: 0, display: 'flex', justifyContent: 'center', ...moveIn(enter, leave, variant)}}>
 			<div style={{...card, padding: '26px 44px 22px', maxWidth: 920}}>
-				{of ? <DotGrid of={of} lit={Math.round(value * k)} /> : null}
+				{of ? <DotGrid of={of} lit={Math.round(value * p)} /> : null}
 				<div style={{fontFamily: FONT, fontSize, lineHeight: 1, color: theme.accent, textShadow: outline(6)}}>
 					{shown}
 					{of ? <span style={{color: 'white', fontSize: 70}}> / {of}</span> : null}
