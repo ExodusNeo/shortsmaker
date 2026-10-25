@@ -30,31 +30,40 @@ def seo_pass(shorts: list[dict], ch: dict | None = None) -> None:
     research = []
     for i, s in enumerate(shorts):
         subject = s.get("subject") or s["title"]
-        seeds = dict.fromkeys([subject, f"{subject} facts", f"why {subject}"] + s.get("wiki_articles", [])[1:3]
-                              + s.get("search_terms", []))
+        seeds = dict.fromkeys([subject, f"{subject} explained", f"why {subject}"] + s.get("wiki_articles", [])[1:3]
+                              + s.get("search_terms", [])[:4] + ch.get("research_seeds", [])[:2])
         suggestions = {q: got for q in seeds if (got := search_suggestions(q))}  # each list: most-searched first
-        research.append({"index": i, "title": s["title"], "description": s.get("description", ""),
+        research.append({"index": i, "subject": subject, "title": s["title"], "description": s.get("description", ""),
                          "hook_sentence": re.split(r"(?<=[.!?])\s+", s["scenes"][0]["narration"].strip())[0],
                          "hook_text": s.get("hook_text"), "thumbnail_text": s.get("thumbnail_text"),
                          "script": " ".join(sc["narration"] for sc in s["scenes"]),
                          "fact_check_corrections": s.get("fact_check", []),
                          "youtube_search_suggestions": suggestions})
-    data = llm.ask_ai(f"""You are a YouTube SEO specialist for a Shorts channel{f' in this niche: {niche}' if niche else ''}. For each Short
+    data = llm.ask_ai(f"""You are a YouTube SEO & Shorts Feed strategist for a Shorts channel{f' in this niche: {niche}' if niche else ''}. For each Short
 below you get its draft metadata, its script, what viewers see in the first second (hook_sentence
 spoken, hook_text big on screen, thumbnail_text), and REAL YouTube autocomplete phrases, grouped by what
 was typed, each list in YouTube's order: most-searched first (some are irrelevant, e.g. unrelated songs
 or movies with the same name: ignore those).
 {f"Titles of the top recent Shorts in this niche, by views per day (learn their patterns, never copy them):{chr(10)}{json.dumps(leaders, ensure_ascii=False)}{chr(10)}" if leaders else ""}{f"How our own posted Shorts did (title, views, notes):{chr(10)}{results}{chr(10)}" if results else ""}For each Short write:
-- title: under 60 characters, and its first 40 characters must work alone (the Shorts player can cut
-  the rest). Curiosity-driven, containing the most-searched relevant phrase near the start. It must
-  promise what the hook delivers without repeating the hook_sentence, hook_text or thumbnail_text
-  (viewers see all of them together). No "#shorts", no emoji, no clickbait that the video doesn't deliver.
+- title: under 60 characters, and its first 40 characters must work alone (the Shorts player and shelf cut
+  the rest). Lead with the scroll-stopping anomaly, dollar figure, or broadly famous anchor entity (e.g.
+  "NBA", "Wall Street", "$800M", "U.S. Navy", "Fake Bonds")—NEVER start the title with an obscure person's
+  or company's name that casual viewers don't already recognize, and NEVER use dry textbook phrasing ("The X
+  of Y in 1923") or pipe suffixes ("| Match King"). Write a punchy human curiosity hook (e.g. "How a Dead
+  Team Made $800M Off the NBA", "How the 'Match King' Bought Countries With Fake Bonds", "He Bought 98% of
+  a Stock—So Wall Street Changed the Rules"). It must promise what the hook delivers without repeating
+  hook_sentence, hook_text or thumbnail_text word-for-word. No "#shorts", no emoji, no clickbait that the
+  video doesn't deliver.
 - Title, description and pinned comment may only claim what the script says. fact_check_corrections
   lists claims our fact check removed as false or unproven: never bring one back.
-- description: first sentence naturally contains the main search phrase (it shows in search
-  results), the second a different relevant search phrase; 2-3 sentences total; then a line with
-  exactly 3 relevant hashtags, #shorts last.
-- tags: 10-15, mixing the relevant real search phrases with broader niche terms.
+- description: Sentence 1 MUST naturally include both the exact historical subject/person name (`subject`)
+  and the main search phrase (it shows in search results and indexes exact-name queries); Sentence 2-3
+  weaves in a broader category/mechanism search phrase (e.g. "short squeeze", "contract loophole",
+  "financial fraud"); 2-3 sentences total; then a new line with 3 hashtags: the first 2 MUST be broad,
+  high-traffic audience-cohort hashtags (e.g. #Economics, #Finance, #WallStreet, #SportsBusiness,
+  #BusinessHistory, #History—NEVER an obscure proper-noun hashtag like #IvarKreuger), and #shorts last.
+- tags: 12-15, combining exact proper nouns from the story, relevant YouTube autocomplete phrases, and
+  broad high-volume niche category terms so YouTube's Shorts Feed matches the right viewer cohort.
 - pinned_comment: one provocative debate question or moral dilemma about the character's choices or the situation (e.g. "Was the Navy right to let them walk free, or was the prank too humiliating to forgive?", "Would you trust a baboon to run a train line if he never made one mistake?"). Never generic "What do you think?" or "Did you know?" — give viewers an immediate reason to take a side in the comments.
 Shorts: {json.dumps(research, ensure_ascii=False)}
 Reply with ONLY JSON: {{"shorts": [{{"index": 0, "title": "...", "description": "...",
@@ -63,8 +72,11 @@ Reply with ONLY JSON: {{"shorts": [{{"index": 0, "title": "...", "description": 
         i = r.get("index")
         if isinstance(i, int) and 0 <= i < len(shorts) and r.get("title") and r.get("tags"):
             shorts[i].update({k: r[k] for k in ("title", "description", "tags", "pinned_comment") if r.get(k)})
-    for s in shorts:  # emoji in titles: no search value, off-tone; the pinned comment may keep them
-        s["title"] = re.sub(r"\s{2,}", " ", re.sub(r"[\U0001F000-\U0001FAFF☀-➿️‍]", "", s["title"])).strip()
+    for s in shorts:  # emoji & pipe suffixes in titles: no search value, off-tone; the pinned comment may keep emoji
+        t = re.sub(r"\s{2,}", " ", re.sub(r"[\U0001F000-\U0001FAFF☀-➿️‍]", "", s["title"])).strip()
+        if " | " in t and len(t.split(" | ")[0].strip()) >= 20:
+            t = t.split(" | ")[0].strip()
+        s["title"] = t
 
 
 def srt(words: list[tuple[float, float, str]], path: Path) -> None:
