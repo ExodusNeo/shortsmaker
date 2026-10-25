@@ -22,3 +22,17 @@ Subscribers gained:
 Stayed to watch (%):
 Average % viewed:
 My notes:
+
+## Ivar Kreuger's Loan-for-Monopoly Machine | Match King
+Made: 2026-10-25 | Written by: Claude (solo) | Length: 0:49.0 | Folder: output\weird-economics\2026-10-25_ivar-kreuger-s-loan-for-monopoly-machine-match-kin
+Topic: Ivar Kreuger, Sweden's 'Match King', worked out that matches were a bigger business than banking. He lent cash-strapped governments huge sums, including $75 million to France and $125 million to Weimar Germany, and in return got a legal national monopoly on matches. By 1930 he controlled about two-thirds of the world's match production. The twist: the whole empire was really a pyramid that needed constant refinancing, propped up by $142 million in Italian government bonds he forged himself. It fell apart when he shot himself in Paris in 1932, which set off the 'Kreuger Crash'. | Story shape: rise and fall
+Hook line: "A match tycoon forged $142 million in Italian bonds." | Hook title: WHY FAKE ITALY'S DEBT?
+
+Posted on:
+Views:
+Likes:
+Comments:
+Subscribers gained:
+Stayed to watch (%):
+Average % viewed:
+My notes:

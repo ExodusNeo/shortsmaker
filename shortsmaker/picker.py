@@ -132,6 +132,10 @@ For reference, their file titles: {json.dumps(titles, ensure_ascii=False)}""",
     chosen, taken = [], set()
     catalog = short.get("catalog") or []
     cat_nums = [e["n"] for e in catalog if isinstance(e, dict) and isinstance(e.get("n"), int) and not e.get("reject")]
+    main_people = [p for p in dict.fromkeys(
+        [short.get("character") or ""] + [s["person"]["name"] for s in short["scenes"] if s.get("person") and s["person"].get("name")]
+    ) if p]
+    portrait_bg_used = False
     for i in range(len(short["scenes"])):
         sc = short["scenes"][i]
         result = {"bg": None, "person": None}
@@ -147,6 +151,13 @@ For reference, their file titles: {json.dumps(titles, ensure_ascii=False)}""",
                      and not plan_rules.is_person_portrait(cands[n - 1], sc["person"]["name"], catalog, n)),
                     None,
                 )
+        is_main_portrait = (
+            isinstance(bg_num, int) and 1 <= bg_num <= len(cands)
+            and any(plan_rules.is_person_portrait(cands[bg_num - 1], name, catalog, bg_num) for name in main_people)
+        )
+        if is_main_portrait and (portrait_bg_used or (i > 0 and sc.get("graphic"))):
+            bg_num = None
+            is_main_portrait = False
         for kind, num in (("bg", bg_num), ("person", per_num)):
             c = cands[num - 1] if isinstance(num, int) and 1 <= num <= len(cands) else None
             result[kind] = None
@@ -164,6 +175,8 @@ For reference, their file titles: {json.dumps(titles, ensure_ascii=False)}""",
                     result[kind] = (img, c["title"], c["credit"])
                     if kind == "bg":
                         result["site"] = c.get("site", "Wikimedia Commons")
+                        if is_main_portrait:
+                            portrait_bg_used = True
                     taken.add(c["url"])
         if pool is not None and sc.get("pic"):
             got, why = picks.get(i + 1, {}).get("bg"), str(picks.get(i + 1, {}).get("swap_why") or "").strip()[:120]

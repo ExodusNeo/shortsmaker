@@ -885,6 +885,20 @@ def test_fill_money_graphics_and_caps():
                                      {"narration": "so Saunders lost $9 million, all because"}]) is True
     assert plan_rules.is_loop_short([{"narration": "A passenger looked out."},
                                      {"narration": "and half a bottle of beer every week."}]) is False
+    # Glass-plate negative mount border trimming (noisy outer negative strip + flat inner mount border)
+    from shortsmaker import photo_prep
+    im = Image.new("RGB", (400, 400), (120, 110, 100))
+    for y in range(400):
+        for x in range(400):
+            if 20 <= x < 380 and 20 <= y < 380:
+                im.putpixel((x, y), ((x * 7 + y * 13) % 200 + 30, (x * 5 + y * 11) % 200 + 30, (x * 3 + y * 17) % 200 + 30))
+            elif 6 <= x < 20 or 380 <= x < 394 or 6 <= y < 20 or 380 <= y < 394:
+                im.putpixel((x, y), (20, 20, 20))  # flat inner mount border
+            else:
+                im.putpixel((x, y), ((x * 37 + y * 19) % 255, (x * 37 + y * 19) % 255, (x * 37 + y * 19) % 255))  # noisy outer negative edge
+    trimmed = photo_prep.trim_borders(im)
+    assert trimmed.size == (360, 360)
+
 
 
 if __name__ == "__main__":

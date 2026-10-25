@@ -214,9 +214,10 @@ def custom_rules(slot: int) -> str:
    crosses a box listed in avoid. Never FlowArrow, never hand-drawn arrow lines or arrowheads (<marker>).
 6. MOVEMENT: anything that moves across the stage uses travel(t, at, from, to): it never goes faster than MIN_MOVE
    (0.9 s). No quick hops or zips; things land, then hold still while they are read.
-7. TIMING: each element appears on a spoken beat (cueAt(full, i, start, end, n)); one idea per scene, at most ~6
-   elements; text never smaller than the Card's own sizing. Animate only with interpolate / spring / appear / popIn /
-   travel driven by `t`: CSS transition, animation and @keyframes don't render.
+7. TIMING: each element appears on a spoken beat (cueAt(full, i, start, end, n)); the first card, photo, or core
+   diagram frame MUST appear at `c[0]` (`<= start + 0.15s`) so the scene never opens on an empty stage; one idea per
+   scene, at most ~6 elements; text never smaller than the Card's own sizing. Animate only with interpolate / spring /
+   appear / popIn / travel driven by `t`: CSS transition, animation and @keyframes don't render.
 8. Be inventive inside these rules: your own <svg> drawings (a cross-section, a gauge, a route, a scale, a timeline),
    PhotoCutout for real photos in full.photos, ClockDial, CalloutTag, StampBadge, the skin's colours (skinOf(full.skin)).
 9. TASTE (numbers from claude-motion's motion-design skill): arrivals ease out Easing.bezier(0.16, 1, 0.3, 1), exits ease

@@ -116,7 +116,8 @@ def gather_pool(articles: list[str], people: list[str], image_terms: list[str], 
     for q in scene_imgs:
         hits = image_sources.commons_search(q)
         if len(hits) < 2 and len(q.split()) > 2:
-            hits += image_sources.commons_search(" ".join(q.split()[:2]), 2)
+            core = [w for w in q.split() if w.lower() not in {"vintage", "old", "historic", "historical", "antique", "classic", "rare", "photo", "picture", "view", "exterior", "interior", "scan"}]
+            hits += image_sources.commons_search(" ".join((core or q.split())[:3]), 2)
         add(hits)
     for name in dict.fromkeys(names):
         surname = plan_rules.words_of(name)[-1:]

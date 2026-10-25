@@ -44,20 +44,22 @@ def trim_borders(img: Image.Image) -> Image.Image:
         mid = px[len(px) // 2]
         return sum(abs(v - mid) <= 16 for v in px) >= 0.9 * len(px)
 
-    def border(line) -> bool:  # plain, or one of up to 3 soft edge lines just before more plain border
-        return any(plain(line(k)) for k in range(4))
+    def border(line, rem: int) -> bool:  # plain, or up to 3 soft edge lines, or a numbered negative strip outside a flat mount
+        return (any(plain(line(k)) for k in range(min(4, rem)))
+                or any(plain(line(k)) and plain(line(k + 1)) for k in range(4, min(13, rem - 1))))
 
+    lim_w, lim_h = int(g.width * 0.15), int(g.height * 0.15)
     changed = True
     while changed:  # borders nest (black frame, then a white strip): repeat until nothing more is plain
         changed = False
         l, t, r, b = box
-        if l < g.width * 0.15 and border(lambda k: (l + k, t, l + k + 1, b)):
+        if l < lim_w and border(lambda k: (l + k, t, l + k + 1, b), lim_w - l):
             box[0], changed = l + 1, True
-        if r > g.width * 0.85 and border(lambda k: (r - k - 1, t, r - k, b)):
+        if r > g.width - lim_w and border(lambda k: (r - k - 1, t, r - k, b), r - (g.width - lim_w)):
             box[2], changed = r - 1, True
-        if t < g.height * 0.15 and border(lambda k: (l, t + k, r, t + k + 1)):
+        if t < lim_h and border(lambda k: (l, t + k, r, t + k + 1), lim_h - t):
             box[1], changed = t + 1, True
-        if b > g.height * 0.85 and border(lambda k: (l, b - k - 1, r, b - k)):
+        if b > g.height - lim_h and border(lambda k: (l, b - k - 1, r, b - k), b - (g.height - lim_h)):
             box[3], changed = b - 1, True
     sx, sy = img.width / g.width, img.height / g.height
     return img.crop((round(box[0] * sx), round(box[1] * sy), round(box[2] * sx), round(box[3] * sy)))

@@ -145,11 +145,30 @@ def ov_get(url: str) -> bytes | None:
 
 def get_image(url: str, what: str) -> bytes | None:
     """Wikimedia files via wm_get() (contact User-Agent, spacing, cache), Openverse via its rate
-    limit, anything else (museums, Internet Archive, NASA) as a plain download. None on failure."""
+    limit, Internet Archive services/img upgraded to the full-res item file on full downloads,
+    anything else (museums, NASA) as a plain download. None on failure."""
     if "wikimedia.org" in url:
         return wm_get(url, what)
     if "api.openverse.org" in url:
         return ov_get(url)
+    if url.startswith("https://archive.org/services/img/") and what != "thumbnail":
+        ident = url.removeprefix("https://archive.org/services/img/").split("?")[0]
+        cached = CACHE / f"ia-{hashlib.sha1(ident.encode()).hexdigest()}"
+        if cached.exists():
+            return cached.read_bytes()
+        try:
+            meta = json.loads(media_tools.fetch(f"https://archive.org/metadata/{ident}", 15, footage.FILM_UA))
+            host, folder = meta.get("d1") or meta.get("d2"), meta.get("dir")
+            name = next((f["name"] for f in meta.get("files", [])
+                         if str(f.get("name", "")).lower().endswith((".jpg", ".jpeg", ".png"))
+                         and not str(f["name"]).endswith("_thumb.jpg") and f["name"] != "__ia_thumb.jpg"), None)
+            if host and folder and name:
+                data = media_tools.fetch(f"https://{host}{folder}/{urllib.parse.quote(name)}", 30, footage.FILM_UA)
+                CACHE.mkdir(exist_ok=True)
+                cached.write_bytes(data)
+                return data
+        except Exception:
+            pass
     try:
         return media_tools.fetch(url, 60, footage.FILM_UA)
     except Exception as e:

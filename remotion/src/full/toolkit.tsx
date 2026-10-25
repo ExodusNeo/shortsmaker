@@ -17,8 +17,12 @@ export const appear = (t: number, at: number, dur = 0.45) =>
 export const popIn = (t: number, at: number, fps = 30) =>
 	t < at ? 0 : spring({frame: (t - at) * fps, fps, config: {damping: 13, stiffness: 180}});
 
-/** Safe cue lookup: returns `full.cues[i]` or an evenly spaced time in the scene. */
+/** Safe cue lookup: returns `full.cues[i]` or an evenly spaced time in the scene (clamping cue 0 so the stage never opens blank). */
 export const cueAt = (full: CustomFull, i: number, start: number, end: number, total = 3) => {
+	if (i === 0) {
+		const c0 = full.cues && full.cues[0] !== undefined ? full.cues[0] : start + 0.1;
+		return Math.min(c0, start + 0.15);
+	}
 	if (full.cues && full.cues[i] !== undefined) return full.cues[i];
 	const span = Math.max(0.8, end - start - 1.2);
 	return start + 0.35 + (span * i) / Math.max(1, total);

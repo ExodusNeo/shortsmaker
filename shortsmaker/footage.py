@@ -107,7 +107,7 @@ def archive_films(query: str, limit: int = 2) -> list[dict]:
     if not clean:
         return []
     search = "https://archive.org/advancedsearch.php?" + urllib.parse.urlencode(
-        {"q": f"(title:({clean}) OR subject:({clean})) AND mediatype:movies AND NOT collection:(opensource_audio OR audio)",
+        {"q": f"(title:({clean}) OR subject:({clean})) AND mediatype:movies AND NOT collection:(opensource_audio OR audio OR tv OR television)",
          "fl[]": ["identifier", "title", "creator", "licenseurl"], "sort[]": "downloads desc", "rows": 6, "output": "json"},
         doseq=True)
     found = []
