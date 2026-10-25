@@ -46,7 +46,8 @@
     "In the 1925 diphtheria outbreak in Nome, Alaska, sled dogs relayed antitoxin serum across about 674 miles of frozen wilderness. Togo, a small 12-year-old husky led by musher Leonhard Seppala, ran the longest and most dangerous leg, about 260 miles there and back, including a crossing of breaking sea ice on Norton Sound in a blizzard. The twist is that the dog who ran the final 55 miles, Balto, got the fame and the statue in New York's Central Park. Balto later ended up in a cheap sideshow until Cleveland schoolchildren raised money to rescue him.",
     "Juan Pujol García, a Spanish chicken farmer, was turned down by British intelligence, so he became a German spy instead and sent Berlin 'reports from London' that he made up in Lisbon from guidebooks and newsreels, inventing a network of 27 fake agents. Britain then hired him, and his lies helped convince Germany that D-Day in Normandy was only a decoy. The twist is that he was awarded both the German Iron Cross and the British MBE, then faked his own death in Africa and vanished to Venezuela until a historian tracked him down in 1984.",
     "In 1910, British prankster Horace de Vere Cole sent a fake telegram that tricked the Royal Navy into rolling out a red carpet on its top-secret flagship, HMS Dreadnought, for the 'Emperor of Abyssinia'—actually Cole and five friends, including a young Virginia Woolf, in robes and glued-on beards shouting 'Bunga! Bunga!' at the guns while Woolf's own cousin gave them the tour without recognizing her. The twist is that when Cole exposed the stunt in the press, the furious Navy found he had broken no law, and when the real Ethiopian ruler visited England later, crowds yelled 'Bunga! Bunga!' at his carriage and he asked to inspect the Navy's ships too.",
-    "In 1941, Royal Air Force fighter ace Douglas Bader, who flew with two artificial legs after a pre-war crash, was shot down over occupied France and lost one of his prosthetics while escaping the cockpit. The British and Germans arranged a temporary ceasefire so the RAF could parachute a replacement leg into France, but the twist is that Bader strapped it on, immediately used it to escape out a hospital window on a bedsheet rope, and forced the Germans to lock his legs away every night."
+    "In 1941, Royal Air Force fighter ace Douglas Bader, who flew with two artificial legs after a pre-war crash, was shot down over occupied France and lost one of his prosthetics while escaping the cockpit. The British and Germans arranged a temporary ceasefire so the RAF could parachute a replacement leg into France, but the twist is that Bader strapped it on, immediately used it to escape out a hospital window on a bedsheet rope, and forced the Germans to lock his legs away every night.",
+    "While confined in an asylum, former army surgeon William Chester Minor volunteered for the new Oxford English Dictionary and sent in over ten thousand historical citations, becoming the project's single most prolific contributor. The twist is that editor James Murray spent twenty years believing Minor was a wealthy gentleman scholar, only to discover upon visiting in person that his greatest researcher was an inmate in Broadmoor Criminal Lunatic Asylum."
   ],
   "research_seeds": {
     "handles": [
@@ -78,9 +79,9 @@
   },
   "cta_line": "for more strange history",
   "recent_shapes": [
-    "one person against the odds",
     "chain of unlikely events",
-    "the hidden reason"
+    "the hidden reason",
+    "mystery solved"
   ],
   "brain": "gemini-only",
   "veo": true,

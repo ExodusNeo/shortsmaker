@@ -153,7 +153,7 @@ def trend_research(ch: dict) -> list[dict]:
     channels drop out), plus channels found through YouTube search. Their recent Shorts are ranked
     by views per day. Cached for the day; returns [] if YouTube can't be reached."""
     today = str(date.today())
-    if session.RESEARCH.exists():
+    if session.RESEARCH.is_file():
         cached = json.loads(session.RESEARCH.read_text(encoding="utf-8"))
         if cached.get("date") == today and cached.get("niche") == ch["niche"]:
             return cached["shorts"]

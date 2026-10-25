@@ -15,7 +15,7 @@ def choose_images(short: dict, work: Path, ch: dict | None = None) -> list[dict]
     NASA), show numbered contact sheets to the AI visual editor, and let it match video clips or stills
     to every scene. Picked video frames download ~14s around that moment and credit the owner on screen."""
     print("  researching images and video footage across sources...")
-    ch = ch or (channel_profiles.load_channel() if session.CHANNEL.exists() else {})
+    ch = ch or (channel_profiles.load_channel() if session.CHANNEL.is_file() else {})
     niche = ch.get("niche", "educational")
     names = [sc["person"]["name"] for sc in short["scenes"] if sc["person"]]
     scene_imgs = list(dict.fromkeys(sc["image_search"] for sc in short["scenes"] if sc.get("image_search")))

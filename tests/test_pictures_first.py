@@ -449,6 +449,60 @@ def test_seo_pass_empty_no_ai():
     assert ai.prompts == []
 
 
+def test_seo_pass_research_seeds_dict_and_list():
+    short = {
+        "title": "Old Title",
+        "subject": "Jack Churchill",
+        "description": "Old desc",
+        "scenes": [{"narration": "He charged with a sword and a longbow. It sounds impossible."}],
+        "wiki_articles": ["Jack Churchill", "Commandos", "WW2"],
+        "search_terms": ["mad jack churchill", "jack churchill ww2"]
+    }
+    channel_dict = {
+        "niche": "Strange history",
+        "research_seeds": {
+            "handles": ["@HistoryMatters"],
+            "queries": ["weird history facts", "strange but true history"],
+            "dropped": []
+        }
+    }
+    ai_reply = {
+        "shorts": [{
+            "index": 0,
+            "title": "Why Captors Pampered This Commando",
+            "description": "Jack Churchill defied normal warfare. #History #WW2 #shorts",
+            "tags": ["Jack Churchill", "history", "WW2"],
+            "pinned_comment": "Would you carry a sword into WW2?"
+        }]
+    }
+    saved_suggestions = seo.search_suggestions
+    saved_trend = channel_profiles.trend_research
+    seo.search_suggestions = lambda q: [f"{q} suggestion 1"]
+    channel_profiles.trend_research = lambda ch: [{"title": "Top Leader Short"}]
+    try:
+        with fake_ai(ai_reply) as ai:
+            shorts = [dict(short)]
+            seo.seo_pass(shorts, channel_dict)
+            assert shorts[0]["title"] == "Why Captors Pampered This Commando"
+            assert "weird history facts" in ai.prompts[0]
+            assert "Jack Churchill" in ai.prompts[0]
+
+        channel_list = {"niche": "Strange history", "research_seeds": ["weird history facts"]}
+        with fake_ai(ai_reply):
+            shorts = [dict(short)]
+            seo.seo_pass(shorts, channel_list)
+            assert shorts[0]["title"] == "Why Captors Pampered This Commando"
+
+        channel_none = {"niche": "Strange history", "research_seeds": None}
+        with fake_ai(ai_reply):
+            shorts = [dict(short)]
+            seo.seo_pass(shorts, channel_none)
+            assert shorts[0]["title"] == "Why Captors Pampered This Commando"
+    finally:
+        seo.search_suggestions = saved_suggestions
+        channel_profiles.trend_research = saved_trend
+
+
 def test_both_mode_pools_follow_reply_position():
     def reply(prompt):
         if "You choose stories" in prompt:

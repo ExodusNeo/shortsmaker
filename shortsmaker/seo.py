@@ -23,20 +23,27 @@ def seo_pass(shorts: list[dict], ch: dict | None = None) -> None:
     if not shorts:
         return
     print("Researching search keywords...")
-    ch = ch or (channel_profiles.load_channel() if session.CHANNEL.exists() else {})
+    ch = ch or (channel_profiles.load_channel() if session.CHANNEL.is_file() else {})
     niche = ch.get("niche", "")
     leaders = [t["title"] for t in channel_profiles.trend_research(ch)[:15]] if niche else []  # cached for the day
     results = logbook.logbook_results()
     research = []
+    rseeds = ch.get("research_seeds") or {}
+    ch_queries = (rseeds.get("queries", []) if isinstance(rseeds, dict)
+                  else rseeds if isinstance(rseeds, list) else [])
     for i, s in enumerate(shorts):
         subject = s.get("subject") or s["title"]
-        seeds = dict.fromkeys([subject, f"{subject} explained", f"why {subject}"] + s.get("wiki_articles", [])[1:3]
-                              + s.get("search_terms", [])[:4] + ch.get("research_seeds", [])[:2])
+        query_candidates = ([subject, f"{subject} explained", f"why {subject}"]
+                            + (s.get("wiki_articles") or [])[1:3]
+                            + (s.get("search_terms") or [])[:4]
+                            + ch_queries[:2])
+        seeds = dict.fromkeys([q.strip() for q in query_candidates if isinstance(q, str) and q.strip()])
         suggestions = {q: got for q in seeds if (got := search_suggestions(q))}  # each list: most-searched first
+        first_narration = s["scenes"][0]["narration"].strip() if s.get("scenes") and s["scenes"][0].get("narration") else ""
         research.append({"index": i, "subject": subject, "title": s["title"], "description": s.get("description", ""),
-                         "hook_sentence": re.split(r"(?<=[.!?])\s+", s["scenes"][0]["narration"].strip())[0],
+                         "hook_sentence": re.split(r"(?<=[.!?])\s+", first_narration)[0] if first_narration else "",
                          "hook_text": s.get("hook_text"), "thumbnail_text": s.get("thumbnail_text"),
-                         "script": " ".join(sc["narration"] for sc in s["scenes"]),
+                         "script": " ".join(sc.get("narration", "") for sc in s.get("scenes", [])),
                          "fact_check_corrections": s.get("fact_check", []),
                          "youtube_search_suggestions": suggestions})
     data = llm.ask_ai(f"""You are a YouTube SEO & Shorts Feed strategist for a Shorts channel{f' in this niche: {niche}' if niche else ''}. For each Short

@@ -97,7 +97,7 @@ JUDGE_MIN_VIEWS = 100  # below this, a Short's watch percentages come from a han
 def logbook_results() -> str:
     """The logbook entries the owner has filled in (Views written down), at most the last 30. Entries under
     JUDGE_MIN_VIEWS get a note, or the planner learns from noise (Cardiff's 81% stayed-to-watch was 28 views)."""
-    if not session.LOG.exists():
+    if not session.LOG.is_file():
         return ""
     out = []
     for e in session.LOG.read_text(encoding="utf-8-sig").split("\n## ")[1:]:
