@@ -25,6 +25,7 @@ def test_graph_wiring():
     assert by["BasicScheduler"]["inputs"]["steps"] == 8 and by["RandomNoise"]["inputs"]["noise_seed"] == 7
     assert by["LoadImage"]["inputs"]["image"] == "start1.jpg"
     assert by["SaveVideo"]["inputs"]["filename_prefix"] == "h3/scene1"
+    assert "VAEDecodeAudio" not in by and "audio" not in by["CreateVideo"]["inputs"]
     for node in g.values():  # every link points at a node that exists
         for v in node["inputs"].values():
             if isinstance(v, list):
@@ -78,7 +79,7 @@ def test_notebook_cells():
     assert nb["cells"][0]["cell_type"] == "markdown" and "gutierrezdishann@gmail.com" in cells[0]
     code = "\n".join(c for c, cell in zip(cells, nb["cells"]) if cell["cell_type"] == "code")
     for needle in ("Comfy-Org/MiniMax-H3", "lightx2v/Minimax-h3-Turbo", h3_run.UNET, h3_run.TEXT, h3_run.VIDEO_VAE,
-                   h3_run.AUDIO_VAE, h3_run.TURBO_LORA, "main.py", "8188", "files.upload", "h3_run.main(",
+                   h3_run.TURBO_LORA, "main.py", "8188", "files.upload", "h3_run.main(",
                    "files.download('clips.zip')"):
         assert needle in code, needle
     run_cell = next(c for c in cells if "h3_run.main(" in c)

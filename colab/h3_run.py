@@ -19,11 +19,10 @@ W, H, FPS = 768, 1344, 24  # H3's native portrait canvas (768px short edge, cap 
 UNET = "minimax_h3_fl2va_pruned_bf16.safetensors"
 TEXT = "qwen3vl_32b_minimax_h3_int8_convrot.safetensors"
 VIDEO_VAE = "minimax_h3_video_vae_fp16.safetensors"
-AUDIO_VAE = "minimax_h3_audio_vae_fp32.safetensors"
 TURBO_LORA = "minimax_h3_fl2v_turbo_8step_v1.0_comfyui_bf16.safetensors"
 REQUIRED = ("UNETLoader", "CLIPLoader", "VAELoader", "LoadImage", "MiniMaxH3ImageToVideo", "LoraLoaderModelOnly",
             "BasicScheduler", "KSamplerSelect", "RandomNoise", "BasicGuider", "SamplerCustomAdvanced", "VAEDecode",
-            "VAEDecodeAudio", "CreateVideo", "SaveVideo")
+            "CreateVideo", "SaveVideo")
 
 
 def frames(seconds: float) -> int:
@@ -43,7 +42,6 @@ def graph(prompt: str, image: str, length: int, seed: int, turbo: bool, prefix: 
         "unet": {"class_type": "UNETLoader", "inputs": {"unet_name": UNET, "weight_dtype": "default"}},
         "text": {"class_type": "CLIPLoader", "inputs": {"clip_name": TEXT, "type": "minimax", "device": "default"}},
         "vae": {"class_type": "VAELoader", "inputs": {"vae_name": VIDEO_VAE}},
-        "avae": {"class_type": "VAELoader", "inputs": {"vae_name": AUDIO_VAE}},
         "img": {"class_type": "LoadImage", "inputs": {"image": image}},
         "i2v": {"class_type": "MiniMaxH3ImageToVideo", "inputs": {
             "clip": ["text", 0], "vae": ["vae", 0], "first_frame": ["img", 0], "prompt": prompt,
@@ -57,8 +55,7 @@ def graph(prompt: str, image: str, length: int, seed: int, turbo: bool, prefix: 
             "noise": ["noise", 0], "guider": ["guider", 0], "sampler": ["sampler", 0], "sigmas": ["sched", 0],
             "latent_image": ["i2v", 1]}},
         "decode": {"class_type": "VAEDecode", "inputs": {"samples": ["sample", 0], "vae": ["vae", 0]}},
-        "adecode": {"class_type": "VAEDecodeAudio", "inputs": {"samples": ["sample", 0], "vae": ["avae", 0]}},
-        "video": {"class_type": "CreateVideo", "inputs": {"images": ["decode", 0], "audio": ["adecode", 0], "fps": FPS}},
+        "video": {"class_type": "CreateVideo", "inputs": {"images": ["decode", 0], "fps": FPS}},
         "save": {"class_type": "SaveVideo", "inputs": {
             "video": ["video", 0], "filename_prefix": prefix, "format": "auto", "format.codec": "auto"}},  # nested input
     }
