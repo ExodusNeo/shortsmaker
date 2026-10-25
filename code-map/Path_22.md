@@ -1,16 +1,22 @@
 ---
 source_file: ""
 type: "code"
-community: "draft_rules"
+community: "Review Auto-Fixes"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/draft_rules
+  - community/Review_Auto-Fixes
 ---
 
 # Path
 
 ## Connections
-- [[draft_rules()]] - `references` [EXTRACTED]
+- [[apply_review_fixes()]] - `references` [EXTRACTED]
+- [[first_second_check()]] - `references` [EXTRACTED]
+- [[paint_new()]] - `references` [EXTRACTED]
+- [[pool_pictures()]] - `references` [EXTRACTED]
+- [[quality_check()]] - `references` [EXTRACTED]
+- [[storyboard()]] - `references` [EXTRACTED]
+- [[visual_review()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/draft_rules
+#graphify/code #graphify/EXTRACTED #community/Review_Auto-Fixes

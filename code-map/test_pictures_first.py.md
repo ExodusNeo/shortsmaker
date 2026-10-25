@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_pictures_first.py"
 type: "code"
-community: "test_pictures_first.py"
+community: "Pictures-First Pool Tests"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_pictures_firstpy
+  - community/Pictures-First_Pool_Tests
 ---
 
 # test_pictures_first.py
@@ -71,6 +71,8 @@ tags:
 - [[test_empty_pool_drops_topic_without_ai()]] - `contains` [EXTRACTED]
 - [[test_gather_pool_shape()]] - `contains` [EXTRACTED]
 - [[test_gather_pool_skip_and_limits()]] - `contains` [EXTRACTED]
+- [[test_on_topic_ignores_a_lone_shared_name()]] - `contains` [EXTRACTED]
+- [[test_pixabay_keeps_only_on_topic_videos()]] - `contains` [EXTRACTED]
 - [[test_plan_note_already_used()]] - `contains` [EXTRACTED]
 - [[test_planned_full_pictures_not_sent_when_empty()]] - `contains` [EXTRACTED]
 - [[test_pool_roundtrip()]] - `contains` [EXTRACTED]
@@ -78,6 +80,7 @@ tags:
 - [[test_prompts_carry_picture_list()]] - `contains` [EXTRACTED]
 - [[test_prune_cache_handles_pools()]] - `contains` [EXTRACTED]
 - [[test_seo_pass_empty_no_ai()]] - `contains` [EXTRACTED]
+- [[test_seo_pass_research_seeds_dict_and_list()]] - `contains` [EXTRACTED]
 - [[test_small_pool_skips_ai()]] - `contains` [EXTRACTED]
 - [[test_topic_prompt_asks_backups_and_visuals()]] - `contains` [EXTRACTED]
 - [[test_usable_counts_film_once()]] - `contains` [EXTRACTED]
@@ -86,4 +89,4 @@ tags:
 - [[traceback]] - `imports` [EXTRACTED]
 - [[writing.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_pictures_firstpy
+#graphify/code #graphify/EXTRACTED #community/Pictures-First_Pool_Tests

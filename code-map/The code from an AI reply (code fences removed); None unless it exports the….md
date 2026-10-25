@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/style_lab.py"
 type: "rationale"
-community: "test_style.py"
+community: "Obsidian Vault Logbook"
 location: "L131"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/test_stylepy
+  - community/Obsidian_Vault_Logbook
 ---
 
 # The code from an AI reply (code fences removed); None unless it exports the…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[clean_style_code()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/test_stylepy
+#graphify/rationale #graphify/EXTRACTED #community/Obsidian_Vault_Logbook

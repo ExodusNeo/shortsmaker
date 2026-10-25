@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_story.py"
 type: "code"
-community: "test_full_scenes.py"
+community: "Narration Number Speech"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_full_scenespy
+  - community/Narration_Number_Speech
 ---
 
 # test_story.py
@@ -29,9 +29,13 @@ tags:
 - [[test_qwen_voice.py]] - `imports_from` [EXTRACTED]
 - [[test_sentences_running_across_cuts_are_one_take()]] - `contains` [EXTRACTED]
 - [[test_story_problems()]] - `contains` [EXTRACTED]
+- [[test_twist_check_keeps_topics_on_null_or_bad_replies()]] - `contains` [EXTRACTED]
+- [[test_twist_check_needs_wikipedia_text()]] - `contains` [EXTRACTED]
+- [[test_twist_check_rewrites_a_legend_before_writing()]] - `contains` [EXTRACTED]
 - [[test_word_counts_match_the_aligner()]] - `contains` [EXTRACTED]
 - [[test_writer_prompt_has_the_story_rules_and_cut_rule()]] - `contains` [EXTRACTED]
 - [[traceback]] - `imports` [EXTRACTED]
+- [[twist_short()]] - `contains` [EXTRACTED]
 - [[writing.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_full_scenespy
+#graphify/code #graphify/EXTRACTED #community/Narration_Number_Speech

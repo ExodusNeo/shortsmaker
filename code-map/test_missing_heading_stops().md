@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_rules.py"
 type: "code"
-community: "test_rules.py"
-location: "L157"
+community: "Channel Rules Files"
+location: "L159"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_rulespy
+  - community/Channel_Rules_Files
 ---
 
 # test_missing_heading_stops()
@@ -16,4 +16,4 @@ tags:
 - [[stop_text()]] - `calls` [EXTRACTED]
 - [[test_rules.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_rulespy
+#graphify/code #graphify/EXTRACTED #community/Channel_Rules_Files

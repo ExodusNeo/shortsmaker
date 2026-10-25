@@ -1,12 +1,12 @@
 ---
 source_file: "blender/templates.py"
 type: "rationale"
-community: "templates.py"
+community: "Bridge Templates"
 location: "L113"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/templatespy
+  - community/Bridge_Templates
 ---
 
 # Deck on deep plate girders (four lines of them), spliced at every panel point.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[girder_bridge()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/templatespy
+#graphify/rationale #graphify/EXTRACTED #community/Bridge_Templates

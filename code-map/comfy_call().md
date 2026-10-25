@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/gpu.py"
 type: "code"
-community: "json"
-location: "L227"
+community: "Local Voice and Freesound"
+location: "L241"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/json
+  - community/Local_Voice_and_Freesound
 ---
 
 # comfy_call()
@@ -16,4 +16,4 @@ tags:
 - [[json]] - `calls` [EXTRACTED]
 - [[moss_images()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/json
+#graphify/code #graphify/EXTRACTED #community/Local_Voice_and_Freesound

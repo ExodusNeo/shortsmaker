@@ -1,18 +1,20 @@
 ---
 source_file: ""
 type: "concept"
-community: "build_scene.py"
+community: "Blender Camera Shots"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/build_scenepy
+  - community/Blender_Camera_Shots
 ---
 
 # math
 
 ## Connections
 - [[audio_mix.py]] - `imports` [EXTRACTED]
+- [[blender_plan.py]] - `imports` [EXTRACTED]
 - [[build_scene.py]] - `imports` [EXTRACTED]
+- [[clamp()]] - `calls` [EXTRACTED]
 - [[direction()]] - `calls` [EXTRACTED]
 - [[failures.py]] - `imports` [EXTRACTED]
 - [[flash_alpha()]] - `calls` [EXTRACTED]
@@ -21,4 +23,4 @@ tags:
 - [[parts.py]] - `imports` [EXTRACTED]
 - [[radians()]] - `calls` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/build_scenepy
+#graphify/concept #graphify/EXTRACTED #community/Blender_Camera_Shots

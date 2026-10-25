@@ -1,12 +1,12 @@
 ---
 source_file: "tools/split_make_shorts.py"
 type: "rationale"
-community: "split_make_shorts.py"
+community: "Script Splitting AST Tools"
 location: "L519"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/split_make_shortspy
+  - community/Script_Splitting_AST_Tools
 ---
 
 # `m.name` -> `owner.name`; `m.subprocess` and other stdlib modules reached…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[rewrite_tests()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/split_make_shortspy
+#graphify/rationale #graphify/EXTRACTED #community/Script_Splitting_AST_Tools

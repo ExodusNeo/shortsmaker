@@ -1,17 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "first_second_check"
+community: "Blender Build Planning"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/first_second_check
+  - community/Blender_Build_Planning
 ---
 
 # Path
 
 ## Connections
-- [[log_short()]] - `references` [EXTRACTED]
-- [[vault_page()]] - `references` [EXTRACTED]
+- [[fake_blender()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/first_second_check
+#graphify/code #graphify/EXTRACTED #community/Blender_Build_Planning

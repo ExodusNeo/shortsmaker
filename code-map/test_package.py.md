@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_package.py"
 type: "code"
-community: "test_full_scenes.py"
+community: "Audio Mix and Shotcut Export"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_full_scenespy
+  - community/Audio_Mix_and_Shotcut_Export
 ---
 
 # test_package.py
@@ -15,13 +15,16 @@ tags:
 - [[Tests for the shortsmaker package wiring (one owner per setting, fakes reach…]] - `rationale_for` [EXTRACTED]
 - [[__init__.py]] - `imports_from` [EXTRACTED]
 - [[audio_mix.py]] - `imports_from` [EXTRACTED]
+- [[channel_profiles.py]] - `imports_from` [EXTRACTED]
 - [[cli.py]] - `imports_from` [EXTRACTED]
 - [[config.py]] - `imports_from` [EXTRACTED]
+- [[editplan.py]] - `imports_from` [EXTRACTED]
 - [[llm.py]] - `imports_from` [EXTRACTED]
 - [[media_tools.py]] - `imports_from` [EXTRACTED]
 - [[motion.py]] - `imports_from` [EXTRACTED]
 - [[os]] - `imports` [EXTRACTED]
 - [[pathlib]] - `imports_from` [EXTRACTED]
+- [[plan_rules.py]] - `imports_from` [EXTRACTED]
 - [[session.py]] - `imports_from` [EXTRACTED]
 - [[shutil]] - `imports` [EXTRACTED]
 - [[sys]] - `imports` [EXTRACTED]
@@ -33,8 +36,16 @@ tags:
 - [[test_fake_reaches_callers()]] - `contains` [EXTRACTED]
 - [[test_ffmpeg_on_path()]] - `contains` [EXTRACTED]
 - [[test_gemini_reviews_get_the_main_model_bulk_pictures_flash()]] - `contains` [EXTRACTED]
+- [[test_gemini_timeout_switches_to_flash()]] - `contains` [EXTRACTED]
+- [[test_person_card_hold_and_exit_gap()]] - `contains` [EXTRACTED]
 - [[test_root()]] - `contains` [EXTRACTED]
+- [[test_run_agy_flags_and_boundaries()]] - `contains` [EXTRACTED]
+- [[test_scene_hold_padding()]] - `contains` [EXTRACTED]
 - [[test_session_shared()]] - `contains` [EXTRACTED]
+- [[test_solo_ask_ai_never_falls_back()]] - `contains` [EXTRACTED]
+- [[test_solo_brain_selection_options()]] - `contains` [EXTRACTED]
+- [[test_solo_edit_scripts_uses_same_ai()]] - `contains` [EXTRACTED]
 - [[traceback]] - `imports` [EXTRACTED]
+- [[writing.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_full_scenespy
+#graphify/code #graphify/EXTRACTED #community/Audio_Mix_and_Shotcut_Export

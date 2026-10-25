@@ -1,20 +1,20 @@
 ---
 source_file: ""
 type: "code"
-community: "make"
+community: "Headless AI Planner Calls"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/make
+  - community/Headless_AI_Planner_Calls
 ---
 
 # Path
 
 ## Connections
-- [[caption_layer()]] - `references` [EXTRACTED]
-- [[make()]] - `references` [EXTRACTED]
-- [[master_gain()]] - `references` [EXTRACTED]
-- [[project_xml()]] - `references` [EXTRACTED]
-- [[remove()]] - `references` [EXTRACTED]
+- [[code_custom_scenes()]] - `references` [EXTRACTED]
+- [[full_props()]] - `references` [EXTRACTED]
+- [[look_and_fix()]] - `references` [EXTRACTED]
+- [[preview_custom()]] - `references` [EXTRACTED]
+- [[preview_sheet()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/make
+#graphify/code #graphify/EXTRACTED #community/Headless_AI_Planner_Calls

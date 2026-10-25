@@ -1,17 +1,20 @@
 ---
 source_file: ""
 type: "code"
-community: "ask_ai"
+community: "Gemini Image Painting"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ask_ai
+  - community/Gemini_Image_Painting
 ---
 
 # Path
 
 ## Connections
-- [[ask_ai()]] - `references` [EXTRACTED]
-- [[run_agy()]] - `references` [EXTRACTED]
+- [[ink_silhouette()]] - `references` [EXTRACTED]
+- [[make_paper()]] - `references` [EXTRACTED]
+- [[paint_instead()]] - `references` [EXTRACTED]
+- [[redraw_custom()]] - `references` [EXTRACTED]
+- [[render_remotion()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ask_ai
+#graphify/code #graphify/EXTRACTED #community/Gemini_Image_Painting

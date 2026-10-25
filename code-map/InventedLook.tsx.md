@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/style/generated/InventedLook.tsx"
 type: "code"
-community: "Halftone.tsx"
+community: "Invented Look Canvas Effects"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Halftonetsx
+  - community/Invented_Look_Canvas_Effects
 ---
 
 # InventedLook.tsx
@@ -20,4 +20,4 @@ tags:
 - [[styleindex.ts]] - `imports_from` [EXTRACTED]
 - [[styletypes.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Halftonetsx
+#graphify/code #graphify/EXTRACTED #community/Invented_Look_Canvas_Effects

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/remotion_render.py"
 type: "code"
-community: "render_remotion"
-location: "L195"
+community: "ASS Captions and Skins"
+location: "L196"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/render_remotion
+  - community/ASS_Captions_and_Skins
 ---
 
 # remotion()
@@ -15,4 +15,4 @@ tags:
 - [[render()_2]] - `calls` [EXTRACTED]
 - [[render_remotion()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/render_remotion
+#graphify/code #graphify/EXTRACTED #community/ASS_Captions_and_Skins

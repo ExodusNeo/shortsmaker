@@ -1,19 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "render"
+community: "Motion Scenes and Style Library"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/render
+  - community/Motion_Scenes_and_Style_Library
 ---
 
 # Path
 
 ## Connections
-- [[drawn_thumbnail()]] - `references` [EXTRACTED]
-- [[load_state()]] - `references` [EXTRACTED]
-- [[render()_1]] - `references` [EXTRACTED]
-- [[save_state()]] - `references` [EXTRACTED]
+- [[candidate_in()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/render
+#graphify/code #graphify/EXTRACTED #community/Motion_Scenes_and_Style_Library

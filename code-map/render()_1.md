@@ -1,19 +1,19 @@
 ---
 source_file: "shortsmaker/short_render.py"
 type: "code"
-community: "render"
-location: "L93"
+community: "Sound Effects and Credits"
+location: "L97"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/render
+  - community/Sound_Effects_and_Credits
 ---
 
 # render()
 
 ## Connections
 - [[Make one Short. With `state` (fix.bat or an automatic fix round), reuse its…]] - `rationale_for` [EXTRACTED]
-- [[Path_8]] - `references` [EXTRACTED]
+- [[Path_13]] - `references` [EXTRACTED]
 - [[apply_review_fixes()]] - `calls` [EXTRACTED]
 - [[captions()]] - `calls` [EXTRACTED]
 - [[choose_images()]] - `calls` [EXTRACTED]
@@ -33,11 +33,12 @@ tags:
 - [[graphics_count()]] - `calls` [EXTRACTED]
 - [[hex_rgb()]] - `calls` [EXTRACTED]
 - [[ink_silhouette()]] - `calls` [EXTRACTED]
+- [[is_loop_short()]] - `calls` [EXTRACTED]
 - [[load_state()]] - `calls` [EXTRACTED]
 - [[local_clips()]] - `calls` [EXTRACTED]
 - [[local_job()]] - `calls` [EXTRACTED]
 - [[local_voice()]] - `calls` [EXTRACTED]
-- [[main()_3]] - `calls` [EXTRACTED]
+- [[main()_2]] - `calls` [EXTRACTED]
 - [[make()]] - `calls` [EXTRACTED]
 - [[make_sfx()]] - `calls` [EXTRACTED]
 - [[mark_details()]] - `calls` [EXTRACTED]
@@ -72,4 +73,4 @@ tags:
 - [[wants_remotion()]] - `calls` [EXTRACTED]
 - [[write_frames()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/render
+#graphify/code #graphify/EXTRACTED #community/Sound_Effects_and_Credits

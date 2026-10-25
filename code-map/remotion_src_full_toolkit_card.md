@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "skinOf"
+community: "Example Chain and Evidence"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/skinOf
+  - community/Example_Chain_and_Evidence
 ---
 
 # remotion_src_full_toolkit_card
@@ -14,4 +14,4 @@ tags:
 - [[ExampleChain.tsx]] - `imports` [EXTRACTED]
 - [[ExampleEvidence.tsx]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/skinOf
+#graphify/concept #graphify/EXTRACTED #community/Example_Chain_and_Evidence

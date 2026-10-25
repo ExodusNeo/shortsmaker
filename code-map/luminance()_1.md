@@ -1,18 +1,24 @@
 ---
-source_file: "shortsmaker/config.py"
+source_file: "remotion/src/style/kit.ts"
 type: "code"
-community: "plan_rules.py"
-location: "L74"
+community: "Invented Look Canvas Effects"
+location: "L43"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/plan_rulespy
+  - community/Invented_Look_Canvas_Effects
 ---
 
 # luminance()
 
 ## Connections
-- [[config.py]] - `contains` [EXTRACTED]
-- [[hex_rgb()]] - `calls` [EXTRACTED]
+- [[Engraving.tsx]] - `imports` [EXTRACTED]
+- [[Halftone.tsx]] - `imports` [EXTRACTED]
+- [[Riso.tsx]] - `imports` [EXTRACTED]
+- [[draw()]] - `calls` [EXTRACTED]
+- [[draw()_1]] - `calls` [EXTRACTED]
+- [[draw()_3]] - `calls` [EXTRACTED]
+- [[drawCover()]] - `calls` [EXTRACTED]
+- [[kit.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/plan_rulespy
+#graphify/code #graphify/EXTRACTED #community/Invented_Look_Canvas_Effects

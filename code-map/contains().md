@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/plan_rules.py"
 type: "code"
-community: "clean_full"
-location: "L308"
+community: "Script Sounds and Graphics"
+location: "L443"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/clean_full
+  - community/Script_Sounds_and_Graphics
 ---
 
 # contains()
@@ -20,4 +20,4 @@ tags:
 - [[word()]] - `calls` [EXTRACTED]
 - [[write_scripts()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/clean_full
+#graphify/code #graphify/EXTRACTED #community/Script_Sounds_and_Graphics

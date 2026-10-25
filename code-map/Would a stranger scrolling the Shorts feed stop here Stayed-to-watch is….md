@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/review.py"
 type: "rationale"
-community: "first_second_check"
-location: "L108"
+community: "TTS and Story Sounds"
+location: "L125"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/first_second_check
+  - community/TTS_and_Story_Sounds
 ---
 
 # Would a stranger scrolling the Shorts feed stop here? Stayed-to-watch is…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[first_second_check()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/first_second_check
+#graphify/rationale #graphify/EXTRACTED #community/TTS_and_Story_Sounds

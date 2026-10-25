@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "json"
+community: "Audio Mix and Shotcut Export"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/json
+  - community/Audio_Mix_and_Shotcut_Export
 ---
 
 # subprocess
@@ -52,4 +52,4 @@ tags:
 - [[video_encoder()]] - `calls` [EXTRACTED]
 - [[voicestudio_up()]] - `calls` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/json
+#graphify/concept #graphify/EXTRACTED #community/Audio_Mix_and_Shotcut_Export

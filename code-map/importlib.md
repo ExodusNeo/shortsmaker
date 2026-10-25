@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "test_full_scenes.py"
+community: "Motion Scenes and Style Library"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/test_full_scenespy
+  - community/Motion_Scenes_and_Style_Library
 ---
 
 # importlib
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[patching.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/test_full_scenespy
+#graphify/concept #graphify/EXTRACTED #community/Motion_Scenes_and_Style_Library

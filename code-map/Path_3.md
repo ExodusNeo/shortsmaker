@@ -1,16 +1,20 @@
 ---
 source_file: ""
 type: "code"
-community: "test_style.py"
+community: "Shotcut Timeline and Loudness"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_stylepy
+  - community/Shotcut_Timeline_and_Loudness
 ---
 
 # Path
 
 ## Connections
-- [[candidate_in()]] - `references` [EXTRACTED]
+- [[caption_layer()]] - `references` [EXTRACTED]
+- [[make()]] - `references` [EXTRACTED]
+- [[master_gain()]] - `references` [EXTRACTED]
+- [[project_xml()]] - `references` [EXTRACTED]
+- [[remove()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_stylepy
+#graphify/code #graphify/EXTRACTED #community/Shotcut_Timeline_and_Loudness

@@ -1,23 +1,23 @@
 ---
 source_file: "shortsmaker/plan_rules.py"
 type: "code"
-community: "ask_ai"
-location: "L243"
+community: "Headless AI Planner Calls"
+location: "L378"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ask_ai
+  - community/Headless_AI_Planner_Calls
 ---
 
 # mark_details()
 
 ## Connections
 - [[Let Claude circle (or point an arrow at) a detail in up to 2 chosen pictures.…]] - `rationale_for` [EXTRACTED]
-- [[Path_26]] - `references` [EXTRACTED]
+- [[Path_2]] - `references` [EXTRACTED]
 - [[ask_ai()]] - `calls` [EXTRACTED]
 - [[io]] - `calls` [EXTRACTED]
 - [[plan_rules.py]] - `contains` [EXTRACTED]
 - [[re]] - `calls` [EXTRACTED]
 - [[render()_1]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ask_ai
+#graphify/code #graphify/EXTRACTED #community/Headless_AI_Planner_Calls

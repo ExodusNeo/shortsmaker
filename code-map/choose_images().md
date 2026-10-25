@@ -1,19 +1,19 @@
 ---
 source_file: "shortsmaker/picker.py"
 type: "code"
-community: "choose_images"
+community: "Pictures-First Pool Tests"
 location: "L12"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/choose_images
+  - community/Pictures-First_Pool_Tests
 ---
 
 # choose_images()
 
 ## Connections
 - [[Build a broad multi-source pool of images and real video footage (per-scene…]] - `rationale_for` [EXTRACTED]
-- [[Path_4]] - `references` [EXTRACTED]
+- [[Path_9]] - `references` [EXTRACTED]
 - [[apply_look_scenes()]] - `calls` [EXTRACTED]
 - [[ask_ai()]] - `calls` [EXTRACTED]
 - [[capture_prompts()]] - `calls` [EXTRACTED]
@@ -22,6 +22,7 @@ tags:
 - [[full_pictures()]] - `calls` [EXTRACTED]
 - [[gather_pool()]] - `calls` [EXTRACTED]
 - [[get_image()]] - `calls` [EXTRACTED]
+- [[is_person_portrait()]] - `calls` [EXTRACTED]
 - [[json]] - `calls` [EXTRACTED]
 - [[load_channel()]] - `calls` [EXTRACTED]
 - [[load_pool()]] - `calls` [EXTRACTED]
@@ -36,4 +37,4 @@ tags:
 - [[test_plan_note_already_used()]] - `calls` [EXTRACTED]
 - [[test_planned_full_pictures_not_sent_when_empty()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/choose_images
+#graphify/code #graphify/EXTRACTED #community/Pictures-First_Pool_Tests

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/__init__.py"
 type: "code"
-community: "test_full_scenes.py"
+community: "CLI, Config and Footage"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_full_scenespy
+  - community/CLI_Config_and_Footage
 ---
 
 # __init__.py
@@ -45,6 +45,7 @@ tags:
 - [[test_edit_project.py]] - `imports_from` [EXTRACTED]
 - [[test_first_second.py]] - `imports_from` [EXTRACTED]
 - [[test_full_scenes.py]] - `imports_from` [EXTRACTED]
+- [[test_h3_handoff.py]] - `imports_from` [EXTRACTED]
 - [[test_package.py]] - `imports_from` [EXTRACTED]
 - [[test_pictures_first.py]] - `imports_from` [EXTRACTED]
 - [[test_rules.py]] - `imports_from` [EXTRACTED]
@@ -52,4 +53,4 @@ tags:
 - [[test_style.py]] - `imports_from` [EXTRACTED]
 - [[writing.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_full_scenespy
+#graphify/code #graphify/EXTRACTED #community/CLI_Config_and_Footage

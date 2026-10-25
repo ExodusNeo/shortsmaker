@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/image_sources.py"
 type: "code"
-community: "render"
-location: "L207"
+community: "Sound Effects and Credits"
+location: "L226"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/render
+  - community/Sound_Effects_and_Credits
 ---
 
 # short_credit()
@@ -16,4 +16,4 @@ tags:
 - [[image_sources.py]] - `contains` [EXTRACTED]
 - [[render()_1]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/render
+#graphify/code #graphify/EXTRACTED #community/Sound_Effects_and_Credits

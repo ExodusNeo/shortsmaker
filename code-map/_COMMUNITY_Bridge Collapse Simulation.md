@@ -1,0 +1,50 @@
+---
+type: community
+cohesion: 0.17
+members: 18
+---
+
+# Bridge Collapse Simulation
+
+**Cohesion:** 0.17 - loosely connected
+**Members:** 18 nodes
+
+## Members
+- [[(part, exact) the part the Short is about, by the plan's spot; the gusset at…]] - rationale - blender/templates.py
+- [[dot-__init__()_5]] - code - blender/failures.py
+- [[dot-_crack()]] - code - blender/failures.py
+- [[dot-fallen()]] - code - blender/failures.py
+- [[dot-falls()]] - code - blender/failures.py
+- [[dot-play()]] - code - blender/failures.py
+- [[dot-reset()]] - code - blender/failures.py
+- [[dot-ride_along()]] - code - blender/failures.py
+- [[A jagged crack across the plate's outer face, in short ink segments that appear…]] - rationale - blender/failures.py
+- [[Back to whole the story after the hook starts from the beginning.]] - rationale - blender/failures.py
+- [[Failure]] - code - blender/failures.py
+- [[Objects that fall with the span (the label on the failing part).]] - rationale - blender/failures.py
+- [[The failure from t0 to its peak, then (collapse) the span falls; `until` (the…]] - rationale - blender/failures.py
+- [[Vector_2]] - code
+- [[Where a point on the collapsing span ends up in the water.]] - rationale - blender/failures.py
+- [[focus_object()]] - code - blender/templates.py
+- [[key()]] - code - blender/failures.py
+- [[main()_3]] - code - blender/build_scene.py
+
+## Live Query (requires Dataview plugin)
+
+```dataview
+TABLE source_file, type FROM #community/Bridge_Collapse_Simulation
+SORT file.name ASC
+```
+
+## Connections to other communities
+- 7 edges to [[_COMMUNITY_Blender Camera Shots]]
+- 4 edges to [[_COMMUNITY_Bridge Templates]]
+- 3 edges to [[_COMMUNITY_Blender Bridge Parts]]
+- 1 edge to [[_COMMUNITY_Blender Ink Look]]
+- 1 edge to [[_COMMUNITY_Local Voice and Freesound]]
+
+## Top bridge nodes
+- [[main()_3]] - degree 19, connects to 5 communities
+- [[Failure]] - degree 9, connects to 1 community
+- [[key()]] - degree 4, connects to 1 community
+- [[focus_object()]] - degree 4, connects to 1 community

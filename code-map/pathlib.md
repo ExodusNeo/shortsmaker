@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "test_full_scenes.py"
+community: "CLI, Config and Footage"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/test_full_scenespy
+  - community/CLI_Config_and_Footage
 ---
 
 # pathlib
@@ -22,6 +22,7 @@ tags:
 - [[frame_render.py]] - `imports_from` [EXTRACTED]
 - [[gen.py]] - `imports_from` [EXTRACTED]
 - [[gpu.py]] - `imports_from` [EXTRACTED]
+- [[h3_run.py]] - `imports_from` [EXTRACTED]
 - [[llm.py]] - `imports_from` [EXTRACTED]
 - [[logbook.py]] - `imports_from` [EXTRACTED]
 - [[media_tools.py]] - `imports_from` [EXTRACTED]
@@ -50,6 +51,8 @@ tags:
 - [[test_edit_project.py]] - `imports_from` [EXTRACTED]
 - [[test_first_second.py]] - `imports_from` [EXTRACTED]
 - [[test_full_scenes.py]] - `imports_from` [EXTRACTED]
+- [[test_h3_handoff.py]] - `imports_from` [EXTRACTED]
+- [[test_h3_run.py]] - `imports_from` [EXTRACTED]
 - [[test_package.py]] - `imports_from` [EXTRACTED]
 - [[test_pictures_first.py]] - `imports_from` [EXTRACTED]
 - [[test_qwen_voice.py]] - `imports_from` [EXTRACTED]
@@ -58,4 +61,4 @@ tags:
 - [[test_style.py]] - `imports_from` [EXTRACTED]
 - [[writing.py]] - `imports_from` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/test_full_scenespy
+#graphify/concept #graphify/EXTRACTED #community/CLI_Config_and_Footage

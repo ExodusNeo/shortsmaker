@@ -1,17 +1,24 @@
 ---
-source_file: "shortsmaker/audio_mix.py"
+source_file: "remotion/src/style/kit.ts"
 type: "code"
-community: "make_sfx"
-location: "L180"
+community: "Invented Look Canvas Effects"
+location: "L27"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/make_sfx
+  - community/Invented_Look_Canvas_Effects
 ---
 
 # noise()
 
 ## Connections
-- [[make_sfx()]] - `contains` [EXTRACTED]
+- [[Halftone.tsx]] - `imports` [EXTRACTED]
+- [[Riso.tsx]] - `imports` [EXTRACTED]
+- [[Silent()]] - `calls` [EXTRACTED]
+- [[Silent.tsx]] - `imports` [EXTRACTED]
+- [[draw()_1]] - `calls` [EXTRACTED]
+- [[draw()_3]] - `calls` [EXTRACTED]
+- [[kit.ts]] - `contains` [EXTRACTED]
+- [[style.test.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/make_sfx
+#graphify/code #graphify/EXTRACTED #community/Invented_Look_Canvas_Effects

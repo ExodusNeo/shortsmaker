@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/photo_prep.py"
 type: "code"
-community: "clean_photo"
+community: "Archive Photo Cleanup"
 location: "L42"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/clean_photo
+  - community/Archive_Photo_Cleanup
 ---
 
 # plain()
@@ -15,4 +15,4 @@ tags:
 - [[border()]] - `calls` [EXTRACTED]
 - [[trim_borders()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/clean_photo
+#graphify/code #graphify/EXTRACTED #community/Archive_Photo_Cleanup

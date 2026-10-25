@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "audio_mix.py"
+community: "Audio Mix and Shotcut Export"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/audio_mixpy
+  - community/Audio_Mix_and_Shotcut_Export
 ---
 
 # urllib_request
@@ -13,6 +13,7 @@ tags:
 ## Connections
 - [[audio_mix.py]] - `imports` [EXTRACTED]
 - [[gpu.py]] - `imports` [EXTRACTED]
+- [[h3_run.py]] - `imports` [EXTRACTED]
 - [[media_tools.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/audio_mixpy
+#graphify/concept #graphify/EXTRACTED #community/Audio_Mix_and_Shotcut_Export

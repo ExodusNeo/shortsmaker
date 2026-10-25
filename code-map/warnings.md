@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "plan_rules.py"
+community: "CLI, Config and Footage"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/plan_rulespy
+  - community/CLI_Config_and_Footage
 ---
 
 # warnings
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[config.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/plan_rulespy
+#graphify/concept #graphify/EXTRACTED #community/CLI_Config_and_Footage

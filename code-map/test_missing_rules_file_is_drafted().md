@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_rules.py"
 type: "code"
-community: "draft_rules"
-location: "L304"
+community: "Channel Rules Files"
+location: "L306"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/draft_rules
+  - community/Channel_Rules_Files
 ---
 
 # test_missing_rules_file_is_drafted()
@@ -16,4 +16,4 @@ tags:
 - [[require_rules()]] - `calls` [EXTRACTED]
 - [[test_rules.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/draft_rules
+#graphify/code #graphify/EXTRACTED #community/Channel_Rules_Files

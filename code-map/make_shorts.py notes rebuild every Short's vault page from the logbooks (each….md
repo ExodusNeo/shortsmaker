@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/logbook.py"
 type: "rationale"
-community: "re"
-location: "L84"
+community: "Obsidian Vault Logbook"
+location: "L85"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/re
+  - community/Obsidian_Vault_Logbook
 ---
 
 # make_shorts.py notes: rebuild every Short's vault page from the logbooks (each…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[vault_refresh()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/re
+#graphify/rationale #graphify/EXTRACTED #community/Obsidian_Vault_Logbook

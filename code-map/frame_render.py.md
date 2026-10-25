@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/frame_render.py"
 type: "code"
-community: "plan_rules.py"
+community: "CLI, Config and Footage"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/plan_rulespy
+  - community/CLI_Config_and_Footage
 ---
 
 # frame_render.py
@@ -38,7 +38,9 @@ tags:
 - [[short_render.py]] - `imports_from` [EXTRACTED]
 - [[shot()]] - `contains` [EXTRACTED]
 - [[subprocess]] - `imports` [EXTRACTED]
+- [[test_blender_plan.py]] - `imports_from` [EXTRACTED]
+- [[test_full_scenes.py]] - `imports_from` [EXTRACTED]
 - [[thumbnail()]] - `contains` [EXTRACTED]
 - [[write_frames()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/plan_rulespy
+#graphify/code #graphify/EXTRACTED #community/CLI_Config_and_Footage

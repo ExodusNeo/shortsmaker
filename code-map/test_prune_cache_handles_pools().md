@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_pictures_first.py"
 type: "code"
-community: "main"
+community: "Main Entry and Channel Profiles"
 location: "L82"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/main
+  - community/Main_Entry_and_Channel_Profiles
 ---
 
 # test_prune_cache_handles_pools()
@@ -15,4 +15,4 @@ tags:
 - [[prune_cache()]] - `calls` [EXTRACTED]
 - [[test_pictures_first.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/main
+#graphify/code #graphify/EXTRACTED #community/Main_Entry_and_Channel_Profiles

@@ -1,12 +1,12 @@
 ---
 source_file: "tests/style.test.ts"
 type: "code"
-community: "Short.tsx"
+community: "Short Composition Root"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Shorttsx
+  - community/Short_Composition_Root
 ---
 
 # style.test.ts
@@ -18,7 +18,7 @@ tags:
 - [[inksOf()]] - `imports` [EXTRACTED]
 - [[kit.ts]] - `imports_from` [EXTRACTED]
 - [[lookFor()]] - `imports` [EXTRACTED]
-- [[noise()]] - `imports` [EXTRACTED]
+- [[noise()_1]] - `imports` [EXTRACTED]
 - [[ok()_1]] - `contains` [EXTRACTED]
 - [[overlayFor()]] - `imports` [EXTRACTED]
 - [[shown()]] - `contains` [EXTRACTED]
@@ -28,4 +28,4 @@ tags:
 - [[transitionWindow()]] - `imports` [EXTRACTED]
 - [[window.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Shorttsx
+#graphify/code #graphify/EXTRACTED #community/Short_Composition_Root

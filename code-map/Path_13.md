@@ -1,20 +1,19 @@
 ---
 source_file: ""
 type: "code"
-community: "render_remotion"
+community: "Sound Effects and Credits"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/render_remotion
+  - community/Sound_Effects_and_Credits
 ---
 
 # Path
 
 ## Connections
-- [[approve_candidate()]] - `references` [EXTRACTED]
-- [[invent_component()]] - `references` [EXTRACTED]
-- [[invent_styles()]] - `references` [EXTRACTED]
-- [[reject_candidate()]] - `references` [EXTRACTED]
-- [[save_candidate()]] - `references` [EXTRACTED]
+- [[drawn_thumbnail()]] - `references` [EXTRACTED]
+- [[load_state()]] - `references` [EXTRACTED]
+- [[render()_1]] - `references` [EXTRACTED]
+- [[save_state()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/render_remotion
+#graphify/code #graphify/EXTRACTED #community/Sound_Effects_and_Credits

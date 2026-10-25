@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "test_full_scenes.py"
+community: "Main Entry and Channel Profiles"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/test_full_scenespy
+  - community/Main_Entry_and_Channel_Profiles
 ---
 
 # logging
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[channel_profiles.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/test_full_scenespy
+#graphify/concept #graphify/EXTRACTED #community/Main_Entry_and_Channel_Profiles

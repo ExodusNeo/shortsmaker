@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/image_sources.py"
 type: "code"
-community: "drawn_thumbnail"
-location: "L160"
+community: "Openverse and Museum Images"
+location: "L179"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/drawn_thumbnail
+  - community/Openverse_and_Museum_Images
 ---
 
 # openverse_images()
@@ -17,4 +17,4 @@ tags:
 - [[image_sources.py]] - `contains` [EXTRACTED]
 - [[ov_get()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/drawn_thumbnail
+#graphify/code #graphify/EXTRACTED #community/Openverse_and_Museum_Images

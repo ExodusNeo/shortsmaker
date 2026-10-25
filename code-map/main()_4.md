@@ -1,34 +1,20 @@
 ---
-source_file: "blender/build_scene.py"
+source_file: "local_ai/qwen_voice.py"
 type: "code"
-community: "main"
-location: "L70"
+community: "Local Voice and Freesound"
+location: "L181"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/main
+  - community/Local_Voice_and_Freesound
 ---
 
 # main()
 
 ## Connections
-- [[dot-beat()]] - `calls` [INFERRED]
-- [[dot-fallen()]] - `calls` [INFERRED]
-- [[dot-falls()]] - `calls` [INFERRED]
-- [[dot-play()]] - `calls` [INFERRED]
-- [[dot-reset()]] - `calls` [INFERRED]
-- [[dot-ride_along()]] - `calls` [INFERRED]
-- [[Failure]] - `calls` [EXTRACTED]
-- [[Shots]] - `calls` [EXTRACTED]
-- [[build()_1]] - `calls` [EXTRACTED]
-- [[build_scene.py]] - `contains` [EXTRACTED]
-- [[fastener()]] - `calls` [EXTRACTED]
-- [[focus_object()]] - `calls` [EXTRACTED]
+- [[align()]] - `calls` [EXTRACTED]
 - [[json]] - `calls` [EXTRACTED]
-- [[keyloc()]] - `calls` [EXTRACTED]
-- [[keyvis()]] - `calls` [EXTRACTED]
-- [[label()]] - `calls` [EXTRACTED]
-- [[material()]] - `calls` [EXTRACTED]
-- [[setup()]] - `calls` [EXTRACTED]
+- [[qwen_voice.py]] - `contains` [EXTRACTED]
+- [[time]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/main
+#graphify/code #graphify/EXTRACTED #community/Local_Voice_and_Freesound

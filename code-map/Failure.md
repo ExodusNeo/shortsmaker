@@ -1,18 +1,18 @@
 ---
 source_file: "blender/failures.py"
 type: "code"
-community: "main"
+community: "Bridge Collapse Simulation"
 location: "L25"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/main
+  - community/Bridge_Collapse_Simulation
 ---
 
 # Failure
 
 ## Connections
-- [[dot-__init__()_6]] - `method` [EXTRACTED]
+- [[dot-__init__()_5]] - `method` [EXTRACTED]
 - [[dot-_crack()]] - `method` [EXTRACTED]
 - [[dot-fallen()]] - `method` [EXTRACTED]
 - [[dot-falls()]] - `method` [EXTRACTED]
@@ -20,6 +20,6 @@ tags:
 - [[dot-reset()]] - `method` [EXTRACTED]
 - [[dot-ride_along()]] - `method` [EXTRACTED]
 - [[failures.py]] - `contains` [EXTRACTED]
-- [[main()_4]] - `calls` [EXTRACTED]
+- [[main()_3]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/main
+#graphify/code #graphify/EXTRACTED #community/Bridge_Collapse_Simulation

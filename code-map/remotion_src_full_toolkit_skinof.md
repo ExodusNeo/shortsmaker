@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "skinOf"
+community: "Custom Remotion Scenes"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/skinOf
+  - community/Custom_Remotion_Scenes
 ---
 
 # remotion_src_full_toolkit_skinof
@@ -18,4 +18,4 @@ tags:
 - [[ExampleChain.tsx]] - `imports` [EXTRACTED]
 - [[ExampleEvidence.tsx]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/skinOf
+#graphify/concept #graphify/EXTRACTED #community/Custom_Remotion_Scenes

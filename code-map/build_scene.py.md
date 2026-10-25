@@ -1,12 +1,12 @@
 ---
 source_file: "blender/build_scene.py"
 type: "code"
-community: "build_scene.py"
+community: "Blender Camera Shots"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/build_scenepy
+  - community/Blender_Camera_Shots
 ---
 
 # build_scene.py
@@ -21,7 +21,7 @@ tags:
 - [[keyloc()]] - `contains` [EXTRACTED]
 - [[keyvis()]] - `contains` [EXTRACTED]
 - [[look.py]] - `imports` [EXTRACTED]
-- [[main()_4]] - `contains` [EXTRACTED]
+- [[main()_3]] - `contains` [EXTRACTED]
 - [[math]] - `imports` [EXTRACTED]
 - [[mathutils]] - `imports_from` [EXTRACTED]
 - [[parts.py]] - `imports` [EXTRACTED]
@@ -29,4 +29,4 @@ tags:
 - [[sys]] - `imports` [EXTRACTED]
 - [[templates.py]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/build_scenepy
+#graphify/code #graphify/EXTRACTED #community/Blender_Camera_Shots

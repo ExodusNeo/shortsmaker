@@ -1,12 +1,12 @@
 ---
 source_file: "tests/guarded.test.ts"
 type: "code"
-community: "guarded.tsx"
+community: "Example Chain and Evidence"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/guardedtsx
+  - community/Example_Chain_and_Evidence
 ---
 
 # guarded.test.ts
@@ -28,4 +28,4 @@ tags:
 - [[test()]] - `contains` [EXTRACTED]
 - [[travel()]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/guardedtsx
+#graphify/code #graphify/EXTRACTED #community/Example_Chain_and_Evidence

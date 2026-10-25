@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/edit_project.py"
 type: "rationale"
-community: "audio_mix.py"
+community: "Audio Mix and Shotcut Export"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/audio_mixpy
+  - community/Audio_Mix_and_Shotcut_Export
 ---
 
 # A Shotcut timeline of a finished Short, for fixing by hand what the automatic…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[edit_project.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/audio_mixpy
+#graphify/rationale #graphify/EXTRACTED #community/Audio_Mix_and_Shotcut_Export

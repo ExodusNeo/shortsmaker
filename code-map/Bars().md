@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/full/BigNumber.tsx"
 type: "code"
-community: "full/types.ts"
-location: "L110"
+community: "Big Number Full Scenes"
+location: "L127"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/full/typests
+  - community/Big_Number_Full_Scenes
 ---
 
 # Bars()
@@ -14,6 +14,6 @@ tags:
 ## Connections
 - [[BigNumber()]] - `calls` [EXTRACTED]
 - [[BigNumber.tsx]] - `contains` [EXTRACTED]
-- [[fmt()]] - `calls` [EXTRACTED]
+- [[fmtBar()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/full/typests
+#graphify/code #graphify/EXTRACTED #community/Big_Number_Full_Scenes

@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_story.py"
 type: "code"
-community: "test_full_scenes.py"
+community: "Narration Number Speech"
 location: "L98"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_full_scenespy
+  - community/Narration_Number_Speech
 ---
 
 # test_writer_prompt_has_the_story_rules_and_cut_rule()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[test_story.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_full_scenespy
+#graphify/code #graphify/EXTRACTED #community/Narration_Number_Speech

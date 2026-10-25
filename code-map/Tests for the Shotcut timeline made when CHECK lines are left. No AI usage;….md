@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_edit_project.py"
 type: "rationale"
-community: "audio_mix.py"
+community: "Audio Mix and Shotcut Export"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/audio_mixpy
+  - community/Audio_Mix_and_Shotcut_Export
 ---
 
 # Tests for the Shotcut timeline made when CHECK lines are left. No AI usage;…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[test_edit_project.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/audio_mixpy
+#graphify/rationale #graphify/EXTRACTED #community/Audio_Mix_and_Shotcut_Export

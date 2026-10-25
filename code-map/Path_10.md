@@ -1,17 +1,20 @@
 ---
 source_file: ""
 type: "code"
-community: "test_blender_render.py"
+community: "Frame Drawing and Graphics"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_blender_renderpy
+  - community/Frame_Drawing_and_Graphics
 ---
 
 # Path
 
 ## Connections
-- [[_run()]] - `references` [EXTRACTED]
-- [[render_clips()]] - `references` [EXTRACTED]
+- [[dot-__init__()_3]] - `references` [EXTRACTED]
+- [[fills_frame()]] - `references` [EXTRACTED]
+- [[frame_maker()]] - `references` [EXTRACTED]
+- [[graphic_low()]] - `references` [EXTRACTED]
+- [[thumbnail()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_blender_renderpy
+#graphify/code #graphify/EXTRACTED #community/Frame_Drawing_and_Graphics

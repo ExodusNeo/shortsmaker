@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/full/CustomScene.tsx"
 type: "code"
-community: "skinOf"
+community: "Custom Remotion Scenes"
 location: "L9"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/skinOf
+  - community/Custom_Remotion_Scenes
 ---
 
 # CustomScene()
@@ -20,4 +20,4 @@ tags:
 - [[FullScene()]] - `calls` [EXTRACTED]
 - [[FullScene.tsx]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/skinOf
+#graphify/code #graphify/EXTRACTED #community/Custom_Remotion_Scenes

@@ -1,18 +1,18 @@
 ---
 source_file: "tests/test_pictures_first.py"
 type: "code"
-community: "write_scripts"
-location: "L238"
+community: "Topic Planning Tests"
+location: "L436"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/write_scripts
+  - community/Topic_Planning_Tests
 ---
 
 # prepare()
 
 ## Connections
 - [[passing()]] - `calls` [EXTRACTED]
-- [[test_weak_topic_swapped_for_backup()]] - `contains` [EXTRACTED]
+- [[test_dropped_topic_pool_removed()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/write_scripts
+#graphify/code #graphify/EXTRACTED #community/Topic_Planning_Tests

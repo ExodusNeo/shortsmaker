@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/motion.py"
 type: "code"
-community: "plan_rules.py"
+community: "Motion Scenes and Style Library"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/plan_rulespy
+  - community/Motion_Scenes_and_Style_Library
 ---
 
 # motion.py
@@ -42,4 +42,4 @@ tags:
 - [[test_style.py]] - `imports_from` [EXTRACTED]
 - [[tsc_check()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/plan_rulespy
+#graphify/code #graphify/EXTRACTED #community/Motion_Scenes_and_Style_Library

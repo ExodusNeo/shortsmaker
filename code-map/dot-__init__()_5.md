@@ -1,17 +1,18 @@
 ---
-source_file: "blender/templates.py"
+source_file: "blender/failures.py"
 type: "code"
-community: "templates.py"
-location: "L14"
+community: "Bridge Collapse Simulation"
+location: "L26"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/templatespy
+  - community/Bridge_Collapse_Simulation
 ---
 
 # .__init__()
 
 ## Connections
-- [[Bridge]] - `method` [EXTRACTED]
+- [[dot-_crack()]] - `calls` [EXTRACTED]
+- [[Failure]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/templatespy
+#graphify/code #graphify/EXTRACTED #community/Bridge_Collapse_Simulation

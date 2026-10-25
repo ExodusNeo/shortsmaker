@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_first_second.py"
 type: "code"
-community: "test_full_scenes.py"
+community: "First-Second Opener Check"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_full_scenespy
+  - community/First-Second_Opener_Check
 ---
 
 # test_first_second.py
@@ -31,7 +31,11 @@ tags:
 - [[test_low_score_opens_on_a_better_real_picture()]] - `contains` [EXTRACTED]
 - [[test_opener_fix_swaps_once()]] - `contains` [EXTRACTED]
 - [[test_opener_must_be_a_later_real_picture()]] - `contains` [EXTRACTED]
+- [[test_opener_prompt_shows_each_scenes_line_and_picture()]] - `contains` [EXTRACTED]
+- [[test_review_knows_what_dims_a_picture_on_purpose()]] - `contains` [EXTRACTED]
+- [[test_swap_ignores_a_clip_already_dropped()]] - `contains` [EXTRACTED]
+- [[test_swap_moves_the_owners_clip_with_its_picture()]] - `contains` [EXTRACTED]
 - [[test_swap_pictures_trades_real_pictures()]] - `contains` [EXTRACTED]
 - [[traceback]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_full_scenespy
+#graphify/code #graphify/EXTRACTED #community/First-Second_Opener_Check

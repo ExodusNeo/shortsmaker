@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/style_lab.py"
 type: "code"
-community: "render_remotion"
+community: "ASS Captions and Skins"
 location: "L157"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/render_remotion
+  - community/ASS_Captions_and_Skins
 ---
 
 # attempt()
@@ -15,4 +15,4 @@ tags:
 - [[invent_component()]] - `contains` [EXTRACTED]
 - [[lint_style_code()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/render_remotion
+#graphify/code #graphify/EXTRACTED #community/ASS_Captions_and_Skins

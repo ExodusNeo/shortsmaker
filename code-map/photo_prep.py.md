@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/photo_prep.py"
 type: "code"
-community: "plan_rules.py"
+community: "CLI, Config and Footage"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/plan_rulespy
+  - community/CLI_Config_and_Footage
 ---
 
 # photo_prep.py
@@ -22,7 +22,8 @@ tags:
 - [[remotion_render.py]] - `imports_from` [EXTRACTED]
 - [[short_render.py]] - `imports_from` [EXTRACTED]
 - [[statistics]] - `imports` [EXTRACTED]
+- [[test_full_scenes.py]] - `imports_from` [EXTRACTED]
 - [[to_vertical()]] - `contains` [EXTRACTED]
 - [[trim_borders()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/plan_rulespy
+#graphify/code #graphify/EXTRACTED #community/CLI_Config_and_Footage

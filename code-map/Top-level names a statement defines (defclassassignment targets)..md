@@ -1,12 +1,12 @@
 ---
 source_file: "tools/split_make_shorts.py"
 type: "rationale"
-community: "split_make_shorts.py"
+community: "Script Splitting AST Tools"
 location: "L177"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/split_make_shortspy
+  - community/Script_Splitting_AST_Tools
 ---
 
 # Top-level names a statement defines (def/class/assignment targets).
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[defined_names()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/split_make_shortspy
+#graphify/rationale #graphify/EXTRACTED #community/Script_Splitting_AST_Tools

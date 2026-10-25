@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/footage.py"
 type: "rationale"
-community: "image_sources.py"
-location: "L86"
+community: "Stock Video Sources"
+location: "L87"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/image_sourcespy
+  - community/Stock_Video_Sources
 ---
 
 # Videos on Wikimedia Commons, as their 480p-720p WebM transcodes (seekable).
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[commons_films()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/image_sourcespy
+#graphify/rationale #graphify/EXTRACTED #community/Stock_Video_Sources

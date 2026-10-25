@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/rules.py"
 type: "code"
-community: "draft_rules"
+community: "Channel Rules Files"
 location: "L126"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/draft_rules
+  - community/Channel_Rules_Files
 ---
 
 # require_rules()
@@ -17,8 +17,8 @@ tags:
 - [[json]] - `calls` [EXTRACTED]
 - [[load_rules()]] - `calls` [EXTRACTED]
 - [[load_rules, but a channel with no rules file yet (a failed draft, a profile…]] - `rationale_for` [EXTRACTED]
-- [[main()_3]] - `calls` [EXTRACTED]
+- [[main()_2]] - `calls` [EXTRACTED]
 - [[rules.py]] - `contains` [EXTRACTED]
 - [[test_missing_rules_file_is_drafted()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/draft_rules
+#graphify/code #graphify/EXTRACTED #community/Channel_Rules_Files

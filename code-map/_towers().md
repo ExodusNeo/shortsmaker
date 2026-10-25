@@ -1,12 +1,12 @@
 ---
 source_file: "blender/templates.py"
 type: "code"
-community: "templates.py"
+community: "Bridge Templates"
 location: "L126"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/templatespy
+  - community/Bridge_Templates
 ---
 
 # _towers()
@@ -19,4 +19,4 @@ tags:
 - [[templates.py]] - `contains` [EXTRACTED]
 - [[tower()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/templatespy
+#graphify/code #graphify/EXTRACTED #community/Bridge_Templates

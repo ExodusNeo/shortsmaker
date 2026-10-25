@@ -1,12 +1,12 @@
 ---
 source_file: "tests/render_full.py"
 type: "code"
-community: "json"
+community: "Local Voice and Freesound"
 location: "L28"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/json
+  - community/Local_Voice_and_Freesound
 ---
 
 # main()
@@ -18,4 +18,4 @@ tags:
 - [[shutil]] - `calls` [EXTRACTED]
 - [[subprocess]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/json
+#graphify/code #graphify/EXTRACTED #community/Local_Voice_and_Freesound

@@ -1,12 +1,12 @@
 ---
 source_file: "blender/templates.py"
 type: "code"
-community: "templates.py"
+community: "Bridge Templates"
 location: "L44"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/templatespy
+  - community/Bridge_Templates
 ---
 
 # .center()
@@ -15,4 +15,4 @@ tags:
 - [[Bridge]] - `method` [EXTRACTED]
 - [[Vector_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/templatespy
+#graphify/code #graphify/EXTRACTED #community/Bridge_Templates

@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "image_sources.py"
+community: "CLI, Config and Footage"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/image_sourcespy
+  - community/CLI_Config_and_Footage
 ---
 
 # io
@@ -14,6 +14,7 @@ tags:
 - [[clean_photo()]] - `calls` [EXTRACTED]
 - [[contact_sheets()]] - `calls` [EXTRACTED]
 - [[crop_film_bytes()]] - `calls` [EXTRACTED]
+- [[drawn_thumbnail()]] - `calls` [EXTRACTED]
 - [[footage.py]] - `imports` [EXTRACTED]
 - [[frame_render.py]] - `imports` [EXTRACTED]
 - [[gpu.py]] - `imports` [EXTRACTED]
@@ -24,7 +25,8 @@ tags:
 - [[picture_pool.py]] - `imports` [EXTRACTED]
 - [[plan_rules.py]] - `imports` [EXTRACTED]
 - [[review.py]] - `imports` [EXTRACTED]
+- [[short_render.py]] - `imports` [EXTRACTED]
 - [[storyboard()]] - `calls` [EXTRACTED]
 - [[test_blender_run.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/image_sourcespy
+#graphify/concept #graphify/EXTRACTED #community/CLI_Config_and_Footage

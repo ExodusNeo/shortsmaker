@@ -1,17 +1,18 @@
 ---
-source_file: "tests/test_rules.py"
+source_file: "tests/test_pictures_first.py"
 type: "code"
-community: "capture_prompts"
-location: "L75"
+community: "Topic Planning Tests"
+location: "L238"
 tags:
   - graphify/code
-  - graphify/INFERRED
-  - community/capture_prompts
+  - graphify/EXTRACTED
+  - community/Topic_Planning_Tests
 ---
 
 # prepare()
 
 ## Connections
-- [[capture_prompts()]] - `indirect_call` [INFERRED]
+- [[passing()]] - `calls` [EXTRACTED]
+- [[test_weak_topic_swapped_for_backup()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/capture_prompts
+#graphify/code #graphify/EXTRACTED #community/Topic_Planning_Tests

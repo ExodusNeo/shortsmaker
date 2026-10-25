@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "test_blender_render.py"
+community: "Edit Plan Text"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_blender_renderpy
+  - community/Edit_Plan_Text
 ---
 
 # Path
 
 ## Connections
-- [[fake_blender()]] - `references` [EXTRACTED]
+- [[edit_plan()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_blender_renderpy
+#graphify/code #graphify/EXTRACTED #community/Edit_Plan_Text

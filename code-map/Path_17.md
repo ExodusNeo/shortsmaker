@@ -1,17 +1,20 @@
 ---
 source_file: ""
 type: "code"
-community: "pool_pictures"
+community: "ASS Captions and Skins"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/pool_pictures
+  - community/ASS_Captions_and_Skins
 ---
 
 # Path
 
 ## Connections
-- [[film_piece()]] - `references` [EXTRACTED]
-- [[shot_span()]] - `references` [EXTRACTED]
+- [[approve_candidate()]] - `references` [EXTRACTED]
+- [[invent_component()]] - `references` [EXTRACTED]
+- [[invent_styles()]] - `references` [EXTRACTED]
+- [[reject_candidate()]] - `references` [EXTRACTED]
+- [[save_candidate()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/pool_pictures
+#graphify/code #graphify/EXTRACTED #community/ASS_Captions_and_Skins

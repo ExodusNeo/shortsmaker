@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "build_scene.py"
+community: "Blender Camera Shots"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/build_scenepy
+  - community/Blender_Camera_Shots
 ---
 
 # mathutils
@@ -16,4 +16,4 @@ tags:
 - [[parts.py]] - `imports_from` [EXTRACTED]
 - [[templates.py]] - `imports_from` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/build_scenepy
+#graphify/concept #graphify/EXTRACTED #community/Blender_Camera_Shots

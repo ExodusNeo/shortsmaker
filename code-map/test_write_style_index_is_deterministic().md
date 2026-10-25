@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_style.py"
 type: "code"
-community: "style_library"
+community: "Motion Scenes and Style Library"
 location: "L33"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/style_library
+  - community/Motion_Scenes_and_Style_Library
 ---
 
 # test_write_style_index_is_deterministic()
@@ -16,4 +16,4 @@ tags:
 - [[test_style.py]] - `contains` [EXTRACTED]
 - [[write_style_index()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/style_library
+#graphify/code #graphify/EXTRACTED #community/Motion_Scenes_and_Style_Library

@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_package.py"
 type: "code"
-community: "test_full_scenes.py"
-location: "L117"
+community: "Audio Mix and Shotcut Export"
+location: "L301"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_full_scenespy
+  - community/Audio_Mix_and_Shotcut_Export
 ---
 
 # test_entry_point()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[test_package.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_full_scenespy
+#graphify/code #graphify/EXTRACTED #community/Audio_Mix_and_Shotcut_Export

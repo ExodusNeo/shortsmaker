@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_blender_render.py"
 type: "code"
-community: "test_blender_render.py"
+community: "Blender Build Planning"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_blender_renderpy
+  - community/Blender_Build_Planning
 ---
 
 # test_blender_render.py
@@ -25,6 +25,7 @@ tags:
 - [[tempfile]] - `imports` [EXTRACTED]
 - [[test_changed_blender_code_redraws()]] - `contains` [EXTRACTED]
 - [[test_crash_retries_then_raises()]] - `contains` [EXTRACTED]
+- [[test_frames_are_trimmed_after_the_clips_are_cut()]] - `contains` [EXTRACTED]
 - [[test_missing_blender_raises()]] - `contains` [EXTRACTED]
 - [[test_peak_on_the_emphasis_word()]] - `contains` [EXTRACTED]
 - [[test_render_clips_makes_one_clip_per_scene()]] - `contains` [EXTRACTED]
@@ -32,4 +33,4 @@ tags:
 - [[test_scene_frames_cover_every_frame_once()]] - `contains` [EXTRACTED]
 - [[traceback]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_blender_renderpy
+#graphify/code #graphify/EXTRACTED #community/Blender_Build_Planning

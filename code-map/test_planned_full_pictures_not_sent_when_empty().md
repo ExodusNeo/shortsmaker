@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_pictures_first.py"
 type: "code"
-community: "choose_images"
-location: "L511"
+community: "Pictures-First Pool Tests"
+location: "L565"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/choose_images
+  - community/Pictures-First_Pool_Tests
 ---
 
 # test_planned_full_pictures_not_sent_when_empty()
@@ -18,4 +18,4 @@ tags:
 - [[scene()]] - `calls` [EXTRACTED]
 - [[test_pictures_first.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/choose_images
+#graphify/code #graphify/EXTRACTED #community/Pictures-First_Pool_Tests

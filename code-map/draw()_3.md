@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/style/looks/Riso.tsx"
 type: "code"
-community: "Halftone.tsx"
+community: "Invented Look Canvas Effects"
 location: "L13"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Halftonetsx
+  - community/Invented_Look_Canvas_Effects
 ---
 
 # draw()
@@ -14,8 +14,8 @@ tags:
 ## Connections
 - [[Riso()]] - `calls` [EXTRACTED]
 - [[Riso.tsx]] - `contains` [EXTRACTED]
-- [[luminance()]] - `calls` [EXTRACTED]
-- [[noise()]] - `calls` [EXTRACTED]
+- [[luminance()_1]] - `calls` [EXTRACTED]
+- [[noise()_1]] - `calls` [EXTRACTED]
 - [[rgb()_1]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Halftonetsx
+#graphify/code #graphify/EXTRACTED #community/Invented_Look_Canvas_Effects

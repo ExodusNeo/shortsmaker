@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/remotion_render.py"
 type: "code"
-community: "render"
+community: "Sound Effects and Credits"
 location: "L15"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/render
+  - community/Sound_Effects_and_Credits
 ---
 
 # wants_remotion()
@@ -17,4 +17,4 @@ tags:
 - [[render()_1]] - `calls` [EXTRACTED]
 - [[test_remotion_forced_by_look()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/render
+#graphify/code #graphify/EXTRACTED #community/Sound_Effects_and_Credits

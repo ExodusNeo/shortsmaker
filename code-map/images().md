@@ -1,12 +1,12 @@
 ---
 source_file: "local_ai/gen.py"
 type: "code"
-community: "gen.py"
+community: "Local GPU Worker"
 location: "L52"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/genpy
+  - community/Local_GPU_Worker
 ---
 
 # images()
@@ -16,4 +16,4 @@ tags:
 - [[item {prompt, out, width, height} - 4-step SDXL-Lightning image.]] - `rationale_for` [EXTRACTED]
 - [[main()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/genpy
+#graphify/code #graphify/EXTRACTED #community/Local_GPU_Worker

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/llm.py"
 type: "rationale"
-community: "ask_ai"
+community: "Headless AI Planner Calls"
 location: "L64"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/ask_ai
+  - community/Headless_AI_Planner_Calls
 ---
 
 # One headless Gemini turn. agy only takes the prompt inline on its command line…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[run_agy()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/ask_ai
+#graphify/rationale #graphify/EXTRACTED #community/Headless_AI_Planner_Calls

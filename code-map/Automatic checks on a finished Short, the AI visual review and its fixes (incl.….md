@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/review.py"
 type: "rationale"
-community: "test_full_scenes.py"
+community: "CLI, Config and Footage"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/test_full_scenespy
+  - community/CLI_Config_and_Footage
 ---
 
 # Automatic checks on a finished Short, the AI visual review and its fixes (incl.…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[review.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/test_full_scenespy
+#graphify/rationale #graphify/EXTRACTED #community/CLI_Config_and_Footage

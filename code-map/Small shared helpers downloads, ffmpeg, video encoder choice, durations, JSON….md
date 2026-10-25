@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/media_tools.py"
 type: "rationale"
-community: "audio_mix.py"
+community: "Audio Mix and Shotcut Export"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/audio_mixpy
+  - community/Audio_Mix_and_Shotcut_Export
 ---
 
 # Small shared helpers: downloads, ffmpeg, video encoder choice, durations, JSON…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[media_tools.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/audio_mixpy
+#graphify/rationale #graphify/EXTRACTED #community/Audio_Mix_and_Shotcut_Export

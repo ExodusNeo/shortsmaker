@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/style/overlays/KineticTitle.tsx"
 type: "code"
-community: "style/index.ts"
+community: "Invented Overlays and Looks"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/style/indexts
+  - community/Invented_Overlays_and_Looks
 ---
 
 # KineticTitle.tsx
@@ -25,4 +25,4 @@ tags:
 - [[styletypes.ts]] - `imports_from` [EXTRACTED]
 - [[theme]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/style/indexts
+#graphify/code #graphify/EXTRACTED #community/Invented_Overlays_and_Looks

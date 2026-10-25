@@ -1,21 +1,21 @@
 ---
 source_file: "tests/test_pictures_first.py"
 type: "code"
-community: "write_scripts"
+community: "Topic Planning Tests"
 location: "L432"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/write_scripts
+  - community/Topic_Planning_Tests
 ---
 
 # test_dropped_topic_pool_removed()
 
 ## Connections
 - [[planning]] - `calls` [EXTRACTED]
-- [[prepare()_3]] - `contains` [EXTRACTED]
-- [[prepare()_1]] - `indirect_call` [INFERRED]
+- [[prepare()_4]] - `contains` [EXTRACTED]
+- [[prepare()_2]] - `indirect_call` [INFERRED]
 - [[test_pictures_first.py]] - `contains` [EXTRACTED]
 - [[write_scripts()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/write_scripts
+#graphify/code #graphify/EXTRACTED #community/Topic_Planning_Tests

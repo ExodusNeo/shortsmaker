@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/blender_plan.py"
 type: "code"
-community: "test_blender_scene.py"
+community: "Blender Build Planning"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_blender_scenepy
+  - community/Blender_Build_Planning
 ---
 
 # blender_plan.py
@@ -20,6 +20,7 @@ tags:
 - [[ending()]] - `contains` [EXTRACTED]
 - [[json]] - `imports` [EXTRACTED]
 - [[llm.py]] - `imports_from` [EXTRACTED]
+- [[math]] - `imports` [EXTRACTED]
 - [[panels()]] - `contains` [EXTRACTED]
 - [[pick()]] - `contains` [EXTRACTED]
 - [[picture_pool.py]] - `imports_from` [EXTRACTED]
@@ -30,7 +31,7 @@ tags:
 - [[test_blender_render.py]] - `imports_from` [EXTRACTED]
 - [[test_blender_run.py]] - `imports_from` [EXTRACTED]
 - [[test_blender_scene.py]] - `imports_from` [EXTRACTED]
-- [[thumbnail_photo()]] - `contains` [EXTRACTED]
+- [[thumbnail_order()]] - `contains` [EXTRACTED]
 - [[writing.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_blender_scenepy
+#graphify/code #graphify/EXTRACTED #community/Blender_Build_Planning

@@ -1,12 +1,12 @@
 ---
 source_file: "blender/parts.py"
 type: "code"
-community: "parts.py"
+community: "Blender Bridge Parts"
 location: "L38"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/partspy
+  - community/Blender_Bridge_Parts
 ---
 
 # box()
@@ -26,4 +26,4 @@ tags:
 - [[valley()]] - `calls` [EXTRACTED]
 - [[water()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/partspy
+#graphify/code #graphify/EXTRACTED #community/Blender_Bridge_Parts

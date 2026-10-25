@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/style/looks/Silent.tsx"
 type: "code"
-community: "Halftone.tsx"
+community: "Invented Look Canvas Effects"
 location: "L19"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Halftonetsx
+  - community/Invented_Look_Canvas_Effects
 ---
 
 # Silent()
@@ -14,8 +14,8 @@ tags:
 ## Connections
 - [[Silent.tsx]] - `contains` [EXTRACTED]
 - [[draw()_4]] - `indirect_call` [INFERRED]
-- [[noise()]] - `calls` [EXTRACTED]
+- [[noise()_1]] - `calls` [EXTRACTED]
 - [[styleindex.ts]] - `indirect_call` [INFERRED]
 - [[useOnceCanvas()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Halftonetsx
+#graphify/code #graphify/EXTRACTED #community/Invented_Look_Canvas_Effects

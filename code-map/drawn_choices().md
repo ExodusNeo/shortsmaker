@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/short_render.py"
 type: "code"
-community: "render"
-location: "L68"
+community: "Sound Effects and Credits"
+location: "L69"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/render
+  - community/Sound_Effects_and_Credits
 ---
 
 # drawn_choices()
@@ -17,4 +17,4 @@ tags:
 - [[short_render.py]] - `contains` [EXTRACTED]
 - [[test_drawn_choices_have_no_pictures()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/render
+#graphify/code #graphify/EXTRACTED #community/Sound_Effects_and_Credits

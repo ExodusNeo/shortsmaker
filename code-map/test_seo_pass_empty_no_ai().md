@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_pictures_first.py"
 type: "code"
-community: "test_pictures_first.py"
+community: "Main Entry and Channel Profiles"
 location: "L446"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_pictures_firstpy
+  - community/Main_Entry_and_Channel_Profiles
 ---
 
 # test_seo_pass_empty_no_ai()
@@ -16,4 +16,4 @@ tags:
 - [[seo_pass()]] - `calls` [EXTRACTED]
 - [[test_pictures_first.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_pictures_firstpy
+#graphify/code #graphify/EXTRACTED #community/Main_Entry_and_Channel_Profiles

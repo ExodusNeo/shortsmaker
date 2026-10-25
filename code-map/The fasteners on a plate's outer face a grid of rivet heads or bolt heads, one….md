@@ -1,12 +1,12 @@
 ---
 source_file: "blender/parts.py"
 type: "rationale"
-community: "parts.py"
+community: "Blender Bridge Parts"
 location: "L103"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/partspy
+  - community/Blender_Bridge_Parts
 ---
 
 # The fasteners on a plate's outer face: a grid of rivet heads or bolt heads, one…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[fastener()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/partspy
+#graphify/rationale #graphify/EXTRACTED #community/Blender_Bridge_Parts

@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/style/index.ts"
 type: "code"
-community: "Short.tsx"
+community: "Short Composition Root"
 location: "L25"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Shorttsx
+  - community/Short_Composition_Root
 ---
 
 # lookFor()
@@ -18,4 +18,4 @@ tags:
 - [[style.test.ts]] - `imports` [EXTRACTED]
 - [[styleindex.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Shorttsx
+#graphify/code #graphify/EXTRACTED #community/Short_Composition_Root

@@ -1,12 +1,12 @@
 ---
 source_file: "blender/templates.py"
 type: "code"
-community: "templates.py"
+community: "Bridge Templates"
 location: "L56"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/templatespy
+  - community/Bridge_Templates
 ---
 
 # _truss_panel_members()
@@ -17,4 +17,4 @@ tags:
 - [[templates.py]] - `contains` [EXTRACTED]
 - [[truss_bridge()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/templatespy
+#graphify/code #graphify/EXTRACTED #community/Bridge_Templates

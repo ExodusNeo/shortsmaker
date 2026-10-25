@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/full/toolkit.tsx"
 type: "code"
-community: "skinOf"
+community: "Custom Remotion Scenes"
 location: "L10"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/skinOf
+  - community/Custom_Remotion_Scenes
 ---
 
 # clamp
@@ -18,4 +18,4 @@ tags:
 - [[Custom3.tsx]] - `imports` [EXTRACTED]
 - [[toolkit.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/skinOf
+#graphify/code #graphify/EXTRACTED #community/Custom_Remotion_Scenes

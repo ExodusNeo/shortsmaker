@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/picture_pool.py"
 type: "code"
-community: "pool_pictures"
-location: "L253"
+community: "Usable Picture Catalog"
+location: "L267"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/pool_pictures
+  - community/Usable_Picture_Catalog
 ---
 
 # is_usable()
@@ -16,7 +16,7 @@ tags:
 - [[clean_pics()]] - `calls` [EXTRACTED]
 - [[picture_pool.py]] - `contains` [EXTRACTED]
 - [[pool_pictures()]] - `calls` [EXTRACTED]
-- [[thumbnail_photo()]] - `calls` [EXTRACTED]
+- [[thumbnail_order()]] - `calls` [EXTRACTED]
 - [[usable()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/pool_pictures
+#graphify/code #graphify/EXTRACTED #community/Usable_Picture_Catalog

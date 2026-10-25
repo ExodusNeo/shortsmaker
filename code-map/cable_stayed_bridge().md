@@ -1,12 +1,12 @@
 ---
 source_file: "blender/templates.py"
 type: "code"
-community: "templates.py"
+community: "Bridge Templates"
 location: "L182"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/templatespy
+  - community/Bridge_Templates
 ---
 
 # cable_stayed_bridge()
@@ -22,4 +22,4 @@ tags:
 - [[main_cable()]] - `calls` [EXTRACTED]
 - [[templates.py]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/templatespy
+#graphify/code #graphify/EXTRACTED #community/Bridge_Templates

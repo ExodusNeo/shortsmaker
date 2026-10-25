@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/plan_rules.py"
 type: "code"
-community: "full_cues"
-location: "L335"
+community: "Sound Design and Scene Cues"
+location: "L470"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/full_cues
+  - community/Sound_Design_and_Scene_Cues
 ---
 
 # full_cues()
@@ -23,4 +23,4 @@ tags:
 - [[test_full_cues_fallback()]] - `calls` [EXTRACTED]
 - [[test_full_cues_leave_time_to_finish()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/full_cues
+#graphify/code #graphify/EXTRACTED #community/Sound_Design_and_Scene_Cues

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/footage.py"
 type: "code"
-community: "image_sources.py"
-location: "L103"
+community: "Stock Video Sources"
+location: "L104"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/image_sourcespy
+  - community/Stock_Video_Sources
 ---
 
 # archive_films()
@@ -20,4 +20,4 @@ tags:
 - [[re]] - `calls` [EXTRACTED]
 - [[words_of()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/image_sourcespy
+#graphify/code #graphify/EXTRACTED #community/Stock_Video_Sources

@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "test_full_scenes.py"
+community: "Main Entry and Channel Profiles"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/test_full_scenespy
+  - community/Main_Entry_and_Channel_Profiles
 ---
 
 # sys
@@ -32,6 +32,8 @@ tags:
 - [[test_edit_project.py]] - `imports` [EXTRACTED]
 - [[test_first_second.py]] - `imports` [EXTRACTED]
 - [[test_full_scenes.py]] - `imports` [EXTRACTED]
+- [[test_h3_handoff.py]] - `imports` [EXTRACTED]
+- [[test_h3_run.py]] - `imports` [EXTRACTED]
 - [[test_package.py]] - `imports` [EXTRACTED]
 - [[test_pictures_first.py]] - `imports` [EXTRACTED]
 - [[test_qwen_voice.py]] - `imports` [EXTRACTED]
@@ -39,4 +41,4 @@ tags:
 - [[test_story.py]] - `imports` [EXTRACTED]
 - [[test_style.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/test_full_scenespy
+#graphify/concept #graphify/EXTRACTED #community/Main_Entry_and_Channel_Profiles

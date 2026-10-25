@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/photo_prep.py"
 type: "code"
-community: "clean_photo"
+community: "Archive Photo Cleanup"
 location: "L12"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/clean_photo
+  - community/Archive_Photo_Cleanup
 ---
 
 # is_stereo()
@@ -19,4 +19,4 @@ tags:
 - [[photo_prep.py]] - `contains` [EXTRACTED]
 - [[statistics]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/clean_photo
+#graphify/code #graphify/EXTRACTED #community/Archive_Photo_Cleanup

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/gpu.py"
 type: "code"
-community: "re"
-location: "L141"
+community: "Local Voice Alignment"
+location: "L142"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/re
+  - community/Local_Voice_Alignment
 ---
 
 # spoken_count()
@@ -14,9 +14,10 @@ tags:
 ## Connections
 - [[Caption words the aligner gives for `text` (qwen_voice.align_words a token…]] - `rationale_for` [EXTRACTED]
 - [[gpu.py]] - `contains` [EXTRACTED]
+- [[local_voice()]] - `calls` [EXTRACTED]
 - [[re]] - `calls` [EXTRACTED]
 - [[split_takes()]] - `calls` [EXTRACTED]
 - [[test_word_counts_match_the_aligner()]] - `calls` [EXTRACTED]
 - [[unicodedata]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/re
+#graphify/code #graphify/EXTRACTED #community/Local_Voice_Alignment

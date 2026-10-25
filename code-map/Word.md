@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/Short.tsx"
 type: "code"
-community: "Short.tsx"
-location: "L60"
+community: "Remotion Caption Cards"
+location: "L62"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Shorttsx
+  - community/Remotion_Caption_Cards
 ---
 
 # Word
@@ -15,4 +15,4 @@ tags:
 - [[Captions.tsx]] - `imports` [EXTRACTED]
 - [[Short.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Shorttsx
+#graphify/code #graphify/EXTRACTED #community/Remotion_Caption_Cards

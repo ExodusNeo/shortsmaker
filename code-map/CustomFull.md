@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/full/types.ts"
 type: "code"
-community: "skinOf"
+community: "Custom Remotion Scenes"
 location: "L56"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/skinOf
+  - community/Custom_Remotion_Scenes
 ---
 
 # CustomFull
@@ -22,4 +22,4 @@ tags:
 - [[fulltypes.ts]] - `contains` [EXTRACTED]
 - [[toolkit.tsx]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/skinOf
+#graphify/code #graphify/EXTRACTED #community/Custom_Remotion_Scenes

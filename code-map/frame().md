@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/frame_render.py"
 type: "code"
-community: "frame_maker"
-location: "L236"
+community: "Frame Drawing and Graphics"
+location: "L248"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/frame_maker
+  - community/Frame_Drawing_and_Graphics
 ---
 
 # frame()
@@ -19,4 +19,4 @@ tags:
 - [[shot()]] - `calls` [EXTRACTED]
 - [[write_frames()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/frame_maker
+#graphify/code #graphify/EXTRACTED #community/Frame_Drawing_and_Graphics

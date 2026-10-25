@@ -1,12 +1,12 @@
 ---
 source_file: "blender/parts.py"
 type: "code"
-community: "parts.py"
+community: "Blender Bridge Parts"
 location: "L56"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/partspy
+  - community/Blender_Bridge_Parts
 ---
 
 # cylinder()
@@ -21,4 +21,4 @@ tags:
 - [[parts.py]] - `contains` [EXTRACTED]
 - [[person()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/partspy
+#graphify/code #graphify/EXTRACTED #community/Blender_Bridge_Parts

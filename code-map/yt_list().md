@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/channel_profiles.py"
 type: "code"
-community: "trend_research"
-location: "L117"
+community: "Main Entry and Channel Profiles"
+location: "L122"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/trend_research
+  - community/Main_Entry_and_Channel_Profiles
 ---
 
 # yt_list()
@@ -16,4 +16,4 @@ tags:
 - [[channel_profiles.py]] - `contains` [EXTRACTED]
 - [[trend_research()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/trend_research
+#graphify/code #graphify/EXTRACTED #community/Main_Entry_and_Channel_Profiles

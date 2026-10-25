@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/rules.py"
 type: "code"
-community: "test_full_scenes.py"
+community: "CLI, Config and Footage"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_full_scenespy
+  - community/CLI_Config_and_Footage
 ---
 
 # rules.py
@@ -21,9 +21,12 @@ tags:
 - [[json]] - `imports` [EXTRACTED]
 - [[llm.py]] - `imports_from` [EXTRACTED]
 - [[load_rules()]] - `contains` [EXTRACTED]
+- [[max_full()]] - `contains` [EXTRACTED]
+- [[max_full_planned()]] - `contains` [EXTRACTED]
 - [[min_real_pictures()]] - `contains` [EXTRACTED]
 - [[parse_rules()]] - `contains` [EXTRACTED]
 - [[pathlib]] - `imports_from` [EXTRACTED]
+- [[picker.py]] - `imports_from` [EXTRACTED]
 - [[picture_pool.py]] - `imports_from` [EXTRACTED]
 - [[re]] - `imports` [EXTRACTED]
 - [[require_rules()]] - `contains` [EXTRACTED]
@@ -35,5 +38,6 @@ tags:
 - [[test_rules.py]] - `imports_from` [EXTRACTED]
 - [[test_story.py]] - `imports_from` [EXTRACTED]
 - [[test_style.py]] - `imports_from` [EXTRACTED]
+- [[writing.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_full_scenespy
+#graphify/code #graphify/EXTRACTED #community/CLI_Config_and_Footage

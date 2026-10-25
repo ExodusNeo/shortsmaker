@@ -1,25 +1,30 @@
 ---
 source_file: "shortsmaker/gpu.py"
 type: "code"
-community: "local_clips"
-location: "L331"
+community: "AI Clip Prompts and Cuts"
+location: "L462"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/local_clips
+  - community/AI_Clip_Prompts_and_Cuts
 ---
 
 # veo_handoff()
 
 ## Connections
-- [[Path_14]] - `references` [EXTRACTED]
-- [[Pause the batch write each animate scene's start picture + Veo prompt to…]] - `rationale_for` [EXTRACTED]
+- [[Path_18]] - `references` [EXTRACTED]
+- [[Pause the batch write each animate scene's start picture + detailed prompt to…]] - `rationale_for` [EXTRACTED]
 - [[cover_crop()]] - `calls` [EXTRACTED]
-- [[ffmpeg()]] - `calls` [EXTRACTED]
+- [[cut_owner_clip()]] - `calls` [EXTRACTED]
 - [[gpu.py]] - `contains` [EXTRACTED]
+- [[h3_prompts()]] - `calls` [EXTRACTED]
+- [[handoff()]] - `calls` [EXTRACTED]
+- [[json]] - `calls` [EXTRACTED]
 - [[local_clips()]] - `calls` [EXTRACTED]
-- [[motion_prompt()]] - `calls` [EXTRACTED]
 - [[os]] - `calls` [EXTRACTED]
-- [[video_encoder()]] - `calls` [EXTRACTED]
+- [[start_picture_problems()]] - `calls` [EXTRACTED]
+- [[test_all_closeup_marked_scenes_skip_pause()]] - `calls` [EXTRACTED]
+- [[unpack_clips()]] - `calls` [EXTRACTED]
+- [[zipfile]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/local_clips
+#graphify/code #graphify/EXTRACTED #community/AI_Clip_Prompts_and_Cuts

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/rules.py"
 type: "code"
-community: "test_rules.py"
+community: "Channel Rules Files"
 location: "L19"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_rulespy
+  - community/Channel_Rules_Files
 ---
 
 # parse_rules()
@@ -28,4 +28,4 @@ tags:
 - [[test_photo_channels_dont_need_a_build_plan()]] - `calls` [EXTRACTED]
 - [[test_strips_tag_comments()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_rulespy
+#graphify/code #graphify/EXTRACTED #community/Channel_Rules_Files

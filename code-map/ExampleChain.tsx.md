@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/full/examples/ExampleChain.tsx"
 type: "code"
-community: "skinOf"
+community: "Example Chain and Evidence"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/skinOf
+  - community/Example_Chain_and_Evidence
 ---
 
 # ExampleChain.tsx
@@ -36,4 +36,4 @@ tags:
 - [[toolkit.tsx]] - `imports_from` [EXTRACTED]
 - [[travel()]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/skinOf
+#graphify/code #graphify/EXTRACTED #community/Example_Chain_and_Evidence

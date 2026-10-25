@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_rules.py"
 type: "code"
-community: "run_draft"
-location: "L187"
+community: "Channel Rules Files"
+location: "L189"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/run_draft
+  - community/Channel_Rules_Files
 ---
 
 # test_draft_blender_channel_needs_build_plan()
@@ -16,4 +16,4 @@ tags:
 - [[run_draft()]] - `calls` [EXTRACTED]
 - [[test_rules.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/run_draft
+#graphify/code #graphify/EXTRACTED #community/Channel_Rules_Files

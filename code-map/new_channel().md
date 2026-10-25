@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/channel_profiles.py"
 type: "code"
-community: "trend_research"
-location: "L85"
+community: "Main Entry and Channel Profiles"
+location: "L90"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/trend_research
+  - community/Main_Entry_and_Channel_Profiles
 ---
 
 # new_channel()
@@ -18,4 +18,4 @@ tags:
 - [[pick_channel()]] - `calls` [EXTRACTED]
 - [[save_channel()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/trend_research
+#graphify/code #graphify/EXTRACTED #community/Main_Entry_and_Channel_Profiles

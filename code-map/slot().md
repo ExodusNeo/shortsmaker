@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/Graphics.tsx"
 type: "code"
-community: "Graphics.tsx"
+community: "Remotion Caption Cards"
 location: "L41"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Graphicstsx
+  - community/Remotion_Caption_Cards
 ---
 
 # slot()
@@ -20,10 +20,12 @@ tags:
 - [[HeadlineCard()]] - `calls` [EXTRACTED]
 - [[KineticTitle()]] - `calls` [EXTRACTED]
 - [[KineticTitle.tsx]] - `imports` [EXTRACTED]
+- [[QuestionBeat()]] - `calls` [EXTRACTED]
+- [[QuestionBeat.tsx]] - `imports` [EXTRACTED]
 - [[QuoteCard()]] - `calls` [EXTRACTED]
 - [[StampCard()]] - `calls` [EXTRACTED]
 - [[StatCard()]] - `calls` [EXTRACTED]
 - [[TimelineCard()]] - `calls` [EXTRACTED]
 - [[kit.ts]] - `re_exports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Graphicstsx
+#graphify/code #graphify/EXTRACTED #community/Remotion_Caption_Cards

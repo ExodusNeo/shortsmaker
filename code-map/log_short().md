@@ -1,23 +1,23 @@
 ---
 source_file: "shortsmaker/logbook.py"
 type: "code"
-community: "first_second_check"
+community: "Obsidian Vault Logbook"
 location: "L24"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/first_second_check
+  - community/Obsidian_Vault_Logbook
 ---
 
 # log_short()
 
 ## Connections
 - [[Add a finished Short to this channel's logbook, with empty lines for its…]] - `rationale_for` [EXTRACTED]
-- [[Path_15]] - `references` [EXTRACTED]
+- [[Path_21]] - `references` [EXTRACTED]
 - [[clock()_1]] - `calls` [EXTRACTED]
 - [[duration()]] - `calls` [EXTRACTED]
 - [[logbook.py]] - `contains` [EXTRACTED]
-- [[main()_3]] - `calls` [EXTRACTED]
+- [[main()_2]] - `calls` [EXTRACTED]
 - [[re]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/first_second_check
+#graphify/code #graphify/EXTRACTED #community/Obsidian_Vault_Logbook

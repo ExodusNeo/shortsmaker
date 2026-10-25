@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/picker.py"
 type: "code"
-community: "drawn_thumbnail"
-location: "L178"
+community: "Openverse and Museum Images"
+location: "L204"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/drawn_thumbnail
+  - community/Openverse_and_Museum_Images
 ---
 
 # full_pictures()
@@ -18,4 +18,4 @@ tags:
 - [[picker.py]] - `contains` [EXTRACTED]
 - [[test_board_pictures_attached()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/drawn_thumbnail
+#graphify/code #graphify/EXTRACTED #community/Openverse_and_Museum_Images

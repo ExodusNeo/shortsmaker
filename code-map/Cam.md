@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/full/Paper.tsx"
 type: "code"
-community: "toolkit.tsx"
+community: "Board and Document Scenes"
 location: "L118"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/toolkittsx
+  - community/Board_and_Document_Scenes
 ---
 
 # Cam
@@ -16,4 +16,4 @@ tags:
 - [[Paper.tsx]] - `contains` [EXTRACTED]
 - [[toolkit.tsx]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/toolkittsx
+#graphify/code #graphify/EXTRACTED #community/Board_and_Document_Scenes

@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/style/overlays/QuestionBeat.tsx"
 type: "code"
-community: "style/index.ts"
-location: "L9"
+community: "Remotion Caption Cards"
+location: "L7"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/style/indexts
+  - community/Remotion_Caption_Cards
 ---
 
 # QuestionBeat()
@@ -14,6 +14,7 @@ tags:
 ## Connections
 - [[QuestionBeat.tsx]] - `contains` [EXTRACTED]
 - [[outline()]] - `calls` [EXTRACTED]
+- [[slot()]] - `calls` [EXTRACTED]
 - [[styleindex.ts]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/style/indexts
+#graphify/code #graphify/EXTRACTED #community/Remotion_Caption_Cards

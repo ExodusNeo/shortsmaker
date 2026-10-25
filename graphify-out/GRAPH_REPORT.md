@@ -1,354 +1,364 @@
-# Graph Report - ShortsMaker  (2026-10-22)
+# Graph Report - ShortsMaker  (2026-10-26)
 
 ## Corpus Check
-- 102 files · ~100,986 words
-- Verdict: corpus is large enough that graph structure adds value.
-- Unclassified: 4 file(s) not represented in the graph (top: (none) 3, .canvas 1)
+- cluster-only mode — file stats not available
 
 ## Summary
-- 1394 nodes · 3789 edges · 62 communities (56 shown, 6 thin omitted)
-- Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 87 edges (avg confidence: 0.85)
-- Token cost: 0 input · 0 output
+- 1526 nodes · 4124 edges · 66 communities (58 shown, 8 thin omitted)
+- Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 101 edges (avg confidence: 0.85)
+- Token cost: 69,368 input · 935 output
 
 ## Graph Freshness
-- Built from commit: `36855729`
+- Built from commit: `f156b366`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
 ## Community Hubs (Navigation)
-- style/index.ts
-- Graphics.tsx
-- clean_full
-- skinOf
-- main
-- split_make_shorts.py
-- test_full_scenes.py
-- ask_ai
-- full_cues
-- toolkit.tsx
-- audio_mix.py
-- drawn_thumbnail
-- code_custom_scenes
-- guarded.tsx
-- make
-- test_rules.py
-- Journey.tsx
-- full/types.ts
-- prepare_topic
-- test_pictures_first.py
-- gen.py
-- test_style.py
-- choose_images
-- test_blender_scene.py
-- image_sources.py
-- write_scripts
-- gather_pool
-- frame_maker
-- style_library
-- sentence_groups
-- render
-- parts.py
-- apply_review_fixes
-- test_blender_render.py
-- templates.py
-- render_remotion
-- re
-- run_check
-- build_scene.py
-- local_clips
-- clean_photo
-- main
-- Short.tsx
-- first_second_check
-- pool_pictures
-- ffmpeg
-- planning_ai
-- Halftone.tsx
-- json
-- speak
-- rewrite_paint_prompts
-- plan_rules.py
-- Shots
-- limit_style
-- trend_research
-- capture_prompts
-- run_draft
-- use_picture_from
-- draft_rules
-- paint_instead
-- make_sfx
-- StopPicker
+- Invented Overlays and Looks
+- Remotion Caption Cards
+- Full-Screen Graphic Validation
+- Custom Remotion Scenes
+- Main Entry and Channel Profiles
+- Script Splitting AST Tools
+- CLI, Config and Footage
+- MiniMax H3 Video Jobs
+- Sound Design and Scene Cues
+- Board and Document Scenes
+- Audio Mix and Shotcut Export
+- Openverse and Museum Images
+- Headless AI Planner Calls
+- Example Chain and Evidence
+- Shotcut Timeline and Loudness
+- Channel Rules Files
+- Map Journey Scene
+- Big Number Full Scenes
+- Picture Pool Storage
+- Director Picture Cleanup Tests
+- Local GPU Worker
+- Motion Scenes and Style Library
+- Pictures-First Pool Tests
+- Blender Scene Tests
+- Stock Video Sources
+- Topic Planning Tests
+- Wikimedia Image Search
+- Frame Drawing and Graphics
+- Edit Plan Text
+- Script Sounds and Graphics
+- Sound Effects and Credits
+- Blender Bridge Parts
+- Write Scripts Review Tests
+- Blender Build Planning
+- Bridge Templates
+- ASS Captions and Skins
+- Narration Number Speech
+- First-Second Opener Check
+- Blender Ink Look
+- AI Clip Prompts and Cuts
+- Archive Photo Cleanup
+- Bridge Collapse Simulation
+- Short Composition Root
+- Quality and Visual Review
+- Film Clip Downloads
+- Local Voice Alignment
+- Fake AI Test Helpers
+- Invented Look Canvas Effects
+- Local Voice and Freesound
+- TTS and Story Sounds
+- Repaint Prompt Rewrites
+- Obsidian Vault Logbook
+- Blender Camera Shots
+- Style Library Caps
+- Style Plan Validation
+- Review Auto-Fixes
+- Graphics Rescue Caps
+- Picture Swap Fixes
+- Usable Picture Catalog
+- Gemini Image Painting
+- Remotion Root Entry
+- Custom Scene Redraw Tests
+- Logbook Results
+- Full Graphic Limits
+- Photo Look Application
+- Short Credit Tags
 
 ## God Nodes (most connected - your core abstractions)
-1. `render()` - 60 edges
-2. `write_scripts()` - 39 edges
-3. `ask_ai()` - 30 edges
+1. `render()` - 61 edges
+2. `write_scripts()` - 44 edges
+3. `ask_ai()` - 35 edges
 4. `skinOf()` - 29 edges
 5. `main()` - 26 edges
 6. `Paper()` - 25 edges
-7. `choose_images()` - 23 edges
-8. `clean_full()` - 21 edges
-9. `style_library()` - 20 edges
-10. `Bridge` - 19 edges
+7. `choose_images()` - 24 edges
+8. `words_of()` - 22 edges
+9. `clean_full()` - 21 edges
+10. `Bridge` - 20 edges
 
 ## Surprising Connections (you probably didn't know these)
-- `test_numbers()` --calls--> `say_number()`  [INFERRED]
-  tests/test_qwen_voice.py → local_ai/qwen_voice.py
+- `test_pixabay_keeps_only_on_topic_videos()` --calls--> `pixabay_films()`  [EXTRACTED]
+  tests/test_pictures_first.py → shortsmaker/footage.py
 - `test_caption_word_counts_match_the_scene_splitter()` --calls--> `align_words()`  [INFERRED]
   tests/test_qwen_voice.py → local_ai/qwen_voice.py
 - `test_caption_words_keep_what_is_written()` --calls--> `align_words()`  [INFERRED]
   tests/test_qwen_voice.py → local_ai/qwen_voice.py
 - `test_every_aligned_word_is_in_the_aligner_alphabet()` --calls--> `align_words()`  [INFERRED]
   tests/test_qwen_voice.py → local_ai/qwen_voice.py
-- `test_min_pictures_from_settings()` --calls--> `prepare_topic()`  [EXTRACTED]
-  tests/test_rules.py → shortsmaker/picture_pool.py
+- `test_numbers()` --calls--> `say_number()`  [INFERRED]
+  tests/test_qwen_voice.py → local_ai/qwen_voice.py
 
 ## Import Cycles
 - 3-file cycle: `shortsmaker/blender_plan.py -> shortsmaker/picture_pool.py -> shortsmaker/writing.py -> shortsmaker/blender_plan.py`
 
-## Communities (62 total, 6 thin omitted)
+## Communities (66 total, 8 thin omitted)
 
-### Community 0 - "style/index.ts"
+### Community 0 - "Invented Overlays and Looks"
 Cohesion: 0.13
-Nodes (22): InventedOverlay(), InventedTransition, LOOKS, OVERLAYS, CAPTION_TOP, CLAMP, clamp01(), H (+14 more)
+Nodes (21): InventedOverlay(), InventedTransition, LOOKS, OVERLAYS, CAPTION_TOP, CLAMP, clamp01(), H (+13 more)
 
-### Community 1 - "Graphics.tsx"
-Cohesion: 0.17
-Nodes (29): card, clamp, DotGrid(), MarkCard(), Props, StatCard(), TimelineCard(), clamp (+21 more)
+### Community 1 - "Remotion Caption Cards"
+Cohesion: 0.15
+Nodes (32): card, clamp, DotGrid(), formatStat(), MarkCard(), Props, StatCard(), TimelineCard() (+24 more)
 
-### Community 2 - "clean_full"
-Cohesion: 0.09
-Nodes (22): clean_sound(), limit_sounds(), rescue_graphics(), clean_full(), word(), clean_graphic(), contains(), coords() (+14 more)
+### Community 2 - "Full-Screen Graphic Validation"
+Cohesion: 0.16
+Nodes (12): clean_full(), coords(), is_num(), number_figures(), show_number(), test_clean_full_board(), test_clean_full_document(), test_clean_full_journey() (+4 more)
 
-### Community 3 - "skinOf"
-Cohesion: 0.18
-Nodes (23): CustomScene(), ExampleChain(), ExampleEvidence(), Custom0(), Custom1(), Custom2(), Custom3(), Card() (+15 more)
+### Community 3 - "Custom Remotion Scenes"
+Cohesion: 0.27
+Nodes (19): CustomScene(), Custom0(), Custom1(), Custom2(), Custom3(), skinOf(), appear(), CalloutTag() (+11 more)
 
-### Community 4 - "main"
-Cohesion: 0.08
-Nodes (18): ask_brain(), ask_count(), ask_number(), ask_yes(), load_channel(), pick_channel(), use_channel(), fix_short() (+10 more)
+### Community 4 - "Main Entry and Channel Profiles"
+Cohesion: 0.07
+Nodes (26): ask_brain(), ask_count(), ask_number(), ask_yes(), channel_url(), load_channel(), new_channel(), pick_channel() (+18 more)
 
-### Community 5 - "split_make_shorts.py"
+### Community 5 - "Script Splitting AST Tools"
 Cohesion: 0.08
 Nodes (20): arg_names(), chunks_of(), defined_names(), global_names(), visit(), identifiers(), import_lines(), is_main_guard() (+12 more)
 
-### Community 7 - "ask_ai"
-Cohesion: 0.12
-Nodes (10): ask_ai(), gemini_model(), quota_exhausted(), run_agy(), mark_details(), test_quota_fallback_both_ways(), test_argon_out_of_quota_switches_to_flash(), test_claude_pinned_to_opus_high() (+2 more)
-
-### Community 8 - "full_cues"
-Cohesion: 0.07
-Nodes (20): sfx_events(), scene_cues(), full_props(), full_summary(), full_cues(), spoken_at(), spoken_span(), _board() (+12 more)
-
-### Community 9 - "toolkit.tsx"
-Cohesion: 0.15
-Nodes (25): Board(), clamp, layout(), LAYOUTS, lerp(), Print, clamp, DocumentScene() (+17 more)
-
-### Community 10 - "audio_mix.py"
-Cohesion: 0.12
-Nodes (3): freesound_fetch(), music_gain(), test_music_gain_evens_out_tracks()
-
-### Community 11 - "drawn_thumbnail"
-Cohesion: 0.18
-Nodes (6): get_image(), openverse_images(), ov_get(), full_pictures(), drawn_thumbnail(), test_board_pictures_attached()
-
-### Community 12 - "code_custom_scenes"
-Cohesion: 0.12
-Nodes (13): clean_tsx_code(), code_custom_scenes(), custom_rules(), fallback_custom_tsx(), lint_custom_code(), look_and_fix(), preview_custom(), preview_sheet() (+5 more)
-
-### Community 13 - "guarded.tsx"
+### Community 6 - "CLI, Config and Footage"
 Cohesion: 0.14
-Nodes (17): Box, boxAt(), clamp, fitCard(), hits(), layoutColumn(), layoutGrid(), layoutRow() (+9 more)
+Nodes (3): crop_film_bytes(), film_frames(), storyboard()
 
-### Community 14 - "make"
-Cohesion: 0.17
-Nodes (6): caption_layer(), make(), master_gain(), project_xml(), remove(), test_timeline_has_scenes_captions_sound_and_markers()
+### Community 7 - "MiniMax H3 Video Jobs"
+Cohesion: 0.05
+Nodes (38): call(), fit_start(), frames(), graph(), main(), saved_file(), h3_problems(), h3_prompt() (+30 more)
 
-### Community 15 - "test_rules.py"
-Cohesion: 0.20
-Nodes (20): parse_rules(), make(), stop_text(), test_bad_min_pictures_stops(), test_blender_needs_a_build_plan_section(), test_bom_and_crlf_load_the_same(), test_draft_stops(), test_draft_writes_tagged_draft_file() (+12 more)
+### Community 8 - "Sound Design and Scene Cues"
+Cohesion: 0.07
+Nodes (21): sfx_events(), scene_cues(), full_props(), full_summary(), full_cues(), spoken_at(), _board(), _jpg() (+13 more)
 
-### Community 16 - "Journey.tsx"
+### Community 9 - "Board and Document Scenes"
+Cohesion: 0.16
+Nodes (21): Board(), clamp, layout(), LAYOUTS, lerp(), Print, clamp, DocumentScene() (+13 more)
+
+### Community 10 - "Audio Mix and Shotcut Export"
+Cohesion: 0.08
+Nodes (9): music_gain(), hex_rgb(), luminance(), shot_span(), fills_frame(), duration(), make_paper(), test_make_paper() (+1 more)
+
+### Community 11 - "Openverse and Museum Images"
+Cohesion: 0.22
+Nodes (5): get_image(), openverse_images(), ov_get(), full_pictures(), test_board_pictures_attached()
+
+### Community 12 - "Headless AI Planner Calls"
+Cohesion: 0.06
+Nodes (27): ask_ai(), gemini_model(), quota_exhausted(), run_agy(), clean_tsx_code(), code_custom_scenes(), custom_rules(), fallback_custom_tsx() (+19 more)
+
+### Community 13 - "Example Chain and Evidence"
+Cohesion: 0.10
+Nodes (23): ExampleChain(), ExampleEvidence(), Box, boxAt(), Card(), clamp, Connect(), fitCard() (+15 more)
+
+### Community 14 - "Shotcut Timeline and Loudness"
+Cohesion: 0.14
+Nodes (9): caption_layer(), make(), master_gain(), project_xml(), remove(), short_folder(), test_melt_plays_it_with_the_captions_on_top(), test_timeline_has_scenes_captions_sound_and_markers() (+1 more)
+
+### Community 15 - "Channel Rules Files"
+Cohesion: 0.08
+Nodes (36): draft_rules(), load_rules(), min_real_pictures(), parse_rules(), require_rules(), capture_prompts(), ask(), draft_reply() (+28 more)
+
+### Community 16 - "Map Journey Scene"
 Cohesion: 0.13
 Nodes (16): clamp, fitPoints(), FOCUS, graticule, INNER, Journey(), level(), LEVELS (+8 more)
 
-### Community 17 - "full/types.ts"
-Cohesion: 0.16
-Nodes (18): Bars(), BigNumber(), clamp, counter(), Figure(), fmt(), gridFor(), FullScene() (+10 more)
+### Community 17 - "Big Number Full Scenes"
+Cohesion: 0.13
+Nodes (21): Bars(), BigNumber(), clamp, counter(), Figure(), fmt(), fmtBar(), gridFor() (+13 more)
 
-### Community 18 - "prepare_topic"
-Cohesion: 0.22
-Nodes (7): contact_sheets(), load_pool(), pool_folder(), prepare_topic(), test_empty_pool_drops_topic_without_ai(), test_pool_roundtrip(), test_small_pool_skips_ai()
-
-### Community 19 - "test_pictures_first.py"
+### Community 18 - "Picture Pool Storage"
 Cohesion: 0.12
-Nodes (26): write_json(), catalog_entries(), catalog_pool(), clean_pics(), save_pool(), entry(), fake_ai, film() (+18 more)
+Nodes (15): write_json(), catalog_entries(), catalog_pool(), contact_sheets(), load_pool(), pool_folder(), prepare_topic(), save_pool() (+7 more)
 
-### Community 20 - "gen.py"
+### Community 19 - "Director Picture Cleanup Tests"
+Cohesion: 0.19
+Nodes (15): clean_pics(), entry(), pic_short(), pool_of(), test_board_item_pics_cleaned(), test_board_item_refuses_film(), test_both_mode_reuses_pools(), test_catalog_both_empty_stops_uncached() (+7 more)
+
+### Community 20 - "Local GPU Worker"
 Cohesion: 0.14
 Nodes (7): encoder_args(), images(), main(), parallax(), t5_encoder(), tts(), video()
 
-### Community 21 - "test_style.py"
-Cohesion: 0.13
-Nodes (14): approve_candidate(), clean_style_code(), library_menu(), reject_candidate(), save_candidate(), candidate_in(), library_snapshot(), restore_library() (+6 more)
-
-### Community 22 - "choose_images"
-Cohesion: 0.19
-Nodes (14): choose_images(), apply_look_scenes(), picking, planned_short(), scene(), still(), test_choose_extra_gather_is_bounded(), test_choose_falls_back_to_plan() (+6 more)
-
-### Community 23 - "test_blender_scene.py"
-Cohesion: 0.08
-Nodes (35): clamp(), clean_build(), default_build(), ending(), panels(), pick(), plan_builds(), thumbnail_photo() (+27 more)
-
-### Community 24 - "image_sources.py"
-Cohesion: 0.08
-Nodes (18): archive_films(), commons_films(), crop_film_bytes(), film_frames(), nasa_films(), pixabay_films(), archive_images(), article_images() (+10 more)
-
-### Community 25 - "write_scripts"
-Cohesion: 0.09
-Nodes (22): pictures_of(), limit_full(), direct_scripts(), edit_scripts(), length_plan(), narration_lines(), story_problems(), write_scripts() (+14 more)
-
-### Community 26 - "gather_pool"
-Cohesion: 0.12
-Nodes (7): gather_pool(), owner(), _fake_planning(), test_director_prompt_mentions_full(), stubbed, test_gather_pool_shape(), test_gather_pool_skip_and_limits()
-
-### Community 27 - "frame_maker"
-Cohesion: 0.07
-Nodes (16): ClipReader, draw_card(), draw_graphic(), fills_frame(), fit_font(), flash_alpha(), frame_maker(), frame() (+8 more)
-
-### Community 28 - "style_library"
+### Community 21 - "Motion Scenes and Style Library"
 Cohesion: 0.06
-Nodes (22): cut_text(), edit_plan(), look_text(), picture_line(), clean_invention(), clean_look(), clean_transition(), settle_style() (+14 more)
+Nodes (28): tsc_check(), approve_candidate(), library_menu(), reject_candidate(), save_candidate(), style_library(), style_rules(), write_style_index() (+20 more)
 
-### Community 29 - "sentence_groups"
-Cohesion: 0.29
-Nodes (6): sentence_groups(), build(), add(), main(), scenes(), test_sentences_running_across_cuts_are_one_take()
+### Community 22 - "Pictures-First Pool Tests"
+Cohesion: 0.21
+Nodes (14): choose_images(), picking, planned_short(), scene(), still(), test_choose_extra_gather_is_bounded(), test_choose_falls_back_to_plan(), test_choose_keeps_plan_and_appends() (+6 more)
 
-### Community 30 - "render"
-Cohesion: 0.12
-Nodes (9): short_credit(), graphics_count(), wants_remotion(), srt(), drawn_choices(), render(), save_state(), test_drawn_choices_have_no_pictures() (+1 more)
+### Community 23 - "Blender Scene Tests"
+Cohesion: 0.18
+Nodes (20): changed(), count(), manifest(), near(), plan_with(), render(), test_a_failing_pier_falls_with_its_red_copy(), test_bridge_stands_until_the_build_starts_over() (+12 more)
 
-### Community 31 - "parts.py"
+### Community 24 - "Stock Video Sources"
+Cohesion: 0.09
+Nodes (15): archive_films(), commons_films(), nasa_films(), pixabay_films(), archive_images(), nasa_images(), nasa_search(), on_topic() (+7 more)
+
+### Community 25 - "Topic Planning Tests"
+Cohesion: 0.22
+Nodes (12): passing(), prepare(), planning, test_all_weak_returns_empty(), test_both_mode_pools_follow_reply_position(), prepare(), test_dropped_topic_pool_removed(), prepare() (+4 more)
+
+### Community 26 - "Wikimedia Image Search"
+Cohesion: 0.10
+Nodes (10): article_images(), commons_search(), thumb_url(), wm_files(), gather_pool(), owner(), film(), stubbed (+2 more)
+
+### Community 27 - "Frame Drawing and Graphics"
+Cohesion: 0.07
+Nodes (15): ClipReader, draw_card(), draw_graphic(), fit_font(), flash_alpha(), frame_maker(), frame(), graphic_overlay() (+7 more)
+
+### Community 28 - "Edit Plan Text"
+Cohesion: 0.20
+Nodes (5): cut_text(), edit_plan(), look_text(), picture_line(), test_edit_plan_picture_line()
+
+### Community 29 - "Script Sounds and Graphics"
+Cohesion: 0.14
+Nodes (14): clean_sound(), limit_sounds(), graphic_low(), word(), clean_graphic(), contains(), fill_money_graphics(), is_person_portrait() (+6 more)
+
+### Community 30 - "Sound Effects and Credits"
+Cohesion: 0.10
+Nodes (10): make_sfx(), short_credit(), graphics_count(), wants_remotion(), srt(), drawn_choices(), render(), save_state() (+2 more)
+
+### Community 31 - "Blender Bridge Parts"
 Cohesion: 0.15
 Nodes (22): material(), bbox_size(), box(), car(), cylinder(), deck(), eyebar(), fastener() (+14 more)
 
-### Community 32 - "apply_review_fixes"
-Cohesion: 0.15
-Nodes (8): apply_review_fixes(), ask(), _review_state(), test_auto_fix_graphic(), test_look_check_fixes_code(), test_redraw_failure_paints(), test_review_redraws_custom(), test_review_uses_unused_pool_pictures_before_painting()
-
-### Community 33 - "test_blender_render.py"
-Cohesion: 0.11
-Nodes (18): BlenderFailed, peaks(), render_clips(), _run(), scene_frames(), fake_blender(), short(), test_changed_blender_code_redraws() (+10 more)
-
-### Community 34 - "templates.py"
-Cohesion: 0.19
-Nodes (14): Bridge, build(), cable_stayed_bridge(), _edge_girders(), eyebar_chain_bridge(), focus_object(), girder_bridge(), _hung_deck() (+6 more)
-
-### Community 35 - "render_remotion"
-Cohesion: 0.06
-Nodes (30): ass_time(), caption_lines(), captions(), styled(), ass_colour(), render_remotion(), remotion(), render() (+22 more)
-
-### Community 36 - "re"
-Cohesion: 0.09
-Nodes (14): align(), align_words(), main(), say_number(), studio_speak(), spoken_count(), voicestudio_up(), vault_page() (+6 more)
-
-### Community 37 - "run_check"
+### Community 32 - "Write Scripts Review Tests"
 Cohesion: 0.22
-Nodes (9): swap_pictures(), real(), run_check(), state(), test_good_opening_or_no_reply_changes_nothing(), test_low_score_opens_on_a_better_real_picture(), test_opener_fix_swaps_once(), test_opener_must_be_a_later_real_picture() (+1 more)
+Nodes (5): _fake_planning(), ask(), test_director_prompt_mentions_full(), test_look_check_fixes_code(), test_review_uses_unused_pool_pictures_before_painting()
 
-### Community 38 - "build_scene.py"
-Cohesion: 0.18
-Nodes (5): collection(), ink_lines(), linear(), setup(), radians()
+### Community 33 - "Blender Build Planning"
+Cohesion: 0.05
+Nodes (44): clamp(), clean_build(), default_build(), ending(), panels(), pick(), plan_builds(), thumbnail_order() (+36 more)
 
-### Community 39 - "local_clips"
-Cohesion: 0.15
-Nodes (9): cover_crop(), local_clips(), local_job(), local_voice(), motion_prompt(), veo_handoff(), video_encoder(), test_local_job_retries_a_hard_crash() (+1 more)
+### Community 34 - "Bridge Templates"
+Cohesion: 0.19
+Nodes (14): Bridge, build(), cable_stayed_bridge(), dress(), _edge_girders(), eyebar_chain_bridge(), girder_bridge(), _hung_deck() (+6 more)
 
-### Community 40 - "clean_photo"
+### Community 35 - "ASS Captions and Skins"
+Cohesion: 0.05
+Nodes (32): ass_time(), caption_lines(), captions(), styled(), ass_colour(), short_skin(), render_remotion(), remotion() (+24 more)
+
+### Community 36 - "Narration Number Speech"
+Cohesion: 0.06
+Nodes (25): align_words(), say_number(), speak(), spoken_sentence(), spoken_tokens(), sentence_groups(), check_twists(), edit_scripts() (+17 more)
+
+### Community 37 - "First-Second Opener Check"
+Cohesion: 0.24
+Nodes (12): swap_pictures(), real(), run_check(), state(), test_good_opening_or_no_reply_changes_nothing(), test_low_score_opens_on_a_better_real_picture(), test_opener_fix_swaps_once(), test_opener_must_be_a_later_real_picture() (+4 more)
+
+### Community 38 - "Blender Ink Look"
+Cohesion: 0.33
+Nodes (4): collection(), ink_lines(), linear(), setup()
+
+### Community 39 - "AI Clip Prompts and Cuts"
+Cohesion: 0.12
+Nodes (11): cover_crop(), cut_owner_clip(), h3_prompts(), local_clips(), local_job(), motion_prompt(), start_picture_problems(), veo_handoff() (+3 more)
+
+### Community 40 - "Archive Photo Cleanup"
 Cohesion: 0.22
 Nodes (5): clean_photo(), is_stereo(), trim_borders(), border(), plain()
 
-### Community 41 - "main"
-Cohesion: 0.18
-Nodes (4): keyvis(), main(), Failure, key()
+### Community 41 - "Bridge Collapse Simulation"
+Cohesion: 0.17
+Nodes (4): main(), Failure, key(), focus_object()
 
-### Community 42 - "Short.tsx"
-Cohesion: 0.12
-Nodes (21): Captions(), HookTitle(), PersonCard(), Root(), Background(), Card, flashAlpha(), GraphicFor() (+13 more)
+### Community 42 - "Short Composition Root"
+Cohesion: 0.16
+Nodes (18): Captions(), HookTitle(), PersonCard(), SubscribeCta(), Background(), flashAlpha(), GraphicFor(), Move (+10 more)
 
-### Community 43 - "first_second_check"
-Cohesion: 0.13
-Nodes (9): log_short(), clock(), first_second_check(), quality_check(), review_fixes(), storyboard(), visual_review(), test_review_is_told_the_drawings_are_deliberate() (+1 more)
-
-### Community 44 - "pool_pictures"
+### Community 43 - "Quality and Visual Review"
 Cohesion: 0.15
-Nodes (6): film_piece(), film_ffmpeg(), catalog_text(), is_usable(), usable(), pool_pictures()
+Nodes (9): clock(), overlay_notes(), quality_check(), review_fixes(), visual_review(), length_plan(), test_review_is_told_the_drawings_are_deliberate(), test_review_knows_what_dims_a_picture_on_purpose() (+1 more)
 
-### Community 45 - "ffmpeg"
+### Community 45 - "Local Voice Alignment"
+Cohesion: 0.28
+Nodes (5): local_voice(), split_takes(), spoken_count(), is_loop_short(), test_word_counts_match_the_aligner()
+
+### Community 46 - "Fake AI Test Helpers"
 Cohesion: 0.22
-Nodes (8): shot_span(), split_takes(), duration(), ffmpeg(), short_folder(), test_melt_plays_it_with_the_captions_on_top(), videos(), test_a_take_is_cut_between_the_scenes_words()
+Nodes (4): fake_ai, planning_ai(), reply(), test_seo_pass_research_seeds_dict_and_list()
 
-### Community 47 - "Halftone.tsx"
+### Community 47 - "Invented Look Canvas Effects"
 Cohesion: 0.17
 Nodes (23): InventedLook(), drawCover(), FILL, luminance(), noise(), stretch(), useOnceCanvas(), draw() (+15 more)
 
-### Community 48 - "json"
-Cohesion: 0.10
-Nodes (12): code_version(), comfy_call(), moss_graph(), moss_images(), voicestudio_unload(), load_state(), article_text(), fact_check() (+4 more)
+### Community 48 - "Local Voice and Freesound"
+Cohesion: 0.08
+Nodes (14): align(), main(), studio_speak(), freesound_fetch(), code_version(), comfy_call(), moss_graph(), moss_images() (+6 more)
 
-### Community 49 - "speak"
+### Community 49 - "TTS and Story Sounds"
+Cohesion: 0.15
+Nodes (8): speak(), story_sound(), tts(), ffmpeg(), first_second_check(), test_story_sound_library(), fetch(), _tone_wav()
+
+### Community 51 - "Obsidian Vault Logbook"
 Cohesion: 0.20
-Nodes (6): speak(), story_sound(), tts(), test_story_sound_library(), fetch(), _tone_wav()
+Nodes (5): log_short(), vault_page(), vault_refresh(), parse_scene_money(), clean_style_code()
 
-### Community 51 - "plan_rules.py"
-Cohesion: 0.12
-Nodes (8): hex_rgb(), luminance(), short_skin(), tsc_check(), make_paper(), prune_work(), test_clean_full_custom_and_skin(), test_make_paper()
+### Community 52 - "Blender Camera Shots"
+Cohesion: 0.15
+Nodes (5): direction(), keyloc(), keyvis(), Shots, radians()
 
-### Community 52 - "Shots"
-Cohesion: 0.24
-Nodes (3): direction(), keyloc(), Shots
-
-### Community 54 - "trend_research"
+### Community 54 - "Style Plan Validation"
 Cohesion: 0.20
-Nodes (6): channel_url(), new_channel(), save_channel(), seed_ideas(), trend_research(), yt_list()
+Nodes (7): clean_invention(), clean_look(), clean_transition(), settle_style(), test_invented_look_needs_fallback(), test_recent_looks_blocked(), test_unknown_names_fall_back()
 
-### Community 55 - "capture_prompts"
-Cohesion: 0.20
-Nodes (6): load_rules(), min_real_pictures(), capture_prompts(), ask(), test_load_rules_sets_session(), test_strange_history_prompts_unchanged()
+### Community 55 - "Review Auto-Fixes"
+Cohesion: 0.28
+Nodes (4): apply_review_fixes(), paint_new(), pool_pictures(), test_auto_fix_graphic()
 
-### Community 56 - "run_draft"
-Cohesion: 0.33
-Nodes (7): draft_reply(), run_draft(), test_draft_blender_channel_needs_build_plan(), test_draft_keeps_ai_headings_inside_their_section(), test_draft_never_overwrites(), test_draft_retries_once_then_stops(), test_draft_settings_come_from_code()
-
-### Community 57 - "use_picture_from"
+### Community 56 - "Graphics Rescue Caps"
 Cohesion: 0.29
-Nodes (4): use_picture_from(), paint_new(), test_new_picture_drops_mark(), test_paint_new_clears_full()
+Nodes (4): rescue_graphics(), max_full(), max_full_planned(), test_rescue_respects_caps()
 
-### Community 58 - "draft_rules"
+### Community 57 - "Picture Swap Fixes"
 Cohesion: 0.33
-Nodes (3): draft_rules(), require_rules(), test_missing_rules_file_is_drafted()
+Nodes (3): use_picture_from(), test_new_picture_drops_mark(), test_paint_new_clears_full()
 
-### Community 59 - "paint_instead"
+### Community 58 - "Usable Picture Catalog"
+Cohesion: 0.29
+Nodes (4): catalog_text(), is_usable(), pictures_of(), usable()
+
+### Community 59 - "Gemini Image Painting"
 Cohesion: 0.12
 Nodes (6): gemini_images(), to_vertical(), ink_silhouette(), paint_instead(), test_ink_silhouette(), test_remotion_failure_paints()
 
+### Community 61 - "Custom Scene Redraw Tests"
+Cohesion: 0.40
+Nodes (3): _review_state(), test_redraw_failure_paints(), test_review_redraws_custom()
+
 ## Knowledge Gaps
-- **6 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **8 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `render()` connect `render` to `clean_full`, `main`, `ask_ai`, `full_cues`, `audio_mix.py`, `drawn_thumbnail`, `make`, `test_style.py`, `choose_images`, `frame_maker`, `style_library`, `apply_review_fixes`, `test_blender_render.py`, `render_remotion`, `re`, `local_clips`, `clean_photo`, `first_second_check`, `ffmpeg`, `json`, `speak`, `plan_rules.py`, `paint_instead`, `make_sfx`?**
-  _High betweenness centrality (0.038) - this node is a cross-community bridge._
-- **Should `style/index.ts` be split into smaller, more focused modules?**
-  _Cohesion score 0.1282051282051282 - nodes in this community are weakly interconnected._
-- **Why does `main()` connect `main` to `templates.py`, `build_scene.py`, `json`, `Shots`, `parts.py`?**
-  _High betweenness centrality (0.027) - this node is a cross-community bridge._
-- **Should `clean_full` be split into smaller, more focused modules?**
-  _Cohesion score 0.09247311827956989 - nodes in this community are weakly interconnected._
-- **Why does `mark_details()` connect `ask_ai` to `image_sources.py`, `plan_rules.py`, `re`, `render`?**
-  _High betweenness centrality (0.017) - this node is a cross-community bridge._
-- **Should `main` be split into smaller, more focused modules?**
-  _Cohesion score 0.08465608465608465 - nodes in this community are weakly interconnected._
-- **Should `split_make_shorts.py` be split into smaller, more focused modules?**
+- **Why does `main()` connect `Bridge Collapse Simulation` to `Bridge Templates`, `Blender Ink Look`, `Local Voice and Freesound`, `Blender Camera Shots`, `Blender Bridge Parts`?**
+  _High betweenness centrality (0.035) - this node is a cross-community bridge._
+- **Should `Invented Overlays and Looks` be split into smaller, more focused modules?**
+  _Cohesion score 0.13086770981507823 - nodes in this community are weakly interconnected._
+- **Why does `render()` connect `Sound Effects and Credits` to `Main Entry and Channel Profiles`, `CLI, Config and Footage`, `Sound Design and Scene Cues`, `Audio Mix and Shotcut Export`, `Headless AI Planner Calls`, `Shotcut Timeline and Loudness`, `Motion Scenes and Style Library`, `Pictures-First Pool Tests`, `Frame Drawing and Graphics`, `Edit Plan Text`, `Script Sounds and Graphics`, `Blender Build Planning`, `ASS Captions and Skins`, `AI Clip Prompts and Cuts`, `Archive Photo Cleanup`, `Quality and Visual Review`, `Local Voice Alignment`, `Local Voice and Freesound`, `TTS and Story Sounds`, `Obsidian Vault Logbook`, `Review Auto-Fixes`, `Graphics Rescue Caps`, `Gemini Image Painting`?**
+  _High betweenness centrality (0.028) - this node is a cross-community bridge._
+- **Should `Main Entry and Channel Profiles` be split into smaller, more focused modules?**
+  _Cohesion score 0.06868686868686869 - nodes in this community are weakly interconnected._
+- **Why does `write_scripts()` connect `Script Sounds and Graphics` to `Full-Screen Graphic Validation`, `Main Entry and Channel Profiles`, `CLI, Config and Footage`, `Headless AI Planner Calls`, `Channel Rules Files`, `Picture Pool Storage`, `Director Picture Cleanup Tests`, `Motion Scenes and Style Library`, `Stock Video Sources`, `Topic Planning Tests`, `Write Scripts Review Tests`, `Blender Build Planning`, `Narration Number Speech`, `Quality and Visual Review`, `Local Voice and Freesound`, `Obsidian Vault Logbook`, `Style Library Caps`, `Style Plan Validation`, `Graphics Rescue Caps`, `Usable Picture Catalog`, `Logbook Results`, `Full Graphic Limits`?**
+  _High betweenness centrality (0.021) - this node is a cross-community bridge._
+- **Should `Script Splitting AST Tools` be split into smaller, more focused modules?**
   _Cohesion score 0.08362369337979095 - nodes in this community are weakly interconnected._
+- **Should `CLI, Config and Footage` be split into smaller, more focused modules?**
+  _Cohesion score 0.13836477987421383 - nodes in this community are weakly interconnected._

@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "plan_rules.py"
+community: "CLI, Config and Footage"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/plan_rulespy
+  - community/CLI_Config_and_Footage
 ---
 
 # pil
@@ -15,6 +15,7 @@ tags:
 - [[frame_render.py]] - `imports_from` [EXTRACTED]
 - [[gen.py]] - `imports_from` [EXTRACTED]
 - [[gpu.py]] - `imports_from` [EXTRACTED]
+- [[h3_run.py]] - `imports_from` [EXTRACTED]
 - [[image_sources.py]] - `imports_from` [EXTRACTED]
 - [[motion.py]] - `imports_from` [EXTRACTED]
 - [[photo_prep.py]] - `imports_from` [EXTRACTED]
@@ -26,5 +27,6 @@ tags:
 - [[test_blender_run.py]] - `imports_from` [EXTRACTED]
 - [[test_blender_scene.py]] - `imports_from` [EXTRACTED]
 - [[test_full_scenes.py]] - `imports_from` [EXTRACTED]
+- [[test_h3_run.py]] - `imports_from` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/plan_rulespy
+#graphify/concept #graphify/EXTRACTED #community/CLI_Config_and_Footage

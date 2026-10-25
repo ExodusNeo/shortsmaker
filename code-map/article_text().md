@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/writing.py"
 type: "code"
-community: "json"
-location: "L474"
+community: "Stock Video Sources"
+location: "L494"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/json
+  - community/Stock_Video_Sources
 ---
 
 # article_text()
@@ -20,4 +20,4 @@ tags:
 - [[wm_get()]] - `calls` [EXTRACTED]
 - [[writing.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/json
+#graphify/code #graphify/EXTRACTED #community/Stock_Video_Sources

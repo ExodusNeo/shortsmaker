@@ -1,19 +1,19 @@
 ---
 source_file: "remotion/src/full/BigNumber.tsx"
 type: "code"
-community: "full/types.ts"
+community: "Big Number Full Scenes"
 location: "L41"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/full/typests
+  - community/Big_Number_Full_Scenes
 ---
 
 # fmt()
 
 ## Connections
-- [[Bars()]] - `calls` [EXTRACTED]
 - [[BigNumber()]] - `calls` [EXTRACTED]
 - [[BigNumber.tsx]] - `contains` [EXTRACTED]
+- [[fmtBar()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/full/typests
+#graphify/code #graphify/EXTRACTED #community/Big_Number_Full_Scenes

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/motion.py"
 type: "rationale"
-community: "code_custom_scenes"
+community: "Headless AI Planner Calls"
 location: "L86"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/code_custom_scenes
+  - community/Headless_AI_Planner_Calls
 ---
 
 # Guaranteed-valid Remotion component for slot 0..3 if the AI coder fails or…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[fallback_custom_tsx()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/code_custom_scenes
+#graphify/rationale #graphify/EXTRACTED #community/Headless_AI_Planner_Calls

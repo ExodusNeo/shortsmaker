@@ -1,42 +1,35 @@
 ---
-source_file: "shortsmaker/cli.py"
+source_file: "blender/build_scene.py"
 type: "code"
-community: "main"
-location: "L17"
+community: "Bridge Collapse Simulation"
+location: "L70"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/main
+  - community/Bridge_Collapse_Simulation
 ---
 
 # main()
 
 ## Connections
-- [[ask_brain()]] - `calls` [EXTRACTED]
-- [[ask_count()]] - `calls` [EXTRACTED]
-- [[ask_yes()]] - `calls` [EXTRACTED]
-- [[cli.py]] - `contains` [EXTRACTED]
-- [[fix_short()]] - `calls` [EXTRACTED]
-- [[gemini_model()]] - `calls` [EXTRACTED]
-- [[library_menu()]] - `calls` [EXTRACTED]
-- [[load_channel()]] - `calls` [EXTRACTED]
-- [[log_short()]] - `calls` [EXTRACTED]
-- [[make_shorts.py]] - `imports` [EXTRACTED]
-- [[pick_channel()]] - `calls` [EXTRACTED]
-- [[prune_cache()]] - `calls` [EXTRACTED]
-- [[prune_work()]] - `calls` [EXTRACTED]
-- [[re]] - `calls` [EXTRACTED]
-- [[render()_1]] - `calls` [EXTRACTED]
-- [[require_rules()]] - `calls` [EXTRACTED]
-- [[save_channel()]] - `calls` [EXTRACTED]
-- [[seo_pass()]] - `calls` [EXTRACTED]
-- [[shutil]] - `calls` [EXTRACTED]
-- [[style_library()]] - `calls` [EXTRACTED]
-- [[test_a_stopped_run_keeps_the_default_channel()]] - `calls` [EXTRACTED]
-- [[test_blender_failure_keeps_the_folder()]] - `calls` [EXTRACTED]
-- [[use_channel()]] - `calls` [EXTRACTED]
-- [[vault_page()]] - `calls` [EXTRACTED]
-- [[vault_refresh()]] - `calls` [EXTRACTED]
-- [[write_scripts()]] - `calls` [EXTRACTED]
+- [[dot-beat()]] - `calls` [INFERRED]
+- [[dot-fallen()]] - `calls` [INFERRED]
+- [[dot-falls()]] - `calls` [INFERRED]
+- [[dot-play()]] - `calls` [INFERRED]
+- [[dot-reset()]] - `calls` [INFERRED]
+- [[dot-ride_along()]] - `calls` [INFERRED]
+- [[Failure]] - `calls` [EXTRACTED]
+- [[Shots]] - `calls` [EXTRACTED]
+- [[build()_1]] - `calls` [EXTRACTED]
+- [[build_scene.py]] - `contains` [EXTRACTED]
+- [[dress()]] - `calls` [EXTRACTED]
+- [[fastener()]] - `calls` [EXTRACTED]
+- [[focus_object()]] - `calls` [EXTRACTED]
+- [[json]] - `calls` [EXTRACTED]
+- [[keyloc()]] - `calls` [EXTRACTED]
+- [[keyvis()]] - `calls` [EXTRACTED]
+- [[label()]] - `calls` [EXTRACTED]
+- [[material()]] - `calls` [EXTRACTED]
+- [[setup()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/main
+#graphify/code #graphify/EXTRACTED #community/Bridge_Collapse_Simulation

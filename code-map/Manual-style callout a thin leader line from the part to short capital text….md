@@ -1,12 +1,12 @@
 ---
 source_file: "blender/parts.py"
 type: "rationale"
-community: "parts.py"
+community: "Blender Bridge Parts"
 location: "L146"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/partspy
+  - community/Blender_Bridge_Parts
 ---
 
 # Manual-style callout: a thin leader line from the part to short capital text…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[label()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/partspy
+#graphify/rationale #graphify/EXTRACTED #community/Blender_Bridge_Parts

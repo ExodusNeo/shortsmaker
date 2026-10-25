@@ -1,20 +1,20 @@
 ---
 source_file: "tests/render_style.py"
 type: "code"
-community: "sentence_groups"
+community: "Motion Scenes and Style Library"
 location: "L19"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/sentence_groups
+  - community/Motion_Scenes_and_Style_Library
 ---
 
 # build()
 
 ## Connections
-- [[add()_1]] - `contains` [EXTRACTED]
+- [[add()]] - `contains` [EXTRACTED]
 - [[main()_1]] - `calls` [EXTRACTED]
 - [[render_style.py]] - `contains` [EXTRACTED]
 - [[style_library()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/sentence_groups
+#graphify/code #graphify/EXTRACTED #community/Motion_Scenes_and_Style_Library

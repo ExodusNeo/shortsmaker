@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "Halftone.tsx"
+community: "Invented Look Canvas Effects"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Halftonetsx
+  - community/Invented_Look_Canvas_Effects
 ---
 
 # remotion_src_style_kit_img
@@ -18,4 +18,4 @@ tags:
 - [[Riso.tsx]] - `imports` [EXTRACTED]
 - [[Silent.tsx]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Halftonetsx
+#graphify/concept #graphify/EXTRACTED #community/Invented_Look_Canvas_Effects

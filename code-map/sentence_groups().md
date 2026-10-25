@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/gpu.py"
 type: "code"
-community: "sentence_groups"
-location: "L129"
+community: "Narration Number Speech"
+location: "L130"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/sentence_groups
+  - community/Narration_Number_Speech
 ---
 
 # sentence_groups()
@@ -18,4 +18,4 @@ tags:
 - [[re]] - `calls` [EXTRACTED]
 - [[test_sentences_running_across_cuts_are_one_take()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/sentence_groups
+#graphify/code #graphify/EXTRACTED #community/Narration_Number_Speech

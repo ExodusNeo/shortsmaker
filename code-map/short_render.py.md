@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/short_render.py"
 type: "code"
-community: "plan_rules.py"
+community: "CLI, Config and Footage"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/plan_rulespy
+  - community/CLI_Config_and_Footage
 ---
 
 # short_render.py
@@ -27,6 +27,7 @@ tags:
 - [[gpu.py]] - `imports_from` [EXTRACTED]
 - [[hex_rgb()]] - `imports` [EXTRACTED]
 - [[image_sources.py]] - `imports_from` [EXTRACTED]
+- [[io]] - `imports` [EXTRACTED]
 - [[json]] - `imports` [EXTRACTED]
 - [[load_state()]] - `contains` [EXTRACTED]
 - [[media_tools.py]] - `imports_from` [EXTRACTED]
@@ -54,4 +55,4 @@ tags:
 - [[test_rules.py]] - `imports_from` [EXTRACTED]
 - [[time]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/plan_rulespy
+#graphify/code #graphify/EXTRACTED #community/CLI_Config_and_Footage

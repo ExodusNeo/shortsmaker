@@ -1,12 +1,12 @@
 ---
 source_file: "local_ai/gen.py"
 type: "code"
-community: "gen.py"
+community: "Local GPU Worker"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/genpy
+  - community/Local_GPU_Worker
 ---
 
 # gen.py
@@ -30,4 +30,4 @@ tags:
 - [[tts()]] - `contains` [EXTRACTED]
 - [[video()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/genpy
+#graphify/code #graphify/EXTRACTED #community/Local_GPU_Worker

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/picture_pool.py"
 type: "code"
-community: "test_pictures_first.py"
+community: "Director Picture Cleanup Tests"
 location: "L24"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_pictures_firstpy
+  - community/Director_Picture_Cleanup_Tests
 ---
 
 # clean_pics()
@@ -21,4 +21,4 @@ tags:
 - [[test_clean_pics()]] - `calls` [EXTRACTED]
 - [[write_scripts()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_pictures_firstpy
+#graphify/code #graphify/EXTRACTED #community/Director_Picture_Cleanup_Tests

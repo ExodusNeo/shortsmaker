@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/motion.py"
 type: "rationale"
-community: "code_custom_scenes"
-location: "L249"
+community: "Headless AI Planner Calls"
+location: "L250"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/code_custom_scenes
+  - community/Headless_AI_Planner_Calls
 ---
 
 # Renders just this custom scene small (its pictures are already in…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[preview_custom()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/code_custom_scenes
+#graphify/rationale #graphify/EXTRACTED #community/Headless_AI_Planner_Calls

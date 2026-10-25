@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/Short.tsx"
 type: "code"
-community: "Short.tsx"
+community: "Short Composition Root"
 location: "L14"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Shorttsx
+  - community/Short_Composition_Root
 ---
 
 # Move
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[Short.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Shorttsx
+#graphify/code #graphify/EXTRACTED #community/Short_Composition_Root

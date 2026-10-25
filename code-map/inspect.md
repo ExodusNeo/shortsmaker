@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "test_style.py"
+community: "Motion Scenes and Style Library"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/test_stylepy
+  - community/Motion_Scenes_and_Style_Library
 ---
 
 # inspect
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[test_style.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/test_stylepy
+#graphify/concept #graphify/EXTRACTED #community/Motion_Scenes_and_Style_Library

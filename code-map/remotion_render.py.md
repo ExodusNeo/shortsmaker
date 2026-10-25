@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/remotion_render.py"
 type: "code"
-community: "plan_rules.py"
+community: "Audio Mix and Shotcut Export"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/plan_rulespy
+  - community/Audio_Mix_and_Shotcut_Export
 ---
 
 # remotion_render.py
@@ -33,6 +33,7 @@ tags:
 - [[render_remotion()]] - `contains` [EXTRACTED]
 - [[review.py]] - `imports_from` [EXTRACTED]
 - [[run_remotion_with_fallback()]] - `contains` [EXTRACTED]
+- [[session.py]] - `imports_from` [EXTRACTED]
 - [[short_render.py]] - `imports_from` [EXTRACTED]
 - [[short_skin()]] - `imports` [EXTRACTED]
 - [[shutil]] - `imports` [EXTRACTED]
@@ -42,4 +43,4 @@ tags:
 - [[test_style.py]] - `imports_from` [EXTRACTED]
 - [[wants_remotion()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/plan_rulespy
+#graphify/code #graphify/EXTRACTED #community/Audio_Mix_and_Shotcut_Export

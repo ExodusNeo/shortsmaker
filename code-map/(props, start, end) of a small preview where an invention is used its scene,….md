@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/style_lab.py"
 type: "rationale"
-community: "render_remotion"
+community: "ASS Captions and Skins"
 location: "L202"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/render_remotion
+  - community/ASS_Captions_and_Skins
 ---
 
 # (props, start, end) of a small preview where an invention is used: its scene,…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[style_preview()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/render_remotion
+#graphify/rationale #graphify/EXTRACTED #community/ASS_Captions_and_Skins

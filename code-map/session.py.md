@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/session.py"
 type: "code"
-community: "test_full_scenes.py"
+community: "CLI, Config and Footage"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_full_scenespy
+  - community/CLI_Config_and_Footage
 ---
 
 # session.py
@@ -25,6 +25,7 @@ tags:
 - [[picker.py]] - `imports_from` [EXTRACTED]
 - [[picture_pool.py]] - `imports_from` [EXTRACTED]
 - [[plan_rules.py]] - `imports_from` [EXTRACTED]
+- [[remotion_render.py]] - `imports_from` [EXTRACTED]
 - [[review.py]] - `imports_from` [EXTRACTED]
 - [[rules.py]] - `imports_from` [EXTRACTED]
 - [[seo.py]] - `imports_from` [EXTRACTED]
@@ -38,4 +39,4 @@ tags:
 - [[test_story.py]] - `imports_from` [EXTRACTED]
 - [[writing.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_full_scenespy
+#graphify/code #graphify/EXTRACTED #community/CLI_Config_and_Footage

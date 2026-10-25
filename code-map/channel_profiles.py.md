@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/channel_profiles.py"
 type: "code"
-community: "test_full_scenes.py"
+community: "Main Entry and Channel Profiles"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_full_scenespy
+  - community/Main_Entry_and_Channel_Profiles
 ---
 
 # channel_profiles.py
@@ -40,6 +40,7 @@ tags:
 - [[sys]] - `imports` [EXTRACTED]
 - [[test_blender_run.py]] - `imports_from` [EXTRACTED]
 - [[test_full_scenes.py]] - `imports_from` [EXTRACTED]
+- [[test_package.py]] - `imports_from` [EXTRACTED]
 - [[test_pictures_first.py]] - `imports_from` [EXTRACTED]
 - [[test_rules.py]] - `imports_from` [EXTRACTED]
 - [[test_style.py]] - `imports_from` [EXTRACTED]
@@ -49,4 +50,4 @@ tags:
 - [[writing.py]] - `imports_from` [EXTRACTED]
 - [[yt_list()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_full_scenespy
+#graphify/code #graphify/EXTRACTED #community/Main_Entry_and_Channel_Profiles

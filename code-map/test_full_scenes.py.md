@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_full_scenes.py"
 type: "code"
-community: "test_full_scenes.py"
+community: "CLI, Config and Footage"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_full_scenespy
+  - community/CLI_Config_and_Footage
 ---
 
 # test_full_scenes.py
@@ -24,6 +24,7 @@ tags:
 - [[cli.py]] - `imports_from` [EXTRACTED]
 - [[config.py]] - `imports_from` [EXTRACTED]
 - [[editplan.py]] - `imports_from` [EXTRACTED]
+- [[frame_render.py]] - `imports_from` [EXTRACTED]
 - [[gpu.py]] - `imports_from` [EXTRACTED]
 - [[image_sources.py]] - `imports_from` [EXTRACTED]
 - [[json]] - `imports` [EXTRACTED]
@@ -33,6 +34,7 @@ tags:
 - [[owner()]] - `imports` [EXTRACTED]
 - [[patching.py]] - `imports_from` [EXTRACTED]
 - [[pathlib]] - `imports_from` [EXTRACTED]
+- [[photo_prep.py]] - `imports_from` [EXTRACTED]
 - [[picker.py]] - `imports_from` [EXTRACTED]
 - [[picture_pool.py]] - `imports_from` [EXTRACTED]
 - [[pil]] - `imports_from` [EXTRACTED]
@@ -62,6 +64,7 @@ tags:
 - [[test_director_prompt_mentions_full()]] - `contains` [EXTRACTED]
 - [[test_fact_check_drops_full()]] - `contains` [EXTRACTED]
 - [[test_fallback_custom_is_clean()]] - `contains` [EXTRACTED]
+- [[test_fill_money_graphics_and_caps()]] - `contains` [EXTRACTED]
 - [[test_full_cues_document()]] - `contains` [EXTRACTED]
 - [[test_full_cues_fallback()]] - `contains` [EXTRACTED]
 - [[test_full_cues_leave_time_to_finish()]] - `contains` [EXTRACTED]
@@ -94,4 +97,4 @@ tags:
 - [[traceback]] - `imports` [EXTRACTED]
 - [[writing.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_full_scenespy
+#graphify/code #graphify/EXTRACTED #community/CLI_Config_and_Footage

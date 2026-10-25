@@ -1,20 +1,20 @@
 ---
 source_file: "blender/templates.py"
 type: "code"
-community: "templates.py"
+community: "Bridge Collapse Simulation"
 location: "L211"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/templatespy
+  - community/Bridge_Collapse_Simulation
 ---
 
 # focus_object()
 
 ## Connections
+- [[(part, exact) the part the Short is about, by the plan's spot; the gusset at…]] - `rationale_for` [EXTRACTED]
 - [[Bridge]] - `references` [EXTRACTED]
-- [[The part the Short is about, by the plan's spot; the gusset at that joint when…]] - `rationale_for` [EXTRACTED]
-- [[main()_4]] - `calls` [EXTRACTED]
+- [[main()_3]] - `calls` [EXTRACTED]
 - [[templates.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/templatespy
+#graphify/code #graphify/EXTRACTED #community/Bridge_Collapse_Simulation

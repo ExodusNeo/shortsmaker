@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_qwen_voice.py"
 type: "code"
-community: "re"
+community: "Narration Number Speech"
 location: "L10"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/re
+  - community/Narration_Number_Speech
 ---
 
 # test_numbers()
@@ -15,4 +15,4 @@ tags:
 - [[say_number()]] - `calls` [INFERRED]
 - [[test_qwen_voice.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/re
+#graphify/code #graphify/EXTRACTED #community/Narration_Number_Speech

@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/full/BigNumber.tsx"
 type: "code"
-community: "full/types.ts"
+community: "Big Number Full Scenes"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/full/typests
+  - community/Big_Number_Full_Scenes
 ---
 
 # BigNumber.tsx
@@ -27,10 +27,11 @@ tags:
 - [[clamp_7]] - `contains` [EXTRACTED]
 - [[counter()]] - `contains` [EXTRACTED]
 - [[fmt()]] - `contains` [EXTRACTED]
+- [[fmtBar()]] - `contains` [EXTRACTED]
 - [[fulltypes.ts]] - `imports_from` [EXTRACTED]
 - [[gridFor()]] - `contains` [EXTRACTED]
 - [[icons.tsx]] - `imports_from` [EXTRACTED]
 - [[ref_remotion]] - `imports_from` [EXTRACTED]
 - [[skinOf()]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/full/typests
+#graphify/code #graphify/EXTRACTED #community/Big_Number_Full_Scenes

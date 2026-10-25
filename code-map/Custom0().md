@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/full/generated/Custom0.tsx"
 type: "code"
-community: "skinOf"
+community: "Custom Remotion Scenes"
 location: "L22"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/skinOf
+  - community/Custom_Remotion_Scenes
 ---
 
 # Custom0()
@@ -24,4 +24,4 @@ tags:
 - [[focusCam()]] - `calls` [EXTRACTED]
 - [[skinOf()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/skinOf
+#graphify/code #graphify/EXTRACTED #community/Custom_Remotion_Scenes

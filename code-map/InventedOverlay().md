@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/style/generated/InventedOverlay.tsx"
 type: "code"
-community: "style/index.ts"
+community: "Invented Overlays and Looks"
 location: "L4"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/style/indexts
+  - community/Invented_Overlays_and_Looks
 ---
 
 # InventedOverlay()
@@ -15,4 +15,4 @@ tags:
 - [[InventedOverlay.tsx]] - `contains` [EXTRACTED]
 - [[styleindex.ts]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/style/indexts
+#graphify/code #graphify/EXTRACTED #community/Invented_Overlays_and_Looks

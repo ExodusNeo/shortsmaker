@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/editplan.py"
 type: "code"
-community: "style_library"
-location: "L30"
+community: "Edit Plan Text"
+location: "L32"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/style_library
+  - community/Edit_Plan_Text
 ---
 
 # picture_line()
@@ -17,4 +17,4 @@ tags:
 - [[editplan.py]] - `contains` [EXTRACTED]
 - [[test_edit_plan_picture_line()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/style_library
+#graphify/code #graphify/EXTRACTED #community/Edit_Plan_Text

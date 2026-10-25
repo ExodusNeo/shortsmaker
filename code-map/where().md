@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/review.py"
 type: "code"
-community: "first_second_check"
+community: "Quality and Visual Review"
 location: "L24"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/first_second_check
+  - community/Quality_and_Visual_Review
 ---
 
 # where()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[quality_check()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/first_second_check
+#graphify/code #graphify/EXTRACTED #community/Quality_and_Visual_Review

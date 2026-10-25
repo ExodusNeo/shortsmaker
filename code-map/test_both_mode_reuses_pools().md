@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_pictures_first.py"
 type: "code"
-community: "test_pictures_first.py"
+community: "Director Picture Cleanup Tests"
 location: "L267"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_pictures_firstpy
+  - community/Director_Picture_Cleanup_Tests
 ---
 
 # test_both_mode_reuses_pools()
@@ -20,4 +20,4 @@ tags:
 - [[test_pictures_first.py]] - `contains` [EXTRACTED]
 - [[write_scripts()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_pictures_firstpy
+#graphify/code #graphify/EXTRACTED #community/Director_Picture_Cleanup_Tests

@@ -1,12 +1,12 @@
 ---
 source_file: "blender/parts.py"
 type: "code"
-community: "parts.py"
+community: "Blender Bridge Parts"
 location: "L71"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/partspy
+  - community/Blender_Bridge_Parts
 ---
 
 # gusset_plate()
@@ -19,4 +19,4 @@ tags:
 - [[parts.py]] - `contains` [EXTRACTED]
 - [[truss_bridge()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/partspy
+#graphify/code #graphify/EXTRACTED #community/Blender_Bridge_Parts

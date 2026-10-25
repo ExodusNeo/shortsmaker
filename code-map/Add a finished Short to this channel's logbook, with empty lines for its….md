@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/logbook.py"
 type: "rationale"
-community: "first_second_check"
+community: "Obsidian Vault Logbook"
 location: "L25"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/first_second_check
+  - community/Obsidian_Vault_Logbook
 ---
 
 # Add a finished Short to this channel's logbook, with empty lines for its…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[log_short()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/first_second_check
+#graphify/rationale #graphify/EXTRACTED #community/Obsidian_Vault_Logbook

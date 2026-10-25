@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/writing.py"
 type: "code"
-community: "json"
-location: "L482"
+community: "Stock Video Sources"
+location: "L540"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/json
+  - community/Stock_Video_Sources
 ---
 
 # fact_check()
@@ -21,4 +21,4 @@ tags:
 - [[write_scripts()]] - `calls` [EXTRACTED]
 - [[writing.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/json
+#graphify/code #graphify/EXTRACTED #community/Stock_Video_Sources

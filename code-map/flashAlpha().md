@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/Short.tsx"
 type: "code"
-community: "Short.tsx"
-location: "L122"
+community: "Short Composition Root"
+location: "L124"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Shorttsx
+  - community/Short_Composition_Root
 ---
 
 # flashAlpha()
@@ -15,4 +15,4 @@ tags:
 - [[Short()_1]] - `calls` [EXTRACTED]
 - [[Short.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Shorttsx
+#graphify/code #graphify/EXTRACTED #community/Short_Composition_Root

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/picture_pool.py"
 type: "code"
-community: "pool_pictures"
-location: "L257"
+community: "Usable Picture Catalog"
+location: "L271"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/pool_pictures
+  - community/Usable_Picture_Catalog
 ---
 
 # usable()
@@ -18,4 +18,4 @@ tags:
 - [[prepare_topic()]] - `calls` [EXTRACTED]
 - [[test_usable_counts_film_once()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/pool_pictures
+#graphify/code #graphify/EXTRACTED #community/Usable_Picture_Catalog

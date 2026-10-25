@@ -1,12 +1,12 @@
 ---
 source_file: "local_ai/gen.py"
 type: "code"
-community: "gen.py"
+community: "Local GPU Worker"
 location: "L139"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/genpy
+  - community/Local_GPU_Worker
 ---
 
 # parallax()
@@ -18,4 +18,4 @@ tags:
 - [[main()]] - `indirect_call` [INFERRED]
 - [[to_grid()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/genpy
+#graphify/code #graphify/EXTRACTED #community/Local_GPU_Worker

@@ -1,18 +1,18 @@
 ---
 source_file: "shortsmaker/style_lab.py"
 type: "code"
-community: "test_style.py"
+community: "Motion Scenes and Style Library"
 location: "L245"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_stylepy
+  - community/Motion_Scenes_and_Style_Library
 ---
 
 # save_candidate()
 
 ## Connections
-- [[Path_13]] - `references` [EXTRACTED]
+- [[Path_17]] - `references` [EXTRACTED]
 - [[Saves an invention that made it into a finished Short as a candidate for the…]] - `rationale_for` [EXTRACTED]
 - [[candidate_in()]] - `calls` [EXTRACTED]
 - [[json]] - `calls` [EXTRACTED]
@@ -25,4 +25,4 @@ tags:
 - [[test_save_candidate_unique_slug()]] - `calls` [EXTRACTED]
 - [[time]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_stylepy
+#graphify/code #graphify/EXTRACTED #community/Motion_Scenes_and_Style_Library

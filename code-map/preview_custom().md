@@ -1,21 +1,21 @@
 ---
 source_file: "shortsmaker/motion.py"
 type: "code"
-community: "code_custom_scenes"
-location: "L248"
+community: "Headless AI Planner Calls"
+location: "L249"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/code_custom_scenes
+  - community/Headless_AI_Planner_Calls
 ---
 
 # preview_custom()
 
 ## Connections
-- [[Path]] - `references` [EXTRACTED]
+- [[Path_1]] - `references` [EXTRACTED]
 - [[Renders just this custom scene small (its pictures are already in…]] - `rationale_for` [EXTRACTED]
 - [[look_and_fix()]] - `calls` [EXTRACTED]
 - [[motion.py]] - `contains` [EXTRACTED]
 - [[preview_sheet()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/code_custom_scenes
+#graphify/code #graphify/EXTRACTED #community/Headless_AI_Planner_Calls

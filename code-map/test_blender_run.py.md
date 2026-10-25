@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_blender_run.py"
 type: "code"
-community: "test_full_scenes.py"
+community: "CLI, Config and Footage"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_full_scenespy
+  - community/CLI_Config_and_Footage
 ---
 
 # test_blender_run.py
@@ -35,12 +35,14 @@ tags:
 - [[short_render.py]] - `imports_from` [EXTRACTED]
 - [[sys]] - `imports` [EXTRACTED]
 - [[tempfile]] - `imports` [EXTRACTED]
-- [[test_blender_failure_keeps_the_folder()]] - `contains` [EXTRACTED]
+- [[test_blender_failure_is_reported_and_the_batch_goes_on()]] - `contains` [EXTRACTED]
 - [[test_drawn_choices_have_no_pictures()]] - `contains` [EXTRACTED]
+- [[test_film_opener_is_skipped_and_bad_bytes_fall_back()]] - `contains` [EXTRACTED]
+- [[test_fix_bat_explains_a_drawn_short()]] - `contains` [EXTRACTED]
 - [[test_no_photo_uses_a_drawing_and_says_so()]] - `contains` [EXTRACTED]
 - [[test_review_is_told_the_drawings_are_deliberate()]] - `contains` [EXTRACTED]
 - [[test_thumbnail_uses_the_real_photo()]] - `contains` [EXTRACTED]
 - [[traceback]] - `imports` [EXTRACTED]
 - [[writing.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_full_scenespy
+#graphify/code #graphify/EXTRACTED #community/CLI_Config_and_Footage

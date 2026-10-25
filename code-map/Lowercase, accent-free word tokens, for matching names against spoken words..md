@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/plan_rules.py"
 type: "rationale"
-community: "clean_full"
-location: "L303"
+community: "Script Sounds and Graphics"
+location: "L438"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/clean_full
+  - community/Script_Sounds_and_Graphics
 ---
 
 # Lowercase, accent-free word tokens, for matching names against spoken words.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[words_of()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/clean_full
+#graphify/rationale #graphify/EXTRACTED #community/Script_Sounds_and_Graphics

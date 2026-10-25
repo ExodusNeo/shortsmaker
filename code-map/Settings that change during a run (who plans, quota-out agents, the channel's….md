@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/session.py"
 type: "rationale"
-community: "test_full_scenes.py"
+community: "CLI, Config and Footage"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/test_full_scenespy
+  - community/CLI_Config_and_Footage
 ---
 
 # Settings that change during a run (who plans, quota-out agents, the channel's…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[session.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/test_full_scenespy
+#graphify/rationale #graphify/EXTRACTED #community/CLI_Config_and_Footage

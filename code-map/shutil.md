@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "plan_rules.py"
+community: "Motion Scenes and Style Library"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/plan_rulespy
+  - community/Motion_Scenes_and_Style_Library
 ---
 
 # shutil
@@ -17,10 +17,12 @@ tags:
 - [[first_second_check()]] - `calls` [EXTRACTED]
 - [[full_props()]] - `calls` [EXTRACTED]
 - [[gpu.py]] - `imports` [EXTRACTED]
+- [[h3_run.py]] - `imports` [EXTRACTED]
 - [[invent_component()]] - `calls` [EXTRACTED]
 - [[llm.py]] - `imports` [EXTRACTED]
 - [[logbook.py]] - `imports` [EXTRACTED]
-- [[main()_3]] - `calls` [EXTRACTED]
+- [[main()_6]] - `calls` [EXTRACTED]
+- [[main()_2]] - `calls` [EXTRACTED]
 - [[main()_5]] - `calls` [EXTRACTED]
 - [[motion.py]] - `imports` [EXTRACTED]
 - [[paint_instead()]] - `calls` [EXTRACTED]
@@ -48,4 +50,4 @@ tags:
 - [[write_scripts()]] - `calls` [EXTRACTED]
 - [[writing.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/plan_rulespy
+#graphify/concept #graphify/EXTRACTED #community/Motion_Scenes_and_Style_Library

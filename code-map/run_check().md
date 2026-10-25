@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_first_second.py"
 type: "code"
-community: "run_check"
+community: "First-Second Opener Check"
 location: "L26"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/run_check
+  - community/First-Second_Opener_Check
 ---
 
 # run_check()
@@ -20,4 +20,4 @@ tags:
 - [[test_low_score_opens_on_a_better_real_picture()]] - `calls` [EXTRACTED]
 - [[test_opener_must_be_a_later_real_picture()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/run_check
+#graphify/code #graphify/EXTRACTED #community/First-Second_Opener_Check

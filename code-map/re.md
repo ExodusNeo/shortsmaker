@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "re"
+community: "Obsidian Vault Logbook"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/re
+  - community/Obsidian_Vault_Logbook
 ---
 
 # re
@@ -30,17 +30,23 @@ tags:
 - [[gen.py]] - `imports` [EXTRACTED]
 - [[gpu.py]] - `imports` [EXTRACTED]
 - [[image_sources.py]] - `imports` [EXTRACTED]
+- [[is_loop_short()]] - `calls` [EXTRACTED]
+- [[is_person_portrait()]] - `calls` [EXTRACTED]
 - [[lint_custom_code()]] - `calls` [EXTRACTED]
 - [[lint_style_code()]] - `calls` [EXTRACTED]
+- [[local_voice()]] - `calls` [EXTRACTED]
 - [[log_short()]] - `calls` [EXTRACTED]
 - [[logbook.py]] - `imports` [EXTRACTED]
 - [[logbook_results()]] - `calls` [EXTRACTED]
-- [[main()_3]] - `calls` [EXTRACTED]
+- [[main()_2]] - `calls` [EXTRACTED]
 - [[mark_details()]] - `calls` [EXTRACTED]
 - [[master_gain()]] - `calls` [EXTRACTED]
+- [[max_full()]] - `calls` [EXTRACTED]
+- [[max_full_planned()]] - `calls` [EXTRACTED]
 - [[motion.py]] - `imports` [EXTRACTED]
 - [[music_gain()]] - `calls` [EXTRACTED]
 - [[parse_rules()]] - `calls` [EXTRACTED]
+- [[parse_scene_money()]] - `calls` [EXTRACTED]
 - [[pick_channel()]] - `calls` [EXTRACTED]
 - [[plan_rules.py]] - `imports` [EXTRACTED]
 - [[project_xml()]] - `calls` [EXTRACTED]
@@ -57,15 +63,18 @@ tags:
 - [[shot_span()]] - `calls` [EXTRACTED]
 - [[split_make_shorts.py]] - `imports` [EXTRACTED]
 - [[spoken_count()]] - `calls` [EXTRACTED]
+- [[spoken_sentence()]] - `calls` [EXTRACTED]
+- [[spoken_tokens()]] - `calls` [EXTRACTED]
 - [[story_problems()]] - `calls` [EXTRACTED]
 - [[story_sound()]] - `calls` [EXTRACTED]
-- [[studio_speak()]] - `calls` [EXTRACTED]
 - [[style_lab.py]] - `imports` [EXTRACTED]
 - [[test_edit_project.py]] - `imports` [EXTRACTED]
 - [[test_style.py]] - `imports` [EXTRACTED]
+- [[unpack_clips()]] - `calls` [EXTRACTED]
 - [[vault_page()]] - `calls` [EXTRACTED]
 - [[vault_refresh()]] - `calls` [EXTRACTED]
 - [[words_of()]] - `calls` [EXTRACTED]
+- [[write_scripts()]] - `calls` [EXTRACTED]
 - [[writing.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/re
+#graphify/concept #graphify/EXTRACTED #community/Obsidian_Vault_Logbook

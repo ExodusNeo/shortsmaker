@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_full_scenes.py"
 type: "code"
-community: "first_second_check"
+community: "Quality and Visual Review"
 location: "L354"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/first_second_check
+  - community/Quality_and_Visual_Review
 ---
 
 # test_review_fix_kinds()
@@ -15,4 +15,4 @@ tags:
 - [[review_fixes()]] - `calls` [EXTRACTED]
 - [[test_full_scenes.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/first_second_check
+#graphify/code #graphify/EXTRACTED #community/Quality_and_Visual_Review

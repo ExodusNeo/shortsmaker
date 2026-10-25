@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/gpu.py"
 type: "code"
-community: "re"
-location: "L95"
+community: "Local Voice and Freesound"
+location: "L96"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/re
+  - community/Local_Voice_and_Freesound
 ---
 
 # up()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[voicestudio_up()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/re
+#graphify/code #graphify/EXTRACTED #community/Local_Voice_and_Freesound

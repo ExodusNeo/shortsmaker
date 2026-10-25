@@ -1,24 +1,24 @@
 ---
 source_file: "shortsmaker/media_tools.py"
 type: "code"
-community: "local_clips"
+community: "AI Clip Prompts and Cuts"
 location: "L30"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/local_clips
+  - community/AI_Clip_Prompts_and_Cuts
 ---
 
 # video_encoder()
 
 ## Connections
 - [[Final H.264 encode NVENC on the GPU when available (frees the CPU), else x264.]] - `rationale_for` [EXTRACTED]
+- [[cut_owner_clip()]] - `calls` [EXTRACTED]
 - [[local_clips()]] - `calls` [EXTRACTED]
 - [[media_tools.py]] - `contains` [EXTRACTED]
 - [[render()_1]] - `calls` [EXTRACTED]
 - [[render_clips()]] - `calls` [EXTRACTED]
 - [[subprocess]] - `calls` [EXTRACTED]
 - [[test_encoder_cache_lives_with_video_encoder()]] - `calls` [EXTRACTED]
-- [[veo_handoff()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/local_clips
+#graphify/code #graphify/EXTRACTED #community/AI_Clip_Prompts_and_Cuts

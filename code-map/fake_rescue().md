@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_full_scenes.py"
 type: "code"
-community: "apply_review_fixes"
+community: "Review Auto-Fixes"
 location: "L373"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/apply_review_fixes
+  - community/Review_Auto-Fixes
 ---
 
 # fake_rescue()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[test_auto_fix_graphic()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/INFERRED #community/apply_review_fixes
+#graphify/code #graphify/INFERRED #community/Review_Auto-Fixes

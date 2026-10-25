@@ -1,20 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "code_custom_scenes"
+community: "Headless AI Planner Calls"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/code_custom_scenes
+  - community/Headless_AI_Planner_Calls
 ---
 
 # Path
 
 ## Connections
-- [[code_custom_scenes()]] - `references` [EXTRACTED]
-- [[full_props()]] - `references` [EXTRACTED]
-- [[look_and_fix()]] - `references` [EXTRACTED]
-- [[preview_custom()]] - `references` [EXTRACTED]
-- [[preview_sheet()]] - `references` [EXTRACTED]
+- [[ask_ai()]] - `references` [EXTRACTED]
+- [[run_agy()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/code_custom_scenes
+#graphify/code #graphify/EXTRACTED #community/Headless_AI_Planner_Calls

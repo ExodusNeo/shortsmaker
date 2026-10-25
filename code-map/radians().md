@@ -1,12 +1,12 @@
 ---
 source_file: "blender/parts.py"
 type: "code"
-community: "build_scene.py"
+community: "Blender Camera Shots"
 location: "L180"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/build_scenepy
+  - community/Blender_Camera_Shots
 ---
 
 # radians()
@@ -15,4 +15,4 @@ tags:
 - [[math]] - `calls` [EXTRACTED]
 - [[parts.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/build_scenepy
+#graphify/code #graphify/EXTRACTED #community/Blender_Camera_Shots

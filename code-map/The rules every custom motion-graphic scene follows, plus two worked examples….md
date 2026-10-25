@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/motion.py"
 type: "rationale"
-community: "code_custom_scenes"
+community: "Headless AI Planner Calls"
 location: "L199"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/code_custom_scenes
+  - community/Headless_AI_Planner_Calls
 ---
 
 # The rules every custom motion-graphic scene follows, plus two worked examples…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[custom_rules()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/code_custom_scenes
+#graphify/rationale #graphify/EXTRACTED #community/Headless_AI_Planner_Calls

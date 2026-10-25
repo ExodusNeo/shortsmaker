@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_style.py"
 type: "rationale"
-community: "render_remotion"
+community: "ASS Captions and Skins"
 location: "L230"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/render_remotion
+  - community/ASS_Captions_and_Skins
 ---
 
 # Runs fn() with ask_ai answering `codes` in turn, tsc_check returning `tsc`, and…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[with_fakes()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/render_remotion
+#graphify/rationale #graphify/EXTRACTED #community/ASS_Captions_and_Skins

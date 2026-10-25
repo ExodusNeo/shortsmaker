@@ -1,17 +1,17 @@
 ---
 source_file: "tests/test_pictures_first.py"
 type: "code"
-community: "choose_images"
-location: "L333"
+community: "Topic Planning Tests"
+location: "L199"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/choose_images
+  - community/Topic_Planning_Tests
 ---
 
 # .__init__()
 
 ## Connections
-- [[picking]] - `method` [EXTRACTED]
+- [[planning]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/choose_images
+#graphify/code #graphify/EXTRACTED #community/Topic_Planning_Tests

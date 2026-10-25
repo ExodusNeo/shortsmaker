@@ -1,12 +1,12 @@
 ---
 source_file: "blender/failures.py"
 type: "code"
-community: "main"
+community: "Bridge Collapse Simulation"
 location: "L64"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/main
+  - community/Bridge_Collapse_Simulation
 ---
 
 # .play()
@@ -15,6 +15,6 @@ tags:
 - [[Failure]] - `method` [EXTRACTED]
 - [[The failure from t0 to its peak, then (collapse) the span falls; `until` (the…]] - `rationale_for` [EXTRACTED]
 - [[key()]] - `calls` [EXTRACTED]
-- [[main()_4]] - `calls` [INFERRED]
+- [[main()_3]] - `calls` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/main
+#graphify/code #graphify/EXTRACTED #community/Bridge_Collapse_Simulation

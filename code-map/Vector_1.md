@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "templates.py"
+community: "Bridge Templates"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/templatespy
+  - community/Bridge_Templates
 ---
 
 # Vector
@@ -15,4 +15,4 @@ tags:
 - [[dot-node()]] - `references` [EXTRACTED]
 - [[_sag_points()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/templatespy
+#graphify/code #graphify/EXTRACTED #community/Bridge_Templates

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/llm.py"
 type: "code"
-community: "ask_ai"
+community: "Headless AI Planner Calls"
 location: "L57"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ask_ai
+  - community/Headless_AI_Planner_Calls
 ---
 
 # quota_exhausted()
@@ -17,4 +17,4 @@ tags:
 - [[llm.py]] - `contains` [EXTRACTED]
 - [[run_agy()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ask_ai
+#graphify/code #graphify/EXTRACTED #community/Headless_AI_Planner_Calls

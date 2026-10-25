@@ -1,19 +1,19 @@
 ---
 source_file: "shortsmaker/picture_pool.py"
 type: "code"
-community: "gather_pool"
+community: "Wikimedia Image Search"
 location: "L98"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/gather_pool
+  - community/Wikimedia_Image_Search
 ---
 
 # gather_pool()
 
 ## Connections
 - [[Candidate pictures (with preview `thumb` bytes) and sampled real-film frames…]] - `rationale_for` [EXTRACTED]
-- [[add()]] - `contains` [EXTRACTED]
+- [[add()_1]] - `contains` [EXTRACTED]
 - [[archive_images()]] - `calls` [EXTRACTED]
 - [[article_images()]] - `calls` [EXTRACTED]
 - [[choose_images()]] - `calls` [EXTRACTED]
@@ -30,4 +30,4 @@ tags:
 - [[test_pool_roundtrip()]] - `calls` [EXTRACTED]
 - [[words_of()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/gather_pool
+#graphify/code #graphify/EXTRACTED #community/Wikimedia_Image_Search

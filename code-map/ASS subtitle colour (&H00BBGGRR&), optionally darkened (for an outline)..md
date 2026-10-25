@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/config.py"
 type: "rationale"
-community: "render_remotion"
+community: "ASS Captions and Skins"
 location: "L114"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/render_remotion
+  - community/ASS_Captions_and_Skins
 ---
 
 # ASS subtitle colour (&H00BBGGRR&), optionally darkened (for an outline).
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[ass_colour()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/render_remotion
+#graphify/rationale #graphify/EXTRACTED #community/ASS_Captions_and_Skins

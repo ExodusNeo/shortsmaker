@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "StopPicker"
+community: "Channel Rules Files"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/StopPicker
+  - community/Channel_Rules_Files
 ---
 
 # Exception
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[StopPicker]] - `inherits` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/StopPicker
+#graphify/code #graphify/EXTRACTED #community/Channel_Rules_Files

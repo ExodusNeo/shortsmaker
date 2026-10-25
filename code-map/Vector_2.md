@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "main"
+community: "Bridge Collapse Simulation"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/main
+  - community/Bridge_Collapse_Simulation
 ---
 
 # Vector
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[dot-fallen()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/main
+#graphify/code #graphify/EXTRACTED #community/Bridge_Collapse_Simulation

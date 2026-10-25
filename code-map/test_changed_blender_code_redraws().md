@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_blender_render.py"
 type: "code"
-community: "test_blender_render.py"
+community: "Blender Build Planning"
 location: "L106"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_blender_renderpy
+  - community/Blender_Build_Planning
 ---
 
 # test_changed_blender_code_redraws()
@@ -17,4 +17,4 @@ tags:
 - [[short()]] - `calls` [EXTRACTED]
 - [[test_blender_render.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_blender_renderpy
+#graphify/code #graphify/EXTRACTED #community/Blender_Build_Planning

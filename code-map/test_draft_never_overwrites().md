@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_rules.py"
 type: "code"
-community: "run_draft"
-location: "L281"
+community: "Channel Rules Files"
+location: "L283"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/run_draft
+  - community/Channel_Rules_Files
 ---
 
 # test_draft_never_overwrites()
@@ -16,4 +16,4 @@ tags:
 - [[run_draft()]] - `calls` [EXTRACTED]
 - [[test_rules.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/run_draft
+#graphify/code #graphify/EXTRACTED #community/Channel_Rules_Files

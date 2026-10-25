@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_blender_plan.py"
 type: "code"
-community: "test_blender_scene.py"
+community: "Blender Build Planning"
 location: "L68"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_blender_scenepy
+  - community/Blender_Build_Planning
 ---
 
 # test_label_is_short_and_upper()
@@ -16,4 +16,4 @@ tags:
 - [[plan()]] - `calls` [EXTRACTED]
 - [[test_blender_plan.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_blender_scenepy
+#graphify/code #graphify/EXTRACTED #community/Blender_Build_Planning

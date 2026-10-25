@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/cli.py"
 type: "code"
-community: "main"
-location: "L111"
+community: "Main Entry and Channel Profiles"
+location: "L126"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/main
+  - community/Main_Entry_and_Channel_Profiles
 ---
 
 # fix_short()
@@ -17,15 +17,16 @@ tags:
 - [[fix.bat re-render a recent Short with one scene changed, keeping its pictures,…]] - `rationale_for` [EXTRACTED]
 - [[load_channel()]] - `calls` [EXTRACTED]
 - [[load_state()]] - `calls` [EXTRACTED]
-- [[main()_3]] - `calls` [EXTRACTED]
+- [[main()_2]] - `calls` [EXTRACTED]
 - [[paint_new()]] - `calls` [EXTRACTED]
 - [[prune_work()]] - `calls` [EXTRACTED]
 - [[render()_1]] - `calls` [EXTRACTED]
 - [[require_rules()]] - `calls` [EXTRACTED]
 - [[rescue_graphics()]] - `calls` [EXTRACTED]
 - [[rewrite_paint_prompts()]] - `calls` [EXTRACTED]
+- [[test_fix_bat_explains_a_drawn_short()]] - `calls` [EXTRACTED]
 - [[test_fix_checks_rules_before_asking_for_a_scene()]] - `calls` [EXTRACTED]
 - [[use_channel()]] - `calls` [EXTRACTED]
 - [[use_picture_from()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/main
+#graphify/code #graphify/EXTRACTED #community/Main_Entry_and_Channel_Profiles

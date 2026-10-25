@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/Short.tsx"
 type: "code"
-community: "Short.tsx"
-location: "L61"
+community: "Remotion Root Entry"
+location: "L63"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Shorttsx
+  - community/Remotion_Root_Entry
 ---
 
 # ShortProps
@@ -15,4 +15,4 @@ tags:
 - [[Root.tsx]] - `imports` [EXTRACTED]
 - [[Short.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Shorttsx
+#graphify/code #graphify/EXTRACTED #community/Remotion_Root_Entry

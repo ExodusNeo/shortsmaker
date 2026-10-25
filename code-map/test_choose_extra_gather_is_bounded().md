@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_pictures_first.py"
 type: "code"
-community: "choose_images"
-location: "L485"
+community: "Pictures-First Pool Tests"
+location: "L539"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/choose_images
+  - community/Pictures-First_Pool_Tests
 ---
 
 # test_choose_extra_gather_is_bounded()
@@ -18,4 +18,4 @@ tags:
 - [[scene()]] - `calls` [EXTRACTED]
 - [[test_pictures_first.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/choose_images
+#graphify/code #graphify/EXTRACTED #community/Pictures-First_Pool_Tests

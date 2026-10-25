@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_style.py"
 type: "code"
-community: "test_style.py"
+community: "Motion Scenes and Style Library"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_stylepy
+  - community/Motion_Scenes_and_Style_Library
 ---
 
 # test_style.py
@@ -29,7 +29,7 @@ tags:
 - [[pathlib]] - `imports_from` [EXTRACTED]
 - [[picture_pool.py]] - `imports_from` [EXTRACTED]
 - [[plan_rules.py]] - `imports_from` [EXTRACTED]
-- [[plan_with()_1]] - `contains` [EXTRACTED]
+- [[plan_with()]] - `contains` [EXTRACTED]
 - [[re]] - `imports` [EXTRACTED]
 - [[remotion_render.py]] - `imports_from` [EXTRACTED]
 - [[restore_library()]] - `contains` [EXTRACTED]
@@ -68,4 +68,4 @@ tags:
 - [[with_fakes()]] - `contains` [EXTRACTED]
 - [[writing.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_stylepy
+#graphify/code #graphify/EXTRACTED #community/Motion_Scenes_and_Style_Library

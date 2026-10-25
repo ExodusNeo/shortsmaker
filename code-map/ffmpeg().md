@@ -1,19 +1,20 @@
 ---
 source_file: "shortsmaker/media_tools.py"
 type: "code"
-community: "ffmpeg"
+community: "TTS and Story Sounds"
 location: "L39"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ffmpeg
+  - community/TTS_and_Story_Sounds
 ---
 
 # ffmpeg()
 
 ## Connections
-- [[Path_18]] - `references` [EXTRACTED]
+- [[Path_6]] - `references` [EXTRACTED]
 - [[caption_layer()]] - `calls` [EXTRACTED]
+- [[cut_owner_clip()]] - `calls` [EXTRACTED]
 - [[first_second_check()]] - `calls` [EXTRACTED]
 - [[local_clips()]] - `calls` [EXTRACTED]
 - [[media_tools.py]] - `contains` [EXTRACTED]
@@ -25,7 +26,6 @@ tags:
 - [[story_sound()]] - `calls` [EXTRACTED]
 - [[subprocess]] - `calls` [EXTRACTED]
 - [[test_a_take_is_cut_between_the_scenes_words()]] - `calls` [EXTRACTED]
-- [[veo_handoff()]] - `calls` [EXTRACTED]
 - [[visual_review()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ffmpeg
+#graphify/code #graphify/EXTRACTED #community/TTS_and_Story_Sounds

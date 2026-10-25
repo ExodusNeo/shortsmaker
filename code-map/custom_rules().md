@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/motion.py"
 type: "code"
-community: "code_custom_scenes"
+community: "Headless AI Planner Calls"
 location: "L198"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/code_custom_scenes
+  - community/Headless_AI_Planner_Calls
 ---
 
 # custom_rules()
@@ -18,4 +18,4 @@ tags:
 - [[motion.py]] - `contains` [EXTRACTED]
 - [[redraw_custom()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/code_custom_scenes
+#graphify/code #graphify/EXTRACTED #community/Headless_AI_Planner_Calls

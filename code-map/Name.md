@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "split_make_shorts.py"
+community: "Script Splitting AST Tools"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/split_make_shortspy
+  - community/Script_Splitting_AST_Tools
 ---
 
 # Name
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[global_names()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/split_make_shortspy
+#graphify/code #graphify/EXTRACTED #community/Script_Splitting_AST_Tools

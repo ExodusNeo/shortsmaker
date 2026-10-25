@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/picture_pool.py"
 type: "rationale"
-community: "test_pictures_first.py"
-location: "L170"
+community: "Picture Pool Storage"
+location: "L178"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/test_pictures_firstpy
+  - community/Picture_Pool_Storage
 ---
 
 # pool.json (the candidates without bytes) + thumb<k>.jpg; list positions are the…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[save_pool()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/test_pictures_firstpy
+#graphify/rationale #graphify/EXTRACTED #community/Picture_Pool_Storage

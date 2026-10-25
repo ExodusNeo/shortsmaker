@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/Graphics.tsx"
 type: "code"
-community: "Short.tsx"
+community: "Short Composition Root"
 location: "L43"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Shorttsx
+  - community/Short_Composition_Root
 ---
 
 # HookTitle()
@@ -17,4 +17,4 @@ tags:
 - [[Short.tsx]] - `imports` [EXTRACTED]
 - [[outline()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Shorttsx
+#graphify/code #graphify/EXTRACTED #community/Short_Composition_Root

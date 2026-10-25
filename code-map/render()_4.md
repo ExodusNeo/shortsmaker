@@ -1,17 +1,17 @@
 ---
 source_file: "tests/test_blender_run.py"
 type: "code"
-community: "main"
+community: "Main Entry and Channel Profiles"
 location: "L88"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/main
+  - community/Main_Entry_and_Channel_Profiles
 ---
 
 # render()
 
 ## Connections
-- [[test_blender_failure_keeps_the_folder()]] - `indirect_call` [INFERRED]
+- [[test_blender_failure_is_reported_and_the_batch_goes_on()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/INFERRED #community/main
+#graphify/code #graphify/INFERRED #community/Main_Entry_and_Channel_Profiles

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/seo.py"
 type: "rationale"
-community: "image_sources.py"
+community: "Stock Video Sources"
 location: "L12"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/image_sourcespy
+  - community/Stock_Video_Sources
 ---
 
 # What people actually type into YouTube search (free autocomplete endpoint, no…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[search_suggestions()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/image_sourcespy
+#graphify/rationale #graphify/EXTRACTED #community/Stock_Video_Sources

@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Shots"
+community: "Blender Camera Shots"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Shots
+  - community/Blender_Camera_Shots
 ---
 
 # Vector
@@ -14,4 +14,4 @@ tags:
 - [[direction()]] - `references` [EXTRACTED]
 - [[keyloc()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Shots
+#graphify/code #graphify/EXTRACTED #community/Blender_Camera_Shots

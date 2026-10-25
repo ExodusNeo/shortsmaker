@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/footage.py"
 type: "rationale"
-community: "ffmpeg"
-location: "L219"
+community: "Audio Mix and Shotcut Export"
+location: "L230"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/ffmpeg
+  - community/Audio_Mix_and_Shotcut_Export
 ---
 
 # Start and end of the camera shot containing time `at` (newsreels cut to title…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[shot_span()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/ffmpeg
+#graphify/rationale #graphify/EXTRACTED #community/Audio_Mix_and_Shotcut_Export

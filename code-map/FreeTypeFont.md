@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "frame_maker"
+community: "Frame Drawing and Graphics"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/frame_maker
+  - community/Frame_Drawing_and_Graphics
 ---
 
 # FreeTypeFont
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[fit_font()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/frame_maker
+#graphify/code #graphify/EXTRACTED #community/Frame_Drawing_and_Graphics

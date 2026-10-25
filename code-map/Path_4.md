@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "choose_images"
+community: "Shotcut Timeline and Loudness"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/choose_images
+  - community/Shotcut_Timeline_and_Loudness
 ---
 
 # Path
 
 ## Connections
-- [[choose_images()]] - `references` [EXTRACTED]
+- [[short_folder()]] - `references` [EXTRACTED]
+- [[videos()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/choose_images
+#graphify/code #graphify/EXTRACTED #community/Shotcut_Timeline_and_Loudness

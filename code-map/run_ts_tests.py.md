@@ -1,12 +1,12 @@
 ---
 source_file: "tests/run_ts_tests.py"
 type: "code"
-community: "test_full_scenes.py"
+community: "Audio Mix and Shotcut Export"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_full_scenespy
+  - community/Audio_Mix_and_Shotcut_Export
 ---
 
 # run_ts_tests.py
@@ -19,4 +19,4 @@ tags:
 - [[sys]] - `imports` [EXTRACTED]
 - [[tempfile]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_full_scenespy
+#graphify/code #graphify/EXTRACTED #community/Audio_Mix_and_Shotcut_Export

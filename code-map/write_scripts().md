@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/writing.py"
 type: "code"
-community: "write_scripts"
+community: "Script Sounds and Graphics"
 location: "L30"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/write_scripts
+  - community/Script_Sounds_and_Graphics
 ---
 
 # write_scripts()
@@ -16,6 +16,7 @@ tags:
 - [[_fake_planning()]] - `calls` [EXTRACTED]
 - [[ask_ai()]] - `calls` [EXTRACTED]
 - [[capture_prompts()]] - `calls` [EXTRACTED]
+- [[check_twists()]] - `calls` [EXTRACTED]
 - [[clean_full()]] - `calls` [EXTRACTED]
 - [[clean_graphic()]] - `calls` [EXTRACTED]
 - [[clean_pics()]] - `calls` [EXTRACTED]
@@ -25,6 +26,8 @@ tags:
 - [[direct_scripts()]] - `calls` [EXTRACTED]
 - [[edit_scripts()]] - `calls` [EXTRACTED]
 - [[fact_check()]] - `calls` [EXTRACTED]
+- [[fill_money_graphics()]] - `calls` [EXTRACTED]
+- [[is_person_portrait()]] - `calls` [EXTRACTED]
 - [[json]] - `calls` [EXTRACTED]
 - [[length_plan()]] - `calls` [EXTRACTED]
 - [[limit_full()]] - `calls` [EXTRACTED]
@@ -32,12 +35,14 @@ tags:
 - [[limit_style()]] - `calls` [EXTRACTED]
 - [[load_pool()]] - `calls` [EXTRACTED]
 - [[logbook_results()]] - `calls` [EXTRACTED]
-- [[main()_3]] - `calls` [EXTRACTED]
+- [[main()_2]] - `calls` [EXTRACTED]
+- [[max_full_planned()]] - `calls` [EXTRACTED]
 - [[narration_lines()]] - `calls` [EXTRACTED]
 - [[pictures_of()]] - `calls` [EXTRACTED]
 - [[plan_builds()]] - `calls` [EXTRACTED]
-- [[plan_with()_1]] - `calls` [EXTRACTED]
+- [[plan_with()]] - `calls` [EXTRACTED]
 - [[prepare_topic()]] - `calls` [EXTRACTED]
+- [[re]] - `calls` [EXTRACTED]
 - [[save_channel()]] - `calls` [EXTRACTED]
 - [[settle_style()]] - `calls` [EXTRACTED]
 - [[shutil]] - `calls` [EXTRACTED]
@@ -52,4 +57,4 @@ tags:
 - [[words_of()]] - `calls` [EXTRACTED]
 - [[writing.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/write_scripts
+#graphify/code #graphify/EXTRACTED #community/Script_Sounds_and_Graphics

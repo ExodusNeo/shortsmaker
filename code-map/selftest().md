@@ -1,12 +1,12 @@
 ---
 source_file: "tools/split_make_shorts.py"
 type: "code"
-community: "split_make_shorts.py"
+community: "Script Splitting AST Tools"
 location: "L584"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/split_make_shortspy
+  - community/Script_Splitting_AST_Tools
 ---
 
 # selftest()
@@ -17,4 +17,4 @@ tags:
 - [[split_make_shorts.py]] - `indirect_call` [INFERRED]
 - [[split_source()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/split_make_shortspy
+#graphify/code #graphify/EXTRACTED #community/Script_Splitting_AST_Tools

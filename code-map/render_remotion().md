@@ -1,18 +1,18 @@
 ---
 source_file: "shortsmaker/remotion_render.py"
 type: "code"
-community: "render_remotion"
-location: "L148"
+community: "ASS Captions and Skins"
+location: "L149"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/render_remotion
+  - community/ASS_Captions_and_Skins
 ---
 
 # render_remotion()
 
 ## Connections
-- [[Path_24]] - `references` [EXTRACTED]
+- [[Path_25]] - `references` [EXTRACTED]
 - [[Render the silent video (with captions) through the Remotion project; returns…]] - `rationale_for` [EXTRACTED]
 - [[caption_lines()]] - `calls` [EXTRACTED]
 - [[code_custom_scenes()]] - `calls` [EXTRACTED]
@@ -30,4 +30,4 @@ tags:
 - [[shutil]] - `calls` [EXTRACTED]
 - [[style_props()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/render_remotion
+#graphify/code #graphify/EXTRACTED #community/ASS_Captions_and_Skins

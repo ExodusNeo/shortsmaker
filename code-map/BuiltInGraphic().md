@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/Short.tsx"
 type: "code"
-community: "Graphics.tsx"
-location: "L130"
+community: "Remotion Caption Cards"
+location: "L132"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Graphicstsx
+  - community/Remotion_Caption_Cards
 ---
 
 # BuiltInGraphic()
@@ -24,4 +24,4 @@ tags:
 - [[StatCard()]] - `calls` [EXTRACTED]
 - [[TimelineCard()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Graphicstsx
+#graphify/code #graphify/EXTRACTED #community/Remotion_Caption_Cards

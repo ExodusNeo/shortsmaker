@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "clean_photo"
+community: "Archive Photo Cleanup"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/clean_photo
+  - community/Archive_Photo_Cleanup
 ---
 
 # statistics
@@ -14,4 +14,4 @@ tags:
 - [[is_stereo()]] - `calls` [EXTRACTED]
 - [[photo_prep.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/clean_photo
+#graphify/concept #graphify/EXTRACTED #community/Archive_Photo_Cleanup

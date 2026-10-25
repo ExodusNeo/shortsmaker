@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_package.py"
 type: "code"
-community: "code_custom_scenes"
+community: "Headless AI Planner Calls"
 location: "L36"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/code_custom_scenes
+  - community/Headless_AI_Planner_Calls
 ---
 
 # test_fake_reaches_callers()
@@ -15,4 +15,4 @@ tags:
 - [[code_custom_scenes()]] - `calls` [EXTRACTED]
 - [[test_package.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/code_custom_scenes
+#graphify/code #graphify/EXTRACTED #community/Headless_AI_Planner_Calls

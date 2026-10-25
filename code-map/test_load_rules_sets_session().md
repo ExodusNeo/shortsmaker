@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_rules.py"
 type: "code"
-community: "capture_prompts"
-location: "L201"
+community: "Channel Rules Files"
+location: "L203"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/capture_prompts
+  - community/Channel_Rules_Files
 ---
 
 # test_load_rules_sets_session()
@@ -17,4 +17,4 @@ tags:
 - [[min_real_pictures()]] - `calls` [EXTRACTED]
 - [[test_rules.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/capture_prompts
+#graphify/code #graphify/EXTRACTED #community/Channel_Rules_Files

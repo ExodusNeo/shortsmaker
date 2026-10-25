@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_full_scenes.py"
 type: "code"
-community: "json"
+community: "Local Voice and Freesound"
 location: "L255"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/json
+  - community/Local_Voice_and_Freesound
 ---
 
 # test_state_roundtrip_full_pics()
@@ -16,4 +16,4 @@ tags:
 - [[save_state()]] - `calls` [EXTRACTED]
 - [[test_full_scenes.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/json
+#graphify/code #graphify/EXTRACTED #community/Local_Voice_and_Freesound

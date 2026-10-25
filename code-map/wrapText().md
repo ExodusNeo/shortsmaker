@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/full/Document.tsx"
 type: "code"
-community: "toolkit.tsx"
+community: "Board and Document Scenes"
 location: "L10"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/toolkittsx
+  - community/Board_and_Document_Scenes
 ---
 
 # wrapText()
@@ -15,4 +15,4 @@ tags:
 - [[Document.tsx]] - `contains` [EXTRACTED]
 - [[DocumentScene()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/toolkittsx
+#graphify/code #graphify/EXTRACTED #community/Board_and_Document_Scenes

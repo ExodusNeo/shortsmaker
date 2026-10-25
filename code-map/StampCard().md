@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/Extras.tsx"
 type: "code"
-community: "Graphics.tsx"
+community: "Remotion Caption Cards"
 location: "L87"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Graphicstsx
+  - community/Remotion_Caption_Cards
 ---
 
 # StampCard()
@@ -18,4 +18,4 @@ tags:
 - [[slot()]] - `calls` [EXTRACTED]
 - [[useWindow()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Graphicstsx
+#graphify/code #graphify/EXTRACTED #community/Remotion_Caption_Cards
