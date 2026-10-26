@@ -1,0 +1,139 @@
+"""Tests for opener staging plans (opener_plan.py, 2026-10-27): the plan format and its tables, the batch call and
+its one retry. The AI is faked. No AI usage. Run: .venv\\Scripts\\python.exe tests\\test_opener_plan.py"""
+import copy
+import sys
+import traceback
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT))
+from shortsmaker import llm, opener_plan  # noqa: E402
+
+EXAMPLE = {  # the spec's example plan
+    "buildable": True,
+    "moment": "an axe chops a rooster's head off on a stump; the headless body hops off and staggers away",
+    "set": {"ground": "dirt", "backdrop": [{"find": "red barn", "size_m": 8}], "light": "day"},
+    "actors": [
+        {"id": "rooster", "find": "rooster", "size_m": 0.55, "on": "stump", "facing": "right"},
+        {"id": "stump", "find": "tree stump", "size_m": 1.2},
+        {"id": "axe", "find": "axe", "size_m": 0.8},
+    ],
+    "beats": [
+        {"move": "cut", "tool": "axe", "target": "rooster", "at": 0.55,
+         "strokes": [{"through": "neck", "angle": "level"}],
+         "expect": [{"piece": "head", "share": 0.15, "then": "fly_off"}, {"piece": "rest", "then": "stay"}]},
+        {"move": "hop_off", "actor": "rooster", "at": 1.3, "style": "stagger"},
+        {"move": "walk", "actor": "rooster", "at": 1.8, "toward": "left", "style": "stagger"},
+    ],
+    "camera": {"angle": "three_quarter", "follow": "rooster"},
+}
+
+
+def plan(**changes):
+    p = copy.deepcopy(EXAMPLE)
+    for path, v in changes.items():
+        node, keys = p, path.split(".")
+        for k in keys[:-1]:
+            node = node[int(k)] if k.isdigit() else node[k]
+        last = keys[-1]
+        node[int(last) if last.isdigit() else last] = v
+    return p
+
+
+def short(i=0):
+    return {"title": f"Short {i}", "research": {"wiki": "text"},
+            "scenes": [{"narration": "The axe fell."}, {"narration": "He walked away."}]}
+
+
+def test_spec_example_is_clean():
+    assert opener_plan.clean_opener(copy.deepcopy(EXAMPLE)) == EXAMPLE
+
+
+def test_rejects_unknown_move_tool_and_id():
+    assert opener_plan.clean_opener(plan(**{"beats.1.move": "explode"})) is None
+    assert opener_plan.clean_opener(plan(**{"beats.0.tool": "laser"})) is None  # not an actor
+    with_laser = plan(**{"beats.0.tool": "laser"})
+    with_laser["actors"].append({"id": "laser", "find": "laser", "size_m": 0.3})
+    assert opener_plan.clean_opener(with_laser) is None  # an actor, but not a tool in the table
+    assert opener_plan.clean_opener(plan(**{"beats.2.actor": "dog"})) is None
+
+
+def test_first_beat_by_one_second():
+    p = plan(**{"beats.0.at": 1.2})
+    assert opener_plan.clean_opener(p) is None
+    assert opener_plan.clean_opener(plan(**{"beats.0.at": 1.0})) is not None
+
+
+def test_sizes_bounded():
+    assert opener_plan.clean_opener(plan(**{"actors.0.size_m": 0.01})) is None
+    assert opener_plan.clean_opener(plan(**{"actors.0.size_m": 50})) is None
+    assert opener_plan.clean_opener(plan(**{"set.backdrop.0.size_m": 31})) is None
+
+
+def test_cut_needs_expect():
+    p = plan()
+    del p["beats"][0]["expect"]
+    assert opener_plan.clean_opener(p) is None
+    mince = plan(**{"beats.0.strokes": [{"mince": 50}], "beats.0.expect": [{"pieces": "40-60", "then": "scatter"}]})
+    assert opener_plan.clean_opener(mince) is not None
+    assert opener_plan.clean_opener(plan(**{"beats.0.expect": [{"pieces": "60-40", "then": "scatter"}]})) is None
+    assert opener_plan.clean_opener(plan(**{"beats.0.expect.0.then": "explode"})) is None
+
+
+def test_unbuildable():
+    old = llm.ask_ai
+    try:
+        llm.ask_ai = lambda *a, **k: {"shorts": [{"index": 0, "buildable": False, "why": "people in uniforms"}]}
+        s = short()
+        opener_plan.plan_openers([s], {"niche": "history"})
+        assert "opener" not in s and s["opener_check"] == "opener: not buildable (people in uniforms)", s
+    finally:
+        llm.ask_ai = old
+
+
+def test_plan_retry_then_none():
+    old, calls = llm.ask_ai, []
+    try:
+        llm.ask_ai = lambda *a, **k: calls.append(1) or {"shorts": [{"index": 0, "junk": True}]}
+        s = short()
+        opener_plan.plan_openers([s], {"niche": "history"})
+        assert len(calls) == 2 and s["opener_check"] == "opener: no usable plan" and "opener" not in s
+    finally:
+        llm.ask_ai = old
+
+
+def test_good_plan_is_kept():
+    old = llm.ask_ai
+    try:
+        llm.ask_ai = lambda *a, **k: {"shorts": [{"index": 0, **copy.deepcopy(EXAMPLE)}]}
+        s = short()
+        opener_plan.plan_openers([s], {"niche": "history"})
+        assert s["opener"] == EXAMPLE and s.get("opener_check") is None
+    finally:
+        llm.ask_ai = old
+
+
+def test_fix_plan_returns_clean_or_none():
+    old = llm.ask_ai
+    try:
+        llm.ask_ai = lambda *a, **k: copy.deepcopy(EXAMPLE)
+        assert opener_plan.fix_plan({"opener": EXAMPLE, "title": "t"}, ["overlap: axe/rooster frames 21-23"]) == EXAMPLE
+        llm.ask_ai = lambda *a, **k: None
+        assert opener_plan.fix_plan({"opener": EXAMPLE, "title": "t"}, ["x"]) is None
+    finally:
+        llm.ask_ai = old
+
+
+if __name__ == "__main__":
+    names = [n for n in sorted(globals()) if n.startswith("test_") and (len(sys.argv) < 2 or n in sys.argv[1:])]
+    failed = 0
+    for n in names:
+        try:
+            globals()[n]()
+            print(f"PASS {n}")
+        except Exception:
+            failed += 1
+            print(f"FAIL {n}")
+            traceback.print_exc()
+    print(f"{len(names) - failed}/{len(names)} passed")
+    sys.exit(1 if failed else 0)
