@@ -164,6 +164,79 @@ def test_pick_model():
         assert clip is None and why == "opener failed: no fitting model for 'rooster'", why
 
 
+def _wiring(render_result):
+    """short_render.use_opener with render_opener faked; returns (check line, short, clips, images, sources, calls)."""
+    from PIL import Image
+    from shortsmaker import short_render
+    d = Path(tempfile.mkdtemp(prefix="opener_wire_"))
+    clip = d / "opener.mp4"
+    media_tools.ffmpeg("-f", "lavfi", "-i", "color=c=orange:s=216x384:d=1", "-pix_fmt", "yuv420p", clip.name, cwd=d)
+    s = {"title": "Mike", "opener": copy.deepcopy(PLAN), "scenes": [{"full": {"type": "custom"}}, {"full": None}]}
+    clips, images, sources = {1: d / "film1.mp4"}, [Image.new("RGB", (8, 8)), Image.new("RGB", (8, 8))], ["photo", "photo"]
+    calls, old = [], opener_render.render_opener
+    opener_render.render_opener = lambda short, seconds, work, exe=None: calls.append(seconds) or (
+        (clip, None) if render_result == "ok" else render_result)
+    try:
+        why = short_render.use_opener(s, [0.0, 2.4, 5.0], d, clips, images, sources)
+    finally:
+        opener_render.render_opener = old
+    return why, s, clips, images, sources, calls, clip
+
+
+def test_use_opener_on_success():
+    why, s, clips, images, sources, calls, clip = _wiring("ok")
+    assert why is None and clips[0] == clip and calls == [2.4]
+    assert sources[0] == "drawn in Blender (opener): " + PLAN["moment"] and s["scenes"][0]["full"] is None
+    assert images[0].size == (216, 384) and s.get("opener_used") is True
+
+
+def test_use_opener_failure_keeps_scene():
+    why, s, clips, images, sources, _, _ = _wiring((None, "opener failed: overlap: a/b frames 3-4"))
+    assert why == "opener failed: overlap: a/b frames 3-4" and 0 not in clips and sources[0] == "photo"
+    assert s["scenes"][0]["full"] == {"type": "custom"} and not s.get("opener_used")
+
+
+def test_use_opener_planner_check():
+    from shortsmaker import short_render
+    s = {"title": "x", "opener_check": "opener: no usable plan", "scenes": [{"full": None}]}
+    calls, old = [], opener_render.render_opener
+    opener_render.render_opener = lambda *a, **k: calls.append(1) or (None, None)
+    try:
+        assert short_render.use_opener(s, [0.0, 2.0], Path("."), {}, [None], ["x"]) == "opener: no usable plan"
+    finally:
+        opener_render.render_opener = old
+
+
+def test_blender_note():
+    import builtins
+    import io
+    from contextlib import redirect_stdout
+    from shortsmaker import cli
+    pings, answers = [], iter(["", "s"])
+    old_ping, old_input = blender_link.ping, builtins.input
+    try:
+        blender_link.ping = lambda timeout=2.0: pings.append(1) and False
+        builtins.input = lambda prompt="": next(answers)
+        out = io.StringIO()
+        with redirect_stdout(out):
+            cli.blender_note(True)
+        assert len(pings) == 2 and "Blender MCP is off: new opener models can't be fetched. Open Blender, press N, " \
+            "click Start MCP Server, then press Enter to retry (or S to skip)." in out.getvalue(), out.getvalue()
+        pings.clear()
+        builtins.input = lambda prompt="": (_ for _ in ()).throw(AssertionError("asked in a scripted run"))
+        out = io.StringIO()
+        with redirect_stdout(out):
+            cli.blender_note(False)
+        assert len(pings) == 1 and "Blender MCP is off" in out.getvalue()
+        blender_link.ping = lambda timeout=2.0: True
+        out = io.StringIO()
+        with redirect_stdout(out):
+            cli.blender_note(True)
+        assert out.getvalue() == ""
+    finally:
+        blender_link.ping, builtins.input = old_ping, old_input
+
+
 if __name__ == "__main__":
     names = [n for n in sorted(globals()) if n.startswith("test_") and (len(sys.argv) < 2 or n in sys.argv[1:])]
     failed = 0

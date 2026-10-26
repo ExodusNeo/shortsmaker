@@ -819,6 +819,47 @@ of resting readable time).
 - **Tests**: Added `test_graphic_card_hold_duration` in `tests/test_package.py` validating hold time and early shift for
   late triggers on stamp and kinetic cards. All test suites pass (17/17 package, 45/45 full scenes, 11/11 first second, TS tests).
 
+## Blender openers (2026-10-27, owner asked: every Short opens on an animation of its strangest moment)
+First-second research (Voggle, How Money Works, Thoughty2, Simple History vs 12 of ours) and a hand-built probe in the
+owner's Blender (Mike's chop; the owner's six catches became the checks below). Spec/plan:
+`docs/superpowers/specs|plans/2026-10-27-blender-openers*`. Part 2 (motion-graphic openers for people stories) not built.
+- **Blender MCP has to be started each time.** Opener models are fetched through the owner's live Blender (the MCP
+  add-on holds the Poly Pizza key). At the start of a run on a channel with `opener: blender`, `cli.blender_note` pings
+  localhost:9876 and, if Blender doesn't answer, says: open Blender, press N, click Start MCP Server, Enter to retry or
+  S to skip (skip = only models already in the library). Rendering itself is headless and needs no window.
+- Rules settings (`## Settings`): `opener: blender` (both strange-history and weird-economics) and `hook: moment |
+  money_claim` (the hook-line check: the editor reports `hook_kind`; a summary hook, or a weird-economics first line
+  without a money figure, goes back to the editor once, `writing.story_problems`).
+- Plan (`opener_plan.py`, after the fact check in `write_scripts`): one AI call stages every Short as JSON from the
+  tables in `blender/opener_tables.json` (grounds, lights, moves, tools, gaits, outcomes, cut-face colours, limits),
+  shared with `blender/moves.py`. `clean_opener` rejects anything outside them; `buildable: false` (people) or an
+  unusable plan leaves `s["opener_check"]` and today's scene 1. The AI never writes Blender code.
+- Models (`blender_link.py`): `D:\ShortsMaker\blender\assets\library\polypizza_<id>.blend + .json` (gitignored;
+  credits in the json). Missing ones: search (CC0 / plain CC-BY only), one AI call picks by title
+  (`opener_render.pick_model`), fetched in a temporary scene `SM_fetch` that copies the add-on's per-scene switches
+  (its commands only exist while that scene's switch is on), the owner's scene restored after. Poly Pizza only (Poly
+  Haven's photo-real scans clash with the look); never Sketchfab (NC licences, fan art).
+- Blender side (plain bpy): `opener_scene.py` (set, brand look: EEVEE, AgX, warm sun, 50 mm, f/2.2 on the subject,
+  three-quarter camera with push-in and follow; actors placed by `stand_on` where the whole footprint clears the
+  surface), `moves.py` (roles not objects; physics for fall/topple/roll/fly_off/scatter/cut pieces with launch speed
+  handed over from 2 keyed frames; keyframes for walk/hop_off/sink/push and tool strokes), `scene_kit.py` (models as
+  one welded mesh, origin at the feet, physics helpers and collision layers), `opener_checks.py`. **`cut` is one move
+  for every cut**: strokes (`through` a region, `at_fraction`, `rows`/`cols`, `mince`) split the target along the
+  blade's plane (bisect, cut faces filled and coloured), the blade stops at the first thing it isn't cutting, piece
+  shares are by surface area (the owner-approved chicken head = 12%), each piece comes loose with the stroke that
+  frees it. Tool edge = the thinner side of the blade.
+- Checks on every frame: overlap (all pairs; allowed only tool vs the piece it cuts during its stroke, pieces of one
+  cut, physics bodies after release), resting (1 cm), in frame, first frame (subject >= 15% + threat), edge leads,
+  blade face (>= 35 deg), cut result (planned shares ±50%, counts, >= 3 mm, <= 80 pieces), blade blocked.
+- Run (`opener_render.render_opener`, from `short_render.use_opener` after the voice): beats scaled into scene 1,
+  headless Blender (10 min, one retry), report, AI review of an 8-frame strip, up to 2 fix rounds
+  (`opener_plan.fix_plan`), then `work/opener.mp4` plays as scene 1 (no motion graphic over it, no first-second
+  picture swap, CC-BY credits in upload.txt) or `CHECK: opener failed: <reason>` and today's scene 1. Unchanged
+  plan + code reuse the clip (`work/opener_done.txt`).
+- Reference tests: `tests/fixtures/openers/` (chicken chop, onion slices, onion mince, crate fall + their models);
+  every check was also seen to catch a real fault while building them, and the renders were looked at by eye (checks
+  alone passed a head blasted out of frame, hollow slices and an exploding mince).
+
 ## Ideas offered, not built
 - Voice cloning (owner's own voice), SFX on the music's beat, YouTube Audio Library tracks for the somber/epic moods.
 - Logbook extras from the Reach/Engagement tabs (drop-off times, search terms, shown in feed, likes/shares): offered
@@ -836,6 +877,10 @@ of resting readable time).
   `.venv\Scripts\python.exe tests\test_style.py` (29: style library, guardrails, inventions, candidates),
   `.venv\Scripts\python.exe tests\run_ts_tests.py` (6 guarded + 13 style: arrow routing, layouts, card fitting, travel speed, registry, transitions) and
   `local_ai\qwen_venv\Scripts\python.exe tests\test_qwen_voice.py` (4: number words, caption words, aligner alphabet, word counts shared with tests/test_story.py).
+- Blender openers: `tests\test_opener_plan.py` (9), `tests\test_blender_link.py` (6, fake add-on socket),
+  `tests\test_opener_render.py` (13, fake Blender: fix rounds, fallback, reuse, credits, scene-1 wiring, the run.bat
+  note), and with real headless Blender `tests\test_opener_checks.py` (7, about a minute) and
+  `tests\test_opener_scene.py` (6 reference plans incl. 4 broken ones, a few minutes).
 - One full-screen scene alone: `.venv\Scripts\python.exe tests\render_full.py remotion\test_props\<name>.json [--still SECONDS]`.
 - Prompt changes without spending AI usage: set `llm.ask_ai` (and `writing.article_text`,
   `channel_profiles.trend_research`) to canned JSON and inspect the captured prompts.

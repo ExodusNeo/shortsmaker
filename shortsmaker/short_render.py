@@ -13,7 +13,7 @@ from PIL import Image
 
 from shortsmaker import (
     audio_mix, blender_plan, blender_render, edit_project, editplan, frame_render, gpu, image_sources, media_tools,
-    motion, photo_prep, picker, picture_pool, plan_rules, remotion_render, review, seo, session, style_lab,
+    motion, opener_render, photo_prep, picker, picture_pool, plan_rules, remotion_render, review, seo, session, style_lab,
 )
 from shortsmaker.config import FPS, H, MUSIC, OUTPUT, PALETTES, SFX, SRC, STYLE_SLOTS, W, hex_rgb
 
@@ -92,6 +92,23 @@ def drawn_thumbnail(short: dict, work: Path, bounds: list[float]) -> tuple[Path,
     last = blender_render.scene_frames(bounds)[zoom][1]
     return (work / "blender_frames" / f"f_{last:04d}.png", None,
             "no real photo of the structure was found: the thumbnail uses a drawing")
+
+
+def use_opener(short: dict, bounds: list[float], work: Path, clips: dict, images: list, sources: list) -> str | None:
+    """Scene 1 plays its Blender opener when one renders (opener_render.py, 2026-10-27): its clip, its first frame as
+    the still, and no motion graphic over it. Otherwise scene 1 stays as it is and the reason comes back as a CHECK
+    line (or the planner's own note when there was no plan)."""
+    short["opener_used"] = False
+    clip, why = opener_render.render_opener(short, bounds[1] - bounds[0], work)
+    if clip is None:
+        return why or short.get("opener_check")
+    media_tools.ffmpeg("-y", "-i", str(clip), "-frames:v", "1", "opener_0.jpg", cwd=work)
+    images[0] = Image.open(work / "opener_0.jpg").convert("RGB")
+    clips[0] = clip
+    short["scenes"][0]["full"] = None
+    sources[0] = f"drawn in Blender (opener): {short['opener']['moment']}"
+    short["opener_used"] = True
+    return None
 
 
 def render(short: dict, ch: dict, folder: Path, state: dict | None = None, fix_round: int = 0) -> None:
@@ -264,6 +281,7 @@ def render(short: dict, ch: dict, folder: Path, state: dict | None = None, fix_r
     else:
         clips = gpu.local_clips(short, work, sources, bounds, {i: c["film"] for i, c in enumerate(choices)
                                                              if c.get("film") and not short["scenes"][i].get("full")})
+    opener_check = None if drawn else use_opener(short, bounds, work, clips, images, sources)
     for i, sc in enumerate(short["scenes"]):  # keep text callouts off the subject's face (maps and marks are full cards)
         if sc["graphic"] and sc["graphic"]["style"] != "mark":
             film = choices[i]["film"]["path"] if clips.get(i) == work / f"film{i}.mp4" else None
@@ -372,6 +390,7 @@ def render(short: dict, ch: dict, folder: Path, state: dict | None = None, fix_r
               f"{'Remotion' if renderer == 'remotion' else 'built-in (Python)'}, {n_graphics} motion graphics",
               clips)
     issues = review.quality_check(folder / "short.mp4", bounds, sources)
+    issues += [opener_check] if opener_check else []
     print(f"  {session.BRAIN.capitalize()} is watching the finished Short for problems...")
     found, fixes = review.visual_review(folder / "short.mp4", short, bounds, sources, work, drawn=drawn, cues=cues)
     issues += found
@@ -382,7 +401,7 @@ def render(short: dict, ch: dict, folder: Path, state: dict | None = None, fix_r
         issues += [thumb_check] if thumb_check else []
     found, opener = review.first_second_check(folder / "short.mp4", short, choices, folder / "storyboard.jpg", work)
     issues += found
-    if short.get("opener_swapped"):  # once per Short: a later round mustn't swap it back
+    if short.get("opener_swapped") or short.get("opener_used"):  # once per Short; a Blender opener stays
         opener = None
     print("  quality check: " + (f"{len(issues)} thing(s) to look at before uploading:" if issues else "OK, nothing to fix"))
     for issue in issues:
@@ -409,6 +428,8 @@ def render(short: dict, ch: dict, folder: Path, state: dict | None = None, fix_r
                 image_credits.append(f"{name} by {c[kind][2]} ({site})")
     if drawn and thumb_credit:
         image_credits.append(f"Thumbnail: {thumb_credit}")
+    if short.get("opener_used"):  # CC-BY models in the Blender opener
+        image_credits += [f"3D model: {c}" for c in short.get("opener_credits") or []]
     if image_credits:
         credit_text += "\n\nFootage and image credits:\n" + "\n".join(dict.fromkeys(image_credits))
     (folder / "upload.txt").write_text(
