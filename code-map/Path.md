@@ -11,7 +11,7 @@ tags:
 # Path
 
 ## Connections
-- [[film_piece()]] - `references` [EXTRACTED]
-- [[shot_span()]] - `references` [EXTRACTED]
+- [[log_short()]] - `references` [EXTRACTED]
+- [[vault_page()]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/subprocess

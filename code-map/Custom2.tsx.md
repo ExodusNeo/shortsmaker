@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/full/generated/Custom2.tsx"
 type: "code"
-community: "toolkit.tsx"
+community: "ExampleEvidence.tsx"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/toolkittsx
+  - community/ExampleEvidencetsx
 ---
 
 # Custom2.tsx
@@ -22,7 +22,7 @@ tags:
 - [[StampBadge()]] - `imports` [EXTRACTED]
 - [[TitleBanner()]] - `imports` [EXTRACTED]
 - [[appear()]] - `imports` [EXTRACTED]
-- [[clamp_8]] - `imports` [EXTRACTED]
+- [[clamp_2]] - `imports` [EXTRACTED]
 - [[cueAt()]] - `imports` [EXTRACTED]
 - [[focusCam()]] - `imports` [EXTRACTED]
 - [[ref_react]] - `imports_from` [EXTRACTED]
@@ -35,4 +35,4 @@ tags:
 - [[skinOf()]] - `imports` [EXTRACTED]
 - [[toolkit.tsx]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/toolkittsx
+#graphify/code #graphify/EXTRACTED #community/ExampleEvidencetsx

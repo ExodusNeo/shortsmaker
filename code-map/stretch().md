@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/style/kit.ts"
 type: "code"
-community: "Invented Look Canvas Effects"
+community: "kit.ts"
 location: "L53"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Invented_Look_Canvas_Effects
+  - community/kitts
 ---
 
 # stretch()
@@ -17,4 +17,4 @@ tags:
 - [[draw()_1]] - `calls` [EXTRACTED]
 - [[kit.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Invented_Look_Canvas_Effects
+#graphify/code #graphify/EXTRACTED #community/kitts

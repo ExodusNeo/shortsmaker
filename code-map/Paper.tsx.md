@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/full/Paper.tsx"
 type: "code"
-community: "Paper"
+community: "toolkit.tsx"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Paper
+  - community/toolkittsx
 ---
 
 # Paper.tsx
@@ -36,4 +36,4 @@ tags:
 - [[toolkit.tsx]] - `re_exports` [EXTRACTED]
 - [[useFonts()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Paper
+#graphify/code #graphify/EXTRACTED #community/toolkittsx

@@ -1,17 +1,17 @@
 ---
-source_file: "remotion/src/full/guarded.tsx"
+source_file: "remotion/src/full/BigNumber.tsx"
 type: "code"
-community: "guarded.tsx"
-location: "L17"
+community: "BigNumber.tsx"
+location: "L7"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/guardedtsx
+  - community/BigNumbertsx
 ---
 
 # clamp
 
 ## Connections
-- [[guarded.tsx]] - `contains` [EXTRACTED]
+- [[BigNumber.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/guardedtsx
+#graphify/code #graphify/EXTRACTED #community/BigNumbertsx

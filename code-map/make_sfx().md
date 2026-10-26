@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/audio_mix.py"
 type: "code"
-community: "math"
+community: "make_sfx"
 location: "L161"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/math
+  - community/make_sfx
 ---
 
 # make_sfx()
@@ -20,4 +20,4 @@ tags:
 - [[render()_1]] - `calls` [EXTRACTED]
 - [[save()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/math
+#graphify/code #graphify/EXTRACTED #community/make_sfx

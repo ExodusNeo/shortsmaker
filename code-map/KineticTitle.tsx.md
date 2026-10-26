@@ -1,18 +1,18 @@
 ---
 source_file: "remotion/src/style/overlays/KineticTitle.tsx"
 type: "code"
-community: "style/index.ts"
+community: "QuestionBeat.tsx"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/style/indexts
+  - community/QuestionBeattsx
 ---
 
 # KineticTitle.tsx
 
 ## Connections
-- [[CLAMP]] - `imports` [EXTRACTED]
+- [[CLAMP_7]] - `imports` [EXTRACTED]
 - [[FONT]] - `imports` [EXTRACTED]
 - [[KineticTitle()]] - `contains` [EXTRACTED]
 - [[Overlay]] - `imports` [EXTRACTED]
@@ -25,4 +25,4 @@ tags:
 - [[styletypes.ts]] - `imports_from` [EXTRACTED]
 - [[theme]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/style/indexts
+#graphify/code #graphify/EXTRACTED #community/QuestionBeattsx

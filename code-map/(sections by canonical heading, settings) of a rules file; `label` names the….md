@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/rules.py"
 type: "rationale"
-community: "test_rules.py"
+community: "make"
 location: "L20"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/test_rulespy
+  - community/make
 ---
 
 # (sections by canonical heading, settings) of a rules file; `label` names the…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[parse_rules()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/test_rulespy
+#graphify/rationale #graphify/EXTRACTED #community/make

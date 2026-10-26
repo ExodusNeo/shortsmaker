@@ -59,6 +59,7 @@ tags:
 - [[test_missing_rules_file_is_drafted()]] - `contains` [EXTRACTED]
 - [[test_new_channel_stops_for_review()]] - `contains` [EXTRACTED]
 - [[test_odd_min_pictures_stop_cleanly()]] - `contains` [EXTRACTED]
+- [[test_opening_picture_needs_its_fields()]] - `contains` [EXTRACTED]
 - [[test_parses_sections_and_settings()]] - `contains` [EXTRACTED]
 - [[test_photo_channels_dont_need_a_build_plan()]] - `contains` [EXTRACTED]
 - [[test_strange_history_prompts_unchanged()]] - `contains` [EXTRACTED]

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/picture_pool.py"
 type: "code"
-community: "gpu.py"
+community: "json"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/gpupy
+  - community/json
 ---
 
 # picture_pool.py
@@ -57,4 +57,4 @@ tags:
 - [[usable()]] - `contains` [EXTRACTED]
 - [[writing.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/gpupy
+#graphify/code #graphify/EXTRACTED #community/json

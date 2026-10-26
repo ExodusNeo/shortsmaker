@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/full/Board.tsx"
 type: "code"
-community: "Paper"
+community: "toolkit.tsx"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Paper
+  - community/toolkittsx
 ---
 
 # Board.tsx
@@ -33,4 +33,4 @@ tags:
 - [[rng()]] - `imports` [EXTRACTED]
 - [[skinOf()]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Paper
+#graphify/code #graphify/EXTRACTED #community/toolkittsx

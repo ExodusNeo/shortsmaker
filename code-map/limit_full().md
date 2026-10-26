@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/plan_rules.py"
 type: "code"
-community: "Full Graphic Limits"
+community: "write_scripts"
 location: "L235"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Full_Graphic_Limits
+  - community/write_scripts
 ---
 
 # limit_full()
@@ -17,4 +17,4 @@ tags:
 - [[test_limit_full()]] - `calls` [EXTRACTED]
 - [[write_scripts()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Full_Graphic_Limits
+#graphify/code #graphify/EXTRACTED #community/write_scripts

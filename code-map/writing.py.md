@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/writing.py"
 type: "code"
-community: "__init__.py"
+community: "re"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/__init__py
+  - community/re
 ---
 
 # writing.py
@@ -51,4 +51,4 @@ tags:
 - [[urllib_parse]] - `imports` [EXTRACTED]
 - [[write_scripts()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/__init__py
+#graphify/code #graphify/EXTRACTED #community/re

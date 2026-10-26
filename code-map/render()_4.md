@@ -1,17 +1,17 @@
 ---
-source_file: "tests/test_style.py"
+source_file: "tests/test_blender_run.py"
 type: "code"
-community: "render_remotion"
-location: "L295"
+community: "main"
+location: "L88"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/render_remotion
+  - community/main
 ---
 
 # render()
 
 ## Connections
-- [[test_invention_runtime_failure_uses_fallback()]] - `indirect_call` [INFERRED]
+- [[test_blender_failure_is_reported_and_the_batch_goes_on()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/INFERRED #community/render_remotion
+#graphify/code #graphify/INFERRED #community/main

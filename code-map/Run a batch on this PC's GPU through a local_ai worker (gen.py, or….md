@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/gpu.py"
 type: "rationale"
-community: "AI Clip Prompts and Cuts"
+community: "local_voice"
 location: "L65"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/AI_Clip_Prompts_and_Cuts
+  - community/local_voice
 ---
 
 # Run a batch on this PC's GPU through a local_ai worker (gen.py, or…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[local_job()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/AI_Clip_Prompts_and_Cuts
+#graphify/rationale #graphify/EXTRACTED #community/local_voice

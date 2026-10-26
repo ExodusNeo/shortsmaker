@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/gpu.py"
 type: "rationale"
-community: "AI Clip Prompts and Cuts"
+community: "test_h3_handoff.py"
 location: "L536"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/AI_Clip_Prompts_and_Cuts
+  - community/test_h3_handoffpy
 ---
 
 # Start pictures (folder/start<N>.jpg) the owner shouldn't spend a clip on: a…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[start_picture_problems()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/AI_Clip_Prompts_and_Cuts
+#graphify/rationale #graphify/EXTRACTED #community/test_h3_handoffpy

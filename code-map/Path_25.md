@@ -1,22 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "fix_short"
+community: "pool_pictures"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/fix_short
+  - community/pool_pictures
 ---
 
 # Path
 
 ## Connections
-- [[apply_review_fixes()]] - `references` [EXTRACTED]
-- [[first_second_check()]] - `references` [EXTRACTED]
-- [[paint_new()]] - `references` [EXTRACTED]
-- [[pool_pictures()]] - `references` [EXTRACTED]
-- [[quality_check()]] - `references` [EXTRACTED]
-- [[storyboard()]] - `references` [EXTRACTED]
-- [[visual_review()]] - `references` [EXTRACTED]
+- [[film_piece()]] - `references` [EXTRACTED]
+- [[shot_span()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/fix_short
+#graphify/code #graphify/EXTRACTED #community/pool_pictures

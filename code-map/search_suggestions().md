@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[What people actually type into YouTube search (free autocomplete endpoint, no…]] - `rationale_for` [EXTRACTED]
-- [[fetch()]] - `calls` [EXTRACTED]
+- [[fetch()_1]] - `calls` [EXTRACTED]
 - [[json]] - `calls` [EXTRACTED]
 - [[seo.py]] - `contains` [EXTRACTED]
 - [[seo_pass()]] - `calls` [EXTRACTED]

@@ -1,50 +1,35 @@
 ---
 type: community
-members: 37
+members: 22
 ---
 
 # write_scripts
 
-**Members:** 37 nodes
+**Members:** 22 nodes
 
 ## Members
-- [[(what one ink figure stands for, how many to draw) the planner's `each` when…]] - rationale - shortsmaker/plan_rules.py
-- [[A planned story sound {word, sound}, validated the word must be spoken in…]] - rationale - shortsmaker/audio_mix.py
-- [[At most MAX_STORY_SOUNDS story sounds per Short (the first ones), so each one…]] - rationale - shortsmaker/audio_mix.py
-- [[Ensure money beats in economicsfinance Shorts don't go bare when the LLM omits…]] - rationale - shortsmaker/plan_rules.py
-- [[How the big-number scene prints a value 30,000  1.5 MILLION  2 BILLION  0.3.]] - rationale - shortsmaker/plan_rules.py
-- [[Lowercase, accent-free word tokens, for matching names against spoken words.]] - rationale - shortsmaker/plan_rules.py
-- [[One planned callout, validated (LLM output is untrusted); None drops it.]] - rationale - shortsmaker/plan_rules.py
-- [[One planned full-screen motion graphic, validated (AI output is untrusted);…]] - rationale - shortsmaker/plan_rules.py
+- [[dot-__init__()]] - code - tests/test_pictures_first.py
+- [[Never scene 1 (real footage keeps the hook), never two in a row, never a scene…]] - rationale - shortsmaker/plan_rules.py
 - [[Plan n Shorts on new topics, or on exactly `topics` (comparison runs the other…]] - rationale - shortsmaker/writing.py
-- [[True when `cand` is a solo portraitheadshot of `person_name` (so a scene that…]] - rationale - shortsmaker/plan_rules.py
-- [[True when the picture's subject would land under the top callouts (y ~180-680…]] - rationale - shortsmaker/frame_render.py
-- [[clean_full()]] - code - shortsmaker/plan_rules.py
-- [[clean_graphic()]] - code - shortsmaker/plan_rules.py
-- [[clean_sound()]] - code - shortsmaker/audio_mix.py
-- [[contains()]] - code - shortsmaker/plan_rules.py
-- [[coords()]] - code - shortsmaker/plan_rules.py
-- [[fill_money_graphics()]] - code - shortsmaker/plan_rules.py
-- [[graphic_low()]] - code - shortsmaker/frame_render.py
-- [[is_num()]] - code - shortsmaker/plan_rules.py
-- [[is_person_portrait()]] - code - shortsmaker/plan_rules.py
-- [[limit_sounds()]] - code - shortsmaker/audio_mix.py
-- [[number_figures()]] - code - shortsmaker/plan_rules.py
-- [[show_number()]] - code - shortsmaker/plan_rules.py
-- [[test_clean_full_board()]] - code - tests/test_full_scenes.py
-- [[test_clean_full_document()]] - code - tests/test_full_scenes.py
-- [[test_clean_full_journey()]] - code - tests/test_full_scenes.py
-- [[test_clean_full_keeps_board_pic()]] - code - tests/test_pictures_first.py
-- [[test_clean_full_keeps_thing()]] - code - tests/test_full_scenes.py
-- [[test_clean_full_limits()]] - code - tests/test_full_scenes.py
-- [[test_clean_question_and_kinetic()]] - code - tests/test_style.py
-- [[test_clean_sound()]] - code - tests/test_full_scenes.py
-- [[test_fill_money_graphics_and_caps()]] - code - tests/test_full_scenes.py
-- [[test_number_scaling()]] - code - tests/test_full_scenes.py
-- [[text()]] - code - shortsmaker/plan_rules.py
-- [[word()]] - code - shortsmaker/plan_rules.py
-- [[words_of()]] - code - shortsmaker/plan_rules.py
+- [[The planner plans the edit (footage searches, shots, camera, graphics, person…]] - rationale - shortsmaker/writing.py
+- [[The topic's usable pictures as prompt lines ( without a picture list).]] - rationale - shortsmaker/picture_pool.py
+- [[direct_scripts()]] - code - shortsmaker/writing.py
+- [[limit_full()]] - code - shortsmaker/plan_rules.py
+- [[passing()]] - code - tests/test_pictures_first.py
+- [[pictures_of()]] - code - shortsmaker/picture_pool.py
+- [[planning]] - code - tests/test_pictures_first.py
+- [[prepare()]] - code - tests/test_pictures_first.py
+- [[prepare()_1]] - code - tests/test_pictures_first.py
+- [[prepare()_2]] - code - tests/test_pictures_first.py
+- [[prepare()_3]] - code - tests/test_pictures_first.py
+- [[test_all_weak_returns_empty()]] - code - tests/test_pictures_first.py
+- [[test_both_mode_pools_follow_reply_position()]] - code - tests/test_pictures_first.py
+- [[test_dropped_topic_pool_removed()]] - code - tests/test_pictures_first.py
+- [[test_limit_full()]] - code - tests/test_full_scenes.py
+- [[test_topic_prompt_asks_backups_and_visuals()]] - code - tests/test_pictures_first.py
+- [[test_weak_topic_swapped_for_backup()]] - code - tests/test_pictures_first.py
 - [[write_scripts()]] - code - shortsmaker/writing.py
+- [[write_scripts() with every AI step canned and `prepare` standing in for…]] - rationale - tests/test_pictures_first.py
 
 ## Live Query (requires Dataview plugin)
 
@@ -54,41 +39,34 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 12 edges to [[_COMMUNITY_test_full_scenes.py]]
-- 10 edges to [[_COMMUNITY_gpu.py]]
-- 9 edges to [[_COMMUNITY_re]]
-- 7 edges to [[_COMMUNITY_test_pictures_first.py]]
-- 5 edges to [[_COMMUNITY_edit_scripts]]
-- 4 edges to [[_COMMUNITY_json]]
-- 3 edges to [[_COMMUNITY_fetch]]
-- 3 edges to [[_COMMUNITY_rescue_graphics]]
-- 2 edges to [[_COMMUNITY_prepare_topic]]
-- 2 edges to [[_COMMUNITY_ask_ai]]
-- 2 edges to [[_COMMUNITY_style_library]]
-- 2 edges to [[_COMMUNITY_frame_maker]]
+- 13 edges to [[_COMMUNITY_test_pictures_first.py]]
+- 5 edges to [[_COMMUNITY_prepare_topic]]
+- 5 edges to [[_COMMUNITY_re]]
+- 4 edges to [[_COMMUNITY_edit_scripts]]
+- 3 edges to [[_COMMUNITY_json]]
+- 3 edges to [[_COMMUNITY_style_library]]
+- 3 edges to [[_COMMUNITY_ask_ai]]
+- 3 edges to [[_COMMUNITY_words_of]]
+- 3 edges to [[_COMMUNITY_clean_sound]]
+- 2 edges to [[_COMMUNITY_planning_ai]]
 - 2 edges to [[_COMMUNITY_gather_pool]]
-- 2 edges to [[_COMMUNITY_ffmpeg]]
-- 2 edges to [[_COMMUNITY_test_style.py]]
-- 1 edge to [[_COMMUNITY_test_rules.py]]
-- 1 edge to [[_COMMUNITY_render]]
-- 1 edge to [[_COMMUNITY_fix_short]]
-- 1 edge to [[_COMMUNITY_visual_review]]
-- 1 edge to [[_COMMUNITY_choose_images]]
-- 1 edge to [[_COMMUNITY_wm_files]]
-- 1 edge to [[_COMMUNITY_scene_cues]]
+- 2 edges to [[_COMMUNITY_trend_research]]
+- 1 edge to [[_COMMUNITY_pool_pictures]]
+- 1 edge to [[_COMMUNITY_main_1]]
 - 1 edge to [[_COMMUNITY_style_lab.py]]
-- 1 edge to [[_COMMUNITY_Full Graphic Limits]]
-- 1 edge to [[_COMMUNITY_clean_pics]]
+- 1 edge to [[_COMMUNITY_fact_check]]
+- 1 edge to [[_COMMUNITY_clean_graphic]]
+- 1 edge to [[_COMMUNITY_clean_full]]
 - 1 edge to [[_COMMUNITY_Style Library Caps]]
-- 1 edge to [[_COMMUNITY_default_build]]
-- 1 edge to [[_COMMUNITY_apply_review_fixes]]
-- 1 edge to [[_COMMUNITY_pool_of]]
-- 1 edge to [[_COMMUNITY___init__.py]]
-- 1 edge to [[_COMMUNITY_trim_borders]]
+- 1 edge to [[_COMMUNITY_test_blender_plan.py]]
+- 1 edge to [[_COMMUNITY_logbook_results]]
+- 1 edge to [[_COMMUNITY_capture_prompts]]
+- 1 edge to [[_COMMUNITY_plan_with]]
+- 1 edge to [[_COMMUNITY_test_full_scenes.py]]
 
 ## Top bridge nodes
-- [[write_scripts()]] - degree 44, connects to 18 communities
-- [[words_of()]] - degree 22, connects to 8 communities
-- [[clean_full()]] - degree 21, connects to 4 communities
-- [[test_fill_money_graphics_and_caps()]] - degree 8, connects to 3 communities
-- [[graphic_low()]] - degree 7, connects to 3 communities
+- [[write_scripts()]] - degree 44, connects to 21 communities
+- [[planning]] - degree 14, connects to 4 communities
+- [[pictures_of()]] - degree 7, connects to 4 communities
+- [[direct_scripts()]] - degree 7, connects to 4 communities
+- [[test_both_mode_pools_follow_reply_position()]] - degree 6, connects to 2 communities

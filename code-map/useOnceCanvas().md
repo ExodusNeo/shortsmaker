@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/style/kit.ts"
 type: "code"
-community: "Invented Look Canvas Effects"
+community: "kit.ts"
 location: "L63"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Invented_Look_Canvas_Effects
+  - community/kitts
 ---
 
 # useOnceCanvas()
@@ -24,4 +24,4 @@ tags:
 - [[Silent.tsx]] - `imports` [EXTRACTED]
 - [[kit.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Invented_Look_Canvas_Effects
+#graphify/code #graphify/EXTRACTED #community/kitts

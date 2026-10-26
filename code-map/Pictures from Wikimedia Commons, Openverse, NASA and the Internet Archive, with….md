@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/image_sources.py"
 type: "rationale"
-community: "gpu.py"
+community: "json"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/gpupy
+  - community/json
 ---
 
 # Pictures from Wikimedia Commons, Openverse, NASA and the Internet Archive, with…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[image_sources.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/gpupy
+#graphify/rationale #graphify/EXTRACTED #community/json

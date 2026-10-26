@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/channel_profiles.py"
 type: "code"
-community: "__init__.py"
+community: "re"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/__init__py
+  - community/re
 ---
 
 # channel_profiles.py
@@ -50,4 +50,4 @@ tags:
 - [[writing.py]] - `imports_from` [EXTRACTED]
 - [[yt_list()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/__init__py
+#graphify/code #graphify/EXTRACTED #community/re

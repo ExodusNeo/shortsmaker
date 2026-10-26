@@ -1,19 +1,19 @@
 ---
 source_file: "shortsmaker/review.py"
 type: "code"
-community: "fix_short"
+community: "visual_review"
 location: "L20"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/fix_short
+  - community/visual_review
 ---
 
 # quality_check()
 
 ## Connections
 - [[Automatic checks on the finished Short, using ffmpeg's own detectors in one…]] - `rationale_for` [EXTRACTED]
-- [[Path_25]] - `references` [EXTRACTED]
+- [[Path_19]] - `references` [EXTRACTED]
 - [[clock()_1]] - `calls` [EXTRACTED]
 - [[length_plan()]] - `calls` [EXTRACTED]
 - [[re]] - `calls` [EXTRACTED]
@@ -22,4 +22,4 @@ tags:
 - [[subprocess]] - `calls` [EXTRACTED]
 - [[where()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/fix_short
+#graphify/code #graphify/EXTRACTED #community/visual_review

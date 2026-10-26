@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/review.py"
 type: "rationale"
-community: "fix_short"
+community: "pool_pictures"
 location: "L230"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/fix_short
+  - community/pool_pictures
 ---
 
 # Rejected scenes (index -> the review's complaint) that get a real picture from…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[pool_pictures()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/fix_short
+#graphify/rationale #graphify/EXTRACTED #community/pool_pictures

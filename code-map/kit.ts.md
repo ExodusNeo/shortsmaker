@@ -1,19 +1,19 @@
 ---
 source_file: "remotion/src/style/kit.ts"
 type: "code"
-community: "style/index.ts"
+community: "kit.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/style/indexts
+  - community/kitts
 ---
 
 # kit.ts
 
 ## Connections
 - [[CAPTION_TOP]] - `contains` [EXTRACTED]
-- [[CLAMP]] - `contains` [EXTRACTED]
+- [[CLAMP_7]] - `contains` [EXTRACTED]
 - [[Engraving.tsx]] - `imports_from` [EXTRACTED]
 - [[FILL]] - `contains` [EXTRACTED]
 - [[FONT]] - `re_exports` [EXTRACTED]
@@ -53,4 +53,4 @@ tags:
 - [[theme]] - `re_exports` [EXTRACTED]
 - [[useOnceCanvas()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/style/indexts
+#graphify/code #graphify/EXTRACTED #community/kitts

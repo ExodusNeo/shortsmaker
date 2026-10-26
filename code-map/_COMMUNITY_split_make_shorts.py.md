@@ -1,11 +1,11 @@
 ---
 type: community
-members: 42
+members: 41
 ---
 
 # split_make_shorts.py
 
-**Members:** 42 nodes
+**Members:** 41 nodes
 
 ## Members
 - [[(local names, names declared global) bound directly in a function body (not in…]] - rationale - tools/split_make_shorts.py
@@ -27,7 +27,6 @@ members: 42
 - [[arg_names()]] - code - tools/split_make_shorts.py
 - [[arguments]] - code
 - [[ast]] - concept
-- [[builtins]] - concept
 - [[chunks_of()]] - code - tools/split_make_shorts.py
 - [[defined_names()]] - code - tools/split_make_shorts.py
 - [[global_names()]] - code - tools/split_make_shorts.py
@@ -59,12 +58,9 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 1 edge to [[_COMMUNITY_re]]
-- 1 edge to [[_COMMUNITY_subprocess]]
-- 1 edge to [[_COMMUNITY___init__.py]]
-- 1 edge to [[_COMMUNITY_test_full_scenes.py]]
+- 2 edges to [[_COMMUNITY_re]]
+- 2 edges to [[_COMMUNITY_subprocess]]
 - 1 edge to [[_COMMUNITY_test_h3_handoff.py]]
 
 ## Top bridge nodes
-- [[split_make_shorts.py]] - degree 26, connects to 4 communities
-- [[builtins]] - degree 2, connects to 1 community
+- [[split_make_shorts.py]] - degree 26, connects to 3 communities

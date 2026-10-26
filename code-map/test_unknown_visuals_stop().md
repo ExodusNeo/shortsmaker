@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_rules.py"
 type: "code"
-community: "test_rules.py"
-location: "L345"
+community: "make"
+location: "L354"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_rulespy
+  - community/make
 ---
 
 # test_unknown_visuals_stop()
@@ -16,4 +16,4 @@ tags:
 - [[stop_text()]] - `calls` [EXTRACTED]
 - [[test_rules.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_rulespy
+#graphify/code #graphify/EXTRACTED #community/make

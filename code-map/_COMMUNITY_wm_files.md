@@ -26,14 +26,13 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 5 edges to [[_COMMUNITY_gpu.py]]
-- 2 edges to [[_COMMUNITY_fetch]]
+- 7 edges to [[_COMMUNITY_json]]
 - 2 edges to [[_COMMUNITY_gather_pool]]
-- 1 edge to [[_COMMUNITY_write_scripts]]
+- 1 edge to [[_COMMUNITY_words_of]]
 
 ## Top bridge nodes
-- [[wm_files()]] - degree 8, connects to 3 communities
+- [[wm_files()]] - degree 8, connects to 2 communities
 - [[article_images()]] - degree 4, connects to 2 communities
-- [[usable_license()]] - degree 4, connects to 2 communities
 - [[commons_search()]] - degree 3, connects to 2 communities
+- [[usable_license()]] - degree 4, connects to 1 community
 - [[thumb_url()]] - degree 3, connects to 1 community

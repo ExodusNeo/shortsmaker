@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/gpu.py"
 type: "rationale"
-community: "AI Clip Prompts and Cuts"
+community: "test_h3_handoff.py"
 location: "L378"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/AI_Clip_Prompts_and_Cuts
+  - community/test_h3_handoffpy
 ---
 
 # Detailed prompts for the owner-made clips (Colab H3 or Flow), written by the AI…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[h3_prompts()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/AI_Clip_Prompts_and_Cuts
+#graphify/rationale #graphify/EXTRACTED #community/test_h3_handoffpy

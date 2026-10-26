@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "ffmpeg"
+community: "local_voice"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/ffmpeg
+  - community/local_voice
 ---
 
 # unicodedata
@@ -18,4 +18,4 @@ tags:
 - [[spoken_count()]] - `calls` [EXTRACTED]
 - [[words_of()]] - `calls` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/ffmpeg
+#graphify/concept #graphify/EXTRACTED #community/local_voice

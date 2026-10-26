@@ -1,17 +1,22 @@
 ---
-source_file: "tests/test_blender_plan.py"
+source_file: "shortsmaker/frame_render.py"
 type: "code"
-community: "math"
-location: "L120"
+community: "frame_maker"
+location: "L248"
 tags:
   - graphify/code
-  - graphify/INFERRED
-  - community/math
+  - graphify/EXTRACTED
+  - community/frame_maker
 ---
 
 # frame()
 
 ## Connections
-- [[test_hard_cuts_never_blend_scenes()]] - `indirect_call` [INFERRED]
+- [[ClipReader]] - `calls` [EXTRACTED]
+- [[draw_card()]] - `calls` [EXTRACTED]
+- [[draw_graphic()]] - `calls` [EXTRACTED]
+- [[frame_maker()]] - `indirect_call` [INFERRED]
+- [[shot()]] - `calls` [EXTRACTED]
+- [[write_frames()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/math
+#graphify/code #graphify/EXTRACTED #community/frame_maker

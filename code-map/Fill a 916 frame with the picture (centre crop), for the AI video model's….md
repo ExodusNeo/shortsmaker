@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/gpu.py"
 type: "rationale"
-community: "AI Clip Prompts and Cuts"
+community: "test_h3_handoff.py"
 location: "L328"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/AI_Clip_Prompts_and_Cuts
+  - community/test_h3_handoffpy
 ---
 
 # Fill a 9:16 frame with the picture (centre crop), for the AI video model's…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[cover_crop()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/AI_Clip_Prompts_and_Cuts
+#graphify/rationale #graphify/EXTRACTED #community/test_h3_handoffpy

@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/style/looks/Engraving.tsx"
 type: "code"
-community: "Invented Look Canvas Effects"
+community: "kit.ts"
 location: "L36"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Invented_Look_Canvas_Effects
+  - community/kitts
 ---
 
 # draw()
@@ -17,4 +17,4 @@ tags:
 - [[hatch()]] - `calls` [EXTRACTED]
 - [[luminance()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Invented_Look_Canvas_Effects
+#graphify/code #graphify/EXTRACTED #community/kitts

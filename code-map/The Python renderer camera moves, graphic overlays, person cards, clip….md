@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/frame_render.py"
 type: "rationale"
-community: "test_full_scenes.py"
+community: "json"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/test_full_scenespy
+  - community/json
 ---
 
 # The Python renderer: camera moves, graphic overlays, person cards, clip…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[frame_render.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/test_full_scenespy
+#graphify/rationale #graphify/EXTRACTED #community/json

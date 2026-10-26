@@ -10,8 +10,8 @@ members: 20
 ## Members
 - [[A finished Short's work in miniature grey pictures, a see-through graphics…]] - rationale - tests/test_edit_project.py
 - [[A re-render with nothing left to fix an old timeline would no longer match the…]] - rationale - shortsmaker/edit_project.py
+- [[Path_2]] - code
 - [[Path_3]] - code
-- [[Path_4]] - code
 - [[The video tracks bottom-up (pictures, then graphics drawn over them), each cut…]] - rationale - shortsmaker/edit_project.py
 - [[caption_layer()]] - code - shortsmaker/edit_project.py
 - [[chain()]] - code - shortsmaker/edit_project.py
@@ -37,9 +37,9 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
+- 6 edges to [[_COMMUNITY_subprocess]]
 - 5 edges to [[_COMMUNITY_test_full_scenes.py]]
-- 5 edges to [[_COMMUNITY_subprocess]]
-- 3 edges to [[_COMMUNITY_ffmpeg]]
+- 2 edges to [[_COMMUNITY_test_h3_handoff.py]]
 - 2 edges to [[_COMMUNITY_render]]
 - 2 edges to [[_COMMUNITY_re]]
 

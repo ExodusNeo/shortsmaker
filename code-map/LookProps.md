@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/style/types.ts"
 type: "code"
-community: "style/index.ts"
+community: "kit.ts"
 location: "L9"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/style/indexts
+  - community/kitts
 ---
 
 # LookProps
@@ -15,4 +15,4 @@ tags:
 - [[kit.ts]] - `re_exports` [EXTRACTED]
 - [[styletypes.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/style/indexts
+#graphify/code #graphify/EXTRACTED #community/kitts

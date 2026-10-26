@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/channel_profiles.py"
 type: "code"
-community: "re"
+community: "main"
 location: "L49"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/re
+  - community/main
 ---
 
 # ask_count()
@@ -15,4 +15,4 @@ tags:
 - [[channel_profiles.py]] - `contains` [EXTRACTED]
 - [[main()_6]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/re
+#graphify/code #graphify/EXTRACTED #community/main

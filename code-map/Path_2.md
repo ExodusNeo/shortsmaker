@@ -1,20 +1,20 @@
 ---
 source_file: ""
 type: "code"
-community: "motion.py"
+community: "Shotcut Timeline and Loudness"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/motionpy
+  - community/Shotcut_Timeline_and_Loudness
 ---
 
 # Path
 
 ## Connections
-- [[code_custom_scenes()]] - `references` [EXTRACTED]
-- [[full_props()]] - `references` [EXTRACTED]
-- [[look_and_fix()]] - `references` [EXTRACTED]
-- [[preview_custom()]] - `references` [EXTRACTED]
-- [[preview_sheet()]] - `references` [EXTRACTED]
+- [[caption_layer()]] - `references` [EXTRACTED]
+- [[make()]] - `references` [EXTRACTED]
+- [[master_gain()]] - `references` [EXTRACTED]
+- [[project_xml()]] - `references` [EXTRACTED]
+- [[remove()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/motionpy
+#graphify/code #graphify/EXTRACTED #community/Shotcut_Timeline_and_Loudness

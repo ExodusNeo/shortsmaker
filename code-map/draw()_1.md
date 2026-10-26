@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/style/looks/Halftone.tsx"
 type: "code"
-community: "Invented Look Canvas Effects"
+community: "kit.ts"
 location: "L36"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Invented_Look_Canvas_Effects
+  - community/kitts
 ---
 
 # draw()
@@ -20,4 +20,4 @@ tags:
 - [[screen()]] - `calls` [EXTRACTED]
 - [[stretch()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Invented_Look_Canvas_Effects
+#graphify/code #graphify/EXTRACTED #community/kitts

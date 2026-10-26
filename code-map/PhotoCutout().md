@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/full/toolkit.tsx"
 type: "code"
-community: "toolkit.tsx"
+community: "skinOf"
 location: "L89"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/toolkittsx
+  - community/skinOf
 ---
 
 # PhotoCutout()
@@ -22,4 +22,4 @@ tags:
 - [[skinOf()]] - `calls` [EXTRACTED]
 - [[toolkit.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/toolkittsx
+#graphify/code #graphify/EXTRACTED #community/skinOf

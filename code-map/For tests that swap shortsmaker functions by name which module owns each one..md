@@ -1,12 +1,12 @@
 ---
 source_file: "tests/patching.py"
 type: "rationale"
-community: "patching.py"
+community: "subprocess"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/patchingpy
+  - community/subprocess
 ---
 
 # For tests that swap shortsmaker functions by name: which module owns each one.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[patching.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/patchingpy
+#graphify/rationale #graphify/EXTRACTED #community/subprocess

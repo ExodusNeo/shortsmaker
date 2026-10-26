@@ -1,18 +1,17 @@
 ---
-source_file: "tests/test_pictures_first.py"
+source_file: "tests/test_rules.py"
 type: "code"
-community: "test_pictures_first.py"
-location: "L238"
+community: "capture_prompts"
+location: "L77"
 tags:
   - graphify/code
-  - graphify/EXTRACTED
-  - community/test_pictures_firstpy
+  - graphify/INFERRED
+  - community/capture_prompts
 ---
 
 # prepare()
 
 ## Connections
-- [[passing()]] - `calls` [EXTRACTED]
-- [[test_weak_topic_swapped_for_backup()]] - `contains` [EXTRACTED]
+- [[capture_prompts()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/test_pictures_firstpy
+#graphify/code #graphify/INFERRED #community/capture_prompts

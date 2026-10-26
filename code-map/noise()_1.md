@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/style/kit.ts"
 type: "code"
-community: "Invented Look Canvas Effects"
+community: "kit.ts"
 location: "L27"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Invented_Look_Canvas_Effects
+  - community/kitts
 ---
 
 # noise()
@@ -21,4 +21,4 @@ tags:
 - [[kit.ts]] - `contains` [EXTRACTED]
 - [[style.test.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Invented_Look_Canvas_Effects
+#graphify/code #graphify/EXTRACTED #community/kitts

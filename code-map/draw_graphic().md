@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[Animate the callout in, hold it, fade it out before the scene ends.]] - `rationale_for` [EXTRACTED]
 - [[Image_1]] - `references` [EXTRACTED]
-- [[frame()_1]] - `calls` [EXTRACTED]
+- [[frame()]] - `calls` [EXTRACTED]
 - [[frame_render.py]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/frame_maker

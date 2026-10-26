@@ -13,7 +13,7 @@ tags:
 ## Connections
 - [[gpu.py]] - `imports` [EXTRACTED]
 - [[h3_run.py]] - `imports` [EXTRACTED]
-- [[main()_1]] - `calls` [EXTRACTED]
+- [[main()_2]] - `calls` [EXTRACTED]
 - [[unpack_clips()]] - `calls` [EXTRACTED]
 - [[veo_handoff()]] - `calls` [EXTRACTED]
 

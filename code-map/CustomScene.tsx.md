@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/full/CustomScene.tsx"
 type: "code"
-community: "toolkit.tsx"
+community: "ExampleEvidence.tsx"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/toolkittsx
+  - community/ExampleEvidencetsx
 ---
 
 # CustomScene.tsx
@@ -27,4 +27,4 @@ tags:
 - [[fulltypes.ts]] - `imports_from` [EXTRACTED]
 - [[ref_react]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/toolkittsx
+#graphify/code #graphify/EXTRACTED #community/ExampleEvidencetsx

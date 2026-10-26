@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/style_lab.py"
 type: "code"
-community: "re"
+community: "style_lab.py"
 location: "L130"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/re
+  - community/style_labpy
 ---
 
 # clean_style_code()
@@ -17,4 +17,4 @@ tags:
 - [[re]] - `calls` [EXTRACTED]
 - [[style_lab.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/re
+#graphify/code #graphify/EXTRACTED #community/style_labpy

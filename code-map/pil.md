@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "gpu.py"
+community: "json"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/gpupy
+  - community/json
 ---
 
 # pil
@@ -29,4 +29,4 @@ tags:
 - [[test_full_scenes.py]] - `imports_from` [EXTRACTED]
 - [[test_h3_run.py]] - `imports_from` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/gpupy
+#graphify/concept #graphify/EXTRACTED #community/json

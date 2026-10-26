@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[The style library (remotionsrcstylelibrary.json) {name, kind, description,…]] - `rationale_for` [EXTRACTED]
 - [[approve_candidate()]] - `calls` [EXTRACTED]
-- [[build()_1]] - `calls` [EXTRACTED]
+- [[build()]] - `calls` [EXTRACTED]
 - [[choose_images()]] - `calls` [EXTRACTED]
 - [[clean_invention()]] - `calls` [EXTRACTED]
 - [[clean_look()]] - `calls` [EXTRACTED]

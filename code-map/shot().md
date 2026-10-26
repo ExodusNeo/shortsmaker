@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[Image_1]] - `references` [EXTRACTED]
 - [[One frame of slow Ken Burns motion; affine sampling is sub-pixel so it never…]] - `rationale_for` [EXTRACTED]
-- [[frame()_1]] - `calls` [EXTRACTED]
+- [[frame()]] - `calls` [EXTRACTED]
 - [[frame_render.py]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/frame_maker

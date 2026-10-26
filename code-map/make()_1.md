@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_rules.py"
 type: "code"
-community: "test_rules.py"
+community: "make"
 location: "L117"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_rulespy
+  - community/make
 ---
 
 # make()
@@ -26,10 +26,11 @@ tags:
 - [[test_load_rules_sets_session()]] - `calls` [EXTRACTED]
 - [[test_missing_heading_stops()]] - `calls` [EXTRACTED]
 - [[test_odd_min_pictures_stop_cleanly()]] - `calls` [EXTRACTED]
+- [[test_opening_picture_needs_its_fields()]] - `calls` [EXTRACTED]
 - [[test_parses_sections_and_settings()]] - `calls` [EXTRACTED]
 - [[test_photo_channels_dont_need_a_build_plan()]] - `calls` [EXTRACTED]
 - [[test_rules.py]] - `contains` [EXTRACTED]
 - [[test_strips_tag_comments()]] - `calls` [EXTRACTED]
 - [[test_unknown_visuals_stop()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_rulespy
+#graphify/code #graphify/EXTRACTED #community/make

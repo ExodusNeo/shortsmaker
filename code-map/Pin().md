@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/Graphics.tsx"
 type: "code"
-community: "Graphics.tsx"
+community: "MapCard.tsx"
 location: "L123"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Graphicstsx
+  - community/MapCardtsx
 ---
 
 # Pin()
@@ -17,4 +17,4 @@ tags:
 - [[MapCard()]] - `calls` [EXTRACTED]
 - [[MapCard.tsx]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Graphicstsx
+#graphify/code #graphify/EXTRACTED #community/MapCardtsx

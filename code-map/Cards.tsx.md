@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/Cards.tsx"
 type: "code"
-community: "Graphics.tsx"
+community: "Cards.tsx"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Graphicstsx
+  - community/Cardstsx
 ---
 
 # Cards.tsx
@@ -22,7 +22,7 @@ tags:
 - [[StatCard()]] - `contains` [EXTRACTED]
 - [[TimelineCard()]] - `contains` [EXTRACTED]
 - [[card_1]] - `contains` [EXTRACTED]
-- [[clamp_1]] - `contains` [EXTRACTED]
+- [[clamp]] - `contains` [EXTRACTED]
 - [[formatStat()]] - `contains` [EXTRACTED]
 - [[moveIn()]] - `imports` [EXTRACTED]
 - [[outline()]] - `imports` [EXTRACTED]
@@ -31,4 +31,4 @@ tags:
 - [[theme]] - `imports` [EXTRACTED]
 - [[useWindow()]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Graphicstsx
+#graphify/code #graphify/EXTRACTED #community/Cardstsx

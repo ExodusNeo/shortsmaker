@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_blender_run.py"
 type: "rationale"
-community: "__init__.py"
+community: "re"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/__init__py
+  - community/re
 ---
 
 # Tests for a Blender channel's run (2026-10-22): every scene drawn (no picture…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[test_blender_run.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/__init__py
+#graphify/rationale #graphify/EXTRACTED #community/re

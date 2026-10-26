@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/style/looks/Riso.tsx"
 type: "code"
-community: "Invented Look Canvas Effects"
+community: "kit.ts"
 location: "L13"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Invented_Look_Canvas_Effects
+  - community/kitts
 ---
 
 # draw()
@@ -18,4 +18,4 @@ tags:
 - [[noise()_1]] - `calls` [EXTRACTED]
 - [[rgb()_1]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Invented_Look_Canvas_Effects
+#graphify/code #graphify/EXTRACTED #community/kitts

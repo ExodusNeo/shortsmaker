@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/Extras.tsx"
 type: "code"
-community: "Graphics.tsx"
+community: "Cards.tsx"
 location: "L56"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Graphicstsx
+  - community/Cardstsx
 ---
 
 # CompareCard()
@@ -20,4 +20,4 @@ tags:
 - [[slot()]] - `calls` [EXTRACTED]
 - [[useWindow()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Graphicstsx
+#graphify/code #graphify/EXTRACTED #community/Cardstsx

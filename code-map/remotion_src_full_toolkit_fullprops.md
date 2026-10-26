@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "toolkit.tsx"
+community: "ExampleEvidence.tsx"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/toolkittsx
+  - community/ExampleEvidencetsx
 ---
 
 # remotion_src_full_toolkit_fullprops
@@ -18,4 +18,4 @@ tags:
 - [[ExampleChain.tsx]] - `imports` [EXTRACTED]
 - [[ExampleEvidence.tsx]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/toolkittsx
+#graphify/concept #graphify/EXTRACTED #community/ExampleEvidencetsx

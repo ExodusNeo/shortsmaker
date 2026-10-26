@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/Graphics.tsx"
 type: "code"
-community: "Graphics.tsx"
+community: "Short.tsx"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Graphicstsx
+  - community/Shorttsx
 ---
 
 # Graphics.tsx
@@ -25,7 +25,7 @@ tags:
 - [[Pin()]] - `contains` [EXTRACTED]
 - [[Short.tsx]] - `imports_from` [EXTRACTED]
 - [[SubscribeCta()]] - `contains` [EXTRACTED]
-- [[clamp_3]] - `contains` [EXTRACTED]
+- [[clamp_8]] - `contains` [EXTRACTED]
 - [[kit.ts]] - `re_exports` [EXTRACTED]
 - [[moveIn()]] - `contains` [EXTRACTED]
 - [[outline()]] - `contains` [EXTRACTED]
@@ -34,4 +34,4 @@ tags:
 - [[theme]] - `contains` [EXTRACTED]
 - [[useWindow()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Graphicstsx
+#graphify/code #graphify/EXTRACTED #community/Shorttsx

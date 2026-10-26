@@ -1,17 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "re"
+community: "use_picture_from"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/re
+  - community/use_picture_from
 ---
 
 # Path
 
 ## Connections
-- [[log_short()]] - `references` [EXTRACTED]
-- [[vault_page()]] - `references` [EXTRACTED]
+- [[use_picture_from()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/re
+#graphify/code #graphify/EXTRACTED #community/use_picture_from

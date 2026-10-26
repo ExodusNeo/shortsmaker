@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "__init__.py"
+community: "subprocess"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/__init__py
+  - community/subprocess
 ---
 
 # sys
@@ -41,4 +41,4 @@ tags:
 - [[test_story.py]] - `imports` [EXTRACTED]
 - [[test_style.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/__init__py
+#graphify/concept #graphify/EXTRACTED #community/subprocess

@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "Invented Look Canvas Effects"
+community: "kit.ts"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Invented_Look_Canvas_Effects
+  - community/kitts
 ---
 
 # remotion_src_style_kit_img
@@ -18,4 +18,4 @@ tags:
 - [[Riso.tsx]] - `imports` [EXTRACTED]
 - [[Silent.tsx]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Invented_Look_Canvas_Effects
+#graphify/concept #graphify/EXTRACTED #community/kitts

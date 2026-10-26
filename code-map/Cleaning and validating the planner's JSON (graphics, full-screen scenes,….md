@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/plan_rules.py"
 type: "rationale"
-community: "gpu.py"
+community: "re"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/gpupy
+  - community/re
 ---
 
 # Cleaning and validating the planner's JSON (graphics, full-screen scenes,…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[plan_rules.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/gpupy
+#graphify/rationale #graphify/EXTRACTED #community/re

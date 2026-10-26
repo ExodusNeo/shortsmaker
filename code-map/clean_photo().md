@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/photo_prep.py"
 type: "code"
-community: "gpu.py"
+community: "trim_borders"
 location: "L68"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/gpupy
+  - community/trim_borders
 ---
 
 # clean_photo()
@@ -19,4 +19,4 @@ tags:
 - [[render()_1]] - `calls` [EXTRACTED]
 - [[trim_borders()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/gpupy
+#graphify/code #graphify/EXTRACTED #community/trim_borders

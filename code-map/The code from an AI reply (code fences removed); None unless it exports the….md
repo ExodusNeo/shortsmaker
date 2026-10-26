@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/style_lab.py"
 type: "rationale"
-community: "re"
+community: "style_lab.py"
 location: "L131"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/re
+  - community/style_labpy
 ---
 
 # The code from an AI reply (code fences removed); None unless it exports the…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[clean_style_code()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/re
+#graphify/rationale #graphify/EXTRACTED #community/style_labpy

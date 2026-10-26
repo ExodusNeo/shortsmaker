@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/llm.py"
 type: "code"
-community: "__init__.py"
+community: "re"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/__init__py
+  - community/re
 ---
 
 # llm.py
@@ -52,4 +52,4 @@ tags:
 - [[time]] - `imports` [EXTRACTED]
 - [[writing.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/__init__py
+#graphify/code #graphify/EXTRACTED #community/re

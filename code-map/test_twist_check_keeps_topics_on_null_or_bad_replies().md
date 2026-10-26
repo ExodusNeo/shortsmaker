@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_story.py"
 type: "code"
-community: "test_story.py"
+community: "ask_ai"
 location: "L123"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_storypy
+  - community/ask_ai
 ---
 
 # test_twist_check_keeps_topics_on_null_or_bad_replies()
@@ -16,4 +16,4 @@ tags:
 - [[test_story.py]] - `contains` [EXTRACTED]
 - [[twist_short()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_storypy
+#graphify/code #graphify/EXTRACTED #community/ask_ai

@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "test_rules.py"
+community: "ask_ai"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_rulespy
+  - community/ask_ai
 ---
 
 # Path
 
 ## Connections
-- [[draft_rules()]] - `references` [EXTRACTED]
+- [[ask_ai()]] - `references` [EXTRACTED]
+- [[run_agy()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_rulespy
+#graphify/code #graphify/EXTRACTED #community/ask_ai

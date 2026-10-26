@@ -1,16 +1,18 @@
 ---
 type: community
-members: 17
+members: 19
 ---
 
 # test_first_second.py
 
-**Members:** 17 nodes
+**Members:** 19 nodes
 
 ## Members
 - [[Scenes i and k trade their real photosfilms (paintings and motion graphics are…]] - rationale - shortsmaker/review.py
 - [[Tests for the first-second check (would a scroller stop) and the honest…]] - rationale - tests/test_first_second.py
+- [[Would a stranger scrolling the Shorts feed stop here Stayed-to-watch is…]] - rationale - shortsmaker/review.py
 - [[first_second_check with ffmpeg and the AI faked; returns its result.]] - rationale - tests/test_first_second.py
+- [[first_second_check()]] - code - shortsmaker/review.py
 - [[real()]] - code - tests/test_first_second.py
 - [[run_check()]] - code - tests/test_first_second.py
 - [[state()]] - code - tests/test_first_second.py
@@ -34,18 +36,23 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 6 edges to [[_COMMUNITY___init__.py]]
-- 3 edges to [[_COMMUNITY_test_full_scenes.py]]
+- 7 edges to [[_COMMUNITY_re]]
+- 4 edges to [[_COMMUNITY_json]]
+- 3 edges to [[_COMMUNITY_subprocess]]
+- 2 edges to [[_COMMUNITY_visual_review]]
 - 2 edges to [[_COMMUNITY_apply_review_fixes]]
-- 2 edges to [[_COMMUNITY_gpu.py]]
-- 2 edges to [[_COMMUNITY_fix_short]]
-- 2 edges to [[_COMMUNITY_subprocess]]
-- 1 edge to [[_COMMUNITY_json]]
-- 1 edge to [[_COMMUNITY_visual_review]]
+- 1 edge to [[_COMMUNITY_prepare_topic]]
+- 1 edge to [[_COMMUNITY_ask_ai]]
+- 1 edge to [[_COMMUNITY_render]]
+- 1 edge to [[_COMMUNITY_style_lab.py]]
+- 1 edge to [[_COMMUNITY_test_h3_handoff.py]]
+- 1 edge to [[_COMMUNITY_clean_graphic]]
+- 1 edge to [[_COMMUNITY_capture_prompts]]
+- 1 edge to [[_COMMUNITY_logbook_results]]
+- 1 edge to [[_COMMUNITY_test_full_scenes.py]]
 
 ## Top bridge nodes
+- [[first_second_check()]] - degree 13, connects to 10 communities
 - [[test_first_second.py]] - degree 27, connects to 6 communities
 - [[swap_pictures()]] - degree 6, connects to 2 communities
-- [[run_check()]] - degree 7, connects to 1 community
 - [[test_opener_fix_swaps_once()]] - degree 4, connects to 1 community
-- [[test_opener_prompt_shows_each_scenes_line_and_picture()]] - degree 3, connects to 1 community

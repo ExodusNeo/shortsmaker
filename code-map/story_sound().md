@@ -12,7 +12,7 @@ tags:
 # story_sound()
 
 ## Connections
-- [[Path_8]] - `references` [EXTRACTED]
+- [[Path_9]] - `references` [EXTRACTED]
 - [[The sound file for a story sound the owner's own file in…]] - `rationale_for` [EXTRACTED]
 - [[audio_mix.py]] - `contains` [EXTRACTED]
 - [[ffmpeg()]] - `calls` [EXTRACTED]

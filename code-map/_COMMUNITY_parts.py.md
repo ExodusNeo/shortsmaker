@@ -1,11 +1,11 @@
 ---
 type: community
-members: 34
+members: 32
 ---
 
 # parts.py
 
-**Members:** 34 nodes
+**Members:** 32 nodes
 
 ## Members
 - [[A flat (emission-only) material in one of COLORS, made once.]] - rationale - blender/look.py
@@ -17,7 +17,6 @@ members: 34
 - [[The fasteners on a plate's outer face a grid of rivet heads or bolt heads, one…]] - rationale - blender/parts.py
 - [[The parts kit every piece a bridge is drawn from. Boxes and cylinders share…]] - rationale - blender/parts.py
 - [[Vector]] - code
-- [[What the plan says was on the bridge rails on a rail deck, cars or a train for…]] - rationale - blender/templates.py
 - [[_mesh()]] - code - blender/parts.py
 - [[_obj()]] - code - blender/parts.py
 - [[bbox_size()]] - code - blender/parts.py
@@ -25,7 +24,6 @@ members: 34
 - [[car()]] - code - blender/parts.py
 - [[cylinder()]] - code - blender/parts.py
 - [[deck()]] - code - blender/parts.py
-- [[dress()]] - code - blender/templates.py
 - [[eyebar()]] - code - blender/parts.py
 - [[fastener()]] - code - blender/parts.py
 - [[gusset_plate()]] - code - blender/parts.py
@@ -52,14 +50,13 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 19 edges to [[_COMMUNITY_templates.py]]
-- 4 edges to [[_COMMUNITY_main]]
-- 4 edges to [[_COMMUNITY_build_scene.py]]
+- 6 edges to [[_COMMUNITY_build_scene.py]]
+- 3 edges to [[_COMMUNITY_main]]
 - 3 edges to [[_COMMUNITY_Blender Ink Look]]
-- 2 edges to [[_COMMUNITY_math]]
 
 ## Top bridge nodes
-- [[parts.py]] - degree 30, connects to 4 communities
-- [[dress()]] - degree 10, connects to 2 communities
+- [[parts.py]] - degree 30, connects to 3 communities
 - [[material()]] - degree 7, connects to 2 communities
 - [[member()]] - degree 12, connects to 1 community
 - [[cylinder()]] - degree 8, connects to 1 community
+- [[label()]] - degree 8, connects to 1 community

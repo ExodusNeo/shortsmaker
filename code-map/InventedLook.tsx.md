@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/style/generated/InventedLook.tsx"
 type: "code"
-community: "Invented Look Canvas Effects"
+community: "kit.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Invented_Look_Canvas_Effects
+  - community/kitts
 ---
 
 # InventedLook.tsx
@@ -20,4 +20,4 @@ tags:
 - [[styleindex.ts]] - `imports_from` [EXTRACTED]
 - [[styletypes.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Invented_Look_Canvas_Effects
+#graphify/code #graphify/EXTRACTED #community/kitts

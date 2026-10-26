@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/gpu.py"
 type: "rationale"
-community: "AI Clip Prompts and Cuts"
+community: "test_h3_handoff.py"
 location: "L524"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/AI_Clip_Prompts_and_Cuts
+  - community/test_h3_handoffpy
 ---
 
 # The owner's clip `src` cut to scene i's length: fills the vertical frame, drops…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[cut_owner_clip()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/AI_Clip_Prompts_and_Cuts
+#graphify/rationale #graphify/EXTRACTED #community/test_h3_handoffpy

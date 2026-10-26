@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "gpu.py"
+community: "json"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/gpupy
+  - community/json
 ---
 
 # urllib_error
@@ -15,4 +15,4 @@ tags:
 - [[h3_run.py]] - `imports` [EXTRACTED]
 - [[image_sources.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/gpupy
+#graphify/concept #graphify/EXTRACTED #community/json

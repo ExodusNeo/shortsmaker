@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/media_tools.py"
 type: "code"
-community: "AI Clip Prompts and Cuts"
+community: "test_h3_handoff.py"
 location: "L30"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AI_Clip_Prompts_and_Cuts
+  - community/test_h3_handoffpy
 ---
 
 # video_encoder()
@@ -21,4 +21,4 @@ tags:
 - [[subprocess]] - `calls` [EXTRACTED]
 - [[test_encoder_cache_lives_with_video_encoder()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AI_Clip_Prompts_and_Cuts
+#graphify/code #graphify/EXTRACTED #community/test_h3_handoffpy

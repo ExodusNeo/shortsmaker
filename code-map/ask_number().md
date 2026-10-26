@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/channel_profiles.py"
 type: "code"
-community: "__init__.py"
+community: "ask_brain"
 location: "L56"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/__init__py
+  - community/ask_brain
 ---
 
 # ask_number()
@@ -18,4 +18,4 @@ tags:
 - [[fix_short()]] - `calls` [EXTRACTED]
 - [[library_menu()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/__init__py
+#graphify/code #graphify/EXTRACTED #community/ask_brain

@@ -1,12 +1,12 @@
 ---
 source_file: "blender/templates.py"
 type: "code"
-community: "parts.py"
+community: "templates.py"
 location: "L238"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/partspy
+  - community/templatespy
 ---
 
 # dress()
@@ -23,4 +23,4 @@ tags:
 - [[templates.py]] - `contains` [EXTRACTED]
 - [[train()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/partspy
+#graphify/code #graphify/EXTRACTED #community/templatespy

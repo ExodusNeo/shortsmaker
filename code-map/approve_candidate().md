@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[Adds a candidate to the library (component file, library.json entry,…]] - `rationale_for` [EXTRACTED]
-- [[Path_17]] - `references` [EXTRACTED]
+- [[Path_18]] - `references` [EXTRACTED]
 - [[json]] - `calls` [EXTRACTED]
 - [[library_menu()]] - `calls` [EXTRACTED]
 - [[shutil]] - `calls` [EXTRACTED]

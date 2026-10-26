@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_rules.py"
 type: "code"
-community: "test_rules.py"
-location: "L125"
+community: "make"
+location: "L126"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_rulespy
+  - community/make
 ---
 
 # stop_text()
@@ -21,7 +21,8 @@ tags:
 - [[test_empty_heading_stops()]] - `calls` [EXTRACTED]
 - [[test_missing_heading_stops()]] - `calls` [EXTRACTED]
 - [[test_odd_min_pictures_stop_cleanly()]] - `calls` [EXTRACTED]
+- [[test_opening_picture_needs_its_fields()]] - `calls` [EXTRACTED]
 - [[test_rules.py]] - `contains` [EXTRACTED]
 - [[test_unknown_visuals_stop()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_rulespy
+#graphify/code #graphify/EXTRACTED #community/make

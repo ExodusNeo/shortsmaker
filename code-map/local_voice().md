@@ -1,18 +1,18 @@
 ---
 source_file: "shortsmaker/gpu.py"
 type: "code"
-community: "ffmpeg"
+community: "local_voice"
 location: "L176"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ffmpeg
+  - community/local_voice
 ---
 
 # local_voice()
 
 ## Connections
-- [[Path_18]] - `references` [EXTRACTED]
+- [[Path_26]] - `references` [EXTRACTED]
 - [[Voice every scene on the GPU CosyVoice (aiden, documentary) for the whole…]] - `rationale_for` [EXTRACTED]
 - [[gpu.py]] - `contains` [EXTRACTED]
 - [[is_loop_short()]] - `calls` [EXTRACTED]
@@ -25,4 +25,4 @@ tags:
 - [[voicestudio_unload()]] - `calls` [EXTRACTED]
 - [[voicestudio_up()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ffmpeg
+#graphify/code #graphify/EXTRACTED #community/local_voice

@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/Short.tsx"
 type: "code"
-community: "Graphics.tsx"
+community: "Short.tsx"
 location: "L15"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Graphicstsx
+  - community/Shorttsx
 ---
 
 # Graphic
@@ -19,4 +19,4 @@ tags:
 - [[Short.tsx]] - `contains` [EXTRACTED]
 - [[styletypes.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Graphicstsx
+#graphify/code #graphify/EXTRACTED #community/Shorttsx

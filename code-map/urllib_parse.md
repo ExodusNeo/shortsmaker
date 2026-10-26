@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "gpu.py"
+community: "json"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/gpupy
+  - community/json
 ---
 
 # urllib_parse
@@ -18,4 +18,4 @@ tags:
 - [[seo.py]] - `imports` [EXTRACTED]
 - [[writing.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/gpupy
+#graphify/concept #graphify/EXTRACTED #community/json

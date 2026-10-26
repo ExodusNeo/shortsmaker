@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "patching.py"
+community: "subprocess"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/patchingpy
+  - community/subprocess
 ---
 
 # pkgutil
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[patching.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/patchingpy
+#graphify/concept #graphify/EXTRACTED #community/subprocess

@@ -1,18 +1,17 @@
 ---
-source_file: "tests/test_blender_plan.py"
+source_file: "tests/test_full_scenes.py"
 type: "code"
-community: "default_build"
-location: "L87"
+community: "rewrite_paint_prompts"
+location: "L667"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/default_build
+  - community/rewrite_paint_prompts
 ---
 
 # ask()
 
 ## Connections
-- [[plan()]] - `calls` [EXTRACTED]
-- [[test_plan_builds_retries_then_defaults()]] - `indirect_call` [INFERRED]
+- [[test_look_check_fixes_code()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/default_build
+#graphify/code #graphify/EXTRACTED #community/rewrite_paint_prompts

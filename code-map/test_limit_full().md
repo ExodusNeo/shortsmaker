@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_full_scenes.py"
 type: "code"
-community: "Full Graphic Limits"
+community: "write_scripts"
 location: "L92"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Full_Graphic_Limits
+  - community/write_scripts
 ---
 
 # test_limit_full()
@@ -15,4 +15,4 @@ tags:
 - [[limit_full()]] - `calls` [EXTRACTED]
 - [[test_full_scenes.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Full_Graphic_Limits
+#graphify/code #graphify/EXTRACTED #community/write_scripts

@@ -25,13 +25,14 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 5 edges to [[_COMMUNITY_test_full_scenes.py]]
+- 4 edges to [[_COMMUNITY_re]]
 - 1 edge to [[_COMMUNITY_render]]
 - 1 edge to [[_COMMUNITY_render_remotion]]
 - 1 edge to [[_COMMUNITY_speak]]
+- 1 edge to [[_COMMUNITY_test_full_scenes.py]]
 
 ## Top bridge nodes
 - [[captions()_1]] - degree 8, connects to 3 communities
+- [[ass_colour()]] - degree 5, connects to 2 communities
 - [[caption_lines()]] - degree 4, connects to 2 communities
-- [[ass_colour()]] - degree 5, connects to 1 community
 - [[ass_time()]] - degree 2, connects to 1 community

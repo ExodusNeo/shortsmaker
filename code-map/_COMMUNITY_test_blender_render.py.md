@@ -36,23 +36,19 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 6 edges to [[_COMMUNITY_test_full_scenes.py]]
+- 6 edges to [[_COMMUNITY_re]]
+- 5 edges to [[_COMMUNITY_subprocess]]
+- 4 edges to [[_COMMUNITY_json]]
 - 3 edges to [[_COMMUNITY_drawn_thumbnail]]
-- 3 edges to [[_COMMUNITY_subprocess]]
-- 2 edges to [[_COMMUNITY_json]]
-- 2 edges to [[_COMMUNITY_ffmpeg]]
-- 2 edges to [[_COMMUNITY___init__.py]]
+- 2 edges to [[_COMMUNITY_test_blender_plan.py]]
+- 2 edges to [[_COMMUNITY_test_h3_handoff.py]]
 - 1 edge to [[_COMMUNITY_BlenderFailed]]
 - 1 edge to [[_COMMUNITY_render]]
 - 1 edge to [[_COMMUNITY_scene_cues]]
-- 1 edge to [[_COMMUNITY_gpu.py]]
-- 1 edge to [[_COMMUNITY_AI Clip Prompts and Cuts]]
-- 1 edge to [[_COMMUNITY_default_build]]
-- 1 edge to [[_COMMUNITY_blender_plan.py]]
 
 ## Top bridge nodes
-- [[render_clips()]] - degree 17, connects to 8 communities
-- [[test_blender_render.py]] - degree 20, connects to 6 communities
+- [[render_clips()]] - degree 17, connects to 6 communities
+- [[test_blender_render.py]] - degree 20, connects to 5 communities
 - [[peaks()]] - degree 5, connects to 2 communities
 - [[_run()]] - degree 5, connects to 2 communities
 - [[short()]] - degree 9, connects to 1 community
