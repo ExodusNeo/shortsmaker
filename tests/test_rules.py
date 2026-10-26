@@ -118,6 +118,7 @@ def make(**override) -> str:
     """A valid rules file; override={"Directing": None} leaves that heading out, a string replaces its text."""
     body = {h: f"{h.lower()} text" for h in rules.REQUIRED}
     body["Settings"] = "status: ready\nvisuals: photos\nmin_real_pictures: 6"
+    body["Opening picture"] = "- era_ok: fits\n- sharp: 1-3\n- hook: can open"
     body.update({k.replace("_", " "): v for k, v in override.items()})
     return "".join(f"## {h}\n{t}\n\n" for h, t in body.items() if t is not None)
 
@@ -166,6 +167,12 @@ def test_empty_heading_stops():
 
 def test_duplicate_heading_stops():
     assert stop_text(make() + "## Directing\nagain\n") == 'Stopped: channels/x.rules.md has "## Directing" twice.'
+
+
+def test_opening_picture_needs_its_fields():
+    assert stop_text(make(Opening_picture="Scene 1 must show the product.\n- sharp: 1-3")) == (
+        'Stopped: channels/x.rules.md: "## Opening picture" must define each field on a "- name:" line; '
+        'missing: era_ok, hook.')
 
 
 def test_draft_stops():
@@ -232,6 +239,8 @@ def test_min_pictures_from_settings():
 def draft_reply(missing=None, **extra):
     sections = {h: {"tag": "copied from strange-history" if h == "Story rules" else "new", "text": f"{h} for engines"}
                 for h in rules.REQUIRED if h not in ("Settings", missing)}
+    if "Opening picture" in sections:
+        sections["Opening picture"]["text"] = "- era_ok: an engine\n- sharp: 1-3\n- hook: a broken engine"
     return {"visuals": "photos", "min_real_pictures": 3, "sections": sections, **extra}
 
 

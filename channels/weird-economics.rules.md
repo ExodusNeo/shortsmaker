@@ -57,8 +57,18 @@ Pacing & Structure (35–50s Shorts, 110–135 spoken words across 11–16 scene
 Watch the first-second drop-off in YouTube Studio: if "Stayed to watch" is below 70%, Scene 1's dollar hook or opening visual was too slow. If "Average percentage viewed" is below 90%, tighten the middle math beats and verify that the circular loop ending bridges smoothly. Over 100% average percentage viewed indicates the infinite loop is succeeding.
 
 ## Opening picture
-<!-- adapted from strange-history -->
-Scene 1 must show the real product, corporate headquarters, founder, or disaster headline that anchors the story. The picture must have strong contrast, be from the story's own era, and have zero burned-in text or watermarks. It must raise the hook's financial anomaly, never give away the twist or final bankruptcy.
+<!-- adapted from strange-history: era_ok/sharp/hook lines restored 2026-10-26 (without them every hook came back false); hook favours the anomaly over exteriors -->
+- era_ok: true if it is from this story's era and place (or shows the real company, product, person or
+  document), false for a look-alike from another era or company, a modern photo for an old story, a
+  namesake, or something unrelated;
+- sharp: 1 (blurry, tiny, damaged), 2 (usable), 3 (crisp and striking);
+- hook: true only if it could open the Short: strong contrast, clearly about the story, from the story's own
+  era, no burned-in text or watermarks, and it shows the money anomaly itself: the luxury, the product, the
+  pile of goods, the crowd, the contract or the person in the middle of the deal. Never an ordinary exterior
+  of a plane, building, logo or storefront that would look the same in any story about that company (an
+  American Airlines DC-10 landing opened "lost $1 million on one passenger" and scored 5/10; the 1971
+  first-class lounge film would have shown what he was getting). It must raise a question, never give away
+  the twist or the final bankruptcy. Best: real film where something moves;
 
 ## Picture picking
 <!-- new -->
@@ -92,7 +102,7 @@ Directing Weird Economics (Motion-Graphics Heavy):
 
 ## First-second check
 <!-- adapted from strange-history -->
-Check whether another scene's picture would open better: the opening frame must showcase the core financial anomaly—a bizarre product, an exorbitant check, or a company sign—paired with the bold hook title.
+Check whether another scene's picture would open better: the opening frame must showcase the core financial anomaly—a bizarre product, an exorbitant check, the luxury or goods the money bought, or the person in the deal—paired with the bold hook title. A plain exterior of a plane, building or company sign is not the anomaly.
 
 ## AI paintings
 <!-- new -->

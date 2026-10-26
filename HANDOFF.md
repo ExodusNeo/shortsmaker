@@ -642,6 +642,10 @@ for the picture`, `Lessons from our numbers`, `Opening picture` (picture list), 
 rules file yet (a failed draft, a profile copied into `channels/` by hand) gets one drafted and the run stops for review; a
 missing/empty/repeated section, `status: draft` or a bad `min_real_pictures`
 stops the run with the file and heading named. Never a fallback to another channel's rules.
+`## Opening picture` must define `- era_ok:`, `- sharp:` and `- hook:` lines (2026-10-26): `catalog_pool()` asks for
+those fields with that text, and weird-economics' prose version made every `hook` false (1 `[opener]` in 231
+pictures over 4 Shorts; the AAirpass Short opened on a landing DC-10, first second 5/10). Its rewritten section, tried
+on that Short's real pool, tags the 1971 lounge film and the 747 first-class cabin as openers and not the plane.
 - What stays in the code, shared: lengths, scene cuts, fact rules, reply formats, `story_problems()`, the picture
   `reject:` safety list, the evidence-board/document/graphic format examples in the director prompt.
 - New profile (run.bat "+ New channel"): after the profile JSON, `rules.draft_rules()` has the AI copy the sections

@@ -46,6 +46,12 @@ def parse_rules(text: str, label: str) -> tuple[dict[str, str], dict[str, str]]:
         raise SystemExit(f'Stopped: {label}: visuals must be "photos" or "blender", not "{settings.get("visuals", "")}".')
     if not re.fullmatch(r"[0-9]+", settings.get("min_real_pictures", "")) or int(settings["min_real_pictures"]) < 1:
         raise SystemExit(f"Stopped: {label}: min_real_pictures must be a whole number above 0.")
+    # catalog_pool() asks for these fields with this section's text; without them every "hook" came back false
+    # (weird-economics 2026-10-26: 1 opener in 231 pictures, and the Short opened on a generic plane)
+    missing = [f for f in ("era_ok", "sharp", "hook") if not re.search(rf"^\s*-\s*{f}:", sections["Opening picture"], re.M)]
+    if missing:
+        raise SystemExit(f'Stopped: {label}: "## Opening picture" must define each field on a "- name:" line; '
+                         f'missing: {", ".join(missing)}.')
     return sections, settings
 
 
@@ -61,7 +67,8 @@ PURPOSE = {  # what each section is for, told to the AI that drafts a new channe
     "Story rules": "how a script is told: hook, pacing, how beats link, where the payoff goes, with an example",
     "Writing for the picture": "how the writer ties lines to what can be shown on screen",
     "Lessons from our numbers": "what the channel's own YouTube numbers taught (a new channel: what to watch for)",
-    "Opening picture": "the picture checker's rules for a picture's fit (era_ok), sharpness and whether it can open the Short",
+    "Opening picture": "the picture checker's rules as three lines \"- era_ok:\", \"- sharp:\" and \"- hook:\": a "
+                       "picture's fit, its sharpness and whether it can open the Short",
     "Picture picking": "what the visual editor wants for scene 1's picture; it follows \"Scene 1 is the hook: give it "
                        "the single most striking candidate that fits the story\"",
     "Directing": "the director's rules for picking each scene's picture, search queries and shot notes, with examples",
