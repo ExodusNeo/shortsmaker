@@ -70,7 +70,7 @@ Made: older ShortsMaker version, before the logbook (folder no longer kept) | Le
 Topic: Violet Jessop, "Miss Unsinkable": the stewardess on the Olympic collision, the Titanic and the Britannic mine | Story shape: -
 
 Posted on: 2026-10-13
-Views: 1,315
+Views: 1,317
 Likes: 21
 Comments: 1
 Subscribers gained: 3
@@ -83,7 +83,7 @@ Made: older ShortsMaker version, before the logbook (folder no longer kept) | Le
 Topic: Lord Byron kept a tame bear at Trinity College, Cambridge in 1807 because the rules only banned dogs | Story shape: -
 
 Posted on: 2026-10-14
-Views: 1,294
+Views: 1,296
 Likes: 10
 Comments: 1
 Subscribers gained: 0
@@ -110,7 +110,7 @@ Topic: The Great Stink of 1858: London's sewage-filled Thames smelled so bad tha
 Hook line: "Parliament considered fleeing London over one smell." | Hook title: SO BAD THEY ALMOST LEFT
 
 Posted on: 2026-10-15
-Views: 344
+Views: 345
 Likes: 7
 Comments: 1
 Subscribers gained: 2
@@ -180,12 +180,12 @@ Topic: Jack the baboon, who worked as a railway signalman in South Africa in the
 Hook line: "A railway once hired a baboon." | Hook title: PAID IN BEER
 
 Posted on: 2026-10-17
-Views: 1,354
+Views: 1,353
 Likes: 15
 Comments: 0
 Subscribers gained: 3
-Stayed to watch (%): 28.6
-Average % viewed: 43.3
+Stayed to watch (%): 28.5
+Average % viewed: 43.4
 My notes: Read from YouTube Studio by Claude on 2026-10-19. Avg view time 0:16 of 0:37. 160 views in the last 48h (slowing). Shorts feed 89.4%, search 10.0%. Likes went 16 -> 15.
 
 ## Was Unsinkable Sam the Cat Real? The WW2 Mystery
@@ -208,11 +208,11 @@ Topic: The 1932 Great Emu War: Australia sent soldiers with machine guns to driv
 Hook line: "Australia's army once lost a war to birds." | Hook title: SOLDIERS RETREATED
 
 Posted on: 2026-10-18
-Views: 975
+Views: 976
 Likes: 13
 Comments: 0
 Subscribers gained: 0
-Stayed to watch (%): 33.7
+Stayed to watch (%): 33.6
 Average % viewed: 44.2
 My notes: Read from YouTube Studio by Claude on 2026-10-20. Avg view time 0:17 of 0:41. 923 of its views came in the first 5 hours, then it slowed (18 more in a day). Shorts feed 96.8%, search 2.8%. Studio: a part kept viewers watching longer than usual.
 
@@ -264,7 +264,7 @@ Topic: The Ghost Army of WWII: about 1,100 American artists, designers and sound
 Hook line: "Germany feared an army that didn't exist." | Hook title: FAKE GHOST DIVISIONS
 
 Posted on: 2026-10-19
-Views: 34
+Views: 35
 Likes: 2
 Comments: 0
 Subscribers gained: 0
@@ -278,11 +278,11 @@ Topic: Hiroo Onoda, a Japanese intelligence officer, kept hiding in the jungle o
 Hook line: "This soldier's World War Two lasted until 1974." | Hook title: STILL FIGHTING DECADES LATER?
 
 Posted on: 2026-10-19
-Views: 1,217
+Views: 1,222
 Likes: 11
 Comments: 0
 Subscribers gained: 3
-Stayed to watch (%): 44.5
+Stayed to watch (%): 44.4
 Average % viewed: 47.4
 My notes: Read from YouTube Studio by Claude on 2026-10-20. Its feed push took it from 317 to 1,207 views in its first day; +3 subscribers, the most of any Short so far. Shorts feed 97.1%, search 2.2%.
 
@@ -306,12 +306,12 @@ Topic: Wojtek, a Syrian brown bear cub adopted by Polish soldiers in 1942, grew 
 Hook line: "One ship rule forced this bear to enlist." | Hook title: WHY MAKE HIM A PRIVATE?
 
 Posted on: 2026-10-20
-Views: 358
-Likes: 5
+Views: 468
+Likes: 9
 Comments: 0
-Subscribers gained:
-Stayed to watch (%): 40.7
-Average % viewed: 59.8
+Subscribers gained: 0
+Stayed to watch (%): 39.2
+Average % viewed: 149.1
 My notes: Read from YouTube Studio by Claude on 2026-10-21. Numbers cover its first day (Studio's table runs through Oct 20); subscribers not reported yet.
 
 ## Mike the Headless Chicken Died of This, Not the Axe
@@ -320,12 +320,12 @@ Topic: In September 1945 Colorado farmer Lloyd Olsen chopped the head off a chic
 Hook line: "This chicken lived 18 months without a head." | Hook title: HOW IS HE ALIVE?
 
 Posted on: 2026-10-21
-Views: 1,178
-Likes: 28
+Views: 1,388
+Likes: 30
 Comments: 0
-Subscribers gained: 3
-Stayed to watch (%):
-Average % viewed: 51.7
+Subscribers gained: 4
+Stayed to watch (%): 53.6
+Average % viewed: 51.2
 My notes: Read from YouTube Studio by Claude on 2026-10-21, its first day: 1,178 views and +3 subscribers; average % viewed is from the first 4 hours; stayed-to-watch still processing.
 
 ## Togo vs Balto: 261 Miles vs Only 55
@@ -333,42 +333,42 @@ Made: 2026-10-22 | Written by: Claude | Length: 0:49.2 | Folder: output\strange-
 Topic: In the 1925 diphtheria outbreak in Nome, Alaska, sled dogs relayed antitoxin serum across about 674 miles of frozen wilderness. Togo, a small 12-year-old husky led by musher Leonhard Seppala, ran the longest and most dangerous leg, about 260 miles there and back, including a crossing of breaking sea ice on Norton Sound in a blizzard. The twist is that the dog who ran the final 55 miles, Balto, got the fame and the statue in New York's Central Park. Balto later ended up in a cheap sideshow until Cleveland schoolchildren raised money to rescue him. | Story shape: myth vs truth
 Hook line: "History gave this dog's glory to another dog." | Hook title: WHO STOLE HIS FAME?
 
-Posted on:
-Views:
-Likes:
-Comments:
-Subscribers gained:
-Stayed to watch (%):
-Average % viewed:
-My notes:
+Posted on: 2026-10-22
+Views: 1,358
+Likes: 13
+Comments: 1
+Subscribers gained: 1
+Stayed to watch (%): 45.3
+Average % viewed: 42.2
+My notes: Read from YouTube Studio by Claude on 2026-10-27 (lifetime table).
 
 ## The Spy Who Fooled Hitler Was a Chicken Farmer
 Made: 2026-10-22 | Written by: Claude | Length: 0:44.6 | Folder: output\strange-history\2026-10-22_the-spy-who-fooled-hitler-was-a-chicken-farmer
 Topic: Juan Pujol García, a Spanish chicken farmer, was turned down by British intelligence, so he became a German spy instead and sent Berlin 'reports from London' that he made up in Lisbon from guidebooks and newsreels, inventing a network of 27 fake agents. Britain then hired him, and his lies helped convince Germany that D-Day in Normandy was only a decoy. The twist is that he was awarded both the German Iron Cross and the British MBE, then faked his own death in Africa and vanished to Venezuela until a historian tracked him down in 1984. | Story shape: one person against the odds
 Hook line: "Germany's star London spy sat in Lisbon," | Hook title: FAKED LONDON FROM LISBON
 
-Posted on:
-Views:
-Likes:
-Comments:
-Subscribers gained:
-Stayed to watch (%):
-Average % viewed:
-My notes:
+Posted on: 2026-10-23
+Views: 301
+Likes: 2
+Comments: 0
+Subscribers gained: 0
+Stayed to watch (%): 27.7
+Average % viewed: 88.2
+My notes: Read from YouTube Studio by Claude on 2026-10-27 (lifetime table).
 
 ## How Virginia Woolf Pranked a Battleship and Her Cousin
 Made: 2026-10-23 | Written by: Gemini | Length: 0:51.5 | Folder: output\strange-history\2026-10-23_how-virginia-woolf-pranked-a-battleship-and-her-co
 Topic: In 1910, British prankster Horace de Vere Cole sent a fake telegram that tricked the Royal Navy into rolling out a red carpet on its top-secret flagship, HMS Dreadnought, for the 'Emperor of Abyssinia'—actually Cole and five friends, including a young Virginia Woolf, in robes and glued-on beards shouting 'Bunga! Bunga!' at the guns while Woolf's own cousin gave them the tour without recognizing her. The twist is that when Cole exposed the stunt in the press, the furious Navy found he had broken no law, and when the real Ethiopian ruler visited England later, crowds yelled 'Bunga! Bunga!' at his carriage and he asked to inspect the Navy's ships too. | Story shape: chain of unlikely events
 Hook line: "Navy officers saluted royal visitors whose beards were glued on." | Hook title: WHO ARE THEY REALLY?
 
-Posted on:
-Views:
-Likes:
-Comments:
-Subscribers gained:
-Stayed to watch (%):
-Average % viewed:
-My notes:
+Posted on: 2026-10-23
+Views: 152
+Likes: 1
+Comments: 1
+Subscribers gained: 0
+Stayed to watch (%): 44.1
+Average % viewed: 42.7
+My notes: Read from YouTube Studio by Claude on 2026-10-27 (lifetime table).
 
 ## Douglas Bader: The Daring WW2 Breakout
 Made: 2026-10-24 | Written by: Gemini (solo) | Length: 0:40.7 | Folder: output\strange-history\2026-10-24_douglas-bader-the-daring-ww2-breakout
@@ -389,11 +389,25 @@ Made: 2026-10-26 | Written by: Gemini (solo) | Length: 0:39.9 | Folder: output\s
 Topic: While confined in an asylum, former army surgeon William Chester Minor volunteered for the new Oxford English Dictionary and sent in over ten thousand historical citations, becoming the project's single most prolific contributor. The twist is that editor James Murray spent twenty years believing Minor was a wealthy gentleman scholar, only to discover upon visiting in person that his greatest researcher was an inmate in Broadmoor Criminal Lunatic Asylum. | Story shape: mystery solved
 Hook line: "He mailed ten thousand letters to Oxford from one room." | Hook title: WHO SENT THEM?
 
-Posted on:
-Views:
+Posted on: 2026-10-26
+Views: 114
+Likes: 2
+Comments: 1
+Subscribers gained: 1
+Stayed to watch (%): 53.0
+Average % viewed: 55.9
+My notes: Read from YouTube Studio by Claude on 2026-10-27; Studio's table runs a day behind (content list already shows 123 views).
+
+## Why a WW2 Officer Carried an Umbrella
+Made: 2026-10-26 | Written by: Gemini (solo) | Length: 0:36.1 | Folder: output\strange-history\2026-10-26_why-a-ww2-officer-carried-an-umbrella
+Topic: In 1944 at the Battle of Arnhem, British paratrooper Major Digby Tatham-Warter led his men into combat carrying a bowler hat and an umbrella because he could never remember passwords and claimed only an Englishman would bring an umbrella to a war. The twist is that after disabling a German armored car by jamming his umbrella through the driver's slit, he deadpanned that he only brought it because the weather forecast called for rain. | Story shape: one person against the odds
+Hook line: "A British officer charged an armored car holding an umbrella." | Hook title: HE FOUGHT WITH WHAT?
+
+Posted on: 2026-10-26
+Views: 519
 Likes:
-Comments:
-Subscribers gained:
+Comments: 0
+Subscribers gained: 1
 Stayed to watch (%):
 Average % viewed:
-My notes:
+My notes: Read from YouTube Studio by Claude on 2026-10-27, its first day: 519 views, +1 subscriber, Shorts feed 83.3%. Likes, stayed-to-watch and average % viewed not reported yet.
