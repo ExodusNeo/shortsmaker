@@ -82,6 +82,7 @@ def test_no_hook_setting_no_hook_check():
 
 def test_rules_accept_opener_setting():
     text = (Path(__file__).resolve().parents[1] / "channels" / "strange-history.rules.md").read_text(encoding="utf-8")
+    text = "\n".join(t for t in text.split("\n") if not t.startswith(("opener:", "hook:")))  # the file's own values
     base = text.replace("status: ready", "status: ready\nopener: blender\nhook: moment", 1)
     _, settings = rules.parse_rules(base, "test")
     assert settings["opener"] == "blender" and settings["hook"] == "moment"
