@@ -113,27 +113,27 @@ results["face_edge_on"] = oc.blade_face(blade, camera((5, 0, 0.2), (0, 0, 0)), 1
 # cut result: piece shares, piece count, piece size
 sc = fresh()
 whole = cube("whole", (0, 0, 0), dims=(1, 1, 1))
-target_volume = oc.volume(whole)
+target_area = oc.area(whole)  # 6 m2
 half = cube("half", (5, 0, 0), dims=(1, 1, 0.5))
 half["piece"] = "head"
 rest = cube("rest", (8, 0, 0), dims=(1, 1, 0.5))
 rest["piece"] = "rest"
 expect = [{"piece": "head", "share": 0.15, "then": "fly_off"}, {"piece": "rest", "then": "stay"}]
-results["cut_half"] = oc.cut_result([half, rest], target_volume, expect)
-small = cube("smallhead", (11, 0, 0), dims=(1, 1, 0.15))
+results["cut_half"] = oc.cut_result([half, rest], target_area, expect)
+small = cube("smallhead", (11, 0, 0), dims=(0.387, 0.387, 0.387))  # 0.9 m2 = 0.15
 small["piece"] = "head"
 rest2 = cube("rest2", (14, 0, 0), dims=(1, 1, 0.85))
 rest2["piece"] = "rest"
-results["cut_ok"] = oc.cut_result([small, rest2], target_volume, expect)
+results["cut_ok"] = oc.cut_result([small, rest2], target_area, expect)
 bits = []
 for i in range(81):
     o = cube(f"bit{i}", (i * 0.2, 5, 0), size=0.05)
     o["piece"] = "bit"
     bits.append(o)
-results["cut_too_many"] = oc.cut_result(bits, target_volume, [{"pieces": "40-81", "then": "scatter"}])
+results["cut_too_many"] = oc.cut_result(bits, target_area, [{"pieces": "40-81", "then": "scatter"}])
 crumb = cube("crumb", (0, 9, 0), size=0.002)
 crumb["piece"] = "bit"
-results["cut_crumb"] = oc.cut_result(bits[:50] + [crumb], target_volume, [{"pieces": "40-60", "then": "scatter"}])
-results["cut_bits_ok"] = oc.cut_result(bits[:50], target_volume, [{"pieces": "40-60", "then": "scatter"}])
+results["cut_crumb"] = oc.cut_result(bits[:50] + [crumb], target_area, [{"pieces": "40-60", "then": "scatter"}])
+results["cut_bits_ok"] = oc.cut_result(bits[:50], target_area, [{"pieces": "40-60", "then": "scatter"}])
 
 out.write_text(json.dumps(results, indent=1), encoding="utf-8")

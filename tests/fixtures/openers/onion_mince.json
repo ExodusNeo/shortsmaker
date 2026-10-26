@@ -1,0 +1,21 @@
+{
+  "plan": {
+    "buildable": true,
+    "moment": "a knife minces an onion on a board",
+    "set": {"ground": "table", "backdrop": [], "light": "day"},
+    "actors": [
+      {"id": "board", "find": "cutting board", "size_m": 0.45},
+      {"id": "onion", "find": "onion", "size_m": 0.09, "on": "board"},
+      {"id": "knife", "find": "kitchen knife", "size_m": 0.3}
+    ],
+    "beats": [
+      {"move": "cut", "tool": "knife", "target": "onion", "at": 0.4,
+       "strokes": [{"mince": 50}],
+       "expect": [{"pieces": "40-60", "then": "scatter"}], "ends": {"on": "board"}}
+    ],
+    "camera": {"angle": "three_quarter", "follow": "onion"}
+  },
+  "models": {"board": "polypizza_Qa4RwW7AxQ.blend", "onion": "polypizza_Q27Be6XKkb.blend",
+             "knife": "polypizza_PUyMKMGnCN.blend"},
+  "seconds": 3.0
+}

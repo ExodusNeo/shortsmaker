@@ -5,7 +5,6 @@ failure strings ("overlap: axe/rooster frames 21-23"); an empty list means it pa
 
 import math
 
-import bmesh
 import bpy
 from bpy_extras.object_utils import world_to_camera_view
 from mathutils import Vector
@@ -74,9 +73,12 @@ def overlaps(objs, frames, allowed: dict) -> list[str]:
 
 
 def resting(pairs, frames, tol: float = 0.01) -> list[str]:
-    """Each object touches what it rests on, within tol: no floating above it, no sinking into it."""
+    """Each object touches what it rests on, within tol: no floating above it, no sinking into it. The support may
+    come with others it may also lie on ((obj, support, [also, ...])): a mince bit on top of another bit is resting."""
     out = []
-    for o, support in pairs:
+    for pair in pairs:
+        o, support = pair[0], pair[1]
+        also = list(pair[2]) if len(pair) > 2 else []
         floating, sinking = [], []
         for f in frames:
             dg = at(f)
@@ -88,8 +90,12 @@ def resting(pairs, frames, tol: float = 0.01) -> list[str]:
                 if hit[0] is not None and hit[0].z - low > tol:
                     sinking.append(f)
                 continue
-            near = [ts.find_nearest(v)[0] for v in vs]
-            if min((p - v).length for p, v in zip(near, vs) if p is not None) > tol:
+            gaps = []
+            for s in [support] + [a for a in also if a is not o and visible(a)]:
+                t = tree(s, dg)
+                near = [t.find_nearest(v)[0] for v in vs]
+                gaps.append(min((p - v).length for p, v in zip(near, vs) if p is not None))
+            if min(gaps) > tol:
                 floating.append(f)
         if floating:
             out.append(f"resting: {o.name} floats above {support.name} on frames {spans(floating)}")
@@ -164,23 +170,26 @@ def blade_face(tool, cam, frame: int, min_deg: float = 35) -> list[str]:
         if off < min_deg else []
 
 
-def volume(o) -> float:
-    """The volume of the object's convex hull (works for open low-poly meshes too)."""
-    bm = bmesh.new()
-    for v in world_verts(o):
-        bm.verts.new(v)
-    if len(bm.verts) < 4:
-        bm.free()
-        return 0.0
-    bmesh.ops.convex_hull(bm, input=bm.verts)
-    vol = bm.calc_volume()
-    bm.free()
-    return abs(vol)
+def area(o) -> float:
+    """How much of a model there is, as its surface area without the filled cut faces (materials named "cut_..."):
+    the owner-approved chicken cut is 12% by area but 5% by hull volume, which a long tail inflates (2026-10-27)."""
+    dg = bpy.context.evaluated_depsgraph_get()
+    ev = o.evaluated_get(dg)
+    me = ev.to_mesh()
+    cut = {i for i, m in enumerate(me.materials) if m and m.name.startswith("cut_")}
+    m = ev.matrix_world
+    total = 0.0
+    for p in me.polygons:
+        if p.material_index not in cut:
+            vs = [m @ me.vertices[i].co for i in p.vertices]
+            total += sum(((vs[0] - vs[k]).cross(vs[0] - vs[k + 1])).length / 2 for k in range(1, len(vs) - 1))
+    ev.to_mesh_clear()
+    return total
 
 
-def cut_result(pieces, target_volume: float, expect: list[dict]) -> list[str]:
-    """The pieces match what the plan expected: named shares within ±50%, counts within range, every piece at least
-    3 mm, at most 80 pieces. Each piece object carries its expect name in o["piece"]."""
+def cut_result(pieces, target_area: float, expect: list[dict]) -> list[str]:
+    """The pieces match what the plan expected: named shares (by area()) within ±50%, counts within range, every
+    piece at least 3 mm, at most 80 pieces. Each piece object carries its expect name in o["piece"]."""
     out = []
     if len(pieces) > MAX_PIECES:
         out.append(f"cut: {len(pieces)} pieces, at most {MAX_PIECES}")
@@ -190,7 +199,7 @@ def cut_result(pieces, target_volume: float, expect: list[dict]) -> list[str]:
     named = {e["piece"] for e in expect if "piece" in e}
     for e in expect:
         if "share" in e:
-            got = sum(volume(o) for o in pieces if o.get("piece") == e["piece"]) / max(target_volume, 1e-9)
+            got = sum(area(o) for o in pieces if o.get("piece") == e["piece"]) / max(target_area, 1e-9)
             lo, hi = e["share"] * (1 - SHARE_TOLERANCE), e["share"] * (1 + SHARE_TOLERANCE)
             if not lo <= got <= hi:
                 out.append(f"cut: {e['piece']} is {got:.2f} of the target, planned {e['share']:.2f}")
