@@ -319,6 +319,26 @@ def test_solo_ask_ai_never_falls_back():
         subprocess.run, llm.run_agy, session.BRAIN, session.SOLO, session.NO_QUOTA, shutil.which = old_run, old_agy, old_brain, old_solo, old_no_quota, shutil_which
 
 
+def test_solo_ask_ai_hands_over_when_out_of_credits():
+    import subprocess
+    old_run, old_agy, old_brain, old_solo, old_no_quota = subprocess.run, llm.run_agy, session.BRAIN, session.SOLO, set(session.NO_QUOTA)
+    claude_called, gemini_called = [], []
+    subprocess.run = lambda cmd, **kw: claude_called.append(cmd) or type("R", (), {"stdout": "", "stderr": "You've hit your limit"})()
+    llm.run_agy = lambda prompt, folder, timeout=900, model=None: gemini_called.append(prompt) or '{"ok": 1}'
+    shutil_which = shutil.which
+    shutil.which = lambda name: name
+    try:
+        # Solo Claude out of credits: Gemini answers and carries on solo for the rest of the run
+        session.BRAIN, session.SOLO, session.NO_QUOTA = "claude", True, set()
+        assert llm.ask_ai("test prompt", fatal=False) == {"ok": 1}
+        assert len(claude_called) == 1 and len(gemini_called) == 1
+        assert session.BRAIN == "gemini" and session.SOLO
+        llm.ask_ai("next step", fatal=False)
+        assert len(claude_called) == 1, "the empty account must not be asked again"
+    finally:
+        subprocess.run, llm.run_agy, session.BRAIN, session.SOLO, session.NO_QUOTA, shutil.which = old_run, old_agy, old_brain, old_solo, old_no_quota, shutil_which
+
+
 
 
 

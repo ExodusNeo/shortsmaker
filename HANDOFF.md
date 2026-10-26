@@ -726,7 +726,7 @@ Owner: selecting the AI should offer an option where only one AI does the entire
   - `5) Both, to compare`: Generates each topic twice (once with Claude, once with Gemini) for side-by-side comparison.
 - **Solo enforcement across pipeline**:
   - `edit_scripts` (`shortsmaker/writing.py`): In solo mode, `editor = session.BRAIN`. The prompt informs the model that it drafted the scripts and is now critiquing and refining its own work.
-  - `ask_ai` (`shortsmaker/llm.py`): In solo mode (`session.SOLO=True`), `order = [first]`. If the model fails or runs out of quota, it does not secretly fall back to the other AI.
+  - `ask_ai` (`shortsmaker/llm.py`): In solo mode (`session.SOLO=True`), a bad or broken answer is retried by the same AI, never handed to the other. Only running out of credits/quota hands over (owner, 2026-10-27): the other AI becomes `session.BRAIN` and does the rest of the run solo (the empty account is in `NO_QUOTA` and isn't asked again).
   - `picture_pool.py`: In solo mode, empty candidate catalogs retry the same AI instead of asking the other AI.
   - `gpu.gemini_images` (`shortsmaker/short_render.py`, `shortsmaker/remotion_render.py`): Only runs `agy` if Gemini is allowed (`not (session.SOLO and session.BRAIN == "claude")`). Claude-only runs use MOSS-Image / local SDXL.
   - `logbook.py` & `cli.py`: Log entries record `Written by: <Brain> (solo)` when solo mode is active.
@@ -827,7 +827,7 @@ of resting readable time).
 
 ## How to verify changes
 - `.venv\Scripts\python.exe -m compileall -q make_shorts.py shortsmaker`; Remotion: `cd remotion && npx tsc -p .`
-- Tests (no AI usage, no rendering): `.venv\Scripts\python.exe tests\test_package.py` (16: ROOT, ffmpeg on PATH, shared session, fakes reach callers, Opus/high pin, Gemini bulk vs review models, Argon->Flash on quota, agy flags and boundaries, Gemini timeout switch to Flash, person card hold and exit gap, scene hold padding, solo brain selection options, solo edit scripts, solo ask_ai no fallback, encoder cache, entry point),
+- Tests (no AI usage, no rendering): `.venv\Scripts\python.exe tests\test_package.py` (16: ROOT, ffmpeg on PATH, shared session, fakes reach callers, Opus/high pin, Gemini bulk vs review models, Argon->Flash on quota, agy flags and boundaries, Gemini timeout switch to Flash, person card hold and exit gap, scene hold padding, solo brain selection options, solo edit scripts, solo ask_ai no fallback, solo hand-over when out of credits, encoder cache, entry point),
   `.venv\Scripts\python.exe tests\test_h3_handoff.py` (19: H3/Flow prompt checks, retries, veo.zip, clips.zip, renamed zips, flow overwrite protection, closeup bypass, start-picture check, owner clip recorded and re-cut), `.venv\Scripts\python.exe tests\test_h3_run.py` (7: frame grid, H3 graph, start-frame crop, notebook, 40GB A100 warning, upload cancel),
   `.venv\Scripts\python.exe tests\test_first_second.py` (10: first-second check, opener swap incl. owner clips and the scene/picture list, review overlay windows, logbook small-sample note),
   `.venv\Scripts\python.exe tests\test_story.py` (9: word counts match the aligner, sentence takes, cutting a take, story_problems, editor second pass, rules in the prompt, twist check),

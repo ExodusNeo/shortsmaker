@@ -100,17 +100,18 @@ def ask_ai(prompt: str, fatal: bool = True, read_dir: Path | None = None, brain:
            bulk: bool = False) -> dict | None:
     """Headless planner call (BRAIN, or `brain`: Claude or Gemini) that returns parsed JSON; with fatal=False, None
     on failure. Either agent automatically falls back to the other on failure or when out of credits/quota
-    (and remembers exhausted quota in NO_QUOTA so later steps don't wait on the empty account). With read_dir,
-    the AI may look at the images in that folder; `bulk` marks a job reading dozens of them, which Gemini runs on
-    Flash (on Argon it would spend the small weekly quota in one Short)."""
+    (and remembers exhausted quota in NO_QUOTA so later steps don't wait on the empty account). In SOLO mode
+    only running out of credits hands over (owner, 2026-10-27): the other AI then does the rest of the run solo.
+    With read_dir, the AI may look at the images in that folder; `bulk` marks a job reading dozens of them, which
+    Gemini runs on Flash (on Argon it would spend the small weekly quota in one Short)."""
     global _argon_exhausted
     first = brain or session.BRAIN
-    if session.SOLO:
-        order = [first]
-    else:
-        second = "gemini" if first == "claude" else "claude"
-        order = [w for w in (first, second) if w not in session.NO_QUOTA] or [first, second]
+    second = "gemini" if first == "claude" else "claude"
+    order = [w for w in (first, second) if w not in session.NO_QUOTA] or [first, second]
     for idx, who in enumerate(order):
+        if idx and session.SOLO and order[0] not in session.NO_QUOTA:
+            break  # solo: a bad answer is retried by the same AI, never handed over
+
         name, exe = who.capitalize(), shutil.which("agy" if who == "gemini" else "claude")
         fallback = ("gemini" if who == "claude" else "claude").capitalize()
         if not exe:
@@ -150,16 +151,13 @@ def ask_ai(prompt: str, fatal: bool = True, read_dir: Path | None = None, brain:
                 pass
             if quota_exhausted(out):
                 session.NO_QUOTA.add(who)
-                if session.SOLO:
-                    print(f"  {name} has no credits/quota left for this solo run.")
-                    break
                 other = "gemini" if who == "claude" else "claude"
                 if session.BRAIN == who and other not in session.NO_QUOTA:
                     session.BRAIN = other
                 print(f"  {name} has no credits/quota left: switching to {fallback} for the rest of this run")
                 break
             print(f"  {name} reply wasn't valid JSON (try {attempt + 1}/2)")
-        if idx == 0 and len(order) > 1 and who not in session.NO_QUOTA:
+        if idx == 0 and len(order) > 1 and who not in session.NO_QUOTA and not session.SOLO:
             print(f"  {name} didn't give a usable answer, asking {fallback} instead")
     if fatal:
         sys.exit("The AI didn't return usable JSON. Run again.")
