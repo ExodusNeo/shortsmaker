@@ -288,9 +288,10 @@ words each (a new picture every ~3 seconds; only a scene that needs time on one 
 notes: 1-4 short lines: the hook scores and what you changed and why.
 payoff_scene: in YOUR final version, the number of the scene where the hook's main question is answered.
 list_like: true if the beats of your final version could be reordered without breaking the story.
+hook_kind: "moment" if your first line happens inside the strangest moment, "summary" if it states the whole story, "money_claim" if it is a specific money figure tied to someone or something the viewer can picture.
 {retry}Scripts: {json.dumps(drafts, ensure_ascii=False)}
 Reply with ONLY JSON: {{"shorts": [{{"index": 0, "scenes": ["...", "..."], "title": "...", "hook_text": "...",
-"thumbnail_text": "...", "notes": ["..."], "payoff_scene": 12, "list_like": false}}]}}""", fatal=False, brain=editor) or {}
+"thumbnail_text": "...", "notes": ["..."], "payoff_scene": 12, "list_like": false, "hook_kind": "moment"}}]}}""", fatal=False, brain=editor) or {}
     who = session.LAST_AI.capitalize()  # Claude steps in when Gemini fails
     for r in data.get("shorts", []) if isinstance(data.get("shorts"), list) else []:
         i = r.get("index") if isinstance(r, dict) else None
@@ -300,12 +301,12 @@ Reply with ONLY JSON: {{"shorts": [{{"index": 0, "scenes": ["...", "..."], "titl
         words = [len(t.split()) for t in lines]
         notes = [str(x).strip()[:300] for x in r.get("notes") or [] if str(x).strip()][:4] \
             if isinstance(r.get("notes"), list) else []
-        verdict = (r.get("payoff_scene"), r.get("list_like"))
+        verdict = (r.get("payoff_scene"), r.get("list_like"), r.get("hook_kind"))
         if s_lo <= len(lines) <= s_hi and max(words) <= channel_profiles.LONG_SCENE_WORDS + 2 and lo - 15 <= sum(words) <= hi + 15:
             s["lines"] = lines
         else:
             notes.append("its scene edit broke the length rules, so the writer's scenes were kept")
-            verdict = (None, None)  # the editor judged its own version, not the one kept
+            verdict = (None, None, None)  # the editor judged its own version, not the one kept
         for k in ("title", "hook_text", "thumbnail_text"):
             if isinstance(r.get(k), str) and r[k].strip():
                 s[k] = r[k].strip()
@@ -320,9 +321,10 @@ Reply with ONLY JSON: {{"shorts": [{{"index": 0, "scenes": ["...", "..."], "titl
             s["editor_notes"] = (s.get("editor_notes") or []) + [f"STILL: {p}" for p in left]
 
 
-def story_problems(lines: list[str], payoff, list_like) -> list[str]:
+def story_problems(lines: list[str], payoff, list_like, hook_kind=None) -> list[str]:
     """The checkable story rules (STORY_RULES): the answer comes last, no line opens with a date, a short first
-    sentence, and the editor's own verdict on whether the beats are a list."""
+    sentence, the editor's own verdict on whether the beats are a list, and (rules setting `hook`, 2026-10-27
+    first-second research) what kind of first line it wrote."""
     found = []
     if isinstance(payoff, int) and not isinstance(payoff, bool) and payoff < len(lines) - 1:
         found.append(f"the hook's question is answered in scene {payoff} of {len(lines)}: the answer must come in the "
@@ -335,6 +337,13 @@ def story_problems(lines: list[str], payoff, list_like) -> list[str]:
         found.append(f'the first sentence has {len(first.split())} words ("{first}"): at most 12')
     if list_like is True:
         found.append('the beats read as a list of facts: link each one to the one before with "but", "so" or "you see"')
+    want = session.RULE_SETTINGS.get("hook")
+    if want == "moment" and hook_kind == "summary":
+        found.append('the first line sums up the story: open inside the strangest moment, told as it happens '
+                     '(Voggle: "The axe cut off the rooster\'s head, but...")')
+    if want == "money_claim" and hook_kind is not None and hook_kind != "money_claim":
+        found.append('the first line needs a specific money figure tied to a person or thing the viewer can picture '
+                     '("This man effectively created a free money machine...")')
     return found
 
 

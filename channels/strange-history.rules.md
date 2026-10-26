@@ -7,6 +7,8 @@ Each section is read by its heading; edit the text under it. Settings: status (d
 status: ready
 visuals: photos
 min_real_pictures: 6
+opener: blender
+hook: moment
 
 ## Topic picking
 <!-- strange-history's original rules, moved from the code 2026-10-22 -->
@@ -23,6 +25,9 @@ George Hull who carved it). Choose an event with nobody to follow only when noth
 
 ## Story rules
 <!-- strange-history's original rules, moved from the code 2026-10-22 -->
+- First line (research 2026-10-27): the hits open inside the moment as it happens, never with a summary.
+  Voggle's Mike (2.7M views): "The axe cut off the rooster's head, but as it dropped into the dirt, the rest of the
+  bird got back up". Ours (1.4K): "This chicken lived 18 months without a head."
 - How to tell it (learned from the true-story Shorts that hold viewers best; follow it closely):
   Target length: 95-110 spoken words (35-42 seconds). Every word counts; cut every bit of padding.
   hook (scene 1): viewers decide in one second whether to swipe. OPEN INSIDE THE STORY'S STRANGEST MOMENT, told

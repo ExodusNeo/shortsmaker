@@ -9,6 +9,8 @@ visuals: photos
 min_real_pictures: 6
 max_full_planned: 4
 max_full: 5
+opener: blender
+hook: money_claim
 
 ## Topic picking
 <!-- new -->
@@ -33,6 +35,11 @@ Anti-Cliché Negative Constraints (Strictly Forbidden):
 
 ## Story rules
 <!-- new -->
+First line (research 2026-10-27): a specific money figure tied to a person or thing the viewer can picture, as
+How Money Works' hits do: "This man effectively created a free money machine and used it to make over three hundred
+thousand dollars" (3.5M views); "Walmart truck drivers are now making the same as entry-level investment bankers"
+(1.9M). Our Match King opened on a crime fact with nothing for the viewer to want (29.7% stayed).
+
 Pacing & Structure (35–50s Shorts, 110–135 spoken words across 11–16 scenes):
 1. Zero Intro Fluff (Scene 1): Open mid-tension on frame 0. Start directly with a staggering dollar figure, an absurd financial contradiction, or a catastrophic calculation error. Never say "Have you ever wondered", "In business history", or "Imagine a world". Scene 1 must be a punchy stand-alone sentence of 12 words or fewer.
 2. Hard Data Density: The script MUST include at least 4 concrete numbers (dollar amounts, profit margins, loss totals, percentages, unit costs, or exact years) that directly drive on-screen Remotion cards and bar charts.

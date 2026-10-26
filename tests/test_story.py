@@ -48,6 +48,49 @@ def test_a_take_is_cut_between_the_scenes_words():
         assert gpu.split_takes([{"out": str(work / "take0.wav"), "words": words[:4]}], [[0, 1]], sc, work) is None
 
 
+def test_story_problems_flags_summary_hook():
+    lines = ["A railway once hired a baboon.", "He passed the test."]
+    old = session.RULE_SETTINGS
+    try:
+        session.RULE_SETTINGS = {"hook": "moment"}
+        assert any("inside the strangest moment" in p for p in writing.story_problems(lines, None, None, "summary"))
+        assert not any("strangest moment" in p for p in writing.story_problems(lines, None, None, "moment"))
+    finally:
+        session.RULE_SETTINGS = old
+
+
+def test_story_problems_money_claim():
+    lines = ["A man flew ten thousand times.", "The airline paid for it."]
+    old = session.RULE_SETTINGS
+    try:
+        session.RULE_SETTINGS = {"hook": "money_claim"}
+        assert any("money figure" in p for p in writing.story_problems(lines, None, None, "moment"))
+        assert not any("money figure" in p for p in writing.story_problems(lines, None, None, "money_claim"))
+    finally:
+        session.RULE_SETTINGS = old
+
+
+def test_no_hook_setting_no_hook_check():
+    old = session.RULE_SETTINGS
+    try:
+        session.RULE_SETTINGS = {}
+        found = writing.story_problems(["A railway once hired a baboon.", "He passed."], None, None, "summary")
+        assert not any("strangest moment" in p or "money figure" in p for p in found), found
+    finally:
+        session.RULE_SETTINGS = old
+
+
+def test_rules_accept_opener_setting():
+    text = (Path(__file__).resolve().parents[1] / "channels" / "strange-history.rules.md").read_text(encoding="utf-8")
+    base = text.replace("status: ready", "status: ready\nopener: blender\nhook: moment", 1)
+    _, settings = rules.parse_rules(base, "test")
+    assert settings["opener"] == "blender" and settings["hook"] == "moment"
+    try:
+        rules.parse_rules(text.replace("status: ready", "status: ready\nopener: maybe", 1), "test")
+        raise AssertionError("opener: maybe was accepted")
+    except SystemExit as e:
+        assert "opener" in str(e), e
+
 def test_story_problems():
     lines = ["A passenger looked out", "and saw a baboon at the signals.", "In 1880, he complained.",
              "So they tested Jack.", "He passed."]
