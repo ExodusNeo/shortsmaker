@@ -1,17 +1,17 @@
 ---
-source_file: "local_ai/qwen_voice.py"
+source_file: "shortsmaker/gpu.py"
 type: "code"
-community: "time"
-location: "L34"
+community: "local_clips"
+location: "L214"
 tags:
   - graphify/code
-  - graphify/EXTRACTED
-  - community/time
+  - graphify/INFERRED
+  - community/local_clips
 ---
 
 # one()
 
 ## Connections
-- [[say_number()]] - `contains` [EXTRACTED]
+- [[gemini_images()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/time
+#graphify/code #graphify/INFERRED #community/local_clips

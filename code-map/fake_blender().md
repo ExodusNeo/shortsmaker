@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[A .cmd that behaves like blender.exe for build_scene.py; returns (exe, run log).]] - `rationale_for` [EXTRACTED]
-- [[Path_16]] - `references` [EXTRACTED]
+- [[Path_10]] - `references` [EXTRACTED]
 - [[test_blender_render.py]] - `contains` [EXTRACTED]
 - [[test_changed_blender_code_redraws()]] - `calls` [EXTRACTED]
 - [[test_crash_retries_then_raises()]] - `calls` [EXTRACTED]

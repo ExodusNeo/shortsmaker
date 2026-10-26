@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/logbook.py"
 type: "rationale"
-community: "re"
+community: "gpu.py"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/re
+  - community/gpupy
 ---
 
 # The owner's logbook and the Obsidian vault pages.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[logbook.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/re
+#graphify/rationale #graphify/EXTRACTED #community/gpupy

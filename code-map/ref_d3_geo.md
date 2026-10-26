@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "MapCard.tsx"
+community: "Short.tsx"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/MapCardtsx
+  - community/Shorttsx
 ---
 
 # ref_d3_geo
@@ -14,4 +14,4 @@ tags:
 - [[Journey.tsx]] - `imports_from` [EXTRACTED]
 - [[MapCard.tsx]] - `imports_from` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/MapCardtsx
+#graphify/concept #graphify/EXTRACTED #community/Shorttsx

@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "style_lab.py"
+community: "gpu.py"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/style_labpy
+  - community/gpupy
 ---
 
 # os
@@ -22,4 +22,4 @@ tags:
 - [[test_pictures_first.py]] - `imports` [EXTRACTED]
 - [[veo_handoff()]] - `calls` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/style_labpy
+#graphify/concept #graphify/EXTRACTED #community/gpupy

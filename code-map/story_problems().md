@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/writing.py"
 type: "code"
-community: "edit_scripts"
+community: "test_blender_scene.py"
 location: "L323"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/edit_scripts
+  - community/test_blender_scenepy
 ---
 
 # story_problems()
@@ -18,4 +18,4 @@ tags:
 - [[test_story_problems()]] - `calls` [EXTRACTED]
 - [[writing.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/edit_scripts
+#graphify/code #graphify/EXTRACTED #community/test_blender_scenepy

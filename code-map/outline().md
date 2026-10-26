@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/Graphics.tsx"
 type: "code"
-community: "Cards.tsx"
+community: "Short.tsx"
 location: "L10"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Cardstsx
+  - community/Shorttsx
 ---
 
 # outline()
@@ -27,4 +27,4 @@ tags:
 - [[TimelineCard()]] - `calls` [EXTRACTED]
 - [[kit.ts]] - `re_exports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Cardstsx
+#graphify/code #graphify/EXTRACTED #community/Shorttsx

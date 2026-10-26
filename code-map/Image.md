@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Blender Scene Tests"
+community: "test_blender_scene.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Blender_Scene_Tests
+  - community/test_blender_scenepy
 ---
 
 # Image
@@ -15,4 +15,4 @@ tags:
 - [[count()]] - `references` [EXTRACTED]
 - [[render()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Blender_Scene_Tests
+#graphify/code #graphify/EXTRACTED #community/test_blender_scenepy

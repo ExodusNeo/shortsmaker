@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/channel_profiles.py"
 type: "rationale"
-community: "trend_research"
+community: "json"
 location: "L91"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/trend_research
+  - community/json
 ---
 
 # Create this channel's profile: the owner's niche (or one Claude picks), with…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[new_channel()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/trend_research
+#graphify/rationale #graphify/EXTRACTED #community/json

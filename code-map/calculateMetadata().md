@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/Root.tsx"
 type: "code"
-community: "MapCard.tsx"
+community: "Root.tsx"
 location: "L5"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/MapCardtsx
+  - community/Roottsx
 ---
 
 # calculateMetadata()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[Root.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/MapCardtsx
+#graphify/code #graphify/EXTRACTED #community/Roottsx

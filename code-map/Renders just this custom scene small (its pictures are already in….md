@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/motion.py"
 type: "rationale"
-community: "ask_ai"
+community: "shutil"
 location: "L250"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/ask_ai
+  - community/shutil
 ---
 
 # Renders just this custom scene small (its pictures are already in…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[preview_custom()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/ask_ai
+#graphify/rationale #graphify/EXTRACTED #community/shutil

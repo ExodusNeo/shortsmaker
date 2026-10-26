@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/frame_render.py"
 type: "code"
-community: "json"
+community: "frame_render.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/json
+  - community/frame_renderpy
 ---
 
 # frame_render.py
@@ -43,4 +43,4 @@ tags:
 - [[thumbnail()]] - `contains` [EXTRACTED]
 - [[write_frames()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/json
+#graphify/code #graphify/EXTRACTED #community/frame_renderpy

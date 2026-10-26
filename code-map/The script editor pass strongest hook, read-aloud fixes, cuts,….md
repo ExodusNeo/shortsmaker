@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/writing.py"
 type: "rationale"
-community: "edit_scripts"
+community: "test_blender_scene.py"
 location: "L244"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/edit_scripts
+  - community/test_blender_scenepy
 ---
 
 # The script editor pass: strongest hook, read-aloud fixes, cuts,…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[edit_scripts()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/edit_scripts
+#graphify/rationale #graphify/EXTRACTED #community/test_blender_scenepy

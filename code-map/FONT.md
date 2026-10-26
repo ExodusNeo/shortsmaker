@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/Graphics.tsx"
 type: "code"
-community: "QuestionBeat.tsx"
+community: "Short.tsx"
 location: "L6"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/QuestionBeattsx
+  - community/Shorttsx
 ---
 
 # FONT
@@ -21,4 +21,4 @@ tags:
 - [[QuestionBeat.tsx]] - `imports` [EXTRACTED]
 - [[kit.ts]] - `re_exports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/QuestionBeattsx
+#graphify/code #graphify/EXTRACTED #community/Shorttsx

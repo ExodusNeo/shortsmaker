@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/MapCard.tsx"
 type: "code"
-community: "MapCard.tsx"
+community: "Short.tsx"
 location: "L20"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/MapCardtsx
+  - community/Shorttsx
 ---
 
 # MapCard()
@@ -20,4 +20,4 @@ tags:
 - [[moveIn()]] - `calls` [EXTRACTED]
 - [[useWindow()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/MapCardtsx
+#graphify/code #graphify/EXTRACTED #community/Shorttsx

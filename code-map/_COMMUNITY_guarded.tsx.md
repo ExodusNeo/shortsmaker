@@ -1,22 +1,26 @@
 ---
 type: community
-members: 25
+members: 36
 ---
 
 # guarded.tsx
 
-**Members:** 25 nodes
+**Members:** 36 nodes
 
 ## Members
 - [[Box]] - code - remotion/src/full/guarded.tsx
-- [[MIN_MOVE]] - code - remotion/src/full/guarded.tsx
+- [[Card()]] - code - remotion/src/full/guarded.tsx
+- [[Connect()]] - code - remotion/src/full/guarded.tsx
+- [[ExampleChain.tsx]] - code - remotion/src/full/examples/ExampleChain.tsx
+- [[ExampleEvidence()]] - code - remotion/src/full/examples/ExampleEvidence.tsx
+- [[ExampleEvidence.tsx]] - code - remotion/src/full/examples/ExampleEvidence.tsx
 - [[NORMAL]] - code - remotion/src/full/guarded.tsx
 - [[Pt]] - code - remotion/src/full/guarded.tsx
 - [[SAFE]] - code - remotion/src/full/guarded.tsx
 - [[SIDES]] - code - remotion/src/full/guarded.tsx
 - [[Side]] - code - remotion/src/full/guarded.tsx
 - [[boxAt()]] - code - remotion/src/full/guarded.tsx
-- [[clamp_3]] - code - remotion/src/full/guarded.tsx
+- [[clamp_5]] - code - remotion/src/full/guarded.tsx
 - [[crosses()]] - code - tests/guarded.test.ts
 - [[fitCard()]] - code - remotion/src/full/guarded.tsx
 - [[guarded.test.ts]] - code - tests/guarded.test.ts
@@ -30,6 +34,13 @@ members: 25
 - [[photoBox()]] - code - remotion/src/full/guarded.tsx
 - [[port()]] - code - remotion/src/full/guarded.tsx
 - [[range()]] - code - remotion/src/full/guarded.tsx
+- [[remotion_src_full_toolkit_boxat]] - concept
+- [[remotion_src_full_toolkit_card]] - concept
+- [[remotion_src_full_toolkit_connect]] - concept
+- [[remotion_src_full_toolkit_layoutcolumn]] - concept
+- [[remotion_src_full_toolkit_layoutrow]] - concept
+- [[remotion_src_full_toolkit_photobox]] - concept
+- [[remotion_src_full_toolkit_travel]] - concept
 - [[routeArrow()]] - code - remotion/src/full/guarded.tsx
 - [[test()]] - code - tests/guarded.test.ts
 - [[travel()]] - code - remotion/src/full/guarded.tsx
@@ -42,14 +53,15 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 10 edges to [[_COMMUNITY_skinOf]]
-- 8 edges to [[_COMMUNITY_toolkit.tsx]]
-- 6 edges to [[_COMMUNITY_ExampleEvidence.tsx]]
-- 1 edge to [[_COMMUNITY_MapCard.tsx]]
+- 35 edges to [[_COMMUNITY_skinOf]]
+- 15 edges to [[_COMMUNITY_toolkit.tsx]]
+- 3 edges to [[_COMMUNITY_kit.ts]]
+- 1 edge to [[_COMMUNITY_Short.tsx]]
+- 1 edge to [[_COMMUNITY_fulltypes.ts]]
 
 ## Top bridge nodes
-- [[guarded.tsx]] - degree 32, connects to 4 communities
-- [[boxAt()]] - degree 7, connects to 2 communities
-- [[layoutColumn()]] - degree 5, connects to 2 communities
-- [[layoutRow()]] - degree 5, connects to 2 communities
-- [[travel()]] - degree 4, connects to 2 communities
+- [[guarded.tsx]] - degree 32, connects to 5 communities
+- [[ExampleEvidence.tsx]] - degree 26, connects to 3 communities
+- [[ExampleChain.tsx]] - degree 23, connects to 3 communities
+- [[ExampleEvidence()]] - degree 13, connects to 2 communities
+- [[guarded.test.ts]] - degree 15, connects to 1 community

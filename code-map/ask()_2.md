@@ -1,18 +1,17 @@
 ---
-source_file: "tests/test_blender_plan.py"
+source_file: "tests/test_rules.py"
 type: "code"
-community: "test_blender_plan.py"
-location: "L87"
+community: "test_rules.py"
+location: "L251"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_blender_planpy
+  - community/test_rulespy
 ---
 
 # ask()
 
 ## Connections
-- [[plan()]] - `calls` [EXTRACTED]
-- [[test_plan_builds_retries_then_defaults()]] - `indirect_call` [INFERRED]
+- [[run_draft()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_blender_planpy
+#graphify/code #graphify/EXTRACTED #community/test_rulespy

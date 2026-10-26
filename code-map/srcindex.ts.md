@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/index.ts"
 type: "code"
-community: "MapCard.tsx"
+community: "Root.tsx"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/MapCardtsx
+  - community/Roottsx
 ---
 
 # src/index.ts
@@ -16,4 +16,4 @@ tags:
 - [[Root.tsx]] - `imports_from` [EXTRACTED]
 - [[ref_remotion]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/MapCardtsx
+#graphify/code #graphify/EXTRACTED #community/Roottsx

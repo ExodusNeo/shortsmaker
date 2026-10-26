@@ -1,16 +1,19 @@
 ---
 source_file: ""
 type: "code"
-community: "ask_ai"
+community: "drawn_thumbnail"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ask_ai
+  - community/drawn_thumbnail
 ---
 
 # Path
 
 ## Connections
-- [[mark_details()]] - `references` [EXTRACTED]
+- [[drawn_thumbnail()]] - `references` [EXTRACTED]
+- [[load_state()]] - `references` [EXTRACTED]
+- [[render()_3]] - `references` [EXTRACTED]
+- [[save_state()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ask_ai
+#graphify/code #graphify/EXTRACTED #community/drawn_thumbnail

@@ -1,17 +1,17 @@
 ---
-source_file: "remotion/src/full/guarded.tsx"
+source_file: "remotion/src/Graphics.tsx"
 type: "code"
-community: "guarded.tsx"
-location: "L17"
+community: "Short.tsx"
+location: "L7"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/guardedtsx
+  - community/Shorttsx
 ---
 
 # clamp
 
 ## Connections
-- [[guarded.tsx]] - `contains` [EXTRACTED]
+- [[Graphics.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/guardedtsx
+#graphify/code #graphify/EXTRACTED #community/Shorttsx

@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_blender_scene.py"
 type: "code"
-community: "Blender Scene Tests"
+community: "test_blender_scene.py"
 location: "L51"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Blender_Scene_Tests
+  - community/test_blender_scenepy
 ---
 
 # plan_with()
@@ -26,4 +26,4 @@ tags:
 - [[test_truss_build_and_zoom_frames()]] - `calls` [EXTRACTED]
 - [[test_zoom_after_the_collapse_finds_the_fallen_part()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Blender_Scene_Tests
+#graphify/code #graphify/EXTRACTED #community/test_blender_scenepy

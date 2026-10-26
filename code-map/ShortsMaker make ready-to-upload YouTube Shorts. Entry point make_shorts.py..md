@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/__init__.py"
 type: "rationale"
-community: "re"
+community: "gpu.py"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/re
+  - community/gpupy
 ---
 
 # ShortsMaker: make ready-to-upload YouTube Shorts. Entry point: make_shorts.py.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[__init__.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/re
+#graphify/rationale #graphify/EXTRACTED #community/gpupy

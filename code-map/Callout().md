@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/Graphics.tsx"
 type: "code"
-community: "Cards.tsx"
+community: "Short.tsx"
 location: "L78"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Cardstsx
+  - community/Shorttsx
 ---
 
 # Callout()
@@ -21,4 +21,4 @@ tags:
 - [[slot()]] - `calls` [EXTRACTED]
 - [[useWindow()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Cardstsx
+#graphify/code #graphify/EXTRACTED #community/Shorttsx

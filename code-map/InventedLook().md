@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/style/generated/InventedLook.tsx"
 type: "code"
-community: "kit.ts"
+community: "style/index.ts"
 location: "L6"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/kitts
+  - community/style/indexts
 ---
 
 # InventedLook()
@@ -15,4 +15,4 @@ tags:
 - [[InventedLook.tsx]] - `contains` [EXTRACTED]
 - [[styleindex.ts]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/kitts
+#graphify/code #graphify/EXTRACTED #community/style/indexts

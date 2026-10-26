@@ -13,14 +13,14 @@ tags:
 
 ## Connections
 - [[BlenderFailed]] - `calls` [EXTRACTED]
-- [[Path_15]] - `references` [EXTRACTED]
+- [[Path_9]] - `references` [EXTRACTED]
 - [[_run()]] - `calls` [EXTRACTED]
 - [[blender_render.py]] - `contains` [EXTRACTED]
 - [[code_version()]] - `calls` [EXTRACTED]
 - [[ffmpeg()]] - `calls` [EXTRACTED]
 - [[json]] - `calls` [EXTRACTED]
 - [[peaks()]] - `calls` [EXTRACTED]
-- [[render()_1]] - `calls` [EXTRACTED]
+- [[render()_3]] - `calls` [EXTRACTED]
 - [[scene_frames()]] - `calls` [EXTRACTED]
 - [[test_changed_blender_code_redraws()]] - `calls` [EXTRACTED]
 - [[test_crash_retries_then_raises()]] - `calls` [EXTRACTED]

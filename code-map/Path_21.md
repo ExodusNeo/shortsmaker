@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "main"
+community: "json"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/main
+  - community/json
 ---
 
 # Path
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[draft_rules()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/main
+#graphify/code #graphify/EXTRACTED #community/json

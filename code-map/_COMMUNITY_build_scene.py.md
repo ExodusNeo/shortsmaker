@@ -1,15 +1,15 @@
 ---
 type: community
-members: 20
+members: 18
 ---
 
 # build_scene.py
 
-**Members:** 20 nodes
+**Members:** 18 nodes
 
 ## Members
 - [[(start pose, end pose) of a beat; `after` the collapse, close shots find the…]] - rationale - blender/build_scene.py
-- [[dot-__init__()_6]] - code - blender/build_scene.py
+- [[dot-__init__()_5]] - code - blender/build_scene.py
 - [[dot-beat()]] - code - blender/build_scene.py
 - [[dot-close()_1]] - code - blender/build_scene.py
 - [[dot-wide()]] - code - blender/build_scene.py
@@ -25,9 +25,7 @@ members: 20
 - [[failures.py]] - code - blender/failures.py
 - [[keyloc()]] - code - blender/build_scene.py
 - [[keyvis()]] - code - blender/build_scene.py
-- [[math]] - concept
 - [[mathutils]] - concept
-- [[radians()]] - code - blender/parts.py
 
 ## Live Query (requires Dataview plugin)
 
@@ -38,20 +36,17 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 7 edges to [[_COMMUNITY_main]]
-- 6 edges to [[_COMMUNITY_parts.py]]
+- 4 edges to [[_COMMUNITY_parts.py]]
+- 3 edges to [[_COMMUNITY_math]]
 - 3 edges to [[_COMMUNITY_Blender Ink Look]]
-- 2 edges to [[_COMMUNITY_test_blender_plan.py]]
 - 2 edges to [[_COMMUNITY_templates.py]]
 - 2 edges to [[_COMMUNITY_json]]
-- 2 edges to [[_COMMUNITY_re]]
-- 1 edge to [[_COMMUNITY_make_sfx]]
-- 1 edge to [[_COMMUNITY_frame_maker]]
-- 1 edge to [[_COMMUNITY_subprocess]]
-- 1 edge to [[_COMMUNITY_test_full_scenes.py]]
+- 1 edge to [[_COMMUNITY_gpu.py]]
+- 1 edge to [[_COMMUNITY_random]]
 
 ## Top bridge nodes
 - [[build_scene.py]] - degree 16, connects to 7 communities
-- [[math]] - degree 11, connects to 6 communities
-- [[failures.py]] - degree 10, connects to 4 communities
+- [[failures.py]] - degree 10, connects to 5 communities
 - [[bpy]] - degree 4, connects to 2 communities
 - [[mathutils]] - degree 4, connects to 2 communities
+- [[Shots]] - degree 7, connects to 1 community

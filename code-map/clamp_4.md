@@ -1,17 +1,17 @@
 ---
-source_file: "remotion/src/full/Journey.tsx"
+source_file: "remotion/src/MapCard.tsx"
 type: "code"
-community: "Journey.tsx"
-location: "L27"
+community: "Short.tsx"
+location: "L16"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Journeytsx
+  - community/Shorttsx
 ---
 
 # clamp
 
 ## Connections
-- [[Journey.tsx]] - `contains` [EXTRACTED]
+- [[MapCard.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Journeytsx
+#graphify/code #graphify/EXTRACTED #community/Shorttsx

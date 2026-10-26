@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_rules.py"
 type: "code"
-community: "make"
+community: "test_rules.py"
 location: "L359"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/make
+  - community/test_rulespy
 ---
 
 # test_equals_sign_works_like_a_colon()
@@ -16,4 +16,4 @@ tags:
 - [[parse_rules()]] - `calls` [EXTRACTED]
 - [[test_rules.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/make
+#graphify/code #graphify/EXTRACTED #community/test_rulespy

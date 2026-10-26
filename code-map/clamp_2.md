@@ -1,21 +1,17 @@
 ---
-source_file: "remotion/src/full/toolkit.tsx"
+source_file: "remotion/src/Extras.tsx"
 type: "code"
-community: "ExampleEvidence.tsx"
-location: "L10"
+community: "Short.tsx"
+location: "L5"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ExampleEvidencetsx
+  - community/Shorttsx
 ---
 
 # clamp
 
 ## Connections
-- [[Custom0.tsx]] - `imports` [EXTRACTED]
-- [[Custom1.tsx]] - `imports` [EXTRACTED]
-- [[Custom2.tsx]] - `imports` [EXTRACTED]
-- [[Custom3.tsx]] - `imports` [EXTRACTED]
-- [[toolkit.tsx]] - `contains` [EXTRACTED]
+- [[Extras.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ExampleEvidencetsx
+#graphify/code #graphify/EXTRACTED #community/Shorttsx

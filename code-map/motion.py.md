@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/motion.py"
 type: "code"
-community: "test_full_scenes.py"
+community: "shutil"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_full_scenespy
+  - community/shutil
 ---
 
 # motion.py
@@ -42,4 +42,4 @@ tags:
 - [[test_style.py]] - `imports_from` [EXTRACTED]
 - [[tsc_check()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_full_scenespy
+#graphify/code #graphify/EXTRACTED #community/shutil

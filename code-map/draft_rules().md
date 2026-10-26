@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/rules.py"
 type: "code"
-community: "main"
+community: "json"
 location: "L83"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/main
+  - community/json
 ---
 
 # draft_rules()
@@ -22,4 +22,4 @@ tags:
 - [[rules.py]] - `contains` [EXTRACTED]
 - [[run_draft()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/main
+#graphify/code #graphify/EXTRACTED #community/json

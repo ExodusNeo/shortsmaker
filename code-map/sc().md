@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_style.py"
 type: "code"
-community: "scene_cues"
+community: "test_style.py"
 location: "L179"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/scene_cues
+  - community/test_stylepy
 ---
 
 # sc()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[test_style_sounds()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/scene_cues
+#graphify/code #graphify/EXTRACTED #community/test_stylepy

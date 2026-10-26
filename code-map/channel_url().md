@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/channel_profiles.py"
 type: "code"
-community: "trend_research"
+community: "json"
 location: "L135"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/trend_research
+  - community/json
 ---
 
 # channel_url()
@@ -15,4 +15,4 @@ tags:
 - [[channel_profiles.py]] - `contains` [EXTRACTED]
 - [[trend_research()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/trend_research
+#graphify/code #graphify/EXTRACTED #community/json

@@ -1,11 +1,11 @@
 ---
 type: community
-members: 37
+members: 33
 ---
 
 # toolkit.tsx
 
-**Members:** 37 nodes
+**Members:** 33 nodes
 
 ## Members
 - [[AnyFull]] - code - remotion/src/full/types.ts
@@ -14,19 +14,16 @@ members: 37
 - [[BoardFull]] - code - remotion/src/full/types.ts
 - [[Cam]] - code - remotion/src/full/Paper.tsx
 - [[CamContext]] - code - remotion/src/full/Paper.tsx
-- [[CustomPhoto]] - code - remotion/src/full/types.ts
 - [[Document.tsx]] - code - remotion/src/full/Document.tsx
-- [[DocumentFull]] - code - remotion/src/full/types.ts
 - [[DocumentScene()]] - code - remotion/src/full/Document.tsx
 - [[FONTS]] - code - remotion/src/full/Paper.tsx
 - [[Filler()]] - code - remotion/src/full/Document.tsx
-- [[FullBase]] - code - remotion/src/full/types.ts
+- [[FullProps]] - code - remotion/src/full/types.ts
 - [[FullScene()]] - code - remotion/src/full/FullScene.tsx
 - [[FullScene.tsx]] - code - remotion/src/full/FullScene.tsx
 - [[INK]] - code - remotion/src/full/Paper.tsx
-- [[JourneyFull]] - code - remotion/src/full/types.ts
 - [[LAYOUTS]] - code - remotion/src/full/Board.tsx
-- [[NumberFull]] - code - remotion/src/full/types.ts
+- [[MIN_MOVE]] - code - remotion/src/full/guarded.tsx
 - [[Paper()]] - code - remotion/src/full/Paper.tsx
 - [[Paper.tsx]] - code - remotion/src/full/Paper.tsx
 - [[Print]] - code - remotion/src/full/Board.tsx
@@ -38,7 +35,6 @@ members: 37
 - [[TYPE]] - code - remotion/src/full/Paper.tsx
 - [[clamp_9]] - code - remotion/src/full/Board.tsx
 - [[clamp_10]] - code - remotion/src/full/Document.tsx
-- [[fulltypes.ts]] - code - remotion/src/full/types.ts
 - [[layout()]] - code - remotion/src/full/Board.tsx
 - [[lerp()]] - code - remotion/src/full/Board.tsx
 - [[rng()]] - code - remotion/src/full/Paper.tsx
@@ -54,17 +50,17 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 28 edges to [[_COMMUNITY_ExampleEvidence.tsx]]
-- 24 edges to [[_COMMUNITY_skinOf]]
-- 13 edges to [[_COMMUNITY_BigNumber.tsx]]
-- 9 edges to [[_COMMUNITY_Journey.tsx]]
-- 8 edges to [[_COMMUNITY_guarded.tsx]]
-- 5 edges to [[_COMMUNITY_Short.tsx]]
-- 4 edges to [[_COMMUNITY_MapCard.tsx]]
+- 43 edges to [[_COMMUNITY_skinOf]]
+- 21 edges to [[_COMMUNITY_fulltypes.ts]]
+- 15 edges to [[_COMMUNITY_guarded.tsx]]
+- 8 edges to [[_COMMUNITY_Journey.tsx]]
+- 7 edges to [[_COMMUNITY_Short.tsx]]
+- 2 edges to [[_COMMUNITY_kit.ts]]
+- 1 edge to [[_COMMUNITY_style.test.ts]]
 
 ## Top bridge nodes
 - [[Paper.tsx]] - degree 23, connects to 6 communities
-- [[fulltypes.ts]] - degree 22, connects to 5 communities
-- [[FullScene.tsx]] - degree 15, connects to 5 communities
-- [[toolkit.tsx]] - degree 36, connects to 4 communities
+- [[toolkit.tsx]] - degree 36, connects to 5 communities
+- [[FullScene()]] - degree 8, connects to 5 communities
 - [[Paper()]] - degree 25, connects to 4 communities
+- [[Board.tsx]] - degree 20, connects to 4 communities

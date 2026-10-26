@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[CAPTION_TOP]] - `contains` [EXTRACTED]
-- [[CLAMP_7]] - `contains` [EXTRACTED]
+- [[CLAMP]] - `contains` [EXTRACTED]
 - [[Engraving.tsx]] - `imports_from` [EXTRACTED]
 - [[FILL]] - `contains` [EXTRACTED]
 - [[FONT]] - `re_exports` [EXTRACTED]

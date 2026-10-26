@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/motion.py"
 type: "code"
-community: "scene_cues"
+community: "full_props"
 location: "L20"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/scene_cues
+  - community/full_props
 ---
 
 # full_summary()
@@ -14,8 +14,8 @@ tags:
 ## Connections
 - [[One plain line for edit_plan.txt saying what a full-screen motion graphic shows.]] - `rationale_for` [EXTRACTED]
 - [[motion.py]] - `contains` [EXTRACTED]
-- [[render()_1]] - `calls` [EXTRACTED]
+- [[render()_3]] - `calls` [EXTRACTED]
 - [[test_full_props_figure()]] - `calls` [EXTRACTED]
 - [[test_full_summary()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/scene_cues
+#graphify/code #graphify/EXTRACTED #community/full_props

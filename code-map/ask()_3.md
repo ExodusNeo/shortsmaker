@@ -1,18 +1,18 @@
 ---
-source_file: "tests/test_rules.py"
+source_file: "tests/test_blender_plan.py"
 type: "code"
-community: "capture_prompts"
-location: "L70"
+community: "test_blender_plan.py"
+location: "L87"
 tags:
   - graphify/code
-  - graphify/INFERRED
-  - community/capture_prompts
+  - graphify/EXTRACTED
+  - community/test_blender_planpy
 ---
 
 # ask()
 
 ## Connections
-- [[capture_prompts()]] - `indirect_call` [INFERRED]
-- [[run_draft()]] - `indirect_call` [INFERRED]
+- [[plan()]] - `calls` [EXTRACTED]
+- [[test_plan_builds_retries_then_defaults()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/INFERRED #community/capture_prompts
+#graphify/code #graphify/EXTRACTED #community/test_blender_planpy

@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "ExampleEvidence.tsx"
+community: "guarded.tsx"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/ExampleEvidencetsx
+  - community/guardedtsx
 ---
 
 # remotion_src_full_toolkit_layoutrow
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[ExampleEvidence.tsx]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/ExampleEvidencetsx
+#graphify/concept #graphify/EXTRACTED #community/guardedtsx

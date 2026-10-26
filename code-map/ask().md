@@ -1,17 +1,17 @@
 ---
-source_file: "tests/test_rules.py"
+source_file: "shortsmaker/blender_plan.py"
 type: "code"
-community: "test_rules.py"
-location: "L251"
+community: "blender_plan.py"
+location: "L114"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_rulespy
+  - community/blender_planpy
 ---
 
 # ask()
 
 ## Connections
-- [[run_draft()]] - `contains` [EXTRACTED]
+- [[plan_builds()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_rulespy
+#graphify/code #graphify/EXTRACTED #community/blender_planpy

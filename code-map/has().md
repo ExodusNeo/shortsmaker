@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/style/index.ts"
 type: "code"
-community: "Short.tsx"
+community: "style.test.ts"
 location: "L24"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Shorttsx
+  - community/styletestts
 ---
 
 # has()
@@ -17,4 +17,4 @@ tags:
 - [[styleindex.ts]] - `contains` [EXTRACTED]
 - [[transitionFor()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Shorttsx
+#graphify/code #graphify/EXTRACTED #community/styletestts

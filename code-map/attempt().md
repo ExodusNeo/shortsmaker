@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/style_lab.py"
 type: "code"
-community: "render_remotion"
+community: "style_placeholders"
 location: "L157"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/render_remotion
+  - community/style_placeholders
 ---
 
 # attempt()
@@ -15,4 +15,4 @@ tags:
 - [[invent_component()]] - `contains` [EXTRACTED]
 - [[lint_style_code()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/render_remotion
+#graphify/code #graphify/EXTRACTED #community/style_placeholders

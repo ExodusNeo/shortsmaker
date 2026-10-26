@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_package.py"
 type: "code"
-community: "ask_ai"
+community: "test_package.py"
 location: "L131"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ask_ai
+  - community/test_packagepy
 ---
 
 # test_gemini_timeout_switches_to_flash()
@@ -18,4 +18,4 @@ tags:
 - [[gemini_model()]] - `calls` [EXTRACTED]
 - [[test_package.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ask_ai
+#graphify/code #graphify/EXTRACTED #community/test_packagepy

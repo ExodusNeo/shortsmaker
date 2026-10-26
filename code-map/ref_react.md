@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "ExampleEvidence.tsx"
+community: "kit.ts"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/ExampleEvidencetsx
+  - community/kitts
 ---
 
 # ref_react
@@ -36,4 +36,4 @@ tags:
 - [[styletypes.ts]] - `imports_from` [EXTRACTED]
 - [[toolkit.tsx]] - `imports_from` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/ExampleEvidencetsx
+#graphify/concept #graphify/EXTRACTED #community/kitts

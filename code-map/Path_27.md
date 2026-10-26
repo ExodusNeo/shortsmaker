@@ -11,7 +11,7 @@ tags:
 # Path
 
 ## Connections
-- [[handoff()]] - `references` [EXTRACTED]
-- [[zip_of()]] - `references` [EXTRACTED]
+- [[fit_start()]] - `references` [EXTRACTED]
+- [[saved_file()]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/test_h3_handoffpy

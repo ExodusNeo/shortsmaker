@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/full/BigNumber.tsx"
 type: "code"
-community: "BigNumber.tsx"
+community: "full/types.ts"
 location: "L11"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/BigNumbertsx
+  - community/full/typests
 ---
 
 # Figure()
@@ -16,4 +16,4 @@ tags:
 - [[BigNumber.tsx]] - `contains` [EXTRACTED]
 - [[InkIcon()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/BigNumbertsx
+#graphify/code #graphify/EXTRACTED #community/full/typests

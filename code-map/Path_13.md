@@ -1,19 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "render"
+community: "test_package.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/render
+  - community/test_packagepy
 ---
 
 # Path
 
 ## Connections
-- [[drawn_thumbnail()]] - `references` [EXTRACTED]
-- [[load_state()]] - `references` [EXTRACTED]
-- [[render()_1]] - `references` [EXTRACTED]
-- [[save_state()]] - `references` [EXTRACTED]
+- [[mark_details()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/render
+#graphify/code #graphify/EXTRACTED #community/test_packagepy

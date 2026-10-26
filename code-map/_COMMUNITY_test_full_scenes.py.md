@@ -1,41 +1,38 @@
 ---
 type: community
-members: 28
+members: 25
 ---
 
 # test_full_scenes.py
 
-**Members:** 28 nodes
+**Members:** 25 nodes
 
 ## Members
-- [[A Short's saved work state and `render()`, which turns a written Short into the…]] - rationale - shortsmaker/short_render.py
-- [[A Shotcut timeline of a finished Short, for fixing by hand what the automatic…]] - rationale - shortsmaker/edit_project.py
-- [[Cleaning found photos stereograph cards, scanner borders, vertical crops.]] - rationale - shortsmaker/photo_prep.py
-- [[Full-screen motion-graphic scenes and the AI-coded Custom scenes (with their…]] - rationale - shortsmaker/motion.py
+- [[A painted figure (black ink on white) becomes a cropped, transparent…]] - rationale - tests/test_full_scenes.py
 - [[Mike's Thinking Music (-22 LUFS) vanished under the voice with the old fixed…]] - rationale - tests/test_full_scenes.py
 - [[On-screen credit tags are short (Emu War review the long tag covered the emus…]] - rationale - tests/test_full_scenes.py
-- [[Paths, fixed settings, palettes and the styleskin tables every module shares.…]] - rationale - shortsmaker/config.py
-- [[Rendering a Short with Remotion (with the Python renderer as fallback),…]] - rationale - shortsmaker/remotion_render.py
+- [[Path_24]] - code
 - [[Tests for the full-screen motion graphic scenes. No AI usage, no rendering.…]] - rationale - tests/test_full_scenes.py
-- [[The aged-paper texture and film-grain frames the full-screen motion graphics…]] - rationale - shortsmaker/remotion_render.py
-- [[config.py]] - code - shortsmaker/config.py
-- [[edit_plan.txt (the timestamped edit list) and per-scene cue timing.]] - rationale - shortsmaker/editplan.py
-- [[edit_project.py]] - code - shortsmaker/edit_project.py
-- [[editplan.py]] - code - shortsmaker/editplan.py
-- [[hex_rgb()]] - code - shortsmaker/config.py
-- [[luminance()_1]] - code - shortsmaker/config.py
-- [[make_paper()]] - code - shortsmaker/remotion_render.py
-- [[motion.py]] - code - shortsmaker/motion.py
-- [[photo_prep.py]] - code - shortsmaker/photo_prep.py
-- [[random]] - concept
-- [[remotion_render.py]] - code - shortsmaker/remotion_render.py
-- [[short_render.py]] - code - shortsmaker/short_render.py
+- [[__init__()]] - code - tests/test_full_scenes.py
+- [[_review_state()]] - code - tests/test_full_scenes.py
+- [[_tone_wav()]] - code - tests/test_full_scenes.py
+- [[ask()_8]] - code - tests/test_full_scenes.py
+- [[fake_gemini()]] - code - tests/test_full_scenes.py
+- [[fake_moss()]] - code - tests/test_full_scenes.py
+- [[fake_rescue()]] - code - tests/test_full_scenes.py
+- [[fetch()_1]] - code - tests/test_full_scenes.py
+- [[test_auto_fix_graphic()]] - code - tests/test_full_scenes.py
 - [[test_full_scenes.py]] - code - tests/test_full_scenes.py
+- [[test_ink_silhouette()]] - code - tests/test_full_scenes.py
 - [[test_make_paper()]] - code - tests/test_full_scenes.py
 - [[test_music_gain_evens_out_tracks()]] - code - tests/test_full_scenes.py
+- [[test_quota_fallback_both_ways()]] - code - tests/test_full_scenes.py
+- [[test_redraw_failure_paints()]] - code - tests/test_full_scenes.py
+- [[test_remotion_failure_paints()]] - code - tests/test_full_scenes.py
+- [[test_review_fix_kinds()]] - code - tests/test_full_scenes.py
+- [[test_review_redraws_custom()]] - code - tests/test_full_scenes.py
 - [[test_short_credit()]] - code - tests/test_full_scenes.py
-- [[warnings]] - concept
-- [[xml_sax_saxutils]] - concept
+- [[test_story_sound_library()]] - code - tests/test_full_scenes.py
 
 ## Live Query (requires Dataview plugin)
 
@@ -45,45 +42,32 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 58 edges to [[_COMMUNITY_re]]
-- 35 edges to [[_COMMUNITY_json]]
-- 16 edges to [[_COMMUNITY_scene_cues]]
-- 13 edges to [[_COMMUNITY_ask_ai]]
-- 12 edges to [[_COMMUNITY_subprocess]]
-- 11 edges to [[_COMMUNITY_style_lab.py]]
-- 10 edges to [[_COMMUNITY_render]]
-- 9 edges to [[_COMMUNITY_render_remotion]]
-- 6 edges to [[_COMMUNITY_clean_full]]
-- 5 edges to [[_COMMUNITY_Shotcut Timeline and Loudness]]
-- 4 edges to [[_COMMUNITY_style_library]]
-- 4 edges to [[_COMMUNITY_trim_borders]]
-- 4 edges to [[_COMMUNITY_apply_review_fixes]]
-- 3 edges to [[_COMMUNITY_local_voice]]
-- 3 edges to [[_COMMUNITY_rewrite_paint_prompts]]
-- 3 edges to [[_COMMUNITY_gather_pool]]
-- 2 edges to [[_COMMUNITY_speak]]
-- 2 edges to [[_COMMUNITY_time]]
+- 19 edges to [[_COMMUNITY_gpu.py]]
+- 8 edges to [[_COMMUNITY_re]]
+- 7 edges to [[_COMMUNITY_clean_full]]
+- 6 edges to [[_COMMUNITY__fake_planning]]
+- 5 edges to [[_COMMUNITY_shutil]]
+- 5 edges to [[_COMMUNITY_full_props]]
+- 4 edges to [[_COMMUNITY_sfx_events]]
+- 4 edges to [[_COMMUNITY_scene_cues]]
+- 3 edges to [[_COMMUNITY_random]]
+- 3 edges to [[_COMMUNITY_json]]
+- 2 edges to [[_COMMUNITY_words_of]]
 - 2 edges to [[_COMMUNITY_use_picture_from]]
-- 1 edge to [[_COMMUNITY_write_scripts]]
-- 1 edge to [[_COMMUNITY_make_sfx]]
+- 2 edges to [[_COMMUNITY_owner]]
+- 2 edges to [[_COMMUNITY_rescue_graphics]]
+- 2 edges to [[_COMMUNITY_test_blender_scene.py]]
 - 1 edge to [[_COMMUNITY_drawn_thumbnail]]
-- 1 edge to [[_COMMUNITY_visual_review]]
-- 1 edge to [[_COMMUNITY_words_of]]
-- 1 edge to [[_COMMUNITY_choose_images]]
-- 1 edge to [[_COMMUNITY_clean_sound]]
-- 1 edge to [[_COMMUNITY_captions]]
-- 1 edge to [[_COMMUNITY_fact_check]]
-- 1 edge to [[_COMMUNITY_rescue_graphics]]
-- 1 edge to [[_COMMUNITY_Blender Scene Tests]]
-- 1 edge to [[_COMMUNITY_test_rules.py]]
-- 1 edge to [[_COMMUNITY_test_blender_plan.py]]
-- 1 edge to [[_COMMUNITY_test_first_second.py]]
-- 1 edge to [[_COMMUNITY_test_pictures_first.py]]
-- 1 edge to [[_COMMUNITY_build_scene.py]]
+- 1 edge to [[_COMMUNITY_test_package.py]]
+- 1 edge to [[_COMMUNITY_test_local_job_retries_a_hard_crash]]
+- 1 edge to [[_COMMUNITY_limit_full]]
+- 1 edge to [[_COMMUNITY_frame_render.py]]
+- 1 edge to [[_COMMUNITY_audio_mix.py]]
+- 1 edge to [[_COMMUNITY_image_sources.py]]
 
 ## Top bridge nodes
-- [[test_full_scenes.py]] - degree 84, connects to 22 communities
-- [[short_render.py]] - degree 43, connects to 10 communities
-- [[remotion_render.py]] - degree 30, connects to 8 communities
-- [[config.py]] - degree 37, connects to 7 communities
-- [[motion.py]] - degree 29, connects to 7 communities
+- [[test_full_scenes.py]] - degree 84, connects to 21 communities
+- [[test_review_redraws_custom()]] - degree 5, connects to 2 communities
+- [[test_remotion_failure_paints()]] - degree 4, connects to 1 community
+- [[test_auto_fix_graphic()]] - degree 3, connects to 1 community
+- [[test_ink_silhouette()]] - degree 3, connects to 1 community

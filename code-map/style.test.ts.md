@@ -1,12 +1,12 @@
 ---
 source_file: "tests/style.test.ts"
 type: "code"
-community: "Short.tsx"
+community: "style.test.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Shorttsx
+  - community/styletestts
 ---
 
 # style.test.ts
@@ -28,4 +28,4 @@ tags:
 - [[transitionWindow()]] - `imports` [EXTRACTED]
 - [[window.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Shorttsx
+#graphify/code #graphify/EXTRACTED #community/styletestts

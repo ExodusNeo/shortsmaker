@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_package.py"
 type: "code"
-community: "ask_ai"
+community: "test_package.py"
 location: "L136"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ask_ai
+  - community/test_packagepy
 ---
 
 # fake_run()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[test_gemini_timeout_switches_to_flash()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ask_ai
+#graphify/code #graphify/EXTRACTED #community/test_packagepy

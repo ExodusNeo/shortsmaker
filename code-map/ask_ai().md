@@ -1,19 +1,19 @@
 ---
 source_file: "shortsmaker/llm.py"
 type: "code"
-community: "ask_ai"
+community: "test_package.py"
 location: "L99"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ask_ai
+  - community/test_packagepy
 ---
 
 # ask_ai()
 
 ## Connections
 - [[Headless planner call (BRAIN, or `brain` Claude or Gemini) that returns parsed…]] - `rationale_for` [EXTRACTED]
-- [[Path_5]] - `references` [EXTRACTED]
+- [[Path_12]] - `references` [EXTRACTED]
 - [[catalog_pool()]] - `calls` [EXTRACTED]
 - [[check_twists()]] - `calls` [EXTRACTED]
 - [[choose_images()]] - `calls` [EXTRACTED]
@@ -44,8 +44,9 @@ tags:
 - [[test_gemini_timeout_switches_to_flash()]] - `calls` [EXTRACTED]
 - [[test_quota_fallback_both_ways()]] - `calls` [EXTRACTED]
 - [[test_session_shared()]] - `calls` [EXTRACTED]
+- [[test_solo_ask_ai_hands_over_when_out_of_credits()]] - `calls` [EXTRACTED]
 - [[test_solo_ask_ai_never_falls_back()]] - `calls` [EXTRACTED]
 - [[visual_review()]] - `calls` [EXTRACTED]
 - [[write_scripts()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ask_ai
+#graphify/code #graphify/EXTRACTED #community/test_packagepy

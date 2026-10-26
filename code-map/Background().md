@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/Short.tsx"
 type: "code"
-community: "Short.tsx"
+community: "style.test.ts"
 location: "L82"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Shorttsx
+  - community/styletestts
 ---
 
 # Background()
@@ -20,4 +20,4 @@ tags:
 - [[transitionFor()]] - `calls` [EXTRACTED]
 - [[transitionWindow()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Shorttsx
+#graphify/code #graphify/EXTRACTED #community/styletestts

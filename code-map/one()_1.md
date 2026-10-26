@@ -1,17 +1,17 @@
 ---
-source_file: "shortsmaker/gpu.py"
+source_file: "local_ai/qwen_voice.py"
 type: "code"
-community: "test_h3_handoff.py"
-location: "L214"
+community: "align_words"
+location: "L34"
 tags:
   - graphify/code
-  - graphify/INFERRED
-  - community/test_h3_handoffpy
+  - graphify/EXTRACTED
+  - community/align_words
 ---
 
 # one()
 
 ## Connections
-- [[gemini_images()]] - `indirect_call` [INFERRED]
+- [[say_number()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/test_h3_handoffpy
+#graphify/code #graphify/EXTRACTED #community/align_words

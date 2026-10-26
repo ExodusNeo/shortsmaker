@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_package.py"
 type: "code"
-community: "re"
+community: "test_package.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/re
+  - community/test_packagepy
 ---
 
 # test_package.py
@@ -43,10 +43,11 @@ tags:
 - [[test_run_agy_flags_and_boundaries()]] - `contains` [EXTRACTED]
 - [[test_scene_hold_padding()]] - `contains` [EXTRACTED]
 - [[test_session_shared()]] - `contains` [EXTRACTED]
+- [[test_solo_ask_ai_hands_over_when_out_of_credits()]] - `contains` [EXTRACTED]
 - [[test_solo_ask_ai_never_falls_back()]] - `contains` [EXTRACTED]
 - [[test_solo_brain_selection_options()]] - `contains` [EXTRACTED]
 - [[test_solo_edit_scripts_uses_same_ai()]] - `contains` [EXTRACTED]
 - [[traceback]] - `imports` [EXTRACTED]
 - [[writing.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/re
+#graphify/code #graphify/EXTRACTED #community/test_packagepy

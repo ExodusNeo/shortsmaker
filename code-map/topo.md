@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/MapCard.tsx"
 type: "code"
-community: "MapCard.tsx"
+community: "Short.tsx"
 location: "L11"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/MapCardtsx
+  - community/Shorttsx
 ---
 
 # topo
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[MapCard.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/MapCardtsx
+#graphify/code #graphify/EXTRACTED #community/Shorttsx

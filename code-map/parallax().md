@@ -15,7 +15,7 @@ tags:
 - [[encoder_args()]] - `calls` [EXTRACTED]
 - [[gen.py]] - `contains` [EXTRACTED]
 - [[item {image, out (.mp4), seconds, move, fps, width, height} -…]] - `rationale_for` [EXTRACTED]
-- [[main()_3]] - `indirect_call` [INFERRED]
+- [[main()]] - `indirect_call` [INFERRED]
 - [[to_grid()]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Local_GPU_Worker

@@ -1,18 +1,18 @@
 ---
 source_file: "tests/test_pictures_first.py"
 type: "code"
-community: "gather_pool"
-location: "L214"
+community: "owner"
+location: "L54"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/gather_pool
+  - community/owner
 ---
 
 # .__exit__()
 
 ## Connections
 - [[owner()]] - `calls` [EXTRACTED]
-- [[planning]] - `method` [EXTRACTED]
+- [[stubbed]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/gather_pool
+#graphify/code #graphify/EXTRACTED #community/owner

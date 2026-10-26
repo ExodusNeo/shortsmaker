@@ -1,21 +1,35 @@
 ---
-source_file: "local_ai/gen.py"
+source_file: "blender/build_scene.py"
 type: "code"
-community: "Local GPU Worker"
-location: "L200"
+community: "main"
+location: "L70"
 tags:
   - graphify/code
-  - graphify/INFERRED
-  - community/Local_GPU_Worker
+  - graphify/EXTRACTED
+  - community/main
 ---
 
 # main()
 
 ## Connections
-- [[gen.py]] - `contains` [EXTRACTED]
-- [[images()]] - `indirect_call` [INFERRED]
-- [[parallax()]] - `indirect_call` [INFERRED]
-- [[tts()]] - `indirect_call` [INFERRED]
-- [[video()]] - `indirect_call` [INFERRED]
+- [[dot-beat()]] - `calls` [INFERRED]
+- [[dot-fallen()]] - `calls` [INFERRED]
+- [[dot-falls()]] - `calls` [INFERRED]
+- [[dot-play()]] - `calls` [INFERRED]
+- [[dot-reset()]] - `calls` [INFERRED]
+- [[dot-ride_along()]] - `calls` [INFERRED]
+- [[Failure]] - `calls` [EXTRACTED]
+- [[Shots]] - `calls` [EXTRACTED]
+- [[build()_1]] - `calls` [EXTRACTED]
+- [[build_scene.py]] - `contains` [EXTRACTED]
+- [[dress()]] - `calls` [EXTRACTED]
+- [[fastener()]] - `calls` [EXTRACTED]
+- [[focus_object()]] - `calls` [EXTRACTED]
+- [[json]] - `calls` [EXTRACTED]
+- [[keyloc()]] - `calls` [EXTRACTED]
+- [[keyvis()]] - `calls` [EXTRACTED]
+- [[label()]] - `calls` [EXTRACTED]
+- [[material()]] - `calls` [EXTRACTED]
+- [[setup()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/Local_GPU_Worker
+#graphify/code #graphify/EXTRACTED #community/main
