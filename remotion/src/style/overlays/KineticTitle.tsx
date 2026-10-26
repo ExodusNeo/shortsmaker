@@ -8,12 +8,12 @@ const STAGGER = 0.032;
 const LAND = 0.22;
 
 export const KineticTitle: Overlay = ({graphic, t, start, end}) => {
-	const tOut = end - 0.28;
+	const tOut = end - 0.18;
 	if (t < start || t > tOut) return null;
 	const glyphs = [...graphic.text];
 	const stagger = Math.min(STAGGER, 0.42 / Math.max(1, glyphs.length));
 	const size = Math.min(124, 1680 / Math.max(8, glyphs.length)); // a long phrase gets smaller letters, never wraps
-	const out = interpolate(t, [tOut - 0.22, tOut], [1, 0], CLAMP);
+	const out = interpolate(t, [tOut - 0.18, tOut], [1, 0], CLAMP);
 	return (
 		<div style={{position: 'absolute', ...slot(graphic, 300), left: 0, right: 0, display: 'flex', justifyContent: 'center', opacity: out}}>
 			<div

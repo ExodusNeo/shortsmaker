@@ -235,7 +235,7 @@ def render(short: dict, ch: dict, folder: Path, state: dict | None = None, fix_r
         if choices[i].get("person") and sc.get("person"):
             needed = max(needed, max(0.0, 1.6 - dur))
         if sc.get("graphic"):
-            needed = max(needed, max(0.0, 1.4 - dur))
+            needed = max(needed, max(0.0, 1.6 - dur))
         # Keep narrator voice pacing tight: never stall with dead air pauses
         pads.append(min(0.25, needed))
     if sum(pads) > budget and sum(pads) > 0:

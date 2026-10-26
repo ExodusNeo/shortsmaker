@@ -16,11 +16,11 @@ export const outline = (px: number) =>
  * in ~12 frames with an ~8% overshoot; `leave` (0 -> 1) is a quicker, accelerating exit. */
 export const useWindow = (t: number, tIn: number, end: number) => {
 	const {fps} = useVideoConfig();
-	const tOut = end - 0.32;
+	const tOut = end - 0.18;
 	const enter = spring({frame: (t - tIn) * fps, fps, config: {damping: 16.5, stiffness: 170}});
-	const leave = interpolate(t, [tOut - 0.28, tOut], [0, 1], {...clamp, easing: Easing.in(Easing.cubic)});
-	// a counter, bar or typing must be done by here, 0.4 s before the exit, however short the scene
-	const ready = Math.max(tIn + 0.5, tOut - 0.5);
+	const leave = interpolate(t, [tOut - 0.20, tOut], [0, 1], {...clamp, easing: Easing.in(Easing.cubic)});
+	// a counter, bar or typing must be done by here, 0.3 s before the exit, however short the scene
+	const ready = Math.max(tIn + 0.5, tOut - 0.3);
 	return {visible: t >= tIn && t <= tOut, enter, leave, exit: 1 - leave, tIn, ready};
 };
 
@@ -131,7 +131,7 @@ export const PersonCard: React.FC<{card: Card; t: number}> = ({card, t}) => {
 	const {fps} = useVideoConfig();
 	if (t < card.on || t > card.off) return null;
 	const pop = spring({frame: (t - card.on) * fps, fps, config: {damping: 10, stiffness: 180}}); // overshoots, then settles
-	const exit = interpolate(t, [card.off - 0.32, card.off], [1, 0], {...clamp, easing: Easing.in(Easing.cubic)});
+	const exit = interpolate(t, [card.off - 0.20, card.off], [1, 0], {...clamp, easing: Easing.in(Easing.cubic)});
 	const scale = (0.6 + 0.4 * pop) * (0.75 + 0.25 * exit);
 	const dropY = 45 * (1 - exit);
 	return (

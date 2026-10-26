@@ -795,6 +795,26 @@ pictures, 10 of 14 scenes had 8+ words, and mid-sentence cuts are on purpose, se
 - Not bugs (checked): Minor's missing name card = the one-portrait-per-Short rule (2026-10-25); his only photo was
   scene 1's background. Left-over CHECK lines are printed and get a Shotcut timeline (not silent).
 
+## Graphic card and title hold time fixes (2026-10-26, owner asked after the Digby Tatham-Warter Short)
+The Digby Tatham-Warter Short showed cards ("VIEWING SLIT" kinetic title in scene 2, "KNOCKED OUT" stamp card in scene 3,
+and "WHY CARRY IT?" question beat in scene 4) disappearing too quickly (~1.1s total on-screen time, with only ~0.25–0.5s
+of resting readable time).
+- **`GRAPHIC_BUILD` & `need_time` (`shortsmaker/editplan.py`)**: Added build times for `kinetic` (0.6s), `stamp` (0.35s),
+  `headline` (0.45s), `question` (0.4s), and `mark` (0.4s). Differentiated full animated card overlays (`kinetic`, `stamp`,
+  `headline`, `quote`, `question`, `stat`, `timeline`, `compare`, `mark`, `date`) from plain inline tags (`fact`, `place`).
+  For card overlays, `need_time = max(1.8, build + 1.0)`. Late-trigger cards now shift earlier in the scene
+  (`latest = end - 0.25 - need_time`), providing >= 1.8s on-screen time (e.g. "KNOCKED OUT" now holds for 1.80s instead of
+  1.10s). Plain callouts preserve `need_time = max(1.1, build + 0.7)` so they wait for their spoken word as tested.
+- **Short scene hold padding (`shortsmaker/short_render.py`)**: Raised `sc.get("graphic")` pad threshold from `1.4 - dur`
+  to `1.6 - dur` (matching person cards), allowing scenes under 1.6s to gain up to 0.25s breathing room without dead air.
+- **Crisp Remotion exit envelopes (`remotion/src/Graphics.tsx`, `KineticTitle.tsx`, `QuestionBeat.tsx`)**:
+  In `useWindow`, changed `tOut` from `end - 0.32` to `end - 0.18` and `leave` from `[tOut - 0.28, tOut]` to `[tOut - 0.20, tOut]`.
+  In `KineticTitle` and `QuestionBeat`, changed `tOut` from `end - 0.28` to `end - 0.18` and `out` from `[tOut - 0.22, tOut]` to
+  `[tOut - 0.18, tOut]`. In `PersonCard`, changed exit interpolation to `[card.off - 0.20, card.off]`. Cards now hold solid
+  ~0.22s longer before beginning their exit transition and finish crisply before the cut.
+- **Tests**: Added `test_graphic_card_hold_duration` in `tests/test_package.py` validating hold time and early shift for
+  late triggers on stamp and kinetic cards. All test suites pass (17/17 package, 45/45 full scenes, 11/11 first second, TS tests).
+
 ## Ideas offered, not built
 - Voice cloning (owner's own voice), SFX on the music's beat, YouTube Audio Library tracks for the somber/epic moods.
 - Logbook extras from the Reach/Engagement tabs (drop-off times, search terms, shown in feed, likes/shares): offered

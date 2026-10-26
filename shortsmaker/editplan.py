@@ -139,7 +139,10 @@ MAP_FLY, MAP_HOLD, MAP_EXIT = 1.8, 1.2, 0.47
 
 # Seconds an overlay animates after it pops in (Cards.tsx, Extras.tsx, Graphics.tsx); it starts early enough to
 # finish and hold before leaving (the Ghost Army "15 MILES" counter left at 13)
-GRAPHIC_BUILD = {"stat": 1.25, "timeline": 1.35, "compare": 1.55, "date": 0.7}
+GRAPHIC_BUILD = {
+    "stat": 1.25, "timeline": 1.35, "compare": 1.55, "date": 0.7,
+    "kinetic": 0.6, "stamp": 0.35, "headline": 0.45, "question": 0.4, "mark": 0.4,
+}
 
 
 def scene_cues(sc: dict, words: list[tuple[float, float, str]], start: float, end: float,
@@ -159,7 +162,9 @@ def scene_cues(sc: dict, words: list[tuple[float, float, str]], start: float, en
             cue["map_pace"] = round(min(1.0, max(0.4, (end - MAP_EXIT - MAP_HOLD - cue["graphic"]) / MAP_FLY)), 2)
         else:
             t = plan_rules.spoken_at(words, g["trigger"]) if "trigger" in g else None
-            need_time = max(1.1, build + 0.7)
+            is_card = g.get("style") in ("kinetic", "stamp", "headline", "quote", "question",
+                                         "stat", "timeline", "compare", "mark", "date")
+            need_time = max(1.8 if is_card else 1.1, build + (1.0 if is_card else 0.7))
             latest = end - 0.25 - need_time
             if t is not None:
                 # Start on trigger word, or shift earlier if late in the scene so the graphic has readable hold time

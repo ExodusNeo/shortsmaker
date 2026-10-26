@@ -5,10 +5,10 @@ import {AbsoluteFill, CLAMP, Easing, FONT, interpolate, outline, slot, theme} fr
 import type {Overlay} from '../types';
 
 export const QuestionBeat: Overlay = ({graphic, t, start, end}) => {
-	const tOut = end - 0.28;
+	const tOut = end - 0.18;
 	if (t < start || t > tOut) return null;
 	const tin = t - start;
-	const out = interpolate(t, [tOut - 0.22, tOut], [1, 0], CLAMP);
+	const out = interpolate(t, [tOut - 0.18, tOut], [1, 0], CLAMP);
 	const dim = interpolate(tin, [0, 0.25], [0, 0.22], CLAMP) * out;
 	const scale = interpolate(tin, [0, 0.32], [0.68, 1], {...CLAMP, easing: Easing.out(Easing.back(1.7))});
 	const pulse = 1 + 0.02 * Math.sin(Math.max(0, tin - 0.32) * Math.PI * 1.6); // a gentle breath while it holds

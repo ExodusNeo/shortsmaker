@@ -209,6 +209,30 @@ def test_scene_hold_padding():
     assert cue["off"] - cue["on"] >= 1.5, f"Card duration on screen should be readable: {cue['off'] - cue['on']}"
 
 
+def test_graphic_card_hold_duration():
+    from shortsmaker import editplan
+    # Late trigger in a 2.7s scene with a stamp card: starts early to ensure >= 1.8s hold time
+    stamp_words = [(0.0, 0.5, "blinding"), (0.5, 0.8, "the"), (0.8, 1.2, "driver"),
+                   (1.3, 1.7, "and"), (1.7, 2.1, "knocking"), (2.1, 2.5, "the"), (2.5, 2.7, "out")]
+    sc_stamp = {"graphic": {"style": "stamp", "text": "KNOCKED OUT", "trigger": "knocking the out"},
+                "emphasis": None, "person": None}
+    cue = editplan.scene_cues(sc_stamp, stamp_words, 0.0, 2.7, 2, None)
+    at = cue["graphic"]
+    # Even though "knocking" was spoken at 1.7s, card shifts earlier to give at least 1.8s hold before end - 0.25
+    assert (2.7 - 0.25) - at >= 1.8 - 1e-6, f"Stamp card hold time too short: {(2.7 - 0.25) - at}"
+    assert at <= 0.65 + 1e-6, f"Stamp card should shift early in the scene: {at}"
+
+    # Late trigger in a 1.9s scene with kinetic title: starts early to maximize hold
+    kinetic_words = [(0.0, 0.4, "shoved"), (0.4, 0.8, "the"), (0.8, 1.1, "tip"),
+                     (1.1, 1.4, "viewing"), (1.4, 1.8, "slit")]
+    sc_kinetic = {"graphic": {"style": "kinetic", "text": "VIEWING SLIT", "trigger": "viewing slit"},
+                  "emphasis": None, "person": None}
+    cue_k = editplan.scene_cues(sc_kinetic, kinetic_words, 0.0, 1.9, 1, None)
+    at_k = cue_k["graphic"]
+    assert (1.9 - 0.25) - at_k >= 1.4, f"Kinetic title hold time too short: {(1.9 - 0.25) - at_k}"
+    assert abs(at_k - 0.2) < 1e-6, f"Kinetic title should start at scene earliest bound: {at_k}"
+
+
 def test_solo_brain_selection_options():
     from shortsmaker import channel_profiles
     assert channel_profiles.BRAINS == ["claude-only", "gemini-only", "claude", "gemini", "both"]
