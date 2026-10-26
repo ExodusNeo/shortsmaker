@@ -238,7 +238,7 @@ Rules that keep it working:
    while ~20 usable pool pictures sat unused; one AI call matches the rejected scenes to usable pool pictures nothing in
    the Short shows, by their picture-list text; a picture the review rejected goes in `review_rejected` and is never
    offered again; on Togo's real data it replaced 2 of 6 paintings, the other 4 had no photo), or get repainted with `paint_new()` + `rewrite_paint_prompts()` (one AI call rewrites every rejected painting's prompt from the old prompt + the complaint, with the rules file's `## AI paintings`, formerly `AI_IMAGE_RULE`; 2026-10-21), and the Short
-   re-renders automatically; each re-render is reviewed again and fixed again while fixable problems remain, up to
+   re-renders automatically (since 2026-10-26, pauses for Enter before fixing: press Enter to fix, or close CMD / type 'skip' to keep as is); each re-render is reviewed again and fixed again while fixable problems remain, up to
    `AUTO_FIX_ROUNDS` (3) rounds (owner asked 2026-10-20; was one round). The cap exists because an AI reviewer
    almost always finds something. Notes in edit_plan.txt are prefixed "round N:". fix.bat re-renders never loop. A flagged **custom** motion graphic is first sent back to its coder with the
    reviewer's complaint and its current code (`redraw_custom()`, owner asked 2026-10-18): one rewrite, compile-checked

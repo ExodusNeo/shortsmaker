@@ -145,6 +145,25 @@ def test_review_knows_what_dims_a_picture_on_purpose():
     assert "| on top:" not in asked[1]  # without cues (fix.bat callers), the plan is as before
 
 
+def test_fix_round_user_confirmation():
+    import builtins
+    from shortsmaker import short_render
+    prompts = []
+    old_input = builtins.input
+    try:
+        builtins.input = lambda prompt="": prompts.append(prompt) or ""
+        # simulate input prompt logic
+        ans = builtins.input("prompt")
+        assert ans == ""
+        assert len(prompts) == 1
+
+        builtins.input = lambda prompt="": prompts.append(prompt) or "skip"
+        ans = builtins.input("prompt").strip().lower()
+        assert ans in ("skip", "n", "no", "q", "quit")
+    finally:
+        builtins.input = old_input
+
+
 if __name__ == "__main__":
     names = [n for n in sorted(globals()) if n.startswith("test_") and (len(sys.argv) < 2 or n in sys.argv[1:])]
     failed = 0

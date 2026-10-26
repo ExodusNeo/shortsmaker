@@ -423,15 +423,25 @@ def render(short: dict, ch: dict, folder: Path, state: dict | None = None, fix_r
     save_state(work, short, choices, music, by_gemini)  # work/ stays KEEP_WORK_DAYS for fix.bat
     # Fix and re-render while the review finds fixable scenes, capped: an AI reviewer nearly always finds
     # something, so an uncapped loop could repaint forever. fix.bat re-renders (state, round 0) stay manual.
+    # The owner approves each fix round (press Enter to fix, or close CMD / type 'skip' to keep as is).
     if (fixes or opener) and (not state or fix_round) and fix_round < AUTO_FIX_ROUNDS:
         st = load_state(work)
         st["short"]["research"] = short.get("research")  # not in state.json; the motion-graphic rescue reads it
-        print(f"  fix round {fix_round + 1}/{AUTO_FIX_ROUNDS}: the review found {min(len(fixes), AUTO_REPAINT_MAX)} "
-              f"scene(s) to fix{' and a weak opening' if opener else ''}: fixing them and re-rendering...")
-        st["short"]["auto_fixed"] = (st["short"].get("auto_fixed") or []) + [
-            f"round {fix_round + 1}: {note}" for note in review.apply_review_fixes(st, work, fixes, opener)]
-        render(st["short"], ch, folder, st, fix_round + 1)
-        return
+        n_fix = min(len(fixes), AUTO_REPAINT_MAX)
+        what = f"{n_fix} scene(s) to fix{' and a weak opening' if opener else ''}"
+        try:
+            ans = input(f"\n  >> Review found {what} (fix round {fix_round + 1}/{AUTO_FIX_ROUNDS}).\n"
+                        f"  >> Press Enter to fix and re-render (or close CMD / type 'skip' to keep as is): ").strip().lower()
+        except (EOFError, KeyboardInterrupt):
+            ans = "skip"
+        if ans in ("skip", "n", "no", "q", "quit"):
+            print("  keeping current video without re-rendering.")
+        else:
+            print(f"  fix round {fix_round + 1}/{AUTO_FIX_ROUNDS}: fixing {what} and re-rendering...")
+            st["short"]["auto_fixed"] = (st["short"].get("auto_fixed") or []) + [
+                f"round {fix_round + 1}: {note}" for note in review.apply_review_fixes(st, work, fixes, opener)]
+            render(st["short"], ch, folder, st, fix_round + 1)
+            return
     if (fixes or opener) and fix_round:
         print(f"  stopped fixing after {AUTO_FIX_ROUNDS} rounds: the CHECK lines above are left for you")
     if not issues:
