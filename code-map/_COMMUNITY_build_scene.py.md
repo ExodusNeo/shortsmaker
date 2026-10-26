@@ -9,7 +9,7 @@ members: 18
 
 ## Members
 - [[(start pose, end pose) of a beat; `after` the collapse, close shots find the…]] - rationale - blender/build_scene.py
-- [[dot-__init__()_8]] - code - blender/build_scene.py
+- [[dot-__init__()_6]] - code - blender/build_scene.py
 - [[dot-beat()]] - code - blender/build_scene.py
 - [[dot-close()_1]] - code - blender/build_scene.py
 - [[dot-wide()]] - code - blender/build_scene.py
@@ -41,11 +41,11 @@ SORT file.name ASC
 - 3 edges to [[_COMMUNITY_Blender Ink Look]]
 - 2 edges to [[_COMMUNITY_templates.py]]
 - 2 edges to [[_COMMUNITY_test_full_scenes.py]]
+- 1 edge to [[_COMMUNITY___init__.py]]
 - 1 edge to [[_COMMUNITY_json]]
-- 1 edge to [[_COMMUNITY_short_render.py]]
 
 ## Top bridge nodes
-- [[build_scene.py]] - degree 16, connects to 7 communities
+- [[build_scene.py]] - degree 16, connects to 8 communities
 - [[failures.py]] - degree 10, connects to 5 communities
 - [[bpy]] - degree 4, connects to 2 communities
 - [[mathutils]] - degree 4, connects to 2 communities

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/image_sources.py"
 type: "rationale"
-community: "gather_pool"
+community: "wm_files"
 location: "L73"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/gather_pool
+  - community/wm_files
 ---
 
 # URL of a standard-size Wikimedia thumbnail: the largest allowed step that fits…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[thumb_url()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/gather_pool
+#graphify/rationale #graphify/EXTRACTED #community/wm_files

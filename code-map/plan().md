@@ -12,7 +12,7 @@ tags:
 # plan()
 
 ## Connections
-- [[ask()_10]] - `calls` [EXTRACTED]
+- [[ask()_5]] - `calls` [EXTRACTED]
 - [[test_a_failure_in_scene_one_becomes_the_hook()]] - `calls` [EXTRACTED]
 - [[test_bad_values_get_defaults()]] - `calls` [EXTRACTED]
 - [[test_blender_plan.py]] - `contains` [EXTRACTED]

@@ -1,17 +1,27 @@
 ---
 source_file: ""
 type: "code"
-community: "test_blender_render.py"
+community: "AI Clip Prompts and Cuts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_blender_renderpy
+  - community/AI_Clip_Prompts_and_Cuts
 ---
 
 # Path
 
 ## Connections
-- [[_run()]] - `references` [EXTRACTED]
-- [[render_clips()]] - `references` [EXTRACTED]
+- [[cover_crop()]] - `references` [EXTRACTED]
+- [[cut_owner_clip()]] - `references` [EXTRACTED]
+- [[gemini_images()]] - `references` [EXTRACTED]
+- [[h3_prompts()]] - `references` [EXTRACTED]
+- [[local_clips()]] - `references` [EXTRACTED]
+- [[local_job()]] - `references` [EXTRACTED]
+- [[local_voice()]] - `references` [EXTRACTED]
+- [[moss_images()]] - `references` [EXTRACTED]
+- [[split_takes()]] - `references` [EXTRACTED]
+- [[start_picture_problems()]] - `references` [EXTRACTED]
+- [[unpack_clips()]] - `references` [EXTRACTED]
+- [[veo_handoff()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_blender_renderpy
+#graphify/code #graphify/EXTRACTED #community/AI_Clip_Prompts_and_Cuts

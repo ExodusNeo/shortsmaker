@@ -16,7 +16,7 @@ tags:
 - [[flash_alpha()]] - `calls` [EXTRACTED]
 - [[frame()_1]] - `calls` [EXTRACTED]
 - [[frame_render.py]] - `contains` [EXTRACTED]
-- [[render()_2]] - `calls` [EXTRACTED]
+- [[render()_1]] - `calls` [EXTRACTED]
 - [[test_hard_cuts_never_blend_scenes()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/math

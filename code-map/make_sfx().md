@@ -17,7 +17,7 @@ tags:
 - [[math]] - `calls` [EXTRACTED]
 - [[noise()]] - `contains` [EXTRACTED]
 - [[random]] - `calls` [EXTRACTED]
-- [[render()_2]] - `calls` [EXTRACTED]
+- [[render()_1]] - `calls` [EXTRACTED]
 - [[save()]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/math

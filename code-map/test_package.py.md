@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_package.py"
 type: "code"
-community: "test_full_scenes.py"
+community: "__init__.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_full_scenespy
+  - community/__init__py
 ---
 
 # test_package.py
@@ -37,6 +37,7 @@ tags:
 - [[test_ffmpeg_on_path()]] - `contains` [EXTRACTED]
 - [[test_gemini_reviews_get_the_main_model_bulk_pictures_flash()]] - `contains` [EXTRACTED]
 - [[test_gemini_timeout_switches_to_flash()]] - `contains` [EXTRACTED]
+- [[test_graphic_card_hold_duration()]] - `contains` [EXTRACTED]
 - [[test_person_card_hold_and_exit_gap()]] - `contains` [EXTRACTED]
 - [[test_root()]] - `contains` [EXTRACTED]
 - [[test_run_agy_flags_and_boundaries()]] - `contains` [EXTRACTED]
@@ -48,4 +49,4 @@ tags:
 - [[traceback]] - `imports` [EXTRACTED]
 - [[writing.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_full_scenespy
+#graphify/code #graphify/EXTRACTED #community/__init__py

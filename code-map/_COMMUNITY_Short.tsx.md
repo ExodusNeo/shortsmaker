@@ -9,7 +9,7 @@ members: 31
 
 ## Members
 - [[Background()]] - code - remotion/src/Short.tsx
-- [[Captions()_1]] - code - remotion/src/Captions.tsx
+- [[Captions()]] - code - remotion/src/Captions.tsx
 - [[Captions.tsx]] - code - remotion/src/Captions.tsx
 - [[GraphicFor()]] - code - remotion/src/Short.tsx
 - [[INKS_1]] - code - tests/style.test.ts

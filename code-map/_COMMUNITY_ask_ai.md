@@ -8,19 +8,19 @@ members: 24
 **Members:** 24 nodes
 
 ## Members
+- [[Before any script is written each topic's twist against its Wikipedia text.…]] - rationale - shortsmaker/writing.py
 - [[Claude's picks of channels to study (plus a few search queries viewers use) for…]] - rationale - shortsmaker/channel_profiles.py
-- [[Create this channel's profile the owner's niche (or one Claude picks), with…]] - rationale - shortsmaker/channel_profiles.py
 - [[Gemini 4 Argon once the owner's account has it (owner's wish), else Gemini 3.8…]] - rationale - shortsmaker/llm.py
 - [[Headless planner call (BRAIN, or `brain` Claude or Gemini) that returns parsed…]] - rationale - shortsmaker/llm.py
 - [[One headless Gemini turn. agy only takes the prompt inline on its command line…]] - rationale - shortsmaker/llm.py
-- [[Path_10]] - code
+- [[Path_7]] - code
 - [[True when a CLI reply is an account quota  credit  rate-limit error rather…]] - rationale - shortsmaker/llm.py
 - [[__init__()]] - code - tests/test_full_scenes.py
 - [[ask_ai()]] - code - shortsmaker/llm.py
+- [[check_twists()]] - code - shortsmaker/writing.py
 - [[fake_run()]] - code - tests/test_package.py
 - [[fake_run()_1]] - code - tests/test_package.py
 - [[gemini_model()]] - code - shortsmaker/llm.py
-- [[new_channel()]] - code - shortsmaker/channel_profiles.py
 - [[quota_exhausted()]] - code - shortsmaker/llm.py
 - [[run_agy()]] - code - shortsmaker/llm.py
 - [[seed_ideas()]] - code - shortsmaker/channel_profiles.py
@@ -41,24 +41,28 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 14 edges to [[_COMMUNITY_test_full_scenes.py]]
-- 4 edges to [[_COMMUNITY_choose_images]]
-- 3 edges to [[_COMMUNITY_test_rules.py]]
-- 3 edges to [[_COMMUNITY_json]]
-- 3 edges to [[_COMMUNITY_fix_short]]
-- 2 edges to [[_COMMUNITY_code_custom_scenes]]
+- 13 edges to [[_COMMUNITY___init__.py]]
+- 4 edges to [[_COMMUNITY_json]]
+- 3 edges to [[_COMMUNITY_motion.py]]
+- 3 edges to [[_COMMUNITY_test_story.py]]
 - 2 edges to [[_COMMUNITY_AI Clip Prompts and Cuts]]
+- 2 edges to [[_COMMUNITY_rescue_graphics]]
+- 2 edges to [[_COMMUNITY_fix_short]]
 - 2 edges to [[_COMMUNITY_edit_scripts]]
-- 1 edge to [[_COMMUNITY_re]]
+- 2 edges to [[_COMMUNITY_write_scripts]]
+- 1 edge to [[_COMMUNITY_test_rules.py]]
+- 1 edge to [[_COMMUNITY_choose_images]]
+- 1 edge to [[_COMMUNITY_pool_of]]
+- 1 edge to [[_COMMUNITY_gpu.py]]
+- 1 edge to [[_COMMUNITY_apply_review_fixes]]
 - 1 edge to [[_COMMUNITY_visual_review]]
-- 1 edge to [[_COMMUNITY_render_remotion]]
-- 1 edge to [[_COMMUNITY_check_twists]]
-- 1 edge to [[_COMMUNITY_fact_check]]
-- 1 edge to [[_COMMUNITY_write_scripts]]
+- 1 edge to [[_COMMUNITY_invent_component]]
+- 1 edge to [[_COMMUNITY_re]]
+- 1 edge to [[_COMMUNITY_test_full_scenes.py]]
 
 ## Top bridge nodes
-- [[ask_ai()]] - degree 35, connects to 14 communities
-- [[new_channel()]] - degree 5, connects to 3 communities
+- [[ask_ai()]] - degree 35, connects to 15 communities
+- [[check_twists()]] - degree 8, connects to 4 communities
 - [[gemini_model()]] - degree 6, connects to 2 communities
 - [[seed_ideas()]] - degree 4, connects to 2 communities
 - [[run_agy()]] - degree 9, connects to 1 community

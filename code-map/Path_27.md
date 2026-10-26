@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Gemini Image Painting"
+community: "paint_instead"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Gemini_Image_Painting
+  - community/paint_instead
 ---
 
 # Path
@@ -17,4 +17,4 @@ tags:
 - [[redraw_custom()]] - `references` [EXTRACTED]
 - [[render_remotion()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Gemini_Image_Painting
+#graphify/code #graphify/EXTRACTED #community/paint_instead

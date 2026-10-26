@@ -37,14 +37,15 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 10 edges to [[_COMMUNITY_subprocess]]
+- 5 edges to [[_COMMUNITY_test_full_scenes.py]]
+- 5 edges to [[_COMMUNITY_subprocess]]
 - 3 edges to [[_COMMUNITY_ffmpeg]]
 - 2 edges to [[_COMMUNITY_render]]
 - 2 edges to [[_COMMUNITY_re]]
 
 ## Top bridge nodes
+- [[master_gain()]] - degree 6, connects to 3 communities
 - [[make()]] - degree 9, connects to 2 communities
 - [[project_xml()]] - degree 8, connects to 2 communities
-- [[master_gain()]] - degree 6, connects to 2 communities
 - [[short_folder()]] - degree 6, connects to 2 communities
 - [[caption_layer()]] - degree 5, connects to 2 communities

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/photo_prep.py"
 type: "rationale"
-community: "Gemini Image Painting"
+community: "render"
 location: "L87"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Gemini_Image_Painting
+  - community/render
 ---
 
 # Fill the 9:16 frame with the picture (centre crop) for the slow zoom/pan. This…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[to_vertical()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Gemini_Image_Painting
+#graphify/rationale #graphify/EXTRACTED #community/render

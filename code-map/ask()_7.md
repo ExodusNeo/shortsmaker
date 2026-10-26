@@ -1,18 +1,17 @@
 ---
-source_file: "tests/test_style.py"
+source_file: "tests/test_full_scenes.py"
 type: "code"
-community: "fact_check"
-location: "L110"
+community: "apply_review_fixes"
+location: "L667"
 tags:
   - graphify/code
-  - graphify/INFERRED
-  - community/fact_check
+  - graphify/EXTRACTED
+  - community/apply_review_fixes
 ---
 
 # ask()
 
 ## Connections
-- [[plan_with()_1]] - `indirect_call` [INFERRED]
-- [[test_fact_check_sees_new_graphics()]] - `indirect_call` [INFERRED]
+- [[test_look_check_fixes_code()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/fact_check
+#graphify/code #graphify/EXTRACTED #community/apply_review_fixes

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/picture_pool.py"
 type: "rationale"
-community: "choose_images"
+community: "pool_of"
 location: "L253"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/choose_images
+  - community/pool_of
 ---
 
 # The valid entries of a picture-list reply (LLM output is untrusted).
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[catalog_entries()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/choose_images
+#graphify/rationale #graphify/EXTRACTED #community/pool_of

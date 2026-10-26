@@ -20,7 +20,7 @@ members: 26
 - [[near()]] - code - tests/test_blender_scene.py
 - [[peak()]] - code - tests/test_blender_scene.py
 - [[plan_with()]] - code - tests/test_blender_scene.py
-- [[render()_1]] - code - tests/test_blender_scene.py
+- [[render()]] - code - tests/test_blender_scene.py
 - [[scene2()]] - code - tests/test_blender_scene.py
 - [[test_a_failing_pier_falls_with_its_red_copy()]] - code - tests/test_blender_scene.py
 - [[test_blender_scene.py]] - code - tests/test_blender_scene.py
@@ -43,13 +43,14 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 4 edges to [[_COMMUNITY_test_full_scenes.py]]
-- 2 edges to [[_COMMUNITY_subprocess]]
-- 2 edges to [[_COMMUNITY_short_render.py]]
+- 3 edges to [[_COMMUNITY_subprocess]]
+- 2 edges to [[_COMMUNITY___init__.py]]
+- 2 edges to [[_COMMUNITY_test_full_scenes.py]]
 - 1 edge to [[_COMMUNITY_default_build]]
 - 1 edge to [[_COMMUNITY_json]]
+- 1 edge to [[_COMMUNITY_gpu.py]]
 - 1 edge to [[_COMMUNITY_blender_plan.py]]
 
 ## Top bridge nodes
-- [[test_blender_scene.py]] - degree 28, connects to 5 communities
+- [[test_blender_scene.py]] - degree 28, connects to 6 communities
 - [[plan_with()]] - degree 13, connects to 1 community

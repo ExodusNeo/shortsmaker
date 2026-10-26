@@ -1,12 +1,12 @@
 ---
 source_file: "local_ai/qwen_voice.py"
 type: "code"
-community: "time"
+community: "test_story.py"
 location: "L57"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/time
+  - community/test_storypy
 ---
 
 # spoken_tokens()
@@ -19,4 +19,4 @@ tags:
 - [[say_number()]] - `calls` [EXTRACTED]
 - [[spoken_sentence()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/time
+#graphify/code #graphify/EXTRACTED #community/test_storypy

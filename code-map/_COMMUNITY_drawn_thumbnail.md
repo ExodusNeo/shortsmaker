@@ -10,7 +10,7 @@ members: 12
 ## Members
 - [[(first, last) frame of every scene, 1-based and back to back; even a very short…]] - rationale - shortsmaker/blender_render.py
 - [[(picture, credit line, CHECK line) for a drawn Short's thumbnail the real…]] - rationale - shortsmaker/short_render.py
-- [[Path_17]] - code
+- [[Path_14]] - code
 - [[drawn_short()]] - code - tests/test_blender_run.py
 - [[drawn_thumbnail()]] - code - shortsmaker/short_render.py
 - [[get()]] - code - tests/test_blender_run.py
@@ -29,18 +29,19 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 5 edges to [[_COMMUNITY_test_full_scenes.py]]
+- 5 edges to [[_COMMUNITY___init__.py]]
 - 3 edges to [[_COMMUNITY_render]]
 - 3 edges to [[_COMMUNITY_test_blender_render.py]]
-- 2 edges to [[_COMMUNITY_choose_images]]
-- 2 edges to [[_COMMUNITY_gpu.py]]
+- 2 edges to [[_COMMUNITY_test_full_scenes.py]]
+- 1 edge to [[_COMMUNITY_prepare_topic]]
+- 1 edge to [[_COMMUNITY_fetch]]
 - 1 edge to [[_COMMUNITY_blender_plan.py]]
+- 1 edge to [[_COMMUNITY_gpu.py]]
 - 1 edge to [[_COMMUNITY_re]]
-- 1 edge to [[_COMMUNITY_short_render.py]]
 - 1 edge to [[_COMMUNITY_default_build]]
 
 ## Top bridge nodes
-- [[drawn_thumbnail()]] - degree 13, connects to 6 communities
+- [[drawn_thumbnail()]] - degree 13, connects to 7 communities
 - [[scene_frames()]] - degree 8, connects to 3 communities
 - [[drawn_short()]] - degree 6, connects to 2 communities
 - [[test_film_opener_is_skipped_and_bad_bytes_fall_back()]] - degree 4, connects to 1 community

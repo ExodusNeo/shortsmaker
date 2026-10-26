@@ -1,19 +1,19 @@
 ---
 source_file: "tests/patching.py"
 type: "code"
-community: "test_pictures_first.py"
+community: "owner"
 location: "L17"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_pictures_firstpy
+  - community/owner
 ---
 
 # owner()
 
 ## Connections
-- [[dot-__enter__()_2]] - `calls` [EXTRACTED]
 - [[dot-__enter__()_3]] - `calls` [EXTRACTED]
+- [[dot-__enter__()]] - `calls` [EXTRACTED]
 - [[dot-__exit__()_2]] - `calls` [EXTRACTED]
 - [[dot-__exit__()_3]] - `calls` [EXTRACTED]
 - [[The module that defines function `name` (KeyError for anything else).]] - `rationale_for` [EXTRACTED]
@@ -26,4 +26,4 @@ tags:
 - [[test_style.py]] - `imports` [EXTRACTED]
 - [[with_fakes()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_pictures_firstpy
+#graphify/code #graphify/EXTRACTED #community/owner

@@ -9,7 +9,7 @@ members: 31
 
 ## Members
 - [[(style, text) for the built-in renderer, which draws only dates, places and…]] - rationale - shortsmaker/plan_rules.py
-- [[dot-__init__()_4]] - code - shortsmaker/frame_render.py
+- [[dot-__init__()_1]] - code - shortsmaker/frame_render.py
 - [[dot-at()]] - code - shortsmaker/frame_render.py
 - [[dot-close()]] - code - shortsmaker/frame_render.py
 - [[Animate the callout in, hold it, fade it out before the scene ends.]] - rationale - shortsmaker/frame_render.py
@@ -19,7 +19,7 @@ members: 31
 - [[Image_1]] - code
 - [[Image_2]] - code
 - [[One frame of slow Ken Burns motion; affine sampling is sub-pixel so it never…]] - rationale - shortsmaker/frame_render.py
-- [[Path_13]] - code
+- [[Path_9]] - code
 - [[Pop the card in with a slight overshoot over a dimmed background, then shrink…]] - rationale - shortsmaker/frame_render.py
 - [[Pre-render a callout as a small transparent image (animated per frame later).]] - rationale - shortsmaker/frame_render.py
 - [[Returns frame(i, t) scene i at time t with camera move and graphics applied.…]] - rationale - shortsmaker/frame_render.py
@@ -48,18 +48,18 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 12 edges to [[_COMMUNITY_gpu.py]]
+- 10 edges to [[_COMMUNITY_test_full_scenes.py]]
+- 3 edges to [[_COMMUNITY_gpu.py]]
 - 2 edges to [[_COMMUNITY_write_scripts]]
 - 2 edges to [[_COMMUNITY_render]]
 - 1 edge to [[_COMMUNITY_math]]
 - 1 edge to [[_COMMUNITY_subprocess]]
 - 1 edge to [[_COMMUNITY_AI Clip Prompts and Cuts]]
-- 1 edge to [[_COMMUNITY_full_cues]]
-- 1 edge to [[_COMMUNITY_test_full_scenes.py]]
+- 1 edge to [[_COMMUNITY_scene_cues]]
 
 ## Top bridge nodes
 - [[fills_frame()]] - degree 6, connects to 4 communities
+- [[person_card()]] - degree 6, connects to 3 communities
 - [[frame_maker()]] - degree 8, connects to 2 communities
-- [[person_card()]] - degree 6, connects to 2 communities
 - [[thumbnail()]] - degree 4, connects to 2 communities
 - [[ClipReader]] - degree 6, connects to 1 community

@@ -1,20 +1,20 @@
 ---
 source_file: "shortsmaker/picture_pool.py"
 type: "code"
-community: "choose_images"
+community: "prepare_topic"
 location: "L173"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/choose_images
+  - community/prepare_topic
 ---
 
 # pool_folder()
 
 ## Connections
-- [[Path_8]] - `references` [EXTRACTED]
+- [[Path_6]] - `references` [EXTRACTED]
 - [[hashlib]] - `calls` [EXTRACTED]
 - [[picture_pool.py]] - `contains` [EXTRACTED]
 - [[prepare_topic()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/choose_images
+#graphify/code #graphify/EXTRACTED #community/prepare_topic

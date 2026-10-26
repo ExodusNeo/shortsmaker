@@ -1,17 +1,17 @@
 ---
-source_file: "blender/build_scene.py"
+source_file: "tests/test_pictures_first.py"
 type: "code"
-community: "build_scene.py"
-location: "L44"
+community: "gather_pool"
+location: "L36"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/build_scenepy
+  - community/gather_pool
 ---
 
 # .__init__()
 
 ## Connections
-- [[Shots]] - `method` [EXTRACTED]
+- [[stubbed]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/build_scenepy
+#graphify/code #graphify/EXTRACTED #community/gather_pool

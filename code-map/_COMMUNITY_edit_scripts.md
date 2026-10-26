@@ -1,11 +1,11 @@
 ---
 type: community
-members: 13
+members: 11
 ---
 
 # edit_scripts
 
-**Members:** 13 nodes
+**Members:** 11 nodes
 
 ## Members
 - [[(min words, max words, min scenes, max scenes, seconds) for this batch's…]] - rationale - shortsmaker/writing.py
@@ -15,11 +15,9 @@ members: 13
 - [[The topic's usable pictures as prompt lines ( without a picture list).]] - rationale - shortsmaker/picture_pool.py
 - [[direct_scripts()]] - code - shortsmaker/writing.py
 - [[edit_scripts()]] - code - shortsmaker/writing.py
-- [[fake()]] - code - tests/test_story.py
 - [[length_plan()]] - code - shortsmaker/writing.py
 - [[narration_lines()]] - code - shortsmaker/writing.py
 - [[pictures_of()]] - code - shortsmaker/picture_pool.py
-- [[test_editor_gets_one_second_pass_for_broken_rules()]] - code - tests/test_story.py
 - [[test_solo_edit_scripts_uses_same_ai()]] - code - tests/test_package.py
 
 ## Live Query (requires Dataview plugin)
@@ -30,15 +28,16 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 7 edges to [[_COMMUNITY_test_full_scenes.py]]
 - 5 edges to [[_COMMUNITY_write_scripts]]
+- 5 edges to [[_COMMUNITY___init__.py]]
 - 2 edges to [[_COMMUNITY_ask_ai]]
+- 2 edges to [[_COMMUNITY_test_story.py]]
 - 2 edges to [[_COMMUNITY_json]]
-- 1 edge to [[_COMMUNITY_choose_images]]
-- 1 edge to [[_COMMUNITY_test_pictures_first.py]]
+- 1 edge to [[_COMMUNITY_prepare_topic]]
 - 1 edge to [[_COMMUNITY_style_library]]
-- 1 edge to [[_COMMUNITY_visual_review]]
-- 1 edge to [[_COMMUNITY_re]]
+- 1 edge to [[_COMMUNITY_fix_short]]
+- 1 edge to [[_COMMUNITY_clean_pics]]
+- 1 edge to [[_COMMUNITY_gpu.py]]
 
 ## Top bridge nodes
 - [[edit_scripts()]] - degree 13, connects to 5 communities

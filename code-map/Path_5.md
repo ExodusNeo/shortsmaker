@@ -11,7 +11,6 @@ tags:
 # Path
 
 ## Connections
-- [[log_short()]] - `references` [EXTRACTED]
-- [[vault_page()]] - `references` [EXTRACTED]
+- [[draft_rules()]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/test_rulespy

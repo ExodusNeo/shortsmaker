@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/gpu.py"
 type: "rationale"
-community: "local_voice"
+community: "ffmpeg"
 location: "L116"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/local_voice
+  - community/ffmpeg
 ---
 
 # Free VoiceStudio's GPU memory: the 8 GB card is needed next for SDXL, LTX and…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[voicestudio_unload()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/local_voice
+#graphify/rationale #graphify/EXTRACTED #community/ffmpeg

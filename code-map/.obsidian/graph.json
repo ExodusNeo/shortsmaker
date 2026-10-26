@@ -43,7 +43,7 @@
       }
     },
     {
-      "query": "tag:#community/test_full_scenespy",
+      "query": "tag:#community/__init__py",
       "color": {
         "a": 1,
         "rgb": 11565729
@@ -57,7 +57,7 @@
       }
     },
     {
-      "query": "tag:#community/full_cues",
+      "query": "tag:#community/scene_cues",
       "color": {
         "a": 1,
         "rgb": 10253663
@@ -85,7 +85,7 @@
       }
     },
     {
-      "query": "tag:#community/code_custom_scenes",
+      "query": "tag:#community/motionpy",
       "color": {
         "a": 1,
         "rgb": 14767961
@@ -127,7 +127,7 @@
       }
     },
     {
-      "query": "tag:#community/choose_images",
+      "query": "tag:#community/prepare_topic",
       "color": {
         "a": 1,
         "rgb": 10253663
@@ -169,7 +169,7 @@
       }
     },
     {
-      "query": "tag:#community/gather_pool",
+      "query": "tag:#community/fetch",
       "color": {
         "a": 1,
         "rgb": 5873999
@@ -183,7 +183,7 @@
       }
     },
     {
-      "query": "tag:#community/audio_mixpy",
+      "query": "tag:#community/speak",
       "color": {
         "a": 1,
         "rgb": 11565729
@@ -246,14 +246,14 @@
       }
     },
     {
-      "query": "tag:#community/render_remotion",
+      "query": "tag:#community/invent_component",
       "color": {
         "a": 1,
         "rgb": 15583560
       }
     },
     {
-      "query": "tag:#community/time",
+      "query": "tag:#community/test_storypy",
       "color": {
         "a": 1,
         "rgb": 11565729
@@ -316,14 +316,14 @@
       }
     },
     {
-      "query": "tag:#community/local_voice",
+      "query": "tag:#community/ffmpeg",
       "color": {
         "a": 1,
         "rgb": 15583560
       }
     },
     {
-      "query": "tag:#community/fact_check",
+      "query": "tag:#community/test_stylepy",
       "color": {
         "a": 1,
         "rgb": 11565729
@@ -344,7 +344,7 @@
       }
     },
     {
-      "query": "tag:#community/ffmpeg",
+      "query": "tag:#community/pool_of",
       "color": {
         "a": 1,
         "rgb": 12234924
@@ -379,7 +379,7 @@
       }
     },
     {
-      "query": "tag:#community/check_twists",
+      "query": "tag:#community/apply_review_fixes",
       "color": {
         "a": 1,
         "rgb": 5873999
@@ -400,6 +400,13 @@
       }
     },
     {
+      "query": "tag:#community/choose_images",
+      "color": {
+        "a": 1,
+        "rgb": 16752039
+      }
+    },
+    {
       "query": "tag:#community/edit_scripts",
       "color": {
         "a": 1,
@@ -407,10 +414,31 @@
       }
     },
     {
-      "query": "tag:#community/Gemini_Image_Painting",
+      "query": "tag:#community/paint_instead",
       "color": {
         "a": 1,
         "rgb": 12234924
+      }
+    },
+    {
+      "query": "tag:#community/style_labpy",
+      "color": {
+        "a": 1,
+        "rgb": 5142951
+      }
+    },
+    {
+      "query": "tag:#community/render_remotion",
+      "color": {
+        "a": 1,
+        "rgb": 15896107
+      }
+    },
+    {
+      "query": "tag:#community/gather_pool",
+      "color": {
+        "a": 1,
+        "rgb": 14767961
       }
     },
     {
@@ -421,17 +449,66 @@
       }
     },
     {
-      "query": "tag:#community/short_renderpy",
+      "query": "tag:#community/test_full_scenespy",
       "color": {
         "a": 1,
         "rgb": 5873999
       }
     },
     {
-      "query": "tag:#community/Short_Credit_Tags",
+      "query": "tag:#community/clean_pics",
       "color": {
         "a": 1,
         "rgb": 15583560
+      }
+    },
+    {
+      "query": "tag:#community/wm_files",
+      "color": {
+        "a": 1,
+        "rgb": 11565729
+      }
+    },
+    {
+      "query": "tag:#community/owner",
+      "color": {
+        "a": 1,
+        "rgb": 16752039
+      }
+    },
+    {
+      "query": "tag:#community/captions",
+      "color": {
+        "a": 1,
+        "rgb": 10253663
+      }
+    },
+    {
+      "query": "tag:#community/rescue_graphics",
+      "color": {
+        "a": 1,
+        "rgb": 12234924
+      }
+    },
+    {
+      "query": "tag:#community/wants_remotion",
+      "color": {
+        "a": 1,
+        "rgb": 5142951
+      }
+    },
+    {
+      "query": "tag:#community/patchingpy",
+      "color": {
+        "a": 1,
+        "rgb": 15896107
+      }
+    },
+    {
+      "query": "tag:#community/gemini_images",
+      "color": {
+        "a": 1,
+        "rgb": 14767961
       }
     }
   ]

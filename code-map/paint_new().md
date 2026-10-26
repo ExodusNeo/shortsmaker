@@ -12,7 +12,7 @@ tags:
 # paint_new()
 
 ## Connections
-- [[Path_9]] - `references` [EXTRACTED]
+- [[Path_25]] - `references` [EXTRACTED]
 - [[apply_review_fixes()]] - `calls` [EXTRACTED]
 - [[fix  auto-fix scene i drops its picture and gets a freshly painted one…]] - `rationale_for` [EXTRACTED]
 - [[fix_short()]] - `calls` [EXTRACTED]

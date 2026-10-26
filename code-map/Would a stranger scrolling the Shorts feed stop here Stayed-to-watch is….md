@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/review.py"
 type: "rationale"
-community: "choose_images"
+community: "fix_short"
 location: "L125"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/choose_images
+  - community/fix_short
 ---
 
 # Would a stranger scrolling the Shorts feed stop here? Stayed-to-watch is…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[first_second_check()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/choose_images
+#graphify/rationale #graphify/EXTRACTED #community/fix_short

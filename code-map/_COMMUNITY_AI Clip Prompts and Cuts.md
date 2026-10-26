@@ -12,7 +12,7 @@ members: 23
 - [[Fill a 916 frame with the picture (centre crop), for the AI video model's…]] - rationale - shortsmaker/gpu.py
 - [[Final H.264 encode NVENC on the GPU when available (frees the CPU), else x264.]] - rationale - shortsmaker/media_tools.py
 - [[Mike the Headless Chicken, fix round 3 the LTX worker died without writing…]] - rationale - tests/test_full_scenes.py
-- [[Path_21]] - code
+- [[Path_18]] - code
 - [[Pause the batch write each animate scene's start picture + detailed prompt to…]] - rationale - shortsmaker/gpu.py
 - [[Real motion for every scene with a picture scenes Claude matched to archival…]] - rationale - shortsmaker/gpu.py
 - [[Run a batch on this PC's GPU through a local_ai worker (gen.py, or…]] - rationale - shortsmaker/gpu.py
@@ -40,24 +40,25 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 11 edges to [[_COMMUNITY_gpu.py]]
+- 9 edges to [[_COMMUNITY_gpu.py]]
 - 7 edges to [[_COMMUNITY_test_h3_handoff.py]]
+- 5 edges to [[_COMMUNITY_ffmpeg]]
+- 3 edges to [[_COMMUNITY_subprocess]]
 - 3 edges to [[_COMMUNITY_render]]
-- 3 edges to [[_COMMUNITY_ffmpeg]]
 - 2 edges to [[_COMMUNITY_ask_ai]]
 - 2 edges to [[_COMMUNITY_json]]
-- 2 edges to [[_COMMUNITY_subprocess]]
-- 2 edges to [[_COMMUNITY_local_voice]]
-- 2 edges to [[_COMMUNITY_Gemini Image Painting]]
 - 2 edges to [[_COMMUNITY_test_full_scenes.py]]
 - 1 edge to [[_COMMUNITY_frame_maker]]
 - 1 edge to [[_COMMUNITY_test_blender_render.py]]
+- 1 edge to [[_COMMUNITY_paint_instead]]
 - 1 edge to [[_COMMUNITY_h3_run.py]]
-- 1 edge to [[_COMMUNITY_short_render.py]]
+- 1 edge to [[_COMMUNITY_style_lab.py]]
+- 1 edge to [[_COMMUNITY___init__.py]]
+- 1 edge to [[_COMMUNITY_gemini_images]]
 
 ## Top bridge nodes
+- [[local_clips()]] - degree 14, connects to 6 communities
 - [[local_job()]] - degree 10, connects to 6 communities
-- [[local_clips()]] - degree 14, connects to 5 communities
 - [[veo_handoff()]] - degree 14, connects to 5 communities
-- [[Path_21]] - degree 12, connects to 5 communities
+- [[Path_18]] - degree 12, connects to 4 communities
 - [[video_encoder()]] - degree 8, connects to 4 communities

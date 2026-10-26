@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[limit_style()]] - `calls` [EXTRACTED]
-- [[scene()_1]] - `contains` [EXTRACTED]
+- [[scene()]] - `contains` [EXTRACTED]
 - [[test_style.py]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Style_Library_Caps

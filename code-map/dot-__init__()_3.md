@@ -1,17 +1,18 @@
 ---
-source_file: "tests/test_pictures_first.py"
+source_file: "blender/failures.py"
 type: "code"
-community: "test_pictures_first.py"
-location: "L36"
+community: "main"
+location: "L26"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_pictures_firstpy
+  - community/main
 ---
 
 # .__init__()
 
 ## Connections
-- [[stubbed]] - `method` [EXTRACTED]
+- [[dot-_crack()]] - `calls` [EXTRACTED]
+- [[Failure]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_pictures_firstpy
+#graphify/code #graphify/EXTRACTED #community/main

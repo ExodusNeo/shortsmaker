@@ -34,14 +34,14 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 10 edges to [[_COMMUNITY_test_full_scenes.py]]
-- 2 edges to [[_COMMUNITY_choose_images]]
+- 6 edges to [[_COMMUNITY___init__.py]]
+- 3 edges to [[_COMMUNITY_test_full_scenes.py]]
+- 2 edges to [[_COMMUNITY_apply_review_fixes]]
+- 2 edges to [[_COMMUNITY_gpu.py]]
 - 2 edges to [[_COMMUNITY_fix_short]]
+- 2 edges to [[_COMMUNITY_subprocess]]
 - 1 edge to [[_COMMUNITY_json]]
 - 1 edge to [[_COMMUNITY_visual_review]]
-- 1 edge to [[_COMMUNITY_subprocess]]
-- 1 edge to [[_COMMUNITY_short_render.py]]
-- 1 edge to [[_COMMUNITY_gpu.py]]
 
 ## Top bridge nodes
 - [[test_first_second.py]] - degree 27, connects to 6 communities

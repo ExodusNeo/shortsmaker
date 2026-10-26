@@ -10,7 +10,7 @@ members: 4
 ## Members
 - [[Guardrails for the style library (STYLE_CAPS) the hook keeps only its title…]] - rationale - shortsmaker/plan_rules.py
 - [[limit_style()]] - code - shortsmaker/plan_rules.py
-- [[scene()_1]] - code - tests/test_style.py
+- [[scene()]] - code - tests/test_style.py
 - [[test_limit_style_caps()]] - code - tests/test_style.py
 
 ## Live Query (requires Dataview plugin)
@@ -21,8 +21,9 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 2 edges to [[_COMMUNITY_test_full_scenes.py]]
 - 1 edge to [[_COMMUNITY_write_scripts]]
+- 1 edge to [[_COMMUNITY_gpu.py]]
+- 1 edge to [[_COMMUNITY_test_style.py]]
 
 ## Top bridge nodes
 - [[limit_style()]] - degree 4, connects to 2 communities

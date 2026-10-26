@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_full_scenes.py"
 type: "code"
-community: "Gemini Image Painting"
+community: "paint_instead"
 location: "L302"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/Gemini_Image_Painting
+  - community/paint_instead
 ---
 
 # fake_moss()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[test_remotion_failure_paints()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/INFERRED #community/Gemini_Image_Painting
+#graphify/code #graphify/INFERRED #community/paint_instead

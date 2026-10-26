@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_rules.py"
 type: "code"
-community: "choose_images"
+community: "test_rules.py"
 location: "L77"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/choose_images
+  - community/test_rulespy
 ---
 
 # prepare()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[capture_prompts()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/INFERRED #community/choose_images
+#graphify/code #graphify/INFERRED #community/test_rulespy

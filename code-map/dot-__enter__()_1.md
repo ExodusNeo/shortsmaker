@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_pictures_first.py"
 type: "code"
-community: "test_pictures_first.py"
+community: "gather_pool"
 location: "L336"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_pictures_firstpy
+  - community/gather_pool
 ---
 
 # .__enter__()
@@ -16,4 +16,4 @@ tags:
 - [[picking]] - `method` [EXTRACTED]
 - [[stubbed]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_pictures_firstpy
+#graphify/code #graphify/EXTRACTED #community/gather_pool

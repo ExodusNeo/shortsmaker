@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[count()]] - `calls` [EXTRACTED]
 - [[plan_with()]] - `calls` [EXTRACTED]
-- [[render()_1]] - `calls` [EXTRACTED]
+- [[render()]] - `calls` [EXTRACTED]
 - [[test_blender_scene.py]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Blender_Scene_Tests

@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_pictures_first.py"
 type: "rationale"
-community: "test_pictures_first.py"
+community: "owner"
 location: "L185"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/test_pictures_firstpy
+  - community/owner
 ---
 
 # Canned replies for every planning step of write_scripts().
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[planning_ai()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/test_pictures_firstpy
+#graphify/rationale #graphify/EXTRACTED #community/owner

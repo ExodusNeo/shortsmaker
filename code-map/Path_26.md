@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Gemini Image Painting"
+community: "choose_images"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Gemini_Image_Painting
+  - community/choose_images
 ---
 
 # Path
 
 ## Connections
-- [[to_vertical()]] - `references` [EXTRACTED]
+- [[choose_images()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Gemini_Image_Painting
+#graphify/code #graphify/EXTRACTED #community/choose_images

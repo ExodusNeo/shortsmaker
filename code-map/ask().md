@@ -1,21 +1,18 @@
 ---
-source_file: "tests/test_full_scenes.py"
+source_file: "tests/test_rules.py"
 type: "code"
-community: "code_custom_scenes"
-location: "L150"
+community: "test_rules.py"
+location: "L70"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/code_custom_scenes
+  - community/test_rulespy
 ---
 
 # ask()
 
 ## Connections
-- [[_fake_planning()]] - `indirect_call` [INFERRED]
-- [[test_look_check_fixes_code()]] - `indirect_call` [INFERRED]
-- [[test_review_redraws_custom()]] - `indirect_call` [INFERRED]
-- [[test_review_uses_unused_pool_pictures_before_painting()]] - `indirect_call` [INFERRED]
-- [[test_rewrite_paint_prompts()]] - `indirect_call` [INFERRED]
+- [[capture_prompts()]] - `indirect_call` [INFERRED]
+- [[run_draft()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/INFERRED #community/code_custom_scenes
+#graphify/code #graphify/INFERRED #community/test_rulespy

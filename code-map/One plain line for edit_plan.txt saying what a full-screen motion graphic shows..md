@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/motion.py"
 type: "rationale"
-community: "full_cues"
+community: "scene_cues"
 location: "L21"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/full_cues
+  - community/scene_cues
 ---
 
 # One plain line for edit_plan.txt saying what a full-screen motion graphic shows.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[full_summary()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/full_cues
+#graphify/rationale #graphify/EXTRACTED #community/scene_cues

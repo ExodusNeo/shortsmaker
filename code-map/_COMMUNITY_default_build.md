@@ -10,8 +10,8 @@ members: 7
 ## Members
 - [[A plan that always works a truss bridge whose mid-span gusset plate bends.]] - rationale - shortsmaker/blender_plan.py
 - [[The engineer step one AI call plans every Short's build (sbuild); Shorts…]] - rationale - shortsmaker/blender_plan.py
-- [[ask()_9]] - code - shortsmaker/blender_plan.py
-- [[ask()_10]] - code - tests/test_blender_plan.py
+- [[ask()_4]] - code - shortsmaker/blender_plan.py
+- [[ask()_5]] - code - tests/test_blender_plan.py
 - [[default_build()]] - code - shortsmaker/blender_plan.py
 - [[plan_builds()]] - code - shortsmaker/blender_plan.py
 - [[test_plan_builds_retries_then_defaults()]] - code - tests/test_blender_plan.py
@@ -35,4 +35,4 @@ SORT file.name ASC
 - [[default_build()]] - degree 8, connects to 5 communities
 - [[plan_builds()]] - degree 7, connects to 3 communities
 - [[test_plan_builds_retries_then_defaults()]] - degree 3, connects to 1 community
-- [[ask()_10]] - degree 2, connects to 1 community
+- [[ask()_5]] - degree 2, connects to 1 community

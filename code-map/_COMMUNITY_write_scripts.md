@@ -54,38 +54,41 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 20 edges to [[_COMMUNITY_test_full_scenes.py]]
-- 9 edges to [[_COMMUNITY_test_pictures_first.py]]
-- 8 edges to [[_COMMUNITY_re]]
-- 6 edges to [[_COMMUNITY_gather_pool]]
-- 5 edges to [[_COMMUNITY_choose_images]]
+- 12 edges to [[_COMMUNITY_test_full_scenes.py]]
+- 10 edges to [[_COMMUNITY_gpu.py]]
+- 9 edges to [[_COMMUNITY_re]]
+- 7 edges to [[_COMMUNITY_test_pictures_first.py]]
 - 5 edges to [[_COMMUNITY_edit_scripts]]
 - 4 edges to [[_COMMUNITY_json]]
+- 3 edges to [[_COMMUNITY_fetch]]
+- 3 edges to [[_COMMUNITY_rescue_graphics]]
+- 2 edges to [[_COMMUNITY_prepare_topic]]
+- 2 edges to [[_COMMUNITY_ask_ai]]
 - 2 edges to [[_COMMUNITY_style_library]]
 - 2 edges to [[_COMMUNITY_frame_maker]]
-- 2 edges to [[_COMMUNITY_audio_mix.py]]
-- 2 edges to [[_COMMUNITY_fix_short]]
-- 2 edges to [[_COMMUNITY_fact_check]]
-- 1 edge to [[_COMMUNITY_code_custom_scenes]]
+- 2 edges to [[_COMMUNITY_gather_pool]]
+- 2 edges to [[_COMMUNITY_ffmpeg]]
+- 2 edges to [[_COMMUNITY_test_style.py]]
 - 1 edge to [[_COMMUNITY_test_rules.py]]
-- 1 edge to [[_COMMUNITY_ask_ai]]
 - 1 edge to [[_COMMUNITY_render]]
-- 1 edge to [[_COMMUNITY_gpu.py]]
-- 1 edge to [[_COMMUNITY_short_render.py]]
+- 1 edge to [[_COMMUNITY_fix_short]]
 - 1 edge to [[_COMMUNITY_visual_review]]
-- 1 edge to [[_COMMUNITY_full_cues]]
-- 1 edge to [[_COMMUNITY_time]]
-- 1 edge to [[_COMMUNITY_subprocess]]
-- 1 edge to [[_COMMUNITY_check_twists]]
+- 1 edge to [[_COMMUNITY_choose_images]]
+- 1 edge to [[_COMMUNITY_wm_files]]
+- 1 edge to [[_COMMUNITY_scene_cues]]
+- 1 edge to [[_COMMUNITY_style_lab.py]]
 - 1 edge to [[_COMMUNITY_Full Graphic Limits]]
+- 1 edge to [[_COMMUNITY_clean_pics]]
 - 1 edge to [[_COMMUNITY_Style Library Caps]]
 - 1 edge to [[_COMMUNITY_default_build]]
-- 1 edge to [[_COMMUNITY_local_voice]]
+- 1 edge to [[_COMMUNITY_apply_review_fixes]]
+- 1 edge to [[_COMMUNITY_pool_of]]
+- 1 edge to [[_COMMUNITY___init__.py]]
 - 1 edge to [[_COMMUNITY_trim_borders]]
 
 ## Top bridge nodes
-- [[write_scripts()]] - degree 44, connects to 16 communities
-- [[words_of()]] - degree 22, connects to 6 communities
+- [[write_scripts()]] - degree 44, connects to 18 communities
+- [[words_of()]] - degree 22, connects to 8 communities
 - [[clean_full()]] - degree 21, connects to 4 communities
 - [[test_fill_money_graphics_and_caps()]] - degree 8, connects to 3 communities
 - [[graphic_low()]] - degree 7, connects to 3 communities

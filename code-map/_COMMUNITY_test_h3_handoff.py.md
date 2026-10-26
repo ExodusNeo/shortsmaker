@@ -1,11 +1,11 @@
 ---
 type: community
-members: 43
+members: 42
 ---
 
 # test_h3_handoff.py
 
-**Members:** 43 nodes
+**Members:** 42 nodes
 
 ## Members
 - [[After an opener swap moved scene 4's clip to scene 1, the re-render cuts it…]] - rationale - tests/test_h3_handoff.py
@@ -16,7 +16,6 @@ members: 43
 - [[Unpack sceneN.mp4.mov.webm from folderclips.zip (the Colab notebook's…]] - rationale - shortsmaker/gpu.py
 - [[What is missing from the AI's prompt fields for one scene (empty list = usable).]] - rationale - shortsmaker/gpu.py
 - [[ask()_11]] - code - tests/test_h3_handoff.py
-- [[builtins]] - concept
 - [[fake_ai()]] - code - tests/test_h3_handoff.py
 - [[h3_problems()]] - code - shortsmaker/gpu.py
 - [[h3_prompt()]] - code - shortsmaker/gpu.py
@@ -61,17 +60,18 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 7 edges to [[_COMMUNITY_AI Clip Prompts and Cuts]]
-- 5 edges to [[_COMMUNITY_test_full_scenes.py]]
 - 4 edges to [[_COMMUNITY_gpu.py]]
-- 1 edge to [[_COMMUNITY_ffmpeg]]
+- 3 edges to [[_COMMUNITY___init__.py]]
+- 2 edges to [[_COMMUNITY_subprocess]]
+- 1 edge to [[_COMMUNITY_test_story.py]]
 - 1 edge to [[_COMMUNITY_h3_run.py]]
 - 1 edge to [[_COMMUNITY_re]]
 - 1 edge to [[_COMMUNITY_split_make_shorts.py]]
-- 1 edge to [[_COMMUNITY_subprocess]]
+- 1 edge to [[_COMMUNITY_test_full_scenes.py]]
 
 ## Top bridge nodes
+- [[test_h3_handoff.py]] - degree 33, connects to 5 communities
 - [[unpack_clips()]] - degree 10, connects to 4 communities
-- [[test_h3_handoff.py]] - degree 33, connects to 3 communities
 - [[handoff()]] - degree 12, connects to 2 communities
 - [[h3_problems()]] - degree 4, connects to 2 communities
 - [[h3_prompt()]] - degree 4, connects to 2 communities

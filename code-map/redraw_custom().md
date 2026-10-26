@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/remotion_render.py"
 type: "code"
-community: "fix_short"
+community: "motion.py"
 location: "L39"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/fix_short
+  - community/motionpy
 ---
 
 # redraw_custom()
@@ -22,4 +22,4 @@ tags:
 - [[remotion_render.py]] - `contains` [EXTRACTED]
 - [[tsc_check()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/fix_short
+#graphify/code #graphify/EXTRACTED #community/motionpy

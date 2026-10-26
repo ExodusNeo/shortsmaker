@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_package.py"
 type: "code"
-community: "test_full_scenes.py"
-location: "L301"
+community: "__init__.py"
+location: "L325"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_full_scenespy
+  - community/__init__py
 ---
 
 # test_entry_point()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[test_package.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_full_scenespy
+#graphify/code #graphify/EXTRACTED #community/__init__py

@@ -32,19 +32,17 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 3 edges to [[_COMMUNITY_gpu.py]]
+- 6 edges to [[_COMMUNITY_test_full_scenes.py]]
 - 3 edges to [[_COMMUNITY_build_scene.py]]
 - 2 edges to [[_COMMUNITY_parts.py]]
 - 2 edges to [[_COMMUNITY_render]]
-- 2 edges to [[_COMMUNITY_audio_mix.py]]
 - 2 edges to [[_COMMUNITY_test_blender_plan.py]]
 - 2 edges to [[_COMMUNITY_blender_plan.py]]
-- 1 edge to [[_COMMUNITY_short_render.py]]
 - 1 edge to [[_COMMUNITY_frame_maker]]
 
 ## Top bridge nodes
-- [[math]] - degree 11, connects to 5 communities
-- [[make_sfx()]] - degree 7, connects to 3 communities
+- [[math]] - degree 11, connects to 4 communities
 - [[write_frames()]] - degree 6, connects to 3 communities
+- [[make_sfx()]] - degree 7, connects to 2 communities
 - [[clamp()]] - degree 4, connects to 2 communities
 - [[flash_alpha()]] - degree 4, connects to 1 community

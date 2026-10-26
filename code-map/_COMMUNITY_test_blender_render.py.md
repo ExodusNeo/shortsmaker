@@ -9,8 +9,8 @@ members: 19
 
 ## Members
 - [[A .cmd that behaves like blender.exe for build_scene.py; returns (exe, run log).]] - rationale - tests/test_blender_render.py
-- [[Path_18]] - code
-- [[Path_19]] - code
+- [[Path_15]] - code
+- [[Path_16]] - code
 - [[Tests for running Blender from a Short (blender_render.py, 2026-10-22) frame…]] - rationale - tests/test_blender_render.py
 - [[When each scene's failure peaks on its emphasis word when spoken, else 70%…]] - rationale - shortsmaker/blender_render.py
 - [[_run()]] - code - shortsmaker/blender_render.py
@@ -36,21 +36,22 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 6 edges to [[_COMMUNITY_gpu.py]]
-- 4 edges to [[_COMMUNITY_test_full_scenes.py]]
+- 6 edges to [[_COMMUNITY_test_full_scenes.py]]
 - 3 edges to [[_COMMUNITY_drawn_thumbnail]]
+- 3 edges to [[_COMMUNITY_subprocess]]
 - 2 edges to [[_COMMUNITY_json]]
 - 2 edges to [[_COMMUNITY_ffmpeg]]
-- 2 edges to [[_COMMUNITY_subprocess]]
+- 2 edges to [[_COMMUNITY___init__.py]]
 - 1 edge to [[_COMMUNITY_BlenderFailed]]
 - 1 edge to [[_COMMUNITY_render]]
-- 1 edge to [[_COMMUNITY_full_cues]]
+- 1 edge to [[_COMMUNITY_scene_cues]]
+- 1 edge to [[_COMMUNITY_gpu.py]]
 - 1 edge to [[_COMMUNITY_AI Clip Prompts and Cuts]]
 - 1 edge to [[_COMMUNITY_default_build]]
 - 1 edge to [[_COMMUNITY_blender_plan.py]]
 
 ## Top bridge nodes
-- [[render_clips()]] - degree 17, connects to 7 communities
+- [[render_clips()]] - degree 17, connects to 8 communities
 - [[test_blender_render.py]] - degree 20, connects to 6 communities
 - [[peaks()]] - degree 5, connects to 2 communities
 - [[_run()]] - degree 5, connects to 2 communities

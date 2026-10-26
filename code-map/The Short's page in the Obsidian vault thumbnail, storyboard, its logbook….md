@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/logbook.py"
 type: "rationale"
-community: "test_rules.py"
+community: "re"
 location: "L59"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/test_rulespy
+  - community/re
 ---
 
 # The Short's page in the Obsidian vault: thumbnail, storyboard, its logbook…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[vault_page()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/test_rulespy
+#graphify/rationale #graphify/EXTRACTED #community/re
