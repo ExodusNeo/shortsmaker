@@ -105,7 +105,9 @@ Also learned:
     {"id": "axe", "find": "axe", "size_m": 0.8}
   ],
   "beats": [
-    {"move": "chop", "tool": "axe", "target": "rooster", "part": "head", "at": 0.55},
+    {"move": "cut", "tool": "axe", "target": "rooster", "at": 0.55,
+     "strokes": [{"through": "neck", "angle": "level"}],
+     "expect": [{"piece": "head", "share": 0.15, "then": "fly_off"}, {"piece": "rest", "then": "stay"}]},
     {"move": "hop_off", "actor": "rooster", "at": 1.3, "style": "stagger"},
     {"move": "walk", "actor": "rooster", "at": 1.8, "toward": "left", "style": "stagger"}
   ],
@@ -118,6 +120,8 @@ Also learned:
   - `at` is in seconds and must fit inside scene 1;
   - every id a beat names must exist;
   - sizes must be 0.05-30 m.
+- A `cut` beat's tool must be in the tool table, each stroke must cross the target, and `expect` must name every
+  piece the strokes make (or give a count range for many small ones, e.g. `{"pieces": "40-60", "then": "scatter"}`).
 - At least one beat must happen by 1.0 s. Frame 0 must show the subject and the beat's threat (tool, edge, drop,
   wave): that's the stop-the-scroll frame.
 
@@ -127,7 +131,7 @@ Each move is written once and tested; the AI only chooses moves and their timing
 
 | Move | What it does |
 |---|---|
-| `chop` | Wind-up behind the target, in line with the part; the swing comes down so the edge leads; it cuts through `part`, stops on contact with the rest of the target, recoils and lifts out of frame. The part is released at the moment of contact. |
+| `cut` | Any cut: one or many tool strokes through a target (details below). |
 | `fall` | Drops under gravity onto whatever is below, with a small bounce, and comes to rest touching it. |
 | `topple` | Tips over around its base edge and comes to rest lying on the ground. |
 | `hop_off` | Jumps clear of what it stands on and lands beside it. |
@@ -136,24 +140,50 @@ Each move is written once and tested; the AI only chooses moves and their timing
 | `sink` | Sinks into water or mud, tilting as it goes. |
 | `roll` | Rolls along the ground. |
 
-**How `chop` picks the part.** Parts are named in a table: `head`, `top`, `front`, `tail`. The body region is
-found from the model's bounding box and facing; for `head`, it's the top front 20% of the height. The model is
-split along the tool's path, and the split must leave the cut piece at most 15% of the model's vertices.
-
-**Seam.** An untouched copy of the model is shown until the frame of the cut, then hidden, and the two pieces are
-shown from that frame on. Splitting can leave a seam line, so the pieces never appear before the cut.
+**`cut`: one general move for every kind of cut** (owner, 2026-10-27: "be prepared for anything"). A chop, a
+split, slices, dice, a mince or a shaving are all the same move with different strokes; there are no built-in
+kinds and no fixed size limits.
+- **Strokes.** A cut is a list of strokes; each one says where it crosses the target (a named region such as
+  `neck`, or a fraction along the target's long axis) and at what angle. Many strokes can be given as a pattern:
+  `{"rows": 8}` (slices), `{"rows": 6, "cols": 6}` (dice), `{"mince": 50}` (repeated strokes moving across).
+- **Tool table.** The tool sets the motion and the shape it cuts:
+  - axe: a chop swing, edge leading;
+  - knife or cleaver: a press or slice down, or quick repeated strokes for a mince;
+  - saw: back and forth, cutting a slot as wide as its blade;
+  - sword: a level slash;
+  - guillotine: a straight drop;
+  - drill, scoop or cookie cutter: they cut their own shape out instead of a flat plane.
+  The cut always follows the path the viewer sees the blade take. New tools are added as table rows.
+- **How the model is split.** Straight blades split it with Blender's bisect along the stroke plane; shaped tools
+  use a boolean with the tool's shape. Every cut face is filled and coloured from a small table by what the target
+  is (pale for onion, light for wood, red for meat, a default otherwise), so no open holes show.
+- **Stopping.** Each stroke stops at the first thing it isn't meant to cut: the rest of the body, a board, a
+  block, the ground. Then it recoils or moves to the next stroke.
+- **Expectations come from the plan.** The `expect` list says what the cut should produce: named pieces with
+  their rough share of the target (`head` about 0.15) or a count range for many small pieces, and what each does
+  afterwards (`stay`, `fall`, `tip_over`, `fly_off`, `scatter`). The check compares the real pieces with that list.
+  Today's half-chicken cut fails because it doesn't match "head about 0.15"; a mince passes as long as it really
+  is 40-60 small bits.
+- **Two limits always apply:** every piece at least 3 mm (visible, and sane geometry) and at most 80 pieces per
+  opener (render time).
+- **The blade must be long enough** to cut the target in one stroke. Otherwise the plan must pick a bigger tool
+  or more strokes.
+- **Seam.** The untouched model is shown until the first stroke reaches it, then the pieces are swapped in.
+  Splitting can leave seam lines, so pieces never appear before the cut.
+- **Not cuts:** shattering, crushing, melting and tearing are separate moves, added to the move list when a story
+  needs one.
 
 ## Checks (blender/opener_checks.py), run on every frame
 
 | Check | Rule |
 |---|---|
-| Overlap | No two objects overlap (mesh against mesh, BVH tree); the only allowed overlap is the tool and the cut part on the frames of the cut |
+| Overlap | No two objects overlap (mesh against mesh, BVH tree); the only allowed overlap is a tool and the piece it is cutting, on the frames of that stroke |
 | Resting | Anything resting or landed touches what it rests on, within 1 cm (no floating, no sinking) |
 | In frame | The subject stays within 4-96% of the frame width and 3-97% of the height on every frame |
 | First frame | At frame 0 the subject and the threat are both in frame, the subject at least 15% of the frame height |
 | Edge leads | At contact, the tool's edge faces the way it's moving and points at the target |
 | Blade face | At contact, the camera sees the blade's flat side (at least 35 degrees off edge-on) |
-| Cut size | The cut piece is at most 15% of the model |
+| Cut result | The pieces match the plan's `expect`: each named piece's share is within ±50% of planned (so 0.15 allows 0.075-0.225), counts are within the planned range, every piece is at least 3 mm, and there are at most 80 pieces |
 
 `opener_report.json` lists every failure with its frame numbers, and those go straight into the fix-round prompt.
 
@@ -196,7 +226,8 @@ machine...").
 - `tests/test_opener_render.py`: a fake Blender covers success (scene 1 uses `opener.mp4`), check failure (fix
   round, then fallback plus CHECK line), crash (retry, then fallback), and CC-BY credits in upload.txt.
 - `tests/test_opener_scene.py`: real headless Blender, a few minutes. The reference plan `chicken_chop.json`
-  (today's opener) must pass every check; plus one deliberately bad plan per check, which must fail that check.
+  (today's opener) must pass every check, as must `onion_slices.json` and `onion_mince.json` (with a knife on a
+  board); plus one deliberately bad plan per check, which must fail that check.
   Re-run on every change to `blender/opener_*.py` or `blender/moves.py`.
 - `tests/test_story.py`: `hook_kind` flags summary hooks and missing money claims.
 
