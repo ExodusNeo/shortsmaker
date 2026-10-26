@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_h3_handoff.py"
 type: "code"
-community: "MiniMax H3 Video Jobs"
+community: "test_h3_handoff.py"
 location: "L87"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/MiniMax_H3_Video_Jobs
+  - community/test_h3_handoffpy
 ---
 
 # test_scene_number_given_as_text_is_accepted()
@@ -17,4 +17,4 @@ tags:
 - [[test_h3_handoff.py]] - `contains` [EXTRACTED]
 - [[with_fakes()_1]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/MiniMax_H3_Video_Jobs
+#graphify/code #graphify/EXTRACTED #community/test_h3_handoffpy

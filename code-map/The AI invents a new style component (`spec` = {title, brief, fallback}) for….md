@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/style_lab.py"
 type: "rationale"
-community: "ASS Captions and Skins"
+community: "render_remotion"
 location: "L141"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/ASS_Captions_and_Skins
+  - community/render_remotion
 ---
 
 # The AI invents a new style component (`spec` = {title, brief, fallback}) for…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[invent_component()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/ASS_Captions_and_Skins
+#graphify/rationale #graphify/EXTRACTED #community/render_remotion

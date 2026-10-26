@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "MiniMax H3 Video Jobs"
+community: "h3_run.py"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/MiniMax_H3_Video_Jobs
+  - community/h3_runpy
 ---
 
 # zipfile
@@ -13,8 +13,8 @@ tags:
 ## Connections
 - [[gpu.py]] - `imports` [EXTRACTED]
 - [[h3_run.py]] - `imports` [EXTRACTED]
-- [[main()_6]] - `calls` [EXTRACTED]
+- [[main()_1]] - `calls` [EXTRACTED]
 - [[unpack_clips()]] - `calls` [EXTRACTED]
 - [[veo_handoff()]] - `calls` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/MiniMax_H3_Video_Jobs
+#graphify/concept #graphify/EXTRACTED #community/h3_runpy

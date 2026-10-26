@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/footage.py"
 type: "code"
-community: "CLI, Config and Footage"
+community: "gpu.py"
 location: "L168"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CLI_Config_and_Footage
+  - community/gpupy
 ---
 
 # film_frames()
@@ -18,4 +18,4 @@ tags:
 - [[footage.py]] - `contains` [EXTRACTED]
 - [[n moments spread through a film, for the contact sheets (with FILM_CROP applied…]] - `rationale_for` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CLI_Config_and_Footage
+#graphify/code #graphify/EXTRACTED #community/gpupy

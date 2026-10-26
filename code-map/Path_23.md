@@ -1,16 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: "Picture Swap Fixes"
+community: "ffmpeg"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Picture_Swap_Fixes
+  - community/ffmpeg
 ---
 
 # Path
 
 ## Connections
-- [[use_picture_from()]] - `references` [EXTRACTED]
+- [[duration()]] - `references` [EXTRACTED]
+- [[ffmpeg()]] - `references` [EXTRACTED]
+- [[write_json()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Picture_Swap_Fixes
+#graphify/code #graphify/EXTRACTED #community/ffmpeg

@@ -1,12 +1,12 @@
 ---
 source_file: "blender/templates.py"
 type: "code"
-community: "Bridge Templates"
+community: "templates.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Bridge_Templates
+  - community/templatespy
 ---
 
 # templates.py
@@ -20,7 +20,7 @@ tags:
 - [[_sag_points()]] - `contains` [EXTRACTED]
 - [[_towers()]] - `contains` [EXTRACTED]
 - [[_truss_panel_members()]] - `contains` [EXTRACTED]
-- [[build()_1]] - `contains` [EXTRACTED]
+- [[build()]] - `contains` [EXTRACTED]
 - [[build_scene.py]] - `imports` [EXTRACTED]
 - [[cable_stayed_bridge()]] - `indirect_call` [INFERRED]
 - [[dress()]] - `contains` [EXTRACTED]
@@ -33,4 +33,4 @@ tags:
 - [[suspension_bridge()]] - `indirect_call` [INFERRED]
 - [[truss_bridge()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/Bridge_Templates
+#graphify/code #graphify/EXTRACTED #community/templatespy

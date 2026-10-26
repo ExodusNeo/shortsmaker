@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/picture_pool.py"
 type: "code"
-community: "Director Picture Cleanup Tests"
+community: "test_pictures_first.py"
 location: "L30"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Director_Picture_Cleanup_Tests
+  - community/test_pictures_firstpy
 ---
 
 # check()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[clean_pics()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Director_Picture_Cleanup_Tests
+#graphify/code #graphify/EXTRACTED #community/test_pictures_firstpy

@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_style.py"
 type: "code"
-community: "ASS Captions and Skins"
+community: "render_remotion"
 location: "L250"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ASS_Captions_and_Skins
+  - community/render_remotion
 ---
 
 # test_invention_passes_into_slot()
@@ -18,4 +18,4 @@ tags:
 - [[test_style.py]] - `contains` [EXTRACTED]
 - [[with_fakes()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ASS_Captions_and_Skins
+#graphify/code #graphify/EXTRACTED #community/render_remotion

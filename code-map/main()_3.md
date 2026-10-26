@@ -1,35 +1,21 @@
 ---
-source_file: "blender/build_scene.py"
+source_file: "local_ai/gen.py"
 type: "code"
-community: "Bridge Collapse Simulation"
-location: "L70"
+community: "Local GPU Worker"
+location: "L200"
 tags:
   - graphify/code
-  - graphify/EXTRACTED
-  - community/Bridge_Collapse_Simulation
+  - graphify/INFERRED
+  - community/Local_GPU_Worker
 ---
 
 # main()
 
 ## Connections
-- [[dot-beat()]] - `calls` [INFERRED]
-- [[dot-fallen()]] - `calls` [INFERRED]
-- [[dot-falls()]] - `calls` [INFERRED]
-- [[dot-play()]] - `calls` [INFERRED]
-- [[dot-reset()]] - `calls` [INFERRED]
-- [[dot-ride_along()]] - `calls` [INFERRED]
-- [[Failure]] - `calls` [EXTRACTED]
-- [[Shots]] - `calls` [EXTRACTED]
-- [[build()_1]] - `calls` [EXTRACTED]
-- [[build_scene.py]] - `contains` [EXTRACTED]
-- [[dress()]] - `calls` [EXTRACTED]
-- [[fastener()]] - `calls` [EXTRACTED]
-- [[focus_object()]] - `calls` [EXTRACTED]
-- [[json]] - `calls` [EXTRACTED]
-- [[keyloc()]] - `calls` [EXTRACTED]
-- [[keyvis()]] - `calls` [EXTRACTED]
-- [[label()]] - `calls` [EXTRACTED]
-- [[material()]] - `calls` [EXTRACTED]
-- [[setup()]] - `calls` [EXTRACTED]
+- [[gen.py]] - `contains` [EXTRACTED]
+- [[images()]] - `indirect_call` [INFERRED]
+- [[parallax()]] - `indirect_call` [INFERRED]
+- [[tts()]] - `indirect_call` [INFERRED]
+- [[video()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/Bridge_Collapse_Simulation
+#graphify/code #graphify/INFERRED #community/Local_GPU_Worker

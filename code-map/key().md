@@ -1,12 +1,12 @@
 ---
 source_file: "blender/failures.py"
 type: "code"
-community: "Bridge Collapse Simulation"
+community: "main"
 location: "L16"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Bridge_Collapse_Simulation
+  - community/main
 ---
 
 # key()
@@ -17,4 +17,4 @@ tags:
 - [[dot-reset()]] - `calls` [EXTRACTED]
 - [[failures.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Bridge_Collapse_Simulation
+#graphify/code #graphify/EXTRACTED #community/main

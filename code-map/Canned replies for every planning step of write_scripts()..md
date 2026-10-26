@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_pictures_first.py"
 type: "rationale"
-community: "Fake AI Test Helpers"
+community: "test_pictures_first.py"
 location: "L185"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Fake_AI_Test_Helpers
+  - community/test_pictures_firstpy
 ---
 
 # Canned replies for every planning step of write_scripts().
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[planning_ai()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Fake_AI_Test_Helpers
+#graphify/rationale #graphify/EXTRACTED #community/test_pictures_firstpy

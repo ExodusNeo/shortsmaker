@@ -1,12 +1,12 @@
 ---
 source_file: "blender/failures.py"
 type: "rationale"
-community: "Bridge Collapse Simulation"
+community: "main"
 location: "L53"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Bridge_Collapse_Simulation
+  - community/main
 ---
 
 # A jagged crack across the plate's outer face, in short ink segments that appear…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[dot-_crack()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Bridge_Collapse_Simulation
+#graphify/rationale #graphify/EXTRACTED #community/main

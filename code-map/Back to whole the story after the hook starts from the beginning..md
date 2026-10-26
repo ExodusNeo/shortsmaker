@@ -1,12 +1,12 @@
 ---
 source_file: "blender/failures.py"
 type: "rationale"
-community: "Bridge Collapse Simulation"
+community: "main"
 location: "L120"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Bridge_Collapse_Simulation
+  - community/main
 ---
 
 # Back to whole: the story after the hook starts from the beginning.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[dot-reset()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Bridge_Collapse_Simulation
+#graphify/rationale #graphify/EXTRACTED #community/main

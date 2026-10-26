@@ -1,12 +1,12 @@
 ---
 source_file: "blender/failures.py"
 type: "code"
-community: "Bridge Collapse Simulation"
+community: "main"
 location: "L103"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Bridge_Collapse_Simulation
+  - community/main
 ---
 
 # .falls()
@@ -14,6 +14,6 @@ tags:
 ## Connections
 - [[dot-ride_along()]] - `calls` [EXTRACTED]
 - [[Failure]] - `method` [EXTRACTED]
-- [[main()_3]] - `calls` [INFERRED]
+- [[main()_5]] - `calls` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/Bridge_Collapse_Simulation
+#graphify/code #graphify/EXTRACTED #community/main

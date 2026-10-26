@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_full_scenes.py"
 type: "rationale"
-community: "Write Scripts Review Tests"
+community: "code_custom_scenes"
 location: "L143"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Write_Scripts_Review_Tests
+  - community/code_custom_scenes
 ---
 
 # Runs write_scripts with every AI/network step replaced by canned answers;…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[_fake_planning()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Write_Scripts_Review_Tests
+#graphify/rationale #graphify/EXTRACTED #community/code_custom_scenes

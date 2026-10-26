@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_rules.py"
 type: "code"
-community: "Channel Rules Files"
+community: "test_rules.py"
 location: "L125"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Channel_Rules_Files
+  - community/test_rulespy
 ---
 
 # stop_text()
@@ -24,4 +24,4 @@ tags:
 - [[test_rules.py]] - `contains` [EXTRACTED]
 - [[test_unknown_visuals_stop()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Channel_Rules_Files
+#graphify/code #graphify/EXTRACTED #community/test_rulespy

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/frame_render.py"
 type: "rationale"
-community: "Frame Drawing and Graphics"
+community: "frame_maker"
 location: "L160"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Frame_Drawing_and_Graphics
+  - community/frame_maker
 ---
 
 # Tilted photo card with a white border, drop shadow and a yellow name banner.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[person_card()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Frame_Drawing_and_Graphics
+#graphify/rationale #graphify/EXTRACTED #community/frame_maker

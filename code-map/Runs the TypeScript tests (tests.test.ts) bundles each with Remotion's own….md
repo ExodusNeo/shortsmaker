@@ -1,12 +1,12 @@
 ---
 source_file: "tests/run_ts_tests.py"
 type: "rationale"
-community: "Audio Mix and Shotcut Export"
+community: "subprocess"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Audio_Mix_and_Shotcut_Export
+  - community/subprocess
 ---
 
 # Runs the TypeScript tests (tests/*.test.ts): bundles each with Remotion's own…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[run_ts_tests.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Audio_Mix_and_Shotcut_Export
+#graphify/rationale #graphify/EXTRACTED #community/subprocess

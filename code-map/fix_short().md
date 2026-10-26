@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/cli.py"
 type: "code"
-community: "Main Entry and Channel Profiles"
+community: "fix_short"
 location: "L126"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Main_Entry_and_Channel_Profiles
+  - community/fix_short
 ---
 
 # fix_short()
@@ -20,7 +20,7 @@ tags:
 - [[main()_2]] - `calls` [EXTRACTED]
 - [[paint_new()]] - `calls` [EXTRACTED]
 - [[prune_work()]] - `calls` [EXTRACTED]
-- [[render()_1]] - `calls` [EXTRACTED]
+- [[render()_2]] - `calls` [EXTRACTED]
 - [[require_rules()]] - `calls` [EXTRACTED]
 - [[rescue_graphics()]] - `calls` [EXTRACTED]
 - [[rewrite_paint_prompts()]] - `calls` [EXTRACTED]
@@ -29,4 +29,4 @@ tags:
 - [[use_channel()]] - `calls` [EXTRACTED]
 - [[use_picture_from()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Main_Entry_and_Channel_Profiles
+#graphify/code #graphify/EXTRACTED #community/fix_short

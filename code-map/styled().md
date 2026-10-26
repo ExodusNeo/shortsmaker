@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/audio_mix.py"
 type: "code"
-community: "ASS Captions and Skins"
+community: "render_remotion"
 location: "L78"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ASS_Captions_and_Skins
+  - community/render_remotion
 ---
 
 # styled()
@@ -15,4 +15,4 @@ tags:
 - [[ass_colour()]] - `calls` [EXTRACTED]
 - [[captions()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ASS_Captions_and_Skins
+#graphify/code #graphify/EXTRACTED #community/render_remotion

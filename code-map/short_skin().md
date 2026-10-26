@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/config.py"
 type: "code"
-community: "ASS Captions and Skins"
+community: "short_render.py"
 location: "L101"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ASS_Captions_and_Skins
+  - community/short_renderpy
 ---
 
 # short_skin()
@@ -18,4 +18,4 @@ tags:
 - [[render_remotion()]] - `calls` [EXTRACTED]
 - [[test_clean_full_custom_and_skin()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ASS_Captions_and_Skins
+#graphify/code #graphify/EXTRACTED #community/short_renderpy

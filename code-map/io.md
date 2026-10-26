@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "CLI, Config and Footage"
+community: "gpu.py"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/CLI_Config_and_Footage
+  - community/gpupy
 ---
 
 # io
@@ -29,4 +29,4 @@ tags:
 - [[storyboard()]] - `calls` [EXTRACTED]
 - [[test_blender_run.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/CLI_Config_and_Footage
+#graphify/concept #graphify/EXTRACTED #community/gpupy

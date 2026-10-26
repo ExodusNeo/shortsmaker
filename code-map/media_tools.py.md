@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/media_tools.py"
 type: "code"
-community: "Audio Mix and Shotcut Export"
+community: "gpu.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Audio_Mix_and_Shotcut_Export
+  - community/gpupy
 ---
 
 # media_tools.py
@@ -45,4 +45,4 @@ tags:
 - [[video_encoder()]] - `contains` [EXTRACTED]
 - [[write_json()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Audio_Mix_and_Shotcut_Export
+#graphify/code #graphify/EXTRACTED #community/gpupy

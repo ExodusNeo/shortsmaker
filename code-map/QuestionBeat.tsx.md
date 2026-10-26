@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/style/overlays/QuestionBeat.tsx"
 type: "code"
-community: "Invented Overlays and Looks"
+community: "style/index.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Invented_Overlays_and_Looks
+  - community/style/indexts
 ---
 
 # QuestionBeat.tsx
@@ -27,4 +27,4 @@ tags:
 - [[styletypes.ts]] - `imports_from` [EXTRACTED]
 - [[theme]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Invented_Overlays_and_Looks
+#graphify/code #graphify/EXTRACTED #community/style/indexts

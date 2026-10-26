@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "Audio Mix and Shotcut Export"
+community: "subprocess"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Audio_Mix_and_Shotcut_Export
+  - community/subprocess
 ---
 
 # xml_sax_saxutils
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[edit_project.py]] - `imports_from` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Audio_Mix_and_Shotcut_Export
+#graphify/concept #graphify/EXTRACTED #community/subprocess

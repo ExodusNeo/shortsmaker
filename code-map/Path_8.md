@@ -1,16 +1,21 @@
 ---
 source_file: ""
 type: "code"
-community: "Motion Scenes and Style Library"
+community: "choose_images"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Motion_Scenes_and_Style_Library
+  - community/choose_images
 ---
 
 # Path
 
 ## Connections
-- [[candidate_in()]] - `references` [EXTRACTED]
+- [[catalog_pool()]] - `references` [EXTRACTED]
+- [[contact_sheets()]] - `references` [EXTRACTED]
+- [[load_pool()]] - `references` [EXTRACTED]
+- [[pool_folder()]] - `references` [EXTRACTED]
+- [[prepare_topic()]] - `references` [EXTRACTED]
+- [[save_pool()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Motion_Scenes_and_Style_Library
+#graphify/code #graphify/EXTRACTED #community/choose_images

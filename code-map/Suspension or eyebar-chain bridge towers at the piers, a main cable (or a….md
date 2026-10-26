@@ -1,12 +1,12 @@
 ---
 source_file: "blender/templates.py"
 type: "rationale"
-community: "Bridge Templates"
+community: "templates.py"
 location: "L141"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Bridge_Templates
+  - community/templatespy
 ---
 
 # Suspension or eyebar-chain bridge: towers at the piers, a main cable (or a…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[_hung_deck()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Bridge_Templates
+#graphify/rationale #graphify/EXTRACTED #community/templatespy

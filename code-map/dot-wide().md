@@ -1,12 +1,12 @@
 ---
 source_file: "blender/build_scene.py"
 type: "code"
-community: "Blender Camera Shots"
+community: "build_scene.py"
 location: "L51"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Blender_Camera_Shots
+  - community/build_scenepy
 ---
 
 # .wide()
@@ -16,4 +16,4 @@ tags:
 - [[Shots]] - `method` [EXTRACTED]
 - [[direction()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Blender_Camera_Shots
+#graphify/code #graphify/EXTRACTED #community/build_scenepy

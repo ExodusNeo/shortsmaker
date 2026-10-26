@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_style.py"
 type: "code"
-community: "Motion Scenes and Style Library"
+community: "style_library"
 location: "L408"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Motion_Scenes_and_Style_Library
+  - community/style_library
 ---
 
 # test_approve_adds_to_library()
@@ -19,4 +19,4 @@ tags:
 - [[style_library()]] - `calls` [EXTRACTED]
 - [[test_style.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Motion_Scenes_and_Style_Library
+#graphify/code #graphify/EXTRACTED #community/style_library

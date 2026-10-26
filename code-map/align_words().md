@@ -1,12 +1,12 @@
 ---
 source_file: "local_ai/qwen_voice.py"
 type: "code"
-community: "Narration Number Speech"
+community: "time"
 location: "L90"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Narration_Number_Speech
+  - community/time
 ---
 
 # align_words()
@@ -23,4 +23,4 @@ tags:
 - [[test_every_aligned_word_is_in_the_aligner_alphabet()]] - `calls` [INFERRED]
 - [[unicodedata]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Narration_Number_Speech
+#graphify/code #graphify/EXTRACTED #community/time

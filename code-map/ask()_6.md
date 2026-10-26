@@ -1,17 +1,17 @@
 ---
-source_file: "tests/test_full_scenes.py"
+source_file: "tests/test_rules.py"
 type: "code"
-community: "Write Scripts Review Tests"
-location: "L410"
+community: "test_rules.py"
+location: "L242"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Write_Scripts_Review_Tests
+  - community/test_rulespy
 ---
 
 # ask()
 
 ## Connections
-- [[test_review_uses_unused_pool_pictures_before_painting()]] - `contains` [EXTRACTED]
+- [[run_draft()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Write_Scripts_Review_Tests
+#graphify/code #graphify/EXTRACTED #community/test_rulespy

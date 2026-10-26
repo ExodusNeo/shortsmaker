@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/plan_rules.py"
 type: "code"
-community: "Local Voice Alignment"
+community: "local_voice"
 location: "L365"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Local_Voice_Alignment
+  - community/local_voice
 ---
 
 # is_loop_short()
@@ -16,8 +16,8 @@ tags:
 - [[local_voice()]] - `calls` [EXTRACTED]
 - [[plan_rules.py]] - `contains` [EXTRACTED]
 - [[re]] - `calls` [EXTRACTED]
-- [[render()_1]] - `calls` [EXTRACTED]
+- [[render()_2]] - `calls` [EXTRACTED]
 - [[split_takes()]] - `calls` [EXTRACTED]
 - [[test_fill_money_graphics_and_caps()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Local_Voice_Alignment
+#graphify/code #graphify/EXTRACTED #community/local_voice

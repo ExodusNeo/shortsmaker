@@ -1,12 +1,12 @@
 ---
 source_file: "blender/templates.py"
 type: "code"
-community: "Bridge Templates"
+community: "templates.py"
 location: "L112"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Bridge_Templates
+  - community/templatespy
 ---
 
 # girder_bridge()
@@ -21,4 +21,4 @@ tags:
 - [[member()]] - `calls` [EXTRACTED]
 - [[templates.py]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/Bridge_Templates
+#graphify/code #graphify/EXTRACTED #community/templatespy

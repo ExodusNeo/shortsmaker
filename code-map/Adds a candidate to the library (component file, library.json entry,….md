@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/style_lab.py"
 type: "rationale"
-community: "Motion Scenes and Style Library"
+community: "style_library"
 location: "L268"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Motion_Scenes_and_Style_Library
+  - community/style_library
 ---
 
 # Adds a candidate to the library (component file, library.json entry,…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[approve_candidate()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Motion_Scenes_and_Style_Library
+#graphify/rationale #graphify/EXTRACTED #community/style_library

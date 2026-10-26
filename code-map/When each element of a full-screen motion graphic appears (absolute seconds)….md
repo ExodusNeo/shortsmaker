@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/plan_rules.py"
 type: "rationale"
-community: "Sound Design and Scene Cues"
+community: "full_cues"
 location: "L471"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Sound_Design_and_Scene_Cues
+  - community/full_cues
 ---
 
 # When each element of a full-screen motion graphic appears (absolute seconds):…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[full_cues()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Sound_Design_and_Scene_Cues
+#graphify/rationale #graphify/EXTRACTED #community/full_cues

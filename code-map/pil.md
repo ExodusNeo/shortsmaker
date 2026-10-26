@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "CLI, Config and Footage"
+community: "short_render.py"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/CLI_Config_and_Footage
+  - community/short_renderpy
 ---
 
 # pil
@@ -29,4 +29,4 @@ tags:
 - [[test_full_scenes.py]] - `imports_from` [EXTRACTED]
 - [[test_h3_run.py]] - `imports_from` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/CLI_Config_and_Footage
+#graphify/concept #graphify/EXTRACTED #community/short_renderpy

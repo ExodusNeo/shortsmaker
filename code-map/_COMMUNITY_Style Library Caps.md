@@ -1,12 +1,10 @@
 ---
 type: community
-cohesion: 0.50
 members: 4
 ---
 
 # Style Library Caps
 
-**Cohesion:** 0.50 - moderately connected
 **Members:** 4 nodes
 
 ## Members
@@ -23,9 +21,8 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 1 edge to [[_COMMUNITY_Script Sounds and Graphics]]
-- 1 edge to [[_COMMUNITY_CLI, Config and Footage]]
-- 1 edge to [[_COMMUNITY_Motion Scenes and Style Library]]
+- 2 edges to [[_COMMUNITY_test_full_scenes.py]]
+- 1 edge to [[_COMMUNITY_write_scripts]]
 
 ## Top bridge nodes
 - [[limit_style()]] - degree 4, connects to 2 communities

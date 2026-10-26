@@ -1,21 +1,17 @@
 ---
 source_file: "tests/test_full_scenes.py"
 type: "code"
-community: "Write Scripts Review Tests"
-location: "L150"
+community: "code_custom_scenes"
+location: "L439"
 tags:
   - graphify/code
-  - graphify/INFERRED
-  - community/Write_Scripts_Review_Tests
+  - graphify/EXTRACTED
+  - community/code_custom_scenes
 ---
 
 # ask()
 
 ## Connections
-- [[_fake_planning()]] - `indirect_call` [INFERRED]
-- [[test_look_check_fixes_code()]] - `indirect_call` [INFERRED]
-- [[test_review_redraws_custom()]] - `indirect_call` [INFERRED]
-- [[test_review_uses_unused_pool_pictures_before_painting()]] - `indirect_call` [INFERRED]
-- [[test_rewrite_paint_prompts()]] - `indirect_call` [INFERRED]
+- [[test_rewrite_paint_prompts()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/Write_Scripts_Review_Tests
+#graphify/code #graphify/EXTRACTED #community/code_custom_scenes

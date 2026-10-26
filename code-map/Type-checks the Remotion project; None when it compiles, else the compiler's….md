@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/motion.py"
 type: "rationale"
-community: "Motion Scenes and Style Library"
+community: "subprocess"
 location: "L310"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Motion_Scenes_and_Style_Library
+  - community/subprocess
 ---
 
 # Type-checks the Remotion project; None when it compiles, else the compiler's…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[tsc_check()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Motion_Scenes_and_Style_Library
+#graphify/rationale #graphify/EXTRACTED #community/subprocess

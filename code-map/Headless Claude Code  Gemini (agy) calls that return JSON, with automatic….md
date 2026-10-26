@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/llm.py"
 type: "rationale"
-community: "CLI, Config and Footage"
+community: "test_full_scenes.py"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/CLI_Config_and_Footage
+  - community/test_full_scenespy
 ---
 
 # Headless Claude Code / Gemini (agy) calls that return JSON, with automatic…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[llm.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/CLI_Config_and_Footage
+#graphify/rationale #graphify/EXTRACTED #community/test_full_scenespy

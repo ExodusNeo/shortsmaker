@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/cli.py"
 type: "code"
-community: "Main Entry and Channel Profiles"
+community: "test_rules.py"
 location: "L17"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Main_Entry_and_Channel_Profiles
+  - community/test_rulespy
 ---
 
 # main()
@@ -26,7 +26,7 @@ tags:
 - [[prune_cache()]] - `calls` [EXTRACTED]
 - [[prune_work()]] - `calls` [EXTRACTED]
 - [[re]] - `calls` [EXTRACTED]
-- [[render()_1]] - `calls` [EXTRACTED]
+- [[render()_2]] - `calls` [EXTRACTED]
 - [[require_rules()]] - `calls` [EXTRACTED]
 - [[save_channel()]] - `calls` [EXTRACTED]
 - [[seo_pass()]] - `calls` [EXTRACTED]
@@ -39,4 +39,4 @@ tags:
 - [[vault_refresh()]] - `calls` [EXTRACTED]
 - [[write_scripts()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Main_Entry_and_Channel_Profiles
+#graphify/code #graphify/EXTRACTED #community/test_rulespy

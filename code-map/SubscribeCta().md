@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/Graphics.tsx"
 type: "code"
-community: "Short Composition Root"
+community: "Graphics.tsx"
 location: "L60"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Short_Composition_Root
+  - community/Graphicstsx
 ---
 
 # SubscribeCta()
@@ -18,4 +18,4 @@ tags:
 - [[outline()]] - `calls` [EXTRACTED]
 - [[useWindow()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Short_Composition_Root
+#graphify/code #graphify/EXTRACTED #community/Graphicstsx

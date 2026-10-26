@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_pictures_first.py"
 type: "rationale"
-community: "Topic Planning Tests"
+community: "test_pictures_first.py"
 location: "L198"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Topic_Planning_Tests
+  - community/test_pictures_firstpy
 ---
 
 # write_scripts() with every AI step canned and `prepare` standing in for…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[planning]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Topic_Planning_Tests
+#graphify/rationale #graphify/EXTRACTED #community/test_pictures_firstpy

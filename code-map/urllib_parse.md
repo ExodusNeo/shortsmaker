@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "CLI, Config and Footage"
+community: "gpu.py"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/CLI_Config_and_Footage
+  - community/gpupy
 ---
 
 # urllib_parse
@@ -18,4 +18,4 @@ tags:
 - [[seo.py]] - `imports` [EXTRACTED]
 - [[writing.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/CLI_Config_and_Footage
+#graphify/concept #graphify/EXTRACTED #community/gpupy

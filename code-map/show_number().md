@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/plan_rules.py"
 type: "code"
-community: "Full-Screen Graphic Validation"
+community: "write_scripts"
 location: "L88"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Full-Screen_Graphic_Validation
+  - community/write_scripts
 ---
 
 # show_number()
@@ -17,4 +17,4 @@ tags:
 - [[plan_rules.py]] - `contains` [EXTRACTED]
 - [[test_number_scaling()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Full-Screen_Graphic_Validation
+#graphify/code #graphify/EXTRACTED #community/write_scripts

@@ -1,12 +1,10 @@
 ---
 type: community
-cohesion: 0.12
 members: 16
 ---
 
 # Gemini Image Painting
 
-**Cohesion:** 0.12 - loosely connected
 **Members:** 16 nodes
 
 ## Members
@@ -14,8 +12,8 @@ members: 16
 - [[A painted figure (dark ink on light paper) - a cropped RGBA silhouette (dark…]] - rationale - shortsmaker/remotion_render.py
 - [[Fill the 916 frame with the picture (centre crop) for the slow zoompan. This…]] - rationale - shortsmaker/photo_prep.py
 - [[Paint the AI images with Gemini (agy's built-in image generator, ~2 min each, 3…]] - rationale - shortsmaker/gpu.py
-- [[Path_24]] - code
-- [[Path_25]] - code
+- [[Path_26]] - code
+- [[Path_27]] - code
 - [[Remotion failed the full-screen motion graphic scenes get a painted picture…]] - rationale - shortsmaker/remotion_render.py
 - [[fake_gemini()]] - code - tests/test_full_scenes.py
 - [[fake_moss()]] - code - tests/test_full_scenes.py
@@ -35,18 +33,18 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 4 edges to [[_COMMUNITY_Sound Effects and Credits]]
-- 3 edges to [[_COMMUNITY_Audio Mix and Shotcut Export]]
-- 3 edges to [[_COMMUNITY_CLI, Config and Footage]]
+- 4 edges to [[_COMMUNITY_render]]
+- 4 edges to [[_COMMUNITY_short_render.py]]
 - 2 edges to [[_COMMUNITY_AI Clip Prompts and Cuts]]
-- 2 edges to [[_COMMUNITY_Local Voice and Freesound]]
-- 1 edge to [[_COMMUNITY_Headless AI Planner Calls]]
-- 1 edge to [[_COMMUNITY_ASS Captions and Skins]]
-- 1 edge to [[_COMMUNITY_Motion Scenes and Style Library]]
+- 2 edges to [[_COMMUNITY_gpu.py]]
+- 2 edges to [[_COMMUNITY_test_full_scenes.py]]
+- 1 edge to [[_COMMUNITY_render_remotion]]
+- 1 edge to [[_COMMUNITY_fix_short]]
+- 1 edge to [[_COMMUNITY_subprocess]]
 
 ## Top bridge nodes
 - [[paint_instead()]] - degree 10, connects to 5 communities
 - [[gemini_images()]] - degree 6, connects to 3 communities
-- [[Path_25]] - degree 5, connects to 3 communities
+- [[Path_27]] - degree 5, connects to 3 communities
 - [[to_vertical()]] - degree 5, connects to 2 communities
 - [[ink_silhouette()]] - degree 5, connects to 2 communities

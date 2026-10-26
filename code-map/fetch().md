@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/media_tools.py"
 type: "code"
-community: "Stock Video Sources"
+community: "gather_pool"
 location: "L9"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Stock_Video_Sources
+  - community/gather_pool
 ---
 
 # fetch()
@@ -24,4 +24,4 @@ tags:
 - [[search_suggestions()]] - `calls` [EXTRACTED]
 - [[wm_get()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Stock_Video_Sources
+#graphify/code #graphify/EXTRACTED #community/gather_pool

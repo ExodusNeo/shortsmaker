@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_pictures_first.py"
 type: "code"
-community: "Director Picture Cleanup Tests"
+community: "test_pictures_first.py"
 location: "L102"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Director_Picture_Cleanup_Tests
+  - community/test_pictures_firstpy
 ---
 
 # pool_of()
@@ -32,4 +32,4 @@ tags:
 - [[test_small_pool_skips_ai()]] - `calls` [EXTRACTED]
 - [[test_usable_counts_film_once()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Director_Picture_Cleanup_Tests
+#graphify/code #graphify/EXTRACTED #community/test_pictures_firstpy

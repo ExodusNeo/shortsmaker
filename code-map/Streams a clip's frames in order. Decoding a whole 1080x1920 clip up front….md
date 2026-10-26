@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/frame_render.py"
 type: "rationale"
-community: "Frame Drawing and Graphics"
+community: "frame_maker"
 location: "L208"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Frame_Drawing_and_Graphics
+  - community/frame_maker
 ---
 
 # Streams a clip's frames in order. Decoding a whole 1080x1920 clip up front…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[ClipReader]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Frame_Drawing_and_Graphics
+#graphify/rationale #graphify/EXTRACTED #community/frame_maker

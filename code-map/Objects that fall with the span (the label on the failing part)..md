@@ -1,12 +1,12 @@
 ---
 source_file: "blender/failures.py"
 type: "rationale"
-community: "Bridge Collapse Simulation"
+community: "main"
 location: "L113"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Bridge_Collapse_Simulation
+  - community/main
 ---
 
 # Objects that fall with the span (the label on the failing part).
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[dot-ride_along()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Bridge_Collapse_Simulation
+#graphify/rationale #graphify/EXTRACTED #community/main

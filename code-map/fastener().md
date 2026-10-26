@@ -1,12 +1,12 @@
 ---
 source_file: "blender/parts.py"
 type: "code"
-community: "Blender Bridge Parts"
+community: "parts.py"
 location: "L102"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Blender_Bridge_Parts
+  - community/partspy
 ---
 
 # fastener()
@@ -16,7 +16,7 @@ tags:
 - [[The fasteners on a plate's outer face a grid of rivet heads or bolt heads, one…]] - `rationale_for` [EXTRACTED]
 - [[box()]] - `calls` [EXTRACTED]
 - [[cylinder()]] - `calls` [EXTRACTED]
-- [[main()_3]] - `calls` [EXTRACTED]
+- [[main()_5]] - `calls` [EXTRACTED]
 - [[parts.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Blender_Bridge_Parts
+#graphify/code #graphify/EXTRACTED #community/partspy

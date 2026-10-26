@@ -1,20 +1,20 @@
 ---
 source_file: ""
 type: "code"
-community: "TTS and Story Sounds"
+community: "render_remotion"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/TTS_and_Story_Sounds
+  - community/render_remotion
 ---
 
 # Path
 
 ## Connections
-- [[captions()]] - `references` [EXTRACTED]
-- [[music_gain()]] - `references` [EXTRACTED]
-- [[speak()_1]] - `references` [EXTRACTED]
-- [[story_sound()]] - `references` [EXTRACTED]
-- [[tts()_1]] - `references` [EXTRACTED]
+- [[approve_candidate()]] - `references` [EXTRACTED]
+- [[invent_component()]] - `references` [EXTRACTED]
+- [[invent_styles()]] - `references` [EXTRACTED]
+- [[reject_candidate()]] - `references` [EXTRACTED]
+- [[save_candidate()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/TTS_and_Story_Sounds
+#graphify/code #graphify/EXTRACTED #community/render_remotion

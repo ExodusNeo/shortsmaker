@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_full_scenes.py"
 type: "code"
-community: "ASS Captions and Skins"
+community: "short_render.py"
 location: "L470"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ASS_Captions_and_Skins
+  - community/short_renderpy
 ---
 
 # test_clean_full_custom_and_skin()
@@ -16,4 +16,4 @@ tags:
 - [[short_skin()]] - `calls` [EXTRACTED]
 - [[test_full_scenes.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ASS_Captions_and_Skins
+#graphify/code #graphify/EXTRACTED #community/short_renderpy

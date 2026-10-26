@@ -1,18 +1,17 @@
 ---
-source_file: "tests/test_blender_plan.py"
+source_file: "tests/test_style.py"
 type: "code"
-community: "Blender Build Planning"
-location: "L87"
+community: "fact_check"
+location: "L200"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Blender_Build_Planning
+  - community/fact_check
 ---
 
 # ask()
 
 ## Connections
-- [[plan()]] - `calls` [EXTRACTED]
-- [[test_plan_builds_retries_then_defaults()]] - `indirect_call` [INFERRED]
+- [[test_fact_check_sees_new_graphics()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Blender_Build_Planning
+#graphify/code #graphify/EXTRACTED #community/fact_check

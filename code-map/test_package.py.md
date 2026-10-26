@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_package.py"
 type: "code"
-community: "Audio Mix and Shotcut Export"
+community: "test_full_scenes.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Audio_Mix_and_Shotcut_Export
+  - community/test_full_scenespy
 ---
 
 # test_package.py
@@ -48,4 +48,4 @@ tags:
 - [[traceback]] - `imports` [EXTRACTED]
 - [[writing.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Audio_Mix_and_Shotcut_Export
+#graphify/code #graphify/EXTRACTED #community/test_full_scenespy

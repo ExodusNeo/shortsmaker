@@ -1,12 +1,12 @@
 ---
 source_file: "tools/split_make_shorts.py"
 type: "code"
-community: "Script Splitting AST Tools"
+community: "split_make_shorts.py"
 location: "L84"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Script_Splitting_AST_Tools
+  - community/split_make_shortspy
 ---
 
 # stored_names()
@@ -16,4 +16,4 @@ tags:
 - [[split_make_shorts.py]] - `contains` [EXTRACTED]
 - [[visit()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Script_Splitting_AST_Tools
+#graphify/code #graphify/EXTRACTED #community/split_make_shortspy

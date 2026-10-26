@@ -1,12 +1,12 @@
 ---
 source_file: "colab/h3_run.py"
 type: "rationale"
-community: "MiniMax H3 Video Jobs"
+community: "h3_run.py"
 location: "L80"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/MiniMax_H3_Video_Jobs
+  - community/h3_runpy
 ---
 
 # The video SaveVideo wrote, found by scanning the job's outputs (the key name…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[saved_file()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/MiniMax_H3_Video_Jobs
+#graphify/rationale #graphify/EXTRACTED #community/h3_runpy

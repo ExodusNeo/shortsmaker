@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/style_lab.py"
 type: "code"
-community: "Motion Scenes and Style Library"
+community: "style_library"
 location: "L14"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Motion_Scenes_and_Style_Library
+  - community/style_library
 ---
 
 # style_library()
@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[The style library (remotionsrcstylelibrary.json) {name, kind, description,…]] - `rationale_for` [EXTRACTED]
 - [[approve_candidate()]] - `calls` [EXTRACTED]
-- [[build()]] - `calls` [EXTRACTED]
+- [[build()_1]] - `calls` [EXTRACTED]
 - [[choose_images()]] - `calls` [EXTRACTED]
 - [[clean_invention()]] - `calls` [EXTRACTED]
 - [[clean_look()]] - `calls` [EXTRACTED]
@@ -33,4 +33,4 @@ tags:
 - [[test_write_style_index_is_deterministic()]] - `calls` [EXTRACTED]
 - [[write_style_index()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Motion_Scenes_and_Style_Library
+#graphify/code #graphify/EXTRACTED #community/style_library

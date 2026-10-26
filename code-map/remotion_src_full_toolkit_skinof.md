@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "Custom Remotion Scenes"
+community: "toolkit.tsx"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Custom_Remotion_Scenes
+  - community/toolkittsx
 ---
 
 # remotion_src_full_toolkit_skinof
@@ -18,4 +18,4 @@ tags:
 - [[ExampleChain.tsx]] - `imports` [EXTRACTED]
 - [[ExampleEvidence.tsx]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Custom_Remotion_Scenes
+#graphify/concept #graphify/EXTRACTED #community/toolkittsx

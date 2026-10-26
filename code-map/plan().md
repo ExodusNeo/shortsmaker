@@ -1,18 +1,18 @@
 ---
 source_file: "tests/test_blender_plan.py"
 type: "code"
-community: "Blender Build Planning"
+community: "test_blender_plan.py"
 location: "L23"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Blender_Build_Planning
+  - community/test_blender_planpy
 ---
 
 # plan()
 
 ## Connections
-- [[ask()_8]] - `calls` [EXTRACTED]
+- [[ask()_10]] - `calls` [EXTRACTED]
 - [[test_a_failure_in_scene_one_becomes_the_hook()]] - `calls` [EXTRACTED]
 - [[test_bad_values_get_defaults()]] - `calls` [EXTRACTED]
 - [[test_blender_plan.py]] - `contains` [EXTRACTED]
@@ -23,4 +23,4 @@ tags:
 - [[test_unlisted_and_bad_scenes_copy_the_previous_beat()]] - `calls` [EXTRACTED]
 - [[test_zoom_and_failure_are_guaranteed()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Blender_Build_Planning
+#graphify/code #graphify/EXTRACTED #community/test_blender_planpy

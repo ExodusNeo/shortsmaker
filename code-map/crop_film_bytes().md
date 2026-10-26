@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/footage.py"
 type: "code"
-community: "CLI, Config and Footage"
+community: "gpu.py"
 location: "L155"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CLI_Config_and_Footage
+  - community/gpupy
 ---
 
 # crop_film_bytes()
@@ -17,4 +17,4 @@ tags:
 - [[footage.py]] - `contains` [EXTRACTED]
 - [[io]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CLI_Config_and_Footage
+#graphify/code #graphify/EXTRACTED #community/gpupy

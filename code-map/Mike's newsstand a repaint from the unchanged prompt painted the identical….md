@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_full_scenes.py"
 type: "rationale"
-community: "Repaint Prompt Rewrites"
+community: "code_custom_scenes"
 location: "L433"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Repaint_Prompt_Rewrites
+  - community/code_custom_scenes
 ---
 
 # Mike's newsstand: a repaint from the unchanged prompt painted the identical…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[test_rewrite_paint_prompts()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Repaint_Prompt_Rewrites
+#graphify/rationale #graphify/EXTRACTED #community/code_custom_scenes

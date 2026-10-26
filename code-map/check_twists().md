@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/writing.py"
 type: "code"
-community: "Narration Number Speech"
+community: "check_twists"
 location: "L506"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Narration_Number_Speech
+  - community/check_twists
 ---
 
 # check_twists()
@@ -21,4 +21,4 @@ tags:
 - [[write_scripts()]] - `calls` [EXTRACTED]
 - [[writing.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Narration_Number_Speech
+#graphify/code #graphify/EXTRACTED #community/check_twists

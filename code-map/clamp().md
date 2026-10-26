@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/blender_plan.py"
 type: "code"
-community: "Blender Build Planning"
+community: "math"
 location: "L33"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Blender_Build_Planning
+  - community/math
 ---
 
 # clamp()
@@ -17,4 +17,4 @@ tags:
 - [[clean_build()]] - `calls` [EXTRACTED]
 - [[math]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Blender_Build_Planning
+#graphify/code #graphify/EXTRACTED #community/math

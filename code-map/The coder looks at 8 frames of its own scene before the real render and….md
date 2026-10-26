@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/motion.py"
 type: "rationale"
-community: "Headless AI Planner Calls"
+community: "code_custom_scenes"
 location: "L280"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Headless_AI_Planner_Calls
+  - community/code_custom_scenes
 ---
 
 # The coder looks at 8 frames of its own scene before the real render and…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[look_and_fix()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Headless_AI_Planner_Calls
+#graphify/rationale #graphify/EXTRACTED #community/code_custom_scenes

@@ -1,18 +1,18 @@
 ---
 source_file: "blender/templates.py"
 type: "code"
-community: "Bridge Templates"
+community: "templates.py"
 location: "L11"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Bridge_Templates
+  - community/templatespy
 ---
 
 # Bridge
 
 ## Connections
-- [[dot-__init__()_4]] - `method` [EXTRACTED]
+- [[dot-__init__()_5]] - `method` [EXTRACTED]
 - [[dot-add()]] - `method` [EXTRACTED]
 - [[dot-center()]] - `method` [EXTRACTED]
 - [[dot-node()]] - `method` [EXTRACTED]
@@ -23,7 +23,7 @@ tags:
 - [[_piers_and_deck()]] - `references` [EXTRACTED]
 - [[_towers()]] - `references` [EXTRACTED]
 - [[_truss_panel_members()]] - `references` [EXTRACTED]
-- [[build()_1]] - `references` [EXTRACTED]
+- [[build()]] - `references` [EXTRACTED]
 - [[cable_stayed_bridge()]] - `calls` [EXTRACTED]
 - [[dress()]] - `references` [EXTRACTED]
 - [[eyebar_chain_bridge()]] - `calls` [EXTRACTED]
@@ -33,4 +33,4 @@ tags:
 - [[templates.py]] - `contains` [EXTRACTED]
 - [[truss_bridge()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Bridge_Templates
+#graphify/code #graphify/EXTRACTED #community/templatespy

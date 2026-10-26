@@ -1,12 +1,12 @@
 ---
 source_file: "blender/failures.py"
 type: "code"
-community: "Bridge Collapse Simulation"
+community: "main"
 location: "L112"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Bridge_Collapse_Simulation
+  - community/main
 ---
 
 # .ride_along()
@@ -15,6 +15,6 @@ tags:
 - [[dot-falls()]] - `calls` [EXTRACTED]
 - [[Failure]] - `method` [EXTRACTED]
 - [[Objects that fall with the span (the label on the failing part).]] - `rationale_for` [EXTRACTED]
-- [[main()_3]] - `calls` [INFERRED]
+- [[main()_5]] - `calls` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/Bridge_Collapse_Simulation
+#graphify/code #graphify/EXTRACTED #community/main

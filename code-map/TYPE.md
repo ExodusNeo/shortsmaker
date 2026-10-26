@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/full/Paper.tsx"
 type: "code"
-community: "Board and Document Scenes"
+community: "BigNumber.tsx"
 location: "L9"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Board_and_Document_Scenes
+  - community/BigNumbertsx
 ---
 
 # TYPE
@@ -21,4 +21,4 @@ tags:
 - [[guarded.tsx]] - `imports` [EXTRACTED]
 - [[toolkit.tsx]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Board_and_Document_Scenes
+#graphify/code #graphify/EXTRACTED #community/BigNumbertsx

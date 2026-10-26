@@ -1,12 +1,12 @@
 ---
 source_file: "blender/parts.py"
 type: "code"
-community: "Blender Bridge Parts"
+community: "parts.py"
 location: "L82"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Blender_Bridge_Parts
+  - community/partspy
 ---
 
 # tower()
@@ -17,4 +17,4 @@ tags:
 - [[member()]] - `calls` [EXTRACTED]
 - [[parts.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Blender_Bridge_Parts
+#graphify/code #graphify/EXTRACTED #community/partspy

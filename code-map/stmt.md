@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Script Splitting AST Tools"
+community: "split_make_shorts.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Script_Splitting_AST_Tools
+  - community/split_make_shortspy
 ---
 
 # stmt
@@ -14,4 +14,4 @@ tags:
 - [[chunks_of()]] - `references` [EXTRACTED]
 - [[import_lines()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Script_Splitting_AST_Tools
+#graphify/code #graphify/EXTRACTED #community/split_make_shortspy

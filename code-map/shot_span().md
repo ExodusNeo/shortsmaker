@@ -1,18 +1,18 @@
 ---
 source_file: "shortsmaker/footage.py"
 type: "code"
-community: "Audio Mix and Shotcut Export"
+community: "gpu.py"
 location: "L229"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Audio_Mix_and_Shotcut_Export
+  - community/gpupy
 ---
 
 # shot_span()
 
 ## Connections
-- [[Path_19]] - `references` [EXTRACTED]
+- [[Path_22]] - `references` [EXTRACTED]
 - [[Start and end of the camera shot containing time `at` (newsreels cut to title…]] - `rationale_for` [EXTRACTED]
 - [[duration()]] - `calls` [EXTRACTED]
 - [[footage.py]] - `contains` [EXTRACTED]
@@ -20,4 +20,4 @@ tags:
 - [[re]] - `calls` [EXTRACTED]
 - [[subprocess]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Audio_Mix_and_Shotcut_Export
+#graphify/code #graphify/EXTRACTED #community/gpupy

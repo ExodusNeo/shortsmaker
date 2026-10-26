@@ -1,18 +1,18 @@
 ---
 source_file: "shortsmaker/cli.py"
 type: "code"
-community: "Picture Swap Fixes"
+community: "fix_short"
 location: "L110"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Picture_Swap_Fixes
+  - community/fix_short
 ---
 
 # use_picture_from()
 
 ## Connections
-- [[Path_23]] - `references` [EXTRACTED]
+- [[Path_25]] - `references` [EXTRACTED]
 - [[cli.py]] - `contains` [EXTRACTED]
 - [[fix scene i shows scene k's picture. A real photofilm is a picture choice; an…]] - `rationale_for` [EXTRACTED]
 - [[fix_short()]] - `calls` [EXTRACTED]
@@ -20,4 +20,4 @@ tags:
 - [[test_new_picture_drops_mark()]] - `calls` [EXTRACTED]
 - [[test_paint_new_clears_full()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Picture_Swap_Fixes
+#graphify/code #graphify/EXTRACTED #community/fix_short

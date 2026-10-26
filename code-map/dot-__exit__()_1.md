@@ -1,18 +1,17 @@
 ---
 source_file: "tests/test_pictures_first.py"
 type: "code"
-community: "Wikimedia Image Search"
-location: "L214"
+community: "test_pictures_first.py"
+location: "L344"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Wikimedia_Image_Search
+  - community/test_pictures_firstpy
 ---
 
 # .__exit__()
 
 ## Connections
-- [[owner()]] - `calls` [EXTRACTED]
-- [[planning]] - `method` [EXTRACTED]
+- [[picking]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Wikimedia_Image_Search
+#graphify/code #graphify/EXTRACTED #community/test_pictures_firstpy

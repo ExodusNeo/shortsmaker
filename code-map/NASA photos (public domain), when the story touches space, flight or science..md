@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/image_sources.py"
 type: "rationale"
-community: "Stock Video Sources"
+community: "gather_pool"
 location: "L208"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Stock_Video_Sources
+  - community/gather_pool
 ---
 
 # NASA photos (public domain), when the story touches space, flight or science.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[nasa_images()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Stock_Video_Sources
+#graphify/rationale #graphify/EXTRACTED #community/gather_pool

@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "Blender Camera Shots"
+community: "math"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Blender_Camera_Shots
+  - community/math
 ---
 
 # math
@@ -23,4 +23,4 @@ tags:
 - [[parts.py]] - `imports` [EXTRACTED]
 - [[radians()]] - `calls` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Blender_Camera_Shots
+#graphify/concept #graphify/EXTRACTED #community/math

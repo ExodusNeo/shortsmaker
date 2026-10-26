@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_blender_render.py"
 type: "code"
-community: "Blender Build Planning"
+community: "test_blender_render.py"
 location: "L40"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Blender_Build_Planning
+  - community/test_blender_renderpy
 ---
 
 # short()
@@ -22,4 +22,4 @@ tags:
 - [[test_render_clips_makes_one_clip_per_scene()]] - `calls` [EXTRACTED]
 - [[test_same_build_json_reuses_frames()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Blender_Build_Planning
+#graphify/code #graphify/EXTRACTED #community/test_blender_renderpy

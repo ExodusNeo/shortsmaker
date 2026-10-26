@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Blender Bridge Parts"
+community: "parts.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Blender_Bridge_Parts
+  - community/partspy
 ---
 
 # Collection
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[_obj()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Blender_Bridge_Parts
+#graphify/code #graphify/EXTRACTED #community/partspy

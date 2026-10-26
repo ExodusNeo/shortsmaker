@@ -1,12 +1,12 @@
 ---
 source_file: "blender/failures.py"
 type: "code"
-community: "Blender Camera Shots"
+community: "build_scene.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Blender_Camera_Shots
+  - community/build_scenepy
 ---
 
 # failures.py
@@ -23,4 +23,4 @@ tags:
 - [[parts.py]] - `imports` [EXTRACTED]
 - [[random]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Blender_Camera_Shots
+#graphify/code #graphify/EXTRACTED #community/build_scenepy

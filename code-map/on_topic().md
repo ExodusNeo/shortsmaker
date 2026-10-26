@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/image_sources.py"
 type: "code"
-community: "Stock Video Sources"
+community: "gather_pool"
 location: "L257"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Stock_Video_Sources
+  - community/gather_pool
 ---
 
 # on_topic()
@@ -23,4 +23,4 @@ tags:
 - [[test_on_topic_ignores_a_lone_shared_name()]] - `calls` [EXTRACTED]
 - [[words_of()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Stock_Video_Sources
+#graphify/code #graphify/EXTRACTED #community/gather_pool

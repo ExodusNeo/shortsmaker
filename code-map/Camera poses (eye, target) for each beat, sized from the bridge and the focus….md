@@ -1,12 +1,12 @@
 ---
 source_file: "blender/build_scene.py"
 type: "rationale"
-community: "Blender Camera Shots"
+community: "build_scene.py"
 location: "L42"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Blender_Camera_Shots
+  - community/build_scenepy
 ---
 
 # Camera poses (eye, target) for each beat, sized from the bridge and the focus…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[Shots]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Blender_Camera_Shots
+#graphify/rationale #graphify/EXTRACTED #community/build_scenepy

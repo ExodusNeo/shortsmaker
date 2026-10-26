@@ -1,18 +1,18 @@
 ---
 source_file: "shortsmaker/picture_pool.py"
 type: "code"
-community: "Picture Pool Storage"
+community: "choose_images"
 location: "L186"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Picture_Pool_Storage
+  - community/choose_images
 ---
 
 # load_pool()
 
 ## Connections
-- [[Path_7]] - `references` [EXTRACTED]
+- [[Path_8]] - `references` [EXTRACTED]
 - [[The saved pool (None if missing or unreadable it is gathered again);…]] - `rationale_for` [EXTRACTED]
 - [[choose_images()]] - `calls` [EXTRACTED]
 - [[drawn_thumbnail()]] - `calls` [EXTRACTED]
@@ -27,4 +27,4 @@ tags:
 - [[test_pool_rows_without_thumbs()]] - `calls` [EXTRACTED]
 - [[write_scripts()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Picture_Pool_Storage
+#graphify/code #graphify/EXTRACTED #community/choose_images

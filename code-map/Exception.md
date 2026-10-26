@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Channel Rules Files"
+community: "test_rules.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Channel_Rules_Files
+  - community/test_rulespy
 ---
 
 # Exception
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[StopPicker]] - `inherits` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Channel_Rules_Files
+#graphify/code #graphify/EXTRACTED #community/test_rulespy

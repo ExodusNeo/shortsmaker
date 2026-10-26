@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/gpu.py"
 type: "rationale"
-community: "Local Voice Alignment"
+community: "time"
 location: "L143"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Local_Voice_Alignment
+  - community/time
 ---
 
 # Caption words the aligner gives for `text` (qwen_voice.align_words: a token…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[spoken_count()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Local_Voice_Alignment
+#graphify/rationale #graphify/EXTRACTED #community/time

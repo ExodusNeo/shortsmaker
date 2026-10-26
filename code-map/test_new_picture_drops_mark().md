@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_full_scenes.py"
 type: "code"
-community: "Picture Swap Fixes"
+community: "fix_short"
 location: "L609"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Picture_Swap_Fixes
+  - community/fix_short
 ---
 
 # test_new_picture_drops_mark()
@@ -17,4 +17,4 @@ tags:
 - [[test_full_scenes.py]] - `contains` [EXTRACTED]
 - [[use_picture_from()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Picture_Swap_Fixes
+#graphify/code #graphify/EXTRACTED #community/fix_short

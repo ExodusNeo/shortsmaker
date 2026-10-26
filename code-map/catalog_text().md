@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/picture_pool.py"
 type: "code"
-community: "Usable Picture Catalog"
+community: "test_pictures_first.py"
 location: "L280"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Usable_Picture_Catalog
+  - community/test_pictures_firstpy
 ---
 
 # catalog_text()
@@ -18,4 +18,4 @@ tags:
 - [[pictures_of()]] - `calls` [EXTRACTED]
 - [[test_catalog_text()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Usable_Picture_Catalog
+#graphify/code #graphify/EXTRACTED #community/test_pictures_firstpy

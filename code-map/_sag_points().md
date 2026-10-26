@@ -1,12 +1,12 @@
 ---
 source_file: "blender/templates.py"
 type: "code"
-community: "Bridge Templates"
+community: "templates.py"
 location: "L134"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Bridge_Templates
+  - community/templatespy
 ---
 
 # _sag_points()
@@ -16,4 +16,4 @@ tags:
 - [[_hung_deck()]] - `calls` [EXTRACTED]
 - [[templates.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Bridge_Templates
+#graphify/code #graphify/EXTRACTED #community/templatespy

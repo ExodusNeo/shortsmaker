@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/style/kit.ts"
 type: "code"
-community: "Invented Overlays and Looks"
+community: "style/index.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Invented_Overlays_and_Looks
+  - community/style/indexts
 ---
 
 # kit.ts
@@ -41,7 +41,7 @@ tags:
 - [[clamp01()]] - `contains` [EXTRACTED]
 - [[drawCover()]] - `contains` [EXTRACTED]
 - [[inksOf()]] - `contains` [EXTRACTED]
-- [[luminance()_1]] - `contains` [EXTRACTED]
+- [[luminance()]] - `contains` [EXTRACTED]
 - [[noise()_1]] - `contains` [EXTRACTED]
 - [[outline()]] - `re_exports` [EXTRACTED]
 - [[ref_react]] - `imports_from` [EXTRACTED]
@@ -53,4 +53,4 @@ tags:
 - [[theme]] - `re_exports` [EXTRACTED]
 - [[useOnceCanvas()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Invented_Overlays_and_Looks
+#graphify/code #graphify/EXTRACTED #community/style/indexts

@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_story.py"
 type: "code"
-community: "Narration Number Speech"
+community: "local_voice"
 location: "L28"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Narration_Number_Speech
+  - community/local_voice
 ---
 
 # test_sentences_running_across_cuts_are_one_take()
@@ -16,4 +16,4 @@ tags:
 - [[sentence_groups()]] - `calls` [EXTRACTED]
 - [[test_story.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Narration_Number_Speech
+#graphify/code #graphify/EXTRACTED #community/local_voice

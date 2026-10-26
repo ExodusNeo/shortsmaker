@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/logbook.py"
 type: "code"
-community: "Obsidian Vault Logbook"
+community: "test_rules.py"
 location: "L84"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Obsidian_Vault_Logbook
+  - community/test_rulespy
 ---
 
 # vault_refresh()
@@ -18,4 +18,4 @@ tags:
 - [[re]] - `calls` [EXTRACTED]
 - [[vault_page()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Obsidian_Vault_Logbook
+#graphify/code #graphify/EXTRACTED #community/test_rulespy

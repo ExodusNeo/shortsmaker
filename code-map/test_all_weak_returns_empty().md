@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_pictures_first.py"
 type: "code"
-community: "Topic Planning Tests"
+community: "test_pictures_first.py"
 location: "L249"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Topic_Planning_Tests
+  - community/test_pictures_firstpy
 ---
 
 # test_all_weak_returns_empty()
@@ -17,4 +17,4 @@ tags:
 - [[test_pictures_first.py]] - `contains` [EXTRACTED]
 - [[write_scripts()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Topic_Planning_Tests
+#graphify/code #graphify/EXTRACTED #community/test_pictures_firstpy

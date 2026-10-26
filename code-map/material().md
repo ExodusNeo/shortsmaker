@@ -1,12 +1,12 @@
 ---
 source_file: "blender/look.py"
 type: "code"
-community: "Blender Bridge Parts"
+community: "parts.py"
 location: "L85"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Blender_Bridge_Parts
+  - community/partspy
 ---
 
 # material()
@@ -18,6 +18,6 @@ tags:
 - [[label()]] - `calls` [EXTRACTED]
 - [[linear()]] - `calls` [EXTRACTED]
 - [[look.py]] - `contains` [EXTRACTED]
-- [[main()_3]] - `calls` [EXTRACTED]
+- [[main()_5]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Blender_Bridge_Parts
+#graphify/code #graphify/EXTRACTED #community/partspy

@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "Audio Mix and Shotcut Export"
+community: "audio_mix.py"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Audio_Mix_and_Shotcut_Export
+  - community/audio_mixpy
 ---
 
 # wave
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[audio_mix.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Audio_Mix_and_Shotcut_Export
+#graphify/concept #graphify/EXTRACTED #community/audio_mixpy

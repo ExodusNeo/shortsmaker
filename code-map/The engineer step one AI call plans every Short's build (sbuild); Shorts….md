@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/blender_plan.py"
 type: "rationale"
-community: "Blender Build Planning"
+community: "default_build"
 location: "L111"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Blender_Build_Planning
+  - community/default_build
 ---
 
 # The engineer step: one AI call plans every Short's build (s["build"]); Shorts…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[plan_builds()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Blender_Build_Planning
+#graphify/rationale #graphify/EXTRACTED #community/default_build

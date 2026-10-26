@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Headless AI Planner Calls"
+community: "code_custom_scenes"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Headless_AI_Planner_Calls
+  - community/code_custom_scenes
 ---
 
 # Path
 
 ## Connections
-- [[mark_details()]] - `references` [EXTRACTED]
+- [[_review_state()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Headless_AI_Planner_Calls
+#graphify/code #graphify/EXTRACTED #community/code_custom_scenes

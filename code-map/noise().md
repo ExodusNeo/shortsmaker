@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/audio_mix.py"
 type: "code"
-community: "Sound Effects and Credits"
+community: "math"
 location: "L180"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Sound_Effects_and_Credits
+  - community/math
 ---
 
 # noise()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[make_sfx()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Sound_Effects_and_Credits
+#graphify/code #graphify/EXTRACTED #community/math

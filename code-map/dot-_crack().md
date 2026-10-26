@@ -1,20 +1,20 @@
 ---
 source_file: "blender/failures.py"
 type: "code"
-community: "Bridge Collapse Simulation"
+community: "main"
 location: "L52"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Bridge_Collapse_Simulation
+  - community/main
 ---
 
 # ._crack()
 
 ## Connections
-- [[dot-__init__()_5]] - `calls` [EXTRACTED]
+- [[dot-__init__()_6]] - `calls` [EXTRACTED]
 - [[A jagged crack across the plate's outer face, in short ink segments that appear…]] - `rationale_for` [EXTRACTED]
 - [[Failure]] - `method` [EXTRACTED]
 - [[key()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Bridge_Collapse_Simulation
+#graphify/code #graphify/EXTRACTED #community/main

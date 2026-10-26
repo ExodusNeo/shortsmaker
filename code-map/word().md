@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/plan_rules.py"
 type: "code"
-community: "Script Sounds and Graphics"
+community: "write_scripts"
 location: "L114"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Script_Sounds_and_Graphics
+  - community/write_scripts
 ---
 
 # word()
@@ -16,4 +16,4 @@ tags:
 - [[contains()]] - `calls` [EXTRACTED]
 - [[words_of()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Script_Sounds_and_Graphics
+#graphify/code #graphify/EXTRACTED #community/write_scripts

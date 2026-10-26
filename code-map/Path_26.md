@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Custom Scene Redraw Tests"
+community: "Gemini Image Painting"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Custom_Scene_Redraw_Tests
+  - community/Gemini_Image_Painting
 ---
 
 # Path
 
 ## Connections
-- [[_review_state()]] - `references` [EXTRACTED]
+- [[to_vertical()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Custom_Scene_Redraw_Tests
+#graphify/code #graphify/EXTRACTED #community/Gemini_Image_Painting

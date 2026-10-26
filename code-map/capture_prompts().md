@@ -1,19 +1,19 @@
 ---
 source_file: "tests/test_rules.py"
 type: "code"
-community: "Channel Rules Files"
+community: "choose_images"
 location: "L63"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Channel_Rules_Files
+  - community/choose_images
 ---
 
 # capture_prompts()
 
 ## Connections
 - [[Every prompt strange-history's writer, editor, director, fact check, picture…]] - `rationale_for` [EXTRACTED]
-- [[ask()]] - `indirect_call` [INFERRED]
+- [[ask()_5]] - `indirect_call` [INFERRED]
 - [[catalog_pool()]] - `calls` [EXTRACTED]
 - [[choose_images()]] - `calls` [EXTRACTED]
 - [[first_second_check()]] - `calls` [EXTRACTED]
@@ -24,4 +24,4 @@ tags:
 - [[test_strange_history_prompts_unchanged()]] - `calls` [EXTRACTED]
 - [[write_scripts()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Channel_Rules_Files
+#graphify/code #graphify/EXTRACTED #community/choose_images

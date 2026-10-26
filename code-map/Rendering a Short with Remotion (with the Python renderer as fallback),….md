@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/remotion_render.py"
 type: "rationale"
-community: "Audio Mix and Shotcut Export"
+community: "short_render.py"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Audio_Mix_and_Shotcut_Export
+  - community/short_renderpy
 ---
 
 # Rendering a Short with Remotion (with the Python renderer as fallback),…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[remotion_render.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Audio_Mix_and_Shotcut_Export
+#graphify/rationale #graphify/EXTRACTED #community/short_renderpy

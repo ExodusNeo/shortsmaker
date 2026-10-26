@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/channel_profiles.py"
 type: "rationale"
-community: "Main Entry and Channel Profiles"
+community: "json"
 location: "L151"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Main_Entry_and_Channel_Profiles
+  - community/json
 ---
 
 # What's working in the niche right now: recent Shorts from channels that are…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[trend_research()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Main_Entry_and_Channel_Profiles
+#graphify/rationale #graphify/EXTRACTED #community/json

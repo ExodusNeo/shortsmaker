@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_pictures_first.py"
 type: "code"
-community: "Wikimedia Image Search"
+community: "test_pictures_first.py"
 location: "L531"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Wikimedia_Image_Search
+  - community/test_pictures_firstpy
 ---
 
 # test_gather_pool_skip_and_limits()
@@ -16,4 +16,4 @@ tags:
 - [[stubbed]] - `calls` [EXTRACTED]
 - [[test_pictures_first.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Wikimedia_Image_Search
+#graphify/code #graphify/EXTRACTED #community/test_pictures_firstpy

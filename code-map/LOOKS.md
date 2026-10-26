@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/style/index.ts"
 type: "code"
-community: "Invented Overlays and Looks"
+community: "style/index.ts"
 location: "L20"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Invented_Overlays_and_Looks
+  - community/style/indexts
 ---
 
 # LOOKS
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[styleindex.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Invented_Overlays_and_Looks
+#graphify/code #graphify/EXTRACTED #community/style/indexts

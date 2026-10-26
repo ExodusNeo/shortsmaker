@@ -1,16 +1,22 @@
 ---
 source_file: ""
 type: "code"
-community: "Pictures-First Pool Tests"
+community: "choose_images"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pictures-First_Pool_Tests
+  - community/choose_images
 ---
 
 # Path
 
 ## Connections
-- [[choose_images()]] - `references` [EXTRACTED]
+- [[apply_review_fixes()]] - `references` [EXTRACTED]
+- [[first_second_check()]] - `references` [EXTRACTED]
+- [[paint_new()]] - `references` [EXTRACTED]
+- [[pool_pictures()]] - `references` [EXTRACTED]
+- [[quality_check()]] - `references` [EXTRACTED]
+- [[storyboard()]] - `references` [EXTRACTED]
+- [[visual_review()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pictures-First_Pool_Tests
+#graphify/code #graphify/EXTRACTED #community/choose_images

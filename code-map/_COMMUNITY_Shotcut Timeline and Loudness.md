@@ -1,12 +1,10 @@
 ---
 type: community
-cohesion: 0.14
 members: 20
 ---
 
 # Shotcut Timeline and Loudness
 
-**Cohesion:** 0.14 - loosely connected
 **Members:** 20 nodes
 
 ## Members
@@ -39,10 +37,10 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 11 edges to [[_COMMUNITY_Audio Mix and Shotcut Export]]
-- 2 edges to [[_COMMUNITY_TTS and Story Sounds]]
-- 2 edges to [[_COMMUNITY_Sound Effects and Credits]]
-- 2 edges to [[_COMMUNITY_Obsidian Vault Logbook]]
+- 10 edges to [[_COMMUNITY_subprocess]]
+- 3 edges to [[_COMMUNITY_ffmpeg]]
+- 2 edges to [[_COMMUNITY_render]]
+- 2 edges to [[_COMMUNITY_re]]
 
 ## Top bridge nodes
 - [[make()]] - degree 9, connects to 2 communities

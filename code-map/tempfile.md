@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "Audio Mix and Shotcut Export"
+community: "subprocess"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Audio_Mix_and_Shotcut_Export
+  - community/subprocess
 ---
 
 # tempfile
@@ -25,4 +25,4 @@ tags:
 - [[test_rules.py]] - `imports` [EXTRACTED]
 - [[test_story.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Audio_Mix_and_Shotcut_Export
+#graphify/concept #graphify/EXTRACTED #community/subprocess

@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/Root.tsx"
 type: "code"
-community: "Remotion Root Entry"
+community: "Short.tsx"
 location: "L10"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Remotion_Root_Entry
+  - community/Shorttsx
 ---
 
 # Root()
@@ -15,4 +15,4 @@ tags:
 - [[Root.tsx]] - `contains` [EXTRACTED]
 - [[srcindex.ts]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/Remotion_Root_Entry
+#graphify/code #graphify/EXTRACTED #community/Shorttsx

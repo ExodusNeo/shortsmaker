@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_blender_plan.py"
 type: "code"
-community: "Blender Build Planning"
+community: "test_blender_plan.py"
 location: "L134"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Blender_Build_Planning
+  - community/test_blender_planpy
 ---
 
 # test_a_failure_in_scene_one_becomes_the_hook()
@@ -16,4 +16,4 @@ tags:
 - [[plan()]] - `calls` [EXTRACTED]
 - [[test_blender_plan.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Blender_Build_Planning
+#graphify/code #graphify/EXTRACTED #community/test_blender_planpy

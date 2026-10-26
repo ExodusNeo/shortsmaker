@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "Local Voice and Freesound"
+community: "gpu.py"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Local_Voice_and_Freesound
+  - community/gpupy
 ---
 
 # urllib_error
@@ -15,4 +15,4 @@ tags:
 - [[h3_run.py]] - `imports` [EXTRACTED]
 - [[image_sources.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Local_Voice_and_Freesound
+#graphify/concept #graphify/EXTRACTED #community/gpupy

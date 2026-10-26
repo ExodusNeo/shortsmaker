@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/writing.py"
 type: "rationale"
-community: "Stock Video Sources"
+community: "fix_short"
 location: "L495"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Stock_Video_Sources
+  - community/fix_short
 ---
 
 # Plain text of an English Wikipedia article ('' when missing or unreachable).
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[article_text()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Stock_Video_Sources
+#graphify/rationale #graphify/EXTRACTED #community/fix_short

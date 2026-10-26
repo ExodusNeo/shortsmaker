@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/writing.py"
 type: "rationale"
-community: "Narration Number Speech"
+community: "check_twists"
 location: "L507"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Narration_Number_Speech
+  - community/check_twists
 ---
 
 # Before any script is written: each topic's twist against its Wikipedia text.…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[check_twists()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Narration_Number_Speech
+#graphify/rationale #graphify/EXTRACTED #community/check_twists

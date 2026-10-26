@@ -1,19 +1,18 @@
 ---
 source_file: "tests/test_pictures_first.py"
 type: "code"
-community: "Wikimedia Image Search"
-location: "L336"
+community: "test_pictures_first.py"
+location: "L117"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Wikimedia_Image_Search
+  - community/test_pictures_firstpy
 ---
 
 # .__enter__()
 
 ## Connections
-- [[fake_ai]] - `calls` [EXTRACTED]
-- [[picking]] - `method` [EXTRACTED]
-- [[stubbed]] - `calls` [EXTRACTED]
+- [[fake_ai]] - `method` [EXTRACTED]
+- [[reply()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Wikimedia_Image_Search
+#graphify/code #graphify/EXTRACTED #community/test_pictures_firstpy

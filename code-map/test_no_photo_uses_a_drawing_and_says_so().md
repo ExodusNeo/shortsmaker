@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_blender_run.py"
 type: "code"
-community: "Blender Build Planning"
+community: "drawn_thumbnail"
 location: "L61"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Blender_Build_Planning
+  - community/drawn_thumbnail
 ---
 
 # test_no_photo_uses_a_drawing_and_says_so()
@@ -17,4 +17,4 @@ tags:
 - [[scene_frames()]] - `calls` [EXTRACTED]
 - [[test_blender_run.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Blender_Build_Planning
+#graphify/code #graphify/EXTRACTED #community/drawn_thumbnail

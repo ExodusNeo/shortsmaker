@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/image_sources.py"
 type: "rationale"
-community: "Stock Video Sources"
+community: "gather_pool"
 location: "L258"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Stock_Video_Sources
+  - community/gather_pool
 ---
 
 # Keep titles that share a meaningful word with the query (including 2-3 letter…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[on_topic()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Stock_Video_Sources
+#graphify/rationale #graphify/EXTRACTED #community/gather_pool

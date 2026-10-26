@@ -1,17 +1,18 @@
 ---
-source_file: "shortsmaker/picture_pool.py"
+source_file: "tests/render_style.py"
 type: "code"
-community: "Wikimedia Image Search"
-location: "L107"
+community: "ffmpeg"
+location: "L22"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Wikimedia_Image_Search
+  - community/ffmpeg
 ---
 
 # add()
 
 ## Connections
-- [[gather_pool()]] - `contains` [EXTRACTED]
+- [[build()_1]] - `contains` [EXTRACTED]
+- [[scenes()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/Wikimedia_Image_Search
+#graphify/code #graphify/EXTRACTED #community/ffmpeg

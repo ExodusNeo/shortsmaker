@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/style_lab.py"
 type: "rationale"
-community: "Motion Scenes and Style Library"
+community: "style_library"
 location: "L15"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Motion_Scenes_and_Style_Library
+  - community/style_library
 ---
 
 # The style library (remotion/src/style/library.json): [{name, kind, description,…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[style_library()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Motion_Scenes_and_Style_Library
+#graphify/rationale #graphify/EXTRACTED #community/style_library

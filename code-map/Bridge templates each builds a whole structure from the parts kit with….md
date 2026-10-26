@@ -1,12 +1,12 @@
 ---
 source_file: "blender/templates.py"
 type: "rationale"
-community: "Bridge Templates"
+community: "templates.py"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Bridge_Templates
+  - community/templatespy
 ---
 
 # Bridge templates: each builds a whole structure from the parts kit with…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[templates.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Bridge_Templates
+#graphify/rationale #graphify/EXTRACTED #community/templatespy

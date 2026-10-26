@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/audio_mix.py"
 type: "code"
-community: "Local Voice and Freesound"
+community: "json"
 location: "L111"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Local_Voice_and_Freesound
+  - community/json
 ---
 
 # freesound_fetch()
@@ -16,4 +16,4 @@ tags:
 - [[audio_mix.py]] - `contains` [EXTRACTED]
 - [[json]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Local_Voice_and_Freesound
+#graphify/code #graphify/EXTRACTED #community/json

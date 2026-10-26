@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/image_sources.py"
 type: "code"
-community: "Wikimedia Image Search"
+community: "gather_pool"
 location: "L116"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Wikimedia_Image_Search
+  - community/gather_pool
 ---
 
 # commons_search()
@@ -16,4 +16,4 @@ tags:
 - [[image_sources.py]] - `contains` [EXTRACTED]
 - [[wm_files()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Wikimedia_Image_Search
+#graphify/code #graphify/EXTRACTED #community/gather_pool

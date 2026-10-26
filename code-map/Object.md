@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Blender Bridge Parts"
+community: "parts.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Blender_Bridge_Parts
+  - community/partspy
 ---
 
 # Object
@@ -31,4 +31,4 @@ tags:
 - [[valley()]] - `references` [EXTRACTED]
 - [[water()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Blender_Bridge_Parts
+#graphify/code #graphify/EXTRACTED #community/partspy

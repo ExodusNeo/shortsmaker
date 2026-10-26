@@ -1,17 +1,18 @@
 ---
-source_file: "tests/test_pictures_first.py"
+source_file: "blender/failures.py"
 type: "code"
-community: "Fake AI Test Helpers"
-location: "L114"
+community: "main"
+location: "L26"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Fake_AI_Test_Helpers
+  - community/main
 ---
 
 # .__init__()
 
 ## Connections
-- [[fake_ai]] - `method` [EXTRACTED]
+- [[dot-_crack()]] - `calls` [EXTRACTED]
+- [[Failure]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Fake_AI_Test_Helpers
+#graphify/code #graphify/EXTRACTED #community/main

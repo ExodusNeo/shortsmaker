@@ -1,19 +1,19 @@
 ---
 source_file: "shortsmaker/llm.py"
 type: "code"
-community: "Headless AI Planner Calls"
+community: "ask_ai"
 location: "L99"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Headless_AI_Planner_Calls
+  - community/ask_ai
 ---
 
 # ask_ai()
 
 ## Connections
 - [[Headless planner call (BRAIN, or `brain` Claude or Gemini) that returns parsed…]] - `rationale_for` [EXTRACTED]
-- [[Path]] - `references` [EXTRACTED]
+- [[Path_10]] - `references` [EXTRACTED]
 - [[catalog_pool()]] - `calls` [EXTRACTED]
 - [[check_twists()]] - `calls` [EXTRACTED]
 - [[choose_images()]] - `calls` [EXTRACTED]
@@ -48,4 +48,4 @@ tags:
 - [[visual_review()]] - `calls` [EXTRACTED]
 - [[write_scripts()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Headless_AI_Planner_Calls
+#graphify/code #graphify/EXTRACTED #community/ask_ai

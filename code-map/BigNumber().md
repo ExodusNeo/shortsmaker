@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/full/BigNumber.tsx"
 type: "code"
-community: "Big Number Full Scenes"
+community: "BigNumber.tsx"
 location: "L60"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Big_Number_Full_Scenes
+  - community/BigNumbertsx
 ---
 
 # BigNumber()
@@ -23,4 +23,4 @@ tags:
 - [[gridFor()]] - `calls` [EXTRACTED]
 - [[skinOf()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Big_Number_Full_Scenes
+#graphify/code #graphify/EXTRACTED #community/BigNumbertsx

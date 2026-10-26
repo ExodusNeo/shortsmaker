@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_full_scenes.py"
 type: "code"
-community: "Audio Mix and Shotcut Export"
+community: "short_render.py"
 location: "L24"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Audio_Mix_and_Shotcut_Export
+  - community/short_renderpy
 ---
 
 # test_make_paper()
@@ -15,4 +15,4 @@ tags:
 - [[make_paper()]] - `calls` [EXTRACTED]
 - [[test_full_scenes.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Audio_Mix_and_Shotcut_Export
+#graphify/code #graphify/EXTRACTED #community/short_renderpy

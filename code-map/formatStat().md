@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/Cards.tsx"
 type: "code"
-community: "Remotion Caption Cards"
+community: "Graphics.tsx"
 location: "L12"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Remotion_Caption_Cards
+  - community/Graphicstsx
 ---
 
 # formatStat()
@@ -15,4 +15,4 @@ tags:
 - [[Cards.tsx]] - `contains` [EXTRACTED]
 - [[StatCard()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Remotion_Caption_Cards
+#graphify/code #graphify/EXTRACTED #community/Graphicstsx

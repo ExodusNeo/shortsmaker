@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/editplan.py"
 type: "rationale"
-community: "CLI, Config and Footage"
+community: "short_render.py"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/CLI_Config_and_Footage
+  - community/short_renderpy
 ---
 
 # edit_plan.txt (the timestamped edit list) and per-scene cue timing.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[editplan.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/CLI_Config_and_Footage
+#graphify/rationale #graphify/EXTRACTED #community/short_renderpy

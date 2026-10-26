@@ -1,22 +1,22 @@
 ---
 source_file: "tests/test_pictures_first.py"
 type: "code"
-community: "Fake AI Test Helpers"
+community: "test_pictures_first.py"
 location: "L112"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Fake_AI_Test_Helpers
+  - community/test_pictures_firstpy
 ---
 
 # fake_ai
 
 ## Connections
-- [[dot-__enter__()]] - `calls` [EXTRACTED]
-- [[dot-__enter__()_3]] - `calls` [EXTRACTED]
-- [[dot-__enter__()_2]] - `method` [EXTRACTED]
-- [[dot-__exit__()_3]] - `method` [EXTRACTED]
-- [[dot-__init__()_6]] - `method` [EXTRACTED]
+- [[dot-__enter__()_1]] - `calls` [EXTRACTED]
+- [[dot-__enter__()_2]] - `calls` [EXTRACTED]
+- [[dot-__enter__()]] - `method` [EXTRACTED]
+- [[dot-__exit__()]] - `method` [EXTRACTED]
+- [[dot-__init__()]] - `method` [EXTRACTED]
 - [[ask_ai replaced by `reply` (a dict, None, or a function of the prompt);…]] - `rationale_for` [EXTRACTED]
 - [[test_catalog_both_empty_stops_uncached()]] - `calls` [EXTRACTED]
 - [[test_catalog_empty_pool_no_ai()]] - `calls` [EXTRACTED]
@@ -28,4 +28,4 @@ tags:
 - [[test_seo_pass_empty_no_ai()]] - `calls` [EXTRACTED]
 - [[test_seo_pass_research_seeds_dict_and_list()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Fake_AI_Test_Helpers
+#graphify/code #graphify/EXTRACTED #community/test_pictures_firstpy

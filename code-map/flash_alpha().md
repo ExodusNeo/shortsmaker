@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/frame_render.py"
 type: "code"
-community: "Frame Drawing and Graphics"
+community: "math"
 location: "L276"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Frame_Drawing_and_Graphics
+  - community/math
 ---
 
 # flash_alpha()
@@ -17,4 +17,4 @@ tags:
 - [[math]] - `calls` [EXTRACTED]
 - [[write_frames()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Frame_Drawing_and_Graphics
+#graphify/code #graphify/EXTRACTED #community/math

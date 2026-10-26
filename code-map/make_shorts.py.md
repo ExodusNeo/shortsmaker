@@ -1,12 +1,12 @@
 ---
 source_file: "make_shorts.py"
 type: "code"
-community: "Main Entry and Channel Profiles"
+community: "test_rules.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Main_Entry_and_Channel_Profiles
+  - community/test_rulespy
 ---
 
 # make_shorts.py
@@ -16,4 +16,4 @@ tags:
 - [[cli.py]] - `imports_from` [EXTRACTED]
 - [[main()_2]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Main_Entry_and_Channel_Profiles
+#graphify/code #graphify/EXTRACTED #community/test_rulespy

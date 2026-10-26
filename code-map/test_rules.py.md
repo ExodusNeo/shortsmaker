@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_rules.py"
 type: "code"
-community: "Channel Rules Files"
+community: "test_rules.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Channel_Rules_Files
+  - community/test_rulespy
 ---
 
 # test_rules.py
@@ -67,4 +67,4 @@ tags:
 - [[traceback]] - `imports` [EXTRACTED]
 - [[writing.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Channel_Rules_Files
+#graphify/code #graphify/EXTRACTED #community/test_rulespy

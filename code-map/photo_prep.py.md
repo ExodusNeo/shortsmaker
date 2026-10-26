@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/photo_prep.py"
 type: "code"
-community: "CLI, Config and Footage"
+community: "short_render.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CLI_Config_and_Footage
+  - community/short_renderpy
 ---
 
 # photo_prep.py
@@ -26,4 +26,4 @@ tags:
 - [[to_vertical()]] - `contains` [EXTRACTED]
 - [[trim_borders()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CLI_Config_and_Footage
+#graphify/code #graphify/EXTRACTED #community/short_renderpy

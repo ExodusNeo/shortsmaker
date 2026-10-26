@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_rules.py"
 type: "code"
-community: "Channel Rules Files"
+community: "test_rules.py"
 location: "L144"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Channel_Rules_Files
+  - community/test_rulespy
 ---
 
 # test_bom_and_crlf_load_the_same()
@@ -16,4 +16,4 @@ tags:
 - [[parse_rules()]] - `calls` [EXTRACTED]
 - [[test_rules.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Channel_Rules_Files
+#graphify/code #graphify/EXTRACTED #community/test_rulespy

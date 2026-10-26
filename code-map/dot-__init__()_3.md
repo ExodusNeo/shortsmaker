@@ -1,18 +1,17 @@
 ---
-source_file: "shortsmaker/frame_render.py"
+source_file: "tests/test_pictures_first.py"
 type: "code"
-community: "Frame Drawing and Graphics"
-location: "L211"
+community: "test_pictures_first.py"
+location: "L36"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Frame_Drawing_and_Graphics
+  - community/test_pictures_firstpy
 ---
 
 # .__init__()
 
 ## Connections
-- [[ClipReader]] - `method` [EXTRACTED]
-- [[Path_10]] - `references` [EXTRACTED]
+- [[stubbed]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Frame_Drawing_and_Graphics
+#graphify/code #graphify/EXTRACTED #community/test_pictures_firstpy

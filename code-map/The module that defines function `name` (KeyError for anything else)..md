@@ -1,12 +1,12 @@
 ---
 source_file: "tests/patching.py"
 type: "rationale"
-community: "Wikimedia Image Search"
+community: "test_pictures_first.py"
 location: "L18"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Wikimedia_Image_Search
+  - community/test_pictures_firstpy
 ---
 
 # The module that defines function `name` (KeyError for anything else).
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[owner()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Wikimedia_Image_Search
+#graphify/rationale #graphify/EXTRACTED #community/test_pictures_firstpy

@@ -1,12 +1,12 @@
 ---
 source_file: "tools/split_make_shorts.py"
 type: "code"
-community: "Script Splitting AST Tools"
+community: "split_make_shorts.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Script_Splitting_AST_Tools
+  - community/split_make_shortspy
 ---
 
 # split_make_shorts.py
@@ -39,4 +39,4 @@ tags:
 - [[sys]] - `imports` [EXTRACTED]
 - [[wrap_import()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Script_Splitting_AST_Tools
+#graphify/code #graphify/EXTRACTED #community/split_make_shortspy

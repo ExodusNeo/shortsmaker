@@ -1,18 +1,18 @@
 ---
 source_file: "blender/build_scene.py"
 type: "code"
-community: "Blender Camera Shots"
+community: "build_scene.py"
 location: "L25"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Blender_Camera_Shots
+  - community/build_scenepy
 ---
 
 # keyvis()
 
 ## Connections
 - [[build_scene.py]] - `contains` [EXTRACTED]
-- [[main()_3]] - `calls` [EXTRACTED]
+- [[main()_5]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Blender_Camera_Shots
+#graphify/code #graphify/EXTRACTED #community/build_scenepy

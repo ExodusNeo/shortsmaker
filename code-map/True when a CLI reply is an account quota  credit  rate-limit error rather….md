@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/llm.py"
 type: "rationale"
-community: "Headless AI Planner Calls"
+community: "ask_ai"
 location: "L58"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Headless_AI_Planner_Calls
+  - community/ask_ai
 ---
 
 # True when a CLI reply is an account quota / credit / rate-limit error rather…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[quota_exhausted()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Headless_AI_Planner_Calls
+#graphify/rationale #graphify/EXTRACTED #community/ask_ai

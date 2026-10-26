@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/remotion_render.py"
 type: "code"
-community: "Audio Mix and Shotcut Export"
+community: "short_render.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Audio_Mix_and_Shotcut_Export
+  - community/short_renderpy
 ---
 
 # remotion_render.py
@@ -43,4 +43,4 @@ tags:
 - [[test_style.py]] - `imports_from` [EXTRACTED]
 - [[wants_remotion()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Audio_Mix_and_Shotcut_Export
+#graphify/code #graphify/EXTRACTED #community/short_renderpy

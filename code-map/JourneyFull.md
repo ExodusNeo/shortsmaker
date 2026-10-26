@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/full/types.ts"
 type: "code"
-community: "Big Number Full Scenes"
+community: "Journey.tsx"
 location: "L14"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Big_Number_Full_Scenes
+  - community/Journeytsx
 ---
 
 # JourneyFull
@@ -15,4 +15,4 @@ tags:
 - [[Journey.tsx]] - `imports` [EXTRACTED]
 - [[fulltypes.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Big_Number_Full_Scenes
+#graphify/code #graphify/EXTRACTED #community/Journeytsx

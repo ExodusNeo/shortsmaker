@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Frame Drawing and Graphics"
+community: "frame_maker"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Frame_Drawing_and_Graphics
+  - community/frame_maker
 ---
 
 # Image
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[credit_tag_image()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Frame_Drawing_and_Graphics
+#graphify/code #graphify/EXTRACTED #community/frame_maker

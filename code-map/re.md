@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "Obsidian Vault Logbook"
+community: "re"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Obsidian_Vault_Logbook
+  - community/re
 ---
 
 # re
@@ -52,7 +52,7 @@ tags:
 - [[project_xml()]] - `calls` [EXTRACTED]
 - [[quality_check()]] - `calls` [EXTRACTED]
 - [[qwen_voice.py]] - `imports` [EXTRACTED]
-- [[render()_1]] - `calls` [EXTRACTED]
+- [[render()_2]] - `calls` [EXTRACTED]
 - [[review.py]] - `imports` [EXTRACTED]
 - [[rules.py]] - `imports` [EXTRACTED]
 - [[save_candidate()]] - `calls` [EXTRACTED]
@@ -77,4 +77,4 @@ tags:
 - [[write_scripts()]] - `calls` [EXTRACTED]
 - [[writing.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Obsidian_Vault_Logbook
+#graphify/concept #graphify/EXTRACTED #community/re

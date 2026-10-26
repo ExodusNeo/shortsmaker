@@ -1,12 +1,12 @@
 ---
 source_file: "blender/failures.py"
 type: "code"
-community: "Bridge Collapse Simulation"
+community: "main"
 location: "L106"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Bridge_Collapse_Simulation
+  - community/main
 ---
 
 # .fallen()
@@ -15,6 +15,6 @@ tags:
 - [[Failure]] - `method` [EXTRACTED]
 - [[Vector_2]] - `references` [EXTRACTED]
 - [[Where a point on the collapsing span ends up in the water.]] - `rationale_for` [EXTRACTED]
-- [[main()_3]] - `calls` [INFERRED]
+- [[main()_5]] - `calls` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/Bridge_Collapse_Simulation
+#graphify/code #graphify/EXTRACTED #community/main

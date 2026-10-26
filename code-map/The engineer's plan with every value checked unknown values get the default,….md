@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/blender_plan.py"
 type: "rationale"
-community: "Blender Build Planning"
+community: "test_blender_plan.py"
 location: "L53"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Blender_Build_Planning
+  - community/test_blender_planpy
 ---
 
 # The engineer's plan with every value checked: unknown values get the default,…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[clean_build()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Blender_Build_Planning
+#graphify/rationale #graphify/EXTRACTED #community/test_blender_planpy

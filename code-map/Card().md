@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/full/guarded.tsx"
 type: "code"
-community: "Example Chain and Evidence"
+community: "guarded.tsx"
 location: "L103"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Example_Chain_and_Evidence
+  - community/guardedtsx
 ---
 
 # Card()
@@ -20,4 +20,4 @@ tags:
 - [[guarded.tsx]] - `contains` [EXTRACTED]
 - [[skinOf()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Example_Chain_and_Evidence
+#graphify/code #graphify/EXTRACTED #community/guardedtsx

@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_h3_handoff.py"
 type: "rationale"
-community: "MiniMax H3 Video Jobs"
+community: "test_h3_handoff.py"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/MiniMax_H3_Video_Jobs
+  - community/test_h3_handoffpy
 ---
 
 # Tests for the Colab H3 / Flow hand-off: frame-checked video prompts, veo.zip,…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[test_h3_handoff.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/MiniMax_H3_Video_Jobs
+#graphify/rationale #graphify/EXTRACTED #community/test_h3_handoffpy

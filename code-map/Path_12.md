@@ -1,16 +1,20 @@
 ---
 source_file: ""
 type: "code"
-community: "Sound Effects and Credits"
+community: "audio_mix.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Sound_Effects_and_Credits
+  - community/audio_mixpy
 ---
 
 # Path
 
 ## Connections
-- [[srt()]] - `references` [EXTRACTED]
+- [[captions()]] - `references` [EXTRACTED]
+- [[music_gain()]] - `references` [EXTRACTED]
+- [[speak()]] - `references` [EXTRACTED]
+- [[story_sound()]] - `references` [EXTRACTED]
+- [[tts()_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Sound_Effects_and_Credits
+#graphify/code #graphify/EXTRACTED #community/audio_mixpy

@@ -1,12 +1,12 @@
 ---
 source_file: "blender/failures.py"
 type: "rationale"
-community: "Bridge Collapse Simulation"
+community: "main"
 location: "L107"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Bridge_Collapse_Simulation
+  - community/main
 ---
 
 # Where a point on the collapsing span ends up in the water.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[dot-fallen()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Bridge_Collapse_Simulation
+#graphify/rationale #graphify/EXTRACTED #community/main

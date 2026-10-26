@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "Invented Overlays and Looks"
+community: "toolkit.tsx"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Invented_Overlays_and_Looks
+  - community/toolkittsx
 ---
 
 # ref_react
@@ -36,4 +36,4 @@ tags:
 - [[styletypes.ts]] - `imports_from` [EXTRACTED]
 - [[toolkit.tsx]] - `imports_from` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Invented_Overlays_and_Looks
+#graphify/concept #graphify/EXTRACTED #community/toolkittsx

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/picture_pool.py"
 type: "rationale"
-community: "Director Picture Cleanup Tests"
+community: "test_pictures_first.py"
 location: "L25"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Director_Picture_Cleanup_Tests
+  - community/test_pictures_firstpy
 ---
 
 # The director's `pic` numbers (scenes and evidence-board items), checked: a…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[clean_pics()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Director_Picture_Cleanup_Tests
+#graphify/rationale #graphify/EXTRACTED #community/test_pictures_firstpy

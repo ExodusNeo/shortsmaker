@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/full/Paper.tsx"
 type: "code"
-community: "Big Number Full Scenes"
+community: "BigNumber.tsx"
 location: "L11"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Big_Number_Full_Scenes
+  - community/BigNumbertsx
 ---
 
 # Skin
@@ -16,4 +16,4 @@ tags:
 - [[Paper.tsx]] - `contains` [EXTRACTED]
 - [[toolkit.tsx]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Big_Number_Full_Scenes
+#graphify/code #graphify/EXTRACTED #community/BigNumbertsx

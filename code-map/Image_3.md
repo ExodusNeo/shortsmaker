@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Archive Photo Cleanup"
+community: "trim_borders"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Archive_Photo_Cleanup
+  - community/trim_borders
 ---
 
 # Image
@@ -14,4 +14,4 @@ tags:
 - [[is_stereo()]] - `references` [EXTRACTED]
 - [[trim_borders()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Archive_Photo_Cleanup
+#graphify/code #graphify/EXTRACTED #community/trim_borders

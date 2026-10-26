@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/audio_mix.py"
 type: "rationale"
-community: "ASS Captions and Skins"
+community: "render_remotion"
 location: "L64"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/ASS_Captions_and_Skins
+  - community/render_remotion
 ---
 
 # ASS captions, one caption_lines() line at a time; the spoken word turns yellow.…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[captions()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/ASS_Captions_and_Skins
+#graphify/rationale #graphify/EXTRACTED #community/render_remotion

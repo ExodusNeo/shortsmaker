@@ -1,17 +1,18 @@
 ---
-source_file: "tests/test_full_scenes.py"
+source_file: "tests/test_blender_plan.py"
 type: "code"
-community: "Custom Scene Redraw Tests"
-location: "L572"
+community: "default_build"
+location: "L87"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Custom_Scene_Redraw_Tests
+  - community/default_build
 ---
 
 # ask()
 
 ## Connections
-- [[test_review_redraws_custom()]] - `contains` [EXTRACTED]
+- [[plan()]] - `calls` [EXTRACTED]
+- [[test_plan_builds_retries_then_defaults()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/Custom_Scene_Redraw_Tests
+#graphify/code #graphify/EXTRACTED #community/default_build

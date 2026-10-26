@@ -17,6 +17,6 @@ tags:
 - [[draw()_2]] - `calls` [EXTRACTED]
 - [[draw()_4]] - `calls` [EXTRACTED]
 - [[kit.ts]] - `contains` [EXTRACTED]
-- [[luminance()_1]] - `calls` [EXTRACTED]
+- [[luminance()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Invented_Look_Canvas_Effects

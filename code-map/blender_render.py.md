@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/blender_render.py"
 type: "code"
-community: "Local Voice and Freesound"
+community: "gpu.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Local_Voice_and_Freesound
+  - community/gpupy
 ---
 
 # blender_render.py
@@ -32,4 +32,4 @@ tags:
 - [[test_blender_render.py]] - `imports_from` [EXTRACTED]
 - [[test_blender_run.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Local_Voice_and_Freesound
+#graphify/code #graphify/EXTRACTED #community/gpupy

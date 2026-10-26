@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/picture_pool.py"
 type: "code"
-community: "Wikimedia Image Search"
+community: "gather_pool"
 location: "L131"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/Wikimedia_Image_Search
+  - community/gather_pool
 ---
 
 # load_thumb()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[gather_pool()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/INFERRED #community/Wikimedia_Image_Search
+#graphify/code #graphify/INFERRED #community/gather_pool

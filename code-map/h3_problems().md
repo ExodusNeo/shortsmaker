@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/gpu.py"
 type: "code"
-community: "MiniMax H3 Video Jobs"
+community: "test_h3_handoff.py"
 location: "L350"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/MiniMax_H3_Video_Jobs
+  - community/test_h3_handoffpy
 ---
 
 # h3_problems()
@@ -17,4 +17,4 @@ tags:
 - [[h3_prompts()]] - `calls` [EXTRACTED]
 - [[test_problems()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/MiniMax_H3_Video_Jobs
+#graphify/code #graphify/EXTRACTED #community/test_h3_handoffpy

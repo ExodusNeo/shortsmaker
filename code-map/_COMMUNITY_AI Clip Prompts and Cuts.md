@@ -1,12 +1,10 @@
 ---
 type: community
-cohesion: 0.12
 members: 23
 ---
 
 # AI Clip Prompts and Cuts
 
-**Cohesion:** 0.12 - loosely connected
 **Members:** 23 nodes
 
 ## Members
@@ -14,7 +12,7 @@ members: 23
 - [[Fill a 916 frame with the picture (centre crop), for the AI video model's…]] - rationale - shortsmaker/gpu.py
 - [[Final H.264 encode NVENC on the GPU when available (frees the CPU), else x264.]] - rationale - shortsmaker/media_tools.py
 - [[Mike the Headless Chicken, fix round 3 the LTX worker died without writing…]] - rationale - tests/test_full_scenes.py
-- [[Path_18]] - code
+- [[Path_21]] - code
 - [[Pause the batch write each animate scene's start picture + detailed prompt to…]] - rationale - shortsmaker/gpu.py
 - [[Real motion for every scene with a picture scenes Claude matched to archival…]] - rationale - shortsmaker/gpu.py
 - [[Run a batch on this PC's GPU through a local_ai worker (gen.py, or…]] - rationale - shortsmaker/gpu.py
@@ -42,21 +40,24 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 11 edges to [[_COMMUNITY_Local Voice and Freesound]]
-- 8 edges to [[_COMMUNITY_MiniMax H3 Video Jobs]]
-- 6 edges to [[_COMMUNITY_Audio Mix and Shotcut Export]]
-- 3 edges to [[_COMMUNITY_Sound Effects and Credits]]
-- 3 edges to [[_COMMUNITY_Local Voice Alignment]]
-- 2 edges to [[_COMMUNITY_Headless AI Planner Calls]]
-- 2 edges to [[_COMMUNITY_TTS and Story Sounds]]
+- 11 edges to [[_COMMUNITY_gpu.py]]
+- 7 edges to [[_COMMUNITY_test_h3_handoff.py]]
+- 3 edges to [[_COMMUNITY_render]]
+- 3 edges to [[_COMMUNITY_ffmpeg]]
+- 2 edges to [[_COMMUNITY_ask_ai]]
+- 2 edges to [[_COMMUNITY_json]]
+- 2 edges to [[_COMMUNITY_subprocess]]
+- 2 edges to [[_COMMUNITY_local_voice]]
 - 2 edges to [[_COMMUNITY_Gemini Image Painting]]
-- 1 edge to [[_COMMUNITY_Blender Build Planning]]
-- 1 edge to [[_COMMUNITY_Motion Scenes and Style Library]]
-- 1 edge to [[_COMMUNITY_CLI, Config and Footage]]
+- 2 edges to [[_COMMUNITY_test_full_scenes.py]]
+- 1 edge to [[_COMMUNITY_frame_maker]]
+- 1 edge to [[_COMMUNITY_test_blender_render.py]]
+- 1 edge to [[_COMMUNITY_h3_run.py]]
+- 1 edge to [[_COMMUNITY_short_render.py]]
 
 ## Top bridge nodes
+- [[local_job()]] - degree 10, connects to 6 communities
 - [[local_clips()]] - degree 14, connects to 5 communities
-- [[local_job()]] - degree 10, connects to 5 communities
-- [[Path_18]] - degree 12, connects to 4 communities
-- [[veo_handoff()]] - degree 14, connects to 3 communities
-- [[video_encoder()]] - degree 8, connects to 3 communities
+- [[veo_handoff()]] - degree 14, connects to 5 communities
+- [[Path_21]] - degree 12, connects to 5 communities
+- [[video_encoder()]] - degree 8, connects to 4 communities

@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/full/icons.tsx"
 type: "code"
-community: "Big Number Full Scenes"
+community: "BigNumber.tsx"
 location: "L5"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Big_Number_Full_Scenes
+  - community/BigNumbertsx
 ---
 
 # SHAPES
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[icons.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Big_Number_Full_Scenes
+#graphify/code #graphify/EXTRACTED #community/BigNumbertsx

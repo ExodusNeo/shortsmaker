@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_rules.py"
 type: "rationale"
-community: "Channel Rules Files"
+community: "test_rules.py"
 location: "L118"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Channel_Rules_Files
+  - community/test_rulespy
 ---
 
 # A valid rules file; override={"Directing": None} leaves that heading out, a…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[make()_1]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Channel_Rules_Files
+#graphify/rationale #graphify/EXTRACTED #community/test_rulespy

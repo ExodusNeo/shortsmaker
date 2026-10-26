@@ -1,12 +1,12 @@
 ---
 source_file: "local_ai/qwen_voice.py"
 type: "code"
-community: "Local Voice and Freesound"
+community: "time"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Local_Voice_and_Freesound
+  - community/time
 ---
 
 # qwen_voice.py
@@ -21,7 +21,7 @@ tags:
 - [[pathlib]] - `imports_from` [EXTRACTED]
 - [[re]] - `imports` [EXTRACTED]
 - [[say_number()]] - `contains` [EXTRACTED]
-- [[speak()]] - `contains` [EXTRACTED]
+- [[speak()_1]] - `contains` [EXTRACTED]
 - [[spoken_sentence()]] - `contains` [EXTRACTED]
 - [[spoken_tokens()]] - `contains` [EXTRACTED]
 - [[studio_speak()]] - `contains` [EXTRACTED]
@@ -31,4 +31,4 @@ tags:
 - [[time]] - `imports` [EXTRACTED]
 - [[unicodedata]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Local_Voice_and_Freesound
+#graphify/code #graphify/EXTRACTED #community/time

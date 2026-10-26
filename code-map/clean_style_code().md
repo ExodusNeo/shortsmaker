@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/style_lab.py"
 type: "code"
-community: "Obsidian Vault Logbook"
+community: "re"
 location: "L130"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Obsidian_Vault_Logbook
+  - community/re
 ---
 
 # clean_style_code()
@@ -17,4 +17,4 @@ tags:
 - [[re]] - `calls` [EXTRACTED]
 - [[style_lab.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Obsidian_Vault_Logbook
+#graphify/code #graphify/EXTRACTED #community/re

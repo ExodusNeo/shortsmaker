@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/audio_mix.py"
 type: "rationale"
-community: "Sound Design and Scene Cues"
+community: "full_cues"
 location: "L266"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Sound_Design_and_Scene_Cues
+  - community/full_cues
 ---
 
 # Sound design: each timed visual gets a matching sound. Candidates are kept by…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[sfx_events()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Sound_Design_and_Scene_Cues
+#graphify/rationale #graphify/EXTRACTED #community/full_cues

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/style_lab.py"
 type: "rationale"
-community: "Motion Scenes and Style Library"
+community: "render_remotion"
 location: "L100"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Motion_Scenes_and_Style_Library
+  - community/render_remotion
 ---
 
 # The rules every invented component of `kind` follows, with the library's…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[style_rules()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Motion_Scenes_and_Style_Library
+#graphify/rationale #graphify/EXTRACTED #community/render_remotion

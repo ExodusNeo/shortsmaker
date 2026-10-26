@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_pictures_first.py"
 type: "code"
-community: "Pictures-First Pool Tests"
+community: "test_pictures_first.py"
 location: "L355"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pictures-First_Pool_Tests
+  - community/test_pictures_firstpy
 ---
 
 # test_choose_keeps_plan_and_appends()
@@ -19,4 +19,4 @@ tags:
 - [[still()]] - `calls` [EXTRACTED]
 - [[test_pictures_first.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pictures-First_Pool_Tests
+#graphify/code #graphify/EXTRACTED #community/test_pictures_firstpy

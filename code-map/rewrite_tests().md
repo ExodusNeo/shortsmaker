@@ -1,12 +1,12 @@
 ---
 source_file: "tools/split_make_shorts.py"
 type: "code"
-community: "Script Splitting AST Tools"
+community: "split_make_shorts.py"
 location: "L518"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Script_Splitting_AST_Tools
+  - community/split_make_shortspy
 ---
 
 # rewrite_tests()
@@ -19,4 +19,4 @@ tags:
 - [[split_make_shorts.py]] - `indirect_call` [INFERRED]
 - [[sub()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/Script_Splitting_AST_Tools
+#graphify/code #graphify/EXTRACTED #community/split_make_shortspy

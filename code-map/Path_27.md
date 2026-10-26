@@ -1,17 +1,20 @@
 ---
 source_file: ""
 type: "code"
-community: "MiniMax H3 Video Jobs"
+community: "Gemini Image Painting"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/MiniMax_H3_Video_Jobs
+  - community/Gemini_Image_Painting
 ---
 
 # Path
 
 ## Connections
-- [[fit_start()]] - `references` [EXTRACTED]
-- [[saved_file()]] - `references` [EXTRACTED]
+- [[ink_silhouette()]] - `references` [EXTRACTED]
+- [[make_paper()]] - `references` [EXTRACTED]
+- [[paint_instead()]] - `references` [EXTRACTED]
+- [[redraw_custom()]] - `references` [EXTRACTED]
+- [[render_remotion()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/MiniMax_H3_Video_Jobs
+#graphify/code #graphify/EXTRACTED #community/Gemini_Image_Painting

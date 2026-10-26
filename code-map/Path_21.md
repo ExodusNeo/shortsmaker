@@ -1,17 +1,27 @@
 ---
 source_file: ""
 type: "code"
-community: "Obsidian Vault Logbook"
+community: "AI Clip Prompts and Cuts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Obsidian_Vault_Logbook
+  - community/AI_Clip_Prompts_and_Cuts
 ---
 
 # Path
 
 ## Connections
-- [[log_short()]] - `references` [EXTRACTED]
-- [[vault_page()]] - `references` [EXTRACTED]
+- [[cover_crop()]] - `references` [EXTRACTED]
+- [[cut_owner_clip()]] - `references` [EXTRACTED]
+- [[gemini_images()]] - `references` [EXTRACTED]
+- [[h3_prompts()]] - `references` [EXTRACTED]
+- [[local_clips()]] - `references` [EXTRACTED]
+- [[local_job()]] - `references` [EXTRACTED]
+- [[local_voice()]] - `references` [EXTRACTED]
+- [[moss_images()]] - `references` [EXTRACTED]
+- [[split_takes()]] - `references` [EXTRACTED]
+- [[start_picture_problems()]] - `references` [EXTRACTED]
+- [[unpack_clips()]] - `references` [EXTRACTED]
+- [[veo_handoff()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Obsidian_Vault_Logbook
+#graphify/code #graphify/EXTRACTED #community/AI_Clip_Prompts_and_Cuts

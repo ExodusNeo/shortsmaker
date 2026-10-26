@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_pictures_first.py"
 type: "code"
-community: "Full-Screen Graphic Validation"
+community: "write_scripts"
 location: "L319"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Full-Screen_Graphic_Validation
+  - community/write_scripts
 ---
 
 # test_clean_full_keeps_board_pic()
@@ -16,4 +16,4 @@ tags:
 - [[test_pictures_first.py]] - `contains` [EXTRACTED]
 - [[words_of()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Full-Screen_Graphic_Validation
+#graphify/code #graphify/EXTRACTED #community/write_scripts

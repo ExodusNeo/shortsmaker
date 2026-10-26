@@ -12,7 +12,7 @@ tags:
 # start_picture_problems()
 
 ## Connections
-- [[Path_18]] - `references` [EXTRACTED]
+- [[Path_21]] - `references` [EXTRACTED]
 - [[Start pictures (folderstartN.jpg) the owner shouldn't spend a clip on a…]] - `rationale_for` [EXTRACTED]
 - [[ask_ai()]] - `calls` [EXTRACTED]
 - [[gpu.py]] - `contains` [EXTRACTED]

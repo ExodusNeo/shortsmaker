@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/blender_plan.py"
 type: "rationale"
-community: "Blender Build Planning"
+community: "default_build"
 location: "L93"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Blender_Build_Planning
+  - community/default_build
 ---
 
 # A plan that always works: a truss bridge whose mid-span gusset plate bends.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[default_build()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Blender_Build_Planning
+#graphify/rationale #graphify/EXTRACTED #community/default_build

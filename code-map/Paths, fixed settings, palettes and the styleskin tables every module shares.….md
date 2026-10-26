@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/config.py"
 type: "rationale"
-community: "CLI, Config and Footage"
+community: "short_render.py"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/CLI_Config_and_Footage
+  - community/short_renderpy
 ---
 
 # Paths, fixed settings, palettes and the style/skin tables every module shares.…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[config.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/CLI_Config_and_Footage
+#graphify/rationale #graphify/EXTRACTED #community/short_renderpy

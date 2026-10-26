@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_package.py"
 type: "code"
-community: "Headless AI Planner Calls"
+community: "ask_ai"
 location: "L269"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Headless_AI_Planner_Calls
+  - community/ask_ai
 ---
 
 # test_solo_ask_ai_never_falls_back()
@@ -15,4 +15,4 @@ tags:
 - [[ask_ai()]] - `calls` [EXTRACTED]
 - [[test_package.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Headless_AI_Planner_Calls
+#graphify/code #graphify/EXTRACTED #community/ask_ai

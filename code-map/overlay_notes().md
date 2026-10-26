@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/review.py"
 type: "code"
-community: "Quality and Visual Review"
+community: "visual_review"
 location: "L52"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Quality_and_Visual_Review
+  - community/visual_review
 ---
 
 # overlay_notes()
@@ -17,4 +17,4 @@ tags:
 - [[review.py]] - `contains` [EXTRACTED]
 - [[visual_review()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Quality_and_Visual_Review
+#graphify/code #graphify/EXTRACTED #community/visual_review

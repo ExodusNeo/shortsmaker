@@ -1,17 +1,19 @@
 ---
-source_file: "tests/test_style.py"
+source_file: "shortsmaker/remotion_render.py"
 type: "code"
-community: "ASS Captions and Skins"
-location: "L295"
+community: "render_remotion"
+location: "L203"
 tags:
   - graphify/code
-  - graphify/INFERRED
-  - community/ASS_Captions_and_Skins
+  - graphify/EXTRACTED
+  - community/render_remotion
 ---
 
 # render()
 
 ## Connections
-- [[test_invention_runtime_failure_uses_fallback()]] - `indirect_call` [INFERRED]
+- [[remotion()]] - `calls` [EXTRACTED]
+- [[render_remotion()]] - `indirect_call` [INFERRED]
+- [[run_remotion_with_fallback()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/ASS_Captions_and_Skins
+#graphify/code #graphify/EXTRACTED #community/render_remotion

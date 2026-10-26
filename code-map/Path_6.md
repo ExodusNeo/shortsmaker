@@ -1,18 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Picture Pool Storage"
+community: "test_rules.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Picture_Pool_Storage
+  - community/test_rulespy
 ---
 
 # Path
 
 ## Connections
-- [[duration()]] - `references` [EXTRACTED]
-- [[ffmpeg()]] - `references` [EXTRACTED]
-- [[write_json()]] - `references` [EXTRACTED]
+- [[draft_rules()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Picture_Pool_Storage
+#graphify/code #graphify/EXTRACTED #community/test_rulespy

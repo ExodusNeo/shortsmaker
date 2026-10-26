@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/full/guarded.tsx"
 type: "code"
-community: "Example Chain and Evidence"
+community: "guarded.tsx"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Example_Chain_and_Evidence
+  - community/guardedtsx
 ---
 
 # guarded.tsx
@@ -45,4 +45,4 @@ tags:
 - [[toolkit.tsx]] - `re_exports` [EXTRACTED]
 - [[travel()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Example_Chain_and_Evidence
+#graphify/code #graphify/EXTRACTED #community/guardedtsx

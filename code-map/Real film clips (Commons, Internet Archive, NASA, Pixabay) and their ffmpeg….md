@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/footage.py"
 type: "rationale"
-community: "CLI, Config and Footage"
+community: "gpu.py"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/CLI_Config_and_Footage
+  - community/gpupy
 ---
 
 # Real film clips (Commons, Internet Archive, NASA, Pixabay) and their ffmpeg…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[footage.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/CLI_Config_and_Footage
+#graphify/rationale #graphify/EXTRACTED #community/gpupy

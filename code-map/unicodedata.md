@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "Local Voice and Freesound"
+community: "time"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Local_Voice_and_Freesound
+  - community/time
 ---
 
 # unicodedata
@@ -18,4 +18,4 @@ tags:
 - [[spoken_count()]] - `calls` [EXTRACTED]
 - [[words_of()]] - `calls` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Local_Voice_and_Freesound
+#graphify/concept #graphify/EXTRACTED #community/time

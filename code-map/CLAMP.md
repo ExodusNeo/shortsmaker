@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/style/kit.ts"
 type: "code"
-community: "Invented Overlays and Looks"
+community: "style/index.ts"
 location: "L10"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Invented_Overlays_and_Looks
+  - community/style/indexts
 ---
 
 # CLAMP
@@ -16,4 +16,4 @@ tags:
 - [[QuestionBeat.tsx]] - `imports` [EXTRACTED]
 - [[kit.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Invented_Overlays_and_Looks
+#graphify/code #graphify/EXTRACTED #community/style/indexts

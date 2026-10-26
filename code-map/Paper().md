@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/full/Paper.tsx"
 type: "code"
-community: "Board and Document Scenes"
+community: "Paper"
 location: "L125"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Board_and_Document_Scenes
+  - community/Paper
 ---
 
 # Paper()
@@ -38,4 +38,4 @@ tags:
 - [[toolkit.tsx]] - `imports` [EXTRACTED]
 - [[useFonts()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Board_and_Document_Scenes
+#graphify/code #graphify/EXTRACTED #community/Paper

@@ -1,12 +1,10 @@
 ---
 type: community
-cohesion: 0.33
 members: 10
 ---
 
 # Blender Ink Look
 
-**Cohesion:** 0.33 - loosely connected
 **Members:** 10 nodes
 
 ## Members
@@ -29,10 +27,10 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 3 edges to [[_COMMUNITY_Blender Bridge Parts]]
-- 3 edges to [[_COMMUNITY_Blender Camera Shots]]
-- 1 edge to [[_COMMUNITY_Bridge Collapse Simulation]]
-- 1 edge to [[_COMMUNITY_Bridge Templates]]
+- 3 edges to [[_COMMUNITY_parts.py]]
+- 3 edges to [[_COMMUNITY_build_scene.py]]
+- 1 edge to [[_COMMUNITY_main]]
+- 1 edge to [[_COMMUNITY_templates.py]]
 
 ## Top bridge nodes
 - [[look.py]] - degree 11, connects to 3 communities

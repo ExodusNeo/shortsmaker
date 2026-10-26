@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "Local Voice and Freesound"
+community: "gpu.py"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Local_Voice_and_Freesound
+  - community/gpupy
 ---
 
 # hashlib
@@ -21,4 +21,4 @@ tags:
 - [[pixabay_films()]] - `calls` [EXTRACTED]
 - [[pool_folder()]] - `calls` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Local_Voice_and_Freesound
+#graphify/concept #graphify/EXTRACTED #community/gpupy

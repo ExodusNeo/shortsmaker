@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_blender_run.py"
 type: "code"
-community: "Main Entry and Channel Profiles"
+community: "fix_short"
 location: "L142"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Main_Entry_and_Channel_Profiles
+  - community/fix_short
 ---
 
 # test_fix_bat_explains_a_drawn_short()
@@ -15,4 +15,4 @@ tags:
 - [[fix_short()]] - `calls` [EXTRACTED]
 - [[test_blender_run.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Main_Entry_and_Channel_Profiles
+#graphify/code #graphify/EXTRACTED #community/fix_short

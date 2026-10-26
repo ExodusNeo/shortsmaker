@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_blender_plan.py"
 type: "rationale"
-community: "Blender Build Planning"
+community: "test_blender_plan.py"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Blender_Build_Planning
+  - community/test_blender_planpy
 ---
 
 # Tests for Blender build plans (blender_plan.py, 2026-10-22): the engineer AI's…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[test_blender_plan.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Blender_Build_Planning
+#graphify/rationale #graphify/EXTRACTED #community/test_blender_planpy

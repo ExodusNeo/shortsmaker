@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_style.py"
 type: "code"
-community: "Style Plan Validation"
+community: "style_library"
 location: "L66"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Style_Plan_Validation
+  - community/style_library
 ---
 
 # test_unknown_names_fall_back()
@@ -16,4 +16,4 @@ tags:
 - [[clean_transition()]] - `calls` [EXTRACTED]
 - [[test_style.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Style_Plan_Validation
+#graphify/code #graphify/EXTRACTED #community/style_library

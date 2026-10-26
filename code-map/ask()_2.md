@@ -1,18 +1,17 @@
 ---
-source_file: "tests/test_style.py"
+source_file: "tests/test_full_scenes.py"
 type: "code"
-community: "Motion Scenes and Style Library"
-location: "L110"
+community: "code_custom_scenes"
+location: "L572"
 tags:
   - graphify/code
-  - graphify/INFERRED
-  - community/Motion_Scenes_and_Style_Library
+  - graphify/EXTRACTED
+  - community/code_custom_scenes
 ---
 
 # ask()
 
 ## Connections
-- [[plan_with()]] - `indirect_call` [INFERRED]
-- [[test_fact_check_sees_new_graphics()]] - `indirect_call` [INFERRED]
+- [[test_review_redraws_custom()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/Motion_Scenes_and_Style_Library
+#graphify/code #graphify/EXTRACTED #community/code_custom_scenes

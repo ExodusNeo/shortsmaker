@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/llm.py"
 type: "rationale"
-community: "Headless AI Planner Calls"
+community: "ask_ai"
 location: "L101"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Headless_AI_Planner_Calls
+  - community/ask_ai
 ---
 
 # Headless planner call (BRAIN, or `brain`: Claude or Gemini) that returns parsed…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[ask_ai()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Headless_AI_Planner_Calls
+#graphify/rationale #graphify/EXTRACTED #community/ask_ai

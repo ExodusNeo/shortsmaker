@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "CLI, Config and Footage"
+community: "short_render.py"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/CLI_Config_and_Footage
+  - community/short_renderpy
 ---
 
 # warnings
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[config.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/CLI_Config_and_Footage
+#graphify/concept #graphify/EXTRACTED #community/short_renderpy

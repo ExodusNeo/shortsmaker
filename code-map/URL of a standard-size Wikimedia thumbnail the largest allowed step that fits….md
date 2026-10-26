@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/image_sources.py"
 type: "rationale"
-community: "Wikimedia Image Search"
+community: "gather_pool"
 location: "L73"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Wikimedia_Image_Search
+  - community/gather_pool
 ---
 
 # URL of a standard-size Wikimedia thumbnail: the largest allowed step that fits…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[thumb_url()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Wikimedia_Image_Search
+#graphify/rationale #graphify/EXTRACTED #community/gather_pool

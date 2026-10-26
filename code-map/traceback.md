@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "MiniMax H3 Video Jobs"
+community: "test_full_scenes.py"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/MiniMax_H3_Video_Jobs
+  - community/test_full_scenespy
 ---
 
 # traceback
@@ -25,4 +25,4 @@ tags:
 - [[test_rules.py]] - `imports` [EXTRACTED]
 - [[test_story.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/MiniMax_H3_Video_Jobs
+#graphify/concept #graphify/EXTRACTED #community/test_full_scenespy

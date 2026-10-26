@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/review.py"
 type: "rationale"
-community: "TTS and Story Sounds"
+community: "choose_images"
 location: "L125"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/TTS_and_Story_Sounds
+  - community/choose_images
 ---
 
 # Would a stranger scrolling the Shorts feed stop here? Stayed-to-watch is…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[first_second_check()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/TTS_and_Story_Sounds
+#graphify/rationale #graphify/EXTRACTED #community/choose_images

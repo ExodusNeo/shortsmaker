@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/writing.py"
 type: "code"
-community: "Script Sounds and Graphics"
+community: "write_scripts"
 location: "L30"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Script_Sounds_and_Graphics
+  - community/write_scripts
 ---
 
 # write_scripts()
@@ -40,7 +40,7 @@ tags:
 - [[narration_lines()]] - `calls` [EXTRACTED]
 - [[pictures_of()]] - `calls` [EXTRACTED]
 - [[plan_builds()]] - `calls` [EXTRACTED]
-- [[plan_with()]] - `calls` [EXTRACTED]
+- [[plan_with()_1]] - `calls` [EXTRACTED]
 - [[prepare_topic()]] - `calls` [EXTRACTED]
 - [[re]] - `calls` [EXTRACTED]
 - [[save_channel()]] - `calls` [EXTRACTED]
@@ -57,4 +57,4 @@ tags:
 - [[words_of()]] - `calls` [EXTRACTED]
 - [[writing.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Script_Sounds_and_Graphics
+#graphify/code #graphify/EXTRACTED #community/write_scripts

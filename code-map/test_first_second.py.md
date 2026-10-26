@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_first_second.py"
 type: "code"
-community: "First-Second Opener Check"
+community: "test_first_second.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/First-Second_Opener_Check
+  - community/test_first_secondpy
 ---
 
 # test_first_second.py
@@ -23,9 +23,11 @@ tags:
 - [[rules.py]] - `imports_from` [EXTRACTED]
 - [[run_check()]] - `contains` [EXTRACTED]
 - [[session.py]] - `imports_from` [EXTRACTED]
+- [[short_render.py]] - `imports_from` [EXTRACTED]
 - [[state()]] - `contains` [EXTRACTED]
 - [[sys]] - `imports` [EXTRACTED]
 - [[tempfile]] - `imports` [EXTRACTED]
+- [[test_fix_round_user_confirmation()]] - `contains` [EXTRACTED]
 - [[test_good_opening_or_no_reply_changes_nothing()]] - `contains` [EXTRACTED]
 - [[test_logbook_marks_tiny_samples()]] - `contains` [EXTRACTED]
 - [[test_low_score_opens_on_a_better_real_picture()]] - `contains` [EXTRACTED]
@@ -38,4 +40,4 @@ tags:
 - [[test_swap_pictures_trades_real_pictures()]] - `contains` [EXTRACTED]
 - [[traceback]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/First-Second_Opener_Check
+#graphify/code #graphify/EXTRACTED #community/test_first_secondpy

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/remotion_render.py"
 type: "rationale"
-community: "Audio Mix and Shotcut Export"
+community: "short_render.py"
 location: "L122"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Audio_Mix_and_Shotcut_Export
+  - community/short_renderpy
 ---
 
 # The aged-paper texture and film-grain frames the full-screen motion graphics…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[make_paper()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Audio_Mix_and_Shotcut_Export
+#graphify/rationale #graphify/EXTRACTED #community/short_renderpy

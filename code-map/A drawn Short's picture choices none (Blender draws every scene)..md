@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/short_render.py"
 type: "rationale"
-community: "Sound Effects and Credits"
+community: "render"
 location: "L70"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Sound_Effects_and_Credits
+  - community/render
 ---
 
 # A drawn Short's picture choices: none (Blender draws every scene).
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[drawn_choices()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Sound_Effects_and_Credits
+#graphify/rationale #graphify/EXTRACTED #community/render
