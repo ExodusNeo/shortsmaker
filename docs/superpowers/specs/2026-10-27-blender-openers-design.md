@@ -129,16 +129,34 @@ Also learned:
 
 Each move is written once and tested; the AI only chooses moves and their timing.
 
+**Rules for every move, not only cuts** (owner, 2026-10-27: the system must be ready for any Blender animation):
+- **Roles, not objects.** A move works on roles (actor, target, tool, support), never on specific things.
+  `walk` works for a rooster, a dog or a cart.
+- **Physics for passive motion.** Anything that falls, tips, rolls, bounces, slides or scatters (including cut
+  pieces) is moved by Blender's rigid-body physics, baked before rendering, with collision shapes from the meshes.
+  This works for any shape and can't pass through things. The probe's hand-keyed head landing was wrong twice.
+- **Tables for driven motion.** Walking, hopping, tool swings, pushes and cut strokes are keyframed moves set by
+  tables:
+  - a gait table by body type (bird, four-legged, two-legged, wheeled, sliding object);
+  - the tool table for strokes.
+  A new body type or tool is a new table row, not new code paths.
+- **Expected end state.** Every beat may state where its actors end up and what they rest on
+  (`"ends": {"on": "board"}`), alongside the cut's `expect`. The checks compare the real end state with it.
+- **The same checks for every move** (below). A moment the moves can't show is `buildable: false` and falls
+  back. A story that needs a new move gets it added the same way, with its own reference test.
+
 | Move | What it does |
 |---|---|
 | `cut` | Any cut: one or many tool strokes through a target (details below). |
-| `fall` | Drops under gravity onto whatever is below, with a small bounce, and comes to rest touching it. |
-| `topple` | Tips over around its base edge and comes to rest lying on the ground. |
+| `fall` | Physics: drops onto whatever is below, bounces, and comes to rest. |
+| `topple` | Physics: tipped over by a push at its top edge, and comes to rest lying down. |
 | `hop_off` | Jumps clear of what it stands on and lands beside it. |
 | `walk` | Moves along the ground with a step bob; `style` is `normal` or `stagger`. |
-| `fly_off` | A cut or knocked part flies off on an arc and lands resting on something. |
-| `sink` | Sinks into water or mud, tilting as it goes. |
-| `roll` | Rolls along the ground. |
+| `fly_off` | Physics: a cut or knocked part is launched with a push and spin and lands where physics puts it. |
+| `scatter` | Physics: many pieces spread out from a hit and settle. |
+| `sink` | Sinks into water or mud, tilting as it goes (keyframed; physics has no water). |
+| `roll` | Physics: rolls along the ground from a push. |
+| `push` | Driven: an actor shoves a target, which then moves by physics. |
 
 **`cut`: one general move for every kind of cut** (owner, 2026-10-27: "be prepared for anything"). A chop, a
 split, slices, dice, a mince or a shaving are all the same move with different strokes; there are no built-in
