@@ -280,7 +280,10 @@ def main(job_path: str) -> None:
         kit.interpolation(o, "BEZIER", set())  # visibility and physics switches CONSTANT
     kit.simulate()
     tools = {b["tool"] for b in plan["beats"] if b["move"] == "cut"}
-    subject_id = plan["camera"].get("follow") or next(a["id"] for a in plan["actors"] if a["id"] not in tools)
+    # the subject is what the action happens to, not whatever is listed first (the fifth live run judged the stump)
+    first = sorted(plan["beats"], key=lambda b: b["at"])[0]
+    subject_id = plan["camera"].get("follow") or first.get("target") or first.get("actor") \
+        or next(a["id"] for a in plan["actors"] if a["id"] not in tools)
     cam = camera(plan, st, subject_id)
     held = hold_offscreen(st, cam)
     failures = checks(plan, st, cam, subject_id)

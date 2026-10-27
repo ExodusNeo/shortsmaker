@@ -97,6 +97,13 @@ def test_unbuildable_cut_is_reported_not_crashed():
     assert not report["ok"] and any(f.startswith("cut") for f in report["failures"]), report["failures"]
 
 
+def test_subject_without_follow():
+    """Fifth live run (Mike): no camera follow and the stump listed first; the checks took the stump as the subject
+    and found it hidden by itself on every frame."""
+    report, _ = run(fixture("chicken_live_nofollow"))
+    assert report["ok"], report["failures"]
+
+
 def test_bad_plans_fail():
     crowded = fixture("chicken_chop")  # a crate on the stump right where the rooster stands
     crowded["plan"]["actors"].append({"id": "crate", "find": "crate", "size_m": 0.3, "on": "stump"})

@@ -130,7 +130,7 @@ def hidden(subject, cam, frames, occluders, min_visible: float = 0.4) -> list[st
         pts = world_verts(subject, dg)
         pts = pts[::max(1, len(pts) // 40)]
         eye = cam.matrix_world.translation
-        trees = [tree(o, dg) for o in occluders if visible(o)]
+        trees = [tree(o, dg) for o in occluders if visible(o) and o is not subject]  # its own front doesn't hide it
         seen = 0
         for p in pts:
             ray = p - eye

@@ -111,7 +111,7 @@ small_box = cube("small_box", (0, 2, 0), size=0.5)
 wall = cube("wall", (0, 0, 0), size=1.5)
 results["hidden_bad"] = oc.hidden(small_box, cam, [1], [wall])
 small_box.location = (2.5, 2, 0)
-results["hidden_ok"] = oc.hidden(small_box, cam, [1], [wall])
+results["hidden_ok"] = oc.hidden(small_box, cam, [1], [wall, small_box])  # never hidden by itself
 
 # blade face: seen face-on (camera on the thin axis) vs edge-on (camera along the blade)
 sc = fresh()

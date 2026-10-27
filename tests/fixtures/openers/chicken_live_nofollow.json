@@ -1,0 +1,95 @@
+{
+ "plan": {
+  "buildable": true,
+  "moment": "The farmer's axe comes down on the rooster's neck on the chopping stump. The head flies off, but the headless bird stays upright, then staggers off the stump and keeps walking across the farmyard as if nothing happened.",
+  "set": {
+   "ground": "dirt",
+   "backdrop": [
+    {
+     "find": "red barn",
+     "size_m": 8
+    },
+    {
+     "find": "wooden fence",
+     "size_m": 3
+    }
+   ],
+   "light": "day"
+  },
+  "actors": [
+   {
+    "id": "stump",
+    "find": "tree stump",
+    "size_m": 0.5
+   },
+   {
+    "id": "rooster",
+    "find": "rooster",
+    "size_m": 0.4,
+    "on": "stump",
+    "facing": "right",
+    "gait": "bird"
+   },
+   {
+    "id": "axe",
+    "find": "axe",
+    "size_m": 0.35
+   }
+  ],
+  "beats": [
+   {
+    "move": "cut",
+    "tool": "axe",
+    "target": "rooster",
+    "at": 0.5,
+    "strokes": [
+     {
+      "through": "neck",
+      "angle": "diagonal"
+     }
+    ],
+    "expect": [
+     {
+      "piece": "head",
+      "share": 0.06,
+      "then": "fly_off"
+     },
+     {
+      "piece": "rest",
+      "then": "stay"
+     }
+    ]
+   },
+   {
+    "move": "hop_off",
+    "actor": "rooster",
+    "at": 1.4,
+    "style": "normal",
+    "ends": {
+     "on": "ground"
+    }
+   },
+   {
+    "move": "walk",
+    "actor": "rooster",
+    "at": 1.9,
+    "toward": "right",
+    "style": "normal",
+    "ends": {
+     "on": "ground"
+    }
+   }
+  ],
+  "camera": {
+   "angle": "side"
+  }
+ },
+ "models": {
+  "stump": "polypizza_2ohXf_yaPki.blend",
+  "rooster": "polypizza_6NTegstc5Jy.blend",
+  "axe": "polypizza_W0UYZPYSXf.blend",
+  "backdrop:0": "polypizza_vSqQNA7ez6.blend",
+  "backdrop:1": "polypizza_LVnubFGRSz.blend"
+ },
+ "seconds": 3.3666666666666667
+}
