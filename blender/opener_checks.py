@@ -256,3 +256,14 @@ def staging(plan: dict, gaits: dict) -> list[str]:
             out.append(f"staging: {actor} {b['move']}s \"{way}\", the way its cut piece flew, over its own piece; "
                        f"use \"{other}\"")
     return out
+
+
+def prop_shown(prop, cam, min_height: float = 0.02) -> list[str]:
+    """A person's planned prop (the umbrella, the sword) is in frame 0 and big enough to see (part 2, 2026-10-27)."""
+    x0, x1, y0, y1 = screen_box(prop, cam, at(bpy.context.scene.frame_start))
+    if x1 < 0 or x0 > 1 or y1 < 0 or y0 > 1:
+        return [f"first_frame: the prop {prop.name} is not in the first frame"]
+    if max(x1 - x0, y1 - y0) < min_height:
+        return [f"first_frame: the prop {prop.name} is too small to see in the first frame "
+                f"({100 * max(x1 - x0, y1 - y0):.1f}% of the frame, needs {100 * min_height:.0f}%)"]
+    return []

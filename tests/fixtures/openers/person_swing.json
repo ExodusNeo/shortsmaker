@@ -1,0 +1,34 @@
+{
+ "plan": {
+  "buildable": true,
+  "moment": "a knight swings an axe",
+  "set": {
+   "ground": "stone",
+   "backdrop": [],
+   "light": "day"
+  },
+  "actors": [
+   {
+    "id": "knight",
+    "person": "medieval_knight",
+    "facing": "right",
+    "prop": "axe"
+   }
+  ],
+  "beats": [
+   {
+    "move": "swing_prop",
+    "actor": "knight",
+    "at": 0.5
+   }
+  ],
+  "camera": {
+   "angle": "side",
+   "follow": "knight"
+  }
+ },
+ "models": {
+  "knight:prop": "polypizza_W0UYZPYSXf.blend"
+ },
+ "seconds": 2.0
+}

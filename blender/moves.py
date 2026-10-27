@@ -40,6 +40,7 @@ class State:
         self.failures: list[str] = []
         self.threat = None
         self.moved_from: dict[str, int] = {}  # actor id -> first frame it moves
+        self.swings: list[tuple] = []  # (a person's blade prop, the frame it swings through): blade-face checked
         self.people: dict | None = None  # the people library (people.load_library) when the plan has people
         self.rigs: dict[str, list] = {}  # actor id -> its leg rig (scene_kit.leg_rig), built when it first moves
         self.stroke_toward: list[float] = []  # each stroke's motion toward the camera (0 = across the frame)

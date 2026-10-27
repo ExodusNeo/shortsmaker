@@ -237,6 +237,29 @@ def test_person_walk_away_is_staging():
     assert any(f.startswith("staging:") for f in report["failures"]), report["failures"]
 
 
+
+def test_swing_shows_blade():
+    """A swung blade in a person's hand shows the camera its flat side, like Part 1's chops."""
+    report, _ = run(fixture("person_swing"))
+    assert report["ok"], report["failures"]
+    assert report["swings"] == ["knight.prop"], report.get("swings")  # judged by the blade check, not skipped
+
+
+def test_drop_lands():
+    """A dropped prop leaves the hand and comes to rest on the ground."""
+    report, _ = run(fixture("person_drop"))
+    assert report["ok"], report["failures"]
+    assert abs(report["lowest"]["officer.prop"]) < 0.02, report["lowest"]
+
+
+def test_prop_hidden_in_first_frame_fails():
+    """The plan names a prop, so frame 0 must show it; a prop too small to see goes back to the planner."""
+    job = fixture("person_drop")
+    job["plan"]["actors"][0]["prop_size_m"] = 0.005
+    report, _ = run(job)
+    assert any(f.startswith("first_frame:") and "prop" in f for f in report["failures"]), report["failures"]
+
+
 if __name__ == "__main__":
     names = [n for n in sorted(globals()) if n.startswith("test_") and (len(sys.argv) < 2 or n in sys.argv[1:])]
     failed = 0

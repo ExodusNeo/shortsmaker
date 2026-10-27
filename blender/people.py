@@ -59,13 +59,16 @@ def _colour(mesh, colours: dict) -> None:
 
 
 def _attach(item, arm, bone: str, at: Vector) -> None:
-    """item (origin at its bottom) stands on `at` and follows the bone from now on."""
+    """item (origin at its bottom) stands on `at` and follows the bone's place and turn, not its scale: the clips
+    scale the hand bones, and a prop parented to one shrank to a third of its size."""
     item.location = at
     bpy.context.view_layer.update()
-    keep = item.matrix_world.copy()
-    item.parent, item.parent_type, item.parent_bone = arm, "BONE", bone
-    bpy.context.view_layer.update()
-    item.matrix_world = keep
+    pb = arm.pose.bones[bone]
+    loc, rot, _ = (arm.matrix_world @ pb.matrix).decompose()
+    con = item.constraints.new("CHILD_OF")
+    con.name, con.target, con.subtarget = "held", arm, bone
+    con.use_scale_x = con.use_scale_y = con.use_scale_z = False
+    con.inverse_matrix = Matrix.LocRotScale(loc, rot, Vector((1, 1, 1))).inverted()
 
 
 def dress(actor: dict, role: dict, lib: dict, models: dict) -> bpy.types.Object:
@@ -175,6 +178,8 @@ def move(beat: dict, st, lib: dict) -> None:
     if spec["kind"] == "in_place":
         strip = _strip(arm, clip, f0)
         _ground(o, st, f0, int(strip.frame_end))
+        if beat["move"] in ("swing_prop", "throw_prop", "drop_prop"):
+            prop_move(beat, st, o, strip)
         return
     if st.support.get(actor, "ground") != "ground":
         st.failures.append(f"walk: {actor} would {beat['move']} off the {st.support[actor]} it stands on; start "
@@ -210,3 +215,67 @@ def move(beat: dict, st, lib: dict) -> None:
         gap = min(v.z for v in kit.world_verts(o)) - start.z
         kit.key_loc(o, f, start + d * room * u - Vector((0, 0, gap)))
     sc.frame_set(1)
+
+
+def _bake_free(item, last: int) -> None:
+    """Keys item's world transform over frames 1..last (it rode the hand bone), then frees it from the bone, so
+    physics can take it from there: a rigid body still parented to an animated bone doesn't fall cleanly."""
+    sc = bpy.context.scene
+    path = []
+    for f in range(1, last + 1):
+        sc.frame_set(f)
+        path.append(item.matrix_world.copy())
+    for con in [c for c in item.constraints if c.name == "held"]:
+        item.constraints.remove(con)
+    for f, m in enumerate(path, 1):
+        loc, rot, _ = m.decompose()
+        item.location, item.rotation_euler = loc, rot.to_euler()
+        item.keyframe_insert("location", frame=f)
+        item.keyframe_insert("rotation_euler", frame=f)
+    sc.frame_set(1)
+
+
+def _show_blade(prop, st, frame: int) -> None:
+    """Turn the blade about its own length so the camera sees its flat side at the height of the swing."""
+    import moves
+    sc = bpy.context.scene
+    sc.frame_set(frame)
+    _, thin, long = moves.tool_axes(prop)
+    best = None
+    for k in range(12):
+        t = math.radians(15 * k)
+        normal = (prop.matrix_world.to_3x3() @ (Matrix.Rotation(t, 3, long) @ thin)).normalized()
+        score = abs(normal.dot(st.cam_h))
+        if best is None or score > best[0]:
+            best = (score, t)
+    prop.rotation_euler = (prop.rotation_euler.to_matrix() @ Matrix.Rotation(best[1], 3, long)).to_euler()
+    sc.frame_set(1)
+
+
+def prop_move(beat: dict, st, o, strip) -> None:
+    """What the prop does in a prop move: a swung blade turns to show its face and is judged by the blade check;
+    a thrown or dropped prop leaves the hand to physics."""
+    import moves
+    prop = bpy.data.objects.get(o.get("prop") or "")
+    if prop is None:
+        st.failures.append(f"{beat['move']}: {beat['actor']} has no prop to {beat['move'].split('_')[0]}")
+        return
+    actor = next(a for a in st.plan["actors"] if a["id"] == beat["actor"])
+    start, end = int(strip.frame_start), int(strip.frame_end)
+    if beat["move"] == "swing_prop":
+        mid = (start + end) // 2
+        if any(f" {k} " in f" {actor.get('prop', '').lower()} " for k in kit.TABLES["tools"]):
+            _show_blade(prop, st, mid)
+            st.swings.append((prop, mid))
+        return
+    let_go = start + round(0.45 * (end - start)) if beat["move"] == "throw_prop" else start
+    _bake_free(prop, let_go)
+    launch = kit.facing_vec(o) * 3.0 + Vector((0, 0, 2.0)) if beat["move"] == "throw_prop" else None
+    moves.release(st, prop, let_go + 1, launch=launch)
+    # it starts inside its owner's hand: collide with everything still but the person who held it (a box let go
+    # stayed stuck on the officer)
+    kit.layers(prop, [2])
+    for other in bpy.context.scene.objects:
+        if other is not o and other.rigid_body is not None and other.rigid_body.type == "PASSIVE":
+            other.rigid_body.collision_collections[2] = True
+    st.resting.append((prop, st.ground))

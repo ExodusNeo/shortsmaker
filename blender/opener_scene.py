@@ -430,6 +430,11 @@ def checks(plan: dict, st: moves.State, cam, subject_id: str) -> list[str]:
     for tool, axis, target, frame in st.contacts:
         out += oc.edge_leads(tool, axis, target, frame)
         out += oc.blade_face(tool, cam, frame)
+    for prop, frame in st.swings:
+        out += oc.blade_face(prop, cam, frame)
+    for a in plan["actors"]:  # a person's planned prop shows in frame 0
+        if a.get("person") and a.get("prop") and st.objs[a["id"]].get("prop"):
+            out += oc.prop_shown(bpy.data.objects[st.objs[a["id"]]["prop"]], cam)
     for pieces, total, expect, _ in st.cuts:
         out += oc.cut_result(pieces, total, expect)
     out += oc.resting(st.resting, [sc.frame_end])
@@ -477,12 +482,15 @@ def main(job_path: str) -> None:
     lowest = {aid: round(min(v.z for v in kit.world_verts(o)), 4) for aid, o in st.objs.items()
               if aid not in tools}
     highest = {aid: round(max(v.z for v in kit.world_verts(o)), 4) for aid, o in st.objs.items() if aid not in tools}
+    for aid, o in st.objs.items():  # a person's prop, e.g. "officer.prop", where it ends up
+        if o.get("prop"):
+            lowest[f"{aid}.prop"] = round(min(v.z for v in kit.world_verts(bpy.data.objects[o["prop"]])), 4)
     moved = {aid: round((o.matrix_world.translation - starts[aid]).length, 4) for aid, o in st.objs.items()
              if aid in starts and aid not in tools}
     report = {"ok": not failures, "failures": failures, "frames": sc.frame_end,
               "pieces": sum(len(p) for p, *_ in st.cuts),
               "cut_shares": {k: v for *_, s in st.cuts for k, v in s.items()}, "lowest": lowest,
-              "highest": highest, "moved": moved,
+              "highest": highest, "moved": moved, "swings": [p.name for p, _ in st.swings],
               "held_offscreen": held, "stroke_toward_camera": st.stroke_toward,
               "key_frames": []}
     times = retime(sc.frame_end, first_hit(st))
