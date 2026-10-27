@@ -963,7 +963,8 @@ every opener.
 - Blender openers: `tests\test_opener_plan.py` (9), `tests\test_blender_link.py` (6, fake add-on socket),
   `tests\test_opener_render.py` (13, fake Blender: fix rounds, fallback, reuse, credits, scene-1 wiring, the run.bat
   note), and with real headless Blender `tests\test_opener_checks.py` (7, about a minute) and
-  `tests\test_opener_scene.py` (6 reference plans incl. 4 broken ones, a few minutes).
+  `tests\test_opener_scene.py` (28 incl. the people tests, about 15 minutes), `tests\test_people_tables.py` (3),
+  `tests\people_sheet.py` (people contact sheets, needs the packed library).
 - One full-screen scene alone: `.venv\Scripts\python.exe tests\render_full.py remotion\test_props\<name>.json [--still SECONDS]`.
 - Prompt changes without spending AI usage: set `llm.ask_ai` (and `writing.article_text`,
   `channel_profiles.trend_research`) to canned JSON and inspect the captured prompts.
