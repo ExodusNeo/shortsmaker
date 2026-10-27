@@ -113,11 +113,18 @@ def test_bad_plans_fail():
     crowded["models"]["crate"] = "primitive:cube"
     wrong_count = fixture("onion_mince")
     wrong_count["plan"]["beats"][0]["expect"] = [{"pieces": "2-3", "then": "scatter"}]
-    edge_on = fixture("chicken_chop")  # a blade plane the camera sees edge-on
-    edge_on["plan"]["beats"][0]["strokes"] = [{"through": "neck", "angle": "down"}]
-    for job, word in ((crowded, "overlap"), (wrong_count, "cut"), (edge_on, "blade")):
+    for job, word in ((crowded, "overlap"), (wrong_count, "cut")):
         report, _ = run(job)
         assert not report["ok"] and any(f.startswith(word) for f in report["failures"]), (word, report["failures"])
+
+
+def test_swung_blade_shows_its_face():
+    """A chop planned edge-on to the camera turns about its stroke until the camera sees the blade's flat side (owner,
+    2026-10-27: the profile shot); it used to fail the blade check and go back to the planner."""
+    edge_on = fixture("chicken_chop")
+    edge_on["plan"]["beats"][0]["strokes"] = [{"through": "neck", "angle": "down"}]
+    report, _ = run(edge_on)
+    assert not any(f.startswith("blade") for f in report["failures"]), report["failures"]
 
 
 def test_camera_follows_unasked():

@@ -870,13 +870,27 @@ owner's Blender (Mike's chop; the owner's six catches became the checks below). 
   added), a tilted blade swinging at the lens (strokes move across the frame), stroke angles explained to the planner.
   Each try's failures are printed. No live run produced a passing opener yet; the owner stopped tuning that one
   animation in favour of general fixes.
-- **Owner, 2026-10-27: the opener animation is still not at the quality they want.** Camera moves, blur, slow-mo
-  and the burst helped, but the Mike render (`cache/opener_cam/mike_camera.mp4`) still reads as stiff: the rooster
-  slides instead of walking (welded one-piece models, no legs to move), the axe floats in with no arm, the
-  barn is a flat wall filling the frame (no sky, no depth), the light is flat, the cut neck is a smooth pink ball,
-  and the burst is a small clump, not a spray. Don't call openers done or switch them on as finished; next
-  candidates: rigged/animated models (legs, wings), set layout with sky and depth, rim light + shadows + haze, a
-  rougher darker cut face. Look at every change by eye, not only the checks.
+- **Owner, 2026-10-27: the opener animation is still not at the quality they want** ("keep improving it until I see
+  that the animation is decent"). Fixed that day, each seen on the Mike render (`cache/opener_cam/mike_side_walk.mp4`
+  = the plan staged by the new rules; `mike_camera.mp4` = the live plan, which walks "away"):
+  - Facings and directions are as seen in the shot (`scene_kit.VIEW_YAW`, `view()`): a "side" camera used to see a
+    rooster planned to face right head-on. Actors line up and backdrops sit side by side across the shot. Cut pieces
+    keep their model's facing. Tools are not turned (their axes come from the mesh).
+  - A neck chop follows the neck's lean and is not tilted at the lens (45 degrees over a 6 cm neck took a wedge off the
+    back of the head and left the face on); a swung blade is turned about its stroke to show its face instead
+    (`moves.show_face`, 50 degrees). Strokes move in the blade's plane, never toward the lens (`n x cam_h`): in
+    profile the axe comes down from behind the head. The wind-up raises the edge against the stroke (it dipped
+    underground) and swings down over 4 frames (`SWING`; it snapped there in one); chops and slashes take 4 frames.
+  - Loose parts within 6% go together when cut (beak and wattle stayed on the neck stump). Cut faces of meat are dark
+    red, not pink. The burst is flat feathers in the colours read from the texture around the cut, drifting down
+    and settling (the first try threw textured spheres with no UVs: grey blobs); physics is re-baked after it (its
+    ground collider dropped the cache and the head never flew).
+  - Walking creatures get a leg rig (`scene_kit.leg_rig`; `legs`/`leg_zone` per gait in the tables): one bone per
+    leg, swung in step with the bob, feet together on the last frame; the walk stops short by the leg's reach.
+  - Staging lessons went into both channels' `## Opener`: animals from the side, walks across the frame, the body
+    walks away from a head that flew forward.
+  Still open: flat light (no rim light, haze or real sky), sparse set, feathers small, the hop has no leg tuck. The
+  installed blender-time-of-day / blender-lighting-lookdev skills cover the light. Look at every change by eye.
 - Reference tests: `tests/fixtures/openers/` (chicken chop, onion slices, onion mince, crate fall + their models);
   every check was also seen to catch a real fault while building them, and the renders were looked at by eye (checks
   alone passed a head blasted out of frame, hollow slices and an exploding mince).

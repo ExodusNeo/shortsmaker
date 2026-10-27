@@ -17,9 +17,10 @@ import scene_kit as kit
 TOWARD = {"left": Vector((-1, 0, 0)), "right": Vector((1, 0, 0)), "camera": Vector((0, -1, 0)), "away": Vector((0, 1, 0))}
 REGION_SIDE = {"head": "top_front", "neck": "top_front", "top": "top", "tail": "back", "back": "back",
                "front": "front", "middle": "middle", "bottom": "bottom", "base": "bottom", "legs": "bottom"}
-STROKE_FRAMES = {"chop": 6, "slash": 6, "press": 5, "drop": 5, "saw": 15, "shape": 8}
+STROKE_FRAMES = {"chop": 4, "slash": 4, "press": 5, "drop": 5, "saw": 15, "shape": 8}
 MINCE_FRAMES = 3
 WIND_DEG = 55  # how far a chop or slash is raised before the stroke
+SWING = 4  # frames a raised chop or slash takes to come down to the cut (it snapped there in one, owner 2026-10-27)
 
 
 class State:
@@ -65,7 +66,7 @@ def apply(beat: dict, st: State) -> None:
 
 
 def toward(beat: dict, default: str = "left") -> Vector:
-    return TOWARD[beat.get("toward", default)].copy()
+    return kit.view(TOWARD[beat.get("toward", default)])
 
 
 # --- passive moves: physics ----------------------------------------------------------------------------------------
@@ -183,12 +184,18 @@ def walk(beat, st):
     tools = {b["tool"] for b in st.plan["beats"] if b["move"] == "cut"}
     obstacles = [x for k, x in st.objs.items() if x is not o and k not in tools] + \
         [x for x in bpy.context.scene.objects if x.name.startswith("backdrop")]
+    leg = (o.dimensions.z or 1) * g.get("leg_zone", 0.3)
+    swing = max(math.radians(22), math.asin(min(0.9, g["step"] / (2 * leg))))  # a stride's reach, never a shuffle
+    reach = leg * math.sin(swing) if g.get("legs") else 0.0  # a foot swings this far ahead of the body
     keep_loc, keep_rot = o.location.copy(), o.rotation_euler.copy()
     o.location, o.rotation_euler = start + Vector((0, 0, 0.01)), (0, 0, base_rot.z + turn)
     bpy.context.view_layer.update()
-    room = max(0.0, clear_distance(o, d, obstacles, speed * (st.frames - f0) / st.fps) - 0.04)  # 4 cm: sway
+    room = max(0.0, clear_distance(o, d, obstacles, speed * (st.frames - f0) / st.fps) - 0.04 - reach)  # 4 cm: sway
     o.location, o.rotation_euler = keep_loc, keep_rot
     bpy.context.view_layer.update()
+    rig = kit.leg_rig(o, g["legs"], g["leg_zone"], kit.facing_vec(o)) if g.get("legs") else []
+    if rig:
+        kit.key_swing(rig, f0, 0.0)
     last = st.frames if (st.frames - f0) % 2 == 0 else st.frames + 1
     for f in range(f0, last + 1, 2):
         f = min(f, st.frames)
@@ -202,6 +209,8 @@ def walk(beat, st):
         tilt = (math.radians(9 * math.sin(t * 8)), math.radians(7 * math.sin(t * 6))) \
             if stagger and f != st.frames else (0, 0)
         kit.key_rot(o, f, (tilt[0], tilt[1], rz))
+        if rig:  # one step per bob; the last frame lands both feet
+            kit.key_swing(rig, f, 0.0 if f == st.frames else swing * math.sin(math.pi * g["steps_per_s"] * t))
         pos.z += kit.lift_for(o, (tilt[0], tilt[1], 0))
         kit.key_loc(o, f, pos)
     kit.key_loc(o, f0, start)
@@ -362,6 +371,11 @@ def region_normal(region: str, angle: str, facing: Vector, cam_h: Vector) -> Vec
     if angle == "down":
         return Vector((-cam_h.y, cam_h.x, 0))
     if angle == "diagonal":
+        if side == "top_front":  # a neck leans forward: the plane follows it as seen and is not tilted at the lens.
+            # In profile a 45-degree tilt over a 6 cm neck took a wedge off the back of the head and left the face on
+            # (owner, 2026-10-27); the blade is turned to show its face instead (show_face)
+            lean = facing - cam_h * facing.dot(cam_h)
+            return (base + lean).normalized()
         return (base + cam_h).normalized()
     return base.copy()
 
@@ -410,7 +424,8 @@ def through_cut(src, region, angle, share, facing, cam_h, cap, total):
     lo, hi = min(proj), max(proj)
     c0 = centre(src)
     lo_b, hi_b = box_of(src)
-    gap = 0.02 * max(hi_b - lo_b)
+    # loose parts within 6% of each other are one piece: at 2% a rooster's beak and wattle stayed on the neck stump
+    gap = 0.06 * max(hi_b - lo_b)
 
     def split(d):
         co = c0 + no * (d - c0.dot(no))
@@ -501,6 +516,21 @@ def tool_rotation(tool, d: Vector, n: Vector, handle_pref: Vector):
             break
     world = Matrix((d, nn, w)).transposed()
     return world @ local.inverted(), nn
+
+
+def show_face(R: Matrix, nn: Vector, d: Vector, cam_h: Vector, deg: float = 50) -> tuple[Matrix, Vector]:
+    """Turn the blade about its stroke until its flat side is at least `deg` toward the camera; the cut is already
+    made, so only the look changes, and the edge still leads along d. 50, not the check's 35: the camera's pitch and
+    arc aren't known yet and took 11 degrees off in the Mike run."""
+    a, b = nn.dot(cam_h), d.cross(nn).dot(cam_h)
+    want = math.sin(math.radians(deg))
+    if abs(a) >= want or math.hypot(a, b) < want:
+        return R, nn
+    phase, spread = math.atan2(b, a), math.acos(want / math.hypot(a, b))
+    turns = [phase - spread, phase + spread, phase + math.pi - spread, phase + math.pi + spread]
+    t = min(((x + math.pi) % (2 * math.pi) - math.pi for x in turns), key=abs)  # the smallest turn that shows it
+    rot = Matrix.Rotation(t, 3, d)
+    return rot @ R, rot @ nn
 
 
 def edge_point_local(tool) -> Vector:
@@ -602,6 +632,7 @@ def cut(beat, st):
     for i, (name, bm) in enumerate(bms):
         o = to_object(bm, f"{tid}.{name}.{i}" if name == "bit" else f"{tid}.{name}", mats)
         o["piece"] = name
+        o["facing"] = target.get("facing", "camera")  # the body walking off kept facing the camera (owner's Mike run)
         bm.free()
         pieces.append(o)
     src.free()
@@ -616,20 +647,23 @@ def cut(beat, st):
     others = [o for k, o in st.objs.items() if k not in (tid, beat["tool"])] + [st.ground]
     stroke_frames = []
     for s_i, (co, no) in enumerate(planes or [(mid, st.cam_h)]):
-        d = Vector((0, 0, -1)) - no * Vector((0, 0, -1)).dot(no)  # down, within the blade's plane
-        if d.length < 0.2:  # a level plane: the blade comes in from the camera's right
-            d = -(Vector((-st.cam_h.y, st.cam_h.x, 0)) - no * Vector((-st.cam_h.y, st.cam_h.x, 0)).dot(no))
+        # within the blade's plane and never toward the lens (moving at the camera the axe ballooned, live run 6):
+        # downward when the plane allows it, else in from the camera's right
+        d = no.cross(st.cam_h)
+        if d.length < 0.2:  # a plane facing the camera: straight down within it
+            d = Vector((0, 0, -1)) - no * Vector((0, 0, -1)).dot(no)
         d.normalize()
-        if 0.2 < abs(no.z) < 0.95:  # a blade tilted to show the camera its face: move across the frame, not at
-            # the lens (straight "down" in that plane carried the axe toward the camera and it ballooned, live run 6)
+        if abs(d.z) < 0.05:
             r = Vector((-st.cam_h.y, st.cam_h.x, 0))
-            side = -(r - no * r.dot(no))
-            side.normalize()
-            d = (side + 0.35 * d).normalized()
+            d = -d if d.dot(r) > 0 else d
+        elif d.z > 0:
+            d = -d
         st.stroke_toward.append(round(d.dot(st.cam_h), 3))
         piece_side = pieces[0] if "through" in stroke else pieces[min(s_i, len(pieces) - 1)]
         pc = sum(kit.world_verts(piece_side), Vector()) / len(kit.world_verts(piece_side))
         R, nn = tool_rotation(tool, d, no, (pc - mid) if "through" in stroke else no)
+        if kind in ("chop", "slash"):  # a knife keeps its slice plane: turned, it was blocked and led with its back
+            R, nn = show_face(R, nn, d, st.cam_h)
         tool.rotation_euler = R.to_euler()
         # the cut line: where the plane crosses the piece's attachment; the blade travels across it along d
         cut_pts = [v for v in kit.world_verts(piece_side) if abs((v - co).dot(no)) < 0.004] or kit.world_verts(piece_side)
@@ -652,7 +686,8 @@ def cut(beat, st):
         rot = R.to_euler()
         if s_i == 0:
             wind = Matrix.Rotation(math.radians(WIND_DEG), 3, nn)
-            if (wind @ (edge_point_local(tool) - handle_end_local(tool))).dot(d) > 0:
+            arm = R @ (edge_point_local(tool) - handle_end_local(tool))
+            if (wind @ arm - arm).dot(d) > 0:  # the edge is pulled back against the stroke (it dipped underground)
                 wind = Matrix.Rotation(-math.radians(WIND_DEG), 3, nn)
             pivot = start_loc + R @ handle_end_local(tool)
             wind_R = wind @ R
@@ -660,9 +695,10 @@ def cut(beat, st):
             wind_rot = wind_R.to_euler() if kind in ("chop", "slash") else rot
             kit.key_loc(tool, 1, wind_loc)
             kit.key_rot(tool, 1, wind_rot)
-            kit.key_loc(tool, max(f_start - 1, 1), wind_loc)
-            kit.key_rot(tool, max(f_start - 1, 1), wind_rot)
-            st.windups.append((tool, max(f_start - 1, 1)))
+            held = max(f_start - (SWING if kind in ("chop", "slash") else 1), 1)
+            kit.key_loc(tool, held, wind_loc)
+            kit.key_rot(tool, held, wind_rot)
+            st.windups.append((tool, held))
             # judged as the blade arrives: by the stroke's end it has passed the piece
             st.contacts.append((tool, tuple(E), pieces[0] if "through" in stroke else target, f_start + 1))
         else:
@@ -672,7 +708,7 @@ def cut(beat, st):
         kit.key_rot(tool, f_start, rot)
         kit.key_loc(tool, f_end, end_loc)
         kit.key_rot(tool, f_end, rot)
-        kit.interpolation(tool, "QUAD", {f_start}, "EASE_IN")
+        kit.interpolation(tool, "QUAD", {f_start} | ({held} if s_i == 0 else set()), "EASE_IN")  # the swing speeds up
         stroke_frames.append((f_start, f_end))
     last_end = stroke_frames[-1][1]
     # recoil and leave the frame

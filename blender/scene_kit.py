@@ -11,6 +11,13 @@ from mathutils.bvhtree import BVHTree
 
 TABLES = json.loads((Path(__file__).resolve().parent / "opener_tables.json").read_text(encoding="utf-8"))
 FACING = {"right": Vector((1, 0, 0)), "left": Vector((-1, 0, 0)), "camera": Vector((0, -1, 0)), "away": Vector((0, 1, 0))}
+VIEW_YAW = 0.0  # radians the camera sits around the set; facings and directions are as seen from it (set by the scene)
+
+
+def view(v: Vector) -> Vector:
+    """A direction as seen in the shot ("right" = screen right) turned into the world: the side camera showed a
+    rooster planned to face right staring into the lens (owner, 2026-10-27)."""
+    return Matrix.Rotation(VIEW_YAW, 4, "Z") @ v
 MARGIN = 0.001  # rigid-body collision margin; Blender's default 4 cm leaves things hovering
 
 
@@ -118,19 +125,21 @@ def load_model(source: str, name: str) -> bpy.types.Object:
     return obj
 
 
-def fit(obj, size_m: float, facing: str) -> None:
-    """Largest side = size_m, turned so its front (-Y) faces `facing`; transforms applied, origin at the bottom."""
+def fit(obj, size_m: float, facing: str, view: bool = True) -> None:
+    """Largest side = size_m, turned so its front (-Y) faces `facing` as seen from the camera (view=False: in the
+    model's own axes, for tools, whose axes are read from the mesh and turned by their strokes); transforms
+    applied, origin at the bottom."""
     me = obj.data
     vs = [v.co for v in me.vertices]
     big = max(max(v[i] for v in vs) - min(v[i] for v in vs) for i in range(3)) or 1.0
     turn = {"right": 90, "left": -90, "camera": 0, "away": 180}[facing]
-    me.transform(Matrix.Rotation(__import__("math").radians(turn), 4, "Z") @ Matrix.Scale(size_m / big, 4))
+    me.transform(Matrix.Rotation(__import__("math").radians(turn) + (VIEW_YAW if view else 0), 4, "Z") @ Matrix.Scale(size_m / big, 4))
     me.update()
     obj["facing"] = facing
 
 
 def facing_vec(obj) -> Vector:
-    return FACING.get(obj.get("facing", "camera"), FACING["camera"]).copy()
+    return view(FACING.get(obj.get("facing", "camera"), FACING["camera"]))
 
 
 def fcurves(obj) -> list:
@@ -266,3 +275,61 @@ def simulate() -> None:
         return
     for f in range(sc.frame_start, sc.frame_end + 1):
         sc.frame_set(f)
+
+
+def leg_rig(obj, legs: int, zone: float, facing: Vector) -> list[tuple]:
+    """A walking rig for a one-piece model: the bottom `zone` of its height is legs, split left/right across `facing`
+    (and front/back for four), each a bone from hip to foot under a body bone; the weights fade over the top quarter
+    of the legs so the hips bend instead of tearing. Returns [(pose bone, swing axis in bone space, phase)], phase
+    0 or 1 for the two alternating sets. Welded models slid along with stiff legs (owner, 2026-10-27)."""
+    me = obj.data
+    zs = [v.co.z for v in me.vertices]
+    z0, z1 = min(zs), max(zs)
+    top = z0 + zone * (z1 - z0)
+    side = Vector((0, 0, 1)).cross(facing).normalized()
+    groups: dict[tuple, list] = {}
+    for v in me.vertices:
+        if v.co.z < top:
+            key = (v.co.dot(side) > 0, v.co.dot(facing) > 0 if legs == 4 else True)
+            groups.setdefault(key, []).append(v)
+    arm = bpy.data.objects.new(f"{obj.name}.rig", bpy.data.armatures.new(f"{obj.name}.rig"))
+    bpy.context.scene.collection.objects.link(arm)
+    arm.parent = obj
+    vl = bpy.context.view_layer
+    was = vl.objects.active
+    vl.objects.active = arm  # edit mode needs the rig active; a context override didn't take in background mode
+    bpy.ops.object.mode_set(mode="EDIT")
+    body = arm.data.edit_bones.new("body")
+    body.head, body.tail = (0, 0, top), (0, 0, z1)
+    names = []
+    for i, (key, vs) in enumerate(sorted(groups.items())):
+        c = sum((v.co for v in vs), Vector()) / len(vs)
+        b = arm.data.edit_bones.new(f"leg{i}")
+        b.head, b.tail, b.parent = (c.x, c.y, top), (c.x, c.y, z0), body
+        names.append((b.name, key))
+    bpy.ops.object.mode_set(mode="OBJECT")
+    vl.objects.active = was
+    fade = 0.25 * (top - z0) or 1e-4
+    body_g = obj.vertex_groups.new(name="body")
+    for name, key in names:
+        g = obj.vertex_groups.new(name=name)
+        for v in groups[key]:
+            w = min(1.0, (top - v.co.z) / fade)
+            g.add([v.index], w, "REPLACE")
+            body_g.add([v.index], 1 - w, "REPLACE")
+    body_g.add([v.index for v in me.vertices if v.co.z >= top], 1.0, "REPLACE")
+    obj.modifiers.new("legs", "ARMATURE").object = arm
+    out = []
+    for name, key in names:
+        pb = arm.pose.bones[name]
+        pb.rotation_mode = "AXIS_ANGLE"
+        axis = arm.data.bones[name].matrix_local.to_3x3().inverted() @ side
+        out.append((pb, axis.normalized(), int(key[0]) ^ int(not key[1])))  # diagonal pairs move together
+    return out
+
+
+def key_swing(rig: list[tuple], frame: int, angle: float) -> None:
+    """Swing the legs: one set forward by `angle` (radians), the other back."""
+    for pb, axis, phase in rig:
+        pb.rotation_axis_angle = (angle if phase else -angle, *axis)
+        pb.keyframe_insert("rotation_axis_angle", frame=frame)

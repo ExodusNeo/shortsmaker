@@ -179,6 +179,11 @@ Accepted by the owner (never a problem):
 - Low-poly cartoon models, simple colours, no gore.
 Staging lessons from the live runs:
 - Hop off and walk in the same direction, away from the support; a walk back toward it just stops at it.
-- Name the subject in camera.follow when it moves, so it stays in the frame.
+- The camera follows the subject by itself once it moves.
+- Show an animal from its side (owner, 2026-10-27: "why can't it be the side of the chicken instead of the front"):
+  camera.angle "side" and the animal facing "left" or "right". Facings and directions are as seen in the shot.
+- Walks and hops go across the frame ("left" or "right"), not "away" or "camera": walking away shows its back.
+- A piece that flies off flies the way the animal faces; the body then hops and walks the other way, or it
+  walks over its own head.
 - Chops through a neck or branch use stroke angle "diagonal" (the camera sees the blade's flat side).
 - Keep the subject in front of everything else from the camera's side; nothing may hide it.
