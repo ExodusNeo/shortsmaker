@@ -43,8 +43,18 @@ Reply with ONLY JSON: {{"pick": 2}} or {{"pick": null}}""", fatal=False)
 
 
 def resolve_models(plan: dict) -> tuple[dict, str | None]:
-    """{actor id or "backdrop:N": .blend path}, or ({}, why not)."""
-    wanted = [(a["id"], a["find"], a["size_m"]) for a in plan["actors"]]
+    """{actor id, "<person id>:hat" / ":prop" or "backdrop:N": .blend path}, or ({}, why not). People come from the
+    packed people library, which must be on D:."""
+    people = [a for a in plan["actors"] if "person" in a]
+    if people and not (config.PEOPLE_JSON.exists() and config.PEOPLE_BLEND.exists()):
+        return {}, "people library missing"
+    wanted = [(a["id"], a["find"], a["size_m"]) for a in plan["actors"] if "person" not in a]
+    for a in people:  # a person's hat (from the role) and prop are models like any other
+        role = opener_plan.ROLES[a["person"]]
+        if role.get("hat"):
+            wanted.append((f"{a['id']}:hat", role["hat"], 0.3))
+        if a.get("prop"):
+            wanted.append((f"{a['id']}:prop", a["prop"], a.get("prop_size_m") or role["height_m"] / 2))
     wanted += [(f"backdrop:{i}", b["find"], b["size_m"]) for i, b in enumerate(plan["set"].get("backdrop") or [])]
     models, online = {}, None
     for key, find, size in wanted:
@@ -137,6 +147,8 @@ def render_opener(short: dict, seconds: float, work: Path, exe: Path | None = No
         job = {"plan": plan, "models": models, "seconds": seconds, "fps": FPS, "size": [1080, 1920],
                "frames_dir": str(frames), "report": str(report_path), "render": True, "render_failed": False,
                "render_scale": 100}
+        if any("person" in a for a in plan["actors"]):
+            job["people"] = {"blend": str(config.PEOPLE_BLEND), "json": str(config.PEOPLE_JSON)}
         print_ = fingerprint(job)
         if done.exists() and done.read_text(encoding="utf-8") == print_ and clip.exists():
             return clip, None

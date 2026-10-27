@@ -314,6 +314,59 @@ def test_fix_round_gets_scaled_plan():
         assert seen and abs(seen[0][0] - 1.8) < 0.04 and max(b["at"] for b in seen[0][1]["beats"]) <= 1.8
 
 
+
+PERSON = {"buildable": True, "moment": "an officer strolls across a street with his umbrella",
+          "set": {"ground": "stone", "backdrop": [], "light": "day"},
+          "actors": [{"id": "officer", "person": "ww2_british_officer", "facing": "right", "prop": "umbrella"}],
+          "beats": [{"move": "walk", "actor": "officer", "at": 0.3, "toward": "left"}],
+          "camera": {"angle": "side", "follow": "officer"}}
+
+
+def _people_files(e, present: bool):
+    saved = (config.PEOPLE_BLEND, config.PEOPLE_JSON)
+    config.PEOPLE_BLEND, config.PEOPLE_JSON = e.dir / "people.blend", e.dir / "people.json"
+    if present:
+        config.PEOPLE_BLEND.write_text("x")
+        config.PEOPLE_JSON.write_text("{}")
+    return saved
+
+
+def test_people_library_missing():
+    with Env() as e:
+        saved = _people_files(e, present=False)
+        try:
+            clip, why = opener_render.render_opener({"title": "Umbrella", "opener": copy.deepcopy(PERSON)}, 3.0, e.work, e.exe)
+        finally:
+            config.PEOPLE_BLEND, config.PEOPLE_JSON = saved
+        assert clip is None and why == "opener failed: people library missing", why
+        assert e.runs() == 0
+
+
+def test_missing_prop_model():
+    with Env() as e:
+        saved = _people_files(e, present=True)
+        blender_link.ping = lambda timeout=2.0: False
+        try:
+            clip, why = opener_render.render_opener({"title": "Umbrella", "opener": copy.deepcopy(PERSON)}, 3.0, e.work, e.exe)
+        finally:
+            config.PEOPLE_BLEND, config.PEOPLE_JSON = saved
+        assert clip is None and why == "opener failed: model 'umbrella' not in the library and Blender is off", why
+
+
+def test_person_job_has_library():
+    with Env() as e:
+        saved = _people_files(e, present=True)
+        p = copy.deepcopy(PERSON)
+        p["actors"][0]["prop"] = "axe"  # in the test library
+        try:
+            opener_render.render_opener({"title": "Umbrella", "opener": p}, 3.0, e.work, e.exe)
+            job = json.loads(e.lastjob.read_text())
+        finally:
+            config.PEOPLE_BLEND, config.PEOPLE_JSON = saved
+        assert job["people"] == {"blend": str(e.dir / "people.blend"), "json": str(e.dir / "people.json")}, job.get("people")
+        assert "officer" not in job["models"] and job["models"]["officer:prop"].endswith(".blend"), job["models"]
+
+
 if __name__ == "__main__":
     names = [n for n in sorted(globals()) if n.startswith("test_") and (len(sys.argv) < 2 or n in sys.argv[1:])]
     failed = 0

@@ -16,12 +16,14 @@ MOVES, TOOLS, GAITS, OUTCOMES, CUT_FACE = (TABLES["moves"], TABLES["tools"], TAB
                                            TABLES["cut_face"])
 STYLES, TOWARDS, STROKE_ANGLES, LIMITS = TABLES["styles"], TABLES["towards"], TABLES["stroke_angles"], TABLES["limits"]
 ACTOR_MOVES = {"fall", "topple", "hop_off", "walk", "fly_off", "scatter", "sink", "roll", "push"}  # cut: tool+target
+ROLES, PEOPLE_MOVES = TABLES["roles"], TABLES["people_moves"]  # people openers (part 2, 2026-10-27)
 PIECES = re.compile(r"^(\d+)-(\d+)$")
 
 DEFAULT_RULES = """Stage the story's strangest moment, the one its first line describes, as a 2-3 second animation.
-It is built from free low-poly library models (animals, objects, vehicles, food, tools, buildings, plants), so
-it can't show people: if the moment needs a person on screen, answer buildable false and say why. Frame 0 must
-already show the subject and the threat (the raised tool, the drop, the wave); the first beat starts by 1.0 s."""
+It is built from free low-poly library models (animals, objects, vehicles, food, tools, buildings, plants) and
+cartoon people by era and role (no faces, at most 3). Answer buildable false only for what even these can't show
+(a crowd, a city). Frame 0 must already show the subject and the threat (the raised tool, the drop, the wave); the
+first beat starts by 1.0 s."""
 
 FORMAT = """Reply with ONLY JSON: {"shorts": [{"index": 0, "buildable": true, "moment": "...",
 "set": {"ground": "dirt", "backdrop": [{"find": "red barn", "size_m": 8}], "light": "day"},
@@ -33,6 +35,10 @@ FORMAT = """Reply with ONLY JSON: {"shorts": [{"index": 0, "buildable": true, "m
           {"move": "hop_off", "actor": "rooster", "at": 1.3, "style": "stagger"},
           {"move": "walk", "actor": "rooster", "at": 1.8, "toward": "left", "style": "stagger", "ends": {"on": "ground"}}],
 "camera": {"angle": "three_quarter", "follow": "rooster"}}]}
+A person is {"id": "officer", "person": "ww2_british_officer", "facing": "right", "prop": "umbrella"} (a role and
+an optional prop to hold; no find or size) and moves only by the people moves, e.g. {"move": "walk", "actor":
+"officer", "at": 0.3, "toward": "left"} for an officer strolling across a bridge with his umbrella while shells
+burst behind him (a "scatter" of rubble).
 For a moment the moves can't show: {"index": 0, "buildable": false, "why": "..."}"""
 
 
@@ -100,7 +106,11 @@ def clean_opener(raw) -> dict | None:
     if not all(isinstance(i, str) and i for i in ids) or len(set(ids)) != len(ids):
         return None
     for a in actors:
-        if not str(a.get("find") or "").strip() or not _size(a.get("size_m")):
+        if "person" in a:  # a person: a role from the table and an optional prop find text
+            if a["person"] not in ROLES or ("prop" in a and not str(a["prop"] or "").strip()) \
+                    or ("prop_size_m" in a and not _size(a["prop_size_m"])):
+                return None
+        elif not str(a.get("find") or "").strip() or not _size(a.get("size_m")):
             return None
         if a.get("on") not in (None, "ground", *ids) or a.get("facing", "right") not in FACINGS \
                 or a.get("gait", "object") not in GAITS:
@@ -116,9 +126,16 @@ def clean_opener(raw) -> dict | None:
     beats = raw.get("beats")
     if not isinstance(beats, list) or not beats:
         return None
-    find = {a["id"]: a["find"] for a in actors}
+    find = {a["id"]: a["find"] for a in actors if "person" not in a}
+    people = {a["id"] for a in actors if "person" in a}
     for b in beats:
-        if not isinstance(b, dict) or b.get("move") not in MOVES or not _num(b.get("at"), 0, LIMITS["max_at_s"]):
+        if not isinstance(b, dict) or not _num(b.get("at"), 0, LIMITS["max_at_s"]):
+            return None
+        if b.get("actor") in people:  # people move by their clips only
+            if b.get("move") not in PEOPLE_MOVES or b.get("toward", "left") not in TOWARDS:
+                return None
+            continue
+        if b.get("move") not in MOVES:
             return None
         if b.get("style", "normal") not in STYLES or b.get("toward", "left") not in TOWARDS:
             return None
@@ -155,7 +172,9 @@ def _tables_text() -> str:
             f"{{\"pieces\": \"40-60\", \"then\": outcome}}, outcomes {OUTCOMES}; style {STYLES}; toward {TOWARDS}; "
             f"camera.angle {ANGLES}; size_m {LIMITS['size_m'][0]}-{LIMITS['size_m'][1]}; at = seconds into the "
             f"scene, 0-{LIMITS['max_at_s']}, the first beat by {LIMITS['first_beat_s']} s; at most "
-            f"{LIMITS['max_pieces']} pieces in all.")
+            f"{LIMITS['max_pieces']} pieces in all. People: person (role) {list(ROLES)}; people moves (for people "
+            f"only; everything else uses the moves above) {list(PEOPLE_MOVES)}; a person's prop is a find text "
+            f"(swing_prop swings it, throw_prop / drop_prop let it go).")
 
 
 def plan_openers(shorts: list[dict], ch: dict) -> None:

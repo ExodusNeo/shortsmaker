@@ -157,6 +157,42 @@ def test_prompt_explains_stroke_angles():
     assert "diagonal" in text and "edge-on" in text and "flat side" in text, text  # the live run chose "down" blindly
 
 
+
+PEOPLE = {  # the spec's people example: the umbrella officer walking across while shells burst behind him
+    "buildable": True,
+    "moment": "an officer strolls across a bridge with his umbrella while shells burst behind him",
+    "set": {"ground": "stone", "backdrop": [], "light": "day"},
+    "actors": [{"id": "officer", "person": "ww2_british_officer", "facing": "right", "prop": "umbrella"},
+               {"id": "rubble", "find": "rocks", "size_m": 0.6}],
+    "beats": [{"move": "walk", "actor": "officer", "at": 0.3, "toward": "left"},
+              {"move": "scatter", "actor": "rubble", "at": 0.6}],
+    "camera": {"angle": "side", "follow": "officer"},
+}
+
+
+def test_person_actor_is_clean():
+    assert opener_plan.clean_opener(copy.deepcopy(PEOPLE)) is not None
+
+
+def test_unknown_role_rejected():
+    p = copy.deepcopy(PEOPLE)
+    p["actors"][0]["person"] = "astronaut"
+    assert opener_plan.clean_opener(p) is None
+
+
+def test_people_move_on_animal_rejected():
+    """People moves are for people, Part 1's for everything else."""
+    assert opener_plan.clean_opener(plan(**{"beats.2.move": "die"})) is None  # the rooster can't "die" by clip
+    p = copy.deepcopy(PEOPLE)
+    p["beats"][0]["move"] = "hop_off"  # nor a person by a Part 1 move
+    assert opener_plan.clean_opener(p) is None
+
+
+def test_prompt_lists_people():
+    text = opener_plan._tables_text()
+    assert "ww2_british_officer" in text and "swing_prop" in text, text[:400]
+
+
 if __name__ == "__main__":
     names = [n for n in sorted(globals()) if n.startswith("test_") and (len(sys.argv) < 2 or n in sys.argv[1:])]
     failed = 0
