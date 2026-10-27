@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "moves.py"
+community: "math"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/movespy
+  - community/math
 ---
 
 # math
@@ -21,6 +21,7 @@ tags:
 - [[clamp()]] - `calls` [EXTRACTED]
 - [[cut()]] - `calls` [EXTRACTED]
 - [[direction()]] - `calls` [EXTRACTED]
+- [[dress_set()]] - `calls` [EXTRACTED]
 - [[failures.py]] - `imports` [EXTRACTED]
 - [[flash_alpha()]] - `calls` [EXTRACTED]
 - [[frame_render.py]] - `imports` [EXTRACTED]
@@ -39,4 +40,4 @@ tags:
 - [[sink()]] - `calls` [EXTRACTED]
 - [[walk()]] - `calls` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/movespy
+#graphify/concept #graphify/EXTRACTED #community/math

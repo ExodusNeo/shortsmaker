@@ -1,12 +1,12 @@
 ---
 source_file: "blender/moves.py"
 type: "code"
-community: "moves.py"
-location: "L127"
+community: "scene_kit.py"
+location: "L139"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/movespy
+  - community/scene_kitpy
 ---
 
 # hop_off()
@@ -17,10 +17,12 @@ tags:
 - [[bbox()]] - `calls` [EXTRACTED]
 - [[key_loc()]] - `calls` [EXTRACTED]
 - [[key_rot()]] - `calls` [EXTRACTED]
+- [[key_swing()]] - `calls` [EXTRACTED]
+- [[legs()]] - `calls` [EXTRACTED]
 - [[lift_for()]] - `calls` [EXTRACTED]
 - [[loc_at()]] - `calls` [EXTRACTED]
 - [[math]] - `calls` [EXTRACTED]
 - [[moves.py]] - `contains` [EXTRACTED]
 - [[toward()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/movespy
+#graphify/code #graphify/EXTRACTED #community/scene_kitpy

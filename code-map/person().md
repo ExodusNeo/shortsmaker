@@ -12,7 +12,7 @@ tags:
 # person()
 
 ## Connections
-- [[Object]] - `references` [EXTRACTED]
+- [[Object_1]] - `references` [EXTRACTED]
 - [[box()]] - `calls` [EXTRACTED]
 - [[cylinder()]] - `calls` [EXTRACTED]
 - [[dress()]] - `calls` [EXTRACTED]

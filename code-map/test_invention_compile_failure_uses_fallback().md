@@ -14,6 +14,6 @@ tags:
 ## Connections
 - [[invent_component()]] - `calls` [EXTRACTED]
 - [[test_style.py]] - `contains` [EXTRACTED]
-- [[with_fakes()]] - `calls` [EXTRACTED]
+- [[with_fakes()_1]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/invent_component

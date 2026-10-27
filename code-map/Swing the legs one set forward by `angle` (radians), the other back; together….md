@@ -9,7 +9,7 @@ tags:
   - community/scene_kitpy
 ---
 
-# Swing the legs: one set forward by `angle` (radians), the other back.
+# Swing the legs: one set forward by `angle` (radians), the other back; together…
 
 ## Connections
 - [[key_swing()]] - `rationale_for` [EXTRACTED]

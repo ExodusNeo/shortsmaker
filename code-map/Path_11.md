@@ -11,10 +11,6 @@ tags:
 # Path
 
 ## Connections
-- [[drawn_thumbnail()]] - `references` [EXTRACTED]
-- [[load_state()]] - `references` [EXTRACTED]
-- [[render()_2]] - `references` [EXTRACTED]
-- [[save_state()]] - `references` [EXTRACTED]
-- [[use_opener()]] - `references` [EXTRACTED]
+- [[srt()]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/render

@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "parts.py"
+community: "look.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/partspy
+  - community/lookpy
 ---
 
 # Collection
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[_obj()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/partspy
+#graphify/code #graphify/EXTRACTED #community/lookpy

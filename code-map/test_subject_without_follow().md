@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[Fifth live run (Mike) no camera follow and the stump listed first; the checks…]] - `rationale_for` [EXTRACTED]
 - [[fixture()]] - `calls` [EXTRACTED]
-- [[run()_2]] - `calls` [EXTRACTED]
+- [[run()_7]] - `calls` [EXTRACTED]
 - [[test_opener_scene.py]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/test_opener_scenepy

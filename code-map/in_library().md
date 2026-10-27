@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[A saved model whose title and tags hold every word of `find` (the closest title…]] - `rationale_for` [EXTRACTED]
-- [[Path_26]] - `references` [EXTRACTED]
+- [[Path_28]] - `references` [EXTRACTED]
 - [[blender_link.py]] - `contains` [EXTRACTED]
 - [[json]] - `calls` [EXTRACTED]
 - [[resolve_models()]] - `calls` [EXTRACTED]

@@ -12,10 +12,10 @@ tags:
 # test_failed_invention_keeps_the_others()
 
 ## Connections
-- [[run()]] - `contains` [EXTRACTED]
-- [[run()_1]] - `indirect_call` [INFERRED]
+- [[run()_5]] - `contains` [EXTRACTED]
+- [[run()_6]] - `indirect_call` [INFERRED]
 - [[style_placeholders()]] - `calls` [EXTRACTED]
 - [[test_style.py]] - `contains` [EXTRACTED]
-- [[with_fakes()]] - `calls` [EXTRACTED]
+- [[with_fakes()_1]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/invent_component

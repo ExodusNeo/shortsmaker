@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/footage.py"
 type: "rationale"
-community: "pathlib"
+community: "footage.py"
 location: "L156"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/pathlib
+  - community/footagepy
 ---
 
 # Match FILM_CROP on downloaded thumbnail JPEGs (cut top 6%, bottom 20%, and 4%…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[crop_film_bytes()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/pathlib
+#graphify/rationale #graphify/EXTRACTED #community/footagepy

@@ -12,7 +12,7 @@ tags:
 # _sag_points()
 
 ## Connections
-- [[Vector_1]] - `references` [EXTRACTED]
+- [[Vector_2]] - `references` [EXTRACTED]
 - [[_hung_deck()]] - `calls` [EXTRACTED]
 - [[templates.py]] - `contains` [EXTRACTED]
 

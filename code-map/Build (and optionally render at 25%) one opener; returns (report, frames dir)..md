@@ -12,6 +12,6 @@ tags:
 # Build (and optionally render at 25%) one opener; returns (report, frames dir).
 
 ## Connections
-- [[run()_2]] - `rationale_for` [EXTRACTED]
+- [[run()_7]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/test_opener_scenepy

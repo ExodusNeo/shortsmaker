@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[Fourth live run (Mike) a fix round asked for an at_fraction slice but still…]] - `rationale_for` [EXTRACTED]
 - [[fixture()]] - `calls` [EXTRACTED]
-- [[run()_2]] - `calls` [EXTRACTED]
+- [[run()_7]] - `calls` [EXTRACTED]
 - [[test_opener_scene.py]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/test_opener_scenepy

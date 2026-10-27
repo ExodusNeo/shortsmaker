@@ -1,12 +1,12 @@
 ---
 source_file: "blender/moves.py"
 type: "rationale"
-community: "opener_scene.py"
-location: "L537"
+community: "moves.py"
+location: "L553"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/opener_scenepy
+  - community/movespy
 ---
 
 # The blade's furthest point along its edge direction, over the whole head half:…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[edge_point_local()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/opener_scenepy
+#graphify/rationale #graphify/EXTRACTED #community/movespy

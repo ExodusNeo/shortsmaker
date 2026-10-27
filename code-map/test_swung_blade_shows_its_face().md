@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[A chop planned edge-on to the camera turns about its stroke until the camera…]] - `rationale_for` [EXTRACTED]
 - [[fixture()]] - `calls` [EXTRACTED]
-- [[run()_2]] - `calls` [EXTRACTED]
+- [[run()_7]] - `calls` [EXTRACTED]
 - [[test_opener_scene.py]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/test_opener_scenepy

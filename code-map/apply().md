@@ -2,7 +2,7 @@
 source_file: "blender/moves.py"
 type: "code"
 community: "moves.py"
-location: "L57"
+location: "L58"
 tags:
   - graphify/code
   - graphify/INFERRED
@@ -17,7 +17,7 @@ tags:
 - [[fall()]] - `indirect_call` [INFERRED]
 - [[fly_off()]] - `indirect_call` [INFERRED]
 - [[hop_off()]] - `indirect_call` [INFERRED]
-- [[main()_5]] - `calls` [EXTRACTED]
+- [[main()_7]] - `calls` [EXTRACTED]
 - [[moves.py]] - `contains` [EXTRACTED]
 - [[push()]] - `indirect_call` [INFERRED]
 - [[roll()]] - `indirect_call` [INFERRED]

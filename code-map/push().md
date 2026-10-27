@@ -2,7 +2,7 @@
 source_file: "blender/moves.py"
 type: "code"
 community: "moves.py"
-location: "L231"
+location: "L247"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -17,6 +17,6 @@ tags:
 - [[key_loc()]] - `calls` [EXTRACTED]
 - [[moves.py]] - `contains` [EXTRACTED]
 - [[release()]] - `calls` [EXTRACTED]
-- [[travel()]] - `calls` [EXTRACTED]
+- [[travel()_1]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/movespy

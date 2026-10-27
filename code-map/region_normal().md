@@ -1,19 +1,19 @@
 ---
 source_file: "blender/moves.py"
 type: "code"
-community: "Vector"
-location: "L365"
+community: "moves.py"
+location: "L381"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Vector
+  - community/movespy
 ---
 
 # region_normal()
 
 ## Connections
-- [[Vector_3]] - `references` [EXTRACTED]
+- [[Vector_4]] - `references` [EXTRACTED]
 - [[moves.py]] - `contains` [EXTRACTED]
 - [[through_cut()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Vector
+#graphify/code #graphify/EXTRACTED #community/movespy

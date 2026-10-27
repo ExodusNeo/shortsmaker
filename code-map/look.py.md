@@ -1,12 +1,12 @@
 ---
 source_file: "blender/look.py"
 type: "code"
-community: "build_scene.py"
+community: "look.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/build_scenepy
+  - community/lookpy
 ---
 
 # look.py
@@ -19,9 +19,9 @@ tags:
 - [[failures.py]] - `imports` [EXTRACTED]
 - [[ink_lines()]] - `contains` [EXTRACTED]
 - [[linear()]] - `contains` [EXTRACTED]
-- [[material()]] - `contains` [EXTRACTED]
+- [[material()_1]] - `contains` [EXTRACTED]
 - [[parts.py]] - `imports` [EXTRACTED]
 - [[setup()]] - `contains` [EXTRACTED]
 - [[templates.py]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/build_scenepy
+#graphify/code #graphify/EXTRACTED #community/lookpy

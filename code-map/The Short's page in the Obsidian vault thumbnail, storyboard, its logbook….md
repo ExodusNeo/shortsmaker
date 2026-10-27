@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/logbook.py"
 type: "rationale"
-community: "channel_profiles.py"
+community: "json"
 location: "L59"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/channel_profilespy
+  - community/json
 ---
 
 # The Short's page in the Obsidian vault: thumbnail, storyboard, its logbook…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[vault_page()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/channel_profilespy
+#graphify/rationale #graphify/EXTRACTED #community/json

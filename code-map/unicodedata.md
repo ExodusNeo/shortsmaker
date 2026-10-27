@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "align_words"
+community: "gpu.py"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/align_words
+  - community/gpupy
 ---
 
 # unicodedata
@@ -18,4 +18,4 @@ tags:
 - [[spoken_count()]] - `calls` [EXTRACTED]
 - [[words_of()]] - `calls` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/align_words
+#graphify/concept #graphify/EXTRACTED #community/gpupy

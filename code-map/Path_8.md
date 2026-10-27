@@ -11,6 +11,6 @@ tags:
 # Path
 
 ## Connections
-- [[drawn_short()]] - `references` [EXTRACTED]
+- [[fake_blender()]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/test_blender_planpy

@@ -1,12 +1,12 @@
 ---
 source_file: "blender/scene_kit.py"
 type: "code"
-community: "travel"
+community: "build_set"
 location: "L52"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/travel
+  - community/build_set
 ---
 
 # surface_z()
@@ -16,4 +16,4 @@ tags:
 - [[scene_kit.py]] - `contains` [EXTRACTED]
 - [[tree()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/travel
+#graphify/code #graphify/EXTRACTED #community/build_set

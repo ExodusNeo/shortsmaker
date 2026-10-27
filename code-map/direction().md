@@ -15,7 +15,7 @@ tags:
 - [[dot-close()_1]] - `calls` [EXTRACTED]
 - [[dot-wide()]] - `calls` [EXTRACTED]
 - [[From the target toward the camera yaw 0 looks along +y from the -y side (the…]] - `rationale_for` [EXTRACTED]
-- [[Vector_4]] - `references` [EXTRACTED]
+- [[Vector_5]] - `references` [EXTRACTED]
 - [[build_scene.py]] - `contains` [EXTRACTED]
 - [[math]] - `calls` [EXTRACTED]
 

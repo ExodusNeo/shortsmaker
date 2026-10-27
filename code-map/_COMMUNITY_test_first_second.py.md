@@ -1,67 +1,34 @@
 ---
 type: community
-members: 54
+members: 21
 ---
 
 # test_first_second.py
 
-**Members:** 54 nodes
+**Members:** 21 nodes
 
 ## Members
-- [[A mark card circles a detail of the old picture it must go when the picture…]] - rationale - tests/test_full_scenes.py
-- [[CompletedProcess]] - code
-- [[Download ~14s of film around the chosen moment (cropped with FILM_CROP to…]] - rationale - shortsmaker/footage.py
-- [[Mike's newsstand a repaint from the unchanged prompt painted the identical…]] - rationale - tests/test_full_scenes.py
-- [[Path_12]] - code
-- [[Path_13]] - code
-- [[Path_14]] - code
-- [[Rejected scenes (index - the review's complaint) that get a real picture from…]] - rationale - shortsmaker/review.py
-- [[Runs write_scripts with every AInetwork step replaced by canned answers;…]] - rationale - tests/test_full_scenes.py
 - [[Scenes i and k trade their real photosfilms (paintings and motion graphics are…]] - rationale - shortsmaker/review.py
 - [[Tests for the first-second check (would a scroller stop) and the honest…]] - rationale - tests/test_first_second.py
-- [[The automatic fixes after a render's review (up to AUTO_REPAINT_MAX scenes per…]] - rationale - shortsmaker/review.py
-- [[Togo vs Balto 4 real pictures the review rejected became paintings while ~20…]] - rationale - tests/test_full_scenes.py
-- [[_fake_planning()]] - code - tests/test_full_scenes.py
-- [[_review_state()]] - code - tests/test_full_scenes.py
-- [[apply_review_fixes()]] - code - shortsmaker/review.py
-- [[ask()_4]] - code - tests/test_full_scenes.py
-- [[ask()_5]] - code - tests/test_full_scenes.py
-- [[ask()_6]] - code - tests/test_full_scenes.py
-- [[ask()_7]] - code - tests/test_full_scenes.py
-- [[ask()_8]] - code - tests/test_full_scenes.py
-- [[fake_rescue()]] - code - tests/test_full_scenes.py
-- [[ffmpeg reading a film over HTTP. Wikimedia gets the contact User-Agent, the…]] - rationale - shortsmaker/image_sources.py
-- [[film_ffmpeg()]] - code - shortsmaker/image_sources.py
-- [[film_piece()]] - code - shortsmaker/footage.py
+- [[The logbook entries the owner has filled in (Views written down), at most the…]] - rationale - shortsmaker/logbook.py
 - [[first_second_check with ffmpeg and the AI faked; returns its result.]] - rationale - tests/test_first_second.py
-- [[fix  auto-fix scene i drops its picture and gets a freshly painted one…]] - rationale - shortsmaker/review.py
-- [[fix scene i shows scene k's picture. A real photofilm is a picture choice; an…]] - rationale - shortsmaker/cli.py
-- [[paint_new()]] - code - shortsmaker/review.py
-- [[pool_pictures()]] - code - shortsmaker/review.py
+- [[logbook_results()]] - code - shortsmaker/logbook.py
 - [[real()]] - code - tests/test_first_second.py
 - [[run_check()]] - code - tests/test_first_second.py
 - [[state()]] - code - tests/test_first_second.py
 - [[swap_pictures()]] - code - shortsmaker/review.py
-- [[test_auto_fix_graphic()]] - code - tests/test_full_scenes.py
-- [[test_director_prompt_mentions_full()]] - code - tests/test_full_scenes.py
 - [[test_first_second.py]] - code - tests/test_first_second.py
 - [[test_fix_round_user_confirmation()]] - code - tests/test_first_second.py
 - [[test_good_opening_or_no_reply_changes_nothing()]] - code - tests/test_first_second.py
-- [[test_look_check_fixes_code()]] - code - tests/test_full_scenes.py
+- [[test_logbook_marks_tiny_samples()]] - code - tests/test_first_second.py
 - [[test_low_score_opens_on_a_better_real_picture()]] - code - tests/test_first_second.py
-- [[test_new_picture_drops_mark()]] - code - tests/test_full_scenes.py
 - [[test_opener_fix_swaps_once()]] - code - tests/test_first_second.py
 - [[test_opener_must_be_a_later_real_picture()]] - code - tests/test_first_second.py
 - [[test_opener_prompt_shows_each_scenes_line_and_picture()]] - code - tests/test_first_second.py
-- [[test_paint_new_clears_full()]] - code - tests/test_full_scenes.py
-- [[test_redraw_failure_paints()]] - code - tests/test_full_scenes.py
-- [[test_review_redraws_custom()]] - code - tests/test_full_scenes.py
-- [[test_review_uses_unused_pool_pictures_before_painting()]] - code - tests/test_full_scenes.py
-- [[test_rewrite_paint_prompts()]] - code - tests/test_full_scenes.py
+- [[test_review_knows_what_dims_a_picture_on_purpose()]] - code - tests/test_first_second.py
 - [[test_swap_ignores_a_clip_already_dropped()]] - code - tests/test_first_second.py
 - [[test_swap_moves_the_owners_clip_with_its_picture()]] - code - tests/test_first_second.py
 - [[test_swap_pictures_trades_real_pictures()]] - code - tests/test_first_second.py
-- [[use_picture_from()]] - code - shortsmaker/cli.py
 
 ## Live Query (requires Dataview plugin)
 
@@ -71,30 +38,17 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 16 edges to [[_COMMUNITY_pathlib]]
 - 11 edges to [[_COMMUNITY_test_full_scenes.py]]
-- 4 edges to [[_COMMUNITY_re]]
-- 3 edges to [[_COMMUNITY_json]]
-- 3 edges to [[_COMMUNITY_image_sources.py]]
-- 3 edges to [[_COMMUNITY_visual_review]]
-- 2 edges to [[_COMMUNITY_motion.py]]
-- 2 edges to [[_COMMUNITY_channel_profiles.py]]
-- 2 edges to [[_COMMUNITY_shutil]]
-- 2 edges to [[_COMMUNITY_test_blender_scene.py]]
-- 1 edge to [[_COMMUNITY_catalog_pool]]
-- 1 edge to [[_COMMUNITY_render]]
-- 1 edge to [[_COMMUNITY_gpu.py]]
-- 1 edge to [[_COMMUNITY_choose_images]]
-- 1 edge to [[_COMMUNITY_ffmpeg]]
-- 1 edge to [[_COMMUNITY_rescue_graphics]]
-- 1 edge to [[_COMMUNITY_pool_of]]
-- 1 edge to [[_COMMUNITY_ask_ai]]
-- 1 edge to [[_COMMUNITY_owner]]
+- 3 edges to [[_COMMUNITY_render]]
+- 2 edges to [[_COMMUNITY_apply_review_fixes]]
+- 2 edges to [[_COMMUNITY_json]]
+- 2 edges to [[_COMMUNITY_subprocess]]
 - 1 edge to [[_COMMUNITY_write_scripts]]
+- 1 edge to [[_COMMUNITY_test_blender_scene.py]]
 
 ## Top bridge nodes
-- [[pool_pictures()]] - degree 10, connects to 6 communities
-- [[test_first_second.py]] - degree 27, connects to 5 communities
-- [[apply_review_fixes()]] - degree 15, connects to 5 communities
-- [[film_piece()]] - degree 7, connects to 4 communities
-- [[use_picture_from()]] - degree 7, connects to 3 communities
+- [[test_first_second.py]] - degree 27, connects to 3 communities
+- [[logbook_results()]] - degree 6, connects to 3 communities
+- [[swap_pictures()]] - degree 6, connects to 2 communities
+- [[run_check()]] - degree 7, connects to 1 community
+- [[test_opener_fix_swaps_once()]] - degree 4, connects to 1 community

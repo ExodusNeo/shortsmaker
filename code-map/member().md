@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[A straight steel member (chord, diagonal, vertical, girder) from p1 to p2 with…]] - `rationale_for` [EXTRACTED]
-- [[Object]] - `references` [EXTRACTED]
+- [[Object_1]] - `references` [EXTRACTED]
 - [[_edge_girders()]] - `calls` [EXTRACTED]
 - [[_obj()]] - `calls` [EXTRACTED]
 - [[_truss_panel_members()]] - `calls` [EXTRACTED]

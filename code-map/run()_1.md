@@ -1,18 +1,23 @@
 ---
-source_file: "tests/test_style.py"
+source_file: "tests/test_h3_handoff.py"
 type: "code"
-community: "invent_component"
-location: "L257"
+community: "short_with"
+location: "L56"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/invent_component
+  - community/short_with
 ---
 
 # run()
 
 ## Connections
-- [[test_failed_invention_keeps_the_others()]] - `indirect_call` [INFERRED]
-- [[test_invention_passes_into_slot()]] - `indirect_call` [INFERRED]
+- [[fake_ai()]] - `calls` [EXTRACTED]
+- [[short_with()]] - `calls` [EXTRACTED]
+- [[test_missing_scene_is_asked_again()]] - `indirect_call` [INFERRED]
+- [[test_retries_only_failing_scene_with_reason()]] - `indirect_call` [INFERRED]
+- [[test_scene_number_given_as_text_is_accepted()]] - `indirect_call` [INFERRED]
+- [[test_tells_owner_after_five_failed_rounds()]] - `indirect_call` [INFERRED]
+- [[test_waits_for_enter_when_no_ai_answers()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/INFERRED #community/invent_component
+#graphify/code #graphify/INFERRED #community/short_with

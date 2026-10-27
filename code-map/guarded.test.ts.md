@@ -26,6 +26,6 @@ tags:
 - [[ok()]] - `contains` [EXTRACTED]
 - [[routeArrow()]] - `imports` [EXTRACTED]
 - [[test()]] - `contains` [EXTRACTED]
-- [[travel()_1]] - `imports` [EXTRACTED]
+- [[travel()]] - `imports` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/guardedtsx

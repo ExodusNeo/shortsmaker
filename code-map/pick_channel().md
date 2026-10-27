@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/channel_profiles.py"
 type: "code"
-community: "channel_profiles.py"
+community: "json"
 location: "L21"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/channel_profilespy
+  - community/json
 ---
 
 # pick_channel()
@@ -16,11 +16,11 @@ tags:
 - [[channel_profiles.py]] - `contains` [EXTRACTED]
 - [[draft_rules()]] - `calls` [EXTRACTED]
 - [[json]] - `calls` [EXTRACTED]
-- [[main()_4]] - `calls` [EXTRACTED]
+- [[main()_6]] - `calls` [EXTRACTED]
 - [[new_channel()]] - `calls` [EXTRACTED]
 - [[re]] - `calls` [EXTRACTED]
 - [[sys]] - `calls` [EXTRACTED]
 - [[test_new_channel_stops_for_review()]] - `calls` [EXTRACTED]
 - [[use_channel()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/channel_profilespy
+#graphify/code #graphify/EXTRACTED #community/json

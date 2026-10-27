@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "random"
+community: "opener_scene.py"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/random
+  - community/opener_scenepy
 ---
 
 # random
@@ -14,6 +14,7 @@ tags:
 - [[audio_mix.py]] - `imports` [EXTRACTED]
 - [[camera()_1]] - `calls` [EXTRACTED]
 - [[cut()]] - `calls` [EXTRACTED]
+- [[dress_set()]] - `calls` [EXTRACTED]
 - [[failures.py]] - `imports` [EXTRACTED]
 - [[feather_colours()]] - `calls` [EXTRACTED]
 - [[make_paper()]] - `calls` [EXTRACTED]
@@ -27,4 +28,4 @@ tags:
 - [[short_render.py]] - `imports` [EXTRACTED]
 - [[test_full_scenes.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/random
+#graphify/concept #graphify/EXTRACTED #community/opener_scenepy

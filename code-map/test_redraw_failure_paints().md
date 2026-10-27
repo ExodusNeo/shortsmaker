@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_full_scenes.py"
 type: "code"
-community: "test_first_second.py"
+community: "apply_review_fixes"
 location: "L593"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_first_secondpy
+  - community/apply_review_fixes
 ---
 
 # test_redraw_failure_paints()
@@ -16,4 +16,4 @@ tags:
 - [[apply_review_fixes()]] - `calls` [EXTRACTED]
 - [[test_full_scenes.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_first_secondpy
+#graphify/code #graphify/EXTRACTED #community/apply_review_fixes

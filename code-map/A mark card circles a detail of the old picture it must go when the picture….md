@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_full_scenes.py"
 type: "rationale"
-community: "test_first_second.py"
+community: "apply_review_fixes"
 location: "L610"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/test_first_secondpy
+  - community/apply_review_fixes
 ---
 
 # A "mark" card circles a detail of the old picture: it must go when the picture…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[test_new_picture_drops_mark()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/test_first_secondpy
+#graphify/rationale #graphify/EXTRACTED #community/apply_review_fixes

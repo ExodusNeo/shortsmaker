@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[The Mike plan left camera.follow out and the rooster walked off alone; the…]] - `rationale_for` [EXTRACTED]
 - [[fixture()]] - `calls` [EXTRACTED]
-- [[run()_2]] - `calls` [EXTRACTED]
+- [[run()_7]] - `calls` [EXTRACTED]
 - [[test_opener_scene.py]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/test_opener_scenepy

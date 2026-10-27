@@ -12,8 +12,9 @@ tags:
 # loc_at()
 
 ## Connections
-- [[Vector_5]] - `references` [EXTRACTED]
+- [[Vector_6]] - `references` [EXTRACTED]
 - [[Where obj's keys put it on `frame`, without stepping the scene (stepping would…]] - `rationale_for` [EXTRACTED]
+- [[dress_set()]] - `calls` [EXTRACTED]
 - [[fcurves()]] - `calls` [EXTRACTED]
 - [[hold_offscreen()]] - `calls` [EXTRACTED]
 - [[hop_off()]] - `calls` [EXTRACTED]

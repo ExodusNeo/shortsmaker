@@ -1,17 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "scene_kit.py"
+community: "moves.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/scene_kitpy
+  - community/movespy
 ---
 
 # Object
 
 ## Connections
-- [[camera()_1]] - `references` [EXTRACTED]
-- [[feather()]] - `references` [EXTRACTED]
+- [[to_object()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/scene_kitpy
+#graphify/code #graphify/EXTRACTED #community/movespy

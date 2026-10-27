@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[dot-x0()]] - `calls` [EXTRACTED]
 - [[Bridge]] - `method` [EXTRACTED]
-- [[Vector_1]] - `references` [EXTRACTED]
+- [[Vector_2]] - `references` [EXTRACTED]
 - [[_edge_girders()]] - `calls` [INFERRED]
 - [[_hung_deck()]] - `calls` [INFERRED]
 - [[cable_stayed_bridge()]] - `calls` [INFERRED]

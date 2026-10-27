@@ -1,14 +1,14 @@
 ---
 type: community
-members: 48
+members: 47
 ---
 
 # test_blender_scene.py
 
-**Members:** 48 nodes
+**Members:** 47 nodes
 
 ## Members
-- [[Image_2]] - code
+- [[Image_1]] - code
 - [[Render `plan` with scenes of the given lengths; returns {frame image} for one…]] - rationale - tests/test_blender_scene.py
 - [[Share of pixels that differ clearly between two frames.]] - rationale - tests/test_blender_scene.py
 - [[Tests for colabh3_run.py (the MiniMax H3 job runner that ships inside veo.zip)…]] - rationale - tests/test_h3_run.py
@@ -25,7 +25,6 @@ members: 48
 - [[render()_5]] - code - tests/test_blender_scene.py
 - [[results()]] - code - tests/test_opener_checks.py
 - [[scene2()]] - code - tests/test_blender_scene.py
-- [[tempfile]] - concept
 - [[test_a_failing_pier_falls_with_its_red_copy()]] - code - tests/test_blender_scene.py
 - [[test_blade_face()]] - code - tests/test_opener_checks.py
 - [[test_blender_scene.py]] - code - tests/test_blender_scene.py
@@ -65,27 +64,24 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 11 edges to [[_COMMUNITY_pathlib]]
-- 5 edges to [[_COMMUNITY_test_blender_plan.py]]
-- 4 edges to [[_COMMUNITY_shutil]]
-- 3 edges to [[_COMMUNITY_test_opener_scene.py]]
-- 2 edges to [[_COMMUNITY_test_rules.py]]
-- 2 edges to [[_COMMUNITY_test_pictures_first.py]]
-- 2 edges to [[_COMMUNITY_test_story.py]]
-- 2 edges to [[_COMMUNITY_test_first_second.py]]
-- 2 edges to [[_COMMUNITY_ask_ai]]
-- 2 edges to [[_COMMUNITY_test_full_scenes.py]]
-- 2 edges to [[_COMMUNITY_test_opener_render.py]]
-- 2 edges to [[_COMMUNITY_test_edit_project.py]]
-- 2 edges to [[_COMMUNITY_test_blender_link.py]]
+- 12 edges to [[_COMMUNITY_test_full_scenes.py]]
+- 9 edges to [[_COMMUNITY_subprocess]]
+- 3 edges to [[_COMMUNITY_test_blender_plan.py]]
+- 2 edges to [[_COMMUNITY_test_opener_scene.py]]
 - 2 edges to [[_COMMUNITY_json]]
-- 2 edges to [[_COMMUNITY_gpu.py]]
-- 2 edges to [[_COMMUNITY_test_h3_handoff.py]]
+- 1 edge to [[_COMMUNITY_test_rules.py]]
+- 1 edge to [[_COMMUNITY_test_pictures_first.py]]
+- 1 edge to [[_COMMUNITY_test_package.py]]
+- 1 edge to [[_COMMUNITY_test_story.py]]
 - 1 edge to [[_COMMUNITY_h3_run.py]]
+- 1 edge to [[_COMMUNITY_test_first_second.py]]
+- 1 edge to [[_COMMUNITY_test_opener_render.py]]
+- 1 edge to [[_COMMUNITY_test_blender_link.py]]
+- 1 edge to [[_COMMUNITY_test_h3_handoff.py]]
 
 ## Top bridge nodes
-- [[tempfile]] - degree 17, connects to 14 communities
-- [[traceback]] - degree 18, connects to 13 communities
-- [[test_blender_scene.py]] - degree 28, connects to 5 communities
-- [[test_opener_checks.py]] - degree 18, connects to 4 communities
+- [[traceback]] - degree 18, connects to 12 communities
+- [[test_blender_scene.py]] - degree 28, connects to 3 communities
+- [[test_opener_checks.py]] - degree 18, connects to 3 communities
 - [[test_h3_run.py]] - degree 14, connects to 3 communities
+- [[plan_with()_1]] - degree 13, connects to 1 community

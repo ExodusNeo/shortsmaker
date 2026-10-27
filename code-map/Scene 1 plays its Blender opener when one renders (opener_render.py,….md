@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/short_render.py"
 type: "rationale"
-community: "test_opener_render.py"
+community: "render"
 location: "L98"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/test_opener_renderpy
+  - community/render
 ---
 
 # Scene 1 plays its Blender opener when one renders (opener_render.py,…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[use_opener()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/test_opener_renderpy
+#graphify/rationale #graphify/EXTRACTED #community/render

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/style_lab.py"
 type: "rationale"
-community: "shutil"
+community: "approve_candidate"
 location: "L268"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/shutil
+  - community/approve_candidate
 ---
 
 # Adds a candidate to the library (component file, library.json entry,…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[approve_candidate()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/shutil
+#graphify/rationale #graphify/EXTRACTED #community/approve_candidate

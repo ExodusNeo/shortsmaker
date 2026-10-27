@@ -14,7 +14,7 @@ members: 60
 - [[Fourth live run (Mike) a fix round asked for an at_fraction slice but still…]] - rationale - tests/test_opener_scene.py
 - [[One AI call stages every Short's opener (sopener); unusable plans are asked…]] - rationale - shortsmaker/opener_plan.py
 - [[Opener staging plans (2026-10-27) for channels with `opener blender`, the…]] - rationale - shortsmaker/opener_plan.py
-- [[Path_18]] - code
+- [[Path_21]] - code
 - [[Tests for building openers in Blender (blenderopener_scene.py + moves.py,…]] - rationale - tests/test_opener_scene.py
 - [[Tests for opener staging plans (opener_plan.py, 2026-10-27) the plan format…]] - rationale - tests/test_opener_plan.py
 - [[The Mike plan left camera.follow out and the rooster walked off alone; the…]] - rationale - tests/test_opener_scene.py
@@ -29,14 +29,14 @@ members: 60
 - [[_size()]] - code - shortsmaker/opener_plan.py
 - [[_stroke()]] - code - shortsmaker/opener_plan.py
 - [[_tables_text()]] - code - shortsmaker/opener_plan.py
-- [[ask()_9]] - code - shortsmaker/opener_plan.py
+- [[ask()_10]] - code - shortsmaker/opener_plan.py
 - [[clean_opener()]] - code - shortsmaker/opener_plan.py
 - [[fix_plan()]] - code - shortsmaker/opener_plan.py
 - [[fixture()]] - code - tests/test_opener_scene.py
 - [[opener_plan.py]] - code - shortsmaker/opener_plan.py
 - [[plan()_1]] - code - tests/test_opener_plan.py
 - [[plan_openers()]] - code - shortsmaker/opener_plan.py
-- [[run()_2]] - code - tests/test_opener_scene.py
+- [[run()_7]] - code - tests/test_opener_scene.py
 - [[short()_2]] - code - tests/test_opener_plan.py
 - [[test_bad_plans_fail()]] - code - tests/test_opener_scene.py
 - [[test_box_fall_rests_and_renders()]] - code - tests/test_opener_scene.py
@@ -77,20 +77,18 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 12 edges to [[_COMMUNITY_pathlib]]
+- 13 edges to [[_COMMUNITY_test_full_scenes.py]]
 - 4 edges to [[_COMMUNITY_json]]
 - 4 edges to [[_COMMUNITY_test_opener_render.py]]
-- 3 edges to [[_COMMUNITY_test_blender_scene.py]]
-- 2 edges to [[_COMMUNITY_moves.py]]
-- 2 edges to [[_COMMUNITY_shutil]]
-- 1 edge to [[_COMMUNITY_ask_ai]]
+- 4 edges to [[_COMMUNITY_subprocess]]
+- 2 edges to [[_COMMUNITY_math]]
+- 2 edges to [[_COMMUNITY_test_blender_scene.py]]
 - 1 edge to [[_COMMUNITY_write_scripts]]
-- 1 edge to [[_COMMUNITY_re]]
-- 1 edge to [[_COMMUNITY_gpu.py]]
+- 1 edge to [[_COMMUNITY_ask_ai]]
 
 ## Top bridge nodes
-- [[test_opener_scene.py]] - degree 27, connects to 6 communities
-- [[opener_plan.py]] - degree 22, connects to 5 communities
+- [[test_opener_scene.py]] - degree 27, connects to 5 communities
 - [[test_opener_plan.py]] - degree 24, connects to 4 communities
+- [[opener_plan.py]] - degree 22, connects to 4 communities
 - [[fix_plan()]] - degree 9, connects to 3 communities
 - [[plan_openers()]] - degree 8, connects to 1 community

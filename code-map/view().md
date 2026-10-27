@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[A direction as seen in the shot (right = screen right) turned into the world…]] - `rationale_for` [EXTRACTED]
-- [[Vector_5]] - `references` [EXTRACTED]
+- [[Vector_6]] - `references` [EXTRACTED]
 - [[build_set()]] - `calls` [EXTRACTED]
 - [[facing_vec()]] - `calls` [EXTRACTED]
 - [[place_actors()]] - `calls` [EXTRACTED]

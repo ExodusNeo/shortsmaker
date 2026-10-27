@@ -1,19 +1,30 @@
 ---
-source_file: "tests/test_h3_handoff.py"
+source_file: "tests/test_opener_scene.py"
 type: "code"
-community: "test_h3_handoff.py"
-location: "L95"
+community: "test_opener_scene.py"
+location: "L27"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_h3_handoffpy
+  - community/test_opener_scenepy
 ---
 
 # run()
 
 ## Connections
-- [[fake_ai()]] - `calls` [EXTRACTED]
-- [[short_with()]] - `calls` [EXTRACTED]
-- [[test_tells_owner_after_five_failed_rounds()]] - `contains` [EXTRACTED]
+- [[Build (and optionally render at 25%) one opener; returns (report, frames dir).]] - `rationale_for` [EXTRACTED]
+- [[Path_21]] - `references` [EXTRACTED]
+- [[test_bad_plans_fail()]] - `calls` [EXTRACTED]
+- [[test_box_fall_rests_and_renders()]] - `calls` [EXTRACTED]
+- [[test_camera_follows_unasked()]] - `calls` [EXTRACTED]
+- [[test_chicken_chop_reference()]] - `calls` [EXTRACTED]
+- [[test_chicken_live_plan()]] - `calls` [EXTRACTED]
+- [[test_onion_mince()]] - `calls` [EXTRACTED]
+- [[test_onion_slices()]] - `calls` [EXTRACTED]
+- [[test_opener_scene.py]] - `contains` [EXTRACTED]
+- [[test_subject_without_follow()]] - `calls` [EXTRACTED]
+- [[test_swung_blade_shows_its_face()]] - `calls` [EXTRACTED]
+- [[test_unbuildable_cut_is_reported_not_crashed()]] - `calls` [EXTRACTED]
+- [[test_walk_stops_short_of_obstacles()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_h3_handoffpy
+#graphify/code #graphify/EXTRACTED #community/test_opener_scenepy

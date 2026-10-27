@@ -1,12 +1,12 @@
 ---
 source_file: "blender/opener_scene.py"
 type: "rationale"
-community: "scene_kit.py"
-location: "L284"
+community: "opener_scene.py"
+location: "L377"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/scene_kitpy
+  - community/opener_scenepy
 ---
 
 # A flat, slightly curled feather, its origin at the middle.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[feather()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/scene_kitpy
+#graphify/rationale #graphify/EXTRACTED #community/opener_scenepy

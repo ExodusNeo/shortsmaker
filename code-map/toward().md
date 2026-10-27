@@ -2,7 +2,7 @@
 source_file: "blender/moves.py"
 type: "code"
 community: "moves.py"
-location: "L68"
+location: "L69"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,7 +12,7 @@ tags:
 # toward()
 
 ## Connections
-- [[Vector_3]] - `references` [EXTRACTED]
+- [[Vector_4]] - `references` [EXTRACTED]
 - [[fly_off()]] - `calls` [EXTRACTED]
 - [[hop_off()]] - `calls` [EXTRACTED]
 - [[moves.py]] - `contains` [EXTRACTED]

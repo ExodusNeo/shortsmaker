@@ -1,12 +1,12 @@
 ---
 source_file: "blender/moves.py"
 type: "code"
-community: "cut"
-location: "L555"
+community: "scene_kit.py"
+location: "L571"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/cut
+  - community/scene_kitpy
 ---
 
 # cut()
@@ -25,7 +25,7 @@ tags:
 - [[key_vis()]] - `calls` [EXTRACTED]
 - [[layers()]] - `calls` [EXTRACTED]
 - [[make_static()]] - `calls` [EXTRACTED]
-- [[material()_1]] - `calls` [EXTRACTED]
+- [[material()]] - `calls` [EXTRACTED]
 - [[math]] - `calls` [EXTRACTED]
 - [[merge_slivers()]] - `calls` [EXTRACTED]
 - [[moves.py]] - `contains` [EXTRACTED]
@@ -40,7 +40,7 @@ tags:
 - [[to_object()]] - `calls` [EXTRACTED]
 - [[tool_axes()]] - `calls` [EXTRACTED]
 - [[tool_rotation()]] - `calls` [EXTRACTED]
-- [[travel()]] - `calls` [EXTRACTED]
+- [[travel()_1]] - `calls` [EXTRACTED]
 - [[world_verts()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/cut
+#graphify/code #graphify/EXTRACTED #community/scene_kitpy

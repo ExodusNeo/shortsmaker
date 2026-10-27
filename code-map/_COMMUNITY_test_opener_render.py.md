@@ -1,21 +1,20 @@
 ---
 type: community
-members: 43
+members: 41
 ---
 
 # test_opener_render.py
 
-**Members:** 43 nodes
+**Members:** 41 nodes
 
 ## Members
-- [[dot-__enter__()_2]] - code - tests/test_opener_render.py
-- [[dot-__exit__()_2]] - code - tests/test_opener_render.py
+- [[dot-__enter__()_1]] - code - tests/test_opener_render.py
+- [[dot-__exit__()_3]] - code - tests/test_opener_render.py
 - [[dot-runs()]] - code - tests/test_opener_render.py
 - [[A temp work folder, a library holding the fixture models, a fake Blender and…]] - rationale - tests/test_opener_render.py
 - [[Beat times squeezed into the real scene 1 (the voice can make it shorter than…]] - rationale - shortsmaker/opener_render.py
 - [[Env]] - code - tests/test_opener_render.py
-- [[Path_24]] - code
-- [[Scene 1 plays its Blender opener when one renders (opener_render.py,…]] - rationale - shortsmaker/short_render.py
+- [[Path_27]] - code
 - [[Scene 1's opener clip, or (None, why). (None, None) when the Short has no…]] - rationale - shortsmaker/opener_render.py
 - [[Sixth live run (Mike) 8 evenly spaced frames skipped the whole 0.3-second…]] - rationale - tests/test_opener_render.py
 - [[Tests for running an opener from a Short (opener_render.py, 2026-10-27) models…]] - rationale - tests/test_opener_render.py
@@ -50,7 +49,6 @@ members: 43
 - [[test_use_opener_never_raises()]] - code - tests/test_opener_render.py
 - [[test_use_opener_on_success()]] - code - tests/test_opener_render.py
 - [[test_use_opener_planner_check()]] - code - tests/test_opener_render.py
-- [[use_opener()]] - code - shortsmaker/short_render.py
 
 ## Live Query (requires Dataview plugin)
 
@@ -60,23 +58,22 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 10 edges to [[_COMMUNITY_json]]
-- 10 edges to [[_COMMUNITY_pathlib]]
-- 4 edges to [[_COMMUNITY_ffmpeg]]
+- 18 edges to [[_COMMUNITY_test_full_scenes.py]]
+- 5 edges to [[_COMMUNITY_subprocess]]
+- 5 edges to [[_COMMUNITY_json]]
+- 4 edges to [[_COMMUNITY_render]]
 - 4 edges to [[_COMMUNITY_test_opener_scene.py]]
-- 4 edges to [[_COMMUNITY_shutil]]
-- 3 edges to [[_COMMUNITY_test_blender_link.py]]
-- 2 edges to [[_COMMUNITY_render]]
-- 2 edges to [[_COMMUNITY_test_blender_scene.py]]
+- 2 edges to [[_COMMUNITY_test_blender_link.py]]
 - 1 edge to [[_COMMUNITY_local_clips]]
 - 1 edge to [[_COMMUNITY_test_rules.py]]
 - 1 edge to [[_COMMUNITY_test_blender_plan.py]]
 - 1 edge to [[_COMMUNITY_ask_ai]]
-- 1 edge to [[_COMMUNITY_moves.py]]
+- 1 edge to [[_COMMUNITY_math]]
+- 1 edge to [[_COMMUNITY_test_blender_scene.py]]
 
 ## Top bridge nodes
+- [[render_opener()]] - degree 27, connects to 8 communities
 - [[test_opener_render.py]] - degree 42, connects to 7 communities
-- [[render_opener()]] - degree 27, connects to 7 communities
-- [[use_opener()]] - degree 9, connects to 3 communities
-- [[review()]] - degree 7, connects to 3 communities
+- [[review()]] - degree 7, connects to 2 communities
+- [[_wiring()]] - degree 6, connects to 2 communities
 - [[scale_beats()]] - degree 5, connects to 2 communities

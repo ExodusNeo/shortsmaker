@@ -1,21 +1,21 @@
 ---
 source_file: "shortsmaker/style_lab.py"
 type: "code"
-community: "shutil"
+community: "approve_candidate"
 location: "L295"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/shutil
+  - community/approve_candidate
 ---
 
 # reject_candidate()
 
 ## Connections
-- [[Path_27]] - `references` [EXTRACTED]
+- [[Path_14]] - `references` [EXTRACTED]
 - [[library_menu()]] - `calls` [EXTRACTED]
 - [[shutil]] - `calls` [EXTRACTED]
 - [[style_lab.py]] - `contains` [EXTRACTED]
 - [[test_reject_deletes()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/shutil
+#graphify/code #graphify/EXTRACTED #community/approve_candidate

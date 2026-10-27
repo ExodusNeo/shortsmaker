@@ -19,7 +19,7 @@ members: 28
 - [[Deck on deep plate girders (four lines of them), spliced at every panel point.]] - rationale - blender/templates.py
 - [[Suspension or eyebar-chain bridge towers at the piers, a main cable (or a…]] - rationale - blender/templates.py
 - [[The deck's two edge girders (named like truss bottom chords) with splice plates…]] - rationale - blender/templates.py
-- [[Vector_1]] - code
+- [[Vector_2]] - code
 - [[What a template built parts by name and stage, the spans' x ranges, and the…]] - rationale - blender/templates.py
 - [[What the plan says was on the bridge rails on a rail deck, cars or a train for…]] - rationale - blender/templates.py
 - [[_edge_girders()]] - code - blender/templates.py
@@ -47,10 +47,11 @@ SORT file.name ASC
 ## Connections to other communities
 - 19 edges to [[_COMMUNITY_parts.py]]
 - 4 edges to [[_COMMUNITY_main]]
-- 3 edges to [[_COMMUNITY_build_scene.py]]
+- 2 edges to [[_COMMUNITY_math]]
+- 1 edge to [[_COMMUNITY_look.py]]
 
 ## Top bridge nodes
-- [[templates.py]] - degree 20, connects to 3 communities
+- [[templates.py]] - degree 20, connects to 4 communities
 - [[dress()]] - degree 10, connects to 2 communities
 - [[Bridge]] - degree 20, connects to 1 community
 - [[_hung_deck()]] - degree 16, connects to 1 community

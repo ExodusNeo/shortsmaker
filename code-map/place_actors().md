@@ -1,12 +1,12 @@
 ---
 source_file: "blender/opener_scene.py"
 type: "code"
-community: "opener_scene.py"
-location: "L100"
+community: "scene_kit.py"
+location: "L184"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/opener_scenepy
+  - community/scene_kitpy
 ---
 
 # place_actors()
@@ -16,10 +16,10 @@ tags:
 - [[bbox()]] - `calls` [EXTRACTED]
 - [[fit()]] - `calls` [EXTRACTED]
 - [[load_model()]] - `calls` [EXTRACTED]
-- [[main()_5]] - `calls` [EXTRACTED]
+- [[main()_7]] - `calls` [EXTRACTED]
 - [[make_static()]] - `calls` [EXTRACTED]
 - [[opener_scene.py]] - `contains` [EXTRACTED]
 - [[stand_on()]] - `calls` [EXTRACTED]
 - [[view()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/opener_scenepy
+#graphify/code #graphify/EXTRACTED #community/scene_kitpy

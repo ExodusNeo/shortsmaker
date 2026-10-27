@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[One headless Gemini turn. agy only takes the prompt inline on its command line…]] - `rationale_for` [EXTRACTED]
-- [[Path_16]] - `references` [EXTRACTED]
+- [[Path_19]] - `references` [EXTRACTED]
 - [[ask_ai()]] - `calls` [EXTRACTED]
 - [[gemini_model()]] - `calls` [EXTRACTED]
 - [[llm.py]] - `contains` [EXTRACTED]

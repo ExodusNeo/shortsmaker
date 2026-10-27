@@ -1,11 +1,11 @@
 ---
 type: community
-members: 39
+members: 38
 ---
 
 # guarded.tsx
 
-**Members:** 39 nodes
+**Members:** 38 nodes
 
 ## Members
 - [[Box]] - code - remotion/src/full/guarded.tsx
@@ -15,7 +15,6 @@ members: 39
 - [[ExampleChain.tsx]] - code - remotion/src/full/examples/ExampleChain.tsx
 - [[ExampleEvidence()]] - code - remotion/src/full/examples/ExampleEvidence.tsx
 - [[ExampleEvidence.tsx]] - code - remotion/src/full/examples/ExampleEvidence.tsx
-- [[FullProps]] - code - remotion/src/full/types.ts
 - [[MIN_MOVE]] - code - remotion/src/full/guarded.tsx
 - [[NORMAL]] - code - remotion/src/full/guarded.tsx
 - [[Pt]] - code - remotion/src/full/guarded.tsx
@@ -46,7 +45,7 @@ members: 39
 - [[remotion_src_full_toolkit_travel]] - concept
 - [[routeArrow()]] - code - remotion/src/full/guarded.tsx
 - [[test()]] - code - tests/guarded.test.ts
-- [[travel()_1]] - code - remotion/src/full/guarded.tsx
+- [[travel()]] - code - remotion/src/full/guarded.tsx
 
 ## Live Query (requires Dataview plugin)
 
@@ -56,16 +55,14 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 44 edges to [[_COMMUNITY_toolkit.tsx]]
-- 11 edges to [[_COMMUNITY_Paper]]
-- 5 edges to [[_COMMUNITY_fulltypes.ts]]
-- 3 edges to [[_COMMUNITY_styleindex.ts]]
-- 1 edge to [[_COMMUNITY_Journey.tsx]]
-- 1 edge to [[_COMMUNITY_ref_remotion]]
+- 41 edges to [[_COMMUNITY_toolkit.tsx]]
+- 12 edges to [[_COMMUNITY_Paper]]
+- 1 edge to [[_COMMUNITY_BigNumber.tsx]]
+- 1 edge to [[_COMMUNITY_Short.tsx]]
 
 ## Top bridge nodes
-- [[guarded.tsx]] - degree 32, connects to 5 communities
-- [[FullProps]] - degree 14, connects to 4 communities
-- [[ExampleEvidence.tsx]] - degree 26, connects to 3 communities
-- [[ExampleChain.tsx]] - degree 23, connects to 3 communities
+- [[guarded.tsx]] - degree 32, connects to 4 communities
+- [[ExampleEvidence.tsx]] - degree 26, connects to 2 communities
+- [[ExampleChain.tsx]] - degree 23, connects to 2 communities
 - [[ExampleEvidence()]] - degree 13, connects to 2 communities
+- [[ExampleChain()]] - degree 11, connects to 2 communities

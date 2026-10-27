@@ -1,23 +1,18 @@
 ---
-source_file: "shortsmaker/audio_mix.py"
+source_file: "local_ai/qwen_voice.py"
 type: "code"
-community: "captions"
-location: "L23"
+community: "test_story.py"
+location: "L105"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/captions
+  - community/test_storypy
 ---
 
 # speak()
 
 ## Connections
-- [[Path_17]] - `references` [EXTRACTED]
-- [[TTS with retries Microsoft's free Edge voice service drops a request now and…]] - `rationale_for` [EXTRACTED]
-- [[asyncio]] - `calls` [EXTRACTED]
-- [[audio_mix.py]] - `contains` [EXTRACTED]
-- [[render()_2]] - `calls` [EXTRACTED]
-- [[time]] - `calls` [EXTRACTED]
-- [[tts()_1]] - `calls` [EXTRACTED]
+- [[qwen_voice.py]] - `contains` [EXTRACTED]
+- [[spoken_sentence()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/captions
+#graphify/code #graphify/EXTRACTED #community/test_storypy

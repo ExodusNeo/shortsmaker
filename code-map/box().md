@@ -12,7 +12,7 @@ tags:
 # box()
 
 ## Connections
-- [[Object]] - `references` [EXTRACTED]
+- [[Object_1]] - `references` [EXTRACTED]
 - [[_obj()]] - `calls` [EXTRACTED]
 - [[car()]] - `calls` [EXTRACTED]
 - [[deck()]] - `calls` [EXTRACTED]

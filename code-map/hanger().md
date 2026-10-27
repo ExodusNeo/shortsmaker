@@ -12,7 +12,7 @@ tags:
 # hanger()
 
 ## Connections
-- [[Object]] - `references` [EXTRACTED]
+- [[Object_1]] - `references` [EXTRACTED]
 - [[_hung_deck()]] - `calls` [EXTRACTED]
 - [[cylinder()]] - `calls` [EXTRACTED]
 - [[parts.py]] - `contains` [EXTRACTED]

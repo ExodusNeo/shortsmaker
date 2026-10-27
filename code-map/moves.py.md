@@ -32,6 +32,7 @@ tags:
 - [[hop_off()]] - `contains` [EXTRACTED]
 - [[islands()]] - `contains` [EXTRACTED]
 - [[join()]] - `contains` [EXTRACTED]
+- [[legs()]] - `contains` [EXTRACTED]
 - [[math]] - `imports` [EXTRACTED]
 - [[mathutils]] - `imports_from` [EXTRACTED]
 - [[merge_slivers()]] - `contains` [EXTRACTED]
@@ -55,7 +56,7 @@ tags:
 - [[tool_rotation()]] - `contains` [EXTRACTED]
 - [[topple()]] - `contains` [EXTRACTED]
 - [[toward()]] - `contains` [EXTRACTED]
-- [[travel()]] - `contains` [EXTRACTED]
+- [[travel()_1]] - `contains` [EXTRACTED]
 - [[walk()]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/movespy

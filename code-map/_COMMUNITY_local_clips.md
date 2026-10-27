@@ -35,21 +35,26 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 12 edges to [[_COMMUNITY_gpu.py]]
-- 7 edges to [[_COMMUNITY_test_h3_handoff.py]]
-- 5 edges to [[_COMMUNITY_ffmpeg]]
-- 3 edges to [[_COMMUNITY_ask_ai]]
+- 11 edges to [[_COMMUNITY_gpu.py]]
+- 5 edges to [[_COMMUNITY_subprocess]]
 - 3 edges to [[_COMMUNITY_render]]
+- 3 edges to [[_COMMUNITY_test_h3_handoff.py]]
+- 2 edges to [[_COMMUNITY_ask_ai]]
+- 2 edges to [[_COMMUNITY_test_full_scenes.py]]
+- 1 edge to [[_COMMUNITY_h3_problems]]
+- 1 edge to [[_COMMUNITY_h3_prompt]]
+- 1 edge to [[_COMMUNITY_frame_maker]]
+- 1 edge to [[_COMMUNITY_test_owner_clip_is_cut_again_for_the_scene_it_now_sits_in]]
 - 1 edge to [[_COMMUNITY_json]]
 - 1 edge to [[_COMMUNITY_h3_run.py]]
-- 1 edge to [[_COMMUNITY_shutil]]
+- 1 edge to [[_COMMUNITY_short_with]]
 - 1 edge to [[_COMMUNITY_test_blender_plan.py]]
 - 1 edge to [[_COMMUNITY_test_opener_render.py]]
-- 1 edge to [[_COMMUNITY_pathlib]]
+- 1 edge to [[_COMMUNITY_test_package.py]]
 
 ## Top bridge nodes
-- [[veo_handoff()]] - degree 14, connects to 5 communities
+- [[veo_handoff()]] - degree 14, connects to 6 communities
+- [[local_clips()]] - degree 14, connects to 5 communities
 - [[video_encoder()]] - degree 9, connects to 5 communities
-- [[local_clips()]] - degree 14, connects to 4 communities
 - [[Path]] - degree 12, connects to 4 communities
-- [[h3_prompts()]] - degree 7, connects to 3 communities
+- [[h3_prompts()]] - degree 7, connects to 4 communities

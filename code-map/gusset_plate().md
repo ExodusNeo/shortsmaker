@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[A flat plate on the outside face of a truss joint (side_y -1 left, +1 right).]] - `rationale_for` [EXTRACTED]
-- [[Object]] - `references` [EXTRACTED]
+- [[Object_1]] - `references` [EXTRACTED]
 - [[_edge_girders()]] - `calls` [EXTRACTED]
 - [[box()]] - `calls` [EXTRACTED]
 - [[parts.py]] - `contains` [EXTRACTED]

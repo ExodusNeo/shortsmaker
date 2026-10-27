@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_full_scenes.py"
 type: "code"
-community: "gpu.py"
+community: "render"
 location: "L302"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/gpupy
+  - community/render
 ---
 
 # fake_moss()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[test_remotion_failure_paints()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/INFERRED #community/gpupy
+#graphify/code #graphify/INFERRED #community/render
