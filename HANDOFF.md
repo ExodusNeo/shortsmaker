@@ -840,7 +840,9 @@ owner's Blender (Mike's chop; the owner's six catches became the checks below). 
   (its commands only exist while that scene's switch is on), the owner's scene restored after. Poly Pizza only (Poly
   Haven's photo-real scans clash with the look); never Sketchfab (NC licences, fan art).
 - Blender side (plain bpy): `opener_scene.py` (set, brand look: EEVEE, AgX, warm sun, 50 mm, f/2.2 on the subject,
-  three-quarter camera with push-in and follow; actors placed by `stand_on` where the whole footprint clears the
+  camera: starts wider and pushes in, arcs 14 deg, cranes up 16 deg, handheld sway, a jolt on the first hit and a lens
+  punch-in (62 mm, else 56, else none: the strongest that keeps the subject in frame), always follows the subject
+  once it moves (2026-10-27, owner: the locked-off Mike shot was bad); actors placed by `stand_on` where the whole footprint clears the
   surface), `moves.py` (roles not objects; physics for fall/topple/roll/fly_off/scatter/cut pieces with launch speed
   handed over from 2 keyed frames; keyframes for walk/hop_off/sink/push and tool strokes), `scene_kit.py` (models as
   one welded mesh, origin at the feet, physics helpers and collision layers), `opener_checks.py`. **`cut` is one move

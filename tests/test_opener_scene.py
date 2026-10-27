@@ -115,11 +115,18 @@ def test_bad_plans_fail():
     wrong_count["plan"]["beats"][0]["expect"] = [{"pieces": "2-3", "then": "scatter"}]
     edge_on = fixture("chicken_chop")  # a blade plane the camera sees edge-on
     edge_on["plan"]["beats"][0]["strokes"] = [{"through": "neck", "angle": "down"}]
-    wanders = fixture("chicken_chop")  # nobody follows it as it walks off
-    wanders["plan"]["camera"] = {"angle": "three_quarter"}
-    for job, word in ((crowded, "overlap"), (wrong_count, "cut"), (edge_on, "blade"), (wanders, "in_frame")):
+    for job, word in ((crowded, "overlap"), (wrong_count, "cut"), (edge_on, "blade")):
         report, _ = run(job)
         assert not report["ok"] and any(f.startswith(word) for f in report["failures"]), (word, report["failures"])
+
+
+def test_camera_follows_unasked():
+    """The Mike plan left camera.follow out and the rooster walked off alone; the camera now follows the subject
+    whatever the plan says."""
+    wanders = fixture("chicken_chop")
+    wanders["plan"]["camera"] = {"angle": "three_quarter"}
+    report, _ = run(wanders)
+    assert report["ok"], report["failures"]
 
 
 if __name__ == "__main__":

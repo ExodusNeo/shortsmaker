@@ -8,6 +8,7 @@ The report: {"ok", "failures", "pieces", "frames", "cut_shares", "lowest"}. Exit
 
 import json
 import math
+import random
 import sys
 from pathlib import Path
 
@@ -24,7 +25,12 @@ PITCH = {"front": 12, "three_quarter": 12, "side": 10, "top": 60}
 LENS, FSTOP = 50, 2.2
 FILL = 0.6  # the subject's width fills at most this much of the frame
 SUBJECT_FILL = 0.35  # and its height this much, at the start
-PUSH_IN = 0.92  # the camera ends this much closer
+PUSH_IN = 0.85  # the camera ends this much closer
+ORBIT = 14  # degrees the camera arcs around the subject over the clip (owner, 2026-10-27: the locked-off shot read flat)
+PUNCH_LENS = 62  # on the first hit the lens snaps to this, then eases back toward LENS
+SHAKE, SHAKE_FRAMES = 0.012, 9  # hit shake as a share of the camera distance, gone after this many frames
+DRIFT = 0.004  # handheld sway, share of the distance
+RISE = 16  # degrees the camera cranes up over the clip, so a subject stepping down stays seen over its support
 
 
 def setup(job: dict) -> None:
@@ -147,7 +153,6 @@ def camera(plan: dict, st: moves.State, subject_id: str) -> bpy.types.Object:
     sc = bpy.context.scene
     angle = plan["camera"]["angle"]
     yaw, pitch = math.radians(YAW[angle]), math.radians(PITCH[angle])
-    view = Vector((math.sin(yaw) * math.cos(pitch), -math.cos(yaw) * math.cos(pitch), math.sin(pitch)))
     sc.frame_set(1)
     # framed on the subject (a 30 cm knife beside a 9 cm onion made the onion 10% of the frame); the start aim leans
     # toward the threat so it shows too, which the first-frame check confirms
@@ -156,36 +161,69 @@ def camera(plan: dict, st: moves.State, subject_id: str) -> bpy.types.Object:
     size = hi - lo
     vfov = 2 * math.atan(18 / LENS)
     hfov = 2 * math.atan(18 * sc.render.resolution_x / sc.render.resolution_y / LENS)
-    dist = max(size.z / SUBJECT_FILL / (2 * math.tan(vfov / 2)),
-               max(size.x, size.y) / FILL / (2 * math.tan(hfov / 2))) + max(size.x, size.y) / 2
+    # starts wider by the push-in, so the push ends on this framing instead of past it (the crate left the frame)
+    dist = (max(size.z / SUBJECT_FILL / (2 * math.tan(vfov / 2)),
+                max(size.x, size.y) / FILL / (2 * math.tan(hfov / 2))) + max(size.x, size.y) / 2) / PUSH_IN
     aim = bpy.data.objects.new("aim", None)
     sc.collection.objects.link(aim)
     start = (lo + hi) / 2
     if st.threat is not None and st.threat is not first:
         tlo, thi = kit.bbox(st.threat)
         start = start.lerp((tlo + thi) / 2, 0.3)
-    follow = plan["camera"].get("follow")
-    moved = st.moved_from.get(follow, sc.frame_end + 1) if follow else sc.frame_end + 1
-    for f in range(1, sc.frame_end + 1, 2):
-        target = start
-        if follow and f >= moved:
-            sc.frame_set(f)
-            o = st.objs[follow]
-            blo, bhi = kit.bbox(o)
-            target = start.lerp((blo + bhi) / 2, min(1.0, (f - moved) / 6))
-        kit.key_loc(aim, f, target)
+    # the subject is always followed once it moves (the Mike plan left follow out and the rooster walked off alone)
+    follow = plan["camera"].get("follow") or subject_id
+    moved = st.moved_from.get(follow, sc.frame_end + 1)
+    hit = first_hit(st)
+    rng = random.Random(7)
     cam = bpy.data.objects.new("cam", bpy.data.cameras.new("cam"))
     sc.collection.objects.link(cam)
     sc.camera = cam
     cam.data.lens = LENS
     cam.data.dof.use_dof, cam.data.dof.aperture_fstop, cam.data.dof.focus_object = True, FSTOP, aim
-    for f in range(1, sc.frame_end + 1, 2):
-        sc.frame_set(f)
-        k = 1 - (1 - PUSH_IN) * (f - 1) / max(sc.frame_end - 1, 1)
-        kit.key_loc(cam, f, aim.matrix_world.translation + view * dist * k)
+    n = max(sc.frame_end - 1, 1)
+    for f in range(1, sc.frame_end + 1):
+        target = start
+        if f >= moved:
+            sc.frame_set(f)
+            blo, bhi = kit.bbox(st.objs[follow])
+            target = start.lerp((blo + bhi) / 2, min(1.0, (f - moved) / 6))
+        t = (f - 1) / n
+        ease = t * t * (3 - 2 * t)
+        y, p = yaw + math.radians(ORBIT) * (ease - 0.5), pitch + math.radians(RISE) * ease
+        v = Vector((math.sin(y) * math.cos(p), -math.cos(y) * math.cos(p), math.sin(p)))
+        sway = Vector((math.sin(f * 0.21), math.sin(f * 0.17 + 2), math.sin(f * 0.13 + 1))) * DRIFT * dist
+        if hit is not None and 0 <= f - hit < SHAKE_FRAMES:  # moves aim and camera together so the frame jolts
+            sway += Vector([rng.uniform(-1, 1) for _ in range(3)]) * SHAKE * dist * (1 - (f - hit) / SHAKE_FRAMES)
+        kit.key_loc(aim, f, target + sway)
+        kit.key_loc(cam, f, target + sway + v * dist * (1 - (1 - PUSH_IN) * ease))
     con = cam.constraints.new("TRACK_TO")
     con.target, con.track_axis, con.up_axis = aim, "TRACK_NEGATIVE_Z", "UP_Y"
     return cam
+
+
+def first_hit(st: moves.State) -> int | None:
+    """The hit: the first blade contact, else the first thing that moves."""
+    hits = [c[3] for c in st.contacts] or list(st.moved_from.values())
+    return min(hits) if hits else None
+
+
+def punch_in(cam, st: moves.State, subject_id: str) -> None:
+    """On the hit the lens snaps in, then eases half back; the strongest punch that keeps the subject in frame (a
+    62 mm punch pushed the reference crate, which already fills the frame, out of it)."""
+    sc = bpy.context.scene
+    hit = first_hit(st)
+    for top in (PUNCH_LENS, (LENS + PUNCH_LENS) / 2):
+        cam.data.animation_data_clear()
+        cam.data.lens = LENS
+        if hit is None:
+            return
+        for f, lens in ((1, LENS), (hit, LENS), (min(hit + 2, sc.frame_end), top), (sc.frame_end, (LENS + top) / 2)):
+            cam.data.lens = lens
+            cam.data.keyframe_insert("lens", frame=f)
+        if not any(oc.in_frame(o, cam, fr) for o, fr in subject_segments(subject_id, st, sc.frame_end)):
+            return
+    cam.data.animation_data_clear()
+    cam.data.lens = LENS
 
 
 def hold_offscreen(st: moves.State, cam) -> dict[str, bool]:
@@ -285,6 +323,7 @@ def main(job_path: str) -> None:
     subject_id = plan["camera"].get("follow") or first.get("target") or first.get("actor") \
         or next(a["id"] for a in plan["actors"] if a["id"] not in tools)
     cam = camera(plan, st, subject_id)
+    punch_in(cam, st, subject_id)
     held = hold_offscreen(st, cam)
     failures = checks(plan, st, cam, subject_id)
     sc.frame_set(sc.frame_end)
