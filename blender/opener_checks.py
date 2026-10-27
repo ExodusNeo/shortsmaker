@@ -233,3 +233,26 @@ def cut_result(pieces, target_area: float, expect: list[dict]) -> list[str]:
             if not lo <= n <= hi:
                 out.append(f"cut: {n} pieces, planned {e['pieces']}")
     return out
+
+
+def staging(plan: dict, gaits: dict) -> list[str]:
+    """Walks and hops that read badly, sent back to the planner (owner, 2026-10-27): an animal walking "away" or
+    "camera" shows its back or its chest instead of its side, and a body walking the way its head flew off walks
+    over its own head."""
+    out = []
+    legs = {a["id"] for a in plan["actors"] if gaits.get(a.get("gait", "object"), {}).get("legs")}
+    facing = {a["id"]: a.get("facing", "camera") for a in plan["actors"]}
+    flew = {b["target"] for b in plan["beats"] if b["move"] == "cut"
+            and any(e.get("then") == "fly_off" for e in b.get("expect", []))}
+    for b in plan["beats"]:
+        if b["move"] not in ("walk", "hop_off") or b.get("actor") not in legs:
+            continue
+        actor, way = b["actor"], b.get("toward", "left")
+        if way in ("away", "camera"):
+            out.append(f"staging: {actor} {b['move']}s toward \"{way}\" and shows the camera its "
+                       f"{'back' if way == 'away' else 'chest'}; use \"left\" or \"right\" so it crosses the frame side-on")
+        elif actor in flew and way == facing[actor]:
+            other = "left" if way == "right" else "right"
+            out.append(f"staging: {actor} {b['move']}s \"{way}\", the way its cut piece flew, over its own piece; "
+                       f"use \"{other}\"")
+    return out

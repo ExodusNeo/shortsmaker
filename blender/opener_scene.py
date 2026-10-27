@@ -32,7 +32,6 @@ SHAKE, SHAKE_FRAMES = 0.012, 9  # hit shake as a share of the camera distance, g
 DRIFT = 0.004  # handheld sway, share of the distance
 SLOW, SLOW_BEFORE, SLOW_AFTER = 0.5, 3, 9  # the hit plays at half speed over these scene frames; the rest runs
 # a little faster so the clip keeps its length (scene 1 is timed to the voice)
-BURST = 36  # feathers knocked off where the blade lands
 RISE = 16  # degrees the camera cranes up over the clip, so a subject stepping down stays seen over its support
 
 
@@ -348,83 +347,6 @@ def retime(n: int, hit: int | None) -> list[float]:
     return out
 
 
-def feather_colours(obj, near: Vector, k: int) -> list[tuple]:
-    """k colours of obj's surface around `near`, read from its texture where it has one (a rooster's neck is orange
-    and red, not the whole bird's black)."""
-    import numpy as np
-    mat = next((m for m in obj.data.materials if m and m.node_tree), None)
-    img = next((n.image for n in mat.node_tree.nodes if n.type == "TEX_IMAGE" and n.image), None) if mat else None
-    if img is None or not obj.data.uv_layers:
-        bsdf = next((n for n in mat.node_tree.nodes if n.type == "BSDF_PRINCIPLED"), None) if mat else None
-        return [tuple(bsdf.inputs["Base Color"].default_value)[:3] if bsdf else (0.5, 0.45, 0.4)]
-    w, h = img.size
-    px = np.empty(w * h * 4, dtype=np.float32)
-    img.pixels.foreach_get(px)
-    px = px.reshape(h, w, 4)
-    uv = obj.data.uv_layers.active.data
-    mw = obj.matrix_world
-    polys = sorted(obj.data.polygons, key=lambda p: ((mw @ p.center) - near).length)[:60]
-    rng = random.Random(3)
-    out = []
-    for p in rng.sample(polys, min(k, len(polys))):
-        u, v = uv[p.loop_start].uv
-        c = px[min(int(v % 1 * h), h - 1), min(int(u % 1 * w), w - 1)]
-        out.append(tuple(float(x) for x in c[:3]))
-    return out
-
-
-def feather(name: str, length: float, rgb) -> bpy.types.Object:
-    """A flat, slightly curled feather, its origin at the middle."""
-    import bmesh
-    w = length * 0.32
-    bm = bmesh.new()
-    pts = [(0, -0.5), (0.5, -0.15), (0.38, 0.22), (0, 0.5), (-0.38, 0.22), (-0.5, -0.15)]
-    bm.faces.new([bm.verts.new((x * w, y * length, 0.12 * length * (y * 2) ** 2)) for x, y in pts])
-    me = bpy.data.meshes.new(name)
-    bm.to_mesh(me)
-    bm.free()
-    me.materials.append(kit.material(name, rgb))
-    return bpy.data.objects.new(name, me)
-
-
-def burst(st: moves.State) -> None:
-    """Feathers (or chips) knocked off where the blade lands, in the colours there, drifting down to settle on the
-    ground. Added after the checks: it is only a look, nothing touches it. The first try threw textured spheres
-    with no UVs, grey blobs the owner called weird (2026-10-27)."""
-    if not st.contacts:
-        return
-    sc = bpy.context.scene
-    tool, _, target, frame = min(st.contacts, key=lambda c: c[3])
-    sc.frame_set(frame)
-    at = kit.tree(target).find_nearest(tool.matrix_world @ moves.edge_point_local(tool))[0]  # on the target, not the blade
-    # sized from the whole uncut target: the head piece made 1 cm bits nobody could see
-    whole = next((st.intact[k] for k, v in st.pieces.items() if target in v and k in st.intact), target)
-    lo, hi = kit.bbox(whole)
-    size = max((hi - lo).length, 0.05)
-    bits = bpy.data.collections.new("bits")
-    for i, rgb in enumerate(feather_colours(whole, at, 4)):
-        bits.objects.link(feather(f"feather{i}", size * 0.16, rgb))  # not in the scene: only its instances show
-    bpy.ops.mesh.primitive_uv_sphere_add(segments=16, ring_count=8, radius=size * 0.03, location=at)
-    em = bpy.context.active_object
-    em.name = "burst"
-    em.show_instancer_for_render = em.show_instancer_for_viewport = False
-    ps = em.modifiers.new("burst", "PARTICLE_SYSTEM").particle_system.settings
-    # out when the first piece comes loose (the contact frame is the stroke's start: bits came out before the blade landed)
-    frame = min([f for f in st.released.values() if f >= frame] or [frame])
-    ps.count, ps.frame_start, ps.frame_end, ps.lifetime = BURST, frame, frame + 2, st.frames
-    # random faces of a round emitter and a random kick: a spray every way (12 vertices threw 12 clumps)
-    ps.emit_from, ps.distribution, ps.normal_factor, ps.factor_random = "FACE", "RAND", size * 2.5, size * 1.5
-    ps.render_type, ps.instance_collection, ps.use_collection_pick_random = "COLLECTION", bits, True
-    ps.particle_size, ps.size_random = 1.0, 0.5
-    ps.use_rotations, ps.angular_velocity_mode, ps.angular_velocity_factor = True, "RAND", 6
-    ps.phase_factor_random = 2.0
-    # feathers: light, dragged by the air, a little flutter; they come to rest on the ground
-    ps.effector_weights.gravity, ps.mass, ps.drag_factor, ps.brownian_factor = 0.5, 0.005, 0.6, size * 0.4
-    ps.use_die_on_collision = False
-    st.ground.modifiers.new("feathers", "COLLISION")
-    st.ground.collision.damping_factor, st.ground.collision.friction_factor = 0.9, 1.0
-
-
 def render(job: dict, times: list[float]) -> None:
     sc = bpy.context.scene
     frames_dir = Path(job["frames_dir"])
@@ -480,7 +402,7 @@ def subject_segments(subject_id: str, st: moves.State, frames: int) -> list[tupl
 def checks(plan: dict, st: moves.State, cam, subject_id: str) -> list[str]:
     sc = bpy.context.scene
     frames = range(1, sc.frame_end + 1)
-    out = list(st.failures)
+    out = list(st.failures) + oc.staging(plan, kit.TABLES["gaits"])
     meshes = [o for o in sc.objects if o.type == "MESH" and o.name != "ground"]
     allowed = dict(st.allowed)
     for o in meshes:  # physics bodies only touch: depth is the resting check's job
@@ -550,9 +472,8 @@ def main(job_path: str) -> None:
     report["key_frames"] = sorted({next((i for i, t in enumerate(times, 1) if t >= k), len(times))
                                    for k in {c[3] + 2 for c in st.contacts} | set(st.moved_from.values())})
     if job.get("render", True) and (report["ok"] or job.get("render_failed")):
-        burst(st)
         dress_set(plan, st)
-        kit.simulate()  # the burst's ground collider dropped the physics cache; slow-motion subframes can't rebuild it
+        kit.simulate()  # what's added after the checks can drop the physics cache; slow-motion subframes can't rebuild it
         render(job, times)
     Path(job["report"]).write_text(json.dumps(report, indent=1), encoding="utf-8")
 

@@ -882,9 +882,9 @@ owner's Blender (Mike's chop; the owner's six catches became the checks below). 
     profile the axe comes down from behind the head. The wind-up raises the edge against the stroke (it dipped
     underground) and swings down over 4 frames (`SWING`; it snapped there in one); chops and slashes take 4 frames.
   - Loose parts within 6% go together when cut (beak and wattle stayed on the neck stump). Cut faces of meat are dark
-    red, not pink. The burst is flat feathers in the colours read from the texture around the cut, drifting down
-    and settling (the first try threw textured spheres with no UVs: grey blobs); physics is re-baked after it (its
-    ground collider dropped the cache and the head never flew).
+    red, not pink. No burst of bits at the cut: spheres, then flat feathers, both looked bad to the owner ("a bunch
+    of little objects spawning", 2026-10-27), so it was removed. Physics is re-baked after anything added past the
+    checks (a ground collider once dropped the cache and the head never flew).
   - Walking creatures get a leg rig (`scene_kit.leg_rig`; `legs`/`leg_zone` per gait in the tables): one bone per
     leg, swung in step with the bob, feet together on the last frame; the walk stops short by the leg's reach.
   - Staging lessons went into both channels' `## Opener`: animals from the side, walks across the frame, the body
@@ -894,10 +894,13 @@ owner's Blender (Mike's chop; the owner's six catches became the checks below). 
     rim); a measured sky (Multiple Scattering) with the sun 135 degrees round from the view, side/back light that
     shapes and rims (lights table `elevation`; night keeps its flat sky); a 400 m ground to the horizon with soft
     light/dark patches (`ground_material`); tufts and stones scattered behind and beside the action, never between
-    it and the camera (`dress_set`, after the checks); bigger, more feathers; legs tucked through a hop
+    it and the camera (`dress_set`, after the checks); legs tucked through a hop
     (`moves.legs` caches the rig for hop and walk). About 58 s of Blender for the 3.4 s Mike clip (was 46).
-  Still open: no haze (at a 10 m set real haze is invisible; it would need a dense fog volume), the AI planner's
-  staging (it chose "away"; the rules now steer it). Look at every change by eye.
+  - Staging check (`opener_checks.staging`, owner: "fix that"): an animal with legs walking or hopping "away" or
+    "camera", or walking the way its own cut piece flew, fails and goes back to the planner with the direction to use
+    (the live Mike plan walked "away"). Three tries in all; a plan still wrong after them loses the opener.
+  Still open: no haze (at a 10 m set real haze is invisible; it would need a dense fog volume). Look at every
+  change by eye.
 - Reference tests: `tests/fixtures/openers/` (chicken chop, onion slices, onion mince, crate fall + their models);
   every check was also seen to catch a real fault while building them, and the renders were looked at by eye (checks
   alone passed a head blasted out of frame, hollow slices and an exploding mince).

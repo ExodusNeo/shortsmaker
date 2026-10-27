@@ -75,9 +75,29 @@ def test_onion_mince():
     assert 40 <= report["pieces"] <= 60, report["pieces"]
 
 
+def builds(report) -> bool:
+    """Built without a fault; a staging failure (a walk the planner is told to change) doesn't count here."""
+    return all(f.startswith("staging") for f in report["failures"])
+
+
 def test_chicken_live_plan():
-    """The plan Claude wrote for Mike in the first live run (2026-10-27): a wider stump whose rim the hop clipped."""
+    """The plan Claude wrote for Mike in the first live run (2026-10-27): a wider stump whose rim the hop clipped.
+    Its walk "camera" is now sent back to the planner."""
     report, _ = run(fixture("chicken_live"))
+    assert builds(report) and any("toward \"camera\"" in f for f in report["failures"]), report["failures"]
+
+
+def test_staging_goes_back_to_the_planner():
+    """Owner, 2026-10-27: walking "away" shows the bird's back, and walking the way its head flew walks over it."""
+    away = fixture("chicken_chop")
+    for b in away["plan"]["beats"]:
+        if b["move"] == "walk":
+            b["toward"] = "away"
+    report, _ = run(away)
+    assert any(f.startswith("staging") and "back" in f for f in report["failures"]), report["failures"]
+    report, _ = run(fixture("chicken_live_nofollow"))  # faces right, the head flies right, it walks right
+    assert any(f.startswith("staging") and "own piece" in f for f in report["failures"]), report["failures"]
+    report, _ = run(fixture("chicken_chop"))  # faces right, walks left
     assert report["ok"], report["failures"]
 
 
@@ -90,7 +110,7 @@ def test_walk_stops_short_of_obstacles():
         if b["move"] == "walk":
             b["toward"], b["at"] = "right", 1.9
     report, _ = run(job)
-    assert report["ok"], report["failures"]
+    assert builds(report), report["failures"]
 
 
 def test_unbuildable_cut_is_reported_not_crashed():
@@ -104,7 +124,7 @@ def test_subject_without_follow():
     """Fifth live run (Mike): no camera follow and the stump listed first; the checks took the stump as the subject
     and found it hidden by itself on every frame."""
     report, _ = run(fixture("chicken_live_nofollow"))
-    assert report["ok"], report["failures"]
+    assert builds(report), report["failures"]
 
 
 def test_bad_plans_fail():
