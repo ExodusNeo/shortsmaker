@@ -823,6 +823,13 @@ of resting readable time).
 First-second research (Voggle, How Money Works, Thoughty2, Simple History vs 12 of ours) and a hand-built probe in the
 owner's Blender (Mike's chop; the owner's six catches became the checks below). Spec/plan:
 `docs/superpowers/specs|plans/2026-10-27-blender-openers*`. Part 2 (people) built: see "People openers" below.
+- **Agent rule (owner, 2026-10-28): load the Blender skills before any opener or people work** (`blender/*.py`,
+  people clips, props, looks). The owner installed them in `~\.claude\skills` from github.com/EL4CTEO/blender-skills:
+  always `blender-core` first, then the one for the job: `blender-character-rigging` (rigs, IK, weights, the people
+  bodies), `blender-animation` (clips, NLA, keys, walks), `blender-lighting-lookdev` / `blender-time-of-day` (light,
+  sky, mood), `blender-rendering`, `blender-simulation` (physics), `blender-geometry-nodes`. They only reach
+  interactive Claude sessions; the pipeline's planner call and the headless render never see them, so whatever they
+  teach has to be baked into `blender/*.py`. Check every change by eye (`tests\people_sheet.py`, a render of the job).
 - **Blender MCP has to be started each time.** Opener models are fetched through the owner's live Blender (the MCP
   add-on holds the Poly Pizza key). At the start of a run on a channel with `opener: blender`, `cli.blender_note` pings
   localhost:9876 and, if Blender doesn't answer, says: open Blender, press N, click Start MCP Server, Enter to retry or
