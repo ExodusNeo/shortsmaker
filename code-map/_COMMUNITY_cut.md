@@ -1,11 +1,11 @@
 ---
 type: community
-members: 21
+members: 20
 ---
 
 # cut
 
-**Members:** 21 nodes
+**Members:** 20 nodes
 
 ## Members
 - [[(edge, thin, long) unit axes of a tool in its own space long = handle-to-head,…]] - rationale - blender/moves.py
@@ -19,7 +19,6 @@ members: 21
 - [[bm_area()]] - code - blender/moves.py
 - [[cut()]] - code - blender/moves.py
 - [[edge_point_local()]] - code - blender/moves.py
-- [[handle_end_local()]] - code - blender/moves.py
 - [[key_vis()]] - code - blender/scene_kit.py
 - [[o's mesh in world space with duplicate corner points welded flat-shaded…]] - rationale - blender/moves.py
 - [[place_tool()]] - code - blender/moves.py
@@ -38,15 +37,16 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 16 edges to [[_COMMUNITY_moves.py]]
-- 9 edges to [[_COMMUNITY_Vector]]
+- 13 edges to [[_COMMUNITY_moves.py]]
+- 8 edges to [[_COMMUNITY_Vector]]
 - 8 edges to [[_COMMUNITY_scene_kit.py]]
-- 3 edges to [[_COMMUNITY_opener_scene.py]]
+- 4 edges to [[_COMMUNITY_opener_scene.py]]
 - 2 edges to [[_COMMUNITY_travel]]
+- 2 edges to [[_COMMUNITY_bbox]]
 
 ## Top bridge nodes
-- [[cut()]] - degree 29, connects to 5 communities
+- [[cut()]] - degree 29, connects to 6 communities
 - [[edge_point_local()]] - degree 7, connects to 3 communities
-- [[handle_end_local()]] - degree 5, connects to 3 communities
+- [[tool_axes()]] - degree 7, connects to 2 communities
 - [[place_tool()]] - degree 6, connects to 2 communities
 - [[tool_rotation()]] - degree 5, connects to 2 communities

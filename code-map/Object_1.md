@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "scene_kit.py"
+community: "bbox"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/scene_kitpy
+  - community/bbox
 ---
 
 # Object
@@ -14,4 +14,4 @@ tags:
 - [[load_model()]] - `references` [EXTRACTED]
 - [[merge()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/scene_kitpy
+#graphify/code #graphify/EXTRACTED #community/bbox

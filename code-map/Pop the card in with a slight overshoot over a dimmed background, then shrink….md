@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/frame_render.py"
 type: "rationale"
-community: "frame_maker"
+community: "test_blender_plan.py"
 location: "L187"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/frame_maker
+  - community/test_blender_planpy
 ---
 
 # Pop the card in with a slight overshoot over a dimmed background, then shrink…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[draw_card()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/frame_maker
+#graphify/rationale #graphify/EXTRACTED #community/test_blender_planpy

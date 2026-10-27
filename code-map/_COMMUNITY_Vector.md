@@ -39,9 +39,9 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 12 edges to [[_COMMUNITY_moves.py]]
-- 9 edges to [[_COMMUNITY_cut]]
+- 8 edges to [[_COMMUNITY_cut]]
 - 2 edges to [[_COMMUNITY_travel]]
-- 1 edge to [[_COMMUNITY_opener_scene.py]]
+- 2 edges to [[_COMMUNITY_opener_scene.py]]
 
 ## Top bridge nodes
 - [[Vector_3]] - degree 13, connects to 4 communities

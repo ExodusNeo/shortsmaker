@@ -13,8 +13,8 @@ members: 57
 - [[ComfyUI API graph for one first-frame clip. No negative prompt H3's graph uses…]] - rationale - colab/h3_run.py
 - [[Join checked fields into one image-to-video prompt. H3 has no negative prompt,…]] - rationale - shortsmaker/gpu.py
 - [[MiniMax H3 image-to-video jobs for a ShortsMaker Short, run on Colab next to…]] - rationale - colab/h3_run.py
+- [[Path_26]] - code
 - [[Path_27]] - code
-- [[Path_28]] - code
 - [[Run fn with llm.ask_ai and input restored afterwards.]] - rationale - tests/test_h3_handoff.py
 - [[Seconds - a valid H3 length, snapped up to its 17k+5 frame grid (the…]] - rationale - colab/h3_run.py
 - [[Tests for the Colab H3  Flow hand-off frame-checked video prompts, veo.zip,…]] - rationale - tests/test_h3_handoff.py
@@ -23,7 +23,7 @@ members: 57
 - [[What is missing from the AI's prompt fields for one scene (empty list = usable).]] - rationale - shortsmaker/gpu.py
 - [[ask()_12]] - code - tests/test_h3_handoff.py
 - [[builtins]] - concept
-- [[call()_1]] - code - colab/h3_run.py
+- [[call()]] - code - colab/h3_run.py
 - [[fake_ai()]] - code - tests/test_h3_handoff.py
 - [[fit_start()]] - code - colab/h3_run.py
 - [[frames()]] - code - colab/h3_run.py
@@ -33,11 +33,11 @@ members: 57
 - [[h3_run.py]] - code - colab/h3_run.py
 - [[handoff()]] - code - tests/test_h3_handoff.py
 - [[main()_7]] - code - colab/h3_run.py
+- [[run()_3]] - code - tests/test_h3_handoff.py
 - [[run()_4]] - code - tests/test_h3_handoff.py
 - [[run()_5]] - code - tests/test_h3_handoff.py
 - [[run()_6]] - code - tests/test_h3_handoff.py
 - [[run()_7]] - code - tests/test_h3_handoff.py
-- [[run()_8]] - code - tests/test_h3_handoff.py
 - [[saved_file()]] - code - colab/h3_run.py
 - [[short_with()]] - code - tests/test_h3_handoff.py
 - [[test_all_closeup_marked_scenes_skip_pause()]] - code - tests/test_h3_handoff.py
@@ -74,18 +74,20 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 9 edges to [[_COMMUNITY_json]]
-- 8 edges to [[_COMMUNITY_local_clips]]
-- 6 edges to [[_COMMUNITY_pathlib]]
+- 11 edges to [[_COMMUNITY_pathlib]]
+- 8 edges to [[_COMMUNITY_ffmpeg]]
 - 5 edges to [[_COMMUNITY_shutil]]
-- 3 edges to [[_COMMUNITY_test_blender_scene.py]]
+- 3 edges to [[_COMMUNITY_json]]
+- 2 edges to [[_COMMUNITY_tempfile]]
+- 1 edge to [[_COMMUNITY_test_story.py]]
 - 1 edge to [[_COMMUNITY_re]]
-- 1 edge to [[_COMMUNITY_ffmpeg]]
 - 1 edge to [[_COMMUNITY_split_make_shorts.py]]
+- 1 edge to [[_COMMUNITY_image_sources.py]]
+- 1 edge to [[_COMMUNITY_test_blender_link.py]]
 
 ## Top bridge nodes
+- [[h3_run.py]] - degree 16, connects to 5 communities
 - [[test_h3_handoff.py]] - degree 33, connects to 4 communities
-- [[h3_run.py]] - degree 16, connects to 4 communities
 - [[unpack_clips()]] - degree 10, connects to 3 communities
 - [[handoff()]] - degree 12, connects to 2 communities
 - [[main()_7]] - degree 10, connects to 2 communities

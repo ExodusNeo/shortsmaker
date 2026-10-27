@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[Centre-crop the start picture to 768x1344 the H3 node stretches off-aspect…]] - `rationale_for` [EXTRACTED]
-- [[Path_27]] - `references` [EXTRACTED]
+- [[Path_26]] - `references` [EXTRACTED]
 - [[h3_run.py]] - `contains` [EXTRACTED]
 - [[main()_7]] - `calls` [EXTRACTED]
 

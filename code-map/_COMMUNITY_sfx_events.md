@@ -25,7 +25,7 @@ SORT file.name ASC
 ## Connections to other communities
 - 2 edges to [[_COMMUNITY_test_full_scenes.py]]
 - 1 edge to [[_COMMUNITY_render]]
-- 1 edge to [[_COMMUNITY_moves.py]]
+- 1 edge to [[_COMMUNITY_opener_scene.py]]
 - 1 edge to [[_COMMUNITY_pathlib]]
 - 1 edge to [[_COMMUNITY_test_style.py]]
 

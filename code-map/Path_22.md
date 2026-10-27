@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "choose_images"
+community: "test_pictures_first.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/choose_images
+  - community/test_pictures_firstpy
 ---
 
 # Path
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[choose_images()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/choose_images
+#graphify/code #graphify/EXTRACTED #community/test_pictures_firstpy

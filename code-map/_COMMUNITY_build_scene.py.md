@@ -43,19 +43,19 @@ SORT file.name ASC
 ## Connections to other communities
 - 7 edges to [[_COMMUNITY_parts.py]]
 - 5 edges to [[_COMMUNITY_main]]
-- 5 edges to [[_COMMUNITY_moves.py]]
+- 4 edges to [[_COMMUNITY_moves.py]]
 - 3 edges to [[_COMMUNITY_Shots]]
 - 3 edges to [[_COMMUNITY_templates.py]]
+- 3 edges to [[_COMMUNITY_opener_scene.py]]
 - 3 edges to [[_COMMUNITY_opener_checks.py]]
 - 2 edges to [[_COMMUNITY_shutil]]
 - 2 edges to [[_COMMUNITY_json]]
 - 2 edges to [[_COMMUNITY_pathlib]]
 - 2 edges to [[_COMMUNITY_scene_kit.py]]
-- 2 edges to [[_COMMUNITY_opener_scene.py]]
 
 ## Top bridge nodes
 - [[build_scene.py]] - degree 16, connects to 8 communities
 - [[mathutils]] - degree 9, connects to 6 communities
 - [[bpy]] - degree 9, connects to 5 communities
 - [[opener_check_cases.py]] - degree 12, connects to 4 communities
-- [[failures.py]] - degree 10, connects to 3 communities
+- [[failures.py]] - degree 10, connects to 4 communities

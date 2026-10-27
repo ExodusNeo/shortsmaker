@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/gpu.py"
 type: "code"
-community: "json"
+community: "moss_images"
 location: "L270"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/json
+  - community/moss_images
 ---
 
 # moss_images()
@@ -25,4 +25,4 @@ tags:
 - [[subprocess]] - `calls` [EXTRACTED]
 - [[time]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/json
+#graphify/code #graphify/EXTRACTED #community/moss_images

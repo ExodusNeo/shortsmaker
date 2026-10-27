@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_opener_scene.py"
 type: "code"
-community: "test_opener_plan.py"
+community: "test_opener_scene.py"
 location: "L103"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_opener_planpy
+  - community/test_opener_scenepy
 ---
 
 # test_subject_without_follow()
@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[Fifth live run (Mike) no camera follow and the stump listed first; the checks…]] - `rationale_for` [EXTRACTED]
 - [[fixture()]] - `calls` [EXTRACTED]
-- [[run()_3]] - `calls` [EXTRACTED]
+- [[run()_2]] - `calls` [EXTRACTED]
 - [[test_opener_scene.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_opener_planpy
+#graphify/code #graphify/EXTRACTED #community/test_opener_scenepy

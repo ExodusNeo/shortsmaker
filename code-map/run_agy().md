@@ -1,19 +1,19 @@
 ---
 source_file: "shortsmaker/llm.py"
 type: "code"
-community: "ask_ai"
+community: "run_agy"
 location: "L63"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ask_ai
+  - community/run_agy
 ---
 
 # run_agy()
 
 ## Connections
 - [[One headless Gemini turn. agy only takes the prompt inline on its command line…]] - `rationale_for` [EXTRACTED]
-- [[Path_14]] - `references` [EXTRACTED]
+- [[Path_30]] - `references` [EXTRACTED]
 - [[ask_ai()]] - `calls` [EXTRACTED]
 - [[gemini_model()]] - `calls` [EXTRACTED]
 - [[llm.py]] - `contains` [EXTRACTED]
@@ -21,4 +21,4 @@ tags:
 - [[run_agy()]] - `calls` [EXTRACTED]
 - [[test_run_agy_flags_and_boundaries()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ask_ai
+#graphify/code #graphify/EXTRACTED #community/run_agy

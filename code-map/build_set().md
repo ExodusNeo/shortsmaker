@@ -1,18 +1,18 @@
 ---
 source_file: "blender/opener_scene.py"
 type: "code"
-community: "scene_kit.py"
-location: "L50"
+community: "bbox"
+location: "L56"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/scene_kitpy
+  - community/bbox
 ---
 
 # build_set()
 
 ## Connections
-- [[Vector_7]] - `references` [EXTRACTED]
+- [[Vector_5]] - `references` [EXTRACTED]
 - [[bbox()]] - `calls` [EXTRACTED]
 - [[fit()]] - `calls` [EXTRACTED]
 - [[load_model()]] - `calls` [EXTRACTED]
@@ -22,4 +22,4 @@ tags:
 - [[math]] - `calls` [EXTRACTED]
 - [[opener_scene.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/scene_kitpy
+#graphify/code #graphify/EXTRACTED #community/bbox

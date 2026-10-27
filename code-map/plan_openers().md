@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/opener_plan.py"
 type: "code"
-community: "test_opener_plan.py"
+community: "test_opener_scene.py"
 location: "L161"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_opener_planpy
+  - community/test_opener_scenepy
 ---
 
 # plan_openers()
@@ -21,4 +21,4 @@ tags:
 - [[test_unbuildable()]] - `calls` [EXTRACTED]
 - [[write_scripts()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_opener_planpy
+#graphify/code #graphify/EXTRACTED #community/test_opener_scenepy

@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_opener_scene.py"
 type: "code"
-community: "test_opener_plan.py"
+community: "test_opener_scene.py"
 location: "L41"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_opener_planpy
+  - community/test_opener_scenepy
 ---
 
 # test_fixture_plans_are_clean()
@@ -16,4 +16,4 @@ tags:
 - [[fixture()]] - `calls` [EXTRACTED]
 - [[test_opener_scene.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_opener_planpy
+#graphify/code #graphify/EXTRACTED #community/test_opener_scenepy

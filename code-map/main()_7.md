@@ -12,7 +12,7 @@ tags:
 # main()
 
 ## Connections
-- [[call()_1]] - `calls` [EXTRACTED]
+- [[call()]] - `calls` [EXTRACTED]
 - [[fit_start()]] - `calls` [EXTRACTED]
 - [[frames()]] - `calls` [EXTRACTED]
 - [[graph()]] - `calls` [EXTRACTED]

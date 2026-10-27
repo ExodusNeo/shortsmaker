@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_opener_plan.py"
 type: "code"
-community: "test_opener_plan.py"
+community: "test_opener_scene.py"
 location: "L43"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_opener_planpy
+  - community/test_opener_scenepy
 ---
 
 # short()
@@ -17,4 +17,4 @@ tags:
 - [[test_plan_retry_then_none()]] - `calls` [EXTRACTED]
 - [[test_unbuildable()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_opener_planpy
+#graphify/code #graphify/EXTRACTED #community/test_opener_scenepy

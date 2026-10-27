@@ -28,7 +28,7 @@ SORT file.name ASC
 - 5 edges to [[_COMMUNITY_pathlib]]
 - 1 edge to [[_COMMUNITY_render_remotion]]
 - 1 edge to [[_COMMUNITY_render]]
-- 1 edge to [[_COMMUNITY_music_gain]]
+- 1 edge to [[_COMMUNITY_speak]]
 
 ## Top bridge nodes
 - [[captions()]] - degree 8, connects to 3 communities

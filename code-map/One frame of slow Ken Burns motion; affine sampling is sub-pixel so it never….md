@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/frame_render.py"
 type: "rationale"
-community: "frame_maker"
+community: "test_blender_plan.py"
 location: "L27"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/frame_maker
+  - community/test_blender_planpy
 ---
 
 # One frame of slow Ken Burns motion; affine sampling is sub-pixel so it never…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[shot()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/frame_maker
+#graphify/rationale #graphify/EXTRACTED #community/test_blender_planpy

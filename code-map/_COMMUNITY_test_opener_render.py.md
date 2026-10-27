@@ -1,14 +1,14 @@
 ---
 type: community
-members: 41
+members: 40
 ---
 
 # test_opener_render.py
 
-**Members:** 41 nodes
+**Members:** 40 nodes
 
 ## Members
-- [[dot-__enter__()_3]] - code - tests/test_opener_render.py
+- [[dot-__enter__()_2]] - code - tests/test_opener_render.py
 - [[dot-__exit__()_3]] - code - tests/test_opener_render.py
 - [[dot-runs()]] - code - tests/test_opener_render.py
 - [[A temp work folder, a library holding the fixture models, a fake Blender and…]] - rationale - tests/test_opener_render.py
@@ -48,7 +48,6 @@ members: 41
 - [[test_use_opener_failure_keeps_scene()]] - code - tests/test_opener_render.py
 - [[test_use_opener_never_raises()]] - code - tests/test_opener_render.py
 - [[test_use_opener_on_success()]] - code - tests/test_opener_render.py
-- [[test_use_opener_planner_check()]] - code - tests/test_opener_render.py
 
 ## Live Query (requires Dataview plugin)
 
@@ -60,22 +59,23 @@ SORT file.name ASC
 ## Connections to other communities
 - 15 edges to [[_COMMUNITY_pathlib]]
 - 4 edges to [[_COMMUNITY_render]]
-- 4 edges to [[_COMMUNITY_test_opener_plan.py]]
+- 4 edges to [[_COMMUNITY_test_opener_scene.py]]
+- 4 edges to [[_COMMUNITY_json]]
 - 4 edges to [[_COMMUNITY_shutil]]
-- 3 edges to [[_COMMUNITY_json]]
 - 3 edges to [[_COMMUNITY_ffmpeg]]
-- 2 edges to [[_COMMUNITY_test_blender_link.py]]
-- 2 edges to [[_COMMUNITY_ask_ai]]
-- 2 edges to [[_COMMUNITY_test_blender_scene.py]]
-- 1 edge to [[_COMMUNITY_local_clips]]
+- 2 edges to [[_COMMUNITY_re]]
 - 1 edge to [[_COMMUNITY_test_rules.py]]
 - 1 edge to [[_COMMUNITY_test_blender_render.py]]
-- 1 edge to [[_COMMUNITY_channel_profiles.py]]
+- 1 edge to [[_COMMUNITY_ask_ai]]
+- 1 edge to [[_COMMUNITY_fetch_model]]
 - 1 edge to [[_COMMUNITY_moves.py]]
+- 1 edge to [[_COMMUNITY_call]]
+- 1 edge to [[_COMMUNITY_test_blender_link.py]]
+- 1 edge to [[_COMMUNITY_tempfile]]
 
 ## Top bridge nodes
-- [[render_opener()]] - degree 27, connects to 9 communities
-- [[test_opener_render.py]] - degree 42, connects to 8 communities
+- [[test_opener_render.py]] - degree 42, connects to 10 communities
+- [[render_opener()]] - degree 27, connects to 8 communities
 - [[review()]] - degree 7, connects to 3 communities
 - [[_wiring()]] - degree 6, connects to 2 communities
 - [[scale_beats()]] - degree 5, connects to 2 communities

@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "test_blender_scene.py"
+community: "test_blender_link.py"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/test_blender_scenepy
+  - community/test_blender_linkpy
 ---
 
 # traceback
@@ -30,4 +30,4 @@ tags:
 - [[test_rules.py]] - `imports` [EXTRACTED]
 - [[test_story.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/test_blender_scenepy
+#graphify/concept #graphify/EXTRACTED #community/test_blender_linkpy

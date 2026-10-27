@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_opener_scene.py"
 type: "code"
-community: "test_opener_plan.py"
+community: "test_opener_scene.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_opener_planpy
+  - community/test_opener_scenepy
 ---
 
 # test_opener_scene.py
@@ -21,12 +21,13 @@ tags:
 - [[opener_plan.py]] - `imports_from` [EXTRACTED]
 - [[pathlib]] - `imports_from` [EXTRACTED]
 - [[pil]] - `imports_from` [EXTRACTED]
-- [[run()_3]] - `contains` [EXTRACTED]
+- [[run()_2]] - `contains` [EXTRACTED]
 - [[subprocess]] - `imports` [EXTRACTED]
 - [[sys]] - `imports` [EXTRACTED]
 - [[tempfile]] - `imports` [EXTRACTED]
 - [[test_bad_plans_fail()]] - `contains` [EXTRACTED]
 - [[test_box_fall_rests_and_renders()]] - `contains` [EXTRACTED]
+- [[test_camera_follows_unasked()]] - `contains` [EXTRACTED]
 - [[test_chicken_chop_reference()]] - `contains` [EXTRACTED]
 - [[test_chicken_live_plan()]] - `contains` [EXTRACTED]
 - [[test_fixture_plans_are_clean()]] - `contains` [EXTRACTED]
@@ -37,4 +38,4 @@ tags:
 - [[test_walk_stops_short_of_obstacles()]] - `contains` [EXTRACTED]
 - [[traceback]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_opener_planpy
+#graphify/code #graphify/EXTRACTED #community/test_opener_scenepy

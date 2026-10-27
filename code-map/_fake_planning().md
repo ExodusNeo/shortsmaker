@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[Runs write_scripts with every AInetwork step replaced by canned answers;…]] - `rationale_for` [EXTRACTED]
-- [[ask()_5]] - `indirect_call` [INFERRED]
+- [[ask()_7]] - `indirect_call` [INFERRED]
 - [[owner()]] - `calls` [EXTRACTED]
 - [[test_director_prompt_mentions_full()]] - `calls` [EXTRACTED]
 - [[test_full_scenes.py]] - `contains` [EXTRACTED]

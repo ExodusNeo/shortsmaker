@@ -1,19 +1,24 @@
 ---
-source_file: "colab/h3_run.py"
+source_file: "shortsmaker/blender_link.py"
 type: "code"
-community: "test_h3_handoff.py"
-location: "L69"
+community: "call"
+location: "L21"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_h3_handoffpy
+  - community/call
 ---
 
 # call()
 
 ## Connections
-- [[h3_run.py]] - `contains` [EXTRACTED]
+- [[LinkError]] - `calls` [EXTRACTED]
+- [[One add-on command; its result. A transport problem or an error reply raises…]] - `rationale_for` [EXTRACTED]
+- [[blender_link.py]] - `contains` [EXTRACTED]
+- [[fetch_model()]] - `calls` [EXTRACTED]
 - [[json]] - `calls` [EXTRACTED]
-- [[main()_7]] - `calls` [EXTRACTED]
+- [[ping()]] - `calls` [EXTRACTED]
+- [[search()]] - `calls` [EXTRACTED]
+- [[socket]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_h3_handoffpy
+#graphify/code #graphify/EXTRACTED #community/call

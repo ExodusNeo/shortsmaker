@@ -15,6 +15,7 @@ tags:
 - [[at()]] - `calls` [EXTRACTED]
 - [[checks()]] - `calls` [EXTRACTED]
 - [[opener_checks.py]] - `contains` [EXTRACTED]
+- [[punch_in()]] - `calls` [EXTRACTED]
 - [[screen_box()]] - `calls` [EXTRACTED]
 - [[spans()]] - `calls` [EXTRACTED]
 

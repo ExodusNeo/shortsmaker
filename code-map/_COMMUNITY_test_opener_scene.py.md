@@ -1,11 +1,11 @@
 ---
 type: community
-members: 54
+members: 56
 ---
 
-# test_opener_plan.py
+# test_opener_scene.py
 
-**Members:** 54 nodes
+**Members:** 56 nodes
 
 ## Members
 - [[Build (and optionally render at 25%) one opener; returns (report, frames dir).]] - rationale - tests/test_opener_scene.py
@@ -16,6 +16,7 @@ members: 54
 - [[Path_17]] - code
 - [[Tests for building openers in Blender (blenderopener_scene.py + moves.py,…]] - rationale - tests/test_opener_scene.py
 - [[Tests for opener staging plans (opener_plan.py, 2026-10-27) the plan format…]] - rationale - tests/test_opener_plan.py
+- [[The Mike plan left camera.follow out and the rooster walked off alone; the…]] - rationale - tests/test_opener_scene.py
 - [[The plan Claude wrote for Mike in the first live run (2026-10-27) a wider…]] - rationale - tests/test_opener_scene.py
 - [[The plan when every value is in its table and every name exists, else None.…]] - rationale - shortsmaker/opener_plan.py
 - [[The planner fixes its own plan after the checks or the review found these…]] - rationale - shortsmaker/opener_plan.py
@@ -33,10 +34,11 @@ members: 54
 - [[opener_plan.py]] - code - shortsmaker/opener_plan.py
 - [[plan()_1]] - code - tests/test_opener_plan.py
 - [[plan_openers()]] - code - shortsmaker/opener_plan.py
-- [[run()_3]] - code - tests/test_opener_scene.py
+- [[run()_2]] - code - tests/test_opener_scene.py
 - [[short()_2]] - code - tests/test_opener_plan.py
 - [[test_bad_plans_fail()]] - code - tests/test_opener_scene.py
 - [[test_box_fall_rests_and_renders()]] - code - tests/test_opener_scene.py
+- [[test_camera_follows_unasked()]] - code - tests/test_opener_scene.py
 - [[test_chicken_chop_reference()]] - code - tests/test_opener_scene.py
 - [[test_chicken_live_plan()]] - code - tests/test_opener_scene.py
 - [[test_cut_needs_expect()]] - code - tests/test_opener_plan.py
@@ -66,23 +68,23 @@ members: 54
 ## Live Query (requires Dataview plugin)
 
 ```dataview
-TABLE source_file, type FROM #community/test_opener_planpy
+TABLE source_file, type FROM #community/test_opener_scenepy
 SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 13 edges to [[_COMMUNITY_pathlib]]
+- 14 edges to [[_COMMUNITY_pathlib]]
+- 4 edges to [[_COMMUNITY_json]]
 - 4 edges to [[_COMMUNITY_test_opener_render.py]]
-- 3 edges to [[_COMMUNITY_json]]
-- 3 edges to [[_COMMUNITY_shutil]]
-- 3 edges to [[_COMMUNITY_test_blender_scene.py]]
 - 2 edges to [[_COMMUNITY_moves.py]]
-- 1 edge to [[_COMMUNITY_write_scripts]]
+- 2 edges to [[_COMMUNITY_shutil]]
+- 2 edges to [[_COMMUNITY_test_blender_link.py]]
 - 1 edge to [[_COMMUNITY_ask_ai]]
 - 1 edge to [[_COMMUNITY_re]]
+- 1 edge to [[_COMMUNITY_tempfile]]
 
 ## Top bridge nodes
-- [[test_opener_scene.py]] - degree 24, connects to 5 communities
+- [[test_opener_scene.py]] - degree 25, connects to 6 communities
 - [[opener_plan.py]] - degree 22, connects to 5 communities
 - [[test_opener_plan.py]] - degree 24, connects to 4 communities
 - [[fix_plan()]] - degree 9, connects to 3 communities

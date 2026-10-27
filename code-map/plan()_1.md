@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_opener_plan.py"
 type: "code"
-community: "test_opener_plan.py"
+community: "test_opener_scene.py"
 location: "L32"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_opener_planpy
+  - community/test_opener_scenepy
 ---
 
 # plan()
@@ -21,4 +21,4 @@ tags:
 - [[test_sizes_bounded()]] - `calls` [EXTRACTED]
 - [[test_through_cut_names_its_rest()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_opener_planpy
+#graphify/code #graphify/EXTRACTED #community/test_opener_scenepy

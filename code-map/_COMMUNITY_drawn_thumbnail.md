@@ -1,11 +1,11 @@
 ---
 type: community
-members: 11
+members: 12
 ---
 
 # drawn_thumbnail
 
-**Members:** 11 nodes
+**Members:** 12 nodes
 
 ## Members
 - [[(first, last) frame of every scene, 1-based and back to back; even a very short…]] - rationale - shortsmaker/blender_render.py
@@ -18,6 +18,7 @@ members: 11
 - [[scene_frames()]] - code - shortsmaker/blender_render.py
 - [[test_film_opener_is_skipped_and_bad_bytes_fall_back()]] - code - tests/test_blender_run.py
 - [[test_no_photo_uses_a_drawing_and_says_so()]] - code - tests/test_blender_run.py
+- [[test_scene_frames_cover_every_frame_once()]] - code - tests/test_blender_render.py
 - [[test_thumbnail_uses_the_real_photo()]] - code - tests/test_blender_run.py
 
 ## Live Query (requires Dataview plugin)
@@ -32,8 +33,8 @@ SORT file.name ASC
 - 3 edges to [[_COMMUNITY_render]]
 - 3 edges to [[_COMMUNITY_test_blender_render.py]]
 - 2 edges to [[_COMMUNITY_test_blender_plan.py]]
-- 1 edge to [[_COMMUNITY_prepare_topic]]
-- 1 edge to [[_COMMUNITY_apply_review_fixes]]
+- 1 edge to [[_COMMUNITY_catalog_pool]]
+- 1 edge to [[_COMMUNITY_image_sources.py]]
 - 1 edge to [[_COMMUNITY_re]]
 
 ## Top bridge nodes

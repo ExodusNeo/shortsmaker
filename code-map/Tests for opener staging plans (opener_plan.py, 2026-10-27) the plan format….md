@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_opener_plan.py"
 type: "rationale"
-community: "test_opener_plan.py"
+community: "test_opener_scene.py"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/test_opener_planpy
+  - community/test_opener_scenepy
 ---
 
 # Tests for opener staging plans (opener_plan.py, 2026-10-27): the plan format…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[test_opener_plan.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/test_opener_planpy
+#graphify/rationale #graphify/EXTRACTED #community/test_opener_scenepy

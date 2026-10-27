@@ -12,7 +12,7 @@ tags:
 # with_fake()
 
 ## Connections
-- [[run()]] - `indirect_call` [INFERRED]
+- [[run()_8]] - `indirect_call` [INFERRED]
 - [[test_blender_link.py]] - `contains` [EXTRACTED]
 - [[test_download_error_cleans_up()]] - `references` [EXTRACTED]
 - [[test_fetch_saves_pair()]] - `references` [EXTRACTED]

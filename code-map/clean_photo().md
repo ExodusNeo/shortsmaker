@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/photo_prep.py"
 type: "code"
-community: "words_of"
+community: "pathlib"
 location: "L68"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/words_of
+  - community/pathlib
 ---
 
 # clean_photo()
@@ -19,4 +19,4 @@ tags:
 - [[render()_3]] - `calls` [EXTRACTED]
 - [[trim_borders()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/words_of
+#graphify/code #graphify/EXTRACTED #community/pathlib

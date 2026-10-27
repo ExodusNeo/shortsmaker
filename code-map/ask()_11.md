@@ -1,17 +1,17 @@
 ---
-source_file: "tests/test_style.py"
+source_file: "tests/test_full_scenes.py"
 type: "code"
-community: "plan_with"
-location: "L200"
+community: "apply_review_fixes"
+location: "L410"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/plan_with
+  - community/apply_review_fixes
 ---
 
 # ask()
 
 ## Connections
-- [[test_fact_check_sees_new_graphics()]] - `contains` [EXTRACTED]
+- [[test_review_uses_unused_pool_pictures_before_painting()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/plan_with
+#graphify/code #graphify/EXTRACTED #community/apply_review_fixes

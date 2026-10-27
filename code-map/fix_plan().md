@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/opener_plan.py"
 type: "code"
-community: "test_opener_plan.py"
+community: "test_opener_scene.py"
 location: "L197"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_opener_planpy
+  - community/test_opener_scenepy
 ---
 
 # fix_plan()
@@ -22,4 +22,4 @@ tags:
 - [[test_fix_plan_gets_scene_length()]] - `calls` [EXTRACTED]
 - [[test_fix_plan_returns_clean_or_none()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_opener_planpy
+#graphify/code #graphify/EXTRACTED #community/test_opener_scenepy

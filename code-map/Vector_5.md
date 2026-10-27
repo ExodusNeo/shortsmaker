@@ -1,21 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "scene_kit.py"
+community: "bbox"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/scene_kitpy
+  - community/bbox
 ---
 
 # Vector
 
 ## Connections
-- [[bbox()]] - `references` [EXTRACTED]
-- [[facing_vec()]] - `references` [EXTRACTED]
-- [[loc_at()]] - `references` [EXTRACTED]
-- [[make_dynamic()]] - `references` [EXTRACTED]
-- [[rot_at()]] - `references` [EXTRACTED]
-- [[world_verts()]] - `references` [EXTRACTED]
+- [[build_set()]] - `references` [EXTRACTED]
+- [[stand_on()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/scene_kitpy
+#graphify/code #graphify/EXTRACTED #community/bbox

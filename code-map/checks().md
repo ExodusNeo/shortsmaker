@@ -2,7 +2,7 @@
 source_file: "blender/opener_scene.py"
 type: "code"
 community: "opener_checks.py"
-location: "L232"
+location: "L270"
 tags:
   - graphify/code
   - graphify/EXTRACTED

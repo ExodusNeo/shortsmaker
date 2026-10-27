@@ -18,7 +18,7 @@ members: 32
 - [[The camera sees the blade's flat side, not its edge the view is at least…]] - rationale - blender/opener_checks.py
 - [[The pieces match what the plan expected named shares (by area()) within ±50%,…]] - rationale - blender/opener_checks.py
 - [[The subject stays visible on every frame at least min_visible of its points…]] - rationale - blender/opener_checks.py
-- [[Vector_6]] - code
+- [[Vector_7]] - code
 - [[3, 4, 5, 9 - 3-5, 9.]] - rationale - blender/opener_checks.py
 - [[area()]] - code - blender/opener_checks.py
 - [[at()]] - code - blender/opener_checks.py
@@ -49,7 +49,7 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 5 edges to [[_COMMUNITY_opener_scene.py]]
+- 6 edges to [[_COMMUNITY_opener_scene.py]]
 - 3 edges to [[_COMMUNITY_build_scene.py]]
 - 2 edges to [[_COMMUNITY_moves.py]]
 - 1 edge to [[_COMMUNITY_scene_kit.py]]
@@ -57,5 +57,6 @@ SORT file.name ASC
 ## Top bridge nodes
 - [[opener_checks.py]] - degree 24, connects to 3 communities
 - [[checks()]] - degree 12, connects to 1 community
+- [[in_frame()]] - degree 6, connects to 1 community
 - [[blade_face()]] - degree 5, connects to 1 community
 - [[mathutils_bvhtree]] - degree 2, connects to 1 community

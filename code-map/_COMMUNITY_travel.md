@@ -26,15 +26,16 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 4 edges to [[_COMMUNITY_moves.py]]
-- 4 edges to [[_COMMUNITY_scene_kit.py]]
-- 3 edges to [[_COMMUNITY_opener_scene.py]]
+- 5 edges to [[_COMMUNITY_scene_kit.py]]
+- 3 edges to [[_COMMUNITY_moves.py]]
 - 2 edges to [[_COMMUNITY_Vector]]
 - 2 edges to [[_COMMUNITY_cut]]
+- 2 edges to [[_COMMUNITY_bbox]]
+- 1 edge to [[_COMMUNITY_opener_scene.py]]
 
 ## Top bridge nodes
+- [[world_verts()]] - degree 7, connects to 4 communities
 - [[travel()]] - degree 7, connects to 3 communities
-- [[world_verts()]] - degree 7, connects to 3 communities
-- [[clear_distance()]] - degree 6, connects to 2 communities
+- [[clear_distance()]] - degree 6, connects to 3 communities
 - [[tree()]] - degree 6, connects to 2 communities
 - [[surface_z()]] - degree 3, connects to 1 community
