@@ -313,8 +313,28 @@ def test_two_walk_at_each_other_and_stop_apart():
                             {"move": "walk", "actor": "knight", "at": 0.3, "toward": "man"}]
     report, _ = run(job)
     assert report["ok"], report["failures"]
-    # placed 0.3 m apart, half the gap is less than a stride's reach for one of them: it turns and waits
     assert max(report["moved"]["knight"], report["moved"]["man"]) > 0.05, report["moved"]
+    assert report["gap_to"]["knight"]["man"] < report["gap_start"]["knight"]["man"], report  # measured at the end
+
+
+
+def test_people_play_their_own_clips():
+    """Final review: a backdrop bringing its own action called "Idle" took the name, and people looked clips up by
+    name. Each person's clips must be the library's (they move bones)."""
+    d = Path(tempfile.mkdtemp(prefix="idle_backdrop_"))
+    code = ("import bpy; bpy.ops.wm.read_factory_settings(use_empty=True); bpy.ops.mesh.primitive_cube_add(); "
+            "o = bpy.context.active_object; o.keyframe_insert('location', frame=1); "
+            "o.animation_data.action.name = 'Idle'; "
+            f"bpy.ops.wm.save_as_mainfile(filepath=r'{d / 'idle_box.blend'}')")
+    r = subprocess.run([str(config.BLENDER), "-b", "--factory-startup", "--python-exit-code", "1", "--python-expr", code],
+                       capture_output=True, text=True, timeout=300)
+    assert r.returncode == 0, r.stderr[-1000:]
+    job = fixture("person_walk")
+    job["plan"]["set"]["backdrop"] = [{"find": "box", "size_m": 2}]
+    job["models"]["backdrop:0"] = str(d / "idle_box.blend")
+    report, _ = run(job)
+    assert report["ok"], report["failures"]
+    assert report["foreign_clips"] == 0, report["foreign_clips"]
 
 
 if __name__ == "__main__":

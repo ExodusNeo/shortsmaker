@@ -144,9 +144,13 @@ def facing_vec(obj) -> Vector:
 
 def fcurves(obj) -> list:
     ad = obj.animation_data
-    if not ad or not ad.action:
+    return fcurves_of(ad.action) if ad and ad.action else []
+
+
+def fcurves_of(a) -> list:
+    """An action's F-curves, through its layers and channelbags in Blender 5.x."""
+    if a is None:
         return []
-    a = ad.action
     if hasattr(a, "fcurves"):
         return list(a.fcurves)
     return [fc for layer in a.layers for strip in layer.strips for cb in strip.channelbags for fc in cb.fcurves]

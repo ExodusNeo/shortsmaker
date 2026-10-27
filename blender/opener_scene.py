@@ -537,14 +537,20 @@ def main(job_path: str) -> None:
             lowest[f"{aid}.prop"] = round(min(v.z for v in kit.world_verts(bpy.data.objects[o["prop"]])), 4)
     moved = {aid: round((o.matrix_world.translation - starts[aid]).length, 4) for aid, o in st.objs.items()
              if aid in starts and aid not in tools}
+    # measured on the last frame, before held() goes back to frame 1 (it read the start gaps, final review)
+    gap_to = {a: {b: round((o.matrix_world.translation - q.matrix_world.translation).length, 4)
+                  for b, q in st.objs.items() if b != a} for a, o in st.objs.items()}
+    # a person's clips must move their bones (a backdrop's own "Idle" once stood in for theirs, final review)
+    foreign = sum(1 for o in st.objs.values() if o.get("rig")
+                  for t in bpy.data.objects[o["rig"]].animation_data.nla_tracks for s in t.strips
+                  if not any(fc.data_path.startswith("pose.bones") for fc in kit.fcurves_of(s.action)))
     report = {"ok": not failures, "failures": failures, "frames": sc.frame_end,
               "pieces": sum(len(p) for p, *_ in st.cuts),
               "cut_shares": {k: v for *_, s in st.cuts for k, v in s.items()}, "lowest": lowest,
               "highest": highest, "moved": moved, "swings": [p.name for p, _ in st.swings],
+              "gap_start": gap_start, "gap_to": gap_to, "foreign_clips": foreign,
               "held": {aid: people.held(o, st.people) for aid, o in st.objs.items() if o.get("prop")},
-              "gap_start": gap_start, "threat": st.threat.name if st.threat is not None else None,
-              "gap_to": {a: {b: round((o.matrix_world.translation - q.matrix_world.translation).length, 4)
-                             for b, q in st.objs.items() if b != a} for a, o in st.objs.items()},
+              "threat": st.threat.name if st.threat is not None else None,
               "held_offscreen": held, "stroke_toward_camera": st.stroke_toward,
               "key_frames": []}
     times = retime(sc.frame_end, first_hit(st))

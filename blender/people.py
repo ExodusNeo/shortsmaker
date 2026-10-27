@@ -22,6 +22,10 @@ def load_library(job: dict) -> dict:
     lib["blend"] = job["people"]["blend"]
     with bpy.data.libraries.load(lib["blend"]) as (src, dst):
         dst.actions = [a for a in src.actions if a in lib["clips"]]
+        names = list(dst.actions)
+    # kept by object, not looked up by name: a backdrop's own "Idle" action took the name (final review); the
+    # appended actions come back in the order asked for, whatever Blender renamed them to
+    lib["actions"] = dict(zip(names, dst.actions))
     return lib
 
 
@@ -197,10 +201,10 @@ def dress(actor: dict, role: dict, lib: dict, models: dict) -> bpy.types.Object:
     return mesh
 
 
-def _strip(arm, clip: str, start: int, repeat: float = 1.0):
+def _strip(arm, lib: dict, clip: str, start: int, repeat: float = 1.0):
     """The clip on its own NLA track from `start`, held after it ends, blended in over 4 frames."""
     track = arm.animation_data.nla_tracks.new()
-    strip = track.strips.new(clip, start, bpy.data.actions[clip])
+    strip = track.strips.new(clip, start, lib["actions"][clip])
     strip.repeat = max(repeat, 0.05)
     strip.extrapolation = "HOLD_FORWARD"
     strip.blend_in = min(4.0, (strip.frame_end - strip.frame_start) / 2)
@@ -211,10 +215,10 @@ def idle(o, lib: dict) -> None:
     """Every person breathes on their Idle clip from frame 1 under whatever they do (a rest pose looked frozen)."""
     arm = bpy.data.objects[o["rig"]]
     arm.animation_data_create()
-    if "Idle" in bpy.data.actions:
+    if "Idle" in lib["actions"]:
         frames = bpy.context.scene.frame_end
         track = arm.animation_data.nla_tracks.new()
-        strip = track.strips.new("Idle", 1, bpy.data.actions["Idle"])
+        strip = track.strips.new("Idle", 1, lib["actions"]["Idle"])
         strip.repeat = frames / max(lib["clips"]["Idle"]["frames"], 1) + 1
         strip.extrapolation = "HOLD"
 
@@ -248,7 +252,7 @@ def move(beat: dict, st, lib: dict) -> None:
     f0 = st.f(beat["at"])
     st.moved_from.setdefault(actor, f0)
     if spec["kind"] == "in_place":
-        strip = _strip(arm, clip, f0)
+        strip = _strip(arm, lib, clip, f0)
         _ground(o, st, f0, int(strip.frame_end))
         if beat["move"] in ("swing_prop", "throw_prop", "drop_prop"):
             prop_move(beat, st, o, strip)
@@ -283,7 +287,7 @@ def move(beat: dict, st, lib: dict) -> None:
     o.location, o.rotation_euler = keep_loc, keep_rot
     bpy.context.view_layer.update()
     stop = min(sc.frame_end, f0 + round(room / speed * st.fps)) if speed > 0 else f0
-    _strip(arm, clip, f0, repeat=(stop - f0) / info["frames"])
+    _strip(arm, lib, clip, f0, repeat=(stop - f0) / info["frames"])
     kit.key_rot(o, f0, base_rot)
     kit.key_rot(o, min(f0 + 8, sc.frame_end), (base_rot.x, base_rot.y, base_rot.z + turn))
     # along the ground at the clip's pace, the lowest foot pinned to it every other frame: a step caught mid-air

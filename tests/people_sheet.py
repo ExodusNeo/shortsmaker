@@ -48,7 +48,7 @@ def render_sheet(kind: str) -> None:
         if kind == "moves":
             clip = kit.TABLES["people_moves"][move]["clip"]
             frames = lib["clips"][clip]["frames"]
-            people._strip(bpy.data.objects[o["rig"]], clip, max(1, 60 - round(0.6 * frames)))
+            people._strip(bpy.data.objects[o["rig"]], lib, clip, max(1, 60 - round(0.6 * frames)))
     sun = bpy.data.objects.new("sun", bpy.data.lights.new("sun", "SUN"))
     sun.data.energy = 4.5
     sun.rotation_euler = (math.radians(50), 0, math.radians(35))

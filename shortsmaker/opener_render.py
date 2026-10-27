@@ -50,16 +50,27 @@ def resolve_models(plan: dict) -> tuple[dict, str | None]:
     if people and not (config.PEOPLE_JSON.exists() and config.PEOPLE_BLEND.exists()):
         return {}, "people library missing"
     wanted = [(a["id"], a["find"], a["size_m"]) for a in plan["actors"] if "person" not in a]
+    optional = set()  # a role's hat comes from the table, not the plan: left off when no library has it
     for a in people:  # a person's hat (from the role) and prop are models like any other
         role = opener_plan.ROLES[a["person"]]
         if role.get("hat"):
             wanted.append((f"{a['id']}:hat", role["hat"], 0.3))
+            optional.add(f"{a['id']}:hat")
         if a.get("prop"):
             wanted.append((f"{a['id']}:prop", a["prop"], a.get("prop_size_m") or role["height_m"] / 2))
     wanted += [(f"backdrop:{i}", b["find"], b["size_m"]) for i, b in enumerate(plan["set"].get("backdrop") or [])]
     models, online, unfound = {}, None, []
     for key, find, size in wanted:
         blend = blender_link.in_library(find)
+        if blend is None and key in optional:
+            online = blender_link.ping() if online is None else online
+            try:
+                hit = pick_model(find, blender_link.search(find)) if online else None
+            except blender_link.LinkError:  # a hat is never worth failing the opener for
+                hit = None
+            blend = blender_link.fetch_model(hit, find, size)[0] if hit else None
+            if blend is None:
+                continue
         if blend is None:
             online = blender_link.ping() if online is None else online
             if not online:
@@ -102,6 +113,18 @@ def review_frames(report: dict, n: int) -> list[int]:
     return picked
 
 
+def _cast_note(plan: dict) -> str:
+    """Who is in the animation, for the review: it was told "there are no people" on people plans (final review)."""
+    notes = []
+    if any("person" in a for a in plan["actors"]):
+        notes.append("Cartoon people by era and role are in it: faceless low-poly figures in costume, holding their "
+                     "prop in the hand (a prop floating away from the hand is a problem).")
+    if any(b["move"] == "cut" for b in plan["beats"]):
+        notes.append("A cutting tool is swung by an unseen hand just off-screen (the owner's choice), so a tool whose "
+                     "handle runs off the edge of the frame is fine; a tool floating in the middle of the shot is not.")
+    return " ".join(notes)
+
+
 def review(short: dict, frames: Path, seconds: float, work: Path, report: dict | None = None) -> list[str]:
     """The AI looks at 8 frames: does the action make physical sense, and does frame 0 show the subject and the
     threat? Its problems, or [] (a failed or unreadable reply never blocks an opener the checks passed)."""
@@ -120,8 +143,7 @@ def review(short: dict, frames: Path, seconds: float, work: Path, report: dict |
     when = ", ".join(f"{(f - 1) / FPS:.2f}s" for f in picked)
     data = llm.ask_ai(f"""strip.jpg in this folder shows {len(picked)} frames, left to right, at {when} of a {seconds:.1f}-second 3D animation
 that opens a YouTube Short. It should show: {short['opener']['moment']}.
-There are no people in these animations: tools are swung by an unseen hand just off-screen (the owner's choice), so
-a tool whose handle runs off the edge of the frame is fine; a tool floating in the middle of the shot is not.
+{_cast_note(short['opener'])}
 This channel's opener rules, including what the owner has accepted (never report those as problems):
 {session.RULES.get("Opener") or opener_plan.DEFAULT_RULES}
 Judge it like a picky viewer: does every action make physical sense (tools hit with their edge, nothing passes through

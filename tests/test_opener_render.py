@@ -410,6 +410,38 @@ def test_model_swaps_dont_use_up_fix_rounds():
         assert e.runs() == 3, e.runs()  # all three renders still happen after the swap
 
 
+
+def test_review_knows_about_people():
+    """Final review: the AI review was still told "There are no people in these animations" on people plans."""
+    with Env() as e:
+        saved = _people_files(e, present=True)
+        p = copy.deepcopy(PERSON)
+        p["actors"][0]["prop"] = "axe"
+        try:
+            opener_render.render_opener({"title": "Umbrella", "opener": p}, 3.0, e.work, e.exe)
+        finally:
+            config.PEOPLE_BLEND, config.PEOPLE_JSON = saved
+        assert e.reviews and "no people" not in e.reviews[-1] and "cartoon people" in e.reviews[-1], e.reviews[-1][:600]
+    with Env() as e:  # a plan with a cut still hears about the unseen hand
+        opener_render.render_opener(short(), 3.0, e.work, e.exe)
+        assert "unseen hand" in e.reviews[-1]
+
+
+def test_role_hat_is_optional():
+    """A role's hat (the king's crown) that no library has is left off; it can't be swapped by the planner."""
+    with Env() as e:
+        saved = _people_files(e, present=True)
+        blender_link.ping = lambda timeout=2.0: False
+        p = copy.deepcopy(PERSON)
+        p["actors"][0]["person"], p["actors"][0]["prop"] = "king", "axe"
+        try:
+            clip, why = opener_render.render_opener({"title": "King", "opener": p}, 3.0, e.work, e.exe)
+            job = json.loads(e.lastjob.read_text()) if e.lastjob.exists() else {}
+        finally:
+            config.PEOPLE_BLEND, config.PEOPLE_JSON = saved
+        assert why is None and "officer:hat" not in job.get("models", {}), (why, job.get("models"))
+
+
 if __name__ == "__main__":
     names = [n for n in sorted(globals()) if n.startswith("test_") and (len(sys.argv) < 2 or n in sys.argv[1:])]
     failed = 0
