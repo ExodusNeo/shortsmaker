@@ -22,8 +22,8 @@ PIECES = re.compile(r"^(\d+)-(\d+)$")
 DEFAULT_RULES = """Stage the story's strangest moment, the one its first line describes, as a 2-3 second animation.
 It is built from free low-poly library models (animals, objects, vehicles, food, tools, buildings, plants) and
 cartoon people by era and role (no faces, at most 3). Answer buildable false only for what even these can't show
-(a crowd, a city). Frame 0 must already show the subject and the threat (the raised tool, the drop, the wave); the
-first beat starts by 1.0 s."""
+(a crowd, a city). Name models plainly, as a free low-poly library titles them ("truck", "house", "rocks"). Frame
+0 must already show the subject and the threat (the raised tool, the drop, the wave); the first beat starts by 1.0 s."""
 
 FORMAT = """Reply with ONLY JSON: {"shorts": [{"index": 0, "buildable": true, "moment": "...",
 "set": {"ground": "dirt", "backdrop": [{"find": "red barn", "size_m": 8}], "light": "day"},

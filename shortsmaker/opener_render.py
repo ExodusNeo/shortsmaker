@@ -56,7 +56,7 @@ def resolve_models(plan: dict) -> tuple[dict, str | None]:
         if a.get("prop"):
             wanted.append((f"{a['id']}:prop", a["prop"], a.get("prop_size_m") or role["height_m"] / 2))
     wanted += [(f"backdrop:{i}", b["find"], b["size_m"]) for i, b in enumerate(plan["set"].get("backdrop") or [])]
-    models, online = {}, None
+    models, online, unfound = {}, None, []
     for key, find, size in wanted:
         blend = blender_link.in_library(find)
         if blend is None:
@@ -68,12 +68,15 @@ def resolve_models(plan: dict) -> tuple[dict, str | None]:
             except blender_link.LinkError as e:  # e.g. Poly Pizza switched off in the owner's open scene
                 return {}, f"model '{find}' could not be searched ({e})"
             hit = pick_model(find, hits)
-            if hit is None:
-                return {}, f"no fitting model for '{find}'"
+            if hit is None:  # every miss is named at once, so one fix round can replace them all
+                unfound.append(find)
+                continue
             blend, why = blender_link.fetch_model(hit, find, size)
             if blend is None:
                 return {}, f"model '{find}' could not be fetched ({why})"
         models[key] = str(blend)
+    if unfound:
+        return {}, "no fitting model for " + ", ".join(f"'{f}'" for f in unfound)
     return models, None
 
 
@@ -141,6 +144,17 @@ def render_opener(short: dict, seconds: float, work: Path, exe: Path | None = No
     for round_no in range(FIX_ROUNDS + 1):
         plan = scale_beats(short["opener"], seconds)
         models, why = resolve_models(plan)
+        if why and why.startswith("no fitting model for") and round_no < FIX_ROUNDS:
+            # back to the planner like any failure: the first people run lost its whole opener to a "ww2 armored
+            # car" no free library has (2026-10-27)
+            failures = [f"model: {why}; use a more common thing that reads the same (a truck for an armoured car) "
+                        "or leave it out"]
+            print(f"    try {round_no + 1} failed: {failures[0]}")
+            fixed = opener_plan.fix_plan(short, failures, seconds, plan)
+            if fixed is None:
+                return None, f"opener failed: {why} (the fix wasn't usable)"
+            short["opener"] = fixed
+            continue
         if why:
             return None, f"opener failed: {why}"
         short["opener_credits"] = list(dict.fromkeys(c for c in map(blender_link.credit, map(Path, models.values())) if c))

@@ -367,6 +367,35 @@ def test_person_job_has_library():
         assert "officer" not in job["models"] and job["models"]["officer:prop"].endswith(".blend"), job["models"]
 
 
+
+def test_unfound_model_goes_back_to_the_planner():
+    """The first people run (umbrella officer) asked for a "ww2 armored car" no free library has and lost the whole
+    opener: a model that can't be found goes back to the planner like any failure."""
+    with Env() as e:
+        blender_link.ping = lambda timeout=2.0: True
+        blender_link.search = lambda find: []  # nothing found for anything not in the library
+        s = short()
+        s["opener"]["actors"][1]["find"] = "ww2 armored car"
+        fixed = copy.deepcopy(PLAN)  # the planner swaps it for something the library has
+        opener_plan.fix_plan = lambda short, failures, seconds=None, scaled=None: e.fixes.append(list(failures)) or copy.deepcopy(fixed)
+        clip, why = opener_render.render_opener(s, 3.0, e.work, e.exe)
+        assert why is None and clip.exists(), why
+        assert e.fixes and "ww2 armored car" in e.fixes[0][0], e.fixes
+
+
+
+def test_every_unfound_model_named_at_once():
+    """Rounds went one missing model at a time (armoured car, then bricks, then a ruined house) and ran out: every
+    model no library has is named in the same round."""
+    with Env() as e:
+        blender_link.ping = lambda timeout=2.0: True
+        blender_link.search = lambda find: []
+        p = copy.deepcopy(PLAN)
+        p["actors"][1]["find"], p["set"]["backdrop"] = "ww2 armored car", [{"find": "ruined brick house", "size_m": 8}]
+        models, why = opener_render.resolve_models(p)
+        assert models == {} and "ww2 armored car" in why and "ruined brick house" in why, why
+
+
 if __name__ == "__main__":
     names = [n for n in sorted(globals()) if n.startswith("test_") and (len(sys.argv) < 2 or n in sys.argv[1:])]
     failed = 0

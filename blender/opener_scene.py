@@ -492,6 +492,7 @@ def main(job_path: str) -> None:
               "pieces": sum(len(p) for p, *_ in st.cuts),
               "cut_shares": {k: v for *_, s in st.cuts for k, v in s.items()}, "lowest": lowest,
               "highest": highest, "moved": moved, "swings": [p.name for p, _ in st.swings],
+              "held": {aid: people.held(o, st.people) for aid, o in st.objs.items() if o.get("prop")},
               "held_offscreen": held, "stroke_toward_camera": st.stroke_toward,
               "key_frames": []}
     times = retime(sc.frame_end, first_hit(st))

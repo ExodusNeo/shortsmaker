@@ -271,6 +271,19 @@ def test_toon_look_everywhere():
     assert len(set(first.resize((27, 48)).getdata())) > 5  # a real picture, not blank
 
 
+
+def test_prop_held_by_its_handle_clear_of_the_body():
+    """The first people run: an umbrella stood centred on the hand, its canopy round the officer's waist and through
+    his body. A long prop is held by its handle end, a blade raised, anything else (a cane, an umbrella) pointing down,
+    and clear of its owner."""
+    for name, points in (("axe", "up"), ("walking stick", "down")):
+        job = fixture("person_swing")
+        job["plan"]["actors"][0]["prop"] = name
+        report, _ = run(job)
+        held = report["held"]["knight"]
+        assert held["hand_gap"] < 0.06 and not held["through_body"] and held["points"] == points, (name, held)
+
+
 if __name__ == "__main__":
     names = [n for n in sorted(globals()) if n.startswith("test_") and (len(sys.argv) < 2 or n in sys.argv[1:])]
     failed = 0

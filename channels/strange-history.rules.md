@@ -169,8 +169,9 @@ One or two descriptive sentences, not a keyword list: the subject first with era
 ## Opener
 <!-- the planner stages scene 1 from this and the reviewer judges by it; add the owner's feedback here (2026-10-27) -->
 Stage the story's strangest moment, the one its first line describes, as a 2-3 second animation built from free
-low-poly library models (animals, objects, vehicles, food, tools, buildings, plants). It can't show people: if the
-moment needs a person on screen, answer buildable false and say why. Frame 0 must already show the subject and the
+low-poly library models (animals, objects, vehicles, food, tools, buildings, plants) and cartoon people by era
+and role (pick the closest role, or man / woman / child; no faces; at most 3 people). Answer buildable false
+only for what even these can't show (a crowd, a city). Frame 0 must already show the subject and the
 threat (the raised tool, the drop, the wave); the first beat starts by 1.0 s.
 Accepted by the owner (never a problem):
 - Tools are swung by an unseen hand just off-screen; the handle may run off the edge of the frame.
@@ -182,6 +183,12 @@ Staging lessons from the live runs:
 - The camera follows the subject by itself once it moves.
 - Show an animal from its side (owner, 2026-10-27: "why can't it be the side of the chicken instead of the front"):
   camera.angle "side" and the animal facing "left" or "right". Facings and directions are as seen in the shot.
+- Name models plainly, the way a free low-poly library titles them: "truck", "house", "rocks", "tank",
+  not "ww2 armored car" or "ruined brick house" (the first people run lost its opener to names no library has).
+- Name a prop as it is held: "closed umbrella", "walking stick", "sword" (an "umbrella" came back open).
+- Two things that move toward each other (a person and a car) start far enough apart to stop short; a person
+  can't stop a car, so the car stops, or it drives across the frame, not into them.
+- A person's prop (the umbrella, the sword) is in frame 0; people are seen from the side like animals.
 - Walks and hops go across the frame ("left" or "right"), not "away" or "camera": walking away shows its back.
 - A piece that flies off flies the way the animal faces; the body then hops and walks the other way, or it
   walks over its own head.

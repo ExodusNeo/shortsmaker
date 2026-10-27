@@ -71,6 +71,71 @@ def _attach(item, arm, bone: str, at: Vector) -> None:
     con.inverse_matrix = Matrix.LocRotScale(loc, rot, Vector((1, 1, 1))).inverted()
 
 
+def _is_blade(find: str) -> bool:
+    return any(f" {k} " in f" {find.lower()} " for k in kit.TABLES["tools"])
+
+
+GRIP_ZONE = 0.08  # the part of a prop this close to its grip is in the hand and may touch it
+
+
+def _through(prop, body_tree, grip: Vector) -> bool:
+    """Does the prop, apart from the bit in the hand, go through its owner?"""
+    from mathutils.bvhtree import BVHTree
+    pts = [prop.matrix_world @ v.co for v in prop.data.vertices]
+    faces = [p.vertices[:] for p in prop.data.polygons if all((pts[i] - grip).length > GRIP_ZONE for i in p.vertices)]
+    return bool(faces) and bool(BVHTree.FromPolygons(pts, faces).overlap(body_tree))
+
+
+def _hold(prop, body, hand: Vector, blade: bool, turn: float = 0.0) -> bool:
+    """The prop held by its handle end in the hand: a blade raised up and forward, anything else (a cane, a closed
+    umbrella) pointing down and forward, turned `turn` about its length; tilted out from the body (the handle kept
+    in the hand) until it clears its owner, slid out only if tilting isn't enough (the first people run stood an
+    umbrella on the hand, its canopy through the officer's waist). True when it clears."""
+    import moves
+    out = hand - Vector((body.location.x, body.location.y, hand.z))
+    out.z = 0
+    out = out.normalized() if out.length > 1e-4 else Vector((0, 0, 0))
+    body_tree = kit.tree(body)
+    dims = sorted(prop.dimensions)
+    if dims[2] < 1.8 * dims[1]:  # not a long thing (a box, a bag): carried, centred on the hand, out from the body
+        mid = sum((v.co for v in prop.data.vertices), Vector()) / len(prop.data.vertices)
+        prop["grip"] = mid[:]
+        for k in range(16):
+            prop.rotation_euler, prop.location = (0, 0, 0), hand + out * (0.02 * k) - mid
+            bpy.context.view_layer.update()
+            if not _through(prop, body_tree, hand + out * (0.02 * k)):
+                return True
+        return False
+    _, _, long = moves.tool_axes(prop)
+    forward = kit.facing_vec(body)
+    aim = (Vector((0, 0, 1)) + 0.35 * forward if blade else Vector((0, 0, -1)) + 0.35 * forward).normalized()
+    grip = moves.handle_end_local(prop)
+    prop["grip"] = grip[:]
+    tilts = sorted(((0.15 * a, 0.25 * b) for a in range(9) for b in range(5)), key=lambda t: t[0] + t[1])
+    for (tilt, lean), slide in [(t, 0.0) for t in tilts] + [((1.2, 1.0), 0.02 * k) for k in range(1, 11)]:
+        r = long.rotation_difference((aim + out * tilt + forward * lean).normalized()).to_matrix()             @ Matrix.Rotation(turn, 3, long)
+        prop.rotation_euler = r.to_euler()
+        prop.location = hand + out * slide - r @ grip
+        bpy.context.view_layer.update()
+        if not _through(prop, body_tree, hand + out * slide):
+            return True
+    return False
+
+
+def held(body, lib: dict) -> dict:
+    """How a person holds their prop at frame 1, for the report: the handle's gap to the hand, whether the prop cuts
+    through its owner, which way it points."""
+    import moves
+    prop = bpy.data.objects[body["prop"]]
+    arm = bpy.data.objects[body["rig"]]
+    bpy.context.scene.frame_set(1)
+    hand = arm.matrix_world @ arm.pose.bones[lib["bones"]["hand_r"]].tail
+    grip = prop.matrix_world @ Vector(prop["grip"])
+    tip = max((prop.matrix_world @ v.co for v in prop.data.vertices), key=lambda p: (p - grip).length)
+    return {"hand_gap": round((grip - hand).length, 4), "through_body": _through(prop, kit.tree(body), grip),
+            "points": "up" if tip.z > grip.z else "down"}
+
+
 def dress(actor: dict, role: dict, lib: dict, models: dict) -> bpy.types.Object:
     """The person as one mesh (origin at the feet, facing as planned, the role's height and colours), its armature
     under it, hat on the head bone and prop in the right hand. Returns the mesh."""
@@ -119,7 +184,9 @@ def dress(actor: dict, role: dict, lib: dict, models: dict) -> bpy.types.Object:
     if models.get(f"{actor['id']}:prop") and "hand_r" in pose:
         prop = kit.load_model(models[f"{actor['id']}:prop"], f"{actor['id']}.prop")
         kit.fit(prop, actor.get("prop_size_m") or PROP_SHARE * role["height_m"], "camera", view=False)
-        _attach(prop, arm, lib["bones"]["hand_r"], pose["hand_r"][1])
+        _hold(prop, mesh, pose["hand_r"][1], _is_blade(actor.get("prop", "")))
+        prop["hand"] = pose["hand_r"][1][:]  # where the hand is at rest: a swing holds the blade again from here
+        _attach(prop, arm, lib["bones"]["hand_r"], prop.location.copy())
         mesh["prop"] = prop.name
     mesh["facing"], mesh["person"], mesh["rig"] = actor.get("facing", "camera"), actor["person"], arm.name
     return mesh
@@ -235,20 +302,24 @@ def _bake_free(item, last: int) -> None:
     sc.frame_set(1)
 
 
-def _show_blade(prop, st, frame: int) -> None:
-    """Turn the blade about its own length so the camera sees its flat side at the height of the swing."""
+def _show_blade(prop, st, frame: int, body) -> None:
+    """Hold the blade turned about its length so the camera sees its flat side at the height of the swing: each
+    turn is held again (tilted clear of the owner), and the clear one showing the most face is kept."""
     import moves
     sc = bpy.context.scene
-    sc.frame_set(frame)
-    _, thin, long = moves.tool_axes(prop)
+    _, thin, _ = moves.tool_axes(prop)
+    hand = Vector(prop["hand"])
     best = None
     for k in range(12):
         t = math.radians(15 * k)
-        normal = (prop.matrix_world.to_3x3() @ (Matrix.Rotation(t, 3, long) @ thin)).normalized()
-        score = abs(normal.dot(st.cam_h))
-        if best is None or score > best[0]:
-            best = (score, t)
-    prop.rotation_euler = (prop.rotation_euler.to_matrix() @ Matrix.Rotation(best[1], 3, long)).to_euler()
+        if not _hold(prop, body, hand, True, turn=t):
+            continue
+        sc.frame_set(frame)
+        face = abs((prop.matrix_world.to_3x3() @ thin).normalized().dot(st.cam_h))
+        sc.frame_set(1)
+        if best is None or face > best[0]:
+            best = (face, t)
+    _hold(prop, body, hand, True, turn=best[1] if best else 0.0)
     sc.frame_set(1)
 
 
@@ -265,7 +336,7 @@ def prop_move(beat: dict, st, o, strip) -> None:
     if beat["move"] == "swing_prop":
         mid = (start + end) // 2
         if any(f" {k} " in f" {actor.get('prop', '').lower()} " for k in kit.TABLES["tools"]):
-            _show_blade(prop, st, mid)
+            _show_blade(prop, st, mid, o)
             st.swings.append((prop, mid))
         return
     let_go = start + round(0.45 * (end - start)) if beat["move"] == "throw_prop" else start
