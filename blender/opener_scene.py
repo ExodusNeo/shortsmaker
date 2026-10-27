@@ -193,9 +193,17 @@ def dress_set(plan: dict, st: moves.State) -> None:
 def place_actors(plan: dict, models: dict, st: moves.State, lib: dict | None = None) -> None:
     tools = {b["tool"] for b in plan["beats"] if b["move"] == "cut"}
     frames = set(range(1, bpy.context.scene.frame_end + 1))
+    # a person walking off to a side already faces it and has the open ground ahead: the umbrella officer, planned
+    # facing right and walking left into a rock 1 m away, spun round and froze mid-stride for 2.5 s (owner 2026-10-27)
+    travel = {k for k, m in kit.TABLES["people_moves"].items() if m["kind"] == "travel"}
+    heading = {}
+    for b in sorted(plan["beats"], key=lambda b: b["at"]):
+        if b["move"] in travel and b.get("toward") in ("left", "right"):
+            heading.setdefault(b["actor"], b["toward"])
     for a in plan["actors"]:
         if "person" in a:  # people (part 2): dressed from the library; their hat and prop may touch them
-            o = people.dress(a, kit.TABLES["roles"][a["person"]], lib, models)
+            o = people.dress({**a, "facing": heading.get(a["id"], a.get("facing", "camera"))},
+                             kit.TABLES["roles"][a["person"]], lib, models)
             for item in (o.get("hat"), o.get("prop")):
                 if item:
                     st.allow(o, bpy.data.objects[item], frames)
@@ -222,6 +230,15 @@ def place_actors(plan: dict, models: dict, st: moves.State, lib: dict | None = N
         # holds both big (side by side across it, the officer beside a car shrank to 8% of the height)
         o.location = kit.view(Vector((0.5 * side, 0.85 * abs(side), 0)) if aid in linked and k else Vector((side, 0, 0)))
         x += width / 2 + (1.5 if aid in linked or (k + 1 < len(on_ground) and on_ground[k + 1] in linked) else 0.3)
+    for walker, way in heading.items():  # what stands in the walker's way goes behind them instead
+        if walker not in on_ground:
+            continue
+        ahead = kit.view(moves.TOWARD[way])
+        w = st.objs[walker].location
+        for aid in on_ground:
+            o = st.objs[aid]
+            if aid != walker and aid not in linked and (o.location - w).dot(ahead) > 0:
+                o.location -= 2 * (o.location - w).dot(ahead) * ahead
     placed: set = set(on_ground) | tools
     while len(placed) < len(plan["actors"]):
         before = len(placed)

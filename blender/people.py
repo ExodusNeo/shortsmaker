@@ -90,6 +90,36 @@ def _through(prop, body_tree, grip: Vector) -> bool:
     return bool(faces) and bool(BVHTree.FromPolygons(pts, faces).overlap(body_tree))
 
 
+def _body_tree(body) -> "BVHTree":
+    """The owner's body without the hand that holds the prop: a cartoon fist wraps more than GRIP_ZONE of an umbrella,
+    and with every hold 'through' it the umbrella slid 0.2 m off the hand (owner 2026-10-27)."""
+    from mathutils.bvhtree import BVHTree
+    g = body.vertex_groups.get(body.get("hand_bone", ""))
+    if g is None:
+        return kit.tree(body)
+    fist = {v.index for v in body.data.vertices if any(x.group == g.index and x.weight > 0.5 for x in v.groups)}
+    ev = body.evaluated_get(bpy.context.evaluated_depsgraph_get())
+    me = ev.to_mesh()
+    t = BVHTree.FromPolygons([ev.matrix_world @ v.co for v in me.vertices],
+                             [p.vertices[:] for p in me.polygons if not fist.intersection(p.vertices)])
+    ev.to_mesh_clear()
+    return t
+
+
+def _handle_first(prop, long: Vector) -> Vector:
+    """`long` turned to run from a cane's or umbrella's handle to its tip: the handle is the wider of its two ends (a
+    crook, a knob), the tip a point. The blade rule (hold the end away from the wide half) put the umbrella officer's
+    hand on the ferrule, the canopy being the wide half (owner 2026-10-27)."""
+    vs = [v.co for v in prop.data.vertices]
+    along = [v.dot(long) for v in vs]
+    lo, hi = min(along), max(along)
+
+    def width(end: float) -> float:
+        pts = [v - long * t for v, t in zip(vs, along) if abs(t - end) <= 0.1 * (hi - lo)]
+        return max(((p - q).length for p in pts for q in pts), default=0.0)
+    return long if width(lo) >= width(hi) else -long
+
+
 def _hold(prop, body, hand: Vector, blade: bool, turn: float = 0.0) -> bool:
     """The prop held by its handle end in the hand: a blade raised up and forward, anything else (a cane, a closed
     umbrella) pointing down and forward, turned `turn` about its length; tilted out from the body (the handle kept
@@ -99,7 +129,7 @@ def _hold(prop, body, hand: Vector, blade: bool, turn: float = 0.0) -> bool:
     out = hand - Vector((body.location.x, body.location.y, hand.z))
     out.z = 0
     out = out.normalized() if out.length > 1e-4 else Vector((0, 0, 0))
-    body_tree = kit.tree(body)
+    body_tree = _body_tree(body)
     dims = sorted(prop.dimensions)
     if dims[2] < 1.8 * dims[1]:  # not a long thing (a box, a bag): carried, centred on the hand, out from the body
         mid = sum((v.co for v in prop.data.vertices), Vector()) / len(prop.data.vertices)
@@ -111,9 +141,11 @@ def _hold(prop, body, hand: Vector, blade: bool, turn: float = 0.0) -> bool:
                 return True
         return False
     _, _, long = moves.tool_axes(prop)
+    if not blade:
+        long = _handle_first(prop, long)
     forward = kit.facing_vec(body)
     aim = (Vector((0, 0, 1)) + 0.35 * forward if blade else Vector((0, 0, -1)) + 0.35 * forward).normalized()
-    grip = moves.handle_end_local(prop)
+    grip = min((v.co for v in prop.data.vertices), key=lambda v: v.dot(long)).copy()
     prop["grip"] = grip[:]
     # forward lean up to near level: a 0.9 m closed umbrella held down from a 0.75 m hand hit the ground
     tilts = sorted(((0.15 * a, 0.25 * b) for a in range(9) for b in range(17)), key=lambda t: t[0] + t[1])
@@ -138,7 +170,7 @@ def held(body, lib: dict) -> dict:
     hand = arm.matrix_world @ arm.pose.bones[lib["bones"]["hand_r"]].head
     grip = prop.matrix_world @ Vector(prop["grip"])
     tip = max((prop.matrix_world @ v.co for v in prop.data.vertices), key=lambda p: (p - grip).length)
-    return {"hand_gap": round((grip - hand).length, 4), "through_body": _through(prop, kit.tree(body), grip),
+    return {"hand_gap": round((grip - hand).length, 4), "through_body": _through(prop, _body_tree(body), grip),
             "lowest": round(min((prop.matrix_world @ v.co).z for v in prop.data.vertices) - body.location.z, 4),
             "points": "up" if tip.z > grip.z else "down"}
 
@@ -179,6 +211,16 @@ def dress(actor: dict, role: dict, lib: dict, models: dict) -> bpy.types.Object:
     mod = next((m for m in mesh.modifiers if m.type == "ARMATURE"), None) or mesh.modifiers.new("rig", "ARMATURE")
     mod.object = arm
     mesh.name, arm.name = actor["id"], f"{actor['id']}.rig"
+    arm["size"] = s  # the clips' location keys are scaled by this too (_clip)
+    # the legs follow the feet: the clips key the Foot bones and leave the legs to an IK the export dropped, so a
+    # walking officer's feet stretched into spikes off rigid shins (owner 2026-10-27)
+    for side in "LR":
+        shin, foot, pole = (arm.pose.bones.get(f"{n}.{side}") for n in ("LowerLeg", "Foot", "PoleTarget"))
+        if shin and foot and not any(c.type == "IK" for c in shin.constraints):
+            ik = shin.constraints.new("IK")
+            ik.target, ik.subtarget, ik.chain_count = arm, foot.name, 2
+            if pole:
+                ik.pole_target, ik.pole_subtarget = arm, pole.name
     _colour(mesh, role.get("colours", {}))
     vl.update()
     pose = {b: (arm.matrix_world @ arm.pose.bones[n].head, arm.matrix_world @ arm.pose.bones[n].tail)
@@ -191,9 +233,17 @@ def dress(actor: dict, role: dict, lib: dict, models: dict) -> bpy.types.Object:
         mesh["hat"] = hat.name
     if models.get(f"{actor['id']}:prop") and "hand_r" in pose:
         prop = kit.load_model(models[f"{actor['id']}:prop"], f"{actor['id']}.prop")
-        kit.fit(prop, actor.get("prop_size_m") or PROP_SHARE * role["height_m"], "camera", view=False)
-        # the hand is the fist bone's head: the importer guesses bone tails, and the Fist tail sat at knee height
-        _hold(prop, mesh, pose["hand_r"][0], _is_blade(actor.get("prop", "")))
+        size = actor.get("prop_size_m") or PROP_SHARE * role["height_m"]
+        kit.fit(prop, size, "camera", view=False)
+        blade = _is_blade(actor.get("prop", ""))
+        mesh["hand_bone"] = lib["bones"]["hand_r"]
+        # the hand is the fist bone's head: the importer guesses bone tails, and the Fist tail sat at knee height.
+        # The biggest prop the hand holds clear of its owner and the ground: the planned 0.9 m umbrella from a 0.5 m
+        # hand floated 0.2 m off it, and a cap at the hand's height left it too small (owner 2026-10-27)
+        for k in range(8):
+            if _hold(prop, mesh, pose["hand_r"][0], blade) or k == 7:
+                break
+            kit.fit(prop, size * 0.9 ** (k + 1), "camera", view=False)
         prop["hand"] = pose["hand_r"][0][:]  # where the hand is at rest: a swing holds the blade again from here
         _attach(prop, arm, lib["bones"]["hand_r"], prop.location.copy())
         mesh["prop"] = prop.name
@@ -201,10 +251,30 @@ def dress(actor: dict, role: dict, lib: dict, models: dict) -> bpy.types.Object:
     return mesh
 
 
+def _clip(lib: dict, clip: str, arm):
+    """The clip at this person's size: its location keys (the feet the leg IK follows, the hips' bob) are in the
+    library rig's units, and on a rig scaled to 1.8 m every step reached 1.8x too far, the legs locked straight in
+    a split and the feet slid (owner 2026-10-27). One copy per clip and size."""
+    s = arm.get("size", 1.0)
+    key = (clip, round(s, 4))
+    scaled = lib.setdefault("scaled", {})
+    if key not in scaled:
+        act = lib["actions"][clip].copy()
+        for fc in kit.fcurves_of(act):
+            if fc.data_path.endswith(".location"):
+                for k in fc.keyframe_points:
+                    k.co[1] *= s
+                    k.handle_left[1] *= s
+                    k.handle_right[1] *= s
+                fc.update()
+        scaled[key] = act
+    return scaled[key]
+
+
 def _strip(arm, lib: dict, clip: str, start: int, repeat: float = 1.0):
     """The clip on its own NLA track from `start`, held after it ends, blended in over 4 frames."""
     track = arm.animation_data.nla_tracks.new()
-    strip = track.strips.new(clip, start, lib["actions"][clip])
+    strip = track.strips.new(clip, start, _clip(lib, clip, arm))
     strip.repeat = max(repeat, 0.05)
     strip.extrapolation = "HOLD_FORWARD"
     strip.blend_in = min(4.0, (strip.frame_end - strip.frame_start) / 2)
@@ -218,7 +288,7 @@ def idle(o, lib: dict) -> None:
     if "Idle" in lib["actions"]:
         frames = bpy.context.scene.frame_end
         track = arm.animation_data.nla_tracks.new()
-        strip = track.strips.new("Idle", 1, lib["actions"]["Idle"])
+        strip = track.strips.new("Idle", 1, _clip(lib, "Idle", arm))
         strip.repeat = frames / max(lib["clips"]["Idle"]["frames"], 1) + 1
         strip.extrapolation = "HOLD"
 
@@ -282,8 +352,10 @@ def move(beat: dict, st, lib: dict) -> None:
         reach = max(0.0, ahead(kit.world_verts(prop)) - ahead(kit.world_verts(o)))
     stride = info["stride_m"] * role["height_m"] / lib["rig_height"]
     reach += 0.3 * stride  # a step swings the leading foot and arm this far ahead of the standing pose
-    room = max(0.0, moves.clear_distance_at_end(o, d, obstacles, want, sc.frame_end) * moves.share_of_gap(st, beat)
-               - 0.04 - reach)
+    # looked for out to the margin past the walk, so open ground isn't cut short by it (the umbrella officer stopped
+    # 0.4 s early with nothing ahead, owner 2026-10-27)
+    clear = moves.clear_distance_at_end(o, d, obstacles, want + 0.04 + reach, sc.frame_end) * moves.share_of_gap(st, beat)
+    room = min(want, max(0.0, clear - 0.04 - reach))
     o.location, o.rotation_euler = keep_loc, keep_rot
     bpy.context.view_layer.update()
     stop = min(sc.frame_end, f0 + round(room / speed * st.fps)) if speed > 0 else f0
