@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[A drawn Short's picture choices none (Blender draws every scene).]] - `rationale_for` [EXTRACTED]
-- [[render()_3]] - `calls` [EXTRACTED]
+- [[render()_2]] - `calls` [EXTRACTED]
 - [[short_render.py]] - `contains` [EXTRACTED]
 - [[test_drawn_choices_have_no_pictures()]] - `calls` [EXTRACTED]
 

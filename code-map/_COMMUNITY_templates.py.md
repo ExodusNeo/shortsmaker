@@ -8,7 +8,7 @@ members: 28
 **Members:** 28 nodes
 
 ## Members
-- [[dot-__init__()_3]] - code - blender/templates.py
+- [[dot-__init__()_4]] - code - blender/templates.py
 - [[dot-add()]] - code - blender/templates.py
 - [[dot-center()]] - code - blender/templates.py
 - [[dot-node()]] - code - blender/templates.py
@@ -19,7 +19,7 @@ members: 28
 - [[Deck on deep plate girders (four lines of them), spliced at every panel point.]] - rationale - blender/templates.py
 - [[Suspension or eyebar-chain bridge towers at the piers, a main cable (or a…]] - rationale - blender/templates.py
 - [[The deck's two edge girders (named like truss bottom chords) with splice plates…]] - rationale - blender/templates.py
-- [[Vector_2]] - code
+- [[Vector_1]] - code
 - [[What a template built parts by name and stage, the spans' x ranges, and the…]] - rationale - blender/templates.py
 - [[What the plan says was on the bridge rails on a rail deck, cars or a train for…]] - rationale - blender/templates.py
 - [[_edge_girders()]] - code - blender/templates.py
@@ -28,7 +28,7 @@ members: 28
 - [[_sag_points()]] - code - blender/templates.py
 - [[_towers()]] - code - blender/templates.py
 - [[_truss_panel_members()]] - code - blender/templates.py
-- [[build()_1]] - code - blender/templates.py
+- [[build()]] - code - blender/templates.py
 - [[cable_stayed_bridge()]] - code - blender/templates.py
 - [[dress()]] - code - blender/templates.py
 - [[eyebar_chain_bridge()]] - code - blender/templates.py
@@ -47,12 +47,10 @@ SORT file.name ASC
 ## Connections to other communities
 - 19 edges to [[_COMMUNITY_parts.py]]
 - 4 edges to [[_COMMUNITY_main]]
-- 1 edge to [[_COMMUNITY_build_scene.py]]
-- 1 edge to [[_COMMUNITY_look.py]]
-- 1 edge to [[_COMMUNITY_opener_check_cases.py]]
+- 3 edges to [[_COMMUNITY_build_scene.py]]
 
 ## Top bridge nodes
-- [[templates.py]] - degree 20, connects to 5 communities
+- [[templates.py]] - degree 20, connects to 3 communities
 - [[dress()]] - degree 10, connects to 2 communities
 - [[Bridge]] - degree 20, connects to 1 community
 - [[_hung_deck()]] - degree 16, connects to 1 community

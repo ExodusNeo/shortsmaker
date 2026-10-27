@@ -1,20 +1,20 @@
 ---
 source_file: "blender/moves.py"
 type: "code"
-community: "moves.py"
-location: "L397"
+community: "Vector"
+location: "L411"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/movespy
+  - community/Vector
 ---
 
 # pick_island()
 
 ## Connections
-- [[Vector_4]] - `references` [EXTRACTED]
+- [[Vector_3]] - `references` [EXTRACTED]
 - [[centre()]] - `calls` [EXTRACTED]
 - [[moves.py]] - `contains` [EXTRACTED]
 - [[split()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/movespy
+#graphify/code #graphify/EXTRACTED #community/Vector

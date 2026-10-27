@@ -1,17 +1,17 @@
 ---
-source_file: "blender/scene_kit.py"
+source_file: "blender/opener_scene.py"
 type: "rationale"
 community: "opener_scene.py"
-location: "L122"
+location: "L259"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
   - community/opener_scenepy
 ---
 
-# Largest side = size_m, turned so its front (-Y) faces `facing`; transforms…
+# k colours of obj's surface around `near`, read from its texture where it has…
 
 ## Connections
-- [[fit()]] - `rationale_for` [EXTRACTED]
+- [[feather_colours()]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/opener_scenepy

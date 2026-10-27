@@ -1,12 +1,12 @@
 ---
 source_file: "blender/moves.py"
 type: "rationale"
-community: "scene_kit.py"
-location: "L223"
+community: "moves.py"
+location: "L232"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/scene_kitpy
+  - community/movespy
 ---
 
 # The actor moves at the target until they touch; from that frame physics carries…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[push()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/scene_kitpy
+#graphify/rationale #graphify/EXTRACTED #community/movespy

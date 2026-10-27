@@ -1,20 +1,20 @@
 ---
-source_file: "tests/render_style.py"
+source_file: "blender/templates.py"
 type: "code"
-community: "style_library"
-location: "L19"
+community: "templates.py"
+location: "L207"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/style_library
+  - community/templatespy
 ---
 
 # build()
 
 ## Connections
-- [[add()]] - `contains` [EXTRACTED]
-- [[main()_1]] - `calls` [EXTRACTED]
-- [[render_style.py]] - `contains` [EXTRACTED]
-- [[style_library()]] - `calls` [EXTRACTED]
+- [[Bridge]] - `references` [EXTRACTED]
+- [[main()_3]] - `calls` [EXTRACTED]
+- [[templates.py]] - `contains` [EXTRACTED]
+- [[truss_bridge()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/style_library
+#graphify/code #graphify/EXTRACTED #community/templatespy

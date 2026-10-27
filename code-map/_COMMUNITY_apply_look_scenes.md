@@ -20,7 +20,7 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 1 edge to [[_COMMUNITY_test_pictures_first.py]]
+- 1 edge to [[_COMMUNITY_choose_images]]
 - 1 edge to [[_COMMUNITY_shutil]]
 - 1 edge to [[_COMMUNITY_test_style.py]]
 

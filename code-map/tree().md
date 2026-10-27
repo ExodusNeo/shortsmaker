@@ -1,12 +1,12 @@
 ---
 source_file: "blender/scene_kit.py"
 type: "code"
-community: "tree"
-location: "L36"
+community: "travel"
+location: "L43"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/tree
+  - community/travel
 ---
 
 # tree()
@@ -18,6 +18,6 @@ tags:
 - [[scene_kit.py]] - `contains` [EXTRACTED]
 - [[stand_on()]] - `calls` [EXTRACTED]
 - [[surface_z()]] - `calls` [EXTRACTED]
-- [[travel()_1]] - `calls` [EXTRACTED]
+- [[travel()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/tree
+#graphify/code #graphify/EXTRACTED #community/travel

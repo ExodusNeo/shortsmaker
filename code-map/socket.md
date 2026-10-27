@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "call"
+community: "test_blender_link.py"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/call
+  - community/test_blender_linkpy
 ---
 
 # socket
@@ -14,4 +14,4 @@ tags:
 - [[blender_link.py]] - `imports` [EXTRACTED]
 - [[call()_1]] - `calls` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/call
+#graphify/concept #graphify/EXTRACTED #community/test_blender_linkpy

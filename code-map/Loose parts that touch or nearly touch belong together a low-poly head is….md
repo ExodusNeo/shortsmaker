@@ -1,12 +1,12 @@
 ---
 source_file: "blender/moves.py"
 type: "rationale"
-community: "moves.py"
-location: "L376"
+community: "Vector"
+location: "L390"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/movespy
+  - community/Vector
 ---
 
 # Loose parts that touch or nearly touch belong together: a low-poly head is…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[clusters()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/movespy
+#graphify/rationale #graphify/EXTRACTED #community/Vector

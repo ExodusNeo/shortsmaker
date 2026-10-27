@@ -1,12 +1,12 @@
 ---
 source_file: "blender/opener_scene.py"
 type: "rationale"
-community: "tree"
-location: "L130"
+community: "opener_scene.py"
+location: "L142"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/tree
+  - community/opener_scenepy
 ---
 
 # Where o stands on top of sup: of spots on its top, the one where o's whole…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[stand_on()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/tree
+#graphify/rationale #graphify/EXTRACTED #community/opener_scenepy

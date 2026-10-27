@@ -1,23 +1,23 @@
 ---
 source_file: "blender/scene_kit.py"
 type: "code"
-community: "tree"
-location: "L21"
+community: "travel"
+location: "L28"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/tree
+  - community/travel
 ---
 
 # world_verts()
 
 ## Connections
-- [[Vector_6]] - `references` [EXTRACTED]
+- [[Vector_5]] - `references` [EXTRACTED]
 - [[bbox()]] - `calls` [EXTRACTED]
 - [[clear_distance()]] - `calls` [EXTRACTED]
 - [[cut()]] - `calls` [EXTRACTED]
 - [[main()_5]] - `calls` [EXTRACTED]
 - [[scene_kit.py]] - `contains` [EXTRACTED]
-- [[travel()_1]] - `calls` [EXTRACTED]
+- [[travel()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/tree
+#graphify/code #graphify/EXTRACTED #community/travel

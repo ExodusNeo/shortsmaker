@@ -33,7 +33,7 @@ members: 39
 - [[layoutColumn()]] - code - remotion/src/full/guarded.tsx
 - [[layoutGrid()]] - code - remotion/src/full/guarded.tsx
 - [[layoutRow()]] - code - remotion/src/full/guarded.tsx
-- [[ok()_1]] - code - tests/guarded.test.ts
+- [[ok()]] - code - tests/guarded.test.ts
 - [[photoBox()]] - code - remotion/src/full/guarded.tsx
 - [[port()]] - code - remotion/src/full/guarded.tsx
 - [[range()]] - code - remotion/src/full/guarded.tsx
@@ -46,7 +46,7 @@ members: 39
 - [[remotion_src_full_toolkit_travel]] - concept
 - [[routeArrow()]] - code - remotion/src/full/guarded.tsx
 - [[test()]] - code - tests/guarded.test.ts
-- [[travel()]] - code - remotion/src/full/guarded.tsx
+- [[travel()_1]] - code - remotion/src/full/guarded.tsx
 
 ## Live Query (requires Dataview plugin)
 

@@ -1,11 +1,11 @@
 ---
 type: community
-members: 25
+members: 24
 ---
 
 # invent_component
 
-**Members:** 25 nodes
+**Members:** 24 nodes
 
 ## Members
 - [[(props, start, end) of a small preview where an invention is used its scene,…]] - rationale - shortsmaker/style_lab.py
@@ -13,9 +13,10 @@ members: 25
 - [[Rule breaks a compiler can't see in an AI-invented style component (see…]] - rationale - shortsmaker/style_lab.py
 - [[Runs fn() with ask_ai answering `codes` in turn, tsc_check returning `tsc`, and…]] - rationale - tests/test_style.py
 - [[The AI invents a new style component (`spec` = {title, brief, fallback}) for…]] - rationale - shortsmaker/style_lab.py
+- [[The code from an AI reply (code fences removed); None unless it exports the…]] - rationale - shortsmaker/style_lab.py
 - [[The empty invention slots (remotionsrcstyleplaceholders.json), by slot name.]] - rationale - shortsmaker/style_lab.py
-- [[The rules every invented component of `kind` follows, with the library's…]] - rationale - shortsmaker/style_lab.py
 - [[attempt()]] - code - shortsmaker/style_lab.py
+- [[clean_style_code()]] - code - shortsmaker/style_lab.py
 - [[invent_component()]] - code - shortsmaker/style_lab.py
 - [[lint_style_code()]] - code - shortsmaker/style_lab.py
 - [[restore_style_slots()]] - code - shortsmaker/style_lab.py
@@ -23,8 +24,6 @@ members: 25
 - [[run()_1]] - code - tests/test_style.py
 - [[style_placeholders()]] - code - shortsmaker/style_lab.py
 - [[style_preview()]] - code - shortsmaker/style_lab.py
-- [[style_rules()]] - code - shortsmaker/style_lab.py
-- [[test_candidate_names_unique_across_kinds()]] - code - tests/test_style.py
 - [[test_failed_invention_keeps_the_others()]] - code - tests/test_style.py
 - [[test_good_look_check_skips_the_extra_compile()]] - code - tests/test_style.py
 - [[test_invention_compile_failure_uses_fallback()]] - code - tests/test_style.py
@@ -42,18 +41,20 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 10 edges to [[_COMMUNITY_shutil]]
-- 10 edges to [[_COMMUNITY_test_style.py]]
+- 8 edges to [[_COMMUNITY_shutil]]
+- 8 edges to [[_COMMUNITY_test_style.py]]
 - 3 edges to [[_COMMUNITY_render_remotion]]
 - 2 edges to [[_COMMUNITY_re]]
 - 2 edges to [[_COMMUNITY_json]]
 - 2 edges to [[_COMMUNITY_owner]]
+- 1 edge to [[_COMMUNITY_motion.py]]
 - 1 edge to [[_COMMUNITY_style_library]]
 - 1 edge to [[_COMMUNITY_ask_ai]]
+- 1 edge to [[_COMMUNITY_candidate_in]]
 
 ## Top bridge nodes
-- [[invent_component()]] - degree 17, connects to 5 communities
-- [[style_placeholders()]] - degree 10, connects to 2 communities
+- [[invent_component()]] - degree 17, connects to 6 communities
+- [[style_placeholders()]] - degree 10, connects to 3 communities
 - [[restore_style_slots()]] - degree 8, connects to 2 communities
 - [[with_fakes()]] - degree 8, connects to 2 communities
 - [[lint_style_code()]] - degree 6, connects to 2 communities

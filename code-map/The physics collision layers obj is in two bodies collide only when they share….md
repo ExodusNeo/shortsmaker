@@ -1,12 +1,12 @@
 ---
 source_file: "blender/scene_kit.py"
 type: "rationale"
-community: "build_set"
-location: "L172"
+community: "scene_kit.py"
+location: "L181"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/build_set
+  - community/scene_kitpy
 ---
 
 # The physics collision layers obj is in: two bodies collide only when they share…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[layers()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/build_set
+#graphify/rationale #graphify/EXTRACTED #community/scene_kitpy

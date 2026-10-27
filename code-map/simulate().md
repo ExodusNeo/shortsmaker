@@ -2,7 +2,7 @@
 source_file: "blender/scene_kit.py"
 type: "code"
 community: "opener_scene.py"
-location: "L262"
+location: "L271"
 tags:
   - graphify/code
   - graphify/EXTRACTED

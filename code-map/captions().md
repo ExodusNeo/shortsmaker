@@ -18,7 +18,7 @@ tags:
 - [[ass_time()]] - `calls` [EXTRACTED]
 - [[audio_mix.py]] - `contains` [EXTRACTED]
 - [[caption_lines()]] - `calls` [EXTRACTED]
-- [[render()_3]] - `calls` [EXTRACTED]
+- [[render()_2]] - `calls` [EXTRACTED]
 - [[styled()]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/captions

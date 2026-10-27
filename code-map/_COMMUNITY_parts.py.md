@@ -16,7 +16,7 @@ members: 33
 - [[Object]] - code
 - [[The fasteners on a plate's outer face a grid of rivet heads or bolt heads, one…]] - rationale - blender/parts.py
 - [[The parts kit every piece a bridge is drawn from. Boxes and cylinders share…]] - rationale - blender/parts.py
-- [[Vector_1]] - code
+- [[Vector]] - code
 - [[_mesh()]] - code - blender/parts.py
 - [[_obj()]] - code - blender/parts.py
 - [[bbox_size()]] - code - blender/parts.py
@@ -51,14 +51,12 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 19 edges to [[_COMMUNITY_templates.py]]
+- 7 edges to [[_COMMUNITY_build_scene.py]]
 - 3 edges to [[_COMMUNITY_main]]
-- 3 edges to [[_COMMUNITY_look.py]]
-- 3 edges to [[_COMMUNITY_opener_check_cases.py]]
-- 2 edges to [[_COMMUNITY_scene_kit.py]]
-- 1 edge to [[_COMMUNITY_build_scene.py]]
+- 2 edges to [[_COMMUNITY_moves.py]]
 
 ## Top bridge nodes
-- [[parts.py]] - degree 30, connects to 5 communities
+- [[parts.py]] - degree 30, connects to 3 communities
 - [[material()]] - degree 7, connects to 2 communities
 - [[member()]] - degree 12, connects to 1 community
 - [[cylinder()]] - degree 8, connects to 1 community

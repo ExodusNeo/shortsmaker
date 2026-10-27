@@ -1,17 +1,17 @@
 ---
-source_file: "tests/guarded.test.ts"
+source_file: "tests/style.test.ts"
 type: "code"
-community: "guarded.tsx"
-location: "L16"
+community: "Short.tsx"
+location: "L17"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/guardedtsx
+  - community/Shorttsx
 ---
 
 # ok()
 
 ## Connections
-- [[guarded.test.ts]] - `contains` [EXTRACTED]
+- [[style.test.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/guardedtsx
+#graphify/code #graphify/EXTRACTED #community/Shorttsx

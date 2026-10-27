@@ -12,7 +12,7 @@ tags:
 # test_ping_on_off()
 
 ## Connections
-- [[ok()]] - `calls` [EXTRACTED]
+- [[ok()_2]] - `calls` [EXTRACTED]
 - [[ping()]] - `calls` [EXTRACTED]
 - [[test_blender_link.py]] - `contains` [EXTRACTED]
 - [[with_fake()]] - `references` [EXTRACTED]

@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_pictures_first.py"
 type: "code"
-community: "pool_of"
+community: "catalog_pool"
 location: "L161"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/pool_of
+  - community/catalog_pool
 ---
 
 # test_catalog_empty_pool_no_ai()
@@ -16,4 +16,4 @@ tags:
 - [[fake_ai]] - `calls` [EXTRACTED]
 - [[test_pictures_first.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/pool_of
+#graphify/code #graphify/EXTRACTED #community/catalog_pool

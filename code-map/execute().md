@@ -13,6 +13,6 @@ tags:
 
 ## Connections
 - [[_fetch_replies()]] - `indirect_call` [INFERRED]
-- [[ok()]] - `calls` [EXTRACTED]
+- [[ok()_2]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/test_blender_linkpy

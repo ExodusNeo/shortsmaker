@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/audio_mix.py"
 type: "code"
-community: "subprocess"
+community: "captions"
 location: "L362"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/subprocess
+  - community/captions
 ---
 
 # music_gain()
@@ -16,8 +16,8 @@ tags:
 - [[Volume factor that brings this track's loudness (first 60 s) to MUSIC_LUFS;…]] - `rationale_for` [EXTRACTED]
 - [[audio_mix.py]] - `contains` [EXTRACTED]
 - [[re]] - `calls` [EXTRACTED]
-- [[render()_3]] - `calls` [EXTRACTED]
+- [[render()_2]] - `calls` [EXTRACTED]
 - [[subprocess]] - `calls` [EXTRACTED]
 - [[test_music_gain_evens_out_tracks()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/subprocess
+#graphify/code #graphify/EXTRACTED #community/captions

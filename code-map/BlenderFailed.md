@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/blender_render.py"
 type: "code"
-community: "BlenderFailed"
+community: "test_blender_plan.py"
 location: "L18"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/BlenderFailed
+  - community/test_blender_planpy
 ---
 
 # BlenderFailed
@@ -17,4 +17,4 @@ tags:
 - [[blender_render.py]] - `contains` [EXTRACTED]
 - [[render_clips()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/BlenderFailed
+#graphify/code #graphify/EXTRACTED #community/test_blender_planpy

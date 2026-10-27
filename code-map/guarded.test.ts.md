@@ -23,9 +23,9 @@ tags:
 - [[layoutColumn()]] - `imports` [EXTRACTED]
 - [[layoutGrid()]] - `imports` [EXTRACTED]
 - [[layoutRow()]] - `imports` [EXTRACTED]
-- [[ok()_1]] - `contains` [EXTRACTED]
+- [[ok()]] - `contains` [EXTRACTED]
 - [[routeArrow()]] - `imports` [EXTRACTED]
 - [[test()]] - `contains` [EXTRACTED]
-- [[travel()]] - `imports` [EXTRACTED]
+- [[travel()_1]] - `imports` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/guardedtsx

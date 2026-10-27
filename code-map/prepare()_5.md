@@ -1,17 +1,18 @@
 ---
 source_file: "tests/test_pictures_first.py"
 type: "code"
-community: "pool_of"
-location: "L284"
+community: "test_pictures_first.py"
+location: "L238"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/pool_of
+  - community/test_pictures_firstpy
 ---
 
 # prepare()
 
 ## Connections
-- [[test_prompts_carry_picture_list()]] - `contains` [EXTRACTED]
+- [[passing()]] - `calls` [EXTRACTED]
+- [[test_weak_topic_swapped_for_backup()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/pool_of
+#graphify/code #graphify/EXTRACTED #community/test_pictures_firstpy

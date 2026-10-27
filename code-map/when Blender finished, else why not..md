@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/blender_render.py"
 type: "rationale"
-community: "test_blender_render.py"
+community: "test_blender_plan.py"
 location: "L52"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/test_blender_renderpy
+  - community/test_blender_planpy
 ---
 
 # when Blender finished, else why not.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[_run()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/test_blender_renderpy
+#graphify/rationale #graphify/EXTRACTED #community/test_blender_planpy

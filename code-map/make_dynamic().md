@@ -2,7 +2,7 @@
 source_file: "blender/scene_kit.py"
 type: "code"
 community: "scene_kit.py"
-location: "L239"
+location: "L248"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[Held by its keyframes until `release`, then moved by physics. A launch (ms)…]] - `rationale_for` [EXTRACTED]
-- [[Vector_6]] - `references` [EXTRACTED]
+- [[Vector_5]] - `references` [EXTRACTED]
 - [[add_body()]] - `calls` [EXTRACTED]
 - [[interpolation()]] - `calls` [EXTRACTED]
 - [[key_loc()]] - `calls` [EXTRACTED]

@@ -46,6 +46,7 @@ tags:
 - [[roll()]] - `contains` [EXTRACTED]
 - [[scatter()]] - `contains` [EXTRACTED]
 - [[scene_kit.py]] - `imports` [EXTRACTED]
+- [[show_face()]] - `contains` [EXTRACTED]
 - [[sink()]] - `contains` [EXTRACTED]
 - [[through_cut()]] - `contains` [EXTRACTED]
 - [[to_bm()]] - `contains` [EXTRACTED]
@@ -54,7 +55,7 @@ tags:
 - [[tool_rotation()]] - `contains` [EXTRACTED]
 - [[topple()]] - `contains` [EXTRACTED]
 - [[toward()]] - `contains` [EXTRACTED]
-- [[travel()_1]] - `contains` [EXTRACTED]
+- [[travel()]] - `contains` [EXTRACTED]
 - [[walk()]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/movespy

@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "moves.py"
+community: "cut"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/movespy
+  - community/cut
 ---
 
 # Object
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[to_object()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/movespy
+#graphify/code #graphify/EXTRACTED #community/cut

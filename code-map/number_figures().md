@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/plan_rules.py"
 type: "code"
-community: "words_of"
+community: "plan_rules.py"
 location: "L96"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/words_of
+  - community/plan_rulespy
 ---
 
 # number_figures()
@@ -18,4 +18,4 @@ tags:
 - [[plan_rules.py]] - `contains` [EXTRACTED]
 - [[test_number_scaling()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/words_of
+#graphify/code #graphify/EXTRACTED #community/plan_rulespy

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/logbook.py"
 type: "code"
-community: "re"
+community: "channel_profiles.py"
 location: "L84"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/re
+  - community/channel_profilespy
 ---
 
 # vault_refresh()
@@ -18,4 +18,4 @@ tags:
 - [[re]] - `calls` [EXTRACTED]
 - [[vault_page()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/re
+#graphify/code #graphify/EXTRACTED #community/channel_profilespy

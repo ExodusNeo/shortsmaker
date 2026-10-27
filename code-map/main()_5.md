@@ -2,7 +2,7 @@
 source_file: "blender/opener_scene.py"
 type: "code"
 community: "opener_scene.py"
-location: "L366"
+location: "L416"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -24,7 +24,7 @@ tags:
 - [[opener_scene.py]] - `contains` [EXTRACTED]
 - [[place_actors()]] - `calls` [EXTRACTED]
 - [[punch_in()]] - `calls` [EXTRACTED]
-- [[render()_5]] - `calls` [EXTRACTED]
+- [[render()_4]] - `calls` [EXTRACTED]
 - [[retime()]] - `calls` [EXTRACTED]
 - [[setup()_1]] - `calls` [EXTRACTED]
 - [[simulate()]] - `calls` [EXTRACTED]

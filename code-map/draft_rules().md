@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[Draft channelsname.rules.md for a new channel the AI copies the sections of…]] - `rationale_for` [EXTRACTED]
-- [[Path_23]] - `references` [EXTRACTED]
+- [[Path_20]] - `references` [EXTRACTED]
 - [[ask_ai()]] - `calls` [EXTRACTED]
 - [[json]] - `calls` [EXTRACTED]
 - [[pick_channel()]] - `calls` [EXTRACTED]

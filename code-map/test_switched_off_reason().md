@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[fetch_model()]] - `calls` [EXTRACTED]
-- [[ok()]] - `calls` [EXTRACTED]
+- [[ok()_2]] - `calls` [EXTRACTED]
 - [[test_blender_link.py]] - `contains` [EXTRACTED]
 - [[with_fake()]] - `references` [EXTRACTED]
 

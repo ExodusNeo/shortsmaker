@@ -2,7 +2,7 @@
 source_file: "blender/moves.py"
 type: "code"
 community: "opener_scene.py"
-location: "L25"
+location: "L26"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,7 +12,7 @@ tags:
 # State
 
 ## Connections
-- [[dot-__init__()_8]] - `method` [EXTRACTED]
+- [[dot-__init__()_6]] - `method` [EXTRACTED]
 - [[dot-allow()]] - `method` [EXTRACTED]
 - [[dot-f()]] - `method` [EXTRACTED]
 - [[dot-support_obj()]] - `method` [EXTRACTED]

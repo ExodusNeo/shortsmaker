@@ -43,6 +43,6 @@ tags:
 - [[routeArrow()]] - `contains` [EXTRACTED]
 - [[skinOf()]] - `imports` [EXTRACTED]
 - [[toolkit.tsx]] - `re_exports` [EXTRACTED]
-- [[travel()]] - `contains` [EXTRACTED]
+- [[travel()_1]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/guardedtsx

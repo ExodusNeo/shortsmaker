@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "opener_scene.py"
+community: "random"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/opener_scenepy
+  - community/random
 ---
 
 # random
@@ -15,15 +15,16 @@ tags:
 - [[camera()_1]] - `calls` [EXTRACTED]
 - [[cut()]] - `calls` [EXTRACTED]
 - [[failures.py]] - `imports` [EXTRACTED]
+- [[feather_colours()]] - `calls` [EXTRACTED]
 - [[make_paper()]] - `calls` [EXTRACTED]
 - [[make_sfx()]] - `calls` [EXTRACTED]
 - [[moves.py]] - `imports` [EXTRACTED]
 - [[opener_scene.py]] - `imports` [EXTRACTED]
 - [[remotion_render.py]] - `imports` [EXTRACTED]
-- [[render()_3]] - `calls` [EXTRACTED]
+- [[render()_2]] - `calls` [EXTRACTED]
 - [[scatter()]] - `calls` [EXTRACTED]
 - [[sfx_events()]] - `calls` [EXTRACTED]
 - [[short_render.py]] - `imports` [EXTRACTED]
 - [[test_full_scenes.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/opener_scenepy
+#graphify/concept #graphify/EXTRACTED #community/random

@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_full_scenes.py"
 type: "rationale"
-community: "subprocess"
+community: "captions"
 location: "L727"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/subprocess
+  - community/captions
 ---
 
 # Mike's Thinking Music (-22 LUFS) vanished under the voice with the old fixed…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[test_music_gain_evens_out_tracks()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/subprocess
+#graphify/rationale #graphify/EXTRACTED #community/captions

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/blender_link.py"
 type: "rationale"
-community: "call"
+community: "test_blender_link.py"
 location: "L22"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/call
+  - community/test_blender_linkpy
 ---
 
 # One add-on command; its result. A transport problem or an error reply raises…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[call()_1]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/call
+#graphify/rationale #graphify/EXTRACTED #community/test_blender_linkpy

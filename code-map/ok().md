@@ -1,23 +1,17 @@
 ---
-source_file: "tests/test_blender_link.py"
+source_file: "tests/guarded.test.ts"
 type: "code"
-community: "test_blender_link.py"
-location: "L56"
+community: "guarded.tsx"
+location: "L16"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_blender_linkpy
+  - community/guardedtsx
 ---
 
 # ok()
 
 ## Connections
-- [[_fetch_replies()]] - `calls` [EXTRACTED]
-- [[execute()]] - `calls` [EXTRACTED]
-- [[test_blender_link.py]] - `contains` [EXTRACTED]
-- [[test_download_error_cleans_up()]] - `calls` [EXTRACTED]
-- [[test_ping_on_off()]] - `calls` [EXTRACTED]
-- [[test_search_filters_licences()]] - `calls` [EXTRACTED]
-- [[test_switched_off_reason()]] - `calls` [EXTRACTED]
+- [[guarded.test.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_blender_linkpy
+#graphify/code #graphify/EXTRACTED #community/guardedtsx

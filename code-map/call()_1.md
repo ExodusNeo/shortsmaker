@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/blender_link.py"
 type: "code"
-community: "call"
+community: "test_blender_link.py"
 location: "L21"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/call
+  - community/test_blender_linkpy
 ---
 
 # call()
@@ -21,4 +21,4 @@ tags:
 - [[search()]] - `calls` [EXTRACTED]
 - [[socket]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/call
+#graphify/code #graphify/EXTRACTED #community/test_blender_linkpy

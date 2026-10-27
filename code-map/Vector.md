@@ -1,17 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "tree"
+community: "parts.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/tree
+  - community/partspy
 ---
 
 # Vector
 
 ## Connections
-- [[build_set()]] - `references` [EXTRACTED]
-- [[stand_on()]] - `references` [EXTRACTED]
+- [[label()]] - `references` [EXTRACTED]
+- [[look_at_quat()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/tree
+#graphify/code #graphify/EXTRACTED #community/partspy

@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "to_vertical"
+community: "srt"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/to_vertical
+  - community/srt
 ---
 
 # Path
 
 ## Connections
-- [[to_vertical()]] - `references` [EXTRACTED]
+- [[srt()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/to_vertical
+#graphify/code #graphify/EXTRACTED #community/srt

@@ -12,7 +12,7 @@ tags:
 # Bridge
 
 ## Connections
-- [[dot-__init__()_3]] - `method` [EXTRACTED]
+- [[dot-__init__()_4]] - `method` [EXTRACTED]
 - [[dot-add()]] - `method` [EXTRACTED]
 - [[dot-center()]] - `method` [EXTRACTED]
 - [[dot-node()]] - `method` [EXTRACTED]
@@ -23,7 +23,7 @@ tags:
 - [[_piers_and_deck()]] - `references` [EXTRACTED]
 - [[_towers()]] - `references` [EXTRACTED]
 - [[_truss_panel_members()]] - `references` [EXTRACTED]
-- [[build()_1]] - `references` [EXTRACTED]
+- [[build()]] - `references` [EXTRACTED]
 - [[cable_stayed_bridge()]] - `calls` [EXTRACTED]
 - [[dress()]] - `references` [EXTRACTED]
 - [[eyebar_chain_bridge()]] - `calls` [EXTRACTED]

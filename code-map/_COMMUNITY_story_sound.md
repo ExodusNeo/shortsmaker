@@ -22,13 +22,14 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 2 edges to [[_COMMUNITY_render]]
 - 2 edges to [[_COMMUNITY_test_full_scenes.py]]
+- 1 edge to [[_COMMUNITY_ffmpeg]]
 - 1 edge to [[_COMMUNITY_re]]
+- 1 edge to [[_COMMUNITY_render]]
 - 1 edge to [[_COMMUNITY_captions]]
 - 1 edge to [[_COMMUNITY_pathlib]]
 
 ## Top bridge nodes
-- [[story_sound()]] - degree 7, connects to 4 communities
+- [[story_sound()]] - degree 7, connects to 5 communities
 - [[test_story_sound_library()]] - degree 3, connects to 1 community
 - [[_tone_wav()]] - degree 2, connects to 1 community

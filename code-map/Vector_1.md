@@ -1,17 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: "parts.py"
+community: "templates.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/partspy
+  - community/templatespy
 ---
 
 # Vector
 
 ## Connections
-- [[label()]] - `references` [EXTRACTED]
-- [[look_at_quat()]] - `references` [EXTRACTED]
+- [[dot-center()]] - `references` [EXTRACTED]
+- [[dot-node()]] - `references` [EXTRACTED]
+- [[_sag_points()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/partspy
+#graphify/code #graphify/EXTRACTED #community/templatespy

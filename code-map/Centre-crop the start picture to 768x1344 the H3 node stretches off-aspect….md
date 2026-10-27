@@ -1,12 +1,12 @@
 ---
 source_file: "colab/h3_run.py"
 type: "rationale"
-community: "test_h3_handoff.py"
+community: "h3_run.py"
 location: "L35"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/test_h3_handoffpy
+  - community/h3_runpy
 ---
 
 # Centre-crop the start picture to 768x1344: the H3 node stretches off-aspect…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[fit_start()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/test_h3_handoffpy
+#graphify/rationale #graphify/EXTRACTED #community/h3_runpy

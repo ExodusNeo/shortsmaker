@@ -13,6 +13,6 @@ tags:
 
 ## Connections
 - [[build_scene.py]] - `contains` [EXTRACTED]
-- [[main()_2]] - `calls` [EXTRACTED]
+- [[main()_3]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/build_scenepy

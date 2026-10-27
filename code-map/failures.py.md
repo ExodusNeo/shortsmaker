@@ -1,12 +1,12 @@
 ---
 source_file: "blender/failures.py"
 type: "code"
-community: "opener_check_cases.py"
+community: "build_scene.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/opener_check_casespy
+  - community/build_scenepy
 ---
 
 # failures.py
@@ -23,4 +23,4 @@ tags:
 - [[parts.py]] - `imports` [EXTRACTED]
 - [[random]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/opener_check_casespy
+#graphify/code #graphify/EXTRACTED #community/build_scenepy

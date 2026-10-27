@@ -12,8 +12,8 @@ tags:
 # test_missing_scene_is_asked_again()
 
 ## Connections
-- [[run()_3]] - `contains` [EXTRACTED]
-- [[run()_4]] - `indirect_call` [INFERRED]
+- [[run()_4]] - `contains` [EXTRACTED]
+- [[run()_5]] - `indirect_call` [INFERRED]
 - [[test_h3_handoff.py]] - `contains` [EXTRACTED]
 - [[with_fakes()_1]] - `calls` [EXTRACTED]
 

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/edit_project.py"
 type: "rationale"
-community: "test_edit_project.py"
+community: "make"
 location: "L17"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/test_edit_projectpy
+  - community/make
 ---
 
 # work/captions.mov: the captions alone on a see-through background, from the…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[caption_layer()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/test_edit_projectpy
+#graphify/rationale #graphify/EXTRACTED #community/make

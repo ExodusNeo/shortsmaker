@@ -26,8 +26,10 @@ tags:
 - [[json]] - `imports` [EXTRACTED]
 - [[key_loc()]] - `contains` [EXTRACTED]
 - [[key_rot()]] - `contains` [EXTRACTED]
+- [[key_swing()]] - `contains` [EXTRACTED]
 - [[key_vis()]] - `contains` [EXTRACTED]
 - [[layers()]] - `contains` [EXTRACTED]
+- [[leg_rig()]] - `contains` [EXTRACTED]
 - [[lift_for()]] - `contains` [EXTRACTED]
 - [[load_model()]] - `contains` [EXTRACTED]
 - [[loc_at()]] - `contains` [EXTRACTED]
@@ -45,6 +47,7 @@ tags:
 - [[simulate()]] - `contains` [EXTRACTED]
 - [[surface_z()]] - `contains` [EXTRACTED]
 - [[tree()]] - `contains` [EXTRACTED]
+- [[view()]] - `contains` [EXTRACTED]
 - [[world_verts()]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/scene_kitpy

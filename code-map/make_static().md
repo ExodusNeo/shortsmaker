@@ -1,12 +1,12 @@
 ---
 source_file: "blender/scene_kit.py"
 type: "code"
-community: "build_set"
-location: "L232"
+community: "scene_kit.py"
+location: "L241"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/build_set
+  - community/scene_kitpy
 ---
 
 # make_static()
@@ -20,4 +20,4 @@ tags:
 - [[place_actors()]] - `calls` [EXTRACTED]
 - [[scene_kit.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/build_set
+#graphify/code #graphify/EXTRACTED #community/scene_kitpy

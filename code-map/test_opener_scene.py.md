@@ -35,6 +35,7 @@ tags:
 - [[test_onion_slices()]] - `contains` [EXTRACTED]
 - [[test_slow_motion_keeps_length()]] - `contains` [EXTRACTED]
 - [[test_subject_without_follow()]] - `contains` [EXTRACTED]
+- [[test_swung_blade_shows_its_face()]] - `contains` [EXTRACTED]
 - [[test_unbuildable_cut_is_reported_not_crashed()]] - `contains` [EXTRACTED]
 - [[test_walk_stops_short_of_obstacles()]] - `contains` [EXTRACTED]
 - [[traceback]] - `imports` [EXTRACTED]

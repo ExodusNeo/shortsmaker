@@ -1,11 +1,11 @@
 ---
 type: community
-members: 27
+members: 29
 ---
 
 # test_story.py
 
-**Members:** 27 nodes
+**Members:** 29 nodes
 
 ## Members
 - [[Before any script is written each topic's twist against its Wikipedia text.…]] - rationale - shortsmaker/writing.py
@@ -13,13 +13,15 @@ members: 27
 - [[Tests for how stories are told (2026-10-22) one voice take per sentence cut…]] - rationale - tests/test_story.py
 - [[The checkable story rules (STORY_RULES) the answer comes last, no line opens…]] - rationale - shortsmaker/writing.py
 - [[The script editor pass strongest hook, read-aloud fixes, cuts,…]] - rationale - shortsmaker/writing.py
+- [[add()_1]] - code - tests/render_style.py
+- [[build()_1]] - code - tests/render_style.py
 - [[check_twists()]] - code - shortsmaker/writing.py
 - [[edit_scripts()]] - code - shortsmaker/writing.py
 - [[fake()]] - code - tests/test_story.py
+- [[main()_1]] - code - tests/render_style.py
 - [[narration_lines()]] - code - shortsmaker/writing.py
 - [[scenes()]] - code - tests/test_story.py
 - [[story_problems()]] - code - shortsmaker/writing.py
-- [[test_a_take_is_cut_between_the_scenes_words()]] - code - tests/test_story.py
 - [[test_editor_gets_one_second_pass_for_broken_rules()]] - code - tests/test_story.py
 - [[test_no_hook_setting_no_hook_check()]] - code - tests/test_story.py
 - [[test_rules_accept_opener_setting()]] - code - tests/test_story.py
@@ -44,24 +46,25 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 12 edges to [[_COMMUNITY_pathlib]]
-- 4 edges to [[_COMMUNITY_write_scripts]]
-- 3 edges to [[_COMMUNITY_local_voice]]
+- 11 edges to [[_COMMUNITY_pathlib]]
+- 4 edges to [[_COMMUNITY_ffmpeg]]
 - 3 edges to [[_COMMUNITY_ask_ai]]
 - 3 edges to [[_COMMUNITY_json]]
-- 2 edges to [[_COMMUNITY_subprocess]]
-- 2 edges to [[_COMMUNITY_traceback]]
+- 3 edges to [[_COMMUNITY_write_scripts]]
+- 3 edges to [[_COMMUNITY_shutil]]
+- 2 edges to [[_COMMUNITY_test_blender_scene.py]]
 - 1 edge to [[_COMMUNITY_test_rules.py]]
-- 1 edge to [[_COMMUNITY_style_library]]
-- 1 edge to [[_COMMUNITY_render]]
 - 1 edge to [[_COMMUNITY_visual_review]]
+- 1 edge to [[_COMMUNITY_pool_of]]
 - 1 edge to [[_COMMUNITY_re]]
+- 1 edge to [[_COMMUNITY_style_library]]
 - 1 edge to [[_COMMUNITY_test_h3_handoff.py]]
-- 1 edge to [[_COMMUNITY_qwen_voice.py]]
+- 1 edge to [[_COMMUNITY_align_words]]
+- 1 edge to [[_COMMUNITY_gpu.py]]
 
 ## Top bridge nodes
-- [[test_story.py]] - degree 29, connects to 5 communities
-- [[edit_scripts()]] - degree 13, connects to 5 communities
+- [[test_story.py]] - degree 29, connects to 7 communities
+- [[edit_scripts()]] - degree 13, connects to 6 communities
 - [[check_twists()]] - degree 8, connects to 4 communities
-- [[test_a_take_is_cut_between_the_scenes_words()]] - degree 5, connects to 3 communities
 - [[story_problems()]] - degree 8, connects to 2 communities
+- [[scenes()]] - degree 5, connects to 2 communities

@@ -1,21 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "scene_kit.py"
+community: "opener_checks.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/scene_kitpy
+  - community/opener_checkspy
 ---
 
 # Vector
 
 ## Connections
-- [[bbox()]] - `references` [EXTRACTED]
-- [[facing_vec()]] - `references` [EXTRACTED]
-- [[loc_at()]] - `references` [EXTRACTED]
-- [[make_dynamic()]] - `references` [EXTRACTED]
-- [[rot_at()]] - `references` [EXTRACTED]
-- [[world_verts()]] - `references` [EXTRACTED]
+- [[edge_point()]] - `references` [EXTRACTED]
+- [[world_verts()_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/scene_kitpy
+#graphify/code #graphify/EXTRACTED #community/opener_checkspy

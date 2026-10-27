@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/image_sources.py"
 type: "code"
-community: "json"
+community: "words_of"
 location: "L257"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/json
+  - community/words_of
 ---
 
 # on_topic()
@@ -23,4 +23,4 @@ tags:
 - [[test_on_topic_ignores_a_lone_shared_name()]] - `calls` [EXTRACTED]
 - [[words_of()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/json
+#graphify/code #graphify/EXTRACTED #community/words_of

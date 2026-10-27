@@ -1,12 +1,12 @@
 ---
 source_file: "blender/failures.py"
 type: "rationale"
-community: "opener_check_cases.py"
+community: "build_scene.py"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/opener_check_casespy
+  - community/build_scenepy
 ---
 
 # Failure animations on the focus part: bend (it buckles), crack (a dark crack…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[failures.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/opener_check_casespy
+#graphify/rationale #graphify/EXTRACTED #community/build_scenepy

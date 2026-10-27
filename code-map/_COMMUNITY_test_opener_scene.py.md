@@ -1,19 +1,20 @@
 ---
 type: community
-members: 58
+members: 60
 ---
 
 # test_opener_scene.py
 
-**Members:** 58 nodes
+**Members:** 60 nodes
 
 ## Members
+- [[A chop planned edge-on to the camera turns about its stroke until the camera…]] - rationale - tests/test_opener_scene.py
 - [[Build (and optionally render at 25%) one opener; returns (report, frames dir).]] - rationale - tests/test_opener_scene.py
 - [[Fifth live run (Mike) no camera follow and the stump listed first; the checks…]] - rationale - tests/test_opener_scene.py
 - [[Fourth live run (Mike) a fix round asked for an at_fraction slice but still…]] - rationale - tests/test_opener_scene.py
 - [[One AI call stages every Short's opener (sopener); unusable plans are asked…]] - rationale - shortsmaker/opener_plan.py
 - [[Opener staging plans (2026-10-27) for channels with `opener blender`, the…]] - rationale - shortsmaker/opener_plan.py
-- [[Path_19]] - code
+- [[Path_18]] - code
 - [[Tests for building openers in Blender (blenderopener_scene.py + moves.py,…]] - rationale - tests/test_opener_scene.py
 - [[Tests for opener staging plans (opener_plan.py, 2026-10-27) the plan format…]] - rationale - tests/test_opener_plan.py
 - [[The Mike plan left camera.follow out and the rooster walked off alone; the…]] - rationale - tests/test_opener_scene.py
@@ -61,6 +62,7 @@ members: 58
 - [[test_slow_motion_keeps_length()]] - code - tests/test_opener_scene.py
 - [[test_spec_example_is_clean()]] - code - tests/test_opener_plan.py
 - [[test_subject_without_follow()]] - code - tests/test_opener_scene.py
+- [[test_swung_blade_shows_its_face()]] - code - tests/test_opener_scene.py
 - [[test_through_cut_names_its_rest()]] - code - tests/test_opener_plan.py
 - [[test_unbuildable()]] - code - tests/test_opener_plan.py
 - [[test_unbuildable_cut_is_reported_not_crashed()]] - code - tests/test_opener_scene.py
@@ -75,18 +77,19 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 13 edges to [[_COMMUNITY_pathlib]]
+- 12 edges to [[_COMMUNITY_pathlib]]
+- 4 edges to [[_COMMUNITY_json]]
 - 4 edges to [[_COMMUNITY_test_opener_render.py]]
-- 3 edges to [[_COMMUNITY_json]]
-- 3 edges to [[_COMMUNITY_subprocess]]
-- 3 edges to [[_COMMUNITY_traceback]]
-- 2 edges to [[_COMMUNITY_scene_kit.py]]
-- 1 edge to [[_COMMUNITY_write_scripts]]
+- 3 edges to [[_COMMUNITY_test_blender_scene.py]]
+- 2 edges to [[_COMMUNITY_moves.py]]
+- 2 edges to [[_COMMUNITY_shutil]]
 - 1 edge to [[_COMMUNITY_ask_ai]]
+- 1 edge to [[_COMMUNITY_write_scripts]]
 - 1 edge to [[_COMMUNITY_re]]
+- 1 edge to [[_COMMUNITY_gpu.py]]
 
 ## Top bridge nodes
-- [[test_opener_scene.py]] - degree 26, connects to 5 communities
+- [[test_opener_scene.py]] - degree 27, connects to 6 communities
 - [[opener_plan.py]] - degree 22, connects to 5 communities
 - [[test_opener_plan.py]] - degree 24, connects to 4 communities
 - [[fix_plan()]] - degree 9, connects to 3 communities

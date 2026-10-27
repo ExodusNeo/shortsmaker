@@ -2,7 +2,7 @@
 source_file: "blender/scene_kit.py"
 type: "code"
 community: "scene_kit.py"
-location: "L146"
+location: "L155"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,7 +12,7 @@ tags:
 # loc_at()
 
 ## Connections
-- [[Vector_6]] - `references` [EXTRACTED]
+- [[Vector_5]] - `references` [EXTRACTED]
 - [[Where obj's keys put it on `frame`, without stepping the scene (stepping would…]] - `rationale_for` [EXTRACTED]
 - [[fcurves()]] - `calls` [EXTRACTED]
 - [[hold_offscreen()]] - `calls` [EXTRACTED]

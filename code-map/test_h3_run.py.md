@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_h3_run.py"
 type: "code"
-community: "traceback"
+community: "test_blender_scene.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/traceback
+  - community/test_blender_scenepy
 ---
 
 # test_h3_run.py
@@ -27,4 +27,4 @@ tags:
 - [[test_save_video_sets_nested_codec()]] - `contains` [EXTRACTED]
 - [[traceback]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/traceback
+#graphify/code #graphify/EXTRACTED #community/test_blender_scenepy

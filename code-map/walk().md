@@ -1,12 +1,12 @@
 ---
 source_file: "blender/moves.py"
 type: "code"
-community: "scene_kit.py"
-location: "L170"
+community: "moves.py"
+location: "L171"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/scene_kitpy
+  - community/movespy
 ---
 
 # walk()
@@ -18,6 +18,8 @@ tags:
 - [[gait()]] - `calls` [EXTRACTED]
 - [[key_loc()]] - `calls` [EXTRACTED]
 - [[key_rot()]] - `calls` [EXTRACTED]
+- [[key_swing()]] - `calls` [EXTRACTED]
+- [[leg_rig()]] - `calls` [EXTRACTED]
 - [[lift_for()]] - `calls` [EXTRACTED]
 - [[loc_at()]] - `calls` [EXTRACTED]
 - [[math]] - `calls` [EXTRACTED]
@@ -25,4 +27,4 @@ tags:
 - [[rot_at()]] - `calls` [EXTRACTED]
 - [[toward()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/scene_kitpy
+#graphify/code #graphify/EXTRACTED #community/movespy

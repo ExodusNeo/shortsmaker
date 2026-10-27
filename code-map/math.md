@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "scene_kit.py"
+community: "moves.py"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/scene_kitpy
+  - community/movespy
 ---
 
 # math
@@ -35,7 +35,8 @@ tags:
 - [[radians()]] - `calls` [EXTRACTED]
 - [[scale_beats()]] - `calls` [EXTRACTED]
 - [[scatter()]] - `calls` [EXTRACTED]
+- [[show_face()]] - `calls` [EXTRACTED]
 - [[sink()]] - `calls` [EXTRACTED]
 - [[walk()]] - `calls` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/scene_kitpy
+#graphify/concept #graphify/EXTRACTED #community/movespy

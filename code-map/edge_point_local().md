@@ -1,19 +1,19 @@
 ---
 source_file: "blender/moves.py"
 type: "code"
-community: "moves.py"
-location: "L506"
+community: "opener_scene.py"
+location: "L536"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/movespy
+  - community/opener_scenepy
 ---
 
 # edge_point_local()
 
 ## Connections
 - [[The blade's furthest point along its edge direction, over the whole head half…]] - `rationale_for` [EXTRACTED]
-- [[Vector_4]] - `references` [EXTRACTED]
+- [[Vector_3]] - `references` [EXTRACTED]
 - [[burst()]] - `calls` [EXTRACTED]
 - [[cut()]] - `calls` [EXTRACTED]
 - [[hold_offscreen()]] - `calls` [EXTRACTED]
@@ -21,4 +21,4 @@ tags:
 - [[place_tool()]] - `calls` [EXTRACTED]
 - [[tool_axes()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/movespy
+#graphify/code #graphify/EXTRACTED #community/opener_scenepy

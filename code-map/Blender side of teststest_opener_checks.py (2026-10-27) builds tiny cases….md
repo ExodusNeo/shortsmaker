@@ -1,12 +1,12 @@
 ---
 source_file: "tests/opener_check_cases.py"
 type: "rationale"
-community: "opener_check_cases.py"
+community: "build_scene.py"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/opener_check_casespy
+  - community/build_scenepy
 ---
 
 # Blender side of tests/test_opener_checks.py (2026-10-27): builds tiny cases…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[opener_check_cases.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/opener_check_casespy
+#graphify/rationale #graphify/EXTRACTED #community/build_scenepy

@@ -13,6 +13,6 @@ tags:
 
 ## Connections
 - [[Bridge]] - `method` [EXTRACTED]
-- [[Vector_2]] - `references` [EXTRACTED]
+- [[Vector_1]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/templatespy

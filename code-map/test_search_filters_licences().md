@@ -12,7 +12,7 @@ tags:
 # test_search_filters_licences()
 
 ## Connections
-- [[ok()]] - `calls` [EXTRACTED]
+- [[ok()_2]] - `calls` [EXTRACTED]
 - [[search()]] - `calls` [EXTRACTED]
 - [[test_blender_link.py]] - `contains` [EXTRACTED]
 - [[with_fake()]] - `references` [EXTRACTED]

@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_pictures_first.py"
 type: "code"
-community: "owner"
+community: "pool_of"
 location: "L39"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/owner
+  - community/pool_of
 ---
 
 # .__enter__()
@@ -17,4 +17,4 @@ tags:
 - [[still()]] - `calls` [EXTRACTED]
 - [[stubbed]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/owner
+#graphify/code #graphify/EXTRACTED #community/pool_of

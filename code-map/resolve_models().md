@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/opener_render.py"
 type: "code"
-community: "blender_link.py"
+community: "test_blender_link.py"
 location: "L45"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/blender_linkpy
+  - community/test_blender_linkpy
 ---
 
 # resolve_models()
@@ -21,4 +21,4 @@ tags:
 - [[search()]] - `calls` [EXTRACTED]
 - [[{actor id or backdropN .blend path}, or ({}, why not).]] - `rationale_for` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/blender_linkpy
+#graphify/code #graphify/EXTRACTED #community/test_blender_linkpy

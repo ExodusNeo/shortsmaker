@@ -1,12 +1,12 @@
 ---
 source_file: "tests/opener_check_cases.py"
 type: "code"
-community: "opener_check_cases.py"
+community: "build_scene.py"
 location: "L52"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/opener_check_casespy
+  - community/build_scenepy
 ---
 
 # key()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[opener_check_cases.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/opener_check_casespy
+#graphify/code #graphify/EXTRACTED #community/build_scenepy

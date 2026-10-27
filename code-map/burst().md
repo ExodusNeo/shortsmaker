@@ -2,7 +2,7 @@
 source_file: "blender/opener_scene.py"
 type: "code"
 community: "opener_scene.py"
-location: "L246"
+location: "L297"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,12 +12,13 @@ tags:
 # burst()
 
 ## Connections
-- [[Bits of the target thrown off where the blade first lands (feathers off a…]] - `rationale_for` [EXTRACTED]
+- [[Feathers (or chips) knocked off where the blade lands, in the colours there,…]] - `rationale_for` [EXTRACTED]
 - [[State]] - `references` [EXTRACTED]
 - [[bbox()]] - `calls` [EXTRACTED]
 - [[edge_point_local()]] - `calls` [EXTRACTED]
+- [[feather()]] - `calls` [EXTRACTED]
+- [[feather_colours()]] - `calls` [EXTRACTED]
 - [[main()_5]] - `calls` [EXTRACTED]
-- [[material()_1]] - `calls` [EXTRACTED]
 - [[opener_scene.py]] - `contains` [EXTRACTED]
 - [[tree()]] - `calls` [EXTRACTED]
 

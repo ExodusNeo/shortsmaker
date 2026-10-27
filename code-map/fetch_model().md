@@ -1,19 +1,19 @@
 ---
 source_file: "shortsmaker/blender_link.py"
 type: "code"
-community: "blender_link.py"
+community: "test_blender_link.py"
 location: "L130"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/blender_linkpy
+  - community/test_blender_linkpy
 ---
 
 # fetch_model()
 
 ## Connections
 - [[Download `hit` through the owner's Blender into the library (the .blend,…]] - `rationale_for` [EXTRACTED]
-- [[Path_27]] - `references` [EXTRACTED]
+- [[Path_26]] - `references` [EXTRACTED]
 - [[attribution()]] - `calls` [EXTRACTED]
 - [[blender_link.py]] - `contains` [EXTRACTED]
 - [[call()_1]] - `calls` [EXTRACTED]
@@ -25,4 +25,4 @@ tags:
 - [[test_switched_off_reason()]] - `calls` [EXTRACTED]
 - [[words()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/blender_linkpy
+#graphify/code #graphify/EXTRACTED #community/test_blender_linkpy

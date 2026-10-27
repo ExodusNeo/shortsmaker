@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[execute()]] - `indirect_call` [INFERRED]
-- [[ok()]] - `calls` [EXTRACTED]
+- [[ok()_2]] - `calls` [EXTRACTED]
 - [[test_blender_link.py]] - `contains` [EXTRACTED]
 - [[test_download_error_cleans_up()]] - `calls` [EXTRACTED]
 - [[test_fetch_saves_pair()]] - `calls` [EXTRACTED]

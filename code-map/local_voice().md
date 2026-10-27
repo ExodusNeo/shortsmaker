@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/gpu.py"
 type: "code"
-community: "local_voice"
+community: "ffmpeg"
 location: "L176"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/local_voice
+  - community/ffmpeg
 ---
 
 # local_voice()
@@ -18,11 +18,11 @@ tags:
 - [[is_loop_short()]] - `calls` [EXTRACTED]
 - [[local_job()]] - `calls` [EXTRACTED]
 - [[re]] - `calls` [EXTRACTED]
-- [[render()_3]] - `calls` [EXTRACTED]
+- [[render()_2]] - `calls` [EXTRACTED]
 - [[sentence_groups()]] - `calls` [EXTRACTED]
 - [[split_takes()]] - `calls` [EXTRACTED]
 - [[spoken_count()]] - `calls` [EXTRACTED]
 - [[voicestudio_unload()]] - `calls` [EXTRACTED]
 - [[voicestudio_up()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/local_voice
+#graphify/code #graphify/EXTRACTED #community/ffmpeg
