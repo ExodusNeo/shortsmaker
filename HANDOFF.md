@@ -822,7 +822,7 @@ of resting readable time).
 ## Blender openers (2026-10-27, owner asked: every Short opens on an animation of its strangest moment)
 First-second research (Voggle, How Money Works, Thoughty2, Simple History vs 12 of ours) and a hand-built probe in the
 owner's Blender (Mike's chop; the owner's six catches became the checks below). Spec/plan:
-`docs/superpowers/specs|plans/2026-10-27-blender-openers*`. Part 2 (motion-graphic openers for people stories) not built.
+`docs/superpowers/specs|plans/2026-10-27-blender-openers*`. Part 2 (people) built: see "People openers" below.
 - **Blender MCP has to be started each time.** Opener models are fetched through the owner's live Blender (the MCP
   add-on holds the Poly Pizza key). At the start of a run on a channel with `opener: blender`, `cli.blender_note` pings
   localhost:9876 and, if Blender doesn't answer, says: open Blender, press N, click Start MCP Server, Enter to retry or
@@ -904,6 +904,44 @@ owner's Blender (Mike's chop; the owner's six catches became the checks below). 
 - Reference tests: `tests/fixtures/openers/` (chicken chop, onion slices, onion mince, crate fall + their models);
   every check was also seen to catch a real fault while building them, and the renders were looked at by eye (checks
   alone passed a head blasted out of frame, hollow slices and an exploding mince).
+
+## People openers (Blender openers part 2, 2026-10-27, owner: "make part 2 now")
+Spec/plan: `docs/superpowers/specs|plans/2026-10-27-people-openers*`; branch `people-openers`. Owner chose cartoon people
+by era and role (no faces), built in Blender from Quaternius rigged people, and one cel-shaded + ink-outlined look for
+every opener.
+- **Library (not in git, licence):** the owner downloaded the Ultimate Animated Character Pack (FBX) and Universal
+  Animation Library [Standard] into `blenderssets\people\src\`; `blender\pack_people.py` packs them into
+  `people.blend` + `people.json` (46 bodies on one 32-bone rig, 17 clips; fixes the FBX data: alpha 0 -> 1, emission
+  off, near-black skin -> a default tone, each body's front measured). The Universal Animation Library is a different
+  65-bone skeleton and is unused (retargeting is out of scope). `config.PEOPLE_*` point at the files.
+- **Tables** (`opener_tables.json`): `roles` (25: body, colours by the body's material names, hat find, height) and
+  `people_moves` (18: walk/run/carry travel; die, collapse, flinch, sit, stand_up, jump, roll, punch, swing_prop,
+  shoot, pick_up, cheer, throw_prop, drop_prop, idle). A plan's person: `{"id", "person": role, "facing", "prop"}`.
+- **Blender** (`blender/people.py`): `dress` makes the mesh the root (origin at the feet) with its armature under it,
+  colours, a hat on top of the head, the prop in the hand (the fist bone's HEAD: imported bone tails are guesses):
+  long props by the handle (a blade up, anything else down and forward, leaning out until clear of the body and the
+  ground), compact props carried. Every person plays Idle under their moves; in-place clips end grounded; travel
+  moves at the clip's stride, feet pinned to the ground, stopping short of where others end up (prop and a quarter
+  stride included; two going at each other meet halfway). Swing turns a blade to show its face (checked); drop/throw
+  bake the prop's path and hand it to physics (layer 2: not its owner). People collide as their rest shape (a
+  deforming passive collider crashed Blender).
+- **All openers:** `toward` may name another actor (linked actors start 1.5 m apart, the target back into the
+  depth, backdrops behind them; what someone goes at is the frame-0 threat, framed with them and at least half
+  shown); `look_toon.apply` (3 light bands as emission, inverted-hull ink outlines) after the checks; a model no
+  library has goes back to the planner (own allowance of 2, every miss named at once); fix rounds read the channel
+  rules; first frame counts a wide low subject by width (40%); a vehicle can't "roll".
+- **Checks/report additions:** staging covers people; `prop_shown` (frame 0); report `moved`, `highest`, `held`,
+  `swings`, `threat`, `gap_start`/`gap_to`, `look`.
+- **Tests:** `tests	est_people_tables.py` (3), `tests\people_standin.py` (stand-in library, built by the tests:
+  no Quaternius file in git), 15 people/look tests in `test_opener_scene.py`, plan/render/check additions;
+  `tests\people_sheet.py` renders `cache\people_sheetoles.png` + `moves.png` to look at by eye.
+- **Status, honestly:** every suite passes; the role and move sheets and a hand-written showcase
+  (`cache\people_showcase\officer_umbrella.mp4`: the officer strolls across a street with a closed umbrella) look
+  right. The end-to-end planner run on the umbrella Short never passed its AI review in about 8 attempts: the free
+  libraries have no WW2 armoured car (a camper van stood in), the planner kept asking for an "umbrella" (Poly Pizza's
+  is open), there's no explosion effect for "shells burst", and a person beside a 5 m vehicle can't be 15% of a
+  portrait frame. Each run fixed a general fault (see the rulings in the commits); the remaining ones are content.
+  Ideas: an explosion/smoke move, the planner told which models the library already has, a closed-umbrella default.
 
 ## Ideas offered, not built
 - Voice cloning (owner's own voice), SFX on the music's beat, YouTube Audio Library tracks for the somber/epic moods.
