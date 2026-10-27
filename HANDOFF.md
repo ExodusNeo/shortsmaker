@@ -910,7 +910,7 @@ Spec/plan: `docs/superpowers/specs|plans/2026-10-27-people-openers*`; branch `pe
 by era and role (no faces), built in Blender from Quaternius rigged people, and one cel-shaded + ink-outlined look for
 every opener.
 - **Library (not in git, licence):** the owner downloaded the Ultimate Animated Character Pack (FBX) and Universal
-  Animation Library [Standard] into `blenderssets\people\src\`; `blender\pack_people.py` packs them into
+  Animation Library [Standard] into `blender\assets\people\src\`; `blender\pack_people.py` packs them into
   `people.blend` + `people.json` (46 bodies on one 32-bone rig, 17 clips; fixes the FBX data: alpha 0 -> 1, emission
   off, near-black skin -> a default tone, each body's front measured). The Universal Animation Library is a different
   65-bone skeleton and is unused (retargeting is out of scope). `config.PEOPLE_*` point at the files.
@@ -932,9 +932,10 @@ every opener.
   rules; first frame counts a wide low subject by width (40%); a vehicle can't "roll".
 - **Checks/report additions:** staging covers people; `prop_shown` (frame 0); report `moved`, `highest`, `held`,
   `swings`, `threat`, `gap_start`/`gap_to`, `look`.
-- **Tests:** `tests	est_people_tables.py` (3), `tests\people_standin.py` (stand-in library, built by the tests:
+- **Tests:** `tests\test_people_tables.py` (3), `tests\people_standin.py` (stand-in library, built by the tests:
   no Quaternius file in git), 15 people/look tests in `test_opener_scene.py`, plan/render/check additions;
-  `tests\people_sheet.py` renders `cache\people_sheetoles.png` + `moves.png` to look at by eye.
+  `tests\people_sheet.py` renders `cache\people_sheet
+oles.png` + `moves.png` to look at by eye.
 - **Status, honestly:** every suite passes; the role and move sheets and a hand-written showcase
   (`cache\people_showcase\officer_umbrella.mp4`: the officer strolls across a street with a closed umbrella) look
   right. The end-to-end planner run on the umbrella Short never passed its AI review in about 8 attempts: the free
