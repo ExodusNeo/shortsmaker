@@ -61,6 +61,11 @@ def test_blade_face():
     assert results()["face_ok"] == []
 
 
+def test_hidden():
+    assert results()["hidden_bad"] and "small_box" in results()["hidden_bad"][0], results()["hidden_bad"]
+    assert results()["hidden_ok"] == []
+
+
 def test_cut_result():
     r = results()
     assert any("head" in f and "0.15" in f for f in r["cut_half"]), r["cut_half"]

@@ -104,6 +104,15 @@ target = cube("target", (2, 0, 0))
 results["edge_wrong"] = oc.edge_leads(blade, (-1, 0, 0), target, 5)
 results["edge_right"] = oc.edge_leads(blade, (1, 0, 0), target, 5)
 
+# hidden: a box right behind a bigger one from the camera's view, then the same box in the open
+sc = fresh()
+cam = camera((0, -8, 0), (0, 0, 0))
+small_box = cube("small_box", (0, 2, 0), size=0.5)
+wall = cube("wall", (0, 0, 0), size=1.5)
+results["hidden_bad"] = oc.hidden(small_box, cam, [1], [wall])
+small_box.location = (2.5, 2, 0)
+results["hidden_ok"] = oc.hidden(small_box, cam, [1], [wall])
+
 # blade face: seen face-on (camera on the thin axis) vs edge-on (camera along the blade)
 sc = fresh()
 blade = cube("blade", (0, 0, 0), dims=(0.4, 0.02, 0.3))

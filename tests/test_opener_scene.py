@@ -57,6 +57,7 @@ def test_chicken_chop_reference():
     report, _ = run(fixture("chicken_chop"))
     assert report["ok"], report["failures"]
     assert 0.075 <= report["cut_shares"]["head"] <= 0.225, report["cut_shares"]
+    assert report["held_offscreen"] == {"axe": True}, report["held_offscreen"]  # the unseen hand's side runs off the frame
 
 
 def test_onion_slices():

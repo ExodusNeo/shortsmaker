@@ -188,6 +188,35 @@ def camera(plan: dict, st: moves.State, subject_id: str) -> bpy.types.Object:
     return cam
 
 
+def hold_offscreen(st: moves.State, cam) -> dict[str, bool]:
+    """No people models, so a tool is swung by an unseen hand (owner, 2026-10-27): its wind-up is moved away from
+    the subject until the handle end runs off the frame while the blade stays in it, so it reads as held from
+    off-screen, not floating. {tool name: done}."""
+    from bpy_extras.object_utils import world_to_camera_view
+    sc = bpy.context.scene
+    done = {}
+    for tool, last in st.windups:
+        sc.frame_set(1)
+        handle = tool.matrix_world @ moves.handle_end_local(tool)
+        head = tool.matrix_world @ moves.edge_point_local(tool)
+        away = handle - head
+        away.normalize()
+        start = kit.loc_at(tool, 1)
+        ok = False
+        for k in range(0, 40):
+            shift = away * 0.04 * k
+            h = world_to_camera_view(sc, cam, handle + shift)
+            b = world_to_camera_view(sc, cam, head + shift)
+            off = not (0 <= h.x <= 1 and 0 <= h.y <= 1)
+            if off and 0.02 <= b.x <= 0.98 and 0.02 <= b.y <= 0.98:
+                for f in (1, last):
+                    kit.key_loc(tool, f, start + shift)
+                ok = True
+                break
+        done[tool.name] = ok
+    return done
+
+
 def subject_segments(subject_id: str, st: moves.State, frames: int) -> list[tuple]:
     """(object, frames) to keep in frame: the uncut subject until its cut, then its "rest" piece if it has one."""
     if subject_id not in st.intact:
@@ -212,8 +241,12 @@ def checks(plan: dict, st: moves.State, cam, subject_id: str) -> list[str]:
                 if p is not o:
                     allowed.setdefault(frozenset((o.name, p.name)), set()).update(range(st.released[o.name], sc.frame_end + 1))
     out += oc.overlaps(meshes, frames, allowed)
+    tools = {st.objs[b["tool"]] for b in plan["beats"] if b["move"] == "cut"}
+    own = set(st.pieces.get(subject_id, [])) | {st.intact.get(subject_id)}
+    occluders = [o for o in meshes if o not in tools and o not in own]
     for obj, fr in subject_segments(subject_id, st, sc.frame_end):
         out += oc.in_frame(obj, cam, fr)
+        out += oc.hidden(obj, cam, fr, occluders)
     first_subject = st.intact.get(subject_id, st.objs[subject_id])
     out += oc.first_frame(first_subject, st.threat or first_subject, cam)
     for tool, axis, target, frame in st.contacts:
@@ -243,13 +276,15 @@ def main(job_path: str) -> None:
     tools = {b["tool"] for b in plan["beats"] if b["move"] == "cut"}
     subject_id = plan["camera"].get("follow") or next(a["id"] for a in plan["actors"] if a["id"] not in tools)
     cam = camera(plan, st, subject_id)
+    held = hold_offscreen(st, cam)
     failures = checks(plan, st, cam, subject_id)
     sc.frame_set(sc.frame_end)
     lowest = {aid: round(min(v.z for v in kit.world_verts(o)), 4) for aid, o in st.objs.items()
               if aid not in tools}
     report = {"ok": not failures, "failures": failures, "frames": sc.frame_end,
               "pieces": sum(len(p) for p, *_ in st.cuts),
-              "cut_shares": {k: v for *_, s in st.cuts for k, v in s.items()}, "lowest": lowest}
+              "cut_shares": {k: v for *_, s in st.cuts for k, v in s.items()}, "lowest": lowest,
+              "held_offscreen": held}
     if job.get("render", True) and (report["ok"] or job.get("render_failed")):
         frames_dir = Path(job["frames_dir"])
         frames_dir.mkdir(parents=True, exist_ok=True)

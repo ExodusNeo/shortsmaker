@@ -39,6 +39,7 @@ class State:
         self.failures: list[str] = []
         self.threat = None
         self.moved_from: dict[str, int] = {}  # actor id -> first frame it moves
+        self.windups: list[tuple] = []  # (tool, its last wind-up frame): moved so the unseen hand is off-screen
 
     def f(self, t: float) -> int:
         return min(kit.frame_of(t, self.fps), self.frames)
@@ -627,6 +628,7 @@ def cut(beat, st):
             kit.key_rot(tool, 1, wind_rot)
             kit.key_loc(tool, max(f_start - 1, 1), wind_loc)
             kit.key_rot(tool, max(f_start - 1, 1), wind_rot)
+            st.windups.append((tool, max(f_start - 1, 1)))
             # judged as the blade arrives: by the stroke's end it has passed the piece
             st.contacts.append((tool, tuple(E), pieces[0] if "through" in stroke else target, f_start + 1))
         else:

@@ -119,6 +119,29 @@ def in_frame(subject, cam, frames) -> list[str]:
     return [f"in_frame: {subject.name} leaves the frame on frames {spans(out)}"] if out else []
 
 
+def hidden(subject, cam, frames, occluders, min_visible: float = 0.4) -> list[str]:
+    """The subject stays visible: on every frame at least min_visible of its points can be seen from the camera
+    past `occluders` (a stump between the camera and the walking rooster hid it in the second live run)."""
+    out = []
+    for f in frames:
+        dg = at(f)
+        if not visible(subject):
+            continue
+        pts = world_verts(subject, dg)
+        pts = pts[::max(1, len(pts) // 40)]
+        eye = cam.matrix_world.translation
+        trees = [tree(o, dg) for o in occluders if visible(o)]
+        seen = 0
+        for p in pts:
+            ray = p - eye
+            dist = ray.length
+            if not any(t.ray_cast(eye, ray.normalized(), dist - 0.01)[0] is not None for t in trees):
+                seen += 1
+        if seen < min_visible * len(pts):
+            out.append(f)
+    return [f"hidden: {subject.name} is hidden behind something on frames {spans(out)}"] if out else []
+
+
 def first_frame(subject, threat, cam, min_height: float = 0.15) -> list[str]:
     """Frame 1 shows the subject, big enough to read, and the threat: the frame that has to stop the scroll."""
     dg, out = at(bpy.context.scene.frame_start), []

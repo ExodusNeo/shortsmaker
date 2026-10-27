@@ -84,6 +84,8 @@ def review(short: dict, frames: Path, seconds: float, work: Path) -> list[str]:
                        f"fps={8 / max(seconds, 0.1):.4f},scale=270:-2,tile=8x1", "-frames:v", "1", "strip.jpg", cwd=look)
     data = llm.ask_ai(f"""strip.jpg in this folder shows 8 frames, left to right, of a {seconds:.1f}-second 3D animation
 that opens a YouTube Short. It should show: {short['opener']['moment']}.
+There are no people in these animations: tools are swung by an unseen hand just off-screen (the owner's choice), so
+a tool whose handle runs off the edge of the frame is fine; a tool floating in the middle of the shot is not.
 Judge it like a picky viewer: does every action make physical sense (tools hit with their edge, nothing passes through
 anything, nothing floats, pieces are the right size), and does the FIRST frame already show the subject and the threat?
 Reply with ONLY JSON: {{"ok": true, "problems": []}} or {{"ok": false, "problems": ["the axe hits the breast", ...]}}""",
