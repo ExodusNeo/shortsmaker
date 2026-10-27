@@ -1,12 +1,12 @@
 ---
 source_file: "blender/moves.py"
 type: "code"
-community: "cut"
-location: "L388"
+community: "Vector"
+location: "L424"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/cut
+  - community/Vector
 ---
 
 # best_in()
@@ -15,4 +15,4 @@ tags:
 - [[split()]] - `calls` [EXTRACTED]
 - [[through_cut()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/cut
+#graphify/code #graphify/EXTRACTED #community/Vector

@@ -13,6 +13,7 @@ tags:
 
 ## Connections
 - [[3, 4, 5, 9 - 3-5, 9.]] - `rationale_for` [EXTRACTED]
+- [[hidden()_1]] - `calls` [EXTRACTED]
 - [[in_frame()]] - `calls` [EXTRACTED]
 - [[opener_checks.py]] - `contains` [EXTRACTED]
 - [[overlaps()]] - `calls` [EXTRACTED]

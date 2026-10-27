@@ -1,11 +1,11 @@
 ---
 type: community
-members: 29
+members: 32
 ---
 
 # opener_checks.py
 
-**Members:** 29 nodes
+**Members:** 32 nodes
 
 ## Members
 - [[At contact, the edge faces the way the tool moves and points at the target (the…]] - rationale - blender/opener_checks.py
@@ -17,7 +17,8 @@ members: 29
 - [[Per-frame checks on a built opener (2026-10-27), plain bpy. Each check came…]] - rationale - blender/opener_checks.py
 - [[The camera sees the blade's flat side, not its edge the view is at least…]] - rationale - blender/opener_checks.py
 - [[The pieces match what the plan expected named shares (by area()) within ±50%,…]] - rationale - blender/opener_checks.py
-- [[Vector_5]] - code
+- [[The subject stays visible on every frame at least min_visible of its points…]] - rationale - blender/opener_checks.py
+- [[Vector_6]] - code
 - [[3, 4, 5, 9 - 3-5, 9.]] - rationale - blender/opener_checks.py
 - [[area()]] - code - blender/opener_checks.py
 - [[at()]] - code - blender/opener_checks.py
@@ -28,7 +29,9 @@ members: 29
 - [[edge_leads()]] - code - blender/opener_checks.py
 - [[edge_point()]] - code - blender/opener_checks.py
 - [[first_frame()]] - code - blender/opener_checks.py
+- [[hidden()_1]] - code - blender/opener_checks.py
 - [[in_frame()]] - code - blender/opener_checks.py
+- [[mathutils_bvhtree]] - concept
 - [[opener_checks.py]] - code - blender/opener_checks.py
 - [[overlaps()]] - code - blender/opener_checks.py
 - [[resting()]] - code - blender/opener_checks.py
@@ -36,7 +39,7 @@ members: 29
 - [[spans()]] - code - blender/opener_checks.py
 - [[tree()_1]] - code - blender/opener_checks.py
 - [[visible()]] - code - blender/opener_checks.py
-- [[world_verts()]] - code - blender/opener_checks.py
+- [[world_verts()_1]] - code - blender/opener_checks.py
 
 ## Live Query (requires Dataview plugin)
 
@@ -52,6 +55,7 @@ SORT file.name ASC
 - 1 edge to [[_COMMUNITY_scene_kit.py]]
 
 ## Top bridge nodes
-- [[opener_checks.py]] - degree 23, connects to 4 communities
-- [[checks()]] - degree 11, connects to 1 community
+- [[opener_checks.py]] - degree 24, connects to 3 communities
+- [[checks()]] - degree 12, connects to 1 community
 - [[blade_face()]] - degree 5, connects to 1 community
+- [[mathutils_bvhtree]] - degree 2, connects to 1 community

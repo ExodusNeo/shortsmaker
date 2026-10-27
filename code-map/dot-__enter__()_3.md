@@ -1,18 +1,17 @@
 ---
-source_file: "tests/test_pictures_first.py"
+source_file: "tests/test_opener_render.py"
 type: "code"
-community: "fake_ai"
-location: "L117"
+community: "test_opener_render.py"
+location: "L45"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/fake_ai
+  - community/test_opener_renderpy
 ---
 
 # .__enter__()
 
 ## Connections
-- [[fake_ai]] - `method` [EXTRACTED]
-- [[reply()]] - `calls` [EXTRACTED]
+- [[Env]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/fake_ai
+#graphify/code #graphify/EXTRACTED #community/test_opener_renderpy

@@ -25,6 +25,7 @@ tags:
 - [[test_cut_result()]] - `contains` [EXTRACTED]
 - [[test_edge_leads()]] - `contains` [EXTRACTED]
 - [[test_first_frame()]] - `contains` [EXTRACTED]
+- [[test_hidden()]] - `contains` [EXTRACTED]
 - [[test_in_frame()]] - `contains` [EXTRACTED]
 - [[test_overlap()]] - `contains` [EXTRACTED]
 - [[test_resting()]] - `contains` [EXTRACTED]

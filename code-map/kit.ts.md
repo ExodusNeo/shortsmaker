@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/style/kit.ts"
 type: "code"
-community: "kit.ts"
+community: "style/index.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/kitts
+  - community/style/indexts
 ---
 
 # kit.ts
@@ -53,4 +53,4 @@ tags:
 - [[theme]] - `re_exports` [EXTRACTED]
 - [[useOnceCanvas()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/kitts
+#graphify/code #graphify/EXTRACTED #community/style/indexts

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/review.py"
 type: "code"
-community: "shutil"
+community: "apply_review_fixes"
 location: "L285"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/shutil
+  - community/apply_review_fixes
 ---
 
 # storyboard()
@@ -20,4 +20,4 @@ tags:
 - [[review.py]] - `contains` [EXTRACTED]
 - [[subprocess]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/shutil
+#graphify/code #graphify/EXTRACTED #community/apply_review_fixes

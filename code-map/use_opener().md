@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/short_render.py"
 type: "code"
-community: "test_opener_render.py"
+community: "render"
 location: "L97"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_opener_renderpy
+  - community/render
 ---
 
 # use_opener()
@@ -22,4 +22,4 @@ tags:
 - [[test_use_opener_never_raises()]] - `calls` [EXTRACTED]
 - [[test_use_opener_planner_check()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_opener_renderpy
+#graphify/code #graphify/EXTRACTED #community/render

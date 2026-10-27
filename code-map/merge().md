@@ -12,7 +12,7 @@ tags:
 # merge()
 
 ## Connections
-- [[Object_2]] - `references` [EXTRACTED]
+- [[Object_1]] - `references` [EXTRACTED]
 - [[One mesh object from many (world transforms applied, materials kept), origin at…]] - `rationale_for` [EXTRACTED]
 - [[load_model()]] - `calls` [EXTRACTED]
 - [[scene_kit.py]] - `contains` [EXTRACTED]

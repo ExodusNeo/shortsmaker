@@ -1,16 +1,18 @@
 ---
 type: community
-members: 18
+members: 20
 ---
 
 # test_first_second.py
 
-**Members:** 18 nodes
+**Members:** 20 nodes
 
 ## Members
 - [[Scenes i and k trade their real photosfilms (paintings and motion graphics are…]] - rationale - shortsmaker/review.py
 - [[Tests for the first-second check (would a scroller stop) and the honest…]] - rationale - tests/test_first_second.py
+- [[The logbook entries the owner has filled in (Views written down), at most the…]] - rationale - shortsmaker/logbook.py
 - [[first_second_check with ffmpeg and the AI faked; returns its result.]] - rationale - tests/test_first_second.py
+- [[logbook_results()]] - code - shortsmaker/logbook.py
 - [[real()]] - code - tests/test_first_second.py
 - [[run_check()]] - code - tests/test_first_second.py
 - [[state()]] - code - tests/test_first_second.py
@@ -35,16 +37,18 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 10 edges to [[_COMMUNITY_pathlib]]
-- 3 edges to [[_COMMUNITY_re]]
-- 2 edges to [[_COMMUNITY_apply_review_fixes]]
+- 11 edges to [[_COMMUNITY_pathlib]]
+- 3 edges to [[_COMMUNITY_apply_review_fixes]]
+- 2 edges to [[_COMMUNITY_ffmpeg]]
 - 2 edges to [[_COMMUNITY_test_blender_scene.py]]
-- 1 edge to [[_COMMUNITY_visual_review]]
-- 1 edge to [[_COMMUNITY_json]]
+- 1 edge to [[_COMMUNITY_write_scripts]]
+- 1 edge to [[_COMMUNITY_re]]
+- 1 edge to [[_COMMUNITY_channel_profiles.py]]
+- 1 edge to [[_COMMUNITY_shutil]]
 
 ## Top bridge nodes
 - [[test_first_second.py]] - degree 27, connects to 4 communities
+- [[logbook_results()]] - degree 6, connects to 4 communities
 - [[swap_pictures()]] - degree 6, connects to 2 communities
 - [[run_check()]] - degree 7, connects to 1 community
 - [[test_opener_fix_swaps_once()]] - degree 4, connects to 1 community
-- [[test_opener_prompt_shows_each_scenes_line_and_picture()]] - degree 3, connects to 1 community

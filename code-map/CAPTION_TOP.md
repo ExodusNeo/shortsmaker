@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/style/kit.ts"
 type: "code"
-community: "kit.ts"
+community: "style/index.ts"
 location: "L12"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/kitts
+  - community/style/indexts
 ---
 
 # CAPTION_TOP
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[kit.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/kitts
+#graphify/code #graphify/EXTRACTED #community/style/indexts

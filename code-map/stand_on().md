@@ -12,7 +12,7 @@ tags:
 # stand_on()
 
 ## Connections
-- [[Vector_6]] - `references` [EXTRACTED]
+- [[Vector_7]] - `references` [EXTRACTED]
 - [[Where o stands on top of sup of spots on its top, the one where o's whole…]] - `rationale_for` [EXTRACTED]
 - [[bbox()]] - `calls` [EXTRACTED]
 - [[opener_scene.py]] - `contains` [EXTRACTED]

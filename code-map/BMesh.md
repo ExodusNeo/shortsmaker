@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "scene_kit.py"
+community: "cut"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/scene_kitpy
+  - community/cut
 ---
 
 # BMesh
@@ -15,4 +15,4 @@ tags:
 - [[scene_kit.py]] - `imports` [EXTRACTED]
 - [[to_bm()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/scene_kitpy
+#graphify/code #graphify/EXTRACTED #community/cut

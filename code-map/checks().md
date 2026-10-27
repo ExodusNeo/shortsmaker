@@ -2,7 +2,7 @@
 source_file: "blender/opener_scene.py"
 type: "code"
 community: "opener_checks.py"
-location: "L203"
+location: "L232"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -17,8 +17,9 @@ tags:
 - [[cut_result()]] - `calls` [EXTRACTED]
 - [[edge_leads()]] - `calls` [EXTRACTED]
 - [[first_frame()]] - `calls` [EXTRACTED]
+- [[hidden()_1]] - `calls` [EXTRACTED]
 - [[in_frame()]] - `calls` [EXTRACTED]
-- [[main()_3]] - `calls` [EXTRACTED]
+- [[main()_4]] - `calls` [EXTRACTED]
 - [[opener_scene.py]] - `contains` [EXTRACTED]
 - [[overlaps()]] - `calls` [EXTRACTED]
 - [[resting()]] - `calls` [EXTRACTED]

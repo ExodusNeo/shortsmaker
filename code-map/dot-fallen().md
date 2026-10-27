@@ -15,6 +15,6 @@ tags:
 - [[Failure]] - `method` [EXTRACTED]
 - [[Vector_2]] - `references` [EXTRACTED]
 - [[Where a point on the collapsing span ends up in the water.]] - `rationale_for` [EXTRACTED]
-- [[main()_1]] - `calls` [INFERRED]
+- [[main()_2]] - `calls` [INFERRED]
 
 #graphify/code #graphify/EXTRACTED #community/main

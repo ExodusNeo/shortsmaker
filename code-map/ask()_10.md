@@ -1,17 +1,18 @@
 ---
-source_file: "tests/test_full_scenes.py"
+source_file: "tests/test_style.py"
 type: "code"
-community: "_fake_planning"
-location: "L439"
+community: "plan_with"
+location: "L110"
 tags:
   - graphify/code
-  - graphify/EXTRACTED
-  - community/_fake_planning
+  - graphify/INFERRED
+  - community/plan_with
 ---
 
 # ask()
 
 ## Connections
-- [[test_rewrite_paint_prompts()]] - `contains` [EXTRACTED]
+- [[plan_with()_1]] - `indirect_call` [INFERRED]
+- [[test_fact_check_sees_new_graphics()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/_fake_planning
+#graphify/code #graphify/INFERRED #community/plan_with

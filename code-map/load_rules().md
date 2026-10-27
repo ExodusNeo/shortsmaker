@@ -17,6 +17,7 @@ tags:
 - [[parse_rules()]] - `calls` [EXTRACTED]
 - [[require_rules()]] - `calls` [EXTRACTED]
 - [[rules.py]] - `contains` [EXTRACTED]
+- [[test_channels_have_opener_rules()]] - `calls` [EXTRACTED]
 - [[test_load_rules_sets_session()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/test_rulespy

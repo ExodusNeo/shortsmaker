@@ -1,12 +1,12 @@
 ---
 source_file: "blender/moves.py"
 type: "code"
-community: "cut"
-location: "L379"
+community: "Vector"
+location: "L415"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/cut
+  - community/Vector
 ---
 
 # split()
@@ -20,4 +20,4 @@ tags:
 - [[pick_island()]] - `calls` [EXTRACTED]
 - [[through_cut()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/cut
+#graphify/code #graphify/EXTRACTED #community/Vector

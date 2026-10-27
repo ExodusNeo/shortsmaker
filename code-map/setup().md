@@ -17,6 +17,6 @@ tags:
 - [[ink_lines()]] - `calls` [EXTRACTED]
 - [[linear()]] - `calls` [EXTRACTED]
 - [[look.py]] - `contains` [EXTRACTED]
-- [[main()_1]] - `calls` [EXTRACTED]
+- [[main()_2]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/build_scenepy

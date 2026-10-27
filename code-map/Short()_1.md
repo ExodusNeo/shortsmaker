@@ -1,19 +1,19 @@
 ---
 source_file: "remotion/src/Short.tsx"
 type: "code"
-community: "style.test.ts"
+community: "Short.tsx"
 location: "L143"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/styletestts
+  - community/Shorttsx
 ---
 
 # Short()
 
 ## Connections
 - [[Background()]] - `calls` [EXTRACTED]
-- [[Captions()]] - `calls` [EXTRACTED]
+- [[Captions()_1]] - `calls` [EXTRACTED]
 - [[GraphicFor()]] - `calls` [EXTRACTED]
 - [[HookTitle()]] - `calls` [EXTRACTED]
 - [[PersonCard()]] - `calls` [EXTRACTED]
@@ -25,4 +25,4 @@ tags:
 - [[transitionFor()]] - `calls` [EXTRACTED]
 - [[transitionWindow()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/styletestts
+#graphify/code #graphify/EXTRACTED #community/Shorttsx

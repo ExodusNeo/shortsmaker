@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/style/kit.ts"
 type: "code"
-community: "style.test.ts"
+community: "Short.tsx"
 location: "L19"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/styletestts
+  - community/Shorttsx
 ---
 
 # inksOf()
@@ -17,4 +17,4 @@ tags:
 - [[kit.ts]] - `contains` [EXTRACTED]
 - [[style.test.ts]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/styletestts
+#graphify/code #graphify/EXTRACTED #community/Shorttsx

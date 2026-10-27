@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/style/overlays/QuestionBeat.tsx"
 type: "code"
-community: "style/index.ts"
+community: "Graphics.tsx"
 location: "L7"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/style/indexts
+  - community/Graphicstsx
 ---
 
 # QuestionBeat()
@@ -17,4 +17,4 @@ tags:
 - [[slot()]] - `calls` [EXTRACTED]
 - [[styleindex.ts]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/style/indexts
+#graphify/code #graphify/EXTRACTED #community/Graphicstsx

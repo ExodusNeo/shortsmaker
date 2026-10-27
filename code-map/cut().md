@@ -2,7 +2,7 @@
 source_file: "blender/moves.py"
 type: "code"
 community: "cut"
-location: "L489"
+location: "L525"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -39,7 +39,7 @@ tags:
 - [[to_object()]] - `calls` [EXTRACTED]
 - [[tool_axes()]] - `calls` [EXTRACTED]
 - [[tool_rotation()]] - `calls` [EXTRACTED]
-- [[travel()_1]] - `calls` [EXTRACTED]
-- [[world_verts()_1]] - `calls` [EXTRACTED]
+- [[travel()]] - `calls` [EXTRACTED]
+- [[world_verts()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/cut

@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "skinOf"
+community: "toolkit.tsx"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/skinOf
+  - community/toolkittsx
 ---
 
 # remotion_src_full_toolkit_serif
@@ -14,4 +14,4 @@ tags:
 - [[Custom0.tsx]] - `imports` [EXTRACTED]
 - [[Custom3.tsx]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/skinOf
+#graphify/concept #graphify/EXTRACTED #community/toolkittsx

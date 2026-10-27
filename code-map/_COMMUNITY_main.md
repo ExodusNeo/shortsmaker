@@ -25,7 +25,7 @@ members: 18
 - [[Where a point on the collapsing span ends up in the water.]] - rationale - blender/failures.py
 - [[focus_object()]] - code - blender/templates.py
 - [[key()_1]] - code - blender/failures.py
-- [[main()_1]] - code - blender/build_scene.py
+- [[main()_2]] - code - blender/build_scene.py
 
 ## Live Query (requires Dataview plugin)
 
@@ -42,7 +42,7 @@ SORT file.name ASC
 - 1 edge to [[_COMMUNITY_json]]
 
 ## Top bridge nodes
-- [[main()_1]] - degree 19, connects to 5 communities
+- [[main()_2]] - degree 19, connects to 5 communities
 - [[Failure]] - degree 9, connects to 1 community
 - [[key()_1]] - degree 4, connects to 1 community
 - [[focus_object()]] - degree 4, connects to 1 community

@@ -2,7 +2,7 @@
 source_file: "tests/test_opener_checks.py"
 type: "code"
 community: "test_blender_scene.py"
-location: "L63"
+location: "L69"
 tags:
   - graphify/code
   - graphify/EXTRACTED

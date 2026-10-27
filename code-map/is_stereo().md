@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/photo_prep.py"
 type: "code"
-community: "trim_borders"
+community: "words_of"
 location: "L12"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/trim_borders
+  - community/words_of
 ---
 
 # is_stereo()
@@ -19,4 +19,4 @@ tags:
 - [[photo_prep.py]] - `contains` [EXTRACTED]
 - [[statistics]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/trim_borders
+#graphify/code #graphify/EXTRACTED #community/words_of

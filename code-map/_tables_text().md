@@ -15,5 +15,6 @@ tags:
 - [[ask()_4]] - `calls` [EXTRACTED]
 - [[fix_plan()]] - `calls` [EXTRACTED]
 - [[opener_plan.py]] - `contains` [EXTRACTED]
+- [[test_prompt_explains_stroke_angles()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/test_opener_planpy

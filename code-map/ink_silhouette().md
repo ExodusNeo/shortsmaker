@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/remotion_render.py"
 type: "code"
-community: "make_paper"
+community: "paint_instead"
 location: "L103"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/make_paper
+  - community/paint_instead
 ---
 
 # ink_silhouette()
@@ -18,4 +18,4 @@ tags:
 - [[render()_3]] - `calls` [EXTRACTED]
 - [[test_ink_silhouette()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/make_paper
+#graphify/code #graphify/EXTRACTED #community/paint_instead

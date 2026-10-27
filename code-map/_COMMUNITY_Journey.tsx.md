@@ -1,11 +1,11 @@
 ---
 type: community
-members: 18
+members: 22
 ---
 
 # Journey.tsx
 
-**Members:** 18 nodes
+**Members:** 22 nodes
 
 ## Members
 - [[FOCUS]] - code - remotion/src/full/Journey.tsx
@@ -24,6 +24,10 @@ members: 18
 - [[outside()]] - code - remotion/src/full/Journey.tsx
 - [[overlap()]] - code - remotion/src/full/Journey.tsx
 - [[placeLabels()]] - code - remotion/src/full/Journey.tsx
+- [[ref_d3_geo]] - concept
+- [[ref_topojson_client]] - concept
+- [[ref_topojson_specification]] - concept
+- [[ref_world_atlas]] - concept
 - [[viewOf()]] - code - remotion/src/full/Journey.tsx
 - [[wrap()]] - code - remotion/src/full/Journey.tsx
 
@@ -35,11 +39,16 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 8 edges to [[_COMMUNITY_toolkit.tsx]]
-- 5 edges to [[_COMMUNITY_Short.tsx]]
-- 2 edges to [[_COMMUNITY_fulltypes.ts]]
-- 2 edges to [[_COMMUNITY_skinOf]]
+- 5 edges to [[_COMMUNITY_fulltypes.ts]]
+- 4 edges to [[_COMMUNITY_Paper]]
+- 4 edges to [[_COMMUNITY_Graphics.tsx]]
+- 2 edges to [[_COMMUNITY_toolkit.tsx]]
+- 1 edge to [[_COMMUNITY_guarded.tsx]]
+- 1 edge to [[_COMMUNITY_ref_remotion]]
 
 ## Top bridge nodes
-- [[Journey.tsx]] - degree 30, connects to 4 communities
-- [[Journey()]] - degree 10, connects to 2 communities
+- [[Journey.tsx]] - degree 30, connects to 5 communities
+- [[Journey()]] - degree 10, connects to 3 communities
+- [[ref_d3_geo]] - degree 2, connects to 1 community
+- [[ref_topojson_client]] - degree 2, connects to 1 community
+- [[ref_topojson_specification]] - degree 2, connects to 1 community

@@ -8,7 +8,7 @@ members: 10
 **Members:** 10 nodes
 
 ## Members
-- [[Path_20]] - code
+- [[Path_19]] - code
 - [[Plain-English name of the Short's photo look for edit_plan.txt.]] - rationale - shortsmaker/editplan.py
 - [[Plain-English scene change for edit_plan.txt.]] - rationale - shortsmaker/editplan.py
 - [[Timestamped edit decision list of exactly what was rendered, plus the sound-…]] - rationale - shortsmaker/editplan.py
@@ -28,9 +28,9 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 4 edges to [[_COMMUNITY_pathlib]]
-- 2 edges to [[_COMMUNITY_test_style.py]]
+- 2 edges to [[_COMMUNITY_style_library]]
 - 1 edge to [[_COMMUNITY_render]]
-- 1 edge to [[_COMMUNITY_visual_review]]
+- 1 edge to [[_COMMUNITY_apply_review_fixes]]
 - 1 edge to [[_COMMUNITY_test_pictures_first.py]]
 
 ## Top bridge nodes

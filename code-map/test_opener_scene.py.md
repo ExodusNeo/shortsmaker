@@ -28,9 +28,13 @@ tags:
 - [[test_bad_plans_fail()]] - `contains` [EXTRACTED]
 - [[test_box_fall_rests_and_renders()]] - `contains` [EXTRACTED]
 - [[test_chicken_chop_reference()]] - `contains` [EXTRACTED]
+- [[test_chicken_live_plan()]] - `contains` [EXTRACTED]
 - [[test_fixture_plans_are_clean()]] - `contains` [EXTRACTED]
 - [[test_onion_mince()]] - `contains` [EXTRACTED]
 - [[test_onion_slices()]] - `contains` [EXTRACTED]
+- [[test_subject_without_follow()]] - `contains` [EXTRACTED]
+- [[test_unbuildable_cut_is_reported_not_crashed()]] - `contains` [EXTRACTED]
+- [[test_walk_stops_short_of_obstacles()]] - `contains` [EXTRACTED]
 - [[traceback]] - `imports` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/test_opener_planpy

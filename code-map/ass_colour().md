@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/config.py"
 type: "code"
-community: "audio_mix.py"
+community: "captions"
 location: "L116"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/audio_mixpy
+  - community/captions
 ---
 
 # ass_colour()
@@ -14,8 +14,8 @@ tags:
 ## Connections
 - [[ASS subtitle colour (&H00BBGGRR&), optionally darkened (for an outline).]] - `rationale_for` [EXTRACTED]
 - [[audio_mix.py]] - `imports` [EXTRACTED]
-- [[captions()_1]] - `calls` [EXTRACTED]
+- [[captions()]] - `calls` [EXTRACTED]
 - [[config.py]] - `contains` [EXTRACTED]
 - [[styled()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/audio_mixpy
+#graphify/code #graphify/EXTRACTED #community/captions

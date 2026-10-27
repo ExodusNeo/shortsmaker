@@ -20,6 +20,6 @@ tags:
 - [[dot-reset()]] - `method` [EXTRACTED]
 - [[dot-ride_along()]] - `method` [EXTRACTED]
 - [[failures.py]] - `contains` [EXTRACTED]
-- [[main()_1]] - `calls` [EXTRACTED]
+- [[main()_2]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/main

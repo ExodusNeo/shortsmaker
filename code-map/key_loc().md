@@ -15,6 +15,7 @@ tags:
 - [[camera()_1]] - `calls` [EXTRACTED]
 - [[cut()]] - `calls` [EXTRACTED]
 - [[fall()]] - `calls` [EXTRACTED]
+- [[hold_offscreen()]] - `calls` [EXTRACTED]
 - [[hop_off()]] - `calls` [EXTRACTED]
 - [[make_dynamic()]] - `calls` [EXTRACTED]
 - [[push()]] - `calls` [EXTRACTED]

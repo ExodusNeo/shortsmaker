@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/style_lab.py"
 type: "rationale"
-community: "pathlib"
+community: "shutil"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/pathlib
+  - community/shutil
 ---
 
 # The style library: invented looks, overlays and scene changes, candidates and…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[style_lab.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/pathlib
+#graphify/rationale #graphify/EXTRACTED #community/shutil

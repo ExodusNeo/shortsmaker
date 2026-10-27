@@ -1,12 +1,12 @@
 ---
 source_file: "blender/moves.py"
 type: "rationale"
-community: "cut"
-location: "L259"
+community: "Vector"
+location: "L295"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/cut
+  - community/Vector
 ---
 
 # The loose parts of bm, each as its own bmesh.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[islands()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/cut
+#graphify/rationale #graphify/EXTRACTED #community/Vector

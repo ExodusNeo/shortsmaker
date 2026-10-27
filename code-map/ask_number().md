@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/channel_profiles.py"
 type: "code"
-community: "pathlib"
+community: "channel_profiles.py"
 location: "L56"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/pathlib
+  - community/channel_profilespy
 ---
 
 # ask_number()
@@ -18,4 +18,4 @@ tags:
 - [[fix_short()]] - `calls` [EXTRACTED]
 - [[library_menu()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/pathlib
+#graphify/code #graphify/EXTRACTED #community/channel_profilespy

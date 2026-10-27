@@ -12,7 +12,7 @@ tags:
 # bbox()
 
 ## Connections
-- [[Vector_7]] - `references` [EXTRACTED]
+- [[Vector_5]] - `references` [EXTRACTED]
 - [[build_set()]] - `calls` [EXTRACTED]
 - [[camera()_1]] - `calls` [EXTRACTED]
 - [[cut()]] - `calls` [EXTRACTED]
@@ -23,6 +23,6 @@ tags:
 - [[scene_kit.py]] - `contains` [EXTRACTED]
 - [[sink()]] - `calls` [EXTRACTED]
 - [[stand_on()]] - `calls` [EXTRACTED]
-- [[world_verts()_1]] - `calls` [EXTRACTED]
+- [[world_verts()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/opener_scenepy

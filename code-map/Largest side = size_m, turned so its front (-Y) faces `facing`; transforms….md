@@ -1,12 +1,12 @@
 ---
 source_file: "blender/scene_kit.py"
 type: "rationale"
-community: "opener_scene.py"
+community: "scene_kit.py"
 location: "L122"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/opener_scenepy
+  - community/scene_kitpy
 ---
 
 # Largest side = size_m, turned so its front (-Y) faces `facing`; transforms…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[fit()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/opener_scenepy
+#graphify/rationale #graphify/EXTRACTED #community/scene_kitpy

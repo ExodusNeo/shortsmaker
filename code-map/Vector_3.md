@@ -1,19 +1,20 @@
 ---
 source_file: ""
 type: "code"
-community: "cut"
+community: "Vector"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/cut
+  - community/Vector
 ---
 
 # Vector
 
 ## Connections
-- [[dot-__init__()_9]] - `references` [EXTRACTED]
+- [[dot-__init__()_10]] - `references` [EXTRACTED]
 - [[box_of()]] - `references` [EXTRACTED]
 - [[centre()]] - `references` [EXTRACTED]
+- [[clear_distance()]] - `references` [EXTRACTED]
 - [[edge_point_local()]] - `references` [EXTRACTED]
 - [[half()]] - `references` [EXTRACTED]
 - [[handle_end_local()]] - `references` [EXTRACTED]
@@ -22,6 +23,6 @@ tags:
 - [[region_normal()]] - `references` [EXTRACTED]
 - [[tool_rotation()]] - `references` [EXTRACTED]
 - [[toward()]] - `references` [EXTRACTED]
-- [[travel()_1]] - `references` [EXTRACTED]
+- [[travel()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/cut
+#graphify/code #graphify/EXTRACTED #community/Vector

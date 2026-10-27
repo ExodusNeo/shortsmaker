@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/review.py"
 type: "code"
-community: "visual_review"
+community: "apply_review_fixes"
 location: "L20"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/visual_review
+  - community/apply_review_fixes
 ---
 
 # quality_check()
@@ -22,4 +22,4 @@ tags:
 - [[subprocess]] - `calls` [EXTRACTED]
 - [[where()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/visual_review
+#graphify/code #graphify/EXTRACTED #community/apply_review_fixes

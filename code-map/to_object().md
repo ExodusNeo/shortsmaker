@@ -2,7 +2,7 @@
 source_file: "blender/moves.py"
 type: "code"
 community: "cut"
-location: "L295"
+location: "L331"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,7 +12,7 @@ tags:
 # to_object()
 
 ## Connections
-- [[Object_1]] - `references` [EXTRACTED]
+- [[Object_3]] - `references` [EXTRACTED]
 - [[cut()]] - `calls` [EXTRACTED]
 - [[moves.py]] - `contains` [EXTRACTED]
 

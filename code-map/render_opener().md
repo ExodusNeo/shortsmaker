@@ -2,7 +2,7 @@
 source_file: "shortsmaker/opener_render.py"
 type: "code"
 community: "test_opener_render.py"
-location: "L96"
+location: "L122"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -33,6 +33,7 @@ tags:
 - [[test_pick_model()]] - `calls` [EXTRACTED]
 - [[test_reuse_after_small_length_change()]] - `calls` [EXTRACTED]
 - [[test_reuse_unchanged()]] - `calls` [EXTRACTED]
+- [[test_review_reads_the_channel_opener_rules()]] - `calls` [EXTRACTED]
 - [[test_review_rejects()]] - `calls` [EXTRACTED]
 - [[test_search_failure_falls_back()]] - `calls` [EXTRACTED]
 - [[test_success_returns_clip()]] - `calls` [EXTRACTED]

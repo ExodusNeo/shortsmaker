@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "use_picture_from"
+community: "test_full_scenes.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/use_picture_from
+  - community/test_full_scenespy
 ---
 
 # Path
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[use_picture_from()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/use_picture_from
+#graphify/code #graphify/EXTRACTED #community/test_full_scenespy

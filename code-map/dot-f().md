@@ -2,7 +2,7 @@
 source_file: "blender/moves.py"
 type: "code"
 community: "opener_scene.py"
-location: "L43"
+location: "L45"
 tags:
   - graphify/code
   - graphify/EXTRACTED

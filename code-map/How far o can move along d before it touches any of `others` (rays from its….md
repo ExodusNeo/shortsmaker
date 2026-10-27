@@ -1,17 +1,17 @@
 ---
 source_file: "blender/moves.py"
 type: "rationale"
-community: "cut"
-location: "L218"
+community: "travel"
+location: "L254"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/cut
+  - community/travel
 ---
 
 # How far o can move along d before it touches any of `others` (rays from its…
 
 ## Connections
-- [[travel()_1]] - `rationale_for` [EXTRACTED]
+- [[travel()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/cut
+#graphify/rationale #graphify/EXTRACTED #community/travel

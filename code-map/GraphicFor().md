@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/Short.tsx"
 type: "code"
-community: "style.test.ts"
+community: "Short.tsx"
 location: "L127"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/styletestts
+  - community/Shorttsx
 ---
 
 # GraphicFor()
@@ -18,4 +18,4 @@ tags:
 - [[Short.tsx]] - `contains` [EXTRACTED]
 - [[overlayFor()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/styletestts
+#graphify/code #graphify/EXTRACTED #community/Shorttsx

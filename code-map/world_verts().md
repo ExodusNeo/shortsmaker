@@ -1,22 +1,23 @@
 ---
-source_file: "blender/opener_checks.py"
+source_file: "blender/scene_kit.py"
 type: "code"
-community: "opener_checks.py"
-location: "L33"
+community: "travel"
+location: "L21"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/opener_checkspy
+  - community/travel
 ---
 
 # world_verts()
 
 ## Connections
 - [[Vector_5]] - `references` [EXTRACTED]
-- [[edge_leads()]] - `calls` [EXTRACTED]
-- [[edge_point()]] - `calls` [EXTRACTED]
-- [[opener_checks.py]] - `contains` [EXTRACTED]
-- [[resting()]] - `calls` [EXTRACTED]
-- [[screen_box()]] - `calls` [EXTRACTED]
+- [[bbox()]] - `calls` [EXTRACTED]
+- [[clear_distance()]] - `calls` [EXTRACTED]
+- [[cut()]] - `calls` [EXTRACTED]
+- [[main()_4]] - `calls` [EXTRACTED]
+- [[scene_kit.py]] - `contains` [EXTRACTED]
+- [[travel()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/opener_checkspy
+#graphify/code #graphify/EXTRACTED #community/travel

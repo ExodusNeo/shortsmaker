@@ -15,6 +15,6 @@ tags:
 - [[first_frame()]] - `calls` [EXTRACTED]
 - [[in_frame()]] - `calls` [EXTRACTED]
 - [[opener_checks.py]] - `contains` [EXTRACTED]
-- [[world_verts()]] - `calls` [EXTRACTED]
+- [[world_verts()_1]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/opener_checkspy

@@ -9,7 +9,7 @@ members: 11
 
 ## Members
 - [[(start pose, end pose) of a beat; `after` the collapse, close shots find the…]] - rationale - blender/build_scene.py
-- [[dot-__init__()_6]] - code - blender/build_scene.py
+- [[dot-__init__()_7]] - code - blender/build_scene.py
 - [[dot-beat()]] - code - blender/build_scene.py
 - [[dot-close()_1]] - code - blender/build_scene.py
 - [[dot-wide()]] - code - blender/build_scene.py

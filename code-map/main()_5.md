@@ -1,8 +1,8 @@
 ---
-source_file: "tests/render_style.py"
+source_file: "local_ai/qwen_voice.py"
 type: "code"
 community: "shutil"
-location: "L49"
+location: "L181"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,7 +12,9 @@ tags:
 # main()
 
 ## Connections
-- [[build()_1]] - `calls` [EXTRACTED]
-- [[render_style.py]] - `contains` [EXTRACTED]
+- [[align()]] - `calls` [EXTRACTED]
+- [[json]] - `calls` [EXTRACTED]
+- [[qwen_voice.py]] - `contains` [EXTRACTED]
+- [[time]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/shutil

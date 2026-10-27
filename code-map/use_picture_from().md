@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/cli.py"
 type: "code"
-community: "use_picture_from"
+community: "test_full_scenes.py"
 location: "L125"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/use_picture_from
+  - community/test_full_scenespy
 ---
 
 # use_picture_from()
@@ -20,4 +20,4 @@ tags:
 - [[test_new_picture_drops_mark()]] - `calls` [EXTRACTED]
 - [[test_paint_new_clears_full()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/use_picture_from
+#graphify/code #graphify/EXTRACTED #community/test_full_scenespy

@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/style/window.ts"
 type: "code"
-community: "style.test.ts"
+community: "Short.tsx"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/styletestts
+  - community/Shorttsx
 ---
 
 # window.ts
@@ -18,4 +18,4 @@ tags:
 - [[transitionFor()]] - `imports` [EXTRACTED]
 - [[transitionWindow()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/styletestts
+#graphify/code #graphify/EXTRACTED #community/Shorttsx

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/review.py"
 type: "code"
-community: "visual_review"
+community: "apply_review_fixes"
 location: "L63"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/visual_review
+  - community/apply_review_fixes
 ---
 
 # visual_review()
@@ -25,4 +25,4 @@ tags:
 - [[test_review_is_told_the_drawings_are_deliberate()]] - `calls` [EXTRACTED]
 - [[test_review_knows_what_dims_a_picture_on_purpose()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/visual_review
+#graphify/code #graphify/EXTRACTED #community/apply_review_fixes

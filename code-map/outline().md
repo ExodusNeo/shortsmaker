@@ -1,19 +1,19 @@
 ---
 source_file: "remotion/src/Graphics.tsx"
 type: "code"
-community: "Short.tsx"
+community: "Graphics.tsx"
 location: "L10"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Shorttsx
+  - community/Graphicstsx
 ---
 
 # outline()
 
 ## Connections
 - [[Callout()]] - `calls` [EXTRACTED]
-- [[Captions()]] - `calls` [EXTRACTED]
+- [[Captions()_1]] - `calls` [EXTRACTED]
 - [[Captions.tsx]] - `imports` [EXTRACTED]
 - [[Cards.tsx]] - `imports` [EXTRACTED]
 - [[CompareCard()]] - `calls` [EXTRACTED]
@@ -27,4 +27,4 @@ tags:
 - [[TimelineCard()]] - `calls` [EXTRACTED]
 - [[kit.ts]] - `re_exports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Shorttsx
+#graphify/code #graphify/EXTRACTED #community/Graphicstsx

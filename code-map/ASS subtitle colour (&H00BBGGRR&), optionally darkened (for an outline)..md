@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/config.py"
 type: "rationale"
-community: "audio_mix.py"
+community: "captions"
 location: "L117"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/audio_mixpy
+  - community/captions
 ---
 
 # ASS subtitle colour (&H00BBGGRR&), optionally darkened (for an outline).
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[ass_colour()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/audio_mixpy
+#graphify/rationale #graphify/EXTRACTED #community/captions

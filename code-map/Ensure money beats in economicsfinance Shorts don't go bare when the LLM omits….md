@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/plan_rules.py"
 type: "rationale"
-community: "plan_rules.py"
+community: "words_of"
 location: "L300"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/plan_rulespy
+  - community/words_of
 ---
 
 # Ensure money beats in economics/finance Shorts don't go bare when the LLM omits…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[fill_money_graphics()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/plan_rulespy
+#graphify/rationale #graphify/EXTRACTED #community/words_of

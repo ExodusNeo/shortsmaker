@@ -12,11 +12,11 @@ tags:
 # camera()
 
 ## Connections
-- [[Object_3]] - `references` [EXTRACTED]
+- [[Object_2]] - `references` [EXTRACTED]
 - [[State]] - `references` [EXTRACTED]
 - [[bbox()]] - `calls` [EXTRACTED]
 - [[key_loc()]] - `calls` [EXTRACTED]
-- [[main()_3]] - `calls` [EXTRACTED]
+- [[main()_4]] - `calls` [EXTRACTED]
 - [[math]] - `calls` [EXTRACTED]
 - [[opener_scene.py]] - `contains` [EXTRACTED]
 

@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[Held by its keyframes until `release`, then moved by physics. A launch (ms)…]] - `rationale_for` [EXTRACTED]
-- [[Vector_7]] - `references` [EXTRACTED]
+- [[Vector_5]] - `references` [EXTRACTED]
 - [[add_body()]] - `calls` [EXTRACTED]
 - [[interpolation()]] - `calls` [EXTRACTED]
 - [[key_loc()]] - `calls` [EXTRACTED]

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/channel_profiles.py"
 type: "code"
-community: "main"
+community: "channel_profiles.py"
 location: "L86"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/main
+  - community/channel_profilespy
 ---
 
 # load_channel()
@@ -16,7 +16,7 @@ tags:
 - [[choose_images()]] - `calls` [EXTRACTED]
 - [[fix_short()]] - `calls` [EXTRACTED]
 - [[json]] - `calls` [EXTRACTED]
-- [[main()_2]] - `calls` [EXTRACTED]
+- [[main()_3]] - `calls` [EXTRACTED]
 - [[seo_pass()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/main
+#graphify/code #graphify/EXTRACTED #community/channel_profilespy

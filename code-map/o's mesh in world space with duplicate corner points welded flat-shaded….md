@@ -1,12 +1,12 @@
 ---
 source_file: "blender/moves.py"
 type: "rationale"
-community: "scene_kit.py"
-location: "L233"
+community: "cut"
+location: "L269"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/scene_kitpy
+  - community/cut
 ---
 
 # o's mesh in world space with duplicate corner points welded: flat-shaded…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[to_bm()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/scene_kitpy
+#graphify/rationale #graphify/EXTRACTED #community/cut

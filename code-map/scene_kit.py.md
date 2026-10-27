@@ -45,6 +45,6 @@ tags:
 - [[simulate()]] - `contains` [EXTRACTED]
 - [[surface_z()]] - `contains` [EXTRACTED]
 - [[tree()]] - `contains` [EXTRACTED]
-- [[world_verts()_1]] - `contains` [EXTRACTED]
+- [[world_verts()]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/scene_kitpy

@@ -22,6 +22,7 @@ tags:
 - [[edge_leads()]] - `contains` [EXTRACTED]
 - [[edge_point()]] - `contains` [EXTRACTED]
 - [[first_frame()]] - `contains` [EXTRACTED]
+- [[hidden()_1]] - `contains` [EXTRACTED]
 - [[in_frame()]] - `contains` [EXTRACTED]
 - [[math]] - `imports` [EXTRACTED]
 - [[mathutils]] - `imports_from` [EXTRACTED]
@@ -34,6 +35,6 @@ tags:
 - [[spans()]] - `contains` [EXTRACTED]
 - [[tree()_1]] - `contains` [EXTRACTED]
 - [[visible()]] - `contains` [EXTRACTED]
-- [[world_verts()]] - `contains` [EXTRACTED]
+- [[world_verts()_1]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/opener_checkspy

@@ -1,12 +1,12 @@
 ---
 source_file: "blender/moves.py"
 type: "code"
-community: "cut"
-location: "L412"
+community: "Vector"
+location: "L448"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/cut
+  - community/Vector
 ---
 
 # merge_slivers()
@@ -19,4 +19,4 @@ tags:
 - [[moves.py]] - `contains` [EXTRACTED]
 - [[thin()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/cut
+#graphify/code #graphify/EXTRACTED #community/Vector

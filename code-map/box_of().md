@@ -1,12 +1,12 @@
 ---
 source_file: "blender/moves.py"
 type: "code"
-community: "cut"
-location: "L333"
+community: "Vector"
+location: "L369"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/cut
+  - community/Vector
 ---
 
 # box_of()
@@ -17,4 +17,4 @@ tags:
 - [[moves.py]] - `contains` [EXTRACTED]
 - [[through_cut()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/cut
+#graphify/code #graphify/EXTRACTED #community/Vector

@@ -1,18 +1,17 @@
 ---
-source_file: "blender/moves.py"
+source_file: "tests/test_pictures_first.py"
 type: "code"
-community: "opener_scene.py"
-location: "L28"
+community: "gather_pool"
+location: "L36"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/opener_scenepy
+  - community/gather_pool
 ---
 
 # .__init__()
 
 ## Connections
-- [[State]] - `method` [EXTRACTED]
-- [[Vector_3]] - `references` [EXTRACTED]
+- [[stubbed]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/opener_scenepy
+#graphify/code #graphify/EXTRACTED #community/gather_pool

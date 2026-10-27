@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/style/kit.ts"
 type: "code"
-community: "kit.ts"
+community: "Halftone.tsx"
 location: "L53"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/kitts
+  - community/Halftonetsx
 ---
 
 # stretch()
@@ -17,4 +17,4 @@ tags:
 - [[draw()_1]] - `calls` [EXTRACTED]
 - [[kit.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/kitts
+#graphify/code #graphify/EXTRACTED #community/Halftonetsx

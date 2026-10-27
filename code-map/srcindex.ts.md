@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/index.ts"
 type: "code"
-community: "Root.tsx"
+community: "ref_remotion"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Roottsx
+  - community/ref_remotion
 ---
 
 # src/index.ts
@@ -16,4 +16,4 @@ tags:
 - [[Root.tsx]] - `imports_from` [EXTRACTED]
 - [[ref_remotion]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Roottsx
+#graphify/code #graphify/EXTRACTED #community/ref_remotion

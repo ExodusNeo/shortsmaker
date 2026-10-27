@@ -28,6 +28,7 @@ tags:
 - [[test_good_plan_is_kept()]] - `contains` [EXTRACTED]
 - [[test_only_buildable_cuts()]] - `contains` [EXTRACTED]
 - [[test_plan_retry_then_none()]] - `contains` [EXTRACTED]
+- [[test_prompt_explains_stroke_angles()]] - `contains` [EXTRACTED]
 - [[test_rejects_on_cycles_and_self()]] - `contains` [EXTRACTED]
 - [[test_rejects_unknown_move_tool_and_id()]] - `contains` [EXTRACTED]
 - [[test_sizes_bounded()]] - `contains` [EXTRACTED]

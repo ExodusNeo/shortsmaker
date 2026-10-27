@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/Cards.tsx"
 type: "code"
-community: "Short.tsx"
+community: "Graphics.tsx"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Shorttsx
+  - community/Graphicstsx
 ---
 
 # Cards.tsx
@@ -31,4 +31,4 @@ tags:
 - [[theme]] - `imports` [EXTRACTED]
 - [[useWindow()]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Shorttsx
+#graphify/code #graphify/EXTRACTED #community/Graphicstsx

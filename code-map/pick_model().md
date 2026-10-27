@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/opener_render.py"
 type: "code"
-community: "json"
+community: "ask_ai"
 location: "L32"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/json
+  - community/ask_ai
 ---
 
 # pick_model()
@@ -19,4 +19,4 @@ tags:
 - [[resolve_models()]] - `calls` [EXTRACTED]
 - [[test_pick_model()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/json
+#graphify/code #graphify/EXTRACTED #community/ask_ai

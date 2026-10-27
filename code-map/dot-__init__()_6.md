@@ -1,17 +1,17 @@
 ---
-source_file: "blender/build_scene.py"
+source_file: "tools/split_make_shorts.py"
 type: "code"
-community: "Shots"
-location: "L44"
+community: "split_make_shorts.py"
+location: "L385"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Shots
+  - community/split_make_shortspy
 ---
 
 # .__init__()
 
 ## Connections
-- [[Shots]] - `method` [EXTRACTED]
+- [[Unqualify]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Shots
+#graphify/code #graphify/EXTRACTED #community/split_make_shortspy

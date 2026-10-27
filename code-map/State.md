@@ -12,7 +12,7 @@ tags:
 # State
 
 ## Connections
-- [[dot-__init__()_9]] - `method` [EXTRACTED]
+- [[dot-__init__()_10]] - `method` [EXTRACTED]
 - [[dot-allow()]] - `method` [EXTRACTED]
 - [[dot-f()]] - `method` [EXTRACTED]
 - [[dot-support_obj()]] - `method` [EXTRACTED]
@@ -21,7 +21,8 @@ tags:
 - [[camera()_1]] - `references` [EXTRACTED]
 - [[checks()]] - `references` [EXTRACTED]
 - [[gait()]] - `references` [EXTRACTED]
-- [[main()_3]] - `calls` [EXTRACTED]
+- [[hold_offscreen()]] - `references` [EXTRACTED]
+- [[main()_4]] - `calls` [EXTRACTED]
 - [[moves.py]] - `contains` [EXTRACTED]
 - [[place_actors()]] - `references` [EXTRACTED]
 - [[release()]] - `references` [EXTRACTED]

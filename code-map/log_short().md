@@ -17,7 +17,7 @@ tags:
 - [[clock()_1]] - `calls` [EXTRACTED]
 - [[duration()]] - `calls` [EXTRACTED]
 - [[logbook.py]] - `contains` [EXTRACTED]
-- [[main()_2]] - `calls` [EXTRACTED]
+- [[main()_3]] - `calls` [EXTRACTED]
 - [[re]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/re

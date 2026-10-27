@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/style/looks/Riso.tsx"
 type: "code"
-community: "kit.ts"
+community: "Halftone.tsx"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/kitts
+  - community/Halftonetsx
 ---
 
 # Riso.tsx
@@ -27,4 +27,4 @@ tags:
 - [[styletypes.ts]] - `imports_from` [EXTRACTED]
 - [[useOnceCanvas()]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/kitts
+#graphify/code #graphify/EXTRACTED #community/Halftonetsx

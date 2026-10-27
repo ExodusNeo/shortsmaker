@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "audio_mix.py"
+community: "pathlib"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/audio_mixpy
+  - community/pathlib
 ---
 
 # urllib_request
@@ -16,4 +16,4 @@ tags:
 - [[h3_run.py]] - `imports` [EXTRACTED]
 - [[media_tools.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/audio_mixpy
+#graphify/concept #graphify/EXTRACTED #community/pathlib

@@ -2,7 +2,7 @@
 source_file: "blender/opener_checks.py"
 type: "rationale"
 community: "opener_checks.py"
-location: "L123"
+location: "L146"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED

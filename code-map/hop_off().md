@@ -2,7 +2,7 @@
 source_file: "blender/moves.py"
 type: "code"
 community: "moves.py"
-location: "L124"
+location: "L126"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,7 +12,7 @@ tags:
 # hop_off()
 
 ## Connections
-- [[Up first, then out and down, so the feet clear the highest point of what it…]] - `rationale_for` [EXTRACTED]
+- [[Up, out at that height until the whole body has passed the support's far edge,…]] - `rationale_for` [EXTRACTED]
 - [[apply()]] - `indirect_call` [INFERRED]
 - [[bbox()]] - `calls` [EXTRACTED]
 - [[key_loc()]] - `calls` [EXTRACTED]

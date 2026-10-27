@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "opener_scene.py"
+community: "cut"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/opener_scenepy
+  - community/cut
 ---
 
 # Object
 
 ## Connections
-- [[camera()_1]] - `references` [EXTRACTED]
+- [[to_object()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/opener_scenepy
+#graphify/code #graphify/EXTRACTED #community/cut

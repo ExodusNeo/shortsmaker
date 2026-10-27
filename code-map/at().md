@@ -15,6 +15,7 @@ tags:
 - [[blade_face()]] - `calls` [EXTRACTED]
 - [[edge_leads()]] - `calls` [EXTRACTED]
 - [[first_frame()]] - `calls` [EXTRACTED]
+- [[hidden()_1]] - `calls` [EXTRACTED]
 - [[in_frame()]] - `calls` [EXTRACTED]
 - [[opener_checks.py]] - `contains` [EXTRACTED]
 - [[overlaps()]] - `calls` [EXTRACTED]

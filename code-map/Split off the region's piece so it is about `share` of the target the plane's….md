@@ -1,12 +1,12 @@
 ---
 source_file: "blender/moves.py"
 type: "rationale"
-community: "cut"
-location: "L369"
+community: "Vector"
+location: "L405"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/cut
+  - community/Vector
 ---
 
 # Split off the region's piece so it is about `share` of the target: the plane's…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[through_cut()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/cut
+#graphify/rationale #graphify/EXTRACTED #community/Vector

@@ -12,6 +12,7 @@ tags:
 # visible()
 
 ## Connections
+- [[hidden()_1]] - `calls` [EXTRACTED]
 - [[opener_checks.py]] - `contains` [EXTRACTED]
 - [[overlaps()]] - `calls` [EXTRACTED]
 - [[resting()]] - `calls` [EXTRACTED]

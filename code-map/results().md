@@ -16,6 +16,7 @@ tags:
 - [[test_cut_result()]] - `calls` [EXTRACTED]
 - [[test_edge_leads()]] - `calls` [EXTRACTED]
 - [[test_first_frame()]] - `calls` [EXTRACTED]
+- [[test_hidden()]] - `calls` [EXTRACTED]
 - [[test_in_frame()]] - `calls` [EXTRACTED]
 - [[test_opener_checks.py]] - `contains` [EXTRACTED]
 - [[test_overlap()]] - `calls` [EXTRACTED]

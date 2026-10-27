@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/remotion_render.py"
 type: "code"
-community: "make_paper"
+community: "render_remotion"
 location: "L121"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/make_paper
+  - community/render_remotion
 ---
 
 # make_paper()
@@ -20,4 +20,4 @@ tags:
 - [[render_remotion()]] - `calls` [EXTRACTED]
 - [[test_make_paper()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/make_paper
+#graphify/code #graphify/EXTRACTED #community/render_remotion

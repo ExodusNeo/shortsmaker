@@ -15,6 +15,6 @@ tags:
 - [[Failure]] - `method` [EXTRACTED]
 - [[The failure from t0 to its peak, then (collapse) the span falls; `until` (the…]] - `rationale_for` [EXTRACTED]
 - [[key()_1]] - `calls` [EXTRACTED]
-- [[main()_1]] - `calls` [INFERRED]
+- [[main()_2]] - `calls` [INFERRED]
 
 #graphify/code #graphify/EXTRACTED #community/main

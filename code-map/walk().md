@@ -2,7 +2,7 @@
 source_file: "blender/moves.py"
 type: "code"
 community: "moves.py"
-location: "L162"
+location: "L170"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -13,6 +13,7 @@ tags:
 
 ## Connections
 - [[apply()]] - `indirect_call` [INFERRED]
+- [[clear_distance()]] - `calls` [EXTRACTED]
 - [[facing_vec()]] - `calls` [EXTRACTED]
 - [[gait()]] - `calls` [EXTRACTED]
 - [[key_loc()]] - `calls` [EXTRACTED]

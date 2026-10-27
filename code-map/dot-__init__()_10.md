@@ -1,17 +1,18 @@
 ---
-source_file: "tests/test_pictures_first.py"
+source_file: "blender/moves.py"
 type: "code"
-community: "fake_ai"
-location: "L114"
+community: "opener_scene.py"
+location: "L28"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/fake_ai
+  - community/opener_scenepy
 ---
 
 # .__init__()
 
 ## Connections
-- [[fake_ai]] - `method` [EXTRACTED]
+- [[State]] - `method` [EXTRACTED]
+- [[Vector_3]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/fake_ai
+#graphify/code #graphify/EXTRACTED #community/opener_scenepy

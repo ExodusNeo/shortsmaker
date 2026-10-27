@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/full/types.ts"
 type: "code"
-community: "toolkit.tsx"
+community: "full/types.ts"
 location: "L37"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/toolkittsx
+  - community/full/typests
 ---
 
 # BoardFull
@@ -15,4 +15,4 @@ tags:
 - [[Board.tsx]] - `imports` [EXTRACTED]
 - [[fulltypes.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/toolkittsx
+#graphify/code #graphify/EXTRACTED #community/full/typests

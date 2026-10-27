@@ -12,9 +12,10 @@ tags:
 # loc_at()
 
 ## Connections
-- [[Vector_7]] - `references` [EXTRACTED]
+- [[Vector_5]] - `references` [EXTRACTED]
 - [[Where obj's keys put it on `frame`, without stepping the scene (stepping would…]] - `rationale_for` [EXTRACTED]
 - [[fcurves()]] - `calls` [EXTRACTED]
+- [[hold_offscreen()]] - `calls` [EXTRACTED]
 - [[hop_off()]] - `calls` [EXTRACTED]
 - [[make_dynamic()]] - `calls` [EXTRACTED]
 - [[scene_kit.py]] - `contains` [EXTRACTED]

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/seo.py"
 type: "code"
-community: "main"
+community: "channel_profiles.py"
 location: "L21"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/main
+  - community/channel_profilespy
 ---
 
 # seo_pass()
@@ -17,7 +17,7 @@ tags:
 - [[json]] - `calls` [EXTRACTED]
 - [[load_channel()]] - `calls` [EXTRACTED]
 - [[logbook_results()]] - `calls` [EXTRACTED]
-- [[main()_2]] - `calls` [EXTRACTED]
+- [[main()_3]] - `calls` [EXTRACTED]
 - [[re]] - `calls` [EXTRACTED]
 - [[search_suggestions()]] - `calls` [EXTRACTED]
 - [[seo.py]] - `contains` [EXTRACTED]
@@ -25,4 +25,4 @@ tags:
 - [[test_seo_pass_research_seeds_dict_and_list()]] - `calls` [EXTRACTED]
 - [[trend_research()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/main
+#graphify/code #graphify/EXTRACTED #community/channel_profilespy

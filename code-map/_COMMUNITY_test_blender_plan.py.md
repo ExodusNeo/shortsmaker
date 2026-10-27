@@ -58,9 +58,9 @@ SORT file.name ASC
 - 2 edges to [[_COMMUNITY_drawn_thumbnail]]
 - 2 edges to [[_COMMUNITY_json]]
 - 1 edge to [[_COMMUNITY_write_scripts]]
-- 1 edge to [[_COMMUNITY_is_usable]]
+- 1 edge to [[_COMMUNITY_clean_pics]]
 - 1 edge to [[_COMMUNITY_frame_maker]]
-- 1 edge to [[_COMMUNITY_gpu.py]]
+- 1 edge to [[_COMMUNITY_shutil]]
 
 ## Top bridge nodes
 - [[test_blender_plan.py]] - degree 24, connects to 5 communities

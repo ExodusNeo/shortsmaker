@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/frame_render.py"
 type: "rationale"
-community: "plan_rules.py"
+community: "words_of"
 location: "L108"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/plan_rulespy
+  - community/words_of
 ---
 
 # True when the picture's subject would land under the top callouts (y ~180-680…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[graphic_low()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/plan_rulespy
+#graphify/rationale #graphify/EXTRACTED #community/words_of
