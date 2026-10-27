@@ -240,7 +240,7 @@ def staging(plan: dict, gaits: dict) -> list[str]:
     "camera" shows its back or its chest instead of its side, and a body walking the way its head flew off walks
     over its own head."""
     out = []
-    legs = {a["id"] for a in plan["actors"] if gaits.get(a.get("gait", "object"), {}).get("legs")}
+    legs = {a["id"] for a in plan["actors"] if gaits.get(a.get("gait", "object"), {}).get("legs") or a.get("person")}
     facing = {a["id"]: a.get("facing", "camera") for a in plan["actors"]}
     flew = {b["target"] for b in plan["beats"] if b["move"] == "cut"
             and any(e.get("then") == "fly_off" for e in b.get("expect", []))}

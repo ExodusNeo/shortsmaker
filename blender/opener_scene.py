@@ -448,6 +448,11 @@ def main(job_path: str) -> None:
     st.ground = build_set(plan, job["models"], cam_h)
     lib = people.load_library(job) if any("person" in a for a in plan["actors"]) else None
     place_actors(plan, job["models"], st, lib)
+    st.people = lib
+    for o in st.objs.values():
+        if o.get("person"):
+            people.idle(o, lib)
+    starts = {aid: o.matrix_world.translation.copy() for aid, o in st.objs.items()}
     for beat in sorted(plan["beats"], key=lambda b: b["at"]):
         try:
             moves.apply(beat, st)
@@ -471,9 +476,13 @@ def main(job_path: str) -> None:
     sc.frame_set(sc.frame_end)
     lowest = {aid: round(min(v.z for v in kit.world_verts(o)), 4) for aid, o in st.objs.items()
               if aid not in tools}
+    highest = {aid: round(max(v.z for v in kit.world_verts(o)), 4) for aid, o in st.objs.items() if aid not in tools}
+    moved = {aid: round((o.matrix_world.translation - starts[aid]).length, 4) for aid, o in st.objs.items()
+             if aid in starts and aid not in tools}
     report = {"ok": not failures, "failures": failures, "frames": sc.frame_end,
               "pieces": sum(len(p) for p, *_ in st.cuts),
               "cut_shares": {k: v for *_, s in st.cuts for k, v in s.items()}, "lowest": lowest,
+              "highest": highest, "moved": moved,
               "held_offscreen": held, "stroke_toward_camera": st.stroke_toward,
               "key_frames": []}
     times = retime(sc.frame_end, first_hit(st))

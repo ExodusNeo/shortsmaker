@@ -204,6 +204,39 @@ def test_missing_slot_is_skipped():
     assert report["ok"], report["failures"]
 
 
+
+def test_person_walks_across():
+    """A person walks left across the frame at their clip's pace: the feet don't slide."""
+    job = fixture("person_walk")
+    report, _ = run(job)
+    assert report["ok"], report["failures"]
+    lib = json.loads(Path(people_lib()["json"]).read_text(encoding="utf-8"))
+    clip = lib["clips"]["Walk"]
+    speed = clip["stride_m"] * 1.8 / lib["rig_height"] / (clip["frames"] / 30)  # the officer is 1.8 m tall
+    expect = speed * (job["seconds"] - 0.3)
+    assert 0.85 * expect <= report["moved"]["officer"] <= 1.15 * expect, (report["moved"], expect)
+
+
+def test_fall_holds_last_pose():
+    """A 1 s fall in a 3 s opener: the person lies on the ground in the clip's last pose at the end."""
+    report, _ = run(fixture("person_fall"))
+    assert report["ok"], report["failures"]
+    assert abs(report["lowest"]["officer"]) < 0.02 and report["highest"]["officer"] < 0.7, report
+
+
+def test_walk_off_support_is_reported():
+    """Standing on a crate and walking: never floats off the edge or crashes; it goes back to the planner."""
+    report, _ = run(fixture("person_walk_off_support"))
+    assert not report["ok"] and any(f.startswith("walk:") for f in report["failures"]), report["failures"]
+
+
+def test_person_walk_away_is_staging():
+    job = fixture("person_walk")
+    job["plan"]["beats"][0]["toward"] = "away"
+    report, _ = run(job)
+    assert any(f.startswith("staging:") for f in report["failures"]), report["failures"]
+
+
 if __name__ == "__main__":
     names = [n for n in sorted(globals()) if n.startswith("test_") and (len(sys.argv) < 2 or n in sys.argv[1:])]
     failed = 0

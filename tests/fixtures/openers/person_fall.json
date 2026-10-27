@@ -1,0 +1,34 @@
+{
+ "plan": {
+  "buildable": true,
+  "moment": "an officer is shot and falls",
+  "set": {
+   "ground": "stone",
+   "backdrop": [],
+   "light": "day"
+  },
+  "actors": [
+   {
+    "id": "officer",
+    "person": "ww2_british_officer",
+    "facing": "right"
+   }
+  ],
+  "beats": [
+   {
+    "move": "die",
+    "actor": "officer",
+    "at": 0.5,
+    "ends": {
+     "on": "ground"
+    }
+   }
+  ],
+  "camera": {
+   "angle": "side",
+   "follow": "officer"
+  }
+ },
+ "models": {},
+ "seconds": 3.0
+}

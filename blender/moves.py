@@ -40,6 +40,7 @@ class State:
         self.failures: list[str] = []
         self.threat = None
         self.moved_from: dict[str, int] = {}  # actor id -> first frame it moves
+        self.people: dict | None = None  # the people library (people.load_library) when the plan has people
         self.rigs: dict[str, list] = {}  # actor id -> its leg rig (scene_kit.leg_rig), built when it first moves
         self.stroke_toward: list[float] = []  # each stroke's motion toward the camera (0 = across the frame)
         self.windups: list[tuple] = []  # (tool, its last wind-up frame): moved so the unseen hand is off-screen
@@ -56,8 +57,12 @@ class State:
 
 
 def apply(beat: dict, st: State) -> None:
-    {"cut": cut, "fall": fall, "topple": topple, "hop_off": hop_off, "walk": walk, "fly_off": fly_off,
-     "scatter": scatter, "sink": sink, "roll": roll, "push": push}[beat["move"]](beat, st)
+    if beat.get("actor") in st.objs and st.objs[beat["actor"]].get("person"):  # people move by their own clips
+        import people
+        people.move(beat, st, st.people)
+    else:
+        {"cut": cut, "fall": fall, "topple": topple, "hop_off": hop_off, "walk": walk, "fly_off": fly_off,
+         "scatter": scatter, "sink": sink, "roll": roll, "push": push}[beat["move"]](beat, st)
     if beat["move"] != "cut" and beat.get("actor") in st.objs:  # where it rested before no longer holds
         moved = st.objs[beat["actor"]]
         st.resting = [r for r in st.resting if r[0] is not moved]
