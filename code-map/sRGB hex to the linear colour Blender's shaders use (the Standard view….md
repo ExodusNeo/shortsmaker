@@ -1,12 +1,12 @@
 ---
 source_file: "blender/look.py"
 type: "rationale"
-community: "Blender Ink Look"
+community: "build_scene.py"
 location: "L12"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Blender_Ink_Look
+  - community/build_scenepy
 ---
 
 # sRGB hex to the linear colour Blender's shaders use (the Standard view…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[linear()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Blender_Ink_Look
+#graphify/rationale #graphify/EXTRACTED #community/build_scenepy

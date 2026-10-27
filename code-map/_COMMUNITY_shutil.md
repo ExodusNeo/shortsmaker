@@ -1,42 +1,34 @@
 ---
 type: community
-members: 30
+members: 22
 ---
 
 # shutil
 
-**Members:** 30 nodes
+**Members:** 22 nodes
 
 ## Members
-- [[Extract clean TypeScriptReact code exporting Custom{slot} from an AI reply.]] - rationale - shortsmaker/motion.py
+- [[Adds a candidate to the library (component file, library.json entry,…]] - rationale - shortsmaker/style_lab.py
 - [[Full-screen motion-graphic scenes and the AI-coded Custom scenes (with their…]] - rationale - shortsmaker/motion.py
-- [[Guaranteed-valid Remotion component for slot 0..3 if the AI coder fails or…]] - rationale - shortsmaker/motion.py
-- [[Motion Graphics Agent writes bespoke ReactSVG Remotion code for each `type…]] - rationale - shortsmaker/motion.py
-- [[Path_5]] - code
-- [[Renders just this custom scene small (its pictures are already in…]] - rationale - shortsmaker/motion.py
+- [[One mid-scene frame per scene from the finished video, labeled with its…]] - rationale - shortsmaker/review.py
+- [[Preview of every style-library preset for the owner each look on two real…]] - rationale - tests/render_style.py
+- [[Render one full-screen motion graphic test scene through the real Short…]] - rationale - tests/render_full.py
 - [[Renders seconds start..end of a small Short (`props`; its pictures already in…]] - rationale - shortsmaker/motion.py
-- [[Rule breaks a compiler can't see in an AI-coded custom scene (see…]] - rationale - shortsmaker/motion.py
 - [[Runs the TypeScript tests (tests.test.ts) bundles each with Remotion's own…]] - rationale - tests/run_ts_tests.py
-- [[The coder looks at 8 frames of its own scene before the real render and…]] - rationale - shortsmaker/motion.py
-- [[The review saw custom scene i look wrong its coder gets the complaint and its…]] - rationale - shortsmaker/remotion_render.py
-- [[The rules every custom motion-graphic scene follows, plus two worked examples…]] - rationale - shortsmaker/motion.py
 - [[Type-checks the Remotion project; None when it compiles, else the compiler's…]] - rationale - shortsmaker/motion.py
-- [[clean_tsx_code()]] - code - shortsmaker/motion.py
-- [[code_custom_scenes()]] - code - shortsmaker/motion.py
-- [[custom_rules()]] - code - shortsmaker/motion.py
-- [[fallback_custom_tsx()]] - code - shortsmaker/motion.py
-- [[graphics_count()]] - code - shortsmaker/motion.py
-- [[lint_custom_code()]] - code - shortsmaker/motion.py
-- [[look_and_fix()]] - code - shortsmaker/motion.py
+- [[approve_candidate()]] - code - shortsmaker/style_lab.py
+- [[build()_1]] - code - tests/render_style.py
+- [[main()_4]] - code - tests/render_full.py
+- [[main()_5]] - code - tests/render_style.py
 - [[motion.py]] - code - shortsmaker/motion.py
-- [[preview_custom()]] - code - shortsmaker/motion.py
 - [[preview_sheet()]] - code - shortsmaker/motion.py
-- [[redraw_custom()]] - code - shortsmaker/remotion_render.py
+- [[props_for()]] - code - tests/render_full.py
+- [[render_full.py]] - code - tests/render_full.py
+- [[render_style.py]] - code - tests/render_style.py
 - [[run_ts_tests.py]] - code - tests/run_ts_tests.py
 - [[shutil]] - concept
-- [[test_code_custom_scenes_fallback()]] - code - tests/test_full_scenes.py
-- [[test_fallback_custom_is_clean()]] - code - tests/test_full_scenes.py
-- [[test_lint_custom_code()]] - code - tests/test_full_scenes.py
+- [[storyboard()]] - code - shortsmaker/review.py
+- [[subprocess]] - concept
 - [[tsc_check()]] - code - shortsmaker/motion.py
 
 ## Live Query (requires Dataview plugin)
@@ -47,28 +39,41 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 22 edges to [[_COMMUNITY_gpu.py]]
-- 16 edges to [[_COMMUNITY_re]]
-- 9 edges to [[_COMMUNITY_json]]
-- 6 edges to [[_COMMUNITY_test_package.py]]
-- 5 edges to [[_COMMUNITY_test_full_scenes.py]]
-- 4 edges to [[_COMMUNITY_full_props]]
-- 3 edges to [[_COMMUNITY_style_library]]
-- 2 edges to [[_COMMUNITY_render_remotion]]
+- 34 edges to [[_COMMUNITY_pathlib]]
+- 12 edges to [[_COMMUNITY_code_custom_scenes]]
+- 11 edges to [[_COMMUNITY_json]]
+- 10 edges to [[_COMMUNITY_test_style.py]]
+- 8 edges to [[_COMMUNITY_gpu.py]]
+- 6 edges to [[_COMMUNITY_test_full_scenes.py]]
+- 5 edges to [[_COMMUNITY_time]]
+- 4 edges to [[_COMMUNITY_render]]
+- 4 edges to [[_COMMUNITY_ffmpeg]]
+- 3 edges to [[_COMMUNITY_test_story.py]]
+- 3 edges to [[_COMMUNITY_re]]
+- 3 edges to [[_COMMUNITY_test_opener_render.py]]
+- 3 edges to [[_COMMUNITY_visual_review]]
+- 3 edges to [[_COMMUNITY_test_blender_scene.py]]
+- 2 edges to [[_COMMUNITY_audio_mix.py]]
 - 2 edges to [[_COMMUNITY_invent_component]]
-- 2 edges to [[_COMMUNITY_test_h3_handoff.py]]
+- 2 edges to [[_COMMUNITY_ask_ai]]
+- 1 edge to [[_COMMUNITY_local_clips]]
+- 1 edge to [[_COMMUNITY_make]]
+- 1 edge to [[_COMMUNITY_render_remotion]]
+- 1 edge to [[_COMMUNITY_frame_maker]]
+- 1 edge to [[_COMMUNITY_test_blender_render.py]]
+- 1 edge to [[_COMMUNITY_main_1]]
 - 1 edge to [[_COMMUNITY_write_scripts]]
-- 1 edge to [[_COMMUNITY__fake_planning]]
-- 1 edge to [[_COMMUNITY_random]]
-- 1 edge to [[_COMMUNITY_audio_mix.py]]
 - 1 edge to [[_COMMUNITY_use_picture_from]]
-- 1 edge to [[_COMMUNITY_vault_page]]
-- 1 edge to [[_COMMUNITY_test_style.py]]
-- 1 edge to [[_COMMUNITY_test_blender_scene.py]]
+- 1 edge to [[_COMMUNITY_apply_review_fixes]]
+- 1 edge to [[_COMMUNITY_film_piece]]
+- 1 edge to [[_COMMUNITY_paint_instead]]
+- 1 edge to [[_COMMUNITY_test_opener_plan.py]]
+- 1 edge to [[_COMMUNITY_image_sources.py]]
+- 1 edge to [[_COMMUNITY_split_make_shorts.py]]
 
 ## Top bridge nodes
-- [[shutil]] - degree 38, connects to 14 communities
-- [[motion.py]] - degree 29, connects to 7 communities
-- [[redraw_custom()]] - degree 9, connects to 4 communities
-- [[run_ts_tests.py]] - degree 6, connects to 4 communities
-- [[code_custom_scenes()]] - degree 15, connects to 3 communities
+- [[shutil]] - degree 42, connects to 18 communities
+- [[subprocess]] - degree 42, connects to 18 communities
+- [[motion.py]] - degree 29, connects to 9 communities
+- [[storyboard()]] - degree 7, connects to 5 communities
+- [[preview_sheet()]] - degree 9, connects to 4 communities

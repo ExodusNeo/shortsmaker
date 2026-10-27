@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/blender_render.py"
 type: "code"
-community: "gpu.py"
+community: "json"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/gpupy
+  - community/json
 ---
 
 # blender_render.py
@@ -22,6 +22,7 @@ tags:
 - [[hashlib]] - `imports` [EXTRACTED]
 - [[json]] - `imports` [EXTRACTED]
 - [[media_tools.py]] - `imports_from` [EXTRACTED]
+- [[opener_render.py]] - `imports_from` [EXTRACTED]
 - [[pathlib]] - `imports_from` [EXTRACTED]
 - [[peaks()]] - `contains` [EXTRACTED]
 - [[plan_rules.py]] - `imports_from` [EXTRACTED]
@@ -32,4 +33,4 @@ tags:
 - [[test_blender_render.py]] - `imports_from` [EXTRACTED]
 - [[test_blender_run.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/gpupy
+#graphify/code #graphify/EXTRACTED #community/json

@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[prove()]] - `calls` [EXTRACTED]
-- [[split()]] - `calls` [EXTRACTED]
+- [[split()_1]] - `calls` [EXTRACTED]
 - [[split_make_shorts.py]] - `indirect_call` [INFERRED]
 - [[split_source()]] - `calls` [EXTRACTED]
 

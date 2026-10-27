@@ -34,18 +34,17 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 4 edges to [[_COMMUNITY_gpu.py]]
-- 4 edges to [[_COMMUNITY_test_full_scenes.py]]
-- 3 edges to [[_COMMUNITY_test_package.py]]
-- 1 edge to [[_COMMUNITY_frame_render.py]]
+- 5 edges to [[_COMMUNITY_test_full_scenes.py]]
+- 4 edges to [[_COMMUNITY_plan_rules.py]]
+- 3 edges to [[_COMMUNITY_ask_ai]]
+- 1 edge to [[_COMMUNITY_gpu.py]]
+- 1 edge to [[_COMMUNITY_render]]
 - 1 edge to [[_COMMUNITY_test_blender_render.py]]
-- 1 edge to [[_COMMUNITY_re]]
-- 1 edge to [[_COMMUNITY_words_of]]
-- 1 edge to [[_COMMUNITY_full_props]]
+- 1 edge to [[_COMMUNITY_pathlib]]
 
 ## Top bridge nodes
 - [[scene_cues()]] - degree 10, connects to 3 communities
 - [[full_cues()]] - degree 10, connects to 2 communities
 - [[spoken_at()]] - degree 6, connects to 2 communities
-- [[spoken_span()]] - degree 5, connects to 2 communities
+- [[spoken_span()]] - degree 5, connects to 1 community
 - [[test_full_cues_leave_time_to_finish()]] - degree 3, connects to 1 community

@@ -1,0 +1,38 @@
+---
+source_file: "shortsmaker/opener_render.py"
+type: "code"
+community: "json"
+location: "L1"
+tags:
+  - graphify/code
+  - graphify/EXTRACTED
+  - community/json
+---
+
+# opener_render.py
+
+## Connections
+- [[Scene 1 as a Blender opener (2026-10-27) once the voice has set scene 1's…]] - `rationale_for` [EXTRACTED]
+- [[__init__.py]] - `imports_from` [EXTRACTED]
+- [[blender_link.py]] - `imports_from` [EXTRACTED]
+- [[blender_render.py]] - `imports_from` [EXTRACTED]
+- [[config.py]] - `imports_from` [EXTRACTED]
+- [[copy]] - `imports` [EXTRACTED]
+- [[fingerprint()]] - `contains` [EXTRACTED]
+- [[hashlib]] - `imports` [EXTRACTED]
+- [[json]] - `imports` [EXTRACTED]
+- [[llm.py]] - `imports_from` [EXTRACTED]
+- [[math]] - `imports` [EXTRACTED]
+- [[media_tools.py]] - `imports_from` [EXTRACTED]
+- [[opener_plan.py]] - `imports_from` [EXTRACTED]
+- [[pathlib]] - `imports_from` [EXTRACTED]
+- [[pick_model()]] - `contains` [EXTRACTED]
+- [[render_opener()]] - `contains` [EXTRACTED]
+- [[resolve_models()]] - `contains` [EXTRACTED]
+- [[review()]] - `contains` [EXTRACTED]
+- [[scale_beats()]] - `contains` [EXTRACTED]
+- [[short_render.py]] - `imports_from` [EXTRACTED]
+- [[shutil]] - `imports` [EXTRACTED]
+- [[test_opener_render.py]] - `imports_from` [EXTRACTED]
+
+#graphify/code #graphify/EXTRACTED #community/json

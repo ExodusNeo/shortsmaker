@@ -2,7 +2,7 @@
 source_file: "shortsmaker/rules.py"
 type: "code"
 community: "re"
-location: "L153"
+location: "L156"
 tags:
   - graphify/code
   - graphify/EXTRACTED

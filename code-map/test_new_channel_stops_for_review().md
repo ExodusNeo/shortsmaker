@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_rules.py"
 type: "code"
-community: "json"
+community: "main"
 location: "L297"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/json
+  - community/main
 ---
 
 # test_new_channel_stops_for_review()
@@ -15,4 +15,4 @@ tags:
 - [[pick_channel()]] - `calls` [EXTRACTED]
 - [[test_rules.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/json
+#graphify/code #graphify/EXTRACTED #community/main

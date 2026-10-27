@@ -1,26 +1,29 @@
 ---
 type: community
-members: 49
+members: 53
 ---
 
 # test_rules.py
 
-**Members:** 49 nodes
+**Members:** 53 nodes
 
 ## Members
 - [[(sections by canonical heading, settings) of a rules file; `label` names the…]] - rationale - shortsmaker/rules.py
 - [[A valid rules file; override={Directing None} leaves that heading out, a…]] - rationale - tests/test_rules.py
+- [[Draft channelsname.rules.md for a new channel the AI copies the sections of…]] - rationale - shortsmaker/rules.py
 - [[Every prompt strange-history's writer, editor, director, fact check, picture…]] - rationale - tests/test_rules.py
 - [[Exception]] - code
+- [[Path_3]] - code
 - [[Read and check channelsname.rules.md into session.RULES …]] - rationale - shortsmaker/rules.py
 - [[StopPicker]] - code - tests/test_rules.py
 - [[Tests for per-channel rules files (channelsname.rules.md, 2026-10-22). The…]] - rationale - tests/test_rules.py
 - [[Usable real picturesclips a topic needs, else a backup topic replaces it.]] - rationale - shortsmaker/rules.py
+- [[ask()]] - code - tests/test_rules.py
 - [[ask()_1]] - code - tests/test_rules.py
-- [[ask()_2]] - code - tests/test_rules.py
 - [[capture_prompts()]] - code - tests/test_rules.py
 - [[draft_reply()]] - code - tests/test_rules.py
 - [[draft_rules in a temp channels folder holding strange-history's rules; returns…]] - rationale - tests/test_rules.py
+- [[draft_rules()]] - code - shortsmaker/rules.py
 - [[load_rules()]] - code - shortsmaker/rules.py
 - [[load_rules, but a channel with no rules file yet (a failed draft, a profile…]] - rationale - shortsmaker/rules.py
 - [[make()_1]] - code - tests/test_rules.py
@@ -30,6 +33,7 @@ members: 49
 - [[require_rules()]] - code - shortsmaker/rules.py
 - [[run_draft()]] - code - tests/test_rules.py
 - [[stop_text()]] - code - tests/test_rules.py
+- [[test_a_stopped_run_keeps_the_default_channel()]] - code - tests/test_rules.py
 - [[test_bad_min_pictures_stops()]] - code - tests/test_rules.py
 - [[test_blender_needs_a_build_plan_section()]] - code - tests/test_rules.py
 - [[test_bom_and_crlf_load_the_same()]] - code - tests/test_rules.py
@@ -66,17 +70,20 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 18 edges to [[_COMMUNITY_gpu.py]]
-- 12 edges to [[_COMMUNITY_json]]
+- 20 edges to [[_COMMUNITY_pathlib]]
+- 6 edges to [[_COMMUNITY_main_1]]
+- 5 edges to [[_COMMUNITY_json]]
+- 3 edges to [[_COMMUNITY_re]]
 - 3 edges to [[_COMMUNITY_catalog_pool]]
-- 2 edges to [[_COMMUNITY_re]]
 - 2 edges to [[_COMMUNITY_test_blender_scene.py]]
+- 1 edge to [[_COMMUNITY_ask_ai]]
+- 1 edge to [[_COMMUNITY_test_story.py]]
 - 1 edge to [[_COMMUNITY_choose_images]]
 - 1 edge to [[_COMMUNITY_write_scripts]]
 
 ## Top bridge nodes
 - [[capture_prompts()]] - degree 11, connects to 5 communities
-- [[test_rules.py]] - degree 55, connects to 3 communities
-- [[parse_rules()]] - degree 15, connects to 2 communities
-- [[require_rules()]] - degree 8, connects to 2 communities
-- [[min_real_pictures()]] - degree 4, connects to 2 communities
+- [[draft_rules()]] - degree 9, connects to 5 communities
+- [[test_rules.py]] - degree 55, connects to 4 communities
+- [[parse_rules()]] - degree 16, connects to 3 communities
+- [[require_rules()]] - degree 8, connects to 3 communities

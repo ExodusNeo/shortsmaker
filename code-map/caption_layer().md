@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/edit_project.py"
 type: "code"
-community: "Shotcut Timeline and Loudness"
+community: "make"
 location: "L16"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Shotcut_Timeline_and_Loudness
+  - community/make
 ---
 
 # caption_layer()
@@ -18,4 +18,4 @@ tags:
 - [[make()]] - `calls` [EXTRACTED]
 - [[workcaptions.mov the captions alone on a see-through background, from the…]] - `rationale_for` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Shotcut_Timeline_and_Loudness
+#graphify/code #graphify/EXTRACTED #community/make

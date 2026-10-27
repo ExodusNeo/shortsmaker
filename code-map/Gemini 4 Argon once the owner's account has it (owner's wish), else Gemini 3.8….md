@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/llm.py"
 type: "rationale"
-community: "test_package.py"
+community: "ask_ai"
 location: "L25"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/test_packagepy
+  - community/ask_ai
 ---
 
 # Gemini 4 Argon once the owner's account has it (owner's wish), else Gemini 3.8…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[gemini_model()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/test_packagepy
+#graphify/rationale #graphify/EXTRACTED #community/ask_ai

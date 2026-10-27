@@ -13,10 +13,10 @@ tags:
 
 ## Connections
 - [[dot-__enter__()_1]] - `calls` [EXTRACTED]
-- [[dot-__enter__()_3]] - `calls` [EXTRACTED]
-- [[dot-__enter__()_2]] - `method` [EXTRACTED]
-- [[dot-__exit__()_3]] - `method` [EXTRACTED]
-- [[dot-__init__()_8]] - `method` [EXTRACTED]
+- [[dot-__enter__()_4]] - `calls` [EXTRACTED]
+- [[dot-__enter__()_3]] - `method` [EXTRACTED]
+- [[dot-__exit__()_4]] - `method` [EXTRACTED]
+- [[dot-__init__()_10]] - `method` [EXTRACTED]
 - [[ask_ai replaced by `reply` (a dict, None, or a function of the prompt);…]] - `rationale_for` [EXTRACTED]
 - [[test_catalog_both_empty_stops_uncached()]] - `calls` [EXTRACTED]
 - [[test_catalog_empty_pool_no_ai()]] - `calls` [EXTRACTED]

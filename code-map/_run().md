@@ -12,9 +12,10 @@ tags:
 # _run()
 
 ## Connections
-- [[Path_9]] - `references` [EXTRACTED]
+- [[Path_12]] - `references` [EXTRACTED]
 - [[blender_render.py]] - `contains` [EXTRACTED]
 - [[render_clips()]] - `calls` [EXTRACTED]
+- [[render_opener()]] - `calls` [EXTRACTED]
 - [[subprocess]] - `calls` [EXTRACTED]
 - [[when Blender finished, else why not.]] - `rationale_for` [EXTRACTED]
 

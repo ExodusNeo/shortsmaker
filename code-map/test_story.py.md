@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_story.py"
 type: "code"
-community: "test_blender_scene.py"
+community: "test_story.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_blender_scenepy
+  - community/test_storypy
 ---
 
 # test_story.py
@@ -26,9 +26,13 @@ tags:
 - [[tempfile]] - `imports` [EXTRACTED]
 - [[test_a_take_is_cut_between_the_scenes_words()]] - `contains` [EXTRACTED]
 - [[test_editor_gets_one_second_pass_for_broken_rules()]] - `contains` [EXTRACTED]
+- [[test_no_hook_setting_no_hook_check()]] - `contains` [EXTRACTED]
 - [[test_qwen_voice.py]] - `imports_from` [EXTRACTED]
+- [[test_rules_accept_opener_setting()]] - `contains` [EXTRACTED]
 - [[test_sentences_running_across_cuts_are_one_take()]] - `contains` [EXTRACTED]
 - [[test_story_problems()]] - `contains` [EXTRACTED]
+- [[test_story_problems_flags_summary_hook()]] - `contains` [EXTRACTED]
+- [[test_story_problems_money_claim()]] - `contains` [EXTRACTED]
 - [[test_twist_check_keeps_topics_on_null_or_bad_replies()]] - `contains` [EXTRACTED]
 - [[test_twist_check_needs_wikipedia_text()]] - `contains` [EXTRACTED]
 - [[test_twist_check_rewrites_a_legend_before_writing()]] - `contains` [EXTRACTED]
@@ -38,4 +42,4 @@ tags:
 - [[twist_short()]] - `contains` [EXTRACTED]
 - [[writing.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_blender_scenepy
+#graphify/code #graphify/EXTRACTED #community/test_storypy

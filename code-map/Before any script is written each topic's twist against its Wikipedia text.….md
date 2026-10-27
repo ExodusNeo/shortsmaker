@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/writing.py"
 type: "rationale"
-community: "test_blender_scene.py"
-location: "L507"
+community: "test_story.py"
+location: "L518"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/test_blender_scenepy
+  - community/test_storypy
 ---
 
 # Before any script is written: each topic's twist against its Wikipedia text.…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[check_twists()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/test_blender_scenepy
+#graphify/rationale #graphify/EXTRACTED #community/test_storypy

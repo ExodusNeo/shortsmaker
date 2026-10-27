@@ -13,8 +13,8 @@ tags:
 
 ## Connections
 - [[Mike's newsstand a repaint from the unchanged prompt painted the identical…]] - `rationale_for` [EXTRACTED]
-- [[ask()_7]] - `contains` [EXTRACTED]
-- [[ask()_4]] - `indirect_call` [INFERRED]
+- [[ask()_10]] - `contains` [EXTRACTED]
+- [[ask()_7]] - `indirect_call` [INFERRED]
 - [[rewrite_paint_prompts()]] - `calls` [EXTRACTED]
 - [[test_full_scenes.py]] - `contains` [EXTRACTED]
 

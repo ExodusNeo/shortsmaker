@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[Detailed prompts for the owner-made clips (Colab H3 or Flow), written by the AI…]] - `rationale_for` [EXTRACTED]
-- [[Path_1]] - `references` [EXTRACTED]
+- [[Path]] - `references` [EXTRACTED]
 - [[ask_ai()]] - `calls` [EXTRACTED]
 - [[gpu.py]] - `contains` [EXTRACTED]
 - [[h3_problems()]] - `calls` [EXTRACTED]

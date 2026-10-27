@@ -1,11 +1,11 @@
 ---
 type: community
-members: 21
+members: 22
 ---
 
 # catalog_pool
 
-**Members:** 21 nodes
+**Members:** 22 nodes
 
 ## Members
 - [[Before writing the topic's Wikipedia research (`_texts`; fact_check() reuses…]] - rationale - shortsmaker/picture_pool.py
@@ -28,6 +28,7 @@ members: 21
 - [[test_corrupt_pool_and_catalog_redone()]] - code - tests/test_pictures_first.py
 - [[test_pool_roundtrip()]] - code - tests/test_pictures_first.py
 - [[test_pool_rows_without_thumbs()]] - code - tests/test_pictures_first.py
+- [[test_small_pool_skips_ai()]] - code - tests/test_pictures_first.py
 - [[write_json()]] - code - shortsmaker/media_tools.py
 
 ## Live Query (requires Dataview plugin)
@@ -38,24 +39,26 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 17 edges to [[_COMMUNITY_test_pictures_first.py]]
-- 10 edges to [[_COMMUNITY_gpu.py]]
-- 4 edges to [[_COMMUNITY_json]]
-- 4 edges to [[_COMMUNITY_write_scripts]]
+- 18 edges to [[_COMMUNITY_test_pictures_first.py]]
+- 8 edges to [[_COMMUNITY_pathlib]]
+- 6 edges to [[_COMMUNITY_json]]
+- 3 edges to [[_COMMUNITY_planning]]
+- 3 edges to [[_COMMUNITY_gather_pool]]
 - 3 edges to [[_COMMUNITY_fake_ai]]
 - 3 edges to [[_COMMUNITY_test_rules.py]]
-- 3 edges to [[_COMMUNITY_re]]
 - 3 edges to [[_COMMUNITY_choose_images]]
-- 2 edges to [[_COMMUNITY_clean_pics]]
-- 2 edges to [[_COMMUNITY_image_sources.py]]
-- 1 edge to [[_COMMUNITY_owner]]
-- 1 edge to [[_COMMUNITY_test_package.py]]
+- 3 edges to [[_COMMUNITY_write_scripts]]
+- 1 edge to [[_COMMUNITY_ffmpeg]]
+- 1 edge to [[_COMMUNITY_ask_ai]]
+- 1 edge to [[_COMMUNITY_gpu.py]]
+- 1 edge to [[_COMMUNITY_re]]
+- 1 edge to [[_COMMUNITY_apply_review_fixes]]
 - 1 edge to [[_COMMUNITY_drawn_thumbnail]]
-- 1 edge to [[_COMMUNITY_rescue_graphics]]
+- 1 edge to [[_COMMUNITY_is_usable]]
 
 ## Top bridge nodes
 - [[prepare_topic()]] - degree 15, connects to 7 communities
 - [[load_pool()]] - degree 14, connects to 7 communities
 - [[catalog_pool()]] - degree 18, connects to 5 communities
 - [[save_pool()]] - degree 13, connects to 4 communities
-- [[write_json()]] - degree 6, connects to 3 communities
+- [[contact_sheets()]] - degree 6, connects to 3 communities

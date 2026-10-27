@@ -1,0 +1,20 @@
+---
+source_file: ""
+type: "concept"
+community: "test_opener_render.py"
+tags:
+  - graphify/concept
+  - graphify/EXTRACTED
+  - community/test_opener_renderpy
+---
+
+# copy
+
+## Connections
+- [[opener_render.py]] - `imports` [EXTRACTED]
+- [[scale_beats()]] - `calls` [EXTRACTED]
+- [[test_opener_plan.py]] - `imports` [EXTRACTED]
+- [[test_opener_render.py]] - `imports` [EXTRACTED]
+- [[test_opener_scene.py]] - `imports` [EXTRACTED]
+
+#graphify/concept #graphify/EXTRACTED #community/test_opener_renderpy

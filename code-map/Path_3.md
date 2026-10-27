@@ -1,17 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Shotcut Timeline and Loudness"
+community: "test_rules.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Shotcut_Timeline_and_Loudness
+  - community/test_rulespy
 ---
 
 # Path
 
 ## Connections
-- [[short_folder()]] - `references` [EXTRACTED]
-- [[videos()]] - `references` [EXTRACTED]
+- [[draft_rules()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Shotcut_Timeline_and_Loudness
+#graphify/code #graphify/EXTRACTED #community/test_rulespy

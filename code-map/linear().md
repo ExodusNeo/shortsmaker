@@ -1,12 +1,12 @@
 ---
 source_file: "blender/look.py"
 type: "code"
-community: "Blender Ink Look"
+community: "build_scene.py"
 location: "L11"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Blender_Ink_Look
+  - community/build_scenepy
 ---
 
 # linear()
@@ -18,4 +18,4 @@ tags:
 - [[sRGB hex to the linear colour Blender's shaders use (the Standard view…]] - `rationale_for` [EXTRACTED]
 - [[setup()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Blender_Ink_Look
+#graphify/code #graphify/EXTRACTED #community/build_scenepy

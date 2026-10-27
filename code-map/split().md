@@ -1,21 +1,23 @@
 ---
-source_file: "tools/split_make_shorts.py"
+source_file: "blender/moves.py"
 type: "code"
-community: "split_make_shorts.py"
-location: "L483"
+community: "cut"
+location: "L379"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/split_make_shortspy
+  - community/cut
 ---
 
 # split()
 
 ## Connections
-- [[original()]] - `calls` [EXTRACTED]
-- [[prove()]] - `calls` [EXTRACTED]
-- [[selftest()]] - `calls` [EXTRACTED]
-- [[split_make_shorts.py]] - `indirect_call` [INFERRED]
-- [[split_source()]] - `calls` [EXTRACTED]
+- [[best_in()]] - `calls` [EXTRACTED]
+- [[bm_area()]] - `calls` [EXTRACTED]
+- [[clusters()]] - `calls` [EXTRACTED]
+- [[half()]] - `calls` [EXTRACTED]
+- [[islands()]] - `calls` [EXTRACTED]
+- [[pick_island()]] - `calls` [EXTRACTED]
+- [[through_cut()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/split_make_shortspy
+#graphify/code #graphify/EXTRACTED #community/cut

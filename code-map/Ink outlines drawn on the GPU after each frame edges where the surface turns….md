@@ -1,12 +1,12 @@
 ---
 source_file: "blender/look.py"
 type: "rationale"
-community: "Blender Ink Look"
+community: "build_scene.py"
 location: "L43"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Blender_Ink_Look
+  - community/build_scenepy
 ---
 
 # Ink outlines drawn on the GPU after each frame: edges where the surface turns…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[ink_lines()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Blender_Ink_Look
+#graphify/rationale #graphify/EXTRACTED #community/build_scenepy

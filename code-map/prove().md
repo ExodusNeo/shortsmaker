@@ -21,7 +21,7 @@ tags:
 - [[is_main_guard()]] - `calls` [EXTRACTED]
 - [[module_for()]] - `calls` [EXTRACTED]
 - [[selftest()]] - `calls` [EXTRACTED]
-- [[split()]] - `calls` [EXTRACTED]
+- [[split()_1]] - `calls` [EXTRACTED]
 - [[split_make_shorts.py]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/split_make_shortspy

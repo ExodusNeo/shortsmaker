@@ -28,5 +28,6 @@ tags:
 - [[test_blender_scene.py]] - `imports_from` [EXTRACTED]
 - [[test_full_scenes.py]] - `imports_from` [EXTRACTED]
 - [[test_h3_run.py]] - `imports_from` [EXTRACTED]
+- [[test_opener_scene.py]] - `imports_from` [EXTRACTED]
 
 #graphify/concept #graphify/EXTRACTED #community/gpupy

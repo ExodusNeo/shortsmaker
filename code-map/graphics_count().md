@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/motion.py"
 type: "code"
-community: "shutil"
+community: "render"
 location: "L15"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/shutil
+  - community/render
 ---
 
 # graphics_count()
@@ -15,4 +15,4 @@ tags:
 - [[motion.py]] - `contains` [EXTRACTED]
 - [[render()_3]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/shutil
+#graphify/code #graphify/EXTRACTED #community/render

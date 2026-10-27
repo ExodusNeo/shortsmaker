@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/config.py"
 type: "code"
-community: "captions"
-location: "L113"
+community: "audio_mix.py"
+location: "L116"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/captions
+  - community/audio_mixpy
 ---
 
 # ass_colour()
@@ -18,4 +18,4 @@ tags:
 - [[config.py]] - `contains` [EXTRACTED]
 - [[styled()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/captions
+#graphify/code #graphify/EXTRACTED #community/audio_mixpy

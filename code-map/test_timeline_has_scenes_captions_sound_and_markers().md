@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_edit_project.py"
 type: "code"
-community: "Shotcut Timeline and Loudness"
+community: "make"
 location: "L43"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Shotcut_Timeline_and_Loudness
+  - community/make
 ---
 
 # test_timeline_has_scenes_captions_sound_and_markers()
@@ -18,4 +18,4 @@ tags:
 - [[test_edit_project.py]] - `contains` [EXTRACTED]
 - [[videos()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Shotcut_Timeline_and_Loudness
+#graphify/code #graphify/EXTRACTED #community/make

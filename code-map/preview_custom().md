@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/motion.py"
 type: "code"
-community: "shutil"
+community: "code_custom_scenes"
 location: "L249"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/shutil
+  - community/code_custom_scenes
 ---
 
 # preview_custom()
@@ -18,4 +18,4 @@ tags:
 - [[motion.py]] - `contains` [EXTRACTED]
 - [[preview_sheet()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/shutil
+#graphify/code #graphify/EXTRACTED #community/code_custom_scenes

@@ -1,19 +1,19 @@
 ---
 source_file: "colab/h3_run.py"
 type: "code"
-community: "test_h3_handoff.py"
+community: "time"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_h3_handoffpy
+  - community/time
 ---
 
 # h3_run.py
 
 ## Connections
 - [[MiniMax H3 image-to-video jobs for a ShortsMaker Short, run on Colab next to…]] - `rationale_for` [EXTRACTED]
-- [[call()]] - `contains` [EXTRACTED]
+- [[call()_1]] - `contains` [EXTRACTED]
 - [[fit_start()]] - `contains` [EXTRACTED]
 - [[frames()]] - `contains` [EXTRACTED]
 - [[graph()]] - `contains` [EXTRACTED]
@@ -29,4 +29,4 @@ tags:
 - [[urllib_request]] - `imports` [EXTRACTED]
 - [[zipfile]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_h3_handoffpy
+#graphify/code #graphify/EXTRACTED #community/time

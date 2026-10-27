@@ -1,14 +1,15 @@
 ---
 type: community
-members: 16
+members: 18
 ---
 
 # main
 
-**Members:** 16 nodes
+**Members:** 18 nodes
 
 ## Members
-- [[dot-__init__()_3]] - code - blender/failures.py
+- [[(part, exact) the part the Short is about, by the plan's spot; the gusset at…]] - rationale - blender/templates.py
+- [[dot-__init__()_4]] - code - blender/failures.py
 - [[dot-_crack()]] - code - blender/failures.py
 - [[dot-fallen()]] - code - blender/failures.py
 - [[dot-falls()]] - code - blender/failures.py
@@ -22,8 +23,9 @@ members: 16
 - [[The failure from t0 to its peak, then (collapse) the span falls; `until` (the…]] - rationale - blender/failures.py
 - [[Vector_2]] - code
 - [[Where a point on the collapsing span ends up in the water.]] - rationale - blender/failures.py
-- [[key()]] - code - blender/failures.py
-- [[main()_3]] - code - blender/build_scene.py
+- [[focus_object()]] - code - blender/templates.py
+- [[key()_1]] - code - blender/failures.py
+- [[main()_1]] - code - blender/build_scene.py
 
 ## Live Query (requires Dataview plugin)
 
@@ -33,13 +35,14 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 7 edges to [[_COMMUNITY_build_scene.py]]
-- 4 edges to [[_COMMUNITY_parts.py]]
-- 2 edges to [[_COMMUNITY_templates.py]]
-- 1 edge to [[_COMMUNITY_Blender Ink Look]]
+- 5 edges to [[_COMMUNITY_build_scene.py]]
+- 4 edges to [[_COMMUNITY_templates.py]]
+- 3 edges to [[_COMMUNITY_Shots]]
+- 3 edges to [[_COMMUNITY_parts.py]]
 - 1 edge to [[_COMMUNITY_json]]
 
 ## Top bridge nodes
-- [[main()_3]] - degree 19, connects to 5 communities
+- [[main()_1]] - degree 19, connects to 5 communities
 - [[Failure]] - degree 9, connects to 1 community
-- [[key()]] - degree 4, connects to 1 community
+- [[key()_1]] - degree 4, connects to 1 community
+- [[focus_object()]] - degree 4, connects to 1 community

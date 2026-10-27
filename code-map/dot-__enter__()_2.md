@@ -1,18 +1,20 @@
 ---
 source_file: "tests/test_pictures_first.py"
 type: "code"
-community: "fake_ai"
-location: "L117"
+community: "gather_pool"
+location: "L39"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/fake_ai
+  - community/gather_pool
 ---
 
 # .__enter__()
 
 ## Connections
-- [[fake_ai]] - `method` [EXTRACTED]
-- [[reply()]] - `calls` [EXTRACTED]
+- [[film()]] - `calls` [EXTRACTED]
+- [[owner()]] - `calls` [EXTRACTED]
+- [[still()]] - `calls` [EXTRACTED]
+- [[stubbed]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/fake_ai
+#graphify/code #graphify/EXTRACTED #community/gather_pool

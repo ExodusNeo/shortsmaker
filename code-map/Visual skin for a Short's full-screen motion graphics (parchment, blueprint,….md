@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/config.py"
 type: "rationale"
-community: "render_remotion"
-location: "L102"
+community: "test_full_scenes.py"
+location: "L105"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/render_remotion
+  - community/test_full_scenespy
 ---
 
 # Visual skin for a Short's full-screen motion graphics (parchment, blueprint,…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[short_skin()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/render_remotion
+#graphify/rationale #graphify/EXTRACTED #community/test_full_scenespy

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/footage.py"
 type: "code"
-community: "audio_mix.py"
+community: "image_sources.py"
 location: "L54"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/audio_mixpy
+  - community/image_sourcespy
 ---
 
 # pixabay_films()
@@ -21,4 +21,4 @@ tags:
 - [[test_pixabay_keeps_only_on_topic_videos()]] - `calls` [EXTRACTED]
 - [[time]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/audio_mixpy
+#graphify/code #graphify/EXTRACTED #community/image_sourcespy

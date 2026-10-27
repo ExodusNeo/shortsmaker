@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_full_scenes.py"
 type: "code"
-community: "sfx_events"
+community: "test_full_scenes.py"
 location: "L201"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/sfx_events
+  - community/test_full_scenespy
 ---
 
 # _board()
@@ -17,4 +17,4 @@ tags:
 - [[test_remotion_props_full()]] - `calls` [EXTRACTED]
 - [[test_sfx_full()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/sfx_events
+#graphify/code #graphify/EXTRACTED #community/test_full_scenespy

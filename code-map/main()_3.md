@@ -1,35 +1,27 @@
 ---
-source_file: "blender/build_scene.py"
+source_file: "blender/opener_scene.py"
 type: "code"
-community: "main"
-location: "L70"
+community: "opener_scene.py"
+location: "L228"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/main
+  - community/opener_scenepy
 ---
 
 # main()
 
 ## Connections
-- [[dot-beat()]] - `calls` [INFERRED]
-- [[dot-fallen()]] - `calls` [INFERRED]
-- [[dot-falls()]] - `calls` [INFERRED]
-- [[dot-play()]] - `calls` [INFERRED]
-- [[dot-reset()]] - `calls` [INFERRED]
-- [[dot-ride_along()]] - `calls` [INFERRED]
-- [[Failure]] - `calls` [EXTRACTED]
-- [[Shots]] - `calls` [EXTRACTED]
-- [[build()_1]] - `calls` [EXTRACTED]
-- [[build_scene.py]] - `contains` [EXTRACTED]
-- [[dress()]] - `calls` [EXTRACTED]
-- [[fastener()]] - `calls` [EXTRACTED]
-- [[focus_object()]] - `calls` [EXTRACTED]
-- [[json]] - `calls` [EXTRACTED]
-- [[keyloc()]] - `calls` [EXTRACTED]
-- [[keyvis()]] - `calls` [EXTRACTED]
-- [[label()]] - `calls` [EXTRACTED]
-- [[material()]] - `calls` [EXTRACTED]
-- [[setup()]] - `calls` [EXTRACTED]
+- [[State]] - `calls` [EXTRACTED]
+- [[apply()]] - `calls` [EXTRACTED]
+- [[build_set()]] - `calls` [EXTRACTED]
+- [[camera()_1]] - `calls` [EXTRACTED]
+- [[checks()]] - `calls` [EXTRACTED]
+- [[interpolation()]] - `calls` [EXTRACTED]
+- [[opener_scene.py]] - `contains` [EXTRACTED]
+- [[place_actors()]] - `calls` [EXTRACTED]
+- [[setup()_1]] - `calls` [EXTRACTED]
+- [[simulate()]] - `calls` [EXTRACTED]
+- [[world_verts()_1]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/main
+#graphify/code #graphify/EXTRACTED #community/opener_scenepy

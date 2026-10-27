@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/short_render.py"
 type: "rationale"
-community: "re"
-location: "L98"
+community: "render"
+location: "L120"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/re
+  - community/render
 ---
 
 # Make one Short. With `state` (fix.bat or an automatic fix round), reuse its…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[render()_3]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/re
+#graphify/rationale #graphify/EXTRACTED #community/render

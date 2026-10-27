@@ -1,17 +1,18 @@
 ---
-source_file: "tests/test_style.py"
+source_file: "tests/test_blender_link.py"
 type: "code"
-community: "style_placeholders"
-location: "L319"
+community: "test_blender_link.py"
+location: "L61"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/style_placeholders
+  - community/test_blender_linkpy
 ---
 
 # run()
 
 ## Connections
-- [[test_failed_invention_keeps_the_others()]] - `contains` [EXTRACTED]
+- [[Fake]] - `calls` [EXTRACTED]
+- [[with_fake()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/style_placeholders
+#graphify/code #graphify/EXTRACTED #community/test_blender_linkpy

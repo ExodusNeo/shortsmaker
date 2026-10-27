@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "test_full_scenes.py"
+community: "test_review_redraws_custom"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_full_scenespy
+  - community/test_review_redraws_custom
 ---
 
 # Path
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[_review_state()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_full_scenespy
+#graphify/code #graphify/EXTRACTED #community/test_review_redraws_custom

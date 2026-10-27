@@ -27,13 +27,14 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 4 edges to [[_COMMUNITY_gpu.py]]
-- 2 edges to [[_COMMUNITY_re]]
-- 2 edges to [[_COMMUNITY_style_library]]
+- 4 edges to [[_COMMUNITY_pathlib]]
+- 2 edges to [[_COMMUNITY_test_style.py]]
+- 1 edge to [[_COMMUNITY_render]]
+- 1 edge to [[_COMMUNITY_visual_review]]
 - 1 edge to [[_COMMUNITY_test_pictures_first.py]]
 
 ## Top bridge nodes
-- [[edit_plan()]] - degree 8, connects to 2 communities
+- [[edit_plan()]] - degree 8, connects to 3 communities
 - [[cut_text()]] - degree 4, connects to 2 communities
 - [[look_text()]] - degree 4, connects to 2 communities
 - [[picture_line()]] - degree 4, connects to 1 community

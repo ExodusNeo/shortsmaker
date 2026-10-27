@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/config.py"
 type: "code"
-community: "random"
-location: "L70"
+community: "pathlib"
+location: "L73"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/random
+  - community/pathlib
 ---
 
 # hex_rgb()
@@ -19,4 +19,4 @@ tags:
 - [[render()_3]] - `calls` [EXTRACTED]
 - [[short_render.py]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/random
+#graphify/code #graphify/EXTRACTED #community/pathlib

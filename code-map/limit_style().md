@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/plan_rules.py"
 type: "code"
-community: "Style Library Caps"
+community: "write_scripts"
 location: "L218"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Style_Library_Caps
+  - community/write_scripts
 ---
 
 # limit_style()
@@ -17,4 +17,4 @@ tags:
 - [[test_limit_style_caps()]] - `calls` [EXTRACTED]
 - [[write_scripts()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Style_Library_Caps
+#graphify/code #graphify/EXTRACTED #community/write_scripts

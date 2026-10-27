@@ -18,6 +18,7 @@ tags:
 - [[media_tools.py]] - `contains` [EXTRACTED]
 - [[render()_3]] - `calls` [EXTRACTED]
 - [[render_clips()]] - `calls` [EXTRACTED]
+- [[render_opener()]] - `calls` [EXTRACTED]
 - [[subprocess]] - `calls` [EXTRACTED]
 - [[test_encoder_cache_lives_with_video_encoder()]] - `calls` [EXTRACTED]
 

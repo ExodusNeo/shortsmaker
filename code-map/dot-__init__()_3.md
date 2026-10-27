@@ -1,18 +1,17 @@
 ---
-source_file: "blender/failures.py"
+source_file: "blender/templates.py"
 type: "code"
-community: "main"
-location: "L26"
+community: "templates.py"
+location: "L14"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/main
+  - community/templatespy
 ---
 
 # .__init__()
 
 ## Connections
-- [[dot-_crack()]] - `calls` [EXTRACTED]
-- [[Failure]] - `method` [EXTRACTED]
+- [[Bridge]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/main
+#graphify/code #graphify/EXTRACTED #community/templatespy

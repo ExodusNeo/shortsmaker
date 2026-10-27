@@ -1,17 +1,27 @@
 ---
 source_file: ""
 type: "code"
-community: "build_scene.py"
+community: "cut"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/build_scenepy
+  - community/cut
 ---
 
 # Vector
 
 ## Connections
-- [[direction()]] - `references` [EXTRACTED]
-- [[keyloc()]] - `references` [EXTRACTED]
+- [[dot-__init__()_9]] - `references` [EXTRACTED]
+- [[box_of()]] - `references` [EXTRACTED]
+- [[centre()]] - `references` [EXTRACTED]
+- [[edge_point_local()]] - `references` [EXTRACTED]
+- [[half()]] - `references` [EXTRACTED]
+- [[handle_end_local()]] - `references` [EXTRACTED]
+- [[pick_island()]] - `references` [EXTRACTED]
+- [[place_tool()]] - `references` [EXTRACTED]
+- [[region_normal()]] - `references` [EXTRACTED]
+- [[tool_rotation()]] - `references` [EXTRACTED]
+- [[toward()]] - `references` [EXTRACTED]
+- [[travel()_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/build_scenepy
+#graphify/code #graphify/EXTRACTED #community/cut

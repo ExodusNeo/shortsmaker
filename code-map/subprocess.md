@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "re"
+community: "shutil"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/re
+  - community/shutil
 ---
 
 # subprocess
@@ -25,7 +25,7 @@ tags:
 - [[image_sources.py]] - `imports` [EXTRACTED]
 - [[llm.py]] - `imports` [EXTRACTED]
 - [[local_job()]] - `calls` [EXTRACTED]
-- [[main()_5]] - `calls` [EXTRACTED]
+- [[main()_4]] - `calls` [EXTRACTED]
 - [[master_gain()]] - `calls` [EXTRACTED]
 - [[media_tools.py]] - `imports` [EXTRACTED]
 - [[moss_images()]] - `calls` [EXTRACTED]
@@ -48,8 +48,10 @@ tags:
 - [[test_blender_scene.py]] - `imports` [EXTRACTED]
 - [[test_edit_project.py]] - `imports` [EXTRACTED]
 - [[test_full_scenes.py]] - `imports` [EXTRACTED]
+- [[test_opener_checks.py]] - `imports` [EXTRACTED]
+- [[test_opener_scene.py]] - `imports` [EXTRACTED]
 - [[tsc_check()]] - `calls` [EXTRACTED]
 - [[video_encoder()]] - `calls` [EXTRACTED]
 - [[voicestudio_up()]] - `calls` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/re
+#graphify/concept #graphify/EXTRACTED #community/shutil

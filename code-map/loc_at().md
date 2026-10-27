@@ -1,0 +1,23 @@
+---
+source_file: "blender/scene_kit.py"
+type: "code"
+community: "scene_kit.py"
+location: "L146"
+tags:
+  - graphify/code
+  - graphify/EXTRACTED
+  - community/scene_kitpy
+---
+
+# loc_at()
+
+## Connections
+- [[Vector_7]] - `references` [EXTRACTED]
+- [[Where obj's keys put it on `frame`, without stepping the scene (stepping would…]] - `rationale_for` [EXTRACTED]
+- [[fcurves()]] - `calls` [EXTRACTED]
+- [[hop_off()]] - `calls` [EXTRACTED]
+- [[make_dynamic()]] - `calls` [EXTRACTED]
+- [[scene_kit.py]] - `contains` [EXTRACTED]
+- [[walk()]] - `calls` [EXTRACTED]
+
+#graphify/code #graphify/EXTRACTED #community/scene_kitpy

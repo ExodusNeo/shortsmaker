@@ -12,8 +12,8 @@ tags:
 # test_look_check_fixes_code()
 
 ## Connections
-- [[ask()_5]] - `contains` [EXTRACTED]
-- [[ask()_4]] - `indirect_call` [INFERRED]
+- [[ask()_8]] - `contains` [EXTRACTED]
+- [[ask()_7]] - `indirect_call` [INFERRED]
 - [[look_and_fix()]] - `calls` [EXTRACTED]
 - [[test_full_scenes.py]] - `contains` [EXTRACTED]
 

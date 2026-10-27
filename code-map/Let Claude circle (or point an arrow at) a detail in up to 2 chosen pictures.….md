@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/plan_rules.py"
 type: "rationale"
-community: "test_package.py"
+community: "re"
 location: "L379"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/test_packagepy
+  - community/re
 ---
 
 # Let Claude circle (or point an arrow at) a detail in up to 2 chosen pictures.…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[mark_details()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/test_packagepy
+#graphify/rationale #graphify/EXTRACTED #community/re

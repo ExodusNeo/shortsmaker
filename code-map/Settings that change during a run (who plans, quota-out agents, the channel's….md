@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/session.py"
 type: "rationale"
-community: "gpu.py"
+community: "pathlib"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/gpupy
+  - community/pathlib
 ---
 
 # Settings that change during a run (who plans, quota-out agents, the channel's…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[session.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/gpupy
+#graphify/rationale #graphify/EXTRACTED #community/pathlib

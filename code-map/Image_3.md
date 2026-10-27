@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "credit_tag_image"
+community: "trim_borders"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/credit_tag_image
+  - community/trim_borders
 ---
 
 # Image
 
 ## Connections
-- [[credit_tag_image()]] - `references` [EXTRACTED]
+- [[is_stereo()]] - `references` [EXTRACTED]
+- [[trim_borders()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/credit_tag_image
+#graphify/code #graphify/EXTRACTED #community/trim_borders

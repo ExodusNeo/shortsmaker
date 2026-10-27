@@ -1,20 +1,27 @@
 ---
 source_file: ""
 type: "code"
-community: "frame_render.py"
+community: "local_clips"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/frame_renderpy
+  - community/local_clips
 ---
 
 # Path
 
 ## Connections
-- [[dot-__init__()_1]] - `references` [EXTRACTED]
-- [[fills_frame()]] - `references` [EXTRACTED]
-- [[frame_maker()]] - `references` [EXTRACTED]
-- [[graphic_low()]] - `references` [EXTRACTED]
-- [[thumbnail()]] - `references` [EXTRACTED]
+- [[cover_crop()]] - `references` [EXTRACTED]
+- [[cut_owner_clip()]] - `references` [EXTRACTED]
+- [[gemini_images()]] - `references` [EXTRACTED]
+- [[h3_prompts()]] - `references` [EXTRACTED]
+- [[local_clips()]] - `references` [EXTRACTED]
+- [[local_job()]] - `references` [EXTRACTED]
+- [[local_voice()]] - `references` [EXTRACTED]
+- [[moss_images()]] - `references` [EXTRACTED]
+- [[split_takes()]] - `references` [EXTRACTED]
+- [[start_picture_problems()]] - `references` [EXTRACTED]
+- [[unpack_clips()]] - `references` [EXTRACTED]
+- [[veo_handoff()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/frame_renderpy
+#graphify/code #graphify/EXTRACTED #community/local_clips

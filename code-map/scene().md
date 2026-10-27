@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_style.py"
 type: "code"
-community: "Style Library Caps"
+community: "write_scripts"
 location: "L88"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Style_Library_Caps
+  - community/write_scripts
 ---
 
 # scene()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[test_limit_style_caps()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Style_Library_Caps
+#graphify/code #graphify/EXTRACTED #community/write_scripts

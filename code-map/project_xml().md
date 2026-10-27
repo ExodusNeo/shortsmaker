@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/edit_project.py"
 type: "code"
-community: "Shotcut Timeline and Loudness"
+community: "make"
 location: "L33"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Shotcut_Timeline_and_Loudness
+  - community/make
 ---
 
 # project_xml()
@@ -21,4 +21,4 @@ tags:
 - [[prop()]] - `contains` [EXTRACTED]
 - [[re]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Shotcut_Timeline_and_Loudness
+#graphify/code #graphify/EXTRACTED #community/make

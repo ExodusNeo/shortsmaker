@@ -2,7 +2,7 @@
 source_file: "shortsmaker/rules.py"
 type: "code"
 community: "test_rules.py"
-location: "L133"
+location: "L136"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -17,7 +17,7 @@ tags:
 - [[json]] - `calls` [EXTRACTED]
 - [[load_rules()]] - `calls` [EXTRACTED]
 - [[load_rules, but a channel with no rules file yet (a failed draft, a profile…]] - `rationale_for` [EXTRACTED]
-- [[main()_4]] - `calls` [EXTRACTED]
+- [[main()_2]] - `calls` [EXTRACTED]
 - [[rules.py]] - `contains` [EXTRACTED]
 - [[test_missing_rules_file_is_drafted()]] - `calls` [EXTRACTED]
 

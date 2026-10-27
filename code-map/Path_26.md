@@ -1,20 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "random"
+community: "time"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/random
+  - community/time
 ---
 
 # Path
 
 ## Connections
-- [[ink_silhouette()]] - `references` [EXTRACTED]
-- [[make_paper()]] - `references` [EXTRACTED]
-- [[paint_instead()]] - `references` [EXTRACTED]
-- [[redraw_custom()]] - `references` [EXTRACTED]
-- [[render_remotion()]] - `references` [EXTRACTED]
+- [[fit_start()]] - `references` [EXTRACTED]
+- [[saved_file()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/random
+#graphify/code #graphify/EXTRACTED #community/time

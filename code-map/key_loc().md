@@ -1,0 +1,25 @@
+---
+source_file: "blender/scene_kit.py"
+type: "code"
+community: "moves.py"
+location: "L184"
+tags:
+  - graphify/code
+  - graphify/EXTRACTED
+  - community/movespy
+---
+
+# key_loc()
+
+## Connections
+- [[camera()_1]] - `calls` [EXTRACTED]
+- [[cut()]] - `calls` [EXTRACTED]
+- [[fall()]] - `calls` [EXTRACTED]
+- [[hop_off()]] - `calls` [EXTRACTED]
+- [[make_dynamic()]] - `calls` [EXTRACTED]
+- [[push()]] - `calls` [EXTRACTED]
+- [[scene_kit.py]] - `contains` [EXTRACTED]
+- [[sink()]] - `calls` [EXTRACTED]
+- [[walk()]] - `calls` [EXTRACTED]
+
+#graphify/code #graphify/EXTRACTED #community/movespy

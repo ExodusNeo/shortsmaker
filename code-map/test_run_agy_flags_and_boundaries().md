@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_package.py"
 type: "code"
-community: "test_package.py"
+community: "ask_ai"
 location: "L107"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_packagepy
+  - community/ask_ai
 ---
 
 # test_run_agy_flags_and_boundaries()
@@ -15,4 +15,4 @@ tags:
 - [[run_agy()]] - `calls` [EXTRACTED]
 - [[test_package.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_packagepy
+#graphify/code #graphify/EXTRACTED #community/ask_ai

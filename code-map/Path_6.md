@@ -1,16 +1,20 @@
 ---
 source_file: ""
 type: "code"
-community: "srt"
+community: "audio_mix.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/srt
+  - community/audio_mixpy
 ---
 
 # Path
 
 ## Connections
-- [[srt()]] - `references` [EXTRACTED]
+- [[captions()_1]] - `references` [EXTRACTED]
+- [[music_gain()]] - `references` [EXTRACTED]
+- [[speak()]] - `references` [EXTRACTED]
+- [[story_sound()]] - `references` [EXTRACTED]
+- [[tts()_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/srt
+#graphify/code #graphify/EXTRACTED #community/audio_mixpy

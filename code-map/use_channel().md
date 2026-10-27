@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/channel_profiles.py"
 type: "code"
-community: "json"
+community: "main"
 location: "L14"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/json
+  - community/main
 ---
 
 # use_channel()
@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[channel_profiles.py]] - `contains` [EXTRACTED]
 - [[fix_short()]] - `calls` [EXTRACTED]
-- [[main()_4]] - `calls` [EXTRACTED]
+- [[main()_2]] - `calls` [EXTRACTED]
 - [[pick_channel()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/json
+#graphify/code #graphify/EXTRACTED #community/main

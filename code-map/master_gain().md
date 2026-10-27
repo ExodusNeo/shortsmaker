@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/edit_project.py"
 type: "code"
-community: "Shotcut Timeline and Loudness"
+community: "make"
 location: "L23"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Shotcut_Timeline_and_Loudness
+  - community/make
 ---
 
 # master_gain()
@@ -19,4 +19,4 @@ tags:
 - [[re]] - `calls` [EXTRACTED]
 - [[subprocess]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Shotcut_Timeline_and_Loudness
+#graphify/code #graphify/EXTRACTED #community/make
