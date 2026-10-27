@@ -124,6 +124,34 @@ def test_fix_plan_returns_clean_or_none():
         llm.ask_ai = old
 
 
+def test_rejects_on_cycles_and_self():
+    assert opener_plan.clean_opener(plan(**{"actors.1.on": "stump"})) is None  # stands on itself
+    assert opener_plan.clean_opener(plan(**{"actors.1.on": "rooster"})) is None  # rooster on stump on rooster
+    assert opener_plan.clean_opener(plan(**{"actors.1.on": "ground"})) is not None
+
+
+def test_through_cut_names_its_rest():
+    assert opener_plan.clean_opener(plan(**{"beats.0.expect": [{"piece": "head", "share": 0.15, "then": "fly_off"}]})) is None
+
+
+def test_only_buildable_cuts():
+    assert "drill" not in opener_plan.TOOLS and "cookie cutter" not in opener_plan.TOOLS  # no boolean cuts yet
+    two = plan(**{"beats.0.strokes": [{"through": "neck", "angle": "diagonal"}, {"rows": 3}]})
+    assert opener_plan.clean_opener(two) is None  # one stroke group per cut
+
+
+def test_fix_plan_gets_scene_length():
+    old, prompts = llm.ask_ai, []
+    try:
+        llm.ask_ai = lambda prompt, **k: prompts.append(prompt) or copy.deepcopy(EXAMPLE)
+        scaled = copy.deepcopy(EXAMPLE)
+        scaled["beats"][2]["at"] = 1.7
+        opener_plan.fix_plan({"opener": EXAMPLE, "title": "t"}, ["in_frame: x"], seconds=1.8, scaled=scaled)
+        assert "1.8 seconds" in prompts[0] and '"at": 1.7' in prompts[0], prompts[0][:400]
+    finally:
+        llm.ask_ai = old
+
+
 if __name__ == "__main__":
     names = [n for n in sorted(globals()) if n.startswith("test_") and (len(sys.argv) < 2 or n in sys.argv[1:])]
     failed = 0

@@ -99,13 +99,18 @@ def use_opener(short: dict, bounds: list[float], work: Path, clips: dict, images
     the still, and no motion graphic over it. Otherwise scene 1 stays as it is and the reason comes back as a CHECK
     line (or the planner's own note when there was no plan)."""
     short["opener_used"] = False
-    clip, why = opener_render.render_opener(short, bounds[1] - bounds[0], work)
-    if clip is None:
-        return why or short.get("opener_check")
-    media_tools.ffmpeg("-y", "-i", str(clip), "-frames:v", "1", "opener_0.jpg", cwd=work)
-    images[0] = Image.open(work / "opener_0.jpg").convert("RGB")
+    try:  # an opener never stops a run (a failing search once escaped and the Short's folder was deleted)
+        clip, why = opener_render.render_opener(short, bounds[1] - bounds[0], work)
+        if clip is None:
+            return why or short.get("opener_check")
+        media_tools.ffmpeg("-y", "-i", str(clip), "-frames:v", "1", "opener_0.jpg", cwd=work)
+        still = Image.open(work / "opener_0.jpg").convert("RGB")
+    except Exception as e:
+        return f"opener failed: {type(e).__name__}: {e}"
+    images[0] = still
     clips[0] = clip
     short["scenes"][0]["full"] = None
+    short["scenes"][0]["credit_tag"] = None  # the replaced photo's credit must not show on the animation
     sources[0] = f"drawn in Blender (opener): {short['opener']['moment']}"
     short["opener_used"] = True
     return None
@@ -417,7 +422,9 @@ def render(short: dict, ch: dict, folder: Path, state: dict | None = None, fix_r
     credit = music.with_name(music.name + ".txt") if music else None
     credit_text = f"\n\nMusic:\n{credit.read_text(encoding='utf-8').strip()}" if credit and credit.exists() else ""
     image_credits = []  # credited material (CC, Internet Archive, Openverse); public domain needs nothing
-    for sc, c in zip(short["scenes"], choices):
+    for k, (sc, c) in enumerate(zip(short["scenes"], choices)):
+        if k == 0 and short.get("opener_used"):  # scene 1's photo was replaced by the Blender opener
+            continue
         for _, title, who, site in (c.get("full_pics") or []) if sc.get("full") else []:
             if who:
                 image_credits.append(f"{re.sub(r'[.](jpe?g|png|tiff?|gif|svg)$', '', title.removeprefix('File:'), flags=re.I)} by {who} ({site})")

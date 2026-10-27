@@ -105,6 +105,14 @@ def clean_opener(raw) -> dict | None:
         if a.get("on") not in (None, "ground", *ids) or a.get("facing", "right") not in FACINGS \
                 or a.get("gait", "object") not in GAITS:
             return None
+    on = {a["id"]: a.get("on") for a in actors}
+    for a in ids:  # standing on itself, or A on B on A, would never be placed
+        seen, cur = set(), a
+        while on.get(cur) not in (None, "ground"):
+            if cur in seen:
+                return None
+            seen.add(cur)
+            cur = on[cur]
     beats = raw.get("beats")
     if not isinstance(beats, list) or not beats:
         return None
@@ -119,9 +127,12 @@ def clean_opener(raw) -> dict | None:
         if b["move"] == "cut":
             if b.get("tool") not in find or b.get("target") not in find or not tool_kind(find[b["tool"]]):
                 return None
-            if not isinstance(b.get("strokes"), list) or not b["strokes"] or not all(map(_stroke, b["strokes"])) \
+            # one stroke group per cut (rows + cols is one group): moves.cut builds no more yet
+            if not isinstance(b.get("strokes"), list) or len(b["strokes"]) != 1 or not _stroke(b["strokes"][0]) \
                     or not _expect(b.get("expect")):
                 return None
+            if "through" in b["strokes"][0] and not any(e.get("piece") == "rest" or "pieces" in e for e in b["expect"]):
+                return None  # the part left behind must be named too
         elif b.get("actor") not in find or (b["move"] == "push" and b.get("target") not in find):
             return None
     if min(b["at"] for b in beats) > LIMITS["first_beat_s"]:
@@ -180,10 +191,14 @@ Shorts: {json.dumps(rows, ensure_ascii=False)}
         shorts[i]["opener_check"] = "opener: no usable plan"
 
 
-def fix_plan(short: dict, failures: list[str]) -> dict | None:
-    """The planner fixes its own plan after the checks or the review found these failures; None if unusable."""
+def fix_plan(short: dict, failures: list[str], seconds: float | None = None, scaled: dict | None = None) -> dict | None:
+    """The planner fixes its own plan after the checks or the review found these failures; None if unusable. It is
+    told scene 1's real length and the beat times as played (the voice can make the scene shorter than planned)."""
+    played = (f"Scene 1 is {seconds:.1f} seconds long; the beats were fitted into it and played like this: "
+              f"{json.dumps(scaled, ensure_ascii=False)}\n") if seconds is not None and scaled is not None else ""
     data = llm.ask_ai(f"""You staged this 3D opener for the Short "{short.get('title', '')}". Rendering it showed these
 problems: {json.dumps(failures, ensure_ascii=False)}
+{played}
 Fix the plan so none of them happens again (move things apart, change the tool's start, the timing, the camera, or
 the expected pieces). Keep the same moment.
 {_tables_text()}

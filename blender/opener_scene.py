@@ -79,12 +79,12 @@ def place_actors(plan: dict, models: dict, st: moves.State) -> None:
     tools = {b["tool"] for b in plan["beats"] if b["move"] == "cut"}
     for a in plan["actors"]:
         o = kit.load_model(models[a["id"]], a["id"])
-        kit.fit(o, a["size_m"], a.get("facing", "camera" if a["id"] not in tools else "camera"))
+        kit.fit(o, a["size_m"], a.get("facing", "camera"))
         st.objs[a["id"]] = o
         st.support[a["id"]] = a.get("on") or "ground"
     bpy.context.view_layer.update()
     # supports and free actors on the ground in a row around the origin, then everything standing on something
-    on_ground = [a["id"] for a in plan["actors"] if not a.get("on") and a["id"] not in tools]
+    on_ground = [a["id"] for a in plan["actors"] if a.get("on") in (None, "ground") and a["id"] not in tools]
     x = 0.0
     for k, aid in enumerate(on_ground):
         o = st.objs[aid]
@@ -96,6 +96,7 @@ def place_actors(plan: dict, models: dict, st: moves.State) -> None:
         x += width / 2 + 0.3
     placed: set = set(on_ground) | tools
     while len(placed) < len(plan["actors"]):
+        before = len(placed)
         for a in plan["actors"]:
             if a["id"] in placed or a.get("on") not in placed and a.get("on") not in (None, "ground"):
                 continue
@@ -105,6 +106,8 @@ def place_actors(plan: dict, models: dict, st: moves.State) -> None:
                                                  [st.objs[b["id"]] for b in plan["actors"]
                                                   if b.get("on") == a["on"] and b["id"] in placed])
             placed.add(a["id"])
+        if len(placed) == before:  # clean_opener rejects cycles; never loop forever on one anyway
+            raise SystemExit("opener: actors stand on each other in a circle")
     for aid in tools:  # out of sight until its stroke keys place it
         st.objs[aid].location = (0, 0, -50)
     bpy.context.view_layer.update()

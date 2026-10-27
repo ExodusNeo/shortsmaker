@@ -59,7 +59,7 @@ class Env:
         config.LIBRARY = lib
         self.reviews, self.fixes = [], []
         llm.ask_ai = lambda prompt, **k: self.reviews.append(prompt) or {"ok": True, "problems": []}
-        opener_plan.fix_plan = lambda short, failures: self.fixes.append(list(failures)) or copy.deepcopy(short["opener"])
+        opener_plan.fix_plan = lambda short, failures, seconds=None, scaled=None: self.fixes.append(list(failures)) or copy.deepcopy(short["opener"])
         return self
 
     def runs(self) -> int:
@@ -171,7 +171,7 @@ def _wiring(render_result):
     d = Path(tempfile.mkdtemp(prefix="opener_wire_"))
     clip = d / "opener.mp4"
     media_tools.ffmpeg("-f", "lavfi", "-i", "color=c=orange:s=216x384:d=1", "-pix_fmt", "yuv420p", clip.name, cwd=d)
-    s = {"title": "Mike", "opener": copy.deepcopy(PLAN), "scenes": [{"full": {"type": "custom"}}, {"full": None}]}
+    s = {"title": "Mike", "opener": copy.deepcopy(PLAN), "scenes": [{"full": {"type": "custom"}, "credit_tag": "Photo: X (CC BY)"}, {"full": None}]}
     clips, images, sources = {1: d / "film1.mp4"}, [Image.new("RGB", (8, 8)), Image.new("RGB", (8, 8))], ["photo", "photo"]
     calls, old = [], opener_render.render_opener
     opener_render.render_opener = lambda short, seconds, work, exe=None: calls.append(seconds) or (
@@ -188,6 +188,7 @@ def test_use_opener_on_success():
     assert why is None and clips[0] == clip and calls == [2.4]
     assert sources[0] == "drawn in Blender (opener): " + PLAN["moment"] and s["scenes"][0]["full"] is None
     assert images[0].size == (216, 384) and s.get("opener_used") is True
+    assert s["scenes"][0]["credit_tag"] is None  # the replaced photo's credit must not show on the animation
 
 
 def test_use_opener_failure_keeps_scene():
@@ -235,6 +236,50 @@ def test_blender_note():
         assert out.getvalue() == ""
     finally:
         blender_link.ping, builtins.input = old_ping, old_input
+
+
+def test_search_failure_falls_back():
+    with Env() as e:
+        for f in config.LIBRARY.glob("polypizza_6NTegstc5Jy.*"):
+            f.unlink()
+        blender_link.ping = lambda timeout=2.0: True
+
+        def broken(find):
+            raise blender_link.LinkError("Unknown command type: search_polypizza_models")
+        blender_link.search = broken
+        clip, why = opener_render.render_opener(short(), 3.0, e.work, e.exe)
+        assert clip is None and why.startswith("opener failed: model 'rooster' could not be searched"), why
+
+
+def test_use_opener_never_raises():
+    from shortsmaker import short_render
+    old = opener_render.render_opener
+
+    def boom(*a, **k):
+        raise RuntimeError("boom")
+    opener_render.render_opener = boom
+    try:
+        s = {"title": "x", "opener": copy.deepcopy(PLAN), "scenes": [{"full": None}]}
+        assert short_render.use_opener(s, [0.0, 2.0], Path("."), {}, [None], ["x"]) == "opener failed: RuntimeError: boom"
+    finally:
+        opener_render.render_opener = old
+
+
+def test_reuse_after_small_length_change():
+    with Env() as e:
+        s = short()
+        opener_render.render_opener(s, 3.0, e.work, e.exe)
+        clip, why = opener_render.render_opener(s, 3.012, e.work, e.exe)  # a voice a few ms longer
+        assert why is None and clip.exists() and e.runs() == 1
+
+
+def test_fix_round_gets_scaled_plan():
+    with Env() as e:
+        e.fail.write_text("in_frame: rooster leaves the frame on frames 50-54")
+        seen = []
+        opener_plan.fix_plan = lambda short, failures, seconds=None, scaled=None: seen.append((seconds, scaled)) or None
+        opener_render.render_opener(short(), 1.8, e.work, e.exe)
+        assert seen and abs(seen[0][0] - 1.8) < 0.04 and max(b["at"] for b in seen[0][1]["beats"]) <= 1.8
 
 
 if __name__ == "__main__":

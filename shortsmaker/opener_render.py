@@ -53,7 +53,11 @@ def resolve_models(plan: dict) -> tuple[dict, str | None]:
             online = blender_link.ping() if online is None else online
             if not online:
                 return {}, f"model '{find}' not in the library and Blender is off"
-            hit = pick_model(find, blender_link.search(find))
+            try:
+                hits = blender_link.search(find)
+            except blender_link.LinkError as e:  # e.g. Poly Pizza switched off in the owner's open scene
+                return {}, f"model '{find}' could not be searched ({e})"
+            hit = pick_model(find, hits)
             if hit is None:
                 return {}, f"no fitting model for '{find}'"
             blend, why = blender_link.fetch_model(hit, find, size)
@@ -93,6 +97,7 @@ def render_opener(short: dict, seconds: float, work: Path, exe: Path | None = No
     """Scene 1's opener clip, or (None, why). (None, None) when the Short has no opener plan."""
     if not short.get("opener"):
         return None, None
+    seconds = round(seconds * FPS) / FPS  # whole frames: a voice a few ms longer still reuses the clip
     exe = exe or config.BLENDER
     work.mkdir(parents=True, exist_ok=True)
     clip, frames, report_path, done = (work / "opener.mp4", work / "opener_frames", work / "opener_report.json",
@@ -133,7 +138,7 @@ def render_opener(short: dict, seconds: float, work: Path, exe: Path | None = No
                 return clip, None
         if round_no == FIX_ROUNDS:
             return None, f"opener failed: {failures[0]}"
-        fixed = opener_plan.fix_plan(short, failures)
+        fixed = opener_plan.fix_plan(short, failures, seconds, plan)
         if fixed is None:
             return None, f"opener failed: {failures[0]} (the fix wasn't usable)"
         short["opener"] = fixed
