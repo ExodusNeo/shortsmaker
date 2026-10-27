@@ -32,7 +32,7 @@ SHAKE, SHAKE_FRAMES = 0.012, 9  # hit shake as a share of the camera distance, g
 DRIFT = 0.004  # handheld sway, share of the distance
 SLOW, SLOW_BEFORE, SLOW_AFTER = 0.5, 3, 9  # the hit plays at half speed over these scene frames; the rest runs
 # a little faster so the clip keeps its length (scene 1 is timed to the voice)
-BURST = 24  # feathers knocked off where the blade lands
+BURST = 36  # feathers knocked off where the blade lands
 RISE = 16  # degrees the camera cranes up over the clip, so a subject stepping down stays seen over its support
 
 
@@ -64,16 +64,32 @@ def build_set(plan: dict, models: dict, cam_dir: Vector) -> object:
     sc.world = w
     w.use_nodes = True
     bg = next(n for n in w.node_tree.nodes if n.type == "BACKGROUND")
-    bg.inputs["Color"].default_value = (*light["sky"], 1)
-    bg.inputs["Strength"].default_value = 0.8
+    # the sun 135 degrees round from where the camera looks: side and back light shows form and rims the subject,
+    # front light flattened it (owner, 2026-10-27: "the light is flat"; blender-time-of-day skill)
+    look = -cam_dir
+    heading = math.atan2(look.x, look.y) + math.radians(135)
+    el = math.radians(light.get("elevation", 35))
+    to_sun = Vector((math.sin(heading) * math.cos(el), math.cos(heading) * math.cos(el), math.sin(el)))
+    if "elevation" in light:  # a measured sky to match the sun (Multiple Scattering, Blender 5.x); night stays flat
+        sky = w.node_tree.nodes.new("ShaderNodeTexSky")
+        try:
+            sky.sky_type = "MULTIPLE_SCATTERING"
+        except TypeError:
+            pass
+        sky.sun_disc, sky.sun_elevation, sky.sun_rotation = False, el, heading
+        w.node_tree.links.new(sky.outputs["Color"], bg.inputs["Color"])
+        bg.inputs["Strength"].default_value = 0.0285 * 1.4  # the skill's sky-to-scene scale, a touch brighter for AgX
+    else:
+        bg.inputs["Color"].default_value = (*light["sky"], 1)
+        bg.inputs["Strength"].default_value = 0.8
     sun = bpy.data.objects.new("sun", bpy.data.lights.new("sun", "SUN"))
-    sun.data.energy, sun.data.color, sun.data.angle = light["sun"], light["color"], math.radians(8)
-    sun.rotation_euler = (math.radians(55), 0, math.radians(-40))
+    sun.data.energy, sun.data.color, sun.data.angle = light["sun"], light["color"], math.radians(3)
+    sun.rotation_euler = Vector((0, 0, 1)).rotation_difference(to_sun).to_euler()
     sc.collection.objects.link(sun)
-    bpy.ops.mesh.primitive_plane_add(size=60)
+    bpy.ops.mesh.primitive_plane_add(size=400)  # to the horizon: past its edge the sky shows a dark "ground"
     ground = bpy.context.active_object
     ground.name = "ground"
-    ground.data.materials.append(kit.material("ground", kit.TABLES["grounds"][st["ground"]]))
+    ground.data.materials.append(ground_material(kit.TABLES["grounds"][st["ground"]]))
     kit.make_static(ground)
     back = -cam_dir.normalized()
     back.z = 0
@@ -95,6 +111,74 @@ def build_set(plan: dict, models: dict, cam_dir: Vector) -> object:
             edges[k] += 0.5 + 2 * half_w
         o.location = back * (half_d + 5 + i) + across * shift
     return ground
+
+
+def ground_material(rgb) -> bpy.types.Material:
+    """The ground's colour broken up by soft patches, lighter and darker: one flat colour read as a floor, not earth."""
+    m = kit.material("ground", rgb)
+    nt = m.node_tree
+    bsdf = next(n for n in nt.nodes if n.type == "BSDF_PRINCIPLED")
+    noise = nt.nodes.new("ShaderNodeTexNoise")
+    noise.inputs["Scale"].default_value, noise.inputs["Detail"].default_value = 1.2, 6.0
+    amount = nt.nodes.new("ShaderNodeMath")
+    amount.operation, amount.inputs[1].default_value, amount.inputs[2].default_value = "MULTIPLY_ADD", 0.5, 0.75
+    nt.links.new(noise.outputs["Fac"], amount.inputs[0])
+    tint = nt.nodes.new("ShaderNodeVectorMath")
+    tint.operation = "SCALE"
+    tint.inputs[0].default_value = rgb
+    nt.links.new(amount.outputs[0], tint.inputs["Scale"])
+    nt.links.new(tint.outputs[0], bsdf.inputs["Base Color"])
+    bsdf.inputs["Roughness"].default_value = 0.95
+    return m
+
+
+DRESS = {"grass": ("tuft", "stone"), "dirt": ("tuft", "stone"), "sand": ("stone",), "snow": ("stone",),
+         "stone": ("stone",)}  # what lies about on each ground; floors, tables and water stay clear
+
+
+def dress_set(plan: dict, st: moves.State) -> None:
+    """Tufts and stones scattered behind and beside the action, never on its ground or between it and the camera:
+    the yard was one bare plane (owner, 2026-10-27). Added after the checks: it is only a look."""
+    kinds = DRESS.get(plan["set"]["ground"])
+    if not kinds:
+        return
+    sc = bpy.context.scene
+    reach = 0.0  # how far anything goes from the middle over the clip
+    for f in range(1, sc.frame_end + 1, 5):
+        for o in st.objs.values():
+            reach = max(reach, kit.loc_at(o, f).xy.length)
+    reach += 0.8
+    across = Vector((-st.cam_h.y, st.cam_h.x, 0))
+    rng = random.Random(9)
+    parts = bpy.data.collections.new("dressing")
+    sc.collection.children.link(parts)
+    greens = [(0.24, 0.38, 0.12), (0.32, 0.42, 0.15), (0.2, 0.3, 0.1)]
+    greys = [(0.42, 0.4, 0.37), (0.5, 0.47, 0.42), (0.33, 0.32, 0.3)]
+    placed = 0
+    while placed < 140:
+        r = reach + rng.uniform(0, 7)
+        a = rng.uniform(0, 2 * math.pi)
+        p = Vector((math.cos(a) * r, math.sin(a) * r, 0))
+        if p.dot(st.cam_h) > 0.3 * reach and abs(p.dot(across)) < r:  # in front: between the camera and the action
+            continue
+        kind = rng.choice(kinds)
+        if kind == "tuft":
+            h = rng.uniform(0.08, 0.2)
+            bpy.ops.mesh.primitive_cone_add(vertices=4, radius1=h * 0.35, depth=h, location=(p.x, p.y, h / 2))
+            ob = bpy.context.active_object
+            ob.rotation_euler = (rng.uniform(-0.25, 0.25), rng.uniform(-0.25, 0.25), rng.uniform(0, 6.3))
+            ob.data.materials.append(kit.material(f"tuft{placed % 3}", greens[placed % 3]))
+        else:
+            s = rng.uniform(0.03, 0.12)
+            bpy.ops.mesh.primitive_ico_sphere_add(subdivisions=1, radius=s, location=(p.x, p.y, s * 0.25))
+            ob = bpy.context.active_object
+            ob.scale = (rng.uniform(0.8, 1.3), rng.uniform(0.8, 1.3), rng.uniform(0.4, 0.7))
+            ob.rotation_euler.z = rng.uniform(0, 6.3)
+            ob.data.materials.append(kit.material(f"stone{placed % 3}", greys[placed % 3]))
+        for c in ob.users_collection:
+            c.objects.unlink(ob)
+        parts.objects.link(ob)
+        placed += 1
 
 
 def place_actors(plan: dict, models: dict, st: moves.State) -> None:
@@ -140,18 +224,26 @@ def place_actors(plan: dict, models: dict, st: moves.State) -> None:
 
 def stand_on(o, sup, neighbours: list) -> Vector:
     """Where o stands on top of sup: of spots on its top, the one where o's whole footprint clears the surface with
-    its feet (origin) closest to touching it, near the middle and away from what already stands there. The probe's
-    first placement at the centre point dipped the rooster into the uneven moss."""
+    its feet (origin) closest to touching it, its feet near the middle and away from what already stands there.
+    The probe's first placement at the centre point dipped the rooster into the uneven moss; every foot has the
+    support under it, and the feet (not the origin, which can sit behind them) are what is centred: the Mike rooster
+    stood on the rim with its toes over the edge (owner, 2026-10-27)."""
     t = kit.tree(sup)
     lo, hi = kit.bbox(sup)
+    mid = Vector(((lo.x + hi.x) / 2, (lo.y + hi.y) / 2))
+    radius = max(hi.x - lo.x, hi.y - lo.y) / 2 or 1.0
     verts = [v.co.copy() for v in o.data.vertices]  # o's own space: origin at its bottom centre
+    z0 = min(v.z for v in verts)
+    feet = [v for v in verts if v.z < z0 + 0.03 * ((max(v.z for v in verts) - z0) or 1)]
+    foot_c = sum((v for v in feet), Vector()) / len(feet)
     best = None
-    for i in range(7):
-        for j in range(7):
-            cx = lo.x + (0.15 + 0.7 * i / 6) * (hi.x - lo.x)
-            cy = lo.y + (0.15 + 0.7 * j / 6) * (hi.y - lo.y)
+    for i in range(9):
+        for j in range(9):
+            cx = lo.x + (0.1 + 0.8 * i / 8) * (hi.x - lo.x)
+            cy = lo.y + (0.1 + 0.8 * j / 8) * (hi.y - lo.y)
             under = t.ray_cast(Vector((cx, cy, 1000)), Vector((0, 0, -1)))[0]
-            if under is None:
+            if under is None or any(t.ray_cast(Vector((cx + v.x, cy + v.y, 1000)), Vector((0, 0, -1)))[0] is None
+                                    for v in feet):
                 continue
             lift = under.z
             for v in verts:
@@ -159,10 +251,11 @@ def stand_on(o, sup, neighbours: list) -> Vector:
                 if hit is not None:
                     lift = max(lift, hit.z - v.z)
             crowd = sum(1 for n in neighbours if (n.location.xy - Vector((cx, cy))).length < 0.15)
-            score = (lift - under.z) + 0.05 * Vector((cx - (lo.x + hi.x) / 2, cy - (lo.y + hi.y) / 2)).length + crowd
+            off = (Vector((cx + foot_c.x, cy + foot_c.y)) - mid).length / radius
+            score = (lift - under.z) + 0.03 * off + crowd  # 3 cm of float weighs the same as standing on the rim
             if best is None or score < best[0]:
                 best = (score, Vector((cx, cy, lift + 0.001)))
-    return best[1] if best else Vector(((lo.x + hi.x) / 2, (lo.y + hi.y) / 2, hi.z + 0.001))
+    return best[1] if best else Vector((mid.x - foot_c.x, mid.y - foot_c.y, hi.z + 0.001))
 
 
 def camera(plan: dict, st: moves.State, subject_id: str) -> bpy.types.Object:
@@ -310,7 +403,7 @@ def burst(st: moves.State) -> None:
     size = max((hi - lo).length, 0.05)
     bits = bpy.data.collections.new("bits")
     for i, rgb in enumerate(feather_colours(whole, at, 4)):
-        bits.objects.link(feather(f"feather{i}", size * 0.11, rgb))  # not in the scene: only its instances show
+        bits.objects.link(feather(f"feather{i}", size * 0.16, rgb))  # not in the scene: only its instances show
     bpy.ops.mesh.primitive_uv_sphere_add(segments=16, ring_count=8, radius=size * 0.03, location=at)
     em = bpy.context.active_object
     em.name = "burst"
@@ -458,6 +551,7 @@ def main(job_path: str) -> None:
                                    for k in {c[3] + 2 for c in st.contacts} | set(st.moved_from.values())})
     if job.get("render", True) and (report["ok"] or job.get("render_failed")):
         burst(st)
+        dress_set(plan, st)
         kit.simulate()  # the burst's ground collider dropped the physics cache; slow-motion subframes can't rebuild it
         render(job, times)
     Path(job["report"]).write_text(json.dumps(report, indent=1), encoding="utf-8")

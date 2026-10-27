@@ -40,6 +40,7 @@ class State:
         self.failures: list[str] = []
         self.threat = None
         self.moved_from: dict[str, int] = {}  # actor id -> first frame it moves
+        self.rigs: dict[str, list] = {}  # actor id -> its leg rig (scene_kit.leg_rig), built when it first moves
         self.stroke_toward: list[float] = []  # each stroke's motion toward the camera (0 = across the frame)
         self.windups: list[tuple] = []  # (tool, its last wind-up frame): moved so the unseen hand is off-screen
 
@@ -124,6 +125,17 @@ def gait(st: State, actor: str) -> dict:
     return kit.TABLES["gaits"][a.get("gait", "object")]
 
 
+def legs(st: State, actor: str) -> list:
+    """The actor's leg rig, built on whatever now stands for it (after a cut, its "rest" piece); [] without legs."""
+    g = gait(st, actor)
+    if not g.get("legs"):
+        return []
+    if actor not in st.rigs:
+        o = st.objs[actor]
+        st.rigs[actor] = kit.leg_rig(o, g["legs"], g["leg_zone"], kit.facing_vec(o))
+    return st.rigs[actor]
+
+
 def hop_off(beat, st):
     """Up, out at that height until the whole body has passed the support's far edge, then down onto the ground: the
     probe's legs went through the stump, and the first live run dropped too early over a wider stump's rim."""
@@ -164,6 +176,10 @@ def hop_off(beat, st):
             pos.z += kit.lift_for(o, rot)
         kit.key_loc(o, f0 + k, pos)
     kit.key_loc(o, f0, start)
+    rig = legs(st, actor)
+    if rig:  # legs tucked back in the air, straight again to land (owner, 2026-10-27)
+        for f, a in ((f0, 0.0), (f0 + rise, -math.radians(35)), (f0 + glide, -math.radians(35)), (f0 + n, 0.0)):
+            kit.key_swing(rig, f, a, together=True)
     st.support[actor] = "ground"
     st.moved_from.setdefault(actor, f0)
 
@@ -193,7 +209,7 @@ def walk(beat, st):
     room = max(0.0, clear_distance(o, d, obstacles, speed * (st.frames - f0) / st.fps) - 0.04 - reach)  # 4 cm: sway
     o.location, o.rotation_euler = keep_loc, keep_rot
     bpy.context.view_layer.update()
-    rig = kit.leg_rig(o, g["legs"], g["leg_zone"], kit.facing_vec(o)) if g.get("legs") else []
+    rig = legs(st, actor)
     if rig:
         kit.key_swing(rig, f0, 0.0)
     last = st.frames if (st.frames - f0) % 2 == 0 else st.frames + 1

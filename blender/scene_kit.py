@@ -328,8 +328,8 @@ def leg_rig(obj, legs: int, zone: float, facing: Vector) -> list[tuple]:
     return out
 
 
-def key_swing(rig: list[tuple], frame: int, angle: float) -> None:
-    """Swing the legs: one set forward by `angle` (radians), the other back."""
+def key_swing(rig: list[tuple], frame: int, angle: float, together: bool = False) -> None:
+    """Swing the legs: one set forward by `angle` (radians), the other back; together = all the same way (a tuck)."""
     for pb, axis, phase in rig:
-        pb.rotation_axis_angle = (angle if phase else -angle, *axis)
+        pb.rotation_axis_angle = (angle if phase or together else -angle, *axis)
         pb.keyframe_insert("rotation_axis_angle", frame=frame)

@@ -889,8 +889,15 @@ owner's Blender (Mike's chop; the owner's six catches became the checks below). 
     leg, swung in step with the bob, feet together on the last frame; the walk stops short by the leg's reach.
   - Staging lessons went into both channels' `## Opener`: animals from the side, walks across the frame, the body
     walks away from a head that flew forward.
-  Still open: flat light (no rim light, haze or real sky), sparse set, feathers small, the hop has no leg tuck. The
-  installed blender-time-of-day / blender-lighting-lookdev skills cover the light. Look at every change by eye.
+  - Second round (owner: "the chicken is standing on the edge of the stump and fix the things that were weak"):
+    `stand_on` needs the support under every foot and centres the feet, not the origin (the rooster stood on the
+    rim); a measured sky (Multiple Scattering) with the sun 135 degrees round from the view, side/back light that
+    shapes and rims (lights table `elevation`; night keeps its flat sky); a 400 m ground to the horizon with soft
+    light/dark patches (`ground_material`); tufts and stones scattered behind and beside the action, never between
+    it and the camera (`dress_set`, after the checks); bigger, more feathers; legs tucked through a hop
+    (`moves.legs` caches the rig for hop and walk). About 58 s of Blender for the 3.4 s Mike clip (was 46).
+  Still open: no haze (at a 10 m set real haze is invisible; it would need a dense fog volume), the AI planner's
+  staging (it chose "away"; the rules now steer it). Look at every change by eye.
 - Reference tests: `tests/fixtures/openers/` (chicken chop, onion slices, onion mince, crate fall + their models);
   every check was also seen to catch a real fault while building them, and the renders were looked at by eye (checks
   alone passed a head blasted out of frame, hollow slices and an exploding mince).
