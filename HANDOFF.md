@@ -842,7 +842,9 @@ owner's Blender (Mike's chop; the owner's six catches became the checks below). 
 - Blender side (plain bpy): `opener_scene.py` (set, brand look: EEVEE, AgX, warm sun, 50 mm, f/2.2 on the subject,
   camera: starts wider and pushes in, arcs 14 deg, cranes up 16 deg, handheld sway, a jolt on the first hit and a lens
   punch-in (62 mm, else 56, else none: the strongest that keeps the subject in frame), always follows the subject
-  once it moves (2026-10-27, owner: the locked-off Mike shot was bad); actors placed by `stand_on` where the whole footprint clears the
+  once it moves (2026-10-27, owner: the locked-off Mike shot was bad); motion blur; the hit plays at half speed
+  (`retime`: scene frames 3 before to 9 after, the rest a little faster, same frame count, rendered on subframes);
+  a burst of bits in the target's colours where the first piece comes loose (`burst`, added after the checks); actors placed by `stand_on` where the whole footprint clears the
   surface), `moves.py` (roles not objects; physics for fall/topple/roll/fly_off/scatter/cut pieces with launch speed
   handed over from 2 keyed frames; keyframes for walk/hop_off/sink/push and tool strokes), `scene_kit.py` (models as
   one welded mesh, origin at the feet, physics helpers and collision layers), `opener_checks.py`. **`cut` is one move
@@ -868,6 +870,13 @@ owner's Blender (Mike's chop; the owner's six catches became the checks below). 
   added), a tilted blade swinging at the lens (strokes move across the frame), stroke angles explained to the planner.
   Each try's failures are printed. No live run produced a passing opener yet; the owner stopped tuning that one
   animation in favour of general fixes.
+- **Owner, 2026-10-27: the opener animation is still not at the quality they want.** Camera moves, blur, slow-mo
+  and the burst helped, but the Mike render (`cache/opener_cam/mike_camera.mp4`) still reads as stiff: the rooster
+  slides instead of walking (welded one-piece models, no legs to move), the axe floats in with no arm, the
+  barn is a flat wall filling the frame (no sky, no depth), the light is flat, the cut neck is a smooth pink ball,
+  and the burst is a small clump, not a spray. Don't call openers done or switch them on as finished; next
+  candidates: rigged/animated models (legs, wings), set layout with sky and depth, rim light + shadows + haze, a
+  rougher darker cut face. Look at every change by eye, not only the checks.
 - Reference tests: `tests/fixtures/openers/` (chicken chop, onion slices, onion mince, crate fall + their models);
   every check was also seen to catch a real fault while building them, and the renders were looked at by eye (checks
   alone passed a head blasted out of frame, hollow slices and an exploding mince).

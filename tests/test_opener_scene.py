@@ -129,6 +129,17 @@ def test_camera_follows_unasked():
     assert report["ok"], report["failures"]
 
 
+def test_slow_motion_keeps_length():
+    """The hit plays at half speed; the clip keeps its frame count (scene 1 is timed to the voice) and its last frame."""
+    code = ("import sys; sys.path.insert(0, r'%s'); import opener_scene as o; t = o.retime(101, 12); "
+            "assert len(t) == 101 and t == sorted(t) and t[0] == 1 and t[-1] >= 99, t; "
+            "assert abs(t[t.index(next(x for x in t if x >= 10)) + 1] - next(x for x in t if x >= 10) - 0.5) < 1e-6; "
+            "assert o.retime(30, 5) == [float(f) for f in range(1, 31)]") % SCRIPT.parent
+    r = subprocess.run([str(config.BLENDER), "-b", "--factory-startup", "--python-exit-code", "1", "--python-expr", code],
+                       capture_output=True, text=True, timeout=300)
+    assert r.returncode == 0, (r.stdout or "")[-2000:] + (r.stderr or "")[-2000:]
+
+
 if __name__ == "__main__":
     names = [n for n in sorted(globals()) if n.startswith("test_") and (len(sys.argv) < 2 or n in sys.argv[1:])]
     failed = 0

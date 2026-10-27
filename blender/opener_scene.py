@@ -30,6 +30,9 @@ ORBIT = 14  # degrees the camera arcs around the subject over the clip (owner, 2
 PUNCH_LENS = 62  # on the first hit the lens snaps to this, then eases back toward LENS
 SHAKE, SHAKE_FRAMES = 0.012, 9  # hit shake as a share of the camera distance, gone after this many frames
 DRIFT = 0.004  # handheld sway, share of the distance
+SLOW, SLOW_BEFORE, SLOW_AFTER = 0.5, 3, 9  # the hit plays at half speed over these scene frames; the rest runs
+# a little faster so the clip keeps its length (scene 1 is timed to the voice)
+BURST = 50  # bits thrown off where the blade lands
 RISE = 16  # degrees the camera cranes up over the clip, so a subject stepping down stays seen over its support
 
 
@@ -51,6 +54,7 @@ def setup(job: dict) -> None:
     except AttributeError:
         pass
     sc.view_settings.view_transform = "AgX"
+    sc.render.use_motion_blur, sc.render.motion_blur_shutter = True, 0.5  # a fast blade smears instead of stepping
 
 
 def build_set(plan: dict, models: dict, cam_dir: Vector) -> object:
@@ -226,6 +230,69 @@ def punch_in(cam, st: moves.State, subject_id: str) -> None:
     cam.data.lens = LENS
 
 
+def retime(n: int, hit: int | None) -> list[float]:
+    """Scene time for each of the n output frames: slow motion around the hit, the same length overall."""
+    if hit is None or n < 40:
+        return [float(f) for f in range(1, n + 1)]
+    a, b = max(1, hit - SLOW_BEFORE), min(n, hit + SLOW_AFTER)
+    fast = (n - 1 - (b - a)) / (n - 1 - (b - a) / SLOW)
+    out, t = [], 1.0
+    for _ in range(n):
+        out.append(min(t, float(n)))
+        t += SLOW if a <= t < b else fast
+    return out
+
+
+def burst(st: moves.State) -> None:
+    """Bits of the target thrown off where the blade first lands (feathers off a rooster, chips off a log). Added after
+    the checks: it is only a look, nothing touches it."""
+    if not st.contacts:
+        return
+    sc = bpy.context.scene
+    tool, _, target, frame = min(st.contacts, key=lambda c: c[3])
+    sc.frame_set(frame)
+    at = kit.tree(target).find_nearest(tool.matrix_world @ moves.edge_point_local(tool))[0]  # on the target, not the blade
+    # sized from the whole uncut target: the head piece made 1 cm bits nobody could see
+    whole = next((st.intact[k] for k, v in st.pieces.items() if target in v and k in st.intact), target)
+    lo, hi = kit.bbox(whole)
+    size = max((hi - lo).length, 0.05)
+    mats = [m for m in target.data.materials if m][:4] or [kit.material("bits", kit.TABLES["cut_face"]["default"])]
+    bits = bpy.data.collections.new("bits")  # one bit per colour of the target, so a rooster sheds orange and black
+    for m in mats:
+        bpy.ops.mesh.primitive_ico_sphere_add(subdivisions=1, radius=1, location=(0, 0, 0))  # instanced from here
+        bit = bpy.context.active_object
+        bit.scale = (size * 0.07, size * 0.025, size * 0.05)
+        bit.data.materials.append(m)
+        bits.objects.link(bit)
+        sc.collection.objects.unlink(bit)  # only its instances show
+    bpy.ops.mesh.primitive_uv_sphere_add(segments=16, ring_count=8, radius=size * 0.03, location=at)
+    em = bpy.context.active_object
+    em.name = "burst"
+    em.show_instancer_for_render = em.show_instancer_for_viewport = False
+    ps = em.modifiers.new("burst", "PARTICLE_SYSTEM").particle_system.settings
+    # out when the first piece comes loose (the contact frame is the stroke's start: bits came out before the blade landed)
+    frame = min([f for f in st.released.values() if f >= frame] or [frame])
+    ps.count, ps.frame_start, ps.frame_end, ps.lifetime = BURST, frame, frame + 2, 22
+    # random faces of a round emitter and a random kick: a spray every way (12 vertices threw 12 clumps)
+    ps.emit_from, ps.distribution, ps.normal_factor, ps.factor_random = "FACE", "RAND", size * 4.0, size * 2.5
+    ps.render_type, ps.instance_collection, ps.use_collection_pick_random = "COLLECTION", bits, True
+    ps.particle_size, ps.size_random = 1.0, 0.6
+    ps.use_rotations, ps.angular_velocity_mode, ps.angular_velocity_factor = True, "RAND", 8
+    ps.effector_weights.gravity, ps.mass = 0.35, 0.01  # light bits drift down, not drop like stones
+    ps.use_die_on_collision = False
+
+
+def render(job: dict, times: list[float]) -> None:
+    sc = bpy.context.scene
+    frames_dir = Path(job["frames_dir"])
+    frames_dir.mkdir(parents=True, exist_ok=True)
+    sc.render.image_settings.file_format = "PNG"
+    for i, t in enumerate(times, 1):  # in order: physics and particles read their caches forward
+        sc.frame_set(int(t), subframe=t - int(t))
+        sc.render.filepath = str(frames_dir / f"f_{i:04d}.png")
+        bpy.ops.render.render(write_still=True)
+
+
 def hold_offscreen(st: moves.State, cam) -> dict[str, bool]:
     """No people models, so a tool is swung by an unseen hand (owner, 2026-10-27): its wind-up is moved away from
     the subject until the handle end runs off the frame while the blade stays in it, so it reads as held from
@@ -333,13 +400,14 @@ def main(job_path: str) -> None:
               "pieces": sum(len(p) for p, *_ in st.cuts),
               "cut_shares": {k: v for *_, s in st.cuts for k, v in s.items()}, "lowest": lowest,
               "held_offscreen": held, "stroke_toward_camera": st.stroke_toward,
-              "key_frames": sorted({c[3] + 2 for c in st.contacts} | set(st.moved_from.values()))}
+              "key_frames": []}
+    times = retime(sc.frame_end, first_hit(st))
+    # key moments as output frames: the review picks them from the rendered (retimed) frames
+    report["key_frames"] = sorted({next((i for i, t in enumerate(times, 1) if t >= k), len(times))
+                                   for k in {c[3] + 2 for c in st.contacts} | set(st.moved_from.values())})
     if job.get("render", True) and (report["ok"] or job.get("render_failed")):
-        frames_dir = Path(job["frames_dir"])
-        frames_dir.mkdir(parents=True, exist_ok=True)
-        sc.render.image_settings.file_format = "PNG"
-        sc.render.filepath = str(frames_dir / "f_")
-        bpy.ops.render.render(animation=True)
+        burst(st)
+        render(job, times)
     Path(job["report"]).write_text(json.dumps(report, indent=1), encoding="utf-8")
 
 
