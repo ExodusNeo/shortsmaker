@@ -131,13 +131,16 @@ def clean_opener(raw) -> dict | None:
     for b in beats:
         if not isinstance(b, dict) or not _num(b.get("at"), 0, LIMITS["max_at_s"]):
             return None
+        way = b.get("toward", "left")  # a direction as seen, or another actor to go at
+        if way not in TOWARDS and (way not in ids or way == b.get("actor")):
+            return None
         if b.get("actor") in people:  # people move by their clips only
-            if b.get("move") not in PEOPLE_MOVES or b.get("toward", "left") not in TOWARDS:
+            if b.get("move") not in PEOPLE_MOVES:
                 return None
             continue
         if b.get("move") not in MOVES:
             return None
-        if b.get("style", "normal") not in STYLES or b.get("toward", "left") not in TOWARDS:
+        if b.get("style", "normal") not in STYLES:
             return None
         if b.get("ends") is not None and (not isinstance(b["ends"], dict) or b["ends"].get("on") not in ("ground", *ids)):
             return None
@@ -169,7 +172,8 @@ def _tables_text() -> str:
             f"\"down\" = upright but edge-on to the camera, which fails the blade check); one stroke is {{\"through\": \"neck\"}} or "
             f"{{\"at_fraction\": 0.5}} or {{\"rows\": 8}} (slices) or {{\"rows\": 6, \"cols\": 6}} (dice) or "
             f"{{\"mince\": 50}}; expect items {{\"piece\": name, \"share\": 0-1, \"then\": outcome}} or "
-            f"{{\"pieces\": \"40-60\", \"then\": outcome}}, outcomes {OUTCOMES}; style {STYLES}; toward {TOWARDS}; "
+            f"{{\"pieces\": \"40-60\", \"then\": outcome}}, outcomes {OUTCOMES}; style {STYLES}; toward {TOWARDS} or "
+            f"another actor's id (go straight at it: you can't know which side things are placed on); "
             f"camera.angle {ANGLES}; size_m {LIMITS['size_m'][0]}-{LIMITS['size_m'][1]}; at = seconds into the "
             f"scene, 0-{LIMITS['max_at_s']}, the first beat by {LIMITS['first_beat_s']} s; at most "
             f"{LIMITS['max_pieces']} pieces in all. People: person (role) {list(ROLES)}; people moves (for people "
@@ -223,6 +227,7 @@ problems: {json.dumps(failures, ensure_ascii=False)}
 {played}
 Fix the plan so none of them happens again (move things apart, change the tool's start, the timing, the camera, or
 the expected pieces). Keep the same moment.
+{session.RULES.get("Opener") or DEFAULT_RULES}
 {_tables_text()}
 Plan: {json.dumps(short.get('opener'), ensure_ascii=False)}
 Reply with ONLY the fixed plan as JSON, in the same format.""", fatal=False)

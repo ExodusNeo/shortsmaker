@@ -396,6 +396,20 @@ def test_every_unfound_model_named_at_once():
         assert models == {} and "ww2 armored car" in why and "ruined brick house" in why, why
 
 
+
+def test_model_swaps_dont_use_up_fix_rounds():
+    """A round spent swapping an unfound model doesn't count against the render fix rounds (2)."""
+    with Env() as e:
+        blender_link.ping = lambda timeout=2.0: True
+        blender_link.search = lambda find: []
+        s = short()
+        s["opener"]["actors"][1]["find"] = "ww2 armored car"
+        e.fail.write_text("overlap: a/b frames 3-4")
+        opener_plan.fix_plan = lambda short, failures, seconds=None, scaled=None: e.fixes.append(list(failures)) or copy.deepcopy(PLAN)
+        opener_render.render_opener(s, 3.0, e.work, e.exe)
+        assert e.runs() == 3, e.runs()  # all three renders still happen after the swap
+
+
 if __name__ == "__main__":
     names = [n for n in sorted(globals()) if n.startswith("test_") and (len(sys.argv) < 2 or n in sys.argv[1:])]
     failed = 0

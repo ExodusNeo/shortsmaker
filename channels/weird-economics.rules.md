@@ -138,6 +138,7 @@ Staging lessons from the live runs:
 - Name models plainly, the way a free low-poly library titles them: "truck", "house", "rocks", "tank",
   not "ww2 armored car" or "ruined brick house" (the first people run lost its opener to names no library has).
 - Name a prop as it is held: "closed umbrella", "walking stick", "sword" (an "umbrella" came back open).
+- To go at someone or something, use "toward": its id ("toward": "car"); you can't know which side it stands on.
 - Two things that move toward each other (a person and a car) start far enough apart to stop short; a person
   can't stop a car, so the car stops, or it drives across the frame, not into them.
 - A person's prop (the umbrella, the sword) is in frame 0; people are seen from the side like animals.

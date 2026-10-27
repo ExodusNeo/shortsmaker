@@ -199,6 +199,9 @@ def place_actors(plan: dict, models: dict, st: moves.State, lib: dict | None = N
     bpy.context.view_layer.update()
     # supports and free actors on the ground in a row around the origin, then everything standing on something
     on_ground = [a["id"] for a in plan["actors"] if a.get("on") in (None, "ground") and a["id"] not in tools]
+    # actors one goes at ("toward": "car") start with room to cross; 0.3 m apart nobody could take a step
+    ids = {a["id"] for a in plan["actors"]}
+    linked = {x for b in plan["beats"] if b.get("toward") in ids for x in (b.get("toward"), b.get("actor"))}
     x = 0.0
     for k, aid in enumerate(on_ground):
         o = st.objs[aid]
@@ -207,7 +210,7 @@ def place_actors(plan: dict, models: dict, st: moves.State, lib: dict | None = N
         if k:
             x += width / 2
         o.location = kit.view(Vector((x if k % 2 == 0 else -x, 0, 0)))  # a row across the shot
-        x += width / 2 + 0.3
+        x += width / 2 + (1.5 if aid in linked or (k + 1 < len(on_ground) and on_ground[k + 1] in linked) else 0.3)
     placed: set = set(on_ground) | tools
     while len(placed) < len(plan["actors"]):
         before = len(placed)
@@ -459,6 +462,7 @@ def main(job_path: str) -> None:
         if o.get("person"):
             people.idle(o, lib)
     starts = {aid: o.matrix_world.translation.copy() for aid, o in st.objs.items()}
+    gap_start = {a: {b: round((p - q).length, 4) for b, q in starts.items() if b != a} for a, p in starts.items()}
     for beat in sorted(plan["beats"], key=lambda b: b["at"]):
         try:
             moves.apply(beat, st)
@@ -493,6 +497,9 @@ def main(job_path: str) -> None:
               "cut_shares": {k: v for *_, s in st.cuts for k, v in s.items()}, "lowest": lowest,
               "highest": highest, "moved": moved, "swings": [p.name for p, _ in st.swings],
               "held": {aid: people.held(o, st.people) for aid, o in st.objs.items() if o.get("prop")},
+              "gap_start": gap_start,
+              "gap_to": {a: {b: round((o.matrix_world.translation - q.matrix_world.translation).length, 4)
+                             for b, q in st.objs.items() if b != a} for a, o in st.objs.items()},
               "held_offscreen": held, "stroke_toward_camera": st.stroke_toward,
               "key_frames": []}
     times = retime(sc.frame_end, first_hit(st))

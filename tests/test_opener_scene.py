@@ -284,6 +284,32 @@ def test_prop_held_by_its_handle_clear_of_the_body():
         assert held["hand_gap"] < 0.06 and not held["through_body"] and held["points"] == points, (name, held)
 
 
+
+def test_walk_toward_another_actor():
+    """The planner can't know which side things are placed on: "toward": "<actor id>" walks at that actor (the
+    first people run's officer "charged" a car by running away from it), stopping short of it."""
+    job = fixture("person_stand")
+    job["plan"]["beats"].append({"move": "walk", "actor": "officer", "at": 0.6, "toward": "crate"})
+    report, _ = run(job)
+    assert report["ok"], report["failures"]
+    assert report["moved"]["officer"] > 0.05, report["moved"]
+    assert report["gap_to"]["officer"]["crate"] < report["gap_start"]["officer"]["crate"], report
+
+
+
+def test_two_walk_at_each_other_and_stop_apart():
+    """The people run's car and officer went at each other and met in the middle (each stopped short of where the
+    other started): a walker stops short of where the others end up, its held prop included."""
+    job = fixture("person_swing")
+    job["plan"]["actors"].append({"id": "man", "person": "man", "facing": "left"})
+    job["plan"]["beats"] = [{"move": "walk", "actor": "man", "at": 0.2, "toward": "knight"},
+                            {"move": "walk", "actor": "knight", "at": 0.3, "toward": "man"}]
+    report, _ = run(job)
+    assert report["ok"], report["failures"]
+    # placed 0.3 m apart, half the gap is less than a stride's reach for one of them: it turns and waits
+    assert max(report["moved"]["knight"], report["moved"]["man"]) > 0.05, report["moved"]
+
+
 if __name__ == "__main__":
     names = [n for n in sorted(globals()) if n.startswith("test_") and (len(sys.argv) < 2 or n in sys.argv[1:])]
     failed = 0

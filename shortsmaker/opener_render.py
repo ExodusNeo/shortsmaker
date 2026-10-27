@@ -17,6 +17,7 @@ SCRIPT = config.ROOT / "blender" / "opener_scene.py"
 FPS = 30
 TIMEOUT = 10 * 60
 FIX_ROUNDS = 2
+MODEL_SWAPS = 2  # rounds asking the planner to replace models no library has (not counted as fix rounds)
 
 
 def scale_beats(plan: dict, seconds: float) -> dict:
@@ -141,15 +142,17 @@ def render_opener(short: dict, seconds: float, work: Path, exe: Path | None = No
     work.mkdir(parents=True, exist_ok=True)
     clip, frames, report_path, done = (work / "opener.mp4", work / "opener_frames", work / "opener_report.json",
                                        work / "opener_done.txt")
-    for round_no in range(FIX_ROUNDS + 1):
+    round_no, swaps = 0, 0
+    while round_no <= FIX_ROUNDS:
         plan = scale_beats(short["opener"], seconds)
         models, why = resolve_models(plan)
-        if why and why.startswith("no fitting model for") and round_no < FIX_ROUNDS:
+        if why and why.startswith("no fitting model for") and swaps < MODEL_SWAPS:
             # back to the planner like any failure: the first people run lost its whole opener to a "ww2 armored
-            # car" no free library has (2026-10-27)
+            # car" no free library has (2026-10-27); a swap has its own allowance and leaves the render rounds
+            swaps += 1
             failures = [f"model: {why}; use a more common thing that reads the same (a truck for an armoured car) "
                         "or leave it out"]
-            print(f"    try {round_no + 1} failed: {failures[0]}")
+            print(f"    model swap {swaps}: {failures[0]}")
             fixed = opener_plan.fix_plan(short, failures, seconds, plan)
             if fixed is None:
                 return None, f"opener failed: {why} (the fix wasn't usable)"
@@ -195,4 +198,5 @@ def render_opener(short: dict, seconds: float, work: Path, exe: Path | None = No
         if fixed is None:
             return None, f"opener failed: {failures[0]} (the fix wasn't usable)"
         short["opener"] = fixed
+        round_no += 1
     return None, "opener failed"

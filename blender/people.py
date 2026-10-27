@@ -251,7 +251,7 @@ def move(beat: dict, st, lib: dict) -> None:
     if st.support.get(actor, "ground") != "ground":
         st.failures.append(f"walk: {actor} would {beat['move']} off the {st.support[actor]} it stands on; start "
                            f"{actor} on the ground")
-    d = moves.toward(beat)
+    d = moves.toward(beat, st=st)
     role = kit.TABLES["roles"][o["person"]]
     seconds_per_loop = info["frames"] / st.fps
     speed = info["stride_m"] * role["height_m"] / lib["rig_height"] / seconds_per_loop
@@ -266,7 +266,15 @@ def move(beat: dict, st, lib: dict) -> None:
     o.location, o.rotation_euler = start + Vector((0, 0, 0.01)), (0, 0, base_rot.z + turn)
     bpy.context.view_layer.update()
     want = speed * (sc.frame_end - f0) / st.fps
-    room = max(0.0, moves.clear_distance(o, d, obstacles, want) - 0.04)
+    reach = 0.0  # how far a held prop sticks out ahead of the body: an umbrella poked into the car
+    prop = bpy.data.objects.get(o.get("prop") or "")
+    if prop is not None:
+        ahead = lambda pts: max(p.dot(d) for p in pts)  # noqa: E731
+        reach = max(0.0, ahead(kit.world_verts(prop)) - ahead(kit.world_verts(o)))
+    stride = info["stride_m"] * role["height_m"] / lib["rig_height"]
+    reach += 0.3 * stride  # a step swings the leading foot and arm this far ahead of the standing pose
+    room = max(0.0, moves.clear_distance_at_end(o, d, obstacles, want, sc.frame_end) * moves.share_of_gap(st, beat)
+               - 0.04 - reach)
     o.location, o.rotation_euler = keep_loc, keep_rot
     bpy.context.view_layer.update()
     stop = min(sc.frame_end, f0 + round(room / speed * st.fps)) if speed > 0 else f0

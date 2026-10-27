@@ -72,8 +72,17 @@ def apply(beat: dict, st: State) -> None:
         st.resting.append((st.objs[beat["actor"]], st.ground if on == "ground" else st.objs[on]))
 
 
-def toward(beat: dict, default: str = "left") -> Vector:
-    return kit.view(TOWARD[beat.get("toward", default)])
+def toward(beat: dict, default: str = "left", st: "State | None" = None) -> Vector:
+    """The way a move goes, as seen in the shot, or straight at another actor ("toward": "car"): the planner can't
+    know which side things are placed on (the first people run's officer "charged" a car by running away from it)."""
+    way = beat.get("toward", default)
+    if st is not None and way in st.objs and beat.get("actor") in st.objs:
+        f = st.f(beat["at"])
+        d = kit.loc_at(st.objs[way], f) - kit.loc_at(st.objs[beat["actor"]], f)
+        d.z = 0
+        if d.length > 1e-4:
+            return d.normalized()
+    return kit.view(TOWARD[way if way in TOWARD else default])
 
 
 # --- passive moves: physics ----------------------------------------------------------------------------------------
@@ -95,13 +104,13 @@ def fall(beat, st):
 
 
 def topple(beat, st):
-    o, d = st.objs[beat["actor"]], toward(beat, "right")
+    o, d = st.objs[beat["actor"]], toward(beat, "right", st)
     release(st, o, st.f(beat["at"]), launch=d * 0.2, spin=Vector((0, 0, 1)).cross(d) * 2.5)
     st.moved_from.setdefault(beat["actor"], st.f(beat["at"]))
 
 
 def roll(beat, st):
-    o, d = st.objs[beat["actor"]], toward(beat, "right")
+    o, d = st.objs[beat["actor"]], toward(beat, "right", st)
     lo, hi = kit.bbox(o)
     r = max((hi.z - lo.z) / 2, 0.02)
     release(st, o, st.f(beat["at"]), launch=d * 1.2, spin=Vector((0, 0, 1)).cross(d) * (1.2 / r))
@@ -109,7 +118,7 @@ def roll(beat, st):
 
 
 def fly_off(beat, st):
-    o, d = st.objs[beat["actor"]], toward(beat, "right")
+    o, d = st.objs[beat["actor"]], toward(beat, "right", st)
     release(st, o, st.f(beat["at"]), launch=d * 1.0 + Vector((0, 0, 1.8)), spin=Vector((3, 6, 2)))
     st.moved_from.setdefault(beat["actor"], st.f(beat["at"]))
 
@@ -145,7 +154,7 @@ def legs(st: State, actor: str) -> list:
 def hop_off(beat, st):
     """Up, out at that height until the whole body has passed the support's far edge, then down onto the ground: the
     probe's legs went through the stump, and the first live run dropped too early over a wider stump's rim."""
-    actor, d = beat["actor"], toward(beat)
+    actor, d = beat["actor"], toward(beat, st=st)
     o, sup = st.objs[actor], st.support_obj(beat["actor"])
     f0 = st.f(beat["at"])
     start = kit.loc_at(o, f0)
@@ -191,7 +200,7 @@ def hop_off(beat, st):
 
 
 def walk(beat, st):
-    actor, d = beat["actor"], toward(beat)
+    actor, d = beat["actor"], toward(beat, st=st)
     o, g = st.objs[actor], gait(st, actor)
     f0 = st.f(beat["at"])
     speed = g["step"] * g["steps_per_s"] or 0.3
@@ -212,7 +221,8 @@ def walk(beat, st):
     keep_loc, keep_rot = o.location.copy(), o.rotation_euler.copy()
     o.location, o.rotation_euler = start + Vector((0, 0, 0.01)), (0, 0, base_rot.z + turn)
     bpy.context.view_layer.update()
-    room = max(0.0, clear_distance(o, d, obstacles, speed * (st.frames - f0) / st.fps) - 0.04 - reach)  # 4 cm: sway
+    room = max(0.0, clear_distance_at_end(o, d, obstacles, speed * (st.frames - f0) / st.fps, st.frames)
+               * share_of_gap(st, beat) - 0.04 - reach)  # 4 cm: sway
     o.location, o.rotation_euler = keep_loc, keep_rot
     bpy.context.view_layer.update()
     rig = legs(st, actor)
@@ -263,6 +273,31 @@ def push(beat, st):
     kit.key_loc(actor, hit, actor.location + d * max(gap - 0.002, 0))
     release(st, target, min(hit + 1, st.frames), launch=d * 0.6)
     st.moved_from.setdefault(beat["actor"], f0)
+
+
+def share_of_gap(st: "State", beat: dict) -> float:
+    """1, or 0.5 when the actor walks at someone who walks back at it: they meet in the middle, the first to move
+    took all the room and the second turned in place, swinging its axe into the first (2026-10-27)."""
+    way, actor = beat.get("toward"), beat.get("actor")
+    back = any(b is not beat and b.get("actor") == way and b.get("toward") == actor and b["move"] != "cut"
+               for b in st.plan["beats"])
+    first = back and beat["at"] <= next(b["at"] for b in st.plan["beats"] if b.get("actor") == way and b.get("toward") == actor)
+    return 0.5 if first else 1.0
+
+
+def clear_distance_at_end(o, d: Vector, others: list, limit: float, frame: int) -> float:
+    """clear_distance against the others where their keys leave them at `frame`: two walkers going at each other
+    each stopped short of where the other started and met in the middle (the people run's officer and car)."""
+    keep = [(x, x.location.copy()) for x in others]
+    for x in others:
+        x.location = kit.loc_at(x, frame)
+    bpy.context.view_layer.update()
+    try:
+        return clear_distance(o, d, others, limit)
+    finally:
+        for x, loc in keep:
+            x.location = loc
+        bpy.context.view_layer.update()
 
 
 def clear_distance(o, d: Vector, others: list, limit: float, step: float = 0.02) -> float:

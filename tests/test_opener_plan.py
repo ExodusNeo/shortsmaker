@@ -193,6 +193,28 @@ def test_prompt_lists_people():
     assert "ww2_british_officer" in text and "swing_prop" in text, text[:400]
 
 
+
+def test_toward_an_actor_is_clean():
+    p = copy.deepcopy(PEOPLE)
+    p["beats"][0]["toward"] = "rubble"
+    assert opener_plan.clean_opener(p) is not None
+    p["beats"][0]["toward"] = "officer"  # not toward itself
+    assert opener_plan.clean_opener(p) is None
+
+
+def test_fix_round_reads_the_opener_rules():
+    """The fix rounds didn't see the channel's opener rules and drifted back to names no library has."""
+    seen = []
+    saved = (llm.ask_ai, opener_plan.session.RULES)
+    llm.ask_ai = lambda prompt, **k: seen.append(prompt) or None
+    opener_plan.session.RULES = {"Opener": "RULES-MARKER name models plainly"}
+    try:
+        opener_plan.fix_plan({"title": "t", "opener": copy.deepcopy(PEOPLE)}, ["overlap: a/b"])
+    finally:
+        llm.ask_ai, opener_plan.session.RULES = saved
+    assert seen and "RULES-MARKER" in seen[0]
+
+
 if __name__ == "__main__":
     names = [n for n in sorted(globals()) if n.startswith("test_") and (len(sys.argv) < 2 or n in sys.argv[1:])]
     failed = 0

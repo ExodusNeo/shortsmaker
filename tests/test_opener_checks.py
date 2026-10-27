@@ -48,6 +48,8 @@ def test_in_frame():
 def test_first_frame():
     assert any("15%" in f for f in results()["first_small"]), results()["first_small"]
     assert results()["first_ok"] == []
+    # a wide, low subject (the people run's armoured car) reads big by its width (40%), not its height
+    assert results()["first_wide"] == [], results()["first_wide"]
 
 
 def test_edge_leads():

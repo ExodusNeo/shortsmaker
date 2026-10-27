@@ -94,6 +94,10 @@ cam = camera((0, -8, 0), (0, 0, 0))
 results["first_small"] = oc.first_frame(small, threat, cam)
 big = cube("big", (0, 0, 0), size=2.0)
 results["first_ok"] = oc.first_frame(big, threat, cam)
+car = cube("car", (0, 0, 3), size=1.0)  # wide and low: a car filling half the width but under 15% of the height
+car.scale = (4.0, 1.0, 0.25)
+bpy.context.view_layer.update()
+results["first_wide"] = oc.first_frame(car, threat, cam)
 
 # edge leads: a blade moving +x, its edge facing -x (wrong) or +x (right)
 sc = fresh()
