@@ -54,15 +54,17 @@ def body(name: str, materials: list[str]) -> tuple:
     eb = arm.data.edit_bones
     root = eb.new("Body")
     root.head, root.tail = (0, 0, 0.85), (0, 0, 1.45)
-    for bname, head, tail in (("Head", (0, 0, 1.45), (0, 0, 1.8)), ("Fist.R", (-0.27, 0, 1.45), (-0.27, 0, 0.85)),
+    for bname, head, tail in (("Head", (0, 0, 1.45), (0, 0, 1.8)), ("Arm.R", (-0.27, 0, 1.45), (-0.27, 0, 0.85)),
                               ("Foot.L", (0.09, 0, 0.85), (0.09, 0, 0)), ("Foot.R", (-0.09, 0, 0.85), (-0.09, 0, 0))):
         b = eb.new(bname)
         b.head, b.tail, b.parent = head, tail, root
+    fist = eb.new("Fist.R")  # like the real rig: a short hand bone whose head is the hand
+    fist.head, fist.tail, fist.parent = (-0.27, 0, 0.85), (-0.27, 0, 0.78), eb["Arm.R"]
     bpy.ops.object.mode_set(mode="OBJECT")
-    groups = {n: mesh.vertex_groups.new(name=n) for n in ("Body", "Head", "Fist.R", "Foot.L", "Foot.R")}
+    groups = {n: mesh.vertex_groups.new(name=n) for n in ("Body", "Head", "Arm.R", "Foot.L", "Foot.R")}
     for v in mesh.data.vertices:
         c = v.co
-        g = "Head" if c.z > 1.45 else "Fist.R" if c.x < -0.2 else "Foot.L" if c.z < 0.85 and c.x > 0 \
+        g = "Head" if c.z > 1.45 else "Arm.R" if c.x < -0.2 else "Foot.L" if c.z < 0.85 and c.x > 0 \
             else "Foot.R" if c.z < 0.85 else "Body"
         groups[g].add([v.index], 1.0, "REPLACE")
     mesh.parent = arm
@@ -94,7 +96,7 @@ def clip(arm, name: str, travel: bool) -> dict:
         key(arm, {1: {"Body": (0, 0, 0)}, 21: {"Body": (-85, 0, 0)}})
         frames = 20
     elif name in ("SwordSlash", "Punch"):
-        key(arm, {1: {"Fist.R": (0, 0, 0)}, 5: {"Fist.R": (150, 0, 0)}, 11: {"Fist.R": (40, 0, 0)}})
+        key(arm, {1: {"Arm.R": (0, 0, 0)}, 5: {"Arm.R": (150, 0, 0)}, 11: {"Arm.R": (40, 0, 0)}})
         frames = 10
     else:
         key(arm, {1: {"Head": (0, 0, 0)}, 8: {"Head": (15, 0, 0)}, 16: {"Head": (0, 0, 0)}})

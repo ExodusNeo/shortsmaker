@@ -111,7 +111,8 @@ def _hold(prop, body, hand: Vector, blade: bool, turn: float = 0.0) -> bool:
     aim = (Vector((0, 0, 1)) + 0.35 * forward if blade else Vector((0, 0, -1)) + 0.35 * forward).normalized()
     grip = moves.handle_end_local(prop)
     prop["grip"] = grip[:]
-    tilts = sorted(((0.15 * a, 0.25 * b) for a in range(9) for b in range(9)), key=lambda t: t[0] + t[1])
+    # forward lean up to near level: a 0.9 m closed umbrella held down from a 0.75 m hand hit the ground
+    tilts = sorted(((0.15 * a, 0.25 * b) for a in range(9) for b in range(17)), key=lambda t: t[0] + t[1])
     for (tilt, lean), slide in [(t, 0.0) for t in tilts] + [((1.2, 1.0), 0.02 * k) for k in range(1, 11)]:
         r = long.rotation_difference((aim + out * tilt + forward * lean).normalized()).to_matrix()             @ Matrix.Rotation(turn, 3, long)
         prop.rotation_euler = r.to_euler()
@@ -130,7 +131,7 @@ def held(body, lib: dict) -> dict:
     prop = bpy.data.objects[body["prop"]]
     arm = bpy.data.objects[body["rig"]]
     bpy.context.scene.frame_set(1)
-    hand = arm.matrix_world @ arm.pose.bones[lib["bones"]["hand_r"]].tail
+    hand = arm.matrix_world @ arm.pose.bones[lib["bones"]["hand_r"]].head
     grip = prop.matrix_world @ Vector(prop["grip"])
     tip = max((prop.matrix_world @ v.co for v in prop.data.vertices), key=lambda p: (p - grip).length)
     return {"hand_gap": round((grip - hand).length, 4), "through_body": _through(prop, kit.tree(body), grip),
@@ -181,13 +182,15 @@ def dress(actor: dict, role: dict, lib: dict, models: dict) -> bpy.types.Object:
     if models.get(f"{actor['id']}:hat") and "head" in pose:
         hat = kit.load_model(models[f"{actor['id']}:hat"], f"{actor['id']}.hat")
         kit.fit(hat, HAT_WIDTH * role["height_m"] / 1.8, "camera", view=False)
-        _attach(hat, arm, lib["bones"]["head"], pose["head"][1])
+        top = max((mesh.matrix_world @ v.co).z for v in mesh.data.vertices)  # on top of the head, wherever the bone
+        _attach(hat, arm, lib["bones"]["head"], Vector((pose["head"][0].x, pose["head"][0].y, top - 0.02)))
         mesh["hat"] = hat.name
     if models.get(f"{actor['id']}:prop") and "hand_r" in pose:
         prop = kit.load_model(models[f"{actor['id']}:prop"], f"{actor['id']}.prop")
         kit.fit(prop, actor.get("prop_size_m") or PROP_SHARE * role["height_m"], "camera", view=False)
-        _hold(prop, mesh, pose["hand_r"][1], _is_blade(actor.get("prop", "")))
-        prop["hand"] = pose["hand_r"][1][:]  # where the hand is at rest: a swing holds the blade again from here
+        # the hand is the fist bone's head: the importer guesses bone tails, and the Fist tail sat at knee height
+        _hold(prop, mesh, pose["hand_r"][0], _is_blade(actor.get("prop", "")))
+        prop["hand"] = pose["hand_r"][0][:]  # where the hand is at rest: a swing holds the blade again from here
         _attach(prop, arm, lib["bones"]["hand_r"], prop.location.copy())
         mesh["prop"] = prop.name
     mesh["facing"], mesh["person"], mesh["rig"] = actor.get("facing", "camera"), actor["person"], arm.name
