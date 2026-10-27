@@ -693,7 +693,9 @@ def cut(beat, st):
     rest_on = st.ground if ends == "ground" else st.objs.get(ends, support) if ends else support
     rng = random.Random(5)
     for i, (p, (name, _)) in enumerate(zip(pieces, bms)):
-        e = next((x for x in named if x["piece"] == name), None) or next(x for x in expect if "pieces" in x)
+        # a piece the plan didn't name stays with the rest; cut_result then reports the mismatch to the planner
+        e = next((x for x in named if x["piece"] == name), None) or next((x for x in expect if "pieces" in x), None) \
+            or next((x for x in named if x["piece"] == "rest"), {"then": "stay"})
         then = e["then"]
         k = min(free_stroke.get(i, 0), len(stroke_frames) - 1)
         free = min(stroke_frames[k][1] + 1, st.frames)

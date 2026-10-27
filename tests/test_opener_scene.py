@@ -90,6 +90,13 @@ def test_walk_stops_short_of_obstacles():
     assert report["ok"], report["failures"]
 
 
+def test_unbuildable_cut_is_reported_not_crashed():
+    """Fourth live run (Mike): a fix round asked for an at_fraction slice but still expected "head" and "rest"; the
+    split didn't match and Blender crashed, which tells the planner nothing. It must come back as a failure."""
+    report, _ = run(fixture("chicken_live_crash"))  # the exact job that crashed
+    assert not report["ok"] and any(f.startswith("cut") for f in report["failures"]), report["failures"]
+
+
 def test_bad_plans_fail():
     crowded = fixture("chicken_chop")  # a crate on the stump right where the rooster stands
     crowded["plan"]["actors"].append({"id": "crate", "find": "crate", "size_m": 0.3, "on": "stump"})

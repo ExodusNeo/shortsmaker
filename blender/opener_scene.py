@@ -269,7 +269,13 @@ def main(job_path: str) -> None:
     st.ground = build_set(plan, job["models"], cam_h)
     place_actors(plan, job["models"], st)
     for beat in sorted(plan["beats"], key=lambda b: b["at"]):
-        moves.apply(beat, st)
+        try:
+            moves.apply(beat, st)
+        except Exception as e:  # a move it can't build is a failure the planner can fix, not a crash that says nothing
+            report = {"ok": False, "failures": [f"{beat['move']}: could not be built ({type(e).__name__}: {e})"],
+                      "frames": sc.frame_end, "pieces": 0, "cut_shares": {}, "lowest": {}, "held_offscreen": {}}
+            Path(job["report"]).write_text(json.dumps(report, indent=1), encoding="utf-8")
+            return
     for o in st.objs.values():
         kit.interpolation(o, "BEZIER", set())  # visibility and physics switches CONSTANT
     kit.simulate()
