@@ -260,6 +260,17 @@ def test_prop_hidden_in_first_frame_fails():
     assert any(f.startswith("first_frame:") and "prop" in f for f in report["failures"]), report["failures"]
 
 
+
+def test_toon_look_everywhere():
+    """One brand look (part 2, 2026-10-27): every visible model is cel-shaded and ink-outlined, and it renders."""
+    report, frames = run(fixture("box_fall"), render=True)
+    assert report["ok"], report["failures"]
+    look = report["look"]
+    assert look["meshes"] > 0 and look["outlined"] == look["meshes"] and look["toon"] == look["materials"], look
+    first = Image.open(sorted(frames.glob("f_*.png"))[0]).convert("RGB")
+    assert len(set(first.resize((27, 48)).getdata())) > 5  # a real picture, not blank
+
+
 if __name__ == "__main__":
     names = [n for n in sorted(globals()) if n.startswith("test_") and (len(sys.argv) < 2 or n in sys.argv[1:])]
     failed = 0

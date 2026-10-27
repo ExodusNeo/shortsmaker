@@ -18,6 +18,7 @@ from mathutils import Vector
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import moves  # noqa: E402
 import opener_checks as oc  # noqa: E402
+import look_toon  # noqa: E402
 import people  # noqa: E402
 import scene_kit as kit  # noqa: E402
 
@@ -499,6 +500,7 @@ def main(job_path: str) -> None:
                                    for k in {c[3] + 2 for c in st.contacts} | set(st.moved_from.values())})
     if job.get("render", True) and (report["ok"] or job.get("render_failed")):
         dress_set(plan, st)
+        report["look"] = look_toon.apply(list(bpy.context.scene.objects))
         kit.simulate()  # what's added after the checks can drop the physics cache; slow-motion subframes can't rebuild it
         render(job, times)
     Path(job["report"]).write_text(json.dumps(report, indent=1), encoding="utf-8")
