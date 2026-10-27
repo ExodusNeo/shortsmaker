@@ -934,8 +934,7 @@ every opener.
   `swings`, `threat`, `gap_start`/`gap_to`, `look`.
 - **Tests:** `tests\test_people_tables.py` (3), `tests\people_standin.py` (stand-in library, built by the tests:
   no Quaternius file in git), 15 people/look tests in `test_opener_scene.py`, plan/render/check additions;
-  `tests\people_sheet.py` renders `cache\people_sheet
-oles.png` + `moves.png` to look at by eye.
+  `tests\people_sheet.py` renders `cache\people_sheet\roles.png` + `moves.png` to look at by eye.
 - **Status, honestly:** every suite passes; the role and move sheets and a hand-written showcase
   (`cache\people_showcase\officer_umbrella.mp4`: the officer strolls across a street with a closed umbrella) look
   right. The end-to-end planner run on the umbrella Short never passed its AI review in about 8 attempts: the free
