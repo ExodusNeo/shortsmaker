@@ -148,8 +148,16 @@ def first_frame(subject, threat, cam, min_height: float = 0.15, min_width: float
     enough: the people run's armoured car filled the width at 14% of the height), and the threat."""
     dg, out = at(bpy.context.scene.frame_start), []
     x0, x1, y0, y1 = screen_box(subject, cam, dg)
+    if threat_whole:  # framed together with what it goes at, the pair is the frame's subject; alone it needs 8%
+        tx0, tx1, ty0, ty1 = screen_box(threat, cam, dg)
+        if min(y1, 1) - max(y0, 0) < 0.08 and min(x1, 1) - max(x0, 0) < min_width / 2:
+            out.append(f"first_frame: {subject.name} is {100 * (min(y1, 1) - max(y0, 0)):.0f}% of the frame height "
+                       f"(needs 8% beside {threat.name})")
+        x0, x1, y0, y1 = min(x0, tx0), max(x1, tx1), min(y0, ty0), max(y1, ty1)
     if x1 < 0 or x0 > 1 or y1 < 0 or y0 > 1:
         out.append(f"first_frame: {subject.name} is not in the first frame")
+    elif out:
+        pass
     elif min(y1, 1) - max(y0, 0) < min_height and min(x1, 1) - max(x0, 0) < min_width:
         out.append(f"first_frame: {subject.name} is {100 * (min(y1, 1) - max(y0, 0)):.0f}% of the frame height "
                    f"(needs {100 * min_height:.0f}%)")

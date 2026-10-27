@@ -58,6 +58,14 @@ def setup(job: dict) -> None:
     sc.render.use_motion_blur, sc.render.motion_blur_shutter = True, 0.5  # a fast blade smears instead of stepping
 
 
+def reach_back(plan: dict) -> float:
+    """How far into the depth actors stand when one goes at another (place_actors stands the target back): the
+    backdrops move back as much (a 5 m car stood inside the row houses)."""
+    ids = {a["id"] for a in plan["actors"]}
+    linked = {x for b in plan["beats"] if b.get("toward") in ids for x in (b.get("toward"), b.get("actor"))}
+    return sum(a.get("size_m") or 2.0 for a in plan["actors"] if a["id"] in linked) + 1.5 * len(linked) if linked         else 0.0
+
+
 def build_set(plan: dict, models: dict, cam_dir: Vector) -> object:
     sc = bpy.context.scene
     st, light = plan["set"], kit.TABLES["lights"][plan["set"].get("light", "day")]
@@ -110,7 +118,7 @@ def build_set(plan: dict, models: dict, cam_dir: Vector) -> object:
             k = (i + 1) % 2  # 1 = right, 0 = left
             shift = (edges[k] + 0.5 + half_w) * (1 if k else -1)
             edges[k] += 0.5 + 2 * half_w
-        o.location = back * (half_d + 5 + i) + across * shift
+        o.location = back * (half_d + 5 + i + reach_back(plan)) + across * shift
     return ground
 
 

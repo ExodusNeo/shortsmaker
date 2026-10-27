@@ -101,6 +101,11 @@ results["first_wide"] = oc.first_frame(car, threat, cam)
 edge = cube("edge", (1.85, 0, 0), size=1.0)  # a threat only a sliver of which is in frame (the people run's car)
 results["threat_sliver"] = oc.first_frame(big, edge, cam, threat_whole=True)
 results["threat_sliver_tool"] = oc.first_frame(big, edge, cam)  # a blade's handle may run off: in frame is enough
+person = cube("person", (-0.4, 0, -0.4), size=0.6)  # 10% tall beside a big thing he goes at: together they read
+truck = cube("truck", (0.6, 2, 0), size=2.5)
+results["pair_ok"] = oc.first_frame(person, truck, cam, threat_whole=True)
+speck = cube("speck", (-0.6, 0, -0.6), size=0.4)  # under the person minimum: still too small, pair or not
+results["pair_speck"] = oc.first_frame(speck, truck, cam, threat_whole=True)
 
 # edge leads: a blade moving +x, its edge facing -x (wrong) or +x (right)
 sc = fresh()

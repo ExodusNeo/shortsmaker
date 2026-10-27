@@ -296,7 +296,9 @@ def test_walk_toward_another_actor():
     assert report["moved"]["officer"] > 0.05, report["moved"]
     assert report["gap_to"]["officer"]["crate"] < report["gap_start"]["officer"]["crate"], report
     assert report["threat"] == "crate", report["threat"]  # what he goes at is the threat frame 0 must show
-    job["plan"]["actors"][1]["size_m"] = 3.0  # a big thing he goes at (the car) is framed with him, not cut off
+    job["plan"]["actors"][1]["size_m"] = 5.0  # a big thing he goes at (the car) is framed with him, not cut off,
+    job["plan"]["set"]["backdrop"] = [{"find": "red barn", "size_m": 8}]  # and stands clear of the backdrop
+    job["models"]["backdrop:0"] = "polypizza_vSqQNA7ez6.blend"
     report, _ = run(job)
     assert report["ok"], report["failures"]
 
