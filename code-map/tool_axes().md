@@ -1,12 +1,12 @@
 ---
 source_file: "blender/moves.py"
 type: "code"
-community: "moves.py"
+community: "hold_offscreen"
 location: "L498"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/movespy
+  - community/hold_offscreen
 ---
 
 # tool_axes()
@@ -20,4 +20,4 @@ tags:
 - [[thickness()]] - `contains` [EXTRACTED]
 - [[tool_rotation()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/movespy
+#graphify/code #graphify/EXTRACTED #community/hold_offscreen

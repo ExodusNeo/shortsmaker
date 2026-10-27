@@ -1,16 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: "render"
+community: "catalog_pool"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/render
+  - community/catalog_pool
 ---
 
 # Path
 
 ## Connections
-- [[to_vertical()]] - `references` [EXTRACTED]
+- [[duration()]] - `references` [EXTRACTED]
+- [[ffmpeg()]] - `references` [EXTRACTED]
+- [[write_json()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/render
+#graphify/code #graphify/EXTRACTED #community/catalog_pool

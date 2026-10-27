@@ -1,19 +1,18 @@
 ---
 source_file: "blender/scene_kit.py"
 type: "code"
-community: "scene_kit.py"
+community: "moves.py"
 location: "L37"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/scene_kitpy
+  - community/movespy
 ---
 
 # bbox()
 
 ## Connections
-- [[Vector_6]] - `references` [EXTRACTED]
-- [[burst()]] - `calls` [EXTRACTED]
+- [[Vector_5]] - `references` [EXTRACTED]
 - [[camera()_1]] - `calls` [EXTRACTED]
 - [[cut()]] - `calls` [EXTRACTED]
 - [[fall()]] - `calls` [EXTRACTED]
@@ -25,4 +24,4 @@ tags:
 - [[stand_on()]] - `calls` [EXTRACTED]
 - [[world_verts()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/scene_kitpy
+#graphify/code #graphify/EXTRACTED #community/movespy

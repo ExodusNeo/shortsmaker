@@ -1,17 +1,20 @@
 ---
-source_file: "tests/test_opener_render.py"
+source_file: "tests/test_pictures_first.py"
 type: "code"
-community: "test_opener_render.py"
-location: "L45"
+community: "choose_images"
+location: "L39"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_opener_renderpy
+  - community/choose_images
 ---
 
 # .__enter__()
 
 ## Connections
-- [[Env]] - `method` [EXTRACTED]
+- [[film()]] - `calls` [EXTRACTED]
+- [[owner()]] - `calls` [EXTRACTED]
+- [[still()]] - `calls` [EXTRACTED]
+- [[stubbed]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_opener_renderpy
+#graphify/code #graphify/EXTRACTED #community/choose_images

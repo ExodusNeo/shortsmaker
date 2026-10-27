@@ -1,18 +1,18 @@
 ---
-source_file: "shortsmaker/opener_plan.py"
+source_file: "tests/test_style.py"
 type: "code"
-community: "test_opener_scene.py"
-location: "L164"
+community: "test_style.py"
+location: "L110"
 tags:
   - graphify/code
-  - graphify/EXTRACTED
-  - community/test_opener_scenepy
+  - graphify/INFERRED
+  - community/test_stylepy
 ---
 
 # ask()
 
 ## Connections
-- [[_tables_text()]] - `calls` [EXTRACTED]
-- [[plan_openers()]] - `contains` [EXTRACTED]
+- [[plan_with()]] - `indirect_call` [INFERRED]
+- [[test_fact_check_sees_new_graphics()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/test_opener_scenepy
+#graphify/code #graphify/INFERRED #community/test_stylepy

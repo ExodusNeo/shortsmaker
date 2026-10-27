@@ -12,7 +12,7 @@ tags:
 # look_at_quat()
 
 ## Connections
-- [[Vector_1]] - `references` [EXTRACTED]
+- [[Vector]] - `references` [EXTRACTED]
 - [[parts.py]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/partspy

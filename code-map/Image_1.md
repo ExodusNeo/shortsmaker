@@ -1,18 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "test_blender_scene.py"
+community: "frame_maker"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_blender_scenepy
+  - community/frame_maker
 ---
 
 # Image
 
 ## Connections
-- [[changed()]] - `references` [EXTRACTED]
-- [[count()]] - `references` [EXTRACTED]
-- [[render()_5]] - `references` [EXTRACTED]
+- [[credit_tag_image()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_blender_scenepy
+#graphify/code #graphify/EXTRACTED #community/frame_maker

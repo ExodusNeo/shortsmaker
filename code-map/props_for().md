@@ -1,18 +1,18 @@
 ---
 source_file: "tests/render_full.py"
 type: "code"
-community: "subprocess"
+community: "gpu.py"
 location: "L16"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/subprocess
+  - community/gpupy
 ---
 
 # props_for()
 
 ## Connections
-- [[main()]] - `calls` [EXTRACTED]
+- [[main()_5]] - `calls` [EXTRACTED]
 - [[render_full.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/subprocess
+#graphify/code #graphify/EXTRACTED #community/gpupy

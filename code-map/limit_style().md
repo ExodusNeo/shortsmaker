@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/plan_rules.py"
 type: "code"
-community: "limit_style"
+community: "test_full_scenes.py"
 location: "L218"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/limit_style
+  - community/test_full_scenespy
 ---
 
 # limit_style()
@@ -17,4 +17,4 @@ tags:
 - [[test_limit_style_caps()]] - `calls` [EXTRACTED]
 - [[write_scripts()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/limit_style
+#graphify/code #graphify/EXTRACTED #community/test_full_scenespy

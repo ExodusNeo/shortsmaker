@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/motion.py"
 type: "code"
-community: "render"
+community: "scene_cues"
 location: "L20"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/render
+  - community/scene_cues
 ---
 
 # full_summary()
@@ -18,4 +18,4 @@ tags:
 - [[test_full_props_figure()]] - `calls` [EXTRACTED]
 - [[test_full_summary()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/render
+#graphify/code #graphify/EXTRACTED #community/scene_cues

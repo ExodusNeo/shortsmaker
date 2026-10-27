@@ -1,23 +1,21 @@
 ---
-source_file: "blender/look.py"
+source_file: "blender/scene_kit.py"
 type: "code"
-community: "look.py"
-location: "L85"
+community: "opener_scene.py"
+location: "L58"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/lookpy
+  - community/opener_scenepy
 ---
 
 # material()
 
 ## Connections
-- [[A flat (emission-only) material in one of COLORS, made once.]] - `rationale_for` [EXTRACTED]
-- [[_mesh()]] - `calls` [EXTRACTED]
-- [[_obj()]] - `calls` [EXTRACTED]
-- [[label()]] - `calls` [EXTRACTED]
-- [[linear()]] - `calls` [EXTRACTED]
-- [[look.py]] - `contains` [EXTRACTED]
-- [[main()_4]] - `calls` [EXTRACTED]
+- [[cut()]] - `calls` [EXTRACTED]
+- [[dress_set()]] - `calls` [EXTRACTED]
+- [[ground_material()]] - `calls` [EXTRACTED]
+- [[load_model()]] - `calls` [EXTRACTED]
+- [[scene_kit.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/lookpy
+#graphify/code #graphify/EXTRACTED #community/opener_scenepy

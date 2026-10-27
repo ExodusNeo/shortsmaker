@@ -8,8 +8,8 @@ members: 41
 **Members:** 41 nodes
 
 ## Members
-- [[dot-__enter__()_1]] - code - tests/test_opener_render.py
-- [[dot-__exit__()_3]] - code - tests/test_opener_render.py
+- [[dot-__enter__()_2]] - code - tests/test_opener_render.py
+- [[dot-__exit__()_2]] - code - tests/test_opener_render.py
 - [[dot-runs()]] - code - tests/test_opener_render.py
 - [[A temp work folder, a library holding the fixture models, a fake Blender and…]] - rationale - tests/test_opener_render.py
 - [[Beat times squeezed into the real scene 1 (the voice can make it shorter than…]] - rationale - shortsmaker/opener_render.py
@@ -58,22 +58,24 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 18 edges to [[_COMMUNITY_test_full_scenes.py]]
-- 5 edges to [[_COMMUNITY_subprocess]]
-- 5 edges to [[_COMMUNITY_json]]
+- 18 edges to [[_COMMUNITY_pathlib]]
 - 4 edges to [[_COMMUNITY_render]]
-- 4 edges to [[_COMMUNITY_test_opener_scene.py]]
-- 2 edges to [[_COMMUNITY_test_blender_link.py]]
-- 1 edge to [[_COMMUNITY_local_clips]]
+- 3 edges to [[_COMMUNITY_ffmpeg]]
+- 3 edges to [[_COMMUNITY_test_opener_plan.py]]
+- 3 edges to [[_COMMUNITY_test_blender_link.py]]
+- 3 edges to [[_COMMUNITY_json]]
+- 2 edges to [[_COMMUNITY_ask_ai]]
+- 2 edges to [[_COMMUNITY_gpu.py]]
 - 1 edge to [[_COMMUNITY_test_rules.py]]
 - 1 edge to [[_COMMUNITY_test_blender_plan.py]]
-- 1 edge to [[_COMMUNITY_ask_ai]]
-- 1 edge to [[_COMMUNITY_math]]
-- 1 edge to [[_COMMUNITY_test_blender_scene.py]]
+- 1 edge to [[_COMMUNITY_test_story.py]]
+- 1 edge to [[_COMMUNITY_moves.py]]
+- 1 edge to [[_COMMUNITY_test_opener_checks.py]]
+- 1 edge to [[_COMMUNITY_test_opener_scene.py]]
 
 ## Top bridge nodes
-- [[render_opener()]] - degree 27, connects to 8 communities
 - [[test_opener_render.py]] - degree 42, connects to 7 communities
+- [[render_opener()]] - degree 27, connects to 7 communities
+- [[copy]] - degree 5, connects to 3 communities
 - [[review()]] - degree 7, connects to 2 communities
 - [[_wiring()]] - degree 6, connects to 2 communities
-- [[scale_beats()]] - degree 5, connects to 2 communities

@@ -1,12 +1,12 @@
 ---
 source_file: "blender/scene_kit.py"
 type: "rationale"
-community: "build_set"
+community: "opener_scene.py"
 location: "L69"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/build_set
+  - community/opener_scenepy
 ---
 
 # One mesh object from many (world transforms applied, materials kept), origin at…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[merge()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/build_set
+#graphify/rationale #graphify/EXTRACTED #community/opener_scenepy

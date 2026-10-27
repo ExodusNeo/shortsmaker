@@ -21,12 +21,12 @@ members: 19
 - [[Failure]] - code - blender/failures.py
 - [[Objects that fall with the span (the label on the failing part).]] - rationale - blender/failures.py
 - [[The failure from t0 to its peak, then (collapse) the span falls; `until` (the…]] - rationale - blender/failures.py
-- [[Vector_3]] - code
+- [[Vector_2]] - code
 - [[Where a point on the collapsing span ends up in the water.]] - rationale - blender/failures.py
 - [[focus_object()]] - code - blender/templates.py
 - [[key()_1]] - code - blender/failures.py
 - [[keyvis()]] - code - blender/build_scene.py
-- [[main()_4]] - code - blender/build_scene.py
+- [[main()_3]] - code - blender/build_scene.py
 
 ## Live Query (requires Dataview plugin)
 
@@ -37,14 +37,14 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 4 edges to [[_COMMUNITY_templates.py]]
-- 4 edges to [[_COMMUNITY_math]]
+- 4 edges to [[_COMMUNITY_build_scene.py]]
 - 3 edges to [[_COMMUNITY_Shots]]
 - 2 edges to [[_COMMUNITY_look.py]]
 - 2 edges to [[_COMMUNITY_parts.py]]
 - 1 edge to [[_COMMUNITY_json]]
 
 ## Top bridge nodes
-- [[main()_4]] - degree 19, connects to 6 communities
+- [[main()_3]] - degree 19, connects to 6 communities
 - [[Failure]] - degree 9, connects to 1 community
 - [[key()_1]] - degree 4, connects to 1 community
 - [[focus_object()]] - degree 4, connects to 1 community

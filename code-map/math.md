@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "math"
+community: "moves.py"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/math
+  - community/movespy
 ---
 
 # math
@@ -40,4 +40,4 @@ tags:
 - [[sink()]] - `calls` [EXTRACTED]
 - [[walk()]] - `calls` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/math
+#graphify/concept #graphify/EXTRACTED #community/movespy

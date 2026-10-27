@@ -1,17 +1,17 @@
 ---
-source_file: "tests/test_h3_handoff.py"
+source_file: "tests/test_full_scenes.py"
 type: "code"
-community: "short_with"
-location: "L24"
+community: "apply_review_fixes"
+location: "L572"
 tags:
   - graphify/code
-  - graphify/INFERRED
-  - community/short_with
+  - graphify/EXTRACTED
+  - community/apply_review_fixes
 ---
 
 # ask()
 
 ## Connections
-- [[fake_ai()]] - `indirect_call` [INFERRED]
+- [[test_review_redraws_custom()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/short_with
+#graphify/code #graphify/EXTRACTED #community/apply_review_fixes

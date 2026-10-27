@@ -1,24 +1,23 @@
 ---
-source_file: "tests/test_style.py"
+source_file: "tests/test_h3_handoff.py"
 type: "code"
-community: "invent_component"
-location: "L229"
+community: "test_h3_handoff.py"
+location: "L31"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/invent_component
+  - community/test_h3_handoffpy
 ---
 
 # with_fakes()
 
 ## Connections
-- [[Runs fn() with ask_ai answering `codes` in turn, tsc_check returning `tsc`, and…]] - `rationale_for` [EXTRACTED]
-- [[owner()]] - `calls` [EXTRACTED]
-- [[restore_style_slots()]] - `calls` [EXTRACTED]
-- [[test_failed_invention_keeps_the_others()]] - `calls` [EXTRACTED]
-- [[test_invention_compile_failure_uses_fallback()]] - `calls` [EXTRACTED]
-- [[test_invention_lint_failure_uses_fallback()]] - `calls` [EXTRACTED]
-- [[test_invention_passes_into_slot()]] - `calls` [EXTRACTED]
-- [[test_style.py]] - `contains` [EXTRACTED]
+- [[Run fn with llm.ask_ai and input restored afterwards.]] - `rationale_for` [EXTRACTED]
+- [[test_h3_handoff.py]] - `contains` [EXTRACTED]
+- [[test_missing_scene_is_asked_again()]] - `calls` [EXTRACTED]
+- [[test_retries_only_failing_scene_with_reason()]] - `calls` [EXTRACTED]
+- [[test_scene_number_given_as_text_is_accepted()]] - `calls` [EXTRACTED]
+- [[test_tells_owner_after_five_failed_rounds()]] - `calls` [EXTRACTED]
+- [[test_waits_for_enter_when_no_ai_answers()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/invent_component
+#graphify/code #graphify/EXTRACTED #community/test_h3_handoffpy

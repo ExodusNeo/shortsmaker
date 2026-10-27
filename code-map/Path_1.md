@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "subprocess"
+community: "make"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/subprocess
+  - community/make
 ---
 
 # Path
@@ -17,4 +17,4 @@ tags:
 - [[project_xml()]] - `references` [EXTRACTED]
 - [[remove()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/subprocess
+#graphify/code #graphify/EXTRACTED #community/make

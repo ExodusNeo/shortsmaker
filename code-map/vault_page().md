@@ -1,18 +1,18 @@
 ---
 source_file: "shortsmaker/logbook.py"
 type: "code"
-community: "json"
+community: "pathlib"
 location: "L58"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/json
+  - community/pathlib
 ---
 
 # vault_page()
 
 ## Connections
-- [[Path_24]] - `references` [EXTRACTED]
+- [[Path_16]] - `references` [EXTRACTED]
 - [[The Short's page in the Obsidian vault thumbnail, storyboard, its logbook…]] - `rationale_for` [EXTRACTED]
 - [[logbook.py]] - `contains` [EXTRACTED]
 - [[main()_6]] - `calls` [EXTRACTED]
@@ -20,4 +20,4 @@ tags:
 - [[shutil]] - `calls` [EXTRACTED]
 - [[vault_refresh()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/json
+#graphify/code #graphify/EXTRACTED #community/pathlib

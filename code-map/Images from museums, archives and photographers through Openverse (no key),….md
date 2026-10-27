@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/image_sources.py"
 type: "rationale"
-community: "full_cues"
+community: "scene_cues"
 location: "L180"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/full_cues
+  - community/scene_cues
 ---
 
 # Images from museums, archives and photographers through Openverse (no key),…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[openverse_images()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/full_cues
+#graphify/rationale #graphify/EXTRACTED #community/scene_cues

@@ -12,7 +12,7 @@ tags:
 # facing_vec()
 
 ## Connections
-- [[Vector_6]] - `references` [EXTRACTED]
+- [[Vector_5]] - `references` [EXTRACTED]
 - [[cut()]] - `calls` [EXTRACTED]
 - [[legs()]] - `calls` [EXTRACTED]
 - [[scene_kit.py]] - `contains` [EXTRACTED]

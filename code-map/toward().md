@@ -12,7 +12,7 @@ tags:
 # toward()
 
 ## Connections
-- [[Vector_4]] - `references` [EXTRACTED]
+- [[Vector_3]] - `references` [EXTRACTED]
 - [[fly_off()]] - `calls` [EXTRACTED]
 - [[hop_off()]] - `calls` [EXTRACTED]
 - [[moves.py]] - `contains` [EXTRACTED]

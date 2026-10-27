@@ -12,7 +12,7 @@ tags:
 # tower()
 
 ## Connections
-- [[Object_1]] - `references` [EXTRACTED]
+- [[Object]] - `references` [EXTRACTED]
 - [[_towers()]] - `calls` [EXTRACTED]
 - [[member()]] - `calls` [EXTRACTED]
 - [[parts.py]] - `contains` [EXTRACTED]

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/image_sources.py"
 type: "rationale"
-community: "full_cues"
+community: "scene_cues"
 location: "L134"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/full_cues
+  - community/scene_cues
 ---
 
 # GET from Openverse, spaced to its anonymous limit (20 requests a minute). None…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[ov_get()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/full_cues
+#graphify/rationale #graphify/EXTRACTED #community/scene_cues

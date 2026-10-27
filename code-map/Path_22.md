@@ -1,16 +1,20 @@
 ---
 source_file: ""
 type: "code"
-community: "footage.py"
+community: "captions"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/footagepy
+  - community/captions
 ---
 
 # Path
 
 ## Connections
-- [[mark_details()]] - `references` [EXTRACTED]
+- [[captions()]] - `references` [EXTRACTED]
+- [[music_gain()]] - `references` [EXTRACTED]
+- [[speak()_1]] - `references` [EXTRACTED]
+- [[story_sound()]] - `references` [EXTRACTED]
+- [[tts()_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/footagepy
+#graphify/code #graphify/EXTRACTED #community/captions

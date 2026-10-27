@@ -1,19 +1,19 @@
 ---
 source_file: "shortsmaker/opener_plan.py"
 type: "code"
-community: "test_opener_scene.py"
+community: "test_opener_plan.py"
 location: "L161"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_opener_scenepy
+  - community/test_opener_planpy
 ---
 
 # plan_openers()
 
 ## Connections
 - [[One AI call stages every Short's opener (sopener); unusable plans are asked…]] - `rationale_for` [EXTRACTED]
-- [[ask()_10]] - `contains` [EXTRACTED]
+- [[ask()_9]] - `contains` [EXTRACTED]
 - [[clean_opener()]] - `calls` [EXTRACTED]
 - [[opener_plan.py]] - `contains` [EXTRACTED]
 - [[test_good_plan_is_kept()]] - `calls` [EXTRACTED]
@@ -21,4 +21,4 @@ tags:
 - [[test_unbuildable()]] - `calls` [EXTRACTED]
 - [[write_scripts()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_opener_scenepy
+#graphify/code #graphify/EXTRACTED #community/test_opener_planpy

@@ -1,11 +1,11 @@
 ---
 type: community
-members: 48
+members: 52
 ---
 
 # test_rules.py
 
-**Members:** 48 nodes
+**Members:** 52 nodes
 
 ## Members
 - [[(sections by canonical heading, settings) of a rules file; `label` names the…]] - rationale - shortsmaker/rules.py
@@ -28,6 +28,7 @@ members: 48
 - [[prepare()]] - code - tests/test_rules.py
 - [[run_draft()]] - code - tests/test_rules.py
 - [[stop_text()]] - code - tests/test_rules.py
+- [[test_a_stopped_run_keeps_the_default_channel()]] - code - tests/test_rules.py
 - [[test_bad_min_pictures_stops()]] - code - tests/test_rules.py
 - [[test_blender_needs_a_build_plan_section()]] - code - tests/test_rules.py
 - [[test_bom_and_crlf_load_the_same()]] - code - tests/test_rules.py
@@ -42,17 +43,20 @@ members: 48
 - [[test_duplicate_heading_stops()]] - code - tests/test_rules.py
 - [[test_empty_heading_stops()]] - code - tests/test_rules.py
 - [[test_equals_sign_works_like_a_colon()]] - code - tests/test_rules.py
+- [[test_fix_checks_rules_before_asking_for_a_scene()]] - code - tests/test_rules.py
 - [[test_heading_case_and_spaces()]] - code - tests/test_rules.py
 - [[test_level3_heading_stays_inside()]] - code - tests/test_rules.py
 - [[test_load_rules_sets_session()]] - code - tests/test_rules.py
 - [[test_min_pictures_from_settings()]] - code - tests/test_rules.py
 - [[test_missing_heading_stops()]] - code - tests/test_rules.py
 - [[test_missing_rules_file_is_drafted()]] - code - tests/test_rules.py
+- [[test_new_channel_stops_for_review()]] - code - tests/test_rules.py
 - [[test_odd_min_pictures_stop_cleanly()]] - code - tests/test_rules.py
 - [[test_opening_picture_needs_its_fields()]] - code - tests/test_rules.py
 - [[test_parses_sections_and_settings()]] - code - tests/test_rules.py
 - [[test_photo_channels_dont_need_a_build_plan()]] - code - tests/test_rules.py
 - [[test_rules.py]] - code - tests/test_rules.py
+- [[test_rules_accept_opener_setting()]] - code - tests/test_story.py
 - [[test_strange_history_prompts_unchanged()]] - code - tests/test_rules.py
 - [[test_strips_tag_comments()]] - code - tests/test_rules.py
 - [[test_unknown_visuals_stop()]] - code - tests/test_rules.py
@@ -65,22 +69,23 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 17 edges to [[_COMMUNITY_test_full_scenes.py]]
-- 9 edges to [[_COMMUNITY_json]]
-- 2 edges to [[_COMMUNITY_prepare_topic]]
-- 2 edges to [[_COMMUNITY_subprocess]]
+- 17 edges to [[_COMMUNITY_pathlib]]
+- 7 edges to [[_COMMUNITY_json]]
+- 2 edges to [[_COMMUNITY_gather_pool]]
+- 2 edges to [[_COMMUNITY_test_full_scenes.py]]
+- 2 edges to [[_COMMUNITY_gpu.py]]
 - 1 edge to [[_COMMUNITY_rewrite_paint_prompts]]
-- 1 edge to [[_COMMUNITY_test_story.py]]
 - 1 edge to [[_COMMUNITY_test_opener_render.py]]
-- 1 edge to [[_COMMUNITY_render]]
+- 1 edge to [[_COMMUNITY_test_first_second.py]]
 - 1 edge to [[_COMMUNITY_choose_images]]
-- 1 edge to [[_COMMUNITY_write_scripts]]
-- 1 edge to [[_COMMUNITY_test_pictures_first.py]]
-- 1 edge to [[_COMMUNITY_test_blender_scene.py]]
+- 1 edge to [[_COMMUNITY_catalog_pool]]
+- 1 edge to [[_COMMUNITY_render]]
+- 1 edge to [[_COMMUNITY_test_story.py]]
+- 1 edge to [[_COMMUNITY_test_opener_checks.py]]
 
 ## Top bridge nodes
 - [[capture_prompts()]] - degree 11, connects to 5 communities
 - [[test_rules.py]] - degree 55, connects to 4 communities
-- [[parse_rules()]] - degree 16, connects to 3 communities
+- [[parse_rules()]] - degree 16, connects to 2 communities
 - [[load_rules()]] - degree 7, connects to 2 communities
 - [[min_real_pictures()]] - degree 4, connects to 2 communities

@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "math"
+community: "build_scene.py"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/math
+  - community/build_scenepy
 ---
 
 # mathutils
@@ -21,4 +21,4 @@ tags:
 - [[scene_kit.py]] - `imports_from` [EXTRACTED]
 - [[templates.py]] - `imports_from` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/math
+#graphify/concept #graphify/EXTRACTED #community/build_scenepy

@@ -1,23 +1,18 @@
 ---
-source_file: "tests/test_h3_handoff.py"
+source_file: "tests/test_style.py"
 type: "code"
-community: "short_with"
-location: "L56"
+community: "style_placeholders"
+location: "L257"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/short_with
+  - community/style_placeholders
 ---
 
 # run()
 
 ## Connections
-- [[fake_ai()]] - `calls` [EXTRACTED]
-- [[short_with()]] - `calls` [EXTRACTED]
-- [[test_missing_scene_is_asked_again()]] - `indirect_call` [INFERRED]
-- [[test_retries_only_failing_scene_with_reason()]] - `indirect_call` [INFERRED]
-- [[test_scene_number_given_as_text_is_accepted()]] - `indirect_call` [INFERRED]
-- [[test_tells_owner_after_five_failed_rounds()]] - `indirect_call` [INFERRED]
-- [[test_waits_for_enter_when_no_ai_answers()]] - `indirect_call` [INFERRED]
+- [[test_failed_invention_keeps_the_others()]] - `indirect_call` [INFERRED]
+- [[test_invention_passes_into_slot()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/INFERRED #community/short_with
+#graphify/code #graphify/INFERRED #community/style_placeholders

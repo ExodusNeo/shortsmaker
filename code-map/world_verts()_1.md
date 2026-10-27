@@ -12,7 +12,7 @@ tags:
 # world_verts()
 
 ## Connections
-- [[Vector_7]] - `references` [EXTRACTED]
+- [[Vector_6]] - `references` [EXTRACTED]
 - [[edge_leads()]] - `calls` [EXTRACTED]
 - [[edge_point()]] - `calls` [EXTRACTED]
 - [[hidden()_1]] - `calls` [EXTRACTED]

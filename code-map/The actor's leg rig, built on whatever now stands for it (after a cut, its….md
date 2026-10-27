@@ -1,12 +1,12 @@
 ---
 source_file: "blender/moves.py"
 type: "rationale"
-community: "scene_kit.py"
+community: "moves.py"
 location: "L129"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/scene_kitpy
+  - community/movespy
 ---
 
 # The actor's leg rig, built on whatever now stands for it (after a cut, its…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[legs()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/scene_kitpy
+#graphify/rationale #graphify/EXTRACTED #community/movespy

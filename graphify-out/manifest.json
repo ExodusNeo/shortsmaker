@@ -636,15 +636,15 @@
     "semantic_hash": ""
   },
   "blender/opener_checks.py": {
-    "mtime": 1793078023.680881,
-    "seen": 1793079182.0972385,
-    "ast_hash": "a4885ef84e8c5c4d10122aefbaca55f1",
+    "mtime": 1793091601.5240047,
+    "seen": 1793091878.2613993,
+    "ast_hash": "86e16b6807c271efb26bb40ece93b75d",
     "semantic_hash": ""
   },
   "blender/opener_scene.py": {
-    "mtime": 1793090652.344126,
-    "seen": 1793090889.8602002,
-    "ast_hash": "8f257a73e28e0ed18d6edcc8b2546416",
+    "mtime": 1793091609.3818147,
+    "seen": 1793091878.261402,
+    "ast_hash": "545e7c3d429c63d25c86469a2d9931d1",
     "semantic_hash": ""
   },
   "blender/scene_kit.py": {
@@ -702,9 +702,9 @@
     "semantic_hash": ""
   },
   "tests/test_opener_scene.py": {
-    "mtime": 1793090027.078309,
-    "seen": 1793090311.410773,
-    "ast_hash": "ed11a53d333df9124c57fa639db45388",
+    "mtime": 1793091630.5946982,
+    "seen": 1793091878.2616296,
+    "ast_hash": "b27d2c1b45105163d8a34581cdf64e88",
     "semantic_hash": ""
   }
 }

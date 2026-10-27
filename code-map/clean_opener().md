@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/opener_plan.py"
 type: "code"
-community: "test_opener_scene.py"
+community: "test_opener_plan.py"
 location: "L85"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_opener_scenepy
+  - community/test_opener_planpy
 ---
 
 # clean_opener()
@@ -31,4 +31,4 @@ tags:
 - [[test_through_cut_names_its_rest()]] - `calls` [EXTRACTED]
 - [[tool_kind()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_opener_scenepy
+#graphify/code #graphify/EXTRACTED #community/test_opener_planpy

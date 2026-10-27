@@ -12,6 +12,6 @@ tags:
 # A flat (emission-only) material in one of COLORS, made once.
 
 ## Connections
-- [[material()_1]] - `rationale_for` [EXTRACTED]
+- [[material()]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/lookpy

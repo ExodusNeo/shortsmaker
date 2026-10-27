@@ -2,7 +2,7 @@
 source_file: "blender/opener_scene.py"
 type: "code"
 community: "opener_scene.py"
-location: "L509"
+location: "L431"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -15,7 +15,6 @@ tags:
 - [[State]] - `calls` [EXTRACTED]
 - [[apply()]] - `calls` [EXTRACTED]
 - [[build_set()]] - `calls` [EXTRACTED]
-- [[burst()]] - `calls` [EXTRACTED]
 - [[camera()_1]] - `calls` [EXTRACTED]
 - [[checks()]] - `calls` [EXTRACTED]
 - [[dress_set()]] - `calls` [EXTRACTED]

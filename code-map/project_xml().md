@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/edit_project.py"
 type: "code"
-community: "subprocess"
+community: "make"
 location: "L33"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/subprocess
+  - community/make
 ---
 
 # project_xml()
@@ -21,4 +21,4 @@ tags:
 - [[prop()]] - `contains` [EXTRACTED]
 - [[re]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/subprocess
+#graphify/code #graphify/EXTRACTED #community/make

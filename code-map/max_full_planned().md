@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/rules.py"
 type: "code"
-community: "json"
+community: "test_full_scenes.py"
 location: "L150"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/json
+  - community/test_full_scenespy
 ---
 
 # max_full_planned()
@@ -18,4 +18,4 @@ tags:
 - [[rules.py]] - `contains` [EXTRACTED]
 - [[write_scripts()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/json
+#graphify/code #graphify/EXTRACTED #community/test_full_scenespy

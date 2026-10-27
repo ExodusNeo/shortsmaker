@@ -1,17 +1,18 @@
 ---
-source_file: "tests/test_pictures_first.py"
+source_file: "tests/test_blender_link.py"
 type: "code"
-community: "choose_images"
-location: "L333"
+community: "test_blender_link.py"
+location: "L24"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/choose_images
+  - community/test_blender_linkpy
 ---
 
 # .__init__()
 
 ## Connections
-- [[picking]] - `method` [EXTRACTED]
+- [[Fake]] - `method` [EXTRACTED]
+- [[handle()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/choose_images
+#graphify/code #graphify/EXTRACTED #community/test_blender_linkpy

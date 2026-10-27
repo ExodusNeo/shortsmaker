@@ -12,7 +12,7 @@ tags:
 # bbox_size()
 
 ## Connections
-- [[Object_1]] - `references` [EXTRACTED]
+- [[Object]] - `references` [EXTRACTED]
 - [[parts.py]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/partspy

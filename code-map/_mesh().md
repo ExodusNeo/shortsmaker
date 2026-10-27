@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[_obj()]] - `calls` [EXTRACTED]
-- [[material()_1]] - `calls` [EXTRACTED]
+- [[material()]] - `calls` [EXTRACTED]
 - [[parts.py]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/lookpy

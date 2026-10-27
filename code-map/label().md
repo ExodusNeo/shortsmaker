@@ -13,11 +13,11 @@ tags:
 
 ## Connections
 - [[Manual-style callout a thin leader line from the part to short capital text…]] - `rationale_for` [EXTRACTED]
-- [[Object_1]] - `references` [EXTRACTED]
-- [[Vector_1]] - `references` [EXTRACTED]
+- [[Object]] - `references` [EXTRACTED]
+- [[Vector]] - `references` [EXTRACTED]
 - [[box()]] - `calls` [EXTRACTED]
-- [[main()_4]] - `calls` [EXTRACTED]
-- [[material()_1]] - `calls` [EXTRACTED]
+- [[main()_3]] - `calls` [EXTRACTED]
+- [[material()]] - `calls` [EXTRACTED]
 - [[member()]] - `calls` [EXTRACTED]
 - [[parts.py]] - `contains` [EXTRACTED]
 

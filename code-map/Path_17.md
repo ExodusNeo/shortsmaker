@@ -11,6 +11,6 @@ tags:
 # Path
 
 ## Connections
-- [[_review_state()]] - `references` [EXTRACTED]
+- [[use_picture_from()]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/apply_review_fixes

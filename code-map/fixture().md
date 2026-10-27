@@ -21,6 +21,7 @@ tags:
 - [[test_onion_mince()]] - `calls` [EXTRACTED]
 - [[test_onion_slices()]] - `calls` [EXTRACTED]
 - [[test_opener_scene.py]] - `contains` [EXTRACTED]
+- [[test_staging_goes_back_to_the_planner()]] - `calls` [EXTRACTED]
 - [[test_subject_without_follow()]] - `calls` [EXTRACTED]
 - [[test_swung_blade_shows_its_face()]] - `calls` [EXTRACTED]
 - [[test_unbuildable_cut_is_reported_not_crashed()]] - `calls` [EXTRACTED]

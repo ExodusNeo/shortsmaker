@@ -1,18 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "subprocess"
+community: "make"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/subprocess
+  - community/make
 ---
 
 # Path
 
 ## Connections
-- [[duration()]] - `references` [EXTRACTED]
-- [[ffmpeg()]] - `references` [EXTRACTED]
-- [[write_json()]] - `references` [EXTRACTED]
+- [[short_folder()]] - `references` [EXTRACTED]
+- [[videos()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/subprocess
+#graphify/code #graphify/EXTRACTED #community/make

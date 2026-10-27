@@ -83,25 +83,26 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 30 edges to [[_COMMUNITY_test_full_scenes.py]]
-- 6 edges to [[_COMMUNITY_subprocess]]
-- 4 edges to [[_COMMUNITY_json]]
+- 29 edges to [[_COMMUNITY_pathlib]]
+- 5 edges to [[_COMMUNITY_json]]
 - 4 edges to [[_COMMUNITY_render]]
-- 3 edges to [[_COMMUNITY_test_blender_scene.py]]
-- 2 edges to [[_COMMUNITY_full_cues]]
-- 1 edge to [[_COMMUNITY_local_clips]]
-- 1 edge to [[_COMMUNITY_write_scripts]]
-- 1 edge to [[_COMMUNITY_math]]
-- 1 edge to [[_COMMUNITY_clean_pics]]
-- 1 edge to [[_COMMUNITY_gpu.py]]
+- 3 edges to [[_COMMUNITY_gpu.py]]
+- 2 edges to [[_COMMUNITY_ffmpeg]]
+- 2 edges to [[_COMMUNITY_test_full_scenes.py]]
+- 2 edges to [[_COMMUNITY_scene_cues]]
+- 2 edges to [[_COMMUNITY_image_sources.py]]
+- 2 edges to [[_COMMUNITY_test_opener_checks.py]]
+- 1 edge to [[_COMMUNITY_pool_of]]
+- 1 edge to [[_COMMUNITY_moves.py]]
+- 1 edge to [[_COMMUNITY_test_blender_scene.py]]
 - 1 edge to [[_COMMUNITY_test_opener_render.py]]
-- 1 edge to [[_COMMUNITY_prepare_topic]]
-- 1 edge to [[_COMMUNITY_footage.py]]
-- 1 edge to [[_COMMUNITY_ClipReader]]
+- 1 edge to [[_COMMUNITY_gather_pool]]
+- 1 edge to [[_COMMUNITY_test_story.py]]
+- 1 edge to [[_COMMUNITY_frame_maker]]
 
 ## Top bridge nodes
-- [[render_clips()]] - degree 17, connects to 6 communities
 - [[drawn_thumbnail()]] - degree 13, connects to 6 communities
 - [[test_blender_plan.py]] - degree 24, connects to 5 communities
 - [[test_blender_render.py]] - degree 20, connects to 4 communities
+- [[render_clips()]] - degree 17, connects to 4 communities
 - [[_run()]] - degree 6, connects to 3 communities

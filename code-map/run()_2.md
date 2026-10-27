@@ -1,19 +1,18 @@
 ---
-source_file: "tests/test_h3_handoff.py"
+source_file: "tests/test_blender_link.py"
 type: "code"
-community: "short_with"
-location: "L88"
+community: "test_blender_link.py"
+location: "L61"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/short_with
+  - community/test_blender_linkpy
 ---
 
 # run()
 
 ## Connections
-- [[fake_ai()]] - `calls` [EXTRACTED]
-- [[short_with()]] - `calls` [EXTRACTED]
-- [[test_scene_number_given_as_text_is_accepted()]] - `contains` [EXTRACTED]
+- [[Fake]] - `calls` [EXTRACTED]
+- [[with_fake()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/short_with
+#graphify/code #graphify/EXTRACTED #community/test_blender_linkpy

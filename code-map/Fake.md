@@ -12,10 +12,10 @@ tags:
 # Fake
 
 ## Connections
-- [[dot-__init__()_10]] - `method` [EXTRACTED]
+- [[dot-__init__()_9]] - `method` [EXTRACTED]
 - [[dot-stop()]] - `method` [EXTRACTED]
 - [[Answers the add-on's commands; `replies` maps a command to a function(params)…]] - `rationale_for` [EXTRACTED]
-- [[run()_8]] - `calls` [EXTRACTED]
+- [[run()_2]] - `calls` [EXTRACTED]
 - [[test_blender_link.py]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/test_blender_linkpy

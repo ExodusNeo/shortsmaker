@@ -12,7 +12,7 @@ tags:
 # train()
 
 ## Connections
-- [[Object_1]] - `references` [EXTRACTED]
+- [[Object]] - `references` [EXTRACTED]
 - [[box()]] - `calls` [EXTRACTED]
 - [[dress()]] - `calls` [EXTRACTED]
 - [[parts.py]] - `contains` [EXTRACTED]

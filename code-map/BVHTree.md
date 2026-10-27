@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "build_set"
+community: "scene_kit.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/build_set
+  - community/scene_kitpy
 ---
 
 # BVHTree
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[tree()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/build_set
+#graphify/code #graphify/EXTRACTED #community/scene_kitpy

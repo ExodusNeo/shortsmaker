@@ -1,17 +1,34 @@
 ---
 source_file: ""
 type: "code"
-community: "build_set"
+community: "parts.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/build_set
+  - community/partspy
 ---
 
 # Object
 
 ## Connections
-- [[load_model()]] - `references` [EXTRACTED]
-- [[merge()]] - `references` [EXTRACTED]
+- [[_obj()]] - `references` [EXTRACTED]
+- [[bbox_size()]] - `references` [EXTRACTED]
+- [[box()]] - `references` [EXTRACTED]
+- [[car()]] - `references` [EXTRACTED]
+- [[cylinder()]] - `references` [EXTRACTED]
+- [[deck()]] - `references` [EXTRACTED]
+- [[eyebar()]] - `references` [EXTRACTED]
+- [[fastener()]] - `references` [EXTRACTED]
+- [[gusset_plate()]] - `references` [EXTRACTED]
+- [[hanger()]] - `references` [EXTRACTED]
+- [[label()]] - `references` [EXTRACTED]
+- [[main_cable()]] - `references` [EXTRACTED]
+- [[member()]] - `references` [EXTRACTED]
+- [[person()]] - `references` [EXTRACTED]
+- [[pier()]] - `references` [EXTRACTED]
+- [[tower()]] - `references` [EXTRACTED]
+- [[train()]] - `references` [EXTRACTED]
+- [[valley()]] - `references` [EXTRACTED]
+- [[water()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/build_set
+#graphify/code #graphify/EXTRACTED #community/partspy

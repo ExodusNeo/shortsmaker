@@ -1,19 +1,19 @@
 ---
 source_file: "tests/test_full_scenes.py"
 type: "code"
-community: "audio_mix.py"
+community: "story_sound"
 location: "L808"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/audio_mixpy
+  - community/story_sound
 ---
 
 # test_story_sound_library()
 
 ## Connections
-- [[fetch()]] - `indirect_call` [INFERRED]
+- [[fetch()_1]] - `indirect_call` [INFERRED]
 - [[story_sound()]] - `calls` [EXTRACTED]
 - [[test_full_scenes.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/audio_mixpy
+#graphify/code #graphify/EXTRACTED #community/story_sound

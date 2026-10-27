@@ -20,7 +20,7 @@ members: 15
 - [[ink_lines()]] - code - blender/look.py
 - [[linear()]] - code - blender/look.py
 - [[look.py]] - code - blender/look.py
-- [[material()_1]] - code - blender/look.py
+- [[material()]] - code - blender/look.py
 - [[sRGB hex to the linear colour Blender's shaders use (the Standard view…]] - rationale - blender/look.py
 - [[setup()]] - code - blender/look.py
 
@@ -33,13 +33,13 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 8 edges to [[_COMMUNITY_parts.py]]
-- 3 edges to [[_COMMUNITY_math]]
+- 3 edges to [[_COMMUNITY_build_scene.py]]
 - 2 edges to [[_COMMUNITY_main]]
 - 1 edge to [[_COMMUNITY_templates.py]]
 
 ## Top bridge nodes
 - [[look.py]] - degree 11, connects to 3 communities
-- [[material()_1]] - degree 7, connects to 2 communities
+- [[material()]] - degree 7, connects to 2 communities
 - [[_obj()]] - degree 8, connects to 1 community
 - [[setup()]] - degree 6, connects to 1 community
 - [[_mesh()]] - degree 3, connects to 1 community

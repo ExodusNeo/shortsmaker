@@ -13,11 +13,11 @@ tags:
 
 ## Connections
 - [[Collection]] - `references` [EXTRACTED]
-- [[Object_1]] - `references` [EXTRACTED]
+- [[Object]] - `references` [EXTRACTED]
 - [[_mesh()]] - `calls` [EXTRACTED]
 - [[box()]] - `calls` [EXTRACTED]
 - [[cylinder()]] - `calls` [EXTRACTED]
-- [[material()_1]] - `calls` [EXTRACTED]
+- [[material()]] - `calls` [EXTRACTED]
 - [[member()]] - `calls` [EXTRACTED]
 - [[parts.py]] - `contains` [EXTRACTED]
 

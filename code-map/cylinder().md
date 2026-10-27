@@ -12,7 +12,7 @@ tags:
 # cylinder()
 
 ## Connections
-- [[Object_1]] - `references` [EXTRACTED]
+- [[Object]] - `references` [EXTRACTED]
 - [[_hung_deck()]] - `calls` [EXTRACTED]
 - [[_obj()]] - `calls` [EXTRACTED]
 - [[fastener()]] - `calls` [EXTRACTED]

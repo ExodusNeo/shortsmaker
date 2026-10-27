@@ -1,17 +1,17 @@
 ---
 source_file: "tests/test_h3_handoff.py"
 type: "rationale"
-community: "short_with"
+community: "test_h3_handoff.py"
 location: "L32"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/short_with
+  - community/test_h3_handoffpy
 ---
 
 # Run fn with llm.ask_ai and input restored afterwards.
 
 ## Connections
-- [[with_fakes()]] - `rationale_for` [EXTRACTED]
+- [[with_fakes()_1]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/short_with
+#graphify/rationale #graphify/EXTRACTED #community/test_h3_handoffpy

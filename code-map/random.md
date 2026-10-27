@@ -16,7 +16,6 @@ tags:
 - [[cut()]] - `calls` [EXTRACTED]
 - [[dress_set()]] - `calls` [EXTRACTED]
 - [[failures.py]] - `imports` [EXTRACTED]
-- [[feather_colours()]] - `calls` [EXTRACTED]
 - [[make_paper()]] - `calls` [EXTRACTED]
 - [[make_sfx()]] - `calls` [EXTRACTED]
 - [[moves.py]] - `imports` [EXTRACTED]

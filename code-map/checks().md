@@ -1,12 +1,12 @@
 ---
 source_file: "blender/opener_scene.py"
 type: "code"
-community: "opener_scene.py"
-location: "L480"
+community: "opener_checks.py"
+location: "L402"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/opener_scenepy
+  - community/opener_checkspy
 ---
 
 # checks()
@@ -23,6 +23,7 @@ tags:
 - [[opener_scene.py]] - `contains` [EXTRACTED]
 - [[overlaps()]] - `calls` [EXTRACTED]
 - [[resting()]] - `calls` [EXTRACTED]
+- [[staging()]] - `calls` [EXTRACTED]
 - [[subject_segments()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/opener_scenepy
+#graphify/code #graphify/EXTRACTED #community/opener_checkspy

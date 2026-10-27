@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[ink_lines()]] - `calls` [EXTRACTED]
 - [[look.py]] - `contains` [EXTRACTED]
-- [[material()_1]] - `calls` [EXTRACTED]
+- [[material()]] - `calls` [EXTRACTED]
 - [[sRGB hex to the linear colour Blender's shaders use (the Standard view…]] - `rationale_for` [EXTRACTED]
 - [[setup()]] - `calls` [EXTRACTED]
 

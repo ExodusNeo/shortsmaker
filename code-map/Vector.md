@@ -1,18 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "build_set"
+community: "parts.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/build_set
+  - community/partspy
 ---
 
 # Vector
 
 ## Connections
-- [[build_set()]] - `references` [EXTRACTED]
-- [[feather_colours()]] - `references` [EXTRACTED]
-- [[stand_on()]] - `references` [EXTRACTED]
+- [[label()]] - `references` [EXTRACTED]
+- [[look_at_quat()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/build_set
+#graphify/code #graphify/EXTRACTED #community/partspy

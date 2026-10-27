@@ -12,7 +12,7 @@ tags:
 # deck()
 
 ## Connections
-- [[Object_1]] - `references` [EXTRACTED]
+- [[Object]] - `references` [EXTRACTED]
 - [[_piers_and_deck()]] - `calls` [EXTRACTED]
 - [[box()]] - `calls` [EXTRACTED]
 - [[parts.py]] - `contains` [EXTRACTED]

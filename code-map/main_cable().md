@@ -12,7 +12,7 @@ tags:
 # main_cable()
 
 ## Connections
-- [[Object_1]] - `references` [EXTRACTED]
+- [[Object]] - `references` [EXTRACTED]
 - [[_hung_deck()]] - `calls` [EXTRACTED]
 - [[cable_stayed_bridge()]] - `calls` [EXTRACTED]
 - [[cylinder()]] - `calls` [EXTRACTED]

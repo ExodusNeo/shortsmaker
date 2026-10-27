@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "footage.py"
+community: "image_sources.py"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/footagepy
+  - community/image_sourcespy
 ---
 
 # io
@@ -29,4 +29,4 @@ tags:
 - [[storyboard()]] - `calls` [EXTRACTED]
 - [[test_blender_run.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/footagepy
+#graphify/concept #graphify/EXTRACTED #community/image_sourcespy

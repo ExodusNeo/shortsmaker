@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/logbook.py"
 type: "code"
-community: "test_first_second.py"
+community: "test_full_scenes.py"
 location: "L97"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_first_secondpy
+  - community/test_full_scenespy
 ---
 
 # logbook_results()
@@ -19,4 +19,4 @@ tags:
 - [[test_logbook_marks_tiny_samples()]] - `calls` [EXTRACTED]
 - [[write_scripts()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_first_secondpy
+#graphify/code #graphify/EXTRACTED #community/test_full_scenespy

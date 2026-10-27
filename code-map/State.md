@@ -12,13 +12,12 @@ tags:
 # State
 
 ## Connections
-- [[dot-__init__()_6]] - `method` [EXTRACTED]
+- [[dot-__init__()_10]] - `method` [EXTRACTED]
 - [[dot-allow()]] - `method` [EXTRACTED]
 - [[dot-f()]] - `method` [EXTRACTED]
 - [[dot-support_obj()]] - `method` [EXTRACTED]
 - [[Everything the moves share the scene's objects by plan id, what stands on…]] - `rationale_for` [EXTRACTED]
 - [[apply()]] - `references` [EXTRACTED]
-- [[burst()]] - `references` [EXTRACTED]
 - [[camera()_1]] - `references` [EXTRACTED]
 - [[checks()]] - `references` [EXTRACTED]
 - [[dress_set()]] - `references` [EXTRACTED]

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/plan_rules.py"
 type: "code"
-community: "words_of"
+community: "test_full_scenes.py"
 location: "L17"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/words_of
+  - community/test_full_scenespy
 ---
 
 # is_num()
@@ -20,4 +20,4 @@ tags:
 - [[plan_rules.py]] - `contains` [EXTRACTED]
 - [[review_fixes()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/words_of
+#graphify/code #graphify/EXTRACTED #community/test_full_scenespy

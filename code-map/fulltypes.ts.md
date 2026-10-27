@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/full/types.ts"
 type: "code"
-community: "Paper"
+community: "full/types.ts"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Paper
+  - community/full/typests
 ---
 
 # full/types.ts
@@ -35,4 +35,4 @@ tags:
 - [[icons.tsx]] - `imports_from` [EXTRACTED]
 - [[toolkit.tsx]] - `re_exports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Paper
+#graphify/code #graphify/EXTRACTED #community/full/typests

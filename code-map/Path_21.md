@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "test_opener_scene.py"
+community: "ask_ai"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_opener_scenepy
+  - community/ask_ai
 ---
 
 # Path
 
 ## Connections
-- [[run()_7]] - `references` [EXTRACTED]
+- [[ask_ai()]] - `references` [EXTRACTED]
+- [[run_agy()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_opener_scenepy
+#graphify/code #graphify/EXTRACTED #community/ask_ai
