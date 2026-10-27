@@ -827,8 +827,10 @@ owner's Blender (Mike's chop; the owner's six catches became the checks below). 
   people clips, props, looks). The owner installed them in `~\.claude\skills` from github.com/EL4CTEO/blender-skills:
   always `blender-core` first, then the one for the job: `blender-character-rigging` (rigs, IK, weights, the people
   bodies), `blender-animation` (clips, NLA, keys, walks), `blender-lighting-lookdev` / `blender-time-of-day` (light,
-  sky, mood), `blender-rendering`, `blender-simulation` (physics), `blender-geometry-nodes`. They only reach
-  interactive Claude sessions; the pipeline's planner call and the headless render never see them, so whatever they
+  sky, mood), `blender-rendering`, `blender-simulation` (physics), `blender-geometry-nodes`. The owner switches between
+  Claude and Gemini: Gemini (agy) has the same 8 as a local plugin, `~\.gemini\config\plugins\blender-skills\skills\`
+  (copies: after updating the Claude ones, copy them over again; `agy plugin list` shows it). They only reach
+  interactive sessions; the pipeline's planner call and the headless render never see them, so whatever they
   teach has to be baked into `blender/*.py`. Check every change by eye (`tests\people_sheet.py`, a render of the job).
 - **Blender MCP has to be started each time.** Opener models are fetched through the owner's live Blender (the MCP
   add-on holds the Poly Pizza key). At the start of a run on a channel with `opener: blender`, `cli.blender_note` pings
