@@ -71,6 +71,12 @@ def test_onion_mince():
     assert 40 <= report["pieces"] <= 60, report["pieces"]
 
 
+def test_chicken_live_plan():
+    """The plan Claude wrote for Mike in the first live run (2026-10-27): a wider stump whose rim the hop clipped."""
+    report, _ = run(fixture("chicken_live"))
+    assert report["ok"], report["failures"]
+
+
 def test_bad_plans_fail():
     crowded = fixture("chicken_chop")  # a crate on the stump right where the rooster stands
     crowded["plan"]["actors"].append({"id": "crate", "find": "crate", "size_m": 0.3, "on": "stump"})

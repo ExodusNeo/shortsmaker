@@ -57,6 +57,7 @@ def test_edge_leads():
 
 def test_blade_face():
     assert results()["face_edge_on"] and "edge-on" in results()["face_edge_on"][0]
+    assert "diagonal" in results()["face_edge_on"][0]  # says how to fix it, for the planner's fix round
     assert results()["face_ok"] == []
 
 

@@ -166,7 +166,8 @@ def blade_face(tool, cam, frame: int, min_deg: float = 35) -> list[str]:
     centre = tool.matrix_world.translation
     view = (centre - cam.matrix_world.translation).normalized()
     off = math.degrees(math.asin(min(1.0, abs(view.dot(normal)))))
-    return [f"blade: {tool.name} is seen edge-on on frame {frame} ({off:.0f} degrees off, needs {min_deg:.0f})"] \
+    return [f"blade: {tool.name} is seen edge-on on frame {frame} ({off:.0f} degrees off, needs {min_deg:.0f}): "
+            "use stroke angle \"diagonal\" (or \"across\") so the camera sees the blade's flat side"] \
         if off < min_deg else []
 
 

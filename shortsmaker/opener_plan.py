@@ -146,7 +146,10 @@ def clean_opener(raw) -> dict | None:
 def _tables_text() -> str:
     return (f"Allowed values: set.ground {list(GROUNDS)}; set.light {list(LIGHTS)}; actor facing {FACINGS}; "
             f"actor gait (how it moves) {list(GAITS)}; moves {MOVES}; cut tools (an actor whose find names one) "
-            f"{list(TOOLS)}; stroke angle {STROKE_ANGLES}; one stroke is {{\"through\": \"neck\"}} or "
+            f"{list(TOOLS)}; stroke angle {STROKE_ANGLES} (the blade travels in that plane: \"diagonal\" = tilted 45 "
+            f"degrees toward the camera, so the camera sees the blade's flat side, the right choice for a chop through "
+            f"a neck or a branch; \"level\" = flat, a sideways slash; \"across\" = upright and facing the camera; "
+            f"\"down\" = upright but edge-on to the camera, which fails the blade check); one stroke is {{\"through\": \"neck\"}} or "
             f"{{\"at_fraction\": 0.5}} or {{\"rows\": 8}} (slices) or {{\"rows\": 6, \"cols\": 6}} (dice) or "
             f"{{\"mince\": 50}}; expect items {{\"piece\": name, \"share\": 0-1, \"then\": outcome}} or "
             f"{{\"pieces\": \"40-60\", \"then\": outcome}}, outcomes {OUTCOMES}; style {STYLES}; toward {TOWARDS}; "

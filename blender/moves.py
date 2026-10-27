@@ -122,8 +122,8 @@ def gait(st: State, actor: str) -> dict:
 
 
 def hop_off(beat, st):
-    """Up first, then out and down, so the feet clear the highest point of what it stands on (the probe's legs went
-    through the stump), landing beside it on the ground."""
+    """Up, out at that height until the whole body has passed the support's far edge, then down onto the ground: the
+    probe's legs went through the stump, and the first live run dropped too early over a wider stump's rim."""
     actor, d = beat["actor"], toward(beat)
     o, sup = st.objs[actor], st.support_obj(beat["actor"])
     f0 = st.f(beat["at"])
@@ -136,18 +136,24 @@ def hop_off(beat, st):
     centre = (lo + hi) / 2
     along = lambda v: v.dot(d)  # noqa: E731
     out = max(along(Vector((x, y, 0))) for x in (slo.x, shi.x) for y in (slo.y, shi.y))  # support's far edge
-    clear = out - along(centre) + abs(along(half)) + 0.08
+    edge = out - along(centre) + abs(along(half)) + 0.02  # here its trailing side has passed the far edge
+    clear = edge + 0.06
     land = start + d * clear
     land.z = 0.0
     apex = shi.z + 0.04  # the bottom of the actor stays above the support's highest point
-    n = max(12, round(0.5 * st.fps))
-    rise = n * 0.4
+    n = max(15, round(0.55 * st.fps))
+    rise, glide = round(n * 0.3), round(n * 0.65)  # frames: up / out at the apex / down
     style = beat.get("style", "normal")
     for k in range(n + 1):
         t = k / n
-        horiz = 0.0 if k <= rise else (k - rise) / (n - rise)
-        z = start.z + (apex - start.z) * min(1.0, k / rise) if k <= rise else apex + (land.z - apex) * horiz ** 2
-        pos = start.lerp(land, horiz)
+        if k <= rise:
+            out_d, z = 0.0, start.z + (apex - start.z) * math.sin(math.pi / 2 * k / rise)
+        elif k <= glide:
+            out_d, z = edge * (k - rise) / (glide - rise), apex
+        else:
+            u = (k - glide) / (n - glide)
+            out_d, z = edge + (clear - edge) * u, apex + (land.z - apex) * u * u
+        pos = start + d * out_d
         pos.z = z
         if style == "stagger":  # zero at the start: before its first key the actor holds that key's tilt
             rot = (math.radians(8 * math.sin(t * 6)), math.radians(6 * math.sin(t * 5)), o.rotation_euler.z)
@@ -165,6 +171,8 @@ def walk(beat, st):
     f0 = st.f(beat["at"])
     speed = g["step"] * g["steps_per_s"] or 0.3
     start = kit.loc_at(o, f0)  # where the moves before this one left it
+    if st.support.get(actor, "ground") == "ground":
+        start.z = 0.0  # on the ground, even if a hop's landing overlaps the walk's first frames
     face = kit.facing_vec(o)
     turn = math.atan2(face.x * d.y - face.y * d.x, face.dot(d))  # turn to face the way it walks
     base_rot = kit.rot_at(o, f0)

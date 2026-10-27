@@ -152,6 +152,11 @@ def test_fix_plan_gets_scene_length():
         llm.ask_ai = old
 
 
+def test_prompt_explains_stroke_angles():
+    text = opener_plan._tables_text()
+    assert "diagonal" in text and "edge-on" in text and "flat side" in text, text  # the live run chose "down" blindly
+
+
 if __name__ == "__main__":
     names = [n for n in sorted(globals()) if n.startswith("test_") and (len(sys.argv) < 2 or n in sys.argv[1:])]
     failed = 0
