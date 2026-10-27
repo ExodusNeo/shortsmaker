@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[key()_1]] - `calls` [EXTRACTED]
-- [[main()_3]] - `calls` [EXTRACTED]
+- [[main()_2]] - `calls` [EXTRACTED]
 - [[people_standin.py]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/math

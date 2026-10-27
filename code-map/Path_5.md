@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "paint_instead"
+community: "test_blender_run.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/paint_instead
+  - community/test_blender_runpy
 ---
 
 # Path
 
 ## Connections
-- [[to_vertical()]] - `references` [EXTRACTED]
+- [[drawn_short()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/paint_instead
+#graphify/code #graphify/EXTRACTED #community/test_blender_runpy

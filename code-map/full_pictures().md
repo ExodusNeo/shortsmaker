@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/picker.py"
 type: "code"
-community: "fetch"
+community: "scene_cues"
 location: "L204"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/fetch
+  - community/scene_cues
 ---
 
 # full_pictures()
@@ -18,4 +18,4 @@ tags:
 - [[picker.py]] - `contains` [EXTRACTED]
 - [[test_board_pictures_attached()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/fetch
+#graphify/code #graphify/EXTRACTED #community/scene_cues

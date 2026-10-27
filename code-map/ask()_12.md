@@ -1,18 +1,17 @@
 ---
-source_file: "tests/test_blender_plan.py"
+source_file: "tests/test_h3_handoff.py"
 type: "code"
-community: "default_build"
-location: "L87"
+community: "test_h3_handoff.py"
+location: "L24"
 tags:
   - graphify/code
-  - graphify/EXTRACTED
-  - community/default_build
+  - graphify/INFERRED
+  - community/test_h3_handoffpy
 ---
 
 # ask()
 
 ## Connections
-- [[plan()]] - `calls` [EXTRACTED]
-- [[test_plan_builds_retries_then_defaults()]] - `indirect_call` [INFERRED]
+- [[fake_ai()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/default_build
+#graphify/code #graphify/INFERRED #community/test_h3_handoffpy

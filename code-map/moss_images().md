@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[Paint on this PC with MOSS-Image in ComfyUI (owner's pick 2026-10-20 over SDXL-…]] - `rationale_for` [EXTRACTED]
-- [[Path]] - `references` [EXTRACTED]
+- [[Path_1]] - `references` [EXTRACTED]
 - [[comfy_call()]] - `calls` [EXTRACTED]
 - [[gpu.py]] - `contains` [EXTRACTED]
 - [[hashlib]] - `calls` [EXTRACTED]
@@ -21,7 +21,7 @@ tags:
 - [[json]] - `calls` [EXTRACTED]
 - [[moss_graph()]] - `calls` [EXTRACTED]
 - [[paint_instead()]] - `calls` [EXTRACTED]
-- [[render()_2]] - `calls` [EXTRACTED]
+- [[render()_5]] - `calls` [EXTRACTED]
 - [[subprocess]] - `calls` [EXTRACTED]
 - [[time]] - `calls` [EXTRACTED]
 

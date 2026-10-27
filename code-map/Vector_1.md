@@ -12,6 +12,7 @@ tags:
 
 ## Connections
 - [[_attach()]] - `references` [EXTRACTED]
+- [[_handle_first()]] - `references` [EXTRACTED]
 - [[_hold()]] - `references` [EXTRACTED]
 - [[_through()]] - `references` [EXTRACTED]
 

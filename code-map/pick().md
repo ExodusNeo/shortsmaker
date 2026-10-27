@@ -1,18 +1,17 @@
 ---
-source_file: "shortsmaker/blender_plan.py"
+source_file: "shortsmaker/audio_mix.py"
 type: "code"
-community: "test_blender_plan.py"
-location: "L29"
+community: "scene_cues"
+location: "L272"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_blender_planpy
+  - community/scene_cues
 ---
 
 # pick()
 
 ## Connections
-- [[blender_plan.py]] - `contains` [EXTRACTED]
-- [[clean_build()]] - `calls` [EXTRACTED]
+- [[sfx_events()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_blender_planpy
+#graphify/code #graphify/EXTRACTED #community/scene_cues

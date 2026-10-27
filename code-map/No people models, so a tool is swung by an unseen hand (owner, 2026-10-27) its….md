@@ -1,12 +1,12 @@
 ---
 source_file: "blender/opener_scene.py"
 type: "rationale"
-community: "opener_scene.py"
-location: "L413"
+community: "cut"
+location: "L430"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/opener_scenepy
+  - community/cut
 ---
 
 # No people models, so a tool is swung by an unseen hand (owner, 2026-10-27): its…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[hold_offscreen()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/opener_scenepy
+#graphify/rationale #graphify/EXTRACTED #community/cut

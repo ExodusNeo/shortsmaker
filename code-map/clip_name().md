@@ -12,7 +12,7 @@ tags:
 # clip_name()
 
 ## Connections
-- [[main()_8]] - `calls` [EXTRACTED]
+- [[main()_9]] - `calls` [EXTRACTED]
 - [[pack_people.py]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/pack_peoplepy

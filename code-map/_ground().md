@@ -2,7 +2,7 @@
 source_file: "blender/people.py"
 type: "code"
 community: "moves.py"
-location: "L226"
+location: "L296"
 tags:
   - graphify/code
   - graphify/EXTRACTED

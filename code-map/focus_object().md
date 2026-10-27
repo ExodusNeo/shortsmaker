@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[(part, exact) the part the Short is about, by the plan's spot; the gusset at…]] - `rationale_for` [EXTRACTED]
 - [[Bridge]] - `references` [EXTRACTED]
-- [[main()_5]] - `calls` [EXTRACTED]
+- [[main()_4]] - `calls` [EXTRACTED]
 - [[templates.py]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/main

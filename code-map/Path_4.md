@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "motion.py"
+community: "shutil"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/motionpy
+  - community/shutil
 ---
 
 # Path
@@ -17,4 +17,4 @@ tags:
 - [[preview_custom()]] - `references` [EXTRACTED]
 - [[preview_sheet()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/motionpy
+#graphify/code #graphify/EXTRACTED #community/shutil

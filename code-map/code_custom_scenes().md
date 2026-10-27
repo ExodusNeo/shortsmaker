@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/motion.py"
 type: "code"
-community: "motion.py"
+community: "shutil"
 location: "L128"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/motionpy
+  - community/shutil
 ---
 
 # code_custom_scenes()
@@ -28,4 +28,4 @@ tags:
 - [[test_fake_reaches_callers()]] - `calls` [EXTRACTED]
 - [[tsc_check()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/motionpy
+#graphify/code #graphify/EXTRACTED #community/shutil

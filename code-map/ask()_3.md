@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_full_scenes.py"
 type: "code"
-community: "test_full_scenes.py"
+community: "test_first_second.py"
 location: "L150"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/test_full_scenespy
+  - community/test_first_secondpy
 ---
 
 # ask()
@@ -18,4 +18,4 @@ tags:
 - [[test_review_uses_unused_pool_pictures_before_painting()]] - `indirect_call` [INFERRED]
 - [[test_rewrite_paint_prompts()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/INFERRED #community/test_full_scenespy
+#graphify/code #graphify/INFERRED #community/test_first_secondpy

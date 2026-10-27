@@ -1,12 +1,12 @@
 ---
 source_file: "blender/moves.py"
 type: "code"
-community: "moves.py"
+community: "cut"
 location: "L319"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/movespy
+  - community/cut
 ---
 
 # travel()
@@ -20,4 +20,4 @@ tags:
 - [[tree()]] - `calls` [EXTRACTED]
 - [[world_verts()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/movespy
+#graphify/code #graphify/EXTRACTED #community/cut

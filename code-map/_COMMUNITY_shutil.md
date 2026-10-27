@@ -1,11 +1,11 @@
 ---
 type: community
-members: 24
+members: 31
 ---
 
-# motion.py
+# shutil
 
-**Members:** 24 nodes
+**Members:** 31 nodes
 
 ## Members
 - [[Extract clean TypeScriptReact code exporting Custom{slot} from an AI reply.]] - rationale - shortsmaker/motion.py
@@ -13,6 +13,7 @@ members: 24
 - [[Guaranteed-valid Remotion component for slot 0..3 if the AI coder fails or…]] - rationale - shortsmaker/motion.py
 - [[Motion Graphics Agent writes bespoke ReactSVG Remotion code for each `type…]] - rationale - shortsmaker/motion.py
 - [[Path_4]] - code
+- [[Render one full-screen motion graphic test scene through the real Short…]] - rationale - tests/render_full.py
 - [[Renders just this custom scene small (its pictures are already in…]] - rationale - shortsmaker/motion.py
 - [[Renders seconds start..end of a small Short (`props`; its pictures already in…]] - rationale - shortsmaker/motion.py
 - [[Rule breaks a compiler can't see in an AI-coded custom scene (see…]] - rationale - shortsmaker/motion.py
@@ -26,35 +27,50 @@ members: 24
 - [[fallback_custom_tsx()]] - code - shortsmaker/motion.py
 - [[lint_custom_code()]] - code - shortsmaker/motion.py
 - [[look_and_fix()]] - code - shortsmaker/motion.py
+- [[main()]] - code - tests/render_full.py
 - [[motion.py]] - code - shortsmaker/motion.py
 - [[preview_custom()]] - code - shortsmaker/motion.py
 - [[preview_sheet()]] - code - shortsmaker/motion.py
+- [[props_for()]] - code - tests/render_full.py
 - [[redraw_custom()]] - code - shortsmaker/remotion_render.py
+- [[render_full.py]] - code - tests/render_full.py
+- [[shutil]] - concept
+- [[test_code_custom_scenes_fallback()]] - code - tests/test_full_scenes.py
 - [[test_fallback_custom_is_clean()]] - code - tests/test_full_scenes.py
+- [[test_lint_custom_code()]] - code - tests/test_full_scenes.py
 - [[tsc_check()]] - code - shortsmaker/motion.py
 
 ## Live Query (requires Dataview plugin)
 
 ```dataview
-TABLE source_file, type FROM #community/motionpy
+TABLE source_file, type FROM #community/shutil
 SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 15 edges to [[_COMMUNITY_json]]
-- 10 edges to [[_COMMUNITY_pathlib]]
-- 9 edges to [[_COMMUNITY_test_full_scenes.py]]
-- 5 edges to [[_COMMUNITY_ask_ai]]
+- 33 edges to [[_COMMUNITY_test_full_scenes.py]]
+- 9 edges to [[_COMMUNITY_json]]
+- 9 edges to [[_COMMUNITY_test_style.py]]
+- 6 edges to [[_COMMUNITY_ask_ai]]
+- 4 edges to [[_COMMUNITY_scene_cues]]
+- 3 edges to [[_COMMUNITY_render_remotion]]
+- 3 edges to [[_COMMUNITY_sys]]
+- 2 edges to [[_COMMUNITY_test_first_second.py]]
+- 2 edges to [[_COMMUNITY_first_second_check]]
+- 2 edges to [[_COMMUNITY_h3_run.py]]
+- 2 edges to [[_COMMUNITY_test_opener_render.py]]
 - 2 edges to [[_COMMUNITY_render]]
-- 1 edge to [[_COMMUNITY_render_remotion]]
-- 1 edge to [[_COMMUNITY_invent_component]]
-- 1 edge to [[_COMMUNITY_style_library]]
+- 1 edge to [[_COMMUNITY_ffmpeg]]
+- 1 edge to [[_COMMUNITY_write_scripts]]
 - 1 edge to [[_COMMUNITY_paint_instead]]
-- 1 edge to [[_COMMUNITY_test_style.py]]
+- 1 edge to [[_COMMUNITY_use_picture_from]]
+- 1 edge to [[_COMMUNITY_log_short]]
+- 1 edge to [[_COMMUNITY_review]]
+- 1 edge to [[_COMMUNITY_gpu.py]]
 
 ## Top bridge nodes
+- [[shutil]] - degree 42, connects to 17 communities
 - [[motion.py]] - degree 29, connects to 6 communities
-- [[code_custom_scenes()]] - degree 15, connects to 4 communities
 - [[preview_sheet()]] - degree 9, connects to 4 communities
 - [[redraw_custom()]] - degree 9, connects to 4 communities
-- [[tsc_check()]] - degree 7, connects to 3 communities
+- [[code_custom_scenes()]] - degree 15, connects to 3 communities

@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[Download `hit` through the owner's Blender into the library (the .blend,…]] - `rationale_for` [EXTRACTED]
-- [[Path_21]] - `references` [EXTRACTED]
+- [[Path_20]] - `references` [EXTRACTED]
 - [[attribution()]] - `calls` [EXTRACTED]
 - [[blender_link.py]] - `contains` [EXTRACTED]
 - [[call()_1]] - `calls` [EXTRACTED]

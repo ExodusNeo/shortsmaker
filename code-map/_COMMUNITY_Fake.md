@@ -23,7 +23,7 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 1 edge to [[_COMMUNITY_test_blender_link.py]]
+- 1 edge to [[_COMMUNITY_sys]]
 - 1 edge to [[_COMMUNITY_blender_link.py]]
 
 ## Top bridge nodes

@@ -12,7 +12,7 @@ tags:
 # test_director_prompt_lists_library()
 
 ## Connections
-- [[plan_with()]] - `calls` [EXTRACTED]
+- [[plan_with()_1]] - `calls` [EXTRACTED]
 - [[style_library()]] - `calls` [EXTRACTED]
 - [[test_style.py]] - `contains` [EXTRACTED]
 

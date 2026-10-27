@@ -12,7 +12,7 @@ tags:
 # body()
 
 ## Connections
-- [[main()_3]] - `calls` [EXTRACTED]
+- [[main()_2]] - `calls` [EXTRACTED]
 - [[part()]] - `calls` [EXTRACTED]
 - [[people_standin.py]] - `contains` [EXTRACTED]
 

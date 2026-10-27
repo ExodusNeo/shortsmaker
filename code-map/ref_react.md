@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "skinOf"
+community: "toolkit.tsx"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/skinOf
+  - community/toolkittsx
 ---
 
 # ref_react
@@ -36,4 +36,4 @@ tags:
 - [[styletypes.ts]] - `imports_from` [EXTRACTED]
 - [[toolkit.tsx]] - `imports_from` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/skinOf
+#graphify/concept #graphify/EXTRACTED #community/toolkittsx

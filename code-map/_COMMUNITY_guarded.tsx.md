@@ -22,7 +22,7 @@ members: 38
 - [[SIDES]] - code - remotion/src/full/guarded.tsx
 - [[Side]] - code - remotion/src/full/guarded.tsx
 - [[boxAt()]] - code - remotion/src/full/guarded.tsx
-- [[clamp_4]] - code - remotion/src/full/guarded.tsx
+- [[clamp_5]] - code - remotion/src/full/guarded.tsx
 - [[crosses()]] - code - tests/guarded.test.ts
 - [[fitCard()]] - code - remotion/src/full/guarded.tsx
 - [[guarded.test.ts]] - code - tests/guarded.test.ts
@@ -55,12 +55,13 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 38 edges to [[_COMMUNITY_skinOf]]
-- 16 edges to [[_COMMUNITY_toolkit.tsx]]
-- 1 edge to [[_COMMUNITY_fulltypes.ts]]
+- 41 edges to [[_COMMUNITY_toolkit.tsx]]
+- 12 edges to [[_COMMUNITY_Paper]]
+- 1 edge to [[_COMMUNITY_BigNumber.tsx]]
+- 1 edge to [[_COMMUNITY_Short.tsx]]
 
 ## Top bridge nodes
-- [[guarded.tsx]] - degree 32, connects to 3 communities
+- [[guarded.tsx]] - degree 32, connects to 4 communities
 - [[ExampleEvidence.tsx]] - degree 26, connects to 2 communities
 - [[ExampleChain.tsx]] - degree 23, connects to 2 communities
 - [[ExampleEvidence()]] - degree 13, connects to 2 communities

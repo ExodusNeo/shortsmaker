@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_blender_run.py"
 type: "code"
-community: "test_full_scenes.py"
+community: "json"
 location: "L142"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_full_scenespy
+  - community/json
 ---
 
 # test_fix_bat_explains_a_drawn_short()
@@ -15,4 +15,4 @@ tags:
 - [[fix_short()]] - `calls` [EXTRACTED]
 - [[test_blender_run.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_full_scenespy
+#graphify/code #graphify/EXTRACTED #community/json

@@ -1,18 +1,18 @@
 ---
 source_file: "shortsmaker/style_lab.py"
 type: "code"
-community: "invent_component"
+community: "test_style.py"
 location: "L140"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/invent_component
+  - community/test_stylepy
 ---
 
 # invent_component()
 
 ## Connections
-- [[Path_13]] - `references` [EXTRACTED]
+- [[Path_29]] - `references` [EXTRACTED]
 - [[The AI invents a new style component (`spec` = {title, brief, fallback}) for…]] - `rationale_for` [EXTRACTED]
 - [[ask_ai()]] - `calls` [EXTRACTED]
 - [[attempt()]] - `contains` [EXTRACTED]
@@ -30,4 +30,4 @@ tags:
 - [[test_invention_lint_failure_uses_fallback()]] - `calls` [EXTRACTED]
 - [[test_invention_passes_into_slot()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/invent_component
+#graphify/code #graphify/EXTRACTED #community/test_stylepy

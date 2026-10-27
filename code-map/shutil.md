@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "json"
+community: "shutil"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/json
+  - community/shutil
 ---
 
 # shutil
@@ -21,9 +21,9 @@ tags:
 - [[invent_component()]] - `calls` [EXTRACTED]
 - [[llm.py]] - `imports` [EXTRACTED]
 - [[logbook.py]] - `imports` [EXTRACTED]
-- [[main()_4]] - `calls` [EXTRACTED]
-- [[main()_6]] - `calls` [EXTRACTED]
-- [[main()_7]] - `calls` [EXTRACTED]
+- [[main()_3]] - `calls` [EXTRACTED]
+- [[main()_8]] - `calls` [EXTRACTED]
+- [[main()]] - `calls` [EXTRACTED]
 - [[motion.py]] - `imports` [EXTRACTED]
 - [[opener_render.py]] - `imports` [EXTRACTED]
 - [[paint_instead()]] - `calls` [EXTRACTED]
@@ -33,7 +33,7 @@ tags:
 - [[prune_work()]] - `calls` [EXTRACTED]
 - [[reject_candidate()]] - `calls` [EXTRACTED]
 - [[remotion_render.py]] - `imports` [EXTRACTED]
-- [[render()_2]] - `calls` [EXTRACTED]
+- [[render()_5]] - `calls` [EXTRACTED]
 - [[render_full.py]] - `imports` [EXTRACTED]
 - [[render_opener()]] - `calls` [EXTRACTED]
 - [[render_remotion()]] - `calls` [EXTRACTED]
@@ -54,4 +54,4 @@ tags:
 - [[write_scripts()]] - `calls` [EXTRACTED]
 - [[writing.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/json
+#graphify/concept #graphify/EXTRACTED #community/shutil

@@ -10,8 +10,8 @@ members: 20
 ## Members
 - [[A finished Short's work in miniature grey pictures, a see-through graphics…]] - rationale - tests/test_edit_project.py
 - [[A re-render with nothing left to fix an old timeline would no longer match the…]] - rationale - shortsmaker/edit_project.py
-- [[Path_1]] - code
 - [[Path_2]] - code
+- [[Path_3]] - code
 - [[The video tracks bottom-up (pictures, then graphics drawn over them), each cut…]] - rationale - shortsmaker/edit_project.py
 - [[caption_layer()]] - code - shortsmaker/edit_project.py
 - [[chain()]] - code - shortsmaker/edit_project.py
@@ -37,13 +37,13 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 11 edges to [[_COMMUNITY_pathlib]]
-- 4 edges to [[_COMMUNITY_render]]
-- 2 edges to [[_COMMUNITY_json]]
+- 12 edges to [[_COMMUNITY_test_full_scenes.py]]
+- 3 edges to [[_COMMUNITY_ffmpeg]]
+- 2 edges to [[_COMMUNITY_render]]
 
 ## Top bridge nodes
 - [[make()]] - degree 9, connects to 2 communities
-- [[project_xml()]] - degree 8, connects to 2 communities
-- [[master_gain()]] - degree 6, connects to 2 communities
 - [[short_folder()]] - degree 6, connects to 2 communities
 - [[caption_layer()]] - degree 5, connects to 2 communities
+- [[remove()]] - degree 5, connects to 2 communities
+- [[test_melt_plays_it_with_the_captions_on_top()]] - degree 5, connects to 2 communities

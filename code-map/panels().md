@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/blender_plan.py"
 type: "code"
-community: "panels"
+community: "test_blender_scene.py"
 location: "L40"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/panels
+  - community/test_blender_scenepy
 ---
 
 # panels()
@@ -16,4 +16,4 @@ tags:
 - [[blender_plan.py]] - `contains` [EXTRACTED]
 - [[clean_build()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/panels
+#graphify/code #graphify/EXTRACTED #community/test_blender_scenepy

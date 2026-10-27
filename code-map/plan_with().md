@@ -1,23 +1,29 @@
 ---
-source_file: "tests/test_style.py"
+source_file: "tests/test_blender_scene.py"
 type: "code"
-community: "test_style.py"
-location: "L106"
+community: "test_blender_scene.py"
+location: "L51"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_stylepy
+  - community/test_blender_scenepy
 ---
 
 # plan_with()
 
 ## Connections
-- [[ask()_9]] - `indirect_call` [INFERRED]
-- [[owner()]] - `calls` [EXTRACTED]
-- [[test_director_inventions_are_kept_with_a_spec()]] - `calls` [EXTRACTED]
-- [[test_director_prompt_lists_library()]] - `calls` [EXTRACTED]
-- [[test_style.py]] - `contains` [EXTRACTED]
-- [[write_scripts with every AInetwork step faked; the director answers…]] - `rationale_for` [EXTRACTED]
-- [[write_scripts()]] - `calls` [EXTRACTED]
+- [[after()]] - `calls` [EXTRACTED]
+- [[default_build()]] - `calls` [EXTRACTED]
+- [[peak()]] - `calls` [EXTRACTED]
+- [[scene2()]] - `calls` [EXTRACTED]
+- [[test_a_failing_pier_falls_with_its_red_copy()]] - `calls` [EXTRACTED]
+- [[test_blender_scene.py]] - `contains` [EXTRACTED]
+- [[test_bridge_stands_until_the_build_starts_over()]] - `calls` [EXTRACTED]
+- [[test_every_template_renders()]] - `calls` [EXTRACTED]
+- [[test_hook_keeps_the_part_in_view()]] - `calls` [EXTRACTED]
+- [[test_label_only_on_the_part_it_names()]] - `calls` [EXTRACTED]
+- [[test_scale_and_rail_deck_are_drawn()]] - `calls` [EXTRACTED]
+- [[test_truss_build_and_zoom_frames()]] - `calls` [EXTRACTED]
+- [[test_zoom_after_the_collapse_finds_the_fallen_part()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_stylepy
+#graphify/code #graphify/EXTRACTED #community/test_blender_scenepy

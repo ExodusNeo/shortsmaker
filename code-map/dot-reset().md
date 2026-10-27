@@ -15,6 +15,6 @@ tags:
 - [[Back to whole the story after the hook starts from the beginning.]] - `rationale_for` [EXTRACTED]
 - [[Failure]] - `method` [EXTRACTED]
 - [[key()_2]] - `calls` [EXTRACTED]
-- [[main()_5]] - `calls` [INFERRED]
+- [[main()_4]] - `calls` [INFERRED]
 
 #graphify/code #graphify/EXTRACTED #community/main

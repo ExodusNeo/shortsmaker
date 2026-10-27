@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/frame_render.py"
 type: "rationale"
-community: "ClipReader"
+community: "frame_render.py"
 location: "L187"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/ClipReader
+  - community/frame_renderpy
 ---
 
 # Pop the card in with a slight overshoot over a dimmed background, then shrink…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[draw_card()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/ClipReader
+#graphify/rationale #graphify/EXTRACTED #community/frame_renderpy

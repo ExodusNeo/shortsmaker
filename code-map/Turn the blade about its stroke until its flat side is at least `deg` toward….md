@@ -1,12 +1,12 @@
 ---
 source_file: "blender/moves.py"
 type: "rationale"
-community: "moves.py"
+community: "cut"
 location: "L579"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/movespy
+  - community/cut
 ---
 
 # Turn the blade about its stroke until its flat side is at least `deg` toward…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[show_face()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/movespy
+#graphify/rationale #graphify/EXTRACTED #community/cut

@@ -1,22 +1,22 @@
 ---
 source_file: "shortsmaker/media_tools.py"
 type: "code"
-community: "pathlib"
+community: "ffmpeg"
 location: "L22"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/pathlib
+  - community/ffmpeg
 ---
 
 # duration()
 
 ## Connections
-- [[Path_3]] - `references` [EXTRACTED]
+- [[Path]] - `references` [EXTRACTED]
 - [[log_short()]] - `calls` [EXTRACTED]
 - [[media_tools.py]] - `contains` [EXTRACTED]
 - [[nasa_films()]] - `calls` [EXTRACTED]
-- [[render()_2]] - `calls` [EXTRACTED]
+- [[render()_5]] - `calls` [EXTRACTED]
 - [[render_remotion()]] - `calls` [EXTRACTED]
 - [[shot_span()]] - `calls` [EXTRACTED]
 - [[split_takes()]] - `calls` [EXTRACTED]
@@ -26,4 +26,4 @@ tags:
 - [[test_render_clips_makes_one_clip_per_scene()]] - `calls` [EXTRACTED]
 - [[test_success_returns_clip()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/pathlib
+#graphify/code #graphify/EXTRACTED #community/ffmpeg

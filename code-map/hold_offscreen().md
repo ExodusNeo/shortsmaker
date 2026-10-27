@@ -1,12 +1,12 @@
 ---
 source_file: "blender/opener_scene.py"
 type: "code"
-community: "opener_scene.py"
-location: "L412"
+community: "cut"
+location: "L429"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/opener_scenepy
+  - community/cut
 ---
 
 # hold_offscreen()
@@ -21,4 +21,4 @@ tags:
 - [[main()_10]] - `calls` [EXTRACTED]
 - [[opener_scene.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/opener_scenepy
+#graphify/code #graphify/EXTRACTED #community/cut

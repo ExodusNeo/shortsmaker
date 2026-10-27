@@ -1,17 +1,18 @@
 ---
-source_file: "tests/test_blender_run.py"
+source_file: "blender/opener_scene.py"
 type: "code"
-community: "json"
-location: "L88"
+community: "opener_scene.py"
+location: "L418"
 tags:
   - graphify/code
-  - graphify/INFERRED
-  - community/json
+  - graphify/EXTRACTED
+  - community/opener_scenepy
 ---
 
 # render()
 
 ## Connections
-- [[test_blender_failure_is_reported_and_the_batch_goes_on()]] - `indirect_call` [INFERRED]
+- [[main()_10]] - `calls` [EXTRACTED]
+- [[opener_scene.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/json
+#graphify/code #graphify/EXTRACTED #community/opener_scenepy

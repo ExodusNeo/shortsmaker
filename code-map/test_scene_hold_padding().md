@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_package.py"
 type: "code"
-community: "test_blender_render.py"
+community: "scene_cues"
 location: "L180"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_blender_renderpy
+  - community/scene_cues
 ---
 
 # test_scene_hold_padding()
@@ -15,4 +15,4 @@ tags:
 - [[scene_cues()]] - `calls` [EXTRACTED]
 - [[test_package.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_blender_renderpy
+#graphify/code #graphify/EXTRACTED #community/scene_cues

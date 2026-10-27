@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/gpu.py"
 type: "rationale"
-community: "test_h3_handoff.py"
+community: "gpu.py"
 location: "L436"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/test_h3_handoffpy
+  - community/gpupy
 ---
 
 # Unpack scene<N>.mp4/.mov/.webm from folder/clips*.zip (the Colab notebook's…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[unpack_clips()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/test_h3_handoffpy
+#graphify/rationale #graphify/EXTRACTED #community/gpupy

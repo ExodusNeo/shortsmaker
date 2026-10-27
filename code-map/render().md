@@ -1,19 +1,17 @@
 ---
-source_file: "shortsmaker/remotion_render.py"
+source_file: "tests/test_blender_run.py"
 type: "code"
-community: "render_remotion"
-location: "L203"
+community: "test_blender_run.py"
+location: "L88"
 tags:
   - graphify/code
-  - graphify/EXTRACTED
-  - community/render_remotion
+  - graphify/INFERRED
+  - community/test_blender_runpy
 ---
 
 # render()
 
 ## Connections
-- [[remotion()]] - `calls` [EXTRACTED]
-- [[render_remotion()]] - `indirect_call` [INFERRED]
-- [[run_remotion_with_fallback()]] - `calls` [EXTRACTED]
+- [[test_blender_failure_is_reported_and_the_batch_goes_on()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/render_remotion
+#graphify/code #graphify/INFERRED #community/test_blender_runpy

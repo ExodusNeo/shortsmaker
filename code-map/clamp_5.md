@@ -1,17 +1,17 @@
 ---
-source_file: "remotion/src/full/Journey.tsx"
+source_file: "remotion/src/full/guarded.tsx"
 type: "code"
-community: "Journey.tsx"
-location: "L27"
+community: "guarded.tsx"
+location: "L17"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Journeytsx
+  - community/guardedtsx
 ---
 
 # clamp
 
 ## Connections
-- [[Journey.tsx]] - `contains` [EXTRACTED]
+- [[guarded.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Journeytsx
+#graphify/code #graphify/EXTRACTED #community/guardedtsx

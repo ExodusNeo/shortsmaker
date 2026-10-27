@@ -1,18 +1,18 @@
 ---
 source_file: "shortsmaker/gpu.py"
 type: "code"
-community: "test_h3_handoff.py"
+community: "gpu.py"
 location: "L435"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_h3_handoffpy
+  - community/gpupy
 ---
 
 # unpack_clips()
 
 ## Connections
-- [[Path]] - `references` [EXTRACTED]
+- [[Path_1]] - `references` [EXTRACTED]
 - [[Unpack sceneN.mp4.mov.webm from folderclips.zip (the Colab notebook's…]] - `rationale_for` [EXTRACTED]
 - [[gpu.py]] - `contains` [EXTRACTED]
 - [[re]] - `calls` [EXTRACTED]
@@ -23,4 +23,4 @@ tags:
 - [[veo_handoff()]] - `calls` [EXTRACTED]
 - [[zipfile]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_h3_handoffpy
+#graphify/code #graphify/EXTRACTED #community/gpupy

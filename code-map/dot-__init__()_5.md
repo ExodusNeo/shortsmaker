@@ -1,17 +1,18 @@
 ---
-source_file: "blender/build_scene.py"
+source_file: "blender/moves.py"
 type: "code"
-community: "Shots"
-location: "L44"
+community: "cut"
+location: "L29"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Shots
+  - community/cut
 ---
 
 # .__init__()
 
 ## Connections
-- [[Shots]] - `method` [EXTRACTED]
+- [[State]] - `method` [EXTRACTED]
+- [[Vector_4]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Shots
+#graphify/code #graphify/EXTRACTED #community/cut

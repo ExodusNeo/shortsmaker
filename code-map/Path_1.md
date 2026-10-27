@@ -1,20 +1,27 @@
 ---
 source_file: ""
 type: "code"
-community: "make"
+community: "gpu.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/make
+  - community/gpupy
 ---
 
 # Path
 
 ## Connections
-- [[caption_layer()]] - `references` [EXTRACTED]
-- [[make()]] - `references` [EXTRACTED]
-- [[master_gain()]] - `references` [EXTRACTED]
-- [[project_xml()]] - `references` [EXTRACTED]
-- [[remove()]] - `references` [EXTRACTED]
+- [[cover_crop()]] - `references` [EXTRACTED]
+- [[cut_owner_clip()]] - `references` [EXTRACTED]
+- [[gemini_images()]] - `references` [EXTRACTED]
+- [[h3_prompts()]] - `references` [EXTRACTED]
+- [[local_clips()]] - `references` [EXTRACTED]
+- [[local_job()]] - `references` [EXTRACTED]
+- [[local_voice()]] - `references` [EXTRACTED]
+- [[moss_images()]] - `references` [EXTRACTED]
+- [[split_takes()]] - `references` [EXTRACTED]
+- [[start_picture_problems()]] - `references` [EXTRACTED]
+- [[unpack_clips()]] - `references` [EXTRACTED]
+- [[veo_handoff()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/make
+#graphify/code #graphify/EXTRACTED #community/gpupy

@@ -1,8 +1,8 @@
 ---
-source_file: "remotion/src/MapCard.tsx"
+source_file: "remotion/src/Graphics.tsx"
 type: "code"
 community: "Graphics.tsx"
-location: "L16"
+location: "L7"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,6 +12,6 @@ tags:
 # clamp
 
 ## Connections
-- [[MapCard.tsx]] - `contains` [EXTRACTED]
+- [[Graphics.tsx]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Graphicstsx

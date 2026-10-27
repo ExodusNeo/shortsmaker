@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/style/types.ts"
 type: "code"
-community: "style/index.ts"
+community: "Halftone.tsx"
 location: "L10"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/style/indexts
+  - community/Halftonetsx
 ---
 
 # Look
@@ -23,4 +23,4 @@ tags:
 - [[styleindex.ts]] - `imports` [EXTRACTED]
 - [[styletypes.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/style/indexts
+#graphify/code #graphify/EXTRACTED #community/Halftonetsx

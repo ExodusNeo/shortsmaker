@@ -23,7 +23,7 @@ SORT file.name ASC
 - 1 edge to [[_COMMUNITY_blender_link.py]]
 - 1 edge to [[_COMMUNITY_test_opener_render.py]]
 - 1 edge to [[_COMMUNITY_json]]
-- 1 edge to [[_COMMUNITY_pathlib]]
+- 1 edge to [[_COMMUNITY_test_full_scenes.py]]
 
 ## Top bridge nodes
 - [[pick_model()]] - degree 6, connects to 5 communities

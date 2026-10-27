@@ -12,7 +12,7 @@ tags:
 # caption_layer()
 
 ## Connections
-- [[Path_1]] - `references` [EXTRACTED]
+- [[Path_2]] - `references` [EXTRACTED]
 - [[edit_project.py]] - `contains` [EXTRACTED]
 - [[ffmpeg()]] - `calls` [EXTRACTED]
 - [[make()]] - `calls` [EXTRACTED]

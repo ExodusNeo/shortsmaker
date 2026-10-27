@@ -1,37 +1,36 @@
 ---
 type: community
-members: 44
+members: 42
 ---
 
 # test_story.py
 
-**Members:** 44 nodes
+**Members:** 42 nodes
 
 ## Members
 - [[Before any script is written each topic's twist against its Wikipedia text.…]] - rationale - shortsmaker/writing.py
 - [[Caption words (as written, punctuation attached) with the a-z words the aligner…]] - rationale - local_ai/qwen_voice.py
+- [[CosyVoice 3 in VoiceStudio (owner's pick 2026-10-20) aiden's voice cloned from…]] - rationale - local_ai/qwen_voice.py
 - [[Full spoken string for TTS synthesis, with punctuation attached cleanly.]] - rationale - local_ai/qwen_voice.py
 - [[How a narrator reads a number token 1932 - nineteen thirty-two, 20,000 -…]] - rationale - local_ai/qwen_voice.py
+- [[Local voice worker for ShortsMaker CosyVoice 3 through VoiceStudio (items with…]] - rationale - local_ai/qwen_voice.py
 - [[Pair each whitespace token in `text` with how the narrator says it, moving…]] - rationale - local_ai/qwen_voice.py
-- [[Runs of scenes that together make whole sentences. A sentence may run across…]] - rationale - shortsmaker/gpu.py
 - [[Tests for how stories are told (2026-10-22) one voice take per sentence cut…]] - rationale - tests/test_story.py
 - [[The checkable story rules (STORY_RULES) the answer comes last, no line opens…]] - rationale - shortsmaker/writing.py
 - [[Word matching for the Qwen voice's captions (no GPU, no models). Run…]] - rationale - tests/test_qwen_voice.py
-- [[add()]] - code - tests/render_style.py
+- [[align()]] - code - local_ai/qwen_voice.py
 - [[align_words()]] - code - local_ai/qwen_voice.py
-- [[build()_1]] - code - tests/render_style.py
 - [[check_twists()]] - code - shortsmaker/writing.py
 - [[fake()]] - code - tests/test_story.py
-- [[main()_2]] - code - tests/render_style.py
 - [[one()_1]] - code - local_ai/qwen_voice.py
+- [[qwen_voice.py]] - code - local_ai/qwen_voice.py
 - [[say_number()]] - code - local_ai/qwen_voice.py
 - [[scenes()]] - code - tests/test_story.py
-- [[sentence_groups()]] - code - shortsmaker/gpu.py
 - [[speak()]] - code - local_ai/qwen_voice.py
 - [[spoken_sentence()]] - code - local_ai/qwen_voice.py
 - [[spoken_tokens()]] - code - local_ai/qwen_voice.py
 - [[story_problems()]] - code - shortsmaker/writing.py
-- [[test_a_take_is_cut_between_the_scenes_words()]] - code - tests/test_story.py
+- [[studio_speak()]] - code - local_ai/qwen_voice.py
 - [[test_caption_word_counts_match_the_scene_splitter()]] - code - tests/test_qwen_voice.py
 - [[test_caption_words_keep_what_is_written()]] - code - tests/test_qwen_voice.py
 - [[test_dollar_scale_word_order()]] - code - tests/test_qwen_voice.py
@@ -49,7 +48,6 @@ members: 44
 - [[test_twist_check_keeps_topics_on_null_or_bad_replies()]] - code - tests/test_story.py
 - [[test_twist_check_needs_wikipedia_text()]] - code - tests/test_story.py
 - [[test_twist_check_rewrites_a_legend_before_writing()]] - code - tests/test_story.py
-- [[test_word_counts_match_the_aligner()]] - code - tests/test_story.py
 - [[test_writer_prompt_has_the_story_rules_and_cut_rule()]] - code - tests/test_story.py
 - [[twist_short()]] - code - tests/test_story.py
 
@@ -61,21 +59,20 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 18 edges to [[_COMMUNITY_json]]
-- 14 edges to [[_COMMUNITY_gpu.py]]
-- 4 edges to [[_COMMUNITY_pathlib]]
-- 2 edges to [[_COMMUNITY_edit_scripts]]
-- 2 edges to [[_COMMUNITY_test_blender_link.py]]
+- 18 edges to [[_COMMUNITY_test_full_scenes.py]]
+- 6 edges to [[_COMMUNITY_ffmpeg]]
+- 6 edges to [[_COMMUNITY_json]]
+- 6 edges to [[_COMMUNITY_sys]]
+- 3 edges to [[_COMMUNITY_write_scripts]]
 - 1 edge to [[_COMMUNITY_test_rules.py]]
-- 1 edge to [[_COMMUNITY_write_scripts]]
-- 1 edge to [[_COMMUNITY_render]]
 - 1 edge to [[_COMMUNITY_ask_ai]]
-- 1 edge to [[_COMMUNITY_style_library]]
 - 1 edge to [[_COMMUNITY_test_h3_handoff.py]]
+- 1 edge to [[_COMMUNITY_gpu.py]]
+- 1 edge to [[_COMMUNITY_test_style.py]]
 
 ## Top bridge nodes
-- [[test_story.py]] - degree 29, connects to 4 communities
-- [[test_qwen_voice.py]] - degree 10, connects to 3 communities
-- [[check_twists()]] - degree 8, connects to 3 communities
-- [[test_a_take_is_cut_between_the_scenes_words()]] - degree 5, connects to 3 communities
+- [[test_story.py]] - degree 29, connects to 5 communities
+- [[qwen_voice.py]] - degree 18, connects to 5 communities
+- [[check_twists()]] - degree 8, connects to 4 communities
+- [[scenes()]] - degree 5, connects to 3 communities
 - [[align_words()]] - degree 10, connects to 2 communities

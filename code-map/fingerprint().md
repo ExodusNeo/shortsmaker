@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/opener_render.py"
 type: "code"
-community: "pathlib"
+community: "test_full_scenes.py"
 location: "L95"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/pathlib
+  - community/test_full_scenespy
 ---
 
 # fingerprint()
@@ -17,4 +17,4 @@ tags:
 - [[opener_render.py]] - `contains` [EXTRACTED]
 - [[render_opener()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/pathlib
+#graphify/code #graphify/EXTRACTED #community/test_full_scenespy

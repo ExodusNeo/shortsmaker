@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_blender_run.py"
 type: "code"
-community: "json"
+community: "test_blender_run.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/json
+  - community/test_blender_runpy
 ---
 
 # test_blender_run.py
@@ -45,4 +45,4 @@ tags:
 - [[traceback]] - `imports` [EXTRACTED]
 - [[writing.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/json
+#graphify/code #graphify/EXTRACTED #community/test_blender_runpy

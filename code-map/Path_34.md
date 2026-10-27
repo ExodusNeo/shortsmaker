@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "srt"
+community: "render"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/srt
+  - community/render
 ---
 
 # Path
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[srt()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/srt
+#graphify/code #graphify/EXTRACTED #community/render

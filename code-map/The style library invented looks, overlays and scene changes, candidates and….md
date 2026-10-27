@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/style_lab.py"
 type: "rationale"
-community: "json"
+community: "test_style.py"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/json
+  - community/test_stylepy
 ---
 
 # The style library: invented looks, overlays and scene changes, candidates and…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[style_lab.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/json
+#graphify/rationale #graphify/EXTRACTED #community/test_stylepy

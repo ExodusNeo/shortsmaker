@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "json"
+community: "sys"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/json
+  - community/sys
 ---
 
 # sys
@@ -52,4 +52,4 @@ tags:
 - [[test_story.py]] - `imports` [EXTRACTED]
 - [[test_style.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/json
+#graphify/concept #graphify/EXTRACTED #community/sys

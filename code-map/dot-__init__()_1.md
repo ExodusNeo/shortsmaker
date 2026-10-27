@@ -1,17 +1,17 @@
 ---
 source_file: "tests/test_pictures_first.py"
 type: "code"
-community: "planning"
-location: "L199"
+community: "fake_ai"
+location: "L114"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/planning
+  - community/fake_ai
 ---
 
 # .__init__()
 
 ## Connections
-- [[planning]] - `method` [EXTRACTED]
+- [[fake_ai]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/planning
+#graphify/code #graphify/EXTRACTED #community/fake_ai

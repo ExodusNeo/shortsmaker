@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "math"
+community: "ask_ai"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/math
+  - community/ask_ai
 ---
 
 # Path
 
 ## Connections
-- [[main()_3]] - `references` [EXTRACTED]
+- [[mark_details()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/math
+#graphify/code #graphify/EXTRACTED #community/ask_ai

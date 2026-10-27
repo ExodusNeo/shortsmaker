@@ -1,17 +1,17 @@
 ---
-source_file: "remotion/src/full/BigNumber.tsx"
+source_file: "remotion/src/full/Journey.tsx"
 type: "code"
-community: "full/types.ts"
-location: "L7"
+community: "Journey.tsx"
+location: "L27"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/full/typests
+  - community/Journeytsx
 ---
 
 # clamp
 
 ## Connections
-- [[BigNumber.tsx]] - `contains` [EXTRACTED]
+- [[Journey.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/full/typests
+#graphify/code #graphify/EXTRACTED #community/Journeytsx

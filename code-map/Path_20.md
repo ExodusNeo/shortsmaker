@@ -1,20 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: "audio_mix.py"
+community: "blender_link.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/audio_mixpy
+  - community/blender_linkpy
 ---
 
 # Path
 
 ## Connections
-- [[captions()]] - `references` [EXTRACTED]
-- [[music_gain()]] - `references` [EXTRACTED]
-- [[speak()_1]] - `references` [EXTRACTED]
-- [[story_sound()]] - `references` [EXTRACTED]
-- [[tts()_1]] - `references` [EXTRACTED]
+- [[credit()]] - `references` [EXTRACTED]
+- [[fetch_model()]] - `references` [EXTRACTED]
+- [[in_library()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/audio_mixpy
+#graphify/code #graphify/EXTRACTED #community/blender_linkpy

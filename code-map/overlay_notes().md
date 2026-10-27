@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/review.py"
 type: "code"
-community: "render"
+community: "first_second_check"
 location: "L52"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/render
+  - community/first_second_check
 ---
 
 # overlay_notes()
@@ -17,4 +17,4 @@ tags:
 - [[review.py]] - `contains` [EXTRACTED]
 - [[visual_review()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/render
+#graphify/code #graphify/EXTRACTED #community/first_second_check

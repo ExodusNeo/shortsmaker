@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/motion.py"
 type: "rationale"
-community: "motion.py"
+community: "shutil"
 location: "L86"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/motionpy
+  - community/shutil
 ---
 
 # Guaranteed-valid Remotion component for slot 0..3 if the AI coder fails or…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[fallback_custom_tsx()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/motionpy
+#graphify/rationale #graphify/EXTRACTED #community/shutil

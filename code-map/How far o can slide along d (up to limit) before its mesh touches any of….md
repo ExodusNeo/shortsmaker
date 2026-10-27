@@ -1,12 +1,12 @@
 ---
 source_file: "blender/moves.py"
 type: "rationale"
-community: "moves.py"
+community: "cut"
 location: "L304"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/movespy
+  - community/cut
 ---
 
 # How far o can slide along d (up to limit) before its mesh touches any of…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[clear_distance()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/movespy
+#graphify/rationale #graphify/EXTRACTED #community/cut

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/frame_render.py"
 type: "code"
-community: "ClipReader"
+community: "frame_render.py"
 location: "L133"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ClipReader
+  - community/frame_renderpy
 ---
 
 # draw_graphic()
@@ -17,4 +17,4 @@ tags:
 - [[frame()]] - `calls` [EXTRACTED]
 - [[frame_render.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ClipReader
+#graphify/code #graphify/EXTRACTED #community/frame_renderpy

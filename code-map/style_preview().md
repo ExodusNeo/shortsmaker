@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/style_lab.py"
 type: "code"
-community: "invent_component"
+community: "test_style.py"
 location: "L201"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/invent_component
+  - community/test_stylepy
 ---
 
 # style_preview()
@@ -16,4 +16,4 @@ tags:
 - [[invent_component()]] - `calls` [EXTRACTED]
 - [[style_lab.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/invent_component
+#graphify/code #graphify/EXTRACTED #community/test_stylepy

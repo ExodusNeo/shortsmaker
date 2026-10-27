@@ -1,18 +1,17 @@
 ---
-source_file: "blender/moves.py"
+source_file: "tests/test_pictures_first.py"
 type: "code"
-community: "opener_scene.py"
-location: "L29"
+community: "choose_images"
+location: "L333"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/opener_scenepy
+  - community/choose_images
 ---
 
 # .__init__()
 
 ## Connections
-- [[State]] - `method` [EXTRACTED]
-- [[Vector_4]] - `references` [EXTRACTED]
+- [[picking]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/opener_scenepy
+#graphify/code #graphify/EXTRACTED #community/choose_images

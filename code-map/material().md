@@ -18,6 +18,6 @@ tags:
 - [[label()]] - `calls` [EXTRACTED]
 - [[linear()]] - `calls` [EXTRACTED]
 - [[look.py]] - `contains` [EXTRACTED]
-- [[main()_5]] - `calls` [EXTRACTED]
+- [[main()_4]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/lookpy

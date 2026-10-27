@@ -1,16 +1,22 @@
 ---
 source_file: ""
 type: "code"
-community: "render"
+community: "first_second_check"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/render
+  - community/first_second_check
 ---
 
 # Path
 
 ## Connections
-- [[drawn_short()]] - `references` [EXTRACTED]
+- [[apply_review_fixes()]] - `references` [EXTRACTED]
+- [[first_second_check()]] - `references` [EXTRACTED]
+- [[paint_new()]] - `references` [EXTRACTED]
+- [[pool_pictures()]] - `references` [EXTRACTED]
+- [[quality_check()]] - `references` [EXTRACTED]
+- [[storyboard()]] - `references` [EXTRACTED]
+- [[visual_review()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/render
+#graphify/code #graphify/EXTRACTED #community/first_second_check

@@ -2,7 +2,7 @@
 source_file: "blender/people.py"
 type: "code"
 community: "people.py"
-location: "L214"
+location: "L284"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -13,6 +13,7 @@ tags:
 
 ## Connections
 - [[Every person breathes on their Idle clip from frame 1 under whatever they do (a…]] - `rationale_for` [EXTRACTED]
+- [[_clip()]] - `calls` [EXTRACTED]
 - [[main()_10]] - `calls` [EXTRACTED]
 - [[people.py]] - `contains` [EXTRACTED]
 

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/photo_prep.py"
 type: "code"
-community: "pathlib"
+community: "trim_borders"
 location: "L68"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/pathlib
+  - community/trim_borders
 ---
 
 # clean_photo()
@@ -16,7 +16,7 @@ tags:
 - [[io]] - `calls` [EXTRACTED]
 - [[is_stereo()]] - `calls` [EXTRACTED]
 - [[photo_prep.py]] - `contains` [EXTRACTED]
-- [[render()_2]] - `calls` [EXTRACTED]
+- [[render()_5]] - `calls` [EXTRACTED]
 - [[trim_borders()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/pathlib
+#graphify/code #graphify/EXTRACTED #community/trim_borders

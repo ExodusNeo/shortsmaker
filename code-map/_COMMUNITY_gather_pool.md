@@ -1,11 +1,11 @@
 ---
 type: community
-members: 12
+members: 11
 ---
 
 # gather_pool
 
-**Members:** 12 nodes
+**Members:** 11 nodes
 
 ## Members
 - [[Candidate pictures (with preview `thumb` bytes) and sampled real-film frames…]] - rationale - shortsmaker/picture_pool.py
@@ -17,7 +17,6 @@ members: 12
 - [[commons_search()]] - code - shortsmaker/image_sources.py
 - [[gather_pool()]] - code - shortsmaker/picture_pool.py
 - [[load_thumb()]] - code - shortsmaker/picture_pool.py
-- [[test_gather_pool_skip_and_limits()]] - code - tests/test_pictures_first.py
 - [[thumb_url()]] - code - shortsmaker/image_sources.py
 - [[wm_files()]] - code - shortsmaker/image_sources.py
 
@@ -29,19 +28,20 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 5 edges to [[_COMMUNITY_fetch]]
-- 4 edges to [[_COMMUNITY_pathlib]]
-- 3 edges to [[_COMMUNITY_write_scripts]]
+- 5 edges to [[_COMMUNITY_test_full_scenes.py]]
+- 2 edges to [[_COMMUNITY_words_of]]
+- 2 edges to [[_COMMUNITY_catalog_pool]]
+- 2 edges to [[_COMMUNITY_fetch]]
+- 2 edges to [[_COMMUNITY_wm_get]]
 - 2 edges to [[_COMMUNITY_owner]]
-- 2 edges to [[_COMMUNITY_prepare_topic]]
-- 1 edge to [[_COMMUNITY_render]]
+- 1 edge to [[_COMMUNITY_clean_full]]
+- 1 edge to [[_COMMUNITY_first_second_check]]
 - 1 edge to [[_COMMUNITY_choose_images]]
-- 1 edge to [[_COMMUNITY_json]]
-- 1 edge to [[_COMMUNITY_test_pictures_first.py]]
+- 1 edge to [[_COMMUNITY_on_topic]]
 
 ## Top bridge nodes
-- [[gather_pool()]] - degree 17, connects to 7 communities
+- [[gather_pool()]] - degree 17, connects to 9 communities
 - [[wm_files()]] - degree 8, connects to 3 communities
-- [[test_gather_pool_skip_and_limits()]] - degree 3, connects to 2 communities
 - [[article_images()]] - degree 4, connects to 1 community
 - [[commons_search()]] - degree 3, connects to 1 community
+- [[thumb_url()]] - degree 3, connects to 1 community

@@ -1,20 +1,20 @@
 ---
 source_file: ""
 type: "code"
-community: "render"
+community: "frame_render.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/render
+  - community/frame_renderpy
 ---
 
 # Path
 
 ## Connections
-- [[drawn_thumbnail()]] - `references` [EXTRACTED]
-- [[load_state()]] - `references` [EXTRACTED]
-- [[render()_2]] - `references` [EXTRACTED]
-- [[save_state()]] - `references` [EXTRACTED]
-- [[use_opener()]] - `references` [EXTRACTED]
+- [[dot-__init__()_2]] - `references` [EXTRACTED]
+- [[fills_frame()]] - `references` [EXTRACTED]
+- [[frame_maker()]] - `references` [EXTRACTED]
+- [[graphic_low()]] - `references` [EXTRACTED]
+- [[thumbnail()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/render
+#graphify/code #graphify/EXTRACTED #community/frame_renderpy

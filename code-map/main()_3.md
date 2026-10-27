@@ -1,21 +1,26 @@
 ---
-source_file: "tests/people_standin.py"
+source_file: "colab/h3_run.py"
 type: "code"
-community: "math"
-location: "L108"
+community: "h3_run.py"
+location: "L89"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/math
+  - community/h3_runpy
 ---
 
 # main()
 
 ## Connections
-- [[Path_16]] - `references` [EXTRACTED]
-- [[body()]] - `calls` [EXTRACTED]
-- [[clip()]] - `calls` [EXTRACTED]
+- [[call()]] - `calls` [EXTRACTED]
+- [[fit_start()]] - `calls` [EXTRACTED]
+- [[frames()]] - `calls` [EXTRACTED]
+- [[graph()]] - `calls` [EXTRACTED]
+- [[h3_run.py]] - `contains` [EXTRACTED]
 - [[json]] - `calls` [EXTRACTED]
-- [[people_standin.py]] - `contains` [EXTRACTED]
+- [[saved_file()]] - `calls` [EXTRACTED]
+- [[shutil]] - `calls` [EXTRACTED]
+- [[time]] - `calls` [EXTRACTED]
+- [[zipfile]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/math
+#graphify/code #graphify/EXTRACTED #community/h3_runpy

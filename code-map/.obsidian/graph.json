@@ -15,14 +15,14 @@
       }
     },
     {
-      "query": "tag:#community/motionpy",
+      "query": "tag:#community/shutil",
       "color": {
         "a": 1,
         "rgb": 14767961
       }
     },
     {
-      "query": "tag:#community/skinOf",
+      "query": "tag:#community/toolkittsx",
       "color": {
         "a": 1,
         "rgb": 7780274
@@ -43,7 +43,7 @@
       }
     },
     {
-      "query": "tag:#community/pathlib",
+      "query": "tag:#community/test_full_scenespy",
       "color": {
         "a": 1,
         "rgb": 11565729
@@ -64,28 +64,28 @@
       }
     },
     {
-      "query": "tag:#community/toolkittsx",
+      "query": "tag:#community/Paper",
       "color": {
         "a": 1,
         "rgb": 12234924
       }
     },
     {
-      "query": "tag:#community/gpupy",
+      "query": "tag:#community/ffmpeg",
       "color": {
         "a": 1,
         "rgb": 5142951
       }
     },
     {
-      "query": "tag:#community/local_clips",
+      "query": "tag:#community/gpupy",
       "color": {
         "a": 1,
         "rgb": 15896107
       }
     },
     {
-      "query": "tag:#community/short_with",
+      "query": "tag:#community/movespy",
       "color": {
         "a": 1,
         "rgb": 14767961
@@ -120,7 +120,7 @@
       }
     },
     {
-      "query": "tag:#community/full/typests",
+      "query": "tag:#community/BigNumbertsx",
       "color": {
         "a": 1,
         "rgb": 16752039
@@ -134,7 +134,7 @@
       }
     },
     {
-      "query": "tag:#community/planning",
+      "query": "tag:#community/write_scripts",
       "color": {
         "a": 1,
         "rgb": 12234924
@@ -148,14 +148,14 @@
       }
     },
     {
-      "query": "tag:#community/clean_look",
+      "query": "tag:#community/words_of",
       "color": {
         "a": 1,
         "rgb": 15896107
       }
     },
     {
-      "query": "tag:#community/test_blender_planpy",
+      "query": "tag:#community/test_blender_runpy",
       "color": {
         "a": 1,
         "rgb": 14767961
@@ -183,14 +183,14 @@
       }
     },
     {
-      "query": "tag:#community/style_placeholders",
+      "query": "tag:#community/fake_ai",
       "color": {
         "a": 1,
         "rgb": 11565729
       }
     },
     {
-      "query": "tag:#community/ClipReader",
+      "query": "tag:#community/frame_renderpy",
       "color": {
         "a": 1,
         "rgb": 16752039
@@ -204,14 +204,14 @@
       }
     },
     {
-      "query": "tag:#community/write_scripts",
+      "query": "tag:#community/clean_full",
       "color": {
         "a": 1,
         "rgb": 12234924
       }
     },
     {
-      "query": "tag:#community/render",
+      "query": "tag:#community/first_second_check",
       "color": {
         "a": 1,
         "rgb": 5142951
@@ -232,7 +232,7 @@
       }
     },
     {
-      "query": "tag:#community/prepare_topic",
+      "query": "tag:#community/catalog_pool",
       "color": {
         "a": 1,
         "rgb": 7780274
@@ -246,7 +246,7 @@
       }
     },
     {
-      "query": "tag:#community/invent_component",
+      "query": "tag:#community/captions",
       "color": {
         "a": 1,
         "rgb": 15583560
@@ -260,7 +260,7 @@
       }
     },
     {
-      "query": "tag:#community/test_full_scenespy",
+      "query": "tag:#community/scene_cues",
       "color": {
         "a": 1,
         "rgb": 16752039
@@ -281,7 +281,7 @@
       }
     },
     {
-      "query": "tag:#community/audio_mixpy",
+      "query": "tag:#community/music_gain",
       "color": {
         "a": 1,
         "rgb": 5142951
@@ -302,7 +302,7 @@
       }
     },
     {
-      "query": "tag:#community/test_blender_linkpy",
+      "query": "tag:#community/sys",
       "color": {
         "a": 1,
         "rgb": 7780274
@@ -316,14 +316,14 @@
       }
     },
     {
-      "query": "tag:#community/movespy",
+      "query": "tag:#community/cut",
       "color": {
         "a": 1,
         "rgb": 15583560
       }
     },
     {
-      "query": "tag:#community/test_stylepy",
+      "query": "tag:#community/use_picture_from",
       "color": {
         "a": 1,
         "rgb": 11565729
@@ -379,7 +379,7 @@
       }
     },
     {
-      "query": "tag:#community/frame_maker",
+      "query": "tag:#community/wm_get",
       "color": {
         "a": 1,
         "rgb": 5873999
@@ -393,7 +393,7 @@
       }
     },
     {
-      "query": "tag:#community/sfx_events",
+      "query": "tag:#community/log_short",
       "color": {
         "a": 1,
         "rgb": 11565729
@@ -463,14 +463,14 @@
       }
     },
     {
-      "query": "tag:#community/QuestionBeattsx",
+      "query": "tag:#community/rescue_graphics",
       "color": {
         "a": 1,
         "rgb": 11565729
       }
     },
     {
-      "query": "tag:#community/test_h3_runpy",
+      "query": "tag:#community/pictures_of",
       "color": {
         "a": 1,
         "rgb": 16752039
@@ -491,7 +491,7 @@
       }
     },
     {
-      "query": "tag:#community/style_library",
+      "query": "tag:#community/test_stylepy",
       "color": {
         "a": 1,
         "rgb": 5142951
@@ -505,7 +505,7 @@
       }
     },
     {
-      "query": "tag:#community/default_build",
+      "query": "tag:#community/test_local_job_retries_a_hard_crash",
       "color": {
         "a": 1,
         "rgb": 14767961
@@ -540,7 +540,7 @@
       }
     },
     {
-      "query": "tag:#community/write_frames",
+      "query": "tag:#community/test_short_credit",
       "color": {
         "a": 1,
         "rgb": 16752039
@@ -561,73 +561,17 @@
       }
     },
     {
-      "query": "tag:#community/h3_problems",
-      "color": {
-        "a": 1,
-        "rgb": 5142951
-      }
-    },
-    {
-      "query": "tag:#community/h3_prompt",
-      "color": {
-        "a": 1,
-        "rgb": 15896107
-      }
-    },
-    {
-      "query": "tag:#community/edit_scripts",
-      "color": {
-        "a": 1,
-        "rgb": 14767961
-      }
-    },
-    {
-      "query": "tag:#community/test_on_topic_ignores_a_lone_shared_name",
+      "query": "tag:#community/on_topic",
       "color": {
         "a": 1,
         "rgb": 7780274
       }
     },
     {
-      "query": "tag:#community/person_card",
-      "color": {
-        "a": 1,
-        "rgb": 5873999
-      }
-    },
-    {
-      "query": "tag:#community/srt",
+      "query": "tag:#community/render",
       "color": {
         "a": 1,
         "rgb": 15583560
-      }
-    },
-    {
-      "query": "tag:#community/thumbnail_order",
-      "color": {
-        "a": 1,
-        "rgb": 11565729
-      }
-    },
-    {
-      "query": "tag:#community/clamp",
-      "color": {
-        "a": 1,
-        "rgb": 16752039
-      }
-    },
-    {
-      "query": "tag:#community/ending",
-      "color": {
-        "a": 1,
-        "rgb": 10253663
-      }
-    },
-    {
-      "query": "tag:#community/panels",
-      "color": {
-        "a": 1,
-        "rgb": 12234924
       }
     },
     {

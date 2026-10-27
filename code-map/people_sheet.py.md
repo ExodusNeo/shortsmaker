@@ -1,12 +1,12 @@
 ---
 source_file: "tests/people_sheet.py"
 type: "code"
-community: "pathlib"
+community: "sys"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/pathlib
+  - community/sys
 ---
 
 # people_sheet.py
@@ -16,10 +16,10 @@ tags:
 - [[bpy]] - `imports` [EXTRACTED]
 - [[config.py]] - `imports_from` [EXTRACTED]
 - [[json]] - `imports` [EXTRACTED]
-- [[main()_9]] - `contains` [EXTRACTED]
+- [[main()_5]] - `contains` [EXTRACTED]
 - [[pathlib]] - `imports_from` [EXTRACTED]
 - [[render_sheet()]] - `contains` [EXTRACTED]
 - [[subprocess]] - `imports` [EXTRACTED]
 - [[sys]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/pathlib
+#graphify/code #graphify/EXTRACTED #community/sys

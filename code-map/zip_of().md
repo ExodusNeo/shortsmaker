@@ -12,7 +12,7 @@ tags:
 # zip_of()
 
 ## Connections
-- [[Path_29]] - `references` [EXTRACTED]
+- [[Path_28]] - `references` [EXTRACTED]
 - [[test_duplicate_clip_names_deduplicated()]] - `calls` [EXTRACTED]
 - [[test_h3_handoff.py]] - `contains` [EXTRACTED]
 - [[test_handoff_picks_up_clips_zip()]] - `calls` [EXTRACTED]

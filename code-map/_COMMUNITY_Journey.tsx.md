@@ -1,24 +1,23 @@
 ---
 type: community
-members: 20
+members: 23
 ---
 
 # Journey.tsx
 
-**Members:** 20 nodes
+**Members:** 23 nodes
 
 ## Members
 - [[FOCUS]] - code - remotion/src/full/Journey.tsx
-- [[FullScene()]] - code - remotion/src/full/FullScene.tsx
-- [[FullScene.tsx]] - code - remotion/src/full/FullScene.tsx
 - [[INNER]] - code - remotion/src/full/Journey.tsx
 - [[Journey()]] - code - remotion/src/full/Journey.tsx
 - [[Journey.tsx]] - code - remotion/src/full/Journey.tsx
+- [[JourneyFull]] - code - remotion/src/full/types.ts
 - [[LEVELS]] - code - remotion/src/full/Journey.tsx
 - [[Rect]] - code - remotion/src/full/Journey.tsx
 - [[SAFE_1]] - code - remotion/src/full/Journey.tsx
 - [[View]] - code - remotion/src/full/Journey.tsx
-- [[clamp_5]] - code - remotion/src/full/Journey.tsx
+- [[clamp_6]] - code - remotion/src/full/Journey.tsx
 - [[fitPoints()]] - code - remotion/src/full/Journey.tsx
 - [[graticule]] - code - remotion/src/full/Journey.tsx
 - [[level()]] - code - remotion/src/full/Journey.tsx
@@ -26,6 +25,10 @@ members: 20
 - [[outside()]] - code - remotion/src/full/Journey.tsx
 - [[overlap()]] - code - remotion/src/full/Journey.tsx
 - [[placeLabels()]] - code - remotion/src/full/Journey.tsx
+- [[ref_d3_geo]] - concept
+- [[ref_topojson_client]] - concept
+- [[ref_topojson_specification]] - concept
+- [[ref_world_atlas]] - concept
 - [[viewOf()]] - code - remotion/src/full/Journey.tsx
 - [[wrap()]] - code - remotion/src/full/Journey.tsx
 
@@ -37,14 +40,14 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 13 edges to [[_COMMUNITY_toolkit.tsx]]
-- 7 edges to [[_COMMUNITY_fulltypes.ts]]
-- 5 edges to [[_COMMUNITY_skinOf]]
+- 10 edges to [[_COMMUNITY_Paper]]
 - 4 edges to [[_COMMUNITY_Graphics.tsx]]
-- 3 edges to [[_COMMUNITY_Short.tsx]]
+- 2 edges to [[_COMMUNITY_toolkit.tsx]]
+- 1 edge to [[_COMMUNITY_Short.tsx]]
 
 ## Top bridge nodes
-- [[Journey.tsx]] - degree 30, connects to 4 communities
-- [[FullScene.tsx]] - degree 15, connects to 4 communities
-- [[FullScene()]] - degree 8, connects to 4 communities
+- [[Journey.tsx]] - degree 30, connects to 3 communities
 - [[Journey()]] - degree 10, connects to 2 communities
+- [[JourneyFull]] - degree 2, connects to 1 community
+- [[ref_d3_geo]] - degree 2, connects to 1 community
+- [[ref_topojson_client]] - degree 2, connects to 1 community

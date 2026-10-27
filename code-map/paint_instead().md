@@ -12,13 +12,13 @@ tags:
 # paint_instead()
 
 ## Connections
-- [[Path_6]] - `references` [EXTRACTED]
+- [[Path_7]] - `references` [EXTRACTED]
 - [[Remotion failed the full-screen motion graphic scenes get a painted picture…]] - `rationale_for` [EXTRACTED]
 - [[gemini_images()]] - `calls` [EXTRACTED]
 - [[local_job()]] - `calls` [EXTRACTED]
 - [[moss_images()]] - `calls` [EXTRACTED]
 - [[remotion_render.py]] - `contains` [EXTRACTED]
-- [[render()_2]] - `calls` [EXTRACTED]
+- [[render()_5]] - `calls` [EXTRACTED]
 - [[shutil]] - `calls` [EXTRACTED]
 - [[test_remotion_failure_paints()]] - `calls` [EXTRACTED]
 - [[to_vertical()]] - `calls` [EXTRACTED]

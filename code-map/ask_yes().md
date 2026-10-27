@@ -13,6 +13,6 @@ tags:
 
 ## Connections
 - [[channel_profiles.py]] - `contains` [EXTRACTED]
-- [[main()_6]] - `calls` [EXTRACTED]
+- [[main()_8]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/json

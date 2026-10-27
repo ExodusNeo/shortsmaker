@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "person_card"
+community: "frame_render.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/person_card
+  - community/frame_renderpy
 ---
 
 # FreeTypeFont
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[fit_font()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/person_card
+#graphify/code #graphify/EXTRACTED #community/frame_renderpy

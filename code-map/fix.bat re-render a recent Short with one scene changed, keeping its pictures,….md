@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/cli.py"
 type: "rationale"
-community: "test_full_scenes.py"
+community: "json"
 location: "L142"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/test_full_scenespy
+  - community/json
 ---
 
 # fix.bat: re-render a recent Short with one scene changed, keeping its pictures,…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[fix_short()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/test_full_scenespy
+#graphify/rationale #graphify/EXTRACTED #community/json

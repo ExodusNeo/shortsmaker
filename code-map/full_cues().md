@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/plan_rules.py"
 type: "code"
-community: "test_blender_render.py"
+community: "scene_cues"
 location: "L470"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_blender_renderpy
+  - community/scene_cues
 ---
 
 # full_cues()
@@ -23,4 +23,4 @@ tags:
 - [[test_full_cues_fallback()]] - `calls` [EXTRACTED]
 - [[test_full_cues_leave_time_to_finish()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_blender_renderpy
+#graphify/code #graphify/EXTRACTED #community/scene_cues

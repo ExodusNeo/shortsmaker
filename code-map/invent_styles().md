@@ -1,22 +1,22 @@
 ---
 source_file: "shortsmaker/style_lab.py"
 type: "code"
-community: "invent_component"
+community: "test_style.py"
 location: "L222"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/invent_component
+  - community/test_stylepy
 ---
 
 # invent_styles()
 
 ## Connections
 - [[Codes this Short's inventions (look  transition  overlay) into their slots; a…]] - `rationale_for` [EXTRACTED]
-- [[Path_13]] - `references` [EXTRACTED]
+- [[Path_29]] - `references` [EXTRACTED]
 - [[invent_component()]] - `calls` [EXTRACTED]
 - [[render_remotion()]] - `calls` [EXTRACTED]
 - [[style_lab.py]] - `contains` [EXTRACTED]
 - [[swap_inventions()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/invent_component
+#graphify/code #graphify/EXTRACTED #community/test_stylepy

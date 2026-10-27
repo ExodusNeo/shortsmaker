@@ -14,7 +14,7 @@ members: 35
 - [[LinkError]] - code - shortsmaker/blender_link.py
 - [[Lower-case words with a plural 's' dropped, so Roosters finds Rooster.]] - rationale - shortsmaker/blender_link.py
 - [[One add-on command; its result. A transport problem or an error reply raises…]] - rationale - shortsmaker/blender_link.py
-- [[Path_21]] - code
+- [[Path_20]] - code
 - [[Poly Pizza models for `find` that we may use.]] - rationale - shortsmaker/blender_link.py
 - [[RuntimeError_1]] - code
 - [[The add-on isn't reachable or answered with an error.]] - rationale - shortsmaker/blender_link.py
@@ -52,9 +52,9 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 10 edges to [[_COMMUNITY_json]]
-- 10 edges to [[_COMMUNITY_test_blender_link.py]]
-- 4 edges to [[_COMMUNITY_pathlib]]
+- 10 edges to [[_COMMUNITY_sys]]
+- 9 edges to [[_COMMUNITY_test_full_scenes.py]]
+- 5 edges to [[_COMMUNITY_json]]
 - 2 edges to [[_COMMUNITY_test_opener_render.py]]
 - 1 edge to [[_COMMUNITY_blender_note]]
 - 1 edge to [[_COMMUNITY_pick_model]]

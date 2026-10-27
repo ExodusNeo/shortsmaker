@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "json"
+community: "test_first_second.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/json
+  - community/test_first_secondpy
 ---
 
 # Path
 
 ## Connections
-- [[draft_rules()]] - `references` [EXTRACTED]
+- [[_review_state()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/json
+#graphify/code #graphify/EXTRACTED #community/test_first_secondpy

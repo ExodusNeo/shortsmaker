@@ -1,12 +1,12 @@
 ---
 source_file: "blender/scene_kit.py"
 type: "rationale"
-community: "opener_scene.py"
+community: "scene_kit.py"
 location: "L107"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/opener_scenepy
+  - community/scene_kitpy
 ---
 
 # A library .blend (every object in it) or "primitive:cube", as one mesh object…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[load_model()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/opener_scenepy
+#graphify/rationale #graphify/EXTRACTED #community/scene_kitpy

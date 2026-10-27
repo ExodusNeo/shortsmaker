@@ -12,11 +12,11 @@ tags:
 # use_opener()
 
 ## Connections
-- [[Path_10]] - `references` [EXTRACTED]
+- [[Path_22]] - `references` [EXTRACTED]
 - [[Scene 1 plays its Blender opener when one renders (opener_render.py,…]] - `rationale_for` [EXTRACTED]
 - [[_wiring()]] - `calls` [EXTRACTED]
 - [[ffmpeg()]] - `calls` [EXTRACTED]
-- [[render()_2]] - `calls` [EXTRACTED]
+- [[render()_5]] - `calls` [EXTRACTED]
 - [[render_opener()]] - `calls` [EXTRACTED]
 - [[short_render.py]] - `contains` [EXTRACTED]
 - [[test_use_opener_never_raises()]] - `calls` [EXTRACTED]

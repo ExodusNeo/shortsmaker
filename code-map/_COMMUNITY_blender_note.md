@@ -20,10 +20,11 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 2 edges to [[_COMMUNITY_json]]
 - 1 edge to [[_COMMUNITY_blender_link.py]]
+- 1 edge to [[_COMMUNITY_json]]
+- 1 edge to [[_COMMUNITY_test_full_scenes.py]]
 - 1 edge to [[_COMMUNITY_test_opener_render.py]]
 
 ## Top bridge nodes
-- [[blender_note()]] - degree 5, connects to 2 communities
+- [[blender_note()]] - degree 5, connects to 3 communities
 - [[test_blender_note()]] - degree 2, connects to 1 community

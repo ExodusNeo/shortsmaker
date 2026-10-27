@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/image_sources.py"
 type: "code"
-community: "fetch"
+community: "on_topic"
 location: "L270"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/fetch
+  - community/on_topic
 ---
 
 # archive_images()
@@ -19,4 +19,4 @@ tags:
 - [[on_topic()]] - `calls` [EXTRACTED]
 - [[words_of()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/fetch
+#graphify/code #graphify/EXTRACTED #community/on_topic

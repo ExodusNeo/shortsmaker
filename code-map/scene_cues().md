@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/editplan.py"
 type: "code"
-community: "test_blender_render.py"
+community: "scene_cues"
 location: "L148"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_blender_renderpy
+  - community/scene_cues
 ---
 
 # scene_cues()
@@ -16,11 +16,11 @@ tags:
 - [[editplan.py]] - `contains` [EXTRACTED]
 - [[full_cues()]] - `calls` [EXTRACTED]
 - [[person_card()]] - `calls` [EXTRACTED]
-- [[render()_2]] - `calls` [EXTRACTED]
+- [[render()_5]] - `calls` [EXTRACTED]
 - [[spoken_at()]] - `calls` [EXTRACTED]
 - [[test_counter_finishes_before_it_leaves()]] - `calls` [EXTRACTED]
 - [[test_graphic_card_hold_duration()]] - `calls` [EXTRACTED]
 - [[test_person_card_hold_and_exit_gap()]] - `calls` [EXTRACTED]
 - [[test_scene_hold_padding()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_blender_renderpy
+#graphify/code #graphify/EXTRACTED #community/scene_cues

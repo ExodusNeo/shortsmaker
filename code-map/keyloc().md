@@ -14,6 +14,6 @@ tags:
 ## Connections
 - [[Vector_5]] - `references` [EXTRACTED]
 - [[build_scene.py]] - `contains` [EXTRACTED]
-- [[main()_5]] - `calls` [EXTRACTED]
+- [[main()_4]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Shots

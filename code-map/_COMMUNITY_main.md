@@ -9,7 +9,7 @@ members: 19
 
 ## Members
 - [[(part, exact) the part the Short is about, by the plan's spot; the gusset at…]] - rationale - blender/templates.py
-- [[dot-__init__()_3]] - code - blender/failures.py
+- [[dot-__init__()_4]] - code - blender/failures.py
 - [[dot-_crack()]] - code - blender/failures.py
 - [[dot-fallen()]] - code - blender/failures.py
 - [[dot-falls()]] - code - blender/failures.py
@@ -26,7 +26,7 @@ members: 19
 - [[focus_object()]] - code - blender/templates.py
 - [[key()_2]] - code - blender/failures.py
 - [[keyvis()]] - code - blender/build_scene.py
-- [[main()_5]] - code - blender/build_scene.py
+- [[main()_4]] - code - blender/build_scene.py
 
 ## Live Query (requires Dataview plugin)
 
@@ -44,7 +44,7 @@ SORT file.name ASC
 - 1 edge to [[_COMMUNITY_json]]
 
 ## Top bridge nodes
-- [[main()_5]] - degree 19, connects to 6 communities
+- [[main()_4]] - degree 19, connects to 6 communities
 - [[Failure]] - degree 9, connects to 1 community
 - [[key()_2]] - degree 4, connects to 1 community
 - [[focus_object()]] - degree 4, connects to 1 community

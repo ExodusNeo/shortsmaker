@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "pathlib"
+community: "fetch"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/pathlib
+  - community/fetch
 ---
 
 # CompletedProcess
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[film_ffmpeg()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/pathlib
+#graphify/code #graphify/EXTRACTED #community/fetch

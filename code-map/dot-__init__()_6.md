@@ -1,18 +1,17 @@
 ---
-source_file: "shortsmaker/frame_render.py"
+source_file: "tools/split_make_shorts.py"
 type: "code"
-community: "frame_maker"
-location: "L211"
+community: "split_make_shorts.py"
+location: "L385"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/frame_maker
+  - community/split_make_shortspy
 ---
 
 # .__init__()
 
 ## Connections
-- [[ClipReader]] - `method` [EXTRACTED]
-- [[Path_24]] - `references` [EXTRACTED]
+- [[Unqualify]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/frame_maker
+#graphify/code #graphify/EXTRACTED #community/split_make_shortspy

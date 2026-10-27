@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/blender_plan.py"
 type: "rationale"
-community: "ending"
+community: "test_blender_scene.py"
 location: "L46"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/ending
+  - community/test_blender_scenepy
 ---
 
 # The last part of every Short: zoom in, the failure, what it left behind.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[ending()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/ending
+#graphify/rationale #graphify/EXTRACTED #community/test_blender_scenepy
