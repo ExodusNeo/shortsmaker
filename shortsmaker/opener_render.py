@@ -11,7 +11,7 @@ import math
 import shutil
 from pathlib import Path
 
-from shortsmaker import blender_link, blender_render, config, llm, media_tools, opener_plan
+from shortsmaker import blender_link, blender_render, config, llm, media_tools, opener_plan, session
 
 SCRIPT = config.ROOT / "blender" / "opener_scene.py"
 FPS = 30
@@ -108,6 +108,8 @@ def review(short: dict, frames: Path, seconds: float, work: Path, report: dict |
 that opens a YouTube Short. It should show: {short['opener']['moment']}.
 There are no people in these animations: tools are swung by an unseen hand just off-screen (the owner's choice), so
 a tool whose handle runs off the edge of the frame is fine; a tool floating in the middle of the shot is not.
+This channel's opener rules, including what the owner has accepted (never report those as problems):
+{session.RULES.get("Opener") or opener_plan.DEFAULT_RULES}
 Judge it like a picky viewer: does every action make physical sense (tools hit with their edge, nothing passes through
 anything, nothing floats, pieces are the right size), and does the FIRST frame already show the subject and the threat?
 Reply with ONLY JSON: {{"ok": true, "problems": []}} or {{"ok": false, "problems": ["the axe hits the breast", ...]}}""",
@@ -160,6 +162,7 @@ def render_opener(short: dict, seconds: float, work: Path, exe: Path | None = No
                 done.write_text(print_, encoding="utf-8")
                 shutil.rmtree(frames, ignore_errors=True)  # ~100 MB of PNGs; the clip is kept
                 return clip, None
+        print(f"    try {round_no + 1} failed: " + "; ".join(failures)[:600])
         if round_no == FIX_ROUNDS:
             return None, f"opener failed: {failures[0]}"
         fixed = opener_plan.fix_plan(short, failures, seconds, plan)

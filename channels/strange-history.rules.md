@@ -166,3 +166,19 @@ One or two descriptive sentences, not a keyword list: the subject first with era
   so never paint a subject made of print without quoting its words (a newsstand, magazine rack, newspaper page,
   poster wall: the painter fills it with gibberish): quote the one cover that matters ("LIFE") or pick another subject.
 
+## Opener
+<!-- the planner stages scene 1 from this and the reviewer judges by it; add the owner's feedback here (2026-10-27) -->
+Stage the story's strangest moment, the one its first line describes, as a 2-3 second animation built from free
+low-poly library models (animals, objects, vehicles, food, tools, buildings, plants). It can't show people: if the
+moment needs a person on screen, answer buildable false and say why. Frame 0 must already show the subject and the
+threat (the raised tool, the drop, the wave); the first beat starts by 1.0 s.
+Accepted by the owner (never a problem):
+- Tools are swung by an unseen hand just off-screen; the handle may run off the edge of the frame.
+- An animal is cut standing where it is (on a block or stump); it isn't laid down first.
+- A blade stops at the first thing it isn't cutting (it cuts the neck and stops at the body).
+- Low-poly cartoon models, simple colours, no gore.
+Staging lessons from the live runs:
+- Hop off and walk in the same direction, away from the support; a walk back toward it just stops at it.
+- Name the subject in camera.follow when it moves, so it stays in the frame.
+- Chops through a neck or branch use stroke angle "diagonal" (the camera sees the blade's flat side).
+- Keep the subject in front of everything else from the camera's side; nothing may hide it.

@@ -856,6 +856,16 @@ owner's Blender (Mike's chop; the owner's six catches became the checks below). 
   (`opener_plan.fix_plan`), then `work/opener.mp4` plays as scene 1 (no motion graphic over it, no first-second
   picture swap, CC-BY credits in upload.txt) or `CHECK: opener failed: <reason>` and today's scene 1. Unchanged
   plan + code reuse the clip (`work/opener_done.txt`).
+- **`## Opener` in each channel's rules file** (owner, 2026-10-27: "i want the quality to improve on every short"):
+  the planner stages from it and the AI review judges by it, including the owner's accepted conventions (unseen hand
+  just off-screen, an animal cut where it stands, a blade stops at the first thing it isn't cutting) and staging
+  lessons from the live runs. New owner feedback on openers goes there, not into code.
+- Live runs on Mike's script (6, 2026-10-27) each found a general fault, now fixed with a test: hop clipping a wider
+  rim (glide past the edge first), walk into an obstacle (stops short), a move that can't be built (reported to the
+  planner, never a crash), wrong check subject / self-hiding, review frames skipping a 0.3 s chop (key moments
+  added), a tilted blade swinging at the lens (strokes move across the frame), stroke angles explained to the planner.
+  Each try's failures are printed. No live run produced a passing opener yet; the owner stopped tuning that one
+  animation in favour of general fixes.
 - Reference tests: `tests/fixtures/openers/` (chicken chop, onion slices, onion mince, crate fall + their models);
   every check was also seen to catch a real fault while building them, and the renders were looked at by eye (checks
   alone passed a head blasted out of frame, hollow slices and an exploding mince).

@@ -173,6 +173,29 @@ def test_review_frames_include_key_moments():
     assert opener_render.review_frames({}, 90)[0] == 1 and len(opener_render.review_frames({}, 90)) == 8
 
 
+def test_review_reads_the_channel_opener_rules():
+    from shortsmaker import session
+    with Env() as e:
+        old = dict(session.RULES)
+        session.RULES["Opener"] = "Owner-approved: the chop stops at the first thing it isn't cutting."
+        prompts = []
+        llm.ask_ai = lambda prompt, **k: prompts.append(prompt) or {"ok": True, "problems": []}
+        try:
+            opener_render.render_opener(short(), 3.0, e.work, e.exe)
+        finally:
+            session.RULES.clear()
+            session.RULES.update(old)
+        assert any("the chop stops at the first thing it isn't cutting" in p for p in prompts), prompts[:1]
+
+
+def test_channels_have_opener_rules():
+    from shortsmaker import rules, session
+    for name in ("strange-history", "weird-economics"):
+        rules.load_rules(name)
+        text = session.RULES.get("Opener", "")
+        assert "unseen hand" in text and "stops at the first thing" in text, (name, text[:200])
+
+
 def _wiring(render_result):
     """short_render.use_opener with render_opener faked; returns (check line, short, clips, images, sources, calls)."""
     from PIL import Image

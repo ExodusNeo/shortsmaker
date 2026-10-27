@@ -57,6 +57,8 @@ def test_chicken_chop_reference():
     report, _ = run(fixture("chicken_chop"))
     assert report["ok"], report["failures"]
     assert 0.075 <= report["cut_shares"]["head"] <= 0.225, report["cut_shares"]
+    # a blade tilted to show its face must move across the frame, not at the lens (the axe ballooned in live run 6)
+    assert all(t < 0.3 for t in report["stroke_toward_camera"]), report["stroke_toward_camera"]
     assert report["held_offscreen"] == {"axe": True}, report["held_offscreen"]
     assert report["key_frames"] and all(1 <= f <= report["frames"] for f in report["key_frames"]), report["key_frames"]  # the unseen hand's side runs off the frame
 

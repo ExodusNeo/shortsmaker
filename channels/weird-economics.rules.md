@@ -117,3 +117,20 @@ Used only when zero archival photos exist and the scene is not already a full-sc
 - Concrete Historical Scenes with People & Architecture (Crucial): Every `ai_image` prompt MUST depict a **concrete historical scene with people and period architecture** matching the exact era and place of the narration (e.g. *"1920s Wall Street stockbrokers in wool suits shouting around trading posts on the New York Stock Exchange floor"*, or *"1923 New York Stock Exchange governors seated around a dark wood-paneled boardroom table"*).
 - Strict Ban on Symbolic Object Clichés: NEVER prompt for symbolic object metaphors or cliché icons—**NO scales of justice, NO hourglasses, NO clocks, NO piggy banks, NO chess pieces, NO bags of money, and NO crystal balls**.
 - Style & Text Rules: Crisp 1970s editorial gouache illustration or vintage hand-colored lithograph aesthetic with bold light-dark contrast filling the frame edge-to-edge. Keep faces in medium/wide group framing, profile, or three-quarter view, and NEVER include written text, signs, or numbers in the painting.
+
+## Opener
+<!-- the planner stages scene 1 from this and the reviewer judges by it; add the owner's feedback here (2026-10-27) -->
+Stage the story's strangest moment, the one its first line describes, as a 2-3 second animation built from free
+low-poly library models (animals, objects, vehicles, food, tools, buildings, plants). It can't show people: if the
+moment needs a person on screen, answer buildable false and say why. Frame 0 must already show the subject and the
+threat (the raised tool, the drop, the wave); the first beat starts by 1.0 s.
+Accepted by the owner (never a problem):
+- Tools are swung by an unseen hand just off-screen; the handle may run off the edge of the frame.
+- An animal is cut standing where it is (on a block or stump); it isn't laid down first.
+- A blade stops at the first thing it isn't cutting (it cuts the neck and stops at the body).
+- Low-poly cartoon models, simple colours, no gore.
+Staging lessons from the live runs:
+- Hop off and walk in the same direction, away from the support; a walk back toward it just stops at it.
+- Name the subject in camera.follow when it moves, so it stays in the frame.
+- Chops through a neck or branch use stroke angle "diagonal" (the camera sees the blade's flat side).
+- Keep the subject in front of everything else from the camera's side; nothing may hide it.

@@ -39,6 +39,7 @@ class State:
         self.failures: list[str] = []
         self.threat = None
         self.moved_from: dict[str, int] = {}  # actor id -> first frame it moves
+        self.stroke_toward: list[float] = []  # each stroke's motion toward the camera (0 = across the frame)
         self.windups: list[tuple] = []  # (tool, its last wind-up frame): moved so the unseen hand is off-screen
 
     def f(self, t: float) -> int:
@@ -619,6 +620,13 @@ def cut(beat, st):
         if d.length < 0.2:  # a level plane: the blade comes in from the camera's right
             d = -(Vector((-st.cam_h.y, st.cam_h.x, 0)) - no * Vector((-st.cam_h.y, st.cam_h.x, 0)).dot(no))
         d.normalize()
+        if 0.2 < abs(no.z) < 0.95:  # a blade tilted to show the camera its face: move across the frame, not at
+            # the lens (straight "down" in that plane carried the axe toward the camera and it ballooned, live run 6)
+            r = Vector((-st.cam_h.y, st.cam_h.x, 0))
+            side = -(r - no * r.dot(no))
+            side.normalize()
+            d = (side + 0.35 * d).normalized()
+        st.stroke_toward.append(round(d.dot(st.cam_h), 3))
         piece_side = pieces[0] if "through" in stroke else pieces[min(s_i, len(pieces) - 1)]
         pc = sum(kit.world_verts(piece_side), Vector()) / len(kit.world_verts(piece_side))
         R, nn = tool_rotation(tool, d, no, (pc - mid) if "through" in stroke else no)
