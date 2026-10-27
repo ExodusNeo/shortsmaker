@@ -52,9 +52,8 @@ def test_first_frame():
     assert results()["first_wide"] == [], results()["first_wide"]
     assert results()["threat_sliver"] and "mostly out" in results()["threat_sliver"][0], results()["threat_sliver"]
     assert results()["threat_sliver_tool"] == [], results()["threat_sliver_tool"]
-    # framed whole with what he goes at, the pair is the subject (15%); the person alone needs 8%
-    assert results()["pair_ok"] == [], results()["pair_ok"]
-    assert results()["pair_speck"] and "8%" in results()["pair_speck"][0], results()["pair_speck"]
+    # framed with what he goes at, the person still needs 15%: a pair rule passed a tiny officer beside a van
+    assert results()["pair_small"] and "15%" in results()["pair_small"][0], results()["pair_small"]
 
 
 def test_edge_leads():
