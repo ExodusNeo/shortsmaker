@@ -16,6 +16,7 @@ tags:
 - [[cut()]] - `calls` [EXTRACTED]
 - [[make_dynamic()]] - `calls` [EXTRACTED]
 - [[make_static()]] - `calls` [EXTRACTED]
+- [[prop_move()]] - `calls` [EXTRACTED]
 - [[scene_kit.py]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/scene_kitpy

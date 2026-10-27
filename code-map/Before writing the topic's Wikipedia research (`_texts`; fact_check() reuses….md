@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/picture_pool.py"
 type: "rationale"
-community: "gather_pool"
+community: "prepare_topic"
 location: "L50"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/gather_pool
+  - community/prepare_topic
 ---
 
 # Before writing: the topic's Wikipedia research (`_texts`; fact_check() reuses…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[prepare_topic()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/gather_pool
+#graphify/rationale #graphify/EXTRACTED #community/prepare_topic

@@ -16,6 +16,7 @@ tags:
 - [[test_first_beat_by_one_second()]] - `calls` [EXTRACTED]
 - [[test_only_buildable_cuts()]] - `calls` [EXTRACTED]
 - [[test_opener_plan.py]] - `contains` [EXTRACTED]
+- [[test_people_move_on_animal_rejected()]] - `calls` [EXTRACTED]
 - [[test_rejects_on_cycles_and_self()]] - `calls` [EXTRACTED]
 - [[test_rejects_unknown_move_tool_and_id()]] - `calls` [EXTRACTED]
 - [[test_sizes_bounded()]] - `calls` [EXTRACTED]

@@ -1,12 +1,12 @@
 ---
 source_file: "blender/scene_kit.py"
 type: "rationale"
-community: "scene_kit.py"
+community: "opener_scene.py"
 location: "L272"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/scene_kitpy
+  - community/opener_scenepy
 ---
 
 # Step every frame in order once so the rigid-body cache holds the whole clip.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[simulate()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/scene_kitpy
+#graphify/rationale #graphify/EXTRACTED #community/opener_scenepy

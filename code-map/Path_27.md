@@ -1,17 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "test_opener_render.py"
+community: "choose_images"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_opener_renderpy
+  - community/choose_images
 ---
 
 # Path
 
 ## Connections
-- [[render_opener()]] - `references` [EXTRACTED]
-- [[review()]] - `references` [EXTRACTED]
+- [[choose_images()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_opener_renderpy
+#graphify/code #graphify/EXTRACTED #community/choose_images

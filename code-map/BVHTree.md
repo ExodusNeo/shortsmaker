@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "scene_kit.py"
+community: "people.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/scene_kitpy
+  - community/peoplepy
 ---
 
 # BVHTree
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[tree()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/scene_kitpy
+#graphify/code #graphify/EXTRACTED #community/peoplepy

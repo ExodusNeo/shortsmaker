@@ -2,7 +2,7 @@
 source_file: "blender/opener_checks.py"
 type: "code"
 community: "opener_checks.py"
-location: "L214"
+location: "L221"
 tags:
   - graphify/code
   - graphify/EXTRACTED

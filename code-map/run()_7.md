@@ -1,19 +1,18 @@
 ---
-source_file: "tests/test_h3_handoff.py"
+source_file: "tests/test_blender_link.py"
 type: "code"
-community: "test_h3_handoff.py"
-location: "L78"
+community: "Fake"
+location: "L61"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_h3_handoffpy
+  - community/Fake
 ---
 
 # run()
 
 ## Connections
-- [[fake_ai()]] - `calls` [EXTRACTED]
-- [[short_with()]] - `calls` [EXTRACTED]
-- [[test_waits_for_enter_when_no_ai_answers()]] - `contains` [EXTRACTED]
+- [[Fake]] - `calls` [EXTRACTED]
+- [[with_fake()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/test_h3_handoffpy
+#graphify/code #graphify/EXTRACTED #community/Fake

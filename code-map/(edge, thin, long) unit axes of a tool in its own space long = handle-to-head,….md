@@ -1,12 +1,12 @@
 ---
 source_file: "blender/moves.py"
 type: "rationale"
-community: "hold_offscreen"
-location: "L499"
+community: "moves.py"
+location: "L540"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/hold_offscreen
+  - community/movespy
 ---
 
 # (edge, thin, long) unit axes of a tool in its own space: long = handle-to-head,…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[tool_axes()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/hold_offscreen
+#graphify/rationale #graphify/EXTRACTED #community/movespy

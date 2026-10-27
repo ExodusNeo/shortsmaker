@@ -12,7 +12,7 @@ tags:
 # State
 
 ## Connections
-- [[dot-__init__()_10]] - `method` [EXTRACTED]
+- [[dot-__init__()_5]] - `method` [EXTRACTED]
 - [[dot-allow()]] - `method` [EXTRACTED]
 - [[dot-f()]] - `method` [EXTRACTED]
 - [[dot-support_obj()]] - `method` [EXTRACTED]
@@ -25,11 +25,12 @@ tags:
 - [[gait()]] - `references` [EXTRACTED]
 - [[hold_offscreen()]] - `references` [EXTRACTED]
 - [[legs()]] - `references` [EXTRACTED]
-- [[main()_7]] - `calls` [EXTRACTED]
+- [[main()_10]] - `calls` [EXTRACTED]
 - [[moves.py]] - `contains` [EXTRACTED]
 - [[place_actors()]] - `references` [EXTRACTED]
 - [[punch_in()]] - `references` [EXTRACTED]
 - [[release()]] - `references` [EXTRACTED]
 - [[subject_segments()]] - `references` [EXTRACTED]
+- [[threat_whole()]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/opener_scenepy

@@ -2,7 +2,7 @@
 source_file: "shortsmaker/opener_plan.py"
 type: "code"
 community: "test_opener_plan.py"
-location: "L39"
+location: "L45"
 tags:
   - graphify/code
   - graphify/EXTRACTED

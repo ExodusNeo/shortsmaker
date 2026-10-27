@@ -1,21 +1,21 @@
 ---
 source_file: "blender/opener_scene.py"
 type: "code"
-community: "opener_scene.py"
-location: "L115"
+community: "load_model"
+location: "L125"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/opener_scenepy
+  - community/load_model
 ---
 
 # ground_material()
 
 ## Connections
-- [[Material]] - `references` [EXTRACTED]
+- [[Material_1]] - `references` [EXTRACTED]
 - [[The ground's colour broken up by soft patches, lighter and darker one flat…]] - `rationale_for` [EXTRACTED]
 - [[build_set()]] - `calls` [EXTRACTED]
 - [[material()_1]] - `calls` [EXTRACTED]
 - [[opener_scene.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/opener_scenepy
+#graphify/code #graphify/EXTRACTED #community/load_model

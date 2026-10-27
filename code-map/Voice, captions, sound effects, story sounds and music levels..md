@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/audio_mix.py"
 type: "rationale"
-community: "gpu.py"
+community: "audio_mix.py"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/gpupy
+  - community/audio_mixpy
 ---
 
 # Voice, captions, sound effects, story sounds and music levels.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[audio_mix.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/gpupy
+#graphify/rationale #graphify/EXTRACTED #community/audio_mixpy

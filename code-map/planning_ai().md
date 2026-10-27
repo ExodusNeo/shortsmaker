@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_pictures_first.py"
 type: "code"
-community: "owner"
+community: "planning_ai"
 location: "L184"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/owner
+  - community/planning_ai
 ---
 
 # planning_ai()
@@ -17,4 +17,4 @@ tags:
 - [[reply()]] - `calls` [EXTRACTED]
 - [[test_pictures_first.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/owner
+#graphify/code #graphify/EXTRACTED #community/planning_ai

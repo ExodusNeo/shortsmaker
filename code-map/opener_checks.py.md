@@ -30,6 +30,7 @@ tags:
 - [[opener_check_cases.py]] - `imports` [EXTRACTED]
 - [[opener_scene.py]] - `imports` [EXTRACTED]
 - [[overlaps()]] - `contains` [EXTRACTED]
+- [[prop_shown()]] - `contains` [EXTRACTED]
 - [[resting()]] - `contains` [EXTRACTED]
 - [[screen_box()]] - `contains` [EXTRACTED]
 - [[spans()]] - `contains` [EXTRACTED]

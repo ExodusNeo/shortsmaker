@@ -1,17 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "test_h3_handoff.py"
+community: "edit_plan"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_h3_handoffpy
+  - community/edit_plan
 ---
 
 # Path
 
 ## Connections
-- [[handoff()]] - `references` [EXTRACTED]
-- [[zip_of()]] - `references` [EXTRACTED]
+- [[edit_plan()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_h3_handoffpy
+#graphify/code #graphify/EXTRACTED #community/edit_plan

@@ -33,7 +33,7 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 8 edges to [[_COMMUNITY_parts.py]]
-- 3 edges to [[_COMMUNITY_build_scene.py]]
+- 3 edges to [[_COMMUNITY_math]]
 - 2 edges to [[_COMMUNITY_main]]
 - 1 edge to [[_COMMUNITY_templates.py]]
 

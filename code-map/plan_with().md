@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_style.py"
 type: "code"
-community: "test_style.py"
+community: "plan_with"
 location: "L106"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_stylepy
+  - community/plan_with
 ---
 
 # plan_with()
@@ -20,4 +20,4 @@ tags:
 - [[write_scripts with every AInetwork step faked; the director answers…]] - `rationale_for` [EXTRACTED]
 - [[write_scripts()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_stylepy
+#graphify/code #graphify/EXTRACTED #community/plan_with

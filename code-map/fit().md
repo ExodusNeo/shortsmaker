@@ -14,6 +14,7 @@ tags:
 ## Connections
 - [[Largest side = size_m, turned so its front (-Y) faces `facing` as seen from the…]] - `rationale_for` [EXTRACTED]
 - [[build_set()]] - `calls` [EXTRACTED]
+- [[dress()]] - `calls` [EXTRACTED]
 - [[place_actors()]] - `calls` [EXTRACTED]
 - [[scene_kit.py]] - `contains` [EXTRACTED]
 

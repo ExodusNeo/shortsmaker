@@ -1,26 +1,28 @@
 ---
-source_file: "blender/templates.py"
+source_file: "blender/people.py"
 type: "code"
-community: "templates.py"
-location: "L238"
+community: "people.py"
+location: "L142"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/templatespy
+  - community/peoplepy
 ---
 
 # dress()
 
 ## Connections
-- [[dot-add()]] - `calls` [INFERRED]
-- [[dot-x0()]] - `calls` [INFERRED]
-- [[Bridge]] - `references` [EXTRACTED]
-- [[What the plan says was on the bridge rails on a rail deck, cars or a train for…]] - `rationale_for` [EXTRACTED]
-- [[car()]] - `calls` [EXTRACTED]
-- [[main()_3]] - `calls` [EXTRACTED]
-- [[member()]] - `calls` [EXTRACTED]
-- [[person()]] - `calls` [EXTRACTED]
-- [[templates.py]] - `contains` [EXTRACTED]
-- [[train()]] - `calls` [EXTRACTED]
+- [[Object_1]] - `references` [EXTRACTED]
+- [[The person as one mesh (origin at the feet, facing as planned, the role's…]] - `rationale_for` [EXTRACTED]
+- [[_append()]] - `calls` [EXTRACTED]
+- [[_attach()]] - `calls` [EXTRACTED]
+- [[_colour()]] - `calls` [EXTRACTED]
+- [[_hold()]] - `calls` [EXTRACTED]
+- [[_is_blade()]] - `calls` [EXTRACTED]
+- [[fit()]] - `calls` [EXTRACTED]
+- [[load_model()]] - `calls` [EXTRACTED]
+- [[math]] - `calls` [EXTRACTED]
+- [[people.py]] - `contains` [EXTRACTED]
+- [[place_actors()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/templatespy
+#graphify/code #graphify/EXTRACTED #community/peoplepy

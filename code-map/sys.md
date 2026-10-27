@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "json"
+community: "subprocess"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/json
+  - community/subprocess
 ---
 
 # sys
@@ -19,7 +19,10 @@ tags:
 - [[llm.py]] - `imports` [EXTRACTED]
 - [[opener_check_cases.py]] - `imports` [EXTRACTED]
 - [[opener_scene.py]] - `imports` [EXTRACTED]
+- [[pack_people.py]] - `imports` [EXTRACTED]
 - [[patching.py]] - `imports` [EXTRACTED]
+- [[people_sheet.py]] - `imports` [EXTRACTED]
+- [[people_standin.py]] - `imports` [EXTRACTED]
 - [[pick_channel()]] - `calls` [EXTRACTED]
 - [[picture_pool.py]] - `imports` [EXTRACTED]
 - [[qwen_voice.py]] - `imports` [EXTRACTED]
@@ -42,10 +45,11 @@ tags:
 - [[test_opener_render.py]] - `imports` [EXTRACTED]
 - [[test_opener_scene.py]] - `imports` [EXTRACTED]
 - [[test_package.py]] - `imports` [EXTRACTED]
+- [[test_people_tables.py]] - `imports` [EXTRACTED]
 - [[test_pictures_first.py]] - `imports` [EXTRACTED]
 - [[test_qwen_voice.py]] - `imports` [EXTRACTED]
 - [[test_rules.py]] - `imports` [EXTRACTED]
 - [[test_story.py]] - `imports` [EXTRACTED]
 - [[test_style.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/json
+#graphify/concept #graphify/EXTRACTED #community/subprocess

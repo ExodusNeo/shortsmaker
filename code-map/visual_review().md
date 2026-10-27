@@ -12,7 +12,7 @@ tags:
 # visual_review()
 
 ## Connections
-- [[Path_18]] - `references` [EXTRACTED]
+- [[Path_16]] - `references` [EXTRACTED]
 - [[The AI watches the finished Short as sheets of one frame per second and reports…]] - `rationale_for` [EXTRACTED]
 - [[ask_ai()]] - `calls` [EXTRACTED]
 - [[clock()_1]] - `calls` [EXTRACTED]

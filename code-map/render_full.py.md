@@ -1,12 +1,12 @@
 ---
 source_file: "tests/render_full.py"
 type: "code"
-community: "gpu.py"
+community: "subprocess"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/gpupy
+  - community/subprocess
 ---
 
 # render_full.py
@@ -14,11 +14,11 @@ tags:
 ## Connections
 - [[Render one full-screen motion graphic test scene through the real Short…]] - `rationale_for` [EXTRACTED]
 - [[json]] - `imports` [EXTRACTED]
-- [[main()_5]] - `contains` [EXTRACTED]
+- [[main()_7]] - `contains` [EXTRACTED]
 - [[pathlib]] - `imports_from` [EXTRACTED]
 - [[props_for()]] - `contains` [EXTRACTED]
 - [[shutil]] - `imports` [EXTRACTED]
 - [[subprocess]] - `imports` [EXTRACTED]
 - [[sys]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/gpupy
+#graphify/code #graphify/EXTRACTED #community/subprocess

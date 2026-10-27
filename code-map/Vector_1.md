@@ -1,18 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: "templates.py"
+community: "people.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/templatespy
+  - community/peoplepy
 ---
 
 # Vector
 
 ## Connections
-- [[dot-center()]] - `references` [EXTRACTED]
-- [[dot-node()]] - `references` [EXTRACTED]
-- [[_sag_points()]] - `references` [EXTRACTED]
+- [[_attach()]] - `references` [EXTRACTED]
+- [[_hold()]] - `references` [EXTRACTED]
+- [[_through()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/templatespy
+#graphify/code #graphify/EXTRACTED #community/peoplepy

@@ -15,7 +15,7 @@ tags:
 - [[GET from Wikimedia, spaced `gap` seconds apart, with a short backoff on rate…]] - `rationale_for` [EXTRACTED]
 - [[article_text()]] - `calls` [EXTRACTED]
 - [[commons_films()]] - `calls` [EXTRACTED]
-- [[fetch()]] - `calls` [EXTRACTED]
+- [[fetch()_1]] - `calls` [EXTRACTED]
 - [[get_image()]] - `calls` [EXTRACTED]
 - [[image_sources.py]] - `contains` [EXTRACTED]
 - [[wm_files()]] - `calls` [EXTRACTED]

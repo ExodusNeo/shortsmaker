@@ -12,8 +12,8 @@ tags:
 # test_tells_owner_after_five_failed_rounds()
 
 ## Connections
-- [[run()_6]] - `contains` [EXTRACTED]
-- [[run()_4]] - `indirect_call` [INFERRED]
+- [[run()_5]] - `contains` [EXTRACTED]
+- [[run()_3]] - `indirect_call` [INFERRED]
 - [[test_h3_handoff.py]] - `contains` [EXTRACTED]
 - [[with_fakes()_1]] - `calls` [EXTRACTED]
 

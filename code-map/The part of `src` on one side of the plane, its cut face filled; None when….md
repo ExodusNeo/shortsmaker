@@ -1,12 +1,12 @@
 ---
 source_file: "blender/moves.py"
 type: "rationale"
-community: "Vector"
-location: "L304"
+community: "moves.py"
+location: "L345"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Vector
+  - community/movespy
 ---
 
 # The part of `src` on one side of the plane, its cut face filled; None when…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[half()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Vector
+#graphify/rationale #graphify/EXTRACTED #community/movespy

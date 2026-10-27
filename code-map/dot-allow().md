@@ -2,7 +2,7 @@
 source_file: "blender/moves.py"
 type: "code"
 community: "opener_scene.py"
-location: "L50"
+location: "L52"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -13,5 +13,6 @@ tags:
 
 ## Connections
 - [[State]] - `method` [EXTRACTED]
+- [[place_actors()]] - `calls` [INFERRED]
 
 #graphify/code #graphify/EXTRACTED #community/opener_scenepy

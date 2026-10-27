@@ -1,24 +1,26 @@
 ---
 source_file: "blender/moves.py"
 type: "code"
-community: "moves.py"
-location: "L69"
+community: "scene_kit.py"
+location: "L75"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/movespy
+  - community/scene_kitpy
 ---
 
 # toward()
 
 ## Connections
-- [[Vector_3]] - `references` [EXTRACTED]
+- [[The way a move goes, as seen in the shot, or straight at another actor…]] - `rationale_for` [EXTRACTED]
+- [[Vector_4]] - `references` [EXTRACTED]
 - [[fly_off()]] - `calls` [EXTRACTED]
 - [[hop_off()]] - `calls` [EXTRACTED]
+- [[loc_at()]] - `calls` [EXTRACTED]
 - [[moves.py]] - `contains` [EXTRACTED]
 - [[roll()]] - `calls` [EXTRACTED]
 - [[topple()]] - `calls` [EXTRACTED]
 - [[view()]] - `calls` [EXTRACTED]
 - [[walk()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/movespy
+#graphify/code #graphify/EXTRACTED #community/scene_kitpy

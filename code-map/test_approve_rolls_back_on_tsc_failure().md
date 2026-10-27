@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_style.py"
 type: "code"
-community: "candidate_in"
+community: "test_style.py"
 location: "L428"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/candidate_in
+  - community/test_stylepy
 ---
 
 # test_approve_rolls_back_on_tsc_failure()
@@ -18,4 +18,4 @@ tags:
 - [[restore_library()]] - `calls` [EXTRACTED]
 - [[test_style.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/candidate_in
+#graphify/code #graphify/EXTRACTED #community/test_stylepy

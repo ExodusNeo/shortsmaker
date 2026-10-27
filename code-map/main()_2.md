@@ -1,26 +1,18 @@
 ---
-source_file: "colab/h3_run.py"
+source_file: "tests/render_style.py"
 type: "code"
-community: "test_opener_checks.py"
-location: "L89"
+community: "test_story.py"
+location: "L49"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_opener_checkspy
+  - community/test_storypy
 ---
 
 # main()
 
 ## Connections
-- [[call()]] - `calls` [EXTRACTED]
-- [[fit_start()]] - `calls` [EXTRACTED]
-- [[frames()]] - `calls` [EXTRACTED]
-- [[graph()]] - `calls` [EXTRACTED]
-- [[h3_run.py]] - `contains` [EXTRACTED]
-- [[json]] - `calls` [EXTRACTED]
-- [[saved_file()]] - `calls` [EXTRACTED]
-- [[shutil]] - `calls` [EXTRACTED]
-- [[time]] - `calls` [EXTRACTED]
-- [[zipfile]] - `calls` [EXTRACTED]
+- [[build()_1]] - `calls` [EXTRACTED]
+- [[render_style.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_opener_checkspy
+#graphify/code #graphify/EXTRACTED #community/test_storypy

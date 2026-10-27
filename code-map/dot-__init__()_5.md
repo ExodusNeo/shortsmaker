@@ -1,18 +1,18 @@
 ---
-source_file: "blender/failures.py"
+source_file: "blender/moves.py"
 type: "code"
-community: "main"
-location: "L26"
+community: "moves.py"
+location: "L29"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/main
+  - community/movespy
 ---
 
 # .__init__()
 
 ## Connections
-- [[dot-_crack()]] - `calls` [EXTRACTED]
-- [[Failure]] - `method` [EXTRACTED]
+- [[State]] - `method` [EXTRACTED]
+- [[Vector_4]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/main
+#graphify/code #graphify/EXTRACTED #community/movespy

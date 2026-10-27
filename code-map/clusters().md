@@ -1,12 +1,12 @@
 ---
 source_file: "blender/moves.py"
 type: "code"
-community: "Vector"
-location: "L405"
+community: "moves.py"
+location: "L446"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Vector
+  - community/movespy
 ---
 
 # clusters()
@@ -16,7 +16,7 @@ tags:
 - [[box_of()]] - `calls` [EXTRACTED]
 - [[join()]] - `calls` [EXTRACTED]
 - [[moves.py]] - `contains` [EXTRACTED]
-- [[root()]] - `contains` [EXTRACTED]
+- [[root()_1]] - `contains` [EXTRACTED]
 - [[split()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Vector
+#graphify/code #graphify/EXTRACTED #community/movespy

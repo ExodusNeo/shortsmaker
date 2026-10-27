@@ -1,21 +1,35 @@
 ---
-source_file: "tests/render_full.py"
+source_file: "blender/build_scene.py"
 type: "code"
-community: "gpu.py"
-location: "L28"
+community: "main"
+location: "L70"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/gpupy
+  - community/main
 ---
 
 # main()
 
 ## Connections
+- [[dot-beat()]] - `calls` [INFERRED]
+- [[dot-fallen()]] - `calls` [INFERRED]
+- [[dot-falls()]] - `calls` [INFERRED]
+- [[dot-play()]] - `calls` [INFERRED]
+- [[dot-reset()]] - `calls` [INFERRED]
+- [[dot-ride_along()]] - `calls` [INFERRED]
+- [[Failure]] - `calls` [EXTRACTED]
+- [[Shots]] - `calls` [EXTRACTED]
+- [[build()]] - `calls` [EXTRACTED]
+- [[build_scene.py]] - `contains` [EXTRACTED]
+- [[dress()_1]] - `calls` [EXTRACTED]
+- [[fastener()]] - `calls` [EXTRACTED]
+- [[focus_object()]] - `calls` [EXTRACTED]
 - [[json]] - `calls` [EXTRACTED]
-- [[props_for()]] - `calls` [EXTRACTED]
-- [[render_full.py]] - `contains` [EXTRACTED]
-- [[shutil]] - `calls` [EXTRACTED]
-- [[subprocess]] - `calls` [EXTRACTED]
+- [[keyloc()]] - `calls` [EXTRACTED]
+- [[keyvis()]] - `calls` [EXTRACTED]
+- [[label()]] - `calls` [EXTRACTED]
+- [[material()]] - `calls` [EXTRACTED]
+- [[setup()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/gpupy
+#graphify/code #graphify/EXTRACTED #community/main

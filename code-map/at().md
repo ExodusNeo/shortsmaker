@@ -19,6 +19,7 @@ tags:
 - [[in_frame()]] - `calls` [EXTRACTED]
 - [[opener_checks.py]] - `contains` [EXTRACTED]
 - [[overlaps()]] - `calls` [EXTRACTED]
+- [[prop_shown()]] - `calls` [EXTRACTED]
 - [[resting()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/opener_checkspy

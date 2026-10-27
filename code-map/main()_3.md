@@ -1,35 +1,21 @@
 ---
-source_file: "blender/build_scene.py"
+source_file: "tests/people_standin.py"
 type: "code"
-community: "main"
-location: "L70"
+community: "math"
+location: "L108"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/main
+  - community/math
 ---
 
 # main()
 
 ## Connections
-- [[dot-beat()]] - `calls` [INFERRED]
-- [[dot-fallen()]] - `calls` [INFERRED]
-- [[dot-falls()]] - `calls` [INFERRED]
-- [[dot-play()]] - `calls` [INFERRED]
-- [[dot-reset()]] - `calls` [INFERRED]
-- [[dot-ride_along()]] - `calls` [INFERRED]
-- [[Failure]] - `calls` [EXTRACTED]
-- [[Shots]] - `calls` [EXTRACTED]
-- [[build()]] - `calls` [EXTRACTED]
-- [[build_scene.py]] - `contains` [EXTRACTED]
-- [[dress()]] - `calls` [EXTRACTED]
-- [[fastener()]] - `calls` [EXTRACTED]
-- [[focus_object()]] - `calls` [EXTRACTED]
+- [[Path_18]] - `references` [EXTRACTED]
+- [[body()]] - `calls` [EXTRACTED]
+- [[clip()]] - `calls` [EXTRACTED]
 - [[json]] - `calls` [EXTRACTED]
-- [[keyloc()]] - `calls` [EXTRACTED]
-- [[keyvis()]] - `calls` [EXTRACTED]
-- [[label()]] - `calls` [EXTRACTED]
-- [[material()]] - `calls` [EXTRACTED]
-- [[setup()]] - `calls` [EXTRACTED]
+- [[people_standin.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/main
+#graphify/code #graphify/EXTRACTED #community/math

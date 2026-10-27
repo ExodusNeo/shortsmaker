@@ -1,16 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: "visual_review"
+community: "fetch_model"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/visual_review
+  - community/fetch_model
 ---
 
 # Path
 
 ## Connections
-- [[edit_plan()]] - `references` [EXTRACTED]
+- [[credit()]] - `references` [EXTRACTED]
+- [[fetch_model()]] - `references` [EXTRACTED]
+- [[in_library()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/visual_review
+#graphify/code #graphify/EXTRACTED #community/fetch_model

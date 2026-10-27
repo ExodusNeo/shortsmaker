@@ -1,19 +1,19 @@
 ---
 source_file: "blender/moves.py"
 type: "code"
-community: "moves.py"
-location: "L187"
+community: "scene_kit.py"
+location: "L202"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/movespy
+  - community/scene_kitpy
 ---
 
 # walk()
 
 ## Connections
 - [[apply()]] - `indirect_call` [INFERRED]
-- [[clear_distance()]] - `calls` [EXTRACTED]
+- [[clear_distance_at_end()]] - `calls` [EXTRACTED]
 - [[facing_vec()]] - `calls` [EXTRACTED]
 - [[gait()]] - `calls` [EXTRACTED]
 - [[key_loc()]] - `calls` [EXTRACTED]
@@ -25,6 +25,7 @@ tags:
 - [[math]] - `calls` [EXTRACTED]
 - [[moves.py]] - `contains` [EXTRACTED]
 - [[rot_at()]] - `calls` [EXTRACTED]
+- [[share_of_gap()]] - `calls` [EXTRACTED]
 - [[toward()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/movespy
+#graphify/code #graphify/EXTRACTED #community/scene_kitpy

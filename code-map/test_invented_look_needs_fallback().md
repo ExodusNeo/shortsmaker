@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_style.py"
 type: "code"
-community: "clean_look"
+community: "style_library"
 location: "L79"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/clean_look
+  - community/style_library
 ---
 
 # test_invented_look_needs_fallback()
@@ -15,4 +15,4 @@ tags:
 - [[clean_look()]] - `calls` [EXTRACTED]
 - [[test_style.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/clean_look
+#graphify/code #graphify/EXTRACTED #community/style_library

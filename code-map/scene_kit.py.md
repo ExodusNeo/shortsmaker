@@ -42,6 +42,7 @@ tags:
 - [[moves.py]] - `imports` [EXTRACTED]
 - [[opener_scene.py]] - `imports` [EXTRACTED]
 - [[pathlib]] - `imports_from` [EXTRACTED]
+- [[people.py]] - `imports` [EXTRACTED]
 - [[remove_body()]] - `contains` [EXTRACTED]
 - [[rot_at()]] - `contains` [EXTRACTED]
 - [[simulate()]] - `contains` [EXTRACTED]

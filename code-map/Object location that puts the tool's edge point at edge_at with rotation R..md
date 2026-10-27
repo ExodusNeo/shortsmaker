@@ -1,12 +1,12 @@
 ---
 source_file: "blender/moves.py"
 type: "rationale"
-community: "Vector"
-location: "L567"
+community: "moves.py"
+location: "L608"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Vector
+  - community/movespy
 ---
 
 # Object location that puts the tool's edge point at edge_at with rotation R.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[place_tool()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Vector
+#graphify/rationale #graphify/EXTRACTED #community/movespy

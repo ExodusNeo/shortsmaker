@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_blender_link.py"
 type: "code"
-community: "test_blender_link.py"
+community: "subprocess"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_blender_linkpy
+  - community/subprocess
 ---
 
 # test_blender_link.py
@@ -35,4 +35,4 @@ tags:
 - [[traceback]] - `imports` [EXTRACTED]
 - [[with_fake()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_blender_linkpy
+#graphify/code #graphify/EXTRACTED #community/subprocess

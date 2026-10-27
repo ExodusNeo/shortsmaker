@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_package.py"
 type: "rationale"
-community: "ask_ai"
+community: "pathlib"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/ask_ai
+  - community/pathlib
 ---
 
 # Tests for the shortsmaker package wiring (one owner per setting, fakes reach…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[test_package.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/ask_ai
+#graphify/rationale #graphify/EXTRACTED #community/pathlib

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/audio_mix.py"
 type: "code"
-community: "gpu.py"
+community: "audio_mix.py"
 location: "L362"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/gpupy
+  - community/audio_mixpy
 ---
 
 # music_gain()
@@ -20,4 +20,4 @@ tags:
 - [[subprocess]] - `calls` [EXTRACTED]
 - [[test_music_gain_evens_out_tracks()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/gpupy
+#graphify/code #graphify/EXTRACTED #community/audio_mixpy

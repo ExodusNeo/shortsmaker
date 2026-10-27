@@ -1,17 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "opener_scene.py"
+community: "moves.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/opener_scenepy
+  - community/movespy
 ---
 
 # Object
 
 ## Connections
-- [[load_model()]] - `references` [EXTRACTED]
-- [[merge()]] - `references` [EXTRACTED]
+- [[to_object()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/opener_scenepy
+#graphify/code #graphify/EXTRACTED #community/movespy

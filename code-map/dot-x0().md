@@ -16,7 +16,7 @@ tags:
 - [[Bridge]] - `method` [EXTRACTED]
 - [[_hung_deck()]] - `calls` [INFERRED]
 - [[_piers_and_deck()]] - `calls` [INFERRED]
-- [[dress()]] - `calls` [INFERRED]
+- [[dress()_1]] - `calls` [INFERRED]
 - [[girder_bridge()]] - `calls` [INFERRED]
 
 #graphify/code #graphify/INFERRED #community/templatespy

@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_blender_link.py"
 type: "code"
-community: "test_blender_link.py"
+community: "fetch_model"
 location: "L143"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_blender_linkpy
+  - community/fetch_model
 ---
 
 # test_in_library()
@@ -18,4 +18,4 @@ tags:
 - [[test_blender_link.py]] - `contains` [EXTRACTED]
 - [[with_fake()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_blender_linkpy
+#graphify/code #graphify/EXTRACTED #community/fetch_model

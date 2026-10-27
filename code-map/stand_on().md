@@ -2,7 +2,7 @@
 source_file: "blender/opener_scene.py"
 type: "code"
 community: "opener_scene.py"
-location: "L224"
+location: "L251"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,7 +12,7 @@ tags:
 # stand_on()
 
 ## Connections
-- [[Vector_7]] - `references` [EXTRACTED]
+- [[Vector_8]] - `references` [EXTRACTED]
 - [[Where o stands on top of sup of spots on its top, the one where o's whole…]] - `rationale_for` [EXTRACTED]
 - [[bbox()]] - `calls` [EXTRACTED]
 - [[opener_scene.py]] - `contains` [EXTRACTED]

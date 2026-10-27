@@ -1,12 +1,12 @@
 ---
 source_file: "blender/opener_scene.py"
 type: "code"
-community: "hold_offscreen"
-location: "L361"
+community: "opener_scene.py"
+location: "L412"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/hold_offscreen
+  - community/opener_scenepy
 ---
 
 # hold_offscreen()
@@ -18,7 +18,7 @@ tags:
 - [[handle_end_local()]] - `calls` [EXTRACTED]
 - [[key_loc()]] - `calls` [EXTRACTED]
 - [[loc_at()]] - `calls` [EXTRACTED]
-- [[main()_7]] - `calls` [EXTRACTED]
+- [[main()_10]] - `calls` [EXTRACTED]
 - [[opener_scene.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/hold_offscreen
+#graphify/code #graphify/EXTRACTED #community/opener_scenepy

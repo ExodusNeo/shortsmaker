@@ -55,6 +55,7 @@ tags:
 - [[test_opener_render.py]] - `imports_from` [EXTRACTED]
 - [[test_opener_scene.py]] - `imports_from` [EXTRACTED]
 - [[test_package.py]] - `imports_from` [EXTRACTED]
+- [[test_people_tables.py]] - `imports_from` [EXTRACTED]
 - [[test_pictures_first.py]] - `imports_from` [EXTRACTED]
 - [[test_rules.py]] - `imports_from` [EXTRACTED]
 - [[test_story.py]] - `imports_from` [EXTRACTED]

@@ -12,7 +12,7 @@ tags:
 # first_frame()
 
 ## Connections
-- [[Frame 1 shows the subject, big enough to read, and the threat the frame that…]] - `rationale_for` [EXTRACTED]
+- [[Frame 1 shows the subject, big enough to read (tall enough, or for a wide low…]] - `rationale_for` [EXTRACTED]
 - [[at()]] - `calls` [EXTRACTED]
 - [[checks()]] - `calls` [EXTRACTED]
 - [[opener_checks.py]] - `contains` [EXTRACTED]

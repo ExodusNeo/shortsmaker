@@ -2,7 +2,7 @@
 source_file: "blender/opener_checks.py"
 type: "code"
 community: "opener_checks.py"
-location: "L160"
+location: "L167"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,7 +12,7 @@ tags:
 # edge_point()
 
 ## Connections
-- [[Vector_6]] - `references` [EXTRACTED]
+- [[Vector_7]] - `references` [EXTRACTED]
 - [[edge_leads()]] - `calls` [EXTRACTED]
 - [[opener_checks.py]] - `contains` [EXTRACTED]
 - [[world_verts()_1]] - `calls` [EXTRACTED]

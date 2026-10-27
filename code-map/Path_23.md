@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "image_sources.py"
+community: "subprocess"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/image_sourcespy
+  - community/subprocess
 ---
 
 # Path
@@ -14,4 +14,4 @@ tags:
 - [[film_piece()]] - `references` [EXTRACTED]
 - [[shot_span()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/image_sourcespy
+#graphify/code #graphify/EXTRACTED #community/subprocess

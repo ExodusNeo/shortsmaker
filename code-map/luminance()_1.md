@@ -2,7 +2,7 @@
 source_file: "shortsmaker/config.py"
 type: "code"
 community: "pathlib"
-location: "L77"
+location: "L79"
 tags:
   - graphify/code
   - graphify/EXTRACTED

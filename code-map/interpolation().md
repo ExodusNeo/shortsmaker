@@ -15,7 +15,7 @@ tags:
 - [[Set the interpolation of obj's keys (all, or only those on `frames`);…]] - `rationale_for` [EXTRACTED]
 - [[cut()]] - `calls` [EXTRACTED]
 - [[fcurves()]] - `calls` [EXTRACTED]
-- [[main()_7]] - `calls` [EXTRACTED]
+- [[main()_10]] - `calls` [EXTRACTED]
 - [[make_dynamic()]] - `calls` [EXTRACTED]
 - [[scene_kit.py]] - `contains` [EXTRACTED]
 

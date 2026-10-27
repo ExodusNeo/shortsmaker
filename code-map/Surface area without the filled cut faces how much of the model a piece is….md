@@ -1,12 +1,12 @@
 ---
 source_file: "blender/moves.py"
 type: "rationale"
-community: "Vector"
-location: "L346"
+community: "moves.py"
+location: "L387"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Vector
+  - community/movespy
 ---
 
 # Surface area without the filled cut faces: how much of the model a piece is…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[bm_area()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Vector
+#graphify/rationale #graphify/EXTRACTED #community/movespy

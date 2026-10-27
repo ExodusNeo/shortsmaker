@@ -1,12 +1,12 @@
 ---
 source_file: "blender/moves.py"
 type: "code"
-community: "moves.py"
-location: "L105"
+community: "scene_kit.py"
+location: "L120"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/movespy
+  - community/scene_kitpy
 ---
 
 # fly_off()
@@ -17,4 +17,4 @@ tags:
 - [[release()]] - `calls` [EXTRACTED]
 - [[toward()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/movespy
+#graphify/code #graphify/EXTRACTED #community/scene_kitpy

@@ -2,7 +2,7 @@
 source_file: "shortsmaker/opener_plan.py"
 type: "code"
 community: "test_opener_plan.py"
-location: "L197"
+location: "L223"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -21,5 +21,6 @@ tags:
 - [[render_opener()]] - `calls` [EXTRACTED]
 - [[test_fix_plan_gets_scene_length()]] - `calls` [EXTRACTED]
 - [[test_fix_plan_returns_clean_or_none()]] - `calls` [EXTRACTED]
+- [[test_fix_round_reads_the_opener_rules()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/test_opener_planpy

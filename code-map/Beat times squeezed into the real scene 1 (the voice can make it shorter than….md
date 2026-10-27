@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/opener_render.py"
 type: "rationale"
-community: "test_opener_render.py"
-location: "L23"
+community: "copy"
+location: "L24"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/test_opener_renderpy
+  - community/copy
 ---
 
 # Beat times squeezed into the real scene 1 (the voice can make it shorter than…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[scale_beats()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/test_opener_renderpy
+#graphify/rationale #graphify/EXTRACTED #community/copy

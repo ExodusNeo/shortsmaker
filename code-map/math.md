@@ -1,17 +1,18 @@
 ---
 source_file: ""
 type: "concept"
-community: "moves.py"
+community: "math"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/movespy
+  - community/math
 ---
 
 # math
 
 ## Connections
 - [[_num()]] - `calls` [EXTRACTED]
+- [[_show_blade()]] - `calls` [EXTRACTED]
 - [[audio_mix.py]] - `imports` [EXTRACTED]
 - [[blade_face()]] - `calls` [EXTRACTED]
 - [[blender_plan.py]] - `imports` [EXTRACTED]
@@ -21,18 +22,23 @@ tags:
 - [[clamp()]] - `calls` [EXTRACTED]
 - [[cut()]] - `calls` [EXTRACTED]
 - [[direction()]] - `calls` [EXTRACTED]
+- [[dress()]] - `calls` [EXTRACTED]
 - [[dress_set()]] - `calls` [EXTRACTED]
 - [[failures.py]] - `imports` [EXTRACTED]
 - [[flash_alpha()]] - `calls` [EXTRACTED]
 - [[frame_render.py]] - `imports` [EXTRACTED]
 - [[hop_off()]] - `calls` [EXTRACTED]
+- [[key()_1]] - `calls` [EXTRACTED]
 - [[make_sfx()]] - `calls` [EXTRACTED]
+- [[move()]] - `calls` [EXTRACTED]
 - [[moves.py]] - `imports` [EXTRACTED]
 - [[opener_checks.py]] - `imports` [EXTRACTED]
 - [[opener_plan.py]] - `imports` [EXTRACTED]
 - [[opener_render.py]] - `imports` [EXTRACTED]
 - [[opener_scene.py]] - `imports` [EXTRACTED]
 - [[parts.py]] - `imports` [EXTRACTED]
+- [[people.py]] - `imports` [EXTRACTED]
+- [[people_standin.py]] - `imports` [EXTRACTED]
 - [[radians()]] - `calls` [EXTRACTED]
 - [[scale_beats()]] - `calls` [EXTRACTED]
 - [[scatter()]] - `calls` [EXTRACTED]
@@ -40,4 +46,4 @@ tags:
 - [[sink()]] - `calls` [EXTRACTED]
 - [[walk()]] - `calls` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/movespy
+#graphify/concept #graphify/EXTRACTED #community/math

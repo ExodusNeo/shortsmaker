@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[NASA videos (public domain), as their mediumsmall MP4 renditions.]] - `rationale_for` [EXTRACTED]
 - [[duration()]] - `calls` [EXTRACTED]
-- [[fetch()]] - `calls` [EXTRACTED]
+- [[fetch()_1]] - `calls` [EXTRACTED]
 - [[footage.py]] - `contains` [EXTRACTED]
 - [[json]] - `calls` [EXTRACTED]
 - [[nasa_search()]] - `calls` [EXTRACTED]

@@ -1,12 +1,12 @@
 ---
 source_file: "blender/moves.py"
 type: "rationale"
-community: "hold_offscreen"
-location: "L524"
+community: "moves.py"
+location: "L565"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/hold_offscreen
+  - community/movespy
 ---
 
 # The rotation that turns the edge toward d and the blade's plane normal along…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[tool_rotation()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/hold_offscreen
+#graphify/rationale #graphify/EXTRACTED #community/movespy

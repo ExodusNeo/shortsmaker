@@ -1,11 +1,11 @@
 ---
 type: community
-members: 20
+members: 19
 ---
 
 # test_first_second.py
 
-**Members:** 20 nodes
+**Members:** 19 nodes
 
 ## Members
 - [[Scenes i and k trade their real photosfilms (paintings and motion graphics are…]] - rationale - shortsmaker/review.py
@@ -20,7 +20,6 @@ members: 20
 - [[test_first_second.py]] - code - tests/test_first_second.py
 - [[test_fix_round_user_confirmation()]] - code - tests/test_first_second.py
 - [[test_good_opening_or_no_reply_changes_nothing()]] - code - tests/test_first_second.py
-- [[test_logbook_marks_tiny_samples()]] - code - tests/test_first_second.py
 - [[test_low_score_opens_on_a_better_real_picture()]] - code - tests/test_first_second.py
 - [[test_opener_fix_swaps_once()]] - code - tests/test_first_second.py
 - [[test_opener_must_be_a_later_real_picture()]] - code - tests/test_first_second.py
@@ -37,22 +36,21 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 11 edges to [[_COMMUNITY_pathlib]]
-- 3 edges to [[_COMMUNITY_test_full_scenes.py]]
+- 12 edges to [[_COMMUNITY_pathlib]]
 - 3 edges to [[_COMMUNITY_apply_review_fixes]]
-- 2 edges to [[_COMMUNITY_gpu.py]]
+- 3 edges to [[_COMMUNITY_subprocess]]
 - 1 edge to [[_COMMUNITY_ffmpeg]]
 - 1 edge to [[_COMMUNITY_test_rules.py]]
+- 1 edge to [[_COMMUNITY_test_full_scenes.py]]
 - 1 edge to [[_COMMUNITY_render]]
-- 1 edge to [[_COMMUNITY_gather_pool]]
+- 1 edge to [[_COMMUNITY_prepare_topic]]
 - 1 edge to [[_COMMUNITY_ask_ai]]
 - 1 edge to [[_COMMUNITY_visual_review]]
-- 1 edge to [[_COMMUNITY_json]]
-- 1 edge to [[_COMMUNITY_test_opener_checks.py]]
+- 1 edge to [[_COMMUNITY_re]]
+- 1 edge to [[_COMMUNITY_logbook_results]]
 
 ## Top bridge nodes
-- [[first_second_check()]] - degree 13, connects to 8 communities
-- [[test_first_second.py]] - degree 27, connects to 5 communities
+- [[first_second_check()]] - degree 13, connects to 9 communities
+- [[test_first_second.py]] - degree 27, connects to 4 communities
 - [[swap_pictures()]] - degree 6, connects to 2 communities
 - [[test_opener_fix_swaps_once()]] - degree 4, connects to 1 community
-- [[test_logbook_marks_tiny_samples()]] - degree 2, connects to 1 community

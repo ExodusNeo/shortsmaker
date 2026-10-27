@@ -1,0 +1,31 @@
+---
+type: community
+members: 6
+---
+
+# Fake
+
+**Members:** 6 nodes
+
+## Members
+- [[dot-__init__()_10]] - code - tests/test_blender_link.py
+- [[dot-stop()]] - code - tests/test_blender_link.py
+- [[Answers the add-on's commands; `replies` maps a command to a function(params)…]] - rationale - tests/test_blender_link.py
+- [[Fake]] - code - tests/test_blender_link.py
+- [[handle()]] - code - tests/test_blender_link.py
+- [[run()_7]] - code - tests/test_blender_link.py
+
+## Live Query (requires Dataview plugin)
+
+```dataview
+TABLE source_file, type FROM #community/Fake
+SORT file.name ASC
+```
+
+## Connections to other communities
+- 1 edge to [[_COMMUNITY_subprocess]]
+- 1 edge to [[_COMMUNITY_fetch_model]]
+
+## Top bridge nodes
+- [[Fake]] - degree 5, connects to 1 community
+- [[run()_7]] - degree 2, connects to 1 community

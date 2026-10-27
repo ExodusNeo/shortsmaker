@@ -12,7 +12,7 @@ tags:
 # scenes()
 
 ## Connections
-- [[add()_1]] - `indirect_call` [INFERRED]
+- [[add()]] - `indirect_call` [INFERRED]
 - [[handoff()]] - `indirect_call` [INFERRED]
 - [[test_a_take_is_cut_between_the_scenes_words()]] - `calls` [EXTRACTED]
 - [[test_sentences_running_across_cuts_are_one_take()]] - `calls` [EXTRACTED]

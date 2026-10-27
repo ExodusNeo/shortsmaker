@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[Back to whole the story after the hook starts from the beginning.]] - `rationale_for` [EXTRACTED]
 - [[Failure]] - `method` [EXTRACTED]
-- [[key()_1]] - `calls` [EXTRACTED]
-- [[main()_3]] - `calls` [INFERRED]
+- [[key()_2]] - `calls` [EXTRACTED]
+- [[main()_5]] - `calls` [INFERRED]
 
 #graphify/code #graphify/EXTRACTED #community/main

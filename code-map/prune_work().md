@@ -1,21 +1,21 @@
 ---
 source_file: "shortsmaker/short_render.py"
 type: "code"
-community: "pathlib"
+community: "re"
 location: "L60"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/pathlib
+  - community/re
 ---
 
 # prune_work()
 
 ## Connections
 - [[fix_short()]] - `calls` [EXTRACTED]
-- [[main()_6]] - `calls` [EXTRACTED]
+- [[main()_8]] - `calls` [EXTRACTED]
 - [[short_render.py]] - `contains` [EXTRACTED]
 - [[shutil]] - `calls` [EXTRACTED]
 - [[time]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/pathlib
+#graphify/code #graphify/EXTRACTED #community/re

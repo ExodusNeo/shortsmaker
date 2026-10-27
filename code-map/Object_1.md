@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "scene_kit.py"
+community: "people.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/scene_kitpy
+  - community/peoplepy
 ---
 
 # Object
 
 ## Connections
-- [[to_object()]] - `references` [EXTRACTED]
+- [[dress()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/scene_kitpy
+#graphify/code #graphify/EXTRACTED #community/peoplepy

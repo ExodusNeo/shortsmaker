@@ -1,17 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "test_opener_checks.py"
+community: "ask_ai"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_opener_checkspy
+  - community/ask_ai
 ---
 
 # Path
 
 ## Connections
-- [[fit_start()]] - `references` [EXTRACTED]
-- [[saved_file()]] - `references` [EXTRACTED]
+- [[ask_ai()]] - `references` [EXTRACTED]
+- [[run_agy()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_opener_checkspy
+#graphify/code #graphify/EXTRACTED #community/ask_ai

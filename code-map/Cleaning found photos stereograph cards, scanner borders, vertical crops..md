@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/photo_prep.py"
 type: "rationale"
-community: "pathlib"
+community: "photo_prep.py"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/pathlib
+  - community/photo_preppy
 ---
 
 # Cleaning found photos: stereograph cards, scanner borders, vertical crops.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[photo_prep.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/pathlib
+#graphify/rationale #graphify/EXTRACTED #community/photo_preppy

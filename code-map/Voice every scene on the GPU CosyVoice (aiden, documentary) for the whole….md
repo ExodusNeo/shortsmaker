@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/gpu.py"
 type: "rationale"
-community: "test_full_scenes.py"
+community: "ffmpeg"
 location: "L177"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/test_full_scenespy
+  - community/ffmpeg
 ---
 
 # Voice every scene on the GPU: CosyVoice (aiden, documentary) for the whole…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[local_voice()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/test_full_scenespy
+#graphify/rationale #graphify/EXTRACTED #community/ffmpeg

@@ -2,7 +2,7 @@
 source_file: "blender/opener_scene.py"
 type: "code"
 community: "opener_scene.py"
-location: "L183"
+location: "L193"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,11 +12,13 @@ tags:
 # place_actors()
 
 ## Connections
+- [[dot-allow()]] - `calls` [INFERRED]
 - [[State]] - `references` [EXTRACTED]
 - [[bbox()]] - `calls` [EXTRACTED]
+- [[dress()]] - `calls` [EXTRACTED]
 - [[fit()]] - `calls` [EXTRACTED]
 - [[load_model()]] - `calls` [EXTRACTED]
-- [[main()_7]] - `calls` [EXTRACTED]
+- [[main()_10]] - `calls` [EXTRACTED]
 - [[make_static()]] - `calls` [EXTRACTED]
 - [[opener_scene.py]] - `contains` [EXTRACTED]
 - [[stand_on()]] - `calls` [EXTRACTED]

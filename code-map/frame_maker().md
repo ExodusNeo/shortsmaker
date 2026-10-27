@@ -12,7 +12,7 @@ tags:
 # frame_maker()
 
 ## Connections
-- [[Path_11]] - `references` [EXTRACTED]
+- [[Path_8]] - `references` [EXTRACTED]
 - [[Returns frame(i, t) scene i at time t with camera move and graphics applied.…]] - `rationale_for` [EXTRACTED]
 - [[credit_tag_image()]] - `calls` [EXTRACTED]
 - [[fallback_graphic()]] - `calls` [EXTRACTED]

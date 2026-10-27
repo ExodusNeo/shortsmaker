@@ -2,7 +2,7 @@
 source_file: "blender/moves.py"
 type: "rationale"
 community: "scene_kit.py"
-location: "L279"
+location: "L320"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED

@@ -47,12 +47,11 @@ SORT file.name ASC
 ## Connections to other communities
 - 19 edges to [[_COMMUNITY_templates.py]]
 - 8 edges to [[_COMMUNITY_look.py]]
-- 4 edges to [[_COMMUNITY_build_scene.py]]
+- 6 edges to [[_COMMUNITY_math]]
 - 2 edges to [[_COMMUNITY_main]]
-- 2 edges to [[_COMMUNITY_moves.py]]
 
 ## Top bridge nodes
-- [[parts.py]] - degree 30, connects to 4 communities
+- [[parts.py]] - degree 30, connects to 3 communities
 - [[member()]] - degree 12, connects to 2 communities
 - [[cylinder()]] - degree 8, connects to 2 communities
 - [[label()]] - degree 8, connects to 2 communities

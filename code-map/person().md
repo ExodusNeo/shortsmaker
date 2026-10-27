@@ -15,7 +15,7 @@ tags:
 - [[Object]] - `references` [EXTRACTED]
 - [[box()]] - `calls` [EXTRACTED]
 - [[cylinder()]] - `calls` [EXTRACTED]
-- [[dress()]] - `calls` [EXTRACTED]
+- [[dress()_1]] - `calls` [EXTRACTED]
 - [[parts.py]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/partspy

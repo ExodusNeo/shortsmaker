@@ -15,9 +15,9 @@ members: 66
 - [[A plan that always works a truss bridge whose mid-span gusset plate bends.]] - rationale - shortsmaker/blender_plan.py
 - [[Blender couldn't draw the Short (missing, crashed or timed out twice).]] - rationale - shortsmaker/blender_render.py
 - [[BlenderFailed]] - code - shortsmaker/blender_render.py
+- [[Path_5]] - code
+- [[Path_6]] - code
 - [[Path_7]] - code
-- [[Path_8]] - code
-- [[Path_9]] - code
 - [[Pool indexes to try for the thumbnail's real photo, best first usable pictures…]] - rationale - shortsmaker/blender_plan.py
 - [[RuntimeError]] - code
 - [[Tests for Blender build plans (blender_plan.py, 2026-10-22) the engineer AI's…]] - rationale - tests/test_blender_plan.py
@@ -83,26 +83,25 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 29 edges to [[_COMMUNITY_pathlib]]
+- 30 edges to [[_COMMUNITY_pathlib]]
+- 7 edges to [[_COMMUNITY_subprocess]]
 - 5 edges to [[_COMMUNITY_json]]
 - 4 edges to [[_COMMUNITY_render]]
-- 3 edges to [[_COMMUNITY_gpu.py]]
 - 2 edges to [[_COMMUNITY_ffmpeg]]
-- 2 edges to [[_COMMUNITY_test_full_scenes.py]]
-- 2 edges to [[_COMMUNITY_scene_cues]]
-- 2 edges to [[_COMMUNITY_image_sources.py]]
-- 2 edges to [[_COMMUNITY_test_opener_checks.py]]
-- 1 edge to [[_COMMUNITY_pool_of]]
-- 1 edge to [[_COMMUNITY_moves.py]]
+- 1 edge to [[_COMMUNITY_write_scripts]]
+- 1 edge to [[_COMMUNITY_math]]
 - 1 edge to [[_COMMUNITY_test_blender_scene.py]]
+- 1 edge to [[_COMMUNITY_clean_pics]]
+- 1 edge to [[_COMMUNITY_test_full_scenes.py]]
 - 1 edge to [[_COMMUNITY_test_opener_render.py]]
-- 1 edge to [[_COMMUNITY_gather_pool]]
-- 1 edge to [[_COMMUNITY_test_story.py]]
+- 1 edge to [[_COMMUNITY_prepare_topic]]
+- 1 edge to [[_COMMUNITY_image_sources.py]]
+- 1 edge to [[_COMMUNITY_re]]
 - 1 edge to [[_COMMUNITY_frame_maker]]
 
 ## Top bridge nodes
 - [[drawn_thumbnail()]] - degree 13, connects to 6 communities
-- [[test_blender_plan.py]] - degree 24, connects to 5 communities
-- [[test_blender_render.py]] - degree 20, connects to 4 communities
+- [[test_blender_plan.py]] - degree 24, connects to 4 communities
 - [[render_clips()]] - degree 17, connects to 4 communities
+- [[test_blender_render.py]] - degree 20, connects to 3 communities
 - [[_run()]] - degree 6, connects to 3 communities
