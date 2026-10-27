@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_pictures_first.py"
 type: "rationale"
-community: "owner"
+community: "gather_pool"
 location: "L35"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/owner
+  - community/gather_pool
 ---
 
 # Replaces the network functions for one test; `calls` records the search queries.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[stubbed]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/owner
+#graphify/rationale #graphify/EXTRACTED #community/gather_pool

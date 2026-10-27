@@ -1,12 +1,12 @@
 ---
 source_file: "blender/scene_kit.py"
 type: "rationale"
-community: "travel"
+community: "tree"
 location: "L46"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/travel
+  - community/tree
 ---
 
 # The height of o's top surface above (x, y), or None when nothing of o is there.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[surface_z()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/travel
+#graphify/rationale #graphify/EXTRACTED #community/tree

@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "travel"
+community: "tree"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/travel
+  - community/tree
 ---
 
 # BVHTree
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[tree()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/travel
+#graphify/code #graphify/EXTRACTED #community/tree

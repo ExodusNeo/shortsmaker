@@ -2,7 +2,7 @@
 source_file: "blender/opener_scene.py"
 type: "code"
 community: "opener_scene.py"
-location: "L204"
+location: "L208"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -15,6 +15,7 @@ tags:
 - [[State]] - `references` [EXTRACTED]
 - [[The hit the first blade contact, else the first thing that moves.]] - `rationale_for` [EXTRACTED]
 - [[camera()_1]] - `calls` [EXTRACTED]
+- [[main()_5]] - `calls` [EXTRACTED]
 - [[opener_scene.py]] - `contains` [EXTRACTED]
 - [[punch_in()]] - `calls` [EXTRACTED]
 

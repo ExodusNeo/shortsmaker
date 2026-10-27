@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_blender_plan.py"
 type: "code"
-community: "test_blender_plan.py"
+community: "test_blender_scene.py"
 location: "L23"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_blender_planpy
+  - community/test_blender_scenepy
 ---
 
 # plan()
@@ -23,4 +23,4 @@ tags:
 - [[test_unlisted_and_bad_scenes_copy_the_previous_beat()]] - `calls` [EXTRACTED]
 - [[test_zoom_and_failure_are_guaranteed()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_blender_planpy
+#graphify/code #graphify/EXTRACTED #community/test_blender_scenepy

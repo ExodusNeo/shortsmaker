@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[Preview of every style-library preset for the owner each look on two real…]] - `rationale_for` [EXTRACTED]
 - [[__init__.py]] - `imports_from` [EXTRACTED]
-- [[build()_1]] - `contains` [EXTRACTED]
+- [[build()]] - `contains` [EXTRACTED]
 - [[config.py]] - `imports_from` [EXTRACTED]
 - [[json]] - `imports` [EXTRACTED]
 - [[main()_1]] - `contains` [EXTRACTED]

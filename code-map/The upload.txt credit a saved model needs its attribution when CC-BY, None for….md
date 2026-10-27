@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/blender_link.py"
 type: "rationale"
-community: "fetch_model"
+community: "blender_link.py"
 location: "L95"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/fetch_model
+  - community/blender_linkpy
 ---
 
 # The upload.txt credit a saved model needs: its attribution when CC-BY, None for…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[credit()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/fetch_model
+#graphify/rationale #graphify/EXTRACTED #community/blender_linkpy

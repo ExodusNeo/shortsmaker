@@ -14,6 +14,6 @@ tags:
 ## Connections
 - [[h3_run.py]] - `contains` [EXTRACTED]
 - [[json]] - `calls` [EXTRACTED]
-- [[main()_7]] - `calls` [EXTRACTED]
+- [[main()_6]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/test_h3_handoffpy

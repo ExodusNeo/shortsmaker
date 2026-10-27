@@ -12,7 +12,7 @@ tags:
 # _tables_text()
 
 ## Connections
-- [[ask()_4]] - `calls` [EXTRACTED]
+- [[ask()_9]] - `calls` [EXTRACTED]
 - [[fix_plan()]] - `calls` [EXTRACTED]
 - [[opener_plan.py]] - `contains` [EXTRACTED]
 - [[test_prompt_explains_stroke_angles()]] - `calls` [EXTRACTED]

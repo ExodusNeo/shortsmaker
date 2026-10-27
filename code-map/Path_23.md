@@ -1,17 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "test_opener_render.py"
+community: "channel_profiles.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_opener_renderpy
+  - community/channel_profilespy
 ---
 
 # Path
 
 ## Connections
-- [[render_opener()]] - `references` [EXTRACTED]
-- [[review()]] - `references` [EXTRACTED]
+- [[draft_rules()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_opener_renderpy
+#graphify/code #graphify/EXTRACTED #community/channel_profilespy

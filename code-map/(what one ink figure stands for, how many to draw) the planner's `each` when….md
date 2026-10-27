@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/plan_rules.py"
 type: "rationale"
-community: "test_full_scenes.py"
+community: "words_of"
 location: "L97"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/test_full_scenespy
+  - community/words_of
 ---
 
 # (what one ink figure stands for, how many to draw): the planner's `each` when…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[number_figures()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/test_full_scenespy
+#graphify/rationale #graphify/EXTRACTED #community/words_of

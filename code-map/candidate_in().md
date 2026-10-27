@@ -12,7 +12,7 @@ tags:
 # candidate_in()
 
 ## Connections
-- [[Path_18]] - `references` [EXTRACTED]
+- [[Path_20]] - `references` [EXTRACTED]
 - [[save_candidate()]] - `calls` [EXTRACTED]
 - [[test_approve_adds_to_library()]] - `calls` [EXTRACTED]
 - [[test_approve_rolls_back_on_tsc_failure()]] - `calls` [EXTRACTED]

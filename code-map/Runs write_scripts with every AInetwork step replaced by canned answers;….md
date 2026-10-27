@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_full_scenes.py"
 type: "rationale"
-community: "rewrite_paint_prompts"
+community: "owner"
 location: "L143"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/rewrite_paint_prompts
+  - community/owner
 ---
 
 # Runs write_scripts with every AI/network step replaced by canned answers;…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[_fake_planning()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/rewrite_paint_prompts
+#graphify/rationale #graphify/EXTRACTED #community/owner

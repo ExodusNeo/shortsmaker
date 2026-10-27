@@ -12,7 +12,7 @@ tags:
 # review()
 
 ## Connections
-- [[Path_23]] - `references` [EXTRACTED]
+- [[Path_26]] - `references` [EXTRACTED]
 - [[The AI looks at 8 frames does the action make physical sense, and does frame 0…]] - `rationale_for` [EXTRACTED]
 - [[ask_ai()]] - `calls` [EXTRACTED]
 - [[opener_render.py]] - `contains` [EXTRACTED]

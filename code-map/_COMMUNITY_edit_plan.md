@@ -8,7 +8,7 @@ members: 10
 **Members:** 10 nodes
 
 ## Members
-- [[Path_20]] - code
+- [[Path_22]] - code
 - [[Plain-English name of the Short's photo look for edit_plan.txt.]] - rationale - shortsmaker/editplan.py
 - [[Plain-English scene change for edit_plan.txt.]] - rationale - shortsmaker/editplan.py
 - [[Timestamped edit decision list of exactly what was rendered, plus the sound-…]] - rationale - shortsmaker/editplan.py

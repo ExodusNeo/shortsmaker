@@ -27,16 +27,16 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 4 edges to [[_COMMUNITY_re]]
-- 2 edges to [[_COMMUNITY_test_blender_link.py]]
-- 2 edges to [[_COMMUNITY_json]]
-- 2 edges to [[_COMMUNITY_fetch_model]]
+- 7 edges to [[_COMMUNITY_blender_link.py]]
+- 1 edge to [[_COMMUNITY_test_blender_link.py]]
+- 1 edge to [[_COMMUNITY_channel_profiles.py]]
+- 1 edge to [[_COMMUNITY_json]]
 - 1 edge to [[_COMMUNITY_pathlib]]
 - 1 edge to [[_COMMUNITY_test_opener_render.py]]
 
 ## Top bridge nodes
-- [[call()_1]] - degree 8, connects to 4 communities
-- [[ping()]] - degree 5, connects to 3 communities
+- [[call()_1]] - degree 8, connects to 2 communities
+- [[ping()]] - degree 5, connects to 2 communities
 - [[blender_note()]] - degree 5, connects to 2 communities
 - [[LinkError]] - degree 4, connects to 1 community
 - [[test_blender_note()]] - degree 2, connects to 1 community

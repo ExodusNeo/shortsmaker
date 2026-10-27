@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/writing.py"
 type: "code"
-community: "json"
+community: "write_scripts"
 location: "L30"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/json
+  - community/write_scripts
 ---
 
 # write_scripts()
@@ -35,7 +35,7 @@ tags:
 - [[limit_style()]] - `calls` [EXTRACTED]
 - [[load_pool()]] - `calls` [EXTRACTED]
 - [[logbook_results()]] - `calls` [EXTRACTED]
-- [[main()_3]] - `calls` [EXTRACTED]
+- [[main()_4]] - `calls` [EXTRACTED]
 - [[max_full_planned()]] - `calls` [EXTRACTED]
 - [[narration_lines()]] - `calls` [EXTRACTED]
 - [[pictures_of()]] - `calls` [EXTRACTED]
@@ -58,4 +58,4 @@ tags:
 - [[words_of()]] - `calls` [EXTRACTED]
 - [[writing.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/json
+#graphify/code #graphify/EXTRACTED #community/write_scripts

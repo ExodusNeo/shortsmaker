@@ -28,15 +28,15 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
+- 6 edges to [[_COMMUNITY_pool_of]]
 - 4 edges to [[_COMMUNITY_test_pictures_first.py]]
-- 3 edges to [[_COMMUNITY_pool_of]]
-- 3 edges to [[_COMMUNITY_catalog_pool]]
-- 2 edges to [[_COMMUNITY_planning]]
-- 2 edges to [[_COMMUNITY_owner]]
-- 2 edges to [[_COMMUNITY_json]]
+- 2 edges to [[_COMMUNITY_write_scripts]]
+- 2 edges to [[_COMMUNITY_channel_profiles.py]]
+- 1 edge to [[_COMMUNITY_gather_pool]]
+- 1 edge to [[_COMMUNITY_owner]]
 
 ## Top bridge nodes
-- [[fake_ai]] - degree 15, connects to 4 communities
+- [[fake_ai]] - degree 15, connects to 3 communities
 - [[dot-__enter__()_4]] - degree 4, connects to 2 communities
 - [[test_seo_pass_empty_no_ai()]] - degree 3, connects to 2 communities
 - [[test_seo_pass_research_seeds_dict_and_list()]] - degree 3, connects to 2 communities

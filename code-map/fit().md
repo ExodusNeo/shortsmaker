@@ -1,12 +1,12 @@
 ---
 source_file: "blender/scene_kit.py"
 type: "code"
-community: "bbox"
+community: "opener_scene.py"
 location: "L121"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/bbox
+  - community/opener_scenepy
 ---
 
 # fit()
@@ -17,4 +17,4 @@ tags:
 - [[place_actors()]] - `calls` [EXTRACTED]
 - [[scene_kit.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/bbox
+#graphify/code #graphify/EXTRACTED #community/opener_scenepy

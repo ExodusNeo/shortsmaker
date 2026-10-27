@@ -1,18 +1,18 @@
 ---
 source_file: "tests/render_style.py"
 type: "code"
-community: "test_story.py"
+community: "style_library"
 location: "L22"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_storypy
+  - community/style_library
 ---
 
 # add()
 
 ## Connections
-- [[build()_1]] - `contains` [EXTRACTED]
+- [[build()]] - `contains` [EXTRACTED]
 - [[scenes()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/test_storypy
+#graphify/code #graphify/EXTRACTED #community/style_library

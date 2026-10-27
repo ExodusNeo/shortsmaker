@@ -1,17 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "bbox"
+community: "moves.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/bbox
+  - community/movespy
 ---
 
 # Object
 
 ## Connections
-- [[load_model()]] - `references` [EXTRACTED]
-- [[merge()]] - `references` [EXTRACTED]
+- [[to_object()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/bbox
+#graphify/code #graphify/EXTRACTED #community/movespy

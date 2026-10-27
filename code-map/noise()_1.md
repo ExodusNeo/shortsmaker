@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/audio_mix.py"
 type: "code"
-community: "opener_scene.py"
+community: "make_sfx"
 location: "L180"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/opener_scenepy
+  - community/make_sfx
 ---
 
 # noise()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[make_sfx()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/opener_scenepy
+#graphify/code #graphify/EXTRACTED #community/make_sfx

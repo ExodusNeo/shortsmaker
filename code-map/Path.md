@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "ffmpeg"
+community: "local_clips"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ffmpeg
+  - community/local_clips
 ---
 
 # Path
@@ -24,4 +24,4 @@ tags:
 - [[unpack_clips()]] - `references` [EXTRACTED]
 - [[veo_handoff()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ffmpeg
+#graphify/code #graphify/EXTRACTED #community/local_clips

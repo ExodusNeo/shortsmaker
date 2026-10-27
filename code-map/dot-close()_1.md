@@ -1,12 +1,12 @@
 ---
 source_file: "blender/build_scene.py"
 type: "code"
-community: "Shots"
+community: "build_scene.py"
 location: "L54"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Shots
+  - community/build_scenepy
 ---
 
 # .close()
@@ -16,4 +16,4 @@ tags:
 - [[Shots]] - `method` [EXTRACTED]
 - [[direction()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Shots
+#graphify/code #graphify/EXTRACTED #community/build_scenepy

@@ -1,18 +1,20 @@
 ---
 source_file: ""
 type: "code"
-community: "fetch_model"
+community: "make_paper"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/fetch_model
+  - community/make_paper
 ---
 
 # Path
 
 ## Connections
-- [[credit()]] - `references` [EXTRACTED]
-- [[fetch_model()]] - `references` [EXTRACTED]
-- [[in_library()]] - `references` [EXTRACTED]
+- [[ink_silhouette()]] - `references` [EXTRACTED]
+- [[make_paper()]] - `references` [EXTRACTED]
+- [[paint_instead()]] - `references` [EXTRACTED]
+- [[redraw_custom()]] - `references` [EXTRACTED]
+- [[render_remotion()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/fetch_model
+#graphify/code #graphify/EXTRACTED #community/make_paper

@@ -12,8 +12,8 @@ tags:
 # test_fact_check_sees_new_graphics()
 
 ## Connections
-- [[ask()_6]] - `contains` [EXTRACTED]
-- [[ask()_5]] - `indirect_call` [INFERRED]
+- [[ask()_11]] - `contains` [EXTRACTED]
+- [[ask()_10]] - `indirect_call` [INFERRED]
 - [[fact_check()]] - `calls` [EXTRACTED]
 - [[test_style.py]] - `contains` [EXTRACTED]
 

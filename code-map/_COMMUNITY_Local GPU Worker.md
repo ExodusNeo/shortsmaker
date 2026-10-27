@@ -36,10 +36,11 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 2 edges to [[_COMMUNITY_shutil]]
 - 2 edges to [[_COMMUNITY_pathlib]]
 - 1 edge to [[_COMMUNITY_re]]
+- 1 edge to [[_COMMUNITY_subprocess]]
+- 1 edge to [[_COMMUNITY_shutil]]
 - 1 edge to [[_COMMUNITY_json]]
 
 ## Top bridge nodes
-- [[gen.py]] - degree 17, connects to 4 communities
+- [[gen.py]] - degree 17, connects to 5 communities

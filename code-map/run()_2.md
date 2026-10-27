@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[Build (and optionally render at 25%) one opener; returns (report, frames dir).]] - `rationale_for` [EXTRACTED]
-- [[Path_17]] - `references` [EXTRACTED]
+- [[Path_19]] - `references` [EXTRACTED]
 - [[test_bad_plans_fail()]] - `calls` [EXTRACTED]
 - [[test_box_fall_rests_and_renders()]] - `calls` [EXTRACTED]
 - [[test_camera_follows_unasked()]] - `calls` [EXTRACTED]

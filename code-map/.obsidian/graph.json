@@ -15,7 +15,7 @@
       }
     },
     {
-      "query": "tag:#community/code_custom_scenes",
+      "query": "tag:#community/re",
       "color": {
         "a": 1,
         "rgb": 14767961
@@ -57,7 +57,7 @@
       }
     },
     {
-      "query": "tag:#community/cut",
+      "query": "tag:#community/qwen_voicepy",
       "color": {
         "a": 1,
         "rgb": 10253663
@@ -71,14 +71,14 @@
       }
     },
     {
-      "query": "tag:#community/travel",
+      "query": "tag:#community/tree",
       "color": {
         "a": 1,
         "rgb": 5142951
       }
     },
     {
-      "query": "tag:#community/ffmpeg",
+      "query": "tag:#community/local_clips",
       "color": {
         "a": 1,
         "rgb": 15896107
@@ -99,7 +99,7 @@
       }
     },
     {
-      "query": "tag:#community/make",
+      "query": "tag:#community/test_edit_projectpy",
       "color": {
         "a": 1,
         "rgb": 5873999
@@ -127,14 +127,14 @@
       }
     },
     {
-      "query": "tag:#community/catalog_pool",
+      "query": "tag:#community/prepare_topic",
       "color": {
         "a": 1,
         "rgb": 10253663
       }
     },
     {
-      "query": "tag:#community/planning",
+      "query": "tag:#community/write_scripts",
       "color": {
         "a": 1,
         "rgb": 12234924
@@ -155,14 +155,14 @@
       }
     },
     {
-      "query": "tag:#community/movespy",
+      "query": "tag:#community/gather_pool",
       "color": {
         "a": 1,
         "rgb": 14767961
       }
     },
     {
-      "query": "tag:#community/test_blender_scenepy",
+      "query": "tag:#community/local_voice",
       "color": {
         "a": 1,
         "rgb": 7780274
@@ -176,14 +176,14 @@
       }
     },
     {
-      "query": "tag:#community/test_blender_planpy",
+      "query": "tag:#community/test_blender_scenepy",
       "color": {
         "a": 1,
         "rgb": 15583560
       }
     },
     {
-      "query": "tag:#community/speak",
+      "query": "tag:#community/story_sound",
       "color": {
         "a": 1,
         "rgb": 11565729
@@ -204,7 +204,7 @@
       }
     },
     {
-      "query": "tag:#community/test_full_scenespy",
+      "query": "tag:#community/words_of",
       "color": {
         "a": 1,
         "rgb": 12234924
@@ -267,7 +267,7 @@
       }
     },
     {
-      "query": "tag:#community/build_scenepy",
+      "query": "tag:#community/opener_check_casespy",
       "color": {
         "a": 1,
         "rgb": 10253663
@@ -302,7 +302,7 @@
       }
     },
     {
-      "query": "tag:#community/re",
+      "query": "tag:#community/subprocess",
       "color": {
         "a": 1,
         "rgb": 7780274
@@ -316,7 +316,7 @@
       }
     },
     {
-      "query": "tag:#community/Vector",
+      "query": "tag:#community/movespy",
       "color": {
         "a": 1,
         "rgb": 15583560
@@ -337,7 +337,7 @@
       }
     },
     {
-      "query": "tag:#community/image_sourcespy",
+      "query": "tag:#community/json",
       "color": {
         "a": 1,
         "rgb": 10253663
@@ -358,42 +358,42 @@
       }
     },
     {
-      "query": "tag:#community/json",
+      "query": "tag:#community/channel_profilespy",
       "color": {
         "a": 1,
         "rgb": 15896107
       }
     },
     {
-      "query": "tag:#community/Shots",
+      "query": "tag:#community/build_scenepy",
       "color": {
         "a": 1,
         "rgb": 14767961
       }
     },
     {
-      "query": "tag:#community/scene_cues",
+      "query": "tag:#community/lookpy",
       "color": {
         "a": 1,
         "rgb": 7780274
       }
     },
     {
-      "query": "tag:#community/rewrite_paint_prompts",
+      "query": "tag:#community/make_paper",
       "color": {
         "a": 1,
         "rgb": 5873999
       }
     },
     {
-      "query": "tag:#community/bbox",
+      "query": "tag:#community/build_set",
       "color": {
         "a": 1,
         "rgb": 15583560
       }
     },
     {
-      "query": "tag:#community/full_props",
+      "query": "tag:#community/test_full_scenespy",
       "color": {
         "a": 1,
         "rgb": 11565729
@@ -435,7 +435,7 @@
       }
     },
     {
-      "query": "tag:#community/fetch_model",
+      "query": "tag:#community/blender_linkpy",
       "color": {
         "a": 1,
         "rgb": 14767961
@@ -449,14 +449,14 @@
       }
     },
     {
-      "query": "tag:#community/moss_images",
+      "query": "tag:#community/make_sfx",
       "color": {
         "a": 1,
         "rgb": 5873999
       }
     },
     {
-      "query": "tag:#community/apply_review_fixes",
+      "query": "tag:#community/BlenderFailed",
       "color": {
         "a": 1,
         "rgb": 15583560
@@ -491,7 +491,7 @@
       }
     },
     {
-      "query": "tag:#community/first_second_check",
+      "query": "tag:#community/gemini_images",
       "color": {
         "a": 1,
         "rgb": 5142951
@@ -512,7 +512,7 @@
       }
     },
     {
-      "query": "tag:#community/tempfile",
+      "query": "tag:#community/traceback",
       "color": {
         "a": 1,
         "rgb": 7780274
@@ -526,24 +526,10 @@
       }
     },
     {
-      "query": "tag:#community/use_picture_from",
+      "query": "tag:#community/to_vertical",
       "color": {
         "a": 1,
         "rgb": 15583560
-      }
-    },
-    {
-      "query": "tag:#community/gemini_model",
-      "color": {
-        "a": 1,
-        "rgb": 11565729
-      }
-    },
-    {
-      "query": "tag:#community/run_agy",
-      "color": {
-        "a": 1,
-        "rgb": 16752039
       }
     },
     {
@@ -554,24 +540,10 @@
       }
     },
     {
-      "query": "tag:#community/mark_details",
-      "color": {
-        "a": 1,
-        "rgb": 12234924
-      }
-    },
-    {
       "query": "tag:#community/apply_look_scenes",
       "color": {
         "a": 1,
         "rgb": 5142951
-      }
-    },
-    {
-      "query": "tag:#community/test_local_job_retries_a_hard_crash",
-      "color": {
-        "a": 1,
-        "rgb": 15896107
       }
     }
   ]

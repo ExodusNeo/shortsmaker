@@ -1,12 +1,12 @@
 ---
 source_file: "blender/moves.py"
 type: "code"
-community: "moves.py"
+community: "scene_kit.py"
 location: "L56"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/movespy
+  - community/scene_kitpy
 ---
 
 # apply()
@@ -17,7 +17,7 @@ tags:
 - [[fall()]] - `indirect_call` [INFERRED]
 - [[fly_off()]] - `indirect_call` [INFERRED]
 - [[hop_off()]] - `indirect_call` [INFERRED]
-- [[main()_4]] - `calls` [EXTRACTED]
+- [[main()_5]] - `calls` [EXTRACTED]
 - [[moves.py]] - `contains` [EXTRACTED]
 - [[push()]] - `indirect_call` [INFERRED]
 - [[roll()]] - `indirect_call` [INFERRED]
@@ -26,4 +26,4 @@ tags:
 - [[topple()]] - `indirect_call` [INFERRED]
 - [[walk()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/INFERRED #community/movespy
+#graphify/code #graphify/INFERRED #community/scene_kitpy

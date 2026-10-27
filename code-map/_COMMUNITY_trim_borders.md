@@ -27,7 +27,7 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 5 edges to [[_COMMUNITY_pathlib]]
-- 1 edge to [[_COMMUNITY_test_full_scenes.py]]
+- 1 edge to [[_COMMUNITY_words_of]]
 
 ## Top bridge nodes
 - [[trim_borders()]] - degree 7, connects to 2 communities

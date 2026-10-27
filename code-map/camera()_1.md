@@ -2,7 +2,7 @@
 source_file: "blender/opener_scene.py"
 type: "code"
 community: "opener_scene.py"
-location: "L152"
+location: "L156"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,12 +12,12 @@ tags:
 # camera()
 
 ## Connections
-- [[Object_2]] - `references` [EXTRACTED]
+- [[Object_3]] - `references` [EXTRACTED]
 - [[State]] - `references` [EXTRACTED]
 - [[bbox()]] - `calls` [EXTRACTED]
 - [[first_hit()]] - `calls` [EXTRACTED]
 - [[key_loc()]] - `calls` [EXTRACTED]
-- [[main()_4]] - `calls` [EXTRACTED]
+- [[main()_5]] - `calls` [EXTRACTED]
 - [[math]] - `calls` [EXTRACTED]
 - [[opener_scene.py]] - `contains` [EXTRACTED]
 - [[random]] - `calls` [EXTRACTED]

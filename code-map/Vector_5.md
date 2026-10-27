@@ -1,17 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "bbox"
+community: "build_scene.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/bbox
+  - community/build_scenepy
 ---
 
 # Vector
 
 ## Connections
-- [[build_set()]] - `references` [EXTRACTED]
-- [[stand_on()]] - `references` [EXTRACTED]
+- [[direction()]] - `references` [EXTRACTED]
+- [[keyloc()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/bbox
+#graphify/code #graphify/EXTRACTED #community/build_scenepy

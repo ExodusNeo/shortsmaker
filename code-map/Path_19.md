@@ -1,17 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "image_sources.py"
+community: "test_opener_scene.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/image_sourcespy
+  - community/test_opener_scenepy
 ---
 
 # Path
 
 ## Connections
-- [[film_piece()]] - `references` [EXTRACTED]
-- [[shot_span()]] - `references` [EXTRACTED]
+- [[run()_2]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/image_sourcespy
+#graphify/code #graphify/EXTRACTED #community/test_opener_scenepy

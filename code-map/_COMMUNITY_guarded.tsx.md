@@ -46,7 +46,7 @@ members: 39
 - [[remotion_src_full_toolkit_travel]] - concept
 - [[routeArrow()]] - code - remotion/src/full/guarded.tsx
 - [[test()]] - code - tests/guarded.test.ts
-- [[travel()_1]] - code - remotion/src/full/guarded.tsx
+- [[travel()]] - code - remotion/src/full/guarded.tsx
 
 ## Live Query (requires Dataview plugin)
 

@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[The MCP server has to be started in Blender each time (owner, 2026-10-27) say…]] - `rationale_for` [EXTRACTED]
 - [[cli.py]] - `contains` [EXTRACTED]
-- [[main()_3]] - `calls` [EXTRACTED]
+- [[main()_4]] - `calls` [EXTRACTED]
 - [[ping()]] - `calls` [EXTRACTED]
 - [[test_blender_note()]] - `calls` [EXTRACTED]
 

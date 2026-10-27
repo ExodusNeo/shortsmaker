@@ -642,9 +642,9 @@
     "semantic_hash": ""
   },
   "blender/opener_scene.py": {
-    "mtime": 1793078784.6210353,
-    "seen": 1793079182.0972397,
-    "ast_hash": "004c15587236b7bc921533fcbb483c42",
+    "mtime": 1793079805.5487967,
+    "seen": 1793079935.5501583,
+    "ast_hash": "888f71b5839224360412e7514840c035",
     "semantic_hash": ""
   },
   "blender/scene_kit.py": {
@@ -702,9 +702,9 @@
     "semantic_hash": ""
   },
   "tests/test_opener_scene.py": {
-    "mtime": 1793078758.6771867,
-    "seen": 1793079182.0973742,
-    "ast_hash": "c38695957f25cc9125aef147f58e18b7",
+    "mtime": 1793079746.1581662,
+    "seen": 1793079935.550288,
+    "ast_hash": "7c6f3bfce4ad13cee043f5e8a42303ac",
     "semantic_hash": ""
   }
 }

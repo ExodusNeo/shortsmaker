@@ -1,18 +1,21 @@
 ---
-source_file: "shortsmaker/opener_plan.py"
+source_file: "tests/test_full_scenes.py"
 type: "code"
-community: "test_opener_scene.py"
-location: "L164"
+community: "test_first_second.py"
+location: "L150"
 tags:
   - graphify/code
-  - graphify/EXTRACTED
-  - community/test_opener_scenepy
+  - graphify/INFERRED
+  - community/test_first_secondpy
 ---
 
 # ask()
 
 ## Connections
-- [[_tables_text()]] - `calls` [EXTRACTED]
-- [[plan_openers()]] - `contains` [EXTRACTED]
+- [[_fake_planning()]] - `indirect_call` [INFERRED]
+- [[test_look_check_fixes_code()]] - `indirect_call` [INFERRED]
+- [[test_review_redraws_custom()]] - `indirect_call` [INFERRED]
+- [[test_review_uses_unused_pool_pictures_before_painting()]] - `indirect_call` [INFERRED]
+- [[test_rewrite_paint_prompts()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/test_opener_scenepy
+#graphify/code #graphify/INFERRED #community/test_first_secondpy

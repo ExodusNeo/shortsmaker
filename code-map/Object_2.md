@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "opener_scene.py"
+community: "build_set"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/opener_scenepy
+  - community/build_set
 ---
 
 # Object
 
 ## Connections
-- [[camera()_1]] - `references` [EXTRACTED]
+- [[load_model()]] - `references` [EXTRACTED]
+- [[merge()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/opener_scenepy
+#graphify/code #graphify/EXTRACTED #community/build_set

@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[The style library (remotionsrcstylelibrary.json) {name, kind, description,…]] - `rationale_for` [EXTRACTED]
 - [[approve_candidate()]] - `calls` [EXTRACTED]
-- [[build()_1]] - `calls` [EXTRACTED]
+- [[build()]] - `calls` [EXTRACTED]
 - [[choose_images()]] - `calls` [EXTRACTED]
 - [[clean_invention()]] - `calls` [EXTRACTED]
 - [[clean_look()]] - `calls` [EXTRACTED]
@@ -23,7 +23,7 @@ tags:
 - [[direct_scripts()]] - `calls` [EXTRACTED]
 - [[json]] - `calls` [EXTRACTED]
 - [[look_text()]] - `calls` [EXTRACTED]
-- [[main()_3]] - `calls` [EXTRACTED]
+- [[main()_4]] - `calls` [EXTRACTED]
 - [[save_candidate()]] - `calls` [EXTRACTED]
 - [[style_lab.py]] - `contains` [EXTRACTED]
 - [[style_rules()]] - `calls` [EXTRACTED]

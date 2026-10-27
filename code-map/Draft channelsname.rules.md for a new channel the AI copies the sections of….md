@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/rules.py"
 type: "rationale"
-community: "json"
+community: "channel_profiles.py"
 location: "L87"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/json
+  - community/channel_profilespy
 ---
 
 # Draft channels/<name>.rules.md for a new channel: the AI copies the sections of…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[draft_rules()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/json
+#graphify/rationale #graphify/EXTRACTED #community/channel_profilespy

@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[Step every frame in order once so the rigid-body cache holds the whole clip.]] - `rationale_for` [EXTRACTED]
-- [[main()_4]] - `calls` [EXTRACTED]
+- [[main()_5]] - `calls` [EXTRACTED]
 - [[scene_kit.py]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/opener_scenepy

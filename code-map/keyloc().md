@@ -1,19 +1,19 @@
 ---
 source_file: "blender/build_scene.py"
 type: "code"
-community: "Shots"
+community: "build_scene.py"
 location: "L30"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Shots
+  - community/build_scenepy
 ---
 
 # keyloc()
 
 ## Connections
-- [[Vector_4]] - `references` [EXTRACTED]
+- [[Vector_5]] - `references` [EXTRACTED]
 - [[build_scene.py]] - `contains` [EXTRACTED]
 - [[main()_2]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Shots
+#graphify/code #graphify/EXTRACTED #community/build_scenepy

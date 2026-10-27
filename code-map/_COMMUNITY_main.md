@@ -21,7 +21,7 @@ members: 18
 - [[Failure]] - code - blender/failures.py
 - [[Objects that fall with the span (the label on the failing part).]] - rationale - blender/failures.py
 - [[The failure from t0 to its peak, then (collapse) the span falls; `until` (the…]] - rationale - blender/failures.py
-- [[Vector_2]] - code
+- [[Vector_3]] - code
 - [[Where a point on the collapsing span ends up in the water.]] - rationale - blender/failures.py
 - [[focus_object()]] - code - blender/templates.py
 - [[key()_1]] - code - blender/failures.py
@@ -37,9 +37,10 @@ SORT file.name ASC
 ## Connections to other communities
 - 5 edges to [[_COMMUNITY_build_scene.py]]
 - 4 edges to [[_COMMUNITY_templates.py]]
-- 3 edges to [[_COMMUNITY_Shots]]
 - 3 edges to [[_COMMUNITY_parts.py]]
+- 2 edges to [[_COMMUNITY_opener_check_cases.py]]
 - 1 edge to [[_COMMUNITY_json]]
+- 1 edge to [[_COMMUNITY_look.py]]
 
 ## Top bridge nodes
 - [[main()_2]] - degree 19, connects to 5 communities

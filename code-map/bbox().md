@@ -1,12 +1,12 @@
 ---
 source_file: "blender/scene_kit.py"
 type: "code"
-community: "bbox"
+community: "scene_kit.py"
 location: "L30"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/bbox
+  - community/scene_kitpy
 ---
 
 # bbox()
@@ -14,6 +14,7 @@ tags:
 ## Connections
 - [[Vector_6]] - `references` [EXTRACTED]
 - [[build_set()]] - `calls` [EXTRACTED]
+- [[burst()]] - `calls` [EXTRACTED]
 - [[camera()_1]] - `calls` [EXTRACTED]
 - [[cut()]] - `calls` [EXTRACTED]
 - [[fall()]] - `calls` [EXTRACTED]
@@ -25,4 +26,4 @@ tags:
 - [[stand_on()]] - `calls` [EXTRACTED]
 - [[world_verts()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/bbox
+#graphify/code #graphify/EXTRACTED #community/scene_kitpy

@@ -1,17 +1,18 @@
 ---
-source_file: "tests/test_full_scenes.py"
+source_file: "shortsmaker/opener_plan.py"
 type: "code"
-community: "rewrite_paint_prompts"
-location: "L439"
+community: "test_opener_scene.py"
+location: "L164"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/rewrite_paint_prompts
+  - community/test_opener_scenepy
 ---
 
 # ask()
 
 ## Connections
-- [[test_rewrite_paint_prompts()]] - `contains` [EXTRACTED]
+- [[_tables_text()]] - `calls` [EXTRACTED]
+- [[plan_openers()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/rewrite_paint_prompts
+#graphify/code #graphify/EXTRACTED #community/test_opener_scenepy

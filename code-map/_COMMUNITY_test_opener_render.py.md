@@ -14,7 +14,7 @@ members: 40
 - [[A temp work folder, a library holding the fixture models, a fake Blender and…]] - rationale - tests/test_opener_render.py
 - [[Beat times squeezed into the real scene 1 (the voice can make it shorter than…]] - rationale - shortsmaker/opener_render.py
 - [[Env]] - code - tests/test_opener_render.py
-- [[Path_23]] - code
+- [[Path_26]] - code
 - [[Scene 1's opener clip, or (None, why). (None, None) when the Short has no…]] - rationale - shortsmaker/opener_render.py
 - [[Sixth live run (Mike) 8 evenly spaced frames skipped the whole 0.3-second…]] - rationale - tests/test_opener_render.py
 - [[Tests for running an opener from a Short (opener_render.py, 2026-10-27) models…]] - rationale - tests/test_opener_render.py
@@ -58,24 +58,23 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 15 edges to [[_COMMUNITY_pathlib]]
-- 4 edges to [[_COMMUNITY_render]]
+- 6 edges to [[_COMMUNITY_render]]
 - 4 edges to [[_COMMUNITY_test_opener_scene.py]]
 - 4 edges to [[_COMMUNITY_json]]
-- 4 edges to [[_COMMUNITY_shutil]]
-- 3 edges to [[_COMMUNITY_ffmpeg]]
-- 2 edges to [[_COMMUNITY_re]]
+- 3 edges to [[_COMMUNITY_shutil]]
+- 2 edges to [[_COMMUNITY_subprocess]]
+- 2 edges to [[_COMMUNITY_blender_link.py]]
+- 2 edges to [[_COMMUNITY_traceback]]
+- 1 edge to [[_COMMUNITY_local_clips]]
 - 1 edge to [[_COMMUNITY_test_rules.py]]
 - 1 edge to [[_COMMUNITY_test_blender_render.py]]
 - 1 edge to [[_COMMUNITY_ask_ai]]
-- 1 edge to [[_COMMUNITY_fetch_model]]
-- 1 edge to [[_COMMUNITY_moves.py]]
+- 1 edge to [[_COMMUNITY_scene_kit.py]]
 - 1 edge to [[_COMMUNITY_call]]
-- 1 edge to [[_COMMUNITY_test_blender_link.py]]
-- 1 edge to [[_COMMUNITY_tempfile]]
 
 ## Top bridge nodes
 - [[test_opener_render.py]] - degree 42, connects to 10 communities
 - [[render_opener()]] - degree 27, connects to 8 communities
 - [[review()]] - degree 7, connects to 3 communities
-- [[_wiring()]] - degree 6, connects to 2 communities
 - [[scale_beats()]] - degree 5, connects to 2 communities
+- [[copy]] - degree 5, connects to 2 communities

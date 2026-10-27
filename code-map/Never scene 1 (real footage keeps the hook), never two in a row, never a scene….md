@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/plan_rules.py"
 type: "rationale"
-community: "test_full_scenes.py"
+community: "write_scripts"
 location: "L236"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/test_full_scenespy
+  - community/write_scripts
 ---
 
 # Never scene 1 (real footage keeps the hook), never two in a row, never a scene…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[limit_full()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/test_full_scenespy
+#graphify/rationale #graphify/EXTRACTED #community/write_scripts
