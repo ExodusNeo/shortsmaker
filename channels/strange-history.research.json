@@ -1,69 +1,96 @@
 {
- "date": "2026-10-26",
+ "date": "2026-10-27",
  "niche": "Strange-but-true history: short, surprising stories about real people, places, inventions and events from history, each built around one hook and a twist ending (avoiding graphic violence and anything political)",
  "shorts": [
+  {
+   "title": "They Were Sealed In The Emperor’s Tomb #shorts",
+   "views": 2100000,
+   "url": "https://www.youtube.com/shorts/XfYSbqUkNDc",
+   "channel": "@HistoryBypass",
+   "days_old": 2,
+   "views_per_day": 1050000,
+   "likes": 35952
+  },
   {
    "title": "The Submarine Disaster That Makes No Sense",
    "views": 6000000,
    "url": "https://www.youtube.com/shorts/oTuFwPkFFXs",
    "channel": "@Thoughty2",
-   "days_old": 96,
-   "views_per_day": 62500,
-   "likes": 186822
-  },
-  {
-   "title": "Rifle with a built in bottle opener?",
-   "views": 559000,
-   "url": "https://www.youtube.com/shorts/olbjFEt4flU",
-   "channel": "@SimpleHistory",
-   "days_old": 22,
-   "views_per_day": 25409,
-   "likes": 21907
+   "days_old": 97,
+   "views_per_day": 61855,
+   "likes": 186820
   },
   {
    "title": "Astronomers Can’t Explain This Moon Mystery",
    "views": 979000,
    "url": "https://www.youtube.com/shorts/ubKRmhsv_W4",
    "channel": "@Thoughty2",
-   "days_old": 47,
-   "views_per_day": 20829,
-   "likes": 17169
+   "days_old": 48,
+   "views_per_day": 20395,
+   "likes": 17170
   },
   {
    "title": "The Wildest Martial Arts Hoax of All Time",
-   "views": 921000,
+   "views": 923000,
    "url": "https://www.youtube.com/shorts/TS_-7T6JMCI",
    "channel": "@Thoughty2",
-   "days_old": 52,
-   "views_per_day": 17711,
-   "likes": 24692
+   "days_old": 53,
+   "views_per_day": 17415,
+   "likes": 24704
   },
   {
    "title": "What Happens When You Are Shot",
    "views": 2900000,
    "url": "https://www.youtube.com/shorts/V15wrmD5VFs",
    "channel": "@TheInfographicsShow",
-   "days_old": 697,
-   "views_per_day": 4160,
-   "likes": 104337
+   "days_old": 698,
+   "views_per_day": 4154,
+   "likes": 104342
+  },
+  {
+   "title": "The Deadliest Tornado In The World 🌪️ #shorts",
+   "views": 2600000,
+   "url": "https://www.youtube.com/shorts/8-KqkH59HFI",
+   "channel": "UCxqX-Q5IfGmltH5fOtUDIgg",
+   "days_old": 1304,
+   "views_per_day": 1993,
+   "likes": 29131
   },
   {
    "title": "How Taiwan Manages with Low Military Spending",
    "views": 1800000,
    "url": "https://www.youtube.com/shorts/oWJaVXdNcvM",
    "channel": "@TheInfographicsShow",
-   "days_old": 1117,
-   "views_per_day": 1611,
-   "likes": 84289
+   "days_old": 1118,
+   "views_per_day": 1610,
+   "likes": 84283
   },
   {
    "title": "Why the Russian Military Switched to the AK-12",
    "views": 1800000,
    "url": "https://www.youtube.com/shorts/syVYb73Yj38",
    "channel": "@TheInfographicsShow",
-   "days_old": 1122,
-   "views_per_day": 1604,
-   "likes": 93792
+   "days_old": 1123,
+   "views_per_day": 1602,
+   "likes": 93779
+  },
+  {
+   "title": "Rifle with a built in bottle opener?",
+   "views": 561000,
+   "url": "https://www.youtube.com/shorts/olbjFEt4flU",
+   "channel": "@SimpleHistory"
+  },
+  {
+   "title": "Insane Jobs People Had in Ancient Rome",
+   "views": 556000,
+   "url": "https://www.youtube.com/shorts/LAu1u6l3qAQ",
+   "channel": "@TheInfographicsShow"
+  },
+  {
+   "title": "Would you take the road less traveled? #shorts",
+   "views": 555000,
+   "url": "https://www.youtube.com/shorts/KWbuAjx95-k",
+   "channel": "@TEDEd"
   },
   {
    "title": "What Would the US Look Like If It Had Won the War of 1812 #war",
@@ -78,19 +105,19 @@
    "channel": "@TheHistoryGuyChannel"
   },
   {
-   "title": "Taiwan's Plan for War Against China #war",
-   "views": 1600000,
-   "url": "https://www.youtube.com/shorts/QZ_4irZZcyQ",
-   "channel": "@TheInfographicsShow",
-   "days_old": 1131,
-   "views_per_day": 1414,
-   "likes": 57043
-  },
-  {
    "title": "The Brazen Bull - Worst Punishment in the History of Mankind",
    "views": 516000,
    "url": "https://www.youtube.com/shorts/FgNoK6wLclE",
    "channel": "@TheInfographicsShow"
+  },
+  {
+   "title": "Taiwan's Plan for War Against China #war",
+   "views": 1600000,
+   "url": "https://www.youtube.com/shorts/QZ_4irZZcyQ",
+   "channel": "@TheInfographicsShow",
+   "days_old": 1132,
+   "views_per_day": 1413,
+   "likes": 57036
   },
   {
    "title": "What If You Only Drank Coke",
@@ -103,9 +130,9 @@
    "views": 1000000,
    "url": "https://www.youtube.com/shorts/drPjV8zkYmw",
    "channel": "@TheInfographicsShow",
-   "days_old": 751,
-   "views_per_day": 1331,
-   "likes": 54433
+   "days_old": 752,
+   "views_per_day": 1329,
+   "likes": 54477
   },
   {
    "title": "Normal Day Jobs of Infamous Serial Killers",
@@ -124,9 +151,9 @@
    "views": 724000,
    "url": "https://www.youtube.com/shorts/tbwFWiMSWwM",
    "channel": "@TheInfographicsShow",
-   "days_old": 634,
-   "views_per_day": 1141,
-   "likes": 13500
+   "days_old": 635,
+   "views_per_day": 1140,
+   "likes": 13503
   },
   {
    "title": "Maus Tank: Outrun by a Jogging Soldier",
@@ -136,7 +163,7 @@
   },
   {
    "title": "3 things you may not know about the Declaration of Independence #shorts",
-   "views": 376000,
+   "views": 377000,
    "url": "https://www.youtube.com/shorts/xDNzz8yAH7I",
    "channel": "@TEDEd"
   },
@@ -147,40 +174,13 @@
    "channel": "@TheInfographicsShow"
   },
   {
-   "title": "Japan's First Naval Defeat of WWII",
-   "views": 363000,
-   "url": "https://www.youtube.com/shorts/w3SSx44tqmk",
-   "channel": "@TheHistoryGuyChannel"
-  },
-  {
-   "title": "How Afghanistan Defeated the Soviet Union #sovietunion",
-   "views": 361000,
-   "url": "https://www.youtube.com/shorts/yPKe46_rbbs",
-   "channel": "@TheInfographicsShow"
-  },
-  {
-   "title": "First Major Naval Battle of the Second World War",
-   "views": 353000,
-   "url": "https://www.youtube.com/shorts/n3N51uVtUMQ",
-   "channel": "@TheHistoryGuyChannel"
-  },
-  {
-   "title": "Insane Jobs People Had in Ancient Rome",
-   "views": 556000,
-   "url": "https://www.youtube.com/shorts/LAu1u6l3qAQ",
-   "channel": "@TheInfographicsShow",
-   "days_old": 1123,
-   "views_per_day": 495,
-   "likes": 27553
-  },
-  {
-   "title": "Would you take the road less traveled? #shorts",
-   "views": 555000,
-   "url": "https://www.youtube.com/shorts/KWbuAjx95-k",
-   "channel": "@TEDEd",
-   "days_old": 1368,
-   "views_per_day": 405,
-   "likes": 26120
+   "title": "The Scariest Natural Disasters Caught On Camera 🌪 #shorts",
+   "views": 999000,
+   "url": "https://www.youtube.com/shorts/CcP0RfXLuAk",
+   "channel": "UCxqX-Q5IfGmltH5fOtUDIgg",
+   "days_old": 1362,
+   "views_per_day": 733,
+   "likes": 15854
   }
  ]
 }
