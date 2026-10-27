@@ -140,6 +140,9 @@ def clean_opener(raw) -> dict | None:
             continue
         if b.get("move") not in MOVES:
             return None
+        gait = next((a.get("gait") for a in actors if a["id"] == b.get("actor")), None)
+        if b["move"] == "roll" and gait == "wheeled":  # roll is a tumble: the people run's car tipped onto its nose
+            return None
         if b.get("style", "normal") not in STYLES:
             return None
         if b.get("ends") is not None and (not isinstance(b["ends"], dict) or b["ends"].get("on") not in ("ground", *ids)):

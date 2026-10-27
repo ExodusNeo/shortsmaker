@@ -479,6 +479,11 @@ def main(job_path: str) -> None:
     first = sorted(plan["beats"], key=lambda b: b["at"])[0]
     subject_id = plan["camera"].get("follow") or first.get("target") or first.get("actor") \
         or next(a["id"] for a in plan["actors"] if a["id"] not in tools)
+    if st.threat is None:  # what someone goes at, or what comes at them, is what frame 0 must show (people plans)
+        ids = {a["id"] for a in plan["actors"]}
+        pair = next(((b["actor"], b["toward"]) for b in plan["beats"] if b.get("toward") in ids), None)
+        if pair:
+            st.threat = st.objs[pair[1] if pair[0] == subject_id else pair[0]]
     cam = camera(plan, st, subject_id)
     punch_in(cam, st, subject_id)
     held = hold_offscreen(st, cam)
@@ -497,7 +502,7 @@ def main(job_path: str) -> None:
               "cut_shares": {k: v for *_, s in st.cuts for k, v in s.items()}, "lowest": lowest,
               "highest": highest, "moved": moved, "swings": [p.name for p, _ in st.swings],
               "held": {aid: people.held(o, st.people) for aid, o in st.objs.items() if o.get("prop")},
-              "gap_start": gap_start,
+              "gap_start": gap_start, "threat": st.threat.name if st.threat is not None else None,
               "gap_to": {a: {b: round((o.matrix_world.translation - q.matrix_world.translation).length, 4)
                              for b, q in st.objs.items() if b != a} for a, o in st.objs.items()},
               "held_offscreen": held, "stroke_toward_camera": st.stroke_toward,

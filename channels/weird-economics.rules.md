@@ -139,6 +139,7 @@ Staging lessons from the live runs:
   not "ww2 armored car" or "ruined brick house" (the first people run lost its opener to names no library has).
 - Name a prop as it is held: "closed umbrella", "walking stick", "sword" (an "umbrella" came back open).
 - To go at someone or something, use "toward": its id ("toward": "car"); you can't know which side it stands on.
+- A vehicle drives with "walk" and gait "wheeled"; "roll" is a tumble for round things (a barrel, a ball).
 - Two things that move toward each other (a person and a car) start far enough apart to stop short; a person
   can't stop a car, so the car stops, or it drives across the frame, not into them.
 - A person's prop (the umbrella, the sword) is in frame 0; people are seen from the side like animals.

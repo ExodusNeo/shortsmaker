@@ -282,6 +282,7 @@ def test_prop_held_by_its_handle_clear_of_the_body():
         report, _ = run(job)
         held = report["held"]["knight"]
         assert held["hand_gap"] < 0.06 and not held["through_body"] and held["points"] == points, (name, held)
+        assert held["lowest"] >= 0.0, (name, held)  # a long cane leans forward rather than sink into the ground
 
 
 
@@ -294,6 +295,7 @@ def test_walk_toward_another_actor():
     assert report["ok"], report["failures"]
     assert report["moved"]["officer"] > 0.05, report["moved"]
     assert report["gap_to"]["officer"]["crate"] < report["gap_start"]["officer"]["crate"], report
+    assert report["threat"] == "crate", report["threat"]  # what he goes at is the threat frame 0 must show
 
 
 

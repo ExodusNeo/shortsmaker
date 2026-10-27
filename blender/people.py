@@ -111,13 +111,14 @@ def _hold(prop, body, hand: Vector, blade: bool, turn: float = 0.0) -> bool:
     aim = (Vector((0, 0, 1)) + 0.35 * forward if blade else Vector((0, 0, -1)) + 0.35 * forward).normalized()
     grip = moves.handle_end_local(prop)
     prop["grip"] = grip[:]
-    tilts = sorted(((0.15 * a, 0.25 * b) for a in range(9) for b in range(5)), key=lambda t: t[0] + t[1])
+    tilts = sorted(((0.15 * a, 0.25 * b) for a in range(9) for b in range(9)), key=lambda t: t[0] + t[1])
     for (tilt, lean), slide in [(t, 0.0) for t in tilts] + [((1.2, 1.0), 0.02 * k) for k in range(1, 11)]:
         r = long.rotation_difference((aim + out * tilt + forward * lean).normalized()).to_matrix()             @ Matrix.Rotation(turn, 3, long)
         prop.rotation_euler = r.to_euler()
         prop.location = hand + out * slide - r @ grip
         bpy.context.view_layer.update()
-        if not _through(prop, body_tree, hand + out * slide):
+        above = min((prop.matrix_world @ v.co).z for v in prop.data.vertices) >= body.location.z + 0.01
+        if above and not _through(prop, body_tree, hand + out * slide):  # clear of the owner and the ground
             return True
     return False
 
@@ -133,6 +134,7 @@ def held(body, lib: dict) -> dict:
     grip = prop.matrix_world @ Vector(prop["grip"])
     tip = max((prop.matrix_world @ v.co for v in prop.data.vertices), key=lambda p: (p - grip).length)
     return {"hand_gap": round((grip - hand).length, 4), "through_body": _through(prop, kit.tree(body), grip),
+            "lowest": round(min((prop.matrix_world @ v.co).z for v in prop.data.vertices) - body.location.z, 4),
             "points": "up" if tip.z > grip.z else "down"}
 
 

@@ -215,6 +215,18 @@ def test_fix_round_reads_the_opener_rules():
     assert seen and "RULES-MARKER" in seen[0]
 
 
+
+def test_vehicle_roll_rejected():
+    """"roll" is the physics tumble for round things; the people run's car rolled and tipped onto its nose. A
+    vehicle (gait wheeled) drives with "walk"."""
+    p = copy.deepcopy(PEOPLE)
+    p["actors"].append({"id": "car", "find": "truck", "size_m": 4, "gait": "wheeled"})
+    p["beats"].append({"move": "roll", "actor": "car", "at": 0.5, "toward": "officer"})
+    assert opener_plan.clean_opener(p) is None
+    p["beats"][-1]["move"] = "walk"
+    assert opener_plan.clean_opener(p) is not None
+
+
 if __name__ == "__main__":
     names = [n for n in sorted(globals()) if n.startswith("test_") and (len(sys.argv) < 2 or n in sys.argv[1:])]
     failed = 0
