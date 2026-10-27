@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_full_scenes.py"
 type: "rationale"
-community: "test_full_scenes.py"
+community: "test_blender_render.py"
 location: "L121"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/test_full_scenespy
+  - community/test_blender_renderpy
 ---
 
 # Mike's 'WHY MIKE DIED' (2.7 s scene, last word 1 s before the cut): its stamp…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[test_full_cues_leave_time_to_finish()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/test_full_scenespy
+#graphify/rationale #graphify/EXTRACTED #community/test_blender_renderpy

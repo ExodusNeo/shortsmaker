@@ -1,12 +1,12 @@
 ---
 source_file: "blender/moves.py"
 type: "code"
-community: "scene_kit.py"
+community: "moves.py"
 location: "L60"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/scene_kitpy
+  - community/movespy
 ---
 
 # apply()
@@ -26,4 +26,4 @@ tags:
 - [[topple()]] - `indirect_call` [INFERRED]
 - [[walk()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/INFERRED #community/scene_kitpy
+#graphify/code #graphify/INFERRED #community/movespy

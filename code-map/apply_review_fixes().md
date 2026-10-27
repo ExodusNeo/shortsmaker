@@ -1,18 +1,18 @@
 ---
 source_file: "shortsmaker/review.py"
 type: "code"
-community: "apply_review_fixes"
+community: "test_full_scenes.py"
 location: "L188"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/apply_review_fixes
+  - community/test_full_scenespy
 ---
 
 # apply_review_fixes()
 
 ## Connections
-- [[Path_16]] - `references` [EXTRACTED]
+- [[Path_9]] - `references` [EXTRACTED]
 - [[The automatic fixes after a render's review (up to AUTO_REPAINT_MAX scenes per…]] - `rationale_for` [EXTRACTED]
 - [[paint_new()]] - `calls` [EXTRACTED]
 - [[pool_pictures()]] - `calls` [EXTRACTED]
@@ -28,4 +28,4 @@ tags:
 - [[test_review_redraws_custom()]] - `calls` [EXTRACTED]
 - [[test_review_uses_unused_pool_pictures_before_painting()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/apply_review_fixes
+#graphify/code #graphify/EXTRACTED #community/test_full_scenespy

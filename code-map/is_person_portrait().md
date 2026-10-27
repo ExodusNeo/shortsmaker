@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/plan_rules.py"
 type: "code"
-community: "choose_images"
+community: "write_scripts"
 location: "L341"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/choose_images
+  - community/write_scripts
 ---
 
 # is_person_portrait()
@@ -20,4 +20,4 @@ tags:
 - [[words_of()]] - `calls` [EXTRACTED]
 - [[write_scripts()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/choose_images
+#graphify/code #graphify/EXTRACTED #community/write_scripts

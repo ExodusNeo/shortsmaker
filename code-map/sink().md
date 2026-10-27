@@ -1,12 +1,12 @@
 ---
 source_file: "blender/moves.py"
 type: "code"
-community: "scene_kit.py"
+community: "moves.py"
 location: "L252"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/scene_kitpy
+  - community/movespy
 ---
 
 # sink()
@@ -19,4 +19,4 @@ tags:
 - [[math]] - `calls` [EXTRACTED]
 - [[moves.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/scene_kitpy
+#graphify/code #graphify/EXTRACTED #community/movespy

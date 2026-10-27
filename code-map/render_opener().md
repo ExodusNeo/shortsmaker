@@ -2,7 +2,7 @@
 source_file: "shortsmaker/opener_render.py"
 type: "code"
 community: "test_opener_render.py"
-location: "L136"
+location: "L158"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,7 +12,7 @@ tags:
 # render_opener()
 
 ## Connections
-- [[Path_32]] - `references` [EXTRACTED]
+- [[Path_31]] - `references` [EXTRACTED]
 - [[Scene 1's opener clip, or (None, why). (None, None) when the Short has no…]] - `rationale_for` [EXTRACTED]
 - [[_run()]] - `calls` [EXTRACTED]
 - [[ffmpeg()]] - `calls` [EXTRACTED]
@@ -37,8 +37,10 @@ tags:
 - [[test_pick_model()]] - `calls` [EXTRACTED]
 - [[test_reuse_after_small_length_change()]] - `calls` [EXTRACTED]
 - [[test_reuse_unchanged()]] - `calls` [EXTRACTED]
+- [[test_review_knows_about_people()]] - `calls` [EXTRACTED]
 - [[test_review_reads_the_channel_opener_rules()]] - `calls` [EXTRACTED]
 - [[test_review_rejects()]] - `calls` [EXTRACTED]
+- [[test_role_hat_is_optional()]] - `calls` [EXTRACTED]
 - [[test_search_failure_falls_back()]] - `calls` [EXTRACTED]
 - [[test_success_returns_clip()]] - `calls` [EXTRACTED]
 - [[test_unfound_model_goes_back_to_the_planner()]] - `calls` [EXTRACTED]

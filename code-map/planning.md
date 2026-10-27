@@ -1,18 +1,18 @@
 ---
 source_file: "tests/test_pictures_first.py"
 type: "code"
-community: "write_scripts"
+community: "planning"
 location: "L197"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/write_scripts
+  - community/planning
 ---
 
 # planning
 
 ## Connections
-- [[dot-__enter__()_4]] - `method` [EXTRACTED]
+- [[dot-__enter__()_1]] - `method` [EXTRACTED]
 - [[dot-__exit__()_3]] - `method` [EXTRACTED]
 - [[dot-__init__()_1]] - `method` [EXTRACTED]
 - [[test_all_weak_returns_empty()]] - `calls` [EXTRACTED]
@@ -27,4 +27,4 @@ tags:
 - [[test_weak_topic_swapped_for_backup()]] - `calls` [EXTRACTED]
 - [[write_scripts() with every AI step canned and `prepare` standing in for…]] - `rationale_for` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/write_scripts
+#graphify/code #graphify/EXTRACTED #community/planning

@@ -1,30 +1,32 @@
 ---
 type: community
-members: 17
+members: 19
 ---
 
 # prepare_topic
 
-**Members:** 17 nodes
+**Members:** 19 nodes
 
 ## Members
 - [[Before writing the topic's Wikipedia research (`_texts`; fact_check() reuses…]] - rationale - shortsmaker/picture_pool.py
 - [[Numbered thumbnail grids (6x4) so Claude can look at every candidate at once.]] - rationale - shortsmaker/picture_pool.py
 - [[Path_12]] - code
-- [[Path_13]] - code
+- [[The planner plans the edit (footage searches, shots, camera, graphics, person…]] - rationale - shortsmaker/writing.py
 - [[The saved pool (None if missing or unreadable it is gathered again);…]] - rationale - shortsmaker/picture_pool.py
-- [[Write via a temp file, so an interrupted run never leaves a half-written file…]] - rationale - shortsmaker/media_tools.py
+- [[The topic's usable pictures as prompt lines ( without a picture list).]] - rationale - shortsmaker/picture_pool.py
+- [[The usable pictures as prompt lines 12 film 1944 newsreel of rubber tanks…]] - rationale - shortsmaker/picture_pool.py
+- [[Usable list entries for the topic check all frames of one video count once…]] - rationale - shortsmaker/picture_pool.py
+- [[catalog_text()]] - code - shortsmaker/picture_pool.py
 - [[contact_sheets()]] - code - shortsmaker/picture_pool.py
+- [[direct_scripts()]] - code - shortsmaker/writing.py
+- [[is_usable()]] - code - shortsmaker/picture_pool.py
 - [[load_pool()]] - code - shortsmaker/picture_pool.py
-- [[pool.json (the candidates without bytes) + thumbk.jpg; list positions are the…]] - rationale - shortsmaker/picture_pool.py
+- [[pictures_of()]] - code - shortsmaker/picture_pool.py
 - [[pool_folder()]] - code - shortsmaker/picture_pool.py
 - [[prepare_topic()]] - code - shortsmaker/picture_pool.py
-- [[save_pool()]] - code - shortsmaker/picture_pool.py
-- [[test_empty_pool_drops_topic_without_ai()]] - code - tests/test_pictures_first.py
 - [[test_pool_roundtrip()]] - code - tests/test_pictures_first.py
-- [[test_pool_rows_without_thumbs()]] - code - tests/test_pictures_first.py
 - [[test_small_pool_skips_ai()]] - code - tests/test_pictures_first.py
-- [[write_json()]] - code - shortsmaker/media_tools.py
+- [[usable()]] - code - shortsmaker/picture_pool.py
 
 ## Live Query (requires Dataview plugin)
 
@@ -34,24 +36,26 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 15 edges to [[_COMMUNITY_test_pictures_first.py]]
-- 6 edges to [[_COMMUNITY_write_scripts]]
-- 6 edges to [[_COMMUNITY_pathlib]]
-- 5 edges to [[_COMMUNITY_json]]
-- 3 edges to [[_COMMUNITY_choose_images]]
+- 14 edges to [[_COMMUNITY_test_pictures_first.py]]
+- 11 edges to [[_COMMUNITY_json]]
+- 4 edges to [[_COMMUNITY_write_scripts]]
+- 2 edges to [[_COMMUNITY_planning]]
 - 2 edges to [[_COMMUNITY_test_rules.py]]
-- 2 edges to [[_COMMUNITY_image_sources.py]]
+- 2 edges to [[_COMMUNITY_render]]
+- 2 edges to [[_COMMUNITY_choose_images]]
+- 2 edges to [[_COMMUNITY_pathlib]]
+- 2 edges to [[_COMMUNITY_fetch]]
+- 2 edges to [[_COMMUNITY_gather_pool]]
 - 1 edge to [[_COMMUNITY_owner]]
-- 1 edge to [[_COMMUNITY_ffmpeg]]
-- 1 edge to [[_COMMUNITY_test_blender_plan.py]]
-- 1 edge to [[_COMMUNITY_test_first_second.py]]
-- 1 edge to [[_COMMUNITY_apply_review_fixes]]
-- 1 edge to [[_COMMUNITY_clean_pics]]
-- 1 edge to [[_COMMUNITY_subprocess]]
+- 1 edge to [[_COMMUNITY_thumbnail_order]]
+- 1 edge to [[_COMMUNITY_edit_scripts]]
+- 1 edge to [[_COMMUNITY_test_full_scenes.py]]
+- 1 edge to [[_COMMUNITY_style_library]]
+- 1 edge to [[_COMMUNITY_ask_ai]]
 
 ## Top bridge nodes
-- [[load_pool()]] - degree 14, connects to 8 communities
 - [[prepare_topic()]] - degree 15, connects to 7 communities
-- [[save_pool()]] - degree 13, connects to 4 communities
+- [[load_pool()]] - degree 14, connects to 6 communities
+- [[direct_scripts()]] - degree 7, connects to 4 communities
 - [[contact_sheets()]] - degree 6, connects to 4 communities
-- [[write_json()]] - degree 6, connects to 3 communities
+- [[is_usable()]] - degree 6, connects to 4 communities

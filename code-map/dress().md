@@ -2,7 +2,7 @@
 source_file: "blender/people.py"
 type: "code"
 community: "people.py"
-location: "L142"
+location: "L146"
 tags:
   - graphify/code
   - graphify/EXTRACTED

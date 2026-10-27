@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "look_toon.py"
+community: "opener_scene.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/look_toonpy
+  - community/opener_scenepy
 ---
 
 # Material
 
 ## Connections
-- [[ink()]] - `references` [EXTRACTED]
+- [[ground_material()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/look_toonpy
+#graphify/code #graphify/EXTRACTED #community/opener_scenepy

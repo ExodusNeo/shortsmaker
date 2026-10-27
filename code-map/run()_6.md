@@ -1,19 +1,18 @@
 ---
-source_file: "tests/test_h3_handoff.py"
+source_file: "tests/test_style.py"
 type: "code"
-community: "test_h3_handoff.py"
-location: "L78"
+community: "style_placeholders"
+location: "L257"
 tags:
   - graphify/code
-  - graphify/EXTRACTED
-  - community/test_h3_handoffpy
+  - graphify/INFERRED
+  - community/style_placeholders
 ---
 
 # run()
 
 ## Connections
-- [[fake_ai()]] - `calls` [EXTRACTED]
-- [[short_with()]] - `calls` [EXTRACTED]
-- [[test_waits_for_enter_when_no_ai_answers()]] - `contains` [EXTRACTED]
+- [[test_failed_invention_keeps_the_others()]] - `indirect_call` [INFERRED]
+- [[test_invention_passes_into_slot()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/test_h3_handoffpy
+#graphify/code #graphify/INFERRED #community/style_placeholders

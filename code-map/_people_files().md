@@ -16,5 +16,7 @@ tags:
 - [[test_opener_render.py]] - `contains` [EXTRACTED]
 - [[test_people_library_missing()]] - `calls` [EXTRACTED]
 - [[test_person_job_has_library()]] - `calls` [EXTRACTED]
+- [[test_review_knows_about_people()]] - `calls` [EXTRACTED]
+- [[test_role_hat_is_optional()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/test_opener_renderpy

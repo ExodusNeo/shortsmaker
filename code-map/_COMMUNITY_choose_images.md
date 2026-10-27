@@ -1,21 +1,19 @@
 ---
 type: community
-members: 19
+members: 17
 ---
 
 # choose_images
 
-**Members:** 19 nodes
+**Members:** 17 nodes
 
 ## Members
 - [[dot-__exit__()_1]] - code - tests/test_pictures_first.py
-- [[dot-__init__()_8]] - code - tests/test_pictures_first.py
+- [[dot-__init__()_7]] - code - tests/test_pictures_first.py
 - [[Build a broad multi-source pool of images and real video footage (per-scene…]] - rationale - shortsmaker/picker.py
-- [[Path_27]] - code
-- [[True when `cand` is a solo portraitheadshot of `person_name` (so a scene that…]] - rationale - shortsmaker/plan_rules.py
+- [[Path_25]] - code
 - [[choose_images()]] - code - shortsmaker/picker.py
 - [[choose_images() with network stubbed; gather_pool returns `extra` (and records…]] - rationale - tests/test_pictures_first.py
-- [[is_person_portrait()]] - code - shortsmaker/plan_rules.py
 - [[picking]] - code - tests/test_pictures_first.py
 - [[planned_short()]] - code - tests/test_pictures_first.py
 - [[scene()]] - code - tests/test_pictures_first.py
@@ -36,25 +34,23 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 14 edges to [[_COMMUNITY_test_pictures_first.py]]
-- 4 edges to [[_COMMUNITY_test_full_scenes.py]]
-- 3 edges to [[_COMMUNITY_prepare_topic]]
+- 15 edges to [[_COMMUNITY_test_pictures_first.py]]
+- 3 edges to [[_COMMUNITY_json]]
 - 2 edges to [[_COMMUNITY_owner]]
-- 2 edges to [[_COMMUNITY_image_sources.py]]
-- 2 edges to [[_COMMUNITY_re]]
+- 2 edges to [[_COMMUNITY_prepare_topic]]
+- 2 edges to [[_COMMUNITY_fetch]]
 - 1 edge to [[_COMMUNITY_test_rules.py]]
 - 1 edge to [[_COMMUNITY_write_scripts]]
-- 1 edge to [[_COMMUNITY_style_library]]
 - 1 edge to [[_COMMUNITY_render]]
 - 1 edge to [[_COMMUNITY_ask_ai]]
-- 1 edge to [[_COMMUNITY_subprocess]]
-- 1 edge to [[_COMMUNITY_json]]
-- 1 edge to [[_COMMUNITY_apply_look_scenes]]
+- 1 edge to [[_COMMUNITY_test_style.py]]
+- 1 edge to [[_COMMUNITY_gather_pool]]
 - 1 edge to [[_COMMUNITY_pathlib]]
+- 1 edge to [[_COMMUNITY_style_library]]
 
 ## Top bridge nodes
-- [[choose_images()]] - degree 24, connects to 12 communities
-- [[is_person_portrait()]] - degree 7, connects to 3 communities
+- [[choose_images()]] - degree 24, connects to 11 communities
 - [[picking]] - degree 12, connects to 2 communities
-- [[planned_short()]] - degree 10, connects to 2 communities
 - [[still()]] - degree 5, connects to 2 communities
+- [[planned_short()]] - degree 10, connects to 1 community
+- [[scene()]] - degree 8, connects to 1 community

@@ -1,21 +1,17 @@
 ---
-source_file: "tests/test_full_scenes.py"
+source_file: "tests/test_h3_handoff.py"
 type: "code"
-community: "ask"
-location: "L150"
+community: "short_with"
+location: "L24"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/ask
+  - community/short_with
 ---
 
 # ask()
 
 ## Connections
-- [[_fake_planning()]] - `indirect_call` [INFERRED]
-- [[test_look_check_fixes_code()]] - `indirect_call` [INFERRED]
-- [[test_review_redraws_custom()]] - `indirect_call` [INFERRED]
-- [[test_review_uses_unused_pool_pictures_before_painting()]] - `indirect_call` [INFERRED]
-- [[test_rewrite_paint_prompts()]] - `indirect_call` [INFERRED]
+- [[fake_ai()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/INFERRED #community/ask
+#graphify/code #graphify/INFERRED #community/short_with

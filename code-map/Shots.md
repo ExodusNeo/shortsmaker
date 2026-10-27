@@ -12,7 +12,7 @@ tags:
 # Shots
 
 ## Connections
-- [[dot-__init__()_7]] - `method` [EXTRACTED]
+- [[dot-__init__()_5]] - `method` [EXTRACTED]
 - [[dot-beat()]] - `method` [EXTRACTED]
 - [[dot-close()_1]] - `method` [EXTRACTED]
 - [[dot-wide()]] - `method` [EXTRACTED]

@@ -27,12 +27,11 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 6 edges to [[_COMMUNITY_test_opener_render.py]]
-- 2 edges to [[_COMMUNITY_ffmpeg]]
-- 2 edges to [[_COMMUNITY_render]]
+- 4 edges to [[_COMMUNITY_render]]
 - 1 edge to [[_COMMUNITY_pathlib]]
 
 ## Top bridge nodes
-- [[use_opener()]] - degree 9, connects to 4 communities
+- [[use_opener()]] - degree 9, connects to 3 communities
 - [[_wiring()]] - degree 6, connects to 2 communities
 - [[test_use_opener_never_raises()]] - degree 3, connects to 1 community
 - [[test_use_opener_failure_keeps_scene()]] - degree 2, connects to 1 community

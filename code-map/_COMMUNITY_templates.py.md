@@ -8,7 +8,7 @@ members: 28
 **Members:** 28 nodes
 
 ## Members
-- [[dot-__init__()_3]] - code - blender/templates.py
+- [[dot-__init__()_2]] - code - blender/templates.py
 - [[dot-add()]] - code - blender/templates.py
 - [[dot-center()]] - code - blender/templates.py
 - [[dot-node()]] - code - blender/templates.py

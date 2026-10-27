@@ -12,7 +12,7 @@ members: 28
 - [[Entry point blender.exe -b --factory-startup --python blenderbuild_scene.py…]] - rationale - blender/build_scene.py
 - [[Failure animations on the focus part bend (it buckles), crack (a dark crack…]] - rationale - blender/failures.py
 - [[Object_2]] - code
-- [[Path_18]] - code
+- [[Path_16]] - code
 - [[Stand-in people library for the tests blender.exe -b --factory-startup…]] - rationale - tests/people_standin.py
 - [[Synthesize the sound-effect library once (no downloads, no copyright). Hits,…]] - rationale - shortsmaker/audio_mix.py
 - [[body()]] - code - tests/people_standin.py
@@ -45,31 +45,30 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
+- 9 edges to [[_COMMUNITY_moves.py]]
 - 8 edges to [[_COMMUNITY_opener_scene.py]]
-- 8 edges to [[_COMMUNITY_scene_kit.py]]
+- 8 edges to [[_COMMUNITY_json]]
 - 6 edges to [[_COMMUNITY_parts.py]]
+- 6 edges to [[_COMMUNITY_people.py]]
 - 6 edges to [[_COMMUNITY_pathlib]]
-- 5 edges to [[_COMMUNITY_people.py]]
 - 5 edges to [[_COMMUNITY_opener_checks.py]]
 - 4 edges to [[_COMMUNITY_main]]
 - 4 edges to [[_COMMUNITY_Shots]]
-- 4 edges to [[_COMMUNITY_json]]
-- 4 edges to [[_COMMUNITY_moves.py]]
-- 4 edges to [[_COMMUNITY_subprocess]]
 - 3 edges to [[_COMMUNITY_look.py]]
 - 2 edges to [[_COMMUNITY_audio_mix.py]]
 - 2 edges to [[_COMMUNITY_test_opener_plan.py]]
 - 2 edges to [[_COMMUNITY_templates.py]]
-- 1 edge to [[_COMMUNITY_test_blender_plan.py]]
-- 1 edge to [[_COMMUNITY_frame_maker]]
+- 2 edges to [[_COMMUNITY_scene_kit.py]]
 - 1 edge to [[_COMMUNITY_render]]
+- 1 edge to [[_COMMUNITY_write_frames]]
 - 1 edge to [[_COMMUNITY_copy]]
+- 1 edge to [[_COMMUNITY_clamp]]
 - 1 edge to [[_COMMUNITY_pack_people.py]]
 - 1 edge to [[_COMMUNITY_look_toon.py]]
 
 ## Top bridge nodes
 - [[math]] - degree 34, connects to 13 communities
 - [[bpy]] - degree 14, connects to 10 communities
-- [[build_scene.py]] - degree 16, connects to 8 communities
+- [[build_scene.py]] - degree 16, connects to 7 communities
 - [[mathutils]] - degree 11, connects to 7 communities
-- [[opener_check_cases.py]] - degree 12, connects to 4 communities
+- [[failures.py]] - degree 10, connects to 4 communities

@@ -9,7 +9,7 @@ members: 10
 
 ## Members
 - [[An inverted hull a slightly bigger copy of the surface, faces flipped, drawn…]] - rationale - blender/look_toon.py
-- [[Material]] - code
+- [[Material_1]] - code
 - [[The material's own colour (value or texture) times a banded light Diffuse on…]] - rationale - blender/look_toon.py
 - [[The openers' one brand look (part 2, owner 2026-10-27 everything) every…]] - rationale - blender/look_toon.py
 - [[Toon every material of the visible meshes and outline each one but the ground;…]] - rationale - blender/look_toon.py

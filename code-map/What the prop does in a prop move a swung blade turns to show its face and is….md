@@ -1,12 +1,12 @@
 ---
 source_file: "blender/people.py"
 type: "rationale"
-community: "scene_kit.py"
-location: "L340"
+community: "people.py"
+location: "L344"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/scene_kitpy
+  - community/peoplepy
 ---
 
 # What the prop does in a prop move: a swung blade turns to show its face and is…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[prop_move()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/scene_kitpy
+#graphify/rationale #graphify/EXTRACTED #community/peoplepy

@@ -1,17 +1,19 @@
 ---
 type: community
-members: 50
+members: 80
 ---
 
 # moves.py
 
-**Members:** 50 nodes
+**Members:** 80 nodes
 
 ## Members
 - [[(edge, thin, long) unit axes of a tool in its own space long = handle-to-head,…]] - rationale - blender/moves.py
-- [[dot-__init__()_5]] - code - blender/moves.py
 - [[1, or 0.5 when the actor walks at someone who walks back at it they meet in…]] - rationale - blender/moves.py
+- [[At the end of a clip the person's lowest point rests on what they stand on a…]] - rationale - blender/people.py
 - [[BMesh]] - code
+- [[How far a tilt about the origin (its feet) pushes obj's lowest point below the…]] - rationale - blender/scene_kit.py
+- [[How far o can move along d before it touches any of `others` (rays from its…]] - rationale - blender/moves.py
 - [[How far o can slide along d (up to limit) before its mesh touches any of…]] - rationale - blender/moves.py
 - [[Loose parts that touch or nearly touch belong together a low-poly head is…]] - rationale - blender/moves.py
 - [[Matrix]] - code
@@ -20,13 +22,21 @@ members: 50
 - [[Pieces thinner than min_m are joined to their nearest neighbour (a mince's edge…]] - rationale - blender/moves.py
 - [[Split off the region's piece so it is about `share` of the target the plane's…]] - rationale - blender/moves.py
 - [[Surface area without the filled cut faces how much of the model a piece is…]] - rationale - blender/moves.py
+- [[Swing the legs one set forward by `angle` (radians), the other back; together…]] - rationale - blender/scene_kit.py
+- [[The actor moves at the target until they touch; from that frame physics carries…]] - rationale - blender/moves.py
+- [[The actor's leg rig, built on whatever now stands for it (after a cut, its…]] - rationale - blender/moves.py
 - [[The blade's furthest point along its edge direction, over the whole head half…]] - rationale - blender/moves.py
 - [[The loose parts of bm, each as its own bmesh.]] - rationale - blender/moves.py
 - [[The opener moves (2026-10-27), plain bpy. Each works on roles (actor, target,…]] - rationale - blender/moves.py
 - [[The part of `src` on one side of the plane, its cut face filled; None when…]] - rationale - blender/moves.py
 - [[The rotation that turns the edge toward d and the blade's plane normal along…]] - rationale - blender/moves.py
+- [[The way a move goes, as seen in the shot, or straight at another actor…]] - rationale - blender/moves.py
 - [[Turn the blade about its stroke until its flat side is at least `deg` toward…]] - rationale - blender/moves.py
+- [[Up, out at that height until the whole body has passed the support's far edge,…]] - rationale - blender/moves.py
 - [[Vector_4]] - code
+- [[_ground()]] - code - blender/people.py
+- [[apply()]] - code - blender/moves.py
+- [[bbox()]] - code - blender/scene_kit.py
 - [[best_in()]] - code - blender/moves.py
 - [[bm_area()]] - code - blender/moves.py
 - [[box_of()]] - code - blender/moves.py
@@ -35,21 +45,36 @@ members: 50
 - [[clear_distance()]] - code - blender/moves.py
 - [[clear_distance_at_end()]] - code - blender/moves.py
 - [[clusters()]] - code - blender/moves.py
+- [[cut()]] - code - blender/moves.py
 - [[edge_point_local()]] - code - blender/moves.py
+- [[fall()]] - code - blender/moves.py
+- [[fly_off()]] - code - blender/moves.py
+- [[gait()]] - code - blender/moves.py
 - [[half()]] - code - blender/moves.py
 - [[handle_end_local()]] - code - blender/moves.py
+- [[hop_off()]] - code - blender/moves.py
 - [[islands()]] - code - blender/moves.py
 - [[join()]] - code - blender/moves.py
+- [[key_loc()]] - code - blender/scene_kit.py
+- [[key_rot()]] - code - blender/scene_kit.py
+- [[key_swing()]] - code - blender/scene_kit.py
+- [[legs()]] - code - blender/moves.py
+- [[lift_for()]] - code - blender/scene_kit.py
 - [[merge_slivers()]] - code - blender/moves.py
 - [[moves.py]] - code - blender/moves.py
 - [[o's mesh in world space with duplicate corner points welded flat-shaded…]] - rationale - blender/moves.py
 - [[pick_island()]] - code - blender/moves.py
 - [[place_tool()]] - code - blender/moves.py
 - [[plane_splits()]] - code - blender/moves.py
+- [[push()]] - code - blender/moves.py
 - [[region_normal()]] - code - blender/moves.py
+- [[release()]] - code - blender/moves.py
+- [[roll()]] - code - blender/moves.py
 - [[root()_1]] - code - blender/moves.py
+- [[scatter()]] - code - blender/moves.py
 - [[share_of_gap()]] - code - blender/moves.py
 - [[show_face()]] - code - blender/moves.py
+- [[sink()]] - code - blender/moves.py
 - [[split()]] - code - blender/moves.py
 - [[thickness()]] - code - blender/moves.py
 - [[thin()]] - code - blender/moves.py
@@ -58,6 +83,11 @@ members: 50
 - [[to_object()]] - code - blender/moves.py
 - [[tool_axes()]] - code - blender/moves.py
 - [[tool_rotation()]] - code - blender/moves.py
+- [[topple()]] - code - blender/moves.py
+- [[toward()]] - code - blender/moves.py
+- [[travel()_1]] - code - blender/moves.py
+- [[walk()]] - code - blender/moves.py
+- [[world_verts()]] - code - blender/scene_kit.py
 
 ## Live Query (requires Dataview plugin)
 
@@ -67,14 +97,14 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 37 edges to [[_COMMUNITY_scene_kit.py]]
-- 6 edges to [[_COMMUNITY_opener_scene.py]]
-- 4 edges to [[_COMMUNITY_math]]
-- 1 edge to [[_COMMUNITY_people.py]]
+- 29 edges to [[_COMMUNITY_scene_kit.py]]
+- 20 edges to [[_COMMUNITY_opener_scene.py]]
+- 9 edges to [[_COMMUNITY_math]]
+- 7 edges to [[_COMMUNITY_people.py]]
 
 ## Top bridge nodes
 - [[moves.py]] - degree 48, connects to 3 communities
-- [[edge_point_local()]] - degree 7, connects to 2 communities
-- [[clear_distance()]] - degree 6, connects to 2 communities
-- [[show_face()]] - degree 6, connects to 2 communities
-- [[handle_end_local()]] - degree 5, connects to 2 communities
+- [[cut()]] - degree 30, connects to 3 communities
+- [[key_loc()]] - degree 12, connects to 3 communities
+- [[world_verts()]] - degree 9, connects to 3 communities
+- [[walk()]] - degree 15, connects to 2 communities

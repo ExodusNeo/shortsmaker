@@ -1,20 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "invent_component"
+community: "test_full_scenes.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/invent_component
+  - community/test_full_scenespy
 ---
 
 # Path
 
 ## Connections
-- [[approve_candidate()]] - `references` [EXTRACTED]
-- [[invent_component()]] - `references` [EXTRACTED]
-- [[invent_styles()]] - `references` [EXTRACTED]
-- [[reject_candidate()]] - `references` [EXTRACTED]
-- [[save_candidate()]] - `references` [EXTRACTED]
+- [[use_picture_from()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/invent_component
+#graphify/code #graphify/EXTRACTED #community/test_full_scenespy

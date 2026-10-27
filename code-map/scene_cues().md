@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/editplan.py"
 type: "code"
-community: "test_full_scenes.py"
+community: "test_blender_render.py"
 location: "L148"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_full_scenespy
+  - community/test_blender_renderpy
 ---
 
 # scene_cues()
@@ -23,4 +23,4 @@ tags:
 - [[test_person_card_hold_and_exit_gap()]] - `calls` [EXTRACTED]
 - [[test_scene_hold_padding()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_full_scenespy
+#graphify/code #graphify/EXTRACTED #community/test_blender_renderpy

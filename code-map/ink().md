@@ -12,7 +12,7 @@ tags:
 # ink()
 
 ## Connections
-- [[Material]] - `references` [EXTRACTED]
+- [[Material_1]] - `references` [EXTRACTED]
 - [[apply()_1]] - `calls` [EXTRACTED]
 - [[look_toon.py]] - `contains` [EXTRACTED]
 

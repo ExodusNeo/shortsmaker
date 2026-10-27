@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/blender_plan.py"
 type: "code"
-community: "test_blender_plan.py"
+community: "thumbnail_order"
 location: "L154"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_blender_planpy
+  - community/thumbnail_order
 ---
 
 # thumbnail_order()
@@ -18,4 +18,4 @@ tags:
 - [[is_usable()]] - `calls` [EXTRACTED]
 - [[test_thumbnail_order_skips_film_and_puts_openers_first()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_blender_planpy
+#graphify/code #graphify/EXTRACTED #community/thumbnail_order

@@ -19,6 +19,7 @@ tags:
 - [[camera()_1]] - `calls` [EXTRACTED]
 - [[checks()]] - `calls` [EXTRACTED]
 - [[dress_set()]] - `calls` [EXTRACTED]
+- [[fcurves_of()]] - `calls` [EXTRACTED]
 - [[first_hit()]] - `calls` [EXTRACTED]
 - [[held()]] - `calls` [EXTRACTED]
 - [[hold_offscreen()]] - `calls` [EXTRACTED]

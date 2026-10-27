@@ -12,6 +12,7 @@ tags:
 # fcurves()
 
 ## Connections
+- [[fcurves_of()]] - `calls` [EXTRACTED]
 - [[interpolation()]] - `calls` [EXTRACTED]
 - [[loc_at()]] - `calls` [EXTRACTED]
 - [[rot_at()]] - `calls` [EXTRACTED]

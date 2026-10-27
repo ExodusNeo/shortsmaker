@@ -1,12 +1,12 @@
 ---
 source_file: "blender/people.py"
 type: "rationale"
-community: "scene_kit.py"
-location: "L239"
+community: "people.py"
+location: "L243"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/scene_kitpy
+  - community/peoplepy
 ---
 
 # A people move: an in-place clip from the beat's time, or a travel clip played…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[move()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/scene_kitpy
+#graphify/rationale #graphify/EXTRACTED #community/peoplepy

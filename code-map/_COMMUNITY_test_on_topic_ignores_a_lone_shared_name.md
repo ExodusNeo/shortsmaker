@@ -19,7 +19,7 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 1 edge to [[_COMMUNITY_image_sources.py]]
+- 1 edge to [[_COMMUNITY_fetch]]
 - 1 edge to [[_COMMUNITY_test_pictures_first.py]]
 
 ## Top bridge nodes

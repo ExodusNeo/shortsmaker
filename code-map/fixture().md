@@ -24,6 +24,7 @@ tags:
 - [[test_onion_mince()]] - `calls` [EXTRACTED]
 - [[test_onion_slices()]] - `calls` [EXTRACTED]
 - [[test_opener_scene.py]] - `contains` [EXTRACTED]
+- [[test_people_play_their_own_clips()]] - `calls` [EXTRACTED]
 - [[test_person_on_support()]] - `calls` [EXTRACTED]
 - [[test_person_stands()]] - `calls` [EXTRACTED]
 - [[test_person_walk_away_is_staging()]] - `calls` [EXTRACTED]

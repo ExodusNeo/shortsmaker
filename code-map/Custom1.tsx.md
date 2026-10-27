@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/full/generated/Custom1.tsx"
 type: "code"
-community: "toolkit.tsx"
+community: "skinOf"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/toolkittsx
+  - community/skinOf
 ---
 
 # Custom1.tsx
@@ -22,7 +22,7 @@ tags:
 - [[PhotoCutout()]] - `imports` [EXTRACTED]
 - [[StampBadge()]] - `imports` [EXTRACTED]
 - [[TitleBanner()]] - `imports` [EXTRACTED]
-- [[clamp_8]] - `imports` [EXTRACTED]
+- [[clamp_7]] - `imports` [EXTRACTED]
 - [[cueAt()]] - `imports` [EXTRACTED]
 - [[focusCam()]] - `imports` [EXTRACTED]
 - [[ref_react]] - `imports_from` [EXTRACTED]
@@ -35,4 +35,4 @@ tags:
 - [[skinOf()]] - `imports` [EXTRACTED]
 - [[toolkit.tsx]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/toolkittsx
+#graphify/code #graphify/EXTRACTED #community/skinOf

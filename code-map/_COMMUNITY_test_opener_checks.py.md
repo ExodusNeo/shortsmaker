@@ -28,9 +28,9 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 4 edges to [[_COMMUNITY_subprocess]]
+- 3 edges to [[_COMMUNITY_json]]
 - 3 edges to [[_COMMUNITY_pathlib]]
-- 1 edge to [[_COMMUNITY_json]]
+- 2 edges to [[_COMMUNITY_test_blender_link.py]]
 
 ## Top bridge nodes
 - [[test_opener_checks.py]] - degree 18, connects to 3 communities

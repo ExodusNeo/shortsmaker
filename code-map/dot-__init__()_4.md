@@ -1,18 +1,17 @@
 ---
-source_file: "blender/failures.py"
+source_file: "tools/split_make_shorts.py"
 type: "code"
-community: "main"
-location: "L26"
+community: "split_make_shorts.py"
+location: "L385"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/main
+  - community/split_make_shortspy
 ---
 
 # .__init__()
 
 ## Connections
-- [[dot-_crack()]] - `calls` [EXTRACTED]
-- [[Failure]] - `method` [EXTRACTED]
+- [[Unqualify]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/main
+#graphify/code #graphify/EXTRACTED #community/split_make_shortspy

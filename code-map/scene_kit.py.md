@@ -20,6 +20,7 @@ tags:
 - [[ensure_world()]] - `contains` [EXTRACTED]
 - [[facing_vec()]] - `contains` [EXTRACTED]
 - [[fcurves()]] - `contains` [EXTRACTED]
+- [[fcurves_of()]] - `contains` [EXTRACTED]
 - [[fit()]] - `contains` [EXTRACTED]
 - [[frame_of()]] - `contains` [EXTRACTED]
 - [[interpolation()]] - `contains` [EXTRACTED]

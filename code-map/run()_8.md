@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[Build (and optionally render at 25%) one opener; returns (report, frames dir).]] - `rationale_for` [EXTRACTED]
-- [[Path_33]] - `references` [EXTRACTED]
+- [[Path_32]] - `references` [EXTRACTED]
 - [[people_lib()]] - `calls` [EXTRACTED]
 - [[test_bad_plans_fail()]] - `calls` [EXTRACTED]
 - [[test_box_fall_rests_and_renders()]] - `calls` [EXTRACTED]
@@ -26,6 +26,7 @@ tags:
 - [[test_onion_mince()]] - `calls` [EXTRACTED]
 - [[test_onion_slices()]] - `calls` [EXTRACTED]
 - [[test_opener_scene.py]] - `contains` [EXTRACTED]
+- [[test_people_play_their_own_clips()]] - `calls` [EXTRACTED]
 - [[test_person_on_support()]] - `calls` [EXTRACTED]
 - [[test_person_stands()]] - `calls` [EXTRACTED]
 - [[test_person_walk_away_is_staging()]] - `calls` [EXTRACTED]

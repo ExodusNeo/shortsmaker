@@ -1,21 +1,21 @@
 ---
 source_file: "tests/test_full_scenes.py"
 type: "code"
-community: "ask"
+community: "test_full_scenes.py"
 location: "L432"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ask
+  - community/test_full_scenespy
 ---
 
 # test_rewrite_paint_prompts()
 
 ## Connections
 - [[Mike's newsstand a repaint from the unchanged prompt painted the identical…]] - `rationale_for` [EXTRACTED]
-- [[ask()_3]] - `contains` [EXTRACTED]
-- [[ask()]] - `indirect_call` [INFERRED]
+- [[ask()_7]] - `contains` [EXTRACTED]
+- [[ask()_3]] - `indirect_call` [INFERRED]
 - [[rewrite_paint_prompts()]] - `calls` [EXTRACTED]
 - [[test_full_scenes.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ask
+#graphify/code #graphify/EXTRACTED #community/test_full_scenespy

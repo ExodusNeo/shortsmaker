@@ -1,13 +1,14 @@
 ---
 type: community
-members: 33
+members: 37
 ---
 
 # people.py
 
-**Members:** 33 nodes
+**Members:** 37 nodes
 
 ## Members
+- [[A people move an in-place clip from the beat's time, or a travel clip played…]] - rationale - blender/people.py
 - [[BVHTree]] - code
 - [[Does the prop, apart from the bit in the hand, go through its owner]] - rationale - blender/people.py
 - [[Each role colour on a copy of the material it names (two people never share…]] - rationale - blender/people.py
@@ -23,6 +24,7 @@ members: 33
 - [[The person as one mesh (origin at the feet, facing as planned, the role's…]] - rationale - blender/people.py
 - [[The prop held by its handle end in the hand a blade raised up and forward,…]] - rationale - blender/people.py
 - [[Vector_1]] - code
+- [[What the prop does in a prop move a swung blade turns to show its face and is…]] - rationale - blender/people.py
 - [[_append()]] - code - blender/people.py
 - [[_attach()]] - code - blender/people.py
 - [[_bake_free()]] - code - blender/people.py
@@ -38,7 +40,9 @@ members: 33
 - [[idle()]] - code - blender/people.py
 - [[item (origin at its bottom) stands on `at` and follows the bone's place and…]] - rationale - blender/people.py
 - [[load_library()]] - code - blender/people.py
+- [[move()]] - code - blender/people.py
 - [[people.py]] - code - blender/people.py
+- [[prop_move()]] - code - blender/people.py
 - [[surface_z()]] - code - blender/scene_kit.py
 - [[tree()]] - code - blender/scene_kit.py
 
@@ -50,17 +54,16 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 11 edges to [[_COMMUNITY_scene_kit.py]]
-- 7 edges to [[_COMMUNITY_opener_scene.py]]
-- 5 edges to [[_COMMUNITY_math]]
-- 1 edge to [[_COMMUNITY_load_model]]
-- 1 edge to [[_COMMUNITY_moves.py]]
+- 9 edges to [[_COMMUNITY_scene_kit.py]]
+- 8 edges to [[_COMMUNITY_opener_scene.py]]
+- 7 edges to [[_COMMUNITY_moves.py]]
+- 6 edges to [[_COMMUNITY_math]]
 - 1 edge to [[_COMMUNITY_json]]
 - 1 edge to [[_COMMUNITY_pathlib]]
 
 ## Top bridge nodes
-- [[people.py]] - degree 25, connects to 5 communities
-- [[dress()]] - degree 12, connects to 3 communities
+- [[people.py]] - degree 25, connects to 6 communities
+- [[move()]] - degree 12, connects to 3 communities
 - [[tree()]] - degree 8, connects to 3 communities
-- [[_show_blade()]] - degree 5, connects to 2 communities
+- [[dress()]] - degree 12, connects to 2 communities
 - [[_hold()]] - degree 8, connects to 1 community

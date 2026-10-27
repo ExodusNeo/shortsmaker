@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/blender_plan.py"
 type: "rationale"
-community: "test_blender_plan.py"
+community: "thumbnail_order"
 location: "L155"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/test_blender_planpy
+  - community/thumbnail_order
 ---
 
 # Pool indexes to try for the thumbnail's real photo, best first: usable pictures…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[thumbnail_order()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/test_blender_planpy
+#graphify/rationale #graphify/EXTRACTED #community/thumbnail_order

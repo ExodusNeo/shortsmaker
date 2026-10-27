@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "load_model"
+community: "look_toon.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/load_model
+  - community/look_toonpy
 ---
 
 # Material
 
 ## Connections
-- [[ground_material()]] - `references` [EXTRACTED]
+- [[ink()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/load_model
+#graphify/code #graphify/EXTRACTED #community/look_toonpy

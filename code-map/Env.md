@@ -12,7 +12,7 @@ tags:
 # Env
 
 ## Connections
-- [[dot-__enter__()]] - `method` [EXTRACTED]
+- [[dot-__enter__()_2]] - `method` [EXTRACTED]
 - [[dot-__exit__()_2]] - `method` [EXTRACTED]
 - [[dot-runs()]] - `method` [EXTRACTED]
 - [[A temp work folder, a library holding the fixture models, a fake Blender and…]] - `rationale_for` [EXTRACTED]
@@ -31,8 +31,10 @@ tags:
 - [[test_pick_model()]] - `calls` [EXTRACTED]
 - [[test_reuse_after_small_length_change()]] - `calls` [EXTRACTED]
 - [[test_reuse_unchanged()]] - `calls` [EXTRACTED]
+- [[test_review_knows_about_people()]] - `calls` [EXTRACTED]
 - [[test_review_reads_the_channel_opener_rules()]] - `calls` [EXTRACTED]
 - [[test_review_rejects()]] - `calls` [EXTRACTED]
+- [[test_role_hat_is_optional()]] - `calls` [EXTRACTED]
 - [[test_search_failure_falls_back()]] - `calls` [EXTRACTED]
 - [[test_success_returns_clip()]] - `calls` [EXTRACTED]
 - [[test_unfound_model_goes_back_to_the_planner()]] - `calls` [EXTRACTED]

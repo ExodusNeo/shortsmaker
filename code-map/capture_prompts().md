@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[Every prompt strange-history's writer, editor, director, fact check, picture…]] - `rationale_for` [EXTRACTED]
-- [[ask()_4]] - `indirect_call` [INFERRED]
+- [[ask()_1]] - `indirect_call` [INFERRED]
 - [[catalog_pool()]] - `calls` [EXTRACTED]
 - [[choose_images()]] - `calls` [EXTRACTED]
 - [[first_second_check()]] - `calls` [EXTRACTED]

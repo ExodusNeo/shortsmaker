@@ -1,11 +1,11 @@
 ---
 type: community
-members: 62
+members: 64
 ---
 
 # test_opener_scene.py
 
-**Members:** 62 nodes
+**Members:** 64 nodes
 
 ## Members
 - [[A 1 s fall in a 3 s opener the person lies on the ground in the clip's last…]] - rationale - tests/test_opener_scene.py
@@ -18,11 +18,12 @@ members: 62
 - [[Build the stand-in library into `out` (drop = a material its bodies leave out);…]] - rationale - tests/test_people_tables.py
 - [[Built without a fault; a staging failure (a walk the planner is told to change)…]] - rationale - tests/test_opener_scene.py
 - [[Fifth live run (Mike) no camera follow and the stump listed first; the checks…]] - rationale - tests/test_opener_scene.py
+- [[Final review a backdrop bringing its own action called Idle took the name,…]] - rationale - tests/test_opener_scene.py
 - [[Fourth live run (Mike) a fix round asked for an at_fraction slice but still…]] - rationale - tests/test_opener_scene.py
 - [[One brand look (part 2, 2026-10-27) every visible model is cel-shaded and ink-…]] - rationale - tests/test_opener_scene.py
 - [[Owner, 2026-10-27 walking away shows the bird's back, and walking the way…]] - rationale - tests/test_opener_scene.py
+- [[Path_32]] - code
 - [[Path_33]] - code
-- [[Path_34]] - code
 - [[People openers (part 2) a dressed person stands with their feet on the ground.]] - rationale - tests/test_opener_scene.py
 - [[Standing on a crate and walking never floats off the edge or crashes; it goes…]] - rationale - tests/test_opener_scene.py
 - [[Tests for building openers in Blender (blenderopener_scene.py + moves.py,…]] - rationale - tests/test_opener_scene.py
@@ -52,6 +53,7 @@ members: 62
 - [[test_onion_mince()]] - code - tests/test_opener_scene.py
 - [[test_onion_slices()]] - code - tests/test_opener_scene.py
 - [[test_opener_scene.py]] - code - tests/test_opener_scene.py
+- [[test_people_play_their_own_clips()]] - code - tests/test_opener_scene.py
 - [[test_person_on_support()]] - code - tests/test_opener_scene.py
 - [[test_person_stands()]] - code - tests/test_opener_scene.py
 - [[test_person_walk_away_is_staging()]] - code - tests/test_opener_scene.py
@@ -79,14 +81,14 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 7 edges to [[_COMMUNITY_subprocess]]
+- 5 edges to [[_COMMUNITY_test_blender_link.py]]
 - 4 edges to [[_COMMUNITY_pathlib]]
+- 3 edges to [[_COMMUNITY_json]]
 - 2 edges to [[_COMMUNITY_test_opener_plan.py]]
 - 1 edge to [[_COMMUNITY_copy]]
-- 1 edge to [[_COMMUNITY_json]]
 
 ## Top bridge nodes
-- [[test_opener_scene.py]] - degree 46, connects to 5 communities
+- [[test_opener_scene.py]] - degree 47, connects to 5 communities
 - [[standin()]] - degree 6, connects to 1 community
 - [[test_fixture_plans_are_clean()]] - degree 3, connects to 1 community
 - [[test_standin_matches_tables()]] - degree 2, connects to 1 community

@@ -15,14 +15,14 @@
       }
     },
     {
-      "query": "tag:#community/code_custom_scenes",
+      "query": "tag:#community/motionpy",
       "color": {
         "a": 1,
         "rgb": 14767961
       }
     },
     {
-      "query": "tag:#community/toolkittsx",
+      "query": "tag:#community/skinOf",
       "color": {
         "a": 1,
         "rgb": 7780274
@@ -64,28 +64,28 @@
       }
     },
     {
-      "query": "tag:#community/Paper",
+      "query": "tag:#community/toolkittsx",
       "color": {
         "a": 1,
         "rgb": 12234924
       }
     },
     {
-      "query": "tag:#community/json",
+      "query": "tag:#community/gpupy",
       "color": {
         "a": 1,
         "rgb": 5142951
       }
     },
     {
-      "query": "tag:#community/ffmpeg",
+      "query": "tag:#community/local_clips",
       "color": {
         "a": 1,
         "rgb": 15896107
       }
     },
     {
-      "query": "tag:#community/ask",
+      "query": "tag:#community/short_with",
       "color": {
         "a": 1,
         "rgb": 14767961
@@ -120,7 +120,7 @@
       }
     },
     {
-      "query": "tag:#community/BigNumbertsx",
+      "query": "tag:#community/full/typests",
       "color": {
         "a": 1,
         "rgb": 16752039
@@ -134,7 +134,7 @@
       }
     },
     {
-      "query": "tag:#community/write_scripts",
+      "query": "tag:#community/planning",
       "color": {
         "a": 1,
         "rgb": 12234924
@@ -148,14 +148,14 @@
       }
     },
     {
-      "query": "tag:#community/style_library",
+      "query": "tag:#community/clean_look",
       "color": {
         "a": 1,
         "rgb": 15896107
       }
     },
     {
-      "query": "tag:#community/qwen_voicepy",
+      "query": "tag:#community/test_blender_planpy",
       "color": {
         "a": 1,
         "rgb": 14767961
@@ -176,21 +176,21 @@
       }
     },
     {
-      "query": "tag:#community/test_blender_planpy",
+      "query": "tag:#community/test_blender_renderpy",
       "color": {
         "a": 1,
         "rgb": 15583560
       }
     },
     {
-      "query": "tag:#community/catalog_entries",
+      "query": "tag:#community/style_placeholders",
       "color": {
         "a": 1,
         "rgb": 11565729
       }
     },
     {
-      "query": "tag:#community/frame_maker",
+      "query": "tag:#community/ClipReader",
       "color": {
         "a": 1,
         "rgb": 16752039
@@ -204,7 +204,7 @@
       }
     },
     {
-      "query": "tag:#community/test_full_scenespy",
+      "query": "tag:#community/write_scripts",
       "color": {
         "a": 1,
         "rgb": 12234924
@@ -260,7 +260,7 @@
       }
     },
     {
-      "query": "tag:#community/apply_review_fixes",
+      "query": "tag:#community/test_full_scenespy",
       "color": {
         "a": 1,
         "rgb": 16752039
@@ -281,7 +281,7 @@
       }
     },
     {
-      "query": "tag:#community/captions",
+      "query": "tag:#community/audio_mixpy",
       "color": {
         "a": 1,
         "rgb": 5142951
@@ -302,7 +302,7 @@
       }
     },
     {
-      "query": "tag:#community/subprocess",
+      "query": "tag:#community/test_blender_linkpy",
       "color": {
         "a": 1,
         "rgb": 7780274
@@ -323,7 +323,7 @@
       }
     },
     {
-      "query": "tag:#community/plan_with",
+      "query": "tag:#community/test_stylepy",
       "color": {
         "a": 1,
         "rgb": 11565729
@@ -337,28 +337,28 @@
       }
     },
     {
-      "query": "tag:#community/image_sourcespy",
+      "query": "tag:#community/fetch",
       "color": {
         "a": 1,
         "rgb": 10253663
       }
     },
     {
-      "query": "tag:#community/fetch_model",
+      "query": "tag:#community/blender_linkpy",
       "color": {
         "a": 1,
         "rgb": 12234924
       }
     },
     {
-      "query": "tag:#community/visual_review",
+      "query": "tag:#community/gather_pool",
       "color": {
         "a": 1,
         "rgb": 5142951
       }
     },
     {
-      "query": "tag:#community/re",
+      "query": "tag:#community/json",
       "color": {
         "a": 1,
         "rgb": 15896107
@@ -379,7 +379,7 @@
       }
     },
     {
-      "query": "tag:#community/audio_mixpy",
+      "query": "tag:#community/frame_maker",
       "color": {
         "a": 1,
         "rgb": 5873999
@@ -435,7 +435,7 @@
       }
     },
     {
-      "query": "tag:#community/blender_linkpy",
+      "query": "tag:#community/blender_note",
       "color": {
         "a": 1,
         "rgb": 14767961
@@ -463,14 +463,14 @@
       }
     },
     {
-      "query": "tag:#community/apply_look_scenes",
+      "query": "tag:#community/QuestionBeattsx",
       "color": {
         "a": 1,
         "rgb": 11565729
       }
     },
     {
-      "query": "tag:#community/load_model",
+      "query": "tag:#community/test_h3_runpy",
       "color": {
         "a": 1,
         "rgb": 16752039
@@ -491,7 +491,7 @@
       }
     },
     {
-      "query": "tag:#community/test_stylepy",
+      "query": "tag:#community/style_library",
       "color": {
         "a": 1,
         "rgb": 5142951
@@ -505,7 +505,7 @@
       }
     },
     {
-      "query": "tag:#community/clean_pics",
+      "query": "tag:#community/default_build",
       "color": {
         "a": 1,
         "rgb": 14767961
@@ -519,14 +519,14 @@
       }
     },
     {
-      "query": "tag:#community/photo_preppy",
+      "query": "tag:#community/trim_borders",
       "color": {
         "a": 1,
         "rgb": 5873999
       }
     },
     {
-      "query": "tag:#community/resolve_models",
+      "query": "tag:#community/pick_model",
       "color": {
         "a": 1,
         "rgb": 15583560
@@ -540,7 +540,7 @@
       }
     },
     {
-      "query": "tag:#community/planning_ai",
+      "query": "tag:#community/write_frames",
       "color": {
         "a": 1,
         "rgb": 16752039
@@ -575,7 +575,7 @@
       }
     },
     {
-      "query": "tag:#community/logbook_results",
+      "query": "tag:#community/edit_scripts",
       "color": {
         "a": 1,
         "rgb": 14767961
@@ -586,6 +586,55 @@
       "color": {
         "a": 1,
         "rgb": 7780274
+      }
+    },
+    {
+      "query": "tag:#community/person_card",
+      "color": {
+        "a": 1,
+        "rgb": 5873999
+      }
+    },
+    {
+      "query": "tag:#community/srt",
+      "color": {
+        "a": 1,
+        "rgb": 15583560
+      }
+    },
+    {
+      "query": "tag:#community/thumbnail_order",
+      "color": {
+        "a": 1,
+        "rgb": 11565729
+      }
+    },
+    {
+      "query": "tag:#community/clamp",
+      "color": {
+        "a": 1,
+        "rgb": 16752039
+      }
+    },
+    {
+      "query": "tag:#community/ending",
+      "color": {
+        "a": 1,
+        "rgb": 10253663
+      }
+    },
+    {
+      "query": "tag:#community/panels",
+      "color": {
+        "a": 1,
+        "rgb": 12234924
+      }
+    },
+    {
+      "query": "tag:#community/test_every_unfound_model_named_at_once",
+      "color": {
+        "a": 1,
+        "rgb": 5142951
       }
     }
   ]

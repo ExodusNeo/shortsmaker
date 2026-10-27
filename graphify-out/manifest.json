@@ -642,15 +642,15 @@
     "semantic_hash": ""
   },
   "blender/opener_scene.py": {
-    "mtime": 1793106090.9958563,
-    "seen": 1793108004.6156504,
-    "ast_hash": "6c6e2d0a51f90ddeb6c8090ecc5f5bf5",
+    "mtime": 1793108670.0035508,
+    "seen": 1793109033.3157814,
+    "ast_hash": "b58cc8d72c584c9fe2ce6b28306b89e6",
     "semantic_hash": ""
   },
   "blender/scene_kit.py": {
-    "mtime": 1793090669.6216471,
-    "seen": 1793090889.8602033,
-    "ast_hash": "4a1401df8bac4a071c6ffeead54b1b8c",
+    "mtime": 1793108682.9851382,
+    "seen": 1793109033.3157935,
+    "ast_hash": "a02223821d455195dd4ffa9ecb96edc4",
     "semantic_hash": ""
   },
   "shortsmaker/blender_link.py": {
@@ -666,9 +666,9 @@
     "semantic_hash": ""
   },
   "shortsmaker/opener_render.py": {
-    "mtime": 1793096483.7016094,
-    "seen": 1793108004.6158519,
-    "ast_hash": "127f83b3e0e4505f5f04a8d49ac11356",
+    "mtime": 1793108570.317202,
+    "seen": 1793109033.3159816,
+    "ast_hash": "4814a1b255d8ff3695e9793632140b7a",
     "semantic_hash": ""
   },
   "tests/opener_check_cases.py": {
@@ -696,15 +696,15 @@
     "semantic_hash": ""
   },
   "tests/test_opener_render.py": {
-    "mtime": 1793096426.037326,
-    "seen": 1793108004.61594,
-    "ast_hash": "cc54380a7b0985e7c33ec5e54154f070",
+    "mtime": 1793108532.706597,
+    "seen": 1793109033.3160663,
+    "ast_hash": "81237b7b3ae3d3bde492ea7f6c902122",
     "semantic_hash": ""
   },
   "tests/test_opener_scene.py": {
-    "mtime": 1793106979.5087886,
-    "seen": 1793108004.6159422,
-    "ast_hash": "c575959a19eec69d913f4d0ec20fc7a8",
+    "mtime": 1793108583.3988712,
+    "seen": 1793109033.3160686,
+    "ast_hash": "2e773d0633d763c72d6ca5eab38a7fbf",
     "semantic_hash": ""
   },
   "blender/look_toon.py": {
@@ -720,15 +720,15 @@
     "semantic_hash": ""
   },
   "blender/people.py": {
-    "mtime": 1793107488.2137103,
-    "seen": 1793108004.6156585,
-    "ast_hash": "e65d94aa6e9063e7d0df6d2d96f0cdea",
+    "mtime": 1793108653.9311962,
+    "seen": 1793109033.315791,
+    "ast_hash": "b6af7807cb4426609d393ea7dc42ca36",
     "semantic_hash": ""
   },
   "tests/people_sheet.py": {
-    "mtime": 1793095120.5091882,
-    "seen": 1793108004.6158936,
-    "ast_hash": "955286585d83feda0840c51871448341",
+    "mtime": 1793108631.6057096,
+    "seen": 1793109033.3160214,
+    "ast_hash": "75b3ad724054eb36f6e19b00b7d7ff61",
     "semantic_hash": ""
   },
   "tests/people_standin.py": {

@@ -1,12 +1,12 @@
 ---
 source_file: "blender/scene_kit.py"
 type: "code"
-community: "load_model"
+community: "opener_scene.py"
 location: "L68"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/load_model
+  - community/opener_scenepy
 ---
 
 # merge()
@@ -17,4 +17,4 @@ tags:
 - [[load_model()]] - `calls` [EXTRACTED]
 - [[scene_kit.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/load_model
+#graphify/code #graphify/EXTRACTED #community/opener_scenepy

@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[One AI call stages every Short's opener (sopener); unusable plans are asked…]] - `rationale_for` [EXTRACTED]
-- [[ask()_9]] - `contains` [EXTRACTED]
+- [[ask()_8]] - `contains` [EXTRACTED]
 - [[clean_opener()]] - `calls` [EXTRACTED]
 - [[opener_plan.py]] - `contains` [EXTRACTED]
 - [[test_good_plan_is_kept()]] - `calls` [EXTRACTED]

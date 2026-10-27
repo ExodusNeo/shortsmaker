@@ -9,7 +9,7 @@ members: 19
 
 ## Members
 - [[(part, exact) the part the Short is about, by the plan's spot; the gusset at…]] - rationale - blender/templates.py
-- [[dot-__init__()_4]] - code - blender/failures.py
+- [[dot-__init__()_3]] - code - blender/failures.py
 - [[dot-_crack()]] - code - blender/failures.py
 - [[dot-fallen()]] - code - blender/failures.py
 - [[dot-falls()]] - code - blender/failures.py

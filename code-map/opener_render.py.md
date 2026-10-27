@@ -14,6 +14,7 @@ tags:
 ## Connections
 - [[Scene 1 as a Blender opener (2026-10-27) once the voice has set scene 1's…]] - `rationale_for` [EXTRACTED]
 - [[__init__.py]] - `imports_from` [EXTRACTED]
+- [[_cast_note()]] - `contains` [EXTRACTED]
 - [[blender_link.py]] - `imports_from` [EXTRACTED]
 - [[blender_render.py]] - `imports_from` [EXTRACTED]
 - [[config.py]] - `imports_from` [EXTRACTED]

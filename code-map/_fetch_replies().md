@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_blender_link.py"
 type: "code"
-community: "fetch_model"
+community: "blender_link.py"
 location: "L91"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/fetch_model
+  - community/blender_linkpy
 ---
 
 # _fetch_replies()
@@ -19,4 +19,4 @@ tags:
 - [[test_fetch_saves_pair()]] - `calls` [EXTRACTED]
 - [[test_in_library()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/fetch_model
+#graphify/code #graphify/EXTRACTED #community/blender_linkpy

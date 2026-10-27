@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/footage.py"
 type: "rationale"
-community: "json"
+community: "pathlib"
 location: "L169"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/json
+  - community/pathlib
 ---
 
 # n moments spread through a film, for the contact sheets (with FILM_CROP applied…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[film_frames()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/json
+#graphify/rationale #graphify/EXTRACTED #community/pathlib

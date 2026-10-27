@@ -39,6 +39,7 @@ tags:
 - [[test_missing_slot_is_skipped()]] - `contains` [EXTRACTED]
 - [[test_onion_mince()]] - `contains` [EXTRACTED]
 - [[test_onion_slices()]] - `contains` [EXTRACTED]
+- [[test_people_play_their_own_clips()]] - `contains` [EXTRACTED]
 - [[test_people_tables.py]] - `imports_from` [EXTRACTED]
 - [[test_person_on_support()]] - `contains` [EXTRACTED]
 - [[test_person_stands()]] - `contains` [EXTRACTED]

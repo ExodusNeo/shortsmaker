@@ -2,7 +2,7 @@
 source_file: "blender/people.py"
 type: "rationale"
 community: "people.py"
-location: "L90"
+location: "L94"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
