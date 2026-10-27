@@ -28,7 +28,7 @@ class State:
 
     def __init__(self, plan: dict, fps: int, frames: int, cam_h: Vector):
         self.plan, self.fps, self.frames, self.cam_h = plan, fps, frames, cam_h
-        self.objs, self.support, self.find = {}, {}, {a["id"]: a["find"] for a in plan["actors"]}
+        self.objs, self.support, self.find = {}, {}, {a["id"]: a.get("find") or a["person"] for a in plan["actors"]}
         self.ground = None
         self.pieces: dict[str, list] = {}  # target id -> its cut pieces
         self.intact: dict[str, object] = {}  # target id -> the uncut copy shown until the first stroke

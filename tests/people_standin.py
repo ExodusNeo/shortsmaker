@@ -1,4 +1,4 @@
-"""Stand-in people library for the tests: blender.exe -b --factory-startup --python tests/people_standin.py -- <out dir>
+"""Stand-in people library for the tests: blender.exe -b --factory-startup --python tests/people_standin.py -- <out dir> [drop]
 
 The Quaternius files may not be in git (licence), so the opener tests build this instead: for every body the roles
 table names, a plain capsule person on an armature with the real rig's bone names, its materials named as the roles
@@ -103,12 +103,14 @@ def clip(arm, name: str, travel: bool) -> dict:
     return {"frames": frames, "loop": travel or name == "Idle", "stride_m": STRIDE if travel else None}
 
 
-def main(out: Path) -> None:
+def main(out: Path, drop: str = "") -> None:
     bpy.ops.wm.read_factory_settings(use_empty=True)
     out.mkdir(parents=True, exist_ok=True)
     needed: dict[str, set] = {}
     for r in TABLES["roles"].values():
         needed.setdefault(r["body"], {"Main", "Skin"}).update(r["colours"])
+    for mats in needed.values():
+        mats.discard(drop)  # a body missing a material a role colours (test_missing_slot_is_skipped)
     data = {"bodies": {}, "bones": BONES, "clips": {}, "rig_height": H}
     arm = None
     for name, mats in sorted(needed.items()):
@@ -122,4 +124,5 @@ def main(out: Path) -> None:
 
 
 if __name__ == "__main__":
-    main(Path(sys.argv[sys.argv.index("--") + 1]))
+    args = sys.argv[sys.argv.index("--") + 1:]
+    main(Path(args[0]), args[1] if len(args) > 1 else "")

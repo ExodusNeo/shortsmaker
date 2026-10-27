@@ -1,0 +1,48 @@
+{
+ "plan": {
+  "buildable": true,
+  "moment": "an officer stands on a crate while a box drops beside it",
+  "set": {
+   "ground": "stone",
+   "backdrop": [],
+   "light": "day"
+  },
+  "actors": [
+   {
+    "id": "officer",
+    "person": "ww2_british_officer",
+    "facing": "right",
+    "on": "crate"
+   },
+   {
+    "id": "crate",
+    "find": "crate",
+    "size_m": 0.6
+   },
+   {
+    "id": "box",
+    "find": "box",
+    "size_m": 0.3
+   }
+  ],
+  "beats": [
+   {
+    "move": "fall",
+    "actor": "box",
+    "at": 0.3,
+    "ends": {
+     "on": "ground"
+    }
+   }
+  ],
+  "camera": {
+   "angle": "side",
+   "follow": "officer"
+  }
+ },
+ "models": {
+  "crate": "primitive:cube",
+  "box": "primitive:cube"
+ },
+ "seconds": 2.0
+}

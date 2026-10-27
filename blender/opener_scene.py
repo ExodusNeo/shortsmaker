@@ -18,6 +18,7 @@ from mathutils import Vector
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import moves  # noqa: E402
 import opener_checks as oc  # noqa: E402
+import people  # noqa: E402
 import scene_kit as kit  # noqa: E402
 
 YAW = {"front": 0, "three_quarter": 40, "side": 90, "top": 25}
@@ -180,11 +181,18 @@ def dress_set(plan: dict, st: moves.State) -> None:
         placed += 1
 
 
-def place_actors(plan: dict, models: dict, st: moves.State) -> None:
+def place_actors(plan: dict, models: dict, st: moves.State, lib: dict | None = None) -> None:
     tools = {b["tool"] for b in plan["beats"] if b["move"] == "cut"}
+    frames = set(range(1, bpy.context.scene.frame_end + 1))
     for a in plan["actors"]:
-        o = kit.load_model(models[a["id"]], a["id"])
-        kit.fit(o, a["size_m"], a.get("facing", "camera"), view=a["id"] not in tools)
+        if "person" in a:  # people (part 2): dressed from the library; their hat and prop may touch them
+            o = people.dress(a, kit.TABLES["roles"][a["person"]], lib, models)
+            for item in (o.get("hat"), o.get("prop")):
+                if item:
+                    st.allow(o, bpy.data.objects[item], frames)
+        else:
+            o = kit.load_model(models[a["id"]], a["id"])
+            kit.fit(o, a["size_m"], a.get("facing", "camera"), view=a["id"] not in tools)
         st.objs[a["id"]] = o
         st.support[a["id"]] = a.get("on") or "ground"
     bpy.context.view_layer.update()
@@ -438,7 +446,8 @@ def main(job_path: str) -> None:
     cam_h = Vector((math.sin(yaw), -math.cos(yaw), 0))
     st = moves.State(plan, job["fps"], sc.frame_end, cam_h)
     st.ground = build_set(plan, job["models"], cam_h)
-    place_actors(plan, job["models"], st)
+    lib = people.load_library(job) if any("person" in a for a in plan["actors"]) else None
+    place_actors(plan, job["models"], st, lib)
     for beat in sorted(plan["beats"], key=lambda b: b["at"]):
         try:
             moves.apply(beat, st)

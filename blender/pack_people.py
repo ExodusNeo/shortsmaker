@@ -15,6 +15,7 @@ import bpy
 SKIP = {"Cow", "Pug", "Chef_Hat", "Cowboy_Hair", "VikingHelmet", "BaseCharacter"}
 LOOPS = {"Idle", "Walk", "Run", "Walk_Carry", "Run_Carry"}
 BONES = {"head": "Head", "hand_r": "Fist.R", "foot_l": "Foot.L", "foot_r": "Foot.R"}
+SKIN = (0.62, 0.38, 0.26)  # a default skin tone (linear) for the pack's near-black skin
 
 
 def clip_name(action_name: str) -> str:
@@ -38,6 +39,22 @@ def stride(arm, action) -> float:
         sc.frame_set(f)
         ys.append((arm.matrix_world @ arm.pose.bones[BONES["foot_l"]].head).y)
     return round(2 * (max(ys) - min(ys)), 4)
+
+
+def front(mesh) -> list[float]:
+    """Which way the body faces, flat, from its middle toward its face (the "Face" material); -Y when it has none."""
+    dg = bpy.context.evaluated_depsgraph_get()
+    ev = mesh.evaluated_get(dg)
+    face = {i for i, s in enumerate(ev.material_slots) if s.material and base_name(s.material.name) == "Face"}
+    pts = [ev.matrix_world @ p.center for p in ev.data.polygons]
+    on_face = [ev.matrix_world @ p.center for p in ev.data.polygons if p.material_index in face]
+    if not on_face:
+        return [0.0, -1.0]
+    mid = sum(pts, pts[0] * 0) / len(pts)
+    f = sum(on_face, on_face[0] * 0) / len(on_face) - mid
+    f.z = 0
+    f.normalize()
+    return [round(f.x, 4), round(f.y, 4)]
 
 
 def height(mesh) -> float:
@@ -79,6 +96,14 @@ def main(src: Path, out: Path) -> None:
                 bpy.ops.object.join()
         body = meshes[0]
         body.name, arm.name = f"body:{name}", f"rig:{name}"
+        for slot in body.material_slots:  # the FBX import leaves every material at alpha 0: invisible, shadows only
+            bsdf = next((n for n in slot.material.node_tree.nodes if n.type == "BSDF_PRINCIPLED"), None)                 if slot.material and slot.material.node_tree else None
+            if bsdf is not None:
+                bsdf.inputs["Alpha"].default_value = 1.0
+                bsdf.inputs["Emission Strength"].default_value = 0.0  # it copies the colour to emission too
+                rgb = bsdf.inputs["Base Color"].default_value
+                if base_name(slot.material.name) == "Skin" and max(rgb[:3]) < 0.05:  # skin comes in near-black
+                    bsdf.inputs["Base Color"].default_value = (*SKIN, 1)
         for action in [a for a in bpy.data.actions if a not in before_actions]:
             clip = clip_name(action.name)
             if clip in data["clips"]:
@@ -92,7 +117,7 @@ def main(src: Path, out: Path) -> None:
         bpy.context.view_layer.update()
         data["bodies"][name] = {"object": body.name, "armature": arm.name,
                                 "materials": sorted({base_name(s.material.name) for s in body.material_slots if s.material}),
-                                "height": height(body)}
+                                "height": height(body), "front": front(body)}
         print(f"packed {name}")
     first = next(iter(data["bodies"].values()))
     data["rig_height"] = first["height"]  # strides are measured on this body; scale them by height / rig_height

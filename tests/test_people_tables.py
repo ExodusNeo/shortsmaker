@@ -19,10 +19,10 @@ REAL = json.loads(config.PEOPLE_JSON.read_text(encoding="utf-8")) if config.PEOP
 STANDIN = ROOT / "tests" / "people_standin.py"
 
 
-def standin(out: Path) -> dict:
-    """Build the stand-in library into `out`; returns its people.json."""
+def standin(out: Path, drop: str = "") -> dict:
+    """Build the stand-in library into `out` (drop = a material its bodies leave out); returns its people.json."""
     r = subprocess.run([str(config.BLENDER), "-b", "--factory-startup", "--python-exit-code", "1", "--python",
-                        str(STANDIN), "--", str(out)], capture_output=True, text=True, timeout=600)
+                        str(STANDIN), "--", str(out), drop], capture_output=True, text=True, timeout=600)
     assert r.returncode == 0, (r.stdout or "")[-2000:] + (r.stderr or "")[-2000:]
     assert (out / "people.blend").exists()
     return json.loads((out / "people.json").read_text(encoding="utf-8"))

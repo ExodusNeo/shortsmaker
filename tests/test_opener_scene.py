@@ -18,6 +18,20 @@ from shortsmaker import config, opener_plan  # noqa: E402
 
 FIX = ROOT / "tests" / "fixtures" / "openers"
 SCRIPT = ROOT / "blender" / "opener_scene.py"
+sys.path.insert(0, str(ROOT / "tests"))
+from test_people_tables import standin  # noqa: E402
+
+_PEOPLE: dict = {}
+
+
+def people_lib(drop: str = "") -> dict:
+    """The stand-in people library (no Quaternius file is in git), built once per test run; drop = a material the
+    stand-in bodies leave out."""
+    if drop not in _PEOPLE:
+        out = Path(tempfile.mkdtemp(prefix="people_standin_"))
+        standin(out, drop)
+        _PEOPLE[drop] = {"blend": str(out / "people.blend"), "json": str(out / "people.json")}
+    return _PEOPLE[drop]
 
 
 def fixture(name: str) -> dict:
@@ -30,7 +44,8 @@ def run(job_fixture: dict, render: bool = False) -> tuple[dict, Path]:
     models = {k: v if v.startswith("primitive:") else str(FIX / v) for k, v in job_fixture["models"].items()}
     job = {"plan": job_fixture["plan"], "models": models, "seconds": job_fixture["seconds"], "fps": 30,
            "size": [1080, 1920], "frames_dir": str(d / "frames"), "report": str(d / "report.json"),
-           "render": render, "render_failed": False, "render_scale": 25}
+           "render": render, "render_failed": False, "render_scale": 25,
+           "people": job_fixture.get("people") or people_lib()}
     (d / "job.json").write_text(json.dumps(job), encoding="utf-8")
     r = subprocess.run([str(config.BLENDER), "-b", "--factory-startup", "--python-exit-code", "1", "--python",
                         str(SCRIPT), "--", str(d / "job.json")], capture_output=True, text=True, timeout=900)
@@ -165,6 +180,28 @@ def test_slow_motion_keeps_length():
     r = subprocess.run([str(config.BLENDER), "-b", "--factory-startup", "--python-exit-code", "1", "--python-expr", code],
                        capture_output=True, text=True, timeout=300)
     assert r.returncode == 0, (r.stdout or "")[-2000:] + (r.stderr or "")[-2000:]
+
+
+
+def test_person_stands():
+    """People openers (part 2): a dressed person stands with their feet on the ground."""
+    report, _ = run(fixture("person_stand"))
+    assert report["ok"], report["failures"]
+    assert abs(report["lowest"]["officer"]) < 0.01, report["lowest"]
+
+
+def test_person_on_support():
+    report, _ = run(fixture("person_on_support"))
+    assert report["ok"], report["failures"]
+    assert abs(report["lowest"]["officer"] - 0.6) < 0.02, report["lowest"]  # on the 0.6 m crate's top
+
+
+def test_missing_slot_is_skipped():
+    """A role colours a material the body doesn't have: that colour is skipped, the person still builds."""
+    job = fixture("person_stand")
+    job["people"] = people_lib(drop="Black")
+    report, _ = run(job)
+    assert report["ok"], report["failures"]
 
 
 if __name__ == "__main__":
