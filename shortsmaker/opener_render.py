@@ -74,15 +74,37 @@ def fingerprint(job: dict) -> str:
     return h.hexdigest()[:16]
 
 
-def review(short: dict, frames: Path, seconds: float, work: Path) -> list[str]:
+def review_frames(report: dict, n: int) -> list[int]:
+    """The frames the reviewer sees: 8 spread over the clip plus 3 around every key moment (a stroke's contact, the
+    first frame something moves). Evenly spaced frames alone skipped a 0.3-second chop in the sixth live run."""
+    even = sorted({1 + round(k * (n - 1) / 7) for k in range(8)})
+    keys = sorted({min(max(f + d, 1), n) for k in report.get("key_frames") or [] for f in [k] for d in (-2, 0, 3)})
+    picked = sorted(set(even) | set(keys))
+    while len(picked) > 12:  # drop evenly spaced frames that sit close to a key moment first
+        spare = [f for f in picked if f not in keys and f not in (1, n)]
+        if not spare:
+            break
+        picked.remove(min(spare, key=lambda f: min(abs(f - k) for k in keys)))
+    return picked
+
+
+def review(short: dict, frames: Path, seconds: float, work: Path, report: dict | None = None) -> list[str]:
     """The AI looks at 8 frames: does the action make physical sense, and does frame 0 show the subject and the
     threat? Its problems, or [] (a failed or unreadable reply never blocks an opener the checks passed)."""
+    from PIL import Image
     look = work / "opener_look"
     shutil.rmtree(look, ignore_errors=True)
     look.mkdir(parents=True)
-    media_tools.ffmpeg("-framerate", str(FPS), "-i", str(frames / "f_%04d.png"), "-vf",
-                       f"fps={8 / max(seconds, 0.1):.4f},scale=270:-2,tile=8x1", "-frames:v", "1", "strip.jpg", cwd=look)
-    data = llm.ask_ai(f"""strip.jpg in this folder shows 8 frames, left to right, of a {seconds:.1f}-second 3D animation
+    n = len(list(frames.glob("f_*.png")))
+    picked = review_frames(report or {}, n)
+    tiles = [Image.open(frames / f"f_{f:04d}.png").convert("RGB") for f in picked]
+    tiles = [t.resize((270, round(270 * t.height / t.width))) for t in tiles]
+    strip = Image.new("RGB", (270 * len(tiles), tiles[0].height))
+    for i, t in enumerate(tiles):
+        strip.paste(t, (270 * i, 0))
+    strip.save(look / "strip.jpg", quality=88)
+    when = ", ".join(f"{(f - 1) / FPS:.2f}s" for f in picked)
+    data = llm.ask_ai(f"""strip.jpg in this folder shows {len(picked)} frames, left to right, at {when} of a {seconds:.1f}-second 3D animation
 that opens a YouTube Short. It should show: {short['opener']['moment']}.
 There are no people in these animations: tools are swung by an unseen hand just off-screen (the owner's choice), so
 a tool whose handle runs off the edge of the frame is fine; a tool floating in the middle of the shot is not.
@@ -131,7 +153,7 @@ def render_opener(short: dict, seconds: float, work: Path, exe: Path | None = No
         report = json.loads(report_path.read_text(encoding="utf-8"))
         failures = list(report.get("failures") or [])
         if report.get("ok") and not failures:
-            failures = review(short, frames, seconds, work)
+            failures = review(short, frames, seconds, work, report)
             if not failures:
                 media_tools.ffmpeg("-y", "-framerate", str(FPS), "-i", str(frames / "f_%04d.png"),
                                    *media_tools.video_encoder(), "-pix_fmt", "yuv420p", clip.name, cwd=work)

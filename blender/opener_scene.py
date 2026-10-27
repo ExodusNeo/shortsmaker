@@ -293,7 +293,8 @@ def main(job_path: str) -> None:
     report = {"ok": not failures, "failures": failures, "frames": sc.frame_end,
               "pieces": sum(len(p) for p, *_ in st.cuts),
               "cut_shares": {k: v for *_, s in st.cuts for k, v in s.items()}, "lowest": lowest,
-              "held_offscreen": held}
+              "held_offscreen": held,
+              "key_frames": sorted({c[3] + 2 for c in st.contacts} | set(st.moved_from.values()))}
     if job.get("render", True) and (report["ok"] or job.get("render_failed")):
         frames_dir = Path(job["frames_dir"])
         frames_dir.mkdir(parents=True, exist_ok=True)

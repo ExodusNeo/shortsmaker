@@ -164,6 +164,15 @@ def test_pick_model():
         assert clip is None and why == "opener failed: no fitting model for 'rooster'", why
 
 
+def test_review_frames_include_key_moments():
+    """Sixth live run (Mike): 8 evenly spaced frames skipped the whole 0.3-second chop, so the review said it never
+    happened. The strip must show the key moments."""
+    picked = opener_render.review_frames({"key_frames": [17]}, 101)
+    assert {15, 17, 20} <= set(picked) and picked[0] == 1 and picked[-1] == 101 and picked == sorted(picked)
+    assert len(picked) <= 12
+    assert opener_render.review_frames({}, 90)[0] == 1 and len(opener_render.review_frames({}, 90)) == 8
+
+
 def _wiring(render_result):
     """short_render.use_opener with render_opener faked; returns (check line, short, clips, images, sources, calls)."""
     from PIL import Image
