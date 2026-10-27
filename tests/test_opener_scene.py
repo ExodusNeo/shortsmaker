@@ -78,6 +78,18 @@ def test_chicken_live_plan():
     assert report["ok"], report["failures"]
 
 
+def test_walk_stops_short_of_obstacles():
+    """Third live run (Mike): hop off to the left, then walk right, back into the stump: the walk must stop short."""
+    job = fixture("chicken_live")
+    for b in job["plan"]["beats"]:
+        if b["move"] == "hop_off":
+            b.pop("toward", None)
+        if b["move"] == "walk":
+            b["toward"], b["at"] = "right", 1.9
+    report, _ = run(job)
+    assert report["ok"], report["failures"]
+
+
 def test_bad_plans_fail():
     crowded = fixture("chicken_chop")  # a crate on the stump right where the rooster stands
     crowded["plan"]["actors"].append({"id": "crate", "find": "crate", "size_m": 0.3, "on": "stump"})

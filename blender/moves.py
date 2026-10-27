@@ -178,11 +178,21 @@ def walk(beat, st):
     turn = math.atan2(face.x * d.y - face.y * d.x, face.dot(d))  # turn to face the way it walks
     base_rot = kit.rot_at(o, f0)
     stagger = beat.get("style") == "stagger"
+    # it stops short of whatever is in its way (the third live run walked back into the stump it hopped off)
+    tools = {b["tool"] for b in st.plan["beats"] if b["move"] == "cut"}
+    obstacles = [x for k, x in st.objs.items() if x is not o and k not in tools] + \
+        [x for x in bpy.context.scene.objects if x.name.startswith("backdrop")]
+    keep_loc, keep_rot = o.location.copy(), o.rotation_euler.copy()
+    o.location, o.rotation_euler = start + Vector((0, 0, 0.01)), (0, 0, base_rot.z + turn)
+    bpy.context.view_layer.update()
+    room = max(0.0, clear_distance(o, d, obstacles, speed * (st.frames - f0) / st.fps) - 0.04)  # 4 cm: sway
+    o.location, o.rotation_euler = keep_loc, keep_rot
+    bpy.context.view_layer.update()
     last = st.frames if (st.frames - f0) % 2 == 0 else st.frames + 1
     for f in range(f0, last + 1, 2):
         f = min(f, st.frames)
         t = (f - f0) / st.fps
-        pos = start + d * speed * t
+        pos = start + d * min(speed * t, room)
         # the last frame lands the step: it ends standing on the ground, not mid-bob
         pos.z = start.z + (0 if f == st.frames else g["bob"] * abs(math.sin(math.pi * g["steps_per_s"] * t)))
         if stagger:
@@ -221,6 +231,22 @@ def push(beat, st):
     kit.key_loc(actor, hit, actor.location + d * max(gap - 0.002, 0))
     release(st, target, min(hit + 1, st.frames), launch=d * 0.6)
     st.moved_from.setdefault(beat["actor"], f0)
+
+
+def clear_distance(o, d: Vector, others: list, limit: float, step: float = 0.02) -> float:
+    """How far o can slide along d (up to limit) before its mesh touches any of `others`: the whole mesh is moved and
+    tested, so a narrow root can't slip between rays the way it does with travel()."""
+    from mathutils.bvhtree import BVHTree
+    trees = [kit.tree(x) for x in others]
+    vs = kit.world_verts(o)
+    polys = [p.vertices[:] for p in o.data.polygons]
+    dist = 0.0
+    while dist <= limit:
+        moved = BVHTree.FromPolygons([v + d * dist for v in vs], polys)
+        if any(moved.overlap(t) for t in trees):
+            return max(0.0, dist - step)
+        dist += step
+    return limit
 
 
 def travel(o, d: Vector, others: list) -> float:
