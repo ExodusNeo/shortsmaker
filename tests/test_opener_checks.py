@@ -50,6 +50,8 @@ def test_first_frame():
     assert results()["first_ok"] == []
     # a wide, low subject (the people run's armoured car) reads big by its width (40%), not its height
     assert results()["first_wide"] == [], results()["first_wide"]
+    assert results()["threat_sliver"] and "mostly out" in results()["threat_sliver"][0], results()["threat_sliver"]
+    assert results()["threat_sliver_tool"] == [], results()["threat_sliver_tool"]
 
 
 def test_edge_leads():

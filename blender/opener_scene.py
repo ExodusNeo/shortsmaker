@@ -209,7 +209,10 @@ def place_actors(plan: dict, models: dict, st: moves.State, lib: dict | None = N
         width = max(hi.x - lo.x, hi.y - lo.y)  # either way round, the camera may sit on any side
         if k:
             x += width / 2
-        o.location = kit.view(Vector((x if k % 2 == 0 else -x, 0, 0)))  # a row across the shot
+        side = x if k % 2 == 0 else -x
+        # a row across the shot; what someone goes at stands back into the depth instead, so a tall portrait frame
+        # holds both big (side by side across it, the officer beside a car shrank to 8% of the height)
+        o.location = kit.view(Vector((0.5 * side, 0.85 * abs(side), 0)) if aid in linked and k else Vector((side, 0, 0)))
         x += width / 2 + (1.5 if aid in linked or (k + 1 < len(on_ground) and on_ground[k + 1] in linked) else 0.3)
     placed: set = set(on_ground) | tools
     while len(placed) < len(plan["actors"]):
@@ -231,6 +234,10 @@ def place_actors(plan: dict, models: dict, st: moves.State, lib: dict | None = N
     for a in plan["actors"]:
         if a["id"] not in tools:
             kit.make_static(st.objs[a["id"]])
+            if a.get("person"):  # a collider rebuilt from the posed mesh every frame crashed Blender (rigid body
+                # shape from a deforming mesh): a person collides as their rest shape
+                rb = st.objs[a["id"]].rigid_body
+                rb.mesh_source, rb.use_deform = "BASE", False
 
 
 def stand_on(o, sup, neighbours: list) -> Vector:
@@ -269,6 +276,12 @@ def stand_on(o, sup, neighbours: list) -> Vector:
     return best[1] if best else Vector((mid.x - foot_c.x, mid.y - foot_c.y, hi.z + 0.001))
 
 
+def threat_whole(st: moves.State, subject) -> bool:
+    """The threat is something to show whole (a car, a person), not a blade whose handle runs off the frame."""
+    blades = {c[0] for c in st.contacts} | {p for p, _ in st.swings}
+    return st.threat is not None and st.threat is not subject and st.threat not in blades
+
+
 def camera(plan: dict, st: moves.State, subject_id: str) -> bpy.types.Object:
     sc = bpy.context.scene
     angle = plan["camera"]["angle"]
@@ -278,16 +291,30 @@ def camera(plan: dict, st: moves.State, subject_id: str) -> bpy.types.Object:
     # toward the threat so it shows too, which the first-frame check confirms
     first = st.intact.get(subject_id, st.objs[subject_id])
     lo, hi = kit.bbox(first)
+    # a threat that isn't a blade (the car someone runs at) is framed with the subject, not leaned at: the people
+    # run's car sat as a sliver at the frame edge and the officer seemed to run on the spot
+    whole = threat_whole(st, first)
+    if whole:
+        tlo, thi = kit.bbox(st.threat)
+        lo = Vector((min(lo.x, tlo.x), min(lo.y, tlo.y), min(lo.z, tlo.z)))
+        hi = Vector((max(hi.x, thi.x), max(hi.y, thi.y), max(hi.z, thi.z)))
     size = hi - lo
     vfov = 2 * math.atan(18 / LENS)
     hfov = 2 * math.atan(18 * sc.render.resolution_x / sc.render.resolution_y / LENS)
     # starts wider by the push-in, so the push ends on this framing instead of past it (the crate left the frame)
     dist = (max(size.z / SUBJECT_FILL / (2 * math.tan(vfov / 2)),
                 max(size.x, size.y) / FILL / (2 * math.tan(hfov / 2))) + max(size.x, size.y) / 2) / PUSH_IN
+    if whole:  # both fit as seen: width across the view, height up; depth only moves the camera back
+        right, back = kit.view(Vector((1, 0, 0))), kit.view(Vector((0, 1, 0)))
+        corners = [Vector((x, y, 0)) for x in (lo.x, hi.x) for y in (lo.y, hi.y)]
+        across = max(c.dot(right) for c in corners) - min(c.dot(right) for c in corners)
+        deep = max(c.dot(back) for c in corners) - min(c.dot(back) for c in corners)
+        dist = (max(size.z / 0.7 / (2 * math.tan(vfov / 2)), across / 0.8 / (2 * math.tan(hfov / 2)))
+                + deep / 2) / PUSH_IN
     aim = bpy.data.objects.new("aim", None)
     sc.collection.objects.link(aim)
     start = (lo + hi) / 2
-    if st.threat is not None and st.threat is not first:
+    if st.threat is not None and st.threat is not first and not whole:
         tlo, thi = kit.bbox(st.threat)
         start = start.lerp((tlo + thi) / 2, 0.15)  # 0.3 pushed a profile rooster off the frame edge
     # the subject is always followed once it moves (the Mike plan left follow out and the rooster walked off alone)
@@ -306,7 +333,11 @@ def camera(plan: dict, st: moves.State, subject_id: str) -> bpy.types.Object:
         if f >= moved:
             sc.frame_set(f)
             blo, bhi = kit.bbox(st.objs[follow])
-            target = start.lerp((blo + bhi) / 2, min(1.0, (f - moved) / 6))
+            now = (blo + bhi) / 2
+            if whole:  # keep both in: follow the point between the subject and what it goes at
+                tlo, thi = kit.bbox(st.threat)
+                now = now.lerp((tlo + thi) / 2, 0.5)
+            target = start.lerp(now, min(1.0, (f - moved) / 6))
         t = (f - 1) / n
         ease = t * t * (3 - 2 * t)
         y, p = yaw + math.radians(ORBIT) * (ease - 0.5), pitch + math.radians(RISE) * ease
@@ -430,7 +461,8 @@ def checks(plan: dict, st: moves.State, cam, subject_id: str) -> list[str]:
         out += oc.in_frame(obj, cam, fr)
         out += oc.hidden(obj, cam, fr, occluders)
     first_subject = st.intact.get(subject_id, st.objs[subject_id])
-    out += oc.first_frame(first_subject, st.threat or first_subject, cam)
+    out += oc.first_frame(first_subject, st.threat or first_subject, cam,
+                          threat_whole=threat_whole(st, first_subject))
     for tool, axis, target, frame in st.contacts:
         out += oc.edge_leads(tool, axis, target, frame)
         out += oc.blade_face(tool, cam, frame)

@@ -98,6 +98,9 @@ car = cube("car", (0, 0, 3), size=1.0)  # wide and low: a car filling half the w
 car.scale = (4.0, 1.0, 0.25)
 bpy.context.view_layer.update()
 results["first_wide"] = oc.first_frame(car, threat, cam)
+edge = cube("edge", (1.85, 0, 0), size=1.0)  # a threat only a sliver of which is in frame (the people run's car)
+results["threat_sliver"] = oc.first_frame(big, edge, cam, threat_whole=True)
+results["threat_sliver_tool"] = oc.first_frame(big, edge, cam)  # a blade's handle may run off: in frame is enough
 
 # edge leads: a blade moving +x, its edge facing -x (wrong) or +x (right)
 sc = fresh()

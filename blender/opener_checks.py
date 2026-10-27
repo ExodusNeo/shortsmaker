@@ -142,7 +142,8 @@ def hidden(subject, cam, frames, occluders, min_visible: float = 0.4) -> list[st
     return [f"hidden: {subject.name} is hidden behind something on frames {spans(out)}"] if out else []
 
 
-def first_frame(subject, threat, cam, min_height: float = 0.15, min_width: float = 0.4) -> list[str]:
+def first_frame(subject, threat, cam, min_height: float = 0.15, min_width: float = 0.4,
+                threat_whole: bool = False) -> list[str]:
     """Frame 1 shows the subject, big enough to read (tall enough, or for a wide low thing like a car, wide
     enough: the people run's armoured car filled the width at 14% of the height), and the threat."""
     dg, out = at(bpy.context.scene.frame_start), []
@@ -155,6 +156,11 @@ def first_frame(subject, threat, cam, min_height: float = 0.15, min_width: float
     tx0, tx1, ty0, ty1 = screen_box(threat, cam, dg)
     if tx1 < 0 or tx0 > 1 or ty1 < 0 or ty0 > 1:
         out.append(f"first_frame: {threat.name} (the threat) is not in the first frame")
+    elif threat_whole:  # not a blade whose handle may run off: at least half of it shows (the people run's car)
+        inside = (max(0.0, min(tx1, 1) - max(tx0, 0)) * max(0.0, min(ty1, 1) - max(ty0, 0))) /             max((tx1 - tx0) * (ty1 - ty0), 1e-9)
+        if inside < 0.5:
+            out.append(f"first_frame: {threat.name} (the threat) is mostly out of the first frame "
+                       f"({100 * inside:.0f}% in)")
     return out
 
 
