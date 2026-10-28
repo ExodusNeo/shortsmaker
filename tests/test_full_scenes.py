@@ -13,6 +13,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from shortsmaker import (  # noqa: E402
     audio_mix, channel_profiles, cli, config, editplan, gpu, image_sources, llm, logbook, motion, picker,
     picture_pool, plan_rules, remotion_render, review, session, short_render, writing,
+    topic_ideas,
 )
 from patching import owner  # noqa: E402
 from PIL import Image  # noqa: E402
@@ -159,8 +160,9 @@ def _fake_planning(monkey_reply_full):
         return {}
 
     saved = {k: getattr(owner(k), k) for k in ("ask_ai", "trend_research", "logbook_results", "article_text", "edit_scripts", "fact_check",
-                                        "prepare_topic")}
+                                        "prepare_topic", "pick_ideas")}
     llm.ask_ai, channel_profiles.trend_research, logbook.logbook_results = ask, (lambda ch: []), (lambda: "")
+    topic_ideas.pick_ideas = lambda *a, **k: []
     picture_pool.prepare_topic = lambda s, folder=None: (s.update(_texts={"A": "text"}, pool_dir="pool", catalog=[], picture_check="9 usable of 9"), True)[1]
     writing.article_text, writing.edit_scripts, writing.fact_check = (lambda t: "text"), (lambda shorts, ch: None), (lambda s: True)
     try:

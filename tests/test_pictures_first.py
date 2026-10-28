@@ -12,6 +12,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from shortsmaker import (  # noqa: E402
     channel_profiles, editplan, footage, image_sources, llm, logbook, picker, picture_pool, plan_rules, seo, session,
     writing,
+    topic_ideas,
 )
 from patching import owner  # noqa: E402
 
@@ -200,10 +201,11 @@ class planning:
         self.prepare, self.over = prepare, over
 
     def __enter__(self):
-        keys = ("trend_research", "logbook_results", "article_text", "edit_scripts", "fact_check", "prepare_topic", *self.over)
+        keys = ("trend_research", "logbook_results", "article_text", "edit_scripts", "fact_check", "prepare_topic", "pick_ideas", *self.over)
         self.saved = {k: getattr(owner(k), k) for k in keys}
         self.ai = fake_ai(planning_ai).__enter__()
         channel_profiles.trend_research, logbook.logbook_results = (lambda ch: []), (lambda: "")
+        topic_ideas.pick_ideas = lambda *a, **k: []
         writing.article_text, writing.edit_scripts, writing.fact_check = (lambda t: "text"), (lambda shorts, ch: None), (lambda s: True)
         if self.prepare:
             picture_pool.prepare_topic = self.prepare

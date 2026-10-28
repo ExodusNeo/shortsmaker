@@ -11,6 +11,7 @@ max_full_planned: 4
 max_full: 5
 opener: blender
 hook: money_claim
+idea_pages: Society, economy and law; Technology, inventions and products; History; Food
 
 ## Topic picking
 <!-- new -->

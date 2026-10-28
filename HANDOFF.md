@@ -126,8 +126,16 @@ Rules that keep it working:
      `RESOURCE_EXHAUSTED` during that run (`_argon_exhausted`), `run_agy` switches to Flash for the rest of the run
      (replaced the old `argon_quota_until.txt` file which locked out Argon for a week even when credits were available).
      agy cannot make video.
-2. **Trend research** (`trend_research()`): proven channels' recent Shorts via yt-dlp, ranked by views/day; seeds
-   without a Shorts tab are replaced (`seed_ideas()`).
+2. **Our own topic research** (owner, 2026-10-28: "research our own topics instead of copying the titles";
+   `topic_ideas.py`): ~60 random story ideas from Wikipedia's "Unusual articles" pages (title + its one odd line;
+   pages per channel by `idea_pages: History; Military` in the rules Settings, else 10 default pages; each page
+   cached 30 days in `cache/ideas/`, stale copy when Wikipedia is down), none already made (`done_topics`) or just
+   posted by a bigger channel, go to the topic picker only. `trend_research()` (proven channels' recent Shorts via
+   yt-dlp, ranked by views/day; seeds without a Shorts tab are replaced, `seed_ideas()`) is now ONLY the "TAKEN"
+   list: the picker is told never to pick those stories, and a picked topic whose subject or character holds every
+   real word of a taken title (`topic_ideas.clash`, 2+ words) is dropped like a weak-picture topic (a backup takes
+   its place; `dropped_topics` says "a bigger channel posted it recently"). The writer and SEO never see competitor
+   titles. Why: Voggle's Mike had 2M views against our 1.2K on the same story, so following their topics loses.
 2b. **Pictures first** (2026-10-19, owner's idea: "hard to adjust the images if there's already a script"; spec
    `docs/superpowers/specs/2026-10-19-pictures-first-design.md`): the planner picks n + `TOPIC_BACKUPS` (2) topics, each
    with `visual_terms` and `people`; `prepare_topic()` per topic, in order until n pass: Wikipedia (`_texts`), the pool
@@ -166,8 +174,8 @@ Rules that keep it working:
    `shot`/`ai_image`), drops/fixes wrong graphics and `full` scenes (`drop_full`, `full_fix`); a myth goes to the
    profile's `myths` with `myth_note` instead.
 4. **SEO** (`seo_pass()`): YouTube autocomplete for the subject, "facts"/"why" variants, 2 more Wikipedia articles
-   and the topic's `search_terms`, kept in YouTube's popularity order and grouped by query; plus the niche leaders'
-   titles (today's trend cache) and the logbook results. Title: < 60 chars, first 40 work alone, must not repeat
+   and the topic's `search_terms`, kept in YouTube's popularity order and grouped by query; plus the logbook results
+   (competitor titles removed 2026-10-28). Title: < 60 chars, first 40 work alone, must not repeat
    the hook sentence / hook_text / thumbnail_text, **no emoji** (prompt rule + stripped in code; owner agreed
    2026-10-16: no search value, off-tone; the pinned comment may keep them). SEO also gets the fact check's
    corrections and may not bring a removed claim back (a test title had re-added a corrected-away "first").
@@ -1058,8 +1066,8 @@ when no template fits, and add three.js only as a fixed template. All three buil
   CC-BY model credit goes to upload.txt (scene 1 `full["credit"]`). Test scene: `remotion\test_props\model-coinbag.json`
   (`tests\render_full.py`); the Eiffel Tower model was also checked by eye. Not tried in a real Short yet.
 - Not done: the run start still asks for the Blender MCP on `opener: blender` channels even if no template will fit
-  (planning happens later, in `write_scripts`). `tests\test_rules.py` `test_strange_history_prompts_unchanged` fails,
-  and failed the same way before this change: its fake AI has no reply for the opener planner's prompt.
+  (planning happens later, in `write_scripts`). `tests\test_rules.py` `test_strange_history_prompts_unchanged` was failing
+  (no fake reply for the opener planner); fixed and the golden re-saved later the same day.
 
 ## Opener next steps (2026-10-28, agreed with the owner, in this order; step 2 done the same day, see above)
 1. **A live run** of one Short with the onion-run fixes (framing everyone, checks before the render, depth staging,
@@ -1106,6 +1114,8 @@ when no template fits, and add three.js only as a fixed template. All three buil
   `.venv\Scripts\python.exe tests\test_style.py` (29: style library, guardrails, inventions, candidates),
   `.venv\Scripts\python.exe tests\run_ts_tests.py` (6 guarded + 13 style: arrow routing, layouts, card fitting, travel speed, registry, transitions) and
   `local_ai\qwen_venv\Scripts\python.exe tests\test_qwen_voice.py` (4: number words, caption words, aligner alphabet, word counts shared with tests/test_story.py).
+- Own topic research: `tests\test_topic_ideas.py` (8: page parsing, clash, pages setting, cache, picks, the topic
+  prompt, dropping a taken story, SEO without competitor titles).
 - Blender openers: `tests\test_opener_plan.py` (21: tables, template fills, model swaps), `tests\test_blender_link.py` (6, fake add-on socket),
   `tests\test_opener_render.py` (28, fake Blender: one build, model swaps, fallback, reuse, credits, scene-1 wiring, the run.bat
   note), `tests\test_shot_templates.py` (real headless Blender + the real library and people: every template

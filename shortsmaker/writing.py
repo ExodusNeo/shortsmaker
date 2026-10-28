@@ -8,7 +8,7 @@ from pathlib import Path
 
 from shortsmaker import (
     audio_mix, blender_plan, channel_profiles, image_sources, llm, logbook, opener_plan, picture_pool, plan_rules, rules,
-    session, style_lab,
+    session, style_lab, topic_ideas,
 )
 from shortsmaker.config import (
     CUSTOM_KINDS, DOC_KINDS, FULL_TYPES, ICONS, MAX_FULL_PLANNED, MOODS, MOVES, MOVE_NAMES, PALETTES, SHAPES,
@@ -33,18 +33,23 @@ def write_scripts(ch: dict, n: int, topics: list[str] | None = None, pools: list
     edits it (edit_scripts), the planner plans the edit on the final words (direct_scripts), then the fact check.
     Before any writing, each topic's real pictures are gathered and listed (prepare_topic); a topic with too few
     is replaced by a backup. `pools` (Both mode): the pool folders of the same topics, by position."""
-    trends = channel_profiles.trend_research(ch)
-    trend_text = ""
-    if trends:
-        rows = [f"- \"{s['title']}\" | {s['views']:,} views" + (f", {s['views_per_day']:,}/day" if s.get("views_per_day") else "")
-                + f" | {s['channel']}" for s in trends[:20]]
-        trend_text = f"""
-WHAT'S WORKING NOW in this niche (real YouTube data, today; top recent Shorts from proven channels):
-{chr(10).join(rows)}
-Use this to choose topics with proven demand and to write titles and hooks in the patterns that
-recur among the leaders. Never remake one of these videos or copy its wording: every story must
-be our own, true and not already covered above.
+    # our own research (owner, 2026-10-28): proven channels' recent Shorts are only stories to stay away from
+    taken = [t["title"] for t in channel_profiles.trend_research(ch)]
+    ideas = topic_ideas.pick_ideas(ch, taken)
+    idea_text = ""
+    if ideas:
+        idea_text += f"""
+STORY IDEAS FROM OUR OWN RESEARCH (Wikipedia's list of unusual articles; each is an article title and why it is odd):
+{chr(10).join(f"- {i['title']}: {i['why']}" for i in ideas)}
+Pick from these where one fits this channel, or from your own knowledge of true, little-known stories.
 """
+    if taken:
+        idea_text += f"""
+TAKEN: bigger channels in this niche posted these Shorts recently. Never pick the same story, person or event
+(a story they just told is one we lose):
+{chr(10).join(f"- {t}" for t in taken)}
+"""
+    trend_text = ""
     results = logbook.logbook_results()
     if results:
         trend_text += f"""
@@ -69,7 +74,7 @@ views to judge" say little). {session.RULES["Lessons from our numbers"]}
     print(f"Choosing topics with {session.BRAIN.capitalize()}...")
     data = llm.ask_ai(f"""You choose stories for a faceless YouTube Shorts channel.
 {about}
-{trend_text}
+{idea_text}{trend_text}
 {what}
 {session.RULES["Topic picking"]}
 For each:
@@ -110,6 +115,10 @@ Reply with ONLY JSON: {{"shorts": [{{"topic": "...", "character": "...", "subjec
             break
         print(f'Topic {i + 1}/{len(shorts)}: "{s["subject"]}": reading Wikipedia, finding real pictures and footage...')
         k = s.pop("_pos")
+        if hit := next((t for name in (s["subject"], s.get("character", "")) if (t := topic_ideas.clash(name, taken))), None):
+            dropped.append(f'"{s["topic"]}": a bigger channel posted it recently ("{hit}")')
+            print(f"  Skipped {dropped[-1]}")
+            continue
         if picture_pool.prepare_topic(s, Path(pools[k]) if pools and k < len(pools) else None):
             kept.append(s)
         else:

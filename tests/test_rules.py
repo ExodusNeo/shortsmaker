@@ -10,7 +10,7 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE.parent))
 from shortsmaker import (  # noqa: E402
-    channel_profiles, llm, logbook, media_tools, picker, picture_pool, review, rules, session, style_lab, writing,
+    channel_profiles, llm, logbook, media_tools, picker, picture_pool, review, rules, session, style_lab, topic_ideas, writing,
 )
 
 # a frozen copy of the strange-history profile: the live file's done_topics grow with every run
@@ -47,13 +47,14 @@ REPLIES = {  # canned AI replies, chosen by the prompt's opening words
     "You judge the first two seconds": {"score": 8, "why": "strong", "open_with_scene": None},
     "Some AI paintings": {"prompts": []},
     "You are the visual editor": None,  # the picker stops after its prompt (the rest downloads pictures)
+    "You are the animation director": {"shorts": [{"index": 0, "template": None, "why": "no template shows it"}]},
 }
 KEYS = {"You choose stories": "topics", "You write YouTube Shorts narration": "writer",
         "You are the script editor": "editor", "You are the director": "director",
         "Before the scripts are written": "twist_check",
         "You are a strict fact-checker": "fact_check", "You are the picture researcher": "picture_list",
         "You judge the first two seconds": "first_second", "Some AI paintings": "repaint",
-        "You are the visual editor": "picker"}
+        "You are the visual editor": "picker", "You are the animation director": "opener"}
 
 
 class StopPicker(Exception):
@@ -79,8 +80,10 @@ def capture_prompts() -> dict[str, str]:
         return True
 
     saved = (llm.ask_ai, channel_profiles.trend_research, logbook.logbook_results, picture_pool.prepare_topic,
-             style_lab.style_library, picture_pool.contact_sheets, media_tools.ffmpeg, picture_pool.gather_pool)
+             style_lab.style_library, picture_pool.contact_sheets, media_tools.ffmpeg, picture_pool.gather_pool,
+             topic_ideas.pick_ideas)
     llm.ask_ai = ask
+    topic_ideas.pick_ideas = lambda ch, taken, k=60, rng=None: [{"title": "Roland the Farter", "why": "a jester's fart"}]
     channel_profiles.trend_research = lambda ch: [{"title": "T", "views": 1000, "channel": "C"}]
     logbook.logbook_results = lambda: "- Example Short | 1,000 views"
     picture_pool.prepare_topic = prepare
@@ -107,7 +110,8 @@ def capture_prompts() -> dict[str, str]:
             pass
     finally:
         (llm.ask_ai, channel_profiles.trend_research, logbook.logbook_results, picture_pool.prepare_topic,
-         style_lab.style_library, picture_pool.contact_sheets, media_tools.ffmpeg, picture_pool.gather_pool) = saved
+         style_lab.style_library, picture_pool.contact_sheets, media_tools.ffmpeg, picture_pool.gather_pool,
+         topic_ideas.pick_ideas) = saved
     return got
 
 
@@ -329,7 +333,7 @@ def test_missing_rules_file_is_drafted():
 
 
 def test_a_stopped_run_keeps_the_default_channel():
-    from shortsmaker import cli
+    from shortsmaker import cli, topic_ideas
     calls = []
     saved = sys.argv, rules.require_rules, channel_profiles.use_channel
     sys.argv = ["make_shorts.py", "1", "engines"]

@@ -148,7 +148,8 @@ Reply with ONLY JSON: {{"handles": ["@..."], "queries": ["..."]}}""", fatal=Fals
 
 
 def trend_research(ch: dict) -> list[dict]:
-    """What's working in the niche right now: recent Shorts from channels that are proven in it.
+    """The biggest recent Shorts from channels that are proven in the niche: since 2026-10-28 only the stories we
+    stay away from (writing.write_scripts' TAKEN list and topic_ideas.clash), never topics or titles to follow.
     Claude suggests channels once; each is verified against real view counts (made-up or weak
     channels drop out), plus channels found through YouTube search. Their recent Shorts are ranked
     by views per day. Cached for the day; returns [] if YouTube can't be reached."""
@@ -157,7 +158,7 @@ def trend_research(ch: dict) -> list[dict]:
         cached = json.loads(session.RESEARCH.read_text(encoding="utf-8"))
         if cached.get("date") == today and cached.get("niche") == ch["niche"]:
             return cached["shorts"]
-    print("Researching what's working in the niche on YouTube...")
+    print("Checking which stories bigger channels in the niche just told...")
     if not ch.get("research_seeds"):
         ch["research_seeds"] = seed_ideas(ch, 12, [])
         save_channel(ch)

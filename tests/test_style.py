@@ -10,6 +10,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from shortsmaker import (  # noqa: E402
     audio_mix, channel_profiles, config, llm, logbook, motion, picture_pool, plan_rules, remotion_render, style_lab,
     writing,
+    topic_ideas,
 )
 from patching import owner  # noqa: E402
 from shortsmaker import rules  # noqa: E402
@@ -117,9 +118,10 @@ def plan_with(director_reply: dict) -> tuple[dict, str]:
             return {"shorts": [{"index": 0, **director_reply}]}
         return {}
 
-    names = ("ask_ai", "trend_research", "logbook_results", "article_text", "edit_scripts", "fact_check", "prepare_topic")
+    names = ("ask_ai", "trend_research", "logbook_results", "article_text", "edit_scripts", "fact_check", "prepare_topic", "pick_ideas")
     saved = {k: getattr(owner(k), k) for k in names}
     llm.ask_ai, channel_profiles.trend_research, logbook.logbook_results = ask, (lambda ch: []), (lambda: "")
+    topic_ideas.pick_ideas = lambda *a, **k: []
     picture_pool.prepare_topic = lambda s, folder=None: (s.update(_texts={"A": "text"}, pool_dir="pool", catalog=[], picture_check="9 usable of 9"), True)[1]
     writing.article_text, writing.edit_scripts, writing.fact_check = (lambda t: "text"), (lambda shorts, ch: None), (lambda s: True)
     try:

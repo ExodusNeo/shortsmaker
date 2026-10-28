@@ -25,7 +25,6 @@ def seo_pass(shorts: list[dict], ch: dict | None = None) -> None:
     print("Researching search keywords...")
     ch = ch or (channel_profiles.load_channel() if session.CHANNEL.is_file() else {})
     niche = ch.get("niche", "")
-    leaders = [t["title"] for t in channel_profiles.trend_research(ch)[:15]] if niche else []  # cached for the day
     results = logbook.logbook_results()
     research = []
     rseeds = ch.get("research_seeds") or {}
@@ -51,7 +50,7 @@ below you get its draft metadata, its script, what viewers see in the first seco
 spoken, hook_text big on screen, thumbnail_text), and REAL YouTube autocomplete phrases, grouped by what
 was typed, each list in YouTube's order: most-searched first (some are irrelevant, e.g. unrelated songs
 or movies with the same name: ignore those).
-{f"Titles of the top recent Shorts in this niche, by views per day (learn their patterns, never copy them):{chr(10)}{json.dumps(leaders, ensure_ascii=False)}{chr(10)}" if leaders else ""}{f"How our own posted Shorts did (title, views, notes):{chr(10)}{results}{chr(10)}" if results else ""}For each Short write:
+{f"How our own posted Shorts did (title, views, notes):{chr(10)}{results}{chr(10)}" if results else ""}For each Short write:
 - title: under 60 characters, and its first 40 characters must work alone (the Shorts player and shelf cut
   the rest). Lead with the scroll-stopping anomaly, dollar figure, or broadly famous anchor entity (e.g.
   "NBA", "Wall Street", "$800M", "U.S. Navy", "Fake Bonds")—NEVER start the title with an obscure person's
