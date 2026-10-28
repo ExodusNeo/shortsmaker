@@ -1,18 +1,18 @@
 ---
-source_file: "tests/test_blender_link.py"
+source_file: "blender/moves.py"
 type: "code"
-community: "test_blender_link.py"
-location: "L24"
+community: "cut"
+location: "L29"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_blender_linkpy
+  - community/cut
 ---
 
 # .__init__()
 
 ## Connections
-- [[Fake]] - `method` [EXTRACTED]
-- [[handle()]] - `contains` [EXTRACTED]
+- [[State]] - `method` [EXTRACTED]
+- [[Vector_5]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_blender_linkpy
+#graphify/code #graphify/EXTRACTED #community/cut

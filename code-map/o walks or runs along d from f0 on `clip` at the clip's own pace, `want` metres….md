@@ -1,12 +1,12 @@
 ---
 source_file: "blender/people.py"
 type: "rationale"
-community: "math"
+community: "scene_kit.py"
 location: "L346"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/math
+  - community/scene_kitpy
 ---
 
 # o walks or runs along d from f0 on `clip` at the clip's own pace, `want` metres…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[_travel()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/math
+#graphify/rationale #graphify/EXTRACTED #community/scene_kitpy

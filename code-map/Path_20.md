@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "channel_profiles.py"
+community: "test_h3_handoff.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/channel_profilespy
+  - community/test_h3_handoffpy
 ---
 
 # Path
 
 ## Connections
-- [[draft_rules()]] - `references` [EXTRACTED]
+- [[handoff()]] - `references` [EXTRACTED]
+- [[zip_of()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/channel_profilespy
+#graphify/code #graphify/EXTRACTED #community/test_h3_handoffpy

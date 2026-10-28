@@ -11,7 +11,7 @@ members: 12
 - [[Ground covered by one loop of an in-place clip a planted foot slides back by…]] - rationale - blender/pack_people.py
 - [[Main.001 - Main the importer numbers clashing names; roles name the…]] - rationale - blender/pack_people.py
 - [[One-time packer blender.exe -b --factory-startup --python…]] - rationale - blender/pack_people.py
-- [[Path_25]] - code
+- [[Path_23]] - code
 - [[Which way the body faces, flat, from its middle toward its face (the Face…]] - rationale - blender/pack_people.py
 - [[base_name()_1]] - code - blender/pack_people.py
 - [[clip_name()]] - code - blender/pack_people.py
@@ -30,8 +30,8 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 3 edges to [[_COMMUNITY_json]]
-- 1 edge to [[_COMMUNITY_build_scene.py]]
-- 1 edge to [[_COMMUNITY_pathlib]]
+- 1 edge to [[_COMMUNITY_bpy]]
+- 1 edge to [[_COMMUNITY_test_full_scenes.py]]
 
 ## Top bridge nodes
 - [[pack_people.py]] - degree 11, connects to 3 communities

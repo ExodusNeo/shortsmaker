@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[plan_openers()]] - `calls` [EXTRACTED]
-- [[short()_2]] - `calls` [EXTRACTED]
+- [[short()_1]] - `calls` [EXTRACTED]
 - [[test_opener_plan.py]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/test_opener_planpy

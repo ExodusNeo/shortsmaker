@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_h3_handoff.py"
 type: "code"
-community: "test_h3_handoff.py"
+community: "short_with"
 location: "L31"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_h3_handoffpy
+  - community/short_with
 ---
 
 # with_fakes()
@@ -20,4 +20,4 @@ tags:
 - [[test_tells_owner_after_five_failed_rounds()]] - `calls` [EXTRACTED]
 - [[test_waits_for_enter_when_no_ai_answers()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_h3_handoffpy
+#graphify/code #graphify/EXTRACTED #community/short_with

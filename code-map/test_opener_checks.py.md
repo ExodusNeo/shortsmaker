@@ -27,6 +27,7 @@ tags:
 - [[test_first_frame()]] - `contains` [EXTRACTED]
 - [[test_hidden()]] - `contains` [EXTRACTED]
 - [[test_in_frame()]] - `contains` [EXTRACTED]
+- [[test_moves_visibly()]] - `contains` [EXTRACTED]
 - [[test_overlap()]] - `contains` [EXTRACTED]
 - [[test_resting()]] - `contains` [EXTRACTED]
 - [[traceback]] - `imports` [EXTRACTED]

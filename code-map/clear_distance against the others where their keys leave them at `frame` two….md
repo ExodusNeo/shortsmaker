@@ -1,12 +1,12 @@
 ---
 source_file: "blender/moves.py"
 type: "rationale"
-community: "tree"
+community: "moves.py"
 location: "L290"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/tree
+  - community/movespy
 ---
 
 # clear_distance against the others where their keys leave them at `frame`: two…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[clear_distance_at_end()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/tree
+#graphify/rationale #graphify/EXTRACTED #community/movespy

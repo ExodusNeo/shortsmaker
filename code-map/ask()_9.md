@@ -1,18 +1,18 @@
 ---
-source_file: "tests/test_blender_plan.py"
+source_file: "shortsmaker/opener_plan.py"
 type: "code"
-community: "test_blender_scene.py"
-location: "L87"
+community: "test_opener_plan.py"
+location: "L204"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_blender_scenepy
+  - community/test_opener_planpy
 ---
 
 # ask()
 
 ## Connections
-- [[plan()_1]] - `calls` [EXTRACTED]
-- [[test_plan_builds_retries_then_defaults()]] - `indirect_call` [INFERRED]
+- [[_tables_text()]] - `calls` [EXTRACTED]
+- [[plan_openers()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_blender_scenepy
+#graphify/code #graphify/EXTRACTED #community/test_opener_planpy

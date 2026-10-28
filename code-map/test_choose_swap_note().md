@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_pictures_first.py"
 type: "code"
-community: "choose_images"
+community: "test_pictures_first.py"
 location: "L368"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/choose_images
+  - community/test_pictures_firstpy
 ---
 
 # test_choose_swap_note()
@@ -18,4 +18,4 @@ tags:
 - [[scene()]] - `calls` [EXTRACTED]
 - [[test_pictures_first.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/choose_images
+#graphify/code #graphify/EXTRACTED #community/test_pictures_firstpy

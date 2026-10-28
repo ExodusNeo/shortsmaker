@@ -9,14 +9,14 @@ members: 25
 
 ## Members
 - [[Background()]] - code - remotion/src/Short.tsx
-- [[Captions()_1]] - code - remotion/src/Captions.tsx
+- [[Captions()]] - code - remotion/src/Captions.tsx
 - [[GraphicFor()]] - code - remotion/src/Short.tsx
 - [[HookTitle()]] - code - remotion/src/Graphics.tsx
 - [[INKS_1]] - code - tests/style.test.ts
 - [[Move]] - code - remotion/src/Short.tsx
 - [[PersonCard()]] - code - remotion/src/Graphics.tsx
 - [[Scene]] - code - remotion/src/Short.tsx
-- [[Short()_1]] - code - remotion/src/Short.tsx
+- [[Short()]] - code - remotion/src/Short.tsx
 - [[Short.tsx]] - code - remotion/src/Short.tsx
 - [[SubscribeCta()]] - code - remotion/src/Graphics.tsx
 - [[TRANSITIONS]] - code - remotion/src/style/index.ts
@@ -53,4 +53,4 @@ SORT file.name ASC
 - [[style.test.ts]] - degree 15, connects to 2 communities
 - [[Background()]] - degree 7, connects to 2 communities
 - [[GraphicFor()]] - degree 5, connects to 2 communities
-- [[Short()_1]] - degree 12, connects to 1 community
+- [[Short()]] - degree 12, connects to 1 community

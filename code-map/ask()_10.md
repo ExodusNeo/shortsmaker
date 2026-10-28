@@ -1,18 +1,17 @@
 ---
-source_file: "tests/test_style.py"
+source_file: "shortsmaker/blender_plan.py"
 type: "code"
-community: "owner"
-location: "L110"
+community: "test_blender_plan.py"
+location: "L114"
 tags:
   - graphify/code
-  - graphify/INFERRED
-  - community/owner
+  - graphify/EXTRACTED
+  - community/test_blender_planpy
 ---
 
 # ask()
 
 ## Connections
-- [[plan_with()_1]] - `indirect_call` [INFERRED]
-- [[test_fact_check_sees_new_graphics()]] - `indirect_call` [INFERRED]
+- [[plan_builds()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/owner
+#graphify/code #graphify/EXTRACTED #community/test_blender_planpy

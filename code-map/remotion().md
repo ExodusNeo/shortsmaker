@@ -12,7 +12,7 @@ tags:
 # remotion()
 
 ## Connections
-- [[render()]] - `calls` [EXTRACTED]
+- [[render()_3]] - `calls` [EXTRACTED]
 - [[render_remotion()]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/render_remotion

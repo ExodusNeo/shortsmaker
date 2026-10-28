@@ -1,12 +1,12 @@
 ---
 source_file: "blender/people.py"
 type: "code"
-community: "math"
+community: "scene_kit.py"
 location: "L312"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/math
+  - community/scene_kitpy
 ---
 
 # move()
@@ -20,4 +20,4 @@ tags:
 - [[pick_up()]] - `calls` [EXTRACTED]
 - [[prop_move()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/math
+#graphify/code #graphify/EXTRACTED #community/scene_kitpy

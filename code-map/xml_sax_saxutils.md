@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "json"
+community: "re"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/json
+  - community/re
 ---
 
 # xml_sax_saxutils
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[edit_project.py]] - `imports_from` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/json
+#graphify/concept #graphify/EXTRACTED #community/re

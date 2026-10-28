@@ -1,12 +1,12 @@
 ---
 source_file: "blender/people.py"
 type: "code"
-community: "math"
+community: "people.py"
 location: "L78"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/math
+  - community/peoplepy
 ---
 
 # _is_blade()
@@ -15,4 +15,4 @@ tags:
 - [[dress()]] - `calls` [EXTRACTED]
 - [[people.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/math
+#graphify/code #graphify/EXTRACTED #community/peoplepy

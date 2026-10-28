@@ -34,6 +34,7 @@ tags:
 - [[test_chicken_chop_reference()]] - `contains` [EXTRACTED]
 - [[test_chicken_live_plan()]] - `contains` [EXTRACTED]
 - [[test_drop_lands()]] - `contains` [EXTRACTED]
+- [[test_everyone_with_a_beat_is_framed()]] - `contains` [EXTRACTED]
 - [[test_fall_holds_last_pose()]] - `contains` [EXTRACTED]
 - [[test_fixture_plans_are_clean()]] - `contains` [EXTRACTED]
 - [[test_missing_slot_is_skipped()]] - `contains` [EXTRACTED]

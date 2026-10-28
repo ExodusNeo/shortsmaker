@@ -1,12 +1,12 @@
 ---
 source_file: "blender/moves.py"
 type: "code"
-community: "scene_kit.py"
+community: "cut"
 location: "L613"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/scene_kitpy
+  - community/cut
 ---
 
 # cut()
@@ -43,4 +43,4 @@ tags:
 - [[travel()_1]] - `calls` [EXTRACTED]
 - [[world_verts()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/scene_kitpy
+#graphify/code #graphify/EXTRACTED #community/cut

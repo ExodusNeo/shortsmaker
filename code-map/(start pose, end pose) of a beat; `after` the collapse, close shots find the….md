@@ -1,12 +1,12 @@
 ---
 source_file: "blender/build_scene.py"
 type: "rationale"
-community: "Shots"
+community: "main"
 location: "L59"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Shots
+  - community/main
 ---
 
 # (start pose, end pose) of a beat; `after` the collapse, close shots find the…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[dot-beat()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Shots
+#graphify/rationale #graphify/EXTRACTED #community/main

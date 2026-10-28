@@ -11,6 +11,7 @@ tags:
 # Vector
 
 ## Connections
-- [[dot-fallen()]] - `references` [EXTRACTED]
+- [[direction()]] - `references` [EXTRACTED]
+- [[keyloc()]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/main

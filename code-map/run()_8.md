@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[Build (and optionally render at 25%) one opener; returns (report, frames dir).]] - `rationale_for` [EXTRACTED]
-- [[Path_30]] - `references` [EXTRACTED]
+- [[Path_28]] - `references` [EXTRACTED]
 - [[people_lib()]] - `calls` [EXTRACTED]
 - [[test_bad_plans_fail()]] - `calls` [EXTRACTED]
 - [[test_box_fall_rests_and_renders()]] - `calls` [EXTRACTED]
@@ -21,6 +21,7 @@ tags:
 - [[test_chicken_chop_reference()]] - `calls` [EXTRACTED]
 - [[test_chicken_live_plan()]] - `calls` [EXTRACTED]
 - [[test_drop_lands()]] - `calls` [EXTRACTED]
+- [[test_everyone_with_a_beat_is_framed()]] - `calls` [EXTRACTED]
 - [[test_fall_holds_last_pose()]] - `calls` [EXTRACTED]
 - [[test_missing_slot_is_skipped()]] - `calls` [EXTRACTED]
 - [[test_onion_mince()]] - `calls` [EXTRACTED]

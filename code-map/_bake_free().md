@@ -1,12 +1,12 @@
 ---
 source_file: "blender/people.py"
 type: "code"
-community: "math"
+community: "people.py"
 location: "L573"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/math
+  - community/peoplepy
 ---
 
 # _bake_free()
@@ -16,4 +16,4 @@ tags:
 - [[people.py]] - `contains` [EXTRACTED]
 - [[prop_move()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/math
+#graphify/code #graphify/EXTRACTED #community/peoplepy

@@ -1,18 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "test_opener_render.py"
+community: "test_blender_plan.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_opener_renderpy
+  - community/test_blender_planpy
 ---
 
 # Path
 
 ## Connections
-- [[render_opener()]] - `references` [EXTRACTED]
-- [[review()]] - `references` [EXTRACTED]
-- [[save_try()]] - `references` [EXTRACTED]
+- [[_run()]] - `references` [EXTRACTED]
+- [[render_clips()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_opener_renderpy
+#graphify/code #graphify/EXTRACTED #community/test_blender_planpy

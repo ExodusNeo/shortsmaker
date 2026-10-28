@@ -12,8 +12,8 @@ tags:
 # Env
 
 ## Connections
-- [[dot-__enter__()_4]] - `method` [EXTRACTED]
-- [[dot-__exit__()_3]] - `method` [EXTRACTED]
+- [[dot-__enter__()_3]] - `method` [EXTRACTED]
+- [[dot-__exit__()_2]] - `method` [EXTRACTED]
 - [[dot-runs()]] - `method` [EXTRACTED]
 - [[A temp work folder, a library holding the fixture models, a fake Blender and…]] - `rationale_for` [EXTRACTED]
 - [[test_beats_scaled_into_scene()]] - `calls` [EXTRACTED]

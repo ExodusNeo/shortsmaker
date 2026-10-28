@@ -1,20 +1,21 @@
 ---
 source_file: ""
 type: "code"
-community: "frame_maker"
+community: "prepare_topic"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/frame_maker
+  - community/prepare_topic
 ---
 
 # Path
 
 ## Connections
-- [[dot-__init__()_2]] - `references` [EXTRACTED]
-- [[fills_frame()]] - `references` [EXTRACTED]
-- [[frame_maker()]] - `references` [EXTRACTED]
-- [[graphic_low()]] - `references` [EXTRACTED]
-- [[thumbnail()]] - `references` [EXTRACTED]
+- [[catalog_pool()]] - `references` [EXTRACTED]
+- [[contact_sheets()]] - `references` [EXTRACTED]
+- [[load_pool()]] - `references` [EXTRACTED]
+- [[pool_folder()]] - `references` [EXTRACTED]
+- [[prepare_topic()]] - `references` [EXTRACTED]
+- [[save_pool()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/frame_maker
+#graphify/code #graphify/EXTRACTED #community/prepare_topic

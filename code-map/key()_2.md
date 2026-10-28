@@ -1,20 +1,20 @@
 ---
-source_file: "tests/people_standin.py"
+source_file: "blender/failures.py"
 type: "code"
-community: "people_standin.py"
-location: "L77"
+community: "main"
+location: "L16"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/people_standinpy
+  - community/main
 ---
 
 # key()
 
 ## Connections
-- [[clip()]] - `calls` [EXTRACTED]
-- [[frames {frame {bone (x, y, z) degrees}}]] - `rationale_for` [EXTRACTED]
-- [[math]] - `calls` [EXTRACTED]
-- [[people_standin.py]] - `contains` [EXTRACTED]
+- [[dot-_crack()]] - `calls` [EXTRACTED]
+- [[dot-play()]] - `calls` [EXTRACTED]
+- [[dot-reset()]] - `calls` [EXTRACTED]
+- [[failures.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/people_standinpy
+#graphify/code #graphify/EXTRACTED #community/main

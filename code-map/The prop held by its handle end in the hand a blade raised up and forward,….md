@@ -1,12 +1,12 @@
 ---
 source_file: "blender/people.py"
 type: "rationale"
-community: "math"
+community: "people.py"
 location: "L124"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/math
+  - community/peoplepy
 ---
 
 # The prop held by its handle end in the hand: a blade raised up and forward,…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[_hold()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/math
+#graphify/rationale #graphify/EXTRACTED #community/peoplepy

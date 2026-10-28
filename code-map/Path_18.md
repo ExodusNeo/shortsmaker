@@ -1,16 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: "use_picture_from"
+community: "test_blender_link.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/use_picture_from
+  - community/test_blender_linkpy
 ---
 
 # Path
 
 ## Connections
-- [[use_picture_from()]] - `references` [EXTRACTED]
+- [[credit()]] - `references` [EXTRACTED]
+- [[fetch_model()]] - `references` [EXTRACTED]
+- [[in_library()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/use_picture_from
+#graphify/code #graphify/EXTRACTED #community/test_blender_linkpy

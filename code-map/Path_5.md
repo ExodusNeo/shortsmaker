@@ -1,20 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "re"
+community: "style_library"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/re
+  - community/style_library
 ---
 
 # Path
 
 ## Connections
-- [[code_custom_scenes()]] - `references` [EXTRACTED]
-- [[full_props()]] - `references` [EXTRACTED]
-- [[look_and_fix()]] - `references` [EXTRACTED]
-- [[preview_custom()]] - `references` [EXTRACTED]
-- [[preview_sheet()]] - `references` [EXTRACTED]
+- [[edit_plan()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/re
+#graphify/code #graphify/EXTRACTED #community/style_library

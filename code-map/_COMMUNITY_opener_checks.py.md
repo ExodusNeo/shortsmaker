@@ -1,14 +1,15 @@
 ---
 type: community
-members: 34
+members: 37
 ---
 
 # opener_checks.py
 
-**Members:** 34 nodes
+**Members:** 37 nodes
 
 ## Members
 - [[A person's planned prop (the umbrella, the sword) is in frame 0 and big enough…]] - rationale - blender/opener_checks.py
+- [[A thing's move shows on screen some corner of it travels at least `share` of…]] - rationale - blender/opener_checks.py
 - [[At contact, the edge faces the way the tool moves and points at the target (the…]] - rationale - blender/opener_checks.py
 - [[BVHTree_1]] - code
 - [[Each object touches what it rests on, within tol no floating above it, no…]] - rationale - blender/opener_checks.py
@@ -26,12 +27,14 @@ members: 34
 - [[at()]] - code - blender/opener_checks.py
 - [[blade_face()]] - code - blender/opener_checks.py
 - [[bpy_extras_object_utils]] - concept
+- [[corners()]] - code - blender/opener_checks.py
 - [[cut_result()]] - code - blender/opener_checks.py
 - [[edge_leads()]] - code - blender/opener_checks.py
 - [[edge_point()]] - code - blender/opener_checks.py
 - [[first_frame()]] - code - blender/opener_checks.py
 - [[hidden()_1]] - code - blender/opener_checks.py
 - [[mathutils_bvhtree]] - concept
+- [[moves_visibly()]] - code - blender/opener_checks.py
 - [[opener_checks.py]] - code - blender/opener_checks.py
 - [[overlaps()]] - code - blender/opener_checks.py
 - [[prop_shown()]] - code - blender/opener_checks.py
@@ -51,14 +54,14 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 14 edges to [[_COMMUNITY_opener_scene.py]]
-- 3 edges to [[_COMMUNITY_build_scene.py]]
-- 2 edges to [[_COMMUNITY_math]]
+- 16 edges to [[_COMMUNITY_opener_scene.py]]
+- 3 edges to [[_COMMUNITY_bpy]]
+- 2 edges to [[_COMMUNITY_moves.py]]
 - 1 edge to [[_COMMUNITY_scene_kit.py]]
 
 ## Top bridge nodes
-- [[opener_checks.py]] - degree 26, connects to 3 communities
+- [[opener_checks.py]] - degree 27, connects to 3 communities
 - [[blade_face()]] - degree 5, connects to 2 communities
-- [[at()]] - degree 9, connects to 1 community
+- [[at()]] - degree 10, connects to 1 community
 - [[hidden()_1]] - degree 8, connects to 1 community
 - [[resting()]] - degree 8, connects to 1 community

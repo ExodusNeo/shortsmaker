@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[The way a move goes, as seen in the shot, or straight at another actor…]] - `rationale_for` [EXTRACTED]
-- [[Vector_4]] - `references` [EXTRACTED]
+- [[Vector_5]] - `references` [EXTRACTED]
 - [[fly_off()]] - `calls` [EXTRACTED]
 - [[hop_off()]] - `calls` [EXTRACTED]
 - [[loc_at()]] - `calls` [EXTRACTED]

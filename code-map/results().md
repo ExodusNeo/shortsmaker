@@ -18,6 +18,7 @@ tags:
 - [[test_first_frame()]] - `calls` [EXTRACTED]
 - [[test_hidden()]] - `calls` [EXTRACTED]
 - [[test_in_frame()]] - `calls` [EXTRACTED]
+- [[test_moves_visibly()]] - `calls` [EXTRACTED]
 - [[test_opener_checks.py]] - `contains` [EXTRACTED]
 - [[test_overlap()]] - `calls` [EXTRACTED]
 - [[test_resting()]] - `calls` [EXTRACTED]

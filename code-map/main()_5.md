@@ -1,8 +1,8 @@
 ---
-source_file: "tests/people_sheet.py"
+source_file: "local_ai/qwen_voice.py"
 type: "code"
 community: "json"
-location: "L75"
+location: "L181"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,7 +12,9 @@ tags:
 # main()
 
 ## Connections
-- [[people_sheet.py]] - `contains` [EXTRACTED]
-- [[subprocess]] - `calls` [EXTRACTED]
+- [[align()]] - `calls` [EXTRACTED]
+- [[json]] - `calls` [EXTRACTED]
+- [[qwen_voice.py]] - `contains` [EXTRACTED]
+- [[time]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/json

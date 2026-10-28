@@ -1,20 +1,21 @@
 ---
-source_file: "local_ai/qwen_voice.py"
+source_file: "tests/people_standin.py"
 type: "code"
-community: "test_story.py"
-location: "L181"
+community: "bpy"
+location: "L116"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_storypy
+  - community/bpy
 ---
 
 # main()
 
 ## Connections
-- [[align()]] - `calls` [EXTRACTED]
+- [[Path_13]] - `references` [EXTRACTED]
+- [[body()]] - `calls` [EXTRACTED]
+- [[clip()]] - `calls` [EXTRACTED]
 - [[json]] - `calls` [EXTRACTED]
-- [[qwen_voice.py]] - `contains` [EXTRACTED]
-- [[time]] - `calls` [EXTRACTED]
+- [[people_standin.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_storypy
+#graphify/code #graphify/EXTRACTED #community/bpy

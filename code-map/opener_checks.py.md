@@ -27,6 +27,7 @@ tags:
 - [[math]] - `imports` [EXTRACTED]
 - [[mathutils]] - `imports_from` [EXTRACTED]
 - [[mathutils_bvhtree]] - `imports_from` [EXTRACTED]
+- [[moves_visibly()]] - `contains` [EXTRACTED]
 - [[opener_check_cases.py]] - `imports` [EXTRACTED]
 - [[opener_scene.py]] - `imports` [EXTRACTED]
 - [[overlaps()]] - `contains` [EXTRACTED]

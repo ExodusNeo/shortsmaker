@@ -1,17 +1,18 @@
 ---
-source_file: "tests/test_opener_render.py"
+source_file: "tests/test_pictures_first.py"
 type: "code"
-community: "test_opener_render.py"
-location: "L68"
+community: "owner"
+location: "L214"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_opener_renderpy
+  - community/owner
 ---
 
 # .__exit__()
 
 ## Connections
-- [[Env]] - `method` [EXTRACTED]
+- [[owner()]] - `calls` [EXTRACTED]
+- [[planning]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_opener_renderpy
+#graphify/code #graphify/EXTRACTED #community/owner

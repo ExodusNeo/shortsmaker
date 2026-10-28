@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "pack_people.py"
+community: "test_blender_plan.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/pack_peoplepy
+  - community/test_blender_planpy
 ---
 
 # Path
 
 ## Connections
-- [[main()_9]] - `references` [EXTRACTED]
+- [[fake_blender()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/pack_peoplepy
+#graphify/code #graphify/EXTRACTED #community/test_blender_planpy

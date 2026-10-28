@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[Pixabay stock video free to use in videos, no credit needed (Pixabay Content…]] - `rationale_for` [EXTRACTED]
-- [[fetch()_1]] - `calls` [EXTRACTED]
+- [[fetch()]] - `calls` [EXTRACTED]
 - [[footage.py]] - `contains` [EXTRACTED]
 - [[hashlib]] - `calls` [EXTRACTED]
 - [[json]] - `calls` [EXTRACTED]

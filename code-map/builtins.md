@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "test_h3_handoff.py"
+community: "split_make_shorts.py"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/test_h3_handoffpy
+  - community/split_make_shortspy
 ---
 
 # builtins
@@ -14,4 +14,4 @@ tags:
 - [[split_make_shorts.py]] - `imports` [EXTRACTED]
 - [[test_h3_handoff.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/test_h3_handoffpy
+#graphify/concept #graphify/EXTRACTED #community/split_make_shortspy

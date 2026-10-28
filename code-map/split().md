@@ -1,12 +1,12 @@
 ---
 source_file: "blender/moves.py"
 type: "code"
-community: "moves.py"
+community: "cut"
 location: "L488"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/movespy
+  - community/cut
 ---
 
 # split()
@@ -15,9 +15,10 @@ tags:
 - [[best_in()]] - `calls` [EXTRACTED]
 - [[bm_area()]] - `calls` [EXTRACTED]
 - [[clusters()]] - `calls` [EXTRACTED]
+- [[gap()]] - `indirect_call` [INFERRED]
 - [[half()]] - `calls` [EXTRACTED]
 - [[islands()]] - `calls` [EXTRACTED]
 - [[pick_island()]] - `calls` [EXTRACTED]
 - [[through_cut()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/movespy
+#graphify/code #graphify/EXTRACTED #community/cut

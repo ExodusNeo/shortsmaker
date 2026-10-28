@@ -1,12 +1,12 @@
 ---
 source_file: "blender/moves.py"
 type: "code"
-community: "moves.py"
+community: "cut"
 location: "L476"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/movespy
+  - community/cut
 ---
 
 # through_cut()
@@ -23,4 +23,4 @@ tags:
 - [[region_normal()]] - `calls` [EXTRACTED]
 - [[split()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/movespy
+#graphify/code #graphify/EXTRACTED #community/cut

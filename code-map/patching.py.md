@@ -1,12 +1,12 @@
 ---
 source_file: "tests/patching.py"
 type: "code"
-community: "owner"
+community: "json"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/owner
+  - community/json
 ---
 
 # patching.py
@@ -23,4 +23,4 @@ tags:
 - [[test_pictures_first.py]] - `imports_from` [EXTRACTED]
 - [[test_style.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/owner
+#graphify/code #graphify/EXTRACTED #community/json

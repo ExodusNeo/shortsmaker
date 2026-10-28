@@ -1,12 +1,12 @@
 ---
 source_file: "blender/people.py"
 type: "rationale"
-community: "math"
+community: "people.py"
 location: "L164"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/math
+  - community/peoplepy
 ---
 
 # How a person holds their prop at frame 1, for the report: the handle's gap to…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[held()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/math
+#graphify/rationale #graphify/EXTRACTED #community/peoplepy

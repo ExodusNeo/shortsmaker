@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/opener_render.py"
 type: "code"
-community: "test_blender_link.py"
+community: "test_opener_render.py"
 location: "L33"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_blender_linkpy
+  - community/test_opener_renderpy
 ---
 
 # pick_model()
@@ -19,4 +19,4 @@ tags:
 - [[resolve_models()]] - `calls` [EXTRACTED]
 - [[test_pick_model()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_blender_linkpy
+#graphify/code #graphify/EXTRACTED #community/test_opener_renderpy

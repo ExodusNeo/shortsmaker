@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "channel_profiles.py"
+community: "json"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/channel_profilespy
+  - community/json
 ---
 
 # time
@@ -20,7 +20,7 @@ tags:
 - [[image_sources.py]] - `imports` [EXTRACTED]
 - [[llm.py]] - `imports` [EXTRACTED]
 - [[main()_3]] - `calls` [EXTRACTED]
-- [[main()_2]] - `calls` [EXTRACTED]
+- [[main()_5]] - `calls` [EXTRACTED]
 - [[moss_images()]] - `calls` [EXTRACTED]
 - [[picture_pool.py]] - `imports` [EXTRACTED]
 - [[pixabay_films()]] - `calls` [EXTRACTED]
@@ -36,4 +36,4 @@ tags:
 - [[trend_research()]] - `calls` [EXTRACTED]
 - [[voicestudio_up()]] - `calls` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/channel_profilespy
+#graphify/concept #graphify/EXTRACTED #community/json

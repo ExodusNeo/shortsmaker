@@ -1,12 +1,12 @@
 ---
 source_file: "tests/people_standin.py"
 type: "code"
-community: "people_standin.py"
+community: "bpy"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/people_standinpy
+  - community/bpy
 ---
 
 # people_standin.py
@@ -17,12 +17,12 @@ tags:
 - [[bpy]] - `imports` [EXTRACTED]
 - [[clip()]] - `contains` [EXTRACTED]
 - [[json]] - `imports` [EXTRACTED]
-- [[key()_2]] - `contains` [EXTRACTED]
-- [[main()_8]] - `contains` [EXTRACTED]
+- [[key()_1]] - `contains` [EXTRACTED]
+- [[main()_2]] - `contains` [EXTRACTED]
 - [[math]] - `imports` [EXTRACTED]
 - [[mathutils]] - `imports_from` [EXTRACTED]
 - [[part()]] - `contains` [EXTRACTED]
 - [[pathlib]] - `imports_from` [EXTRACTED]
 - [[sys]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/people_standinpy
+#graphify/code #graphify/EXTRACTED #community/bpy

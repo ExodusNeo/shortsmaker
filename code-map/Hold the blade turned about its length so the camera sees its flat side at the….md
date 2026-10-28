@@ -1,12 +1,12 @@
 ---
 source_file: "blender/people.py"
 type: "rationale"
-community: "math"
+community: "people.py"
 location: "L592"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/math
+  - community/peoplepy
 ---
 
 # Hold the blade turned about its length so the camera sees its flat side at the…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[_show_blade()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/math
+#graphify/rationale #graphify/EXTRACTED #community/peoplepy

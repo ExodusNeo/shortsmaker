@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/short_render.py"
 type: "rationale"
-community: "pathlib"
+community: "test_blender_plan.py"
 location: "L75"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/pathlib
+  - community/test_blender_planpy
 ---
 
 # (picture, credit line, CHECK line) for a drawn Short's thumbnail: the real…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[drawn_thumbnail()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/pathlib
+#graphify/rationale #graphify/EXTRACTED #community/test_blender_planpy

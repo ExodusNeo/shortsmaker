@@ -1,18 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "test_blender_link.py"
+community: "channel_profiles.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_blender_linkpy
+  - community/channel_profilespy
 ---
 
 # Path
 
 ## Connections
-- [[credit()]] - `references` [EXTRACTED]
-- [[fetch_model()]] - `references` [EXTRACTED]
-- [[in_library()]] - `references` [EXTRACTED]
+- [[draft_rules()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_blender_linkpy
+#graphify/code #graphify/EXTRACTED #community/channel_profilespy

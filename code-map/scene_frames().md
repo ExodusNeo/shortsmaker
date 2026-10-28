@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/blender_render.py"
 type: "code"
-community: "test_blender_render.py"
+community: "test_blender_plan.py"
 location: "L30"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_blender_renderpy
+  - community/test_blender_planpy
 ---
 
 # scene_frames()
@@ -21,4 +21,4 @@ tags:
 - [[test_no_photo_uses_a_drawing_and_says_so()]] - `calls` [EXTRACTED]
 - [[test_scene_frames_cover_every_frame_once()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_blender_renderpy
+#graphify/code #graphify/EXTRACTED #community/test_blender_planpy

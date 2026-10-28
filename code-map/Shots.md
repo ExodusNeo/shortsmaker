@@ -1,18 +1,18 @@
 ---
 source_file: "blender/build_scene.py"
 type: "code"
-community: "Shots"
+community: "main"
 location: "L41"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Shots
+  - community/main
 ---
 
 # Shots
 
 ## Connections
-- [[dot-__init__()_9]] - `method` [EXTRACTED]
+- [[dot-__init__()_4]] - `method` [EXTRACTED]
 - [[dot-beat()]] - `method` [EXTRACTED]
 - [[dot-close()_1]] - `method` [EXTRACTED]
 - [[dot-wide()]] - `method` [EXTRACTED]
@@ -20,4 +20,4 @@ tags:
 - [[build_scene.py]] - `contains` [EXTRACTED]
 - [[main()_4]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Shots
+#graphify/code #graphify/EXTRACTED #community/main

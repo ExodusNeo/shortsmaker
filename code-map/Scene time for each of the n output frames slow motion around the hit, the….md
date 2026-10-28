@@ -2,7 +2,7 @@
 source_file: "blender/opener_scene.py"
 type: "rationale"
 community: "opener_scene.py"
-location: "L416"
+location: "L479"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED

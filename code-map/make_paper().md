@@ -1,18 +1,18 @@
 ---
 source_file: "shortsmaker/remotion_render.py"
 type: "code"
-community: "test_full_scenes.py"
+community: "local_job"
 location: "L121"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_full_scenespy
+  - community/local_job
 ---
 
 # make_paper()
 
 ## Connections
-- [[Path_33]] - `references` [EXTRACTED]
+- [[Path_9]] - `references` [EXTRACTED]
 - [[The aged-paper texture and film-grain frames the full-screen motion graphics…]] - `rationale_for` [EXTRACTED]
 - [[hex_rgb()]] - `calls` [EXTRACTED]
 - [[random]] - `calls` [EXTRACTED]
@@ -20,4 +20,4 @@ tags:
 - [[render_remotion()]] - `calls` [EXTRACTED]
 - [[test_make_paper()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_full_scenespy
+#graphify/code #graphify/EXTRACTED #community/local_job

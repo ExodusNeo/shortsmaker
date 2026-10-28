@@ -1,18 +1,18 @@
 ---
 source_file: "tests/test_h3_handoff.py"
 type: "code"
-community: "unpack_clips"
+community: "test_h3_handoff.py"
 location: "L146"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/unpack_clips
+  - community/test_h3_handoffpy
 ---
 
 # zip_of()
 
 ## Connections
-- [[Path_22]] - `references` [EXTRACTED]
+- [[Path_20]] - `references` [EXTRACTED]
 - [[test_duplicate_clip_names_deduplicated()]] - `calls` [EXTRACTED]
 - [[test_h3_handoff.py]] - `contains` [EXTRACTED]
 - [[test_handoff_picks_up_clips_zip()]] - `calls` [EXTRACTED]
@@ -20,4 +20,4 @@ tags:
 - [[test_renamed_zip_is_picked_up()]] - `calls` [EXTRACTED]
 - [[test_unpack_clips()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/unpack_clips
+#graphify/code #graphify/EXTRACTED #community/test_h3_handoffpy

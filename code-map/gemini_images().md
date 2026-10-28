@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/gpu.py"
 type: "code"
-community: "render"
+community: "gemini_images"
 location: "L211"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/render
+  - community/gemini_images
 ---
 
 # gemini_images()
@@ -19,4 +19,4 @@ tags:
 - [[paint_instead()]] - `calls` [EXTRACTED]
 - [[render()_5]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/render
+#graphify/code #graphify/EXTRACTED #community/gemini_images

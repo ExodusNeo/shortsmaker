@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_edit_project.py"
 type: "rationale"
-community: "ffmpeg"
+community: "re"
 location: "L20"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/ffmpeg
+  - community/re
 ---
 
 # A finished Short's work/ in miniature: grey pictures, a see-through graphics…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[short_folder()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/ffmpeg
+#graphify/rationale #graphify/EXTRACTED #community/re

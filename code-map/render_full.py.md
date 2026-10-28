@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[Render one full-screen motion graphic test scene through the real Short…]] - `rationale_for` [EXTRACTED]
 - [[json]] - `imports` [EXTRACTED]
-- [[main()_6]] - `contains` [EXTRACTED]
+- [[main()_7]] - `contains` [EXTRACTED]
 - [[pathlib]] - `imports_from` [EXTRACTED]
 - [[props_for()]] - `contains` [EXTRACTED]
 - [[shutil]] - `imports` [EXTRACTED]

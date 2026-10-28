@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_h3_handoff.py"
 type: "code"
-community: "test_h3_handoff.py"
+community: "short_with"
 location: "L56"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/test_h3_handoffpy
+  - community/short_with
 ---
 
 # run()
@@ -20,4 +20,4 @@ tags:
 - [[test_tells_owner_after_five_failed_rounds()]] - `indirect_call` [INFERRED]
 - [[test_waits_for_enter_when_no_ai_answers()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/INFERRED #community/test_h3_handoffpy
+#graphify/code #graphify/INFERRED #community/short_with

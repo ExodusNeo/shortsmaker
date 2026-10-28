@@ -13,6 +13,7 @@ tags:
 
 ## Connections
 - [[blade_face()]] - `calls` [EXTRACTED]
+- [[corners()]] - `calls` [EXTRACTED]
 - [[edge_leads()]] - `calls` [EXTRACTED]
 - [[first_frame()]] - `calls` [EXTRACTED]
 - [[hidden()_1]] - `calls` [EXTRACTED]

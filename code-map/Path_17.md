@@ -1,20 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "captions"
+community: "fetch"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/captions
+  - community/fetch
 ---
 
 # Path
 
 ## Connections
-- [[captions()]] - `references` [EXTRACTED]
-- [[music_gain()]] - `references` [EXTRACTED]
-- [[speak()_1]] - `references` [EXTRACTED]
-- [[story_sound()]] - `references` [EXTRACTED]
-- [[tts()_1]] - `references` [EXTRACTED]
+- [[film_piece()]] - `references` [EXTRACTED]
+- [[shot_span()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/captions
+#graphify/code #graphify/EXTRACTED #community/fetch

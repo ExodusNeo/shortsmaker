@@ -1,17 +1,17 @@
 ---
-source_file: "shortsmaker/blender_plan.py"
+source_file: "tests/test_style.py"
 type: "code"
-community: "test_blender_scene.py"
-location: "L114"
+community: "rescue_graphics"
+location: "L200"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_blender_scenepy
+  - community/rescue_graphics
 ---
 
 # ask()
 
 ## Connections
-- [[plan_builds()]] - `contains` [EXTRACTED]
+- [[test_fact_check_sees_new_graphics()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_blender_scenepy
+#graphify/code #graphify/EXTRACTED #community/rescue_graphics

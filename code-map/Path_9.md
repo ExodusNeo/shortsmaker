@@ -1,17 +1,20 @@
 ---
 source_file: ""
 type: "code"
-community: "test_blender_render.py"
+community: "local_job"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_blender_renderpy
+  - community/local_job
 ---
 
 # Path
 
 ## Connections
-- [[_run()]] - `references` [EXTRACTED]
-- [[render_clips()]] - `references` [EXTRACTED]
+- [[ink_silhouette()]] - `references` [EXTRACTED]
+- [[make_paper()]] - `references` [EXTRACTED]
+- [[paint_instead()]] - `references` [EXTRACTED]
+- [[redraw_custom()]] - `references` [EXTRACTED]
+- [[render_remotion()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_blender_renderpy
+#graphify/code #graphify/EXTRACTED #community/local_job

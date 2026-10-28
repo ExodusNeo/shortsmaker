@@ -13,9 +13,9 @@ tags:
 
 ## Connections
 - [[dot-__enter__()_1]] - `calls` [EXTRACTED]
-- [[dot-__enter__()_3]] - `calls` [EXTRACTED]
+- [[dot-__enter__()_4]] - `calls` [EXTRACTED]
+- [[dot-__exit__()_3]] - `calls` [EXTRACTED]
 - [[dot-__exit__()_4]] - `calls` [EXTRACTED]
-- [[dot-__exit__()_1]] - `calls` [EXTRACTED]
 - [[The module that defines function `name` (KeyError for anything else).]] - `rationale_for` [EXTRACTED]
 - [[_fake_planning()]] - `calls` [EXTRACTED]
 - [[patching.py]] - `contains` [EXTRACTED]

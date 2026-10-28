@@ -16,7 +16,7 @@ tags:
 - [[Final review the AI review was still told There are no people in these…]] - `rationale_for` [EXTRACTED]
 - [[_people_files()]] - `calls` [EXTRACTED]
 - [[render_opener()]] - `calls` [EXTRACTED]
-- [[short()_3]] - `calls` [EXTRACTED]
+- [[short()_2]] - `calls` [EXTRACTED]
 - [[test_opener_render.py]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/test_opener_renderpy

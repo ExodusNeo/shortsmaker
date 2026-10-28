@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_blender_run.py"
 type: "code"
-community: "pathlib"
+community: "test_blender_plan.py"
 location: "L29"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/pathlib
+  - community/test_blender_planpy
 ---
 
 # drawn_short()
@@ -19,4 +19,4 @@ tags:
 - [[test_no_photo_uses_a_drawing_and_says_so()]] - `calls` [EXTRACTED]
 - [[test_thumbnail_uses_the_real_photo()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/pathlib
+#graphify/code #graphify/EXTRACTED #community/test_blender_planpy

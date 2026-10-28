@@ -2,7 +2,7 @@
 source_file: "tests/test_opener_checks.py"
 type: "code"
 community: "test_opener_checks.py"
-location: "L75"
+location: "L81"
 tags:
   - graphify/code
   - graphify/EXTRACTED

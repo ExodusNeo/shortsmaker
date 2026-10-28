@@ -1,17 +1,17 @@
 ---
-source_file: "tests/test_pictures_first.py"
+source_file: "tests/test_opener_render.py"
 type: "code"
-community: "choose_images"
-location: "L344"
+community: "test_opener_render.py"
+location: "L68"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/choose_images
+  - community/test_opener_renderpy
 ---
 
 # .__exit__()
 
 ## Connections
-- [[picking]] - `method` [EXTRACTED]
+- [[Env]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/choose_images
+#graphify/code #graphify/EXTRACTED #community/test_opener_renderpy

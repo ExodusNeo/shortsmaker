@@ -1,12 +1,12 @@
 ---
 source_file: "blender/people.py"
 type: "code"
-community: "math"
+community: "people.py"
 location: "L65"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/math
+  - community/peoplepy
 ---
 
 # _attach()
@@ -17,4 +17,4 @@ tags:
 - [[item (origin at its bottom) stands on `at` and follows the bone's place and…]] - `rationale_for` [EXTRACTED]
 - [[people.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/math
+#graphify/code #graphify/EXTRACTED #community/peoplepy

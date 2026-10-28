@@ -12,6 +12,6 @@ tags:
 # Render `plan` with scenes of the given lengths; returns {frame: image} for one…
 
 ## Connections
-- [[render()_4]] - `rationale_for` [EXTRACTED]
+- [[render()]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/test_blender_scenepy

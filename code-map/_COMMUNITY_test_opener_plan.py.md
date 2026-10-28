@@ -24,7 +24,7 @@ members: 50
 - [[_stroke()]] - code - shortsmaker/opener_plan.py
 - [[_tables_text()]] - code - shortsmaker/opener_plan.py
 - [[_takeable()]] - code - shortsmaker/opener_plan.py
-- [[ask()_7]] - code - shortsmaker/opener_plan.py
+- [[ask()_9]] - code - shortsmaker/opener_plan.py
 - [[clean_opener()]] - code - shortsmaker/opener_plan.py
 - [[fix_plan()]] - code - shortsmaker/opener_plan.py
 - [[opener_plan.py]] - code - shortsmaker/opener_plan.py
@@ -32,7 +32,7 @@ members: 50
 - [[plan()]] - code - tests/test_opener_plan.py
 - [[plan_openers()]] - code - shortsmaker/opener_plan.py
 - [[roll is the physics tumble for round things; the people run's car rolled and…]] - rationale - tests/test_opener_plan.py
-- [[short()_2]] - code - tests/test_opener_plan.py
+- [[short()_1]] - code - tests/test_opener_plan.py
 - [[test_cut_needs_expect()]] - code - tests/test_opener_plan.py
 - [[test_first_beat_by_one_second()]] - code - tests/test_opener_plan.py
 - [[test_fix_plan_can_say_unfixable()]] - code - tests/test_opener_plan.py
@@ -67,11 +67,11 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 9 edges to [[_COMMUNITY_pathlib]]
+- 9 edges to [[_COMMUNITY_test_full_scenes.py]]
 - 4 edges to [[_COMMUNITY_json]]
 - 3 edges to [[_COMMUNITY_test_opener_render.py]]
 - 2 edges to [[_COMMUNITY_test_opener_scene.py]]
-- 2 edges to [[_COMMUNITY_math]]
+- 2 edges to [[_COMMUNITY_moves.py]]
 - 1 edge to [[_COMMUNITY_write_scripts]]
 - 1 edge to [[_COMMUNITY_ask_ai]]
 - 1 edge to [[_COMMUNITY_re]]

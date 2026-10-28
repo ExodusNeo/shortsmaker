@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[GET from Openverse, spaced to its anonymous limit (20 requests a minute). None…]] - `rationale_for` [EXTRACTED]
-- [[fetch()_1]] - `calls` [EXTRACTED]
+- [[fetch()]] - `calls` [EXTRACTED]
 - [[get_image()]] - `calls` [EXTRACTED]
 - [[image_sources.py]] - `contains` [EXTRACTED]
 - [[openverse_images()]] - `calls` [EXTRACTED]

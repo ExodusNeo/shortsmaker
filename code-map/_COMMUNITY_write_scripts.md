@@ -1,24 +1,29 @@
 ---
 type: community
-members: 27
+members: 33
 ---
 
 # write_scripts
 
-**Members:** 27 nodes
+**Members:** 33 nodes
 
 ## Members
 - [[(min words, max words, min scenes, max scenes, seconds) for this batch's…]] - rationale - shortsmaker/writing.py
-- [[dot-__init__()_1]] - code - tests/test_pictures_first.py
+- [[dot-__init__()]] - code - tests/test_pictures_first.py
 - [[Never scene 1 (real footage keeps the hook), never two in a row, never a scene…]] - rationale - shortsmaker/plan_rules.py
 - [[Plan n Shorts on new topics, or on exactly `topics` (comparison runs the other…]] - rationale - shortsmaker/writing.py
 - [[Scene narrations from an AI reply a list of strings (or of {narration ...}).]] - rationale - shortsmaker/writing.py
+- [[The planner plans the edit (footage searches, shots, camera, graphics, person…]] - rationale - shortsmaker/writing.py
 - [[The script editor pass strongest hook, read-aloud fixes, cuts,…]] - rationale - shortsmaker/writing.py
+- [[The topic's usable pictures as prompt lines ( without a picture list).]] - rationale - shortsmaker/picture_pool.py
+- [[direct_scripts()]] - code - shortsmaker/writing.py
 - [[edit_scripts()]] - code - shortsmaker/writing.py
+- [[fake()]] - code - tests/test_story.py
 - [[length_plan()]] - code - shortsmaker/writing.py
 - [[limit_full()]] - code - shortsmaker/plan_rules.py
 - [[narration_lines()]] - code - shortsmaker/writing.py
 - [[passing()]] - code - tests/test_pictures_first.py
+- [[pictures_of()]] - code - shortsmaker/picture_pool.py
 - [[planning]] - code - tests/test_pictures_first.py
 - [[prepare()_1]] - code - tests/test_pictures_first.py
 - [[prepare()_2]] - code - tests/test_pictures_first.py
@@ -28,6 +33,7 @@ members: 27
 - [[test_all_weak_returns_empty()]] - code - tests/test_pictures_first.py
 - [[test_both_mode_pools_follow_reply_position()]] - code - tests/test_pictures_first.py
 - [[test_dropped_topic_pool_removed()]] - code - tests/test_pictures_first.py
+- [[test_editor_gets_one_second_pass_for_broken_rules()]] - code - tests/test_story.py
 - [[test_limit_full()]] - code - tests/test_full_scenes.py
 - [[test_prompts_carry_picture_list()]] - code - tests/test_pictures_first.py
 - [[test_solo_edit_scripts_uses_same_ai()]] - code - tests/test_package.py
@@ -44,30 +50,29 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 14 edges to [[_COMMUNITY_test_pictures_first.py]]
+- 8 edges to [[_COMMUNITY_test_pictures_first.py]]
+- 8 edges to [[_COMMUNITY_test_full_scenes.py]]
 - 8 edges to [[_COMMUNITY_clean_full]]
-- 5 edges to [[_COMMUNITY_pathlib]]
-- 4 edges to [[_COMMUNITY_prepare_topic]]
-- 4 edges to [[_COMMUNITY_channel_profiles.py]]
-- 3 edges to [[_COMMUNITY_pictures_of]]
-- 3 edges to [[_COMMUNITY_ask_ai]]
+- 7 edges to [[_COMMUNITY_pool_of]]
+- 5 edges to [[_COMMUNITY_prepare_topic]]
+- 4 edges to [[_COMMUNITY_ask_ai]]
+- 4 edges to [[_COMMUNITY_json]]
+- 3 edges to [[_COMMUNITY_owner]]
 - 3 edges to [[_COMMUNITY_test_story.py]]
-- 3 edges to [[_COMMUNITY_test_full_scenes.py]]
-- 2 edges to [[_COMMUNITY_planning_ai]]
-- 2 edges to [[_COMMUNITY_owner]]
-- 2 edges to [[_COMMUNITY_json]]
-- 2 edges to [[_COMMUNITY_re]]
-- 2 edges to [[_COMMUNITY_style_library]]
+- 3 edges to [[_COMMUNITY_re]]
+- 3 edges to [[_COMMUNITY_style_library]]
+- 3 edges to [[_COMMUNITY_channel_profiles.py]]
+- 2 edges to [[_COMMUNITY_fake_ai]]
 - 1 edge to [[_COMMUNITY_test_rules.py]]
-- 1 edge to [[_COMMUNITY_visual_review]]
+- 1 edge to [[_COMMUNITY_render]]
+- 1 edge to [[_COMMUNITY_rescue_graphics]]
 - 1 edge to [[_COMMUNITY_limit_style]]
-- 1 edge to [[_COMMUNITY_test_blender_scene.py]]
+- 1 edge to [[_COMMUNITY_test_blender_plan.py]]
 - 1 edge to [[_COMMUNITY_test_opener_plan.py]]
-- 1 edge to [[_COMMUNITY__fake_planning]]
 
 ## Top bridge nodes
-- [[write_scripts()]] - degree 45, connects to 18 communities
-- [[edit_scripts()]] - degree 13, connects to 5 communities
-- [[planning]] - degree 14, connects to 4 communities
-- [[test_prompts_carry_picture_list()]] - degree 8, connects to 2 communities
-- [[test_both_mode_pools_follow_reply_position()]] - degree 6, connects to 2 communities
+- [[write_scripts()]] - degree 45, connects to 16 communities
+- [[planning]] - degree 14, connects to 5 communities
+- [[edit_scripts()]] - degree 13, connects to 4 communities
+- [[direct_scripts()]] - degree 7, connects to 4 communities
+- [[pictures_of()]] - degree 7, connects to 3 communities

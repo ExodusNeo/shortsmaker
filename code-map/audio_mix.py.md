@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/audio_mix.py"
 type: "code"
-community: "pathlib"
+community: "test_full_scenes.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/pathlib
+  - community/test_full_scenespy
 ---
 
 # audio_mix.py
@@ -18,7 +18,7 @@ tags:
 - [[ass_time()]] - `contains` [EXTRACTED]
 - [[asyncio]] - `imports` [EXTRACTED]
 - [[caption_lines()]] - `contains` [EXTRACTED]
-- [[captions()]] - `contains` [EXTRACTED]
+- [[captions()_1]] - `contains` [EXTRACTED]
 - [[clean_sound()]] - `contains` [EXTRACTED]
 - [[config.py]] - `imports_from` [EXTRACTED]
 - [[edge_tts]] - `imports` [EXTRACTED]
@@ -50,4 +50,4 @@ tags:
 - [[wave]] - `imports` [EXTRACTED]
 - [[writing.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/pathlib
+#graphify/code #graphify/EXTRACTED #community/test_full_scenespy

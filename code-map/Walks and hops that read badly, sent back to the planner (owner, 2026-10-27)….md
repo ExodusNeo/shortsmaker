@@ -2,7 +2,7 @@
 source_file: "blender/opener_checks.py"
 type: "rationale"
 community: "opener_checks.py"
-location: "L246"
+location: "L264"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED

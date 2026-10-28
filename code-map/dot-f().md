@@ -5,7 +5,7 @@ community: "opener_scene.py"
 location: "L50"
 tags:
   - graphify/code
-  - graphify/EXTRACTED
+  - graphify/INFERRED
   - community/opener_scenepy
 ---
 
@@ -13,5 +13,7 @@ tags:
 
 ## Connections
 - [[State]] - `method` [EXTRACTED]
+- [[corners()]] - `indirect_call` [INFERRED]
+- [[seen_windows()]] - `calls` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/opener_scenepy
+#graphify/code #graphify/INFERRED #community/opener_scenepy

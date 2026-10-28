@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "re"
+community: "json"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/re
+  - community/json
 ---
 
 # shutil
@@ -22,8 +22,8 @@ tags:
 - [[llm.py]] - `imports` [EXTRACTED]
 - [[logbook.py]] - `imports` [EXTRACTED]
 - [[main()_3]] - `calls` [EXTRACTED]
+- [[main()_8]] - `calls` [EXTRACTED]
 - [[main()_7]] - `calls` [EXTRACTED]
-- [[main()_6]] - `calls` [EXTRACTED]
 - [[motion.py]] - `imports` [EXTRACTED]
 - [[opener_render.py]] - `imports` [EXTRACTED]
 - [[paint_instead()]] - `calls` [EXTRACTED]
@@ -55,4 +55,4 @@ tags:
 - [[write_scripts()]] - `calls` [EXTRACTED]
 - [[writing.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/re
+#graphify/concept #graphify/EXTRACTED #community/json

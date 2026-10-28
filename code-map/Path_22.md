@@ -1,17 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: "unpack_clips"
+community: "test_opener_render.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/unpack_clips
+  - community/test_opener_renderpy
 ---
 
 # Path
 
 ## Connections
-- [[handoff()]] - `references` [EXTRACTED]
-- [[zip_of()]] - `references` [EXTRACTED]
+- [[render_opener()]] - `references` [EXTRACTED]
+- [[review()]] - `references` [EXTRACTED]
+- [[save_try()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/unpack_clips
+#graphify/code #graphify/EXTRACTED #community/test_opener_renderpy

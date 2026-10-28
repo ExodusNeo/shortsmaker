@@ -12,12 +12,13 @@ tags:
 # State
 
 ## Connections
-- [[dot-__init__()_5]] - `method` [EXTRACTED]
+- [[dot-__init__()_6]] - `method` [EXTRACTED]
 - [[dot-allow()]] - `method` [EXTRACTED]
 - [[dot-f()]] - `method` [EXTRACTED]
 - [[dot-support_obj()]] - `method` [EXTRACTED]
 - [[Everything the moves share the scene's objects by plan id, what stands on…]] - `rationale_for` [EXTRACTED]
 - [[apply()]] - `references` [EXTRACTED]
+- [[beat_actors()]] - `references` [EXTRACTED]
 - [[camera()_1]] - `references` [EXTRACTED]
 - [[checks()]] - `references` [EXTRACTED]
 - [[dress_set()]] - `references` [EXTRACTED]
@@ -30,6 +31,8 @@ tags:
 - [[place_actors()]] - `references` [EXTRACTED]
 - [[punch_in()]] - `references` [EXTRACTED]
 - [[release()]] - `references` [EXTRACTED]
+- [[seen_segments()]] - `references` [EXTRACTED]
+- [[seen_windows()]] - `references` [EXTRACTED]
 - [[subject_segments()]] - `references` [EXTRACTED]
 - [[threat_whole()]] - `references` [EXTRACTED]
 

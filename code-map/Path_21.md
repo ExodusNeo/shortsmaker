@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "people_standin.py"
+community: "test_pictures_first.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/people_standinpy
+  - community/test_pictures_firstpy
 ---
 
 # Path
 
 ## Connections
-- [[main()_8]] - `references` [EXTRACTED]
+- [[choose_images()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/people_standinpy
+#graphify/code #graphify/EXTRACTED #community/test_pictures_firstpy

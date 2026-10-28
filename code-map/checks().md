@@ -2,7 +2,7 @@
 source_file: "blender/opener_scene.py"
 type: "code"
 community: "opener_scene.py"
-location: "L480"
+location: "L548"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -20,10 +20,13 @@ tags:
 - [[hidden()_1]] - `calls` [EXTRACTED]
 - [[in_frame()]] - `calls` [EXTRACTED]
 - [[main()_10]] - `calls` [EXTRACTED]
+- [[moves_visibly()]] - `calls` [EXTRACTED]
+- [[oc_moves()]] - `calls` [EXTRACTED]
 - [[opener_scene.py]] - `contains` [EXTRACTED]
 - [[overlaps()]] - `calls` [EXTRACTED]
 - [[prop_shown()]] - `calls` [EXTRACTED]
 - [[resting()]] - `calls` [EXTRACTED]
+- [[seen_segments()]] - `calls` [EXTRACTED]
 - [[staging()]] - `calls` [EXTRACTED]
 - [[subject_segments()]] - `calls` [EXTRACTED]
 - [[threat_whole()]] - `calls` [EXTRACTED]

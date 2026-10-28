@@ -1,11 +1,11 @@
 ---
 type: community
-members: 66
+members: 68
 ---
 
 # test_opener_scene.py
 
-**Members:** 66 nodes
+**Members:** 68 nodes
 
 ## Members
 - [[A 1 s fall in a 3 s opener the person lies on the ground in the clip's last…]] - rationale - tests/test_opener_scene.py
@@ -21,9 +21,10 @@ members: 66
 - [[Final review a backdrop bringing its own action called Idle took the name,…]] - rationale - tests/test_opener_scene.py
 - [[Fourth live run (Mike) a fix round asked for an at_fraction slice but still…]] - rationale - tests/test_opener_scene.py
 - [[One brand look (part 2, 2026-10-27) every visible model is cel-shaded and ink-…]] - rationale - tests/test_opener_scene.py
+- [[Onion run (2026-10-28) with three actors the camera framed the first alone and…]] - rationale - tests/test_opener_scene.py
 - [[Owner, 2026-10-27 walking away shows the bird's back, and walking the way…]] - rationale - tests/test_opener_scene.py
-- [[Path_30]] - code
-- [[Path_31]] - code
+- [[Path_28]] - code
+- [[Path_29]] - code
 - [[People openers (part 2) a dressed person stands with their feet on the ground.]] - rationale - tests/test_opener_scene.py
 - [[Standing on a crate and walking never floats off the edge or crashes; it goes…]] - rationale - tests/test_opener_scene.py
 - [[Tests for building openers in Blender (blenderopener_scene.py + moves.py,…]] - rationale - tests/test_opener_scene.py
@@ -48,6 +49,7 @@ members: 66
 - [[test_chicken_chop_reference()]] - code - tests/test_opener_scene.py
 - [[test_chicken_live_plan()]] - code - tests/test_opener_scene.py
 - [[test_drop_lands()]] - code - tests/test_opener_scene.py
+- [[test_everyone_with_a_beat_is_framed()]] - code - tests/test_opener_scene.py
 - [[test_fall_holds_last_pose()]] - code - tests/test_opener_scene.py
 - [[test_fixture_plans_are_clean()]] - code - tests/test_opener_scene.py
 - [[test_missing_slot_is_skipped()]] - code - tests/test_opener_scene.py
@@ -84,12 +86,12 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 8 edges to [[_COMMUNITY_json]]
-- 4 edges to [[_COMMUNITY_pathlib]]
+- 4 edges to [[_COMMUNITY_test_full_scenes.py]]
 - 2 edges to [[_COMMUNITY_test_opener_plan.py]]
 - 1 edge to [[_COMMUNITY_test_opener_render.py]]
 
 ## Top bridge nodes
-- [[test_opener_scene.py]] - degree 48, connects to 4 communities
+- [[test_opener_scene.py]] - degree 49, connects to 4 communities
 - [[standin()]] - degree 6, connects to 1 community
 - [[test_fixture_plans_are_clean()]] - degree 3, connects to 1 community
 - [[test_standin_matches_tables()]] - degree 2, connects to 1 community

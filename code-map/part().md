@@ -1,19 +1,19 @@
 ---
 source_file: "tests/people_standin.py"
 type: "code"
-community: "people_standin.py"
+community: "bpy"
 location: "L24"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/people_standinpy
+  - community/bpy
 ---
 
 # part()
 
 ## Connections
-- [[Object_3]] - `references` [EXTRACTED]
+- [[Object_2]] - `references` [EXTRACTED]
 - [[body()]] - `calls` [EXTRACTED]
 - [[people_standin.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/people_standinpy
+#graphify/code #graphify/EXTRACTED #community/bpy

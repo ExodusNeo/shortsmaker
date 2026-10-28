@@ -12,8 +12,8 @@ tags:
 # test_blender_failure_is_reported_and_the_batch_goes_on()
 
 ## Connections
-- [[main()_7]] - `calls` [EXTRACTED]
-- [[render()_2]] - `indirect_call` [INFERRED]
+- [[main()_8]] - `calls` [EXTRACTED]
+- [[render()_1]] - `indirect_call` [INFERRED]
 - [[test_blender_run.py]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/channel_profilespy

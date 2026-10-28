@@ -1,61 +1,63 @@
 ---
 type: community
-members: 48
+members: 50
 ---
 
 # re
 
-**Members:** 48 nodes
+**Members:** 50 nodes
 
 ## Members
+- [[A Shotcut timeline of a finished Short, for fixing by hand what the automatic…]] - rationale - shortsmaker/edit_project.py
+- [[A finished Short's work in miniature grey pictures, a see-through graphics…]] - rationale - tests/test_edit_project.py
+- [[A re-render with nothing left to fix an old timeline would no longer match the…]] - rationale - shortsmaker/edit_project.py
+- [[A saved model whose title and tags hold every word of `find` (the closest title…]] - rationale - shortsmaker/blender_link.py
 - [[Add a finished Short to this channel's logbook, with empty lines for its…]] - rationale - shortsmaker/logbook.py
+- [[CC0, or plain CC-BY (no NC, ND or SA) free to use in a monetised Short with a…]] - rationale - shortsmaker/blender_link.py
 - [[Extract (numeric_value, compact_display, short_label, trigger_phrase) from a…]] - rationale - shortsmaker/plan_rules.py
-- [[Extract clean TypeScriptReact code exporting Custom{slot} from an AI reply.]] - rationale - shortsmaker/motion.py
-- [[Full-screen motion-graphic scenes and the AI-coded Custom scenes (with their…]] - rationale - shortsmaker/motion.py
-- [[Guaranteed-valid Remotion component for slot 0..3 if the AI coder fails or…]] - rationale - shortsmaker/motion.py
-- [[Motion Graphics Agent writes bespoke ReactSVG Remotion code for each `type…]] - rationale - shortsmaker/motion.py
-- [[Path_4]] - code
-- [[Path_5]] - code
-- [[Renders just this custom scene small (its pictures are already in…]] - rationale - shortsmaker/motion.py
-- [[Renders seconds start..end of a small Short (`props`; its pictures already in…]] - rationale - shortsmaker/motion.py
-- [[Rule breaks a compiler can't see in an AI-coded custom scene (see…]] - rationale - shortsmaker/motion.py
-- [[Saves an invention that made it into a finished Short as a candidate for the…]] - rationale - shortsmaker/style_lab.py
+- [[Lower-case words with a plural 's' dropped, so Roosters finds Rooster.]] - rationale - shortsmaker/blender_link.py
+- [[Path_1]] - code
+- [[Path_2]] - code
+- [[Path_3]] - code
+- [[Planned full-screen motion graphics allowed per Short (default MAX_FULL_PLANNED…]] - rationale - shortsmaker/rules.py
+- [[Tests for the Shotcut timeline made when CHECK lines are left. No AI usage;…]] - rationale - tests/test_edit_project.py
 - [[The Short's page in the Obsidian vault thumbnail, storyboard, its logbook…]] - rationale - shortsmaker/logbook.py
-- [[The `full` object Remotion draws for scene i the plan's data, its word…]] - rationale - shortsmaker/motion.py
 - [[The code from an AI reply (code fences removed); None unless it exports the…]] - rationale - shortsmaker/style_lab.py
-- [[The coder looks at 8 frames of its own scene before the real render and…]] - rationale - shortsmaker/motion.py
-- [[The review saw custom scene i look wrong its coder gets the complaint and its…]] - rationale - shortsmaker/remotion_render.py
-- [[The rules every custom motion-graphic scene follows, plus two worked examples…]] - rationale - shortsmaker/motion.py
-- [[The style library invented looks, overlays and scene changes, candidates and…]] - rationale - shortsmaker/style_lab.py
-- [[Type-checks the Remotion project; None when it compiles, else the compiler's…]] - rationale - shortsmaker/motion.py
+- [[The logbook entries the owner has filled in (Views written down), at most the…]] - rationale - shortsmaker/logbook.py
+- [[The video tracks bottom-up (pictures, then graphics drawn over them), each cut…]] - rationale - shortsmaker/edit_project.py
+- [[Total full-screen motion graphics (planned + rescued) allowed per Short…]] - rationale - shortsmaker/rules.py
+- [[allowed_licence()]] - code - shortsmaker/blender_link.py
+- [[caption_layer()]] - code - shortsmaker/edit_project.py
+- [[chain()]] - code - shortsmaker/edit_project.py
 - [[clean_style_code()]] - code - shortsmaker/style_lab.py
-- [[clean_tsx_code()]] - code - shortsmaker/motion.py
-- [[code_custom_scenes()]] - code - shortsmaker/motion.py
-- [[custom_rules()]] - code - shortsmaker/motion.py
-- [[fallback_custom_tsx()]] - code - shortsmaker/motion.py
-- [[full_props()]] - code - shortsmaker/motion.py
-- [[library.bat the owner watches each invention the AI made for a Short and adds…]] - rationale - shortsmaker/style_lab.py
-- [[library_menu()]] - code - shortsmaker/style_lab.py
-- [[lint_custom_code()]] - code - shortsmaker/motion.py
+- [[clock()]] - code - shortsmaker/edit_project.py
+- [[dB that brings the tracks played together to LUFS, like the final mix's…]] - rationale - shortsmaker/edit_project.py
+- [[edit_project.py]] - code - shortsmaker/edit_project.py
+- [[folderedit.mlt + edit_in_shotcut.bat for a finished Short. `videos` = (track…]] - rationale - shortsmaker/edit_project.py
+- [[in_library()]] - code - shortsmaker/blender_link.py
 - [[log_short()]] - code - shortsmaker/logbook.py
-- [[look_and_fix()]] - code - shortsmaker/motion.py
+- [[logbook_results()]] - code - shortsmaker/logbook.py
+- [[make()]] - code - shortsmaker/edit_project.py
 - [[make_shorts.py notes rebuild every Short's vault page from the logbooks (each…]] - rationale - shortsmaker/logbook.py
-- [[motion.py]] - code - shortsmaker/motion.py
-- [[os]] - concept
+- [[master_gain()]] - code - shortsmaker/edit_project.py
+- [[max_full()]] - code - shortsmaker/rules.py
+- [[max_full_planned()]] - code - shortsmaker/rules.py
 - [[parse_scene_money()]] - code - shortsmaker/plan_rules.py
-- [[preview_custom()]] - code - shortsmaker/motion.py
-- [[preview_sheet()]] - code - shortsmaker/motion.py
-- [[put()]] - code - shortsmaker/motion.py
+- [[project_xml()]] - code - shortsmaker/edit_project.py
+- [[prop()]] - code - shortsmaker/edit_project.py
 - [[re]] - concept
-- [[redraw_custom()]] - code - shortsmaker/remotion_render.py
-- [[reject_candidate()]] - code - shortsmaker/style_lab.py
-- [[save_candidate()]] - code - shortsmaker/style_lab.py
-- [[shutil]] - concept
-- [[style_lab.py]] - code - shortsmaker/style_lab.py
-- [[test_fallback_custom_is_clean()]] - code - tests/test_full_scenes.py
-- [[tsc_check()]] - code - shortsmaker/motion.py
+- [[remove()]] - code - shortsmaker/edit_project.py
+- [[short_folder()]] - code - tests/test_edit_project.py
+- [[test_edit_project.py]] - code - tests/test_edit_project.py
+- [[test_melt_plays_it_with_the_captions_on_top()]] - code - tests/test_edit_project.py
+- [[test_timeline_has_scenes_captions_sound_and_markers()]] - code - tests/test_edit_project.py
 - [[vault_page()]] - code - shortsmaker/logbook.py
 - [[vault_refresh()]] - code - shortsmaker/logbook.py
+- [[videos()]] - code - tests/test_edit_project.py
+- [[words()]] - code - shortsmaker/blender_link.py
+- [[workcaptions.mov the captions alone on a see-through background, from the…]] - rationale - shortsmaker/edit_project.py
+- [[xml_etree_elementtree]] - concept
+- [[xml_sax_saxutils]] - concept
 
 ## Live Query (requires Dataview plugin)
 
@@ -65,43 +67,32 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 52 edges to [[_COMMUNITY_pathlib]]
-- 18 edges to [[_COMMUNITY_json]]
-- 17 edges to [[_COMMUNITY_channel_profiles.py]]
-- 12 edges to [[_COMMUNITY_test_full_scenes.py]]
-- 12 edges to [[_COMMUNITY_invent_component]]
-- 8 edges to [[_COMMUNITY_ask_ai]]
-- 8 edges to [[_COMMUNITY_style_library]]
-- 8 edges to [[_COMMUNITY_test_style.py]]
+- 35 edges to [[_COMMUNITY_test_full_scenes.py]]
+- 12 edges to [[_COMMUNITY_render]]
+- 10 edges to [[_COMMUNITY_json]]
+- 9 edges to [[_COMMUNITY_channel_profiles.py]]
 - 6 edges to [[_COMMUNITY_clean_full]]
-- 6 edges to [[_COMMUNITY_render]]
-- 6 edges to [[_COMMUNITY_test_story.py]]
-- 5 edges to [[_COMMUNITY_render_remotion]]
-- 4 edges to [[_COMMUNITY_local_voice]]
-- 4 edges to [[_COMMUNITY_test_blender_link.py]]
-- 4 edges to [[_COMMUNITY_test_opener_render.py]]
-- 3 edges to [[_COMMUNITY_ffmpeg]]
-- 3 edges to [[_COMMUNITY_visual_review]]
-- 2 edges to [[_COMMUNITY_test_rules.py]]
-- 2 edges to [[_COMMUNITY_write_scripts]]
-- 2 edges to [[_COMMUNITY_h3_run.py]]
-- 2 edges to [[_COMMUNITY_test_first_second.py]]
-- 1 edge to [[_COMMUNITY_local_clips]]
-- 1 edge to [[_COMMUNITY__fake_planning]]
-- 1 edge to [[_COMMUNITY_apply_review_fixes]]
-- 1 edge to [[_COMMUNITY_film_piece]]
-- 1 edge to [[_COMMUNITY_captions]]
-- 1 edge to [[_COMMUNITY_use_picture_from]]
-- 1 edge to [[_COMMUNITY_fetch]]
-- 1 edge to [[_COMMUNITY_unpack_clips]]
-- 1 edge to [[_COMMUNITY_test_pictures_first.py]]
+- 5 edges to [[_COMMUNITY_test_story.py]]
+- 5 edges to [[_COMMUNITY_test_blender_link.py]]
+- 4 edges to [[_COMMUNITY_motion.py]]
+- 3 edges to [[_COMMUNITY_write_scripts]]
+- 3 edges to [[_COMMUNITY_align_words]]
+- 2 edges to [[_COMMUNITY_render_remotion]]
+- 2 edges to [[_COMMUNITY_fetch]]
+- 1 edge to [[_COMMUNITY_test_opener_render.py]]
+- 1 edge to [[_COMMUNITY_test_first_second.py]]
+- 1 edge to [[_COMMUNITY_rescue_graphics]]
+- 1 edge to [[_COMMUNITY_test_rules.py]]
+- 1 edge to [[_COMMUNITY_ask_ai]]
+- 1 edge to [[_COMMUNITY_test_h3_handoff.py]]
+- 1 edge to [[_COMMUNITY_test_blender_plan.py]]
 - 1 edge to [[_COMMUNITY_Local GPU Worker]]
 - 1 edge to [[_COMMUNITY_test_opener_plan.py]]
 - 1 edge to [[_COMMUNITY_split_make_shorts.py]]
 
 ## Top bridge nodes
-- [[re]] - degree 70, connects to 24 communities
-- [[shutil]] - degree 43, connects to 15 communities
-- [[style_lab.py]] - degree 39, connects to 8 communities
-- [[motion.py]] - degree 30, connects to 6 communities
-- [[save_candidate()]] - degree 12, connects to 6 communities
+- [[re]] - degree 70, connects to 19 communities
+- [[in_library()]] - degree 7, connects to 4 communities
+- [[logbook_results()]] - degree 6, connects to 4 communities
+- [[log_short()]] - degree 7, connects to 3 communities
+- [[vault_page()]] - degree 7, connects to 3 communities

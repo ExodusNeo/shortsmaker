@@ -1,15 +1,15 @@
 ---
 type: community
-members: 66
+members: 74
 ---
 
 # test_opener_render.py
 
-**Members:** 66 nodes
+**Members:** 74 nodes
 
 ## Members
-- [[dot-__enter__()_4]] - code - tests/test_opener_render.py
-- [[dot-__exit__()_3]] - code - tests/test_opener_render.py
+- [[dot-__enter__()_3]] - code - tests/test_opener_render.py
+- [[dot-__exit__()_2]] - code - tests/test_opener_render.py
 - [[dot-runs()]] - code - tests/test_opener_render.py
 - [[A failure the planner says no plan change can fix ends the opener at once (the…]] - rationale - tests/test_opener_render.py
 - [[A role's hat (the king's crown) that no library has is left off; it can't be…]] - rationale - tests/test_opener_render.py
@@ -19,13 +19,15 @@ members: 66
 - [[Env]] - code - tests/test_opener_render.py
 - [[Every failed try kept for the engine fixes (workopener_triestryn.json and…]] - rationale - shortsmaker/opener_render.py
 - [[Final review the AI review was still told There are no people in these…]] - rationale - tests/test_opener_render.py
-- [[Path_24]] - code
+- [[One AI call picks the library result that is really `find` (by title), or none.]] - rationale - shortsmaker/opener_render.py
+- [[Path_22]] - code
 - [[Rounds went one missing model at a time (armoured car, then bricks, then a…]] - rationale - tests/test_opener_render.py
 - [[Scene 1 plays its Blender opener when one renders (opener_render.py,…]] - rationale - shortsmaker/short_render.py
 - [[Scene 1's opener clip, or (None, why). (None, None) when the Short has no…]] - rationale - shortsmaker/opener_render.py
 - [[Sixth live run (Mike) 8 evenly spaced frames skipped the whole 0.3-second…]] - rationale - tests/test_opener_render.py
 - [[Tests for running an opener from a Short (opener_render.py, 2026-10-27) models…]] - rationale - tests/test_opener_render.py
 - [[The AI looks at 8 frames does the action make physical sense, and does frame 0…]] - rationale - shortsmaker/opener_render.py
+- [[The MCP server has to be started in Blender each time (owner, 2026-10-27) say…]] - rationale - shortsmaker/cli.py
 - [[The Opening line says which opener played the Blender one, or the motion…]] - rationale - tests/test_opener_render.py
 - [[The first people run (umbrella officer) asked for a ww2 armored car no free…]] - rationale - tests/test_opener_render.py
 - [[The frames the reviewer sees 8 spread over the clip plus 3 around every key…]] - rationale - shortsmaker/opener_render.py
@@ -33,18 +35,23 @@ members: 66
 - [[_cast_note()]] - code - shortsmaker/opener_render.py
 - [[_people_files()]] - code - tests/test_opener_render.py
 - [[_wiring()]] - code - tests/test_opener_render.py
+- [[blender_note()]] - code - shortsmaker/cli.py
 - [[boom()]] - code - tests/test_opener_render.py
 - [[broken()]] - code - tests/test_opener_render.py
 - [[copy]] - concept
 - [[failed()]] - code - shortsmaker/short_render.py
+- [[pick_model()]] - code - shortsmaker/opener_render.py
+- [[ping()]] - code - shortsmaker/blender_link.py
 - [[render_opener()]] - code - shortsmaker/opener_render.py
+- [[resolve_models()]] - code - shortsmaker/opener_render.py
 - [[review()]] - code - shortsmaker/opener_render.py
 - [[review_frames()]] - code - shortsmaker/opener_render.py
 - [[save_try()]] - code - shortsmaker/opener_render.py
 - [[scale_beats()]] - code - shortsmaker/opener_render.py
-- [[short()_3]] - code - tests/test_opener_render.py
+- [[short()_2]] - code - tests/test_opener_render.py
 - [[short_render.use_opener with render_opener faked; returns (check line, short,…]] - rationale - tests/test_opener_render.py
 - [[test_beats_scaled_into_scene()]] - code - tests/test_opener_render.py
+- [[test_blender_note()]] - code - tests/test_opener_render.py
 - [[test_cc_by_credit()]] - code - tests/test_opener_render.py
 - [[test_crash_retry_then_fallback()]] - code - tests/test_opener_render.py
 - [[test_every_unfound_model_named_at_once()]] - code - tests/test_opener_render.py
@@ -74,6 +81,7 @@ members: 66
 - [[test_use_opener_opening_note()]] - code - tests/test_opener_render.py
 - [[test_use_opener_planner_check()]] - code - tests/test_opener_render.py
 - [[use_opener()]] - code - shortsmaker/short_render.py
+- [[{actor id, person idhat  prop or backdropN .blend path}, or ({},…]] - rationale - shortsmaker/opener_render.py
 
 ## Live Query (requires Dataview plugin)
 
@@ -83,24 +91,23 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 18 edges to [[_COMMUNITY_pathlib]]
-- 7 edges to [[_COMMUNITY_json]]
-- 5 edges to [[_COMMUNITY_test_blender_link.py]]
-- 4 edges to [[_COMMUNITY_ffmpeg]]
-- 4 edges to [[_COMMUNITY_re]]
+- 24 edges to [[_COMMUNITY_test_full_scenes.py]]
+- 11 edges to [[_COMMUNITY_json]]
+- 6 edges to [[_COMMUNITY_render]]
+- 4 edges to [[_COMMUNITY_test_blender_link.py]]
 - 3 edges to [[_COMMUNITY_test_opener_plan.py]]
+- 2 edges to [[_COMMUNITY_ask_ai]]
 - 1 edge to [[_COMMUNITY_local_clips]]
+- 1 edge to [[_COMMUNITY_re]]
 - 1 edge to [[_COMMUNITY_test_rules.py]]
-- 1 edge to [[_COMMUNITY_test_blender_render.py]]
-- 1 edge to [[_COMMUNITY_ask_ai]]
-- 1 edge to [[_COMMUNITY_math]]
-- 1 edge to [[_COMMUNITY_render]]
-- 1 edge to [[_COMMUNITY_load_state]]
+- 1 edge to [[_COMMUNITY_channel_profiles.py]]
+- 1 edge to [[_COMMUNITY_test_blender_plan.py]]
+- 1 edge to [[_COMMUNITY_moves.py]]
 - 1 edge to [[_COMMUNITY_test_opener_scene.py]]
 
 ## Top bridge nodes
-- [[render_opener()]] - degree 36, connects to 8 communities
-- [[test_opener_render.py]] - degree 53, connects to 6 communities
-- [[use_opener()]] - degree 11, connects to 4 communities
+- [[render_opener()]] - degree 36, connects to 6 communities
+- [[test_opener_render.py]] - degree 53, connects to 4 communities
+- [[resolve_models()]] - degree 9, connects to 3 communities
 - [[review()]] - degree 8, connects to 3 communities
-- [[save_try()]] - degree 6, connects to 3 communities
+- [[pick_model()]] - degree 6, connects to 3 communities
