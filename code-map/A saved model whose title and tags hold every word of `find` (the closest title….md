@@ -2,7 +2,7 @@
 source_file: "shortsmaker/blender_link.py"
 type: "rationale"
 community: "re"
-location: "L75"
+location: "L74"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED

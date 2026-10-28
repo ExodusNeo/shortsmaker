@@ -2,7 +2,7 @@
 source_file: "shortsmaker/blender_link.py"
 type: "code"
 community: "re"
-location: "L69"
+location: "L68"
 tags:
   - graphify/code
   - graphify/EXTRACTED

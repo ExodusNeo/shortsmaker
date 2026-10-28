@@ -642,9 +642,9 @@
     "semantic_hash": ""
   },
   "blender/opener_scene.py": {
-    "mtime": 1793192043.62021,
-    "seen": 1793192265.9855072,
-    "ast_hash": "4261079013e0c9c0861d7c08bf809700",
+    "mtime": 1793192611.7799523,
+    "seen": 1793192929.2069461,
+    "ast_hash": "91964e6eae61fa002c2f984d2321378d",
     "semantic_hash": ""
   },
   "blender/scene_kit.py": {
