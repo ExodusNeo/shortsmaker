@@ -29,7 +29,7 @@ SORT file.name ASC
 - 5 edges to [[_COMMUNITY_opener_scene.py]]
 - 3 edges to [[_COMMUNITY_scene_kit.py]]
 - 1 edge to [[_COMMUNITY_math]]
-- 1 edge to [[_COMMUNITY_moves.py]]
+- 1 edge to [[_COMMUNITY_cut]]
 
 ## Top bridge nodes
 - [[load_model()]] - degree 8, connects to 3 communities

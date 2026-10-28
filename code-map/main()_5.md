@@ -1,18 +1,21 @@
 ---
-source_file: "tests/people_sheet.py"
+source_file: "tests/render_full.py"
 type: "code"
-community: "json"
-location: "L75"
+community: "subprocess"
+location: "L28"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/json
+  - community/subprocess
 ---
 
 # main()
 
 ## Connections
-- [[people_sheet.py]] - `contains` [EXTRACTED]
+- [[json]] - `calls` [EXTRACTED]
+- [[props_for()]] - `calls` [EXTRACTED]
+- [[render_full.py]] - `contains` [EXTRACTED]
+- [[shutil]] - `calls` [EXTRACTED]
 - [[subprocess]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/json
+#graphify/code #graphify/EXTRACTED #community/subprocess

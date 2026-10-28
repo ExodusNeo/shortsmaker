@@ -2,7 +2,7 @@
 source_file: "tests/test_full_scenes.py"
 type: "code"
 community: "write_scripts"
-location: "L92"
+location: "L93"
 tags:
   - graphify/code
   - graphify/EXTRACTED

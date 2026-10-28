@@ -2,7 +2,7 @@
 source_file: "tests/test_pictures_first.py"
 type: "code"
 community: "test_pictures_first.py"
-location: "L112"
+location: "L113"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -25,7 +25,9 @@ tags:
 - [[test_catalog_redone_when_missing()]] - `calls` [EXTRACTED]
 - [[test_corrupt_pool_and_catalog_redone()]] - `calls` [EXTRACTED]
 - [[test_pictures_first.py]] - `contains` [EXTRACTED]
+- [[test_seo_never_sees_competitor_titles()]] - `calls` [EXTRACTED]
 - [[test_seo_pass_empty_no_ai()]] - `calls` [EXTRACTED]
 - [[test_seo_pass_research_seeds_dict_and_list()]] - `calls` [EXTRACTED]
+- [[test_topic_ideas.py]] - `imports` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/test_pictures_firstpy

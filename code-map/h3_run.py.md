@@ -13,12 +13,12 @@ tags:
 
 ## Connections
 - [[MiniMax H3 image-to-video jobs for a ShortsMaker Short, run on Colab next to…]] - `rationale_for` [EXTRACTED]
-- [[call()_1]] - `contains` [EXTRACTED]
+- [[call()]] - `contains` [EXTRACTED]
 - [[fit_start()]] - `contains` [EXTRACTED]
 - [[frames()]] - `contains` [EXTRACTED]
 - [[graph()]] - `contains` [EXTRACTED]
 - [[json]] - `imports` [EXTRACTED]
-- [[main()_3]] - `contains` [EXTRACTED]
+- [[main()_2]] - `contains` [EXTRACTED]
 - [[pathlib]] - `imports_from` [EXTRACTED]
 - [[pil]] - `imports_from` [EXTRACTED]
 - [[saved_file()]] - `contains` [EXTRACTED]

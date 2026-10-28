@@ -12,6 +12,7 @@ tags:
 # test_full_scenes.py
 
 ## Connections
+- [[Random]] - `imports` [EXTRACTED]
 - [[Tests for the full-screen motion graphic scenes. No AI usage, no rendering.…]] - `rationale_for` [EXTRACTED]
 - [[__init__.py]] - `imports_from` [EXTRACTED]
 - [[_board()]] - `contains` [EXTRACTED]
@@ -40,7 +41,6 @@ tags:
 - [[picture_pool.py]] - `imports_from` [EXTRACTED]
 - [[pil]] - `imports_from` [EXTRACTED]
 - [[plan_rules.py]] - `imports_from` [EXTRACTED]
-- [[random]] - `imports` [EXTRACTED]
 - [[remotion_render.py]] - `imports_from` [EXTRACTED]
 - [[review.py]] - `imports_from` [EXTRACTED]
 - [[rules.py]] - `imports_from` [EXTRACTED]
@@ -97,6 +97,7 @@ tags:
 - [[test_state_roundtrip_full_pics()]] - `contains` [EXTRACTED]
 - [[test_story_sound_library()]] - `contains` [EXTRACTED]
 - [[test_story_sound_wins_its_moment()]] - `contains` [EXTRACTED]
+- [[topic_ideas.py]] - `imports_from` [EXTRACTED]
 - [[traceback]] - `imports` [EXTRACTED]
 - [[writing.py]] - `imports_from` [EXTRACTED]
 

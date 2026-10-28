@@ -2,7 +2,7 @@
 source_file: "tests/test_style.py"
 type: "code"
 community: "invent_component"
-location: "L271"
+location: "L273"
 tags:
   - graphify/code
   - graphify/EXTRACTED

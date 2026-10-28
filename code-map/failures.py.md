@@ -14,6 +14,7 @@ tags:
 ## Connections
 - [[Failure]] - `contains` [EXTRACTED]
 - [[Failure animations on the focus part bend (it buckles), crack (a dark crack…]] - `rationale_for` [EXTRACTED]
+- [[Random]] - `imports` [EXTRACTED]
 - [[bpy]] - `imports` [EXTRACTED]
 - [[build_scene.py]] - `imports` [EXTRACTED]
 - [[key()_1]] - `contains` [EXTRACTED]
@@ -21,6 +22,5 @@ tags:
 - [[math]] - `imports` [EXTRACTED]
 - [[mathutils]] - `imports_from` [EXTRACTED]
 - [[parts.py]] - `imports` [EXTRACTED]
-- [[random]] - `imports` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/build_scenepy

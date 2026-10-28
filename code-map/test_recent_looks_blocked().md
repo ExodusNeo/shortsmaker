@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_style.py"
 type: "code"
-community: "style_library"
-location: "L73"
+community: "clean_look"
+location: "L74"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/style_library
+  - community/clean_look
 ---
 
 # test_recent_looks_blocked()
@@ -15,4 +15,4 @@ tags:
 - [[clean_look()]] - `calls` [EXTRACTED]
 - [[test_style.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/style_library
+#graphify/code #graphify/EXTRACTED #community/clean_look

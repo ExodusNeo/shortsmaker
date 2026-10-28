@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_pictures_first.py"
 type: "code"
-community: "write_scripts"
-location: "L197"
+community: "planning"
+location: "L198"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/write_scripts
+  - community/planning
 ---
 
 # planning
@@ -23,8 +23,11 @@ tags:
 - [[test_pictures_first.py]] - `contains` [EXTRACTED]
 - [[test_prompts_carry_picture_list()]] - `calls` [EXTRACTED]
 - [[test_small_pool_skips_ai()]] - `calls` [EXTRACTED]
+- [[test_topic_a_proven_channel_just_posted_is_dropped()]] - `calls` [EXTRACTED]
+- [[test_topic_ideas.py]] - `imports` [EXTRACTED]
 - [[test_topic_prompt_asks_backups_and_visuals()]] - `calls` [EXTRACTED]
+- [[test_topic_prompt_uses_our_ideas_and_lists_taken_stories()]] - `calls` [EXTRACTED]
 - [[test_weak_topic_swapped_for_backup()]] - `calls` [EXTRACTED]
 - [[write_scripts() with every AI step canned and `prepare` standing in for…]] - `rationale_for` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/write_scripts
+#graphify/code #graphify/EXTRACTED #community/planning

@@ -2,7 +2,7 @@
 source_file: "tests/test_style.py"
 type: "rationale"
 community: "approve_candidate"
-location: "L371"
+location: "L373"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED

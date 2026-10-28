@@ -2,7 +2,7 @@
 source_file: "tests/test_style.py"
 type: "code"
 community: "render_remotion"
-location: "L292"
+location: "L294"
 tags:
   - graphify/code
   - graphify/EXTRACTED

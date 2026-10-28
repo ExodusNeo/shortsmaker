@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_style.py"
 type: "code"
-community: "pathlib"
+community: "test_style.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/pathlib
+  - community/test_stylepy
 ---
 
 # test_style.py
@@ -65,7 +65,8 @@ tags:
 - [[test_swap_inventions()]] - `contains` [EXTRACTED]
 - [[test_unknown_names_fall_back()]] - `contains` [EXTRACTED]
 - [[test_write_style_index_is_deterministic()]] - `contains` [EXTRACTED]
+- [[topic_ideas.py]] - `imports_from` [EXTRACTED]
 - [[with_fakes()_1]] - `contains` [EXTRACTED]
 - [[writing.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/pathlib
+#graphify/code #graphify/EXTRACTED #community/test_stylepy

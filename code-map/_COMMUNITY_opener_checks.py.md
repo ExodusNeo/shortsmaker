@@ -11,7 +11,7 @@ members: 41
 - [[A person's planned prop (the umbrella, the sword) is in frame 0 and big enough…]] - rationale - blender/opener_checks.py
 - [[A thing's move shows on screen some corner of it travels at least `share` of…]] - rationale - blender/opener_checks.py
 - [[At contact, the edge faces the way the tool moves and points at the target (the…]] - rationale - blender/opener_checks.py
-- [[BVHTree]] - code
+- [[BVHTree_1]] - code
 - [[Each object touches what it rests on, within tol no floating above it, no…]] - rationale - blender/opener_checks.py
 - [[Frame 1 shows the subject, big enough to read (tall enough, or for a wide low…]] - rationale - blender/opener_checks.py
 - [[How much of a model there is, as its surface area without the filled cut faces…]] - rationale - blender/opener_checks.py
@@ -46,7 +46,7 @@ members: 41
 - [[screen_box()]] - code - blender/opener_checks.py
 - [[spans()]] - code - blender/opener_checks.py
 - [[staging()]] - code - blender/opener_checks.py
-- [[tree()]] - code - blender/opener_checks.py
+- [[tree()_1]] - code - blender/opener_checks.py
 - [[visible()]] - code - blender/opener_checks.py
 - [[world_verts()_1]] - code - blender/opener_checks.py
 

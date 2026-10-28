@@ -17,6 +17,6 @@ tags:
 - [[bbox()]] - `calls` [EXTRACTED]
 - [[opener_scene.py]] - `contains` [EXTRACTED]
 - [[place_actors()]] - `calls` [EXTRACTED]
-- [[tree()_1]] - `calls` [EXTRACTED]
+- [[tree()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/opener_scenepy

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/plan_rules.py"
 type: "rationale"
-community: "limit_style"
+community: "write_scripts"
 location: "L228"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/limit_style
+  - community/write_scripts
 ---
 
 # Guardrails for the style library (STYLE_CAPS): the hook keeps only its title…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[limit_style()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/limit_style
+#graphify/rationale #graphify/EXTRACTED #community/write_scripts

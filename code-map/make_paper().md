@@ -12,10 +12,9 @@ tags:
 # make_paper()
 
 ## Connections
-- [[Path_7]] - `references` [EXTRACTED]
+- [[Path_10]] - `references` [EXTRACTED]
 - [[The aged-paper texture and film-grain frames the full-screen motion graphics…]] - `rationale_for` [EXTRACTED]
 - [[hex_rgb()]] - `calls` [EXTRACTED]
-- [[random]] - `calls` [EXTRACTED]
 - [[remotion_render.py]] - `contains` [EXTRACTED]
 - [[render_remotion()]] - `calls` [EXTRACTED]
 - [[test_make_paper()]] - `calls` [EXTRACTED]

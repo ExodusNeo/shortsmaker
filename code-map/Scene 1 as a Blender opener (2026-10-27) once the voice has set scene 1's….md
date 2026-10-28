@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/opener_render.py"
 type: "rationale"
-community: "json"
+community: "subprocess"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/json
+  - community/subprocess
 ---
 
 # Scene 1 as a Blender opener (2026-10-27): once the voice has set scene 1's…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[opener_render.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/json
+#graphify/rationale #graphify/EXTRACTED #community/subprocess

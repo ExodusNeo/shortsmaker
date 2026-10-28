@@ -1,20 +1,26 @@
 ---
-source_file: "local_ai/qwen_voice.py"
+source_file: "colab/h3_run.py"
 type: "code"
-community: "qwen_voice.py"
-location: "L181"
+community: "h3_run.py"
+location: "L89"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/qwen_voicepy
+  - community/h3_runpy
 ---
 
 # main()
 
 ## Connections
-- [[align()]] - `calls` [EXTRACTED]
+- [[call()]] - `calls` [EXTRACTED]
+- [[fit_start()]] - `calls` [EXTRACTED]
+- [[frames()]] - `calls` [EXTRACTED]
+- [[graph()]] - `calls` [EXTRACTED]
+- [[h3_run.py]] - `contains` [EXTRACTED]
 - [[json]] - `calls` [EXTRACTED]
-- [[qwen_voice.py]] - `contains` [EXTRACTED]
+- [[saved_file()]] - `calls` [EXTRACTED]
+- [[shutil]] - `calls` [EXTRACTED]
 - [[time]] - `calls` [EXTRACTED]
+- [[zipfile]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/qwen_voicepy
+#graphify/code #graphify/EXTRACTED #community/h3_runpy

@@ -16,6 +16,6 @@ tags:
 - [[_hold()]] - `calls` [EXTRACTED]
 - [[held()]] - `calls` [EXTRACTED]
 - [[people.py]] - `contains` [EXTRACTED]
-- [[tree()_1]] - `calls` [EXTRACTED]
+- [[tree()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/math

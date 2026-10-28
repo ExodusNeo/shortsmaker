@@ -21,7 +21,6 @@ tags:
 - [[main()_9]] - `calls` [EXTRACTED]
 - [[math]] - `calls` [EXTRACTED]
 - [[opener_scene.py]] - `contains` [EXTRACTED]
-- [[random]] - `calls` [EXTRACTED]
 - [[seen_windows()]] - `calls` [EXTRACTED]
 - [[threat_whole()]] - `calls` [EXTRACTED]
 - [[view()]] - `calls` [EXTRACTED]

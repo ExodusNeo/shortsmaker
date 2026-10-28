@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/edit_project.py"
 type: "rationale"
-community: "test_edit_project.py"
+community: "re"
 location: "L106"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/test_edit_projectpy
+  - community/re
 ---
 
 # A re-render with nothing left to fix: an old timeline would no longer match the…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[remove()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/test_edit_projectpy
+#graphify/rationale #graphify/EXTRACTED #community/re

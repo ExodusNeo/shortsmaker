@@ -1,18 +1,18 @@
 ---
 source_file: "tests/render_style.py"
 type: "code"
-community: "ffmpeg"
+community: "gpu.py"
 location: "L22"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ffmpeg
+  - community/gpupy
 ---
 
 # add()
 
 ## Connections
-- [[build()]] - `contains` [EXTRACTED]
+- [[build()_1]] - `contains` [EXTRACTED]
 - [[scenes()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/ffmpeg
+#graphify/code #graphify/EXTRACTED #community/gpupy

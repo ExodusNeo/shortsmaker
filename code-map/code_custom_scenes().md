@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[Motion Graphics Agent writes bespoke ReactSVG Remotion code for each `type…]] - `rationale_for` [EXTRACTED]
-- [[Path_3]] - `references` [EXTRACTED]
+- [[Path_8]] - `references` [EXTRACTED]
 - [[ask_ai()]] - `calls` [EXTRACTED]
 - [[clean_tsx_code()]] - `calls` [EXTRACTED]
 - [[custom_rules()]] - `calls` [EXTRACTED]

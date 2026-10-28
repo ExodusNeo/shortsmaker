@@ -33,19 +33,20 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 5 edges to [[_COMMUNITY_pathlib]]
+- 6 edges to [[_COMMUNITY_test_full_scenes.py]]
 - 4 edges to [[_COMMUNITY_main]]
 - 4 edges to [[_COMMUNITY_parts.py]]
 - 4 edges to [[_COMMUNITY_math]]
 - 3 edges to [[_COMMUNITY_Shots]]
 - 3 edges to [[_COMMUNITY_look.py]]
-- 3 edges to [[_COMMUNITY_json]]
-- 3 edges to [[_COMMUNITY_opener_scene.py]]
 - 3 edges to [[_COMMUNITY_opener_checks.py]]
-- 2 edges to [[_COMMUNITY_templates.py]]
 - 2 edges to [[_COMMUNITY_moves.py]]
+- 2 edges to [[_COMMUNITY_templates.py]]
+- 2 edges to [[_COMMUNITY_json]]
 - 2 edges to [[_COMMUNITY_scene_kit.py]]
+- 2 edges to [[_COMMUNITY_opener_scene.py]]
 - 2 edges to [[_COMMUNITY_people_standin.py]]
+- 1 edge to [[_COMMUNITY_subprocess]]
 - 1 edge to [[_COMMUNITY_pack_people.py]]
 - 1 edge to [[_COMMUNITY_look_toon.py]]
 

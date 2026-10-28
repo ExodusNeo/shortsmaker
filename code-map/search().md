@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/blender_link.py"
 type: "code"
-community: "re"
+community: "blender_link.py"
 location: "L60"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/re
+  - community/blender_linkpy
 ---
 
 # search()
@@ -15,9 +15,9 @@ tags:
 - [[Poly Pizza models for `find` that we may use.]] - `rationale_for` [EXTRACTED]
 - [[allowed_licence()]] - `calls` [EXTRACTED]
 - [[blender_link.py]] - `contains` [EXTRACTED]
-- [[call()]] - `calls` [EXTRACTED]
+- [[call()_1]] - `calls` [EXTRACTED]
 - [[model_for()]] - `calls` [EXTRACTED]
 - [[resolve_models()]] - `calls` [EXTRACTED]
 - [[test_search_filters_licences()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/re
+#graphify/code #graphify/EXTRACTED #community/blender_linkpy

@@ -2,7 +2,7 @@
 source_file: "tests/test_rules.py"
 type: "code"
 community: "test_rules.py"
-location: "L63"
+location: "L64"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[Every prompt strange-history's writer, editor, director, fact check, picture…]] - `rationale_for` [EXTRACTED]
-- [[ask()]] - `indirect_call` [INFERRED]
+- [[ask()_1]] - `indirect_call` [INFERRED]
 - [[catalog_pool()]] - `calls` [EXTRACTED]
 - [[choose_images()]] - `calls` [EXTRACTED]
 - [[first_second_check()]] - `calls` [EXTRACTED]

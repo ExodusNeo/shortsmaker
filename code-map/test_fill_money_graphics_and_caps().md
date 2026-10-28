@@ -2,7 +2,7 @@
 source_file: "tests/test_full_scenes.py"
 type: "code"
 community: "plan_rules.py"
-location: "L886"
+location: "L888"
 tags:
   - graphify/code
   - graphify/EXTRACTED

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/style_lab.py"
 type: "code"
-community: "pathlib"
+community: "approve_candidate"
 location: "L245"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/pathlib
+  - community/approve_candidate
 ---
 
 # save_candidate()
@@ -25,4 +25,4 @@ tags:
 - [[test_save_candidate_unique_slug()]] - `calls` [EXTRACTED]
 - [[time]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/pathlib
+#graphify/code #graphify/EXTRACTED #community/approve_candidate

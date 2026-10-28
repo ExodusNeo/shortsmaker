@@ -1,12 +1,12 @@
 ---
 source_file: "blender/moves.py"
 type: "code"
-community: "moves.py"
+community: "cut"
 location: "L613"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/movespy
+  - community/cut
 ---
 
 # cut()
@@ -31,7 +31,6 @@ tags:
 - [[moves.py]] - `contains` [EXTRACTED]
 - [[place_tool()]] - `calls` [EXTRACTED]
 - [[plane_splits()]] - `calls` [EXTRACTED]
-- [[random]] - `calls` [EXTRACTED]
 - [[release()]] - `calls` [EXTRACTED]
 - [[remove_body()]] - `calls` [EXTRACTED]
 - [[show_face()]] - `calls` [EXTRACTED]
@@ -43,4 +42,4 @@ tags:
 - [[travel()_1]] - `calls` [EXTRACTED]
 - [[world_verts()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/movespy
+#graphify/code #graphify/EXTRACTED #community/cut

@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "render"
+community: "to_vertical"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/render
+  - community/to_vertical
 ---
 
 # Path
 
 ## Connections
-- [[mark_details()]] - `references` [EXTRACTED]
+- [[to_vertical()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/render
+#graphify/code #graphify/EXTRACTED #community/to_vertical

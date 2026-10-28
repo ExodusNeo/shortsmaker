@@ -2,7 +2,7 @@
 source_file: "tests/test_style.py"
 type: "code"
 community: "render_remotion"
-location: "L295"
+location: "L297"
 tags:
   - graphify/code
   - graphify/INFERRED

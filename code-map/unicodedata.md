@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "ffmpeg"
+community: "plan_rules.py"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/ffmpeg
+  - community/plan_rulespy
 ---
 
 # unicodedata
@@ -18,4 +18,4 @@ tags:
 - [[spoken_count()]] - `calls` [EXTRACTED]
 - [[words_of()]] - `calls` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/ffmpeg
+#graphify/concept #graphify/EXTRACTED #community/plan_rulespy

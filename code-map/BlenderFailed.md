@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[Blender couldn't draw the Short (missing, crashed or timed out twice).]] - `rationale_for` [EXTRACTED]
-- [[RuntimeError_1]] - `inherits` [EXTRACTED]
+- [[RuntimeError]] - `inherits` [EXTRACTED]
 - [[blender_render.py]] - `contains` [EXTRACTED]
 - [[render_clips()]] - `calls` [EXTRACTED]
 

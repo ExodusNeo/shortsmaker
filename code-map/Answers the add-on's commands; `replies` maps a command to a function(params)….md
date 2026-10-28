@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_blender_link.py"
 type: "rationale"
-community: "test_blender_link.py"
+community: "blender_link.py"
 location: "L23"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/test_blender_linkpy
+  - community/blender_linkpy
 ---
 
 # Answers the add-on's commands; `replies` maps a command to a function(params)…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[Fake]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/test_blender_linkpy
+#graphify/rationale #graphify/EXTRACTED #community/blender_linkpy

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/blender_link.py"
 type: "code"
-community: "re"
+community: "blender_link.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/re
+  - community/blender_linkpy
 ---
 
 # blender_link.py
@@ -17,7 +17,7 @@ tags:
 - [[__init__.py]] - `imports_from` [EXTRACTED]
 - [[allowed_licence()]] - `contains` [EXTRACTED]
 - [[attribution()]] - `contains` [EXTRACTED]
-- [[call()]] - `contains` [EXTRACTED]
+- [[call()_1]] - `contains` [EXTRACTED]
 - [[cli.py]] - `imports_from` [EXTRACTED]
 - [[config.py]] - `imports_from` [EXTRACTED]
 - [[credit()]] - `contains` [EXTRACTED]
@@ -35,4 +35,4 @@ tags:
 - [[test_opener_render.py]] - `imports_from` [EXTRACTED]
 - [[words()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/re
+#graphify/code #graphify/EXTRACTED #community/blender_linkpy

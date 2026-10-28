@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/writing.py"
 type: "rationale"
-community: "test_story.py"
-location: "L327"
+community: "test_full_scenes.py"
+location: "L336"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/test_storypy
+  - community/test_full_scenespy
 ---
 
 # The checkable story rules (STORY_RULES): the answer comes last, no line opens…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[story_problems()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/test_storypy
+#graphify/rationale #graphify/EXTRACTED #community/test_full_scenespy

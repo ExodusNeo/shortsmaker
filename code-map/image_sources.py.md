@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/image_sources.py"
 type: "code"
-community: "plan_rules.py"
+community: "image_sources.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/plan_rulespy
+  - community/image_sourcespy
 ---
 
 # image_sources.py
@@ -43,9 +43,11 @@ tags:
 - [[test_blender_run.py]] - `imports_from` [EXTRACTED]
 - [[test_full_scenes.py]] - `imports_from` [EXTRACTED]
 - [[test_pictures_first.py]] - `imports_from` [EXTRACTED]
+- [[test_topic_ideas.py]] - `imports_from` [EXTRACTED]
 - [[threading]] - `imports` [EXTRACTED]
 - [[thumb_url()]] - `contains` [EXTRACTED]
 - [[time]] - `imports` [EXTRACTED]
+- [[topic_ideas.py]] - `imports_from` [EXTRACTED]
 - [[urllib_error]] - `imports` [EXTRACTED]
 - [[urllib_parse]] - `imports` [EXTRACTED]
 - [[usable_license()]] - `contains` [EXTRACTED]
@@ -53,4 +55,4 @@ tags:
 - [[wm_get()]] - `contains` [EXTRACTED]
 - [[writing.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/plan_rulespy
+#graphify/code #graphify/EXTRACTED #community/image_sourcespy

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/opener_render.py"
 type: "rationale"
-community: "test_opener_render.py"
+community: "subprocess"
 location: "L147"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/test_opener_renderpy
+  - community/subprocess
 ---
 
 # Who is in the animation, for the review: it was told "there are no people" on…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[_cast_note()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/test_opener_renderpy
+#graphify/rationale #graphify/EXTRACTED #community/subprocess

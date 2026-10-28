@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_pictures_first.py"
 type: "code"
-community: "planning_ai"
-location: "L202"
+community: "planning"
+location: "L203"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/planning_ai
+  - community/planning
 ---
 
 # .__enter__()
@@ -17,4 +17,4 @@ tags:
 - [[planning]] - `method` [EXTRACTED]
 - [[planning_ai()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/planning_ai
+#graphify/code #graphify/EXTRACTED #community/planning

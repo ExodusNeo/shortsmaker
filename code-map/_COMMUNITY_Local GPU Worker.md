@@ -36,9 +36,10 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 4 edges to [[_COMMUNITY_pathlib]]
+- 3 edges to [[_COMMUNITY_test_full_scenes.py]]
 - 1 edge to [[_COMMUNITY_re]]
+- 1 edge to [[_COMMUNITY_time]]
 - 1 edge to [[_COMMUNITY_json]]
 
 ## Top bridge nodes
-- [[gen.py]] - degree 17, connects to 3 communities
+- [[gen.py]] - degree 17, connects to 4 communities

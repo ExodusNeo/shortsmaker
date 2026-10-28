@@ -2,7 +2,7 @@
 source_file: "shortsmaker/seo.py"
 type: "code"
 community: "srt"
-location: "L91"
+location: "L90"
 tags:
   - graphify/code
   - graphify/EXTRACTED

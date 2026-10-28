@@ -2,7 +2,7 @@
 source_file: "tests/test_style.py"
 type: "code"
 community: "approve_candidate"
-location: "L408"
+location: "L410"
 tags:
   - graphify/code
   - graphify/EXTRACTED

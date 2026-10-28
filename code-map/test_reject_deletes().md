@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_style.py"
 type: "code"
-community: "pathlib"
-location: "L477"
+community: "approve_candidate"
+location: "L479"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/pathlib
+  - community/approve_candidate
 ---
 
 # test_reject_deletes()
@@ -16,4 +16,4 @@ tags:
 - [[reject_candidate()]] - `calls` [EXTRACTED]
 - [[test_style.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/pathlib
+#graphify/code #graphify/EXTRACTED #community/approve_candidate

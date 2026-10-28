@@ -2,7 +2,7 @@
 source_file: "tests/test_pictures_first.py"
 type: "code"
 community: "gather_pool"
-location: "L531"
+location: "L533"
 tags:
   - graphify/code
   - graphify/EXTRACTED

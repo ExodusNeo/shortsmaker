@@ -1,12 +1,12 @@
 ---
 source_file: "blender/scene_kit.py"
 type: "code"
-community: "tree"
+community: "scene_kit.py"
 location: "L52"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/tree
+  - community/scene_kitpy
 ---
 
 # surface_z()
@@ -14,6 +14,6 @@ tags:
 ## Connections
 - [[The height of o's top surface above (x, y), or None when nothing of o is there.]] - `rationale_for` [EXTRACTED]
 - [[scene_kit.py]] - `contains` [EXTRACTED]
-- [[tree()_1]] - `calls` [EXTRACTED]
+- [[tree()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/tree
+#graphify/code #graphify/EXTRACTED #community/scene_kitpy

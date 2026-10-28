@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/image_sources.py"
 type: "code"
-community: "plan_rules.py"
+community: "image_sources.py"
 location: "L41"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/plan_rulespy
+  - community/image_sourcespy
 ---
 
 # wm_get()
@@ -15,9 +15,10 @@ tags:
 - [[GET from Wikimedia, spaced `gap` seconds apart, with a short backoff on rate…]] - `rationale_for` [EXTRACTED]
 - [[article_text()]] - `calls` [EXTRACTED]
 - [[commons_films()]] - `calls` [EXTRACTED]
-- [[fetch()_1]] - `calls` [EXTRACTED]
+- [[fetch()]] - `calls` [EXTRACTED]
+- [[fetch_ideas()]] - `calls` [EXTRACTED]
 - [[get_image()]] - `calls` [EXTRACTED]
 - [[image_sources.py]] - `contains` [EXTRACTED]
 - [[wm_files()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/plan_rulespy
+#graphify/code #graphify/EXTRACTED #community/image_sourcespy

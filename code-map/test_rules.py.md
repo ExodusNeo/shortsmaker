@@ -65,6 +65,7 @@ tags:
 - [[test_strange_history_prompts_unchanged()]] - `contains` [EXTRACTED]
 - [[test_strips_tag_comments()]] - `contains` [EXTRACTED]
 - [[test_unknown_visuals_stop()]] - `contains` [EXTRACTED]
+- [[topic_ideas.py]] - `imports_from` [EXTRACTED]
 - [[traceback]] - `imports` [EXTRACTED]
 - [[writing.py]] - `imports_from` [EXTRACTED]
 

@@ -19,6 +19,5 @@ tags:
 - [[material()_1]] - `calls` [EXTRACTED]
 - [[math]] - `calls` [EXTRACTED]
 - [[opener_scene.py]] - `contains` [EXTRACTED]
-- [[random]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/opener_scenepy

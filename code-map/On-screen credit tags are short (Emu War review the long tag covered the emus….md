@@ -2,7 +2,7 @@
 source_file: "tests/test_full_scenes.py"
 type: "rationale"
 community: "test_full_scenes.py"
-location: "L723"
+location: "L725"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED

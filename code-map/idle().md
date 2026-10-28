@@ -1,12 +1,12 @@
 ---
 source_file: "blender/people.py"
 type: "code"
-community: "_clip"
+community: "math"
 location: "L284"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/_clip
+  - community/math
 ---
 
 # idle()
@@ -17,4 +17,4 @@ tags:
 - [[main()_9]] - `calls` [EXTRACTED]
 - [[people.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/_clip
+#graphify/code #graphify/EXTRACTED #community/math

@@ -2,7 +2,7 @@
 source_file: "tests/test_pictures_first.py"
 type: "code"
 community: "choose_images"
-location: "L381"
+location: "L383"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[choose_images()]] - `calls` [EXTRACTED]
 - [[picking]] - `calls` [EXTRACTED]
-- [[scene()]] - `calls` [EXTRACTED]
+- [[scene()_1]] - `calls` [EXTRACTED]
 - [[still()]] - `calls` [EXTRACTED]
 - [[test_pictures_first.py]] - `contains` [EXTRACTED]
 

@@ -11,7 +11,7 @@ members: 60
 - [[A number in lo, hi (whole numbers stay whole), or the default for anything…]] - rationale - shortsmaker/blender_plan.py
 - [[A plan that always works a truss bridge whose mid-span gusset plate bends.]] - rationale - shortsmaker/blender_plan.py
 - [[Blender build plans (2026-10-22) for channels with `visuals blender`, the…]] - rationale - shortsmaker/blender_plan.py
-- [[Image_1]] - code
+- [[Image_2]] - code
 - [[Pool indexes to try for the thumbnail's real photo, best first usable pictures…]] - rationale - shortsmaker/blender_plan.py
 - [[Render `plan` with scenes of the given lengths; returns {frame image} for one…]] - rationale - tests/test_blender_scene.py
 - [[Share of pixels that differ clearly between two frames.]] - rationale - tests/test_blender_scene.py
@@ -23,8 +23,8 @@ members: 60
 - [[Truss panels per span about square panels, 4-16 of them.]] - rationale - shortsmaker/blender_plan.py
 - [[What build_scene built (objects.json next to the frames).]] - rationale - tests/test_blender_scene.py
 - [[after()]] - code - tests/test_blender_scene.py
-- [[ask()_10]] - code - shortsmaker/blender_plan.py
-- [[ask()_11]] - code - tests/test_blender_plan.py
+- [[ask()_11]] - code - shortsmaker/blender_plan.py
+- [[ask()_12]] - code - tests/test_blender_plan.py
 - [[blender_plan.py]] - code - shortsmaker/blender_plan.py
 - [[changed()]] - code - tests/test_blender_scene.py
 - [[clamp()]] - code - shortsmaker/blender_plan.py
@@ -77,19 +77,20 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 18 edges to [[_COMMUNITY_pathlib]]
-- 4 edges to [[_COMMUNITY_json]]
-- 3 edges to [[_COMMUNITY_tempfile]]
-- 2 edges to [[_COMMUNITY_test_blender_render.py]]
+- 17 edges to [[_COMMUNITY_test_full_scenes.py]]
+- 4 edges to [[_COMMUNITY_test_blender_render.py]]
+- 3 edges to [[_COMMUNITY_json]]
 - 2 edges to [[_COMMUNITY_math]]
-- 2 edges to [[_COMMUNITY_render]]
+- 2 edges to [[_COMMUNITY_test_first_second.py]]
+- 2 edges to [[_COMMUNITY_subprocess]]
+- 1 edge to [[_COMMUNITY_frame_maker]]
 - 1 edge to [[_COMMUNITY_write_scripts]]
-- 1 edge to [[_COMMUNITY_ClipReader]]
-- 1 edge to [[_COMMUNITY_clean_pics]]
+- 1 edge to [[_COMMUNITY_pool_pictures]]
+- 1 edge to [[_COMMUNITY_frame_render.py]]
 
 ## Top bridge nodes
-- [[test_blender_plan.py]] - degree 24, connects to 4 communities
+- [[test_blender_plan.py]] - degree 24, connects to 5 communities
+- [[test_blender_scene.py]] - degree 28, connects to 4 communities
 - [[blender_plan.py]] - degree 21, connects to 4 communities
-- [[test_blender_scene.py]] - degree 28, connects to 3 communities
-- [[default_build()]] - degree 8, connects to 2 communities
 - [[thumbnail_order()]] - degree 5, connects to 2 communities
+- [[default_build()]] - degree 8, connects to 1 community

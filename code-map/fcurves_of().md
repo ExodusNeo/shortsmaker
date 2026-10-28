@@ -1,12 +1,12 @@
 ---
 source_file: "blender/scene_kit.py"
 type: "code"
-community: "_clip"
+community: "scene_kit.py"
 location: "L150"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/_clip
+  - community/scene_kitpy
 ---
 
 # fcurves_of()
@@ -18,4 +18,4 @@ tags:
 - [[main()_9]] - `calls` [EXTRACTED]
 - [[scene_kit.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/_clip
+#graphify/code #graphify/EXTRACTED #community/scene_kitpy

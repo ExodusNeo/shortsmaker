@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/edit_project.py"
 type: "rationale"
-community: "test_edit_project.py"
+community: "re"
 location: "L24"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/test_edit_projectpy
+  - community/re
 ---
 
 # dB that brings the tracks played together to LUFS, like the final mix's…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[master_gain()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/test_edit_projectpy
+#graphify/rationale #graphify/EXTRACTED #community/re

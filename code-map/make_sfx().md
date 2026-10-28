@@ -16,7 +16,6 @@ tags:
 - [[audio_mix.py]] - `contains` [EXTRACTED]
 - [[math]] - `calls` [EXTRACTED]
 - [[noise()_1]] - `contains` [EXTRACTED]
-- [[random]] - `calls` [EXTRACTED]
 - [[render()_5]] - `calls` [EXTRACTED]
 - [[save()]] - `contains` [EXTRACTED]
 

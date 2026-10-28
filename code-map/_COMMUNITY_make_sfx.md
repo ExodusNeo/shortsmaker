@@ -22,9 +22,8 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 1 edge to [[_COMMUNITY_math]]
-- 1 edge to [[_COMMUNITY_opener_scene.py]]
 - 1 edge to [[_COMMUNITY_render]]
-- 1 edge to [[_COMMUNITY_audio_mix.py]]
+- 1 edge to [[_COMMUNITY_test_full_scenes.py]]
 
 ## Top bridge nodes
-- [[make_sfx()]] - degree 7, connects to 4 communities
+- [[make_sfx()]] - degree 6, connects to 3 communities

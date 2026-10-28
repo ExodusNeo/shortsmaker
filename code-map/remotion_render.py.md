@@ -1,17 +1,18 @@
 ---
 source_file: "shortsmaker/remotion_render.py"
 type: "code"
-community: "pathlib"
+community: "test_full_scenes.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/pathlib
+  - community/test_full_scenespy
 ---
 
 # remotion_render.py
 
 ## Connections
+- [[Random]] - `imports` [EXTRACTED]
 - [[Rendering a Short with Remotion (with the Python renderer as fallback),…]] - `rationale_for` [EXTRACTED]
 - [[__init__.py]] - `imports_from` [EXTRACTED]
 - [[audio_mix.py]] - `imports_from` [EXTRACTED]
@@ -28,7 +29,6 @@ tags:
 - [[pathlib]] - `imports_from` [EXTRACTED]
 - [[photo_prep.py]] - `imports_from` [EXTRACTED]
 - [[pil]] - `imports_from` [EXTRACTED]
-- [[random]] - `imports` [EXTRACTED]
 - [[redraw_custom()]] - `contains` [EXTRACTED]
 - [[render_remotion()]] - `contains` [EXTRACTED]
 - [[review.py]] - `imports_from` [EXTRACTED]
@@ -43,4 +43,4 @@ tags:
 - [[test_style.py]] - `imports_from` [EXTRACTED]
 - [[wants_remotion()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/pathlib
+#graphify/code #graphify/EXTRACTED #community/test_full_scenespy

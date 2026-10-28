@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_blender_run.py"
 type: "code"
-community: "render"
+community: "test_blender_render.py"
 location: "L119"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/render
+  - community/test_blender_renderpy
 ---
 
 # test_film_opener_is_skipped_and_bad_bytes_fall_back()
@@ -17,4 +17,4 @@ tags:
 - [[get()]] - `indirect_call` [INFERRED]
 - [[test_blender_run.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/render
+#graphify/code #graphify/EXTRACTED #community/test_blender_renderpy

@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[One AI call picks and fills a shot template for every Short (sopener, and…]] - `rationale_for` [EXTRACTED]
-- [[ask()_9]] - `contains` [EXTRACTED]
+- [[ask()_10]] - `contains` [EXTRACTED]
 - [[fill_template()]] - `calls` [EXTRACTED]
 - [[opener_plan.py]] - `contains` [EXTRACTED]
 - [[test_fill_retry_then_none()]] - `calls` [EXTRACTED]

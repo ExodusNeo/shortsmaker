@@ -2,7 +2,7 @@
 source_file: "tests/test_pictures_first.py"
 type: "rationale"
 community: "gather_pool"
-location: "L35"
+location: "L36"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED

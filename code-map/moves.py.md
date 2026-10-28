@@ -13,6 +13,7 @@ tags:
 
 ## Connections
 - [[BMesh]] - `imports` [EXTRACTED]
+- [[Random]] - `imports` [EXTRACTED]
 - [[State]] - `contains` [EXTRACTED]
 - [[The opener moves (2026-10-27), plain bpy. Each works on roles (actor, target,…]] - `rationale_for` [EXTRACTED]
 - [[apply()]] - `contains` [EXTRACTED]
@@ -42,7 +43,6 @@ tags:
 - [[place_tool()]] - `contains` [EXTRACTED]
 - [[plane_splits()]] - `contains` [EXTRACTED]
 - [[push()]] - `contains` [EXTRACTED]
-- [[random]] - `imports` [EXTRACTED]
 - [[region_normal()]] - `contains` [EXTRACTED]
 - [[release()]] - `contains` [EXTRACTED]
 - [[roll()]] - `contains` [EXTRACTED]

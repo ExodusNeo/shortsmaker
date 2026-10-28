@@ -13,6 +13,7 @@ tags:
 
 ## Connections
 - [[Entry point blender.exe -b --factory-startup --python blenderopener_scene.py…]] - `rationale_for` [EXTRACTED]
+- [[Random]] - `imports` [EXTRACTED]
 - [[beat_actors()]] - `contains` [EXTRACTED]
 - [[bpy]] - `imports` [EXTRACTED]
 - [[build_set()]] - `contains` [EXTRACTED]
@@ -34,7 +35,6 @@ tags:
 - [[people.py]] - `imports` [EXTRACTED]
 - [[place_actors()]] - `contains` [EXTRACTED]
 - [[punch_in()]] - `contains` [EXTRACTED]
-- [[random]] - `imports` [EXTRACTED]
 - [[reach_back()]] - `contains` [EXTRACTED]
 - [[render()_1]] - `contains` [EXTRACTED]
 - [[retime()]] - `contains` [EXTRACTED]

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/llm.py"
 type: "code"
-community: "gemini_model"
+community: "ask_ai"
 location: "L24"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/gemini_model
+  - community/ask_ai
 ---
 
 # gemini_model()
@@ -19,4 +19,4 @@ tags:
 - [[test_argon_out_of_quota_switches_to_flash()]] - `calls` [EXTRACTED]
 - [[test_gemini_timeout_switches_to_flash()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/gemini_model
+#graphify/code #graphify/EXTRACTED #community/ask_ai

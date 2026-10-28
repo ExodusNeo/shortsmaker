@@ -2,7 +2,7 @@
 source_file: "tests/test_full_scenes.py"
 type: "code"
 community: "code_custom_scenes"
-location: "L690"
+location: "L692"
 tags:
   - graphify/code
   - graphify/EXTRACTED

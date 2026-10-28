@@ -2,7 +2,7 @@
 source_file: "tests/test_style.py"
 type: "code"
 community: "style_library"
-location: "L33"
+location: "L34"
 tags:
   - graphify/code
   - graphify/EXTRACTED

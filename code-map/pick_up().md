@@ -27,7 +27,7 @@ tags:
 - [[people.py]] - `contains` [EXTRACTED]
 - [[pick_up take (owner, 2026-10-28) the person walks over to the thing on the…]] - `rationale_for` [EXTRACTED]
 - [[rot_at()]] - `calls` [EXTRACTED]
-- [[tree()_1]] - `calls` [EXTRACTED]
+- [[tree()]] - `calls` [EXTRACTED]
 - [[world_verts()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/scene_kitpy

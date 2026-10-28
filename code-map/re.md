@@ -11,6 +11,7 @@ tags:
 # re
 
 ## Connections
+- [[_words()]] - `calls` [EXTRACTED]
 - [[align_words()]] - `calls` [EXTRACTED]
 - [[allowed_licence()]] - `calls` [EXTRACTED]
 - [[archive_films()]] - `calls` [EXTRACTED]
@@ -27,6 +28,7 @@ tags:
 - [[drawn_thumbnail()]] - `calls` [EXTRACTED]
 - [[edit_project.py]] - `imports` [EXTRACTED]
 - [[fallback_custom_tsx()]] - `calls` [EXTRACTED]
+- [[fetch_ideas()]] - `calls` [EXTRACTED]
 - [[first_second_check()]] - `calls` [EXTRACTED]
 - [[footage.py]] - `imports` [EXTRACTED]
 - [[gen.py]] - `imports` [EXTRACTED]
@@ -48,6 +50,7 @@ tags:
 - [[motion.py]] - `imports` [EXTRACTED]
 - [[music_gain()]] - `calls` [EXTRACTED]
 - [[opener_plan.py]] - `imports` [EXTRACTED]
+- [[parse_ideas()]] - `calls` [EXTRACTED]
 - [[parse_rules()]] - `calls` [EXTRACTED]
 - [[parse_scene_money()]] - `calls` [EXTRACTED]
 - [[pick_channel()]] - `calls` [EXTRACTED]
@@ -74,6 +77,7 @@ tags:
 - [[test_blender_link.py]] - `imports` [EXTRACTED]
 - [[test_edit_project.py]] - `imports` [EXTRACTED]
 - [[test_style.py]] - `imports` [EXTRACTED]
+- [[topic_ideas.py]] - `imports` [EXTRACTED]
 - [[unpack_clips()]] - `calls` [EXTRACTED]
 - [[vault_page()]] - `calls` [EXTRACTED]
 - [[vault_refresh()]] - `calls` [EXTRACTED]

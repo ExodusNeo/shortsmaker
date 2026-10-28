@@ -17,7 +17,7 @@ tags:
 - [[checks()]] - `calls` [EXTRACTED]
 - [[opener_checks.py]] - `contains` [EXTRACTED]
 - [[spans()]] - `calls` [EXTRACTED]
-- [[tree()]] - `calls` [EXTRACTED]
+- [[tree()_1]] - `calls` [EXTRACTED]
 - [[visible()]] - `calls` [EXTRACTED]
 - [[world_verts()_1]] - `calls` [EXTRACTED]
 

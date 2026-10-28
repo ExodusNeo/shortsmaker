@@ -16,7 +16,7 @@ tags:
 - [[Vector_4]] - `references` [EXTRACTED]
 - [[clear_distance_at_end()]] - `calls` [EXTRACTED]
 - [[moves.py]] - `contains` [EXTRACTED]
-- [[tree()_1]] - `calls` [EXTRACTED]
+- [[tree()]] - `calls` [EXTRACTED]
 - [[world_verts()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/movespy

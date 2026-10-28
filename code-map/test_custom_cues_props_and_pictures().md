@@ -2,7 +2,7 @@
 source_file: "tests/test_full_scenes.py"
 type: "code"
 community: "full_props"
-location: "L520"
+location: "L522"
 tags:
   - graphify/code
   - graphify/EXTRACTED
