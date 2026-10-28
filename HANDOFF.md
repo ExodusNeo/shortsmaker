@@ -845,8 +845,8 @@ owner's Blender (Mike's chop; the owner's six catches became the checks below). 
   unusable plan leaves `s["opener_check"]` and today's scene 1. The AI never writes Blender code.
 - Models (`blender_link.py`): `D:\ShortsMaker\blender\assets\library\polypizza_<id>.blend + .json` (gitignored;
   credits in the json). Missing ones: search (CC0 / plain CC-BY only), one AI call picks by title
-  (`opener_render.pick_model`), fetched in a temporary scene `SM_fetch` that copies the add-on's per-scene switches
-  (its commands only exist while that scene's switch is on), the owner's scene restored after. Poly Pizza only (Poly
+  (`opener_render.pick_model`), fetched in the owner's own scene (owner, 2026-10-28: no scene of ours; it used to be a temporary
+  `SM_fetch` scene): the objects there before are noted, the download's new ones saved and removed. Poly Pizza only (Poly
   Haven's photo-real scans clash with the look); never Sketchfab (NC licences, fan art).
 - Blender side (plain bpy): `opener_scene.py` (set, brand look: EEVEE, AgX, warm sun, 50 mm, f/2.2 on the subject,
   camera: starts wider and pushes in, arcs 14 deg, cranes up 16 deg, handheld sway, a jolt on the first hit and a lens
@@ -928,9 +928,11 @@ owner's Blender (Mike's chop; the owner's six catches became the checks below). 
     farmer stood behind the trader). Everyone who has to be seen is also checked for being hidden. Onion try 2 now
     passes every check and reads by eye (sack topples into the trader, he goes down, the farmer cheers); the empty
     floor below them is where the captions (bottom-aligned, 620 px up) and YouTube's buttons sit.
-  - To look at a build in the owner's window: a job with `"save_blend": <path>` saves the built scene; append its
-    scene with `bpy.data.libraries.load` (never `setup()` live), `look`, then set the window back to "Scene" and
-    remove the appended scene + orphans.
+  - To look at a build in the owner's window: a job with `"save_blend": <path>` saves the built scene. **Owner
+    (2026-10-28): keep the window on their one "Scene"; never add or switch to another scene** (each new scene means
+    starting the MCP again). Load the build's objects into a temporary collection in "Scene"
+    (`bpy.data.libraries.load`; never `setup()` live), set `scene.camera`/frame range to the build's, `look`, then
+    restore them and remove the collection, its objects and orphans.
  The add-on registers its Poly Pizza commands per
   scene (`blendermcp_use_polypizza`): with the window on an appended test scene, every model search failed with
   "Unknown command type: search_polypizza_models" (2026-10-28).

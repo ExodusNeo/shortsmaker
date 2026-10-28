@@ -112,7 +112,8 @@ def test_fetch_saves_pair(fake):
     assert meta["size_m"] == 0.55 and "rooster" in meta["tags"] and "poly.pizza/m/b2" in meta["attribution"]
     assert blender_link.credit(blend) == meta["attribution"]
     codes = [c["params"]["code"] for c in fake.calls if c["type"] == "execute_code"]
-    assert any("blendermcp_" in c and "SM_fetch" in c for c in codes), "the temporary scene copies the add-on switches"
+    assert any("sm_before" in c for c in codes), "fetched in the owner's scene: only the download's new objects"
+    assert not any("scenes.new" in c or "window.scene =" in c for c in codes), "never a scene of ours (owner)"
     assert any("tempdir" in c and str(config.BLENDER_TMP) in c for c in codes), "downloads go through D:"
     cc0 = dict(hit, id="a1", licence="CC0 1.0", title="Tree Stump")
     blend0, _ = blender_link.fetch_model(cc0, "tree stump", 1.2)
@@ -136,7 +137,7 @@ def test_download_error_cleans_up(fake):
                                            "licence": "CC0 1.0", "tags": []}, "thing", 1.0)
     assert blend is None and "No Poly Pizza model" in why
     last = [c["params"]["code"] for c in fake.calls if c["type"] == "execute_code"][-1]
-    assert "SM_fetch" in last and "SAVE_PATH" not in last, "the temporary scene is removed without saving"
+    assert "sm_before" in last and "SAVE_PATH" not in last, "the download's objects are removed without saving"
 
 
 @with_fake

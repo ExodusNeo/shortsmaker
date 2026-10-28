@@ -11,7 +11,6 @@ from pathlib import Path
 
 from shortsmaker import config
 
-FETCH_SCENE = "SM_fetch"
 
 
 class LinkError(RuntimeError):
@@ -97,30 +96,21 @@ def credit(blend: Path) -> str | None:
     return None if "CC0" in meta.get("licence", "").upper() else meta.get("attribution")
 
 
-SETUP = f"""import bpy, tempfile
-tempfile.tempdir = r'{{tmp}}'
-src = bpy.context.window.scene
-bpy.app.driver_namespace['sm_prev_scene'] = src.name
-old = bpy.data.scenes.get('{FETCH_SCENE}')
-if old: bpy.data.scenes.remove(old)
-new = bpy.data.scenes.new('{FETCH_SCENE}')
-for p in bpy.types.Scene.bl_rna.properties:  # the add-on's on/off switches are kept per scene
-    if p.identifier.startswith('blendermcp_'):
-        try: setattr(new, p.identifier, getattr(src, p.identifier))
-        except Exception: pass
-bpy.context.window.scene = new
+# Fetched in the owner's own scene, never a scene of ours (owner, 2026-10-28: a new scene meant starting the MCP
+# again): the objects that were there before are noted, the download's new ones saved and removed, nothing else
+# touched. The add-on's commands also only exist while a scene with its switches on is current.
+SETUP = """import bpy, tempfile
+tempfile.tempdir = r'{tmp}'
+bpy.app.driver_namespace['sm_before'] = set(bpy.data.objects.keys())
 print('ready')
 """
 
-FINISH = f"""import bpy
-fetch = bpy.data.scenes.get('{FETCH_SCENE}')
-objs = list(fetch.objects) if fetch else []
-{{save}}
+FINISH = """import bpy
+before = bpy.app.driver_namespace.pop('sm_before', None)
+objs = [o for o in bpy.data.objects if before is not None and o.name not in before]  # unknown before: touch nothing
+{save}
 for o in objs:
     bpy.data.objects.remove(o, do_unlink=True)
-prev = bpy.data.scenes.get(bpy.app.driver_namespace.pop('sm_prev_scene', ''))
-if prev: bpy.context.window.scene = prev
-if fetch: bpy.data.scenes.remove(fetch)
 print('saved', len(objs))
 """
 
