@@ -1019,6 +1019,30 @@ every opener.
   portrait frame. Each run fixed a general fault (see the rulings in the commits); the remaining ones are content.
   Ideas: an explosion/smoke move, the planner told which models the library already has, a closed-umbrella default.
 
+## Opener next steps (2026-10-28, agreed with the owner, in this order)
+1. **A live run** of one Short with the onion-run fixes (framing everyone, checks before the render, depth staging,
+   collapse, fetching in the owner's scene). Onion try 2 passes every check when replayed; no AI review or owner has
+   seen it yet. Read `edit_plan.txt` (Opening + CHECK lines), `work/opener_tries/`, `work/opener_report.json`.
+2. **Shot templates** (recommended as the real consistency fix; not started): a small set of staged shots built once
+   and checked by eye ("a thing falls near a person", "one hands something to another", "a person collapses",
+   "a cut", "a crowd cheers"); the planner picks one and fills in roles and models instead of composing moves
+   freely (0 of ~10 live runs passed that way, each new combination found a new engine edge). Same reason the
+   motion-graphic templates are reliable and custom code needs a fallback.
+3. **TRELLIS.2 on Colab for missing models** (owner, 2026-10-28: fine running the Colab step by hand, like the H3
+   clips). microsoft/TRELLIS.2-4B, picture -> textured 3D model, **MIT licence** (commercial use, no conditions),
+   about 24 GB VRAM: the Colab Pro A100 account (gutierrezdishann@gmail.com; the others are free tier). Plan: when
+   no library has a model (`resolve_models`' "no fitting model"), MOSS paints the object on a plain background,
+   TRELLIS.2 turns it into a model, saved to `blender/assets/library` with a json like a Poly Pizza model so later
+   runs reuse it. Open: the hand-off pauses the run until the owner runs the notebook (or models are made ahead of
+   time), fit with the toon look, mesh quality for the physics/overlap checks. Read the repo's LICENSE before building.
+- Considered, not chosen: Hyper3D Rodin through the MCP add-on (its "free trial" is a key built into the add-on and
+  shared by all its users, about 10 credits, commercial terms unclear; only with the owner's own key on a plan that
+  clearly allows commercial use); Hunyuan3D 2.1 (Tencent licence excludes the EU, UK, South Korea; 29 GB with
+  texture). Text-to-motion for more people moves, only if templates show the 17 clips aren't enough: HY-Motion 1.0
+  (Tencent community licence, reportedly free commercial use under 100M monthly users; 24-26 GB) or NVIDIA Kimodo
+  (code Apache-2.0, weights licence per checkpoint, the SMPL-X one non-commercial; 17 GB, under 3 GB with the text
+  encoder on CPU); both need retargeting onto the 32-bone Quaternius rig.
+
 ## Ideas offered, not built
 - Voice cloning (owner's own voice), SFX on the music's beat, YouTube Audio Library tracks for the somber/epic moods.
 - Logbook extras from the Reach/Engagement tabs (drop-off times, search terms, shown in feed, likes/shares): offered
