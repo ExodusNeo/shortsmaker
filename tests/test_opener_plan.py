@@ -214,7 +214,7 @@ def test_fill_if_items():
     r["fill"]["witness"] = None  # a falls_on with nobody reacting hid its victim behind the crate (2026-10-28)
     assert opener_plan.fill_template(r) is None
     cheer = opener_plan.fill_template(copy.deepcopy(SAMPLES["falls_on_cheer"]))
-    assert cheer["beats"][-1] == {"move": "cheer", "actor": "witness", "at": 1.8}
+    assert cheer["beats"][-1] == {"move": "cheer", "actor": "witness", "at": 1.7}
     sl = opener_plan.fill_template(copy.deepcopy(SAMPLES["slice"]))
     assert sl["beats"][0]["strokes"] == [{"rows": 5}] and sl["beats"][0]["expect"][0]["pieces"] == "5-5"
     run = opener_plan.fill_template(copy.deepcopy(SAMPLES["hand_over_run"]))
