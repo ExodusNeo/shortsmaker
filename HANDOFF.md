@@ -923,7 +923,14 @@ owner's Blender (Mike's chop; the owner's six catches became the checks below). 
   - `collapse` played `Defeat`, which only hangs the head (head 2.08 -> 1.84 -> 2.08 m); it now plays `Death` and
     `despair` is the head-hang. The stand-in library's `Defeat` had been a fall, so no test saw it. Die/collapse
     say they fall the way the person faces.
-  - Still open: three people across a portrait frame are small (about 15%) with empty floor below them.
+  - Groups of three or more stand in depth (9:16 staging: foreground to back, not side by side): everyone after
+    the first goes back at a slant (0.8 across, 0.6 back), so silhouettes clear (at the linked pair's 0.5/0.85 the
+    farmer stood behind the trader). Everyone who has to be seen is also checked for being hidden. Onion try 2 now
+    passes every check and reads by eye (sack topples into the trader, he goes down, the farmer cheers); the empty
+    floor below them is where the captions (bottom-aligned, 620 px up) and YouTube's buttons sit.
+  - To look at a build in the owner's window: a job with `"save_blend": <path>` saves the built scene; append its
+    scene with `bpy.data.libraries.load` (never `setup()` live), `look`, then set the window back to "Scene" and
+    remove the appended scene + orphans.
  The add-on registers its Poly Pizza commands per
   scene (`blendermcp_use_polypizza`): with the window on an appended test scene, every model search failed with
   "Unknown command type: search_polypizza_models" (2026-10-28).

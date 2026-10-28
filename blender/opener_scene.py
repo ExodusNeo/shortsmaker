@@ -240,9 +240,13 @@ def place_actors(plan: dict, models: dict, st: moves.State, lib: dict | None = N
         last[sgn] = aid
         if not k:
             edge[-1], last[-1] = width / 2, aid
-        # a row across the shot; what someone goes at stands back into the depth instead, so a tall portrait frame
-        # holds both big (side by side across it, the officer beside a car shrank to 8% of the height)
-        o.location = kit.view(Vector((0.5 * side, 0.85 * abs(side), 0)) if aid in linked and k else Vector((side, 0, 0)))
+        # a row across the shot; what someone goes at, and everyone after the first in a group of three or more,
+        # stands back into the depth instead, so a tall portrait frame holds them big (side by side across it, the
+        # officer beside a car shrank to 8% of the height, the onion run's three to 13%; 9:16 staging is in depth)
+        # a group's row goes back at a shallower slant: at the linked pair's the farmer stood behind the trader
+        across, back = (0.5, 0.85) if aid in linked else (0.8, 0.6)
+        deep = k and (aid in linked or len(on_ground) >= 3)
+        o.location = kit.view(Vector((across * side, back * abs(side), 0)) if deep else Vector((side, 0, 0)))
     for walker, way in heading.items():  # what stands in the walker's way goes behind them instead
         if walker not in on_ground:
             continue
@@ -565,6 +569,7 @@ def checks(plan: dict, st: moves.State, cam, subject_id: str) -> list[str]:
         out += oc.hidden(obj, cam, fr, occluders)
     for obj, fr in seen_segments(plan, st, subject_id)[len(subject_segments(subject_id, st, sc.frame_end)):]:
         out += oc.in_frame(obj, cam, fr)
+        out += oc.hidden(obj, cam, fr, [o for o in occluders if o is not obj])
     for b in plan["beats"]:
         if b.get("actor") in st.objs and b["actor"] not in st.intact and not st.objs[b["actor"]].get("person")                 and b["move"] in oc_moves():
             out += oc.moves_visibly(b["move"], st.objs[b["actor"]], frames)
@@ -665,6 +670,8 @@ def main(job_path: str) -> None:
         report["look"] = look_toon.apply(list(bpy.context.scene.objects))
         kit.simulate()  # what's added after the checks can drop the physics cache; slow-motion subframes can't rebuild it
         render(job, times)
+    if job.get("save_blend"):  # to look at a build in the owner's window (appended there, never setup() live)
+        bpy.ops.wm.save_as_mainfile(filepath=job["save_blend"], copy=True)
     Path(job["report"]).write_text(json.dumps(report, indent=1), encoding="utf-8")
 
 
