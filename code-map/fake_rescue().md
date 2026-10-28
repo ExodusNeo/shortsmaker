@@ -2,7 +2,7 @@
 source_file: "tests/test_full_scenes.py"
 type: "code"
 community: "apply_review_fixes"
-location: "L405"
+location: "L409"
 tags:
   - graphify/code
   - graphify/INFERRED

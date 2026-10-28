@@ -2,7 +2,7 @@
 source_file: "tests/test_full_scenes.py"
 type: "code"
 community: "_fake_planning"
-location: "L423"
+location: "L427"
 tags:
   - graphify/code
   - graphify/EXTRACTED

@@ -2,7 +2,7 @@
 source_file: "tests/test_full_scenes.py"
 type: "rationale"
 community: "_fake_planning"
-location: "L424"
+location: "L428"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED

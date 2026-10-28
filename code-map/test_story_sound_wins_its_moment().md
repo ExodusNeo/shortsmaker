@@ -2,7 +2,7 @@
 source_file: "tests/test_full_scenes.py"
 type: "code"
 community: "sfx_events"
-location: "L859"
+location: "L863"
 tags:
   - graphify/code
   - graphify/EXTRACTED

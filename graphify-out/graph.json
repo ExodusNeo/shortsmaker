@@ -1184,7 +1184,7 @@
       "file_type": "code",
       "norm_label": "test_local_job_retries_a_hard_crash()",
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L733"
+      "source_location": "L737"
     },
     {
       "id": "tests_test_full_scenes_test_local_job_retries_a_hard_crash_fake_run",
@@ -1196,7 +1196,7 @@
       "file_type": "code",
       "norm_label": "fake_run()",
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L739"
+      "source_location": "L743"
     },
     {
       "id": "tests_test_h3_handoff_test_prompt_joins_fields",
@@ -3224,7 +3224,7 @@
       "file_type": "code",
       "norm_label": "test_fallback_custom_is_clean()",
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L686"
+      "source_location": "L690"
     },
     {
       "id": "local_ai_gen_encoder_args",
@@ -3668,7 +3668,7 @@
       "file_type": "code",
       "norm_label": "_review_state()",
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L586"
+      "source_location": "L590"
     },
     {
       "id": "tests_test_full_scenes_test_auto_fix_graphic",
@@ -3680,7 +3680,7 @@
       "file_type": "code",
       "norm_label": "test_auto_fix_graphic()",
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L398"
+      "source_location": "L402"
     },
     {
       "id": "tests_test_full_scenes_test_auto_fix_graphic_fake_rescue",
@@ -3692,7 +3692,7 @@
       "file_type": "code",
       "norm_label": "fake_rescue()",
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L405"
+      "source_location": "L409"
     },
     {
       "id": "tests_test_full_scenes_test_redraw_failure_paints",
@@ -3704,7 +3704,7 @@
       "file_type": "code",
       "norm_label": "test_redraw_failure_paints()",
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L625"
+      "source_location": "L629"
     },
     {
       "id": "tests_test_full_scenes_test_review_redraws_custom",
@@ -3716,7 +3716,7 @@
       "file_type": "code",
       "norm_label": "test_review_redraws_custom()",
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L598"
+      "source_location": "L602"
     },
     {
       "id": "tests_test_full_scenes_test_review_redraws_custom_ask",
@@ -3728,7 +3728,7 @@
       "file_type": "code",
       "norm_label": "ask()",
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L604"
+      "source_location": "L608"
     },
     {
       "id": "shortsmaker_remotion_render_render_remotion",
@@ -4568,7 +4568,7 @@
       "file_type": "code",
       "norm_label": "test_clean_full_keeps_thing()",
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L794"
+      "source_location": "L798"
     },
     {
       "id": "tests_test_full_scenes_test_clean_full_limits",
@@ -4592,7 +4592,7 @@
       "file_type": "code",
       "norm_label": "test_clean_sound()",
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L817"
+      "source_location": "L821"
     },
     {
       "id": "tests_test_full_scenes_test_fill_money_graphics_and_caps",
@@ -4604,7 +4604,7 @@
       "file_type": "code",
       "norm_label": "test_fill_money_graphics_and_caps()",
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L882"
+      "source_location": "L886"
     },
     {
       "id": "tests_test_full_scenes_test_number_scaling",
@@ -4952,7 +4952,7 @@
       "file_type": "code",
       "norm_label": "test_review_fix_kinds()",
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L386"
+      "source_location": "L390"
     },
     {
       "id": "blender_look_material",
@@ -5936,7 +5936,7 @@
       "file_type": "code",
       "norm_label": "test_look_check_fixes_code()",
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L691"
+      "source_location": "L695"
     },
     {
       "id": "tests_test_full_scenes_test_look_check_fixes_code_ask",
@@ -5948,7 +5948,7 @@
       "file_type": "code",
       "norm_label": "ask()",
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L699"
+      "source_location": "L703"
     },
     {
       "id": "tests_test_full_scenes_test_review_uses_unused_pool_pictures_before_painting",
@@ -5960,7 +5960,7 @@
       "file_type": "code",
       "norm_label": "test_review_uses_unused_pool_pictures_before_painting()",
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L423"
+      "source_location": "L427"
     },
     {
       "id": "tests_test_full_scenes_test_review_uses_unused_pool_pictures_before_painting_ask",
@@ -5972,7 +5972,7 @@
       "file_type": "code",
       "norm_label": "ask()",
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L442"
+      "source_location": "L446"
     },
     {
       "id": "tests_test_full_scenes_test_rewrite_paint_prompts",
@@ -5984,7 +5984,7 @@
       "file_type": "code",
       "norm_label": "test_rewrite_paint_prompts()",
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L464"
+      "source_location": "L468"
     },
     {
       "id": "tests_test_full_scenes_test_rewrite_paint_prompts_ask",
@@ -5996,7 +5996,7 @@
       "file_type": "code",
       "norm_label": "ask()",
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L471"
+      "source_location": "L475"
     },
     {
       "id": "local_ai_qwen_voice_align",
@@ -6536,7 +6536,7 @@
       "file_type": "code",
       "norm_label": "_jpg()",
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L299"
+      "source_location": "L303"
     },
     {
       "id": "tests_test_full_scenes_test_board_pictures_attached",
@@ -6560,7 +6560,7 @@
       "file_type": "code",
       "norm_label": "test_clean_full_custom_and_skin()",
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L502"
+      "source_location": "L506"
     },
     {
       "id": "tests_test_full_scenes_test_code_custom_scenes_fallback",
@@ -6572,7 +6572,7 @@
       "file_type": "code",
       "norm_label": "test_code_custom_scenes_fallback()",
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L529"
+      "source_location": "L533"
     },
     {
       "id": "tests_test_full_scenes_test_custom_cues_props_and_pictures",
@@ -6584,7 +6584,7 @@
       "file_type": "code",
       "norm_label": "test_custom_cues_props_and_pictures()",
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L516"
+      "source_location": "L520"
     },
     {
       "id": "tests_test_full_scenes_test_fact_check_drops_full",
@@ -6644,7 +6644,7 @@
       "file_type": "code",
       "norm_label": "test_full_props_figure()",
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L802"
+      "source_location": "L806"
     },
     {
       "id": "tests_test_full_scenes_test_full_summary",
@@ -6656,7 +6656,7 @@
       "file_type": "code",
       "norm_label": "test_full_summary()",
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L376"
+      "source_location": "L380"
     },
     {
       "id": "tests_test_full_scenes_test_lint_custom_code",
@@ -6668,7 +6668,7 @@
       "file_type": "code",
       "norm_label": "test_lint_custom_code()",
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L673"
+      "source_location": "L677"
     },
     {
       "id": "tests_test_full_scenes_test_make_paper",
@@ -6692,7 +6692,7 @@
       "file_type": "code",
       "norm_label": "test_music_gain_evens_out_tracks()",
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L758"
+      "source_location": "L762"
     },
     {
       "id": "tests_test_full_scenes_test_opener_graphic",
@@ -6716,7 +6716,7 @@
       "file_type": "code",
       "norm_label": "test_remotion_props_full()",
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L306"
+      "source_location": "L310"
     },
     {
       "id": "tests_test_full_scenes_test_rescue_respects_caps",
@@ -6740,7 +6740,7 @@
       "file_type": "code",
       "norm_label": "test_sfx_full()",
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L358"
+      "source_location": "L362"
     },
     {
       "id": "tests_test_full_scenes_test_short_credit",
@@ -6752,7 +6752,7 @@
       "file_type": "code",
       "norm_label": "test_short_credit()",
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L718"
+      "source_location": "L722"
     },
     {
       "id": "blender_build_scene_keyvis",
@@ -7124,7 +7124,7 @@
       "file_type": "code",
       "norm_label": "test_counter_finishes_before_it_leaves()",
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L871"
+      "source_location": "L875"
     },
     {
       "id": "tests_test_full_scenes_test_quota_fallback_both_ways",
@@ -7136,7 +7136,7 @@
       "file_type": "code",
       "norm_label": "test_quota_fallback_both_ways()",
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L550"
+      "source_location": "L554"
     },
     {
       "id": "tests_test_full_scenes_test_quota_fallback_both_ways_init",
@@ -7148,7 +7148,7 @@
       "file_type": "code",
       "norm_label": "__init__()",
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L555"
+      "source_location": "L559"
     },
     {
       "id": "tests_test_package_test_argon_out_of_quota_switches_to_flash",
@@ -7460,7 +7460,7 @@
       "file_type": "code",
       "norm_label": "test_story_sound_library()",
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L840"
+      "source_location": "L844"
     },
     {
       "id": "tests_test_full_scenes_test_story_sound_library_fetch",
@@ -7472,7 +7472,7 @@
       "file_type": "code",
       "norm_label": "fetch()",
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L845"
+      "source_location": "L849"
     },
     {
       "id": "tests_test_full_scenes_tone_wav",
@@ -7484,7 +7484,7 @@
       "file_type": "code",
       "norm_label": "_tone_wav()",
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L828"
+      "source_location": "L832"
     },
     {
       "id": "blender_build_scene_main",
@@ -8888,7 +8888,7 @@
       "file_type": "code",
       "norm_label": "test_new_picture_drops_mark()",
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L641"
+      "source_location": "L645"
     },
     {
       "id": "tests_test_full_scenes_test_paint_new_clears_full",
@@ -8900,7 +8900,7 @@
       "file_type": "code",
       "norm_label": "test_paint_new_clears_full()",
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L490"
+      "source_location": "L494"
     },
     {
       "id": "remotion_src_style_generated_inventedlook_inventedlook",
@@ -12836,7 +12836,7 @@
       "file_type": "code",
       "norm_label": "test_story_sound_wins_its_moment()",
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L859"
+      "source_location": "L863"
     },
     {
       "id": "tests_test_style_test_style_sounds",
@@ -14048,7 +14048,7 @@
       "file_type": "code",
       "norm_label": "test_state_roundtrip_full_pics()",
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L287"
+      "source_location": "L291"
     },
     {
       "id": "shortsmaker_audio_mix_make_sfx",
@@ -14816,7 +14816,7 @@
       "file_type": "code",
       "norm_label": "test_ink_silhouette()",
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L774"
+      "source_location": "L778"
     },
     {
       "id": "tests_test_full_scenes_test_remotion_failure_paints",
@@ -14828,7 +14828,7 @@
       "file_type": "code",
       "norm_label": "test_remotion_failure_paints()",
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L326"
+      "source_location": "L330"
     },
     {
       "id": "tests_test_full_scenes_test_remotion_failure_paints_fake_gemini",
@@ -14840,7 +14840,7 @@
       "file_type": "code",
       "norm_label": "fake_gemini()",
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L338"
+      "source_location": "L342"
     },
     {
       "id": "tests_test_full_scenes_test_remotion_failure_paints_fake_moss",
@@ -14852,7 +14852,7 @@
       "file_type": "code",
       "norm_label": "fake_moss()",
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L334"
+      "source_location": "L338"
     },
     {
       "id": "tests_test_style_test_remotion_forced_by_look",
@@ -15580,7 +15580,7 @@
       "source_location": "L31"
     },
     {
-      "id": "tests_test_full_scenes_rationale_734",
+      "id": "tests_test_full_scenes_rationale_738",
       "label": "Mike the Headless Chicken, fix round 3: the LTX worker died without writing\u2026",
       "_origin": "ast",
       "community": 11,
@@ -15588,7 +15588,7 @@
       "file_type": "rationale",
       "norm_label": "mike the headless chicken, fix round 3: the ltx worker died without writing...",
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L734"
+      "source_location": "L738"
     },
     {
       "id": "blender_scene_kit_py_bvhtree",
@@ -17989,7 +17989,7 @@
       "source_location": "L143"
     },
     {
-      "id": "tests_test_full_scenes_rationale_424",
+      "id": "tests_test_full_scenes_rationale_428",
       "label": "Togo vs Balto: 4 real pictures the review rejected became paintings while ~20\u2026",
       "_origin": "ast",
       "community": 35,
@@ -17997,10 +17997,10 @@
       "file_type": "rationale",
       "norm_label": "togo vs balto: 4 real pictures the review rejected became paintings while ~20...",
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L424"
+      "source_location": "L428"
     },
     {
-      "id": "tests_test_full_scenes_rationale_465",
+      "id": "tests_test_full_scenes_rationale_469",
       "label": "Mike's newsstand: a repaint from the unchanged prompt painted the identical\u2026",
       "_origin": "ast",
       "community": 35,
@@ -18008,7 +18008,7 @@
       "file_type": "rationale",
       "norm_label": "mike's newsstand: a repaint from the unchanged prompt painted the identical...",
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L465"
+      "source_location": "L469"
     },
     {
       "id": "local_ai_qwen_voice",
@@ -18352,7 +18352,7 @@
       "source_location": "L256"
     },
     {
-      "id": "tests_test_full_scenes_rationale_719",
+      "id": "tests_test_full_scenes_rationale_723",
       "label": "On-screen credit tags are short (Emu War review: the long tag covered the emus\u2026",
       "_origin": "ast",
       "community": 37,
@@ -18360,10 +18360,10 @@
       "file_type": "rationale",
       "norm_label": "on-screen credit tags are short (emu war review: the long tag covered the emus...",
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L719"
+      "source_location": "L723"
     },
     {
-      "id": "tests_test_full_scenes_rationale_759",
+      "id": "tests_test_full_scenes_rationale_763",
       "label": "Mike's Thinking Music (-22 LUFS) vanished under the voice with the old fixed\u2026",
       "_origin": "ast",
       "community": 37,
@@ -18371,7 +18371,7 @@
       "file_type": "rationale",
       "norm_label": "mike's thinking music (-22 lufs) vanished under the voice with the old fixed...",
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L759"
+      "source_location": "L763"
     },
     {
       "id": "blender_build_scene",
@@ -19540,7 +19540,7 @@
       "source_location": "L126"
     },
     {
-      "id": "tests_test_full_scenes_rationale_642",
+      "id": "tests_test_full_scenes_rationale_646",
       "label": "A \"mark\" card circles a detail of the old picture: it must go when the picture\u2026",
       "_origin": "ast",
       "community": 46,
@@ -19548,7 +19548,7 @@
       "file_type": "rationale",
       "norm_label": "a \"mark\" card circles a detail of the old picture: it must go when the picture...",
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L642"
+      "source_location": "L646"
     },
     {
       "id": "remotion_src_style_generated_inventedlook",
@@ -23269,7 +23269,7 @@
       "source_location": "L70"
     },
     {
-      "id": "tests_test_full_scenes_rationale_775",
+      "id": "tests_test_full_scenes_rationale_779",
       "label": "A painted figure (black ink on white) becomes a cropped, transparent\u2026",
       "_origin": "ast",
       "community": 85,
@@ -23277,7 +23277,7 @@
       "file_type": "rationale",
       "norm_label": "a painted figure (black ink on white) becomes a cropped, transparent...",
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L775"
+      "source_location": "L779"
     },
     {
       "id": "remotion_src_full_board",
@@ -35842,7 +35842,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "shortsmaker/picker.py",
-      "source_location": "L315",
+      "source_location": "L317",
       "weight": 1.0
     },
     {
@@ -35854,7 +35854,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "shortsmaker/picker.py",
-      "source_location": "L320",
+      "source_location": "L322",
       "weight": 1.0
     },
     {
@@ -35866,7 +35866,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "shortsmaker/picker.py",
-      "source_location": "L321",
+      "source_location": "L323",
       "weight": 1.0
     },
     {
@@ -35878,7 +35878,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "shortsmaker/picker.py",
-      "source_location": "L328",
+      "source_location": "L333",
       "weight": 1.0
     },
     {
@@ -41494,7 +41494,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L413",
+      "source_location": "L417",
       "weight": 1.0
     },
     {
@@ -41542,7 +41542,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L503",
+      "source_location": "L507",
       "weight": 1.0
     },
     {
@@ -41554,7 +41554,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L510",
+      "source_location": "L514",
       "weight": 1.0
     },
     {
@@ -41590,7 +41590,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L795",
+      "source_location": "L799",
       "weight": 1.0
     },
     {
@@ -41614,7 +41614,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L818",
+      "source_location": "L822",
       "weight": 1.0
     },
     {
@@ -41626,7 +41626,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L819",
+      "source_location": "L823",
       "weight": 1.0
     },
     {
@@ -41638,7 +41638,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L824",
+      "source_location": "L828",
       "weight": 1.0
     },
     {
@@ -41650,7 +41650,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L542",
+      "source_location": "L546",
       "weight": 1.0
     },
     {
@@ -41662,7 +41662,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L876",
+      "source_location": "L880",
       "weight": 1.0
     },
     {
@@ -41674,7 +41674,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L520",
+      "source_location": "L524",
       "weight": 1.0
     },
     {
@@ -41686,7 +41686,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L524",
+      "source_location": "L528",
       "weight": 1.0
     },
     {
@@ -41698,7 +41698,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L524",
+      "source_location": "L528",
       "weight": 1.0
     },
     {
@@ -41734,7 +41734,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L687",
+      "source_location": "L691",
       "weight": 1.0
     },
     {
@@ -41746,7 +41746,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L688",
+      "source_location": "L692",
       "weight": 1.0
     },
     {
@@ -41758,7 +41758,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L891",
+      "source_location": "L895",
       "weight": 1.0
     },
     {
@@ -41770,7 +41770,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L899",
+      "source_location": "L903",
       "weight": 1.0
     },
     {
@@ -41782,7 +41782,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L904",
+      "source_location": "L908",
       "weight": 1.0
     },
     {
@@ -41794,7 +41794,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L905",
+      "source_location": "L909",
       "weight": 1.0
     },
     {
@@ -41806,7 +41806,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L912",
+      "source_location": "L916",
       "weight": 1.0
     },
     {
@@ -41818,7 +41818,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L916",
+      "source_location": "L920",
       "weight": 1.0
     },
     {
@@ -41830,7 +41830,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L931",
+      "source_location": "L935",
       "weight": 1.0
     },
     {
@@ -41878,7 +41878,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L810",
+      "source_location": "L814",
       "weight": 1.0
     },
     {
@@ -41890,7 +41890,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L814",
+      "source_location": "L818",
       "weight": 1.0
     },
     {
@@ -41902,7 +41902,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L377",
+      "source_location": "L381",
       "weight": 1.0
     },
     {
@@ -41914,7 +41914,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L782",
+      "source_location": "L786",
       "weight": 1.0
     },
     {
@@ -41938,7 +41938,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L674",
+      "source_location": "L678",
       "weight": 1.0
     },
     {
@@ -41950,7 +41950,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L752",
+      "source_location": "L756",
       "weight": 1.0
     },
     {
@@ -41962,7 +41962,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L706",
+      "source_location": "L710",
       "weight": 1.0
     },
     {
@@ -41986,7 +41986,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L769",
+      "source_location": "L773",
       "weight": 1.0
     },
     {
@@ -41998,7 +41998,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L649",
+      "source_location": "L653",
       "weight": 1.0
     },
     {
@@ -42010,7 +42010,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L652",
+      "source_location": "L656",
       "weight": 1.0
     },
     {
@@ -42058,7 +42058,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L269",
+      "source_location": "L270",
       "weight": 1.0
     },
     {
@@ -42070,7 +42070,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L274",
+      "source_location": "L275",
       "weight": 1.0
     },
     {
@@ -42082,7 +42082,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L495",
+      "source_location": "L499",
       "weight": 1.0
     },
     {
@@ -42094,7 +42094,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L498",
+      "source_location": "L502",
       "weight": 1.0
     },
     {
@@ -42106,7 +42106,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L564",
+      "source_location": "L568",
       "weight": 1.0
     },
     {
@@ -42118,7 +42118,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L628",
+      "source_location": "L632",
       "weight": 1.0
     },
     {
@@ -42130,7 +42130,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L633",
+      "source_location": "L637",
       "weight": 1.0
     },
     {
@@ -42142,7 +42142,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L349",
+      "source_location": "L353",
       "weight": 1.0
     },
     {
@@ -42154,7 +42154,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L310",
+      "source_location": "L314",
       "weight": 1.0
     },
     {
@@ -42166,7 +42166,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L312",
+      "source_location": "L316",
       "weight": 1.0
     },
     {
@@ -42178,7 +42178,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L313",
+      "source_location": "L317",
       "weight": 1.0
     },
     {
@@ -42202,7 +42202,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L392",
+      "source_location": "L396",
       "weight": 1.0
     },
     {
@@ -42214,7 +42214,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L601",
+      "source_location": "L605",
       "weight": 1.0
     },
     {
@@ -42226,7 +42226,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L613",
+      "source_location": "L617",
       "weight": 1.0
     },
     {
@@ -42238,7 +42238,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L450",
+      "source_location": "L454",
       "weight": 1.0
     },
     {
@@ -42250,7 +42250,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L481",
+      "source_location": "L485",
       "weight": 1.0
     },
     {
@@ -42262,7 +42262,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L360",
+      "source_location": "L364",
       "weight": 1.0
     },
     {
@@ -42274,7 +42274,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L367",
+      "source_location": "L371",
       "weight": 1.0
     },
     {
@@ -42286,7 +42286,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L293",
+      "source_location": "L297",
       "weight": 1.0
     },
     {
@@ -42298,7 +42298,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L294",
+      "source_location": "L298",
       "weight": 1.0
     },
     {
@@ -42310,7 +42310,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L849",
+      "source_location": "L853",
       "weight": 1.0
     },
     {
@@ -42322,7 +42322,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L847",
+      "source_location": "L851",
       "weight": 1.0
     },
     {
@@ -42334,7 +42334,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L865",
+      "source_location": "L869",
       "weight": 1.0
     },
     {
@@ -63347,7 +63347,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L586",
+      "source_location": "L590",
       "weight": 1.0
     },
     {
@@ -66761,7 +66761,7 @@
       "confidence_score": 1.0,
       "context": "submodule_import",
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L883",
+      "source_location": "L887",
       "weight": 1.0
     },
     {
@@ -66773,7 +66773,7 @@
       "confidence_score": 1.0,
       "context": "submodule_import",
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L921",
+      "source_location": "L925",
       "weight": 1.0
     },
     {
@@ -76394,7 +76394,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L287",
+      "source_location": "L291",
       "weight": 1.0
     },
     {
@@ -76405,7 +76405,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L299",
+      "source_location": "L303",
       "weight": 1.0
     },
     {
@@ -76416,7 +76416,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L306",
+      "source_location": "L310",
       "weight": 1.0
     },
     {
@@ -76427,7 +76427,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L326",
+      "source_location": "L330",
       "weight": 1.0
     },
     {
@@ -76438,7 +76438,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L358",
+      "source_location": "L362",
       "weight": 1.0
     },
     {
@@ -76449,7 +76449,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L376",
+      "source_location": "L380",
       "weight": 1.0
     },
     {
@@ -76460,7 +76460,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L386",
+      "source_location": "L390",
       "weight": 1.0
     },
     {
@@ -76471,7 +76471,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L398",
+      "source_location": "L402",
       "weight": 1.0
     },
     {
@@ -76493,7 +76493,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L423",
+      "source_location": "L427",
       "weight": 1.0
     },
     {
@@ -76504,7 +76504,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L464",
+      "source_location": "L468",
       "weight": 1.0
     },
     {
@@ -76515,7 +76515,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L490",
+      "source_location": "L494",
       "weight": 1.0
     },
     {
@@ -76526,7 +76526,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L502",
+      "source_location": "L506",
       "weight": 1.0
     },
     {
@@ -76548,7 +76548,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L516",
+      "source_location": "L520",
       "weight": 1.0
     },
     {
@@ -76559,7 +76559,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L529",
+      "source_location": "L533",
       "weight": 1.0
     },
     {
@@ -76570,7 +76570,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L550",
+      "source_location": "L554",
       "weight": 1.0
     },
     {
@@ -76581,18 +76581,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L586",
-      "weight": 1.0
-    },
-    {
-      "source": "tests_test_full_scenes",
-      "target": "tests_test_full_scenes_test_review_redraws_custom",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "tests/test_full_scenes.py",
-      "source_location": "L598",
+      "source_location": "L590",
       "weight": 1.0
     },
     {
@@ -76608,13 +76597,24 @@
     },
     {
       "source": "tests_test_full_scenes",
+      "target": "tests_test_full_scenes_test_review_redraws_custom",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/test_full_scenes.py",
+      "source_location": "L602",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_full_scenes",
       "target": "tests_test_full_scenes_test_redraw_failure_paints",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L625",
+      "source_location": "L629",
       "weight": 1.0
     },
     {
@@ -76625,7 +76625,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L641",
+      "source_location": "L645",
       "weight": 1.0
     },
     {
@@ -76636,7 +76636,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L673",
+      "source_location": "L677",
       "weight": 1.0
     },
     {
@@ -76658,7 +76658,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L686",
+      "source_location": "L690",
       "weight": 1.0
     },
     {
@@ -76669,7 +76669,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L691",
+      "source_location": "L695",
       "weight": 1.0
     },
     {
@@ -76680,7 +76680,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L718",
+      "source_location": "L722",
       "weight": 1.0
     },
     {
@@ -76691,7 +76691,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L733",
+      "source_location": "L737",
       "weight": 1.0
     },
     {
@@ -76702,7 +76702,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L758",
+      "source_location": "L762",
       "weight": 1.0
     },
     {
@@ -76724,7 +76724,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L774",
+      "source_location": "L778",
       "weight": 1.0
     },
     {
@@ -76735,7 +76735,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L794",
+      "source_location": "L798",
       "weight": 1.0
     },
     {
@@ -76746,7 +76746,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L802",
+      "source_location": "L806",
       "weight": 1.0
     },
     {
@@ -76757,7 +76757,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L817",
+      "source_location": "L821",
       "weight": 1.0
     },
     {
@@ -76768,7 +76768,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L828",
+      "source_location": "L832",
       "weight": 1.0
     },
     {
@@ -76779,7 +76779,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L840",
+      "source_location": "L844",
       "weight": 1.0
     },
     {
@@ -76790,7 +76790,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L859",
+      "source_location": "L863",
       "weight": 1.0
     },
     {
@@ -76801,7 +76801,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L871",
+      "source_location": "L875",
       "weight": 1.0
     },
     {
@@ -76812,7 +76812,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L882",
+      "source_location": "L886",
       "weight": 1.0
     },
     {
@@ -76834,7 +76834,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L699",
+      "source_location": "L703",
       "weight": 1.0
     },
     {
@@ -76845,7 +76845,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L555",
+      "source_location": "L559",
       "weight": 1.0
     },
     {
@@ -76856,7 +76856,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L604",
+      "source_location": "L608",
       "weight": 1.0
     },
     {
@@ -76867,7 +76867,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L442",
+      "source_location": "L446",
       "weight": 1.0
     },
     {
@@ -76878,7 +76878,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L471",
+      "source_location": "L475",
       "weight": 1.0
     },
     {
@@ -85770,80 +85770,80 @@
       "weight": 1.0
     },
     {
-      "source": "tests_test_full_scenes_rationale_424",
+      "source": "tests_test_full_scenes_rationale_428",
       "target": "tests_test_full_scenes_test_review_uses_unused_pool_pictures_before_painting",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L424",
+      "source_location": "L428",
       "weight": 1.0
     },
     {
-      "source": "tests_test_full_scenes_rationale_465",
+      "source": "tests_test_full_scenes_rationale_469",
       "target": "tests_test_full_scenes_test_rewrite_paint_prompts",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L465",
+      "source_location": "L469",
       "weight": 1.0
     },
     {
-      "source": "tests_test_full_scenes_rationale_642",
+      "source": "tests_test_full_scenes_rationale_646",
       "target": "tests_test_full_scenes_test_new_picture_drops_mark",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L642",
+      "source_location": "L646",
       "weight": 1.0
     },
     {
-      "source": "tests_test_full_scenes_rationale_719",
+      "source": "tests_test_full_scenes_rationale_723",
       "target": "tests_test_full_scenes_test_short_credit",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L719",
+      "source_location": "L723",
       "weight": 1.0
     },
     {
-      "source": "tests_test_full_scenes_rationale_734",
+      "source": "tests_test_full_scenes_rationale_738",
       "target": "tests_test_full_scenes_test_local_job_retries_a_hard_crash",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L734",
+      "source_location": "L738",
       "weight": 1.0
     },
     {
-      "source": "tests_test_full_scenes_rationale_759",
+      "source": "tests_test_full_scenes_rationale_763",
       "target": "tests_test_full_scenes_test_music_gain_evens_out_tracks",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L759",
+      "source_location": "L763",
       "weight": 1.0
     },
     {
-      "source": "tests_test_full_scenes_rationale_775",
+      "source": "tests_test_full_scenes_rationale_779",
       "target": "tests_test_full_scenes_test_ink_silhouette",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L775",
+      "source_location": "L779",
       "weight": 1.0
     },
     {
@@ -86855,7 +86855,7 @@
       "confidence_score": 0.85,
       "context": "argument",
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L849",
+      "source_location": "L853",
       "weight": 1.0
     },
     {
@@ -87119,7 +87119,7 @@
       "confidence_score": 0.85,
       "context": "assignment",
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L411",
+      "source_location": "L415",
       "weight": 1.0
     },
     {
@@ -87131,7 +87131,7 @@
       "confidence_score": 0.85,
       "context": "assignment",
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L749",
+      "source_location": "L753",
       "weight": 1.0
     },
     {
@@ -87143,7 +87143,7 @@
       "confidence_score": 0.85,
       "context": "assignment",
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L704",
+      "source_location": "L708",
       "weight": 1.0
     },
     {
@@ -87155,7 +87155,7 @@
       "confidence_score": 0.85,
       "context": "assignment",
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L346",
+      "source_location": "L350",
       "weight": 1.0
     },
     {
@@ -87167,7 +87167,7 @@
       "confidence_score": 0.85,
       "context": "assignment",
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L346",
+      "source_location": "L350",
       "weight": 1.0
     },
     {
@@ -87179,7 +87179,7 @@
       "confidence_score": 0.85,
       "context": "assignment",
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L611",
+      "source_location": "L615",
       "weight": 1.0
     },
     {
@@ -87191,7 +87191,7 @@
       "confidence_score": 0.85,
       "context": "assignment",
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L448",
+      "source_location": "L452",
       "weight": 1.0
     },
     {
@@ -87203,7 +87203,7 @@
       "confidence_score": 0.85,
       "context": "assignment",
       "source_file": "tests/test_full_scenes.py",
-      "source_location": "L479",
+      "source_location": "L483",
       "weight": 1.0
     },
     {
@@ -88240,5 +88240,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "f794b65058c9c4ee9dc354ada843790ff64a11ab"
+  "built_at_commit": "0c03249e616b9b085236a1ca2e604677f310a331"
 }
