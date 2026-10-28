@@ -1027,13 +1027,15 @@ Owner asked whether to drop Blender for three.js openers; the answer given: keep
 when no template fits, and add three.js only as a fixed template. All three built:
 - **Shot templates** (`blender/shot_templates.json`): `chop` (Mike's rooster: a bird on a block loses its head, the
   body hops off and staggers away), `slice` (a food on a board sliced into 4-6 rings), `falls_on` (a sack/bag
-  topples on a person who flinches and collapses; a second person cheers or despairs), `hand_over` (one person drops
+  drops from 2.5 m and crashes down beside a person who flinches and collapses; a second person cheers or despairs;
+  it toppled at first, which only rocked the sack sideways), `hand_over` (one person drops
   a small prop, another walks over, picks it up and walks/runs off). Each is a plan that passed the checks with
   `$slot` blanks; the planner (`opener_plan.plan_openers`) only picks one and fills it (roles, models with size
   ranges, a few picks, ground/light/backdrop); `fill_template` validates every value and `clean_opener` the result.
   Proof: `tests\test_shot_templates.py`, 8 variants with the real library + people, all pass every check, strips
-  looked at by eye (`cache\shot_templates\`). **Not yet seen in the owner's live Blender window** (MCP was off), not
-  through the AI review, and no live run yet.
+  looked at by eye (`cache\shot_templates\`). Seen in the owner's live window the same evening (chop, hand_over, falls_on;
+  physics pieces such as the flying head and the dropped sack don't play there, the build's rigid-body world stays
+  in its own scene, so judge those from the render). Not through the AI review, and no live run yet.
 - Limits found while building them, kept out of the templates: chopping a thing that isn't a bird (the axe left the
   first frame); `falls_on` with a crate (it hid the person once fallen) or with nobody reacting (same);
   `walk_through` (a person strolls on while a blast goes off behind them) was dropped: `scatter` only hops a thing,

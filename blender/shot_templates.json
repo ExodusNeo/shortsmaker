@@ -192,7 +192,7 @@
   }
  },
  "falls_on": {
-  "shows": "a big sack topples over and crashes down in front of a person, who flinches and collapses, while a second person cheers or hangs their head",
+  "shows": "a big sack drops from above and crashes down beside a person, who flinches and collapses, while a second person cheers or hangs their head",
   "grounds": [
    "wood floor",
    "stone",
@@ -249,24 +249,25 @@
    ],
    "beats": [
     {
-     "move": "topple",
+     "move": "fall",
      "actor": "thing",
-     "at": 0.5
+     "at": 0.2,
+     "from_m": 2.5
     },
     {
      "move": "flinch",
      "actor": "victim",
-     "at": 0.9
+     "at": 0.85
     },
     {
      "move": "collapse",
      "actor": "victim",
-     "at": 1.3
+     "at": 1.15
     },
     {
      "move": "$witness_does",
      "actor": "witness",
-     "at": 1.8
+     "at": 1.7
     }
    ],
    "camera": {
