@@ -935,7 +935,9 @@ owner's Blender (Mike's chop; the owner's six catches became the checks below). 
     restore them and remove the collection, its objects and orphans.
  The add-on registers its Poly Pizza commands per
   scene (`blendermcp_use_polypizza`): with the window on an appended test scene, every model search failed with
-  "Unknown command type: search_polypizza_models" (2026-10-28).
+  "Unknown command type: search_polypizza_models" (2026-10-28). **Owner, 2026-10-28: never add or switch to another scene in their window** (every opener try used to
+  open an `SM_fetch` scene for its downloads, and a new scene means starting the MCP again): downloads, live looks and
+  tests all stay in "Scene".
 - **`## Opener` in each channel's rules file** (owner, 2026-10-27: "i want the quality to improve on every short"):
   the planner stages from it and the AI review judges by it, including the owner's accepted conventions (unseen hand
   just off-screen, an animal cut where it stands, a blade stops at the first thing it isn't cutting) and staging
@@ -991,7 +993,7 @@ every opener.
   off, near-black skin -> a default tone, each body's front measured). The Universal Animation Library is a different
   65-bone skeleton and is unused (retargeting is out of scope). `config.PEOPLE_*` point at the files.
 - **Tables** (`opener_tables.json`): `roles` (25: body, colours by the body's material names, hat find, height) and
-  `people_moves` (18: walk/run/carry travel; die, collapse, flinch, sit, stand_up, jump, roll, punch, swing_prop,
+  `people_moves` (19: walk/run/carry travel; die, collapse, despair, flinch, sit, stand_up, jump, roll, punch, swing_prop,
   shoot, pick_up, cheer, throw_prop, drop_prop, idle). A plan's person: `{"id", "person": role, "facing", "prop"}`.
 - **Blender** (`blender/people.py`): `dress` makes the mesh the root (origin at the feet) with its armature under it,
   colours, a hat on top of the head, the prop in the hand (the fist bone's HEAD: imported bone tails are guesses):
@@ -1023,6 +1025,10 @@ every opener.
 1. **A live run** of one Short with the onion-run fixes (framing everyone, checks before the render, depth staging,
    collapse, fetching in the owner's scene). Onion try 2 passes every check when replayed; no AI review or owner has
    seen it yet. Read `edit_plan.txt` (Opening + CHECK lines), `work/opener_tries/`, `work/opener_report.json`.
+   Also open from that run: the owner says run.bat's "press any key" at the end doesn't close the window. Not found in
+   the code (nothing changes the console mode; ComfyUI is stopped, VoiceStudio is a GUI app). Guess: Windows Terminal
+   keeps a tab open after a non-zero exit code and then only Enter/Ctrl+D act. Asked the owner for the window's last
+   line; not fixed.
 2. **Shot templates** (recommended as the real consistency fix; not started): a small set of staged shots built once
    and checked by eye ("a thing falls near a person", "one hands something to another", "a person collapses",
    "a cut", "a crowd cheers"); the planner picks one and fills in roles and models instead of composing moves
@@ -1056,12 +1062,12 @@ every opener.
   `.venv\Scripts\python.exe tests\test_first_second.py` (10: first-second check, opener swap incl. owner clips and the scene/picture list, review overlay windows, logbook small-sample note),
   `.venv\Scripts\python.exe tests\test_story.py` (9: word counts match the aligner, sentence takes, cutting a take, story_problems, editor second pass, rules in the prompt, twist check),
   `.venv\Scripts\python.exe tests\test_edit_project.py` (2: Shotcut timeline layout (pictures, graphics, captions; 3 sound tracks), output filters, markers; melt renders graphics + captions over the pictures at -14 LUFS),
-  `.venv\Scripts\python.exe tests\test_full_scenes.py` (43 on 2026-10-21), `.venv\Scripts\python.exe tests\test_pictures_first.py` (39: pool, picture list, topic check, `pic`, picker, review fixes, relevance filter, Pixabay filter) and
+  `.venv\Scripts\python.exe tests\test_full_scenes.py` (46 on 2026-10-28), `.venv\Scripts\python.exe tests\test_pictures_first.py` (39: pool, picture list, topic check, `pic`, picker, review fixes, relevance filter, Pixabay filter) and
   `.venv\Scripts\python.exe tests\test_style.py` (29: style library, guardrails, inventions, candidates),
   `.venv\Scripts\python.exe tests\run_ts_tests.py` (6 guarded + 13 style: arrow routing, layouts, card fitting, travel speed, registry, transitions) and
   `local_ai\qwen_venv\Scripts\python.exe tests\test_qwen_voice.py` (4: number words, caption words, aligner alphabet, word counts shared with tests/test_story.py).
-- Blender openers: `tests\test_opener_plan.py` (9), `tests\test_blender_link.py` (6, fake add-on socket),
-  `tests\test_opener_render.py` (13, fake Blender: fix rounds, fallback, reuse, credits, scene-1 wiring, the run.bat
+- Blender openers: `tests\test_opener_plan.py` (23), `tests\test_blender_link.py` (6, fake add-on socket),
+  `tests\test_opener_render.py` (30, fake Blender: fix rounds, fallback, reuse, credits, scene-1 wiring, the run.bat
   note), and with real headless Blender `tests\test_opener_checks.py` (9, about a minute) and
   `tests\test_opener_scene.py` (31 incl. the people tests, about 15 minutes), `tests\test_people_tables.py` (3),
   `tests\people_sheet.py` (people contact sheets, needs the packed library).
