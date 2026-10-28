@@ -318,6 +318,22 @@ def test_two_walk_at_each_other_and_stop_apart():
 
 
 
+def test_pick_up_walks_over_and_carries_it():
+    """The Eiffel Short's con artist bent where he stood, a metre from the dropped briefcase (2026-10-28): pick_up
+    walks over, the hand ends on the box, the box rides the hand, and the next walk waits and carries it off."""
+    job = fixture("person_drop")
+    job["seconds"] = 3.0
+    job["plan"]["actors"].append({"id": "man", "person": "man", "facing": "left"})
+    job["plan"]["beats"] = [{"move": "drop_prop", "actor": "officer", "at": 0.2},
+                            {"move": "pick_up", "actor": "man", "at": 0.6, "take": "officer"},
+                            {"move": "walk", "actor": "man", "at": 0.7, "toward": "right"}]
+    job["plan"]["camera"]["follow"] = "man"
+    report, _ = run(job)
+    assert report["ok"], report["failures"]
+    assert report["moved"]["man"] > 0.3, report["moved"]
+    assert report["lowest"]["officer.prop"] > 0.1, report["lowest"]  # in the hand at the end, not on the ground
+
+
 def test_people_play_their_own_clips():
     """Final review: a backdrop bringing its own action called "Idle" took the name, and people looked clips up by
     name. Each person's clips must be the library's (they move bones)."""

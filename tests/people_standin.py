@@ -95,6 +95,11 @@ def clip(arm, name: str, travel: bool) -> dict:
     elif name in ("Death", "Defeat"):
         key(arm, {1: {"Body": (0, 0, 0)}, 21: {"Body": (-85, 0, 0)}})
         frames = 20
+    elif name == "PickUp":  # a bend over and back up: pick_up finds the lowest hand (2026-10-28)
+        # the hand hangs on the hip hinge, so the arm swings down too or the hand wouldn't move
+        key(arm, {1: {"Body": (0, 0, 0), "Arm.R": (0, 0, 0)}, 9: {"Body": (-75, 0, 0), "Arm.R": (75, 0, 0)},
+                  17: {"Body": (0, 0, 0), "Arm.R": (0, 0, 0)}})
+        frames = 16
     elif name in ("SwordSlash", "Punch"):
         key(arm, {1: {"Arm.R": (0, 0, 0)}, 5: {"Arm.R": (150, 0, 0)}, 11: {"Arm.R": (40, 0, 0)}})
         frames = 10

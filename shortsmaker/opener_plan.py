@@ -88,6 +88,18 @@ def tool_kind(find: str) -> str | None:
     return next((TOOLS[k] for k in sorted(TOOLS, key=len, reverse=True) if f" {k} " in text), None)
 
 
+def _takeable(b: dict, actors: list[dict], beats: list[dict]) -> bool:
+    """pick_up's "take" lies on the ground: a thing of at most 1 m (not on anything), or a person's prop after their
+    earlier drop_prop. The first pick_up only bent where the con artist stood (Eiffel Short, 2026-10-28)."""
+    a = next((x for x in actors if x["id"] == b.get("take")), None)
+    if a is None or a["id"] == b.get("actor"):
+        return False
+    if "person" in a:
+        return bool(a.get("prop")) and any(d.get("move") == "drop_prop" and d.get("actor") == a["id"]
+                                           and _num(d.get("at"), 0, b["at"]) and d["at"] < b["at"] for d in beats)
+    return a.get("on") in (None, "ground") and _size(a.get("size_m")) and a["size_m"] <= 1.0
+
+
 def clean_opener(raw) -> dict | None:
     """The plan when every value is in its table and every name exists, else None. Nothing is filled in or changed:
     a plan the AI got wrong goes back to it (fix_plan), never silently patched."""
@@ -137,6 +149,8 @@ def clean_opener(raw) -> dict | None:
         if b.get("actor") in people:  # people move by their clips only
             if b.get("move") not in PEOPLE_MOVES:
                 return None
+            if b["move"] == "pick_up" and not _takeable(b, actors, beats):
+                return None
             continue
         if b.get("move") not in MOVES:
             return None
@@ -179,9 +193,9 @@ def _tables_text() -> str:
             f"another actor's id (go straight at it: you can't know which side things are placed on); "
             f"camera.angle {ANGLES}; size_m {LIMITS['size_m'][0]}-{LIMITS['size_m'][1]}; at = seconds into the "
             f"scene, 0-{LIMITS['max_at_s']}, the first beat by {LIMITS['first_beat_s']} s; at most "
-            f"{LIMITS['max_pieces']} pieces in all. People: person (role) {list(ROLES)}; people moves (for people "
-            f"only; everything else uses the moves above) {list(PEOPLE_MOVES)}; a person's prop is a find text "
-            f"(swing_prop swings it, throw_prop / drop_prop let it go).")
+            f"{LIMITS['max_pieces']} pieces in all. People: person (role) {list(ROLES)}; a person's prop is a find text; "
+            f"people moves (for people only; everything else uses the moves above), each exactly as it plays, nothing "
+            f"more: " + "; ".join(f"{m} = {v['does']}" for m, v in PEOPLE_MOVES.items()) + ".")
 
 
 def plan_openers(shorts: list[dict], ch: dict) -> None:
@@ -220,18 +234,29 @@ Shorts: {json.dumps(rows, ensure_ascii=False)}
         shorts[i]["opener_check"] = "opener: no usable plan"
 
 
-def fix_plan(short: dict, failures: list[str], seconds: float | None = None, scaled: dict | None = None) -> dict | None:
-    """The planner fixes its own plan after the checks or the review found these failures; None if unusable. It is
-    told scene 1's real length and the beat times as played (the voice can make the scene shorter than planned)."""
+def fix_plan(short: dict, failures: list[str], seconds: float | None = None, scaled: dict | None = None) -> dict | str | None:
+    """The planner fixes its own plan after the checks or the review found these failures; None if unusable, or the
+    planner's reason (a str) when no plan change can fix them (a failure that came back after a fix is the engine's,
+    and every live run spent its last tries on one: 0 of 7 passed by 2026-10-28). It is told scene 1's real length,
+    the beat times as played (the voice can make the scene shorter than planned) and the earlier tries
+    (short["opener_tries"], from opener_render)."""
     played = (f"Scene 1 is {seconds:.1f} seconds long; the beats were fitted into it and played like this: "
               f"{json.dumps(scaled, ensure_ascii=False)}\n") if seconds is not None and scaled is not None else ""
+    earlier = [t["failures"] for t in short.get("opener_tries") or []][:-1]
+    earlier = (f"Earlier tries, already fixed once, failed with: {json.dumps(earlier, ensure_ascii=False)}\n"
+               if earlier else "")
     data = llm.ask_ai(f"""You staged this 3D opener for the Short "{short.get('title', '')}". Rendering it showed these
 problems: {json.dumps(failures, ensure_ascii=False)}
-{played}
+{earlier}{played}
 Fix the plan so none of them happens again (move things apart, change the tool's start, the timing, the camera, or
-the expected pieces). Keep the same moment.
+the expected pieces). Keep the same moment where the moves below can show it; a move that can't do what the moment
+needs is replaced or left out, with the moment rewritten to what is shown.
+If no change to the plan can fix them (the same problem came back after an earlier fix, or a move did what its
+description says and the problem is in how it is drawn), reply {{"fixable": false, "why": "one short sentence"}}.
 {session.RULES.get("Opener") or DEFAULT_RULES}
 {_tables_text()}
 Plan: {json.dumps(short.get('opener'), ensure_ascii=False)}
 Reply with ONLY the fixed plan as JSON, in the same format.""", fatal=False)
+    if isinstance(data, dict) and data.get("fixable") is False:
+        return str(data.get("why") or "no reason given")[:200]
     return clean_opener(data)

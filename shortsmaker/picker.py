@@ -4,7 +4,7 @@ import json
 from pathlib import Path
 
 from shortsmaker import (
-    channel_profiles, footage, image_sources, llm, picture_pool, plan_rules, rules, session, style_lab, writing,
+    channel_profiles, footage, image_sources, llm, motion, picture_pool, plan_rules, rules, session, style_lab, writing,
 )
 from shortsmaker.config import DOC_KINDS, ICONS, MAX_FULL, MOVE_NAMES, STYLE_CAPS
 
@@ -244,6 +244,21 @@ def full_pictures(short: dict, picks: dict, cands: list[dict], taken: set) -> di
     return out
 
 
+def full_formats() -> str:
+    """The full-screen motion graphic formats the AI may pick from (rescue_graphics, opener_graphic)."""
+    return f"""{{"type": "journey", "stops": [{{"name": "Uitenhage", "lat": -33.76, "lon": 25.4, "word": "Uitenhage"}}], "note": "1881"}}
+ (1-4 real places in travel order);
+{{"type": "number", "value": 30000, "label": "mourners", "icon": "person", "thing": "mourner", "each": 1000, "word": "thirty"}}
+ (label at most 24 letters; thing = what one figure is, a singular noun; icon = the closest of {list(ICONS)}; optional "compare": {{"a_label": "1858", "a_value": 100, "b_label": "today", "b_value": 3}});
+{{"type": "document", "kind": "telegram", "key_line": "...", "date": "1890", "word": "..."}}
+ (kind one of {list(DOC_KINDS)}; key_line at most 14 words, documented or a plain summary; "paper" only for a
+ real newspaper that covered it);
+{{"type": "custom", "kind": "diagram", "title": "...", "brief": "...", "words": ["...", "...", "..."]}}
+ (a bespoke animated scene coded from scratch for this moment when the line explains a mechanism, physical
+ layout/cross-section, loophole/cause-and-effect chain, or schedule/countdown; kind one of
+ ["diagram", "flow", "clock"]; "words" = 2-4 spoken words from the scene that trigger each animation beat)."""
+
+
 def rescue_graphics(short: dict, scenes: list[int], why: dict[int, str]) -> list[int]:
     """Scenes whose picture is missing or weak may become a full-screen motion graphic (map journey, big number,
     document, or a custom AI-coded diagram/flow/clock) when one shows their line better than a painting.
@@ -264,17 +279,7 @@ def rescue_graphics(short: dict, scenes: list[int], why: dict[int, str]) -> list
 have no good picture. For each of them, decide whether a FULL-SCREEN motion graphic would show its line well
 (else null: the scene gets a painting instead). Real facts only, from the articles below. "word" = a word or
 name spoken in that scene's narration when that element should appear. Formats:
-{{"type": "journey", "stops": [{{"name": "Uitenhage", "lat": -33.76, "lon": 25.4, "word": "Uitenhage"}}], "note": "1881"}}
- (1-4 real places in travel order);
-{{"type": "number", "value": 30000, "label": "mourners", "icon": "person", "thing": "mourner", "each": 1000, "word": "thirty"}}
- (thing = what one figure is, a singular noun; icon = the closest of {list(ICONS)}; optional "compare": {{"a_label": "1858", "a_value": 100, "b_label": "today", "b_value": 3}});
-{{"type": "document", "kind": "telegram", "key_line": "...", "date": "1890", "word": "..."}}
- (kind one of {list(DOC_KINDS)}; key_line at most 14 words, documented or a plain summary; "paper" only for a
- real newspaper that covered it);
-{{"type": "custom", "kind": "diagram", "title": "...", "brief": "...", "words": ["...", "...", "..."]}}
- (a bespoke animated scene coded from scratch for this moment when the line explains a mechanism, physical
- layout/cross-section, loophole/cause-and-effect chain, or schedule/countdown; kind one of
- ["diagram", "flow", "clock"]; "words" = 2-4 spoken words from the scene that trigger each animation beat).
+{full_formats()}
 Script: {json.dumps(script, ensure_ascii=False)}
 Wikipedia articles: {json.dumps(texts, ensure_ascii=False)}
 Reply with ONLY JSON: {{"scenes": [{{"scene": 3, "full": null}}]}}""", fatal=False)
@@ -293,3 +298,35 @@ Reply with ONLY JSON: {{"scenes": [{{"scene": 3, "full": null}}]}}""", fatal=Fal
             scs[i].update(full=f, graphic=None, person=None, animate=False, full_rescued=why.get(i, "the picture was weak"))
             got.append(i)
     return got
+
+
+def opener_graphic(short: dict) -> str:
+    """The motion-graphic opener (owner, 2026-10-28): on a channel with Blender openers, scene 1 gets a full-screen
+    motion graphic up front when one shows the hook's strangest moment; a Blender opener that renders replaces it
+    (short_render.use_opener), one that fails leaves it playing. Outside MAX_FULL and the never-scene-1 /
+    never-two-in-a-row rules (an opener is not a slideshow scene; owner: two in a row is fine). One AI call.
+    Returns the edit-plan note: the graphic chosen, or why none was."""
+    sc = short["scenes"][0]
+    if sc.get("full"):
+        return f"motion graphic: {motion.full_summary(sc['full'])} (already planned)"
+    has_doc = any((s.get("full") or {}).get("type") == "document" for s in short["scenes"])
+    texts = short.get("research") or {t: writing.article_text(t)[:15000] for t in short.get("wiki_articles", [])[:3]}
+    print(f"  asking {session.BRAIN.capitalize()} for a motion-graphic opener (plays if the Blender opener fails)...")
+    data = llm.ask_ai(f"""You are the director of a YouTube Short: "{short['title']}". Scene 1 is the hook: "{sc['narration']}".
+The channel opens every Short on an animation of the story's strangest moment. Decide whether a FULL-SCREEN motion
+graphic would show this hook's strangest moment strongly from its first frame (else null: scene 1 opens on its picture).
+Real facts only, from the articles below. Leave out "word"/"words": the opener moves from its first frame.
+{"Not a document: the Short already has one. " if has_doc else ""}Formats:
+{full_formats()}
+Wikipedia articles: {json.dumps(texts, ensure_ascii=False)}
+Reply with ONLY JSON: {{"full": {{...}} or null, "why": "one short sentence"}}""", fatal=False)
+    data = data if isinstance(data, dict) else {}
+    why = str(data.get("why") or "no reason given").strip()[:200]
+    f = data.get("full")
+    if not isinstance(f, dict) or f.get("type") == "board" or (has_doc and f.get("type") == "document"):
+        return f"no motion graphic ({why if f is None else 'the AI picked an unusable one'})"
+    f = plan_rules.clean_full(f, [])  # no spoken-word triggers: an opener moves from frame 0, not on its word
+    if not f:
+        return "no motion graphic (the AI's pick failed the format check)"
+    sc.update(full=f, graphic=None, person=None, animate=False, full_rescued="motion-graphic opener")
+    return f"motion graphic: {motion.full_summary(f)} ({why})"

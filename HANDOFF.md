@@ -869,6 +869,47 @@ owner's Blender (Mike's chop; the owner's six catches became the checks below). 
   (`opener_plan.fix_plan`), then `work/opener.mp4` plays as scene 1 (no motion graphic over it, no first-second
   picture swap, CC-BY credits in upload.txt) or `CHECK: opener failed: <reason>` and today's scene 1. Unchanged
   plan + code reuse the clip (`work/opener_done.txt`).
+- **Motion-graphic opener (owner, 2026-10-28: the Eiffel Short's opener failed 3 times and fell back to a mugshot
+  with no word on a motion graphic).** `picker.opener_graphic` (after the rescue, on Shorts with `opener` or
+  `opener_check`) asks once for a full-screen graphic of the hook's strangest moment and puts it on scene 1 up front,
+  outside MAX_FULL and the never-scene-1 / never-two-in-a-row rules (owner: two in a row is fine). A Blender opener
+  that renders clears it; one that fails leaves it playing. Its spoken-word triggers are dropped and scene 1's
+  `full_cues` start at 0 s, so it moves from the first frame. The first-second picture swap is skipped under it.
+  The edit plan's `Opening:` line says what played: `Blender opener: ...` or
+  `Blender opener failed (<why>) -> motion graphic: <summary> (<AI's reason>)` / `-> no motion graphic (<reason>);
+  scene 1 opens on its picture`.
+- **Opener consistency (owner, 2026-10-28: "it failed 3 times, how can we make it more consistent?").** 0 of 7 live
+  runs had passed: most failures were engine limits, sent back to a planner that could only edit the plan, so the same
+  fault came back on tries 2 and 3. Now:
+  - `opener_tables.json` `people_moves[*].does` says what each people move really does; `_tables_text` gives it to
+    the planner and the fixer. The fixer may replace a move that can't show the moment (it used to "keep the same
+    moment" and kept `pick_up` three times).
+  - `fix_plan` sees the earlier tries' failures (`short["opener_tries"]`) and can reply `{"fixable": false}`
+    (returns the reason as a str): `render_opener` stops at once and the motion-graphic opener plays.
+  - Every failed try is kept: `work/opener_tries/try<n>.json` (plan + failures) and `try<n>_strip.jpg` (the review
+    strip, when the checks passed).
+  - `pick_up` needs `"take"` (a thing of at most 1 m on the ground, or a person after their earlier `drop_prop`;
+    `opener_plan._takeable`). `people.pick_up`: probes the PickUp clip for the lowest-hand frame, picks one of 12 ways
+    to stand whose bend keeps `BEND_ROOM` from everyone (side-on to the camera, nearest), walks there (`_travel`,
+    split out of `move`), turns, bends; the item is frozen from the bend (kinematic) and rides the hand (CHILD_OF
+    "picked") from the grab. Failures: the hand misses (`GRAB_GAP`), no room to bend. The person's next move waits
+    until they stand up (`st.busy`); pushed past the scene's end, that's a failure the planner fixes.
+  - `drop_prop` lets go out to the side (`DROP_OUT`): straight down, the case lay against the dealer's foot.
+  - The stand-in people library's PickUp bends and swings the arm down (its hand sits on the hip hinge).
+  - From the second live run (its three tries replayed headless on each fix, `opener_tries/*.json`): the taker aims
+    at where a dropped item comes to rest (`REST_FRAMES`); the room to bend is judged against everyone's footprint
+    over the rest of the scene and includes the hips going back (`BEND_BACK`); the walk ignores the item and goes
+    round whoever is in the way (`_detour`, two legs); a missed grab leaves the item on the ground. In
+    `opener_scene`: whoever picks something up has their beats built last (so the bend sees the dealer's later
+    cheer); a thing to pick up starts `TAKE_GAP` in front of its taker; a dropper and their taker stand
+    `PICK_APART` further apart; a prop someone will pick up is dropped toward them (`DROP_TOWARD`).
+  - Fixed for every person: a second travel move (a run after a pick_up, a detour's second leg) turned from the
+    planned facing instead of the way the person faces now (`people.facing_now`).
+  - Result on the replays: the first live plan (which had failed on timing) and the third pass, as does the first
+    Eiffel plan with `take` added; the second still fails by 0.01 m of bend room (dealer cheering over the bag).
+- **Blender MCP: keep the owner's window on their own scene.** The add-on registers its Poly Pizza commands per
+  scene (`blendermcp_use_polypizza`): with the window on an appended test scene, every model search failed with
+  "Unknown command type: search_polypizza_models" (2026-10-28).
 - **`## Opener` in each channel's rules file** (owner, 2026-10-27: "i want the quality to improve on every short"):
   the planner stages from it and the AI review judges by it, including the owner's accepted conventions (unseen hand
   just off-screen, an animal cut where it stands, a blade stops at the first thing it isn't cutting) and staging

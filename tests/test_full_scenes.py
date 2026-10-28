@@ -252,6 +252,38 @@ def test_rescue_respects_caps():
     assert short["scenes"][5]["graphic"] is None
 
 
+def test_opener_graphic():
+    """Scene 1's motion-graphic opener: set outside the scene-1 and two-in-a-row rules, its reason kept for the edit
+    plan; a decline or a second document leaves scene 1 alone with the reason."""
+    num = {"type": "number", "value": 70000, "label": "francs paid for the Eiffel Tower", "icon": "money", "word": "fortune"}
+    short = {"title": "T", "research": {"A": "text"}, "wiki_articles": ["A"],
+             "scenes": [{"narration": "A scrap dealer paid a fortune for the Eiffel Tower.", "full": None, "graphic": None,
+                         "person": None, "animate": True},
+                        {"narration": "But the seller used forged papers.", "graphic": None, "person": None,
+                         "full": {"type": "document", "kind": "letter", "key_line": "x"}}]}
+    saved, prompts = llm.ask_ai, []
+    replies = iter([{"full": num, "why": "the sum is the shock"}, {"full": None, "why": "a portrait reads better"},
+                    {"full": {"type": "document", "kind": "letter", "key_line": "y"}, "why": "x"}])
+    llm.ask_ai = lambda prompt, fatal=True, read_dir=None, brain=None, bulk=False: prompts.append(prompt) or next(replies)
+    try:
+        note = picker.opener_graphic(short)
+        assert note.startswith("motion graphic: ") and note.endswith("(the sum is the shock)"), note
+        sc = short["scenes"][0]
+        assert sc["full"]["type"] == "number" and sc["animate"] is False and sc["full_rescued"] == "motion-graphic opener"
+        assert sc["full"]["label"] == "FRANCS PAID FOR THE" and "word" not in sc["full"]  # cut at a word; moves on frame 0
+        assert plan_rules.full_cues(sc["full"], [(1.0, 1.4, "fortune")], 0.0, 2.6) == {"at": 0.0}
+        assert "Not a document" in prompts[0]
+        assert picker.opener_graphic(short).endswith("(already planned)") and len(prompts) == 1
+        sc["full"] = None
+        assert picker.opener_graphic(short) == "no motion graphic (a portrait reads better)" and sc["full"] is None
+        assert picker.opener_graphic(short) == "no motion graphic (the AI picked an unusable one)" and sc["full"] is None
+    finally:
+        llm.ask_ai = saved
+    # the opener's first element lands on frame 0; later scenes still wait out their transition
+    assert plan_rules.full_cues({"type": "journey", "stops": [{"name": "Paris"}]}, [], 0.0, 2.6)["times"] == [0.0]
+    assert plan_rules.full_cues({"type": "journey", "stops": [{"name": "Paris"}]}, [], 10.0, 12.6)["times"] == [10.4]
+
+
 def test_state_roundtrip_full_pics():
     with tempfile.TemporaryDirectory() as d:
         work = Path(d)

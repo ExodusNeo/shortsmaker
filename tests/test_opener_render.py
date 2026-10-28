@@ -229,6 +229,25 @@ def test_use_opener_failure_keeps_scene():
     assert s["scenes"][0]["full"] == {"type": "custom"} and not s.get("opener_used")
 
 
+def test_use_opener_opening_note():
+    """The Opening line says which opener played: the Blender one, or the motion graphic (or none) after a failure."""
+    why, s, *_ = _wiring("ok")
+    assert s["opening_note"] == "Blender opener: " + PLAN["moment"]
+    from PIL import Image
+    from shortsmaker import short_render
+    for full, note in (({"type": "number"}, "motion graphic: big number (a fortune)"),
+                       (None, "no motion graphic (a portrait reads better)")):
+        s = {"title": "x", "opener": copy.deepcopy(PLAN), "opener_graphic": note, "scenes": [{"full": full}]}
+        saved = opener_render.render_opener
+        opener_render.render_opener = lambda *a, **k: (None, "opener failed: the dealer floats")
+        try:
+            short_render.use_opener(s, [0.0, 2.0], Path("."), {}, [Image.new("RGB", (8, 8))], ["x"])
+        finally:
+            opener_render.render_opener = saved
+        assert s["opening_note"] == "Blender opener failed (the dealer floats) -> " + note + (
+            "" if full else "; scene 1 opens on its picture"), s["opening_note"]
+
+
 def test_use_opener_planner_check():
     from shortsmaker import short_render
     s = {"title": "x", "opener_check": "opener: no usable plan", "scenes": [{"full": None}]}
@@ -366,6 +385,21 @@ def test_person_job_has_library():
         assert job["people"] == {"blend": str(e.dir / "people.blend"), "json": str(e.dir / "people.json")}, job.get("people")
         assert "officer" not in job["models"] and job["models"]["officer:prop"].endswith(".blend"), job["models"]
 
+
+
+def test_unfixable_stops_early_and_every_try_is_kept():
+    """A failure the planner says no plan change can fix ends the opener at once (the motion-graphic opener plays
+    instead of two more 10-minute tries), and every failed try is kept in work/opener_tries."""
+    with Env() as e:
+        e.fail.write_text("overlap: a/b frames 3-4")
+        opener_plan.fix_plan = lambda short, failures, seconds=None, scaled=None: e.fixes.append(list(failures)) or "drawn wrong"
+        s = short()
+        clip, why = opener_render.render_opener(s, 3.0, e.work, e.exe)
+        assert clip is None and e.runs() == 1, (why, e.runs())
+        assert why == "opener failed: overlap: a/b frames 3-4 (the planner can't fix it with the plan: drawn wrong)", why
+        kept = json.loads((e.work / "opener_tries" / "try1.json").read_text(encoding="utf-8"))
+        assert kept["failures"] == ["overlap: a/b frames 3-4"] and kept["plan"]["beats"], kept
+        assert [t["try"] for t in s["opener_tries"]] == [1]
 
 
 def test_unfound_model_goes_back_to_the_planner():

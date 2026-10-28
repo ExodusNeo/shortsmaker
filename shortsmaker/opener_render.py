@@ -155,6 +155,18 @@ Reply with ONLY JSON: {{"ok": true, "problems": []}} or {{"ok": false, "problems
     return []
 
 
+def save_try(short: dict, work: Path, n: int, plan: dict, failures: list[str]) -> None:
+    """Every failed try kept for the engine fixes (work/opener_tries/try<n>.json and its review strip): only the last
+    try's report survived the Eiffel Short, and the six Mike runs needed hand-made logs."""
+    short["opener_tries"].append({"try": n, "plan": plan, "failures": failures})
+    out = work / "opener_tries"
+    out.mkdir(exist_ok=True)
+    (out / f"try{n}.json").write_text(json.dumps(short["opener_tries"][-1], indent=1, ensure_ascii=False), encoding="utf-8")
+    strip = work / "opener_look" / "strip.jpg"
+    if strip.exists():  # only when the checks passed and the reviewer looked
+        shutil.move(strip, out / f"try{n}_strip.jpg")
+
+
 def render_opener(short: dict, seconds: float, work: Path, exe: Path | None = None) -> tuple[Path | None, str | None]:
     """Scene 1's opener clip, or (None, why). (None, None) when the Short has no opener plan."""
     if not short.get("opener"):
@@ -165,6 +177,8 @@ def render_opener(short: dict, seconds: float, work: Path, exe: Path | None = No
     clip, frames, report_path, done = (work / "opener.mp4", work / "opener_frames", work / "opener_report.json",
                                        work / "opener_done.txt")
     round_no, swaps = 0, 0
+    short["opener_tries"] = []
+    shutil.rmtree(work / "opener_tries", ignore_errors=True)
     while round_no <= FIX_ROUNDS:
         plan = scale_beats(short["opener"], seconds)
         models, why = resolve_models(plan)
@@ -176,7 +190,7 @@ def render_opener(short: dict, seconds: float, work: Path, exe: Path | None = No
                         "or leave it out"]
             print(f"    model swap {swaps}: {failures[0]}")
             fixed = opener_plan.fix_plan(short, failures, seconds, plan)
-            if fixed is None:
+            if not isinstance(fixed, dict):
                 return None, f"opener failed: {why} (the fix wasn't usable)"
             short["opener"] = fixed
             continue
@@ -214,9 +228,12 @@ def render_opener(short: dict, seconds: float, work: Path, exe: Path | None = No
                 shutil.rmtree(frames, ignore_errors=True)  # ~100 MB of PNGs; the clip is kept
                 return clip, None
         print(f"    try {round_no + 1} failed: " + "; ".join(failures)[:600])
+        save_try(short, work, round_no + 1, plan, failures)
         if round_no == FIX_ROUNDS:
             return None, f"opener failed: {failures[0]}"
         fixed = opener_plan.fix_plan(short, failures, seconds, plan)
+        if isinstance(fixed, str):  # stopped early: the motion-graphic opener plays without more 10-minute tries
+            return None, f"opener failed: {failures[0]} (the planner can't fix it with the plan: {fixed})"
         if fixed is None:
             return None, f"opener failed: {failures[0]} (the fix wasn't usable)"
         short["opener"] = fixed

@@ -29,6 +29,8 @@ FILL = 0.6  # the subject's width fills at most this much of the frame
 SUBJECT_FILL = 0.35  # and its height this much, at the start
 PUSH_IN = 0.85  # the camera ends this much closer
 ORBIT = 14  # degrees the camera arcs around the subject over the clip (owner, 2026-10-27: the locked-off shot read flat)
+PICK_APART = 0.8  # extra metres between a person who drops something and the one who picks it up
+TAKE_GAP = 0.7  # a thing someone picks up starts this far in front of them
 PUNCH_LENS = 62  # on the first hit the lens snaps to this, then eases back toward LENS
 SHAKE, SHAKE_FRAMES = 0.012, 9  # hit shake as a share of the camera distance, gone after this many frames
 DRIFT = 0.004  # handheld sway, share of the distance
@@ -218,6 +220,9 @@ def place_actors(plan: dict, models: dict, st: moves.State, lib: dict | None = N
     # actors one goes at ("toward": "car") start with room to cross; 0.3 m apart nobody could take a step
     ids = {a["id"] for a in plan["actors"]}
     linked = {x for b in plan["beats"] if b.get("toward") in ids for x in (b.get("toward"), b.get("actor"))}
+    # a dropper and their taker stand further apart: 1.07 m apart, the bag fell between them and nobody could bend
+    # for it (live run 2, try 2)
+    pickers = {x for b in plan["beats"] if b["move"] == "pick_up" for x in (b["actor"], b.get("take"))}
     x = 0.0
     for k, aid in enumerate(on_ground):
         o = st.objs[aid]
@@ -229,7 +234,8 @@ def place_actors(plan: dict, models: dict, st: moves.State, lib: dict | None = N
         # a row across the shot; what someone goes at stands back into the depth instead, so a tall portrait frame
         # holds both big (side by side across it, the officer beside a car shrank to 8% of the height)
         o.location = kit.view(Vector((0.5 * side, 0.85 * abs(side), 0)) if aid in linked and k else Vector((side, 0, 0)))
-        x += width / 2 + (1.5 if aid in linked or (k + 1 < len(on_ground) and on_ground[k + 1] in linked) else 0.3)
+        nxt = on_ground[k + 1] if k + 1 < len(on_ground) else None
+        x += width / 2 + (1.5 if aid in linked or nxt in linked else PICK_APART if {aid, nxt} & pickers else 0.3)
     for walker, way in heading.items():  # what stands in the walker's way goes behind them instead
         if walker not in on_ground:
             continue
@@ -239,6 +245,10 @@ def place_actors(plan: dict, models: dict, st: moves.State, lib: dict | None = N
             o = st.objs[aid]
             if aid != walker and aid not in linked and (o.location - w).dot(ahead) > 0:
                 o.location -= 2 * (o.location - w).dot(ahead) * ahead
+    for b in plan["beats"]:  # a thing to pick up lies in front of its taker (the bag lay behind the dealer: live run 2)
+        if b["move"] == "pick_up" and b.get("take") in on_ground and not st.objs[b["take"]].get("person"):
+            taker = st.objs[b["actor"]]
+            st.objs[b["take"]].location = taker.location + kit.facing_vec(taker) * TAKE_GAP
     placed: set = set(on_ground) | tools
     while len(placed) < len(plan["actors"]):
         before = len(placed)
@@ -520,7 +530,10 @@ def main(job_path: str) -> None:
             people.idle(o, lib)
     starts = {aid: o.matrix_world.translation.copy() for aid, o in st.objs.items()}
     gap_start = {a: {b: round((p - q).length, 4) for b, q in starts.items() if b != a} for a, p in starts.items()}
-    for beat in sorted(plan["beats"], key=lambda b: b["at"]):
+    # whoever picks something up moves last, so its bend sees everyone else's later moves (the dealer's cheer, built
+    # after the pick_up, swung his arm into the con artist's bend: live run 2, try 2); in time order otherwise
+    pickers = {b["actor"] for b in plan["beats"] if b["move"] == "pick_up"}
+    for beat in sorted(plan["beats"], key=lambda b: (b.get("actor") in pickers, b["at"])):
         try:
             moves.apply(beat, st)
         except Exception as e:  # a move it can't build is a failure the planner can fix, not a crash that says nothing

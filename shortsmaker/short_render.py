@@ -96,17 +96,26 @@ def drawn_thumbnail(short: dict, work: Path, bounds: list[float]) -> tuple[Path,
 
 def use_opener(short: dict, bounds: list[float], work: Path, clips: dict, images: list, sources: list) -> str | None:
     """Scene 1 plays its Blender opener when one renders (opener_render.py, 2026-10-27): its clip, its first frame as
-    the still, and no motion graphic over it. Otherwise scene 1 stays as it is and the reason comes back as a CHECK
-    line (or the planner's own note when there was no plan)."""
-    short["opener_used"] = False
+    the still, and no motion graphic over it. Otherwise scene 1 stays as it is (its motion-graphic opener when
+    picker.opener_graphic gave it one) and the reason comes back as a CHECK line (or the planner's own note when
+    there was no plan). short["opening_note"] says which opener played, for the edit plan's Opening line."""
+    short["opener_used"], short["opening_note"] = False, None
+
+    def failed(why: str | None) -> str | None:
+        if why and short.get("opener_graphic"):
+            short["opening_note"] = (f"Blender opener failed ({why.removeprefix('opener failed: ')}) -> {short['opener_graphic']}"
+                                     + ("" if short["scenes"][0].get("full") else "; scene 1 opens on its picture"))
+        return why
+
     try:  # an opener never stops a run (a failing search once escaped and the Short's folder was deleted)
         clip, why = opener_render.render_opener(short, bounds[1] - bounds[0], work)
         if clip is None:
-            return why or short.get("opener_check")
+            return failed(why or short.get("opener_check"))
         media_tools.ffmpeg("-y", "-i", str(clip), "-frames:v", "1", "opener_0.jpg", cwd=work)
         still = Image.open(work / "opener_0.jpg").convert("RGB")
     except Exception as e:
-        return f"opener failed: {type(e).__name__}: {e}"
+        return failed(f"opener failed: {type(e).__name__}: {e}")
+    short["opening_note"] = f"Blender opener: {short['opener']['moment']}"
     images[0] = still
     clips[0] = clip
     short["scenes"][0]["full"] = None
@@ -136,6 +145,8 @@ def render(short: dict, ch: dict, folder: Path, state: dict | None = None, fix_r
         # real footage first, then a full-screen motion graphic, and only then an AI painting
         weak = [i for i, c in enumerate(choices) if not c["bg"] and not short["scenes"][i].get("full")]
         picker.rescue_graphics(short, weak, {i: "no fitting picture was found" for i in weak})
+        if short.get("opener") or short.get("opener_check"):  # the channel opens on animations: the fallback one
+            short["opener_graphic"] = picker.opener_graphic(short)
         plan_rules.mark_details(short, choices, work)
     for i, sc in enumerate(short["scenes"]):  # an evidence board needs its real photos (3 or more)
         if (sc.get("full") or {}).get("type") == "board" and len(choices[i].get("full_pics") or []) < 3:
@@ -406,7 +417,8 @@ def render(short: dict, ch: dict, folder: Path, state: dict | None = None, fix_r
         issues += [thumb_check] if thumb_check else []
     found, opener = review.first_second_check(folder / "short.mp4", short, choices, folder / "storyboard.jpg", work)
     issues += found
-    if short.get("opener_swapped") or short.get("opener_used"):  # once per Short; a Blender opener stays
+    # once per Short; a Blender or motion-graphic opener stays (a swapped picture would play under the graphic)
+    if short.get("opener_swapped") or short.get("opener_used") or short["scenes"][0].get("full"):
         opener = None
     print("  quality check: " + (f"{len(issues)} thing(s) to look at before uploading:" if issues else "OK, nothing to fix"))
     for issue in issues:

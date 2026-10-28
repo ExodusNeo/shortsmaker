@@ -316,35 +316,56 @@ def move(beat: dict, st, lib: dict) -> None:
     actor = beat["actor"]
     o = st.objs[actor]
     arm = bpy.data.objects[o["rig"]]
-    spec = kit.TABLES["people_moves"][beat["move"]]
-    clip, info = spec["clip"], lib["clips"][spec["clip"]]
-    sc = bpy.context.scene
-    f0 = st.f(beat["at"])
+    clip = kit.TABLES["people_moves"][beat["move"]]["clip"]
+    f0 = max(st.f(beat["at"]), st.busy.get(actor, 1))  # after its pick_up has it in hand and stands up again
+    if f0 > st.f(beat["at"]) and f0 >= bpy.context.scene.frame_end - 3:  # the Eiffel plan's escape never showed
+        st.failures.append(f"{beat['move']}: {actor} is still picking up until {f0 / st.fps:.1f} s, the end of the "
+                           f"scene, so the {beat['move']} never shows; start {actor} next to what it picks up, or "
+                           f"pick up earlier")
     st.moved_from.setdefault(actor, f0)
-    if spec["kind"] == "in_place":
+    if beat["move"] == "pick_up":
+        pick_up(beat, st, lib, o, arm, f0)
+        return
+    if kit.TABLES["people_moves"][beat["move"]]["kind"] == "in_place":
         strip = _strip(arm, lib, clip, f0)
         _ground(o, st, f0, int(strip.frame_end))
         if beat["move"] in ("swing_prop", "throw_prop", "drop_prop"):
             prop_move(beat, st, o, strip)
         return
+    _travel(beat, st, lib, o, arm, clip, f0, moves.toward(beat, st=st))
+
+
+def facing_now(o, f: int) -> Vector:
+    """The way o faces on frame f: its planned facing turned by every turn keyed since frame 1. A run after a pick_up
+    turned from the planned facing and set off at the wrong angle."""
+    return Matrix.Rotation(kit.rot_at(o, f).z - kit.rot_at(o, 1).z, 3, "Z") @ kit.facing_vec(o)
+
+
+def _travel(beat: dict, st, lib: dict, o, arm, clip: str, f0: int, d: Vector, want: float | None = None,
+            ignore=None) -> int:
+    """o walks or runs along d from f0 on `clip` at the clip's own pace, `want` metres (default: to the end of the
+    scene), stopping short of obstacles (not `ignore`, what it walks over to pick up). Returns its stop frame."""
+    import moves
+    actor = beat["actor"]
+    info = lib["clips"][clip]
+    sc = bpy.context.scene
     if st.support.get(actor, "ground") != "ground":
         st.failures.append(f"walk: {actor} would {beat['move']} off the {st.support[actor]} it stands on; start "
                            f"{actor} on the ground")
-    d = moves.toward(beat, st=st)
     role = kit.TABLES["roles"][o["person"]]
     seconds_per_loop = info["frames"] / st.fps
     speed = info["stride_m"] * role["height_m"] / lib["rig_height"] / seconds_per_loop
     start = kit.loc_at(o, f0)
-    face = kit.facing_vec(o)
-    turn = math.atan2(face.x * d.y - face.y * d.x, face.dot(d))
     base_rot = kit.rot_at(o, f0)
+    face = facing_now(o, f0)
+    turn = math.atan2(face.x * d.y - face.y * d.x, face.dot(d))
     tools = {b["tool"] for b in st.plan["beats"] if b["move"] == "cut"}
-    obstacles = [x for k, x in st.objs.items() if x is not o and k not in tools] + \
+    obstacles = [x for k, x in st.objs.items() if x is not o and x is not ignore and k not in tools] + \
         [x for x in sc.objects if x.name.startswith("backdrop")]
     keep_loc, keep_rot = o.location.copy(), o.rotation_euler.copy()
     o.location, o.rotation_euler = start + Vector((0, 0, 0.01)), (0, 0, base_rot.z + turn)
     bpy.context.view_layer.update()
-    want = speed * (sc.frame_end - f0) / st.fps
+    want = speed * (sc.frame_end - f0) / st.fps if want is None else want
     reach = 0.0  # how far a held prop sticks out ahead of the body: an umbrella poked into the car
     prop = bpy.data.objects.get(o.get("prop") or "")
     if prop is not None:
@@ -371,6 +392,182 @@ def move(beat: dict, st, lib: dict) -> None:
         gap = min(v.z for v in kit.world_verts(o)) - start.z
         kit.key_loc(o, f, start + d * room * u - Vector((0, 0, gap)))
     sc.frame_set(1)
+    return stop
+
+
+DROP_OUT = 1.2  # m/s out from the body: a dropped prop lands about 0.35 m from the leg
+DROP_TOWARD = 2.0  # m/s toward the taker: lands about 0.6 m out, clear of the dropper's arms
+GRAB_GAP = 0.1  # the hand ends at most this far from the thing it picks up
+
+
+def _step_to(f: int) -> None:
+    """Every frame up to f in order, so physics (a dropped case still landing) is where it really is on frame f."""
+    sc = bpy.context.scene
+    for k in range(sc.frame_start, f + 1):
+        sc.frame_set(k)
+
+
+def _footprints(others: list, f0: int) -> list[tuple]:
+    """Everyone else's xy box over the rest of the scene: the dealer's cheer, keyed later, swung his arms into the
+    con artist's bend (live run 2, try 2)."""
+    sc = bpy.context.scene
+    boxes = []
+    for x in others:
+        lo, hi = Vector((9e9, 9e9, 0)), Vector((-9e9, -9e9, 0))
+        # only people move under their clips; a 30 m backdrop measured every 3 frames took over 10 minutes
+        for f in range(f0, sc.frame_end + 1, 3) if x.get("rig") else [f0]:
+            sc.frame_set(f)
+            a, b = kit.bbox(x)
+            lo.x, lo.y, hi.x, hi.y = min(lo.x, a.x), min(lo.y, a.y), max(hi.x, b.x), max(hi.y, b.y)
+        boxes.append((lo, hi))
+    return boxes
+
+
+def _clearance(a: Vector, b: Vector, boxes: list, upto: float = 0.6) -> float:
+    """How far the stretch from a toward b (the bend: feet to 60 % of the way over to the hand, the head and back but
+    not the hand at the item; a walk: all of it) keeps from everyone else's footprint."""
+    out = 9.0
+    for lo, hi in boxes:
+        for k in range(9):
+            p = a.lerp(b, upto * k / 8)
+            dx, dy = max(lo.x - p.x, 0.0, p.x - hi.x), max(lo.y - p.y, 0.0, p.y - hi.y)
+            out = min(out, math.hypot(dx, dy))
+    return out
+
+
+PATH_ROOM = 0.25  # a walk keeps its middle this far from everyone (about half a body's width)
+
+
+def _detour(a: Vector, b: Vector, boxes: list) -> Vector | None:
+    """A point beside whoever blocks the straight walk from a to b, both legs clear, the shorter way round; None if
+    neither side is clear."""
+    d = (b - a).normalized()
+    side = Vector((-d.y, d.x, 0))
+    best = None
+    for lo, hi in boxes:
+        c = Vector(((lo.x + hi.x) / 2, (lo.y + hi.y) / 2, a.z))
+        if _clearance(a, b, [(lo, hi)], 1.0) >= PATH_ROOM:
+            continue
+        r0 = math.hypot(hi.x - lo.x, hi.y - lo.y) / 2 + PATH_ROOM
+        # further out until both legs clear its corners (the nearest point clipped the cheering dealer by 0.1 m)
+        for r, sgn in [(r0 + 0.2 * k, sgn) for k in range(6) for sgn in (1, -1)]:
+            via = c + side * sgn * r
+            if _clearance(a, via, boxes, 1.0) >= PATH_ROOM and _clearance(via, b, boxes, 1.0) >= PATH_ROOM:
+                length = (via - a).length + (b - via).length
+                if best is None or length < best[0]:
+                    best = (length, via)
+    return best[1] if best else None
+
+
+REST_FRAMES = 20  # a dropped item has landed and settled this long after it's let go
+BEND_ROOM = 0.35
+BEND_BACK = 0.3  # how far behind the feet the hips go in a bend  # the bend keeps this far from other people and things (the con artist's head hit the dealer's)
+TURN_FRAMES = 6  # a turn on the spot into the reach, after the walk
+
+
+def pick_up(beat: dict, st, lib: dict, o, arm, f0: int) -> None:
+    """pick_up "take" (owner, 2026-10-28): the person walks over to the thing on the ground, turns so the PickUp
+    clip's lowest hand lands on it, bends, and from that frame it rides the hand. Of 12 ways to stand, the one whose
+    bend keeps clear of everyone, side-on to the camera, nearest. The first version only bent where the con artist
+    stood, a metre from the briefcase, and all three tries of the Eiffel Short failed on it."""
+    sc = bpy.context.scene
+    take = st.objs[beat["take"]]
+    item = bpy.data.objects[take["prop"]] if take.get("person") else take
+    hand_bone = lib["bones"]["hand_r"]
+
+    def hand_at() -> Vector:
+        return arm.matrix_world @ arm.pose.bones[hand_bone].head
+
+    # where the hand reaches in the body's own (scaled) frame, and when: the clip tried out once and taken off again
+    probe = _strip(arm, lib, "PickUp", f0)
+    lows = []
+    for f in range(f0, int(probe.frame_end) + 1):
+        sc.frame_set(f)
+        lows.append((hand_at().z, f - f0, o.matrix_world.inverted() @ hand_at()))
+    arm.animation_data.nla_tracks.remove(next(t for t in arm.animation_data.nla_tracks if probe in t.strips[:]))
+    _, contact, local = min(lows, key=lambda x: x[0])
+    # where it comes to rest: a bag dropped at 0.0 s was aimed at in mid-fall and missed (live run 2, try 2)
+    _step_to(min(max(f0, st.released.get(item.name, 0) + REST_FRAMES), sc.frame_end))
+    pts = kit.world_verts(item)
+    grab = sum(pts, Vector()) / len(pts)
+    grab.z = max(p.z for p in pts)  # its top: a handle, a lid
+    sc.frame_set(f0)  # the walk starts from where the person is now
+    body = o.matrix_world.translation.copy()
+    m = o.matrix_world.to_3x3()
+    yaw0 = kit.rot_at(o, f0).z
+    face0 = facing_now(o, f0)
+    others = [x for x in st.objs.values() if x is not o and x is not item] + \
+        [x for x in sc.objects if x.name.startswith("backdrop")]
+    boxes = _footprints(others, f0)
+    ways = []
+    for k in range(12):
+        u = Matrix.Rotation(math.radians(30 * k), 3, "Z") @ Vector((1, 0, 0))
+        turn = math.atan2(face0.x * u.y - face0.y * u.x, face0.dot(u))
+        off = Matrix.Rotation(turn, 3, "Z") @ m @ local
+        feet = Vector((grab.x - off.x, grab.y - off.y, body.z))
+        to = Vector((grab.x, grab.y, body.z))
+        hips = feet - (to - feet).normalized() * BEND_BACK  # a bend pushes the hips back (live run 2, try 2)
+        clear = _clearance(hips, to, boxes, 0.6 * (to - hips).length / max((to - hips).length, 1e-6))
+        side = abs(u.dot(st.cam_h))  # 0 = across the frame: the bend shows from the side
+        ways.append((min(clear, BEND_ROOM) < BEND_ROOM, side > 0.5, (feet - body).length, turn, feet, clear))
+    _, _, walked, turn, feet, clear = min(ways, key=lambda w: w[:3])
+    legs = [feet]
+    if _clearance(body, feet, boxes, 1.0) < PATH_ROOM:  # someone stands in the way (live run 2, try 3: the dealer)
+        via = _detour(body, feet, boxes)
+        if via is None:
+            st.failures.append(f"pick_up: no way around to the {beat['take']} for {beat['actor']}; start "
+                               f"{beat['actor']} on the {beat['take']}'s side")
+        legs = [via, feet] if via is not None else legs
+    start, at = f0, body
+    for leg in legs:
+        if (leg - at).length >= 0.05:
+            start = _travel(beat, st, lib, o, arm, "Walk", start, (leg - at).normalized(), want=(leg - at).length,
+                            ignore=item)
+            at = kit.loc_at(o, start)
+    kit.key_rot(o, start, kit.rot_at(o, start))
+    start = min(start + TURN_FRAMES, sc.frame_end)
+    r = kit.rot_at(o, f0)
+    kit.key_rot(o, start, (r.x, r.y, yaw0 + turn))  # into the reach, from the way it faced before the walk
+    strip = _strip(arm, lib, "PickUp", start)
+    c = min(start + contact, sc.frame_end)
+    # its next move waits until it stands up again: a walk starting mid-bend pinned the bent body 0.5 m into the ground
+    st.busy[beat["actor"]] = min(int(strip.frame_end), sc.frame_end)
+    # the item is held still from the bend on (it lies at rest by then): the stand-in's bend knocked the box 0.6 m away
+    _step_to(start)
+    loc, rq, _ = item.matrix_world.decompose()
+    item.location, item.rotation_euler = loc, rq.to_euler()
+    for f in (start, c):
+        item.keyframe_insert("location", frame=f)
+        item.keyframe_insert("rotation_euler", frame=f)
+    if item.rigid_body is not None:  # physics lets go of it: from here it follows its keys and the hand
+        item.rigid_body.kinematic = True
+        item.keyframe_insert("rigid_body.kinematic", frame=start)
+    _step_to(c)
+    gap = kit.tree(item).find_nearest(hand_at())[3]
+    if gap is None or gap > GRAB_GAP:
+        why = ("the walk over takes the whole scene; start them nearer it" if start >= sc.frame_end - 1
+               else "the walk to it was blocked")
+        st.failures.append(f"pick_up: {beat['actor']}'s hand misses the {beat['take']} by "
+                           f"{gap if gap is not None else 9:.2f} m ({why})")
+        sc.frame_set(1)
+        return  # it stays on the ground: attached, it flew after a hand 1.7 m away (live run 2, try 3)
+    if clear < BEND_ROOM:
+        st.failures.append(f"pick_up: no room around the {beat['take']} for {beat['actor']} to bend "
+                           f"({clear:.2f} m to the nearest thing): someone else's move reaches over it; keep them still until "
+                           f"it is picked up")
+    hl, hr, _ = (arm.matrix_world @ arm.pose.bones[hand_bone].matrix).decompose()
+    con = item.constraints.new("CHILD_OF")
+    con.name, con.target, con.subtarget = "picked", arm, hand_bone
+    con.use_scale_x = con.use_scale_y = con.use_scale_z = False
+    con.inverse_matrix = Matrix.LocRotScale(hl, hr, Vector((1, 1, 1))).inverted()
+    for f, v in ((1, 0.0), (c - 1, 0.0), (c, 1.0)):
+        con.influence = v
+        con.keyframe_insert("influence", frame=max(f, 1))
+    st.resting[:] = [r for r in st.resting if r[0] is not item]  # in the hand now, not on the ground
+    # the hand closes on it through the bend, not only from the grab frame (live run 2, try 3: one frame early)
+    st.allowed.setdefault(frozenset((o.name, item.name)), set()).update(range(start, sc.frame_end + 1))
+    sc.frame_set(1)
+    return strip
 
 
 def _bake_free(item, last: int) -> None:
@@ -430,7 +627,19 @@ def prop_move(beat: dict, st, o, strip) -> None:
         return
     let_go = start + round(0.45 * (end - start)) if beat["move"] == "throw_prop" else start
     _bake_free(prop, let_go)
-    launch = kit.facing_vec(o) * 3.0 + Vector((0, 0, 2.0)) if beat["move"] == "throw_prop" else None
+    if beat["move"] == "throw_prop":
+        launch = kit.facing_vec(o) * 3.0 + Vector((0, 0, 2.0))
+    else:  # let go out to the side: straight down it lay against the foot and nobody could bend for it (Eiffel Short)
+        sc = bpy.context.scene
+        sc.frame_set(let_go)
+        out = prop.matrix_world.translation - o.matrix_world.translation
+        taker = next((b["actor"] for b in st.plan["beats"] if b["move"] == "pick_up" and b.get("take") == beat["actor"]), None)
+        speed = DROP_OUT
+        if taker:  # toward whoever picks it up, out of the dropper's reach (the dealer's cheer: live run 2, try 2)
+            out, speed = st.objs[taker].matrix_world.translation - o.matrix_world.translation, DROP_TOWARD
+        out.z = 0
+        launch = out.normalized() * speed if out.length > 1e-4 else None
+        sc.frame_set(1)
     moves.release(st, prop, let_go + 1, launch=launch)
     # it starts inside its owner's hand: collide with everything still but the person who held it (a box let go
     # stayed stuck on the officer)

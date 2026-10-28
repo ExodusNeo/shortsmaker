@@ -140,6 +140,41 @@ def test_only_buildable_cuts():
     assert opener_plan.clean_opener(two) is None  # one stroke group per cut
 
 
+def test_fix_plan_can_say_unfixable():
+    """0 of 7 live runs passed and each spent its last tries on an engine fault the plan couldn't fix: the planner
+    can say so (a str back), and it sees the earlier tries' failures to spot a repeat."""
+    old, prompts = llm.ask_ai, []
+    try:
+        llm.ask_ai = lambda prompt, **k: prompts.append(prompt) or {"fixable": False, "why": "the pick up is drawn wrong"}
+        s = {"opener": EXAMPLE, "title": "t", "opener_tries": [{"failures": ["a"]}, {"failures": ["b"]}]}
+        assert opener_plan.fix_plan(s, ["b"]) == "the pick up is drawn wrong"
+        assert 'already fixed once, failed with: [["a"]]' in prompts[0], prompts[0][:400]
+        assert "pick_up = needs" in prompts[0]  # every people move is described as it plays
+    finally:
+        llm.ask_ai = old
+
+
+def test_pick_up_needs_something_on_the_ground():
+    """The Eiffel plan's pick_up named nothing to pick up: "take" is a person who dropped their prop earlier, or a
+    thing of at most 1 m on the ground."""
+    p = copy.deepcopy(PEOPLE)
+    p["actors"] = [{"id": "dealer", "person": "worker", "facing": "right", "prop": "briefcase"},
+                   {"id": "con", "person": "businessman", "facing": "left"},
+                   {"id": "case", "find": "suitcase", "size_m": 0.6},
+                   {"id": "car", "find": "car", "size_m": 4}]
+    p["beats"] = [{"move": "drop_prop", "actor": "dealer", "at": 0.3},
+                  {"move": "pick_up", "actor": "con", "at": 0.8, "take": "dealer"}]
+    p["camera"] = {"angle": "side", "follow": "con"}
+    assert opener_plan.clean_opener(copy.deepcopy(p))
+    for take, at in ((None, 0.8), ("con", 0.8), ("car", 0.8), ("dealer", 0.2), ("nobody", 0.8)):
+        q = copy.deepcopy(p)
+        q["beats"][1].update(take=take, at=at)
+        assert opener_plan.clean_opener(q) is None, (take, at)
+    q = copy.deepcopy(p)
+    q["beats"][1]["take"] = "case"
+    assert opener_plan.clean_opener(q)
+
+
 def test_fix_plan_gets_scene_length():
     old, prompts = llm.ask_ai, []
     try:

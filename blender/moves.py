@@ -45,6 +45,7 @@ class State:
         self.rigs: dict[str, list] = {}  # actor id -> its leg rig (scene_kit.leg_rig), built when it first moves
         self.stroke_toward: list[float] = []  # each stroke's motion toward the camera (0 = across the frame)
         self.windups: list[tuple] = []  # (tool, its last wind-up frame): moved so the unseen hand is off-screen
+        self.busy: dict[str, int] = {}  # person id -> the frame its pick_up has the item in hand (next move waits)
 
     def f(self, t: float) -> int:
         return min(kit.frame_of(t, self.fps), self.frames)

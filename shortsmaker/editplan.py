@@ -54,6 +54,7 @@ def edit_plan(short: dict, bounds: list[float], sources: list[str], cues: list[d
                                + ", ".join(str(k + 1) for k, sc in enumerate(short["scenes"]) if sc.get("look"))
                                if any(sc.get("look") for sc in short["scenes"]) else "none (plain pictures)"),
              f"Opening: hook title \"{short['hook_text']}\" 0:00.0-0:01.8"
+             + (f" | {short['opening_note']}" if short.get("opening_note") else "")
              + (f" | hook lines considered: {' / '.join(short['hook_options'])}" if short["hook_options"] else ""),
              "Script editor: " + ("\n  ".join([""] + short["editor_notes"]) if short.get("editor_notes") else "none"),
              *([f"Twist check (topic against Wikipedia, before writing): {short['twist_check']}"]

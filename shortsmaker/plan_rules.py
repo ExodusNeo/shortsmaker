@@ -108,7 +108,10 @@ def clean_full(f, said: list[str]) -> dict | None:
         return None
 
     def text(v, n: int, upper: bool = False) -> str:
-        s = str(v or "").strip()[:n].strip()
+        s = str(v or "").strip()
+        if len(s) > n:  # cut at a word ("FRANCS PAID FOR THE EIFF" on the first number opener)
+            s = s[:n + 1].rsplit(" ", 1)[0] if " " in s[:n + 1] else s[:n]
+        s = s.strip()
         return s.upper() if upper else s
 
     def word(d: dict) -> dict:
@@ -472,7 +475,8 @@ def full_cues(full: dict, words: list[tuple[float, float, str]], start: float, e
     on an even slot inside the scene; board prints and map stops always appear in order, 0.4 s apart at least.
     The last beat comes FULL_SETTLE before the cut so it can finish and be seen; a late beat pulls the earlier ones
     forward with it (squeezed, order kept) instead of all piling up at the end."""
-    lo, hi = start + 0.4, max(start + 0.7, end - FULL_SETTLE)
+    lo = start + (0.4 if start else 0.0)  # scene 1 has no transition to wait out: its opener moves on frame 0
+    hi = max(lo + 0.3, end - FULL_SETTLE)
     said = lambda w: (start + spoken_at(words, w)) if isinstance(w, str) and spoken_at(words, w) is not None else None  # noqa: E731
 
     def squeeze(ts: list[float]) -> list[float]:
@@ -509,5 +513,5 @@ def full_cues(full: dict, words: list[tuple[float, float, str]], start: float, e
     if span:
         return {"at": round(start + span[0], 3), "lineEnd": round(start + span[1], 3)}
     t = said(full.get("word"))
-    at = min(hi, t if t is not None else start + 0.6)
+    at = min(hi, t if t is not None else lo + 0.2)
     return {"at": round(at, 3), "lineEnd": round(at + 1.2, 3)}
