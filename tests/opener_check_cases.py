@@ -155,4 +155,15 @@ crumb["piece"] = "bit"
 results["cut_crumb"] = oc.cut_result(bits[:50] + [crumb], target_area, [{"pieces": "40-60", "then": "scatter"}])
 results["cut_bits_ok"] = oc.cut_result(bits[:50], target_area, [{"pieces": "40-60", "then": "scatter"}])
 
+# a move shows: a 1.2 m sack that rocks 3 cm fails (onion run), one that drops 1 m passes
+sc = fresh()
+rocker = cube("rocker", (0, 0, 0.6), size=1.2)
+key(rocker, 1, (0, 0, 0.6))
+key(rocker, 15, (0.03, 0, 0.6))
+results["moves_rocks"] = oc.moves_visibly("topple", rocker, range(1, 31))
+dropper = cube("dropper", (3, 0, 1.6), size=1.2)
+key(dropper, 1, (3, 0, 1.6))
+key(dropper, 15, (3, 0, 0.6))
+results["moves_drops"] = oc.moves_visibly("fall", dropper, range(1, 31))
+
 out.write_text(json.dumps(results, indent=1), encoding="utf-8")

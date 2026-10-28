@@ -908,7 +908,23 @@ owner's Blender (Mike's chop; the owner's six catches became the checks below). 
     planned facing instead of the way the person faces now (`people.facing_now`).
   - Result on the replays: the first live plan (which had failed on timing) and the third pass, as does the first
     Eiffel plan with `take` added; the second still fails by 0.01 m of bend room (dealer cheering over the bag).
-- **Blender MCP: keep the owner's window on their own scene.** The add-on registers its Poly Pizza commands per
+- **From the onion-futures run (2026-10-28; all 3 tries failed only at the AI review, the motion-graphic AI then
+  declined).** Replayed headless from `work/opener_tries/`, each try now fails in seconds before the render:
+  - Everyone a beat moves is framed and checked (`opener_scene.beat_actors`, `seen_segments`): the camera framed the
+    sack alone and the trader and farmer were never in shot. The frame covers where they go over the whole scene
+    (a cheer's arms, a fallen subject), a falling thing down to where it lands, and the camera no longer rides a
+    physics body up and down (the sack's fall looked like the ground rising). The camera follows the subject and
+    whoever has to be seen at that frame (a second from each of their beats; smoothed only then: alone, the lag lost
+    the chopped rooster), and the punch-in keeps all of them in.
+  - `opener_checks.moves_visibly`: a thing's beat must move it by a quarter of its size (a "toppled" sack on the
+    floor only rocked).
+  - Line-up: actors alternate right/left of the first, each side from its own edge (one running edge put the third
+    actor past the second's width on the other side: the farmer 2.6 m out, everyone 13% of the frame).
+  - `collapse` played `Defeat`, which only hangs the head (head 2.08 -> 1.84 -> 2.08 m); it now plays `Death` and
+    `despair` is the head-hang. The stand-in library's `Defeat` had been a fall, so no test saw it. Die/collapse
+    say they fall the way the person faces.
+  - Still open: three people across a portrait frame are small (about 15%) with empty floor below them.
+ The add-on registers its Poly Pizza commands per
   scene (`blendermcp_use_polypizza`): with the window on an appended test scene, every model search failed with
   "Unknown command type: search_polypizza_models" (2026-10-28).
 - **`## Opener` in each channel's rules file** (owner, 2026-10-27: "i want the quality to improve on every short"):

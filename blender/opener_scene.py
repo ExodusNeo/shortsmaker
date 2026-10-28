@@ -223,19 +223,26 @@ def place_actors(plan: dict, models: dict, st: moves.State, lib: dict | None = N
     # a dropper and their taker stand further apart: 1.07 m apart, the bag fell between them and nobody could bend
     # for it (live run 2, try 2)
     pickers = {x for b in plan["beats"] if b["move"] == "pick_up" for x in (b["actor"], b.get("take"))}
-    x = 0.0
+    def gap(a: str, b: str) -> float:
+        return 1.5 if a in linked or b in linked else PICK_APART if {a, b} & pickers else 0.3
+
+    # alternately right and left of the first, each side from its own edge: one running edge put the third actor
+    # past the second's width on the other side (onion run: the farmer 2.6 m out, everyone 13% of the frame)
+    edge, last = {1: 0.0, -1: 0.0}, {}
     for k, aid in enumerate(on_ground):
         o = st.objs[aid]
         lo, hi = kit.bbox(o)
         width = max(hi.x - lo.x, hi.y - lo.y)  # either way round, the camera may sit on any side
-        if k:
-            x += width / 2
-        side = x if k % 2 == 0 else -x
+        sgn = 1 if k % 2 == 0 else -1
+        centre = edge[sgn] + gap(last[sgn], aid) + width / 2 if k else 0.0
+        side = sgn * centre
+        edge[sgn] = centre + width / 2
+        last[sgn] = aid
+        if not k:
+            edge[-1], last[-1] = width / 2, aid
         # a row across the shot; what someone goes at stands back into the depth instead, so a tall portrait frame
         # holds both big (side by side across it, the officer beside a car shrank to 8% of the height)
         o.location = kit.view(Vector((0.5 * side, 0.85 * abs(side), 0)) if aid in linked and k else Vector((side, 0, 0)))
-        nxt = on_ground[k + 1] if k + 1 < len(on_ground) else None
-        x += width / 2 + (1.5 if aid in linked or nxt in linked else PICK_APART if {aid, nxt} & pickers else 0.3)
     for walker, way in heading.items():  # what stands in the walker's way goes behind them instead
         if walker not in on_ground:
             continue
@@ -317,6 +324,18 @@ def threat_whole(st: moves.State, subject) -> bool:
     return st.threat is not None and st.threat is not subject and st.threat not in blades
 
 
+def beat_actors(plan: dict, st: moves.State) -> list[str]:
+    """Everyone a beat moves, apart from tools and things that get cut (their pieces are the subject's checks): all
+    of them have to be seen (the onion run framed the sack alone; the trader and the farmer were never in shot)."""
+    tools = {b.get("tool") for b in plan["beats"]}
+    out = []
+    for b in plan["beats"]:
+        a = b.get("actor")
+        if a in st.objs and a not in tools and a not in st.intact and a not in out:
+            out.append(a)
+    return out
+
+
 def camera(plan: dict, st: moves.State, subject_id: str) -> bpy.types.Object:
     sc = bpy.context.scene
     angle = plan["camera"]["angle"]
@@ -328,9 +347,25 @@ def camera(plan: dict, st: moves.State, subject_id: str) -> bpy.types.Object:
     lo, hi = kit.bbox(first)
     # a threat that isn't a blade (the car someone runs at) is framed with the subject, not leaned at: the people
     # run's car sat as a sliver at the frame edge and the officer seemed to run on the spot
-    whole = threat_whole(st, first)
-    if whole:
-        tlo, thi = kit.bbox(st.threat)
+    framed = [first] + ([st.threat] if threat_whole(st, first) else [])
+    framed += [st.objs[a] for a in beat_actors(plan, st) if st.objs[a] not in framed]
+    whole = len(framed) > 1
+    boxes = [kit.bbox(o) for o in framed[1:]]
+    # everywhere they go, not just frame 1: a cheer's raised arms and a toppled sack rolling off left the frame
+    # (onion run); a falling thing too, down to where it lands, as the camera doesn't ride the fall
+    travel = {k for k, m in kit.TABLES["people_moves"].items() if m["kind"] == "travel"}
+    walkers = {st.objs[b["actor"]] for b in plan["beats"] if b["move"] in travel and b.get("actor") in st.objs}
+    # people who stay put, the subject too (a fallen subject lay out of frame); the camera follows a walker
+    roam = [o for o in framed if o.name in st.released or (o.get("person") and o not in walkers
+                                                              and (whole or o is not first))]
+    # and the subject wherever it goes while someone else still has to be seen (the walker and the dropper of the
+    # pick-up test both in one frame)
+    due = set().union(*seen_windows(plan, st, subject_id).values())
+    for f in sorted({*range(1, sc.frame_end + 1, 4), sc.frame_end}):
+        sc.frame_set(f)
+        boxes += [kit.bbox(o) for o in roam] + ([kit.bbox(first)] if f in due and first not in roam else [])
+    sc.frame_set(1)
+    for tlo, thi in boxes:
         lo = Vector((min(lo.x, tlo.x), min(lo.y, tlo.y), min(lo.z, tlo.z)))
         hi = Vector((max(hi.x, thi.x), max(hi.y, thi.y), max(hi.z, thi.z)))
     size = hi - lo
@@ -363,16 +398,28 @@ def camera(plan: dict, st: moves.State, subject_id: str) -> bpy.types.Object:
     cam.data.lens = LENS
     cam.data.dof.use_dof, cam.data.dof.aperture_fstop, cam.data.dof.focus_object = True, FSTOP, aim
     n = max(sc.frame_end - 1, 1)
+    windows = seen_windows(plan, st, subject_id)
+    smooth = None
     for f in range(1, sc.frame_end + 1):
         target = start
         if f >= moved:
             sc.frame_set(f)
             blo, bhi = kit.bbox(st.objs[follow])
             now = (blo + bhi) / 2
-            if whole:  # keep both in: follow the point between the subject and what it goes at
+            if threat_whole(st, first):  # keep both in: follow the point between the subject and what it goes at
                 tlo, thi = kit.bbox(st.threat)
                 now = now.lerp((tlo + thi) / 2, 0.5)
+            # and whoever has to be seen right now: following the subject alone lost the farmer's cheer, the
+            # average of everyone lost the walker (onion run, pick-up test)
+            due = [kit.bbox(st.objs[a]) for a, fr in windows.items() if f in fr]
+            if due:
+                now = (now + sum(((a + b) / 2 for a, b in due), Vector())) / (1 + len(due))
+            if st.objs[follow].name in st.released:  # riding a fall down made the onion sack seem to sit still
+                now.z = start.z
             target = start.lerp(now, min(1.0, (f - moved) / 6))
+            if windows:  # no jump when someone's window ends; alone, the lag lost the chopped rooster's body
+                smooth = target if smooth is None else smooth.lerp(target, 0.3)
+                target = smooth
         t = (f - 1) / n
         ease = t * t * (3 - 2 * t)
         y, p = yaw + math.radians(ORBIT) * (ease - 0.5), pitch + math.radians(RISE) * ease
@@ -393,7 +440,23 @@ def first_hit(st: moves.State) -> int | None:
     return min(hits) if hits else None
 
 
-def punch_in(cam, st: moves.State, subject_id: str) -> None:
+def seen_windows(plan: dict, st: moves.State, subject_id: str) -> dict[str, set]:
+    """Everyone else a beat moves, and the frames they have to be in shot: a second from each of their beats."""
+    end = bpy.context.scene.frame_end
+    seen: dict[str, set] = {}
+    for b in plan["beats"]:
+        if b.get("actor") in beat_actors(plan, st) and b["actor"] != subject_id:
+            f0 = st.f(b["at"])
+            seen.setdefault(b["actor"], set()).update(range(f0, min(end, f0 + st.fps) + 1))
+    return seen
+
+
+def seen_segments(plan: dict, st: moves.State, subject_id: str) -> list:
+    """What has to stay in frame: the subject's segments and everyone else's windows."""
+    return subject_segments(subject_id, st, bpy.context.scene.frame_end) +         [(st.objs[a], sorted(fr)) for a, fr in seen_windows(plan, st, subject_id).items()]
+
+
+def punch_in(cam, plan: dict, st: moves.State, subject_id: str) -> None:
     """On the hit the lens snaps in, then eases half back; the strongest punch that keeps the subject in frame (a
     62 mm punch pushed the reference crate, which already fills the frame, out of it)."""
     sc = bpy.context.scene
@@ -406,7 +469,7 @@ def punch_in(cam, st: moves.State, subject_id: str) -> None:
         for f, lens in ((1, LENS), (hit, LENS), (min(hit + 2, sc.frame_end), top), (sc.frame_end, (LENS + top) / 2)):
             cam.data.lens = lens
             cam.data.keyframe_insert("lens", frame=f)
-        if not any(oc.in_frame(o, cam, fr) for o, fr in subject_segments(subject_id, st, sc.frame_end)):
+        if not any(oc.in_frame(o, cam, fr) for o, fr in seen_segments(plan, st, subject_id)):
             return
     cam.data.animation_data_clear()
     cam.data.lens = LENS
@@ -477,6 +540,11 @@ def subject_segments(subject_id: str, st: moves.State, frames: int) -> list[tupl
     return segs
 
 
+def oc_moves() -> set[str]:
+    """The thing moves that must show: physics and keyed travel (cut has its own checks)."""
+    return set(kit.TABLES["moves"]) - {"cut"}
+
+
 def checks(plan: dict, st: moves.State, cam, subject_id: str) -> list[str]:
     sc = bpy.context.scene
     frames = range(1, sc.frame_end + 1)
@@ -495,6 +563,11 @@ def checks(plan: dict, st: moves.State, cam, subject_id: str) -> list[str]:
     for obj, fr in subject_segments(subject_id, st, sc.frame_end):
         out += oc.in_frame(obj, cam, fr)
         out += oc.hidden(obj, cam, fr, occluders)
+    for obj, fr in seen_segments(plan, st, subject_id)[len(subject_segments(subject_id, st, sc.frame_end)):]:
+        out += oc.in_frame(obj, cam, fr)
+    for b in plan["beats"]:
+        if b.get("actor") in st.objs and b["actor"] not in st.intact and not st.objs[b["actor"]].get("person")                 and b["move"] in oc_moves():
+            out += oc.moves_visibly(b["move"], st.objs[b["actor"]], frames)
     first_subject = st.intact.get(subject_id, st.objs[subject_id])
     out += oc.first_frame(first_subject, st.threat or first_subject, cam,
                           threat_whole=threat_whole(st, first_subject))
@@ -555,7 +628,7 @@ def main(job_path: str) -> None:
         if pair:
             st.threat = st.objs[pair[1] if pair[0] == subject_id else pair[0]]
     cam = camera(plan, st, subject_id)
-    punch_in(cam, st, subject_id)
+    punch_in(cam, plan, st, subject_id)
     held = hold_offscreen(st, cam)
     failures = checks(plan, st, cam, subject_id)
     sc.frame_set(sc.frame_end)

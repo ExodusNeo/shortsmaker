@@ -92,8 +92,11 @@ def clip(arm, name: str, travel: bool) -> dict:
         key(arm, {1: {"Foot.L": (25, 0, 0), "Foot.R": (-25, 0, 0)}, LOOP // 2 + 1: {"Foot.L": (-25, 0, 0), "Foot.R": (25, 0, 0)},
                   LOOP + 1: {"Foot.L": (25, 0, 0), "Foot.R": (-25, 0, 0)}})
         frames = LOOP
-    elif name in ("Death", "Defeat"):
+    elif name == "Death":
         key(arm, {1: {"Body": (0, 0, 0)}, 21: {"Body": (-85, 0, 0)}})
+        frames = 20
+    elif name == "Defeat":  # like the real clip: the head hangs and comes back up, still standing
+        key(arm, {1: {"Body": (0, 0, 0)}, 11: {"Body": (-15, 0, 0)}, 21: {"Body": (0, 0, 0)}})
         frames = 20
     elif name == "PickUp":  # a bend over and back up: pick_up finds the lowest hand (2026-10-28)
         # the hand hangs on the hip hinge, so the arm swings down too or the hand wouldn't move

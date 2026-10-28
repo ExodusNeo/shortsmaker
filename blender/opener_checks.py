@@ -119,6 +119,24 @@ def in_frame(subject, cam, frames) -> list[str]:
     return [f"in_frame: {subject.name} leaves the frame on frames {spans(out)}"] if out else []
 
 
+def moves_visibly(move: str, o, frames, share: float = 0.25) -> list[str]:
+    """A thing's move shows on screen: some corner of it travels at least `share` of its size from frame 1 (the onion
+    run's sack "toppled" on the floor and only rocked; the review was the first to notice, a render later)."""
+    def corners():
+        at(f)
+        return [o.matrix_world @ Vector(c) for c in o.bound_box]
+    f = frames[0]
+    c0 = corners()
+    size = max(max(v[i] for v in c0) - min(v[i] for v in c0) for i in range(3))
+    most = 0.0
+    for f in frames:
+        most = max(most, max((a - b).length for a, b in zip(corners(), c0)))
+    if most >= max(0.05, share * size):
+        return []
+    hint = " (a squat or round thing on the ground only rocks: topple a tall thing, or use fall or roll)"         if move == "topple" else ""
+    return [f"{move}: {o.name} barely moves ({most:.2f} m for a {size:.2f} m thing){hint}"]
+
+
 def hidden(subject, cam, frames, occluders, min_visible: float = 0.4) -> list[str]:
     """The subject stays visible: on every frame at least min_visible of its points can be seen from the camera
     past `occluders` (a stump between the camera and the walking rooster hid it in the second live run)."""

@@ -56,6 +56,12 @@ def test_first_frame():
     assert results()["pair_small"] and "15%" in results()["pair_small"][0], results()["pair_small"]
 
 
+def test_moves_visibly():
+    rocks = results()["moves_rocks"]
+    assert len(rocks) == 1 and "rocker barely moves" in rocks[0] and "topple a tall thing" in rocks[0], rocks
+    assert results()["moves_drops"] == [], results()["moves_drops"]
+
+
 def test_edge_leads():
     assert results()["edge_wrong"] and "edge" in results()["edge_wrong"][0]
     assert results()["edge_right"] == []

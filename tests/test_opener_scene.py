@@ -353,6 +353,23 @@ def test_people_play_their_own_clips():
     assert report["foreign_clips"] == 0, report["foreign_clips"]
 
 
+def test_everyone_with_a_beat_is_framed():
+    """Onion run (2026-10-28): with three actors the camera framed the first alone and the third stood 2.6 m out
+    (one running edge for both sides). Now each side has its own edge, everyone a beat moves is framed and checked,
+    and a collapse ends on the ground (its clip was a head-hang)."""
+    job = fixture("person_stand")
+    plan = job["plan"]
+    plan["actors"][0]["facing"] = "camera"  # falls toward the lens, clear of the others
+    plan["actors"] += [{"id": "clerk", "person": plan["actors"][0]["person"], "facing": "left"}]
+    plan["beats"] = [{"move": "collapse", "actor": "officer", "at": 0.4}, {"move": "cheer", "actor": "clerk", "at": 0.8}]
+    plan["camera"] = {"angle": "side", "follow": "officer"}
+    report, _ = run(job)
+    assert report["ok"], report["failures"]
+    crate = report["gap_start"]["officer"]["crate"]
+    assert report["gap_start"]["officer"]["clerk"] < crate + 0.5, report["gap_start"]  # not past the crate's width
+    assert report["highest"]["officer"] < 0.7, report["highest"]  # down on the ground
+
+
 if __name__ == "__main__":
     names = [n for n in sorted(globals()) if n.startswith("test_") and (len(sys.argv) < 2 or n in sys.argv[1:])]
     failed = 0
