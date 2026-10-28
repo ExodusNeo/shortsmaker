@@ -54,19 +54,19 @@ class Env:
                                           encoding="utf-8")
         self.exe = self.dir / "blender.cmd"
         self.exe.write_text(f'@"{sys.executable}" "{self.dir / "fake.py"}" %*\n', encoding="utf-8")
-        self.saved = (config.LIBRARY, llm.ask_ai, opener_plan.fix_plan, blender_link.ping, blender_link.search,
+        self.saved = (config.LIBRARY, llm.ask_ai, opener_plan.swap_models, blender_link.ping, blender_link.search,
                       blender_link.fetch_model)
         config.LIBRARY = lib
         self.reviews, self.fixes = [], []
         llm.ask_ai = lambda prompt, **k: self.reviews.append(prompt) or {"ok": True, "problems": []}
-        opener_plan.fix_plan = lambda short, failures, seconds=None, scaled=None: self.fixes.append(list(failures)) or copy.deepcopy(short["opener"])
+        opener_plan.swap_models = lambda short, unfound: self.fixes.append(list(unfound)) or copy.deepcopy(short["opener"])
         return self
 
     def runs(self) -> int:
         return len(self.log.read_text().splitlines()) if self.log.exists() else 0
 
     def __exit__(self, *exc):
-        (config.LIBRARY, llm.ask_ai, opener_plan.fix_plan, blender_link.ping, blender_link.search,
+        (config.LIBRARY, llm.ask_ai, opener_plan.swap_models, blender_link.ping, blender_link.search,
          blender_link.fetch_model) = self.saved
         shutil.rmtree(self.dir, ignore_errors=True)
 
@@ -94,12 +94,17 @@ def test_beats_scaled_into_scene():
         assert max(ats) <= 1.8 - 1 / 30 + 1e-9 and ats == sorted(ats), ats
 
 
-def test_failed_checks_fix_then_fallback():
+def test_failed_checks_fall_back_and_the_try_is_kept():
+    """A template build that fails its checks is not re-planned (the staging is fixed): one run, the motion-graphic
+    opener plays, and the try is kept in work/opener_tries for engine fixes."""
     with Env() as e:
         e.fail.write_text("overlap: a/b frames 3-4")
-        clip, why = opener_render.render_opener(short(), 3.0, e.work, e.exe)
+        s = short()
+        clip, why = opener_render.render_opener(s, 3.0, e.work, e.exe)
         assert clip is None and why == "opener failed: overlap: a/b frames 3-4", why
-        assert e.runs() == 3 and len(e.fixes) == 2 and e.fixes[0] == ["overlap: a/b frames 3-4"]
+        assert e.runs() == 1 and e.fixes == []
+        kept = json.loads((e.work / "opener_tries" / "try1.json").read_text(encoding="utf-8"))
+        assert kept["failures"] == ["overlap: a/b frames 3-4"] and kept["plan"]["beats"], kept
 
 
 def test_crash_retry_then_fallback():
@@ -129,10 +134,9 @@ def test_missing_model_blender_off():
 
 def test_review_rejects():
     with Env() as e:
-        replies = iter([{"ok": False, "problems": ["the axe hits the breast"]}, {"ok": True, "problems": []}])
-        llm.ask_ai = lambda prompt, **k: next(replies)
+        llm.ask_ai = lambda prompt, **k: {"ok": False, "problems": ["the axe hits the breast"]}
         clip, why = opener_render.render_opener(short(), 3.0, e.work, e.exe)
-        assert why is None and clip.exists() and e.fixes == [["the axe hits the breast"]] and e.runs() == 2
+        assert clip is None and why == "opener failed: the axe hits the breast" and e.runs() == 1, why
 
 
 def test_cc_by_credit():
@@ -248,6 +252,16 @@ def test_use_opener_opening_note():
             "" if full else "; scene 1 opens on its picture"), s["opening_note"]
 
 
+def test_use_opener_no_template_note():
+    """No template fits: Blender never tried, and the Opening line says so."""
+    from PIL import Image
+    from shortsmaker import short_render
+    s = {"title": "x", "opener_check": "opener: no template fits (a crowd)", "opener_graphic": "motion graphic: map",
+         "scenes": [{"full": {"type": "journey"}}]}
+    short_render.use_opener(s, [0.0, 2.0], Path("."), {}, [Image.new("RGB", (8, 8))], ["x"])
+    assert s["opening_note"] == "no template fits (a crowd) -> motion graphic: map", s["opening_note"]
+
+
 def test_use_opener_planner_check():
     from shortsmaker import short_render
     s = {"title": "x", "opener_check": "opener: no usable plan", "scenes": [{"full": None}]}
@@ -324,13 +338,6 @@ def test_reuse_after_small_length_change():
         assert why is None and clip.exists() and e.runs() == 1
 
 
-def test_fix_round_gets_scaled_plan():
-    with Env() as e:
-        e.fail.write_text("in_frame: rooster leaves the frame on frames 50-54")
-        seen = []
-        opener_plan.fix_plan = lambda short, failures, seconds=None, scaled=None: seen.append((seconds, scaled)) or None
-        opener_render.render_opener(short(), 1.8, e.work, e.exe)
-        assert seen and abs(seen[0][0] - 1.8) < 0.04 and max(b["at"] for b in seen[0][1]["beats"]) <= 1.8
 
 
 
@@ -387,34 +394,28 @@ def test_person_job_has_library():
 
 
 
-def test_unfixable_stops_early_and_every_try_is_kept():
-    """A failure the planner says no plan change can fix ends the opener at once (the motion-graphic opener plays
-    instead of two more 10-minute tries), and every failed try is kept in work/opener_tries."""
-    with Env() as e:
-        e.fail.write_text("overlap: a/b frames 3-4")
-        opener_plan.fix_plan = lambda short, failures, seconds=None, scaled=None: e.fixes.append(list(failures)) or "drawn wrong"
-        s = short()
-        clip, why = opener_render.render_opener(s, 3.0, e.work, e.exe)
-        assert clip is None and e.runs() == 1, (why, e.runs())
-        assert why == "opener failed: overlap: a/b frames 3-4 (the planner can't fix it with the plan: drawn wrong)", why
-        kept = json.loads((e.work / "opener_tries" / "try1.json").read_text(encoding="utf-8"))
-        assert kept["failures"] == ["overlap: a/b frames 3-4"] and kept["plan"]["beats"], kept
-        assert [t["try"] for t in s["opener_tries"]] == [1]
 
 
 def test_unfound_model_goes_back_to_the_planner():
     """The first people run (umbrella officer) asked for a "ww2 armored car" no free library has and lost the whole
-    opener: a model that can't be found goes back to the planner like any failure."""
+    opener: the planner refills the template with a more common thing."""
     with Env() as e:
         blender_link.ping = lambda timeout=2.0: True
         blender_link.search = lambda find: []  # nothing found for anything not in the library
         s = short()
         s["opener"]["actors"][1]["find"] = "ww2 armored car"
-        fixed = copy.deepcopy(PLAN)  # the planner swaps it for something the library has
-        opener_plan.fix_plan = lambda short, failures, seconds=None, scaled=None: e.fixes.append(list(failures)) or copy.deepcopy(fixed)
+        opener_plan.swap_models = lambda short, unfound: e.fixes.append(list(unfound)) or copy.deepcopy(PLAN)
         clip, why = opener_render.render_opener(s, 3.0, e.work, e.exe)
         assert why is None and clip.exists(), why
-        assert e.fixes and "ww2 armored car" in e.fixes[0][0], e.fixes
+        assert e.fixes == [["ww2 armored car"]], e.fixes
+    with Env() as e:  # an unusable swap ends it
+        blender_link.ping = lambda timeout=2.0: True
+        blender_link.search = lambda find: []
+        s = short()
+        s["opener"]["actors"][1]["find"] = "ww2 armored car"
+        opener_plan.swap_models = lambda short, unfound: None
+        clip, why = opener_render.render_opener(s, 3.0, e.work, e.exe)
+        assert clip is None and why == "opener failed: no fitting model for 'ww2 armored car' (the swap wasn't usable)", why
 
 
 
@@ -431,17 +432,6 @@ def test_every_unfound_model_named_at_once():
 
 
 
-def test_model_swaps_dont_use_up_fix_rounds():
-    """A round spent swapping an unfound model doesn't count against the render fix rounds (2)."""
-    with Env() as e:
-        blender_link.ping = lambda timeout=2.0: True
-        blender_link.search = lambda find: []
-        s = short()
-        s["opener"]["actors"][1]["find"] = "ww2 armored car"
-        e.fail.write_text("overlap: a/b frames 3-4")
-        opener_plan.fix_plan = lambda short, failures, seconds=None, scaled=None: e.fixes.append(list(failures)) or copy.deepcopy(PLAN)
-        opener_render.render_opener(s, 3.0, e.work, e.exe)
-        assert e.runs() == 3, e.runs()  # all three renders still happen after the swap
 
 
 

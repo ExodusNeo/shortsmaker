@@ -4,7 +4,8 @@ import json
 from pathlib import Path
 
 from shortsmaker import (
-    channel_profiles, footage, image_sources, llm, motion, picture_pool, plan_rules, rules, session, style_lab, writing,
+    blender_link, channel_profiles, footage, image_sources, llm, motion, opener_render, picture_pool, plan_rules, rules,
+    session, style_lab, writing,
 )
 from shortsmaker.config import DOC_KINDS, ICONS, MAX_FULL, MOVE_NAMES, STYLE_CAPS
 
@@ -319,7 +320,11 @@ The channel opens every Short on an animation of the story's strangest moment. P
 that shows this hook's strangest moment most strongly from its first frame (always one: it is the opener).
 Real facts only, from the articles below. Leave out "word"/"words": the opener moves from its first frame.
 {"Not a document: the Short already has one. " if has_doc else ""}Not a board. {retry}Formats:
-{full_formats()}
+{full_formats()};
+{{"type": "model", "find": "eiffel tower", "label": "SOLD FOR SCRAP", "note": "1925"}}
+ (a low-poly 3D model of the one real thing at the heart of the moment drops in and turns under a headline;
+ find = what a free low-poly model library titles it, a single object, never a person; label and note at most 24
+ letters each)
 Wikipedia articles: {json.dumps(texts, ensure_ascii=False)}
 Reply with ONLY JSON: {{"full": {{...}}, "why": "one short sentence"}}""", fatal=False)
         data = data if isinstance(data, dict) else {}
@@ -330,8 +335,14 @@ Reply with ONLY JSON: {{"full": {{...}}, "why": "one short sentence"}}""", fatal
         elif f.get("type") == "board" or (has_doc and f.get("type") == "document"):
             note = "no motion graphic (the AI picked an unusable one)"
         else:
-            f = plan_rules.clean_full(f, [])  # no spoken-word triggers: an opener moves from frame 0, not on its word
+            f = plan_rules.clean_full(f, [], opener=True)  # no spoken-word triggers: an opener moves from frame 0
             note = None if f else "no motion graphic (the AI's pick failed the format check)"
+            if f and f["type"] == "model":  # its model must exist before it is planned (else ask once more)
+                blend, miss = opener_render.model_for(f["find"])
+                if blend:
+                    f.update(model=str(blend), credit=blender_link.credit(blend))
+                else:
+                    note = f"no motion graphic ({miss})"
         if not note:
             break
         retry = f"Your last pick was rejected: {note.removeprefix('no motion graphic (')[:-1]}. "

@@ -8,7 +8,7 @@ from pathlib import Path
 
 from PIL import Image
 
-from shortsmaker import llm, media_tools
+from shortsmaker import llm, media_tools, opener_render
 from shortsmaker.config import FPS, PALETTES, REMOTION, XFADE
 
 
@@ -29,6 +29,8 @@ def full_summary(f: dict) -> str:
         return f"big number: {f['show']} {f['label']} ({f['figures']} figures, each = {f['each']:,.10g}{painted})"
     if f["type"] == "board":
         return "evidence board: " + " / ".join(it["label"] for it in f["items"])
+    if f["type"] == "model":
+        return f"3D model: {f['find']} under \"{f['label']}\"" + (f", {f['note']}" if f.get("note") else "")
     if f["type"] == "custom":
         return f"custom animation ({f.get('kind', 'diagram')}): {f.get('title', 'SCENE')} — {f.get('brief', '')}"
     return (f"document ({f['kind']}): \"{f['key_line']}\" underlined"
@@ -42,7 +44,7 @@ def full_props(sc: dict, cue: dict, i: int, pics: list | None, job: Path,
     f, c = sc.get("full"), cue.get("full")
     if not f or not c:
         return None
-    out = {k: v for k, v in f.items() if k not in ("word", "words", "find", "photos")}
+    out = {k: v for k, v in f.items() if k not in ("word", "words", "find", "photos", "model", "credit")}
     out["seed"] = i + 1
     out.setdefault("skin", skin)
 
@@ -68,6 +70,9 @@ def full_props(sc: dict, cue: dict, i: int, pics: list | None, job: Path,
         if fig.name and fig.exists():  # Gemini's ink silhouette of the counted thing (else the built-in icon)
             shutil.copy(fig, job / f"fig{i}.png")
             out["image"] = f"job/fig{i}.png"
+    elif f["type"] == "model":  # the library model as .glb for three.js (Model3D.tsx)
+        shutil.copy(opener_render.to_glb(Path(f["model"])), job / f"model{i}.glb")
+        out.update(src=f"job/model{i}.glb", at=c["at"], noteAt=c["noteAt"])
     elif f["type"] == "custom":
         cues_list = c.get("cues") or [0.5, 1.8, 3.0]
         out.update(slot=slot, cues=cues_list, photos=[])

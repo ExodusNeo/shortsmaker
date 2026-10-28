@@ -1,5 +1,5 @@
-"""Tests for opener staging plans (opener_plan.py, 2026-10-27): the plan format and its tables, the batch call and
-its one retry. The AI is faked. No AI usage. Run: .venv\\Scripts\\python.exe tests\\test_opener_plan.py"""
+"""Tests for opener staging plans (opener_plan.py, 2026-10-27; shot templates 2026-10-28): the plan format and its
+tables, template fills, the batch call and its one retry, model swaps. The AI is faked. No AI usage. Run: .venv\\Scripts\\python.exe tests\\test_opener_plan.py"""
 import copy
 import sys
 import traceback
@@ -8,6 +8,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 from shortsmaker import llm, opener_plan  # noqa: E402
+sys.path.insert(0, str(ROOT / "tests"))
+from test_shot_templates import SAMPLES  # noqa: E402
 
 EXAMPLE = {  # the spec's example plan
     "buildable": True,
@@ -38,11 +40,6 @@ def plan(**changes):
         last = keys[-1]
         node[int(last) if last.isdigit() else last] = v
     return p
-
-
-def short(i=0):
-    return {"title": f"Short {i}", "research": {"wiki": "text"},
-            "scenes": [{"narration": "The axe fell."}, {"narration": "He walked away."}]}
 
 
 def test_spec_example_is_clean():
@@ -80,48 +77,12 @@ def test_cut_needs_expect():
     assert opener_plan.clean_opener(plan(**{"beats.0.expect.0.then": "explode"})) is None
 
 
-def test_unbuildable():
-    old = llm.ask_ai
-    try:
-        llm.ask_ai = lambda *a, **k: {"shorts": [{"index": 0, "buildable": False, "why": "people in uniforms"}]}
-        s = short()
-        opener_plan.plan_openers([s], {"niche": "history"})
-        assert "opener" not in s and s["opener_check"] == "opener: not buildable (people in uniforms)", s
-    finally:
-        llm.ask_ai = old
 
 
-def test_plan_retry_then_none():
-    old, calls = llm.ask_ai, []
-    try:
-        llm.ask_ai = lambda *a, **k: calls.append(1) or {"shorts": [{"index": 0, "junk": True}]}
-        s = short()
-        opener_plan.plan_openers([s], {"niche": "history"})
-        assert len(calls) == 2 and s["opener_check"] == "opener: no usable plan" and "opener" not in s
-    finally:
-        llm.ask_ai = old
 
 
-def test_good_plan_is_kept():
-    old = llm.ask_ai
-    try:
-        llm.ask_ai = lambda *a, **k: {"shorts": [{"index": 0, **copy.deepcopy(EXAMPLE)}]}
-        s = short()
-        opener_plan.plan_openers([s], {"niche": "history"})
-        assert s["opener"] == EXAMPLE and s.get("opener_check") is None
-    finally:
-        llm.ask_ai = old
 
 
-def test_fix_plan_returns_clean_or_none():
-    old = llm.ask_ai
-    try:
-        llm.ask_ai = lambda *a, **k: copy.deepcopy(EXAMPLE)
-        assert opener_plan.fix_plan({"opener": EXAMPLE, "title": "t"}, ["overlap: axe/rooster frames 21-23"]) == EXAMPLE
-        llm.ask_ai = lambda *a, **k: None
-        assert opener_plan.fix_plan({"opener": EXAMPLE, "title": "t"}, ["x"]) is None
-    finally:
-        llm.ask_ai = old
 
 
 def test_rejects_on_cycles_and_self():
@@ -140,18 +101,6 @@ def test_only_buildable_cuts():
     assert opener_plan.clean_opener(two) is None  # one stroke group per cut
 
 
-def test_fix_plan_can_say_unfixable():
-    """0 of 7 live runs passed and each spent its last tries on an engine fault the plan couldn't fix: the planner
-    can say so (a str back), and it sees the earlier tries' failures to spot a repeat."""
-    old, prompts = llm.ask_ai, []
-    try:
-        llm.ask_ai = lambda prompt, **k: prompts.append(prompt) or {"fixable": False, "why": "the pick up is drawn wrong"}
-        s = {"opener": EXAMPLE, "title": "t", "opener_tries": [{"failures": ["a"]}, {"failures": ["b"]}]}
-        assert opener_plan.fix_plan(s, ["b"]) == "the pick up is drawn wrong"
-        assert 'already fixed once, failed with: [["a"]]' in prompts[0], prompts[0][:400]
-        assert "pick_up = needs" in prompts[0]  # every people move is described as it plays
-    finally:
-        llm.ask_ai = old
 
 
 def test_pick_up_needs_something_on_the_ground():
@@ -175,21 +124,8 @@ def test_pick_up_needs_something_on_the_ground():
     assert opener_plan.clean_opener(q)
 
 
-def test_fix_plan_gets_scene_length():
-    old, prompts = llm.ask_ai, []
-    try:
-        llm.ask_ai = lambda prompt, **k: prompts.append(prompt) or copy.deepcopy(EXAMPLE)
-        scaled = copy.deepcopy(EXAMPLE)
-        scaled["beats"][2]["at"] = 1.7
-        opener_plan.fix_plan({"opener": EXAMPLE, "title": "t"}, ["in_frame: x"], seconds=1.8, scaled=scaled)
-        assert "1.8 seconds" in prompts[0] and '"at": 1.7' in prompts[0], prompts[0][:400]
-    finally:
-        llm.ask_ai = old
 
 
-def test_prompt_explains_stroke_angles():
-    text = opener_plan._tables_text()
-    assert "diagonal" in text and "edge-on" in text and "flat side" in text, text  # the live run chose "down" blindly
 
 
 
@@ -223,9 +159,6 @@ def test_people_move_on_animal_rejected():
     assert opener_plan.clean_opener(p) is None
 
 
-def test_prompt_lists_people():
-    text = opener_plan._tables_text()
-    assert "ww2_british_officer" in text and "swing_prop" in text, text[:400]
 
 
 
@@ -237,17 +170,6 @@ def test_toward_an_actor_is_clean():
     assert opener_plan.clean_opener(p) is None
 
 
-def test_fix_round_reads_the_opener_rules():
-    """The fix rounds didn't see the channel's opener rules and drifted back to names no library has."""
-    seen = []
-    saved = (llm.ask_ai, opener_plan.session.RULES)
-    llm.ask_ai = lambda prompt, **k: seen.append(prompt) or None
-    opener_plan.session.RULES = {"Opener": "RULES-MARKER name models plainly"}
-    try:
-        opener_plan.fix_plan({"title": "t", "opener": copy.deepcopy(PEOPLE)}, ["overlap: a/b"])
-    finally:
-        llm.ask_ai, opener_plan.session.RULES = saved
-    assert seen and "RULES-MARKER" in seen[0]
 
 
 
@@ -260,6 +182,100 @@ def test_vehicle_roll_rejected():
     assert opener_plan.clean_opener(p) is None
     p["beats"][-1]["move"] = "walk"
     assert opener_plan.clean_opener(p) is not None
+
+
+def test_every_sample_fill_is_clean():
+    for name, reply in SAMPLES.items():
+        plan = opener_plan.fill_template(copy.deepcopy(reply))
+        assert plan and plan["template"] == reply["template"], name
+
+
+def test_fill_rejects_values_outside_the_template():
+    good = SAMPLES["falls_on_cheer"]
+    for path, v in (("template", "explode"), ("fill.victim", "astronaut"), ("fill.thing.size_m", 4),
+                    ("fill.witness_does", "dance"), ("set.ground", "water"), ("set.light", "noon"), ("moment", "")):
+        r = copy.deepcopy(good)
+        node, keys = r, path.split(".")
+        for k in keys[:-1]:
+            node = node[k]
+        node[keys[-1]] = v
+        assert opener_plan.fill_template(r) is None, path
+    r = copy.deepcopy(SAMPLES["chop_bird"])
+    r["fill"]["tool"]["find"] = "spoon"  # not a cut tool
+    assert opener_plan.fill_template(r) is None
+    r = copy.deepcopy(SAMPLES["falls_on_cheer"])
+    r["fill"]["thing"]["find"] = "crate"  # only sacks and bags passed
+    assert opener_plan.fill_template(r) is None
+
+
+def test_fill_if_items():
+    """A pick fills in a beat's move or a stroke; every slot must be filled."""
+    r = copy.deepcopy(SAMPLES["falls_on_cheer"])
+    r["fill"]["witness"] = None  # a falls_on with nobody reacting hid its victim behind the crate (2026-10-28)
+    assert opener_plan.fill_template(r) is None
+    cheer = opener_plan.fill_template(copy.deepcopy(SAMPLES["falls_on_cheer"]))
+    assert cheer["beats"][-1] == {"move": "cheer", "actor": "witness", "at": 1.8}
+    sl = opener_plan.fill_template(copy.deepcopy(SAMPLES["slice"]))
+    assert sl["beats"][0]["strokes"] == [{"rows": 5}] and sl["beats"][0]["expect"][0]["pieces"] == "5-5"
+    run = opener_plan.fill_template(copy.deepcopy(SAMPLES["hand_over_run"]))
+    assert run["beats"][-1]["move"] == "run" and run["actors"][0]["prop"] == "coin bag"
+
+
+def short(i=0):
+    return {"title": f"Short {i}", "research": {"wiki": "text"},
+            "scenes": [{"narration": "The sack fell."}, {"narration": "He was ruined."}]}
+
+
+def test_no_template_fits():
+    old = llm.ask_ai
+    try:
+        llm.ask_ai = lambda *a, **k: {"shorts": [{"index": 0, "template": None, "why": "a crowd of thousands"}]}
+        s = short()
+        opener_plan.plan_openers([s], {"niche": "history"})
+        assert "opener" not in s and s["opener_check"] == "opener: no template fits (a crowd of thousands)", s
+    finally:
+        llm.ask_ai = old
+
+
+def test_fill_retry_then_none():
+    old, calls = llm.ask_ai, []
+    try:
+        llm.ask_ai = lambda *a, **k: calls.append(1) or {"shorts": [{"index": 0, "template": "falls_on", "fill": {}}]}
+        s = short()
+        opener_plan.plan_openers([s], {"niche": "history"})
+        assert len(calls) == 2 and s["opener_check"] == "opener: no usable template fill" and "opener" not in s
+    finally:
+        llm.ask_ai = old
+
+
+def test_good_fill_is_kept_and_prompt_has_templates_and_rules():
+    old, prompts = (llm.ask_ai, opener_plan.session.RULES), []
+    try:
+        opener_plan.session.RULES = {"Opener": "RULES-MARKER"}
+        llm.ask_ai = lambda prompt, **k: prompts.append(prompt) or {"shorts": [{"index": 0, **copy.deepcopy(SAMPLES["hand_over_walk"])}]}
+        s = short()
+        opener_plan.plan_openers([s], {"niche": "history"})
+        assert s["opener"]["template"] == "hand_over" and s.get("opener_check") is None
+        assert s["opener_fill"]["fill"]["taker"] == "businessman"
+        assert "RULES-MARKER" in prompts[0] and "- falls_on:" in prompts[0] and "ww2_british_officer" in prompts[0]
+    finally:
+        llm.ask_ai, opener_plan.session.RULES = old
+
+
+def test_swap_models_refills_the_template():
+    old, prompts = llm.ask_ai, []
+    try:
+        swapped = copy.deepcopy(SAMPLES["falls_on_cheer"])
+        swapped["fill"]["thing"]["find"] = "sack of grain"
+        llm.ask_ai = lambda prompt, **k: prompts.append(prompt) or copy.deepcopy(swapped)
+        s = {"title": "t", "opener_fill": copy.deepcopy(SAMPLES["falls_on_cheer"])}
+        plan = opener_plan.swap_models(s, ["gunny sack"])
+        assert plan["actors"][1]["find"] == "sack of grain" and s["opener_fill"]["fill"]["thing"]["find"] == "sack of grain"
+        assert '"gunny sack"' in prompts[0]
+        llm.ask_ai = lambda prompt, **k: {"template": "falls_on"}
+        assert opener_plan.swap_models(s, ["sack of grain"]) is None and s["opener_fill"]["fill"]["thing"]["find"] == "sack of grain"
+    finally:
+        llm.ask_ai = old
 
 
 if __name__ == "__main__":

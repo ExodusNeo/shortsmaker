@@ -1,0 +1,3 @@
+{"total": 4, "narration": "In 1925 a con man sold the Eiffel Tower for a bag of cash, twice.",
+ "scenes": [{"start": 0, "end": 4, "full": {"type": "model", "seed": 1, "skin": "dossier", "src": "job/model_coinbag.glb",
+   "label": "PAID IN CASH", "note": "1925", "at": 0.55, "noteAt": 1.05}}]}

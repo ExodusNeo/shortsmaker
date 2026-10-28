@@ -103,7 +103,9 @@ def use_opener(short: dict, bounds: list[float], work: Path, clips: dict, images
 
     def failed(why: str | None) -> str | None:
         if why and short.get("opener_graphic"):
-            short["opening_note"] = (f"Blender opener failed ({why.removeprefix('opener failed: ')}) -> {short['opener_graphic']}"
+            head = (why.removeprefix("opener: ") if why.startswith("opener: no template")  # Blender never tried
+                    else f"Blender opener failed ({why.removeprefix('opener failed: ')})")
+            short["opening_note"] = (f"{head} -> {short['opener_graphic']}"
                                      + ("" if short["scenes"][0].get("full") else "; scene 1 opens on its picture"))
         return why
 
@@ -449,6 +451,8 @@ def render(short: dict, ch: dict, folder: Path, state: dict | None = None, fix_r
         image_credits.append(f"Thumbnail: {thumb_credit}")
     if short.get("opener_used"):  # CC-BY models in the Blender opener
         image_credits += [f"3D model: {c}" for c in short.get("opener_credits") or []]
+    elif (short["scenes"][0].get("full") or {}).get("credit"):  # the CC-BY model in a three.js model opener
+        image_credits.append(f"3D model: {short['scenes'][0]['full']['credit']}")
     if image_credits:
         credit_text += "\n\nFootage and image credits:\n" + "\n".join(dict.fromkeys(image_credits))
     (folder / "upload.txt").write_text(

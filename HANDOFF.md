@@ -839,7 +839,7 @@ owner's Blender (Mike's chop; the owner's six catches became the checks below). 
 - Rules settings (`## Settings`): `opener: blender` (both strange-history and weird-economics) and `hook: moment |
   money_claim` (the hook-line check: the editor reports `hook_kind`; a summary hook, or a weird-economics first line
   without a money figure, goes back to the editor once, `writing.story_problems`).
-- Plan (`opener_plan.py`, after the fact check in `write_scripts`): one AI call stages every Short as JSON from the
+- Plan (`opener_plan.py`, after the fact check in `write_scripts`; **replaced 2026-10-28 by shot templates, see below**): one AI call stages every Short as JSON from the
   tables in `blender/opener_tables.json` (grounds, lights, moves, tools, gaits, outcomes, cut-face colours, limits),
   shared with `blender/moves.py`. `clean_opener` rejects anything outside them; `buildable: false` (people) or an
   unusable plan leaves `s["opener_check"]` and today's scene 1. The AI never writes Blender code.
@@ -865,8 +865,8 @@ owner's Blender (Mike's chop; the owner's six catches became the checks below). 
   cut, physics bodies after release), resting (1 cm), in frame, first frame (subject >= 15% + threat), edge leads,
   blade face (>= 35 deg), cut result (planned shares ±50%, counts, >= 3 mm, <= 80 pieces), blade blocked.
 - Run (`opener_render.render_opener`, from `short_render.use_opener` after the voice): beats scaled into scene 1,
-  headless Blender (10 min, one retry), report, AI review of an 8-frame strip, up to 2 fix rounds
-  (`opener_plan.fix_plan`), then `work/opener.mp4` plays as scene 1 (no motion graphic over it, no first-second
+  headless Blender (10 min, one retry), report, AI review of an 8-frame strip (no fix rounds since the shot
+  templates, 2026-10-28), then `work/opener.mp4` plays as scene 1 (no motion graphic over it, no first-second
   picture swap, CC-BY credits in upload.txt) or `CHECK: opener failed: <reason>` and today's scene 1. Unchanged
   plan + code reuse the clip (`work/opener_done.txt`).
 - **Motion-graphic opener (owner, 2026-10-28: the Eiffel Short's opener failed 3 times and fell back to a mugshot
@@ -1021,7 +1021,45 @@ every opener.
   portrait frame. Each run fixed a general fault (see the rulings in the commits); the remaining ones are content.
   Ideas: an explosion/smoke move, the planner told which models the library already has, a closed-umbrella default.
 
-## Opener next steps (2026-10-28, agreed with the owner, in this order)
+## Shot templates + three.js model graphic (2026-10-28, owner: "add those all 3 of it but make sure they can be useful")
+Owner asked whether to drop Blender for three.js openers; the answer given: keep Blender but stop free composition
+(0 of ~10 live runs passed; every new combination found a new engine edge), make the motion graphic the default
+when no template fits, and add three.js only as a fixed template. All three built:
+- **Shot templates** (`blender/shot_templates.json`): `chop` (Mike's rooster: a bird on a block loses its head, the
+  body hops off and staggers away), `slice` (a food on a board sliced into 4-6 rings), `falls_on` (a sack/bag
+  topples on a person who flinches and collapses; a second person cheers or despairs), `hand_over` (one person drops
+  a small prop, another walks over, picks it up and walks/runs off). Each is a plan that passed the checks with
+  `$slot` blanks; the planner (`opener_plan.plan_openers`) only picks one and fills it (roles, models with size
+  ranges, a few picks, ground/light/backdrop); `fill_template` validates every value and `clean_opener` the result.
+  Proof: `tests\test_shot_templates.py`, 8 variants with the real library + people, all pass every check, strips
+  looked at by eye (`cache\shot_templates\`). **Not yet seen in the owner's live Blender window** (MCP was off), not
+  through the AI review, and no live run yet.
+- Limits found while building them, kept out of the templates: chopping a thing that isn't a bird (the axe left the
+  first frame); `falls_on` with a crate (it hid the person once fallen) or with nobody reacting (same);
+  `walk_through` (a person strolls on while a blast goes off behind them) was dropped: `scatter` only hops a thing,
+  `fly_off` threw one small rock, and the held closed umbrella read as a dark triangle. It needs an explosion/smoke
+  move first (the umbrella officer Short's moment).
+- **No template fits -> motion graphic, no Blender at all.** `s["opener_check"] = "opener: no template fits (why)"`;
+  the edit plan's Opening line reads `no template fits (<why>) -> motion graphic: ...`. Free composition is gone:
+  no planner-written beats, no fix rounds (`fix_plan`, `_tables_text`, `FORMAT` removed). `render_opener` builds
+  once; a model no library has goes back to the planner (`swap_models`, up to 2) for a more common find in the same
+  template; any check or review failure plays the motion graphic and keeps the try in `work/opener_tries/try1.json`.
+  New owner feedback on a template's look goes into the template (or the engine), then `test_shot_templates.py`.
+- **three.js model graphic** (`remotion/src/full/Model3D.tsx`, `@remotion/three` 4.0.535 + `three` 0.170.0 +
+  `@react-three/fiber` 9.1.2, exact versions): a full-screen motion graphic `{"type": "model", "find", "label",
+  "note"}` offered to `picker.opener_graphic` only (`clean_full(..., opener=True)`; never a slideshow scene). The
+  model must exist before it is planned (`opener_render.model_for`: library, else Poly Pizza through the owner's
+  Blender; no model -> the AI is asked once more, told why). Render: the .blend is exported once to a .glb beside it
+  (`blender/export_glb.py`, `opener_render.to_glb`) and copied to `job/model<i>.glb`; toon-shaded in 3 bands with
+  an inverted-hull outline like the Blender look, drops in from frame 0, lands with a squash, camera cranes round and
+  pushes in, framed to the model's size between the headline and the captions; headline at 0.55 s, note 0.5 s later.
+  CC-BY model credit goes to upload.txt (scene 1 `full["credit"]`). Test scene: `remotion\test_props\model-coinbag.json`
+  (`tests\render_full.py`); the Eiffel Tower model was also checked by eye. Not tried in a real Short yet.
+- Not done: the run start still asks for the Blender MCP on `opener: blender` channels even if no template will fit
+  (planning happens later, in `write_scripts`). `tests\test_rules.py` `test_strange_history_prompts_unchanged` fails,
+  and failed the same way before this change: its fake AI has no reply for the opener planner's prompt.
+
+## Opener next steps (2026-10-28, agreed with the owner, in this order; step 2 done the same day, see above)
 1. **A live run** of one Short with the onion-run fixes (framing everyone, checks before the render, depth staging,
    collapse, fetching in the owner's scene). Onion try 2 passes every check when replayed; no AI review or owner has
    seen it yet. Read `edit_plan.txt` (Opening + CHECK lines), `work/opener_tries/`, `work/opener_report.json`.
@@ -1062,13 +1100,14 @@ every opener.
   `.venv\Scripts\python.exe tests\test_first_second.py` (10: first-second check, opener swap incl. owner clips and the scene/picture list, review overlay windows, logbook small-sample note),
   `.venv\Scripts\python.exe tests\test_story.py` (9: word counts match the aligner, sentence takes, cutting a take, story_problems, editor second pass, rules in the prompt, twist check),
   `.venv\Scripts\python.exe tests\test_edit_project.py` (2: Shotcut timeline layout (pictures, graphics, captions; 3 sound tracks), output filters, markers; melt renders graphics + captions over the pictures at -14 LUFS),
-  `.venv\Scripts\python.exe tests\test_full_scenes.py` (46 on 2026-10-28), `.venv\Scripts\python.exe tests\test_pictures_first.py` (39: pool, picture list, topic check, `pic`, picker, review fixes, relevance filter, Pixabay filter) and
+  `.venv\Scripts\python.exe tests\test_full_scenes.py` (47 on 2026-10-28), `.venv\Scripts\python.exe tests\test_pictures_first.py` (39: pool, picture list, topic check, `pic`, picker, review fixes, relevance filter, Pixabay filter) and
   `.venv\Scripts\python.exe tests\test_style.py` (29: style library, guardrails, inventions, candidates),
   `.venv\Scripts\python.exe tests\run_ts_tests.py` (6 guarded + 13 style: arrow routing, layouts, card fitting, travel speed, registry, transitions) and
   `local_ai\qwen_venv\Scripts\python.exe tests\test_qwen_voice.py` (4: number words, caption words, aligner alphabet, word counts shared with tests/test_story.py).
-- Blender openers: `tests\test_opener_plan.py` (23), `tests\test_blender_link.py` (6, fake add-on socket),
-  `tests\test_opener_render.py` (30, fake Blender: fix rounds, fallback, reuse, credits, scene-1 wiring, the run.bat
-  note), and with real headless Blender `tests\test_opener_checks.py` (9, about a minute) and
+- Blender openers: `tests\test_opener_plan.py` (21: tables, template fills, model swaps), `tests\test_blender_link.py` (6, fake add-on socket),
+  `tests\test_opener_render.py` (28, fake Blender: one build, model swaps, fallback, reuse, credits, scene-1 wiring, the run.bat
+  note), `tests\test_shot_templates.py` (real headless Blender + the real library and people: every template
+  variant passes every check, about 6 minutes; `--render` writes `cache\shot_templates\<name>.mp4/.jpg` to look at), and with real headless Blender `tests\test_opener_checks.py` (9, about a minute) and
   `tests\test_opener_scene.py` (31 incl. the people tests, about 15 minutes), `tests\test_people_tables.py` (3),
   `tests\people_sheet.py` (people contact sheets, needs the packed library).
 - One full-screen scene alone: `.venv\Scripts\python.exe tests\render_full.py remotion\test_props\<name>.json [--still SECONDS]`.

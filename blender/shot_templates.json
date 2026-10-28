@@ -1,0 +1,346 @@
+{
+ "_about": "Shot templates (owner, 2026-10-28: free-composed openers passed 0 of ~10 live runs). Each is a staged plan that passed every check and was looked at by eye; the planner only picks one and fills its slots (opener_plan.fill_template). Slot kinds: role (a people role), thing ({find, size_m} in range), tool (a thing whose find names a cut tool; a thing's `words` limit its find to those that passed), prop (a find text), pick (one of `of`). In `plan`, \"$slot\" is the slot's value, \"$slot.find\" / \"$slot.size_m\" a thing's parts, and an actor or beat with \"if\": \"slot\" (set) or \"slot=a|b\" is kept only then. Every new template, and every new `of` value, is built headless by tests/test_shot_templates.py and looked at before it ships. Dropped 2026-10-28: walk_through (a person strolls on while a blast goes off behind them): no move reads as a blast (scatter only hopped, fly_off threw one small rock), and the held umbrella read as a dark triangle; it needs an explosion/smoke move first.",
+ "chop": {
+  "shows": "a blade chops the head off a bird that stands on a block; the head flies off and the headless body hops off the block and staggers away",
+  "grounds": [
+   "dirt",
+   "grass",
+   "stone",
+   "sand",
+   "snow"
+  ],
+  "slots": {
+   "target": {
+    "kind": "thing",
+    "size_m": [
+     0.3,
+     0.7
+    ],
+    "note": "the bird that loses its head (\"rooster\", \"chicken\", \"turkey\")"
+   },
+   "block": {
+    "kind": "thing",
+    "size_m": [
+     0.9,
+     1.3
+    ],
+    "note": "what it stands on (\"tree stump\", \"chopping block\")"
+   },
+   "tool": {
+    "kind": "tool",
+    "size_m": [
+     0.6,
+     1.0
+    ],
+    "note": "the blade (\"axe\", \"cleaver\", \"sword\")"
+   }
+  },
+  "plan": {
+   "actors": [
+    {
+     "id": "target",
+     "find": "$target.find",
+     "size_m": "$target.size_m",
+     "on": "block",
+     "facing": "right",
+     "gait": "bird"
+    },
+    {
+     "id": "block",
+     "find": "$block.find",
+     "size_m": "$block.size_m"
+    },
+    {
+     "id": "tool",
+     "find": "$tool.find",
+     "size_m": "$tool.size_m"
+    }
+   ],
+   "beats": [
+    {
+     "move": "cut",
+     "tool": "tool",
+     "target": "target",
+     "at": 0.55,
+     "strokes": [
+      {
+       "through": "neck",
+       "angle": "diagonal"
+      }
+     ],
+     "expect": [
+      {
+       "piece": "head",
+       "share": 0.15,
+       "then": "fly_off"
+      },
+      {
+       "piece": "rest",
+       "then": "stay"
+      }
+     ]
+    },
+    {
+     "move": "hop_off",
+     "actor": "target",
+     "at": 1.3,
+     "style": "stagger",
+     "toward": "left"
+    },
+    {
+     "move": "walk",
+     "actor": "target",
+     "at": 1.8,
+     "toward": "left",
+     "style": "stagger",
+     "ends": {
+      "on": "ground"
+     }
+    }
+   ],
+   "camera": {
+    "angle": "three_quarter",
+    "follow": "target"
+   }
+  }
+ },
+ "slice": {
+  "shows": "a knife slices a small food or thing on a board into rings that tip over",
+  "grounds": [
+   "table"
+  ],
+  "slots": {
+   "food": {
+    "kind": "thing",
+    "size_m": [
+     0.06,
+     0.15
+    ],
+    "note": "what is sliced (\"onion\", \"tomato\", \"potato\", \"apple\")"
+   },
+   "board": {
+    "kind": "thing",
+    "size_m": [
+     0.35,
+     0.5
+    ],
+    "note": "\"cutting board\""
+   },
+   "tool": {
+    "kind": "tool",
+    "size_m": [
+     0.25,
+     0.35
+    ],
+    "note": "\"kitchen knife\""
+   },
+   "slices": {
+    "kind": "pick",
+    "of": [
+     4,
+     5,
+     6
+    ],
+    "note": "how many slices"
+   }
+  },
+  "plan": {
+   "actors": [
+    {
+     "id": "board",
+     "find": "$board.find",
+     "size_m": "$board.size_m"
+    },
+    {
+     "id": "food",
+     "find": "$food.find",
+     "size_m": "$food.size_m",
+     "on": "board"
+    },
+    {
+     "id": "tool",
+     "find": "$tool.find",
+     "size_m": "$tool.size_m"
+    }
+   ],
+   "beats": [
+    {
+     "move": "cut",
+     "tool": "tool",
+     "target": "food",
+     "at": 0.5,
+     "strokes": [
+      {
+       "rows": "$slices"
+      }
+     ],
+     "expect": [
+      {
+       "pieces": "$slices-$slices",
+       "then": "tip_over"
+      }
+     ],
+     "ends": {
+      "on": "board"
+     }
+    }
+   ],
+   "camera": {
+    "angle": "three_quarter",
+    "follow": "food"
+   }
+  }
+ },
+ "falls_on": {
+  "shows": "a big sack topples over and crashes down in front of a person, who flinches and collapses, while a second person cheers or hangs their head",
+  "grounds": [
+   "wood floor",
+   "stone",
+   "dirt",
+   "grass"
+  ],
+  "slots": {
+   "victim": {
+    "kind": "role",
+    "note": "who it falls on"
+   },
+   "thing": {
+    "kind": "thing",
+    "size_m": [
+     0.8,
+     1.2
+    ],
+    "words": [
+     "sack",
+     "bag"
+    ],
+    "note": "the sack or bag that topples (\"gunny sack\", \"sack of grain\"); a crate hid the person it fell on"
+   },
+   "witness": {
+    "kind": "role",
+    "note": "the second person"
+   },
+   "witness_does": {
+    "kind": "pick",
+    "of": [
+     "cheer",
+     "despair"
+    ],
+    "note": "what the second person does"
+   }
+  },
+  "plan": {
+   "actors": [
+    {
+     "id": "victim",
+     "person": "$victim",
+     "facing": "left"
+    },
+    {
+     "id": "thing",
+     "find": "$thing.find",
+     "size_m": "$thing.size_m"
+    },
+    {
+     "id": "witness",
+     "person": "$witness",
+     "facing": "right"
+    }
+   ],
+   "beats": [
+    {
+     "move": "topple",
+     "actor": "thing",
+     "at": 0.5
+    },
+    {
+     "move": "flinch",
+     "actor": "victim",
+     "at": 0.9
+    },
+    {
+     "move": "collapse",
+     "actor": "victim",
+     "at": 1.3
+    },
+    {
+     "move": "$witness_does",
+     "actor": "witness",
+     "at": 1.8
+    }
+   ],
+   "camera": {
+    "angle": "side",
+    "follow": "victim"
+   }
+  }
+ },
+ "hand_over": {
+  "shows": "one person drops a small thing (a briefcase, a bag of money, a box) at their feet; another walks over, picks it up and walks or runs off with it",
+  "grounds": [
+   "stone",
+   "wood floor",
+   "dirt",
+   "grass"
+  ],
+  "slots": {
+   "giver": {
+    "kind": "role"
+   },
+   "taker": {
+    "kind": "role"
+   },
+   "item": {
+    "kind": "prop",
+    "note": "what changes hands, at most 0.6 m (\"briefcase\", \"coin bag\", \"box\")"
+   },
+   "leaves": {
+    "kind": "pick",
+    "of": [
+     "walk",
+     "run"
+    ],
+    "note": "how the taker goes off with it"
+   }
+  },
+  "plan": {
+   "actors": [
+    {
+     "id": "giver",
+     "person": "$giver",
+     "facing": "right",
+     "prop": "$item",
+     "prop_size_m": 0.4
+    },
+    {
+     "id": "taker",
+     "person": "$taker",
+     "facing": "left"
+    }
+   ],
+   "beats": [
+    {
+     "move": "drop_prop",
+     "actor": "giver",
+     "at": 0.2
+    },
+    {
+     "move": "pick_up",
+     "actor": "taker",
+     "at": 0.6,
+     "take": "giver"
+    },
+    {
+     "move": "$leaves",
+     "actor": "taker",
+     "at": 0.7,
+     "toward": "right"
+    }
+   ],
+   "camera": {
+    "angle": "side",
+    "follow": "taker"
+   }
+  }
+ }
+}

@@ -1,8 +1,9 @@
-"""Opener staging plans (2026-10-27): for channels with `opener: blender`, the planner AI stages each Short's
-strangest moment as a short Blender animation for scene 1: which library models, where they stand, and moves from a
-fixed list. Every value is checked against blender/opener_tables.json (shared with blender/moves.py); the AI never
-writes Blender code. A plan that can't be used is asked for once more; a moment the moves can't show is
-`buildable: false`. Either way the Short keeps today's scene 1 and gets a CHECK note (s["opener_check"])."""
+"""Opener staging plans (2026-10-27; shot templates 2026-10-28): for channels with `opener: blender`, the planner AI
+picks one of the shot templates in blender/shot_templates.json for each Short's strangest moment and fills its slots
+(who, which library models, a few picks). The template's staging was built and checked by eye once, so the AI never
+writes beats or Blender code (free-composed plans passed 0 of ~10 live runs). Every value is checked against the
+template and blender/opener_tables.json. No template fits, or no usable fill after one retry: the Short gets a CHECK
+note (s["opener_check"]) and its motion-graphic opener plays."""
 
 import json
 import math
@@ -18,29 +19,14 @@ STYLES, TOWARDS, STROKE_ANGLES, LIMITS = TABLES["styles"], TABLES["towards"], TA
 ACTOR_MOVES = {"fall", "topple", "hop_off", "walk", "fly_off", "scatter", "sink", "roll", "push"}  # cut: tool+target
 ROLES, PEOPLE_MOVES = TABLES["roles"], TABLES["people_moves"]  # people openers (part 2, 2026-10-27)
 PIECES = re.compile(r"^(\d+)-(\d+)$")
+TEMPLATES = {k: v for k, v in json.loads((config.ROOT / "blender" / "shot_templates.json").read_text(encoding="utf-8")).items()
+             if not k.startswith("_")}
+SLOT = re.compile(r"\$(\w+)(?:\.(find|size_m))?")
 
-DEFAULT_RULES = """Stage the story's strangest moment, the one its first line describes, as a 2-3 second animation.
-It is built from free low-poly library models (animals, objects, vehicles, food, tools, buildings, plants) and
-cartoon people by era and role (no faces, at most 3). Answer buildable false only for what even these can't show
-(a crowd, a city). Name models plainly, as a free low-poly library titles them ("truck", "house", "rocks"). Frame
-0 must already show the subject and the threat (the raised tool, the drop, the wave); the first beat starts by 1.0 s."""
-
-FORMAT = """Reply with ONLY JSON: {"shorts": [{"index": 0, "buildable": true, "moment": "...",
-"set": {"ground": "dirt", "backdrop": [{"find": "red barn", "size_m": 8}], "light": "day"},
-"actors": [{"id": "rooster", "find": "rooster", "size_m": 0.55, "on": "stump", "facing": "right", "gait": "bird"},
-           {"id": "stump", "find": "tree stump", "size_m": 1.2}, {"id": "axe", "find": "axe", "size_m": 0.8}],
-"beats": [{"move": "cut", "tool": "axe", "target": "rooster", "at": 0.55,
-           "strokes": [{"through": "neck", "angle": "level"}],
-           "expect": [{"piece": "head", "share": 0.15, "then": "fly_off"}, {"piece": "rest", "then": "stay"}]},
-          {"move": "hop_off", "actor": "rooster", "at": 1.3, "style": "stagger"},
-          {"move": "walk", "actor": "rooster", "at": 1.8, "toward": "left", "style": "stagger", "ends": {"on": "ground"}}],
-"camera": {"angle": "three_quarter", "follow": "rooster"}}]}
-A person is {"id": "officer", "person": "ww2_british_officer", "facing": "right", "prop": "umbrella"} (a role and
-an optional prop to hold; no find or size) and moves only by the people moves, e.g. {"move": "walk", "actor":
-"officer", "at": 0.3, "toward": "left"} for an officer strolling across a bridge with his umbrella while shells
-burst behind him (a "scatter" of rubble).
-For a moment the moves can't show: {"index": 0, "buildable": false, "why": "..."}"""
-
+DEFAULT_RULES = """Show the story's strangest moment, the one its first line describes, as a 2-3 second animation
+made from one shot template. Models are free low-poly library models and cartoon people by era and role (no faces).
+Name models plainly, as a free low-poly library titles them ("truck", "house", "rocks"). Pick no template when none
+shows the moment itself: a motion graphic opens the Short instead, which is better than a 3D shot of something else."""
 
 def _num(v, lo, hi) -> bool:
     return not isinstance(v, bool) and isinstance(v, (int, float)) and math.isfinite(v) and lo <= v <= hi
@@ -180,27 +166,89 @@ def clean_opener(raw) -> dict | None:
     return raw
 
 
-def _tables_text() -> str:
-    return (f"Allowed values: set.ground {list(GROUNDS)}; set.light {list(LIGHTS)}; actor facing {FACINGS}; "
-            f"actor gait (how it moves) {list(GAITS)}; moves {MOVES}; cut tools (an actor whose find names one) "
-            f"{list(TOOLS)}; stroke angle {STROKE_ANGLES} (the blade travels in that plane: \"diagonal\" = tilted 45 "
-            f"degrees toward the camera, so the camera sees the blade's flat side, the right choice for a chop through "
-            f"a neck or a branch; \"level\" = flat, a sideways slash; \"across\" = upright and facing the camera; "
-            f"\"down\" = upright but edge-on to the camera, which fails the blade check); one stroke is {{\"through\": \"neck\"}} or "
-            f"{{\"at_fraction\": 0.5}} or {{\"rows\": 8}} (slices) or {{\"rows\": 6, \"cols\": 6}} (dice) or "
-            f"{{\"mince\": 50}}; expect items {{\"piece\": name, \"share\": 0-1, \"then\": outcome}} or "
-            f"{{\"pieces\": \"40-60\", \"then\": outcome}}, outcomes {OUTCOMES}; style {STYLES}; toward {TOWARDS} or "
-            f"another actor's id (go straight at it: you can't know which side things are placed on); "
-            f"camera.angle {ANGLES}; size_m {LIMITS['size_m'][0]}-{LIMITS['size_m'][1]}; at = seconds into the "
-            f"scene, 0-{LIMITS['max_at_s']}, the first beat by {LIMITS['first_beat_s']} s; at most "
-            f"{LIMITS['max_pieces']} pieces in all. People: person (role) {list(ROLES)}; a person's prop is a find text; "
-            f"people moves (for people only; everything else uses the moves above), each exactly as it plays, nothing "
-            f"more: " + "; ".join(f"{m} = {v['does']}" for m, v in PEOPLE_MOVES.items()) + ".")
+
+
+def _keep(cond: str, fill: dict) -> bool:
+    """A template item's "if": "slot" (the slot is set) or "slot=a|b" (it is one of those)."""
+    name, _, vals = cond.partition("=")
+    return str(fill.get(name)) in vals.split("|") if vals else bool(fill.get(name))
+
+
+def _sub(node, fill: dict):
+    """The template's plan with its "$slot" values filled in and its "if" items kept or dropped."""
+    if isinstance(node, dict):
+        return {k: _sub(v, fill) for k, v in node.items() if k != "if"}
+    if isinstance(node, list):
+        return [_sub(x, fill) for x in node if not (isinstance(x, dict) and "if" in x and not _keep(x["if"], fill))]
+    if isinstance(node, str):
+        m = SLOT.fullmatch(node)
+        if m:
+            return fill[m[1]][m[2]] if m[2] else fill[m[1]]
+        return SLOT.sub(lambda m: str(fill[m[1]]), node)
+    return node
+
+
+def _slot_ok(spec: dict, v) -> bool:
+    kind = spec["kind"]
+    if v is None:
+        return bool(spec.get("optional"))
+    if kind == "role":
+        return v in ROLES
+    if kind == "prop":
+        return isinstance(v, str) and bool(v.strip())
+    if kind == "pick":
+        return not isinstance(v, bool) and v in spec["of"]
+    return (isinstance(v, dict) and isinstance(v.get("find"), str) and bool(v["find"].strip())
+            and _num(v.get("size_m"), *spec["size_m"]) and (kind != "tool" or tool_kind(v["find"]) is not None)
+            and (not spec.get("words") or bool(set(v["find"].lower().split()) & set(spec["words"]))))
+
+
+def fill_template(reply) -> dict | None:
+    """The plan from the planner's {"template", "moment", "set", "fill"}, or None when any value is outside the
+    template or the tables. Nothing is patched: a bad fill is asked for again."""
+    if not isinstance(reply, dict) or reply.get("template") not in TEMPLATES or not str(reply.get("moment") or "").strip():
+        return None
+    tpl, fill, st = TEMPLATES[reply["template"]], reply.get("fill"), reply.get("set")
+    if not isinstance(fill, dict) or not isinstance(st, dict) or st.get("ground") not in tpl["grounds"] \
+            or st.get("light", "day") not in LIGHTS or not isinstance(st.get("backdrop") or "", str):
+        return None
+    fill = dict(fill)
+    for name, spec in tpl["slots"].items():
+        if spec["kind"] == "pick" and fill.get(name) is None:  # a pick only its "if" item uses may be left out
+            fill[name] = spec["of"][0]
+        if not _slot_ok(spec, fill.get(name)):
+            return None
+    backdrop = str(st.get("backdrop") or "").strip()
+    plan = {"buildable": True, "moment": str(reply["moment"]).strip()[:300], "template": reply["template"],
+            "set": {"ground": st["ground"], "light": st.get("light", "day"),
+                    "backdrop": [{"find": backdrop, "size_m": 8}] if backdrop else []},
+            **_sub(tpl["plan"], fill)}
+    return clean_opener(plan)
+
+
+def _templates_text() -> str:
+    def slot(name, sp):
+        extra = (f" {sp['size_m'][0]}-{sp['size_m'][1]} m" if "size_m" in sp else "") + \
+                (f" one of {sp['of']}" if "of" in sp else "") + (" or null" if sp.get("optional") else "")
+        return f"{name} ({sp['kind']}{extra}{': ' + sp['note'] if sp.get('note') else ''})"
+    return "\n".join(f"- {k}: {t['shows']}. Grounds {t['grounds']}. Slots: " +
+                     "; ".join(slot(n, sp) for n, sp in t["slots"].items()) for k, t in TEMPLATES.items())
+
+
+REPLY = """A thing slot is {"find": "sack", "size_m": 1.2} (its real size in metres, inside the slot's range); a tool slot
+is a thing whose find names one of """ + json.dumps(list(TOOLS)) + """; a role slot is one of """ + json.dumps(list(ROLES)) + """;
+a prop slot is a find text. set.light one of """ + json.dumps(list(LIGHTS)) + """; set.backdrop is one big thing behind
+the action ("warehouse", "barn") or null.
+Reply with ONLY JSON: {"shorts": [{"index": 0, "template": "falls_on", "moment": "one sentence: what the animation shows",
+"set": {"ground": "wood floor", "light": "day", "backdrop": "warehouse"},
+"fill": {"victim": "businessman", "thing": {"find": "sack", "size_m": 1.2}, "witness": "farmer", "witness_does": "cheer"}}]}
+For a moment no template shows: {"index": 0, "template": null, "why": "..."}"""
 
 
 def plan_openers(shorts: list[dict], ch: dict) -> None:
-    """One AI call stages every Short's opener (s["opener"]); unusable plans are asked for once more. A Short
-    without a usable plan gets s["opener_check"] and keeps today's scene 1."""
+    """One AI call picks and fills a shot template for every Short (s["opener"], and s["opener_fill"] for model
+    swaps); unusable fills are asked for once more. A Short without one gets s["opener_check"]: its motion-graphic
+    opener plays."""
     def ask(idx: list[int], note: str = "") -> dict:
         rows = [{"index": i, "title": shorts[i]["title"],
                  "scene_1": shorts[i]["scenes"][0]["narration"],
@@ -209,54 +257,43 @@ def plan_openers(shorts: list[dict], ch: dict) -> None:
         data = llm.ask_ai(f"""You are the animation director of a faceless YouTube Shorts channel. Niche: {ch.get('niche', '')}.
 Every Short opens on a short 3D animation of its strangest moment, played under the first line. {note}
 {session.RULES.get("Opener") or DEFAULT_RULES}
-{_tables_text()}
-Shorts: {json.dumps(rows, ensure_ascii=False)}
-{FORMAT}""", fatal=False)
+Shot templates: the staging is fixed and proven; you only pick one and fill its slots. Pick one only when it shows
+the moment itself (who, what and what happens), else none:
+{_templates_text()}
+{REPLY}
+Shorts: {json.dumps(rows, ensure_ascii=False)}""", fatal=False)
         got = data.get("shorts") if isinstance(data, dict) else None
         return {r["index"]: r for r in got or [] if isinstance(r, dict) and r.get("index") in idx}
 
     todo = list(range(len(shorts)))
     for attempt in range(2):
-        replies = ask(todo, "" if not attempt else "Your last plan for these could not be used: send a full plan.")
+        replies = ask(todo, "" if not attempt else "Your last reply for these could not be used: every slot must be filled "
+                                                   "from its allowed values.")
         for i in list(todo):
             r = replies.get(i)
-            if isinstance(r, dict) and r.get("buildable") is False:
-                shorts[i]["opener_check"] = f"opener: not buildable ({str(r.get('why') or 'no reason given')[:200]})"
+            if isinstance(r, dict) and "template" in r and r["template"] is None:
+                shorts[i]["opener_check"] = f"opener: no template fits ({str(r.get('why') or 'no reason given')[:200]})"
                 todo.remove(i)
                 continue
-            plan = clean_opener({k: v for k, v in r.items() if k != "index"} if isinstance(r, dict) else None)
+            plan = fill_template(r)
             if plan:
-                shorts[i]["opener"], shorts[i]["opener_check"] = plan, None
+                shorts[i]["opener"], shorts[i]["opener_fill"], shorts[i]["opener_check"] = plan, r, None
                 todo.remove(i)
         if not todo:
             break
     for i in todo:
-        shorts[i]["opener_check"] = "opener: no usable plan"
+        shorts[i]["opener_check"] = "opener: no usable template fill"
 
 
-def fix_plan(short: dict, failures: list[str], seconds: float | None = None, scaled: dict | None = None) -> dict | str | None:
-    """The planner fixes its own plan after the checks or the review found these failures; None if unusable, or the
-    planner's reason (a str) when no plan change can fix them (a failure that came back after a fix is the engine's,
-    and every live run spent its last tries on one: 0 of 7 passed by 2026-10-28). It is told scene 1's real length,
-    the beat times as played (the voice can make the scene shorter than planned) and the earlier tries
-    (short["opener_tries"], from opener_render)."""
-    played = (f"Scene 1 is {seconds:.1f} seconds long; the beats were fitted into it and played like this: "
-              f"{json.dumps(scaled, ensure_ascii=False)}\n") if seconds is not None and scaled is not None else ""
-    earlier = [t["failures"] for t in short.get("opener_tries") or []][:-1]
-    earlier = (f"Earlier tries, already fixed once, failed with: {json.dumps(earlier, ensure_ascii=False)}\n"
-               if earlier else "")
-    data = llm.ask_ai(f"""You staged this 3D opener for the Short "{short.get('title', '')}". Rendering it showed these
-problems: {json.dumps(failures, ensure_ascii=False)}
-{earlier}{played}
-Fix the plan so none of them happens again (move things apart, change the tool's start, the timing, the camera, or
-the expected pieces). Keep the same moment where the moves below can show it; a move that can't do what the moment
-needs is replaced or left out, with the moment rewritten to what is shown.
-If no change to the plan can fix them (the same problem came back after an earlier fix, or a move did what its
-description says and the problem is in how it is drawn), reply {{"fixable": false, "why": "one short sentence"}}.
-{session.RULES.get("Opener") or DEFAULT_RULES}
-{_tables_text()}
-Plan: {json.dumps(short.get('opener'), ensure_ascii=False)}
-Reply with ONLY the fixed plan as JSON, in the same format.""", fatal=False)
-    if isinstance(data, dict) and data.get("fixable") is False:
-        return str(data.get("why") or "no reason given")[:200]
-    return clean_opener(data)
+def swap_models(short: dict, unfound: list[str]) -> dict | None:
+    """The same template refilled with more common things for the models no library has (the first people run asked
+    for a "ww2 armored car"), or None."""
+    data = llm.ask_ai(f"""This filled shot template stages the opener of the Short "{short.get('title', '')}":
+{json.dumps(short.get('opener_fill'), ensure_ascii=False)}
+No free library has a model for: {json.dumps(unfound, ensure_ascii=False)}. Replace each with a more common thing that
+reads the same (a truck for an armoured car) or, for a backdrop, null. Keep everything else.
+{REPLY.split("Reply with ONLY JSON")[0]}Reply with ONLY the same JSON object (template, moment, set, fill).""", fatal=False)
+    plan = fill_template(data)
+    if plan:
+        short["opener_fill"] = data
+    return plan

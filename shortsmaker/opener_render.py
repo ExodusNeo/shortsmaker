@@ -1,8 +1,10 @@
-"""Scene 1 as a Blender opener (2026-10-27): once the voice has set scene 1's length, the Short's staging plan
-(opener_plan.py) gets its models (the library, else fetched through the owner's Blender), headless Blender builds,
-checks and renders it (blender/opener_scene.py), the AI looks at a strip of frames, and failures go back to the
-planner for up to 2 fix rounds. Success: work/opener.mp4 plays as scene 1. Anything else: (None, "opener failed:
-...") and scene 1 stays as it is today, with that CHECK line. An unchanged plan and code reuse the last clip."""
+"""Scene 1 as a Blender opener (2026-10-27): once the voice has set scene 1's length, the Short's filled shot
+template (opener_plan.py) gets its models (the library, else fetched through the owner's Blender; a model no library
+has is swapped by the planner), headless Blender builds, checks and renders it once (blender/opener_scene.py) and the
+AI looks at a strip of frames. Success: work/opener.mp4 plays as scene 1. Anything else: (None, "opener failed:
+...") and the motion-graphic opener plays, with that CHECK line. There are no fix rounds: a template's staging is
+fixed, and the planner's rewrites of free plans brought the same faults back (0 of ~10 live runs passed). An
+unchanged plan and code reuse the last clip."""
 
 import copy
 import hashlib
@@ -16,8 +18,7 @@ from shortsmaker import blender_link, blender_render, config, llm, media_tools, 
 SCRIPT = config.ROOT / "blender" / "opener_scene.py"
 FPS = 30
 TIMEOUT = 10 * 60
-FIX_ROUNDS = 2
-MODEL_SWAPS = 2  # rounds asking the planner to replace models no library has (not counted as fix rounds)
+MODEL_SWAPS = 2  # rounds asking the planner to replace models no library has
 
 
 def scale_beats(plan: dict, seconds: float) -> dict:
@@ -92,9 +93,38 @@ def resolve_models(plan: dict) -> tuple[dict, str | None]:
     return models, None
 
 
+def model_for(find: str) -> tuple[Path | None, str | None]:
+    """One model for the three.js model graphic (picker.opener_graphic): the library's, else searched and fetched
+    through the owner's Blender. (blend, None) or (None, why)."""
+    blend = blender_link.in_library(find)
+    if blend:
+        return blend, None
+    if not blender_link.ping():
+        return None, f"no 3D model of '{find}' in the library and Blender is off"
+    try:
+        hit = pick_model(find, blender_link.search(find))
+    except blender_link.LinkError as e:
+        return None, f"no 3D model of '{find}' ({e})"
+    if hit is None:
+        return None, f"no 3D model of '{find}'"
+    blend, why = blender_link.fetch_model(hit, find, 1.0)
+    return (blend, None) if blend else (None, f"no 3D model of '{find}' ({why})")
+
+
+def to_glb(blend: Path, exe: Path | None = None) -> Path:
+    """The model as .glb next to its .blend (made once, headless)."""
+    glb = blend.with_suffix(".glb")
+    if not glb.exists() or glb.stat().st_mtime < blend.stat().st_mtime:
+        crash = blender_render._run(exe or config.BLENDER, blend, config.ROOT / "blender" / "export_glb.py", 120)
+        if crash or not glb.exists():
+            raise RuntimeError(f"glb export failed for {blend.name}: {crash}")
+    return glb
+
+
 def fingerprint(job: dict) -> str:
     h = hashlib.sha1(json.dumps(job, sort_keys=True).encode("utf-8"))
-    for f in sorted((config.ROOT / "blender").glob("*.py")) + [config.ROOT / "blender" / "opener_tables.json"]:
+    for f in sorted((config.ROOT / "blender").glob("*.py")) + [config.ROOT / "blender" / n
+                                                                for n in ("opener_tables.json", "shot_templates.json")]:
         h.update(f.read_bytes())
     return h.hexdigest()[:16]
 
@@ -176,66 +206,54 @@ def render_opener(short: dict, seconds: float, work: Path, exe: Path | None = No
     work.mkdir(parents=True, exist_ok=True)
     clip, frames, report_path, done = (work / "opener.mp4", work / "opener_frames", work / "opener_report.json",
                                        work / "opener_done.txt")
-    round_no, swaps = 0, 0
     short["opener_tries"] = []
     shutil.rmtree(work / "opener_tries", ignore_errors=True)
-    while round_no <= FIX_ROUNDS:
+    for swap in range(MODEL_SWAPS + 1):
         plan = scale_beats(short["opener"], seconds)
         models, why = resolve_models(plan)
-        if why and why.startswith("no fitting model for") and swaps < MODEL_SWAPS:
-            # back to the planner like any failure: the first people run lost its whole opener to a "ww2 armored
-            # car" no free library has (2026-10-27); a swap has its own allowance and leaves the render rounds
-            swaps += 1
-            failures = [f"model: {why}; use a more common thing that reads the same (a truck for an armoured car) "
-                        "or leave it out"]
-            print(f"    model swap {swaps}: {failures[0]}")
-            fixed = opener_plan.fix_plan(short, failures, seconds, plan)
-            if not isinstance(fixed, dict):
-                return None, f"opener failed: {why} (the fix wasn't usable)"
-            short["opener"] = fixed
-            continue
-        if why:
-            return None, f"opener failed: {why}"
-        short["opener_credits"] = list(dict.fromkeys(c for c in map(blender_link.credit, map(Path, models.values())) if c))
-        job = {"plan": plan, "models": models, "seconds": seconds, "fps": FPS, "size": [1080, 1920],
-               "frames_dir": str(frames), "report": str(report_path), "render": True, "render_failed": False,
-               "render_scale": 100}
-        if any("person" in a for a in plan["actors"]):
-            job["people"] = {"blend": str(config.PEOPLE_BLEND), "json": str(config.PEOPLE_JSON)}
-        print_ = fingerprint(job)
-        if done.exists() and done.read_text(encoding="utf-8") == print_ and clip.exists():
-            return clip, None
-        shutil.rmtree(frames, ignore_errors=True)
-        report_path.unlink(missing_ok=True)
-        (work / "opener_job.json").write_text(json.dumps(job, ensure_ascii=False), encoding="utf-8")
-        print(f"  Blender opener: {plan['moment'][:80]} (try {round_no + 1})")
-        crash = ""
-        for attempt in range(2):
-            crash = blender_render._run(exe, work / "opener_job.json", SCRIPT, TIMEOUT)
-            if not crash and report_path.exists():
-                break
-            crash = crash or "no report"
-        else:
-            return None, f"opener failed: Blender failed ({crash})"
-        report = json.loads(report_path.read_text(encoding="utf-8"))
-        failures = list(report.get("failures") or [])
-        if report.get("ok") and not failures:
-            failures = review(short, frames, seconds, work, report)
-            if not failures:
-                media_tools.ffmpeg("-y", "-framerate", str(FPS), "-i", str(frames / "f_%04d.png"),
-                                   *media_tools.video_encoder(), "-pix_fmt", "yuv420p", clip.name, cwd=work)
-                done.write_text(print_, encoding="utf-8")
-                shutil.rmtree(frames, ignore_errors=True)  # ~100 MB of PNGs; the clip is kept
-                return clip, None
-        print(f"    try {round_no + 1} failed: " + "; ".join(failures)[:600])
-        save_try(short, work, round_no + 1, plan, failures)
-        if round_no == FIX_ROUNDS:
-            return None, f"opener failed: {failures[0]}"
-        fixed = opener_plan.fix_plan(short, failures, seconds, plan)
-        if isinstance(fixed, str):  # stopped early: the motion-graphic opener plays without more 10-minute tries
-            return None, f"opener failed: {failures[0]} (the planner can't fix it with the plan: {fixed})"
+        if not (why and why.startswith("no fitting model for")) or swap == MODEL_SWAPS:
+            break
+        unfound = why.removeprefix("no fitting model for ").replace("'", "").split(", ")
+        print(f"    model swap {swap + 1}: {why}")
+        fixed = opener_plan.swap_models(short, unfound)
         if fixed is None:
-            return None, f"opener failed: {failures[0]} (the fix wasn't usable)"
+            return None, f"opener failed: {why} (the swap wasn't usable)"
         short["opener"] = fixed
-        round_no += 1
-    return None, "opener failed"
+    if why:
+        return None, f"opener failed: {why}"
+    short["opener_credits"] = list(dict.fromkeys(c for c in map(blender_link.credit, map(Path, models.values())) if c))
+    job = {"plan": plan, "models": models, "seconds": seconds, "fps": FPS, "size": [1080, 1920],
+           "frames_dir": str(frames), "report": str(report_path), "render": True, "render_failed": False,
+           "render_scale": 100}
+    if any("person" in a for a in plan["actors"]):
+        job["people"] = {"blend": str(config.PEOPLE_BLEND), "json": str(config.PEOPLE_JSON)}
+    print_ = fingerprint(job)
+    if done.exists() and done.read_text(encoding="utf-8") == print_ and clip.exists():
+        return clip, None
+    shutil.rmtree(frames, ignore_errors=True)
+    report_path.unlink(missing_ok=True)
+    (work / "opener_job.json").write_text(json.dumps(job, ensure_ascii=False), encoding="utf-8")
+    print(f"  Blender opener ({plan.get('template', 'plan')}): {plan['moment'][:80]}")
+    crash = ""
+    for attempt in range(2):
+        crash = blender_render._run(exe, work / "opener_job.json", SCRIPT, TIMEOUT)
+        if not crash and report_path.exists():
+            break
+        crash = crash or "no report"
+    else:
+        return None, f"opener failed: Blender failed ({crash})"
+    report = json.loads(report_path.read_text(encoding="utf-8"))
+    failures = list(report.get("failures") or [])
+    if report.get("ok") and not failures:
+        failures = review(short, frames, seconds, work, report)
+        if not failures:
+            media_tools.ffmpeg("-y", "-framerate", str(FPS), "-i", str(frames / "f_%04d.png"),
+                               *media_tools.video_encoder(), "-pix_fmt", "yuv420p", clip.name, cwd=work)
+            done.write_text(print_, encoding="utf-8")
+            shutil.rmtree(frames, ignore_errors=True)  # ~100 MB of PNGs; the clip is kept
+            return clip, None
+    print("    opener failed: " + "; ".join(failures)[:600])
+    save_try(short, work, 1, plan, failures)  # kept for engine fixes to the template (work/opener_tries)
+    return None, f"opener failed: {failures[0]}"
+
+
