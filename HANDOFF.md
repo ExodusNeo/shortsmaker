@@ -871,7 +871,8 @@ owner's Blender (Mike's chop; the owner's six catches became the checks below). 
   plan + code reuse the clip (`work/opener_done.txt`).
 - **Motion-graphic opener (owner, 2026-10-28: the Eiffel Short's opener failed 3 times and fell back to a mugshot
   with no word on a motion graphic).** `picker.opener_graphic` (after the rescue, on Shorts with `opener` or
-  `opener_check`) asks once for a full-screen graphic of the hook's strangest moment and puts it on scene 1 up front,
+  `opener_check`) asks for a full-screen graphic of the hook's strangest moment (it may not decline: the onion
+  Short's AI said "a picture opens stronger"; an unusable pick is asked once more, told why) and puts it on scene 1 up front,
   outside MAX_FULL and the never-scene-1 / never-two-in-a-row rules (owner: two in a row is fine). A Blender opener
   that renders clears it; one that fails leaves it playing. Its spoken-word triggers are dropped and scene 1's
   `full_cues` start at 0 s, so it moves from the first frame. The first-second picture swap is skipped under it.

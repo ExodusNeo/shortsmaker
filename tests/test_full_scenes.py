@@ -254,7 +254,7 @@ def test_rescue_respects_caps():
 
 def test_opener_graphic():
     """Scene 1's motion-graphic opener: set outside the scene-1 and two-in-a-row rules, its reason kept for the edit
-    plan; a decline or a second document leaves scene 1 alone with the reason."""
+    plan; it may not decline: an unusable pick is asked once more (told why), two leave scene 1 alone."""
     num = {"type": "number", "value": 70000, "label": "francs paid for the Eiffel Tower", "icon": "money", "word": "fortune"}
     short = {"title": "T", "research": {"A": "text"}, "wiki_articles": ["A"],
              "scenes": [{"narration": "A scrap dealer paid a fortune for the Eiffel Tower.", "full": None, "graphic": None,
@@ -262,8 +262,9 @@ def test_opener_graphic():
                         {"narration": "But the seller used forged papers.", "graphic": None, "person": None,
                          "full": {"type": "document", "kind": "letter", "key_line": "x"}}]}
     saved, prompts = llm.ask_ai, []
+    doc = {"full": {"type": "document", "kind": "letter", "key_line": "y"}, "why": "x"}
     replies = iter([{"full": num, "why": "the sum is the shock"}, {"full": None, "why": "a portrait reads better"},
-                    {"full": {"type": "document", "kind": "letter", "key_line": "y"}, "why": "x"}])
+                    {"full": dict(num), "why": "retried"}, doc, doc])
     llm.ask_ai = lambda prompt, fatal=True, read_dir=None, brain=None, bulk=False: prompts.append(prompt) or next(replies)
     try:
         note = picker.opener_graphic(short)
@@ -275,8 +276,11 @@ def test_opener_graphic():
         assert "Not a document" in prompts[0]
         assert picker.opener_graphic(short).endswith("(already planned)") and len(prompts) == 1
         sc["full"] = None
-        assert picker.opener_graphic(short) == "no motion graphic (a portrait reads better)" and sc["full"] is None
+        assert picker.opener_graphic(short).endswith("(retried)") and sc["full"]["type"] == "number"  # a decline is re-asked
+        assert "Pick the FULL-SCREEN" in prompts[1] and "rejected: the AI gave none" in prompts[2]
+        sc["full"] = None
         assert picker.opener_graphic(short) == "no motion graphic (the AI picked an unusable one)" and sc["full"] is None
+        assert len(prompts) == 5
     finally:
         llm.ask_ai = saved
     # the opener's first element lands on frame 0; later scenes still wait out their transition

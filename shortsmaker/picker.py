@@ -302,9 +302,9 @@ Reply with ONLY JSON: {{"scenes": [{{"scene": 3, "full": null}}]}}""", fatal=Fal
 
 def opener_graphic(short: dict) -> str:
     """The motion-graphic opener (owner, 2026-10-28): on a channel with Blender openers, scene 1 gets a full-screen
-    motion graphic up front when one shows the hook's strangest moment; a Blender opener that renders replaces it
+    motion graphic up front (always one: the AI may not decline); a Blender opener that renders replaces it
     (short_render.use_opener), one that fails leaves it playing. Outside MAX_FULL and the never-scene-1 /
-    never-two-in-a-row rules (an opener is not a slideshow scene; owner: two in a row is fine). One AI call.
+    never-two-in-a-row rules (an opener is not a slideshow scene; owner: two in a row is fine). One AI call, a second when the pick is unusable.
     Returns the edit-plan note: the graphic chosen, or why none was."""
     sc = short["scenes"][0]
     if sc.get("full"):
@@ -312,21 +312,30 @@ def opener_graphic(short: dict) -> str:
     has_doc = any((s.get("full") or {}).get("type") == "document" for s in short["scenes"])
     texts = short.get("research") or {t: writing.article_text(t)[:15000] for t in short.get("wiki_articles", [])[:3]}
     print(f"  asking {session.BRAIN.capitalize()} for a motion-graphic opener (plays if the Blender opener fails)...")
-    data = llm.ask_ai(f"""You are the director of a YouTube Short: "{short['title']}". Scene 1 is the hook: "{sc['narration']}".
-The channel opens every Short on an animation of the story's strangest moment. Decide whether a FULL-SCREEN motion
-graphic would show this hook's strangest moment strongly from its first frame (else null: scene 1 opens on its picture).
+    retry = ""
+    for _ in range(2):  # owner, 2026-10-28: a failed Blender opener always gets a graphic; a bad pick is asked once more
+        data = llm.ask_ai(f"""You are the director of a YouTube Short: "{short['title']}". Scene 1 is the hook: "{sc['narration']}".
+The channel opens every Short on an animation of the story's strangest moment. Pick the FULL-SCREEN motion graphic
+that shows this hook's strangest moment most strongly from its first frame (always one: it is the opener).
 Real facts only, from the articles below. Leave out "word"/"words": the opener moves from its first frame.
-{"Not a document: the Short already has one. " if has_doc else ""}Formats:
+{"Not a document: the Short already has one. " if has_doc else ""}Not a board. {retry}Formats:
 {full_formats()}
 Wikipedia articles: {json.dumps(texts, ensure_ascii=False)}
-Reply with ONLY JSON: {{"full": {{...}} or null, "why": "one short sentence"}}""", fatal=False)
-    data = data if isinstance(data, dict) else {}
-    why = str(data.get("why") or "no reason given").strip()[:200]
-    f = data.get("full")
-    if not isinstance(f, dict) or f.get("type") == "board" or (has_doc and f.get("type") == "document"):
-        return f"no motion graphic ({why if f is None else 'the AI picked an unusable one'})"
-    f = plan_rules.clean_full(f, [])  # no spoken-word triggers: an opener moves from frame 0, not on its word
-    if not f:
-        return "no motion graphic (the AI's pick failed the format check)"
+Reply with ONLY JSON: {{"full": {{...}}, "why": "one short sentence"}}""", fatal=False)
+        data = data if isinstance(data, dict) else {}
+        why = str(data.get("why") or "no reason given").strip()[:200]
+        f = data.get("full")
+        if not isinstance(f, dict):
+            note = "no motion graphic (the AI gave none)"
+        elif f.get("type") == "board" or (has_doc and f.get("type") == "document"):
+            note = "no motion graphic (the AI picked an unusable one)"
+        else:
+            f = plan_rules.clean_full(f, [])  # no spoken-word triggers: an opener moves from frame 0, not on its word
+            note = None if f else "no motion graphic (the AI's pick failed the format check)"
+        if not note:
+            break
+        retry = f"Your last pick was rejected: {note.removeprefix('no motion graphic (')[:-1]}. "
+    else:
+        return note
     sc.update(full=f, graphic=None, person=None, animate=False, full_rescued="motion-graphic opener")
     return f"motion graphic: {motion.full_summary(f)} ({why})"
