@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "music_gain"
+community: "captions"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/music_gain
+  - community/captions
 ---
 
 # Path
@@ -17,4 +17,4 @@ tags:
 - [[story_sound()]] - `references` [EXTRACTED]
 - [[tts()_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/music_gain
+#graphify/code #graphify/EXTRACTED #community/captions

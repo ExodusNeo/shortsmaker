@@ -1,12 +1,12 @@
 ---
 source_file: "blender/moves.py"
 type: "code"
-community: "cut"
-location: "L593"
+community: "moves.py"
+location: "L594"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/cut
+  - community/movespy
 ---
 
 # edge_point_local()
@@ -20,4 +20,4 @@ tags:
 - [[place_tool()]] - `calls` [EXTRACTED]
 - [[tool_axes()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/cut
+#graphify/code #graphify/EXTRACTED #community/movespy

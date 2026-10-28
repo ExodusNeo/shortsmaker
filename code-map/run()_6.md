@@ -1,18 +1,17 @@
 ---
 source_file: "tests/test_style.py"
 type: "code"
-community: "test_style.py"
-location: "L257"
+community: "invent_component"
+location: "L319"
 tags:
   - graphify/code
-  - graphify/INFERRED
-  - community/test_stylepy
+  - graphify/EXTRACTED
+  - community/invent_component
 ---
 
 # run()
 
 ## Connections
-- [[test_failed_invention_keeps_the_others()]] - `indirect_call` [INFERRED]
-- [[test_invention_passes_into_slot()]] - `indirect_call` [INFERRED]
+- [[test_failed_invention_keeps_the_others()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/test_stylepy
+#graphify/code #graphify/EXTRACTED #community/invent_component

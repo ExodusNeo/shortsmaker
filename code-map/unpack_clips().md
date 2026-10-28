@@ -1,18 +1,18 @@
 ---
 source_file: "shortsmaker/gpu.py"
 type: "code"
-community: "gpu.py"
+community: "unpack_clips"
 location: "L435"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/gpupy
+  - community/unpack_clips
 ---
 
 # unpack_clips()
 
 ## Connections
-- [[Path_1]] - `references` [EXTRACTED]
+- [[Path]] - `references` [EXTRACTED]
 - [[Unpack sceneN.mp4.mov.webm from folderclips.zip (the Colab notebook's…]] - `rationale_for` [EXTRACTED]
 - [[gpu.py]] - `contains` [EXTRACTED]
 - [[re]] - `calls` [EXTRACTED]
@@ -23,4 +23,4 @@ tags:
 - [[veo_handoff()]] - `calls` [EXTRACTED]
 - [[zipfile]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/gpupy
+#graphify/code #graphify/EXTRACTED #community/unpack_clips

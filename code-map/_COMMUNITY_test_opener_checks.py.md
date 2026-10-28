@@ -28,9 +28,8 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 4 edges to [[_COMMUNITY_test_full_scenes.py]]
-- 3 edges to [[_COMMUNITY_sys]]
-- 1 edge to [[_COMMUNITY_json]]
+- 5 edges to [[_COMMUNITY_json]]
+- 3 edges to [[_COMMUNITY_pathlib]]
 
 ## Top bridge nodes
-- [[test_opener_checks.py]] - degree 18, connects to 3 communities
+- [[test_opener_checks.py]] - degree 18, connects to 2 communities

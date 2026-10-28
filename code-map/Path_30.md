@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "test_style.py"
+community: "test_opener_scene.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_stylepy
+  - community/test_opener_scenepy
 ---
 
 # Path
 
 ## Connections
-- [[candidate_in()]] - `references` [EXTRACTED]
+- [[run()_8]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_stylepy
+#graphify/code #graphify/EXTRACTED #community/test_opener_scenepy

@@ -1,18 +1,18 @@
 ---
 source_file: "tests/render_style.py"
 type: "code"
-community: "sys"
+community: "local_voice"
 location: "L22"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/sys
+  - community/local_voice
 ---
 
 # add()
 
 ## Connections
-- [[build()_1]] - `contains` [EXTRACTED]
+- [[build()]] - `contains` [EXTRACTED]
 - [[scenes()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/sys
+#graphify/code #graphify/EXTRACTED #community/local_voice

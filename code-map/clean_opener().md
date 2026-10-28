@@ -2,7 +2,7 @@
 source_file: "shortsmaker/opener_plan.py"
 type: "code"
 community: "test_opener_plan.py"
-location: "L91"
+location: "L103"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -17,6 +17,7 @@ tags:
 - [[_num()]] - `calls` [EXTRACTED]
 - [[_size()]] - `calls` [EXTRACTED]
 - [[_stroke()]] - `calls` [EXTRACTED]
+- [[_takeable()]] - `calls` [EXTRACTED]
 - [[fix_plan()]] - `calls` [EXTRACTED]
 - [[opener_plan.py]] - `contains` [EXTRACTED]
 - [[plan_openers()]] - `calls` [EXTRACTED]
@@ -26,6 +27,7 @@ tags:
 - [[test_only_buildable_cuts()]] - `calls` [EXTRACTED]
 - [[test_people_move_on_animal_rejected()]] - `calls` [EXTRACTED]
 - [[test_person_actor_is_clean()]] - `calls` [EXTRACTED]
+- [[test_pick_up_needs_something_on_the_ground()]] - `calls` [EXTRACTED]
 - [[test_rejects_on_cycles_and_self()]] - `calls` [EXTRACTED]
 - [[test_rejects_unknown_move_tool_and_id()]] - `calls` [EXTRACTED]
 - [[test_sizes_bounded()]] - `calls` [EXTRACTED]

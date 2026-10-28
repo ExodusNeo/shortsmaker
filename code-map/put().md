@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/motion.py"
 type: "code"
-community: "scene_cues"
+community: "re"
 location: "L49"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/scene_cues
+  - community/re
 ---
 
 # put()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[full_props()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/scene_cues
+#graphify/code #graphify/EXTRACTED #community/re

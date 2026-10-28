@@ -68,20 +68,21 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 17 edges to [[_COMMUNITY_test_full_scenes.py]]
-- 9 edges to [[_COMMUNITY_json]]
-- 3 edges to [[_COMMUNITY_catalog_pool]]
-- 3 edges to [[_COMMUNITY_sys]]
+- 16 edges to [[_COMMUNITY_pathlib]]
+- 8 edges to [[_COMMUNITY_channel_profiles.py]]
+- 4 edges to [[_COMMUNITY_json]]
+- 2 edges to [[_COMMUNITY_prepare_topic]]
+- 2 edges to [[_COMMUNITY_re]]
 - 1 edge to [[_COMMUNITY_test_story.py]]
 - 1 edge to [[_COMMUNITY_test_opener_render.py]]
-- 1 edge to [[_COMMUNITY_first_second_check]]
+- 1 edge to [[_COMMUNITY_test_first_second.py]]
 - 1 edge to [[_COMMUNITY_choose_images]]
 - 1 edge to [[_COMMUNITY_write_scripts]]
-- 1 edge to [[_COMMUNITY_test_style.py]]
+- 1 edge to [[_COMMUNITY_test_pictures_first.py]]
 
 ## Top bridge nodes
 - [[capture_prompts()]] - degree 11, connects to 5 communities
 - [[test_rules.py]] - degree 55, connects to 4 communities
-- [[parse_rules()]] - degree 16, connects to 2 communities
+- [[parse_rules()]] - degree 16, connects to 3 communities
 - [[load_rules()]] - degree 7, connects to 2 communities
 - [[min_real_pictures()]] - degree 4, connects to 2 communities

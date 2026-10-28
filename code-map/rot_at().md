@@ -13,9 +13,11 @@ tags:
 
 ## Connections
 - [[Vector_6]] - `references` [EXTRACTED]
+- [[_travel()]] - `calls` [EXTRACTED]
+- [[facing_now()]] - `calls` [EXTRACTED]
 - [[fcurves()]] - `calls` [EXTRACTED]
 - [[make_dynamic()]] - `calls` [EXTRACTED]
-- [[move()]] - `calls` [EXTRACTED]
+- [[pick_up()]] - `calls` [EXTRACTED]
 - [[scene_kit.py]] - `contains` [EXTRACTED]
 - [[walk()]] - `calls` [EXTRACTED]
 

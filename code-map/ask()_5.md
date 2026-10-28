@@ -1,17 +1,17 @@
 ---
 source_file: "tests/test_full_scenes.py"
 type: "code"
-community: "test_first_second.py"
-location: "L572"
+community: "_fake_planning"
+location: "L442"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_first_secondpy
+  - community/_fake_planning
 ---
 
 # ask()
 
 ## Connections
-- [[test_review_redraws_custom()]] - `contains` [EXTRACTED]
+- [[test_review_uses_unused_pool_pictures_before_painting()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_first_secondpy
+#graphify/code #graphify/EXTRACTED #community/_fake_planning

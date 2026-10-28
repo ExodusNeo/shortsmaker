@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "shutil"
+community: "re"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/shutil
+  - community/re
 ---
 
 # shutil
@@ -22,8 +22,8 @@ tags:
 - [[llm.py]] - `imports` [EXTRACTED]
 - [[logbook.py]] - `imports` [EXTRACTED]
 - [[main()_3]] - `calls` [EXTRACTED]
-- [[main()_8]] - `calls` [EXTRACTED]
-- [[main()]] - `calls` [EXTRACTED]
+- [[main()_7]] - `calls` [EXTRACTED]
+- [[main()_6]] - `calls` [EXTRACTED]
 - [[motion.py]] - `imports` [EXTRACTED]
 - [[opener_render.py]] - `imports` [EXTRACTED]
 - [[paint_instead()]] - `calls` [EXTRACTED]
@@ -42,6 +42,7 @@ tags:
 - [[review.py]] - `imports` [EXTRACTED]
 - [[run_ts_tests.py]] - `imports` [EXTRACTED]
 - [[save_candidate()]] - `calls` [EXTRACTED]
+- [[save_try()]] - `calls` [EXTRACTED]
 - [[short_render.py]] - `imports` [EXTRACTED]
 - [[style_lab.py]] - `imports` [EXTRACTED]
 - [[test_full_scenes.py]] - `imports` [EXTRACTED]
@@ -54,4 +55,4 @@ tags:
 - [[write_scripts()]] - `calls` [EXTRACTED]
 - [[writing.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/shutil
+#graphify/concept #graphify/EXTRACTED #community/re

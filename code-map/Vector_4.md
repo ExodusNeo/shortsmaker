@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "cut"
+community: "moves.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/cut
+  - community/movespy
 ---
 
 # Vector
@@ -27,4 +27,4 @@ tags:
 - [[toward()]] - `references` [EXTRACTED]
 - [[travel()_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/cut
+#graphify/code #graphify/EXTRACTED #community/movespy

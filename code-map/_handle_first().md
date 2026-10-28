@@ -1,12 +1,12 @@
 ---
 source_file: "blender/people.py"
 type: "code"
-community: "people.py"
+community: "math"
 location: "L109"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/peoplepy
+  - community/math
 ---
 
 # _handle_first()
@@ -18,4 +18,4 @@ tags:
 - [[people.py]] - `contains` [EXTRACTED]
 - [[width()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/peoplepy
+#graphify/code #graphify/EXTRACTED #community/math

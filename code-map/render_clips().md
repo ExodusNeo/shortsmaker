@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[BlenderFailed]] - `calls` [EXTRACTED]
-- [[Path_8]] - `references` [EXTRACTED]
+- [[Path_9]] - `references` [EXTRACTED]
 - [[_run()]] - `calls` [EXTRACTED]
 - [[blender_render.py]] - `contains` [EXTRACTED]
 - [[code_version()]] - `calls` [EXTRACTED]

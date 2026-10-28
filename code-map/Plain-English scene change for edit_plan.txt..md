@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/editplan.py"
 type: "rationale"
-community: "test_style.py"
+community: "edit_plan"
 location: "L19"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/test_stylepy
+  - community/edit_plan
 ---
 
 # Plain-English scene change for edit_plan.txt.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[cut_text()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/test_stylepy
+#graphify/rationale #graphify/EXTRACTED #community/edit_plan

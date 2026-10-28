@@ -30,7 +30,7 @@ members: 23
 - [[test_notebook_cells()]] - code - tests/test_h3_run.py
 - [[test_rejected_graph_shows_comfyui_error()]] - code - tests/test_h3_run.py
 - [[test_save_video_sets_nested_codec()]] - code - tests/test_h3_run.py
-- [[urllib_error]] - concept
+- [[zipfile]] - concept
 
 ## Live Query (requires Dataview plugin)
 
@@ -40,15 +40,16 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 6 edges to [[_COMMUNITY_test_full_scenes.py]]
-- 5 edges to [[_COMMUNITY_json]]
-- 3 edges to [[_COMMUNITY_gpu.py]]
-- 3 edges to [[_COMMUNITY_sys]]
-- 2 edges to [[_COMMUNITY_shutil]]
+- 7 edges to [[_COMMUNITY_pathlib]]
+- 6 edges to [[_COMMUNITY_json]]
+- 2 edges to [[_COMMUNITY_channel_profiles.py]]
+- 2 edges to [[_COMMUNITY_re]]
+- 1 edge to [[_COMMUNITY_local_clips]]
+- 1 edge to [[_COMMUNITY_unpack_clips]]
 
 ## Top bridge nodes
 - [[h3_run.py]] - degree 16, connects to 4 communities
 - [[main()_3]] - degree 10, connects to 3 communities
+- [[zipfile]] - degree 5, connects to 3 communities
 - [[test_h3_run.py]] - degree 14, connects to 2 communities
-- [[urllib_error]] - degree 3, connects to 2 communities
 - [[call()]] - degree 3, connects to 1 community

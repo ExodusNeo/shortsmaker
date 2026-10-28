@@ -2,7 +2,7 @@
 source_file: "shortsmaker/opener_render.py"
 type: "code"
 community: "test_opener_render.py"
-location: "L158"
+location: "L170"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,7 +12,7 @@ tags:
 # render_opener()
 
 ## Connections
-- [[Path_31]] - `references` [EXTRACTED]
+- [[Path_24]] - `references` [EXTRACTED]
 - [[Scene 1's opener clip, or (None, why). (None, None) when the Short has no…]] - `rationale_for` [EXTRACTED]
 - [[_run()]] - `calls` [EXTRACTED]
 - [[ffmpeg()]] - `calls` [EXTRACTED]
@@ -22,6 +22,7 @@ tags:
 - [[opener_render.py]] - `contains` [EXTRACTED]
 - [[resolve_models()]] - `calls` [EXTRACTED]
 - [[review()]] - `calls` [EXTRACTED]
+- [[save_try()]] - `calls` [EXTRACTED]
 - [[scale_beats()]] - `calls` [EXTRACTED]
 - [[shutil]] - `calls` [EXTRACTED]
 - [[test_beats_scaled_into_scene()]] - `calls` [EXTRACTED]
@@ -43,6 +44,7 @@ tags:
 - [[test_role_hat_is_optional()]] - `calls` [EXTRACTED]
 - [[test_search_failure_falls_back()]] - `calls` [EXTRACTED]
 - [[test_success_returns_clip()]] - `calls` [EXTRACTED]
+- [[test_unfixable_stops_early_and_every_try_is_kept()]] - `calls` [EXTRACTED]
 - [[test_unfound_model_goes_back_to_the_planner()]] - `calls` [EXTRACTED]
 - [[use_opener()]] - `calls` [EXTRACTED]
 - [[video_encoder()]] - `calls` [EXTRACTED]

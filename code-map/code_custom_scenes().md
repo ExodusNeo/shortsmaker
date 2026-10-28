@@ -1,19 +1,19 @@
 ---
 source_file: "shortsmaker/motion.py"
 type: "code"
-community: "shutil"
+community: "re"
 location: "L128"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/shutil
+  - community/re
 ---
 
 # code_custom_scenes()
 
 ## Connections
 - [[Motion Graphics Agent writes bespoke ReactSVG Remotion code for each `type…]] - `rationale_for` [EXTRACTED]
-- [[Path_4]] - `references` [EXTRACTED]
+- [[Path_5]] - `references` [EXTRACTED]
 - [[ask_ai()]] - `calls` [EXTRACTED]
 - [[clean_tsx_code()]] - `calls` [EXTRACTED]
 - [[custom_rules()]] - `calls` [EXTRACTED]
@@ -28,4 +28,4 @@ tags:
 - [[test_fake_reaches_callers()]] - `calls` [EXTRACTED]
 - [[tsc_check()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/shutil
+#graphify/code #graphify/EXTRACTED #community/re

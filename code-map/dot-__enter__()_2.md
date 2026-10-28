@@ -1,17 +1,19 @@
 ---
-source_file: "tests/test_opener_render.py"
+source_file: "tests/test_pictures_first.py"
 type: "code"
-community: "test_opener_render.py"
-location: "L45"
+community: "gather_pool"
+location: "L336"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_opener_renderpy
+  - community/gather_pool
 ---
 
 # .__enter__()
 
 ## Connections
-- [[Env]] - `method` [EXTRACTED]
+- [[fake_ai]] - `calls` [EXTRACTED]
+- [[picking]] - `method` [EXTRACTED]
+- [[stubbed]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_opener_renderpy
+#graphify/code #graphify/EXTRACTED #community/gather_pool

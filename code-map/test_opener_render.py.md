@@ -57,10 +57,12 @@ tags:
 - [[test_role_hat_is_optional()]] - `contains` [EXTRACTED]
 - [[test_search_failure_falls_back()]] - `contains` [EXTRACTED]
 - [[test_success_returns_clip()]] - `contains` [EXTRACTED]
+- [[test_unfixable_stops_early_and_every_try_is_kept()]] - `contains` [EXTRACTED]
 - [[test_unfound_model_goes_back_to_the_planner()]] - `contains` [EXTRACTED]
 - [[test_use_opener_failure_keeps_scene()]] - `contains` [EXTRACTED]
 - [[test_use_opener_never_raises()]] - `contains` [EXTRACTED]
 - [[test_use_opener_on_success()]] - `contains` [EXTRACTED]
+- [[test_use_opener_opening_note()]] - `contains` [EXTRACTED]
 - [[test_use_opener_planner_check()]] - `contains` [EXTRACTED]
 - [[traceback]] - `imports` [EXTRACTED]
 

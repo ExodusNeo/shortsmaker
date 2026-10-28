@@ -1,12 +1,12 @@
 ---
 source_file: "tests/people_sheet.py"
 type: "code"
-community: "sys"
+community: "json"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/sys
+  - community/json
 ---
 
 # people_sheet.py
@@ -22,4 +22,4 @@ tags:
 - [[subprocess]] - `imports` [EXTRACTED]
 - [[sys]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/sys
+#graphify/code #graphify/EXTRACTED #community/json

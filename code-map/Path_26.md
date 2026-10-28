@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "pack_people.py"
+community: "pathlib"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/pack_peoplepy
+  - community/pathlib
 ---
 
 # Path
 
 ## Connections
-- [[main()_9]] - `references` [EXTRACTED]
+- [[drawn_short()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/pack_peoplepy
+#graphify/code #graphify/EXTRACTED #community/pathlib

@@ -1,12 +1,12 @@
 ---
 source_file: "blender/people.py"
 type: "rationale"
-community: "people.py"
+community: "math"
 location: "L285"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/peoplepy
+  - community/math
 ---
 
 # Every person breathes on their Idle clip from frame 1 under whatever they do (a…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[idle()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/peoplepy
+#graphify/rationale #graphify/EXTRACTED #community/math

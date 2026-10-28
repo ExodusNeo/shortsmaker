@@ -1,12 +1,12 @@
 ---
 source_file: "blender/people.py"
 type: "code"
-community: "people.py"
-location: "L415"
+community: "math"
+location: "L612"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/peoplepy
+  - community/math
 ---
 
 # prop_move()
@@ -20,4 +20,4 @@ tags:
 - [[move()]] - `calls` [EXTRACTED]
 - [[people.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/peoplepy
+#graphify/code #graphify/EXTRACTED #community/math

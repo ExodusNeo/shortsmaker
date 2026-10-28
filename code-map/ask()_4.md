@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_full_scenes.py"
 type: "code"
-community: "test_first_second.py"
-location: "L667"
+community: "_fake_planning"
+location: "L699"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_first_secondpy
+  - community/_fake_planning
 ---
 
 # ask()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[test_look_check_fixes_code()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_first_secondpy
+#graphify/code #graphify/EXTRACTED #community/_fake_planning

@@ -22,5 +22,6 @@ tags:
 - [[test_reuse_unchanged()]] - `calls` [INFERRED]
 - [[test_review_rejects()]] - `calls` [INFERRED]
 - [[test_success_returns_clip()]] - `calls` [INFERRED]
+- [[test_unfixable_stops_early_and_every_try_is_kept()]] - `calls` [INFERRED]
 
 #graphify/code #graphify/INFERRED #community/test_opener_renderpy

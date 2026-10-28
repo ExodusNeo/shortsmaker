@@ -1,20 +1,24 @@
 ---
 type: community
-members: 28
+members: 33
 ---
 
 # parts.py
 
-**Members:** 28 nodes
+**Members:** 33 nodes
 
 ## Members
+- [[A flat (emission-only) material in one of COLORS, made once.]] - rationale - blender/look.py
 - [[A flat plate on the outside face of a truss joint (side_y -1 left, +1 right).]] - rationale - blender/parts.py
 - [[A straight steel member (chord, diagonal, vertical, girder) from p1 to p2 with…]] - rationale - blender/parts.py
+- [[Collection]] - code
 - [[Manual-style callout a thin leader line from the part to short capital text…]] - rationale - blender/parts.py
 - [[Object]] - code
 - [[The fasteners on a plate's outer face a grid of rivet heads or bolt heads, one…]] - rationale - blender/parts.py
 - [[The parts kit every piece a bridge is drawn from. Boxes and cylinders share…]] - rationale - blender/parts.py
 - [[Vector]] - code
+- [[_mesh()]] - code - blender/parts.py
+- [[_obj()]] - code - blender/parts.py
 - [[bbox_size()]] - code - blender/parts.py
 - [[box()]] - code - blender/parts.py
 - [[car()]] - code - blender/parts.py
@@ -27,6 +31,7 @@ members: 28
 - [[label()]] - code - blender/parts.py
 - [[look_at_quat()]] - code - blender/parts.py
 - [[main_cable()]] - code - blender/parts.py
+- [[material()]] - code - blender/look.py
 - [[member()]] - code - blender/parts.py
 - [[parts.py]] - code - blender/parts.py
 - [[person()]] - code - blender/parts.py
@@ -46,13 +51,13 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 19 edges to [[_COMMUNITY_templates.py]]
-- 8 edges to [[_COMMUNITY_look.py]]
-- 6 edges to [[_COMMUNITY_math]]
-- 2 edges to [[_COMMUNITY_main]]
+- 7 edges to [[_COMMUNITY_build_scene.py]]
+- 3 edges to [[_COMMUNITY_main]]
+- 2 edges to [[_COMMUNITY_math]]
 
 ## Top bridge nodes
 - [[parts.py]] - degree 30, connects to 3 communities
-- [[member()]] - degree 12, connects to 2 communities
-- [[cylinder()]] - degree 8, connects to 2 communities
-- [[label()]] - degree 8, connects to 2 communities
-- [[Object]] - degree 19, connects to 1 community
+- [[material()]] - degree 7, connects to 2 communities
+- [[member()]] - degree 12, connects to 1 community
+- [[cylinder()]] - degree 8, connects to 1 community
+- [[label()]] - degree 8, connects to 1 community

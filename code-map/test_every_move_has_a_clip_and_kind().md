@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_people_tables.py"
 type: "code"
-community: "sys"
+community: "json"
 location: "L46"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/sys
+  - community/json
 ---
 
 # test_every_move_has_a_clip_and_kind()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[test_people_tables.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/sys
+#graphify/code #graphify/EXTRACTED #community/json

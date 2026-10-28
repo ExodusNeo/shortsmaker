@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/seo.py"
 type: "code"
-community: "json"
+community: "fetch"
 location: "L11"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/json
+  - community/fetch
 ---
 
 # search_suggestions()
@@ -18,4 +18,4 @@ tags:
 - [[seo.py]] - `contains` [EXTRACTED]
 - [[seo_pass()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/json
+#graphify/code #graphify/EXTRACTED #community/fetch

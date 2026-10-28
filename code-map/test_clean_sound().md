@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_full_scenes.py"
 type: "code"
-community: "words_of"
-location: "L785"
+community: "clean_full"
+location: "L817"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/words_of
+  - community/clean_full
 ---
 
 # test_clean_sound()
@@ -17,4 +17,4 @@ tags:
 - [[test_full_scenes.py]] - `contains` [EXTRACTED]
 - [[words_of()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/words_of
+#graphify/code #graphify/EXTRACTED #community/clean_full

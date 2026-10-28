@@ -12,8 +12,8 @@ tags:
 # Env
 
 ## Connections
-- [[dot-__enter__()_2]] - `method` [EXTRACTED]
-- [[dot-__exit__()_2]] - `method` [EXTRACTED]
+- [[dot-__enter__()_4]] - `method` [EXTRACTED]
+- [[dot-__exit__()_3]] - `method` [EXTRACTED]
 - [[dot-runs()]] - `method` [EXTRACTED]
 - [[A temp work folder, a library holding the fixture models, a fake Blender and…]] - `rationale_for` [EXTRACTED]
 - [[test_beats_scaled_into_scene()]] - `calls` [EXTRACTED]
@@ -37,6 +37,7 @@ tags:
 - [[test_role_hat_is_optional()]] - `calls` [EXTRACTED]
 - [[test_search_failure_falls_back()]] - `calls` [EXTRACTED]
 - [[test_success_returns_clip()]] - `calls` [EXTRACTED]
+- [[test_unfixable_stops_early_and_every_try_is_kept()]] - `calls` [EXTRACTED]
 - [[test_unfound_model_goes_back_to_the_planner()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/test_opener_renderpy

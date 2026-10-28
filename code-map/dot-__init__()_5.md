@@ -1,12 +1,12 @@
 ---
 source_file: "blender/moves.py"
 type: "code"
-community: "cut"
+community: "moves.py"
 location: "L29"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/cut
+  - community/movespy
 ---
 
 # .__init__()
@@ -15,4 +15,4 @@ tags:
 - [[State]] - `method` [EXTRACTED]
 - [[Vector_4]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/cut
+#graphify/code #graphify/EXTRACTED #community/movespy

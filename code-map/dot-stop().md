@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_blender_link.py"
 type: "code"
-community: "Fake"
+community: "test_blender_link.py"
 location: "L51"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Fake
+  - community/test_blender_linkpy
 ---
 
 # .stop()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[Fake]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Fake
+#graphify/code #graphify/EXTRACTED #community/test_blender_linkpy

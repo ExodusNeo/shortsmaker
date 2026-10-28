@@ -1,17 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: "log_short"
+community: "test_opener_render.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/log_short
+  - community/test_opener_renderpy
 ---
 
 # Path
 
 ## Connections
-- [[log_short()]] - `references` [EXTRACTED]
-- [[vault_page()]] - `references` [EXTRACTED]
+- [[render_opener()]] - `references` [EXTRACTED]
+- [[review()]] - `references` [EXTRACTED]
+- [[save_try()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/log_short
+#graphify/code #graphify/EXTRACTED #community/test_opener_renderpy

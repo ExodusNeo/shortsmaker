@@ -1,20 +1,20 @@
 ---
 source_file: "tests/test_full_scenes.py"
 type: "code"
-community: "test_first_second.py"
-location: "L554"
+community: "apply_review_fixes"
+location: "L586"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_first_secondpy
+  - community/apply_review_fixes
 ---
 
 # _review_state()
 
 ## Connections
-- [[Path_23]] - `references` [EXTRACTED]
+- [[Path_8]] - `references` [EXTRACTED]
 - [[test_full_scenes.py]] - `contains` [EXTRACTED]
 - [[test_redraw_failure_paints()]] - `calls` [EXTRACTED]
 - [[test_review_redraws_custom()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_first_secondpy
+#graphify/code #graphify/EXTRACTED #community/apply_review_fixes

@@ -13,6 +13,7 @@ tags:
 
 ## Connections
 - [[_num()]] - `calls` [EXTRACTED]
+- [[_takeable()]] - `calls` [EXTRACTED]
 - [[clean_opener()]] - `calls` [EXTRACTED]
 - [[opener_plan.py]] - `contains` [EXTRACTED]
 

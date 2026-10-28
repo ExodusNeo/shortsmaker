@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_full_scenes.py"
 type: "code"
-community: "test_first_second.py"
-location: "L391"
+community: "_fake_planning"
+location: "L423"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_first_secondpy
+  - community/_fake_planning
 ---
 
 # test_review_uses_unused_pool_pictures_before_painting()
@@ -14,8 +14,8 @@ tags:
 ## Connections
 - [[Togo vs Balto 4 real pictures the review rejected became paintings while ~20…]] - `rationale_for` [EXTRACTED]
 - [[apply_review_fixes()]] - `calls` [EXTRACTED]
-- [[ask()_6]] - `contains` [EXTRACTED]
+- [[ask()_5]] - `contains` [EXTRACTED]
 - [[ask()_3]] - `indirect_call` [INFERRED]
 - [[test_full_scenes.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_first_secondpy
+#graphify/code #graphify/EXTRACTED #community/_fake_planning

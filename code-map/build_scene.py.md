@@ -1,12 +1,12 @@
 ---
 source_file: "blender/build_scene.py"
 type: "code"
-community: "math"
+community: "build_scene.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/math
+  - community/build_scenepy
 ---
 
 # build_scene.py
@@ -29,4 +29,4 @@ tags:
 - [[sys]] - `imports` [EXTRACTED]
 - [[templates.py]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/math
+#graphify/code #graphify/EXTRACTED #community/build_scenepy

@@ -28,6 +28,7 @@ tags:
 - [[test_review_rejects()]] - `calls` [EXTRACTED]
 - [[test_search_failure_falls_back()]] - `calls` [EXTRACTED]
 - [[test_success_returns_clip()]] - `calls` [EXTRACTED]
+- [[test_unfixable_stops_early_and_every_try_is_kept()]] - `calls` [EXTRACTED]
 - [[test_unfound_model_goes_back_to_the_planner()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/test_opener_renderpy

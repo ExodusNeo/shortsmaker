@@ -1,21 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "catalog_pool"
+community: "film_piece"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/catalog_pool
+  - community/film_piece
 ---
 
 # Path
 
 ## Connections
-- [[catalog_pool()]] - `references` [EXTRACTED]
-- [[contact_sheets()]] - `references` [EXTRACTED]
-- [[load_pool()]] - `references` [EXTRACTED]
-- [[pool_folder()]] - `references` [EXTRACTED]
-- [[prepare_topic()]] - `references` [EXTRACTED]
-- [[save_pool()]] - `references` [EXTRACTED]
+- [[film_piece()]] - `references` [EXTRACTED]
+- [[shot_span()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/catalog_pool
+#graphify/code #graphify/EXTRACTED #community/film_piece

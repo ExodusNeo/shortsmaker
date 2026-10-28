@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/motion.py"
 type: "rationale"
-community: "shutil"
+community: "re"
 location: "L129"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/shutil
+  - community/re
 ---
 
 # Motion Graphics Agent: writes bespoke React/SVG Remotion code for each `type:…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[code_custom_scenes()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/shutil
+#graphify/rationale #graphify/EXTRACTED #community/re

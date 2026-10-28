@@ -1,12 +1,12 @@
 ---
 source_file: "tests/render_full.py"
 type: "rationale"
-community: "shutil"
+community: "json"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/shutil
+  - community/json
 ---
 
 # Render one full-screen motion graphic test scene through the real Short…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[render_full.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/shutil
+#graphify/rationale #graphify/EXTRACTED #community/json

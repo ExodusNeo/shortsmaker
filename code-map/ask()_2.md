@@ -1,18 +1,17 @@
 ---
-source_file: "shortsmaker/opener_plan.py"
+source_file: "tests/test_full_scenes.py"
 type: "code"
-community: "test_opener_plan.py"
-location: "L190"
+community: "apply_review_fixes"
+location: "L604"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_opener_planpy
+  - community/apply_review_fixes
 ---
 
 # ask()
 
 ## Connections
-- [[_tables_text()]] - `calls` [EXTRACTED]
-- [[plan_openers()]] - `contains` [EXTRACTED]
+- [[test_review_redraws_custom()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_opener_planpy
+#graphify/code #graphify/EXTRACTED #community/apply_review_fixes

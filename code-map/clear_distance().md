@@ -1,12 +1,12 @@
 ---
 source_file: "blender/moves.py"
 type: "code"
-community: "cut"
-location: "L303"
+community: "tree"
+location: "L304"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/cut
+  - community/tree
 ---
 
 # clear_distance()
@@ -19,4 +19,4 @@ tags:
 - [[tree()]] - `calls` [EXTRACTED]
 - [[world_verts()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/cut
+#graphify/code #graphify/EXTRACTED #community/tree

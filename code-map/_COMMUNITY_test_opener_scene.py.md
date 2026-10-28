@@ -1,11 +1,11 @@
 ---
 type: community
-members: 64
+members: 66
 ---
 
 # test_opener_scene.py
 
-**Members:** 64 nodes
+**Members:** 66 nodes
 
 ## Members
 - [[A 1 s fall in a 3 s opener the person lies on the ground in the clip's last…]] - rationale - tests/test_opener_scene.py
@@ -22,11 +22,12 @@ members: 64
 - [[Fourth live run (Mike) a fix round asked for an at_fraction slice but still…]] - rationale - tests/test_opener_scene.py
 - [[One brand look (part 2, 2026-10-27) every visible model is cel-shaded and ink-…]] - rationale - tests/test_opener_scene.py
 - [[Owner, 2026-10-27 walking away shows the bird's back, and walking the way…]] - rationale - tests/test_opener_scene.py
-- [[Path_32]] - code
-- [[Path_33]] - code
+- [[Path_30]] - code
+- [[Path_31]] - code
 - [[People openers (part 2) a dressed person stands with their feet on the ground.]] - rationale - tests/test_opener_scene.py
 - [[Standing on a crate and walking never floats off the edge or crashes; it goes…]] - rationale - tests/test_opener_scene.py
 - [[Tests for building openers in Blender (blenderopener_scene.py + moves.py,…]] - rationale - tests/test_opener_scene.py
+- [[The Eiffel Short's con artist bent where he stood, a metre from the dropped…]] - rationale - tests/test_opener_scene.py
 - [[The Mike plan left camera.follow out and the rooster walked off alone; the…]] - rationale - tests/test_opener_scene.py
 - [[The first people run an umbrella stood centred on the hand, its canopy round…]] - rationale - tests/test_opener_scene.py
 - [[The hit plays at half speed; the clip keeps its frame count (scene 1 is timed…]] - rationale - tests/test_opener_scene.py
@@ -58,6 +59,7 @@ members: 64
 - [[test_person_stands()]] - code - tests/test_opener_scene.py
 - [[test_person_walk_away_is_staging()]] - code - tests/test_opener_scene.py
 - [[test_person_walks_across()]] - code - tests/test_opener_scene.py
+- [[test_pick_up_walks_over_and_carries_it()]] - code - tests/test_opener_scene.py
 - [[test_prop_held_by_its_handle_clear_of_the_body()]] - code - tests/test_opener_scene.py
 - [[test_prop_hidden_in_first_frame_fails()]] - code - tests/test_opener_scene.py
 - [[test_slow_motion_keeps_length()]] - code - tests/test_opener_scene.py
@@ -81,14 +83,13 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 6 edges to [[_COMMUNITY_sys]]
-- 5 edges to [[_COMMUNITY_test_full_scenes.py]]
+- 8 edges to [[_COMMUNITY_json]]
+- 4 edges to [[_COMMUNITY_pathlib]]
 - 2 edges to [[_COMMUNITY_test_opener_plan.py]]
-- 1 edge to [[_COMMUNITY_copy]]
-- 1 edge to [[_COMMUNITY_json]]
+- 1 edge to [[_COMMUNITY_test_opener_render.py]]
 
 ## Top bridge nodes
-- [[test_opener_scene.py]] - degree 47, connects to 5 communities
+- [[test_opener_scene.py]] - degree 48, connects to 4 communities
 - [[standin()]] - degree 6, connects to 1 community
 - [[test_fixture_plans_are_clean()]] - degree 3, connects to 1 community
 - [[test_standin_matches_tables()]] - degree 2, connects to 1 community

@@ -79,6 +79,7 @@ tags:
 - [[test_music_gain_evens_out_tracks()]] - `contains` [EXTRACTED]
 - [[test_new_picture_drops_mark()]] - `contains` [EXTRACTED]
 - [[test_number_scaling()]] - `contains` [EXTRACTED]
+- [[test_opener_graphic()]] - `contains` [EXTRACTED]
 - [[test_paint_new_clears_full()]] - `contains` [EXTRACTED]
 - [[test_quota_fallback_both_ways()]] - `contains` [EXTRACTED]
 - [[test_redraw_failure_paints()]] - `contains` [EXTRACTED]

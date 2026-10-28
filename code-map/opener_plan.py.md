@@ -19,6 +19,7 @@ tags:
 - [[_size()]] - `contains` [EXTRACTED]
 - [[_stroke()]] - `contains` [EXTRACTED]
 - [[_tables_text()]] - `contains` [EXTRACTED]
+- [[_takeable()]] - `contains` [EXTRACTED]
 - [[clean_opener()]] - `contains` [EXTRACTED]
 - [[config.py]] - `imports_from` [EXTRACTED]
 - [[fix_plan()]] - `contains` [EXTRACTED]

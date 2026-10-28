@@ -2,7 +2,7 @@
 source_file: "shortsmaker/opener_plan.py"
 type: "code"
 community: "test_opener_plan.py"
-location: "L169"
+location: "L183"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,7 +12,7 @@ tags:
 # _tables_text()
 
 ## Connections
-- [[ask()_2]] - `calls` [EXTRACTED]
+- [[ask()_7]] - `calls` [EXTRACTED]
 - [[fix_plan()]] - `calls` [EXTRACTED]
 - [[opener_plan.py]] - `contains` [EXTRACTED]
 - [[test_prompt_explains_stroke_angles()]] - `calls` [EXTRACTED]

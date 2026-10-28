@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/plan_rules.py"
 type: "code"
-community: "words_of"
-location: "L268"
+community: "re"
+location: "L271"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/words_of
+  - community/re
 ---
 
 # parse_scene_money()
@@ -17,4 +17,4 @@ tags:
 - [[plan_rules.py]] - `contains` [EXTRACTED]
 - [[re]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/words_of
+#graphify/code #graphify/EXTRACTED #community/re

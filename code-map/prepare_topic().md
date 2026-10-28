@@ -1,19 +1,19 @@
 ---
 source_file: "shortsmaker/picture_pool.py"
 type: "code"
-community: "catalog_pool"
+community: "prepare_topic"
 location: "L49"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/catalog_pool
+  - community/prepare_topic
 ---
 
 # prepare_topic()
 
 ## Connections
 - [[Before writing the topic's Wikipedia research (`_texts`; fact_check() reuses…]] - `rationale_for` [EXTRACTED]
-- [[Path_12]] - `references` [EXTRACTED]
+- [[Path_13]] - `references` [EXTRACTED]
 - [[article_text()]] - `calls` [EXTRACTED]
 - [[catalog_pool()]] - `calls` [EXTRACTED]
 - [[gather_pool()]] - `calls` [EXTRACTED]
@@ -28,4 +28,4 @@ tags:
 - [[usable()]] - `calls` [EXTRACTED]
 - [[write_scripts()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/catalog_pool
+#graphify/code #graphify/EXTRACTED #community/prepare_topic

@@ -11,6 +11,7 @@ tags:
 # Object
 
 ## Connections
-- [[camera()_1]] - `references` [EXTRACTED]
+- [[load_model()]] - `references` [EXTRACTED]
+- [[merge()]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/opener_scenepy

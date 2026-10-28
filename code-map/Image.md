@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "frame_render.py"
+community: "frame_maker"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/frame_renderpy
+  - community/frame_maker
 ---
 
 # Image
@@ -18,4 +18,4 @@ tags:
 - [[person_card()]] - `references` [EXTRACTED]
 - [[shot()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/frame_renderpy
+#graphify/code #graphify/EXTRACTED #community/frame_maker

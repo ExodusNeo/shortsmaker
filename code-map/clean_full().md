@@ -17,6 +17,7 @@ tags:
 - [[coords()]] - `calls` [EXTRACTED]
 - [[is_num()]] - `calls` [EXTRACTED]
 - [[number_figures()]] - `calls` [EXTRACTED]
+- [[opener_graphic()]] - `calls` [EXTRACTED]
 - [[plan_rules.py]] - `contains` [EXTRACTED]
 - [[re]] - `calls` [EXTRACTED]
 - [[rescue_graphics()]] - `calls` [EXTRACTED]

@@ -12,7 +12,7 @@ tags:
 # duration()
 
 ## Connections
-- [[Path]] - `references` [EXTRACTED]
+- [[Path_2]] - `references` [EXTRACTED]
 - [[log_short()]] - `calls` [EXTRACTED]
 - [[media_tools.py]] - `contains` [EXTRACTED]
 - [[nasa_films()]] - `calls` [EXTRACTED]

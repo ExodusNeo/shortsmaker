@@ -2,7 +2,7 @@
 source_file: "shortsmaker/opener_plan.py"
 type: "code"
 community: "test_opener_plan.py"
-location: "L187"
+location: "L201"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[One AI call stages every Short's opener (sopener); unusable plans are asked…]] - `rationale_for` [EXTRACTED]
-- [[ask()_2]] - `contains` [EXTRACTED]
+- [[ask()_7]] - `contains` [EXTRACTED]
 - [[clean_opener()]] - `calls` [EXTRACTED]
 - [[opener_plan.py]] - `contains` [EXTRACTED]
 - [[test_good_plan_is_kept()]] - `calls` [EXTRACTED]

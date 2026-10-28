@@ -1,20 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "json"
+community: "unpack_clips"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/json
+  - community/unpack_clips
 ---
 
 # Path
 
 ## Connections
-- [[drawn_thumbnail()]] - `references` [EXTRACTED]
-- [[load_state()]] - `references` [EXTRACTED]
-- [[render()_5]] - `references` [EXTRACTED]
-- [[save_state()]] - `references` [EXTRACTED]
-- [[use_opener()]] - `references` [EXTRACTED]
+- [[handoff()]] - `references` [EXTRACTED]
+- [[zip_of()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/json
+#graphify/code #graphify/EXTRACTED #community/unpack_clips

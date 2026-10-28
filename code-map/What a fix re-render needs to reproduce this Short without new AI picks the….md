@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/short_render.py"
 type: "rationale"
-community: "json"
+community: "load_state"
 location: "L27"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/json
+  - community/load_state
 ---
 
 # What a fix re-render needs to reproduce this Short without new AI picks: the…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[save_state()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/json
+#graphify/rationale #graphify/EXTRACTED #community/load_state

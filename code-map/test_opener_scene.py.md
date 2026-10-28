@@ -45,6 +45,7 @@ tags:
 - [[test_person_stands()]] - `contains` [EXTRACTED]
 - [[test_person_walk_away_is_staging()]] - `contains` [EXTRACTED]
 - [[test_person_walks_across()]] - `contains` [EXTRACTED]
+- [[test_pick_up_walks_over_and_carries_it()]] - `contains` [EXTRACTED]
 - [[test_prop_held_by_its_handle_clear_of_the_body()]] - `contains` [EXTRACTED]
 - [[test_prop_hidden_in_first_frame_fails()]] - `contains` [EXTRACTED]
 - [[test_slow_motion_keeps_length()]] - `contains` [EXTRACTED]

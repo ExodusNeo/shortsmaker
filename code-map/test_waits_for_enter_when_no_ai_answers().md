@@ -12,8 +12,8 @@ tags:
 # test_waits_for_enter_when_no_ai_answers()
 
 ## Connections
-- [[run()_4]] - `contains` [EXTRACTED]
-- [[run()_1]] - `indirect_call` [INFERRED]
+- [[run()_5]] - `contains` [EXTRACTED]
+- [[run()_2]] - `indirect_call` [INFERRED]
 - [[test_h3_handoff.py]] - `contains` [EXTRACTED]
 - [[with_fakes()]] - `calls` [EXTRACTED]
 

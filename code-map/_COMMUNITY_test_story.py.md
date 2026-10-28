@@ -22,10 +22,10 @@ members: 42
 - [[align_words()]] - code - local_ai/qwen_voice.py
 - [[check_twists()]] - code - shortsmaker/writing.py
 - [[fake()]] - code - tests/test_story.py
-- [[one()_1]] - code - local_ai/qwen_voice.py
+- [[main()_2]] - code - local_ai/qwen_voice.py
+- [[one()]] - code - local_ai/qwen_voice.py
 - [[qwen_voice.py]] - code - local_ai/qwen_voice.py
 - [[say_number()]] - code - local_ai/qwen_voice.py
-- [[scenes()]] - code - tests/test_story.py
 - [[speak()]] - code - local_ai/qwen_voice.py
 - [[spoken_sentence()]] - code - local_ai/qwen_voice.py
 - [[spoken_tokens()]] - code - local_ai/qwen_voice.py
@@ -40,7 +40,6 @@ members: 42
 - [[test_numbers()]] - code - tests/test_qwen_voice.py
 - [[test_qwen_voice.py]] - code - tests/test_qwen_voice.py
 - [[test_rules_accept_opener_setting()]] - code - tests/test_story.py
-- [[test_sentences_running_across_cuts_are_one_take()]] - code - tests/test_story.py
 - [[test_story.py]] - code - tests/test_story.py
 - [[test_story_problems()]] - code - tests/test_story.py
 - [[test_story_problems_flags_summary_hook()]] - code - tests/test_story.py
@@ -50,6 +49,7 @@ members: 42
 - [[test_twist_check_rewrites_a_legend_before_writing()]] - code - tests/test_story.py
 - [[test_writer_prompt_has_the_story_rules_and_cut_rule()]] - code - tests/test_story.py
 - [[twist_short()]] - code - tests/test_story.py
+- [[unicodedata]] - concept
 
 ## Live Query (requires Dataview plugin)
 
@@ -59,20 +59,19 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 18 edges to [[_COMMUNITY_test_full_scenes.py]]
-- 6 edges to [[_COMMUNITY_ffmpeg]]
-- 6 edges to [[_COMMUNITY_json]]
-- 6 edges to [[_COMMUNITY_sys]]
+- 14 edges to [[_COMMUNITY_pathlib]]
+- 11 edges to [[_COMMUNITY_json]]
+- 6 edges to [[_COMMUNITY_re]]
+- 5 edges to [[_COMMUNITY_local_voice]]
 - 3 edges to [[_COMMUNITY_write_scripts]]
+- 2 edges to [[_COMMUNITY_channel_profiles.py]]
 - 1 edge to [[_COMMUNITY_test_rules.py]]
+- 1 edge to [[_COMMUNITY_clean_full]]
 - 1 edge to [[_COMMUNITY_ask_ai]]
-- 1 edge to [[_COMMUNITY_test_h3_handoff.py]]
-- 1 edge to [[_COMMUNITY_gpu.py]]
-- 1 edge to [[_COMMUNITY_test_style.py]]
 
 ## Top bridge nodes
-- [[test_story.py]] - degree 29, connects to 5 communities
-- [[qwen_voice.py]] - degree 18, connects to 5 communities
+- [[qwen_voice.py]] - degree 18, connects to 4 communities
 - [[check_twists()]] - degree 8, connects to 4 communities
-- [[scenes()]] - degree 5, connects to 3 communities
-- [[align_words()]] - degree 10, connects to 2 communities
+- [[test_story.py]] - degree 29, connects to 3 communities
+- [[story_problems()]] - degree 8, connects to 3 communities
+- [[unicodedata]] - degree 6, connects to 3 communities

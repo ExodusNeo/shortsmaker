@@ -12,8 +12,8 @@ tags:
 # test_scene_number_given_as_text_is_accepted()
 
 ## Connections
-- [[run()_2]] - `contains` [EXTRACTED]
-- [[run()_1]] - `indirect_call` [INFERRED]
+- [[run()_3]] - `contains` [EXTRACTED]
+- [[run()_2]] - `indirect_call` [INFERRED]
 - [[test_h3_handoff.py]] - `contains` [EXTRACTED]
 - [[with_fakes()]] - `calls` [EXTRACTED]
 

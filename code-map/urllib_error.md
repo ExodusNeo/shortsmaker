@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "h3_run.py"
+community: "pathlib"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/h3_runpy
+  - community/pathlib
 ---
 
 # urllib_error
@@ -15,4 +15,4 @@ tags:
 - [[h3_run.py]] - `imports` [EXTRACTED]
 - [[image_sources.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/h3_runpy
+#graphify/concept #graphify/EXTRACTED #community/pathlib

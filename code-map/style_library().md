@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/style_lab.py"
 type: "code"
-community: "test_style.py"
+community: "style_library"
 location: "L14"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_stylepy
+  - community/style_library
 ---
 
 # style_library()
@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[The style library (remotionsrcstylelibrary.json) {name, kind, description,…]] - `rationale_for` [EXTRACTED]
 - [[approve_candidate()]] - `calls` [EXTRACTED]
-- [[build()_1]] - `calls` [EXTRACTED]
+- [[build()]] - `calls` [EXTRACTED]
 - [[choose_images()]] - `calls` [EXTRACTED]
 - [[clean_invention()]] - `calls` [EXTRACTED]
 - [[clean_look()]] - `calls` [EXTRACTED]
@@ -23,7 +23,7 @@ tags:
 - [[direct_scripts()]] - `calls` [EXTRACTED]
 - [[json]] - `calls` [EXTRACTED]
 - [[look_text()]] - `calls` [EXTRACTED]
-- [[main()_8]] - `calls` [EXTRACTED]
+- [[main()_7]] - `calls` [EXTRACTED]
 - [[save_candidate()]] - `calls` [EXTRACTED]
 - [[style_lab.py]] - `contains` [EXTRACTED]
 - [[style_rules()]] - `calls` [EXTRACTED]
@@ -33,4 +33,4 @@ tags:
 - [[test_write_style_index_is_deterministic()]] - `calls` [EXTRACTED]
 - [[write_style_index()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_stylepy
+#graphify/code #graphify/EXTRACTED #community/style_library

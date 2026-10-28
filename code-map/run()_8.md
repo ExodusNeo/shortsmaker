@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[Build (and optionally render at 25%) one opener; returns (report, frames dir).]] - `rationale_for` [EXTRACTED]
-- [[Path_32]] - `references` [EXTRACTED]
+- [[Path_30]] - `references` [EXTRACTED]
 - [[people_lib()]] - `calls` [EXTRACTED]
 - [[test_bad_plans_fail()]] - `calls` [EXTRACTED]
 - [[test_box_fall_rests_and_renders()]] - `calls` [EXTRACTED]
@@ -31,6 +31,7 @@ tags:
 - [[test_person_stands()]] - `calls` [EXTRACTED]
 - [[test_person_walk_away_is_staging()]] - `calls` [EXTRACTED]
 - [[test_person_walks_across()]] - `calls` [EXTRACTED]
+- [[test_pick_up_walks_over_and_carries_it()]] - `calls` [EXTRACTED]
 - [[test_prop_held_by_its_handle_clear_of_the_body()]] - `calls` [EXTRACTED]
 - [[test_prop_hidden_in_first_frame_fails()]] - `calls` [EXTRACTED]
 - [[test_staging_goes_back_to_the_planner()]] - `calls` [EXTRACTED]

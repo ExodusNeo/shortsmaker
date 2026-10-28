@@ -15,6 +15,6 @@ tags:
 - [[dot-__init__()_4]] - `calls` [EXTRACTED]
 - [[A jagged crack across the plate's outer face, in short ink segments that appear…]] - `rationale_for` [EXTRACTED]
 - [[Failure]] - `method` [EXTRACTED]
-- [[key()_2]] - `calls` [EXTRACTED]
+- [[key()_1]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/main

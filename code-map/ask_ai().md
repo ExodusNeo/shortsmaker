@@ -30,6 +30,7 @@ tags:
 - [[look_and_fix()]] - `calls` [EXTRACTED]
 - [[mark_details()]] - `calls` [EXTRACTED]
 - [[new_channel()]] - `calls` [EXTRACTED]
+- [[opener_graphic()]] - `calls` [EXTRACTED]
 - [[pick_model()]] - `calls` [EXTRACTED]
 - [[pool_pictures()]] - `calls` [EXTRACTED]
 - [[quota_exhausted()]] - `calls` [EXTRACTED]

@@ -1,18 +1,18 @@
 ---
 source_file: "shortsmaker/opener_render.py"
 type: "code"
-community: "review"
+community: "test_opener_render.py"
 location: "L128"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/review
+  - community/test_opener_renderpy
 ---
 
 # review()
 
 ## Connections
-- [[Path_31]] - `references` [EXTRACTED]
+- [[Path_24]] - `references` [EXTRACTED]
 - [[The AI looks at 8 frames does the action make physical sense, and does frame 0…]] - `rationale_for` [EXTRACTED]
 - [[_cast_note()]] - `calls` [EXTRACTED]
 - [[ask_ai()]] - `calls` [EXTRACTED]
@@ -21,4 +21,4 @@ tags:
 - [[review_frames()]] - `calls` [EXTRACTED]
 - [[shutil]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/review
+#graphify/code #graphify/EXTRACTED #community/test_opener_renderpy

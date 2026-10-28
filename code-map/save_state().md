@@ -1,22 +1,22 @@
 ---
 source_file: "shortsmaker/short_render.py"
 type: "code"
-community: "json"
+community: "load_state"
 location: "L26"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/json
+  - community/load_state
 ---
 
 # save_state()
 
 ## Connections
-- [[Path_22]] - `references` [EXTRACTED]
+- [[Path_29]] - `references` [EXTRACTED]
 - [[What a fix re-render needs to reproduce this Short without new AI picks the…]] - `rationale_for` [EXTRACTED]
 - [[json]] - `calls` [EXTRACTED]
 - [[render()_5]] - `calls` [EXTRACTED]
 - [[short_render.py]] - `contains` [EXTRACTED]
 - [[test_state_roundtrip_full_pics()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/json
+#graphify/code #graphify/EXTRACTED #community/load_state

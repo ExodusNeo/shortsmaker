@@ -9,7 +9,7 @@ members: 27
 
 ## Members
 - [[(min words, max words, min scenes, max scenes, seconds) for this batch's…]] - rationale - shortsmaker/writing.py
-- [[dot-__init__()]] - code - tests/test_pictures_first.py
+- [[dot-__init__()_1]] - code - tests/test_pictures_first.py
 - [[Never scene 1 (real footage keeps the hook), never two in a row, never a scene…]] - rationale - shortsmaker/plan_rules.py
 - [[Plan n Shorts on new topics, or on exactly `topics` (comparison runs the other…]] - rationale - shortsmaker/writing.py
 - [[Scene narrations from an AI reply a list of strings (or of {narration ...}).]] - rationale - shortsmaker/writing.py
@@ -45,25 +45,25 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 14 edges to [[_COMMUNITY_test_pictures_first.py]]
-- 7 edges to [[_COMMUNITY_test_full_scenes.py]]
-- 5 edges to [[_COMMUNITY_json]]
-- 5 edges to [[_COMMUNITY_ask_ai]]
-- 5 edges to [[_COMMUNITY_words_of]]
-- 4 edges to [[_COMMUNITY_catalog_pool]]
-- 3 edges to [[_COMMUNITY_owner]]
+- 8 edges to [[_COMMUNITY_clean_full]]
+- 5 edges to [[_COMMUNITY_pathlib]]
+- 4 edges to [[_COMMUNITY_prepare_topic]]
+- 4 edges to [[_COMMUNITY_channel_profiles.py]]
+- 3 edges to [[_COMMUNITY_pictures_of]]
+- 3 edges to [[_COMMUNITY_ask_ai]]
 - 3 edges to [[_COMMUNITY_test_story.py]]
-- 3 edges to [[_COMMUNITY_clean_full]]
-- 2 edges to [[_COMMUNITY_fake_ai]]
-- 2 edges to [[_COMMUNITY_pictures_of]]
-- 2 edges to [[_COMMUNITY_test_style.py]]
+- 3 edges to [[_COMMUNITY_test_full_scenes.py]]
+- 2 edges to [[_COMMUNITY_planning_ai]]
+- 2 edges to [[_COMMUNITY_owner]]
+- 2 edges to [[_COMMUNITY_json]]
+- 2 edges to [[_COMMUNITY_re]]
+- 2 edges to [[_COMMUNITY_style_library]]
 - 1 edge to [[_COMMUNITY_test_rules.py]]
-- 1 edge to [[_COMMUNITY_first_second_check]]
-- 1 edge to [[_COMMUNITY_shutil]]
-- 1 edge to [[_COMMUNITY_rescue_graphics]]
+- 1 edge to [[_COMMUNITY_visual_review]]
 - 1 edge to [[_COMMUNITY_limit_style]]
 - 1 edge to [[_COMMUNITY_test_blender_scene.py]]
 - 1 edge to [[_COMMUNITY_test_opener_plan.py]]
-- 1 edge to [[_COMMUNITY_test_first_second.py]]
+- 1 edge to [[_COMMUNITY__fake_planning]]
 
 ## Top bridge nodes
 - [[write_scripts()]] - degree 45, connects to 18 communities

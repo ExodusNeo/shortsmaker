@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/review.py"
 type: "code"
-community: "json"
+community: "channel_profiles.py"
 location: "L318"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/json
+  - community/channel_profilespy
 ---
 
 # rewrite_paint_prompts()
@@ -21,4 +21,4 @@ tags:
 - [[review.py]] - `contains` [EXTRACTED]
 - [[test_rewrite_paint_prompts()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/json
+#graphify/code #graphify/EXTRACTED #community/channel_profilespy

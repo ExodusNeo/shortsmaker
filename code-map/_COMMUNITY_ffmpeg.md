@@ -1,36 +1,34 @@
 ---
 type: community
-members: 23
+members: 21
 ---
 
 # ffmpeg
 
-**Members:** 23 nodes
+**Members:** 21 nodes
 
 ## Members
-- [[Caption words the aligner gives for `text` (qwen_voice.align_words a token…]] - rationale - shortsmaker/gpu.py
-- [[Cut each take into its scenes halfway through the pause between their words…]] - rationale - shortsmaker/gpu.py
-- [[Free VoiceStudio's GPU memory the 8 GB card is needed next for SDXL, LTX and…]] - rationale - shortsmaker/gpu.py
-- [[Path]] - code
-- [[Runs of scenes that together make whole sentences. A sentence may run across…]] - rationale - shortsmaker/gpu.py
-- [[Start and end of the camera shot containing time `at` (newsreels cut to title…]] - rationale - shortsmaker/footage.py
-- [[True when the Short's final scene is an open grammatical loop bridge into scene…]] - rationale - shortsmaker/plan_rules.py
-- [[Voice every scene on the GPU CosyVoice (aiden, documentary) for the whole…]] - rationale - shortsmaker/gpu.py
-- [[VoiceStudio's backend answers, starting the app (and waiting up to 2 min) if it…]] - rationale - shortsmaker/gpu.py
+- [[A finished Short's work in miniature grey pictures, a see-through graphics…]] - rationale - tests/test_edit_project.py
+- [[A re-render with nothing left to fix an old timeline would no longer match the…]] - rationale - shortsmaker/edit_project.py
+- [[Path_1]] - code
+- [[Path_2]] - code
+- [[Path_3]] - code
+- [[The video tracks bottom-up (pictures, then graphics drawn over them), each cut…]] - rationale - shortsmaker/edit_project.py
+- [[caption_layer()]] - code - shortsmaker/edit_project.py
+- [[chain()]] - code - shortsmaker/edit_project.py
+- [[clock()]] - code - shortsmaker/edit_project.py
 - [[duration()]] - code - shortsmaker/media_tools.py
 - [[ffmpeg()]] - code - shortsmaker/media_tools.py
-- [[is_loop_short()]] - code - shortsmaker/plan_rules.py
-- [[local_voice()]] - code - shortsmaker/gpu.py
-- [[sentence_groups()]] - code - shortsmaker/gpu.py
-- [[shot_span()]] - code - shortsmaker/footage.py
-- [[split_takes()]] - code - shortsmaker/gpu.py
-- [[spoken_count()]] - code - shortsmaker/gpu.py
-- [[test_a_take_is_cut_between_the_scenes_words()]] - code - tests/test_story.py
-- [[test_word_counts_match_the_aligner()]] - code - tests/test_story.py
-- [[unicodedata]] - concept
-- [[up()]] - code - shortsmaker/gpu.py
-- [[voicestudio_unload()]] - code - shortsmaker/gpu.py
-- [[voicestudio_up()]] - code - shortsmaker/gpu.py
+- [[folderedit.mlt + edit_in_shotcut.bat for a finished Short. `videos` = (track…]] - rationale - shortsmaker/edit_project.py
+- [[make()]] - code - shortsmaker/edit_project.py
+- [[project_xml()]] - code - shortsmaker/edit_project.py
+- [[prop()]] - code - shortsmaker/edit_project.py
+- [[remove()]] - code - shortsmaker/edit_project.py
+- [[short_folder()]] - code - tests/test_edit_project.py
+- [[test_melt_plays_it_with_the_captions_on_top()]] - code - tests/test_edit_project.py
+- [[test_timeline_has_scenes_captions_sound_and_markers()]] - code - tests/test_edit_project.py
+- [[videos()]] - code - tests/test_edit_project.py
+- [[workcaptions.mov the captions alone on a see-through background, from the…]] - rationale - shortsmaker/edit_project.py
 
 ## Live Query (requires Dataview plugin)
 
@@ -40,27 +38,25 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 14 edges to [[_COMMUNITY_test_full_scenes.py]]
-- 13 edges to [[_COMMUNITY_gpu.py]]
-- 6 edges to [[_COMMUNITY_test_story.py]]
+- 12 edges to [[_COMMUNITY_json]]
+- 4 edges to [[_COMMUNITY_local_voice]]
 - 4 edges to [[_COMMUNITY_render]]
-- 3 edges to [[_COMMUNITY_make]]
-- 2 edges to [[_COMMUNITY_fetch]]
-- 2 edges to [[_COMMUNITY_json]]
+- 4 edges to [[_COMMUNITY_test_opener_render.py]]
+- 3 edges to [[_COMMUNITY_re]]
+- 2 edges to [[_COMMUNITY_local_clips]]
 - 2 edges to [[_COMMUNITY_test_blender_render.py]]
-- 2 edges to [[_COMMUNITY_test_opener_render.py]]
-- 2 edges to [[_COMMUNITY_first_second_check]]
-- 2 edges to [[_COMMUNITY_use_opener]]
-- 2 edges to [[_COMMUNITY_words_of]]
-- 1 edge to [[_COMMUNITY_log_short]]
+- 2 edges to [[_COMMUNITY_pathlib]]
+- 1 edge to [[_COMMUNITY_fetch]]
+- 1 edge to [[_COMMUNITY_film_piece]]
 - 1 edge to [[_COMMUNITY_render_remotion]]
-- 1 edge to [[_COMMUNITY_music_gain]]
-- 1 edge to [[_COMMUNITY_shutil]]
-- 1 edge to [[_COMMUNITY_catalog_pool]]
+- 1 edge to [[_COMMUNITY_captions]]
+- 1 edge to [[_COMMUNITY_test_first_second.py]]
+- 1 edge to [[_COMMUNITY_visual_review]]
+- 1 edge to [[_COMMUNITY_prepare_topic]]
 
 ## Top bridge nodes
-- [[ffmpeg()]] - degree 18, connects to 10 communities
-- [[duration()]] - degree 13, connects to 8 communities
-- [[unicodedata]] - degree 6, connects to 4 communities
-- [[local_voice()]] - degree 12, connects to 3 communities
-- [[shot_span()]] - degree 7, connects to 3 communities
+- [[ffmpeg()]] - degree 18, connects to 11 communities
+- [[duration()]] - degree 13, connects to 10 communities
+- [[make()]] - degree 9, connects to 2 communities
+- [[project_xml()]] - degree 8, connects to 2 communities
+- [[remove()]] - degree 5, connects to 2 communities

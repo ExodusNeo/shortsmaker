@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "cut"
+community: "people_standin.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/cut
+  - community/people_standinpy
 ---
 
 # Object
 
 ## Connections
-- [[to_object()]] - `references` [EXTRACTED]
+- [[part()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/cut
+#graphify/code #graphify/EXTRACTED #community/people_standinpy

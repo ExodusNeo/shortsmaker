@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/image_sources.py"
 type: "code"
-community: "wm_get"
+community: "fetch"
 location: "L41"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/wm_get
+  - community/fetch
 ---
 
 # wm_get()
@@ -20,4 +20,4 @@ tags:
 - [[image_sources.py]] - `contains` [EXTRACTED]
 - [[wm_files()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/wm_get
+#graphify/code #graphify/EXTRACTED #community/fetch

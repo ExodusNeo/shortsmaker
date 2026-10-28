@@ -1,21 +1,18 @@
 ---
-source_file: "tests/render_full.py"
+source_file: "tests/render_style.py"
 type: "code"
-community: "shutil"
-location: "L28"
+community: "local_voice"
+location: "L49"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/shutil
+  - community/local_voice
 ---
 
 # main()
 
 ## Connections
-- [[json]] - `calls` [EXTRACTED]
-- [[props_for()]] - `calls` [EXTRACTED]
-- [[render_full.py]] - `contains` [EXTRACTED]
-- [[shutil]] - `calls` [EXTRACTED]
-- [[subprocess]] - `calls` [EXTRACTED]
+- [[build()]] - `calls` [EXTRACTED]
+- [[render_style.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/shutil
+#graphify/code #graphify/EXTRACTED #community/local_voice

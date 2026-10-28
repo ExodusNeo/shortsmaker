@@ -1,17 +1,17 @@
 ---
-source_file: "tests/test_pictures_first.py"
+source_file: "blender/build_scene.py"
 type: "code"
-community: "owner"
-location: "L36"
+community: "Shots"
+location: "L44"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/owner
+  - community/Shots
 ---
 
 # .__init__()
 
 ## Connections
-- [[stubbed]] - `method` [EXTRACTED]
+- [[Shots]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/owner
+#graphify/code #graphify/EXTRACTED #community/Shots

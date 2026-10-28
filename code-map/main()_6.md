@@ -1,18 +1,21 @@
 ---
-source_file: "tests/render_style.py"
+source_file: "tests/render_full.py"
 type: "code"
-community: "sys"
-location: "L49"
+community: "json"
+location: "L28"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/sys
+  - community/json
 ---
 
 # main()
 
 ## Connections
-- [[build()_1]] - `calls` [EXTRACTED]
-- [[render_style.py]] - `contains` [EXTRACTED]
+- [[json]] - `calls` [EXTRACTED]
+- [[props_for()]] - `calls` [EXTRACTED]
+- [[render_full.py]] - `contains` [EXTRACTED]
+- [[shutil]] - `calls` [EXTRACTED]
+- [[subprocess]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/sys
+#graphify/code #graphify/EXTRACTED #community/json

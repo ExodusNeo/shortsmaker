@@ -15,6 +15,7 @@ tags:
 - [[_expect()]] - `calls` [EXTRACTED]
 - [[_size()]] - `calls` [EXTRACTED]
 - [[_stroke()]] - `calls` [EXTRACTED]
+- [[_takeable()]] - `calls` [EXTRACTED]
 - [[clean_opener()]] - `calls` [EXTRACTED]
 - [[math]] - `calls` [EXTRACTED]
 - [[opener_plan.py]] - `contains` [EXTRACTED]

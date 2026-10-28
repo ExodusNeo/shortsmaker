@@ -52,11 +52,12 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 14 edges to [[_COMMUNITY_opener_scene.py]]
-- 5 edges to [[_COMMUNITY_math]]
+- 3 edges to [[_COMMUNITY_build_scene.py]]
+- 2 edges to [[_COMMUNITY_math]]
 - 1 edge to [[_COMMUNITY_scene_kit.py]]
 
 ## Top bridge nodes
-- [[opener_checks.py]] - degree 26, connects to 2 communities
+- [[opener_checks.py]] - degree 26, connects to 3 communities
 - [[blade_face()]] - degree 5, connects to 2 communities
 - [[at()]] - degree 9, connects to 1 community
 - [[hidden()_1]] - degree 8, connects to 1 community
