@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[Matrix]] - `references` [EXTRACTED]
 - [[Turn the blade about its stroke until its flat side is at least `deg` toward…]] - `rationale_for` [EXTRACTED]
-- [[Vector_5]] - `references` [EXTRACTED]
+- [[Vector_4]] - `references` [EXTRACTED]
 - [[cut()]] - `calls` [EXTRACTED]
 - [[math]] - `calls` [EXTRACTED]
 - [[moves.py]] - `contains` [EXTRACTED]

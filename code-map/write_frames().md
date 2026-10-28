@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/frame_render.py"
 type: "code"
-community: "write_frames"
+community: "ClipReader"
 location: "L283"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/write_frames
+  - community/ClipReader
 ---
 
 # write_frames()
@@ -19,4 +19,4 @@ tags:
 - [[render()_5]] - `calls` [EXTRACTED]
 - [[test_hard_cuts_never_blend_scenes()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/write_frames
+#graphify/code #graphify/EXTRACTED #community/ClipReader

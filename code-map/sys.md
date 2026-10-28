@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "json"
+community: "pathlib"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/json
+  - community/pathlib
 ---
 
 # sys
@@ -15,6 +15,7 @@ tags:
 - [[catalog_pool()]] - `calls` [EXTRACTED]
 - [[channel_profiles.py]] - `imports` [EXTRACTED]
 - [[cli.py]] - `imports` [EXTRACTED]
+- [[export_glb.py]] - `imports` [EXTRACTED]
 - [[gen.py]] - `imports` [EXTRACTED]
 - [[llm.py]] - `imports` [EXTRACTED]
 - [[opener_check_cases.py]] - `imports` [EXTRACTED]
@@ -49,7 +50,8 @@ tags:
 - [[test_pictures_first.py]] - `imports` [EXTRACTED]
 - [[test_qwen_voice.py]] - `imports` [EXTRACTED]
 - [[test_rules.py]] - `imports` [EXTRACTED]
+- [[test_shot_templates.py]] - `imports` [EXTRACTED]
 - [[test_story.py]] - `imports` [EXTRACTED]
 - [[test_style.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/json
+#graphify/concept #graphify/EXTRACTED #community/pathlib

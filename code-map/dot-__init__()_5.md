@@ -1,18 +1,18 @@
 ---
-source_file: "blender/failures.py"
+source_file: "tests/test_blender_link.py"
 type: "code"
-community: "main"
-location: "L26"
+community: "test_blender_link.py"
+location: "L24"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/main
+  - community/test_blender_linkpy
 ---
 
 # .__init__()
 
 ## Connections
-- [[dot-_crack()]] - `calls` [EXTRACTED]
-- [[Failure]] - `method` [EXTRACTED]
+- [[Fake]] - `method` [EXTRACTED]
+- [[handle()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/main
+#graphify/code #graphify/EXTRACTED #community/test_blender_linkpy

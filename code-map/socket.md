@@ -1,17 +1,17 @@
 ---
 source_file: ""
 type: "concept"
-community: "test_blender_link.py"
+community: "re"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/test_blender_linkpy
+  - community/re
 ---
 
 # socket
 
 ## Connections
 - [[blender_link.py]] - `imports` [EXTRACTED]
-- [[call()_1]] - `calls` [EXTRACTED]
+- [[call()]] - `calls` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/test_blender_linkpy
+#graphify/concept #graphify/EXTRACTED #community/re

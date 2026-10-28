@@ -1,23 +1,23 @@
 ---
 source_file: "blender/moves.py"
 type: "code"
-community: "scene_kit.py"
+community: "moves.py"
 location: "L320"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/scene_kitpy
+  - community/movespy
 ---
 
 # travel()
 
 ## Connections
 - [[How far o can move along d before it touches any of `others` (rays from its…]] - `rationale_for` [EXTRACTED]
-- [[Vector_5]] - `references` [EXTRACTED]
+- [[Vector_4]] - `references` [EXTRACTED]
 - [[cut()]] - `calls` [EXTRACTED]
 - [[moves.py]] - `contains` [EXTRACTED]
 - [[push()]] - `calls` [EXTRACTED]
-- [[tree()]] - `calls` [EXTRACTED]
+- [[tree()_1]] - `calls` [EXTRACTED]
 - [[world_verts()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/scene_kitpy
+#graphify/code #graphify/EXTRACTED #community/movespy

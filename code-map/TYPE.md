@@ -17,6 +17,7 @@ tags:
 - [[Custom0.tsx]] - `imports` [EXTRACTED]
 - [[Custom3.tsx]] - `imports` [EXTRACTED]
 - [[Document.tsx]] - `imports` [EXTRACTED]
+- [[Model3D.tsx]] - `imports` [EXTRACTED]
 - [[Paper.tsx]] - `contains` [EXTRACTED]
 - [[guarded.tsx]] - `imports` [EXTRACTED]
 - [[toolkit.tsx]] - `imports` [EXTRACTED]

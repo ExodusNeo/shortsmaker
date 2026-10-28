@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/config.py"
 type: "code"
-community: "test_full_scenes.py"
+community: "pathlib"
 location: "L79"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_full_scenespy
+  - community/pathlib
 ---
 
 # luminance()
@@ -15,4 +15,4 @@ tags:
 - [[config.py]] - `contains` [EXTRACTED]
 - [[hex_rgb()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_full_scenespy
+#graphify/code #graphify/EXTRACTED #community/pathlib

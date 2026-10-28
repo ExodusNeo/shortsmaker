@@ -13,11 +13,11 @@ tags:
 
 ## Connections
 - [[Add a finished Short to this channel's logbook, with empty lines for its…]] - `rationale_for` [EXTRACTED]
-- [[Path_2]] - `references` [EXTRACTED]
+- [[Path_4]] - `references` [EXTRACTED]
 - [[clock()_1]] - `calls` [EXTRACTED]
 - [[duration()]] - `calls` [EXTRACTED]
 - [[logbook.py]] - `contains` [EXTRACTED]
-- [[main()_8]] - `calls` [EXTRACTED]
+- [[main()_7]] - `calls` [EXTRACTED]
 - [[re]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/re

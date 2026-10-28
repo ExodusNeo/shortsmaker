@@ -1,30 +1,23 @@
 ---
 source_file: ""
 type: "code"
-community: "cut"
+community: "scene_kit.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/cut
+  - community/scene_kitpy
 ---
 
 # Vector
 
 ## Connections
-- [[dot-__init__()_6]] - `references` [EXTRACTED]
-- [[box_of()]] - `references` [EXTRACTED]
-- [[centre()]] - `references` [EXTRACTED]
-- [[clear_distance()]] - `references` [EXTRACTED]
-- [[clear_distance_at_end()]] - `references` [EXTRACTED]
-- [[edge_point_local()]] - `references` [EXTRACTED]
-- [[half()]] - `references` [EXTRACTED]
-- [[handle_end_local()]] - `references` [EXTRACTED]
-- [[pick_island()]] - `references` [EXTRACTED]
-- [[place_tool()]] - `references` [EXTRACTED]
-- [[region_normal()]] - `references` [EXTRACTED]
-- [[show_face()]] - `references` [EXTRACTED]
-- [[tool_rotation()]] - `references` [EXTRACTED]
-- [[toward()]] - `references` [EXTRACTED]
-- [[travel()_1]] - `references` [EXTRACTED]
+- [[bbox()]] - `references` [EXTRACTED]
+- [[facing_vec()]] - `references` [EXTRACTED]
+- [[leg_rig()]] - `references` [EXTRACTED]
+- [[loc_at()]] - `references` [EXTRACTED]
+- [[make_dynamic()]] - `references` [EXTRACTED]
+- [[rot_at()]] - `references` [EXTRACTED]
+- [[view()]] - `references` [EXTRACTED]
+- [[world_verts()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/cut
+#graphify/code #graphify/EXTRACTED #community/scene_kitpy

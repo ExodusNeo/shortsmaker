@@ -14,14 +14,12 @@ tags:
 ## Connections
 - [[Env]] - `method` [EXTRACTED]
 - [[test_crash_retry_then_fallback()]] - `calls` [INFERRED]
-- [[test_failed_checks_fix_then_fallback()]] - `calls` [INFERRED]
+- [[test_failed_checks_fall_back_and_the_try_is_kept()]] - `calls` [INFERRED]
 - [[test_missing_model_blender_off()]] - `calls` [INFERRED]
-- [[test_model_swaps_dont_use_up_fix_rounds()]] - `calls` [INFERRED]
 - [[test_people_library_missing()]] - `calls` [INFERRED]
 - [[test_reuse_after_small_length_change()]] - `calls` [INFERRED]
 - [[test_reuse_unchanged()]] - `calls` [INFERRED]
 - [[test_review_rejects()]] - `calls` [INFERRED]
 - [[test_success_returns_clip()]] - `calls` [INFERRED]
-- [[test_unfixable_stops_early_and_every_try_is_kept()]] - `calls` [INFERRED]
 
 #graphify/code #graphify/INFERRED #community/test_opener_renderpy

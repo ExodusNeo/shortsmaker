@@ -1,12 +1,12 @@
 ---
 source_file: "blender/people.py"
 type: "code"
-community: "scene_kit.py"
+community: "_clip"
 location: "L254"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/scene_kitpy
+  - community/_clip
 ---
 
 # _clip()
@@ -18,4 +18,4 @@ tags:
 - [[idle()]] - `calls` [EXTRACTED]
 - [[people.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/scene_kitpy
+#graphify/code #graphify/EXTRACTED #community/_clip

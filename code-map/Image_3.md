@@ -1,17 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "trim_borders"
+community: "render"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/trim_borders
+  - community/render
 ---
 
 # Image
 
 ## Connections
-- [[is_stereo()]] - `references` [EXTRACTED]
-- [[trim_borders()]] - `references` [EXTRACTED]
+- [[credit_tag_image()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/trim_borders
+#graphify/code #graphify/EXTRACTED #community/render

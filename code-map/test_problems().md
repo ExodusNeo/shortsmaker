@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_h3_handoff.py"
 type: "code"
-community: "h3_problems"
+community: "gpu.py"
 location: "L40"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/h3_problems
+  - community/gpupy
 ---
 
 # test_problems()
@@ -15,4 +15,4 @@ tags:
 - [[h3_problems()]] - `calls` [EXTRACTED]
 - [[test_h3_handoff.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/h3_problems
+#graphify/code #graphify/EXTRACTED #community/gpupy

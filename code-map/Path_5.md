@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "style_library"
+community: "test_full_scenes.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/style_library
+  - community/test_full_scenespy
 ---
 
 # Path
 
 ## Connections
-- [[edit_plan()]] - `references` [EXTRACTED]
+- [[use_picture_from()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/style_library
+#graphify/code #graphify/EXTRACTED #community/test_full_scenespy

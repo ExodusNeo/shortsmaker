@@ -1,11 +1,11 @@
 ---
 type: community
-members: 52
+members: 50
 ---
 
 # test_rules.py
 
-**Members:** 52 nodes
+**Members:** 50 nodes
 
 ## Members
 - [[(sections by canonical heading, settings) of a rules file; `label` names the…]] - rationale - shortsmaker/rules.py
@@ -47,7 +47,6 @@ members: 52
 - [[test_heading_case_and_spaces()]] - code - tests/test_rules.py
 - [[test_level3_heading_stays_inside()]] - code - tests/test_rules.py
 - [[test_load_rules_sets_session()]] - code - tests/test_rules.py
-- [[test_min_pictures_from_settings()]] - code - tests/test_rules.py
 - [[test_missing_heading_stops()]] - code - tests/test_rules.py
 - [[test_missing_rules_file_is_drafted()]] - code - tests/test_rules.py
 - [[test_new_channel_stops_for_review()]] - code - tests/test_rules.py
@@ -56,7 +55,6 @@ members: 52
 - [[test_parses_sections_and_settings()]] - code - tests/test_rules.py
 - [[test_photo_channels_dont_need_a_build_plan()]] - code - tests/test_rules.py
 - [[test_rules.py]] - code - tests/test_rules.py
-- [[test_rules_accept_opener_setting()]] - code - tests/test_story.py
 - [[test_strange_history_prompts_unchanged()]] - code - tests/test_rules.py
 - [[test_strips_tag_comments()]] - code - tests/test_rules.py
 - [[test_unknown_visuals_stop()]] - code - tests/test_rules.py
@@ -69,22 +67,22 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 17 edges to [[_COMMUNITY_test_full_scenes.py]]
-- 7 edges to [[_COMMUNITY_channel_profiles.py]]
-- 4 edges to [[_COMMUNITY_json]]
+- 18 edges to [[_COMMUNITY_pathlib]]
+- 7 edges to [[_COMMUNITY_main_1]]
 - 2 edges to [[_COMMUNITY_prepare_topic]]
+- 2 edges to [[_COMMUNITY_json]]
+- 2 edges to [[_COMMUNITY_tempfile]]
 - 1 edge to [[_COMMUNITY_re]]
-- 1 edge to [[_COMMUNITY_test_opener_render.py]]
-- 1 edge to [[_COMMUNITY_render]]
-- 1 edge to [[_COMMUNITY_apply_review_fixes]]
-- 1 edge to [[_COMMUNITY_test_pictures_first.py]]
-- 1 edge to [[_COMMUNITY_write_scripts]]
-- 1 edge to [[_COMMUNITY_pool_of]]
 - 1 edge to [[_COMMUNITY_test_story.py]]
+- 1 edge to [[_COMMUNITY_test_opener_render.py]]
+- 1 edge to [[_COMMUNITY_first_second_check]]
+- 1 edge to [[_COMMUNITY_choose_images]]
+- 1 edge to [[_COMMUNITY_write_scripts]]
+- 1 edge to [[_COMMUNITY_test_pictures_first.py]]
 
 ## Top bridge nodes
 - [[capture_prompts()]] - degree 11, connects to 5 communities
-- [[test_rules.py]] - degree 55, connects to 3 communities
-- [[parse_rules()]] - degree 16, connects to 2 communities
+- [[test_rules.py]] - degree 55, connects to 4 communities
+- [[parse_rules()]] - degree 16, connects to 3 communities
 - [[load_rules()]] - degree 7, connects to 2 communities
 - [[min_real_pictures()]] - degree 4, connects to 2 communities

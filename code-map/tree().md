@@ -1,24 +1,21 @@
 ---
-source_file: "blender/scene_kit.py"
+source_file: "blender/opener_checks.py"
 type: "code"
-community: "scene_kit.py"
-location: "L43"
+community: "opener_checks.py"
+location: "L42"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/scene_kitpy
+  - community/opener_checkspy
 ---
 
 # tree()
 
 ## Connections
 - [[BVHTree]] - `references` [EXTRACTED]
-- [[_body_tree()]] - `calls` [EXTRACTED]
-- [[clear_distance()]] - `calls` [EXTRACTED]
-- [[pick_up()]] - `calls` [EXTRACTED]
-- [[scene_kit.py]] - `contains` [EXTRACTED]
-- [[stand_on()]] - `calls` [EXTRACTED]
-- [[surface_z()]] - `calls` [EXTRACTED]
-- [[travel()_1]] - `calls` [EXTRACTED]
+- [[hidden()_1]] - `calls` [EXTRACTED]
+- [[opener_checks.py]] - `contains` [EXTRACTED]
+- [[overlaps()]] - `calls` [EXTRACTED]
+- [[resting()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/scene_kitpy
+#graphify/code #graphify/EXTRACTED #community/opener_checkspy

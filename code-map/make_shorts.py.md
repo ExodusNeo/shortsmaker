@@ -1,12 +1,12 @@
 ---
 source_file: "make_shorts.py"
 type: "code"
-community: "channel_profiles.py"
+community: "main"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/channel_profilespy
+  - community/main
 ---
 
 # make_shorts.py
@@ -14,6 +14,6 @@ tags:
 ## Connections
 - [[Make ready-to-upload YouTube Shorts with no API keys. Claude Code (headless)…]] - `rationale_for` [EXTRACTED]
 - [[cli.py]] - `imports_from` [EXTRACTED]
-- [[main()_8]] - `imports` [EXTRACTED]
+- [[main()_7]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/channel_profilespy
+#graphify/code #graphify/EXTRACTED #community/main

@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_full_scenes.py"
 type: "rationale"
-community: "owner"
+community: "gather_pool"
 location: "L143"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/owner
+  - community/gather_pool
 ---
 
 # Runs write_scripts with every AI/network step replaced by canned answers;…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[_fake_planning()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/owner
+#graphify/rationale #graphify/EXTRACTED #community/gather_pool

@@ -10,7 +10,7 @@ members: 9
 ## Members
 - [[A library .blend (every object in it) or primitivecube, as one mesh object…]] - rationale - blender/scene_kit.py
 - [[Material]] - code
-- [[Object_3]] - code
+- [[Object_2]] - code
 - [[One mesh object from many (world transforms applied, materials kept), origin at…]] - rationale - blender/scene_kit.py
 - [[The ground's colour broken up by soft patches, lighter and darker one flat…]] - rationale - blender/opener_scene.py
 - [[ground_material()]] - code - blender/opener_scene.py
@@ -28,8 +28,8 @@ SORT file.name ASC
 ## Connections to other communities
 - 5 edges to [[_COMMUNITY_opener_scene.py]]
 - 3 edges to [[_COMMUNITY_scene_kit.py]]
-- 1 edge to [[_COMMUNITY_people.py]]
-- 1 edge to [[_COMMUNITY_cut]]
+- 1 edge to [[_COMMUNITY_math]]
+- 1 edge to [[_COMMUNITY_moves.py]]
 
 ## Top bridge nodes
 - [[load_model()]] - degree 8, connects to 3 communities

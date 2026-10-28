@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[Scene time for each of the n output frames slow motion around the hit, the…]] - `rationale_for` [EXTRACTED]
-- [[main()_10]] - `calls` [EXTRACTED]
+- [[main()_9]] - `calls` [EXTRACTED]
 - [[opener_scene.py]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/opener_scenepy

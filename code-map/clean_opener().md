@@ -2,7 +2,7 @@
 source_file: "shortsmaker/opener_plan.py"
 type: "code"
 community: "test_opener_plan.py"
-location: "L103"
+location: "L89"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -18,9 +18,8 @@ tags:
 - [[_size()]] - `calls` [EXTRACTED]
 - [[_stroke()]] - `calls` [EXTRACTED]
 - [[_takeable()]] - `calls` [EXTRACTED]
-- [[fix_plan()]] - `calls` [EXTRACTED]
+- [[fill_template()]] - `calls` [EXTRACTED]
 - [[opener_plan.py]] - `contains` [EXTRACTED]
-- [[plan_openers()]] - `calls` [EXTRACTED]
 - [[test_cut_needs_expect()]] - `calls` [EXTRACTED]
 - [[test_first_beat_by_one_second()]] - `calls` [EXTRACTED]
 - [[test_fixture_plans_are_clean()]] - `calls` [EXTRACTED]

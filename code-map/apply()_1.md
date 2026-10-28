@@ -15,7 +15,7 @@ tags:
 - [[Toon every material of the visible meshes and outline each one but the ground;…]] - `rationale_for` [EXTRACTED]
 - [[ink()]] - `calls` [EXTRACTED]
 - [[look_toon.py]] - `contains` [EXTRACTED]
-- [[main()_10]] - `calls` [EXTRACTED]
+- [[main()_9]] - `calls` [EXTRACTED]
 - [[outline()_1]] - `calls` [EXTRACTED]
 - [[toon()]] - `calls` [EXTRACTED]
 

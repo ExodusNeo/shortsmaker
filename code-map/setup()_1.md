@@ -12,7 +12,7 @@ tags:
 # setup()
 
 ## Connections
-- [[main()_10]] - `calls` [EXTRACTED]
+- [[main()_9]] - `calls` [EXTRACTED]
 - [[opener_scene.py]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/opener_scenepy

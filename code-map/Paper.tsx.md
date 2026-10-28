@@ -20,6 +20,7 @@ tags:
 - [[FONTS]] - `contains` [EXTRACTED]
 - [[INK]] - `contains` [EXTRACTED]
 - [[Journey.tsx]] - `imports_from` [EXTRACTED]
+- [[Model3D.tsx]] - `imports_from` [EXTRACTED]
 - [[Paper()]] - `contains` [EXTRACTED]
 - [[RED]] - `contains` [EXTRACTED]
 - [[SERIF]] - `contains` [EXTRACTED]

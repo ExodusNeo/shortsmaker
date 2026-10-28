@@ -1,17 +1,18 @@
 ---
 source_file: ""
 type: "concept"
-community: "json"
+community: "pathlib"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/json
+  - community/pathlib
 ---
 
 # shutil
 
 ## Connections
 - [[approve_candidate()]] - `calls` [EXTRACTED]
+- [[build()_2]] - `calls` [EXTRACTED]
 - [[cli.py]] - `imports` [EXTRACTED]
 - [[code_custom_scenes()]] - `calls` [EXTRACTED]
 - [[first_second_check()]] - `calls` [EXTRACTED]
@@ -22,8 +23,8 @@ tags:
 - [[llm.py]] - `imports` [EXTRACTED]
 - [[logbook.py]] - `imports` [EXTRACTED]
 - [[main()_3]] - `calls` [EXTRACTED]
-- [[main()_8]] - `calls` [EXTRACTED]
 - [[main()_7]] - `calls` [EXTRACTED]
+- [[main()_6]] - `calls` [EXTRACTED]
 - [[motion.py]] - `imports` [EXTRACTED]
 - [[opener_render.py]] - `imports` [EXTRACTED]
 - [[paint_instead()]] - `calls` [EXTRACTED]
@@ -48,6 +49,7 @@ tags:
 - [[test_full_scenes.py]] - `imports` [EXTRACTED]
 - [[test_opener_render.py]] - `imports` [EXTRACTED]
 - [[test_package.py]] - `imports` [EXTRACTED]
+- [[test_shot_templates.py]] - `imports` [EXTRACTED]
 - [[tsc_check()]] - `calls` [EXTRACTED]
 - [[use_picture_from()]] - `calls` [EXTRACTED]
 - [[vault_page()]] - `calls` [EXTRACTED]
@@ -55,4 +57,4 @@ tags:
 - [[write_scripts()]] - `calls` [EXTRACTED]
 - [[writing.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/json
+#graphify/concept #graphify/EXTRACTED #community/pathlib

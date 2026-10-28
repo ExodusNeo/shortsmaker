@@ -13,11 +13,12 @@ tags:
 
 ## Connections
 - [[Download `hit` through the owner's Blender into the library (the .blend,…]] - `rationale_for` [EXTRACTED]
-- [[Path_18]] - `references` [EXTRACTED]
+- [[Path_17]] - `references` [EXTRACTED]
 - [[attribution()]] - `calls` [EXTRACTED]
 - [[blender_link.py]] - `contains` [EXTRACTED]
-- [[call()_1]] - `calls` [EXTRACTED]
+- [[call()]] - `calls` [EXTRACTED]
 - [[json]] - `calls` [EXTRACTED]
+- [[model_for()]] - `calls` [EXTRACTED]
 - [[resolve_models()]] - `calls` [EXTRACTED]
 - [[test_download_error_cleans_up()]] - `calls` [EXTRACTED]
 - [[test_fetch_saves_pair()]] - `calls` [EXTRACTED]

@@ -15,7 +15,7 @@ tags:
 - [[Togo vs Balto 4 real pictures the review rejected became paintings while ~20…]] - `rationale_for` [EXTRACTED]
 - [[apply_review_fixes()]] - `calls` [EXTRACTED]
 - [[ask()_5]] - `contains` [EXTRACTED]
-- [[ask()_2]] - `indirect_call` [INFERRED]
+- [[ask()_3]] - `indirect_call` [INFERRED]
 - [[test_full_scenes.py]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/ask

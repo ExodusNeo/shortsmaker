@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "guarded.tsx"
+community: "toolkit.tsx"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/guardedtsx
+  - community/toolkittsx
 ---
 
 # remotion_src_full_toolkit_layoutcolumn
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[ExampleChain.tsx]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/guardedtsx
+#graphify/concept #graphify/EXTRACTED #community/toolkittsx

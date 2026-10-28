@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/blender_plan.py"
 type: "code"
-community: "test_blender_plan.py"
+community: "test_blender_scene.py"
 location: "L52"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_blender_planpy
+  - community/test_blender_scenepy
 ---
 
 # clean_build()
@@ -31,4 +31,4 @@ tags:
 - [[test_unusable_plan_is_none()]] - `calls` [EXTRACTED]
 - [[test_zoom_and_failure_are_guaranteed()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_blender_planpy
+#graphify/code #graphify/EXTRACTED #community/test_blender_scenepy

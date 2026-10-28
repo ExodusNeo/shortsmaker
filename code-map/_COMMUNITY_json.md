@@ -1,61 +1,63 @@
 ---
 type: community
-members: 48
+members: 50
 ---
 
 # json
 
-**Members:** 48 nodes
+**Members:** 50 nodes
 
 ## Members
-- [[Comfy-Org's official MOSS-Image text-to-image template (25 steps, CFG 2.5,…]] - rationale - shortsmaker/gpu.py
+- [[A fingerprint of the drawing code (blender.py) frames drawn by older code…]] - rationale - shortsmaker/blender_render.py
+- [[CompletedProcess]] - code
 - [[Contact sheets of the people library (part 2, 2026-10-27), to look at by eye…]] - rationale - tests/people_sheet.py
-- [[CosyVoice 3 in VoiceStudio (owner's pick 2026-10-20) aiden's voice cloned from…]] - rationale - local_ai/qwen_voice.py
-- [[Drop cached downloads and topic pools older than 30 days.]] - rationale - shortsmaker/picture_pool.py
-- [[For tests that swap shortsmaker functions by name which module owns each one.]] - rationale - tests/patching.py
-- [[Local voice worker for ShortsMaker CosyVoice 3 through VoiceStudio (items with…]] - rationale - local_ai/qwen_voice.py
-- [[One CC0 (no credit, any use) sound for `name` from Freesound's official API…]] - rationale - shortsmaker/audio_mix.py
+- [[Download ~14s of film around the chosen moment (cropped with FILM_CROP to…]] - rationale - shortsmaker/footage.py
+- [[Draw a Short in Blender (2026-10-22) after the voice sets every scene's…]] - rationale - shortsmaker/blender_render.py
+- [[Every failed try kept for the engine fixes (workopener_triestryn.json and…]] - rationale - shortsmaker/opener_render.py
+- [[Match FILM_CROP on downloaded thumbnail JPEGs (cut top 6%, bottom 20%, and 4%…]] - rationale - shortsmaker/footage.py
+- [[One mid-scene frame per scene from the finished video, labeled with its…]] - rationale - shortsmaker/review.py
 - [[Paint on this PC with MOSS-Image in ComfyUI (owner's pick 2026-10-20 over SDXL-…]] - rationale - shortsmaker/gpu.py
-- [[Preview of every style-library preset for the owner each look on two real…]] - rationale - tests/render_style.py
+- [[Path_15]] - code
+- [[Pixabay stock video free to use in videos, no credit needed (Pixabay Content…]] - rationale - shortsmaker/footage.py
+- [[Real film clips (Commons, Internet Archive, NASA, Pixabay) and their ffmpeg…]] - rationale - shortsmaker/footage.py
+- [[Rejected scenes (index - the review's complaint) that get a real picture from…]] - rationale - shortsmaker/review.py
 - [[Render one full-screen motion graphic test scene through the real Short…]] - rationale - tests/render_full.py
-- [[Runs the TypeScript tests (tests.test.ts) bundles each with Remotion's own…]] - rationale - tests/run_ts_tests.py
-- [[Saves an invention that made it into a finished Short as a candidate for the…]] - rationale - shortsmaker/style_lab.py
-- [[Tests for the people tables (blenderopener_tables.json roles and…]] - rationale - tests/test_people_tables.py
-- [[align()]] - code - local_ai/qwen_voice.py
+- [[Scene 1 as a Blender opener (2026-10-27) once the voice has set scene 1's…]] - rationale - shortsmaker/opener_render.py
+- [[Shot templates (blendershot_templates.json, 2026-10-28) every template, with…]] - rationale - tests/test_shot_templates.py
+- [[Small shared helpers downloads, ffmpeg, video encoder choice, durations, JSON…]] - rationale - shortsmaker/media_tools.py
+- [[Start and end of the camera shot containing time `at` (newsreels cut to title…]] - rationale - shortsmaker/footage.py
+- [[blender_render.py]] - code - shortsmaker/blender_render.py
+- [[code_version()]] - code - shortsmaker/blender_render.py
 - [[comfy_call()]] - code - shortsmaker/gpu.py
-- [[freesound_fetch()]] - code - shortsmaker/audio_mix.py
-- [[importlib]] - concept
+- [[crop_film_bytes()]] - code - shortsmaker/footage.py
+- [[duration()]] - code - shortsmaker/media_tools.py
+- [[ffmpeg reading a film over HTTP. Wikimedia gets the contact User-Agent, the…]] - rationale - shortsmaker/image_sources.py
+- [[film_ffmpeg()]] - code - shortsmaker/image_sources.py
+- [[film_frames()]] - code - shortsmaker/footage.py
+- [[film_piece()]] - code - shortsmaker/footage.py
+- [[fingerprint()]] - code - shortsmaker/opener_render.py
+- [[footage.py]] - code - shortsmaker/footage.py
+- [[hashlib]] - concept
+- [[io]] - concept
 - [[json]] - concept
-- [[main()_5]] - code - local_ai/qwen_voice.py
-- [[main()_6]] - code - tests/people_sheet.py
-- [[main()_7]] - code - tests/render_full.py
-- [[moss_graph()]] - code - shortsmaker/gpu.py
+- [[main()_5]] - code - tests/people_sheet.py
+- [[main()_6]] - code - tests/render_full.py
+- [[media_tools.py]] - code - shortsmaker/media_tools.py
 - [[moss_images()]] - code - shortsmaker/gpu.py
-- [[patching.py]] - code - tests/patching.py
+- [[n moments spread through a film, for the contact sheets (with FILM_CROP applied…]] - rationale - shortsmaker/footage.py
+- [[opener_render.py]] - code - shortsmaker/opener_render.py
 - [[people_sheet.py]] - code - tests/people_sheet.py
-- [[pkgutil]] - concept
+- [[pixabay_films()]] - code - shortsmaker/footage.py
+- [[pool_pictures()]] - code - shortsmaker/review.py
 - [[props_for()]] - code - tests/render_full.py
-- [[prune_cache()]] - code - shortsmaker/picture_pool.py
-- [[qwen_voice.py]] - code - local_ai/qwen_voice.py
-- [[reject_candidate()]] - code - shortsmaker/style_lab.py
 - [[render_full.py]] - code - tests/render_full.py
 - [[render_sheet()]] - code - tests/people_sheet.py
-- [[render_style.py]] - code - tests/render_style.py
-- [[run_ts_tests.py]] - code - tests/run_ts_tests.py
-- [[save_candidate()]] - code - shortsmaker/style_lab.py
-- [[shutil]] - concept
-- [[studio_speak()]] - code - local_ai/qwen_voice.py
+- [[save_try()]] - code - shortsmaker/opener_render.py
+- [[shot_span()]] - code - shortsmaker/footage.py
+- [[storyboard()]] - code - shortsmaker/review.py
 - [[subprocess]] - concept
-- [[sys]] - concept
-- [[tempfile]] - concept
-- [[test_candidate_names_unique_across_kinds()]] - code - tests/test_style.py
-- [[test_every_move_has_a_clip_and_kind()]] - code - tests/test_people_tables.py
-- [[test_every_role_is_complete()]] - code - tests/test_people_tables.py
-- [[test_people_tables.py]] - code - tests/test_people_tables.py
-- [[test_reject_deletes()]] - code - tests/test_style.py
-- [[test_save_candidate_unique_slug()]] - code - tests/test_style.py
-- [[time]] - concept
-- [[traceback]] - concept
+- [[test_every_template_has_samples()]] - code - tests/test_shot_templates.py
+- [[test_shot_templates.py]] - code - tests/test_shot_templates.py
 
 ## Live Query (requires Dataview plugin)
 
@@ -65,52 +67,57 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 94 edges to [[_COMMUNITY_test_full_scenes.py]]
-- 18 edges to [[_COMMUNITY_channel_profiles.py]]
-- 14 edges to [[_COMMUNITY_render]]
-- 11 edges to [[_COMMUNITY_motion.py]]
-- 11 edges to [[_COMMUNITY_test_opener_render.py]]
-- 10 edges to [[_COMMUNITY_re]]
-- 10 edges to [[_COMMUNITY_style_library]]
-- 9 edges to [[_COMMUNITY_test_story.py]]
-- 9 edges to [[_COMMUNITY_align_words]]
-- 9 edges to [[_COMMUNITY_fetch]]
-- 9 edges to [[_COMMUNITY_test_blender_plan.py]]
-- 8 edges to [[_COMMUNITY_test_pictures_first.py]]
-- 8 edges to [[_COMMUNITY_test_opener_scene.py]]
-- 7 edges to [[_COMMUNITY_h3_run.py]]
-- 7 edges to [[_COMMUNITY_render_remotion]]
-- 7 edges to [[_COMMUNITY_test_blender_link.py]]
-- 6 edges to [[_COMMUNITY_bpy]]
-- 5 edges to [[_COMMUNITY_test_blender_scene.py]]
-- 5 edges to [[_COMMUNITY_test_opener_checks.py]]
-- 4 edges to [[_COMMUNITY_write_scripts]]
-- 4 edges to [[_COMMUNITY_local_job]]
-- 4 edges to [[_COMMUNITY_rescue_graphics]]
-- 4 edges to [[_COMMUNITY_test_opener_plan.py]]
-- 4 edges to [[_COMMUNITY_test_rules.py]]
-- 4 edges to [[_COMMUNITY_ask_ai]]
-- 3 edges to [[_COMMUNITY_local_clips]]
-- 3 edges to [[_COMMUNITY_pool_of]]
-- 3 edges to [[_COMMUNITY_main]]
-- 3 edges to [[_COMMUNITY_pack_people.py]]
-- 3 edges to [[_COMMUNITY_Local GPU Worker]]
-- 3 edges to [[_COMMUNITY_test_h3_run.py]]
-- 3 edges to [[_COMMUNITY_test_first_second.py]]
-- 3 edges to [[_COMMUNITY_test_h3_handoff.py]]
-- 2 edges to [[_COMMUNITY_apply_review_fixes]]
-- 2 edges to [[_COMMUNITY_split_make_shorts.py]]
-- 2 edges to [[_COMMUNITY_opener_scene.py]]
-- 1 edge to [[_COMMUNITY_frame_maker]]
-- 1 edge to [[_COMMUNITY_prepare_topic]]
-- 1 edge to [[_COMMUNITY_full_props]]
-- 1 edge to [[_COMMUNITY_owner]]
-- 1 edge to [[_COMMUNITY_people.py]]
+- 83 edges to [[_COMMUNITY_pathlib]]
+- 22 edges to [[_COMMUNITY_test_opener_render.py]]
+- 21 edges to [[_COMMUNITY_plan_rules.py]]
+- 16 edges to [[_COMMUNITY_gpu.py]]
+- 12 edges to [[_COMMUNITY_render]]
+- 11 edges to [[_COMMUNITY_test_blender_render.py]]
+- 9 edges to [[_COMMUNITY_main_1]]
+- 8 edges to [[_COMMUNITY_re]]
+- 7 edges to [[_COMMUNITY_test_full_scenes.py]]
+- 7 edges to [[_COMMUNITY_prepare_topic]]
+- 6 edges to [[_COMMUNITY_ffmpeg]]
+- 6 edges to [[_COMMUNITY_test_edit_project.py]]
+- 6 edges to [[_COMMUNITY_audio_mix.py]]
+- 5 edges to [[_COMMUNITY_code_custom_scenes]]
+- 5 edges to [[_COMMUNITY_first_second_check]]
+- 5 edges to [[_COMMUNITY_test_opener_plan.py]]
+- 4 edges to [[_COMMUNITY_test_pictures_first.py]]
+- 4 edges to [[_COMMUNITY_qwen_voice.py]]
+- 4 edges to [[_COMMUNITY_h3_run.py]]
+- 4 edges to [[_COMMUNITY_test_blender_scene.py]]
+- 3 edges to [[_COMMUNITY_test_blender_link.py]]
+- 3 edges to [[_COMMUNITY_test_story.py]]
+- 3 edges to [[_COMMUNITY_build_scene.py]]
+- 3 edges to [[_COMMUNITY_tempfile]]
+- 2 edges to [[_COMMUNITY_style_library]]
+- 2 edges to [[_COMMUNITY_ask_ai]]
+- 2 edges to [[_COMMUNITY_choose_images]]
+- 2 edges to [[_COMMUNITY_pack_people.py]]
+- 2 edges to [[_COMMUNITY_edit_scripts]]
+- 2 edges to [[_COMMUNITY_invent_component]]
+- 2 edges to [[_COMMUNITY_people_standin.py]]
+- 2 edges to [[_COMMUNITY_test_rules.py]]
+- 2 edges to [[_COMMUNITY_math]]
+- 2 edges to [[_COMMUNITY_test_opener_checks.py]]
+- 2 edges to [[_COMMUNITY_test_opener_scene.py]]
+- 1 edge to [[_COMMUNITY_write_scripts]]
+- 1 edge to [[_COMMUNITY_fact_check]]
+- 1 edge to [[_COMMUNITY_main]]
+- 1 edge to [[_COMMUNITY_render_remotion]]
+- 1 edge to [[_COMMUNITY_clean_pics]]
+- 1 edge to [[_COMMUNITY_approve_candidate]]
+- 1 edge to [[_COMMUNITY_trim_borders]]
+- 1 edge to [[_COMMUNITY_Local GPU Worker]]
+- 1 edge to [[_COMMUNITY_test_first_second.py]]
+- 1 edge to [[_COMMUNITY_split_make_shorts.py]]
 - 1 edge to [[_COMMUNITY_scene_kit.py]]
+- 1 edge to [[_COMMUNITY_opener_scene.py]]
 
 ## Top bridge nodes
-- [[json]] - degree 110, connects to 33 communities
-- [[sys]] - degree 40, connects to 25 communities
-- [[traceback]] - degree 19, connects to 16 communities
-- [[tempfile]] - degree 18, connects to 15 communities
-- [[subprocess]] - degree 45, connects to 14 communities
+- [[json]] - degree 112, connects to 39 communities
+- [[subprocess]] - degree 47, connects to 18 communities
+- [[media_tools.py]] - degree 35, connects to 15 communities
+- [[duration()]] - degree 13, connects to 9 communities
+- [[pool_pictures()]] - degree 10, connects to 7 communities

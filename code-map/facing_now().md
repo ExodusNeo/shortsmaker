@@ -1,12 +1,12 @@
 ---
 source_file: "blender/people.py"
 type: "code"
-community: "people.py"
+community: "scene_kit.py"
 location: "L338"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/peoplepy
+  - community/scene_kitpy
 ---
 
 # facing_now()
@@ -20,4 +20,4 @@ tags:
 - [[pick_up()]] - `calls` [EXTRACTED]
 - [[rot_at()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/peoplepy
+#graphify/code #graphify/EXTRACTED #community/scene_kitpy

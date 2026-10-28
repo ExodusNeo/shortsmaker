@@ -1,34 +1,20 @@
 ---
-source_file: "tests/test_opener_render.py"
+source_file: "tests/test_opener_plan.py"
 type: "code"
-community: "test_opener_render.py"
-location: "L74"
+community: "test_opener_plan.py"
+location: "L224"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_opener_renderpy
+  - community/test_opener_planpy
 ---
 
 # short()
 
 ## Connections
-- [[test_beats_scaled_into_scene()]] - `calls` [EXTRACTED]
-- [[test_cc_by_credit()]] - `calls` [EXTRACTED]
-- [[test_crash_retry_then_fallback()]] - `calls` [EXTRACTED]
-- [[test_failed_checks_fix_then_fallback()]] - `calls` [EXTRACTED]
-- [[test_fix_round_gets_scaled_plan()]] - `calls` [EXTRACTED]
-- [[test_missing_model_blender_off()]] - `calls` [EXTRACTED]
-- [[test_model_swaps_dont_use_up_fix_rounds()]] - `calls` [EXTRACTED]
-- [[test_opener_render.py]] - `contains` [EXTRACTED]
-- [[test_pick_model()]] - `calls` [EXTRACTED]
-- [[test_reuse_after_small_length_change()]] - `calls` [EXTRACTED]
-- [[test_reuse_unchanged()]] - `calls` [EXTRACTED]
-- [[test_review_knows_about_people()]] - `calls` [EXTRACTED]
-- [[test_review_reads_the_channel_opener_rules()]] - `calls` [EXTRACTED]
-- [[test_review_rejects()]] - `calls` [EXTRACTED]
-- [[test_search_failure_falls_back()]] - `calls` [EXTRACTED]
-- [[test_success_returns_clip()]] - `calls` [EXTRACTED]
-- [[test_unfixable_stops_early_and_every_try_is_kept()]] - `calls` [EXTRACTED]
-- [[test_unfound_model_goes_back_to_the_planner()]] - `calls` [EXTRACTED]
+- [[test_fill_retry_then_none()]] - `calls` [EXTRACTED]
+- [[test_good_fill_is_kept_and_prompt_has_templates_and_rules()]] - `calls` [EXTRACTED]
+- [[test_no_template_fits()]] - `calls` [EXTRACTED]
+- [[test_opener_plan.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_opener_renderpy
+#graphify/code #graphify/EXTRACTED #community/test_opener_planpy

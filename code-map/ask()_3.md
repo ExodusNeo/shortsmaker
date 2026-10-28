@@ -2,16 +2,20 @@
 source_file: "tests/test_full_scenes.py"
 type: "code"
 community: "ask"
-location: "L703"
+location: "L150"
 tags:
   - graphify/code
-  - graphify/EXTRACTED
+  - graphify/INFERRED
   - community/ask
 ---
 
 # ask()
 
 ## Connections
-- [[test_look_check_fixes_code()]] - `contains` [EXTRACTED]
+- [[_fake_planning()]] - `indirect_call` [INFERRED]
+- [[test_look_check_fixes_code()]] - `indirect_call` [INFERRED]
+- [[test_review_redraws_custom()]] - `indirect_call` [INFERRED]
+- [[test_review_uses_unused_pool_pictures_before_painting()]] - `indirect_call` [INFERRED]
+- [[test_rewrite_paint_prompts()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/ask
+#graphify/code #graphify/INFERRED #community/ask

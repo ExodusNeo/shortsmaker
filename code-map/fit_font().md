@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/frame_render.py"
 type: "code"
-community: "person_card"
+community: "render"
 location: "L39"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/person_card
+  - community/render
 ---
 
 # fit_font()
@@ -18,4 +18,4 @@ tags:
 - [[person_card()]] - `calls` [EXTRACTED]
 - [[thumbnail()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/person_card
+#graphify/code #graphify/EXTRACTED #community/render

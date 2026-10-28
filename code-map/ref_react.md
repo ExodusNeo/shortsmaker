@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "style/index.ts"
+community: "toolkit.tsx"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/style/indexts
+  - community/toolkittsx
 ---
 
 # ref_react
@@ -25,6 +25,7 @@ tags:
 - [[Leak.tsx]] - `imports_from` [EXTRACTED]
 - [[MapCard.tsx]] - `imports_from` [EXTRACTED]
 - [[Miniature.tsx]] - `imports_from` [EXTRACTED]
+- [[Model3D.tsx]] - `imports_from` [EXTRACTED]
 - [[Paper.tsx]] - `imports_from` [EXTRACTED]
 - [[QuestionBeat.tsx]] - `imports_from` [EXTRACTED]
 - [[Riso.tsx]] - `imports_from` [EXTRACTED]
@@ -36,4 +37,4 @@ tags:
 - [[styletypes.ts]] - `imports_from` [EXTRACTED]
 - [[toolkit.tsx]] - `imports_from` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/style/indexts
+#graphify/concept #graphify/EXTRACTED #community/toolkittsx

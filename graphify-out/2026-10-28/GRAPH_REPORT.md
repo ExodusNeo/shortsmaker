@@ -1,7 +1,7 @@
 # Graph Report - ShortsMaker  (2026-10-28)
 
 ## Corpus Check
-- 124 files · ~150,589 words
+- 124 files · ~150,628 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 14 file(s) not represented in the graph (top: .blend 9, (none) 3, .canvas 1)
 
@@ -11,7 +11,7 @@
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `9824e345`
+- Built from commit: `39d84665`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 

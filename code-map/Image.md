@@ -1,18 +1,21 @@
 ---
 source_file: ""
 type: "code"
-community: "test_blender_scene.py"
+community: "ClipReader"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_blender_scenepy
+  - community/ClipReader
 ---
 
 # Image
 
 ## Connections
-- [[changed()]] - `references` [EXTRACTED]
-- [[count()]] - `references` [EXTRACTED]
-- [[render()]] - `references` [EXTRACTED]
+- [[dot-at()]] - `references` [EXTRACTED]
+- [[draw_card()]] - `references` [EXTRACTED]
+- [[draw_graphic()]] - `references` [EXTRACTED]
+- [[graphic_overlay()]] - `references` [EXTRACTED]
+- [[person_card()]] - `references` [EXTRACTED]
+- [[shot()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_blender_scenepy
+#graphify/code #graphify/EXTRACTED #community/ClipReader

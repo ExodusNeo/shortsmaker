@@ -36,7 +36,7 @@ tags:
 - [[screen_box()]] - `contains` [EXTRACTED]
 - [[spans()]] - `contains` [EXTRACTED]
 - [[staging()]] - `contains` [EXTRACTED]
-- [[tree()_1]] - `contains` [EXTRACTED]
+- [[tree()]] - `contains` [EXTRACTED]
 - [[visible()]] - `contains` [EXTRACTED]
 - [[world_verts()_1]] - `contains` [EXTRACTED]
 

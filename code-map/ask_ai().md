@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[Headless planner call (BRAIN, or `brain` Claude or Gemini) that returns parsed…]] - `rationale_for` [EXTRACTED]
-- [[Path_15]] - `references` [EXTRACTED]
+- [[Path_14]] - `references` [EXTRACTED]
 - [[catalog_pool()]] - `calls` [EXTRACTED]
 - [[check_twists()]] - `calls` [EXTRACTED]
 - [[choose_images()]] - `calls` [EXTRACTED]
@@ -23,7 +23,6 @@ tags:
 - [[edit_scripts()]] - `calls` [EXTRACTED]
 - [[fact_check()]] - `calls` [EXTRACTED]
 - [[first_second_check()]] - `calls` [EXTRACTED]
-- [[fix_plan()]] - `calls` [EXTRACTED]
 - [[h3_prompts()]] - `calls` [EXTRACTED]
 - [[invent_component()]] - `calls` [EXTRACTED]
 - [[llm.py]] - `contains` [EXTRACTED]
@@ -42,6 +41,7 @@ tags:
 - [[seed_ideas()]] - `calls` [EXTRACTED]
 - [[seo_pass()]] - `calls` [EXTRACTED]
 - [[start_picture_problems()]] - `calls` [EXTRACTED]
+- [[swap_models()]] - `calls` [EXTRACTED]
 - [[test_argon_out_of_quota_switches_to_flash()]] - `calls` [EXTRACTED]
 - [[test_claude_pinned_to_opus_high()]] - `calls` [EXTRACTED]
 - [[test_gemini_reviews_get_the_main_model_bulk_pictures_flash()]] - `calls` [EXTRACTED]

@@ -12,7 +12,7 @@ tags:
 # save_state()
 
 ## Connections
-- [[Path_34]] - `references` [EXTRACTED]
+- [[Path_32]] - `references` [EXTRACTED]
 - [[What a fix re-render needs to reproduce this Short without new AI picks the…]] - `rationale_for` [EXTRACTED]
 - [[json]] - `calls` [EXTRACTED]
 - [[render()_5]] - `calls` [EXTRACTED]

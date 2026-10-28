@@ -1,17 +1,17 @@
 ---
-source_file: "local_ai/qwen_voice.py"
+source_file: "shortsmaker/gpu.py"
 type: "code"
-community: "align_words"
-location: "L34"
+community: "gpu.py"
+location: "L214"
 tags:
   - graphify/code
-  - graphify/EXTRACTED
-  - community/align_words
+  - graphify/INFERRED
+  - community/gpupy
 ---
 
 # one()
 
 ## Connections
-- [[say_number()]] - `contains` [EXTRACTED]
+- [[gemini_images()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/align_words
+#graphify/code #graphify/INFERRED #community/gpupy

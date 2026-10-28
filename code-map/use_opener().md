@@ -12,7 +12,7 @@ tags:
 # use_opener()
 
 ## Connections
-- [[Path_34]] - `references` [EXTRACTED]
+- [[Path_32]] - `references` [EXTRACTED]
 - [[Scene 1 plays its Blender opener when one renders (opener_render.py,…]] - `rationale_for` [EXTRACTED]
 - [[_wiring()]] - `calls` [EXTRACTED]
 - [[failed()]] - `contains` [EXTRACTED]
@@ -21,6 +21,7 @@ tags:
 - [[render_opener()]] - `calls` [EXTRACTED]
 - [[short_render.py]] - `contains` [EXTRACTED]
 - [[test_use_opener_never_raises()]] - `calls` [EXTRACTED]
+- [[test_use_opener_no_template_note()]] - `calls` [EXTRACTED]
 - [[test_use_opener_opening_note()]] - `calls` [EXTRACTED]
 - [[test_use_opener_planner_check()]] - `calls` [EXTRACTED]
 

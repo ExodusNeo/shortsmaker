@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "bpy"
+community: "load_model"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/bpy
+  - community/load_model
 ---
 
 # Object
 
 ## Connections
-- [[part()]] - `references` [EXTRACTED]
+- [[load_model()]] - `references` [EXTRACTED]
+- [[merge()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/bpy
+#graphify/code #graphify/EXTRACTED #community/load_model

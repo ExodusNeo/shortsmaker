@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_full_scenes.py"
 type: "rationale"
-community: "rescue_graphics"
+community: "test_full_scenes.py"
 location: "L256"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/rescue_graphics
+  - community/test_full_scenespy
 ---
 
 # Scene 1's motion-graphic opener: set outside the scene-1 and two-in-a-row…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[test_opener_graphic()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/rescue_graphics
+#graphify/rationale #graphify/EXTRACTED #community/test_full_scenespy

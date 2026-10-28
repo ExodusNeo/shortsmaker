@@ -1,18 +1,18 @@
 ---
 source_file: "shortsmaker/picture_pool.py"
 type: "code"
-community: "pool_of"
+community: "prepare_topic"
 location: "L177"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/pool_of
+  - community/prepare_topic
 ---
 
 # save_pool()
 
 ## Connections
-- [[Path_11]] - `references` [EXTRACTED]
+- [[Path_12]] - `references` [EXTRACTED]
 - [[pic_short()]] - `calls` [EXTRACTED]
 - [[picture_pool.py]] - `contains` [EXTRACTED]
 - [[planned_short()]] - `calls` [EXTRACTED]
@@ -26,4 +26,4 @@ tags:
 - [[test_prompts_carry_picture_list()]] - `calls` [EXTRACTED]
 - [[write_json()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/pool_of
+#graphify/code #graphify/EXTRACTED #community/prepare_topic

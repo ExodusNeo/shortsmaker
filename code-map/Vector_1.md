@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "people.py"
+community: "math"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/peoplepy
+  - community/math
 ---
 
 # Vector
@@ -20,4 +20,4 @@ tags:
 - [[_travel()]] - `references` [EXTRACTED]
 - [[facing_now()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/peoplepy
+#graphify/code #graphify/EXTRACTED #community/math

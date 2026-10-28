@@ -12,13 +12,13 @@ tags:
 # world_verts()
 
 ## Connections
-- [[Vector_6]] - `references` [EXTRACTED]
+- [[Vector_5]] - `references` [EXTRACTED]
 - [[_ground()]] - `calls` [EXTRACTED]
 - [[_travel()]] - `calls` [EXTRACTED]
 - [[bbox()]] - `calls` [EXTRACTED]
 - [[clear_distance()]] - `calls` [EXTRACTED]
 - [[cut()]] - `calls` [EXTRACTED]
-- [[main()_10]] - `calls` [EXTRACTED]
+- [[main()_9]] - `calls` [EXTRACTED]
 - [[pick_up()]] - `calls` [EXTRACTED]
 - [[scene_kit.py]] - `contains` [EXTRACTED]
 - [[travel()_1]] - `calls` [EXTRACTED]

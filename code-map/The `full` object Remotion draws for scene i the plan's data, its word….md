@@ -2,7 +2,7 @@
 source_file: "shortsmaker/motion.py"
 type: "rationale"
 community: "full_props"
-location: "L40"
+location: "L42"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED

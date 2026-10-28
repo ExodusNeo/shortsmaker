@@ -17,7 +17,7 @@ tags:
 - [[checks()]] - `calls` [EXTRACTED]
 - [[opener_checks.py]] - `contains` [EXTRACTED]
 - [[spans()]] - `calls` [EXTRACTED]
-- [[tree()_1]] - `calls` [EXTRACTED]
+- [[tree()]] - `calls` [EXTRACTED]
 - [[visible()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/opener_checkspy

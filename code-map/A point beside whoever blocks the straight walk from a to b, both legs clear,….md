@@ -1,12 +1,12 @@
 ---
 source_file: "blender/people.py"
 type: "rationale"
-community: "people.py"
+community: "math"
 location: "L442"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/peoplepy
+  - community/math
 ---
 
 # A point beside whoever blocks the straight walk from a to b, both legs clear,…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[_detour()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/peoplepy
+#graphify/rationale #graphify/EXTRACTED #community/math

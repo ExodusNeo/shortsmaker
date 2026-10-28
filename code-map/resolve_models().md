@@ -2,7 +2,7 @@
 source_file: "shortsmaker/opener_render.py"
 type: "code"
 community: "test_opener_render.py"
-location: "L46"
+location: "L47"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,6 +12,7 @@ tags:
 # resolve_models()
 
 ## Connections
+- [[build()_2]] - `calls` [EXTRACTED]
 - [[fetch_model()]] - `calls` [EXTRACTED]
 - [[in_library()]] - `calls` [EXTRACTED]
 - [[opener_render.py]] - `contains` [EXTRACTED]

@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_opener_scene.py"
 type: "rationale"
-community: "test_opener_scene.py"
+community: "people_lib"
 location: "L209"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/test_opener_scenepy
+  - community/people_lib
 ---
 
 # A person walks left across the frame at their clip's pace: the feet don't slide.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[test_person_walks_across()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/test_opener_scenepy
+#graphify/rationale #graphify/EXTRACTED #community/people_lib

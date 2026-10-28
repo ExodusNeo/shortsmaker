@@ -17,7 +17,7 @@ members: 12
 - [[clip_name()]] - code - blender/pack_people.py
 - [[front()]] - code - blender/pack_people.py
 - [[height()]] - code - blender/pack_people.py
-- [[main()_9]] - code - blender/pack_people.py
+- [[main()_8]] - code - blender/pack_people.py
 - [[pack_people.py]] - code - blender/pack_people.py
 - [[stride()]] - code - blender/pack_people.py
 
@@ -29,10 +29,10 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 3 edges to [[_COMMUNITY_json]]
-- 1 edge to [[_COMMUNITY_bpy]]
-- 1 edge to [[_COMMUNITY_test_full_scenes.py]]
+- 2 edges to [[_COMMUNITY_json]]
+- 2 edges to [[_COMMUNITY_pathlib]]
+- 1 edge to [[_COMMUNITY_build_scene.py]]
 
 ## Top bridge nodes
 - [[pack_people.py]] - degree 11, connects to 3 communities
-- [[main()_9]] - degree 8, connects to 1 community
+- [[main()_8]] - degree 8, connects to 1 community

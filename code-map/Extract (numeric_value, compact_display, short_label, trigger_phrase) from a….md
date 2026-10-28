@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/plan_rules.py"
 type: "rationale"
-community: "re"
-location: "L272"
+community: "plan_rules.py"
+location: "L278"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/re
+  - community/plan_rulespy
 ---
 
 # Extract (numeric_value, compact_display, short_label, trigger_phrase) from a…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[parse_scene_money()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/re
+#graphify/rationale #graphify/EXTRACTED #community/plan_rulespy

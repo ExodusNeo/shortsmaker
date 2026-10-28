@@ -12,6 +12,8 @@ tags:
 # useFonts()
 
 ## Connections
+- [[Model3D()]] - `calls` [EXTRACTED]
+- [[Model3D.tsx]] - `imports` [EXTRACTED]
 - [[Paper()]] - `calls` [EXTRACTED]
 - [[Paper.tsx]] - `contains` [EXTRACTED]
 

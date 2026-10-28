@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_people_tables.py"
 type: "code"
-community: "test_opener_scene.py"
+community: "tempfile"
 location: "L57"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_opener_scenepy
+  - community/tempfile
 ---
 
 # test_standin_matches_tables()
@@ -15,4 +15,4 @@ tags:
 - [[standin()]] - `calls` [EXTRACTED]
 - [[test_people_tables.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_opener_scenepy
+#graphify/code #graphify/EXTRACTED #community/tempfile

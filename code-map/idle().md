@@ -1,12 +1,12 @@
 ---
 source_file: "blender/people.py"
 type: "code"
-community: "people.py"
+community: "_clip"
 location: "L284"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/peoplepy
+  - community/_clip
 ---
 
 # idle()
@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[Every person breathes on their Idle clip from frame 1 under whatever they do (a…]] - `rationale_for` [EXTRACTED]
 - [[_clip()]] - `calls` [EXTRACTED]
-- [[main()_10]] - `calls` [EXTRACTED]
+- [[main()_9]] - `calls` [EXTRACTED]
 - [[people.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/peoplepy
+#graphify/code #graphify/EXTRACTED #community/_clip

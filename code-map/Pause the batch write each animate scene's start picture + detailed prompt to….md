@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/gpu.py"
 type: "rationale"
-community: "local_clips"
+community: "gpu.py"
 location: "L463"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/local_clips
+  - community/gpupy
 ---
 
 # Pause the batch: write each animate scene's start picture + detailed prompt to…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[veo_handoff()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/local_clips
+#graphify/rationale #graphify/EXTRACTED #community/gpupy

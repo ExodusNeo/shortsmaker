@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[Env]] - `calls` [EXTRACTED]
 - [[render_opener()]] - `calls` [EXTRACTED]
-- [[short()_2]] - `calls` [EXTRACTED]
+- [[short()_3]] - `calls` [EXTRACTED]
 - [[test_opener_render.py]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/test_opener_renderpy

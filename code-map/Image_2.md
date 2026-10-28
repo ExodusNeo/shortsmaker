@@ -1,21 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "ClipReader"
+community: "trim_borders"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ClipReader
+  - community/trim_borders
 ---
 
 # Image
 
 ## Connections
-- [[dot-at()]] - `references` [EXTRACTED]
-- [[draw_card()]] - `references` [EXTRACTED]
-- [[draw_graphic()]] - `references` [EXTRACTED]
-- [[graphic_overlay()]] - `references` [EXTRACTED]
-- [[person_card()]] - `references` [EXTRACTED]
-- [[shot()]] - `references` [EXTRACTED]
+- [[is_stereo()]] - `references` [EXTRACTED]
+- [[trim_borders()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ClipReader
+#graphify/code #graphify/EXTRACTED #community/trim_borders

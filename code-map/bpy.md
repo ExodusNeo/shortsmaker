@@ -1,17 +1,18 @@
 ---
 source_file: ""
 type: "concept"
-community: "bpy"
+community: "build_scene.py"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/bpy
+  - community/build_scenepy
 ---
 
 # bpy
 
 ## Connections
 - [[build_scene.py]] - `imports` [EXTRACTED]
+- [[export_glb.py]] - `imports` [EXTRACTED]
 - [[failures.py]] - `imports` [EXTRACTED]
 - [[look.py]] - `imports` [EXTRACTED]
 - [[look_toon.py]] - `imports` [EXTRACTED]
@@ -26,4 +27,4 @@ tags:
 - [[people_standin.py]] - `imports` [EXTRACTED]
 - [[scene_kit.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/bpy
+#graphify/concept #graphify/EXTRACTED #community/build_scenepy

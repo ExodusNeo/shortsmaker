@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[Failure]] - `method` [EXTRACTED]
-- [[Vector_4]] - `references` [EXTRACTED]
+- [[Vector_3]] - `references` [EXTRACTED]
 - [[Where a point on the collapsing span ends up in the water.]] - `rationale_for` [EXTRACTED]
 - [[main()_4]] - `calls` [INFERRED]
 

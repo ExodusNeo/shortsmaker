@@ -1,12 +1,12 @@
 ---
 source_file: "blender/opener_checks.py"
 type: "code"
-community: "opener_scene.py"
+community: "opener_checks.py"
 location: "L113"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/opener_scenepy
+  - community/opener_checkspy
 ---
 
 # in_frame()
@@ -19,4 +19,4 @@ tags:
 - [[screen_box()]] - `calls` [EXTRACTED]
 - [[spans()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/opener_scenepy
+#graphify/code #graphify/EXTRACTED #community/opener_checkspy

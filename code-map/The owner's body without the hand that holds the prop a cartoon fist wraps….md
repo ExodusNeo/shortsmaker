@@ -1,12 +1,12 @@
 ---
 source_file: "blender/people.py"
 type: "rationale"
-community: "people.py"
+community: "math"
 location: "L94"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/peoplepy
+  - community/math
 ---
 
 # The owner's body without the hand that holds the prop: a cartoon fist wraps…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[_body_tree()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/peoplepy
+#graphify/rationale #graphify/EXTRACTED #community/math

@@ -2,7 +2,7 @@
 source_file: "shortsmaker/opener_render.py"
 type: "code"
 community: "test_opener_render.py"
-location: "L23"
+location: "L24"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -13,6 +13,7 @@ tags:
 
 ## Connections
 - [[Beat times squeezed into the real scene 1 (the voice can make it shorter than…]] - `rationale_for` [EXTRACTED]
+- [[build()_2]] - `calls` [EXTRACTED]
 - [[copy]] - `calls` [EXTRACTED]
 - [[math]] - `calls` [EXTRACTED]
 - [[opener_render.py]] - `contains` [EXTRACTED]

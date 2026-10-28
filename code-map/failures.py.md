@@ -1,12 +1,12 @@
 ---
 source_file: "blender/failures.py"
 type: "code"
-community: "bpy"
+community: "build_scene.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/bpy
+  - community/build_scenepy
 ---
 
 # failures.py
@@ -16,11 +16,11 @@ tags:
 - [[Failure animations on the focus part bend (it buckles), crack (a dark crack…]] - `rationale_for` [EXTRACTED]
 - [[bpy]] - `imports` [EXTRACTED]
 - [[build_scene.py]] - `imports` [EXTRACTED]
-- [[key()_2]] - `contains` [EXTRACTED]
+- [[key()_1]] - `contains` [EXTRACTED]
 - [[look.py]] - `imports` [EXTRACTED]
 - [[math]] - `imports` [EXTRACTED]
 - [[mathutils]] - `imports_from` [EXTRACTED]
 - [[parts.py]] - `imports` [EXTRACTED]
 - [[random]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/bpy
+#graphify/code #graphify/EXTRACTED #community/build_scenepy

@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "opener_checks.py"
+community: "tree"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/opener_checkspy
+  - community/tree
 ---
 
 # BVHTree
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[tree()_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/opener_checkspy
+#graphify/code #graphify/EXTRACTED #community/tree

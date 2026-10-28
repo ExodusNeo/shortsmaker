@@ -511,7 +511,7 @@
       "file_type": "code",
       "norm_label": "linkerror",
       "source_file": "shortsmaker/blender_link.py",
-      "source_location": "L17"
+      "source_location": "L16"
     },
     {
       "id": "tests_test_blender_link_fake",
@@ -1784,7 +1784,7 @@
       "file_type": "code",
       "norm_label": "allowed_licence()",
       "source_file": "shortsmaker/blender_link.py",
-      "source_location": "L55"
+      "source_location": "L54"
     },
     {
       "id": "shortsmaker_blender_link_in_library",
@@ -1796,7 +1796,7 @@
       "file_type": "code",
       "norm_label": "in_library()",
       "source_file": "shortsmaker/blender_link.py",
-      "source_location": "L74"
+      "source_location": "L73"
     },
     {
       "id": "shortsmaker_blender_link_words",
@@ -1808,7 +1808,7 @@
       "file_type": "code",
       "norm_label": "words()",
       "source_file": "shortsmaker/blender_link.py",
-      "source_location": "L69"
+      "source_location": "L68"
     },
     {
       "id": "shortsmaker_edit_project_caption_layer",
@@ -9092,7 +9092,7 @@
       "file_type": "code",
       "norm_label": "attribution()",
       "source_file": "shortsmaker/blender_link.py",
-      "source_location": "L90"
+      "source_location": "L89"
     },
     {
       "id": "shortsmaker_blender_link_call",
@@ -9104,7 +9104,7 @@
       "file_type": "code",
       "norm_label": "call()",
       "source_file": "shortsmaker/blender_link.py",
-      "source_location": "L21"
+      "source_location": "L20"
     },
     {
       "id": "shortsmaker_blender_link_credit",
@@ -9116,7 +9116,7 @@
       "file_type": "code",
       "norm_label": "credit()",
       "source_file": "shortsmaker/blender_link.py",
-      "source_location": "L94"
+      "source_location": "L93"
     },
     {
       "id": "shortsmaker_blender_link_fetch_model",
@@ -9128,7 +9128,7 @@
       "file_type": "code",
       "norm_label": "fetch_model()",
       "source_file": "shortsmaker/blender_link.py",
-      "source_location": "L130"
+      "source_location": "L120"
     },
     {
       "id": "shortsmaker_blender_link_search",
@@ -9140,7 +9140,7 @@
       "file_type": "code",
       "norm_label": "search()",
       "source_file": "shortsmaker/blender_link.py",
-      "source_location": "L61"
+      "source_location": "L60"
     },
     {
       "id": "tests_test_blender_link_fake_init",
@@ -9224,7 +9224,7 @@
       "file_type": "code",
       "norm_label": "test_download_error_cleans_up()",
       "source_file": "tests/test_blender_link.py",
-      "source_location": "L132"
+      "source_location": "L133"
     },
     {
       "id": "tests_test_blender_link_test_fetch_saves_pair",
@@ -9248,7 +9248,7 @@
       "file_type": "code",
       "norm_label": "test_in_library()",
       "source_file": "tests/test_blender_link.py",
-      "source_location": "L143"
+      "source_location": "L144"
     },
     {
       "id": "tests_test_blender_link_test_ping_on_off",
@@ -9284,7 +9284,7 @@
       "file_type": "code",
       "norm_label": "test_switched_off_reason()",
       "source_file": "tests/test_blender_link.py",
-      "source_location": "L123"
+      "source_location": "L124"
     },
     {
       "id": "tests_test_blender_link_with_fake",
@@ -11048,7 +11048,7 @@
       "file_type": "code",
       "norm_label": "ping()",
       "source_file": "shortsmaker/blender_link.py",
-      "source_location": "L47"
+      "source_location": "L46"
     },
     {
       "id": "shortsmaker_cli_blender_note",
@@ -16029,7 +16029,7 @@
       "source_location": ""
     },
     {
-      "id": "shortsmaker_blender_link_rationale_56",
+      "id": "shortsmaker_blender_link_rationale_55",
       "label": "CC0, or plain CC-BY (no NC, ND or SA): free to use in a monetised Short with a\u2026",
       "_origin": "ast",
       "community": 14,
@@ -16037,10 +16037,10 @@
       "file_type": "rationale",
       "norm_label": "cc0, or plain cc-by (no nc, nd or sa): free to use in a monetised short with a...",
       "source_file": "shortsmaker/blender_link.py",
-      "source_location": "L56"
+      "source_location": "L55"
     },
     {
-      "id": "shortsmaker_blender_link_rationale_70",
+      "id": "shortsmaker_blender_link_rationale_69",
       "label": "Lower-case words with a plural 's' dropped, so \"Roosters\" finds \"Rooster\".",
       "_origin": "ast",
       "community": 14,
@@ -16048,10 +16048,10 @@
       "file_type": "rationale",
       "norm_label": "lower-case words with a plural 's' dropped, so \"roosters\" finds \"rooster\".",
       "source_file": "shortsmaker/blender_link.py",
-      "source_location": "L70"
+      "source_location": "L69"
     },
     {
-      "id": "shortsmaker_blender_link_rationale_75",
+      "id": "shortsmaker_blender_link_rationale_74",
       "label": "A saved model whose title and tags hold every word of `find` (the closest title\u2026",
       "_origin": "ast",
       "community": 14,
@@ -16059,7 +16059,7 @@
       "file_type": "rationale",
       "norm_label": "a saved model whose title and tags hold every word of `find` (the closest title...",
       "source_file": "shortsmaker/blender_link.py",
-      "source_location": "L75"
+      "source_location": "L74"
     },
     {
       "id": "shortsmaker_edit_project_rationale_1",
@@ -19780,7 +19780,7 @@
       "source_location": "L1"
     },
     {
-      "id": "shortsmaker_blender_link_rationale_131",
+      "id": "shortsmaker_blender_link_rationale_121",
       "label": "Download `hit` through the owner's Blender into the library: (the .blend,\u2026",
       "_origin": "ast",
       "community": 49,
@@ -19788,10 +19788,10 @@
       "file_type": "rationale",
       "norm_label": "download `hit` through the owner's blender into the library: (the .blend,...",
       "source_file": "shortsmaker/blender_link.py",
-      "source_location": "L131"
+      "source_location": "L121"
     },
     {
-      "id": "shortsmaker_blender_link_rationale_18",
+      "id": "shortsmaker_blender_link_rationale_17",
       "label": "The add-on isn't reachable or answered with an error.",
       "_origin": "ast",
       "community": 49,
@@ -19799,10 +19799,10 @@
       "file_type": "rationale",
       "norm_label": "the add-on isn't reachable or answered with an error.",
       "source_file": "shortsmaker/blender_link.py",
-      "source_location": "L18"
+      "source_location": "L17"
     },
     {
-      "id": "shortsmaker_blender_link_rationale_22",
+      "id": "shortsmaker_blender_link_rationale_21",
       "label": "One add-on command; its result. A transport problem or an error reply raises\u2026",
       "_origin": "ast",
       "community": 49,
@@ -19810,10 +19810,10 @@
       "file_type": "rationale",
       "norm_label": "one add-on command; its result. a transport problem or an error reply raises...",
       "source_file": "shortsmaker/blender_link.py",
-      "source_location": "L22"
+      "source_location": "L21"
     },
     {
-      "id": "shortsmaker_blender_link_rationale_62",
+      "id": "shortsmaker_blender_link_rationale_61",
       "label": "Poly Pizza models for `find` that we may use.",
       "_origin": "ast",
       "community": 49,
@@ -19821,10 +19821,10 @@
       "file_type": "rationale",
       "norm_label": "poly pizza models for `find` that we may use.",
       "source_file": "shortsmaker/blender_link.py",
-      "source_location": "L62"
+      "source_location": "L61"
     },
     {
-      "id": "shortsmaker_blender_link_rationale_95",
+      "id": "shortsmaker_blender_link_rationale_94",
       "label": "The upload.txt credit a saved model needs: its attribution when CC-BY, None for\u2026",
       "_origin": "ast",
       "community": 49,
@@ -19832,7 +19832,7 @@
       "file_type": "rationale",
       "norm_label": "the upload.txt credit a saved model needs: its attribution when cc-by, none for...",
       "source_file": "shortsmaker/blender_link.py",
-      "source_location": "L95"
+      "source_location": "L94"
     },
     {
       "id": "tests_test_blender_link_rationale_1",
@@ -32140,7 +32140,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "shortsmaker/blender_link.py",
-      "source_location": "L58",
+      "source_location": "L57",
       "weight": 1.0
     },
     {
@@ -32152,7 +32152,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "shortsmaker/blender_link.py",
-      "source_location": "L24",
+      "source_location": "L23",
       "weight": 1.0
     },
     {
@@ -32164,7 +32164,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "shortsmaker/blender_link.py",
-      "source_location": "L25",
+      "source_location": "L24",
       "weight": 1.0
     },
     {
@@ -32176,7 +32176,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "shortsmaker/blender_link.py",
-      "source_location": "L30",
+      "source_location": "L29",
       "weight": 1.0
     },
     {
@@ -32188,7 +32188,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "shortsmaker/blender_link.py",
-      "source_location": "L96",
+      "source_location": "L95",
       "weight": 1.0
     },
     {
@@ -32200,7 +32200,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "shortsmaker/blender_link.py",
-      "source_location": "L133",
+      "source_location": "L123",
       "weight": 1.0
     },
     {
@@ -32212,7 +32212,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "shortsmaker/blender_link.py",
-      "source_location": "L157",
+      "source_location": "L147",
       "weight": 1.0
     },
     {
@@ -32224,7 +32224,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "shortsmaker/blender_link.py",
-      "source_location": "L158",
+      "source_location": "L148",
       "weight": 1.0
     },
     {
@@ -32236,7 +32236,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "shortsmaker/blender_link.py",
-      "source_location": "L159",
+      "source_location": "L149",
       "weight": 1.0
     },
     {
@@ -32248,7 +32248,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "shortsmaker/blender_link.py",
-      "source_location": "L76",
+      "source_location": "L75",
       "weight": 1.0
     },
     {
@@ -32260,7 +32260,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "shortsmaker/blender_link.py",
-      "source_location": "L80",
+      "source_location": "L79",
       "weight": 1.0
     },
     {
@@ -32272,7 +32272,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "shortsmaker/blender_link.py",
-      "source_location": "L49",
+      "source_location": "L48",
       "weight": 1.0
     },
     {
@@ -32284,7 +32284,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "shortsmaker/blender_link.py",
-      "source_location": "L63",
+      "source_location": "L62",
       "weight": 1.0
     },
     {
@@ -32296,7 +32296,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "shortsmaker/blender_link.py",
-      "source_location": "L66",
+      "source_location": "L65",
       "weight": 1.0
     },
     {
@@ -32308,7 +32308,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "shortsmaker/blender_link.py",
-      "source_location": "L71",
+      "source_location": "L70",
       "weight": 1.0
     },
     {
@@ -40120,7 +40120,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "tests/test_blender_link.py",
-      "source_location": "L133",
+      "source_location": "L134",
       "weight": 1.0
     },
     {
@@ -40132,7 +40132,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "tests/test_blender_link.py",
-      "source_location": "L134",
+      "source_location": "L135",
       "weight": 1.0
     },
     {
@@ -40144,7 +40144,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "tests/test_blender_link.py",
-      "source_location": "L135",
+      "source_location": "L136",
       "weight": 1.0
     },
     {
@@ -40192,7 +40192,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "tests/test_blender_link.py",
-      "source_location": "L144",
+      "source_location": "L145",
       "weight": 1.0
     },
     {
@@ -40204,7 +40204,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "tests/test_blender_link.py",
-      "source_location": "L145",
+      "source_location": "L146",
       "weight": 1.0
     },
     {
@@ -40216,7 +40216,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "tests/test_blender_link.py",
-      "source_location": "L147",
+      "source_location": "L148",
       "weight": 1.0
     },
     {
@@ -40276,7 +40276,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "tests/test_blender_link.py",
-      "source_location": "L124",
+      "source_location": "L125",
       "weight": 1.0
     },
     {
@@ -40288,7 +40288,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "tests/test_blender_link.py",
-      "source_location": "L125",
+      "source_location": "L126",
       "weight": 1.0
     },
     {
@@ -49948,7 +49948,7 @@
       "confidence_score": 1.0,
       "context": "decorator",
       "source_file": "tests/test_blender_link.py",
-      "source_location": "L131",
+      "source_location": "L132",
       "weight": 1.0
     },
     {
@@ -49972,7 +49972,7 @@
       "confidence_score": 1.0,
       "context": "decorator",
       "source_file": "tests/test_blender_link.py",
-      "source_location": "L142",
+      "source_location": "L143",
       "weight": 1.0
     },
     {
@@ -50008,7 +50008,7 @@
       "confidence_score": 1.0,
       "context": "decorator",
       "source_file": "tests/test_blender_link.py",
-      "source_location": "L122",
+      "source_location": "L123",
       "weight": 1.0
     },
     {
@@ -50249,7 +50249,7 @@
       "confidence_score": 1.0,
       "context": "generic_arg",
       "source_file": "shortsmaker/blender_link.py",
-      "source_location": "L130",
+      "source_location": "L120",
       "weight": 1.0
     },
     {
@@ -62957,7 +62957,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "shortsmaker/blender_link.py",
-      "source_location": "L94",
+      "source_location": "L93",
       "weight": 1.0
     },
     {
@@ -64487,7 +64487,7 @@
       "confidence_score": 1.0,
       "context": "return_type",
       "source_file": "shortsmaker/blender_link.py",
-      "source_location": "L74",
+      "source_location": "L73",
       "weight": 1.0
     },
     {
@@ -72669,7 +72669,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "shortsmaker/blender_link.py",
-      "source_location": "L130",
+      "source_location": "L120",
       "weight": 1.0
     },
     {
@@ -72680,7 +72680,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "shortsmaker/blender_link.py",
-      "source_location": "L17",
+      "source_location": "L16",
       "weight": 1.0
     },
     {
@@ -72691,7 +72691,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "shortsmaker/blender_link.py",
-      "source_location": "L21",
+      "source_location": "L20",
       "weight": 1.0
     },
     {
@@ -72702,7 +72702,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "shortsmaker/blender_link.py",
-      "source_location": "L47",
+      "source_location": "L46",
       "weight": 1.0
     },
     {
@@ -72713,7 +72713,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "shortsmaker/blender_link.py",
-      "source_location": "L55",
+      "source_location": "L54",
       "weight": 1.0
     },
     {
@@ -72724,7 +72724,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "shortsmaker/blender_link.py",
-      "source_location": "L61",
+      "source_location": "L60",
       "weight": 1.0
     },
     {
@@ -72735,7 +72735,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "shortsmaker/blender_link.py",
-      "source_location": "L69",
+      "source_location": "L68",
       "weight": 1.0
     },
     {
@@ -72746,7 +72746,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "shortsmaker/blender_link.py",
-      "source_location": "L74",
+      "source_location": "L73",
       "weight": 1.0
     },
     {
@@ -72757,7 +72757,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "shortsmaker/blender_link.py",
-      "source_location": "L90",
+      "source_location": "L89",
       "weight": 1.0
     },
     {
@@ -72768,7 +72768,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "shortsmaker/blender_link.py",
-      "source_location": "L94",
+      "source_location": "L93",
       "weight": 1.0
     },
     {
@@ -75837,7 +75837,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tests/test_blender_link.py",
-      "source_location": "L123",
+      "source_location": "L124",
       "weight": 1.0
     },
     {
@@ -75848,7 +75848,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tests/test_blender_link.py",
-      "source_location": "L132",
+      "source_location": "L133",
       "weight": 1.0
     },
     {
@@ -75859,7 +75859,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tests/test_blender_link.py",
-      "source_location": "L143",
+      "source_location": "L144",
       "weight": 1.0
     },
     {
@@ -80908,7 +80908,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "shortsmaker/blender_link.py",
-      "source_location": "L17",
+      "source_location": "L16",
       "weight": 1.0
     },
     {
@@ -83134,91 +83134,91 @@
       "weight": 1.0
     },
     {
-      "source": "shortsmaker_blender_link_rationale_131",
+      "source": "shortsmaker_blender_link_rationale_121",
       "target": "shortsmaker_blender_link_fetch_model",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "shortsmaker/blender_link.py",
-      "source_location": "L131",
+      "source_location": "L121",
       "weight": 1.0
     },
     {
-      "source": "shortsmaker_blender_link_rationale_18",
+      "source": "shortsmaker_blender_link_rationale_17",
       "target": "shortsmaker_blender_link_linkerror",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "shortsmaker/blender_link.py",
-      "source_location": "L18",
+      "source_location": "L17",
       "weight": 1.0
     },
     {
-      "source": "shortsmaker_blender_link_rationale_22",
+      "source": "shortsmaker_blender_link_rationale_21",
       "target": "shortsmaker_blender_link_call",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "shortsmaker/blender_link.py",
-      "source_location": "L22",
+      "source_location": "L21",
       "weight": 1.0
     },
     {
-      "source": "shortsmaker_blender_link_rationale_56",
+      "source": "shortsmaker_blender_link_rationale_55",
       "target": "shortsmaker_blender_link_allowed_licence",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "shortsmaker/blender_link.py",
-      "source_location": "L56",
+      "source_location": "L55",
       "weight": 1.0
     },
     {
-      "source": "shortsmaker_blender_link_rationale_62",
+      "source": "shortsmaker_blender_link_rationale_61",
       "target": "shortsmaker_blender_link_search",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "shortsmaker/blender_link.py",
-      "source_location": "L62",
+      "source_location": "L61",
       "weight": 1.0
     },
     {
-      "source": "shortsmaker_blender_link_rationale_70",
+      "source": "shortsmaker_blender_link_rationale_69",
       "target": "shortsmaker_blender_link_words",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "shortsmaker/blender_link.py",
-      "source_location": "L70",
+      "source_location": "L69",
       "weight": 1.0
     },
     {
-      "source": "shortsmaker_blender_link_rationale_75",
+      "source": "shortsmaker_blender_link_rationale_74",
       "target": "shortsmaker_blender_link_in_library",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "shortsmaker/blender_link.py",
-      "source_location": "L75",
+      "source_location": "L74",
       "weight": 1.0
     },
     {
-      "source": "shortsmaker_blender_link_rationale_95",
+      "source": "shortsmaker_blender_link_rationale_94",
       "target": "shortsmaker_blender_link_credit",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "shortsmaker/blender_link.py",
-      "source_location": "L95",
+      "source_location": "L94",
       "weight": 1.0
     },
     {
@@ -88797,5 +88797,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "9824e345577b5a43af2de9a6016fd9233f195dda"
+  "built_at_commit": "39d84665924b5ea310d493bf9412b1e947d8ea8a"
 }

@@ -1,19 +1,17 @@
 ---
-source_file: "shortsmaker/remotion_render.py"
+source_file: "tests/test_style.py"
 type: "code"
 community: "render_remotion"
-location: "L203"
+location: "L295"
 tags:
   - graphify/code
-  - graphify/EXTRACTED
+  - graphify/INFERRED
   - community/render_remotion
 ---
 
 # render()
 
 ## Connections
-- [[remotion()]] - `calls` [EXTRACTED]
-- [[render_remotion()]] - `indirect_call` [INFERRED]
-- [[run_remotion_with_fallback()]] - `calls` [EXTRACTED]
+- [[test_invention_runtime_failure_uses_fallback()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/render_remotion
+#graphify/code #graphify/INFERRED #community/render_remotion

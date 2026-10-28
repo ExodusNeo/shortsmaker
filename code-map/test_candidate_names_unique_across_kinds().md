@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_style.py"
 type: "code"
-community: "json"
+community: "approve_candidate"
 location: "L464"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/json
+  - community/approve_candidate
 ---
 
 # test_candidate_names_unique_across_kinds()
@@ -17,4 +17,4 @@ tags:
 - [[style_placeholders()]] - `calls` [EXTRACTED]
 - [[test_style.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/json
+#graphify/code #graphify/EXTRACTED #community/approve_candidate

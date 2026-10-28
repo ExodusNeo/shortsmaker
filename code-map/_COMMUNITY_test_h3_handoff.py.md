@@ -1,16 +1,17 @@
 ---
 type: community
-members: 18
+members: 19
 ---
 
 # test_h3_handoff.py
 
-**Members:** 18 nodes
+**Members:** 19 nodes
 
 ## Members
 - [[Path_20]] - code
 - [[Tests for the Colab H3  Flow hand-off frame-checked video prompts, veo.zip,…]] - rationale - tests/test_h3_handoff.py
 - [[Unpack sceneN.mp4.mov.webm from folderclips.zip (the Colab notebook's…]] - rationale - shortsmaker/gpu.py
+- [[builtins]] - concept
 - [[handoff()]] - code - tests/test_h3_handoff.py
 - [[test_all_start_pictures_flagged_skips_pause()]] - code - tests/test_h3_handoff.py
 - [[test_duplicate_clip_names_deduplicated()]] - code - tests/test_h3_handoff.py
@@ -35,19 +36,17 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 10 edges to [[_COMMUNITY_short_with]]
-- 5 edges to [[_COMMUNITY_test_full_scenes.py]]
-- 3 edges to [[_COMMUNITY_local_clips]]
-- 3 edges to [[_COMMUNITY_json]]
-- 1 edge to [[_COMMUNITY_test_story.py]]
-- 1 edge to [[_COMMUNITY_h3_run.py]]
+- 11 edges to [[_COMMUNITY_short_with]]
+- 7 edges to [[_COMMUNITY_gpu.py]]
+- 4 edges to [[_COMMUNITY_pathlib]]
+- 2 edges to [[_COMMUNITY_tempfile]]
+- 1 edge to [[_COMMUNITY_ffmpeg]]
 - 1 edge to [[_COMMUNITY_re]]
-- 1 edge to [[_COMMUNITY_h3_problems]]
 - 1 edge to [[_COMMUNITY_h3_prompt]]
-- 1 edge to [[_COMMUNITY_test_owner_clip_is_cut_again_for_the_scene_it_now_sits_in]]
 - 1 edge to [[_COMMUNITY_split_make_shorts.py]]
 
 ## Top bridge nodes
-- [[test_h3_handoff.py]] - degree 33, connects to 7 communities
-- [[unpack_clips()]] - degree 10, connects to 4 communities
+- [[test_h3_handoff.py]] - degree 33, connects to 5 communities
 - [[handoff()]] - degree 12, connects to 3 communities
+- [[unpack_clips()]] - degree 10, connects to 2 communities
+- [[builtins]] - degree 2, connects to 1 community

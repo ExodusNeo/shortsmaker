@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_opener_scene.py"
 type: "code"
-community: "test_opener_scene.py"
+community: "builds"
 location: "L119"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_opener_scenepy
+  - community/builds
 ---
 
 # test_walk_stops_short_of_obstacles()
@@ -18,4 +18,4 @@ tags:
 - [[run()_8]] - `calls` [EXTRACTED]
 - [[test_opener_scene.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_opener_scenepy
+#graphify/code #graphify/EXTRACTED #community/builds

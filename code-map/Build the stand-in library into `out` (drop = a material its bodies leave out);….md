@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_people_tables.py"
 type: "rationale"
-community: "test_opener_scene.py"
+community: "tempfile"
 location: "L23"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/test_opener_scenepy
+  - community/tempfile
 ---
 
 # Build the stand-in library into `out` (drop = a material its bodies leave out);…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[standin()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/test_opener_scenepy
+#graphify/rationale #graphify/EXTRACTED #community/tempfile

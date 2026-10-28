@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "ref_remotion"
+community: "Paper"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/ref_remotion
+  - community/Paper
 ---
 
 # ref_remotion
@@ -20,6 +20,7 @@ tags:
 - [[Graphics.tsx]] - `imports_from` [EXTRACTED]
 - [[Journey.tsx]] - `imports_from` [EXTRACTED]
 - [[MapCard.tsx]] - `imports_from` [EXTRACTED]
+- [[Model3D.tsx]] - `imports_from` [EXTRACTED]
 - [[Paper.tsx]] - `imports_from` [EXTRACTED]
 - [[Root.tsx]] - `imports_from` [EXTRACTED]
 - [[Short.tsx]] - `imports_from` [EXTRACTED]
@@ -29,4 +30,4 @@ tags:
 - [[srcindex.ts]] - `imports_from` [EXTRACTED]
 - [[toolkit.tsx]] - `imports_from` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/ref_remotion
+#graphify/concept #graphify/EXTRACTED #community/Paper

@@ -12,10 +12,11 @@ tags:
 # credit()
 
 ## Connections
-- [[Path_18]] - `references` [EXTRACTED]
+- [[Path_17]] - `references` [EXTRACTED]
 - [[The upload.txt credit a saved model needs its attribution when CC-BY, None for…]] - `rationale_for` [EXTRACTED]
 - [[blender_link.py]] - `contains` [EXTRACTED]
 - [[json]] - `calls` [EXTRACTED]
+- [[opener_graphic()]] - `calls` [EXTRACTED]
 - [[test_fetch_saves_pair()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/test_blender_linkpy

@@ -1,11 +1,11 @@
 ---
 type: community
-members: 30
+members: 32
 ---
 
 # templates.py
 
-**Members:** 30 nodes
+**Members:** 32 nodes
 
 ## Members
 - [[(part, exact) the part the Short is about, by the plan's spot; the gusset at…]] - rationale - blender/templates.py
@@ -14,6 +14,7 @@ members: 30
 - [[dot-center()]] - code - blender/templates.py
 - [[dot-node()]] - code - blender/templates.py
 - [[dot-x0()]] - code - blender/templates.py
+- [[A straight steel member (chord, diagonal, vertical, girder) from p1 to p2 with…]] - rationale - blender/parts.py
 - [[A tower at each inner pier (one in the middle for a single span) with stays…]] - rationale - blender/templates.py
 - [[Bridge]] - code - blender/templates.py
 - [[Bridge templates each builds a whole structure from the parts kit with…]] - rationale - blender/templates.py
@@ -35,6 +36,7 @@ members: 30
 - [[eyebar_chain_bridge()]] - code - blender/templates.py
 - [[focus_object()]] - code - blender/templates.py
 - [[girder_bridge()]] - code - blender/templates.py
+- [[member()]] - code - blender/parts.py
 - [[suspension_bridge()]] - code - blender/templates.py
 - [[templates.py]] - code - blender/templates.py
 - [[truss_bridge()]] - code - blender/templates.py
@@ -47,14 +49,14 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 19 edges to [[_COMMUNITY_parts.py]]
-- 4 edges to [[_COMMUNITY_main]]
+- 20 edges to [[_COMMUNITY_parts.py]]
+- 3 edges to [[_COMMUNITY_main]]
+- 2 edges to [[_COMMUNITY_build_scene.py]]
 - 1 edge to [[_COMMUNITY_look.py]]
-- 1 edge to [[_COMMUNITY_bpy]]
 
 ## Top bridge nodes
-- [[templates.py]] - degree 20, connects to 4 communities
+- [[templates.py]] - degree 20, connects to 3 communities
 - [[dress()_1]] - degree 10, connects to 2 communities
 - [[_hung_deck()]] - degree 16, connects to 1 community
+- [[member()]] - degree 12, connects to 1 community
 - [[_edge_girders()]] - degree 10, connects to 1 community
-- [[_piers_and_deck()]] - degree 10, connects to 1 community

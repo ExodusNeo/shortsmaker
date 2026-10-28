@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_opener_scene.py"
 type: "code"
-community: "test_opener_scene.py"
+community: "people_lib"
 location: "L27"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_opener_scenepy
+  - community/people_lib
 ---
 
 # people_lib()
@@ -19,4 +19,4 @@ tags:
 - [[test_opener_scene.py]] - `contains` [EXTRACTED]
 - [[test_person_walks_across()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_opener_scenepy
+#graphify/code #graphify/EXTRACTED #community/people_lib

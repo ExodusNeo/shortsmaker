@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/plan_rules.py"
 type: "code"
-community: "test_story.py"
-location: "L368"
+community: "plan_rules.py"
+location: "L374"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_storypy
+  - community/plan_rulespy
 ---
 
 # is_loop_short()
@@ -20,4 +20,4 @@ tags:
 - [[split_takes()]] - `calls` [EXTRACTED]
 - [[test_fill_money_graphics_and_caps()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_storypy
+#graphify/code #graphify/EXTRACTED #community/plan_rulespy

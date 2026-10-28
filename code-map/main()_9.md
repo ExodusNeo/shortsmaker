@@ -1,24 +1,38 @@
 ---
-source_file: "blender/pack_people.py"
+source_file: "blender/opener_scene.py"
 type: "code"
-community: "pack_people.py"
-location: "L67"
+community: "opener_scene.py"
+location: "L593"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/pack_peoplepy
+  - community/opener_scenepy
 ---
 
 # main()
 
 ## Connections
-- [[Path_23]] - `references` [EXTRACTED]
-- [[base_name()_1]] - `calls` [EXTRACTED]
-- [[clip_name()]] - `calls` [EXTRACTED]
-- [[front()]] - `calls` [EXTRACTED]
-- [[height()]] - `calls` [EXTRACTED]
-- [[json]] - `calls` [EXTRACTED]
-- [[pack_people.py]] - `contains` [EXTRACTED]
-- [[stride()]] - `calls` [EXTRACTED]
+- [[State]] - `calls` [EXTRACTED]
+- [[apply()]] - `calls` [EXTRACTED]
+- [[apply()_1]] - `calls` [EXTRACTED]
+- [[build_set()]] - `calls` [EXTRACTED]
+- [[camera()_1]] - `calls` [EXTRACTED]
+- [[checks()]] - `calls` [EXTRACTED]
+- [[dress_set()]] - `calls` [EXTRACTED]
+- [[fcurves_of()]] - `calls` [EXTRACTED]
+- [[first_hit()]] - `calls` [EXTRACTED]
+- [[held()]] - `calls` [EXTRACTED]
+- [[hold_offscreen()]] - `calls` [EXTRACTED]
+- [[idle()]] - `calls` [EXTRACTED]
+- [[interpolation()]] - `calls` [EXTRACTED]
+- [[load_library()]] - `calls` [EXTRACTED]
+- [[opener_scene.py]] - `contains` [EXTRACTED]
+- [[place_actors()]] - `calls` [EXTRACTED]
+- [[punch_in()]] - `calls` [EXTRACTED]
+- [[render()_1]] - `calls` [EXTRACTED]
+- [[retime()]] - `calls` [EXTRACTED]
+- [[setup()_1]] - `calls` [EXTRACTED]
+- [[simulate()]] - `calls` [EXTRACTED]
+- [[world_verts()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/pack_peoplepy
+#graphify/code #graphify/EXTRACTED #community/opener_scenepy

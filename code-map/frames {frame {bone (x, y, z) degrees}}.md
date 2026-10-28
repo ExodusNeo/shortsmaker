@@ -1,17 +1,17 @@
 ---
 source_file: "tests/people_standin.py"
 type: "rationale"
-community: "bpy"
+community: "people_standin.py"
 location: "L78"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/bpy
+  - community/people_standinpy
 ---
 
 # frames: {frame: {bone: (x, y, z) degrees}}
 
 ## Connections
-- [[key()_1]] - `rationale_for` [EXTRACTED]
+- [[key()_2]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/bpy
+#graphify/rationale #graphify/EXTRACTED #community/people_standinpy

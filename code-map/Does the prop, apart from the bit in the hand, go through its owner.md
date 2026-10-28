@@ -1,12 +1,12 @@
 ---
 source_file: "blender/people.py"
 type: "rationale"
-community: "people.py"
+community: "math"
 location: "L86"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/peoplepy
+  - community/math
 ---
 
 # Does the prop, apart from the bit in the hand, go through its owner?
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[_through()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/peoplepy
+#graphify/rationale #graphify/EXTRACTED #community/math

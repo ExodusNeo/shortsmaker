@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_full_scenes.py"
 type: "code"
-community: "local_job"
+community: "render"
 location: "L342"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/local_job
+  - community/render
 ---
 
 # fake_gemini()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[test_remotion_failure_paints()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/INFERRED #community/local_job
+#graphify/code #graphify/INFERRED #community/render

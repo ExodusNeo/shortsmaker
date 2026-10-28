@@ -1,12 +1,12 @@
 ---
 source_file: "tests/opener_check_cases.py"
 type: "code"
-community: "bpy"
+community: "build_scene.py"
 location: "L41"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/bpy
+  - community/build_scenepy
 ---
 
 # camera()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[opener_check_cases.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/bpy
+#graphify/code #graphify/EXTRACTED #community/build_scenepy

@@ -11,6 +11,6 @@ tags:
 # Path
 
 ## Connections
-- [[srt()]] - `references` [EXTRACTED]
+- [[drawn_short()]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/render

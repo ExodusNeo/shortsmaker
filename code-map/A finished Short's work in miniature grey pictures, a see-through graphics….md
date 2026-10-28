@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_edit_project.py"
 type: "rationale"
-community: "re"
+community: "test_edit_project.py"
 location: "L20"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/re
+  - community/test_edit_projectpy
 ---
 
 # A finished Short's work/ in miniature: grey pictures, a see-through graphics…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[short_folder()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/re
+#graphify/rationale #graphify/EXTRACTED #community/test_edit_projectpy

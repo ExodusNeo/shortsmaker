@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/opener_render.py"
 type: "code"
-community: "test_full_scenes.py"
+community: "json"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_full_scenespy
+  - community/json
 ---
 
 # opener_render.py
@@ -25,9 +25,12 @@ tags:
 - [[llm.py]] - `imports_from` [EXTRACTED]
 - [[math]] - `imports` [EXTRACTED]
 - [[media_tools.py]] - `imports_from` [EXTRACTED]
+- [[model_for()]] - `contains` [EXTRACTED]
+- [[motion.py]] - `imports_from` [EXTRACTED]
 - [[opener_plan.py]] - `imports_from` [EXTRACTED]
 - [[pathlib]] - `imports_from` [EXTRACTED]
 - [[pick_model()]] - `contains` [EXTRACTED]
+- [[picker.py]] - `imports_from` [EXTRACTED]
 - [[render_opener()]] - `contains` [EXTRACTED]
 - [[resolve_models()]] - `contains` [EXTRACTED]
 - [[review()]] - `contains` [EXTRACTED]
@@ -37,6 +40,9 @@ tags:
 - [[session.py]] - `imports_from` [EXTRACTED]
 - [[short_render.py]] - `imports_from` [EXTRACTED]
 - [[shutil]] - `imports` [EXTRACTED]
+- [[test_full_scenes.py]] - `imports_from` [EXTRACTED]
 - [[test_opener_render.py]] - `imports_from` [EXTRACTED]
+- [[test_shot_templates.py]] - `imports_from` [EXTRACTED]
+- [[to_glb()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_full_scenespy
+#graphify/code #graphify/EXTRACTED #community/json

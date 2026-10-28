@@ -1,13 +1,14 @@
 ---
 type: community
-members: 16
+members: 18
 ---
 
 # short_with
 
-**Members:** 16 nodes
+**Members:** 18 nodes
 
 ## Members
+- [[After an opener swap moved scene 4's clip to scene 1, the re-render cuts it…]] - rationale - tests/test_h3_handoff.py
 - [[Run fn with llm.ask_ai and input restored afterwards.]] - rationale - tests/test_h3_handoff.py
 - [[ask()_12]] - code - tests/test_h3_handoff.py
 - [[fake_ai()]] - code - tests/test_h3_handoff.py
@@ -19,6 +20,7 @@ members: 16
 - [[short_with()]] - code - tests/test_h3_handoff.py
 - [[test_all_closeup_marked_scenes_skip_pause()]] - code - tests/test_h3_handoff.py
 - [[test_missing_scene_is_asked_again()]] - code - tests/test_h3_handoff.py
+- [[test_owner_clip_is_cut_again_for_the_scene_it_now_sits_in()]] - code - tests/test_h3_handoff.py
 - [[test_retries_only_failing_scene_with_reason()]] - code - tests/test_h3_handoff.py
 - [[test_scene_number_given_as_text_is_accepted()]] - code - tests/test_h3_handoff.py
 - [[test_tells_owner_after_five_failed_rounds()]] - code - tests/test_h3_handoff.py
@@ -33,13 +35,12 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 10 edges to [[_COMMUNITY_test_h3_handoff.py]]
-- 1 edge to [[_COMMUNITY_local_clips]]
-- 1 edge to [[_COMMUNITY_test_owner_clip_is_cut_again_for_the_scene_it_now_sits_in]]
+- 11 edges to [[_COMMUNITY_test_h3_handoff.py]]
+- 2 edges to [[_COMMUNITY_gpu.py]]
 
 ## Top bridge nodes
-- [[short_with()]] - degree 9, connects to 2 communities
+- [[test_owner_clip_is_cut_again_for_the_scene_it_now_sits_in()]] - degree 4, connects to 2 communities
 - [[test_all_closeup_marked_scenes_skip_pause()]] - degree 3, connects to 2 communities
+- [[short_with()]] - degree 9, connects to 1 community
 - [[fake_ai()]] - degree 7, connects to 1 community
 - [[with_fakes()]] - degree 7, connects to 1 community
-- [[test_missing_scene_is_asked_again()]] - degree 4, connects to 1 community

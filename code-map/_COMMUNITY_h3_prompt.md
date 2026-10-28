@@ -20,10 +20,9 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 1 edge to [[_COMMUNITY_local_clips]]
-- 1 edge to [[_COMMUNITY_test_full_scenes.py]]
+- 2 edges to [[_COMMUNITY_gpu.py]]
 - 1 edge to [[_COMMUNITY_test_h3_handoff.py]]
 
 ## Top bridge nodes
-- [[h3_prompt()]] - degree 4, connects to 2 communities
+- [[h3_prompt()]] - degree 4, connects to 1 community
 - [[test_prompt_joins_fields()]] - degree 2, connects to 1 community

@@ -12,7 +12,7 @@ tags:
 # edge_point()
 
 ## Connections
-- [[Vector_7]] - `references` [EXTRACTED]
+- [[Vector_6]] - `references` [EXTRACTED]
 - [[edge_leads()]] - `calls` [EXTRACTED]
 - [[opener_checks.py]] - `contains` [EXTRACTED]
 - [[world_verts()_1]] - `calls` [EXTRACTED]

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/image_sources.py"
 type: "code"
-community: "fetch"
+community: "plan_rules.py"
 location: "L207"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/fetch
+  - community/plan_rulespy
 ---
 
 # nasa_images()
@@ -18,4 +18,4 @@ tags:
 - [[nasa_search()]] - `calls` [EXTRACTED]
 - [[on_topic()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/fetch
+#graphify/code #graphify/EXTRACTED #community/plan_rulespy

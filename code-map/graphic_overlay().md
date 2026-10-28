@@ -1,21 +1,21 @@
 ---
 source_file: "shortsmaker/frame_render.py"
 type: "code"
-community: "person_card"
+community: "render"
 location: "L47"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/person_card
+  - community/render
 ---
 
 # graphic_overlay()
 
 ## Connections
-- [[Image_2]] - `references` [EXTRACTED]
+- [[Image]] - `references` [EXTRACTED]
 - [[Pre-render a callout as a small transparent image (animated per frame later).]] - `rationale_for` [EXTRACTED]
 - [[fit_font()]] - `calls` [EXTRACTED]
 - [[frame_maker()]] - `calls` [EXTRACTED]
 - [[frame_render.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/person_card
+#graphify/code #graphify/EXTRACTED #community/render

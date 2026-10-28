@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[A library .blend (every object in it) or primitivecube, as one mesh object…]] - `rationale_for` [EXTRACTED]
-- [[Object_3]] - `references` [EXTRACTED]
+- [[Object_2]] - `references` [EXTRACTED]
 - [[build_set()]] - `calls` [EXTRACTED]
 - [[dress()]] - `calls` [EXTRACTED]
 - [[material()_1]] - `calls` [EXTRACTED]

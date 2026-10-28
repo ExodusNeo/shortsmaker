@@ -15,7 +15,7 @@ tags:
 - [[State]] - `references` [EXTRACTED]
 - [[The hit the first blade contact, else the first thing that moves.]] - `rationale_for` [EXTRACTED]
 - [[camera()_1]] - `calls` [EXTRACTED]
-- [[main()_10]] - `calls` [EXTRACTED]
+- [[main()_9]] - `calls` [EXTRACTED]
 - [[opener_scene.py]] - `contains` [EXTRACTED]
 - [[punch_in()]] - `calls` [EXTRACTED]
 

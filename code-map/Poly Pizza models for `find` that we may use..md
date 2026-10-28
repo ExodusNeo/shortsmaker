@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/blender_link.py"
 type: "rationale"
-community: "test_blender_link.py"
+community: "re"
 location: "L61"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/test_blender_linkpy
+  - community/re
 ---
 
 # Poly Pizza models for `find` that we may use.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[search()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/test_blender_linkpy
+#graphify/rationale #graphify/EXTRACTED #community/re

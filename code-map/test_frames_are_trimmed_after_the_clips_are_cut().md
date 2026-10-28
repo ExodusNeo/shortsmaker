@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_blender_render.py"
 type: "code"
-community: "test_blender_plan.py"
+community: "test_blender_render.py"
 location: "L122"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_blender_planpy
+  - community/test_blender_renderpy
 ---
 
 # test_frames_are_trimmed_after_the_clips_are_cut()
@@ -15,7 +15,7 @@ tags:
 - [[fake_blender()]] - `calls` [EXTRACTED]
 - [[render_clips()]] - `calls` [EXTRACTED]
 - [[scene_frames()]] - `calls` [EXTRACTED]
-- [[short()_3]] - `calls` [EXTRACTED]
+- [[short()]] - `calls` [EXTRACTED]
 - [[test_blender_render.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_blender_planpy
+#graphify/code #graphify/EXTRACTED #community/test_blender_renderpy

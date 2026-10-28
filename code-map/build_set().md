@@ -12,11 +12,11 @@ tags:
 # build_set()
 
 ## Connections
-- [[Vector_8]] - `references` [EXTRACTED]
+- [[Vector_7]] - `references` [EXTRACTED]
 - [[fit()]] - `calls` [EXTRACTED]
 - [[ground_material()]] - `calls` [EXTRACTED]
 - [[load_model()]] - `calls` [EXTRACTED]
-- [[main()_10]] - `calls` [EXTRACTED]
+- [[main()_9]] - `calls` [EXTRACTED]
 - [[make_static()]] - `calls` [EXTRACTED]
 - [[math]] - `calls` [EXTRACTED]
 - [[opener_scene.py]] - `contains` [EXTRACTED]
