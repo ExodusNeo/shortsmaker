@@ -1,22 +1,22 @@
 ---
 source_file: "blender/moves.py"
 type: "code"
-community: "moves.py"
+community: "tree"
 location: "L291"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/movespy
+  - community/tree
 ---
 
 # clear_distance_at_end()
 
 ## Connections
-- [[Vector_4]] - `references` [EXTRACTED]
+- [[Vector_3]] - `references` [EXTRACTED]
 - [[clear_distance against the others where their keys leave them at `frame` two…]] - `rationale_for` [EXTRACTED]
 - [[clear_distance()]] - `calls` [EXTRACTED]
 - [[loc_at()]] - `calls` [EXTRACTED]
 - [[moves.py]] - `contains` [EXTRACTED]
 - [[walk()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/movespy
+#graphify/code #graphify/EXTRACTED #community/tree

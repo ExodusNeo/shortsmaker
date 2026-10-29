@@ -1,12 +1,12 @@
 ---
 source_file: "tests/people_sheet.py"
 type: "code"
-community: "subprocess"
+community: "sys"
 location: "L19"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/subprocess
+  - community/sys
 ---
 
 # render_sheet()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[people_sheet.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/subprocess
+#graphify/code #graphify/EXTRACTED #community/sys

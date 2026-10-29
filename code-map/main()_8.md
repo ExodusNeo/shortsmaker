@@ -1,24 +1,18 @@
 ---
-source_file: "blender/pack_people.py"
+source_file: "tests/render_style.py"
 type: "code"
-community: "pack_people.py"
-location: "L67"
+community: "sentence_groups"
+location: "L49"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/pack_peoplepy
+  - community/sentence_groups
 ---
 
 # main()
 
 ## Connections
-- [[Path_20]] - `references` [EXTRACTED]
-- [[base_name()_1]] - `calls` [EXTRACTED]
-- [[clip_name()]] - `calls` [EXTRACTED]
-- [[front()]] - `calls` [EXTRACTED]
-- [[height()]] - `calls` [EXTRACTED]
-- [[json]] - `calls` [EXTRACTED]
-- [[pack_people.py]] - `contains` [EXTRACTED]
-- [[stride()]] - `calls` [EXTRACTED]
+- [[build()_2]] - `calls` [EXTRACTED]
+- [[render_style.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/pack_peoplepy
+#graphify/code #graphify/EXTRACTED #community/sentence_groups

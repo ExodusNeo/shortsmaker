@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_style.py"
 type: "code"
-community: "render"
+community: "wants_remotion"
 location: "L171"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/render
+  - community/wants_remotion
 ---
 
 # test_remotion_forced_by_look()
@@ -15,4 +15,4 @@ tags:
 - [[test_style.py]] - `contains` [EXTRACTED]
 - [[wants_remotion()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/render
+#graphify/code #graphify/EXTRACTED #community/wants_remotion

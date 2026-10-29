@@ -1,17 +1,17 @@
 ---
-source_file: "tests/style.test.ts"
+source_file: "tests/guarded.test.ts"
 type: "code"
-community: "Short.tsx"
-location: "L8"
+community: "toolkit.tsx"
+location: "L7"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Shorttsx
+  - community/toolkittsx
 ---
 
 # test()
 
 ## Connections
-- [[style.test.ts]] - `contains` [EXTRACTED]
+- [[guarded.test.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Shorttsx
+#graphify/code #graphify/EXTRACTED #community/toolkittsx

@@ -1,27 +1,20 @@
 ---
-source_file: "tests/test_shot_templates.py"
+source_file: "tests/render_style.py"
 type: "code"
-community: "json"
-location: "L59"
+community: "sentence_groups"
+location: "L19"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/json
+  - community/sentence_groups
 ---
 
 # build()
 
 ## Connections
-- [[copy]] - `calls` [EXTRACTED]
-- [[ffmpeg()]] - `calls` [EXTRACTED]
-- [[fill_template()]] - `calls` [EXTRACTED]
-- [[json]] - `calls` [EXTRACTED]
-- [[resolve_models()]] - `calls` [EXTRACTED]
-- [[review_frames()]] - `calls` [EXTRACTED]
-- [[scale_beats()]] - `calls` [EXTRACTED]
-- [[shutil]] - `calls` [EXTRACTED]
-- [[subprocess]] - `calls` [EXTRACTED]
-- [[tempfile]] - `calls` [EXTRACTED]
-- [[test_shot_templates.py]] - `contains` [EXTRACTED]
+- [[add()_1]] - `contains` [EXTRACTED]
+- [[main()_8]] - `calls` [EXTRACTED]
+- [[render_style.py]] - `contains` [EXTRACTED]
+- [[style_library()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/json
+#graphify/code #graphify/EXTRACTED #community/sentence_groups

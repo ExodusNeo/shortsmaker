@@ -2,7 +2,7 @@
 source_file: "blender/people.py"
 type: "code"
 community: "scene_kit.py"
-location: "L344"
+location: "L347"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,7 +12,7 @@ tags:
 # _travel()
 
 ## Connections
-- [[Vector_1]] - `references` [EXTRACTED]
+- [[Vector_4]] - `references` [EXTRACTED]
 - [[_strip()]] - `calls` [EXTRACTED]
 - [[facing_now()]] - `calls` [EXTRACTED]
 - [[key_loc()]] - `calls` [EXTRACTED]

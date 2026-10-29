@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_full_scenes.py"
 type: "rationale"
-community: "opener_graphic"
+community: "full_cues"
 location: "L943"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/opener_graphic
+  - community/full_cues
 ---
 
 # The three.js model graphic (2026-10-28): motion-graphic openers only, its model…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[test_model_graphic()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/opener_graphic
+#graphify/rationale #graphify/EXTRACTED #community/full_cues

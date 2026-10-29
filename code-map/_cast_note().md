@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/opener_render.py"
 type: "code"
-community: "review"
+community: "json"
 location: "L146"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/review
+  - community/json
 ---
 
 # _cast_note()
@@ -16,4 +16,4 @@ tags:
 - [[opener_render.py]] - `contains` [EXTRACTED]
 - [[review()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/review
+#graphify/code #graphify/EXTRACTED #community/json

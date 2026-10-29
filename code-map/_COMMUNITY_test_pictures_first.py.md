@@ -1,17 +1,17 @@
 ---
 type: community
-members: 22
+members: 23
 ---
 
 # test_pictures_first.py
 
-**Members:** 22 nodes
+**Members:** 23 nodes
 
 ## Members
 - [[dot-__exit__()_3]] - code - tests/test_pictures_first.py
-- [[dot-__init__()_7]] - code - tests/test_pictures_first.py
+- [[dot-__init__()_8]] - code - tests/test_pictures_first.py
 - [[Build a broad multi-source pool of images and real video footage (per-scene…]] - rationale - shortsmaker/picker.py
-- [[Path_19]] - code
+- [[Path_23]] - code
 - [[Tests for pictures-first planning (gather the pool, the AI picture list, topic…]] - rationale - tests/test_pictures_first.py
 - [[The Oxford pool (2026-10-26) got stock videos that only shared a first name or…]] - rationale - tests/test_pictures_first.py
 - [[choose_images()]] - code - shortsmaker/picker.py
@@ -30,6 +30,7 @@ members: 22
 - [[test_pixabay_keeps_only_on_topic_videos()]] - code - tests/test_pictures_first.py
 - [[test_plan_note_already_used()]] - code - tests/test_pictures_first.py
 - [[test_planned_full_pictures_not_sent_when_empty()]] - code - tests/test_pictures_first.py
+- [[test_prune_cache_handles_pools()]] - code - tests/test_pictures_first.py
 
 ## Live Query (requires Dataview plugin)
 
@@ -39,28 +40,29 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 24 edges to [[_COMMUNITY_pool_of]]
-- 17 edges to [[_COMMUNITY_test_full_scenes.py]]
-- 10 edges to [[_COMMUNITY_gather_pool]]
+- 22 edges to [[_COMMUNITY_pool_of]]
+- 15 edges to [[_COMMUNITY_test_full_scenes.py]]
 - 9 edges to [[_COMMUNITY_write_scripts]]
-- 5 edges to [[_COMMUNITY_image_sources.py]]
-- 3 edges to [[_COMMUNITY_owner]]
-- 3 edges to [[_COMMUNITY_re]]
-- 3 edges to [[_COMMUNITY_json]]
-- 2 edges to [[_COMMUNITY_style_library]]
-- 2 edges to [[_COMMUNITY_main_1]]
-- 2 edges to [[_COMMUNITY_test_story.py]]
+- 7 edges to [[_COMMUNITY_gather_pool]]
+- 6 edges to [[_COMMUNITY_re]]
+- 5 edges to [[_COMMUNITY_fake_ai]]
+- 4 edges to [[_COMMUNITY_owner]]
+- 4 edges to [[_COMMUNITY_json]]
+- 3 edges to [[_COMMUNITY_sys]]
+- 2 edges to [[_COMMUNITY_clean_full]]
+- 2 edges to [[_COMMUNITY_fetch]]
+- 1 edge to [[_COMMUNITY_style_library]]
+- 1 edge to [[_COMMUNITY_test_rules.py]]
+- 1 edge to [[_COMMUNITY_full_cues]]
 - 1 edge to [[_COMMUNITY_ask_ai]]
-- 1 edge to [[_COMMUNITY_sfx_events]]
-- 1 edge to [[_COMMUNITY_film_piece]]
+- 1 edge to [[_COMMUNITY_edit_plan]]
+- 1 edge to [[_COMMUNITY_apply_review_fixes]]
 - 1 edge to [[_COMMUNITY_apply_look_scenes]]
 - 1 edge to [[_COMMUNITY_render]]
-- 1 edge to [[_COMMUNITY_capture_prompts]]
-- 1 edge to [[_COMMUNITY_words_of]]
 
 ## Top bridge nodes
-- [[choose_images()]] - degree 24, connects to 13 communities
-- [[test_pictures_first.py]] - degree 78, connects to 12 communities
+- [[choose_images()]] - degree 24, connects to 14 communities
+- [[test_pictures_first.py]] - degree 78, connects to 11 communities
 - [[still()]] - degree 5, connects to 2 communities
 - [[picking]] - degree 12, connects to 1 community
 - [[planned_short()]] - degree 10, connects to 1 community

@@ -1,27 +1,25 @@
 ---
 type: community
-members: 32
+members: 28
 ---
 
 # templates.py
 
-**Members:** 32 nodes
+**Members:** 28 nodes
 
 ## Members
-- [[(part, exact) the part the Short is about, by the plan's spot; the gusset at…]] - rationale - blender/templates.py
 - [[dot-__init__()_2]] - code - blender/templates.py
 - [[dot-add()]] - code - blender/templates.py
 - [[dot-center()]] - code - blender/templates.py
 - [[dot-node()]] - code - blender/templates.py
 - [[dot-x0()]] - code - blender/templates.py
-- [[A straight steel member (chord, diagonal, vertical, girder) from p1 to p2 with…]] - rationale - blender/parts.py
 - [[A tower at each inner pier (one in the middle for a single span) with stays…]] - rationale - blender/templates.py
 - [[Bridge]] - code - blender/templates.py
 - [[Bridge templates each builds a whole structure from the parts kit with…]] - rationale - blender/templates.py
 - [[Deck on deep plate girders (four lines of them), spliced at every panel point.]] - rationale - blender/templates.py
 - [[Suspension or eyebar-chain bridge towers at the piers, a main cable (or a…]] - rationale - blender/templates.py
 - [[The deck's two edge girders (named like truss bottom chords) with splice plates…]] - rationale - blender/templates.py
-- [[Vector_2]] - code
+- [[Vector_1]] - code
 - [[What a template built parts by name and stage, the spans' x ranges, and the…]] - rationale - blender/templates.py
 - [[What the plan says was on the bridge rails on a rail deck, cars or a train for…]] - rationale - blender/templates.py
 - [[_edge_girders()]] - code - blender/templates.py
@@ -30,13 +28,11 @@ members: 32
 - [[_sag_points()]] - code - blender/templates.py
 - [[_towers()]] - code - blender/templates.py
 - [[_truss_panel_members()]] - code - blender/templates.py
-- [[build()_1]] - code - blender/templates.py
+- [[build()]] - code - blender/templates.py
 - [[cable_stayed_bridge()]] - code - blender/templates.py
-- [[dress()_1]] - code - blender/templates.py
+- [[dress()]] - code - blender/templates.py
 - [[eyebar_chain_bridge()]] - code - blender/templates.py
-- [[focus_object()]] - code - blender/templates.py
 - [[girder_bridge()]] - code - blender/templates.py
-- [[member()]] - code - blender/parts.py
 - [[suspension_bridge()]] - code - blender/templates.py
 - [[templates.py]] - code - blender/templates.py
 - [[truss_bridge()]] - code - blender/templates.py
@@ -49,14 +45,14 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 20 edges to [[_COMMUNITY_parts.py]]
-- 3 edges to [[_COMMUNITY_main]]
-- 2 edges to [[_COMMUNITY_build_scene.py]]
+- 19 edges to [[_COMMUNITY_parts.py]]
+- 4 edges to [[_COMMUNITY_main]]
+- 2 edges to [[_COMMUNITY_math]]
 - 1 edge to [[_COMMUNITY_look.py]]
 
 ## Top bridge nodes
-- [[templates.py]] - degree 20, connects to 3 communities
-- [[dress()_1]] - degree 10, connects to 2 communities
+- [[templates.py]] - degree 20, connects to 4 communities
+- [[dress()]] - degree 10, connects to 2 communities
+- [[Bridge]] - degree 20, connects to 1 community
 - [[_hung_deck()]] - degree 16, connects to 1 community
-- [[member()]] - degree 12, connects to 1 community
 - [[_edge_girders()]] - degree 10, connects to 1 community

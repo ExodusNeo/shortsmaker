@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/motion.py"
 type: "rationale"
-community: "opener_graphic"
+community: "full_cues"
 location: "L42"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/opener_graphic
+  - community/full_cues
 ---
 
 # The `full` object Remotion draws for scene i: the plan's data, its word…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[full_props()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/opener_graphic
+#graphify/rationale #graphify/EXTRACTED #community/full_cues

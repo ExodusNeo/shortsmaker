@@ -1,23 +1,20 @@
 ---
-source_file: "blender/moves.py"
+source_file: "remotion/src/full/guarded.tsx"
 type: "code"
-community: "cut"
-location: "L322"
+community: "toolkit.tsx"
+location: "L267"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/cut
+  - community/toolkittsx
 ---
 
 # travel()
 
 ## Connections
-- [[How far o can move along d before it touches any of `others` (rays from its…]] - `rationale_for` [EXTRACTED]
-- [[Vector_4]] - `references` [EXTRACTED]
-- [[cut()]] - `calls` [EXTRACTED]
-- [[moves.py]] - `contains` [EXTRACTED]
-- [[push()]] - `calls` [EXTRACTED]
-- [[tree()]] - `calls` [EXTRACTED]
-- [[world_verts()]] - `calls` [EXTRACTED]
+- [[ExampleChain()]] - `calls` [EXTRACTED]
+- [[ExampleChain.tsx]] - `imports` [EXTRACTED]
+- [[guarded.test.ts]] - `imports` [EXTRACTED]
+- [[guarded.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/cut
+#graphify/code #graphify/EXTRACTED #community/toolkittsx

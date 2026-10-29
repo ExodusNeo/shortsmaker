@@ -1,12 +1,12 @@
 ---
 source_file: "blender/people.py"
 type: "rationale"
-community: "math"
+community: "dress"
 location: "L66"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/math
+  - community/dress
 ---
 
 # item (origin at its bottom) stands on `at` and follows the bone's place and…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[_attach()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/math
+#graphify/rationale #graphify/EXTRACTED #community/dress

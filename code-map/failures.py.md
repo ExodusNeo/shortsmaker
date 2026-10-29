@@ -1,12 +1,12 @@
 ---
 source_file: "blender/failures.py"
 type: "code"
-community: "build_scene.py"
+community: "math"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/build_scenepy
+  - community/math
 ---
 
 # failures.py
@@ -17,10 +17,10 @@ tags:
 - [[Random]] - `imports` [EXTRACTED]
 - [[bpy]] - `imports` [EXTRACTED]
 - [[build_scene.py]] - `imports` [EXTRACTED]
-- [[key()_1]] - `contains` [EXTRACTED]
+- [[key()]] - `contains` [EXTRACTED]
 - [[look.py]] - `imports` [EXTRACTED]
 - [[math]] - `imports` [EXTRACTED]
 - [[mathutils]] - `imports_from` [EXTRACTED]
 - [[parts.py]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/build_scenepy
+#graphify/code #graphify/EXTRACTED #community/math

@@ -1,16 +1,20 @@
 ---
 source_file: ""
 type: "code"
-community: "draft_rules"
+community: "render"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/draft_rules
+  - community/render
 ---
 
 # Path
 
 ## Connections
-- [[draft_rules()]] - `references` [EXTRACTED]
+- [[drawn_thumbnail()]] - `references` [EXTRACTED]
+- [[load_state()]] - `references` [EXTRACTED]
+- [[render()_5]] - `references` [EXTRACTED]
+- [[save_state()]] - `references` [EXTRACTED]
+- [[use_opener()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/draft_rules
+#graphify/code #graphify/EXTRACTED #community/render

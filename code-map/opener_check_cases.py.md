@@ -1,12 +1,12 @@
 ---
 source_file: "tests/opener_check_cases.py"
 type: "code"
-community: "build_scene.py"
+community: "opener_checks.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/build_scenepy
+  - community/opener_checkspy
 ---
 
 # opener_check_cases.py
@@ -18,11 +18,11 @@ tags:
 - [[cube()]] - `contains` [EXTRACTED]
 - [[fresh()]] - `contains` [EXTRACTED]
 - [[json]] - `imports` [EXTRACTED]
-- [[key()]] - `contains` [EXTRACTED]
+- [[key()_1]] - `contains` [EXTRACTED]
 - [[mathutils]] - `imports_from` [EXTRACTED]
 - [[opener_checks.py]] - `imports` [EXTRACTED]
 - [[pathlib]] - `imports_from` [EXTRACTED]
 - [[plane()]] - `contains` [EXTRACTED]
 - [[sys]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/build_scenepy
+#graphify/code #graphify/EXTRACTED #community/opener_checkspy

@@ -12,10 +12,10 @@ tags:
 # passing()
 
 ## Connections
-- [[prepare()_1]] - `calls` [EXTRACTED]
-- [[prepare()_2]] - `calls` [EXTRACTED]
+- [[prepare()_3]] - `calls` [EXTRACTED]
 - [[prepare()_4]] - `calls` [EXTRACTED]
-- [[prepare()]] - `indirect_call` [INFERRED]
+- [[prepare()_5]] - `calls` [EXTRACTED]
+- [[prepare()_2]] - `indirect_call` [INFERRED]
 - [[test_all_weak_returns_empty()]] - `calls` [EXTRACTED]
 - [[test_pictures_first.py]] - `contains` [EXTRACTED]
 - [[test_topic_a_proven_channel_just_posted_is_dropped()]] - `calls` [EXTRACTED]

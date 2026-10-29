@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[Every failed try kept for the engine fixes (workopener_triestryn.json and…]] - `rationale_for` [EXTRACTED]
-- [[Path_26]] - `references` [EXTRACTED]
+- [[Path_10]] - `references` [EXTRACTED]
 - [[json]] - `calls` [EXTRACTED]
 - [[opener_render.py]] - `contains` [EXTRACTED]
 - [[render_opener()]] - `calls` [EXTRACTED]

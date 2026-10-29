@@ -12,7 +12,7 @@ tags:
 # look_and_fix()
 
 ## Connections
-- [[Path_22]] - `references` [EXTRACTED]
+- [[Path_27]] - `references` [EXTRACTED]
 - [[The coder looks at 8 frames of its own scene before the real render and…]] - `rationale_for` [EXTRACTED]
 - [[ask_ai()]] - `calls` [EXTRACTED]
 - [[clean_tsx_code()]] - `calls` [EXTRACTED]

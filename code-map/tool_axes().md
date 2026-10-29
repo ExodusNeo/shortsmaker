@@ -1,12 +1,12 @@
 ---
 source_file: "blender/moves.py"
 type: "code"
-community: "cut"
+community: "moves.py"
 location: "L542"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/cut
+  - community/movespy
 ---
 
 # tool_axes()
@@ -20,4 +20,4 @@ tags:
 - [[thickness()]] - `contains` [EXTRACTED]
 - [[tool_rotation()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/cut
+#graphify/code #graphify/EXTRACTED #community/movespy

@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_style.py"
 type: "rationale"
-community: "test_style.py"
+community: "style_placeholders"
 location: "L232"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/test_stylepy
+  - community/style_placeholders
 ---
 
 # Runs fn() with ask_ai answering `codes` in turn, tsc_check returning `tsc`, and…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[with_fakes()_1]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/test_stylepy
+#graphify/rationale #graphify/EXTRACTED #community/style_placeholders

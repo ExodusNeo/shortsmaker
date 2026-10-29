@@ -1,12 +1,12 @@
 ---
 source_file: "blender/moves.py"
 type: "code"
-community: "moves.py"
+community: "walk"
 location: "L144"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/movespy
+  - community/walk
 ---
 
 # legs()
@@ -21,4 +21,4 @@ tags:
 - [[moves.py]] - `contains` [EXTRACTED]
 - [[walk()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/movespy
+#graphify/code #graphify/EXTRACTED #community/walk

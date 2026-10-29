@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[Beat times squeezed into the real scene 1 (the voice can make it shorter than…]] - `rationale_for` [EXTRACTED]
-- [[build()_2]] - `calls` [EXTRACTED]
+- [[build()_1]] - `calls` [EXTRACTED]
 - [[copy]] - `calls` [EXTRACTED]
 - [[math]] - `calls` [EXTRACTED]
 - [[opener_render.py]] - `contains` [EXTRACTED]

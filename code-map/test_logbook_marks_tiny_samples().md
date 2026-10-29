@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_first_second.py"
 type: "code"
-community: "main"
+community: "re"
 location: "L76"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/main
+  - community/re
 ---
 
 # test_logbook_marks_tiny_samples()
@@ -15,4 +15,4 @@ tags:
 - [[logbook_results()]] - `calls` [EXTRACTED]
 - [[test_first_second.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/main
+#graphify/code #graphify/EXTRACTED #community/re

@@ -1,18 +1,26 @@
 ---
-source_file: "tests/render_style.py"
+source_file: "colab/h3_run.py"
 type: "code"
-community: "style_library"
-location: "L49"
+community: "h3_run.py"
+location: "L89"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/style_library
+  - community/h3_runpy
 ---
 
 # main()
 
 ## Connections
-- [[build()]] - `calls` [EXTRACTED]
-- [[render_style.py]] - `contains` [EXTRACTED]
+- [[call()]] - `calls` [EXTRACTED]
+- [[fit_start()]] - `calls` [EXTRACTED]
+- [[frames()]] - `calls` [EXTRACTED]
+- [[graph()]] - `calls` [EXTRACTED]
+- [[h3_run.py]] - `contains` [EXTRACTED]
+- [[json]] - `calls` [EXTRACTED]
+- [[saved_file()]] - `calls` [EXTRACTED]
+- [[shutil]] - `calls` [EXTRACTED]
+- [[time]] - `calls` [EXTRACTED]
+- [[zipfile]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/style_library
+#graphify/code #graphify/EXTRACTED #community/h3_runpy

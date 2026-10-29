@@ -16,6 +16,7 @@ members: 33
 - [[Flash]] - code - remotion/src/style/transitions/Flash.tsx
 - [[Flash.tsx]] - code - remotion/src/style/transitions/Flash.tsx
 - [[H]] - code - remotion/src/style/kit.ts
+- [[Inks]] - code - remotion/src/style/types.ts
 - [[InventedLook()]] - code - remotion/src/style/generated/InventedLook.tsx
 - [[InventedLook.tsx]] - code - remotion/src/style/generated/InventedLook.tsx
 - [[InventedOverlay()]] - code - remotion/src/style/generated/InventedOverlay.tsx
@@ -28,7 +29,6 @@ members: 33
 - [[Look]] - code - remotion/src/style/types.ts
 - [[LookProps]] - code - remotion/src/style/types.ts
 - [[OVERLAYS]] - code - remotion/src/style/index.ts
-- [[Overlay]] - code - remotion/src/style/types.ts
 - [[OverlayProps]] - code - remotion/src/style/types.ts
 - [[Transition]] - code - remotion/src/style/types.ts
 - [[TransitionFrame]] - code - remotion/src/style/types.ts
@@ -50,16 +50,16 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 35 edges to [[_COMMUNITY_Halftone.tsx]]
+- 36 edges to [[_COMMUNITY_Halftone.tsx]]
 - 14 edges to [[_COMMUNITY_Short.tsx]]
-- 12 edges to [[_COMMUNITY_QuestionBeat.tsx]]
+- 14 edges to [[_COMMUNITY_QuestionBeat.tsx]]
 - 5 edges to [[_COMMUNITY_Graphics.tsx]]
 - 5 edges to [[_COMMUNITY_toolkit.tsx]]
-- 1 edge to [[_COMMUNITY_Paper]]
+- 1 edge to [[_COMMUNITY_ref_remotion]]
 
 ## Top bridge nodes
 - [[kit.ts]] - degree 40, connects to 6 communities
 - [[styletypes.ts]] - degree 28, connects to 5 communities
 - [[styleindex.ts]] - degree 46, connects to 4 communities
 - [[Look]] - degree 10, connects to 2 communities
-- [[Overlay]] - degree 7, connects to 2 communities
+- [[InventedLook.tsx]] - degree 7, connects to 2 communities

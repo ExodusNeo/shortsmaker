@@ -1,20 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "frame_maker"
+community: "test_opener_scene.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/frame_maker
+  - community/test_opener_scenepy
 ---
 
 # Path
 
 ## Connections
-- [[dot-__init__()_10]] - `references` [EXTRACTED]
-- [[fills_frame()]] - `references` [EXTRACTED]
-- [[frame_maker()]] - `references` [EXTRACTED]
-- [[graphic_low()]] - `references` [EXTRACTED]
-- [[thumbnail()]] - `references` [EXTRACTED]
+- [[run()_8]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/frame_maker
+#graphify/code #graphify/EXTRACTED #community/test_opener_scenepy

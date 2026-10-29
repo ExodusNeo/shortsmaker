@@ -1,12 +1,12 @@
 ---
 source_file: "tests/people_standin.py"
 type: "rationale"
-community: "people_standin.py"
+community: "math"
 location: "L78"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/people_standinpy
+  - community/math
 ---
 
 # frames: {frame: {bone: (x, y, z) degrees}}
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[key()_2]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/people_standinpy
+#graphify/rationale #graphify/EXTRACTED #community/math

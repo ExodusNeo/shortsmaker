@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_blender_run.py"
 type: "code"
-community: "frame_render.py"
+community: "drawn_thumbnail"
 location: "L48"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/frame_renderpy
+  - community/drawn_thumbnail
 ---
 
 # test_thumbnail_uses_the_real_photo()
@@ -17,4 +17,4 @@ tags:
 - [[jpeg()]] - `calls` [EXTRACTED]
 - [[test_blender_run.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/frame_renderpy
+#graphify/code #graphify/EXTRACTED #community/drawn_thumbnail

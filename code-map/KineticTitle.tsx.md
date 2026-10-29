@@ -12,7 +12,7 @@ tags:
 # KineticTitle.tsx
 
 ## Connections
-- [[CLAMP_8]] - `imports` [EXTRACTED]
+- [[CLAMP_5]] - `imports` [EXTRACTED]
 - [[FONT]] - `imports` [EXTRACTED]
 - [[KineticTitle()]] - `contains` [EXTRACTED]
 - [[Overlay]] - `imports` [EXTRACTED]

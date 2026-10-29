@@ -1,18 +1,18 @@
 ---
 source_file: "tests/test_blender_link.py"
 type: "code"
-community: "test_blender_link.py"
+community: "fetch_model"
 location: "L60"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_blender_linkpy
+  - community/fetch_model
 ---
 
 # with_fake()
 
 ## Connections
-- [[run()_5]] - `indirect_call` [INFERRED]
+- [[run()_7]] - `indirect_call` [INFERRED]
 - [[test_blender_link.py]] - `contains` [EXTRACTED]
 - [[test_download_error_cleans_up()]] - `references` [EXTRACTED]
 - [[test_fetch_saves_pair()]] - `references` [EXTRACTED]
@@ -21,4 +21,4 @@ tags:
 - [[test_search_filters_licences()]] - `references` [EXTRACTED]
 - [[test_switched_off_reason()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_blender_linkpy
+#graphify/code #graphify/EXTRACTED #community/fetch_model

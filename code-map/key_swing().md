@@ -1,12 +1,12 @@
 ---
 source_file: "blender/scene_kit.py"
 type: "code"
-community: "moves.py"
+community: "walk"
 location: "L335"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/movespy
+  - community/walk
 ---
 
 # key_swing()
@@ -17,4 +17,4 @@ tags:
 - [[scene_kit.py]] - `contains` [EXTRACTED]
 - [[walk()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/movespy
+#graphify/code #graphify/EXTRACTED #community/walk

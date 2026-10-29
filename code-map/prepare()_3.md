@@ -2,7 +2,7 @@
 source_file: "tests/test_pictures_first.py"
 type: "code"
 community: "write_scripts"
-location: "L286"
+location: "L515"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,6 +12,7 @@ tags:
 # prepare()
 
 ## Connections
-- [[test_prompts_carry_picture_list()]] - `contains` [EXTRACTED]
+- [[passing()]] - `calls` [EXTRACTED]
+- [[test_both_mode_pools_follow_reply_position()]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/write_scripts

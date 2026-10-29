@@ -12,7 +12,7 @@ tags:
 # _templates_text()
 
 ## Connections
-- [[ask()_3]] - `calls` [EXTRACTED]
+- [[ask()_5]] - `calls` [EXTRACTED]
 - [[opener_plan.py]] - `contains` [EXTRACTED]
 - [[slot()_1]] - `contains` [EXTRACTED]
 

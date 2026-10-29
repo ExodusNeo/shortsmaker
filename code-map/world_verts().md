@@ -18,9 +18,10 @@ tags:
 - [[bbox()]] - `calls` [EXTRACTED]
 - [[clear_distance()]] - `calls` [EXTRACTED]
 - [[cut()]] - `calls` [EXTRACTED]
-- [[main()_9]] - `calls` [EXTRACTED]
+- [[drink()]] - `calls` [EXTRACTED]
+- [[main()_7]] - `calls` [EXTRACTED]
 - [[pick_up()]] - `calls` [EXTRACTED]
 - [[scene_kit.py]] - `contains` [EXTRACTED]
-- [[travel()_1]] - `calls` [EXTRACTED]
+- [[travel()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/scene_kitpy

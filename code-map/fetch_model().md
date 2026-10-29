@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/blender_link.py"
 type: "code"
-community: "test_blender_link.py"
+community: "fetch_model"
 location: "L120"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_blender_linkpy
+  - community/fetch_model
 ---
 
 # fetch_model()
@@ -16,7 +16,7 @@ tags:
 - [[Path_8]] - `references` [EXTRACTED]
 - [[attribution()]] - `calls` [EXTRACTED]
 - [[blender_link.py]] - `contains` [EXTRACTED]
-- [[call()]] - `calls` [EXTRACTED]
+- [[call()_1]] - `calls` [EXTRACTED]
 - [[json]] - `calls` [EXTRACTED]
 - [[model_for()]] - `calls` [EXTRACTED]
 - [[resolve_models()]] - `calls` [EXTRACTED]
@@ -26,4 +26,4 @@ tags:
 - [[test_switched_off_reason()]] - `calls` [EXTRACTED]
 - [[words()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_blender_linkpy
+#graphify/code #graphify/EXTRACTED #community/fetch_model

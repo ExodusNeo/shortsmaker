@@ -1,12 +1,12 @@
 ---
 source_file: "blender/people.py"
 type: "code"
-community: "math"
+community: "scene_kit.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/math
+  - community/scene_kitpy
 ---
 
 # people.py
@@ -33,7 +33,8 @@ tags:
 - [[_travel()]] - `contains` [EXTRACTED]
 - [[base_name()]] - `contains` [EXTRACTED]
 - [[bpy]] - `imports` [EXTRACTED]
-- [[dress()]] - `contains` [EXTRACTED]
+- [[dress()_1]] - `contains` [EXTRACTED]
+- [[drink()]] - `contains` [EXTRACTED]
 - [[facing_now()]] - `contains` [EXTRACTED]
 - [[held()]] - `contains` [EXTRACTED]
 - [[idle()]] - `contains` [EXTRACTED]
@@ -48,4 +49,4 @@ tags:
 - [[prop_move()]] - `contains` [EXTRACTED]
 - [[scene_kit.py]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/math
+#graphify/code #graphify/EXTRACTED #community/scene_kitpy

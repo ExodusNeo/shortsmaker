@@ -1,17 +1,18 @@
 ---
 type: community
-members: 39
+members: 46
 ---
 
 # opener_checks.py
 
-**Members:** 39 nodes
+**Members:** 46 nodes
 
 ## Members
 - [[A person's planned prop (the umbrella, the sword) is in frame 0 and big enough…]] - rationale - blender/opener_checks.py
 - [[A thing's move shows on screen some corner of it travels at least `share` of…]] - rationale - blender/opener_checks.py
 - [[At contact, the edge faces the way the tool moves and points at the target (the…]] - rationale - blender/opener_checks.py
 - [[BVHTree_1]] - code
+- [[Blender side of teststest_opener_checks.py (2026-10-27) builds tiny cases…]] - rationale - tests/opener_check_cases.py
 - [[Each object touches what it rests on, within tol no floating above it, no…]] - rationale - blender/opener_checks.py
 - [[Frame 1 shows the subject, big enough to read (tall enough, or for a wide low…]] - rationale - blender/opener_checks.py
 - [[How much of a model there is, as its surface area without the filled cut faces…]] - rationale - blender/opener_checks.py
@@ -27,18 +28,24 @@ members: 39
 - [[at()]] - code - blender/opener_checks.py
 - [[blade_face()]] - code - blender/opener_checks.py
 - [[bpy_extras_object_utils]] - concept
+- [[camera()]] - code - tests/opener_check_cases.py
 - [[checks()]] - code - blender/opener_scene.py
 - [[corners()]] - code - blender/opener_checks.py
+- [[cube()]] - code - tests/opener_check_cases.py
 - [[cut_result()]] - code - blender/opener_checks.py
 - [[edge_leads()]] - code - blender/opener_checks.py
 - [[edge_point()]] - code - blender/opener_checks.py
 - [[first_frame()]] - code - blender/opener_checks.py
+- [[fresh()]] - code - tests/opener_check_cases.py
 - [[hidden()_1]] - code - blender/opener_checks.py
 - [[in_frame()]] - code - blender/opener_checks.py
+- [[key()_1]] - code - tests/opener_check_cases.py
 - [[mathutils_bvhtree]] - concept
 - [[moves_visibly()]] - code - blender/opener_checks.py
+- [[opener_check_cases.py]] - code - tests/opener_check_cases.py
 - [[opener_checks.py]] - code - blender/opener_checks.py
 - [[overlaps()]] - code - blender/opener_checks.py
+- [[plane()]] - code - tests/opener_check_cases.py
 - [[prop_shown()]] - code - blender/opener_checks.py
 - [[resting()]] - code - blender/opener_checks.py
 - [[screen_box()]] - code - blender/opener_checks.py
@@ -57,13 +64,15 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 10 edges to [[_COMMUNITY_opener_scene.py]]
-- 3 edges to [[_COMMUNITY_build_scene.py]]
-- 2 edges to [[_COMMUNITY_math]]
+- 6 edges to [[_COMMUNITY_math]]
 - 1 edge to [[_COMMUNITY_scene_kit.py]]
+- 1 edge to [[_COMMUNITY_json]]
+- 1 edge to [[_COMMUNITY_sys]]
+- 1 edge to [[_COMMUNITY_test_full_scenes.py]]
 
 ## Top bridge nodes
-- [[opener_checks.py]] - degree 27, connects to 3 communities
+- [[opener_check_cases.py]] - degree 12, connects to 4 communities
+- [[opener_checks.py]] - degree 27, connects to 2 communities
 - [[checks()]] - degree 18, connects to 1 community
 - [[in_frame()]] - degree 6, connects to 1 community
 - [[blade_face()]] - degree 5, connects to 1 community
-- [[corners()]] - degree 3, connects to 1 community

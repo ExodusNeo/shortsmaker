@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "Paper"
+community: "toolkit.tsx"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Paper
+  - community/toolkittsx
 ---
 
 # ref_remotion_three
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[Model3D.tsx]] - `imports_from` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Paper
+#graphify/concept #graphify/EXTRACTED #community/toolkittsx

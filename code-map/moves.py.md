@@ -58,7 +58,7 @@ tags:
 - [[tool_rotation()]] - `contains` [EXTRACTED]
 - [[topple()]] - `contains` [EXTRACTED]
 - [[toward()]] - `contains` [EXTRACTED]
-- [[travel()_1]] - `contains` [EXTRACTED]
+- [[travel()]] - `contains` [EXTRACTED]
 - [[walk()]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/movespy

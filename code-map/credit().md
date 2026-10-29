@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/blender_link.py"
 type: "code"
-community: "test_blender_link.py"
+community: "fetch_model"
 location: "L93"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_blender_linkpy
+  - community/fetch_model
 ---
 
 # credit()
@@ -19,4 +19,4 @@ tags:
 - [[opener_graphic()]] - `calls` [EXTRACTED]
 - [[test_fetch_saves_pair()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_blender_linkpy
+#graphify/code #graphify/EXTRACTED #community/fetch_model

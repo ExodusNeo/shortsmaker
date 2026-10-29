@@ -1,18 +1,18 @@
 ---
 source_file: "shortsmaker/channel_profiles.py"
 type: "code"
-community: "main"
+community: "sys"
 location: "L64"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/main
+  - community/sys
 ---
 
 # ask_yes()
 
 ## Connections
 - [[channel_profiles.py]] - `contains` [EXTRACTED]
-- [[main()_7]] - `calls` [EXTRACTED]
+- [[main()_4]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/main
+#graphify/code #graphify/EXTRACTED #community/sys

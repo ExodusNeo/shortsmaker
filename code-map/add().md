@@ -1,18 +1,17 @@
 ---
-source_file: "tests/render_style.py"
+source_file: "shortsmaker/picture_pool.py"
 type: "code"
-community: "style_library"
-location: "L22"
+community: "gather_pool"
+location: "L107"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/style_library
+  - community/gather_pool
 ---
 
 # add()
 
 ## Connections
-- [[build()]] - `contains` [EXTRACTED]
-- [[scenes()]] - `indirect_call` [INFERRED]
+- [[gather_pool()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/style_library
+#graphify/code #graphify/EXTRACTED #community/gather_pool

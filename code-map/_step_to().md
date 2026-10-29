@@ -1,12 +1,12 @@
 ---
 source_file: "blender/people.py"
 type: "code"
-community: "math"
-location: "L403"
+community: "scene_kit.py"
+location: "L406"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/math
+  - community/scene_kitpy
 ---
 
 # _step_to()
@@ -16,4 +16,4 @@ tags:
 - [[people.py]] - `contains` [EXTRACTED]
 - [[pick_up()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/math
+#graphify/code #graphify/EXTRACTED #community/scene_kitpy

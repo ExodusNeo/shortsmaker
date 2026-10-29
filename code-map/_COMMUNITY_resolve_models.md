@@ -24,10 +24,10 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 4 edges to [[_COMMUNITY_test_opener_render.py]]
-- 4 edges to [[_COMMUNITY_test_blender_link.py]]
+- 4 edges to [[_COMMUNITY_fetch_model]]
 - 4 edges to [[_COMMUNITY_json]]
 - 1 edge to [[_COMMUNITY_ask_ai]]
-- 1 edge to [[_COMMUNITY_re]]
+- 1 edge to [[_COMMUNITY_call]]
 
 ## Top bridge nodes
 - [[resolve_models()]] - degree 10, connects to 4 communities

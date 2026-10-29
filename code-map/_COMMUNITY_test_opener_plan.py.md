@@ -29,7 +29,7 @@ members: 55
 - [[_sub()]] - code - shortsmaker/opener_plan.py
 - [[_takeable()]] - code - shortsmaker/opener_plan.py
 - [[_templates_text()]] - code - shortsmaker/opener_plan.py
-- [[ask()_3]] - code - shortsmaker/opener_plan.py
+- [[ask()_5]] - code - shortsmaker/opener_plan.py
 - [[clean_opener()]] - code - shortsmaker/opener_plan.py
 - [[fill_template()]] - code - shortsmaker/opener_plan.py
 - [[opener_plan.py]] - code - shortsmaker/opener_plan.py
@@ -72,15 +72,15 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 9 edges to [[_COMMUNITY_test_full_scenes.py]]
-- 7 edges to [[_COMMUNITY_json]]
+- 8 edges to [[_COMMUNITY_json]]
+- 6 edges to [[_COMMUNITY_test_full_scenes.py]]
+- 3 edges to [[_COMMUNITY_re]]
 - 2 edges to [[_COMMUNITY_test_opener_scene.py]]
 - 2 edges to [[_COMMUNITY_math]]
 - 2 edges to [[_COMMUNITY_test_opener_render.py]]
 - 1 edge to [[_COMMUNITY_write_scripts]]
 - 1 edge to [[_COMMUNITY_ask_ai]]
-- 1 edge to [[_COMMUNITY_re]]
-- 1 edge to [[_COMMUNITY_test_story.py]]
+- 1 edge to [[_COMMUNITY_sys]]
 
 ## Top bridge nodes
 - [[opener_plan.py]] - degree 28, connects to 6 communities

@@ -1,29 +1,31 @@
 ---
 type: community
-members: 16
+members: 18
 ---
 
 # opener_graphic
 
-**Members:** 16 nodes
+**Members:** 18 nodes
 
 ## Members
-- [[One plain line for edit_plan.txt saying what a full-screen motion graphic shows.]] - rationale - shortsmaker/motion.py
+- [[Check every line against the story's Wikipedia articles and rewrite what they…]] - rationale - shortsmaker/writing.py
+- [[Plain text of an English Wikipedia article ('' when missing or unreachable).]] - rationale - shortsmaker/writing.py
+- [[Planned full-screen motion graphics allowed per Short (default MAX_FULL_PLANNED…]] - rationale - shortsmaker/rules.py
 - [[Scene 1's motion-graphic opener set outside the scene-1 and two-in-a-row…]] - rationale - tests/test_full_scenes.py
-- [[The `full` object Remotion draws for scene i the plan's data, its word…]] - rationale - shortsmaker/motion.py
+- [[Scenes whose picture is missing or weak may become a full-screen motion graphic…]] - rationale - shortsmaker/picker.py
+- [[The full-screen motion graphic formats the AI may pick from (rescue_graphics,…]] - rationale - shortsmaker/picker.py
 - [[The motion-graphic opener (owner, 2026-10-28) on a channel with Blender…]] - rationale - shortsmaker/picker.py
-- [[The three.js model graphic (2026-10-28) motion-graphic openers only, its model…]] - rationale - tests/test_full_scenes.py
-- [[_jpg()]] - code - tests/test_full_scenes.py
-- [[full_props()]] - code - shortsmaker/motion.py
-- [[full_summary()]] - code - shortsmaker/motion.py
+- [[Total full-screen motion graphics (planned + rescued) allowed per Short…]] - rationale - shortsmaker/rules.py
+- [[article_text()]] - code - shortsmaker/writing.py
+- [[fact_check()]] - code - shortsmaker/writing.py
+- [[full_formats()]] - code - shortsmaker/picker.py
+- [[max_full()]] - code - shortsmaker/rules.py
+- [[max_full_planned()]] - code - shortsmaker/rules.py
 - [[opener_graphic()]] - code - shortsmaker/picker.py
-- [[put()]] - code - shortsmaker/motion.py
-- [[test_custom_cues_props_and_pictures()]] - code - tests/test_full_scenes.py
-- [[test_full_props_figure()]] - code - tests/test_full_scenes.py
-- [[test_full_summary()]] - code - tests/test_full_scenes.py
-- [[test_model_graphic()]] - code - tests/test_full_scenes.py
+- [[rescue_graphics()]] - code - shortsmaker/picker.py
+- [[test_fact_check_drops_full()]] - code - tests/test_full_scenes.py
 - [[test_opener_graphic()]] - code - tests/test_full_scenes.py
-- [[test_remotion_props_full()]] - code - tests/test_full_scenes.py
+- [[test_rescue_respects_caps()]] - code - tests/test_full_scenes.py
 
 ## Live Query (requires Dataview plugin)
 
@@ -33,23 +35,23 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 11 edges to [[_COMMUNITY_test_full_scenes.py]]
+- 8 edges to [[_COMMUNITY_test_full_scenes.py]]
+- 4 edges to [[_COMMUNITY_json]]
+- 4 edges to [[_COMMUNITY_re]]
+- 3 edges to [[_COMMUNITY_write_scripts]]
+- 3 edges to [[_COMMUNITY_clean_full]]
 - 3 edges to [[_COMMUNITY_full_cues]]
-- 2 edges to [[_COMMUNITY_clean_full]]
-- 2 edges to [[_COMMUNITY_test_blender_link.py]]
+- 3 edges to [[_COMMUNITY_ask_ai]]
+- 2 edges to [[_COMMUNITY_fetch_model]]
 - 2 edges to [[_COMMUNITY_render]]
-- 1 edge to [[_COMMUNITY_render_remotion]]
-- 1 edge to [[_COMMUNITY_ask_ai]]
-- 1 edge to [[_COMMUNITY_review]]
-- 1 edge to [[_COMMUNITY_code_custom_scenes]]
-- 1 edge to [[_COMMUNITY_article_text]]
-- 1 edge to [[_COMMUNITY_rescue_graphics]]
-- 1 edge to [[_COMMUNITY_json]]
-- 1 edge to [[_COMMUNITY_sfx_events]]
+- 1 edge to [[_COMMUNITY_test_style.py]]
+- 1 edge to [[_COMMUNITY_fetch]]
+- 1 edge to [[_COMMUNITY_sys]]
+- 1 edge to [[_COMMUNITY_apply_review_fixes]]
 
 ## Top bridge nodes
-- [[opener_graphic()]] - degree 13, connects to 8 communities
-- [[full_props()]] - degree 11, connects to 4 communities
-- [[test_model_graphic()]] - degree 7, connects to 3 communities
-- [[full_summary()]] - degree 7, connects to 2 communities
-- [[test_custom_cues_props_and_pictures()]] - degree 4, connects to 2 communities
+- [[opener_graphic()]] - degree 13, connects to 7 communities
+- [[rescue_graphics()]] - degree 13, connects to 7 communities
+- [[fact_check()]] - degree 8, connects to 5 communities
+- [[article_text()]] - degree 8, connects to 4 communities
+- [[max_full_planned()]] - degree 5, connects to 3 communities

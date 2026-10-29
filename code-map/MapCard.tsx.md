@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/MapCard.tsx"
 type: "code"
-community: "Graphics.tsx"
+community: "Journey.tsx"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Graphicstsx
+  - community/Journeytsx
 ---
 
 # MapCard.tsx
@@ -18,7 +18,7 @@ tags:
 - [[MapCard()]] - `contains` [EXTRACTED]
 - [[Pin()]] - `imports` [EXTRACTED]
 - [[Short.tsx]] - `imports_from` [EXTRACTED]
-- [[clamp_3]] - `contains` [EXTRACTED]
+- [[clamp_4]] - `contains` [EXTRACTED]
 - [[interpolateColor()]] - `contains` [EXTRACTED]
 - [[moveIn()]] - `imports` [EXTRACTED]
 - [[ref_d3_geo]] - `imports_from` [EXTRACTED]
@@ -31,4 +31,4 @@ tags:
 - [[topo]] - `contains` [EXTRACTED]
 - [[useWindow()]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Graphicstsx
+#graphify/code #graphify/EXTRACTED #community/Journeytsx

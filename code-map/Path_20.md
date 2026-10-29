@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "pack_people.py"
+community: "apply_review_fixes"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/pack_peoplepy
+  - community/apply_review_fixes
 ---
 
 # Path
 
 ## Connections
-- [[main()_8]] - `references` [EXTRACTED]
+- [[_review_state()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/pack_peoplepy
+#graphify/code #graphify/EXTRACTED #community/apply_review_fixes

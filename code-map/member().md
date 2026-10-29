@@ -1,12 +1,12 @@
 ---
 source_file: "blender/parts.py"
 type: "code"
-community: "templates.py"
+community: "parts.py"
 location: "L44"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/templatespy
+  - community/partspy
 ---
 
 # member()
@@ -17,7 +17,7 @@ tags:
 - [[_edge_girders()]] - `calls` [EXTRACTED]
 - [[_obj()]] - `calls` [EXTRACTED]
 - [[_truss_panel_members()]] - `calls` [EXTRACTED]
-- [[dress()_1]] - `calls` [EXTRACTED]
+- [[dress()]] - `calls` [EXTRACTED]
 - [[eyebar()]] - `calls` [EXTRACTED]
 - [[girder_bridge()]] - `calls` [EXTRACTED]
 - [[label()]] - `calls` [EXTRACTED]
@@ -25,4 +25,4 @@ tags:
 - [[tower()]] - `calls` [EXTRACTED]
 - [[truss_bridge()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/templatespy
+#graphify/code #graphify/EXTRACTED #community/partspy

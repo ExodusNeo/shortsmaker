@@ -12,7 +12,7 @@ tags:
 # resolve_models()
 
 ## Connections
-- [[build()_2]] - `calls` [EXTRACTED]
+- [[build()_1]] - `calls` [EXTRACTED]
 - [[fetch_model()]] - `calls` [EXTRACTED]
 - [[in_library()]] - `calls` [EXTRACTED]
 - [[opener_render.py]] - `contains` [EXTRACTED]

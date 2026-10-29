@@ -1,12 +1,12 @@
 ---
 source_file: "blender/export_glb.py"
 type: "rationale"
-community: "build_scene.py"
+community: "math"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/build_scenepy
+  - community/math
 ---
 
 # A library model (.blend) as a .glb for the three.js model graphic…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[export_glb.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/build_scenepy
+#graphify/rationale #graphify/EXTRACTED #community/math

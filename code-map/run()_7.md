@@ -1,18 +1,18 @@
 ---
-source_file: "tests/test_style.py"
+source_file: "tests/test_blender_link.py"
 type: "code"
-community: "test_style.py"
-location: "L259"
+community: "Fake"
+location: "L61"
 tags:
   - graphify/code
-  - graphify/INFERRED
-  - community/test_stylepy
+  - graphify/EXTRACTED
+  - community/Fake
 ---
 
 # run()
 
 ## Connections
-- [[test_failed_invention_keeps_the_others()]] - `indirect_call` [INFERRED]
-- [[test_invention_passes_into_slot()]] - `indirect_call` [INFERRED]
+- [[Fake]] - `calls` [EXTRACTED]
+- [[with_fake()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/INFERRED #community/test_stylepy
+#graphify/code #graphify/EXTRACTED #community/Fake

@@ -1,19 +1,19 @@
 ---
 source_file: "shortsmaker/rules.py"
 type: "code"
-community: "draft_rules"
+community: "sys"
 location: "L86"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/draft_rules
+  - community/sys
 ---
 
 # draft_rules()
 
 ## Connections
 - [[Draft channelsname.rules.md for a new channel the AI copies the sections of…]] - `rationale_for` [EXTRACTED]
-- [[Path_34]] - `references` [EXTRACTED]
+- [[Path_18]] - `references` [EXTRACTED]
 - [[ask_ai()]] - `calls` [EXTRACTED]
 - [[json]] - `calls` [EXTRACTED]
 - [[pick_channel()]] - `calls` [EXTRACTED]
@@ -22,4 +22,4 @@ tags:
 - [[rules.py]] - `contains` [EXTRACTED]
 - [[run_draft()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/draft_rules
+#graphify/code #graphify/EXTRACTED #community/sys

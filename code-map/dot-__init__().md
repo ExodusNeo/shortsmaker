@@ -1,17 +1,17 @@
 ---
 source_file: "tests/test_pictures_first.py"
 type: "code"
-community: "pool_of"
-location: "L115"
+community: "write_scripts"
+location: "L200"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/pool_of
+  - community/write_scripts
 ---
 
 # .__init__()
 
 ## Connections
-- [[fake_ai]] - `method` [EXTRACTED]
+- [[planning]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/pool_of
+#graphify/code #graphify/EXTRACTED #community/write_scripts

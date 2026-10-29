@@ -12,7 +12,7 @@ tags:
 # save_pool()
 
 ## Connections
-- [[Path_14]] - `references` [EXTRACTED]
+- [[Path_4]] - `references` [EXTRACTED]
 - [[pic_short()]] - `calls` [EXTRACTED]
 - [[picture_pool.py]] - `contains` [EXTRACTED]
 - [[planned_short()]] - `calls` [EXTRACTED]

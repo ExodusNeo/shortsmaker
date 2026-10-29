@@ -1,30 +1,26 @@
 ---
 type: community
-members: 17
+members: 13
 ---
 
 # owner
 
-**Members:** 17 nodes
+**Members:** 13 nodes
 
 ## Members
-- [[dot-__enter__()_2]] - code - tests/test_pictures_first.py
+- [[dot-__enter__()]] - code - tests/test_pictures_first.py
+- [[dot-__exit__()]] - code - tests/test_pictures_first.py
 - [[dot-__exit__()_1]] - code - tests/test_pictures_first.py
-- [[dot-__exit__()_2]] - code - tests/test_pictures_first.py
+- [[For tests that swap shortsmaker functions by name which module owns each one.]] - rationale - tests/patching.py
 - [[Runs write_scripts with every AInetwork step replaced by canned answers;…]] - rationale - tests/test_full_scenes.py
 - [[The module that defines function `name` (KeyError for anything else).]] - rationale - tests/patching.py
 - [[_fake_planning()]] - code - tests/test_full_scenes.py
-- [[ask()_1]] - code - tests/test_style.py
-- [[ask()_2]] - code - tests/test_style.py
 - [[film()]] - code - tests/test_pictures_first.py
+- [[importlib]] - concept
 - [[owner()]] - code - tests/patching.py
-- [[plan_with()]] - code - tests/test_style.py
-- [[test_director_inventions_are_kept_with_a_spec()]] - code - tests/test_style.py
-- [[test_director_prompt_lists_library()]] - code - tests/test_style.py
+- [[patching.py]] - code - tests/patching.py
+- [[pkgutil]] - concept
 - [[test_director_prompt_mentions_full()]] - code - tests/test_full_scenes.py
-- [[test_fact_check_sees_new_graphics()]] - code - tests/test_style.py
-- [[test_good_look_check_skips_the_extra_compile()]] - code - tests/test_style.py
-- [[write_scripts with every AInetwork step faked; the director answers…]] - rationale - tests/test_style.py
 
 ## Live Query (requires Dataview plugin)
 
@@ -34,19 +30,21 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 9 edges to [[_COMMUNITY_test_style.py]]
-- 4 edges to [[_COMMUNITY_write_scripts]]
-- 4 edges to [[_COMMUNITY_test_full_scenes.py]]
-- 3 edges to [[_COMMUNITY_test_pictures_first.py]]
+- 6 edges to [[_COMMUNITY_test_full_scenes.py]]
+- 4 edges to [[_COMMUNITY_test_pictures_first.py]]
+- 3 edges to [[_COMMUNITY_test_style.py]]
+- 2 edges to [[_COMMUNITY_write_scripts]]
 - 2 edges to [[_COMMUNITY_gather_pool]]
+- 1 edge to [[_COMMUNITY_style_placeholders]]
 - 1 edge to [[_COMMUNITY_pool_of]]
-- 1 edge to [[_COMMUNITY_style_library]]
-- 1 edge to [[_COMMUNITY_rewrite_paint_prompts]]
-- 1 edge to [[_COMMUNITY_article_text]]
+- 1 edge to [[_COMMUNITY_fake_ai]]
+- 1 edge to [[_COMMUNITY_invent_component]]
+- 1 edge to [[_COMMUNITY_apply_review_fixes]]
+- 1 edge to [[_COMMUNITY_sys]]
 
 ## Top bridge nodes
-- [[owner()]] - degree 13, connects to 4 communities
+- [[owner()]] - degree 13, connects to 6 communities
+- [[patching.py]] - degree 10, connects to 4 communities
 - [[_fake_planning()]] - degree 6, connects to 3 communities
-- [[plan_with()]] - degree 7, connects to 2 communities
-- [[dot-__enter__()_2]] - degree 4, connects to 2 communities
-- [[test_fact_check_sees_new_graphics()]] - degree 4, connects to 2 communities
+- [[dot-__enter__()]] - degree 4, connects to 2 communities
+- [[film()]] - degree 3, connects to 2 communities

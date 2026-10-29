@@ -1,18 +1,17 @@
 ---
 source_file: "tests/test_pictures_first.py"
 type: "code"
-community: "write_scripts"
-location: "L515"
+community: "pool_of"
+location: "L286"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/write_scripts
+  - community/pool_of
 ---
 
 # prepare()
 
 ## Connections
-- [[passing()]] - `calls` [EXTRACTED]
-- [[test_both_mode_pools_follow_reply_position()]] - `contains` [EXTRACTED]
+- [[test_prompts_carry_picture_list()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/write_scripts
+#graphify/code #graphify/EXTRACTED #community/pool_of

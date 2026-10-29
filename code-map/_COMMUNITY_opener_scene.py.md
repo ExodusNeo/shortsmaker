@@ -1,30 +1,32 @@
 ---
 type: community
-members: 46
+members: 50
 ---
 
 # opener_scene.py
 
-**Members:** 46 nodes
+**Members:** 50 nodes
 
 ## Members
 - [[(object, frames) to keep in frame the uncut subject until its cut, then its…]] - rationale - blender/opener_scene.py
 - [[dot-allow()]] - code - blender/moves.py
 - [[dot-f()]] - code - blender/moves.py
 - [[dot-support_obj()]] - code - blender/moves.py
+- [[A direction as seen in the shot (right = screen right) turned into the world…]] - rationale - blender/scene_kit.py
 - [[Entry point blender.exe -b --factory-startup --python blenderopener_scene.py…]] - rationale - blender/opener_scene.py
 - [[Everyone a beat moves, apart from tools and things that get cut (their pieces…]] - rationale - blender/opener_scene.py
 - [[Everyone else a beat moves, and the frames they have to be in shot a second…]] - rationale - blender/opener_scene.py
 - [[Everything the moves share the scene's objects by plan id, what stands on…]] - rationale - blender/moves.py
 - [[How far into the depth actors stand when one goes at another (place_actors…]] - rationale - blender/opener_scene.py
 - [[Largest side = size_m, turned so its front (-Y) faces `facing` as seen from the…]] - rationale - blender/scene_kit.py
+- [[No people models, so a tool is swung by an unseen hand (owner, 2026-10-27) its…]] - rationale - blender/opener_scene.py
 - [[Object_4]] - code
 - [[On the hit the lens snaps in, then eases half back; the strongest punch that…]] - rationale - blender/opener_scene.py
 - [[Scene time for each of the n output frames slow motion around the hit, the…]] - rationale - blender/opener_scene.py
-- [[Something physics bodies land on and bounce off; it may still move by its own…]] - rationale - blender/scene_kit.py
 - [[State]] - code - blender/moves.py
 - [[Step every frame in order once so the rigid-body cache holds the whole clip.]] - rationale - blender/scene_kit.py
 - [[The hit the first blade contact, else the first thing that moves.]] - rationale - blender/opener_scene.py
+- [[The people.json of the job's library plus blend; every clip is appended once…]] - rationale - blender/people.py
 - [[The thing moves that must show physics and keyed travel (cut has its own…]] - rationale - blender/opener_scene.py
 - [[The threat is something to show whole (a car, a person), not a blade whose…]] - rationale - blender/opener_scene.py
 - [[Tufts and stones scattered behind and beside the action, never on its ground or…]] - rationale - blender/opener_scene.py
@@ -37,8 +39,9 @@ members: 46
 - [[dress_set()]] - code - blender/opener_scene.py
 - [[first_hit()]] - code - blender/opener_scene.py
 - [[fit()]] - code - blender/scene_kit.py
-- [[main()_9]] - code - blender/opener_scene.py
-- [[make_static()]] - code - blender/scene_kit.py
+- [[hold_offscreen()]] - code - blender/opener_scene.py
+- [[load_library()]] - code - blender/people.py
+- [[main()_7]] - code - blender/opener_scene.py
 - [[mid()]] - code - blender/opener_scene.py
 - [[oc_moves()]] - code - blender/opener_scene.py
 - [[opener_scene.py]] - code - blender/opener_scene.py
@@ -54,6 +57,7 @@ members: 46
 - [[stand_on()]] - code - blender/opener_scene.py
 - [[subject_segments()]] - code - blender/opener_scene.py
 - [[threat_whole()]] - code - blender/opener_scene.py
+- [[view()]] - code - blender/scene_kit.py
 
 ## Live Query (requires Dataview plugin)
 
@@ -64,20 +68,22 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 18 edges to [[_COMMUNITY_scene_kit.py]]
+- 10 edges to [[_COMMUNITY_moves.py]]
 - 10 edges to [[_COMMUNITY_opener_checks.py]]
-- 10 edges to [[_COMMUNITY_math]]
-- 8 edges to [[_COMMUNITY_moves.py]]
-- 6 edges to [[_COMMUNITY_cut]]
-- 5 edges to [[_COMMUNITY_load_model]]
+- 7 edges to [[_COMMUNITY_dress]]
+- 6 edges to [[_COMMUNITY_math]]
+- 4 edges to [[_COMMUNITY_walk]]
+- 3 edges to [[_COMMUNITY__hold]]
 - 2 edges to [[_COMMUNITY_look_toon.py]]
-- 2 edges to [[_COMMUNITY_test_full_scenes.py]]
-- 2 edges to [[_COMMUNITY_build_scene.py]]
+- 1 edge to [[_COMMUNITY_tree]]
 - 1 edge to [[_COMMUNITY_re]]
+- 1 edge to [[_COMMUNITY_sys]]
 - 1 edge to [[_COMMUNITY_json]]
+- 1 edge to [[_COMMUNITY_test_full_scenes.py]]
 
 ## Top bridge nodes
-- [[opener_scene.py]] - degree 34, connects to 11 communities
-- [[main()_9]] - degree 22, connects to 6 communities
-- [[place_actors()]] - degree 13, connects to 4 communities
+- [[opener_scene.py]] - degree 34, connects to 10 communities
+- [[main()_7]] - degree 22, connects to 5 communities
+- [[place_actors()]] - degree 13, connects to 5 communities
 - [[State]] - degree 23, connects to 3 communities
-- [[camera()_1]] - degree 13, connects to 3 communities
+- [[build_set()]] - degree 10, connects to 3 communities

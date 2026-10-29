@@ -1,20 +1,17 @@
 ---
-source_file: "blender/failures.py"
+source_file: "tests/opener_check_cases.py"
 type: "code"
-community: "main"
-location: "L16"
+community: "opener_checks.py"
+location: "L52"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/main
+  - community/opener_checkspy
 ---
 
 # key()
 
 ## Connections
-- [[dot-_crack()]] - `calls` [EXTRACTED]
-- [[dot-play()]] - `calls` [EXTRACTED]
-- [[dot-reset()]] - `calls` [EXTRACTED]
-- [[failures.py]] - `contains` [EXTRACTED]
+- [[opener_check_cases.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/main
+#graphify/code #graphify/EXTRACTED #community/opener_checkspy

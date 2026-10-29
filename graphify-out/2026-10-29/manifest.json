@@ -630,9 +630,9 @@
     "semantic_hash": ""
   },
   "blender/moves.py": {
-    "mtime": 1793173083.635117,
-    "seen": 1793175994.3845785,
-    "ast_hash": "6e8ec78fc832d97eb6787d85f31ad220",
+    "mtime": 1793276519.083676,
+    "seen": 1793276618.8277109,
+    "ast_hash": "cd5bc42f70794f1f7eaa3f3fce5dd9c3",
     "semantic_hash": ""
   },
   "blender/opener_checks.py": {
@@ -642,9 +642,9 @@
     "semantic_hash": ""
   },
   "blender/opener_scene.py": {
-    "mtime": 1793192611.7799523,
-    "seen": 1793192929.2069461,
-    "ast_hash": "91964e6eae61fa002c2f984d2321378d",
+    "mtime": 1793276011.783769,
+    "seen": 1793276618.8277144,
+    "ast_hash": "a1951bd0601f64eb7e65ef8acad03e2e",
     "semantic_hash": ""
   },
   "blender/scene_kit.py": {
@@ -756,9 +756,9 @@
     "semantic_hash": ""
   },
   "tests/test_shot_templates.py": {
-    "mtime": 1793198003.1428697,
-    "seen": 1793198352.127837,
-    "ast_hash": "57406c87b5e269bce1dffcbea9f61b5b",
+    "mtime": 1793275502.8879564,
+    "seen": 1793276618.8279467,
+    "ast_hash": "bf18d7a44ea43b7988ae20e366e66ac8",
     "semantic_hash": ""
   },
   "shortsmaker/topic_ideas.py": {

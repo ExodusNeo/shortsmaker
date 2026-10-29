@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/blender_link.py"
 type: "rationale"
-community: "LinkError"
+community: "call"
 location: "L17"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/LinkError
+  - community/call
 ---
 
 # The add-on isn't reachable or answered with an error.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[LinkError]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/LinkError
+#graphify/rationale #graphify/EXTRACTED #community/call

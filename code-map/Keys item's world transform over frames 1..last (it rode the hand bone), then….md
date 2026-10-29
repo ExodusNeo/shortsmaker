@@ -1,12 +1,12 @@
 ---
 source_file: "blender/people.py"
 type: "rationale"
-community: "math"
-location: "L574"
+community: "_hold"
+location: "L577"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/math
+  - community/_hold
 ---
 
 # Keys item's world transform over frames 1..last (it rode the hand bone), then…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[_bake_free()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/math
+#graphify/rationale #graphify/EXTRACTED #community/_hold

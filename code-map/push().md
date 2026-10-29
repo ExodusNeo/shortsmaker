@@ -17,6 +17,6 @@ tags:
 - [[key_loc()]] - `calls` [EXTRACTED]
 - [[moves.py]] - `contains` [EXTRACTED]
 - [[release()]] - `calls` [EXTRACTED]
-- [[travel()_1]] - `calls` [EXTRACTED]
+- [[travel()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/movespy

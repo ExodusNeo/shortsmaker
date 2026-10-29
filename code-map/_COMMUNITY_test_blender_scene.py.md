@@ -8,7 +8,7 @@ members: 26
 **Members:** 26 nodes
 
 ## Members
-- [[Image_1]] - code
+- [[Image_2]] - code
 - [[Render `plan` with scenes of the given lengths; returns {frame image} for one…]] - rationale - tests/test_blender_scene.py
 - [[Share of pixels that differ clearly between two frames.]] - rationale - tests/test_blender_scene.py
 - [[Tests for the Blender side (blenderbuild_scene.py, 2026-10-22) a tiny fixed…]] - rationale - tests/test_blender_scene.py
@@ -43,11 +43,10 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 6 edges to [[_COMMUNITY_test_full_scenes.py]]
-- 2 edges to [[_COMMUNITY_test_story.py]]
-- 1 edge to [[_COMMUNITY_default_build]]
-- 1 edge to [[_COMMUNITY_json]]
-- 1 edge to [[_COMMUNITY_subprocess]]
+- 5 edges to [[_COMMUNITY_test_full_scenes.py]]
+- 3 edges to [[_COMMUNITY_json]]
+- 2 edges to [[_COMMUNITY_blender_plan.py]]
+- 1 edge to [[_COMMUNITY_sys]]
 
 ## Top bridge nodes
 - [[test_blender_scene.py]] - degree 28, connects to 4 communities

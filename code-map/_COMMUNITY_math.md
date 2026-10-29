@@ -1,54 +1,32 @@
 ---
 type: community
-members: 41
+members: 19
 ---
 
 # math
 
-**Members:** 41 nodes
+**Members:** 19 nodes
 
 ## Members
-- [[A point beside whoever blocks the straight walk from a to b, both legs clear,…]] - rationale - blender/people.py
-- [[Does the prop, apart from the bit in the hand, go through its owner]] - rationale - blender/people.py
-- [[Each role colour on a copy of the material it names (two people never share…]] - rationale - blender/people.py
-- [[Every frame up to f in order, so physics (a dropped case still landing) is…]] - rationale - blender/people.py
-- [[Every person breathes on their Idle clip from frame 1 under whatever they do (a…]] - rationale - blender/people.py
-- [[Hold the blade turned about its length so the camera sees its flat side at the…]] - rationale - blender/people.py
-- [[How a person holds their prop at frame 1, for the report the handle's gap to…]] - rationale - blender/people.py
-- [[How far the stretch from a toward b (the bend feet to 60 % of the way over to…]] - rationale - blender/people.py
-- [[Keys item's world transform over frames 1..last (it rode the hand bone), then…]] - rationale - blender/people.py
-- [[Object_1]] - code
-- [[People in openers (part 2, 2026-10-27) Quaternius rigged people dressed by era…]] - rationale - blender/people.py
-- [[The clip at this person's size its location keys (the feet the leg IK follows,…]] - rationale - blender/people.py
-- [[The owner's body without the hand that holds the prop a cartoon fist wraps…]] - rationale - blender/people.py
-- [[The people.json of the job's library plus blend; every clip is appended once…]] - rationale - blender/people.py
-- [[The person as one mesh (origin at the feet, facing as planned, the role's…]] - rationale - blender/people.py
-- [[The prop held by its handle end in the hand a blade raised up and forward,…]] - rationale - blender/people.py
-- [[Vector_1]] - code
-- [[_append()]] - code - blender/people.py
-- [[_attach()]] - code - blender/people.py
-- [[_bake_free()]] - code - blender/people.py
-- [[_body_tree()]] - code - blender/people.py
-- [[_clearance()]] - code - blender/people.py
-- [[_clip()]] - code - blender/people.py
-- [[_colour()]] - code - blender/people.py
-- [[_detour()]] - code - blender/people.py
-- [[_handle_first()]] - code - blender/people.py
-- [[_hold()]] - code - blender/people.py
-- [[_is_blade()]] - code - blender/people.py
-- [[_show_blade()]] - code - blender/people.py
-- [[_step_to()]] - code - blender/people.py
-- [[_through()]] - code - blender/people.py
-- [[`long` turned to run from a cane's or umbrella's handle to its tip the handle…]] - rationale - blender/people.py
-- [[base_name()]] - code - blender/people.py
-- [[dress()]] - code - blender/people.py
-- [[held()]] - code - blender/people.py
-- [[idle()]] - code - blender/people.py
-- [[item (origin at its bottom) stands on `at` and follows the bone's place and…]] - rationale - blender/people.py
-- [[load_library()]] - code - blender/people.py
+- [[A library model (.blend) as a .glb for the three.js model graphic…]] - rationale - blender/export_glb.py
+- [[Entry point blender.exe -b --factory-startup --python blenderbuild_scene.py…]] - rationale - blender/build_scene.py
+- [[Failure animations on the focus part bend (it buckles), crack (a dark crack…]] - rationale - blender/failures.py
+- [[Object_5]] - code
+- [[Path_29]] - code
+- [[Stand-in people library for the tests blender.exe -b --factory-startup…]] - rationale - tests/people_standin.py
+- [[body()]] - code - tests/people_standin.py
+- [[bpy]] - concept
+- [[build_scene.py]] - code - blender/build_scene.py
+- [[clip()]] - code - tests/people_standin.py
+- [[export_glb.py]] - code - blender/export_glb.py
+- [[failures.py]] - code - blender/failures.py
+- [[frames {frame {bone (x, y, z) degrees}}]] - rationale - tests/people_standin.py
+- [[key()_2]] - code - tests/people_standin.py
+- [[main()_9]] - code - tests/people_standin.py
 - [[math]] - concept
-- [[people.py]] - code - blender/people.py
-- [[width()]] - code - blender/people.py
+- [[mathutils]] - concept
+- [[part()]] - code - tests/people_standin.py
+- [[people_standin.py]] - code - tests/people_standin.py
 
 ## Live Query (requires Dataview plugin)
 
@@ -58,27 +36,32 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 22 edges to [[_COMMUNITY_scene_kit.py]]
-- 10 edges to [[_COMMUNITY_opener_scene.py]]
-- 5 edges to [[_COMMUNITY_moves.py]]
-- 4 edges to [[_COMMUNITY_json]]
-- 4 edges to [[_COMMUNITY_build_scene.py]]
-- 2 edges to [[_COMMUNITY_parts.py]]
+- 12 edges to [[_COMMUNITY_scene_kit.py]]
+- 6 edges to [[_COMMUNITY_parts.py]]
+- 6 edges to [[_COMMUNITY_moves.py]]
+- 6 edges to [[_COMMUNITY_opener_checks.py]]
+- 6 edges to [[_COMMUNITY_opener_scene.py]]
+- 5 edges to [[_COMMUNITY_json]]
+- 4 edges to [[_COMMUNITY_main]]
+- 4 edges to [[_COMMUNITY_Shots]]
+- 4 edges to [[_COMMUNITY_sys]]
+- 4 edges to [[_COMMUNITY_test_full_scenes.py]]
+- 3 edges to [[_COMMUNITY_look.py]]
 - 2 edges to [[_COMMUNITY_test_opener_plan.py]]
-- 2 edges to [[_COMMUNITY_cut]]
-- 2 edges to [[_COMMUNITY_opener_checks.py]]
-- 2 edges to [[_COMMUNITY_people_standin.py]]
-- 2 edges to [[_COMMUNITY_test_full_scenes.py]]
-- 1 edge to [[_COMMUNITY_load_model]]
-- 1 edge to [[_COMMUNITY_Shots]]
+- 2 edges to [[_COMMUNITY_blender_plan.py]]
+- 2 edges to [[_COMMUNITY_templates.py]]
+- 1 edge to [[_COMMUNITY_walk]]
+- 1 edge to [[_COMMUNITY_frame_maker]]
+- 1 edge to [[_COMMUNITY__hold]]
+- 1 edge to [[_COMMUNITY_dress]]
 - 1 edge to [[_COMMUNITY_render]]
-- 1 edge to [[_COMMUNITY_write_frames]]
-- 1 edge to [[_COMMUNITY_clamp]]
-- 1 edge to [[_COMMUNITY_frame_render.py]]
+- 1 edge to [[_COMMUNITY_re]]
+- 1 edge to [[_COMMUNITY_pack_people.py]]
+- 1 edge to [[_COMMUNITY_look_toon.py]]
 
 ## Top bridge nodes
-- [[math]] - degree 37, connects to 16 communities
-- [[people.py]] - degree 35, connects to 5 communities
-- [[dress()]] - degree 12, connects to 2 communities
-- [[_hold()]] - degree 9, connects to 1 community
-- [[Vector_1]] - degree 8, connects to 1 community
+- [[math]] - degree 38, connects to 15 communities
+- [[bpy]] - degree 15, connects to 9 communities
+- [[build_scene.py]] - degree 16, connects to 8 communities
+- [[mathutils]] - degree 11, connects to 6 communities
+- [[failures.py]] - degree 10, connects to 4 communities

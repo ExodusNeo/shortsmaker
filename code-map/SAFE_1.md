@@ -1,17 +1,18 @@
 ---
-source_file: "remotion/src/full/Journey.tsx"
+source_file: "remotion/src/full/guarded.tsx"
 type: "code"
-community: "Journey.tsx"
-location: "L31"
+community: "toolkit.tsx"
+location: "L11"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Journeytsx
+  - community/toolkittsx
 ---
 
 # SAFE
 
 ## Connections
-- [[Journey.tsx]] - `contains` [EXTRACTED]
+- [[guarded.test.ts]] - `imports` [EXTRACTED]
+- [[guarded.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Journeytsx
+#graphify/code #graphify/EXTRACTED #community/toolkittsx

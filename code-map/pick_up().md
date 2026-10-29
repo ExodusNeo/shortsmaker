@@ -2,7 +2,7 @@
 source_file: "blender/people.py"
 type: "code"
 community: "scene_kit.py"
-location: "L468"
+location: "L471"
 tags:
   - graphify/code
   - graphify/EXTRACTED

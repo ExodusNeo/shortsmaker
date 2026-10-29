@@ -1,12 +1,12 @@
 ---
 source_file: "tests/guarded.test.ts"
 type: "code"
-community: "guarded.tsx"
+community: "toolkit.tsx"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/guardedtsx
+  - community/toolkittsx
 ---
 
 # guarded.test.ts
@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[Box]] - `imports` [EXTRACTED]
 - [[MIN_MOVE]] - `imports` [EXTRACTED]
-- [[SAFE]] - `imports` [EXTRACTED]
+- [[SAFE_1]] - `imports` [EXTRACTED]
 - [[boxAt()]] - `imports` [EXTRACTED]
 - [[crosses()]] - `contains` [EXTRACTED]
 - [[fitCard()]] - `imports` [EXTRACTED]
@@ -23,9 +23,9 @@ tags:
 - [[layoutColumn()]] - `imports` [EXTRACTED]
 - [[layoutGrid()]] - `imports` [EXTRACTED]
 - [[layoutRow()]] - `imports` [EXTRACTED]
-- [[ok()]] - `contains` [EXTRACTED]
+- [[ok()_2]] - `contains` [EXTRACTED]
 - [[routeArrow()]] - `imports` [EXTRACTED]
-- [[test()]] - `contains` [EXTRACTED]
-- [[travel()]] - `imports` [EXTRACTED]
+- [[test()_1]] - `contains` [EXTRACTED]
+- [[travel()_1]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/guardedtsx
+#graphify/code #graphify/EXTRACTED #community/toolkittsx

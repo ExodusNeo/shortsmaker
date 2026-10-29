@@ -1,12 +1,12 @@
 ---
 source_file: "blender/export_glb.py"
 type: "code"
-community: "build_scene.py"
+community: "math"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/build_scenepy
+  - community/math
 ---
 
 # export_glb.py
@@ -16,4 +16,4 @@ tags:
 - [[bpy]] - `imports` [EXTRACTED]
 - [[sys]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/build_scenepy
+#graphify/code #graphify/EXTRACTED #community/math

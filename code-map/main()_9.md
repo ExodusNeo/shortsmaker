@@ -1,38 +1,21 @@
 ---
-source_file: "blender/opener_scene.py"
+source_file: "tests/people_standin.py"
 type: "code"
-community: "opener_scene.py"
-location: "L609"
+community: "math"
+location: "L116"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/opener_scenepy
+  - community/math
 ---
 
 # main()
 
 ## Connections
-- [[State]] - `calls` [EXTRACTED]
-- [[apply()]] - `calls` [EXTRACTED]
-- [[apply()_1]] - `calls` [EXTRACTED]
-- [[build_set()]] - `calls` [EXTRACTED]
-- [[camera()_1]] - `calls` [EXTRACTED]
-- [[checks()]] - `calls` [EXTRACTED]
-- [[dress_set()]] - `calls` [EXTRACTED]
-- [[fcurves_of()]] - `calls` [EXTRACTED]
-- [[first_hit()]] - `calls` [EXTRACTED]
-- [[held()]] - `calls` [EXTRACTED]
-- [[hold_offscreen()]] - `calls` [EXTRACTED]
-- [[idle()]] - `calls` [EXTRACTED]
-- [[interpolation()]] - `calls` [EXTRACTED]
-- [[load_library()]] - `calls` [EXTRACTED]
-- [[opener_scene.py]] - `contains` [EXTRACTED]
-- [[place_actors()]] - `calls` [EXTRACTED]
-- [[punch_in()]] - `calls` [EXTRACTED]
-- [[render()_4]] - `calls` [EXTRACTED]
-- [[retime()]] - `calls` [EXTRACTED]
-- [[setup()_1]] - `calls` [EXTRACTED]
-- [[simulate()]] - `calls` [EXTRACTED]
-- [[world_verts()]] - `calls` [EXTRACTED]
+- [[Path_29]] - `references` [EXTRACTED]
+- [[body()]] - `calls` [EXTRACTED]
+- [[clip()]] - `calls` [EXTRACTED]
+- [[json]] - `calls` [EXTRACTED]
+- [[people_standin.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/opener_scenepy
+#graphify/code #graphify/EXTRACTED #community/math

@@ -1,17 +1,18 @@
 ---
-source_file: "tools/split_make_shorts.py"
+source_file: "blender/moves.py"
 type: "code"
-community: "split_make_shorts.py"
-location: "L385"
+community: "moves.py"
+location: "L29"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/split_make_shortspy
+  - community/movespy
 ---
 
 # .__init__()
 
 ## Connections
-- [[Unqualify]] - `method` [EXTRACTED]
+- [[State]] - `method` [EXTRACTED]
+- [[Vector_3]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/split_make_shortspy
+#graphify/code #graphify/EXTRACTED #community/movespy

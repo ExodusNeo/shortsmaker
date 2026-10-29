@@ -2,7 +2,7 @@
 source_file: "blender/people.py"
 type: "code"
 community: "scene_kit.py"
-location: "L338"
+location: "L341"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -13,8 +13,9 @@ tags:
 
 ## Connections
 - [[The way o faces on frame f its planned facing turned by every turn keyed since…]] - `rationale_for` [EXTRACTED]
-- [[Vector_1]] - `references` [EXTRACTED]
+- [[Vector_4]] - `references` [EXTRACTED]
 - [[_travel()]] - `calls` [EXTRACTED]
+- [[drink()]] - `calls` [EXTRACTED]
 - [[facing_vec()]] - `calls` [EXTRACTED]
 - [[people.py]] - `contains` [EXTRACTED]
 - [[pick_up()]] - `calls` [EXTRACTED]

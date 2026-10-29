@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/full/examples/ExampleChain.tsx"
 type: "code"
-community: "guarded.tsx"
+community: "toolkit.tsx"
 location: "L7"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/guardedtsx
+  - community/toolkittsx
 ---
 
 # ExampleChain()
@@ -22,6 +22,6 @@ tags:
 - [[focusCam()]] - `calls` [EXTRACTED]
 - [[layoutColumn()]] - `calls` [EXTRACTED]
 - [[skinOf()]] - `calls` [EXTRACTED]
-- [[travel()]] - `calls` [EXTRACTED]
+- [[travel()_1]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/guardedtsx
+#graphify/code #graphify/EXTRACTED #community/toolkittsx

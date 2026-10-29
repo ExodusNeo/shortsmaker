@@ -13,8 +13,8 @@ tags:
 
 ## Connections
 - [[planning]] - `calls` [EXTRACTED]
-- [[prepare()_1]] - `contains` [EXTRACTED]
-- [[prepare()]] - `indirect_call` [INFERRED]
+- [[prepare()_3]] - `contains` [EXTRACTED]
+- [[prepare()_2]] - `indirect_call` [INFERRED]
 - [[reply()]] - `indirect_call` [INFERRED]
 - [[test_pictures_first.py]] - `contains` [EXTRACTED]
 - [[write_scripts()]] - `calls` [EXTRACTED]

@@ -18,7 +18,7 @@ tags:
 - [[_piers_and_deck()]] - `calls` [INFERRED]
 - [[_towers()]] - `calls` [INFERRED]
 - [[cable_stayed_bridge()]] - `calls` [INFERRED]
-- [[dress()_1]] - `calls` [INFERRED]
+- [[dress()]] - `calls` [INFERRED]
 - [[girder_bridge()]] - `calls` [INFERRED]
 - [[truss_bridge()]] - `calls` [INFERRED]
 

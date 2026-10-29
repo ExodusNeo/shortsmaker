@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "load_model"
+community: "dress"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/load_model
+  - community/dress
 ---
 
 # Material
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[ground_material()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/load_model
+#graphify/code #graphify/EXTRACTED #community/dress

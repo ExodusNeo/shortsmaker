@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[Which way the body faces, flat, from its middle toward its face (the Face…]] - `rationale_for` [EXTRACTED]
 - [[base_name()_1]] - `calls` [EXTRACTED]
-- [[main()_8]] - `calls` [EXTRACTED]
+- [[main()_6]] - `calls` [EXTRACTED]
 - [[pack_people.py]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/pack_peoplepy

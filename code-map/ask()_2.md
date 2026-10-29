@@ -1,17 +1,17 @@
 ---
-source_file: "tests/test_style.py"
+source_file: "tests/test_rules.py"
 type: "code"
-community: "owner"
-location: "L202"
+community: "test_rules.py"
+location: "L255"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/owner
+  - community/test_rulespy
 ---
 
 # ask()
 
 ## Connections
-- [[test_fact_check_sees_new_graphics()]] - `contains` [EXTRACTED]
+- [[run_draft()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/owner
+#graphify/code #graphify/EXTRACTED #community/test_rulespy

@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "people_standin.py"
+community: "paint_instead"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/people_standinpy
+  - community/paint_instead
 ---
 
 # Path
 
 ## Connections
-- [[main()_10]] - `references` [EXTRACTED]
+- [[to_vertical()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/people_standinpy
+#graphify/code #graphify/EXTRACTED #community/paint_instead

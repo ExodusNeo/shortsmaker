@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[Shot templates (blendershot_templates.json, 2026-10-28) every template, with…]] - `rationale_for` [EXTRACTED]
 - [[__init__.py]] - `imports_from` [EXTRACTED]
-- [[build()_2]] - `contains` [EXTRACTED]
+- [[build()_1]] - `contains` [EXTRACTED]
 - [[config.py]] - `imports_from` [EXTRACTED]
 - [[copy]] - `imports` [EXTRACTED]
 - [[json]] - `imports` [EXTRACTED]

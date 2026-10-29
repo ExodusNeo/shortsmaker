@@ -12,7 +12,7 @@ tags:
 # height()
 
 ## Connections
-- [[main()_8]] - `calls` [EXTRACTED]
+- [[main()_6]] - `calls` [EXTRACTED]
 - [[pack_people.py]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/pack_peoplepy

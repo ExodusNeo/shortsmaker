@@ -1,11 +1,11 @@
 ---
 type: community
-members: 27
+members: 26
 ---
 
 # Halftone.tsx
 
-**Members:** 27 nodes
+**Members:** 26 nodes
 
 ## Members
 - [[Engraving()]] - code - remotion/src/style/looks/Engraving.tsx
@@ -13,7 +13,6 @@ members: 27
 - [[FILL]] - code - remotion/src/style/kit.ts
 - [[Halftone()]] - code - remotion/src/style/looks/Halftone.tsx
 - [[Halftone.tsx]] - code - remotion/src/style/looks/Halftone.tsx
-- [[Inks]] - code - remotion/src/style/types.ts
 - [[Miniature()]] - code - remotion/src/style/looks/Miniature.tsx
 - [[Miniature.tsx]] - code - remotion/src/style/looks/Miniature.tsx
 - [[Riso()]] - code - remotion/src/style/looks/Riso.tsx
@@ -44,10 +43,10 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 35 edges to [[_COMMUNITY_styleindex.ts]]
+- 36 edges to [[_COMMUNITY_styleindex.ts]]
 - 5 edges to [[_COMMUNITY_toolkit.tsx]]
-- 2 edges to [[_COMMUNITY_Short.tsx]]
-- 1 edge to [[_COMMUNITY_Paper]]
+- 1 edge to [[_COMMUNITY_Short.tsx]]
+- 1 edge to [[_COMMUNITY_ref_remotion]]
 
 ## Top bridge nodes
 - [[Silent.tsx]] - degree 13, connects to 3 communities

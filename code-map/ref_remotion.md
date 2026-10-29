@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "Paper"
+community: "ref_remotion"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Paper
+  - community/ref_remotion
 ---
 
 # ref_remotion
@@ -30,4 +30,4 @@ tags:
 - [[srcindex.ts]] - `imports_from` [EXTRACTED]
 - [[toolkit.tsx]] - `imports_from` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Paper
+#graphify/concept #graphify/EXTRACTED #community/ref_remotion

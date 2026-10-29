@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/blender_link.py"
 type: "rationale"
-community: "test_blender_link.py"
+community: "fetch_model"
 location: "L121"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/test_blender_linkpy
+  - community/fetch_model
 ---
 
 # Download `hit` through the owner's Blender into the library: (the .blend,…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[fetch_model()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/test_blender_linkpy
+#graphify/rationale #graphify/EXTRACTED #community/fetch_model

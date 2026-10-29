@@ -16,6 +16,7 @@ tags:
 - [[_ground()]] - `calls` [EXTRACTED]
 - [[_strip()]] - `calls` [EXTRACTED]
 - [[_travel()]] - `calls` [EXTRACTED]
+- [[drink()]] - `calls` [EXTRACTED]
 - [[people.py]] - `contains` [EXTRACTED]
 - [[pick_up()]] - `calls` [EXTRACTED]
 - [[prop_move()]] - `calls` [EXTRACTED]

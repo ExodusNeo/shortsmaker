@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/short_render.py"
 type: "rationale"
-community: "frame_render.py"
+community: "drawn_thumbnail"
 location: "L75"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/frame_renderpy
+  - community/drawn_thumbnail
 ---
 
 # (picture, credit line, CHECK line) for a drawn Short's thumbnail: the real…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[drawn_thumbnail()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/frame_renderpy
+#graphify/rationale #graphify/EXTRACTED #community/drawn_thumbnail

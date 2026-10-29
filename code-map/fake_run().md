@@ -1,17 +1,18 @@
 ---
-source_file: "tests/test_full_scenes.py"
+source_file: "tests/test_package.py"
 type: "code"
-community: "local_clips"
-location: "L745"
+community: "ask_ai"
+location: "L90"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/local_clips
+  - community/ask_ai
 ---
 
 # fake_run()
 
 ## Connections
-- [[test_local_job_retries_a_hard_crash()]] - `indirect_call` [INFERRED]
+- [[test_argon_out_of_quota_switches_to_flash()]] - `indirect_call` [INFERRED]
+- [[test_gemini_timeout_switches_to_flash()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/INFERRED #community/local_clips
+#graphify/code #graphify/INFERRED #community/ask_ai

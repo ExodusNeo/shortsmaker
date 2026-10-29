@@ -14,8 +14,8 @@ tags:
 ## Connections
 - [[_review_state()]] - `calls` [EXTRACTED]
 - [[apply_review_fixes()]] - `calls` [EXTRACTED]
-- [[ask()_4]] - `contains` [EXTRACTED]
-- [[ask()_5]] - `indirect_call` [INFERRED]
+- [[ask()_8]] - `contains` [EXTRACTED]
+- [[ask()_6]] - `indirect_call` [INFERRED]
 - [[test_full_scenes.py]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/apply_review_fixes

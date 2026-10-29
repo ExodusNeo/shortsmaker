@@ -1,12 +1,12 @@
 ---
 source_file: "blender/scene_kit.py"
 type: "code"
-community: "moves.py"
+community: "scene_kit.py"
 location: "L197"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/movespy
+  - community/scene_kitpy
 ---
 
 # key_loc()
@@ -16,6 +16,7 @@ tags:
 - [[_travel()]] - `calls` [EXTRACTED]
 - [[camera()_1]] - `calls` [EXTRACTED]
 - [[cut()]] - `calls` [EXTRACTED]
+- [[drink()]] - `calls` [EXTRACTED]
 - [[fall()]] - `calls` [EXTRACTED]
 - [[hold_offscreen()]] - `calls` [EXTRACTED]
 - [[hop_off()]] - `calls` [EXTRACTED]
@@ -25,4 +26,4 @@ tags:
 - [[sink()]] - `calls` [EXTRACTED]
 - [[walk()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/movespy
+#graphify/code #graphify/EXTRACTED #community/scene_kitpy

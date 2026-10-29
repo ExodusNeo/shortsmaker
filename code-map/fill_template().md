@@ -15,7 +15,7 @@ tags:
 - [[The plan from the planner's {template, moment, set, fill}, or None when…]] - `rationale_for` [EXTRACTED]
 - [[_slot_ok()]] - `calls` [EXTRACTED]
 - [[_sub()]] - `calls` [EXTRACTED]
-- [[build()_2]] - `calls` [EXTRACTED]
+- [[build()_1]] - `calls` [EXTRACTED]
 - [[clean_opener()]] - `calls` [EXTRACTED]
 - [[opener_plan.py]] - `contains` [EXTRACTED]
 - [[plan_openers()]] - `calls` [EXTRACTED]

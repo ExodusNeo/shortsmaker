@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/opener_render.py"
 type: "rationale"
-community: "review"
+community: "json"
 location: "L159"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/review
+  - community/json
 ---
 
 # The AI looks at 8 frames: does the action make physical sense, and does frame 0…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[review()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/review
+#graphify/rationale #graphify/EXTRACTED #community/json

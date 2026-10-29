@@ -1,17 +1,17 @@
 ---
 source_file: ""
 type: "concept"
-community: "test_story.py"
+community: "json"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/test_storypy
+  - community/json
 ---
 
 # tempfile
 
 ## Connections
-- [[build()_2]] - `calls` [EXTRACTED]
+- [[build()_1]] - `calls` [EXTRACTED]
 - [[run_ts_tests.py]] - `imports` [EXTRACTED]
 - [[test_blender_link.py]] - `imports` [EXTRACTED]
 - [[test_blender_render.py]] - `imports` [EXTRACTED]
@@ -33,4 +33,4 @@ tags:
 - [[test_story.py]] - `imports` [EXTRACTED]
 - [[test_topic_ideas.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/test_storypy
+#graphify/concept #graphify/EXTRACTED #community/json

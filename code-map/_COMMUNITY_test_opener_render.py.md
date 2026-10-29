@@ -51,23 +51,24 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 11 edges to [[_COMMUNITY_test_full_scenes.py]]
-- 9 edges to [[_COMMUNITY_json]]
+- 13 edges to [[_COMMUNITY_json]]
 - 9 edges to [[_COMMUNITY_use_opener]]
+- 9 edges to [[_COMMUNITY_test_full_scenes.py]]
 - 4 edges to [[_COMMUNITY_resolve_models]]
-- 3 edges to [[_COMMUNITY_review]]
 - 2 edges to [[_COMMUNITY_ffmpeg]]
 - 2 edges to [[_COMMUNITY_test_opener_plan.py]]
-- 2 edges to [[_COMMUNITY_test_story.py]]
-- 1 edge to [[_COMMUNITY_local_clips]]
+- 1 edge to [[_COMMUNITY_test_rules.py]]
 - 1 edge to [[_COMMUNITY_test_blender_render.py]]
-- 1 edge to [[_COMMUNITY_test_blender_link.py]]
-- 1 edge to [[_COMMUNITY_capture_prompts]]
+- 1 edge to [[_COMMUNITY_call]]
+- 1 edge to [[_COMMUNITY_render]]
+- 1 edge to [[_COMMUNITY_full_cues]]
+- 1 edge to [[_COMMUNITY_test_review_frames_include_key_moments]]
 - 1 edge to [[_COMMUNITY_re]]
+- 1 edge to [[_COMMUNITY_sys]]
 
 ## Top bridge nodes
 - [[test_opener_render.py]] - degree 52, connects to 10 communities
-- [[render_opener()]] - degree 33, connects to 9 communities
+- [[render_opener()]] - degree 33, connects to 8 communities
 - [[Env]] - degree 24, connects to 1 community
 - [[test_success_returns_clip()]] - degree 6, connects to 1 community
 - [[test_pick_model()]] - degree 5, connects to 1 community

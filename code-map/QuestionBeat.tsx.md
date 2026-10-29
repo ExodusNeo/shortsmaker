@@ -12,7 +12,7 @@ tags:
 # QuestionBeat.tsx
 
 ## Connections
-- [[CLAMP_8]] - `imports` [EXTRACTED]
+- [[CLAMP_5]] - `imports` [EXTRACTED]
 - [[FONT]] - `imports` [EXTRACTED]
 - [[Overlay]] - `imports` [EXTRACTED]
 - [[QuestionBeat()]] - `contains` [EXTRACTED]

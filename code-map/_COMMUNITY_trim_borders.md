@@ -26,11 +26,10 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 3 edges to [[_COMMUNITY_test_full_scenes.py]]
-- 2 edges to [[_COMMUNITY_frame_render.py]]
-- 1 edge to [[_COMMUNITY_words_of]]
+- 5 edges to [[_COMMUNITY_test_full_scenes.py]]
+- 1 edge to [[_COMMUNITY_clean_full]]
 
 ## Top bridge nodes
-- [[trim_borders()]] - degree 7, connects to 3 communities
-- [[is_stereo()]] - degree 6, connects to 2 communities
+- [[trim_borders()]] - degree 7, connects to 2 communities
+- [[is_stereo()]] - degree 6, connects to 1 community
 - [[statistics]] - degree 2, connects to 1 community

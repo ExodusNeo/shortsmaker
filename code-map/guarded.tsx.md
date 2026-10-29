@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/full/guarded.tsx"
 type: "code"
-community: "guarded.tsx"
+community: "toolkit.tsx"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/guardedtsx
+  - community/toolkittsx
 ---
 
 # guarded.tsx
@@ -20,14 +20,14 @@ tags:
 - [[NORMAL]] - `contains` [EXTRACTED]
 - [[Paper.tsx]] - `imports_from` [EXTRACTED]
 - [[Pt]] - `contains` [EXTRACTED]
-- [[SAFE]] - `contains` [EXTRACTED]
+- [[SAFE_1]] - `contains` [EXTRACTED]
 - [[SERIF]] - `imports` [EXTRACTED]
 - [[SIDES]] - `contains` [EXTRACTED]
 - [[Side]] - `contains` [EXTRACTED]
 - [[SkinName]] - `imports` [EXTRACTED]
 - [[TYPE]] - `imports` [EXTRACTED]
 - [[boxAt()]] - `contains` [EXTRACTED]
-- [[clamp_4]] - `contains` [EXTRACTED]
+- [[clamp_9]] - `contains` [EXTRACTED]
 - [[fitCard()]] - `contains` [EXTRACTED]
 - [[fulltypes.ts]] - `imports_from` [EXTRACTED]
 - [[guarded.test.ts]] - `imports_from` [EXTRACTED]
@@ -43,6 +43,6 @@ tags:
 - [[routeArrow()]] - `contains` [EXTRACTED]
 - [[skinOf()]] - `imports` [EXTRACTED]
 - [[toolkit.tsx]] - `re_exports` [EXTRACTED]
-- [[travel()]] - `contains` [EXTRACTED]
+- [[travel()_1]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/guardedtsx
+#graphify/code #graphify/EXTRACTED #community/toolkittsx

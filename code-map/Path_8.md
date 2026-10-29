@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "test_blender_link.py"
+community: "fetch_model"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_blender_linkpy
+  - community/fetch_model
 ---
 
 # Path
@@ -15,4 +15,4 @@ tags:
 - [[fetch_model()]] - `references` [EXTRACTED]
 - [[in_library()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_blender_linkpy
+#graphify/code #graphify/EXTRACTED #community/fetch_model

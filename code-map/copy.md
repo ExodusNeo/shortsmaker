@@ -11,7 +11,7 @@ tags:
 # copy
 
 ## Connections
-- [[build()_2]] - `calls` [EXTRACTED]
+- [[build()_1]] - `calls` [EXTRACTED]
 - [[opener_render.py]] - `imports` [EXTRACTED]
 - [[scale_beats()]] - `calls` [EXTRACTED]
 - [[test_opener_plan.py]] - `imports` [EXTRACTED]

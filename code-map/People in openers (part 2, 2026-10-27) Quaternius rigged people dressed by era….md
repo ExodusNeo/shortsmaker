@@ -1,12 +1,12 @@
 ---
 source_file: "blender/people.py"
 type: "rationale"
-community: "math"
+community: "scene_kit.py"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/math
+  - community/scene_kitpy
 ---
 
 # People in openers (part 2, 2026-10-27): Quaternius rigged people dressed by era…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[people.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/math
+#graphify/rationale #graphify/EXTRACTED #community/scene_kitpy
