@@ -441,5 +441,61 @@
     "follow": "runner"
    }
   }
+ },
+ "drink": {
+  "shows": "a person lifts a cup, beaker or bottle to their face, tips it back and it vanishes (cartoon gag: no mouth), then they react",
+  "grounds": [
+   "wood floor",
+   "stone",
+   "dirt",
+   "grass",
+   "table"
+  ],
+  "slots": {
+   "drinker": {
+    "kind": "role",
+    "note": "who drinks"
+   },
+   "cup": {
+    "kind": "prop",
+    "note": "what they drink from, small (\"beaker\", \"mug\", \"bottle\", \"glass\")"
+   },
+   "after": {
+    "kind": "pick",
+    "of": [
+     "collapse",
+     "cheer",
+     "despair"
+    ],
+    "note": "how they react once it's down"
+   }
+  },
+  "plan": {
+   "actors": [
+    {
+     "id": "drinker",
+     "person": "$drinker",
+     "facing": "right",
+     "prop": "$cup",
+     "prop_size_m": 0.3
+    }
+   ],
+   "beats": [
+    {
+     "move": "drink",
+     "actor": "drinker",
+     "at": 0.2
+    },
+    {
+     "move": "$after",
+     "actor": "drinker",
+     "at": 1.7
+    }
+   ],
+   "camera": {
+    "angle": "side",
+    "follow": "drinker"
+   }
+  }
  }
 }

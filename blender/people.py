@@ -326,6 +326,9 @@ def move(beat: dict, st, lib: dict) -> None:
     if beat["move"] == "pick_up":
         pick_up(beat, st, lib, o, arm, f0)
         return
+    if beat["move"] == "drink":
+        drink(beat, st, lib, o, arm, f0)
+        return
     if kit.TABLES["people_moves"][beat["move"]]["kind"] == "in_place":
         strip = _strip(arm, lib, clip, f0)
         _ground(o, st, f0, int(strip.frame_end))
@@ -648,3 +651,61 @@ def prop_move(beat: dict, st, o, strip) -> None:
         if other is not o and other.rigid_body is not None and other.rigid_body.type == "PASSIVE":
             other.rigid_body.collision_collections[2] = True
     st.resting.append((prop, st.ground))
+
+
+DRINK_UP, DRINK_TIP, DRINK_GONE, DRINK_DOWN = 0.5, 0.35, 0.12, 0.4  # seconds: to the face, tipped, popped, arm down
+DRINK_TILT = 110  # degrees the cup tips back toward the face
+
+
+def drink(beat: dict, st, lib: dict, o, arm, f0: int) -> None:
+    """drink (owner, 2026-10-29): no clip lifts a hand to the mouth, so an IK pulls the right fist up in front of the
+    face, the held cup tips back toward it and then shrinks to nothing (the owner's gag: there is no mouth to pour
+    into), and the empty hand goes back down. The person's next move waits for it (st.busy)."""
+    prop = bpy.data.objects.get(o.get("prop") or "")
+    if prop is None:
+        st.failures.append(f"drink: {beat['actor']} has no prop to drink from")
+        return
+    sc = bpy.context.scene
+    up = f0 + round(DRINK_UP * st.fps)
+    tipped = up + round(DRINK_TIP * st.fps)
+    gone = tipped + round(DRINK_GONE * st.fps)
+    down = gone + round(DRINK_DOWN * st.fps)
+    if gone > sc.frame_end:
+        st.failures.append(f"drink: {beat['actor']} starts drinking too late to finish by the end of the scene")
+        return
+    sc.frame_set(f0)
+    hand = arm.pose.bones[lib["bones"]["hand_r"]]
+    head = arm.pose.bones[lib["bones"]["head"]]
+    base, top = arm.matrix_world @ head.head, arm.matrix_world @ head.tail
+    face = facing_now(o, f0)
+    # in front of the face, a quarter up the head: measured on the mesh, as the cartoon head is far bigger than its
+    # bone (placed from the bone, the cup went to the cheek like a phone call, 2026-10-29)
+    chin = base + (top - base) * 0.25
+    front = max((v - chin).dot(face) for v in kit.world_verts(o) if base.z <= v.z <= top.z)
+    mouth = chin + face * (front + 0.04)
+    rest = arm.matrix_world @ hand.head
+    aim = bpy.data.objects.new(f"{o.name}.drink", None)
+    sc.collection.objects.link(aim)
+    for f, at in ((f0, rest), (up, mouth), (gone, mouth), (down, rest)):
+        kit.key_loc(aim, f, at)
+    ik = hand.parent.constraints.new("IK")  # the forearm: its tail is the wrist
+    ik.target, ik.chain_count = aim, 2
+    for f, v in ((f0, 0.0), (up, 1.0), (gone, 1.0), (down, 0.0)):
+        ik.influence = v
+        ik.keyframe_insert("influence", frame=f)
+    # tip the cup about its grip, top toward the face; keyed on its own transform under the hand's CHILD_OF
+    sc.frame_set(tipped)
+    world = prop.matrix_world.copy()
+    held = world @ prop.matrix_basis.inverted()  # the hand's part of its world matrix
+    grip = world @ Vector(prop["grip"])
+    turn = Matrix.Translation(grip) @ Matrix.Rotation(math.radians(DRINK_TILT), 4, face.cross(Vector((0, 0, 1))).normalized()) \
+        @ Matrix.Translation(-grip)
+    loc0, rot0, size0 = prop.location.copy(), prop.rotation_euler.copy(), prop.scale.copy()
+    loc1, quat1, _ = (held.inverted() @ turn @ world).decompose()
+    for f, loc, rot, size in ((up, loc0, rot0, size0), (tipped, loc1, quat1.to_euler(rot0.order, rot0), size0),
+                              (gone, loc1, quat1.to_euler(rot0.order, rot0), size0 * 0.01)):
+        prop.location, prop.rotation_euler, prop.scale = loc, rot, size
+        for path in ("location", "rotation_euler", "scale"):
+            prop.keyframe_insert(path, frame=f)
+    sc.frame_set(1)
+    st.busy[beat["actor"]] = down

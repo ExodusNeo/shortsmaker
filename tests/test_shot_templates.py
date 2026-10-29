@@ -51,6 +51,15 @@ SAMPLES = {  # name -> the planner's reply; every template, and every pick and o
     "chase_night": {"template": "chase", "moment": "guards chase an escaped prisoner through the snow",
                     "set": {"ground": "snow", "light": "night", "backdrop": "row house"},
                     "fill": {"runner": "man", "chaser": "ww2_soldier"}},
+    "drink_collapse": {"template": "drink", "moment": "a doctor drinks a beaker of bacteria and collapses",
+                     "set": {"ground": "wood floor", "light": "day", "backdrop": None},
+                     "fill": {"drinker": "doctor", "cup": "beaker", "after": "collapse"}},
+    "drink_despair": {"template": "drink", "moment": "a farmer drinks the rainmaker's tonic and hangs his head",
+                      "set": {"ground": "dirt", "light": "dusk", "backdrop": "barn"},
+                      "fill": {"drinker": "farmer", "cup": "mug", "after": "despair"}},
+    "drink_cheer": {"template": "drink", "moment": "the ship's baker downs a bottle of whiskey and cheers",
+                    "set": {"ground": "wood floor", "light": "night", "backdrop": None},
+                    "fill": {"drinker": "chef", "cup": "bottle", "after": "cheer"}},
 }
 SECONDS = 3.0
 OUT = ROOT / "cache" / "shot_templates"

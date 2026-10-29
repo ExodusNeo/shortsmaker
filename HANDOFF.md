@@ -179,8 +179,11 @@ Rules that keep it working:
   prop; another walks over, picks it up and walks/runs off), `sink` (a ship tilts and goes down on water, still
   going at the last frame; no people), `chase` (one person runs off, a second runs after them; the camera rides with
   the middle of the pair, `opener_scene.camera` "together"). Sink + chase added 2026-10-29 after the owner pointed out
-  4 templates fit too few stories (past topics: sinkings x4, chases x3); drink was wanted (x3) but no people clip
-  lifts a hand to the mouth (Quaternius 17 clips, UAL has none either). The planner (`opener_plan.plan_openers`) only picks one
+  4 templates fit too few stories (past topics: sinkings x4, chases x3), and `drink` (a person lifts a cup to the
+  face, it tips back and vanishes, then they collapse, cheer or despair). No clip lifts a hand to the mouth, so the
+  `drink` people move (`people.drink`) pulls the right fist in front of the measured face with an IK on the forearm;
+  the cup vanishing is the owner's gag (no mouths). Flinch was dropped as its reaction: it doesn't read.
+  The planner (`opener_plan.plan_openers`) only picks one
   and fills its slots; `fill_template` + `clean_opener` check every value. Each template passed every check with
   the real library and was looked at by eye.
 - **No template fits -> no Blender**: the motion-graphic opener plays (`picker.opener_graphic`, always planned for
