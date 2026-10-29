@@ -64,23 +64,21 @@ SORT file.name ASC
 - 10 edges to [[_COMMUNITY_opener_scene.py]]
 - 6 edges to [[_COMMUNITY_moves.py]]
 - 4 edges to [[_COMMUNITY_build_scene.py]]
+- 4 edges to [[_COMMUNITY_test_full_scenes.py]]
+- 3 edges to [[_COMMUNITY_json]]
 - 2 edges to [[_COMMUNITY_parts.py]]
-- 2 edges to [[_COMMUNITY_subprocess]]
 - 2 edges to [[_COMMUNITY_test_opener_plan.py]]
 - 2 edges to [[_COMMUNITY_cut]]
 - 2 edges to [[_COMMUNITY_opener_checks.py]]
-- 2 edges to [[_COMMUNITY_test_blender_scene.py]]
 - 2 edges to [[_COMMUNITY_people_standin.py]]
-- 2 edges to [[_COMMUNITY_test_full_scenes.py]]
 - 1 edge to [[_COMMUNITY_frame_maker]]
 - 1 edge to [[_COMMUNITY_load_model]]
 - 1 edge to [[_COMMUNITY_Shots]]
+- 1 edge to [[_COMMUNITY_test_blender_plan.py]]
 - 1 edge to [[_COMMUNITY_make_sfx]]
-- 1 edge to [[_COMMUNITY_json]]
-- 1 edge to [[_COMMUNITY_frame_render.py]]
 
 ## Top bridge nodes
-- [[math]] - degree 37, connects to 16 communities
+- [[math]] - degree 37, connects to 15 communities
 - [[people.py]] - degree 35, connects to 5 communities
 - [[dress()]] - degree 12, connects to 2 communities
 - [[_footprints()]] - degree 4, connects to 2 communities

@@ -2,7 +2,7 @@
 source_file: "tests/test_h3_handoff.py"
 type: "code"
 community: "test_h3_handoff.py"
-location: "L168"
+location: "L169"
 tags:
   - graphify/code
   - graphify/EXTRACTED

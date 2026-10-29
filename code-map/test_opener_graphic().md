@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_full_scenes.py"
 type: "code"
-community: "blender_link.py"
+community: "opener_graphic"
 location: "L257"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/blender_linkpy
+  - community/opener_graphic
 ---
 
 # test_opener_graphic()
@@ -17,4 +17,4 @@ tags:
 - [[opener_graphic()]] - `calls` [EXTRACTED]
 - [[test_full_scenes.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/blender_linkpy
+#graphify/code #graphify/EXTRACTED #community/opener_graphic

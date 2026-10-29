@@ -1,18 +1,18 @@
 ---
 source_file: "shortsmaker/gpu.py"
 type: "code"
-community: "test_h3_handoff.py"
+community: "local_clips"
 location: "L462"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_h3_handoffpy
+  - community/local_clips
 ---
 
 # veo_handoff()
 
 ## Connections
-- [[Path]] - `references` [EXTRACTED]
+- [[Path_5]] - `references` [EXTRACTED]
 - [[Pause the batch write each animate scene's start picture + detailed prompt to…]] - `rationale_for` [EXTRACTED]
 - [[cover_crop()]] - `calls` [EXTRACTED]
 - [[cut_owner_clip()]] - `calls` [EXTRACTED]
@@ -23,8 +23,7 @@ tags:
 - [[local_clips()]] - `calls` [EXTRACTED]
 - [[os]] - `calls` [EXTRACTED]
 - [[start_picture_problems()]] - `calls` [EXTRACTED]
-- [[test_all_closeup_marked_scenes_skip_pause()]] - `calls` [EXTRACTED]
 - [[unpack_clips()]] - `calls` [EXTRACTED]
 - [[zipfile]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_h3_handoffpy
+#graphify/code #graphify/EXTRACTED #community/local_clips

@@ -2,7 +2,7 @@
 source_file: "tests/test_h3_handoff.py"
 type: "rationale"
 community: "test_h3_handoff.py"
-location: "L261"
+location: "L243"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED

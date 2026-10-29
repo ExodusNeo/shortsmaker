@@ -1,20 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: "music_gain"
+community: "blender_link.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/music_gain
+  - community/blender_linkpy
 ---
 
 # Path
 
 ## Connections
-- [[captions()_1]] - `references` [EXTRACTED]
-- [[music_gain()]] - `references` [EXTRACTED]
-- [[speak()]] - `references` [EXTRACTED]
-- [[story_sound()]] - `references` [EXTRACTED]
-- [[tts()_1]] - `references` [EXTRACTED]
+- [[credit()]] - `references` [EXTRACTED]
+- [[fetch_model()]] - `references` [EXTRACTED]
+- [[in_library()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/music_gain
+#graphify/code #graphify/EXTRACTED #community/blender_linkpy

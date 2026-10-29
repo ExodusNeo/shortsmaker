@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/picker.py"
 type: "code"
-community: "blender_link.py"
+community: "clean_full"
 location: "L248"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/blender_linkpy
+  - community/clean_full
 ---
 
 # full_formats()
@@ -17,4 +17,4 @@ tags:
 - [[picker.py]] - `contains` [EXTRACTED]
 - [[rescue_graphics()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/blender_linkpy
+#graphify/code #graphify/EXTRACTED #community/clean_full

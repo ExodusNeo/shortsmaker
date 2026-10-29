@@ -1,20 +1,20 @@
 ---
 source_file: ""
 type: "code"
-community: "make_paper"
+community: "captions"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/make_paper
+  - community/captions
 ---
 
 # Path
 
 ## Connections
-- [[ink_silhouette()]] - `references` [EXTRACTED]
-- [[make_paper()]] - `references` [EXTRACTED]
-- [[paint_instead()]] - `references` [EXTRACTED]
-- [[redraw_custom()]] - `references` [EXTRACTED]
-- [[render_remotion()]] - `references` [EXTRACTED]
+- [[captions()]] - `references` [EXTRACTED]
+- [[music_gain()]] - `references` [EXTRACTED]
+- [[speak()]] - `references` [EXTRACTED]
+- [[story_sound()]] - `references` [EXTRACTED]
+- [[tts()_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/make_paper
+#graphify/code #graphify/EXTRACTED #community/captions

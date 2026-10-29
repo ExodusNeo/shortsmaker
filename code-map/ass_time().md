@@ -13,6 +13,6 @@ tags:
 
 ## Connections
 - [[audio_mix.py]] - `contains` [EXTRACTED]
-- [[captions()_1]] - `calls` [EXTRACTED]
+- [[captions()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/captions

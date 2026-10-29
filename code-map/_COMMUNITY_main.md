@@ -23,7 +23,7 @@ members: 16
 - [[Vector_3]] - code
 - [[Where a point on the collapsing span ends up in the water.]] - rationale - blender/failures.py
 - [[key()_1]] - code - blender/failures.py
-- [[main()_3]] - code - blender/build_scene.py
+- [[main()_4]] - code - blender/build_scene.py
 
 ## Live Query (requires Dataview plugin)
 
@@ -41,6 +41,6 @@ SORT file.name ASC
 - 1 edge to [[_COMMUNITY_json]]
 
 ## Top bridge nodes
-- [[main()_3]] - degree 19, connects to 6 communities
+- [[main()_4]] - degree 19, connects to 6 communities
 - [[Failure]] - degree 9, connects to 1 community
 - [[key()_1]] - degree 4, connects to 1 community

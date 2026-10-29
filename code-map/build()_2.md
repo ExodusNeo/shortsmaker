@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_shot_templates.py"
 type: "code"
-community: "subprocess"
+community: "json"
 location: "L50"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/subprocess
+  - community/json
 ---
 
 # build()
@@ -24,4 +24,4 @@ tags:
 - [[tempfile]] - `calls` [EXTRACTED]
 - [[test_shot_templates.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/subprocess
+#graphify/code #graphify/EXTRACTED #community/json

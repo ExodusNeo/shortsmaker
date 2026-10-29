@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/cli.py"
 type: "code"
-community: "test_rules.py"
+community: "re"
 location: "L141"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_rulespy
+  - community/re
 ---
 
 # fix_short()
@@ -29,4 +29,4 @@ tags:
 - [[use_channel()]] - `calls` [EXTRACTED]
 - [[use_picture_from()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_rulespy
+#graphify/code #graphify/EXTRACTED #community/re

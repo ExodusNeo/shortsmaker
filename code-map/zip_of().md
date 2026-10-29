@@ -2,7 +2,7 @@
 source_file: "tests/test_h3_handoff.py"
 type: "code"
 community: "test_h3_handoff.py"
-location: "L146"
+location: "L147"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,7 +12,7 @@ tags:
 # zip_of()
 
 ## Connections
-- [[Path_1]] - `references` [EXTRACTED]
+- [[Path]] - `references` [EXTRACTED]
 - [[test_duplicate_clip_names_deduplicated()]] - `calls` [EXTRACTED]
 - [[test_h3_handoff.py]] - `contains` [EXTRACTED]
 - [[test_handoff_picks_up_clips_zip()]] - `calls` [EXTRACTED]

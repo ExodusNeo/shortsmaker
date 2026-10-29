@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_rules.py"
 type: "code"
-community: "json"
+community: "test_rules.py"
 location: "L335"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/json
+  - community/test_rulespy
 ---
 
 # test_a_stopped_run_keeps_the_default_channel()
@@ -15,4 +15,4 @@ tags:
 - [[main()_7]] - `calls` [EXTRACTED]
 - [[test_rules.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/json
+#graphify/code #graphify/EXTRACTED #community/test_rulespy

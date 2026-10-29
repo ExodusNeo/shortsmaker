@@ -57,7 +57,7 @@ SORT file.name ASC
 - 11 edges to [[_COMMUNITY_opener_scene.py]]
 - 6 edges to [[_COMMUNITY_math]]
 - 2 edges to [[_COMMUNITY_build_scene.py]]
-- 1 edge to [[_COMMUNITY_test_full_scenes.py]]
+- 1 edge to [[_COMMUNITY_test_topic_ideas.py]]
 
 ## Top bridge nodes
 - [[moves.py]] - degree 48, connects to 6 communities

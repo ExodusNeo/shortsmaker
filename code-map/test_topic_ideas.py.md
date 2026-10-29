@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_topic_ideas.py"
 type: "code"
-community: "image_sources.py"
+community: "test_topic_ideas.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/image_sourcespy
+  - community/test_topic_ideaspy
 ---
 
 # test_topic_ideas.py
@@ -43,4 +43,4 @@ tags:
 - [[traceback]] - `imports` [EXTRACTED]
 - [[writing.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/image_sourcespy
+#graphify/code #graphify/EXTRACTED #community/test_topic_ideaspy

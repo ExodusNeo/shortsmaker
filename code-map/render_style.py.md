@@ -1,12 +1,12 @@
 ---
 source_file: "tests/render_style.py"
 type: "code"
-community: "subprocess"
+community: "test_style.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/subprocess
+  - community/test_stylepy
 ---
 
 # render_style.py
@@ -17,7 +17,7 @@ tags:
 - [[build()_1]] - `contains` [EXTRACTED]
 - [[config.py]] - `imports_from` [EXTRACTED]
 - [[json]] - `imports` [EXTRACTED]
-- [[main()_6]] - `contains` [EXTRACTED]
+- [[main()_1]] - `contains` [EXTRACTED]
 - [[pathlib]] - `imports_from` [EXTRACTED]
 - [[shutil]] - `imports` [EXTRACTED]
 - [[style_lab.py]] - `imports_from` [EXTRACTED]
@@ -25,4 +25,4 @@ tags:
 - [[sys]] - `imports` [EXTRACTED]
 - [[time]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/subprocess
+#graphify/code #graphify/EXTRACTED #community/test_stylepy

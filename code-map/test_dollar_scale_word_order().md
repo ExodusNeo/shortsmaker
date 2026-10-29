@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_qwen_voice.py"
 type: "code"
-community: "time"
+community: "test_story.py"
 location: "L23"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/time
+  - community/test_storypy
 ---
 
 # test_dollar_scale_word_order()
@@ -16,4 +16,4 @@ tags:
 - [[spoken_sentence()]] - `calls` [INFERRED]
 - [[test_qwen_voice.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/time
+#graphify/code #graphify/INFERRED #community/test_storypy

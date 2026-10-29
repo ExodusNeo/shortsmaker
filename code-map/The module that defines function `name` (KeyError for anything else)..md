@@ -1,12 +1,12 @@
 ---
 source_file: "tests/patching.py"
 type: "rationale"
-community: "test_style.py"
+community: "gather_pool"
 location: "L18"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/test_stylepy
+  - community/gather_pool
 ---
 
 # The module that defines function `name` (KeyError for anything else).
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[owner()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/test_stylepy
+#graphify/rationale #graphify/EXTRACTED #community/gather_pool

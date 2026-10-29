@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_story.py"
 type: "code"
-community: "check_twists"
+community: "test_story.py"
 location: "L147"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/check_twists
+  - community/test_storypy
 ---
 
 # twist_short()
@@ -17,4 +17,4 @@ tags:
 - [[test_twist_check_needs_wikipedia_text()]] - `calls` [EXTRACTED]
 - [[test_twist_check_rewrites_a_legend_before_writing()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/check_twists
+#graphify/code #graphify/EXTRACTED #community/test_storypy

@@ -1,16 +1,20 @@
 ---
 source_file: ""
 type: "code"
-community: "code_custom_scenes"
+community: "frame_maker"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/code_custom_scenes
+  - community/frame_maker
 ---
 
 # Path
 
 ## Connections
-- [[_review_state()]] - `references` [EXTRACTED]
+- [[dot-__init__()_2]] - `references` [EXTRACTED]
+- [[fills_frame()]] - `references` [EXTRACTED]
+- [[frame_maker()]] - `references` [EXTRACTED]
+- [[graphic_low()]] - `references` [EXTRACTED]
+- [[thumbnail()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/code_custom_scenes
+#graphify/code #graphify/EXTRACTED #community/frame_maker

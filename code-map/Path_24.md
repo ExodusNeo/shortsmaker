@@ -1,16 +1,20 @@
 ---
 source_file: ""
 type: "code"
-community: "approve_candidate"
+community: "motion.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/approve_candidate
+  - community/motionpy
 ---
 
 # Path
 
 ## Connections
-- [[candidate_in()]] - `references` [EXTRACTED]
+- [[code_custom_scenes()]] - `references` [EXTRACTED]
+- [[full_props()]] - `references` [EXTRACTED]
+- [[look_and_fix()]] - `references` [EXTRACTED]
+- [[preview_custom()]] - `references` [EXTRACTED]
+- [[preview_sheet()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/approve_candidate
+#graphify/code #graphify/EXTRACTED #community/motionpy

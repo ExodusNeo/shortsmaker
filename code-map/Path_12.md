@@ -1,20 +1,21 @@
 ---
 source_file: ""
 type: "code"
-community: "test_blender_render.py"
+community: "prepare_topic"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_blender_renderpy
+  - community/prepare_topic
 ---
 
 # Path
 
 ## Connections
-- [[model_for()]] - `references` [EXTRACTED]
-- [[render_opener()]] - `references` [EXTRACTED]
-- [[review()]] - `references` [EXTRACTED]
-- [[save_try()]] - `references` [EXTRACTED]
-- [[to_glb()]] - `references` [EXTRACTED]
+- [[catalog_pool()]] - `references` [EXTRACTED]
+- [[contact_sheets()]] - `references` [EXTRACTED]
+- [[load_pool()]] - `references` [EXTRACTED]
+- [[pool_folder()]] - `references` [EXTRACTED]
+- [[prepare_topic()]] - `references` [EXTRACTED]
+- [[save_pool()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_blender_renderpy
+#graphify/code #graphify/EXTRACTED #community/prepare_topic

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/blender_link.py"
 type: "rationale"
-community: "blender_link.py"
+community: "resolve_models"
 location: "L55"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/blender_linkpy
+  - community/resolve_models
 ---
 
 # CC0, or plain CC-BY (no NC, ND or SA): free to use in a monetised Short with a…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[allowed_licence()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/blender_linkpy
+#graphify/rationale #graphify/EXTRACTED #community/resolve_models

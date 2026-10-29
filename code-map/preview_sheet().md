@@ -1,18 +1,18 @@
 ---
 source_file: "shortsmaker/motion.py"
 type: "code"
-community: "subprocess"
+community: "motion.py"
 location: "L262"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/subprocess
+  - community/motionpy
 ---
 
 # preview_sheet()
 
 ## Connections
-- [[Path_8]] - `references` [EXTRACTED]
+- [[Path_24]] - `references` [EXTRACTED]
 - [[Renders seconds start..end of a small Short (`props`; its pictures already in…]] - `rationale_for` [EXTRACTED]
 - [[ffmpeg()]] - `calls` [EXTRACTED]
 - [[invent_component()]] - `calls` [EXTRACTED]
@@ -22,4 +22,4 @@ tags:
 - [[shutil]] - `calls` [EXTRACTED]
 - [[subprocess]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/subprocess
+#graphify/code #graphify/EXTRACTED #community/motionpy

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/plan_rules.py"
 type: "rationale"
-community: "plan_rules.py"
+community: "clean_full"
 location: "L30"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/plan_rulespy
+  - community/clean_full
 ---
 
 # One planned callout, validated (LLM output is untrusted); None drops it.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[clean_graphic()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/plan_rulespy
+#graphify/rationale #graphify/EXTRACTED #community/clean_full

@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_pictures_first.py"
 type: "code"
-community: "test_style.py"
+community: "gather_pool"
 location: "L216"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_stylepy
+  - community/gather_pool
 ---
 
 # .__exit__()
@@ -15,4 +15,4 @@ tags:
 - [[owner()]] - `calls` [EXTRACTED]
 - [[planning]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_stylepy
+#graphify/code #graphify/EXTRACTED #community/gather_pool

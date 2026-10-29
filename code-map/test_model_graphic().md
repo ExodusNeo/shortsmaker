@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_full_scenes.py"
 type: "code"
-community: "full_props"
+community: "opener_graphic"
 location: "L942"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/full_props
+  - community/opener_graphic
 ---
 
 # test_model_graphic()
@@ -20,4 +20,4 @@ tags:
 - [[opener_graphic()]] - `calls` [EXTRACTED]
 - [[test_full_scenes.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/full_props
+#graphify/code #graphify/EXTRACTED #community/opener_graphic

@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_pictures_first.py"
 type: "code"
-community: "edit_plan"
+community: "style_library"
 location: "L392"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/edit_plan
+  - community/style_library
 ---
 
 # test_edit_plan_picture_line()
@@ -15,4 +15,4 @@ tags:
 - [[picture_line()]] - `calls` [EXTRACTED]
 - [[test_pictures_first.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/edit_plan
+#graphify/code #graphify/EXTRACTED #community/style_library

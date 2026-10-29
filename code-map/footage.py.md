@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/footage.py"
 type: "code"
-community: "frame_render.py"
+community: "test_full_scenes.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/frame_renderpy
+  - community/test_full_scenespy
 ---
 
 # footage.py
@@ -42,4 +42,4 @@ tags:
 - [[time]] - `imports` [EXTRACTED]
 - [[urllib_parse]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/frame_renderpy
+#graphify/code #graphify/EXTRACTED #community/test_full_scenespy

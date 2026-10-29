@@ -1,21 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "frame_maker"
+community: "clean_full"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/frame_maker
+  - community/clean_full
 ---
 
 # Image
 
 ## Connections
-- [[dot-at()]] - `references` [EXTRACTED]
-- [[draw_card()]] - `references` [EXTRACTED]
-- [[draw_graphic()]] - `references` [EXTRACTED]
-- [[graphic_overlay()]] - `references` [EXTRACTED]
-- [[person_card()]] - `references` [EXTRACTED]
-- [[shot()]] - `references` [EXTRACTED]
+- [[is_stereo()]] - `references` [EXTRACTED]
+- [[trim_borders()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/frame_maker
+#graphify/code #graphify/EXTRACTED #community/clean_full

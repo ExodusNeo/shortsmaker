@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[plan_with()_1]] - `calls` [EXTRACTED]
-- [[render()_4]] - `calls` [EXTRACTED]
+- [[render()_1]] - `calls` [EXTRACTED]
 - [[test_each_failure_changes_the_focus()]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/test_blender_scenepy

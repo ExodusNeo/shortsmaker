@@ -1,11 +1,11 @@
 ---
 type: community
-members: 52
+members: 55
 ---
 
 # test_opener_render.py
 
-**Members:** 52 nodes
+**Members:** 55 nodes
 
 ## Members
 - [[dot-__enter__()_4]] - code - tests/test_opener_render.py
@@ -16,6 +16,7 @@ members: 52
 - [[A template build that fails its checks is not re-planned (the staging is…]] - rationale - tests/test_opener_render.py
 - [[Env]] - code - tests/test_opener_render.py
 - [[Final review the AI review was still told There are no people in these…]] - rationale - tests/test_opener_render.py
+- [[No template fits and an AI clip of scene 1 came back (owner's or LTX) it plays…]] - rationale - tests/test_opener_render.py
 - [[No template fits Blender never tried, and the Opening line says so.]] - rationale - tests/test_opener_render.py
 - [[Rounds went one missing model at a time (armoured car, then bricks, then a…]] - rationale - tests/test_opener_render.py
 - [[Scene 1 plays its Blender opener when one renders (opener_render.py,…]] - rationale - shortsmaker/short_render.py
@@ -33,6 +34,7 @@ members: 52
 - [[short()_3]] - code - tests/test_opener_render.py
 - [[short_render.use_opener with render_opener faked; returns (check line, short,…]] - rationale - tests/test_opener_render.py
 - [[test_beats_scaled_into_scene()]] - code - tests/test_opener_render.py
+- [[test_blender_note()]] - code - tests/test_opener_render.py
 - [[test_cc_by_credit()]] - code - tests/test_opener_render.py
 - [[test_crash_retry_then_fallback()]] - code - tests/test_opener_render.py
 - [[test_every_unfound_model_named_at_once()]] - code - tests/test_opener_render.py
@@ -55,6 +57,7 @@ members: 52
 - [[test_unfound_model_goes_back_to_the_planner()]] - code - tests/test_opener_render.py
 - [[test_use_opener_failure_keeps_scene()]] - code - tests/test_opener_render.py
 - [[test_use_opener_never_raises()]] - code - tests/test_opener_render.py
+- [[test_use_opener_no_template_ai_clip()]] - code - tests/test_opener_render.py
 - [[test_use_opener_no_template_note()]] - code - tests/test_opener_render.py
 - [[test_use_opener_on_success()]] - code - tests/test_opener_render.py
 - [[test_use_opener_opening_note()]] - code - tests/test_opener_render.py
@@ -69,21 +72,24 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 11 edges to [[_COMMUNITY_subprocess]]
-- 11 edges to [[_COMMUNITY_test_full_scenes.py]]
-- 4 edges to [[_COMMUNITY_re]]
-- 4 edges to [[_COMMUNITY_blender_link.py]]
-- 3 edges to [[_COMMUNITY_json]]
-- 2 edges to [[_COMMUNITY_test_blender_render.py]]
+- 11 edges to [[_COMMUNITY_json]]
+- 10 edges to [[_COMMUNITY_test_full_scenes.py]]
+- 4 edges to [[_COMMUNITY_resolve_models]]
+- 3 edges to [[_COMMUNITY_ffmpeg]]
 - 2 edges to [[_COMMUNITY_test_opener_plan.py]]
+- 2 edges to [[_COMMUNITY_subprocess]]
+- 2 edges to [[_COMMUNITY_test_style.py]]
 - 2 edges to [[_COMMUNITY_render]]
-- 1 edge to [[_COMMUNITY_test_h3_handoff.py]]
 - 1 edge to [[_COMMUNITY_test_rules.py]]
-- 1 edge to [[_COMMUNITY_test_first_second.py]]
+- 1 edge to [[_COMMUNITY_local_clips]]
+- 1 edge to [[_COMMUNITY_test_blender_render.py]]
+- 1 edge to [[_COMMUNITY_re]]
+- 1 edge to [[_COMMUNITY_blender_link.py]]
+- 1 edge to [[_COMMUNITY_test_blender_scene.py]]
 
 ## Top bridge nodes
-- [[test_opener_render.py]] - degree 51, connects to 7 communities
+- [[test_opener_render.py]] - degree 52, connects to 8 communities
 - [[render_opener()]] - degree 33, connects to 7 communities
-- [[use_opener()]] - degree 12, connects to 3 communities
+- [[use_opener()]] - degree 13, connects to 3 communities
 - [[_wiring()]] - degree 7, connects to 1 community
 - [[test_success_returns_clip()]] - degree 6, connects to 1 community

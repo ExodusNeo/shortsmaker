@@ -23,7 +23,6 @@ tags:
 - [[short_with()]] - `contains` [EXTRACTED]
 - [[sys]] - `imports` [EXTRACTED]
 - [[tempfile]] - `imports` [EXTRACTED]
-- [[test_all_closeup_marked_scenes_skip_pause()]] - `contains` [EXTRACTED]
 - [[test_all_start_pictures_flagged_skips_pause()]] - `contains` [EXTRACTED]
 - [[test_duplicate_clip_names_deduplicated()]] - `contains` [EXTRACTED]
 - [[test_flagged_start_picture_is_not_sent()]] - `contains` [EXTRACTED]

@@ -13,6 +13,6 @@ tags:
 
 ## Connections
 - [[ass_colour()]] - `calls` [EXTRACTED]
-- [[captions()_1]] - `contains` [EXTRACTED]
+- [[captions()]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/captions

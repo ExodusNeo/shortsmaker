@@ -12,7 +12,7 @@ tags:
 # credit()
 
 ## Connections
-- [[Path_20]] - `references` [EXTRACTED]
+- [[Path_16]] - `references` [EXTRACTED]
 - [[The upload.txt credit a saved model needs its attribution when CC-BY, None for…]] - `rationale_for` [EXTRACTED]
 - [[blender_link.py]] - `contains` [EXTRACTED]
 - [[json]] - `calls` [EXTRACTED]

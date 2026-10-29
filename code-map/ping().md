@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/blender_link.py"
 type: "code"
-community: "blender_link.py"
+community: "test_blender_link.py"
 location: "L46"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/blender_linkpy
+  - community/test_blender_linkpy
 ---
 
 # ping()
@@ -19,4 +19,4 @@ tags:
 - [[resolve_models()]] - `calls` [EXTRACTED]
 - [[test_ping_on_off()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/blender_linkpy
+#graphify/code #graphify/EXTRACTED #community/test_blender_linkpy

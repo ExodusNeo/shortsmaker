@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "subprocess"
+community: "test_style.py"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/subprocess
+  - community/test_stylepy
 ---
 
 # shutil
@@ -24,7 +24,7 @@ tags:
 - [[logbook.py]] - `imports` [EXTRACTED]
 - [[main()_2]] - `calls` [EXTRACTED]
 - [[main()_7]] - `calls` [EXTRACTED]
-- [[main()_5]] - `calls` [EXTRACTED]
+- [[main()_6]] - `calls` [EXTRACTED]
 - [[motion.py]] - `imports` [EXTRACTED]
 - [[opener_render.py]] - `imports` [EXTRACTED]
 - [[paint_instead()]] - `calls` [EXTRACTED]
@@ -58,4 +58,4 @@ tags:
 - [[write_scripts()]] - `calls` [EXTRACTED]
 - [[writing.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/subprocess
+#graphify/concept #graphify/EXTRACTED #community/test_stylepy

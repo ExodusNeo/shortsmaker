@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "image_sources.py"
+community: "test_full_scenes.py"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/image_sourcespy
+  - community/test_full_scenespy
 ---
 
 # urllib_parse
@@ -19,4 +19,4 @@ tags:
 - [[topic_ideas.py]] - `imports` [EXTRACTED]
 - [[writing.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/image_sourcespy
+#graphify/concept #graphify/EXTRACTED #community/test_full_scenespy

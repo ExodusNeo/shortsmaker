@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/writing.py"
 type: "rationale"
-community: "blender_link.py"
+community: "json"
 location: "L515"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/blender_linkpy
+  - community/json
 ---
 
 # Plain text of an English Wikipedia article ('' when missing or unreachable).
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[article_text()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/blender_linkpy
+#graphify/rationale #graphify/EXTRACTED #community/json

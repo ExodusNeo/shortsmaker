@@ -1,17 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: "test_blender_render.py"
+community: "prepare_topic"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_blender_renderpy
+  - community/prepare_topic
 ---
 
 # Path
 
 ## Connections
-- [[_run()]] - `references` [EXTRACTED]
-- [[render_clips()]] - `references` [EXTRACTED]
+- [[duration()]] - `references` [EXTRACTED]
+- [[ffmpeg()]] - `references` [EXTRACTED]
+- [[write_json()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_blender_renderpy
+#graphify/code #graphify/EXTRACTED #community/prepare_topic

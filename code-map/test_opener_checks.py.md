@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_opener_checks.py"
 type: "code"
-community: "test_opener_checks.py"
+community: "test_blender_scene.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_opener_checkspy
+  - community/test_blender_scenepy
 ---
 
 # test_opener_checks.py
@@ -32,4 +32,4 @@ tags:
 - [[test_resting()]] - `contains` [EXTRACTED]
 - [[traceback]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_opener_checkspy
+#graphify/code #graphify/EXTRACTED #community/test_blender_scenepy

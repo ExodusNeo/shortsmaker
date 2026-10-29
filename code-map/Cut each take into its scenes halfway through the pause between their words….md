@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/gpu.py"
 type: "rationale"
-community: "gpu.py"
+community: "local_voice"
 location: "L150"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/gpupy
+  - community/local_voice
 ---
 
 # Cut each take into its scenes halfway through the pause between their words:…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[split_takes()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/gpupy
+#graphify/rationale #graphify/EXTRACTED #community/local_voice

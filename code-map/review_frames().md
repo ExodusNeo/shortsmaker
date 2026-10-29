@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/opener_render.py"
 type: "code"
-community: "subprocess"
+community: "json"
 location: "L132"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/subprocess
+  - community/json
 ---
 
 # review_frames()
@@ -18,4 +18,4 @@ tags:
 - [[review()]] - `calls` [EXTRACTED]
 - [[test_review_frames_include_key_moments()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/subprocess
+#graphify/code #graphify/EXTRACTED #community/json

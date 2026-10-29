@@ -1,18 +1,18 @@
 ---
 source_file: "shortsmaker/gpu.py"
 type: "code"
-community: "test_h3_handoff.py"
+community: "local_clips"
 location: "L523"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_h3_handoffpy
+  - community/local_clips
 ---
 
 # cut_owner_clip()
 
 ## Connections
-- [[Path]] - `references` [EXTRACTED]
+- [[Path_5]] - `references` [EXTRACTED]
 - [[The owner's clip `src` cut to scene i's length fills the vertical frame, drops…]] - `rationale_for` [EXTRACTED]
 - [[ffmpeg()]] - `calls` [EXTRACTED]
 - [[gpu.py]] - `contains` [EXTRACTED]
@@ -20,4 +20,4 @@ tags:
 - [[veo_handoff()]] - `calls` [EXTRACTED]
 - [[video_encoder()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_h3_handoffpy
+#graphify/code #graphify/EXTRACTED #community/local_clips

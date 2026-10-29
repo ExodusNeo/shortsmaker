@@ -13,8 +13,8 @@ tags:
 
 ## Connections
 - [[ask_ai()]] - `calls` [EXTRACTED]
-- [[fake_run()_2]] - `contains` [EXTRACTED]
-- [[fake_run()_1]] - `indirect_call` [INFERRED]
+- [[fake_run()_1]] - `contains` [EXTRACTED]
+- [[fake_run()]] - `indirect_call` [INFERRED]
 - [[gemini_model()]] - `calls` [EXTRACTED]
 - [[test_package.py]] - `contains` [EXTRACTED]
 

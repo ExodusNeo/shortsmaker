@@ -1,18 +1,17 @@
 ---
 source_file: "tests/test_style.py"
 type: "code"
-community: "style_placeholders"
-location: "L259"
+community: "render_remotion"
+location: "L321"
 tags:
   - graphify/code
-  - graphify/INFERRED
-  - community/style_placeholders
+  - graphify/EXTRACTED
+  - community/render_remotion
 ---
 
 # run()
 
 ## Connections
-- [[test_failed_invention_keeps_the_others()]] - `indirect_call` [INFERRED]
-- [[test_invention_passes_into_slot()]] - `indirect_call` [INFERRED]
+- [[test_failed_invention_keeps_the_others()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/style_placeholders
+#graphify/code #graphify/EXTRACTED #community/render_remotion

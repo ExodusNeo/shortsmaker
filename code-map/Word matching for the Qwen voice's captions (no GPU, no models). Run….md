@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_qwen_voice.py"
 type: "rationale"
-community: "time"
+community: "test_story.py"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/time
+  - community/test_storypy
 ---
 
 # Word matching for the Qwen voice's captions (no GPU, no models). Run:…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[test_qwen_voice.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/time
+#graphify/rationale #graphify/EXTRACTED #community/test_storypy

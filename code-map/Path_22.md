@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "choose_images"
+community: "pack_people.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/choose_images
+  - community/pack_peoplepy
 ---
 
 # Path
 
 ## Connections
-- [[choose_images()]] - `references` [EXTRACTED]
+- [[main()_8]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/choose_images
+#graphify/code #graphify/EXTRACTED #community/pack_peoplepy

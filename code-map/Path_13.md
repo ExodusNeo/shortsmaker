@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "test_blender_render.py"
+community: "time"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_blender_renderpy
+  - community/time
 ---
 
 # Path
 
 ## Connections
-- [[fake_blender()]] - `references` [EXTRACTED]
+- [[fit_start()]] - `references` [EXTRACTED]
+- [[saved_file()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_blender_renderpy
+#graphify/code #graphify/EXTRACTED #community/time

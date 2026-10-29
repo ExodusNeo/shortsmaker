@@ -1,18 +1,18 @@
 ---
 source_file: "shortsmaker/review.py"
 type: "code"
-community: "test_rules.py"
+community: "use_picture_from"
 location: "L302"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_rulespy
+  - community/use_picture_from
 ---
 
 # paint_new()
 
 ## Connections
-- [[Path_21]] - `references` [EXTRACTED]
+- [[Path_20]] - `references` [EXTRACTED]
 - [[apply_review_fixes()]] - `calls` [EXTRACTED]
 - [[fix  auto-fix scene i drops its picture and gets a freshly painted one…]] - `rationale_for` [EXTRACTED]
 - [[fix_short()]] - `calls` [EXTRACTED]
@@ -20,4 +20,4 @@ tags:
 - [[test_new_picture_drops_mark()]] - `calls` [EXTRACTED]
 - [[test_paint_new_clears_full()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_rulespy
+#graphify/code #graphify/EXTRACTED #community/use_picture_from

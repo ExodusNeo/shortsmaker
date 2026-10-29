@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_full_scenes.py"
 type: "code"
-community: "full_pictures"
+community: "drawn_thumbnail"
 location: "L203"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/full_pictures
+  - community/drawn_thumbnail
 ---
 
 # _board()
@@ -17,4 +17,4 @@ tags:
 - [[test_remotion_props_full()]] - `calls` [EXTRACTED]
 - [[test_sfx_full()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/full_pictures
+#graphify/code #graphify/EXTRACTED #community/drawn_thumbnail

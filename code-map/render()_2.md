@@ -1,19 +1,18 @@
 ---
-source_file: "shortsmaker/remotion_render.py"
+source_file: "blender/opener_scene.py"
 type: "code"
-community: "render_remotion"
-location: "L203"
+community: "opener_scene.py"
+location: "L495"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/render_remotion
+  - community/opener_scenepy
 ---
 
 # render()
 
 ## Connections
-- [[remotion()]] - `calls` [EXTRACTED]
-- [[render_remotion()]] - `indirect_call` [INFERRED]
-- [[run_remotion_with_fallback()]] - `calls` [EXTRACTED]
+- [[main()_9]] - `calls` [EXTRACTED]
+- [[opener_scene.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/render_remotion
+#graphify/code #graphify/EXTRACTED #community/opener_scenepy

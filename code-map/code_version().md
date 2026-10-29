@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/blender_render.py"
 type: "code"
-community: "subprocess"
+community: "json"
 location: "L22"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/subprocess
+  - community/json
 ---
 
 # code_version()
@@ -17,4 +17,4 @@ tags:
 - [[hashlib]] - `calls` [EXTRACTED]
 - [[render_clips()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/subprocess
+#graphify/code #graphify/EXTRACTED #community/json

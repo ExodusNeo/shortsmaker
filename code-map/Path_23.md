@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "pack_people.py"
+community: "test_style.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/pack_peoplepy
+  - community/test_stylepy
 ---
 
 # Path
 
 ## Connections
-- [[main()_8]] - `references` [EXTRACTED]
+- [[candidate_in()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/pack_peoplepy
+#graphify/code #graphify/EXTRACTED #community/test_stylepy

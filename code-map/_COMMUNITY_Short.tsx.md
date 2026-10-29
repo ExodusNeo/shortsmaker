@@ -9,7 +9,7 @@ members: 31
 
 ## Members
 - [[Background()]] - code - remotion/src/Short.tsx
-- [[Captions()]] - code - remotion/src/Captions.tsx
+- [[Captions()_1]] - code - remotion/src/Captions.tsx
 - [[Captions.tsx]] - code - remotion/src/Captions.tsx
 - [[Card]] - code - remotion/src/Short.tsx
 - [[GraphicFor()]] - code - remotion/src/Short.tsx
@@ -30,7 +30,7 @@ members: 31
 - [[hidden()]] - code - tests/style.test.ts
 - [[inksOf()]] - code - remotion/src/style/kit.ts
 - [[lookFor()]] - code - remotion/src/style/index.ts
-- [[ok()_1]] - code - tests/style.test.ts
+- [[ok()_2]] - code - tests/style.test.ts
 - [[overlayFor()]] - code - remotion/src/style/index.ts
 - [[shown()]] - code - tests/style.test.ts
 - [[srcindex.ts]] - code - remotion/src/index.ts

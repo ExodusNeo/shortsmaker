@@ -1,41 +1,52 @@
 ---
 type: community
-members: 28
+members: 39
 ---
 
 # test_first_second.py
 
-**Members:** 28 nodes
+**Members:** 39 nodes
 
 ## Members
-- [[Tests for colabh3_run.py (the MiniMax H3 job runner that ships inside veo.zip)…]] - rationale - tests/test_h3_run.py
+- [[Mike's newsstand a repaint from the unchanged prompt painted the identical…]] - rationale - tests/test_full_scenes.py
+- [[Path_3]] - code
+- [[Scenes i and k trade their real photosfilms (paintings and motion graphics are…]] - rationale - shortsmaker/review.py
 - [[Tests for the first-second check (would a scroller stop) and the honest…]] - rationale - tests/test_first_second.py
-- [[Tests for the people tables (blenderopener_tables.json roles and…]] - rationale - tests/test_people_tables.py
+- [[The automatic fixes after a render's review (up to AUTO_REPAINT_MAX scenes per…]] - rationale - shortsmaker/review.py
 - [[The logbook entries the owner has filled in (Views written down), at most the…]] - rationale - shortsmaker/logbook.py
-- [[Would a stranger scrolling the Shorts feed stop here Stayed-to-watch is…]] - rationale - shortsmaker/review.py
+- [[Togo vs Balto 4 real pictures the review rejected became paintings while ~20…]] - rationale - tests/test_full_scenes.py
+- [[_review_state()]] - code - tests/test_full_scenes.py
+- [[apply_review_fixes()]] - code - shortsmaker/review.py
+- [[ask()_3]] - code - tests/test_full_scenes.py
+- [[ask()_4]] - code - tests/test_full_scenes.py
+- [[ask()_5]] - code - tests/test_full_scenes.py
+- [[ask()_6]] - code - tests/test_full_scenes.py
+- [[ask()_7]] - code - tests/test_full_scenes.py
+- [[fake_rescue()]] - code - tests/test_full_scenes.py
 - [[first_second_check with ffmpeg and the AI faked; returns its result.]] - rationale - tests/test_first_second.py
-- [[first_second_check()]] - code - shortsmaker/review.py
 - [[logbook_results()]] - code - shortsmaker/logbook.py
+- [[real()]] - code - tests/test_first_second.py
 - [[run_check()]] - code - tests/test_first_second.py
-- [[test_every_move_has_a_clip_and_kind()]] - code - tests/test_people_tables.py
-- [[test_every_role_is_complete()]] - code - tests/test_people_tables.py
+- [[state()]] - code - tests/test_first_second.py
+- [[swap_pictures()]] - code - shortsmaker/review.py
+- [[test_auto_fix_graphic()]] - code - tests/test_full_scenes.py
 - [[test_first_second.py]] - code - tests/test_first_second.py
-- [[test_fit_start_is_768x1344()]] - code - tests/test_h3_run.py
 - [[test_fix_round_user_confirmation()]] - code - tests/test_first_second.py
-- [[test_frames_snap_to_17k_plus_5()]] - code - tests/test_h3_run.py
 - [[test_good_opening_or_no_reply_changes_nothing()]] - code - tests/test_first_second.py
-- [[test_graph_wiring()]] - code - tests/test_h3_run.py
-- [[test_h3_run.py]] - code - tests/test_h3_run.py
 - [[test_logbook_marks_tiny_samples()]] - code - tests/test_first_second.py
+- [[test_look_check_fixes_code()]] - code - tests/test_full_scenes.py
 - [[test_low_score_opens_on_a_better_real_picture()]] - code - tests/test_first_second.py
-- [[test_notebook_a100_40gb_warning_and_cancelled_upload()]] - code - tests/test_h3_run.py
-- [[test_notebook_cells()]] - code - tests/test_h3_run.py
+- [[test_opener_fix_swaps_once()]] - code - tests/test_first_second.py
 - [[test_opener_must_be_a_later_real_picture()]] - code - tests/test_first_second.py
 - [[test_opener_prompt_shows_each_scenes_line_and_picture()]] - code - tests/test_first_second.py
-- [[test_people_tables.py]] - code - tests/test_people_tables.py
-- [[test_rejected_graph_shows_comfyui_error()]] - code - tests/test_h3_run.py
-- [[test_save_video_sets_nested_codec()]] - code - tests/test_h3_run.py
-- [[traceback]] - concept
+- [[test_redraw_failure_paints()]] - code - tests/test_full_scenes.py
+- [[test_review_knows_what_dims_a_picture_on_purpose()]] - code - tests/test_first_second.py
+- [[test_review_redraws_custom()]] - code - tests/test_full_scenes.py
+- [[test_review_uses_unused_pool_pictures_before_painting()]] - code - tests/test_full_scenes.py
+- [[test_rewrite_paint_prompts()]] - code - tests/test_full_scenes.py
+- [[test_swap_ignores_a_clip_already_dropped()]] - code - tests/test_first_second.py
+- [[test_swap_moves_the_owners_clip_with_its_picture()]] - code - tests/test_first_second.py
+- [[test_swap_pictures_trades_real_pictures()]] - code - tests/test_first_second.py
 
 ## Live Query (requires Dataview plugin)
 
@@ -45,33 +56,24 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 22 edges to [[_COMMUNITY_test_full_scenes.py]]
-- 8 edges to [[_COMMUNITY_code_custom_scenes]]
-- 5 edges to [[_COMMUNITY_subprocess]]
+- 17 edges to [[_COMMUNITY_test_full_scenes.py]]
 - 4 edges to [[_COMMUNITY_re]]
-- 4 edges to [[_COMMUNITY_test_opener_scene.py]]
-- 2 edges to [[_COMMUNITY_test_rules.py]]
-- 2 edges to [[_COMMUNITY_ask_ai]]
-- 2 edges to [[_COMMUNITY_json]]
+- 3 edges to [[_COMMUNITY_json]]
+- 2 edges to [[_COMMUNITY_motion.py]]
 - 2 edges to [[_COMMUNITY_visual_review]]
-- 2 edges to [[_COMMUNITY_test_blender_scene.py]]
-- 1 edge to [[_COMMUNITY_plan_rules.py]]
-- 1 edge to [[_COMMUNITY_prepare_topic]]
+- 2 edges to [[_COMMUNITY_test_style.py]]
 - 1 edge to [[_COMMUNITY_write_scripts]]
+- 1 edge to [[_COMMUNITY_clean_full]]
+- 1 edge to [[_COMMUNITY_pool_pictures]]
+- 1 edge to [[_COMMUNITY_use_picture_from]]
 - 1 edge to [[_COMMUNITY_render]]
-- 1 edge to [[_COMMUNITY_test_h3_handoff.py]]
-- 1 edge to [[_COMMUNITY_test_pictures_first.py]]
-- 1 edge to [[_COMMUNITY_test_blender_render.py]]
-- 1 edge to [[_COMMUNITY_h3_run.py]]
-- 1 edge to [[_COMMUNITY_test_opener_plan.py]]
-- 1 edge to [[_COMMUNITY_image_sources.py]]
-- 1 edge to [[_COMMUNITY_blender_link.py]]
-- 1 edge to [[_COMMUNITY_test_opener_render.py]]
-- 1 edge to [[_COMMUNITY_test_opener_checks.py]]
+- 1 edge to [[_COMMUNITY_gather_pool]]
+- 1 edge to [[_COMMUNITY_subprocess]]
+- 1 edge to [[_COMMUNITY_test_blender_scene.py]]
 
 ## Top bridge nodes
-- [[traceback]] - degree 20, connects to 14 communities
-- [[first_second_check()]] - degree 13, connects to 9 communities
-- [[test_first_second.py]] - degree 27, connects to 4 communities
-- [[test_people_tables.py]] - degree 14, connects to 4 communities
-- [[logbook_results()]] - degree 6, connects to 4 communities
+- [[apply_review_fixes()]] - degree 15, connects to 8 communities
+- [[test_first_second.py]] - degree 27, connects to 5 communities
+- [[logbook_results()]] - degree 6, connects to 2 communities
+- [[test_rewrite_paint_prompts()]] - degree 5, connects to 2 communities
+- [[test_look_check_fixes_code()]] - degree 4, connects to 2 communities

@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "json"
+community: "re"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/json
+  - community/re
 ---
 
 # datetime
@@ -14,4 +14,4 @@ tags:
 - [[channel_profiles.py]] - `imports_from` [EXTRACTED]
 - [[cli.py]] - `imports_from` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/json
+#graphify/concept #graphify/EXTRACTED #community/re

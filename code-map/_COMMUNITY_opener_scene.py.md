@@ -40,7 +40,7 @@ members: 41
 - [[place_actors()]] - code - blender/opener_scene.py
 - [[punch_in()]] - code - blender/opener_scene.py
 - [[reach_back()]] - code - blender/opener_scene.py
-- [[render()_1]] - code - blender/opener_scene.py
+- [[render()_2]] - code - blender/opener_scene.py
 - [[retime()]] - code - blender/opener_scene.py
 - [[seen_segments()]] - code - blender/opener_scene.py
 - [[seen_windows()]] - code - blender/opener_scene.py
@@ -64,13 +64,15 @@ SORT file.name ASC
 - 10 edges to [[_COMMUNITY_math]]
 - 5 edges to [[_COMMUNITY_cut]]
 - 5 edges to [[_COMMUNITY_load_model]]
-- 3 edges to [[_COMMUNITY_test_full_scenes.py]]
 - 2 edges to [[_COMMUNITY_look_toon.py]]
 - 2 edges to [[_COMMUNITY_build_scene.py]]
+- 1 edge to [[_COMMUNITY_test_topic_ideas.py]]
+- 1 edge to [[_COMMUNITY_subprocess]]
 - 1 edge to [[_COMMUNITY_json]]
+- 1 edge to [[_COMMUNITY_test_full_scenes.py]]
 
 ## Top bridge nodes
-- [[opener_scene.py]] - degree 34, connects to 10 communities
+- [[opener_scene.py]] - degree 34, connects to 12 communities
 - [[main()_9]] - degree 22, connects to 6 communities
 - [[place_actors()]] - degree 13, connects to 5 communities
 - [[State]] - degree 23, connects to 3 communities

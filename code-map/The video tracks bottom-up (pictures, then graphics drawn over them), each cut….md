@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/edit_project.py"
 type: "rationale"
-community: "re"
+community: "make"
 location: "L35"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/re
+  - community/make
 ---
 
 # The video tracks bottom-up (pictures, then graphics drawn over them), each cut…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[project_xml()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/re
+#graphify/rationale #graphify/EXTRACTED #community/make

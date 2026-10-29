@@ -12,7 +12,7 @@ tags:
 # graphic_overlay()
 
 ## Connections
-- [[Image]] - `references` [EXTRACTED]
+- [[Image_1]] - `references` [EXTRACTED]
 - [[Pre-render a callout as a small transparent image (animated per frame later).]] - `rationale_for` [EXTRACTED]
 - [[fit_font()]] - `calls` [EXTRACTED]
 - [[frame_maker()]] - `calls` [EXTRACTED]

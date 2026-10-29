@@ -12,7 +12,7 @@ tags:
 # pool_pictures()
 
 ## Connections
-- [[Path_21]] - `references` [EXTRACTED]
+- [[Path_20]] - `references` [EXTRACTED]
 - [[Rejected scenes (index - the review's complaint) that get a real picture from…]] - `rationale_for` [EXTRACTED]
 - [[apply_review_fixes()]] - `calls` [EXTRACTED]
 - [[ask_ai()]] - `calls` [EXTRACTED]

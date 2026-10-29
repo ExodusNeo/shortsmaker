@@ -1,18 +1,18 @@
 ---
-source_file: "tests/test_blender_link.py"
+source_file: "tests/test_style.py"
 type: "code"
-community: "blender_link.py"
-location: "L61"
+community: "render_remotion"
+location: "L259"
 tags:
   - graphify/code
-  - graphify/EXTRACTED
-  - community/blender_linkpy
+  - graphify/INFERRED
+  - community/render_remotion
 ---
 
 # run()
 
 ## Connections
-- [[Fake]] - `calls` [EXTRACTED]
-- [[with_fake()]] - `indirect_call` [INFERRED]
+- [[test_failed_invention_keeps_the_others()]] - `indirect_call` [INFERRED]
+- [[test_invention_passes_into_slot()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/blender_linkpy
+#graphify/code #graphify/INFERRED #community/render_remotion

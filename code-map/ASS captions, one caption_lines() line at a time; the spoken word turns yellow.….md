@@ -12,6 +12,6 @@ tags:
 # ASS captions, one caption_lines() line at a time; the spoken word turns yellow.…
 
 ## Connections
-- [[captions()_1]] - `rationale_for` [EXTRACTED]
+- [[captions()]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/captions

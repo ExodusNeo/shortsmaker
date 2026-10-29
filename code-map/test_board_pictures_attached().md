@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_full_scenes.py"
 type: "code"
-community: "full_pictures"
+community: "drawn_thumbnail"
 location: "L207"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/full_pictures
+  - community/drawn_thumbnail
 ---
 
 # test_board_pictures_attached()
@@ -16,4 +16,4 @@ tags:
 - [[full_pictures()]] - `calls` [EXTRACTED]
 - [[test_full_scenes.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/full_pictures
+#graphify/code #graphify/EXTRACTED #community/drawn_thumbnail

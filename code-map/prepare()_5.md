@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_pictures_first.py"
 type: "code"
-community: "planning"
+community: "write_scripts"
 location: "L240"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/planning
+  - community/write_scripts
 ---
 
 # prepare()
@@ -15,4 +15,4 @@ tags:
 - [[passing()]] - `calls` [EXTRACTED]
 - [[test_weak_topic_swapped_for_backup()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/planning
+#graphify/code #graphify/EXTRACTED #community/write_scripts

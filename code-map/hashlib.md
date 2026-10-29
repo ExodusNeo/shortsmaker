@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "subprocess"
+community: "json"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/subprocess
+  - community/json
 ---
 
 # hashlib
@@ -23,4 +23,4 @@ tags:
 - [[pixabay_films()]] - `calls` [EXTRACTED]
 - [[pool_folder()]] - `calls` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/subprocess
+#graphify/concept #graphify/EXTRACTED #community/json

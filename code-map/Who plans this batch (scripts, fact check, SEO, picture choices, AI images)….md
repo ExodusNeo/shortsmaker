@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/channel_profiles.py"
 type: "rationale"
-community: "test_rules.py"
+community: "re"
 location: "L73"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/test_rulespy
+  - community/re
 ---
 
 # Who plans this batch (scripts, fact check, SEO, picture choices, AI images):…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[ask_brain()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/test_rulespy
+#graphify/rationale #graphify/EXTRACTED #community/re

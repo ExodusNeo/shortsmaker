@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/cli.py"
 type: "code"
-community: "json"
+community: "re"
 location: "L21"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/json
+  - community/re
 ---
 
 # blender_note()
@@ -18,4 +18,4 @@ tags:
 - [[ping()]] - `calls` [EXTRACTED]
 - [[test_blender_note()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/json
+#graphify/code #graphify/EXTRACTED #community/re

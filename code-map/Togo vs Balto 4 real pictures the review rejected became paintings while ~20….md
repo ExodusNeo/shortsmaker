@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_full_scenes.py"
 type: "rationale"
-community: "code_custom_scenes"
+community: "test_first_second.py"
 location: "L430"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/code_custom_scenes
+  - community/test_first_secondpy
 ---
 
 # Togo vs Balto: 4 real pictures the review rejected became paintings while ~20…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[test_review_uses_unused_pool_pictures_before_painting()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/code_custom_scenes
+#graphify/rationale #graphify/EXTRACTED #community/test_first_secondpy

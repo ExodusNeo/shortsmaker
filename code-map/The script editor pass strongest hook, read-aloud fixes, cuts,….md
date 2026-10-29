@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/writing.py"
 type: "rationale"
-community: "write_scripts"
+community: "edit_scripts"
 location: "L255"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/write_scripts
+  - community/edit_scripts
 ---
 
 # The script editor pass: strongest hook, read-aloud fixes, cuts,…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[edit_scripts()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/write_scripts
+#graphify/rationale #graphify/EXTRACTED #community/edit_scripts

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/review.py"
 type: "code"
-community: "code_custom_scenes"
+community: "test_first_second.py"
 location: "L173"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/code_custom_scenes
+  - community/test_first_secondpy
 ---
 
 # swap_pictures()
@@ -19,4 +19,4 @@ tags:
 - [[test_swap_moves_the_owners_clip_with_its_picture()]] - `calls` [EXTRACTED]
 - [[test_swap_pictures_trades_real_pictures()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/code_custom_scenes
+#graphify/code #graphify/EXTRACTED #community/test_first_secondpy

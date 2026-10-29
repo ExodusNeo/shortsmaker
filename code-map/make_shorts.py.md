@@ -1,12 +1,12 @@
 ---
 source_file: "make_shorts.py"
 type: "code"
-community: "json"
+community: "re"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/json
+  - community/re
 ---
 
 # make_shorts.py
@@ -16,4 +16,4 @@ tags:
 - [[cli.py]] - `imports_from` [EXTRACTED]
 - [[main()_7]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/json
+#graphify/code #graphify/EXTRACTED #community/re

@@ -1,18 +1,17 @@
 ---
-source_file: "tests/test_blender_link.py"
+source_file: "tools/split_make_shorts.py"
 type: "code"
-community: "blender_link.py"
-location: "L24"
+community: "split_make_shorts.py"
+location: "L385"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/blender_linkpy
+  - community/split_make_shortspy
 ---
 
 # .__init__()
 
 ## Connections
-- [[Fake]] - `method` [EXTRACTED]
-- [[handle()]] - `contains` [EXTRACTED]
+- [[Unqualify]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/blender_linkpy
+#graphify/code #graphify/EXTRACTED #community/split_make_shortspy

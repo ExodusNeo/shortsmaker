@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/picker.py"
 type: "code"
-community: "blender_link.py"
+community: "opener_graphic"
 location: "L304"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/blender_linkpy
+  - community/opener_graphic
 ---
 
 # opener_graphic()
@@ -26,4 +26,4 @@ tags:
 - [[test_model_graphic()]] - `calls` [EXTRACTED]
 - [[test_opener_graphic()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/blender_linkpy
+#graphify/code #graphify/EXTRACTED #community/opener_graphic
