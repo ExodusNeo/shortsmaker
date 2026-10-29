@@ -100,6 +100,13 @@ def use_opener(short: dict, bounds: list[float], work: Path, clips: dict, images
     picker.opener_graphic gave it one) and the reason comes back as a CHECK line (or the planner's own note when
     there was no plan). short["opening_note"] says which opener played, for the edit plan's Opening line."""
     short["opener_used"], short["opening_note"] = False, None
+    first = short["scenes"][0]
+    if first.get("opener_clip") and clips.get(0) and clips[0].name.startswith("clip"):  # AI clip, not archival film
+        first["full"] = None  # the clip plays instead of the motion graphic
+        maker = "made by you" if "_veo" in clips[0].name else "made on this PC"
+        short["opening_note"] = f"{short['opener_check'].removeprefix('opener: ')} -> AI clip of the strangest moment ({maker})"
+        sources[0] += f" | AI clip of the strangest moment ({maker})"
+        return short["opener_check"]
 
     def failed(why: str | None) -> str | None:
         if why and short.get("opener_graphic"):
@@ -297,6 +304,12 @@ def render(short: dict, ch: dict, folder: Path, state: dict | None = None, fix_r
         images = [Image.open(work / "blender_frames" / f"f_{a:04d}.png").convert("RGB")
                   for a, _ in blender_render.scene_frames(bounds)]
     else:
+        first = short["scenes"][0]
+        if session.VEO_HANDOFF and short.get("opener_check") and not short.get("opener"):
+            # no Blender template fits (owner, 2026-10-29): the strangest moment goes to the owner's clip hand-off
+            # (LTX if they skip it); the motion graphic plays only when no clip comes back
+            first["animate"] = first["motion_people"] = first["opener_clip"] = True
+            first["motion"] = first.get("motion") or f"act out the story's strangest moment: {first['narration']}"
         clips = gpu.local_clips(short, work, sources, bounds, {i: c["film"] for i, c in enumerate(choices)
                                                              if c.get("film") and not short["scenes"][i].get("full")})
     opener_check = None if drawn else use_opener(short, bounds, work, clips, images, sources)

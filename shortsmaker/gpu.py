@@ -466,7 +466,7 @@ def veo_handoff(short: dict, work: Path, bounds: list[float], marked: list[int])
     Scenes left without a file fall back to LTX."""
     folder = work.parent / "veo"
     folder.mkdir(exist_ok=True)
-    scenes = [i for i in marked if not short["scenes"][i].get("shot", "").startswith("CLOSE-UP:")]
+    scenes = list(marked)  # close-ups too: skipping them sent them to LTX behind the owner's back (2026-10-29)
     if not scenes:
         return {}
     for old_zip in folder.glob("*.zip"):

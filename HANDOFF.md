@@ -180,7 +180,11 @@ Rules that keep it working:
   and fills its slots; `fill_template` + `clean_opener` check every value. Each template passed every check with
   the real library and was looked at by eye.
 - **No template fits -> no Blender**: the motion-graphic opener plays (`picker.opener_graphic`, always planned for
-  these channels; the Opening line says `no template fits (...) -> motion graphic: ...`).
+  these channels; the Opening line says `no template fits (...) -> motion graphic: ...`). On "make AI clips
+  yourself" runs (owner, 2026-10-29: many stories fit no template) scene 1 first goes into the owner's clip hand-off
+  as the strangest moment (`opener_clip`, set in `render`); a skipped one is made by LTX; whichever clip comes back
+  plays instead of the graphic (`use_opener`, Opening line `... -> AI clip of the strangest moment (made by ...)`).
+  The hand-off sends close-ups too (it used to skip them, so they quietly went to LTX).
 - **Render** (`opener_render.render_opener`): models from `blender/assets/library` (else Poly Pizza through the
   owner's Blender, CC0 / CC-BY only; a missing model goes back to the planner, `swap_models`, up to 2), one headless
   build with checks (overlap, resting, framing, first frame shows subject + threat, blade face, cut shares, moves

@@ -262,6 +262,24 @@ def test_use_opener_no_template_note():
     assert s["opening_note"] == "no template fits (a crowd) -> motion graphic: map", s["opening_note"]
 
 
+def test_use_opener_no_template_ai_clip():
+    """No template fits and an AI clip of scene 1 came back (owner's or LTX): it plays instead of the motion graphic;
+    archival film on scene 1 does not count."""
+    from PIL import Image
+    from shortsmaker import short_render
+    for name, maker in (("clip0_veo.mp4", "made by you"), ("clip0_soft.mp4", "made on this PC")):
+        s = {"title": "x", "opener_check": "opener: no template fits (a crowd)", "opener_graphic": "motion graphic: map",
+             "scenes": [{"full": {"type": "journey"}, "opener_clip": True}]}
+        sources = ["photo"]
+        assert short_render.use_opener(s, [0.0, 2.0], Path("."), {0: Path(name)}, [Image.new("RGB", (8, 8))], sources) \
+            == "opener: no template fits (a crowd)"
+        assert s["scenes"][0]["full"] is None and maker in s["opening_note"] and maker in sources[0]
+    s = {"title": "x", "opener_check": "opener: no template fits (a crowd)", "opener_graphic": "motion graphic: map",
+         "scenes": [{"full": {"type": "journey"}, "opener_clip": True}]}
+    short_render.use_opener(s, [0.0, 2.0], Path("."), {0: Path("film0.mp4")}, [Image.new("RGB", (8, 8))], ["x"])
+    assert s["scenes"][0]["full"] == {"type": "journey"}
+
+
 def test_use_opener_planner_check():
     from shortsmaker import short_render
     s = {"title": "x", "opener_check": "opener: no usable plan", "scenes": [{"full": None}]}

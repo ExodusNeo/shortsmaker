@@ -133,12 +133,13 @@ def test_handoff_writes_jobs_and_zip():
     import zipfile
     with tempfile.TemporaryDirectory() as d:
         _, folder, asked = handoff(Path(d))
-        assert asked == [[0, 2]]  # no prompt asked for the CLOSE-UP
+        assert asked == [[0, 1, 2]]  # the CLOSE-UP goes to the owner too (it used to fall to LTX)
         jobs = json.loads((folder / "jobs.json").read_text(encoding="utf-8"))
         assert jobs == [
             {"scene": 1, "image": "start1.jpg", "prompt": "PROMPT 1", "seconds": round(3.0 + gpu.XFADE, 2), "out": "scene1.mp4"},
+            {"scene": 2, "image": "start2.jpg", "prompt": "PROMPT 2", "seconds": round(2.0 + gpu.XFADE, 2), "out": "scene2.mp4"},
             {"scene": 3, "image": "start3.jpg", "prompt": "PROMPT 3", "seconds": round(4.5 + gpu.XFADE, 2), "out": "scene3.mp4"}]
-        assert set(zipfile.ZipFile(folder / "veo.zip").namelist()) == {"jobs.json", "start1.jpg", "start3.jpg", "h3_run.py"}
+        assert set(zipfile.ZipFile(folder / "veo.zip").namelist()) == {"jobs.json", "start1.jpg", "start2.jpg", "start3.jpg", "h3_run.py"}
         notes = (folder / "prompts.txt").read_text(encoding="utf-8")
         assert "Colab" in notes and "Google Flow" in notes and "PROMPT 1" in notes and "PROMPT 3" in notes
 
@@ -204,25 +205,6 @@ def test_duplicate_clip_names_deduplicated():
         assert gpu.unpack_clips(folder) == ["scene1.mp4", "scene2.mp4"]
 
 
-def test_all_closeup_marked_scenes_skip_pause():
-    with tempfile.TemporaryDirectory() as d:
-        work = Path(d) / "short" / "work"
-        work.mkdir(parents=True)
-        short = short_with(2)
-        short["scenes"][0]["shot"] = "CLOSE-UP: face"
-        short["scenes"][1]["shot"] = "CLOSE-UP: hand"
-        old_input = builtins.input
-        waited = []
-        builtins.input = lambda msg="": waited.append(msg) or ""
-        try:
-            got = gpu.veo_handoff(short, work, [0.0, 3.0, 6.0], [0, 1])
-            assert got == {}
-            assert len(waited) == 0  # no pause with 0 clips to make
-            assert not (work.parent / "veo" / "jobs.json").exists()
-        finally:
-            builtins.input = old_input
-
-
 def test_old_zips_cleaned_up_on_handoff_start():
     with tempfile.TemporaryDirectory() as d:
         veo = Path(d) / "short" / "veo"
@@ -238,15 +220,15 @@ def test_flagged_start_picture_is_not_sent():
     import json
     with tempfile.TemporaryDirectory() as d:
         _, folder, asked = handoff(Path(d), flagged={0: "shows a street sign reading SAN PEDRO ST"})
-        assert asked == [[2]]  # scene 1's picture is bad: no prompt, no job, no clip asked for
-        assert [j["scene"] for j in json.loads((folder / "jobs.json").read_text(encoding="utf-8"))] == [3]
+        assert asked == [[1, 2]]  # scene 1's picture is bad: no prompt, no job, no clip asked for
+        assert [j["scene"] for j in json.loads((folder / "jobs.json").read_text(encoding="utf-8"))] == [2, 3]
         assert handoff.short["scenes"][0]["animate"] is False
 
 
 def test_all_start_pictures_flagged_skips_pause():
     with tempfile.TemporaryDirectory() as d:
         paused = []
-        got, folder, asked = handoff(Path(d), during_pause=paused.append, flagged={0: "garbled text", 2: "wrong city"})
+        got, folder, asked = handoff(Path(d), during_pause=paused.append, flagged={0: "garbled text", 1: "a hand melts", 2: "wrong city"})
         assert got == {} and asked == [] and paused == []
 
 
