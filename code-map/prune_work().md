@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/short_render.py"
 type: "code"
-community: "re"
+community: "json"
 location: "L60"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/re
+  - community/json
 ---
 
 # prune_work()
@@ -18,4 +18,4 @@ tags:
 - [[shutil]] - `calls` [EXTRACTED]
 - [[time]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/re
+#graphify/code #graphify/EXTRACTED #community/json

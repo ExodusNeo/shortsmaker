@@ -2,7 +2,7 @@
 source_file: "blender/moves.py"
 type: "code"
 community: "cut"
-location: "L608"
+location: "L610"
 tags:
   - graphify/code
   - graphify/EXTRACTED

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/cli.py"
 type: "rationale"
-community: "re"
+community: "fix_short"
 location: "L142"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/re
+  - community/fix_short
 ---
 
 # fix.bat: re-render a recent Short with one scene changed, keeping its pictures,…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[fix_short()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/re
+#graphify/rationale #graphify/EXTRACTED #community/fix_short

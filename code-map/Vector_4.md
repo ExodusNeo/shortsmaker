@@ -11,7 +11,7 @@ tags:
 # Vector
 
 ## Connections
-- [[dot-__init__()_5]] - `references` [EXTRACTED]
+- [[dot-__init__()_4]] - `references` [EXTRACTED]
 - [[box_of()]] - `references` [EXTRACTED]
 - [[centre()]] - `references` [EXTRACTED]
 - [[clear_distance()]] - `references` [EXTRACTED]

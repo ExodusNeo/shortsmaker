@@ -1,20 +1,20 @@
 ---
 source_file: ""
 type: "code"
-community: "render_remotion"
+community: "review"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/render_remotion
+  - community/review
 ---
 
 # Path
 
 ## Connections
-- [[approve_candidate()]] - `references` [EXTRACTED]
-- [[invent_component()]] - `references` [EXTRACTED]
-- [[invent_styles()]] - `references` [EXTRACTED]
-- [[reject_candidate()]] - `references` [EXTRACTED]
-- [[save_candidate()]] - `references` [EXTRACTED]
+- [[model_for()]] - `references` [EXTRACTED]
+- [[render_opener()]] - `references` [EXTRACTED]
+- [[review()]] - `references` [EXTRACTED]
+- [[save_try()]] - `references` [EXTRACTED]
+- [[to_glb()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/render_remotion
+#graphify/code #graphify/EXTRACTED #community/review

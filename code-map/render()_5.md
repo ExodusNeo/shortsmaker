@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[Make one Short. With `state` (fix.bat or an automatic fix round), reuse its…]] - `rationale_for` [EXTRACTED]
-- [[Path_34]] - `references` [EXTRACTED]
+- [[Path_33]] - `references` [EXTRACTED]
 - [[apply_review_fixes()]] - `calls` [EXTRACTED]
 - [[captions()]] - `calls` [EXTRACTED]
 - [[choose_images()]] - `calls` [EXTRACTED]

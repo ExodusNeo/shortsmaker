@@ -1,19 +1,19 @@
 ---
 source_file: "shortsmaker/blender_link.py"
 type: "code"
-community: "blender_link.py"
+community: "re"
 location: "L73"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/blender_linkpy
+  - community/re
 ---
 
 # in_library()
 
 ## Connections
 - [[A saved model whose title and tags hold every word of `find` (the closest title…]] - `rationale_for` [EXTRACTED]
-- [[Path_16]] - `references` [EXTRACTED]
+- [[Path_8]] - `references` [EXTRACTED]
 - [[blender_link.py]] - `contains` [EXTRACTED]
 - [[json]] - `calls` [EXTRACTED]
 - [[model_for()]] - `calls` [EXTRACTED]
@@ -21,4 +21,4 @@ tags:
 - [[test_in_library()]] - `calls` [EXTRACTED]
 - [[words()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/blender_linkpy
+#graphify/code #graphify/EXTRACTED #community/re

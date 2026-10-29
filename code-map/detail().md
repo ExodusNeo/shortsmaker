@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/photo_prep.py"
 type: "code"
-community: "clean_full"
+community: "trim_borders"
 location: "L21"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/clean_full
+  - community/trim_borders
 ---
 
 # detail()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[is_stereo()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/clean_full
+#graphify/code #graphify/EXTRACTED #community/trim_borders

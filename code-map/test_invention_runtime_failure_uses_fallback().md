@@ -12,7 +12,7 @@ tags:
 # test_invention_runtime_failure_uses_fallback()
 
 ## Connections
-- [[render()_4]] - `indirect_call` [INFERRED]
+- [[render()_1]] - `indirect_call` [INFERRED]
 - [[run_remotion_with_fallback()]] - `calls` [EXTRACTED]
 - [[test_style.py]] - `contains` [EXTRACTED]
 

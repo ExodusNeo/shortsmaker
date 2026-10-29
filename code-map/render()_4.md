@@ -1,17 +1,18 @@
 ---
-source_file: "tests/test_style.py"
+source_file: "blender/opener_scene.py"
 type: "code"
-community: "render_remotion"
-location: "L297"
+community: "opener_scene.py"
+location: "L511"
 tags:
   - graphify/code
-  - graphify/INFERRED
-  - community/render_remotion
+  - graphify/EXTRACTED
+  - community/opener_scenepy
 ---
 
 # render()
 
 ## Connections
-- [[test_invention_runtime_failure_uses_fallback()]] - `indirect_call` [INFERRED]
+- [[main()_9]] - `calls` [EXTRACTED]
+- [[opener_scene.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/render_remotion
+#graphify/code #graphify/EXTRACTED #community/opener_scenepy

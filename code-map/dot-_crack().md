@@ -12,7 +12,7 @@ tags:
 # ._crack()
 
 ## Connections
-- [[dot-__init__()_4]] - `calls` [EXTRACTED]
+- [[dot-__init__()_3]] - `calls` [EXTRACTED]
 - [[A jagged crack across the plate's outer face, in short ink segments that appear…]] - `rationale_for` [EXTRACTED]
 - [[Failure]] - `method` [EXTRACTED]
 - [[key()_1]] - `calls` [EXTRACTED]

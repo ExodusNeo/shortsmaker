@@ -1,17 +1,17 @@
 ---
-source_file: "tools/split_make_shorts.py"
+source_file: "tests/test_pictures_first.py"
 type: "code"
-community: "split_make_shorts.py"
-location: "L385"
+community: "gather_pool"
+location: "L37"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/split_make_shortspy
+  - community/gather_pool
 ---
 
 # .__init__()
 
 ## Connections
-- [[Unqualify]] - `method` [EXTRACTED]
+- [[stubbed]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/split_make_shortspy
+#graphify/code #graphify/EXTRACTED #community/gather_pool

@@ -1,18 +1,18 @@
 ---
 source_file: "shortsmaker/review.py"
 type: "code"
-community: "test_style.py"
+community: "test_story.py"
 location: "L123"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_stylepy
+  - community/test_storypy
 ---
 
 # first_second_check()
 
 ## Connections
-- [[Path_20]] - `references` [EXTRACTED]
+- [[Path_16]] - `references` [EXTRACTED]
 - [[Would a stranger scrolling the Shorts feed stop here Stayed-to-watch is…]] - `rationale_for` [EXTRACTED]
 - [[ask_ai()]] - `calls` [EXTRACTED]
 - [[capture_prompts()]] - `calls` [EXTRACTED]
@@ -26,4 +26,4 @@ tags:
 - [[shutil]] - `calls` [EXTRACTED]
 - [[test_opener_prompt_shows_each_scenes_line_and_picture()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_stylepy
+#graphify/code #graphify/EXTRACTED #community/test_storypy

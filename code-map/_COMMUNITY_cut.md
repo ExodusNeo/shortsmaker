@@ -9,7 +9,7 @@ members: 47
 
 ## Members
 - [[(edge, thin, long) unit axes of a tool in its own space long = handle-to-head,…]] - rationale - blender/moves.py
-- [[dot-__init__()_5]] - code - blender/moves.py
+- [[dot-__init__()_4]] - code - blender/moves.py
 - [[How far o can move along d before it touches any of `others` (rays from its…]] - rationale - blender/moves.py
 - [[Loose parts that touch or nearly touch belong together a low-poly head is…]] - rationale - blender/moves.py
 - [[Matrix]] - code
@@ -64,14 +64,14 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 31 edges to [[_COMMUNITY_moves.py]]
+- 30 edges to [[_COMMUNITY_moves.py]]
 - 11 edges to [[_COMMUNITY_scene_kit.py]]
-- 5 edges to [[_COMMUNITY_opener_scene.py]]
+- 6 edges to [[_COMMUNITY_opener_scene.py]]
 - 2 edges to [[_COMMUNITY_math]]
 - 1 edge to [[_COMMUNITY_load_model]]
 
 ## Top bridge nodes
-- [[cut()]] - degree 29, connects to 4 communities
+- [[cut()]] - degree 29, connects to 5 communities
 - [[hold_offscreen()]] - degree 8, connects to 3 communities
 - [[travel()_1]] - degree 7, connects to 2 communities
 - [[show_face()]] - degree 6, connects to 2 communities

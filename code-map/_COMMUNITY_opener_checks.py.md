@@ -1,11 +1,11 @@
 ---
 type: community
-members: 41
+members: 39
 ---
 
 # opener_checks.py
 
-**Members:** 41 nodes
+**Members:** 39 nodes
 
 ## Members
 - [[A person's planned prop (the umbrella, the sword) is in frame 0 and big enough…]] - rationale - blender/opener_checks.py
@@ -20,7 +20,6 @@ members: 41
 - [[The camera sees the blade's flat side, not its edge the view is at least…]] - rationale - blender/opener_checks.py
 - [[The pieces match what the plan expected named shares (by area()) within ±50%,…]] - rationale - blender/opener_checks.py
 - [[The subject stays visible on every frame at least min_visible of its points…]] - rationale - blender/opener_checks.py
-- [[The thing moves that must show physics and keyed travel (cut has its own…]] - rationale - blender/opener_scene.py
 - [[Vector_6]] - code
 - [[Walks and hops that read badly, sent back to the planner (owner, 2026-10-27)…]] - rationale - blender/opener_checks.py
 - [[3, 4, 5, 9 - 3-5, 9.]] - rationale - blender/opener_checks.py
@@ -38,7 +37,6 @@ members: 41
 - [[in_frame()]] - code - blender/opener_checks.py
 - [[mathutils_bvhtree]] - concept
 - [[moves_visibly()]] - code - blender/opener_checks.py
-- [[oc_moves()]] - code - blender/opener_scene.py
 - [[opener_checks.py]] - code - blender/opener_checks.py
 - [[overlaps()]] - code - blender/opener_checks.py
 - [[prop_shown()]] - code - blender/opener_checks.py

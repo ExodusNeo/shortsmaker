@@ -1,19 +1,19 @@
 ---
 source_file: "tests/test_pictures_first.py"
 type: "code"
-community: "gather_pool"
+community: "owner"
 location: "L31"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/gather_pool
+  - community/owner
 ---
 
 # film()
 
 ## Connections
-- [[dot-__enter__()_3]] - `calls` [EXTRACTED]
+- [[dot-__enter__()_2]] - `calls` [EXTRACTED]
 - [[pool_of()]] - `calls` [EXTRACTED]
 - [[test_pictures_first.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/gather_pool
+#graphify/code #graphify/EXTRACTED #community/owner

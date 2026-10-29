@@ -1,17 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "time"
+community: "ask_ai"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/time
+  - community/ask_ai
 ---
 
 # Path
 
 ## Connections
-- [[fit_start()]] - `references` [EXTRACTED]
-- [[saved_file()]] - `references` [EXTRACTED]
+- [[mark_details()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/time
+#graphify/code #graphify/EXTRACTED #community/ask_ai

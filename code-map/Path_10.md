@@ -1,20 +1,20 @@
 ---
 source_file: ""
 type: "code"
-community: "captions"
+community: "render_remotion"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/captions
+  - community/render_remotion
 ---
 
 # Path
 
 ## Connections
-- [[captions()]] - `references` [EXTRACTED]
-- [[music_gain()]] - `references` [EXTRACTED]
-- [[speak()]] - `references` [EXTRACTED]
-- [[story_sound()]] - `references` [EXTRACTED]
-- [[tts()_1]] - `references` [EXTRACTED]
+- [[ink_silhouette()]] - `references` [EXTRACTED]
+- [[make_paper()]] - `references` [EXTRACTED]
+- [[paint_instead()]] - `references` [EXTRACTED]
+- [[redraw_custom()]] - `references` [EXTRACTED]
+- [[render_remotion()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/captions
+#graphify/code #graphify/EXTRACTED #community/render_remotion

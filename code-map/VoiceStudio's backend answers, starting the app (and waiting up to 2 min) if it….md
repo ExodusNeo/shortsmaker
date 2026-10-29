@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/gpu.py"
 type: "rationale"
-community: "time"
+community: "json"
 location: "L95"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/time
+  - community/json
 ---
 
 # VoiceStudio's backend answers, starting the app (and waiting up to 2 min) if it…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[voicestudio_up()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/time
+#graphify/rationale #graphify/EXTRACTED #community/json

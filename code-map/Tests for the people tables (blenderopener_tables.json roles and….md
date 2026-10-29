@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_people_tables.py"
 type: "rationale"
-community: "subprocess"
+community: "test_story.py"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/subprocess
+  - community/test_storypy
 ---
 
 # Tests for the people tables (blender/opener_tables.json "roles" and…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[test_people_tables.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/subprocess
+#graphify/rationale #graphify/EXTRACTED #community/test_storypy

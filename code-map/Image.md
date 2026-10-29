@@ -1,17 +1,21 @@
 ---
 source_file: ""
 type: "code"
-community: "clean_full"
+community: "ClipReader"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/clean_full
+  - community/ClipReader
 ---
 
 # Image
 
 ## Connections
-- [[is_stereo()]] - `references` [EXTRACTED]
-- [[trim_borders()]] - `references` [EXTRACTED]
+- [[dot-at()]] - `references` [EXTRACTED]
+- [[draw_card()]] - `references` [EXTRACTED]
+- [[draw_graphic()]] - `references` [EXTRACTED]
+- [[graphic_overlay()]] - `references` [EXTRACTED]
+- [[person_card()]] - `references` [EXTRACTED]
+- [[shot()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/clean_full
+#graphify/code #graphify/EXTRACTED #community/ClipReader

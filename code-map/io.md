@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "test_full_scenes.py"
+community: "frame_render.py"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/test_full_scenespy
+  - community/frame_renderpy
 ---
 
 # io
@@ -29,4 +29,4 @@ tags:
 - [[storyboard()]] - `calls` [EXTRACTED]
 - [[test_blender_run.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/test_full_scenespy
+#graphify/concept #graphify/EXTRACTED #community/frame_renderpy

@@ -12,7 +12,7 @@ tags:
 # tts()
 
 ## Connections
-- [[Path_10]] - `references` [EXTRACTED]
+- [[Path_9]] - `references` [EXTRACTED]
 - [[audio_mix.py]] - `contains` [EXTRACTED]
 - [[edge_tts]] - `calls` [EXTRACTED]
 - [[speak()]] - `calls` [EXTRACTED]

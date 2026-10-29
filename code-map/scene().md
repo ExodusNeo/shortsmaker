@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_pictures_first.py"
 type: "code"
-community: "choose_images"
+community: "test_pictures_first.py"
 location: "L328"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/choose_images
+  - community/test_pictures_firstpy
 ---
 
 # scene()
@@ -21,4 +21,4 @@ tags:
 - [[test_plan_note_already_used()]] - `calls` [EXTRACTED]
 - [[test_planned_full_pictures_not_sent_when_empty()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/choose_images
+#graphify/code #graphify/EXTRACTED #community/test_pictures_firstpy

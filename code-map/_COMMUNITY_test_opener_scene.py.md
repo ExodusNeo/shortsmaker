@@ -23,8 +23,8 @@ members: 68
 - [[One brand look (part 2, 2026-10-27) every visible model is cel-shaded and ink-…]] - rationale - tests/test_opener_scene.py
 - [[Onion run (2026-10-28) with three actors the camera framed the first alone and…]] - rationale - tests/test_opener_scene.py
 - [[Owner, 2026-10-27 walking away shows the bird's back, and walking the way…]] - rationale - tests/test_opener_scene.py
+- [[Path_29]] - code
 - [[Path_30]] - code
-- [[Path_31]] - code
 - [[People openers (part 2) a dressed person stands with their feet on the ground.]] - rationale - tests/test_opener_scene.py
 - [[Standing on a crate and walking never floats off the edge or crashes; it goes…]] - rationale - tests/test_opener_scene.py
 - [[Tests for building openers in Blender (blenderopener_scene.py + moves.py,…]] - rationale - tests/test_opener_scene.py
@@ -85,11 +85,11 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 5 edges to [[_COMMUNITY_subprocess]]
-- 4 edges to [[_COMMUNITY_test_full_scenes.py]]
-- 3 edges to [[_COMMUNITY_json]]
+- 5 edges to [[_COMMUNITY_test_story.py]]
+- 5 edges to [[_COMMUNITY_test_full_scenes.py]]
 - 2 edges to [[_COMMUNITY_test_opener_plan.py]]
-- 1 edge to [[_COMMUNITY_test_blender_scene.py]]
+- 2 edges to [[_COMMUNITY_json]]
+- 1 edge to [[_COMMUNITY_subprocess]]
 
 ## Top bridge nodes
 - [[test_opener_scene.py]] - degree 49, connects to 5 communities

@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[blender_link.py]] - `contains` [EXTRACTED]
 - [[blender_note()]] - `calls` [EXTRACTED]
-- [[call()_1]] - `calls` [EXTRACTED]
+- [[call()]] - `calls` [EXTRACTED]
 - [[model_for()]] - `calls` [EXTRACTED]
 - [[resolve_models()]] - `calls` [EXTRACTED]
 - [[test_ping_on_off()]] - `calls` [EXTRACTED]

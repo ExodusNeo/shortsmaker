@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/channel_profiles.py"
 type: "code"
-community: "re"
+community: "fix_short"
 location: "L72"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/re
+  - community/fix_short
 ---
 
 # ask_brain()
@@ -18,4 +18,4 @@ tags:
 - [[main()_7]] - `calls` [EXTRACTED]
 - [[test_solo_brain_selection_options()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/re
+#graphify/code #graphify/EXTRACTED #community/fix_short

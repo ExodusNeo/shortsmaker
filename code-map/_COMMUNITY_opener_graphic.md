@@ -33,21 +33,22 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 8 edges to [[_COMMUNITY_test_full_scenes.py]]
-- 3 edges to [[_COMMUNITY_clean_full]]
+- 11 edges to [[_COMMUNITY_test_full_scenes.py]]
 - 3 edges to [[_COMMUNITY_full_cues]]
-- 3 edges to [[_COMMUNITY_motion.py]]
-- 2 edges to [[_COMMUNITY_resolve_models]]
-- 2 edges to [[_COMMUNITY_json]]
+- 2 edges to [[_COMMUNITY_clean_full]]
+- 2 edges to [[_COMMUNITY_test_blender_link.py]]
 - 2 edges to [[_COMMUNITY_render]]
-- 1 edge to [[_COMMUNITY_ask_ai]]
-- 1 edge to [[_COMMUNITY_blender_link.py]]
-- 1 edge to [[_COMMUNITY_test_style.py]]
 - 1 edge to [[_COMMUNITY_render_remotion]]
-- 1 edge to [[_COMMUNITY_drawn_thumbnail]]
+- 1 edge to [[_COMMUNITY_ask_ai]]
+- 1 edge to [[_COMMUNITY_review]]
+- 1 edge to [[_COMMUNITY_code_custom_scenes]]
+- 1 edge to [[_COMMUNITY_article_text]]
+- 1 edge to [[_COMMUNITY_rescue_graphics]]
+- 1 edge to [[_COMMUNITY_json]]
+- 1 edge to [[_COMMUNITY_sfx_events]]
 
 ## Top bridge nodes
-- [[opener_graphic()]] - degree 13, connects to 7 communities
+- [[opener_graphic()]] - degree 13, connects to 8 communities
 - [[full_props()]] - degree 11, connects to 4 communities
 - [[test_model_graphic()]] - degree 7, connects to 3 communities
 - [[full_summary()]] - degree 7, connects to 2 communities

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/gpu.py"
 type: "code"
-community: "local_voice"
+community: "ffmpeg"
 location: "L149"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/local_voice
+  - community/ffmpeg
 ---
 
 # split_takes()
@@ -22,4 +22,4 @@ tags:
 - [[spoken_count()]] - `calls` [EXTRACTED]
 - [[test_a_take_is_cut_between_the_scenes_words()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/local_voice
+#graphify/code #graphify/EXTRACTED #community/ffmpeg

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/style_lab.py"
 type: "code"
-community: "render_remotion"
+community: "test_style.py"
 location: "L116"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/render_remotion
+  - community/test_stylepy
 ---
 
 # lint_style_code()
@@ -19,4 +19,4 @@ tags:
 - [[test_invention_lint_failure_uses_fallback()]] - `calls` [EXTRACTED]
 - [[test_placeholders_match_the_slots()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/render_remotion
+#graphify/code #graphify/EXTRACTED #community/test_stylepy

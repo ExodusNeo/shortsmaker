@@ -1,20 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "resolve_models"
+community: "test_blender_render.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/resolve_models
+  - community/test_blender_renderpy
 ---
 
 # Path
 
 ## Connections
-- [[model_for()]] - `references` [EXTRACTED]
-- [[render_opener()]] - `references` [EXTRACTED]
-- [[review()]] - `references` [EXTRACTED]
-- [[save_try()]] - `references` [EXTRACTED]
-- [[to_glb()]] - `references` [EXTRACTED]
+- [[_run()]] - `references` [EXTRACTED]
+- [[render_clips()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/resolve_models
+#graphify/code #graphify/EXTRACTED #community/test_blender_renderpy

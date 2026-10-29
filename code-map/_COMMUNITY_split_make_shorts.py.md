@@ -11,7 +11,7 @@ members: 42
 - [[(local names, names declared global) bound directly in a function body (not in…]] - rationale - tools/split_make_shorts.py
 - [[(source line, names it binds, node) for each top-level import, in order.]] - rationale - tools/split_make_shorts.py
 - [[(statement, first line, last line) with the comments above it. For a statement…]] - rationale - tools/split_make_shorts.py
-- [[dot-__init__()_6]] - code - tools/split_make_shorts.py
+- [[dot-__init__()_5]] - code - tools/split_make_shorts.py
 - [[dot-visit_Attribute()]] - code - tools/split_make_shorts.py
 - [[dot-visit_Global()]] - code - tools/split_make_shorts.py
 - [[Every Name node in `tree_nodes` (top-level statements) that refers to a module-…]] - rationale - tools/split_make_shorts.py
@@ -59,10 +59,10 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 2 edges to [[_COMMUNITY_subprocess]]
+- 2 edges to [[_COMMUNITY_test_full_scenes.py]]
 - 1 edge to [[_COMMUNITY_test_h3_handoff.py]]
 - 1 edge to [[_COMMUNITY_re]]
-- 1 edge to [[_COMMUNITY_test_full_scenes.py]]
+- 1 edge to [[_COMMUNITY_subprocess]]
 
 ## Top bridge nodes
 - [[split_make_shorts.py]] - degree 26, connects to 3 communities

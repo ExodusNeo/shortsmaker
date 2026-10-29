@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/opener_render.py"
 type: "rationale"
-community: "resolve_models"
+community: "test_blender_link.py"
 location: "L97"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/resolve_models
+  - community/test_blender_linkpy
 ---
 
 # One model for the three.js model graphic (picker.opener_graphic): the…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[model_for()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/resolve_models
+#graphify/rationale #graphify/EXTRACTED #community/test_blender_linkpy

@@ -1,11 +1,11 @@
 ---
 type: community
-members: 35
+members: 34
 ---
 
 # moves.py
 
-**Members:** 35 nodes
+**Members:** 34 nodes
 
 ## Members
 - [[1, or 0.5 when the actor walks at someone who walks back at it they meet in…]] - rationale - blender/moves.py
@@ -19,7 +19,6 @@ members: 35
 - [[The way a move goes, as seen in the shot, or straight at another actor…]] - rationale - blender/moves.py
 - [[Up, out at that height until the whole body has passed the support's far edge,…]] - rationale - blender/moves.py
 - [[apply()]] - code - blender/moves.py
-- [[bbox()]] - code - blender/scene_kit.py
 - [[clear_distance against the others where their keys leave them at `frame` two…]] - rationale - blender/moves.py
 - [[clear_distance()]] - code - blender/moves.py
 - [[clear_distance_at_end()]] - code - blender/moves.py
@@ -52,16 +51,16 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 31 edges to [[_COMMUNITY_cut]]
+- 30 edges to [[_COMMUNITY_cut]]
 - 27 edges to [[_COMMUNITY_scene_kit.py]]
-- 11 edges to [[_COMMUNITY_opener_scene.py]]
-- 6 edges to [[_COMMUNITY_math]]
+- 8 edges to [[_COMMUNITY_opener_scene.py]]
+- 5 edges to [[_COMMUNITY_math]]
 - 2 edges to [[_COMMUNITY_build_scene.py]]
-- 1 edge to [[_COMMUNITY_test_topic_ideas.py]]
+- 1 edge to [[_COMMUNITY_re]]
 
 ## Top bridge nodes
 - [[moves.py]] - degree 48, connects to 6 communities
-- [[bbox()]] - degree 13, connects to 4 communities
 - [[key_loc()]] - degree 12, connects to 3 communities
 - [[release()]] - degree 10, connects to 3 communities
 - [[walk()]] - degree 15, connects to 2 communities
+- [[apply()]] - degree 13, connects to 2 communities

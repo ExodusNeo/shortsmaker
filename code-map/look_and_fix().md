@@ -1,18 +1,18 @@
 ---
 source_file: "shortsmaker/motion.py"
 type: "code"
-community: "motion.py"
+community: "code_custom_scenes"
 location: "L284"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/motionpy
+  - community/code_custom_scenes
 ---
 
 # look_and_fix()
 
 ## Connections
-- [[Path_24]] - `references` [EXTRACTED]
+- [[Path_22]] - `references` [EXTRACTED]
 - [[The coder looks at 8 frames of its own scene before the real render and…]] - `rationale_for` [EXTRACTED]
 - [[ask_ai()]] - `calls` [EXTRACTED]
 - [[clean_tsx_code()]] - `calls` [EXTRACTED]
@@ -23,4 +23,4 @@ tags:
 - [[preview_custom()]] - `calls` [EXTRACTED]
 - [[test_look_check_fixes_code()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/motionpy
+#graphify/code #graphify/EXTRACTED #community/code_custom_scenes

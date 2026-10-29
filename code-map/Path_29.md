@@ -1,17 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "pool_pictures"
+community: "test_opener_scene.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/pool_pictures
+  - community/test_opener_scenepy
 ---
 
 # Path
 
 ## Connections
-- [[film_piece()]] - `references` [EXTRACTED]
-- [[shot_span()]] - `references` [EXTRACTED]
+- [[run()_8]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/pool_pictures
+#graphify/code #graphify/EXTRACTED #community/test_opener_scenepy

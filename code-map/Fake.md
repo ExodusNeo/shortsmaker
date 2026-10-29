@@ -12,7 +12,7 @@ tags:
 # Fake
 
 ## Connections
-- [[dot-__init__()_9]] - `method` [EXTRACTED]
+- [[dot-__init__()_8]] - `method` [EXTRACTED]
 - [[dot-stop()]] - `method` [EXTRACTED]
 - [[Answers the add-on's commands; `replies` maps a command to a function(params)…]] - `rationale_for` [EXTRACTED]
 - [[run()_5]] - `calls` [EXTRACTED]

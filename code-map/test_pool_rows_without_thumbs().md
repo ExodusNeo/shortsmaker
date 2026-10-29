@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_pictures_first.py"
 type: "code"
-community: "prepare_topic"
+community: "pool_of"
 location: "L576"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/prepare_topic
+  - community/pool_of
 ---
 
 # test_pool_rows_without_thumbs()
@@ -17,4 +17,4 @@ tags:
 - [[save_pool()]] - `calls` [EXTRACTED]
 - [[test_pictures_first.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/prepare_topic
+#graphify/code #graphify/EXTRACTED #community/pool_of

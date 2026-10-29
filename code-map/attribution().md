@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/blender_link.py"
 type: "code"
-community: "blender_link.py"
+community: "test_blender_link.py"
 location: "L89"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/blender_linkpy
+  - community/test_blender_linkpy
 ---
 
 # attribution()
@@ -15,4 +15,4 @@ tags:
 - [[blender_link.py]] - `contains` [EXTRACTED]
 - [[fetch_model()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/blender_linkpy
+#graphify/code #graphify/EXTRACTED #community/test_blender_linkpy

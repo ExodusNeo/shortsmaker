@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "json"
+community: "test_story.py"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/json
+  - community/test_storypy
 ---
 
 # tempfile
@@ -33,4 +33,4 @@ tags:
 - [[test_story.py]] - `imports` [EXTRACTED]
 - [[test_topic_ideas.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/json
+#graphify/concept #graphify/EXTRACTED #community/test_storypy

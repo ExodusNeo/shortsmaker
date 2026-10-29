@@ -1,19 +1,19 @@
 ---
 source_file: "tests/test_blender_run.py"
 type: "code"
-community: "re"
+community: "main"
 location: "L85"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/re
+  - community/main
 ---
 
 # test_blender_failure_is_reported_and_the_batch_goes_on()
 
 ## Connections
 - [[main()_7]] - `calls` [EXTRACTED]
-- [[render()]] - `indirect_call` [INFERRED]
+- [[render()_2]] - `indirect_call` [INFERRED]
 - [[test_blender_run.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/re
+#graphify/code #graphify/EXTRACTED #community/main

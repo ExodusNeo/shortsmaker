@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_opener_render.py"
 type: "rationale"
-community: "test_opener_render.py"
+community: "use_opener"
 location: "L266"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/test_opener_renderpy
+  - community/use_opener
 ---
 
 # No template fits and an AI clip of scene 1 came back (owner's or LTX): it plays…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[test_use_opener_no_template_ai_clip()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/test_opener_renderpy
+#graphify/rationale #graphify/EXTRACTED #community/use_opener

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/motion.py"
 type: "code"
-community: "motion.py"
+community: "code_custom_scenes"
 location: "L90"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/motionpy
+  - community/code_custom_scenes
 ---
 
 # fallback_custom_tsx()
@@ -19,4 +19,4 @@ tags:
 - [[re]] - `calls` [EXTRACTED]
 - [[test_fallback_custom_is_clean()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/motionpy
+#graphify/code #graphify/EXTRACTED #community/code_custom_scenes

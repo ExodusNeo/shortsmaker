@@ -1,19 +1,21 @@
 ---
 type: community
-members: 6
+members: 8
 ---
 
 # ffmpeg
 
-**Members:** 6 nodes
+**Members:** 8 nodes
 
 ## Members
-- [[The sound file for a story sound the owner's own file in…]] - rationale - shortsmaker/audio_mix.py
-- [[_tone_wav()]] - code - tests/test_full_scenes.py
-- [[fetch()_1]] - code - tests/test_full_scenes.py
+- [[Cut each take into its scenes halfway through the pause between their words…]] - rationale - shortsmaker/gpu.py
+- [[Path]] - code
+- [[True when the Short's final scene is an open grammatical loop bridge into scene…]] - rationale - shortsmaker/plan_rules.py
+- [[duration()]] - code - shortsmaker/media_tools.py
 - [[ffmpeg()]] - code - shortsmaker/media_tools.py
-- [[story_sound()]] - code - shortsmaker/audio_mix.py
-- [[test_story_sound_library()]] - code - tests/test_full_scenes.py
+- [[is_loop_short()]] - code - shortsmaker/plan_rules.py
+- [[split_takes()]] - code - shortsmaker/gpu.py
+- [[test_a_take_is_cut_between_the_scenes_words()]] - code - tests/test_story.py
 
 ## Live Query (requires Dataview plugin)
 
@@ -23,25 +25,29 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 4 edges to [[_COMMUNITY_test_full_scenes.py]]
-- 3 edges to [[_COMMUNITY_test_opener_render.py]]
-- 2 edges to [[_COMMUNITY_make]]
-- 2 edges to [[_COMMUNITY_local_clips]]
-- 2 edges to [[_COMMUNITY_render]]
-- 1 edge to [[_COMMUNITY_local_voice]]
-- 1 edge to [[_COMMUNITY_test_blender_render.py]]
-- 1 edge to [[_COMMUNITY_test_story.py]]
-- 1 edge to [[_COMMUNITY_json]]
-- 1 edge to [[_COMMUNITY_visual_review]]
-- 1 edge to [[_COMMUNITY_test_style.py]]
-- 1 edge to [[_COMMUNITY_motion.py]]
-- 1 edge to [[_COMMUNITY_re]]
+- 5 edges to [[_COMMUNITY_local_clips]]
+- 4 edges to [[_COMMUNITY_json]]
+- 4 edges to [[_COMMUNITY_subprocess]]
+- 3 edges to [[_COMMUNITY_render]]
+- 3 edges to [[_COMMUNITY_make]]
+- 2 edges to [[_COMMUNITY_visual_review]]
+- 2 edges to [[_COMMUNITY_test_blender_render.py]]
+- 2 edges to [[_COMMUNITY_test_opener_render.py]]
+- 2 edges to [[_COMMUNITY_test_story.py]]
+- 2 edges to [[_COMMUNITY_use_opener]]
+- 1 edge to [[_COMMUNITY_qwen_voice.py]]
+- 1 edge to [[_COMMUNITY_image_sources.py]]
+- 1 edge to [[_COMMUNITY_render_remotion]]
 - 1 edge to [[_COMMUNITY_captions]]
-- 1 edge to [[_COMMUNITY_subprocess]]
-- 1 edge to [[_COMMUNITY_prepare_topic]]
+- 1 edge to [[_COMMUNITY_re]]
+- 1 edge to [[_COMMUNITY_words_of]]
+- 1 edge to [[_COMMUNITY_test_full_scenes.py]]
+- 1 edge to [[_COMMUNITY_style_library]]
+- 1 edge to [[_COMMUNITY_pool_of]]
 
 ## Top bridge nodes
-- [[ffmpeg()]] - degree 19, connects to 14 communities
-- [[story_sound()]] - degree 7, connects to 4 communities
-- [[test_story_sound_library()]] - degree 3, connects to 1 community
-- [[_tone_wav()]] - degree 2, connects to 1 community
+- [[ffmpeg()]] - degree 19, connects to 11 communities
+- [[duration()]] - degree 13, connects to 9 communities
+- [[is_loop_short()]] - degree 7, connects to 5 communities
+- [[split_takes()]] - degree 9, connects to 3 communities
+- [[test_a_take_is_cut_between_the_scenes_words()]] - degree 5, connects to 2 communities

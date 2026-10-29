@@ -1,18 +1,18 @@
 ---
 source_file: "shortsmaker/short_render.py"
 type: "code"
-community: "test_opener_render.py"
+community: "use_opener"
 location: "L97"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_opener_renderpy
+  - community/use_opener
 ---
 
 # use_opener()
 
 ## Connections
-- [[Path_34]] - `references` [EXTRACTED]
+- [[Path_33]] - `references` [EXTRACTED]
 - [[Scene 1 plays its Blender opener when one renders (opener_render.py,…]] - `rationale_for` [EXTRACTED]
 - [[_wiring()]] - `calls` [EXTRACTED]
 - [[failed()]] - `contains` [EXTRACTED]
@@ -26,4 +26,4 @@ tags:
 - [[test_use_opener_opening_note()]] - `calls` [EXTRACTED]
 - [[test_use_opener_planner_check()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_opener_renderpy
+#graphify/code #graphify/EXTRACTED #community/use_opener

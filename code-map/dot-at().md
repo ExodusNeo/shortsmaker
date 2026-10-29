@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/frame_render.py"
 type: "code"
-community: "frame_maker"
+community: "ClipReader"
 location: "L220"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/frame_maker
+  - community/ClipReader
 ---
 
 # .at()
@@ -14,6 +14,6 @@ tags:
 ## Connections
 - [[ClipReader]] - `method` [EXTRACTED]
 - [[Frame at fraction p (0..1) of the clip; p never goes backwards within a scene.]] - `rationale_for` [EXTRACTED]
-- [[Image_1]] - `references` [EXTRACTED]
+- [[Image]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/frame_maker
+#graphify/code #graphify/EXTRACTED #community/ClipReader

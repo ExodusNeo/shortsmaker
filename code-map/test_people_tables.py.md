@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_people_tables.py"
 type: "code"
-community: "subprocess"
+community: "test_story.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/subprocess
+  - community/test_storypy
 ---
 
 # test_people_tables.py
@@ -27,4 +27,4 @@ tags:
 - [[test_standin_matches_tables()]] - `contains` [EXTRACTED]
 - [[traceback]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/subprocess
+#graphify/code #graphify/EXTRACTED #community/test_storypy

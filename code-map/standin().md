@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[Build the stand-in library into `out` (drop = a material its bodies leave out);…]] - `rationale_for` [EXTRACTED]
-- [[Path_31]] - `references` [EXTRACTED]
+- [[Path_30]] - `references` [EXTRACTED]
 - [[people_lib()]] - `calls` [EXTRACTED]
 - [[test_opener_scene.py]] - `imports` [EXTRACTED]
 - [[test_people_tables.py]] - `contains` [EXTRACTED]

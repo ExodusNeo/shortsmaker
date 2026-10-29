@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_full_scenes.py"
 type: "code"
-community: "json"
+community: "render"
 location: "L293"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/json
+  - community/render
 ---
 
 # test_state_roundtrip_full_pics()
@@ -16,4 +16,4 @@ tags:
 - [[save_state()]] - `calls` [EXTRACTED]
 - [[test_full_scenes.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/json
+#graphify/code #graphify/EXTRACTED #community/render

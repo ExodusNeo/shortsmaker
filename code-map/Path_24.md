@@ -1,20 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "motion.py"
+community: "test_style.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/motionpy
+  - community/test_stylepy
 ---
 
 # Path
 
 ## Connections
-- [[code_custom_scenes()]] - `references` [EXTRACTED]
-- [[full_props()]] - `references` [EXTRACTED]
-- [[look_and_fix()]] - `references` [EXTRACTED]
-- [[preview_custom()]] - `references` [EXTRACTED]
-- [[preview_sheet()]] - `references` [EXTRACTED]
+- [[candidate_in()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/motionpy
+#graphify/code #graphify/EXTRACTED #community/test_stylepy

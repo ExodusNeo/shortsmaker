@@ -2,7 +2,7 @@
 source_file: "tests/test_shot_templates.py"
 type: "code"
 community: "json"
-location: "L82"
+location: "L91"
 tags:
   - graphify/code
   - graphify/EXTRACTED

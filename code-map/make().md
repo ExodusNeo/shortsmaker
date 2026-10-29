@@ -12,7 +12,7 @@ tags:
 # make()
 
 ## Connections
-- [[Path_1]] - `references` [EXTRACTED]
+- [[Path_2]] - `references` [EXTRACTED]
 - [[caption_layer()]] - `calls` [EXTRACTED]
 - [[edit_project.py]] - `contains` [EXTRACTED]
 - [[folderedit.mlt + edit_in_shotcut.bat for a finished Short. `videos` = (track…]] - `rationale_for` [EXTRACTED]

@@ -11,6 +11,6 @@ tags:
 # Path
 
 ## Connections
-- [[run()_8]] - `references` [EXTRACTED]
+- [[standin()]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/test_opener_scenepy

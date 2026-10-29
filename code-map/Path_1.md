@@ -1,20 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "make"
+community: "test_h3_handoff.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/make
+  - community/test_h3_handoffpy
 ---
 
 # Path
 
 ## Connections
-- [[caption_layer()]] - `references` [EXTRACTED]
-- [[make()]] - `references` [EXTRACTED]
-- [[master_gain()]] - `references` [EXTRACTED]
-- [[project_xml()]] - `references` [EXTRACTED]
-- [[remove()]] - `references` [EXTRACTED]
+- [[handoff()]] - `references` [EXTRACTED]
+- [[zip_of()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/make
+#graphify/code #graphify/EXTRACTED #community/test_h3_handoffpy

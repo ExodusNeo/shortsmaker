@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_opener_render.py"
 type: "code"
-community: "test_opener_render.py"
+community: "test_blender_link.py"
 location: "L294"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_opener_renderpy
+  - community/test_blender_linkpy
 ---
 
 # test_blender_note()
@@ -15,4 +15,4 @@ tags:
 - [[blender_note()]] - `calls` [EXTRACTED]
 - [[test_opener_render.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_opener_renderpy
+#graphify/code #graphify/EXTRACTED #community/test_blender_linkpy

@@ -11,7 +11,6 @@ tags:
 # Path
 
 ## Connections
-- [[_run()]] - `references` [EXTRACTED]
-- [[render_clips()]] - `references` [EXTRACTED]
+- [[fake_blender()]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/test_blender_renderpy

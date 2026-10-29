@@ -12,7 +12,7 @@ tags:
 # reject_candidate()
 
 ## Connections
-- [[Path_26]] - `references` [EXTRACTED]
+- [[Path_23]] - `references` [EXTRACTED]
 - [[library_menu()]] - `calls` [EXTRACTED]
 - [[shutil]] - `calls` [EXTRACTED]
 - [[style_lab.py]] - `contains` [EXTRACTED]
