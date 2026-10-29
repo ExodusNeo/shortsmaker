@@ -42,6 +42,15 @@ SAMPLES = {  # name -> the planner's reply; every template, and every pick and o
     "hand_over_run": {"template": "hand_over", "moment": "a banker drops a bag of coins and a pirate runs off with it",
                       "set": {"ground": "wood floor", "light": "day", "backdrop": None},
                       "fill": {"giver": "victorian_gentleman", "taker": "pirate", "item": "coin bag", "leaves": "run"}},
+    "sink_ship": {"template": "sink", "moment": "a warship tilts and sinks a mile into its maiden voyage",
+                  "set": {"ground": "water", "light": "day", "backdrop": None},
+                  "fill": {"ship": {"find": "ship", "size_m": 12}}},
+    "chase_day": {"template": "chase", "moment": "a policeman chases a speeding driver down a country road",
+                  "set": {"ground": "dirt", "light": "day", "backdrop": None},
+                  "fill": {"runner": "victorian_gentleman", "chaser": "soldier_1800s"}},
+    "chase_night": {"template": "chase", "moment": "guards chase an escaped prisoner through the snow",
+                    "set": {"ground": "snow", "light": "night", "backdrop": "row house"},
+                    "fill": {"runner": "man", "chaser": "ww2_soldier"}},
 }
 SECONDS = 3.0
 OUT = ROOT / "cache" / "shot_templates"

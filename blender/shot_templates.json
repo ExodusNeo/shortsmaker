@@ -343,5 +343,103 @@
     "follow": "taker"
    }
   }
+ },
+ "sink": {
+  "shows": "a ship or boat on open water tilts and sinks, alone in the shot (no people: nobody stands on water)",
+  "grounds": [
+   "water"
+  ],
+  "slots": {
+   "ship": {
+    "kind": "thing",
+    "size_m": [
+     4,
+     30
+    ],
+    "words": [
+     "ship",
+     "boat",
+     "sailboat",
+     "warship",
+     "galleon",
+     "steamship",
+     "ferry"
+    ],
+    "note": "what sinks (\"ship\", \"sailboat\", \"warship\")"
+   }
+  },
+  "plan": {
+   "actors": [
+    {
+     "id": "ship",
+     "find": "$ship.find",
+     "size_m": "$ship.size_m",
+     "facing": "right"
+    }
+   ],
+   "beats": [
+    {
+     "move": "sink",
+     "actor": "ship",
+     "at": 0.4
+    }
+   ],
+   "camera": {
+    "angle": "three_quarter",
+    "follow": "ship"
+   }
+  }
+ },
+ "chase": {
+  "shows": "one person runs off and a second runs after them (a policeman after a speeder, guards after an escapee)",
+  "grounds": [
+   "dirt",
+   "grass",
+   "stone",
+   "sand",
+   "snow"
+  ],
+  "slots": {
+   "runner": {
+    "kind": "role",
+    "note": "who is chased"
+   },
+   "chaser": {
+    "kind": "role",
+    "note": "who chases"
+   }
+  },
+  "plan": {
+   "actors": [
+    {
+     "id": "runner",
+     "person": "$runner",
+     "facing": "right"
+    },
+    {
+     "id": "chaser",
+     "person": "$chaser",
+     "facing": "right"
+    }
+   ],
+   "beats": [
+    {
+     "move": "run",
+     "actor": "runner",
+     "at": 0.1,
+     "toward": "right"
+    },
+    {
+     "move": "run",
+     "actor": "chaser",
+     "at": 0.25,
+     "toward": "right"
+    }
+   ],
+   "camera": {
+    "angle": "side",
+    "follow": "runner"
+   }
+  }
  }
 }

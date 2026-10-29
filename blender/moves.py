@@ -256,8 +256,10 @@ def sink(beat, st):
     lo, hi = kit.bbox(o)
     kit.key_loc(o, f0, o.location.copy())
     kit.key_rot(o, f0, o.rotation_euler.copy())
-    kit.key_loc(o, min(f0 + round(1.5 * st.fps), st.frames), o.location - Vector((0, 0, 0.9 * (hi.z - lo.z))))
-    kit.key_rot(o, min(f0 + round(1.5 * st.fps), st.frames), (math.radians(15), 0, o.rotation_euler.z))
+    # going down until the last frame, mast tip still up: done in 1.5 s, the ship template's second half was empty
+    # water (2026-10-29)
+    kit.key_loc(o, st.frames, o.location - Vector((0, 0, 0.75 * (hi.z - lo.z))))
+    kit.key_rot(o, st.frames, (math.radians(20), 0, o.rotation_euler.z))
     st.moved_from.setdefault(beat["actor"], f0)
 
 

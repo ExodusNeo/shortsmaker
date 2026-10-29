@@ -254,7 +254,8 @@ def place_actors(plan: dict, models: dict, st: moves.State, lib: dict | None = N
         w = st.objs[walker].location
         for aid in on_ground:
             o = st.objs[aid]
-            if aid != walker and aid not in linked and (o.location - w).dot(ahead) > 0:
+            # someone heading the same way isn't in the way (a chase: the runner was flipped behind the chaser)
+            if aid != walker and aid not in linked and heading.get(aid) != way and (o.location - w).dot(ahead) > 0:
                 o.location -= 2 * (o.location - w).dot(ahead) * ahead
     for b in plan["beats"]:  # a thing to pick up lies in front of its taker (the bag lay behind the dealer: live run 2)
         if b["move"] == "pick_up" and b.get("take") in on_ground and not st.objs[b["take"]].get("person"):
@@ -365,9 +366,24 @@ def camera(plan: dict, st: moves.State, subject_id: str) -> bpy.types.Object:
     # and the subject wherever it goes while someone else still has to be seen (the walker and the dropper of the
     # pick-up test both in one frame)
     due = set().union(*seen_windows(plan, st, subject_id).values())
+    # walkers as seen from the followed one (the camera rides along): a chase's runner pulls ahead of the chaser and
+    # both left a frame sized on frame 1, where they stood side by side (chase template, 2026-10-29)
+    # everyone running together (a chase): the camera rides along with the middle of the group (following the runner
+    # cut the chaser off at the frame edge), so only their spacing has to fit
+    led = st.objs[plan["camera"].get("follow") or subject_id]
+    together = all(o in walkers for o in framed)
+    group = framed if together else [led]
+
+    def mid() -> Vector:
+        return sum((sum(kit.bbox(o), Vector()) / 2 for o in group), Vector()) / len(group)
+    lead0 = mid()
     for f in sorted({*range(1, sc.frame_end + 1, 4), sc.frame_end}):
         sc.frame_set(f)
-        boxes += [kit.bbox(o) for o in roam] + ([kit.bbox(first)] if f in due and first not in roam else [])
+        boxes += [kit.bbox(o) for o in roam] + ([kit.bbox(first)] if f in due and first not in roam and not together else [])
+        shift = mid() - lead0
+        shift.z = 0
+        boxes += [(a - shift, b - shift) for a, b in (kit.bbox(o) for o in walkers
+                                                       if o in framed and (together or o is not led))]
     sc.frame_set(1)
     for tlo, thi in boxes:
         lo = Vector((min(lo.x, tlo.x), min(lo.y, tlo.y), min(lo.z, tlo.z)))
@@ -409,7 +425,7 @@ def camera(plan: dict, st: moves.State, subject_id: str) -> bpy.types.Object:
         if f >= moved:
             sc.frame_set(f)
             blo, bhi = kit.bbox(st.objs[follow])
-            now = (blo + bhi) / 2
+            now = mid() if together else (blo + bhi) / 2
             if threat_whole(st, first):  # keep both in: follow the point between the subject and what it goes at
                 tlo, thi = kit.bbox(st.threat)
                 now = now.lerp((tlo + thi) / 2, 0.5)
