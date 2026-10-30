@@ -149,8 +149,9 @@ Rules that keep it working:
    look-alikes from another culture or era; one solo portrait of a person per Short; portraits never under that
    person's own card. Scenes with nothing fitting go to `rescue_graphics()` (full-screen graphic) or a painting.
 7. **Media**: voice = **CosyVoice 3 through VoiceStudio** (`D:\VoiceStudio`, backend 127.0.0.1:3900, started by
-   `voicestudio_up()`), cloned "aiden" (`local_ai/voices/aiden_ref.wav`), documentary instruct, tempo `COSY_SPEED`
-   (1.20 in `gpu.py`); each sentence run is one take (`sentence_groups()`), cut per scene by MMS word alignment. Backups in order:
+   `voicestudio_up()`), cloned Mark Nelson (`local_ai/voices/nelson_ref.wav` with `aiden_ref.wav` fallback; brisk
+   investigative storyteller, CC0/PD), story-arc delivery (`cosy_instruct`: urgent hook -> suspenseful middle -> punchline payoff),
+   tempo `COSY_SPEED` (1.10 in `gpu.py`, brisk ~2.8 wps base pace with zero audio stretching); each sentence run is one take (`sentence_groups()`), cut per scene by MMS word alignment. Backups in order:
    Qwen3-TTS (aiden), Kokoro, Edge, never mixed in one Short. Paintings: **MOSS-Image** (ComfyUI `D:\ComfyUI`), then
    Gemini, then SDXL. Paintings may show only words quoted in `ai_image`; a hand-made period medium, never "concept
    art"/"cinematic". Real stills -> `clean_photo()` -> 9:16 cover; film -> `FILM_CROP` + `FILM_VF` band. AI video

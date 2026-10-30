@@ -43,14 +43,14 @@ MOSS_AI_LOOK = (", 3d render, cgi, glossy plastic look, airbrushed, smooth digit
 # quoted words, so the painter writes real text (MOSS and Gemini render quoted text exactly) instead of gibberish.
 PAINT_TEXT_RULE = ("Any writing in the picture must be exactly the words in double quotes in this prompt; with no "
                    "quoted words, no writing. No logos or watermarks.")
-# Main voice (owner's pick 2026-10-20, over OmniVoice and VoxCPM2): CosyVoice 3 in VoiceStudio, cloning aiden
-# from a 10 s clip of his own Qwen voice, read as a documentary narrator. Needs the VoiceStudio app (D:).
+# Main voice (owner's pick 2026-10-30): CosyVoice 3 in VoiceStudio, cloning Mark Nelson (investigative
+# storyteller, crisp cadence, CC0/PD). Fallback to aiden_ref.wav if nelson_ref.wav is missing.
 VOICESTUDIO = "http://127.0.0.1:3900"
 VOICESTUDIO_EXE = Path(r"D:\VoiceStudio\app\VoiceStudio.exe")
-COSY_REF = LOCAL_AI / "voices" / "aiden_ref.wav"  # its words are in aiden_ref.txt
+COSY_REF = LOCAL_AI / "voices" / "nelson_ref.wav" if (LOCAL_AI / "voices" / "nelson_ref.wav").exists() else LOCAL_AI / "voices" / "aiden_ref.wav"
 COSY_INSTRUCT = "Speak with dry wit, curiosity, and building suspense, like a storyteller sharing an incredible secret."
-# Owner's pick 2026-10-24 for natural documentary cadence without breathlessness (at 95-110 words, ~35-42s)
-COSY_SPEED = 1.20
+# Mark Nelson's natural pace is ~2.8 wps, so speed 1.10 hits snappy ~35-40s with zero audio stretching artifacts
+COSY_SPEED = 1.10
 # Backup voice (owner's pick 2026-10-18 over Chatterbox and Kokoro): Qwen3-TTS "aiden", no style instruction,
 # in its own venv (qwen-tts pins transformers versions that would break gen.py). Then Kokoro, then Edge.
 QWEN_SPEAKER = "aiden"
@@ -173,8 +173,17 @@ def split_takes(done: list[dict], groups: list[list[int]], scenes: list[dict], w
     return out
 
 
+def cosy_instruct(take_idx: int, total_takes: int) -> str:
+    """Story arc delivery: hook urgency -> suspenseful investigation -> payoff reveal."""
+    if take_idx == 0:
+        return "Speak with sharp curiosity, urgent pacing, and disbelief, hooking the listener instantly."
+    if total_takes > 1 and take_idx == total_takes - 1:
+        return "Speak with dramatic emphasis and wry satisfaction, delivering the incredible punchline."
+    return COSY_INSTRUCT
+
+
 def local_voice(short: dict, ch: dict, work: Path) -> list[tuple[Path, list] | None]:
-    """Voice every scene on the GPU: CosyVoice (aiden, documentary) for the whole Short, else Qwen (aiden),
+    """Voice every scene on the GPU: CosyVoice (Mark Nelson, documentary) for the whole Short, else Qwen (aiden),
     else Kokoro; per scene (wav, words) or None to fall back to Edge. A voice counts only if every scene worked,
     so one Short never mixes voices. CosyVoice and Qwen read whole sentences in one take (sentence_groups)."""
     scenes, groups = short["scenes"], sentence_groups(short["scenes"])
@@ -189,7 +198,8 @@ def local_voice(short: dict, ch: dict, work: Path) -> list[tuple[Path, list] | N
     if COSY_REF.exists() and voicestudio_up():
         ref_text = COSY_REF.with_suffix(".txt").read_text(encoding="utf-8").strip()
         done = local_job("tts", [{**it, "engine": "cosyvoice", "ref": str(COSY_REF), "ref_text": ref_text,
-                                  "instruct": COSY_INSTRUCT, "speed": COSY_SPEED} for it in items],
+                                  "instruct": cosy_instruct(idx, len(items)), "speed": COSY_SPEED}
+                                 for idx, it in enumerate(items)],
                          work, timeout=1200, worker="qwen_voice.py", venv="qwen_venv") or []
         voicestudio_unload()
         if done and all(it.get("ok") and it.get("words") for it in done) and (cut := split_takes(done, groups, scenes, work)):

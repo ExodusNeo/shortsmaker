@@ -1514,3 +1514,6 @@ when no template fits, and add three.js only as a fixed template. All three buil
   channel_profiles.load_channel(), folder, state)` with `short_render.load_state(work)`) to avoid spending AI usage.
 - Full run: `.venv\Scripts\python.exe -u make_shorts.py 1 strange-history gemini`, then review 1 frame/s
   (`ffmpeg -i short.mp4 -vf "fps=1,scale=180:-1,tile=11x5" -frames:v 1 sheet.jpg`) and edit_plan.txt's CHECK lines.
+
+
+2026-10-30: Voice upgraded from synthetic-cloned Qwen aiden to Mark Nelson (local_ai/voices/nelson_ref.wav + .txt, CC0/PD, 10.1 s from Continental Op), an articulate American investigative narrator with crisp diction and natural ~2.8 wps cadence. COSY_SPEED lowered from 1.20 to 1.10 (snappy 35-40s Shorts without metallic ffmpeg atempo time-stretching artifacts). Dynamic delivery arc added (cosy_instruct): urgent curiosity for the hook (take 0), suspenseful investigation for the body, and dramatic payoff for the final reveal.
