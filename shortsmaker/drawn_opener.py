@@ -12,11 +12,14 @@ import shutil
 import subprocess
 from pathlib import Path
 
-from shortsmaker import llm, session
+from shortsmaker import llm, plan_rules, session
 from shortsmaker.config import FPS, ROOT, XFADE
 
 DRAWN = ROOT / "drawn"
 FIXES = 2  # look-and-fix rounds after the first draft (owner: a few fixes, then the next opener in line)
+# The art director's score (1-10) a draft needs. A list of flaws alone never passed: on the first live runs
+# (2026-10-31) it found some in every draft, good ones included, and all 6 Shorts fell back to the motion graphic.
+PASS = 7
 TIMEOUT = 600  # one node run (a 4 s render takes ~20 s)
 # The scene runs as code on this PC and its writer has read Wikipedia text: only kit calls and plain JavaScript.
 # node also runs with --disallow-code-generation-from-strings (no eval / Function at run time).
@@ -111,12 +114,12 @@ Reply with ONLY JSON: {{"moment": "one sentence: what the animation shows", "cod
     return {"moment": str(data.get("moment") or "the strangest moment").strip()[:200], "code": code}
 
 
-def review(short: dict, plan: dict, sheet: Path, seconds: float) -> list[str]:
-    """The art director's problems with a draft's preview sheet ([] = it passes). A failed call passes nothing."""
-    data = llm.ask_ai(f"""You are the strict art director of a YouTube Short: "{short['title']}". Open {sheet}: six frames of its
+def review(short: dict, plan: dict, sheet: Path, seconds: float) -> tuple[float, list[str]]:
+    """The art director's score (1-10) of a draft's preview sheet and what to fix. A failed call passes it."""
+    data = llm.ask_ai(f"""You are the art director of a YouTube Short: "{short['title']}". Open {sheet}: six frames of its
 hand-drawn opener across {seconds:.1f} s, left to right (the time is on each). The voice over it says:
 "{short['scenes'][0]['narration']}". The animator meant it to show: {plan['moment']}.
-A stranger scrolling the Shorts feed sees the first frame for one second. Report every problem a viewer would notice:
+A stranger scrolling the Shorts feed sees the first frame for one second. Look for these problems:
 - frame 0 doesn't already show the subject and what is strange about it, or you can't tell what is happening;
 - the main thing is too small to read on a phone, or crowded out by background;
 - something doesn't look like what it should be (name it), or looks wrong for the story's era or place;
@@ -129,11 +132,14 @@ A stranger scrolling the Shorts feed sees the first frame for one second. Report
 - nothing moves, or the moving parts glitch or jump between frames;
 - gore, blood or a weapon hurting someone.
 The hand-drawn cartoon look itself (dot eyes, stick limbs, brush lines, watercolour) is intended: don't report it.
-Reply with ONLY JSON: {{"ok": true}} or {{"ok": false, "problems": ["...", "..."]}}""", fatal=False, read_dir=sheet.parent)
-    if not isinstance(data, dict) or data.get("ok") is True:
-        return []
+Score it 1-10: would that stranger understand the strange moment at a glance and stop scrolling? {PASS} = good
+enough to post: small flaws are fine. Below {PASS}, list the problems that stop it working, the worst first.
+Reply with ONLY JSON: {{"score": 7, "problems": ["...", "..."]}}""", fatal=False, read_dir=sheet.parent)
+    score = data.get("score") if isinstance(data, dict) else None
+    if not plan_rules.is_num(score) or not 1 <= score <= 10:  # no verdict: the draft passes as it is
+        return PASS, []
     found = [str(p).strip()[:240] for p in data.get("problems") or [] if str(p).strip()]
-    return found[:8] or ([] if data.get("ok") is not False else ["the art director rejected it without saying why"])
+    return float(score), found[:8] or ([] if score >= PASS else ["the art director gave a low score without saying why"])
 
 
 def fingerprint(code: str, seconds: float) -> str:
@@ -163,14 +169,14 @@ def make_opener(short: dict, words: list, seconds: float, work: Path) -> tuple[P
 
     if not plan:
         print("  drawing the opener: the strangest moment as a hand-drawn animation...")
-        problems, sheet = [], None
+        problems, sheet, score = [], None, 0.0
         for attempt in range(FIXES + 1):
             draft = write(short, words, seconds, plan, problems, sheet)
             if not draft:
                 if plan is None:
                     return fail("the AI wrote no usable scene")
                 break  # keep the last draft's problems
-            plan, sheet = draft, None
+            plan, sheet, score = draft, None, 0.0
             problems = lint(plan["code"])
             if not problems:
                 scene.write_text(plan["code"], encoding="utf-8")
@@ -180,13 +186,13 @@ def make_opener(short: dict, words: list, seconds: float, work: Path) -> tuple[P
                 else:
                     sheet = folder / f"sheet{attempt + 1}.png"
                     (folder / "sheet.png").replace(sheet)
-                    problems = review(short, plan, sheet, seconds)
-            if not problems:
+                    score, problems = review(short, plan, sheet, seconds)
+            if score >= PASS:
                 break
-            print(f"    opener draft {attempt + 1}: " + "; ".join(problems)[:300])
-        if problems:
-            return fail("the drawn opener still had problems after "
-                        f"{FIXES} fixes: {'; '.join(problems)[:300]}")
+            print(f"    opener draft {attempt + 1} ({score:g}/10): " + "; ".join(problems)[:300])
+        if score < PASS:
+            return fail(f"the drawn opener's last draft scored {score:g}/10 after {FIXES} fixes: "
+                        f"{'; '.join(problems)[:300]}")
         short["drawn"] = plan
     scene.write_text(plan["code"], encoding="utf-8")
     mark = fingerprint(plan["code"], seconds)

@@ -176,7 +176,8 @@ Order (owner, 2026-10-30): drawn opener -> motion graphic (2 fixes) -> AI clip o
   strangest moment, scene 1 + the crossfade long. The AI codes one scene module against the kit (`drawn/kit.mjs`; its
   manual `drawn/KIT.md`, with the approved Dexter example) -> lint (only `k.*` calls and plain JS; node runs with
   `--disallow-code-generation-from-strings`: the coder has read Wikipedia text) -> a 6-frame preview sheet ->
-  the AI as art director -> the coder fixes what it found, up to `FIXES` (2) times -> `drawn/run.mjs` renders
+  the AI as art director, who scores it 1-10 (passes at `PASS` 7; a bare list of flaws rejected every draft on the
+  first live runs, good ones included) -> below 7 the coder fixes what it found, up to `FIXES` (2) times -> `drawn/run.mjs` renders
   `work/drawn/opener.mp4`. The plan stays in `short["drawn"]` (fix rounds and fix.bat reuse the clip by
   fingerprint); a failure stays in `short["drawn_failed"]` and is never retried for that Short. Final-review findings
   on a drawn opener stay CHECK lines (it passed its own art director). The channel's optional `## Opener` rules

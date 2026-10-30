@@ -43,7 +43,7 @@ def test_drawn_opener_renders_and_is_reused():
     """A draft that passes: coded, previewed (6 frames), approved, rendered as scene 1 + the crossfade; a second call
     (a fix round) reuses the clip without asking the AI."""
     saved, prompts = llm.ask_ai, []
-    llm.ask_ai = fake_ai([{"moment": "a ship of bed warmers sails into the tropics", "code": EXAMPLE}, {"ok": True}], prompts)
+    llm.ask_ai = fake_ai([{"moment": "a ship of bed warmers sails into the tropics", "code": EXAMPLE}, {"score": 8, "problems": ["the sun is a bit flat"]}], prompts)
     try:
         with tempfile.TemporaryDirectory() as d:
             s = short()
@@ -58,19 +58,19 @@ def test_drawn_opener_renders_and_is_reused():
 
 
 def test_drawn_opener_gives_up_after_fixes():
-    """The art director rejects every draft: FIXES rewrites (each told the problems), then the failure is kept and
+    """The art director scores every draft below PASS: FIXES rewrites (each told the problems), then the failure is kept and
     never retried for this Short. A crash and a lint break count as problems too."""
     saved, prompts = llm.ask_ai, []
     crash = EXAMPLE.replace("k.sky(", "k.nothing(")
     replies = [{"moment": "m", "code": crash},                                   # draft 1 crashes in node
                {"moment": "m", "code": EXAMPLE + "\nconst x = Math.random();"},  # draft 2 breaks the lint
-               {"moment": "m", "code": EXAMPLE}, {"ok": False, "problems": ["the ship is too small"]}]
+               {"moment": "m", "code": EXAMPLE}, {"score": 5, "problems": ["the ship is too small"]}]
     llm.ask_ai = fake_ai(replies, prompts)
     try:
         with tempfile.TemporaryDirectory() as d:
             s = short()
             clip, why = drawn_opener.make_opener(s, WORDS, 3.5, Path(d))
-            assert clip is None and "the ship is too small" in why and s["drawn_failed"] == why, why
+            assert clip is None and "scored 5/10" in why and "the ship is too small" in why and s["drawn_failed"] == why, why
             assert "crashed when it ran" in prompts[1] and "k.nothing is not a function" in prompts[1], prompts[1][-800:]
             assert "Math.random" in prompts[2] and "Last draft" in prompts[2]
             assert len(prompts) == 4 and "drawn" not in s
