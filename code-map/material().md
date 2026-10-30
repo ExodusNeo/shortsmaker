@@ -1,12 +1,12 @@
 ---
 source_file: "blender/look.py"
 type: "code"
-community: "look.py"
+community: "parts.py"
 location: "L85"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/lookpy
+  - community/partspy
 ---
 
 # material()
@@ -20,4 +20,4 @@ tags:
 - [[look.py]] - `contains` [EXTRACTED]
 - [[main()_3]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/lookpy
+#graphify/code #graphify/EXTRACTED #community/partspy

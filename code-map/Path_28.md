@@ -1,16 +1,19 @@
 ---
 source_file: ""
 type: "code"
-community: "test_opener_scene.py"
+community: "render"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_opener_scenepy
+  - community/render
 ---
 
 # Path
 
 ## Connections
-- [[run()_8]] - `references` [EXTRACTED]
+- [[drawn_thumbnail()]] - `references` [EXTRACTED]
+- [[load_state()]] - `references` [EXTRACTED]
+- [[render()_4]] - `references` [EXTRACTED]
+- [[save_state()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_opener_scenepy
+#graphify/code #graphify/EXTRACTED #community/render

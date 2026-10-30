@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/editplan.py"
 type: "rationale"
-community: "test_package.py"
+community: "full_cues"
 location: "L151"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/test_packagepy
+  - community/full_cues
 ---
 
 # Timed extras for one scene: a person card (photo `found`) when their name is…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[scene_cues()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/test_packagepy
+#graphify/rationale #graphify/EXTRACTED #community/full_cues

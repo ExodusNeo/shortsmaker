@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_pictures_first.py"
 type: "code"
-community: "fake_ai"
+community: "catalog_pool"
 location: "L113"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/fake_ai
+  - community/catalog_pool
 ---
 
 # fake_ai
@@ -30,4 +30,4 @@ tags:
 - [[test_seo_pass_research_seeds_dict_and_list()]] - `calls` [EXTRACTED]
 - [[test_topic_ideas.py]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/fake_ai
+#graphify/code #graphify/EXTRACTED #community/catalog_pool

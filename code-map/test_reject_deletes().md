@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_style.py"
 type: "code"
-community: "test_style.py"
+community: "re"
 location: "L479"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_stylepy
+  - community/re
 ---
 
 # test_reject_deletes()
@@ -16,4 +16,4 @@ tags:
 - [[reject_candidate()]] - `calls` [EXTRACTED]
 - [[test_style.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_stylepy
+#graphify/code #graphify/EXTRACTED #community/re

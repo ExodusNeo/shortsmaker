@@ -57,6 +57,7 @@ tags:
 - [[spoken_span()]] - `contains` [EXTRACTED]
 - [[style_lab.py]] - `imports_from` [EXTRACTED]
 - [[test_full_scenes.py]] - `imports_from` [EXTRACTED]
+- [[test_opener_graphic.py]] - `imports_from` [EXTRACTED]
 - [[test_package.py]] - `imports_from` [EXTRACTED]
 - [[test_pictures_first.py]] - `imports_from` [EXTRACTED]
 - [[test_style.py]] - `imports_from` [EXTRACTED]

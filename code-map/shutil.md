@@ -1,18 +1,17 @@
 ---
 source_file: ""
 type: "concept"
-community: "test_style.py"
+community: "test_full_scenes.py"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/test_stylepy
+  - community/test_full_scenespy
 ---
 
 # shutil
 
 ## Connections
 - [[approve_candidate()]] - `calls` [EXTRACTED]
-- [[build()_2]] - `calls` [EXTRACTED]
 - [[cli.py]] - `imports` [EXTRACTED]
 - [[code_custom_scenes()]] - `calls` [EXTRACTED]
 - [[first_second_check()]] - `calls` [EXTRACTED]
@@ -23,10 +22,9 @@ tags:
 - [[llm.py]] - `imports` [EXTRACTED]
 - [[logbook.py]] - `imports` [EXTRACTED]
 - [[main()_2]] - `calls` [EXTRACTED]
-- [[main()_7]] - `calls` [EXTRACTED]
-- [[main()_6]] - `calls` [EXTRACTED]
+- [[main()_5]] - `calls` [EXTRACTED]
+- [[main()_4]] - `calls` [EXTRACTED]
 - [[motion.py]] - `imports` [EXTRACTED]
-- [[opener_render.py]] - `imports` [EXTRACTED]
 - [[paint_instead()]] - `calls` [EXTRACTED]
 - [[picture_pool.py]] - `imports` [EXTRACTED]
 - [[preview_sheet()]] - `calls` [EXTRACTED]
@@ -34,22 +32,17 @@ tags:
 - [[prune_work()]] - `calls` [EXTRACTED]
 - [[reject_candidate()]] - `calls` [EXTRACTED]
 - [[remotion_render.py]] - `imports` [EXTRACTED]
-- [[render()_5]] - `calls` [EXTRACTED]
+- [[render()_4]] - `calls` [EXTRACTED]
 - [[render_full.py]] - `imports` [EXTRACTED]
-- [[render_opener()]] - `calls` [EXTRACTED]
 - [[render_remotion()]] - `calls` [EXTRACTED]
 - [[render_style.py]] - `imports` [EXTRACTED]
-- [[review()]] - `calls` [EXTRACTED]
 - [[review.py]] - `imports` [EXTRACTED]
 - [[run_ts_tests.py]] - `imports` [EXTRACTED]
 - [[save_candidate()]] - `calls` [EXTRACTED]
-- [[save_try()]] - `calls` [EXTRACTED]
 - [[short_render.py]] - `imports` [EXTRACTED]
 - [[style_lab.py]] - `imports` [EXTRACTED]
 - [[test_full_scenes.py]] - `imports` [EXTRACTED]
-- [[test_opener_render.py]] - `imports` [EXTRACTED]
 - [[test_package.py]] - `imports` [EXTRACTED]
-- [[test_shot_templates.py]] - `imports` [EXTRACTED]
 - [[test_topic_ideas.py]] - `imports` [EXTRACTED]
 - [[tsc_check()]] - `calls` [EXTRACTED]
 - [[use_picture_from()]] - `calls` [EXTRACTED]
@@ -58,4 +51,4 @@ tags:
 - [[write_scripts()]] - `calls` [EXTRACTED]
 - [[writing.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/test_stylepy
+#graphify/concept #graphify/EXTRACTED #community/test_full_scenespy

@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_rules.py"
 type: "code"
-community: "make"
+community: "test_rules.py"
 location: "L176"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/make
+  - community/test_rulespy
 ---
 
 # test_opening_picture_needs_its_fields()
@@ -16,4 +16,4 @@ tags:
 - [[stop_text()]] - `calls` [EXTRACTED]
 - [[test_rules.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/make
+#graphify/code #graphify/EXTRACTED #community/test_rulespy

@@ -1,23 +1,19 @@
 ---
 type: community
-members: 11
+members: 7
 ---
 
 # capture_prompts
 
-**Members:** 11 nodes
+**Members:** 7 nodes
 
 ## Members
 - [[Every prompt strange-history's writer, editor, director, fact check, picture…]] - rationale - tests/test_rules.py
-- [[Read and check channelsname.rules.md into session.RULES …]] - rationale - shortsmaker/rules.py
-- [[Usable real picturesclips a topic needs, else a backup topic replaces it.]] - rationale - shortsmaker/rules.py
-- [[ask()_7]] - code - tests/test_rules.py
+- [[Scenes being repainted (scene index - what was wrong) get a better ai_image,…]] - rationale - shortsmaker/review.py
+- [[ask()_4]] - code - tests/test_rules.py
 - [[capture_prompts()]] - code - tests/test_rules.py
-- [[load_rules()]] - code - shortsmaker/rules.py
-- [[min_real_pictures()]] - code - shortsmaker/rules.py
 - [[prepare()_5]] - code - tests/test_rules.py
-- [[test_channels_have_opener_rules()]] - code - tests/test_opener_render.py
-- [[test_load_rules_sets_session()]] - code - tests/test_rules.py
+- [[rewrite_paint_prompts()]] - code - shortsmaker/review.py
 - [[test_strange_history_prompts_unchanged()]] - code - tests/test_rules.py
 
 ## Live Query (requires Dataview plugin)
@@ -28,20 +24,21 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 4 edges to [[_COMMUNITY_test_rules.py]]
-- 2 edges to [[_COMMUNITY_make_1]]
-- 2 edges to [[_COMMUNITY_catalog_pool]]
-- 2 edges to [[_COMMUNITY_pathlib]]
+- 2 edges to [[_COMMUNITY_fix_short]]
+- 2 edges to [[_COMMUNITY_test_rules.py]]
 - 1 edge to [[_COMMUNITY_write_scripts]]
+- 1 edge to [[_COMMUNITY_catalog_pool]]
+- 1 edge to [[_COMMUNITY_run_draft]]
+- 1 edge to [[_COMMUNITY_ask_ai]]
 - 1 edge to [[_COMMUNITY_json]]
-- 1 edge to [[_COMMUNITY_ffmpeg]]
+- 1 edge to [[_COMMUNITY_ask]]
+- 1 edge to [[_COMMUNITY_test_full_scenes.py]]
+- 1 edge to [[_COMMUNITY_first_second_check]]
 - 1 edge to [[_COMMUNITY_choose_images]]
-- 1 edge to [[_COMMUNITY_draft_rules]]
-- 1 edge to [[_COMMUNITY_test_opener_render.py]]
+- 1 edge to [[_COMMUNITY_require_rules]]
 
 ## Top bridge nodes
 - [[capture_prompts()]] - degree 11, connects to 6 communities
-- [[load_rules()]] - degree 7, connects to 3 communities
-- [[min_real_pictures()]] - degree 4, connects to 2 communities
-- [[test_load_rules_sets_session()]] - degree 4, connects to 2 communities
-- [[test_channels_have_opener_rules()]] - degree 2, connects to 1 community
+- [[rewrite_paint_prompts()]] - degree 8, connects to 5 communities
+- [[ask()_4]] - degree 2, connects to 1 community
+- [[test_strange_history_prompts_unchanged()]] - degree 2, connects to 1 community

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/plan_rules.py"
 type: "code"
-community: "re"
+community: "clean_full"
 location: "L21"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/re
+  - community/clean_full
 ---
 
 # coords()
@@ -17,4 +17,4 @@ tags:
 - [[is_num()]] - `calls` [EXTRACTED]
 - [[plan_rules.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/re
+#graphify/code #graphify/EXTRACTED #community/clean_full

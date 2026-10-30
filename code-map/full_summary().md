@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/motion.py"
 type: "code"
-community: "test_full_scenes.py"
+community: "first_second_check"
 location: "L20"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_full_scenespy
+  - community/first_second_check
 ---
 
 # full_summary()
@@ -17,9 +17,8 @@ tags:
 - [[fix_opener_graphic()]] - `calls` [EXTRACTED]
 - [[motion.py]] - `contains` [EXTRACTED]
 - [[opener_graphic()]] - `calls` [EXTRACTED]
-- [[render()_5]] - `calls` [EXTRACTED]
+- [[render()_4]] - `calls` [EXTRACTED]
 - [[test_full_props_figure()]] - `calls` [EXTRACTED]
 - [[test_full_summary()]] - `calls` [EXTRACTED]
-- [[test_model_graphic()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_full_scenespy
+#graphify/code #graphify/EXTRACTED #community/first_second_check

@@ -37,11 +37,11 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 5 edges to [[_COMMUNITY_pathlib]]
-- 5 edges to [[_COMMUNITY_subprocess]]
+- 9 edges to [[_COMMUNITY_audio_mix.py]]
 - 3 edges to [[_COMMUNITY_ffmpeg]]
 - 2 edges to [[_COMMUNITY_render]]
 - 2 edges to [[_COMMUNITY_re]]
+- 1 edge to [[_COMMUNITY_gpu.py]]
 
 ## Top bridge nodes
 - [[master_gain()]] - degree 6, connects to 3 communities

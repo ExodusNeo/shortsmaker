@@ -17,7 +17,7 @@ members: 23
 - [[Rect]] - code - remotion/src/full/Journey.tsx
 - [[SAFE]] - code - remotion/src/full/Journey.tsx
 - [[View]] - code - remotion/src/full/Journey.tsx
-- [[clamp_8]] - code - remotion/src/full/Journey.tsx
+- [[clamp_7]] - code - remotion/src/full/Journey.tsx
 - [[fitPoints()]] - code - remotion/src/full/Journey.tsx
 - [[graticule]] - code - remotion/src/full/Journey.tsx
 - [[level()]] - code - remotion/src/full/Journey.tsx
@@ -40,14 +40,13 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 7 edges to [[_COMMUNITY_toolkit.tsx]]
-- 4 edges to [[_COMMUNITY_skinOf]]
+- 10 edges to [[_COMMUNITY_Paper]]
 - 4 edges to [[_COMMUNITY_Graphics.tsx]]
-- 1 edge to [[_COMMUNITY_Custom3.tsx]]
+- 2 edges to [[_COMMUNITY_toolkit.tsx]]
 - 1 edge to [[_COMMUNITY_Short.tsx]]
 
 ## Top bridge nodes
-- [[Journey.tsx]] - degree 30, connects to 4 communities
+- [[Journey.tsx]] - degree 30, connects to 3 communities
 - [[Journey()]] - degree 10, connects to 2 communities
 - [[JourneyFull]] - degree 2, connects to 1 community
 - [[ref_d3_geo]] - degree 2, connects to 1 community

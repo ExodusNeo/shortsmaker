@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/full/toolkit.tsx"
 type: "code"
-community: "Custom3.tsx"
+community: "toolkit.tsx"
 location: "L205"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Custom3tsx
+  - community/toolkittsx
 ---
 
 # FlowArrow()
@@ -19,4 +19,4 @@ tags:
 - [[appear()]] - `calls` [EXTRACTED]
 - [[toolkit.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Custom3tsx
+#graphify/code #graphify/EXTRACTED #community/toolkittsx

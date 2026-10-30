@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_rules.py"
 type: "code"
-community: "test_rules.py"
+community: "prepare_topic"
 location: "L227"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_rulespy
+  - community/prepare_topic
 ---
 
 # test_min_pictures_from_settings()
@@ -15,4 +15,4 @@ tags:
 - [[prepare_topic()]] - `calls` [EXTRACTED]
 - [[test_rules.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_rulespy
+#graphify/code #graphify/EXTRACTED #community/prepare_topic

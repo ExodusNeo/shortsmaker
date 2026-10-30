@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/channel_profiles.py"
 type: "code"
-community: "pathlib"
+community: "test_pictures_first.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/pathlib
+  - community/test_pictures_firstpy
 ---
 
 # channel_profiles.py
@@ -51,4 +51,4 @@ tags:
 - [[writing.py]] - `imports_from` [EXTRACTED]
 - [[yt_list()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/pathlib
+#graphify/code #graphify/EXTRACTED #community/test_pictures_firstpy

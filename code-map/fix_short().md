@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/cli.py"
 type: "code"
-community: "main"
-location: "L141"
+community: "fix_short"
+location: "L126"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/main
+  - community/fix_short
 ---
 
 # fix_short()
@@ -17,10 +17,10 @@ tags:
 - [[fix.bat re-render a recent Short with one scene changed, keeping its pictures,…]] - `rationale_for` [EXTRACTED]
 - [[load_channel()]] - `calls` [EXTRACTED]
 - [[load_state()]] - `calls` [EXTRACTED]
-- [[main()_7]] - `calls` [EXTRACTED]
+- [[main()_5]] - `calls` [EXTRACTED]
 - [[paint_new()]] - `calls` [EXTRACTED]
 - [[prune_work()]] - `calls` [EXTRACTED]
-- [[render()_5]] - `calls` [EXTRACTED]
+- [[render()_4]] - `calls` [EXTRACTED]
 - [[require_rules()]] - `calls` [EXTRACTED]
 - [[rescue_graphics()]] - `calls` [EXTRACTED]
 - [[rewrite_paint_prompts()]] - `calls` [EXTRACTED]
@@ -29,4 +29,4 @@ tags:
 - [[use_channel()]] - `calls` [EXTRACTED]
 - [[use_picture_from()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/main
+#graphify/code #graphify/EXTRACTED #community/fix_short

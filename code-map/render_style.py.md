@@ -1,12 +1,12 @@
 ---
 source_file: "tests/render_style.py"
 type: "code"
-community: "test_style.py"
+community: "gpu.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_stylepy
+  - community/gpupy
 ---
 
 # render_style.py
@@ -25,4 +25,4 @@ tags:
 - [[sys]] - `imports` [EXTRACTED]
 - [[time]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_stylepy
+#graphify/code #graphify/EXTRACTED #community/gpupy

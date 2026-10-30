@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/short_render.py"
 type: "code"
-community: "pathlib"
+community: "test_full_scenes.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/pathlib
+  - community/test_full_scenespy
 ---
 
 # short_render.py
@@ -33,7 +33,6 @@ tags:
 - [[load_state()]] - `contains` [EXTRACTED]
 - [[media_tools.py]] - `imports_from` [EXTRACTED]
 - [[motion.py]] - `imports_from` [EXTRACTED]
-- [[opener_render.py]] - `imports_from` [EXTRACTED]
 - [[pathlib]] - `imports_from` [EXTRACTED]
 - [[photo_prep.py]] - `imports_from` [EXTRACTED]
 - [[picker.py]] - `imports_from` [EXTRACTED]
@@ -43,7 +42,7 @@ tags:
 - [[prune_work()]] - `contains` [EXTRACTED]
 - [[re]] - `imports` [EXTRACTED]
 - [[remotion_render.py]] - `imports_from` [EXTRACTED]
-- [[render()_5]] - `contains` [EXTRACTED]
+- [[render()_4]] - `contains` [EXTRACTED]
 - [[review.py]] - `imports_from` [EXTRACTED]
 - [[save_state()]] - `contains` [EXTRACTED]
 - [[seo.py]] - `imports_from` [EXTRACTED]
@@ -54,9 +53,9 @@ tags:
 - [[test_blender_run.py]] - `imports_from` [EXTRACTED]
 - [[test_first_second.py]] - `imports_from` [EXTRACTED]
 - [[test_full_scenes.py]] - `imports_from` [EXTRACTED]
-- [[test_opener_render.py]] - `imports_from` [EXTRACTED]
+- [[test_opener_graphic.py]] - `imports_from` [EXTRACTED]
 - [[test_rules.py]] - `imports_from` [EXTRACTED]
 - [[time]] - `imports` [EXTRACTED]
 - [[use_opener()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/pathlib
+#graphify/code #graphify/EXTRACTED #community/test_full_scenespy

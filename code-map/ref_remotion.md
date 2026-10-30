@@ -20,7 +20,6 @@ tags:
 - [[Graphics.tsx]] - `imports_from` [EXTRACTED]
 - [[Journey.tsx]] - `imports_from` [EXTRACTED]
 - [[MapCard.tsx]] - `imports_from` [EXTRACTED]
-- [[Model3D.tsx]] - `imports_from` [EXTRACTED]
 - [[Paper.tsx]] - `imports_from` [EXTRACTED]
 - [[Root.tsx]] - `imports_from` [EXTRACTED]
 - [[Short.tsx]] - `imports_from` [EXTRACTED]

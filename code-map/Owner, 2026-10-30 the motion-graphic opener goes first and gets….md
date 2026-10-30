@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/review.py"
 type: "rationale"
-community: "test_full_scenes.py"
+community: "first_second_check"
 location: "L249"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/test_full_scenespy
+  - community/first_second_check
 ---
 
 # Owner, 2026-10-30: the motion-graphic opener goes first and gets…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[fix_opener_graphic()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/test_full_scenespy
+#graphify/rationale #graphify/EXTRACTED #community/first_second_check

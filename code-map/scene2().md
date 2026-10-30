@@ -12,8 +12,8 @@ tags:
 # scene2()
 
 ## Connections
-- [[plan_with()_1]] - `calls` [EXTRACTED]
-- [[render()_3]] - `calls` [EXTRACTED]
+- [[plan_with()]] - `calls` [EXTRACTED]
+- [[render()]] - `calls` [EXTRACTED]
 - [[test_hook_collapse_stays_in_the_hook()]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/test_blender_scenepy

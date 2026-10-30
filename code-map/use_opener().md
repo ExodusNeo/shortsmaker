@@ -12,20 +12,10 @@ tags:
 # use_opener()
 
 ## Connections
-- [[Path_34]] - `references` [EXTRACTED]
-- [[Scene 1 plays its Blender opener when one renders (opener_render.py,…]] - `rationale_for` [EXTRACTED]
-- [[_wiring()]] - `calls` [EXTRACTED]
-- [[failed()]] - `contains` [EXTRACTED]
-- [[ffmpeg()]] - `calls` [EXTRACTED]
-- [[render()_5]] - `calls` [EXTRACTED]
-- [[render_opener()]] - `calls` [EXTRACTED]
+- [[Scene 1 opens on its motion-graphic opener (picker.opener_graphic); an AI clip…]] - `rationale_for` [EXTRACTED]
+- [[render()_4]] - `calls` [EXTRACTED]
 - [[short_render.py]] - `contains` [EXTRACTED]
-- [[test_use_opener_clip_after_blender_failed()]] - `calls` [EXTRACTED]
-- [[test_use_opener_failure_not_rebuilt()]] - `calls` [EXTRACTED]
-- [[test_use_opener_never_raises()]] - `calls` [EXTRACTED]
-- [[test_use_opener_no_template_ai_clip()]] - `calls` [EXTRACTED]
-- [[test_use_opener_no_template_note()]] - `calls` [EXTRACTED]
-- [[test_use_opener_opening_note()]] - `calls` [EXTRACTED]
-- [[test_use_opener_planner_check()]] - `calls` [EXTRACTED]
+- [[test_use_opener_ai_clip_replaces_graphic()]] - `calls` [EXTRACTED]
+- [[test_use_opener_without_graphic()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/use_opener

@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_style.py"
 type: "code"
-community: "test_style.py"
+community: "test_pictures_first.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_stylepy
+  - community/test_pictures_firstpy
 ---
 
 # test_style.py
@@ -29,7 +29,7 @@ tags:
 - [[pathlib]] - `imports_from` [EXTRACTED]
 - [[picture_pool.py]] - `imports_from` [EXTRACTED]
 - [[plan_rules.py]] - `imports_from` [EXTRACTED]
-- [[plan_with()]] - `contains` [EXTRACTED]
+- [[plan_with()_1]] - `contains` [EXTRACTED]
 - [[re]] - `imports` [EXTRACTED]
 - [[remotion_render.py]] - `imports_from` [EXTRACTED]
 - [[restore_library()]] - `contains` [EXTRACTED]
@@ -69,4 +69,4 @@ tags:
 - [[with_fakes()_1]] - `contains` [EXTRACTED]
 - [[writing.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_stylepy
+#graphify/code #graphify/EXTRACTED #community/test_pictures_firstpy

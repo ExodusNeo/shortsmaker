@@ -1,12 +1,12 @@
 ---
-source_file: "tests/test_opener_render.py"
+source_file: "tests/test_opener_graphic.py"
 type: "code"
-community: "test_weak_opener_graphic_fixes_then_handoff"
-location: "L292"
+community: "first_second_check"
+location: "L24"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/test_weak_opener_graphic_fixes_then_handoff
+  - community/first_second_check
 ---
 
 # fake_pick()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[test_weak_opener_graphic_fixes_then_handoff()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/INFERRED #community/test_weak_opener_graphic_fixes_then_handoff
+#graphify/code #graphify/INFERRED #community/first_second_check

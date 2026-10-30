@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/remotion_render.py"
 type: "rationale"
-community: "test_package.py"
+community: "code_custom_scenes"
 location: "L40"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/test_packagepy
+  - community/code_custom_scenes
 ---
 
 # The review saw custom scene i look wrong: its coder gets the complaint and its…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[redraw_custom()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/test_packagepy
+#graphify/rationale #graphify/EXTRACTED #community/code_custom_scenes

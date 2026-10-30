@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_pictures_first.py"
 type: "rationale"
-community: "test_pictures_first.py"
+community: "words_of"
 location: "L584"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/test_pictures_firstpy
+  - community/words_of
 ---
 
 # The Oxford pool (2026-10-26) got stock videos that only shared a first name or…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[test_on_topic_ignores_a_lone_shared_name()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/test_pictures_firstpy
+#graphify/rationale #graphify/EXTRACTED #community/words_of

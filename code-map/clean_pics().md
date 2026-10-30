@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/picture_pool.py"
 type: "code"
-community: "edit_scripts"
+community: "pool_of"
 location: "L24"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/edit_scripts
+  - community/pool_of
 ---
 
 # clean_pics()
@@ -21,4 +21,4 @@ tags:
 - [[test_clean_pics()]] - `calls` [EXTRACTED]
 - [[write_scripts()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/edit_scripts
+#graphify/code #graphify/EXTRACTED #community/pool_of

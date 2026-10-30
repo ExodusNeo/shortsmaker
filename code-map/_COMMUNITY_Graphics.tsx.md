@@ -56,7 +56,7 @@ SORT file.name ASC
 - 29 edges to [[_COMMUNITY_Short.tsx]]
 - 19 edges to [[_COMMUNITY_styleindex.ts]]
 - 4 edges to [[_COMMUNITY_Journey.tsx]]
-- 1 edge to [[_COMMUNITY_Custom3.tsx]]
+- 1 edge to [[_COMMUNITY_toolkit.tsx]]
 
 ## Top bridge nodes
 - [[MapCard.tsx]] - degree 18, connects to 4 communities

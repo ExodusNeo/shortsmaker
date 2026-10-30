@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/full/Paper.tsx"
 type: "code"
-community: "toolkit.tsx"
+community: "Paper"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/toolkittsx
+  - community/Paper
 ---
 
 # Paper.tsx
@@ -20,7 +20,6 @@ tags:
 - [[FONTS]] - `contains` [EXTRACTED]
 - [[INK]] - `contains` [EXTRACTED]
 - [[Journey.tsx]] - `imports_from` [EXTRACTED]
-- [[Model3D.tsx]] - `imports_from` [EXTRACTED]
 - [[Paper()]] - `contains` [EXTRACTED]
 - [[RED]] - `contains` [EXTRACTED]
 - [[SERIF]] - `contains` [EXTRACTED]
@@ -37,4 +36,4 @@ tags:
 - [[toolkit.tsx]] - `re_exports` [EXTRACTED]
 - [[useFonts()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/toolkittsx
+#graphify/code #graphify/EXTRACTED #community/Paper

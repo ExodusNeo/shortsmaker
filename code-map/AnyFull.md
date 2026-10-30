@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/full/types.ts"
 type: "code"
-community: "toolkit.tsx"
-location: "L75"
+community: "Paper"
+location: "L65"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/toolkittsx
+  - community/Paper
 ---
 
 # AnyFull
@@ -16,4 +16,4 @@ tags:
 - [[Short.tsx]] - `imports` [EXTRACTED]
 - [[fulltypes.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/toolkittsx
+#graphify/code #graphify/EXTRACTED #community/Paper

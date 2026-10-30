@@ -1,12 +1,12 @@
 ---
-source_file: "tests/test_opener_render.py"
+source_file: "tests/test_opener_graphic.py"
 type: "rationale"
-community: "test_weak_opener_graphic_fixes_then_handoff"
-location: "L284"
+community: "first_second_check"
+location: "L21"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/test_weak_opener_graphic_fixes_then_handoff
+  - community/first_second_check
 ---
 
 # Owner, 2026-10-30: a weak motion-graphic opener is fixed OPENER_GRAPHIC_FIXES…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[test_weak_opener_graphic_fixes_then_handoff()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/test_weak_opener_graphic_fixes_then_handoff
+#graphify/rationale #graphify/EXTRACTED #community/first_second_check

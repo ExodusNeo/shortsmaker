@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_pictures_first.py"
 type: "code"
-community: "choose_images"
+community: "picking"
 location: "L26"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/choose_images
+  - community/picking
 ---
 
 # still()
@@ -18,4 +18,4 @@ tags:
 - [[test_choose_old_path_unchanged()]] - `calls` [EXTRACTED]
 - [[test_pictures_first.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/choose_images
+#graphify/code #graphify/EXTRACTED #community/picking

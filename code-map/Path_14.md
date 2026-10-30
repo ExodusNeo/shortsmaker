@@ -1,17 +1,20 @@
 ---
 source_file: ""
 type: "code"
-community: "ask_ai"
+community: "invent_component"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ask_ai
+  - community/invent_component
 ---
 
 # Path
 
 ## Connections
-- [[ask_ai()]] - `references` [EXTRACTED]
-- [[run_agy()]] - `references` [EXTRACTED]
+- [[approve_candidate()]] - `references` [EXTRACTED]
+- [[invent_component()]] - `references` [EXTRACTED]
+- [[invent_styles()]] - `references` [EXTRACTED]
+- [[reject_candidate()]] - `references` [EXTRACTED]
+- [[save_candidate()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ask_ai
+#graphify/code #graphify/EXTRACTED #community/invent_component

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/media_tools.py"
 type: "code"
-community: "pathlib"
+community: "audio_mix.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/pathlib
+  - community/audio_mixpy
 ---
 
 # media_tools.py
@@ -27,7 +27,6 @@ tags:
 - [[json]] - `imports` [EXTRACTED]
 - [[logbook.py]] - `imports_from` [EXTRACTED]
 - [[motion.py]] - `imports_from` [EXTRACTED]
-- [[opener_render.py]] - `imports_from` [EXTRACTED]
 - [[pathlib]] - `imports_from` [EXTRACTED]
 - [[picture_pool.py]] - `imports_from` [EXTRACTED]
 - [[remotion_render.py]] - `imports_from` [EXTRACTED]
@@ -39,13 +38,11 @@ tags:
 - [[test_blender_run.py]] - `imports_from` [EXTRACTED]
 - [[test_edit_project.py]] - `imports_from` [EXTRACTED]
 - [[test_first_second.py]] - `imports_from` [EXTRACTED]
-- [[test_opener_render.py]] - `imports_from` [EXTRACTED]
 - [[test_package.py]] - `imports_from` [EXTRACTED]
 - [[test_rules.py]] - `imports_from` [EXTRACTED]
-- [[test_shot_templates.py]] - `imports_from` [EXTRACTED]
 - [[test_story.py]] - `imports_from` [EXTRACTED]
 - [[urllib_request]] - `imports` [EXTRACTED]
 - [[video_encoder()]] - `contains` [EXTRACTED]
 - [[write_json()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/pathlib
+#graphify/code #graphify/EXTRACTED #community/audio_mixpy

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/logbook.py"
 type: "code"
-community: "pathlib"
+community: "test_pictures_first.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/pathlib
+  - community/test_pictures_firstpy
 ---
 
 # logbook.py
@@ -35,4 +35,4 @@ tags:
 - [[vault_refresh()]] - `contains` [EXTRACTED]
 - [[writing.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/pathlib
+#graphify/code #graphify/EXTRACTED #community/test_pictures_firstpy

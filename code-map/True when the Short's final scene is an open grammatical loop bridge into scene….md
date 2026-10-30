@@ -2,7 +2,7 @@
 source_file: "shortsmaker/plan_rules.py"
 type: "rationale"
 community: "ffmpeg"
-location: "L375"
+location: "L369"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED

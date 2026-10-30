@@ -12,9 +12,9 @@ tags:
 # thumbnail()
 
 ## Connections
-- [[Path_7]] - `references` [EXTRACTED]
+- [[Path_8]] - `references` [EXTRACTED]
 - [[fit_font()]] - `calls` [EXTRACTED]
 - [[frame_render.py]] - `contains` [EXTRACTED]
-- [[render()_5]] - `calls` [EXTRACTED]
+- [[render()_4]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/frame_maker

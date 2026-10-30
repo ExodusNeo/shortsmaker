@@ -12,8 +12,8 @@ tags:
 # after()
 
 ## Connections
-- [[plan_with()_1]] - `calls` [EXTRACTED]
-- [[render()_3]] - `calls` [EXTRACTED]
+- [[plan_with()]] - `calls` [EXTRACTED]
+- [[render()]] - `calls` [EXTRACTED]
 - [[test_collapse_moves_the_span_down()]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/test_blender_scenepy

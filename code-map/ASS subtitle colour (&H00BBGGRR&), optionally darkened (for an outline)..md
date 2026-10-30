@@ -2,7 +2,7 @@
 source_file: "shortsmaker/config.py"
 type: "rationale"
 community: "captions"
-location: "L119"
+location: "L114"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED

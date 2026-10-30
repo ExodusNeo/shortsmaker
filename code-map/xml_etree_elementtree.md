@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "subprocess"
+community: "audio_mix.py"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/subprocess
+  - community/audio_mixpy
 ---
 
 # xml_etree_elementtree
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[test_edit_project.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/subprocess
+#graphify/concept #graphify/EXTRACTED #community/audio_mixpy

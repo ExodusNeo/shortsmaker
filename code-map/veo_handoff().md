@@ -12,7 +12,7 @@ tags:
 # veo_handoff()
 
 ## Connections
-- [[Path_4]] - `references` [EXTRACTED]
+- [[Path_5]] - `references` [EXTRACTED]
 - [[Pause the batch write each animate scene's start picture + detailed prompt to…]] - `rationale_for` [EXTRACTED]
 - [[cover_crop()]] - `calls` [EXTRACTED]
 - [[cut_owner_clip()]] - `calls` [EXTRACTED]

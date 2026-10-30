@@ -1,20 +1,20 @@
 ---
 source_file: "tests/render_style.py"
 type: "code"
-community: "test_style.py"
+community: "test_h3_handoff.py"
 location: "L19"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_stylepy
+  - community/test_h3_handoffpy
 ---
 
 # build()
 
 ## Connections
-- [[add()_1]] - `contains` [EXTRACTED]
+- [[add()]] - `contains` [EXTRACTED]
 - [[main()]] - `calls` [EXTRACTED]
 - [[render_style.py]] - `contains` [EXTRACTED]
 - [[style_library()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_stylepy
+#graphify/code #graphify/EXTRACTED #community/test_h3_handoffpy

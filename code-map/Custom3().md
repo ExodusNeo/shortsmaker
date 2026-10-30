@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/full/generated/Custom3.tsx"
 type: "code"
-community: "Custom3.tsx"
+community: "toolkit.tsx"
 location: "L23"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Custom3tsx
+  - community/toolkittsx
 ---
 
 # Custom3()
@@ -25,4 +25,4 @@ tags:
 - [[focusCam()]] - `calls` [EXTRACTED]
 - [[skinOf()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Custom3tsx
+#graphify/code #graphify/EXTRACTED #community/toolkittsx

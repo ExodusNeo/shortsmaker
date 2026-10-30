@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/picker.py"
 type: "rationale"
-community: "test_full_scenes.py"
+community: "rescue_graphics"
 location: "L249"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/test_full_scenespy
+  - community/rescue_graphics
 ---
 
 # The full-screen motion graphic formats the AI may pick from (rescue_graphics,…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[full_formats()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/test_full_scenespy
+#graphify/rationale #graphify/EXTRACTED #community/rescue_graphics

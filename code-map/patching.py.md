@@ -1,12 +1,12 @@
 ---
 source_file: "tests/patching.py"
 type: "code"
-community: "subprocess"
+community: "test_pictures_first.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/subprocess
+  - community/test_pictures_firstpy
 ---
 
 # patching.py
@@ -23,4 +23,4 @@ tags:
 - [[test_pictures_first.py]] - `imports_from` [EXTRACTED]
 - [[test_style.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/subprocess
+#graphify/code #graphify/EXTRACTED #community/test_pictures_firstpy

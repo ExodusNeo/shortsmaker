@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_package.py"
 type: "rationale"
-community: "test_package.py"
+community: "test_pictures_first.py"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/test_packagepy
+  - community/test_pictures_firstpy
 ---
 
 # Tests for the shortsmaker package wiring (one owner per setting, fakes reach…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[test_package.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/test_packagepy
+#graphify/rationale #graphify/EXTRACTED #community/test_pictures_firstpy

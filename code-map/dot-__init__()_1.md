@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_pictures_first.py"
 type: "code"
-community: "fake_ai"
+community: "catalog_pool"
 location: "L115"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/fake_ai
+  - community/catalog_pool
 ---
 
 # .__init__()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[fake_ai]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/fake_ai
+#graphify/code #graphify/EXTRACTED #community/catalog_pool

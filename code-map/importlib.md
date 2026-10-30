@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "subprocess"
+community: "test_pictures_first.py"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/subprocess
+  - community/test_pictures_firstpy
 ---
 
 # importlib
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[patching.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/subprocess
+#graphify/concept #graphify/EXTRACTED #community/test_pictures_firstpy

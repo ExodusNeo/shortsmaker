@@ -15,6 +15,6 @@ tags:
 - [[Engraving()]] - `calls` [EXTRACTED]
 - [[Engraving.tsx]] - `contains` [EXTRACTED]
 - [[hatch()]] - `calls` [EXTRACTED]
-- [[luminance()]] - `calls` [EXTRACTED]
+- [[luminance()_1]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Halftonetsx

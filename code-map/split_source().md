@@ -20,7 +20,7 @@ tags:
 - [[merge_from()]] - `calls` [EXTRACTED]
 - [[module_for()]] - `calls` [EXTRACTED]
 - [[selftest()]] - `calls` [EXTRACTED]
-- [[split()_1]] - `calls` [EXTRACTED]
+- [[split()]] - `calls` [EXTRACTED]
 - [[split_make_shorts.py]] - `contains` [EXTRACTED]
 - [[wrap_import()]] - `calls` [EXTRACTED]
 - [[{module source} for the package (see the module docstring for the rules).]] - `rationale_for` [EXTRACTED]

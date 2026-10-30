@@ -1,20 +1,21 @@
 ---
-source_file: "local_ai/qwen_voice.py"
+source_file: "tests/render_full.py"
 type: "code"
-community: "subprocess"
-location: "L181"
+community: "gpu.py"
+location: "L28"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/subprocess
+  - community/gpupy
 ---
 
 # main()
 
 ## Connections
-- [[align()]] - `calls` [EXTRACTED]
 - [[json]] - `calls` [EXTRACTED]
-- [[qwen_voice.py]] - `contains` [EXTRACTED]
-- [[time]] - `calls` [EXTRACTED]
+- [[props_for()]] - `calls` [EXTRACTED]
+- [[render_full.py]] - `contains` [EXTRACTED]
+- [[shutil]] - `calls` [EXTRACTED]
+- [[subprocess]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/subprocess
+#graphify/code #graphify/EXTRACTED #community/gpupy

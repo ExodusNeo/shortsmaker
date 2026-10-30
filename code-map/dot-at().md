@@ -14,6 +14,6 @@ tags:
 ## Connections
 - [[ClipReader]] - `method` [EXTRACTED]
 - [[Frame at fraction p (0..1) of the clip; p never goes backwards within a scene.]] - `rationale_for` [EXTRACTED]
-- [[Image]] - `references` [EXTRACTED]
+- [[Image_1]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/frame_maker

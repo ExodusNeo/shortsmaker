@@ -1,18 +1,21 @@
 ---
-source_file: "tests/test_rules.py"
+source_file: "tests/test_full_scenes.py"
 type: "code"
-community: "capture_prompts"
-location: "L71"
+community: "ask"
+location: "L151"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/capture_prompts
+  - community/ask
 ---
 
 # ask()
 
 ## Connections
-- [[capture_prompts()]] - `indirect_call` [INFERRED]
-- [[run_draft()]] - `indirect_call` [INFERRED]
+- [[_fake_planning()]] - `indirect_call` [INFERRED]
+- [[test_look_check_fixes_code()]] - `indirect_call` [INFERRED]
+- [[test_review_redraws_custom()]] - `indirect_call` [INFERRED]
+- [[test_review_uses_unused_pool_pictures_before_painting()]] - `indirect_call` [INFERRED]
+- [[test_rewrite_paint_prompts()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/INFERRED #community/capture_prompts
+#graphify/code #graphify/INFERRED #community/ask

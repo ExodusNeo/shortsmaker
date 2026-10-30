@@ -12,7 +12,7 @@ tags:
 # write_json()
 
 ## Connections
-- [[Path_13]] - `references` [EXTRACTED]
+- [[Path_11]] - `references` [EXTRACTED]
 - [[Write via a temp file, so an interrupted run never leaves a half-written file…]] - `rationale_for` [EXTRACTED]
 - [[catalog_pool()]] - `calls` [EXTRACTED]
 - [[json]] - `calls` [EXTRACTED]

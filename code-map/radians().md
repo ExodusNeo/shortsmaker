@@ -1,12 +1,12 @@
 ---
 source_file: "blender/parts.py"
 type: "code"
-community: "parts.py"
+community: "test_blender_plan.py"
 location: "L180"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/partspy
+  - community/test_blender_planpy
 ---
 
 # radians()
@@ -15,4 +15,4 @@ tags:
 - [[math]] - `calls` [EXTRACTED]
 - [[parts.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/partspy
+#graphify/code #graphify/EXTRACTED #community/test_blender_planpy

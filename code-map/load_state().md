@@ -12,10 +12,10 @@ tags:
 # load_state()
 
 ## Connections
-- [[Path_34]] - `references` [EXTRACTED]
+- [[Path_28]] - `references` [EXTRACTED]
 - [[fix_short()]] - `calls` [EXTRACTED]
 - [[json]] - `calls` [EXTRACTED]
-- [[render()_5]] - `calls` [EXTRACTED]
+- [[render()_4]] - `calls` [EXTRACTED]
 - [[short_render.py]] - `contains` [EXTRACTED]
 - [[test_state_roundtrip_full_pics()]] - `calls` [EXTRACTED]
 

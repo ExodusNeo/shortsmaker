@@ -1,21 +1,21 @@
 ---
 source_file: "shortsmaker/remotion_render.py"
 type: "code"
-community: "render_remotion"
+community: "make_paper"
 location: "L103"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/render_remotion
+  - community/make_paper
 ---
 
 # ink_silhouette()
 
 ## Connections
 - [[A painted figure (dark ink on light paper) - a cropped RGBA silhouette (dark…]] - `rationale_for` [EXTRACTED]
-- [[Path_10]] - `references` [EXTRACTED]
+- [[Path_18]] - `references` [EXTRACTED]
 - [[remotion_render.py]] - `contains` [EXTRACTED]
-- [[render()_5]] - `calls` [EXTRACTED]
+- [[render()_4]] - `calls` [EXTRACTED]
 - [[test_ink_silhouette()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/render_remotion
+#graphify/code #graphify/EXTRACTED #community/make_paper

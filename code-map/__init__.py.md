@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/__init__.py"
 type: "code"
-community: "pathlib"
+community: "test_pictures_first.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/pathlib
+  - community/test_pictures_firstpy
 ---
 
 # __init__.py
@@ -14,7 +14,6 @@ tags:
 ## Connections
 - [[ShortsMaker make ready-to-upload YouTube Shorts. Entry point make_shorts.py.]] - `rationale_for` [EXTRACTED]
 - [[audio_mix.py]] - `imports_from` [EXTRACTED]
-- [[blender_link.py]] - `imports_from` [EXTRACTED]
 - [[blender_plan.py]] - `imports_from` [EXTRACTED]
 - [[blender_render.py]] - `imports_from` [EXTRACTED]
 - [[channel_profiles.py]] - `imports_from` [EXTRACTED]
@@ -28,8 +27,6 @@ tags:
 - [[llm.py]] - `imports_from` [EXTRACTED]
 - [[logbook.py]] - `imports_from` [EXTRACTED]
 - [[motion.py]] - `imports_from` [EXTRACTED]
-- [[opener_plan.py]] - `imports_from` [EXTRACTED]
-- [[opener_render.py]] - `imports_from` [EXTRACTED]
 - [[patching.py]] - `imports` [EXTRACTED]
 - [[picker.py]] - `imports_from` [EXTRACTED]
 - [[picture_pool.py]] - `imports_from` [EXTRACTED]
@@ -41,7 +38,6 @@ tags:
 - [[seo.py]] - `imports_from` [EXTRACTED]
 - [[short_render.py]] - `imports_from` [EXTRACTED]
 - [[style_lab.py]] - `imports_from` [EXTRACTED]
-- [[test_blender_link.py]] - `imports_from` [EXTRACTED]
 - [[test_blender_plan.py]] - `imports_from` [EXTRACTED]
 - [[test_blender_render.py]] - `imports_from` [EXTRACTED]
 - [[test_blender_run.py]] - `imports_from` [EXTRACTED]
@@ -50,19 +46,14 @@ tags:
 - [[test_first_second.py]] - `imports_from` [EXTRACTED]
 - [[test_full_scenes.py]] - `imports_from` [EXTRACTED]
 - [[test_h3_handoff.py]] - `imports_from` [EXTRACTED]
-- [[test_opener_checks.py]] - `imports_from` [EXTRACTED]
-- [[test_opener_plan.py]] - `imports_from` [EXTRACTED]
-- [[test_opener_render.py]] - `imports_from` [EXTRACTED]
-- [[test_opener_scene.py]] - `imports_from` [EXTRACTED]
+- [[test_opener_graphic.py]] - `imports_from` [EXTRACTED]
 - [[test_package.py]] - `imports_from` [EXTRACTED]
-- [[test_people_tables.py]] - `imports_from` [EXTRACTED]
 - [[test_pictures_first.py]] - `imports_from` [EXTRACTED]
 - [[test_rules.py]] - `imports_from` [EXTRACTED]
-- [[test_shot_templates.py]] - `imports_from` [EXTRACTED]
 - [[test_story.py]] - `imports_from` [EXTRACTED]
 - [[test_style.py]] - `imports_from` [EXTRACTED]
 - [[test_topic_ideas.py]] - `imports_from` [EXTRACTED]
 - [[topic_ideas.py]] - `imports_from` [EXTRACTED]
 - [[writing.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/pathlib
+#graphify/code #graphify/EXTRACTED #community/test_pictures_firstpy

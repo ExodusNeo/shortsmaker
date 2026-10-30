@@ -15,7 +15,7 @@
       }
     },
     {
-      "query": "tag:#community/fake_ai",
+      "query": "tag:#community/catalog_pool",
       "color": {
         "a": 1,
         "rgb": 14767961
@@ -43,21 +43,21 @@
       }
     },
     {
-      "query": "tag:#community/pathlib",
+      "query": "tag:#community/test_pictures_firstpy",
       "color": {
         "a": 1,
         "rgb": 11565729
       }
     },
     {
-      "query": "tag:#community/test_packagepy",
+      "query": "tag:#community/code_custom_scenes",
       "color": {
         "a": 1,
         "rgb": 16752039
       }
     },
     {
-      "query": "tag:#community/test_opener_scenepy",
+      "query": "tag:#community/words_of",
       "color": {
         "a": 1,
         "rgb": 10253663
@@ -71,7 +71,7 @@
       }
     },
     {
-      "query": "tag:#community/toolkittsx",
+      "query": "tag:#community/Paper",
       "color": {
         "a": 1,
         "rgb": 5142951
@@ -85,14 +85,14 @@
       }
     },
     {
-      "query": "tag:#community/movespy",
+      "query": "tag:#community/test_blender_scenepy",
       "color": {
         "a": 1,
         "rgb": 14767961
       }
     },
     {
-      "query": "tag:#community/test_stylepy",
+      "query": "tag:#community/approve_candidate",
       "color": {
         "a": 1,
         "rgb": 7780274
@@ -106,7 +106,7 @@
       }
     },
     {
-      "query": "tag:#community/make",
+      "query": "tag:#community/test_rulespy",
       "color": {
         "a": 1,
         "rgb": 15583560
@@ -120,14 +120,14 @@
       }
     },
     {
-      "query": "tag:#community/Custom3tsx",
+      "query": "tag:#community/toolkittsx",
       "color": {
         "a": 1,
         "rgb": 16752039
       }
     },
     {
-      "query": "tag:#community/test_pictures_firstpy",
+      "query": "tag:#community/pool_of",
       "color": {
         "a": 1,
         "rgb": 10253663
@@ -162,7 +162,7 @@
       }
     },
     {
-      "query": "tag:#community/skinOf",
+      "query": "tag:#community/test_full_scenespy",
       "color": {
         "a": 1,
         "rgb": 7780274
@@ -197,7 +197,7 @@
       }
     },
     {
-      "query": "tag:#community/test_full_scenespy",
+      "query": "tag:#community/full_cues",
       "color": {
         "a": 1,
         "rgb": 10253663
@@ -225,7 +225,7 @@
       }
     },
     {
-      "query": "tag:#community/scene_kitpy",
+      "query": "tag:#community/clean_full",
       "color": {
         "a": 1,
         "rgb": 14767961
@@ -246,28 +246,28 @@
       }
     },
     {
-      "query": "tag:#community/json",
+      "query": "tag:#community/image_sourcespy",
       "color": {
         "a": 1,
         "rgb": 15583560
       }
     },
     {
-      "query": "tag:#community/test_blender_linkpy",
+      "query": "tag:#community/style_library",
       "color": {
         "a": 1,
         "rgb": 11565729
       }
     },
     {
-      "query": "tag:#community/test_rulespy",
+      "query": "tag:#community/run_draft",
       "color": {
         "a": 1,
         "rgb": 16752039
       }
     },
     {
-      "query": "tag:#community/review",
+      "query": "tag:#community/main",
       "color": {
         "a": 1,
         "rgb": 10253663
@@ -281,14 +281,14 @@
       }
     },
     {
-      "query": "tag:#community/load_model",
+      "query": "tag:#community/json",
       "color": {
         "a": 1,
         "rgb": 5142951
       }
     },
     {
-      "query": "tag:#community/main",
+      "query": "tag:#community/build_scenepy",
       "color": {
         "a": 1,
         "rgb": 15896107
@@ -302,28 +302,28 @@
       }
     },
     {
-      "query": "tag:#community/subprocess",
+      "query": "tag:#community/gpupy",
       "color": {
         "a": 1,
         "rgb": 7780274
       }
     },
     {
-      "query": "tag:#community/test_opener_planpy",
+      "query": "tag:#community/audio_mixpy",
       "color": {
         "a": 1,
         "rgb": 5873999
       }
     },
     {
-      "query": "tag:#community/cut",
+      "query": "tag:#community/rescue_graphics",
       "color": {
         "a": 1,
         "rgb": 15583560
       }
     },
     {
-      "query": "tag:#community/catalog_pool",
+      "query": "tag:#community/prepare_topic",
       "color": {
         "a": 1,
         "rgb": 11565729
@@ -337,14 +337,14 @@
       }
     },
     {
-      "query": "tag:#community/test_topic_ideaspy",
+      "query": "tag:#community/topic_ideaspy",
       "color": {
         "a": 1,
         "rgb": 10253663
       }
     },
     {
-      "query": "tag:#community/blender_linkpy",
+      "query": "tag:#community/invent_component",
       "color": {
         "a": 1,
         "rgb": 12234924
@@ -372,7 +372,7 @@
       }
     },
     {
-      "query": "tag:#community/test_first_secondpy",
+      "query": "tag:#community/state",
       "color": {
         "a": 1,
         "rgb": 7780274
@@ -386,70 +386,70 @@
       }
     },
     {
-      "query": "tag:#community/math",
+      "query": "tag:#community/style_placeholders",
       "color": {
         "a": 1,
         "rgb": 15583560
       }
     },
     {
-      "query": "tag:#community/tree",
+      "query": "tag:#community/test_storypy",
       "color": {
         "a": 1,
         "rgb": 11565729
       }
     },
     {
-      "query": "tag:#community/choose_images",
+      "query": "tag:#community/picking",
       "color": {
         "a": 1,
         "rgb": 16752039
       }
     },
     {
-      "query": "tag:#community/test_opener_renderpy",
+      "query": "tag:#community/make_paper",
       "color": {
         "a": 1,
         "rgb": 10253663
       }
     },
     {
-      "query": "tag:#community/pack_peoplepy",
+      "query": "tag:#community/capture_prompts",
       "color": {
         "a": 1,
         "rgb": 12234924
       }
     },
     {
-      "query": "tag:#community/test_blender_scenepy",
+      "query": "tag:#community/test_blender_planpy",
       "color": {
         "a": 1,
         "rgb": 5142951
       }
     },
     {
-      "query": "tag:#community/opener_checkspy",
+      "query": "tag:#community/check_twists",
       "color": {
         "a": 1,
         "rgb": 15896107
       }
     },
     {
-      "query": "tag:#community/capture_prompts",
+      "query": "tag:#community/require_rules",
       "color": {
         "a": 1,
         "rgb": 14767961
       }
     },
     {
-      "query": "tag:#community/opener_scenepy",
+      "query": "tag:#community/clean_sound",
       "color": {
         "a": 1,
         "rgb": 7780274
       }
     },
     {
-      "query": "tag:#community/bpy",
+      "query": "tag:#community/story_sound",
       "color": {
         "a": 1,
         "rgb": 5873999
@@ -463,21 +463,21 @@
       }
     },
     {
-      "query": "tag:#community/film_piece",
+      "query": "tag:#community/choose_images",
       "color": {
         "a": 1,
         "rgb": 11565729
       }
     },
     {
-      "query": "tag:#community/sfx_events",
+      "query": "tag:#community/limit_full",
       "color": {
         "a": 1,
         "rgb": 16752039
       }
     },
     {
-      "query": "tag:#community/use_picture_from",
+      "query": "tag:#community/StopPicker",
       "color": {
         "a": 1,
         "rgb": 10253663
@@ -491,7 +491,7 @@
       }
     },
     {
-      "query": "tag:#community/apply_review_fixes",
+      "query": "tag:#community/fix_short",
       "color": {
         "a": 1,
         "rgb": 5142951
@@ -505,38 +505,17 @@
       }
     },
     {
-      "query": "tag:#community/test_storypy",
+      "query": "tag:#community/qwen_voicepy",
       "color": {
         "a": 1,
         "rgb": 14767961
       }
     },
     {
-      "query": "tag:#community/people_standinpy",
-      "color": {
-        "a": 1,
-        "rgb": 7780274
-      }
-    },
-    {
-      "query": "tag:#community/test_opener_checkspy",
-      "color": {
-        "a": 1,
-        "rgb": 5873999
-      }
-    },
-    {
-      "query": "tag:#community/test_weak_opener_graphic_fixes_then_handoff",
+      "query": "tag:#community/first_second_check",
       "color": {
         "a": 1,
         "rgb": 15583560
-      }
-    },
-    {
-      "query": "tag:#community/ask_brain",
-      "color": {
-        "a": 1,
-        "rgb": 11565729
       }
     },
     {
@@ -558,27 +537,6 @@
       "color": {
         "a": 1,
         "rgb": 12234924
-      }
-    },
-    {
-      "query": "tag:#community/draft_rules",
-      "color": {
-        "a": 1,
-        "rgb": 5142951
-      }
-    },
-    {
-      "query": "tag:#community/test_review_redraws_custom",
-      "color": {
-        "a": 1,
-        "rgb": 15896107
-      }
-    },
-    {
-      "query": "tag:#community/test_every_unfound_model_named_at_once",
-      "color": {
-        "a": 1,
-        "rgb": 14767961
       }
     },
     {

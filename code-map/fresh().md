@@ -1,17 +1,20 @@
 ---
-source_file: "tests/opener_check_cases.py"
+source_file: "tests/test_opener_graphic.py"
 type: "code"
-community: "opener_checks.py"
-location: "L18"
+community: "use_opener"
+location: "L14"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/opener_checkspy
+  - community/use_opener
 ---
 
 # fresh()
 
 ## Connections
-- [[opener_check_cases.py]] - `contains` [EXTRACTED]
+- [[test_opener_graphic.py]] - `contains` [EXTRACTED]
+- [[test_use_opener_ai_clip_replaces_graphic()]] - `calls` [EXTRACTED]
+- [[test_use_opener_without_graphic()]] - `calls` [EXTRACTED]
+- [[test_weak_opener_graphic_fixes_then_handoff()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/opener_checkspy
+#graphify/code #graphify/EXTRACTED #community/use_opener

@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/full/FullScene.tsx"
 type: "code"
-community: "toolkit.tsx"
+community: "Paper"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/toolkittsx
+  - community/Paper
 ---
 
 # FullScene.tsx
@@ -25,9 +25,7 @@ tags:
 - [[FullScene()]] - `contains` [EXTRACTED]
 - [[Journey()]] - `imports` [EXTRACTED]
 - [[Journey.tsx]] - `imports_from` [EXTRACTED]
-- [[Model3D()]] - `imports` [EXTRACTED]
-- [[Model3D.tsx]] - `imports_from` [EXTRACTED]
 - [[Short.tsx]] - `imports_from` [EXTRACTED]
 - [[fulltypes.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/toolkittsx
+#graphify/code #graphify/EXTRACTED #community/Paper

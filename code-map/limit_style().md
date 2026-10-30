@@ -2,7 +2,7 @@
 source_file: "shortsmaker/plan_rules.py"
 type: "code"
 community: "limit_style"
-location: "L227"
+location: "L221"
 tags:
   - graphify/code
   - graphify/EXTRACTED

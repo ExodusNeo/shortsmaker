@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/motion.py"
 type: "code"
-community: "test_package.py"
-location: "L203"
+community: "code_custom_scenes"
+location: "L198"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_packagepy
+  - community/code_custom_scenes
 ---
 
 # custom_rules()
@@ -18,4 +18,4 @@ tags:
 - [[motion.py]] - `contains` [EXTRACTED]
 - [[redraw_custom()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_packagepy
+#graphify/code #graphify/EXTRACTED #community/code_custom_scenes

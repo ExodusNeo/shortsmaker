@@ -12,7 +12,7 @@ tags:
 # count()
 
 ## Connections
-- [[Image_2]] - `references` [EXTRACTED]
+- [[Image]] - `references` [EXTRACTED]
 - [[near()]] - `calls` [EXTRACTED]
 - [[test_blender_scene.py]] - `contains` [EXTRACTED]
 - [[test_bridge_stands_until_the_build_starts_over()]] - `calls` [EXTRACTED]

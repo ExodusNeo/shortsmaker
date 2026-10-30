@@ -12,7 +12,7 @@ tags:
 # test_director_inventions_are_kept_with_a_spec()
 
 ## Connections
-- [[plan_with()]] - `calls` [EXTRACTED]
+- [[plan_with()_1]] - `calls` [EXTRACTED]
 - [[test_style.py]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/owner

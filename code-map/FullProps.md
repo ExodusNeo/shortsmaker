@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/full/types.ts"
 type: "code"
-community: "Custom3.tsx"
+community: "Paper"
 location: "L12"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Custom3tsx
+  - community/Paper
 ---
 
 # FullProps
@@ -24,8 +24,7 @@ tags:
 - [[ExampleEvidence.tsx]] - `imports` [EXTRACTED]
 - [[FullScene.tsx]] - `imports` [EXTRACTED]
 - [[Journey.tsx]] - `imports` [EXTRACTED]
-- [[Model3D.tsx]] - `imports` [EXTRACTED]
 - [[fulltypes.ts]] - `contains` [EXTRACTED]
 - [[toolkit.tsx]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Custom3tsx
+#graphify/code #graphify/EXTRACTED #community/Paper

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/logbook.py"
 type: "rationale"
-community: "pathlib"
+community: "test_pictures_first.py"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/pathlib
+  - community/test_pictures_firstpy
 ---
 
 # The owner's logbook and the Obsidian vault pages.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[logbook.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/pathlib
+#graphify/rationale #graphify/EXTRACTED #community/test_pictures_firstpy

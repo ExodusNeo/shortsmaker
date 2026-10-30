@@ -29,7 +29,7 @@ members: 31
 - [[hidden()]] - code - tests/style.test.ts
 - [[inksOf()]] - code - remotion/src/style/kit.ts
 - [[lookFor()]] - code - remotion/src/style/index.ts
-- [[ok()_1]] - code - tests/style.test.ts
+- [[ok()]] - code - tests/style.test.ts
 - [[overlayFor()]] - code - remotion/src/style/index.ts
 - [[ref_remotion]] - concept
 - [[shown()]] - code - tests/style.test.ts
@@ -50,14 +50,15 @@ SORT file.name ASC
 ## Connections to other communities
 - 29 edges to [[_COMMUNITY_Graphics.tsx]]
 - 17 edges to [[_COMMUNITY_styleindex.ts]]
-- 10 edges to [[_COMMUNITY_toolkit.tsx]]
+- 8 edges to [[_COMMUNITY_Paper]]
 - 4 edges to [[_COMMUNITY_Halftone.tsx]]
 - 1 edge to [[_COMMUNITY_Journey.tsx]]
+- 1 edge to [[_COMMUNITY_toolkit.tsx]]
 - 1 edge to [[_COMMUNITY_BigNumber.tsx]]
 - 1 edge to [[_COMMUNITY_guarded.tsx]]
 
 ## Top bridge nodes
-- [[ref_remotion]] - degree 18, connects to 7 communities
+- [[ref_remotion]] - degree 17, connects to 8 communities
 - [[Short.tsx]] - degree 46, connects to 4 communities
 - [[style.test.ts]] - degree 15, connects to 2 communities
 - [[Captions.tsx]] - degree 8, connects to 2 communities

@@ -1,11 +1,11 @@
 ---
 type: community
-members: 14
+members: 16
 ---
 
 # BigNumber.tsx
 
-**Members:** 14 nodes
+**Members:** 16 nodes
 
 ## Members
 - [[Bars()]] - code - remotion/src/full/BigNumber.tsx
@@ -16,7 +16,9 @@ members: 14
 - [[InkIcon()]] - code - remotion/src/full/icons.tsx
 - [[NumberFull]] - code - remotion/src/full/types.ts
 - [[SHAPES]] - code - remotion/src/full/icons.tsx
-- [[clamp_10]] - code - remotion/src/full/BigNumber.tsx
+- [[Skin]] - code - remotion/src/full/Paper.tsx
+- [[TYPE]] - code - remotion/src/full/Paper.tsx
+- [[clamp_9]] - code - remotion/src/full/BigNumber.tsx
 - [[counter()]] - code - remotion/src/full/BigNumber.tsx
 - [[fmt()]] - code - remotion/src/full/BigNumber.tsx
 - [[fmtBar()]] - code - remotion/src/full/BigNumber.tsx
@@ -31,14 +33,14 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 11 edges to [[_COMMUNITY_toolkit.tsx]]
-- 4 edges to [[_COMMUNITY_skinOf]]
-- 2 edges to [[_COMMUNITY_Custom3.tsx]]
+- 16 edges to [[_COMMUNITY_Paper]]
+- 7 edges to [[_COMMUNITY_toolkit.tsx]]
 - 1 edge to [[_COMMUNITY_Short.tsx]]
+- 1 edge to [[_COMMUNITY_guarded.tsx]]
 
 ## Top bridge nodes
-- [[BigNumber.tsx]] - degree 21, connects to 4 communities
+- [[BigNumber.tsx]] - degree 21, connects to 3 communities
+- [[TYPE]] - degree 8, connects to 3 communities
 - [[BigNumber()]] - degree 10, connects to 2 communities
 - [[icons.tsx]] - degree 6, connects to 2 communities
-- [[Icon]] - degree 2, connects to 1 community
-- [[NumberFull]] - degree 2, connects to 1 community
+- [[Skin]] - degree 3, connects to 2 communities

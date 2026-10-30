@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/full/types.ts"
 type: "code"
-community: "toolkit.tsx"
+community: "Paper"
 location: "L6"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/toolkittsx
+  - community/Paper
 ---
 
 # SkinName
@@ -17,4 +17,4 @@ tags:
 - [[guarded.tsx]] - `imports` [EXTRACTED]
 - [[toolkit.tsx]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/toolkittsx
+#graphify/code #graphify/EXTRACTED #community/Paper

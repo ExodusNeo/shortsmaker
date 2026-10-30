@@ -1,27 +1,27 @@
 ---
 type: community
-members: 24
+members: 25
 ---
 
 # test_blender_render.py
 
-**Members:** 24 nodes
+**Members:** 25 nodes
 
 ## Members
+- [[(first, last) frame of every scene, 1-based and back to back; even a very short…]] - rationale - shortsmaker/blender_render.py
 - [[A .cmd that behaves like blender.exe for build_scene.py; returns (exe, run log).]] - rationale - tests/test_blender_render.py
-- [[A fingerprint of the drawing code (blender.py) frames drawn by older code…]] - rationale - shortsmaker/blender_render.py
 - [[Blender couldn't draw the Short (missing, crashed or timed out twice).]] - rationale - shortsmaker/blender_render.py
 - [[BlenderFailed]] - code - shortsmaker/blender_render.py
-- [[Path_5]] - code
 - [[Path_6]] - code
+- [[Path_7]] - code
 - [[RuntimeError]] - code
 - [[Tests for running Blender from a Short (blender_render.py, 2026-10-22) frame…]] - rationale - tests/test_blender_render.py
 - [[When each scene's failure peaks on its emphasis word when spoken, else 70%…]] - rationale - shortsmaker/blender_render.py
 - [[_run()]] - code - shortsmaker/blender_render.py
-- [[code_version()]] - code - shortsmaker/blender_render.py
 - [[fake_blender()]] - code - tests/test_blender_render.py
 - [[peaks()]] - code - shortsmaker/blender_render.py
 - [[render_clips()]] - code - shortsmaker/blender_render.py
+- [[scene_frames()]] - code - shortsmaker/blender_render.py
 - [[short()]] - code - tests/test_blender_render.py
 - [[test_blender_render.py]] - code - tests/test_blender_render.py
 - [[test_changed_blender_code_redraws()]] - code - tests/test_blender_render.py
@@ -31,6 +31,7 @@ members: 24
 - [[test_peak_on_the_emphasis_word()]] - code - tests/test_blender_render.py
 - [[test_render_clips_makes_one_clip_per_scene()]] - code - tests/test_blender_render.py
 - [[test_same_build_json_reuses_frames()]] - code - tests/test_blender_render.py
+- [[test_scene_frames_cover_every_frame_once()]] - code - tests/test_blender_render.py
 - [[when Blender finished, else why not.]] - rationale - shortsmaker/blender_render.py
 
 ## Live Query (requires Dataview plugin)
@@ -41,21 +42,20 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 9 edges to [[_COMMUNITY_pathlib]]
-- 4 edges to [[_COMMUNITY_subprocess]]
-- 3 edges to [[_COMMUNITY_json]]
-- 3 edges to [[_COMMUNITY_drawn_thumbnail]]
+- 8 edges to [[_COMMUNITY_gpu.py]]
+- 5 edges to [[_COMMUNITY_test_pictures_first.py]]
+- 2 edges to [[_COMMUNITY_json]]
 - 2 edges to [[_COMMUNITY_ffmpeg]]
-- 2 edges to [[_COMMUNITY_test_blender_scene.py]]
-- 1 edge to [[_COMMUNITY_re]]
+- 2 edges to [[_COMMUNITY_render]]
+- 2 edges to [[_COMMUNITY_drawn_thumbnail]]
+- 2 edges to [[_COMMUNITY_test_blender_plan.py]]
 - 1 edge to [[_COMMUNITY_local_clips]]
-- 1 edge to [[_COMMUNITY_render]]
-- 1 edge to [[_COMMUNITY_test_opener_render.py]]
-- 1 edge to [[_COMMUNITY_review]]
+- 1 edge to [[_COMMUNITY_full_cues]]
+- 1 edge to [[_COMMUNITY_audio_mix.py]]
 
 ## Top bridge nodes
-- [[render_clips()]] - degree 17, connects to 6 communities
 - [[test_blender_render.py]] - degree 20, connects to 5 communities
-- [[_run()]] - degree 7, connects to 4 communities
+- [[render_clips()]] - degree 17, connects to 5 communities
+- [[scene_frames()]] - degree 8, connects to 3 communities
 - [[peaks()]] - degree 5, connects to 2 communities
-- [[code_version()]] - degree 4, connects to 2 communities
+- [[short()]] - degree 9, connects to 1 community

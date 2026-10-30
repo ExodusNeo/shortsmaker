@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/media_tools.py"
 type: "code"
-community: "json"
+community: "words_of"
 location: "L9"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/json
+  - community/words_of
 ---
 
 # fetch()
@@ -24,4 +24,4 @@ tags:
 - [[search_suggestions()]] - `calls` [EXTRACTED]
 - [[wm_get()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/json
+#graphify/code #graphify/EXTRACTED #community/words_of

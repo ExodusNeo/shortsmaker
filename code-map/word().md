@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/plan_rules.py"
 type: "code"
-community: "re"
-location: "L118"
+community: "clean_full"
+location: "L117"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/re
+  - community/clean_full
 ---
 
 # word()
@@ -16,4 +16,4 @@ tags:
 - [[contains()]] - `calls` [EXTRACTED]
 - [[words_of()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/re
+#graphify/code #graphify/EXTRACTED #community/clean_full

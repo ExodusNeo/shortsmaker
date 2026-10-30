@@ -1,12 +1,12 @@
 ---
 source_file: "blender/failures.py"
 type: "code"
-community: "main"
+community: "build_scene.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/main
+  - community/build_scenepy
 ---
 
 # failures.py
@@ -23,4 +23,4 @@ tags:
 - [[mathutils]] - `imports_from` [EXTRACTED]
 - [[parts.py]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/main
+#graphify/code #graphify/EXTRACTED #community/build_scenepy

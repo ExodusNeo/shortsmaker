@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_package.py"
 type: "code"
-community: "test_package.py"
+community: "test_pictures_first.py"
 location: "L20"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_packagepy
+  - community/test_pictures_firstpy
 ---
 
 # test_ffmpeg_on_path()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[test_package.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_packagepy
+#graphify/code #graphify/EXTRACTED #community/test_pictures_firstpy

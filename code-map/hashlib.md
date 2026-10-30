@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "json"
+community: "gpu.py"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/json
+  - community/gpupy
 ---
 
 # hashlib
@@ -13,14 +13,12 @@ tags:
 ## Connections
 - [[blender_render.py]] - `imports` [EXTRACTED]
 - [[code_version()]] - `calls` [EXTRACTED]
-- [[fingerprint()]] - `calls` [EXTRACTED]
 - [[footage.py]] - `imports` [EXTRACTED]
 - [[gpu.py]] - `imports` [EXTRACTED]
 - [[image_sources.py]] - `imports` [EXTRACTED]
 - [[moss_images()]] - `calls` [EXTRACTED]
-- [[opener_render.py]] - `imports` [EXTRACTED]
 - [[picture_pool.py]] - `imports` [EXTRACTED]
 - [[pixabay_films()]] - `calls` [EXTRACTED]
 - [[pool_folder()]] - `calls` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/json
+#graphify/concept #graphify/EXTRACTED #community/gpupy

@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/full/Paper.tsx"
 type: "code"
-community: "skinOf"
+community: "toolkit.tsx"
 location: "L85"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/skinOf
+  - community/toolkittsx
 ---
 
 # skinOf()
@@ -35,8 +35,6 @@ tags:
 - [[FlowCard()]] - `calls` [EXTRACTED]
 - [[Journey()]] - `calls` [EXTRACTED]
 - [[Journey.tsx]] - `imports` [EXTRACTED]
-- [[Model3D()]] - `calls` [EXTRACTED]
-- [[Model3D.tsx]] - `imports` [EXTRACTED]
 - [[Paper()]] - `calls` [EXTRACTED]
 - [[Paper.tsx]] - `contains` [EXTRACTED]
 - [[PhotoCutout()]] - `calls` [EXTRACTED]
@@ -44,4 +42,4 @@ tags:
 - [[guarded.tsx]] - `imports` [EXTRACTED]
 - [[toolkit.tsx]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/skinOf
+#graphify/code #graphify/EXTRACTED #community/toolkittsx

@@ -12,14 +12,14 @@ tags:
 # local_job()
 
 ## Connections
-- [[Path_4]] - `references` [EXTRACTED]
+- [[Path_5]] - `references` [EXTRACTED]
 - [[Run a batch on this PC's GPU through a local_ai worker (gen.py, or…]] - `rationale_for` [EXTRACTED]
 - [[gpu.py]] - `contains` [EXTRACTED]
 - [[json]] - `calls` [EXTRACTED]
 - [[local_clips()]] - `calls` [EXTRACTED]
 - [[local_voice()]] - `calls` [EXTRACTED]
 - [[paint_instead()]] - `calls` [EXTRACTED]
-- [[render()_5]] - `calls` [EXTRACTED]
+- [[render()_4]] - `calls` [EXTRACTED]
 - [[subprocess]] - `calls` [EXTRACTED]
 - [[test_local_job_retries_a_hard_crash()]] - `calls` [EXTRACTED]
 

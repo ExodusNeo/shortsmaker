@@ -1,30 +1,27 @@
 ---
 source_file: "shortsmaker/picker.py"
 type: "code"
-community: "test_full_scenes.py"
+community: "rescue_graphics"
 location: "L304"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_full_scenespy
+  - community/rescue_graphics
 ---
 
 # opener_graphic()
 
 ## Connections
-- [[The motion-graphic opener (owner, 2026-10-28) on a channel with Blender…]] - `rationale_for` [EXTRACTED]
+- [[The motion-graphic opener (owner, 2026-10-28) on a channel with `opener…]] - `rationale_for` [EXTRACTED]
 - [[article_text()]] - `calls` [EXTRACTED]
 - [[ask_ai()]] - `calls` [EXTRACTED]
 - [[clean_full()]] - `calls` [EXTRACTED]
-- [[credit()]] - `calls` [EXTRACTED]
 - [[fix_opener_graphic()]] - `calls` [EXTRACTED]
 - [[full_formats()]] - `calls` [EXTRACTED]
 - [[full_summary()]] - `calls` [EXTRACTED]
 - [[json]] - `calls` [EXTRACTED]
-- [[model_for()]] - `calls` [EXTRACTED]
 - [[picker.py]] - `contains` [EXTRACTED]
-- [[render()_5]] - `calls` [EXTRACTED]
-- [[test_model_graphic()]] - `calls` [EXTRACTED]
+- [[render()_4]] - `calls` [EXTRACTED]
 - [[test_opener_graphic()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_full_scenespy
+#graphify/code #graphify/EXTRACTED #community/rescue_graphics

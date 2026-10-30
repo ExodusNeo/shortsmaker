@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/plan_rules.py"
 type: "code"
-community: "test_full_scenes.py"
-location: "L479"
+community: "full_cues"
+location: "L473"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_full_scenespy
+  - community/full_cues
 ---
 
 # full_cues()
@@ -22,7 +22,6 @@ tags:
 - [[test_full_cues_document()]] - `calls` [EXTRACTED]
 - [[test_full_cues_fallback()]] - `calls` [EXTRACTED]
 - [[test_full_cues_leave_time_to_finish()]] - `calls` [EXTRACTED]
-- [[test_model_graphic()]] - `calls` [EXTRACTED]
 - [[test_opener_graphic()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_full_scenespy
+#graphify/code #graphify/EXTRACTED #community/full_cues

@@ -2,7 +2,7 @@
 source_file: "shortsmaker/config.py"
 type: "code"
 community: "captions"
-location: "L118"
+location: "L113"
 tags:
   - graphify/code
   - graphify/EXTRACTED

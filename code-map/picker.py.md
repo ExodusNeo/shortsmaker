@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/picker.py"
 type: "code"
-community: "pathlib"
+community: "test_pictures_first.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/pathlib
+  - community/test_pictures_firstpy
 ---
 
 # picker.py
@@ -14,7 +14,6 @@ tags:
 ## Connections
 - [[Choosing each scene's picture, pictures for full-screen scenes, and rescue…]] - `rationale_for` [EXTRACTED]
 - [[__init__.py]] - `imports_from` [EXTRACTED]
-- [[blender_link.py]] - `imports_from` [EXTRACTED]
 - [[channel_profiles.py]] - `imports_from` [EXTRACTED]
 - [[choose_images()]] - `contains` [EXTRACTED]
 - [[cli.py]] - `imports_from` [EXTRACTED]
@@ -27,7 +26,6 @@ tags:
 - [[llm.py]] - `imports_from` [EXTRACTED]
 - [[motion.py]] - `imports_from` [EXTRACTED]
 - [[opener_graphic()]] - `contains` [EXTRACTED]
-- [[opener_render.py]] - `imports_from` [EXTRACTED]
 - [[pathlib]] - `imports_from` [EXTRACTED]
 - [[picture_pool.py]] - `imports_from` [EXTRACTED]
 - [[plan_rules.py]] - `imports_from` [EXTRACTED]
@@ -38,9 +36,9 @@ tags:
 - [[short_render.py]] - `imports_from` [EXTRACTED]
 - [[style_lab.py]] - `imports_from` [EXTRACTED]
 - [[test_full_scenes.py]] - `imports_from` [EXTRACTED]
-- [[test_opener_render.py]] - `imports_from` [EXTRACTED]
+- [[test_opener_graphic.py]] - `imports_from` [EXTRACTED]
 - [[test_pictures_first.py]] - `imports_from` [EXTRACTED]
 - [[test_rules.py]] - `imports_from` [EXTRACTED]
 - [[writing.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/pathlib
+#graphify/code #graphify/EXTRACTED #community/test_pictures_firstpy
