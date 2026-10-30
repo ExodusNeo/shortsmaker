@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_full_scenes.py"
 type: "code"
-community: "_fake_planning"
+community: "gather_pool"
 location: "L143"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/_fake_planning
+  - community/gather_pool
 ---
 
 # _fake_planning()
@@ -19,4 +19,4 @@ tags:
 - [[test_full_scenes.py]] - `contains` [EXTRACTED]
 - [[write_scripts()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/_fake_planning
+#graphify/code #graphify/EXTRACTED #community/gather_pool

@@ -1,24 +1,18 @@
 ---
-source_file: "remotion/src/style/kit.ts"
+source_file: "shortsmaker/config.py"
 type: "code"
-community: "Halftone.tsx"
-location: "L43"
+community: "plan_rules.py"
+location: "L74"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Halftonetsx
+  - community/plan_rulespy
 ---
 
 # luminance()
 
 ## Connections
-- [[Engraving.tsx]] - `imports` [EXTRACTED]
-- [[Halftone.tsx]] - `imports` [EXTRACTED]
-- [[Riso.tsx]] - `imports` [EXTRACTED]
-- [[draw()]] - `calls` [EXTRACTED]
-- [[draw()_1]] - `calls` [EXTRACTED]
-- [[draw()_3]] - `calls` [EXTRACTED]
-- [[drawCover()]] - `calls` [EXTRACTED]
-- [[kit.ts]] - `contains` [EXTRACTED]
+- [[config.py]] - `contains` [EXTRACTED]
+- [[hex_rgb()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Halftonetsx
+#graphify/code #graphify/EXTRACTED #community/plan_rulespy

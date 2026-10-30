@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/config.py"
 type: "rationale"
-community: "gpu.py"
+community: "plan_rules.py"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/gpupy
+  - community/plan_rulespy
 ---
 
 # Paths, fixed settings, palettes and the style/skin tables every module shares.…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[config.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/gpupy
+#graphify/rationale #graphify/EXTRACTED #community/plan_rulespy

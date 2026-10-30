@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[Riso()]] - `calls` [EXTRACTED]
 - [[Riso.tsx]] - `contains` [EXTRACTED]
-- [[luminance()]] - `calls` [EXTRACTED]
+- [[luminance()_1]] - `calls` [EXTRACTED]
 - [[noise()]] - `calls` [EXTRACTED]
 - [[rgb()_1]] - `calls` [EXTRACTED]
 

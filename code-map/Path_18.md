@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "invent_component"
+community: "render_remotion"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/invent_component
+  - community/render_remotion
 ---
 
 # Path
@@ -17,4 +17,4 @@ tags:
 - [[reject_candidate()]] - `references` [EXTRACTED]
 - [[save_candidate()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/invent_component
+#graphify/code #graphify/EXTRACTED #community/render_remotion

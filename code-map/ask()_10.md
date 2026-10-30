@@ -1,17 +1,17 @@
 ---
 source_file: "tests/test_full_scenes.py"
 type: "code"
-community: "_fake_planning"
-location: "L477"
+community: "apply_review_fixes"
+location: "L610"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/_fake_planning
+  - community/apply_review_fixes
 ---
 
 # ask()
 
 ## Connections
-- [[test_rewrite_paint_prompts()]] - `contains` [EXTRACTED]
+- [[test_review_redraws_custom()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/_fake_planning
+#graphify/code #graphify/EXTRACTED #community/apply_review_fixes

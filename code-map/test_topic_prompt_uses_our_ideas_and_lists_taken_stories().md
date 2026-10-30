@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_topic_ideas.py"
 type: "code"
-community: "test_topic_ideas.py"
+community: "write_scripts"
 location: "L104"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_topic_ideaspy
+  - community/write_scripts
 ---
 
 # test_topic_prompt_uses_our_ideas_and_lists_taken_stories()
@@ -18,4 +18,4 @@ tags:
 - [[topic_prompt()]] - `calls` [EXTRACTED]
 - [[write_scripts()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_topic_ideaspy
+#graphify/code #graphify/EXTRACTED #community/write_scripts

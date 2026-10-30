@@ -2,7 +2,7 @@
 source_file: "tests/test_first_second.py"
 type: "rationale"
 community: "test_first_second.py"
-location: "L27"
+location: "L43"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED

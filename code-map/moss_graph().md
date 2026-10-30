@@ -2,7 +2,7 @@
 source_file: "shortsmaker/gpu.py"
 type: "code"
 community: "json"
-location: "L266"
+location: "L267"
 tags:
   - graphify/code
   - graphify/EXTRACTED

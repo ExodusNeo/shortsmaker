@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/picker.py"
 type: "code"
-community: "json"
+community: "test_full_scenes.py"
 location: "L304"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/json
+  - community/test_full_scenespy
 ---
 
 # opener_graphic()
@@ -24,4 +24,4 @@ tags:
 - [[render()_4]] - `calls` [EXTRACTED]
 - [[test_opener_graphic()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/json
+#graphify/code #graphify/EXTRACTED #community/test_full_scenespy

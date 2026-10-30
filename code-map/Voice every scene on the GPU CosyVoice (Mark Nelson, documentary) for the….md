@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/gpu.py"
 type: "rationale"
-community: "json"
-location: "L194"
+community: "ffmpeg"
+location: "L195"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/json
+  - community/ffmpeg
 ---
 
 # Voice every scene on the GPU: CosyVoice (Mark Nelson, documentary) for the…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[local_voice()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/json
+#graphify/rationale #graphify/EXTRACTED #community/ffmpeg

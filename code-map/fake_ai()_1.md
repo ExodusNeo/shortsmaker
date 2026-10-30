@@ -1,23 +1,19 @@
 ---
-source_file: "tests/test_h3_handoff.py"
+source_file: "tests/test_drawn_opener.py"
 type: "code"
-community: "short_with"
-location: "L23"
+community: "review"
+location: "L37"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/short_with
+  - community/review
 ---
 
 # fake_ai()
 
 ## Connections
-- [[ask()_6]] - `indirect_call` [INFERRED]
-- [[run()_3]] - `calls` [EXTRACTED]
-- [[run()_4]] - `calls` [EXTRACTED]
-- [[run()_5]] - `calls` [EXTRACTED]
-- [[run()_6]] - `calls` [EXTRACTED]
-- [[run()_7]] - `calls` [EXTRACTED]
-- [[test_h3_handoff.py]] - `contains` [EXTRACTED]
+- [[test_drawn_opener.py]] - `contains` [EXTRACTED]
+- [[test_drawn_opener_gives_up_after_fixes()]] - `calls` [EXTRACTED]
+- [[test_drawn_opener_renders_and_is_reused()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/short_with
+#graphify/code #graphify/EXTRACTED #community/review

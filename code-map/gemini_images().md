@@ -1,23 +1,23 @@
 ---
 source_file: "shortsmaker/gpu.py"
 type: "code"
-community: "render"
-location: "L229"
+community: "paint_instead"
+location: "L230"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/render
+  - community/paint_instead
 ---
 
 # gemini_images()
 
 ## Connections
 - [[Paint the AI images with Gemini (agy's built-in image generator, ~2 min each, 3…]] - `rationale_for` [EXTRACTED]
-- [[Path_8]] - `references` [EXTRACTED]
+- [[Path_6]] - `references` [EXTRACTED]
 - [[gpu.py]] - `contains` [EXTRACTED]
 - [[one()_1]] - `indirect_call` [INFERRED]
 - [[paint_instead()]] - `calls` [EXTRACTED]
 - [[paint_opener_start()]] - `calls` [EXTRACTED]
 - [[render()_4]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/render
+#graphify/code #graphify/EXTRACTED #community/paint_instead

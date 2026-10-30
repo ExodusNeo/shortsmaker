@@ -1,16 +1,18 @@
 ---
 type: community
-members: 6
+members: 8
 ---
 
 # use_picture_from
 
-**Members:** 6 nodes
+**Members:** 8 nodes
 
 ## Members
 - [[A mark card circles a detail of the old picture it must go when the picture…]] - rationale - tests/test_full_scenes.py
-- [[Path_24]] - code
+- [[Path_23]] - code
+- [[fix  auto-fix scene i drops its picture and gets a freshly painted one…]] - rationale - shortsmaker/review.py
 - [[fix scene i shows scene k's picture. A real photofilm is a picture choice; an…]] - rationale - shortsmaker/cli.py
+- [[paint_new()]] - code - shortsmaker/review.py
 - [[test_new_picture_drops_mark()]] - code - tests/test_full_scenes.py
 - [[test_paint_new_clears_full()]] - code - tests/test_full_scenes.py
 - [[use_picture_from()]] - code - shortsmaker/cli.py
@@ -23,12 +25,15 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 2 edges to [[_COMMUNITY_gpu.py]]
-- 2 edges to [[_COMMUNITY_render]]
+- 2 edges to [[_COMMUNITY_re]]
+- 2 edges to [[_COMMUNITY_json]]
 - 2 edges to [[_COMMUNITY_test_full_scenes.py]]
-- 1 edge to [[_COMMUNITY_channel_profiles.py]]
+- 1 edge to [[_COMMUNITY_apply_review_fixes]]
+- 1 edge to [[_COMMUNITY_subprocess]]
+- 1 edge to [[_COMMUNITY___init__.py]]
 
 ## Top bridge nodes
-- [[use_picture_from()]] - degree 7, connects to 2 communities
-- [[test_new_picture_drops_mark()]] - degree 4, connects to 2 communities
-- [[test_paint_new_clears_full()]] - degree 3, connects to 2 communities
+- [[use_picture_from()]] - degree 7, connects to 3 communities
+- [[paint_new()]] - degree 7, connects to 3 communities
+- [[test_new_picture_drops_mark()]] - degree 4, connects to 1 community
+- [[test_paint_new_clears_full()]] - degree 3, connects to 1 community

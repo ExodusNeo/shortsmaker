@@ -1,16 +1,20 @@
 ---
 source_file: ""
 type: "code"
-community: "photo_prep.py"
+community: "render"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/photo_preppy
+  - community/render
 ---
 
 # Path
 
 ## Connections
-- [[to_vertical()]] - `references` [EXTRACTED]
+- [[drawn_thumbnail()]] - `references` [EXTRACTED]
+- [[load_state()]] - `references` [EXTRACTED]
+- [[render()_4]] - `references` [EXTRACTED]
+- [[save_state()]] - `references` [EXTRACTED]
+- [[use_opener()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/photo_preppy
+#graphify/code #graphify/EXTRACTED #community/render

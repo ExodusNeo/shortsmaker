@@ -12,7 +12,7 @@ tags:
 # test_level3_heading_stays_inside()
 
 ## Connections
-- [[make()_1]] - `calls` [EXTRACTED]
+- [[make()]] - `calls` [EXTRACTED]
 - [[parse_rules()]] - `calls` [EXTRACTED]
 - [[test_rules.py]] - `contains` [EXTRACTED]
 

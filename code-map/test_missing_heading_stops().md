@@ -12,7 +12,7 @@ tags:
 # test_missing_heading_stops()
 
 ## Connections
-- [[make()_1]] - `calls` [EXTRACTED]
+- [[make()]] - `calls` [EXTRACTED]
 - [[stop_text()]] - `calls` [EXTRACTED]
 - [[test_rules.py]] - `contains` [EXTRACTED]
 

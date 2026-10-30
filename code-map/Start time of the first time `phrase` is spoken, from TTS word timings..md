@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/plan_rules.py"
 type: "rationale"
-community: "plan_rules.py"
-location: "L463"
+community: "test_full_scenes.py"
+location: "L469"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/plan_rulespy
+  - community/test_full_scenespy
 ---
 
 # Start time of the first time `phrase` is spoken, from TTS word timings.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[spoken_at()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/plan_rulespy
+#graphify/rationale #graphify/EXTRACTED #community/test_full_scenespy

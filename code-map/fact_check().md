@@ -1,24 +1,17 @@
 ---
-source_file: "shortsmaker/writing.py"
+source_file: "tests/test_pictures_first.py"
 type: "code"
-community: "ask_ai"
-location: "L558"
+community: "write_scripts"
+location: "L626"
 tags:
   - graphify/code
-  - graphify/EXTRACTED
-  - community/ask_ai
+  - graphify/INFERRED
+  - community/write_scripts
 ---
 
 # fact_check()
 
 ## Connections
-- [[Check every line against the story's Wikipedia articles and rewrite what they…]] - `rationale_for` [EXTRACTED]
-- [[article_text()]] - `calls` [EXTRACTED]
-- [[ask_ai()]] - `calls` [EXTRACTED]
-- [[json]] - `calls` [EXTRACTED]
-- [[test_fact_check_drops_full()]] - `calls` [EXTRACTED]
-- [[test_fact_check_sees_new_graphics()]] - `calls` [EXTRACTED]
-- [[write_scripts()]] - `calls` [EXTRACTED]
-- [[writing.py]] - `contains` [EXTRACTED]
+- [[test_fact_check_rewrites_get_the_story_rules_again()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/ask_ai
+#graphify/code #graphify/INFERRED #community/write_scripts

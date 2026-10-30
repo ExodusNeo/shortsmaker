@@ -1,19 +1,19 @@
 ---
-source_file: "tests/test_h3_handoff.py"
+source_file: "drawn/lib/film.mjs"
 type: "code"
-community: "short_with"
-location: "L78"
+community: "kit.mjs"
+location: "L29"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/short_with
+  - community/kitmjs
 ---
 
 # run()
 
 ## Connections
-- [[fake_ai()_1]] - `calls` [EXTRACTED]
-- [[short_with()]] - `calls` [EXTRACTED]
-- [[test_waits_for_enter_when_no_ai_answers()]] - `contains` [EXTRACTED]
+- [[args()]] - `calls` [EXTRACTED]
+- [[film.mjs]] - `contains` [EXTRACTED]
+- [[run.mjs]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/short_with
+#graphify/code #graphify/EXTRACTED #community/kitmjs

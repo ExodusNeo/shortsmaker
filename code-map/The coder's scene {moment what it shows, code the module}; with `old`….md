@@ -1,17 +1,17 @@
 ---
 source_file: "shortsmaker/drawn_opener.py"
 type: "rationale"
-community: "drawn_opener.py"
+community: "write"
 location: "L92"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/drawn_openerpy
+  - community/write
 ---
 
 # The coder's scene: {"moment": what it shows, "code": the module}; with `old`…
 
 ## Connections
-- [[write()]] - `rationale_for` [EXTRACTED]
+- [[write()_1]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/drawn_openerpy
+#graphify/rationale #graphify/EXTRACTED #community/write

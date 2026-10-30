@@ -36,9 +36,10 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 4 edges to [[_COMMUNITY_gpu.py]]
+- 2 edges to [[_COMMUNITY_json]]
+- 2 edges to [[_COMMUNITY_plan_rules.py]]
 - 1 edge to [[_COMMUNITY_re]]
-- 1 edge to [[_COMMUNITY_json]]
+- 1 edge to [[_COMMUNITY___init__.py]]
 
 ## Top bridge nodes
-- [[gen.py]] - degree 17, connects to 3 communities
+- [[gen.py]] - degree 17, connects to 4 communities

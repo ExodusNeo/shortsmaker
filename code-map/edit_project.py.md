@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/edit_project.py"
 type: "code"
-community: "subprocess"
+community: "plan_rules.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/subprocess
+  - community/plan_rulespy
 ---
 
 # edit_project.py
@@ -16,7 +16,7 @@ tags:
 - [[__init__.py]] - `imports_from` [EXTRACTED]
 - [[caption_layer()]] - `contains` [EXTRACTED]
 - [[config.py]] - `imports_from` [EXTRACTED]
-- [[make()]] - `contains` [EXTRACTED]
+- [[make()_1]] - `contains` [EXTRACTED]
 - [[master_gain()]] - `contains` [EXTRACTED]
 - [[media_tools.py]] - `imports_from` [EXTRACTED]
 - [[pathlib]] - `imports_from` [EXTRACTED]
@@ -28,4 +28,4 @@ tags:
 - [[test_edit_project.py]] - `imports_from` [EXTRACTED]
 - [[xml_sax_saxutils]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/subprocess
+#graphify/code #graphify/EXTRACTED #community/plan_rulespy

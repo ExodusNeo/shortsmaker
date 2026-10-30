@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[The engineer step one AI call plans every Short's build (sbuild); Shorts…]] - `rationale_for` [EXTRACTED]
-- [[ask()_2]] - `contains` [EXTRACTED]
+- [[ask()_3]] - `contains` [EXTRACTED]
 - [[blender_plan.py]] - `contains` [EXTRACTED]
 - [[clean_build()]] - `calls` [EXTRACTED]
 - [[default_build()]] - `calls` [EXTRACTED]

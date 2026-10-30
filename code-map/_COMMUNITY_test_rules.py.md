@@ -1,11 +1,11 @@
 ---
 type: community
-members: 52
+members: 54
 ---
 
 # test_rules.py
 
-**Members:** 52 nodes
+**Members:** 54 nodes
 
 ## Members
 - [[(sections by canonical heading, settings) of a rules file; `label` names the…]] - rationale - shortsmaker/rules.py
@@ -13,26 +13,27 @@ members: 52
 - [[Draft channelsname.rules.md for a new channel the AI copies the sections of…]] - rationale - shortsmaker/rules.py
 - [[Every prompt strange-history's writer, editor, director, fact check, picture…]] - rationale - tests/test_rules.py
 - [[Exception]] - code
-- [[Path_5]] - code
+- [[Path_3]] - code
 - [[Read and check channelsname.rules.md into session.RULES …]] - rationale - shortsmaker/rules.py
 - [[StopPicker]] - code - tests/test_rules.py
 - [[Tests for per-channel rules files (channelsname.rules.md, 2026-10-22). The…]] - rationale - tests/test_rules.py
 - [[Usable real picturesclips a topic needs, else a backup topic replaces it.]] - rationale - shortsmaker/rules.py
-- [[ask()]] - code - tests/test_rules.py
 - [[ask()_1]] - code - tests/test_rules.py
+- [[ask()_2]] - code - tests/test_rules.py
 - [[capture_prompts()]] - code - tests/test_rules.py
 - [[draft_reply()]] - code - tests/test_rules.py
 - [[draft_rules in a temp channels folder holding strange-history's rules; returns…]] - rationale - tests/test_rules.py
 - [[draft_rules()]] - code - shortsmaker/rules.py
 - [[load_rules()]] - code - shortsmaker/rules.py
 - [[load_rules, but a channel with no rules file yet (a failed draft, a profile…]] - rationale - shortsmaker/rules.py
-- [[make()_1]] - code - tests/test_rules.py
+- [[make()]] - code - tests/test_rules.py
 - [[min_real_pictures()]] - code - shortsmaker/rules.py
 - [[parse_rules()]] - code - shortsmaker/rules.py
 - [[prepare()]] - code - tests/test_rules.py
 - [[require_rules()]] - code - shortsmaker/rules.py
 - [[run_draft()]] - code - tests/test_rules.py
 - [[stop_text()]] - code - tests/test_rules.py
+- [[test_a_stopped_run_keeps_the_default_channel()]] - code - tests/test_rules.py
 - [[test_bad_min_pictures_stops()]] - code - tests/test_rules.py
 - [[test_blender_needs_a_build_plan_section()]] - code - tests/test_rules.py
 - [[test_bom_and_crlf_load_the_same()]] - code - tests/test_rules.py
@@ -52,6 +53,7 @@ members: 52
 - [[test_min_pictures_from_settings()]] - code - tests/test_rules.py
 - [[test_missing_heading_stops()]] - code - tests/test_rules.py
 - [[test_missing_rules_file_is_drafted()]] - code - tests/test_rules.py
+- [[test_new_channel_stops_for_review()]] - code - tests/test_rules.py
 - [[test_odd_min_pictures_stop_cleanly()]] - code - tests/test_rules.py
 - [[test_opening_picture_needs_its_fields()]] - code - tests/test_rules.py
 - [[test_parses_sections_and_settings()]] - code - tests/test_rules.py
@@ -69,23 +71,22 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 20 edges to [[_COMMUNITY_gpu.py]]
-- 7 edges to [[_COMMUNITY_channel_profiles.py]]
-- 3 edges to [[_COMMUNITY_re]]
-- 3 edges to [[_COMMUNITY_json]]
+- 18 edges to [[_COMMUNITY___init__.py]]
+- 8 edges to [[_COMMUNITY_re]]
+- 5 edges to [[_COMMUNITY_json]]
+- 4 edges to [[_COMMUNITY_plan_rules.py]]
 - 2 edges to [[_COMMUNITY_prepare_topic]]
-- 2 edges to [[_COMMUNITY_test_blender_scene.py]]
 - 1 edge to [[_COMMUNITY_ask_ai]]
 - 1 edge to [[_COMMUNITY_test_story.py]]
-- 1 edge to [[_COMMUNITY_render]]
-- 1 edge to [[_COMMUNITY_test_pictures_first.py]]
+- 1 edge to [[_COMMUNITY_test_first_second.py]]
+- 1 edge to [[_COMMUNITY_choose_images]]
 - 1 edge to [[_COMMUNITY_write_scripts]]
-- 1 edge to [[_COMMUNITY_pool_of]]
+- 1 edge to [[_COMMUNITY_test_pictures_first.py]]
 - 1 edge to [[_COMMUNITY_test_topic_ideas.py]]
 
 ## Top bridge nodes
 - [[test_rules.py]] - degree 56, connects to 5 communities
 - [[capture_prompts()]] - degree 11, connects to 5 communities
-- [[draft_rules()]] - degree 9, connects to 5 communities
+- [[draft_rules()]] - degree 9, connects to 4 communities
 - [[parse_rules()]] - degree 16, connects to 3 communities
 - [[require_rules()]] - degree 8, connects to 3 communities

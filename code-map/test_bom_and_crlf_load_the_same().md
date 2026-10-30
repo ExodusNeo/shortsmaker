@@ -12,7 +12,7 @@ tags:
 # test_bom_and_crlf_load_the_same()
 
 ## Connections
-- [[make()_1]] - `calls` [EXTRACTED]
+- [[make()]] - `calls` [EXTRACTED]
 - [[parse_rules()]] - `calls` [EXTRACTED]
 - [[test_rules.py]] - `contains` [EXTRACTED]
 

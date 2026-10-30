@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/style_lab.py"
 type: "code"
-community: "invent_component"
+community: "render_remotion"
 location: "L222"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/invent_component
+  - community/render_remotion
 ---
 
 # invent_styles()
@@ -19,4 +19,4 @@ tags:
 - [[style_lab.py]] - `contains` [EXTRACTED]
 - [[swap_inventions()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/invent_component
+#graphify/code #graphify/EXTRACTED #community/render_remotion

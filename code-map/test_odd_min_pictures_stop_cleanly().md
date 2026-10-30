@@ -12,7 +12,7 @@ tags:
 # test_odd_min_pictures_stop_cleanly()
 
 ## Connections
-- [[make()_1]] - `calls` [EXTRACTED]
+- [[make()]] - `calls` [EXTRACTED]
 - [[stop_text()]] - `calls` [EXTRACTED]
 - [[test_rules.py]] - `contains` [EXTRACTED]
 

@@ -12,6 +12,6 @@ tags:
 # A valid rules file; override={"Directing": None} leaves that heading out, a…
 
 ## Connections
-- [[make()_1]] - `rationale_for` [EXTRACTED]
+- [[make()]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/test_rulespy

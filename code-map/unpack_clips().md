@@ -2,7 +2,7 @@
 source_file: "shortsmaker/gpu.py"
 type: "code"
 community: "test_h3_handoff.py"
-location: "L453"
+location: "L454"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,7 +12,7 @@ tags:
 # unpack_clips()
 
 ## Connections
-- [[Path_8]] - `references` [EXTRACTED]
+- [[Path_6]] - `references` [EXTRACTED]
 - [[Unpack sceneN.mp4.mov.webm from folderclips.zip (the Colab notebook's…]] - `rationale_for` [EXTRACTED]
 - [[gpu.py]] - `contains` [EXTRACTED]
 - [[re]] - `calls` [EXTRACTED]

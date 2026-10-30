@@ -69,6 +69,7 @@ tags:
 - [[test_dropped_topic_pool_removed()]] - `contains` [EXTRACTED]
 - [[test_edit_plan_picture_line()]] - `contains` [EXTRACTED]
 - [[test_empty_pool_drops_topic_without_ai()]] - `contains` [EXTRACTED]
+- [[test_fact_check_rewrites_get_the_story_rules_again()]] - `contains` [EXTRACTED]
 - [[test_gather_pool_shape()]] - `contains` [EXTRACTED]
 - [[test_gather_pool_skip_and_limits()]] - `contains` [EXTRACTED]
 - [[test_on_topic_ignores_a_lone_shared_name()]] - `contains` [EXTRACTED]

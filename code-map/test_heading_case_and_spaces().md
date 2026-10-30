@@ -12,7 +12,7 @@ tags:
 # test_heading_case_and_spaces()
 
 ## Connections
-- [[make()_1]] - `calls` [EXTRACTED]
+- [[make()]] - `calls` [EXTRACTED]
 - [[parse_rules()]] - `calls` [EXTRACTED]
 - [[test_rules.py]] - `contains` [EXTRACTED]
 

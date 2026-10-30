@@ -1,16 +1,20 @@
 ---
 source_file: ""
 type: "code"
-community: "use_picture_from"
+community: "look_and_fix"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/use_picture_from
+  - community/look_and_fix
 ---
 
 # Path
 
 ## Connections
-- [[use_picture_from()]] - `references` [EXTRACTED]
+- [[code_custom_scenes()]] - `references` [EXTRACTED]
+- [[full_props()]] - `references` [EXTRACTED]
+- [[look_and_fix()]] - `references` [EXTRACTED]
+- [[preview_custom()]] - `references` [EXTRACTED]
+- [[preview_sheet()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/use_picture_from
+#graphify/code #graphify/EXTRACTED #community/look_and_fix

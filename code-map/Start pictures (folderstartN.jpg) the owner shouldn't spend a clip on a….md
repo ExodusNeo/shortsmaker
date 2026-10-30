@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/gpu.py"
 type: "rationale"
-community: "ffmpeg"
-location: "L554"
+community: "local_clips"
+location: "L555"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/ffmpeg
+  - community/local_clips
 ---
 
 # Start pictures (folder/start<N>.jpg) the owner shouldn't spend a clip on: a…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[start_picture_problems()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/ffmpeg
+#graphify/rationale #graphify/EXTRACTED #community/local_clips

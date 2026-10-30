@@ -12,11 +12,11 @@ tags:
 # run_draft()
 
 ## Connections
-- [[ask()_1]] - `contains` [EXTRACTED]
-- [[ask()]] - `indirect_call` [INFERRED]
+- [[ask()_2]] - `contains` [EXTRACTED]
+- [[ask()_1]] - `indirect_call` [INFERRED]
 - [[draft_rules in a temp channels folder holding strange-history's rules; returns…]] - `rationale_for` [EXTRACTED]
 - [[draft_rules()]] - `calls` [EXTRACTED]
-- [[make()_1]] - `calls` [EXTRACTED]
+- [[make()]] - `calls` [EXTRACTED]
 - [[test_draft_blender_channel_needs_build_plan()]] - `calls` [EXTRACTED]
 - [[test_draft_keeps_ai_headings_inside_their_section()]] - `calls` [EXTRACTED]
 - [[test_draft_never_overwrites()]] - `calls` [EXTRACTED]

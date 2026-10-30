@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/edit_project.py"
 type: "rationale"
-community: "test_blender_scene.py"
+community: "test_edit_project.py"
 location: "L17"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/test_blender_scenepy
+  - community/test_edit_projectpy
 ---
 
 # work/captions.mov: the captions alone on a see-through background, from the…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[caption_layer()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/test_blender_scenepy
+#graphify/rationale #graphify/EXTRACTED #community/test_edit_projectpy

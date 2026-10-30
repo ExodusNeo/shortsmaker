@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_drawn_opener.py"
 type: "rationale"
-community: "drawn_opener.py"
+community: "__init__.py"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/drawn_openerpy
+  - community/__init__py
 ---
 
 # Tests for the drawn opener (drawn_opener.py + drawn/, 2026-10-30): the lint on…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[test_drawn_opener.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/drawn_openerpy
+#graphify/rationale #graphify/EXTRACTED #community/__init__py

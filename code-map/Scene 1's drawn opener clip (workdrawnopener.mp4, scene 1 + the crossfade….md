@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/drawn_opener.py"
 type: "rationale"
-community: "drawn_opener.py"
-location: "L151"
+community: "make_opener"
+location: "L152"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/drawn_openerpy
+  - community/make_opener
 ---
 
 # Scene 1's drawn opener clip (work/drawn/opener.mp4, scene 1 + the crossfade…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[make_opener()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/drawn_openerpy
+#graphify/rationale #graphify/EXTRACTED #community/make_opener

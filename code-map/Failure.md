@@ -12,7 +12,7 @@ tags:
 # Failure
 
 ## Connections
-- [[dot-__init__()_5]] - `method` [EXTRACTED]
+- [[dot-__init__()_4]] - `method` [EXTRACTED]
 - [[dot-_crack()]] - `method` [EXTRACTED]
 - [[dot-fallen()]] - `method` [EXTRACTED]
 - [[dot-falls()]] - `method` [EXTRACTED]

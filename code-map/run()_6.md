@@ -1,19 +1,18 @@
 ---
-source_file: "tests/test_h3_handoff.py"
+source_file: "tests/test_style.py"
 type: "code"
-community: "short_with"
-location: "L95"
+community: "render_remotion"
+location: "L259"
 tags:
   - graphify/code
-  - graphify/EXTRACTED
-  - community/short_with
+  - graphify/INFERRED
+  - community/render_remotion
 ---
 
 # run()
 
 ## Connections
-- [[fake_ai()_1]] - `calls` [EXTRACTED]
-- [[short_with()]] - `calls` [EXTRACTED]
-- [[test_tells_owner_after_five_failed_rounds()]] - `contains` [EXTRACTED]
+- [[test_failed_invention_keeps_the_others()]] - `indirect_call` [INFERRED]
+- [[test_invention_passes_into_slot()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/short_with
+#graphify/code #graphify/INFERRED #community/render_remotion

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/photo_prep.py"
 type: "rationale"
-community: "photo_prep.py"
+community: "paint_instead"
 location: "L87"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/photo_preppy
+  - community/paint_instead
 ---
 
 # Fill the 9:16 frame with the picture (centre crop) for the slow zoom/pan. This…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[to_vertical()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/photo_preppy
+#graphify/rationale #graphify/EXTRACTED #community/paint_instead

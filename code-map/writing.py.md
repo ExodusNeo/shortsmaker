@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/writing.py"
 type: "code"
-community: "gpu.py"
+community: "__init__.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/gpupy
+  - community/__init__py
 ---
 
 # writing.py
@@ -23,12 +23,13 @@ tags:
 - [[config.py]] - `imports_from` [EXTRACTED]
 - [[direct_scripts()]] - `contains` [EXTRACTED]
 - [[edit_scripts()]] - `contains` [EXTRACTED]
-- [[fact_check()]] - `contains` [EXTRACTED]
+- [[fact_check()_1]] - `contains` [EXTRACTED]
 - [[image_sources.py]] - `imports_from` [EXTRACTED]
 - [[json]] - `imports` [EXTRACTED]
 - [[length_plan()]] - `contains` [EXTRACTED]
 - [[llm.py]] - `imports_from` [EXTRACTED]
 - [[logbook.py]] - `imports_from` [EXTRACTED]
+- [[max_seconds()]] - `contains` [EXTRACTED]
 - [[narration_lines()]] - `contains` [EXTRACTED]
 - [[pathlib]] - `imports_from` [EXTRACTED]
 - [[picker.py]] - `imports_from` [EXTRACTED]
@@ -53,4 +54,4 @@ tags:
 - [[urllib_parse]] - `imports` [EXTRACTED]
 - [[write_scripts()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/gpupy
+#graphify/code #graphify/EXTRACTED #community/__init__py

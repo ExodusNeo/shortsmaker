@@ -1,19 +1,19 @@
 ---
 source_file: "tests/test_h3_handoff.py"
 type: "code"
-community: "short_with"
-location: "L69"
+community: "test_h3_handoff.py"
+location: "L95"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/short_with
+  - community/test_h3_handoffpy
 ---
 
 # run()
 
 ## Connections
-- [[fake_ai()_1]] - `calls` [EXTRACTED]
+- [[fake_ai()]] - `calls` [EXTRACTED]
 - [[short_with()]] - `calls` [EXTRACTED]
-- [[test_missing_scene_is_asked_again()]] - `contains` [EXTRACTED]
+- [[test_tells_owner_after_five_failed_rounds()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/short_with
+#graphify/code #graphify/EXTRACTED #community/test_h3_handoffpy

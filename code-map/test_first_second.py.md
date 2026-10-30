@@ -34,6 +34,7 @@ tags:
 - [[test_opener_fix_swaps_once()]] - `contains` [EXTRACTED]
 - [[test_opener_must_be_a_later_real_picture()]] - `contains` [EXTRACTED]
 - [[test_opener_prompt_shows_each_scenes_line_and_picture()]] - `contains` [EXTRACTED]
+- [[test_quality_check_reads_ffmpeg_and_flags_reused_pictures()]] - `contains` [EXTRACTED]
 - [[test_review_knows_what_dims_a_picture_on_purpose()]] - `contains` [EXTRACTED]
 - [[test_swap_ignores_a_clip_already_dropped()]] - `contains` [EXTRACTED]
 - [[test_swap_moves_the_owners_clip_with_its_picture()]] - `contains` [EXTRACTED]

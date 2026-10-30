@@ -2,7 +2,7 @@
 source_file: "tests/test_first_second.py"
 type: "code"
 community: "test_first_second.py"
-location: "L26"
+location: "L42"
 tags:
   - graphify/code
   - graphify/EXTRACTED

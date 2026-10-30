@@ -1,17 +1,17 @@
 ---
-source_file: "blender/templates.py"
+source_file: "tests/test_pictures_first.py"
 type: "code"
-community: "templates.py"
-location: "L14"
+community: "gather_pool"
+location: "L37"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/templatespy
+  - community/gather_pool
 ---
 
 # .__init__()
 
 ## Connections
-- [[Bridge]] - `method` [EXTRACTED]
+- [[stubbed]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/templatespy
+#graphify/code #graphify/EXTRACTED #community/gather_pool

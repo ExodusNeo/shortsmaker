@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/blender_plan.py"
 type: "rationale"
-community: "gpu.py"
+community: "__init__.py"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/gpupy
+  - community/__init__py
 ---
 
 # Blender build plans (2026-10-22): for channels with `visuals: blender`, the…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[blender_plan.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/gpupy
+#graphify/rationale #graphify/EXTRACTED #community/__init__py

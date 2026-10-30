@@ -1,12 +1,12 @@
 ---
 source_file: "tests/patching.py"
 type: "rationale"
-community: "gather_pool"
+community: "test_style.py"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/gather_pool
+  - community/test_stylepy
 ---
 
 # For tests that swap shortsmaker functions by name: which module owns each one.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[patching.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/gather_pool
+#graphify/rationale #graphify/EXTRACTED #community/test_stylepy

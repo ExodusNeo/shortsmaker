@@ -2,7 +2,7 @@
 source_file: "shortsmaker/gpu.py"
 type: "rationale"
 community: "json"
-location: "L267"
+location: "L268"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/gpu.py"
 type: "rationale"
-community: "h3_prompt"
-location: "L386"
+community: "test_h3_handoff.py"
+location: "L387"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/h3_prompt
+  - community/test_h3_handoffpy
 ---
 
 # Join checked fields into one image-to-video prompt. H3 has no negative prompt,…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[h3_prompt()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/h3_prompt
+#graphify/rationale #graphify/EXTRACTED #community/test_h3_handoffpy

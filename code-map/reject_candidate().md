@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/style_lab.py"
 type: "code"
-community: "gpu.py"
+community: "__init__.py"
 location: "L295"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/gpupy
+  - community/__init__py
 ---
 
 # reject_candidate()
@@ -18,4 +18,4 @@ tags:
 - [[style_lab.py]] - `contains` [EXTRACTED]
 - [[test_reject_deletes()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/gpupy
+#graphify/code #graphify/EXTRACTED #community/__init__py

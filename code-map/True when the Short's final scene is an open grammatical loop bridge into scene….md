@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/plan_rules.py"
 type: "rationale"
-community: "plan_rules.py"
+community: "ffmpeg"
 location: "L369"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/plan_rulespy
+  - community/ffmpeg
 ---
 
 # True when the Short's final scene is an open grammatical loop bridge into scene…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[is_loop_short()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/plan_rulespy
+#graphify/rationale #graphify/EXTRACTED #community/ffmpeg

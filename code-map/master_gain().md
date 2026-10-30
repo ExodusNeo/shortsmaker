@@ -1,22 +1,22 @@
 ---
 source_file: "shortsmaker/edit_project.py"
 type: "code"
-community: "test_blender_scene.py"
+community: "test_edit_project.py"
 location: "L23"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_blender_scenepy
+  - community/test_edit_projectpy
 ---
 
 # master_gain()
 
 ## Connections
-- [[Path_1]] - `references` [EXTRACTED]
+- [[Path_7]] - `references` [EXTRACTED]
 - [[dB that brings the tracks played together to LUFS, like the final mix's…]] - `rationale_for` [EXTRACTED]
 - [[edit_project.py]] - `contains` [EXTRACTED]
-- [[make()]] - `calls` [EXTRACTED]
+- [[make()_1]] - `calls` [EXTRACTED]
 - [[re]] - `calls` [EXTRACTED]
 - [[subprocess]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_blender_scenepy
+#graphify/code #graphify/EXTRACTED #community/test_edit_projectpy

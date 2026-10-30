@@ -2,7 +2,7 @@
 source_file: "tests/test_story.py"
 type: "code"
 community: "test_story.py"
-location: "L95"
+location: "L115"
 tags:
   - graphify/code
   - graphify/EXTRACTED

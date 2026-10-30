@@ -12,7 +12,7 @@ tags:
 # flashAlpha()
 
 ## Connections
-- [[Short()_2]] - `calls` [EXTRACTED]
+- [[Short()_1]] - `calls` [EXTRACTED]
 - [[Short.tsx]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Shorttsx

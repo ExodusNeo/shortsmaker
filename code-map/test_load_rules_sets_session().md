@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[load_rules()]] - `calls` [EXTRACTED]
-- [[make()_1]] - `calls` [EXTRACTED]
+- [[make()]] - `calls` [EXTRACTED]
 - [[min_real_pictures()]] - `calls` [EXTRACTED]
 - [[test_rules.py]] - `contains` [EXTRACTED]
 

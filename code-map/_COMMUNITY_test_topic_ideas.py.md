@@ -1,11 +1,11 @@
 ---
 type: community
-members: 23
+members: 21
 ---
 
 # test_topic_ideas.py
 
-**Members:** 23 nodes
+**Members:** 21 nodes
 
 ## Members
 - [[Every idea on these pages, each page cached for REFRESH_DAYS (a stale copy is…]] - rationale - shortsmaker/topic_ideas.py
@@ -28,9 +28,7 @@ members: 23
 - [[test_parse_ideas()]] - code - tests/test_topic_ideas.py
 - [[test_pick_skips_done_and_taken()]] - code - tests/test_topic_ideas.py
 - [[test_topic_ideas.py]] - code - tests/test_topic_ideas.py
-- [[test_topic_prompt_uses_our_ideas_and_lists_taken_stories()]] - code - tests/test_topic_ideas.py
 - [[topic_ideas.py]] - code - shortsmaker/topic_ideas.py
-- [[topic_prompt()]] - code - tests/test_topic_ideas.py
 
 ## Live Query (requires Dataview plugin)
 
@@ -40,25 +38,23 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 17 edges to [[_COMMUNITY_gpu.py]]
-- 6 edges to [[_COMMUNITY_planning]]
+- 10 edges to [[_COMMUNITY___init__.py]]
+- 9 edges to [[_COMMUNITY_write_scripts]]
+- 8 edges to [[_COMMUNITY_plan_rules.py]]
+- 5 edges to [[_COMMUNITY_json]]
 - 4 edges to [[_COMMUNITY_re]]
-- 3 edges to [[_COMMUNITY_write_scripts]]
-- 3 edges to [[_COMMUNITY_json]]
+- 3 edges to [[_COMMUNITY_fake_ai]]
 - 3 edges to [[_COMMUNITY_image_sources.py]]
-- 2 edges to [[_COMMUNITY_channel_profiles.py]]
-- 2 edges to [[_COMMUNITY_test_full_scenes.py]]
 - 2 edges to [[_COMMUNITY_test_pictures_first.py]]
-- 2 edges to [[_COMMUNITY_test_blender_scene.py]]
-- 1 edge to [[_COMMUNITY_pool_of]]
+- 2 edges to [[_COMMUNITY_test_full_scenes.py]]
+- 1 edge to [[_COMMUNITY_test_style.py]]
 - 1 edge to [[_COMMUNITY_test_rules.py]]
 - 1 edge to [[_COMMUNITY_build_scene.py]]
-- 1 edge to [[_COMMUNITY_audio_mix.py]]
-- 1 edge to [[_COMMUNITY_test_style.py]]
+- 1 edge to [[_COMMUNITY_subprocess]]
 
 ## Top bridge nodes
-- [[test_topic_ideas.py]] - degree 30, connects to 8 communities
-- [[topic_ideas.py]] - degree 22, connects to 8 communities
-- [[fetch_ideas()]] - degree 9, connects to 4 communities
-- [[Random]] - degree 8, connects to 4 communities
-- [[test_topic_prompt_uses_our_ideas_and_lists_taken_stories()]] - degree 5, connects to 2 communities
+- [[topic_ideas.py]] - degree 22, connects to 9 communities
+- [[test_topic_ideas.py]] - degree 32, connects to 8 communities
+- [[fetch_ideas()]] - degree 9, connects to 3 communities
+- [[Random]] - degree 8, connects to 3 communities
+- [[pick_ideas()]] - degree 8, connects to 1 community

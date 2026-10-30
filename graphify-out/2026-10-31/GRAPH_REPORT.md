@@ -1,17 +1,17 @@
 # Graph Report - ShortsMaker  (2026-10-31)
 
 ## Corpus Check
-- 119 files · ~139,015 words
+- 119 files · ~139,140 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 7 file(s) not represented in the graph (top: (none) 5, .canvas 1, .ipynb 1)
 
 ## Summary
-- 1812 nodes · 4918 edges · 79 communities (68 shown, 11 thin omitted)
+- 1812 nodes · 4920 edges · 79 communities (68 shown, 11 thin omitted)
 - Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 107 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `77f3d866`
+- Built from commit: `899cfb0a`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/style_lab.py"
 type: "rationale"
-community: "invent_component"
+community: "render_remotion"
 location: "L131"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/invent_component
+  - community/render_remotion
 ---
 
 # The code from an AI reply (code fences removed); None unless it exports the…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[clean_style_code()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/invent_component
+#graphify/rationale #graphify/EXTRACTED #community/render_remotion

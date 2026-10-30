@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/audio_mix.py"
 type: "code"
-community: "full_props"
+community: "test_full_scenes.py"
 location: "L265"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/full_props
+  - community/test_full_scenespy
 ---
 
 # sfx_events()
@@ -20,4 +20,4 @@ tags:
 - [[test_story_sound_wins_its_moment()]] - `calls` [EXTRACTED]
 - [[test_style_sounds()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/full_props
+#graphify/code #graphify/EXTRACTED #community/test_full_scenespy

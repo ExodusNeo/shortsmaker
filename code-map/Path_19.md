@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "style_library"
+community: "re"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/style_library
+  - community/re
 ---
 
 # Path
 
 ## Connections
-- [[edit_plan()]] - `references` [EXTRACTED]
+- [[log_short()]] - `references` [EXTRACTED]
+- [[vault_page()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/style_library
+#graphify/code #graphify/EXTRACTED #community/re

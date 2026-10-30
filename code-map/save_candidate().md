@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/style_lab.py"
 type: "code"
-community: "gpu.py"
+community: "test_style.py"
 location: "L245"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/gpupy
+  - community/test_stylepy
 ---
 
 # save_candidate()
@@ -25,4 +25,4 @@ tags:
 - [[test_save_candidate_unique_slug()]] - `calls` [EXTRACTED]
 - [[time]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/gpupy
+#graphify/code #graphify/EXTRACTED #community/test_stylepy

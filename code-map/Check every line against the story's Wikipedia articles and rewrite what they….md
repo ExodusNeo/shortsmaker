@@ -1,17 +1,17 @@
 ---
 source_file: "shortsmaker/writing.py"
 type: "rationale"
-community: "ask_ai"
-location: "L559"
+community: "test_full_scenes.py"
+location: "L577"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/ask_ai
+  - community/test_full_scenespy
 ---
 
 # Check every line against the story's Wikipedia articles and rewrite what they…
 
 ## Connections
-- [[fact_check()]] - `rationale_for` [EXTRACTED]
+- [[fact_check()_1]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/ask_ai
+#graphify/rationale #graphify/EXTRACTED #community/test_full_scenespy

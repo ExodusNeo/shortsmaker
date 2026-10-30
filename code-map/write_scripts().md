@@ -2,7 +2,7 @@
 source_file: "shortsmaker/writing.py"
 type: "code"
 community: "write_scripts"
-location: "L30"
+location: "L35"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -26,7 +26,7 @@ tags:
 - [[contains()]] - `calls` [EXTRACTED]
 - [[direct_scripts()]] - `calls` [EXTRACTED]
 - [[edit_scripts()]] - `calls` [EXTRACTED]
-- [[fact_check()]] - `calls` [EXTRACTED]
+- [[fact_check()_1]] - `calls` [EXTRACTED]
 - [[fill_money_graphics()]] - `calls` [EXTRACTED]
 - [[is_person_portrait()]] - `calls` [EXTRACTED]
 - [[json]] - `calls` [EXTRACTED]
@@ -48,14 +48,17 @@ tags:
 - [[save_channel()]] - `calls` [EXTRACTED]
 - [[settle_style()]] - `calls` [EXTRACTED]
 - [[shutil]] - `calls` [EXTRACTED]
+- [[story_problems()]] - `calls` [EXTRACTED]
 - [[test_all_weak_returns_empty()]] - `calls` [EXTRACTED]
 - [[test_both_mode_pools_follow_reply_position()]] - `calls` [EXTRACTED]
 - [[test_both_mode_reuses_pools()]] - `calls` [EXTRACTED]
 - [[test_dropped_topic_pool_removed()]] - `calls` [EXTRACTED]
+- [[test_fact_check_rewrites_get_the_story_rules_again()]] - `calls` [EXTRACTED]
 - [[test_prompts_carry_picture_list()]] - `calls` [EXTRACTED]
 - [[test_topic_a_proven_channel_just_posted_is_dropped()]] - `calls` [EXTRACTED]
 - [[test_topic_prompt_asks_backups_and_visuals()]] - `calls` [EXTRACTED]
 - [[test_topic_prompt_uses_our_ideas_and_lists_taken_stories()]] - `calls` [EXTRACTED]
+- [[test_topic_we_already_made_is_dropped()]] - `calls` [EXTRACTED]
 - [[test_weak_topic_swapped_for_backup()]] - `calls` [EXTRACTED]
 - [[trend_research()]] - `calls` [EXTRACTED]
 - [[words_of()]] - `calls` [EXTRACTED]

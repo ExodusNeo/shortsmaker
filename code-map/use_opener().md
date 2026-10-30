@@ -12,7 +12,7 @@ tags:
 # use_opener()
 
 ## Connections
-- [[Path_28]] - `references` [EXTRACTED]
+- [[Path_29]] - `references` [EXTRACTED]
 - [[Scene 1 on an `opener animated` channel plays the first opener that works…]] - `rationale_for` [EXTRACTED]
 - [[ffmpeg()]] - `calls` [EXTRACTED]
 - [[make_opener()]] - `calls` [EXTRACTED]
