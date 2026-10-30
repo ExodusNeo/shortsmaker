@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "test_blender_plan.py"
+community: "math"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/test_blender_planpy
+  - community/math
 ---
 
 # math
@@ -23,4 +23,4 @@ tags:
 - [[parts.py]] - `imports` [EXTRACTED]
 - [[radians()]] - `calls` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/test_blender_planpy
+#graphify/concept #graphify/EXTRACTED #community/math

@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "fix_short"
+community: "pool_pictures"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/fix_short
+  - community/pool_pictures
 ---
 
 # Path
 
 ## Connections
-- [[use_picture_from()]] - `references` [EXTRACTED]
+- [[film_piece()]] - `references` [EXTRACTED]
+- [[shot_span()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/fix_short
+#graphify/code #graphify/EXTRACTED #community/pool_pictures

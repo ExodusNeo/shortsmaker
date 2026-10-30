@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_opener_graphic.py"
 type: "rationale"
-community: "first_second_check"
-location: "L21"
+community: "test_opener_graphic.py"
+location: "L22"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/first_second_check
+  - community/test_opener_graphicpy
 ---
 
 # Owner, 2026-10-30: a weak motion-graphic opener is fixed OPENER_GRAPHIC_FIXES…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[test_weak_opener_graphic_fixes_then_handoff()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/first_second_check
+#graphify/rationale #graphify/EXTRACTED #community/test_opener_graphicpy

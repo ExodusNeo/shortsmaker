@@ -43,11 +43,12 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 5 edges to [[_COMMUNITY_test_pictures_first.py]]
-- 2 edges to [[_COMMUNITY_test_blender_plan.py]]
-- 2 edges to [[_COMMUNITY_test_full_scenes.py]]
+- 5 edges to [[_COMMUNITY_test_full_scenes.py]]
+- 2 edges to [[_COMMUNITY_re]]
+- 1 edge to [[_COMMUNITY_default_build]]
 - 1 edge to [[_COMMUNITY_json]]
-- 1 edge to [[_COMMUNITY_gpu.py]]
+- 1 edge to [[_COMMUNITY_subprocess]]
+- 1 edge to [[_COMMUNITY_blender_plan.py]]
 
 ## Top bridge nodes
 - [[test_blender_scene.py]] - degree 28, connects to 5 communities

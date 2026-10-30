@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/frame_render.py"
 type: "code"
-community: "test_blender_plan.py"
+community: "math"
 location: "L283"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_blender_planpy
+  - community/math
 ---
 
 # write_frames()
@@ -19,4 +19,4 @@ tags:
 - [[render()_4]] - `calls` [EXTRACTED]
 - [[test_hard_cuts_never_blend_scenes()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_blender_planpy
+#graphify/code #graphify/EXTRACTED #community/math

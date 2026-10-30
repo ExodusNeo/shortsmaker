@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "style/index.ts"
+community: "QuestionBeat.tsx"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/style/indexts
+  - community/QuestionBeattsx
 ---
 
 # remotion_src_style_kit_absolutefill
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[QuestionBeat.tsx]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/style/indexts
+#graphify/concept #graphify/EXTRACTED #community/QuestionBeattsx

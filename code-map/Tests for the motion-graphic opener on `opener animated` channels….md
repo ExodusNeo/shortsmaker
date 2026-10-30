@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_opener_graphic.py"
 type: "rationale"
-community: "test_pictures_first.py"
+community: "test_opener_graphic.py"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/test_pictures_firstpy
+  - community/test_opener_graphicpy
 ---
 
 # Tests for the motion-graphic opener on `opener: animated` channels…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[test_opener_graphic.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/test_pictures_firstpy
+#graphify/rationale #graphify/EXTRACTED #community/test_opener_graphicpy

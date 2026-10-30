@@ -55,7 +55,7 @@ SORT file.name ASC
 - 4 edges to [[_COMMUNITY_main]]
 - 4 edges to [[_COMMUNITY_build_scene.py]]
 - 3 edges to [[_COMMUNITY_look.py]]
-- 2 edges to [[_COMMUNITY_test_blender_plan.py]]
+- 2 edges to [[_COMMUNITY_math]]
 
 ## Top bridge nodes
 - [[parts.py]] - degree 30, connects to 4 communities

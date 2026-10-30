@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/picture_pool.py"
 type: "rationale"
-community: "image_sources.py"
+community: "gather_pool"
 location: "L100"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/image_sourcespy
+  - community/gather_pool
 ---
 
 # Candidate pictures (with preview `thumb` bytes) and sampled real-film frames…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[gather_pool()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/image_sourcespy
+#graphify/rationale #graphify/EXTRACTED #community/gather_pool

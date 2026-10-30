@@ -1,11 +1,11 @@
 ---
 type: community
-members: 34
+members: 33
 ---
 
 # full_cues
 
-**Members:** 34 nodes
+**Members:** 33 nodes
 
 ## Members
 - [[(start, end) of the first time `phrase` is spoken, from TTS word timings.]] - rationale - shortsmaker/plan_rules.py
@@ -20,7 +20,7 @@ members: 34
 - [[_jpg()]] - code - tests/test_full_scenes.py
 - [[full_cues()]] - code - shortsmaker/plan_rules.py
 - [[full_props()]] - code - shortsmaker/motion.py
-- [[pick()]] - code - shortsmaker/audio_mix.py
+- [[pick()_1]] - code - shortsmaker/audio_mix.py
 - [[put()]] - code - shortsmaker/motion.py
 - [[sc()]] - code - tests/test_style.py
 - [[scene_cues()]] - code - shortsmaker/editplan.py
@@ -33,7 +33,6 @@ members: 34
 - [[test_full_cues_document()]] - code - tests/test_full_scenes.py
 - [[test_full_cues_fallback()]] - code - tests/test_full_scenes.py
 - [[test_full_cues_leave_time_to_finish()]] - code - tests/test_full_scenes.py
-- [[test_full_props_figure()]] - code - tests/test_full_scenes.py
 - [[test_graphic_card_hold_duration()]] - code - tests/test_package.py
 - [[test_opener_graphic()]] - code - tests/test_full_scenes.py
 - [[test_person_card_hold_and_exit_gap()]] - code - tests/test_package.py
@@ -51,23 +50,21 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 14 edges to [[_COMMUNITY_test_full_scenes.py]]
-- 4 edges to [[_COMMUNITY_re]]
-- 4 edges to [[_COMMUNITY_test_pictures_first.py]]
-- 2 edges to [[_COMMUNITY_render]]
+- 20 edges to [[_COMMUNITY_test_full_scenes.py]]
+- 3 edges to [[_COMMUNITY_render]]
 - 1 edge to [[_COMMUNITY_test_blender_render.py]]
 - 1 edge to [[_COMMUNITY_frame_maker]]
-- 1 edge to [[_COMMUNITY_audio_mix.py]]
+- 1 edge to [[_COMMUNITY_subprocess]]
 - 1 edge to [[_COMMUNITY_render_remotion]]
-- 1 edge to [[_COMMUNITY_code_custom_scenes]]
+- 1 edge to [[_COMMUNITY_look_and_fix]]
 - 1 edge to [[_COMMUNITY_words_of]]
-- 1 edge to [[_COMMUNITY_choose_images]]
-- 1 edge to [[_COMMUNITY_first_second_check]]
-- 1 edge to [[_COMMUNITY_rescue_graphics]]
+- 1 edge to [[_COMMUNITY_pool_pictures]]
+- 1 edge to [[_COMMUNITY_json]]
+- 1 edge to [[_COMMUNITY_test_style.py]]
 
 ## Top bridge nodes
+- [[full_props()]] - degree 9, connects to 4 communities
 - [[scene_cues()]] - degree 10, connects to 3 communities
-- [[full_props()]] - degree 9, connects to 3 communities
 - [[sfx_events()]] - degree 7, connects to 2 communities
 - [[spoken_at()]] - degree 6, connects to 2 communities
 - [[spoken_span()]] - degree 5, connects to 2 communities

@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "test_pictures_first.py"
+community: "test_full_scenes.py"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/test_pictures_firstpy
+  - community/test_full_scenespy
 ---
 
 # pathlib
@@ -63,4 +63,4 @@ tags:
 - [[test_topic_ideas.py]] - `imports_from` [EXTRACTED]
 - [[writing.py]] - `imports_from` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/test_pictures_firstpy
+#graphify/concept #graphify/EXTRACTED #community/test_full_scenespy

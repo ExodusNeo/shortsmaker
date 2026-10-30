@@ -1,17 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "choose_images"
+community: "run_agy"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/choose_images
+  - community/run_agy
 ---
 
 # Path
 
 ## Connections
-- [[film_piece()]] - `references` [EXTRACTED]
-- [[shot_span()]] - `references` [EXTRACTED]
+- [[ask_ai()]] - `references` [EXTRACTED]
+- [[run_agy()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/choose_images
+#graphify/code #graphify/EXTRACTED #community/run_agy

@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_pictures_first.py"
 type: "code"
-community: "picking"
+community: "test_pictures_first.py"
 location: "L377"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/picking
+  - community/test_pictures_firstpy
 ---
 
 # test_choose_falls_back_to_plan()
@@ -18,4 +18,4 @@ tags:
 - [[scene()]] - `calls` [EXTRACTED]
 - [[test_pictures_first.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/picking
+#graphify/code #graphify/EXTRACTED #community/test_pictures_firstpy

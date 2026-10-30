@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_full_scenes.py"
 type: "code"
-community: "fix_short"
+community: "test_first_second.py"
 location: "L411"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/fix_short
+  - community/test_first_secondpy
 ---
 
 # fake_rescue()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[test_auto_fix_graphic()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/INFERRED #community/fix_short
+#graphify/code #graphify/INFERRED #community/test_first_secondpy

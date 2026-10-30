@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/full/Document.tsx"
 type: "code"
-community: "Paper"
+community: "toolkit.tsx"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Paper
+  - community/toolkittsx
 ---
 
 # Document.tsx
@@ -23,10 +23,10 @@ tags:
 - [[RED]] - `imports` [EXTRACTED]
 - [[SERIF]] - `imports` [EXTRACTED]
 - [[TYPE]] - `imports` [EXTRACTED]
-- [[clamp_6]] - `contains` [EXTRACTED]
+- [[clamp_8]] - `contains` [EXTRACTED]
 - [[fulltypes.ts]] - `imports_from` [EXTRACTED]
 - [[ref_remotion]] - `imports_from` [EXTRACTED]
 - [[rng()]] - `imports` [EXTRACTED]
 - [[wrapText()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Paper
+#graphify/code #graphify/EXTRACTED #community/toolkittsx

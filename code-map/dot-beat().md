@@ -16,6 +16,6 @@ tags:
 - [[dot-close()_1]] - `calls` [EXTRACTED]
 - [[dot-wide()]] - `calls` [EXTRACTED]
 - [[Shots]] - `method` [EXTRACTED]
-- [[main()_3]] - `calls` [INFERRED]
+- [[main()_2]] - `calls` [INFERRED]
 
 #graphify/code #graphify/EXTRACTED #community/build_scenepy

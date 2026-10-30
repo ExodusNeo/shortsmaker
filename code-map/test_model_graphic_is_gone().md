@@ -2,7 +2,7 @@
 source_file: "tests/test_opener_graphic.py"
 type: "code"
 community: "clean_full"
-location: "L80"
+location: "L98"
 tags:
   - graphify/code
   - graphify/EXTRACTED

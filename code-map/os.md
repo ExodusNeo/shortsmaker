@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "test_pictures_first.py"
+community: "test_full_scenes.py"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/test_pictures_firstpy
+  - community/test_full_scenespy
 ---
 
 # os
@@ -22,4 +22,4 @@ tags:
 - [[test_pictures_first.py]] - `imports` [EXTRACTED]
 - [[veo_handoff()]] - `calls` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/test_pictures_firstpy
+#graphify/concept #graphify/EXTRACTED #community/test_full_scenespy

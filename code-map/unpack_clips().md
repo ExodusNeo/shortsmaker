@@ -2,7 +2,7 @@
 source_file: "shortsmaker/gpu.py"
 type: "code"
 community: "test_h3_handoff.py"
-location: "L445"
+location: "L453"
 tags:
   - graphify/code
   - graphify/EXTRACTED

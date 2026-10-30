@@ -29,6 +29,7 @@ tags:
 - [[motion.py]] - `imports_from` [EXTRACTED]
 - [[overlay_notes()]] - `contains` [EXTRACTED]
 - [[paint_new()]] - `contains` [EXTRACTED]
+- [[paint_opener_start()]] - `contains` [EXTRACTED]
 - [[pathlib]] - `imports_from` [EXTRACTED]
 - [[picker.py]] - `imports_from` [EXTRACTED]
 - [[picture_pool.py]] - `imports_from` [EXTRACTED]

@@ -1,18 +1,18 @@
 ---
 source_file: "tests/test_pictures_first.py"
 type: "code"
-community: "image_sources.py"
+community: "gather_pool"
 location: "L35"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/image_sourcespy
+  - community/gather_pool
 ---
 
 # stubbed
 
 ## Connections
-- [[dot-__enter__()_2]] - `calls` [EXTRACTED]
+- [[dot-__enter__()_1]] - `calls` [EXTRACTED]
 - [[dot-__enter__()_3]] - `method` [EXTRACTED]
 - [[dot-__exit__()_2]] - `method` [EXTRACTED]
 - [[dot-__init__()_4]] - `method` [EXTRACTED]
@@ -22,4 +22,4 @@ tags:
 - [[test_pictures_first.py]] - `contains` [EXTRACTED]
 - [[test_pool_roundtrip()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/image_sourcespy
+#graphify/code #graphify/EXTRACTED #community/gather_pool

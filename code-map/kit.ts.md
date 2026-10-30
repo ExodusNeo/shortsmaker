@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[CAPTION_TOP]] - `contains` [EXTRACTED]
-- [[CLAMP]] - `contains` [EXTRACTED]
+- [[CLAMP_5]] - `contains` [EXTRACTED]
 - [[Engraving.tsx]] - `imports_from` [EXTRACTED]
 - [[FILL]] - `contains` [EXTRACTED]
 - [[FONT]] - `re_exports` [EXTRACTED]
@@ -41,7 +41,7 @@ tags:
 - [[clamp01()]] - `contains` [EXTRACTED]
 - [[drawCover()]] - `contains` [EXTRACTED]
 - [[inksOf()]] - `contains` [EXTRACTED]
-- [[luminance()_1]] - `contains` [EXTRACTED]
+- [[luminance()]] - `contains` [EXTRACTED]
 - [[noise()]] - `contains` [EXTRACTED]
 - [[outline()]] - `re_exports` [EXTRACTED]
 - [[ref_react]] - `imports_from` [EXTRACTED]

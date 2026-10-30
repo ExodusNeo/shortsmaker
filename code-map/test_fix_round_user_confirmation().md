@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_first_second.py"
 type: "code"
-community: "test_pictures_first.py"
+community: "test_first_second.py"
 location: "L148"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_pictures_firstpy
+  - community/test_first_secondpy
 ---
 
 # test_fix_round_user_confirmation()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[test_first_second.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_pictures_firstpy
+#graphify/code #graphify/EXTRACTED #community/test_first_secondpy

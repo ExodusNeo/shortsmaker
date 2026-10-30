@@ -2,7 +2,7 @@
 source_file: "tests/test_opener_graphic.py"
 type: "rationale"
 community: "clean_full"
-location: "L81"
+location: "L99"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED

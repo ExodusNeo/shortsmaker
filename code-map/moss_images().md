@@ -2,7 +2,7 @@
 source_file: "shortsmaker/gpu.py"
 type: "code"
 community: "gpu.py"
-location: "L280"
+location: "L288"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -21,6 +21,7 @@ tags:
 - [[json]] - `calls` [EXTRACTED]
 - [[moss_graph()]] - `calls` [EXTRACTED]
 - [[paint_instead()]] - `calls` [EXTRACTED]
+- [[paint_opener_start()]] - `calls` [EXTRACTED]
 - [[render()_4]] - `calls` [EXTRACTED]
 - [[subprocess]] - `calls` [EXTRACTED]
 - [[time]] - `calls` [EXTRACTED]

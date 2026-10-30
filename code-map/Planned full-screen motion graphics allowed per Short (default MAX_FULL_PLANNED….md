@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/rules.py"
 type: "rationale"
-community: "re"
+community: "rescue_graphics"
 location: "L151"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/re
+  - community/rescue_graphics
 ---
 
 # Planned full-screen motion graphics allowed per Short (default MAX_FULL_PLANNED…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[max_full_planned()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/re
+#graphify/rationale #graphify/EXTRACTED #community/rescue_graphics

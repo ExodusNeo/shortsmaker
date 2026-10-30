@@ -1,20 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "captions"
+community: "h3_run.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/captions
+  - community/h3_runpy
 ---
 
 # Path
 
 ## Connections
-- [[captions()]] - `references` [EXTRACTED]
-- [[music_gain()]] - `references` [EXTRACTED]
-- [[speak()]] - `references` [EXTRACTED]
-- [[story_sound()]] - `references` [EXTRACTED]
-- [[tts()_1]] - `references` [EXTRACTED]
+- [[fit_start()]] - `references` [EXTRACTED]
+- [[saved_file()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/captions
+#graphify/code #graphify/EXTRACTED #community/h3_runpy

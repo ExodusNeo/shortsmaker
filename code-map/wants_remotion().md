@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/remotion_render.py"
 type: "code"
-community: "render"
+community: "test_style.py"
 location: "L15"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/render
+  - community/test_stylepy
 ---
 
 # wants_remotion()
@@ -17,4 +17,4 @@ tags:
 - [[render()_4]] - `calls` [EXTRACTED]
 - [[test_remotion_forced_by_look()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/render
+#graphify/code #graphify/EXTRACTED #community/test_stylepy

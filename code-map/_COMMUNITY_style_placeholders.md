@@ -31,10 +31,10 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 6 edges to [[_COMMUNITY_invent_component]]
-- 6 edges to [[_COMMUNITY_test_pictures_first.py]]
+- 6 edges to [[_COMMUNITY_test_style.py]]
 - 2 edges to [[_COMMUNITY_render_remotion]]
-- 2 edges to [[_COMMUNITY_owner]]
-- 2 edges to [[_COMMUNITY_re]]
+- 2 edges to [[_COMMUNITY_gather_pool]]
+- 2 edges to [[_COMMUNITY_test_full_scenes.py]]
 - 1 edge to [[_COMMUNITY_approve_candidate]]
 - 1 edge to [[_COMMUNITY_json]]
 

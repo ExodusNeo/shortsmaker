@@ -1,20 +1,20 @@
 ---
 source_file: "tests/test_full_scenes.py"
 type: "code"
-community: "ask"
+community: "test_first_second.py"
 location: "L697"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ask
+  - community/test_first_secondpy
 ---
 
 # test_look_check_fixes_code()
 
 ## Connections
-- [[ask()_8]] - `contains` [EXTRACTED]
-- [[ask()_7]] - `indirect_call` [INFERRED]
+- [[ask()_7]] - `contains` [EXTRACTED]
+- [[ask()_6]] - `indirect_call` [INFERRED]
 - [[look_and_fix()]] - `calls` [EXTRACTED]
 - [[test_full_scenes.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ask
+#graphify/code #graphify/EXTRACTED #community/test_first_secondpy

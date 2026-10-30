@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "test_pictures_first.py"
+community: "gather_pool"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/test_pictures_firstpy
+  - community/gather_pool
 ---
 
 # importlib
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[patching.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/test_pictures_firstpy
+#graphify/concept #graphify/EXTRACTED #community/gather_pool

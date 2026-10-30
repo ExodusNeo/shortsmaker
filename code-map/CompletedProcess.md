@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "choose_images"
+community: "pool_pictures"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/choose_images
+  - community/pool_pictures
 ---
 
 # CompletedProcess
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[film_ffmpeg()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/choose_images
+#graphify/code #graphify/EXTRACTED #community/pool_pictures

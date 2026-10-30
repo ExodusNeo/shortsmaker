@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/full/BigNumber.tsx"
 type: "code"
-community: "BigNumber.tsx"
+community: "toolkit.tsx"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/BigNumbertsx
+  - community/toolkittsx
 ---
 
 # BigNumber.tsx
@@ -24,7 +24,7 @@ tags:
 - [[SERIF]] - `imports` [EXTRACTED]
 - [[Skin]] - `imports` [EXTRACTED]
 - [[TYPE]] - `imports` [EXTRACTED]
-- [[clamp_9]] - `contains` [EXTRACTED]
+- [[clamp_6]] - `contains` [EXTRACTED]
 - [[counter()]] - `contains` [EXTRACTED]
 - [[fmt()]] - `contains` [EXTRACTED]
 - [[fmtBar()]] - `contains` [EXTRACTED]
@@ -34,4 +34,4 @@ tags:
 - [[ref_remotion]] - `imports_from` [EXTRACTED]
 - [[skinOf()]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/BigNumbertsx
+#graphify/code #graphify/EXTRACTED #community/toolkittsx

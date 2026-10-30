@@ -46,17 +46,15 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 11 edges to [[_COMMUNITY_gpu.py]]
+- 13 edges to [[_COMMUNITY_json]]
 - 2 edges to [[_COMMUNITY_render]]
-- 1 edge to [[_COMMUNITY_test_blender_plan.py]]
+- 1 edge to [[_COMMUNITY_math]]
 - 1 edge to [[_COMMUNITY_full_cues]]
-- 1 edge to [[_COMMUNITY_image_sources.py]]
-- 1 edge to [[_COMMUNITY_re]]
-- 1 edge to [[_COMMUNITY_words_of]]
+- 1 edge to [[_COMMUNITY_test_full_scenes.py]]
 
 ## Top bridge nodes
 - [[frame_maker()]] - degree 8, connects to 2 communities
 - [[person_card()]] - degree 6, connects to 2 communities
-- [[Path_8]] - degree 5, connects to 2 communities
 - [[thumbnail()]] - degree 4, connects to 2 communities
 - [[ClipReader]] - degree 6, connects to 1 community
+- [[frame()]] - degree 6, connects to 1 community

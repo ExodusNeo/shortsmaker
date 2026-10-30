@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "topic_ideas.py"
+community: "subprocess"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/topic_ideaspy
+  - community/subprocess
 ---
 
 # urllib_parse
@@ -19,4 +19,4 @@ tags:
 - [[topic_ideas.py]] - `imports` [EXTRACTED]
 - [[writing.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/topic_ideaspy
+#graphify/concept #graphify/EXTRACTED #community/subprocess

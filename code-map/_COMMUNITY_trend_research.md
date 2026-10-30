@@ -24,15 +24,14 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 4 edges to [[_COMMUNITY_test_pictures_first.py]]
+- 5 edges to [[_COMMUNITY_test_full_scenes.py]]
 - 1 edge to [[_COMMUNITY_write_scripts]]
 - 1 edge to [[_COMMUNITY_ask_ai]]
 - 1 edge to [[_COMMUNITY_main_1]]
 - 1 edge to [[_COMMUNITY_json]]
-- 1 edge to [[_COMMUNITY_gpu.py]]
 
 ## Top bridge nodes
-- [[trend_research()]] - degree 9, connects to 5 communities
+- [[trend_research()]] - degree 9, connects to 4 communities
 - [[seed_ideas()]] - degree 4, connects to 2 communities
 - [[yt_list()]] - degree 3, connects to 1 community
 - [[channel_url()]] - degree 2, connects to 1 community

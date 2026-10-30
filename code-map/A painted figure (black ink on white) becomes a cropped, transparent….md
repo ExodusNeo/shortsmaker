@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_full_scenes.py"
 type: "rationale"
-community: "make_paper"
+community: "render_remotion"
 location: "L781"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/make_paper
+  - community/render_remotion
 ---
 
 # A painted figure (black ink on white) becomes a cropped, transparent…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[test_ink_silhouette()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/make_paper
+#graphify/rationale #graphify/EXTRACTED #community/render_remotion

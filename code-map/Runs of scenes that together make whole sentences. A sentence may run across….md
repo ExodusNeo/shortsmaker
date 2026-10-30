@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/gpu.py"
 type: "rationale"
-community: "test_h3_handoff.py"
-location: "L131"
+community: "test_story.py"
+location: "L139"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/test_h3_handoffpy
+  - community/test_storypy
 ---
 
 # Runs of scenes that together make whole sentences. A sentence may run across…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[sentence_groups()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/test_h3_handoffpy
+#graphify/rationale #graphify/EXTRACTED #community/test_storypy

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/gpu.py"
 type: "code"
-community: "local_clips"
-location: "L572"
+community: "gpu.py"
+location: "L580"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/local_clips
+  - community/gpupy
 ---
 
 # local_clips()
@@ -23,8 +23,9 @@ tags:
 - [[motion_prompt()]] - `calls` [EXTRACTED]
 - [[render()_4]] - `calls` [EXTRACTED]
 - [[shot_span()]] - `calls` [EXTRACTED]
+- [[start_picture()]] - `calls` [EXTRACTED]
 - [[test_owner_clip_is_cut_again_for_the_scene_it_now_sits_in()]] - `calls` [EXTRACTED]
 - [[veo_handoff()]] - `calls` [EXTRACTED]
 - [[video_encoder()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/local_clips
+#graphify/code #graphify/EXTRACTED #community/gpupy

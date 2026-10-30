@@ -1,11 +1,11 @@
 ---
 type: community
-members: 30
+members: 26
 ---
 
 # Halftone.tsx
 
-**Members:** 30 nodes
+**Members:** 26 nodes
 
 ## Members
 - [[Engraving()]] - code - remotion/src/style/looks/Engraving.tsx
@@ -13,10 +13,6 @@ members: 30
 - [[FILL]] - code - remotion/src/style/kit.ts
 - [[Halftone()]] - code - remotion/src/style/looks/Halftone.tsx
 - [[Halftone.tsx]] - code - remotion/src/style/looks/Halftone.tsx
-- [[Inks]] - code - remotion/src/style/types.ts
-- [[InventedLook()]] - code - remotion/src/style/generated/InventedLook.tsx
-- [[InventedLook.tsx]] - code - remotion/src/style/generated/InventedLook.tsx
-- [[Look]] - code - remotion/src/style/types.ts
 - [[Miniature()]] - code - remotion/src/style/looks/Miniature.tsx
 - [[Miniature.tsx]] - code - remotion/src/style/looks/Miniature.tsx
 - [[Riso()]] - code - remotion/src/style/looks/Riso.tsx
@@ -30,7 +26,7 @@ members: 30
 - [[draw()_4]] - code - remotion/src/style/looks/Silent.tsx
 - [[drawCover()]] - code - remotion/src/style/kit.ts
 - [[hatch()]] - code - remotion/src/style/looks/Engraving.tsx
-- [[luminance()_1]] - code - remotion/src/style/kit.ts
+- [[luminance()]] - code - remotion/src/style/kit.ts
 - [[noise()]] - code - remotion/src/style/kit.ts
 - [[remotion_src_style_kit_img]] - concept
 - [[rgb()]] - code - remotion/src/style/looks/Halftone.tsx
@@ -48,8 +44,9 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 36 edges to [[_COMMUNITY_styleindex.ts]]
-- 6 edges to [[_COMMUNITY_toolkit.tsx]]
-- 4 edges to [[_COMMUNITY_Short.tsx]]
+- 5 edges to [[_COMMUNITY_toolkit.tsx]]
+- 1 edge to [[_COMMUNITY_Short.tsx]]
+- 1 edge to [[_COMMUNITY_ref_remotion]]
 
 ## Top bridge nodes
 - [[Silent.tsx]] - degree 13, connects to 3 communities

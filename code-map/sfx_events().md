@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[Sound design each timed visual gets a matching sound. Candidates are kept by…]] - `rationale_for` [EXTRACTED]
 - [[audio_mix.py]] - `contains` [EXTRACTED]
-- [[pick()]] - `contains` [EXTRACTED]
+- [[pick()_1]] - `contains` [EXTRACTED]
 - [[render()_4]] - `calls` [EXTRACTED]
 - [[test_sfx_full()]] - `calls` [EXTRACTED]
 - [[test_story_sound_wins_its_moment()]] - `calls` [EXTRACTED]

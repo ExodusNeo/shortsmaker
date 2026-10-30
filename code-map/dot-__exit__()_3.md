@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_pictures_first.py"
 type: "code"
-community: "picking"
+community: "test_pictures_first.py"
 location: "L346"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/picking
+  - community/test_pictures_firstpy
 ---
 
 # .__exit__()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[picking]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/picking
+#graphify/code #graphify/EXTRACTED #community/test_pictures_firstpy
