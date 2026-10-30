@@ -12,8 +12,8 @@ from pathlib import Path
 from PIL import Image
 
 from shortsmaker import (
-    audio_mix, blender_plan, blender_render, edit_project, editplan, frame_render, gpu, image_sources, media_tools,
-    motion, photo_prep, picker, picture_pool, plan_rules, remotion_render, review, seo, session, style_lab,
+    audio_mix, blender_plan, blender_render, drawn_opener, edit_project, editplan, frame_render, gpu, image_sources,
+    media_tools, motion, photo_prep, picker, picture_pool, plan_rules, remotion_render, review, seo, session, style_lab,
 )
 from shortsmaker.config import FPS, H, MUSIC, OUTPUT, PALETTES, SFX, SRC, STYLE_SLOTS, W, hex_rgb
 
@@ -94,12 +94,14 @@ def drawn_thumbnail(short: dict, work: Path, bounds: list[float]) -> tuple[Path,
             "no real photo of the structure was found: the thumbnail uses a drawing")
 
 
-def use_opener(short: dict, clips: dict, sources: list) -> str | None:
-    """Scene 1 opens on its motion-graphic opener (picker.opener_graphic); an AI clip of the strangest moment (the
-    owner's or LTX's, once the graphic failed its fixes: review.fix_opener_graphic) plays instead of it.
-    short["opening_note"] says which opener played, for the edit plan's Opening line. Returns a CHECK line when the
-    channel wanted an opener and scene 1 got none."""
-    short["opening_note"] = None
+def use_opener(short: dict, bounds: list[float], all_words: list, work: Path, clips: dict, images: list,
+               sources: list) -> str | None:
+    """Scene 1 on an `opener: animated` channel plays the first opener that works (owner, 2026-10-30): the drawn
+    opener (drawn_opener.make_opener), else its motion graphic (picker.opener_graphic, fixed up to
+    review.OPENER_GRAPHIC_FIXES times), else an AI clip of the strangest moment (the owner's or LTX's, once the graphic
+    failed: review.fix_opener_graphic). short["opening_note"] says which played, for the edit plan's Opening line.
+    Returns a CHECK line when scene 1 got no opener at all."""
+    short["opening_note"], short["opener_used"] = None, False
     first = short["scenes"][0]
     if not short.get("opener_graphic"):  # the channel has no openers
         return None
@@ -110,7 +112,22 @@ def use_opener(short: dict, clips: dict, sources: list) -> str | None:
         short["opening_note"] = f"AI clip of the strangest moment ({maker}){tried}"
         sources[0] += f" | AI clip of the strangest moment ({maker})"
         return None
-    short["opening_note"] = short["opener_graphic"] + ("" if first.get("full") else "; scene 1 opens on its picture")
+    try:  # an opener never stops a run
+        clip, why = drawn_opener.make_opener(short, [w for w in all_words if w[0] < bounds[1]], bounds[1] - bounds[0], work)
+        if clip:
+            media_tools.ffmpeg("-y", "-i", str(clip), "-frames:v", "1", "drawn_0.jpg", cwd=work)
+            images[0] = Image.open(work / "drawn_0.jpg").convert("RGB")
+    except Exception as e:
+        clip, why = None, f"the drawn opener failed: {type(e).__name__}: {e}"
+        short["drawn_failed"] = why
+    if clip:
+        clips[0] = clip
+        first.update(full=None, graphic=None, credit_tag=None)  # the replaced photo's credit must not show on it
+        sources[0] = f"drawn opener (hand-drawn animation): {short['drawn']['moment']}"
+        short["opening_note"], short["opener_used"] = f"drawn opener: {short['drawn']['moment']}", True
+        return None
+    short["opening_note"] = (f"drawn opener failed ({why}) -> " if why else "") + short["opener_graphic"] + (
+        "" if first.get("full") else "; scene 1 opens on its picture")
     return None if first.get("full") else f"opener: {short['opener_graphic']}"
 
 
@@ -285,16 +302,16 @@ def render(short: dict, ch: dict, folder: Path, state: dict | None = None, fix_r
                   for a, _ in blender_render.scene_frames(bounds)]
     else:
         first = short["scenes"][0]
-        if session.VEO_HANDOFF and short.get("opener_graphic") and not first.get("full"):
-            # no motion-graphic opener came back: the strangest moment goes to the owner's clip hand-off (LTX if
-            # they skip it). A graphic opener goes first and is handed off only after its fixes fail (owner,
-            # 2026-10-30; review.fix_opener_graphic)
+        if session.VEO_HANDOFF and short.get("drawn_failed") and short.get("opener_graphic") and not first.get("full"):
+            # the drawn opener failed and no motion graphic came back: the strangest moment goes to the owner's clip
+            # hand-off (LTX if they skip it). A graphic opener goes first and is handed off only after its fixes
+            # fail (owner, 2026-10-30; review.fix_opener_graphic)
             first["animate"] = first["motion_people"] = first["opener_clip"] = True
             review.paint_opener_start(short, work)
             first["motion"] = first.get("motion") or f"act out the story's strangest moment: {first['narration']}"
         clips = gpu.local_clips(short, work, sources, bounds, {i: c["film"] for i, c in enumerate(choices)
                                                              if c.get("film") and not short["scenes"][i].get("full")})
-    opener_check = None if drawn else use_opener(short, clips, sources)
+    opener_check = None if drawn else use_opener(short, bounds, all_words, work, clips, images, sources)
     for i, sc in enumerate(short["scenes"]):  # keep text callouts off the subject's face (maps and marks are full cards)
         if sc["graphic"] and sc["graphic"]["style"] != "mark":
             film = choices[i]["film"]["path"] if clips.get(i) == work / f"film{i}.mp4" else None
@@ -415,8 +432,10 @@ def render(short: dict, ch: dict, folder: Path, state: dict | None = None, fix_r
     found, opener = review.first_second_check(folder / "short.mp4", short, choices, folder / "storyboard.jpg", work)
     issues += found
     weak_graphic = review.weak_opener_graphic(short, fixes, found)  # takes scene 1 out of `fixes`
+    if short.get("opener_used"):  # the drawn opener passed its own art director: findings stay CHECK lines
+        fixes.pop(0, None)
     # once per Short; a motion-graphic opener stays (a swapped picture would play under the graphic)
-    if short.get("opener_swapped") or short["scenes"][0].get("full"):
+    if short.get("opener_swapped") or short.get("opener_used") or short["scenes"][0].get("full"):
         opener = None
     print("  quality check: " + (f"{len(issues)} thing(s) to look at before uploading:" if issues else "OK, nothing to fix"))
     for issue in issues:
@@ -433,6 +452,8 @@ def render(short: dict, ch: dict, folder: Path, state: dict | None = None, fix_r
     credit_text = f"\n\nMusic:\n{credit.read_text(encoding='utf-8').strip()}" if credit and credit.exists() else ""
     image_credits = []  # credited material (CC, Internet Archive, Openverse); public domain needs nothing
     for k, (sc, c) in enumerate(zip(short["scenes"], choices)):
+        if k == 0 and short.get("opener_used"):  # scene 1's photo was replaced by the drawn opener
+            continue
         for _, title, who, site in (c.get("full_pics") or []) if sc.get("full") else []:
             if who:
                 image_credits.append(f"{re.sub(r'[.](jpe?g|png|tiff?|gif|svg)$', '', title.removeprefix('File:'), flags=re.I)} by {who} ({site})")

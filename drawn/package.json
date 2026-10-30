@@ -1,0 +1,7 @@
+{
+  "name": "shortsmaker-drawn",
+  "private": true,
+  "type": "module",
+  "description": "Drawn openers: hand-drawn 2D animation of scene 1 (claude-animation lib, MIT, vendored in lib/).",
+  "dependencies": { "@napi-rs/canvas": "0.1.65" }
+}

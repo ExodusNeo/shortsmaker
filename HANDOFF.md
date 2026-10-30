@@ -53,6 +53,7 @@ everything (voice, paintings, video). Real archival/online pictures and film are
 | `vault/` | Obsidian vault: `Logbook/<name>.md` (the owner's results log), `Shorts/<channel>/<folder>.md` (one page per Short, `vault_page()`), `Home.md`. `make_shorts.py notes` rebuilds the pages |
 | `code-map/`, `graphify-out/` | graphify code map (second Obsidian vault + `graph.html`). Refresh: `C:\Python314\python.exe -m graphify update .`, delete `code-map\*.md` and `code-map\graph.canvas` (keep `.obsidian`), `C:\Python314\python.exe -m graphify export obsidian --dir code-map`. No auto hook (needs the owner's go-ahead) |
 | `blender/` | Blender scripts (plain bpy, run headless by `D:\Blender\blender.exe` 5.2.1): engineering-failures drawings (`build_scene.py`, `look.py`, `parts.py`, `templates.py`, `failures.py`) |
+| `drawn/` | Drawn openers: `kit.mjs` (the parts), `KIT.md` (the AI's manual), `run.mjs` (renders a scene: sheet or clip), `lib/` (claude-animation, MIT), `examples/` |
 | `remotion/src/` | `Short.tsx`, `Graphics.tsx`, `Cards.tsx`, `Extras.tsx`, `MapCard.tsx`, `Captions.tsx`; `full/` = full-screen motion graphics; `style/` = style library (see those sections) |
 | `remotion/test_props/` | Test scenes for full-screen graphics (+ `media/`); `tests/render_full.py` renders them into `test_renders/` |
 | `local_ai/` | GPU worker `gen.py` (own venv: Kokoro, SDXL-Lightning, LTX-Video 0.9.8); voice worker `qwen_voice.py` (`qwen_venv`: Qwen3-TTS, MMS aligner, VoiceStudio client); models in `hf/` |
@@ -93,6 +94,7 @@ are stored LF (`.gitattributes`).
 | `review.py` | Quality check, visual review, first-second check, review fixes, repaints, storyboard |
 | `editplan.py` | `edit_plan()`, `scene_cues()` (graphic timing) |
 | `short_render.py` | `render()`, work state, `use_opener()` |
+| `drawn_opener.py` | Drawn opener: AI scene code, lint, preview, art-director review and fixes, render |
 | `blender_plan.py`, `blender_render.py` | Blender-drawn channels: build plans, headless render |
 | `edit_project.py` | Shotcut timeline for hand fixes |
 | `logbook.py` | Logbook entries, vault pages |
@@ -169,6 +171,20 @@ Rules that keep it working:
     used), storyboard, thumbnail, captions.srt, logbook entry, vault page, `work/state.json` for fix.bat.
 
 ## Openers (scene 1 of every Short on `opener: animated` channels)
+Order (owner, 2026-10-30): drawn opener -> motion graphic (2 fixes) -> AI clip of the strangest moment (`use_opener`).
+- **Drawn opener** (`drawn_opener.make_opener`, `drawn/`): a hand-drawn brush-ink + watercolour animation of the
+  strangest moment, scene 1 + the crossfade long. The AI codes one scene module against the kit (`drawn/kit.mjs`; its
+  manual `drawn/KIT.md`, with the approved Dexter example) -> lint (only `k.*` calls and plain JS; node runs with
+  `--disallow-code-generation-from-strings`: the coder has read Wikipedia text) -> a 6-frame preview sheet ->
+  the AI as art director -> the coder fixes what it found, up to `FIXES` (2) times -> `drawn/run.mjs` renders
+  `work/drawn/opener.mp4`. The plan stays in `short["drawn"]` (fix rounds and fix.bat reuse the clip by
+  fingerprint); a failure stays in `short["drawn_failed"]` and is never retried for that Short. Final-review findings
+  on a drawn opener stay CHECK lines (it passed its own art director). The channel's optional `## Opener` rules
+  replace `DEFAULT_RULES`. Library: claude-animation (MIT), vendored in `drawn/lib` (`VERSION` = the upstream commit);
+  install once: `cd drawn && npm install`. Adding a kit part: write it in `kit.mjs`, document it in `KIT.md`, add it
+  to `drawn/examples/kit_parts.mjs`, run `tests\test_drawn_opener.py --look` and look at `drawn\out\sheet.png`.
+  Look lessons: the library's over-mode wash lays paper grain on top and greys colours (`k.paint` = solid, then a
+  thin multiplied wash); multiplied washes over the teal sea turn brown into green.
 - **Motion-graphic opener** (`picker.opener_graphic`, planned in `render` for every Short on these channels; Opening
   line `motion graphic: ...`). It goes first and is judged on every render (owner, 2026-10-30): the visual review's
   scene-1 finding or a first-second score < 7 makes it weak (`review.weak_opener_graphic`), and the fix rounds fix it
@@ -178,18 +194,10 @@ Rules that keep it working:
   comes back plays instead of the graphic (`use_opener`, Opening line `AI clip of the strangest moment (made by ...)
   (the motion graphic still looked weak after 2 fixes: ...)`). Without the hand-off it stays a CHECK line. Only a
   Short with no graphic at all hands scene 1 off on the first render. The hand-off sends close-ups too.
+
 - Scene 1's clip starts from a painting of the strangest moment (`review.paint_opener_start` ->
   `work/opener_start.jpg`, `gpu.start_picture`; same painters and `AI paintings` rules), not scene 1's own picture:
   the Dexter Short (2026-10-30) sent Flow the woodcut of Dexter walking, so the clip couldn't show the bed warmers.
-- **Drawn opener (next)**: hand-drawn 2D animation in code (claude-animation, MIT, Node canvas + ffmpeg, cloned to
-  `D:\claude-animation-skill`; the owner approved its look on 2026-10-30). One hand-made test:
-  `test_renders\drawn_opener_dexter\` (`film.mjs`, `compare_drawn_vs_flow.mp4`). Plan: a kit of tested parts (ships,
-  people, props) the AI composes per Short, a preview-and-fix check, then the order drawn -> motion graphic -> clip.
-  Running the cloned library from Claude Code needs the owner's permission (blocked as downloaded code).
-- Lessons from the test: the library's over-mode wash lays paper grain on top at 55% and greys colours (paint solid
-  first, then a thin multiplied wash); multiplied washes over the teal sea turn brown into green; keep the story in
-  y 200-1160 (title above, captions below).
-
 ## Full-screen motion graphics (`remotion/src/full/`)
 - 4 skins (`parchment`, `blueprint`, `dossier`, `hud`) chosen from the palette/mood (`short_skin()`).
 - Templates: map `journey`, big `number` (counter + figures, painted silhouette or icons, or `compare` bars),
@@ -270,7 +278,8 @@ strangest moment. Same story, other channel: Voggle's Mike 2M views vs ours 1.2K
   1,000 subs + 10M Shorts views in 90 days; 20M from 2027-02-01.
 
 ## Open items and next steps
-- **Openers**: build the drawn opener (see Openers). The motion-graphic fix rounds have no live run yet.
+- **Openers**: the drawn opener has only run on past Shorts (`test_renders\drawn_samples\`), not inside a full run;
+  the motion-graphic fix rounds have no live run yet. More kit parts as stories need them.
 - run.bat's "press any key" at the end doesn't close the window for the owner: not found in the code; waiting for
   the window's last line.
 - Never seen in a real run: style inventions, question beats, wipes, the Shotcut timeline.
@@ -287,7 +296,7 @@ strangest moment. Same story, other channel: Voggle's Mike 2M views vs ours 1.2K
 - Tests, no AI usage (`.venv\Scripts\python.exe tests\<name>.py`): `test_package`, `test_pictures_first`,
   `test_full_scenes`, `test_style`, `test_rules` (golden prompts), `test_story`, `test_first_second`,
   `test_topic_ideas`, `test_h3_handoff`, `test_h3_run`, `test_edit_project`, `test_blender_plan`,
-  `test_blender_render`, `test_opener_graphic`;
+  `test_blender_render`, `test_opener_graphic`, `test_drawn_opener` (real node, ~1 min);
   `tests\run_ts_tests.py` (TypeScript); `local_ai\qwen_venv\Scripts\python.exe tests\test_qwen_voice.py`.
 - With real headless Blender (engineering-failures): `test_blender_run`, `test_blender_scene`.
 - One full-screen scene: `tests\render_full.py remotion\test_props\<name>.json [--still SECONDS]`.

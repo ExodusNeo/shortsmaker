@@ -24,3 +24,5 @@ graphify-out/cache/
 freesound_key.txt
 pixabay_key.txt
 .superpowers/
+drawn/node_modules/
+drawn/out/

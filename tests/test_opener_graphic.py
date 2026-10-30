@@ -67,6 +67,12 @@ def test_weak_opener_graphic_fixes_then_handoff():
         tmp.cleanup()
 
 
+def use(s, clips, sources):
+    """use_opener with the drawn opener already failed (drawn_failed: it is never retried), so the graphic is next."""
+    s.setdefault("drawn_failed", "the ship is too small")
+    return short_render.use_opener(s, [0.0, 2.0], [], Path("."), clips, [None], sources)
+
+
 def test_use_opener_ai_clip_replaces_graphic():
     """An AI clip of scene 1 came back (the owner's or LTX's): it plays instead of the motion graphic, and the
     Opening line says why; archival film on scene 1 does not count."""
@@ -75,13 +81,14 @@ def test_use_opener_ai_clip_replaces_graphic():
         s["opener_graphic_failed"] = "the motion graphic still looked weak after 2 fixes: x"
         s["scenes"][0]["opener_clip"] = True
         sources = ["photo"]
-        assert short_render.use_opener(s, {0: Path(name)}, sources) is None
+        assert use(s, {0: Path(name)}, sources) is None
         assert s["scenes"][0]["full"] is None and maker in sources[0], sources
         assert s["opening_note"] == f"AI clip of the strangest moment ({maker}) (the motion graphic still looked weak after 2 fixes: x)"
     s = fresh()
     s["scenes"][0]["opener_clip"] = True
-    short_render.use_opener(s, {0: Path("film0.mp4")}, ["x"])
-    assert s["scenes"][0]["full"]["type"] == "journey" and s["opening_note"] == s["opener_graphic"]
+    use(s, {0: Path("film0.mp4")}, ["x"])
+    assert s["scenes"][0]["full"]["type"] == "journey"
+    assert s["opening_note"] == "drawn opener failed (the ship is too small) -> " + s["opener_graphic"], s["opening_note"]
 
 
 def test_use_opener_without_graphic():
@@ -89,10 +96,10 @@ def test_use_opener_without_graphic():
     gets neither."""
     s = fresh()
     s["opener_graphic"], s["scenes"][0]["full"] = "no motion graphic (the AI gave none)", None
-    assert short_render.use_opener(s, {}, ["x"]) == "opener: no motion graphic (the AI gave none)"
+    assert use(s, {}, ["x"]) == "opener: no motion graphic (the AI gave none)"
     assert s["opening_note"].endswith("; scene 1 opens on its picture")
     s = {"title": "x", "scenes": [{"full": None}]}
-    assert short_render.use_opener(s, {}, ["x"]) is None and s["opening_note"] is None
+    assert use(s, {}, ["x"]) is None and s["opening_note"] is None
 
 
 def test_model_graphic_is_gone():
