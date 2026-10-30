@@ -4921,7 +4921,7 @@
       "height": 60
     },
     {
-      "id": "n_shortsmaker_drawn_opener_rationale_45",
+      "id": "n_shortsmaker_drawn_opener_rationale_48",
       "type": "file",
       "file": "Rule breaks in an AI-written scene (KIT.md's code rules). Empty = clean..md",
       "x": 9560,
@@ -4930,7 +4930,7 @@
       "height": 60
     },
     {
-      "id": "n_shortsmaker_drawn_opener_rationale_65",
+      "id": "n_shortsmaker_drawn_opener_rationale_68",
       "type": "file",
       "file": "Runs drawnrun.mjs on one job; None when it worked, else what went wrong\u2026.md",
       "x": 9760,
@@ -4939,7 +4939,7 @@
       "height": 60
     },
     {
-      "id": "n_shortsmaker_drawn_opener_rationale_145",
+      "id": "n_shortsmaker_drawn_opener_rationale_151",
       "type": "file",
       "file": "Scene 1's drawn opener clip (workdrawnopener.mp4, scene 1 + the crossfade\u2026.md",
       "x": 8560,
@@ -4948,7 +4948,7 @@
       "height": 60
     },
     {
-      "id": "n_shortsmaker_drawn_opener_rationale_83",
+      "id": "n_shortsmaker_drawn_opener_rationale_86",
       "type": "file",
       "file": "Six frames across the opener for the preview, the first and the last included..md",
       "x": 8760,
@@ -4968,23 +4968,23 @@
     {
       "id": "n_tests_test_drawn_opener_rationale_61",
       "type": "file",
-      "file": "The art director rejects every draft FIXES rewrites (each told the problems),\u2026.md",
+      "file": "The art director scores every draft below PASS FIXES rewrites (each told the\u2026.md",
       "x": 9160,
       "y": 1260,
       "width": 180,
       "height": 60
     },
     {
-      "id": "n_shortsmaker_drawn_opener_rationale_115",
+      "id": "n_shortsmaker_drawn_opener_rationale_118",
       "type": "file",
-      "file": "The art director's problems with a draft's preview sheet ( = it passes). A\u2026.md",
+      "file": "The art director's score (1-10) of a draft's preview sheet and what to fix. A\u2026.md",
       "x": 9360,
       "y": 1260,
       "width": 180,
       "height": 60
     },
     {
-      "id": "n_shortsmaker_drawn_opener_rationale_89",
+      "id": "n_shortsmaker_drawn_opener_rationale_92",
       "type": "file",
       "file": "The coder's scene {moment what it shows, code the module}; with `old`\u2026.md",
       "x": 9560,
@@ -4993,7 +4993,7 @@
       "height": 60
     },
     {
-      "id": "n_shortsmaker_drawn_opener_rationale_57",
+      "id": "n_shortsmaker_drawn_opener_rationale_60",
       "type": "file",
       "file": "The scene module from an AI reply (fences stripped), or None..md",
       "x": 9760,
@@ -5002,7 +5002,7 @@
       "height": 60
     },
     {
-      "id": "n_shortsmaker_drawn_opener_rationale_36",
+      "id": "n_shortsmaker_drawn_opener_rationale_39",
       "type": "file",
       "file": "Why a drawn opener can't be made on this PC, or None..md",
       "x": 8560,

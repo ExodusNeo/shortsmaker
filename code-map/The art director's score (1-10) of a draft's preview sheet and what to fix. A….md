@@ -2,14 +2,14 @@
 source_file: "shortsmaker/drawn_opener.py"
 type: "rationale"
 community: "drawn_opener.py"
-location: "L115"
+location: "L118"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
   - community/drawn_openerpy
 ---
 
-# The art director's problems with a draft's preview sheet ([] = it passes). A…
+# The art director's score (1-10) of a draft's preview sheet and what to fix. A…
 
 ## Connections
 - [[review()]] - `rationale_for` [EXTRACTED]

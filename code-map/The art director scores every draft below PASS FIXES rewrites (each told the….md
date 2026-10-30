@@ -9,7 +9,7 @@ tags:
   - community/drawn_openerpy
 ---
 
-# The art director rejects every draft: FIXES rewrites (each told the problems),…
+# The art director scores every draft below PASS: FIXES rewrites (each told the…
 
 ## Connections
 - [[test_drawn_opener_gives_up_after_fixes()]] - `rationale_for` [EXTRACTED]

@@ -62,6 +62,7 @@ SORT file.name ASC
 - 4 edges to [[_COMMUNITY_clean_look]]
 - 3 edges to [[_COMMUNITY_test_pictures_first.py]]
 - 3 edges to [[_COMMUNITY_full_cues]]
+- 2 edges to [[_COMMUNITY_drawn_opener.py]]
 - 2 edges to [[_COMMUNITY_json]]
 - 2 edges to [[_COMMUNITY_test_style.py]]
 - 2 edges to [[_COMMUNITY_gather_pool]]
@@ -75,7 +76,7 @@ SORT file.name ASC
 - 1 edge to [[_COMMUNITY_channel_profiles.py]]
 
 ## Top bridge nodes
-- [[plan_rules.py]] - degree 52, connects to 12 communities
+- [[plan_rules.py]] - degree 53, connects to 13 communities
 - [[words_of()]] - degree 22, connects to 6 communities
 - [[clean_full()]] - degree 23, connects to 5 communities
 - [[is_loop_short()]] - degree 7, connects to 4 communities

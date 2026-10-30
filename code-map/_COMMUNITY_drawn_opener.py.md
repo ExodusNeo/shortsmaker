@@ -18,8 +18,8 @@ members: 37
 - [[Scene 1's drawn opener clip (workdrawnopener.mp4, scene 1 + the crossfade…]] - rationale - shortsmaker/drawn_opener.py
 - [[Six frames across the opener for the preview, the first and the last included.]] - rationale - shortsmaker/drawn_opener.py
 - [[Tests for the drawn opener (drawn_opener.py + drawn, 2026-10-30) the lint on…]] - rationale - tests/test_drawn_opener.py
-- [[The art director rejects every draft FIXES rewrites (each told the problems),…]] - rationale - tests/test_drawn_opener.py
-- [[The art director's problems with a draft's preview sheet ( = it passes). A…]] - rationale - shortsmaker/drawn_opener.py
+- [[The art director scores every draft below PASS FIXES rewrites (each told the…]] - rationale - tests/test_drawn_opener.py
+- [[The art director's score (1-10) of a draft's preview sheet and what to fix. A…]] - rationale - shortsmaker/drawn_opener.py
 - [[The coder's scene {moment what it shows, code the module}; with `old`…]] - rationale - shortsmaker/drawn_opener.py
 - [[The scene module from an AI reply (fences stripped), or None.]] - rationale - shortsmaker/drawn_opener.py
 - [[Why a drawn opener can't be made on this PC, or None.]] - rationale - shortsmaker/drawn_opener.py
@@ -60,13 +60,14 @@ SORT file.name ASC
 - 3 edges to [[_COMMUNITY_re]]
 - 2 edges to [[_COMMUNITY_render]]
 - 2 edges to [[_COMMUNITY_ask_ai]]
+- 2 edges to [[_COMMUNITY_plan_rules.py]]
 - 2 edges to [[_COMMUNITY_image_sources.py]]
 - 2 edges to [[_COMMUNITY_test_blender_scene.py]]
 - 1 edge to [[_COMMUNITY_test_blender_plan.py]]
 - 1 edge to [[_COMMUNITY_prepare_topic]]
 
 ## Top bridge nodes
-- [[drawn_opener.py]] - degree 22, connects to 4 communities
+- [[drawn_opener.py]] - degree 23, connects to 5 communities
 - [[hashlib]] - degree 11, connects to 4 communities
 - [[test_drawn_opener.py]] - degree 20, connects to 3 communities
 - [[node_run()]] - degree 7, connects to 2 communities

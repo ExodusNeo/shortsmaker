@@ -1,0 +1,25 @@
+---
+source_file: "tests/test_blender_render.py"
+type: "code"
+community: "test_blender_plan.py"
+location: "L40"
+tags:
+  - graphify/code
+  - graphify/EXTRACTED
+  - community/test_blender_planpy
+---
+
+# short()
+
+## Connections
+- [[default_build()]] - `calls` [EXTRACTED]
+- [[test_blender_render.py]] - `contains` [EXTRACTED]
+- [[test_changed_blender_code_redraws()]] - `calls` [EXTRACTED]
+- [[test_crash_retries_then_raises()]] - `calls` [EXTRACTED]
+- [[test_frames_are_trimmed_after_the_clips_are_cut()]] - `calls` [EXTRACTED]
+- [[test_missing_blender_raises()]] - `calls` [EXTRACTED]
+- [[test_peak_on_the_emphasis_word()]] - `calls` [EXTRACTED]
+- [[test_render_clips_makes_one_clip_per_scene()]] - `calls` [EXTRACTED]
+- [[test_same_build_json_reuses_frames()]] - `calls` [EXTRACTED]
+
+#graphify/code #graphify/EXTRACTED #community/test_blender_planpy

@@ -1637,7 +1637,7 @@
       "file_type": "code",
       "norm_label": "available()",
       "source_file": "shortsmaker/drawn_opener.py",
-      "source_location": "L35"
+      "source_location": "L38"
     },
     {
       "id": "shortsmaker_drawn_opener_clean_code",
@@ -1649,7 +1649,7 @@
       "file_type": "code",
       "norm_label": "clean_code()",
       "source_file": "shortsmaker/drawn_opener.py",
-      "source_location": "L56"
+      "source_location": "L59"
     },
     {
       "id": "shortsmaker_drawn_opener_fingerprint",
@@ -1661,7 +1661,7 @@
       "file_type": "code",
       "norm_label": "fingerprint()",
       "source_file": "shortsmaker/drawn_opener.py",
-      "source_location": "L139"
+      "source_location": "L145"
     },
     {
       "id": "shortsmaker_drawn_opener_lint",
@@ -1673,7 +1673,7 @@
       "file_type": "code",
       "norm_label": "lint()",
       "source_file": "shortsmaker/drawn_opener.py",
-      "source_location": "L44"
+      "source_location": "L47"
     },
     {
       "id": "shortsmaker_drawn_opener_make_opener",
@@ -1685,7 +1685,7 @@
       "file_type": "code",
       "norm_label": "make_opener()",
       "source_file": "shortsmaker/drawn_opener.py",
-      "source_location": "L144"
+      "source_location": "L150"
     },
     {
       "id": "shortsmaker_drawn_opener_make_opener_fail",
@@ -1697,7 +1697,7 @@
       "file_type": "code",
       "norm_label": "fail()",
       "source_file": "shortsmaker/drawn_opener.py",
-      "source_location": "L160"
+      "source_location": "L166"
     },
     {
       "id": "shortsmaker_drawn_opener_node_run",
@@ -1709,7 +1709,7 @@
       "file_type": "code",
       "norm_label": "node_run()",
       "source_file": "shortsmaker/drawn_opener.py",
-      "source_location": "L64"
+      "source_location": "L67"
     },
     {
       "id": "shortsmaker_drawn_opener_review",
@@ -1721,7 +1721,7 @@
       "file_type": "code",
       "norm_label": "review()",
       "source_file": "shortsmaker/drawn_opener.py",
-      "source_location": "L114"
+      "source_location": "L117"
     },
     {
       "id": "shortsmaker_drawn_opener_sheet_times",
@@ -1733,7 +1733,7 @@
       "file_type": "code",
       "norm_label": "sheet_times()",
       "source_file": "shortsmaker/drawn_opener.py",
-      "source_location": "L82"
+      "source_location": "L85"
     },
     {
       "id": "shortsmaker_drawn_opener_write",
@@ -1745,7 +1745,7 @@
       "file_type": "code",
       "norm_label": "write()",
       "source_file": "shortsmaker/drawn_opener.py",
-      "source_location": "L87"
+      "source_location": "L90"
     },
     {
       "id": "tests_test_drawn_opener_fake_ai",
@@ -14114,18 +14114,18 @@
       "source_location": "L1"
     },
     {
-      "id": "shortsmaker_drawn_opener_rationale_115",
-      "label": "The art director's problems with a draft's preview sheet ([] = it passes). A\u2026",
+      "id": "shortsmaker_drawn_opener_rationale_118",
+      "label": "The art director's score (1-10) of a draft's preview sheet and what to fix. A\u2026",
       "_origin": "ast",
       "community": 14,
       "community_name": "drawn_opener.py",
       "file_type": "rationale",
-      "norm_label": "the art director's problems with a draft's preview sheet ([] = it passes). a...",
+      "norm_label": "the art director's score (1-10) of a draft's preview sheet and what to fix. a...",
       "source_file": "shortsmaker/drawn_opener.py",
-      "source_location": "L115"
+      "source_location": "L118"
     },
     {
-      "id": "shortsmaker_drawn_opener_rationale_145",
+      "id": "shortsmaker_drawn_opener_rationale_151",
       "label": "Scene 1's drawn opener clip (work/drawn/opener.mp4, scene 1 + the crossfade\u2026",
       "_origin": "ast",
       "community": 14,
@@ -14133,10 +14133,10 @@
       "file_type": "rationale",
       "norm_label": "scene 1's drawn opener clip (work/drawn/opener.mp4, scene 1 + the crossfade...",
       "source_file": "shortsmaker/drawn_opener.py",
-      "source_location": "L145"
+      "source_location": "L151"
     },
     {
-      "id": "shortsmaker_drawn_opener_rationale_36",
+      "id": "shortsmaker_drawn_opener_rationale_39",
       "label": "Why a drawn opener can't be made on this PC, or None.",
       "_origin": "ast",
       "community": 14,
@@ -14144,10 +14144,10 @@
       "file_type": "rationale",
       "norm_label": "why a drawn opener can't be made on this pc, or none.",
       "source_file": "shortsmaker/drawn_opener.py",
-      "source_location": "L36"
+      "source_location": "L39"
     },
     {
-      "id": "shortsmaker_drawn_opener_rationale_45",
+      "id": "shortsmaker_drawn_opener_rationale_48",
       "label": "Rule breaks in an AI-written scene (KIT.md's code rules). Empty = clean.",
       "_origin": "ast",
       "community": 14,
@@ -14155,10 +14155,10 @@
       "file_type": "rationale",
       "norm_label": "rule breaks in an ai-written scene (kit.md's code rules). empty = clean.",
       "source_file": "shortsmaker/drawn_opener.py",
-      "source_location": "L45"
+      "source_location": "L48"
     },
     {
-      "id": "shortsmaker_drawn_opener_rationale_57",
+      "id": "shortsmaker_drawn_opener_rationale_60",
       "label": "The scene module from an AI reply (fences stripped), or None.",
       "_origin": "ast",
       "community": 14,
@@ -14166,10 +14166,10 @@
       "file_type": "rationale",
       "norm_label": "the scene module from an ai reply (fences stripped), or none.",
       "source_file": "shortsmaker/drawn_opener.py",
-      "source_location": "L57"
+      "source_location": "L60"
     },
     {
-      "id": "shortsmaker_drawn_opener_rationale_65",
+      "id": "shortsmaker_drawn_opener_rationale_68",
       "label": "Runs drawn/run.mjs on one job; None when it worked, else what went wrong\u2026",
       "_origin": "ast",
       "community": 14,
@@ -14177,10 +14177,10 @@
       "file_type": "rationale",
       "norm_label": "runs drawn/run.mjs on one job; none when it worked, else what went wrong...",
       "source_file": "shortsmaker/drawn_opener.py",
-      "source_location": "L65"
+      "source_location": "L68"
     },
     {
-      "id": "shortsmaker_drawn_opener_rationale_83",
+      "id": "shortsmaker_drawn_opener_rationale_86",
       "label": "Six frames across the opener for the preview, the first and the last included.",
       "_origin": "ast",
       "community": 14,
@@ -14188,10 +14188,10 @@
       "file_type": "rationale",
       "norm_label": "six frames across the opener for the preview, the first and the last included.",
       "source_file": "shortsmaker/drawn_opener.py",
-      "source_location": "L83"
+      "source_location": "L86"
     },
     {
-      "id": "shortsmaker_drawn_opener_rationale_89",
+      "id": "shortsmaker_drawn_opener_rationale_92",
       "label": "The coder's scene: {\"moment\": what it shows, \"code\": the module}; with `old`\u2026",
       "_origin": "ast",
       "community": 14,
@@ -14199,7 +14199,7 @@
       "file_type": "rationale",
       "norm_label": "the coder's scene: {\"moment\": what it shows, \"code\": the module}; with `old`...",
       "source_file": "shortsmaker/drawn_opener.py",
-      "source_location": "L89"
+      "source_location": "L92"
     },
     {
       "id": "tests_test_drawn_opener_rationale_1",
@@ -14236,12 +14236,12 @@
     },
     {
       "id": "tests_test_drawn_opener_rationale_61",
-      "label": "The art director rejects every draft: FIXES rewrites (each told the problems),\u2026",
+      "label": "The art director scores every draft below PASS: FIXES rewrites (each told the\u2026",
       "_origin": "ast",
       "community": 14,
       "community_name": "drawn_opener.py",
       "file_type": "rationale",
-      "norm_label": "the art director rejects every draft: fixes rewrites (each told the problems),...",
+      "norm_label": "the art director scores every draft below pass: fixes rewrites (each told the...",
       "source_file": "tests/test_drawn_opener.py",
       "source_location": "L61"
     },
@@ -29383,7 +29383,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "shortsmaker/drawn_opener.py",
-      "source_location": "L37",
+      "source_location": "L40",
       "weight": 1.0
     },
     {
@@ -29395,7 +29395,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "shortsmaker/drawn_opener.py",
-      "source_location": "L60",
+      "source_location": "L63",
       "weight": 1.0
     },
     {
@@ -29407,7 +29407,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "shortsmaker/drawn_opener.py",
-      "source_location": "L141",
+      "source_location": "L147",
       "weight": 1.0
     },
     {
@@ -29419,7 +29419,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "shortsmaker/drawn_opener.py",
-      "source_location": "L49",
+      "source_location": "L52",
       "weight": 1.0
     },
     {
@@ -29431,7 +29431,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "shortsmaker/drawn_opener.py",
-      "source_location": "L150",
+      "source_location": "L156",
       "weight": 1.0
     },
     {
@@ -29443,7 +29443,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "shortsmaker/drawn_opener.py",
-      "source_location": "L168",
+      "source_location": "L174",
       "weight": 1.0
     },
     {
@@ -29455,7 +29455,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "shortsmaker/drawn_opener.py",
-      "source_location": "L174",
+      "source_location": "L180",
       "weight": 1.0
     },
     {
@@ -29467,7 +29467,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "shortsmaker/drawn_opener.py",
-      "source_location": "L177",
+      "source_location": "L183",
       "weight": 1.0
     },
     {
@@ -29479,7 +29479,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "shortsmaker/drawn_opener.py",
-      "source_location": "L177",
+      "source_location": "L183",
       "weight": 1.0
     },
     {
@@ -29491,7 +29491,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "shortsmaker/drawn_opener.py",
-      "source_location": "L183",
+      "source_location": "L189",
       "weight": 1.0
     },
     {
@@ -29503,7 +29503,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "shortsmaker/drawn_opener.py",
-      "source_location": "L192",
+      "source_location": "L198",
       "weight": 1.0
     },
     {
@@ -29515,7 +29515,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "shortsmaker/drawn_opener.py",
-      "source_location": "L66",
+      "source_location": "L69",
       "weight": 1.0
     },
     {
@@ -29527,7 +29527,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "shortsmaker/drawn_opener.py",
-      "source_location": "L69",
+      "source_location": "L72",
       "weight": 1.0
     },
     {
@@ -29539,31 +29539,19 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "shortsmaker/drawn_opener.py",
-      "source_location": "L116",
+      "source_location": "L119",
       "weight": 1.0
     },
     {
-      "source": "shortsmaker_drawn_opener_write",
-      "target": "json",
+      "source": "shortsmaker_drawn_opener_review",
+      "target": "shortsmaker_plan_rules_is_num",
       "relation": "calls",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "shortsmaker/drawn_opener.py",
-      "source_location": "L101",
-      "weight": 1.0
-    },
-    {
-      "source": "shortsmaker_drawn_opener_write",
-      "target": "shortsmaker_drawn_opener_clean_code",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "shortsmaker/drawn_opener.py",
-      "source_location": "L108",
+      "source_location": "L139",
       "weight": 1.0
     },
     {
@@ -29575,7 +29563,31 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "shortsmaker/drawn_opener.py",
-      "source_location": "L98",
+      "source_location": "L101",
+      "weight": 1.0
+    },
+    {
+      "source": "shortsmaker_drawn_opener_write",
+      "target": "json",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "shortsmaker/drawn_opener.py",
+      "source_location": "L104",
+      "weight": 1.0
+    },
+    {
+      "source": "shortsmaker_drawn_opener_write",
+      "target": "shortsmaker_drawn_opener_clean_code",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "shortsmaker/drawn_opener.py",
+      "source_location": "L111",
       "weight": 1.0
     },
     {
@@ -43447,7 +43459,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "shortsmaker/drawn_opener.py",
-      "source_location": "L160",
+      "source_location": "L166",
       "weight": 1.0
     },
     {
@@ -43964,7 +43976,7 @@
       "confidence_score": 1.0,
       "context": "generic_arg",
       "source_file": "shortsmaker/drawn_opener.py",
-      "source_location": "L144",
+      "source_location": "L150",
       "weight": 1.0
     },
     {
@@ -56132,7 +56144,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "shortsmaker/drawn_opener.py",
-      "source_location": "L64",
+      "source_location": "L67",
       "weight": 1.0
     },
     {
@@ -56144,7 +56156,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "shortsmaker/drawn_opener.py",
-      "source_location": "L114",
+      "source_location": "L117",
       "weight": 1.0
     },
     {
@@ -56156,7 +56168,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "shortsmaker/drawn_opener.py",
-      "source_location": "L87",
+      "source_location": "L90",
       "weight": 1.0
     },
     {
@@ -57872,6 +57884,18 @@
     {
       "source": "shortsmaker_drawn_opener",
       "target": "shortsmaker_llm",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "submodule_import",
+      "source_file": "shortsmaker/drawn_opener.py",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "shortsmaker_drawn_opener",
+      "target": "shortsmaker_plan_rules",
       "relation": "imports_from",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -65100,7 +65124,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "shortsmaker/drawn_opener.py",
-      "source_location": "L114",
+      "source_location": "L117",
       "weight": 1.0
     },
     {
@@ -65111,7 +65135,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "shortsmaker/drawn_opener.py",
-      "source_location": "L139",
+      "source_location": "L145",
       "weight": 1.0
     },
     {
@@ -65122,7 +65146,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "shortsmaker/drawn_opener.py",
-      "source_location": "L144",
+      "source_location": "L150",
       "weight": 1.0
     },
     {
@@ -65133,7 +65157,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "shortsmaker/drawn_opener.py",
-      "source_location": "L35",
+      "source_location": "L38",
       "weight": 1.0
     },
     {
@@ -65144,7 +65168,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "shortsmaker/drawn_opener.py",
-      "source_location": "L44",
+      "source_location": "L47",
       "weight": 1.0
     },
     {
@@ -65155,7 +65179,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "shortsmaker/drawn_opener.py",
-      "source_location": "L56",
+      "source_location": "L59",
       "weight": 1.0
     },
     {
@@ -65166,7 +65190,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "shortsmaker/drawn_opener.py",
-      "source_location": "L64",
+      "source_location": "L67",
       "weight": 1.0
     },
     {
@@ -65177,7 +65201,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "shortsmaker/drawn_opener.py",
-      "source_location": "L82",
+      "source_location": "L85",
       "weight": 1.0
     },
     {
@@ -65188,7 +65212,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "shortsmaker/drawn_opener.py",
-      "source_location": "L87",
+      "source_location": "L90",
       "weight": 1.0
     },
     {
@@ -74014,91 +74038,91 @@
       "weight": 1.0
     },
     {
-      "source": "shortsmaker_drawn_opener_rationale_115",
+      "source": "shortsmaker_drawn_opener_rationale_118",
       "target": "shortsmaker_drawn_opener_review",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "shortsmaker/drawn_opener.py",
-      "source_location": "L115",
+      "source_location": "L118",
       "weight": 1.0
     },
     {
-      "source": "shortsmaker_drawn_opener_rationale_145",
+      "source": "shortsmaker_drawn_opener_rationale_151",
       "target": "shortsmaker_drawn_opener_make_opener",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "shortsmaker/drawn_opener.py",
-      "source_location": "L145",
+      "source_location": "L151",
       "weight": 1.0
     },
     {
-      "source": "shortsmaker_drawn_opener_rationale_36",
+      "source": "shortsmaker_drawn_opener_rationale_39",
       "target": "shortsmaker_drawn_opener_available",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "shortsmaker/drawn_opener.py",
-      "source_location": "L36",
+      "source_location": "L39",
       "weight": 1.0
     },
     {
-      "source": "shortsmaker_drawn_opener_rationale_45",
+      "source": "shortsmaker_drawn_opener_rationale_48",
       "target": "shortsmaker_drawn_opener_lint",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "shortsmaker/drawn_opener.py",
-      "source_location": "L45",
+      "source_location": "L48",
       "weight": 1.0
     },
     {
-      "source": "shortsmaker_drawn_opener_rationale_57",
+      "source": "shortsmaker_drawn_opener_rationale_60",
       "target": "shortsmaker_drawn_opener_clean_code",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "shortsmaker/drawn_opener.py",
-      "source_location": "L57",
+      "source_location": "L60",
       "weight": 1.0
     },
     {
-      "source": "shortsmaker_drawn_opener_rationale_65",
+      "source": "shortsmaker_drawn_opener_rationale_68",
       "target": "shortsmaker_drawn_opener_node_run",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "shortsmaker/drawn_opener.py",
-      "source_location": "L65",
+      "source_location": "L68",
       "weight": 1.0
     },
     {
-      "source": "shortsmaker_drawn_opener_rationale_83",
+      "source": "shortsmaker_drawn_opener_rationale_86",
       "target": "shortsmaker_drawn_opener_sheet_times",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "shortsmaker/drawn_opener.py",
-      "source_location": "L83",
+      "source_location": "L86",
       "weight": 1.0
     },
     {
-      "source": "shortsmaker_drawn_opener_rationale_89",
+      "source": "shortsmaker_drawn_opener_rationale_92",
       "target": "shortsmaker_drawn_opener_write",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "shortsmaker/drawn_opener.py",
-      "source_location": "L89",
+      "source_location": "L92",
       "weight": 1.0
     },
     {
@@ -78599,5 +78623,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "77f3d8669f5076267560feec4a38d4df44aea63c"
+  "built_at_commit": "899cfb0a7f0c6b67ad8f4dd87fbae019218e239c"
 }

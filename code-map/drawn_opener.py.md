@@ -25,6 +25,7 @@ tags:
 - [[make_opener()]] - `contains` [EXTRACTED]
 - [[node_run()]] - `contains` [EXTRACTED]
 - [[pathlib]] - `imports_from` [EXTRACTED]
+- [[plan_rules.py]] - `imports_from` [EXTRACTED]
 - [[re]] - `imports` [EXTRACTED]
 - [[review()]] - `contains` [EXTRACTED]
 - [[session.py]] - `imports_from` [EXTRACTED]
