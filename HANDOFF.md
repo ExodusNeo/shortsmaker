@@ -122,7 +122,8 @@ Rules that keep it working:
    `done_topics` or on the taken list, go to the topic picker with the logbook results and the `myths` list.
    `trend_research()` (bigger channels' recent Shorts, yt-dlp, daily cache) is ONLY the "TAKEN" list: the picker must
    not pick those, and a picked topic whose subject/character holds every real word of a taken title
-   (`topic_ideas.clash`, 2+ words) is dropped for a backup. The writer and SEO never see competitor titles. Every
+   (`topic_ideas.clash`, 2+ words) is dropped for a backup, and so is one whose main character (else subject) clashes
+   with our own `done_topics`. The writer and SEO never see competitor titles. Every
    Short needs a main `character` (soft rule: one named person or animal; events told through them).
 3. **Pictures first**: the picker gives n + 2 backup topics with `visual_terms` and `people`; `prepare_topic()` reads
    Wikipedia, gathers the pool (`gather_pool()`), has the AI list every picture (`catalog_pool()`: what, era_ok,
@@ -134,13 +135,19 @@ Rules that keep it working:
    (`direct_scripts()`, can't change narration: per scene `pic`, image/video search, shot, move, graphic, person,
    emphasis, transition, `ai_image`, animate/motion, sound, optional `full`; per Short palette, music mood, look,
    thumbnail, SEO drafts) -> fact check against the Wikipedia text (rewrites unsupported lines, drops wrong graphics,
-   myths go to the profile).
-   Lengths: 95-125 words in 11-16 scenes (~40-50 s), or `SHORT_FORM` 60-72 words in 8-10. Scenes of 4-10 words
-   (`SCENE_WORDS`), up to 16 where one picture needs time; sentences may run across cuts (`SCENE_CUTS`). The hook
-   opens inside the strangest moment; story rules (but / so / you see, answer last) live in each rules file.
+   myths go to the profile). When the fact check rewrote lines, the text rules (`story_problems` without the
+   editor's verdicts) and the word total are checked again; leftovers are `STILL (after the fact check):` notes.
+   Lengths: 95-125 words in 11-16 scenes (~40-50 s), or `SHORT_FORM` 60-72 words in 8-10: `writing.length_plan()` is
+   the only length target (the strange-history rules file no longer repeats one; weird-economics' rules still say
+   110-135); `writing.max_seconds()` is quality_check's limit. Scenes of 4-10 words
+   (`SCENE_WORDS`), up to 16 where one picture needs time; sentences may run across cuts (`SCENE_CUTS`), but the first
+   sentence ends by scene 2 (checked). `plan_rules.first_sentence()` reads it across the cut for the logbook, the
+   first-second check and SEO. The hook opens inside the strangest moment; story rules (but / so / you see, answer
+   last) live in each rules file.
 5. **SEO** (`seo_pass()`): YouTube autocomplete for the subject + variants + `search_terms` + profile seeds, the logbook
    results and the fact check's corrections. Title < 60 chars, first 40 work alone, no emoji, never repeats the hook.
-   Then description, tags, pinned comment.
+   Then description, tags, pinned comment. Title/hashtag/pinned-comment examples come from the channel's optional
+   `## SEO` rules section (the prompt in `seo.py` holds no niche's examples).
 6. **Pictures** (`choose_images()`): keeps each director `pic` unless it doesn't fit; new searches only for scenes
    without one and for portraits. The AI looks at numbered contact sheets; rejects violence, logos/watermarks,
    look-alikes from another culture or era; one solo portrait of a person per Short; portraits never under that
@@ -161,7 +168,8 @@ Rules that keep it working:
    (`short_credit()`), 2.8 s. Loop Shorts (weird-economics) end straight into frame 0.
 9. **Audio**: voice + music (loudness-matched to `MUSIC_LUFS`, ducked) + SFX cue sheet + story sounds; loudnorm
    -14 LUFS + limiter; h264_nvenc.
-10. **Checks and fixes**: `quality_check()`, `visual_review()` (1 frame/s sheets; told about overlay windows),
+10. **Checks and fixes**: `quality_check()` (also flags a scene that reuses another scene's picture because nothing
+    fit), `visual_review()` (1 frame/s sheets; told about overlay windows),
     `first_second_check()` (score < 7 may swap in a later real picture once). Flagged scenes get an unused pool
     picture, a full-screen graphic or a repaint with a rewritten prompt (`rewrite_paint_prompts()`); a flagged custom
     scene goes back to its coder once. Re-render and re-review up to `AUTO_FIX_ROUNDS` (3); it pauses for Enter first.
@@ -177,7 +185,8 @@ Order (owner, 2026-10-30): drawn opener -> motion graphic (2 fixes) -> AI clip o
   manual `drawn/KIT.md`, with the approved Dexter example) -> lint (only `k.*` calls and plain JS; node runs with
   `--disallow-code-generation-from-strings`: the coder has read Wikipedia text) -> a 6-frame preview sheet ->
   the AI as art director, who scores it 1-10 (passes at `PASS` 7; a bare list of flaws rejected every draft on the
-  first live runs, good ones included) -> below 7 the coder fixes what it found, up to `FIXES` (2) times -> `drawn/run.mjs` renders
+  first live runs, good ones included; no verdict = the draft is kept with `unreviewed` and a CHECK line says nobody
+  judged it) -> below 7 the coder fixes what it found, up to `FIXES` (2) times -> `drawn/run.mjs` renders
   `work/drawn/opener.mp4`. The plan stays in `short["drawn"]` (fix rounds and fix.bat reuse the clip by
   fingerprint); a failure stays in `short["drawn_failed"]` and is never retried for that Short. Final-review findings
   on a drawn opener stay CHECK lines (it passed its own art director). The channel's optional `## Opener` rules
@@ -226,7 +235,8 @@ Read by `##` heading: `Settings` (`status: draft|ready`, `visuals: photos|blende
 `max_full_planned`, `max_full`, `opener: animated|none`, `hook: moment|money_claim`, `idea_pages`), `Topic picking`,
 `Story rules`, `Writing for the picture`, `Lessons from our numbers`, `Opening picture` (must define `- era_ok:`,
 `- sharp:`, `- hook:`), `Picture picking`, `Directing`, `First-second check`, `AI paintings`,
-`Build plan` (Blender channels). A missing section or `status: draft` stops the run; never another channel's rules.
+`Build plan` (Blender channels); optional: `Opener`, `SEO`. A missing section or `status: draft` stops the run;
+never another channel's rules.
 A new profile gets drafted rules (`rules.draft_rules()`) and waits for the owner to set `status: ready`.
 `tests/golden/prompts.json` holds strange-history's prompts; re-save (`tests\test_rules.py --save-golden`) only for
 an intended prompt change, and diff it per prompt first.
@@ -279,6 +289,8 @@ strangest moment. Same story, other channel: Voggle's Mike 2M views vs ours 1.2K
   1,000 subs + 10M Shorts views in 90 days; 20M from 2027-02-01.
 
 ## Open items and next steps
+- **Audit improvements (2026-10-31)**: plan in parts, waiting for the owner's go-ahead per part:
+  `docs/superpowers/plans/2026-10-31-audit-improvements.md` (tick tasks there as they are built).
 - **Openers**: the drawn opener has only run on past Shorts (`test_renders\drawn_samples\`), not inside a full run;
   the motion-graphic fix rounds have no live run yet. More kit parts as stories need them.
 - run.bat's "press any key" at the end doesn't close the window for the owner: not found in the code; waiting for

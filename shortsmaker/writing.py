@@ -27,6 +27,11 @@ def length_plan() -> tuple[int, int, int, int, str]:
     return (60, 72, 8, 10, "25-30") if session.SHORT_FORM else (95, 125, 11, 16, "40-50")
 
 
+def max_seconds() -> float:
+    """Past this, review.quality_check says the Short ran long (the planned seconds of length_plan, plus slack)."""
+    return 36 if session.SHORT_FORM else 62
+
+
 def write_scripts(ch: dict, n: int, topics: list[str] | None = None, pools: list[str] | None = None) -> list[dict]:
     """Plan n Shorts on new topics, or on exactly `topics` (comparison runs: the other AI's topics), as a small
     team: the planner picks topics, Wikipedia is read for each, the planner writes the narration, the OTHER AI
@@ -119,6 +124,11 @@ Reply with ONLY JSON: {{"shorts": [{{"topic": "...", "character": "...", "subjec
             dropped.append(f'"{s["topic"]}": a bigger channel posted it recently ("{hit}")')
             print(f"  Skipped {dropped[-1]}")
             continue
+        # by the main character's name (a subject like "Royal Navy" would match many of our stories)
+        if not topics and (hit := topic_ideas.clash(s.get("character") or s["subject"], ch.get("done_topics") or [])):
+            dropped.append(f'"{s["topic"]}": we already made it ("{hit[:80]}")')  # the prompt alone let repeats through
+            print(f"  Skipped {dropped[-1]}")
+            continue
         if picture_pool.prepare_topic(s, Path(pools[k]) if pools and k < len(pools) else None):
             kept.append(s)
         else:
@@ -184,6 +194,12 @@ Reply with ONLY JSON: {{"shorts": [{{"index": 0, "shape": "...", "title": "...",
             channel_profiles.save_channel(ch)
             continue
         kept.append(s)
+        if s.get("fact_check"):  # its rewrites come after the story checks: the text rules again, as edit_plan notes
+            lines, notes = [sc["narration"] for sc in s["scenes"]], s.get("editor_notes") or []
+            left = story_problems(lines, None, None)
+            if not lo - 15 <= (words := sum(len(t.split()) for t in lines)) <= hi + 15:  # the editor's own slack
+                left.append(f"the script has {words} words, planned {lo}-{hi}")
+            s["editor_notes"] = notes + [f"STILL (after the fact check): {p}" for p in left if f"STILL: {p}" not in notes]
         s["shape"] = s.get("shape") if s.get("shape") in SHAPES else ""
         s["thumbnail_prompt"] = str(s.get("thumbnail_prompt") or "").strip()[:400]
         s["music_mood"] = s.get("music_mood") if s.get("music_mood") in MOODS else ""
@@ -341,9 +357,11 @@ def story_problems(lines: list[str], payoff, list_like, hook_kind=None) -> list[
     for k, line in enumerate(lines):
         if DATE_FIRST.match(line):
             found.append(f'scene {k + 1} starts with a date ("{line}"): bring the year in mid-sentence, or leave it out')
-    first = re.split(r"(?<=[.!?])\s", " ".join(lines))[0]
+    first = plan_rules.first_sentence(lines)
     if len(first.split()) > 12:
         found.append(f'the first sentence has {len(first.split())} words ("{first}"): at most 12')
+    if len(lines) > 1 and not " ".join(t.strip() for t in lines[:2]).startswith(first):
+        found.append(f'the first sentence ("{first}") runs past scene 2: it must end in scene 1 or scene 2')
     if list_like is True:
         found.append('the beats read as a list of facts: link each one to the one before with "but", "so" or "you see"')
     want = session.RULE_SETTINGS.get("hook")

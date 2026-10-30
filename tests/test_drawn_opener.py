@@ -25,6 +25,15 @@ def short():
                        {"narration": "But local merchants set the trap to bankrupt him.", "full": None}]}
 
 
+def test_no_verdict_is_not_a_pass():
+    saved = llm.ask_ai
+    llm.ask_ai = lambda *a, **k: None  # the art director's call failed
+    try:
+        assert drawn_opener.review(short(), {"moment": "m"}, Path("sheet") / "sheet1.png", 2.0) == (None, [])
+    finally:
+        llm.ask_ai = saved
+
+
 def fake_ai(replies, prompts):
     it = iter(replies)
     return lambda prompt, **k: prompts.append(prompt) or next(it)

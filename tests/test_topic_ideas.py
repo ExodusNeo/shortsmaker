@@ -130,6 +130,37 @@ def test_topic_a_proven_channel_just_posted_is_dropped():
     assert any("Mike the Headless Chicken" in d and "posted" in d for d in shorts[0]["dropped_topics"]), shorts[0]["dropped_topics"]
 
 
+def test_topic_we_already_made_is_dropped():
+    def ai(prompt):
+        if "You choose stories" in prompt:
+            return {"shorts": [{"topic": "A baboon ran the signals", "subject": "Uitenhage railway",
+                                "character": "Jack the baboon"},
+                               {"topic": "Topic 2", "subject": "Subject 2"}, {"topic": "Topic 3", "subject": "Subject 3"}]}
+        from test_pictures_first import planning_ai
+        return planning_ai(prompt)
+    done = ["Jack the baboon, who worked as a railway signalman in South Africa in the 1880s."]
+    with planning(passing({"A baboon ran the signals", "Topic 2"}), pick_ideas=lambda *a, **k: []) as pl:
+        pl.ai.reply = ai
+        shorts = writing.write_scripts({"niche": "history", "done_topics": done, "myths": []}, 1)
+    assert [s["topic"] for s in shorts] == ["Topic 2"]
+    assert any("already made" in d for d in shorts[0]["dropped_topics"]), shorts[0]["dropped_topics"]
+
+
+def test_seo_examples_come_from_the_channel():
+    short = {"title": "T", "subject": "Mike", "scenes": [{"narration": "A rooster lived."}], "description": ""}
+    saved = (seo.search_suggestions, logbook.logbook_results, session.RULES)
+    seo.search_suggestions, logbook.logbook_results = (lambda q: []), (lambda: "")
+    try:
+        for rules_now, want, never in (({"SEO": "- hashtags: #WeirdHistory"}, "#WeirdHistory", "#WallStreet"),
+                                       ({}, "", "#WallStreet")):
+            session.RULES = rules_now
+            with fake_ai(lambda p: {"shorts": []}) as ai:
+                seo.seo_pass([dict(short)], {"niche": "history"})
+            assert want in ai.prompts[0] and never not in ai.prompts[0] and "$800M" not in ai.prompts[0]
+    finally:
+        seo.search_suggestions, logbook.logbook_results, session.RULES = saved
+
+
 def test_seo_never_sees_competitor_titles():
     short = {"title": "T", "subject": "Mike", "scenes": [{"narration": "A rooster lived."}], "description": ""}
     saved = (seo.search_suggestions, channel_profiles.trend_research, logbook.logbook_results)

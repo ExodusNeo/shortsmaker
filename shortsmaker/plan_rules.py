@@ -443,6 +443,12 @@ def words_of(text: str) -> list[str]:
     return re.findall(r"[a-z0-9]+", plain.lower())
 
 
+def first_sentence(lines: list[str]) -> str:
+    """The narration's first sentence, read across scene cuts: scene 1 may end mid-sentence (writing.SCENE_CUTS), and
+    reading scene 1 alone logged hooks like "Germany's star London spy sat in Lisbon," (audit 2026-10-31)."""
+    return re.split(r"(?<=[.!?])\s+", " ".join(t.strip() for t in lines).strip())[0]
+
+
 def contains(words: list[str], phrase: list[str]) -> bool:
     return bool(phrase) and any(words[k:k + len(phrase)] == phrase for k in range(len(words)))
 

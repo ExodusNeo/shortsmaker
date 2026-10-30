@@ -12,6 +12,22 @@ from shortsmaker import rules  # noqa: E402
 rules.load_rules("strange-history")  # the prompts read the channel's rules file
 
 
+def test_quality_check_reads_ffmpeg_and_flags_reused_pictures():
+    log = ("[blackdetect @ 0] black_start:3.2 black_end:3.6 black_duration:0.4\n"
+           "  Integrated loudness:\n    I:         -14.2 LUFS\n  True peak:\n    Peak:        -1.0 dBFS\n")
+    saved = review.subprocess.run
+    review.subprocess.run = lambda *a, **k: type("Done", (), {"stderr": log})()
+    try:
+        issues = review.quality_check(Path("x.mp4"), [0.0, 2.0, 70.0],
+                                      ["Wikimedia Commons, public domain: a", 'reused from scene 1 (nothing fit "x")'])
+    finally:
+        review.subprocess.run = saved
+    assert any("black screen" in i and "scene 2" in i for i in issues), issues
+    assert any("scene 2 shows another scene's picture again" in i for i in issues), issues
+    assert any("past the planned" in i for i in issues), issues  # 70 s against writing.max_seconds() 62
+    assert not any("loudness" in i or "peaks" in i for i in issues), issues
+
+
 def real(k):
     return (b"jpg", f"File:Photo {k}.jpg", "Someone")
 

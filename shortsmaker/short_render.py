@@ -125,7 +125,8 @@ def use_opener(short: dict, bounds: list[float], all_words: list, work: Path, cl
         first.update(full=None, graphic=None, credit_tag=None)  # the replaced photo's credit must not show on it
         sources[0] = f"drawn opener (hand-drawn animation): {short['drawn']['moment']}"
         short["opening_note"], short["opener_used"] = f"drawn opener: {short['drawn']['moment']}", True
-        return None
+        return ("drawn opener: its art director gave no verdict, so nobody judged it: look at scene 1 yourself"
+                if short["drawn"].get("unreviewed") else None)
     short["opening_note"] = (f"drawn opener failed ({why}) -> " if why else "") + short["opener_graphic"] + (
         "" if first.get("full") else "; scene 1 opens on its picture")
     return None if first.get("full") else f"opener: {short['opener_graphic']}"

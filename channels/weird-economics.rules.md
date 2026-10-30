@@ -118,3 +118,12 @@ Used only when zero archival photos exist and the scene is not already a full-sc
 - Concrete Historical Scenes with People & Architecture (Crucial): Every `ai_image` prompt MUST depict a **concrete historical scene with people and period architecture** matching the exact era and place of the narration (e.g. *"1920s Wall Street stockbrokers in wool suits shouting around trading posts on the New York Stock Exchange floor"*, or *"1923 New York Stock Exchange governors seated around a dark wood-paneled boardroom table"*).
 - Strict Ban on Symbolic Object Clichés: NEVER prompt for symbolic object metaphors or cliché icons—**NO scales of justice, NO hourglasses, NO clocks, NO piggy banks, NO chess pieces, NO bags of money, and NO crystal balls**.
 - Style & Text Rules: Crisp 1970s editorial gouache illustration or vintage hand-colored lithograph aesthetic with bold light-dark contrast filling the frame edge-to-edge. Keep faces in medium/wide group framing, profile, or three-quarter view, and NEVER include written text, signs, or numbers in the painting.
+
+## SEO
+<!-- optional section (audit 2026-10-31): the examples that used to sit in seo.py's shared prompt -->
+- titles: lead with the anomaly, a dollar figure or a famous anchor ("NBA", "Wall Street", "$800M", "U.S. Navy",
+  "Fake Bonds"), e.g. "How a Dead Team Made $800M Off the NBA", "How the 'Match King' Bought Countries With Fake
+  Bonds", "He Bought 98% of a Stock—So Wall Street Changed the Rules". No pipe suffixes like "| Match King".
+- description phrases: a broader mechanism search phrase such as "short squeeze", "contract loophole", "financial fraud".
+- hashtags: #Economics, #Finance, #WallStreet, #SportsBusiness, #BusinessHistory, #History; never a proper-noun
+  hashtag like #IvarKreuger.

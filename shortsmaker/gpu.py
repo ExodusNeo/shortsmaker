@@ -57,7 +57,8 @@ VOICESTUDIO = "http://127.0.0.1:3900"
 VOICESTUDIO_EXE = Path(r"D:\VoiceStudio\app\VoiceStudio.exe")
 COSY_REF = LOCAL_AI / "voices" / "nelson_ref.wav" if (LOCAL_AI / "voices" / "nelson_ref.wav").exists() else LOCAL_AI / "voices" / "aiden_ref.wav"
 COSY_INSTRUCT = "Speak with dry wit, curiosity, and building suspense, like a storyteller sharing an incredible secret."
-# Mark Nelson's natural pace is ~2.8 wps, so speed 1.10 hits snappy ~35-40s with zero audio stretching artifacts
+# Mark Nelson's natural pace is ~2.8 wps; speed 1.10 keeps it brisk with zero audio stretching artifacts (the
+# Short's length comes from writing.length_plan's word counts)
 COSY_SPEED = 1.10
 # Backup voice (owner's pick 2026-10-18 over Chatterbox and Kokoro): Qwen3-TTS "aiden", no style instruction,
 # in its own venv (qwen-tts pins transformers versions that would break gen.py). Then Kokoro, then Edge.

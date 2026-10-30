@@ -114,8 +114,9 @@ Reply with ONLY JSON: {{"moment": "one sentence: what the animation shows", "cod
     return {"moment": str(data.get("moment") or "the strangest moment").strip()[:200], "code": code}
 
 
-def review(short: dict, plan: dict, sheet: Path, seconds: float) -> tuple[float, list[str]]:
-    """The art director's score (1-10) of a draft's preview sheet and what to fix. A failed call passes it."""
+def review(short: dict, plan: dict, sheet: Path, seconds: float) -> tuple[float | None, list[str]]:
+    """The art director's score (1-10) of a draft's preview sheet and what to fix. None = no verdict (a failed call):
+    make_opener keeps the draft and the final check says it was never judged."""
     data = llm.ask_ai(f"""You are the art director of a YouTube Short: "{short['title']}". Open {sheet}: six frames of its
 hand-drawn opener across {seconds:.1f} s, left to right (the time is on each). The voice over it says:
 "{short['scenes'][0]['narration']}". The animator meant it to show: {plan['moment']}.
@@ -136,8 +137,8 @@ Score it 1-10: would that stranger understand the strange moment at a glance and
 enough to post: small flaws are fine. Below {PASS}, list the problems that stop it working, the worst first.
 Reply with ONLY JSON: {{"score": 7, "problems": ["...", "..."]}}""", fatal=False, read_dir=sheet.parent)
     score = data.get("score") if isinstance(data, dict) else None
-    if not plan_rules.is_num(score) or not 1 <= score <= 10:  # no verdict: the draft passes as it is
-        return PASS, []
+    if not plan_rules.is_num(score) or not 1 <= score <= 10:
+        return None, []
     found = [str(p).strip()[:240] for p in data.get("problems") or [] if str(p).strip()]
     return float(score), found[:8] or ([] if score >= PASS else ["the art director gave a low score without saying why"])
 
@@ -187,6 +188,8 @@ def make_opener(short: dict, words: list, seconds: float, work: Path) -> tuple[P
                     sheet = folder / f"sheet{attempt + 1}.png"
                     (folder / "sheet.png").replace(sheet)
                     score, problems = review(short, plan, sheet, seconds)
+                    if score is None:  # no verdict: kept as it is, flagged (audit 2026-10-31: it used to pass silently)
+                        score, plan["unreviewed"] = PASS, True
             if score >= PASS:
                 break
             print(f"    opener draft {attempt + 1} ({score:g}/10): " + "; ".join(problems)[:300])

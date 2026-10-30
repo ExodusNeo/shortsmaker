@@ -40,7 +40,9 @@ def quality_check(video: Path, bounds: list[float], sources: list[str]) -> list[
     if peak and float(peak[-1]) > -0.5:
         issues.append(f"sound peaks at {float(peak[-1]):.1f} dB, close to distorting")
     issues += [f"scene {k + 1} has no picture (plain frame)" for k, src in enumerate(sources) if src.startswith("PLAIN")]
-    if bounds[-1] > (36 if session.SHORT_FORM else 62):
+    issues += [f"scene {k + 1} shows another scene's picture again (nothing fit its line)"
+               for k, src in enumerate(sources) if src.startswith("reused from scene")]
+    if bounds[-1] > writing.max_seconds():
         issues.append(f"{media_tools.clock(bounds[-1])} long, past the planned {writing.length_plan()[4]} seconds")
     return issues
 
@@ -138,7 +140,7 @@ def first_second_check(video: Path, short: dict, choices: list[dict], board: Pat
         return [], None
     scenes = short["scenes"]
     real = [j for j in range(1, len(scenes)) if choices[j].get("bg") and not scenes[j].get("full")]
-    first = re.split(r"(?<=[.!?])\s", scenes[0]["narration"].strip())[0]
+    first = plan_rules.first_sentence([sc["narration"] for sc in scenes])
     cands = picture_pool.load_pool(Path(short["pool_dir"]), thumbs=False) if short.get("pool_dir") else None
     what = {cands[e["n"] - 1]["title"]: e.get("what") for e in short.get("catalog") or []
             if cands and isinstance(e, dict) and isinstance(e.get("n"), int) and 1 <= e["n"] <= len(cands)}

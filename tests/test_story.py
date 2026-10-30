@@ -7,7 +7,7 @@ import traceback
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from shortsmaker import gpu, llm, media_tools, session, writing  # noqa: E402
+from shortsmaker import config, gpu, llm, logbook, media_tools, plan_rules, session, writing  # noqa: E402
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from test_qwen_voice import COUNTED  # noqa: E402  (no qwen imports at module level: plain dict)
@@ -46,6 +46,26 @@ def test_a_take_is_cut_between_the_scenes_words():
         assert abs(wb[0][0] - 0.2) < 1e-6  # timings start at the scene's own audio
         # words that don't add up to the scenes: no guessing, the caller falls back
         assert gpu.split_takes([{"out": str(work / "take0.wav"), "words": words[:4]}], [[0, 1]], sc, work) is None
+
+
+def test_first_sentence_reads_across_the_cut():
+    lines = ["Germany's star London spy sat in Lisbon,", "inventing every report.", "Berlin believed him."]
+    assert plan_rules.first_sentence(lines) == "Germany's star London spy sat in Lisbon, inventing every report."
+    assert not any("runs past scene 2" in p for p in writing.story_problems(lines, None, None))
+    late = ["He sat in Lisbon,", "inventing reports", "that Berlin believed.", "Then he vanished."]
+    assert any("runs past scene 2" in p for p in writing.story_problems(late, None, None))
+
+
+def test_logbook_hook_line_is_the_whole_first_sentence():
+    old_log, old_dur = session.LOG, media_tools.duration
+    with tempfile.TemporaryDirectory() as d:
+        try:
+            session.LOG, media_tools.duration = Path(d) / "x.md", (lambda p: 40.0)
+            logbook.log_short({"title": "T", "scenes": scenes("He sat in Lisbon,", "inventing reports.", "Then.")},
+                              config.ROOT / "output" / "x" / "2026-10-31_x")  # never created: only its name is logged
+            assert 'Hook line: "He sat in Lisbon, inventing reports."' in session.LOG.read_text(encoding="utf-8")
+        finally:
+            session.LOG, media_tools.duration = old_log, old_dur
 
 
 def test_story_problems_flags_summary_hook():

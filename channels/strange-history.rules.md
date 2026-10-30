@@ -29,11 +29,12 @@ George Hull who carved it). Choose an event with nobody to follow only when noth
   Voggle's Mike (2.7M views): "The axe cut off the rooster's head, but as it dropped into the dirt, the rest of the
   bird got back up". Ours (1.4K): "This chicken lived 18 months without a head."
 - How to tell it (learned from the true-story Shorts that hold viewers best; follow it closely):
-  Target length: 95-110 spoken words (35-42 seconds). Every word counts; cut every bit of padding.
+  Every word counts; cut every bit of padding.
   hook (scene 1): viewers decide in one second whether to swipe. OPEN INSIDE THE STORY'S STRANGEST MOMENT, told
   as it happens, not as a summary: "A passenger looked out the train window and saw a baboon working the
-  signals." / "Halfway through the race, the jockey died, and his horse kept running." Scene 1 must be a
-  complete, punchy stand-alone sentence ending with a period or exclamation mark. It shows WHAT is happening
+  signals." / "Halfway through the race, the jockey died, and his horse kept running." The first sentence is
+  complete and punchy, ending with a period or exclamation mark by the end of scene 2 at the latest (it may run
+  across the cut from scene 1 into scene 2, never further). It shows WHAT is happening
   and holds back WHY, so the viewer needs the answer. Weak: a summary that tells the whole story at once ("A
   railway once hired a baboon.", "Australia's army once lost a war to birds."): once the viewer knows the story,
   nothing is left to stay for. The first sentence: at most 12 words, crystal-clear action understood with no
@@ -165,3 +166,11 @@ One or two descriptive sentences, not a keyword list: the subject first with era
   true to the story and its era (no invented names, dates or numbers). Without quotes the painting has no writing,
   so never paint a subject made of print without quoting its words (a newsstand, magazine rack, newspaper page,
   poster wall: the painter fills it with gibberish): quote the one cover that matters ("LIFE") or pick another subject.
+
+## SEO
+<!-- optional section (audit 2026-10-31): examples for seo_pass; the prompt's rules stay in seo.py -->
+- titles: lead with the anomaly or a famous anchor ("U.S. Navy", "Titanic", "Hitler"), e.g. "The Spy Who Fooled
+  Hitler Was a Chicken Farmer", "Why a WW2 Officer Carried an Umbrella".
+- hashtags: broad history cohorts such as #History, #WeirdHistory, #HistoryFacts, then #shorts.
+- pinned comments: "Was the Navy right to let them walk free, or was the prank too humiliating to forgive?",
+  "Would you trust a baboon to run a train line if he never made one mistake?"

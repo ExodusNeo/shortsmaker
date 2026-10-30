@@ -4,7 +4,7 @@ import re
 import shutil
 from pathlib import Path
 
-from shortsmaker import media_tools, session
+from shortsmaker import media_tools, plan_rules, session
 from shortsmaker.config import LOGBOOK, ROOT, VAULT
 
 
@@ -26,7 +26,7 @@ def log_short(short: dict, folder: Path) -> None:
     LOGBOOK.mkdir(parents=True, exist_ok=True)
     if not session.LOG.exists():
         session.LOG.write_text(LOG_HEADER.format(name=session.LOG.stem), encoding="utf-8")
-    hook = re.split(r"(?<=[.!?])\s+", short["scenes"][0]["narration"].strip())[0]
+    hook = plan_rules.first_sentence([sc["narration"] for sc in short["scenes"]])
     mode_str = " (solo)" if session.SOLO else ""
     with session.LOG.open("a", encoding="utf-8") as f:
         f.write(f"""

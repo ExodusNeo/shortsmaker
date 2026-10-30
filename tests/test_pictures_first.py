@@ -622,6 +622,18 @@ def test_pixabay_keeps_only_on_topic_videos():
     assert [f["src"] for f in named] == ["https://x/2.mp4"], named
 
 
+def test_fact_check_rewrites_get_the_story_rules_again():
+    def fact_check(s):  # its rewrite lands after the editor's story checks
+        s["fact_check"] = ['scene 1: "..." -> "..."']
+        s["scenes"][0]["narration"] = "In the cold spring of nineteen forty four a whole German army feared rubber tanks."
+        return True
+    with planning(passing({"Topic 1"}), fact_check=fact_check):
+        shorts = writing.write_scripts({"niche": "history", "done_topics": [], "myths": []}, 1)
+    notes = shorts[0]["editor_notes"]
+    assert any(n.startswith("STILL (after the fact check):") and "15 words" in n for n in notes), notes
+    assert any("words, planned" in n for n in notes), notes  # three short lines are far below the planned length
+
+
 if __name__ == "__main__":
     names = [n for n in sorted(globals()) if n.startswith("test_") and (len(sys.argv) < 2 or n in sys.argv[1:])]
     failed = 0

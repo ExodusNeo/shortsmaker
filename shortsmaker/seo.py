@@ -5,7 +5,7 @@ import re
 import urllib.parse
 from pathlib import Path
 
-from shortsmaker import channel_profiles, llm, logbook, media_tools, session
+from shortsmaker import channel_profiles, llm, logbook, media_tools, plan_rules, session
 
 
 def search_suggestions(query: str) -> list[str]:
@@ -38,9 +38,8 @@ def seo_pass(shorts: list[dict], ch: dict | None = None) -> None:
                             + ch_queries[:2])
         seeds = dict.fromkeys([q.strip() for q in query_candidates if isinstance(q, str) and q.strip()])
         suggestions = {q: got for q in seeds if (got := search_suggestions(q))}  # each list: most-searched first
-        first_narration = s["scenes"][0]["narration"].strip() if s.get("scenes") and s["scenes"][0].get("narration") else ""
         research.append({"index": i, "subject": subject, "title": s["title"], "description": s.get("description", ""),
-                         "hook_sentence": re.split(r"(?<=[.!?])\s+", first_narration)[0] if first_narration else "",
+                         "hook_sentence": plan_rules.first_sentence([sc.get("narration", "") for sc in s.get("scenes", [])]),
                          "hook_text": s.get("hook_text"), "thumbnail_text": s.get("thumbnail_text"),
                          "script": " ".join(sc.get("narration", "") for sc in s.get("scenes", [])),
                          "fact_check_corrections": s.get("fact_check", []),
@@ -52,26 +51,25 @@ was typed, each list in YouTube's order: most-searched first (some are irrelevan
 or movies with the same name: ignore those).
 {f"How our own posted Shorts did (title, views, notes):{chr(10)}{results}{chr(10)}" if results else ""}For each Short write:
 - title: under 60 characters, and its first 40 characters must work alone (the Shorts player and shelf cut
-  the rest). Lead with the scroll-stopping anomaly, dollar figure, or broadly famous anchor entity (e.g.
-  "NBA", "Wall Street", "$800M", "U.S. Navy", "Fake Bonds")—NEVER start the title with an obscure person's
-  or company's name that casual viewers don't already recognize, and NEVER use dry textbook phrasing ("The X
-  of Y in 1923") or pipe suffixes ("| Match King"). Write a punchy human curiosity hook (e.g. "How a Dead
-  Team Made $800M Off the NBA", "How the 'Match King' Bought Countries With Fake Bonds", "He Bought 98% of
-  a Stock—So Wall Street Changed the Rules"). It must promise what the hook delivers without repeating
-  hook_sentence, hook_text or thumbnail_text word-for-word. No "#shorts", no emoji, no clickbait that the
-  video doesn't deliver.
+  the rest). Lead with the scroll-stopping anomaly or a broadly famous anchor (a place, institution, event
+  or thing casual viewers already know)—NEVER start the title with an obscure person's or company's name
+  that casual viewers don't already recognize, and NEVER use dry textbook phrasing ("The X of Y in 1923") or
+  pipe suffixes. Write a punchy human curiosity hook. It must promise what the hook delivers without
+  repeating hook_sentence, hook_text or thumbnail_text word-for-word. No "#shorts", no emoji, no clickbait
+  that the video doesn't deliver.
 - Title, description and pinned comment may only claim what the script says. fact_check_corrections
   lists claims our fact check removed as false or unproven: never bring one back.
-- description: Sentence 1 MUST naturally include both the exact historical subject/person name (`subject`)
-  and the main search phrase (it shows in search results and indexes exact-name queries); Sentence 2-3
-  weaves in a broader category/mechanism search phrase (e.g. "short squeeze", "contract loophole",
-  "financial fraud"); 2-3 sentences total; then a new line with 3 hashtags: the first 2 MUST be broad,
-  high-traffic audience-cohort hashtags (e.g. #Economics, #Finance, #WallStreet, #SportsBusiness,
-  #BusinessHistory, #History—NEVER an obscure proper-noun hashtag like #IvarKreuger), and #shorts last.
+- description: Sentence 1 MUST naturally include both the exact subject/person name (`subject`) and the main
+  search phrase (it shows in search results and indexes exact-name queries); Sentence 2-3 weaves in a broader
+  category search phrase for the niche; 2-3 sentences total; then a new line with 3 hashtags: the first 2
+  MUST be broad, high-traffic audience-cohort hashtags of the niche (NEVER an obscure proper-noun hashtag
+  such as a person's name), and #shorts last.
 - tags: 12-15, combining exact proper nouns from the story, relevant YouTube autocomplete phrases, and
   broad high-volume niche category terms so YouTube's Shorts Feed matches the right viewer cohort.
-- pinned_comment: one provocative debate question or moral dilemma about the character's choices or the situation (e.g. "Was the Navy right to let them walk free, or was the prank too humiliating to forgive?", "Would you trust a baboon to run a train line if he never made one mistake?"). Never generic "What do you think?" or "Did you know?" — give viewers an immediate reason to take a side in the comments.
-Shorts: {json.dumps(research, ensure_ascii=False)}
+- pinned_comment: one provocative debate question or moral dilemma about the character's choices or the
+  situation. Never generic "What do you think?" or "Did you know?" — give viewers an immediate reason to take
+  a side in the comments.
+{f"Examples for this channel (never reuse their wording):{chr(10)}{session.RULES['SEO']}{chr(10)}" if session.RULES.get("SEO") else ""}Shorts: {json.dumps(research, ensure_ascii=False)}
 Reply with ONLY JSON: {{"shorts": [{{"index": 0, "title": "...", "description": "...",
 "tags": ["..."], "pinned_comment": "..."}}]}}""")
     for r in data.get("shorts", []):  # keep the draft if the reply is incomplete

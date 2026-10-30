@@ -26,3 +26,5 @@ pixabay_key.txt
 .superpowers/
 drawn/node_modules/
 drawn/out/
+# temporary: the audit plan, until its changes are done
+docs/superpowers/plans/2026-10-31-audit-improvements.md
