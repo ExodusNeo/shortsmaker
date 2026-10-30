@@ -3,12 +3,13 @@ one gets review.OPENER_GRAPHIC_FIXES fixes, then scene 1 goes to the owner's AI 
 back plays instead of the graphic (short_render.use_opener). The AI is faked. No AI usage.
 Run: .venv\\Scripts\\python.exe tests\\test_opener_graphic.py"""
 import sys
+import tempfile
 import traceback
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
-from shortsmaker import picker, plan_rules, review, session, short_render  # noqa: E402
+from shortsmaker import gpu, llm, picker, plan_rules, review, session, short_render  # noqa: E402
 
 
 def fresh():
@@ -20,7 +21,17 @@ def fresh():
 def test_weak_opener_graphic_fixes_then_handoff():
     """Owner, 2026-10-30: a weak motion-graphic opener is fixed OPENER_GRAPHIC_FIXES times (a new pick with the
     complaint) before scene 1 goes to the owner's clip hand-off; without the hand-off it stays a CHECK line."""
-    picks, old_pick, old_veo = [], picker.opener_graphic, session.VEO_HANDOFF
+    picks, old_pick, old_veo, old_moss, old_ask = [], picker.opener_graphic, session.VEO_HANDOFF, gpu.moss_images, llm.ask_ai
+    painted = []
+    def fake_moss(items, work):
+        painted.append(items[0]["prompt"])
+        Path(items[0]["out"]).write_bytes(b"jpg")
+        return {items[0]["out"]}
+    gpu.moss_images = fake_moss
+    llm.ask_ai = lambda prompt, **k: {"prompts": [{"scene": 1, "ai_image": "Woodcut: a ship heaped with brass pans under a tropical sun"}]}
+    tmp = tempfile.TemporaryDirectory()
+    work = Path(tmp.name)
+    old_rules, session.RULES = session.RULES, {**session.RULES, "AI paintings": "a hand-made period medium"}
     def fake_pick(short, weak=""):
         picks.append(weak)
         short["scenes"][0]["full"] = {"type": "journey", "stops": [{"name": f"stop {len(picks)}"}]}
@@ -34,11 +45,16 @@ def test_weak_opener_graphic_fixes_then_handoff():
         why = review.weak_opener_graphic(st["short"], fixes, ["FIRST SECOND: 4/10: nothing strange"])
         assert why == "the map is unreadable; 4/10: nothing strange" and list(fixes) == [3], (why, fixes)
         for _ in range(review.OPENER_GRAPHIC_FIXES):
-            notes = review.fix_opener_graphic(st, Path("."), why)
+            notes = review.fix_opener_graphic(st, work, why)
             assert "replaced by map journey" in notes[0] and not sc.get("opener_clip"), notes
         assert len(picks) == review.OPENER_GRAPHIC_FIXES and "unreadable" in picks[0]
-        notes = review.fix_opener_graphic(st, Path("."), why)
-        assert sc["opener_clip"] and sc["animate"] and "hand-off" in notes[0], notes
+        assert gpu.start_picture(work, 0) == work / "0_raw.jpg"  # no painting yet: scene 1's own picture
+        notes = review.fix_opener_graphic(st, work, why)
+        assert sc["opener_clip"] and sc["animate"] and "hand-off" in notes[0] and "no start painting" not in notes[0], notes
+        # the clip starts from a painting of the strangest moment, painted once, not from scene 1's picture
+        assert painted == ["Woodcut: a ship heaped with brass pans under a tropical sun"], painted
+        assert gpu.start_picture(work, 0) == work / gpu.OPENER_START and gpu.start_picture(work, 3) == work / "3_raw.jpg"
+        assert review.paint_opener_start(st["short"], work) and len(painted) == 1
         assert sc["full"]["stops"][0]["name"] == "stop 2"  # still plays if no clip comes back
         assert review.weak_opener_graphic(st["short"], {}, ["FIRST SECOND: 3/10: x"]) is None  # a clip took over
         assert review.weak_opener_graphic(fresh(), {}, []) is None  # passed
@@ -46,7 +62,9 @@ def test_weak_opener_graphic_fixes_then_handoff():
         st = {"short": {**fresh(), "opener_fixes": review.OPENER_GRAPHIC_FIXES}}
         assert review.weak_opener_graphic(st["short"], {}, ["FIRST SECOND: 3/10: x"]) is None  # nothing left to try
     finally:
-        picker.opener_graphic, session.VEO_HANDOFF = old_pick, old_veo
+        picker.opener_graphic, session.VEO_HANDOFF, gpu.moss_images, llm.ask_ai = old_pick, old_veo, old_moss, old_ask
+        session.RULES = old_rules
+        tmp.cleanup()
 
 
 def test_use_opener_ai_clip_replaces_graphic():

@@ -290,6 +290,7 @@ def render(short: dict, ch: dict, folder: Path, state: dict | None = None, fix_r
             # they skip it). A graphic opener goes first and is handed off only after its fixes fail (owner,
             # 2026-10-30; review.fix_opener_graphic)
             first["animate"] = first["motion_people"] = first["opener_clip"] = True
+            review.paint_opener_start(short, work)
             first["motion"] = first.get("motion") or f"act out the story's strangest moment: {first['narration']}"
         clips = gpu.local_clips(short, work, sources, bounds, {i: c["film"] for i, c in enumerate(choices)
                                                              if c.get("film") and not short["scenes"][i].get("full")})

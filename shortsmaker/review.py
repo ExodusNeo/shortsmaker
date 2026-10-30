@@ -256,7 +256,8 @@ def fix_opener_graphic(st: dict, work: Path, why: str) -> list[str]:
         sc["animate"] = sc["motion_people"] = sc["opener_clip"] = True
         sc["motion"] = sc.get("motion") or f"act out the story's strangest moment: {sc['narration']}"
         short["opener_graphic_failed"] = f"the motion graphic still looked weak after {tries} fixes: {why}"
-        return [f"scene 1 goes to your AI clip hand-off ({short['opener_graphic_failed']})"]
+        painted = "" if paint_opener_start(short, work) else " (no start painting: it starts from scene 1's picture)"
+        return [f"scene 1 goes to your AI clip hand-off ({short['opener_graphic_failed']}){painted}"]
     short["opener_fixes"] = tries + 1
     if sc["full"]["type"] == "custom" and remotion_render.redraw_custom(short, 0, 0, why, work):  # scene 1 = slot 0
         return [f"the motion-graphic opener was redrawn ({why})"]
@@ -268,6 +269,27 @@ def fix_opener_graphic(st: dict, work: Path, why: str) -> list[str]:
         return [f"the motion-graphic opener was kept: no new one came back ({why})"]
     short["opener_graphic"] = note
     return [f"the motion-graphic opener was replaced by {note.removeprefix('motion graphic: ')} ({why})"]
+
+
+def paint_opener_start(short: dict, work: Path) -> bool:
+    """The start picture for scene 1's AI clip (gpu.OPENER_START): a painting of the strangest moment itself. Scene 1's
+    own picture is often a portrait (the Dexter Short, 2026-10-30: Flow could only make the woodcut of Dexter walk,
+    not his bed warmers in the tropics). Painted once, same painters and channel rules as the Short's paintings; the
+    motion graphic stays as the fallback. False = nothing painted (the clip starts from scene 1's picture)."""
+    out = work / gpu.OPENER_START
+    if out.exists():
+        return True
+    sc = short["scenes"][0]
+    sc["ai_image"] = sc.get("ai_image") or f"{sc.get('shot') or sc['narration']} {gpu.PAINT_FALLBACK}"
+    rewrite_paint_prompts(short, {0: "it is the first frame of an AI video clip, so it must show the story's strangest "
+                                     f"moment itself, as the narration says it: {sc['narration']!r}"})
+    item = [{"prompt": sc["ai_image"], "out": str(out)}]
+    print("  painting the strangest moment as the start picture of scene 1's AI clip...")
+    if not gpu.moss_images(item, work) and shutil.which("agy") and not (session.SOLO and session.BRAIN == "claude"):
+        gpu.gemini_images(item, work)
+    if not out.exists():
+        gpu.local_job("images", item, work, timeout=900)
+    return out.exists()
 
 
 def pool_pictures(st: dict, work: Path, why: dict[int, str]) -> dict[int, str]:

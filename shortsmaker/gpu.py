@@ -32,6 +32,14 @@ MOSS_NO_TEXT = ", text, caption, title, letters, words, inscription, signature"
 # Owner 2026-10-21: the paintings looked "way too AI" (glossy, cartoonish). Prompts now name a real period medium;
 # this keeps MOSS off its default digital finish. PAINT_FALLBACK is the medium when a scene has no ai_image;
 # PAINT_HANDMADE tells Gemini the same (it has no negative prompt).
+OPENER_START = "opener_start.jpg"  # work/: the painted strangest moment scene 1's AI clip starts from (review.paint_opener_start)
+
+
+def start_picture(work: Path, i: int) -> Path:
+    """The picture scene i's AI clip starts from: scene 1's painted strangest moment when it has one, else its picture."""
+    return work / OPENER_START if i == 0 and (work / OPENER_START).exists() else work / f"{i}_raw.jpg"
+
+
 PAINT_FALLBACK = ("Loose oil sketch on canvas board, thick visible brushstrokes, unfinished edges, muted earth colors, "
                   "soft natural daylight.")
 PAINT_HANDMADE = ("Make it look hand-made in the medium the prompt names, with that medium's real marks (paper grain, "
@@ -486,7 +494,7 @@ def veo_handoff(short: dict, work: Path, bounds: list[float], marked: list[int])
             except OSError:
                 pass
     for i in scenes:
-        cover_crop(work / f"{i}_raw.jpg", folder / f"start{i + 1}.jpg")
+        cover_crop(start_picture(work, i), folder / f"start{i + 1}.jpg")
     flagged = start_picture_problems(short, folder, scenes)
     for i, why in flagged.items():
         print(f"    scene {i + 1}: not sent for a clip, its start picture {why} (the review replaces the picture)")
@@ -607,7 +615,7 @@ def local_clips(short: dict, work: Path, sources: list[str], bounds: list[float]
     if marked:
         print(f"  animating {len(marked)} scenes with AI video on this PC (a few minutes)...")
         for i in marked:
-            cover_crop(work / f"{i}_raw.jpg", work / f"{i}_9x16.jpg")
+            cover_crop(start_picture(work, i), work / f"{i}_9x16.jpg")
         items = [{"image": str(work / f"{i}_9x16.jpg"), "out": str(work / f"clip{i}.mp4"), "seed": i, "frames": 97,
                   "prompt": motion_prompt(short["scenes"][i])} for i in marked]
         done = local_job("video", items, work, timeout=3600) or []

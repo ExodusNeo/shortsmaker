@@ -178,8 +178,9 @@ Rules that keep it working:
   comes back plays instead of the graphic (`use_opener`, Opening line `AI clip of the strangest moment (made by ...)
   (the motion graphic still looked weak after 2 fixes: ...)`). Without the hand-off it stays a CHECK line. Only a
   Short with no graphic at all hands scene 1 off on the first render. The hand-off sends close-ups too.
-- Known gap: the hand-off's start picture is scene 1's own picture, so a clip can only animate that (the Dexter
-  Short, 2026-10-30, got the woodcut of Dexter walking, not the bed warmers in the tropics).
+- Scene 1's clip starts from a painting of the strangest moment (`review.paint_opener_start` ->
+  `work/opener_start.jpg`, `gpu.start_picture`; same painters and `AI paintings` rules), not scene 1's own picture:
+  the Dexter Short (2026-10-30) sent Flow the woodcut of Dexter walking, so the clip couldn't show the bed warmers.
 - **Drawn opener (next)**: hand-drawn 2D animation in code (claude-animation, MIT, Node canvas + ffmpeg, cloned to
   `D:\claude-animation-skill`; the owner approved its look on 2026-10-30). One hand-made test:
   `test_renders\drawn_opener_dexter\` (`film.mjs`, `compare_drawn_vs_flow.mp4`). Plan: a kit of tested parts (ships,
