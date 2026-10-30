@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/full/Document.tsx"
 type: "code"
-community: "toolkit.tsx"
+community: "Paper"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/toolkittsx
+  - community/Paper
 ---
 
 # Document.tsx
@@ -17,16 +17,16 @@ tags:
 - [[Filler()]] - `contains` [EXTRACTED]
 - [[FullProps]] - `imports` [EXTRACTED]
 - [[FullScene.tsx]] - `imports_from` [EXTRACTED]
-- [[INK]] - `imports` [EXTRACTED]
+- [[INK_1]] - `imports` [EXTRACTED]
 - [[Paper()]] - `imports` [EXTRACTED]
 - [[Paper.tsx]] - `imports_from` [EXTRACTED]
 - [[RED]] - `imports` [EXTRACTED]
 - [[SERIF]] - `imports` [EXTRACTED]
 - [[TYPE]] - `imports` [EXTRACTED]
-- [[clamp_8]] - `contains` [EXTRACTED]
+- [[clamp_9]] - `contains` [EXTRACTED]
 - [[fulltypes.ts]] - `imports_from` [EXTRACTED]
 - [[ref_remotion]] - `imports_from` [EXTRACTED]
 - [[rng()]] - `imports` [EXTRACTED]
 - [[wrapText()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/toolkittsx
+#graphify/code #graphify/EXTRACTED #community/Paper

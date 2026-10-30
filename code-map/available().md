@@ -1,0 +1,20 @@
+---
+source_file: "shortsmaker/drawn_opener.py"
+type: "code"
+community: "drawn_opener.py"
+location: "L35"
+tags:
+  - graphify/code
+  - graphify/EXTRACTED
+  - community/drawn_openerpy
+---
+
+# available()
+
+## Connections
+- [[Why a drawn opener can't be made on this PC, or None.]] - `rationale_for` [EXTRACTED]
+- [[drawn_opener.py]] - `contains` [EXTRACTED]
+- [[make_opener()]] - `calls` [EXTRACTED]
+- [[shutil]] - `calls` [EXTRACTED]
+
+#graphify/code #graphify/EXTRACTED #community/drawn_openerpy

@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/MapCard.tsx"
 type: "code"
-community: "Journey.tsx"
+community: "Graphics.tsx"
 location: "L102"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Journeytsx
+  - community/Graphicstsx
 ---
 
 # interpolateColor()
@@ -15,4 +15,4 @@ tags:
 - [[MapCard()]] - `calls` [EXTRACTED]
 - [[MapCard.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Journeytsx
+#graphify/code #graphify/EXTRACTED #community/Graphicstsx

@@ -1,11 +1,11 @@
 ---
 type: community
-members: 26
+members: 22
 ---
 
 # Journey.tsx
 
-**Members:** 26 nodes
+**Members:** 22 nodes
 
 ## Members
 - [[FOCUS]] - code - remotion/src/full/Journey.tsx
@@ -13,15 +13,12 @@ members: 26
 - [[Journey()]] - code - remotion/src/full/Journey.tsx
 - [[Journey.tsx]] - code - remotion/src/full/Journey.tsx
 - [[LEVELS]] - code - remotion/src/full/Journey.tsx
-- [[MapCard.tsx]] - code - remotion/src/MapCard.tsx
 - [[Rect]] - code - remotion/src/full/Journey.tsx
 - [[SAFE]] - code - remotion/src/full/Journey.tsx
 - [[View]] - code - remotion/src/full/Journey.tsx
-- [[clamp_3]] - code - remotion/src/full/Journey.tsx
-- [[clamp_4]] - code - remotion/src/MapCard.tsx
+- [[clamp_5]] - code - remotion/src/full/Journey.tsx
 - [[fitPoints()]] - code - remotion/src/full/Journey.tsx
 - [[graticule]] - code - remotion/src/full/Journey.tsx
-- [[interpolateColor()]] - code - remotion/src/MapCard.tsx
 - [[level()]] - code - remotion/src/full/Journey.tsx
 - [[load()]] - code - remotion/src/full/Journey.tsx
 - [[outside()]] - code - remotion/src/full/Journey.tsx
@@ -31,7 +28,6 @@ members: 26
 - [[ref_topojson_client]] - concept
 - [[ref_topojson_specification]] - concept
 - [[ref_world_atlas]] - concept
-- [[topo]] - code - remotion/src/MapCard.tsx
 - [[viewOf()]] - code - remotion/src/full/Journey.tsx
 - [[wrap()]] - code - remotion/src/full/Journey.tsx
 
@@ -43,14 +39,16 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 13 edges to [[_COMMUNITY_toolkit.tsx]]
-- 7 edges to [[_COMMUNITY_Graphics.tsx]]
-- 2 edges to [[_COMMUNITY_ref_remotion]]
-- 2 edges to [[_COMMUNITY_QuestionBeat.tsx]]
-- 1 edge to [[_COMMUNITY_Short.tsx]]
+- 5 edges to [[_COMMUNITY_fulltypes.ts]]
+- 4 edges to [[_COMMUNITY_Paper]]
+- 4 edges to [[_COMMUNITY_Graphics.tsx]]
+- 2 edges to [[_COMMUNITY_toolkit.tsx]]
+- 1 edge to [[_COMMUNITY_guarded.tsx]]
+- 1 edge to [[_COMMUNITY_ref_remotion]]
 
 ## Top bridge nodes
-- [[MapCard.tsx]] - degree 18, connects to 5 communities
-- [[Journey.tsx]] - degree 30, connects to 2 communities
-- [[Journey()]] - degree 10, connects to 1 community
-- [[interpolateColor()]] - degree 2, connects to 1 community
+- [[Journey.tsx]] - degree 30, connects to 5 communities
+- [[Journey()]] - degree 10, connects to 3 communities
+- [[ref_d3_geo]] - degree 2, connects to 1 community
+- [[ref_topojson_client]] - degree 2, connects to 1 community
+- [[ref_topojson_specification]] - degree 2, connects to 1 community

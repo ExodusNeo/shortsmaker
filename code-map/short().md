@@ -1,25 +1,20 @@
 ---
-source_file: "tests/test_blender_render.py"
+source_file: "tests/test_drawn_opener.py"
 type: "code"
-community: "test_blender_render.py"
-location: "L40"
+community: "drawn_opener.py"
+location: "L22"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_blender_renderpy
+  - community/drawn_openerpy
 ---
 
 # short()
 
 ## Connections
-- [[default_build()]] - `calls` [EXTRACTED]
-- [[test_blender_render.py]] - `contains` [EXTRACTED]
-- [[test_changed_blender_code_redraws()]] - `calls` [EXTRACTED]
-- [[test_crash_retries_then_raises()]] - `calls` [EXTRACTED]
-- [[test_frames_are_trimmed_after_the_clips_are_cut()]] - `calls` [EXTRACTED]
-- [[test_missing_blender_raises()]] - `calls` [EXTRACTED]
-- [[test_peak_on_the_emphasis_word()]] - `calls` [EXTRACTED]
-- [[test_render_clips_makes_one_clip_per_scene()]] - `calls` [EXTRACTED]
-- [[test_same_build_json_reuses_frames()]] - `calls` [EXTRACTED]
+- [[test_drawn_opener.py]] - `contains` [EXTRACTED]
+- [[test_drawn_opener_gives_up_after_fixes()]] - `calls` [EXTRACTED]
+- [[test_drawn_opener_renders_and_is_reused()]] - `calls` [EXTRACTED]
+- [[test_use_opener_plays_the_drawn_opener()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_blender_renderpy
+#graphify/code #graphify/EXTRACTED #community/drawn_openerpy

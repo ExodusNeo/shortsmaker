@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/picture_pool.py"
 type: "rationale"
-community: "edit_scripts"
+community: "clean_pics"
 location: "L281"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/edit_scripts
+  - community/clean_pics
 ---
 
 # The usable pictures as prompt lines: "#12 film: 1944 newsreel of rubber tanks…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[catalog_text()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/edit_scripts
+#graphify/rationale #graphify/EXTRACTED #community/clean_pics

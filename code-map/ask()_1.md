@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_rules.py"
 type: "code"
-community: "run_draft"
+community: "test_rules.py"
 location: "L255"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/run_draft
+  - community/test_rulespy
 ---
 
 # ask()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[run_draft()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/run_draft
+#graphify/code #graphify/EXTRACTED #community/test_rulespy

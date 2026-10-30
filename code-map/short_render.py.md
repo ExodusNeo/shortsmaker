@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/short_render.py"
 type: "code"
-community: "test_full_scenes.py"
+community: "gpu.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_full_scenespy
+  - community/gpupy
 ---
 
 # short_render.py
@@ -21,6 +21,7 @@ tags:
 - [[cli.py]] - `imports_from` [EXTRACTED]
 - [[config.py]] - `imports_from` [EXTRACTED]
 - [[drawn_choices()]] - `contains` [EXTRACTED]
+- [[drawn_opener.py]] - `imports_from` [EXTRACTED]
 - [[drawn_thumbnail()]] - `contains` [EXTRACTED]
 - [[edit_project.py]] - `imports_from` [EXTRACTED]
 - [[editplan.py]] - `imports_from` [EXTRACTED]
@@ -51,6 +52,7 @@ tags:
 - [[style_lab.py]] - `imports_from` [EXTRACTED]
 - [[subprocess]] - `imports` [EXTRACTED]
 - [[test_blender_run.py]] - `imports_from` [EXTRACTED]
+- [[test_drawn_opener.py]] - `imports_from` [EXTRACTED]
 - [[test_first_second.py]] - `imports_from` [EXTRACTED]
 - [[test_full_scenes.py]] - `imports_from` [EXTRACTED]
 - [[test_opener_graphic.py]] - `imports_from` [EXTRACTED]
@@ -58,4 +60,4 @@ tags:
 - [[time]] - `imports` [EXTRACTED]
 - [[use_opener()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_full_scenespy
+#graphify/code #graphify/EXTRACTED #community/gpupy

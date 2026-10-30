@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/style/generated/InventedLook.tsx"
 type: "code"
-community: "style/index.ts"
+community: "Halftone.tsx"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/style/indexts
+  - community/Halftonetsx
 ---
 
 # InventedLook.tsx
@@ -20,4 +20,4 @@ tags:
 - [[styleindex.ts]] - `imports_from` [EXTRACTED]
 - [[styletypes.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/style/indexts
+#graphify/code #graphify/EXTRACTED #community/Halftonetsx

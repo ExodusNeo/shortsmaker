@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_full_scenes.py"
 type: "code"
-community: "words_of"
+community: "plan_rules.py"
 location: "L888"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/words_of
+  - community/plan_rulespy
 ---
 
 # test_fill_money_graphics_and_caps()
@@ -21,4 +21,4 @@ tags:
 - [[trim_borders()]] - `calls` [EXTRACTED]
 - [[words_of()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/words_of
+#graphify/code #graphify/EXTRACTED #community/plan_rulespy

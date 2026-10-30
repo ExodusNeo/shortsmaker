@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/picker.py"
 type: "code"
-community: "rescue_graphics"
+community: "json"
 location: "L248"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/rescue_graphics
+  - community/json
 ---
 
 # full_formats()
@@ -17,4 +17,4 @@ tags:
 - [[picker.py]] - `contains` [EXTRACTED]
 - [[rescue_graphics()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/rescue_graphics
+#graphify/code #graphify/EXTRACTED #community/json

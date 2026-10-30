@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_blender_render.py"
 type: "code"
-community: "test_blender_render.py"
+community: "test_blender_plan.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_blender_renderpy
+  - community/test_blender_planpy
 ---
 
 # test_blender_render.py
@@ -20,7 +20,7 @@ tags:
 - [[json]] - `imports` [EXTRACTED]
 - [[media_tools.py]] - `imports_from` [EXTRACTED]
 - [[pathlib]] - `imports_from` [EXTRACTED]
-- [[short()]] - `contains` [EXTRACTED]
+- [[short()_1]] - `contains` [EXTRACTED]
 - [[sys]] - `imports` [EXTRACTED]
 - [[tempfile]] - `imports` [EXTRACTED]
 - [[test_changed_blender_code_redraws()]] - `contains` [EXTRACTED]
@@ -33,4 +33,4 @@ tags:
 - [[test_scene_frames_cover_every_frame_once()]] - `contains` [EXTRACTED]
 - [[traceback]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_blender_renderpy
+#graphify/code #graphify/EXTRACTED #community/test_blender_planpy

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/review.py"
 type: "rationale"
-community: "test_opener_graphic.py"
+community: "render"
 location: "L235"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/test_opener_graphicpy
+  - community/render
 ---
 
 # Why scene 1's motion-graphic opener (picker.opener_graphic) looked weak in this…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[weak_opener_graphic()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/test_opener_graphicpy
+#graphify/rationale #graphify/EXTRACTED #community/render

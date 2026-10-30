@@ -1,12 +1,12 @@
 ---
 source_file: "tests/guarded.test.ts"
 type: "code"
-community: "toolkit.tsx"
+community: "guarded.tsx"
 location: "L21"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/toolkittsx
+  - community/guardedtsx
 ---
 
 # crosses()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[guarded.test.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/toolkittsx
+#graphify/code #graphify/EXTRACTED #community/guardedtsx

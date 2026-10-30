@@ -1,52 +1,31 @@
 ---
 type: community
-members: 39
+members: 18
 ---
 
 # subprocess
 
-**Members:** 39 nodes
+**Members:** 18 nodes
 
 ## Members
-- [[Cut each take into its scenes halfway through the pause between their words…]] - rationale - shortsmaker/gpu.py
-- [[Mike's Thinking Music (-22 LUFS) vanished under the voice with the old fixed…]] - rationale - tests/test_full_scenes.py
-- [[One CC0 (no credit, any use) sound for `name` from Freesound's official API…]] - rationale - shortsmaker/audio_mix.py
-- [[Path_13]] - code
-- [[Path_14]] - code
+- [[A Shotcut timeline of a finished Short, for fixing by hand what the automatic…]] - rationale - shortsmaker/edit_project.py
+- [[A re-render with nothing left to fix an old timeline would no longer match the…]] - rationale - shortsmaker/edit_project.py
+- [[Download ~14s of film around the chosen moment (cropped with FILM_CROP to…]] - rationale - shortsmaker/footage.py
+- [[Path_22]] - code
 - [[Render one full-screen motion graphic test scene through the real Short…]] - rationale - tests/render_full.py
-- [[Small shared helpers downloads, ffmpeg, video encoder choice, durations, JSON…]] - rationale - shortsmaker/media_tools.py
+- [[Runs the TypeScript tests (tests.test.ts) bundles each with Remotion's own…]] - rationale - tests/run_ts_tests.py
 - [[Start and end of the camera shot containing time `at` (newsreels cut to title…]] - rationale - shortsmaker/footage.py
-- [[TTS with retries Microsoft's free Edge voice service drops a request now and…]] - rationale - shortsmaker/audio_mix.py
-- [[The sound file for a story sound the owner's own file in…]] - rationale - shortsmaker/audio_mix.py
-- [[True when the Short's final scene is an open grammatical loop bridge into scene…]] - rationale - shortsmaker/plan_rules.py
-- [[Voice, captions, sound effects, story sounds and music levels.]] - rationale - shortsmaker/audio_mix.py
-- [[Volume factor that brings this track's loudness (first 60 s) to MUSIC_LUFS;…]] - rationale - shortsmaker/audio_mix.py
-- [[_tone_wav()]] - code - tests/test_full_scenes.py
-- [[asyncio]] - concept
-- [[audio_mix.py]] - code - shortsmaker/audio_mix.py
 - [[duration()]] - code - shortsmaker/media_tools.py
-- [[edge_tts]] - concept
-- [[fetch()]] - code - tests/test_full_scenes.py
-- [[ffmpeg()]] - code - shortsmaker/media_tools.py
-- [[freesound_fetch()]] - code - shortsmaker/audio_mix.py
-- [[is_loop_short()]] - code - shortsmaker/plan_rules.py
-- [[main()_3]] - code - tests/render_full.py
-- [[media_tools.py]] - code - shortsmaker/media_tools.py
-- [[music_gain()]] - code - shortsmaker/audio_mix.py
+- [[edit_project.py]] - code - shortsmaker/edit_project.py
+- [[film_piece()]] - code - shortsmaker/footage.py
+- [[main()_4]] - code - tests/render_full.py
 - [[props_for()]] - code - tests/render_full.py
+- [[remove()]] - code - shortsmaker/edit_project.py
 - [[render_full.py]] - code - tests/render_full.py
+- [[run_ts_tests.py]] - code - tests/run_ts_tests.py
 - [[shot_span()]] - code - shortsmaker/footage.py
-- [[speak()]] - code - shortsmaker/audio_mix.py
-- [[split_takes()]] - code - shortsmaker/gpu.py
-- [[story_sound()]] - code - shortsmaker/audio_mix.py
 - [[subprocess]] - concept
-- [[test_a_take_is_cut_between_the_scenes_words()]] - code - tests/test_story.py
-- [[test_music_gain_evens_out_tracks()]] - code - tests/test_full_scenes.py
-- [[test_story_sound_library()]] - code - tests/test_full_scenes.py
-- [[tts()_1]] - code - shortsmaker/audio_mix.py
-- [[urllib_parse]] - concept
-- [[urllib_request]] - concept
-- [[wave]] - concept
+- [[xml_sax_saxutils]] - concept
 
 ## Live Query (requires Dataview plugin)
 
@@ -56,33 +35,28 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 41 edges to [[_COMMUNITY_test_full_scenes.py]]
-- 18 edges to [[_COMMUNITY_json]]
-- 16 edges to [[_COMMUNITY_gpu.py]]
-- 13 edges to [[_COMMUNITY_re]]
-- 12 edges to [[_COMMUNITY_render]]
-- 6 edges to [[_COMMUNITY_test_story.py]]
-- 5 edges to [[_COMMUNITY_captions]]
-- 4 edges to [[_COMMUNITY_make]]
-- 4 edges to [[_COMMUNITY_test_blender_render.py]]
-- 2 edges to [[_COMMUNITY_load_pool]]
-- 2 edges to [[_COMMUNITY_look_and_fix]]
-- 2 edges to [[_COMMUNITY_pool_pictures]]
-- 2 edges to [[_COMMUNITY_math]]
-- 2 edges to [[_COMMUNITY_clean_sound]]
-- 1 edge to [[_COMMUNITY_full_cues]]
+- 26 edges to [[_COMMUNITY_gpu.py]]
+- 12 edges to [[_COMMUNITY_test_blender_scene.py]]
+- 6 edges to [[_COMMUNITY_render]]
+- 5 edges to [[_COMMUNITY_ffmpeg]]
+- 5 edges to [[_COMMUNITY_json]]
+- 4 edges to [[_COMMUNITY_drawn_opener.py]]
+- 3 edges to [[_COMMUNITY_re]]
+- 3 edges to [[_COMMUNITY_image_sources.py]]
+- 2 edges to [[_COMMUNITY_test_blender_plan.py]]
+- 2 edges to [[_COMMUNITY_audio_mix.py]]
+- 2 edges to [[_COMMUNITY_code_custom_scenes]]
+- 2 edges to [[_COMMUNITY_test_story.py]]
 - 1 edge to [[_COMMUNITY_render_remotion]]
-- 1 edge to [[_COMMUNITY_words_of]]
-- 1 edge to [[_COMMUNITY_test_blender_scene.py]]
-- 1 edge to [[_COMMUNITY_test_rules.py]]
-- 1 edge to [[_COMMUNITY_h3_run.py]]
-- 1 edge to [[_COMMUNITY_test_style.py]]
-- 1 edge to [[_COMMUNITY_test_first_second.py]]
+- 1 edge to [[_COMMUNITY_scene_cues]]
+- 1 edge to [[_COMMUNITY_test_pictures_first.py]]
+- 1 edge to [[_COMMUNITY_prepare_topic]]
+- 1 edge to [[_COMMUNITY_test_full_scenes.py]]
 - 1 edge to [[_COMMUNITY_split_make_shorts.py]]
 
 ## Top bridge nodes
-- [[subprocess]] - degree 40, connects to 12 communities
-- [[media_tools.py]] - degree 32, connects to 10 communities
-- [[audio_mix.py]] - degree 37, connects to 8 communities
-- [[duration()]] - degree 12, connects to 6 communities
-- [[ffmpeg()]] - degree 15, connects to 5 communities
+- [[subprocess]] - degree 43, connects to 14 communities
+- [[duration()]] - degree 13, connects to 10 communities
+- [[film_piece()]] - degree 7, connects to 4 communities
+- [[edit_project.py]] - degree 15, connects to 3 communities
+- [[shot_span()]] - degree 7, connects to 3 communities

@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[Root()]] - `contains` [EXTRACTED]
-- [[Short()_1]] - `imports` [EXTRACTED]
+- [[Short()_2]] - `imports` [EXTRACTED]
 - [[Short.tsx]] - `imports_from` [EXTRACTED]
 - [[ShortProps]] - `imports` [EXTRACTED]
 - [[calculateMetadata()]] - `contains` [EXTRACTED]

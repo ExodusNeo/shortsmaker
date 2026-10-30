@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_pictures_first.py"
 type: "code"
-community: "write_scripts"
+community: "planning"
 location: "L185"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/write_scripts
+  - community/planning
 ---
 
 # planning_ai()
@@ -20,4 +20,4 @@ tags:
 - [[test_topic_a_proven_channel_just_posted_is_dropped()]] - `calls` [EXTRACTED]
 - [[test_topic_ideas.py]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/write_scripts
+#graphify/code #graphify/EXTRACTED #community/planning

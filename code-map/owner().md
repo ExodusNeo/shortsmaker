@@ -24,6 +24,6 @@ tags:
 - [[test_good_look_check_skips_the_extra_compile()]] - `calls` [EXTRACTED]
 - [[test_pictures_first.py]] - `imports` [EXTRACTED]
 - [[test_style.py]] - `imports` [EXTRACTED]
-- [[with_fakes()_1]] - `calls` [EXTRACTED]
+- [[with_fakes()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/gather_pool

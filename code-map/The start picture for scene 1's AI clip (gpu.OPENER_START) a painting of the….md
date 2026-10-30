@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/review.py"
 type: "rationale"
-community: "gpu.py"
+community: "render"
 location: "L275"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/gpupy
+  - community/render
 ---
 
 # The start picture for scene 1's AI clip (gpu.OPENER_START): a painting of the…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[paint_opener_start()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/gpupy
+#graphify/rationale #graphify/EXTRACTED #community/render

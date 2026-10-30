@@ -1,20 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "make"
+community: "test_blender_scene.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/make
+  - community/test_blender_scenepy
 ---
 
 # Path
 
 ## Connections
-- [[caption_layer()]] - `references` [EXTRACTED]
-- [[make()]] - `references` [EXTRACTED]
-- [[master_gain()]] - `references` [EXTRACTED]
-- [[project_xml()]] - `references` [EXTRACTED]
-- [[remove()]] - `references` [EXTRACTED]
+- [[short_folder()]] - `references` [EXTRACTED]
+- [[videos()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/make
+#graphify/code #graphify/EXTRACTED #community/test_blender_scenepy

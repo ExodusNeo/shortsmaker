@@ -12,10 +12,10 @@ tags:
 # test_failed_invention_keeps_the_others()
 
 ## Connections
-- [[run()_5]] - `contains` [EXTRACTED]
-- [[run()_6]] - `indirect_call` [INFERRED]
+- [[run()_1]] - `contains` [EXTRACTED]
+- [[run()_2]] - `indirect_call` [INFERRED]
 - [[style_placeholders()]] - `calls` [EXTRACTED]
 - [[test_style.py]] - `contains` [EXTRACTED]
-- [[with_fakes()_1]] - `calls` [EXTRACTED]
+- [[with_fakes()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/style_placeholders

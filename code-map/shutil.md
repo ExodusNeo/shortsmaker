@@ -1,19 +1,21 @@
 ---
 source_file: ""
 type: "concept"
-community: "test_full_scenes.py"
+community: "gpu.py"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/test_full_scenespy
+  - community/gpupy
 ---
 
 # shutil
 
 ## Connections
 - [[approve_candidate()]] - `calls` [EXTRACTED]
+- [[available()]] - `calls` [EXTRACTED]
 - [[cli.py]] - `imports` [EXTRACTED]
 - [[code_custom_scenes()]] - `calls` [EXTRACTED]
+- [[drawn_opener.py]] - `imports` [EXTRACTED]
 - [[first_second_check()]] - `calls` [EXTRACTED]
 - [[full_props()]] - `calls` [EXTRACTED]
 - [[gpu.py]] - `imports` [EXTRACTED]
@@ -22,8 +24,8 @@ tags:
 - [[llm.py]] - `imports` [EXTRACTED]
 - [[logbook.py]] - `imports` [EXTRACTED]
 - [[main()_1]] - `calls` [EXTRACTED]
-- [[main()_4]] - `calls` [EXTRACTED]
 - [[main()_3]] - `calls` [EXTRACTED]
+- [[main()_4]] - `calls` [EXTRACTED]
 - [[motion.py]] - `imports` [EXTRACTED]
 - [[paint_instead()]] - `calls` [EXTRACTED]
 - [[paint_opener_start()]] - `calls` [EXTRACTED]
@@ -52,4 +54,4 @@ tags:
 - [[write_scripts()]] - `calls` [EXTRACTED]
 - [[writing.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/test_full_scenespy
+#graphify/concept #graphify/EXTRACTED #community/gpupy

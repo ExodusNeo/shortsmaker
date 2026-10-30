@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/full/Board.tsx"
 type: "code"
-community: "toolkit.tsx"
+community: "Paper"
 location: "L36"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/toolkittsx
+  - community/Paper
 ---
 
 # Board()
@@ -17,7 +17,7 @@ tags:
 - [[FullScene.tsx]] - `imports` [EXTRACTED]
 - [[Paper()]] - `calls` [EXTRACTED]
 - [[layout()]] - `calls` [EXTRACTED]
-- [[lerp()]] - `calls` [EXTRACTED]
+- [[lerp()_1]] - `calls` [EXTRACTED]
 - [[skinOf()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/toolkittsx
+#graphify/code #graphify/EXTRACTED #community/Paper

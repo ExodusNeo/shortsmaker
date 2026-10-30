@@ -12,7 +12,7 @@ tags:
 # duration()
 
 ## Connections
-- [[Path_14]] - `references` [EXTRACTED]
+- [[Path_6]] - `references` [EXTRACTED]
 - [[log_short()]] - `calls` [EXTRACTED]
 - [[media_tools.py]] - `contains` [EXTRACTED]
 - [[nasa_films()]] - `calls` [EXTRACTED]
@@ -22,6 +22,7 @@ tags:
 - [[split_takes()]] - `calls` [EXTRACTED]
 - [[subprocess]] - `calls` [EXTRACTED]
 - [[test_a_take_is_cut_between_the_scenes_words()]] - `calls` [EXTRACTED]
+- [[test_drawn_opener_renders_and_is_reused()]] - `calls` [EXTRACTED]
 - [[test_melt_plays_it_with_the_captions_on_top()]] - `calls` [EXTRACTED]
 - [[test_render_clips_makes_one_clip_per_scene()]] - `calls` [EXTRACTED]
 

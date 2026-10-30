@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[The engineer's plan with every value checked unknown values get the default,…]] - `rationale_for` [EXTRACTED]
 - [[blender_plan.py]] - `contains` [EXTRACTED]
-- [[clamp()]] - `calls` [EXTRACTED]
+- [[clamp()_1]] - `calls` [EXTRACTED]
 - [[default_build()]] - `calls` [EXTRACTED]
 - [[ending()]] - `calls` [EXTRACTED]
 - [[panels()]] - `calls` [EXTRACTED]

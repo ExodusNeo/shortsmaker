@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/blender_plan.py"
 type: "code"
-community: "default_build"
+community: "test_blender_plan.py"
 location: "L92"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/default_build
+  - community/test_blender_planpy
 ---
 
 # default_build()
@@ -18,7 +18,7 @@ tags:
 - [[drawn_short()]] - `calls` [EXTRACTED]
 - [[plan_builds()]] - `calls` [EXTRACTED]
 - [[plan_with()]] - `calls` [EXTRACTED]
-- [[short()]] - `calls` [EXTRACTED]
+- [[short()_1]] - `calls` [EXTRACTED]
 - [[test_default_build_shape()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/default_build
+#graphify/code #graphify/EXTRACTED #community/test_blender_planpy

@@ -1,17 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "run_agy"
+community: "style_library"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/run_agy
+  - community/style_library
 ---
 
 # Path
 
 ## Connections
-- [[ask_ai()]] - `references` [EXTRACTED]
-- [[run_agy()]] - `references` [EXTRACTED]
+- [[edit_plan()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/run_agy
+#graphify/code #graphify/EXTRACTED #community/style_library

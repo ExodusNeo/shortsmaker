@@ -1,20 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "look_and_fix"
+community: "h3_run.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/look_and_fix
+  - community/h3_runpy
 ---
 
 # Path
 
 ## Connections
-- [[code_custom_scenes()]] - `references` [EXTRACTED]
-- [[full_props()]] - `references` [EXTRACTED]
-- [[look_and_fix()]] - `references` [EXTRACTED]
-- [[preview_custom()]] - `references` [EXTRACTED]
-- [[preview_sheet()]] - `references` [EXTRACTED]
+- [[fit_start()]] - `references` [EXTRACTED]
+- [[saved_file()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/look_and_fix
+#graphify/code #graphify/EXTRACTED #community/h3_runpy

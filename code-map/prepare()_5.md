@@ -1,17 +1,17 @@
 ---
-source_file: "tests/test_rules.py"
+source_file: "tests/test_pictures_first.py"
 type: "code"
-community: "capture_prompts"
-location: "L78"
+community: "pool_of"
+location: "L286"
 tags:
   - graphify/code
-  - graphify/INFERRED
-  - community/capture_prompts
+  - graphify/EXTRACTED
+  - community/pool_of
 ---
 
 # prepare()
 
 ## Connections
-- [[capture_prompts()]] - `indirect_call` [INFERRED]
+- [[test_prompts_carry_picture_list()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/capture_prompts
+#graphify/code #graphify/EXTRACTED #community/pool_of

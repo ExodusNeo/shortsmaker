@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "json"
+community: "drawn_opener.py"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/json
+  - community/drawn_openerpy
 ---
 
 # hashlib
@@ -13,6 +13,8 @@ tags:
 ## Connections
 - [[blender_render.py]] - `imports` [EXTRACTED]
 - [[code_version()]] - `calls` [EXTRACTED]
+- [[drawn_opener.py]] - `imports` [EXTRACTED]
+- [[fingerprint()]] - `calls` [EXTRACTED]
 - [[footage.py]] - `imports` [EXTRACTED]
 - [[gpu.py]] - `imports` [EXTRACTED]
 - [[image_sources.py]] - `imports` [EXTRACTED]
@@ -21,4 +23,4 @@ tags:
 - [[pixabay_films()]] - `calls` [EXTRACTED]
 - [[pool_folder()]] - `calls` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/json
+#graphify/concept #graphify/EXTRACTED #community/drawn_openerpy

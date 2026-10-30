@@ -1,21 +1,19 @@
 ---
 source_file: ""
 type: "code"
-community: "load_pool"
+community: "drawn_opener.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/load_pool
+  - community/drawn_openerpy
 ---
 
 # Path
 
 ## Connections
-- [[catalog_pool()]] - `references` [EXTRACTED]
-- [[contact_sheets()]] - `references` [EXTRACTED]
-- [[load_pool()]] - `references` [EXTRACTED]
-- [[pool_folder()]] - `references` [EXTRACTED]
-- [[prepare_topic()]] - `references` [EXTRACTED]
-- [[save_pool()]] - `references` [EXTRACTED]
+- [[make_opener()]] - `references` [EXTRACTED]
+- [[node_run()]] - `references` [EXTRACTED]
+- [[review()]] - `references` [EXTRACTED]
+- [[write()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/load_pool
+#graphify/code #graphify/EXTRACTED #community/drawn_openerpy

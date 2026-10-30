@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_pictures_first.py"
 type: "code"
-community: "load_pool"
+community: "prepare_topic"
 location: "L71"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/load_pool
+  - community/prepare_topic
 ---
 
 # test_pool_roundtrip()
@@ -18,4 +18,4 @@ tags:
 - [[stubbed]] - `calls` [EXTRACTED]
 - [[test_pictures_first.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/load_pool
+#graphify/code #graphify/EXTRACTED #community/prepare_topic

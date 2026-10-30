@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/image_sources.py"
 type: "code"
-community: "json"
+community: "image_sources.py"
 location: "L207"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/json
+  - community/image_sourcespy
 ---
 
 # nasa_images()
@@ -18,4 +18,4 @@ tags:
 - [[nasa_search()]] - `calls` [EXTRACTED]
 - [[on_topic()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/json
+#graphify/code #graphify/EXTRACTED #community/image_sourcespy

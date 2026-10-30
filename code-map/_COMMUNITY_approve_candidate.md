@@ -9,7 +9,7 @@ members: 13
 
 ## Members
 - [[Adds a candidate to the library (component file, library.json entry,…]] - rationale - shortsmaker/style_lab.py
-- [[Path_1]] - code
+- [[Path_3]] - code
 - [[The library files a candidate test may touch, to put back afterwards.]] - rationale - tests/test_style.py
 - [[approve_candidate()]] - code - shortsmaker/style_lab.py
 - [[candidate_in()]] - code - tests/test_style.py
@@ -31,14 +31,15 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 8 edges to [[_COMMUNITY_test_style.py]]
-- 7 edges to [[_COMMUNITY_test_full_scenes.py]]
+- 6 edges to [[_COMMUNITY_gpu.py]]
 - 3 edges to [[_COMMUNITY_style_library]]
 - 1 edge to [[_COMMUNITY_json]]
+- 1 edge to [[_COMMUNITY_code_custom_scenes]]
 - 1 edge to [[_COMMUNITY_invent_component]]
 - 1 edge to [[_COMMUNITY_style_placeholders]]
 
 ## Top bridge nodes
-- [[approve_candidate()]] - degree 12, connects to 4 communities
+- [[approve_candidate()]] - degree 12, connects to 5 communities
 - [[test_candidate_names_unique_across_kinds()]] - degree 4, connects to 3 communities
 - [[candidate_in()]] - degree 8, connects to 2 communities
 - [[test_approve_adds_to_library()]] - degree 6, connects to 2 communities

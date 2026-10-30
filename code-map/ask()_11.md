@@ -1,18 +1,17 @@
 ---
-source_file: "tests/test_rules.py"
+source_file: "tests/test_full_scenes.py"
 type: "code"
-community: "capture_prompts"
-location: "L71"
+community: "test_review_redraws_custom"
+location: "L610"
 tags:
   - graphify/code
-  - graphify/INFERRED
-  - community/capture_prompts
+  - graphify/EXTRACTED
+  - community/test_review_redraws_custom
 ---
 
 # ask()
 
 ## Connections
-- [[capture_prompts()]] - `indirect_call` [INFERRED]
-- [[run_draft()]] - `indirect_call` [INFERRED]
+- [[test_review_redraws_custom()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/capture_prompts
+#graphify/code #graphify/EXTRACTED #community/test_review_redraws_custom

@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[Headless planner call (BRAIN, or `brain` Claude or Gemini) that returns parsed…]] - `rationale_for` [EXTRACTED]
-- [[Path_19]] - `references` [EXTRACTED]
+- [[Path_13]] - `references` [EXTRACTED]
 - [[catalog_pool()]] - `calls` [EXTRACTED]
 - [[check_twists()]] - `calls` [EXTRACTED]
 - [[choose_images()]] - `calls` [EXTRACTED]
@@ -34,6 +34,7 @@ tags:
 - [[quota_exhausted()]] - `calls` [EXTRACTED]
 - [[redraw_custom()]] - `calls` [EXTRACTED]
 - [[rescue_graphics()]] - `calls` [EXTRACTED]
+- [[review()]] - `calls` [EXTRACTED]
 - [[rewrite_paint_prompts()]] - `calls` [EXTRACTED]
 - [[run_agy()]] - `calls` [EXTRACTED]
 - [[seed_ideas()]] - `calls` [EXTRACTED]
@@ -48,6 +49,7 @@ tags:
 - [[test_solo_ask_ai_hands_over_when_out_of_credits()]] - `calls` [EXTRACTED]
 - [[test_solo_ask_ai_never_falls_back()]] - `calls` [EXTRACTED]
 - [[visual_review()]] - `calls` [EXTRACTED]
+- [[write()]] - `calls` [EXTRACTED]
 - [[write_scripts()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/ask_ai

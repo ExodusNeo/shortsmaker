@@ -1,21 +1,24 @@
 ---
 source_file: "shortsmaker/short_render.py"
 type: "code"
-community: "test_opener_graphic.py"
+community: "render"
 location: "L97"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_opener_graphicpy
+  - community/render
 ---
 
 # use_opener()
 
 ## Connections
-- [[Scene 1 opens on its motion-graphic opener (picker.opener_graphic); an AI clip…]] - `rationale_for` [EXTRACTED]
+- [[Path_28]] - `references` [EXTRACTED]
+- [[Scene 1 on an `opener animated` channel plays the first opener that works…]] - `rationale_for` [EXTRACTED]
+- [[ffmpeg()]] - `calls` [EXTRACTED]
+- [[make_opener()]] - `calls` [EXTRACTED]
 - [[render()_4]] - `calls` [EXTRACTED]
 - [[short_render.py]] - `contains` [EXTRACTED]
-- [[test_use_opener_ai_clip_replaces_graphic()]] - `calls` [EXTRACTED]
-- [[test_use_opener_without_graphic()]] - `calls` [EXTRACTED]
+- [[test_use_opener_plays_the_drawn_opener()]] - `calls` [EXTRACTED]
+- [[use()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_opener_graphicpy
+#graphify/code #graphify/EXTRACTED #community/render

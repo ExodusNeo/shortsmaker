@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_full_scenes.py"
 type: "code"
-community: "test_first_second.py"
+community: "_fake_planning"
 location: "L470"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_first_secondpy
+  - community/_fake_planning
 ---
 
 # test_rewrite_paint_prompts()
@@ -14,8 +14,8 @@ tags:
 ## Connections
 - [[Mike's newsstand a repaint from the unchanged prompt painted the identical…]] - `rationale_for` [EXTRACTED]
 - [[ask()_10]] - `contains` [EXTRACTED]
-- [[ask()_6]] - `indirect_call` [INFERRED]
+- [[ask()_7]] - `indirect_call` [INFERRED]
 - [[rewrite_paint_prompts()]] - `calls` [EXTRACTED]
 - [[test_full_scenes.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_first_secondpy
+#graphify/code #graphify/EXTRACTED #community/_fake_planning

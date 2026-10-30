@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_pictures_first.py"
 type: "code"
-community: "write_scripts"
+community: "planning"
 location: "L236"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/write_scripts
+  - community/planning
 ---
 
 # test_weak_topic_swapped_for_backup()
@@ -14,8 +14,8 @@ tags:
 ## Connections
 - [[planning]] - `calls` [EXTRACTED]
 - [[prepare()_4]] - `contains` [EXTRACTED]
-- [[prepare()]] - `indirect_call` [INFERRED]
+- [[prepare()_1]] - `indirect_call` [INFERRED]
 - [[test_pictures_first.py]] - `contains` [EXTRACTED]
 - [[write_scripts()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/write_scripts
+#graphify/code #graphify/EXTRACTED #community/planning

@@ -1,18 +1,18 @@
 ---
 source_file: "remotion/src/Captions.tsx"
 type: "code"
-community: "QuestionBeat.tsx"
+community: "Graphics.tsx"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/QuestionBeattsx
+  - community/Graphicstsx
 ---
 
 # Captions.tsx
 
 ## Connections
-- [[Captions()_1]] - `contains` [EXTRACTED]
+- [[Captions()]] - `contains` [EXTRACTED]
 - [[FONT]] - `imports` [EXTRACTED]
 - [[Graphics.tsx]] - `imports_from` [EXTRACTED]
 - [[Short.tsx]] - `imports_from` [EXTRACTED]
@@ -21,4 +21,4 @@ tags:
 - [[ref_remotion]] - `imports_from` [EXTRACTED]
 - [[theme]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/QuestionBeattsx
+#graphify/code #graphify/EXTRACTED #community/Graphicstsx

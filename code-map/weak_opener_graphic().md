@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/review.py"
 type: "code"
-community: "test_opener_graphic.py"
+community: "render"
 location: "L234"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_opener_graphicpy
+  - community/render
 ---
 
 # weak_opener_graphic()
@@ -17,4 +17,4 @@ tags:
 - [[review.py]] - `contains` [EXTRACTED]
 - [[test_weak_opener_graphic_fixes_then_handoff()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_opener_graphicpy
+#graphify/code #graphify/EXTRACTED #community/render

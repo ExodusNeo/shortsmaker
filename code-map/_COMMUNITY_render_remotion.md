@@ -1,21 +1,17 @@
 ---
 type: community
-members: 22
+members: 17
 ---
 
 # render_remotion
 
-**Members:** 22 nodes
+**Members:** 17 nodes
 
 ## Members
-- [[A painted figure (black ink on white) becomes a cropped, transparent…]] - rationale - tests/test_full_scenes.py
-- [[A painted figure (dark ink on light paper) - a cropped RGBA silhouette (dark…]] - rationale - shortsmaker/remotion_render.py
 - [[A scene's style-library props for Remotion (an old Short's state has no look…]] - rationale - shortsmaker/style_lab.py
-- [[Path_10]] - code
 - [[Render the silent video (with captions) through the Remotion project; returns…]] - rationale - shortsmaker/remotion_render.py
 - [[The aged-paper texture and film-grain frames the full-screen motion graphics…]] - rationale - shortsmaker/remotion_render.py
 - [[Visual skin for a Short's full-screen motion graphics (parchment, blueprint,…]] - rationale - shortsmaker/config.py
-- [[ink_silhouette()]] - code - shortsmaker/remotion_render.py
 - [[make_paper()]] - code - shortsmaker/remotion_render.py
 - [[remotion()]] - code - shortsmaker/remotion_render.py
 - [[render()_1]] - code - shortsmaker/remotion_render.py
@@ -26,7 +22,6 @@ members: 22
 - [[short_skin()]] - code - shortsmaker/config.py
 - [[style_props()]] - code - shortsmaker/style_lab.py
 - [[test_clean_full_custom_and_skin()]] - code - tests/test_full_scenes.py
-- [[test_ink_silhouette()]] - code - tests/test_full_scenes.py
 - [[test_invention_runtime_failure_uses_fallback()]] - code - tests/test_style.py
 - [[test_make_paper()]] - code - tests/test_full_scenes.py
 - [[test_old_state_renders_plain()]] - code - tests/test_style.py
@@ -39,22 +34,21 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 12 edges to [[_COMMUNITY_test_full_scenes.py]]
-- 2 edges to [[_COMMUNITY_render]]
+- 8 edges to [[_COMMUNITY_gpu.py]]
+- 3 edges to [[_COMMUNITY_render]]
 - 2 edges to [[_COMMUNITY_style_placeholders]]
 - 2 edges to [[_COMMUNITY_invent_component]]
+- 2 edges to [[_COMMUNITY_test_full_scenes.py]]
 - 2 edges to [[_COMMUNITY_test_style.py]]
-- 1 edge to [[_COMMUNITY_gpu.py]]
-- 1 edge to [[_COMMUNITY_full_cues]]
-- 1 edge to [[_COMMUNITY_captions]]
-- 1 edge to [[_COMMUNITY_clean_full]]
+- 1 edge to [[_COMMUNITY_full_props]]
+- 1 edge to [[_COMMUNITY_plan_rules.py]]
 - 1 edge to [[_COMMUNITY_subprocess]]
+- 1 edge to [[_COMMUNITY_audio_mix.py]]
 - 1 edge to [[_COMMUNITY_code_custom_scenes]]
-- 1 edge to [[_COMMUNITY_redraw_custom]]
 
 ## Top bridge nodes
 - [[render_remotion()]] - degree 17, connects to 8 communities
 - [[run_remotion_with_fallback()]] - degree 7, connects to 3 communities
-- [[ink_silhouette()]] - degree 5, connects to 2 communities
-- [[Path_10]] - degree 5, connects to 2 communities
+- [[make_paper()]] - degree 6, connects to 2 communities
 - [[test_clean_full_custom_and_skin()]] - degree 3, connects to 2 communities
+- [[short_skin()]] - degree 5, connects to 1 community

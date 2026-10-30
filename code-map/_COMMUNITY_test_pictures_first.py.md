@@ -18,7 +18,7 @@ members: 22
 - [[choose_images() with network stubbed; gather_pool returns `extra` (and records…]] - rationale - tests/test_pictures_first.py
 - [[picking]] - code - tests/test_pictures_first.py
 - [[planned_short()]] - code - tests/test_pictures_first.py
-- [[scene()]] - code - tests/test_pictures_first.py
+- [[scene()_1]] - code - tests/test_pictures_first.py
 - [[still()]] - code - tests/test_pictures_first.py
 - [[test_choose_extra_gather_is_bounded()]] - code - tests/test_pictures_first.py
 - [[test_choose_falls_back_to_plan()]] - code - tests/test_pictures_first.py
@@ -39,26 +39,28 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 21 edges to [[_COMMUNITY_pool_of]]
-- 17 edges to [[_COMMUNITY_test_full_scenes.py]]
-- 12 edges to [[_COMMUNITY_write_scripts]]
+- 19 edges to [[_COMMUNITY_pool_of]]
+- 17 edges to [[_COMMUNITY_gpu.py]]
+- 9 edges to [[_COMMUNITY_planning]]
 - 9 edges to [[_COMMUNITY_gather_pool]]
-- 6 edges to [[_COMMUNITY_json]]
-- 5 edges to [[_COMMUNITY_load_pool]]
-- 4 edges to [[_COMMUNITY_re]]
-- 3 edges to [[_COMMUNITY_pool_pictures]]
-- 2 edges to [[_COMMUNITY_words_of]]
-- 2 edges to [[_COMMUNITY_main_1]]
-- 1 edge to [[_COMMUNITY_style_library]]
+- 6 edges to [[_COMMUNITY_prepare_topic]]
+- 5 edges to [[_COMMUNITY_image_sources.py]]
+- 4 edges to [[_COMMUNITY_clean_pics]]
+- 3 edges to [[_COMMUNITY_plan_rules.py]]
+- 2 edges to [[_COMMUNITY_channel_profiles.py]]
+- 2 edges to [[_COMMUNITY_style_library]]
+- 2 edges to [[_COMMUNITY_json]]
+- 2 edges to [[_COMMUNITY_test_topic_ideas.py]]
+- 2 edges to [[_COMMUNITY_test_blender_scene.py]]
+- 1 edge to [[_COMMUNITY_test_rules.py]]
 - 1 edge to [[_COMMUNITY_ask_ai]]
-- 1 edge to [[_COMMUNITY_test_style.py]]
-- 1 edge to [[_COMMUNITY_edit_plan]]
+- 1 edge to [[_COMMUNITY_subprocess]]
+- 1 edge to [[_COMMUNITY_apply_look_scenes]]
 - 1 edge to [[_COMMUNITY_render]]
-- 1 edge to [[_COMMUNITY_capture_prompts]]
 
 ## Top bridge nodes
-- [[choose_images()]] - degree 24, connects to 12 communities
-- [[test_pictures_first.py]] - degree 78, connects to 10 communities
+- [[test_pictures_first.py]] - degree 78, connects to 13 communities
+- [[choose_images()]] - degree 24, connects to 13 communities
 - [[planned_short()]] - degree 10, connects to 2 communities
 - [[still()]] - degree 5, connects to 2 communities
 - [[picking]] - degree 12, connects to 1 community

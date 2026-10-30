@@ -12,6 +12,6 @@ tags:
 # Runs fn() with ask_ai answering `codes` in turn, tsc_check returning `tsc`, and…
 
 ## Connections
-- [[with_fakes()_1]] - `rationale_for` [EXTRACTED]
+- [[with_fakes()]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/style_placeholders

@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_opener_graphic.py"
 type: "code"
-community: "test_opener_graphic.py"
+community: "gpu.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_opener_graphicpy
+  - community/gpupy
 ---
 
 # test_opener_graphic.py
@@ -30,5 +30,6 @@ tags:
 - [[test_use_opener_without_graphic()]] - `contains` [EXTRACTED]
 - [[test_weak_opener_graphic_fixes_then_handoff()]] - `contains` [EXTRACTED]
 - [[traceback]] - `imports` [EXTRACTED]
+- [[use()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_opener_graphicpy
+#graphify/code #graphify/EXTRACTED #community/gpupy

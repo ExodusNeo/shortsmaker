@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[BuiltInGraphic()]] - `calls` [EXTRACTED]
 - [[Overlay]] - `calls` [EXTRACTED]
-- [[Short()_1]] - `calls` [EXTRACTED]
+- [[Short()_2]] - `calls` [EXTRACTED]
 - [[Short.tsx]] - `contains` [EXTRACTED]
 - [[overlayFor()]] - `calls` [EXTRACTED]
 

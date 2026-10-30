@@ -28,7 +28,7 @@ members: 52
 - [[fake()]] - code - tests/test_story.py
 - [[main()_5]] - code - local_ai/qwen_voice.py
 - [[main()_6]] - code - tests/render_style.py
-- [[one()_1]] - code - local_ai/qwen_voice.py
+- [[one()]] - code - local_ai/qwen_voice.py
 - [[qwen_voice.py]] - code - local_ai/qwen_voice.py
 - [[say_number()]] - code - local_ai/qwen_voice.py
 - [[scenes()]] - code - tests/test_story.py
@@ -69,22 +69,22 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 19 edges to [[_COMMUNITY_test_full_scenes.py]]
-- 9 edges to [[_COMMUNITY_re]]
-- 6 edges to [[_COMMUNITY_gpu.py]]
-- 6 edges to [[_COMMUNITY_subprocess]]
-- 4 edges to [[_COMMUNITY_json]]
-- 2 edges to [[_COMMUNITY_edit_scripts]]
+- 23 edges to [[_COMMUNITY_gpu.py]]
+- 7 edges to [[_COMMUNITY_re]]
+- 6 edges to [[_COMMUNITY_json]]
+- 3 edges to [[_COMMUNITY_ffmpeg]]
+- 3 edges to [[_COMMUNITY_write_scripts]]
+- 2 edges to [[_COMMUNITY_plan_rules.py]]
+- 2 edges to [[_COMMUNITY_subprocess]]
+- 2 edges to [[_COMMUNITY_test_blender_scene.py]]
 - 1 edge to [[_COMMUNITY_test_h3_handoff.py]]
 - 1 edge to [[_COMMUNITY_test_rules.py]]
-- 1 edge to [[_COMMUNITY_write_scripts]]
-- 1 edge to [[_COMMUNITY_style_library]]
-- 1 edge to [[_COMMUNITY_words_of]]
 - 1 edge to [[_COMMUNITY_ask_ai]]
+- 1 edge to [[_COMMUNITY_style_library]]
 
 ## Top bridge nodes
-- [[test_story.py]] - degree 29, connects to 5 communities
+- [[test_story.py]] - degree 29, connects to 4 communities
 - [[qwen_voice.py]] - degree 18, connects to 4 communities
 - [[check_twists()]] - degree 8, connects to 4 communities
+- [[spoken_count()]] - degree 7, connects to 4 communities
 - [[story_problems()]] - degree 8, connects to 3 communities
-- [[spoken_count()]] - degree 7, connects to 3 communities
