@@ -1,90 +1,78 @@
 {
- "date": "2026-10-28",
+ "date": "2026-10-30",
  "niche": "Strange-but-true history: short, surprising stories about real people, places, inventions and events from history, each built around one hook and a twist ending (avoiding graphic violence and anything political)",
  "shorts": [
   {
    "title": "They Were Sealed In The Emperor’s Tomb #shorts",
-   "views": 4300000,
+   "views": 4700000,
    "url": "https://www.youtube.com/shorts/XfYSbqUkNDc",
    "channel": "@HistoryBypass",
-   "days_old": 3,
-   "views_per_day": 1433333,
-   "likes": 56599
+   "days_old": 5,
+   "views_per_day": 940000,
+   "likes": 62011
   },
   {
    "title": "The Submarine Disaster That Makes No Sense",
    "views": 6000000,
    "url": "https://www.youtube.com/shorts/oTuFwPkFFXs",
    "channel": "@Thoughty2",
-   "days_old": 98,
-   "views_per_day": 61224,
-   "likes": 186803
+   "days_old": 100,
+   "views_per_day": 60000,
+   "likes": 186793
+  },
+  {
+   "title": "Rifle with a built in bottle opener?",
+   "views": 568000,
+   "url": "https://www.youtube.com/shorts/olbjFEt4flU",
+   "channel": "@SimpleHistory",
+   "days_old": 26,
+   "views_per_day": 21846,
+   "likes": 22173
   },
   {
    "title": "Astronomers Can’t Explain This Moon Mystery",
    "views": 980000,
    "url": "https://www.youtube.com/shorts/ubKRmhsv_W4",
    "channel": "@Thoughty2",
-   "days_old": 49,
-   "views_per_day": 20000,
-   "likes": 17179
+   "days_old": 51,
+   "views_per_day": 19215,
+   "likes": 17187
   },
   {
    "title": "The Wildest Martial Arts Hoax of All Time",
    "views": 925000,
    "url": "https://www.youtube.com/shorts/TS_-7T6JMCI",
    "channel": "@Thoughty2",
-   "days_old": 54,
-   "views_per_day": 17129,
-   "likes": 24745
+   "days_old": 56,
+   "views_per_day": 16517,
+   "likes": 24759
   },
   {
    "title": "What Happens When You Are Shot",
    "views": 2900000,
    "url": "https://www.youtube.com/shorts/V15wrmD5VFs",
    "channel": "@TheInfographicsShow",
-   "days_old": 699,
-   "views_per_day": 4148,
-   "likes": 104365
-  },
-  {
-   "title": "The Deadliest Tornado In The World 🌪️ #shorts",
-   "views": 2600000,
-   "url": "https://www.youtube.com/shorts/8-KqkH59HFI",
-   "channel": "UCxqX-Q5IfGmltH5fOtUDIgg",
-   "days_old": 1305,
-   "views_per_day": 1992,
-   "likes": 29120
+   "days_old": 701,
+   "views_per_day": 4136,
+   "likes": 104373
   },
   {
    "title": "How Taiwan Manages with Low Military Spending",
    "views": 1800000,
    "url": "https://www.youtube.com/shorts/oWJaVXdNcvM",
    "channel": "@TheInfographicsShow",
-   "days_old": 1119,
-   "views_per_day": 1608,
-   "likes": 84271
+   "days_old": 1121,
+   "views_per_day": 1605,
+   "likes": 84253
   },
   {
    "title": "Why the Russian Military Switched to the AK-12",
    "views": 1800000,
    "url": "https://www.youtube.com/shorts/syVYb73Yj38",
    "channel": "@TheInfographicsShow",
-   "days_old": 1124,
-   "views_per_day": 1601,
-   "likes": 93770
-  },
-  {
-   "title": "Rifle with a built in bottle opener?",
-   "views": 564000,
-   "url": "https://www.youtube.com/shorts/olbjFEt4flU",
-   "channel": "@SimpleHistory"
-  },
-  {
-   "title": "Would you take the road less traveled? #shorts",
-   "views": 556000,
-   "url": "https://www.youtube.com/shorts/KWbuAjx95-k",
-   "channel": "@TEDEd"
+   "days_old": 1126,
+   "views_per_day": 1598,
+   "likes": 93755
   },
   {
    "title": "Insane Jobs People Had in Ancient Rome",
@@ -115,9 +103,9 @@
    "views": 1600000,
    "url": "https://www.youtube.com/shorts/QZ_4irZZcyQ",
    "channel": "@TheInfographicsShow",
-   "days_old": 1133,
-   "views_per_day": 1412,
-   "likes": 57031
+   "days_old": 1135,
+   "views_per_day": 1409,
+   "likes": 57018
   },
   {
    "title": "What If You Only Drank Coke",
@@ -126,19 +114,19 @@
    "channel": "@TheInfographicsShow"
   },
   {
-   "title": "Meet The Infographics Show Voice Over",
-   "views": 1000000,
-   "url": "https://www.youtube.com/shorts/drPjV8zkYmw",
-   "channel": "@TheInfographicsShow",
-   "days_old": 753,
-   "views_per_day": 1328,
-   "likes": 54526
-  },
-  {
    "title": "Normal Day Jobs of Infamous Serial Killers",
    "views": 484000,
    "url": "https://www.youtube.com/shorts/0LXTt0EssiM",
    "channel": "@TheInfographicsShow"
+  },
+  {
+   "title": "Meet The Infographics Show Voice Over",
+   "views": 1000000,
+   "url": "https://www.youtube.com/shorts/drPjV8zkYmw",
+   "channel": "@TheInfographicsShow",
+   "days_old": 755,
+   "views_per_day": 1324,
+   "likes": 54644
   },
   {
    "title": "The World's Most Dangerous Borders",
@@ -151,13 +139,13 @@
    "views": 725000,
    "url": "https://www.youtube.com/shorts/tbwFWiMSWwM",
    "channel": "@TheInfographicsShow",
-   "days_old": 636,
-   "views_per_day": 1139,
-   "likes": 13502
+   "days_old": 638,
+   "views_per_day": 1136,
+   "likes": 13501
   },
   {
    "title": "Maus Tank: Outrun by a Jogging Soldier",
-   "views": 378000,
+   "views": 379000,
    "url": "https://www.youtube.com/shorts/sEDXmBPyxyA",
    "channel": "@SimpleHistory"
   },
@@ -174,13 +162,25 @@
    "channel": "@TheInfographicsShow"
   },
   {
-   "title": "The Scariest Natural Disasters Caught On Camera 🌪 #shorts",
-   "views": 999000,
-   "url": "https://www.youtube.com/shorts/CcP0RfXLuAk",
-   "channel": "UCxqX-Q5IfGmltH5fOtUDIgg",
-   "days_old": 1363,
-   "views_per_day": 732,
-   "likes": 15849
+   "title": "Japan's First Naval Defeat of WWII",
+   "views": 363000,
+   "url": "https://www.youtube.com/shorts/w3SSx44tqmk",
+   "channel": "@TheHistoryGuyChannel"
+  },
+  {
+   "title": "How Afghanistan Defeated the Soviet Union #sovietunion",
+   "views": 362000,
+   "url": "https://www.youtube.com/shorts/yPKe46_rbbs",
+   "channel": "@TheInfographicsShow"
+  },
+  {
+   "title": "Would you take the road less traveled? #shorts",
+   "views": 556000,
+   "url": "https://www.youtube.com/shorts/KWbuAjx95-k",
+   "channel": "@TEDEd",
+   "days_old": 1372,
+   "views_per_day": 405,
+   "likes": 26120
   }
  ]
 }

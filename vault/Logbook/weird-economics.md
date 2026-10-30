@@ -50,3 +50,17 @@ Subscribers gained: 1
 Stayed to watch (%):
 Average % viewed:
 My notes: Read from YouTube Studio by Claude on 2026-10-27, its first day: 1,220 views, +1 subscriber, Shorts feed 93.2%. Likes, stayed-to-watch and average % viewed not reported yet.
+
+## Why Congress Made Onion Futures Illegal
+Made: 2026-10-28 | Written by: Gemini (solo) | Length: 0:47.9 | Folder: output\weird-economics\2026-10-28_why-congress-made-onion-futures-illegal
+Topic: In 1955, onion farmer Vincent Kosuga bought up 30 million pounds of onions to corner 98% of Chicago's supply, then shorted the market and dumped his hoard until a 50-pound sack crashed from $2.75 to 10 cents—making onions worth less than the empty bags holding them. | Story shape: countdown to disaster
+Hook line: "One farmer made millions driving onion prices down to ten cents." | Hook title: CHEAPER THAN BAGS
+
+Posted on:
+Views:
+Likes:
+Comments:
+Subscribers gained:
+Stayed to watch (%):
+Average % viewed:
+My notes:

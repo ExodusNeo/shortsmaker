@@ -411,3 +411,31 @@ Subscribers gained: 1
 Stayed to watch (%):
 Average % viewed:
 My notes: Read from YouTube Studio by Claude on 2026-10-27, its first day: 519 views, +1 subscriber, Shorts feed 83.3%. Likes, stayed-to-watch and average % viewed not reported yet.
+
+## How Drinking Bacteria Won a Nobel Prize
+Made: 2026-10-29 | Written by: Gemini (solo) | Length: 0:42.7 | Folder: output\strange-history\2026-10-29_how-drinking-bacteria-won-a-nobel-prize
+Topic: Frustrated that medical experts dismissed his theory that bacteria caused stomach ulcers, Australian doctor Barry Marshall cultured a beaker of lethal broth and drank it himself. The twist is that after suffering severe vomiting and agonizing gastritis to prove his point, his reckless self-experiment cured millions of patients and won him the Nobel Prize. | Story shape: myth vs truth
+Hook line: "A doctor swallowed a beaker of living bacteria." | Hook title: HE DRANK THE GERMS
+
+Posted on:
+Views:
+Likes:
+Comments:
+Subscribers gained:
+Stayed to watch (%):
+Average % viewed:
+My notes:
+
+## How Rivals Accidentally Made Him Rich
+Made: 2026-10-30 | Written by: Gemini (solo) | Length: 0:44.4 | Folder: output\strange-history\2026-10-30_how-rivals-accidentally-made-him-rich
+Topic: In the 1790s, rivals tricked eccentric merchant Timothy Dexter into suicidal investments like shipping warming pans to the tropical Caribbean and coal to Newcastle. The twist is that freak coincidences—like islanders buying the pans as molasses ladles and a sudden British coal strike—made him fabulously wealthy every single time. | Story shape: chain of unlikely events
+Hook line: "He shipped brass bed warmers straight to the tropical Caribbean." | Hook title: HEATING A JUNGLE
+
+Posted on:
+Views:
+Likes:
+Comments:
+Subscribers gained:
+Stayed to watch (%):
+Average % viewed:
+My notes:

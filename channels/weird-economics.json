@@ -16,7 +16,8 @@
   "done_topics": [
     "In 1923, after Wall Street short sellers tried to tank his grocery chain Piggly Wiggly, founder Clarence Saunders borrowed $10 million and quietly bought up 198,872 of the company's 200,000 existing shares—cornering 99.4% of the stock and trapping Wall Street for millions until the New York Stock Exchange changed its own rules mid-trade to save its members and bankrupt him.",
     "Ivar Kreuger, Sweden's 'Match King', worked out that matches were a bigger business than banking. He lent cash-strapped governments huge sums, including $75 million to France and $125 million to Weimar Germany, and in return got a legal national monopoly on matches. By 1930 he controlled about two-thirds of the world's match production. The twist: the whole empire was really a pyramid that needed constant refinancing, propped up by $142 million in Italian government bonds he forged himself. It fell apart when he shot himself in Paris in 1932, which set off the 'Kreuger Crash'.",
-    "In 1981, American Airlines sold an unlimited lifetime first-class AAirpass for $250,000 to cure a cash crunch, but frequent flyer Steve Rothstein took over 10,000 flights and 30 million miles—costing the airline $1 million a year in lost revenue until they deployed private investigators to terminate his contract."
+    "In 1981, American Airlines sold an unlimited lifetime first-class AAirpass for $250,000 to cure a cash crunch, but frequent flyer Steve Rothstein took over 10,000 flights and 30 million miles—costing the airline $1 million a year in lost revenue until they deployed private investigators to terminate his contract.",
+    "In 1955, onion farmer Vincent Kosuga bought up 30 million pounds of onions to corner 98% of Chicago's supply, then shorted the market and dumped his hoard until a 50-pound sack crashed from $2.75 to 10 cents—making onions worth less than the empty bags holding them."
   ],
   "research_seeds": {
     "handles": [
@@ -39,11 +40,11 @@
   },
   "brain": "gemini-only",
   "veo": true,
-  "short_form": false,
+  "short_form": true,
   "recent_shapes": [
-    "one person against the odds",
     "rise and fall",
-    "the hidden reason"
+    "the hidden reason",
+    "countdown to disaster"
   ],
   "recent_looks": [
     "halftone",

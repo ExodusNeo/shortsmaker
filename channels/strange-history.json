@@ -40,7 +40,9 @@
     "In 1910, British prankster Horace de Vere Cole sent a fake telegram that tricked the Royal Navy into rolling out a red carpet on its top-secret flagship, HMS Dreadnought, for the 'Emperor of Abyssinia'—actually Cole and five friends, including a young Virginia Woolf, in robes and glued-on beards shouting 'Bunga! Bunga!' at the guns while Woolf's own cousin gave them the tour without recognizing her. The twist is that when Cole exposed the stunt in the press, the furious Navy found he had broken no law, and when the real Ethiopian ruler visited England later, crowds yelled 'Bunga! Bunga!' at his carriage and he asked to inspect the Navy's ships too.",
     "In 1941, Royal Air Force fighter ace Douglas Bader, who flew with two artificial legs after a pre-war crash, was shot down over occupied France and lost one of his prosthetics while escaping the cockpit. The British and Germans arranged a temporary ceasefire so the RAF could parachute a replacement leg into France, but the twist is that Bader strapped it on, immediately used it to escape out a hospital window on a bedsheet rope, and forced the Germans to lock his legs away every night.",
     "While confined in an asylum, former army surgeon William Chester Minor volunteered for the new Oxford English Dictionary and sent in over ten thousand historical citations, becoming the project's single most prolific contributor. The twist is that editor James Murray spent twenty years believing Minor was a wealthy gentleman scholar, only to discover upon visiting in person that his greatest researcher was an inmate in Broadmoor Criminal Lunatic Asylum.",
-    "In 1944 at the Battle of Arnhem, British paratrooper Major Digby Tatham-Warter led his men into combat carrying a bowler hat and an umbrella because he could never remember passwords and claimed only an Englishman would bring an umbrella to a war. The twist is that after disabling a German armored car by jamming his umbrella through the driver's slit, he deadpanned that he only brought it because the weather forecast called for rain."
+    "In 1944 at the Battle of Arnhem, British paratrooper Major Digby Tatham-Warter led his men into combat carrying a bowler hat and an umbrella because he could never remember passwords and claimed only an Englishman would bring an umbrella to a war. The twist is that after disabling a German armored car by jamming his umbrella through the driver's slit, he deadpanned that he only brought it because the weather forecast called for rain.",
+    "Frustrated that medical experts dismissed his theory that bacteria caused stomach ulcers, Australian doctor Barry Marshall cultured a beaker of lethal broth and drank it himself. The twist is that after suffering severe vomiting and agonizing gastritis to prove his point, his reckless self-experiment cured millions of patients and won him the Nobel Prize.",
+    "In the 1790s, rivals tricked eccentric merchant Timothy Dexter into suicidal investments like shipping warming pans to the tropical Caribbean and coal to Newcastle. The twist is that freak coincidences—like islanders buying the pans as molasses ladles and a sudden British coal strike—made him fabulously wealthy every single time."
   ],
   "research_seeds": {
     "handles": [
@@ -72,15 +74,15 @@
   },
   "cta_line": "for more strange history",
   "recent_shapes": [
-    "the hidden reason",
-    "mystery solved",
-    "one person against the odds"
+    "one person against the odds",
+    "myth vs truth",
+    "chain of unlikely events"
   ],
   "brain": "gemini-only",
   "veo": true,
   "short_form": false,
   "recent_looks": [
-    "halftone",
-    "riso"
+    "riso",
+    "engraving"
   ]
 }
