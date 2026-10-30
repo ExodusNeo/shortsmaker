@@ -13,7 +13,7 @@ from PIL import Image
 
 from shortsmaker import (
     audio_mix, blender_plan, blender_render, edit_project, editplan, frame_render, gpu, image_sources, media_tools,
-    motion, opener_render, photo_prep, picker, picture_pool, plan_rules, remotion_render, review, seo, session, style_lab,
+    motion, photo_prep, picker, picture_pool, plan_rules, remotion_render, review, seo, session, style_lab,
 )
 from shortsmaker.config import FPS, H, MUSIC, OUTPUT, PALETTES, SFX, SRC, STYLE_SLOTS, W, hex_rgb
 
@@ -94,50 +94,24 @@ def drawn_thumbnail(short: dict, work: Path, bounds: list[float]) -> tuple[Path,
             "no real photo of the structure was found: the thumbnail uses a drawing")
 
 
-def use_opener(short: dict, bounds: list[float], work: Path, clips: dict, images: list, sources: list) -> str | None:
-    """Scene 1 plays its Blender opener when one renders (opener_render.py, 2026-10-27): its clip, its first frame as
-    the still, and no motion graphic over it. Otherwise scene 1 stays as it is (its motion-graphic opener when
-    picker.opener_graphic gave it one) and the reason comes back as a CHECK line (or the planner's own note when
-    there was no plan). short["opening_note"] says which opener played, for the edit plan's Opening line."""
-    short["opener_used"], short["opening_note"] = False, None
+def use_opener(short: dict, clips: dict, sources: list) -> str | None:
+    """Scene 1 opens on its motion-graphic opener (picker.opener_graphic); an AI clip of the strangest moment (the
+    owner's or LTX's, once the graphic failed its fixes: review.fix_opener_graphic) plays instead of it.
+    short["opening_note"] says which opener played, for the edit plan's Opening line. Returns a CHECK line when the
+    channel wanted an opener and scene 1 got none."""
+    short["opening_note"] = None
     first = short["scenes"][0]
+    if not short.get("opener_graphic"):  # the channel has no openers
+        return None
     if first.get("opener_clip") and clips.get(0) and clips[0].name.startswith("clip"):  # AI clip, not archival film
         first["full"] = None  # the clip plays instead of the motion graphic
         maker = "made by you" if "_veo" in clips[0].name else "made on this PC"
         tried = f" ({short['opener_graphic_failed']})" if short.get("opener_graphic_failed") else ""
-        head = (short.get("opener_check") or "opener: Blender opener failed").removeprefix("opener: ")
-        short["opening_note"] = f"{head} -> AI clip of the strangest moment ({maker}){tried}"
+        short["opening_note"] = f"AI clip of the strangest moment ({maker}){tried}"
         sources[0] += f" | AI clip of the strangest moment ({maker})"
-        return short.get("opener_check")
-
-    def failed(why: str | None) -> str | None:
-        if why and short.get("opener"):  # remembered for the automatic fix rounds (render clears it otherwise)
-            short["opener_failed"] = why
-        if why and short.get("opener_graphic"):
-            head = (why.removeprefix("opener: ") if why.startswith("opener: no template")  # Blender never tried
-                    else f"Blender opener failed ({why.removeprefix('opener failed: ')})")
-            short["opening_note"] = (f"{head} -> {short['opener_graphic']}"
-                                     + ("" if short["scenes"][0].get("full") else "; scene 1 opens on its picture"))
-        return why
-
-    if short.get("opener_failed"):  # a fix round: the same plan would build and fail the same way again
-        return failed(short["opener_failed"])
-    try:  # an opener never stops a run (a failing search once escaped and the Short's folder was deleted)
-        clip, why = opener_render.render_opener(short, bounds[1] - bounds[0], work)
-        if clip is None:
-            return failed(why or short.get("opener_check"))
-        media_tools.ffmpeg("-y", "-i", str(clip), "-frames:v", "1", "opener_0.jpg", cwd=work)
-        still = Image.open(work / "opener_0.jpg").convert("RGB")
-    except Exception as e:
-        return failed(f"opener failed: {type(e).__name__}: {e}")
-    short["opening_note"] = f"Blender opener: {short['opener']['moment']}"
-    images[0] = still
-    clips[0] = clip
-    short["scenes"][0]["full"] = None
-    short["scenes"][0]["credit_tag"] = None  # the replaced photo's credit must not show on the animation
-    sources[0] = f"drawn in Blender (opener): {short['opener']['moment']}"
-    short["opener_used"] = True
-    return None
+        return None
+    short["opening_note"] = short["opener_graphic"] + ("" if first.get("full") else "; scene 1 opens on its picture")
+    return None if first.get("full") else f"opener: {short['opener_graphic']}"
 
 
 def render(short: dict, ch: dict, folder: Path, state: dict | None = None, fix_round: int = 0) -> None:
@@ -147,8 +121,6 @@ def render(short: dict, ch: dict, folder: Path, state: dict | None = None, fix_r
     work.mkdir(parents=True, exist_ok=True)
     all_words, bounds, images, sources, cues, audio, scene_sounds = [], [0.0], [], [], [], [], []
     short["cta_line"] = ch.get("cta_line") or "for more stories like this"
-    if not fix_round:  # first render or fix.bat: a Blender opener that failed before gets built again
-        short.pop("opener_failed", None)
     if short.get("palette") not in PALETTES:  # planner gave none (or an old plan): a random one
         short["palette"] = random.choice(list(PALETTES))
     session.YELLOW, session.EMPHASIS = (hex_rgb(PALETTES[short["palette"]][k]) for k in ("accent", "emphasis"))
@@ -162,7 +134,7 @@ def render(short: dict, ch: dict, folder: Path, state: dict | None = None, fix_r
         # real footage first, then a full-screen motion graphic, and only then an AI painting
         weak = [i for i, c in enumerate(choices) if not c["bg"] and not short["scenes"][i].get("full")]
         picker.rescue_graphics(short, weak, {i: "no fitting picture was found" for i in weak})
-        if short.get("opener") or short.get("opener_check"):  # the channel opens on animations: the fallback one
+        if session.RULE_SETTINGS.get("opener") == "animated":  # the channel opens every Short on an animation
             short["opener_graphic"] = picker.opener_graphic(short)
         plan_rules.mark_details(short, choices, work)
     for i, sc in enumerate(short["scenes"]):  # an evidence board needs its real photos (3 or more)
@@ -313,15 +285,15 @@ def render(short: dict, ch: dict, folder: Path, state: dict | None = None, fix_r
                   for a, _ in blender_render.scene_frames(bounds)]
     else:
         first = short["scenes"][0]
-        if session.VEO_HANDOFF and short.get("opener_check") and not short.get("opener") and not first.get("full"):
-            # no Blender template fits and no motion-graphic opener came back: the strangest moment goes to the
-            # owner's clip hand-off (LTX if they skip it). A graphic opener goes first and is handed off only after
-            # its fixes fail (owner, 2026-10-30; review.fix_opener_graphic)
+        if session.VEO_HANDOFF and short.get("opener_graphic") and not first.get("full"):
+            # no motion-graphic opener came back: the strangest moment goes to the owner's clip hand-off (LTX if
+            # they skip it). A graphic opener goes first and is handed off only after its fixes fail (owner,
+            # 2026-10-30; review.fix_opener_graphic)
             first["animate"] = first["motion_people"] = first["opener_clip"] = True
             first["motion"] = first.get("motion") or f"act out the story's strangest moment: {first['narration']}"
         clips = gpu.local_clips(short, work, sources, bounds, {i: c["film"] for i, c in enumerate(choices)
                                                              if c.get("film") and not short["scenes"][i].get("full")})
-    opener_check = None if drawn else use_opener(short, bounds, work, clips, images, sources)
+    opener_check = None if drawn else use_opener(short, clips, sources)
     for i, sc in enumerate(short["scenes"]):  # keep text callouts off the subject's face (maps and marks are full cards)
         if sc["graphic"] and sc["graphic"]["style"] != "mark":
             film = choices[i]["film"]["path"] if clips.get(i) == work / f"film{i}.mp4" else None
@@ -442,8 +414,8 @@ def render(short: dict, ch: dict, folder: Path, state: dict | None = None, fix_r
     found, opener = review.first_second_check(folder / "short.mp4", short, choices, folder / "storyboard.jpg", work)
     issues += found
     weak_graphic = review.weak_opener_graphic(short, fixes, found)  # takes scene 1 out of `fixes`
-    # once per Short; a Blender or motion-graphic opener stays (a swapped picture would play under the graphic)
-    if short.get("opener_swapped") or short.get("opener_used") or short["scenes"][0].get("full"):
+    # once per Short; a motion-graphic opener stays (a swapped picture would play under the graphic)
+    if short.get("opener_swapped") or short["scenes"][0].get("full"):
         opener = None
     print("  quality check: " + (f"{len(issues)} thing(s) to look at before uploading:" if issues else "OK, nothing to fix"))
     for issue in issues:
@@ -460,8 +432,6 @@ def render(short: dict, ch: dict, folder: Path, state: dict | None = None, fix_r
     credit_text = f"\n\nMusic:\n{credit.read_text(encoding='utf-8').strip()}" if credit and credit.exists() else ""
     image_credits = []  # credited material (CC, Internet Archive, Openverse); public domain needs nothing
     for k, (sc, c) in enumerate(zip(short["scenes"], choices)):
-        if k == 0 and short.get("opener_used"):  # scene 1's photo was replaced by the Blender opener
-            continue
         for _, title, who, site in (c.get("full_pics") or []) if sc.get("full") else []:
             if who:
                 image_credits.append(f"{re.sub(r'[.](jpe?g|png|tiff?|gif|svg)$', '', title.removeprefix('File:'), flags=re.I)} by {who} ({site})")
@@ -472,10 +442,6 @@ def render(short: dict, ch: dict, folder: Path, state: dict | None = None, fix_r
                 image_credits.append(f"{name} by {c[kind][2]} ({site})")
     if drawn and thumb_credit:
         image_credits.append(f"Thumbnail: {thumb_credit}")
-    if short.get("opener_used"):  # CC-BY models in the Blender opener
-        image_credits += [f"3D model: {c}" for c in short.get("opener_credits") or []]
-    elif (short["scenes"][0].get("full") or {}).get("credit"):  # the CC-BY model in a three.js model opener
-        image_credits.append(f"3D model: {short['scenes'][0]['full']['credit']}")
     if image_credits:
         credit_text += "\n\nFootage and image credits:\n" + "\n".join(dict.fromkeys(image_credits))
     (folder / "upload.txt").write_text(

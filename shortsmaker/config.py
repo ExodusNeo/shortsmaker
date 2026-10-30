@@ -17,11 +17,6 @@ LOGBOOK = VAULT / "Logbook"  # <channel>.md: each Short made, with the YouTube n
 OUTPUT = ROOT / "output"  # each channel's Shorts go in output/<name>/
 REMOTION = ROOT / "remotion"  # React/Remotion renderer for motion-graphics-heavy plans
 BLENDER = Path(r"D:\Blender\blender.exe")  # headless Blender for channels with visuals: blender (blender/build_scene.py)
-PEOPLE_DIR = ROOT / "blender" / "assets" / "people"  # Quaternius people, packed by blender/pack_people.py (gitignored)
-PEOPLE_BLEND, PEOPLE_JSON = PEOPLE_DIR / "people.blend", PEOPLE_DIR / "people.json"
-LIBRARY = ROOT / "blender" / "assets" / "library"  # opener models fetched through the owner's Blender (gitignored)
-BLENDER_TMP = ROOT / "cache" / "blender_tmp"  # the MCP add-on's download temp folder, kept off the nearly full C:
-MCP_PORT = 9876  # the Blender MCP add-on's socket (Start MCP Server in Blender's N-panel)
 SHOTCUT = Path(r"D:\Shotcut\shotcut.exe")  # open-source editor for fixing by hand what the fix rounds left (edit.mlt)
 # Style library (2026-10-19): photo looks, overlays and transitions, presets + owner-approved AI inventions
 STYLE_DIR = REMOTION / "src" / "style"

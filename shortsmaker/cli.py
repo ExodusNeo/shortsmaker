@@ -8,23 +8,10 @@ from datetime import date
 from pathlib import Path
 
 from shortsmaker import (
-    blender_link, blender_render, channel_profiles, llm, logbook, picker, picture_pool, review, rules, seo, session,
+    blender_render, channel_profiles, llm, logbook, picker, picture_pool, review, rules, seo, session,
     short_render, style_lab, writing,
 )
 from shortsmaker.config import OUTPUT
-
-
-BLENDER_NOTE = ("Blender MCP is off: new opener models can't be fetched. Open Blender, press N, click Start MCP Server, "
-                "then press Enter to retry (or S to skip).")
-
-
-def blender_note(interactive: bool) -> None:
-    """The MCP server has to be started in Blender each time (owner, 2026-10-27): say so until it answers, or the
-    owner skips (openers then use library models only); a scripted run only says it once."""
-    while not blender_link.ping():
-        print(BLENDER_NOTE)
-        if not interactive or input("> ").strip().lower() == "s":
-            return
 
 
 def main() -> None:
@@ -40,8 +27,6 @@ def main() -> None:
     name = sys.argv[2] if len(sys.argv) > 2 else channel_profiles.pick_channel()
     rules.require_rules(name)  # stops on a draft, a broken file or no file yet, before last.txt changes
     channel_profiles.use_channel(name)
-    if session.RULE_SETTINGS.get("opener") == "blender":  # new opener models come through the owner's Blender
-        blender_note(len(sys.argv) < 2)
     n = int(sys.argv[1]) if len(sys.argv) > 1 else channel_profiles.ask_count()
     ch, failed = channel_profiles.load_channel(), 0
     raw_choice = sys.argv[3].lower().replace("_", "-") if len(sys.argv) > 3 else None

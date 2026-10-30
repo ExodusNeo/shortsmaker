@@ -5,7 +5,7 @@
 
 export type SkinName = 'parchment' | 'blueprint' | 'dossier' | 'hud';
 export type FullBase = {
-	type: 'board' | 'journey' | 'number' | 'document' | 'custom' | 'model';
+	type: 'board' | 'journey' | 'number' | 'document' | 'custom';
 	seed: number;
 	skin?: SkinName;
 };
@@ -62,14 +62,4 @@ export type CustomFull = FullBase & {
 	photos?: CustomPhoto[];
 };
 
-// A low-poly 3D model (three.js) of the one real thing at the heart of the hook: motion-graphic openers only.
-export type ModelFull = FullBase & {
-	type: 'model';
-	src: string; // job/model<i>.glb, exported from the opener model library
-	label: string;
-	note?: string;
-	at: number;
-	noteAt?: number;
-};
-
-export type AnyFull = JourneyFull | NumberFull | BoardFull | DocumentFull | CustomFull | ModelFull;
+export type AnyFull = JourneyFull | NumberFull | BoardFull | DocumentFull | CustomFull;

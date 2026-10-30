@@ -35,13 +35,9 @@ everything (voice, paintings, video). Real archival/online pictures and film are
 - **No 2.5D parallax** (it bent pictures). Stills get a plain zoom/pan.
 - **Code map**: after every commit that changes code, refresh `code-map/` + `graphify-out/` as its own commit
   ("docs: refresh code map"); commands in Layout.
-- **Blender work** (`blender/*.py`, openers, people): load the Blender skills first (`blender-core`, then the one for
-  the job: `blender-character-rigging`, `blender-animation`, `blender-lighting-lookdev` / `blender-time-of-day`,
-  `blender-rendering`, `blender-simulation`, `blender-geometry-nodes`; Gemini has copies in
-  `~\.gemini\config\plugins\blender-skills\skills\`, re-copy after updating). Look at every change by eye in the
-  **owner's live Blender window** (see Openers), never only in headless strips.
-- **The owner's Blender window stays on their one scene, "Scene"**: never add or switch to another scene (a new scene
-  means restarting the MCP). The MCP must be started by hand each time (Blender, N panel, Start MCP Server).
+- **Blender work** (`blender/*.py`, engineering-failures only): load the Blender skills first (`blender-core`, then
+  the one for the job). The Blender openers, people and model library were removed 2026-10-30 (owner: the drawn and
+  motion-graphic openers are more consistent); `git log -- shortsmaker/opener_render.py` has them.
 - Hardware: RTX 5060 8 GB, 32 GB RAM, Ryzen 7 5700X3D, Windows 11; Roblox, Wallpaper Engine, Discord and Chrome are
   often open (VRAM/RAM). Page file is only 2 GB.
 
@@ -56,14 +52,14 @@ everything (voice, paintings, video). Real archival/online pictures and film are
 | `channels/<name>.rules.md` | The channel's rules, read by `##` heading (see Rules per channel) |
 | `vault/` | Obsidian vault: `Logbook/<name>.md` (the owner's results log), `Shorts/<channel>/<folder>.md` (one page per Short, `vault_page()`), `Home.md`. `make_shorts.py notes` rebuilds the pages |
 | `code-map/`, `graphify-out/` | graphify code map (second Obsidian vault + `graph.html`). Refresh: `C:\Python314\python.exe -m graphify update .`, delete `code-map\*.md` and `code-map\graph.canvas` (keep `.obsidian`), `C:\Python314\python.exe -m graphify export obsidian --dir code-map`. No auto hook (needs the owner's go-ahead) |
-| `blender/` | Blender scripts (plain bpy, run headless by `D:\Blender\blender.exe` 5.2.1): engineering-failures drawings (`build_scene.py`, `look.py`, `parts.py`, `templates.py`, `failures.py`) and openers (`opener_scene.py`, `moves.py`, `scene_kit.py`, `people.py`, `look_toon.py`, `opener_checks.py`, `export_glb.py`); tables `opener_tables.json`, `shot_templates.json`; models `assets/library/` (Poly Pizza, gitignored), people `assets/people/` (Quaternius, gitignored) |
+| `blender/` | Blender scripts (plain bpy, run headless by `D:\Blender\blender.exe` 5.2.1): engineering-failures drawings (`build_scene.py`, `look.py`, `parts.py`, `templates.py`, `failures.py`) |
 | `remotion/src/` | `Short.tsx`, `Graphics.tsx`, `Cards.tsx`, `Extras.tsx`, `MapCard.tsx`, `Captions.tsx`; `full/` = full-screen motion graphics; `style/` = style library (see those sections) |
 | `remotion/test_props/` | Test scenes for full-screen graphics (+ `media/`); `tests/render_full.py` renders them into `test_renders/` |
 | `local_ai/` | GPU worker `gen.py` (own venv: Kokoro, SDXL-Lightning, LTX-Video 0.9.8); voice worker `qwen_voice.py` (`qwen_venv`: Qwen3-TTS, MMS aligner, VoiceStudio client); models in `hf/` |
 | `colab/` | `h3_clips.ipynb` + `h3_run.py` + `README.md`: AI video clips the owner makes on Colab Pro (gutierrezdishann@gmail.com, A100) |
 | `music/<mood>/`, `sfx/`, `sfx/story/` | Music by mood (`.mp3.txt` = credit; somber is empty), synthesized SFX, story sounds (owner's files + CC0 Freesound) |
 | `branding/` | Profile picture, banner, channel text |
-| `cache/` | Downloads (30-day prune), `pools/` (a topic's pictures + AI picture list), `ideas/` (Wikipedia idea pages), `shot_templates/` (template renders) |
+| `cache/` | Downloads (30-day prune), `pools/` (a topic's pictures + AI picture list), `ideas/` (Wikipedia idea pages) |
 | `output/<channel>/<date>_<slug>/` | `short.mp4`, `thumbnail.jpg`, `upload.txt`, `captions.srt`, `edit_plan.txt`, `storyboard.jpg`, `work/` (kept 7 days), `veo/` (clip hand-off), `edit.mlt` + `edit_in_shotcut.bat` (only when CHECK lines are left) |
 | `docs/superpowers/` | Specs and plans of the bigger features (dated names) |
 | `ffmpeg/` | FFmpeg build (put on PATH by `config.py`) |
@@ -97,7 +93,6 @@ are stored LF (`.gitattributes`).
 | `review.py` | Quality check, visual review, first-second check, review fixes, repaints, storyboard |
 | `editplan.py` | `edit_plan()`, `scene_cues()` (graphic timing) |
 | `short_render.py` | `render()`, work state, `use_opener()` |
-| `opener_plan.py`, `opener_render.py`, `blender_link.py` | Blender openers: template fill, headless build/review, model library + Poly Pizza fetch through the MCP |
 | `blender_plan.py`, `blender_render.py` | Blender-drawn channels: build plans, headless render |
 | `edit_project.py` | Shotcut timeline for hand fixes |
 | `logbook.py` | Logbook entries, vault pages |
@@ -137,7 +132,7 @@ Rules that keep it working:
    (`direct_scripts()`, can't change narration: per scene `pic`, image/video search, shot, move, graphic, person,
    emphasis, transition, `ai_image`, animate/motion, sound, optional `full`; per Short palette, music mood, look,
    thumbnail, SEO drafts) -> fact check against the Wikipedia text (rewrites unsupported lines, drops wrong graphics,
-   myths go to the profile) -> opener plan (Openers).
+   myths go to the profile).
    Lengths: 95-125 words in 11-16 scenes (~40-50 s), or `SHORT_FORM` 60-72 words in 8-10. Scenes of 4-10 words
    (`SCENE_WORDS`), up to 16 where one picture needs time; sentences may run across cuts (`SCENE_CUTS`). The hook
    opens inside the strangest moment; story rules (but / so / you see, answer last) live in each rules file.
@@ -173,56 +168,31 @@ Rules that keep it working:
     upload.txt (credits for every non-PD source and CC-BY 3D model; "altered or synthetic content: Yes" when AI was
     used), storyboard, thumbnail, captions.srt, logbook entry, vault page, `work/state.json` for fix.bat.
 
-## Openers (scene 1 of every Short on `opener: blender` channels)
-- **Shot templates** (`blender/shot_templates.json`): `chop` (a bird on a block loses its head; the body hops off
-  and staggers away), `slice` (a food on a board cut into 4-6 rings), `falls_on` (a sack/bag drops from 2.5 m beside
-  a person who flinches and collapses; a second person cheers or despairs), `hand_over` (one person drops a small
-  prop; another walks over, picks it up and walks/runs off), `sink` (a ship tilts and goes down on water, still
-  going at the last frame; no people), `chase` (one person runs off, a second runs after them; the camera rides with
-  the middle of the pair, `opener_scene.camera` "together"). Sink + chase added 2026-10-29 after the owner pointed out
-  4 templates fit too few stories (past topics: sinkings x4, chases x3), and `drink` (a person lifts a cup to the
-  face, it tips back and vanishes, then they collapse, cheer or despair). No clip lifts a hand to the mouth, so the
-  `drink` people move (`people.drink`) pulls the right fist in front of the measured face with an IK on the forearm;
-  the cup vanishing is the owner's gag (no mouths). Flinch was dropped as its reaction: it doesn't read.
-  The planner (`opener_plan.plan_openers`) only picks one
-  and fills its slots; `fill_template` + `clean_opener` check every value. Each template passed every check with
-  the real library and was looked at by eye.
-- **No template fits -> no Blender**: the motion-graphic opener plays (`picker.opener_graphic`, always planned for
-  these channels; the Opening line says `no template fits (...) -> motion graphic: ...`). It goes first and is
-  judged on every render (owner, 2026-10-30: a clip hand-off up front skipped it): the visual review's scene-1
-  finding or a first-second score < 7 makes it weak (`review.weak_opener_graphic`), and the fix rounds fix it
+## Openers (scene 1 of every Short on `opener: animated` channels)
+- **Motion-graphic opener** (`picker.opener_graphic`, planned in `render` for every Short on these channels; Opening
+  line `motion graphic: ...`). It goes first and is judged on every render (owner, 2026-10-30): the visual review's
+  scene-1 finding or a first-second score < 7 makes it weak (`review.weak_opener_graphic`), and the fix rounds fix it
   `OPENER_GRAPHIC_FIXES` (2) times (`review.fix_opener_graphic`: a custom one is redrawn, any other picked again
   with the complaint). Still weak after that on "make AI clips yourself" runs -> scene 1 goes into the owner's clip
   hand-off as the strangest moment (`opener_clip`, 3rd fix round); a skipped one is made by LTX; whichever clip
-  comes back plays instead of the graphic (`use_opener`, Opening line `... -> AI clip of the strangest moment (made
-  by ...) (the motion graphic still looked weak after 2 fixes: ...)`). Without the hand-off it stays a CHECK line.
-  Only a Short with no graphic at all hands scene 1 off on the first render. Same for a failed Blender opener.
-  The hand-off sends close-ups too (it used to skip them, so they quietly went to LTX).
-- **Render** (`opener_render.render_opener`): models from `blender/assets/library` (else Poly Pizza through the
-  owner's Blender, CC0 / CC-BY only; a missing model goes back to the planner, `swap_models`, up to 2), one headless
-  build with checks (overlap, resting, framing, first frame shows subject + threat, blade face, cut shares, moves
-  visibly, staging, hidden), an AI review of key frames, then `work/opener.mp4` plays as scene 1. Any failure plays
-  the motion graphic and keeps the try in `work/opener_tries/`. No fix rounds (free-composed plans passed 0 of ~10).
-  A failure is remembered (`opener_failed`): the automatic fix rounds don't rebuild it; the first render and fix.bat do.
-- Look: EEVEE, AgX, toon bands + ink outlines (`look_toon.apply`), slow-mo hit, camera follows everyone a beat moves.
-  People: Quaternius bodies on one 32-bone rig, 17 clips, 25 roles (`opener_tables.json`).
-- **three.js model graphic** (`remotion/src/full/Model3D.tsx`): a motion-graphic opener only
-  (`{"type": "model", "find", "label", "note"}`); a library model as .glb (`blender/export_glb.py`) drops in and
-  turns under a headline. The model must exist before it is planned (`opener_render.model_for`).
-- **Adding or changing a template**: edit `shot_templates.json`, run `tests\test_shot_templates.py --render`, look at
-  `cache\shot_templates\`, then look in the owner's window. Owner feedback on staging goes in the template or the
-  engine; feedback on what to stage goes in the channel's `## Opener` rules.
-- **Looking in the owner's window**: build headless with job `"save_blend": <path>`, load its objects into a temporary
-  collection in "Scene" (`bpy.data.libraries.load`; never `setup()` live), hide the owner's objects, set the camera,
-  frame range and 1080x1920, `look` through the camera, then restore everything and remove the collection and
-  orphans. Physics (flying pieces, dropped things) doesn't play there (the rigid-body world stays in the build's
-  scene): judge those from the render. The MCP `look` isn't 9:16.
+  comes back plays instead of the graphic (`use_opener`, Opening line `AI clip of the strangest moment (made by ...)
+  (the motion graphic still looked weak after 2 fixes: ...)`). Without the hand-off it stays a CHECK line. Only a
+  Short with no graphic at all hands scene 1 off on the first render. The hand-off sends close-ups too.
+- Known gap: the hand-off's start picture is scene 1's own picture, so a clip can only animate that (the Dexter
+  Short, 2026-10-30, got the woodcut of Dexter walking, not the bed warmers in the tropics).
+- **Drawn opener (next)**: hand-drawn 2D animation in code (claude-animation, MIT, Node canvas + ffmpeg, cloned to
+  `D:\claude-animation-skill`; the owner approved its look on 2026-10-30). One hand-made test:
+  `test_renders\drawn_opener_dexter\` (`film.mjs`, `compare_drawn_vs_flow.mp4`). Plan: a kit of tested parts (ships,
+  people, props) the AI composes per Short, a preview-and-fix check, then the order drawn -> motion graphic -> clip.
+  Running the cloned library from Claude Code needs the owner's permission (blocked as downloaded code).
+- Lessons from the test: the library's over-mode wash lays paper grain on top at 55% and greys colours (paint solid
+  first, then a thin multiplied wash); multiplied washes over the teal sea turn brown into green; keep the story in
+  y 200-1160 (title above, captions below).
 
 ## Full-screen motion graphics (`remotion/src/full/`)
 - 4 skins (`parchment`, `blueprint`, `dossier`, `hud`) chosen from the palette/mood (`short_skin()`).
 - Templates: map `journey`, big `number` (counter + figures, painted silhouette or icons, or `compare` bars),
-  evidence `board` (3-5 real photos), `document` (only the key line readable, underlined as spoken). Plus `model`
-  (openers only).
+  evidence `board` (3-5 real photos), `document` (only the key line readable, underlined as spoken).
 - `custom` (diagram / collage / flow / clock): the AI codes a React scene per Short (`code_custom_scenes()`) from the
   guarded toolkit (`guarded.tsx`: never-overlapping layouts, arrow router, fitted cards, `MIN_MOVE` 0.9 s); lint +
   `tsc` (one repair) + a small preview the coder fixes once (`look_and_fix()`); fallback scene if it still fails.
@@ -243,9 +213,9 @@ ones wait in `library.bat`. The invention path has never run in a real Short.
 
 ## Rules per channel (`channels/<name>.rules.md`)
 Read by `##` heading: `Settings` (`status: draft|ready`, `visuals: photos|blender`, `min_real_pictures`,
-`max_full_planned`, `max_full`, `opener: blender|none`, `hook: moment|money_claim`, `idea_pages`), `Topic picking`,
+`max_full_planned`, `max_full`, `opener: animated|none`, `hook: moment|money_claim`, `idea_pages`), `Topic picking`,
 `Story rules`, `Writing for the picture`, `Lessons from our numbers`, `Opening picture` (must define `- era_ok:`,
-`- sharp:`, `- hook:`), `Picture picking`, `Directing`, `First-second check`, `AI paintings`, `Opener`,
+`- sharp:`, `- hook:`), `Picture picking`, `Directing`, `First-second check`, `AI paintings`,
 `Build plan` (Blender channels). A missing section or `status: draft` stops the run; never another channel's rules.
 A new profile gets drafted rules (`rules.draft_rules()`) and waits for the owner to set `status: ready`.
 `tests/golden/prompts.json` holds strange-history's prompts; re-save (`tests\test_rules.py --save-golden`) only for
@@ -299,14 +269,10 @@ strangest moment. Same story, other channel: Voggle's Mike 2M views vs ours 1.2K
   1,000 subs + 10M Shorts views in 90 days; 20M from 2027-02-01.
 
 ## Open items and next steps
-- **Openers**: no live run with templates yet; the AI review of a template build is unseen. Next: a live run on one
-  Short (read edit_plan.txt's Opening + CHECK lines, `work/opener_tries/`). Then TRELLIS.2 on Colab for models no
-  library has (MIT licence, A100 account; plan in `HANDOFF_history.md` "Opener next steps"). Needed for more
-  templates: an explosion/smoke move (the umbrella officer's "walk through danger" was dropped without one).
-- The run start still asks for the Blender MCP on `opener: blender` channels even when no template will fit.
+- **Openers**: build the drawn opener (see Openers). The motion-graphic fix rounds have no live run yet.
 - run.bat's "press any key" at the end doesn't close the window for the owner: not found in the code; waiting for
   the window's last line.
-- Never seen in a real run: style inventions, question beats, wipes, the Shotcut timeline, the model graphic.
+- Never seen in a real run: style inventions, question beats, wipes, the Shotcut timeline.
 - `channels/gaming.rules.md` is drafted and waiting for the owner's review.
 - `FILM_CROP` (cuts film edges, made for other creators' captions): removing it was offered; owner hasn't decided.
 
@@ -320,10 +286,9 @@ strangest moment. Same story, other channel: Voggle's Mike 2M views vs ours 1.2K
 - Tests, no AI usage (`.venv\Scripts\python.exe tests\<name>.py`): `test_package`, `test_pictures_first`,
   `test_full_scenes`, `test_style`, `test_rules` (golden prompts), `test_story`, `test_first_second`,
   `test_topic_ideas`, `test_h3_handoff`, `test_h3_run`, `test_edit_project`, `test_blender_plan`,
-  `test_blender_render`, `test_blender_link`, `test_opener_plan`, `test_opener_render`, `test_people_tables`;
+  `test_blender_render`, `test_opener_graphic`;
   `tests\run_ts_tests.py` (TypeScript); `local_ai\qwen_venv\Scripts\python.exe tests\test_qwen_voice.py`.
-- With real headless Blender: `test_shot_templates` (~6 min; `--render` to look), `test_opener_checks` (~1 min),
-  `test_opener_scene` (~15 min), `test_blender_run`, `test_blender_scene`; `tests\people_sheet.py` for people.
+- With real headless Blender (engineering-failures): `test_blender_run`, `test_blender_scene`.
 - One full-screen scene: `tests\render_full.py remotion\test_props\<name>.json [--still SECONDS]`.
 - Prompt changes without AI usage: fake `llm.ask_ai` (and `writing.article_text`, `channel_profiles.trend_research`,
   `topic_ideas.pick_ideas`) and read the captured prompts. Single steps: in a scratch script call

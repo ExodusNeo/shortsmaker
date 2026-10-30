@@ -234,7 +234,7 @@ OPENER_GRAPHIC_FIXES = 2  # fixes of a weak motion-graphic opener before scene 1
 def weak_opener_graphic(short: dict, fixes: dict[int, tuple[str, str]], first_second: list[str]) -> str | None:
     """Why scene 1's motion-graphic opener (picker.opener_graphic) looked weak in this render: the visual review's
     scene-1 finding (taken out of `fixes`: a repaint would only change the picture under the graphic) and a low
-    first-second score. None = it passed, or it isn't playing (a Blender opener or an AI clip replaced it)."""
+    first-second score. None = it passed, or it isn't playing (an AI clip replaced it)."""
     sc = short["scenes"][0]
     if not sc.get("full") or sc.get("full_rescued") != "motion-graphic opener" or sc.get("opener_clip"):
         return None

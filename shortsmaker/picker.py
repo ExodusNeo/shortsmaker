@@ -4,7 +4,7 @@ import json
 from pathlib import Path
 
 from shortsmaker import (
-    blender_link, channel_profiles, footage, image_sources, llm, motion, opener_render, picture_pool, plan_rules, rules,
+    channel_profiles, footage, image_sources, llm, motion, picture_pool, plan_rules, rules,
     session, style_lab, writing,
 )
 from shortsmaker.config import DOC_KINDS, ICONS, MAX_FULL, MOVE_NAMES, STYLE_CAPS
@@ -302,9 +302,9 @@ Reply with ONLY JSON: {{"scenes": [{{"scene": 3, "full": null}}]}}""", fatal=Fal
 
 
 def opener_graphic(short: dict, weak: str = "") -> str:
-    """The motion-graphic opener (owner, 2026-10-28): on a channel with Blender openers, scene 1 gets a full-screen
-    motion graphic up front (always one: the AI may not decline); a Blender opener that renders replaces it
-    (short_render.use_opener), one that fails leaves it playing. Outside MAX_FULL and the never-scene-1 /
+    """The motion-graphic opener (owner, 2026-10-28): on a channel with `opener: animated`, scene 1 gets a
+    full-screen motion graphic up front (always one: the AI may not decline); the owner's AI clip replaces it only
+    when it still looks weak after its fixes (review.fix_opener_graphic, short_render.use_opener). Outside MAX_FULL and the never-scene-1 /
     never-two-in-a-row rules (an opener is not a slideshow scene; owner: two in a row is fine). One AI call, a second when the pick is unusable.
     `weak` = the review's complaint about the last opener graphic (review.fix_opener_graphic asks for a new one).
     Returns the edit-plan note: the graphic chosen, or why none was."""
@@ -313,19 +313,15 @@ def opener_graphic(short: dict, weak: str = "") -> str:
         return f"motion graphic: {motion.full_summary(sc['full'])} (already planned)"
     has_doc = any((s.get("full") or {}).get("type") == "document" for s in short["scenes"])
     texts = short.get("research") or {t: writing.article_text(t)[:15000] for t in short.get("wiki_articles", [])[:3]}
-    print(f"  asking {session.BRAIN.capitalize()} for a motion-graphic opener (plays if the Blender opener fails)...")
+    print(f"  asking {session.BRAIN.capitalize()} for a motion-graphic opener...")
     retry = f"The last opener graphic was judged weak: {weak}. Pick a stronger one. " if weak else ""
-    for _ in range(2):  # owner, 2026-10-28: a failed Blender opener always gets a graphic; a bad pick is asked once more
+    for _ in range(2):  # owner, 2026-10-28: an opener always gets a graphic; a bad pick is asked once more
         data = llm.ask_ai(f"""You are the director of a YouTube Short: "{short['title']}". Scene 1 is the hook: "{sc['narration']}".
 The channel opens every Short on an animation of the story's strangest moment. Pick the FULL-SCREEN motion graphic
 that shows this hook's strangest moment most strongly from its first frame (always one: it is the opener).
 Real facts only, from the articles below. Leave out "word"/"words": the opener moves from its first frame.
 {"Not a document: the Short already has one. " if has_doc else ""}Not a board. {retry}Formats:
-{full_formats()};
-{{"type": "model", "find": "eiffel tower", "label": "SOLD FOR SCRAP", "note": "1925"}}
- (a low-poly 3D model of the one real thing at the heart of the moment drops in and turns under a headline;
- find = what a free low-poly model library titles it, a single object, never a person; label and note at most 24
- letters each)
+{full_formats()}
 Wikipedia articles: {json.dumps(texts, ensure_ascii=False)}
 Reply with ONLY JSON: {{"full": {{...}}, "why": "one short sentence"}}""", fatal=False)
         data = data if isinstance(data, dict) else {}
@@ -336,14 +332,8 @@ Reply with ONLY JSON: {{"full": {{...}}, "why": "one short sentence"}}""", fatal
         elif f.get("type") == "board" or (has_doc and f.get("type") == "document"):
             note = "no motion graphic (the AI picked an unusable one)"
         else:
-            f = plan_rules.clean_full(f, [], opener=True)  # no spoken-word triggers: an opener moves from frame 0
+            f = plan_rules.clean_full(f, [])  # no spoken-word triggers: an opener moves from frame 0
             note = None if f else "no motion graphic (the AI's pick failed the format check)"
-            if f and f["type"] == "model":  # its model must exist before it is planned (else ask once more)
-                blend, miss = opener_render.model_for(f["find"])
-                if blend:
-                    f.update(model=str(blend), credit=blender_link.credit(blend))
-                else:
-                    note = f"no motion graphic ({miss})"
         if not note:
             break
         retry = f"Your last pick was rejected: {note.removeprefix('no motion graphic (')[:-1]}. "

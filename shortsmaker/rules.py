@@ -44,7 +44,7 @@ def parse_rules(text: str, label: str) -> tuple[dict[str, str], dict[str, str]]:
                          'to "status: ready".')
     if settings.get("visuals") not in ("photos", "blender"):
         raise SystemExit(f'Stopped: {label}: visuals must be "photos" or "blender", not "{settings.get("visuals", "")}".')
-    for key, allowed in (("opener", ("blender", "none")), ("hook", ("moment", "money_claim"))):  # optional
+    for key, allowed in (("opener", ("animated", "none")), ("hook", ("moment", "money_claim"))):  # optional
         if key in settings and settings[key] not in allowed:
             raise SystemExit(f'Stopped: {label}: {key} must be {" or ".join(map(repr, allowed))}, not "{settings[key]}".')
     if not re.fullmatch(r"[0-9]+", settings.get("min_real_pictures", "")) or int(settings["min_real_pictures"]) < 1:

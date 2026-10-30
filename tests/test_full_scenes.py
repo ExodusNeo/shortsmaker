@@ -939,45 +939,6 @@ def test_fill_money_graphics_and_caps():
 
 
 
-def test_model_graphic():
-    """The three.js model graphic (2026-10-28): motion-graphic openers only, its model found before it is planned
-    (a thing no library has is asked for once more), its credit kept, its headline after the model lands."""
-    from shortsmaker import opener_render
-    m = {"type": "model", "find": "Eiffel Tower", "label": "sold for scrap", "note": "1925"}
-    assert plan_rules.clean_full(dict(m), []) is None  # never a slideshow scene
-    f = plan_rules.clean_full(dict(m), [], opener=True)
-    assert f == {"type": "model", "find": "Eiffel Tower", "label": "SOLD FOR SCRAP", "note": "1925"}, f
-    assert plan_rules.clean_full({"type": "model", "find": "tower"}, [], opener=True) is None  # no headline
-    assert plan_rules.full_cues(f, [], 0.0, 3.0) == {"at": 0.55, "noteAt": 1.05}
-    assert motion.full_summary(f) == '3D model: Eiffel Tower under "SOLD FOR SCRAP", 1925'
-    short = {"title": "T", "research": {"A": "text"},
-             "scenes": [{"narration": "A con man sold the Eiffel Tower.", "full": None, "graphic": None, "person": None}]}
-    saved = (llm.ask_ai, opener_render.model_for)
-    prompts, finds = [], []
-    replies = iter([{"full": {**m, "find": "eiffel tower made of gold"}, "why": "a"}, {"full": dict(m), "why": "the tower itself"}])
-    llm.ask_ai = lambda prompt, **k: prompts.append(prompt) or next(replies)
-    lib = config.ROOT / "tests" / "fixtures" / "openers" / "polypizza_6NTegstc5Jy.blend"  # a CC-BY model
-    opener_render.model_for = lambda find: finds.append(find) or ((lib, None) if find == "Eiffel Tower" else (None, f"no 3D model of '{find}'"))
-    try:
-        note = picker.opener_graphic(short)
-    finally:
-        llm.ask_ai, opener_render.model_for = saved
-    full = short["scenes"][0]["full"]
-    assert note.endswith("(the tower itself)") and full["model"] == str(lib) and "Rooster" in full["credit"], (note, full)
-    assert '"type": "model"' in prompts[0] and "no 3D model of 'eiffel tower made of gold'" in prompts[1], prompts[1][-600:]
-    with tempfile.TemporaryDirectory() as d:  # the props: the model as job/model0.glb, no file paths or credit
-        saved = opener_render.to_glb
-        glb = Path(d) / "m.glb"
-        glb.write_bytes(b"glb")
-        opener_render.to_glb = lambda blend: glb
-        try:
-            props = motion.full_props(short["scenes"][0], {"full": {"at": 0.55, "noteAt": 1.05}}, 0, None, Path(d))
-        finally:
-            opener_render.to_glb = saved
-        assert props["src"] == "job/model0.glb" and (Path(d) / "model0.glb").exists()
-        assert "model" not in props and "credit" not in props and "find" not in props and props["at"] == 0.55
-
-
 if __name__ == "__main__":
     names = [n for n in sorted(globals()) if n.startswith("test_") and (len(sys.argv) < 2 or n in sys.argv[1:])]
     failed = 0

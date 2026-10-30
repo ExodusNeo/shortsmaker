@@ -101,11 +101,10 @@ def number_figures(value: float, each) -> tuple[float, int]:
     return each, max(1, round(value / each))
 
 
-def clean_full(f, said: list[str], opener: bool = False) -> dict | None:
+def clean_full(f, said: list[str]) -> dict | None:
     """One planned full-screen motion graphic, validated (AI output is untrusted); None drops it. Timing words
-    (`word`) are kept only when the narration says them; the renderer times everything else evenly. `opener`
-    also allows the three.js "model" graphic (motion-graphic openers only: picker.opener_graphic finds its model)."""
-    if not (isinstance(f, dict) and (f.get("type") in FULL_TYPES or (opener and f.get("type") == "model"))):
+    (`word`) are kept only when the narration says them; the renderer times everything else evenly."""
+    if not (isinstance(f, dict) and f.get("type") in FULL_TYPES):
         return None
 
     def text(v, n: int, upper: bool = False) -> str:
@@ -166,11 +165,6 @@ def clean_full(f, said: list[str], opener: bool = False) -> dict | None:
                    "find": text(p.get("find") or p.get("label"), 120), **word(p)}
                   for p in (f.get("photos") or []) if isinstance(p, dict) and (text(p.get("label"), 40) or text(p.get("find"), 120))][:3]
         out.update(kind=kind, title=title, brief=brief, words=words, photos=photos)
-    elif f["type"] == "model":
-        find, label = text(f.get("find"), 60), text(f.get("label"), 24, True)
-        if not find or not label:
-            return None
-        out.update(find=find, label=label, **({"note": text(f.get("note"), 24, True)} if text(f.get("note"), 24) else {}))
     else:
         line = text(f.get("key_line"), 160)
         if f.get("kind") not in DOC_KINDS or not line or len(line.split()) > 14:
@@ -515,9 +509,6 @@ def full_cues(full: dict, words: list[tuple[float, float, str]], start: float, e
     if full["type"] == "number":
         t = said(full.get("word"))
         return {"at": round(min(hi, t if t is not None else lo), 3)}
-    if full["type"] == "model":  # the headline stamps in once the model has landed (Model3D's DROP), the note after
-        at = min(hi, lo + 0.55)
-        return {"at": round(at, 3), "noteAt": round(min(hi, at + 0.5), 3)}
     span = spoken_span(words, full["key_line"])
     if span:
         return {"at": round(start + span[0], 3), "lineEnd": round(start + span[1], 3)}
