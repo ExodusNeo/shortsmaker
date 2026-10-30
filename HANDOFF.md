@@ -203,6 +203,7 @@ Rules that keep it working:
   build with checks (overlap, resting, framing, first frame shows subject + threat, blade face, cut shares, moves
   visibly, staging, hidden), an AI review of key frames, then `work/opener.mp4` plays as scene 1. Any failure plays
   the motion graphic and keeps the try in `work/opener_tries/`. No fix rounds (free-composed plans passed 0 of ~10).
+  A failure is remembered (`opener_failed`): the automatic fix rounds don't rebuild it; the first render and fix.bat do.
 - Look: EEVEE, AgX, toon bands + ink outlines (`look_toon.apply`), slow-mo hit, camera follows everyone a beat moves.
   People: Quaternius bodies on one 32-bone rig, 17 clips, 25 roles (`opener_tables.json`).
 - **three.js model graphic** (`remotion/src/full/Model3D.tsx`): a motion-graphic opener only

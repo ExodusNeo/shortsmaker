@@ -327,6 +327,22 @@ def test_use_opener_clip_after_blender_failed():
     assert s["opening_note"] == "Blender opener failed -> AI clip of the strangest moment (made by you) (weak after 2 fixes)"
 
 
+def test_use_opener_failure_not_rebuilt():
+    """A failed Blender opener is remembered: the next render (an automatic fix round) doesn't build it again."""
+    from PIL import Image
+    from shortsmaker import short_render
+    s = {"title": "x", "opener": copy.deepcopy(PLAN), "opener_graphic": "motion graphic: map",
+         "scenes": [{"full": {"type": "journey"}}]}
+    calls, old = [], opener_render.render_opener
+    opener_render.render_opener = lambda *a, **k: calls.append(1) or (None, "opener failed: the axe floats")
+    try:
+        for _ in range(2):
+            assert short_render.use_opener(s, [0.0, 2.0], Path("."), {}, [Image.new("RGB", (8, 8))], ["x"])                 == "opener failed: the axe floats"
+        assert calls == [1] and s["opening_note"].startswith("Blender opener failed (the axe floats)"), s["opening_note"]
+    finally:
+        opener_render.render_opener = old
+
+
 def test_use_opener_planner_check():
     from shortsmaker import short_render
     s = {"title": "x", "opener_check": "opener: no usable plan", "scenes": [{"full": None}]}

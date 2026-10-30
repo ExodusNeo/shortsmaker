@@ -111,6 +111,8 @@ def use_opener(short: dict, bounds: list[float], work: Path, clips: dict, images
         return short.get("opener_check")
 
     def failed(why: str | None) -> str | None:
+        if why and short.get("opener"):  # remembered for the automatic fix rounds (render clears it otherwise)
+            short["opener_failed"] = why
         if why and short.get("opener_graphic"):
             head = (why.removeprefix("opener: ") if why.startswith("opener: no template")  # Blender never tried
                     else f"Blender opener failed ({why.removeprefix('opener failed: ')})")
@@ -118,6 +120,8 @@ def use_opener(short: dict, bounds: list[float], work: Path, clips: dict, images
                                      + ("" if short["scenes"][0].get("full") else "; scene 1 opens on its picture"))
         return why
 
+    if short.get("opener_failed"):  # a fix round: the same plan would build and fail the same way again
+        return failed(short["opener_failed"])
     try:  # an opener never stops a run (a failing search once escaped and the Short's folder was deleted)
         clip, why = opener_render.render_opener(short, bounds[1] - bounds[0], work)
         if clip is None:
@@ -143,6 +147,8 @@ def render(short: dict, ch: dict, folder: Path, state: dict | None = None, fix_r
     work.mkdir(parents=True, exist_ok=True)
     all_words, bounds, images, sources, cues, audio, scene_sounds = [], [0.0], [], [], [], [], []
     short["cta_line"] = ch.get("cta_line") or "for more stories like this"
+    if not fix_round:  # first render or fix.bat: a Blender opener that failed before gets built again
+        short.pop("opener_failed", None)
     if short.get("palette") not in PALETTES:  # planner gave none (or an old plan): a random one
         short["palette"] = random.choice(list(PALETTES))
     session.YELLOW, session.EMPHASIS = (hex_rgb(PALETTES[short["palette"]][k]) for k in ("accent", "emphasis"))
