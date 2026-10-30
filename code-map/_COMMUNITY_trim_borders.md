@@ -26,7 +26,7 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 5 edges to [[_COMMUNITY_test_full_scenes.py]]
+- 5 edges to [[_COMMUNITY_gpu.py]]
 - 1 edge to [[_COMMUNITY_clean_full]]
 
 ## Top bridge nodes

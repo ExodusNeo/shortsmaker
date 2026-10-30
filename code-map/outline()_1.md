@@ -1,19 +1,18 @@
 ---
-source_file: "blender/look_toon.py"
+source_file: "remotion/src/full/Model3D.tsx"
 type: "code"
-community: "look_toon.py"
-location: "L63"
+community: "Paper"
+location: "L21"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/look_toonpy
+  - community/Paper
 ---
 
 # outline()
 
 ## Connections
-- [[An inverted hull a slightly bigger copy of the surface, faces flipped, drawn…]] - `rationale_for` [EXTRACTED]
-- [[apply()_1]] - `calls` [EXTRACTED]
-- [[look_toon.py]] - `contains` [EXTRACTED]
+- [[Model3D.tsx]] - `contains` [EXTRACTED]
+- [[useModel()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/look_toonpy
+#graphify/code #graphify/EXTRACTED #community/Paper

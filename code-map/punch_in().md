@@ -16,7 +16,7 @@ tags:
 - [[State]] - `references` [EXTRACTED]
 - [[first_hit()]] - `calls` [EXTRACTED]
 - [[in_frame()]] - `calls` [EXTRACTED]
-- [[main()_7]] - `calls` [EXTRACTED]
+- [[main()_8]] - `calls` [EXTRACTED]
 - [[opener_scene.py]] - `contains` [EXTRACTED]
 - [[seen_segments()]] - `calls` [EXTRACTED]
 

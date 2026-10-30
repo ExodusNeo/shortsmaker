@@ -1,18 +1,18 @@
 ---
 source_file: ""
 type: "concept"
-community: "json"
+community: "test_style.py"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/json
+  - community/test_stylepy
 ---
 
 # shutil
 
 ## Connections
 - [[approve_candidate()]] - `calls` [EXTRACTED]
-- [[build()_1]] - `calls` [EXTRACTED]
+- [[build()_2]] - `calls` [EXTRACTED]
 - [[cli.py]] - `imports` [EXTRACTED]
 - [[code_custom_scenes()]] - `calls` [EXTRACTED]
 - [[first_second_check()]] - `calls` [EXTRACTED]
@@ -22,9 +22,9 @@ tags:
 - [[invent_component()]] - `calls` [EXTRACTED]
 - [[llm.py]] - `imports` [EXTRACTED]
 - [[logbook.py]] - `imports` [EXTRACTED]
-- [[main()_1]] - `calls` [EXTRACTED]
-- [[main()_4]] - `calls` [EXTRACTED]
 - [[main()_3]] - `calls` [EXTRACTED]
+- [[main()_5]] - `calls` [EXTRACTED]
+- [[main()_10]] - `calls` [EXTRACTED]
 - [[motion.py]] - `imports` [EXTRACTED]
 - [[opener_render.py]] - `imports` [EXTRACTED]
 - [[paint_instead()]] - `calls` [EXTRACTED]
@@ -58,4 +58,4 @@ tags:
 - [[write_scripts()]] - `calls` [EXTRACTED]
 - [[writing.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/json
+#graphify/concept #graphify/EXTRACTED #community/test_stylepy

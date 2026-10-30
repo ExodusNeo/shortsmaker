@@ -10,7 +10,6 @@ members: 25
 ## Members
 - [[Background()]] - code - remotion/src/Short.tsx
 - [[Captions()_1]] - code - remotion/src/Captions.tsx
-- [[Card]] - code - remotion/src/Short.tsx
 - [[GraphicFor()]] - code - remotion/src/Short.tsx
 - [[HookTitle()]] - code - remotion/src/Graphics.tsx
 - [[INKS_1]] - code - tests/style.test.ts
@@ -19,6 +18,7 @@ members: 25
 - [[Scene]] - code - remotion/src/Short.tsx
 - [[Short()_1]] - code - remotion/src/Short.tsx
 - [[Short.tsx]] - code - remotion/src/Short.tsx
+- [[SubscribeCta()]] - code - remotion/src/Graphics.tsx
 - [[TRANSITIONS]] - code - remotion/src/style/index.ts
 - [[flashAlpha()]] - code - remotion/src/Short.tsx
 - [[has()]] - code - remotion/src/style/index.ts
@@ -42,17 +42,16 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 22 edges to [[_COMMUNITY_Graphics.tsx]]
-- 14 edges to [[_COMMUNITY_styleindex.ts]]
-- 5 edges to [[_COMMUNITY_QuestionBeat.tsx]]
-- 5 edges to [[_COMMUNITY_toolkit.tsx]]
+- 28 edges to [[_COMMUNITY_Graphics.tsx]]
+- 13 edges to [[_COMMUNITY_styleindex.ts]]
+- 4 edges to [[_COMMUNITY_Paper]]
 - 4 edges to [[_COMMUNITY_ref_remotion]]
-- 1 edge to [[_COMMUNITY_Halftone.tsx]]
-- 1 edge to [[_COMMUNITY_Journey.tsx]]
+- 3 edges to [[_COMMUNITY_Halftone.tsx]]
+- 1 edge to [[_COMMUNITY_fulltypes.ts]]
 
 ## Top bridge nodes
 - [[Short.tsx]] - degree 46, connects to 6 communities
 - [[style.test.ts]] - degree 15, connects to 2 communities
-- [[Short()_1]] - degree 12, connects to 2 communities
 - [[Background()]] - degree 7, connects to 2 communities
 - [[GraphicFor()]] - degree 5, connects to 2 communities
+- [[Short()_1]] - degree 12, connects to 1 community

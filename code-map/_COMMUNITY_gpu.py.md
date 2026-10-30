@@ -1,55 +1,72 @@
 ---
 type: community
-members: 42
+members: 59
 ---
 
 # gpu.py
 
-**Members:** 42 nodes
+**Members:** 59 nodes
 
 ## Members
-- [[Caption words the aligner gives for `text` (qwen_voice.align_words a token…]] - rationale - shortsmaker/gpu.py
-- [[Comfy-Org's official MOSS-Image text-to-image template (25 steps, CFG 2.5,…]] - rationale - shortsmaker/gpu.py
-- [[Detailed prompts for the owner-made clips (Colab H3 or Flow), written by the AI…]] - rationale - shortsmaker/gpu.py
-- [[Fill a 916 frame with the picture (centre crop), for the AI video model's…]] - rationale - shortsmaker/gpu.py
-- [[Free VoiceStudio's GPU memory the 8 GB card is needed next for SDXL, LTX and…]] - rationale - shortsmaker/gpu.py
-- [[Join checked fields into one image-to-video prompt. H3 has no negative prompt,…]] - rationale - shortsmaker/gpu.py
+- [[A Short's saved work state and `render()`, which turns a written Short into the…]] - rationale - shortsmaker/short_render.py
+- [[A Shotcut timeline of a finished Short, for fixing by hand what the automatic…]] - rationale - shortsmaker/edit_project.py
+- [[Archive scans look broken on screen with their extras a stereograph card keeps…]] - rationale - shortsmaker/photo_prep.py
+- [[Cleaning and validating the planner's JSON (graphics, full-screen scenes,…]] - rationale - shortsmaker/plan_rules.py
+- [[Cleaning found photos stereograph cards, scanner borders, vertical crops.]] - rationale - shortsmaker/photo_prep.py
+- [[Contact sheets of the people library (part 2, 2026-10-27), to look at by eye…]] - rationale - tests/people_sheet.py
+- [[Draw a Short in Blender (2026-10-22) after the voice sets every scene's…]] - rationale - shortsmaker/blender_render.py
+- [[Full-screen motion-graphic scenes and the AI-coded Custom scenes (with their…]] - rationale - shortsmaker/motion.py
 - [[Local AI on the owner's GPU and helpers ComfyUIMOSS, VoiceStudio, Gemini…]] - rationale - shortsmaker/gpu.py
-- [[Paint on this PC with MOSS-Image in ComfyUI (owner's pick 2026-10-20 over SDXL-…]] - rationale - shortsmaker/gpu.py
-- [[Path_5]] - code
-- [[Pause the batch write each animate scene's start picture + detailed prompt to…]] - rationale - shortsmaker/gpu.py
-- [[Real motion for every scene with a picture scenes Claude matched to archival…]] - rationale - shortsmaker/gpu.py
-- [[Run a batch on this PC's GPU through a local_ai worker (gen.py, or…]] - rationale - shortsmaker/gpu.py
-- [[Short image-to-video prompt for an animate scene made by LTX on this PC.]] - rationale - shortsmaker/gpu.py
-- [[Start pictures (folderstartN.jpg) the owner shouldn't spend a clip on a…]] - rationale - shortsmaker/gpu.py
-- [[The owner's clip `src` cut to scene i's length fills the vertical frame, drops…]] - rationale - shortsmaker/gpu.py
-- [[Voice every scene on the GPU CosyVoice (aiden, documentary) for the whole…]] - rationale - shortsmaker/gpu.py
-- [[VoiceStudio's backend answers, starting the app (and waiting up to 2 min) if it…]] - rationale - shortsmaker/gpu.py
-- [[What is missing from the AI's prompt fields for one scene (empty list = usable).]] - rationale - shortsmaker/gpu.py
-- [[comfy_call()]] - code - shortsmaker/gpu.py
+- [[Match FILM_CROP on downloaded thumbnail JPEGs (cut top 6%, bottom 20%, and 4%…]] - rationale - shortsmaker/footage.py
+- [[One mid-scene frame per scene from the finished video, labeled with its…]] - rationale - shortsmaker/review.py
+- [[Paths, fixed settings, palettes and the styleskin tables every module shares.…]] - rationale - shortsmaker/config.py
+- [[Real film clips (Commons, Internet Archive, NASA, Pixabay) and their ffmpeg…]] - rationale - shortsmaker/footage.py
+- [[Rendering a Short with Remotion (with the Python renderer as fallback),…]] - rationale - shortsmaker/remotion_render.py
+- [[Small shared helpers downloads, ffmpeg, video encoder choice, durations, JSON…]] - rationale - shortsmaker/media_tools.py
+- [[Start and end of the camera shot containing time `at` (newsreels cut to title…]] - rationale - shortsmaker/footage.py
+- [[The Python renderer camera moves, graphic overlays, person cards, clip…]] - rationale - shortsmaker/frame_render.py
+- [[Tilted photo card with a white border, drop shadow and a yellow name banner.]] - rationale - shortsmaker/frame_render.py
+- [[True only when a video is already vertical (916-ish, 720p+); horizontal videos…]] - rationale - shortsmaker/frame_render.py
+- [[Voice, captions, sound effects, story sounds and music levels.]] - rationale - shortsmaker/audio_mix.py
+- [[audio_mix.py]] - code - shortsmaker/audio_mix.py
+- [[blender_render.py]] - code - shortsmaker/blender_render.py
+- [[clean_photo()]] - code - shortsmaker/photo_prep.py
 - [[concurrent_futures]] - concept
-- [[cover_crop()]] - code - shortsmaker/gpu.py
-- [[cut_owner_clip()]] - code - shortsmaker/gpu.py
+- [[config.py]] - code - shortsmaker/config.py
+- [[crop_film_bytes()]] - code - shortsmaker/footage.py
+- [[duration()]] - code - shortsmaker/media_tools.py
+- [[edit_plan.txt (the timestamped edit list) and per-scene cue timing.]] - rationale - shortsmaker/editplan.py
+- [[edit_project.py]] - code - shortsmaker/edit_project.py
+- [[editplan.py]] - code - shortsmaker/editplan.py
+- [[fills_frame()]] - code - shortsmaker/frame_render.py
+- [[film_frames()]] - code - shortsmaker/footage.py
+- [[footage.py]] - code - shortsmaker/footage.py
+- [[frame_render.py]] - code - shortsmaker/frame_render.py
 - [[gpu.py]] - code - shortsmaker/gpu.py
-- [[h3_problems()]] - code - shortsmaker/gpu.py
-- [[h3_prompt()]] - code - shortsmaker/gpu.py
-- [[h3_prompts()]] - code - shortsmaker/gpu.py
-- [[local_clips()]] - code - shortsmaker/gpu.py
-- [[local_job()]] - code - shortsmaker/gpu.py
-- [[local_voice()]] - code - shortsmaker/gpu.py
-- [[moss_graph()]] - code - shortsmaker/gpu.py
-- [[moss_images()]] - code - shortsmaker/gpu.py
-- [[motion_prompt()]] - code - shortsmaker/gpu.py
-- [[spoken_count()]] - code - shortsmaker/gpu.py
-- [[start_picture_problems()]] - code - shortsmaker/gpu.py
-- [[test_problems()]] - code - tests/test_h3_handoff.py
-- [[test_prompt_joins_fields()]] - code - tests/test_h3_handoff.py
-- [[test_word_counts_match_the_aligner()]] - code - tests/test_story.py
+- [[hex_rgb()]] - code - shortsmaker/config.py
+- [[io]] - concept
+- [[luminance()_1]] - code - shortsmaker/config.py
+- [[main()_7]] - code - tests/people_sheet.py
+- [[media_tools.py]] - code - shortsmaker/media_tools.py
+- [[motion.py]] - code - shortsmaker/motion.py
+- [[n moments spread through a film, for the contact sheets (with FILM_CROP applied…]] - rationale - shortsmaker/footage.py
+- [[people_sheet.py]] - code - tests/people_sheet.py
+- [[person_card()]] - code - shortsmaker/frame_render.py
+- [[photo_prep.py]] - code - shortsmaker/photo_prep.py
+- [[pil]] - concept
+- [[plan_rules.py]] - code - shortsmaker/plan_rules.py
+- [[remotion_render.py]] - code - shortsmaker/remotion_render.py
+- [[render_sheet()]] - code - tests/people_sheet.py
+- [[short_render.py]] - code - shortsmaker/short_render.py
+- [[shot_span()]] - code - shortsmaker/footage.py
+- [[storyboard()]] - code - shortsmaker/review.py
+- [[subprocess]] - concept
 - [[unicodedata]] - concept
-- [[up()]] - code - shortsmaker/gpu.py
-- [[veo_handoff()]] - code - shortsmaker/gpu.py
-- [[voicestudio_unload()]] - code - shortsmaker/gpu.py
-- [[voicestudio_up()]] - code - shortsmaker/gpu.py
+- [[urllib_parse]] - concept
+- [[urllib_request]] - concept
+- [[warnings]] - concept
+- [[wave]] - concept
+- [[xml_sax_saxutils]] - concept
 
 ## Live Query (requires Dataview plugin)
 
@@ -59,24 +76,57 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 29 edges to [[_COMMUNITY_test_full_scenes.py]]
-- 8 edges to [[_COMMUNITY_ffmpeg]]
-- 8 edges to [[_COMMUNITY_test_h3_handoff.py]]
-- 7 edges to [[_COMMUNITY_json]]
-- 6 edges to [[_COMMUNITY_render]]
-- 5 edges to [[_COMMUNITY_re]]
-- 4 edges to [[_COMMUNITY_paint_instead]]
+- 99 edges to [[_COMMUNITY_test_full_scenes.py]]
+- 23 edges to [[_COMMUNITY_ffmpeg]]
+- 19 edges to [[_COMMUNITY_test_style.py]]
+- 19 edges to [[_COMMUNITY_json]]
+- 17 edges to [[_COMMUNITY_image_sources.py]]
+- 15 edges to [[_COMMUNITY_clean_full]]
+- 15 edges to [[_COMMUNITY_re]]
+- 14 edges to [[_COMMUNITY_frame_maker]]
+- 14 edges to [[_COMMUNITY_opener_render.py]]
+- 14 edges to [[_COMMUNITY_render]]
+- 11 edges to [[_COMMUNITY_captions]]
+- 10 edges to [[_COMMUNITY_time]]
+- 10 edges to [[_COMMUNITY_code_custom_scenes]]
+- 9 edges to [[_COMMUNITY_render_remotion]]
+- 8 edges to [[_COMMUNITY_test_blender_render.py]]
+- 8 edges to [[_COMMUNITY_style_library]]
+- 8 edges to [[_COMMUNITY_test_package.py]]
+- 6 edges to [[_COMMUNITY_test_edit_project.py]]
+- 5 edges to [[_COMMUNITY_make]]
+- 5 edges to [[_COMMUNITY_test_pictures_first.py]]
+- 5 edges to [[_COMMUNITY_test_opener_render.py]]
+- 5 edges to [[_COMMUNITY_trim_borders]]
+- 5 edges to [[_COMMUNITY_test_blender_scene.py]]
+- 4 edges to [[_COMMUNITY_test_h3_handoff.py]]
+- 4 edges to [[_COMMUNITY_film_piece]]
 - 4 edges to [[_COMMUNITY_h3_run.py]]
+- 3 edges to [[_COMMUNITY_channel_profiles.py]]
+- 3 edges to [[_COMMUNITY_visual_review]]
+- 3 edges to [[_COMMUNITY_full_cues]]
 - 3 edges to [[_COMMUNITY_test_story.py]]
+- 3 edges to [[_COMMUNITY_drawn_thumbnail]]
+- 3 edges to [[_COMMUNITY_math]]
+- 3 edges to [[_COMMUNITY_test_opener_scene.py]]
+- 2 edges to [[_COMMUNITY_opener_graphic]]
 - 2 edges to [[_COMMUNITY_ask_ai]]
-- 2 edges to [[_COMMUNITY_sentence_groups]]
-- 1 edge to [[_COMMUNITY_test_local_job_retries_a_hard_crash]]
-- 1 edge to [[_COMMUNITY_clean_full]]
-- 1 edge to [[_COMMUNITY_qwen_voice.py]]
+- 2 edges to [[_COMMUNITY_test_rules.py]]
+- 2 edges to [[_COMMUNITY_test_opener_checks.py]]
+- 1 edge to [[_COMMUNITY_write_scripts]]
+- 1 edge to [[_COMMUNITY_sfx_events]]
+- 1 edge to [[_COMMUNITY_apply_review_fixes]]
+- 1 edge to [[_COMMUNITY_prepare_topic]]
+- 1 edge to [[_COMMUNITY_limit_style]]
+- 1 edge to [[_COMMUNITY_Local GPU Worker]]
+- 1 edge to [[_COMMUNITY_test_blender_link.py]]
+- 1 edge to [[_COMMUNITY_test_opener_plan.py]]
+- 1 edge to [[_COMMUNITY_blender_link.py]]
+- 1 edge to [[_COMMUNITY_split_make_shorts.py]]
 
 ## Top bridge nodes
-- [[gpu.py]] - degree 52, connects to 9 communities
-- [[local_job()]] - degree 10, connects to 5 communities
-- [[local_clips()]] - degree 14, connects to 4 communities
-- [[veo_handoff()]] - degree 13, connects to 4 communities
-- [[local_voice()]] - degree 12, connects to 4 communities
+- [[subprocess]] - degree 47, connects to 19 communities
+- [[config.py]] - degree 48, connects to 17 communities
+- [[plan_rules.py]] - degree 51, connects to 15 communities
+- [[short_render.py]] - degree 46, connects to 13 communities
+- [[media_tools.py]] - degree 35, connects to 13 communities

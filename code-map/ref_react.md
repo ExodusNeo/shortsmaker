@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "toolkit.tsx"
+community: "style/index.ts"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/toolkittsx
+  - community/style/indexts
 ---
 
 # ref_react
@@ -37,4 +37,4 @@ tags:
 - [[styletypes.ts]] - `imports_from` [EXTRACTED]
 - [[toolkit.tsx]] - `imports_from` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/toolkittsx
+#graphify/concept #graphify/EXTRACTED #community/style/indexts

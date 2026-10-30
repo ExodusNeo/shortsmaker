@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_full_scenes.py"
 type: "code"
-community: "opener_graphic"
+community: "json"
 location: "L185"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/opener_graphic
+  - community/json
 ---
 
 # test_fact_check_drops_full()
@@ -15,4 +15,4 @@ tags:
 - [[fact_check()]] - `calls` [EXTRACTED]
 - [[test_full_scenes.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/opener_graphic
+#graphify/code #graphify/EXTRACTED #community/json

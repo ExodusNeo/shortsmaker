@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/full/guarded.tsx"
 type: "code"
-community: "toolkit.tsx"
+community: "guarded.tsx"
 location: "L47"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/toolkittsx
+  - community/guardedtsx
 ---
 
 # layoutColumn()
@@ -18,4 +18,4 @@ tags:
 - [[guarded.test.ts]] - `imports` [EXTRACTED]
 - [[guarded.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/toolkittsx
+#graphify/code #graphify/EXTRACTED #community/guardedtsx

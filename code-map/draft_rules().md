@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/rules.py"
 type: "code"
-community: "sys"
+community: "channel_profiles.py"
 location: "L86"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/sys
+  - community/channel_profilespy
 ---
 
 # draft_rules()
@@ -22,4 +22,4 @@ tags:
 - [[rules.py]] - `contains` [EXTRACTED]
 - [[run_draft()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/sys
+#graphify/code #graphify/EXTRACTED #community/channel_profilespy

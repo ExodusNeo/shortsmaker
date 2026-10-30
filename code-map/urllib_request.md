@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "h3_run.py"
+community: "gpu.py"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/h3_runpy
+  - community/gpupy
 ---
 
 # urllib_request
@@ -16,4 +16,4 @@ tags:
 - [[h3_run.py]] - `imports` [EXTRACTED]
 - [[media_tools.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/h3_runpy
+#graphify/concept #graphify/EXTRACTED #community/gpupy

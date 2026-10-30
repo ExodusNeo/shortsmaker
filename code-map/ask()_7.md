@@ -1,17 +1,17 @@
 ---
-source_file: "tests/test_full_scenes.py"
+source_file: "shortsmaker/blender_plan.py"
 type: "code"
-community: "apply_review_fixes"
-location: "L705"
+community: "test_blender_scene.py"
+location: "L114"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/apply_review_fixes
+  - community/test_blender_scenepy
 ---
 
 # ask()
 
 ## Connections
-- [[test_look_check_fixes_code()]] - `contains` [EXTRACTED]
+- [[plan_builds()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/apply_review_fixes
+#graphify/code #graphify/EXTRACTED #community/test_blender_scenepy

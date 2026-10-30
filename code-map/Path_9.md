@@ -1,20 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: "frame_maker"
+community: "fetch_model"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/frame_maker
+  - community/fetch_model
 ---
 
 # Path
 
 ## Connections
-- [[dot-__init__()_1]] - `references` [EXTRACTED]
-- [[fills_frame()]] - `references` [EXTRACTED]
-- [[frame_maker()]] - `references` [EXTRACTED]
-- [[graphic_low()]] - `references` [EXTRACTED]
-- [[thumbnail()]] - `references` [EXTRACTED]
+- [[credit()]] - `references` [EXTRACTED]
+- [[fetch_model()]] - `references` [EXTRACTED]
+- [[in_library()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/frame_maker
+#graphify/code #graphify/EXTRACTED #community/fetch_model

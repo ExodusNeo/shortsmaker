@@ -1,18 +1,18 @@
 ---
 source_file: "shortsmaker/cli.py"
 type: "code"
-community: "visual_review"
+community: "apply_review_fixes"
 location: "L125"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/visual_review
+  - community/apply_review_fixes
 ---
 
 # use_picture_from()
 
 ## Connections
-- [[Path_21]] - `references` [EXTRACTED]
+- [[Path_20]] - `references` [EXTRACTED]
 - [[cli.py]] - `contains` [EXTRACTED]
 - [[fix scene i shows scene k's picture. A real photofilm is a picture choice; an…]] - `rationale_for` [EXTRACTED]
 - [[fix_short()]] - `calls` [EXTRACTED]
@@ -20,4 +20,4 @@ tags:
 - [[test_new_picture_drops_mark()]] - `calls` [EXTRACTED]
 - [[test_paint_new_clears_full()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/visual_review
+#graphify/code #graphify/EXTRACTED #community/apply_review_fixes

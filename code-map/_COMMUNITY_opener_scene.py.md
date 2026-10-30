@@ -41,7 +41,7 @@ members: 50
 - [[fit()]] - code - blender/scene_kit.py
 - [[hold_offscreen()]] - code - blender/opener_scene.py
 - [[load_library()]] - code - blender/people.py
-- [[main()_7]] - code - blender/opener_scene.py
+- [[main()_8]] - code - blender/opener_scene.py
 - [[mid()]] - code - blender/opener_scene.py
 - [[oc_moves()]] - code - blender/opener_scene.py
 - [[opener_scene.py]] - code - blender/opener_scene.py
@@ -75,15 +75,14 @@ SORT file.name ASC
 - 4 edges to [[_COMMUNITY_walk]]
 - 3 edges to [[_COMMUNITY__hold]]
 - 2 edges to [[_COMMUNITY_look_toon.py]]
+- 2 edges to [[_COMMUNITY_test_full_scenes.py]]
 - 1 edge to [[_COMMUNITY_tree]]
 - 1 edge to [[_COMMUNITY_re]]
-- 1 edge to [[_COMMUNITY_sys]]
 - 1 edge to [[_COMMUNITY_json]]
-- 1 edge to [[_COMMUNITY_test_full_scenes.py]]
 
 ## Top bridge nodes
-- [[opener_scene.py]] - degree 34, connects to 10 communities
-- [[main()_7]] - degree 22, connects to 5 communities
+- [[opener_scene.py]] - degree 34, connects to 9 communities
+- [[main()_8]] - degree 22, connects to 5 communities
 - [[place_actors()]] - degree 13, connects to 5 communities
 - [[State]] - degree 23, connects to 3 communities
 - [[build_set()]] - degree 10, connects to 3 communities

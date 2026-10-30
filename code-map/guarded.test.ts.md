@@ -1,12 +1,12 @@
 ---
 source_file: "tests/guarded.test.ts"
 type: "code"
-community: "toolkit.tsx"
+community: "guarded.tsx"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/toolkittsx
+  - community/guardedtsx
 ---
 
 # guarded.test.ts
@@ -28,4 +28,4 @@ tags:
 - [[test()_1]] - `contains` [EXTRACTED]
 - [[travel()_1]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/toolkittsx
+#graphify/code #graphify/EXTRACTED #community/guardedtsx

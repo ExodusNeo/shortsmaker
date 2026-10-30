@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/blender_link.py"
 type: "code"
-community: "test_full_scenes.py"
+community: "blender_link.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_full_scenespy
+  - community/blender_linkpy
 ---
 
 # blender_link.py
@@ -35,4 +35,4 @@ tags:
 - [[test_opener_render.py]] - `imports_from` [EXTRACTED]
 - [[words()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_full_scenespy
+#graphify/code #graphify/EXTRACTED #community/blender_linkpy

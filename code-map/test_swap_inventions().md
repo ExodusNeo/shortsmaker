@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_style.py"
 type: "code"
-community: "render_remotion"
+community: "test_style.py"
 location: "L351"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/render_remotion
+  - community/test_stylepy
 ---
 
 # test_swap_inventions()
@@ -15,4 +15,4 @@ tags:
 - [[swap_inventions()]] - `calls` [EXTRACTED]
 - [[test_style.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/render_remotion
+#graphify/code #graphify/EXTRACTED #community/test_stylepy

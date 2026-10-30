@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_opener_render.py"
 type: "code"
-community: "use_opener"
+community: "test_opener_render.py"
 location: "L203"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/use_opener
+  - community/test_opener_renderpy
 ---
 
 # _wiring()
@@ -20,4 +20,4 @@ tags:
 - [[test_use_opener_opening_note()]] - `calls` [EXTRACTED]
 - [[use_opener()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/use_opener
+#graphify/code #graphify/EXTRACTED #community/test_opener_renderpy

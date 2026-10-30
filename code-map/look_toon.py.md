@@ -17,7 +17,7 @@ tags:
 - [[bpy]] - `imports` [EXTRACTED]
 - [[ink()]] - `contains` [EXTRACTED]
 - [[opener_scene.py]] - `imports` [EXTRACTED]
-- [[outline()_1]] - `contains` [EXTRACTED]
+- [[outline()_2]] - `contains` [EXTRACTED]
 - [[toon()]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/look_toonpy

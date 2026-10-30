@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_pictures_first.py"
 type: "code"
-community: "pool_of"
+community: "test_pictures_first.py"
 location: "L103"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/pool_of
+  - community/test_pictures_firstpy
 ---
 
 # pool_of()
@@ -32,4 +32,4 @@ tags:
 - [[test_small_pool_skips_ai()]] - `calls` [EXTRACTED]
 - [[test_usable_counts_film_once()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/pool_of
+#graphify/code #graphify/EXTRACTED #community/test_pictures_firstpy

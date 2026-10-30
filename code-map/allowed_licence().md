@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/blender_link.py"
 type: "code"
-community: "re"
+community: "blender_link.py"
 location: "L54"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/re
+  - community/blender_linkpy
 ---
 
 # allowed_licence()
@@ -17,4 +17,4 @@ tags:
 - [[re]] - `calls` [EXTRACTED]
 - [[search()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/re
+#graphify/code #graphify/EXTRACTED #community/blender_linkpy

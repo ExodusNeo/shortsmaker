@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/full/Board.tsx"
 type: "code"
-community: "toolkit.tsx"
+community: "Paper"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/toolkittsx
+  - community/Paper
 ---
 
 # Board.tsx
@@ -24,7 +24,7 @@ tags:
 - [[Paper.tsx]] - `imports_from` [EXTRACTED]
 - [[Print]] - `contains` [EXTRACTED]
 - [[TYPE]] - `imports` [EXTRACTED]
-- [[clamp_7]] - `contains` [EXTRACTED]
+- [[clamp_5]] - `contains` [EXTRACTED]
 - [[fulltypes.ts]] - `imports_from` [EXTRACTED]
 - [[guarded.tsx]] - `imports_from` [EXTRACTED]
 - [[layout()]] - `contains` [EXTRACTED]
@@ -33,4 +33,4 @@ tags:
 - [[rng()]] - `imports` [EXTRACTED]
 - [[skinOf()]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/toolkittsx
+#graphify/code #graphify/EXTRACTED #community/Paper

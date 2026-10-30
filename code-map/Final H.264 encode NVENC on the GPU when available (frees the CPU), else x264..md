@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/media_tools.py"
 type: "rationale"
-community: "render"
+community: "ffmpeg"
 location: "L31"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/render
+  - community/ffmpeg
 ---
 
 # Final H.264 encode: NVENC on the GPU when available (frees the CPU), else x264.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[video_encoder()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/render
+#graphify/rationale #graphify/EXTRACTED #community/ffmpeg

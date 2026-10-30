@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/opener_render.py"
 type: "rationale"
-community: "json"
+community: "opener_render.py"
 location: "L133"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/json
+  - community/opener_renderpy
 ---
 
 # The frames the reviewer sees: 8 spread over the clip plus 3 around every key…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[review_frames()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/json
+#graphify/rationale #graphify/EXTRACTED #community/opener_renderpy

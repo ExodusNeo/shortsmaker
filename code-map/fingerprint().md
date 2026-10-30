@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/opener_render.py"
 type: "code"
-community: "json"
+community: "opener_render.py"
 location: "L124"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/json
+  - community/opener_renderpy
 ---
 
 # fingerprint()
@@ -17,4 +17,4 @@ tags:
 - [[opener_render.py]] - `contains` [EXTRACTED]
 - [[render_opener()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/json
+#graphify/code #graphify/EXTRACTED #community/opener_renderpy

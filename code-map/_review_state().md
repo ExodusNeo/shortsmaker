@@ -12,7 +12,7 @@ tags:
 # _review_state()
 
 ## Connections
-- [[Path_20]] - `references` [EXTRACTED]
+- [[Path_22]] - `references` [EXTRACTED]
 - [[test_full_scenes.py]] - `contains` [EXTRACTED]
 - [[test_redraw_failure_paints()]] - `calls` [EXTRACTED]
 - [[test_review_redraws_custom()]] - `calls` [EXTRACTED]

@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_shot_templates.py"
 type: "code"
-community: "json"
+community: "opener_render.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/json
+  - community/opener_renderpy
 ---
 
 # test_shot_templates.py
@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[Shot templates (blendershot_templates.json, 2026-10-28) every template, with…]] - `rationale_for` [EXTRACTED]
 - [[__init__.py]] - `imports_from` [EXTRACTED]
-- [[build()_1]] - `contains` [EXTRACTED]
+- [[build()_2]] - `contains` [EXTRACTED]
 - [[config.py]] - `imports_from` [EXTRACTED]
 - [[copy]] - `imports` [EXTRACTED]
 - [[json]] - `imports` [EXTRACTED]
@@ -29,4 +29,4 @@ tags:
 - [[test_every_template_has_samples()]] - `contains` [EXTRACTED]
 - [[test_opener_plan.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/json
+#graphify/code #graphify/EXTRACTED #community/opener_renderpy

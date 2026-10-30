@@ -1,18 +1,18 @@
 ---
 source_file: "shortsmaker/gpu.py"
 type: "code"
-community: "gpu.py"
-location: "L562"
+community: "ffmpeg"
+location: "L572"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/gpupy
+  - community/ffmpeg
 ---
 
 # local_clips()
 
 ## Connections
-- [[Path_5]] - `references` [EXTRACTED]
+- [[Path_6]] - `references` [EXTRACTED]
 - [[Real motion for every scene with a picture scenes Claude matched to archival…]] - `rationale_for` [EXTRACTED]
 - [[cover_crop()]] - `calls` [EXTRACTED]
 - [[cut_owner_clip()]] - `calls` [EXTRACTED]
@@ -27,4 +27,4 @@ tags:
 - [[veo_handoff()]] - `calls` [EXTRACTED]
 - [[video_encoder()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/gpupy
+#graphify/code #graphify/EXTRACTED #community/ffmpeg

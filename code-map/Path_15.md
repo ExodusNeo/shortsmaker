@@ -11,6 +11,7 @@ tags:
 # Path
 
 ## Connections
-- [[mark_details()]] - `references` [EXTRACTED]
+- [[ask_ai()]] - `references` [EXTRACTED]
+- [[run_agy()]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/ask_ai

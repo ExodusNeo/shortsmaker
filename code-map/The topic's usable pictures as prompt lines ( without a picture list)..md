@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/picture_pool.py"
 type: "rationale"
-community: "pictures_of"
+community: "prepare_topic"
 location: "L19"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/pictures_of
+  - community/prepare_topic
 ---
 
 # The topic's usable pictures as prompt lines ("" without a picture list).
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[pictures_of()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/pictures_of
+#graphify/rationale #graphify/EXTRACTED #community/prepare_topic

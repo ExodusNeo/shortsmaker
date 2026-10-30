@@ -52,26 +52,28 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 22 edges to [[_COMMUNITY_test_full_scenes.py]]
+- 15 edges to [[_COMMUNITY_gpu.py]]
 - 8 edges to [[_COMMUNITY_write_scripts]]
+- 8 edges to [[_COMMUNITY_test_full_scenes.py]]
 - 6 edges to [[_COMMUNITY_re]]
-- 3 edges to [[_COMMUNITY_opener_graphic]]
-- 3 edges to [[_COMMUNITY_gather_pool]]
-- 3 edges to [[_COMMUNITY_fetch]]
-- 2 edges to [[_COMMUNITY_full_cues]]
-- 2 edges to [[_COMMUNITY_test_pictures_first.py]]
+- 4 edges to [[_COMMUNITY_image_sources.py]]
+- 2 edges to [[_COMMUNITY_opener_graphic]]
+- 2 edges to [[_COMMUNITY_json]]
+- 2 edges to [[_COMMUNITY_gather_pool]]
+- 1 edge to [[_COMMUNITY_first_second_check]]
 - 1 edge to [[_COMMUNITY_ffmpeg]]
-- 1 edge to [[_COMMUNITY_test_first_second.py]]
 - 1 edge to [[_COMMUNITY_render]]
 - 1 edge to [[_COMMUNITY_frame_maker]]
 - 1 edge to [[_COMMUNITY_render_remotion]]
 - 1 edge to [[_COMMUNITY_visual_review]]
-- 1 edge to [[_COMMUNITY_gpu.py]]
+- 1 edge to [[_COMMUNITY_choose_images]]
+- 1 edge to [[_COMMUNITY_full_cues]]
 - 1 edge to [[_COMMUNITY_trim_borders]]
+- 1 edge to [[_COMMUNITY_test_pictures_first.py]]
 - 1 edge to [[_COMMUNITY_test_style.py]]
 
 ## Top bridge nodes
-- [[words_of()]] - degree 22, connects to 8 communities
+- [[words_of()]] - degree 22, connects to 7 communities
 - [[clean_full()]] - degree 23, connects to 6 communities
 - [[is_person_portrait()]] - degree 7, connects to 4 communities
 - [[clean_graphic()]] - degree 10, connects to 3 communities

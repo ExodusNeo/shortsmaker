@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_opener_render.py"
 type: "rationale"
-community: "use_opener"
+community: "test_opener_render.py"
 location: "L237"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/use_opener
+  - community/test_opener_renderpy
 ---
 
 # The Opening line says which opener played: the Blender one, or the motion…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[test_use_opener_opening_note()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/use_opener
+#graphify/rationale #graphify/EXTRACTED #community/test_opener_renderpy

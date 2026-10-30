@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/gpu.py"
 type: "rationale"
-community: "gpu.py"
-location: "L328"
+community: "ffmpeg"
+location: "L338"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/gpupy
+  - community/ffmpeg
 ---
 
 # Fill a 9:16 frame with the picture (centre crop), for the AI video model's…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[cover_crop()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/gpupy
+#graphify/rationale #graphify/EXTRACTED #community/ffmpeg

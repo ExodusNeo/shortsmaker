@@ -12,6 +12,6 @@ tags:
 # An inverted hull: a slightly bigger copy of the surface, faces flipped, drawn…
 
 ## Connections
-- [[outline()_1]] - `rationale_for` [EXTRACTED]
+- [[outline()_2]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/look_toonpy

@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "math"
+community: "drawn_thumbnail"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/math
+  - community/drawn_thumbnail
 ---
 
 # Path
 
 ## Connections
-- [[main()_9]] - `references` [EXTRACTED]
+- [[drawn_short()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/math
+#graphify/code #graphify/EXTRACTED #community/drawn_thumbnail

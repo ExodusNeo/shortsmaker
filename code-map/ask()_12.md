@@ -1,17 +1,17 @@
 ---
-source_file: "shortsmaker/blender_plan.py"
+source_file: "tests/test_full_scenes.py"
 type: "code"
-community: "blender_plan.py"
-location: "L114"
+community: "rewrite_paint_prompts"
+location: "L477"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/blender_planpy
+  - community/rewrite_paint_prompts
 ---
 
 # ask()
 
 ## Connections
-- [[plan_builds()]] - `contains` [EXTRACTED]
+- [[test_rewrite_paint_prompts()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/blender_planpy
+#graphify/code #graphify/EXTRACTED #community/rewrite_paint_prompts

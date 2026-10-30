@@ -12,7 +12,7 @@ tags:
 # master_gain()
 
 ## Connections
-- [[Path_2]] - `references` [EXTRACTED]
+- [[Path_3]] - `references` [EXTRACTED]
 - [[dB that brings the tracks played together to LUFS, like the final mix's…]] - `rationale_for` [EXTRACTED]
 - [[edit_project.py]] - `contains` [EXTRACTED]
 - [[make()]] - `calls` [EXTRACTED]

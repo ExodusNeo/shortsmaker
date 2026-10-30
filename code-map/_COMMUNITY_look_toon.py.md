@@ -16,7 +16,7 @@ members: 10
 - [[apply()_1]] - code - blender/look_toon.py
 - [[ink()]] - code - blender/look_toon.py
 - [[look_toon.py]] - code - blender/look_toon.py
-- [[outline()_1]] - code - blender/look_toon.py
+- [[outline()_2]] - code - blender/look_toon.py
 - [[toon()]] - code - blender/look_toon.py
 
 ## Live Query (requires Dataview plugin)

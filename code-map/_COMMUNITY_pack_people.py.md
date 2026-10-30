@@ -30,10 +30,9 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 2 edges to [[_COMMUNITY_json]]
-- 1 edge to [[_COMMUNITY_sys]]
+- 2 edges to [[_COMMUNITY_test_full_scenes.py]]
 - 1 edge to [[_COMMUNITY_math]]
-- 1 edge to [[_COMMUNITY_test_full_scenes.py]]
 
 ## Top bridge nodes
-- [[pack_people.py]] - degree 11, connects to 4 communities
+- [[pack_people.py]] - degree 11, connects to 3 communities
 - [[main()_6]] - degree 8, connects to 1 community

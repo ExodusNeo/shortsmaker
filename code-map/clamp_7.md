@@ -1,17 +1,17 @@
 ---
-source_file: "remotion/src/full/Board.tsx"
+source_file: "remotion/src/full/Model3D.tsx"
 type: "code"
-community: "toolkit.tsx"
-location: "L6"
+community: "Paper"
+location: "L9"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/toolkittsx
+  - community/Paper
 ---
 
 # clamp
 
 ## Connections
-- [[Board.tsx]] - `contains` [EXTRACTED]
+- [[Model3D.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/toolkittsx
+#graphify/code #graphify/EXTRACTED #community/Paper

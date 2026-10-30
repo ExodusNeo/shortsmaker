@@ -23,15 +23,17 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 7 edges to [[_COMMUNITY_toolkit.tsx]]
+- 5 edges to [[_COMMUNITY_Graphics.tsx]]
 - 4 edges to [[_COMMUNITY_Short.tsx]]
-- 3 edges to [[_COMMUNITY_Graphics.tsx]]
-- 2 edges to [[_COMMUNITY_Journey.tsx]]
+- 4 edges to [[_COMMUNITY_Paper]]
 - 1 edge to [[_COMMUNITY_styleindex.ts]]
+- 1 edge to [[_COMMUNITY_Journey.tsx]]
+- 1 edge to [[_COMMUNITY_toolkit.tsx]]
+- 1 edge to [[_COMMUNITY_fulltypes.ts]]
 - 1 edge to [[_COMMUNITY_Halftone.tsx]]
-- 1 edge to [[_COMMUNITY_QuestionBeat.tsx]]
+- 1 edge to [[_COMMUNITY_guarded.tsx]]
 
 ## Top bridge nodes
-- [[ref_remotion]] - degree 18, connects to 7 communities
+- [[ref_remotion]] - degree 18, connects to 9 communities
 - [[Root.tsx]] - degree 7, connects to 1 community
 - [[ShortProps]] - degree 2, connects to 1 community

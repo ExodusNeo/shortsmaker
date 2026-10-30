@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/full/Model3D.tsx"
 type: "code"
-community: "toolkit.tsx"
+community: "Paper"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/toolkittsx
+  - community/Paper
 ---
 
 # Model3D.tsx
@@ -19,9 +19,9 @@ tags:
 - [[Paper.tsx]] - `imports_from` [EXTRACTED]
 - [[TYPE]] - `imports` [EXTRACTED]
 - [[bands]] - `contains` [EXTRACTED]
-- [[clamp_10]] - `contains` [EXTRACTED]
+- [[clamp_7]] - `contains` [EXTRACTED]
 - [[fulltypes.ts]] - `imports_from` [EXTRACTED]
-- [[outline()_2]] - `contains` [EXTRACTED]
+- [[outline()_1]] - `contains` [EXTRACTED]
 - [[ref_react]] - `imports_from` [EXTRACTED]
 - [[ref_remotion]] - `imports_from` [EXTRACTED]
 - [[ref_remotion_three]] - `imports_from` [EXTRACTED]
@@ -30,4 +30,4 @@ tags:
 - [[useFonts()]] - `imports` [EXTRACTED]
 - [[useModel()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/toolkittsx
+#graphify/code #graphify/EXTRACTED #community/Paper

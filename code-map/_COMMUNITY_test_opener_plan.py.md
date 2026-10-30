@@ -72,19 +72,20 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 8 edges to [[_COMMUNITY_json]]
-- 6 edges to [[_COMMUNITY_test_full_scenes.py]]
-- 3 edges to [[_COMMUNITY_re]]
+- 9 edges to [[_COMMUNITY_test_full_scenes.py]]
+- 5 edges to [[_COMMUNITY_opener_render.py]]
 - 2 edges to [[_COMMUNITY_test_opener_scene.py]]
 - 2 edges to [[_COMMUNITY_math]]
+- 2 edges to [[_COMMUNITY_json]]
 - 2 edges to [[_COMMUNITY_test_opener_render.py]]
 - 1 edge to [[_COMMUNITY_write_scripts]]
 - 1 edge to [[_COMMUNITY_ask_ai]]
-- 1 edge to [[_COMMUNITY_sys]]
+- 1 edge to [[_COMMUNITY_re]]
+- 1 edge to [[_COMMUNITY_gpu.py]]
 
 ## Top bridge nodes
-- [[opener_plan.py]] - degree 28, connects to 6 communities
-- [[test_opener_plan.py]] - degree 32, connects to 3 communities
+- [[opener_plan.py]] - degree 28, connects to 8 communities
 - [[swap_models()]] - degree 7, connects to 3 communities
+- [[test_opener_plan.py]] - degree 32, connects to 2 communities
 - [[clean_opener()]] - degree 24, connects to 1 community
 - [[fill_template()]] - degree 11, connects to 1 community

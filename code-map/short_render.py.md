@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/short_render.py"
 type: "code"
-community: "test_full_scenes.py"
+community: "gpu.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_full_scenespy
+  - community/gpupy
 ---
 
 # short_render.py
@@ -59,4 +59,4 @@ tags:
 - [[time]] - `imports` [EXTRACTED]
 - [[use_opener()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_full_scenespy
+#graphify/code #graphify/EXTRACTED #community/gpupy

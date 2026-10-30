@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/gpu.py"
 type: "rationale"
-community: "gpu.py"
-location: "L342"
+community: "ffmpeg"
+location: "L352"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/gpupy
+  - community/ffmpeg
 ---
 
 # Short image-to-video prompt for an animate scene made by LTX on this PC.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[motion_prompt()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/gpupy
+#graphify/rationale #graphify/EXTRACTED #community/ffmpeg

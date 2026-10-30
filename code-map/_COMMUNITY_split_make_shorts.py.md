@@ -62,7 +62,7 @@ SORT file.name ASC
 - 2 edges to [[_COMMUNITY_test_full_scenes.py]]
 - 1 edge to [[_COMMUNITY_test_h3_handoff.py]]
 - 1 edge to [[_COMMUNITY_re]]
-- 1 edge to [[_COMMUNITY_sys]]
+- 1 edge to [[_COMMUNITY_gpu.py]]
 
 ## Top bridge nodes
 - [[split_make_shorts.py]] - degree 26, connects to 3 communities

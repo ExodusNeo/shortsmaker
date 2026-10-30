@@ -1,11 +1,11 @@
 ---
 type: community
-members: 26
+members: 30
 ---
 
 # Halftone.tsx
 
-**Members:** 26 nodes
+**Members:** 30 nodes
 
 ## Members
 - [[Engraving()]] - code - remotion/src/style/looks/Engraving.tsx
@@ -13,6 +13,10 @@ members: 26
 - [[FILL]] - code - remotion/src/style/kit.ts
 - [[Halftone()]] - code - remotion/src/style/looks/Halftone.tsx
 - [[Halftone.tsx]] - code - remotion/src/style/looks/Halftone.tsx
+- [[Inks]] - code - remotion/src/style/types.ts
+- [[InventedLook()]] - code - remotion/src/style/generated/InventedLook.tsx
+- [[InventedLook.tsx]] - code - remotion/src/style/generated/InventedLook.tsx
+- [[Look]] - code - remotion/src/style/types.ts
 - [[Miniature()]] - code - remotion/src/style/looks/Miniature.tsx
 - [[Miniature.tsx]] - code - remotion/src/style/looks/Miniature.tsx
 - [[Riso()]] - code - remotion/src/style/looks/Riso.tsx
@@ -43,14 +47,13 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 36 edges to [[_COMMUNITY_styleindex.ts]]
-- 5 edges to [[_COMMUNITY_toolkit.tsx]]
-- 1 edge to [[_COMMUNITY_Short.tsx]]
+- 42 edges to [[_COMMUNITY_styleindex.ts]]
+- 3 edges to [[_COMMUNITY_Short.tsx]]
 - 1 edge to [[_COMMUNITY_ref_remotion]]
 
 ## Top bridge nodes
-- [[Silent.tsx]] - degree 13, connects to 3 communities
-- [[Halftone.tsx]] - degree 16, connects to 2 communities
-- [[Riso.tsx]] - degree 14, connects to 2 communities
-- [[Engraving.tsx]] - degree 13, connects to 2 communities
-- [[Miniature.tsx]] - degree 11, connects to 2 communities
+- [[Silent.tsx]] - degree 13, connects to 2 communities
+- [[Look]] - degree 10, connects to 2 communities
+- [[noise()]] - degree 8, connects to 2 communities
+- [[Inks]] - degree 6, connects to 2 communities
+- [[Halftone.tsx]] - degree 16, connects to 1 community

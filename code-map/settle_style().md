@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/plan_rules.py"
 type: "code"
-community: "clean_look"
+community: "style_library"
 location: "L214"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/clean_look
+  - community/style_library
 ---
 
 # settle_style()
@@ -18,4 +18,4 @@ tags:
 - [[plan_rules.py]] - `contains` [EXTRACTED]
 - [[write_scripts()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/clean_look
+#graphify/code #graphify/EXTRACTED #community/style_library

@@ -26,7 +26,7 @@ members: 19
 - [[focus_object()]] - code - blender/templates.py
 - [[key()]] - code - blender/failures.py
 - [[keyvis()]] - code - blender/build_scene.py
-- [[main()_2]] - code - blender/build_scene.py
+- [[main()_4]] - code - blender/build_scene.py
 
 ## Live Query (requires Dataview plugin)
 
@@ -44,7 +44,7 @@ SORT file.name ASC
 - 1 edge to [[_COMMUNITY_json]]
 
 ## Top bridge nodes
-- [[main()_2]] - degree 19, connects to 6 communities
+- [[main()_4]] - degree 19, connects to 6 communities
 - [[Failure]] - degree 9, connects to 1 community
 - [[key()]] - degree 4, connects to 1 community
 - [[focus_object()]] - degree 4, connects to 1 community

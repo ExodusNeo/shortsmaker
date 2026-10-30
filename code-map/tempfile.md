@@ -1,17 +1,17 @@
 ---
 source_file: ""
 type: "concept"
-community: "json"
+community: "opener_render.py"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/json
+  - community/opener_renderpy
 ---
 
 # tempfile
 
 ## Connections
-- [[build()_1]] - `calls` [EXTRACTED]
+- [[build()_2]] - `calls` [EXTRACTED]
 - [[run_ts_tests.py]] - `imports` [EXTRACTED]
 - [[test_blender_link.py]] - `imports` [EXTRACTED]
 - [[test_blender_render.py]] - `imports` [EXTRACTED]
@@ -33,4 +33,4 @@ tags:
 - [[test_story.py]] - `imports` [EXTRACTED]
 - [[test_topic_ideas.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/json
+#graphify/concept #graphify/EXTRACTED #community/opener_renderpy

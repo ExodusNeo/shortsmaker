@@ -1,33 +1,31 @@
 ---
 type: community
-members: 20
+members: 18
 ---
 
 # gather_pool
 
-**Members:** 20 nodes
+**Members:** 18 nodes
 
 ## Members
+- [[dot-__enter__()_2]] - code - tests/test_pictures_first.py
 - [[dot-__enter__()_3]] - code - tests/test_pictures_first.py
+- [[dot-__exit__()_1]] - code - tests/test_pictures_first.py
+- [[dot-__exit__()_2]] - code - tests/test_pictures_first.py
 - [[dot-__init__()_7]] - code - tests/test_pictures_first.py
 - [[Candidate pictures (with preview `thumb` bytes) and sampled real-film frames…]] - rationale - shortsmaker/picture_pool.py
-- [[Images used in an English Wikipedia article chosen by editors, so almost…]] - rationale - shortsmaker/image_sources.py
 - [[Replaces the network functions for one test; `calls` records the search queries.]] - rationale - tests/test_pictures_first.py
-- [[The saved pool (None if missing or unreadable it is gathered again);…]] - rationale - shortsmaker/picture_pool.py
-- [[URL of a standard-size Wikimedia thumbnail the largest allowed step that fits…]] - rationale - shortsmaker/image_sources.py
-- [[Usable images from a WikimediaWikipedia API query photos, screenshots,…]] - rationale - shortsmaker/image_sources.py
-- [[add()]] - code - shortsmaker/picture_pool.py
-- [[article_images()]] - code - shortsmaker/image_sources.py
-- [[commons_search()]] - code - shortsmaker/image_sources.py
+- [[Runs write_scripts with every AInetwork step replaced by canned answers;…]] - rationale - tests/test_full_scenes.py
+- [[The module that defines function `name` (KeyError for anything else).]] - rationale - tests/patching.py
+- [[_fake_planning()]] - code - tests/test_full_scenes.py
+- [[add()_1]] - code - shortsmaker/picture_pool.py
 - [[gather_pool()]] - code - shortsmaker/picture_pool.py
-- [[load_pool()]] - code - shortsmaker/picture_pool.py
 - [[load_thumb()]] - code - shortsmaker/picture_pool.py
+- [[owner()]] - code - tests/patching.py
 - [[stubbed]] - code - tests/test_pictures_first.py
+- [[test_director_prompt_mentions_full()]] - code - tests/test_full_scenes.py
 - [[test_gather_pool_shape()]] - code - tests/test_pictures_first.py
 - [[test_gather_pool_skip_and_limits()]] - code - tests/test_pictures_first.py
-- [[test_pool_roundtrip()]] - code - tests/test_pictures_first.py
-- [[thumb_url()]] - code - shortsmaker/image_sources.py
-- [[wm_files()]] - code - shortsmaker/image_sources.py
 
 ## Live Query (requires Dataview plugin)
 
@@ -37,24 +35,22 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 7 edges to [[_COMMUNITY_test_pictures_first.py]]
-- 6 edges to [[_COMMUNITY_test_full_scenes.py]]
-- 5 edges to [[_COMMUNITY_fetch]]
-- 4 edges to [[_COMMUNITY_pool_of]]
+- 6 edges to [[_COMMUNITY_test_pictures_first.py]]
+- 5 edges to [[_COMMUNITY_image_sources.py]]
+- 5 edges to [[_COMMUNITY_test_full_scenes.py]]
 - 3 edges to [[_COMMUNITY_write_scripts]]
-- 3 edges to [[_COMMUNITY_clean_full]]
-- 2 edges to [[_COMMUNITY_owner]]
-- 1 edge to [[_COMMUNITY_fake_ai]]
-- 1 edge to [[_COMMUNITY_test_first_second.py]]
+- 3 edges to [[_COMMUNITY_prepare_topic]]
+- 3 edges to [[_COMMUNITY_choose_images]]
+- 2 edges to [[_COMMUNITY_clean_full]]
+- 2 edges to [[_COMMUNITY_render_remotion]]
+- 1 edge to [[_COMMUNITY_plan_with]]
 - 1 edge to [[_COMMUNITY_visual_review]]
-- 1 edge to [[_COMMUNITY_json]]
-- 1 edge to [[_COMMUNITY_pictures_of]]
-- 1 edge to [[_COMMUNITY_apply_review_fixes]]
-- 1 edge to [[_COMMUNITY_drawn_thumbnail]]
+- 1 edge to [[_COMMUNITY_test_style.py]]
+- 1 edge to [[_COMMUNITY_rewrite_paint_prompts]]
 
 ## Top bridge nodes
-- [[load_pool()]] - degree 14, connects to 9 communities
 - [[gather_pool()]] - degree 17, connects to 6 communities
-- [[wm_files()]] - degree 8, connects to 3 communities
+- [[owner()]] - degree 13, connects to 6 communities
+- [[_fake_planning()]] - degree 6, connects to 3 communities
 - [[stubbed]] - degree 9, connects to 2 communities
-- [[test_pool_roundtrip()]] - degree 5, connects to 2 communities
+- [[dot-__enter__()_3]] - degree 4, connects to 2 communities

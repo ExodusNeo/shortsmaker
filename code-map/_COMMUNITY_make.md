@@ -1,16 +1,13 @@
 ---
 type: community
-members: 20
+members: 12
 ---
 
 # make
 
-**Members:** 20 nodes
+**Members:** 12 nodes
 
 ## Members
-- [[A finished Short's work in miniature grey pictures, a see-through graphics…]] - rationale - tests/test_edit_project.py
-- [[A re-render with nothing left to fix an old timeline would no longer match the…]] - rationale - shortsmaker/edit_project.py
-- [[Path_2]] - code
 - [[Path_3]] - code
 - [[The video tracks bottom-up (pictures, then graphics drawn over them), each cut…]] - rationale - shortsmaker/edit_project.py
 - [[caption_layer()]] - code - shortsmaker/edit_project.py
@@ -22,11 +19,6 @@ members: 20
 - [[master_gain()]] - code - shortsmaker/edit_project.py
 - [[project_xml()]] - code - shortsmaker/edit_project.py
 - [[prop()]] - code - shortsmaker/edit_project.py
-- [[remove()]] - code - shortsmaker/edit_project.py
-- [[short_folder()]] - code - tests/test_edit_project.py
-- [[test_melt_plays_it_with_the_captions_on_top()]] - code - tests/test_edit_project.py
-- [[test_timeline_has_scenes_captions_sound_and_markers()]] - code - tests/test_edit_project.py
-- [[videos()]] - code - tests/test_edit_project.py
 - [[workcaptions.mov the captions alone on a see-through background, from the…]] - rationale - shortsmaker/edit_project.py
 
 ## Live Query (requires Dataview plugin)
@@ -37,14 +29,15 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 10 edges to [[_COMMUNITY_test_full_scenes.py]]
-- 3 edges to [[_COMMUNITY_ffmpeg]]
-- 2 edges to [[_COMMUNITY_render]]
+- 5 edges to [[_COMMUNITY_gpu.py]]
+- 3 edges to [[_COMMUNITY_test_edit_project.py]]
 - 2 edges to [[_COMMUNITY_re]]
+- 1 edge to [[_COMMUNITY_ffmpeg]]
+- 1 edge to [[_COMMUNITY_render]]
 
 ## Top bridge nodes
-- [[make()]] - degree 9, connects to 2 communities
+- [[make()]] - degree 9, connects to 3 communities
 - [[project_xml()]] - degree 8, connects to 2 communities
 - [[master_gain()]] - degree 6, connects to 2 communities
-- [[short_folder()]] - degree 6, connects to 2 communities
 - [[caption_layer()]] - degree 5, connects to 2 communities
+- [[Path_3]] - degree 5, connects to 1 community

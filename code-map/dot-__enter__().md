@@ -1,20 +1,18 @@
 ---
 source_file: "tests/test_pictures_first.py"
 type: "code"
-community: "owner"
-location: "L40"
+community: "write_scripts"
+location: "L118"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/owner
+  - community/write_scripts
 ---
 
 # .__enter__()
 
 ## Connections
-- [[film()]] - `calls` [EXTRACTED]
-- [[owner()]] - `calls` [EXTRACTED]
-- [[still()]] - `calls` [EXTRACTED]
-- [[stubbed]] - `method` [EXTRACTED]
+- [[fake_ai]] - `method` [EXTRACTED]
+- [[reply()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/owner
+#graphify/code #graphify/EXTRACTED #community/write_scripts

@@ -17,6 +17,7 @@ tags:
 - [[comfy_call()]] - `contains` [EXTRACTED]
 - [[concurrent_futures]] - `imports_from` [EXTRACTED]
 - [[config.py]] - `imports_from` [EXTRACTED]
+- [[cosy_instruct()]] - `contains` [EXTRACTED]
 - [[cover_crop()]] - `contains` [EXTRACTED]
 - [[cut_owner_clip()]] - `contains` [EXTRACTED]
 - [[footage.py]] - `imports_from` [EXTRACTED]

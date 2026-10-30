@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_blender_link.py"
 type: "code"
-community: "fetch_model"
+community: "test_blender_link.py"
 location: "L133"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/fetch_model
+  - community/test_blender_linkpy
 ---
 
 # test_download_error_cleans_up()
@@ -18,4 +18,4 @@ tags:
 - [[test_blender_link.py]] - `contains` [EXTRACTED]
 - [[with_fake()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/fetch_model
+#graphify/code #graphify/EXTRACTED #community/test_blender_linkpy

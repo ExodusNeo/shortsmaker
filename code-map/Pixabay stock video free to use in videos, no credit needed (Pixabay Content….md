@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/footage.py"
 type: "rationale"
-community: "test_full_scenes.py"
+community: "image_sources.py"
 location: "L55"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/test_full_scenespy
+  - community/image_sourcespy
 ---
 
 # Pixabay stock video: free to use in videos, no credit needed (Pixabay Content…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[pixabay_films()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/test_full_scenespy
+#graphify/rationale #graphify/EXTRACTED #community/image_sourcespy

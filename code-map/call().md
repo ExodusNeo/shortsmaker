@@ -14,6 +14,6 @@ tags:
 ## Connections
 - [[h3_run.py]] - `contains` [EXTRACTED]
 - [[json]] - `calls` [EXTRACTED]
-- [[main()_1]] - `calls` [EXTRACTED]
+- [[main()_3]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/h3_runpy

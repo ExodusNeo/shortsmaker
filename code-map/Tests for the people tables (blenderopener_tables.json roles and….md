@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_people_tables.py"
 type: "rationale"
-community: "json"
+community: "test_full_scenes.py"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/json
+  - community/test_full_scenespy
 ---
 
 # Tests for the people tables (blender/opener_tables.json "roles" and…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[test_people_tables.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/json
+#graphify/rationale #graphify/EXTRACTED #community/test_full_scenespy

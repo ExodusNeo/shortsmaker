@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/blender_link.py"
 type: "code"
-community: "fetch_model"
+community: "blender_link.py"
 location: "L60"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/fetch_model
+  - community/blender_linkpy
 ---
 
 # search()
@@ -20,4 +20,4 @@ tags:
 - [[resolve_models()]] - `calls` [EXTRACTED]
 - [[test_search_filters_licences()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/fetch_model
+#graphify/code #graphify/EXTRACTED #community/blender_linkpy

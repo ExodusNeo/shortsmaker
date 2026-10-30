@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/picture_pool.py"
 type: "code"
-community: "pool_of"
+community: "prepare_topic"
 location: "L30"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/pool_of
+  - community/prepare_topic
 ---
 
 # check()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[clean_pics()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/pool_of
+#graphify/code #graphify/EXTRACTED #community/prepare_topic

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/blender_plan.py"
 type: "rationale"
-community: "blender_plan.py"
+community: "test_blender_scene.py"
 location: "L111"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/blender_planpy
+  - community/test_blender_scenepy
 ---
 
 # The engineer step: one AI call plans every Short's build (s["build"]); Shorts…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[plan_builds()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/blender_planpy
+#graphify/rationale #graphify/EXTRACTED #community/test_blender_scenepy

@@ -1,18 +1,18 @@
 ---
 source_file: "shortsmaker/motion.py"
 type: "code"
-community: "full_cues"
+community: "opener_graphic"
 location: "L40"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/full_cues
+  - community/opener_graphic
 ---
 
 # full_props()
 
 ## Connections
-- [[Path_27]] - `references` [EXTRACTED]
+- [[Path_26]] - `references` [EXTRACTED]
 - [[The `full` object Remotion draws for scene i the plan's data, its word…]] - `rationale_for` [EXTRACTED]
 - [[motion.py]] - `contains` [EXTRACTED]
 - [[put()]] - `contains` [EXTRACTED]
@@ -24,4 +24,4 @@ tags:
 - [[test_remotion_props_full()]] - `calls` [EXTRACTED]
 - [[to_glb()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/full_cues
+#graphify/code #graphify/EXTRACTED #community/opener_graphic

@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_full_scenes.py"
 type: "code"
-community: "full_cues"
+community: "opener_graphic"
 location: "L305"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/full_cues
+  - community/opener_graphic
 ---
 
 # _jpg()
@@ -16,4 +16,4 @@ tags:
 - [[test_full_scenes.py]] - `contains` [EXTRACTED]
 - [[test_remotion_props_full()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/full_cues
+#graphify/code #graphify/EXTRACTED #community/opener_graphic

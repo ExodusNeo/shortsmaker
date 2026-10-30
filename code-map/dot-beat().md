@@ -16,6 +16,6 @@ tags:
 - [[dot-close()_1]] - `calls` [EXTRACTED]
 - [[dot-wide()]] - `calls` [EXTRACTED]
 - [[Shots]] - `method` [EXTRACTED]
-- [[main()_2]] - `calls` [INFERRED]
+- [[main()_4]] - `calls` [INFERRED]
 
 #graphify/code #graphify/EXTRACTED #community/Shots

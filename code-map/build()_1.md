@@ -1,27 +1,20 @@
 ---
-source_file: "tests/test_shot_templates.py"
+source_file: "blender/templates.py"
 type: "code"
-community: "json"
-location: "L68"
+community: "templates.py"
+location: "L207"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/json
+  - community/templatespy
 ---
 
 # build()
 
 ## Connections
-- [[copy]] - `calls` [EXTRACTED]
-- [[ffmpeg()]] - `calls` [EXTRACTED]
-- [[fill_template()]] - `calls` [EXTRACTED]
-- [[json]] - `calls` [EXTRACTED]
-- [[resolve_models()]] - `calls` [EXTRACTED]
-- [[review_frames()]] - `calls` [EXTRACTED]
-- [[scale_beats()]] - `calls` [EXTRACTED]
-- [[shutil]] - `calls` [EXTRACTED]
-- [[subprocess]] - `calls` [EXTRACTED]
-- [[tempfile]] - `calls` [EXTRACTED]
-- [[test_shot_templates.py]] - `contains` [EXTRACTED]
+- [[Bridge]] - `references` [EXTRACTED]
+- [[main()_4]] - `calls` [EXTRACTED]
+- [[templates.py]] - `contains` [EXTRACTED]
+- [[truss_bridge()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/json
+#graphify/code #graphify/EXTRACTED #community/templatespy

@@ -1,12 +1,12 @@
 ---
 source_file: "local_ai/qwen_voice.py"
 type: "rationale"
-community: "test_story.py"
+community: "time"
 location: "L86"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/test_storypy
+  - community/time
 ---
 
 # Full spoken string for TTS synthesis, with punctuation attached cleanly.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[spoken_sentence()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/test_storypy
+#graphify/rationale #graphify/EXTRACTED #community/time
