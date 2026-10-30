@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[One model for the three.js model graphic (picker.opener_graphic) the…]] - `rationale_for` [EXTRACTED]
-- [[Path_27]] - `references` [EXTRACTED]
+- [[Path_12]] - `references` [EXTRACTED]
 - [[fetch_model()]] - `calls` [EXTRACTED]
 - [[in_library()]] - `calls` [EXTRACTED]
 - [[opener_graphic()]] - `calls` [EXTRACTED]

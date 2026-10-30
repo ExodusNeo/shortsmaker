@@ -29,7 +29,7 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 5 edges to [[_COMMUNITY_pathlib]]
-- 1 edge to [[_COMMUNITY_write_scripts]]
+- 1 edge to [[_COMMUNITY_re]]
 - 1 edge to [[_COMMUNITY_render]]
 
 ## Top bridge nodes

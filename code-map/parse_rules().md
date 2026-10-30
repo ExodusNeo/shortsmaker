@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/rules.py"
 type: "code"
-community: "test_rules.py"
+community: "make"
 location: "L19"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_rulespy
+  - community/make
 ---
 
 # parse_rules()
@@ -29,4 +29,4 @@ tags:
 - [[test_rules_accept_opener_setting()]] - `calls` [EXTRACTED]
 - [[test_strips_tag_comments()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_rulespy
+#graphify/code #graphify/EXTRACTED #community/make

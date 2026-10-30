@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/logbook.py"
 type: "rationale"
-community: "re"
+community: "fake_ai"
 location: "L98"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/re
+  - community/fake_ai
 ---
 
 # The logbook entries the owner has filled in (Views written down), at most the…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[logbook_results()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/re
+#graphify/rationale #graphify/EXTRACTED #community/fake_ai

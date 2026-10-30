@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[Owner, 2026-10-30 the motion-graphic opener goes first and gets…]] - `rationale_for` [EXTRACTED]
-- [[Path_21]] - `references` [EXTRACTED]
+- [[Path_25]] - `references` [EXTRACTED]
 - [[full_summary()]] - `calls` [EXTRACTED]
 - [[opener_graphic()]] - `calls` [EXTRACTED]
 - [[redraw_custom()]] - `calls` [EXTRACTED]

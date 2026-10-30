@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/edit_project.py"
 type: "code"
-community: "ffmpeg"
+community: "make"
 location: "L45"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ffmpeg
+  - community/make
 ---
 
 # chain()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[project_xml()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ffmpeg
+#graphify/code #graphify/EXTRACTED #community/make

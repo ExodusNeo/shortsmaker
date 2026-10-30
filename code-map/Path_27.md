@@ -1,20 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "shutil"
+community: "drawn_thumbnail"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/shutil
+  - community/drawn_thumbnail
 ---
 
 # Path
 
 ## Connections
-- [[model_for()]] - `references` [EXTRACTED]
-- [[render_opener()]] - `references` [EXTRACTED]
-- [[review()]] - `references` [EXTRACTED]
-- [[save_try()]] - `references` [EXTRACTED]
-- [[to_glb()]] - `references` [EXTRACTED]
+- [[drawn_short()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/shutil
+#graphify/code #graphify/EXTRACTED #community/drawn_thumbnail

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/plan_rules.py"
 type: "code"
-community: "write_scripts"
+community: "re"
 location: "L308"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/write_scripts
+  - community/re
 ---
 
 # fill_money_graphics()
@@ -19,4 +19,4 @@ tags:
 - [[words_of()]] - `calls` [EXTRACTED]
 - [[write_scripts()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/write_scripts
+#graphify/code #graphify/EXTRACTED #community/re

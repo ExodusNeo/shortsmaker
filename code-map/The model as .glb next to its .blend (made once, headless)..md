@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/opener_render.py"
 type: "rationale"
-community: "shutil"
+community: "review"
 location: "L115"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/shutil
+  - community/review
 ---
 
 # The model as .glb next to its .blend (made once, headless).
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[to_glb()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/shutil
+#graphify/rationale #graphify/EXTRACTED #community/review

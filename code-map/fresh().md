@@ -1,17 +1,17 @@
 ---
-source_file: "tests/test_opener_render.py"
+source_file: "tests/opener_check_cases.py"
 type: "code"
-community: "test_opener_render.py"
-location: "L287"
+community: "opener_checks.py"
+location: "L18"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_opener_renderpy
+  - community/opener_checkspy
 ---
 
 # fresh()
 
 ## Connections
-- [[test_weak_opener_graphic_fixes_then_handoff()]] - `contains` [EXTRACTED]
+- [[opener_check_cases.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_opener_renderpy
+#graphify/code #graphify/EXTRACTED #community/opener_checkspy

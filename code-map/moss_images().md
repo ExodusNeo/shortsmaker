@@ -1,19 +1,19 @@
 ---
 source_file: "shortsmaker/gpu.py"
 type: "code"
-community: "pathlib"
+community: "json"
 location: "L280"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/pathlib
+  - community/json
 ---
 
 # moss_images()
 
 ## Connections
 - [[Paint on this PC with MOSS-Image in ComfyUI (owner's pick 2026-10-20 over SDXL-…]] - `rationale_for` [EXTRACTED]
-- [[Path_8]] - `references` [EXTRACTED]
+- [[Path_4]] - `references` [EXTRACTED]
 - [[comfy_call()]] - `calls` [EXTRACTED]
 - [[gpu.py]] - `contains` [EXTRACTED]
 - [[hashlib]] - `calls` [EXTRACTED]
@@ -25,4 +25,4 @@ tags:
 - [[subprocess]] - `calls` [EXTRACTED]
 - [[time]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/pathlib
+#graphify/code #graphify/EXTRACTED #community/json

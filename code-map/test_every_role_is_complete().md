@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_people_tables.py"
 type: "code"
-community: "sys"
+community: "subprocess"
 location: "L31"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/sys
+  - community/subprocess
 ---
 
 # test_every_role_is_complete()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[test_people_tables.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/sys
+#graphify/code #graphify/EXTRACTED #community/subprocess

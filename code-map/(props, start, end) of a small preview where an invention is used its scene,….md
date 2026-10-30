@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/style_lab.py"
 type: "rationale"
-community: "test_style.py"
+community: "render_remotion"
 location: "L202"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/test_stylepy
+  - community/render_remotion
 ---
 
 # (props, start, end) of a small preview where an invention is used: its scene,…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[style_preview()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/test_stylepy
+#graphify/rationale #graphify/EXTRACTED #community/render_remotion

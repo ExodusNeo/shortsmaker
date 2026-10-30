@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_opener_render.py"
 type: "code"
-community: "test_opener_render.py"
+community: "test_weak_opener_graphic_fixes_then_handoff"
 location: "L283"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_opener_renderpy
+  - community/test_weak_opener_graphic_fixes_then_handoff
 ---
 
 # test_weak_opener_graphic_fixes_then_handoff()
@@ -15,8 +15,8 @@ tags:
 - [[Owner, 2026-10-30 a weak motion-graphic opener is fixed OPENER_GRAPHIC_FIXES…]] - `rationale_for` [EXTRACTED]
 - [[fake_pick()]] - `indirect_call` [INFERRED]
 - [[fix_opener_graphic()]] - `calls` [EXTRACTED]
-- [[fresh()]] - `contains` [EXTRACTED]
+- [[fresh()_1]] - `contains` [EXTRACTED]
 - [[test_opener_render.py]] - `contains` [EXTRACTED]
 - [[weak_opener_graphic()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_opener_renderpy
+#graphify/code #graphify/EXTRACTED #community/test_weak_opener_graphic_fixes_then_handoff

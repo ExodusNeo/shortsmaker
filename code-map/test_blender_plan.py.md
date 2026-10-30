@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_blender_plan.py"
 type: "code"
-community: "test_blender_plan.py"
+community: "test_blender_scene.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_blender_planpy
+  - community/test_blender_scenepy
 ---
 
 # test_blender_plan.py
@@ -19,7 +19,7 @@ tags:
 - [[json]] - `imports` [EXTRACTED]
 - [[llm.py]] - `imports_from` [EXTRACTED]
 - [[pathlib]] - `imports_from` [EXTRACTED]
-- [[plan()]] - `contains` [EXTRACTED]
+- [[plan()_1]] - `contains` [EXTRACTED]
 - [[session.py]] - `imports_from` [EXTRACTED]
 - [[sys]] - `imports` [EXTRACTED]
 - [[test_a_failure_in_scene_one_becomes_the_hook()]] - `contains` [EXTRACTED]
@@ -37,4 +37,4 @@ tags:
 - [[test_zoom_and_failure_are_guaranteed()]] - `contains` [EXTRACTED]
 - [[traceback]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_blender_planpy
+#graphify/code #graphify/EXTRACTED #community/test_blender_scenepy

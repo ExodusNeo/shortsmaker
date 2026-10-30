@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_topic_ideas.py"
 type: "code"
-community: "channel_profiles.py"
+community: "fake_ai"
 location: "L133"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/channel_profilespy
+  - community/fake_ai
 ---
 
 # test_seo_never_sees_competitor_titles()
@@ -16,4 +16,4 @@ tags:
 - [[seo_pass()]] - `calls` [EXTRACTED]
 - [[test_topic_ideas.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/channel_profilespy
+#graphify/code #graphify/EXTRACTED #community/fake_ai

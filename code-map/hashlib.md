@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "pathlib"
+community: "json"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/pathlib
+  - community/json
 ---
 
 # hashlib
@@ -23,4 +23,4 @@ tags:
 - [[pixabay_films()]] - `calls` [EXTRACTED]
 - [[pool_folder()]] - `calls` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/pathlib
+#graphify/concept #graphify/EXTRACTED #community/json

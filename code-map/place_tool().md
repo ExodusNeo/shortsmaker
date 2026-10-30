@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[Matrix]] - `references` [EXTRACTED]
 - [[Object location that puts the tool's edge point at edge_at with rotation R.]] - `rationale_for` [EXTRACTED]
-- [[Vector_4]] - `references` [EXTRACTED]
+- [[Vector_5]] - `references` [EXTRACTED]
 - [[cut()]] - `calls` [EXTRACTED]
 - [[edge_point_local()]] - `calls` [EXTRACTED]
 - [[moves.py]] - `contains` [EXTRACTED]

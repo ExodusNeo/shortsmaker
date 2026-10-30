@@ -29,12 +29,12 @@ members: 55
 - [[_sub()]] - code - shortsmaker/opener_plan.py
 - [[_takeable()]] - code - shortsmaker/opener_plan.py
 - [[_templates_text()]] - code - shortsmaker/opener_plan.py
-- [[ask()_7]] - code - shortsmaker/opener_plan.py
+- [[ask()_2]] - code - shortsmaker/opener_plan.py
 - [[clean_opener()]] - code - shortsmaker/opener_plan.py
 - [[fill_template()]] - code - shortsmaker/opener_plan.py
 - [[opener_plan.py]] - code - shortsmaker/opener_plan.py
 - [[pick_up's take lies on the ground a thing of at most 1 m (not on anything),…]] - rationale - shortsmaker/opener_plan.py
-- [[plan()_1]] - code - tests/test_opener_plan.py
+- [[plan()]] - code - tests/test_opener_plan.py
 - [[plan_openers()]] - code - shortsmaker/opener_plan.py
 - [[roll is the physics tumble for round things; the people run's car rolled and…]] - rationale - tests/test_opener_plan.py
 - [[short()_2]] - code - tests/test_opener_plan.py
@@ -73,7 +73,7 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 9 edges to [[_COMMUNITY_pathlib]]
-- 6 edges to [[_COMMUNITY_sys]]
+- 6 edges to [[_COMMUNITY_subprocess]]
 - 2 edges to [[_COMMUNITY_test_opener_scene.py]]
 - 2 edges to [[_COMMUNITY_math]]
 - 2 edges to [[_COMMUNITY_json]]

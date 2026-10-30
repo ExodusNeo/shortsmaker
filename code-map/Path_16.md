@@ -1,17 +1,21 @@
 ---
 source_file: ""
 type: "code"
-community: "json"
+community: "catalog_pool"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/json
+  - community/catalog_pool
 ---
 
 # Path
 
 ## Connections
-- [[fit_start()]] - `references` [EXTRACTED]
-- [[saved_file()]] - `references` [EXTRACTED]
+- [[catalog_pool()]] - `references` [EXTRACTED]
+- [[contact_sheets()]] - `references` [EXTRACTED]
+- [[load_pool()]] - `references` [EXTRACTED]
+- [[pool_folder()]] - `references` [EXTRACTED]
+- [[prepare_topic()]] - `references` [EXTRACTED]
+- [[save_pool()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/json
+#graphify/code #graphify/EXTRACTED #community/catalog_pool

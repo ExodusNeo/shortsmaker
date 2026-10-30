@@ -8,7 +8,7 @@ members: 6
 **Members:** 6 nodes
 
 ## Members
-- [[Path_19]] - code
+- [[Path_18]] - code
 - [[Timestamped edit decision list of exactly what was rendered, plus the sound-…]] - rationale - shortsmaker/editplan.py
 - [[edit_plan()]] - code - shortsmaker/editplan.py
 - [[edit_plan.txt what the pictures-first check found (None for a plan made before…]] - rationale - shortsmaker/editplan.py

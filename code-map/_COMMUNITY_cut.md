@@ -9,7 +9,7 @@ members: 43
 
 ## Members
 - [[(edge, thin, long) unit axes of a tool in its own space long = handle-to-head,…]] - rationale - blender/moves.py
-- [[dot-__init__()_5]] - code - blender/moves.py
+- [[dot-__init__()_7]] - code - blender/moves.py
 - [[Loose parts that touch or nearly touch belong together a low-poly head is…]] - rationale - blender/moves.py
 - [[Matrix]] - code
 - [[Object_2]] - code
@@ -22,7 +22,7 @@ members: 43
 - [[The part of `src` on one side of the plane, its cut face filled; None when…]] - rationale - blender/moves.py
 - [[The rotation that turns the edge toward d and the blade's plane normal along…]] - rationale - blender/moves.py
 - [[Turn the blade about its stroke until its flat side is at least `deg` toward…]] - rationale - blender/moves.py
-- [[Vector_4]] - code
+- [[Vector_5]] - code
 - [[best_in()]] - code - blender/moves.py
 - [[bm_area()]] - code - blender/moves.py
 - [[box_of()]] - code - blender/moves.py
@@ -42,7 +42,7 @@ members: 43
 - [[plane_splits()]] - code - blender/moves.py
 - [[region_normal()]] - code - blender/moves.py
 - [[remove_body()]] - code - blender/scene_kit.py
-- [[root()]] - code - blender/moves.py
+- [[root()_1]] - code - blender/moves.py
 - [[show_face()]] - code - blender/moves.py
 - [[split()]] - code - blender/moves.py
 - [[thickness()]] - code - blender/moves.py
@@ -69,7 +69,7 @@ SORT file.name ASC
 
 ## Top bridge nodes
 - [[cut()]] - degree 29, connects to 5 communities
-- [[Vector_4]] - degree 15, connects to 2 communities
+- [[Vector_5]] - degree 15, connects to 2 communities
 - [[edge_point_local()]] - degree 7, connects to 2 communities
 - [[show_face()]] - degree 6, connects to 2 communities
 - [[handle_end_local()]] - degree 5, connects to 2 communities

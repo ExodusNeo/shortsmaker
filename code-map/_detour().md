@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[A point beside whoever blocks the straight walk from a to b, both legs clear,…]] - `rationale_for` [EXTRACTED]
-- [[Vector_5]] - `references` [EXTRACTED]
+- [[Vector_6]] - `references` [EXTRACTED]
 - [[_clearance()]] - `calls` [EXTRACTED]
 - [[math]] - `calls` [EXTRACTED]
 - [[people.py]] - `contains` [EXTRACTED]

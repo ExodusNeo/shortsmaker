@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/full/toolkit.tsx"
 type: "code"
-community: "toolkit.tsx"
+community: "Custom3.tsx"
 location: "L40"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/toolkittsx
+  - community/Custom3tsx
 ---
 
 # TitleBanner()
@@ -28,4 +28,4 @@ tags:
 - [[skinOf()]] - `calls` [EXTRACTED]
 - [[toolkit.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/toolkittsx
+#graphify/code #graphify/EXTRACTED #community/Custom3tsx

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/edit_project.py"
 type: "rationale"
-community: "ffmpeg"
+community: "make"
 location: "L106"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/ffmpeg
+  - community/make
 ---
 
 # A re-render with nothing left to fix: an old timeline would no longer match the…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[remove()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/ffmpeg
+#graphify/rationale #graphify/EXTRACTED #community/make

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/image_sources.py"
 type: "rationale"
-community: "gather_pool"
+community: "json"
 location: "L99"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/gather_pool
+  - community/json
 ---
 
 # Usable images from a Wikimedia/Wikipedia API query: photos, screenshots,…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[wm_files()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/gather_pool
+#graphify/rationale #graphify/EXTRACTED #community/json

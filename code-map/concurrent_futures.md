@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "pathlib"
+community: "json"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/pathlib
+  - community/json
 ---
 
 # concurrent_futures
@@ -14,4 +14,4 @@ tags:
 - [[gpu.py]] - `imports_from` [EXTRACTED]
 - [[picture_pool.py]] - `imports_from` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/pathlib
+#graphify/concept #graphify/EXTRACTED #community/json

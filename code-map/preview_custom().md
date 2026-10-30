@@ -1,21 +1,21 @@
 ---
 source_file: "shortsmaker/motion.py"
 type: "code"
-community: "shutil"
+community: "test_package.py"
 location: "L254"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/shutil
+  - community/test_packagepy
 ---
 
 # preview_custom()
 
 ## Connections
-- [[Path_26]] - `references` [EXTRACTED]
+- [[Path_24]] - `references` [EXTRACTED]
 - [[Renders just this custom scene small (its pictures are already in…]] - `rationale_for` [EXTRACTED]
 - [[look_and_fix()]] - `calls` [EXTRACTED]
 - [[motion.py]] - `contains` [EXTRACTED]
 - [[preview_sheet()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/shutil
+#graphify/code #graphify/EXTRACTED #community/test_packagepy

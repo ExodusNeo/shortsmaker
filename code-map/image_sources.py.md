@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/image_sources.py"
 type: "code"
-community: "pathlib"
+community: "json"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/pathlib
+  - community/json
 ---
 
 # image_sources.py
@@ -55,4 +55,4 @@ tags:
 - [[wm_get()]] - `contains` [EXTRACTED]
 - [[writing.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/pathlib
+#graphify/code #graphify/EXTRACTED #community/json

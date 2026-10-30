@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_opener_render.py"
 type: "code"
-community: "test_opener_render.py"
+community: "use_opener"
 location: "L265"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_opener_renderpy
+  - community/use_opener
 ---
 
 # test_use_opener_no_template_ai_clip()
@@ -16,4 +16,4 @@ tags:
 - [[test_opener_render.py]] - `contains` [EXTRACTED]
 - [[use_opener()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_opener_renderpy
+#graphify/code #graphify/EXTRACTED #community/use_opener

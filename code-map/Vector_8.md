@@ -1,17 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "build_scene.py"
+community: "opener_scene.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/build_scenepy
+  - community/opener_scenepy
 ---
 
 # Vector
 
 ## Connections
-- [[direction()]] - `references` [EXTRACTED]
-- [[keyloc()]] - `references` [EXTRACTED]
+- [[build_set()]] - `references` [EXTRACTED]
+- [[stand_on()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/build_scenepy
+#graphify/code #graphify/EXTRACTED #community/opener_scenepy

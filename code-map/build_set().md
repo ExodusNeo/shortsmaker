@@ -12,7 +12,7 @@ tags:
 # build_set()
 
 ## Connections
-- [[Vector_7]] - `references` [EXTRACTED]
+- [[Vector_8]] - `references` [EXTRACTED]
 - [[fit()]] - `calls` [EXTRACTED]
 - [[ground_material()]] - `calls` [EXTRACTED]
 - [[load_model()]] - `calls` [EXTRACTED]

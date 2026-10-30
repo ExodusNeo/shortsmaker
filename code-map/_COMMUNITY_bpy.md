@@ -31,20 +31,19 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 3 edges to [[_COMMUNITY_opener_scene.py]]
-- 2 edges to [[_COMMUNITY_sys]]
+- 2 edges to [[_COMMUNITY_main]]
+- 2 edges to [[_COMMUNITY_subprocess]]
 - 2 edges to [[_COMMUNITY_opener_checks.py]]
 - 1 edge to [[_COMMUNITY_moves.py]]
 - 1 edge to [[_COMMUNITY_look.py]]
 - 1 edge to [[_COMMUNITY_parts.py]]
 - 1 edge to [[_COMMUNITY_scene_kit.py]]
-- 1 edge to [[_COMMUNITY_main]]
 - 1 edge to [[_COMMUNITY_math]]
 - 1 edge to [[_COMMUNITY_pack_people.py]]
-- 1 edge to [[_COMMUNITY_build_scene.py]]
 - 1 edge to [[_COMMUNITY_people_standin.py]]
 
 ## Top bridge nodes
-- [[bpy]] - degree 15, connects to 12 communities
+- [[bpy]] - degree 15, connects to 11 communities
 - [[look_toon.py]] - degree 7, connects to 1 community
 - [[apply()_1]] - degree 6, connects to 1 community
 - [[export_glb.py]] - degree 3, connects to 1 community

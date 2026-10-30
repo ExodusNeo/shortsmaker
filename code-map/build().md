@@ -12,7 +12,7 @@ tags:
 # build()
 
 ## Connections
-- [[add()]] - `contains` [EXTRACTED]
+- [[add()_1]] - `contains` [EXTRACTED]
 - [[main()]] - `calls` [EXTRACTED]
 - [[render_style.py]] - `contains` [EXTRACTED]
 - [[style_library()]] - `calls` [EXTRACTED]

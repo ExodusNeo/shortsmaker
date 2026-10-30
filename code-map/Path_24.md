@@ -1,16 +1,20 @@
 ---
 source_file: ""
 type: "code"
-community: "pack_people.py"
+community: "test_package.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/pack_peoplepy
+  - community/test_packagepy
 ---
 
 # Path
 
 ## Connections
-- [[main()_8]] - `references` [EXTRACTED]
+- [[code_custom_scenes()]] - `references` [EXTRACTED]
+- [[full_props()]] - `references` [EXTRACTED]
+- [[look_and_fix()]] - `references` [EXTRACTED]
+- [[preview_custom()]] - `references` [EXTRACTED]
+- [[preview_sheet()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/pack_peoplepy
+#graphify/code #graphify/EXTRACTED #community/test_packagepy

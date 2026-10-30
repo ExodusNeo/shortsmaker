@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "json"
+community: "re"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/json
+  - community/re
 ---
 
 # wave
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[audio_mix.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/json
+#graphify/concept #graphify/EXTRACTED #community/re

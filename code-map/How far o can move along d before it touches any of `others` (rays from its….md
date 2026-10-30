@@ -12,6 +12,6 @@ tags:
 # How far o can move along d before it touches any of `others` (rays from its…
 
 ## Connections
-- [[travel()]] - `rationale_for` [EXTRACTED]
+- [[travel()_1]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/tree

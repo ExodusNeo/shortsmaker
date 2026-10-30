@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_style.py"
 type: "code"
-community: "test_style.py"
+community: "render_remotion"
 location: "L316"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_stylepy
+  - community/render_remotion
 ---
 
 # test_failed_invention_keeps_the_others()
@@ -18,4 +18,4 @@ tags:
 - [[test_style.py]] - `contains` [EXTRACTED]
 - [[with_fakes()_1]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_stylepy
+#graphify/code #graphify/EXTRACTED #community/render_remotion

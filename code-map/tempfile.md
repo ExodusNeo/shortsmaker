@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "sys"
+community: "subprocess"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/sys
+  - community/subprocess
 ---
 
 # tempfile
@@ -33,4 +33,4 @@ tags:
 - [[test_story.py]] - `imports` [EXTRACTED]
 - [[test_topic_ideas.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/sys
+#graphify/concept #graphify/EXTRACTED #community/subprocess

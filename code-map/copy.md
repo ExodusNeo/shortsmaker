@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "sys"
+community: "subprocess"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/sys
+  - community/subprocess
 ---
 
 # copy
@@ -19,4 +19,4 @@ tags:
 - [[test_opener_scene.py]] - `imports` [EXTRACTED]
 - [[test_shot_templates.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/sys
+#graphify/concept #graphify/EXTRACTED #community/subprocess

@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "channel_profiles.py"
+community: "edit_plan"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/channel_profilespy
+  - community/edit_plan
 ---
 
 # Path
 
 ## Connections
-- [[draft_rules()]] - `references` [EXTRACTED]
+- [[edit_plan()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/channel_profilespy
+#graphify/code #graphify/EXTRACTED #community/edit_plan

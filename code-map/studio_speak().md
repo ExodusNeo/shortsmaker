@@ -1,12 +1,12 @@
 ---
 source_file: "local_ai/qwen_voice.py"
 type: "code"
-community: "json"
+community: "subprocess"
 location: "L125"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/json
+  - community/subprocess
 ---
 
 # studio_speak()
@@ -17,4 +17,4 @@ tags:
 - [[spoken_sentence()]] - `calls` [EXTRACTED]
 - [[subprocess]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/json
+#graphify/code #graphify/EXTRACTED #community/subprocess

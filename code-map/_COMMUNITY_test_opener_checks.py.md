@@ -29,8 +29,8 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 4 edges to [[_COMMUNITY_pathlib]]
-- 3 edges to [[_COMMUNITY_sys]]
+- 4 edges to [[_COMMUNITY_subprocess]]
+- 3 edges to [[_COMMUNITY_pathlib]]
 - 1 edge to [[_COMMUNITY_json]]
 
 ## Top bridge nodes

@@ -1,23 +1,23 @@
 ---
 source_file: "shortsmaker/review.py"
 type: "code"
-community: "pathlib"
+community: "subprocess"
 location: "L329"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/pathlib
+  - community/subprocess
 ---
 
 # storyboard()
 
 ## Connections
 - [[One mid-scene frame per scene from the finished video, labeled with its…]] - `rationale_for` [EXTRACTED]
-- [[Path_21]] - `references` [EXTRACTED]
+- [[Path_25]] - `references` [EXTRACTED]
 - [[clock()_1]] - `calls` [EXTRACTED]
 - [[io]] - `calls` [EXTRACTED]
 - [[render()_5]] - `calls` [EXTRACTED]
 - [[review.py]] - `contains` [EXTRACTED]
 - [[subprocess]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/pathlib
+#graphify/code #graphify/EXTRACTED #community/subprocess

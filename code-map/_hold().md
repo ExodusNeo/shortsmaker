@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[The prop held by its handle end in the hand a blade raised up and forward,…]] - `rationale_for` [EXTRACTED]
-- [[Vector_5]] - `references` [EXTRACTED]
+- [[Vector_6]] - `references` [EXTRACTED]
 - [[_body_tree()]] - `calls` [EXTRACTED]
 - [[_handle_first()]] - `calls` [EXTRACTED]
 - [[_show_blade()]] - `calls` [EXTRACTED]

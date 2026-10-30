@@ -12,7 +12,7 @@ tags:
 # _attach()
 
 ## Connections
-- [[Vector_5]] - `references` [EXTRACTED]
+- [[Vector_6]] - `references` [EXTRACTED]
 - [[dress()_1]] - `calls` [EXTRACTED]
 - [[item (origin at its bottom) stands on `at` and follows the bone's place and…]] - `rationale_for` [EXTRACTED]
 - [[people.py]] - `contains` [EXTRACTED]

@@ -12,7 +12,7 @@ tags:
 # cut_owner_clip()
 
 ## Connections
-- [[Path_8]] - `references` [EXTRACTED]
+- [[Path_4]] - `references` [EXTRACTED]
 - [[The owner's clip `src` cut to scene i's length fills the vertical frame, drops…]] - `rationale_for` [EXTRACTED]
 - [[ffmpeg()]] - `calls` [EXTRACTED]
 - [[gpu.py]] - `contains` [EXTRACTED]

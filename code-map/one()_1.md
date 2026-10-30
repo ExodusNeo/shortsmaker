@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/gpu.py"
 type: "code"
-community: "gemini_images"
+community: "render"
 location: "L224"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/gemini_images
+  - community/render
 ---
 
 # one()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[gemini_images()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/INFERRED #community/gemini_images
+#graphify/code #graphify/INFERRED #community/render

@@ -1,12 +1,12 @@
 ---
 source_file: "make_shorts.py"
 type: "rationale"
-community: "channel_profiles.py"
+community: "main"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/channel_profilespy
+  - community/main
 ---
 
 # Make ready-to-upload YouTube Shorts with no API keys. Claude Code (headless)…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[make_shorts.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/channel_profilespy
+#graphify/rationale #graphify/EXTRACTED #community/main

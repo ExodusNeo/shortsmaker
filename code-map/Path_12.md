@@ -1,20 +1,20 @@
 ---
 source_file: ""
 type: "code"
-community: "write_scripts"
+community: "review"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/write_scripts
+  - community/review
 ---
 
 # Path
 
 ## Connections
-- [[dot-__init__()_2]] - `references` [EXTRACTED]
-- [[fills_frame()]] - `references` [EXTRACTED]
-- [[frame_maker()]] - `references` [EXTRACTED]
-- [[graphic_low()]] - `references` [EXTRACTED]
-- [[thumbnail()]] - `references` [EXTRACTED]
+- [[model_for()]] - `references` [EXTRACTED]
+- [[render_opener()]] - `references` [EXTRACTED]
+- [[review()]] - `references` [EXTRACTED]
+- [[save_try()]] - `references` [EXTRACTED]
+- [[to_glb()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/write_scripts
+#graphify/code #graphify/EXTRACTED #community/review

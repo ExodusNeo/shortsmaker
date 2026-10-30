@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/cli.py"
 type: "rationale"
-community: "channel_profiles.py"
+community: "main"
 location: "L22"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/channel_profilespy
+  - community/main
 ---
 
 # The MCP server has to be started in Blender each time (owner, 2026-10-27): say…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[blender_note()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/channel_profilespy
+#graphify/rationale #graphify/EXTRACTED #community/main

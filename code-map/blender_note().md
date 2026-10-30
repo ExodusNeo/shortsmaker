@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/cli.py"
 type: "code"
-community: "channel_profiles.py"
+community: "main"
 location: "L21"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/channel_profilespy
+  - community/main
 ---
 
 # blender_note()
@@ -18,4 +18,4 @@ tags:
 - [[ping()]] - `calls` [EXTRACTED]
 - [[test_blender_note()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/channel_profilespy
+#graphify/code #graphify/EXTRACTED #community/main

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/plan_rules.py"
 type: "rationale"
-community: "clean_look"
+community: "re"
 location: "L205"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/clean_look
+  - community/re
 ---
 
 # A planned invention {"title", "brief", "fallback": <library name of that…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[clean_invention()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/clean_look
+#graphify/rationale #graphify/EXTRACTED #community/re

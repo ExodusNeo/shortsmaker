@@ -1,12 +1,12 @@
 ---
 source_file: "tests/run_ts_tests.py"
 type: "code"
-community: "sys"
+community: "subprocess"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/sys
+  - community/subprocess
 ---
 
 # run_ts_tests.py
@@ -19,4 +19,4 @@ tags:
 - [[sys]] - `imports` [EXTRACTED]
 - [[tempfile]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/sys
+#graphify/code #graphify/EXTRACTED #community/subprocess

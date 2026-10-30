@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[The way o faces on frame f its planned facing turned by every turn keyed since…]] - `rationale_for` [EXTRACTED]
-- [[Vector_5]] - `references` [EXTRACTED]
+- [[Vector_6]] - `references` [EXTRACTED]
 - [[_travel()]] - `calls` [EXTRACTED]
 - [[drink()]] - `calls` [EXTRACTED]
 - [[facing_vec()]] - `calls` [EXTRACTED]

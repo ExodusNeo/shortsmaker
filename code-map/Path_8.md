@@ -1,27 +1,20 @@
 ---
 source_file: ""
 type: "code"
-community: "local_clips"
+community: "captions"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/local_clips
+  - community/captions
 ---
 
 # Path
 
 ## Connections
-- [[cover_crop()]] - `references` [EXTRACTED]
-- [[cut_owner_clip()]] - `references` [EXTRACTED]
-- [[gemini_images()]] - `references` [EXTRACTED]
-- [[h3_prompts()]] - `references` [EXTRACTED]
-- [[local_clips()]] - `references` [EXTRACTED]
-- [[local_job()]] - `references` [EXTRACTED]
-- [[local_voice()]] - `references` [EXTRACTED]
-- [[moss_images()]] - `references` [EXTRACTED]
-- [[split_takes()]] - `references` [EXTRACTED]
-- [[start_picture_problems()]] - `references` [EXTRACTED]
-- [[unpack_clips()]] - `references` [EXTRACTED]
-- [[veo_handoff()]] - `references` [EXTRACTED]
+- [[captions()]] - `references` [EXTRACTED]
+- [[music_gain()]] - `references` [EXTRACTED]
+- [[speak()]] - `references` [EXTRACTED]
+- [[story_sound()]] - `references` [EXTRACTED]
+- [[tts()_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/local_clips
+#graphify/code #graphify/EXTRACTED #community/captions

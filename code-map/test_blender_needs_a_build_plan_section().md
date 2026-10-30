@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_rules.py"
 type: "code"
-community: "test_rules.py"
+community: "make"
 location: "L188"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_rulespy
+  - community/make
 ---
 
 # test_blender_needs_a_build_plan_section()
@@ -17,4 +17,4 @@ tags:
 - [[stop_text()]] - `calls` [EXTRACTED]
 - [[test_rules.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_rulespy
+#graphify/code #graphify/EXTRACTED #community/make

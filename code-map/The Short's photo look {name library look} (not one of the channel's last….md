@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/plan_rules.py"
 type: "rationale"
-community: "clean_look"
+community: "re"
 location: "L192"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/clean_look
+  - community/re
 ---
 
 # The Short's photo look: {"name": <library look>} (not one of the channel's last…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[clean_look()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/clean_look
+#graphify/rationale #graphify/EXTRACTED #community/re

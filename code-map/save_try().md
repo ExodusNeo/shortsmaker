@@ -1,22 +1,22 @@
 ---
 source_file: "shortsmaker/opener_render.py"
 type: "code"
-community: "shutil"
+community: "test_style.py"
 location: "L188"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/shutil
+  - community/test_stylepy
 ---
 
 # save_try()
 
 ## Connections
 - [[Every failed try kept for the engine fixes (workopener_triestryn.json and…]] - `rationale_for` [EXTRACTED]
-- [[Path_27]] - `references` [EXTRACTED]
+- [[Path_12]] - `references` [EXTRACTED]
 - [[json]] - `calls` [EXTRACTED]
 - [[opener_render.py]] - `contains` [EXTRACTED]
 - [[render_opener()]] - `calls` [EXTRACTED]
 - [[shutil]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/shutil
+#graphify/code #graphify/EXTRACTED #community/test_stylepy

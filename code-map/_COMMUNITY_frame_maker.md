@@ -1,11 +1,11 @@
 ---
 type: community
-members: 41
+members: 40
 ---
 
-# scene_cues
+# frame_maker
 
-**Members:** 41 nodes
+**Members:** 40 nodes
 
 ## Members
 - [[(style, text) for the built-in renderer, which draws only dates, places and…]] - rationale - shortsmaker/plan_rules.py
@@ -19,6 +19,7 @@ members: 41
 - [[Image]] - code
 - [[Image_1]] - code
 - [[One frame of slow Ken Burns motion; affine sampling is sub-pixel so it never…]] - rationale - shortsmaker/frame_render.py
+- [[Path_7]] - code
 - [[Pop the card in with a slight overshoot over a dimmed background, then shrink…]] - rationale - shortsmaker/frame_render.py
 - [[Pre-render a callout as a small transparent image (animated per frame later).]] - rationale - shortsmaker/frame_render.py
 - [[Returns frame(i, t) scene i at time t with camera move and graphics applied.…]] - rationale - shortsmaker/frame_render.py
@@ -26,26 +27,24 @@ members: 41
 - [[Stream every frame to ffmpeg. Cuts in `flashes` are hard cuts under a white…]] - rationale - shortsmaker/frame_render.py
 - [[Streams a clip's frames in order. Decoding a whole 1080x1920 clip up front…]] - rationale - shortsmaker/frame_render.py
 - [[Tilted photo card with a white border, drop shadow and a yellow name banner.]] - rationale - shortsmaker/frame_render.py
-- [[Timed extras for one scene a person card (photo `found`) when their name is…]] - rationale - shortsmaker/editplan.py
+- [[True only when a video is already vertical (916-ish, 720p+); horizontal videos…]] - rationale - shortsmaker/frame_render.py
+- [[True when the picture's subject would land under the top callouts (y ~180-680…]] - rationale - shortsmaker/frame_render.py
 - [[White camera-flash curve snaps up over the 2 frames before the cut, then…]] - rationale - shortsmaker/frame_render.py
 - [[credit_tag_image()]] - code - shortsmaker/image_sources.py
 - [[draw_card()]] - code - shortsmaker/frame_render.py
 - [[draw_graphic()]] - code - shortsmaker/frame_render.py
 - [[fallback_graphic()]] - code - shortsmaker/plan_rules.py
+- [[fills_frame()]] - code - shortsmaker/frame_render.py
 - [[fit_font()]] - code - shortsmaker/frame_render.py
 - [[flash_alpha()]] - code - shortsmaker/frame_render.py
 - [[frame()]] - code - shortsmaker/frame_render.py
 - [[frame()_1]] - code - tests/test_blender_plan.py
 - [[frame_maker()]] - code - shortsmaker/frame_render.py
+- [[graphic_low()]] - code - shortsmaker/frame_render.py
 - [[graphic_overlay()]] - code - shortsmaker/frame_render.py
 - [[person_card()]] - code - shortsmaker/frame_render.py
-- [[scene_cues()]] - code - shortsmaker/editplan.py
 - [[shot()]] - code - shortsmaker/frame_render.py
-- [[test_counter_finishes_before_it_leaves()]] - code - tests/test_full_scenes.py
-- [[test_graphic_card_hold_duration()]] - code - tests/test_package.py
 - [[test_hard_cuts_never_blend_scenes()]] - code - tests/test_blender_plan.py
-- [[test_person_card_hold_and_exit_gap()]] - code - tests/test_package.py
-- [[test_scene_hold_padding()]] - code - tests/test_package.py
 - [[thumbnail()]] - code - shortsmaker/frame_render.py
 - [[write()]] - code - tests/test_blender_plan.py
 - [[write_frames()]] - code - shortsmaker/frame_render.py
@@ -53,24 +52,24 @@ members: 41
 ## Live Query (requires Dataview plugin)
 
 ```dataview
-TABLE source_file, type FROM #community/scene_cues
+TABLE source_file, type FROM #community/frame_maker
 SORT file.name ASC
 ```
 
 ## Connections to other communities
 - 14 edges to [[_COMMUNITY_pathlib]]
 - 4 edges to [[_COMMUNITY_render]]
-- 3 edges to [[_COMMUNITY_write_scripts]]
-- 3 edges to [[_COMMUNITY_ask_ai]]
-- 2 edges to [[_COMMUNITY_full_cues]]
+- 3 edges to [[_COMMUNITY_re]]
+- 1 edge to [[_COMMUNITY_local_clips]]
+- 1 edge to [[_COMMUNITY_subprocess]]
 - 1 edge to [[_COMMUNITY_math]]
-- 1 edge to [[_COMMUNITY_plan_rules.py]]
-- 1 edge to [[_COMMUNITY_test_blender_plan.py]]
-- 1 edge to [[_COMMUNITY_test_full_scenes.py]]
+- 1 edge to [[_COMMUNITY_test_package.py]]
+- 1 edge to [[_COMMUNITY_json]]
+- 1 edge to [[_COMMUNITY_test_blender_scene.py]]
 
 ## Top bridge nodes
-- [[scene_cues()]] - degree 10, connects to 3 communities
-- [[frame_maker()]] - degree 8, connects to 3 communities
-- [[thumbnail()]] - degree 4, connects to 3 communities
+- [[graphic_low()]] - degree 7, connects to 3 communities
+- [[fills_frame()]] - degree 6, connects to 3 communities
+- [[frame_maker()]] - degree 8, connects to 2 communities
+- [[person_card()]] - degree 6, connects to 2 communities
 - [[write_frames()]] - degree 6, connects to 2 communities
-- [[flash_alpha()]] - degree 4, connects to 2 communities

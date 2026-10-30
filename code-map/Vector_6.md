@@ -1,17 +1,23 @@
 ---
 source_file: ""
 type: "code"
-community: "opener_checks.py"
+community: "math"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/opener_checkspy
+  - community/math
 ---
 
 # Vector
 
 ## Connections
-- [[edge_point()]] - `references` [EXTRACTED]
-- [[world_verts()_1]] - `references` [EXTRACTED]
+- [[_attach()]] - `references` [EXTRACTED]
+- [[_clearance()]] - `references` [EXTRACTED]
+- [[_detour()]] - `references` [EXTRACTED]
+- [[_handle_first()]] - `references` [EXTRACTED]
+- [[_hold()]] - `references` [EXTRACTED]
+- [[_through()]] - `references` [EXTRACTED]
+- [[_travel()]] - `references` [EXTRACTED]
+- [[facing_now()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/opener_checkspy
+#graphify/code #graphify/EXTRACTED #community/math

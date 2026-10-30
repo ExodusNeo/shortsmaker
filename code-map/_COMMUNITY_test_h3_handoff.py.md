@@ -58,17 +58,18 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 7 edges to [[_COMMUNITY_pathlib]]
 - 6 edges to [[_COMMUNITY_local_clips]]
-- 3 edges to [[_COMMUNITY_sys]]
-- 1 edge to [[_COMMUNITY_json]]
+- 4 edges to [[_COMMUNITY_json]]
+- 3 edges to [[_COMMUNITY_subprocess]]
+- 3 edges to [[_COMMUNITY_pathlib]]
+- 1 edge to [[_COMMUNITY_h3_run.py]]
 - 1 edge to [[_COMMUNITY_re]]
 - 1 edge to [[_COMMUNITY_test_story.py]]
 - 1 edge to [[_COMMUNITY_split_make_shorts.py]]
 
 ## Top bridge nodes
+- [[test_h3_handoff.py]] - degree 32, connects to 4 communities
 - [[unpack_clips()]] - degree 10, connects to 4 communities
-- [[test_h3_handoff.py]] - degree 32, connects to 3 communities
 - [[handoff()]] - degree 12, connects to 2 communities
 - [[h3_problems()]] - degree 4, connects to 2 communities
 - [[h3_prompt()]] - degree 4, connects to 2 communities

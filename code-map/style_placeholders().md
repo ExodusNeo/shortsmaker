@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/style_lab.py"
 type: "code"
-community: "test_style.py"
+community: "render_remotion"
 location: "L88"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_stylepy
+  - community/render_remotion
 ---
 
 # style_placeholders()
@@ -23,4 +23,4 @@ tags:
 - [[test_placeholders_match_the_slots()]] - `calls` [EXTRACTED]
 - [[test_slots_restored_after_render()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_stylepy
+#graphify/code #graphify/EXTRACTED #community/render_remotion

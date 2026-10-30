@@ -39,7 +39,7 @@ tags:
 - [[to_object()]] - `calls` [EXTRACTED]
 - [[tool_axes()]] - `calls` [EXTRACTED]
 - [[tool_rotation()]] - `calls` [EXTRACTED]
-- [[travel()]] - `calls` [EXTRACTED]
+- [[travel()_1]] - `calls` [EXTRACTED]
 - [[world_verts()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/cut

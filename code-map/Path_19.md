@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "edit_plan"
+community: "visual_review"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/edit_plan
+  - community/visual_review
 ---
 
 # Path
 
 ## Connections
-- [[edit_plan()]] - `references` [EXTRACTED]
+- [[log_short()]] - `references` [EXTRACTED]
+- [[vault_page()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/edit_plan
+#graphify/code #graphify/EXTRACTED #community/visual_review

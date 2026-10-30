@@ -22,7 +22,7 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 1 edge to [[_COMMUNITY_write_scripts]]
-- 1 edge to [[_COMMUNITY_plan_rules.py]]
+- 1 edge to [[_COMMUNITY_re]]
 - 1 edge to [[_COMMUNITY_test_style.py]]
 
 ## Top bridge nodes

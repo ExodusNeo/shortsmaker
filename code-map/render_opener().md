@@ -12,7 +12,7 @@ tags:
 # render_opener()
 
 ## Connections
-- [[Path_27]] - `references` [EXTRACTED]
+- [[Path_12]] - `references` [EXTRACTED]
 - [[Scene 1's opener clip, or (None, why). (None, None) when the Short has no…]] - `rationale_for` [EXTRACTED]
 - [[_run()]] - `calls` [EXTRACTED]
 - [[ffmpeg()]] - `calls` [EXTRACTED]

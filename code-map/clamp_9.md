@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/full/toolkit.tsx"
 type: "code"
-community: "toolkit.tsx"
+community: "Custom3.tsx"
 location: "L10"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/toolkittsx
+  - community/Custom3tsx
 ---
 
 # clamp
@@ -18,4 +18,4 @@ tags:
 - [[Custom3.tsx]] - `imports` [EXTRACTED]
 - [[toolkit.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/toolkittsx
+#graphify/code #graphify/EXTRACTED #community/Custom3tsx

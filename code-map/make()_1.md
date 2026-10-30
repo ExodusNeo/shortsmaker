@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_rules.py"
 type: "code"
-community: "test_rules.py"
+community: "make"
 location: "L121"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_rulespy
+  - community/make
 ---
 
 # make()
@@ -33,4 +33,4 @@ tags:
 - [[test_strips_tag_comments()]] - `calls` [EXTRACTED]
 - [[test_unknown_visuals_stop()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_rulespy
+#graphify/code #graphify/EXTRACTED #community/make

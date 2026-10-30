@@ -51,7 +51,7 @@ SORT file.name ASC
 - 1 edge to [[_COMMUNITY_bpy]]
 - 1 edge to [[_COMMUNITY_opener_checks.py]]
 - 1 edge to [[_COMMUNITY_pathlib]]
-- 1 edge to [[_COMMUNITY_people_standin.py]]
+- 1 edge to [[_COMMUNITY_main]]
 
 ## Top bridge nodes
 - [[scene_kit.py]] - degree 39, connects to 11 communities

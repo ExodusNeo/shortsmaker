@@ -1,12 +1,12 @@
 ---
 source_file: "blender/build_scene.py"
 type: "rationale"
-community: "build_scene.py"
+community: "main"
 location: "L36"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/build_scenepy
+  - community/main
 ---
 
 # From the target toward the camera: yaw 0 looks along +y from the -y side (the…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[direction()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/build_scenepy
+#graphify/rationale #graphify/EXTRACTED #community/main

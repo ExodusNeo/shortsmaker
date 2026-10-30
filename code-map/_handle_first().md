@@ -12,7 +12,7 @@ tags:
 # _handle_first()
 
 ## Connections
-- [[Vector_5]] - `references` [EXTRACTED]
+- [[Vector_6]] - `references` [EXTRACTED]
 - [[_hold()]] - `calls` [EXTRACTED]
 - [[`long` turned to run from a cane's or umbrella's handle to its tip the handle…]] - `rationale_for` [EXTRACTED]
 - [[people.py]] - `contains` [EXTRACTED]

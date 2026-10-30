@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_shot_templates.py"
 type: "code"
-community: "sys"
+community: "subprocess"
 location: "L100"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/sys
+  - community/subprocess
 ---
 
 # test_every_template_has_samples()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[test_shot_templates.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/sys
+#graphify/code #graphify/EXTRACTED #community/subprocess

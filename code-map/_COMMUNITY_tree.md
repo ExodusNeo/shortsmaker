@@ -14,7 +14,7 @@ members: 8
 - [[The height of o's top surface above (x, y), or None when nothing of o is there.]] - rationale - blender/scene_kit.py
 - [[clear_distance()]] - code - blender/moves.py
 - [[surface_z()]] - code - blender/scene_kit.py
-- [[travel()]] - code - blender/moves.py
+- [[travel()_1]] - code - blender/moves.py
 - [[tree()]] - code - blender/scene_kit.py
 
 ## Live Query (requires Dataview plugin)
@@ -33,6 +33,6 @@ SORT file.name ASC
 
 ## Top bridge nodes
 - [[tree()]] - degree 8, connects to 3 communities
-- [[travel()]] - degree 7, connects to 3 communities
+- [[travel()_1]] - degree 7, connects to 3 communities
 - [[clear_distance()]] - degree 6, connects to 3 communities
 - [[surface_z()]] - degree 3, connects to 1 community

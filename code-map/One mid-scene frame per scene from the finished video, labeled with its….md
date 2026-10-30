@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/review.py"
 type: "rationale"
-community: "pathlib"
+community: "subprocess"
 location: "L330"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/pathlib
+  - community/subprocess
 ---
 
 # One mid-scene frame per scene from the finished video, labeled with its…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[storyboard()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/pathlib
+#graphify/rationale #graphify/EXTRACTED #community/subprocess

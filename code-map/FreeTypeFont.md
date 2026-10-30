@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "scene_cues"
+community: "frame_maker"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/scene_cues
+  - community/frame_maker
 ---
 
 # FreeTypeFont
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[fit_font()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/scene_cues
+#graphify/code #graphify/EXTRACTED #community/frame_maker

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/image_sources.py"
 type: "code"
-community: "gather_pool"
+community: "json"
 location: "L122"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/gather_pool
+  - community/json
 ---
 
 # article_images()
@@ -17,4 +17,4 @@ tags:
 - [[image_sources.py]] - `contains` [EXTRACTED]
 - [[wm_files()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/gather_pool
+#graphify/code #graphify/EXTRACTED #community/json

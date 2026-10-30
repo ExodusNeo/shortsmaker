@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/motion.py"
 type: "rationale"
-community: "shutil"
+community: "test_package.py"
 location: "L285"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/shutil
+  - community/test_packagepy
 ---
 
 # The coder looks at 8 frames of its own scene before the real render and…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[look_and_fix()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/shutil
+#graphify/rationale #graphify/EXTRACTED #community/test_packagepy

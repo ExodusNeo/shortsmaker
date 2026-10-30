@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "blender_link.py"
+community: "test_blender_render.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/blender_linkpy
+  - community/test_blender_renderpy
 ---
 
 # RuntimeError
 
 ## Connections
-- [[LinkError]] - `inherits` [EXTRACTED]
+- [[BlenderFailed]] - `inherits` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/blender_linkpy
+#graphify/code #graphify/EXTRACTED #community/test_blender_renderpy

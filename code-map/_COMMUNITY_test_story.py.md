@@ -1,23 +1,42 @@
 ---
 type: community
-members: 21
+members: 40
 ---
 
 # test_story.py
 
-**Members:** 21 nodes
+**Members:** 40 nodes
 
 ## Members
 - [[Before any script is written each topic's twist against its Wikipedia text.…]] - rationale - shortsmaker/writing.py
+- [[Caption words (as written, punctuation attached) with the a-z words the aligner…]] - rationale - local_ai/qwen_voice.py
+- [[Full spoken string for TTS synthesis, with punctuation attached cleanly.]] - rationale - local_ai/qwen_voice.py
+- [[How a narrator reads a number token 1932 - nineteen thirty-two, 20,000 -…]] - rationale - local_ai/qwen_voice.py
+- [[Pair each whitespace token in `text` with how the narrator says it, moving…]] - rationale - local_ai/qwen_voice.py
 - [[Runs of scenes that together make whole sentences. A sentence may run across…]] - rationale - shortsmaker/gpu.py
 - [[Tests for how stories are told (2026-10-22) one voice take per sentence cut…]] - rationale - tests/test_story.py
 - [[The checkable story rules (STORY_RULES) the answer comes last, no line opens…]] - rationale - shortsmaker/writing.py
+- [[Word matching for the Qwen voice's captions (no GPU, no models). Run…]] - rationale - tests/test_qwen_voice.py
+- [[add()_1]] - code - tests/render_style.py
+- [[align_words()]] - code - local_ai/qwen_voice.py
 - [[check_twists()]] - code - shortsmaker/writing.py
+- [[fake()]] - code - tests/test_story.py
+- [[one()]] - code - local_ai/qwen_voice.py
+- [[say_number()]] - code - local_ai/qwen_voice.py
 - [[scenes()]] - code - tests/test_story.py
 - [[sentence_groups()]] - code - shortsmaker/gpu.py
+- [[speak()_1]] - code - local_ai/qwen_voice.py
+- [[spoken_sentence()]] - code - local_ai/qwen_voice.py
+- [[spoken_tokens()]] - code - local_ai/qwen_voice.py
 - [[story_problems()]] - code - shortsmaker/writing.py
-- [[test_a_take_is_cut_between_the_scenes_words()]] - code - tests/test_story.py
+- [[test_caption_word_counts_match_the_scene_splitter()]] - code - tests/test_qwen_voice.py
+- [[test_caption_words_keep_what_is_written()]] - code - tests/test_qwen_voice.py
+- [[test_dollar_scale_word_order()]] - code - tests/test_qwen_voice.py
+- [[test_editor_gets_one_second_pass_for_broken_rules()]] - code - tests/test_story.py
+- [[test_every_aligned_word_is_in_the_aligner_alphabet()]] - code - tests/test_qwen_voice.py
 - [[test_no_hook_setting_no_hook_check()]] - code - tests/test_story.py
+- [[test_numbers()]] - code - tests/test_qwen_voice.py
+- [[test_qwen_voice.py]] - code - tests/test_qwen_voice.py
 - [[test_rules_accept_opener_setting()]] - code - tests/test_story.py
 - [[test_sentences_running_across_cuts_are_one_take()]] - code - tests/test_story.py
 - [[test_story.py]] - code - tests/test_story.py
@@ -38,23 +57,22 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 11 edges to [[_COMMUNITY_pathlib]]
-- 3 edges to [[_COMMUNITY_re]]
-- 3 edges to [[_COMMUNITY_local_voice]]
-- 3 edges to [[_COMMUNITY_sys]]
+- 12 edges to [[_COMMUNITY_subprocess]]
+- 10 edges to [[_COMMUNITY_pathlib]]
+- 6 edges to [[_COMMUNITY_re]]
+- 4 edges to [[_COMMUNITY_json]]
+- 3 edges to [[_COMMUNITY_ffmpeg]]
 - 2 edges to [[_COMMUNITY_edit_scripts]]
-- 2 edges to [[_COMMUNITY_json]]
 - 1 edge to [[_COMMUNITY_test_h3_handoff.py]]
 - 1 edge to [[_COMMUNITY_test_style.py]]
-- 1 edge to [[_COMMUNITY_ffmpeg]]
-- 1 edge to [[_COMMUNITY_test_rules.py]]
+- 1 edge to [[_COMMUNITY_make_1]]
 - 1 edge to [[_COMMUNITY_write_scripts]]
+- 1 edge to [[_COMMUNITY_local_clips]]
 - 1 edge to [[_COMMUNITY_ask_ai]]
-- 1 edge to [[_COMMUNITY_align_words]]
 
 ## Top bridge nodes
-- [[test_story.py]] - degree 29, connects to 6 communities
+- [[test_story.py]] - degree 29, connects to 4 communities
 - [[check_twists()]] - degree 8, connects to 4 communities
 - [[story_problems()]] - degree 8, connects to 3 communities
 - [[sentence_groups()]] - degree 5, connects to 3 communities
-- [[test_a_take_is_cut_between_the_scenes_words()]] - degree 5, connects to 3 communities
+- [[align_words()]] - degree 10, connects to 2 communities

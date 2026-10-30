@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/plan_rules.py"
 type: "code"
-community: "full_cues"
+community: "test_full_scenes.py"
 location: "L488"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/full_cues
+  - community/test_full_scenespy
 ---
 
 # squeeze()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[full_cues()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/full_cues
+#graphify/code #graphify/EXTRACTED #community/test_full_scenespy

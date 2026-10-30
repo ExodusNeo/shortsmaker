@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "shutil"
+community: "test_style.py"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/shutil
+  - community/test_stylepy
 ---
 
 # shutil
@@ -22,7 +22,7 @@ tags:
 - [[invent_component()]] - `calls` [EXTRACTED]
 - [[llm.py]] - `imports` [EXTRACTED]
 - [[logbook.py]] - `imports` [EXTRACTED]
-- [[main()_4]] - `calls` [EXTRACTED]
+- [[main()_2]] - `calls` [EXTRACTED]
 - [[main()_7]] - `calls` [EXTRACTED]
 - [[main()_6]] - `calls` [EXTRACTED]
 - [[motion.py]] - `imports` [EXTRACTED]
@@ -58,4 +58,4 @@ tags:
 - [[write_scripts()]] - `calls` [EXTRACTED]
 - [[writing.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/shutil
+#graphify/concept #graphify/EXTRACTED #community/test_stylepy

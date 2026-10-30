@@ -12,7 +12,7 @@ tags:
 # _travel()
 
 ## Connections
-- [[Vector_5]] - `references` [EXTRACTED]
+- [[Vector_6]] - `references` [EXTRACTED]
 - [[_strip()]] - `calls` [EXTRACTED]
 - [[facing_now()]] - `calls` [EXTRACTED]
 - [[key_loc()]] - `calls` [EXTRACTED]

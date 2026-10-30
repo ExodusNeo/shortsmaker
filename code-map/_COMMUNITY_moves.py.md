@@ -57,8 +57,8 @@ SORT file.name ASC
 - 13 edges to [[_COMMUNITY_opener_scene.py]]
 - 4 edges to [[_COMMUNITY_tree]]
 - 1 edge to [[_COMMUNITY_bpy]]
-- 1 edge to [[_COMMUNITY_json]]
-- 1 edge to [[_COMMUNITY_people_standin.py]]
+- 1 edge to [[_COMMUNITY_test_topic_ideas.py]]
+- 1 edge to [[_COMMUNITY_main]]
 
 ## Top bridge nodes
 - [[moves.py]] - degree 48, connects to 8 communities

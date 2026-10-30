@@ -1,25 +1,30 @@
 ---
 type: community
-members: 12
+members: 17
 ---
 
 # edit_scripts
 
-**Members:** 12 nodes
+**Members:** 17 nodes
 
 ## Members
 - [[(min words, max words, min scenes, max scenes, seconds) for this batch's…]] - rationale - shortsmaker/writing.py
-- [[Automatic checks on the finished Short, using ffmpeg's own detectors in one…]] - rationale - shortsmaker/review.py
 - [[Scene narrations from an AI reply a list of strings (or of {narration ...}).]] - rationale - shortsmaker/writing.py
+- [[The director's `pic` numbers (scenes and evidence-board items), checked a…]] - rationale - shortsmaker/picture_pool.py
 - [[The script editor pass strongest hook, read-aloud fixes, cuts,…]] - rationale - shortsmaker/writing.py
+- [[The topic's usable pictures as prompt lines ( without a picture list).]] - rationale - shortsmaker/picture_pool.py
+- [[The usable pictures as prompt lines 12 film 1944 newsreel of rubber tanks…]] - rationale - shortsmaker/picture_pool.py
+- [[Usable list entries for the topic check all frames of one video count once…]] - rationale - shortsmaker/picture_pool.py
+- [[catalog_text()]] - code - shortsmaker/picture_pool.py
+- [[check()]] - code - shortsmaker/picture_pool.py
+- [[clean_pics()]] - code - shortsmaker/picture_pool.py
 - [[edit_scripts()]] - code - shortsmaker/writing.py
-- [[fake()]] - code - tests/test_story.py
+- [[is_usable()]] - code - shortsmaker/picture_pool.py
 - [[length_plan()]] - code - shortsmaker/writing.py
 - [[narration_lines()]] - code - shortsmaker/writing.py
-- [[quality_check()]] - code - shortsmaker/review.py
-- [[test_editor_gets_one_second_pass_for_broken_rules()]] - code - tests/test_story.py
+- [[pictures_of()]] - code - shortsmaker/picture_pool.py
 - [[test_solo_edit_scripts_uses_same_ai()]] - code - tests/test_package.py
-- [[where()]] - code - shortsmaker/review.py
+- [[usable()]] - code - shortsmaker/picture_pool.py
 
 ## Live Query (requires Dataview plugin)
 
@@ -29,20 +34,21 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 5 edges to [[_COMMUNITY_pathlib]]
-- 3 edges to [[_COMMUNITY_write_scripts]]
-- 2 edges to [[_COMMUNITY_ask_ai]]
+- 8 edges to [[_COMMUNITY_pathlib]]
+- 5 edges to [[_COMMUNITY_test_pictures_first.py]]
+- 5 edges to [[_COMMUNITY_write_scripts]]
+- 2 edges to [[_COMMUNITY_catalog_pool]]
+- 2 edges to [[_COMMUNITY_apply_review_fixes]]
 - 2 edges to [[_COMMUNITY_test_story.py]]
-- 1 edge to [[_COMMUNITY_visual_review]]
-- 1 edge to [[_COMMUNITY_pool_pictures]]
-- 1 edge to [[_COMMUNITY_re]]
-- 1 edge to [[_COMMUNITY_render]]
-- 1 edge to [[_COMMUNITY_test_first_second.py]]
+- 1 edge to [[_COMMUNITY_test_style.py]]
+- 1 edge to [[_COMMUNITY_ask_ai]]
+- 1 edge to [[_COMMUNITY_test_blender_scene.py]]
 - 1 edge to [[_COMMUNITY_json]]
+- 1 edge to [[_COMMUNITY_test_package.py]]
 
 ## Top bridge nodes
-- [[edit_scripts()]] - degree 13, connects to 6 communities
-- [[quality_check()]] - degree 9, connects to 5 communities
-- [[length_plan()]] - degree 5, connects to 2 communities
-- [[narration_lines()]] - degree 4, connects to 2 communities
-- [[test_editor_gets_one_second_pass_for_broken_rules()]] - degree 3, connects to 1 community
+- [[edit_scripts()]] - degree 13, connects to 5 communities
+- [[pictures_of()]] - degree 7, connects to 4 communities
+- [[clean_pics()]] - degree 8, connects to 3 communities
+- [[is_usable()]] - degree 6, connects to 3 communities
+- [[usable()]] - degree 5, connects to 3 communities

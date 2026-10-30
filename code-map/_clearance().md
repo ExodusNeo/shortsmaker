@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[How far the stretch from a toward b (the bend feet to 60 % of the way over to…]] - `rationale_for` [EXTRACTED]
-- [[Vector_5]] - `references` [EXTRACTED]
+- [[Vector_6]] - `references` [EXTRACTED]
 - [[_detour()]] - `calls` [EXTRACTED]
 - [[math]] - `calls` [EXTRACTED]
 - [[people.py]] - `contains` [EXTRACTED]

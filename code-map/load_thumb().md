@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/picture_pool.py"
 type: "code"
-community: "gather_pool"
+community: "json"
 location: "L131"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/gather_pool
+  - community/json
 ---
 
 # load_thumb()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[gather_pool()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/INFERRED #community/gather_pool
+#graphify/code #graphify/INFERRED #community/json

@@ -1,19 +1,19 @@
 ---
 source_file: "local_ai/qwen_voice.py"
 type: "code"
-community: "json"
+community: "subprocess"
 location: "L157"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/json
+  - community/subprocess
 ---
 
 # align()
 
 ## Connections
 - [[align_words()]] - `calls` [EXTRACTED]
-- [[main()_5]] - `calls` [EXTRACTED]
+- [[main()_4]] - `calls` [EXTRACTED]
 - [[qwen_voice.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/json
+#graphify/code #graphify/EXTRACTED #community/subprocess

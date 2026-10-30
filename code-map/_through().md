@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[Does the prop, apart from the bit in the hand, go through its owner]] - `rationale_for` [EXTRACTED]
-- [[Vector_5]] - `references` [EXTRACTED]
+- [[Vector_6]] - `references` [EXTRACTED]
 - [[_hold()]] - `calls` [EXTRACTED]
 - [[held()]] - `calls` [EXTRACTED]
 - [[people.py]] - `contains` [EXTRACTED]

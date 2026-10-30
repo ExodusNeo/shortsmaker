@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_pictures_first.py"
 type: "code"
-community: "planning"
+community: "write_scripts"
 location: "L118"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/planning
+  - community/write_scripts
 ---
 
 # .__enter__()
@@ -15,4 +15,4 @@ tags:
 - [[fake_ai]] - `method` [EXTRACTED]
 - [[reply()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/planning
+#graphify/code #graphify/EXTRACTED #community/write_scripts

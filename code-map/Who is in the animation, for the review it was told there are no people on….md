@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/opener_render.py"
 type: "rationale"
-community: "shutil"
+community: "review"
 location: "L147"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/shutil
+  - community/review
 ---
 
 # Who is in the animation, for the review: it was told "there are no people" on…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[_cast_note()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/shutil
+#graphify/rationale #graphify/EXTRACTED #community/review

@@ -1,18 +1,18 @@
 ---
-source_file: "shortsmaker/opener_plan.py"
+source_file: "tests/test_rules.py"
 type: "code"
-community: "test_opener_plan.py"
-location: "L252"
+community: "capture_prompts"
+location: "L71"
 tags:
   - graphify/code
-  - graphify/EXTRACTED
-  - community/test_opener_planpy
+  - graphify/INFERRED
+  - community/capture_prompts
 ---
 
 # ask()
 
 ## Connections
-- [[_templates_text()]] - `calls` [EXTRACTED]
-- [[plan_openers()]] - `contains` [EXTRACTED]
+- [[capture_prompts()]] - `indirect_call` [INFERRED]
+- [[run_draft()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/test_opener_planpy
+#graphify/code #graphify/INFERRED #community/capture_prompts

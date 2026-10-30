@@ -1,17 +1,18 @@
 ---
-source_file: "tests/test_style.py"
+source_file: "shortsmaker/opener_plan.py"
 type: "code"
-community: "test_style.py"
-location: "L202"
+community: "test_opener_plan.py"
+location: "L252"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_stylepy
+  - community/test_opener_planpy
 ---
 
 # ask()
 
 ## Connections
-- [[test_fact_check_sees_new_graphics()]] - `contains` [EXTRACTED]
+- [[_templates_text()]] - `calls` [EXTRACTED]
+- [[plan_openers()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_stylepy
+#graphify/code #graphify/EXTRACTED #community/test_opener_planpy

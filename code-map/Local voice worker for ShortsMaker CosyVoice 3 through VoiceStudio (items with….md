@@ -1,12 +1,12 @@
 ---
 source_file: "local_ai/qwen_voice.py"
 type: "rationale"
-community: "json"
+community: "subprocess"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/json
+  - community/subprocess
 ---
 
 # Local voice worker for ShortsMaker: CosyVoice 3 through VoiceStudio (items with…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[qwen_voice.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/json
+#graphify/rationale #graphify/EXTRACTED #community/subprocess

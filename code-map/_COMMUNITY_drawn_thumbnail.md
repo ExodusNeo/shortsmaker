@@ -10,7 +10,7 @@ members: 12
 ## Members
 - [[(first, last) frame of every scene, 1-based and back to back; even a very short…]] - rationale - shortsmaker/blender_render.py
 - [[(picture, credit line, CHECK line) for a drawn Short's thumbnail the real…]] - rationale - shortsmaker/short_render.py
-- [[Path_29]] - code
+- [[Path_27]] - code
 - [[drawn_short()]] - code - tests/test_blender_run.py
 - [[drawn_thumbnail()]] - code - shortsmaker/short_render.py
 - [[get()]] - code - tests/test_blender_run.py
@@ -32,9 +32,9 @@ SORT file.name ASC
 - 8 edges to [[_COMMUNITY_pathlib]]
 - 3 edges to [[_COMMUNITY_test_blender_render.py]]
 - 3 edges to [[_COMMUNITY_render]]
-- 2 edges to [[_COMMUNITY_blender_plan.py]]
-- 1 edge to [[_COMMUNITY_gather_pool]]
-- 1 edge to [[_COMMUNITY_prepare_topic]]
+- 2 edges to [[_COMMUNITY_test_blender_scene.py]]
+- 1 edge to [[_COMMUNITY_json]]
+- 1 edge to [[_COMMUNITY_catalog_pool]]
 - 1 edge to [[_COMMUNITY_re]]
 
 ## Top bridge nodes

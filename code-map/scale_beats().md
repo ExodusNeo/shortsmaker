@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/opener_render.py"
 type: "code"
-community: "sys"
+community: "subprocess"
 location: "L24"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/sys
+  - community/subprocess
 ---
 
 # scale_beats()
@@ -19,4 +19,4 @@ tags:
 - [[opener_render.py]] - `contains` [EXTRACTED]
 - [[render_opener()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/sys
+#graphify/code #graphify/EXTRACTED #community/subprocess

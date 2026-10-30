@@ -60,6 +60,7 @@ tags:
 - [[test_unfound_model_goes_back_to_the_planner()]] - `contains` [EXTRACTED]
 - [[test_use_opener_clip_after_blender_failed()]] - `contains` [EXTRACTED]
 - [[test_use_opener_failure_keeps_scene()]] - `contains` [EXTRACTED]
+- [[test_use_opener_failure_not_rebuilt()]] - `contains` [EXTRACTED]
 - [[test_use_opener_never_raises()]] - `contains` [EXTRACTED]
 - [[test_use_opener_no_template_ai_clip()]] - `contains` [EXTRACTED]
 - [[test_use_opener_no_template_note()]] - `contains` [EXTRACTED]

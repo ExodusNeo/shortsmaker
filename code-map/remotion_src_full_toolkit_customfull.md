@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "toolkit.tsx"
+community: "Custom3.tsx"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/toolkittsx
+  - community/Custom3tsx
 ---
 
 # remotion_src_full_toolkit_customfull
@@ -18,4 +18,4 @@ tags:
 - [[ExampleChain.tsx]] - `imports` [EXTRACTED]
 - [[ExampleEvidence.tsx]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/toolkittsx
+#graphify/concept #graphify/EXTRACTED #community/Custom3tsx

@@ -22,6 +22,6 @@ tags:
 - [[main()_9]] - `calls` [EXTRACTED]
 - [[pick_up()]] - `calls` [EXTRACTED]
 - [[scene_kit.py]] - `contains` [EXTRACTED]
-- [[travel()]] - `calls` [EXTRACTED]
+- [[travel()_1]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/math

@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/full/Model3D.tsx"
 type: "code"
-community: "Paper"
+community: "toolkit.tsx"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Paper
+  - community/toolkittsx
 ---
 
 # Model3D.tsx
@@ -30,4 +30,4 @@ tags:
 - [[useFonts()]] - `imports` [EXTRACTED]
 - [[useModel()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Paper
+#graphify/code #graphify/EXTRACTED #community/toolkittsx

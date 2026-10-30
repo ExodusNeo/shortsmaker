@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/full/Model3D.tsx"
 type: "code"
-community: "Paper"
+community: "toolkit.tsx"
 location: "L21"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Paper
+  - community/toolkittsx
 ---
 
 # outline()
@@ -15,4 +15,4 @@ tags:
 - [[Model3D.tsx]] - `contains` [EXTRACTED]
 - [[useModel()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Paper
+#graphify/code #graphify/EXTRACTED #community/toolkittsx

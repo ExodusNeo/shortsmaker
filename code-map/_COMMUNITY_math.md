@@ -28,7 +28,7 @@ members: 60
 - [[The person as one mesh (origin at the feet, facing as planned, the role's…]] - rationale - blender/people.py
 - [[The prop held by its handle end in the hand a blade raised up and forward,…]] - rationale - blender/people.py
 - [[The way o faces on frame f its planned facing turned by every turn keyed since…]] - rationale - blender/people.py
-- [[Vector_5]] - code
+- [[Vector_6]] - code
 - [[What the prop does in a prop move a swung blade turns to show its face and is…]] - rationale - blender/people.py
 - [[_append()]] - code - blender/people.py
 - [[_attach()]] - code - blender/people.py
@@ -80,25 +80,25 @@ SORT file.name ASC
 - 15 edges to [[_COMMUNITY_moves.py]]
 - 13 edges to [[_COMMUNITY_scene_kit.py]]
 - 13 edges to [[_COMMUNITY_opener_scene.py]]
+- 4 edges to [[_COMMUNITY_main]]
 - 4 edges to [[_COMMUNITY_cut]]
 - 4 edges to [[_COMMUNITY_tree]]
-- 3 edges to [[_COMMUNITY_people_standin.py]]
 - 3 edges to [[_COMMUNITY_pathlib]]
-- 2 edges to [[_COMMUNITY_blender_plan.py]]
 - 2 edges to [[_COMMUNITY_parts.py]]
 - 2 edges to [[_COMMUNITY_test_opener_plan.py]]
+- 2 edges to [[_COMMUNITY_test_blender_scene.py]]
 - 2 edges to [[_COMMUNITY_opener_checks.py]]
-- 2 edges to [[_COMMUNITY_build_scene.py]]
-- 2 edges to [[_COMMUNITY_json]]
-- 1 edge to [[_COMMUNITY_scene_cues]]
+- 2 edges to [[_COMMUNITY_people_standin.py]]
+- 1 edge to [[_COMMUNITY_frame_maker]]
 - 1 edge to [[_COMMUNITY_load_model]]
-- 1 edge to [[_COMMUNITY_sys]]
+- 1 edge to [[_COMMUNITY_subprocess]]
 - 1 edge to [[_COMMUNITY_render]]
-- 1 edge to [[_COMMUNITY_main]]
+- 1 edge to [[_COMMUNITY_re]]
 - 1 edge to [[_COMMUNITY_bpy]]
+- 1 edge to [[_COMMUNITY_json]]
 
 ## Top bridge nodes
-- [[math]] - degree 38, connects to 15 communities
+- [[math]] - degree 38, connects to 14 communities
 - [[people.py]] - degree 36, connects to 6 communities
 - [[world_verts()]] - degree 11, connects to 5 communities
 - [[facing_vec()]] - degree 10, connects to 4 communities

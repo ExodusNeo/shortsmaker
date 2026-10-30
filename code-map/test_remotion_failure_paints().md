@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_full_scenes.py"
 type: "code"
-community: "render_remotion"
+community: "paint_instead"
 location: "L332"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/render_remotion
+  - community/paint_instead
 ---
 
 # test_remotion_failure_paints()
@@ -17,4 +17,4 @@ tags:
 - [[paint_instead()]] - `calls` [EXTRACTED]
 - [[test_full_scenes.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/render_remotion
+#graphify/code #graphify/EXTRACTED #community/paint_instead

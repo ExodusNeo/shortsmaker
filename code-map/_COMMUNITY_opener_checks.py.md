@@ -21,7 +21,7 @@ members: 46
 - [[The camera sees the blade's flat side, not its edge the view is at least…]] - rationale - blender/opener_checks.py
 - [[The pieces match what the plan expected named shares (by area()) within ±50%,…]] - rationale - blender/opener_checks.py
 - [[The subject stays visible on every frame at least min_visible of its points…]] - rationale - blender/opener_checks.py
-- [[Vector_6]] - code
+- [[Vector_7]] - code
 - [[Walks and hops that read badly, sent back to the planner (owner, 2026-10-27)…]] - rationale - blender/opener_checks.py
 - [[3, 4, 5, 9 - 3-5, 9.]] - rationale - blender/opener_checks.py
 - [[area()]] - code - blender/opener_checks.py
@@ -36,7 +36,7 @@ members: 46
 - [[edge_leads()]] - code - blender/opener_checks.py
 - [[edge_point()]] - code - blender/opener_checks.py
 - [[first_frame()]] - code - blender/opener_checks.py
-- [[fresh()_1]] - code - tests/opener_check_cases.py
+- [[fresh()]] - code - tests/opener_check_cases.py
 - [[hidden()_1]] - code - blender/opener_checks.py
 - [[in_frame()]] - code - blender/opener_checks.py
 - [[key()_1]] - code - tests/opener_check_cases.py
@@ -66,10 +66,10 @@ SORT file.name ASC
 - 10 edges to [[_COMMUNITY_opener_scene.py]]
 - 2 edges to [[_COMMUNITY_math]]
 - 2 edges to [[_COMMUNITY_bpy]]
-- 2 edges to [[_COMMUNITY_people_standin.py]]
+- 2 edges to [[_COMMUNITY_main]]
 - 1 edge to [[_COMMUNITY_scene_kit.py]]
 - 1 edge to [[_COMMUNITY_json]]
-- 1 edge to [[_COMMUNITY_sys]]
+- 1 edge to [[_COMMUNITY_subprocess]]
 - 1 edge to [[_COMMUNITY_pathlib]]
 
 ## Top bridge nodes

@@ -29,7 +29,7 @@ members: 48
 - [[The thing moves that must show physics and keyed travel (cut has its own…]] - rationale - blender/opener_scene.py
 - [[The threat is something to show whole (a car, a person), not a blade whose…]] - rationale - blender/opener_scene.py
 - [[Tufts and stones scattered behind and beside the action, never on its ground or…]] - rationale - blender/opener_scene.py
-- [[Vector_7]] - code
+- [[Vector_8]] - code
 - [[What has to stay in frame the subject's segments and everyone else's windows.]] - rationale - blender/opener_scene.py
 - [[Where o stands on top of sup of spots on its top, the one where o's whole…]] - rationale - blender/opener_scene.py
 - [[beat_actors()]] - code - blender/opener_scene.py
@@ -72,14 +72,15 @@ SORT file.name ASC
 - 5 edges to [[_COMMUNITY_load_model]]
 - 4 edges to [[_COMMUNITY_cut]]
 - 3 edges to [[_COMMUNITY_bpy]]
-- 2 edges to [[_COMMUNITY_json]]
 - 1 edge to [[_COMMUNITY_tree]]
-- 1 edge to [[_COMMUNITY_sys]]
+- 1 edge to [[_COMMUNITY_test_topic_ideas.py]]
+- 1 edge to [[_COMMUNITY_subprocess]]
+- 1 edge to [[_COMMUNITY_json]]
 - 1 edge to [[_COMMUNITY_pathlib]]
-- 1 edge to [[_COMMUNITY_people_standin.py]]
+- 1 edge to [[_COMMUNITY_main]]
 
 ## Top bridge nodes
-- [[opener_scene.py]] - degree 34, connects to 10 communities
+- [[opener_scene.py]] - degree 34, connects to 11 communities
 - [[main()_9]] - degree 22, connects to 5 communities
 - [[place_actors()]] - degree 13, connects to 5 communities
 - [[State]] - degree 23, connects to 3 communities

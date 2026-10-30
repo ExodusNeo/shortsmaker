@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/frame_render.py"
 type: "code"
-community: "scene_cues"
+community: "frame_maker"
 location: "L220"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/scene_cues
+  - community/frame_maker
 ---
 
 # .at()
@@ -16,4 +16,4 @@ tags:
 - [[Frame at fraction p (0..1) of the clip; p never goes backwards within a scene.]] - `rationale_for` [EXTRACTED]
 - [[Image]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/scene_cues
+#graphify/code #graphify/EXTRACTED #community/frame_maker

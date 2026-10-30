@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[The rotation that turns the edge toward d and the blade's plane normal along…]] - `rationale_for` [EXTRACTED]
-- [[Vector_4]] - `references` [EXTRACTED]
+- [[Vector_5]] - `references` [EXTRACTED]
 - [[cut()]] - `calls` [EXTRACTED]
 - [[moves.py]] - `contains` [EXTRACTED]
 - [[tool_axes()]] - `calls` [EXTRACTED]

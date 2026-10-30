@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_rules.py"
 type: "code"
-community: "test_rules.py"
+community: "make"
 location: "L138"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_rulespy
+  - community/make
 ---
 
 # test_parses_sections_and_settings()
@@ -16,4 +16,4 @@ tags:
 - [[parse_rules()]] - `calls` [EXTRACTED]
 - [[test_rules.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_rulespy
+#graphify/code #graphify/EXTRACTED #community/make
