@@ -301,11 +301,12 @@ Reply with ONLY JSON: {{"scenes": [{{"scene": 3, "full": null}}]}}""", fatal=Fal
     return got
 
 
-def opener_graphic(short: dict) -> str:
+def opener_graphic(short: dict, weak: str = "") -> str:
     """The motion-graphic opener (owner, 2026-10-28): on a channel with Blender openers, scene 1 gets a full-screen
     motion graphic up front (always one: the AI may not decline); a Blender opener that renders replaces it
     (short_render.use_opener), one that fails leaves it playing. Outside MAX_FULL and the never-scene-1 /
     never-two-in-a-row rules (an opener is not a slideshow scene; owner: two in a row is fine). One AI call, a second when the pick is unusable.
+    `weak` = the review's complaint about the last opener graphic (review.fix_opener_graphic asks for a new one).
     Returns the edit-plan note: the graphic chosen, or why none was."""
     sc = short["scenes"][0]
     if sc.get("full"):
@@ -313,7 +314,7 @@ def opener_graphic(short: dict) -> str:
     has_doc = any((s.get("full") or {}).get("type") == "document" for s in short["scenes"])
     texts = short.get("research") or {t: writing.article_text(t)[:15000] for t in short.get("wiki_articles", [])[:3]}
     print(f"  asking {session.BRAIN.capitalize()} for a motion-graphic opener (plays if the Blender opener fails)...")
-    retry = ""
+    retry = f"The last opener graphic was judged weak: {weak}. Pick a stronger one. " if weak else ""
     for _ in range(2):  # owner, 2026-10-28: a failed Blender opener always gets a graphic; a bad pick is asked once more
         data = llm.ask_ai(f"""You are the director of a YouTube Short: "{short['title']}". Scene 1 is the hook: "{sc['narration']}".
 The channel opens every Short on an animation of the story's strangest moment. Pick the FULL-SCREEN motion graphic

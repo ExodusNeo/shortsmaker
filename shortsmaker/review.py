@@ -11,7 +11,7 @@ from pathlib import Path
 from PIL import Image, ImageDraw, ImageFont
 
 from shortsmaker import (
-    footage, gpu, image_sources, llm, media_tools, picker, picture_pool, plan_rules, remotion_render, session, short_render,
+    footage, gpu, image_sources, llm, media_tools, motion, picker, picture_pool, plan_rules, remotion_render, session, short_render,
     writing,
 )
 from shortsmaker.config import FONT, GRAPHIC_STYLES
@@ -142,9 +142,11 @@ def first_second_check(video: Path, short: dict, choices: list[dict], board: Pat
     cands = picture_pool.load_pool(Path(short["pool_dir"]), thumbs=False) if short.get("pool_dir") else None
     what = {cands[e["n"] - 1]["title"]: e.get("what") for e in short.get("catalog") or []
             if cands and isinstance(e, dict) and isinstance(e.get("n"), int) and 1 <= e["n"] <= len(cands)}
-    rows = [f"scene {j + 1} says \"{scenes[j]['narration']}\" | its picture: {choices[j]['bg'][1]}"
-            + (f" ({what[choices[j]['bg'][1]]})" if what.get(choices[j]["bg"][1]) else "") for j in [0] + real
-            if choices[j].get("bg")]
+    rows = [f"scene 1 says \"{scenes[0]['narration']}\" | it opens on a full-screen motion graphic: "
+            f"{motion.full_summary(scenes[0]['full'])}"] if scenes[0].get("full") else []
+    rows += [f"scene {j + 1} says \"{scenes[j]['narration']}\" | its picture: {choices[j]['bg'][1]}"
+             + (f" ({what[choices[j]['bg'][1]]})" if what.get(choices[j]["bg"][1]) else "") for j in ([] if rows else [0]) + real
+             if choices[j].get("bg")]
     data = llm.ask_ai(f"""You judge the first two seconds of a YouTube Short the way a stranger scrolling the Shorts feed would.
 Open {folder / 'first.jpg'}: frames at 0, 0.5, 1 and 1.5 seconds, left to right (the big title on them is the hook title).
 The narrator's first sentence: "{first}". The Short: "{short['title']}"; its main character: {short.get('character') or 'not named'};
@@ -224,6 +226,48 @@ def apply_review_fixes(st: dict, work: Path, fixes: dict[int, tuple[str, str]],
         how = "a rewritten prompt" if i in rewritten else "its old prompt, seen from a new angle"
         notes.append(f"scene {i + 1} got a new painted picture from {how} ({why})")
     return notes
+
+
+OPENER_GRAPHIC_FIXES = 2  # fixes of a weak motion-graphic opener before scene 1 goes to the owner's clip hand-off
+
+
+def weak_opener_graphic(short: dict, fixes: dict[int, tuple[str, str]], first_second: list[str]) -> str | None:
+    """Why scene 1's motion-graphic opener (picker.opener_graphic) looked weak in this render: the visual review's
+    scene-1 finding (taken out of `fixes`: a repaint would only change the picture under the graphic) and a low
+    first-second score. None = it passed, or it isn't playing (a Blender opener or an AI clip replaced it)."""
+    sc = short["scenes"][0]
+    if not sc.get("full") or sc.get("full_rescued") != "motion-graphic opener" or sc.get("opener_clip"):
+        return None
+    why = [fixes.pop(0)[1]] if 0 in fixes else []
+    why += [f.removeprefix("FIRST SECOND: ") for f in first_second]
+    if not why or (short.get("opener_fixes", 0) >= OPENER_GRAPHIC_FIXES and not session.VEO_HANDOFF):
+        return None  # nothing left to try: the CHECK lines stay
+    return "; ".join(why)[:300]
+
+
+def fix_opener_graphic(st: dict, work: Path, why: str) -> list[str]:
+    """Owner, 2026-10-30: the motion-graphic opener goes first and gets OPENER_GRAPHIC_FIXES fixes (a custom one is
+    redrawn by its coder, any other is picked again with the complaint); only when it still looks weak does scene 1
+    go to the owner's AI clip hand-off (gpu.veo_handoff; short_render.use_opener plays the clip instead).
+    Returns the edit-plan notes."""
+    short = st["short"]
+    sc, tries = short["scenes"][0], short.get("opener_fixes", 0)
+    if tries >= OPENER_GRAPHIC_FIXES:
+        sc["animate"] = sc["motion_people"] = sc["opener_clip"] = True
+        sc["motion"] = sc.get("motion") or f"act out the story's strangest moment: {sc['narration']}"
+        short["opener_graphic_failed"] = f"the motion graphic still looked weak after {tries} fixes: {why}"
+        return [f"scene 1 goes to your AI clip hand-off ({short['opener_graphic_failed']})"]
+    short["opener_fixes"] = tries + 1
+    if sc["full"]["type"] == "custom" and remotion_render.redraw_custom(short, 0, 0, why, work):  # scene 1 = slot 0
+        return [f"the motion-graphic opener was redrawn ({why})"]
+    old = sc["full"]
+    sc["full"] = None
+    note = picker.opener_graphic(short, f"{motion.full_summary(old)}: {why}")
+    if not sc.get("full"):  # no new pick: the old graphic beats opening on a bare picture
+        sc["full"] = old
+        return [f"the motion-graphic opener was kept: no new one came back ({why})"]
+    short["opener_graphic"] = note
+    return [f"the motion-graphic opener was replaced by {note.removeprefix('motion graphic: ')} ({why})"]
 
 
 def pool_pictures(st: dict, work: Path, why: dict[int, str]) -> dict[int, str]:

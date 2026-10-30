@@ -104,9 +104,11 @@ def use_opener(short: dict, bounds: list[float], work: Path, clips: dict, images
     if first.get("opener_clip") and clips.get(0) and clips[0].name.startswith("clip"):  # AI clip, not archival film
         first["full"] = None  # the clip plays instead of the motion graphic
         maker = "made by you" if "_veo" in clips[0].name else "made on this PC"
-        short["opening_note"] = f"{short['opener_check'].removeprefix('opener: ')} -> AI clip of the strangest moment ({maker})"
+        tried = f" ({short['opener_graphic_failed']})" if short.get("opener_graphic_failed") else ""
+        head = (short.get("opener_check") or "opener: Blender opener failed").removeprefix("opener: ")
+        short["opening_note"] = f"{head} -> AI clip of the strangest moment ({maker}){tried}"
         sources[0] += f" | AI clip of the strangest moment ({maker})"
-        return short["opener_check"]
+        return short.get("opener_check")
 
     def failed(why: str | None) -> str | None:
         if why and short.get("opener_graphic"):
@@ -305,9 +307,10 @@ def render(short: dict, ch: dict, folder: Path, state: dict | None = None, fix_r
                   for a, _ in blender_render.scene_frames(bounds)]
     else:
         first = short["scenes"][0]
-        if session.VEO_HANDOFF and short.get("opener_check") and not short.get("opener"):
-            # no Blender template fits (owner, 2026-10-29): the strangest moment goes to the owner's clip hand-off
-            # (LTX if they skip it); the motion graphic plays only when no clip comes back
+        if session.VEO_HANDOFF and short.get("opener_check") and not short.get("opener") and not first.get("full"):
+            # no Blender template fits and no motion-graphic opener came back: the strangest moment goes to the
+            # owner's clip hand-off (LTX if they skip it). A graphic opener goes first and is handed off only after
+            # its fixes fail (owner, 2026-10-30; review.fix_opener_graphic)
             first["animate"] = first["motion_people"] = first["opener_clip"] = True
             first["motion"] = first.get("motion") or f"act out the story's strangest moment: {first['narration']}"
         clips = gpu.local_clips(short, work, sources, bounds, {i: c["film"] for i, c in enumerate(choices)
@@ -432,6 +435,7 @@ def render(short: dict, ch: dict, folder: Path, state: dict | None = None, fix_r
         issues += [thumb_check] if thumb_check else []
     found, opener = review.first_second_check(folder / "short.mp4", short, choices, folder / "storyboard.jpg", work)
     issues += found
+    weak_graphic = review.weak_opener_graphic(short, fixes, found)  # takes scene 1 out of `fixes`
     # once per Short; a Blender or motion-graphic opener stays (a swapped picture would play under the graphic)
     if short.get("opener_swapped") or short.get("opener_used") or short["scenes"][0].get("full"):
         opener = None
@@ -481,11 +485,12 @@ def render(short: dict, ch: dict, folder: Path, state: dict | None = None, fix_r
     # Fix and re-render while the review finds fixable scenes, capped: an AI reviewer nearly always finds
     # something, so an uncapped loop could repaint forever. fix.bat re-renders (state, round 0) stay manual.
     # The owner approves each fix round (press Enter to fix, or close CMD / type 'skip' to keep as is).
-    if (fixes or opener) and (not state or fix_round) and fix_round < AUTO_FIX_ROUNDS:
+    if (fixes or opener or weak_graphic) and (not state or fix_round) and fix_round < AUTO_FIX_ROUNDS:
         st = load_state(work)
         st["short"]["research"] = short.get("research")  # not in state.json; the motion-graphic rescue reads it
         n_fix = min(len(fixes), AUTO_REPAINT_MAX)
-        what = f"{n_fix} scene(s) to fix{' and a weak opening' if opener else ''}"
+        what = (f"{n_fix} scene(s) to fix{' and a weak opening' if opener else ''}"
+                f"{' and a weak motion-graphic opener' if weak_graphic else ''}")
         try:
             ans = input(f"\n  >> Review found {what} (fix round {fix_round + 1}/{AUTO_FIX_ROUNDS}).\n"
                         f"  >> Press Enter to fix and re-render (or close CMD / type 'skip' to keep as is): ").strip().lower()
@@ -496,10 +501,11 @@ def render(short: dict, ch: dict, folder: Path, state: dict | None = None, fix_r
         else:
             print(f"  fix round {fix_round + 1}/{AUTO_FIX_ROUNDS}: fixing {what} and re-rendering...")
             st["short"]["auto_fixed"] = (st["short"].get("auto_fixed") or []) + [
-                f"round {fix_round + 1}: {note}" for note in review.apply_review_fixes(st, work, fixes, opener)]
+                f"round {fix_round + 1}: {note}" for note in review.apply_review_fixes(st, work, fixes, opener)
+                + (review.fix_opener_graphic(st, work, weak_graphic) if weak_graphic else [])]
             render(st["short"], ch, folder, st, fix_round + 1)
             return
-    if (fixes or opener) and fix_round:
+    if (fixes or opener or weak_graphic) and fix_round:
         print(f"  stopped fixing after {AUTO_FIX_ROUNDS} rounds: the CHECK lines above are left for you")
     if not issues:
         edit_project.remove(folder)  # an older timeline would no longer match this video

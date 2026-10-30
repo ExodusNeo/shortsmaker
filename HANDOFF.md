@@ -188,10 +188,15 @@ Rules that keep it working:
   and fills its slots; `fill_template` + `clean_opener` check every value. Each template passed every check with
   the real library and was looked at by eye.
 - **No template fits -> no Blender**: the motion-graphic opener plays (`picker.opener_graphic`, always planned for
-  these channels; the Opening line says `no template fits (...) -> motion graphic: ...`). On "make AI clips
-  yourself" runs (owner, 2026-10-29: many stories fit no template) scene 1 first goes into the owner's clip hand-off
-  as the strangest moment (`opener_clip`, set in `render`); a skipped one is made by LTX; whichever clip comes back
-  plays instead of the graphic (`use_opener`, Opening line `... -> AI clip of the strangest moment (made by ...)`).
+  these channels; the Opening line says `no template fits (...) -> motion graphic: ...`). It goes first and is
+  judged on every render (owner, 2026-10-30: a clip hand-off up front skipped it): the visual review's scene-1
+  finding or a first-second score < 7 makes it weak (`review.weak_opener_graphic`), and the fix rounds fix it
+  `OPENER_GRAPHIC_FIXES` (2) times (`review.fix_opener_graphic`: a custom one is redrawn, any other picked again
+  with the complaint). Still weak after that on "make AI clips yourself" runs -> scene 1 goes into the owner's clip
+  hand-off as the strangest moment (`opener_clip`, 3rd fix round); a skipped one is made by LTX; whichever clip
+  comes back plays instead of the graphic (`use_opener`, Opening line `... -> AI clip of the strangest moment (made
+  by ...) (the motion graphic still looked weak after 2 fixes: ...)`). Without the hand-off it stays a CHECK line.
+  Only a Short with no graphic at all hands scene 1 off on the first render. Same for a failed Blender opener.
   The hand-off sends close-ups too (it used to skip them, so they quietly went to LTX).
 - **Render** (`opener_render.render_opener`): models from `blender/assets/library` (else Poly Pizza through the
   owner's Blender, CC0 / CC-BY only; a missing model goes back to the planner, `swap_models`, up to 2), one headless

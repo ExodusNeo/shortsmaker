@@ -280,6 +280,53 @@ def test_use_opener_no_template_ai_clip():
     assert s["scenes"][0]["full"] == {"type": "journey"}
 
 
+def test_weak_opener_graphic_fixes_then_handoff():
+    """Owner, 2026-10-30: a weak motion-graphic opener is fixed OPENER_GRAPHIC_FIXES times (a new pick with the
+    complaint) before scene 1 goes to the owner's clip hand-off; without the hand-off it stays a CHECK line."""
+    from shortsmaker import picker, review, session
+    def fresh():
+        return {"title": "x", "opener_check": "opener: no template fits (a ship)",
+                "scenes": [{"narration": "He shipped bed warmers to the tropics.",
+                            "full": {"type": "journey", "stops": []}, "full_rescued": "motion-graphic opener"}]}
+    picks, old_pick, old_veo = [], picker.opener_graphic, session.VEO_HANDOFF
+    def fake_pick(short, weak=""):
+        picks.append(weak)
+        short["scenes"][0]["full"] = {"type": "journey", "stops": [{"name": f"stop {len(picks)}"}]}
+        return f"motion graphic: map journey: stop {len(picks)}"
+    picker.opener_graphic = fake_pick
+    try:
+        session.VEO_HANDOFF = True
+        st = {"short": fresh()}
+        sc = st["short"]["scenes"][0]
+        fixes = {0: ("repaint", "the map is unreadable"), 3: ("repaint", "blur")}
+        why = review.weak_opener_graphic(st["short"], fixes, ["FIRST SECOND: 4/10: nothing strange"])
+        assert why == "the map is unreadable; 4/10: nothing strange" and list(fixes) == [3], (why, fixes)
+        for n in range(review.OPENER_GRAPHIC_FIXES):
+            notes = review.fix_opener_graphic(st, Path("."), why)
+            assert "replaced by map journey" in notes[0] and not sc.get("opener_clip"), notes
+        assert len(picks) == review.OPENER_GRAPHIC_FIXES and "unreadable" in picks[0]
+        notes = review.fix_opener_graphic(st, Path("."), why)
+        assert sc["opener_clip"] and sc["animate"] and "hand-off" in notes[0], notes
+        assert sc["full"]["stops"][0]["name"] == "stop 2"  # still plays if no clip comes back
+        assert review.weak_opener_graphic(st["short"], {}, ["FIRST SECOND: 3/10: x"]) is None  # a clip took over
+        assert review.weak_opener_graphic(fresh(), {}, []) is None  # passed
+        session.VEO_HANDOFF = False
+        st = {"short": {**fresh(), "opener_fixes": review.OPENER_GRAPHIC_FIXES}}
+        assert review.weak_opener_graphic(st["short"], {}, ["FIRST SECOND: 3/10: x"]) is None  # nothing left to try
+    finally:
+        picker.opener_graphic, session.VEO_HANDOFF = old_pick, old_veo
+
+
+def test_use_opener_clip_after_blender_failed():
+    """A Blender opener failed, its graphic was handed off and a clip came back: no opener_check to quote."""
+    from PIL import Image
+    from shortsmaker import short_render
+    s = {"title": "x", "opener": copy.deepcopy(PLAN), "opener_check": None, "opener_graphic_failed": "weak after 2 fixes",
+         "scenes": [{"full": {"type": "journey"}, "opener_clip": True}]}
+    assert short_render.use_opener(s, [0.0, 2.0], Path("."), {0: Path("clip0_veo.mp4")}, [Image.new("RGB", (8, 8))], ["x"]) is None
+    assert s["opening_note"] == "Blender opener failed -> AI clip of the strangest moment (made by you) (weak after 2 fixes)"
+
+
 def test_use_opener_planner_check():
     from shortsmaker import short_render
     s = {"title": "x", "opener_check": "opener: no usable plan", "scenes": [{"full": None}]}
