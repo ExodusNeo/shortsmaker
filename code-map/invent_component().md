@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/style_lab.py"
 type: "code"
-community: "render_remotion"
+community: "test_style.py"
 location: "L140"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/render_remotion
+  - community/test_stylepy
 ---
 
 # invent_component()
@@ -30,4 +30,4 @@ tags:
 - [[test_invention_lint_failure_uses_fallback()]] - `calls` [EXTRACTED]
 - [[test_invention_passes_into_slot()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/render_remotion
+#graphify/code #graphify/EXTRACTED #community/test_stylepy

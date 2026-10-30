@@ -29,12 +29,12 @@ members: 55
 - [[_sub()]] - code - shortsmaker/opener_plan.py
 - [[_takeable()]] - code - shortsmaker/opener_plan.py
 - [[_templates_text()]] - code - shortsmaker/opener_plan.py
-- [[ask()_5]] - code - shortsmaker/opener_plan.py
+- [[ask()_7]] - code - shortsmaker/opener_plan.py
 - [[clean_opener()]] - code - shortsmaker/opener_plan.py
 - [[fill_template()]] - code - shortsmaker/opener_plan.py
 - [[opener_plan.py]] - code - shortsmaker/opener_plan.py
 - [[pick_up's take lies on the ground a thing of at most 1 m (not on anything),…]] - rationale - shortsmaker/opener_plan.py
-- [[plan()]] - code - tests/test_opener_plan.py
+- [[plan()_1]] - code - tests/test_opener_plan.py
 - [[plan_openers()]] - code - shortsmaker/opener_plan.py
 - [[roll is the physics tumble for round things; the people run's car rolled and…]] - rationale - tests/test_opener_plan.py
 - [[short()_2]] - code - tests/test_opener_plan.py
@@ -72,8 +72,8 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 9 edges to [[_COMMUNITY_test_full_scenes.py]]
-- 5 edges to [[_COMMUNITY_opener_render.py]]
+- 9 edges to [[_COMMUNITY_pathlib]]
+- 6 edges to [[_COMMUNITY_sys]]
 - 2 edges to [[_COMMUNITY_test_opener_scene.py]]
 - 2 edges to [[_COMMUNITY_math]]
 - 2 edges to [[_COMMUNITY_json]]
@@ -81,10 +81,9 @@ SORT file.name ASC
 - 1 edge to [[_COMMUNITY_write_scripts]]
 - 1 edge to [[_COMMUNITY_ask_ai]]
 - 1 edge to [[_COMMUNITY_re]]
-- 1 edge to [[_COMMUNITY_gpu.py]]
 
 ## Top bridge nodes
-- [[opener_plan.py]] - degree 28, connects to 8 communities
+- [[opener_plan.py]] - degree 28, connects to 7 communities
 - [[swap_models()]] - degree 7, connects to 3 communities
 - [[test_opener_plan.py]] - degree 32, connects to 2 communities
 - [[clean_opener()]] - degree 24, connects to 1 community

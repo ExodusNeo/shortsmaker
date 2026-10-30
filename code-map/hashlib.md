@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "opener_render.py"
+community: "pathlib"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/opener_renderpy
+  - community/pathlib
 ---
 
 # hashlib
@@ -23,4 +23,4 @@ tags:
 - [[pixabay_films()]] - `calls` [EXTRACTED]
 - [[pool_folder()]] - `calls` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/opener_renderpy
+#graphify/concept #graphify/EXTRACTED #community/pathlib

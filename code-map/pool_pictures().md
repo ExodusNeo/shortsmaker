@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/review.py"
 type: "code"
-community: "apply_review_fixes"
-location: "L229"
+community: "pool_pictures"
+location: "L273"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/apply_review_fixes
+  - community/pool_pictures
 ---
 
 # pool_pictures()
@@ -23,4 +23,4 @@ tags:
 - [[load_pool()]] - `calls` [EXTRACTED]
 - [[review.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/apply_review_fixes
+#graphify/code #graphify/EXTRACTED #community/pool_pictures

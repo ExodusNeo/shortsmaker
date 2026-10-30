@@ -1,18 +1,23 @@
 ---
 source_file: ""
 type: "code"
-community: "templates.py"
+community: "scene_kit.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/templatespy
+  - community/scene_kitpy
 ---
 
 # Vector
 
 ## Connections
-- [[dot-center()]] - `references` [EXTRACTED]
-- [[dot-node()]] - `references` [EXTRACTED]
-- [[_sag_points()]] - `references` [EXTRACTED]
+- [[bbox()]] - `references` [EXTRACTED]
+- [[facing_vec()]] - `references` [EXTRACTED]
+- [[leg_rig()]] - `references` [EXTRACTED]
+- [[loc_at()]] - `references` [EXTRACTED]
+- [[make_dynamic()]] - `references` [EXTRACTED]
+- [[rot_at()]] - `references` [EXTRACTED]
+- [[view()]] - `references` [EXTRACTED]
+- [[world_verts()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/templatespy
+#graphify/code #graphify/EXTRACTED #community/scene_kitpy

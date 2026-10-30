@@ -1,12 +1,12 @@
 ---
 source_file: "blender/opener_scene.py"
 type: "code"
-community: "dress"
+community: "load_model"
 location: "L127"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/dress
+  - community/load_model
 ---
 
 # ground_material()
@@ -18,4 +18,4 @@ tags:
 - [[material()_1]] - `calls` [EXTRACTED]
 - [[opener_scene.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/dress
+#graphify/code #graphify/EXTRACTED #community/load_model

@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[People moves are for people, Part 1's for everything else.]] - `rationale_for` [EXTRACTED]
 - [[clean_opener()]] - `calls` [EXTRACTED]
-- [[plan()]] - `calls` [EXTRACTED]
+- [[plan()_1]] - `calls` [EXTRACTED]
 - [[test_opener_plan.py]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/test_opener_planpy

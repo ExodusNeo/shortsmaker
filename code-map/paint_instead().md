@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/remotion_render.py"
 type: "code"
-community: "json"
+community: "render_remotion"
 location: "L71"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/json
+  - community/render_remotion
 ---
 
 # paint_instead()
@@ -23,4 +23,4 @@ tags:
 - [[test_remotion_failure_paints()]] - `calls` [EXTRACTED]
 - [[to_vertical()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/json
+#graphify/code #graphify/EXTRACTED #community/render_remotion

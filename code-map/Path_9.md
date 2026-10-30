@@ -1,18 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "fetch_model"
+community: "test_blender_render.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/fetch_model
+  - community/test_blender_renderpy
 ---
 
 # Path
 
 ## Connections
-- [[credit()]] - `references` [EXTRACTED]
-- [[fetch_model()]] - `references` [EXTRACTED]
-- [[in_library()]] - `references` [EXTRACTED]
+- [[_run()]] - `references` [EXTRACTED]
+- [[render_clips()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/fetch_model
+#graphify/code #graphify/EXTRACTED #community/test_blender_renderpy

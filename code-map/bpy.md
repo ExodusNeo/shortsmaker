@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "math"
+community: "bpy"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/math
+  - community/bpy
 ---
 
 # bpy
@@ -27,4 +27,4 @@ tags:
 - [[people_standin.py]] - `imports` [EXTRACTED]
 - [[scene_kit.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/math
+#graphify/concept #graphify/EXTRACTED #community/bpy

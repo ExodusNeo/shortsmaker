@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/opener_render.py"
 type: "rationale"
-community: "fetch_model"
+community: "blender_link.py"
 location: "L48"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/fetch_model
+  - community/blender_linkpy
 ---
 
 # {actor id, "<person id>:hat" / ":prop" or "backdrop:N": .blend path}, or ({},…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[resolve_models()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/fetch_model
+#graphify/rationale #graphify/EXTRACTED #community/blender_linkpy

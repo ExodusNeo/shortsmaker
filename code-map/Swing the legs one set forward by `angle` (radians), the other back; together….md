@@ -1,12 +1,12 @@
 ---
 source_file: "blender/scene_kit.py"
 type: "rationale"
-community: "walk"
+community: "moves.py"
 location: "L336"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/walk
+  - community/movespy
 ---
 
 # Swing the legs: one set forward by `angle` (radians), the other back; together…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[key_swing()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/walk
+#graphify/rationale #graphify/EXTRACTED #community/movespy

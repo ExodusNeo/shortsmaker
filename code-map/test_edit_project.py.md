@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_edit_project.py"
 type: "code"
-community: "test_edit_project.py"
+community: "sys"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_edit_projectpy
+  - community/sys
 ---
 
 # test_edit_project.py
@@ -29,4 +29,4 @@ tags:
 - [[videos()]] - `contains` [EXTRACTED]
 - [[xml_etree_elementtree]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_edit_projectpy
+#graphify/code #graphify/EXTRACTED #community/sys

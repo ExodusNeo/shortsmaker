@@ -1,12 +1,12 @@
 ---
 source_file: "blender/opener_scene.py"
 type: "rationale"
-community: "dress"
+community: "load_model"
 location: "L128"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/dress
+  - community/load_model
 ---
 
 # The ground's colour broken up by soft patches, lighter and darker: one flat…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[ground_material()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/dress
+#graphify/rationale #graphify/EXTRACTED #community/load_model

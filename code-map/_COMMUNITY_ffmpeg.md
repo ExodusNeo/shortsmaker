@@ -1,46 +1,34 @@
 ---
 type: community
-members: 33
+members: 21
 ---
 
 # ffmpeg
 
-**Members:** 33 nodes
+**Members:** 21 nodes
 
 ## Members
-- [[Caption words the aligner gives for `text` (qwen_voice.align_words a token…]] - rationale - shortsmaker/gpu.py
-- [[Cut each take into its scenes halfway through the pause between their words…]] - rationale - shortsmaker/gpu.py
-- [[Detailed prompts for the owner-made clips (Colab H3 or Flow), written by the AI…]] - rationale - shortsmaker/gpu.py
-- [[Fill a 916 frame with the picture (centre crop), for the AI video model's…]] - rationale - shortsmaker/gpu.py
-- [[Final H.264 encode NVENC on the GPU when available (frees the CPU), else x264.]] - rationale - shortsmaker/media_tools.py
-- [[Path_6]] - code
-- [[Pause the batch write each animate scene's start picture + detailed prompt to…]] - rationale - shortsmaker/gpu.py
-- [[Real motion for every scene with a picture scenes Claude matched to archival…]] - rationale - shortsmaker/gpu.py
-- [[Run a batch on this PC's GPU through a local_ai worker (gen.py, or…]] - rationale - shortsmaker/gpu.py
-- [[Short image-to-video prompt for an animate scene made by LTX on this PC.]] - rationale - shortsmaker/gpu.py
-- [[Start pictures (folderstartN.jpg) the owner shouldn't spend a clip on a…]] - rationale - shortsmaker/gpu.py
-- [[Story arc delivery hook urgency - suspenseful investigation - payoff reveal.]] - rationale - shortsmaker/gpu.py
-- [[The owner's clip `src` cut to scene i's length fills the vertical frame, drops…]] - rationale - shortsmaker/gpu.py
-- [[True when the Short's final scene is an open grammatical loop bridge into scene…]] - rationale - shortsmaker/plan_rules.py
-- [[Voice every scene on the GPU CosyVoice (Mark Nelson, documentary) for the…]] - rationale - shortsmaker/gpu.py
-- [[cosy_instruct()]] - code - shortsmaker/gpu.py
-- [[cover_crop()]] - code - shortsmaker/gpu.py
-- [[cut_owner_clip()]] - code - shortsmaker/gpu.py
+- [[A finished Short's work in miniature grey pictures, a see-through graphics…]] - rationale - tests/test_edit_project.py
+- [[A re-render with nothing left to fix an old timeline would no longer match the…]] - rationale - shortsmaker/edit_project.py
+- [[Path_3]] - code
+- [[Path_4]] - code
+- [[The video tracks bottom-up (pictures, then graphics drawn over them), each cut…]] - rationale - shortsmaker/edit_project.py
+- [[caption_layer()]] - code - shortsmaker/edit_project.py
+- [[chain()]] - code - shortsmaker/edit_project.py
+- [[clock()]] - code - shortsmaker/edit_project.py
+- [[dB that brings the tracks played together to LUFS, like the final mix's…]] - rationale - shortsmaker/edit_project.py
 - [[ffmpeg()]] - code - shortsmaker/media_tools.py
-- [[h3_prompts()]] - code - shortsmaker/gpu.py
-- [[is_loop_short()]] - code - shortsmaker/plan_rules.py
-- [[local_clips()]] - code - shortsmaker/gpu.py
-- [[local_job()]] - code - shortsmaker/gpu.py
-- [[local_voice()]] - code - shortsmaker/gpu.py
-- [[motion_prompt()]] - code - shortsmaker/gpu.py
-- [[split_takes()]] - code - shortsmaker/gpu.py
-- [[spoken_count()]] - code - shortsmaker/gpu.py
-- [[start_picture_problems()]] - code - shortsmaker/gpu.py
-- [[test_a_take_is_cut_between_the_scenes_words()]] - code - tests/test_story.py
-- [[test_encoder_cache_lives_with_video_encoder()]] - code - tests/test_package.py
-- [[test_word_counts_match_the_aligner()]] - code - tests/test_story.py
-- [[veo_handoff()]] - code - shortsmaker/gpu.py
-- [[video_encoder()]] - code - shortsmaker/media_tools.py
+- [[folderedit.mlt + edit_in_shotcut.bat for a finished Short. `videos` = (track…]] - rationale - shortsmaker/edit_project.py
+- [[make()]] - code - shortsmaker/edit_project.py
+- [[master_gain()]] - code - shortsmaker/edit_project.py
+- [[project_xml()]] - code - shortsmaker/edit_project.py
+- [[prop()]] - code - shortsmaker/edit_project.py
+- [[remove()]] - code - shortsmaker/edit_project.py
+- [[short_folder()]] - code - tests/test_edit_project.py
+- [[test_melt_plays_it_with_the_captions_on_top()]] - code - tests/test_edit_project.py
+- [[test_timeline_has_scenes_captions_sound_and_markers()]] - code - tests/test_edit_project.py
+- [[videos()]] - code - tests/test_edit_project.py
+- [[workcaptions.mov the captions alone on a see-through background, from the…]] - rationale - shortsmaker/edit_project.py
 
 ## Live Query (requires Dataview plugin)
 
@@ -50,34 +38,23 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 23 edges to [[_COMMUNITY_gpu.py]]
-- 7 edges to [[_COMMUNITY_render]]
-- 6 edges to [[_COMMUNITY_test_h3_handoff.py]]
-- 5 edges to [[_COMMUNITY_json]]
-- 4 edges to [[_COMMUNITY_test_opener_render.py]]
-- 3 edges to [[_COMMUNITY_test_story.py]]
-- 3 edges to [[_COMMUNITY_re]]
-- 2 edges to [[_COMMUNITY_ask_ai]]
-- 2 edges to [[_COMMUNITY_test_blender_render.py]]
-- 1 edge to [[_COMMUNITY_make]]
-- 1 edge to [[_COMMUNITY_first_second_check]]
-- 1 edge to [[_COMMUNITY_style_library]]
-- 1 edge to [[_COMMUNITY_test_local_job_retries_a_hard_crash]]
-- 1 edge to [[_COMMUNITY_time]]
-- 1 edge to [[_COMMUNITY_h3_run.py]]
-- 1 edge to [[_COMMUNITY_test_style.py]]
-- 1 edge to [[_COMMUNITY_captions]]
-- 1 edge to [[_COMMUNITY_code_custom_scenes]]
+- 8 edges to [[_COMMUNITY_pathlib]]
+- 5 edges to [[_COMMUNITY_sys]]
+- 4 edges to [[_COMMUNITY_re]]
+- 3 edges to [[_COMMUNITY_render]]
+- 3 edges to [[_COMMUNITY_test_opener_render.py]]
+- 2 edges to [[_COMMUNITY_local_clips]]
+- 1 edge to [[_COMMUNITY_story_sound]]
+- 1 edge to [[_COMMUNITY_test_blender_render.py]]
+- 1 edge to [[_COMMUNITY_local_voice]]
+- 1 edge to [[_COMMUNITY_shutil]]
 - 1 edge to [[_COMMUNITY_visual_review]]
-- 1 edge to [[_COMMUNITY_test_edit_project.py]]
-- 1 edge to [[_COMMUNITY_opener_render.py]]
+- 1 edge to [[_COMMUNITY_test_story.py]]
 - 1 edge to [[_COMMUNITY_test_pictures_first.py]]
-- 1 edge to [[_COMMUNITY_clean_full]]
-- 1 edge to [[_COMMUNITY_test_package.py]]
 
 ## Top bridge nodes
-- [[ffmpeg()]] - degree 19, connects to 12 communities
-- [[local_voice()]] - degree 13, connects to 6 communities
-- [[veo_handoff()]] - degree 13, connects to 5 communities
-- [[local_job()]] - degree 10, connects to 4 communities
-- [[video_encoder()]] - degree 9, connects to 4 communities
+- [[ffmpeg()]] - degree 19, connects to 13 communities
+- [[make()]] - degree 9, connects to 2 communities
+- [[project_xml()]] - degree 8, connects to 2 communities
+- [[master_gain()]] - degree 6, connects to 2 communities
+- [[remove()]] - degree 5, connects to 2 communities

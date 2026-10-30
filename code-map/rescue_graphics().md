@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/picker.py"
 type: "code"
-community: "json"
+community: "rescue_graphics"
 location: "L263"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/json
+  - community/rescue_graphics
 ---
 
 # rescue_graphics()
@@ -26,4 +26,4 @@ tags:
 - [[test_rescue_respects_caps()]] - `calls` [EXTRACTED]
 - [[words_of()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/json
+#graphify/code #graphify/EXTRACTED #community/rescue_graphics

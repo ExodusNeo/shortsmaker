@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/gpu.py"
 type: "rationale"
-community: "gpu.py"
+community: "pathlib"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/gpupy
+  - community/pathlib
 ---
 
 # Local AI on the owner's GPU and helpers: ComfyUI/MOSS, VoiceStudio, Gemini…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[gpu.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/gpupy
+#graphify/rationale #graphify/EXTRACTED #community/pathlib

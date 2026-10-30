@@ -1,12 +1,12 @@
 ---
 source_file: "blender/moves.py"
 type: "code"
-community: "walk"
+community: "moves.py"
 location: "L281"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/walk
+  - community/movespy
 ---
 
 # share_of_gap()
@@ -16,4 +16,4 @@ tags:
 - [[moves.py]] - `contains` [EXTRACTED]
 - [[walk()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/walk
+#graphify/code #graphify/EXTRACTED #community/movespy

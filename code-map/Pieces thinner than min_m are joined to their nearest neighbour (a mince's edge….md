@@ -1,12 +1,12 @@
 ---
 source_file: "blender/moves.py"
 type: "rationale"
-community: "moves.py"
+community: "cut"
 location: "L524"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/movespy
+  - community/cut
 ---
 
 # Pieces thinner than min_m are joined to their nearest neighbour (a mince's edge…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[merge_slivers()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/movespy
+#graphify/rationale #graphify/EXTRACTED #community/cut

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/review.py"
 type: "code"
-community: "gpu.py"
-location: "L285"
+community: "pathlib"
+location: "L329"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/gpupy
+  - community/pathlib
 ---
 
 # storyboard()
@@ -20,4 +20,4 @@ tags:
 - [[review.py]] - `contains` [EXTRACTED]
 - [[subprocess]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/gpupy
+#graphify/code #graphify/EXTRACTED #community/pathlib

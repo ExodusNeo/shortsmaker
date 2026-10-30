@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_shot_templates.py"
 type: "code"
-community: "opener_render.py"
+community: "sys"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/opener_renderpy
+  - community/sys
 ---
 
 # test_shot_templates.py
@@ -29,4 +29,4 @@ tags:
 - [[test_every_template_has_samples()]] - `contains` [EXTRACTED]
 - [[test_opener_plan.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/opener_renderpy
+#graphify/code #graphify/EXTRACTED #community/sys

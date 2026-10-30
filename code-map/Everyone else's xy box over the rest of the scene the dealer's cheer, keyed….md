@@ -1,12 +1,12 @@
 ---
 source_file: "blender/people.py"
 type: "rationale"
-community: "scene_kit.py"
+community: "math"
 location: "L414"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/scene_kitpy
+  - community/math
 ---
 
 # Everyone else's xy box over the rest of the scene: the dealer's cheer, keyed…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[_footprints()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/scene_kitpy
+#graphify/rationale #graphify/EXTRACTED #community/math

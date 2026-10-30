@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[The people.json of the job's library plus blend; every clip is appended once…]] - `rationale_for` [EXTRACTED]
-- [[main()_8]] - `calls` [EXTRACTED]
+- [[main()_9]] - `calls` [EXTRACTED]
 - [[people.py]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/opener_scenepy

@@ -1,12 +1,12 @@
 ---
 source_file: "blender/look_toon.py"
 type: "rationale"
-community: "look_toon.py"
+community: "bpy"
 location: "L14"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/look_toonpy
+  - community/bpy
 ---
 
 # The material's own colour (value or texture) times a banded light: Diffuse on…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[toon()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/look_toonpy
+#graphify/rationale #graphify/EXTRACTED #community/bpy

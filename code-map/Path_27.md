@@ -1,16 +1,20 @@
 ---
 source_file: ""
 type: "code"
-community: "math"
+community: "shutil"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/math
+  - community/shutil
 ---
 
 # Path
 
 ## Connections
-- [[main()_9]] - `references` [EXTRACTED]
+- [[model_for()]] - `references` [EXTRACTED]
+- [[render_opener()]] - `references` [EXTRACTED]
+- [[review()]] - `references` [EXTRACTED]
+- [[save_try()]] - `references` [EXTRACTED]
+- [[to_glb()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/math
+#graphify/code #graphify/EXTRACTED #community/shutil

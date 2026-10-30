@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/style_lab.py"
 type: "code"
-community: "style_library"
+community: "test_style.py"
 location: "L14"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/style_library
+  - community/test_stylepy
 ---
 
 # style_library()
@@ -23,7 +23,7 @@ tags:
 - [[direct_scripts()]] - `calls` [EXTRACTED]
 - [[json]] - `calls` [EXTRACTED]
 - [[look_text()]] - `calls` [EXTRACTED]
-- [[main()_5]] - `calls` [EXTRACTED]
+- [[main()_7]] - `calls` [EXTRACTED]
 - [[save_candidate()]] - `calls` [EXTRACTED]
 - [[style_lab.py]] - `contains` [EXTRACTED]
 - [[style_rules()]] - `calls` [EXTRACTED]
@@ -33,4 +33,4 @@ tags:
 - [[test_write_style_index_is_deterministic()]] - `calls` [EXTRACTED]
 - [[write_style_index()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/style_library
+#graphify/code #graphify/EXTRACTED #community/test_stylepy

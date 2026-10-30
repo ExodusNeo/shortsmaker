@@ -1,18 +1,18 @@
 ---
 source_file: "blender/people.py"
 type: "code"
-community: "scene_kit.py"
+community: "math"
 location: "L347"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/scene_kitpy
+  - community/math
 ---
 
 # _travel()
 
 ## Connections
-- [[Vector_4]] - `references` [EXTRACTED]
+- [[Vector_5]] - `references` [EXTRACTED]
 - [[_strip()]] - `calls` [EXTRACTED]
 - [[facing_now()]] - `calls` [EXTRACTED]
 - [[key_loc()]] - `calls` [EXTRACTED]
@@ -26,4 +26,4 @@ tags:
 - [[rot_at()]] - `calls` [EXTRACTED]
 - [[world_verts()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/scene_kitpy
+#graphify/code #graphify/EXTRACTED #community/math

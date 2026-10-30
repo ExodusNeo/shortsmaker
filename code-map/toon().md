@@ -1,12 +1,12 @@
 ---
 source_file: "blender/look_toon.py"
 type: "code"
-community: "look_toon.py"
+community: "bpy"
 location: "L13"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/look_toonpy
+  - community/bpy
 ---
 
 # toon()
@@ -16,4 +16,4 @@ tags:
 - [[apply()_1]] - `calls` [EXTRACTED]
 - [[look_toon.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/look_toonpy
+#graphify/code #graphify/EXTRACTED #community/bpy

@@ -1,12 +1,12 @@
 ---
 source_file: "blender/scene_kit.py"
 type: "code"
-community: "moves.py"
+community: "cut"
 location: "L191"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/movespy
+  - community/cut
 ---
 
 # remove_body()
@@ -15,4 +15,4 @@ tags:
 - [[cut()]] - `calls` [EXTRACTED]
 - [[scene_kit.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/movespy
+#graphify/code #graphify/EXTRACTED #community/cut

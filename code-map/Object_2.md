@@ -1,17 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "dress"
+community: "cut"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/dress
+  - community/cut
 ---
 
 # Object
 
 ## Connections
-- [[load_model()]] - `references` [EXTRACTED]
-- [[merge()]] - `references` [EXTRACTED]
+- [[to_object()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/dress
+#graphify/code #graphify/EXTRACTED #community/cut

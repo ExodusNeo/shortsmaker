@@ -8,6 +8,7 @@ members: 28
 **Members:** 28 nodes
 
 ## Members
+- [[(part, exact) the part the Short is about, by the plan's spot; the gusset at…]] - rationale - blender/templates.py
 - [[dot-__init__()_3]] - code - blender/templates.py
 - [[dot-add()]] - code - blender/templates.py
 - [[dot-center()]] - code - blender/templates.py
@@ -19,9 +20,8 @@ members: 28
 - [[Deck on deep plate girders (four lines of them), spliced at every panel point.]] - rationale - blender/templates.py
 - [[Suspension or eyebar-chain bridge towers at the piers, a main cable (or a…]] - rationale - blender/templates.py
 - [[The deck's two edge girders (named like truss bottom chords) with splice plates…]] - rationale - blender/templates.py
-- [[Vector_1]] - code
+- [[Vector_2]] - code
 - [[What a template built parts by name and stage, the spans' x ranges, and the…]] - rationale - blender/templates.py
-- [[What the plan says was on the bridge rails on a rail deck, cars or a train for…]] - rationale - blender/templates.py
 - [[_edge_girders()]] - code - blender/templates.py
 - [[_hung_deck()]] - code - blender/templates.py
 - [[_piers_and_deck()]] - code - blender/templates.py
@@ -30,8 +30,8 @@ members: 28
 - [[_truss_panel_members()]] - code - blender/templates.py
 - [[build()_1]] - code - blender/templates.py
 - [[cable_stayed_bridge()]] - code - blender/templates.py
-- [[dress()]] - code - blender/templates.py
 - [[eyebar_chain_bridge()]] - code - blender/templates.py
+- [[focus_object()]] - code - blender/templates.py
 - [[girder_bridge()]] - code - blender/templates.py
 - [[suspension_bridge()]] - code - blender/templates.py
 - [[templates.py]] - code - blender/templates.py
@@ -46,13 +46,14 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 19 edges to [[_COMMUNITY_parts.py]]
-- 4 edges to [[_COMMUNITY_main]]
-- 2 edges to [[_COMMUNITY_math]]
+- 2 edges to [[_COMMUNITY_main]]
 - 1 edge to [[_COMMUNITY_look.py]]
+- 1 edge to [[_COMMUNITY_build_scene.py]]
+- 1 edge to [[_COMMUNITY_people_standin.py]]
 
 ## Top bridge nodes
 - [[templates.py]] - degree 20, connects to 4 communities
-- [[dress()]] - degree 10, connects to 2 communities
 - [[Bridge]] - degree 20, connects to 1 community
 - [[_hung_deck()]] - degree 16, connects to 1 community
 - [[_edge_girders()]] - degree 10, connects to 1 community
+- [[_piers_and_deck()]] - degree 10, connects to 1 community

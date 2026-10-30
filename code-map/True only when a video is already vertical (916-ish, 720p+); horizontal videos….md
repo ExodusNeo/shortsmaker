@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/frame_render.py"
 type: "rationale"
-community: "gpu.py"
+community: "write_scripts"
 location: "L15"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/gpupy
+  - community/write_scripts
 ---
 
 # True only when a video is already vertical (9:16-ish, 720p+); horizontal videos…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[fills_frame()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/gpupy
+#graphify/rationale #graphify/EXTRACTED #community/write_scripts

@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_h3_run.py"
 type: "code"
-community: "h3_run.py"
+community: "sys"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/h3_runpy
+  - community/sys
 ---
 
 # test_h3_run.py
@@ -27,4 +27,4 @@ tags:
 - [[test_save_video_sets_nested_codec()]] - `contains` [EXTRACTED]
 - [[traceback]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/h3_runpy
+#graphify/code #graphify/EXTRACTED #community/sys

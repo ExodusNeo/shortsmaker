@@ -20,6 +20,7 @@ tags:
 - [[render()_5]] - `calls` [EXTRACTED]
 - [[render_opener()]] - `calls` [EXTRACTED]
 - [[short_render.py]] - `contains` [EXTRACTED]
+- [[test_use_opener_clip_after_blender_failed()]] - `calls` [EXTRACTED]
 - [[test_use_opener_never_raises()]] - `calls` [EXTRACTED]
 - [[test_use_opener_no_template_ai_clip()]] - `calls` [EXTRACTED]
 - [[test_use_opener_no_template_note()]] - `calls` [EXTRACTED]

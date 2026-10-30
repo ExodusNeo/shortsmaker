@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "math"
+community: "people_standin.py"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/math
+  - community/people_standinpy
 ---
 
 # mathutils
@@ -23,4 +23,4 @@ tags:
 - [[scene_kit.py]] - `imports_from` [EXTRACTED]
 - [[templates.py]] - `imports_from` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/math
+#graphify/concept #graphify/EXTRACTED #community/people_standinpy

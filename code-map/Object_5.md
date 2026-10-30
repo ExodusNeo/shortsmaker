@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "math"
+community: "people_standin.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/math
+  - community/people_standinpy
 ---
 
 # Object
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[part()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/math
+#graphify/code #graphify/EXTRACTED #community/people_standinpy

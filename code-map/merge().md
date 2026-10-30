@@ -1,20 +1,20 @@
 ---
 source_file: "blender/scene_kit.py"
 type: "code"
-community: "dress"
+community: "load_model"
 location: "L68"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/dress
+  - community/load_model
 ---
 
 # merge()
 
 ## Connections
-- [[Object_2]] - `references` [EXTRACTED]
+- [[Object_1]] - `references` [EXTRACTED]
 - [[One mesh object from many (world transforms applied, materials kept), origin at…]] - `rationale_for` [EXTRACTED]
 - [[load_model()]] - `calls` [EXTRACTED]
 - [[scene_kit.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/dress
+#graphify/code #graphify/EXTRACTED #community/load_model

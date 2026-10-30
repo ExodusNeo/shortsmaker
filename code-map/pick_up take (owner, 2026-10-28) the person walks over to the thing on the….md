@@ -1,12 +1,12 @@
 ---
 source_file: "blender/people.py"
 type: "rationale"
-community: "scene_kit.py"
+community: "math"
 location: "L472"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/scene_kitpy
+  - community/math
 ---
 
 # pick_up "take" (owner, 2026-10-28): the person walks over to the thing on the…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[pick_up()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/scene_kitpy
+#graphify/rationale #graphify/EXTRACTED #community/math

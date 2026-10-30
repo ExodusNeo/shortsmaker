@@ -1,12 +1,12 @@
 ---
 source_file: "blender/people.py"
 type: "rationale"
-community: "_hold"
+community: "math"
 location: "L616"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/_hold
+  - community/math
 ---
 
 # What the prop does in a prop move: a swung blade turns to show its face and is…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[prop_move()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/_hold
+#graphify/rationale #graphify/EXTRACTED #community/math

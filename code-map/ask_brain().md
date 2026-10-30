@@ -15,7 +15,7 @@ tags:
 - [[Who plans this batch (scripts, fact check, SEO, picture choices, AI images)…]] - `rationale_for` [EXTRACTED]
 - [[ask_number()]] - `calls` [EXTRACTED]
 - [[channel_profiles.py]] - `contains` [EXTRACTED]
-- [[main()_5]] - `calls` [EXTRACTED]
+- [[main()_7]] - `calls` [EXTRACTED]
 - [[test_solo_brain_selection_options()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/channel_profilespy

@@ -15,7 +15,7 @@ tags:
 - [[An action's F-curves, through its layers and channelbags in Blender 5.x.]] - `rationale_for` [EXTRACTED]
 - [[_clip()]] - `calls` [EXTRACTED]
 - [[fcurves()]] - `calls` [EXTRACTED]
-- [[main()_8]] - `calls` [EXTRACTED]
+- [[main()_9]] - `calls` [EXTRACTED]
 - [[scene_kit.py]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/scene_kitpy

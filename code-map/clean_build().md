@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/blender_plan.py"
 type: "code"
-community: "test_blender_scene.py"
+community: "test_blender_plan.py"
 location: "L52"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_blender_scenepy
+  - community/test_blender_planpy
 ---
 
 # clean_build()
@@ -18,7 +18,7 @@ tags:
 - [[default_build()]] - `calls` [EXTRACTED]
 - [[ending()]] - `calls` [EXTRACTED]
 - [[panels()]] - `calls` [EXTRACTED]
-- [[pick()_1]] - `calls` [EXTRACTED]
+- [[pick()]] - `calls` [EXTRACTED]
 - [[plan_builds()]] - `calls` [EXTRACTED]
 - [[test_a_failure_in_scene_one_becomes_the_hook()]] - `calls` [EXTRACTED]
 - [[test_bad_values_get_defaults()]] - `calls` [EXTRACTED]
@@ -31,4 +31,4 @@ tags:
 - [[test_unusable_plan_is_none()]] - `calls` [EXTRACTED]
 - [[test_zoom_and_failure_are_guaranteed()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_blender_scenepy
+#graphify/code #graphify/EXTRACTED #community/test_blender_planpy

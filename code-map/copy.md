@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "opener_render.py"
+community: "sys"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/opener_renderpy
+  - community/sys
 ---
 
 # copy
@@ -19,4 +19,4 @@ tags:
 - [[test_opener_scene.py]] - `imports` [EXTRACTED]
 - [[test_shot_templates.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/opener_renderpy
+#graphify/concept #graphify/EXTRACTED #community/sys

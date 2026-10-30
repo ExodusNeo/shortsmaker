@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/opener_render.py"
 type: "rationale"
-community: "json"
+community: "shutil"
 location: "L189"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/json
+  - community/shutil
 ---
 
 # Every failed try kept for the engine fixes (work/opener_tries/try<n>.json and…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[save_try()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/json
+#graphify/rationale #graphify/EXTRACTED #community/shutil

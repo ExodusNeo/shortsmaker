@@ -27,6 +27,8 @@ tags:
 - [[opener_plan.py]] - `imports_from` [EXTRACTED]
 - [[opener_render.py]] - `imports_from` [EXTRACTED]
 - [[pathlib]] - `imports_from` [EXTRACTED]
+- [[picker.py]] - `imports_from` [EXTRACTED]
+- [[review.py]] - `imports_from` [EXTRACTED]
 - [[rules.py]] - `imports_from` [EXTRACTED]
 - [[session.py]] - `imports_from` [EXTRACTED]
 - [[short()_3]] - `contains` [EXTRACTED]
@@ -56,6 +58,7 @@ tags:
 - [[test_search_failure_falls_back()]] - `contains` [EXTRACTED]
 - [[test_success_returns_clip()]] - `contains` [EXTRACTED]
 - [[test_unfound_model_goes_back_to_the_planner()]] - `contains` [EXTRACTED]
+- [[test_use_opener_clip_after_blender_failed()]] - `contains` [EXTRACTED]
 - [[test_use_opener_failure_keeps_scene()]] - `contains` [EXTRACTED]
 - [[test_use_opener_never_raises()]] - `contains` [EXTRACTED]
 - [[test_use_opener_no_template_ai_clip()]] - `contains` [EXTRACTED]
@@ -63,6 +66,7 @@ tags:
 - [[test_use_opener_on_success()]] - `contains` [EXTRACTED]
 - [[test_use_opener_opening_note()]] - `contains` [EXTRACTED]
 - [[test_use_opener_planner_check()]] - `contains` [EXTRACTED]
+- [[test_weak_opener_graphic_fixes_then_handoff()]] - `contains` [EXTRACTED]
 - [[traceback]] - `imports` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/test_opener_renderpy

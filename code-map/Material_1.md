@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "look_toon.py"
+community: "bpy"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/look_toonpy
+  - community/bpy
 ---
 
 # Material
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[ink()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/look_toonpy
+#graphify/code #graphify/EXTRACTED #community/bpy

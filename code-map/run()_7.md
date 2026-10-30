@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_blender_link.py"
 type: "code"
-community: "Fake"
+community: "blender_link.py"
 location: "L61"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Fake
+  - community/blender_linkpy
 ---
 
 # run()
@@ -15,4 +15,4 @@ tags:
 - [[Fake]] - `calls` [EXTRACTED]
 - [[with_fake()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/Fake
+#graphify/code #graphify/EXTRACTED #community/blender_linkpy

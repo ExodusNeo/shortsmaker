@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/remotion_render.py"
 type: "code"
-community: "code_custom_scenes"
+community: "shutil"
 location: "L39"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/code_custom_scenes
+  - community/shutil
 ---
 
 # redraw_custom()
@@ -18,8 +18,9 @@ tags:
 - [[ask_ai()]] - `calls` [EXTRACTED]
 - [[clean_tsx_code()]] - `calls` [EXTRACTED]
 - [[custom_rules()]] - `calls` [EXTRACTED]
+- [[fix_opener_graphic()]] - `calls` [EXTRACTED]
 - [[lint_custom_code()]] - `calls` [EXTRACTED]
 - [[remotion_render.py]] - `contains` [EXTRACTED]
 - [[tsc_check()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/code_custom_scenes
+#graphify/code #graphify/EXTRACTED #community/shutil

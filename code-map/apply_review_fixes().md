@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/review.py"
 type: "code"
-community: "apply_review_fixes"
-location: "L188"
+community: "test_first_second.py"
+location: "L190"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/apply_review_fixes
+  - community/test_first_secondpy
 ---
 
 # apply_review_fixes()
@@ -28,4 +28,4 @@ tags:
 - [[test_review_redraws_custom()]] - `calls` [EXTRACTED]
 - [[test_review_uses_unused_pool_pictures_before_painting()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/apply_review_fixes
+#graphify/code #graphify/EXTRACTED #community/test_first_secondpy

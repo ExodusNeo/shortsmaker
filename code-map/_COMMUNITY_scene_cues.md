@@ -1,0 +1,76 @@
+---
+type: community
+members: 41
+---
+
+# scene_cues
+
+**Members:** 41 nodes
+
+## Members
+- [[(style, text) for the built-in renderer, which draws only dates, places and…]] - rationale - shortsmaker/plan_rules.py
+- [[dot-__init__()_2]] - code - shortsmaker/frame_render.py
+- [[dot-at()]] - code - shortsmaker/frame_render.py
+- [[dot-close()]] - code - shortsmaker/frame_render.py
+- [[Animate the callout in, hold it, fade it out before the scene ends.]] - rationale - shortsmaker/frame_render.py
+- [[ClipReader]] - code - shortsmaker/frame_render.py
+- [[Frame at fraction p (0..1) of the clip; p never goes backwards within a scene.]] - rationale - shortsmaker/frame_render.py
+- [[FreeTypeFont]] - code
+- [[Image]] - code
+- [[Image_1]] - code
+- [[One frame of slow Ken Burns motion; affine sampling is sub-pixel so it never…]] - rationale - shortsmaker/frame_render.py
+- [[Pop the card in with a slight overshoot over a dimmed background, then shrink…]] - rationale - shortsmaker/frame_render.py
+- [[Pre-render a callout as a small transparent image (animated per frame later).]] - rationale - shortsmaker/frame_render.py
+- [[Returns frame(i, t) scene i at time t with camera move and graphics applied.…]] - rationale - shortsmaker/frame_render.py
+- [[Small credit label (bottom-left, CREDIT_Y) while credited material (YouTube…]] - rationale - shortsmaker/image_sources.py
+- [[Stream every frame to ffmpeg. Cuts in `flashes` are hard cuts under a white…]] - rationale - shortsmaker/frame_render.py
+- [[Streams a clip's frames in order. Decoding a whole 1080x1920 clip up front…]] - rationale - shortsmaker/frame_render.py
+- [[Tilted photo card with a white border, drop shadow and a yellow name banner.]] - rationale - shortsmaker/frame_render.py
+- [[Timed extras for one scene a person card (photo `found`) when their name is…]] - rationale - shortsmaker/editplan.py
+- [[White camera-flash curve snaps up over the 2 frames before the cut, then…]] - rationale - shortsmaker/frame_render.py
+- [[credit_tag_image()]] - code - shortsmaker/image_sources.py
+- [[draw_card()]] - code - shortsmaker/frame_render.py
+- [[draw_graphic()]] - code - shortsmaker/frame_render.py
+- [[fallback_graphic()]] - code - shortsmaker/plan_rules.py
+- [[fit_font()]] - code - shortsmaker/frame_render.py
+- [[flash_alpha()]] - code - shortsmaker/frame_render.py
+- [[frame()]] - code - shortsmaker/frame_render.py
+- [[frame()_1]] - code - tests/test_blender_plan.py
+- [[frame_maker()]] - code - shortsmaker/frame_render.py
+- [[graphic_overlay()]] - code - shortsmaker/frame_render.py
+- [[person_card()]] - code - shortsmaker/frame_render.py
+- [[scene_cues()]] - code - shortsmaker/editplan.py
+- [[shot()]] - code - shortsmaker/frame_render.py
+- [[test_counter_finishes_before_it_leaves()]] - code - tests/test_full_scenes.py
+- [[test_graphic_card_hold_duration()]] - code - tests/test_package.py
+- [[test_hard_cuts_never_blend_scenes()]] - code - tests/test_blender_plan.py
+- [[test_person_card_hold_and_exit_gap()]] - code - tests/test_package.py
+- [[test_scene_hold_padding()]] - code - tests/test_package.py
+- [[thumbnail()]] - code - shortsmaker/frame_render.py
+- [[write()]] - code - tests/test_blender_plan.py
+- [[write_frames()]] - code - shortsmaker/frame_render.py
+
+## Live Query (requires Dataview plugin)
+
+```dataview
+TABLE source_file, type FROM #community/scene_cues
+SORT file.name ASC
+```
+
+## Connections to other communities
+- 14 edges to [[_COMMUNITY_pathlib]]
+- 4 edges to [[_COMMUNITY_render]]
+- 3 edges to [[_COMMUNITY_write_scripts]]
+- 3 edges to [[_COMMUNITY_ask_ai]]
+- 2 edges to [[_COMMUNITY_full_cues]]
+- 1 edge to [[_COMMUNITY_math]]
+- 1 edge to [[_COMMUNITY_plan_rules.py]]
+- 1 edge to [[_COMMUNITY_test_blender_plan.py]]
+- 1 edge to [[_COMMUNITY_test_full_scenes.py]]
+
+## Top bridge nodes
+- [[scene_cues()]] - degree 10, connects to 3 communities
+- [[frame_maker()]] - degree 8, connects to 3 communities
+- [[thumbnail()]] - degree 4, connects to 3 communities
+- [[write_frames()]] - degree 6, connects to 2 communities
+- [[flash_alpha()]] - degree 4, connects to 2 communities

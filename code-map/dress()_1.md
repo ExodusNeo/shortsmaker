@@ -1,18 +1,18 @@
 ---
 source_file: "blender/people.py"
 type: "code"
-community: "dress"
+community: "math"
 location: "L178"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/dress
+  - community/math
 ---
 
 # dress()
 
 ## Connections
-- [[Object_1]] - `references` [EXTRACTED]
+- [[Object_3]] - `references` [EXTRACTED]
 - [[The person as one mesh (origin at the feet, facing as planned, the role's…]] - `rationale_for` [EXTRACTED]
 - [[_append()]] - `calls` [EXTRACTED]
 - [[_attach()]] - `calls` [EXTRACTED]
@@ -25,4 +25,4 @@ tags:
 - [[people.py]] - `contains` [EXTRACTED]
 - [[place_actors()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/dress
+#graphify/code #graphify/EXTRACTED #community/math

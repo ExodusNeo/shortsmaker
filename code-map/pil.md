@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "gpu.py"
+community: "pathlib"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/gpupy
+  - community/pathlib
 ---
 
 # pil
@@ -30,4 +30,4 @@ tags:
 - [[test_h3_run.py]] - `imports_from` [EXTRACTED]
 - [[test_opener_scene.py]] - `imports_from` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/gpupy
+#graphify/concept #graphify/EXTRACTED #community/pathlib

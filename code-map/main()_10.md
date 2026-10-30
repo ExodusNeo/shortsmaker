@@ -1,21 +1,21 @@
 ---
-source_file: "tests/render_full.py"
+source_file: "tests/people_standin.py"
 type: "code"
-community: "json"
-location: "L28"
+community: "people_standin.py"
+location: "L116"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/json
+  - community/people_standinpy
 ---
 
 # main()
 
 ## Connections
+- [[Path_28]] - `references` [EXTRACTED]
+- [[body()]] - `calls` [EXTRACTED]
+- [[clip()]] - `calls` [EXTRACTED]
 - [[json]] - `calls` [EXTRACTED]
-- [[props_for()]] - `calls` [EXTRACTED]
-- [[render_full.py]] - `contains` [EXTRACTED]
-- [[shutil]] - `calls` [EXTRACTED]
-- [[subprocess]] - `calls` [EXTRACTED]
+- [[people_standin.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/json
+#graphify/code #graphify/EXTRACTED #community/people_standinpy

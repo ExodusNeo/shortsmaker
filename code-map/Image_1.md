@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "frame_maker"
+community: "scene_cues"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/frame_maker
+  - community/scene_cues
 ---
 
 # Image
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[credit_tag_image()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/frame_maker
+#graphify/code #graphify/EXTRACTED #community/scene_cues

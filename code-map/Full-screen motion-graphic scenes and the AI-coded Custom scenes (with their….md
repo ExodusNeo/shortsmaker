@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/motion.py"
 type: "rationale"
-community: "gpu.py"
+community: "shutil"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/gpupy
+  - community/shutil
 ---
 
 # Full-screen motion-graphic scenes and the AI-coded Custom scenes (with their…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[motion.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/gpupy
+#graphify/rationale #graphify/EXTRACTED #community/shutil

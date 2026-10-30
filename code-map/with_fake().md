@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_blender_link.py"
 type: "code"
-community: "test_blender_link.py"
+community: "blender_link.py"
 location: "L60"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_blender_linkpy
+  - community/blender_linkpy
 ---
 
 # with_fake()
@@ -21,4 +21,4 @@ tags:
 - [[test_search_filters_licences()]] - `references` [EXTRACTED]
 - [[test_switched_off_reason()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_blender_linkpy
+#graphify/code #graphify/EXTRACTED #community/blender_linkpy

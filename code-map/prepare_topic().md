@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[Before writing the topic's Wikipedia research (`_texts`; fact_check() reuses…]] - `rationale_for` [EXTRACTED]
-- [[Path_25]] - `references` [EXTRACTED]
+- [[Path_15]] - `references` [EXTRACTED]
 - [[article_text()]] - `calls` [EXTRACTED]
 - [[catalog_pool()]] - `calls` [EXTRACTED]
 - [[gather_pool()]] - `calls` [EXTRACTED]

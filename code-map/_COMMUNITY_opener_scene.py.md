@@ -1,11 +1,11 @@
 ---
 type: community
-members: 50
+members: 48
 ---
 
 # opener_scene.py
 
-**Members:** 50 nodes
+**Members:** 48 nodes
 
 ## Members
 - [[(object, frames) to keep in frame the uncut subject until its cut, then its…]] - rationale - blender/opener_scene.py
@@ -24,7 +24,6 @@ members: 50
 - [[On the hit the lens snaps in, then eases half back; the strongest punch that…]] - rationale - blender/opener_scene.py
 - [[Scene time for each of the n output frames slow motion around the hit, the…]] - rationale - blender/opener_scene.py
 - [[State]] - code - blender/moves.py
-- [[Step every frame in order once so the rigid-body cache holds the whole clip.]] - rationale - blender/scene_kit.py
 - [[The hit the first blade contact, else the first thing that moves.]] - rationale - blender/opener_scene.py
 - [[The people.json of the job's library plus blend; every clip is appended once…]] - rationale - blender/people.py
 - [[The thing moves that must show physics and keyed travel (cut has its own…]] - rationale - blender/opener_scene.py
@@ -41,7 +40,7 @@ members: 50
 - [[fit()]] - code - blender/scene_kit.py
 - [[hold_offscreen()]] - code - blender/opener_scene.py
 - [[load_library()]] - code - blender/people.py
-- [[main()_8]] - code - blender/opener_scene.py
+- [[main()_9]] - code - blender/opener_scene.py
 - [[mid()]] - code - blender/opener_scene.py
 - [[oc_moves()]] - code - blender/opener_scene.py
 - [[opener_scene.py]] - code - blender/opener_scene.py
@@ -53,7 +52,6 @@ members: 50
 - [[seen_segments()]] - code - blender/opener_scene.py
 - [[seen_windows()]] - code - blender/opener_scene.py
 - [[setup()_1]] - code - blender/opener_scene.py
-- [[simulate()]] - code - blender/scene_kit.py
 - [[stand_on()]] - code - blender/opener_scene.py
 - [[subject_segments()]] - code - blender/opener_scene.py
 - [[threat_whole()]] - code - blender/opener_scene.py
@@ -67,22 +65,22 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 18 edges to [[_COMMUNITY_scene_kit.py]]
-- 10 edges to [[_COMMUNITY_moves.py]]
+- 13 edges to [[_COMMUNITY_moves.py]]
+- 13 edges to [[_COMMUNITY_math]]
+- 11 edges to [[_COMMUNITY_scene_kit.py]]
 - 10 edges to [[_COMMUNITY_opener_checks.py]]
-- 7 edges to [[_COMMUNITY_dress]]
-- 6 edges to [[_COMMUNITY_math]]
-- 4 edges to [[_COMMUNITY_walk]]
-- 3 edges to [[_COMMUNITY__hold]]
-- 2 edges to [[_COMMUNITY_look_toon.py]]
-- 2 edges to [[_COMMUNITY_test_full_scenes.py]]
+- 5 edges to [[_COMMUNITY_load_model]]
+- 4 edges to [[_COMMUNITY_cut]]
+- 3 edges to [[_COMMUNITY_bpy]]
+- 2 edges to [[_COMMUNITY_json]]
 - 1 edge to [[_COMMUNITY_tree]]
-- 1 edge to [[_COMMUNITY_re]]
-- 1 edge to [[_COMMUNITY_json]]
+- 1 edge to [[_COMMUNITY_sys]]
+- 1 edge to [[_COMMUNITY_pathlib]]
+- 1 edge to [[_COMMUNITY_people_standin.py]]
 
 ## Top bridge nodes
-- [[opener_scene.py]] - degree 34, connects to 9 communities
-- [[main()_8]] - degree 22, connects to 5 communities
+- [[opener_scene.py]] - degree 34, connects to 10 communities
+- [[main()_9]] - degree 22, connects to 5 communities
 - [[place_actors()]] - degree 13, connects to 5 communities
 - [[State]] - degree 23, connects to 3 communities
 - [[build_set()]] - degree 10, connects to 3 communities

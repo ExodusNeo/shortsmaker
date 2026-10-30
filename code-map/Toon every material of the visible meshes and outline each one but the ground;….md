@@ -1,12 +1,12 @@
 ---
 source_file: "blender/look_toon.py"
 type: "rationale"
-community: "look_toon.py"
+community: "bpy"
 location: "L77"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/look_toonpy
+  - community/bpy
 ---
 
 # Toon every material of the visible meshes and outline each one but the ground;…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[apply()_1]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/look_toonpy
+#graphify/rationale #graphify/EXTRACTED #community/bpy

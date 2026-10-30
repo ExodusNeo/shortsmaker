@@ -12,7 +12,7 @@ tags:
 # _run()
 
 ## Connections
-- [[Path_7]] - `references` [EXTRACTED]
+- [[Path_9]] - `references` [EXTRACTED]
 - [[blender_render.py]] - `contains` [EXTRACTED]
 - [[render_clips()]] - `calls` [EXTRACTED]
 - [[render_opener()]] - `calls` [EXTRACTED]

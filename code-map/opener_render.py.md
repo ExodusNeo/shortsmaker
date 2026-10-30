@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/opener_render.py"
 type: "code"
-community: "opener_render.py"
+community: "pathlib"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/opener_renderpy
+  - community/pathlib
 ---
 
 # opener_render.py
@@ -45,4 +45,4 @@ tags:
 - [[test_shot_templates.py]] - `imports_from` [EXTRACTED]
 - [[to_glb()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/opener_renderpy
+#graphify/code #graphify/EXTRACTED #community/pathlib

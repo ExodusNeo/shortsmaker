@@ -12,7 +12,7 @@ tags:
 # unpack_clips()
 
 ## Connections
-- [[Path_6]] - `references` [EXTRACTED]
+- [[Path_8]] - `references` [EXTRACTED]
 - [[Unpack sceneN.mp4.mov.webm from folderclips.zip (the Colab notebook's…]] - `rationale_for` [EXTRACTED]
 - [[gpu.py]] - `contains` [EXTRACTED]
 - [[re]] - `calls` [EXTRACTED]

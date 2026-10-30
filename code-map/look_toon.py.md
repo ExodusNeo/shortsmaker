@@ -1,12 +1,12 @@
 ---
 source_file: "blender/look_toon.py"
 type: "code"
-community: "look_toon.py"
+community: "bpy"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/look_toonpy
+  - community/bpy
 ---
 
 # look_toon.py
@@ -20,4 +20,4 @@ tags:
 - [[outline()_2]] - `contains` [EXTRACTED]
 - [[toon()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/look_toonpy
+#graphify/code #graphify/EXTRACTED #community/bpy

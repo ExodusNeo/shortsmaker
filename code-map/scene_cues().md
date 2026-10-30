@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/editplan.py"
 type: "code"
-community: "test_package.py"
+community: "scene_cues"
 location: "L149"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_packagepy
+  - community/scene_cues
 ---
 
 # scene_cues()
@@ -23,4 +23,4 @@ tags:
 - [[test_person_card_hold_and_exit_gap()]] - `calls` [EXTRACTED]
 - [[test_scene_hold_padding()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_packagepy
+#graphify/code #graphify/EXTRACTED #community/scene_cues

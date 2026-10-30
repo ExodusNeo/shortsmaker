@@ -1,20 +1,20 @@
 ---
 source_file: ""
 type: "code"
-community: "opener_graphic"
+community: "captions"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/opener_graphic
+  - community/captions
 ---
 
 # Path
 
 ## Connections
-- [[model_for()]] - `references` [EXTRACTED]
-- [[render_opener()]] - `references` [EXTRACTED]
-- [[review()]] - `references` [EXTRACTED]
-- [[save_try()]] - `references` [EXTRACTED]
-- [[to_glb()]] - `references` [EXTRACTED]
+- [[captions()]] - `references` [EXTRACTED]
+- [[music_gain()]] - `references` [EXTRACTED]
+- [[speak()]] - `references` [EXTRACTED]
+- [[story_sound()]] - `references` [EXTRACTED]
+- [[tts()_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/opener_graphic
+#graphify/code #graphify/EXTRACTED #community/captions

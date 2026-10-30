@@ -1,12 +1,12 @@
 ---
 source_file: "blender/people.py"
 type: "code"
-community: "_hold"
+community: "math"
 location: "L93"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/_hold
+  - community/math
 ---
 
 # _body_tree()
@@ -18,4 +18,4 @@ tags:
 - [[people.py]] - `contains` [EXTRACTED]
 - [[tree()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/_hold
+#graphify/code #graphify/EXTRACTED #community/math

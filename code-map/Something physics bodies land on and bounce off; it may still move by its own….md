@@ -1,12 +1,12 @@
 ---
 source_file: "blender/scene_kit.py"
 type: "rationale"
-community: "_hold"
+community: "scene_kit.py"
 location: "L246"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/_hold
+  - community/scene_kitpy
 ---
 
 # Something physics bodies land on and bounce off; it may still move by its own…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[make_static()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/_hold
+#graphify/rationale #graphify/EXTRACTED #community/scene_kitpy

@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_pictures_first.py"
 type: "code"
-community: "write_scripts"
+community: "planning"
 location: "L198"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/write_scripts
+  - community/planning
 ---
 
 # planning
@@ -30,4 +30,4 @@ tags:
 - [[test_weak_topic_swapped_for_backup()]] - `calls` [EXTRACTED]
 - [[write_scripts() with every AI step canned and `prepare` standing in for…]] - `rationale_for` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/write_scripts
+#graphify/code #graphify/EXTRACTED #community/planning

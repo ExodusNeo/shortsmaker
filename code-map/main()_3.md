@@ -1,26 +1,18 @@
 ---
-source_file: "colab/h3_run.py"
+source_file: "tests/people_sheet.py"
 type: "code"
-community: "h3_run.py"
-location: "L89"
+community: "sys"
+location: "L75"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/h3_runpy
+  - community/sys
 ---
 
 # main()
 
 ## Connections
-- [[call()]] - `calls` [EXTRACTED]
-- [[fit_start()]] - `calls` [EXTRACTED]
-- [[frames()]] - `calls` [EXTRACTED]
-- [[graph()]] - `calls` [EXTRACTED]
-- [[h3_run.py]] - `contains` [EXTRACTED]
-- [[json]] - `calls` [EXTRACTED]
-- [[saved_file()]] - `calls` [EXTRACTED]
-- [[shutil]] - `calls` [EXTRACTED]
-- [[time]] - `calls` [EXTRACTED]
-- [[zipfile]] - `calls` [EXTRACTED]
+- [[people_sheet.py]] - `contains` [EXTRACTED]
+- [[subprocess]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/h3_runpy
+#graphify/code #graphify/EXTRACTED #community/sys

@@ -36,7 +36,7 @@ members: 46
 - [[edge_leads()]] - code - blender/opener_checks.py
 - [[edge_point()]] - code - blender/opener_checks.py
 - [[first_frame()]] - code - blender/opener_checks.py
-- [[fresh()]] - code - tests/opener_check_cases.py
+- [[fresh()_1]] - code - tests/opener_check_cases.py
 - [[hidden()_1]] - code - blender/opener_checks.py
 - [[in_frame()]] - code - blender/opener_checks.py
 - [[key()_1]] - code - tests/opener_check_cases.py
@@ -64,14 +64,17 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 10 edges to [[_COMMUNITY_opener_scene.py]]
-- 6 edges to [[_COMMUNITY_math]]
-- 2 edges to [[_COMMUNITY_test_full_scenes.py]]
+- 2 edges to [[_COMMUNITY_math]]
+- 2 edges to [[_COMMUNITY_bpy]]
+- 2 edges to [[_COMMUNITY_people_standin.py]]
 - 1 edge to [[_COMMUNITY_scene_kit.py]]
 - 1 edge to [[_COMMUNITY_json]]
+- 1 edge to [[_COMMUNITY_sys]]
+- 1 edge to [[_COMMUNITY_pathlib]]
 
 ## Top bridge nodes
-- [[opener_check_cases.py]] - degree 12, connects to 3 communities
-- [[opener_checks.py]] - degree 27, connects to 2 communities
+- [[opener_check_cases.py]] - degree 12, connects to 5 communities
+- [[opener_checks.py]] - degree 27, connects to 4 communities
 - [[checks()]] - degree 18, connects to 1 community
 - [[in_frame()]] - degree 6, connects to 1 community
 - [[blade_face()]] - degree 5, connects to 1 community

@@ -1,17 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: "re"
+community: "blender_link.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/re
+  - community/blender_linkpy
 ---
 
 # Path
 
 ## Connections
-- [[log_short()]] - `references` [EXTRACTED]
-- [[vault_page()]] - `references` [EXTRACTED]
+- [[credit()]] - `references` [EXTRACTED]
+- [[fetch_model()]] - `references` [EXTRACTED]
+- [[in_library()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/re
+#graphify/code #graphify/EXTRACTED #community/blender_linkpy

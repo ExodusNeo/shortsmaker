@@ -1,12 +1,12 @@
 ---
 source_file: "blender/look_toon.py"
 type: "rationale"
-community: "look_toon.py"
+community: "bpy"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/look_toonpy
+  - community/bpy
 ---
 
 # The openers' one brand look (part 2, owner 2026-10-27: "everything"): every…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[look_toon.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/look_toonpy
+#graphify/rationale #graphify/EXTRACTED #community/bpy

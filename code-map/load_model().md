@@ -1,19 +1,19 @@
 ---
 source_file: "blender/scene_kit.py"
 type: "code"
-community: "dress"
+community: "load_model"
 location: "L106"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/dress
+  - community/load_model
 ---
 
 # load_model()
 
 ## Connections
 - [[A library .blend (every object in it) or primitivecube, as one mesh object…]] - `rationale_for` [EXTRACTED]
-- [[Object_2]] - `references` [EXTRACTED]
+- [[Object_1]] - `references` [EXTRACTED]
 - [[build_set()]] - `calls` [EXTRACTED]
 - [[dress()_1]] - `calls` [EXTRACTED]
 - [[material()_1]] - `calls` [EXTRACTED]
@@ -21,4 +21,4 @@ tags:
 - [[place_actors()]] - `calls` [EXTRACTED]
 - [[scene_kit.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/dress
+#graphify/code #graphify/EXTRACTED #community/load_model

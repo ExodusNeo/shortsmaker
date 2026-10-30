@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/remotion_render.py"
 type: "rationale"
-community: "json"
+community: "render_remotion"
 location: "L72"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/json
+  - community/render_remotion
 ---
 
 # Remotion failed: the full-screen motion graphic scenes get a painted picture…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[paint_instead()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/json
+#graphify/rationale #graphify/EXTRACTED #community/render_remotion

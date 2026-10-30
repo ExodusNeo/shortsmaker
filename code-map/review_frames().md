@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/opener_render.py"
 type: "code"
-community: "opener_render.py"
+community: "shutil"
 location: "L132"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/opener_renderpy
+  - community/shutil
 ---
 
 # review_frames()
@@ -18,4 +18,4 @@ tags:
 - [[review()]] - `calls` [EXTRACTED]
 - [[test_review_frames_include_key_moments()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/opener_renderpy
+#graphify/code #graphify/EXTRACTED #community/shutil

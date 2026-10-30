@@ -2,7 +2,7 @@
 source_file: "shortsmaker/short_render.py"
 type: "code"
 community: "render"
-location: "L137"
+location: "L139"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -25,6 +25,7 @@ tags:
 - [[edit_plan()]] - `calls` [EXTRACTED]
 - [[ffmpeg()]] - `calls` [EXTRACTED]
 - [[first_second_check()]] - `calls` [EXTRACTED]
+- [[fix_opener_graphic()]] - `calls` [EXTRACTED]
 - [[fix_short()]] - `calls` [EXTRACTED]
 - [[frame_maker()]] - `calls` [EXTRACTED]
 - [[full_summary()]] - `calls` [EXTRACTED]
@@ -38,7 +39,7 @@ tags:
 - [[local_clips()]] - `calls` [EXTRACTED]
 - [[local_job()]] - `calls` [EXTRACTED]
 - [[local_voice()]] - `calls` [EXTRACTED]
-- [[main()_5]] - `calls` [EXTRACTED]
+- [[main()_7]] - `calls` [EXTRACTED]
 - [[make()]] - `calls` [EXTRACTED]
 - [[make_sfx()]] - `calls` [EXTRACTED]
 - [[mark_details()]] - `calls` [EXTRACTED]
@@ -72,6 +73,7 @@ tags:
 - [[video_encoder()]] - `calls` [EXTRACTED]
 - [[visual_review()]] - `calls` [EXTRACTED]
 - [[wants_remotion()]] - `calls` [EXTRACTED]
+- [[weak_opener_graphic()]] - `calls` [EXTRACTED]
 - [[write_frames()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/render

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/writing.py"
 type: "rationale"
-community: "check_twists"
+community: "test_story.py"
 location: "L527"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/check_twists
+  - community/test_storypy
 ---
 
 # Before any script is written: each topic's twist against its Wikipedia text.…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[check_twists()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/check_twists
+#graphify/rationale #graphify/EXTRACTED #community/test_storypy

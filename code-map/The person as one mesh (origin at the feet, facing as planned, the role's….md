@@ -1,12 +1,12 @@
 ---
 source_file: "blender/people.py"
 type: "rationale"
-community: "dress"
+community: "math"
 location: "L179"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/dress
+  - community/math
 ---
 
 # The person as one mesh (origin at the feet, facing as planned, the role's…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[dress()_1]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/dress
+#graphify/rationale #graphify/EXTRACTED #community/math

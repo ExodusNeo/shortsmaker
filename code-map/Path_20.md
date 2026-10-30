@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "apply_review_fixes"
+community: "test_first_second.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/apply_review_fixes
+  - community/test_first_secondpy
 ---
 
 # Path
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[use_picture_from()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/apply_review_fixes
+#graphify/code #graphify/EXTRACTED #community/test_first_secondpy

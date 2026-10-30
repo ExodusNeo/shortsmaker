@@ -1,12 +1,12 @@
 ---
 source_file: "blender/people.py"
 type: "rationale"
-community: "scene_kit.py"
+community: "math"
 location: "L407"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/scene_kitpy
+  - community/math
 ---
 
 # Every frame up to f in order, so physics (a dropped case still landing) is…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[_step_to()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/scene_kitpy
+#graphify/rationale #graphify/EXTRACTED #community/math

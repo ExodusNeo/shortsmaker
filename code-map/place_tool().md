@@ -1,12 +1,12 @@
 ---
 source_file: "blender/moves.py"
 type: "code"
-community: "moves.py"
+community: "cut"
 location: "L610"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/movespy
+  - community/cut
 ---
 
 # place_tool()
@@ -14,9 +14,9 @@ tags:
 ## Connections
 - [[Matrix]] - `references` [EXTRACTED]
 - [[Object location that puts the tool's edge point at edge_at with rotation R.]] - `rationale_for` [EXTRACTED]
-- [[Vector_3]] - `references` [EXTRACTED]
+- [[Vector_4]] - `references` [EXTRACTED]
 - [[cut()]] - `calls` [EXTRACTED]
 - [[edge_point_local()]] - `calls` [EXTRACTED]
 - [[moves.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/movespy
+#graphify/code #graphify/EXTRACTED #community/cut

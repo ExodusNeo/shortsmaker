@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "re"
+community: "json"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/re
+  - community/json
 ---
 
 # Random
@@ -22,4 +22,4 @@ tags:
 - [[test_topic_ideas.py]] - `imports` [EXTRACTED]
 - [[topic_ideas.py]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/re
+#graphify/code #graphify/EXTRACTED #community/json

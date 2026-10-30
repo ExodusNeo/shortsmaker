@@ -12,8 +12,8 @@ tags:
 # run_draft()
 
 ## Connections
-- [[ask()_2]] - `contains` [EXTRACTED]
-- [[ask()_1]] - `indirect_call` [INFERRED]
+- [[ask()_4]] - `contains` [EXTRACTED]
+- [[ask()_3]] - `indirect_call` [INFERRED]
 - [[draft_rules in a temp channels folder holding strange-history's rules; returns…]] - `rationale_for` [EXTRACTED]
 - [[draft_rules()]] - `calls` [EXTRACTED]
 - [[make()_1]] - `calls` [EXTRACTED]

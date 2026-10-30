@@ -1,12 +1,12 @@
 ---
 source_file: "blender/scene_kit.py"
 type: "code"
-community: "_hold"
+community: "scene_kit.py"
 location: "L184"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/_hold
+  - community/scene_kitpy
 ---
 
 # layers()
@@ -19,4 +19,4 @@ tags:
 - [[prop_move()]] - `calls` [EXTRACTED]
 - [[scene_kit.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/_hold
+#graphify/code #graphify/EXTRACTED #community/scene_kitpy

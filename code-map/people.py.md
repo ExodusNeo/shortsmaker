@@ -1,12 +1,12 @@
 ---
 source_file: "blender/people.py"
 type: "code"
-community: "scene_kit.py"
+community: "math"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/scene_kitpy
+  - community/math
 ---
 
 # people.py
@@ -49,4 +49,4 @@ tags:
 - [[prop_move()]] - `contains` [EXTRACTED]
 - [[scene_kit.py]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/scene_kitpy
+#graphify/code #graphify/EXTRACTED #community/math

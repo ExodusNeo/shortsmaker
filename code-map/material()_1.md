@@ -1,12 +1,12 @@
 ---
 source_file: "blender/scene_kit.py"
 type: "code"
-community: "dress"
+community: "load_model"
 location: "L58"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/dress
+  - community/load_model
 ---
 
 # material()
@@ -18,4 +18,4 @@ tags:
 - [[load_model()]] - `calls` [EXTRACTED]
 - [[scene_kit.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/dress
+#graphify/code #graphify/EXTRACTED #community/load_model
