@@ -98,8 +98,8 @@ def run_agy(prompt: str, folder: Path, timeout: int = 900, model: str | None = N
 
 
 def other_ai(brain: str) -> str:
-    """The second member of this run's pair; Gemini runs use Codex without trying Claude."""
-    return session.PARTNER if brain == "gemini" else "gemini"
+    """Preferred alternative, keeping the configured hybrid partner when possible."""
+    return next(ai for ai in (session.PARTNER, session.BRAIN, "gemini", "codex", "claude") if ai != brain)
 
 
 def run_codex(prompt: str, read_dir: Path | None = None, timeout: int = 900) -> str | None:
@@ -132,25 +132,29 @@ def run_codex(prompt: str, read_dir: Path | None = None, timeout: int = 900) -> 
 
 def ask_ai(prompt: str, fatal: bool = True, read_dir: Path | None = None, brain: str | None = None,
            bulk: bool = False, allow_fallback: bool = False) -> dict | None:
-    """Headless planner call (BRAIN, or `brain`: Claude or Gemini) that returns parsed JSON; with fatal=False, None
-    on failure. Either agent automatically falls back to the other on failure or when out of credits/quota
+    """Headless planner call (BRAIN, or `brain`: Codex, Claude or Gemini) that returns parsed JSON; with fatal=False, None
+    on failure. Hybrid calls try the preferred partner, then the remaining AI, on failure or exhausted quota
     (and remembers exhausted quota in NO_QUOTA so later steps don't wait on the empty account). In SOLO mode
-    only running out of credits hands over (owner, 2026-10-27): the other AI then does the rest of the run solo.
+    quota exhaustion or a missing CLI hands over: the available AI continues the run solo.
+    Exhausted accounts are skipped for the rest of the run, including when all three are exhausted.
     `allow_fallback` lets an independent cold read try both AIs without changing the run's solo/editor selection.
     With read_dir, the AI may look at the images in that folder; `bulk` marks a job reading dozens of them, which
     Gemini runs on Flash (on Argon it would spend the small weekly quota in one Short)."""
     global _argon_exhausted
     first = brain or session.BRAIN
-    second = other_ai(first)
-    order = [w for w in (first, second) if w not in session.NO_QUOTA] or [first, second]
+    order = list(dict.fromkeys((first, other_ai(first), "codex", "claude", "gemini")))
+    order = [ai for ai in order if ai not in session.NO_QUOTA]
+    may_continue = not session.SOLO or allow_fallback
+    unavailable = set()
     for idx, who in enumerate(order):
-        if idx and session.SOLO and not allow_fallback and order[0] not in session.NO_QUOTA:
-            break  # solo: a bad answer is retried by the same AI, never handed over
+        if idx and not may_continue:
+            break  # solo: retry malformed replies locally; quota/missing CLI allows a handover
 
         name, exe = who.capitalize(), shutil.which("agy" if who == "gemini" else who)
-        fallback = other_ai(who).capitalize()
         if not exe:
             print(f"  {name} isn't installed ({'Antigravity agy' if who == 'gemini' else who + ' CLI'})")
+            unavailable.add(who)
+            may_continue = True
             continue
         for attempt in range(2):
             if who == "gemini":
@@ -183,19 +187,19 @@ def ask_ai(prompt: str, fatal: bool = True, read_dir: Path | None = None, brain:
                 if start >= 0 and end > start:
                     data = json.loads(out[start: end + 1])
                     session.LAST_AI = who
+                    if session.BRAIN in session.NO_QUOTA or session.BRAIN in unavailable:
+                        session.BRAIN = who
                     return data
             except json.JSONDecodeError:
                 pass
             if quota_exhausted(out):
                 session.NO_QUOTA.add(who)
-                other = other_ai(who)
-                if session.BRAIN == who and other not in session.NO_QUOTA:
-                    session.BRAIN = other
-                print(f"  {name} has no credits/quota left: switching to {fallback} for the rest of this run")
+                may_continue = True
+                print(f"  {name} has no credits/quota left: trying the next available AI")
                 break
             print(f"  {name} reply wasn't valid JSON (try {attempt + 1}/2)")
-        if idx == 0 and len(order) > 1 and who not in session.NO_QUOTA and (not session.SOLO or allow_fallback):
-            print(f"  {name} didn't give a usable answer, asking {fallback} instead")
+        if may_continue and idx + 1 < len(order) and who not in session.NO_QUOTA:
+            print(f"  {name} didn't give a usable answer, trying {order[idx + 1].capitalize()} instead")
     if fatal:
         sys.exit("The AI didn't return usable JSON. Run again.")
     return None

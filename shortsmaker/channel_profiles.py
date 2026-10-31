@@ -66,30 +66,39 @@ def ask_yes(question: str, default: bool) -> bool:
     return default if not ans else ans.startswith("y")
 
 
-BRAINS = ["claude-only", "gemini-only", "claude", "gemini", "both"]
+AI_NAMES = ("codex", "claude", "gemini")
+BRAINS = [f"{ai}-only" for ai in AI_NAMES] + [f"{writer}-{editor}" for writer in AI_NAMES for editor in AI_NAMES if writer != editor]
+BRAIN_ALIASES = {"claude": "claude-gemini", "gemini": "gemini-codex"}
+
+
+def normalize_brain(choice: str) -> str:
+    choice = choice.lower().replace("_", "-")
+    return BRAIN_ALIASES.get(choice, choice)
 
 
 def configure_brain(choice: str) -> None:
-    """Shared by batch runs and fix.bat: Gemini pairs with Codex; explicit Claude modes retain the old pair."""
-    choice = choice.lower().replace("_", "-")
-    session.SOLO = choice in ("claude-only", "gemini-only")
-    session.BRAIN = "gemini" if choice in ("gemini", "gemini-only") else "claude"
-    session.PARTNER = "codex" if session.BRAIN == "gemini" else "claude"
+    """Select the writer and editor, shared by run.bat and fix.bat."""
+    choice = normalize_brain(choice)
+    if choice == "both":  # legacy comparison command, outside the nine-choice menu
+        choice = "claude-gemini"
+    if choice not in BRAINS:
+        choice = "gemini-only"
+    writer, editor = choice.split("-")
+    session.BRAIN, session.SOLO = writer, editor == "only"
+    session.PARTNER = next(ai for ai in AI_NAMES if ai != writer) if session.SOLO else editor
 
 
 def ask_brain(last: str) -> str:
-    """Who plans this batch (scripts, fact check, SEO, picture choices, AI images): Enter = last time's.
-    "both" makes every topic twice, once by each AI, to compare them side by side."""
-    print("Who writes and plans these Shorts?\n"
-          "  1) Claude writes, edits and plans (Gemini checks the story)\n"
-          "  2) Gemini writes, edits and plans (Codex checks the story; no Claude)\n"
-          "  3) Claude (Gemini edits each script)\n"
-          "  4) Gemini, Argon when your account has it (Codex edits and checks each script; no Claude)\n"
-          "  5) Both, to compare: each topic made once by Claude and once by Gemini (post only the better one)\n"
-          "Every mode uses the other AI for a story check when available, using some of both subscriptions' quotas.")
-    norm = last.lower().replace("_", "-") if last else ""
-    idx = BRAINS.index(norm) + 1 if norm in BRAINS else 1
-    return BRAINS[ask_number("Pick a number", 5, idx) - 1]
+    """Three solo choices and every ordered writer/editor pairing; Enter preserves the saved choice."""
+    print("Who writes and plans these Shorts? (Codex = ChatGPT)")
+    for index, choice in enumerate(BRAINS, 1):
+        writer, editor = choice.split("-")
+        label = f"{writer.capitalize()} solo (writes, edits and reviews)" if editor == "only" else f"{writer.capitalize()} writes and plans; {editor.capitalize()} edits and checks"
+        print(f"  {index}) {label}")
+    print("If an AI runs out of quota, an available AI takes over in this same run.")
+    norm = normalize_brain(last) if last else "gemini-only"
+    idx = BRAINS.index(norm) + 1 if norm in BRAINS else BRAINS.index("gemini-only") + 1
+    return BRAINS[ask_number("Pick a number", len(BRAINS), idx) - 1]
 
 
 def load_channel() -> dict:

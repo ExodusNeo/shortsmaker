@@ -369,11 +369,11 @@ HOOK_KINDS = ("moment", "summary", "money_claim")
 def cold_read(shorts: list[dict]) -> dict[int, dict]:
     """How a stranger hears each final script (audit 2026-10-31): the editor used to report payoff_scene, list_like and
     hook_kind about its own version and story_problems believed it. This reader sees only the scenes (no topic, notes
-    or research). The other AI reads, even in solo mode, with the planner as fallback. One call for all Shorts;
+    or research). Solo mode uses the planner; hybrid mode uses the selected editor with fallback. One call for all Shorts;
     {index: reading} for the valid answers ({} when it doesn't answer)."""
     rows = [{"index": i, "scenes": [{"scene": k + 1, "narration": t} for k, t in enumerate(s["lines"])]}
             for i, s in enumerate(shorts)]
-    reader = llm.other_ai(session.BRAIN)
+    reader = session.BRAIN if session.SOLO else llm.other_ai(session.BRAIN)
     if reader in session.NO_QUOTA:
         reader = session.BRAIN
     print(f"{reader.capitalize()} is reading the script(s) as a stranger would...")
@@ -393,7 +393,7 @@ For each Short:
   "money_claim" if it is a specific money figure tied to someone or something the viewer can picture.
 Scripts: {json.dumps(rows, ensure_ascii=False)}
 Reply with ONLY JSON: {{"shorts": [{{"index": 0, "question": "...", "answer": 12, "new": [true, false], "list_like": false,
-"swipe": null, "swipe_why": null, "hook_kind": "moment"}}]}}""", fatal=False, brain=reader, allow_fallback=True) or {}
+"swipe": null, "swipe_why": null, "hook_kind": "moment"}}]}}""", fatal=False, brain=reader, allow_fallback=not session.SOLO) or {}
     out = {}
     if not isinstance(data, dict):
         return out

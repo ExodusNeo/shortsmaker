@@ -44,7 +44,7 @@ everything (voice, paintings, video). Real archival/online pictures and film are
 ## Layout (`D:\ShortsMaker`)
 | Path | What |
 |---|---|
-| `run.bat` | Asks: channel (Enter = last), how many, who plans (1 Claude only, 2 Gemini only, 3 Claude [Gemini edits], 4 Gemini [Codex edits], 5 Both to compare), make AI clips yourself (Colab H3 / Flow, y/N), shorter Shorts (25-30 s test, y/N). Answers remembered in the profile. `make_shorts.py [count] [channel] [claude-only\|gemini-only\|claude\|gemini\|both]` skips them |
+| `run.bat` | Asks channel, count, then nine AI choices: 1 Codex solo, 2 Claude solo, 3 Gemini solo; 4 Codex/Claude, 5 Codex/Gemini, 6 Claude/Codex, 7 Claude/Gemini, 8 Gemini/Codex, 9 Gemini/Claude (writer/editor). Then clip handoff and short-form questions. Saved per profile. CLI uses `codex-only`, `claude-only`, `gemini-only`, or `<writer>-<editor>` |
 | `fix.bat` | `make_shorts.py fix`: re-render a recent Short (7 days) with one scene changed (see fix.bat) |
 | `library.bat` | `make_shorts.py library`: approve or throw away looks/overlays/cuts the AI invented (`style_candidates/`) |
 | `make_shorts.py` | Entry point only; the pipeline is `shortsmaker/` |
@@ -112,13 +112,15 @@ Rules that keep it working:
   the pipeline. Whatever a skill teaches has to live in the prompts or code.
 
 ## Pipeline (`main()` -> `write_scripts()` -> `seo_pass()` -> `render()` per Short)
-1. **AI calls** go through `ask_ai()`. Planner = `BRAIN`. Solo modes (1, 2) use one AI except for the independent cold read; a bad answer is
-   retried by the same AI, and only running out of quota hands the rest of the run to the other one (`NO_QUOTA`).
-   Gemini modes (2, 4) pair with Codex (ChatGPT subscription), never Claude. Mode 2 keeps Gemini as editor;
-   mode 4 uses Codex as editor. Explicit Claude modes retain the Claude/Gemini pair. `configure_brain()` also
-   applies this in fix.bat; `llm.other_ai()` selects the partner for all fallbacks, including picture catalogs.
-   The cold read alone sets `allow_fallback=True`, so it can try both AIs even in solo mode.
-   Collaborative modes (3, 4): the partner edits the scripts. "Both" makes each topic twice (folders end
+1. **AI calls** go through `ask_ai()`. `configure_brain()` sets the selected writer (`BRAIN`), solo flag and
+   hybrid editor (`PARTNER`), for both run.bat and fix.bat. Solo uses the same AI for writing, editing and all
+   reviews, including the cold read. Hybrid uses the selected editor for editing and the cold read.
+   On quota exhaustion, the current request tries the preferred alternative, then the remaining third AI.
+   Exhausted accounts are skipped throughout the run; successful writer handover changes `BRAIN` so later steps
+   continue without restarting. A missing CLI also permits handover. Solo malformed replies are retried by the
+   same AI; hybrid failures can try alternatives. All three exhausted = no repeated empty-account calls.
+   Saved/CLI aliases `claude` and `gemini` map to `claude-gemini` and `gemini-codex`; `both` remains a legacy CLI
+   comparison command, outside the nine-choice menu. "Both" makes each topic twice (folders end
    `-claude`/`-gemini`; post the better one). Codex: `codex exec --model gpt-6-astra`, high effort, ChatGPT login enforced, API-key environment variables
    removed for the child, read-only sandbox, shell tools disabled, no user config or project instructions, ephemeral
    sessions; prompts via stdin and review images attached directly. Claude: `--model opus --effort high`. Gemini via Antigravity's `agy`
@@ -141,7 +143,7 @@ Rules that keep it working:
    topics are skipped (`dropped_topics`). No picture list from either AI = the run stops. Then `check_twists()`: each
    twist against Wikipedia (a legend becomes "the story says X; in fact Y").
 4. **Script team**: the planner writes narration -> the editor (`edit_scripts()`: hooks, read-aloud fixes, cuts) ->
-   the cold reader (`cold_read()`, the partner AI with planner fallback, including solo modes; one call per batch:
+   the cold reader (`cold_read()`, the planner in solo mode, selected editor with fallback in hybrid mode; one call per batch:
    sees only the final scenes and reports the
    question line 1 opens, the scene that answers it, `new` per scene, list_like, first swipe scene, hook_kind; the
    editor no longer supplies its own grades) -> `story_problems()` sends a failing script back once (answer before the
@@ -307,8 +309,8 @@ strangest moment. Same story, other channel: Voggle's Mike 2M views vs ours 1.2K
 
 ## Open items and next steps
 - **Audit improvements (2026-10-31)**: Parts 1 and 2.1/2.3-2.5 were already on master and pushed at
-  `beaae733`; the previous branch/wait notes were stale. This continuation implements 2.2 with Codex + Gemini
-  (owner has no Claude credits), leaving the selected editor unchanged in solo mode. No Part 3 changes yet.
+  `beaae733`; the previous branch/wait notes were stale. Part 2.2 supports all three AIs. Owner clarified: three true solo modes and all six ordered writer/editor
+  pairs; quota handover can use the third AI within the same run. No Part 3 changes yet.
   Plan: `docs/superpowers/plans/2026-10-31-audit-improvements.md` (git-ignored on purpose).
   Malformed cold reads now count as no review; a failed second read removes the old draft's verdict. A failed
   opener preview also clears the old render's score. A live Codex cold read passed. Still to verify: a complete live Short with these changes.
@@ -328,7 +330,7 @@ strangest moment. Same story, other channel: Voggle's Mike 2M views vs ours 1.2K
 
 ## How to verify changes
 - `.venv\Scripts\python.exe -m compileall -q make_shorts.py shortsmaker`; Remotion: `cd remotion && npx tsc -p .`
-- Tests, no AI usage (`.venv\Scripts\python.exe tests\<name>.py`): `test_package`, `test_codex`, `test_pictures_first`,
+- Tests, no AI usage (`.venv\Scripts\python.exe tests\<name>.py`): `test_package`, `test_codex`, `test_ai_modes`, `test_pictures_first`,
   `test_full_scenes`, `test_style`, `test_rules` (golden prompts), `test_story`, `test_first_second`,
   `test_topic_ideas`, `test_h3_handoff`, `test_h3_run`, `test_edit_project`, `test_blender_plan`,
   `test_blender_render`, `test_opener_graphic`, `test_drawn_opener` (real node, ~1 min);

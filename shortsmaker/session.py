@@ -14,8 +14,8 @@ EMPHASIS = (255, 160, 0)  # the glowing emphasis word in the captions
 BRAIN = "claude"  # who plans, writes and picks pictures: "claude" (Claude Code) or "gemini" (Google Antigravity
 # CLI, `agy`, signed in with the owner's Google account). Chosen per batch in run.bat, saved in the profile.
 # Gemini (agy image generator, Flash) paints the AI gap images and thumbnail art for either planner; SDXL is the backup.
-SOLO = False  # one AI writes, edits, plans and reviews visuals; the independent story check can use the other AI
-PARTNER = "claude"  # legacy pair for direct callers; configure_brain selects Codex for Gemini CLI runs
+SOLO = False  # one AI writes, edits and reviews; another takes over if it runs out of quota
+PARTNER = "claude"  # configured hybrid editor, or the first fallback in solo mode
 NO_QUOTA: set[str] = set()  # agents ("claude" / "gemini") that ran out of credits/quota during this run
 
 

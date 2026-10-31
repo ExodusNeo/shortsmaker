@@ -29,11 +29,11 @@ def main() -> None:
     channel_profiles.use_channel(name)
     n = int(sys.argv[1]) if len(sys.argv) > 1 else channel_profiles.ask_count()
     ch, failed = channel_profiles.load_channel(), 0
-    raw_choice = sys.argv[3].lower().replace("_", "-") if len(sys.argv) > 3 else None
-    choice = raw_choice if raw_choice in channel_profiles.BRAINS else (
+    raw_choice = channel_profiles.normalize_brain(sys.argv[3]) if len(sys.argv) > 3 else None
+    choice = raw_choice if raw_choice in channel_profiles.BRAINS + ["both"] else (
         channel_profiles.ask_brain(ch.get("brain", "gemini-only")) if len(sys.argv) < 2 else ch.get("brain", "gemini-only"))
-    choice = choice.lower().replace("_", "-")
-    if choice not in channel_profiles.BRAINS:
+    choice = channel_profiles.normalize_brain(choice)
+    if choice not in channel_profiles.BRAINS + ["both"]:
         choice = "gemini-only"
     ch["brain"] = choice
     if len(sys.argv) < 2 and session.RULE_SETTINGS.get("visuals") != "blender":  # Blender draws every scene
@@ -44,19 +44,13 @@ def main() -> None:
         session.SHORT_FORM = channel_profiles.ask_yes("Make shorter Shorts, about 25-30 seconds instead of 40-50 (a test)?", ch.get("short_form", False))
         ch["short_form"] = session.SHORT_FORM
     channel_profiles.configure_brain(choice)
-    if choice == "claude-only":
-        print("Claude only: Claude Opus, high effort (solo: Claude writes, edits, plans and reviews)")
-    elif choice == "gemini-only":
-        print(f"Gemini only: {llm.gemini_model()}, high effort (solo: Gemini writes, edits, plans and reviews)")
-    elif choice == "gemini":
-        print(f"Gemini: {llm.gemini_model()}, high effort; Codex edits each script and steps in if Gemini fails")
-    elif choice == "claude":
-        print("Claude: Claude Opus, high effort; Gemini edits each script and steps in if Claude fails")
-    print("Story check: the other AI reads the script; falls back to the planner if unavailable (uses subscription quota).")
+    print(f"{session.BRAIN.capitalize()} writes and plans; "
+          + ("solo editing and reviews." if session.SOLO else f"{session.PARTNER.capitalize()} edits and checks."))
+    print("Quota exhausted: an available AI takes over without restarting the batch.")
     picture_pool.prune_cache()
     short_render.prune_work()
     topics = pools = None
-    brains = ["claude", "gemini"] if choice == "both" else ["claude" if "claude" in choice else "gemini"]
+    brains = ["claude", "gemini"] if choice == "both" else [session.BRAIN]
     for session.BRAIN in brains:
         if topics == []:  # Claude's half made nothing: nothing to compare
             break

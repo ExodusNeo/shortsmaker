@@ -235,31 +235,19 @@ def test_graphic_card_hold_duration():
 
 def test_solo_brain_selection_options():
     from shortsmaker import channel_profiles
-    assert channel_profiles.BRAINS == ["claude-only", "gemini-only", "claude", "gemini", "both"]
-
-    # Test number selections 1-5
     import builtins
-    old_input = builtins.input
-    try:
-        builtins.input = lambda prompt="": "1"
-        assert channel_profiles.ask_brain("claude") == "claude-only"
-        builtins.input = lambda prompt="": "2"
-        assert channel_profiles.ask_brain("claude") == "gemini-only"
-        builtins.input = lambda prompt="": "3"
-        assert channel_profiles.ask_brain("claude") == "claude"
-        builtins.input = lambda prompt="": "4"
-        assert channel_profiles.ask_brain("claude") == "gemini"
-        builtins.input = lambda prompt="": "5"
-        assert channel_profiles.ask_brain("claude") == "both"
-        # Test default Enter preserving last choice
-        builtins.input = lambda prompt="": ""
-        assert channel_profiles.ask_brain("claude-only") == "claude-only"
-        assert channel_profiles.ask_brain("gemini-only") == "gemini-only"
-        assert channel_profiles.ask_brain("claude") == "claude"
-        assert channel_profiles.ask_brain("gemini") == "gemini"
-        assert channel_profiles.ask_brain("both") == "both"
-    finally:
-        builtins.input = old_input
+    from unittest.mock import patch
+    expected = ["codex-only", "claude-only", "gemini-only", "codex-claude", "codex-gemini",
+                "claude-codex", "claude-gemini", "gemini-codex", "gemini-claude"]
+    assert channel_profiles.BRAINS == expected
+    for index, choice in enumerate(expected, 1):
+        with patch.object(builtins, "input", return_value=str(index)):
+            assert channel_profiles.ask_brain("gemini-only") == choice
+        with patch.object(builtins, "input", return_value=""):
+            assert channel_profiles.ask_brain(choice) == choice
+    for old, new in (("claude", "claude-gemini"), ("gemini", "gemini-codex")):
+        with patch.object(builtins, "input", return_value=""):
+            assert channel_profiles.ask_brain(old) == new
 
 
 def test_solo_edit_scripts_uses_same_ai():

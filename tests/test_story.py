@@ -91,9 +91,10 @@ def test_cold_read_uses_other_ai_in_solo_and_collaborative_modes():
                 llm.ask_ai = ask
                 session.BRAIN, session.SOLO, session.NO_QUOTA = planner, solo, set()
                 result = writing.cold_read([{"lines": JACK}])
-                assert calls == [{"fatal": False, "brain": reviewer, "allow_fallback": True}]
-                assert result[0]["reviewer"] == reviewer
-                assert f"reviewed by {reviewer.capitalize()}" in editplan.cold_read_line(result[0])
+                expected = planner if solo else reviewer
+                assert calls == [{"fatal": False, "brain": expected, "allow_fallback": not solo}]
+                assert result[0]["reviewer"] == expected
+                assert f"reviewed by {expected.capitalize()}" in editplan.cold_read_line(result[0])
                 assert session.BRAIN == planner and session.SOLO == solo
             session.NO_QUOTA = {reviewer}
             calls.clear()

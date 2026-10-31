@@ -57,7 +57,7 @@ def test_gemini_modes_choose_codex_and_keep_editor_choice():
 def test_codex_cold_reader_and_quota_fallback_never_call_claude():
     old = session.BRAIN, session.SOLO, session.PARTNER, session.NO_QUOTA, session.LAST_AI
     try:
-        channel_profiles.configure_brain("gemini-only")
+        channel_profiles.configure_brain("gemini-codex")
         session.NO_QUOTA = set()
         reply = '{"shorts":[{"index":0,"question":"Why?","answer":2}]}'
         with patch.object(llm.shutil, "which", side_effect=lambda name: name), \
@@ -72,7 +72,7 @@ def test_codex_cold_reader_and_quota_fallback_never_call_claude():
             before = codex.call_count
             writing.cold_read([{"lines": ["He stayed.", "He was paid."]}])
             assert codex.call_count == before
-            assert session.BRAIN == "gemini" and session.SOLO
+            assert session.BRAIN == "gemini" and not session.SOLO
     finally:
         session.BRAIN, session.SOLO, session.PARTNER, session.NO_QUOTA, session.LAST_AI = old
 

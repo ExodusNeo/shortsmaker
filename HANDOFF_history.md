@@ -1544,3 +1544,19 @@ when no template fits, and add three.js only as a fixed template. All three buil
   are in .superpowers/part2-verification/ (ignored).
 - Still unverified: a complete live Short with the updated pair, including image-based Codex fallback. No claim
   about better audience retention yet. Part 3 and weird-economics' word-length decision remain open.
+
+
+### 2026-10-31: three solo modes, all six writer/editor pairs, three-AI quota continuation
+Owner corrected the earlier fixed Gemini/Codex interpretation: they want to select among Codex, Claude and
+Gemini and keep a batch running when any subscription runs out. run.bat now offers exactly nine choices:
+Codex solo, Claude solo, Gemini solo, then Codex/Claude, Codex/Gemini, Claude/Codex, Claude/Gemini,
+Gemini/Codex and Gemini/Claude (writer/editor). Solo includes the cold read on the same AI. Hybrid routes
+editing and the cold read to the selected editor. Saved choices and fix.bat use the same configuration;
+legacy claude/gemini aliases are normalized, and the old both command still works from the CLI.
+ask_ai now tries all three providers, skips accounts exhausted earlier in this run, and updates the writer
+when a substitute answers after quota exhaustion or a missing CLI. If all three quotas are empty it stops
+without re-querying them. Solo malformed replies still retry the selected AI rather than switching arbitrarily.
+Verification: all nine modes tested for editor/cold-reader routing and batch writer selection; every mode
+continues through two exhausted providers to the third and reuses it on the next request. Eight relevant
+suites passed (139 tests), including unchanged golden prompts; compileall and diff checks passed. No live
+AI quota spent on this change. A full video render was not needed for menu and provider-routing changes.
