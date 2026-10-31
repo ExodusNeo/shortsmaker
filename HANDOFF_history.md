@@ -1602,3 +1602,39 @@ Verification: 149 tests pass across 9 suites, including 10 new retention tests; 
 check pass. Golden prompt differences reviewed before re-saving: only topics/writer lessons and editor's old
 performance assertions changed. Archived files verified byte-for-byte by hash. No real Studio screenshot was
 provided yet, so no live visual-AI retention result is claimed and no test data was put into actual outputs.
+
+
+### 2026-10-31: reliability follow-up (all four improvements approved by owner)
+- Completed scripts are queued atomically in work/progress.json before SEO, then checkpointed after picture
+  selection, voice and encoding. Batch errors preserve folders and continue; run.bat offers resume, resume.bat
+  resumes directly, and the CLI accepts resume [folder]. Unfinished work is excluded from seven-day pruning.
+  New batches choose a non-existing output folder, preserving old results with the same title.
+- save_state now commits JSON atomically and writes background/person blobs through temporary files. Encoding
+  targets work/rendering.mp4 and replaces short.mp4 only after success. render-context.json stores the data
+  needed by finish_render(), with explicit JSON tags for bytes/paths (no pickle/executable serialization).
+  A rendered-stage resume goes straight to reports/reviews. Profile/logbook finalization is repeatable and does
+  not duplicate an existing folder's logbook entry. An interrupted planning call itself is not checkpointed;
+  completed scripts are. Legacy outputs do not retroactively gain batch checkpoints.
+- voice_cache stores per-scene audio and word timings, checked against narration, voice settings, speed,
+  instruction/reference and audio hashes. Unchanged visuals can be rerendered without another voice job.
+  A real FFmpeg render test caught and fixed concat paths for cached audio in a subdirectory.
+- Visual and opening AI reviews now record Passed / Problems found / Not reviewed. Preview failure, absent or
+  malformed replies produce NOT REVIEWED checks and no guessed image fixes. edit_plan.txt records statuses.
+- fix.bat option 6 changes circle/arrow coordinates and label; option 3 can remove a mark with the same preview.
+  The fast path renders only that still scene with hard cuts, replaces its upper card area and keeps original
+  captions/audio. It produces preview.mp4 and sheet.jpg, asks the owner to apply, backs up the original video,
+  state and reports, updates the storyboard/edit plan, and archives a stale Shotcut timeline. Other scenes
+  fall back to ordinary repairs with narration caching. Manual edits invalidate the visual-review status.
+- Picture downloads retry at most twice (Wikimedia retains its own existing retry/backoff). On selected-background
+  failure, one AI selection may choose an unused reviewed, sharp, era-appropriate pool alternative. Failed URLs,
+  reused candidates and unsafe portrait substitutions are excluded. Credits survive; old motion is disabled.
+- While running the broad suite, long temporary paths exposed an existing drawn-opener diagnostic truncation:
+  node_run kept the last 600 characters, losing the actual TypeError. It now keeps the error headline first;
+  a new regression covers long paths and the existing real-node test passes.
+- Verification: 22/22 suites pass (including 13 reliability regressions, real FFmpeg render/cache/resume smoke,
+  real-node drawn openers and TypeScript runtime tests); compileall, tsc and git diff --check pass. Golden prompts
+  unchanged. Real scene preview/apply exercised on an isolated copy of Mary Toft in test_renders/reliability-toft,
+  with applied-sheet.jpg visually inspected and original audio SHA256 verified identical. No live AI quota spent.
+  Owner's output files, profile/research edits and fresh logbooks remain untouched.
+Usage/limitations: docs/reliability.md. Tracked checklist: docs/superpowers/plans/2026-10-31-reliability-improvements.md.
+Retention Part 3.2 still awaits implementation and fresh results.

@@ -12,8 +12,8 @@ from pathlib import Path
 from PIL import Image
 
 from shortsmaker import (
-    audio_mix, blender_plan, blender_render, drawn_opener, edit_project, editplan, frame_render, gpu, image_sources,
-    media_tools, motion, photo_prep, picker, picture_pool, plan_rules, remotion_render, review, seo, session, style_lab,
+    audio_mix, blender_plan, blender_render, checkpoints, drawn_opener, edit_project, editplan, frame_render, gpu, image_sources,
+    media_tools, motion, photo_prep, picker, picture_pool, plan_rules, remotion_render, review, seo, session, style_lab, voice_cache,
 )
 from shortsmaker.config import FPS, H, MUSIC, OUTPUT, PALETTES, SFX, SRC, STYLE_SLOTS, W, hex_rgb
 
@@ -32,7 +32,10 @@ def save_state(work: Path, short: dict, choices: list[dict], music: Path | None,
         for kind in ("bg", "person"):
             row[kind] = None
             if c[kind]:
-                (work / f"keep_{i}_{kind}.bin").write_bytes(c[kind][0])
+                blob = work / f"keep_{i}_{kind}.bin"
+                temp = blob.with_suffix(".tmp")
+                temp.write_bytes(c[kind][0])
+                temp.replace(blob)
                 row[kind] = [c[kind][1], c[kind][2]]
         if c.get("full_pics"):  # evidence-board photos / document scan
             for k, p in enumerate(c["full_pics"]):
@@ -40,8 +43,7 @@ def save_state(work: Path, short: dict, choices: list[dict], music: Path | None,
             row["full_pics"] = [list(p[1:]) for p in c["full_pics"]]
         rows.append(row)
     short = {k: v for k, v in short.items() if k != "research"}  # Wikipedia text: re-read when needed
-    (work / "state.json").write_text(json.dumps({"short": short, "choices": rows, "music": music.relative_to(MUSIC).as_posix() if music else None,
-                                                 "by_gemini": sorted(by_gemini)}, default=str), encoding="utf-8")
+    media_tools.write_json(work / "state.json", json.loads(json.dumps({"short": short, "choices": rows, "music": music.relative_to(MUSIC).as_posix() if music else None, "by_gemini": sorted(by_gemini)}, default=str)))
 
 
 def load_state(work: Path) -> dict:
@@ -59,6 +61,12 @@ def load_state(work: Path) -> dict:
 
 def prune_work() -> None:
     for w in OUTPUT.glob("*/*/work"):
+        if (w / "progress.json").exists():
+            try:
+                if checkpoints.read(w / "progress.json")["stage"] != "complete":
+                    continue
+            except (OSError, ValueError, KeyError):
+                continue
         if time.time() - w.stat().st_mtime > KEEP_WORK_DAYS * 86400:
             shutil.rmtree(w, ignore_errors=True)
 
@@ -159,7 +167,16 @@ def render(short: dict, ch: dict, folder: Path, state: dict | None = None, fix_r
         if (sc.get("full") or {}).get("type") == "board" and len(choices[i].get("full_pics") or []) < 3:
             sc["full"] = None
     print("  voice, gap images and thumbnail art on this PC...")
-    voices = gpu.local_voice(short, ch, work)
+    prior_music = MUSIC / state["music"] if state and state.get("music") else None
+    save_state(work, short, choices, prior_music, set(state.get("by_gemini", [])) if state else set())
+    checkpoints.update(work, "pictures", short)
+    voices = voice_cache.load(short, ch, work)
+    if voices is None:
+        voices = gpu.local_voice(short, ch, work)
+        voice_cache.save(short, ch, work, voices)
+    else:
+        print("  reusing the saved narration (text and voice settings match)")
+    checkpoints.update(work, "voice", short)
     gen = [{"prompt": sc["ai_image"], "out": str(work / f"ai{i}.jpg")}
            for i, sc in enumerate(short["scenes"]) if not choices[i]["bg"] and sc["ai_image"] and not sc.get("full")]
     figs = {i: sc["full"]["thing"] for i, sc in enumerate(short["scenes"])
@@ -250,6 +267,8 @@ def render(short: dict, ch: dict, folder: Path, state: dict | None = None, fix_r
                 sound = trimmed
         scene_sounds.append((sound, words, img))
 
+    voice_cache.save(short, ch, work, [(sound, words) for sound, words, _ in scene_sounds])
+
     # Pacing & hold time: full-screen graphics, person cards and overlay graphics need breathing room
     # to be read and understood before the scene transitions to the next beat.
     # Keep narration pacing tight: graphics start earlier within speech, avoiding dead air pauses.
@@ -317,7 +336,7 @@ def render(short: dict, ch: dict, folder: Path, state: dict | None = None, fix_r
         if sc["graphic"] and sc["graphic"]["style"] != "mark":
             film = choices[i]["film"]["path"] if clips.get(i) == work / f"film{i}.mp4" else None
             sc["graphic"]["low"] = frame_render.graphic_low(choices[i], work / f"{i}_raw.jpg", film, sc)
-    (work / "list.txt").write_text("".join(f"file '{a.name}'\n" for a in audio))
+    (work / "list.txt").write_text("".join(f"file '{a.relative_to(work).as_posix()}'\n" for a in audio))
     media_tools.ffmpeg("-f", "concat", "-i", "list.txt", "-ar", "44100", "-ac", "2", "voice.wav", cwd=work)
     emphasis = {c["emphasis"] for c in cues if c.get("emphasis") is not None}
     flashes = {bounds[i] for i, sc in enumerate(short["scenes"]) if sc["transition"] == "flash"}
@@ -405,7 +424,7 @@ def render(short: dict, ch: dict, folder: Path, state: dict | None = None, fix_r
          "-filter_complex", ";".join(graph), "-map", "[v]", "-map", "[a]",
          *media_tools.video_encoder(), "-pix_fmt", "yuv420p",
          "-c:a", "aac", "-b:a", "192k", "-t", f"{total:.2f}", "-movflags", "+faststart",
-         "../short.mp4", *(["-map", "[clean]", *media_tools.video_encoder(), "-pix_fmt", "yuv420p", "-t", f"{total:.2f}",
+         "rendering.mp4", *(["-map", "[clean]", *media_tools.video_encoder(), "-pix_fmt", "yuv420p", "-t", f"{total:.2f}",
                             "clean.mp4"] if renderer == "python" else []), *stems],
         stdin=subprocess.PIPE if renderer == "python" else None, cwd=work)
     if renderer == "python":
@@ -416,6 +435,20 @@ def render(short: dict, ch: dict, folder: Path, state: dict | None = None, fix_r
         proc.stdin.close()
     if proc.wait() != 0:
         raise RuntimeError("ffmpeg failed while rendering")
+    (work / "rendering.mp4").replace(folder / "short.mp4")
+    save_state(work, short, choices, music, by_gemini)
+    context = {"bounds": bounds, "sources": sources, "cues": cues, "events": events, "music": music, "n_graphics": n_graphics, "clips": clips, "opener_check": opener_check, "drawn": drawn, "total": total, "emphasis": emphasis, "flashes": flashes, "by_gemini": by_gemini, "renderer": renderer}
+    checkpoints.save_context(work, {**context, "fix_round": fix_round, "state": bool(state)})
+    checkpoints.update(work, "rendered", short)
+    finish_render(short, ch, folder, state, fix_round, **context)
+
+
+def finish_render(short: dict, ch: dict, folder: Path, state=None, fix_round: int = 0, *,
+                  bounds, sources, cues, events, music, n_graphics, clips, opener_check, drawn,
+                  total, emphasis, flashes, by_gemini, renderer) -> None:
+    """Finish reports/reviews from a committed video; resume reaches here without rerendering or revoicing."""
+    work = folder / "work"
+    choices = load_state(work)["choices"]
     review.storyboard(folder / "short.mp4", bounds, folder / "storyboard.jpg")
     editplan.edit_plan(short, bounds, sources, cues, events, music, folder / "edit_plan.txt",
               f"{'Remotion' if renderer == 'remotion' else 'built-in (Python)'}, {n_graphics} motion graphics",
@@ -445,6 +478,7 @@ def render(short: dict, ch: dict, folder: Path, state: dict | None = None, fix_r
         f.write("\n\nQUALITY CHECK (automatic, on the finished video)\n" + ("\n".join(f"  CHECK: {i}" for i in issues) or
                 "  OK: no black or frozen stretches, loudness on target, every scene has a picture") + "\n"
                 + (f"  First second (AI score of the opening): {short['first_second']}\n" if short.get("first_second") else ""))
+        f.write("".join(f"  Review status: {line}\n" for line in review.status_lines(short)))
 
     art = work / "thumb_art.jpg"  # Claude's thumbnail plan, painted on this PC; else the first scene
     frame_render.thumbnail(thumb_pic if drawn else art if art.exists() else work / "0.jpg",

@@ -20,6 +20,15 @@ from shortsmaker.config import FONT, GRAPHIC_STYLES
 PAUSE_MAX = 0.8  # seconds of narration silence worth a look: sentence pauses ran 0.4-0.56 s; the Nobel bacteria Short had 1.06 s at 2.6 s
 
 
+def review_status(short: dict, name: str, status: str, why: str = "") -> None:
+    short.setdefault("review_status", {})[name] = {"status": status, "why": why}
+
+
+def status_lines(short: dict) -> list[str]:
+    return [f"{name}: {item['status']}" + (f" ({item['why']})" if item.get("why") else "")
+            for name, item in short.get("review_status", {}).items()]
+
+
 def quality_check(video: Path, bounds: list[float], sources: list[str], voice: Path | None = None) -> list[str]:
     """Automatic checks on the finished Short, using ffmpeg's own detectors in one pass: black or
     frozen stretches, loudness off target or clipping, scenes with no picture, unplanned length; with `voice` (the
@@ -80,14 +89,17 @@ def visual_review(video: Path, short: dict, bounds: list[float], sources: list[s
     by eye). One AI call; its findings join the CHECK lines. Failure means no findings. `cues` (render's timed
     extras) tell it when a graphic dims the picture on purpose: Oxford 2026-10-26 repainted two good pictures
     3 times as "nearly blank" because a question beat and a kinetic title had dimmed them."""
+    review_status(short, "Visual review", "Not reviewed", "review did not finish")
     folder = work / "review"
     shutil.rmtree(folder, ignore_errors=True)
     folder.mkdir()
     try:  # 6x5 tiles = 30 seconds per sheet
         media_tools.ffmpeg("-i", str(video), "-vf", "fps=1,scale=300:-2,tile=6x5", "-fps_mode", "vfr", "sheet%d.jpg", cwd=folder)
-    except subprocess.CalledProcessError:
-        return [], {}
+    except (subprocess.CalledProcessError, OSError):
+        return ["NOT REVIEWED: visual review preview could not be made"], {}
     sheets = sorted(folder.glob("sheet*.jpg"), key=lambda p: int(p.stem[5:]))
+    if not sheets:
+        return ["NOT REVIEWED: visual review has no preview frames"], {}
     plan = "\n".join(f"scene {i + 1} ({media_tools.clock(bounds[i])}-{media_tools.clock(bounds[i + 1])}): \"{sc['narration']}\" | picture: {src[:160]}"
                      + (overlay_notes(sc, cues[i], bounds[i + 1]) if cues else "")
                      for i, (sc, src) in enumerate(zip(short["scenes"], sources)))
@@ -114,7 +126,12 @@ otherwise (e.g. a graphic covering a face).
 Do not run shell commands, execute scripts, crop images, or inspect other files in the codebase. View the sheet images directly with read_file, evaluate the Short, and immediately output the JSON.
 Reply with ONLY JSON: {{"problems": [{{"second": 12, "scene": 3, "what": "a white smoke cloud covers the statue", "fix": "repaint"}}]}}""",
                   fatal=False, read_dir=folder)
-    return review_fixes(data, len(short["scenes"]))
+    if not isinstance(data, dict) or not isinstance(data.get("problems"), list) or any(
+            not isinstance(p, dict) or not str(p.get("what") or "").strip() for p in data["problems"]):
+        return ["NOT REVIEWED: visual reviewer did not return a usable verdict"], {}
+    found, fixes = review_fixes(data, len(short["scenes"]))
+    review_status(short, "Visual review", "Problems found" if found else "Passed")
+    return found, fixes
 
 
 def review_fixes(data, n_scenes: int) -> tuple[list[str], dict[int, tuple[str, str]]]:
@@ -144,6 +161,7 @@ def first_second_check(video: Path, short: dict, choices: list[dict], board: Pat
     better (no painting: the opening wants a real picture). Returns (CHECK lines, (scene index, why) or None);
     failure means ([], None)."""
     short.pop("first_second", None)  # this render needs its own score, even if making the preview fails
+    review_status(short, "Opening review", "Not reviewed", "review did not finish")
     folder = work / "hook"
     shutil.rmtree(folder, ignore_errors=True)
     folder.mkdir()
@@ -152,7 +170,7 @@ def first_second_check(video: Path, short: dict, choices: list[dict], board: Pat
                            "first.jpg", cwd=folder)
         shutil.copy(board, folder / "storyboard.jpg")
     except (subprocess.CalledProcessError, OSError):
-        return [], None
+        return ["NOT REVIEWED: opening preview could not be made"], None
     scenes = short["scenes"]
     animated = short.get("opener_used") or scenes[0].get("full")  # an opener is judged, never swapped (render)
     real = [] if animated else [j for j in range(1, len(scenes)) if choices[j].get("bg") and not scenes[j].get("full")]
@@ -188,6 +206,9 @@ Reply with ONLY JSON: {{"score": 6, "why": "one short reason", "open_with_scene"
     why = str((data or {}).get("why") or "weak opening").strip()[:160] if isinstance(data, dict) else ""
     if plan_rules.is_num(score) and 1 <= score <= 10:  # every score is kept, to set against Stayed to watch later
         short["first_second"] = f"{score:g}/10: {why}"
+        review_status(short, "Opening review", "Problems found" if score < HOOK_MIN_SCORE else "Passed", why)
+    else:
+        return ["NOT REVIEWED: opening reviewer did not return a valid score"], None
     if not plan_rules.is_num(score) or not 1 <= score < HOOK_MIN_SCORE:  # also drops 0, negatives and NaN
         return [], None
     k = data.get("open_with_scene")

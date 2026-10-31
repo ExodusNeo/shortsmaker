@@ -26,6 +26,8 @@ def log_short(short: dict, folder: Path) -> None:
     LOGBOOK.mkdir(parents=True, exist_ok=True)
     if not session.LOG.exists():
         session.LOG.write_text(LOG_HEADER.format(name=session.LOG.stem), encoding="utf-8")
+    if session.LOG.exists() and any(line.rstrip().endswith(f"Folder: {folder.relative_to(ROOT)}") for line in session.LOG.read_text(encoding="utf-8-sig").splitlines()):
+        return  # a resume after an interrupted finalization must not duplicate this Short's entry
     hook = plan_rules.first_sentence([sc["narration"] for sc in short["scenes"]])
     mode_str = " (solo)" if session.SOLO else ""
     with session.LOG.open("a", encoding="utf-8") as f:

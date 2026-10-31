@@ -10,6 +10,52 @@ from shortsmaker import (
 from shortsmaker.config import DOC_KINDS, ICONS, MAX_FULL, MOVE_NAMES, STYLE_CAPS
 
 
+def download_picture(url: str) -> bytes | None:
+    """Bounded retry; Wikimedia already handles its own rate limits and retries."""
+    for _ in range(1 if "wikimedia.org" in url else 2):
+        data = image_sources.get_image(url, "image download")
+        if data:
+            return data
+    return None
+
+
+def recover_downloads(short: dict, chosen: list[dict], cands: list[dict], taken: set,
+                      failed: list[int], failed_urls: set | None = None) -> None:
+    """One text selection from already-reviewed pool entries before missing scenes reach rescue/reuse."""
+    available = {entry["n"]: entry for entry in short.get("catalog", []) if isinstance(entry, dict)
+                 and type(entry.get("n")) is int and 1 <= entry["n"] <= len(cands)
+                 and not entry.get("reject") and entry.get("era_ok") is True
+                 and type(entry.get("sharp")) is int and 2 <= entry["sharp"] <= 3
+                 and not cands[entry["n"] - 1].get("film") and cands[entry["n"] - 1]["url"] not in taken
+                 and cands[entry["n"] - 1]["url"] not in (failed_urls or set())}
+    if not failed or not available:
+        return
+    data = llm.ask_ai(f"""A selected picture could not be downloaded. Match an alternative ONLY when it fits the scene.
+Use this previously reviewed picture list; never guess by a vaguely related title. Choose null if none fits.
+Scenes: {json.dumps([{'scene': i + 1, 'narration': short['scenes'][i]['narration'], 'shot': short['scenes'][i].get('shot')} for i in failed])}
+Pictures: {json.dumps(list(available.values()), ensure_ascii=False)}
+Reply with ONLY JSON: {{"picks": [{{"scene": 3, "bg": 7}}]}}""", fatal=False)
+    for pick in data.get("picks", []) if isinstance(data, dict) and isinstance(data.get("picks"), list) else []:
+        if not isinstance(pick, dict) or type(pick.get("scene")) is not int or type(pick.get("bg")) is not int:
+            continue
+        i, n = pick["scene"] - 1, pick["bg"]
+        if i not in failed or n not in available or chosen[i]["bg"]:
+            continue
+        candidate, sc = cands[n - 1], short["scenes"][i]
+        names = [short.get("character") or ""] + [s["person"]["name"] for s in short["scenes"] if s.get("person")]
+        if candidate["url"] in taken or any(name and plan_rules.is_person_portrait(
+                candidate, name, short.get("catalog"), n) for name in names):
+            continue
+        picture = download_picture(candidate["url"])
+        if not picture:
+            continue
+        chosen[i].update(bg=(picture, candidate["title"], candidate["credit"]),
+                         site=candidate.get("site", "Wikimedia Commons"), plan_note=f"download recovery: reviewed pool picture #{n}")
+        chosen[i].pop("subject_y", None)
+        sc["animate"], sc["motion"] = False, ""  # the old motion described a different picture
+        taken.add(candidate["url"])
+
+
 def choose_images(short: dict, work: Path, ch: dict | None = None) -> list[dict]:
     """Build a broad multi-source pool of images and real video footage (per-scene video search on
     Internet Archive, Wikimedia Commons, Wikipedia, Openverse, Pixabay,
@@ -130,7 +176,7 @@ For reference, their file titles: {json.dumps(titles, ensure_ascii=False)}""",
                           for i, sc in enumerate(short["scenes"])]}
     picks = {p.get("scene"): p for p in (data or {}).get("picks", []) if isinstance(p, dict)}
 
-    chosen, taken = [], set()
+    chosen, taken, failed_downloads, failed_urls = [], set(), [], set()
     catalog = short.get("catalog") or []
     cat_nums = [e["n"] for e in catalog if isinstance(e, dict) and isinstance(e.get("n"), int) and not e.get("reject")]
     main_people = [p for p in dict.fromkeys(
@@ -171,7 +217,10 @@ For reference, their file titles: {json.dumps(titles, ensure_ascii=False)}""",
                     if piece:
                         result["film"] = {**c["film"], "path": work / f"film{i}_src.mp4", "offset": piece[1]}
                 else:
-                    img = image_sources.get_image(c["url"], "image download")
+                    img = download_picture(c["url"])
+                    if not img and kind == "bg":
+                        failed_downloads.append(i)
+                        failed_urls.add(c["url"])
                 if img:
                     result[kind] = (img, c["title"], c["credit"])
                     if kind == "bg":
@@ -196,6 +245,7 @@ For reference, their file titles: {json.dumps(titles, ensure_ascii=False)}""",
             sc["motion_people"] = picks.get(i + 1, {}).get("motion_people") is True
             sc["animate"] = bool(sc["motion"]) and not result.get("film")
         chosen.append(result)
+    recover_downloads(short, chosen, cands, taken, failed_downloads, failed_urls)
     for i, pics in full_pictures(short, picks, cands, taken).items():
         chosen[i]["full_pics"] = pics
     style_lab.apply_look_scenes(short, chosen, (data or {}).get("look_scenes"))

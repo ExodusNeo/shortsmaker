@@ -45,7 +45,8 @@ everything (voice, paintings, video). Real archival/online pictures and film are
 | Path | What |
 |---|---|
 | `run.bat` | Asks channel, count, then nine AI choices: 1 Codex solo, 2 Claude solo, 3 Gemini solo; 4 Codex/Claude, 5 Codex/Gemini, 6 Claude/Codex, 7 Claude/Gemini, 8 Gemini/Codex, 9 Gemini/Claude (writer/editor). Then clip handoff and short-form questions. Saved per profile. CLI uses `codex-only`, `claude-only`, `gemini-only`, or `<writer>-<editor>` |
-| `fix.bat` | `make_shorts.py fix`: re-render a recent Short (7 days) with one scene changed (see fix.bat) |
+| `fix.bat` | Repair a recent Short: reuse narration when unchanged; option 6 previews circle/arrow target/label changes, option 3 can preview their removal |
+| `resume.bat` | Continue unfinished Shorts; run.bat also offers resume before starting a new batch. See `docs/reliability.md` |
 | `retention.bat` | Pick a finished Short and a Studio retention screenshot; writes `retention.txt` plus `retention/graph.<ext>` in that output folder. Same AI modes/quota fallback; see `docs/retention.md` |
 | `library.bat` | `make_shorts.py library`: approve or throw away looks/overlays/cuts the AI invented (`style_candidates/`) |
 | `make_shorts.py` | Entry point only; the pipeline is `shortsmaker/` |
@@ -96,7 +97,9 @@ are stored LF (`.gitattributes`).
 | `style_lab.py` | Style library inventions and candidates |
 | `review.py` | Quality check, visual review, first-second check, review fixes, repaints, storyboard |
 | `editplan.py` | `edit_plan()`, `scene_cues()` (graphic timing) |
-| `short_render.py` | `render()`, work state, `use_opener()` |
+| `short_render.py` | `render()`, saved render context, resumable `finish_render()`, work state, `use_opener()` |
+| `checkpoints.py`, `voice_cache.py` | Atomic per-Short progress; preserved unfinished work; narration cache matched to text/voice/reference and file hashes |
+| `scene_repair.py` | Isolated circle/arrow preview and apply, original audio retained, backups and state/report updates |
 | `drawn_opener.py` | Drawn opener: AI scene code, lint, preview, art-director review and fixes, render |
 | `blender_plan.py`, `blender_render.py` | Blender-drawn channels: build plans, headless render |
 | `edit_project.py` | Shotcut timeline for hand fixes |
@@ -189,7 +192,9 @@ Rules that keep it working:
    (`short_credit()`), 2.8 s. Loop Shorts (weird-economics) end straight into frame 0.
 9. **Audio**: voice + music (loudness-matched to `MUSIC_LUFS`, ducked) + SFX cue sheet + story sounds; loudnorm
    -14 LUFS + limiter; h264_nvenc.
-10. **Checks and fixes**: `quality_check()` (also flags a scene that reuses another scene's picture because nothing
+10. **Checks and fixes**: Visual/opening review status is explicitly Passed / Problems found / Not reviewed;
+    failed previews, absent replies and malformed verdicts add NOT REVIEWED checks.
+    `quality_check()` (also flags a scene that reuses another scene's picture because nothing
     fit, and narration pauses over `PAUSE_MAX` 0.8 s in `work/voice.wav`), `visual_review()` (1 frame/s sheets; told
     about overlay windows; also notes, as CHECK lines without a fix, a weak reveal visual, 5+ s with nothing new and
     crowded scenes), `first_second_check()` (every score goes in edit_plan.txt's quality block; score < 7 may swap in
@@ -197,7 +202,13 @@ Rules that keep it working:
     picture, a full-screen graphic or a repaint with a rewritten prompt (`rewrite_paint_prompts()`); a flagged custom
     scene goes back to its coder once. Re-render and re-review up to `AUTO_FIX_ROUNDS` (3); it pauses for Enter first.
     Left-over findings are `CHECK:` lines in edit_plan.txt (and a Shotcut timeline).
-11. **Outputs**: edit_plan.txt (Opening line, fact-check changes, per-scene edit list, sound cues, checks),
+11. **Resume**: Completed scripts are queued before SEO. Failed renders keep folders; run.bat offers resume
+    (`resume.bat` / `make_shorts.py resume [folder]`). Checkpoints after pictures, voice and successful encoding
+    let the next run reuse finished work. Unchanged narration is cached by text/voice/reference and audio hashes.
+    Rendering writes a temporary video before replacing short.mp4; a rendered-stage resume finishes reports
+    and reviews without another encode. Finalization does not duplicate logbook entries. Incomplete work is not
+    pruned by the seven-day cleanup. Legacy outputs have no batch checkpoints.
+12. **Outputs**: edit_plan.txt (Opening line, fact-check changes, per-scene edit list, sound cues, checks),
     upload.txt (credits for every non-PD source and CC-BY 3D model; "altered or synthetic content: Yes" when AI was
     used), storyboard, thumbnail, captions.srt, logbook entry, vault page, `work/state.json` for fix.bat.
 
@@ -274,13 +285,17 @@ person cards; review findings stay CHECK lines; fix.bat can't change these Short
 ## fix.bat
 Pick a recent Short (7 days), a scene, then: 1) no AI motion, 2) another scene's picture, 3) remove its graphic,
 4) paint a new picture (asks what's wrong; rewrites the prompt), 5) make it a motion graphic. Reuses pictures,
-music and palette; re-makes voice and video (a few minutes); no automatic fix rounds; logbook untouched.
+music and palette; reuses verified narration when unchanged; no automatic fix rounds; logbook untouched.
+Option 6 adjusts circle/arrow position or label; option 3 can remove it with a scene preview. The fast path
+requires a still with hard cuts; overlapping scenes use the ordinary render path. Applying archives originals,
+updates state/storyboard/edit-plan, preserves original audio, and archives the stale Shotcut timeline.
+See `docs/reliability.md` for checkpoint and repair details.
 
 ## Shotcut timeline
 When CHECK lines are left after the last fix round, the Short's folder gets `edit.mlt` + `edit_in_shotcut.bat`
 (Shotcut portable in `D:\Shotcut`, settings in `D:\Shotcut\appdata`): pictures, graphics (with alpha) and captions as
 separate tracks cut per scene, voice/music/sounds as 3 audio tracks, a gain + limiter for -14 LUFS, a red marker per
-CHECK. `work/` is pruned after 7 days, which breaks the timeline too. Not yet used on a real Short.
+CHECK. `work/` is pruned after 7 days for complete Shorts, which breaks the timeline too; unfinished checkpoints are preserved. Not yet used on a real Short.
 
 ## Logbook (`vault/Logbook/<channel>.md`)
 Fresh performance baseline started 2026-10-31 at the owner's request: all 38 old entries from three logbooks
@@ -328,6 +343,8 @@ strangest moment. Same story, other channel: Voggle's Mike 2M views vs ours 1.2K
   opener preview also clears the old render's score. A live Codex cold read passed. Owner completed the Mary Toft Short (2026-10-31); its 19-21 s callout
   exposed a cleaned-image coordinate mismatch, now fixed. A corrected copy is saved alongside the original.
   The run also left CHECK notes for a reused picture and weaker reveal visual.
+  Reliability follow-up is implemented: resume checkpoints, narration reuse, explicit review statuses, circle/arrow
+  scene repairs, and reviewed-pool download recovery. Plan: `docs/superpowers/plans/2026-10-31-reliability-improvements.md`.
   Separate open question: weird-economics' 110-135 words vs the code's 95-125.
 - **Openers**: the drawn opener has only run on past Shorts (`test_renders\drawn_samples\`), not inside a full run;
   the motion-graphic fix rounds have no live run yet. More kit parts as stories need them.
@@ -344,7 +361,7 @@ strangest moment. Same story, other channel: Voggle's Mike 2M views vs ours 1.2K
 
 ## How to verify changes
 - `.venv\Scripts\python.exe -m compileall -q make_shorts.py shortsmaker`; Remotion: `cd remotion && npx tsc -p .`
-- Tests, no AI usage (`.venv\Scripts\python.exe tests\<name>.py`): `test_package`, `test_codex`, `test_ai_modes`, `test_marks`, `test_retention`, `test_pictures_first`,
+- Tests, no AI usage (`.venv\Scripts\python.exe tests\<name>.py`): `test_reliability`, `test_render_resume` (real FFmpeg, fake AI), `test_package`, `test_codex`, `test_ai_modes`, `test_marks`, `test_retention`, `test_pictures_first`,
   `test_full_scenes`, `test_style`, `test_rules` (golden prompts), `test_story`, `test_first_second`,
   `test_topic_ideas`, `test_h3_handoff`, `test_h3_run`, `test_edit_project`, `test_blender_plan`,
   `test_blender_render`, `test_opener_graphic`, `test_drawn_opener` (real node, ~1 min);

@@ -75,7 +75,7 @@ def test_failed_preview_clears_previous_opener_score():
             st = state()
             st["short"]["first_second"] = "9/10: old render"
             assert review.first_second_check(Path(d) / "short.mp4", st["short"], st["choices"],
-                                             Path(d) / "storyboard.jpg", Path(d)) == ([], None)
+                                             Path(d) / "storyboard.jpg", Path(d))[0][0].startswith("NOT REVIEWED:")
             assert "first_second" not in st["short"], "a failed preview must not retain the old render's score"
     finally:
         media_tools.ffmpeg = old_ff
@@ -96,8 +96,8 @@ def test_opener_must_be_a_later_real_picture():
 
 def test_good_opening_or_no_reply_changes_nothing():
     assert run_check({"score": 8, "why": "strong", "open_with_scene": 4}) == ([], None)
-    assert run_check(None) == ([], None)
-    assert run_check({"score": "high"}) == ([], None)
+    assert run_check(None)[0][0].startswith("NOT REVIEWED:")
+    assert run_check({"score": "high"})[0][0].startswith("NOT REVIEWED:")
 
 
 def test_opener_fix_swaps_once():

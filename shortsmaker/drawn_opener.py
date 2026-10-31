@@ -78,7 +78,8 @@ def node_run(job: dict, folder: Path) -> str | None:
         err = [line.strip() for line in (r.stderr or r.stdout).splitlines()
                if line.strip() and "node:internal" not in line and not set(line.strip()) <= {"^", "~"}]
         if err:
-            return " | ".join(err)[-600:]
+            headline = next((line for line in err if re.match(r"(?:\w*Error|Error):", line)), None)
+            return " | ".join(([headline] if headline else []) + [line for line in err if line != headline])[:600]
     return f"node stopped with exit code {r.returncode} and no message"
 
 
