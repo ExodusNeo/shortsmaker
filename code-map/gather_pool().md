@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[Candidate pictures (with preview `thumb` bytes) and sampled real-film frames…]] - `rationale_for` [EXTRACTED]
-- [[add()]] - `contains` [EXTRACTED]
+- [[add()_1]] - `contains` [EXTRACTED]
 - [[archive_images()]] - `calls` [EXTRACTED]
 - [[article_images()]] - `calls` [EXTRACTED]
 - [[choose_images()]] - `calls` [EXTRACTED]

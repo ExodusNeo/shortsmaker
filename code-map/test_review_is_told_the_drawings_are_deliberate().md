@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_blender_run.py"
 type: "code"
-community: "visual_review"
+community: "ask_ai"
 location: "L70"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/visual_review
+  - community/ask_ai
 ---
 
 # test_review_is_told_the_drawings_are_deliberate()
@@ -15,4 +15,4 @@ tags:
 - [[test_blender_run.py]] - `contains` [EXTRACTED]
 - [[visual_review()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/visual_review
+#graphify/code #graphify/EXTRACTED #community/ask_ai

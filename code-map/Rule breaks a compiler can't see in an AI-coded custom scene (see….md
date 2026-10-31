@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/motion.py"
 type: "rationale"
-community: "code_custom_scenes"
+community: "shutil"
 location: "L235"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/code_custom_scenes
+  - community/shutil
 ---
 
 # Rule breaks a compiler can't see in an AI-coded custom scene (see…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[lint_custom_code()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/code_custom_scenes
+#graphify/rationale #graphify/EXTRACTED #community/shutil

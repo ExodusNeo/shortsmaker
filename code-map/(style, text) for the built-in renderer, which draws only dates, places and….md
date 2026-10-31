@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/plan_rules.py"
 type: "rationale"
-community: "frame_maker"
-location: "L429"
+community: "frame_render.py"
+location: "L431"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/frame_maker
+  - community/frame_renderpy
 ---
 
 # (style, text) for the built-in renderer, which draws only dates, places and…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[fallback_graphic()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/frame_maker
+#graphify/rationale #graphify/EXTRACTED #community/frame_renderpy

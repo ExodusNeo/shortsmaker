@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/review.py"
 type: "code"
-community: "capture_prompts"
+community: "main"
 location: "L407"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/capture_prompts
+  - community/main
 ---
 
 # rewrite_paint_prompts()
@@ -22,4 +22,4 @@ tags:
 - [[review.py]] - `contains` [EXTRACTED]
 - [[test_rewrite_paint_prompts()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/capture_prompts
+#graphify/code #graphify/EXTRACTED #community/main

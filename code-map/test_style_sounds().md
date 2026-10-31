@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_style.py"
 type: "code"
-community: "full_props"
+community: "test_style.py"
 location: "L180"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/full_props
+  - community/test_stylepy
 ---
 
 # test_style_sounds()
@@ -16,4 +16,4 @@ tags:
 - [[sfx_events()]] - `calls` [EXTRACTED]
 - [[test_style.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/full_props
+#graphify/code #graphify/EXTRACTED #community/test_stylepy

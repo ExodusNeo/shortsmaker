@@ -1,11 +1,11 @@
 ---
 type: community
-members: 27
+members: 29
 ---
 
 # test_blender_render.py
 
-**Members:** 27 nodes
+**Members:** 29 nodes
 
 ## Members
 - [[(first, last) frame of every scene, 1-based and back to back; even a very short…]] - rationale - shortsmaker/blender_render.py
@@ -13,12 +13,14 @@ members: 27
 - [[A fingerprint of the drawing code (blender.py) frames drawn by older code…]] - rationale - shortsmaker/blender_render.py
 - [[Blender couldn't draw the Short (missing, crashed or timed out twice).]] - rationale - shortsmaker/blender_render.py
 - [[BlenderFailed]] - code - shortsmaker/blender_render.py
-- [[Path_15]] - code
-- [[Path_16]] - code
+- [[Draw a Short in Blender (2026-10-22) after the voice sets every scene's…]] - rationale - shortsmaker/blender_render.py
+- [[Path_11]] - code
+- [[Path_12]] - code
 - [[RuntimeError]] - code
 - [[Tests for running Blender from a Short (blender_render.py, 2026-10-22) frame…]] - rationale - tests/test_blender_render.py
 - [[When each scene's failure peaks on its emphasis word when spoken, else 70%…]] - rationale - shortsmaker/blender_render.py
 - [[_run()]] - code - shortsmaker/blender_render.py
+- [[blender_render.py]] - code - shortsmaker/blender_render.py
 - [[code_version()]] - code - shortsmaker/blender_render.py
 - [[fake_blender()]] - code - tests/test_blender_render.py
 - [[peaks()]] - code - shortsmaker/blender_render.py
@@ -44,20 +46,18 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 10 edges to [[_COMMUNITY_test_full_scenes.py]]
-- 5 edges to [[_COMMUNITY_json]]
-- 2 edges to [[_COMMUNITY_render]]
-- 2 edges to [[_COMMUNITY_ffmpeg]]
+- 16 edges to [[_COMMUNITY_plan_rules.py]]
+- 3 edges to [[_COMMUNITY_render]]
+- 3 edges to [[_COMMUNITY_footage.py]]
+- 3 edges to [[_COMMUNITY_json]]
+- 2 edges to [[_COMMUNITY_test_blender_scene.py]]
 - 2 edges to [[_COMMUNITY_drawn_thumbnail]]
-- 2 edges to [[_COMMUNITY_traceback]]
-- 1 edge to [[_COMMUNITY_gpu.py]]
-- 1 edge to [[_COMMUNITY_test_blender_plan.py]]
+- 1 edge to [[_COMMUNITY_local_clips]]
 - 1 edge to [[_COMMUNITY_full_cues]]
-- 1 edge to [[_COMMUNITY_image_sources.py]]
 
 ## Top bridge nodes
-- [[render_clips()]] - degree 17, connects to 5 communities
 - [[test_blender_render.py]] - degree 20, connects to 3 communities
-- [[scene_frames()]] - degree 8, connects to 3 communities
-- [[peaks()]] - degree 5, connects to 2 communities
-- [[code_version()]] - degree 4, connects to 2 communities
+- [[blender_render.py]] - degree 19, connects to 3 communities
+- [[render_clips()]] - degree 17, connects to 3 communities
+- [[scene_frames()]] - degree 8, connects to 2 communities
+- [[short()_2]] - degree 9, connects to 1 community

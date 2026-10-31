@@ -1,17 +1,18 @@
 ---
-source_file: "blender/templates.py"
+source_file: "shortsmaker/frame_render.py"
 type: "code"
-community: "templates.py"
-location: "L14"
+community: "frame_render.py"
+location: "L211"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/templatespy
+  - community/frame_renderpy
 ---
 
 # .__init__()
 
 ## Connections
-- [[Bridge]] - `method` [EXTRACTED]
+- [[ClipReader]] - `method` [EXTRACTED]
+- [[Path_8]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/templatespy
+#graphify/code #graphify/EXTRACTED #community/frame_renderpy

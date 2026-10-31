@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/motion.py"
 type: "rationale"
-community: "code_custom_scenes"
+community: "shutil"
 location: "L116"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/code_custom_scenes
+  - community/shutil
 ---
 
 # Extract clean TypeScript/React code exporting Custom{slot} from an AI reply.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[clean_tsx_code()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/code_custom_scenes
+#graphify/rationale #graphify/EXTRACTED #community/shutil

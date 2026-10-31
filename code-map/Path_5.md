@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "make"
+community: "edit_project.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/make
+  - community/edit_projectpy
 ---
 
 # Path
@@ -17,4 +17,4 @@ tags:
 - [[project_xml()]] - `references` [EXTRACTED]
 - [[remove()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/make
+#graphify/code #graphify/EXTRACTED #community/edit_projectpy

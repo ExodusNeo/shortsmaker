@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/gpu.py"
 type: "code"
-community: "gpu.py"
+community: "local_clips"
 location: "L38"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/gpupy
+  - community/local_clips
 ---
 
 # start_picture()
@@ -19,4 +19,4 @@ tags:
 - [[test_weak_opener_graphic_fixes_then_handoff()]] - `calls` [EXTRACTED]
 - [[veo_handoff()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/gpupy
+#graphify/code #graphify/EXTRACTED #community/local_clips

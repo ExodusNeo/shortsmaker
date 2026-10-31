@@ -1,21 +1,17 @@
 ---
-source_file: "tests/test_full_scenes.py"
+source_file: "tests/test_story.py"
 type: "code"
-community: "apply_review_fixes"
-location: "L151"
+community: "test_story.py"
+location: "L86"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/apply_review_fixes
+  - community/test_storypy
 ---
 
 # ask()
 
 ## Connections
-- [[_fake_planning()]] - `indirect_call` [INFERRED]
-- [[test_look_check_fixes_code()]] - `indirect_call` [INFERRED]
-- [[test_review_redraws_custom()]] - `indirect_call` [INFERRED]
-- [[test_review_uses_unused_pool_pictures_before_painting()]] - `indirect_call` [INFERRED]
-- [[test_rewrite_paint_prompts()]] - `indirect_call` [INFERRED]
+- [[test_cold_read_uses_other_ai_in_solo_and_collaborative_modes()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/INFERRED #community/apply_review_fixes
+#graphify/code #graphify/INFERRED #community/test_storypy

@@ -10,7 +10,7 @@ members: 33
 ## Members
 - [[A draft that passes coded, previewed (6 frames), approved, rendered as scene 1…]] - rationale - tests/test_drawn_opener.py
 - [[Drawn openers (owner, 2026-10-30) scene 1 of an `opener animated` Short as a…]] - rationale - shortsmaker/drawn_opener.py
-- [[Path_12]] - code
+- [[Path_9]] - code
 - [[Renders drawnoutsheet.png every kit part, one page per second (look at it…]] - rationale - tests/test_drawn_opener.py
 - [[Rule breaks in an AI-written scene (KIT.md's code rules). Empty = clean.]] - rationale - shortsmaker/drawn_opener.py
 - [[Runs drawnrun.mjs on one job; None when it worked, else what went wrong…]] - rationale - shortsmaker/drawn_opener.py
@@ -50,15 +50,14 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 16 edges to [[_COMMUNITY_test_full_scenes.py]]
-- 5 edges to [[_COMMUNITY_json]]
+- 18 edges to [[_COMMUNITY_plan_rules.py]]
 - 3 edges to [[_COMMUNITY_re]]
+- 3 edges to [[_COMMUNITY_footage.py]]
+- 3 edges to [[_COMMUNITY_json]]
 - 2 edges to [[_COMMUNITY_render]]
 - 2 edges to [[_COMMUNITY_shutil]]
-- 2 edges to [[_COMMUNITY_image_sources.py]]
 - 2 edges to [[_COMMUNITY_ask_ai]]
-- 1 edge to [[_COMMUNITY_clean_full]]
-- 1 edge to [[_COMMUNITY_ffmpeg]]
+- 1 edge to [[_COMMUNITY_clean_graphic]]
 
 ## Top bridge nodes
 - [[drawn_opener.py]] - degree 23, connects to 5 communities

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/gpu.py"
 type: "rationale"
-community: "shutil"
+community: "gpu.py"
 location: "L104"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/shutil
+  - community/gpupy
 ---
 
 # VoiceStudio's backend answers, starting the app (and waiting up to 2 min) if it…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[voicestudio_up()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/shutil
+#graphify/rationale #graphify/EXTRACTED #community/gpupy

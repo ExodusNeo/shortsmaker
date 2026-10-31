@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/edit_project.py"
 type: "code"
-community: "make"
+community: "edit_project.py"
 location: "L16"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/make
+  - community/edit_projectpy
 ---
 
 # caption_layer()
@@ -18,4 +18,4 @@ tags:
 - [[make()_1]] - `calls` [EXTRACTED]
 - [[workcaptions.mov the captions alone on a see-through background, from the…]] - `rationale_for` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/make
+#graphify/code #graphify/EXTRACTED #community/edit_projectpy

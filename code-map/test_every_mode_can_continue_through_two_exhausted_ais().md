@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_ai_modes.py"
 type: "code"
-community: "configure_brain"
+community: "test_ai_modes.py"
 location: "L58"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/configure_brain
+  - community/test_ai_modespy
 ---
 
 # test_every_mode_can_continue_through_two_exhausted_ais()
@@ -19,4 +19,4 @@ tags:
 - [[saved_session()]] - `calls` [EXTRACTED]
 - [[test_ai_modes.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/configure_brain
+#graphify/code #graphify/EXTRACTED #community/test_ai_modespy

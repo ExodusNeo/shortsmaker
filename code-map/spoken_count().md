@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/gpu.py"
 type: "code"
-community: "qwen_voice.py"
+community: "gpu.py"
 location: "L151"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/qwen_voicepy
+  - community/gpupy
 ---
 
 # spoken_count()
@@ -20,4 +20,4 @@ tags:
 - [[test_word_counts_match_the_aligner()]] - `calls` [EXTRACTED]
 - [[unicodedata]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/qwen_voicepy
+#graphify/code #graphify/EXTRACTED #community/gpupy

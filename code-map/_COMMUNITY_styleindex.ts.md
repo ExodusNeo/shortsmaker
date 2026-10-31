@@ -58,11 +58,10 @@ SORT file.name ASC
 - 42 edges to [[_COMMUNITY_Halftone.tsx]]
 - 17 edges to [[_COMMUNITY_Graphics.tsx]]
 - 13 edges to [[_COMMUNITY_Short.tsx]]
-- 6 edges to [[_COMMUNITY_toolkit.tsx]]
-- 3 edges to [[_COMMUNITY_guarded.tsx]]
-- 1 edge to [[_COMMUNITY_ref_remotion]]
-- 1 edge to [[_COMMUNITY_fulltypes.ts]]
-- 1 edge to [[_COMMUNITY_Paper]]
+- 7 edges to [[_COMMUNITY_skinOf]]
+- 3 edges to [[_COMMUNITY_toolkit.tsx]]
+- 1 edge to [[_COMMUNITY_BigNumber.tsx]]
+- 1 edge to [[_COMMUNITY_guarded.tsx]]
 
 ## Top bridge nodes
 - [[ref_react]] - degree 24, connects to 6 communities

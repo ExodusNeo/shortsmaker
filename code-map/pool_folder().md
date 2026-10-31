@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/picture_pool.py"
 type: "code"
-community: "prepare_topic"
+community: "picture_pool.py"
 location: "L173"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/prepare_topic
+  - community/picture_poolpy
 ---
 
 # pool_folder()
@@ -17,4 +17,4 @@ tags:
 - [[picture_pool.py]] - `contains` [EXTRACTED]
 - [[prepare_topic()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/prepare_topic
+#graphify/code #graphify/EXTRACTED #community/picture_poolpy

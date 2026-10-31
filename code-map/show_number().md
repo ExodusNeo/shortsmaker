@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/plan_rules.py"
 type: "code"
-community: "clean_full"
+community: "test_full_scenes.py"
 location: "L88"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/clean_full
+  - community/test_full_scenespy
 ---
 
 # show_number()
@@ -17,4 +17,4 @@ tags:
 - [[plan_rules.py]] - `contains` [EXTRACTED]
 - [[test_number_scaling()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/clean_full
+#graphify/code #graphify/EXTRACTED #community/test_full_scenespy

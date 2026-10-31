@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/plan_rules.py"
 type: "code"
-community: "frame_maker"
-location: "L428"
+community: "frame_render.py"
+location: "L430"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/frame_maker
+  - community/frame_renderpy
 ---
 
 # fallback_graphic()
@@ -16,4 +16,4 @@ tags:
 - [[frame_maker()]] - `calls` [EXTRACTED]
 - [[plan_rules.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/frame_maker
+#graphify/code #graphify/EXTRACTED #community/frame_renderpy

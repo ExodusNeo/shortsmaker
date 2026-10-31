@@ -12,7 +12,7 @@ tags:
 # picking
 
 ## Connections
-- [[dot-__enter__()]] - `method` [EXTRACTED]
+- [[dot-__enter__()_2]] - `method` [EXTRACTED]
 - [[dot-__exit__()_3]] - `method` [EXTRACTED]
 - [[dot-__init__()_8]] - `method` [EXTRACTED]
 - [[choose_images() with network stubbed; gather_pool returns `extra` (and records…]] - `rationale_for` [EXTRACTED]

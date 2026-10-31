@@ -12,7 +12,7 @@ tags:
 # write()
 
 ## Connections
-- [[Path_12]] - `references` [EXTRACTED]
+- [[Path_9]] - `references` [EXTRACTED]
 - [[The coder's scene {moment what it shows, code the module}; with `old`…]] - `rationale_for` [EXTRACTED]
 - [[ask_ai()]] - `calls` [EXTRACTED]
 - [[clean_code()]] - `calls` [EXTRACTED]

@@ -1,66 +1,62 @@
 ---
 type: community
-members: 53
+members: 49
 ---
 
 # json
 
-**Members:** 53 nodes
+**Members:** 49 nodes
 
 ## Members
-- [[Blender build plans (2026-10-22) for channels with `visuals blender`, the…]] - rationale - shortsmaker/blender_plan.py
-- [[Channel profiles (channelsname.json), the run.bat menus, and YouTubetrend…]] - rationale - shortsmaker/channel_profiles.py
+- [[(props, start, end) of a small preview where an invention is used its scene,…]] - rationale - shortsmaker/style_lab.py
+- [[Adds a candidate to the library (component file, library.json entry,…]] - rationale - shortsmaker/style_lab.py
 - [[Check every line against the story's Wikipedia articles and rewrite what they…]] - rationale - shortsmaker/writing.py
-- [[Choosing each scene's picture, pictures for full-screen scenes, and rescue…]] - rationale - shortsmaker/picker.py
-- [[Claude's picks of channels to study (plus a few search queries viewers use) for…]] - rationale - shortsmaker/channel_profiles.py
-- [[Codex subscription calls and the GeminiCodex pair. No network or AI usage.]] - rationale - tests/test_codex.py
-- [[Command-line entry making a batch (`main`), fix.bat's one-scene re-render,…]] - rationale - shortsmaker/cli.py
-- [[Each channel's own rules (channelsname.rules.md, 2026-10-22) the niche's…]] - rationale - shortsmaker/rules.py
-- [[Flat listing (title, views, duration, url) of a YouTube search, channel tab or…]] - rationale - shortsmaker/channel_profiles.py
-- [[Headless Codex  Claude Code  Gemini (agy) calls that return JSON, with…]] - rationale - shortsmaker/llm.py
-- [[One CC0 (no credit, any use) sound for `name` from Freesound's official API…]] - rationale - shortsmaker/audio_mix.py
+- [[Codes this Short's inventions (look  transition  overlay) into their slots; a…]] - rationale - shortsmaker/style_lab.py
+- [[Path_16]] - code
+- [[Path_17]] - code
 - [[Plain text of an English Wikipedia article ('' when missing or unreachable).]] - rationale - shortsmaker/writing.py
-- [[Preview of every style-library preset for the owner each look on two real…]] - rationale - tests/render_style.py
-- [[ShortsMaker make ready-to-upload YouTube Shorts. Entry point make_shorts.py.]] - rationale - shortsmaker/__init__.py
-- [[Tests for a Blender channel's run (2026-10-22) every scene drawn (no picture…]] - rationale - tests/test_blender_run.py
-- [[The biggest recent Shorts from channels that are proven in the niche since…]] - rationale - shortsmaker/channel_profiles.py
-- [[The nine menu choices and quota handover, using fake CLI replies only.]] - rationale - tests/test_ai_modes.py
-- [[The pictures gathered for a topic before writing, their catalog, cache and…]] - rationale - shortsmaker/picture_pool.py
-- [[The style library invented looks, overlays and scene changes, candidates and…]] - rationale - shortsmaker/style_lab.py
-- [[Topics - Wikipedia research - writer - editor - director - fact check.]] - rationale - shortsmaker/writing.py
-- [[__init__.py]] - code - shortsmaker/__init__.py
+- [[Plain-English name of the Short's photo look for edit_plan.txt.]] - rationale - shortsmaker/editplan.py
+- [[Plain-English scene change for edit_plan.txt.]] - rationale - shortsmaker/editplan.py
+- [[Regenerates remotionsrcstyleindex.ts from library.json Remotion's bundle…]] - rationale - shortsmaker/style_lab.py
+- [[Render one full-screen motion graphic test scene through the real Short…]] - rationale - tests/render_full.py
+- [[Saves an invention that made it into a finished Short as a candidate for the…]] - rationale - shortsmaker/style_lab.py
+- [[Scenes whose picture is missing or weak may become a full-screen motion graphic…]] - rationale - shortsmaker/picker.py
+- [[The AI invents a new style component (`spec` = {title, brief, fallback}) for…]] - rationale - shortsmaker/style_lab.py
+- [[The empty invention slots (remotionsrcstyleplaceholders.json), by slot name.]] - rationale - shortsmaker/style_lab.py
+- [[The full-screen motion graphic formats the AI may pick from (rescue_graphics,…]] - rationale - shortsmaker/picker.py
+- [[The motion-graphic opener (owner, 2026-10-28) on a channel with `opener…]] - rationale - shortsmaker/picker.py
+- [[The planner plans the edit (footage searches, shots, camera, graphics, person…]] - rationale - shortsmaker/writing.py
+- [[The rules every invented component of `kind` follows, with the library's…]] - rationale - shortsmaker/style_lab.py
+- [[The style library (remotionsrcstylelibrary.json) {name, kind, description,…]] - rationale - shortsmaker/style_lab.py
+- [[Timestamped edit decision list of exactly what was rendered, plus the sound-…]] - rationale - shortsmaker/editplan.py
+- [[add()]] - code - tests/render_style.py
+- [[approve_candidate()]] - code - shortsmaker/style_lab.py
 - [[article_text()]] - code - shortsmaker/writing.py
-- [[blender_plan.py]] - code - shortsmaker/blender_plan.py
-- [[channel_profiles.py]] - code - shortsmaker/channel_profiles.py
-- [[channel_url()]] - code - shortsmaker/channel_profiles.py
-- [[cli.py]] - code - shortsmaker/cli.py
-- [[contextlib]] - concept
-- [[datetime]] - concept
+- [[build()_1]] - code - tests/render_style.py
+- [[cut_text()]] - code - shortsmaker/editplan.py
+- [[direct_scripts()]] - code - shortsmaker/writing.py
+- [[edit_plan()]] - code - shortsmaker/editplan.py
 - [[fact_check()_1]] - code - shortsmaker/writing.py
-- [[freesound_fetch()]] - code - shortsmaker/audio_mix.py
+- [[full_formats()]] - code - shortsmaker/picker.py
+- [[invent_component()]] - code - shortsmaker/style_lab.py
+- [[invent_styles()]] - code - shortsmaker/style_lab.py
 - [[json]] - concept
-- [[library.bat the owner watches each invention the AI made for a Short and adds…]] - rationale - shortsmaker/style_lab.py
-- [[library_menu()]] - code - shortsmaker/style_lab.py
-- [[llm.py]] - code - shortsmaker/llm.py
-- [[logging]] - concept
-- [[os]] - concept
-- [[picker.py]] - code - shortsmaker/picker.py
-- [[picture_pool.py]] - code - shortsmaker/picture_pool.py
-- [[reject_candidate()]] - code - shortsmaker/style_lab.py
-- [[render_style.py]] - code - tests/render_style.py
-- [[rules.py]] - code - shortsmaker/rules.py
-- [[save_channel()]] - code - shortsmaker/channel_profiles.py
-- [[seed_ideas()]] - code - shortsmaker/channel_profiles.py
-- [[style_lab.py]] - code - shortsmaker/style_lab.py
-- [[sys]] - concept
-- [[test_ai_modes.py]] - code - tests/test_ai_modes.py
-- [[test_blender_run.py]] - code - tests/test_blender_run.py
-- [[test_codex.py]] - code - tests/test_codex.py
+- [[look_text()]] - code - shortsmaker/editplan.py
+- [[main()_4]] - code - tests/render_full.py
+- [[main()_5]] - code - tests/render_style.py
+- [[opener_graphic()]] - code - shortsmaker/picker.py
+- [[props_for()]] - code - tests/render_full.py
+- [[render_full.py]] - code - tests/render_full.py
+- [[rescue_graphics()]] - code - shortsmaker/picker.py
+- [[save_candidate()]] - code - shortsmaker/style_lab.py
+- [[style_library()]] - code - shortsmaker/style_lab.py
+- [[style_placeholders()]] - code - shortsmaker/style_lab.py
+- [[style_preview()]] - code - shortsmaker/style_lab.py
+- [[style_rules()]] - code - shortsmaker/style_lab.py
 - [[test_fact_check_drops_full()]] - code - tests/test_full_scenes.py
-- [[trend_research()]] - code - shortsmaker/channel_profiles.py
-- [[unittest_mock]] - concept
-- [[writing.py]] - code - shortsmaker/writing.py
-- [[yt_list()]] - code - shortsmaker/channel_profiles.py
+- [[test_invention_passes_into_slot()]] - code - tests/test_style.py
+- [[test_write_style_index_is_deterministic()]] - code - tests/test_style.py
+- [[write_style_index()]] - code - shortsmaker/style_lab.py
 
 ## Live Query (requires Dataview plugin)
 
@@ -70,58 +66,51 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 111 edges to [[_COMMUNITY_test_full_scenes.py]]
-- 24 edges to [[_COMMUNITY_re]]
-- 19 edges to [[_COMMUNITY_shutil]]
-- 18 edges to [[_COMMUNITY_test_style.py]]
-- 18 edges to [[_COMMUNITY_test_story.py]]
-- 16 edges to [[_COMMUNITY_test_pictures_first.py]]
-- 13 edges to [[_COMMUNITY_test_blender_plan.py]]
-- 13 edges to [[_COMMUNITY_image_sources.py]]
-- 12 edges to [[_COMMUNITY_test_rules.py]]
-- 11 edges to [[_COMMUNITY_gpu.py]]
-- 11 edges to [[_COMMUNITY_main_1]]
-- 9 edges to [[_COMMUNITY_traceback]]
-- 8 edges to [[_COMMUNITY_pick_channel]]
-- 8 edges to [[_COMMUNITY_ask_ai]]
-- 7 edges to [[_COMMUNITY_clean_pics]]
-- 7 edges to [[_COMMUNITY_configure_brain]]
-- 7 edges to [[_COMMUNITY_test_package.py]]
-- 6 edges to [[_COMMUNITY_prepare_topic]]
-- 6 edges to [[_COMMUNITY_style_library]]
-- 5 edges to [[_COMMUNITY_write_scripts]]
-- 5 edges to [[_COMMUNITY_drawn_opener.py]]
-- 5 edges to [[_COMMUNITY_test_blender_render.py]]
-- 5 edges to [[_COMMUNITY_choose_images]]
-- 5 edges to [[_COMMUNITY_fix_short]]
-- 5 edges to [[_COMMUNITY_qwen_voice.py]]
-- 5 edges to [[_COMMUNITY_drawn_thumbnail]]
-- 4 edges to [[_COMMUNITY_opener_graphic]]
-- 4 edges to [[_COMMUNITY_invent_component]]
-- 4 edges to [[_COMMUNITY_require_rules]]
-- 4 edges to [[_COMMUNITY_test_blender_scene.py]]
-- 4 edges to [[_COMMUNITY_test_first_second.py]]
-- 3 edges to [[_COMMUNITY_render]]
-- 3 edges to [[_COMMUNITY_visual_review]]
-- 3 edges to [[_COMMUNITY_style_placeholders]]
-- 3 edges to [[_COMMUNITY_clean_full]]
-- 3 edges to [[_COMMUNITY_code_custom_scenes]]
+- 41 edges to [[_COMMUNITY_plan_rules.py]]
+- 11 edges to [[_COMMUNITY_shutil]]
+- 10 edges to [[_COMMUNITY_main_1]]
+- 7 edges to [[_COMMUNITY_candidate_in]]
+- 7 edges to [[_COMMUNITY_test_style.py]]
+- 7 edges to [[_COMMUNITY_with_fakes]]
+- 6 edges to [[_COMMUNITY_render]]
+- 6 edges to [[_COMMUNITY_test_story.py]]
+- 5 edges to [[_COMMUNITY_render_remotion]]
+- 5 edges to [[_COMMUNITY_ask_ai]]
+- 5 edges to [[_COMMUNITY_test_full_scenes.py]]
+- 5 edges to [[_COMMUNITY_re]]
+- 4 edges to [[_COMMUNITY_picture_pool.py]]
+- 4 edges to [[_COMMUNITY_audio_mix.py]]
 - 3 edges to [[_COMMUNITY_test_h3_handoff.py]]
-- 3 edges to [[_COMMUNITY_build_scene.py]]
-- 2 edges to [[_COMMUNITY_pool_pictures]]
-- 2 edges to [[_COMMUNITY_invent_styles]]
-- 2 edges to [[_COMMUNITY_Local GPU Worker]]
-- 1 edge to [[_COMMUNITY_gather_pool]]
+- 3 edges to [[_COMMUNITY_write_scripts]]
+- 3 edges to [[_COMMUNITY_drawn_opener.py]]
+- 3 edges to [[_COMMUNITY_clean_look]]
+- 3 edges to [[_COMMUNITY_test_blender_render.py]]
+- 3 edges to [[_COMMUNITY_image_sources.py]]
+- 3 edges to [[_COMMUNITY_test_topic_ideas.py]]
+- 3 edges to [[_COMMUNITY_test_blender_scene.py]]
+- 2 edges to [[_COMMUNITY_test_pictures_first.py]]
+- 2 edges to [[_COMMUNITY_fetch]]
+- 2 edges to [[_COMMUNITY_choose_images]]
+- 2 edges to [[_COMMUNITY_apply_review_fixes]]
+- 2 edges to [[_COMMUNITY_gpu.py]]
+- 2 edges to [[_COMMUNITY_moss_images]]
+- 2 edges to [[_COMMUNITY_footage.py]]
+- 1 edge to [[_COMMUNITY_local_clips]]
+- 1 edge to [[_COMMUNITY_full_cues]]
 - 1 edge to [[_COMMUNITY_main]]
-- 1 edge to [[_COMMUNITY_fake_ai]]
-- 1 edge to [[_COMMUNITY_capture_prompts]]
-- 1 edge to [[_COMMUNITY_gemini_model]]
-- 1 edge to [[_COMMUNITY_style_props]]
-- 1 edge to [[_COMMUNITY_split_make_shorts.py]]
+- 1 edge to [[_COMMUNITY_words_of]]
+- 1 edge to [[_COMMUNITY_local_job]]
+- 1 edge to [[_COMMUNITY_picture_line]]
+- 1 edge to [[_COMMUNITY_full_props]]
+- 1 edge to [[_COMMUNITY_paint_opener_start]]
+- 1 edge to [[_COMMUNITY_write_json]]
+- 1 edge to [[_COMMUNITY_test_rules.py]]
+- 1 edge to [[_COMMUNITY_Local GPU Worker]]
+- 1 edge to [[_COMMUNITY_build_scene.py]]
 
 ## Top bridge nodes
-- [[json]] - degree 91, connects to 33 communities
-- [[sys]] - degree 34, connects to 19 communities
-- [[__init__.py]] - degree 47, connects to 16 communities
-- [[llm.py]] - degree 46, connects to 15 communities
-- [[writing.py]] - degree 44, connects to 12 communities
+- [[json]] - degree 91, connects to 31 communities
+- [[rescue_graphics()]] - degree 13, connects to 8 communities
+- [[save_candidate()]] - degree 12, connects to 7 communities
+- [[opener_graphic()]] - degree 11, connects to 7 communities
+- [[style_library()]] - degree 20, connects to 6 communities

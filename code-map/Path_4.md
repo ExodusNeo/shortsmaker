@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "gpu.py"
+community: "local_clips"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/gpupy
+  - community/local_clips
 ---
 
 # Path
@@ -25,4 +25,4 @@ tags:
 - [[unpack_clips()]] - `references` [EXTRACTED]
 - [[veo_handoff()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/gpupy
+#graphify/code #graphify/EXTRACTED #community/local_clips

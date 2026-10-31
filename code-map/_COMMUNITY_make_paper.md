@@ -10,7 +10,7 @@ members: 8
 ## Members
 - [[A painted figure (black ink on white) becomes a cropped, transparent…]] - rationale - tests/test_full_scenes.py
 - [[A painted figure (dark ink on light paper) - a cropped RGBA silhouette (dark…]] - rationale - shortsmaker/remotion_render.py
-- [[Path_29]] - code
+- [[Path_26]] - code
 - [[The aged-paper texture and film-grain frames the full-screen motion graphics…]] - rationale - shortsmaker/remotion_render.py
 - [[ink_silhouette()]] - code - shortsmaker/remotion_render.py
 - [[make_paper()]] - code - shortsmaker/remotion_render.py
@@ -25,14 +25,15 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 5 edges to [[_COMMUNITY_test_full_scenes.py]]
+- 3 edges to [[_COMMUNITY_plan_rules.py]]
 - 2 edges to [[_COMMUNITY_render_remotion]]
-- 1 edge to [[_COMMUNITY_gpu.py]]
+- 2 edges to [[_COMMUNITY_test_full_scenes.py]]
 - 1 edge to [[_COMMUNITY_render]]
-- 1 edge to [[_COMMUNITY_code_custom_scenes]]
+- 1 edge to [[_COMMUNITY_local_job]]
+- 1 edge to [[_COMMUNITY_shutil]]
 
 ## Top bridge nodes
-- [[Path_29]] - degree 5, connects to 3 communities
+- [[Path_26]] - degree 5, connects to 3 communities
 - [[make_paper()]] - degree 6, connects to 2 communities
 - [[ink_silhouette()]] - degree 5, connects to 2 communities
 - [[test_ink_silhouette()]] - degree 3, connects to 1 community

@@ -12,7 +12,7 @@ tags:
 # Bridge
 
 ## Connections
-- [[dot-__init__()_3]] - `method` [EXTRACTED]
+- [[dot-__init__()_4]] - `method` [EXTRACTED]
 - [[dot-add()]] - `method` [EXTRACTED]
 - [[dot-center()]] - `method` [EXTRACTED]
 - [[dot-node()]] - `method` [EXTRACTED]

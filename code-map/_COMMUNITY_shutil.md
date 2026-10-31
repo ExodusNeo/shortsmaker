@@ -1,37 +1,39 @@
 ---
 type: community
-members: 24
+members: 26
 ---
 
 # shutil
 
-**Members:** 24 nodes
+**Members:** 26 nodes
 
 ## Members
-- [[Centre-crop the start picture to 768x1344 the H3 node stretches off-aspect…]] - rationale - colab/h3_run.py
-- [[ComfyUI API graph for one first-frame clip. No negative prompt H3's graph uses…]] - rationale - colab/h3_run.py
-- [[MiniMax H3 image-to-video jobs for a ShortsMaker Short, run on Colab next to…]] - rationale - colab/h3_run.py
-- [[Path_11]] - code
-- [[Render one full-screen motion graphic test scene through the real Short…]] - rationale - tests/render_full.py
-- [[Seconds - a valid H3 length, snapped up to its 17k+5 frame grid (the…]] - rationale - colab/h3_run.py
-- [[The video SaveVideo wrote, found by scanning the job's outputs (the key name…]] - rationale - colab/h3_run.py
-- [[VoiceStudio's backend answers, starting the app (and waiting up to 2 min) if it…]] - rationale - shortsmaker/gpu.py
-- [[call()]] - code - colab/h3_run.py
-- [[fit_start()]] - code - colab/h3_run.py
-- [[frames()]] - code - colab/h3_run.py
-- [[graph()]] - code - colab/h3_run.py
-- [[h3_run.py]] - code - colab/h3_run.py
-- [[main()_1]] - code - colab/h3_run.py
-- [[main()_2]] - code - tests/render_full.py
-- [[props_for()]] - code - tests/render_full.py
-- [[prune_work()]] - code - shortsmaker/short_render.py
-- [[render_full.py]] - code - tests/render_full.py
-- [[saved_file()]] - code - colab/h3_run.py
+- [[Extract clean TypeScriptReact code exporting Custom{slot} from an AI reply.]] - rationale - shortsmaker/motion.py
+- [[Full-screen motion-graphic scenes and the AI-coded Custom scenes (with their…]] - rationale - shortsmaker/motion.py
+- [[Guaranteed-valid Remotion component for slot 0..3 if the AI coder fails or…]] - rationale - shortsmaker/motion.py
+- [[Motion Graphics Agent writes bespoke ReactSVG Remotion code for each `type…]] - rationale - shortsmaker/motion.py
+- [[Path_22]] - code
+- [[Renders just this custom scene small (its pictures are already in…]] - rationale - shortsmaker/motion.py
+- [[Renders seconds start..end of a small Short (`props`; its pictures already in…]] - rationale - shortsmaker/motion.py
+- [[Rule breaks a compiler can't see in an AI-coded custom scene (see…]] - rationale - shortsmaker/motion.py
+- [[The coder looks at 8 frames of its own scene before the real render and…]] - rationale - shortsmaker/motion.py
+- [[The review saw custom scene i look wrong its coder gets the complaint and its…]] - rationale - shortsmaker/remotion_render.py
+- [[The rules every custom motion-graphic scene follows, plus two worked examples…]] - rationale - shortsmaker/motion.py
+- [[Type-checks the Remotion project; None when it compiles, else the compiler's…]] - rationale - shortsmaker/motion.py
+- [[clean_tsx_code()]] - code - shortsmaker/motion.py
+- [[code_custom_scenes()]] - code - shortsmaker/motion.py
+- [[custom_rules()]] - code - shortsmaker/motion.py
+- [[fallback_custom_tsx()]] - code - shortsmaker/motion.py
+- [[lint_custom_code()]] - code - shortsmaker/motion.py
+- [[look_and_fix()]] - code - shortsmaker/motion.py
+- [[motion.py]] - code - shortsmaker/motion.py
+- [[preview_custom()]] - code - shortsmaker/motion.py
+- [[preview_sheet()]] - code - shortsmaker/motion.py
+- [[redraw_custom()]] - code - shortsmaker/remotion_render.py
 - [[shutil]] - concept
-- [[time]] - concept
-- [[up()]] - code - shortsmaker/gpu.py
-- [[voicestudio_up()]] - code - shortsmaker/gpu.py
-- [[zipfile]] - concept
+- [[test_fallback_custom_is_clean()]] - code - tests/test_full_scenes.py
+- [[test_lint_custom_code()]] - code - tests/test_full_scenes.py
+- [[tsc_check()]] - code - shortsmaker/motion.py
 
 ## Live Query (requires Dataview plugin)
 
@@ -41,35 +43,33 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 19 edges to [[_COMMUNITY_json]]
-- 17 edges to [[_COMMUNITY_test_full_scenes.py]]
-- 8 edges to [[_COMMUNITY_gpu.py]]
-- 5 edges to [[_COMMUNITY_main_1]]
-- 4 edges to [[_COMMUNITY_test_style.py]]
-- 3 edges to [[_COMMUNITY_image_sources.py]]
-- 3 edges to [[_COMMUNITY_re]]
-- 2 edges to [[_COMMUNITY_fix_short]]
+- 26 edges to [[_COMMUNITY_plan_rules.py]]
+- 11 edges to [[_COMMUNITY_json]]
+- 7 edges to [[_COMMUNITY_ask_ai]]
+- 5 edges to [[_COMMUNITY_test_full_scenes.py]]
+- 4 edges to [[_COMMUNITY_full_props]]
+- 4 edges to [[_COMMUNITY_re]]
+- 3 edges to [[_COMMUNITY_render]]
+- 3 edges to [[_COMMUNITY_main_1]]
+- 2 edges to [[_COMMUNITY_test_h3_handoff.py]]
+- 2 edges to [[_COMMUNITY_render_remotion]]
 - 2 edges to [[_COMMUNITY_drawn_opener.py]]
-- 2 edges to [[_COMMUNITY_code_custom_scenes]]
-- 2 edges to [[_COMMUNITY_qwen_voice.py]]
-- 2 edges to [[_COMMUNITY_traceback]]
-- 1 edge to [[_COMMUNITY_test_h3_handoff.py]]
-- 1 edge to [[_COMMUNITY_render_remotion]]
+- 2 edges to [[_COMMUNITY_apply_review_fixes]]
+- 2 edges to [[_COMMUNITY_paint_opener_start]]
 - 1 edge to [[_COMMUNITY_write_scripts]]
-- 1 edge to [[_COMMUNITY_render]]
-- 1 edge to [[_COMMUNITY_ffmpeg]]
-- 1 edge to [[_COMMUNITY_visual_review]]
-- 1 edge to [[_COMMUNITY_music_gain]]
+- 1 edge to [[_COMMUNITY_local_job]]
 - 1 edge to [[_COMMUNITY_test_first_second.py]]
-- 1 edge to [[_COMMUNITY_full_props]]
-- 1 edge to [[_COMMUNITY_invent_component]]
-- 1 edge to [[_COMMUNITY_test_pictures_first.py]]
-- 1 edge to [[_COMMUNITY_Local GPU Worker]]
-- 1 edge to [[_COMMUNITY_test_package.py]]
+- 1 edge to [[_COMMUNITY_audio_mix.py]]
+- 1 edge to [[_COMMUNITY__fake_planning]]
+- 1 edge to [[_COMMUNITY_make_paper]]
+- 1 edge to [[_COMMUNITY_picture_pool.py]]
+- 1 edge to [[_COMMUNITY_test_style.py]]
+- 1 edge to [[_COMMUNITY_test_topic_ideas.py]]
+- 1 edge to [[_COMMUNITY_gpu.py]]
 
 ## Top bridge nodes
-- [[shutil]] - degree 42, connects to 18 communities
-- [[time]] - degree 26, connects to 11 communities
-- [[h3_run.py]] - degree 16, connects to 4 communities
-- [[voicestudio_up()]] - degree 6, connects to 3 communities
-- [[prune_work()]] - degree 5, connects to 3 communities
+- [[shutil]] - degree 42, connects to 19 communities
+- [[motion.py]] - degree 31, connects to 8 communities
+- [[redraw_custom()]] - degree 10, connects to 5 communities
+- [[code_custom_scenes()]] - degree 15, connects to 4 communities
+- [[preview_sheet()]] - degree 9, connects to 3 communities

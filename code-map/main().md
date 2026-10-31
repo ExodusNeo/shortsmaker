@@ -1,21 +1,26 @@
 ---
-source_file: "local_ai/gen.py"
+source_file: "colab/h3_run.py"
 type: "code"
-community: "Local GPU Worker"
-location: "L200"
+community: "test_h3_handoff.py"
+location: "L89"
 tags:
   - graphify/code
-  - graphify/INFERRED
-  - community/Local_GPU_Worker
+  - graphify/EXTRACTED
+  - community/test_h3_handoffpy
 ---
 
 # main()
 
 ## Connections
-- [[gen.py]] - `contains` [EXTRACTED]
-- [[images()]] - `indirect_call` [INFERRED]
-- [[parallax()]] - `indirect_call` [INFERRED]
-- [[tts()]] - `indirect_call` [INFERRED]
-- [[video()]] - `indirect_call` [INFERRED]
+- [[call()]] - `calls` [EXTRACTED]
+- [[fit_start()]] - `calls` [EXTRACTED]
+- [[frames()]] - `calls` [EXTRACTED]
+- [[graph()]] - `calls` [EXTRACTED]
+- [[h3_run.py]] - `contains` [EXTRACTED]
+- [[json]] - `calls` [EXTRACTED]
+- [[saved_file()]] - `calls` [EXTRACTED]
+- [[shutil]] - `calls` [EXTRACTED]
+- [[time]] - `calls` [EXTRACTED]
+- [[zipfile]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/Local_GPU_Worker
+#graphify/code #graphify/EXTRACTED #community/test_h3_handoffpy

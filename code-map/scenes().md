@@ -12,7 +12,7 @@ tags:
 # scenes()
 
 ## Connections
-- [[add()_1]] - `indirect_call` [INFERRED]
+- [[add()]] - `indirect_call` [INFERRED]
 - [[handoff()]] - `indirect_call` [INFERRED]
 - [[test_a_take_is_cut_between_the_scenes_words()]] - `calls` [EXTRACTED]
 - [[test_logbook_hook_line_is_the_whole_first_sentence()]] - `calls` [EXTRACTED]

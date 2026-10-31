@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "StopPicker"
+community: "test_rules.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/StopPicker
+  - community/test_rulespy
 ---
 
 # Exception
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[StopPicker]] - `inherits` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/StopPicker
+#graphify/code #graphify/EXTRACTED #community/test_rulespy

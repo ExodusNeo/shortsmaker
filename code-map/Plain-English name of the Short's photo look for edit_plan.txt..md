@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/editplan.py"
 type: "rationale"
-community: "style_library"
+community: "json"
 location: "L10"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/style_library
+  - community/json
 ---
 
 # Plain-English name of the Short's photo look for edit_plan.txt.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[look_text()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/style_library
+#graphify/rationale #graphify/EXTRACTED #community/json

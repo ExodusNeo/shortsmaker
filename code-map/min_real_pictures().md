@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/rules.py"
 type: "code"
-community: "require_rules"
+community: "test_rules.py"
 location: "L145"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/require_rules
+  - community/test_rulespy
 ---
 
 # min_real_pictures()
@@ -17,4 +17,4 @@ tags:
 - [[rules.py]] - `contains` [EXTRACTED]
 - [[test_load_rules_sets_session()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/require_rules
+#graphify/code #graphify/EXTRACTED #community/test_rulespy

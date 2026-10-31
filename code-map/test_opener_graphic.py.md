@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_opener_graphic.py"
 type: "code"
-community: "test_full_scenes.py"
+community: "plan_rules.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_full_scenespy
+  - community/plan_rulespy
 ---
 
 # test_opener_graphic.py
@@ -32,4 +32,4 @@ tags:
 - [[traceback]] - `imports` [EXTRACTED]
 - [[use()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_full_scenespy
+#graphify/code #graphify/EXTRACTED #community/plan_rulespy

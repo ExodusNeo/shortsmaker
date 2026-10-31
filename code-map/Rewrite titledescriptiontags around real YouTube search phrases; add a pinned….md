@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/seo.py"
 type: "rationale"
-community: "fake_ai"
+community: "main"
 location: "L22"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/fake_ai
+  - community/main
 ---
 
 # Rewrite title/description/tags around real YouTube search phrases; add a pinned…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[seo_pass()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/fake_ai
+#graphify/rationale #graphify/EXTRACTED #community/main

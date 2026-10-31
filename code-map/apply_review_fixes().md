@@ -12,12 +12,12 @@ tags:
 # apply_review_fixes()
 
 ## Connections
-- [[Path_13]] - `references` [EXTRACTED]
+- [[Path_19]] - `references` [EXTRACTED]
 - [[The automatic fixes after a render's review (up to AUTO_REPAINT_MAX scenes per…]] - `rationale_for` [EXTRACTED]
 - [[paint_new()]] - `calls` [EXTRACTED]
 - [[pool_pictures()]] - `calls` [EXTRACTED]
 - [[redraw_custom()]] - `calls` [EXTRACTED]
-- [[render()_2]] - `calls` [EXTRACTED]
+- [[render()_3]] - `calls` [EXTRACTED]
 - [[rescue_graphics()]] - `calls` [EXTRACTED]
 - [[review.py]] - `contains` [EXTRACTED]
 - [[rewrite_paint_prompts()]] - `calls` [EXTRACTED]

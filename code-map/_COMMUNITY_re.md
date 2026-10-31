@@ -1,50 +1,46 @@
 ---
 type: community
-members: 37
+members: 33
 ---
 
 # re
 
-**Members:** 37 nodes
+**Members:** 33 nodes
 
 ## Members
-- [[Every idea on these pages, each page cached for REFRESH_DAYS (a stale copy is…]] - rationale - shortsmaker/topic_ideas.py
-- [[Extract (numeric_value, compact_display, short_label, trigger_phrase) from a…]] - rationale - shortsmaker/plan_rules.py
-- [[Our own topic research (2026-10-28, owner research our own topics instead of…]] - rationale - shortsmaker/topic_ideas.py
-- [[Path_17]] - code
+- [[Caption words (as written, punctuation attached) with the a-z words the aligner…]] - rationale - local_ai/qwen_voice.py
+- [[CosyVoice 3 in VoiceStudio (owner's pick 2026-10-20) aiden's voice cloned from…]] - rationale - local_ai/qwen_voice.py
+- [[Full spoken string for TTS synthesis, with punctuation attached cleanly.]] - rationale - local_ai/qwen_voice.py
+- [[How a narrator reads a number token 1932 - nineteen thirty-two, 20,000 -…]] - rationale - local_ai/qwen_voice.py
+- [[Let the AI circle (or point an arrow at) a detail in up to 2 chosen pictures.…]] - rationale - shortsmaker/plan_rules.py
+- [[Local voice worker for ShortsMaker CosyVoice 3 through VoiceStudio (items with…]] - rationale - local_ai/qwen_voice.py
+- [[Pair each whitespace token in `text` with how the narrator says it, moving…]] - rationale - local_ai/qwen_voice.py
+- [[Path_23]] - code
 - [[Planned full-screen motion graphics allowed per Short (default MAX_FULL_PLANNED…]] - rationale - shortsmaker/rules.py
-- [[Start and end of the camera shot containing time `at` (newsreels cut to title…]] - rationale - shortsmaker/footage.py
-- [[Tests for our own topic research (topic_ideas.py, 2026-10-28, owner research…]] - rationale - tests/test_topic_ideas.py
-- [[The channel's Unusual articles pages (`idea_pages History; Military` in…]] - rationale - shortsmaker/topic_ideas.py
 - [[The code from an AI reply (code fences removed); None unless it exports the…]] - rationale - shortsmaker/style_lab.py
-- [[The first text that holds every real word of `name` (Mike the Headless…]] - rationale - shortsmaker/topic_ideas.py
-- [[Titles, descriptions and tags from YouTube autocomplete; the .srt captions file.]] - rationale - shortsmaker/seo.py
 - [[Total full-screen motion graphics (planned + rescued) allowed per Short…]] - rationale - shortsmaker/rules.py
-- [[{title article, why its one line} from an Unusual articles page's…]] - rationale - shortsmaker/topic_ideas.py
-- [[_words()]] - code - shortsmaker/topic_ideas.py
-- [[clash()]] - code - shortsmaker/topic_ideas.py
+- [[Word matching for the Qwen voice's captions (no GPU, no models). Run…]] - rationale - tests/test_qwen_voice.py
+- [[align()]] - code - local_ai/qwen_voice.py
+- [[align_words()]] - code - local_ai/qwen_voice.py
 - [[clean_style_code()]] - code - shortsmaker/style_lab.py
-- [[dB that brings the tracks played together to LUFS, like the final mix's…]] - rationale - shortsmaker/edit_project.py
-- [[fetch_ideas()]] - code - shortsmaker/topic_ideas.py
-- [[k ideas for today's topic picker none we already made (done_topics) or a…]] - rationale - shortsmaker/topic_ideas.py
-- [[master_gain()]] - code - shortsmaker/edit_project.py
+- [[main()_6]] - code - local_ai/qwen_voice.py
+- [[mark_details()]] - code - shortsmaker/plan_rules.py
 - [[max_full()]] - code - shortsmaker/rules.py
 - [[max_full_planned()]] - code - shortsmaker/rules.py
-- [[pages()]] - code - shortsmaker/topic_ideas.py
-- [[parse_ideas()]] - code - shortsmaker/topic_ideas.py
-- [[parse_scene_money()]] - code - shortsmaker/plan_rules.py
-- [[pick_ideas()]] - code - shortsmaker/topic_ideas.py
+- [[one()_1]] - code - local_ai/qwen_voice.py
+- [[qwen_voice.py]] - code - local_ai/qwen_voice.py
 - [[re]] - concept
-- [[seo.py]] - code - shortsmaker/seo.py
-- [[shot_span()]] - code - shortsmaker/footage.py
-- [[test_clash_needs_every_name_word()]] - code - tests/test_topic_ideas.py
-- [[test_fetch_is_cached()]] - code - tests/test_topic_ideas.py
-- [[test_pages_setting()]] - code - tests/test_topic_ideas.py
-- [[test_parse_ideas()]] - code - tests/test_topic_ideas.py
-- [[test_pick_skips_done_and_taken()]] - code - tests/test_topic_ideas.py
-- [[test_topic_ideas.py]] - code - tests/test_topic_ideas.py
-- [[topic_ideas.py]] - code - shortsmaker/topic_ideas.py
-- [[urllib_parse]] - concept
+- [[say_number()]] - code - local_ai/qwen_voice.py
+- [[speak()_1]] - code - local_ai/qwen_voice.py
+- [[spoken_sentence()]] - code - local_ai/qwen_voice.py
+- [[spoken_tokens()]] - code - local_ai/qwen_voice.py
+- [[studio_speak()]] - code - local_ai/qwen_voice.py
+- [[test_caption_word_counts_match_the_scene_splitter()]] - code - tests/test_qwen_voice.py
+- [[test_caption_words_keep_what_is_written()]] - code - tests/test_qwen_voice.py
+- [[test_dollar_scale_word_order()]] - code - tests/test_qwen_voice.py
+- [[test_every_aligned_word_is_in_the_aligner_alphabet()]] - code - tests/test_qwen_voice.py
+- [[test_numbers()]] - code - tests/test_qwen_voice.py
+- [[test_qwen_voice.py]] - code - tests/test_qwen_voice.py
 
 ## Live Query (requires Dataview plugin)
 
@@ -54,40 +50,37 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 30 edges to [[_COMMUNITY_test_full_scenes.py]]
-- 24 edges to [[_COMMUNITY_json]]
-- 11 edges to [[_COMMUNITY_write_scripts]]
-- 7 edges to [[_COMMUNITY_image_sources.py]]
-- 7 edges to [[_COMMUNITY_clean_full]]
-- 6 edges to [[_COMMUNITY_fake_ai]]
-- 5 edges to [[_COMMUNITY_qwen_voice.py]]
-- 3 edges to [[_COMMUNITY_test_style.py]]
-- 3 edges to [[_COMMUNITY_gpu.py]]
-- 3 edges to [[_COMMUNITY_make]]
+- 24 edges to [[_COMMUNITY_plan_rules.py]]
+- 7 edges to [[_COMMUNITY_main_1]]
+- 6 edges to [[_COMMUNITY_gpu.py]]
+- 5 edges to [[_COMMUNITY_json]]
+- 4 edges to [[_COMMUNITY_words_of]]
+- 4 edges to [[_COMMUNITY_test_topic_ideas.py]]
+- 4 edges to [[_COMMUNITY_audio_mix.py]]
+- 4 edges to [[_COMMUNITY_shutil]]
+- 3 edges to [[_COMMUNITY_edit_project.py]]
+- 3 edges to [[_COMMUNITY_render]]
 - 3 edges to [[_COMMUNITY_drawn_opener.py]]
-- 3 edges to [[_COMMUNITY_ffmpeg]]
-- 3 edges to [[_COMMUNITY_shutil]]
-- 3 edges to [[_COMMUNITY_main_1]]
-- 3 edges to [[_COMMUNITY_code_custom_scenes]]
-- 3 edges to [[_COMMUNITY_test_pictures_first.py]]
-- 3 edges to [[_COMMUNITY_traceback]]
-- 2 edges to [[_COMMUNITY_test_rules.py]]
-- 2 edges to [[_COMMUNITY_render]]
-- 2 edges to [[_COMMUNITY_test_story.py]]
-- 2 edges to [[_COMMUNITY_music_gain]]
-- 2 edges to [[_COMMUNITY_invent_component]]
-- 2 edges to [[_COMMUNITY_pick_channel]]
+- 3 edges to [[_COMMUNITY_test_story.py]]
+- 2 edges to [[_COMMUNITY_write_scripts]]
+- 2 edges to [[_COMMUNITY_footage.py]]
 - 1 edge to [[_COMMUNITY_test_h3_handoff.py]]
-- 1 edge to [[_COMMUNITY_visual_review]]
+- 1 edge to [[_COMMUNITY_test_rules.py]]
+- 1 edge to [[_COMMUNITY_fetch]]
+- 1 edge to [[_COMMUNITY_quality_check]]
+- 1 edge to [[_COMMUNITY_with_fakes]]
+- 1 edge to [[_COMMUNITY_clean_graphic]]
+- 1 edge to [[_COMMUNITY_test_full_scenes.py]]
 - 1 edge to [[_COMMUNITY_ask_ai]]
 - 1 edge to [[_COMMUNITY_drawn_thumbnail]]
-- 1 edge to [[_COMMUNITY_pool_pictures]]
 - 1 edge to [[_COMMUNITY_Local GPU Worker]]
+- 1 edge to [[_COMMUNITY_test_style.py]]
+- 1 edge to [[_COMMUNITY_image_sources.py]]
 - 1 edge to [[_COMMUNITY_split_make_shorts.py]]
 
 ## Top bridge nodes
-- [[re]] - degree 70, connects to 27 communities
-- [[test_topic_ideas.py]] - degree 32, connects to 8 communities
-- [[topic_ideas.py]] - degree 22, connects to 7 communities
-- [[seo.py]] - degree 20, connects to 6 communities
-- [[urllib_parse]] - degree 7, connects to 4 communities
+- [[re]] - degree 70, connects to 26 communities
+- [[qwen_voice.py]] - degree 18, connects to 4 communities
+- [[mark_details()]] - degree 8, connects to 3 communities
+- [[test_qwen_voice.py]] - degree 10, connects to 2 communities
+- [[max_full()]] - degree 5, connects to 2 communities

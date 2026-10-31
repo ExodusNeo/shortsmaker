@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/gpu.py"
 type: "rationale"
-community: "gpu.py"
+community: "local_job"
 location: "L231"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/gpupy
+  - community/local_job
 ---
 
 # Paint the AI images with Gemini (agy's built-in image generator, ~2 min each, 3…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[gemini_images()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/gpupy
+#graphify/rationale #graphify/EXTRACTED #community/local_job

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/gpu.py"
 type: "code"
-community: "gpu.py"
+community: "local_clips"
 location: "L481"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/gpupy
+  - community/local_clips
 ---
 
 # veo_handoff()
@@ -27,4 +27,4 @@ tags:
 - [[unpack_clips()]] - `calls` [EXTRACTED]
 - [[zipfile]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/gpupy
+#graphify/code #graphify/EXTRACTED #community/local_clips

@@ -1,17 +1,17 @@
 ---
-source_file: "tests/test_ai_modes.py"
+source_file: "tests/test_full_scenes.py"
 type: "code"
-community: "configure_brain"
-location: "L48"
+community: "_fake_planning"
+location: "L705"
 tags:
   - graphify/code
-  - graphify/INFERRED
-  - community/configure_brain
+  - graphify/EXTRACTED
+  - community/_fake_planning
 ---
 
 # ask()
 
 ## Connections
-- [[test_all_modes_route_writer_editor_and_reader()]] - `indirect_call` [INFERRED]
+- [[test_look_check_fixes_code()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/configure_brain
+#graphify/code #graphify/EXTRACTED #community/_fake_planning

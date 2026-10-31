@@ -1,21 +1,14 @@
 ---
 type: community
-members: 39
+members: 25
 ---
 
 # guarded.tsx
 
-**Members:** 39 nodes
+**Members:** 25 nodes
 
 ## Members
 - [[Box]] - code - remotion/src/full/guarded.tsx
-- [[Card()]] - code - remotion/src/full/guarded.tsx
-- [[Connect()]] - code - remotion/src/full/guarded.tsx
-- [[ExampleChain()]] - code - remotion/src/full/examples/ExampleChain.tsx
-- [[ExampleChain.tsx]] - code - remotion/src/full/examples/ExampleChain.tsx
-- [[ExampleEvidence()]] - code - remotion/src/full/examples/ExampleEvidence.tsx
-- [[ExampleEvidence.tsx]] - code - remotion/src/full/examples/ExampleEvidence.tsx
-- [[FullProps]] - code - remotion/src/full/types.ts
 - [[MIN_MOVE]] - code - remotion/src/full/guarded.tsx
 - [[NORMAL]] - code - remotion/src/full/guarded.tsx
 - [[Pt]] - code - remotion/src/full/guarded.tsx
@@ -37,13 +30,6 @@ members: 39
 - [[photoBox()]] - code - remotion/src/full/guarded.tsx
 - [[port()]] - code - remotion/src/full/guarded.tsx
 - [[range()]] - code - remotion/src/full/guarded.tsx
-- [[remotion_src_full_toolkit_boxat]] - concept
-- [[remotion_src_full_toolkit_card]] - concept
-- [[remotion_src_full_toolkit_connect]] - concept
-- [[remotion_src_full_toolkit_layoutcolumn]] - concept
-- [[remotion_src_full_toolkit_layoutrow]] - concept
-- [[remotion_src_full_toolkit_photobox]] - concept
-- [[remotion_src_full_toolkit_travel]] - concept
 - [[routeArrow()]] - code - remotion/src/full/guarded.tsx
 - [[test()_1]] - code - tests/guarded.test.ts
 - [[travel()]] - code - remotion/src/full/guarded.tsx
@@ -56,16 +42,13 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 44 edges to [[_COMMUNITY_toolkit.tsx]]
-- 11 edges to [[_COMMUNITY_Paper]]
-- 5 edges to [[_COMMUNITY_fulltypes.ts]]
-- 3 edges to [[_COMMUNITY_styleindex.ts]]
-- 1 edge to [[_COMMUNITY_Journey.tsx]]
-- 1 edge to [[_COMMUNITY_ref_remotion]]
+- 15 edges to [[_COMMUNITY_skinOf]]
+- 9 edges to [[_COMMUNITY_toolkit.tsx]]
+- 1 edge to [[_COMMUNITY_styleindex.ts]]
 
 ## Top bridge nodes
-- [[guarded.tsx]] - degree 32, connects to 5 communities
-- [[FullProps]] - degree 14, connects to 4 communities
-- [[ExampleEvidence.tsx]] - degree 26, connects to 3 communities
-- [[ExampleChain.tsx]] - degree 23, connects to 3 communities
-- [[ExampleEvidence()]] - degree 13, connects to 2 communities
+- [[guarded.tsx]] - degree 32, connects to 3 communities
+- [[boxAt()]] - degree 7, connects to 1 community
+- [[layoutColumn()]] - degree 5, connects to 1 community
+- [[layoutRow()]] - degree 5, connects to 1 community
+- [[routeArrow()]] - degree 5, connects to 1 community

@@ -9,7 +9,7 @@ members: 9
 
 ## Members
 - [[(picture, credit line, CHECK line) for a drawn Short's thumbnail the real…]] - rationale - shortsmaker/short_render.py
-- [[Path_28]] - code
+- [[Path_25]] - code
 - [[drawn_short()]] - code - tests/test_blender_run.py
 - [[drawn_thumbnail()]] - code - shortsmaker/short_render.py
 - [[get()]] - code - tests/test_blender_run.py
@@ -26,13 +26,12 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 5 edges to [[_COMMUNITY_json]]
-- 2 edges to [[_COMMUNITY_test_blender_plan.py]]
+- 7 edges to [[_COMMUNITY_plan_rules.py]]
+- 2 edges to [[_COMMUNITY_test_blender_scene.py]]
 - 2 edges to [[_COMMUNITY_render]]
 - 2 edges to [[_COMMUNITY_test_blender_render.py]]
-- 2 edges to [[_COMMUNITY_test_full_scenes.py]]
-- 1 edge to [[_COMMUNITY_prepare_topic]]
-- 1 edge to [[_COMMUNITY_pool_pictures]]
+- 1 edge to [[_COMMUNITY_picture_pool.py]]
+- 1 edge to [[_COMMUNITY_image_sources.py]]
 - 1 edge to [[_COMMUNITY_re]]
 
 ## Top bridge nodes

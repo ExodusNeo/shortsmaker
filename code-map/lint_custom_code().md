@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/motion.py"
 type: "code"
-community: "code_custom_scenes"
+community: "shutil"
 location: "L234"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/code_custom_scenes
+  - community/shutil
 ---
 
 # lint_custom_code()
@@ -21,4 +21,4 @@ tags:
 - [[test_fallback_custom_is_clean()]] - `calls` [EXTRACTED]
 - [[test_lint_custom_code()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/code_custom_scenes
+#graphify/code #graphify/EXTRACTED #community/shutil

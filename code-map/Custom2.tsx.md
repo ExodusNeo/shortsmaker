@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/full/generated/Custom2.tsx"
 type: "code"
-community: "toolkit.tsx"
+community: "skinOf"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/toolkittsx
+  - community/skinOf
 ---
 
 # Custom2.tsx
@@ -35,4 +35,4 @@ tags:
 - [[skinOf()]] - `imports` [EXTRACTED]
 - [[toolkit.tsx]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/toolkittsx
+#graphify/code #graphify/EXTRACTED #community/skinOf

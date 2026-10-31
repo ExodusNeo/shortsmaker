@@ -12,7 +12,7 @@ tags:
 # still()
 
 ## Connections
-- [[dot-__enter__()_1]] - `calls` [EXTRACTED]
+- [[dot-__enter__()_3]] - `calls` [EXTRACTED]
 - [[pool_of()]] - `calls` [EXTRACTED]
 - [[test_choose_keeps_plan_and_appends()]] - `calls` [EXTRACTED]
 - [[test_choose_old_path_unchanged()]] - `calls` [EXTRACTED]

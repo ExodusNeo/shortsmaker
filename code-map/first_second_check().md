@@ -12,7 +12,7 @@ tags:
 # first_second_check()
 
 ## Connections
-- [[Path_13]] - `references` [EXTRACTED]
+- [[Path_19]] - `references` [EXTRACTED]
 - [[Would a stranger scrolling the Shorts feed stop here Stayed-to-watch is…]] - `rationale_for` [EXTRACTED]
 - [[ask_ai()]] - `calls` [EXTRACTED]
 - [[capture_prompts()]] - `calls` [EXTRACTED]
@@ -21,7 +21,7 @@ tags:
 - [[full_summary()]] - `calls` [EXTRACTED]
 - [[is_num()]] - `calls` [EXTRACTED]
 - [[load_pool()]] - `calls` [EXTRACTED]
-- [[render()_2]] - `calls` [EXTRACTED]
+- [[render()_3]] - `calls` [EXTRACTED]
 - [[review.py]] - `contains` [EXTRACTED]
 - [[run_check()]] - `calls` [EXTRACTED]
 - [[shutil]] - `calls` [EXTRACTED]

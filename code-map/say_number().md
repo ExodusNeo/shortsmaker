@@ -1,12 +1,12 @@
 ---
 source_file: "local_ai/qwen_voice.py"
 type: "code"
-community: "qwen_voice.py"
+community: "re"
 location: "L27"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/qwen_voicepy
+  - community/re
 ---
 
 # say_number()
@@ -18,4 +18,4 @@ tags:
 - [[spoken_tokens()]] - `calls` [EXTRACTED]
 - [[test_numbers()]] - `calls` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/qwen_voicepy
+#graphify/code #graphify/EXTRACTED #community/re

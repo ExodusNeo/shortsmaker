@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/picker.py"
 type: "rationale"
-community: "clean_full"
+community: "json"
 location: "L264"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/clean_full
+  - community/json
 ---
 
 # Scenes whose picture is missing or weak may become a full-screen motion graphic…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[rescue_graphics()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/clean_full
+#graphify/rationale #graphify/EXTRACTED #community/json

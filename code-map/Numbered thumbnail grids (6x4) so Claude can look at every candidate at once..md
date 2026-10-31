@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/picture_pool.py"
 type: "rationale"
-community: "prepare_topic"
+community: "picture_pool.py"
 location: "L71"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/prepare_topic
+  - community/picture_poolpy
 ---
 
 # Numbered thumbnail grids (6x4) so Claude can look at every candidate at once.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[contact_sheets()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/prepare_topic
+#graphify/rationale #graphify/EXTRACTED #community/picture_poolpy

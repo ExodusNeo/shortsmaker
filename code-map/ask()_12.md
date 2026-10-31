@@ -1,17 +1,17 @@
 ---
 source_file: "tests/test_full_scenes.py"
 type: "code"
-community: "capture_prompts"
-location: "L477"
+community: "_fake_planning"
+location: "L448"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/capture_prompts
+  - community/_fake_planning
 ---
 
 # ask()
 
 ## Connections
-- [[test_rewrite_paint_prompts()]] - `contains` [EXTRACTED]
+- [[test_review_uses_unused_pool_pictures_before_painting()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/capture_prompts
+#graphify/code #graphify/EXTRACTED #community/_fake_planning
