@@ -117,7 +117,7 @@ class fake_ai:
 
     def __enter__(self):
         self.saved = llm.ask_ai
-        llm.ask_ai = lambda prompt, fatal=True, read_dir=None, brain=None, bulk=False: (
+        llm.ask_ai = lambda prompt, fatal=True, read_dir=None, brain=None, bulk=False, allow_fallback=False: (
             self.prompts.append(prompt), self.reply(prompt) if callable(self.reply) else self.reply)[1]
         return self
 
@@ -399,7 +399,7 @@ def test_edit_plan_picture_line():
 def test_catalog_empty_reply_asks_other_ai():
     brains, replies = [], [{"pictures": []}, {"pictures": [entry(1)]}]
     saved = llm.ask_ai
-    llm.ask_ai = lambda prompt, fatal=True, read_dir=None, brain=None, bulk=False: (brains.append(brain), replies.pop(0))[1]
+    llm.ask_ai = lambda prompt, fatal=True, read_dir=None, brain=None, bulk=False, allow_fallback=False: (brains.append(brain), replies.pop(0))[1]
     try:
         with tempfile.TemporaryDirectory() as d:
             got = picture_pool.catalog_pool(TOPIC, pool_of(3), Path(d))

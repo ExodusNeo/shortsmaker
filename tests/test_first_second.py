@@ -62,6 +62,25 @@ def test_swap_pictures_trades_real_pictures():
     assert st["short"]["scenes"][0]["animate"] is False and st["short"]["scenes"][3]["animate"] is False
 
 
+def test_failed_preview_clears_previous_opener_score():
+    import subprocess
+    old_ff = media_tools.ffmpeg
+
+    def failed_preview(*args, **kw):
+        raise subprocess.CalledProcessError(1, "ffmpeg")
+
+    media_tools.ffmpeg = failed_preview
+    try:
+        with tempfile.TemporaryDirectory() as d:
+            st = state()
+            st["short"]["first_second"] = "9/10: old render"
+            assert review.first_second_check(Path(d) / "short.mp4", st["short"], st["choices"],
+                                             Path(d) / "storyboard.jpg", Path(d)) == ([], None)
+            assert "first_second" not in st["short"], "a failed preview must not retain the old render's score"
+    finally:
+        media_tools.ffmpeg = old_ff
+
+
 def test_low_score_opens_on_a_better_real_picture():
     issues, opener = run_check({"score": 4, "why": "the picture shows the whole story", "open_with_scene": 4})
     assert issues == ["FIRST SECOND: 4/10: the picture shows the whole story"], issues

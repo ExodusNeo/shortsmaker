@@ -286,7 +286,7 @@ def edit_scripts(shorts: list[dict], ch: dict, problems: dict[int, list[str]] | 
     critiques and refines its own drafts. A failed or malformed reply keeps the draft. A script that still breaks
     a checkable story rule (story_problems) goes back once with `problems` ({index: [problem]}); whatever is left
     becomes a STILL: line in the editor notes."""
-    editor = session.BRAIN if session.SOLO else ("gemini" if session.BRAIN == "claude" else "claude")
+    editor = session.BRAIN if session.SOLO else llm.other_ai(session.BRAIN)
     lo, hi, s_lo, s_hi, _ = length_plan()
     mode_str = " (solo)" if session.SOLO else ""
     print(f"{editor.capitalize()}{mode_str} is editing the script(s)...")
@@ -351,6 +351,7 @@ Reply with ONLY JSON: {{"shorts": [{{"index": 0, "scenes": ["...", "..."], "titl
         if i in reads:
             s["story_read"] = reads[i]
         else:
+            s.pop("story_read", None)  # a previous draft's verdict says nothing about these revised lines
             s["editor_notes"] = (s.get("editor_notes") or []) + ["the cold reader didn't answer: only the text rules were checked"]
         s["_problems"] = story_problems(s["lines"], reads.get(i))
     failing = [s for s in shorts if s.get("_problems")]
@@ -368,10 +369,14 @@ HOOK_KINDS = ("moment", "summary", "money_claim")
 def cold_read(shorts: list[dict]) -> dict[int, dict]:
     """How a stranger hears each final script (audit 2026-10-31): the editor used to report payoff_scene, list_like and
     hook_kind about its own version and story_problems believed it. This reader sees only the scenes (no topic, notes
-    or research). One call for all Shorts; {index: reading} for the valid answers ({} when it doesn't answer)."""
+    or research). The other AI reads, even in solo mode, with the planner as fallback. One call for all Shorts;
+    {index: reading} for the valid answers ({} when it doesn't answer)."""
     rows = [{"index": i, "scenes": [{"scene": k + 1, "narration": t} for k, t in enumerate(s["lines"])]}
             for i, s in enumerate(shorts)]
-    print(f"{session.BRAIN.capitalize()} is reading the script(s) as a stranger would...")
+    reader = llm.other_ai(session.BRAIN)
+    if reader in session.NO_QUOTA:
+        reader = session.BRAIN
+    print(f"{reader.capitalize()} is reading the script(s) as a stranger would...")
     data = llm.ask_ai(f"""You are a stranger scrolling YouTube Shorts and you know nothing about these stories. Read each script
 below exactly as a viewer hears it, scene by scene, and say honestly what you get from it. Nobody here wrote it:
 praise nothing that isn't there.
@@ -388,8 +393,10 @@ For each Short:
   "money_claim" if it is a specific money figure tied to someone or something the viewer can picture.
 Scripts: {json.dumps(rows, ensure_ascii=False)}
 Reply with ONLY JSON: {{"shorts": [{{"index": 0, "question": "...", "answer": 12, "new": [true, false], "list_like": false,
-"swipe": null, "swipe_why": null, "hook_kind": "moment"}}]}}""", fatal=False) or {}
+"swipe": null, "swipe_why": null, "hook_kind": "moment"}}]}}""", fatal=False, brain=reader, allow_fallback=True) or {}
     out = {}
+    if not isinstance(data, dict):
+        return out
     for r in data.get("shorts") if isinstance(data.get("shorts"), list) else []:  # LLM output is untrusted
         i = r.get("index") if isinstance(r, dict) else None
         if not (type(i) is int and 0 <= i < len(shorts) and isinstance(r.get("question"), str) and r["question"].strip()):
@@ -397,7 +404,7 @@ Reply with ONLY JSON: {{"shorts": [{{"index": 0, "question": "...", "answer": 12
         n = len(shorts[i]["lines"])
         scene = lambda v: v if type(v) is int and 1 <= v <= n else None  # noqa: E731
         new = r.get("new")
-        out[i] = {"question": r["question"].strip()[:200], "answer": scene(r.get("answer")),
+        out[i] = {"reviewer": session.LAST_AI, "question": r["question"].strip()[:200], "answer": scene(r.get("answer")),
                   "new": new if isinstance(new, list) and len(new) == n and all(type(x) is bool for x in new) else None,
                   "list_like": r.get("list_like") is True, "swipe": scene(r.get("swipe")),
                   "swipe_why": str(r.get("swipe_why") or "").strip()[:160],

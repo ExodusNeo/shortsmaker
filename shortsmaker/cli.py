@@ -31,10 +31,10 @@ def main() -> None:
     ch, failed = channel_profiles.load_channel(), 0
     raw_choice = sys.argv[3].lower().replace("_", "-") if len(sys.argv) > 3 else None
     choice = raw_choice if raw_choice in channel_profiles.BRAINS else (
-        channel_profiles.ask_brain(ch.get("brain", "claude-only")) if len(sys.argv) < 2 else ch.get("brain", "claude-only"))
+        channel_profiles.ask_brain(ch.get("brain", "gemini-only")) if len(sys.argv) < 2 else ch.get("brain", "gemini-only"))
     choice = choice.lower().replace("_", "-")
     if choice not in channel_profiles.BRAINS:
-        choice = "claude-only"
+        choice = "gemini-only"
     ch["brain"] = choice
     if len(sys.argv) < 2 and session.RULE_SETTINGS.get("visuals") != "blender":  # Blender draws every scene
         session.VEO_HANDOFF = channel_profiles.ask_yes("Make the AI video clips yourself (Colab H3 or Google Flow)? The batch pauses at each Short "
@@ -43,15 +43,16 @@ def main() -> None:
     if len(sys.argv) < 2:  # run.bat: ask; scripted runs never pause
         session.SHORT_FORM = channel_profiles.ask_yes("Make shorter Shorts, about 25-30 seconds instead of 40-50 (a test)?", ch.get("short_form", False))
         ch["short_form"] = session.SHORT_FORM
-    session.SOLO = choice in ("claude-only", "gemini-only")
+    channel_profiles.configure_brain(choice)
     if choice == "claude-only":
         print("Claude only: Claude Opus, high effort (solo: Claude writes, edits, plans and reviews)")
     elif choice == "gemini-only":
         print(f"Gemini only: {llm.gemini_model()}, high effort (solo: Gemini writes, edits, plans and reviews)")
     elif choice == "gemini":
-        print(f"Gemini: {llm.gemini_model()}, high effort; Claude edits each script and steps in if Gemini fails")
+        print(f"Gemini: {llm.gemini_model()}, high effort; Codex edits each script and steps in if Gemini fails")
     elif choice == "claude":
         print("Claude: Claude Opus, high effort; Gemini edits each script and steps in if Claude fails")
+    print("Story check: the other AI reads the script; falls back to the planner if unavailable (uses subscription quota).")
     picture_pool.prune_cache()
     short_render.prune_work()
     topics = pools = None
@@ -150,9 +151,7 @@ def fix_short() -> None:
     sc = short["scenes"][i]
     channel_profiles.use_channel(folder.parent.name)
     ch = channel_profiles.load_channel()
-    b = str(ch.get("brain", "claude")).lower().replace("_", "-")
-    session.SOLO = b in ("claude-only", "gemini-only")
-    session.BRAIN = "gemini" if "gemini" in b else "claude" 
+    channel_profiles.configure_brain(str(ch.get("brain", "gemini-only")))
     print("What should change?\n  1) No AI motion (a smooth camera move instead)\n"
           "  2) Use the picture from another scene\n  3) Remove its text graphic, map or motion graphic\n"
           "  4) Paint a new picture for it (the AI first writes a better picture prompt)\n"

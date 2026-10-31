@@ -17,7 +17,7 @@ everything (voice, paintings, video). Real archival/online pictures and film are
 
 ## Owner's standing rules
 - **Install everything on D:** (C: is nearly full).
-- **Pays only for Claude Pro and Google AI Pro.** No paid per-use APIs. Free keys allowed: Pixabay, vidIQ (chat use
+- **Subscription access only: Google AI Pro and signed-in ChatGPT/Codex; Claude Pro currently has no credits.** No paid per-use APIs. Free keys allowed: Pixabay, vidIQ (chat use
   only), Freesound (`freesound_key.txt`). Never print a key. Ask before adding another. Sounds only from the
   Freesound API or the owner's own files (Pixabay forbids scraping).
 - **No other creators' YouTube videos as footage** (YouTube cuts reach for re-uploads). Other sourcing is the owner's
@@ -44,7 +44,7 @@ everything (voice, paintings, video). Real archival/online pictures and film are
 ## Layout (`D:\ShortsMaker`)
 | Path | What |
 |---|---|
-| `run.bat` | Asks: channel (Enter = last), how many, who plans (1 Claude only, 2 Gemini only, 3 Claude [Gemini edits], 4 Gemini [Claude edits], 5 Both to compare), make AI clips yourself (Colab H3 / Flow, y/N), shorter Shorts (25-30 s test, y/N). Answers remembered in the profile. `make_shorts.py [count] [channel] [claude-only\|gemini-only\|claude\|gemini\|both]` skips them |
+| `run.bat` | Asks: channel (Enter = last), how many, who plans (1 Claude only, 2 Gemini only, 3 Claude [Gemini edits], 4 Gemini [Codex edits], 5 Both to compare), make AI clips yourself (Colab H3 / Flow, y/N), shorter Shorts (25-30 s test, y/N). Answers remembered in the profile. `make_shorts.py [count] [channel] [claude-only\|gemini-only\|claude\|gemini\|both]` skips them |
 | `fix.bat` | `make_shorts.py fix`: re-render a recent Short (7 days) with one scene changed (see fix.bat) |
 | `library.bat` | `make_shorts.py library`: approve or throw away looks/overlays/cuts the AI invented (`style_candidates/`) |
 | `make_shorts.py` | Entry point only; the pipeline is `shortsmaker/` |
@@ -67,13 +67,15 @@ everything (voice, paintings, video). Real archival/online pictures and film are
 | `backup/` | Old single-file versions from before git (history only) |
 
 ## Code layout (`shortsmaker/`)
-Local git repo (`master`, nothing pushed). Find any function with `grep -n "def <name>" shortsmaker/*.py`. Files
+Git repo (`master`, pushed to `origin/master` at github.com/ExodusNeo/shortsmaker).
+Push every completed change set and its separate code-map refresh (owner, 2026-10-31).
+Find any function with `grep -n "def <name>" shortsmaker/*.py`. Files
 are stored LF (`.gitattributes`).
 
 | Module | Job |
 |---|---|
 | `config.py` | Paths, fixed settings, palettes, style/skin tables; puts ffmpeg on PATH |
-| `session.py` | Run state: `BRAIN`, `SOLO`, `NO_QUOTA`, `LAST_AI`, `CHANNEL`/`RESEARCH`/`LOG`, `RULES`/`RULE_SETTINGS`, `SHORT_FORM`, `VEO_HANDOFF` |
+| `session.py` | Run state: `BRAIN`, `SOLO`, `PARTNER`, `NO_QUOTA`, `LAST_AI`, `CHANNEL`/`RESEARCH`/`LOG`, `RULES`/`RULE_SETTINGS`, `SHORT_FORM`, `VEO_HANDOFF` |
 | `llm.py` | `ask_ai()`, `run_agy()`, quota detection, model pick |
 | `channel_profiles.py` | Profiles, run.bat menus, `trend_research()` (the taken list) |
 | `topic_ideas.py` | Our own story ideas from Wikipedia's Unusual articles pages; `clash()` |
@@ -110,10 +112,16 @@ Rules that keep it working:
   the pipeline. Whatever a skill teaches has to live in the prompts or code.
 
 ## Pipeline (`main()` -> `write_scripts()` -> `seo_pass()` -> `render()` per Short)
-1. **AI calls** go through `ask_ai()`. Planner = `BRAIN`. Solo modes (1, 2) use one AI for everything; a bad answer is
+1. **AI calls** go through `ask_ai()`. Planner = `BRAIN`. Solo modes (1, 2) use one AI except for the independent cold read; a bad answer is
    retried by the same AI, and only running out of quota hands the rest of the run to the other one (`NO_QUOTA`).
-   Collaborative modes (3, 4): the other AI edits the scripts. "Both" makes each topic twice (folders end
-   `-claude`/`-gemini`; post the better one). Claude: `--model opus --effort high`. Gemini via Antigravity's `agy`
+   Gemini modes (2, 4) pair with Codex (ChatGPT subscription), never Claude. Mode 2 keeps Gemini as editor;
+   mode 4 uses Codex as editor. Explicit Claude modes retain the Claude/Gemini pair. `configure_brain()` also
+   applies this in fix.bat; `llm.other_ai()` selects the partner for all fallbacks, including picture catalogs.
+   The cold read alone sets `allow_fallback=True`, so it can try both AIs even in solo mode.
+   Collaborative modes (3, 4): the partner edits the scripts. "Both" makes each topic twice (folders end
+   `-claude`/`-gemini`; post the better one). Codex: `codex exec --model gpt-6-astra`, high effort, ChatGPT login enforced, API-key environment variables
+   removed for the child, read-only sandbox, shell tools disabled, no user config or project instructions, ephemeral
+   sessions; prompts via stdin and review images attached directly. Claude: `--model opus --effort high`. Gemini via Antigravity's `agy`
    (Google login, no key; prompt in a task file; `--disable-slash-commands`, no shell/tools for review calls;
    timeouts 300 s review / 180 s text): Argon if listed, Flash on `RESOURCE_EXHAUSTED` or a timeout for the rest of
    the run; bulk picture jobs (`catalog_pool`, `choose_images`) always Flash. agy can't make video.
@@ -133,11 +141,12 @@ Rules that keep it working:
    topics are skipped (`dropped_topics`). No picture list from either AI = the run stops. Then `check_twists()`: each
    twist against Wikipedia (a legend becomes "the story says X; in fact Y").
 4. **Script team**: the planner writes narration -> the editor (`edit_scripts()`: hooks, read-aloud fixes, cuts) ->
-   the cold reader (`cold_read()`, planner's AI, one call per batch: sees only the final scenes and reports the
+   the cold reader (`cold_read()`, the partner AI with planner fallback, including solo modes; one call per batch:
+   sees only the final scenes and reports the
    question line 1 opens, the scene that answers it, `new` per scene, list_like, first swipe scene, hook_kind; the
-   editor no longer grades its own version) -> `story_problems()` sends a failing script back once (answer before the
+   editor no longer supplies its own grades) -> `story_problems()` sends a failing script back once (answer before the
    last two scenes, no question, 2+ scenes with nothing new, swipe in scenes 1-4, list, summary hook, plus the text
-   rules); edit_plan "Cold read" line -> the director
+   rules); edit_plan "Cold read" line (including the AI that actually answered) -> the director
    (`direct_scripts()`, can't change narration: per scene `pic`, image/video search, shot, move, graphic, person,
    emphasis, transition, `ai_image`, animate/motion, sound, optional `full`; per Short palette, music mood, look,
    thumbnail, SEO drafts) -> fact check against the Wikipedia text (rewrites unsupported lines, drops wrong graphics,
@@ -297,11 +306,13 @@ strangest moment. Same story, other channel: Voggle's Mike 2M views vs ours 1.2K
   1,000 subs + 10M Shorts views in 90 days; 20M from 2027-02-01.
 
 ## Open items and next steps
-- **Audit improvements (2026-10-31)**: plan in parts, waiting for the owner's go-ahead per part:
-  `docs/superpowers/plans/2026-10-31-audit-improvements.md` (git-ignored on purpose; tick tasks there as they are
-  built). Part 1 is on master. Part 2 (2.1, 2.3-2.5) is on branch `audit-part2`, not merged, never run live; the
-  owner said to wait before going on. Open questions for the owner: 2.2 (the other AI as cold reader / editor) and
-  weird-economics' 110-135 words vs the code's 95-125.
+- **Audit improvements (2026-10-31)**: Parts 1 and 2.1/2.3-2.5 were already on master and pushed at
+  `beaae733`; the previous branch/wait notes were stale. This continuation implements 2.2 with Codex + Gemini
+  (owner has no Claude credits), leaving the selected editor unchanged in solo mode. No Part 3 changes yet.
+  Plan: `docs/superpowers/plans/2026-10-31-audit-improvements.md` (git-ignored on purpose).
+  Malformed cold reads now count as no review; a failed second read removes the old draft's verdict. A failed
+  opener preview also clears the old render's score. A live Codex cold read passed. Still to verify: a complete live Short with these changes.
+  Separate open question: weird-economics' 110-135 words vs the code's 95-125.
 - **Openers**: the drawn opener has only run on past Shorts (`test_renders\drawn_samples\`), not inside a full run;
   the motion-graphic fix rounds have no live run yet. More kit parts as stories need them.
 - run.bat's "press any key" at the end doesn't close the window for the owner: not found in the code; waiting for
@@ -317,7 +328,7 @@ strangest moment. Same story, other channel: Voggle's Mike 2M views vs ours 1.2K
 
 ## How to verify changes
 - `.venv\Scripts\python.exe -m compileall -q make_shorts.py shortsmaker`; Remotion: `cd remotion && npx tsc -p .`
-- Tests, no AI usage (`.venv\Scripts\python.exe tests\<name>.py`): `test_package`, `test_pictures_first`,
+- Tests, no AI usage (`.venv\Scripts\python.exe tests\<name>.py`): `test_package`, `test_codex`, `test_pictures_first`,
   `test_full_scenes`, `test_style`, `test_rules` (golden prompts), `test_story`, `test_first_second`,
   `test_topic_ideas`, `test_h3_handoff`, `test_h3_run`, `test_edit_project`, `test_blender_plan`,
   `test_blender_render`, `test_opener_graphic`, `test_drawn_opener` (real node, ~1 min);

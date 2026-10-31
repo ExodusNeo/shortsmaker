@@ -36,7 +36,7 @@ def test_session_shared():
 def test_fake_reaches_callers():
     gen = config.REMOTION / "src" / "full" / "generated" / "Custom0.tsx"
     saved, old_ask, calls = gen.read_bytes(), llm.ask_ai, []  # bytes: put it back exactly (git sees CRLF changes)
-    llm.ask_ai = lambda prompt, fatal=True, read_dir=None, brain=None, bulk=False: calls.append(prompt) or {"code": None}
+    llm.ask_ai = lambda prompt, fatal=True, read_dir=None, brain=None, bulk=False, allow_fallback=False: calls.append(prompt) or {"code": None}
     try:
         with tempfile.TemporaryDirectory() as d:
             short = {"title": "T", "scenes": [{"narration": "One, then two, then three.",
@@ -267,7 +267,7 @@ def test_solo_edit_scripts_uses_same_ai():
     old_ask, old_brain, old_solo, old_rules = llm.ask_ai, session.BRAIN, session.SOLO, dict(session.RULES)
     session.RULES["Story rules"] = "Be gripping"
     called_brains = []
-    llm.ask_ai = lambda prompt, fatal=True, read_dir=None, brain=None, bulk=False: (
+    llm.ask_ai = lambda prompt, fatal=True, read_dir=None, brain=None, bulk=False, allow_fallback=False: (
         called_brains.append(brain) if prompt.startswith("You are the script editor") else None) or {
         "shorts": [{"index": 0, "scenes": ["Scene 1 narration"], "title": "T", "hook_text": "H", "thumbnail_text": "Th", "notes": []}]
     }
@@ -338,6 +338,33 @@ def test_solo_ask_ai_hands_over_when_out_of_credits():
         assert len(claude_called) == 1, "the empty account must not be asked again"
     finally:
         subprocess.run, llm.run_agy, session.BRAIN, session.SOLO, session.NO_QUOTA, shutil.which = old_run, old_agy, old_brain, old_solo, old_no_quota, shutil_which
+
+
+def test_independent_review_falls_back_without_changing_solo_mode():
+    import subprocess
+    from unittest.mock import patch
+    old = session.BRAIN, session.SOLO, session.NO_QUOTA, session.LAST_AI
+    try:
+        for failure in ("invalid json", "You've hit your limit"):
+            session.BRAIN, session.SOLO, session.NO_QUOTA = "gemini", True, set()
+            with patch.object(shutil, "which", side_effect=lambda name: name), \
+                 patch.object(subprocess, "run", return_value=type("R", (), {"stdout": failure, "stderr": ""})()) as claude, \
+                 patch.object(llm, "run_agy", return_value='{"ok": 1}') as gemini:
+                assert llm.ask_ai("review", brain="claude", allow_fallback=True) == {"ok": 1}
+                assert claude.call_count == (1 if "limit" in failure else 2)
+                assert gemini.call_count == 1
+                assert session.BRAIN == "gemini" and session.SOLO
+                assert session.LAST_AI == "gemini"
+        for exhausted, missing in (({"claude"}, False), (set(), True)):
+            session.BRAIN, session.SOLO, session.NO_QUOTA = "gemini", True, exhausted
+            with patch.object(shutil, "which", side_effect=lambda name: None if missing and name == "claude" else name), \
+                 patch.object(subprocess, "run") as claude, \
+                 patch.object(llm, "run_agy", return_value='{"ok": 1}') as gemini:
+                assert llm.ask_ai("review", brain="claude", allow_fallback=True) == {"ok": 1}
+                assert claude.call_count == 0 and gemini.call_count == 1
+                assert session.BRAIN == "gemini" and session.SOLO
+    finally:
+        session.BRAIN, session.SOLO, session.NO_QUOTA, session.LAST_AI = old
 
 
 

@@ -143,6 +143,7 @@ def first_second_check(video: Path, short: dict, choices: list[dict], board: Pat
     2 seconds and the storyboard; below HOOK_MIN_SCORE it may name a later scene whose real photo or film would open
     better (no painting: the opening wants a real picture). Returns (CHECK lines, (scene index, why) or None);
     failure means ([], None)."""
+    short.pop("first_second", None)  # this render needs its own score, even if making the preview fails
     folder = work / "hook"
     shutil.rmtree(folder, ignore_errors=True)
     folder.mkdir()
@@ -153,8 +154,7 @@ def first_second_check(video: Path, short: dict, choices: list[dict], board: Pat
     except (subprocess.CalledProcessError, OSError):
         return [], None
     scenes = short["scenes"]
-    short.pop("first_second", None)  # a fix round's score replaces the last one; no reply = no score
-    animated =short.get("opener_used") or scenes[0].get("full")  # an opener is judged, never swapped (render)
+    animated = short.get("opener_used") or scenes[0].get("full")  # an opener is judged, never swapped (render)
     real = [] if animated else [j for j in range(1, len(scenes)) if choices[j].get("bg") and not scenes[j].get("full")]
     first = plan_rules.first_sentence([sc["narration"] for sc in scenes])
     cands = picture_pool.load_pool(Path(short["pool_dir"]), thumbs=False) if short.get("pool_dir") else None

@@ -43,7 +43,8 @@ def cold_read_line(read: dict) -> str:
     return (f"Cold read (a stranger's view of the script): question \"{read['question']}\" | answered in scene "
             f"{read.get('answer') or 'none'} | first swipe: "
             + (f"scene {read['swipe']} ({read.get('swipe_why') or 'no reason'})" if read.get("swipe") else "none")
-            + (f" | nothing new in scene(s) {', '.join(stale)}" if stale else ""))
+            + (f" | nothing new in scene(s) {', '.join(stale)}" if stale else "")
+            + (f" | reviewed by {read['reviewer'].capitalize()}" if read.get("reviewer") else ""))
 
 
 def edit_plan(short: dict, bounds: list[float], sources: list[str], cues: list[dict],

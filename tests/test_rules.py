@@ -69,7 +69,7 @@ def capture_prompts() -> dict[str, str]:
     got: dict[str, str] = {}
     tmp = tempfile.mkdtemp()
 
-    def ask(prompt, fatal=True, read_dir=None, brain=None, bulk=False):
+    def ask(prompt, fatal=True, read_dir=None, brain=None, bulk=False, allow_fallback=False):
         start = next(k for k in REPLIES if prompt.startswith(k))
         got.setdefault(KEYS[start], prompt.replace(tmp, "<TMP>").replace(tmp.replace("\\", "/"), "<TMP>"))
         if REPLIES[start] is None:
@@ -253,7 +253,7 @@ def run_draft(replies, existing=None):
     """draft_rules in a temp channels folder holding strange-history's rules; returns (file text or None, calls)."""
     calls = []
 
-    def ask(prompt, fatal=True, read_dir=None, brain=None, bulk=False):
+    def ask(prompt, fatal=True, read_dir=None, brain=None, bulk=False, allow_fallback=False):
         calls.append(prompt)
         return replies[min(len(calls), len(replies)) - 1]
 
@@ -320,7 +320,7 @@ def test_new_channel_stops_for_review():
 def test_missing_rules_file_is_drafted():
     with tempfile.TemporaryDirectory() as d:
         old, old_ask = rules.CHANNELS, llm.ask_ai
-        rules.CHANNELS, llm.ask_ai = Path(d), lambda prompt, fatal=True, read_dir=None, brain=None, bulk=False: draft_reply()
+        rules.CHANNELS, llm.ask_ai = Path(d), lambda prompt, fatal=True, read_dir=None, brain=None, bulk=False, allow_fallback=False: draft_reply()
         (Path(d) / "engines.json").write_text(json.dumps({"niche": "jet engines"}), encoding="utf-8")
         try:
             try:

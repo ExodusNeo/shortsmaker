@@ -69,15 +69,24 @@ def ask_yes(question: str, default: bool) -> bool:
 BRAINS = ["claude-only", "gemini-only", "claude", "gemini", "both"]
 
 
+def configure_brain(choice: str) -> None:
+    """Shared by batch runs and fix.bat: Gemini pairs with Codex; explicit Claude modes retain the old pair."""
+    choice = choice.lower().replace("_", "-")
+    session.SOLO = choice in ("claude-only", "gemini-only")
+    session.BRAIN = "gemini" if choice in ("gemini", "gemini-only") else "claude"
+    session.PARTNER = "codex" if session.BRAIN == "gemini" else "claude"
+
+
 def ask_brain(last: str) -> str:
     """Who plans this batch (scripts, fact check, SEO, picture choices, AI images): Enter = last time's.
     "both" makes every topic twice, once by each AI, to compare them side by side."""
     print("Who writes and plans these Shorts?\n"
-          "  1) Claude only (does the entire thing: writes, edits, plans, reviews)\n"
-          "  2) Gemini only (does the entire thing: writes, edits, plans, reviews)\n"
+          "  1) Claude writes, edits and plans (Gemini checks the story)\n"
+          "  2) Gemini writes, edits and plans (Codex checks the story; no Claude)\n"
           "  3) Claude (Gemini edits each script)\n"
-          "  4) Gemini, Argon when your account has it (Claude edits each script)\n"
-          "  5) Both, to compare: each topic made once by Claude and once by Gemini (post only the better one)")
+          "  4) Gemini, Argon when your account has it (Codex edits and checks each script; no Claude)\n"
+          "  5) Both, to compare: each topic made once by Claude and once by Gemini (post only the better one)\n"
+          "Every mode uses the other AI for a story check when available, using some of both subscriptions' quotas.")
     norm = last.lower().replace("_", "-") if last else ""
     idx = BRAINS.index(norm) + 1 if norm in BRAINS else 1
     return BRAINS[ask_number("Pick a number", 5, idx) - 1]

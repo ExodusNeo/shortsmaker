@@ -1517,3 +1517,30 @@ when no template fits, and add three.js only as a fixed template. All three buil
 
 
 2026-10-30: Voice upgraded from synthetic-cloned Qwen aiden to Mark Nelson (local_ai/voices/nelson_ref.wav + .txt, CC0/PD, 10.1 s from Continental Op), an articulate American investigative narrator with crisp diction and natural ~2.8 wps cadence. COSY_SPEED lowered from 1.20 to 1.10 (snappy 35-40s Shorts without metallic ffmpeg atempo time-stretching artifacts). Dynamic delivery arc added (cosy_instruct): urgent curiosity for the hook (take 0), suspenseful investigation for the body, and dramatic payoff for the final reveal.
+
+
+### 2026-10-31: Part 2 continuation, Codex + Gemini
+- Owner asked to continue the audit improvements and push every completed change set. Repository and remote
+  were already at beaae733 on master: Parts 1 and 2.1/2.3-2.5 were merged; old handoff branch/wait notes were stale.
+- Owner specified Codex + Gemini because Claude has no credits. Gemini modes now pair with Codex. Mode 2
+  (the current strange-history and weird-economics defaults) keeps Gemini writing/editing and uses Codex for
+  the independent cold read. Mode 4 uses Codex for editing too. Explicit Claude modes remain available.
+  configure_brain is shared by normal runs and fix.bat; picture-catalog fallback uses the same pair.
+- Part 2.2: cold reads try the partner, fall back to the planner on failure even in solo mode, and skip a partner
+  whose quota is exhausted. Other solo calls keep their existing quota-only handover. Reports name the AI that
+  actually answered. Menu/startup text explains the subscription quota use.
+- Codex CLI 0.166.0 is already installed and logged in using ChatGPT. run_codex uses the local configured
+  gpt-6-astra model at high effort, stdin prompts, direct image attachments, read-only sandbox, disabled shell
+  tools, ephemeral sessions, and no user config/project instructions. ChatGPT authentication is enforced and
+  API-key environment variables are removed from its child environment. No packages installed.
+  Integration references: https://learn.chatgpt.com/docs/non-interactive-mode and
+  https://learn.chatgpt.com/docs/config-file/config-reference (forced_login_method, features.shell_tool).
+- Regression fixes: a failed second cold read clears the old draft's verdict; non-object cold-read replies
+  are handled as no review; a failed opener preview clears the previous render's score. Each bug was reproduced
+  in a failing regression test before its fix.
+- Verification: 17/17 test suites passed (16 Python suites plus run_ts_tests), Python compileall, TypeScript tsc,
+  and git diff --check passed. Golden prompts unchanged. Live Codex cold read of the Jack fixture succeeded,
+  identifying the open question and answer scene 6; no Claude was called. Local test logs and the live response
+  are in .superpowers/part2-verification/ (ignored).
+- Still unverified: a complete live Short with the updated pair, including image-based Codex fallback. No claim
+  about better audience retention yet. Part 3 and weird-economics' word-length decision remain open.

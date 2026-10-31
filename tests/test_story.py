@@ -7,7 +7,7 @@ import traceback
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from shortsmaker import config, gpu, llm, logbook, media_tools, plan_rules, session, writing  # noqa: E402
+from shortsmaker import config, editplan, gpu, llm, logbook, media_tools, plan_rules, session, writing  # noqa: E402
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from test_qwen_voice import COUNTED  # noqa: E402  (no qwen imports at module level: plain dict)
@@ -64,6 +64,65 @@ def test_cold_read_keeps_only_valid_answers():
         llm.ask_ai = old
     assert list(got) == [0] and got[0]["answer"] == 10 and got[0]["swipe"] is None and got[0]["hook_kind"] is None
     assert "passenger looked out" in prompts[0] and "topic" not in prompts[0]  # the reader gets the scenes only
+
+
+def test_cold_read_handles_malformed_reply():
+    old = llm.ask_ai
+    try:
+        for reply in (["bad reply"], "not a mapping", 42, {"shorts": None}, {"shorts": "bad"}):
+            llm.ask_ai = lambda prompt, **kw: reply
+            assert writing.cold_read([{"lines": JACK}]) == {}, reply
+    finally:
+        llm.ask_ai = old
+
+
+def test_cold_read_uses_other_ai_in_solo_and_collaborative_modes():
+    old = llm.ask_ai, session.BRAIN, session.SOLO, session.NO_QUOTA, session.LAST_AI
+    try:
+        for planner, reviewer in (("claude", "gemini"), ("gemini", "claude")):
+            for solo in (True, False):
+                calls = []
+
+                def ask(prompt, **kw):
+                    calls.append(kw)
+                    session.LAST_AI = kw["brain"]
+                    return {"shorts": [{"index": 0, "question": "Why a baboon?", "answer": 10}]}
+
+                llm.ask_ai = ask
+                session.BRAIN, session.SOLO, session.NO_QUOTA = planner, solo, set()
+                result = writing.cold_read([{"lines": JACK}])
+                assert calls == [{"fatal": False, "brain": reviewer, "allow_fallback": True}]
+                assert result[0]["reviewer"] == reviewer
+                assert f"reviewed by {reviewer.capitalize()}" in editplan.cold_read_line(result[0])
+                assert session.BRAIN == planner and session.SOLO == solo
+            session.NO_QUOTA = {reviewer}
+            calls.clear()
+            result = writing.cold_read([{"lines": JACK}])
+            assert calls[0]["brain"] == planner and result[0]["reviewer"] == planner
+    finally:
+        llm.ask_ai, session.BRAIN, session.SOLO, session.NO_QUOTA, session.LAST_AI = old
+
+
+def test_failed_second_read_clears_old_verdict():
+    old_ask, old_plan = llm.ask_ai, writing.length_plan
+    early = list(JACK)
+    early[2] = "In 1881, the railway sent officials."
+    replies = iter([
+        {"shorts": [{"index": 0, "scenes": early}]},
+        {"shorts": [{"index": 0, "question": "Why a baboon?", "answer": 3}]},
+        {"shorts": [{"index": 0, "scenes": JACK}]},
+        None,
+    ])
+    llm.ask_ai = lambda prompt, **kw: next(replies)
+    writing.length_plan = lambda: (40, 125, 8, 16, "40-50")
+    try:
+        short = {"topic": "Jack", "title": "Jack", "lines": list(JACK)}
+        writing.edit_scripts([short], {"niche": "history"})
+    finally:
+        llm.ask_ai, writing.length_plan = old_ask, old_plan
+    assert short["lines"] == JACK
+    assert "story_read" not in short, "the rejected draft's verdict must not describe the revised script"
+    assert any("cold reader didn't answer" in note for note in short["editor_notes"])
 
 
 def test_word_counts_match_the_aligner():
@@ -188,7 +247,7 @@ def test_editor_gets_one_second_pass_for_broken_rules():
     ]
     old_ask, old_brain = llm.ask_ai, session.BRAIN
 
-    def fake(prompt, fatal=True, read_dir=None, brain=None, bulk=False):
+    def fake(prompt, fatal=True, read_dir=None, brain=None, bulk=False, allow_fallback=False):
         prompts.append(prompt)
         session.LAST_AI = brain or "claude"
         return replies[len(prompts) - 1]
@@ -220,7 +279,7 @@ def twist_short(topic="Murray found his best volunteer locked in an asylum by su
 
 def test_twist_check_rewrites_a_legend_before_writing():
     asked, old = [], llm.ask_ai
-    llm.ask_ai = lambda prompt, fatal=True, read_dir=None, brain=None, bulk=False: asked.append(prompt) or {
+    llm.ask_ai = lambda prompt, fatal=True, read_dir=None, brain=None, bulk=False, allow_fallback=False: asked.append(prompt) or {
         "stories": [{"index": 0, "topic": "Minor killed a man, then helped write the OED from Broadmoor.",
                      "why": "the surprise visit is a 1915 legend"}]}
     try:

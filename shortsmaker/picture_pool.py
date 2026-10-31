@@ -233,7 +233,7 @@ Reply with ONLY JSON: {{"pictures": [{{"n": 1, "what": "...", "era_ok": true, "s
     out = catalog_entries(data, len(cands))
     if data is not None and not out:  # valid JSON but no usable entry: ask_ai only falls back on broken JSON
         if not session.SOLO:
-            other = "gemini" if session.LAST_AI == "claude" else "claude"
+            other = llm.other_ai(session.LAST_AI)
             print(f"  {session.LAST_AI.capitalize()}'s picture list was empty, asking {other.capitalize()} instead")
             out = catalog_entries(llm.ask_ai(prompt, fatal=False, read_dir=folder / "sheets", brain=other, bulk=True), len(cands))
         else:
@@ -242,7 +242,7 @@ Reply with ONLY JSON: {{"pictures": [{{"n": 1, "what": "...", "era_ok": true, "s
     if not out:
         sys.exit(f'Stopped: no picture list for "{s["topic"]}". The AI ({session.BRAIN.capitalize()}) did not give a usable answer '
                  "(their messages are above). Run again later." if session.SOLO else
-                 f'Stopped: no picture list for "{s["topic"]}". Neither Claude nor Gemini gave a usable answer '
+                 f'Stopped: no picture list for "{s["topic"]}". Neither AI gave a usable answer '
                  "(their messages are above). Run again later.")
     folder.mkdir(parents=True, exist_ok=True)
     media_tools.write_json(folder / "catalog.json", out)
