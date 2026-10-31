@@ -124,19 +124,25 @@ Rules that keep it working:
    not pick those, and a picked topic whose subject/character holds every real word of a taken title
    (`topic_ideas.clash`, 2+ words) is dropped for a backup, and so is one whose main character (else subject) clashes
    with our own `done_topics`. The writer and SEO never see competitor titles. Every
-   Short needs a main `character` (soft rule: one named person or animal; events told through them).
+   Short needs a main `character` (soft rule: one named person or animal; events told through them). Each topic
+   comes with a pitch (`fact8`, `question`, `payoff`, `fame` 1-3; edit_plan "Topic pitch" line): `fame` 3 (told
+   everywhere) is skipped for a backup; a pitch the picker left out keeps its topic.
 3. **Pictures first**: the picker gives n + 2 backup topics with `visual_terms` and `people`; `prepare_topic()` reads
    Wikipedia, gathers the pool (`gather_pool()`), has the AI list every picture (`catalog_pool()`: what, era_ok,
    sharp, hook, reject) and keeps topics with >= `min_real_pictures` usable (frames of one video count once); weak
    topics are skipped (`dropped_topics`). No picture list from either AI = the run stops. Then `check_twists()`: each
    twist against Wikipedia (a legend becomes "the story says X; in fact Y").
-4. **Script team**: the planner writes narration -> the editor (`edit_scripts()`: hooks, read-aloud fixes, cuts,
-   `payoff_scene`, `list_like`, `hook_kind`; `story_problems()` sends a failing script back once) -> the director
+4. **Script team**: the planner writes narration -> the editor (`edit_scripts()`: hooks, read-aloud fixes, cuts) ->
+   the cold reader (`cold_read()`, planner's AI, one call per batch: sees only the final scenes and reports the
+   question line 1 opens, the scene that answers it, `new` per scene, list_like, first swipe scene, hook_kind; the
+   editor no longer grades its own version) -> `story_problems()` sends a failing script back once (answer before the
+   last two scenes, no question, 2+ scenes with nothing new, swipe in scenes 1-4, list, summary hook, plus the text
+   rules); edit_plan "Cold read" line -> the director
    (`direct_scripts()`, can't change narration: per scene `pic`, image/video search, shot, move, graphic, person,
    emphasis, transition, `ai_image`, animate/motion, sound, optional `full`; per Short palette, music mood, look,
    thumbnail, SEO drafts) -> fact check against the Wikipedia text (rewrites unsupported lines, drops wrong graphics,
-   myths go to the profile). When the fact check rewrote lines, the text rules (`story_problems` without the
-   editor's verdicts) and the word total are checked again; leftovers are `STILL (after the fact check):` notes.
+   myths go to the profile). When the fact check rewrote lines, the text rules (`story_problems` without a cold
+   read) and the word total are checked again; leftovers are `STILL (after the fact check):` notes.
    Lengths: 95-125 words in 11-16 scenes (~40-50 s), or `SHORT_FORM` 60-72 words in 8-10: `writing.length_plan()` is
    the only length target (the strange-history rules file no longer repeats one; weird-economics' rules still say
    110-135); `writing.max_seconds()` is quality_check's limit. Scenes of 4-10 words
@@ -169,8 +175,10 @@ Rules that keep it working:
 9. **Audio**: voice + music (loudness-matched to `MUSIC_LUFS`, ducked) + SFX cue sheet + story sounds; loudnorm
    -14 LUFS + limiter; h264_nvenc.
 10. **Checks and fixes**: `quality_check()` (also flags a scene that reuses another scene's picture because nothing
-    fit), `visual_review()` (1 frame/s sheets; told about overlay windows),
-    `first_second_check()` (score < 7 may swap in a later real picture once). Flagged scenes get an unused pool
+    fit, and narration pauses over `PAUSE_MAX` 0.8 s in `work/voice.wav`), `visual_review()` (1 frame/s sheets; told
+    about overlay windows; also notes, as CHECK lines without a fix, a weak reveal visual, 5+ s with nothing new and
+    crowded scenes), `first_second_check()` (every score goes in edit_plan.txt's quality block; score < 7 may swap in
+    a later real picture once; an opener is judged as what it is, never swapped). Flagged scenes get an unused pool
     picture, a full-screen graphic or a repaint with a rewritten prompt (`rewrite_paint_prompts()`); a flagged custom
     scene goes back to its coder once. Re-render and re-review up to `AUTO_FIX_ROUNDS` (3); it pauses for Enter first.
     Left-over findings are `CHECK:` lines in edit_plan.txt (and a Shotcut timeline).
@@ -290,7 +298,10 @@ strangest moment. Same story, other channel: Voggle's Mike 2M views vs ours 1.2K
 
 ## Open items and next steps
 - **Audit improvements (2026-10-31)**: plan in parts, waiting for the owner's go-ahead per part:
-  `docs/superpowers/plans/2026-10-31-audit-improvements.md` (tick tasks there as they are built).
+  `docs/superpowers/plans/2026-10-31-audit-improvements.md` (git-ignored on purpose; tick tasks there as they are
+  built). Part 1 is on master. Part 2 (2.1, 2.3-2.5) is on branch `audit-part2`, not merged, never run live; the
+  owner said to wait before going on. Open questions for the owner: 2.2 (the other AI as cold reader / editor) and
+  weird-economics' 110-135 words vs the code's 95-125.
 - **Openers**: the drawn opener has only run on past Shorts (`test_renders\drawn_samples\`), not inside a full run;
   the motion-graphic fix rounds have no live run yet. More kit parts as stories need them.
 - run.bat's "press any key" at the end doesn't close the window for the owner: not found in the code; waiting for
