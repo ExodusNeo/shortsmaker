@@ -94,9 +94,15 @@ For each:
 - visual_terms: 4-6 short search phrases for the real people, places, objects and events of this story a
   camera could show, as photo archives would title them (e.g. "Ghost Army inflatable tank", "Rhine crossing 1945").
 - people: the key people's full names (e.g. ["Ellsworth Kelly"]), [] if none. Their portraits are searched.
+- fact8: its single most shocking fact in 8 words or fewer, as a stranger would get it instantly.
+- question: what a viewer must stay to the very end to find out.
+- payoff: the concrete ending that answers it (a number, a verdict, a twist, a legend proved wrong).
+- fame: 1 = little-known, 2 = known to history or niche fans, 3 = told everywhere (big channels, documentaries,
+  school). Pick 1 or 2: a story told everywhere is skipped.
 Pictures and footage are gathered from these before any script is written: prefer stories with real photos or film.
 Reply with ONLY JSON: {{"shorts": [{{"topic": "...", "character": "...", "subject": "...", "wiki_articles": ["..."],
-"search_terms": ["..."], "visual_terms": ["..."], "people": ["..."]}}]}}""")
+"search_terms": ["..."], "visual_terms": ["..."], "people": ["..."], "fact8": "...", "question": "...", "payoff": "...",
+"fame": 1}}]}}""")
     shorts = []
     wanted = len(topics) if topics else n
     for k, p in enumerate(data.get("shorts", [])[:len(topics) if topics else n + picture_pool.TOPIC_BACKUPS]):
@@ -113,6 +119,11 @@ Reply with ONLY JSON: {{"shorts": [{{"topic": "...", "character": "...", "subjec
                           if isinstance(p.get(k), list) else [] for k, cap in (("visual_terms", 6), ("people", 4))}})
         if (who := shorts[-1]["character"]) and who not in shorts[-1]["people"]:  # their portrait is searched first
             shorts[-1]["people"] = [who] + shorts[-1]["people"][:3]
+        pitch = {f: str(p.get(f) or "").strip()[:160] for f in ("fact8", "question", "payoff")}
+        fame = p.get("fame") if type(p.get("fame")) is int and 1 <= p["fame"] <= 3 else None
+        shorts[-1]["fame"] = fame  # a pitch the picker left out keeps its topic: a thin reply mustn't lose a run
+        shorts[-1]["pitch"] = " | ".join([f"{f}: {v}" for f, v in pitch.items() if v]
+                                         + ([f"fame {fame}/3"] if fame else [])) or None
     assert shorts, f"no usable topics: {data}"
     kept, dropped = [], []
     for i, s in enumerate(shorts):
@@ -120,6 +131,10 @@ Reply with ONLY JSON: {{"shorts": [{{"topic": "...", "character": "...", "subjec
             break
         print(f'Topic {i + 1}/{len(shorts)}: "{s["subject"]}": reading Wikipedia, finding real pictures and footage...')
         k = s.pop("_pos")
+        if s.pop("fame") == 3 and not topics:  # Emu War: ~1K on ours and ~8K on Voggle, a channel that gets millions
+            dropped.append(f'"{s["topic"]}": told everywhere already (fame 3/3)')
+            print(f"  Skipped {dropped[-1]}")
+            continue
         if hit := next((t for name in (s["subject"], s.get("character", "")) if (t := topic_ideas.clash(name, taken))), None):
             dropped.append(f'"{s["topic"]}": a bigger channel posted it recently ("{hit}")')
             print(f"  Skipped {dropped[-1]}")
@@ -196,7 +211,7 @@ Reply with ONLY JSON: {{"shorts": [{{"index": 0, "shape": "...", "title": "...",
         kept.append(s)
         if s.get("fact_check"):  # its rewrites come after the story checks: the text rules again, as edit_plan notes
             lines, notes = [sc["narration"] for sc in s["scenes"]], s.get("editor_notes") or []
-            left = story_problems(lines, None, None)
+            left = story_problems(lines)
             if not lo - 15 <= (words := sum(len(t.split()) for t in lines)) <= hi + 15:  # the editor's own slack
                 left.append(f"the script has {words} words, planned {lo}-{hi}")
             s["editor_notes"] = notes + [f"STILL (after the fact check): {p}" for p in left if f"STILL: {p}" not in notes]
@@ -311,12 +326,9 @@ Change wording, never claims: add no fact that isn't already in the script. Keep
 words each (a new picture every ~3 seconds; only a scene that needs time on one picture may run up to
 {channel_profiles.LONG_SCENE_WORDS}), {lo}-{hi} words in total. {SCENE_CUTS} Return every scene, changed or not.
 notes: 1-4 short lines: the hook scores and what you changed and why.
-payoff_scene: in YOUR final version, the number of the scene where the hook's main question is answered.
-list_like: true if the beats of your final version could be reordered without breaking the story.
-hook_kind: "moment" if your first line happens inside the strangest moment, "summary" if it states the whole story, "money_claim" if it is a specific money figure tied to someone or something the viewer can picture.
 {retry}Scripts: {json.dumps(drafts, ensure_ascii=False)}
 Reply with ONLY JSON: {{"shorts": [{{"index": 0, "scenes": ["...", "..."], "title": "...", "hook_text": "...",
-"thumbnail_text": "...", "notes": ["..."], "payoff_scene": 12, "list_like": false, "hook_kind": "moment"}}]}}""", fatal=False, brain=editor) or {}
+"thumbnail_text": "...", "notes": ["..."]}}]}}""", fatal=False, brain=editor) or {}
     who = session.LAST_AI.capitalize()  # Claude steps in when Gemini fails
     for r in data.get("shorts", []) if isinstance(data.get("shorts"), list) else []:
         i = r.get("index") if isinstance(r, dict) else None
@@ -326,17 +338,21 @@ Reply with ONLY JSON: {{"shorts": [{{"index": 0, "scenes": ["...", "..."], "titl
         words = [len(t.split()) for t in lines]
         notes = [str(x).strip()[:300] for x in r.get("notes") or [] if str(x).strip()][:4] \
             if isinstance(r.get("notes"), list) else []
-        verdict = (r.get("payoff_scene"), r.get("list_like"), r.get("hook_kind"))
         if s_lo <= len(lines) <= s_hi and max(words) <= channel_profiles.LONG_SCENE_WORDS + 2 and lo - 15 <= sum(words) <= hi + 15:
             s["lines"] = lines
         else:
             notes.append("its scene edit broke the length rules, so the writer's scenes were kept")
-            verdict = (None, None, None)  # the editor judged its own version, not the one kept
         for k in ("title", "hook_text", "thumbnail_text"):
             if isinstance(r.get(k), str) and r[k].strip():
                 s[k] = r[k].strip()
         s["editor_notes"] = (s.get("editor_notes") or [] if problems else []) + ([f"{who}: {x}" for x in notes] or [f"{who}: no changes"])
-        s["_problems"] = story_problems(s["lines"], *verdict)
+    reads = cold_read(shorts)  # every Short, also one whose edit was refused: the kept scenes are what gets judged
+    for i, s in enumerate(shorts):
+        if i in reads:
+            s["story_read"] = reads[i]
+        else:
+            s["editor_notes"] = (s.get("editor_notes") or []) + ["the cold reader didn't answer: only the text rules were checked"]
+        s["_problems"] = story_problems(s["lines"], reads.get(i))
     failing = [s for s in shorts if s.get("_problems")]
     if problems is None and failing:  # once: the editor gets the problems and fixes its version
         print(f"  {len(failing)} script(s) broke the story rules, sending back to the editor once...")
@@ -346,14 +362,72 @@ Reply with ONLY JSON: {{"shorts": [{{"index": 0, "scenes": ["...", "..."], "titl
             s["editor_notes"] = (s.get("editor_notes") or []) + [f"STILL: {p}" for p in left]
 
 
-def story_problems(lines: list[str], payoff, list_like, hook_kind=None) -> list[str]:
-    """The checkable story rules (STORY_RULES): the answer comes last, no line opens with a date, a short first
-    sentence, the editor's own verdict on whether the beats are a list, and (rules setting `hook`, 2026-10-27
-    first-second research) what kind of first line it wrote."""
-    found = []
-    if isinstance(payoff, int) and not isinstance(payoff, bool) and payoff < len(lines) - 1:
-        found.append(f"the hook's question is answered in scene {payoff} of {len(lines)}: the answer must come in the "
+HOOK_KINDS = ("moment", "summary", "money_claim")
+
+
+def cold_read(shorts: list[dict]) -> dict[int, dict]:
+    """How a stranger hears each final script (audit 2026-10-31): the editor used to report payoff_scene, list_like and
+    hook_kind about its own version and story_problems believed it. This reader sees only the scenes (no topic, notes
+    or research). One call for all Shorts; {index: reading} for the valid answers ({} when it doesn't answer)."""
+    rows = [{"index": i, "scenes": [{"scene": k + 1, "narration": t} for k, t in enumerate(s["lines"])]}
+            for i, s in enumerate(shorts)]
+    print(f"{session.BRAIN.capitalize()} is reading the script(s) as a stranger would...")
+    data = llm.ask_ai(f"""You are a stranger scrolling YouTube Shorts and you know nothing about these stories. Read each script
+below exactly as a viewer hears it, scene by scene, and say honestly what you get from it. Nobody here wrote it:
+praise nothing that isn't there.
+For each Short:
+- question: the question the first sentence makes you need answered, in your own words; "none" if it leaves you
+  nothing to wonder about (it already told you the whole story, or you don't care yet).
+- answer: the number of the scene where that question is answered, or null if it never is.
+- new: one true/false per scene, in order: does this scene give you new information or a new question? false for a
+  recap, a fact said again, filler, or background you didn't need yet.
+- list_like: true if the scenes could be reordered without breaking the story (a list of facts, not one story).
+- swipe: the number of the first scene where most strangers would swipe away, or null if it holds them to the end;
+  swipe_why: one short reason, else null.
+- hook_kind: "moment" if the first line happens inside the strangest moment, "summary" if it states the whole story,
+  "money_claim" if it is a specific money figure tied to someone or something the viewer can picture.
+Scripts: {json.dumps(rows, ensure_ascii=False)}
+Reply with ONLY JSON: {{"shorts": [{{"index": 0, "question": "...", "answer": 12, "new": [true, false], "list_like": false,
+"swipe": null, "swipe_why": null, "hook_kind": "moment"}}]}}""", fatal=False) or {}
+    out = {}
+    for r in data.get("shorts") if isinstance(data.get("shorts"), list) else []:  # LLM output is untrusted
+        i = r.get("index") if isinstance(r, dict) else None
+        if not (type(i) is int and 0 <= i < len(shorts) and isinstance(r.get("question"), str) and r["question"].strip()):
+            continue
+        n = len(shorts[i]["lines"])
+        scene = lambda v: v if type(v) is int and 1 <= v <= n else None  # noqa: E731
+        new = r.get("new")
+        out[i] = {"question": r["question"].strip()[:200], "answer": scene(r.get("answer")),
+                  "new": new if isinstance(new, list) and len(new) == n and all(type(x) is bool for x in new) else None,
+                  "list_like": r.get("list_like") is True, "swipe": scene(r.get("swipe")),
+                  "swipe_why": str(r.get("swipe_why") or "").strip()[:160],
+                  "hook_kind": r.get("hook_kind") if r.get("hook_kind") in HOOK_KINDS else None}
+    return out
+
+
+def story_problems(lines: list[str], read: dict | None = None) -> list[str]:
+    """The checkable story rules (STORY_RULES): the text rules (no line opens with a date, a short first sentence that
+    ends by scene 2) and, with the cold reader's `read` (cold_read), the answer comes last, line 1 opens a question,
+    no run of scenes adds nothing, no early swipe point, the beats aren't a list, and (rules setting `hook`,
+    2026-10-27 first-second research) what kind of first line it is."""
+    found, read = [], read or {}
+    if (answer := read.get("answer")) and answer < len(lines) - 1:
+        found.append(f"the hook's question is answered in scene {answer} of {len(lines)}: the answer must come in the "
                      "last scene or the last two, and the Short ends there")
+    if read.get("question", "").lower().strip(" .") == "none":
+        found.append("the first sentence leaves a stranger nothing to wonder about: open a question only the ending answers")
+    new, k = read.get("new") or [], 0
+    while k < len(new):  # runs of 2+ scenes that add nothing
+        end = k
+        while end < len(new) and not new[end]:
+            end += 1
+        if end - k >= 2:
+            found.append(f"scenes {k + 1}-{end} add nothing new for a viewer (a recap, filler or background too early): "
+                         "cut them or turn them into the next question")
+        k = end + 1
+    if (swipe := read.get("swipe")) and swipe <= 4:
+        found.append(f"a stranger would likely swipe at scene {swipe} ({read.get('swipe_why') or 'no reason given'}): "
+                     "make it raise the stakes or open the next question")
     for k, line in enumerate(lines):
         if DATE_FIRST.match(line):
             found.append(f'scene {k + 1} starts with a date ("{line}"): bring the year in mid-sentence, or leave it out')
@@ -362,9 +436,9 @@ def story_problems(lines: list[str], payoff, list_like, hook_kind=None) -> list[
         found.append(f'the first sentence has {len(first.split())} words ("{first}"): at most 12')
     if len(lines) > 1 and not " ".join(t.strip() for t in lines[:2]).startswith(first):
         found.append(f'the first sentence ("{first}") runs past scene 2: it must end in scene 1 or scene 2')
-    if list_like is True:
+    if read.get("list_like"):
         found.append('the beats read as a list of facts: link each one to the one before with "but", "so" or "you see"')
-    want = session.RULE_SETTINGS.get("hook")
+    want, hook_kind = session.RULE_SETTINGS.get("hook"), read.get("hook_kind")
     if want == "moment" and hook_kind == "summary":
         found.append('the first line sums up the story: open inside the strangest moment, told as it happens '
                      '(Voggle: "The axe cut off the rooster\'s head, but...")')
@@ -451,7 +525,7 @@ The narration below is final: never change a word of it. Plan the edit of every 
   most 2 scenes, only where it shows the moment better than any picture or footage could: a trip between
   places, a number too big to picture, a document that matters, several people/things that connect, or a
   story-specific mechanism/diagram/cause-and-effect chain.
-  Rules: never scene 1 (real footage hooks better), never two in a row, only on a scene of at least
+  Rules: never scene 1 (its opening is planned on its own), never two in a row, only on a scene of at least
   {channel_profiles.FULL_MIN_WORDS} words (it needs ~3 seconds), real facts only (they are
   fact-checked), labels at most 3 words, "word" = a word or name spoken in that scene's narration when that
   element should appear. One of:

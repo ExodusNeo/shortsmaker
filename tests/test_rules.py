@@ -39,6 +39,7 @@ REPLIES = {  # canned AI replies, chosen by the prompt's opening words
                                                        "hook_options": ["a", "b", "c"], "hook_text": "NOBODY FIRED HIM",
                                                        "thumbnail_text": "BABOON SIGNALMAN", "scenes": LINES}]},
     "You are the script editor": {},
+    "You are a stranger scrolling": {},
     "You are the director": {"shorts": [{"index": 0, "scenes": [{} for _ in LINES]}]},
     "Before the scripts are written": {"stories": [{"index": 0, "topic": None, "why": "holds up"}]},
     "You are a strict fact-checker": {"story_holds": True, "fixes": []},
@@ -50,7 +51,7 @@ REPLIES = {  # canned AI replies, chosen by the prompt's opening words
     "You are the animation director": {"shorts": [{"index": 0, "template": None, "why": "no template shows it"}]},
 }
 KEYS = {"You choose stories": "topics", "You write YouTube Shorts narration": "writer",
-        "You are the script editor": "editor", "You are the director": "director",
+        "You are the script editor": "editor", "You are a stranger scrolling": "cold_reader", "You are the director": "director",
         "Before the scripts are written": "twist_check",
         "You are a strict fact-checker": "fact_check", "You are the picture researcher": "picture_list",
         "You judge the first two seconds": "first_second", "Some AI paintings": "repaint",

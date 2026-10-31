@@ -20,6 +20,52 @@ def scenes(*lines):
     return [{"narration": t} for t in lines]
 
 
+def read(**over):
+    """A cold reader's reading (writing.cold_read) that finds nothing wrong, with `over` changed."""
+    return {"question": "why did they keep him?", "answer": None, "new": None, "list_like": False, "swipe": None,
+            "swipe_why": "", "hook_kind": None, **over}
+
+
+# Jack retold (strange-history's own example), a list of facts, and an early answer: what the cold reader's
+# answers about them must turn into (the reader itself is an AI: these fix only what the code does with its reading)
+JACK = ["A passenger looked out", "and saw a baboon working the signals.",
+        "He complained, so the railway sent officials.", "But the baboon had a very good reason to be there.",
+        "You see, the signalman had lost both legs.", "So he taught Jack the signals.",
+        "The officials gave Jack an exam.", "He never pulled a wrong lever.", "So the railway hired him,",
+        "and he never made a single mistake."]
+
+
+def test_cold_read_verdicts():
+    n = len(JACK)
+    assert writing.story_problems(JACK, read(answer=n, new=[True] * n)) == []
+    found = writing.story_problems(JACK, read(answer=4))
+    assert any("answered in scene 4 of 10" in p for p in found), found
+    found = writing.story_problems(JACK, read(new=[True, True, False, False, False, True, True, True, True, True]))
+    assert any("scenes 3-5 add nothing new" in p for p in found), found
+    assert not writing.story_problems(JACK, read(new=[True, False] * 5))  # one quiet scene at a time is fine
+    assert any("nothing to wonder about" in p for p in writing.story_problems(JACK, read(question="None.")))
+    found = writing.story_problems(JACK, read(swipe=3, swipe_why="backstory before stakes"))
+    assert any("swipe at scene 3 (backstory before stakes)" in p for p in found), found
+    assert not writing.story_problems(JACK, read(swipe=8))  # a late swipe point is a note in the read, not a send-back
+    assert any("list of facts" in p for p in writing.story_problems(JACK, read(list_like=True)))
+
+
+def test_cold_read_keeps_only_valid_answers():
+    shorts = [{"lines": JACK}, {"lines": JACK[:3]}]
+    reply = {"shorts": [{"index": 0, "question": "why a baboon?", "answer": 10, "new": [True] * 10, "list_like": False,
+                         "swipe": 99, "hook_kind": "nonsense"},
+                        {"index": 1, "question": "", "answer": 2},  # no question: no reading
+                        {"index": 7, "question": "x"}, "junk"]}
+    old, prompts = llm.ask_ai, []
+    llm.ask_ai = lambda prompt, **k: prompts.append(prompt) or reply
+    try:
+        got = writing.cold_read(shorts)
+    finally:
+        llm.ask_ai = old
+    assert list(got) == [0] and got[0]["answer"] == 10 and got[0]["swipe"] is None and got[0]["hook_kind"] is None
+    assert "passenger looked out" in prompts[0] and "topic" not in prompts[0]  # the reader gets the scenes only
+
+
 def test_word_counts_match_the_aligner():
     for text, n in COUNTED.items():
         assert gpu.spoken_count(text) == n, (text, gpu.spoken_count(text))
@@ -51,9 +97,9 @@ def test_a_take_is_cut_between_the_scenes_words():
 def test_first_sentence_reads_across_the_cut():
     lines = ["Germany's star London spy sat in Lisbon,", "inventing every report.", "Berlin believed him."]
     assert plan_rules.first_sentence(lines) == "Germany's star London spy sat in Lisbon, inventing every report."
-    assert not any("runs past scene 2" in p for p in writing.story_problems(lines, None, None))
+    assert not any("runs past scene 2" in p for p in writing.story_problems(lines))
     late = ["He sat in Lisbon,", "inventing reports", "that Berlin believed.", "Then he vanished."]
-    assert any("runs past scene 2" in p for p in writing.story_problems(late, None, None))
+    assert any("runs past scene 2" in p for p in writing.story_problems(late))
 
 
 def test_logbook_hook_line_is_the_whole_first_sentence():
@@ -73,8 +119,8 @@ def test_story_problems_flags_summary_hook():
     old = session.RULE_SETTINGS
     try:
         session.RULE_SETTINGS = {"hook": "moment"}
-        assert any("inside the strangest moment" in p for p in writing.story_problems(lines, None, None, "summary"))
-        assert not any("strangest moment" in p for p in writing.story_problems(lines, None, None, "moment"))
+        assert any("inside the strangest moment" in p for p in writing.story_problems(lines, read(hook_kind="summary")))
+        assert not any("strangest moment" in p for p in writing.story_problems(lines, read(hook_kind="moment")))
     finally:
         session.RULE_SETTINGS = old
 
@@ -84,8 +130,8 @@ def test_story_problems_money_claim():
     old = session.RULE_SETTINGS
     try:
         session.RULE_SETTINGS = {"hook": "money_claim"}
-        assert any("money figure" in p for p in writing.story_problems(lines, None, None, "moment"))
-        assert not any("money figure" in p for p in writing.story_problems(lines, None, None, "money_claim"))
+        assert any("money figure" in p for p in writing.story_problems(lines, read(hook_kind="moment")))
+        assert not any("money figure" in p for p in writing.story_problems(lines, read(hook_kind="money_claim")))
     finally:
         session.RULE_SETTINGS = old
 
@@ -94,7 +140,7 @@ def test_no_hook_setting_no_hook_check():
     old = session.RULE_SETTINGS
     try:
         session.RULE_SETTINGS = {}
-        found = writing.story_problems(["A railway once hired a baboon.", "He passed."], None, None, "summary")
+        found = writing.story_problems(["A railway once hired a baboon.", "He passed."], read(hook_kind="summary"))
         assert not any("strangest moment" in p or "money figure" in p for p in found), found
     finally:
         session.RULE_SETTINGS = old
@@ -115,14 +161,14 @@ def test_rules_accept_opener_setting():
 def test_story_problems():
     lines = ["A passenger looked out", "and saw a baboon at the signals.", "In 1880, he complained.",
              "So they tested Jack.", "He passed."]
-    found = writing.story_problems(lines, 2, False)
+    found = writing.story_problems(lines, read(answer=2))
     assert any("answered in scene 2 of 5" in p for p in found), found
     assert any("scene 3 starts with a date" in p for p in found), found
-    assert writing.story_problems(lines[:2] + lines[3:], 4, False) == []  # second-to-last scene is fine
-    assert writing.story_problems(lines[:2] + lines[3:], None, None) == []  # no verdict, nothing to judge
+    assert writing.story_problems(lines[:2] + lines[3:], read(answer=3)) == []  # second-to-last scene is fine
+    assert writing.story_problems(lines[:2] + lines[3:]) == []  # no cold read: only the text rules
     long_first = ["One two three four five six seven", "eight nine ten eleven twelve thirteen."]
-    assert any("13 words" in p for p in writing.story_problems(long_first, None, None))
-    assert any("list of facts" in p for p in writing.story_problems(["Jack worked.", "He passed."], None, True))
+    assert any("13 words" in p for p in writing.story_problems(long_first))
+    assert any("list of facts" in p for p in writing.story_problems(["Jack worked.", "He passed."], read(list_like=True)))
     for date in ("1932: the emus came.", "By the 1850s it stank.", "On 16 October", "In the late 1800s, they"):
         assert writing.DATE_FIRST.match(date), date
     for fine in ("Twenty thousand emus came.", "In nine years, he never slipped.", "The 1932 war"):
@@ -134,9 +180,11 @@ def test_editor_gets_one_second_pass_for_broken_rules():
             "and he passed.", "But they paid him in beer.", "Twenty cents a day too.", "He never made one mistake,",
             "not in nine years.", "That baboon kept the job,", "and a passenger kept riding."]
     early = good[:2] + ["In 1881, he passed the test."] + good[3:]
-    prompts, replies = [], [
-        {"shorts": [{"index": 0, "scenes": early, "payoff_scene": 3, "list_like": False, "notes": ["first"]}]},
-        {"shorts": [{"index": 0, "scenes": good, "payoff_scene": 10, "list_like": False, "notes": ["fixed"]}]},
+    prompts, replies = [], [  # editor, cold reader, editor again, cold reader again
+        {"shorts": [{"index": 0, "scenes": early, "notes": ["first"]}]},
+        {"shorts": [{"index": 0, "question": "why a baboon?", "answer": 3}]},
+        {"shorts": [{"index": 0, "scenes": good, "notes": ["fixed"]}]},
+        {"shorts": [{"index": 0, "question": "why a baboon?", "answer": 10}]},
     ]
     old_ask, old_brain = llm.ask_ai, session.BRAIN
 
@@ -152,9 +200,10 @@ def test_editor_gets_one_second_pass_for_broken_rules():
         writing.edit_scripts([s], {"niche": "history", "tone": "friend at a bar"})
     finally:
         llm.ask_ai, session.BRAIN, writing.length_plan = old_ask, old_brain, old_plan
-    assert len(prompts) == 2 and "SECOND PASS" in prompts[1] and "answered in scene 3 of 10" in prompts[1]
+    assert len(prompts) == 4 and "SECOND PASS" in prompts[2] and "answered in scene 3 of 10" in prompts[2]
     assert "OPEN INSIDE THE STORY'S STRANGEST MOMENT" in prompts[0] and "SECOND PASS" not in prompts[0]
-    assert s["lines"] == good
+    assert "payoff_scene" not in prompts[0] and "stranger scrolling" in prompts[1]  # the editor no longer grades itself
+    assert s["lines"] == good and s["story_read"]["answer"] == 10
     assert not any(n.startswith("STILL") for n in s["editor_notes"]), s["editor_notes"]
     assert any("first" in n for n in s["editor_notes"]) and any("fixed" in n for n in s["editor_notes"])
 

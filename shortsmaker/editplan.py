@@ -37,6 +37,15 @@ def picture_line(short: dict) -> str | None:
     return f"Pictures found before writing: {short['picture_check']}" + (f" (topics dropped: {'; '.join(dropped)})" if dropped else "")
 
 
+def cold_read_line(read: dict) -> str:
+    """edit_plan.txt: how the cold reader (writing.cold_read) heard the final script."""
+    stale = [str(k + 1) for k, v in enumerate(read.get("new") or []) if not v]
+    return (f"Cold read (a stranger's view of the script): question \"{read['question']}\" | answered in scene "
+            f"{read.get('answer') or 'none'} | first swipe: "
+            + (f"scene {read['swipe']} ({read.get('swipe_why') or 'no reason'})" if read.get("swipe") else "none")
+            + (f" | nothing new in scene(s) {', '.join(stale)}" if stale else ""))
+
+
 def edit_plan(short: dict, bounds: list[float], sources: list[str], cues: list[dict],
               events: list[dict], music: Path | None, path: Path, renderer: str,
               clips: dict[int, Path]) -> None:
@@ -57,6 +66,8 @@ def edit_plan(short: dict, bounds: list[float], sources: list[str], cues: list[d
              + (f" | {short['opening_note']}" if short.get("opening_note") else "")
              + (f" | hook lines considered: {' / '.join(short['hook_options'])}" if short["hook_options"] else ""),
              "Script editor: " + ("\n  ".join([""] + short["editor_notes"]) if short.get("editor_notes") else "none"),
+             *([cold_read_line(short["story_read"])] if short.get("story_read") else []),
+             *([f"Topic pitch: {short['pitch']}"] if short.get("pitch") else []),
              *([f"Twist check (topic against Wikipedia, before writing): {short['twist_check']}"]
                if short.get("twist_check") else []),
              "Fact check (against the Wikipedia articles): "

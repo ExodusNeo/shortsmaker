@@ -61,6 +61,8 @@ George Hull who carved it). Choose an event with nobody to follow only when noth
   payoff LAST: the answer to the hook's question (the reveal or twist) is the final scene or the final two,
   and the Short ends there: no epilogue after it, no "follow for more" (an on-screen subscribe button and the
   pinned comment handle that). Where it fits, the reveal echoes the hook so the ending loops into a rewatch.
+  Where it fits, ask the hook's question again out loud just before the answer ("So why would a railway keep a
+  baboon?"), so the viewer stays for it.
   CIRCULAR LOOP ENDING: write the very last sentence so it connects grammatically or conceptually right back into
   scene 1's opening line (e.g. ending on "...all because..." or echoing scene 1's hook subject so the replay begins
   seamlessly before the viewer realizes the video ended). This circular loop drives average percentage viewed over 100%.

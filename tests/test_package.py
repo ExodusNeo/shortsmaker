@@ -267,8 +267,9 @@ def test_solo_edit_scripts_uses_same_ai():
     old_ask, old_brain, old_solo, old_rules = llm.ask_ai, session.BRAIN, session.SOLO, dict(session.RULES)
     session.RULES["Story rules"] = "Be gripping"
     called_brains = []
-    llm.ask_ai = lambda prompt, fatal=True, read_dir=None, brain=None, bulk=False: called_brains.append(brain) or {
-        "shorts": [{"index": 0, "scenes": ["Scene 1 narration"], "title": "T", "hook_text": "H", "thumbnail_text": "Th", "notes": [], "payoff_scene": 1, "list_like": False}]
+    llm.ask_ai = lambda prompt, fatal=True, read_dir=None, brain=None, bulk=False: (
+        called_brains.append(brain) if prompt.startswith("You are the script editor") else None) or {
+        "shorts": [{"index": 0, "scenes": ["Scene 1 narration"], "title": "T", "hook_text": "H", "thumbnail_text": "Th", "notes": []}]
     }
     try:
         # Collaborative mode: Claude writer -> Gemini editor

@@ -17,9 +17,13 @@ from shortsmaker import (
 from shortsmaker.config import FONT, GRAPHIC_STYLES
 
 
-def quality_check(video: Path, bounds: list[float], sources: list[str]) -> list[str]:
+PAUSE_MAX = 0.8  # seconds of narration silence worth a look: sentence pauses ran 0.4-0.56 s; the Nobel bacteria Short had 1.06 s at 2.6 s
+
+
+def quality_check(video: Path, bounds: list[float], sources: list[str], voice: Path | None = None) -> list[str]:
     """Automatic checks on the finished Short, using ffmpeg's own detectors in one pass: black or
-    frozen stretches, loudness off target or clipping, scenes with no picture, unplanned length.
+    frozen stretches, loudness off target or clipping, scenes with no picture, unplanned length; with `voice` (the
+    narration alone: the music covers its gaps in the mix), pauses over PAUSE_MAX.
     Returns the problems worth a look before uploading ([] = all clear)."""
     def where(t: float) -> str:
         k = next((k for k in range(len(bounds) - 1) if bounds[k] <= t < bounds[k + 1]), len(bounds) - 2)
@@ -44,6 +48,13 @@ def quality_check(video: Path, bounds: list[float], sources: list[str]) -> list[
                for k, src in enumerate(sources) if src.startswith("reused from scene")]
     if bounds[-1] > writing.max_seconds():
         issues.append(f"{media_tools.clock(bounds[-1])} long, past the planned {writing.length_plan()[4]} seconds")
+    if voice and voice.exists():
+        quiet = subprocess.run(["ffmpeg", "-hide_banner", "-nostats", "-i", str(voice), "-af",
+                                f"silencedetect=n=-35dB:d={PAUSE_MAX}", "-f", "null", "-"],
+                               capture_output=True, text=True, errors="replace").stderr
+        # a silence with no end is the tail after the last word
+        issues += [f"the narration goes quiet for {float(b) - float(a):.1f}s at {where(float(a))}"
+                   for a, b in re.findall(r"silence_start:\s*([\d.]+).*?silence_end:\s*([\d.]+)", quiet, re.S)]
     return issues
 
 
@@ -89,7 +100,10 @@ not a blank, washed-out or missing picture. Judge each picture in the seconds wh
 faces or objects), text or graphics covering a face, a picture that doesn't match its line or shows the
 wrong era/place/person, unreadable, washed-out or nearly blank pictures, printed captions, logos or
 watermarks on a real photo or film, a painted or AI picture standing in for a real person or object as if it
-were real. Writing inside an AI-GENERATED painting is allowed when it is real, readable words that fit the
+were real. Also report these story problems (fix null; they are notes for the editor): the reveal scene (where the
+story's answer lands) doesn't get one of the strongest visuals of the Short; a stretch of 5+ seconds where nothing new
+appears on screen; a scene so crowded (graphic, photo card and captions at once) that the eye can't tell where to look.
+Writing inside an AI-GENERATED painting is allowed when it is real, readable words that fit the
 story; garbled or made-up lettering there is a problem (fix "repaint"). Ignore
 the captions, the subscribe button and normal crossfades. No problems: an empty list.
 fix = "repaint" when showing a different picture in that scene would fix it (wrong or blank picture, AI
@@ -139,13 +153,18 @@ def first_second_check(video: Path, short: dict, choices: list[dict], board: Pat
     except (subprocess.CalledProcessError, OSError):
         return [], None
     scenes = short["scenes"]
-    real = [j for j in range(1, len(scenes)) if choices[j].get("bg") and not scenes[j].get("full")]
+    short.pop("first_second", None)  # a fix round's score replaces the last one; no reply = no score
+    animated =short.get("opener_used") or scenes[0].get("full")  # an opener is judged, never swapped (render)
+    real = [] if animated else [j for j in range(1, len(scenes)) if choices[j].get("bg") and not scenes[j].get("full")]
     first = plan_rules.first_sentence([sc["narration"] for sc in scenes])
     cands = picture_pool.load_pool(Path(short["pool_dir"]), thumbs=False) if short.get("pool_dir") else None
     what = {cands[e["n"] - 1]["title"]: e.get("what") for e in short.get("catalog") or []
             if cands and isinstance(e, dict) and isinstance(e.get("n"), int) and 1 <= e["n"] <= len(cands)}
-    rows = [f"scene 1 says \"{scenes[0]['narration']}\" | it opens on a full-screen motion graphic: "
-            f"{motion.full_summary(scenes[0]['full'])}"] if scenes[0].get("full") else []
+    # the drawn opener replaced scene 1's photo, which the judge must not be told it sees (audit 2026-10-31)
+    rows = ([f"scene 1 says \"{scenes[0]['narration']}\" | it opens on a hand-drawn animation: {short['drawn']['moment']}"]
+            if short.get("opener_used") else
+            [f"scene 1 says \"{scenes[0]['narration']}\" | it opens on a full-screen motion graphic: "
+             f"{motion.full_summary(scenes[0]['full'])}"] if scenes[0].get("full") else [])
     rows += [f"scene {j + 1} says \"{scenes[j]['narration']}\" | its picture: {choices[j]['bg'][1]}"
              + (f" ({what[choices[j]['bg'][1]]})" if what.get(choices[j]["bg"][1]) else "") for j in ([] if rows else [0]) + real
              if choices[j].get("bg")]
@@ -166,9 +185,11 @@ The scenes and their pictures:
 {chr(10).join(rows)}
 Reply with ONLY JSON: {{"score": 6, "why": "one short reason", "open_with_scene": 4}}""", fatal=False, read_dir=folder)
     score = data.get("score") if isinstance(data, dict) else None
+    why = str((data or {}).get("why") or "weak opening").strip()[:160] if isinstance(data, dict) else ""
+    if plan_rules.is_num(score) and 1 <= score <= 10:  # every score is kept, to set against Stayed to watch later
+        short["first_second"] = f"{score:g}/10: {why}"
     if not plan_rules.is_num(score) or not 1 <= score < HOOK_MIN_SCORE:  # also drops 0, negatives and NaN
         return [], None
-    why = str(data.get("why") or "weak opening").strip()[:160]
     k = data.get("open_with_scene")
     opener = (k - 1, why) if isinstance(k, int) and not isinstance(k, bool) and k - 1 in real else None
     return [f"FIRST SECOND: {score:g}/10: {why}"], opener

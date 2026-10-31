@@ -420,7 +420,7 @@ def render(short: dict, ch: dict, folder: Path, state: dict | None = None, fix_r
     editplan.edit_plan(short, bounds, sources, cues, events, music, folder / "edit_plan.txt",
               f"{'Remotion' if renderer == 'remotion' else 'built-in (Python)'}, {n_graphics} motion graphics",
               clips)
-    issues = review.quality_check(folder / "short.mp4", bounds, sources)
+    issues = review.quality_check(folder / "short.mp4", bounds, sources, work / "voice.wav")
     issues += [opener_check] if opener_check else []
     print(f"  {session.BRAIN.capitalize()} is watching the finished Short for problems...")
     found, fixes = review.visual_review(folder / "short.mp4", short, bounds, sources, work, drawn=drawn, cues=cues)
@@ -443,7 +443,8 @@ def render(short: dict, ch: dict, folder: Path, state: dict | None = None, fix_r
         print(f"    CHECK: {issue}")
     with open(folder / "edit_plan.txt", "a", encoding="utf-8") as f:
         f.write("\n\nQUALITY CHECK (automatic, on the finished video)\n" + ("\n".join(f"  CHECK: {i}" for i in issues) or
-                "  OK: no black or frozen stretches, loudness on target, every scene has a picture") + "\n")
+                "  OK: no black or frozen stretches, loudness on target, every scene has a picture") + "\n"
+                + (f"  First second (AI score of the opening): {short['first_second']}\n" if short.get("first_second") else ""))
 
     art = work / "thumb_art.jpg"  # Claude's thumbnail plan, painted on this PC; else the first scene
     frame_render.thumbnail(thumb_pic if drawn else art if art.exists() else work / "0.jpg",
