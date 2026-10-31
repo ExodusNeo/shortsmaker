@@ -1564,3 +1564,19 @@ AI quota spent on this change. A full video render was not needed for menu and p
 
 ### 2026-10-31: Codex model changed at owner request
 All ShortsMaker Codex modes now explicitly use gpt-6.1-sol with high reasoning effort.
+
+
+### 2026-10-31: Mary Toft live-run detail-circle alignment
+Owner completed output/strange-history/2026-10-31_doctors-believed-her-babies-were-rabbits and reported an
+unrelated circle around 20 seconds. Inspected original frames, the saved grid and _raw scan: mark_details
+chose coordinates on the untrimmed download, while MarkCard used the cleaned image after border trimming.
+The title's old F3 cell consequently landed on ?Perform?d by.? mark_details now builds its grid on clean_photo
+output, the same framing as the rendered card (also fixes the coordinate basis for stereo-card extraction).
+A regression test fails on the previous code and passes with the fix. test_marks, test_rules, test_full_scenes
+and test_pictures_first pass (116 tests); Python compilation passes. Golden prompts unchanged.
+Rendered scene 8 frames 562-638 with the circle centred on the printed ?Rabbets? at x=.70/y=.18, inspected a
+five-frame strip, and saved short-circle-fixed.mp4 alongside the untouched original. Only the top 1100 pixels
+of those frames are replaced, preserving the original captions below; audio is stream-copied and its SHA256
+matches exactly. Both copies are 41.533333 seconds. Before/after strips, corrected props and scene render are
+in work/circle-fix/ (before strip in work/circle-before.jpg). Original work state and Shotcut timeline still
+correspond to original short.mp4. User run profiles/logbook/vault changes are not included in this fix commit.

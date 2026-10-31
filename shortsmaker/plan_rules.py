@@ -7,7 +7,7 @@ from pathlib import Path
 
 from PIL import Image, ImageDraw, ImageFont
 
-from shortsmaker import channel_profiles, llm, session, style_lab
+from shortsmaker import channel_profiles, llm, photo_prep, session, style_lab
 from shortsmaker.config import (
     CUSTOM_KINDS, DOC_KINDS, FONT, FULL_TYPES, ICONS, MAX_FIGURES, PLANNED_STYLES, SKINS, SPECIAL_TRANSITIONS,
     STYLE_CAPS,
@@ -379,7 +379,7 @@ def is_loop_short(scenes: list[dict]) -> bool:
 
 
 def mark_details(short: dict, choices: list[dict], work: Path) -> None:
-    """Let Claude circle (or point an arrow at) a detail in up to 2 chosen pictures. It sees each
+    """Let the AI circle (or point an arrow at) a detail in up to 2 chosen pictures. It sees each
     picture under a lettered 10x10 grid and names the cell, which places the mark accurately. Only
     scenes with a picture and no other callout or person card qualify. Failure just means no marks."""
     folder = work / "marks"
@@ -388,7 +388,9 @@ def mark_details(short: dict, choices: list[dict], work: Path) -> None:
     for i, (sc, c) in enumerate(zip(short["scenes"], choices)):
         if i and c["bg"] and not c.get("film") and not sc["graphic"] and not sc["person"] and not sc.get("full"):
             try:
-                img = Image.open(io.BytesIO(c["bg"][0])).convert("RGB")
+                # MarkCard displays the cleaned _raw image, not the downloaded scan. Trimming borders
+                # or splitting a stereo card changes coordinates: choose the target on that same framing.
+                img = Image.open(io.BytesIO(photo_prep.clean_photo(c["bg"][0]))).convert("RGB")
             except Exception:
                 continue
             img.thumbnail((1000, 1000))

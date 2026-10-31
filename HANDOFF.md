@@ -178,7 +178,9 @@ Rules that keep it working:
    art"/"cinematic". Real stills -> `clean_photo()` -> 9:16 cover; film -> `FILM_CROP` + `FILM_VF` band. AI video
    (`animate`, max 5): the owner's Colab H3 / Flow clips if chosen (start pictures checked first,
    `start_picture_problems()`), else LTX. Motion only for what the picture shows.
-8. **Render**: Remotion when there are >= 3 graphics, any look/special cut, or any full-screen scene; else the Python
+8. **Render**: Detail callouts (`mark_details`) choose coordinates on `photo_prep.clean_photo()` output, matching
+   the cleaned `_raw.jpg` shown by MarkCard; the downloaded scan can have different borders or stereo framing.
+   Remotion when there are >= 3 graphics, any look/special cut, or any full-screen scene; else the Python
    renderer. Graphic styles: date, place (map), fact, stat, timeline, mark, headline, quote, compare, stamp, question,
    kinetic; card overlays hold >= 1.8 s and start early when their word comes late (`editplan.py`); person cards pop
    on the spoken name. Palettes (9) drive all graphics and map to a full-scene skin. Credit tag bottom-left
@@ -313,7 +315,9 @@ strangest moment. Same story, other channel: Voggle's Mike 2M views vs ours 1.2K
   pairs; quota handover can use the third AI within the same run. No Part 3 changes yet.
   Plan: `docs/superpowers/plans/2026-10-31-audit-improvements.md` (git-ignored on purpose).
   Malformed cold reads now count as no review; a failed second read removes the old draft's verdict. A failed
-  opener preview also clears the old render's score. A live Codex cold read passed. Still to verify: a complete live Short with these changes.
+  opener preview also clears the old render's score. A live Codex cold read passed. Owner completed the Mary Toft Short (2026-10-31); its 19-21 s callout
+  exposed a cleaned-image coordinate mismatch, now fixed. A corrected copy is saved alongside the original.
+  The run also left CHECK notes for a reused picture and weaker reveal visual.
   Separate open question: weird-economics' 110-135 words vs the code's 95-125.
 - **Openers**: the drawn opener has only run on past Shorts (`test_renders\drawn_samples\`), not inside a full run;
   the motion-graphic fix rounds have no live run yet. More kit parts as stories need them.
@@ -330,7 +334,7 @@ strangest moment. Same story, other channel: Voggle's Mike 2M views vs ours 1.2K
 
 ## How to verify changes
 - `.venv\Scripts\python.exe -m compileall -q make_shorts.py shortsmaker`; Remotion: `cd remotion && npx tsc -p .`
-- Tests, no AI usage (`.venv\Scripts\python.exe tests\<name>.py`): `test_package`, `test_codex`, `test_ai_modes`, `test_pictures_first`,
+- Tests, no AI usage (`.venv\Scripts\python.exe tests\<name>.py`): `test_package`, `test_codex`, `test_ai_modes`, `test_marks`, `test_pictures_first`,
   `test_full_scenes`, `test_style`, `test_rules` (golden prompts), `test_story`, `test_first_second`,
   `test_topic_ideas`, `test_h3_handoff`, `test_h3_run`, `test_edit_project`, `test_blender_plan`,
   `test_blender_render`, `test_opener_graphic`, `test_drawn_opener` (real node, ~1 min);
