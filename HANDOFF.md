@@ -121,7 +121,7 @@ Rules that keep it working:
    same AI; hybrid failures can try alternatives. All three exhausted = no repeated empty-account calls.
    Saved/CLI aliases `claude` and `gemini` map to `claude-gemini` and `gemini-codex`; `both` remains a legacy CLI
    comparison command, outside the nine-choice menu. "Both" makes each topic twice (folders end
-   `-claude`/`-gemini`; post the better one). Codex: `codex exec --model gpt-6-astra`, high effort, ChatGPT login enforced, API-key environment variables
+   `-claude`/`-gemini`; post the better one). Codex: `codex exec --model gpt-6.1-sol`, high effort, ChatGPT login enforced, API-key environment variables
    removed for the child, read-only sandbox, shell tools disabled, no user config or project instructions, ephemeral
    sessions; prompts via stdin and review images attached directly. Claude: `--model opus --effort high`. Gemini via Antigravity's `agy`
    (Google login, no key; prompt in a task file; `--disable-slash-commands`, no shell/tools for review calls;

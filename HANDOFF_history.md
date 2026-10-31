@@ -1560,3 +1560,7 @@ Verification: all nine modes tested for editor/cold-reader routing and batch wri
 continues through two exhausted providers to the third and reuses it on the next request. Eight relevant
 suites passed (139 tests), including unchanged golden prompts; compileall and diff checks passed. No live
 AI quota spent on this change. A full video render was not needed for menu and provider-routing changes.
+
+
+### 2026-10-31: Codex model changed at owner request
+All ShortsMaker Codex modes now explicitly use gpt-6.1-sol with high reasoning effort.

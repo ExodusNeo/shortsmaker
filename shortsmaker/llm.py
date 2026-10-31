@@ -16,7 +16,7 @@ from shortsmaker.config import ROOT
 # Pinned, not left to the CLI's defaults (the lean call skips the owner's settings), so no task can quietly get a
 # weaker model. High is the highest effort the owner's Claude plan allows (owner, 2026-10-21).
 CLAUDE_MODEL, CLAUDE_EFFORT = "opus", "high"
-CODEX_MODEL, CODEX_EFFORT = "gpt-6-astra", "high"  # the owner's signed-in Codex model, 2026-10-31
+CODEX_MODEL, CODEX_EFFORT = "gpt-6.1-sol", "high"  # owner-selected model and effort, 2026-10-31
 GEMINI_FALLBACK = "gemini-3.8-flash-high"
 _gemini_model: str | None = None
 _argon_exhausted: bool = False  # set True for the rest of this run if Argon returns RESOURCE_EXHAUSTED
