@@ -61,8 +61,8 @@ Pacing & Structure (35–50s Shorts, 110–135 spoken words across 11–16 scene
 - Never write abstract metaphors ("greed consumed them", "money vanished into thin air") that force generic stock footage.
 
 ## Lessons from our numbers
-<!-- adapted from strange-history: new channel baseline -->
-Watch the first-second drop-off in YouTube Studio: if "Stayed to watch" is below 70%, Scene 1's dollar hook or opening visual was too slow. If "Average percentage viewed" is below 90%, tighten the middle math beats and verify that the circular loop ending bridges smoothly. Over 100% average percentage viewed indicates the infinite loop is succeeding.
+Fresh performance baseline started 2026-10-31. Earlier performance results were archived.
+Use only the current logbook entries; do not infer performance from the archived Shorts.
 
 ## Opening picture
 <!-- adapted from strange-history: era_ok/sharp/hook lines restored 2026-10-26 (without them every hook came back false); hook favours the anomaly over exteriors -->

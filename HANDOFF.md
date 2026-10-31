@@ -46,6 +46,7 @@ everything (voice, paintings, video). Real archival/online pictures and film are
 |---|---|
 | `run.bat` | Asks channel, count, then nine AI choices: 1 Codex solo, 2 Claude solo, 3 Gemini solo; 4 Codex/Claude, 5 Codex/Gemini, 6 Claude/Codex, 7 Claude/Gemini, 8 Gemini/Codex, 9 Gemini/Claude (writer/editor). Then clip handoff and short-form questions. Saved per profile. CLI uses `codex-only`, `claude-only`, `gemini-only`, or `<writer>-<editor>` |
 | `fix.bat` | `make_shorts.py fix`: re-render a recent Short (7 days) with one scene changed (see fix.bat) |
+| `retention.bat` | Pick a finished Short and a Studio retention screenshot; writes `retention.txt` plus `retention/graph.<ext>` in that output folder. Same AI modes/quota fallback; see `docs/retention.md` |
 | `library.bat` | `make_shorts.py library`: approve or throw away looks/overlays/cuts the AI invented (`style_candidates/`) |
 | `make_shorts.py` | Entry point only; the pipeline is `shortsmaker/` |
 | `channels/<name>.json` | Profile: niche, audience, tone, voice, `done_topics`, `research_seeds`, `cta_line`, `brain`, `veo`, `short_form`, `recent_shapes`, `myths`. `<name>.research.json` = today's bigger-channel Shorts (the "taken" list); `last.txt` = default channel |
@@ -99,6 +100,7 @@ are stored LF (`.gitattributes`).
 | `drawn_opener.py` | Drawn opener: AI scene code, lint, preview, art-director review and fixes, render |
 | `blender_plan.py`, `blender_render.py` | Blender-drawn channels: build plans, headless render |
 | `edit_project.py` | Shotcut timeline for hand fixes |
+| `retention.py` | Approximate retention screenshot reading, code-based matching to saved scene timings; no automatic logbook writes |
 | `logbook.py` | Logbook entries, vault pages |
 | `cli.py` | `main()`, `fix_short()`, `fix` / `library` / `notes` |
 | `media_tools.py` | `fetch()`, `ffmpeg()`, `video_encoder()`, `duration()`, `write_json()` |
@@ -281,6 +283,13 @@ separate tracks cut per scene, voice/music/sounds as 3 audio tracks, a gain + li
 CHECK. `work/` is pruned after 7 days, which breaks the timeline too. Not yet used on a real Short.
 
 ## Logbook (`vault/Logbook/<channel>.md`)
+Fresh performance baseline started 2026-10-31 at the owner's request: all 38 old entries from three logbooks
+were backed up under `vault/Archive/Logbooks/2026-10-31_200433/` and cleared from active logbooks. Earlier numerical
+`Lessons from our numbers` sections were archived there and replaced with fresh-baseline instructions; old
+performance claims were removed from the editor prompt. Archives are not read by `logbook_results()`. Videos
+and `done_topics` were preserved. Retention reports live in each output folder, not in the logbook; the owner
+may copy the suggested summary into the existing My notes line. No automatic report ingestion until Part 3.2.
+
 One entry per Short; the owner's YouTube Studio numbers (Views, Comments, Subscribers gained, Stayed to watch,
 Average % viewed, likes, a note). When the owner names a channel, read Studio with Claude in Chrome (already logged
 in; Content -> Shorts and each Short's Analytics; exact % viewed and likes from the Analytics overview's "Latest
@@ -312,7 +321,8 @@ strangest moment. Same story, other channel: Voggle's Mike 2M views vs ours 1.2K
 ## Open items and next steps
 - **Audit improvements (2026-10-31)**: Parts 1 and 2.1/2.3-2.5 were already on master and pushed at
   `beaae733`; the previous branch/wait notes were stale. Part 2.2 supports all three AIs. Owner clarified: three true solo modes and all six ordered writer/editor
-  pairs; quota handover can use the third AI within the same run. No Part 3 changes yet.
+  pairs; quota handover can use the third AI within the same run. Part 3.1 (retention reader) is implemented;
+  3.2 (automatic use of reports), 3.3 and 3.4 remain open.
   Plan: `docs/superpowers/plans/2026-10-31-audit-improvements.md` (git-ignored on purpose).
   Malformed cold reads now count as no review; a failed second read removes the old draft's verdict. A failed
   opener preview also clears the old render's score. A live Codex cold read passed. Owner completed the Mary Toft Short (2026-10-31); its 19-21 s callout
@@ -334,7 +344,7 @@ strangest moment. Same story, other channel: Voggle's Mike 2M views vs ours 1.2K
 
 ## How to verify changes
 - `.venv\Scripts\python.exe -m compileall -q make_shorts.py shortsmaker`; Remotion: `cd remotion && npx tsc -p .`
-- Tests, no AI usage (`.venv\Scripts\python.exe tests\<name>.py`): `test_package`, `test_codex`, `test_ai_modes`, `test_marks`, `test_pictures_first`,
+- Tests, no AI usage (`.venv\Scripts\python.exe tests\<name>.py`): `test_package`, `test_codex`, `test_ai_modes`, `test_marks`, `test_retention`, `test_pictures_first`,
   `test_full_scenes`, `test_style`, `test_rules` (golden prompts), `test_story`, `test_first_second`,
   `test_topic_ideas`, `test_h3_handoff`, `test_h3_run`, `test_edit_project`, `test_blender_plan`,
   `test_blender_render`, `test_opener_graphic`, `test_drawn_opener` (real node, ~1 min);

@@ -302,7 +302,7 @@ def edit_scripts(shorts: list[dict], ch: dict, problems: dict[int, list[str]] | 
                  "Another writer drafted the scripts below; make each one as gripping as possible.")
     data = llm.ask_ai(f"""You are the script editor of a faceless YouTube Shorts channel. Niche: {ch['niche']}.
 Tone: {ch.get('tone', '')}. {role_desc}
-About half our viewers swipe away in the first second, so the hook matters most.
+The hook must give a stranger a reason to stop scrolling and stay for the answer.
 For each script:
 1. Hook: score every candidate first sentence (hook_options and scene 1's first sentence) 1-10 for
    "would a stranger scrolling past stop, AND need to stay for the answer?". Strong: the story's strangest
@@ -315,8 +315,8 @@ For each script:
    wouldn't get. The narration should flow as one story; choppy fragments read like a list.
 3. Cut filler and empty lines ("this changed everything", "little did they know"): every scene adds
    something new a camera could show. No phrase of 3+ words twice.
-4. Make it follow these rules; reorder and rephrase as much as needed (our retention curves drop hardest
-   4-12 seconds in and keep sliding when a script recaps, rewinds to a timeline or answers its question early):
+4. Make it follow these rules; reorder and rephrase as much as needed. Avoid recaps, a rewind to a timeline,
+   or answering the opening question before the ending:
 {session.RULES["Story rules"]}
 5. hook_text (big words over the first second), thumbnail_text and title must tease the same story
    without repeating each other's words or the hook sentence; hook_text sharpens the same question as

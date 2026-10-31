@@ -59,17 +59,8 @@ Gaming is full of fake facts. Pick only what developers, interviews, datamines o
 - Build on the real pictures: each topic's "pictures" lists the real screenshots, photos and gameplay footage found for it (#number, what it shows; [opener] = strong enough to open the Short). Where a strong picture exists, let the story pass through what it shows, and write the hook for an [opener] picture when one fits. The story rules above still come first: never bend a fact or the pacing to fit a picture.
 
 ## Lessons from our numbers
-<!-- new -->
-A new channel: we have no numbers of our own yet. Until we do, watch the weak spots our strange-history channel found, and check these after every 10 Shorts:
-- The first second: how many viewers swipe away (in the Shorts feed, "viewed vs. swiped away"). Strange-history lost 4-8 of every 10 viewers here even on Shorts the feed pushed. Aim to keep more than half.
-- The 4-12 second dip: strange-history's retention curves dropped hardest here. A scene 2 that doesn't deepen the mystery loses viewers at this point.
-- The end: whether the curve stays flat until the last scene. Strange-history's two best Shorts held about 90% of the video because the main question stayed open until the end.
-Also compare which kinds of Shorts bring subscribers, not only views:
-- huge franchises (Mario, Pokémon, GTA) vs. smaller cult games
-- retro vs. recent games
-- developer stories vs. glitch and speedrun stories vs. lore
-- a named main character vs. none
-Once 20 or more Shorts are out, replace this section with what our own numbers say.
+Fresh performance baseline started 2026-10-31. Earlier performance results were archived.
+Use only the current logbook entries; do not infer performance from the archived Shorts.
 
 ## Opening picture
 <!-- adapted from strange-history: era_ok judges the right game, version and platform; hook bans thumbnails, facecams, overlays and fan art; gaming examples -->

@@ -1,0 +1,17 @@
+[
+  {
+    "file": "vault/Logbook/gaming.md",
+    "entries_archived": 2,
+    "sha256": "263aec2baa7e3c5a30396f0767aa6e31353f70b65686abdffc9b65e9838feb58"
+  },
+  {
+    "file": "vault/Logbook/strange-history.md",
+    "entries_archived": 32,
+    "sha256": "a0f0f8a9e9b6d7cd82ccabcea17f3fc348c19b922937495bef2ef71e18b5abe3"
+  },
+  {
+    "file": "vault/Logbook/weird-economics.md",
+    "entries_archived": 4,
+    "sha256": "c02815da2c36a1fc308358028290d80a2d8b26e04acfbef3497e33621fbf57fe"
+  }
+]

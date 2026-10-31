@@ -8,7 +8,7 @@ from datetime import date
 from pathlib import Path
 
 from shortsmaker import (
-    blender_render, channel_profiles, llm, logbook, picker, picture_pool, review, rules, seo, session,
+    blender_render, channel_profiles, llm, logbook, picker, picture_pool, retention, review, rules, seo, session,
     short_render, style_lab, writing,
 )
 from shortsmaker.config import OUTPUT
@@ -18,6 +18,8 @@ def main() -> None:
     # make_shorts.py [count] [channel] [claude|gemini]: anything missing is asked for (run.bat passes nothing);
     # with a count given, the planner defaults to the profile's last choice
     # make_shorts.py fix: fix.bat, re-render one scene of a recent Short
+    if sys.argv[1:2] == ["retention"]:
+        return retention.command(sys.argv[2:])
     if sys.argv[1:2] == ["fix"]:
         return fix_short()
     if sys.argv[1:2] == ["library"]:  # library.bat: approve or throw away the AI's invented looks/overlays/cuts

@@ -16,10 +16,7 @@ Viewers decide in one second whether to swipe, so pick stories whose single most
 said in 8 words or fewer that a stranger understands instantly (e.g. "A dead man won this horse race."),
 with a strange moment the Short can open inside of and an answer or twist it can save for the very end.
 Rule of the eccentric character: Every Short needs a MAIN CHARACTER: one named person or animal the story follows,
-with a real photo or portrait of them. Our Shorts built around one strange person or animal (Jack the baboon, Violet Jessop,
-Emperor Norton, Lord Byron and his bear, Hiroo Onoda, Mike the headless chicken, Wojtek the bear) were all pushed by
-YouTube, and the named characters brought nearly all our subscribers; the ones about a thing, an event or a
-group (a smell, a newspaper hoax, a fake statue, the WW2 Ghost Army) stalled, some under 60 views. Always tell an event
+with a real photo or portrait of them. Always tell an event
 through the eccentric person at its center (the Great Stink through engineer Joseph Bazalgette, the Cardiff Giant through
 George Hull who carved it). Choose an event with nobody to follow only when nothing better is left.
 
@@ -88,11 +85,8 @@ George Hull who carved it). Choose an event with nobody to follow only when noth
   come first: never bend a fact or the pacing to fit a picture.
 
 ## Lessons from our numbers
-<!-- strange-history's original rules, moved from the code 2026-10-22 -->
-Two weak spots: the first second (Shorts the feed pushed still lost 4-8 of every
-10 viewers there) and what follows it: the retention curves of most Shorts dropped hardest 4-12 seconds in
-and kept sliding to the end, while the two that held best (Great Stink, Emperor Norton: about 90% of the
-video watched) kept their main question open until the last scene and made every beat stranger than the last.
+Fresh performance baseline started 2026-10-31. Earlier performance results were archived.
+Use only the current logbook entries; do not infer performance from the archived Shorts.
 
 ## Opening picture
 <!-- strange-history's original rules, moved from the code 2026-10-22 -->

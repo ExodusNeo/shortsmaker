@@ -1580,3 +1580,25 @@ of those frames are replaced, preserving the original captions below; audio is s
 matches exactly. Both copies are 41.533333 seconds. Before/after strips, corrected props and scene render are
 in work/circle-fix/ (before strip in work/circle-before.jpg). Original work state and Shotcut timeline still
 correspond to original short.mp4. User run profiles/logbook/vault changes are not included in this fix commit.
+
+
+### 2026-10-31: Part 3.1 retention reader and owner-requested fresh performance baseline
+Added retention.bat / make_shorts.py retention [folder] [screenshot] [AI mode]. The owner selects a finished
+Short, supplies a Studio graph screenshot, and chooses an existing AI mode. One AI review task (normal retries
+and quota fallback) reads only the isolated screenshot. Valid drop intervals are mapped to edit-plan scenes
+in code, including narration and visual notes. retention.txt records at most three approximate drops,
++/-1-2s uncertainty, limitations, the reviewer, and a suggested My notes line; screenshot copy in retention/.
+Unreadable graphs produce no guessed timings; malformed replies preserve the previous report. Work-state
+pruning is irrelevant: the reader needs only edit_plan.txt. No automatic logbook writes or retention ingestion;
+that is Part 3.2. Usage documented in docs/retention.md.
+Owner asked to remove every old Short's logbook entry so old results do not influence the new baseline.
+Archived exact current logbooks (including the latest Mary Toft run) and all four channel rules files under
+vault/Archive/Logbooks/2026-10-31_200433/, with SHA256 manifest. Cleared 32 strange-history, 4 weird-economics
+and 2 gaming entries. Active logbooks now have no results; verified logbook_results() returns empty for all
+three. Archived and reset numerical Lessons from our numbers sections, and removed old measured-viewer claims
+from the editor prompt and topic-picking rules. Videos, topic-repeat history and vault Short pages remain. Existing unrelated channel
+profile/research edits are excluded from this commit.
+Verification: 149 tests pass across 9 suites, including 10 new retention tests; Python compilation and diff
+check pass. Golden prompt differences reviewed before re-saving: only topics/writer lessons and editor's old
+performance assertions changed. Archived files verified byte-for-byte by hash. No real Studio screenshot was
+provided yet, so no live visual-AI retention result is claimed and no test data was put into actual outputs.
