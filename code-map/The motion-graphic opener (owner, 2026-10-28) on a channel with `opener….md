@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/picker.py"
 type: "rationale"
-community: "opener_graphic"
+community: "render"
 location: "L305"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/opener_graphic
+  - community/render
 ---
 
 # The motion-graphic opener (owner, 2026-10-28): on a channel with `opener:…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[opener_graphic()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/opener_graphic
+#graphify/rationale #graphify/EXTRACTED #community/render

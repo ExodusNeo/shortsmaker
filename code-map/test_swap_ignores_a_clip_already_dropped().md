@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_first_second.py"
 type: "code"
-community: "first_second_check"
-location: "L118"
+community: "test_first_second.py"
+location: "L137"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/first_second_check
+  - community/test_first_secondpy
 ---
 
 # test_swap_ignores_a_clip_already_dropped()
@@ -16,4 +16,4 @@ tags:
 - [[swap_pictures()]] - `calls` [EXTRACTED]
 - [[test_first_second.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/first_second_check
+#graphify/code #graphify/EXTRACTED #community/test_first_secondpy

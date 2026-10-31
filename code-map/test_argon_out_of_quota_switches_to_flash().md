@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_package.py"
 type: "code"
-community: "gemini_model"
+community: "ask_ai"
 location: "L85"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/gemini_model
+  - community/ask_ai
 ---
 
 # test_argon_out_of_quota_switches_to_flash()
@@ -17,4 +17,4 @@ tags:
 - [[gemini_model()]] - `calls` [EXTRACTED]
 - [[test_package.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/gemini_model
+#graphify/code #graphify/EXTRACTED #community/ask_ai

@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "json"
+community: "render"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/json
+  - community/render
 ---
 
 # Path
@@ -13,8 +13,8 @@ tags:
 ## Connections
 - [[drawn_thumbnail()]] - `references` [EXTRACTED]
 - [[load_state()]] - `references` [EXTRACTED]
-- [[render()_4]] - `references` [EXTRACTED]
+- [[render()_3]] - `references` [EXTRACTED]
 - [[save_state()]] - `references` [EXTRACTED]
 - [[use_opener()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/json
+#graphify/code #graphify/EXTRACTED #community/render

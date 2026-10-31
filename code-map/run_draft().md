@@ -1,19 +1,19 @@
 ---
 source_file: "tests/test_rules.py"
 type: "code"
-community: "test_rules.py"
+community: "run_draft"
 location: "L252"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_rulespy
+  - community/run_draft
 ---
 
 # run_draft()
 
 ## Connections
-- [[ask()_2]] - `contains` [EXTRACTED]
-- [[ask()_1]] - `indirect_call` [INFERRED]
+- [[ask()_9]] - `contains` [EXTRACTED]
+- [[ask()_8]] - `indirect_call` [INFERRED]
 - [[draft_rules in a temp channels folder holding strange-history's rules; returns…]] - `rationale_for` [EXTRACTED]
 - [[draft_rules()]] - `calls` [EXTRACTED]
 - [[make()]] - `calls` [EXTRACTED]
@@ -25,4 +25,4 @@ tags:
 - [[test_draft_writes_tagged_draft_file()]] - `calls` [EXTRACTED]
 - [[test_rules.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_rulespy
+#graphify/code #graphify/EXTRACTED #community/run_draft

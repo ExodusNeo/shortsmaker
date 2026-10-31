@@ -1,36 +1,32 @@
 ---
 type: community
-members: 23
+members: 19
 ---
 
 # gather_pool
 
-**Members:** 23 nodes
+**Members:** 19 nodes
 
 ## Members
-- [[dot-__enter__()_2]] - code - tests/test_pictures_first.py
-- [[dot-__enter__()_3]] - code - tests/test_pictures_first.py
-- [[dot-__exit__()_1]] - code - tests/test_pictures_first.py
-- [[dot-__exit__()_2]] - code - tests/test_pictures_first.py
-- [[dot-__init__()_4]] - code - tests/test_pictures_first.py
+- [[dot-__enter__()]] - code - tests/test_pictures_first.py
+- [[dot-__init__()]] - code - tests/test_pictures_first.py
 - [[Candidate pictures (with preview `thumb` bytes) and sampled real-film frames…]] - rationale - shortsmaker/picture_pool.py
-- [[For tests that swap shortsmaker functions by name which module owns each one.]] - rationale - tests/patching.py
+- [[Downloads the real photos the picker chose for evidence boards, custom scenes…]] - rationale - shortsmaker/picker.py
+- [[GET from Openverse, spaced to its anonymous limit (20 requests a minute). None…]] - rationale - shortsmaker/image_sources.py
+- [[Images from museums, archives and photographers through Openverse (no key),…]] - rationale - shortsmaker/image_sources.py
 - [[Replaces the network functions for one test; `calls` records the search queries.]] - rationale - tests/test_pictures_first.py
-- [[Runs write_scripts with every AInetwork step replaced by canned answers;…]] - rationale - tests/test_full_scenes.py
-- [[The module that defines function `name` (KeyError for anything else).]] - rationale - tests/patching.py
-- [[_fake_planning()]] - code - tests/test_full_scenes.py
+- [[Wikimedia files via wm_get() (contact User-Agent, spacing, cache), Openverse…]] - rationale - shortsmaker/image_sources.py
 - [[add()]] - code - shortsmaker/picture_pool.py
+- [[full_pictures()]] - code - shortsmaker/picker.py
 - [[gather_pool()]] - code - shortsmaker/picture_pool.py
-- [[importlib]] - concept
+- [[get_image()]] - code - shortsmaker/image_sources.py
 - [[load_thumb()]] - code - shortsmaker/picture_pool.py
-- [[owner()]] - code - tests/patching.py
-- [[patching.py]] - code - tests/patching.py
-- [[pkgutil]] - concept
+- [[openverse_images()]] - code - shortsmaker/image_sources.py
+- [[ov_get()]] - code - shortsmaker/image_sources.py
 - [[stubbed]] - code - tests/test_pictures_first.py
-- [[test_director_prompt_mentions_full()]] - code - tests/test_full_scenes.py
+- [[test_board_pictures_attached()]] - code - tests/test_full_scenes.py
 - [[test_gather_pool_shape()]] - code - tests/test_pictures_first.py
 - [[test_gather_pool_skip_and_limits()]] - code - tests/test_pictures_first.py
-- [[test_good_look_check_skips_the_extra_compile()]] - code - tests/test_style.py
 
 ## Live Query (requires Dataview plugin)
 
@@ -40,21 +36,22 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 8 edges to [[_COMMUNITY_test_full_scenes.py]]
-- 7 edges to [[_COMMUNITY_test_pictures_first.py]]
-- 5 edges to [[_COMMUNITY_image_sources.py]]
-- 4 edges to [[_COMMUNITY_test_style.py]]
-- 3 edges to [[_COMMUNITY_write_scripts]]
+- 11 edges to [[_COMMUNITY_re]]
+- 5 edges to [[_COMMUNITY_choose_images]]
 - 3 edges to [[_COMMUNITY_prepare_topic]]
-- 3 edges to [[_COMMUNITY_choose_images]]
-- 3 edges to [[_COMMUNITY_invent_component]]
-- 2 edges to [[_COMMUNITY_clean_full]]
-- 1 edge to [[_COMMUNITY_visual_review]]
+- 3 edges to [[_COMMUNITY_test_pictures_first.py]]
+- 3 edges to [[_COMMUNITY_test_full_scenes.py]]
+- 1 edge to [[_COMMUNITY_owner]]
+- 1 edge to [[_COMMUNITY_fake_ai]]
 - 1 edge to [[_COMMUNITY_apply_review_fixes]]
+- 1 edge to [[_COMMUNITY_test_blender_render.py]]
+- 1 edge to [[_COMMUNITY_clean_full]]
+- 1 edge to [[_COMMUNITY_visual_review]]
+- 1 edge to [[_COMMUNITY_full_props]]
 
 ## Top bridge nodes
 - [[gather_pool()]] - degree 17, connects to 6 communities
-- [[owner()]] - degree 13, connects to 5 communities
-- [[patching.py]] - degree 10, connects to 3 communities
-- [[_fake_planning()]] - degree 6, connects to 3 communities
-- [[stubbed]] - degree 9, connects to 2 communities
+- [[stubbed]] - degree 9, connects to 4 communities
+- [[get_image()]] - degree 9, connects to 4 communities
+- [[full_pictures()]] - degree 5, connects to 2 communities
+- [[test_board_pictures_attached()]] - degree 3, connects to 2 communities

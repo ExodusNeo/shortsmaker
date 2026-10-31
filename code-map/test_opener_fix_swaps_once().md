@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_first_second.py"
 type: "code"
-community: "first_second_check"
-location: "L84"
+community: "test_first_second.py"
+location: "L103"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/first_second_check
+  - community/test_first_secondpy
 ---
 
 # test_opener_fix_swaps_once()
@@ -17,4 +17,4 @@ tags:
 - [[state()]] - `calls` [EXTRACTED]
 - [[test_first_second.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/first_second_check
+#graphify/code #graphify/EXTRACTED #community/test_first_secondpy

@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_opener_graphic.py"
 type: "rationale"
-community: "opener_graphic"
+community: "render"
 location: "L22"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/opener_graphic
+  - community/render
 ---
 
 # Owner, 2026-10-30: a weak motion-graphic opener is fixed OPENER_GRAPHIC_FIXES…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[test_weak_opener_graphic_fixes_then_handoff()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/opener_graphic
+#graphify/rationale #graphify/EXTRACTED #community/render

@@ -1,22 +1,22 @@
 ---
 source_file: "shortsmaker/media_tools.py"
 type: "code"
-community: "local_voice"
+community: "subprocess"
 location: "L22"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/local_voice
+  - community/subprocess
 ---
 
 # duration()
 
 ## Connections
-- [[Path_11]] - `references` [EXTRACTED]
+- [[Path_22]] - `references` [EXTRACTED]
 - [[log_short()]] - `calls` [EXTRACTED]
 - [[media_tools.py]] - `contains` [EXTRACTED]
 - [[nasa_films()]] - `calls` [EXTRACTED]
-- [[render()_4]] - `calls` [EXTRACTED]
+- [[render()_3]] - `calls` [EXTRACTED]
 - [[render_remotion()]] - `calls` [EXTRACTED]
 - [[shot_span()]] - `calls` [EXTRACTED]
 - [[split_takes()]] - `calls` [EXTRACTED]
@@ -26,4 +26,4 @@ tags:
 - [[test_melt_plays_it_with_the_captions_on_top()]] - `calls` [EXTRACTED]
 - [[test_render_clips_makes_one_clip_per_scene()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/local_voice
+#graphify/code #graphify/EXTRACTED #community/subprocess

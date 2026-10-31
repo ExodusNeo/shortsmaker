@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/seo.py"
 type: "rationale"
-community: "test_topic_ideas.py"
+community: "json"
 location: "L12"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/test_topic_ideaspy
+  - community/json
 ---
 
 # What people actually type into YouTube search (free autocomplete endpoint, no…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[search_suggestions()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/test_topic_ideaspy
+#graphify/rationale #graphify/EXTRACTED #community/json

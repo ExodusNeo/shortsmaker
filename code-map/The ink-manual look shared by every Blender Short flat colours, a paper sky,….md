@@ -1,12 +1,12 @@
 ---
 source_file: "blender/look.py"
 type: "rationale"
-community: "look.py"
+community: "build_scene.py"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/lookpy
+  - community/build_scenepy
 ---
 
 # The ink-manual look shared by every Blender Short: flat colours, a paper sky,…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[look.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/lookpy
+#graphify/rationale #graphify/EXTRACTED #community/build_scenepy

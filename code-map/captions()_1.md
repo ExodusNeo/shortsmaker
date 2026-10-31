@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/audio_mix.py"
 type: "code"
-community: "captions"
+community: "audio_mix.py"
 location: "L63"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/captions
+  - community/audio_mixpy
 ---
 
 # captions()
@@ -18,7 +18,7 @@ tags:
 - [[ass_time()]] - `calls` [EXTRACTED]
 - [[audio_mix.py]] - `contains` [EXTRACTED]
 - [[caption_lines()]] - `calls` [EXTRACTED]
-- [[render()_4]] - `calls` [EXTRACTED]
+- [[render()_3]] - `calls` [EXTRACTED]
 - [[styled()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/captions
+#graphify/code #graphify/EXTRACTED #community/audio_mixpy

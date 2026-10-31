@@ -16,7 +16,7 @@ tags:
 - [[luminance()]] - `calls` [EXTRACTED]
 - [[make_paper()]] - `calls` [EXTRACTED]
 - [[remotion_render.py]] - `imports` [EXTRACTED]
-- [[render()_4]] - `calls` [EXTRACTED]
+- [[render()_3]] - `calls` [EXTRACTED]
 - [[short_render.py]] - `imports` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/test_full_scenespy

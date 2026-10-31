@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "captions"
+community: "audio_mix.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/captions
+  - community/audio_mixpy
 ---
 
 # Path
@@ -17,4 +17,4 @@ tags:
 - [[story_sound()]] - `references` [EXTRACTED]
 - [[tts()_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/captions
+#graphify/code #graphify/EXTRACTED #community/audio_mixpy

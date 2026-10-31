@@ -1,18 +1,17 @@
 ---
-source_file: "blender/failures.py"
+source_file: "blender/build_scene.py"
 type: "code"
-community: "main"
-location: "L26"
+community: "Shots"
+location: "L44"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/main
+  - community/Shots
 ---
 
 # .__init__()
 
 ## Connections
-- [[dot-_crack()]] - `calls` [EXTRACTED]
-- [[Failure]] - `method` [EXTRACTED]
+- [[Shots]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/main
+#graphify/code #graphify/EXTRACTED #community/Shots

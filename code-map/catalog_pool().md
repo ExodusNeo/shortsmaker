@@ -12,13 +12,14 @@ tags:
 # catalog_pool()
 
 ## Connections
-- [[Path_4]] - `references` [EXTRACTED]
+- [[Path_2]] - `references` [EXTRACTED]
 - [[The picture list the writer, editor and director plan with the AI looks at the…]] - `rationale_for` [EXTRACTED]
 - [[ask_ai()]] - `calls` [EXTRACTED]
 - [[capture_prompts()]] - `calls` [EXTRACTED]
 - [[catalog_entries()]] - `calls` [EXTRACTED]
 - [[contact_sheets()]] - `calls` [EXTRACTED]
 - [[json]] - `calls` [EXTRACTED]
+- [[other_ai()]] - `calls` [EXTRACTED]
 - [[picture_pool.py]] - `contains` [EXTRACTED]
 - [[prepare_topic()]] - `calls` [EXTRACTED]
 - [[sys]] - `calls` [EXTRACTED]

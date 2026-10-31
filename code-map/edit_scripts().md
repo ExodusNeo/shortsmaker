@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/writing.py"
 type: "code"
-community: "edit_scripts"
+community: "test_story.py"
 location: "L283"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/edit_scripts
+  - community/test_storypy
 ---
 
 # edit_scripts()
@@ -19,11 +19,13 @@ tags:
 - [[json]] - `calls` [EXTRACTED]
 - [[length_plan()]] - `calls` [EXTRACTED]
 - [[narration_lines()]] - `calls` [EXTRACTED]
+- [[other_ai()]] - `calls` [EXTRACTED]
 - [[pictures_of()]] - `calls` [EXTRACTED]
 - [[story_problems()]] - `calls` [EXTRACTED]
 - [[test_editor_gets_one_second_pass_for_broken_rules()]] - `calls` [EXTRACTED]
+- [[test_failed_second_read_clears_old_verdict()]] - `calls` [EXTRACTED]
 - [[test_solo_edit_scripts_uses_same_ai()]] - `calls` [EXTRACTED]
 - [[write_scripts()]] - `calls` [EXTRACTED]
 - [[writing.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/edit_scripts
+#graphify/code #graphify/EXTRACTED #community/test_storypy

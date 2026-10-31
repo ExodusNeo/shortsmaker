@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/cli.py"
 type: "rationale"
-community: "channel_profiles.py"
-location: "L127"
+community: "fix_short"
+location: "L128"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/channel_profilespy
+  - community/fix_short
 ---
 
 # fix.bat: re-render a recent Short with one scene changed, keeping its pictures,…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[fix_short()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/channel_profilespy
+#graphify/rationale #graphify/EXTRACTED #community/fix_short

@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_story.py"
 type: "code"
-community: "story_problems"
-location: "L139"
+community: "test_story.py"
+location: "L198"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/story_problems
+  - community/test_storypy
 ---
 
 # test_no_hook_setting_no_hook_check()
@@ -16,4 +16,4 @@ tags:
 - [[story_problems()]] - `calls` [EXTRACTED]
 - [[test_story.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/story_problems
+#graphify/code #graphify/EXTRACTED #community/test_storypy

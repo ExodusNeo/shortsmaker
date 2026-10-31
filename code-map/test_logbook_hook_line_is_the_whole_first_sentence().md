@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_story.py"
 type: "code"
-community: "local_voice"
-location: "L105"
+community: "test_story.py"
+location: "L164"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/local_voice
+  - community/test_storypy
 ---
 
 # test_logbook_hook_line_is_the_whole_first_sentence()
@@ -16,4 +16,4 @@ tags:
 - [[scenes()]] - `calls` [EXTRACTED]
 - [[test_story.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/local_voice
+#graphify/code #graphify/EXTRACTED #community/test_storypy

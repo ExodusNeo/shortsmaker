@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/writing.py"
 type: "code"
-community: "ask_ai"
-location: "L368"
+community: "test_story.py"
+location: "L369"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ask_ai
+  - community/test_storypy
 ---
 
 # cold_read()
@@ -16,7 +16,11 @@ tags:
 - [[ask_ai()]] - `calls` [EXTRACTED]
 - [[edit_scripts()]] - `calls` [EXTRACTED]
 - [[json]] - `calls` [EXTRACTED]
+- [[other_ai()]] - `calls` [EXTRACTED]
+- [[test_codex_cold_reader_and_quota_fallback_never_call_claude()]] - `calls` [EXTRACTED]
+- [[test_cold_read_handles_malformed_reply()]] - `calls` [EXTRACTED]
 - [[test_cold_read_keeps_only_valid_answers()]] - `calls` [EXTRACTED]
+- [[test_cold_read_uses_other_ai_in_solo_and_collaborative_modes()]] - `calls` [EXTRACTED]
 - [[writing.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ask_ai
+#graphify/code #graphify/EXTRACTED #community/test_storypy

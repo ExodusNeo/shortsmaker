@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/writing.py"
 type: "rationale"
-community: "ask_ai"
-location: "L369"
+community: "test_story.py"
+location: "L370"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/ask_ai
+  - community/test_storypy
 ---
 
 # How a stranger hears each final script (audit 2026-10-31): the editor used to…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[cold_read()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/ask_ai
+#graphify/rationale #graphify/EXTRACTED #community/test_storypy

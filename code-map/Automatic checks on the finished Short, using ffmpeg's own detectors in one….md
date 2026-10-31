@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/review.py"
 type: "rationale"
-community: "visual_review"
+community: "quality_check"
 location: "L24"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/visual_review
+  - community/quality_check
 ---
 
 # Automatic checks on the finished Short, using ffmpeg's own detectors in one…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[quality_check()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/visual_review
+#graphify/rationale #graphify/EXTRACTED #community/quality_check

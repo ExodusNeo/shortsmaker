@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_drawn_opener.py"
 type: "code"
-community: "make_opener"
+community: "clean_full"
 location: "L116"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/make_opener
+  - community/clean_full
 ---
 
 # look()
@@ -16,4 +16,4 @@ tags:
 - [[node_run()]] - `calls` [EXTRACTED]
 - [[test_drawn_opener.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/make_opener
+#graphify/code #graphify/EXTRACTED #community/clean_full

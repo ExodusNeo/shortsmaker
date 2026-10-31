@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/seo.py"
 type: "code"
-community: "test_topic_ideas.py"
+community: "fake_ai"
 location: "L21"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_topic_ideaspy
+  - community/fake_ai
 ---
 
 # seo_pass()
@@ -27,4 +27,4 @@ tags:
 - [[test_seo_pass_empty_no_ai()]] - `calls` [EXTRACTED]
 - [[test_seo_pass_research_seeds_dict_and_list()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_topic_ideaspy
+#graphify/code #graphify/EXTRACTED #community/fake_ai

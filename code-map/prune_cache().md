@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/picture_pool.py"
 type: "code"
-community: "time"
+community: "main"
 location: "L195"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/time
+  - community/main
 ---
 
 # prune_cache()
@@ -19,4 +19,4 @@ tags:
 - [[test_prune_cache_handles_pools()]] - `calls` [EXTRACTED]
 - [[time]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/time
+#graphify/code #graphify/EXTRACTED #community/main

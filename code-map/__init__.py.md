@@ -43,6 +43,7 @@ tags:
 - [[test_blender_render.py]] - `imports_from` [EXTRACTED]
 - [[test_blender_run.py]] - `imports_from` [EXTRACTED]
 - [[test_blender_scene.py]] - `imports_from` [EXTRACTED]
+- [[test_codex.py]] - `imports_from` [EXTRACTED]
 - [[test_drawn_opener.py]] - `imports_from` [EXTRACTED]
 - [[test_edit_project.py]] - `imports_from` [EXTRACTED]
 - [[test_first_second.py]] - `imports_from` [EXTRACTED]

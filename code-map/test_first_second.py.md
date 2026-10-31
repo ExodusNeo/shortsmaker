@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_first_second.py"
 type: "code"
-community: "test_full_scenes.py"
+community: "test_first_second.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_full_scenespy
+  - community/test_first_secondpy
 ---
 
 # test_first_second.py
@@ -27,6 +27,7 @@ tags:
 - [[state()]] - `contains` [EXTRACTED]
 - [[sys]] - `imports` [EXTRACTED]
 - [[tempfile]] - `imports` [EXTRACTED]
+- [[test_failed_preview_clears_previous_opener_score()]] - `contains` [EXTRACTED]
 - [[test_fix_round_user_confirmation()]] - `contains` [EXTRACTED]
 - [[test_good_opening_or_no_reply_changes_nothing()]] - `contains` [EXTRACTED]
 - [[test_logbook_marks_tiny_samples()]] - `contains` [EXTRACTED]
@@ -41,4 +42,4 @@ tags:
 - [[test_swap_pictures_trades_real_pictures()]] - `contains` [EXTRACTED]
 - [[traceback]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_full_scenespy
+#graphify/code #graphify/EXTRACTED #community/test_first_secondpy

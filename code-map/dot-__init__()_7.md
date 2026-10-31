@@ -1,17 +1,17 @@
 ---
-source_file: "tools/split_make_shorts.py"
+source_file: "tests/test_pictures_first.py"
 type: "code"
-community: "split_make_shorts.py"
-location: "L385"
+community: "fake_ai"
+location: "L115"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/split_make_shortspy
+  - community/fake_ai
 ---
 
 # .__init__()
 
 ## Connections
-- [[Unqualify]] - `method` [EXTRACTED]
+- [[fake_ai]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/split_make_shortspy
+#graphify/code #graphify/EXTRACTED #community/fake_ai

@@ -1,21 +1,22 @@
 ---
 type: community
-members: 24
+members: 26
 ---
 
 # invent_component
 
-**Members:** 24 nodes
+**Members:** 26 nodes
 
 ## Members
 - [[(props, start, end) of a small preview where an invention is used its scene,…]] - rationale - shortsmaker/style_lab.py
 - [[Codes this Short's inventions (look  transition  overlay) into their slots; a…]] - rationale - shortsmaker/style_lab.py
-- [[Path_14]] - code
+- [[Path_16]] - code
 - [[Puts the empty placeholders back into remotionsrcstylegenerated (after a…]] - rationale - shortsmaker/style_lab.py
 - [[Rule breaks a compiler can't see in an AI-invented style component (see…]] - rationale - shortsmaker/style_lab.py
 - [[Runs fn() with ask_ai answering `codes` in turn, tsc_check returning `tsc`, and…]] - rationale - tests/test_style.py
 - [[The AI invents a new style component (`spec` = {title, brief, fallback}) for…]] - rationale - shortsmaker/style_lab.py
 - [[The empty invention slots (remotionsrcstyleplaceholders.json), by slot name.]] - rationale - shortsmaker/style_lab.py
+- [[The rules every invented component of `kind` follows, with the library's…]] - rationale - shortsmaker/style_lab.py
 - [[attempt()]] - code - shortsmaker/style_lab.py
 - [[invent_component()]] - code - shortsmaker/style_lab.py
 - [[invent_styles()]] - code - shortsmaker/style_lab.py
@@ -25,6 +26,7 @@ members: 24
 - [[run()_6]] - code - tests/test_style.py
 - [[style_placeholders()]] - code - shortsmaker/style_lab.py
 - [[style_preview()]] - code - shortsmaker/style_lab.py
+- [[style_rules()]] - code - shortsmaker/style_lab.py
 - [[test_failed_invention_keeps_the_others()]] - code - tests/test_style.py
 - [[test_invention_compile_failure_uses_fallback()]] - code - tests/test_style.py
 - [[test_invention_lint_failure_uses_fallback()]] - code - tests/test_style.py
@@ -41,15 +43,15 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 11 edges to [[_COMMUNITY_re]]
+- 10 edges to [[_COMMUNITY_test_full_scenes.py]]
 - 7 edges to [[_COMMUNITY_test_style.py]]
 - 4 edges to [[_COMMUNITY_render_remotion]]
-- 3 edges to [[_COMMUNITY_gather_pool]]
-- 2 edges to [[_COMMUNITY_approve_candidate]]
+- 3 edges to [[_COMMUNITY_style_library]]
+- 3 edges to [[_COMMUNITY_owner]]
+- 2 edges to [[_COMMUNITY_re]]
 - 2 edges to [[_COMMUNITY_json]]
 - 1 edge to [[_COMMUNITY_ask_ai]]
-- 1 edge to [[_COMMUNITY_style_library]]
-- 1 edge to [[_COMMUNITY_look_and_fix]]
+- 1 edge to [[_COMMUNITY_subprocess]]
 
 ## Top bridge nodes
 - [[invent_component()]] - degree 17, connects to 6 communities

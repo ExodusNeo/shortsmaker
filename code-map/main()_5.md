@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/cli.py"
 type: "code"
-community: "channel_profiles.py"
+community: "main"
 location: "L17"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/channel_profilespy
+  - community/main
 ---
 
 # main()
@@ -16,6 +16,7 @@ tags:
 - [[ask_count()]] - `calls` [EXTRACTED]
 - [[ask_yes()]] - `calls` [EXTRACTED]
 - [[cli.py]] - `contains` [EXTRACTED]
+- [[configure_brain()]] - `calls` [EXTRACTED]
 - [[fix_short()]] - `calls` [EXTRACTED]
 - [[gemini_model()]] - `calls` [EXTRACTED]
 - [[library_menu()]] - `calls` [EXTRACTED]
@@ -26,7 +27,7 @@ tags:
 - [[prune_cache()]] - `calls` [EXTRACTED]
 - [[prune_work()]] - `calls` [EXTRACTED]
 - [[re]] - `calls` [EXTRACTED]
-- [[render()_4]] - `calls` [EXTRACTED]
+- [[render()_3]] - `calls` [EXTRACTED]
 - [[require_rules()]] - `calls` [EXTRACTED]
 - [[save_channel()]] - `calls` [EXTRACTED]
 - [[seo_pass()]] - `calls` [EXTRACTED]
@@ -39,4 +40,4 @@ tags:
 - [[vault_refresh()]] - `calls` [EXTRACTED]
 - [[write_scripts()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/channel_profilespy
+#graphify/code #graphify/EXTRACTED #community/main

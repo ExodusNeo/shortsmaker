@@ -12,7 +12,7 @@ tags:
 # llm.py
 
 ## Connections
-- [[Headless Claude Code  Gemini (agy) calls that return JSON, with automatic…]] - `rationale_for` [EXTRACTED]
+- [[Headless Codex  Claude Code  Gemini (agy) calls that return JSON, with…]] - `rationale_for` [EXTRACTED]
 - [[__init__.py]] - `imports_from` [EXTRACTED]
 - [[ask_ai()]] - `contains` [EXTRACTED]
 - [[blender_plan.py]] - `imports_from` [EXTRACTED]
@@ -25,6 +25,7 @@ tags:
 - [[json]] - `imports` [EXTRACTED]
 - [[motion.py]] - `imports_from` [EXTRACTED]
 - [[os]] - `imports` [EXTRACTED]
+- [[other_ai()]] - `contains` [EXTRACTED]
 - [[pathlib]] - `imports_from` [EXTRACTED]
 - [[picker.py]] - `imports_from` [EXTRACTED]
 - [[picture_pool.py]] - `imports_from` [EXTRACTED]
@@ -34,6 +35,7 @@ tags:
 - [[review.py]] - `imports_from` [EXTRACTED]
 - [[rules.py]] - `imports_from` [EXTRACTED]
 - [[run_agy()]] - `contains` [EXTRACTED]
+- [[run_codex()]] - `contains` [EXTRACTED]
 - [[seo.py]] - `imports_from` [EXTRACTED]
 - [[session.py]] - `imports_from` [EXTRACTED]
 - [[shutil]] - `imports` [EXTRACTED]
@@ -42,6 +44,7 @@ tags:
 - [[sys]] - `imports` [EXTRACTED]
 - [[test_blender_plan.py]] - `imports_from` [EXTRACTED]
 - [[test_blender_run.py]] - `imports_from` [EXTRACTED]
+- [[test_codex.py]] - `imports_from` [EXTRACTED]
 - [[test_drawn_opener.py]] - `imports_from` [EXTRACTED]
 - [[test_first_second.py]] - `imports_from` [EXTRACTED]
 - [[test_full_scenes.py]] - `imports_from` [EXTRACTED]

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/rules.py"
 type: "code"
-community: "re"
+community: "rescue_graphics"
 location: "L156"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/re
+  - community/rescue_graphics
 ---
 
 # max_full()
@@ -18,4 +18,4 @@ tags:
 - [[rescue_graphics()]] - `calls` [EXTRACTED]
 - [[rules.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/re
+#graphify/code #graphify/EXTRACTED #community/rescue_graphics

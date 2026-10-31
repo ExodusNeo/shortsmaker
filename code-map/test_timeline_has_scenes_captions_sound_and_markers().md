@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_edit_project.py"
 type: "code"
-community: "ffmpeg"
+community: "edit_project.py"
 location: "L43"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ffmpeg
+  - community/edit_projectpy
 ---
 
 # test_timeline_has_scenes_captions_sound_and_markers()
@@ -18,4 +18,4 @@ tags:
 - [[test_edit_project.py]] - `contains` [EXTRACTED]
 - [[videos()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ffmpeg
+#graphify/code #graphify/EXTRACTED #community/edit_projectpy

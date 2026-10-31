@@ -12,6 +12,6 @@ tags:
 # Make one Short. With `state` (fix.bat or an automatic fix round), reuse its…
 
 ## Connections
-- [[render()_4]] - `rationale_for` [EXTRACTED]
+- [[render()_3]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/render

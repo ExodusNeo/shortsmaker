@@ -13,6 +13,6 @@ tags:
 
 ## Connections
 - [[motion.py]] - `contains` [EXTRACTED]
-- [[render()_4]] - `calls` [EXTRACTED]
+- [[render()_3]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/render

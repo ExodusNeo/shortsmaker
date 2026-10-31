@@ -1,19 +1,21 @@
 ---
 type: community
-members: 17
+members: 19
 ---
 
 # choose_images
 
-**Members:** 17 nodes
+**Members:** 19 nodes
 
 ## Members
+- [[dot-__enter__()_3]] - code - tests/test_pictures_first.py
 - [[dot-__exit__()_3]] - code - tests/test_pictures_first.py
 - [[dot-__init__()_8]] - code - tests/test_pictures_first.py
 - [[Build a broad multi-source pool of images and real video footage (per-scene…]] - rationale - shortsmaker/picker.py
-- [[Path_17]] - code
+- [[Path_19]] - code
 - [[choose_images()]] - code - shortsmaker/picker.py
 - [[choose_images() with network stubbed; gather_pool returns `extra` (and records…]] - rationale - tests/test_pictures_first.py
+- [[load_channel()]] - code - shortsmaker/channel_profiles.py
 - [[picking]] - code - tests/test_pictures_first.py
 - [[planned_short()]] - code - tests/test_pictures_first.py
 - [[scene()_1]] - code - tests/test_pictures_first.py
@@ -34,25 +36,26 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 14 edges to [[_COMMUNITY_test_pictures_first.py]]
-- 3 edges to [[_COMMUNITY_gather_pool]]
-- 3 edges to [[_COMMUNITY_prepare_topic]]
-- 1 edge to [[_COMMUNITY_test_rules.py]]
-- 1 edge to [[_COMMUNITY_clean_full]]
-- 1 edge to [[_COMMUNITY_ask_ai]]
-- 1 edge to [[_COMMUNITY_image_sources.py]]
-- 1 edge to [[_COMMUNITY_channel_profiles.py]]
+- 16 edges to [[_COMMUNITY_test_pictures_first.py]]
+- 5 edges to [[_COMMUNITY_gather_pool]]
+- 2 edges to [[_COMMUNITY_prepare_topic]]
+- 2 edges to [[_COMMUNITY_json]]
+- 2 edges to [[_COMMUNITY_test_full_scenes.py]]
 - 1 edge to [[_COMMUNITY_style_library]]
-- 1 edge to [[_COMMUNITY_json]]
-- 1 edge to [[_COMMUNITY_film_piece]]
-- 1 edge to [[_COMMUNITY_sfx_events]]
-- 1 edge to [[_COMMUNITY_test_style.py]]
 - 1 edge to [[_COMMUNITY_render]]
-- 1 edge to [[_COMMUNITY_test_full_scenes.py]]
+- 1 edge to [[_COMMUNITY_owner]]
+- 1 edge to [[_COMMUNITY_ask_ai]]
+- 1 edge to [[_COMMUNITY_re]]
+- 1 edge to [[_COMMUNITY_main_1]]
+- 1 edge to [[_COMMUNITY_fake_ai]]
+- 1 edge to [[_COMMUNITY_fix_short]]
+- 1 edge to [[_COMMUNITY_film_piece]]
+- 1 edge to [[_COMMUNITY_test_style.py]]
+- 1 edge to [[_COMMUNITY_capture_prompts]]
 
 ## Top bridge nodes
-- [[choose_images()]] - degree 24, connects to 14 communities
+- [[choose_images()]] - degree 24, connects to 11 communities
+- [[load_channel()]] - degree 6, connects to 5 communities
+- [[dot-__enter__()_3]] - degree 4, connects to 3 communities
 - [[picking]] - degree 12, connects to 2 communities
-- [[planned_short()]] - degree 10, connects to 2 communities
-- [[still()]] - degree 5, connects to 2 communities
-- [[scene()_1]] - degree 8, connects to 1 community
+- [[planned_short()]] - degree 10, connects to 1 community

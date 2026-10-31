@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "mark_details"
+community: "srt"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/mark_details
+  - community/srt
 ---
 
 # Path
 
 ## Connections
-- [[mark_details()]] - `references` [EXTRACTED]
+- [[srt()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/mark_details
+#graphify/code #graphify/EXTRACTED #community/srt

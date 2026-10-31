@@ -2,7 +2,7 @@
 source_file: "shortsmaker/editplan.py"
 type: "rationale"
 community: "edit_plan"
-location: "L52"
+location: "L53"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED

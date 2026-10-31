@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_full_scenes.py"
 type: "code"
-community: "apply_review_fixes"
+community: "ask"
 location: "L429"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/apply_review_fixes
+  - community/ask
 ---
 
 # test_review_uses_unused_pool_pictures_before_painting()
@@ -14,8 +14,8 @@ tags:
 ## Connections
 - [[Togo vs Balto 4 real pictures the review rejected became paintings while ~20…]] - `rationale_for` [EXTRACTED]
 - [[apply_review_fixes()]] - `calls` [EXTRACTED]
-- [[ask()_8]] - `contains` [EXTRACTED]
-- [[ask()_5]] - `indirect_call` [INFERRED]
+- [[ask()_7]] - `contains` [EXTRACTED]
+- [[ask()_4]] - `indirect_call` [INFERRED]
 - [[test_full_scenes.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/apply_review_fixes
+#graphify/code #graphify/EXTRACTED #community/ask

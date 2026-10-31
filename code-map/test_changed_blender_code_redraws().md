@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[fake_blender()]] - `calls` [EXTRACTED]
 - [[render_clips()]] - `calls` [EXTRACTED]
-- [[short()_1]] - `calls` [EXTRACTED]
+- [[short()_2]] - `calls` [EXTRACTED]
 - [[test_blender_render.py]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/test_blender_renderpy

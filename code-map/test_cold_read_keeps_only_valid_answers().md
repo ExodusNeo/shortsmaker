@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_story.py"
 type: "code"
-community: "ask_ai"
+community: "test_story.py"
 location: "L53"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ask_ai
+  - community/test_storypy
 ---
 
 # test_cold_read_keeps_only_valid_answers()
@@ -15,4 +15,4 @@ tags:
 - [[cold_read()]] - `calls` [EXTRACTED]
 - [[test_story.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ask_ai
+#graphify/code #graphify/EXTRACTED #community/test_storypy

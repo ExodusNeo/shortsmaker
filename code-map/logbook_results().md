@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/logbook.py"
 type: "code"
-community: "re"
+community: "fake_ai"
 location: "L97"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/re
+  - community/fake_ai
 ---
 
 # logbook_results()
@@ -19,4 +19,4 @@ tags:
 - [[test_logbook_marks_tiny_samples()]] - `calls` [EXTRACTED]
 - [[write_scripts()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/re
+#graphify/code #graphify/EXTRACTED #community/fake_ai

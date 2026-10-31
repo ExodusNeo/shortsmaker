@@ -29,6 +29,7 @@ tags:
 - [[test_blender_render.py]] - `imports` [EXTRACTED]
 - [[test_blender_run.py]] - `imports` [EXTRACTED]
 - [[test_blender_scene.py]] - `imports` [EXTRACTED]
+- [[test_codex.py]] - `imports` [EXTRACTED]
 - [[test_drawn_opener.py]] - `imports` [EXTRACTED]
 - [[test_edit_project.py]] - `imports` [EXTRACTED]
 - [[test_first_second.py]] - `imports` [EXTRACTED]

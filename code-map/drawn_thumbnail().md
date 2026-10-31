@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/short_render.py"
 type: "code"
-community: "test_blender_run.py"
+community: "test_blender_render.py"
 location: "L74"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_blender_runpy
+  - community/test_blender_renderpy
 ---
 
 # drawn_thumbnail()
@@ -18,7 +18,7 @@ tags:
 - [[io]] - `calls` [EXTRACTED]
 - [[load_pool()]] - `calls` [EXTRACTED]
 - [[re]] - `calls` [EXTRACTED]
-- [[render()_4]] - `calls` [EXTRACTED]
+- [[render()_3]] - `calls` [EXTRACTED]
 - [[scene_frames()]] - `calls` [EXTRACTED]
 - [[short_render.py]] - `contains` [EXTRACTED]
 - [[test_film_opener_is_skipped_and_bad_bytes_fall_back()]] - `calls` [EXTRACTED]
@@ -26,4 +26,4 @@ tags:
 - [[test_thumbnail_uses_the_real_photo()]] - `calls` [EXTRACTED]
 - [[thumbnail_order()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_blender_runpy
+#graphify/code #graphify/EXTRACTED #community/test_blender_renderpy

@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_story.py"
 type: "code"
-community: "local_voice"
+community: "test_story.py"
 location: "L19"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/local_voice
+  - community/test_storypy
 ---
 
 # scenes()
@@ -19,4 +19,4 @@ tags:
 - [[test_sentences_running_across_cuts_are_one_take()]] - `calls` [EXTRACTED]
 - [[test_story.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/local_voice
+#graphify/code #graphify/EXTRACTED #community/test_storypy

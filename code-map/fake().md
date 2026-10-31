@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_story.py"
 type: "code"
-community: "edit_scripts"
-location: "L191"
+community: "test_story.py"
+location: "L250"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/edit_scripts
+  - community/test_storypy
 ---
 
 # fake()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[test_editor_gets_one_second_pass_for_broken_rules()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/INFERRED #community/edit_scripts
+#graphify/code #graphify/INFERRED #community/test_storypy

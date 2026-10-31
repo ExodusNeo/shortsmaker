@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "test_full_scenes.py"
+community: "subprocess"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/test_full_scenespy
+  - community/subprocess
 ---
 
 # subprocess
@@ -26,7 +26,7 @@ tags:
 - [[image_sources.py]] - `imports` [EXTRACTED]
 - [[llm.py]] - `imports` [EXTRACTED]
 - [[local_job()]] - `calls` [EXTRACTED]
-- [[main()_1]] - `calls` [EXTRACTED]
+- [[main()_6]] - `calls` [EXTRACTED]
 - [[master_gain()]] - `calls` [EXTRACTED]
 - [[media_tools.py]] - `imports` [EXTRACTED]
 - [[moss_images()]] - `calls` [EXTRACTED]
@@ -37,7 +37,7 @@ tags:
 - [[quality_check()]] - `calls` [EXTRACTED]
 - [[qwen_voice.py]] - `imports` [EXTRACTED]
 - [[remotion_render.py]] - `imports` [EXTRACTED]
-- [[render()_4]] - `calls` [EXTRACTED]
+- [[render()_3]] - `calls` [EXTRACTED]
 - [[render_full.py]] - `imports` [EXTRACTED]
 - [[render_style.py]] - `imports` [EXTRACTED]
 - [[review.py]] - `imports` [EXTRACTED]
@@ -48,6 +48,7 @@ tags:
 - [[storyboard()]] - `calls` [EXTRACTED]
 - [[studio_speak()]] - `calls` [EXTRACTED]
 - [[test_blender_scene.py]] - `imports` [EXTRACTED]
+- [[test_codex.py]] - `imports` [EXTRACTED]
 - [[test_drawn_opener.py]] - `imports` [EXTRACTED]
 - [[test_edit_project.py]] - `imports` [EXTRACTED]
 - [[test_full_scenes.py]] - `imports` [EXTRACTED]
@@ -55,4 +56,4 @@ tags:
 - [[video_encoder()]] - `calls` [EXTRACTED]
 - [[voicestudio_up()]] - `calls` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/test_full_scenespy
+#graphify/concept #graphify/EXTRACTED #community/subprocess

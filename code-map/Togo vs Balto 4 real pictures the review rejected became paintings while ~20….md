@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_full_scenes.py"
 type: "rationale"
-community: "apply_review_fixes"
+community: "ask"
 location: "L430"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/apply_review_fixes
+  - community/ask
 ---
 
 # Togo vs Balto: 4 real pictures the review rejected became paintings while ~20…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[test_review_uses_unused_pool_pictures_before_painting()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/apply_review_fixes
+#graphify/rationale #graphify/EXTRACTED #community/ask

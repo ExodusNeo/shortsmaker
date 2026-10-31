@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/drawn_opener.py"
 type: "code"
-community: "json"
+community: "clean_full"
 location: "L47"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/json
+  - community/clean_full
 ---
 
 # lint()
@@ -18,4 +18,4 @@ tags:
 - [[re]] - `calls` [EXTRACTED]
 - [[test_lint()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/json
+#graphify/code #graphify/EXTRACTED #community/clean_full

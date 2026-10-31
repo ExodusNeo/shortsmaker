@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/logbook.py"
 type: "rationale"
-community: "re"
+community: "main"
 location: "L85"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/re
+  - community/main
 ---
 
 # make_shorts.py notes: rebuild every Short's vault page from the logbooks (each…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[vault_refresh()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/re
+#graphify/rationale #graphify/EXTRACTED #community/main

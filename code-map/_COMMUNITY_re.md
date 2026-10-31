@@ -1,46 +1,70 @@
 ---
 type: community
-members: 33
+members: 57
 ---
 
 # re
 
-**Members:** 33 nodes
+**Members:** 57 nodes
 
 ## Members
-- [[Command-line entry making a batch (`main`), fix.bat's one-scene re-render,…]] - rationale - shortsmaker/cli.py
+- [[(ok, credit). Public domainCC0 need no credit; all other WikimediaWikipedia…]] - rationale - shortsmaker/image_sources.py
+- [[A planned story sound {word, sound}, validated the word must be spoken in…]] - rationale - shortsmaker/audio_mix.py
+- [[Caption words the aligner gives for `text` (qwen_voice.align_words a token…]] - rationale - shortsmaker/gpu.py
+- [[Ensure money beats in economicsfinance Shorts don't go bare when the LLM omits…]] - rationale - shortsmaker/plan_rules.py
 - [[Extract (numeric_value, compact_display, short_label, trigger_phrase) from a…]] - rationale - shortsmaker/plan_rules.py
-- [[Planned full-screen motion graphics allowed per Short (default MAX_FULL_PLANNED…]] - rationale - shortsmaker/rules.py
-- [[Preview of every style-library preset for the owner each look on two real…]] - rationale - tests/render_style.py
-- [[Saves an invention that made it into a finished Short as a candidate for the…]] - rationale - shortsmaker/style_lab.py
-- [[The Short's page in the Obsidian vault thumbnail, storyboard, its logbook…]] - rationale - shortsmaker/logbook.py
+- [[GET from Wikimedia, spaced `gap` seconds apart, with a short backoff on rate…]] - rationale - shortsmaker/image_sources.py
+- [[Images used in an English Wikipedia article chosen by editors, so almost…]] - rationale - shortsmaker/image_sources.py
+- [[Keep titles that share a meaningful word with the query (including 2-3 letter…]] - rationale - shortsmaker/image_sources.py
+- [[Lowercase, accent-free word tokens, for matching names against spoken words.]] - rationale - shortsmaker/plan_rules.py
+- [[NASA photos (public domain), when the story touches space, flight or science.]] - rationale - shortsmaker/image_sources.py
+- [[NASA videos (public domain), as their mediumsmall MP4 renditions.]] - rationale - shortsmaker/footage.py
+- [[Pictures from Wikimedia Commons, Openverse, NASA and the Internet Archive, with…]] - rationale - shortsmaker/image_sources.py
+- [[Still images, magazinemanual scans, art and archival photos from the Internet…]] - rationale - shortsmaker/image_sources.py
+- [[Story arc delivery hook urgency - suspenseful investigation - payoff reveal.]] - rationale - shortsmaker/gpu.py
 - [[The code from an AI reply (code fences removed); None unless it exports the…]] - rationale - shortsmaker/style_lab.py
-- [[The logbook entries the owner has filled in (Views written down), at most the…]] - rationale - shortsmaker/logbook.py
-- [[The owner's logbook and the Obsidian vault pages.]] - rationale - shortsmaker/logbook.py
-- [[The style library invented looks, overlays and scene changes, candidates and…]] - rationale - shortsmaker/style_lab.py
-- [[Topics - Wikipedia research - writer - editor - director - fact check.]] - rationale - shortsmaker/writing.py
-- [[Total full-screen motion graphics (planned + rescued) allowed per Short…]] - rationale - shortsmaker/rules.py
+- [[The on-screen credit tag kind, a short name and the licence (Photo E. Mariz…]] - rationale - shortsmaker/image_sources.py
+- [[True when `cand` is a solo portraitheadshot of `person_name` (so a scene that…]] - rationale - shortsmaker/plan_rules.py
+- [[True when the Short's final scene is an open grammatical loop bridge into scene…]] - rationale - shortsmaker/plan_rules.py
+- [[True when the picture's subject would land under the top callouts (y ~180-680…]] - rationale - shortsmaker/frame_render.py
+- [[URL of a standard-size Wikimedia thumbnail the largest allowed step that fits…]] - rationale - shortsmaker/image_sources.py
+- [[Usable images from a WikimediaWikipedia API query photos, screenshots,…]] - rationale - shortsmaker/image_sources.py
+- [[Videos across the entire Internet Archive (historical film, retro gaming,…]] - rationale - shortsmaker/footage.py
+- [[Videos on Wikimedia Commons, as their 480p-720p WebM transcodes (seekable).]] - rationale - shortsmaker/footage.py
+- [[Voice every scene on the GPU CosyVoice (Mark Nelson, documentary) for the…]] - rationale - shortsmaker/gpu.py
+- [[archive_films()]] - code - shortsmaker/footage.py
+- [[archive_images()]] - code - shortsmaker/image_sources.py
+- [[article_images()]] - code - shortsmaker/image_sources.py
+- [[clean_sound()]] - code - shortsmaker/audio_mix.py
 - [[clean_style_code()]] - code - shortsmaker/style_lab.py
-- [[cli.py]] - code - shortsmaker/cli.py
-- [[library.bat the owner watches each invention the AI made for a Short and adds…]] - rationale - shortsmaker/style_lab.py
-- [[library_menu()]] - code - shortsmaker/style_lab.py
-- [[logbook.py]] - code - shortsmaker/logbook.py
-- [[logbook_results()]] - code - shortsmaker/logbook.py
-- [[make_shorts.py notes rebuild every Short's vault page from the logbooks (each…]] - rationale - shortsmaker/logbook.py
-- [[max_full()]] - code - shortsmaker/rules.py
-- [[max_full_planned()]] - code - shortsmaker/rules.py
-- [[os]] - concept
+- [[commons_films()]] - code - shortsmaker/footage.py
+- [[commons_search()]] - code - shortsmaker/image_sources.py
+- [[cosy_instruct()]] - code - shortsmaker/gpu.py
+- [[fetch()_1]] - code - shortsmaker/media_tools.py
+- [[fill_money_graphics()]] - code - shortsmaker/plan_rules.py
+- [[graphic_low()]] - code - shortsmaker/frame_render.py
+- [[image_sources.py]] - code - shortsmaker/image_sources.py
+- [[is_loop_short()]] - code - shortsmaker/plan_rules.py
+- [[is_person_portrait()]] - code - shortsmaker/plan_rules.py
+- [[local_voice()]] - code - shortsmaker/gpu.py
+- [[nasa_films()]] - code - shortsmaker/footage.py
+- [[nasa_images()]] - code - shortsmaker/image_sources.py
+- [[nasa_search()]] - code - shortsmaker/image_sources.py
+- [[on_topic()]] - code - shortsmaker/image_sources.py
 - [[parse_scene_money()]] - code - shortsmaker/plan_rules.py
 - [[re]] - concept
-- [[reject_candidate()]] - code - shortsmaker/style_lab.py
-- [[render_style.py]] - code - tests/render_style.py
-- [[save_candidate()]] - code - shortsmaker/style_lab.py
-- [[shutil]] - concept
-- [[style_lab.py]] - code - shortsmaker/style_lab.py
-- [[test_logbook_marks_tiny_samples()]] - code - tests/test_first_second.py
-- [[vault_page()]] - code - shortsmaker/logbook.py
-- [[vault_refresh()]] - code - shortsmaker/logbook.py
-- [[writing.py]] - code - shortsmaker/writing.py
+- [[short_credit()]] - code - shortsmaker/image_sources.py
+- [[spoken_count()]] - code - shortsmaker/gpu.py
+- [[test_clean_sound()]] - code - tests/test_full_scenes.py
+- [[test_fill_money_graphics_and_caps()]] - code - tests/test_full_scenes.py
+- [[threading]] - concept
+- [[thumb_url()]] - code - shortsmaker/image_sources.py
+- [[unicodedata]] - concept
+- [[urllib_error]] - concept
+- [[usable_license()]] - code - shortsmaker/image_sources.py
+- [[wm_files()]] - code - shortsmaker/image_sources.py
+- [[wm_get()]] - code - shortsmaker/image_sources.py
+- [[words_of()]] - code - shortsmaker/plan_rules.py
 
 ## Live Query (requires Dataview plugin)
 
@@ -50,51 +74,44 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 82 edges to [[_COMMUNITY_test_full_scenes.py]]
-- 16 edges to [[_COMMUNITY_channel_profiles.py]]
-- 14 edges to [[_COMMUNITY_json]]
-- 14 edges to [[_COMMUNITY_test_topic_ideas.py]]
-- 11 edges to [[_COMMUNITY_invent_component]]
-- 9 edges to [[_COMMUNITY_time]]
-- 8 edges to [[_COMMUNITY_local_voice]]
-- 7 edges to [[_COMMUNITY_clean_full]]
-- 6 edges to [[_COMMUNITY_approve_candidate]]
-- 6 edges to [[_COMMUNITY_test_rules.py]]
-- 6 edges to [[_COMMUNITY_test_style.py]]
+- 41 edges to [[_COMMUNITY_test_full_scenes.py]]
+- 12 edges to [[_COMMUNITY_json]]
+- 11 edges to [[_COMMUNITY_gather_pool]]
+- 11 edges to [[_COMMUNITY_subprocess]]
+- 9 edges to [[_COMMUNITY_clean_full]]
+- 8 edges to [[_COMMUNITY_gpu.py]]
+- 7 edges to [[_COMMUNITY_topic_ideas.py]]
+- 6 edges to [[_COMMUNITY_render]]
 - 5 edges to [[_COMMUNITY_write_scripts]]
-- 4 edges to [[_COMMUNITY_style_library]]
-- 4 edges to [[_COMMUNITY_test_blender_run.py]]
-- 4 edges to [[_COMMUNITY_code_custom_scenes]]
-- 3 edges to [[_COMMUNITY_render_remotion]]
-- 3 edges to [[_COMMUNITY_visual_review]]
-- 3 edges to [[_COMMUNITY_image_sources.py]]
-- 3 edges to [[_COMMUNITY_render]]
-- 3 edges to [[_COMMUNITY_edit_scripts]]
-- 3 edges to [[_COMMUNITY_test_pictures_first.py]]
-- 2 edges to [[_COMMUNITY_ffmpeg]]
-- 2 edges to [[_COMMUNITY_h3_run.py]]
-- 2 edges to [[_COMMUNITY_apply_review_fixes]]
-- 2 edges to [[_COMMUNITY_story_problems]]
+- 5 edges to [[_COMMUNITY_audio_mix.py]]
+- 4 edges to [[_COMMUNITY_test_story.py]]
+- 4 edges to [[_COMMUNITY_rescue_graphics]]
+- 4 edges to [[_COMMUNITY_main_1]]
+- 4 edges to [[_COMMUNITY_align_words]]
+- 3 edges to [[_COMMUNITY_edit_project.py]]
+- 3 edges to [[_COMMUNITY_drawn_opener.py]]
+- 3 edges to [[_COMMUNITY_code_custom_scenes]]
+- 2 edges to [[_COMMUNITY_frame_maker]]
+- 2 edges to [[_COMMUNITY_invent_component]]
+- 2 edges to [[_COMMUNITY_fake_ai]]
 - 1 edge to [[_COMMUNITY_test_h3_handoff.py]]
-- 1 edge to [[_COMMUNITY_local_clips]]
-- 1 edge to [[_COMMUNITY_opener_graphic]]
-- 1 edge to [[_COMMUNITY_ask_ai]]
-- 1 edge to [[_COMMUNITY_captions]]
-- 1 edge to [[_COMMUNITY_first_second_check]]
-- 1 edge to [[_COMMUNITY_clean_pics]]
-- 1 edge to [[_COMMUNITY_look_and_fix]]
-- 1 edge to [[_COMMUNITY_paint_instead]]
-- 1 edge to [[_COMMUNITY_full_props]]
-- 1 edge to [[_COMMUNITY_check_twists]]
+- 1 edge to [[_COMMUNITY_test_rules.py]]
+- 1 edge to [[_COMMUNITY_full_cues]]
+- 1 edge to [[_COMMUNITY_test_blender_render.py]]
+- 1 edge to [[_COMMUNITY_test_on_topic_ignores_a_lone_shared_name]]
+- 1 edge to [[_COMMUNITY_choose_images]]
+- 1 edge to [[_COMMUNITY_trim_borders]]
+- 1 edge to [[_COMMUNITY_fix_short]]
+- 1 edge to [[_COMMUNITY_quality_check]]
 - 1 edge to [[_COMMUNITY_film_piece]]
-- 1 edge to [[_COMMUNITY_music_gain]]
-- 1 edge to [[_COMMUNITY_mark_details]]
+- 1 edge to [[_COMMUNITY_test_pictures_first.py]]
 - 1 edge to [[_COMMUNITY_Local GPU Worker]]
 - 1 edge to [[_COMMUNITY_split_make_shorts.py]]
+- 1 edge to [[_COMMUNITY_test_style.py]]
 
 ## Top bridge nodes
-- [[re]] - degree 70, connects to 25 communities
-- [[shutil]] - degree 42, connects to 19 communities
-- [[writing.py]] - degree 42, connects to 16 communities
-- [[style_lab.py]] - degree 39, connects to 10 communities
-- [[logbook.py]] - degree 24, connects to 7 communities
+- [[re]] - degree 70, connects to 26 communities
+- [[image_sources.py]] - degree 42, connects to 9 communities
+- [[words_of()]] - degree 22, connects to 6 communities
+- [[local_voice()]] - degree 13, connects to 5 communities
+- [[fetch()_1]] - degree 11, connects to 4 communities

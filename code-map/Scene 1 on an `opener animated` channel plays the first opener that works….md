@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/short_render.py"
 type: "rationale"
-community: "make_opener"
+community: "render"
 location: "L99"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/make_opener
+  - community/render
 ---
 
 # Scene 1 on an `opener: animated` channel plays the first opener that works…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[use_opener()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/make_opener
+#graphify/rationale #graphify/EXTRACTED #community/render

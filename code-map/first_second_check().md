@@ -1,18 +1,18 @@
 ---
 source_file: "shortsmaker/review.py"
 type: "code"
-community: "first_second_check"
+community: "test_first_second.py"
 location: "L139"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/first_second_check
+  - community/test_first_secondpy
 ---
 
 # first_second_check()
 
 ## Connections
-- [[Path_21]] - `references` [EXTRACTED]
+- [[Path_24]] - `references` [EXTRACTED]
 - [[Would a stranger scrolling the Shorts feed stop here Stayed-to-watch is…]] - `rationale_for` [EXTRACTED]
 - [[ask_ai()]] - `calls` [EXTRACTED]
 - [[capture_prompts()]] - `calls` [EXTRACTED]
@@ -21,10 +21,11 @@ tags:
 - [[full_summary()]] - `calls` [EXTRACTED]
 - [[is_num()]] - `calls` [EXTRACTED]
 - [[load_pool()]] - `calls` [EXTRACTED]
-- [[render()_4]] - `calls` [EXTRACTED]
+- [[render()_3]] - `calls` [EXTRACTED]
 - [[review.py]] - `contains` [EXTRACTED]
 - [[run_check()]] - `calls` [EXTRACTED]
 - [[shutil]] - `calls` [EXTRACTED]
+- [[test_failed_preview_clears_previous_opener_score()]] - `calls` [EXTRACTED]
 - [[test_opener_prompt_shows_each_scenes_line_and_picture()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/first_second_check
+#graphify/code #graphify/EXTRACTED #community/test_first_secondpy

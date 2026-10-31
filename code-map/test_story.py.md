@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_story.py"
 type: "code"
-community: "test_full_scenes.py"
+community: "test_story.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_full_scenespy
+  - community/test_storypy
 ---
 
 # test_story.py
@@ -15,6 +15,7 @@ tags:
 - [[Tests for how stories are told (2026-10-22) one voice take per sentence cut…]] - `rationale_for` [EXTRACTED]
 - [[__init__.py]] - `imports_from` [EXTRACTED]
 - [[config.py]] - `imports_from` [EXTRACTED]
+- [[editplan.py]] - `imports_from` [EXTRACTED]
 - [[gpu.py]] - `imports_from` [EXTRACTED]
 - [[json]] - `imports` [EXTRACTED]
 - [[llm.py]] - `imports_from` [EXTRACTED]
@@ -29,9 +30,12 @@ tags:
 - [[sys]] - `imports` [EXTRACTED]
 - [[tempfile]] - `imports` [EXTRACTED]
 - [[test_a_take_is_cut_between_the_scenes_words()]] - `contains` [EXTRACTED]
+- [[test_cold_read_handles_malformed_reply()]] - `contains` [EXTRACTED]
 - [[test_cold_read_keeps_only_valid_answers()]] - `contains` [EXTRACTED]
+- [[test_cold_read_uses_other_ai_in_solo_and_collaborative_modes()]] - `contains` [EXTRACTED]
 - [[test_cold_read_verdicts()]] - `contains` [EXTRACTED]
 - [[test_editor_gets_one_second_pass_for_broken_rules()]] - `contains` [EXTRACTED]
+- [[test_failed_second_read_clears_old_verdict()]] - `contains` [EXTRACTED]
 - [[test_first_sentence_reads_across_the_cut()]] - `contains` [EXTRACTED]
 - [[test_logbook_hook_line_is_the_whole_first_sentence()]] - `contains` [EXTRACTED]
 - [[test_no_hook_setting_no_hook_check()]] - `contains` [EXTRACTED]
@@ -50,4 +54,4 @@ tags:
 - [[twist_short()]] - `contains` [EXTRACTED]
 - [[writing.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_full_scenespy
+#graphify/code #graphify/EXTRACTED #community/test_storypy

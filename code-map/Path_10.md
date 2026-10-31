@@ -1,17 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "local_voice"
+community: "json"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/local_voice
+  - community/json
 ---
 
 # Path
 
 ## Connections
-- [[log_short()]] - `references` [EXTRACTED]
-- [[vault_page()]] - `references` [EXTRACTED]
+- [[fit_start()]] - `references` [EXTRACTED]
+- [[saved_file()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/local_voice
+#graphify/code #graphify/EXTRACTED #community/json

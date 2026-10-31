@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_story.py"
 type: "code"
-community: "story_problems"
+community: "test_story.py"
 location: "L23"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/story_problems
+  - community/test_storypy
 ---
 
 # read()
@@ -20,4 +20,4 @@ tags:
 - [[test_story_problems_flags_summary_hook()]] - `calls` [EXTRACTED]
 - [[test_story_problems_money_claim()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/story_problems
+#graphify/code #graphify/EXTRACTED #community/test_storypy
