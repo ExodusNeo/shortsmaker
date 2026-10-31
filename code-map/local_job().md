@@ -12,7 +12,7 @@ tags:
 # local_job()
 
 ## Connections
-- [[Path_3]] - `references` [EXTRACTED]
+- [[Path_4]] - `references` [EXTRACTED]
 - [[Run a batch on this PC's GPU through a local_ai worker (gen.py, or…]] - `rationale_for` [EXTRACTED]
 - [[gpu.py]] - `contains` [EXTRACTED]
 - [[json]] - `calls` [EXTRACTED]
@@ -20,7 +20,7 @@ tags:
 - [[local_voice()]] - `calls` [EXTRACTED]
 - [[paint_instead()]] - `calls` [EXTRACTED]
 - [[paint_opener_start()]] - `calls` [EXTRACTED]
-- [[render()_3]] - `calls` [EXTRACTED]
+- [[render()_2]] - `calls` [EXTRACTED]
 - [[subprocess]] - `calls` [EXTRACTED]
 - [[test_local_job_retries_a_hard_crash()]] - `calls` [EXTRACTED]
 

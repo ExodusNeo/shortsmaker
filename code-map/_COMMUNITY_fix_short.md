@@ -1,26 +1,27 @@
 ---
 type: community
-members: 13
+members: 14
 ---
 
 # fix_short
 
-**Members:** 13 nodes
+**Members:** 14 nodes
 
 ## Members
-- [[Draft channelsname.rules.md for a new channel the AI copies the sections of…]] - rationale - shortsmaker/rules.py
-- [[Path_18]] - code
-- [[Shared by batch runs and fix.bat Gemini pairs with Codex; explicit Claude…]] - rationale - shortsmaker/channel_profiles.py
-- [[configure_brain()]] - code - shortsmaker/channel_profiles.py
-- [[draft_rules()]] - code - shortsmaker/rules.py
+- [[A mark card circles a detail of the old picture it must go when the picture…]] - rationale - tests/test_full_scenes.py
+- [[Ask for a number 1..n (Enter = default, when there is one).]] - rationale - shortsmaker/channel_profiles.py
+- [[Path_24]] - code
+- [[ask_number()]] - code - shortsmaker/channel_profiles.py
+- [[fix  auto-fix scene i drops its picture and gets a freshly painted one…]] - rationale - shortsmaker/review.py
 - [[fix.bat re-render a recent Short with one scene changed, keeping its pictures,…]] - rationale - shortsmaker/cli.py
+- [[fix scene i shows scene k's picture. A real photofilm is a picture choice; an…]] - rationale - shortsmaker/cli.py
 - [[fix_short()]] - code - shortsmaker/cli.py
-- [[load_rules, but a channel with no rules file yet (a failed draft, a profile…]] - rationale - shortsmaker/rules.py
-- [[require_rules()]] - code - shortsmaker/rules.py
-- [[test_codex_cold_reader_and_quota_fallback_never_call_claude()]] - code - tests/test_codex.py
+- [[paint_new()]] - code - shortsmaker/review.py
 - [[test_fix_bat_explains_a_drawn_short()]] - code - tests/test_blender_run.py
 - [[test_fix_checks_rules_before_asking_for_a_scene()]] - code - tests/test_rules.py
-- [[test_missing_rules_file_is_drafted()]] - code - tests/test_rules.py
+- [[test_new_picture_drops_mark()]] - code - tests/test_full_scenes.py
+- [[test_paint_new_clears_full()]] - code - tests/test_full_scenes.py
+- [[use_picture_from()]] - code - shortsmaker/cli.py
 
 ## Live Query (requires Dataview plugin)
 
@@ -30,24 +31,24 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 7 edges to [[_COMMUNITY_test_full_scenes.py]]
-- 5 edges to [[_COMMUNITY_main_1]]
-- 3 edges to [[_COMMUNITY_json]]
+- 5 edges to [[_COMMUNITY_json]]
+- 3 edges to [[_COMMUNITY_test_full_scenes.py]]
 - 2 edges to [[_COMMUNITY_render]]
-- 2 edges to [[_COMMUNITY_test_story.py]]
-- 2 edges to [[_COMMUNITY_apply_review_fixes]]
-- 2 edges to [[_COMMUNITY_run_draft]]
-- 2 edges to [[_COMMUNITY_test_rules.py]]
-- 1 edge to [[_COMMUNITY_ask_ai]]
+- 2 edges to [[_COMMUNITY_shutil]]
+- 2 edges to [[_COMMUNITY_main_1]]
+- 1 edge to [[_COMMUNITY_pick_channel]]
 - 1 edge to [[_COMMUNITY_choose_images]]
-- 1 edge to [[_COMMUNITY_rewrite_paint_prompts]]
-- 1 edge to [[_COMMUNITY_rescue_graphics]]
-- 1 edge to [[_COMMUNITY_re]]
+- 1 edge to [[_COMMUNITY_apply_review_fixes]]
+- 1 edge to [[_COMMUNITY_require_rules]]
+- 1 edge to [[_COMMUNITY_configure_brain]]
 - 1 edge to [[_COMMUNITY_capture_prompts]]
+- 1 edge to [[_COMMUNITY_clean_full]]
+- 1 edge to [[_COMMUNITY_visual_review]]
+- 1 edge to [[_COMMUNITY_test_rules.py]]
 
 ## Top bridge nodes
-- [[fix_short()]] - degree 17, connects to 8 communities
-- [[draft_rules()]] - degree 9, connects to 6 communities
-- [[require_rules()]] - degree 8, connects to 4 communities
-- [[configure_brain()]] - degree 6, connects to 3 communities
-- [[test_codex_cold_reader_and_quota_fallback_never_call_claude()]] - degree 3, connects to 2 communities
+- [[fix_short()]] - degree 17, connects to 10 communities
+- [[paint_new()]] - degree 7, connects to 3 communities
+- [[use_picture_from()]] - degree 7, connects to 2 communities
+- [[ask_number()]] - degree 5, connects to 2 communities
+- [[test_new_picture_drops_mark()]] - degree 4, connects to 1 community

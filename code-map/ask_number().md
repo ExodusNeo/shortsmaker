@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/channel_profiles.py"
 type: "code"
-community: "test_full_scenes.py"
+community: "fix_short"
 location: "L56"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_full_scenespy
+  - community/fix_short
 ---
 
 # ask_number()
@@ -18,4 +18,4 @@ tags:
 - [[fix_short()]] - `calls` [EXTRACTED]
 - [[library_menu()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_full_scenespy
+#graphify/code #graphify/EXTRACTED #community/fix_short

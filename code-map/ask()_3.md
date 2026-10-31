@@ -1,17 +1,18 @@
 ---
-source_file: "tests/test_story.py"
+source_file: "tests/test_blender_plan.py"
 type: "code"
-community: "test_story.py"
-location: "L86"
+community: "test_blender_plan.py"
+location: "L87"
 tags:
   - graphify/code
-  - graphify/INFERRED
-  - community/test_storypy
+  - graphify/EXTRACTED
+  - community/test_blender_planpy
 ---
 
 # ask()
 
 ## Connections
-- [[test_cold_read_uses_other_ai_in_solo_and_collaborative_modes()]] - `indirect_call` [INFERRED]
+- [[plan()]] - `calls` [EXTRACTED]
+- [[test_plan_builds_retries_then_defaults()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/INFERRED #community/test_storypy
+#graphify/code #graphify/EXTRACTED #community/test_blender_planpy

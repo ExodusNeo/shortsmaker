@@ -31,6 +31,7 @@ tags:
 - [[rules.py]] - `imports_from` [EXTRACTED]
 - [[seo.py]] - `imports_from` [EXTRACTED]
 - [[short_render.py]] - `imports_from` [EXTRACTED]
+- [[test_ai_modes.py]] - `imports_from` [EXTRACTED]
 - [[test_blender_plan.py]] - `imports_from` [EXTRACTED]
 - [[test_codex.py]] - `imports_from` [EXTRACTED]
 - [[test_drawn_opener.py]] - `imports_from` [EXTRACTED]

@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "choose_images"
+community: "pick_channel"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/choose_images
+  - community/pick_channel
 ---
 
 # Path
 
 ## Connections
-- [[choose_images()]] - `references` [EXTRACTED]
+- [[draft_rules()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/choose_images
+#graphify/code #graphify/EXTRACTED #community/pick_channel

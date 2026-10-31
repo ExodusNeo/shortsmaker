@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_opener_graphic.py"
 type: "code"
-community: "render"
+community: "test_weak_opener_graphic_fixes_then_handoff"
 location: "L21"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/render
+  - community/test_weak_opener_graphic_fixes_then_handoff
 ---
 
 # test_weak_opener_graphic_fixes_then_handoff()
@@ -22,4 +22,4 @@ tags:
 - [[test_opener_graphic.py]] - `contains` [EXTRACTED]
 - [[weak_opener_graphic()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/render
+#graphify/code #graphify/EXTRACTED #community/test_weak_opener_graphic_fixes_then_handoff

@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "test_full_scenes.py"
+community: "shutil"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/test_full_scenespy
+  - community/shutil
 ---
 
 # shutil
@@ -25,7 +25,7 @@ tags:
 - [[logbook.py]] - `imports` [EXTRACTED]
 - [[main()_1]] - `calls` [EXTRACTED]
 - [[main()_5]] - `calls` [EXTRACTED]
-- [[main()_6]] - `calls` [EXTRACTED]
+- [[main()_2]] - `calls` [EXTRACTED]
 - [[motion.py]] - `imports` [EXTRACTED]
 - [[paint_instead()]] - `calls` [EXTRACTED]
 - [[paint_opener_start()]] - `calls` [EXTRACTED]
@@ -35,7 +35,7 @@ tags:
 - [[prune_work()]] - `calls` [EXTRACTED]
 - [[reject_candidate()]] - `calls` [EXTRACTED]
 - [[remotion_render.py]] - `imports` [EXTRACTED]
-- [[render()_3]] - `calls` [EXTRACTED]
+- [[render()_2]] - `calls` [EXTRACTED]
 - [[render_full.py]] - `imports` [EXTRACTED]
 - [[render_remotion()]] - `calls` [EXTRACTED]
 - [[render_style.py]] - `imports` [EXTRACTED]
@@ -54,4 +54,4 @@ tags:
 - [[write_scripts()]] - `calls` [EXTRACTED]
 - [[writing.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/test_full_scenespy
+#graphify/concept #graphify/EXTRACTED #community/shutil

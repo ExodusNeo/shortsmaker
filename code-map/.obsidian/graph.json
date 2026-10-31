@@ -22,14 +22,14 @@
       }
     },
     {
-      "query": "tag:#community/json",
+      "query": "tag:#community/shutil",
       "color": {
         "a": 1,
         "rgb": 7780274
       }
     },
     {
-      "query": "tag:#community/ask_ai",
+      "query": "tag:#community/test_packagepy",
       "color": {
         "a": 1,
         "rgb": 5873999
@@ -43,7 +43,7 @@
       }
     },
     {
-      "query": "tag:#community/rescue_graphics",
+      "query": "tag:#community/json",
       "color": {
         "a": 1,
         "rgb": 11565729
@@ -57,7 +57,7 @@
       }
     },
     {
-      "query": "tag:#community/film_piece",
+      "query": "tag:#community/pool_pictures",
       "color": {
         "a": 1,
         "rgb": 10253663
@@ -92,7 +92,7 @@
       }
     },
     {
-      "query": "tag:#community/style_library",
+      "query": "tag:#community/test_stylepy",
       "color": {
         "a": 1,
         "rgb": 7780274
@@ -162,7 +162,7 @@
       }
     },
     {
-      "query": "tag:#community/edit_projectpy",
+      "query": "tag:#community/make",
       "color": {
         "a": 1,
         "rgb": 7780274
@@ -176,7 +176,7 @@
       }
     },
     {
-      "query": "tag:#community/test_blender_scenepy",
+      "query": "tag:#community/test_blender_planpy",
       "color": {
         "a": 1,
         "rgb": 15583560
@@ -204,7 +204,7 @@
       }
     },
     {
-      "query": "tag:#community/drawn_openerpy",
+      "query": "tag:#community/test_blender_scenepy",
       "color": {
         "a": 1,
         "rgb": 12234924
@@ -225,7 +225,7 @@
       }
     },
     {
-      "query": "tag:#community/clean_full",
+      "query": "tag:#community/drawn_openerpy",
       "color": {
         "a": 1,
         "rgb": 14767961
@@ -246,7 +246,7 @@
       }
     },
     {
-      "query": "tag:#community/owner",
+      "query": "tag:#community/test_weak_opener_graphic_fixes_then_handoff",
       "color": {
         "a": 1,
         "rgb": 15583560
@@ -309,7 +309,7 @@
       }
     },
     {
-      "query": "tag:#community/audio_mixpy",
+      "query": "tag:#community/music_gain",
       "color": {
         "a": 1,
         "rgb": 5873999
@@ -323,7 +323,7 @@
       }
     },
     {
-      "query": "tag:#community/re",
+      "query": "tag:#community/image_sourcespy",
       "color": {
         "a": 1,
         "rgb": 11565729
@@ -337,14 +337,14 @@
       }
     },
     {
-      "query": "tag:#community/topic_ideaspy",
+      "query": "tag:#community/re",
       "color": {
         "a": 1,
         "rgb": 10253663
       }
     },
     {
-      "query": "tag:#community/invent_component",
+      "query": "tag:#community/style_placeholders",
       "color": {
         "a": 1,
         "rgb": 12234924
@@ -365,7 +365,7 @@
       }
     },
     {
-      "query": "tag:#community/clean_look",
+      "query": "tag:#community/clean_pics",
       "color": {
         "a": 1,
         "rgb": 14767961
@@ -393,7 +393,7 @@
       }
     },
     {
-      "query": "tag:#community/fix_short",
+      "query": "tag:#community/pick_channel",
       "color": {
         "a": 1,
         "rgb": 11565729
@@ -407,14 +407,14 @@
       }
     },
     {
-      "query": "tag:#community/edit_plan",
+      "query": "tag:#community/style_library",
       "color": {
         "a": 1,
         "rgb": 10253663
       }
     },
     {
-      "query": "tag:#community/ask",
+      "query": "tag:#community/apply_review_fixes",
       "color": {
         "a": 1,
         "rgb": 12234924
@@ -435,7 +435,7 @@
       }
     },
     {
-      "query": "tag:#community/subprocess",
+      "query": "tag:#community/ffmpeg",
       "color": {
         "a": 1,
         "rgb": 14767961
@@ -449,14 +449,14 @@
       }
     },
     {
-      "query": "tag:#community/apply_review_fixes",
+      "query": "tag:#community/fix_short",
       "color": {
         "a": 1,
         "rgb": 5873999
       }
     },
     {
-      "query": "tag:#community/quality_check",
+      "query": "tag:#community/configure_brain",
       "color": {
         "a": 1,
         "rgb": 15583560
@@ -491,42 +491,42 @@
       }
     },
     {
-      "query": "tag:#community/run_draft",
+      "query": "tag:#community/opener_graphic",
       "color": {
         "a": 1,
         "rgb": 5142951
       }
     },
     {
-      "query": "tag:#community/trim_borders",
+      "query": "tag:#community/clean_full",
       "color": {
         "a": 1,
         "rgb": 15896107
       }
     },
     {
-      "query": "tag:#community/align_words",
+      "query": "tag:#community/qwen_voicepy",
       "color": {
         "a": 1,
         "rgb": 14767961
       }
     },
     {
-      "query": "tag:#community/run_agy",
+      "query": "tag:#community/ask_ai",
       "color": {
         "a": 1,
         "rgb": 7780274
       }
     },
     {
-      "query": "tag:#community/test_h3_runpy",
+      "query": "tag:#community/traceback",
       "color": {
         "a": 1,
         "rgb": 5873999
       }
     },
     {
-      "query": "tag:#community/test_stylepy",
+      "query": "tag:#community/drawn_thumbnail",
       "color": {
         "a": 1,
         "rgb": 15583560
@@ -540,21 +540,21 @@
       }
     },
     {
-      "query": "tag:#community/trend_research",
+      "query": "tag:#community/captions",
       "color": {
         "a": 1,
         "rgb": 16752039
       }
     },
     {
-      "query": "tag:#community/rewrite_paint_prompts",
+      "query": "tag:#community/invent_component",
       "color": {
         "a": 1,
         "rgb": 10253663
       }
     },
     {
-      "query": "tag:#community/srt",
+      "query": "tag:#community/require_rules",
       "color": {
         "a": 1,
         "rgb": 12234924
@@ -568,17 +568,24 @@
       }
     },
     {
-      "query": "tag:#community/catalog_entries",
+      "query": "tag:#community/gemini_model",
       "color": {
         "a": 1,
         "rgb": 15896107
       }
     },
     {
-      "query": "tag:#community/test_on_topic_ignores_a_lone_shared_name",
+      "query": "tag:#community/invent_styles",
       "color": {
         "a": 1,
         "rgb": 14767961
+      }
+    },
+    {
+      "query": "tag:#community/style_props",
+      "color": {
+        "a": 1,
+        "rgb": 7780274
       }
     },
     {
@@ -586,13 +593,6 @@
       "color": {
         "a": 1,
         "rgb": 15583560
-      }
-    },
-    {
-      "query": "tag:#community/test_short_credit",
-      "color": {
-        "a": 1,
-        "rgb": 11565729
       }
     }
   ]

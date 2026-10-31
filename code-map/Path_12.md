@@ -1,20 +1,19 @@
 ---
 source_file: ""
 type: "code"
-community: "audio_mix.py"
+community: "drawn_opener.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/audio_mixpy
+  - community/drawn_openerpy
 ---
 
 # Path
 
 ## Connections
-- [[captions()_1]] - `references` [EXTRACTED]
-- [[music_gain()]] - `references` [EXTRACTED]
-- [[speak()]] - `references` [EXTRACTED]
-- [[story_sound()]] - `references` [EXTRACTED]
-- [[tts()_1]] - `references` [EXTRACTED]
+- [[make_opener()]] - `references` [EXTRACTED]
+- [[node_run()]] - `references` [EXTRACTED]
+- [[review()]] - `references` [EXTRACTED]
+- [[write()_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/audio_mixpy
+#graphify/code #graphify/EXTRACTED #community/drawn_openerpy

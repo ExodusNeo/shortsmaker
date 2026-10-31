@@ -1,12 +1,12 @@
 ---
 source_file: "local_ai/qwen_voice.py"
 type: "code"
-community: "align_words"
+community: "qwen_voice.py"
 location: "L125"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/align_words
+  - community/qwen_voicepy
 ---
 
 # studio_speak()
@@ -17,4 +17,4 @@ tags:
 - [[spoken_sentence()]] - `calls` [EXTRACTED]
 - [[subprocess]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/align_words
+#graphify/code #graphify/EXTRACTED #community/qwen_voicepy

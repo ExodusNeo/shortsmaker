@@ -1,19 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "clean_full"
+community: "shutil"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/clean_full
+  - community/shutil
 ---
 
 # Path
 
 ## Connections
-- [[make_opener()]] - `references` [EXTRACTED]
-- [[node_run()]] - `references` [EXTRACTED]
-- [[review()]] - `references` [EXTRACTED]
-- [[write()_1]] - `references` [EXTRACTED]
+- [[fit_start()]] - `references` [EXTRACTED]
+- [[saved_file()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/clean_full
+#graphify/code #graphify/EXTRACTED #community/shutil

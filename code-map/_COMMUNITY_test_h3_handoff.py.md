@@ -60,15 +60,17 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 10 edges to [[_COMMUNITY_gpu.py]]
-- 6 edges to [[_COMMUNITY_test_full_scenes.py]]
-- 1 edge to [[_COMMUNITY_json]]
+- 3 edges to [[_COMMUNITY_json]]
+- 2 edges to [[_COMMUNITY_traceback]]
+- 1 edge to [[_COMMUNITY_shutil]]
 - 1 edge to [[_COMMUNITY_re]]
 - 1 edge to [[_COMMUNITY_test_story.py]]
+- 1 edge to [[_COMMUNITY_test_full_scenes.py]]
 - 1 edge to [[_COMMUNITY_split_make_shorts.py]]
 
 ## Top bridge nodes
+- [[test_h3_handoff.py]] - degree 32, connects to 4 communities
 - [[unpack_clips()]] - degree 10, connects to 3 communities
-- [[test_h3_handoff.py]] - degree 32, connects to 2 communities
 - [[handoff()]] - degree 12, connects to 2 communities
 - [[h3_problems()]] - degree 4, connects to 1 community
 - [[h3_prompt()]] - degree 4, connects to 1 community

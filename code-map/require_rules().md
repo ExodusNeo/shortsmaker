@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/rules.py"
 type: "code"
-community: "fix_short"
+community: "require_rules"
 location: "L136"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/fix_short
+  - community/require_rules
 ---
 
 # require_rules()
@@ -21,4 +21,4 @@ tags:
 - [[rules.py]] - `contains` [EXTRACTED]
 - [[test_missing_rules_file_is_drafted()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/fix_short
+#graphify/code #graphify/EXTRACTED #community/require_rules

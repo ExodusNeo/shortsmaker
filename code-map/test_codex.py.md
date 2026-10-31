@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_codex.py"
 type: "code"
-community: "test_full_scenes.py"
+community: "json"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_full_scenespy
+  - community/json
 ---
 
 # test_codex.py
@@ -30,4 +30,4 @@ tags:
 - [[unittest_mock]] - `imports_from` [EXTRACTED]
 - [[writing.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_full_scenespy
+#graphify/code #graphify/EXTRACTED #community/json

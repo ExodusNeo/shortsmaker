@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/media_tools.py"
 type: "code"
-community: "re"
+community: "image_sources.py"
 location: "L9"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/re
+  - community/image_sourcespy
 ---
 
 # fetch()
@@ -24,4 +24,4 @@ tags:
 - [[search_suggestions()]] - `calls` [EXTRACTED]
 - [[wm_get()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/re
+#graphify/code #graphify/EXTRACTED #community/image_sourcespy

@@ -1,18 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "subprocess"
+community: "apply_review_fixes"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/subprocess
+  - community/apply_review_fixes
 ---
 
 # Path
 
 ## Connections
-- [[duration()]] - `references` [EXTRACTED]
-- [[ffmpeg()]] - `references` [EXTRACTED]
-- [[write_json()]] - `references` [EXTRACTED]
+- [[_review_state()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/subprocess
+#graphify/code #graphify/EXTRACTED #community/apply_review_fixes

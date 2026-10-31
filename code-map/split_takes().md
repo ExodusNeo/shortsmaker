@@ -1,19 +1,19 @@
 ---
 source_file: "shortsmaker/gpu.py"
 type: "code"
-community: "subprocess"
+community: "ffmpeg"
 location: "L158"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/subprocess
+  - community/ffmpeg
 ---
 
 # split_takes()
 
 ## Connections
 - [[Cut each take into its scenes halfway through the pause between their words…]] - `rationale_for` [EXTRACTED]
-- [[Path_3]] - `references` [EXTRACTED]
+- [[Path_4]] - `references` [EXTRACTED]
 - [[duration()]] - `calls` [EXTRACTED]
 - [[ffmpeg()]] - `calls` [EXTRACTED]
 - [[gpu.py]] - `contains` [EXTRACTED]
@@ -22,4 +22,4 @@ tags:
 - [[spoken_count()]] - `calls` [EXTRACTED]
 - [[test_a_take_is_cut_between_the_scenes_words()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/subprocess
+#graphify/code #graphify/EXTRACTED #community/ffmpeg

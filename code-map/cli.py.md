@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/cli.py"
 type: "code"
-community: "test_full_scenes.py"
+community: "json"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_full_scenespy
+  - community/json
 ---
 
 # cli.py
@@ -36,6 +36,7 @@ tags:
 - [[shutil]] - `imports` [EXTRACTED]
 - [[style_lab.py]] - `imports_from` [EXTRACTED]
 - [[sys]] - `imports` [EXTRACTED]
+- [[test_ai_modes.py]] - `imports_from` [EXTRACTED]
 - [[test_blender_run.py]] - `imports_from` [EXTRACTED]
 - [[test_full_scenes.py]] - `imports_from` [EXTRACTED]
 - [[test_package.py]] - `imports_from` [EXTRACTED]
@@ -43,4 +44,4 @@ tags:
 - [[use_picture_from()]] - `contains` [EXTRACTED]
 - [[writing.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_full_scenespy
+#graphify/code #graphify/EXTRACTED #community/json

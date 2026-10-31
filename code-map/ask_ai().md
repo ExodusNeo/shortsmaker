@@ -12,7 +12,7 @@ tags:
 # ask_ai()
 
 ## Connections
-- [[Headless planner call (BRAIN, or `brain` Claude or Gemini) that returns parsed…]] - `rationale_for` [EXTRACTED]
+- [[Headless planner call (BRAIN, or `brain` Codex, Claude or Gemini) that returns…]] - `rationale_for` [EXTRACTED]
 - [[Path_26]] - `references` [EXTRACTED]
 - [[catalog_pool()]] - `calls` [EXTRACTED]
 - [[check_twists()]] - `calls` [EXTRACTED]
@@ -45,6 +45,8 @@ tags:
 - [[start_picture_problems()]] - `calls` [EXTRACTED]
 - [[test_argon_out_of_quota_switches_to_flash()]] - `calls` [EXTRACTED]
 - [[test_claude_pinned_to_opus_high()]] - `calls` [EXTRACTED]
+- [[test_every_mode_can_continue_through_two_exhausted_ais()]] - `calls` [EXTRACTED]
+- [[test_exhausted_accounts_are_not_retried_when_all_three_are_empty()]] - `calls` [EXTRACTED]
 - [[test_gemini_reviews_get_the_main_model_bulk_pictures_flash()]] - `calls` [EXTRACTED]
 - [[test_gemini_timeout_switches_to_flash()]] - `calls` [EXTRACTED]
 - [[test_independent_review_falls_back_without_changing_solo_mode()]] - `calls` [EXTRACTED]

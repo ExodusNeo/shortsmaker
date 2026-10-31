@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_rules.py"
 type: "rationale"
-community: "run_draft"
+community: "test_rules.py"
 location: "L253"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/run_draft
+  - community/test_rulespy
 ---
 
 # draft_rules in a temp channels folder holding strange-history's rules; returns…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[run_draft()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/run_draft
+#graphify/rationale #graphify/EXTRACTED #community/test_rulespy

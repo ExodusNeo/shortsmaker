@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[dot-__enter__()]] - `calls` [EXTRACTED]
-- [[dot-__enter__()_3]] - `method` [EXTRACTED]
+- [[dot-__enter__()_1]] - `method` [EXTRACTED]
 - [[dot-__exit__()_1]] - `method` [EXTRACTED]
 - [[dot-__init__()]] - `method` [EXTRACTED]
 - [[Replaces the network functions for one test; `calls` records the search queries.]] - `rationale_for` [EXTRACTED]

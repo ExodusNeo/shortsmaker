@@ -31,21 +31,21 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 9 edges to [[_COMMUNITY_test_pictures_first.py]]
-- 5 edges to [[_COMMUNITY_test_full_scenes.py]]
-- 2 edges to [[_COMMUNITY_write_scripts]]
-- 2 edges to [[_COMMUNITY_json]]
-- 2 edges to [[_COMMUNITY_re]]
+- 6 edges to [[_COMMUNITY_re]]
+- 3 edges to [[_COMMUNITY_write_scripts]]
 - 1 edge to [[_COMMUNITY_gather_pool]]
-- 1 edge to [[_COMMUNITY_owner]]
 - 1 edge to [[_COMMUNITY_test_story.py]]
-- 1 edge to [[_COMMUNITY_ask_ai]]
+- 1 edge to [[_COMMUNITY_image_sources.py]]
 - 1 edge to [[_COMMUNITY_main_1]]
+- 1 edge to [[_COMMUNITY_test_full_scenes.py]]
 - 1 edge to [[_COMMUNITY_choose_images]]
+- 1 edge to [[_COMMUNITY_ask_ai]]
+- 1 edge to [[_COMMUNITY_json]]
 - 1 edge to [[_COMMUNITY_test_first_second.py]]
 
 ## Top bridge nodes
 - [[seo_pass()]] - degree 14, connects to 7 communities
-- [[fake_ai]] - degree 18, connects to 5 communities
+- [[fake_ai]] - degree 18, connects to 4 communities
 - [[logbook_results()]] - degree 6, connects to 3 communities
 - [[test_seo_pass_empty_no_ai()]] - degree 3, connects to 1 community
 - [[test_seo_pass_research_seeds_dict_and_list()]] - degree 3, connects to 1 community

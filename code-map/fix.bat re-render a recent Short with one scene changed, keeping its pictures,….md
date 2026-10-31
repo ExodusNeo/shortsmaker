@@ -2,7 +2,7 @@
 source_file: "shortsmaker/cli.py"
 type: "rationale"
 community: "fix_short"
-location: "L128"
+location: "L122"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED

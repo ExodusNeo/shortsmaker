@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_rules.py"
 type: "code"
-community: "run_draft"
+community: "test_rules.py"
 location: "L369"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/run_draft
+  - community/test_rulespy
 ---
 
 # test_draft_keeps_ai_headings_inside_their_section()
@@ -17,4 +17,4 @@ tags:
 - [[run_draft()]] - `calls` [EXTRACTED]
 - [[test_rules.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/run_draft
+#graphify/code #graphify/EXTRACTED #community/test_rulespy

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/channel_profiles.py"
 type: "rationale"
-community: "test_full_scenes.py"
+community: "fix_short"
 location: "L57"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/test_full_scenespy
+  - community/fix_short
 ---
 
 # Ask for a number 1..n (Enter = default, when there is one).
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[ask_number()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/test_full_scenespy
+#graphify/rationale #graphify/EXTRACTED #community/fix_short

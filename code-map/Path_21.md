@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "ask"
+community: "style_library"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ask
+  - community/style_library
 ---
 
 # Path
 
 ## Connections
-- [[_review_state()]] - `references` [EXTRACTED]
+- [[edit_plan()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ask
+#graphify/code #graphify/EXTRACTED #community/style_library

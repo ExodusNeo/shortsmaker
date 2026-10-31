@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "fix_short"
+community: "main"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/fix_short
+  - community/main
 ---
 
 # Path
 
 ## Connections
-- [[draft_rules()]] - `references` [EXTRACTED]
+- [[log_short()]] - `references` [EXTRACTED]
+- [[vault_page()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/fix_short
+#graphify/code #graphify/EXTRACTED #community/main

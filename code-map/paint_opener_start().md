@@ -12,13 +12,13 @@ tags:
 # paint_opener_start()
 
 ## Connections
-- [[Path_24]] - `references` [EXTRACTED]
+- [[Path_13]] - `references` [EXTRACTED]
 - [[The start picture for scene 1's AI clip (gpu.OPENER_START) a painting of the…]] - `rationale_for` [EXTRACTED]
 - [[fix_opener_graphic()]] - `calls` [EXTRACTED]
 - [[gemini_images()]] - `calls` [EXTRACTED]
 - [[local_job()]] - `calls` [EXTRACTED]
 - [[moss_images()]] - `calls` [EXTRACTED]
-- [[render()_3]] - `calls` [EXTRACTED]
+- [[render()_2]] - `calls` [EXTRACTED]
 - [[review.py]] - `contains` [EXTRACTED]
 - [[rewrite_paint_prompts()]] - `calls` [EXTRACTED]
 - [[shutil]] - `calls` [EXTRACTED]

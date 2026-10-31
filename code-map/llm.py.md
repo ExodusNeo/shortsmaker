@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/llm.py"
 type: "code"
-community: "test_full_scenes.py"
+community: "json"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_full_scenespy
+  - community/json
 ---
 
 # llm.py
@@ -42,6 +42,7 @@ tags:
 - [[style_lab.py]] - `imports_from` [EXTRACTED]
 - [[subprocess]] - `imports` [EXTRACTED]
 - [[sys]] - `imports` [EXTRACTED]
+- [[test_ai_modes.py]] - `imports_from` [EXTRACTED]
 - [[test_blender_plan.py]] - `imports_from` [EXTRACTED]
 - [[test_blender_run.py]] - `imports_from` [EXTRACTED]
 - [[test_codex.py]] - `imports_from` [EXTRACTED]
@@ -58,4 +59,4 @@ tags:
 - [[time]] - `imports` [EXTRACTED]
 - [[writing.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_full_scenespy
+#graphify/code #graphify/EXTRACTED #community/json

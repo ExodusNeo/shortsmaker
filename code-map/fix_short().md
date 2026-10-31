@@ -2,7 +2,7 @@
 source_file: "shortsmaker/cli.py"
 type: "code"
 community: "fix_short"
-location: "L127"
+location: "L121"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -21,7 +21,7 @@ tags:
 - [[main()_5]] - `calls` [EXTRACTED]
 - [[paint_new()]] - `calls` [EXTRACTED]
 - [[prune_work()]] - `calls` [EXTRACTED]
-- [[render()_3]] - `calls` [EXTRACTED]
+- [[render()_2]] - `calls` [EXTRACTED]
 - [[require_rules()]] - `calls` [EXTRACTED]
 - [[rescue_graphics()]] - `calls` [EXTRACTED]
 - [[rewrite_paint_prompts()]] - `calls` [EXTRACTED]

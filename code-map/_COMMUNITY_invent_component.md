@@ -1,39 +1,21 @@
 ---
 type: community
-members: 26
+members: 8
 ---
 
 # invent_component
 
-**Members:** 26 nodes
+**Members:** 8 nodes
 
 ## Members
 - [[(props, start, end) of a small preview where an invention is used its scene,…]] - rationale - shortsmaker/style_lab.py
-- [[Codes this Short's inventions (look  transition  overlay) into their slots; a…]] - rationale - shortsmaker/style_lab.py
-- [[Path_16]] - code
-- [[Puts the empty placeholders back into remotionsrcstylegenerated (after a…]] - rationale - shortsmaker/style_lab.py
 - [[Rule breaks a compiler can't see in an AI-invented style component (see…]] - rationale - shortsmaker/style_lab.py
-- [[Runs fn() with ask_ai answering `codes` in turn, tsc_check returning `tsc`, and…]] - rationale - tests/test_style.py
 - [[The AI invents a new style component (`spec` = {title, brief, fallback}) for…]] - rationale - shortsmaker/style_lab.py
-- [[The empty invention slots (remotionsrcstyleplaceholders.json), by slot name.]] - rationale - shortsmaker/style_lab.py
-- [[The rules every invented component of `kind` follows, with the library's…]] - rationale - shortsmaker/style_lab.py
 - [[attempt()]] - code - shortsmaker/style_lab.py
 - [[invent_component()]] - code - shortsmaker/style_lab.py
-- [[invent_styles()]] - code - shortsmaker/style_lab.py
 - [[lint_style_code()]] - code - shortsmaker/style_lab.py
-- [[restore_style_slots()]] - code - shortsmaker/style_lab.py
-- [[run()_5]] - code - tests/test_style.py
-- [[run()_6]] - code - tests/test_style.py
-- [[style_placeholders()]] - code - shortsmaker/style_lab.py
 - [[style_preview()]] - code - shortsmaker/style_lab.py
-- [[style_rules()]] - code - shortsmaker/style_lab.py
-- [[test_failed_invention_keeps_the_others()]] - code - tests/test_style.py
-- [[test_invention_compile_failure_uses_fallback()]] - code - tests/test_style.py
 - [[test_invention_lint_failure_uses_fallback()]] - code - tests/test_style.py
-- [[test_invention_passes_into_slot()]] - code - tests/test_style.py
-- [[test_placeholders_match_the_slots()]] - code - tests/test_style.py
-- [[test_slots_restored_after_render()]] - code - tests/test_style.py
-- [[with_fakes()_1]] - code - tests/test_style.py
 
 ## Live Query (requires Dataview plugin)
 
@@ -43,19 +25,19 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 10 edges to [[_COMMUNITY_test_full_scenes.py]]
-- 7 edges to [[_COMMUNITY_test_style.py]]
-- 4 edges to [[_COMMUNITY_render_remotion]]
-- 3 edges to [[_COMMUNITY_style_library]]
-- 3 edges to [[_COMMUNITY_owner]]
+- 5 edges to [[_COMMUNITY_style_placeholders]]
+- 4 edges to [[_COMMUNITY_json]]
 - 2 edges to [[_COMMUNITY_re]]
-- 2 edges to [[_COMMUNITY_json]]
+- 2 edges to [[_COMMUNITY_test_style.py]]
+- 1 edge to [[_COMMUNITY_gather_pool]]
+- 1 edge to [[_COMMUNITY_style_library]]
+- 1 edge to [[_COMMUNITY_code_custom_scenes]]
 - 1 edge to [[_COMMUNITY_ask_ai]]
-- 1 edge to [[_COMMUNITY_subprocess]]
+- 1 edge to [[_COMMUNITY_shutil]]
+- 1 edge to [[_COMMUNITY_invent_styles]]
 
 ## Top bridge nodes
-- [[invent_component()]] - degree 17, connects to 6 communities
-- [[style_placeholders()]] - degree 10, connects to 3 communities
-- [[restore_style_slots()]] - degree 8, connects to 3 communities
-- [[with_fakes()_1]] - degree 8, connects to 2 communities
-- [[invent_styles()]] - degree 6, connects to 2 communities
+- [[invent_component()]] - degree 17, connects to 10 communities
+- [[lint_style_code()]] - degree 6, connects to 3 communities
+- [[test_invention_lint_failure_uses_fallback()]] - degree 4, connects to 2 communities
+- [[style_preview()]] - degree 3, connects to 1 community

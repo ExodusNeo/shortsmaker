@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/audio_mix.py"
 type: "code"
-community: "re"
+community: "clean_full"
 location: "L93"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/re
+  - community/clean_full
 ---
 
 # clean_sound()
@@ -20,4 +20,4 @@ tags:
 - [[words_of()]] - `calls` [EXTRACTED]
 - [[write_scripts()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/re
+#graphify/code #graphify/EXTRACTED #community/clean_full

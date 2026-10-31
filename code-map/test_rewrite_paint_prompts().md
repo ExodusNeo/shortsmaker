@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_full_scenes.py"
 type: "code"
-community: "rewrite_paint_prompts"
+community: "capture_prompts"
 location: "L470"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/rewrite_paint_prompts
+  - community/capture_prompts
 ---
 
 # test_rewrite_paint_prompts()
@@ -14,8 +14,8 @@ tags:
 ## Connections
 - [[Mike's newsstand a repaint from the unchanged prompt painted the identical…]] - `rationale_for` [EXTRACTED]
 - [[ask()_12]] - `contains` [EXTRACTED]
-- [[ask()_4]] - `indirect_call` [INFERRED]
+- [[ask()_7]] - `indirect_call` [INFERRED]
 - [[rewrite_paint_prompts()]] - `calls` [EXTRACTED]
 - [[test_full_scenes.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/rewrite_paint_prompts
+#graphify/code #graphify/EXTRACTED #community/capture_prompts

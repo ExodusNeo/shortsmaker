@@ -12,7 +12,7 @@ tags:
 # planning
 
 ## Connections
-- [[dot-__enter__()_2]] - `method` [EXTRACTED]
+- [[dot-__enter__()_3]] - `method` [EXTRACTED]
 - [[dot-__exit__()]] - `method` [EXTRACTED]
 - [[dot-__init__()_1]] - `method` [EXTRACTED]
 - [[test_all_weak_returns_empty()]] - `calls` [EXTRACTED]

@@ -1,17 +1,20 @@
 ---
 source_file: ""
 type: "code"
-community: "film_piece"
+community: "make_paper"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/film_piece
+  - community/make_paper
 ---
 
 # Path
 
 ## Connections
-- [[film_piece()]] - `references` [EXTRACTED]
-- [[shot_span()]] - `references` [EXTRACTED]
+- [[ink_silhouette()]] - `references` [EXTRACTED]
+- [[make_paper()]] - `references` [EXTRACTED]
+- [[paint_instead()]] - `references` [EXTRACTED]
+- [[redraw_custom()]] - `references` [EXTRACTED]
+- [[render_remotion()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/film_piece
+#graphify/code #graphify/EXTRACTED #community/make_paper

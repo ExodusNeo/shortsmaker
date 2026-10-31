@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "render"
+community: "make"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/render
+  - community/make
 ---
 
 # Path
 
 ## Connections
-- [[to_vertical()]] - `references` [EXTRACTED]
+- [[short_folder()]] - `references` [EXTRACTED]
+- [[videos()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/render
+#graphify/code #graphify/EXTRACTED #community/make

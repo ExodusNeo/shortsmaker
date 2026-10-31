@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/audio_mix.py"
 type: "rationale"
-community: "audio_mix.py"
+community: "clean_full"
 location: "L102"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/audio_mixpy
+  - community/clean_full
 ---
 
 # At most MAX_STORY_SOUNDS story sounds per Short (the first ones), so each one…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[limit_sounds()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/audio_mixpy
+#graphify/rationale #graphify/EXTRACTED #community/clean_full

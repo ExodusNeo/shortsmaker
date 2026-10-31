@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/motion.py"
 type: "code"
-community: "subprocess"
+community: "test_style.py"
 location: "L309"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/subprocess
+  - community/test_stylepy
 ---
 
 # tsc_check()
@@ -20,4 +20,4 @@ tags:
 - [[shutil]] - `calls` [EXTRACTED]
 - [[subprocess]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/subprocess
+#graphify/code #graphify/EXTRACTED #community/test_stylepy

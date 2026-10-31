@@ -12,7 +12,7 @@ tags:
 # start_picture()
 
 ## Connections
-- [[Path_3]] - `references` [EXTRACTED]
+- [[Path_4]] - `references` [EXTRACTED]
 - [[The picture scene i's AI clip starts from scene 1's painted strangest moment…]] - `rationale_for` [EXTRACTED]
 - [[gpu.py]] - `contains` [EXTRACTED]
 - [[local_clips()]] - `calls` [EXTRACTED]

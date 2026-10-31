@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/channel_profiles.py"
 type: "code"
-community: "test_full_scenes.py"
+community: "json"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_full_scenespy
+  - community/json
 ---
 
 # channel_profiles.py
@@ -28,6 +28,7 @@ tags:
 - [[load_channel()]] - `contains` [EXTRACTED]
 - [[logging]] - `imports` [EXTRACTED]
 - [[new_channel()]] - `contains` [EXTRACTED]
+- [[normalize_brain()]] - `contains` [EXTRACTED]
 - [[pick_channel()]] - `contains` [EXTRACTED]
 - [[picker.py]] - `imports_from` [EXTRACTED]
 - [[plan_rules.py]] - `imports_from` [EXTRACTED]
@@ -39,6 +40,7 @@ tags:
 - [[session.py]] - `imports_from` [EXTRACTED]
 - [[style_lab.py]] - `imports_from` [EXTRACTED]
 - [[sys]] - `imports` [EXTRACTED]
+- [[test_ai_modes.py]] - `imports_from` [EXTRACTED]
 - [[test_blender_run.py]] - `imports_from` [EXTRACTED]
 - [[test_codex.py]] - `imports_from` [EXTRACTED]
 - [[test_full_scenes.py]] - `imports_from` [EXTRACTED]
@@ -53,4 +55,4 @@ tags:
 - [[writing.py]] - `imports_from` [EXTRACTED]
 - [[yt_list()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_full_scenespy
+#graphify/code #graphify/EXTRACTED #community/json

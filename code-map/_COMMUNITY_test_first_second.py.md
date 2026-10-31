@@ -38,21 +38,24 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 14 edges to [[_COMMUNITY_test_full_scenes.py]]
-- 3 edges to [[_COMMUNITY_apply_review_fixes]]
-- 2 edges to [[_COMMUNITY_render]]
-- 2 edges to [[_COMMUNITY_subprocess]]
+- 8 edges to [[_COMMUNITY_test_full_scenes.py]]
+- 4 edges to [[_COMMUNITY_json]]
+- 3 edges to [[_COMMUNITY_visual_review]]
+- 2 edges to [[_COMMUNITY_apply_review_fixes]]
+- 2 edges to [[_COMMUNITY_traceback]]
 - 1 edge to [[_COMMUNITY_prepare_topic]]
-- 1 edge to [[_COMMUNITY_clean_full]]
+- 1 edge to [[_COMMUNITY_render]]
 - 1 edge to [[_COMMUNITY_test_story.py]]
+- 1 edge to [[_COMMUNITY_shutil]]
+- 1 edge to [[_COMMUNITY_ffmpeg]]
+- 1 edge to [[_COMMUNITY_opener_graphic]]
 - 1 edge to [[_COMMUNITY_ask_ai]]
-- 1 edge to [[_COMMUNITY_visual_review]]
+- 1 edge to [[_COMMUNITY_clean_full]]
 - 1 edge to [[_COMMUNITY_capture_prompts]]
 - 1 edge to [[_COMMUNITY_fake_ai]]
-- 1 edge to [[_COMMUNITY_quality_check]]
 
 ## Top bridge nodes
-- [[first_second_check()]] - degree 15, connects to 9 communities
+- [[first_second_check()]] - degree 15, connects to 11 communities
 - [[test_first_second.py]] - degree 29, connects to 5 communities
 - [[swap_pictures()]] - degree 6, connects to 2 communities
 - [[test_opener_fix_swaps_once()]] - degree 4, connects to 1 community

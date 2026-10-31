@@ -1,12 +1,12 @@
 ---
 source_file: "colab/h3_run.py"
 type: "code"
-community: "json"
+community: "shutil"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/json
+  - community/shutil
 ---
 
 # h3_run.py
@@ -29,4 +29,4 @@ tags:
 - [[urllib_request]] - `imports` [EXTRACTED]
 - [[zipfile]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/json
+#graphify/code #graphify/EXTRACTED #community/shutil

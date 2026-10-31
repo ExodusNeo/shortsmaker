@@ -16,7 +16,7 @@ tags:
 - [[audio_mix.py]] - `contains` [EXTRACTED]
 - [[math]] - `calls` [EXTRACTED]
 - [[noise()_1]] - `contains` [EXTRACTED]
-- [[render()_3]] - `calls` [EXTRACTED]
+- [[render()_2]] - `calls` [EXTRACTED]
 - [[save()]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/make_sfx

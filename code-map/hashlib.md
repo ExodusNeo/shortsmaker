@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "drawn_opener.py"
+community: "image_sources.py"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/drawn_openerpy
+  - community/image_sourcespy
 ---
 
 # hashlib
@@ -23,4 +23,4 @@ tags:
 - [[pixabay_films()]] - `calls` [EXTRACTED]
 - [[pool_folder()]] - `calls` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/drawn_openerpy
+#graphify/concept #graphify/EXTRACTED #community/image_sourcespy

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/image_sources.py"
 type: "code"
-community: "re"
+community: "image_sources.py"
 location: "L84"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/re
+  - community/image_sourcespy
 ---
 
 # usable_license()
@@ -17,4 +17,4 @@ tags:
 - [[image_sources.py]] - `contains` [EXTRACTED]
 - [[wm_files()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/re
+#graphify/code #graphify/EXTRACTED #community/image_sourcespy

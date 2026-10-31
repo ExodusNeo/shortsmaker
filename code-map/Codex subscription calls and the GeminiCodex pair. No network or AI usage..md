@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_codex.py"
 type: "rationale"
-community: "test_full_scenes.py"
+community: "json"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/test_full_scenespy
+  - community/json
 ---
 
 # Codex subscription calls and the Gemini/Codex pair. No network or AI usage.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[test_codex.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/test_full_scenespy
+#graphify/rationale #graphify/EXTRACTED #community/json

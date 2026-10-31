@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "re"
+community: "image_sources.py"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/re
+  - community/image_sourcespy
 ---
 
 # threading
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[image_sources.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/re
+#graphify/concept #graphify/EXTRACTED #community/image_sourcespy

@@ -12,11 +12,11 @@ tags:
 # use_opener()
 
 ## Connections
-- [[Path_8]] - `references` [EXTRACTED]
+- [[Path_9]] - `references` [EXTRACTED]
 - [[Scene 1 on an `opener animated` channel plays the first opener that works…]] - `rationale_for` [EXTRACTED]
 - [[ffmpeg()]] - `calls` [EXTRACTED]
 - [[make_opener()]] - `calls` [EXTRACTED]
-- [[render()_3]] - `calls` [EXTRACTED]
+- [[render()_2]] - `calls` [EXTRACTED]
 - [[short_render.py]] - `contains` [EXTRACTED]
 - [[test_use_opener_plays_the_drawn_opener()]] - `calls` [EXTRACTED]
 - [[use()]] - `calls` [EXTRACTED]

@@ -12,12 +12,13 @@ tags:
 # other_ai()
 
 ## Connections
-- [[The second member of this run's pair; Gemini runs use Codex without trying…]] - `rationale_for` [EXTRACTED]
+- [[Preferred alternative, keeping the configured hybrid partner when possible.]] - `rationale_for` [EXTRACTED]
 - [[ask_ai()]] - `calls` [EXTRACTED]
 - [[catalog_pool()]] - `calls` [EXTRACTED]
 - [[cold_read()]] - `calls` [EXTRACTED]
 - [[edit_scripts()]] - `calls` [EXTRACTED]
 - [[llm.py]] - `contains` [EXTRACTED]
+- [[test_every_mode_can_continue_through_two_exhausted_ais()]] - `calls` [EXTRACTED]
 - [[test_gemini_modes_choose_codex_and_keep_editor_choice()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/test_storypy

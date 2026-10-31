@@ -41,12 +41,11 @@ SORT file.name ASC
 - 6 edges to [[_COMMUNITY_main]]
 - 4 edges to [[_COMMUNITY_Shots]]
 - 4 edges to [[_COMMUNITY_test_full_scenes.py]]
+- 3 edges to [[_COMMUNITY_json]]
 - 3 edges to [[_COMMUNITY_templates.py]]
-- 2 edges to [[_COMMUNITY_test_blender_scene.py]]
+- 1 edge to [[_COMMUNITY_test_blender_plan.py]]
 - 1 edge to [[_COMMUNITY_frame_maker]]
 - 1 edge to [[_COMMUNITY_make_sfx]]
-- 1 edge to [[_COMMUNITY_json]]
-- 1 edge to [[_COMMUNITY_audio_mix.py]]
 
 ## Top bridge nodes
 - [[math]] - degree 11, connects to 7 communities

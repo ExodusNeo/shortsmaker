@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/footage.py"
 type: "code"
-community: "test_full_scenes.py"
+community: "image_sources.py"
 location: "L155"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_full_scenespy
+  - community/image_sourcespy
 ---
 
 # crop_film_bytes()
@@ -17,4 +17,4 @@ tags:
 - [[footage.py]] - `contains` [EXTRACTED]
 - [[io]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_full_scenespy
+#graphify/code #graphify/EXTRACTED #community/image_sourcespy

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/rules.py"
 type: "code"
-community: "capture_prompts"
+community: "require_rules"
 location: "L61"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/capture_prompts
+  - community/require_rules
 ---
 
 # load_rules()
@@ -19,4 +19,4 @@ tags:
 - [[rules.py]] - `contains` [EXTRACTED]
 - [[test_load_rules_sets_session()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/capture_prompts
+#graphify/code #graphify/EXTRACTED #community/require_rules

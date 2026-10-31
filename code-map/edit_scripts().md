@@ -22,6 +22,7 @@ tags:
 - [[other_ai()]] - `calls` [EXTRACTED]
 - [[pictures_of()]] - `calls` [EXTRACTED]
 - [[story_problems()]] - `calls` [EXTRACTED]
+- [[test_all_modes_route_writer_editor_and_reader()]] - `calls` [EXTRACTED]
 - [[test_editor_gets_one_second_pass_for_broken_rules()]] - `calls` [EXTRACTED]
 - [[test_failed_second_read_clears_old_verdict()]] - `calls` [EXTRACTED]
 - [[test_solo_edit_scripts_uses_same_ai()]] - `calls` [EXTRACTED]

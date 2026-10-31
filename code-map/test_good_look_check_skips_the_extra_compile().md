@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_style.py"
 type: "code"
-community: "owner"
+community: "gather_pool"
 location: "L333"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/owner
+  - community/gather_pool
 ---
 
 # test_good_look_check_skips_the_extra_compile()
@@ -17,4 +17,4 @@ tags:
 - [[restore_style_slots()]] - `calls` [EXTRACTED]
 - [[test_style.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/owner
+#graphify/code #graphify/EXTRACTED #community/gather_pool

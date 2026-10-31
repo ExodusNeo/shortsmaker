@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/review.py"
 type: "rationale"
-community: "render"
+community: "opener_graphic"
 location: "L272"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/render
+  - community/opener_graphic
 ---
 
 # Owner, 2026-10-30: the motion-graphic opener goes first and gets…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[fix_opener_graphic()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/render
+#graphify/rationale #graphify/EXTRACTED #community/opener_graphic

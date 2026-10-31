@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "concept"
-community: "test_full_scenes.py"
+community: "traceback"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/test_full_scenespy
+  - community/traceback
 ---
 
 # traceback
 
 ## Connections
+- [[test_ai_modes.py]] - `imports` [EXTRACTED]
 - [[test_blender_plan.py]] - `imports` [EXTRACTED]
 - [[test_blender_render.py]] - `imports` [EXTRACTED]
 - [[test_blender_run.py]] - `imports` [EXTRACTED]
@@ -29,4 +30,4 @@ tags:
 - [[test_story.py]] - `imports` [EXTRACTED]
 - [[test_topic_ideas.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/test_full_scenespy
+#graphify/concept #graphify/EXTRACTED #community/traceback

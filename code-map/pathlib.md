@@ -45,6 +45,7 @@ tags:
 - [[short_render.py]] - `imports_from` [EXTRACTED]
 - [[split_make_shorts.py]] - `imports_from` [EXTRACTED]
 - [[style_lab.py]] - `imports_from` [EXTRACTED]
+- [[test_ai_modes.py]] - `imports_from` [EXTRACTED]
 - [[test_blender_plan.py]] - `imports_from` [EXTRACTED]
 - [[test_blender_render.py]] - `imports_from` [EXTRACTED]
 - [[test_blender_run.py]] - `imports_from` [EXTRACTED]

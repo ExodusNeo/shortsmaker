@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/channel_profiles.py"
 type: "rationale"
-community: "main"
-location: "L100"
+community: "pick_channel"
+location: "L109"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/main
+  - community/pick_channel
 ---
 
 # Create this channel's profile: the owner's niche (or one Claude picks), with…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[new_channel()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/main
+#graphify/rationale #graphify/EXTRACTED #community/pick_channel

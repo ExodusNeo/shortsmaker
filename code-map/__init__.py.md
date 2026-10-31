@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/__init__.py"
 type: "code"
-community: "test_full_scenes.py"
+community: "json"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_full_scenespy
+  - community/json
 ---
 
 # __init__.py
@@ -39,6 +39,7 @@ tags:
 - [[seo.py]] - `imports_from` [EXTRACTED]
 - [[short_render.py]] - `imports_from` [EXTRACTED]
 - [[style_lab.py]] - `imports_from` [EXTRACTED]
+- [[test_ai_modes.py]] - `imports_from` [EXTRACTED]
 - [[test_blender_plan.py]] - `imports_from` [EXTRACTED]
 - [[test_blender_render.py]] - `imports_from` [EXTRACTED]
 - [[test_blender_run.py]] - `imports_from` [EXTRACTED]
@@ -59,4 +60,4 @@ tags:
 - [[topic_ideas.py]] - `imports_from` [EXTRACTED]
 - [[writing.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_full_scenespy
+#graphify/code #graphify/EXTRACTED #community/json

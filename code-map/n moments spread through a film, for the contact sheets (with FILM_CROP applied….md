@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/footage.py"
 type: "rationale"
-community: "test_full_scenes.py"
+community: "image_sources.py"
 location: "L169"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/test_full_scenespy
+  - community/image_sourcespy
 ---
 
 # n moments spread through a film, for the contact sheets (with FILM_CROP applied…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[film_frames()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/test_full_scenespy
+#graphify/rationale #graphify/EXTRACTED #community/image_sourcespy

@@ -16,10 +16,10 @@ members: 36
 - [[ClipReader]] - code - shortsmaker/frame_render.py
 - [[Frame at fraction p (0..1) of the clip; p never goes backwards within a scene.]] - rationale - shortsmaker/frame_render.py
 - [[FreeTypeFont]] - code
+- [[Image]] - code
 - [[Image_1]] - code
-- [[Image_2]] - code
 - [[One frame of slow Ken Burns motion; affine sampling is sub-pixel so it never…]] - rationale - shortsmaker/frame_render.py
-- [[Path_9]] - code
+- [[Path_10]] - code
 - [[Pop the card in with a slight overshoot over a dimmed background, then shrink…]] - rationale - shortsmaker/frame_render.py
 - [[Pre-render a callout as a small transparent image (animated per frame later).]] - rationale - shortsmaker/frame_render.py
 - [[Returns frame(i, t) scene i at time t with camera move and graphics applied.…]] - rationale - shortsmaker/frame_render.py
@@ -53,17 +53,17 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 13 edges to [[_COMMUNITY_test_full_scenes.py]]
+- 14 edges to [[_COMMUNITY_test_full_scenes.py]]
 - 3 edges to [[_COMMUNITY_render]]
-- 2 edges to [[_COMMUNITY_re]]
 - 1 edge to [[_COMMUNITY_build_scene.py]]
-- 1 edge to [[_COMMUNITY_full_cues]]
-- 1 edge to [[_COMMUNITY_test_blender_scene.py]]
-- 1 edge to [[_COMMUNITY_subprocess]]
+- 1 edge to [[_COMMUNITY_test_package.py]]
+- 1 edge to [[_COMMUNITY_image_sources.py]]
+- 1 edge to [[_COMMUNITY_test_blender_plan.py]]
+- 1 edge to [[_COMMUNITY_clean_full]]
 
 ## Top bridge nodes
 - [[frame_maker()]] - degree 8, connects to 2 communities
 - [[person_card()]] - degree 6, connects to 2 communities
 - [[write_frames()]] - degree 6, connects to 2 communities
-- [[Path_9]] - degree 5, connects to 2 communities
+- [[Path_10]] - degree 5, connects to 2 communities
 - [[flash_alpha()]] - degree 4, connects to 2 communities

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/style_lab.py"
 type: "code"
-community: "render_remotion"
+community: "style_props"
 location: "L42"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/render_remotion
+  - community/style_props
 ---
 
 # style_props()
@@ -17,4 +17,4 @@ tags:
 - [[style_lab.py]] - `contains` [EXTRACTED]
 - [[test_old_state_renders_plain()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/render_remotion
+#graphify/code #graphify/EXTRACTED #community/style_props

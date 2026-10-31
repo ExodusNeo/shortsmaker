@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/topic_ideas.py"
 type: "rationale"
-community: "topic_ideas.py"
+community: "re"
 location: "L77"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/topic_ideaspy
+  - community/re
 ---
 
 # k ideas for today's topic picker: none we already made (done_topics) or a…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[pick_ideas()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/topic_ideaspy
+#graphify/rationale #graphify/EXTRACTED #community/re

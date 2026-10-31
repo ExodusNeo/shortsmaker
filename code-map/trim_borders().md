@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/photo_prep.py"
 type: "code"
-community: "trim_borders"
+community: "clean_full"
 location: "L35"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/trim_borders
+  - community/clean_full
 ---
 
 # trim_borders()
@@ -20,4 +20,4 @@ tags:
 - [[plain()]] - `contains` [EXTRACTED]
 - [[test_fill_money_graphics_and_caps()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/trim_borders
+#graphify/code #graphify/EXTRACTED #community/clean_full

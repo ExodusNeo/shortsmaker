@@ -114,8 +114,8 @@
     "semantic_hash": "8ad5a82c8d8fe87803e31639a21555ff"
   },
   "remotion/src/full/generated/Custom0.tsx": {
-    "mtime": 1793443439.299484,
-    "seen": 1793443572.3199773,
+    "mtime": 1793444038.2934115,
+    "seen": 1793444099.2083735,
     "ast_hash": "ecf374479fafb0d21fe1bb55a662eb6e",
     "semantic_hash": "ecf374479fafb0d21fe1bb55a662eb6e"
   },
@@ -354,15 +354,15 @@
     "semantic_hash": "d47903d32c99f26fa5161ca27ed4b55c"
   },
   "shortsmaker/channel_profiles.py": {
-    "mtime": 1793443377.4888628,
-    "seen": 1793443572.3200188,
-    "ast_hash": "d4bc62a44833090df4cc4e9196dcebc0",
+    "mtime": 1793443975.22139,
+    "seen": 1793444099.2084138,
+    "ast_hash": "00b6db128a5822f58e8c2dc67854e0c7",
     "semantic_hash": ""
   },
   "shortsmaker/cli.py": {
-    "mtime": 1793443377.4899282,
-    "seen": 1793443572.3200197,
-    "ast_hash": "c9922401a71db8aaa0d6cee8db29fcf8",
+    "mtime": 1793443975.2219052,
+    "seen": 1793444099.2084153,
+    "ast_hash": "8d3f5e1b531109873575c067b487d73f",
     "semantic_hash": ""
   },
   "shortsmaker/config.py": {
@@ -402,9 +402,9 @@
     "semantic_hash": ""
   },
   "shortsmaker/llm.py": {
-    "mtime": 1793443377.4867363,
-    "seen": 1793443572.3200305,
-    "ast_hash": "7c5cb574394f33198b573d9ffd7f8536",
+    "mtime": 1793444026.4709518,
+    "seen": 1793444099.208426,
+    "ast_hash": "6dd276e15526070a5b3bf73ae43f4649",
     "semantic_hash": ""
   },
   "shortsmaker/logbook.py": {
@@ -468,9 +468,9 @@
     "semantic_hash": ""
   },
   "shortsmaker/session.py": {
-    "mtime": 1793443377.486215,
-    "seen": 1793443572.320045,
-    "ast_hash": "b9b5eda54cd282158b1a682a74a2742d",
+    "mtime": 1793444026.4709518,
+    "seen": 1793444099.2084408,
+    "ast_hash": "14f460bcc351db453b3ff7f77a65cb9c",
     "semantic_hash": ""
   },
   "shortsmaker/short_render.py": {
@@ -486,9 +486,9 @@
     "semantic_hash": "df97b16f77aa73fa2c933b78bd4e4595"
   },
   "shortsmaker/writing.py": {
-    "mtime": 1793443377.4878354,
-    "seen": 1793443572.32005,
-    "ast_hash": "05bf016a8c3d2fc99fbcc6a5283c5248",
+    "mtime": 1793444026.472124,
+    "seen": 1793444099.2084455,
+    "ast_hash": "49e1f2a743a8bc68fd2db943461042ba",
     "semantic_hash": ""
   },
   "tests/patching.py": {
@@ -498,9 +498,9 @@
     "semantic_hash": "0235c45070741ca2bc59581a406b0d80"
   },
   "tests/test_package.py": {
-    "mtime": 1793443157.8396227,
-    "seen": 1793443572.320074,
-    "ast_hash": "85ff8759a55d7b877176bd5e78e25f34",
+    "mtime": 1793443986.890202,
+    "seen": 1793444099.2084718,
+    "ast_hash": "78a4f0fc696f3bf6e901cd37c29409c7",
     "semantic_hash": ""
   },
   "tools/split_make_shorts.py": {
@@ -528,9 +528,9 @@
     "semantic_hash": "e2ca0a721fe953067ccb14a834892543"
   },
   "tests/test_story.py": {
-    "mtime": 1793443192.5999603,
-    "seen": 1793443572.3200786,
-    "ast_hash": "96252edce7ec1d41d8248cd1661f24ef",
+    "mtime": 1793443986.8907223,
+    "seen": 1793444099.2084768,
+    "ast_hash": "d4e1cd9e5a48477afd7f5ae945e8f6ae",
     "semantic_hash": ""
   },
   "shortsmaker/rules.py": {
@@ -714,9 +714,15 @@
     "semantic_hash": ""
   },
   "tests/test_codex.py": {
-    "mtime": 1793443349.9595244,
-    "seen": 1793443572.3200638,
-    "ast_hash": "0ff52d187f8aea836b53c9faac4abf9e",
+    "mtime": 1793443986.8907223,
+    "seen": 1793444099.2084618,
+    "ast_hash": "b7c7629b1db3535efeb641a2de604a30",
+    "semantic_hash": ""
+  },
+  "tests/test_ai_modes.py": {
+    "mtime": 1793444026.4704435,
+    "seen": 1793444099.2084544,
+    "ast_hash": "a76136aa04273ad4d36cb20bbbf5641f",
     "semantic_hash": ""
   }
 }

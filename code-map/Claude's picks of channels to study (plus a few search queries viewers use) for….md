@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/channel_profiles.py"
 type: "rationale"
-community: "trend_research"
-location: "L149"
+community: "json"
+location: "L158"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/trend_research
+  - community/json
 ---
 
 # Claude's picks of channels to study (plus a few search queries viewers use) for…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[seed_ideas()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/trend_research
+#graphify/rationale #graphify/EXTRACTED #community/json

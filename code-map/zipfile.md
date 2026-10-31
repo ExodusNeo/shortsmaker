@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "json"
+community: "shutil"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/json
+  - community/shutil
 ---
 
 # zipfile
@@ -17,4 +17,4 @@ tags:
 - [[unpack_clips()]] - `calls` [EXTRACTED]
 - [[veo_handoff()]] - `calls` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/json
+#graphify/concept #graphify/EXTRACTED #community/shutil

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/writing.py"
 type: "code"
-community: "json"
+community: "clean_pics"
 location: "L466"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/json
+  - community/clean_pics
 ---
 
 # direct_scripts()
@@ -20,4 +20,4 @@ tags:
 - [[write_scripts()]] - `calls` [EXTRACTED]
 - [[writing.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/json
+#graphify/code #graphify/EXTRACTED #community/clean_pics

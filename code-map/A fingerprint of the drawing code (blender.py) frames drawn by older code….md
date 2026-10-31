@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/blender_render.py"
 type: "rationale"
-community: "drawn_opener.py"
+community: "test_blender_render.py"
 location: "L23"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/drawn_openerpy
+  - community/test_blender_renderpy
 ---
 
 # A fingerprint of the drawing code (blender/*.py): frames drawn by older code…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[code_version()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/drawn_openerpy
+#graphify/rationale #graphify/EXTRACTED #community/test_blender_renderpy
