@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/style_lab.py"
 type: "code"
-community: "__init__.py"
+community: "re"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/__init__py
+  - community/re
 ---
 
 # style_lab.py
@@ -52,4 +52,4 @@ tags:
 - [[write_style_index()]] - `contains` [EXTRACTED]
 - [[writing.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/__init__py
+#graphify/code #graphify/EXTRACTED #community/re

@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_style.py"
 type: "code"
-community: "render_remotion"
+community: "invent_component"
 location: "L252"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/render_remotion
+  - community/invent_component
 ---
 
 # test_invention_passes_into_slot()
@@ -18,4 +18,4 @@ tags:
 - [[test_style.py]] - `contains` [EXTRACTED]
 - [[with_fakes()_1]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/render_remotion
+#graphify/code #graphify/EXTRACTED #community/invent_component

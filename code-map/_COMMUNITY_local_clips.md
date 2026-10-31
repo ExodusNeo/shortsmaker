@@ -12,7 +12,7 @@ members: 25
 - [[Fill a 916 frame with the picture (centre crop), for the AI video model's…]] - rationale - shortsmaker/gpu.py
 - [[Final H.264 encode NVENC on the GPU when available (frees the CPU), else x264.]] - rationale - shortsmaker/media_tools.py
 - [[Mike the Headless Chicken, fix round 3 the LTX worker died without writing…]] - rationale - tests/test_full_scenes.py
-- [[Path_6]] - code
+- [[Path_5]] - code
 - [[Pause the batch write each animate scene's start picture + detailed prompt to…]] - rationale - shortsmaker/gpu.py
 - [[Real motion for every scene with a picture scenes Claude matched to archival…]] - rationale - shortsmaker/gpu.py
 - [[Run a batch on this PC's GPU through a local_ai worker (gen.py, or…]] - rationale - shortsmaker/gpu.py
@@ -42,24 +42,24 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 13 edges to [[_COMMUNITY_json]]
+- 14 edges to [[_COMMUNITY_test_full_scenes.py]]
 - 6 edges to [[_COMMUNITY_test_h3_handoff.py]]
-- 6 edges to [[_COMMUNITY_ffmpeg]]
 - 3 edges to [[_COMMUNITY_render]]
+- 3 edges to [[_COMMUNITY_json]]
+- 3 edges to [[_COMMUNITY_local_voice]]
+- 3 edges to [[_COMMUNITY_opener_graphic]]
+- 2 edges to [[_COMMUNITY_ffmpeg]]
 - 2 edges to [[_COMMUNITY_ask_ai]]
-- 2 edges to [[_COMMUNITY_subprocess]]
-- 2 edges to [[_COMMUNITY_paint_instead]]
-- 2 edges to [[_COMMUNITY___init__.py]]
-- 1 edge to [[_COMMUNITY_frame_maker]]
-- 1 edge to [[_COMMUNITY_test_weak_opener_graphic_fixes_then_handoff]]
+- 1 edge to [[_COMMUNITY_film_piece]]
+- 1 edge to [[_COMMUNITY_graphic_low]]
+- 1 edge to [[_COMMUNITY_paint_instead]]
 - 1 edge to [[_COMMUNITY_h3_run.py]]
-- 1 edge to [[_COMMUNITY_test_blender_plan.py]]
-- 1 edge to [[_COMMUNITY_plan_rules.py]]
-- 1 edge to [[_COMMUNITY_test_full_scenes.py]]
+- 1 edge to [[_COMMUNITY_re]]
+- 1 edge to [[_COMMUNITY_test_blender_render.py]]
 
 ## Top bridge nodes
-- [[local_clips()]] - degree 15, connects to 5 communities
-- [[local_job()]] - degree 11, connects to 5 communities
-- [[veo_handoff()]] - degree 14, connects to 4 communities
-- [[Path_6]] - degree 13, connects to 4 communities
-- [[video_encoder()]] - degree 8, connects to 4 communities
+- [[local_clips()]] - degree 15, connects to 6 communities
+- [[local_job()]] - degree 11, connects to 6 communities
+- [[veo_handoff()]] - degree 14, connects to 5 communities
+- [[Path_5]] - degree 13, connects to 4 communities
+- [[video_encoder()]] - degree 8, connects to 3 communities

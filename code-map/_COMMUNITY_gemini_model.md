@@ -23,9 +23,10 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 3 edges to [[_COMMUNITY_ask_ai]]
-- 3 edges to [[_COMMUNITY___init__.py]]
-- 1 edge to [[_COMMUNITY_re]]
+- 3 edges to [[_COMMUNITY_test_full_scenes.py]]
+- 2 edges to [[_COMMUNITY_ask_ai]]
+- 1 edge to [[_COMMUNITY_channel_profiles.py]]
+- 1 edge to [[_COMMUNITY_run_agy]]
 
 ## Top bridge nodes
 - [[gemini_model()]] - degree 6, connects to 3 communities

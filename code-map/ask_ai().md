@@ -13,11 +13,12 @@ tags:
 
 ## Connections
 - [[Headless planner call (BRAIN, or `brain` Claude or Gemini) that returns parsed…]] - `rationale_for` [EXTRACTED]
-- [[Path_16]] - `references` [EXTRACTED]
+- [[Path_24]] - `references` [EXTRACTED]
 - [[catalog_pool()]] - `calls` [EXTRACTED]
 - [[check_twists()]] - `calls` [EXTRACTED]
 - [[choose_images()]] - `calls` [EXTRACTED]
 - [[code_custom_scenes()]] - `calls` [EXTRACTED]
+- [[cold_read()]] - `calls` [EXTRACTED]
 - [[direct_scripts()]] - `calls` [EXTRACTED]
 - [[draft_rules()]] - `calls` [EXTRACTED]
 - [[edit_scripts()]] - `calls` [EXTRACTED]

@@ -2,7 +2,7 @@
 source_file: "tests/test_rules.py"
 type: "rationale"
 community: "test_rules.py"
-location: "L65"
+location: "L66"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED

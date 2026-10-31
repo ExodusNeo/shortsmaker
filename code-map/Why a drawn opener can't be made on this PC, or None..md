@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/drawn_opener.py"
 type: "rationale"
-community: "subprocess"
+community: "json"
 location: "L39"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/subprocess
+  - community/json
 ---
 
 # Why a drawn opener can't be made on this PC, or None.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[available()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/subprocess
+#graphify/rationale #graphify/EXTRACTED #community/json

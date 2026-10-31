@@ -2,7 +2,7 @@
 source_file: "tests/test_rules.py"
 type: "code"
 community: "test_rules.py"
-location: "L78"
+location: "L79"
 tags:
   - graphify/code
   - graphify/INFERRED

@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "style_library"
+community: "apply_review_fixes"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/style_library
+  - community/apply_review_fixes
 ---
 
 # Path
 
 ## Connections
-- [[edit_plan()]] - `references` [EXTRACTED]
+- [[use_picture_from()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/style_library
+#graphify/code #graphify/EXTRACTED #community/apply_review_fixes

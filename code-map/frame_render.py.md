@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/frame_render.py"
 type: "code"
-community: "plan_rules.py"
+community: "test_full_scenes.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/plan_rulespy
+  - community/test_full_scenespy
 ---
 
 # frame_render.py
@@ -43,4 +43,4 @@ tags:
 - [[thumbnail()]] - `contains` [EXTRACTED]
 - [[write_frames()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/plan_rulespy
+#graphify/code #graphify/EXTRACTED #community/test_full_scenespy

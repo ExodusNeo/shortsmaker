@@ -1,24 +1,25 @@
 ---
 source_file: "shortsmaker/editplan.py"
 type: "code"
-community: "style_library"
-location: "L40"
+community: "edit_plan"
+location: "L49"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/style_library
+  - community/edit_plan
 ---
 
 # edit_plan()
 
 ## Connections
-- [[Path_20]] - `references` [EXTRACTED]
+- [[Path_18]] - `references` [EXTRACTED]
 - [[Timestamped edit decision list of exactly what was rendered, plus the sound-…]] - `rationale_for` [EXTRACTED]
 - [[clock()_1]] - `calls` [EXTRACTED]
+- [[cold_read_line()]] - `calls` [EXTRACTED]
 - [[cut_text()]] - `calls` [EXTRACTED]
 - [[editplan.py]] - `contains` [EXTRACTED]
 - [[look_text()]] - `calls` [EXTRACTED]
 - [[picture_line()]] - `calls` [EXTRACTED]
 - [[render()_4]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/style_library
+#graphify/code #graphify/EXTRACTED #community/edit_plan

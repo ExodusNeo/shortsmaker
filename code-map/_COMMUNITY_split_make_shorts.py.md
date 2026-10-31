@@ -58,11 +58,9 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
+- 3 edges to [[_COMMUNITY_test_full_scenes.py]]
 - 1 edge to [[_COMMUNITY_test_h3_handoff.py]]
 - 1 edge to [[_COMMUNITY_re]]
-- 1 edge to [[_COMMUNITY_subprocess]]
-- 1 edge to [[_COMMUNITY___init__.py]]
-- 1 edge to [[_COMMUNITY_plan_rules.py]]
 
 ## Top bridge nodes
-- [[split_make_shorts.py]] - degree 26, connects to 5 communities
+- [[split_make_shorts.py]] - degree 26, connects to 3 communities

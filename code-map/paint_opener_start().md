@@ -1,18 +1,18 @@
 ---
 source_file: "shortsmaker/review.py"
 type: "code"
-community: "json"
-location: "L276"
+community: "opener_graphic"
+location: "L297"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/json
+  - community/opener_graphic
 ---
 
 # paint_opener_start()
 
 ## Connections
-- [[Path_13]] - `references` [EXTRACTED]
+- [[Path_21]] - `references` [EXTRACTED]
 - [[The start picture for scene 1's AI clip (gpu.OPENER_START) a painting of the…]] - `rationale_for` [EXTRACTED]
 - [[fix_opener_graphic()]] - `calls` [EXTRACTED]
 - [[gemini_images()]] - `calls` [EXTRACTED]
@@ -24,4 +24,4 @@ tags:
 - [[shutil]] - `calls` [EXTRACTED]
 - [[test_weak_opener_graphic_fixes_then_handoff()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/json
+#graphify/code #graphify/EXTRACTED #community/opener_graphic

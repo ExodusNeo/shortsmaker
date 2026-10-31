@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_story.py"
 type: "code"
-community: "test_story.py"
-location: "L51"
+community: "story_problems"
+location: "L97"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_storypy
+  - community/story_problems
 ---
 
 # test_first_sentence_reads_across_the_cut()
@@ -16,4 +16,4 @@ tags:
 - [[story_problems()]] - `calls` [EXTRACTED]
 - [[test_story.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_storypy
+#graphify/code #graphify/EXTRACTED #community/story_problems

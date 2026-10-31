@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/frame_render.py"
 type: "code"
-community: "frame_maker"
+community: "graphic_low"
 location: "L39"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/frame_maker
+  - community/graphic_low
 ---
 
 # fit_font()
@@ -18,4 +18,4 @@ tags:
 - [[person_card()]] - `calls` [EXTRACTED]
 - [[thumbnail()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/frame_maker
+#graphify/code #graphify/EXTRACTED #community/graphic_low

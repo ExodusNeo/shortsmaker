@@ -1,17 +1,17 @@
 ---
-source_file: "tests/test_pictures_first.py"
+source_file: "blender/build_scene.py"
 type: "code"
-community: "fake_ai"
-location: "L115"
+community: "build_scene.py"
+location: "L44"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/fake_ai
+  - community/build_scenepy
 ---
 
 # .__init__()
 
 ## Connections
-- [[fake_ai]] - `method` [EXTRACTED]
+- [[Shots]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/fake_ai
+#graphify/code #graphify/EXTRACTED #community/build_scenepy

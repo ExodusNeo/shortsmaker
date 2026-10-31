@@ -12,7 +12,7 @@ tags:
 # local_job()
 
 ## Connections
-- [[Path_6]] - `references` [EXTRACTED]
+- [[Path_5]] - `references` [EXTRACTED]
 - [[Run a batch on this PC's GPU through a local_ai worker (gen.py, or…]] - `rationale_for` [EXTRACTED]
 - [[gpu.py]] - `contains` [EXTRACTED]
 - [[json]] - `calls` [EXTRACTED]

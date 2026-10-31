@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "render"
+community: "_run"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/render
+  - community/_run
 ---
 
 # Path
 
 ## Connections
-- [[mark_details()]] - `references` [EXTRACTED]
+- [[_run()]] - `references` [EXTRACTED]
+- [[render_clips()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/render
+#graphify/code #graphify/EXTRACTED #community/_run

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/drawn_opener.py"
 type: "code"
-community: "subprocess"
+community: "json"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/subprocess
+  - community/json
 ---
 
 # drawn_opener.py
@@ -36,4 +36,4 @@ tags:
 - [[test_drawn_opener.py]] - `imports_from` [EXTRACTED]
 - [[write()_1]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/subprocess
+#graphify/code #graphify/EXTRACTED #community/json

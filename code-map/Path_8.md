@@ -1,17 +1,20 @@
 ---
 source_file: ""
 type: "code"
-community: "test_edit_project.py"
+community: "json"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_edit_projectpy
+  - community/json
 ---
 
 # Path
 
 ## Connections
-- [[short_folder()]] - `references` [EXTRACTED]
-- [[videos()]] - `references` [EXTRACTED]
+- [[drawn_thumbnail()]] - `references` [EXTRACTED]
+- [[load_state()]] - `references` [EXTRACTED]
+- [[render()_4]] - `references` [EXTRACTED]
+- [[save_state()]] - `references` [EXTRACTED]
+- [[use_opener()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_edit_projectpy
+#graphify/code #graphify/EXTRACTED #community/json

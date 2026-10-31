@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_full_scenes.py"
 type: "code"
-community: "test_full_scenes.py"
+community: "sfx_events"
 location: "L865"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_full_scenespy
+  - community/sfx_events
 ---
 
 # test_story_sound_wins_its_moment()
@@ -15,4 +15,4 @@ tags:
 - [[sfx_events()]] - `calls` [EXTRACTED]
 - [[test_full_scenes.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_full_scenespy
+#graphify/code #graphify/EXTRACTED #community/sfx_events

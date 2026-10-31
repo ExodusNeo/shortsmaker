@@ -1,11 +1,11 @@
 ---
 type: community
-members: 54
+members: 53
 ---
 
 # test_rules.py
 
-**Members:** 54 nodes
+**Members:** 53 nodes
 
 ## Members
 - [[(sections by canonical heading, settings) of a rules file; `label` names the…]] - rationale - shortsmaker/rules.py
@@ -33,7 +33,6 @@ members: 54
 - [[require_rules()]] - code - shortsmaker/rules.py
 - [[run_draft()]] - code - tests/test_rules.py
 - [[stop_text()]] - code - tests/test_rules.py
-- [[test_a_stopped_run_keeps_the_default_channel()]] - code - tests/test_rules.py
 - [[test_bad_min_pictures_stops()]] - code - tests/test_rules.py
 - [[test_blender_needs_a_build_plan_section()]] - code - tests/test_rules.py
 - [[test_bom_and_crlf_load_the_same()]] - code - tests/test_rules.py
@@ -53,12 +52,12 @@ members: 54
 - [[test_min_pictures_from_settings()]] - code - tests/test_rules.py
 - [[test_missing_heading_stops()]] - code - tests/test_rules.py
 - [[test_missing_rules_file_is_drafted()]] - code - tests/test_rules.py
-- [[test_new_channel_stops_for_review()]] - code - tests/test_rules.py
 - [[test_odd_min_pictures_stop_cleanly()]] - code - tests/test_rules.py
 - [[test_opening_picture_needs_its_fields()]] - code - tests/test_rules.py
 - [[test_parses_sections_and_settings()]] - code - tests/test_rules.py
 - [[test_photo_channels_dont_need_a_build_plan()]] - code - tests/test_rules.py
 - [[test_rules.py]] - code - tests/test_rules.py
+- [[test_rules_accept_opener_setting()]] - code - tests/test_story.py
 - [[test_strange_history_prompts_unchanged()]] - code - tests/test_rules.py
 - [[test_strips_tag_comments()]] - code - tests/test_rules.py
 - [[test_unknown_visuals_stop()]] - code - tests/test_rules.py
@@ -71,14 +70,14 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 18 edges to [[_COMMUNITY___init__.py]]
-- 8 edges to [[_COMMUNITY_re]]
-- 5 edges to [[_COMMUNITY_json]]
-- 4 edges to [[_COMMUNITY_plan_rules.py]]
+- 19 edges to [[_COMMUNITY_test_full_scenes.py]]
+- 7 edges to [[_COMMUNITY_channel_profiles.py]]
+- 6 edges to [[_COMMUNITY_re]]
+- 3 edges to [[_COMMUNITY_json]]
 - 2 edges to [[_COMMUNITY_prepare_topic]]
 - 1 edge to [[_COMMUNITY_ask_ai]]
-- 1 edge to [[_COMMUNITY_test_story.py]]
-- 1 edge to [[_COMMUNITY_test_first_second.py]]
+- 1 edge to [[_COMMUNITY_first_second_check]]
+- 1 edge to [[_COMMUNITY_apply_review_fixes]]
 - 1 edge to [[_COMMUNITY_choose_images]]
 - 1 edge to [[_COMMUNITY_write_scripts]]
 - 1 edge to [[_COMMUNITY_test_pictures_first.py]]
@@ -87,6 +86,6 @@ SORT file.name ASC
 ## Top bridge nodes
 - [[test_rules.py]] - degree 56, connects to 5 communities
 - [[capture_prompts()]] - degree 11, connects to 5 communities
-- [[draft_rules()]] - degree 9, connects to 4 communities
-- [[parse_rules()]] - degree 16, connects to 3 communities
+- [[draft_rules()]] - degree 9, connects to 5 communities
 - [[require_rules()]] - degree 8, connects to 3 communities
+- [[parse_rules()]] - degree 16, connects to 2 communities

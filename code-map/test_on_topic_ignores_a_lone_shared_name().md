@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_pictures_first.py"
 type: "code"
-community: "fetch"
+community: "test_pictures_first.py"
 location: "L583"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/fetch
+  - community/test_pictures_firstpy
 ---
 
 # test_on_topic_ignores_a_lone_shared_name()
@@ -16,4 +16,4 @@ tags:
 - [[on_topic()]] - `calls` [EXTRACTED]
 - [[test_pictures_first.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/fetch
+#graphify/code #graphify/EXTRACTED #community/test_pictures_firstpy

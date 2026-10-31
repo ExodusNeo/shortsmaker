@@ -12,7 +12,7 @@ tags:
 # ClipReader
 
 ## Connections
-- [[dot-__init__()_1]] - `method` [EXTRACTED]
+- [[dot-__init__()_2]] - `method` [EXTRACTED]
 - [[dot-at()]] - `method` [EXTRACTED]
 - [[dot-close()]] - `method` [EXTRACTED]
 - [[Streams a clip's frames in order. Decoding a whole 1080x1920 clip up front…]] - `rationale_for` [EXTRACTED]

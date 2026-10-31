@@ -1,20 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "paint_instead"
+community: "film_piece"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/paint_instead
+  - community/film_piece
 ---
 
 # Path
 
 ## Connections
-- [[ink_silhouette()]] - `references` [EXTRACTED]
-- [[make_paper()]] - `references` [EXTRACTED]
-- [[paint_instead()]] - `references` [EXTRACTED]
-- [[redraw_custom()]] - `references` [EXTRACTED]
-- [[render_remotion()]] - `references` [EXTRACTED]
+- [[film_piece()]] - `references` [EXTRACTED]
+- [[shot_span()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/paint_instead
+#graphify/code #graphify/EXTRACTED #community/film_piece

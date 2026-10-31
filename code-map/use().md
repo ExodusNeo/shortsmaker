@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_opener_graphic.py"
 type: "code"
-community: "test_weak_opener_graphic_fixes_then_handoff"
+community: "make_opener"
 location: "L70"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_weak_opener_graphic_fixes_then_handoff
+  - community/make_opener
 ---
 
 # use()
@@ -18,4 +18,4 @@ tags:
 - [[use_opener with the drawn opener already failed (drawn_failed it is never…]] - `rationale_for` [EXTRACTED]
 - [[use_opener()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_weak_opener_graphic_fixes_then_handoff
+#graphify/code #graphify/EXTRACTED #community/make_opener

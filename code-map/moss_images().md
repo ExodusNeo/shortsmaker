@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[Paint on this PC with MOSS-Image in ComfyUI (owner's pick 2026-10-20 over SDXL-…]] - `rationale_for` [EXTRACTED]
-- [[Path_6]] - `references` [EXTRACTED]
+- [[Path_5]] - `references` [EXTRACTED]
 - [[comfy_call()]] - `calls` [EXTRACTED]
 - [[gpu.py]] - `contains` [EXTRACTED]
 - [[hashlib]] - `calls` [EXTRACTED]

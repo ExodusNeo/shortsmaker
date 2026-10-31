@@ -1,20 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "look_and_fix"
+community: "run_agy"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/look_and_fix
+  - community/run_agy
 ---
 
 # Path
 
 ## Connections
-- [[code_custom_scenes()]] - `references` [EXTRACTED]
-- [[full_props()]] - `references` [EXTRACTED]
-- [[look_and_fix()]] - `references` [EXTRACTED]
-- [[preview_custom()]] - `references` [EXTRACTED]
-- [[preview_sheet()]] - `references` [EXTRACTED]
+- [[ask_ai()]] - `references` [EXTRACTED]
+- [[run_agy()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/look_and_fix
+#graphify/code #graphify/EXTRACTED #community/run_agy

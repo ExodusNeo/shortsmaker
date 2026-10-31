@@ -1,11 +1,11 @@
 ---
 type: community
-members: 38
+members: 39
 ---
 
 # guarded.tsx
 
-**Members:** 38 nodes
+**Members:** 39 nodes
 
 ## Members
 - [[Box]] - code - remotion/src/full/guarded.tsx
@@ -15,6 +15,7 @@ members: 38
 - [[ExampleChain.tsx]] - code - remotion/src/full/examples/ExampleChain.tsx
 - [[ExampleEvidence()]] - code - remotion/src/full/examples/ExampleEvidence.tsx
 - [[ExampleEvidence.tsx]] - code - remotion/src/full/examples/ExampleEvidence.tsx
+- [[FullProps]] - code - remotion/src/full/types.ts
 - [[MIN_MOVE]] - code - remotion/src/full/guarded.tsx
 - [[NORMAL]] - code - remotion/src/full/guarded.tsx
 - [[Pt]] - code - remotion/src/full/guarded.tsx
@@ -55,14 +56,16 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 41 edges to [[_COMMUNITY_toolkit.tsx]]
-- 12 edges to [[_COMMUNITY_Paper]]
-- 1 edge to [[_COMMUNITY_BigNumber.tsx]]
-- 1 edge to [[_COMMUNITY_Short.tsx]]
+- 44 edges to [[_COMMUNITY_toolkit.tsx]]
+- 11 edges to [[_COMMUNITY_Paper]]
+- 5 edges to [[_COMMUNITY_fulltypes.ts]]
+- 3 edges to [[_COMMUNITY_styleindex.ts]]
+- 1 edge to [[_COMMUNITY_Journey.tsx]]
+- 1 edge to [[_COMMUNITY_ref_remotion]]
 
 ## Top bridge nodes
-- [[guarded.tsx]] - degree 32, connects to 4 communities
-- [[ExampleEvidence.tsx]] - degree 26, connects to 2 communities
-- [[ExampleChain.tsx]] - degree 23, connects to 2 communities
+- [[guarded.tsx]] - degree 32, connects to 5 communities
+- [[FullProps]] - degree 14, connects to 4 communities
+- [[ExampleEvidence.tsx]] - degree 26, connects to 3 communities
+- [[ExampleChain.tsx]] - degree 23, connects to 3 communities
 - [[ExampleEvidence()]] - degree 13, connects to 2 communities
-- [[ExampleChain()]] - degree 11, connects to 2 communities

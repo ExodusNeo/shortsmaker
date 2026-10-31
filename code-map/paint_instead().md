@@ -12,7 +12,7 @@ tags:
 # paint_instead()
 
 ## Connections
-- [[Path_26]] - `references` [EXTRACTED]
+- [[Path_2]] - `references` [EXTRACTED]
 - [[Remotion failed the full-screen motion graphic scenes get a painted picture…]] - `rationale_for` [EXTRACTED]
 - [[gemini_images()]] - `calls` [EXTRACTED]
 - [[local_job()]] - `calls` [EXTRACTED]

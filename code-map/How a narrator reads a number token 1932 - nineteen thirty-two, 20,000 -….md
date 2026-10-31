@@ -1,12 +1,12 @@
 ---
 source_file: "local_ai/qwen_voice.py"
 type: "rationale"
-community: "qwen_voice.py"
+community: "time"
 location: "L28"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/qwen_voicepy
+  - community/time
 ---
 
 # How a narrator reads a number token: 1932 -> nineteen thirty-two, 20,000 ->…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[say_number()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/qwen_voicepy
+#graphify/rationale #graphify/EXTRACTED #community/time

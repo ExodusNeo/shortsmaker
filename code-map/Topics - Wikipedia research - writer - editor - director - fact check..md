@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/writing.py"
 type: "rationale"
-community: "__init__.py"
+community: "re"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/__init__py
+  - community/re
 ---
 
 # Topics -> Wikipedia research -> writer -> editor -> director -> fact check.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[writing.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/__init__py
+#graphify/rationale #graphify/EXTRACTED #community/re

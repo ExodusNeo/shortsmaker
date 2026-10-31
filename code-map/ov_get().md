@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/image_sources.py"
 type: "code"
-community: "get_image"
+community: "image_sources.py"
 location: "L133"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/get_image
+  - community/image_sourcespy
 ---
 
 # ov_get()
@@ -18,4 +18,4 @@ tags:
 - [[image_sources.py]] - `contains` [EXTRACTED]
 - [[openverse_images()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/get_image
+#graphify/code #graphify/EXTRACTED #community/image_sourcespy

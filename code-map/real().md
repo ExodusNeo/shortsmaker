@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_first_second.py"
 type: "code"
-community: "state"
+community: "first_second_check"
 location: "L31"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/state
+  - community/first_second_check
 ---
 
 # real()
@@ -17,4 +17,4 @@ tags:
 - [[test_opener_fix_swaps_once()]] - `calls` [EXTRACTED]
 - [[test_swap_pictures_trades_real_pictures()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/state
+#graphify/code #graphify/EXTRACTED #community/first_second_check

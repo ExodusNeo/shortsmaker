@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_drawn_opener.py"
 type: "code"
-community: "review"
+community: "make_opener"
 location: "L51"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/review
+  - community/make_opener
 ---
 
 # test_drawn_opener_renders_and_is_reused()
@@ -19,4 +19,4 @@ tags:
 - [[short()_2]] - `calls` [EXTRACTED]
 - [[test_drawn_opener.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/review
+#graphify/code #graphify/EXTRACTED #community/make_opener

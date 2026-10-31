@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_story.py"
 type: "code"
-community: "test_story.py"
+community: "test_full_scenes.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_storypy
+  - community/test_full_scenespy
 ---
 
 # test_story.py
@@ -22,12 +22,15 @@ tags:
 - [[media_tools.py]] - `imports_from` [EXTRACTED]
 - [[pathlib]] - `imports_from` [EXTRACTED]
 - [[plan_rules.py]] - `imports_from` [EXTRACTED]
+- [[read()]] - `contains` [EXTRACTED]
 - [[rules.py]] - `imports_from` [EXTRACTED]
 - [[scenes()]] - `contains` [EXTRACTED]
 - [[session.py]] - `imports_from` [EXTRACTED]
 - [[sys]] - `imports` [EXTRACTED]
 - [[tempfile]] - `imports` [EXTRACTED]
 - [[test_a_take_is_cut_between_the_scenes_words()]] - `contains` [EXTRACTED]
+- [[test_cold_read_keeps_only_valid_answers()]] - `contains` [EXTRACTED]
+- [[test_cold_read_verdicts()]] - `contains` [EXTRACTED]
 - [[test_editor_gets_one_second_pass_for_broken_rules()]] - `contains` [EXTRACTED]
 - [[test_first_sentence_reads_across_the_cut()]] - `contains` [EXTRACTED]
 - [[test_logbook_hook_line_is_the_whole_first_sentence()]] - `contains` [EXTRACTED]
@@ -47,4 +50,4 @@ tags:
 - [[twist_short()]] - `contains` [EXTRACTED]
 - [[writing.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_storypy
+#graphify/code #graphify/EXTRACTED #community/test_full_scenespy

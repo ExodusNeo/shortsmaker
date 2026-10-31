@@ -59,18 +59,16 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
+- 10 edges to [[_COMMUNITY_test_full_scenes.py]]
 - 6 edges to [[_COMMUNITY_local_clips]]
-- 5 edges to [[_COMMUNITY___init__.py]]
-- 4 edges to [[_COMMUNITY_json]]
 - 1 edge to [[_COMMUNITY_h3_run.py]]
 - 1 edge to [[_COMMUNITY_re]]
-- 1 edge to [[_COMMUNITY_ffmpeg]]
-- 1 edge to [[_COMMUNITY_plan_rules.py]]
+- 1 edge to [[_COMMUNITY_local_voice]]
 - 1 edge to [[_COMMUNITY_split_make_shorts.py]]
 
 ## Top bridge nodes
 - [[unpack_clips()]] - degree 10, connects to 4 communities
-- [[test_h3_handoff.py]] - degree 32, connects to 3 communities
 - [[handoff()]] - degree 12, connects to 2 communities
 - [[h3_problems()]] - degree 4, connects to 2 communities
 - [[h3_prompt()]] - degree 4, connects to 2 communities
+- [[test_h3_handoff.py]] - degree 32, connects to 1 community

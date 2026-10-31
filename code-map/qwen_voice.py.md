@@ -1,12 +1,12 @@
 ---
 source_file: "local_ai/qwen_voice.py"
 type: "code"
-community: "qwen_voice.py"
+community: "time"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/qwen_voicepy
+  - community/time
 ---
 
 # qwen_voice.py
@@ -31,4 +31,4 @@ tags:
 - [[time]] - `imports` [EXTRACTED]
 - [[unicodedata]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/qwen_voicepy
+#graphify/code #graphify/EXTRACTED #community/time

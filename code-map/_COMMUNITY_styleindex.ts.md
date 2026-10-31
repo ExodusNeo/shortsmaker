@@ -12,7 +12,6 @@ members: 38
 - [[CLAMP]] - code - remotion/src/style/kit.ts
 - [[Cut]] - code - remotion/src/style/transitions/Cut.tsx
 - [[Cut.tsx]] - code - remotion/src/style/transitions/Cut.tsx
-- [[FONT]] - code - remotion/src/Graphics.tsx
 - [[Fade]] - code - remotion/src/style/transitions/Fade.tsx
 - [[Fade.tsx]] - code - remotion/src/style/transitions/Fade.tsx
 - [[Flash]] - code - remotion/src/style/transitions/Flash.tsx
@@ -22,6 +21,7 @@ members: 38
 - [[InventedOverlay.tsx]] - code - remotion/src/style/generated/InventedOverlay.tsx
 - [[InventedTransition]] - code - remotion/src/style/generated/InventedTransition.tsx
 - [[InventedTransition.tsx]] - code - remotion/src/style/generated/InventedTransition.tsx
+- [[KineticTitle()]] - code - remotion/src/style/overlays/KineticTitle.tsx
 - [[KineticTitle.tsx]] - code - remotion/src/style/overlays/KineticTitle.tsx
 - [[LOOKS]] - code - remotion/src/style/index.ts
 - [[Leak]] - code - remotion/src/style/transitions/Leak.tsx
@@ -40,12 +40,12 @@ members: 38
 - [[Wipe.tsx]] - code - remotion/src/style/transitions/Wipe.tsx
 - [[clamp01()]] - code - remotion/src/style/kit.ts
 - [[kit.ts]] - code - remotion/src/style/kit.ts
+- [[ref_react]] - concept
 - [[remotion_src_style_kit_absolutefill]] - concept
 - [[remotion_src_style_kit_easing]] - concept
 - [[remotion_src_style_kit_interpolate]] - concept
 - [[styleindex.ts]] - code - remotion/src/style/index.ts
 - [[styletypes.ts]] - code - remotion/src/style/types.ts
-- [[theme]] - code - remotion/src/Graphics.tsx
 
 ## Live Query (requires Dataview plugin)
 
@@ -55,14 +55,18 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 36 edges to [[_COMMUNITY_Halftone.tsx]]
-- 19 edges to [[_COMMUNITY_Graphics.tsx]]
-- 17 edges to [[_COMMUNITY_Short.tsx]]
+- 42 edges to [[_COMMUNITY_Halftone.tsx]]
+- 17 edges to [[_COMMUNITY_Graphics.tsx]]
+- 13 edges to [[_COMMUNITY_Short.tsx]]
 - 6 edges to [[_COMMUNITY_toolkit.tsx]]
+- 3 edges to [[_COMMUNITY_guarded.tsx]]
+- 1 edge to [[_COMMUNITY_ref_remotion]]
+- 1 edge to [[_COMMUNITY_fulltypes.ts]]
+- 1 edge to [[_COMMUNITY_Paper]]
 
 ## Top bridge nodes
+- [[ref_react]] - degree 24, connects to 6 communities
 - [[kit.ts]] - degree 40, connects to 4 communities
-- [[styletypes.ts]] - degree 28, connects to 4 communities
 - [[styleindex.ts]] - degree 46, connects to 3 communities
-- [[QuestionBeat.tsx]] - degree 14, connects to 2 communities
-- [[KineticTitle.tsx]] - degree 12, connects to 2 communities
+- [[styletypes.ts]] - degree 28, connects to 3 communities
+- [[QuestionBeat.tsx]] - degree 14, connects to 1 community

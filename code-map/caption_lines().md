@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/audio_mix.py"
 type: "code"
-community: "render_remotion"
+community: "captions"
 location: "L51"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/render_remotion
+  - community/captions
 ---
 
 # caption_lines()
@@ -17,4 +17,4 @@ tags:
 - [[captions()_1]] - `calls` [EXTRACTED]
 - [[render_remotion()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/render_remotion
+#graphify/code #graphify/EXTRACTED #community/captions

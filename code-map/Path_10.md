@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "test_blender_plan.py"
+community: "local_voice"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_blender_planpy
+  - community/local_voice
 ---
 
 # Path
 
 ## Connections
-- [[fake_blender()]] - `references` [EXTRACTED]
+- [[log_short()]] - `references` [EXTRACTED]
+- [[vault_page()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_blender_planpy
+#graphify/code #graphify/EXTRACTED #community/local_voice

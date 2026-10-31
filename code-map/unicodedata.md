@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "qwen_voice.py"
+community: "time"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/qwen_voicepy
+  - community/time
 ---
 
 # unicodedata
@@ -18,4 +18,4 @@ tags:
 - [[spoken_count()]] - `calls` [EXTRACTED]
 - [[words_of()]] - `calls` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/qwen_voicepy
+#graphify/concept #graphify/EXTRACTED #community/time

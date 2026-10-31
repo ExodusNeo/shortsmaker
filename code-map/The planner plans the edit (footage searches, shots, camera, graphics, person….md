@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/writing.py"
 type: "rationale"
-community: "prepare_topic"
-location: "L386"
+community: "clean_pics"
+location: "L460"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/prepare_topic
+  - community/clean_pics
 ---
 
 # The planner plans the edit (footage searches, shots, camera, graphics, person…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[direct_scripts()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/prepare_topic
+#graphify/rationale #graphify/EXTRACTED #community/clean_pics

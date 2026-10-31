@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/writing.py"
 type: "code"
-community: "__init__.py"
+community: "re"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/__init__py
+  - community/re
 ---
 
 # writing.py
@@ -20,6 +20,7 @@ tags:
 - [[channel_profiles.py]] - `imports_from` [EXTRACTED]
 - [[check_twists()]] - `contains` [EXTRACTED]
 - [[cli.py]] - `imports_from` [EXTRACTED]
+- [[cold_read()]] - `contains` [EXTRACTED]
 - [[config.py]] - `imports_from` [EXTRACTED]
 - [[direct_scripts()]] - `contains` [EXTRACTED]
 - [[edit_scripts()]] - `contains` [EXTRACTED]
@@ -54,4 +55,4 @@ tags:
 - [[urllib_parse]] - `imports` [EXTRACTED]
 - [[write_scripts()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/__init__py
+#graphify/code #graphify/EXTRACTED #community/re

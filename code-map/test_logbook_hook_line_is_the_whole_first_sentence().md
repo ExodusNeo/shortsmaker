@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_story.py"
 type: "code"
-community: "ffmpeg"
-location: "L59"
+community: "local_voice"
+location: "L105"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ffmpeg
+  - community/local_voice
 ---
 
 # test_logbook_hook_line_is_the_whole_first_sentence()
@@ -16,4 +16,4 @@ tags:
 - [[scenes()]] - `calls` [EXTRACTED]
 - [[test_story.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ffmpeg
+#graphify/code #graphify/EXTRACTED #community/local_voice

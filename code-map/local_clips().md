@@ -12,7 +12,7 @@ tags:
 # local_clips()
 
 ## Connections
-- [[Path_6]] - `references` [EXTRACTED]
+- [[Path_5]] - `references` [EXTRACTED]
 - [[Real motion for every scene with a picture scenes Claude matched to archival…]] - `rationale_for` [EXTRACTED]
 - [[cover_crop()]] - `calls` [EXTRACTED]
 - [[cut_owner_clip()]] - `calls` [EXTRACTED]

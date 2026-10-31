@@ -33,21 +33,18 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 8 edges to [[_COMMUNITY_subprocess]]
+- 12 edges to [[_COMMUNITY_test_full_scenes.py]]
 - 5 edges to [[_COMMUNITY_look_and_fix]]
-- 3 edges to [[_COMMUNITY_json]]
-- 3 edges to [[_COMMUNITY_re]]
-- 3 edges to [[_COMMUNITY_test_full_scenes.py]]
+- 4 edges to [[_COMMUNITY_re]]
+- 2 edges to [[_COMMUNITY_render_remotion]]
 - 2 edges to [[_COMMUNITY_ask_ai]]
-- 1 edge to [[_COMMUNITY_render_remotion]]
+- 2 edges to [[_COMMUNITY_json]]
+- 1 edge to [[_COMMUNITY_opener_graphic]]
 - 1 edge to [[_COMMUNITY_apply_review_fixes]]
-- 1 edge to [[_COMMUNITY_paint_instead]]
-- 1 edge to [[_COMMUNITY_plan_rules.py]]
-- 1 edge to [[_COMMUNITY___init__.py]]
 
 ## Top bridge nodes
-- [[redraw_custom()]] - degree 10, connects to 6 communities
-- [[code_custom_scenes()]] - degree 15, connects to 5 communities
+- [[code_custom_scenes()]] - degree 15, connects to 6 communities
+- [[redraw_custom()]] - degree 10, connects to 5 communities
 - [[lint_custom_code()]] - degree 8, connects to 3 communities
 - [[clean_tsx_code()]] - degree 6, connects to 3 communities
 - [[fallback_custom_tsx()]] - degree 6, connects to 3 communities

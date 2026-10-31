@@ -2,7 +2,7 @@
 source_file: "tests/test_rules.py"
 type: "code"
 community: "test_rules.py"
-location: "L200"
+location: "L201"
 tags:
   - graphify/code
   - graphify/EXTRACTED

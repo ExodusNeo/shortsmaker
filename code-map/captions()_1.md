@@ -1,19 +1,19 @@
 ---
 source_file: "shortsmaker/audio_mix.py"
 type: "code"
-community: "render_remotion"
+community: "captions"
 location: "L63"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/render_remotion
+  - community/captions
 ---
 
 # captions()
 
 ## Connections
 - [[ASS captions, one caption_lines() line at a time; the spoken word turns yellow.…]] - `rationale_for` [EXTRACTED]
-- [[Path_17]] - `references` [EXTRACTED]
+- [[Path_12]] - `references` [EXTRACTED]
 - [[ass_colour()]] - `calls` [EXTRACTED]
 - [[ass_time()]] - `calls` [EXTRACTED]
 - [[audio_mix.py]] - `contains` [EXTRACTED]
@@ -21,4 +21,4 @@ tags:
 - [[render()_4]] - `calls` [EXTRACTED]
 - [[styled()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/render_remotion
+#graphify/code #graphify/EXTRACTED #community/captions

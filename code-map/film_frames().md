@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/footage.py"
 type: "code"
-community: "fetch"
+community: "film_piece"
 location: "L168"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/fetch
+  - community/film_piece
 ---
 
 # film_frames()
@@ -18,4 +18,4 @@ tags:
 - [[footage.py]] - `contains` [EXTRACTED]
 - [[n moments spread through a film, for the contact sheets (with FILM_CROP applied…]] - `rationale_for` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/fetch
+#graphify/code #graphify/EXTRACTED #community/film_piece

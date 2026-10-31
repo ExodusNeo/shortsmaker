@@ -47,32 +47,29 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 17 edges to [[_COMMUNITY_test_pictures_first.py]]
+- 14 edges to [[_COMMUNITY_test_pictures_first.py]]
 - 9 edges to [[_COMMUNITY_test_topic_ideas.py]]
-- 5 edges to [[_COMMUNITY_prepare_topic]]
-- 5 edges to [[_COMMUNITY_test_story.py]]
+- 8 edges to [[_COMMUNITY_clean_full]]
+- 7 edges to [[_COMMUNITY_prepare_topic]]
+- 5 edges to [[_COMMUNITY_re]]
 - 3 edges to [[_COMMUNITY_gather_pool]]
-- 3 edges to [[_COMMUNITY_fake_ai]]
-- 3 edges to [[_COMMUNITY_re]]
-- 3 edges to [[_COMMUNITY_words_of]]
-- 3 edges to [[_COMMUNITY_clean_sound]]
-- 3 edges to [[_COMMUNITY_style_library]]
-- 2 edges to [[_COMMUNITY_trend_research]]
+- 3 edges to [[_COMMUNITY_channel_profiles.py]]
+- 3 edges to [[_COMMUNITY_clean_pics]]
+- 3 edges to [[_COMMUNITY_edit_scripts]]
+- 2 edges to [[_COMMUNITY_json]]
+- 2 edges to [[_COMMUNITY_style_library]]
 - 1 edge to [[_COMMUNITY_test_rules.py]]
-- 1 edge to [[_COMMUNITY_subprocess]]
-- 1 edge to [[_COMMUNITY_json]]
-- 1 edge to [[_COMMUNITY_test_full_scenes.py]]
-- 1 edge to [[_COMMUNITY_clean_graphic]]
-- 1 edge to [[_COMMUNITY_clean_full]]
+- 1 edge to [[_COMMUNITY_check_twists]]
+- 1 edge to [[_COMMUNITY_story_problems]]
 - 1 edge to [[_COMMUNITY_limit_full]]
 - 1 edge to [[_COMMUNITY_limit_style]]
 - 1 edge to [[_COMMUNITY_test_blender_plan.py]]
 - 1 edge to [[_COMMUNITY_ask_ai]]
-- 1 edge to [[_COMMUNITY___init__.py]]
+- 1 edge to [[_COMMUNITY_test_style.py]]
 
 ## Top bridge nodes
-- [[write_scripts()]] - degree 51, connects to 22 communities
+- [[write_scripts()]] - degree 51, connects to 18 communities
 - [[planning]] - degree 19, connects to 4 communities
 - [[passing()]] - degree 12, connects to 2 communities
 - [[planning_ai()]] - degree 9, connects to 2 communities
-- [[dot-__enter__()_1]] - degree 4, connects to 2 communities
+- [[test_prompts_carry_picture_list()]] - degree 8, connects to 2 communities

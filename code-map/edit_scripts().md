@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/writing.py"
 type: "code"
-community: "test_story.py"
-location: "L268"
+community: "edit_scripts"
+location: "L283"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_storypy
+  - community/edit_scripts
 ---
 
 # edit_scripts()
@@ -14,6 +14,7 @@ tags:
 ## Connections
 - [[The script editor pass strongest hook, read-aloud fixes, cuts,…]] - `rationale_for` [EXTRACTED]
 - [[ask_ai()]] - `calls` [EXTRACTED]
+- [[cold_read()]] - `calls` [EXTRACTED]
 - [[edit_scripts()]] - `calls` [EXTRACTED]
 - [[json]] - `calls` [EXTRACTED]
 - [[length_plan()]] - `calls` [EXTRACTED]
@@ -25,4 +26,4 @@ tags:
 - [[write_scripts()]] - `calls` [EXTRACTED]
 - [[writing.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_storypy
+#graphify/code #graphify/EXTRACTED #community/edit_scripts

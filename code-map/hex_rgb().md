@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/config.py"
 type: "code"
-community: "plan_rules.py"
+community: "test_full_scenes.py"
 location: "L70"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/plan_rulespy
+  - community/test_full_scenespy
 ---
 
 # hex_rgb()
@@ -19,4 +19,4 @@ tags:
 - [[render()_4]] - `calls` [EXTRACTED]
 - [[short_render.py]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/plan_rulespy
+#graphify/code #graphify/EXTRACTED #community/test_full_scenespy

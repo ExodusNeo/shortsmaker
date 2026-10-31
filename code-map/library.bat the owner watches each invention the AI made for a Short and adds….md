@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/style_lab.py"
 type: "rationale"
-community: "__init__.py"
+community: "re"
 location: "L300"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/__init__py
+  - community/re
 ---
 
 # library.bat: the owner watches each invention the AI made for a Short and adds…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[library_menu()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/__init__py
+#graphify/rationale #graphify/EXTRACTED #community/re

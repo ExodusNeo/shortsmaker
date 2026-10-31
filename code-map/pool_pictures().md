@@ -1,18 +1,18 @@
 ---
 source_file: "shortsmaker/review.py"
 type: "code"
-community: "prepare_topic"
-location: "L297"
+community: "apply_review_fixes"
+location: "L318"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/prepare_topic
+  - community/apply_review_fixes
 ---
 
 # pool_pictures()
 
 ## Connections
-- [[Path_13]] - `references` [EXTRACTED]
+- [[Path_21]] - `references` [EXTRACTED]
 - [[Rejected scenes (index - the review's complaint) that get a real picture from…]] - `rationale_for` [EXTRACTED]
 - [[apply_review_fixes()]] - `calls` [EXTRACTED]
 - [[ask_ai()]] - `calls` [EXTRACTED]
@@ -23,4 +23,4 @@ tags:
 - [[load_pool()]] - `calls` [EXTRACTED]
 - [[review.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/prepare_topic
+#graphify/code #graphify/EXTRACTED #community/apply_review_fixes
