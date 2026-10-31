@@ -12,14 +12,14 @@ tags:
 # edit_plan()
 
 ## Connections
-- [[Path_28]] - `references` [EXTRACTED]
+- [[Path_27]] - `references` [EXTRACTED]
 - [[Timestamped edit decision list of exactly what was rendered, plus the sound-…]] - `rationale_for` [EXTRACTED]
 - [[clock()_1]] - `calls` [EXTRACTED]
 - [[cold_read_line()]] - `calls` [EXTRACTED]
 - [[cut_text()]] - `calls` [EXTRACTED]
 - [[editplan.py]] - `contains` [EXTRACTED]
+- [[finish_render()]] - `calls` [EXTRACTED]
 - [[look_text()]] - `calls` [EXTRACTED]
 - [[picture_line()]] - `calls` [EXTRACTED]
-- [[render()_2]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/edit_plan

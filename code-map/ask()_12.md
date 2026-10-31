@@ -1,17 +1,17 @@
 ---
-source_file: "tests/test_full_scenes.py"
+source_file: "tests/test_ai_modes.py"
 type: "code"
-community: "rewrite_paint_prompts"
-location: "L477"
+community: "test_ai_modes.py"
+location: "L48"
 tags:
   - graphify/code
-  - graphify/EXTRACTED
-  - community/rewrite_paint_prompts
+  - graphify/INFERRED
+  - community/test_ai_modespy
 ---
 
 # ask()
 
 ## Connections
-- [[test_rewrite_paint_prompts()]] - `contains` [EXTRACTED]
+- [[test_all_modes_route_writer_editor_and_reader()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/rewrite_paint_prompts
+#graphify/code #graphify/INFERRED #community/test_ai_modespy

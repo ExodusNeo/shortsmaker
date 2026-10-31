@@ -1,18 +1,18 @@
 ---
 source_file: "shortsmaker/picture_pool.py"
 type: "code"
-community: "catalog_pool"
+community: "test_pictures_first.py"
 location: "L206"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/catalog_pool
+  - community/test_pictures_firstpy
 ---
 
 # catalog_pool()
 
 ## Connections
-- [[Path_3]] - `references` [EXTRACTED]
+- [[Path_1]] - `references` [EXTRACTED]
 - [[The picture list the writer, editor and director plan with the AI looks at the…]] - `rationale_for` [EXTRACTED]
 - [[ask_ai()]] - `calls` [EXTRACTED]
 - [[capture_prompts()]] - `calls` [EXTRACTED]
@@ -32,4 +32,4 @@ tags:
 - [[test_corrupt_pool_and_catalog_redone()]] - `calls` [EXTRACTED]
 - [[write_json()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/catalog_pool
+#graphify/code #graphify/EXTRACTED #community/test_pictures_firstpy

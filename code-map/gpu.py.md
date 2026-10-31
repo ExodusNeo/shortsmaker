@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/gpu.py"
 type: "code"
-community: "gpu.py"
+community: "json"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/gpupy
+  - community/json
 ---
 
 # gpu.py
@@ -56,6 +56,8 @@ tags:
 - [[test_full_scenes.py]] - `imports_from` [EXTRACTED]
 - [[test_h3_handoff.py]] - `imports_from` [EXTRACTED]
 - [[test_opener_graphic.py]] - `imports_from` [EXTRACTED]
+- [[test_reliability.py]] - `imports_from` [EXTRACTED]
+- [[test_render_resume.py]] - `imports_from` [EXTRACTED]
 - [[test_story.py]] - `imports_from` [EXTRACTED]
 - [[time]] - `imports` [EXTRACTED]
 - [[unicodedata]] - `imports` [EXTRACTED]
@@ -64,8 +66,9 @@ tags:
 - [[urllib_parse]] - `imports` [EXTRACTED]
 - [[urllib_request]] - `imports` [EXTRACTED]
 - [[veo_handoff()]] - `contains` [EXTRACTED]
+- [[voice_cache.py]] - `imports_from` [EXTRACTED]
 - [[voicestudio_unload()]] - `contains` [EXTRACTED]
 - [[voicestudio_up()]] - `contains` [EXTRACTED]
 - [[zipfile]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/gpupy
+#graphify/code #graphify/EXTRACTED #community/json

@@ -1,17 +1,20 @@
 ---
 source_file: ""
 type: "code"
-community: "log_short"
+community: "code_custom_scenes"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/log_short
+  - community/code_custom_scenes
 ---
 
 # Path
 
 ## Connections
-- [[log_short()]] - `references` [EXTRACTED]
-- [[vault_page()]] - `references` [EXTRACTED]
+- [[code_custom_scenes()]] - `references` [EXTRACTED]
+- [[full_props()]] - `references` [EXTRACTED]
+- [[look_and_fix()]] - `references` [EXTRACTED]
+- [[preview_custom()]] - `references` [EXTRACTED]
+- [[preview_sheet()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/log_short
+#graphify/code #graphify/EXTRACTED #community/code_custom_scenes

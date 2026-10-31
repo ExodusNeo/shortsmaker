@@ -2,7 +2,7 @@
 source_file: "shortsmaker/short_render.py"
 type: "code"
 community: "test_blender_plan.py"
-location: "L74"
+location: "L82"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -13,12 +13,12 @@ tags:
 
 ## Connections
 - [[(picture, credit line, CHECK line) for a drawn Short's thumbnail the real…]] - `rationale_for` [EXTRACTED]
-- [[Path_11]] - `references` [EXTRACTED]
+- [[Path_32]] - `references` [EXTRACTED]
+- [[finish_render()]] - `calls` [EXTRACTED]
 - [[get_image()]] - `calls` [EXTRACTED]
 - [[io]] - `calls` [EXTRACTED]
 - [[load_pool()]] - `calls` [EXTRACTED]
 - [[re]] - `calls` [EXTRACTED]
-- [[render()_2]] - `calls` [EXTRACTED]
 - [[scene_frames()]] - `calls` [EXTRACTED]
 - [[short_render.py]] - `contains` [EXTRACTED]
 - [[test_film_opener_is_skipped_and_bad_bytes_fall_back()]] - `calls` [EXTRACTED]

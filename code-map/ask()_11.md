@@ -1,17 +1,17 @@
 ---
-source_file: "tests/test_full_scenes.py"
+source_file: "tests/test_story.py"
 type: "code"
-community: "rewrite_paint_prompts"
-location: "L448"
+community: "cold_read_line"
+location: "L86"
 tags:
   - graphify/code
-  - graphify/EXTRACTED
-  - community/rewrite_paint_prompts
+  - graphify/INFERRED
+  - community/cold_read_line
 ---
 
 # ask()
 
 ## Connections
-- [[test_review_uses_unused_pool_pictures_before_painting()]] - `contains` [EXTRACTED]
+- [[test_cold_read_uses_other_ai_in_solo_and_collaborative_modes()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/rewrite_paint_prompts
+#graphify/code #graphify/INFERRED #community/cold_read_line

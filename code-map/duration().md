@@ -12,7 +12,8 @@ tags:
 # duration()
 
 ## Connections
-- [[Path_22]] - `references` [EXTRACTED]
+- [[Path_20]] - `references` [EXTRACTED]
+- [[apply()]] - `calls` [EXTRACTED]
 - [[log_short()]] - `calls` [EXTRACTED]
 - [[media_tools.py]] - `contains` [EXTRACTED]
 - [[nasa_films()]] - `calls` [EXTRACTED]

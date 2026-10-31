@@ -1,17 +1,17 @@
 ---
 type: community
-members: 24
+members: 23
 ---
 
 # h3_run.py
 
-**Members:** 24 nodes
+**Members:** 23 nodes
 
 ## Members
 - [[Centre-crop the start picture to 768x1344 the H3 node stretches off-aspect…]] - rationale - colab/h3_run.py
 - [[ComfyUI API graph for one first-frame clip. No negative prompt H3's graph uses…]] - rationale - colab/h3_run.py
 - [[MiniMax H3 image-to-video jobs for a ShortsMaker Short, run on Colab next to…]] - rationale - colab/h3_run.py
-- [[Path_12]] - code
+- [[Path_10]] - code
 - [[Seconds - a valid H3 length, snapped up to its 17k+5 frame grid (the…]] - rationale - colab/h3_run.py
 - [[Tests for colabh3_run.py (the MiniMax H3 job runner that ships inside veo.zip)…]] - rationale - tests/test_h3_run.py
 - [[The video SaveVideo wrote, found by scanning the job's outputs (the key name…]] - rationale - colab/h3_run.py
@@ -30,7 +30,6 @@ members: 24
 - [[test_notebook_cells()]] - code - tests/test_h3_run.py
 - [[test_rejected_graph_shows_comfyui_error()]] - code - tests/test_h3_run.py
 - [[test_save_video_sets_nested_codec()]] - code - tests/test_h3_run.py
-- [[urllib_error]] - concept
 - [[zipfile]] - concept
 
 ## Live Query (requires Dataview plugin)
@@ -41,16 +40,17 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 5 edges to [[_COMMUNITY_json]]
-- 5 edges to [[_COMMUNITY_test_full_scenes.py]]
+- 5 edges to [[_COMMUNITY_short_render.py]]
 - 5 edges to [[_COMMUNITY_pathlib]]
-- 3 edges to [[_COMMUNITY_gpu.py]]
+- 4 edges to [[_COMMUNITY_json]]
+- 2 edges to [[_COMMUNITY_test_full_scenes.py]]
 - 1 edge to [[_COMMUNITY_test_h3_handoff.py]]
+- 1 edge to [[_COMMUNITY_local_clips]]
 - 1 edge to [[_COMMUNITY_image_sources.py]]
 
 ## Top bridge nodes
-- [[h3_run.py]] - degree 16, connects to 3 communities
+- [[h3_run.py]] - degree 16, connects to 5 communities
+- [[zipfile]] - degree 5, connects to 3 communities
 - [[test_h3_run.py]] - degree 14, connects to 2 communities
 - [[main()_1]] - degree 10, connects to 2 communities
-- [[zipfile]] - degree 5, connects to 2 communities
-- [[urllib_error]] - degree 3, connects to 2 communities
+- [[call()]] - degree 3, connects to 1 community

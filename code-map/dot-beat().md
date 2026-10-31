@@ -1,12 +1,12 @@
 ---
 source_file: "blender/build_scene.py"
 type: "code"
-community: "Shots"
+community: "build_scene.py"
 location: "L58"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Shots
+  - community/build_scenepy
 ---
 
 # .beat()
@@ -18,4 +18,4 @@ tags:
 - [[Shots]] - `method` [EXTRACTED]
 - [[main()_2]] - `calls` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/Shots
+#graphify/code #graphify/EXTRACTED #community/build_scenepy

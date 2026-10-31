@@ -1,16 +1,20 @@
 ---
 source_file: ""
 type: "code"
-community: "analyze"
+community: "speak"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/analyze
+  - community/speak
 ---
 
 # Path
 
 ## Connections
-- [[analyze()]] - `references` [EXTRACTED]
+- [[captions()_1]] - `references` [EXTRACTED]
+- [[music_gain()]] - `references` [EXTRACTED]
+- [[speak()_1]] - `references` [EXTRACTED]
+- [[story_sound()]] - `references` [EXTRACTED]
+- [[tts()_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/analyze
+#graphify/code #graphify/EXTRACTED #community/speak

@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[fake_gemini()]] - `indirect_call` [INFERRED]
-- [[fake_moss()]] - `indirect_call` [INFERRED]
+- [[fake_moss()_1]] - `indirect_call` [INFERRED]
 - [[paint_instead()]] - `calls` [EXTRACTED]
 - [[test_full_scenes.py]] - `contains` [EXTRACTED]
 

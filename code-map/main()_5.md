@@ -1,21 +1,18 @@
 ---
-source_file: "tests/render_full.py"
+source_file: "tests/render_style.py"
 type: "code"
-community: "json"
-location: "L28"
+community: "ffmpeg"
+location: "L49"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/json
+  - community/ffmpeg
 ---
 
 # main()
 
 ## Connections
-- [[json]] - `calls` [EXTRACTED]
-- [[props_for()]] - `calls` [EXTRACTED]
-- [[render_full.py]] - `contains` [EXTRACTED]
-- [[shutil]] - `calls` [EXTRACTED]
-- [[subprocess]] - `calls` [EXTRACTED]
+- [[build()_1]] - `calls` [EXTRACTED]
+- [[render_style.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/json
+#graphify/code #graphify/EXTRACTED #community/ffmpeg

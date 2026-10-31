@@ -29,5 +29,6 @@ tags:
 - [[storyboard()]] - `calls` [EXTRACTED]
 - [[test_blender_run.py]] - `imports` [EXTRACTED]
 - [[test_marks.py]] - `imports` [EXTRACTED]
+- [[test_render_resume.py]] - `imports` [EXTRACTED]
 
 #graphify/concept #graphify/EXTRACTED #community/test_full_scenespy

@@ -12,7 +12,7 @@ tags:
 # invent_component()
 
 ## Connections
-- [[Path_17]] - `references` [EXTRACTED]
+- [[Path_15]] - `references` [EXTRACTED]
 - [[The AI invents a new style component (`spec` = {title, brief, fallback}) for…]] - `rationale_for` [EXTRACTED]
 - [[ask_ai()]] - `calls` [EXTRACTED]
 - [[attempt()]] - `contains` [EXTRACTED]

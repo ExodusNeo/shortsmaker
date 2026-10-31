@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/retention.py"
 type: "code"
-community: "main"
+community: "command"
 location: "L131"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/main
+  - community/command
 ---
 
 # command()
@@ -22,4 +22,4 @@ tags:
 - [[retention.bat, or make_shorts.py retention Short folder screenshot AI…]] - `rationale_for` [EXTRACTED]
 - [[retention.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/main
+#graphify/code #graphify/EXTRACTED #community/command

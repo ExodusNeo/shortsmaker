@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/gpu.py"
 type: "code"
-community: "log_short"
+community: "ffmpeg"
 location: "L139"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/log_short
+  - community/ffmpeg
 ---
 
 # sentence_groups()
@@ -18,4 +18,4 @@ tags:
 - [[re]] - `calls` [EXTRACTED]
 - [[test_sentences_running_across_cuts_are_one_take()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/log_short
+#graphify/code #graphify/EXTRACTED #community/ffmpeg

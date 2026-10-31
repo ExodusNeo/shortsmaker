@@ -2,7 +2,7 @@
 source_file: "shortsmaker/review.py"
 type: "code"
 community: "quality_check"
-location: "L23"
+location: "L32"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -13,12 +13,12 @@ tags:
 
 ## Connections
 - [[Automatic checks on the finished Short, using ffmpeg's own detectors in one…]] - `rationale_for` [EXTRACTED]
-- [[Path_19]] - `references` [EXTRACTED]
+- [[Path_17]] - `references` [EXTRACTED]
 - [[clock()_1]] - `calls` [EXTRACTED]
+- [[finish_render()]] - `calls` [EXTRACTED]
 - [[length_plan()]] - `calls` [EXTRACTED]
 - [[max_seconds()]] - `calls` [EXTRACTED]
 - [[re]] - `calls` [EXTRACTED]
-- [[render()_2]] - `calls` [EXTRACTED]
 - [[review.py]] - `contains` [EXTRACTED]
 - [[subprocess]] - `calls` [EXTRACTED]
 - [[test_quality_check_reads_ffmpeg_and_flags_reused_pictures()]] - `calls` [EXTRACTED]

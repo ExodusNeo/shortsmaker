@@ -16,5 +16,6 @@ tags:
 - [[fix_short()]] - `calls` [EXTRACTED]
 - [[main()_3]] - `calls` [EXTRACTED]
 - [[pick_channel()]] - `calls` [EXTRACTED]
+- [[resume_runs()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/main

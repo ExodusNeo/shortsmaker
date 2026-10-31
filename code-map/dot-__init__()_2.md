@@ -1,17 +1,17 @@
 ---
-source_file: "blender/templates.py"
+source_file: "tests/test_pictures_first.py"
 type: "code"
-community: "templates.py"
-location: "L14"
+community: "test_pictures_first.py"
+location: "L115"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/templatespy
+  - community/test_pictures_firstpy
 ---
 
 # .__init__()
 
 ## Connections
-- [[Bridge]] - `method` [EXTRACTED]
+- [[fake_ai]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/templatespy
+#graphify/code #graphify/EXTRACTED #community/test_pictures_firstpy

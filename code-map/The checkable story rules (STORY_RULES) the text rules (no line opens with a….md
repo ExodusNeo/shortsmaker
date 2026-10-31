@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/writing.py"
 type: "rationale"
-community: "test_story.py"
+community: "story_problems"
 location: "L416"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/test_storypy
+  - community/story_problems
 ---
 
 # The checkable story rules (STORY_RULES): the text rules (no line opens with a…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[story_problems()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/test_storypy
+#graphify/rationale #graphify/EXTRACTED #community/story_problems

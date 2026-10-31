@@ -1,14 +1,14 @@
 ---
 type: community
-members: 17
+members: 16
 ---
 
 # main
 
-**Members:** 17 nodes
+**Members:** 16 nodes
 
 ## Members
-- [[dot-__init__()_3]] - code - blender/failures.py
+- [[dot-__init__()_5]] - code - blender/failures.py
 - [[dot-_crack()]] - code - blender/failures.py
 - [[dot-fallen()]] - code - blender/failures.py
 - [[dot-falls()]] - code - blender/failures.py
@@ -23,7 +23,6 @@ members: 17
 - [[Vector_2]] - code
 - [[Where a point on the collapsing span ends up in the water.]] - rationale - blender/failures.py
 - [[key()]] - code - blender/failures.py
-- [[keyvis()]] - code - blender/build_scene.py
 - [[main()_2]] - code - blender/build_scene.py
 
 ## Live Query (requires Dataview plugin)
@@ -34,14 +33,13 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 6 edges to [[_COMMUNITY_build_scene.py]]
-- 3 edges to [[_COMMUNITY_Shots]]
-- 3 edges to [[_COMMUNITY_templates.py]]
-- 2 edges to [[_COMMUNITY_parts.py]]
+- 7 edges to [[_COMMUNITY_build_scene.py]]
+- 4 edges to [[_COMMUNITY_parts.py]]
+- 2 edges to [[_COMMUNITY_templates.py]]
+- 1 edge to [[_COMMUNITY_look.py]]
 - 1 edge to [[_COMMUNITY_json]]
 
 ## Top bridge nodes
 - [[main()_2]] - degree 19, connects to 5 communities
 - [[Failure]] - degree 9, connects to 1 community
 - [[key()]] - degree 4, connects to 1 community
-- [[keyvis()]] - degree 2, connects to 1 community

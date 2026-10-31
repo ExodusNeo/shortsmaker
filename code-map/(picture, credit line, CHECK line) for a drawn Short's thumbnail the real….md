@@ -2,7 +2,7 @@
 source_file: "shortsmaker/short_render.py"
 type: "rationale"
 community: "test_blender_plan.py"
-location: "L75"
+location: "L83"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED

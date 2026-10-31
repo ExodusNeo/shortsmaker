@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_pictures_first.py"
 type: "code"
-community: "catalog_pool"
+community: "test_pictures_first.py"
 location: "L167"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/catalog_pool
+  - community/test_pictures_firstpy
 ---
 
 # test_usable_counts_film_once()
@@ -17,4 +17,4 @@ tags:
 - [[test_pictures_first.py]] - `contains` [EXTRACTED]
 - [[usable()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/catalog_pool
+#graphify/code #graphify/EXTRACTED #community/test_pictures_firstpy

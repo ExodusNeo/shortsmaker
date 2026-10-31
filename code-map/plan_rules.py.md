@@ -69,6 +69,7 @@ tags:
 - [[test_story.py]] - `imports_from` [EXTRACTED]
 - [[test_style.py]] - `imports_from` [EXTRACTED]
 - [[unicodedata]] - `imports` [EXTRACTED]
+- [[voice_cache.py]] - `imports_from` [EXTRACTED]
 - [[words_of()]] - `contains` [EXTRACTED]
 - [[writing.py]] - `imports_from` [EXTRACTED]
 

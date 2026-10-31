@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "test_full_scenes.py"
+community: "short_render.py"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/test_full_scenespy
+  - community/short_renderpy
 ---
 
 # subprocess
@@ -14,6 +14,7 @@ tags:
 - [[_run()]] - `calls` [EXTRACTED]
 - [[audio_mix.py]] - `imports` [EXTRACTED]
 - [[blender_render.py]] - `imports` [EXTRACTED]
+- [[cli.py]] - `imports` [EXTRACTED]
 - [[drawn_opener.py]] - `imports` [EXTRACTED]
 - [[duration()]] - `calls` [EXTRACTED]
 - [[edit_project.py]] - `imports` [EXTRACTED]
@@ -26,13 +27,14 @@ tags:
 - [[image_sources.py]] - `imports` [EXTRACTED]
 - [[llm.py]] - `imports` [EXTRACTED]
 - [[local_job()]] - `calls` [EXTRACTED]
-- [[main()_5]] - `calls` [EXTRACTED]
+- [[main()_4]] - `calls` [EXTRACTED]
 - [[master_gain()]] - `calls` [EXTRACTED]
 - [[media_tools.py]] - `imports` [EXTRACTED]
 - [[moss_images()]] - `calls` [EXTRACTED]
 - [[motion.py]] - `imports` [EXTRACTED]
 - [[music_gain()]] - `calls` [EXTRACTED]
 - [[node_run()]] - `calls` [EXTRACTED]
+- [[preview()]] - `calls` [EXTRACTED]
 - [[preview_sheet()]] - `calls` [EXTRACTED]
 - [[quality_check()]] - `calls` [EXTRACTED]
 - [[qwen_voice.py]] - `imports` [EXTRACTED]
@@ -42,6 +44,7 @@ tags:
 - [[render_style.py]] - `imports` [EXTRACTED]
 - [[review.py]] - `imports` [EXTRACTED]
 - [[run_ts_tests.py]] - `imports` [EXTRACTED]
+- [[scene_repair.py]] - `imports` [EXTRACTED]
 - [[short_render.py]] - `imports` [EXTRACTED]
 - [[shot_span()]] - `calls` [EXTRACTED]
 - [[split_make_shorts.py]] - `imports` [EXTRACTED]
@@ -52,8 +55,9 @@ tags:
 - [[test_drawn_opener.py]] - `imports` [EXTRACTED]
 - [[test_edit_project.py]] - `imports` [EXTRACTED]
 - [[test_full_scenes.py]] - `imports` [EXTRACTED]
+- [[test_reliability.py]] - `imports` [EXTRACTED]
 - [[tsc_check()]] - `calls` [EXTRACTED]
 - [[video_encoder()]] - `calls` [EXTRACTED]
 - [[voicestudio_up()]] - `calls` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/test_full_scenespy
+#graphify/concept #graphify/EXTRACTED #community/short_renderpy

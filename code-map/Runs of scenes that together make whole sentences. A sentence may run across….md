@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/gpu.py"
 type: "rationale"
-community: "log_short"
+community: "ffmpeg"
 location: "L140"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/log_short
+  - community/ffmpeg
 ---
 
 # Runs of scenes that together make whole sentences. A sentence may run across…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[sentence_groups()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/log_short
+#graphify/rationale #graphify/EXTRACTED #community/ffmpeg

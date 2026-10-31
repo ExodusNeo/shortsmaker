@@ -1,18 +1,18 @@
 ---
-source_file: "shortsmaker/frame_render.py"
+source_file: "blender/failures.py"
 type: "code"
-community: "frame_maker"
-location: "L211"
+community: "main"
+location: "L26"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/frame_maker
+  - community/main
 ---
 
 # .__init__()
 
 ## Connections
-- [[ClipReader]] - `method` [EXTRACTED]
-- [[Path_14]] - `references` [EXTRACTED]
+- [[dot-_crack()]] - `calls` [EXTRACTED]
+- [[Failure]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/frame_maker
+#graphify/code #graphify/EXTRACTED #community/main

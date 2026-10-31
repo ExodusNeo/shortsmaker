@@ -12,11 +12,12 @@ tags:
 # render_remotion()
 
 ## Connections
-- [[Path_16]] - `references` [EXTRACTED]
+- [[Path_31]] - `references` [EXTRACTED]
 - [[Render the silent video (with captions) through the Remotion project; returns…]] - `rationale_for` [EXTRACTED]
 - [[caption_lines()]] - `calls` [EXTRACTED]
 - [[code_custom_scenes()]] - `calls` [EXTRACTED]
 - [[duration()]] - `calls` [EXTRACTED]
+- [[finish_render()]] - `calls` [EXTRACTED]
 - [[full_props()]] - `calls` [EXTRACTED]
 - [[invent_styles()]] - `calls` [EXTRACTED]
 - [[make_paper()]] - `calls` [EXTRACTED]

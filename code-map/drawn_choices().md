@@ -2,7 +2,7 @@
 source_file: "shortsmaker/short_render.py"
 type: "code"
 community: "render"
-location: "L69"
+location: "L77"
 tags:
   - graphify/code
   - graphify/EXTRACTED

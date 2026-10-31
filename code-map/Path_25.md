@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "clean_full"
+community: "re"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/clean_full
+  - community/re
 ---
 
 # Path
 
 ## Connections
-- [[mark_details()]] - `references` [EXTRACTED]
+- [[analyze()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/clean_full
+#graphify/code #graphify/EXTRACTED #community/re

@@ -2,7 +2,7 @@
 source_file: "shortsmaker/cli.py"
 type: "code"
 community: "main"
-location: "L123"
+location: "L195"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,7 +12,9 @@ tags:
 # fix_short()
 
 ## Connections
+- [[apply()]] - `calls` [EXTRACTED]
 - [[ask_number()]] - `calls` [EXTRACTED]
+- [[ask_yes()]] - `calls` [EXTRACTED]
 - [[cli.py]] - `contains` [EXTRACTED]
 - [[configure_brain()]] - `calls` [EXTRACTED]
 - [[fix.bat re-render a recent Short with one scene changed, keeping its pictures,…]] - `rationale_for` [EXTRACTED]
@@ -20,6 +22,7 @@ tags:
 - [[load_state()]] - `calls` [EXTRACTED]
 - [[main()_3]] - `calls` [EXTRACTED]
 - [[paint_new()]] - `calls` [EXTRACTED]
+- [[preview()]] - `calls` [EXTRACTED]
 - [[prune_work()]] - `calls` [EXTRACTED]
 - [[render()_2]] - `calls` [EXTRACTED]
 - [[require_rules()]] - `calls` [EXTRACTED]

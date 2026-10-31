@@ -1,11 +1,11 @@
 ---
 type: community
-members: 49
+members: 52
 ---
 
 # clean_full
 
-**Members:** 49 nodes
+**Members:** 52 nodes
 
 ## Members
 - [[(what one ink figure stands for, how many to draw) the planner's `each` when…]] - rationale - shortsmaker/plan_rules.py
@@ -21,9 +21,10 @@ members: 49
 - [[Lowercase, accent-free word tokens, for matching names against spoken words.]] - rationale - shortsmaker/plan_rules.py
 - [[One planned callout, validated (LLM output is untrusted); None drops it.]] - rationale - shortsmaker/plan_rules.py
 - [[One planned full-screen motion graphic, validated (AI output is untrusted);…]] - rationale - shortsmaker/plan_rules.py
-- [[Path_25]] - code
+- [[Path_24]] - code
+- [[Scenes whose picture is missing or weak may become a full-screen motion graphic…]] - rationale - shortsmaker/picker.py
+- [[The full-screen motion graphic formats the AI may pick from (rescue_graphics,…]] - rationale - shortsmaker/picker.py
 - [[The three.js model graphic left with Blender (2026-10-30) a planned one is…]] - rationale - tests/test_opener_graphic.py
-- [[True when `cand` is a solo portraitheadshot of `person_name` (so a scene that…]] - rationale - shortsmaker/plan_rules.py
 - [[border()]] - code - shortsmaker/photo_prep.py
 - [[clean_full()]] - code - shortsmaker/plan_rules.py
 - [[clean_graphic()]] - code - shortsmaker/plan_rules.py
@@ -33,13 +34,14 @@ members: 49
 - [[coords()]] - code - shortsmaker/plan_rules.py
 - [[detail()]] - code - shortsmaker/photo_prep.py
 - [[fill_money_graphics()]] - code - shortsmaker/plan_rules.py
+- [[full_formats()]] - code - shortsmaker/picker.py
 - [[is_num()]] - code - shortsmaker/plan_rules.py
-- [[is_person_portrait()]] - code - shortsmaker/plan_rules.py
 - [[is_stereo()]] - code - shortsmaker/photo_prep.py
 - [[limit_sounds()]] - code - shortsmaker/audio_mix.py
 - [[mark_details()]] - code - shortsmaker/plan_rules.py
 - [[number_figures()]] - code - shortsmaker/plan_rules.py
 - [[plain()]] - code - shortsmaker/photo_prep.py
+- [[rescue_graphics()]] - code - shortsmaker/picker.py
 - [[show_number()]] - code - shortsmaker/plan_rules.py
 - [[statistics]] - concept
 - [[test_clean_full_board()]] - code - tests/test_full_scenes.py
@@ -53,6 +55,7 @@ members: 49
 - [[test_fill_money_graphics_and_caps()]] - code - tests/test_full_scenes.py
 - [[test_model_graphic_is_gone()]] - code - tests/test_opener_graphic.py
 - [[test_number_scaling()]] - code - tests/test_full_scenes.py
+- [[test_rescue_respects_caps()]] - code - tests/test_full_scenes.py
 - [[text()]] - code - shortsmaker/plan_rules.py
 - [[trim_borders()]] - code - shortsmaker/photo_prep.py
 - [[word()]] - code - shortsmaker/plan_rules.py
@@ -66,27 +69,32 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 28 edges to [[_COMMUNITY_test_full_scenes.py]]
-- 8 edges to [[_COMMUNITY_write_scripts]]
-- 7 edges to [[_COMMUNITY_re]]
+- 26 edges to [[_COMMUNITY_test_full_scenes.py]]
+- 7 edges to [[_COMMUNITY_write_scripts]]
+- 6 edges to [[_COMMUNITY_re]]
+- 5 edges to [[_COMMUNITY_render]]
 - 4 edges to [[_COMMUNITY_image_sources.py]]
-- 3 edges to [[_COMMUNITY_rescue_graphics]]
+- 3 edges to [[_COMMUNITY_json]]
+- 3 edges to [[_COMMUNITY_pathlib]]
 - 2 edges to [[_COMMUNITY_gather_pool]]
-- 2 edges to [[_COMMUNITY_render]]
 - 2 edges to [[_COMMUNITY_frame_maker]]
-- 2 edges to [[_COMMUNITY_test_pictures_first.py]]
-- 2 edges to [[_COMMUNITY_ffmpeg]]
+- 2 edges to [[_COMMUNITY_choose_images]]
+- 2 edges to [[_COMMUNITY_short_render.py]]
+- 2 edges to [[_COMMUNITY_ask_ai]]
+- 1 edge to [[_COMMUNITY_render_remotion]]
 - 1 edge to [[_COMMUNITY_full_cues]]
-- 1 edge to [[_COMMUNITY_drawn_opener.py]]
+- 1 edge to [[_COMMUNITY_make_opener]]
+- 1 edge to [[_COMMUNITY_main_1]]
 - 1 edge to [[_COMMUNITY_test_first_second.py]]
+- 1 edge to [[_COMMUNITY_apply_review_fixes]]
 - 1 edge to [[_COMMUNITY_visual_review]]
-- 1 edge to [[_COMMUNITY_ask_ai]]
-- 1 edge to [[_COMMUNITY_pathlib]]
+- 1 edge to [[_COMMUNITY_qwen_voice.py]]
+- 1 edge to [[_COMMUNITY_test_pictures_first.py]]
 - 1 edge to [[_COMMUNITY_test_style.py]]
 
 ## Top bridge nodes
 - [[words_of()]] - degree 22, connects to 9 communities
-- [[clean_full()]] - degree 23, connects to 4 communities
+- [[rescue_graphics()]] - degree 13, connects to 7 communities
+- [[clean_full()]] - degree 23, connects to 5 communities
 - [[is_num()]] - degree 8, connects to 4 communities
 - [[mark_details()]] - degree 8, connects to 4 communities
-- [[is_person_portrait()]] - degree 7, connects to 4 communities
