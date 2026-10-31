@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/photo_prep.py"
 type: "rationale"
-community: "plan_rules.py"
+community: "clean_full"
 location: "L69"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/plan_rulespy
+  - community/clean_full
 ---
 
 # Archive scans look broken on screen with their extras: a stereograph card keeps…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[clean_photo()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/plan_rulespy
+#graphify/rationale #graphify/EXTRACTED #community/clean_full

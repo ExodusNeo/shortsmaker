@@ -20,7 +20,7 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 1 edge to [[_COMMUNITY_plan_rules.py]]
+- 1 edge to [[_COMMUNITY_pathlib]]
 
 ## Top bridge nodes
 - [[MarkTests]] - degree 2, connects to 1 community

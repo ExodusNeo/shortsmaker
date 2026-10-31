@@ -1,12 +1,12 @@
 ---
 source_file: "blender/look.py"
 type: "code"
-community: "look.py"
+community: "build_scene.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/lookpy
+  - community/build_scenepy
 ---
 
 # look.py
@@ -24,4 +24,4 @@ tags:
 - [[setup()]] - `contains` [EXTRACTED]
 - [[templates.py]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/lookpy
+#graphify/code #graphify/EXTRACTED #community/build_scenepy

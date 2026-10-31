@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/channel_profiles.py"
 type: "code"
-community: "audio_mix.py"
+community: "json"
 location: "L157"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/audio_mixpy
+  - community/json
 ---
 
 # seed_ideas()
@@ -17,4 +17,4 @@ tags:
 - [[channel_profiles.py]] - `contains` [EXTRACTED]
 - [[trend_research()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/audio_mixpy
+#graphify/code #graphify/EXTRACTED #community/json

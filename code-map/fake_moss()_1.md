@@ -1,17 +1,17 @@
 ---
-source_file: "tests/test_full_scenes.py"
+source_file: "tests/test_opener_graphic.py"
 type: "code"
-community: "test_remotion_failure_paints"
-location: "L340"
+community: "paint_opener_start"
+location: "L26"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/test_remotion_failure_paints
+  - community/paint_opener_start
 ---
 
 # fake_moss()
 
 ## Connections
-- [[test_remotion_failure_paints()]] - `indirect_call` [INFERRED]
+- [[test_weak_opener_graphic_fixes_then_handoff()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/INFERRED #community/test_remotion_failure_paints
+#graphify/code #graphify/INFERRED #community/paint_opener_start

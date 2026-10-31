@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/short_render.py"
 type: "code"
-community: "plan_rules.py"
+community: "test_full_scenes.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/plan_rulespy
+  - community/test_full_scenespy
 ---
 
 # short_render.py
@@ -43,7 +43,7 @@ tags:
 - [[prune_work()]] - `contains` [EXTRACTED]
 - [[re]] - `imports` [EXTRACTED]
 - [[remotion_render.py]] - `imports_from` [EXTRACTED]
-- [[render()_3]] - `contains` [EXTRACTED]
+- [[render()_2]] - `contains` [EXTRACTED]
 - [[review.py]] - `imports_from` [EXTRACTED]
 - [[save_state()]] - `contains` [EXTRACTED]
 - [[seo.py]] - `imports_from` [EXTRACTED]
@@ -60,4 +60,4 @@ tags:
 - [[time]] - `imports` [EXTRACTED]
 - [[use_opener()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/plan_rulespy
+#graphify/code #graphify/EXTRACTED #community/test_full_scenespy

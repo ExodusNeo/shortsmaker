@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/picture_pool.py"
 type: "code"
-community: "picture_pool.py"
+community: "pathlib"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/picture_poolpy
+  - community/pathlib
 ---
 
 # picture_pool.py
@@ -57,4 +57,4 @@ tags:
 - [[usable()]] - `contains` [EXTRACTED]
 - [[writing.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/picture_poolpy
+#graphify/code #graphify/EXTRACTED #community/pathlib

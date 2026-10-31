@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "plan_rules.py"
+community: "pathlib"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/plan_rulespy
+  - community/pathlib
 ---
 
 # traceback
@@ -30,4 +30,4 @@ tags:
 - [[test_story.py]] - `imports` [EXTRACTED]
 - [[test_topic_ideas.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/plan_rulespy
+#graphify/concept #graphify/EXTRACTED #community/pathlib

@@ -1,14 +1,13 @@
 ---
 type: community
-members: 32
+members: 30
 ---
 
 # parts.py
 
-**Members:** 32 nodes
+**Members:** 30 nodes
 
 ## Members
-- [[A flat (emission-only) material in one of COLORS, made once.]] - rationale - blender/look.py
 - [[A flat plate on the outside face of a truss joint (side_y -1 left, +1 right).]] - rationale - blender/parts.py
 - [[A straight steel member (chord, diagonal, vertical, girder) from p1 to p2 with…]] - rationale - blender/parts.py
 - [[Collection]] - code
@@ -31,7 +30,6 @@ members: 32
 - [[label()]] - code - blender/parts.py
 - [[look_at_quat()]] - code - blender/parts.py
 - [[main_cable()]] - code - blender/parts.py
-- [[material()]] - code - blender/look.py
 - [[member()]] - code - blender/parts.py
 - [[parts.py]] - code - blender/parts.py
 - [[person()]] - code - blender/parts.py
@@ -50,13 +48,12 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 19 edges to [[_COMMUNITY_templates.py]]
-- 6 edges to [[_COMMUNITY_build_scene.py]]
-- 3 edges to [[_COMMUNITY_look.py]]
-- 3 edges to [[_COMMUNITY_main]]
+- 10 edges to [[_COMMUNITY_build_scene.py]]
+- 2 edges to [[_COMMUNITY_main]]
 
 ## Top bridge nodes
-- [[parts.py]] - degree 30, connects to 3 communities
-- [[material()]] - degree 7, connects to 2 communities
+- [[parts.py]] - degree 30, connects to 2 communities
+- [[label()]] - degree 8, connects to 2 communities
 - [[member()]] - degree 12, connects to 1 community
 - [[cylinder()]] - degree 8, connects to 1 community
-- [[label()]] - degree 8, connects to 1 community
+- [[_obj()]] - degree 8, connects to 1 community

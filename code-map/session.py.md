@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/session.py"
 type: "code"
-community: "plan_rules.py"
+community: "pathlib"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/plan_rulespy
+  - community/pathlib
 ---
 
 # session.py
@@ -27,6 +27,7 @@ tags:
 - [[picture_pool.py]] - `imports_from` [EXTRACTED]
 - [[plan_rules.py]] - `imports_from` [EXTRACTED]
 - [[remotion_render.py]] - `imports_from` [EXTRACTED]
+- [[retention.py]] - `imports_from` [EXTRACTED]
 - [[review.py]] - `imports_from` [EXTRACTED]
 - [[rules.py]] - `imports_from` [EXTRACTED]
 - [[seo.py]] - `imports_from` [EXTRACTED]
@@ -40,10 +41,11 @@ tags:
 - [[test_opener_graphic.py]] - `imports_from` [EXTRACTED]
 - [[test_package.py]] - `imports_from` [EXTRACTED]
 - [[test_pictures_first.py]] - `imports_from` [EXTRACTED]
+- [[test_retention.py]] - `imports_from` [EXTRACTED]
 - [[test_rules.py]] - `imports_from` [EXTRACTED]
 - [[test_story.py]] - `imports_from` [EXTRACTED]
 - [[test_topic_ideas.py]] - `imports_from` [EXTRACTED]
 - [[topic_ideas.py]] - `imports_from` [EXTRACTED]
 - [[writing.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/plan_rulespy
+#graphify/code #graphify/EXTRACTED #community/pathlib

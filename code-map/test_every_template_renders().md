@@ -13,8 +13,8 @@ tags:
 
 ## Connections
 - [[count()]] - `calls` [EXTRACTED]
-- [[plan_with()]] - `calls` [EXTRACTED]
-- [[render()_2]] - `calls` [EXTRACTED]
+- [[plan_with()_1]] - `calls` [EXTRACTED]
+- [[render()_3]] - `calls` [EXTRACTED]
 - [[test_blender_scene.py]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/test_blender_scenepy

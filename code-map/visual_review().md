@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/review.py"
 type: "code"
-community: "ask_ai"
+community: "visual_review"
 location: "L76"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ask_ai
+  - community/visual_review
 ---
 
 # visual_review()
@@ -18,11 +18,11 @@ tags:
 - [[clock()_1]] - `calls` [EXTRACTED]
 - [[ffmpeg()]] - `calls` [EXTRACTED]
 - [[overlay_notes()]] - `calls` [EXTRACTED]
-- [[render()_3]] - `calls` [EXTRACTED]
+- [[render()_2]] - `calls` [EXTRACTED]
 - [[review.py]] - `contains` [EXTRACTED]
 - [[review_fixes()]] - `calls` [EXTRACTED]
 - [[shutil]] - `calls` [EXTRACTED]
 - [[test_review_is_told_the_drawings_are_deliberate()]] - `calls` [EXTRACTED]
 - [[test_review_knows_what_dims_a_picture_on_purpose()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ask_ai
+#graphify/code #graphify/EXTRACTED #community/visual_review

@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "footage.py"
+community: "json"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/footagepy
+  - community/json
 ---
 
 # hashlib
@@ -23,4 +23,4 @@ tags:
 - [[pixabay_films()]] - `calls` [EXTRACTED]
 - [[pool_folder()]] - `calls` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/footagepy
+#graphify/concept #graphify/EXTRACTED #community/json

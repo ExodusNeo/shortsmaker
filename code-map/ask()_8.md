@@ -1,17 +1,17 @@
 ---
-source_file: "tests/test_full_scenes.py"
+source_file: "tests/test_ai_modes.py"
 type: "code"
-community: "apply_review_fixes"
-location: "L610"
+community: "edit_scripts"
+location: "L48"
 tags:
   - graphify/code
-  - graphify/EXTRACTED
-  - community/apply_review_fixes
+  - graphify/INFERRED
+  - community/edit_scripts
 ---
 
 # ask()
 
 ## Connections
-- [[test_review_redraws_custom()]] - `contains` [EXTRACTED]
+- [[test_all_modes_route_writer_editor_and_reader()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/apply_review_fixes
+#graphify/code #graphify/INFERRED #community/edit_scripts

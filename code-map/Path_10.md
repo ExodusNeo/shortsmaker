@@ -1,17 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "test_story.py"
+community: "render"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_storypy
+  - community/render
 ---
 
 # Path
 
 ## Connections
-- [[log_short()]] - `references` [EXTRACTED]
-- [[vault_page()]] - `references` [EXTRACTED]
+- [[srt()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_storypy
+#graphify/code #graphify/EXTRACTED #community/render

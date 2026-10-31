@@ -1,20 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: "shutil"
+community: "ffmpeg"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/shutil
+  - community/ffmpeg
 ---
 
 # Path
 
 ## Connections
-- [[code_custom_scenes()]] - `references` [EXTRACTED]
-- [[full_props()]] - `references` [EXTRACTED]
-- [[look_and_fix()]] - `references` [EXTRACTED]
-- [[preview_custom()]] - `references` [EXTRACTED]
-- [[preview_sheet()]] - `references` [EXTRACTED]
+- [[duration()]] - `references` [EXTRACTED]
+- [[ffmpeg()]] - `references` [EXTRACTED]
+- [[write_json()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/shutil
+#graphify/code #graphify/EXTRACTED #community/ffmpeg

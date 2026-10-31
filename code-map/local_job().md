@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/gpu.py"
 type: "code"
-community: "local_job"
+community: "gpu.py"
 location: "L72"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/local_job
+  - community/gpupy
 ---
 
 # local_job()
@@ -20,8 +20,8 @@ tags:
 - [[local_voice()]] - `calls` [EXTRACTED]
 - [[paint_instead()]] - `calls` [EXTRACTED]
 - [[paint_opener_start()]] - `calls` [EXTRACTED]
-- [[render()_3]] - `calls` [EXTRACTED]
+- [[render()_2]] - `calls` [EXTRACTED]
 - [[subprocess]] - `calls` [EXTRACTED]
 - [[test_local_job_retries_a_hard_crash()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/local_job
+#graphify/code #graphify/EXTRACTED #community/gpupy

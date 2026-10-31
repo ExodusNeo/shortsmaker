@@ -18,7 +18,7 @@ tags:
 - [[opener_graphic()]] - `calls` [EXTRACTED]
 - [[paint_opener_start()]] - `calls` [EXTRACTED]
 - [[redraw_custom()]] - `calls` [EXTRACTED]
-- [[render()_3]] - `calls` [EXTRACTED]
+- [[render()_2]] - `calls` [EXTRACTED]
 - [[review.py]] - `contains` [EXTRACTED]
 - [[test_weak_opener_graphic_fixes_then_handoff()]] - `calls` [EXTRACTED]
 

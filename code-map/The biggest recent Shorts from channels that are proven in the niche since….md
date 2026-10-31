@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/channel_profiles.py"
 type: "rationale"
-community: "audio_mix.py"
+community: "json"
 location: "L169"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/audio_mixpy
+  - community/json
 ---
 
 # The biggest recent Shorts from channels that are proven in the niche: since…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[trend_research()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/audio_mixpy
+#graphify/rationale #graphify/EXTRACTED #community/json

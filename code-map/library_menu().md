@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/style_lab.py"
 type: "code"
-community: "plan_rules.py"
+community: "main"
 location: "L299"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/plan_rulespy
+  - community/main
 ---
 
 # library_menu()
@@ -21,4 +21,4 @@ tags:
 - [[reject_candidate()]] - `calls` [EXTRACTED]
 - [[style_lab.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/plan_rulespy
+#graphify/code #graphify/EXTRACTED #community/main

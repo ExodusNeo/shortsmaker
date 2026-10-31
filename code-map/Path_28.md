@@ -1,17 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "footage.py"
+community: "edit_plan"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/footagepy
+  - community/edit_plan
 ---
 
 # Path
 
 ## Connections
-- [[film_piece()]] - `references` [EXTRACTED]
-- [[shot_span()]] - `references` [EXTRACTED]
+- [[edit_plan()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/footagepy
+#graphify/code #graphify/EXTRACTED #community/edit_plan

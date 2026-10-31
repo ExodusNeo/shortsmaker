@@ -1,21 +1,21 @@
 ---
 source_file: "shortsmaker/photo_prep.py"
 type: "code"
-community: "local_job"
+community: "paint_instead"
 location: "L86"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/local_job
+  - community/paint_instead
 ---
 
 # to_vertical()
 
 ## Connections
 - [[Fill the 916 frame with the picture (centre crop) for the slow zoompan. This…]] - `rationale_for` [EXTRACTED]
-- [[Path_14]] - `references` [EXTRACTED]
+- [[Path_15]] - `references` [EXTRACTED]
 - [[paint_instead()]] - `calls` [EXTRACTED]
 - [[photo_prep.py]] - `contains` [EXTRACTED]
-- [[render()_3]] - `calls` [EXTRACTED]
+- [[render()_2]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/local_job
+#graphify/code #graphify/EXTRACTED #community/paint_instead

@@ -1,17 +1,17 @@
 ---
 source_file: ""
 type: "concept"
-community: "audio_mix.py"
+community: "speak"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/audio_mixpy
+  - community/speak
 ---
 
 # asyncio
 
 ## Connections
 - [[audio_mix.py]] - `imports` [EXTRACTED]
-- [[speak()]] - `calls` [EXTRACTED]
+- [[speak()_1]] - `calls` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/audio_mixpy
+#graphify/concept #graphify/EXTRACTED #community/speak

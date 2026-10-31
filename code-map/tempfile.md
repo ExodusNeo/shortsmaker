@@ -1,16 +1,18 @@
 ---
 source_file: ""
 type: "concept"
-community: "plan_rules.py"
+community: "pathlib"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/plan_rulespy
+  - community/pathlib
 ---
 
 # tempfile
 
 ## Connections
+- [[analyze()]] - `calls` [EXTRACTED]
+- [[retention.py]] - `imports` [EXTRACTED]
 - [[run_ts_tests.py]] - `imports` [EXTRACTED]
 - [[test_blender_render.py]] - `imports` [EXTRACTED]
 - [[test_blender_run.py]] - `imports` [EXTRACTED]
@@ -26,8 +28,9 @@ tags:
 - [[test_opener_graphic.py]] - `imports` [EXTRACTED]
 - [[test_package.py]] - `imports` [EXTRACTED]
 - [[test_pictures_first.py]] - `imports` [EXTRACTED]
+- [[test_retention.py]] - `imports` [EXTRACTED]
 - [[test_rules.py]] - `imports` [EXTRACTED]
 - [[test_story.py]] - `imports` [EXTRACTED]
 - [[test_topic_ideas.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/plan_rulespy
+#graphify/concept #graphify/EXTRACTED #community/pathlib

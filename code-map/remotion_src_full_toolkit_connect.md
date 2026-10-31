@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "skinOf"
+community: "guarded.tsx"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/skinOf
+  - community/guardedtsx
 ---
 
 # remotion_src_full_toolkit_connect
@@ -14,4 +14,4 @@ tags:
 - [[ExampleChain.tsx]] - `imports` [EXTRACTED]
 - [[ExampleEvidence.tsx]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/skinOf
+#graphify/concept #graphify/EXTRACTED #community/guardedtsx

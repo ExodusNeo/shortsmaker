@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/frame_render.py"
 type: "code"
-community: "frame_render.py"
+community: "ClipReader"
 location: "L248"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/frame_renderpy
+  - community/ClipReader
 ---
 
 # frame()
@@ -19,4 +19,4 @@ tags:
 - [[shot()]] - `calls` [EXTRACTED]
 - [[write_frames()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/frame_renderpy
+#graphify/code #graphify/EXTRACTED #community/ClipReader

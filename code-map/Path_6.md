@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "edit_project.py"
+community: "test_edit_project.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/edit_projectpy
+  - community/test_edit_projectpy
 ---
 
 # Path
@@ -14,4 +14,4 @@ tags:
 - [[short_folder()]] - `references` [EXTRACTED]
 - [[videos()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/edit_projectpy
+#graphify/code #graphify/EXTRACTED #community/test_edit_projectpy

@@ -1,20 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "render"
+community: "test_blender_plan.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/render
+  - community/test_blender_planpy
 ---
 
 # Path
 
 ## Connections
-- [[drawn_thumbnail()]] - `references` [EXTRACTED]
-- [[load_state()]] - `references` [EXTRACTED]
-- [[render()_3]] - `references` [EXTRACTED]
-- [[save_state()]] - `references` [EXTRACTED]
-- [[use_opener()]] - `references` [EXTRACTED]
+- [[_run()]] - `references` [EXTRACTED]
+- [[render_clips()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/render
+#graphify/code #graphify/EXTRACTED #community/test_blender_planpy

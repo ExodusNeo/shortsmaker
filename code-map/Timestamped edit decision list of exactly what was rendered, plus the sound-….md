@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/editplan.py"
 type: "rationale"
-community: "json"
+community: "edit_plan"
 location: "L53"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/json
+  - community/edit_plan
 ---
 
 # Timestamped edit decision list of exactly what was rendered, plus the sound-…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[edit_plan()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/json
+#graphify/rationale #graphify/EXTRACTED #community/edit_plan

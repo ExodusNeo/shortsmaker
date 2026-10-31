@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/style_lab.py"
 type: "code"
-community: "with_fakes"
+community: "lint_style_code"
 location: "L116"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/with_fakes
+  - community/lint_style_code
 ---
 
 # lint_style_code()
@@ -19,4 +19,4 @@ tags:
 - [[test_invention_lint_failure_uses_fallback()]] - `calls` [EXTRACTED]
 - [[test_placeholders_match_the_slots()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/with_fakes
+#graphify/code #graphify/EXTRACTED #community/lint_style_code

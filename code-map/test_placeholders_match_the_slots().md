@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_style.py"
 type: "code"
-community: "with_fakes"
+community: "lint_style_code"
 location: "L245"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/with_fakes
+  - community/lint_style_code
 ---
 
 # test_placeholders_match_the_slots()
@@ -16,4 +16,4 @@ tags:
 - [[style_placeholders()]] - `calls` [EXTRACTED]
 - [[test_style.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/with_fakes
+#graphify/code #graphify/EXTRACTED #community/lint_style_code

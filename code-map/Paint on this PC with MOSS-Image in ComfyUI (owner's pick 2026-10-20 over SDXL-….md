@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/gpu.py"
 type: "rationale"
-community: "moss_images"
+community: "gpu.py"
 location: "L290"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/moss_images
+  - community/gpupy
 ---
 
 # Paint on this PC with MOSS-Image in ComfyUI (owner's pick 2026-10-20 over SDXL-…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[moss_images()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/moss_images
+#graphify/rationale #graphify/EXTRACTED #community/gpupy

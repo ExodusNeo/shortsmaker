@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_drawn_opener.py"
 type: "code"
-community: "plan_rules.py"
+community: "drawn_opener.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/plan_rulespy
+  - community/drawn_openerpy
 ---
 
 # test_drawn_opener.py
@@ -22,7 +22,7 @@ tags:
 - [[pathlib]] - `imports_from` [EXTRACTED]
 - [[pil]] - `imports_from` [EXTRACTED]
 - [[session.py]] - `imports_from` [EXTRACTED]
-- [[short()]] - `contains` [EXTRACTED]
+- [[short()_1]] - `contains` [EXTRACTED]
 - [[short_render.py]] - `imports_from` [EXTRACTED]
 - [[subprocess]] - `imports` [EXTRACTED]
 - [[sys]] - `imports` [EXTRACTED]
@@ -34,4 +34,4 @@ tags:
 - [[test_use_opener_plays_the_drawn_opener()]] - `contains` [EXTRACTED]
 - [[traceback]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/plan_rulespy
+#graphify/code #graphify/EXTRACTED #community/drawn_openerpy

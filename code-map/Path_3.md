@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "picture_pool.py"
+community: "prepare_topic"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/picture_poolpy
+  - community/prepare_topic
 ---
 
 # Path
@@ -18,4 +18,4 @@ tags:
 - [[prepare_topic()]] - `references` [EXTRACTED]
 - [[save_pool()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/picture_poolpy
+#graphify/code #graphify/EXTRACTED #community/prepare_topic

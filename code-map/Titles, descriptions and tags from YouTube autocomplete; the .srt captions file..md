@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/seo.py"
 type: "rationale"
-community: "plan_rules.py"
+community: "pathlib"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/plan_rulespy
+  - community/pathlib
 ---
 
 # Titles, descriptions and tags from YouTube autocomplete; the .srt captions file.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[seo.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/plan_rulespy
+#graphify/rationale #graphify/EXTRACTED #community/pathlib

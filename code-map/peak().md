@@ -12,8 +12,8 @@ tags:
 # peak()
 
 ## Connections
-- [[plan_with()]] - `calls` [EXTRACTED]
-- [[render()_2]] - `calls` [EXTRACTED]
+- [[plan_with()_1]] - `calls` [EXTRACTED]
+- [[render()_3]] - `calls` [EXTRACTED]
 - [[test_each_failure_changes_the_focus()]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/test_blender_scenepy

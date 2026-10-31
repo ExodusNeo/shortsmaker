@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/style_lab.py"
 type: "code"
-community: "json"
+community: "invent_component"
 location: "L140"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/json
+  - community/invent_component
 ---
 
 # invent_component()
@@ -30,4 +30,4 @@ tags:
 - [[test_invention_lint_failure_uses_fallback()]] - `calls` [EXTRACTED]
 - [[test_invention_passes_into_slot()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/json
+#graphify/code #graphify/EXTRACTED #community/invent_component

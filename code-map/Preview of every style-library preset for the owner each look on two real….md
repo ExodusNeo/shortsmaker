@@ -1,12 +1,12 @@
 ---
 source_file: "tests/render_style.py"
 type: "rationale"
-community: "plan_rules.py"
+community: "json"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/plan_rulespy
+  - community/json
 ---
 
 # Preview of every style-library preset for the owner: each look on two real…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[render_style.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/plan_rulespy
+#graphify/rationale #graphify/EXTRACTED #community/json

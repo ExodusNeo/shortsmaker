@@ -1,12 +1,12 @@
 ---
 source_file: "colab/h3_run.py"
 type: "code"
-community: "test_h3_handoff.py"
+community: "h3_run.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_h3_handoffpy
+  - community/h3_runpy
 ---
 
 # h3_run.py
@@ -18,7 +18,7 @@ tags:
 - [[frames()]] - `contains` [EXTRACTED]
 - [[graph()]] - `contains` [EXTRACTED]
 - [[json]] - `imports` [EXTRACTED]
-- [[main()]] - `contains` [EXTRACTED]
+- [[main()_1]] - `contains` [EXTRACTED]
 - [[pathlib]] - `imports_from` [EXTRACTED]
 - [[pil]] - `imports_from` [EXTRACTED]
 - [[saved_file()]] - `contains` [EXTRACTED]
@@ -29,4 +29,4 @@ tags:
 - [[urllib_request]] - `imports` [EXTRACTED]
 - [[zipfile]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_h3_handoffpy
+#graphify/code #graphify/EXTRACTED #community/h3_runpy

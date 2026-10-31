@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_opener_graphic.py"
 type: "rationale"
-community: "plan_rules.py"
+community: "pathlib"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/plan_rulespy
+  - community/pathlib
 ---
 
 # Tests for the motion-graphic opener on `opener: animated` channels…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[test_opener_graphic.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/plan_rulespy
+#graphify/rationale #graphify/EXTRACTED #community/pathlib

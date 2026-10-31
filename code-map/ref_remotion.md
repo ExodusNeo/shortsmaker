@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "toolkit.tsx"
+community: "ref_remotion"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/toolkittsx
+  - community/ref_remotion
 ---
 
 # ref_remotion
@@ -29,4 +29,4 @@ tags:
 - [[srcindex.ts]] - `imports_from` [EXTRACTED]
 - [[toolkit.tsx]] - `imports_from` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/toolkittsx
+#graphify/concept #graphify/EXTRACTED #community/ref_remotion

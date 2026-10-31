@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "json"
+community: "invent_component"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/json
+  - community/invent_component
 ---
 
 # Path
@@ -17,4 +17,4 @@ tags:
 - [[reject_candidate()]] - `references` [EXTRACTED]
 - [[save_candidate()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/json
+#graphify/code #graphify/EXTRACTED #community/invent_component

@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_pictures_first.py"
 type: "code"
-community: "picture_pool.py"
+community: "prepare_topic"
 location: "L422"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/picture_poolpy
+  - community/prepare_topic
 ---
 
 # test_small_pool_skips_ai()
@@ -17,4 +17,4 @@ tags:
 - [[prepare_topic()]] - `calls` [EXTRACTED]
 - [[test_pictures_first.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/picture_poolpy
+#graphify/code #graphify/EXTRACTED #community/prepare_topic

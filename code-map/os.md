@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "plan_rules.py"
+community: "pathlib"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/plan_rulespy
+  - community/pathlib
 ---
 
 # os
@@ -23,4 +23,4 @@ tags:
 - [[test_pictures_first.py]] - `imports` [EXTRACTED]
 - [[veo_handoff()]] - `calls` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/plan_rulespy
+#graphify/concept #graphify/EXTRACTED #community/pathlib

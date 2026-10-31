@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_opener_graphic.py"
 type: "code"
-community: "plan_rules.py"
+community: "pathlib"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/plan_rulespy
+  - community/pathlib
 ---
 
 # test_opener_graphic.py
@@ -32,4 +32,4 @@ tags:
 - [[traceback]] - `imports` [EXTRACTED]
 - [[use()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/plan_rulespy
+#graphify/code #graphify/EXTRACTED #community/pathlib

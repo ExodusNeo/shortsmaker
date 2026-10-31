@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/channel_profiles.py"
 type: "code"
-community: "plan_rules.py"
+community: "pathlib"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/plan_rulespy
+  - community/pathlib
 ---
 
 # channel_profiles.py
@@ -33,6 +33,7 @@ tags:
 - [[picker.py]] - `imports_from` [EXTRACTED]
 - [[plan_rules.py]] - `imports_from` [EXTRACTED]
 - [[re]] - `imports` [EXTRACTED]
+- [[retention.py]] - `imports_from` [EXTRACTED]
 - [[rules.py]] - `imports_from` [EXTRACTED]
 - [[save_channel()]] - `contains` [EXTRACTED]
 - [[seed_ideas()]] - `contains` [EXTRACTED]
@@ -55,4 +56,4 @@ tags:
 - [[writing.py]] - `imports_from` [EXTRACTED]
 - [[yt_list()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/plan_rulespy
+#graphify/code #graphify/EXTRACTED #community/pathlib

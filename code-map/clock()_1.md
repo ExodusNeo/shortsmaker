@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/media_tools.py"
 type: "code"
-community: "plan_rules.py"
+community: "visual_review"
 location: "L43"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/plan_rulespy
+  - community/visual_review
 ---
 
 # clock()
@@ -18,9 +18,9 @@ tags:
 - [[media_tools.py]] - `contains` [EXTRACTED]
 - [[overlay_notes()]] - `calls` [EXTRACTED]
 - [[quality_check()]] - `calls` [EXTRACTED]
-- [[render()_3]] - `calls` [EXTRACTED]
+- [[render()_2]] - `calls` [EXTRACTED]
 - [[review_fixes()]] - `calls` [EXTRACTED]
 - [[storyboard()]] - `calls` [EXTRACTED]
 - [[visual_review()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/plan_rulespy
+#graphify/code #graphify/EXTRACTED #community/visual_review

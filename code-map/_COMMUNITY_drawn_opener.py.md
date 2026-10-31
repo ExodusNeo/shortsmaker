@@ -1,21 +1,22 @@
 ---
 type: community
-members: 33
+members: 35
 ---
 
 # drawn_opener.py
 
-**Members:** 33 nodes
+**Members:** 35 nodes
 
 ## Members
 - [[A draft that passes coded, previewed (6 frames), approved, rendered as scene 1…]] - rationale - tests/test_drawn_opener.py
 - [[Drawn openers (owner, 2026-10-30) scene 1 of an `opener animated` Short as a…]] - rationale - shortsmaker/drawn_opener.py
-- [[Path_9]] - code
+- [[Path_13]] - code
 - [[Renders drawnoutsheet.png every kit part, one page per second (look at it…]] - rationale - tests/test_drawn_opener.py
 - [[Rule breaks in an AI-written scene (KIT.md's code rules). Empty = clean.]] - rationale - shortsmaker/drawn_opener.py
 - [[Runs drawnrun.mjs on one job; None when it worked, else what went wrong…]] - rationale - shortsmaker/drawn_opener.py
 - [[Scene 1's drawn opener clip (workdrawnopener.mp4, scene 1 + the crossfade…]] - rationale - shortsmaker/drawn_opener.py
 - [[Six frames across the opener for the preview, the first and the last included.]] - rationale - shortsmaker/drawn_opener.py
+- [[Tests for the drawn opener (drawn_opener.py + drawn, 2026-10-30) the lint on…]] - rationale - tests/test_drawn_opener.py
 - [[The art director scores every draft below PASS FIXES rewrites (each told the…]] - rationale - tests/test_drawn_opener.py
 - [[The art director's score (1-10) of a draft's preview sheet and what to fix.…]] - rationale - shortsmaker/drawn_opener.py
 - [[The coder's scene {moment what it shows, code the module}; with `old`…]] - rationale - shortsmaker/drawn_opener.py
@@ -33,7 +34,8 @@ members: 33
 - [[node_run()]] - code - shortsmaker/drawn_opener.py
 - [[review()]] - code - shortsmaker/drawn_opener.py
 - [[sheet_times()]] - code - shortsmaker/drawn_opener.py
-- [[short()]] - code - tests/test_drawn_opener.py
+- [[short()_1]] - code - tests/test_drawn_opener.py
+- [[test_drawn_opener.py]] - code - tests/test_drawn_opener.py
 - [[test_drawn_opener_gives_up_after_fixes()]] - code - tests/test_drawn_opener.py
 - [[test_drawn_opener_renders_and_is_reused()]] - code - tests/test_drawn_opener.py
 - [[test_lint()]] - code - tests/test_drawn_opener.py
@@ -50,18 +52,18 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 18 edges to [[_COMMUNITY_plan_rules.py]]
+- 11 edges to [[_COMMUNITY_test_full_scenes.py]]
+- 11 edges to [[_COMMUNITY_pathlib]]
+- 5 edges to [[_COMMUNITY_json]]
 - 3 edges to [[_COMMUNITY_re]]
-- 3 edges to [[_COMMUNITY_footage.py]]
-- 3 edges to [[_COMMUNITY_json]]
 - 2 edges to [[_COMMUNITY_render]]
-- 2 edges to [[_COMMUNITY_shutil]]
 - 2 edges to [[_COMMUNITY_ask_ai]]
-- 1 edge to [[_COMMUNITY_clean_graphic]]
+- 1 edge to [[_COMMUNITY_clean_full]]
+- 1 edge to [[_COMMUNITY_ffmpeg]]
 
 ## Top bridge nodes
-- [[drawn_opener.py]] - degree 23, connects to 5 communities
+- [[drawn_opener.py]] - degree 23, connects to 4 communities
+- [[test_drawn_opener.py]] - degree 21, connects to 2 communities
 - [[node_run()]] - degree 7, connects to 2 communities
 - [[review()]] - degree 7, connects to 2 communities
 - [[write()_1]] - degree 7, connects to 2 communities
-- [[test_drawn_opener_renders_and_is_reused()]] - degree 6, connects to 2 communities

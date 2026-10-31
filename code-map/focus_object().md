@@ -1,12 +1,12 @@
 ---
 source_file: "blender/templates.py"
 type: "code"
-community: "main"
+community: "templates.py"
 location: "L211"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/main
+  - community/templatespy
 ---
 
 # focus_object()
@@ -17,4 +17,4 @@ tags:
 - [[main()_2]] - `calls` [EXTRACTED]
 - [[templates.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/main
+#graphify/code #graphify/EXTRACTED #community/templatespy

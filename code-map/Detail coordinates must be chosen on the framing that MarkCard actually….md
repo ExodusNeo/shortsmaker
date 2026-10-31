@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_marks.py"
 type: "rationale"
-community: "plan_rules.py"
+community: "pathlib"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/plan_rulespy
+  - community/pathlib
 ---
 
 # Detail coordinates must be chosen on the framing that MarkCard actually…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[test_marks.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/plan_rulespy
+#graphify/rationale #graphify/EXTRACTED #community/pathlib

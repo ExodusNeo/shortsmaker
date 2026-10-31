@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "plan_rules.py"
+community: "pathlib"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/plan_rulespy
+  - community/pathlib
 ---
 
 # unittest_mock
@@ -14,5 +14,6 @@ tags:
 - [[test_ai_modes.py]] - `imports_from` [EXTRACTED]
 - [[test_codex.py]] - `imports_from` [EXTRACTED]
 - [[test_marks.py]] - `imports_from` [EXTRACTED]
+- [[test_retention.py]] - `imports_from` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/plan_rulespy
+#graphify/concept #graphify/EXTRACTED #community/pathlib

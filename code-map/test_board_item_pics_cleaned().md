@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_pictures_first.py"
 type: "code"
-community: "test_pictures_first.py"
+community: "catalog_pool"
 location: "L312"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_pictures_firstpy
+  - community/catalog_pool
 ---
 
 # test_board_item_pics_cleaned()
@@ -18,4 +18,4 @@ tags:
 - [[pool_of()]] - `calls` [EXTRACTED]
 - [[test_pictures_first.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_pictures_firstpy
+#graphify/code #graphify/EXTRACTED #community/catalog_pool

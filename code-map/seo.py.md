@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/seo.py"
 type: "code"
-community: "plan_rules.py"
+community: "pathlib"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/plan_rulespy
+  - community/pathlib
 ---
 
 # seo.py
@@ -33,4 +33,4 @@ tags:
 - [[test_topic_ideas.py]] - `imports_from` [EXTRACTED]
 - [[urllib_parse]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/plan_rulespy
+#graphify/code #graphify/EXTRACTED #community/pathlib

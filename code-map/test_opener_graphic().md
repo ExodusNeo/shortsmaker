@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_full_scenes.py"
 type: "code"
-community: "full_cues"
+community: "rescue_graphics"
 location: "L257"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/full_cues
+  - community/rescue_graphics
 ---
 
 # test_opener_graphic()
@@ -17,4 +17,4 @@ tags:
 - [[opener_graphic()]] - `calls` [EXTRACTED]
 - [[test_full_scenes.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/full_cues
+#graphify/code #graphify/EXTRACTED #community/rescue_graphics

@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "owner"
+community: "test_style.py"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/owner
+  - community/test_stylepy
 ---
 
 # pkgutil
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[patching.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/owner
+#graphify/concept #graphify/EXTRACTED #community/test_stylepy

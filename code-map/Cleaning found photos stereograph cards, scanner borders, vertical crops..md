@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/photo_prep.py"
 type: "rationale"
-community: "plan_rules.py"
+community: "test_full_scenes.py"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/plan_rulespy
+  - community/test_full_scenespy
 ---
 
 # Cleaning found photos: stereograph cards, scanner borders, vertical crops.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[photo_prep.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/plan_rulespy
+#graphify/rationale #graphify/EXTRACTED #community/test_full_scenespy

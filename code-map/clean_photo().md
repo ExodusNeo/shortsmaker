@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/photo_prep.py"
 type: "code"
-community: "plan_rules.py"
+community: "clean_full"
 location: "L68"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/plan_rulespy
+  - community/clean_full
 ---
 
 # clean_photo()
@@ -17,7 +17,7 @@ tags:
 - [[is_stereo()]] - `calls` [EXTRACTED]
 - [[mark_details()]] - `calls` [EXTRACTED]
 - [[photo_prep.py]] - `contains` [EXTRACTED]
-- [[render()_3]] - `calls` [EXTRACTED]
+- [[render()_2]] - `calls` [EXTRACTED]
 - [[trim_borders()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/plan_rulespy
+#graphify/code #graphify/EXTRACTED #community/clean_full

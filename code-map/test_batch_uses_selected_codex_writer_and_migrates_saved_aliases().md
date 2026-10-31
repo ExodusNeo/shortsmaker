@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_ai_modes.py"
 type: "code"
-community: "test_ai_modes.py"
+community: "main"
 location: "L85"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_ai_modespy
+  - community/main
 ---
 
 # test_batch_uses_selected_codex_writer_and_migrates_saved_aliases()
@@ -17,4 +17,4 @@ tags:
 - [[saved_session()]] - `calls` [EXTRACTED]
 - [[test_ai_modes.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_ai_modespy
+#graphify/code #graphify/EXTRACTED #community/main

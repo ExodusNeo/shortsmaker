@@ -1,16 +1,20 @@
 ---
 source_file: ""
 type: "code"
-community: "local_job"
+community: "frame_maker"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/local_job
+  - community/frame_maker
 ---
 
 # Path
 
 ## Connections
-- [[to_vertical()]] - `references` [EXTRACTED]
+- [[dot-__init__()_5]] - `references` [EXTRACTED]
+- [[fills_frame()]] - `references` [EXTRACTED]
+- [[frame_maker()]] - `references` [EXTRACTED]
+- [[graphic_low()]] - `references` [EXTRACTED]
+- [[thumbnail()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/local_job
+#graphify/code #graphify/EXTRACTED #community/frame_maker

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/channel_profiles.py"
 type: "code"
-community: "main"
+community: "fake_ai"
 location: "L104"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/main
+  - community/fake_ai
 ---
 
 # load_channel()
@@ -19,4 +19,4 @@ tags:
 - [[main()_3]] - `calls` [EXTRACTED]
 - [[seo_pass()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/main
+#graphify/code #graphify/EXTRACTED #community/fake_ai

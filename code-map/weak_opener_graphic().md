@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[Why scene 1's motion-graphic opener (picker.opener_graphic) looked weak in this…]] - `rationale_for` [EXTRACTED]
-- [[render()_3]] - `calls` [EXTRACTED]
+- [[render()_2]] - `calls` [EXTRACTED]
 - [[review.py]] - `contains` [EXTRACTED]
 - [[test_weak_opener_graphic_fixes_then_handoff()]] - `calls` [EXTRACTED]
 

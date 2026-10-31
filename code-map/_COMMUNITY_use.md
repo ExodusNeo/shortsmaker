@@ -24,7 +24,7 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 4 edges to [[_COMMUNITY_plan_rules.py]]
+- 4 edges to [[_COMMUNITY_pathlib]]
 - 1 edge to [[_COMMUNITY_render]]
 - 1 edge to [[_COMMUNITY_paint_opener_start]]
 

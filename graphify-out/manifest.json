@@ -114,8 +114,8 @@
     "semantic_hash": "8ad5a82c8d8fe87803e31639a21555ff"
   },
   "remotion/src/full/generated/Custom0.tsx": {
-    "mtime": 1793447657.8384569,
-    "seen": 1793447720.447369,
+    "mtime": 1793448475.1104827,
+    "seen": 1793448508.682232,
     "ast_hash": "ecf374479fafb0d21fe1bb55a662eb6e",
     "semantic_hash": "ecf374479fafb0d21fe1bb55a662eb6e"
   },
@@ -360,9 +360,9 @@
     "semantic_hash": ""
   },
   "shortsmaker/cli.py": {
-    "mtime": 1793443975.2219052,
-    "seen": 1793444099.2084153,
-    "ast_hash": "8d3f5e1b531109873575c067b487d73f",
+    "mtime": 1793448189.8114562,
+    "seen": 1793448508.6822734,
+    "ast_hash": "1763917ad7eddf82870ea45c3a7233a9",
     "semantic_hash": ""
   },
   "shortsmaker/config.py": {
@@ -486,9 +486,9 @@
     "semantic_hash": "df97b16f77aa73fa2c933b78bd4e4595"
   },
   "shortsmaker/writing.py": {
-    "mtime": 1793444026.472124,
-    "seen": 1793444099.2084455,
-    "ast_hash": "49e1f2a743a8bc68fd2db943461042ba",
+    "mtime": 1793448273.7149484,
+    "seen": 1793448508.6823068,
+    "ast_hash": "2804730aaab6ec1b29ef5ccf9b2e039e",
     "semantic_hash": ""
   },
   "tests/patching.py": {
@@ -729,6 +729,18 @@
     "mtime": 1793447558.2490034,
     "seen": 1793447720.4474647,
     "ast_hash": "d28c0de450b144bd2c59a8756dd25d59",
+    "semantic_hash": ""
+  },
+  "shortsmaker/retention.py": {
+    "mtime": 1793448189.8101056,
+    "seen": 1793448508.6822963,
+    "ast_hash": "02a5e1cfeec7ff7ae627d1764af3d773",
+    "semantic_hash": ""
+  },
+  "tests/test_retention.py": {
+    "mtime": 1793448407.2486207,
+    "seen": 1793448508.6823366,
+    "ast_hash": "8b2a0508f1c40997e35ae5a4f0badf2c",
     "semantic_hash": ""
   }
 }

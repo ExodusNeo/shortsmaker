@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "look.py"
+community: "build_scene.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/lookpy
+  - community/build_scenepy
 ---
 
 # Scene
@@ -15,4 +15,4 @@ tags:
 - [[ink_lines()]] - `references` [EXTRACTED]
 - [[setup()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/lookpy
+#graphify/code #graphify/EXTRACTED #community/build_scenepy

@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_full_scenes.py"
 type: "code"
-community: "sfx_events"
+community: "full_cues"
 location: "L207"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/sfx_events
+  - community/full_cues
 ---
 
 # test_board_pictures_attached()
@@ -16,4 +16,4 @@ tags:
 - [[full_pictures()]] - `calls` [EXTRACTED]
 - [[test_full_scenes.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/sfx_events
+#graphify/code #graphify/EXTRACTED #community/full_cues

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/style_lab.py"
 type: "code"
-community: "json"
+community: "invent_component"
 location: "L222"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/json
+  - community/invent_component
 ---
 
 # invent_styles()
@@ -19,4 +19,4 @@ tags:
 - [[style_lab.py]] - `contains` [EXTRACTED]
 - [[swap_inventions()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/json
+#graphify/code #graphify/EXTRACTED #community/invent_component

@@ -1,16 +1,19 @@
 ---
 source_file: ""
 type: "code"
-community: "main"
+community: "drawn_opener.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/main
+  - community/drawn_openerpy
 ---
 
 # Path
 
 ## Connections
-- [[draft_rules()]] - `references` [EXTRACTED]
+- [[make_opener()]] - `references` [EXTRACTED]
+- [[node_run()]] - `references` [EXTRACTED]
+- [[review()]] - `references` [EXTRACTED]
+- [[write()_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/main
+#graphify/code #graphify/EXTRACTED #community/drawn_openerpy

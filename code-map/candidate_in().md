@@ -1,18 +1,18 @@
 ---
 source_file: "tests/test_style.py"
 type: "code"
-community: "candidate_in"
+community: "test_style.py"
 location: "L404"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/candidate_in
+  - community/test_stylepy
 ---
 
 # candidate_in()
 
 ## Connections
-- [[Path_2]] - `references` [EXTRACTED]
+- [[Path_1]] - `references` [EXTRACTED]
 - [[save_candidate()]] - `calls` [EXTRACTED]
 - [[test_approve_adds_to_library()]] - `calls` [EXTRACTED]
 - [[test_approve_rolls_back_on_tsc_failure()]] - `calls` [EXTRACTED]
@@ -21,4 +21,4 @@ tags:
 - [[test_reject_deletes()]] - `calls` [EXTRACTED]
 - [[test_style.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/candidate_in
+#graphify/code #graphify/EXTRACTED #community/test_stylepy

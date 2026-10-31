@@ -1,11 +1,11 @@
 ---
 type: community
-members: 30
+members: 25
 ---
 
 # Short.tsx
 
-**Members:** 30 nodes
+**Members:** 25 nodes
 
 ## Members
 - [[Background()]] - code - remotion/src/Short.tsx
@@ -15,15 +15,11 @@ members: 30
 - [[INKS_1]] - code - tests/style.test.ts
 - [[Move]] - code - remotion/src/Short.tsx
 - [[PersonCard()]] - code - remotion/src/Graphics.tsx
-- [[Root()]] - code - remotion/src/Root.tsx
-- [[Root.tsx]] - code - remotion/src/Root.tsx
 - [[Scene]] - code - remotion/src/Short.tsx
-- [[Short()_1]] - code - remotion/src/Short.tsx
+- [[Short()_2]] - code - remotion/src/Short.tsx
 - [[Short.tsx]] - code - remotion/src/Short.tsx
-- [[ShortProps]] - code - remotion/src/Short.tsx
 - [[SubscribeCta()]] - code - remotion/src/Graphics.tsx
 - [[TRANSITIONS]] - code - remotion/src/style/index.ts
-- [[calculateMetadata()]] - code - remotion/src/Root.tsx
 - [[flashAlpha()]] - code - remotion/src/Short.tsx
 - [[has()]] - code - remotion/src/style/index.ts
 - [[hidden()]] - code - tests/style.test.ts
@@ -32,7 +28,6 @@ members: 30
 - [[ok()]] - code - tests/style.test.ts
 - [[overlayFor()]] - code - remotion/src/style/index.ts
 - [[shown()]] - code - tests/style.test.ts
-- [[srcindex.ts]] - code - remotion/src/index.ts
 - [[style.test.ts]] - code - tests/style.test.ts
 - [[test()]] - code - tests/style.test.ts
 - [[transitionFor()]] - code - remotion/src/style/index.ts
@@ -49,12 +44,13 @@ SORT file.name ASC
 ## Connections to other communities
 - 28 edges to [[_COMMUNITY_Graphics.tsx]]
 - 13 edges to [[_COMMUNITY_styleindex.ts]]
-- 8 edges to [[_COMMUNITY_toolkit.tsx]]
+- 5 edges to [[_COMMUNITY_fulltypes.ts]]
+- 4 edges to [[_COMMUNITY_ref_remotion]]
 - 3 edges to [[_COMMUNITY_Halftone.tsx]]
 
 ## Top bridge nodes
-- [[Short.tsx]] - degree 46, connects to 4 communities
+- [[Short.tsx]] - degree 46, connects to 5 communities
 - [[style.test.ts]] - degree 15, connects to 2 communities
 - [[Background()]] - degree 7, connects to 2 communities
 - [[GraphicFor()]] - degree 5, connects to 2 communities
-- [[transitionFor()]] - degree 8, connects to 1 community
+- [[Short()_2]] - degree 12, connects to 1 community

@@ -1,12 +1,12 @@
 ---
 source_file: "tests/run_ts_tests.py"
 type: "code"
-community: "plan_rules.py"
+community: "pathlib"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/plan_rulespy
+  - community/pathlib
 ---
 
 # run_ts_tests.py
@@ -19,4 +19,4 @@ tags:
 - [[sys]] - `imports` [EXTRACTED]
 - [[tempfile]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/plan_rulespy
+#graphify/code #graphify/EXTRACTED #community/pathlib

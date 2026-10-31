@@ -1,20 +1,20 @@
 ---
 source_file: "shortsmaker/audio_mix.py"
 type: "code"
-community: "audio_mix.py"
+community: "speak"
 location: "L35"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/audio_mixpy
+  - community/speak
 ---
 
 # tts()
 
 ## Connections
-- [[Path_21]] - `references` [EXTRACTED]
+- [[Path_27]] - `references` [EXTRACTED]
 - [[audio_mix.py]] - `contains` [EXTRACTED]
 - [[edge_tts]] - `calls` [EXTRACTED]
-- [[speak()]] - `calls` [EXTRACTED]
+- [[speak()_1]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/audio_mixpy
+#graphify/code #graphify/EXTRACTED #community/speak

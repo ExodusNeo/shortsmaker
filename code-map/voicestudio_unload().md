@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/gpu.py"
 type: "code"
-community: "gpu.py"
+community: "ffmpeg"
 location: "L124"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/gpupy
+  - community/ffmpeg
 ---
 
 # voicestudio_unload()
@@ -17,4 +17,4 @@ tags:
 - [[json]] - `calls` [EXTRACTED]
 - [[local_voice()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/gpupy
+#graphify/code #graphify/EXTRACTED #community/ffmpeg

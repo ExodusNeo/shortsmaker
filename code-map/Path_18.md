@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "apply_review_fixes"
+community: "test_pictures_first.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/apply_review_fixes
+  - community/test_pictures_firstpy
 ---
 
 # Path
 
 ## Connections
-- [[use_picture_from()]] - `references` [EXTRACTED]
+- [[choose_images()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/apply_review_fixes
+#graphify/code #graphify/EXTRACTED #community/test_pictures_firstpy

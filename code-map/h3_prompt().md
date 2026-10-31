@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/gpu.py"
 type: "code"
-community: "h3_prompt"
+community: "gpu.py"
 location: "L386"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/h3_prompt
+  - community/gpupy
 ---
 
 # h3_prompt()
@@ -17,4 +17,4 @@ tags:
 - [[h3_prompts()]] - `calls` [EXTRACTED]
 - [[test_prompt_joins_fields()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/h3_prompt
+#graphify/code #graphify/EXTRACTED #community/gpupy

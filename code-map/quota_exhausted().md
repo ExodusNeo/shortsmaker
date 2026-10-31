@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/llm.py"
 type: "code"
-community: "ask_ai"
+community: "run_agy"
 location: "L58"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ask_ai
+  - community/run_agy
 ---
 
 # quota_exhausted()
@@ -18,4 +18,4 @@ tags:
 - [[run_agy()]] - `calls` [EXTRACTED]
 - [[test_codex_failure_is_bounded()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ask_ai
+#graphify/code #graphify/EXTRACTED #community/run_agy

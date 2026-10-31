@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_full_scenes.py"
 type: "code"
-community: "full_props"
+community: "paint_opener_start"
 location: "L808"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/full_props
+  - community/paint_opener_start
 ---
 
 # test_full_props_figure()
@@ -16,4 +16,4 @@ tags:
 - [[full_summary()]] - `calls` [EXTRACTED]
 - [[test_full_scenes.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/full_props
+#graphify/code #graphify/EXTRACTED #community/paint_opener_start

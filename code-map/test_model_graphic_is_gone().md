@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_opener_graphic.py"
 type: "code"
-community: "test_full_scenes.py"
+community: "clean_full"
 location: "L105"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_full_scenespy
+  - community/clean_full
 ---
 
 # test_model_graphic_is_gone()
@@ -16,4 +16,4 @@ tags:
 - [[clean_full()]] - `calls` [EXTRACTED]
 - [[test_opener_graphic.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_full_scenespy
+#graphify/code #graphify/EXTRACTED #community/clean_full

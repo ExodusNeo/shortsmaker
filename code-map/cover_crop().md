@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/gpu.py"
 type: "code"
-community: "local_clips"
+community: "gpu.py"
 location: "L346"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/local_clips
+  - community/gpupy
 ---
 
 # cover_crop()
@@ -18,4 +18,4 @@ tags:
 - [[local_clips()]] - `calls` [EXTRACTED]
 - [[veo_handoff()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/local_clips
+#graphify/code #graphify/EXTRACTED #community/gpupy

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/gpu.py"
 type: "rationale"
-community: "h3_problems"
+community: "gpu.py"
 location: "L370"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/h3_problems
+  - community/gpupy
 ---
 
 # What is missing from the AI's prompt fields for one scene (empty list = usable).
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[h3_problems()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/h3_problems
+#graphify/rationale #graphify/EXTRACTED #community/gpupy

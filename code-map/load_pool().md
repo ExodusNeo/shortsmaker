@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/picture_pool.py"
 type: "code"
-community: "picture_pool.py"
+community: "prepare_topic"
 location: "L186"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/picture_poolpy
+  - community/prepare_topic
 ---
 
 # load_pool()
@@ -27,4 +27,4 @@ tags:
 - [[test_pool_rows_without_thumbs()]] - `calls` [EXTRACTED]
 - [[write_scripts()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/picture_poolpy
+#graphify/code #graphify/EXTRACTED #community/prepare_topic

@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "build_scene.py"
+community: "Shots"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/build_scenepy
+  - community/Shots
 ---
 
 # Vector
@@ -14,4 +14,4 @@ tags:
 - [[direction()]] - `references` [EXTRACTED]
 - [[keyloc()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/build_scenepy
+#graphify/code #graphify/EXTRACTED #community/Shots

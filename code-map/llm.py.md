@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/llm.py"
 type: "code"
-community: "plan_rules.py"
+community: "pathlib"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/plan_rulespy
+  - community/pathlib
 ---
 
 # llm.py
@@ -32,6 +32,7 @@ tags:
 - [[plan_rules.py]] - `imports_from` [EXTRACTED]
 - [[quota_exhausted()]] - `contains` [EXTRACTED]
 - [[remotion_render.py]] - `imports_from` [EXTRACTED]
+- [[retention.py]] - `imports_from` [EXTRACTED]
 - [[review.py]] - `imports_from` [EXTRACTED]
 - [[rules.py]] - `imports_from` [EXTRACTED]
 - [[run_agy()]] - `contains` [EXTRACTED]
@@ -54,10 +55,11 @@ tags:
 - [[test_opener_graphic.py]] - `imports_from` [EXTRACTED]
 - [[test_package.py]] - `imports_from` [EXTRACTED]
 - [[test_pictures_first.py]] - `imports_from` [EXTRACTED]
+- [[test_retention.py]] - `imports_from` [EXTRACTED]
 - [[test_rules.py]] - `imports_from` [EXTRACTED]
 - [[test_story.py]] - `imports_from` [EXTRACTED]
 - [[test_style.py]] - `imports_from` [EXTRACTED]
 - [[time]] - `imports` [EXTRACTED]
 - [[writing.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/plan_rulespy
+#graphify/code #graphify/EXTRACTED #community/pathlib

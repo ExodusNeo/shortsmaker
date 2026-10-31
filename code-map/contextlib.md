@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "test_ai_modes.py"
+community: "pathlib"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/test_ai_modespy
+  - community/pathlib
 ---
 
 # contextlib
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[test_ai_modes.py]] - `imports_from` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/test_ai_modespy
+#graphify/concept #graphify/EXTRACTED #community/pathlib

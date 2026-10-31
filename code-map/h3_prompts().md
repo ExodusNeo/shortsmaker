@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/gpu.py"
 type: "code"
-community: "local_clips"
+community: "gpu.py"
 location: "L396"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/local_clips
+  - community/gpupy
 ---
 
 # h3_prompts()
@@ -20,4 +20,4 @@ tags:
 - [[h3_prompt()]] - `calls` [EXTRACTED]
 - [[veo_handoff()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/local_clips
+#graphify/code #graphify/EXTRACTED #community/gpupy

@@ -1,17 +1,17 @@
 ---
-source_file: "blender/templates.py"
+source_file: "blender/build_scene.py"
 type: "code"
-community: "templates.py"
-location: "L14"
+community: "Shots"
+location: "L44"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/templatespy
+  - community/Shots
 ---
 
 # .__init__()
 
 ## Connections
-- [[Bridge]] - `method` [EXTRACTED]
+- [[Shots]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/templatespy
+#graphify/code #graphify/EXTRACTED #community/Shots

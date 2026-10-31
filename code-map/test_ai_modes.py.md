@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_ai_modes.py"
 type: "code"
-community: "test_ai_modes.py"
+community: "pathlib"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_ai_modespy
+  - community/pathlib
 ---
 
 # test_ai_modes.py
@@ -31,4 +31,4 @@ tags:
 - [[unittest_mock]] - `imports_from` [EXTRACTED]
 - [[writing.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_ai_modespy
+#graphify/code #graphify/EXTRACTED #community/pathlib

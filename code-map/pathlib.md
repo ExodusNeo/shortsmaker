@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "plan_rules.py"
+community: "pathlib"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/plan_rulespy
+  - community/pathlib
 ---
 
 # pathlib
@@ -37,6 +37,7 @@ tags:
 - [[remotion_render.py]] - `imports_from` [EXTRACTED]
 - [[render_full.py]] - `imports_from` [EXTRACTED]
 - [[render_style.py]] - `imports_from` [EXTRACTED]
+- [[retention.py]] - `imports_from` [EXTRACTED]
 - [[review.py]] - `imports_from` [EXTRACTED]
 - [[rules.py]] - `imports_from` [EXTRACTED]
 - [[run_ts_tests.py]] - `imports_from` [EXTRACTED]
@@ -62,10 +63,11 @@ tags:
 - [[test_package.py]] - `imports_from` [EXTRACTED]
 - [[test_pictures_first.py]] - `imports_from` [EXTRACTED]
 - [[test_qwen_voice.py]] - `imports_from` [EXTRACTED]
+- [[test_retention.py]] - `imports_from` [EXTRACTED]
 - [[test_rules.py]] - `imports_from` [EXTRACTED]
 - [[test_story.py]] - `imports_from` [EXTRACTED]
 - [[test_style.py]] - `imports_from` [EXTRACTED]
 - [[test_topic_ideas.py]] - `imports_from` [EXTRACTED]
 - [[writing.py]] - `imports_from` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/plan_rulespy
+#graphify/concept #graphify/EXTRACTED #community/pathlib

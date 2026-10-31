@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/config.py"
 type: "code"
-community: "plan_rules.py"
+community: "test_full_scenes.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/plan_rulespy
+  - community/test_full_scenespy
 ---
 
 # config.py
@@ -28,7 +28,7 @@ tags:
 - [[image_sources.py]] - `imports_from` [EXTRACTED]
 - [[llm.py]] - `imports_from` [EXTRACTED]
 - [[logbook.py]] - `imports_from` [EXTRACTED]
-- [[luminance()]] - `contains` [EXTRACTED]
+- [[luminance()_1]] - `contains` [EXTRACTED]
 - [[motion.py]] - `imports_from` [EXTRACTED]
 - [[os]] - `imports` [EXTRACTED]
 - [[pathlib]] - `imports_from` [EXTRACTED]
@@ -38,6 +38,7 @@ tags:
 - [[plan_rules.py]] - `imports_from` [EXTRACTED]
 - [[remotion_render.py]] - `imports_from` [EXTRACTED]
 - [[render_style.py]] - `imports_from` [EXTRACTED]
+- [[retention.py]] - `imports_from` [EXTRACTED]
 - [[review.py]] - `imports_from` [EXTRACTED]
 - [[rules.py]] - `imports_from` [EXTRACTED]
 - [[short_render.py]] - `imports_from` [EXTRACTED]
@@ -53,4 +54,4 @@ tags:
 - [[warnings]] - `imports` [EXTRACTED]
 - [[writing.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/plan_rulespy
+#graphify/code #graphify/EXTRACTED #community/test_full_scenespy

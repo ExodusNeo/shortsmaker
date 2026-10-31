@@ -1,20 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: "audio_mix.py"
+community: "run_agy"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/audio_mixpy
+  - community/run_agy
 ---
 
 # Path
 
 ## Connections
-- [[captions()_1]] - `references` [EXTRACTED]
-- [[music_gain()]] - `references` [EXTRACTED]
-- [[speak()]] - `references` [EXTRACTED]
-- [[story_sound()]] - `references` [EXTRACTED]
-- [[tts()_1]] - `references` [EXTRACTED]
+- [[ask_ai()]] - `references` [EXTRACTED]
+- [[run_agy()]] - `references` [EXTRACTED]
+- [[run_codex()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/audio_mixpy
+#graphify/code #graphify/EXTRACTED #community/run_agy

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/cli.py"
 type: "code"
-community: "plan_rules.py"
+community: "pathlib"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/plan_rulespy
+  - community/pathlib
 ---
 
 # cli.py
@@ -28,6 +28,7 @@ tags:
 - [[picker.py]] - `imports_from` [EXTRACTED]
 - [[picture_pool.py]] - `imports_from` [EXTRACTED]
 - [[re]] - `imports` [EXTRACTED]
+- [[retention.py]] - `imports_from` [EXTRACTED]
 - [[review.py]] - `imports_from` [EXTRACTED]
 - [[rules.py]] - `imports_from` [EXTRACTED]
 - [[seo.py]] - `imports_from` [EXTRACTED]
@@ -40,8 +41,9 @@ tags:
 - [[test_blender_run.py]] - `imports_from` [EXTRACTED]
 - [[test_full_scenes.py]] - `imports_from` [EXTRACTED]
 - [[test_package.py]] - `imports_from` [EXTRACTED]
+- [[test_retention.py]] - `imports_from` [EXTRACTED]
 - [[test_rules.py]] - `imports_from` [EXTRACTED]
 - [[use_picture_from()]] - `contains` [EXTRACTED]
 - [[writing.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/plan_rulespy
+#graphify/code #graphify/EXTRACTED #community/pathlib

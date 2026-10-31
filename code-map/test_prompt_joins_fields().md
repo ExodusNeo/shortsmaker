@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_h3_handoff.py"
 type: "code"
-community: "h3_prompt"
+community: "gpu.py"
 location: "L48"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/h3_prompt
+  - community/gpupy
 ---
 
 # test_prompt_joins_fields()
@@ -15,4 +15,4 @@ tags:
 - [[h3_prompt()]] - `calls` [EXTRACTED]
 - [[test_h3_handoff.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/h3_prompt
+#graphify/code #graphify/EXTRACTED #community/gpupy

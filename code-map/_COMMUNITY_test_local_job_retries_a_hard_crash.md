@@ -20,7 +20,7 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 1 edge to [[_COMMUNITY_local_job]]
+- 1 edge to [[_COMMUNITY_gpu.py]]
 - 1 edge to [[_COMMUNITY_test_full_scenes.py]]
 
 ## Top bridge nodes

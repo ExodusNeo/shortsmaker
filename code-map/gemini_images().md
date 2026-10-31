@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/gpu.py"
 type: "code"
-community: "local_job"
+community: "paint_instead"
 location: "L230"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/local_job
+  - community/paint_instead
 ---
 
 # gemini_images()
@@ -18,6 +18,6 @@ tags:
 - [[one()]] - `indirect_call` [INFERRED]
 - [[paint_instead()]] - `calls` [EXTRACTED]
 - [[paint_opener_start()]] - `calls` [EXTRACTED]
-- [[render()_3]] - `calls` [EXTRACTED]
+- [[render()_2]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/local_job
+#graphify/code #graphify/EXTRACTED #community/paint_instead
