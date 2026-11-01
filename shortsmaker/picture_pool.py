@@ -11,7 +11,7 @@ from pathlib import Path
 
 from PIL import Image, ImageDraw, ImageFont
 
-from shortsmaker import footage, image_sources, llm, media_tools, plan_rules, rules, session, writing
+from shortsmaker import extra_sources, footage, image_sources, llm, media_library, media_tools, photo_prep, plan_rules, rules, session, writing
 from shortsmaker.config import FONT
 
 
@@ -59,6 +59,7 @@ def prepare_topic(s: dict, folder: Path | None = None) -> bool:
             return False
         save_pool(folder, cands)
     s["catalog"] = catalog_pool(s, cands, folder)
+    preflight_pictures(cands, s["catalog"], folder)
     good = usable(cands, s["catalog"])
     s["pool_dir"], s["picture_check"] = str(folder), f"{len(good)} usable of {len(cands)}"
     return len(good) >= rules.min_real_pictures()
@@ -81,9 +82,15 @@ def contact_sheets(cands: list[dict], folder: Path, per_sheet: int = 24) -> list
             x, y = (k % cols) * tile, (k // cols) * tile
             if c.get("thumb"):
                 try:
-                    im = Image.open(io.BytesIO(c["thumb"])).convert("RGB")
-                    im.thumbnail((tile - 12, tile - 12))
-                    sheet.paste(im, (x + (tile - im.width) // 2, y + (tile - im.height) // 2))
+                    clean = c["thumb"] if c.get("film") else photo_prep.clean_photo(c["thumb"])
+                    original = Image.open(io.BytesIO(clean)).convert("RGB")
+                    im = original.copy()
+                    im.thumbnail((tile - 12, 190))
+                    sheet.paste(im, (x + (tile - im.width) // 2, y + 4 + (190 - im.height) // 2))
+                    if not c.get("film"):
+                        for j, fx in enumerate((0.15, 0.5, 0.85)):
+                            crop = photo_prep.vertical_image(original, (fx, 0.5), (48, 85))
+                            sheet.paste(crop, (x + 57 + j * 65, y + 202))
                 except Exception:
                     pass  # unreadable thumbnail: the tile stays blank and Claude skips it
             num = str(s + k + 1)
@@ -126,7 +133,9 @@ def gather_pool(articles: list[str], people: list[str], image_terms: list[str], 
         add(image_sources.openverse_images(q, 3) + image_sources.archive_images(q, 3, names))
     for q in articles[:2]:
         add(image_sources.nasa_images(q, 2, names))
-    cands = [c for c in pool.values() if c["url"] not in skip][:limit]
+    for query in list(dict.fromkeys(scene_imgs[:1] + articles[:1]))[:2]:
+        add(extra_sources.collection_images(query))
+    cands = balanced_candidates([c for c in pool.values() if c["url"] not in skip], limit)
 
     def load_thumb(c: dict) -> dict | None:
         c["thumb"] = image_sources.get_image(c["small"], "thumbnail") or (
@@ -135,12 +144,17 @@ def gather_pool(articles: list[str], people: list[str], image_terms: list[str], 
 
     with ThreadPoolExecutor(4) as ex:
         cands = [c for c in ex.map(load_thumb, cands) if c]
+    cands = visual_unique(cands)
 
     # Video footage research: Internet Archive, Wikimedia Commons, Pixabay and NASA. No other creators' YouTube
     # videos: since Oct 2026 YouTube cuts the Shorts reach of content re-uploaded from other creators.
     films: list[dict] = []
     other_queries = list(dict.fromkeys(articles[:3] + scene_vids[:5]))
-    for search, cap, queries in ((footage.archive_films, 4, other_queries[:6]),
+    ad_queries = footage.commercial_queries(other_queries + scene_imgs)
+    for search, cap, queries in ((footage.archive_ad_films, 3, ad_queries),
+                                 (footage.duke_films, 2, ad_queries),
+                                 (extra_sources.brand_films, 2, ad_queries[:1]),
+                                 (footage.archive_films, 4, other_queries[:6]),
                                  (footage.commons_films, 4, other_queries[:5]),
                                  (footage.pixabay_films, 4, list(dict.fromkeys(scene_vids[:5] + scene_imgs[:4]))[:6]),
                                  (footage.nasa_films, 2, articles[:3])):
@@ -149,7 +163,11 @@ def gather_pool(articles: list[str], people: list[str], image_terms: list[str], 
             if len(got) < cap:
                 got.update({f["src"]: f for f in search(q, names=names) if f["src"] not in skip})
         films += list(got.values())[:cap]
-    films = films[:film_limit]
+    if media_library.source_enabled("local"):
+        for query in other_queries[:3]:
+            films += media_library.local_assets(query, video=True, limit=3)
+    films = list({f["src"]: f for f in films if f["src"] not in skip}.values())
+    films = balanced_candidates(films, film_limit)
 
     if films:
         print(f"  sampling frames from {len(films)} archival/stock videos...")
@@ -163,11 +181,69 @@ def gather_pool(articles: list[str], people: list[str], image_terms: list[str], 
                     print(f"    video sampling failed ({e}), skipping")
                     sampled.append([])
         for f, frames in zip(films, sampled):
-            cands += [{"title": f["title"], "url": f"{f['src']}#t={t:.0f}", "credit": f["credit"], "thumb": jpg,
+            cands += [{"title": f["title"], "url": f"{f['src']}#t={t:g}", "credit": f["credit"], "thumb": jpg,
                        "source": f"REAL FILM ({f['site']}: {f['credit'] or 'no credit needed'}), frame at {media_tools.clock(t)}",
                        "film": {**f, "t": t}, "site": f["site"]}
                       for t, jpg in frames]
     return cands
+
+
+def balanced_candidates(candidates: list[dict], limit: int) -> list[dict]:
+    """Round-robin sources rather than letting the first provider consume the whole budget."""
+    groups = {}
+    for row in candidates:
+        source = row.get("site") or row.get("source", "unknown").split(' "')[0]
+        groups.setdefault(source, []).append(row)
+    out = []
+    while len(out) < limit and any(groups.values()):
+        for rows in groups.values():
+            if rows and len(out) < limit:
+                out.append(rows.pop(0))
+    return out
+
+
+def visual_unique(candidates: list[dict]) -> list[dict]:
+    """Conservative 256-bit difference hashes catch copies from different websites, before numbering."""
+    kept, hashes = [], []
+    for row in candidates:
+        try:
+            img = Image.open(io.BytesIO(photo_prep.clean_photo(row["thumb"]))).convert("L").resize((17, 16))
+            values = list(img.tobytes())
+            bits = sum((values[y * 17 + x] > values[y * 17 + x + 1]) << (y * 16 + x)
+                       for y in range(16) for x in range(16))
+            if 8 < bits.bit_count() < 248 and any((bits ^ old).bit_count() <= 5 for old in hashes):
+                continue
+            if 8 < bits.bit_count() < 248:
+                hashes.append(bits)
+        except (OSError, ValueError, KeyError):
+            pass
+        kept.append(row)
+    return kept
+
+
+def preflight_pictures(candidates: list[dict], catalog: list[dict], folder: Path) -> None:
+    """Verify/download usable originals while the writer can still avoid unavailable pictures."""
+    for entry in catalog:
+        if entry.get("reject") == "Full-size picture could not be downloaded or decoded":
+            entry["reject"] = None  # transient failures can recover on a later run
+    entries = [entry for entry in catalog if is_usable(entry) and not candidates[entry["n"] - 1].get("film")]
+    if not entries:
+        return
+
+    def verify(entry):
+        data = image_sources.get_image(candidates[entry["n"] - 1]["url"], "picture preflight")
+        try:
+            Image.open(io.BytesIO(data or b"")).verify()
+            return True
+        except (OSError, ValueError):
+            return False
+
+    print(f"  checking {len(entries)} full-size pictures before writing...")
+    with ThreadPoolExecutor(4) as ex:
+        for entry, ok in zip(entries, ex.map(verify, entries)):
+            if not ok:
+                entry["reject"] = "Full-size picture could not be downloaded or decoded"
+    media_tools.write_json(folder / "catalog.json", catalog)
 
 
 def pool_folder(topic: str) -> Path:
@@ -225,8 +301,11 @@ For EVERY number give:
 - what: what it really shows, 12 words or fewer (people, place, object, event; "film:" frames say what moves);
 {session.RULES["Opening picture"]}
 - reject: null, or why it must never be used: graphic violence, torture, executions, corpses or suffering; a
-  watermark or channel logo; burned-in subtitles, captions or "subscribe" text (film frames already had their top
-  6% and bottom 20% cropped); a printed caption naming a different event, place or person.
+  uploader watermark or unrelated channel logo; burned-in creator subtitles or "subscribe" overlays;
+  a printed caption naming a different event, place or person. Genuine product logos, packaging, prices,
+  advertising slogans, historical document text and original commercial titles are allowed and must remain visible.
+The three small previews below each still show possible left/centre/right vertical crops. Check that the
+important subject remains readable in a phone crop. The larger image is the cleaned source.
 For reference, their file titles: {json.dumps(titles, ensure_ascii=False)}
 Reply with ONLY JSON: {{"pictures": [{{"n": 1, "what": "...", "era_ok": true, "sharp": 3, "hook": false, "reject": null}}]}}"""
     data = llm.ask_ai(prompt, fatal=False, read_dir=folder / "sheets", bulk=True)

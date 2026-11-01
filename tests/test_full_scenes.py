@@ -870,7 +870,7 @@ def test_story_sound_wins_its_moment():
     random.seed(3)
     ev = audio_mix.sfx_events({"scenes": scenes}, cues, [0, 5, 10], True)
     kinds = [(e["sound"], e["t"]) for e in ev]
-    assert ("story/gun_cock", 7.1) in kinds
+    assert any(e["sound"] == "story/gun_cock" and e["target_t"] == 7.1 for e in ev)
     assert not any(s.startswith("stamp") and abs(t - 7.1) < 0.5 for s, t in kinds)  # the stamp gives way
 
 

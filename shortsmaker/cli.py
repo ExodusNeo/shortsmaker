@@ -9,13 +9,15 @@ from datetime import date
 from pathlib import Path
 
 from shortsmaker import (
-    blender_render, channel_profiles, checkpoints, llm, logbook, picker, picture_pool, retention, review, rules, scene_repair, seo, session,
+    blender_render, channel_profiles, checkpoints, llm, logbook, media_menu, picker, picture_pool, retention, review, rules, scene_repair, seo, session,
     short_render, style_lab, writing,
 )
 from shortsmaker.config import OUTPUT
 
 
 def main() -> None:
+    if sys.argv[1:2] == ["media"]:
+        return media_menu.media_command(sys.argv[2:])
     # make_shorts.py [count] [channel] [claude|gemini]: anything missing is asked for (run.bat passes nothing);
     # with a count given, the planner defaults to the profile's last choice
     # make_shorts.py fix: fix.bat, re-render one scene of a recent Short

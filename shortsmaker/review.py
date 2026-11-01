@@ -110,16 +110,18 @@ The plan: {plan}
 not a blank, washed-out or missing picture. Judge each picture in the seconds when nothing covers it.
 {DRAWN if drawn else ''}Report only problems a viewer would notice: AI artifacts (smoke or fog blobs, melting or warped people,
 faces or objects), text or graphics covering a face, a picture that doesn't match its line or shows the
-wrong era/place/person, unreadable, washed-out or nearly blank pictures, printed captions, logos or
-watermarks on a real photo or film, a painted or AI picture standing in for a real person or object as if it
+wrong era/place/person, unreadable, washed-out or nearly blank pictures, misleading printed captions,
+uploader watermarks or unrelated channel logos on a real photo or film, a painted or AI picture standing in for a real person or object as if it
 were real. Also report these story problems (fix null; they are notes for the editor): the reveal scene (where the
 story's answer lands) doesn't get one of the strongest visuals of the Short; a stretch of 5+ seconds where nothing new
 appears on screen; a scene so crowded (graphic, photo card and captions at once) that the eye can't tell where to look.
 Writing inside an AI-GENERATED painting is allowed when it is real, readable words that fit the
 story; garbled or made-up lettering there is a problem (fix "repaint"). Ignore
 the captions, the subscribe button and normal crossfades. No problems: an empty list.
+Genuine brand logos, product packaging, historical document text, prices, campaign slogans and original
+advertisement titles belong to the source material: do not reject these as creator watermarks or subtitles.
 fix = "repaint" when showing a different picture in that scene would fix it (wrong or blank picture, AI
-artifacts, captions/logos in footage, someone else's AI art posing as real); "graphic" when the scene's line is
+artifacts, creator subtitle/watermark overlays in footage, someone else's AI art posing as real); "graphic" when the scene's line is
 about places, a number, a document, a mechanism, or a cause-and-effect chain and a full-screen motion graphic
 (map journey, big number, document, or custom animated diagram) would show it better than any picture; null
 otherwise (e.g. a graphic covering a face).

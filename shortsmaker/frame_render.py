@@ -20,7 +20,7 @@ def fills_frame(path: Path) -> bool:
         w, h = (int(v) for v in out.strip().split(",")[:2])
     except ValueError:
         return False
-    return h >= 720 and w < h
+    return h >= 720 and 0.53 <= w / h <= 0.60
 
 
 def shot(img: Image.Image, move: str, p: float) -> Image.Image:
@@ -120,10 +120,13 @@ def graphic_low(choice: dict, raw: Path, film: Path | None, sc: dict | None = No
     with Image.open(raw) as im:
         aspect = im.width / im.height
     if film and not fills_frame(film):
-        fy = (H - footage.FILM_BAND) / 2 + y * footage.FILM_BAND  # FILM_VF: always a FILM_BAND-tall band, centred
+        band = min(footage.FILM_BAND, W / aspect)
+        fy = (H - band) / 2 + y * band
     else:  # a wide picture keeps its full height; a tall one loses some top and bottom
         shown = min(1.0, aspect / (W / H))
-        fy = ((y - 0.5) / shown + 0.5) * H
+        focus_y = (choice.get("focal_point") or [0.5, 0.5])[1]
+        top = max(0.0, min(1.0 - shown, focus_y - shown / 2))
+        fy = (y - top) / shown * H
     return 180 <= fy <= 680
 
 

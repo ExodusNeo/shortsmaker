@@ -11,21 +11,21 @@ from pathlib import Path
 
 from PIL import Image
 
-from shortsmaker import image_sources, media_tools, plan_rules
+from shortsmaker import image_sources, media_library, media_tools, plan_rules
 from shortsmaker.config import H, ROOT, W
 
 
 FILM_UA = "ShortsMaker/1.0 (personal video script)"  # non-Wikimedia sites don't get the contact email
 PIXABAY_KEY_FILE = ROOT / "pixabay_key.txt"  # the owner's free Pixabay API key (stock video); optional
-# Sourced videos (esp. YouTube) often have burned-in subtitles in the bottom ~20% and chapter/watermark bars
-# in the top ~6%: crop those off first so neither the video nor the blurred background shows them.
+# Legacy crop is opt-in for old source notes. New sources retain their whole frame;
+# uploader overlays are rejected by the visual editor rather than hidden by cropping.
 FILM_CROP = "crop=trunc(iw*0.92/2)*2:trunc(ih*0.74/2)*2:trunc(iw*0.04/2)*2:trunc(ih*0.06/2)*2"
-# Vertical frame for horizontal video clips: a FILM_BAND-tall band (sides trimmed to the centre) over a
-# blurred, darkened copy of the cropped video. Fitting the full width left a ~490 px strip on a 1920 px
-# screen (owner, 2026-10-16: "make every short better"); 1100 px keeps the middle ~45% of a 16:9 clip.
+# Horizontal clips fit within this foreground band, above a blurred/darkened background.
 FILM_BAND = 1100
+# Keep the complete original frame in the foreground: prices, brand marks and ad slogans are evidence.
 FILM_VF = (f"split[a][b];[a]scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},gblur=sigma=30,"
-           f"colorchannelmixer=rr=0.55:gg=0.55:bb=0.55[bg];[b]scale=-2:{FILM_BAND},crop='min(iw,{W})':ih[fg];"
+           f"colorchannelmixer=rr=0.55:gg=0.55:bb=0.55[bg];"
+           f"[b]scale={W}:{FILM_BAND}:force_original_aspect_ratio=decrease[fg];"
            "[bg][fg]overlay=(W-w)/2:(H-h)/2,format=yuv420p")
 # Already-vertical clips (9:16 Veo clips or vertical stock footage) fill the whole 1080x1920 frame.
 FILL_VF = f"scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},format=yuv420p"
@@ -101,15 +101,21 @@ def commons_films(query: str, limit: int = 2, names=()) -> list[dict]:
     return found[:limit]
 
 
-def archive_films(query: str, limit: int = 2, names=()) -> list[dict]:
+def archive_films(query: str, limit: int = 2, names=(), advertising: bool = False,
+                  collection: str | None = None) -> list[dict]:
     """Videos across the entire Internet Archive (historical film, retro gaming, commercials, tech,
     broadcasts, documentaries), ranked by downloads. Non-public-domain uploads credit their creator."""
     clean = " ".join(w for w in plan_rules.words_of(query) if w not in image_sources.STOPWORDS) or re.sub(r"[^\w\s]", " ", query).strip()
     if not clean:
         return []
+    clean = re.sub(r"\bmcdonald s\b|\bmcdonalds\b", "mcdonald*", clean, flags=re.I)
+    extra = (" AND (title:(commercial OR advertisement OR advertising) OR subject:(commercial OR advertisement OR advertising))"
+             if advertising and not collection else "")
+    collection_filter = (f" AND collection:{collection}" if collection else
+                         "" if advertising else " AND NOT collection:(opensource_audio OR audio OR tv OR television)")
     search = "https://archive.org/advancedsearch.php?" + urllib.parse.urlencode(
-        {"q": f"(title:({clean}) OR subject:({clean})) AND mediatype:movies AND NOT collection:(opensource_audio OR audio OR tv OR television)",
-         "fl[]": ["identifier", "title", "creator", "licenseurl"], "sort[]": "downloads desc", "rows": 6, "output": "json"},
+        {"q": f"(title:({clean}) OR subject:({clean})) AND mediatype:movies{extra}{collection_filter}",
+         "fl[]": ["identifier", "title", "creator", "licenseurl"], "sort[]": "downloads desc", "rows": 16 if advertising or collection else 6, "output": "json"},
         doseq=True)
     found = []
     try:
@@ -130,6 +136,8 @@ def archive_films(query: str, limit: int = 2, names=()) -> list[dict]:
             mp4 = [f for f in meta.get("files", [])
                    if (f.get("format") in ("h.264", "MPEG4", "h.264 IA") or str(f.get("name", "")).lower().endswith(".mp4"))
                    and f.get("length") and not str(f.get("name", "")).startswith("_")]
+            mp4.sort(key=lambda f: ("512kb" not in f.get("name", "").lower(),
+                                    (f.get("format") or "").lower() in ("h.264", "h.264 ia")), reverse=True)
             thumbs = sorted((int(m.group(1)), f["name"]) for f in meta.get("files", [])
                             if f.get("format") == "Thumbnail" and (m := re.search(r"_(\d+)\.jpg$", f["name"])))
             try:
@@ -141,15 +149,80 @@ def archive_films(query: str, limit: int = 2, names=()) -> list[dict]:
                 creator = md.get("creator") or doc.get("creator") or md.get("uploader") or "Internet Archive"
                 if isinstance(creator, list):
                     creator = ", ".join(str(x) for x in creator)
-                credit = None if ("publicdomain" in lic or "cc0" in lic or "zero" in lic) else str(creator).split("@")[0].strip()[:50]
+                credit = (None if ("publicdomain" in lic or "cc0" in lic or "zero" in lic) else
+                          f"{str(creator).split('@')[0].strip()[:50]}; {lic or 'Rights not specified'}; https://archive.org/details/{ident}")
                 base = f"https://archive.org/download/{urllib.parse.quote(ident)}/"
                 found.append({"title": f"{title} (archive.org/details/{ident})", "credit": credit,
                               "src": base + urllib.parse.quote(mp4[0]["name"]), "dur": dur,
-                              "site": "Internet Archive",
+                              "site": "Duke AdViews" if collection == "adviews" else "Internet Archive",
+                              "category": "advertisement" if advertising or collection else "archival",
+                              "crop": "preserve", "source_page": f"https://archive.org/details/{ident}",
                               "thumbs": [(t, base + urllib.parse.quote(n)) for t, n in thumbs] if len(thumbs) >= 4 else []})
     except Exception as e:
         print(f'    Internet Archive video search "{query}" failed ({e})')
     return found
+
+
+def archive_ad_films(query: str, limit: int = 3, names=()) -> list[dict]:
+    return archive_films(query, limit, names, advertising=True)
+
+
+def duke_films(query: str, limit: int = 3, names=()) -> list[dict]:
+    if not media_library.source_enabled("duke"):
+        return []
+    return archive_films(query, limit, names, collection="adviews")
+
+
+def commercial_queries(queries: list[str]) -> list[str]:
+    """Retain product/year/country details from the director; also search the recognized brand alone."""
+    out = []
+    for query in queries:
+        if re.search(r"\b(commercial|advert|advertisement|advertising|campaign|brand|product|menu|packaging)\b", query, re.I):
+            out.append(query)
+        for brand in media_library.settings().get("brands", []):
+            if any(alias.lower() in query.lower() for alias in brand.get("aliases", [])):
+                out.extend((query, brand["name"]))
+    return list(dict.fromkeys(out))[:3]
+
+
+def crop_filter(film: dict) -> str:
+    return FILM_CROP if film.get("crop") == "legacy" else "null"
+
+
+def shot_moments(film: dict, maximum: int = 12) -> list[float]:
+    """Detect cuts in short ads/local files; bounded work and cached results for network films."""
+    if not (film.get("local_path") or film.get("category") == "advertisement") or film["dur"] > 600:
+        return []
+    cache = image_sources.CACHE / ("shots-" + hashlib.sha256(str(film["src"]).encode()).hexdigest() + ".json")
+    if not film.get("local_path"):
+        # One bounded stream copy instead of seeking across the internet once per camera shot.
+        local = cache.with_suffix(".mkv")
+        if not local.exists():
+            local.parent.mkdir(parents=True, exist_ok=True)
+            temp = local.with_name(local.stem + ".partial.mkv")
+            result = image_sources.film_ffmpeg(film, [], ["-t", str(film["dur"]), "-an", "-c:v", "copy", str(temp)], 45)
+            if result.returncode or not temp.exists():
+                temp.unlink(missing_ok=True)
+                return []
+            temp.replace(local)
+        film["sample_path"] = str(local)
+    if cache.exists():
+        try:
+            return json.loads(cache.read_text(encoding="utf-8"))
+        except (OSError, ValueError):
+            pass
+    result = image_sources.film_ffmpeg(film, ["-loglevel", "info"], ["-an", "-vf", "scale=320:-2,select='gt(scene,0.28)',showinfo",
+                                                 "-f", "null", "-"], 45)
+    if result.returncode:
+        return []
+    cuts = [0.0] + [float(t) for t in re.findall(rb"pts_time:([\d.]+)", result.stderr)] + [film["dur"]]
+    spans = [(a, b) for a, b in zip(cuts, cuts[1:]) if b - a >= 0.45]
+    if len(spans) > maximum:
+        spans = [spans[round(k * (len(spans) - 1) / (maximum - 1))] for k in range(maximum)]
+    moments = [round((a + b) / 2, 3) for a, b in spans]
+    cache.parent.mkdir(parents=True, exist_ok=True)
+    media_tools.write_json(cache, moments)
+    return moments
 
 
 def crop_film_bytes(data: bytes) -> bytes:
@@ -166,23 +239,24 @@ def crop_film_bytes(data: bytes) -> bytes:
 
 
 def film_frames(film: dict, n: int = 4) -> list[tuple[float, bytes]]:
-    """n moments spread through a film, for the contact sheets (with FILM_CROP applied so bottom
-    captions and top bars are already cut off): the Internet Archive's own preview frames, or matching
-    YouTube chapter timestamps, or single frames fetched by ffmpeg (skipping the first/last 15% on
-    longer videos to avoid channel intros and end screens)."""
+    """Camera-shot samples for short ads/local videos; otherwise spread samples or Archive thumbnails.
+    The original frame is preserved unless the source explicitly asks for the legacy crop."""
     try:
-        if film.get("thumbs"):
+        moments = shot_moments(film)
+        if film.get("thumbs") and not moments:
             picks = [film["thumbs"][round(k * (len(film["thumbs"]) - 1) / max(1, n - 1))] for k in range(n)]
             out = []
             for t, url in dict(picks).items():
                 try:
-                    out.append((float(t), crop_film_bytes(media_tools.fetch(url, 30, FILM_UA))))
+                    data = media_tools.fetch(url, 30, FILM_UA)
+                    out.append((float(t), crop_film_bytes(data) if film.get("crop") == "legacy" else data))
                 except Exception:
                     pass
             if out:
                 return out
         dur = film["dur"]
-        times = list(film.get("moments") or [])
+        times = list(moments or film.get("moments") or [])
+        n = max(n, len(times))
         for k in range(n):
             if len(times) >= n:
                 break
@@ -192,7 +266,7 @@ def film_frames(film: dict, n: int = 4) -> list[tuple[float, bytes]]:
         out = []
         for t in sorted(times[:n]):
             try:
-                r = image_sources.film_ffmpeg(film, ["-ss", f"{t:.1f}"], ["-frames:v", "1", "-vf", FILM_CROP, "-f", "image2pipe", "-vcodec", "mjpeg", "-"], 25)
+                r = image_sources.film_ffmpeg(film, ["-ss", f"{t:.1f}"], ["-frames:v", "1", "-vf", crop_filter(film), "-f", "image2pipe", "-vcodec", "mjpeg", "-"], 25)
                 if r.returncode == 0 and r.stdout:
                     out.append((t, r.stdout))
                 elif b"timeout" in (r.stderr or b""):
@@ -207,12 +281,11 @@ def film_frames(film: dict, n: int = 4) -> list[tuple[float, bytes]]:
 
 
 def film_piece(film: dict, out: Path) -> tuple[bytes, float] | None:
-    """Download ~14s of film around the chosen moment (cropped with FILM_CROP to remove bottom captions
-    and top bars, and re-encoded so it seeks locally), and return a full-size still of that moment plus
-    its offset in the piece. None on failure."""
+    """Download ~14s around the chosen moment with original framing and muted source audio.
+    Return a full-size still plus its offset in the piece, or None on failure."""
     start = max(0.0, film["t"] - 3)
     try:
-        r = image_sources.film_ffmpeg(film, ["-ss", f"{start:.1f}"], ["-t", "14", "-an", "-vf", FILM_CROP, "-c:v", "libx264",
+        r = image_sources.film_ffmpeg(film, ["-ss", f"{start:.1f}"], ["-t", "14", "-an", "-vf", crop_filter(film), "-c:v", "libx264",
                                                         "-preset", "veryfast", "-crf", "16", str(out)], 300)
         if r.returncode or not out.exists():
             print(f"    film download failed ({r.stderr.decode(errors='replace').strip()[-120:]})")

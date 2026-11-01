@@ -21,7 +21,7 @@ def write_json(path: Path, data) -> None:
 
 def duration(path: Path) -> float:
     return float(subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration",
-                                 "-of", "csv=p=0", str(path)], capture_output=True, text=True).stdout)
+                                 "-of", "csv=p=0", str(path)], capture_output=True, text=True, timeout=30).stdout)
 
 
 _encoder: list[str] = []

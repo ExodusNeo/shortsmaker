@@ -49,6 +49,7 @@ everything (voice, paintings, video). Real archival/online pictures and film are
 | `resume.bat` | Continue unfinished Shorts; run.bat also offers resume before starting a new batch. See `docs/reliability.md` |
 | `retention.bat` | Pick a finished Short and a Studio retention screenshot; writes `retention.txt` plus `retention/graph.<ext>` in that output folder. Same AI modes/quota fallback; see `docs/retention.md` |
 | `library.bat` | `make_shorts.py library`: approve or throw away looks/overlays/cuts the AI invented (`style_candidates/`) |
+| `media.bat` | Import pictures/videos/audio; listen, approve or reject music/SFX; adjust timing/tags; narration previews; source status and official brand pages. See `docs/media-library.md` |
 | `make_shorts.py` | Entry point only; the pipeline is `shortsmaker/` |
 | `channels/<name>.json` | Profile: niche, audience, tone, voice, `done_topics`, `research_seeds`, `cta_line`, `brain`, `veo`, `short_form`, `recent_shapes`, `myths`. `<name>.research.json` = today's bigger-channel Shorts (the "taken" list); `last.txt` = default channel |
 | `channels/<name>.rules.md` | The channel's rules, read by `##` heading (see Rules per channel) |
@@ -60,7 +61,8 @@ everything (voice, paintings, video). Real archival/online pictures and film are
 | `remotion/test_props/` | Test scenes for full-screen graphics (+ `media/`); `tests/render_full.py` renders them into `test_renders/` |
 | `local_ai/` | GPU worker `gen.py` (own venv: Kokoro, SDXL-Lightning, LTX-Video 0.9.8); voice worker `qwen_voice.py` (`qwen_venv`: Qwen3-TTS, MMS aligner, VoiceStudio client); models in `hf/` |
 | `colab/` | `h3_clips.ipynb` + `h3_run.py` + `README.md`: AI video clips the owner makes on Colab Pro (gutierrezdishann@gmail.com, A100) |
-| `music/<mood>/`, `sfx/`, `sfx/story/` | Music by mood (`.mp3.txt` = credit; somber is empty), synthesized SFX, story sounds (owner's files + CC0 Freesound) |
+| `music/<mood>/`, `sfx/`, `sfx/story/` | Music by mood (audio + `.txt` credit and `.json` metadata), synthesized SFX, story sounds. New downloaded variants stay pending until approved in media.bat; existing assets keep working. Empty moods stay silent |
+| `media_library/`, `media_sources.json` | Owner-imported assets + source/credit sidecars (local, ignored); provider switches, official brand-page registry and music ducking settings |
 | `branding/` | Profile picture, banner, channel text |
 | `cache/` | Downloads (30-day prune), `pools/` (a topic's pictures + AI picture list), `ideas/` (Wikipedia idea pages) |
 | `output/<channel>/<date>_<slug>/` | `short.mp4`, `thumbnail.jpg`, `upload.txt`, `captions.srt`, `edit_plan.txt`, `storyboard.jpg`, `work/` (kept 7 days), `veo/` (clip hand-off), `edit.mlt` + `edit_in_shotcut.bat` (only when CHECK lines are left) |
@@ -86,10 +88,12 @@ are stored LF (`.gitattributes`).
 | `plan_rules.py` | Cleaning the planner's JSON, word timings, full-scene cues |
 | `seo.py` | `seo_pass()`, autocomplete, `srt()` |
 | `image_sources.py`, `footage.py` | Pictures (Wikimedia, Openverse, NASA, Archive) and film clips; licences and credits |
+| `extra_sources.py`, `media_library.py` | Wellcome/LoC/Smithsonian/Europeana/Pixabay photos, official brand images/direct video links, source status, owner imports; Duke AdViews uses Archive in footage.py |
 | `picture_pool.py` | Pictures-first pool, AI picture list, cache pruning, contact sheets |
 | `picker.py` | `choose_images()`, full-scene pictures, rescue graphics, `opener_graphic()` |
 | `photo_prep.py` | Stereo cards, border trimming, vertical crops |
 | `audio_mix.py` | Voice call, captions, SFX, story sounds, music gain |
+| `audio_library.py`, `media_menu.py` | Music/variant selection, local history, metadata/approval, impact measurements, previews and media.bat menu |
 | `gpu.py` | MOSS (ComfyUI), VoiceStudio, Gemini paintings, LTX clips, Colab/Flow clip hand-off |
 | `frame_render.py` | Python renderer (fallback), thumbnail |
 | `remotion_render.py` | `render_remotion()`, fallback, redraws |
@@ -144,7 +148,7 @@ Rules that keep it working:
    everywhere) is skipped for a backup; a pitch the picker left out keeps its topic.
 3. **Pictures first**: the picker gives n + 2 backup topics with `visual_terms` and `people`; `prepare_topic()` reads
    Wikipedia, gathers the pool (`gather_pool()`), has the AI list every picture (`catalog_pool()`: what, era_ok,
-   sharp, hook, reject) and keeps topics with >= `min_real_pictures` usable (frames of one video count once); weak
+   sharp, hook, reject), verifies usable full-size still downloads before writing, and keeps topics with >= `min_real_pictures` usable (frames of one video count once); weak
    topics are skipped (`dropped_topics`). No picture list from either AI = the run stops. Then `check_twists()`: each
    twist against Wikipedia (a legend becomes "the story says X; in fact Y").
 4. **Script team**: the planner writes narration -> the editor (`edit_scripts()`: hooks, read-aloud fixes, cuts) ->
@@ -171,8 +175,11 @@ Rules that keep it working:
    Then description, tags, pinned comment. Title/hashtag/pinned-comment examples come from the channel's optional
    `## SEO` rules section (the prompt in `seo.py` holds no niche's examples).
 6. **Pictures** (`choose_images()`): keeps each director `pic` unless it doesn't fit; new searches only for scenes
-   without one and for portraits. The AI looks at numbered contact sheets; rejects violence, logos/watermarks,
-   look-alikes from another culture or era; one solo portrait of a person per Short; portraits never under that
+   without one and for portraits. The AI looks at numbered contact sheets; rejects violence, uploader overlays and
+   look-alikes from another culture or era. Genuine brand marks, prices, packaging and original ad text are allowed.
+   Sources share candidate space; visual duplicates are removed before numbering. Contact sheets include vertical
+   crop previews; the picker saves a focal point and the selected crop as `work/crop_preview_<scene>.jpg`.
+   One solo portrait of a person per Short; portraits never under that
    person's own card. Scenes with nothing fitting go to `rescue_graphics()` (full-screen graphic) or a painting.
 7. **Media**: voice = **CosyVoice 3 through VoiceStudio** (`D:\VoiceStudio`, backend 127.0.0.1:3900, started by
    `voicestudio_up()`), cloned Mark Nelson (`local_ai/voices/nelson_ref.wav` with `aiden_ref.wav` fallback; brisk
@@ -180,7 +187,9 @@ Rules that keep it working:
    tempo `COSY_SPEED` (1.10 in `gpu.py`, brisk ~2.8 wps base pace with zero audio stretching); each sentence run is one take (`sentence_groups()`), cut per scene by MMS word alignment. Backups in order:
    Qwen3-TTS (aiden), Kokoro, Edge, never mixed in one Short. Paintings: **MOSS-Image** (ComfyUI `D:\ComfyUI`), then
    Gemini, then SDXL. Paintings may show only words quoted in `ai_image`; a hand-made period medium, never "concept
-   art"/"cinematic". Real stills -> `clean_photo()` -> 9:16 cover; film -> `FILM_CROP` + `FILM_VF` band. AI video
+   art"/"cinematic". Real stills -> `clean_photo()` -> focal-point 9:16 crop; film -> complete source frame fitted
+   inside `FILM_VF` (legacy `FILM_CROP` only when explicitly requested). Short ads/local clips get camera-shot
+   samples; targeted brand/product/year searches include Duke AdViews via Archive and owner imports. AI video
    (`animate`, max 5): the owner's Colab H3 / Flow clips if chosen (start pictures checked first,
    `start_picture_problems()`), else LTX. Motion only for what the picture shows.
 8. **Render**: Detail callouts (`mark_details`) choose coordinates on `photo_prep.clean_photo()` output, matching
@@ -192,6 +201,11 @@ Rules that keep it working:
    (`short_credit()`), 2.8 s. Loop Shorts (weird-economics) end straight into frame 0.
 9. **Audio**: voice + music (loudness-matched to `MUSIC_LUFS`, ducked) + SFX cue sheet + story sounds; loudnorm
    -14 LUFS + limiter; h264_nvenc.
+   Music avoids recent repeats, uses mood/intensity/instrument tags and a saved start offset; empty moods stay
+   silent. New music/variant downloads wait for approval in media.bat (20 music candidates + 8 SFX variants were
+   seeded 2026-11-01). A narration/music preview is saved beside the video. Story sounds align their measured or
+   owner-adjusted impact to the spoken word; effects compete over full durations, with at most one quiet texture
+   underneath. Freesound uses the current `/apiv2/search/` endpoint. Details: `docs/media-library.md`.
 10. **Checks and fixes**: Visual/opening review status is explicitly Passed / Problems found / Not reviewed;
     failed previews, absent replies and malformed verdicts add NOT REVIEWED checks.
     `quality_check()` (also flags a scene that reuses another scene's picture because nothing
@@ -352,7 +366,10 @@ strangest moment. Same story, other channel: Voggle's Mike 2M views vs ours 1.2K
   the window's last line.
 - Never seen in a real run: style inventions, question beats, wipes, the Shotcut timeline.
 - `channels/gaming.rules.md` is drafted and waiting for the owner's review.
-- `FILM_CROP` (cuts film edges, made for other creators' captions): removing it was offered; owner hasn't decided.
+- Media sources/audio expansion implemented 2026-11-01. Source status and local import fallback in media.bat;
+  McDonald's/LoC blocked automated requests here, Smithsonian demo key hit its rate limit, Europeana needs an
+  optional owner-supplied key. Duke AdViews works; Duke's separate Ad*Access print site has no working connector
+  here (local import available). No new keys acquired. New film preserves its frame; legacy crop is opt-in.
 
 ## Ideas offered, not built
 - Voice cloning of the owner, SFX on the music's beat, YouTube Audio Library tracks for somber/epic.
@@ -360,6 +377,8 @@ strangest moment. Same story, other channel: Voggle's Mike 2M views vs ours 1.2K
   Flow/Gemini (account ToS risk), Hyper3D Rodin's shared trial key, Hunyuan3D 2.1 (licence excludes EU/UK/KR).
 
 ## How to verify changes
+- Media changes: `tests/test_media.py` (source fixtures + real FFmpeg shot/crop/audio checks) and
+  `tests/test_render_resume.py` (real renders with and without music/SFX, saved offset and report resume).
 - `.venv\Scripts\python.exe -m compileall -q make_shorts.py shortsmaker`; Remotion: `cd remotion && npx tsc -p .`
 - Tests, no AI usage (`.venv\Scripts\python.exe tests\<name>.py`): `test_reliability`, `test_render_resume` (real FFmpeg, fake AI), `test_package`, `test_codex`, `test_ai_modes`, `test_marks`, `test_retention`, `test_pictures_first`,
   `test_full_scenes`, `test_style`, `test_rules` (golden prompts), `test_story`, `test_first_second`,

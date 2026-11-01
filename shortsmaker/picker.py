@@ -117,9 +117,9 @@ planned_full_pictures as full_pictures the same way (null for a planned photo th
 For every scene choose the background candidate (video clip or image) that best matches its shot note
 (subject and framing), or else what the narration is about at that moment: the right game, person,
 place, object or event, from the right era. Never pick pictures of graphic violence, torture, executions,
-corpses or suffering: use null instead. All REAL FILM frames have already had their top 6% and bottom 20%
-cropped off to remove standard bottom subtitles; if a frame STILL has burned-in subtitles, captions, or
-"subscribe" text visible inside the cropped image, DO NOT pick it (normal in-game UI/HUDs are fine).
+corpses or suffering: use null instead. REAL FILM keeps its original frame. Reject uploader watermarks,
+unrelated channel logos, burned-in creator subtitles and "subscribe" overlays. Genuine brand logos,
+product packaging, prices, campaign slogans, original ad titles and normal in-game UI/HUDs are allowed.
 Scene 1 is the hook that decides whether viewers swipe away: give it the single most striking,
 eye-catching candidate that fits the story (REAL FILM first whenever it shows the subject), even when
 another picture matches its words more literally. {session.RULES["Picture picking"]}
@@ -158,8 +158,12 @@ figures). Never the same move in two scenes in a row.
 Also give subject_row = where the main subject sits in the background you chose (the face, if there is
 one), as a row from 1 (top edge) to 10 (bottom edge); null when there's no single subject. Text callouts
 are moved out of the subject's way.
+For a STILL background also give focal_point = [x, y], the subject's position from 0 to 1 in the larger
+cleaned source picture (default [0.5, 0.5]). The three small previews below it show left/centre/right
+9:16 crops. Choose a point that keeps the important face, object or evidence visible in that phone crop.
+For video, leave focal_point null: the complete frame is preserved.
 {plan_rule}Scenes: {json.dumps(scenes, ensure_ascii=False)}
-{look_rule}Reply with ONLY JSON: {{"picks": [{{"scene": 1, "bg": 7, "person": null, "move": "in", "motion": null, "motion_people": false, "subject_row": 3, "full_pictures": null, "swap_why": null}}], "look_scenes": []}}"""
+{look_rule}Reply with ONLY JSON: {{"picks": [{{"scene": 1, "bg": 7, "person": null, "move": "in", "motion": null, "motion_people": false, "subject_row": 3, "focal_point": [0.5, 0.5], "full_pictures": null, "swap_why": null}}], "look_scenes": []}}"""
     titles = [f"{k + 1}: {c['title']} ({c['source']})" for k, c in enumerate(cands)]
     sheet_list = "\n".join(str(s) for s in sheets)
     data = llm.ask_ai(f"""{rules}
@@ -236,6 +240,11 @@ For reference, their file titles: {json.dumps(titles, ensure_ascii=False)}""",
                                        "it was already used in another scene" if cands[got - 1]["url"] in taken else
                                        "it could not be downloaded")))
         row = picks.get(i + 1, {}).get("subject_row")
+        focal = p_pick.get("focal_point")
+        if (result["bg"] and not result.get("film") and bg_num == p_pick.get("bg")
+                and isinstance(focal, list) and len(focal) == 2
+                and all(type(v) in (int, float) and 0 <= v <= 1 for v in focal)):
+            result["focal_point"] = focal
         if result["bg"] and isinstance(row, int) and 1 <= row <= 10:
             result["subject_y"] = (row - 0.5) / 10  # 0..1 down the picture
         if result["bg"] and picks.get(i + 1, {}).get("move") in MOVE_NAMES:

@@ -1,0 +1,23 @@
+{
+  "sources": {
+    "loc": true,
+    "wellcome": true,
+    "smithsonian": true,
+    "europeana": true,
+    "pixabay_photos": true,
+    "brand_media": true,
+    "duke": true,
+    "local": true
+  },
+  "brands": [
+    {
+      "name": "McDonald's",
+      "aliases": ["mcdonald", "mcdonalds", "mcdonald's", "arch deluxe", "big mac", "mcnuggets", "happy meal"],
+      "pages": [
+        "https://corporate.mcdonalds.com/corpmcd/our-stories/media-assets-library.html",
+        "https://corporate.mcdonalds.com/corpmcd/en-us/CorpNewsroom/Media/media-assets/all-assets.html"
+      ]
+    }
+  ],
+  "music_ducking": {"threshold": 0.03, "ratio": 4, "attack": 15, "release": 350}
+}

@@ -14,7 +14,7 @@ from pathlib import Path
 
 import edge_tts
 
-from shortsmaker import media_tools, plan_rules, session
+from shortsmaker import audio_library, media_tools, plan_rules, session
 from shortsmaker.config import (
     FREESOUND_KEY, GRAPHIC_STYLES, H, MAX_STORY_SOUNDS, SFX, STORY_SFX, STORY_SOUND_GAIN, W, ass_colour,
 )
@@ -108,27 +108,47 @@ def limit_sounds(scenes: list[dict]) -> None:
             sc["sound"] = None
 
 
+def freesound_results(name: str, music: bool = False, limit: int = 10) -> list[dict]:
+    """Official API, CC0 only; collect metadata before choosing a preview."""
+    key = FREESOUND_KEY.read_text(encoding="utf-8-sig").strip() if FREESOUND_KEY.exists() else ""
+    if not key:
+        return []
+    duration = "[30 TO 600]" if music else "[0.15 TO 4]"
+    q = urllib.parse.urlencode({"query": name, "filter": f'license:"Creative Commons 0" duration:{duration}',
+                                "fields": "id,name,description,tags,duration,avg_rating,num_downloads,previews,license",
+                                "page_size": min(30, limit), "sort": "score", "group_by_pack": 1})
+    try:
+        req = urllib.request.Request(f"https://freesound.org/apiv2/search/?{q}",
+                                     headers={"Authorization": f"Token {key}", "User-Agent": "ShortsMaker/1.0"})
+        results = json.load(urllib.request.urlopen(req, timeout=25)).get("results") or []
+        terms = set(name.lower().split())
+
+        def rank(row):
+            text = " ".join([str(row.get("name", "")), " ".join(row.get("tags") or []), str(row.get("description", ""))]).lower()
+            return (len(terms & set(re.findall(r"[a-z]+", text))),
+                    (row.get("avg_rating") or 0) >= 3, math.log1p(row.get("num_downloads") or 0))
+
+        return sorted((r for r in results if "creativecommons.org/publicdomain/zero" in str(r.get("license", ""))
+                       or str(r.get("license", "")).lower() in ("creative commons 0", "cc0")), key=rank, reverse=True)
+    except (OSError, ValueError, KeyError):
+        return []
+
+
+def freesound_preview(meta: dict) -> bytes | None:
+    try:
+        return media_tools.fetch(meta["previews"]["preview-hq-mp3"], 30)
+    except (OSError, ValueError, KeyError):
+        return None
+
+
 def freesound_fetch(name: str) -> tuple[bytes, dict] | None:
     """One CC0 (no credit, any use) sound for `name` from Freesound's official API: the best-scoring short sound,
     preferring well-rated, much-downloaded ones; its high-quality preview MP3. None without a key or a match."""
-    key = FREESOUND_KEY.read_text(encoding="utf-8-sig").strip() if FREESOUND_KEY.exists() else ""
-    if not key:
-        return None
-    q = urllib.parse.urlencode({"query": name, "filter": 'license:"Creative Commons 0" duration:[0.15 TO 4]',
-                                "fields": "id,name,duration,avg_rating,num_downloads,previews,license",
-                                "page_size": 10, "sort": "score"})
-    try:
-        req = urllib.request.Request(f"https://freesound.org/apiv2/search/text/?{q}",
-                                     headers={"Authorization": f"Token {key}", "User-Agent": "ShortsMaker/1.0"})
-        results = json.load(urllib.request.urlopen(req, timeout=30)).get("results") or []
-        if not results:
-            return None
-        best = next((r for r in results if (r.get("avg_rating") or 0) >= 3 and (r.get("num_downloads") or 0) >= 20), results[0])
-        audio = urllib.request.urlopen(urllib.request.Request(best["previews"]["preview-hq-mp3"],
-                                                              headers={"User-Agent": "ShortsMaker/1.0"}), timeout=30).read()
-        return audio, best
-    except (OSError, ValueError, KeyError):
-        return None
+    for meta in freesound_results(name)[:3]:
+        data = freesound_preview(meta)
+        if data:
+            return data, meta
+    return None
 
 
 def story_sound(name: str, lib: Path = STORY_SFX, fetch=freesound_fetch) -> Path | None:
@@ -136,9 +156,14 @@ def story_sound(name: str, lib: Path = STORY_SFX, fetch=freesound_fetch) -> Path
     fetched from Freesound, trimmed, high-passed like every SFX, evened out and kept as sfx/story/<name>.wav (with a
     .txt note of where it came from), so each sound is fetched only once."""
     slug = re.sub(r"[^a-z0-9]+", "_", name.lower()).strip("_")
+    selected = audio_library.approved_sound(name, lib)
+    if selected:
+        return selected
     for ext in (".wav", ".mp3", ".ogg", ".flac"):
-        if (lib / f"{slug}{ext}").exists():
+        if (lib / f"{slug}{ext}").exists() and audio_library.usable_audio(lib / f"{slug}{ext}"):
             return lib / f"{slug}{ext}"
+    if any(lib.glob(f"{slug}.*")):
+        return None  # never fetch over an explicitly rejected original
     got = fetch(name)
     if not got:
         return None
@@ -155,6 +180,8 @@ def story_sound(name: str, lib: Path = STORY_SFX, fetch=freesound_fetch) -> Path
         raw.unlink(missing_ok=True)
     (lib / f"{slug}.txt").write_text(f"Freesound #{meta.get('id')}: {meta.get('name')} ({meta.get('license')}) "
                                      f"https://freesound.org/s/{meta.get('id')}/\n", encoding="utf-8")
+    audio_library.set_audio_metadata(out, aliases=[name], source_url=f"https://freesound.org/s/{meta.get('id')}/",
+                                    license=meta.get("license"), review_status="automatic", tags=meta.get("tags") or [])
     return out
 
 
@@ -342,14 +369,35 @@ def sfx_events(short: dict, cues: list[dict], bounds: list[float], remotion: boo
     if len(scenes) > 2 and bounds[-2] > 6:  # build tension into the payoff scene
         riser = {"t": bounds[-2] - 2.2, "sound": "riser", "gain": 0.18, "prio": 2, "what": "riser into the payoff"}
 
-    textures = [e for e in cand if e["sound"] in ("ticks", "scratch")] + ([riser] if riser else [])
-    chosen: list[dict] = []
-    for e in sorted((e for e in cand if e["sound"] not in ("ticks", "scratch")), key=lambda e: (-e["prio"], e["t"])):
-        if not any(abs(e["t"] - c["t"]) < 0.5 for c in chosen):
-            chosen.append(e)
-    chosen += textures
-    for e in chosen:
-        e["t"] = max(0.0, e["t"])
+    return schedule_sounds(cand + ([riser] if riser else []), bounds[-1])
+
+
+def schedule_sounds(candidates: list[dict], total: float) -> list[dict]:
+    """Main story impacts land on their word; effects compete over their whole duration."""
+    prepared = []
+    for original in candidates:
+        event = dict(original)
+        path = SFX / event["sound"]
+        path = path if path.suffix else path.with_suffix(".wav")
+        meta = audio_library.sound_profile(path) if path.exists() else {"duration": 0.5, "impact": 0}
+        impact = float(meta.get("impact", 0)) if event["what"].startswith("story sound:") else 0
+        target = max(0.0, float(event["t"]))
+        event.update(target_t=target, t=max(0.0, target - impact), trim=max(0.0, impact - target))
+        event["duration"] = min(max(0.0, total - event["t"]), max(0.0, float(meta.get("duration", 0.5)) - event["trim"]))
+        if event["duration"] > 0:
+            prepared.append(event)
+    chosen = []
+    for event in sorted(prepared, key=lambda e: (-e["prio"], e["t"])):
+        overlaps = [old for old in chosen if event["t"] < old["t"] + old["duration"] + 0.06
+                    and old["t"] < event["t"] + event["duration"] + 0.06]
+        texture = event["sound"] in ("ticks", "scratch", "riser")
+        if overlaps and not texture:
+            continue
+        if texture and overlaps:
+            if any(old["sound"] in ("ticks", "scratch", "riser") for old in overlaps):
+                continue
+            event["gain"] *= 0.4
+        chosen.append(event)
     return sorted(chosen, key=lambda e: e["t"])
 
 

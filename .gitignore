@@ -23,6 +23,14 @@ graphify-out/cache/
 *.wav
 freesound_key.txt
 pixabay_key.txt
+*_key.txt
+media_library/
+sfx/**/*.wav.json
+sfx/**/*.mp3.json
+sfx/**/*.ogg.json
+sfx/**/*.flac.json
+sfx/recent.json
+sfx/story/*/
 .superpowers/
 drawn/node_modules/
 drawn/out/

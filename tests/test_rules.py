@@ -228,17 +228,18 @@ def test_load_rules_sets_session():
 def test_min_pictures_from_settings():
     cands = [{"title": f"File:{k}.jpg", "source": "Commons", "url": f"u{k}"} for k in (1, 2)]
     entries = [{"n": k, "what": "x", "era_ok": True, "sharp": 2, "hook": False, "reject": None} for k in (1, 2)]
-    saved = writing.article_text, picture_pool.load_pool, picture_pool.catalog_pool, dict(session.RULE_SETTINGS)
+    saved = writing.article_text, picture_pool.load_pool, picture_pool.catalog_pool, dict(session.RULE_SETTINGS), picture_pool.preflight_pictures
     writing.article_text = lambda t: ""
     picture_pool.load_pool = lambda folder: cands
     picture_pool.catalog_pool = lambda s, c, folder: entries
+    picture_pool.preflight_pictures = lambda *args: None  # verified separately with real image fixtures
     try:
         for need, ok in (("2", True), ("3", False)):
             session.RULE_SETTINGS = {"min_real_pictures": need}
             s = {"topic": "t", "wiki_articles": ["A"]}
             assert picture_pool.prepare_topic(s, Path(tempfile.mkdtemp())) is ok, need
     finally:
-        writing.article_text, picture_pool.load_pool, picture_pool.catalog_pool, session.RULE_SETTINGS = saved
+        writing.article_text, picture_pool.load_pool, picture_pool.catalog_pool, session.RULE_SETTINGS, picture_pool.preflight_pictures = saved
 
 
 def draft_reply(missing=None, **extra):

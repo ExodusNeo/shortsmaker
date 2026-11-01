@@ -1638,3 +1638,40 @@ provided yet, so no live visual-AI retention result is claimed and no test data 
   Owner's output files, profile/research edits and fresh logbooks remain untouched.
 Usage/limitations: docs/reliability.md. Tracked checklist: docs/superpowers/plans/2026-10-31-reliability-improvements.md.
 Retention Part 3.2 still awaits implementation and fresh results.
+
+## 2026-11-01 — media sourcing, commercials and audio library
+
+Owner approved the source expansion and the preceding image/SFX/music recommendations.
+
+- Added Wellcome, Library of Congress, Smithsonian, Europeana and Pixabay-photo adapters; configurable official
+  brand media pages (McDonald's preconfigured), direct official video links, and owner-imported pictures/videos.
+  Duke AdViews commercials are searched through Internet Archive. No key/account acquired; existing Pixabay and
+  Freesound keys reused, Smithsonian public DEMO_KEY supported, Europeana optional without an owner key.
+- Source status is visible in media.bat. Blocked/rate-limited sources cool down rather than being hammered.
+  Live Wellcome, Duke, Archive, Pixabay-photo and Freesound checks worked. McDonald's/LoC returned 403 here;
+  Smithsonian demo allowance reached 429. Duke's separate Ad*Access print site has no working automated connector
+  in this change; owner imports cover saved ads. No paywall/login or site blocking was bypassed.
+- Brand/product/year/country queries now reach the picture planner/director. New footage keeps its whole frame
+  and drops source audio. Only near-9:16 clips fill the screen; other aspect ratios fit above a blurred background.
+  Original brand logos, prices, packaging and campaign text are allowed; uploader overlays still rejected. Existing
+  YouTube-reupload exclusions remain. Short ads/local videos get bounded camera-shot sampling and local caching.
+- Candidate space is balanced by provider; conservative visual hashes remove copies before numbering. Usable
+  full-size pictures are downloaded/decoded before writing. Transient failures can recover on the next run.
+  Contact sheets show cleaned originals + three vertical crop previews; chosen focal crops are saved for review.
+- Music uses its mood, preferred intensity/instruments, recent history and saved start offset. Empty moods stay
+  silent. Fixes/resume preserve a valid previous selection/offset; history is idempotent per output. Gentler ducking
+  is configurable. A narration/music preview is saved beside the video. Music imports and editing require no code.
+- Freesound uses /apiv2/search/, collects tags/descriptions and tries alternate previews. Approved sound variants
+  rotate; new downloaded variants wait for listening/approval. Story impacts align to words, even near time zero;
+  full-duration overlap checks prevent competing effects, and overlapping textures are limited/attenuated.
+- media.bat supports copy-only media imports with source/credit notes, music/SFX playback and approval/rejection,
+  offsets/impact adjustments, instrument/intensity/alias tags, previews, source status and adding brand pages.
+  Seeded 20 CC0 music candidates (4 per mood) and 8 SFX variants; all remain pending, with credits, until reviewed.
+- Verification: 245 tests across 13 relevant suites passed, including 21 new media cases and 2 real FFmpeg
+  render/resume cases (with and without music/SFX). compileall, TypeScript tsc and git diff --check passed.
+  Reviewed per-prompt golden diffs: only source/crop/brand-ad/audio planning instructions changed.
+  Real Wellcome crop contact sheet, real Duke commercial shot sheet and vertical fitted frame inspected by eye in
+  test_renders/media-improvements. No live AI quota spent; no existing output rerendered or uploaded.
+  Owner's profile/research edits and untracked vault pages are excluded from the implementation commits.
+
+Usage and source limitations: docs/media-library.md. Scope: docs/media-improvements.md.

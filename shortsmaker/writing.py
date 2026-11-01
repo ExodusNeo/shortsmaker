@@ -93,6 +93,8 @@ For each:
   everyday words about its angle, not only the name (e.g. "titanic survivor", "worst warship ever").
 - visual_terms: 4-6 short search phrases for the real people, places, objects and events of this story a
   camera could show, as photo archives would title them (e.g. "Ghost Army inflatable tank", "Rhine crossing 1945").
+  For a brand/product/campaign story, include an original commercial search with brand, product,
+  approximate year and country when known, plus a packaging, menu or print-ad search. Do not invent dates.
 - people: the key people's full names (e.g. ["Ellsworth Kelly"]), [] if none. Their portraits are searched.
 - fact8: its single most shocking fact in 8 words or fewer, as a stranger would get it instantly.
 - question: what a viewer must stay to the very end to find out.
@@ -218,6 +220,8 @@ Reply with ONLY JSON: {{"shorts": [{{"index": 0, "shape": "...", "title": "...",
         s["shape"] = s.get("shape") if s.get("shape") in SHAPES else ""
         s["thumbnail_prompt"] = str(s.get("thumbnail_prompt") or "").strip()[:400]
         s["music_mood"] = s.get("music_mood") if s.get("music_mood") in MOODS else ""
+        s["music_intensity"] = s.get("music_intensity") if s.get("music_intensity") in ("low", "medium", "high") else "low"
+        s["music_instruments"] = [v.strip().lower()[:30] for v in s.get("music_instruments", []) if isinstance(v, str)][:6] if isinstance(s.get("music_instruments"), list) else []
         s["palette"] = s.get("palette") if s.get("palette") in PALETTES else ""
         s["hook_text"] = str(s.get("hook_text") or s.get("thumbnail_text") or "").strip().upper()[:40]
         opts = s.get("hook_options")
@@ -474,6 +478,9 @@ def direct_scripts(shorts: list[dict], ch: dict) -> None:
     data = llm.ask_ai(f"""You are the director of YouTube Shorts for a faceless channel. Niche: {ch['niche']}.
 The narration below is final: never change a word of it. Plan the edit of every scene of every Short.
 {session.RULES["Directing"]}
+  For brand/product scenes, video_search should look for the original commercial or official footage:
+  name the brand and product, then country and approximate year when supported by the research.
+  image_search can look for packaging, menus and print advertisements as well as photographs.
   move = camera move that suits the image: "in" (faces, details, tension), "out" (reveals),
   "left"/"right" (wide places, crowds, landscapes), "up"/"down" (tall buildings, full-length
   portraits). Vary them; never the same move twice in a row.
@@ -570,6 +577,8 @@ The narration below is final: never change a word of it. Plan the edit of every 
   mystical: violet; nature: lime). Vary it across Shorts.
 - music_mood: the background music that fits the story's feeling, one of {MOODS} (vary it across
   Shorts; a disaster is "tense" or "somber", a funny loophole "playful", a big achievement "epic").
+- music_intensity: "low", "medium" or "high"; music_instruments: optional preferred instruments, e.g.
+  ["piano", "strings"]. Keep these choices underneath the narration rather than competing with it.
 - thumbnail_prompt: image-generator prompt for the thumbnail background, written like ai_image (subject, setting,
   light, a real hand-made medium with its marks; same face rule). It raises the title's question without answering
   it, true to the story: ONE big focal subject that reads in under a second at phone-thumbnail size, little else,
@@ -591,7 +600,7 @@ STYLE LIBRARY (name (kind): what it is; fits):
 {style_text}
 Shorts: {json.dumps(final, ensure_ascii=False)}
 Reply with ONLY JSON, one entry in "scenes" per scene, in order: {{"shorts": [{{"index": 0, "palette": "...",
-"music_mood": "...", "thumbnail_prompt": "...", "description": "...", "tags": ["..."], "look": null,
+"music_mood": "...", "music_intensity": "low", "music_instruments": [], "thumbnail_prompt": "...", "description": "...", "tags": ["..."], "look": null,
 "invented_transition": null, "invented_overlay": null,
 "scenes": [{{"pic": null, "image_search": "...", "video_search": "...", "shot": "...", "move": "in", "graphic": null,
 "person": null, "emphasis": "...", "transition": "fade", "ai_image": "...", "animate": false,
@@ -599,7 +608,7 @@ Reply with ONLY JSON, one entry in "scenes" per scene, in order: {{"shorts": [{{
     plans = {r["index"]: r for r in data.get("shorts", []) if isinstance(r, dict) and isinstance(r.get("index"), int)}
     for i, s in enumerate(shorts):
         r = plans.get(i, {})
-        s.update({k: r[k] for k in ("palette", "music_mood", "thumbnail_prompt", "description", "tags") if r.get(k)})
+        s.update({k: r[k] for k in ("palette", "music_mood", "music_intensity", "music_instruments", "thumbnail_prompt", "description", "tags") if r.get(k)})
         s.update({k: r.get(k) for k in ("look", "invented_transition", "invented_overlay")})  # validated in write_scripts
         scenes = r.get("scenes") if isinstance(r.get("scenes"), list) else []
         s["scenes"] = [{**(scenes[k] if k < len(scenes) and isinstance(scenes[k], dict) else {}), "narration": t}

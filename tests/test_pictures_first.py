@@ -11,13 +11,14 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from shortsmaker import (  # noqa: E402
     channel_profiles, editplan, footage, image_sources, llm, logbook, picker, picture_pool, plan_rules, seo, session,
-    writing,
+    writing, extra_sources, media_library,
     topic_ideas,
 )
 from patching import owner  # noqa: E402
 
 NET = ("article_images", "commons_search", "openverse_images", "archive_images", "nasa_images",
-       "archive_films", "commons_films", "pixabay_films", "nasa_films", "get_image", "film_frames")
+       "archive_films", "commons_films", "pixabay_films", "nasa_films", "get_image", "film_frames",
+       "collection_images", "brand_films", "local_assets", "archive_ad_films", "duke_films", "preflight_pictures")
 from shortsmaker import rules  # noqa: E402
 
 rules.load_rules("strange-history")  # the prompts read the channel's rules file
@@ -46,6 +47,10 @@ class stubbed:
         image_sources.openverse_images = image_sources.archive_images = image_sources.nasa_images = rec("other", lambda: [])
         footage.archive_films = rec("films", lambda: [film(k) for k in range(self.films)])
         footage.commons_films = footage.pixabay_films = footage.nasa_films = rec("films2", lambda: [])
+        footage.archive_ad_films = footage.duke_films = lambda *a, **k: []
+        extra_sources.collection_images = media_library.local_assets = lambda *a, **k: []
+        extra_sources.brand_films = lambda *a, **k: []
+        picture_pool.preflight_pictures = lambda *a: None  # full-file verification has dedicated real-image tests
         image_sources.get_image = lambda url, what: b"jpg:" + url.encode()
         footage.film_frames = lambda f, n=4: [(float(t), b"frame%d" % t) for t in (5, 15, 25, 35)]
         for k, v in self.over.items():
@@ -201,12 +206,13 @@ class planning:
         self.prepare, self.over = prepare, over
 
     def __enter__(self):
-        keys = ("trend_research", "logbook_results", "article_text", "edit_scripts", "fact_check", "prepare_topic", "pick_ideas", *self.over)
+        keys = ("trend_research", "logbook_results", "article_text", "edit_scripts", "fact_check", "prepare_topic", "pick_ideas", "preflight_pictures", *self.over)
         self.saved = {k: getattr(owner(k), k) for k in keys}
         self.ai = fake_ai(planning_ai).__enter__()
         channel_profiles.trend_research, logbook.logbook_results = (lambda ch: []), (lambda: "")
         topic_ideas.pick_ideas = lambda *a, **k: []
         writing.article_text, writing.edit_scripts, writing.fact_check = (lambda t: "text"), (lambda shorts, ch: None), (lambda s: True)
+        picture_pool.preflight_pictures = lambda *a: None
         if self.prepare:
             picture_pool.prepare_topic = self.prepare
         for k, v in self.over.items():

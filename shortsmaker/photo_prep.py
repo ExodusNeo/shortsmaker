@@ -83,8 +83,22 @@ def clean_photo(data: bytes) -> bytes:
     return out.getvalue()
 
 
-def to_vertical(path: Path) -> None:
+def vertical_image(img: Image.Image, focus=(0.5, 0.5), size=None) -> Image.Image:
+    """Cover crop around a chosen subject, clamped to real image bounds."""
+    size = size or (int(W * SRC), int(H * SRC))
+    try:
+        fx, fy = (max(0.0, min(1.0, float(v))) for v in focus)
+    except (TypeError, ValueError):
+        fx, fy = 0.5, 0.5
+    ratio = size[0] / size[1]
+    cw, ch = min(img.width, img.height * ratio), min(img.height, img.width / ratio)
+    left = max(0.0, min(img.width - cw, fx * img.width - cw / 2))
+    top = max(0.0, min(img.height - ch, fy * img.height - ch / 2))
+    return img.resize(size, Image.Resampling.LANCZOS, box=(left, top, left + cw, top + ch))
+
+
+def to_vertical(path: Path, focus=(0.5, 0.5)) -> None:
     """Fill the 9:16 frame with the picture (centre crop) for the slow zoom/pan. This was the 2.5D parallax
     clip's full-screen framing; parallax itself was dropped (2026-10-16) because its depth warp bent paintings."""
     img = Image.open(path).convert("RGB")
-    ImageOps.fit(img, (int(W * SRC), int(H * SRC)), Image.LANCZOS).save(path, quality=95)
+    vertical_image(img, focus).save(path, quality=95)

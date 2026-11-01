@@ -1,0 +1,172 @@
+"""Music/SFX metadata, recent choices, approval and short mix previews."""
+
+import json
+import hashlib
+import math
+import random
+import re
+import shutil
+import subprocess
+from pathlib import Path
+
+from shortsmaker import media_library, media_tools
+from shortsmaker.config import MOODS, MUSIC, SFX, STORY_SFX
+
+
+AUDIO_EXTS = {".mp3", ".wav", ".ogg", ".flac", ".m4a"}
+MUSIC_HISTORY = MUSIC / "recent.json"
+SOUND_HISTORY = SFX / "recent.json"
+
+
+def audio_metadata(path: Path) -> dict:
+    try:
+        data = json.loads(path.with_suffix(path.suffix + ".json").read_text(encoding="utf-8-sig"))
+        return data if isinstance(data, dict) else {}
+    except (OSError, ValueError):
+        return {}
+
+
+def set_audio_metadata(path: Path, **values) -> None:
+    data = audio_metadata(path)
+    data.update(values)
+    media_tools.write_json(path.with_suffix(path.suffix + ".json"), data)
+
+
+def usable_audio(path: Path) -> bool:
+    return path.is_file() and path.suffix.lower() in AUDIO_EXTS and audio_metadata(path).get("approved") is not False
+
+
+def import_audio_file(path: Path, name: str, mood: str | None, credit: str, source: str = "") -> Path:
+    path = path.expanduser().resolve(strict=True)
+    if path.suffix.lower() not in AUDIO_EXTS or (mood is not None and mood not in MOODS):
+        raise ValueError("Choose a supported sound/music file and a valid music mood.")
+    slug = re.sub(r"[^a-z0-9]+", "_", name.lower()).strip("_") or "sound"
+    folder = MUSIC / mood if mood else STORY_SFX / slug
+    folder.mkdir(parents=True, exist_ok=True)
+    with path.open("rb") as stream:
+        digest = hashlib.file_digest(stream, "sha256").hexdigest()[:12]
+    target = folder / f"{slug}_{digest}{path.suffix.lower()}"
+    if target != path:
+        shutil.copy2(path, target)
+    set_audio_metadata(target, title=name or path.stem, aliases=[] if mood else [name.lower()],
+                       approved=False, review_status="pending", source_url=source,
+                       license=credit or "Owner supplied; rights not specified", start=0)
+    target.with_suffix(target.suffix + ".txt").write_text(f"{name}: {credit or 'Owner supplied; rights not specified'}\n{source}\n", encoding="utf-8")
+    return target
+
+
+def history_read(path: Path) -> list:
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+        return [row for row in data if isinstance(row, dict)] if isinstance(data, list) else []
+    except (OSError, ValueError):
+        return []
+
+
+def record_audio(path: Path, root: Path, history: Path, job: str = "") -> None:
+    entries = history_read(history)
+    # A fix/resume replaces this job's choice rather than using up the no-repeat window again.
+    entries = [row for row in entries if not job or row.get("job") != job]
+    entries.append({"file": path.relative_to(root).as_posix(), "job": job})
+    history.parent.mkdir(parents=True, exist_ok=True)
+    media_tools.write_json(history, entries[-30:])
+
+
+def select_music(short: dict, prior: Path | None = None) -> Path | None:
+    if prior and usable_audio(prior):
+        return prior
+    mood = short.get("music_mood")
+    if mood not in MOODS:
+        short["music_note"] = "No recognized music mood; left silent"
+        return None
+    tracks = [p for p in sorted((MUSIC / mood).glob("*")) if usable_audio(p)]
+    if not tracks:
+        short["music_note"] = f"No approved {mood} music; left silent (add tracks with media.bat)"
+        return None
+    recent = [row.get("file") for row in history_read(MUSIC_HISTORY)[-5:]]
+    fresh = [p for p in tracks if p.relative_to(MUSIC).as_posix() not in recent]
+    available = fresh or tracks
+    intensity = short.get("music_intensity", "low")
+    instruments = set(short.get("music_instruments") or [])
+
+    def score(path):
+        meta = audio_metadata(path)
+        return (2 * (meta.get("intensity") == intensity)
+                + len(instruments & set(meta.get("instruments") or [])))
+
+    best = max(map(score, available))
+    choices = [p for p in available if score(p) == best]
+    if not fresh:
+        # Reuse the least recently heard file once a small mood library is exhausted.
+        oldest = sorted(choices, key=lambda p: max((i for i, name in enumerate(recent)
+                                                    if name == p.relative_to(MUSIC).as_posix()), default=-1))
+        return oldest[0]
+    return random.choice(choices)
+
+
+def track_start(path: Path, short: dict) -> float:
+    meta = audio_metadata(path)
+    raw = short.get("music_start", meta.get("start", 0))
+    try:
+        start = float(raw)
+        return max(0.0, min(start, max(0.0, media_tools.duration(path) - 1))) if math.isfinite(start) else 0.0
+    except (OSError, ValueError, TypeError, subprocess.SubprocessError):
+        return 0.0
+
+
+def ducking_filter() -> str:
+    options = media_library.settings().get("music_ducking") or {}
+    values = {}
+    for key, default, lo, hi in (("threshold", 0.03, 0.001, 0.5), ("ratio", 4, 1, 20),
+                                  ("attack", 15, 1, 100), ("release", 350, 50, 1500)):
+        try:
+            value = float(options.get(key, default))
+            values[key] = max(lo, min(hi, value)) if math.isfinite(value) else default
+        except (ValueError, TypeError):
+            values[key] = default
+    return "sidechaincompress=" + ":".join(f"{k}={v:g}" for k, v in values.items())
+
+
+def approved_sound(name: str, lib: Path = STORY_SFX) -> Path | None:
+    slug = re.sub(r"[^a-z0-9]+", "_", name.lower()).strip("_")
+    found = []
+    for path in sorted(lib.rglob("*")) if lib.exists() else []:
+        if not usable_audio(path):
+            continue
+        meta = audio_metadata(path)
+        aliases = [str(x).lower() for x in meta.get("aliases", [])]
+        names = {path.stem, path.parent.name, re.sub(r"__.*$", "", path.stem)}
+        if slug in names or name.lower() in aliases:
+            found.append(path)
+    if not found:
+        return None
+    recent = [row.get("file") for row in history_read(SOUND_HISTORY)[-6:]]
+    preferred = [p for p in found if p.relative_to(SFX).as_posix() not in recent] if lib == STORY_SFX else found
+    return random.choice(preferred or found)
+
+
+def sound_profile(path: Path) -> dict:
+    """Measure once: duration and strongest 10-ms window, with explicit owner overrides."""
+    meta = audio_metadata(path)
+    stamp = [path.stat().st_size, path.stat().st_mtime_ns]
+    if meta.get("profile_stamp") == stamp and "duration" in meta and "impact" in meta:
+        return meta
+    result = subprocess.run(["ffmpeg", "-v", "error", "-i", str(path), "-t", "30", "-f", "s16le", "-ac", "1",
+                             "-ar", "8000", "-"], capture_output=True, timeout=20)
+    if result.returncode:
+        return {**meta, "duration": 0.5, "impact": 0}
+    import array
+    samples = array.array("h", result.stdout[:len(result.stdout) // 2 * 2])
+    windows = [sum(v * v for v in samples[i:i + 80]) for i in range(0, len(samples), 80)]
+    measured = windows.index(max(windows)) * 0.01 if windows and max(windows) else 0.0
+    set_audio_metadata(path, duration=len(samples) / 8000, impact=meta.get("impact_override", measured), profile_stamp=stamp)
+    return audio_metadata(path)
+
+
+def preview_mix(voice: Path, track: Path, out: Path, start: float = 0) -> Path:
+    from shortsmaker import audio_mix
+    media_tools.ffmpeg("-i", str(voice), "-stream_loop", "-1", "-ss", str(start), "-i", str(track),
+                       "-filter_complex", f"[0:a]asplit[v][key];[1:a]volume={audio_mix.music_gain(track):.5f}[m];"
+                       f"[m][key]{ducking_filter()}[duck];[v][duck]amix=inputs=2:normalize=0,"
+                       "loudnorm=I=-14:TP=-1.5:LRA=11[out]", "-map", "[out]", "-t", "12", str(out), cwd=out.parent)
+    return out

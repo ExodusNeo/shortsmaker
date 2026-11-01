@@ -57,7 +57,8 @@ def edit_plan(short: dict, bounds: list[float], sources: list[str], cues: list[d
              "in yellow, emphasis word glows orange to the end of its line",
              f"Renderer: {renderer}",
              *([picture_line(short)] if picture_line(short) else []),
-             f"Music: {music.stem if music else 'none'}{f' ({music.parent.name} mood)' if music and music.parent != MUSIC else ''} (ducked under the voice, fades out over the last 2s)",
+             f"Music: {music.stem if music else 'none'}{f' ({music.parent.name} mood)' if music and music.parent != MUSIC else ''}"
+             + (f" (starts at {short.get('music_start', 0):.1f}s; ducked under the voice)" if music else f" ({short.get('music_note', 'no music selected')})"),
              f"Colours: {short['palette']} palette (accent {PALETTES[short['palette']]['accent']}, "
              f"emphasis {PALETTES[short['palette']]['emphasis']}, map {PALETTES[short['palette']]['panel']})",
              "Photo look: " + (f"{look_text(short)} on scenes "

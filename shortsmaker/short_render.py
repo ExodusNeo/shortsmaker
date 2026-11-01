@@ -12,7 +12,7 @@ from pathlib import Path
 from PIL import Image
 
 from shortsmaker import (
-    audio_mix, blender_plan, blender_render, checkpoints, drawn_opener, edit_project, editplan, frame_render, gpu, image_sources,
+    audio_library, audio_mix, blender_plan, blender_render, checkpoints, drawn_opener, edit_project, editplan, frame_render, gpu, image_sources,
     media_tools, motion, photo_prep, picker, picture_pool, plan_rules, remotion_render, review, seo, session, style_lab, voice_cache,
 )
 from shortsmaker.config import FPS, H, MUSIC, OUTPUT, PALETTES, SFX, SRC, STYLE_SLOTS, W, hex_rgb
@@ -211,7 +211,9 @@ def render(short: dict, ch: dict, folder: Path, state: dict | None = None, fix_r
         elif choices[i]["bg"]:  # film scenes play the clip; their still only stands in if the cut fails
             img.write_bytes(choices[i]["bg"][0] if choices[i].get("film") else photo_prep.clean_photo(choices[i]["bg"][0]))
             shutil.copy(img, work / f"{i}_raw.jpg")  # original framing, for the GPU camera moves
-            photo_prep.to_vertical(img)
+            photo_prep.to_vertical(img, choices[i].get("focal_point", (0.5, 0.5)))
+            if not choices[i].get("film"):
+                shutil.copy(img, work / f"crop_preview_{i + 1}.jpg")
             film, site, credit = choices[i].get("film"), choices[i].get("site", "Wikimedia Commons"), choices[i]["bg"][2]
             licence = credit or ("Pixabay license, no credit needed" if site == "Pixabay" else "public domain")
             source = (f"{site}, {licence}: {choices[i]['bg'][1]}"
@@ -369,11 +371,16 @@ def render(short: dict, ch: dict, folder: Path, state: dict | None = None, fix_r
                 by_gemini |= remotion_render.paint_instead(short, work, full, images, sources)
 
     # Audio: voice + music ducked under the voice + the sound-design cue sheet.
-    tracks = sorted(MUSIC.rglob("*.mp3"))  # music/<mood>/*.mp3; the planner picks the Short's mood
-    fitting = [t for t in tracks if t.parent.name == short.get("music_mood")]
-    music = random.choice(fitting or tracks) if tracks else None
-    if state and state.get("music") and (MUSIC / state["music"]).exists():
-        music = MUSIC / state["music"]
+    prior_track = MUSIC / state["music"] if state and state.get("music") else None
+    music = None if state and not state.get("music") else audio_library.select_music(short, prior_track)
+    if music:
+        if music != prior_track:
+            short.pop("music_start", None)
+        short["music_start"] = audio_library.track_start(music, short)
+        try:
+            audio_library.preview_mix(work / "voice.wav", music, folder / "music_preview.wav", short["music_start"])
+        except (OSError, subprocess.SubprocessError):
+            print("    music preview could not be made; continuing with the main mix")
     for i, sc in enumerate(short["scenes"]):  # the story's own sounds: owner's file, else fetched once from Freesound
         if sc.get("sound") and not sc["sound"].get("file"):
             found = audio_mix.story_sound(sc["sound"]["sound"])
@@ -391,16 +398,17 @@ def render(short: dict, ch: dict, folder: Path, state: dict | None = None, fix_r
     inputs = ["-i", "voice.wav"]
     if music:
         fade_out = 0.12 if loop_short else 2.0
-        inputs += ["-stream_loop", "-1", "-i", str(music)]
+        inputs += ["-stream_loop", "-1", "-ss", str(short.get("music_start", 0)), "-i", str(music)]
         graph += [f"[2:a]{fmt},volume={audio_mix.music_gain(music):.4f},afade=t=in:d=0.1,afade=t=out:st={max(0.0, total - fade_out):.2f}:d={fade_out:.2f}[m]",
-                  "[m][key]sidechaincompress=threshold=0.03:ratio=6:attack=15:release=400,asplit[music][music_stem]"]
+                  f"[m][key]{audio_library.ducking_filter()},asplit[music][music_stem]"]
         mix.append("[music]")
     fx = []
     for e in events:
         k = 1 + inputs.count("-i")  # ffmpeg input index; input 0 is the video
         src = SFX / e["sound"]
-        inputs += ["-i", str(src if src.suffix else src.with_suffix(".wav"))]
-        graph.append(f"[{k}:a]{fmt},volume={e['gain']},adelay={int(e['t'] * 1000)}:all=1[s{k}]")
+        inputs += ["-ss", str(e.get("trim", 0)), "-t", str(e.get("duration", total)),
+                   "-i", str(src if src.suffix else src.with_suffix(".wav"))]
+        graph.append(f"[{k}:a]{fmt},highpass=f=220,volume={e['gain']},adelay={int(e['t'] * 1000)}:all=1[s{k}]")
         fx.append(f"[s{k}]")
     if fx:  # summed apart first (same total: amix with normalize=0 only adds) so they can be saved as one track
         graph.append("".join(fx) + f"amix=inputs={len(fx)}:normalize=0,asplit[fx][fx_stem]")
@@ -436,6 +444,11 @@ def render(short: dict, ch: dict, folder: Path, state: dict | None = None, fix_r
     if proc.wait() != 0:
         raise RuntimeError("ffmpeg failed while rendering")
     (work / "rendering.mp4").replace(folder / "short.mp4")
+    if music:
+        audio_library.record_audio(music, MUSIC, audio_library.MUSIC_HISTORY, str(folder))
+    for event in events:
+        if event["what"].startswith("story sound:"):
+            audio_library.record_audio(SFX / event["sound"], SFX, audio_library.SOUND_HISTORY, str(folder) + ":" + event["sound"])
     save_state(work, short, choices, music, by_gemini)
     context = {"bounds": bounds, "sources": sources, "cues": cues, "events": events, "music": music, "n_graphics": n_graphics, "clips": clips, "opener_check": opener_check, "drawn": drawn, "total": total, "emphasis": emphasis, "flashes": flashes, "by_gemini": by_gemini, "renderer": renderer}
     checkpoints.save_context(work, {**context, "fix_round": fix_round, "state": bool(state)})

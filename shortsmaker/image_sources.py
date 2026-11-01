@@ -2,6 +2,7 @@
 on-screen credits."""
 
 import hashlib
+import io
 import json
 import re
 import subprocess
@@ -147,6 +148,13 @@ def get_image(url: str, what: str) -> bytes | None:
     """Wikimedia files via wm_get() (contact User-Agent, spacing, cache), Openverse via its rate
     limit, Internet Archive services/img upgraded to the full-res item file on full downloads,
     anything else (museums, NASA) as a plain download. None on failure."""
+    if url.startswith("file://"):
+        from urllib.request import url2pathname
+        from pathlib import Path
+        try:
+            return Path(url2pathname(urllib.parse.urlsplit(url).path)).read_bytes()
+        except OSError:
+            return None
     if "wikimedia.org" in url:
         return wm_get(url, what)
     if "api.openverse.org" in url:
@@ -169,8 +177,16 @@ def get_image(url: str, what: str) -> bytes | None:
                 return data
         except Exception:
             pass
+    cached = CACHE / f"image-{hashlib.sha256(url.encode()).hexdigest()}" if what != "thumbnail" else None
     try:
-        return media_tools.fetch(url, 60, footage.FILM_UA)
+        if cached and cached.exists():
+            return cached.read_bytes()
+        data = media_tools.fetch(url, 30, footage.FILM_UA)
+        if cached:
+            Image.open(io.BytesIO(data)).verify()  # do not poison the cache with a host's HTML error page
+            CACHE.mkdir(exist_ok=True)
+            cached.write_bytes(data)
+        return data
     except Exception as e:
         print(f"    {what} failed ({e})")
         return None
@@ -226,6 +242,11 @@ CREDIT_ORGS = {"library", "museum", "archive", "archives", "studies", "collectio
 def short_credit(credit: str, film: bool = False, max_len: int = 44) -> str:
     """The on-screen credit tag: kind, a short name and the licence ("Photo: E. Mariz · CC BY 2.0"). The full
     credit stays in upload.txt. A long name loses whole words from its end, never letters mid-word."""
+    # Expanded sources retain a full rights statement + URL in upload.txt; keep the on-screen tag readable.
+    if ";" in credit:
+        parts = credit.split(";")
+        license_name = next((part.strip() for part in parts[1:] if re.fullmatch(r"CC[ -]?(?:BY(?:-SA|-NC|-NC-SA)?|0)(?:[ -][\d.]+)?", part.strip(), re.I)), "")
+        credit = parts[0].strip() + (f", {license_name}" if license_name else "")
     credit = re.sub(r"https?://(?:www\.)?([^/\s,]+)[^\s,]*(?:\s+https?://[^\s,]*)*", r"\1", credit)  # links -> first domain
     lic = re.search(r",\s*((?:CC[ -]?(?:BY|0)[A-Z-]*|public domain|GFDL)(?:[ -][\d.]+)?)\s*$", credit, re.I)
     name = re.split(r"\s+from\s+|,", credit[:lic.start()] if lic else credit)[0].strip()
@@ -304,7 +325,10 @@ def film_ffmpeg(film: dict, before: list[str], after: list[str], timeout: int) -
     """ffmpeg reading a film over HTTP. Wikimedia gets the contact User-Agent, the same 1s spacing as
     wm_get() and a short wait on rate limits (HTTP 429); a seek is several requests, so it trips them."""
     global _last_wm
-    wiki = film["site"] == "Wikimedia Commons"
+    sample = film.get("sample_path")
+    from pathlib import Path
+    source = sample if sample and Path(sample).is_file() else film["src"]
+    wiki = film["site"] == "Wikimedia Commons" and str(source).startswith("http")
     for attempt in range(3):
         if wiki:
             with _wm_lock:
@@ -312,8 +336,9 @@ def film_ffmpeg(film: dict, before: list[str], after: list[str], timeout: int) -
                 _last_wm = time.time()
         ua = film.get("ua") or (WM_UA if wiki else footage.FILM_UA)  # YouTube streams need yt-dlp's own User-Agent
         try:
-            r = subprocess.run(["ffmpeg", "-y", "-loglevel", "error", *before, "-user_agent", ua,
-                                "-i", film["src"], *after], capture_output=True, timeout=timeout)
+            http_options = ["-user_agent", ua] if str(source).startswith(("http://", "https://")) else []
+            r = subprocess.run(["ffmpeg", "-y", "-loglevel", "error", *before, *http_options,
+                                "-i", str(source), *after], capture_output=True, timeout=timeout)
         except subprocess.TimeoutExpired:
             print(f"    film fetch timed out after {timeout}s ({film.get('site', 'video')})")
             return subprocess.CompletedProcess(args=[], returncode=1, stdout=b"", stderr=b"timeout")
