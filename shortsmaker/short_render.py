@@ -487,7 +487,8 @@ def finish_render(short: dict, ch: dict, folder: Path, state=None, fix_round: in
     found, opener = review.first_second_check(folder / "short.mp4", short, choices, folder / "storyboard.jpg", work)
     issues += found
     weak_graphic = review.weak_opener_graphic(short, fixes, found)  # takes scene 1 out of `fixes`
-    if short.get("opener_used"):  # the drawn opener passed its own art director: findings stay CHECK lines
+    drawn_answer = review.drawn_answer_problem(short)
+    if short.get("opener_used"):  # ordinary repaint findings stay CHECK lines; answer reveals use the rewrite path
         fixes.pop(0, None)
     # once per Short; a motion-graphic opener stays (a swapped picture would play under the graphic)
     if short.get("opener_swapped") or short.get("opener_used") or short["scenes"][0].get("full"):
@@ -536,12 +537,13 @@ def finish_render(short: dict, ch: dict, folder: Path, state=None, fix_round: in
     # Fix and re-render while the review finds fixable scenes, capped: an AI reviewer nearly always finds
     # something, so an uncapped loop could repaint forever. fix.bat re-renders (state, round 0) stay manual.
     # The owner approves each fix round (press Enter to fix, or close CMD / type 'skip' to keep as is).
-    if (fixes or opener or weak_graphic) and (not state or fix_round) and fix_round < AUTO_FIX_ROUNDS:
+    if (fixes or opener or weak_graphic or drawn_answer) and (not state or fix_round) and fix_round < AUTO_FIX_ROUNDS:
         st = load_state(work)
         st["short"]["research"] = short.get("research")  # not in state.json; the motion-graphic rescue reads it
         n_fix = min(len(fixes), AUTO_REPAINT_MAX)
         what = (f"{n_fix} scene(s) to fix{' and a weak opening' if opener else ''}"
-                f"{' and a weak motion-graphic opener' if weak_graphic else ''}")
+                f"{' and a weak motion-graphic opener' if weak_graphic else ''}"
+                f"{' and an opening that gives away the answer' if drawn_answer else ''}")
         try:
             ans = input(f"\n  >> Review found {what} (fix round {fix_round + 1}/{AUTO_FIX_ROUNDS}).\n"
                         f"  >> Press Enter to fix and re-render (or close CMD / type 'skip' to keep as is): ").strip().lower()
@@ -553,10 +555,11 @@ def finish_render(short: dict, ch: dict, folder: Path, state=None, fix_round: in
             print(f"  fix round {fix_round + 1}/{AUTO_FIX_ROUNDS}: fixing {what} and re-rendering...")
             st["short"]["auto_fixed"] = (st["short"].get("auto_fixed") or []) + [
                 f"round {fix_round + 1}: {note}" for note in review.apply_review_fixes(st, work, fixes, opener)
-                + (review.fix_opener_graphic(st, work, weak_graphic) if weak_graphic else [])]
+                + (review.fix_opener_graphic(st, work, weak_graphic) if weak_graphic else [])
+                + (review.fix_drawn_answer(st, work, drawn_answer) if drawn_answer else [])]
             render(st["short"], ch, folder, st, fix_round + 1)
             return
-    if (fixes or opener or weak_graphic) and fix_round:
+    if (fixes or opener or weak_graphic or drawn_answer) and fix_round:
         print(f"  stopped fixing after {AUTO_FIX_ROUNDS} rounds: the CHECK lines above are left for you")
     if not issues:
         edit_project.remove(folder)  # an older timeline would no longer match this video

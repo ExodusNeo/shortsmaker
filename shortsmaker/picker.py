@@ -4,7 +4,7 @@ import json
 from pathlib import Path
 
 from shortsmaker import (
-    channel_profiles, footage, image_sources, llm, motion, picture_pool, plan_rules, rules,
+    channel_profiles, footage, image_sources, llm, motion, opening_rules, picture_pool, plan_rules, rules,
     session, style_lab, writing,
 )
 from shortsmaker.config import DOC_KINDS, ICONS, MAX_FULL, MOVE_NAMES, STYLE_CAPS
@@ -163,6 +163,7 @@ cleaned source picture (default [0.5, 0.5]). The three small previews below it s
 9:16 crops. Choose a point that keeps the important face, object or evidence visible in that phone crop.
 For video, leave focal_point null: the complete frame is preserved.
 {plan_rule}Scenes: {json.dumps(scenes, ensure_ascii=False)}
+{opening_rules.opening_brief(short)}
 {look_rule}Reply with ONLY JSON: {{"picks": [{{"scene": 1, "bg": 7, "person": null, "move": "in", "motion": null, "motion_people": false, "subject_row": 3, "focal_point": [0.5, 0.5], "full_pictures": null, "swap_why": null}}], "look_scenes": []}}"""
     titles = [f"{k + 1}: {c['title']} ({c['source']})" for k, c in enumerate(cands)]
     sheet_list = "\n".join(str(s) for s in sheets)
@@ -378,6 +379,7 @@ def opener_graphic(short: dict, weak: str = "") -> str:
         data = llm.ask_ai(f"""You are the director of a YouTube Short: "{short['title']}". Scene 1 is the hook: "{sc['narration']}".
 The channel opens every Short on an animation of the story's strangest moment. Pick the FULL-SCREEN motion graphic
 that shows this hook's strangest moment most strongly from its first frame (always one: it is the opener).
+{opening_rules.opening_brief(short)}
 Real facts only, from the articles below. Leave out "word"/"words": the opener moves from its first frame.
 {"Not a document: the Short already has one. " if has_doc else ""}Not a board. {retry}Formats:
 {full_formats()}

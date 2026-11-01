@@ -11,7 +11,7 @@ from pathlib import Path
 from PIL import Image, ImageDraw, ImageFont
 
 from shortsmaker import (
-    footage, gpu, image_sources, llm, media_tools, motion, picker, picture_pool, plan_rules, remotion_render, session, short_render,
+    footage, gpu, image_sources, llm, media_tools, motion, opening_rules, picker, picture_pool, plan_rules, remotion_render, session, short_render,
     writing,
 )
 from shortsmaker.config import FONT, GRAPHIC_STYLES
@@ -163,6 +163,7 @@ def first_second_check(video: Path, short: dict, choices: list[dict], board: Pat
     better (no painting: the opening wants a real picture). Returns (CHECK lines, (scene index, why) or None);
     failure means ([], None)."""
     short.pop("first_second", None)  # this render needs its own score, even if making the preview fails
+    short.pop("opening_answer_reveal", None)
     review_status(short, "Opening review", "Not reviewed", "review did not finish")
     folder = work / "hook"
     shutil.rmtree(folder, ignore_errors=True)
@@ -192,6 +193,7 @@ def first_second_check(video: Path, short: dict, choices: list[dict], board: Pat
 Open {folder / 'first.jpg'}: frames at 0, 0.5, 1 and 1.5 seconds, left to right (the big title on them is the hook title).
 The narrator's first sentence: "{first}". The Short: "{short['title']}"; its main character: {short.get('character') or 'not named'};
 how it ends: "{scenes[-1]['narration']}".
+{opening_rules.opening_brief(short)}
 Score 1-10: would they stop scrolling AND need to stay for the answer? Score lower when the picture already shows the
 answer or the whole story (with the first sentence, nothing is left to wonder about), when there is no single clear
 subject, when it is dark, busy or hard to read at phone size, or when nothing on screen is strange or surprising.
@@ -203,10 +205,18 @@ a line about someone else (the editor's portrait under "He mailed ten thousand l
 them). A picture of a place or object with no recognizable person fits whenever the place or object is right.
 The scenes and their pictures:
 {chr(10).join(rows)}
-Reply with ONLY JSON: {{"score": 6, "why": "one short reason", "open_with_scene": 4}}""", fatal=False, read_dir=folder)
+Explicitly check whether the visible objects, labels, signs, hook title or opening action identify the answer
+that the narration saves for later. Set reveals_answer=true and quote/name the giveaway in answer_why.
+An attractive opening still fails when it gives away that answer. Known facts already stated in the opening
+are allowed. For an animated opener use open_with_scene=null: it needs a rewrite, not a photo swap.
+Reply with ONLY JSON: {{"score": 6, "why": "one short reason", "reveals_answer": false, "answer_why": "", "open_with_scene": 4}}""", fatal=False, read_dir=folder)
     score = data.get("score") if isinstance(data, dict) else None
     why = str((data or {}).get("why") or "weak opening").strip()[:160] if isinstance(data, dict) else ""
     if plan_rules.is_num(score) and 1 <= score <= 10:  # every score is kept, to set against Stayed to watch later
+        if data.get("reveals_answer") is True:
+            short["opening_answer_reveal"] = str(data.get("answer_why") or why)[:240]
+            score = min(score, HOOK_MIN_SCORE - 1)
+            why = ("opening reveals the answer: " + short["opening_answer_reveal"])[:160]
         short["first_second"] = f"{score:g}/10: {why}"
         review_status(short, "Opening review", "Problems found" if score < HOOK_MIN_SCORE else "Passed", why)
     else:
@@ -275,6 +285,26 @@ def apply_review_fixes(st: dict, work: Path, fixes: dict[int, tuple[str, str]],
 
 
 OPENER_GRAPHIC_FIXES = 2  # fixes of a weak motion-graphic opener before scene 1 goes to the owner's clip hand-off
+DRAWN_ANSWER_FIXES = 1  # a final-render spoiler finding can send a drawn opener back through its existing draft loop
+
+
+def drawn_answer_problem(short: dict) -> str | None:
+    if (short.get("opener_used") and short.get("drawn") and short.get("opening_answer_reveal")
+            and short.get("drawn_answer_fixes", 0) < DRAWN_ANSWER_FIXES):
+        return short["opening_answer_reveal"]
+    return None
+
+
+def fix_drawn_answer(st: dict, work: Path, why: str) -> list[str]:
+    short = st["short"]
+    if short.get("drawn_answer_fixes", 0) >= DRAWN_ANSWER_FIXES:
+        return []
+    short["drawn_answer_fixes"] = short.get("drawn_answer_fixes", 0) + 1
+    short["drawn_repair"] = "The finished opening reveals the ending: " + why + ". " + opening_rules.GUIDANCE
+    short.pop("drawn_failed", None)
+    # The drawn opener clears scene 1's original graphic. Restore a protected fallback before its rewrite.
+    short["opener_graphic"] = picker.opener_graphic(short, "withhold the ending's answer: " + why)
+    return ["the drawn opener goes back for a rewrite that withholds the answer (" + why + ")"]
 
 
 def weak_opener_graphic(short: dict, fixes: dict[int, tuple[str, str]], first_second: list[str]) -> str | None:
@@ -328,7 +358,8 @@ def paint_opener_start(short: dict, work: Path) -> bool:
     sc = short["scenes"][0]
     sc["ai_image"] = sc.get("ai_image") or f"{sc.get('shot') or sc['narration']} {gpu.PAINT_FALLBACK}"
     rewrite_paint_prompts(short, {0: "it is the first frame of an AI video clip, so it must show the story's strangest "
-                                     f"moment itself, as the narration says it: {sc['narration']!r}"})
+                                     f"moment itself, as the narration says it: {sc['narration']!r}\n"
+                                     + opening_rules.opening_brief(short)})
     item = [{"prompt": sc["ai_image"], "out": str(out)}]
     print("  painting the strangest moment as the start picture of scene 1's AI clip...")
     if not gpu.moss_images(item, work) and shutil.which("agy") and not (session.SOLO and session.BRAIN == "claude"):

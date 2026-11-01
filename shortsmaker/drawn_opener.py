@@ -12,7 +12,7 @@ import shutil
 import subprocess
 from pathlib import Path
 
-from shortsmaker import llm, plan_rules, session
+from shortsmaker import llm, opening_rules, plan_rules, session
 from shortsmaker.config import FPS, ROOT, XFADE
 
 DRAWN = ROOT / "drawn"
@@ -105,6 +105,7 @@ It lasts {seconds:.2f} s; each spoken word starts at: {timing}.
 The rest of the story, for context only (don't show it): {json.dumps([sc['narration'] for sc in scenes[1:]], ensure_ascii=False)}
 Main character: {short.get('character') or 'not named'}.
 {session.RULES.get("Opener") or DEFAULT_RULES}
+{opening_rules.opening_brief(short)}
 Write the scene with the kit below.
 {(DRAWN / "KIT.md").read_text(encoding="utf-8")}{fix}
 Reply with ONLY JSON: {{"moment": "one sentence: what the animation shows", "code": "export const camera = ...\\nexport default function scene(k, t) {{ ... }}"}}""",
@@ -121,6 +122,7 @@ def review(short: dict, plan: dict, sheet: Path, seconds: float) -> tuple[float 
     data = llm.ask_ai(f"""You are the art director of a YouTube Short: "{short['title']}". Open {sheet}: six frames of its
 hand-drawn opener across {seconds:.1f} s, left to right (the time is on each). The voice over it says:
 "{short['scenes'][0]['narration']}". The animator meant it to show: {plan['moment']}.
+{opening_rules.opening_brief(short)}
 A stranger scrolling the Shorts feed sees the first frame for one second. Look for these problems:
 - frame 0 doesn't already show the subject and what is strange about it, or you can't tell what is happening;
 - the main thing is too small to read on a phone, or crowded out by background;
@@ -131,16 +133,22 @@ A stranger scrolling the Shorts feed sees the first frame for one second. Look f
 - a face or a word sits behind the title band (y 74-170, first 1.8 s) or the captions (y 1170-1300); bodies,
   limbs and props crossing those bands are fine;
 - text is misspelled, unreadable or not something the story says;
+- an answer object or any visible label/sign gives away the ending before the narrator reveals it;
 - nothing moves, or the moving parts glitch or jump between frames;
 - gore, blood or a weapon hurting someone.
 The hand-drawn cartoon look itself (dot eyes, stick limbs, brush lines, watercolour) is intended: don't report it.
 Score it 1-10: would that stranger understand the strange moment at a glance and stop scrolling? {PASS} = good
 enough to post: small flaws are fine. Below {PASS}, list the problems that stop it working, the worst first.
-Reply with ONLY JSON: {{"score": 7, "problems": ["...", "..."]}}""", fatal=False, read_dir=sheet.parent)
+Also return reveals_answer=true if any frame identifies the withheld answer; give the exact visible object/text
+in answer_why. An opening that reveals the answer cannot pass, even if the drawing and animation look excellent.
+Reply with ONLY JSON: {{"score": 7, "reveals_answer": false, "answer_why": "", "problems": ["...", "..."]}}""", fatal=False, read_dir=sheet.parent)
     score = data.get("score") if isinstance(data, dict) else None
     if not plan_rules.is_num(score) or not 1 <= score <= 10:
         return None, []
     found = [str(p).strip()[:240] for p in data.get("problems") or [] if str(p).strip()]
+    if data.get("reveals_answer") is True:
+        score = min(score, PASS - 1)
+        found.insert(0, "Opening reveals the answer: " + str(data.get("answer_why") or "withhold the ending's answer object and labels")[:200])
     return float(score), found[:8] or ([] if score >= PASS else ["the art director gave a low score without saying why"])
 
 
@@ -169,9 +177,10 @@ def make_opener(short: dict, words: list, seconds: float, work: Path) -> tuple[P
         short["drawn_failed"] = why
         return None, why
 
-    if not plan:
+    repair = short.pop("drawn_repair", None)
+    if not plan or repair:
         print("  drawing the opener: the strangest moment as a hand-drawn animation...")
-        problems, sheet, score = [], None, 0.0
+        problems, sheet, score = ([repair] if repair else []), None, 0.0
         for attempt in range(FIXES + 1):
             draft = write(short, words, seconds, plan, problems, sheet)
             if not draft:

@@ -7,7 +7,7 @@ import urllib.parse
 from pathlib import Path
 
 from shortsmaker import (
-    audio_mix, blender_plan, channel_profiles, image_sources, llm, logbook, picture_pool, plan_rules, rules,
+    audio_mix, blender_plan, channel_profiles, image_sources, llm, logbook, opening_rules, picture_pool, plan_rules, rules,
     session, style_lab, topic_ideas,
 )
 from shortsmaker.config import (
@@ -188,6 +188,7 @@ Rules for each Short:
 - hook_text: 2-4 words shown big over the first second, for viewers watching with the sound off:
   sharpens the SAME question the first sentence opens, in other words (e.g. "NOBODY FIRED HIM"),
   never a separate idea, not a repeat of the title or thumbnail_text.
+  Never name or show a new answer that the narration saves for the ending in hook_text.
 Topics and research: {json.dumps(research, ensure_ascii=False)}
 Reply with ONLY JSON: {{"shorts": [{{"index": 0, "shape": "...", "title": "...", "hook_options": ["...", "...", "..."],
 "hook_text": "...", "thumbnail_text": "...", "scenes": ["narration of scene 1", "narration of scene 2", "..."]}}]}}""")
@@ -472,12 +473,14 @@ def direct_scripts(shorts: list[dict], ch: dict) -> None:
     palette, music, thumbnail) on the final narration, which it may not change."""
     print(f"{session.BRAIN.capitalize()} is planning the edit...")
     final = [{"index": i, "topic": s["topic"], "title": s["title"], "pictures": picture_pool.pictures_of(s) or "none listed",
+              "opening_brief": opening_rules.opening_brief(s),
               "scenes": [{"scene": k + 1, "narration": t} for k, t in enumerate(s["lines"])]} for i, s in enumerate(shorts)]
     style_text = "\n".join(f"  - {e['name']} ({e['kind']}): {e['description']}; fits: {e['fits']}" for e in style_lab.style_library())
     recent_looks = ch.get("recent_looks", [])[-2:] or "none"
     data = llm.ask_ai(f"""You are the director of YouTube Shorts for a faceless channel. Niche: {ch['niche']}.
 The narration below is final: never change a word of it. Plan the edit of every scene of every Short.
 {session.RULES["Directing"]}
+{opening_rules.GUIDANCE}
   For brand/product scenes, video_search should look for the original commercial or official footage:
   name the brand and product, then country and approximate year when supported by the research.
   image_search can look for packaging, menus and print advertisements as well as photographs.

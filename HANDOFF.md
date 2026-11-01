@@ -109,6 +109,7 @@ are stored LF (`.gitattributes`).
 | Checkpoint images | Person-card PIL images use tagged lossless PNG data in JSON; restored with pixels/alpha intact. Fixes the post-encode Image serialization failure |
 | `scene_repair.py` | Isolated circle/arrow preview and apply, original audio retained, backups and state/report updates |
 | `drawn_opener.py` | Drawn opener: AI scene code, lint, preview, art-director review and fixes, render |
+| `opening_rules.py` | Shared hook/ending context and answer-protection instructions for planning, sourcing and opening reviews |
 | `blender_plan.py`, `blender_render.py` | Blender-drawn channels: build plans, headless render |
 | `edit_project.py` | Shotcut timeline for hand fixes |
 | `retention.py` | Approximate retention screenshot reading, code-based matching to saved scene timings; no automatic logbook writes |
@@ -242,6 +243,12 @@ Rules that keep it working:
 
 ## Openers (scene 1 of every Short on `opener: animated` channels)
 Order (owner, 2026-10-30): drawn opener -> motion graphic (2 fixes) -> AI clip of the strangest moment (`use_opener`).
+- **Protect the unanswered question** (`opening_rules.py`, all channels): planning, hook text, picture selection,
+  motion-graphic planning, drawn coding/review, clip starting-image rewrites and final opening review must withhold
+  new answers saved for later narration. Check recognizable objects as well as labels, signs, diagrams and titles;
+  facts already spoken in the hook stay allowed. Both opening reviewers return `reveals_answer`/`answer_why`;
+  a positive finding caps the score below 7 even if the art otherwise scores highly. Final review still records
+  CHECK lines when a repair is skipped/exhausted or the AI cannot review. No promise of automatic detection.
 - **Drawn opener** (`drawn_opener.make_opener`, `drawn/`): a hand-drawn brush-ink + watercolour animation of the
   strangest moment, scene 1 + the crossfade long. The AI codes one scene module against the kit (`drawn/kit.mjs`; its
   manual `drawn/KIT.md`, with the approved Dexter example) -> lint (only `k.*` calls and plain JS; node runs with
@@ -250,8 +257,10 @@ Order (owner, 2026-10-30): drawn opener -> motion graphic (2 fixes) -> AI clip o
   first live runs, good ones included; no verdict = the draft is kept with `unreviewed` and a CHECK line says nobody
   judged it) -> below 7 the coder fixes what it found, up to `FIXES` (2) times -> `drawn/run.mjs` renders
   `work/drawn/opener.mp4`. The plan stays in `short["drawn"]` (fix rounds and fix.bat reuse the clip by
-  fingerprint); a failure stays in `short["drawn_failed"]` and is never retried for that Short. Final-review findings
-  on a drawn opener stay CHECK lines (it passed its own art director). The channel's optional `## Opener` rules
+  fingerprint); a failure stays in `short["drawn_failed"]`. A final-review answer reveal can request one bounded
+  rewrite via the existing owner-approved fix round (`drawn_answer_fixes`, `drawn_repair`); this bypasses cached
+  opener reuse, runs the usual draft/review loop, and restores a protected motion-graphic fallback first. A failed
+  rewrite cannot reuse the known spoiler clip. Other final-review findings stay CHECK lines. The channel's optional `## Opener` rules
   replace `DEFAULT_RULES`. Library: claude-animation (MIT), vendored in `drawn/lib` (`VERSION` = the upstream commit);
   install once: `cd drawn && npm install`. Adding a kit part: write it in `kit.mjs`, document it in `KIT.md`, add it
   to `drawn/examples/kit_parts.mjs`, run `tests\test_drawn_opener.py --look` and look at `drawn\out\sheet.png`.

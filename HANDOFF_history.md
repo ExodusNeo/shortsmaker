@@ -1724,3 +1724,27 @@ Verification completed: 83 tests across reliability (15), real render/resume wit
 full scenes (46), package wiring (19) and callout repair (1) passed. compileall and git diff --check passed.
 Posting check saved beside the Short as posting_check.txt: 37.97 seconds, 1080x1920 at 30 fps, H.264/AAC;
 automatic black/freeze/loudness/pause checks had no findings. No automatic upload was attempted.
+
+### 2026-11-01 — protect the unanswered question in future openings
+
+Owner asked to apply the Bobby Leach opening-quality finding to all future Shorts. Added shared opening rules
+with final opening narration, cold-reader question when available and ending context. The writer's hook title,
+director, picture picker, motion-graphic planner, drawn coder/art director, clip starting-image rewrite and
+finished-video opening reviewer now explicitly protect new answers saved for later narration. Recognizable
+objects, labels, signs, diagrams and titles count as giveaways; facts already stated in the hook remain allowed.
+No keyword blacklist or niche-specific exclusion was added.
+
+Both opening reviewers now return reveals_answer/answer_why. A positive finding forces the opening below the
+passing score even if its drawing otherwise scores highly. A final-render finding can send a previously approved
+drawn opener back for one rewrite via the existing owner-approved fix-round flow. It bypasses cached reuse and
+uses the existing two-fix draft loop; a motion-graphic fallback is restored before rewriting. An unsuccessful
+rewrite cannot reuse the known spoiler clip. Other drawn-opening defects remain CHECK lines, as before; repairs
+remain bounded and skipped/exhausted/unreviewed results remain visible for owner review.
+
+Verification: 205 tests passed across opening rules (12), first second (13), opener graphic (4), channel rules/
+golden prompts (29), pictures first (40), story (20), full scenes (46), real FFmpeg render/resume (2), package (19),
+reliability (15) and real Node drawn opener rendering (5). Reviewed the four changed golden prompts before
+updating their fixture. compileall and git diff --check passed. A live Codex art review of the existing Bobby
+Leach preview returned 4/10 and explicitly identified the visible peel and ORANGE PEEL pavement label as the
+answer reveal. The existing Short was only read; its video, state and reports were not rewritten. These checks
+improve the workflow but do not guarantee an AI will detect every giveaway. No retention outcome is claimed.
