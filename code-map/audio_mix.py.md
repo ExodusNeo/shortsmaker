@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/audio_mix.py"
 type: "code"
-community: "short_render.py"
+community: "re"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/short_renderpy
+  - community/re
 ---
 
 # audio_mix.py
@@ -18,22 +18,27 @@ tags:
 - [[ass_colour()]] - `imports` [EXTRACTED]
 - [[ass_time()]] - `contains` [EXTRACTED]
 - [[asyncio]] - `imports` [EXTRACTED]
+- [[audio_library.py]] - `imports_from` [EXTRACTED]
 - [[caption_lines()]] - `contains` [EXTRACTED]
 - [[captions()_1]] - `contains` [EXTRACTED]
 - [[clean_sound()]] - `contains` [EXTRACTED]
 - [[config.py]] - `imports_from` [EXTRACTED]
 - [[edge_tts]] - `imports` [EXTRACTED]
 - [[freesound_fetch()]] - `contains` [EXTRACTED]
+- [[freesound_preview()]] - `contains` [EXTRACTED]
+- [[freesound_results()]] - `contains` [EXTRACTED]
 - [[json]] - `imports` [EXTRACTED]
 - [[limit_sounds()]] - `contains` [EXTRACTED]
 - [[make_sfx()]] - `contains` [EXTRACTED]
 - [[math]] - `imports` [EXTRACTED]
+- [[media_menu.py]] - `imports_from` [EXTRACTED]
 - [[media_tools.py]] - `imports_from` [EXTRACTED]
 - [[music_gain()]] - `contains` [EXTRACTED]
 - [[pathlib]] - `imports_from` [EXTRACTED]
 - [[plan_rules.py]] - `imports_from` [EXTRACTED]
 - [[re]] - `imports` [EXTRACTED]
 - [[remotion_render.py]] - `imports_from` [EXTRACTED]
+- [[schedule_sounds()]] - `contains` [EXTRACTED]
 - [[session.py]] - `imports_from` [EXTRACTED]
 - [[sfx_events()]] - `contains` [EXTRACTED]
 - [[short_render.py]] - `imports_from` [EXTRACTED]
@@ -41,7 +46,9 @@ tags:
 - [[story_sound()]] - `contains` [EXTRACTED]
 - [[subprocess]] - `imports` [EXTRACTED]
 - [[test_full_scenes.py]] - `imports_from` [EXTRACTED]
+- [[test_media.py]] - `imports_from` [EXTRACTED]
 - [[test_package.py]] - `imports_from` [EXTRACTED]
+- [[test_render_resume.py]] - `imports_from` [EXTRACTED]
 - [[test_style.py]] - `imports_from` [EXTRACTED]
 - [[time]] - `imports` [EXTRACTED]
 - [[tts()_1]] - `contains` [EXTRACTED]
@@ -50,4 +57,4 @@ tags:
 - [[wave]] - `imports` [EXTRACTED]
 - [[writing.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/short_renderpy
+#graphify/code #graphify/EXTRACTED #community/re

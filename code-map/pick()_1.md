@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/audio_mix.py"
 type: "code"
-community: "get_image"
-location: "L272"
+community: "sfx_events"
+location: "L299"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/get_image
+  - community/sfx_events
 ---
 
 # pick()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[sfx_events()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/get_image
+#graphify/code #graphify/EXTRACTED #community/sfx_events

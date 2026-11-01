@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[(start pose, end pose) of a beat; `after` the collapse, close shots find the…]] - `rationale_for` [EXTRACTED]
-- [[dot-close()_1]] - `calls` [EXTRACTED]
+- [[dot-close()]] - `calls` [EXTRACTED]
 - [[dot-wide()]] - `calls` [EXTRACTED]
 - [[Shots]] - `method` [EXTRACTED]
 - [[main()_2]] - `calls` [INFERRED]

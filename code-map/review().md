@@ -12,8 +12,8 @@ tags:
 # review()
 
 ## Connections
-- [[dot-test_real_video_reuses_voice_and_resumes_reports_without_rendering()]] - `indirect_call` [INFERRED]
-- [[Path_12]] - `references` [EXTRACTED]
+- [[dot-render_fixture()]] - `indirect_call` [INFERRED]
+- [[Path_11]] - `references` [EXTRACTED]
 - [[The art director's score (1-10) of a draft's preview sheet and what to fix.…]] - `rationale_for` [EXTRACTED]
 - [[ask_ai()]] - `calls` [EXTRACTED]
 - [[drawn_opener.py]] - `contains` [EXTRACTED]

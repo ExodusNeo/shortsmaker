@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/config.py"
 type: "code"
-community: "test_full_scenes.py"
+community: "test_style.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_full_scenespy
+  - community/test_stylepy
 ---
 
 # config.py
@@ -14,6 +14,7 @@ tags:
 ## Connections
 - [[Paths, fixed settings, palettes and the styleskin tables every module shares.…]] - `rationale_for` [EXTRACTED]
 - [[ass_colour()]] - `contains` [EXTRACTED]
+- [[audio_library.py]] - `imports_from` [EXTRACTED]
 - [[audio_mix.py]] - `imports_from` [EXTRACTED]
 - [[blender_render.py]] - `imports_from` [EXTRACTED]
 - [[channel_profiles.py]] - `imports_from` [EXTRACTED]
@@ -30,6 +31,8 @@ tags:
 - [[llm.py]] - `imports_from` [EXTRACTED]
 - [[logbook.py]] - `imports_from` [EXTRACTED]
 - [[luminance()_1]] - `contains` [EXTRACTED]
+- [[media_library.py]] - `imports_from` [EXTRACTED]
+- [[media_menu.py]] - `imports_from` [EXTRACTED]
 - [[motion.py]] - `imports_from` [EXTRACTED]
 - [[os]] - `imports` [EXTRACTED]
 - [[pathlib]] - `imports_from` [EXTRACTED]
@@ -49,6 +52,7 @@ tags:
 - [[test_blender_scene.py]] - `imports_from` [EXTRACTED]
 - [[test_edit_project.py]] - `imports_from` [EXTRACTED]
 - [[test_full_scenes.py]] - `imports_from` [EXTRACTED]
+- [[test_media.py]] - `imports_from` [EXTRACTED]
 - [[test_package.py]] - `imports_from` [EXTRACTED]
 - [[test_story.py]] - `imports_from` [EXTRACTED]
 - [[test_style.py]] - `imports_from` [EXTRACTED]
@@ -56,4 +60,4 @@ tags:
 - [[warnings]] - `imports` [EXTRACTED]
 - [[writing.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_full_scenespy
+#graphify/code #graphify/EXTRACTED #community/test_stylepy

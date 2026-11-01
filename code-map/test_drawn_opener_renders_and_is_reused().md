@@ -16,7 +16,7 @@ tags:
 - [[duration()]] - `calls` [EXTRACTED]
 - [[fake_ai()_1]] - `calls` [EXTRACTED]
 - [[make_opener()]] - `calls` [EXTRACTED]
-- [[short()_1]] - `calls` [EXTRACTED]
+- [[short()]] - `calls` [EXTRACTED]
 - [[test_drawn_opener.py]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/make_opener

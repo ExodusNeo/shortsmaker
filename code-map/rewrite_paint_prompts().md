@@ -2,7 +2,7 @@
 source_file: "shortsmaker/review.py"
 type: "code"
 community: "rewrite_paint_prompts"
-location: "L428"
+location: "L430"
 tags:
   - graphify/code
   - graphify/EXTRACTED

@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "short_render.py"
+community: "time"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/short_renderpy
+  - community/time
 ---
 
 # time
@@ -13,6 +13,7 @@ tags:
 ## Connections
 - [[audio_mix.py]] - `imports` [EXTRACTED]
 - [[channel_profiles.py]] - `imports` [EXTRACTED]
+- [[extra_sources.py]] - `imports` [EXTRACTED]
 - [[fetch_ideas()]] - `calls` [EXTRACTED]
 - [[footage.py]] - `imports` [EXTRACTED]
 - [[gen.py]] - `imports` [EXTRACTED]
@@ -21,7 +22,8 @@ tags:
 - [[image_sources.py]] - `imports` [EXTRACTED]
 - [[llm.py]] - `imports` [EXTRACTED]
 - [[main()_1]] - `calls` [EXTRACTED]
-- [[main()_6]] - `calls` [EXTRACTED]
+- [[main()_5]] - `calls` [EXTRACTED]
+- [[media_library.py]] - `imports` [EXTRACTED]
 - [[moss_images()]] - `calls` [EXTRACTED]
 - [[picture_pool.py]] - `imports` [EXTRACTED]
 - [[pixabay_films()]] - `calls` [EXTRACTED]
@@ -31,6 +33,8 @@ tags:
 - [[render_style.py]] - `imports` [EXTRACTED]
 - [[save_candidate()]] - `calls` [EXTRACTED]
 - [[short_render.py]] - `imports` [EXTRACTED]
+- [[source_json()]] - `calls` [EXTRACTED]
+- [[source_status()]] - `calls` [EXTRACTED]
 - [[speak()_1]] - `calls` [EXTRACTED]
 - [[style_lab.py]] - `imports` [EXTRACTED]
 - [[test_pictures_first.py]] - `imports` [EXTRACTED]
@@ -38,4 +42,4 @@ tags:
 - [[trend_research()]] - `calls` [EXTRACTED]
 - [[voicestudio_up()]] - `calls` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/short_renderpy
+#graphify/concept #graphify/EXTRACTED #community/time

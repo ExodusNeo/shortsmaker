@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/image_sources.py"
 type: "code"
-community: "image_sources.py"
+community: "test_full_scenes.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/image_sourcespy
+  - community/test_full_scenespy
 ---
 
 # image_sources.py
@@ -19,11 +19,13 @@ tags:
 - [[commons_search()]] - `contains` [EXTRACTED]
 - [[config.py]] - `imports_from` [EXTRACTED]
 - [[credit_tag_image()]] - `contains` [EXTRACTED]
+- [[extra_sources.py]] - `imports_from` [EXTRACTED]
 - [[film_ffmpeg()]] - `contains` [EXTRACTED]
 - [[footage.py]] - `imports_from` [EXTRACTED]
 - [[frame_render.py]] - `imports_from` [EXTRACTED]
 - [[get_image()]] - `contains` [EXTRACTED]
 - [[hashlib]] - `imports` [EXTRACTED]
+- [[io]] - `imports` [EXTRACTED]
 - [[json]] - `imports` [EXTRACTED]
 - [[media_tools.py]] - `imports_from` [EXTRACTED]
 - [[nasa_images()]] - `contains` [EXTRACTED]
@@ -42,6 +44,7 @@ tags:
 - [[subprocess]] - `imports` [EXTRACTED]
 - [[test_blender_run.py]] - `imports_from` [EXTRACTED]
 - [[test_full_scenes.py]] - `imports_from` [EXTRACTED]
+- [[test_media.py]] - `imports_from` [EXTRACTED]
 - [[test_pictures_first.py]] - `imports_from` [EXTRACTED]
 - [[test_topic_ideas.py]] - `imports_from` [EXTRACTED]
 - [[threading]] - `imports` [EXTRACTED]
@@ -55,4 +58,4 @@ tags:
 - [[wm_get()]] - `contains` [EXTRACTED]
 - [[writing.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/image_sourcespy
+#graphify/code #graphify/EXTRACTED #community/test_full_scenespy

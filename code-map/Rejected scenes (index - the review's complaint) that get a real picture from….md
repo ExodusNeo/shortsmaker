@@ -2,7 +2,7 @@
 source_file: "shortsmaker/review.py"
 type: "rationale"
 community: "apply_review_fixes"
-location: "L340"
+location: "L342"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED

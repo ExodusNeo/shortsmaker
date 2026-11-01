@@ -1,25 +1,27 @@
 ---
 source_file: "shortsmaker/media_tools.py"
 type: "code"
-community: "ffmpeg"
+community: "write_json"
 location: "L39"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ffmpeg
+  - community/write_json
 ---
 
 # ffmpeg()
 
 ## Connections
-- [[Path_20]] - `references` [EXTRACTED]
+- [[Path_19]] - `references` [EXTRACTED]
 - [[apply()]] - `calls` [EXTRACTED]
 - [[caption_layer()]] - `calls` [EXTRACTED]
 - [[cut_owner_clip()]] - `calls` [EXTRACTED]
+- [[download_audio_choices()]] - `calls` [EXTRACTED]
 - [[first_second_check()]] - `calls` [EXTRACTED]
 - [[local_clips()]] - `calls` [EXTRACTED]
 - [[media_tools.py]] - `contains` [EXTRACTED]
 - [[preview()]] - `calls` [EXTRACTED]
+- [[preview_mix()]] - `calls` [EXTRACTED]
 - [[preview_sheet()]] - `calls` [EXTRACTED]
 - [[render()_2]] - `calls` [EXTRACTED]
 - [[render_clips()]] - `calls` [EXTRACTED]
@@ -31,4 +33,4 @@ tags:
 - [[use_opener()]] - `calls` [EXTRACTED]
 - [[visual_review()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ffmpeg
+#graphify/code #graphify/EXTRACTED #community/write_json

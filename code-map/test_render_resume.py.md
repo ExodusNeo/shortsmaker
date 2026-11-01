@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_render_resume.py"
 type: "code"
-community: "pathlib"
+community: "test_full_scenes.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/pathlib
+  - community/test_full_scenespy
 ---
 
 # test_render_resume.py
@@ -15,6 +15,8 @@ tags:
 - [[A real FFmpegPython render with fake AI verifies stage saves, voice reuse and…]] - `rationale_for` [EXTRACTED]
 - [[RenderResumeTests]] - `contains` [EXTRACTED]
 - [[__init__.py]] - `imports_from` [EXTRACTED]
+- [[audio_library.py]] - `imports_from` [EXTRACTED]
+- [[audio_mix.py]] - `imports_from` [EXTRACTED]
 - [[checkpoints.py]] - `imports_from` [EXTRACTED]
 - [[cli.py]] - `imports_from` [EXTRACTED]
 - [[contextlib]] - `imports_from` [EXTRACTED]
@@ -33,4 +35,4 @@ tags:
 - [[unittest]] - `imports` [EXTRACTED]
 - [[unittest_mock]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/pathlib
+#graphify/code #graphify/EXTRACTED #community/test_full_scenespy

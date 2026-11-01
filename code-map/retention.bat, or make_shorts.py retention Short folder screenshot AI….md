@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/retention.py"
 type: "rationale"
-community: "command"
+community: "retention.py"
 location: "L132"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/command
+  - community/retentionpy
 ---
 
 # retention.bat, or make_shorts.py retention [Short folder] [screenshot] [AI…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[command()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/command
+#graphify/rationale #graphify/EXTRACTED #community/retentionpy

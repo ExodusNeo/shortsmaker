@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/channel_profiles.py"
 type: "code"
-community: "test_ai_modes.py"
+community: "main"
 location: "L74"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_ai_modespy
+  - community/main
 ---
 
 # normalize_brain()
@@ -19,4 +19,4 @@ tags:
 - [[main()_3]] - `calls` [EXTRACTED]
 - [[test_batch_uses_selected_codex_writer_and_migrates_saved_aliases()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_ai_modespy
+#graphify/code #graphify/EXTRACTED #community/main

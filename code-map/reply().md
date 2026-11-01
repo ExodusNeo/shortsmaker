@@ -2,7 +2,7 @@
 source_file: "tests/test_pictures_first.py"
 type: "code"
 community: "write_scripts"
-location: "L509"
+location: "L515"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,7 +12,7 @@ tags:
 # reply()
 
 ## Connections
-- [[dot-__enter__()_1]] - `calls` [EXTRACTED]
+- [[dot-__enter__()_2]] - `calls` [EXTRACTED]
 - [[planning_ai()]] - `calls` [EXTRACTED]
 - [[test_both_mode_pools_follow_reply_position()]] - `indirect_call` [INFERRED]
 

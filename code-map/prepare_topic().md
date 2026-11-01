@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[Before writing the topic's Wikipedia research (`_texts`; fact_check() reuses…]] - `rationale_for` [EXTRACTED]
-- [[Path_1]] - `references` [EXTRACTED]
+- [[Path_3]] - `references` [EXTRACTED]
 - [[article_text()]] - `calls` [EXTRACTED]
 - [[catalog_pool()]] - `calls` [EXTRACTED]
 - [[gather_pool()]] - `calls` [EXTRACTED]
@@ -21,6 +21,7 @@ tags:
 - [[min_real_pictures()]] - `calls` [EXTRACTED]
 - [[picture_pool.py]] - `contains` [EXTRACTED]
 - [[pool_folder()]] - `calls` [EXTRACTED]
+- [[preflight_pictures()]] - `calls` [EXTRACTED]
 - [[save_pool()]] - `calls` [EXTRACTED]
 - [[test_empty_pool_drops_topic_without_ai()]] - `calls` [EXTRACTED]
 - [[test_min_pictures_from_settings()]] - `calls` [EXTRACTED]

@@ -1,21 +1,23 @@
 ---
 source_file: ""
 type: "concept"
-community: "re"
+community: "retention.py"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/re
+  - community/retentionpy
 ---
 
 # math
 
 ## Connections
+- [[audio_library.py]] - `imports` [EXTRACTED]
 - [[audio_mix.py]] - `imports` [EXTRACTED]
 - [[blender_plan.py]] - `imports` [EXTRACTED]
 - [[build_scene.py]] - `imports` [EXTRACTED]
 - [[clamp()_1]] - `calls` [EXTRACTED]
 - [[direction()]] - `calls` [EXTRACTED]
+- [[ducking_filter()]] - `calls` [EXTRACTED]
 - [[failures.py]] - `imports` [EXTRACTED]
 - [[flash_alpha()]] - `calls` [EXTRACTED]
 - [[frame_render.py]] - `imports` [EXTRACTED]
@@ -26,5 +28,6 @@ tags:
 - [[radians()]] - `calls` [EXTRACTED]
 - [[retention.py]] - `imports` [EXTRACTED]
 - [[scene_repair.py]] - `imports` [EXTRACTED]
+- [[track_start()]] - `calls` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/re
+#graphify/concept #graphify/EXTRACTED #community/retentionpy

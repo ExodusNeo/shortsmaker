@@ -1,17 +1,17 @@
 ---
-source_file: "tools/split_make_shorts.py"
+source_file: "shortsmaker/extra_sources.py"
 type: "code"
-community: "split_make_shorts.py"
-location: "L385"
+community: "extra_sources.py"
+location: "L148"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/split_make_shortspy
+  - community/extra_sourcespy
 ---
 
 # .__init__()
 
 ## Connections
-- [[Unqualify]] - `method` [EXTRACTED]
+- [[BrandImages]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/split_make_shortspy
+#graphify/code #graphify/EXTRACTED #community/extra_sourcespy

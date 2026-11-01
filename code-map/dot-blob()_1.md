@@ -1,28 +1,20 @@
 ---
-source_file: "drawn/kit.mjs"
+source_file: "tests/test_media.py"
 type: "code"
-community: "k"
-location: "L48"
+community: "MediaTests"
+location: "L39"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/k
+  - community/MediaTests
 ---
 
 # .blob()
 
 ## Connections
-- [[dot-barrel()]] - `calls` [EXTRACTED]
-- [[dot-blob()_1]] - `calls` [EXTRACTED]
-- [[dot-bubble()]] - `calls` [EXTRACTED]
-- [[dot-cow()]] - `calls` [EXTRACTED]
-- [[dot-dog()]] - `calls` [EXTRACTED]
-- [[dot-horse()]] - `calls` [EXTRACTED]
-- [[dot-island()]] - `calls` [EXTRACTED]
-- [[dot-moneybag()]] - `calls` [EXTRACTED]
-- [[dot-person()]] - `calls` [EXTRACTED]
-- [[dot-sack()]] - `calls` [EXTRACTED]
-- [[dot-tree()]] - `calls` [EXTRACTED]
-- [[k]] - `method` [EXTRACTED]
+- [[dot-test_import_keeps_original_and_source_notes()]] - `calls` [EXTRACTED]
+- [[dot-test_preflight_rejects_broken_original_and_recovers_later()]] - `calls` [EXTRACTED]
+- [[dot-test_visual_copies_from_two_websites_are_one_candidate()]] - `calls` [EXTRACTED]
+- [[MediaTests]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/k
+#graphify/code #graphify/EXTRACTED #community/MediaTests

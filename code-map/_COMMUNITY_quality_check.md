@@ -25,9 +25,10 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 3 edges to [[_COMMUNITY_re]]
+- 2 edges to [[_COMMUNITY_test_style.py]]
 - 1 edge to [[_COMMUNITY_write_scripts]]
-- 1 edge to [[_COMMUNITY_short_render.py]]
+- 1 edge to [[_COMMUNITY_subprocess]]
+- 1 edge to [[_COMMUNITY_re]]
 - 1 edge to [[_COMMUNITY_visual_review]]
 - 1 edge to [[_COMMUNITY_finish_render]]
 - 1 edge to [[_COMMUNITY_apply_review_fixes]]

@@ -18,6 +18,7 @@ tags:
 - [[footage.py]] - `imports` [EXTRACTED]
 - [[frame_render.py]] - `imports` [EXTRACTED]
 - [[gpu.py]] - `imports` [EXTRACTED]
+- [[image_sources.py]] - `imports` [EXTRACTED]
 - [[mark_details()]] - `calls` [EXTRACTED]
 - [[moss_images()]] - `calls` [EXTRACTED]
 - [[person_card()]] - `calls` [EXTRACTED]
@@ -29,6 +30,8 @@ tags:
 - [[storyboard()]] - `calls` [EXTRACTED]
 - [[test_blender_run.py]] - `imports` [EXTRACTED]
 - [[test_marks.py]] - `imports` [EXTRACTED]
+- [[test_media.py]] - `imports` [EXTRACTED]
 - [[test_render_resume.py]] - `imports` [EXTRACTED]
+- [[visual_unique()]] - `calls` [EXTRACTED]
 
 #graphify/concept #graphify/EXTRACTED #community/test_full_scenespy

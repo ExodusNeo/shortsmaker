@@ -1,21 +1,24 @@
 ---
 source_file: ""
 type: "concept"
-community: "pathlib"
+community: "test_style.py"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/pathlib
+  - community/test_stylepy
 ---
 
 # os
 
 ## Connections
+- [[audition_audio()]] - `calls` [EXTRACTED]
 - [[cli.py]] - `imports` [EXTRACTED]
 - [[config.py]] - `imports` [EXTRACTED]
 - [[gpu.py]] - `imports` [EXTRACTED]
 - [[library_menu()]] - `calls` [EXTRACTED]
 - [[llm.py]] - `imports` [EXTRACTED]
+- [[media_library.py]] - `imports` [EXTRACTED]
+- [[media_menu.py]] - `imports` [EXTRACTED]
 - [[qwen_voice.py]] - `imports` [EXTRACTED]
 - [[style_lab.py]] - `imports` [EXTRACTED]
 - [[test_codex.py]] - `imports` [EXTRACTED]
@@ -24,4 +27,4 @@ tags:
 - [[test_reliability.py]] - `imports` [EXTRACTED]
 - [[veo_handoff()]] - `calls` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/pathlib
+#graphify/concept #graphify/EXTRACTED #community/test_stylepy

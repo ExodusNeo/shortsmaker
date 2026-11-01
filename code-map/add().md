@@ -2,7 +2,7 @@
 source_file: "shortsmaker/picture_pool.py"
 type: "code"
 community: "gather_pool"
-location: "L107"
+location: "L114"
 tags:
   - graphify/code
   - graphify/EXTRACTED

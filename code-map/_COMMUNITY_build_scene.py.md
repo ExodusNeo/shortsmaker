@@ -9,9 +9,9 @@ members: 18
 
 ## Members
 - [[(start pose, end pose) of a beat; `after` the collapse, close shots find the…]] - rationale - blender/build_scene.py
-- [[dot-__init__()_6]] - code - blender/build_scene.py
+- [[dot-__init__()_5]] - code - blender/build_scene.py
 - [[dot-beat()]] - code - blender/build_scene.py
-- [[dot-close()_1]] - code - blender/build_scene.py
+- [[dot-close()]] - code - blender/build_scene.py
 - [[dot-wide()]] - code - blender/build_scene.py
 - [[Camera poses (eye, target) for each beat, sized from the bridge and the focus…]] - rationale - blender/build_scene.py
 - [[Entry point blender.exe -b --factory-startup --python blenderbuild_scene.py…]] - rationale - blender/build_scene.py
@@ -37,15 +37,16 @@ SORT file.name ASC
 ## Connections to other communities
 - 7 edges to [[_COMMUNITY_main]]
 - 4 edges to [[_COMMUNITY_parts.py]]
-- 3 edges to [[_COMMUNITY_re]]
+- 3 edges to [[_COMMUNITY_retention.py]]
 - 3 edges to [[_COMMUNITY_look.py]]
 - 2 edges to [[_COMMUNITY_templates.py]]
-- 2 edges to [[_COMMUNITY_pathlib]]
+- 1 edge to [[_COMMUNITY_subprocess]]
 - 1 edge to [[_COMMUNITY_json]]
+- 1 edge to [[_COMMUNITY_test_full_scenes.py]]
 - 1 edge to [[_COMMUNITY_test_topic_ideas.py]]
 
 ## Top bridge nodes
-- [[build_scene.py]] - degree 16, connects to 7 communities
+- [[build_scene.py]] - degree 16, connects to 8 communities
 - [[failures.py]] - degree 10, connects to 5 communities
 - [[bpy]] - degree 4, connects to 2 communities
 - [[mathutils]] - degree 4, connects to 2 communities

@@ -18,6 +18,7 @@ tags:
 - [[io]] - `imports` [EXTRACTED]
 - [[is_stereo()]] - `contains` [EXTRACTED]
 - [[pathlib]] - `imports_from` [EXTRACTED]
+- [[picture_pool.py]] - `imports_from` [EXTRACTED]
 - [[pil]] - `imports_from` [EXTRACTED]
 - [[plan_rules.py]] - `imports_from` [EXTRACTED]
 - [[remotion_render.py]] - `imports_from` [EXTRACTED]
@@ -25,7 +26,9 @@ tags:
 - [[statistics]] - `imports` [EXTRACTED]
 - [[test_full_scenes.py]] - `imports_from` [EXTRACTED]
 - [[test_marks.py]] - `imports_from` [EXTRACTED]
+- [[test_media.py]] - `imports_from` [EXTRACTED]
 - [[to_vertical()]] - `contains` [EXTRACTED]
 - [[trim_borders()]] - `contains` [EXTRACTED]
+- [[vertical_image()]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/test_full_scenespy

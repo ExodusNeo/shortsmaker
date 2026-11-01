@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/audio_mix.py"
 type: "code"
-community: "get_image"
-location: "L265"
+community: "sfx_events"
+location: "L292"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/get_image
+  - community/sfx_events
 ---
 
 # sfx_events()
@@ -16,8 +16,9 @@ tags:
 - [[audio_mix.py]] - `contains` [EXTRACTED]
 - [[pick()_1]] - `contains` [EXTRACTED]
 - [[render()_2]] - `calls` [EXTRACTED]
+- [[schedule_sounds()]] - `calls` [EXTRACTED]
 - [[test_sfx_full()]] - `calls` [EXTRACTED]
 - [[test_story_sound_wins_its_moment()]] - `calls` [EXTRACTED]
 - [[test_style_sounds()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/get_image
+#graphify/code #graphify/EXTRACTED #community/sfx_events

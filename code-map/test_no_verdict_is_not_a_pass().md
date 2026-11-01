@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[review()]] - `calls` [EXTRACTED]
-- [[short()_1]] - `calls` [EXTRACTED]
+- [[short()]] - `calls` [EXTRACTED]
 - [[test_drawn_opener.py]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/make_opener

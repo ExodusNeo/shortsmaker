@@ -1,17 +1,19 @@
 ---
-source_file: "shortsmaker/frame_render.py"
+source_file: "blender/build_scene.py"
 type: "code"
-community: "frame_maker"
-location: "L233"
+community: "build_scene.py"
+location: "L54"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/frame_maker
+  - community/build_scenepy
 ---
 
 # .close()
 
 ## Connections
-- [[ClipReader]] - `method` [EXTRACTED]
+- [[dot-beat()]] - `calls` [EXTRACTED]
+- [[Shots]] - `method` [EXTRACTED]
+- [[direction()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/frame_maker
+#graphify/code #graphify/EXTRACTED #community/build_scenepy

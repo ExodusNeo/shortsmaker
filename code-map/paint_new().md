@@ -2,7 +2,7 @@
 source_file: "shortsmaker/review.py"
 type: "code"
 community: "apply_review_fixes"
-location: "L412"
+location: "L414"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,7 +12,7 @@ tags:
 # paint_new()
 
 ## Connections
-- [[Path_17]] - `references` [EXTRACTED]
+- [[Path_14]] - `references` [EXTRACTED]
 - [[apply_review_fixes()]] - `calls` [EXTRACTED]
 - [[fix  auto-fix scene i drops its picture and gets a freshly painted one…]] - `rationale_for` [EXTRACTED]
 - [[fix_short()]] - `calls` [EXTRACTED]

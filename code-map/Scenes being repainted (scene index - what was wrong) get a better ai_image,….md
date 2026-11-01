@@ -2,7 +2,7 @@
 source_file: "shortsmaker/review.py"
 type: "rationale"
 community: "rewrite_paint_prompts"
-location: "L429"
+location: "L431"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED

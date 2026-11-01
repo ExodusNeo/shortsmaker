@@ -24,6 +24,7 @@ tags:
 - [[library_menu()]] - `calls` [EXTRACTED]
 - [[load_channel()]] - `calls` [EXTRACTED]
 - [[make_shorts.py]] - `imports` [EXTRACTED]
+- [[media_command()]] - `calls` [EXTRACTED]
 - [[normalize_brain()]] - `calls` [EXTRACTED]
 - [[pending()]] - `calls` [EXTRACTED]
 - [[pick_channel()]] - `calls` [EXTRACTED]

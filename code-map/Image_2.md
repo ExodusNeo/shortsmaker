@@ -1,18 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: "test_blender_scene.py"
+community: "is_stereo"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_blender_scenepy
+  - community/is_stereo
 ---
 
 # Image
 
 ## Connections
-- [[changed()]] - `references` [EXTRACTED]
-- [[count()]] - `references` [EXTRACTED]
-- [[render()_3]] - `references` [EXTRACTED]
+- [[is_stereo()]] - `references` [EXTRACTED]
+- [[trim_borders()]] - `references` [EXTRACTED]
+- [[vertical_image()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_blender_scenepy
+#graphify/code #graphify/EXTRACTED #community/is_stereo

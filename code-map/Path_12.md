@@ -1,19 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "make_opener"
+community: "test_story.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/make_opener
+  - community/test_storypy
 ---
 
 # Path
 
 ## Connections
-- [[make_opener()]] - `references` [EXTRACTED]
-- [[node_run()]] - `references` [EXTRACTED]
-- [[review()]] - `references` [EXTRACTED]
-- [[write()_1]] - `references` [EXTRACTED]
+- [[log_short()]] - `references` [EXTRACTED]
+- [[vault_page()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/make_opener
+#graphify/code #graphify/EXTRACTED #community/test_storypy

@@ -38,22 +38,22 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 12 edges to [[_COMMUNITY_re]]
+- 15 edges to [[_COMMUNITY_test_full_scenes.py]]
 - 9 edges to [[_COMMUNITY_write_scripts]]
-- 6 edges to [[_COMMUNITY_short_render.py]]
-- 6 edges to [[_COMMUNITY_pathlib]]
-- 3 edges to [[_COMMUNITY_test_pictures_first.py]]
-- 3 edges to [[_COMMUNITY_image_sources.py]]
+- 6 edges to [[_COMMUNITY_re]]
+- 6 edges to [[_COMMUNITY_test_style.py]]
+- 3 edges to [[_COMMUNITY_fake_ai]]
 - 3 edges to [[_COMMUNITY_json]]
-- 3 edges to [[_COMMUNITY_test_full_scenes.py]]
-- 2 edges to [[_COMMUNITY_main_1]]
+- 2 edges to [[_COMMUNITY_time]]
+- 2 edges to [[_COMMUNITY_test_pictures_first.py]]
+- 2 edges to [[_COMMUNITY_subprocess]]
+- 1 edge to [[_COMMUNITY_extra_sources.py]]
 - 1 edge to [[_COMMUNITY_test_rules.py]]
-- 1 edge to [[_COMMUNITY_test_style.py]]
 - 1 edge to [[_COMMUNITY_build_scene.py]]
 
 ## Top bridge nodes
-- [[topic_ideas.py]] - degree 22, connects to 9 communities
-- [[test_topic_ideas.py]] - degree 32, connects to 8 communities
+- [[test_topic_ideas.py]] - degree 32, connects to 7 communities
+- [[topic_ideas.py]] - degree 22, connects to 7 communities
 - [[fetch_ideas()]] - degree 9, connects to 4 communities
-- [[Random]] - degree 8, connects to 3 communities
+- [[Random]] - degree 9, connects to 3 communities
 - [[pick_ideas()]] - degree 8, connects to 1 community

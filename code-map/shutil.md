@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "short_render.py"
+community: "test_style.py"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/short_renderpy
+  - community/test_stylepy
 ---
 
 # shutil
@@ -14,6 +14,7 @@ tags:
 - [[analyze()]] - `calls` [EXTRACTED]
 - [[apply()]] - `calls` [EXTRACTED]
 - [[approve_candidate()]] - `calls` [EXTRACTED]
+- [[audio_library.py]] - `imports` [EXTRACTED]
 - [[available()]] - `calls` [EXTRACTED]
 - [[cli.py]] - `imports` [EXTRACTED]
 - [[code_custom_scenes()]] - `calls` [EXTRACTED]
@@ -22,11 +23,14 @@ tags:
 - [[full_props()]] - `calls` [EXTRACTED]
 - [[gpu.py]] - `imports` [EXTRACTED]
 - [[h3_run.py]] - `imports` [EXTRACTED]
+- [[import_audio_file()]] - `calls` [EXTRACTED]
+- [[import_media()]] - `calls` [EXTRACTED]
 - [[invent_component()]] - `calls` [EXTRACTED]
 - [[llm.py]] - `imports` [EXTRACTED]
 - [[logbook.py]] - `imports` [EXTRACTED]
 - [[main()_1]] - `calls` [EXTRACTED]
 - [[main()_4]] - `calls` [EXTRACTED]
+- [[media_library.py]] - `imports` [EXTRACTED]
 - [[motion.py]] - `imports` [EXTRACTED]
 - [[paint_instead()]] - `calls` [EXTRACTED]
 - [[paint_opener_start()]] - `calls` [EXTRACTED]
@@ -60,4 +64,4 @@ tags:
 - [[write_scripts()]] - `calls` [EXTRACTED]
 - [[writing.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/short_renderpy
+#graphify/concept #graphify/EXTRACTED #community/test_stylepy

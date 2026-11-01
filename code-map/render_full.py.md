@@ -1,12 +1,12 @@
 ---
 source_file: "tests/render_full.py"
 type: "code"
-community: "short_render.py"
+community: "subprocess"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/short_renderpy
+  - community/subprocess
 ---
 
 # render_full.py
@@ -21,4 +21,4 @@ tags:
 - [[subprocess]] - `imports` [EXTRACTED]
 - [[sys]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/short_renderpy
+#graphify/code #graphify/EXTRACTED #community/subprocess

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/image_sources.py"
 type: "rationale"
-community: "get_image"
-location: "L180"
+community: "extra_sources.py"
+location: "L196"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/get_image
+  - community/extra_sourcespy
 ---
 
 # Images from museums, archives and photographers through Openverse (no key),…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[openverse_images()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/get_image
+#graphify/rationale #graphify/EXTRACTED #community/extra_sourcespy

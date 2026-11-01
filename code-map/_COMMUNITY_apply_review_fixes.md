@@ -9,7 +9,7 @@ members: 14
 
 ## Members
 - [[A mark card circles a detail of the old picture it must go when the picture…]] - rationale - tests/test_full_scenes.py
-- [[Path_17]] - code
+- [[Path_14]] - code
 - [[Rejected scenes (index - the review's complaint) that get a real picture from…]] - rationale - shortsmaker/review.py
 - [[The automatic fixes after a render's review (up to AUTO_REPAINT_MAX scenes per…]] - rationale - shortsmaker/review.py
 - [[apply_review_fixes()]] - code - shortsmaker/review.py
@@ -31,22 +31,22 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 7 edges to [[_COMMUNITY_test_full_scenes.py]]
-- 3 edges to [[_COMMUNITY_test_first_second.py]]
-- 2 edges to [[_COMMUNITY_render]]
+- 6 edges to [[_COMMUNITY_test_full_scenes.py]]
+- 2 edges to [[_COMMUNITY_prepare_topic]]
 - 2 edges to [[_COMMUNITY_main_1]]
+- 2 edges to [[_COMMUNITY_test_first_second.py]]
+- 2 edges to [[_COMMUNITY_test_style.py]]
 - 2 edges to [[_COMMUNITY_rewrite_paint_prompts]]
 - 2 edges to [[_COMMUNITY_test_review_redraws_custom]]
-- 1 edge to [[_COMMUNITY_prepare_topic]]
+- 2 edges to [[_COMMUNITY_opener_graphic]]
+- 1 edge to [[_COMMUNITY_redraw_custom]]
+- 1 edge to [[_COMMUNITY_first_second_check]]
+- 1 edge to [[_COMMUNITY_rescue_graphics]]
 - 1 edge to [[_COMMUNITY_quality_check]]
-- 1 edge to [[_COMMUNITY_get_image]]
-- 1 edge to [[_COMMUNITY_short_render.py]]
+- 1 edge to [[_COMMUNITY_extra_sources.py]]
+- 1 edge to [[_COMMUNITY_subprocess]]
 - 1 edge to [[_COMMUNITY_resume_runs]]
-- 1 edge to [[_COMMUNITY_re]]
-- 1 edge to [[_COMMUNITY_clean_full]]
-- 1 edge to [[_COMMUNITY_code_custom_scenes]]
 - 1 edge to [[_COMMUNITY_finish_render]]
-- 1 edge to [[_COMMUNITY_clean_pics]]
 - 1 edge to [[_COMMUNITY_ask_ai]]
 - 1 edge to [[_COMMUNITY_json]]
 - 1 edge to [[_COMMUNITY_film_piece]]
@@ -54,7 +54,7 @@ SORT file.name ASC
 
 ## Top bridge nodes
 - [[apply_review_fixes()]] - degree 15, connects to 7 communities
-- [[pool_pictures()]] - degree 10, connects to 7 communities
-- [[Path_17]] - degree 9, connects to 5 communities
-- [[use_picture_from()]] - degree 7, connects to 4 communities
+- [[pool_pictures()]] - degree 10, connects to 6 communities
+- [[Path_14]] - degree 9, connects to 5 communities
+- [[use_picture_from()]] - degree 7, connects to 3 communities
 - [[paint_new()]] - degree 7, connects to 2 communities

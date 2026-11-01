@@ -31,6 +31,7 @@ tags:
 - [[test_full_scenes.py]] - `imports_from` [EXTRACTED]
 - [[test_h3_run.py]] - `imports_from` [EXTRACTED]
 - [[test_marks.py]] - `imports_from` [EXTRACTED]
+- [[test_media.py]] - `imports_from` [EXTRACTED]
 - [[test_render_resume.py]] - `imports_from` [EXTRACTED]
 - [[test_retention.py]] - `imports_from` [EXTRACTED]
 

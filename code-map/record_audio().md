@@ -1,0 +1,21 @@
+---
+source_file: "shortsmaker/audio_library.py"
+type: "code"
+community: "media_command"
+location: "L66"
+tags:
+  - graphify/code
+  - graphify/EXTRACTED
+  - community/media_command
+---
+
+# record_audio()
+
+## Connections
+- [[Path_24]] - `references` [EXTRACTED]
+- [[audio_library.py]] - `contains` [EXTRACTED]
+- [[history_read()]] - `calls` [EXTRACTED]
+- [[render()_2]] - `calls` [EXTRACTED]
+- [[write_json()]] - `calls` [EXTRACTED]
+
+#graphify/code #graphify/EXTRACTED #community/media_command

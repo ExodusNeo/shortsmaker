@@ -1,18 +1,19 @@
 ---
 source_file: "shortsmaker/__init__.py"
 type: "code"
-community: "pathlib"
+community: "test_full_scenes.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/pathlib
+  - community/test_full_scenespy
 ---
 
 # __init__.py
 
 ## Connections
 - [[ShortsMaker make ready-to-upload YouTube Shorts. Entry point make_shorts.py.]] - `rationale_for` [EXTRACTED]
+- [[audio_library.py]] - `imports_from` [EXTRACTED]
 - [[audio_mix.py]] - `imports_from` [EXTRACTED]
 - [[blender_plan.py]] - `imports_from` [EXTRACTED]
 - [[blender_render.py]] - `imports_from` [EXTRACTED]
@@ -22,12 +23,15 @@ tags:
 - [[drawn_opener.py]] - `imports_from` [EXTRACTED]
 - [[edit_project.py]] - `imports_from` [EXTRACTED]
 - [[editplan.py]] - `imports_from` [EXTRACTED]
+- [[extra_sources.py]] - `imports_from` [EXTRACTED]
 - [[footage.py]] - `imports_from` [EXTRACTED]
 - [[frame_render.py]] - `imports_from` [EXTRACTED]
 - [[gpu.py]] - `imports_from` [EXTRACTED]
 - [[image_sources.py]] - `imports_from` [EXTRACTED]
 - [[llm.py]] - `imports_from` [EXTRACTED]
 - [[logbook.py]] - `imports_from` [EXTRACTED]
+- [[media_library.py]] - `imports_from` [EXTRACTED]
+- [[media_menu.py]] - `imports_from` [EXTRACTED]
 - [[motion.py]] - `imports_from` [EXTRACTED]
 - [[patching.py]] - `imports` [EXTRACTED]
 - [[picker.py]] - `imports_from` [EXTRACTED]
@@ -54,6 +58,7 @@ tags:
 - [[test_full_scenes.py]] - `imports_from` [EXTRACTED]
 - [[test_h3_handoff.py]] - `imports_from` [EXTRACTED]
 - [[test_marks.py]] - `imports_from` [EXTRACTED]
+- [[test_media.py]] - `imports_from` [EXTRACTED]
 - [[test_opener_graphic.py]] - `imports_from` [EXTRACTED]
 - [[test_package.py]] - `imports_from` [EXTRACTED]
 - [[test_pictures_first.py]] - `imports_from` [EXTRACTED]
@@ -68,4 +73,4 @@ tags:
 - [[voice_cache.py]] - `imports_from` [EXTRACTED]
 - [[writing.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/pathlib
+#graphify/code #graphify/EXTRACTED #community/test_full_scenespy

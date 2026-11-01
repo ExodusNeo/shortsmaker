@@ -2,7 +2,7 @@
 source_file: "tests/test_pictures_first.py"
 type: "rationale"
 community: "write_scripts"
-location: "L186"
+location: "L191"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED

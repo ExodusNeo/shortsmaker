@@ -2,7 +2,7 @@
 source_file: "shortsmaker/picture_pool.py"
 type: "code"
 community: "gather_pool"
-location: "L131"
+location: "L140"
 tags:
   - graphify/code
   - graphify/INFERRED

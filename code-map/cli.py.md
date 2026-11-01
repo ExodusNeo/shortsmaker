@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/cli.py"
 type: "code"
-community: "re"
+community: "test_style.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/re
+  - community/test_stylepy
 ---
 
 # cli.py
@@ -25,6 +25,7 @@ tags:
 - [[logbook.py]] - `imports_from` [EXTRACTED]
 - [[main()_3]] - `contains` [EXTRACTED]
 - [[make_shorts.py]] - `imports_from` [EXTRACTED]
+- [[media_menu.py]] - `imports_from` [EXTRACTED]
 - [[os]] - `imports` [EXTRACTED]
 - [[pathlib]] - `imports_from` [EXTRACTED]
 - [[picker.py]] - `imports_from` [EXTRACTED]
@@ -54,4 +55,4 @@ tags:
 - [[use_picture_from()]] - `contains` [EXTRACTED]
 - [[writing.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/re
+#graphify/code #graphify/EXTRACTED #community/test_stylepy

@@ -12,7 +12,7 @@ tags:
 # .barrel()
 
 ## Connections
-- [[dot-blob()_1]] - `calls` [EXTRACTED]
+- [[dot-blob()_2]] - `calls` [EXTRACTED]
 - [[dot-paint()]] - `calls` [EXTRACTED]
 - [[k]] - `method` [EXTRACTED]
 

@@ -1,20 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "make_paper"
+community: "finish_render"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/make_paper
+  - community/finish_render
 ---
 
 # Path
 
 ## Connections
-- [[ink_silhouette()]] - `references` [EXTRACTED]
-- [[make_paper()]] - `references` [EXTRACTED]
-- [[paint_instead()]] - `references` [EXTRACTED]
-- [[redraw_custom()]] - `references` [EXTRACTED]
-- [[render_remotion()]] - `references` [EXTRACTED]
+- [[drawn_short()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/make_paper
+#graphify/code #graphify/EXTRACTED #community/finish_render

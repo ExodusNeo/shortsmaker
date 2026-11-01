@@ -12,9 +12,9 @@ tags:
 # Shots
 
 ## Connections
-- [[dot-__init__()_6]] - `method` [EXTRACTED]
+- [[dot-__init__()_5]] - `method` [EXTRACTED]
 - [[dot-beat()]] - `method` [EXTRACTED]
-- [[dot-close()_1]] - `method` [EXTRACTED]
+- [[dot-close()]] - `method` [EXTRACTED]
 - [[dot-wide()]] - `method` [EXTRACTED]
 - [[Camera poses (eye, target) for each beat, sized from the bridge and the focus…]] - `rationale_for` [EXTRACTED]
 - [[build_scene.py]] - `contains` [EXTRACTED]

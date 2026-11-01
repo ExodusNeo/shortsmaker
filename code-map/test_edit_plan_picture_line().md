@@ -2,7 +2,7 @@
 source_file: "tests/test_pictures_first.py"
 type: "code"
 community: "edit_plan"
-location: "L392"
+location: "L398"
 tags:
   - graphify/code
   - graphify/EXTRACTED

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/short_render.py"
 type: "code"
-community: "short_render.py"
+community: "test_full_scenes.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/short_renderpy
+  - community/test_full_scenespy
 ---
 
 # short_render.py
@@ -15,6 +15,7 @@ tags:
 - [[A Short's saved work state and `render()`, which turns a written Short into the…]] - `rationale_for` [EXTRACTED]
 - [[Random]] - `imports` [EXTRACTED]
 - [[__init__.py]] - `imports_from` [EXTRACTED]
+- [[audio_library.py]] - `imports_from` [EXTRACTED]
 - [[audio_mix.py]] - `imports_from` [EXTRACTED]
 - [[blender_plan.py]] - `imports_from` [EXTRACTED]
 - [[blender_render.py]] - `imports_from` [EXTRACTED]
@@ -66,4 +67,4 @@ tags:
 - [[use_opener()]] - `contains` [EXTRACTED]
 - [[voice_cache.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/short_renderpy
+#graphify/code #graphify/EXTRACTED #community/test_full_scenespy

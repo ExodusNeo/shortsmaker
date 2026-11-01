@@ -1,18 +1,20 @@
 ---
 source_file: "shortsmaker/footage.py"
 type: "code"
-community: "image_sources.py"
+community: "extra_sources.py"
 location: "L104"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/image_sourcespy
+  - community/extra_sourcespy
 ---
 
 # archive_films()
 
 ## Connections
 - [[Videos across the entire Internet Archive (historical film, retro gaming,…]] - `rationale_for` [EXTRACTED]
+- [[archive_ad_films()]] - `calls` [EXTRACTED]
+- [[duke_films()]] - `calls` [EXTRACTED]
 - [[fetch()]] - `calls` [EXTRACTED]
 - [[footage.py]] - `contains` [EXTRACTED]
 - [[json]] - `calls` [EXTRACTED]
@@ -20,4 +22,4 @@ tags:
 - [[re]] - `calls` [EXTRACTED]
 - [[words_of()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/image_sourcespy
+#graphify/code #graphify/EXTRACTED #community/extra_sourcespy

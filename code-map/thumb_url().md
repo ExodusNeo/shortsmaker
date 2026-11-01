@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/image_sources.py"
 type: "code"
-community: "image_sources.py"
-location: "L72"
+community: "extra_sources.py"
+location: "L73"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/image_sourcespy
+  - community/extra_sourcespy
 ---
 
 # thumb_url()
@@ -16,4 +16,4 @@ tags:
 - [[image_sources.py]] - `contains` [EXTRACTED]
 - [[wm_files()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/image_sourcespy
+#graphify/code #graphify/EXTRACTED #community/extra_sourcespy

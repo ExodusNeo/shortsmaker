@@ -12,7 +12,7 @@ tags:
 # direction()
 
 ## Connections
-- [[dot-close()_1]] - `calls` [EXTRACTED]
+- [[dot-close()]] - `calls` [EXTRACTED]
 - [[dot-wide()]] - `calls` [EXTRACTED]
 - [[From the target toward the camera yaw 0 looks along +y from the -y side (the…]] - `rationale_for` [EXTRACTED]
 - [[Vector_3]] - `references` [EXTRACTED]

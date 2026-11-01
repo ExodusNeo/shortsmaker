@@ -2,7 +2,7 @@
 source_file: "shortsmaker/picture_pool.py"
 type: "rationale"
 community: "prepare_topic"
-location: "L71"
+location: "L72"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED

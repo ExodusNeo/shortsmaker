@@ -1,18 +1,19 @@
 ---
 source_file: "shortsmaker/media_tools.py"
 type: "code"
-community: "short_render.py"
+community: "test_full_scenes.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/short_renderpy
+  - community/test_full_scenespy
 ---
 
 # media_tools.py
 
 ## Connections
 - [[Small shared helpers downloads, ffmpeg, video encoder choice, durations, JSON…]] - `rationale_for` [EXTRACTED]
+- [[audio_library.py]] - `imports_from` [EXTRACTED]
 - [[audio_mix.py]] - `imports_from` [EXTRACTED]
 - [[blender_render.py]] - `imports_from` [EXTRACTED]
 - [[checkpoints.py]] - `imports_from` [EXTRACTED]
@@ -20,6 +21,7 @@ tags:
 - [[duration()]] - `contains` [EXTRACTED]
 - [[edit_project.py]] - `imports_from` [EXTRACTED]
 - [[editplan.py]] - `imports_from` [EXTRACTED]
+- [[extra_sources.py]] - `imports_from` [EXTRACTED]
 - [[fetch()]] - `contains` [EXTRACTED]
 - [[ffmpeg()]] - `contains` [EXTRACTED]
 - [[footage.py]] - `imports_from` [EXTRACTED]
@@ -27,6 +29,8 @@ tags:
 - [[image_sources.py]] - `imports_from` [EXTRACTED]
 - [[json]] - `imports` [EXTRACTED]
 - [[logbook.py]] - `imports_from` [EXTRACTED]
+- [[media_library.py]] - `imports_from` [EXTRACTED]
+- [[media_menu.py]] - `imports_from` [EXTRACTED]
 - [[motion.py]] - `imports_from` [EXTRACTED]
 - [[pathlib]] - `imports_from` [EXTRACTED]
 - [[picture_pool.py]] - `imports_from` [EXTRACTED]
@@ -41,6 +45,7 @@ tags:
 - [[test_drawn_opener.py]] - `imports_from` [EXTRACTED]
 - [[test_edit_project.py]] - `imports_from` [EXTRACTED]
 - [[test_first_second.py]] - `imports_from` [EXTRACTED]
+- [[test_media.py]] - `imports_from` [EXTRACTED]
 - [[test_package.py]] - `imports_from` [EXTRACTED]
 - [[test_reliability.py]] - `imports_from` [EXTRACTED]
 - [[test_render_resume.py]] - `imports_from` [EXTRACTED]
@@ -51,4 +56,4 @@ tags:
 - [[voice_cache.py]] - `imports_from` [EXTRACTED]
 - [[write_json()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/short_renderpy
+#graphify/code #graphify/EXTRACTED #community/test_full_scenespy

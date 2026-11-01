@@ -12,7 +12,7 @@ tags:
 # render()
 
 ## Connections
-- [[Image_2]] - `references` [EXTRACTED]
+- [[Image_1]] - `references` [EXTRACTED]
 - [[Render `plan` with scenes of the given lengths; returns {frame image} for one…]] - `rationale_for` [EXTRACTED]
 - [[after()]] - `calls` [EXTRACTED]
 - [[peak()]] - `calls` [EXTRACTED]

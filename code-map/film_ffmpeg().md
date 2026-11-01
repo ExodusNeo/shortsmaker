@@ -2,7 +2,7 @@
 source_file: "shortsmaker/image_sources.py"
 type: "code"
 community: "film_piece"
-location: "L303"
+location: "L324"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -17,5 +17,6 @@ tags:
 - [[film_frames()]] - `calls` [EXTRACTED]
 - [[film_piece()]] - `calls` [EXTRACTED]
 - [[image_sources.py]] - `contains` [EXTRACTED]
+- [[shot_moments()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/film_piece

@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "concept"
-community: "pathlib"
+community: "test_full_scenes.py"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/pathlib
+  - community/test_full_scenespy
 ---
 
 # pathlib
 
 ## Connections
+- [[audio_library.py]] - `imports_from` [EXTRACTED]
 - [[audio_mix.py]] - `imports_from` [EXTRACTED]
 - [[blender_render.py]] - `imports_from` [EXTRACTED]
 - [[build_scene.py]] - `imports_from` [EXTRACTED]
@@ -27,6 +28,8 @@ tags:
 - [[h3_run.py]] - `imports_from` [EXTRACTED]
 - [[llm.py]] - `imports_from` [EXTRACTED]
 - [[logbook.py]] - `imports_from` [EXTRACTED]
+- [[media_library.py]] - `imports_from` [EXTRACTED]
+- [[media_menu.py]] - `imports_from` [EXTRACTED]
 - [[media_tools.py]] - `imports_from` [EXTRACTED]
 - [[motion.py]] - `imports_from` [EXTRACTED]
 - [[patching.py]] - `imports_from` [EXTRACTED]
@@ -61,6 +64,7 @@ tags:
 - [[test_h3_handoff.py]] - `imports_from` [EXTRACTED]
 - [[test_h3_run.py]] - `imports_from` [EXTRACTED]
 - [[test_marks.py]] - `imports_from` [EXTRACTED]
+- [[test_media.py]] - `imports_from` [EXTRACTED]
 - [[test_opener_graphic.py]] - `imports_from` [EXTRACTED]
 - [[test_package.py]] - `imports_from` [EXTRACTED]
 - [[test_pictures_first.py]] - `imports_from` [EXTRACTED]
@@ -75,4 +79,4 @@ tags:
 - [[voice_cache.py]] - `imports_from` [EXTRACTED]
 - [[writing.py]] - `imports_from` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/pathlib
+#graphify/concept #graphify/EXTRACTED #community/test_full_scenespy

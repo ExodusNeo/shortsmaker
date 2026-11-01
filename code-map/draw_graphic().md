@@ -1,20 +1,20 @@
 ---
 source_file: "shortsmaker/frame_render.py"
 type: "code"
-community: "frame_maker"
-location: "L133"
+community: "ClipReader"
+location: "L136"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/frame_maker
+  - community/ClipReader
 ---
 
 # draw_graphic()
 
 ## Connections
 - [[Animate the callout in, hold it, fade it out before the scene ends.]] - `rationale_for` [EXTRACTED]
-- [[Image]] - `references` [EXTRACTED]
-- [[frame()]] - `calls` [EXTRACTED]
+- [[Image_3]] - `references` [EXTRACTED]
+- [[frame()_2]] - `calls` [EXTRACTED]
 - [[frame_render.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/frame_maker
+#graphify/code #graphify/EXTRACTED #community/ClipReader

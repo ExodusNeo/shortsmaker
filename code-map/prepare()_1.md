@@ -2,7 +2,7 @@
 source_file: "tests/test_pictures_first.py"
 type: "code"
 community: "write_scripts"
-location: "L223"
+location: "L229"
 tags:
   - graphify/code
   - graphify/INFERRED

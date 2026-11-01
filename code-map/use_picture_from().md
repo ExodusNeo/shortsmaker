@@ -2,7 +2,7 @@
 source_file: "shortsmaker/cli.py"
 type: "code"
 community: "apply_review_fixes"
-location: "L179"
+location: "L181"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,7 +12,7 @@ tags:
 # use_picture_from()
 
 ## Connections
-- [[Path_30]] - `references` [EXTRACTED]
+- [[Path_29]] - `references` [EXTRACTED]
 - [[cli.py]] - `contains` [EXTRACTED]
 - [[fix scene i shows scene k's picture. A real photofilm is a picture choice; an…]] - `rationale_for` [EXTRACTED]
 - [[fix_short()]] - `calls` [EXTRACTED]

@@ -33,18 +33,18 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
+- 5 edges to [[_COMMUNITY_test_story.py]]
+- 5 edges to [[_COMMUNITY_test_style.py]]
 - 4 edges to [[_COMMUNITY_ask_ai]]
-- 4 edges to [[_COMMUNITY_test_ai_modes.py]]
-- 4 edges to [[_COMMUNITY_test_story.py]]
-- 3 edges to [[_COMMUNITY_pathlib]]
-- 3 edges to [[_COMMUNITY_re]]
 - 2 edges to [[_COMMUNITY_write_scripts]]
+- 2 edges to [[_COMMUNITY_main_1]]
+- 2 edges to [[_COMMUNITY_test_every_mode_can_continue_through_two_exhausted_ais]]
 - 2 edges to [[_COMMUNITY_json]]
-- 1 edge to [[_COMMUNITY_test_pictures_first.py]]
-- 1 edge to [[_COMMUNITY_story_problems]]
+- 1 edge to [[_COMMUNITY_prepare_topic]]
+- 1 edge to [[_COMMUNITY_catalog_pool]]
 - 1 edge to [[_COMMUNITY_quality_check]]
+- 1 edge to [[_COMMUNITY_test_full_scenes.py]]
 - 1 edge to [[_COMMUNITY_cold_read_line]]
-- 1 edge to [[_COMMUNITY_clean_pics]]
 
 ## Top bridge nodes
 - [[edit_scripts()]] - degree 17, connects to 8 communities

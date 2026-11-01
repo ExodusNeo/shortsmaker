@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/config.py"
 type: "code"
-community: "short_render.py"
+community: "test_style.py"
 location: "L70"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/short_renderpy
+  - community/test_stylepy
 ---
 
 # hex_rgb()
@@ -19,4 +19,4 @@ tags:
 - [[render()_2]] - `calls` [EXTRACTED]
 - [[short_render.py]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/short_renderpy
+#graphify/code #graphify/EXTRACTED #community/test_stylepy

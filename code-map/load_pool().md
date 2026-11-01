@@ -2,7 +2,7 @@
 source_file: "shortsmaker/picture_pool.py"
 type: "code"
 community: "prepare_topic"
-location: "L186"
+location: "L262"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,7 +12,7 @@ tags:
 # load_pool()
 
 ## Connections
-- [[Path_1]] - `references` [EXTRACTED]
+- [[Path_3]] - `references` [EXTRACTED]
 - [[The saved pool (None if missing or unreadable it is gathered again);…]] - `rationale_for` [EXTRACTED]
 - [[choose_images()]] - `calls` [EXTRACTED]
 - [[drawn_thumbnail()]] - `calls` [EXTRACTED]

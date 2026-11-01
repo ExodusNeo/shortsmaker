@@ -1,21 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "prepare_topic"
+community: "_run"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/prepare_topic
+  - community/_run
 ---
 
 # Path
 
 ## Connections
-- [[catalog_pool()]] - `references` [EXTRACTED]
-- [[contact_sheets()]] - `references` [EXTRACTED]
-- [[load_pool()]] - `references` [EXTRACTED]
-- [[pool_folder()]] - `references` [EXTRACTED]
-- [[prepare_topic()]] - `references` [EXTRACTED]
-- [[save_pool()]] - `references` [EXTRACTED]
+- [[_run()]] - `references` [EXTRACTED]
+- [[render_clips()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/prepare_topic
+#graphify/code #graphify/EXTRACTED #community/_run

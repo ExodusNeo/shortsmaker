@@ -1,23 +1,25 @@
 ---
 source_file: ""
 type: "concept"
-community: "short_render.py"
+community: "subprocess"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/short_renderpy
+  - community/subprocess
 ---
 
 # subprocess
 
 ## Connections
 - [[_run()]] - `calls` [EXTRACTED]
+- [[audio_library.py]] - `imports` [EXTRACTED]
 - [[audio_mix.py]] - `imports` [EXTRACTED]
 - [[blender_render.py]] - `imports` [EXTRACTED]
 - [[cli.py]] - `imports` [EXTRACTED]
 - [[drawn_opener.py]] - `imports` [EXTRACTED]
 - [[duration()]] - `calls` [EXTRACTED]
 - [[edit_project.py]] - `imports` [EXTRACTED]
+- [[extra_sources.py]] - `imports` [EXTRACTED]
 - [[ffmpeg()]] - `calls` [EXTRACTED]
 - [[fills_frame()]] - `calls` [EXTRACTED]
 - [[film_piece()]] - `calls` [EXTRACTED]
@@ -29,6 +31,8 @@ tags:
 - [[local_job()]] - `calls` [EXTRACTED]
 - [[main()_4]] - `calls` [EXTRACTED]
 - [[master_gain()]] - `calls` [EXTRACTED]
+- [[media_library.py]] - `imports` [EXTRACTED]
+- [[media_menu.py]] - `imports` [EXTRACTED]
 - [[media_tools.py]] - `imports` [EXTRACTED]
 - [[moss_images()]] - `calls` [EXTRACTED]
 - [[motion.py]] - `imports` [EXTRACTED]
@@ -47,6 +51,7 @@ tags:
 - [[scene_repair.py]] - `imports` [EXTRACTED]
 - [[short_render.py]] - `imports` [EXTRACTED]
 - [[shot_span()]] - `calls` [EXTRACTED]
+- [[sound_profile()]] - `calls` [EXTRACTED]
 - [[split_make_shorts.py]] - `imports` [EXTRACTED]
 - [[storyboard()]] - `calls` [EXTRACTED]
 - [[studio_speak()]] - `calls` [EXTRACTED]
@@ -55,9 +60,10 @@ tags:
 - [[test_drawn_opener.py]] - `imports` [EXTRACTED]
 - [[test_edit_project.py]] - `imports` [EXTRACTED]
 - [[test_full_scenes.py]] - `imports` [EXTRACTED]
+- [[test_media.py]] - `imports` [EXTRACTED]
 - [[test_reliability.py]] - `imports` [EXTRACTED]
 - [[tsc_check()]] - `calls` [EXTRACTED]
 - [[video_encoder()]] - `calls` [EXTRACTED]
 - [[voicestudio_up()]] - `calls` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/short_renderpy
+#graphify/concept #graphify/EXTRACTED #community/subprocess
