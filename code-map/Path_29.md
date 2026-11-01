@@ -11,7 +11,7 @@ tags:
 # Path
 
 ## Connections
-- [[apply()]] - `references` [EXTRACTED]
-- [[preview()]] - `references` [EXTRACTED]
+- [[load()_1]] - `references` [EXTRACTED]
+- [[save()_1]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/json

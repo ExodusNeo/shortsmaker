@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_render_resume.py"
 type: "code"
-community: "__init__.py"
+community: "subprocess"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/__init__py
+  - community/subprocess
 ---
 
 # test_render_resume.py
@@ -35,4 +35,4 @@ tags:
 - [[unittest]] - `imports` [EXTRACTED]
 - [[unittest_mock]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/__init__py
+#graphify/code #graphify/EXTRACTED #community/subprocess

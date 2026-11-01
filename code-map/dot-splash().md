@@ -12,7 +12,7 @@ tags:
 # .splash()
 
 ## Connections
-- [[clamp()_1]] - `calls` [EXTRACTED]
+- [[clamp()]] - `calls` [EXTRACTED]
 - [[ellPts()]] - `calls` [EXTRACTED]
 - [[k]] - `method` [EXTRACTED]
 

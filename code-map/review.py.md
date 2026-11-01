@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/review.py"
 type: "code"
-community: "pathlib"
+community: "test_full_scenes.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/pathlib
+  - community/test_full_scenespy
 ---
 
 # review.py
@@ -31,6 +31,7 @@ tags:
 - [[motion.py]] - `imports_from` [EXTRACTED]
 - [[opening_rules.py]] - `imports_from` [EXTRACTED]
 - [[overlay_notes()]] - `contains` [EXTRACTED]
+- [[pacing_check()]] - `contains` [EXTRACTED]
 - [[paint_new()]] - `contains` [EXTRACTED]
 - [[paint_opener_start()]] - `contains` [EXTRACTED]
 - [[pathlib]] - `imports_from` [EXTRACTED]
@@ -58,6 +59,7 @@ tags:
 - [[test_full_scenes.py]] - `imports_from` [EXTRACTED]
 - [[test_opener_graphic.py]] - `imports_from` [EXTRACTED]
 - [[test_opening_rules.py]] - `imports_from` [EXTRACTED]
+- [[test_quality.py]] - `imports_from` [EXTRACTED]
 - [[test_reliability.py]] - `imports_from` [EXTRACTED]
 - [[test_render_resume.py]] - `imports_from` [EXTRACTED]
 - [[test_rules.py]] - `imports_from` [EXTRACTED]
@@ -65,4 +67,4 @@ tags:
 - [[weak_opener_graphic()]] - `contains` [EXTRACTED]
 - [[writing.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/pathlib
+#graphify/code #graphify/EXTRACTED #community/test_full_scenespy

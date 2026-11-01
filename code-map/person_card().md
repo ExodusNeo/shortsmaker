@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/frame_render.py"
 type: "code"
-community: "fills_frame"
+community: "io"
 location: "L162"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/fills_frame
+  - community/io
 ---
 
 # person_card()
@@ -19,4 +19,4 @@ tags:
 - [[io]] - `calls` [EXTRACTED]
 - [[scene_cues()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/fills_frame
+#graphify/code #graphify/EXTRACTED #community/io

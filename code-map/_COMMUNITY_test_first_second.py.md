@@ -1,11 +1,11 @@
 ---
 type: community
-members: 22
+members: 21
 ---
 
 # test_first_second.py
 
-**Members:** 22 nodes
+**Members:** 21 nodes
 
 ## Members
 - [[Scenes i and k trade their real photosfilms (paintings and motion graphics are…]] - rationale - shortsmaker/review.py
@@ -22,7 +22,6 @@ members: 22
 - [[test_first_second.py]] - code - tests/test_first_second.py
 - [[test_fix_round_user_confirmation()]] - code - tests/test_first_second.py
 - [[test_good_opening_or_no_reply_changes_nothing()]] - code - tests/test_first_second.py
-- [[test_logbook_marks_tiny_samples()]] - code - tests/test_first_second.py
 - [[test_low_score_opens_on_a_better_real_picture()]] - code - tests/test_first_second.py
 - [[test_opener_fix_swaps_once()]] - code - tests/test_first_second.py
 - [[test_opener_must_be_a_later_real_picture()]] - code - tests/test_first_second.py
@@ -39,24 +38,25 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 6 edges to [[_COMMUNITY_pathlib]]
-- 5 edges to [[_COMMUNITY___init__.py]]
-- 4 edges to [[_COMMUNITY_finish_render]]
+- 10 edges to [[_COMMUNITY_test_full_scenes.py]]
+- 4 edges to [[_COMMUNITY_subprocess]]
 - 3 edges to [[_COMMUNITY_apply_review_fixes]]
-- 2 edges to [[_COMMUNITY_re]]
-- 2 edges to [[_COMMUNITY_shutil]]
-- 2 edges to [[_COMMUNITY_opener_graphic]]
-- 1 edge to [[_COMMUNITY_render]]
-- 1 edge to [[_COMMUNITY_test_rules.py]]
-- 1 edge to [[_COMMUNITY_prepare_topic]]
+- 2 edges to [[_COMMUNITY_finish_render]]
+- 1 edge to [[_COMMUNITY_ffmpeg]]
 - 1 edge to [[_COMMUNITY_story_problems]]
+- 1 edge to [[_COMMUNITY_fake_ai]]
+- 1 edge to [[_COMMUNITY_make_opener]]
+- 1 edge to [[_COMMUNITY_gather_pool]]
+- 1 edge to [[_COMMUNITY_scene_repair.py]]
+- 1 edge to [[_COMMUNITY_json]]
+- 1 edge to [[_COMMUNITY_opener_graphic]]
 - 1 edge to [[_COMMUNITY_ask_ai]]
-- 1 edge to [[_COMMUNITY_test_full_scenes.py]]
-- 1 edge to [[_COMMUNITY_test_story.py]]
+- 1 edge to [[_COMMUNITY_clean_full]]
+- 1 edge to [[_COMMUNITY_capture_prompts]]
+- 1 edge to [[_COMMUNITY_visual_review]]
 
 ## Top bridge nodes
-- [[first_second_check()]] - degree 17, connects to 11 communities
-- [[test_first_second.py]] - degree 29, connects to 6 communities
+- [[first_second_check()]] - degree 17, connects to 13 communities
+- [[test_first_second.py]] - degree 29, connects to 5 communities
 - [[swap_pictures()]] - degree 6, connects to 2 communities
 - [[test_opener_fix_swaps_once()]] - degree 4, connects to 1 community
-- [[test_logbook_marks_tiny_samples()]] - degree 2, connects to 1 community

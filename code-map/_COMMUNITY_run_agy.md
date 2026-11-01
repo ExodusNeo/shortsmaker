@@ -27,12 +27,12 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 5 edges to [[_COMMUNITY_ask_ai]]
-- 5 edges to [[_COMMUNITY___init__.py]]
-- 1 edge to [[_COMMUNITY_gemini_model]]
+- 6 edges to [[_COMMUNITY_ask_ai]]
+- 3 edges to [[_COMMUNITY_test_full_scenes.py]]
+- 2 edges to [[_COMMUNITY_subprocess]]
 
 ## Top bridge nodes
-- [[run_agy()]] - degree 9, connects to 3 communities
+- [[run_agy()]] - degree 9, connects to 2 communities
 - [[run_codex()]] - degree 6, connects to 2 communities
 - [[quota_exhausted()]] - degree 5, connects to 2 communities
 - [[test_codex_failure_is_bounded()]] - degree 3, connects to 1 community

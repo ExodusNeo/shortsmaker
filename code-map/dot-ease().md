@@ -12,7 +12,7 @@ tags:
 # .ease()
 
 ## Connections
-- [[clamp()_1]] - `calls` [EXTRACTED]
+- [[clamp()]] - `calls` [EXTRACTED]
 - [[eOut()]] - `calls` [EXTRACTED]
 - [[k]] - `method` [EXTRACTED]
 

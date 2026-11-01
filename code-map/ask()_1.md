@@ -1,17 +1,17 @@
 ---
-source_file: "tests/test_h3_handoff.py"
+source_file: "tests/test_rules.py"
 type: "code"
-community: "test_h3_handoff.py"
-location: "L24"
+community: "test_rules.py"
+location: "L257"
 tags:
   - graphify/code
-  - graphify/INFERRED
-  - community/test_h3_handoffpy
+  - graphify/EXTRACTED
+  - community/test_rulespy
 ---
 
 # ask()
 
 ## Connections
-- [[fake_ai()]] - `indirect_call` [INFERRED]
+- [[run_draft()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/test_h3_handoffpy
+#graphify/code #graphify/EXTRACTED #community/test_rulespy

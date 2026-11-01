@@ -30,7 +30,7 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 1 edge to [[_COMMUNITY___init__.py]]
+- 1 edge to [[_COMMUNITY_subprocess]]
 
 ## Top bridge nodes
 - [[RetentionTests]] - degree 12, connects to 1 community

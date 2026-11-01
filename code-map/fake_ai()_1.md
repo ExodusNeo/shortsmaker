@@ -1,19 +1,17 @@
 ---
-source_file: "tests/test_drawn_opener.py"
+source_file: "tests/test_opening_rules.py"
 type: "code"
 community: "OpeningRulesTests"
-location: "L37"
+location: "L122"
 tags:
   - graphify/code
-  - graphify/EXTRACTED
+  - graphify/INFERRED
   - community/OpeningRulesTests
 ---
 
 # fake_ai()
 
 ## Connections
-- [[test_drawn_opener.py]] - `contains` [EXTRACTED]
-- [[test_drawn_opener_gives_up_after_fixes()]] - `calls` [EXTRACTED]
-- [[test_drawn_opener_renders_and_is_reused()]] - `calls` [EXTRACTED]
+- [[dot-test_marked_drawn_plan_is_rewritten_instead_of_reusing_cached_bad_clip()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/OpeningRulesTests
+#graphify/code #graphify/INFERRED #community/OpeningRulesTests

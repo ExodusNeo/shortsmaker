@@ -12,7 +12,7 @@ tags:
 # ss()
 
 ## Connections
-- [[clamp()_1]] - `calls` [EXTRACTED]
+- [[clamp()]] - `calls` [EXTRACTED]
 - [[core.mjs]] - `contains` [EXTRACTED]
 - [[kit.mjs]] - `imports` [EXTRACTED]
 - [[makeKit()]] - `calls` [EXTRACTED]

@@ -1,17 +1,17 @@
 ---
-source_file: "shortsmaker/blender_plan.py"
+source_file: "tests/test_h3_handoff.py"
 type: "code"
-community: "blender_plan.py"
-location: "L114"
+community: "test_h3_handoff.py"
+location: "L24"
 tags:
   - graphify/code
-  - graphify/EXTRACTED
-  - community/blender_planpy
+  - graphify/INFERRED
+  - community/test_h3_handoffpy
 ---
 
 # ask()
 
 ## Connections
-- [[plan_builds()]] - `contains` [EXTRACTED]
+- [[fake_ai()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/blender_planpy
+#graphify/code #graphify/INFERRED #community/test_h3_handoffpy

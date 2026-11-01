@@ -2,7 +2,7 @@
 source_file: "tests/test_story.py"
 type: "code"
 community: "story_problems"
-location: "L188"
+location: "L190"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,7 +12,7 @@ tags:
 # test_story_problems_money_claim()
 
 ## Connections
-- [[read()]] - `calls` [EXTRACTED]
+- [[read()_1]] - `calls` [EXTRACTED]
 - [[story_problems()]] - `calls` [EXTRACTED]
 - [[test_story.py]] - `contains` [EXTRACTED]
 

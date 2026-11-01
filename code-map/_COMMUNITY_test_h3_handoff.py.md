@@ -1,20 +1,24 @@
 ---
 type: community
-members: 35
+members: 41
 ---
 
 # test_h3_handoff.py
 
-**Members:** 35 nodes
+**Members:** 41 nodes
 
 ## Members
 - [[After an opener swap moved scene 4's clip to scene 1, the re-render cuts it…]] - rationale - tests/test_h3_handoff.py
+- [[Join checked fields into one image-to-video prompt. H3 has no negative prompt,…]] - rationale - shortsmaker/gpu.py
 - [[Path_1]] - code
 - [[Run fn with llm.ask_ai and input restored afterwards.]] - rationale - tests/test_h3_handoff.py
 - [[Tests for the Colab H3  Flow hand-off frame-checked video prompts, veo.zip,…]] - rationale - tests/test_h3_handoff.py
 - [[Unpack sceneN.mp4.mov.webm from folderclips.zip (the Colab notebook's…]] - rationale - shortsmaker/gpu.py
-- [[ask()_1]] - code - tests/test_h3_handoff.py
+- [[What is missing from the AI's prompt fields for one scene (empty list = usable).]] - rationale - shortsmaker/gpu.py
+- [[ask()]] - code - tests/test_h3_handoff.py
 - [[fake_ai()]] - code - tests/test_h3_handoff.py
+- [[h3_problems()]] - code - shortsmaker/gpu.py
+- [[h3_prompt()]] - code - shortsmaker/gpu.py
 - [[handoff()]] - code - tests/test_h3_handoff.py
 - [[run()]] - code - tests/test_h3_handoff.py
 - [[run()_1]] - code - tests/test_h3_handoff.py
@@ -33,6 +37,8 @@ members: 35
 - [[test_old_zip_does_not_overwrite_newer_clip()]] - code - tests/test_h3_handoff.py
 - [[test_old_zips_cleaned_up_on_handoff_start()]] - code - tests/test_h3_handoff.py
 - [[test_owner_clip_is_cut_again_for_the_scene_it_now_sits_in()]] - code - tests/test_h3_handoff.py
+- [[test_problems()]] - code - tests/test_h3_handoff.py
+- [[test_prompt_joins_fields()]] - code - tests/test_h3_handoff.py
 - [[test_renamed_zip_is_picked_up()]] - code - tests/test_h3_handoff.py
 - [[test_retries_only_failing_scene_with_reason()]] - code - tests/test_h3_handoff.py
 - [[test_scene_number_given_as_text_is_accepted()]] - code - tests/test_h3_handoff.py
@@ -52,18 +58,18 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 8 edges to [[_COMMUNITY_gpu.py]]
-- 3 edges to [[_COMMUNITY___init__.py]]
+- 6 edges to [[_COMMUNITY_local_clips]]
+- 4 edges to [[_COMMUNITY_json]]
+- 3 edges to [[_COMMUNITY_subprocess]]
+- 3 edges to [[_COMMUNITY_test_full_scenes.py]]
 - 1 edge to [[_COMMUNITY_h3_run.py]]
 - 1 edge to [[_COMMUNITY_re]]
-- 1 edge to [[_COMMUNITY_render]]
+- 1 edge to [[_COMMUNITY_ffmpeg]]
 - 1 edge to [[_COMMUNITY_split_make_shorts.py]]
-- 1 edge to [[_COMMUNITY_shutil]]
-- 1 edge to [[_COMMUNITY_test_story.py]]
-- 1 edge to [[_COMMUNITY_pathlib]]
 
 ## Top bridge nodes
-- [[test_h3_handoff.py]] - degree 32, connects to 6 communities
-- [[unpack_clips()]] - degree 10, connects to 3 communities
+- [[test_h3_handoff.py]] - degree 32, connects to 4 communities
+- [[unpack_clips()]] - degree 10, connects to 4 communities
 - [[handoff()]] - degree 12, connects to 2 communities
-- [[test_owner_clip_is_cut_again_for_the_scene_it_now_sits_in()]] - degree 4, connects to 1 community
+- [[h3_problems()]] - degree 4, connects to 2 communities
+- [[h3_prompt()]] - degree 4, connects to 2 communities

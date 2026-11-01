@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[Finish reportsreviews from a committed video; resume reaches here without…]] - `rationale_for` [EXTRACTED]
-- [[Path_6]] - `references` [EXTRACTED]
+- [[Path_12]] - `references` [EXTRACTED]
 - [[apply_review_fixes()]] - `calls` [EXTRACTED]
 - [[drawn_answer_problem()]] - `calls` [EXTRACTED]
 - [[drawn_thumbnail()]] - `calls` [EXTRACTED]
@@ -23,10 +23,11 @@ tags:
 - [[fix_opener_graphic()]] - `calls` [EXTRACTED]
 - [[load_state()]] - `calls` [EXTRACTED]
 - [[make()_1]] - `calls` [EXTRACTED]
+- [[pacing_check()]] - `calls` [EXTRACTED]
 - [[quality_check()]] - `calls` [EXTRACTED]
 - [[re]] - `calls` [EXTRACTED]
 - [[remove()]] - `calls` [EXTRACTED]
-- [[render()]] - `calls` [EXTRACTED]
+- [[render()_2]] - `calls` [EXTRACTED]
 - [[render_remotion()]] - `calls` [EXTRACTED]
 - [[resume_runs()]] - `calls` [EXTRACTED]
 - [[save_state()]] - `calls` [EXTRACTED]

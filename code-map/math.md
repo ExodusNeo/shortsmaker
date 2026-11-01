@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "render"
+community: "math"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/render
+  - community/math
 ---
 
 # math
@@ -15,7 +15,7 @@ tags:
 - [[audio_mix.py]] - `imports` [EXTRACTED]
 - [[blender_plan.py]] - `imports` [EXTRACTED]
 - [[build_scene.py]] - `imports` [EXTRACTED]
-- [[clamp()]] - `calls` [EXTRACTED]
+- [[clamp()_1]] - `calls` [EXTRACTED]
 - [[direction()]] - `calls` [EXTRACTED]
 - [[ducking_filter()]] - `calls` [EXTRACTED]
 - [[failures.py]] - `imports` [EXTRACTED]
@@ -31,4 +31,4 @@ tags:
 - [[source_music()]] - `calls` [EXTRACTED]
 - [[track_start()]] - `calls` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/render
+#graphify/concept #graphify/EXTRACTED #community/math

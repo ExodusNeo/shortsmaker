@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[Graphics.tsx]] - `contains` [EXTRACTED]
-- [[Short()_1]] - `calls` [EXTRACTED]
+- [[Short()]] - `calls` [EXTRACTED]
 - [[Short.tsx]] - `imports` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Shorttsx

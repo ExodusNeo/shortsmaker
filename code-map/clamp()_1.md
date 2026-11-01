@@ -1,43 +1,20 @@
 ---
-source_file: "drawn/lib/core.mjs"
+source_file: "shortsmaker/blender_plan.py"
 type: "code"
-community: "core.mjs"
-location: "L7"
+community: "test_blender_plan.py"
+location: "L33"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/coremjs
+  - community/test_blender_planpy
 ---
 
 # clamp()
 
 ## Connections
-- [[dot-arc()]] - `calls` [EXTRACTED]
-- [[dot-begin()]] - `calls` [EXTRACTED]
-- [[dot-burst()]] - `calls` [EXTRACTED]
-- [[dot-ease()]] - `calls` [EXTRACTED]
-- [[dot-fade()]] - `calls` [EXTRACTED]
-- [[dot-fall()]] - `calls` [EXTRACTED]
-- [[dot-next()]] - `calls` [EXTRACTED]
-- [[dot-puff()]] - `calls` [EXTRACTED]
-- [[dot-splash()]] - `calls` [EXTRACTED]
-- [[dot-sweat()]] - `calls` [EXTRACTED]
-- [[catmull()]] - `calls` [EXTRACTED]
-- [[core.mjs]] - `contains` [EXTRACTED]
-- [[eBack()]] - `calls` [EXTRACTED]
-- [[eBounce()]] - `calls` [EXTRACTED]
-- [[eElastic()]] - `calls` [EXTRACTED]
-- [[eExpo()]] - `calls` [EXTRACTED]
-- [[eIO()]] - `calls` [EXTRACTED]
-- [[eIn()]] - `calls` [EXTRACTED]
-- [[eOut()]] - `calls` [EXTRACTED]
-- [[ik()]] - `calls` [EXTRACTED]
-- [[kit.mjs]] - `imports` [EXTRACTED]
-- [[lerpColor()]] - `calls` [EXTRACTED]
-- [[makeKit()]] - `calls` [EXTRACTED]
-- [[pathOf()]] - `calls` [EXTRACTED]
-- [[pen.mjs]] - `imports` [EXTRACTED]
-- [[smooth()]] - `calls` [EXTRACTED]
-- [[ss()]] - `calls` [EXTRACTED]
+- [[A number in lo, hi (whole numbers stay whole), or the default for anything…]] - `rationale_for` [EXTRACTED]
+- [[blender_plan.py]] - `contains` [EXTRACTED]
+- [[clean_build()]] - `calls` [EXTRACTED]
+- [[math]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/coremjs
+#graphify/code #graphify/EXTRACTED #community/test_blender_planpy

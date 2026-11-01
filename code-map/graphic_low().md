@@ -1,23 +1,23 @@
 ---
 source_file: "shortsmaker/frame_render.py"
 type: "code"
-community: "test_full_scenes.py"
+community: "words_of"
 location: "L107"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_full_scenespy
+  - community/words_of
 ---
 
 # graphic_low()
 
 ## Connections
-- [[Path_35]] - `references` [EXTRACTED]
+- [[Path_13]] - `references` [EXTRACTED]
 - [[True when the picture's subject would land under the top callouts (y ~180-680…]] - `rationale_for` [EXTRACTED]
 - [[fills_frame()]] - `calls` [EXTRACTED]
 - [[frame_render.py]] - `contains` [EXTRACTED]
-- [[render()]] - `calls` [EXTRACTED]
+- [[render()_2]] - `calls` [EXTRACTED]
 - [[test_fill_money_graphics_and_caps()]] - `calls` [EXTRACTED]
 - [[words_of()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_full_scenespy
+#graphify/code #graphify/EXTRACTED #community/words_of

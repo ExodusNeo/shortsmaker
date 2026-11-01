@@ -1,16 +1,21 @@
 ---
 source_file: ""
 type: "code"
-community: "apply_review_fixes"
+community: "write_json"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/apply_review_fixes
+  - community/write_json
 ---
 
 # Path
 
 ## Connections
-- [[_review_state()]] - `references` [EXTRACTED]
+- [[begin()]] - `references` [EXTRACTED]
+- [[context()]] - `references` [EXTRACTED]
+- [[pending()]] - `references` [EXTRACTED]
+- [[read()]] - `references` [EXTRACTED]
+- [[save_context()]] - `references` [EXTRACTED]
+- [[update()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/apply_review_fixes
+#graphify/code #graphify/EXTRACTED #community/write_json

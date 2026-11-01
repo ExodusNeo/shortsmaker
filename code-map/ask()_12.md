@@ -1,17 +1,18 @@
 ---
-source_file: "tests/test_story.py"
+source_file: "tests/test_style.py"
 type: "code"
-community: "edit_plan"
-location: "L86"
+community: "plan_with"
+location: "L111"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/edit_plan
+  - community/plan_with
 ---
 
 # ask()
 
 ## Connections
-- [[test_cold_read_uses_other_ai_in_solo_and_collaborative_modes()]] - `indirect_call` [INFERRED]
+- [[plan_with()_1]] - `indirect_call` [INFERRED]
+- [[test_fact_check_sees_new_graphics()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/INFERRED #community/edit_plan
+#graphify/code #graphify/INFERRED #community/plan_with

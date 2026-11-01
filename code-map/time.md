@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "extra_sources.py"
+community: "json"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/extra_sourcespy
+  - community/json
 ---
 
 # time
@@ -21,7 +21,7 @@ tags:
 - [[h3_run.py]] - `imports` [EXTRACTED]
 - [[image_sources.py]] - `imports` [EXTRACTED]
 - [[llm.py]] - `imports` [EXTRACTED]
-- [[main()_1]] - `calls` [EXTRACTED]
+- [[main()_2]] - `calls` [EXTRACTED]
 - [[main()_5]] - `calls` [EXTRACTED]
 - [[media_library.py]] - `imports` [EXTRACTED]
 - [[moss_images()]] - `calls` [EXTRACTED]
@@ -42,4 +42,4 @@ tags:
 - [[trend_research()]] - `calls` [EXTRACTED]
 - [[voicestudio_up()]] - `calls` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/extra_sourcespy
+#graphify/concept #graphify/EXTRACTED #community/json

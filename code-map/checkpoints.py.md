@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/checkpoints.py"
 type: "code"
-community: "main"
+community: "io"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/main
+  - community/io
 ---
 
 # checkpoints.py
@@ -26,7 +26,7 @@ tags:
 - [[pathlib]] - `imports_from` [EXTRACTED]
 - [[pending()]] - `contains` [EXTRACTED]
 - [[pil]] - `imports_from` [EXTRACTED]
-- [[read()_1]] - `contains` [EXTRACTED]
+- [[read()]] - `contains` [EXTRACTED]
 - [[save_context()]] - `contains` [EXTRACTED]
 - [[scene_repair.py]] - `imports_from` [EXTRACTED]
 - [[session.py]] - `imports_from` [EXTRACTED]
@@ -36,4 +36,4 @@ tags:
 - [[unpack()]] - `contains` [EXTRACTED]
 - [[update()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/main
+#graphify/code #graphify/EXTRACTED #community/io

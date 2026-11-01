@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "shutil"
+community: "subprocess"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/shutil
+  - community/subprocess
 ---
 
 # tempfile
@@ -30,6 +30,7 @@ tags:
 - [[test_opening_rules.py]] - `imports` [EXTRACTED]
 - [[test_package.py]] - `imports` [EXTRACTED]
 - [[test_pictures_first.py]] - `imports` [EXTRACTED]
+- [[test_quality.py]] - `imports` [EXTRACTED]
 - [[test_reliability.py]] - `imports` [EXTRACTED]
 - [[test_render_resume.py]] - `imports` [EXTRACTED]
 - [[test_retention.py]] - `imports` [EXTRACTED]
@@ -37,4 +38,4 @@ tags:
 - [[test_story.py]] - `imports` [EXTRACTED]
 - [[test_topic_ideas.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/shutil
+#graphify/concept #graphify/EXTRACTED #community/subprocess

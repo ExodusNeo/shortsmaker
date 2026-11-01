@@ -18,7 +18,7 @@ members: 31
 - [[_grain]] - code - drawn/lib/core.mjs
 - [[at()]] - code - drawn/lib/core.mjs
 - [[burst()]] - code - drawn/lib/core.mjs
-- [[clamp()_1]] - code - drawn/lib/core.mjs
+- [[clamp()]] - code - drawn/lib/core.mjs
 - [[core.mjs]] - code - drawn/lib/core.mjs
 - [[eBack()]] - code - drawn/lib/core.mjs
 - [[eBounce()]] - code - drawn/lib/core.mjs
@@ -58,6 +58,6 @@ SORT file.name ASC
 ## Top bridge nodes
 - [[core.mjs]] - degree 46, connects to 6 communities
 - [[lerp()]] - degree 17, connects to 4 communities
-- [[clamp()_1]] - degree 27, connects to 3 communities
+- [[clamp()]] - degree 27, connects to 3 communities
 - [[eBack()]] - degree 6, connects to 3 communities
 - [[ss()]] - degree 4, connects to 2 communities

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/media_menu.py"
 type: "code"
-community: "media_menu.py"
+community: "media_command"
 location: "L76"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/media_menupy
+  - community/media_command
 ---
 
 # audition_audio()
@@ -18,4 +18,4 @@ tags:
 - [[os]] - `calls` [EXTRACTED]
 - [[review_audio_files()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/media_menupy
+#graphify/code #graphify/EXTRACTED #community/media_command

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/seo.py"
 type: "code"
-community: "re"
+community: "test_full_scenes.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/re
+  - community/test_full_scenespy
 ---
 
 # seo.py
@@ -14,7 +14,10 @@ tags:
 ## Connections
 - [[Titles, descriptions and tags from YouTube autocomplete; the .srt captions file.]] - `rationale_for` [EXTRACTED]
 - [[__init__.py]] - `imports_from` [EXTRACTED]
+- [[apply_metadata()]] - `contains` [EXTRACTED]
 - [[channel_profiles.py]] - `imports_from` [EXTRACTED]
+- [[clean_tags()]] - `contains` [EXTRACTED]
+- [[clean_title()]] - `contains` [EXTRACTED]
 - [[cli.py]] - `imports_from` [EXTRACTED]
 - [[json]] - `imports` [EXTRACTED]
 - [[llm.py]] - `imports_from` [EXTRACTED]
@@ -30,7 +33,8 @@ tags:
 - [[srt()]] - `contains` [EXTRACTED]
 - [[test_blender_run.py]] - `imports_from` [EXTRACTED]
 - [[test_pictures_first.py]] - `imports_from` [EXTRACTED]
+- [[test_quality.py]] - `imports_from` [EXTRACTED]
 - [[test_topic_ideas.py]] - `imports_from` [EXTRACTED]
 - [[urllib_parse]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/re
+#graphify/code #graphify/EXTRACTED #community/test_full_scenespy

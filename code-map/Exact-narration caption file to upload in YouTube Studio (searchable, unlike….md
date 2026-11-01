@@ -2,7 +2,7 @@
 source_file: "shortsmaker/seo.py"
 type: "rationale"
 community: "render"
-location: "L87"
+location: "L149"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED

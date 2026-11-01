@@ -2,7 +2,7 @@
 source_file: "shortsmaker/review.py"
 type: "code"
 community: "opener_graphic"
-location: "L324"
+location: "L359"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[Owner, 2026-10-30 the motion-graphic opener goes first and gets…]] - `rationale_for` [EXTRACTED]
-- [[Path_7]] - `references` [EXTRACTED]
+- [[Path_3]] - `references` [EXTRACTED]
 - [[finish_render()]] - `calls` [EXTRACTED]
 - [[full_summary()]] - `calls` [EXTRACTED]
 - [[opener_graphic()]] - `calls` [EXTRACTED]

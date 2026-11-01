@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_blender_scene.py"
 type: "rationale"
-community: "test_blender_scene.py"
+community: "plan_with"
 location: "L30"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/test_blender_scenepy
+  - community/plan_with
 ---
 
 # Render `plan` with scenes of the given lengths; returns {frame: image} for one…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[render()_3]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/test_blender_scenepy
+#graphify/rationale #graphify/EXTRACTED #community/plan_with

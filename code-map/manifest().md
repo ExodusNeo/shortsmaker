@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_blender_scene.py"
 type: "code"
-community: "test_blender_scene.py"
+community: "plan_with"
 location: "L165"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_blender_scenepy
+  - community/plan_with
 ---
 
 # manifest()
@@ -17,4 +17,4 @@ tags:
 - [[test_label_only_on_the_part_it_names()]] - `calls` [EXTRACTED]
 - [[test_scale_and_rail_deck_are_drawn()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_blender_scenepy
+#graphify/code #graphify/EXTRACTED #community/plan_with

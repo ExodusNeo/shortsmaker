@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/opening_rules.py"
 type: "code"
-community: "opener_graphic"
+community: "make_opener"
 location: "L19"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/opener_graphic
+  - community/make_opener
 ---
 
 # opening_brief()
@@ -23,4 +23,4 @@ tags:
 - [[review()]] - `calls` [EXTRACTED]
 - [[write()_1]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/opener_graphic
+#graphify/code #graphify/EXTRACTED #community/make_opener

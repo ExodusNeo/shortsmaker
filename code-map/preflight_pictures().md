@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/picture_pool.py"
 type: "code"
-community: "prepare_topic"
+community: "direct_scripts"
 location: "L224"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/prepare_topic
+  - community/direct_scripts
 ---
 
 # preflight_pictures()
@@ -20,4 +20,4 @@ tags:
 - [[verify()]] - `indirect_call` [INFERRED]
 - [[write_json()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/prepare_topic
+#graphify/code #graphify/EXTRACTED #community/direct_scripts

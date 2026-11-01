@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/checkpoints.py"
 type: "code"
-community: "main"
+community: "io"
 location: "L29"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/main
+  - community/io
 ---
 
 # unpack()
@@ -15,7 +15,7 @@ tags:
 - [[base64]] - `calls` [EXTRACTED]
 - [[checkpoints.py]] - `contains` [EXTRACTED]
 - [[io]] - `calls` [EXTRACTED]
-- [[read()_1]] - `calls` [EXTRACTED]
+- [[read()]] - `calls` [EXTRACTED]
 - [[unpack()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/main
+#graphify/code #graphify/EXTRACTED #community/io

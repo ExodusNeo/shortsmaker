@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "speak"
+community: "story_sound"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/speak
+  - community/story_sound
 ---
 
 # edge_tts
@@ -14,4 +14,4 @@ tags:
 - [[audio_mix.py]] - `imports` [EXTRACTED]
 - [[tts()_1]] - `calls` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/speak
+#graphify/concept #graphify/EXTRACTED #community/story_sound

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/picker.py"
 type: "rationale"
-community: "__init__.py"
+community: "test_full_scenes.py"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/__init__py
+  - community/test_full_scenespy
 ---
 
 # Choosing each scene's picture, pictures for full-screen scenes, and rescue…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[picker.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/__init__py
+#graphify/rationale #graphify/EXTRACTED #community/test_full_scenespy

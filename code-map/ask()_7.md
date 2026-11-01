@@ -1,18 +1,17 @@
 ---
-source_file: "tests/test_blender_plan.py"
+source_file: "tests/test_ai_modes.py"
 type: "code"
-community: "test_blender_plan.py"
-location: "L87"
+community: "edit_scripts"
+location: "L48"
 tags:
   - graphify/code
-  - graphify/EXTRACTED
-  - community/test_blender_planpy
+  - graphify/INFERRED
+  - community/edit_scripts
 ---
 
 # ask()
 
 ## Connections
-- [[plan()]] - `calls` [EXTRACTED]
-- [[test_plan_builds_retries_then_defaults()]] - `indirect_call` [INFERRED]
+- [[test_all_modes_route_writer_editor_and_reader()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/test_blender_planpy
+#graphify/code #graphify/INFERRED #community/edit_scripts

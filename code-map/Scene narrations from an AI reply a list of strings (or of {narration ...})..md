@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/writing.py"
 type: "rationale"
-community: "test_style.py"
-location: "L283"
+community: "edit_scripts"
+location: "L289"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/test_stylepy
+  - community/edit_scripts
 ---
 
 # Scene narrations from an AI reply: a list of strings (or of {"narration": ...}).
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[narration_lines()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/test_stylepy
+#graphify/rationale #graphify/EXTRACTED #community/edit_scripts

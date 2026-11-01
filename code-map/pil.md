@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "pathlib"
+community: "subprocess"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/pathlib
+  - community/subprocess
 ---
 
 # pil
@@ -37,4 +37,4 @@ tags:
 - [[test_render_resume.py]] - `imports_from` [EXTRACTED]
 - [[test_retention.py]] - `imports_from` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/pathlib
+#graphify/concept #graphify/EXTRACTED #community/subprocess

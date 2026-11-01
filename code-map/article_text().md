@@ -1,19 +1,19 @@
 ---
 source_file: "shortsmaker/writing.py"
 type: "code"
-community: "opener_graphic"
-location: "L623"
+community: "extra_sources.py"
+location: "L652"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/opener_graphic
+  - community/extra_sourcespy
 ---
 
 # article_text()
 
 ## Connections
 - [[Plain text of an English Wikipedia article ('' when missing or unreachable).]] - `rationale_for` [EXTRACTED]
-- [[fact_check()]] - `calls` [EXTRACTED]
+- [[fact_check()_1]] - `calls` [EXTRACTED]
 - [[json]] - `calls` [EXTRACTED]
 - [[opener_graphic()]] - `calls` [EXTRACTED]
 - [[prepare_topic()]] - `calls` [EXTRACTED]
@@ -21,4 +21,4 @@ tags:
 - [[wm_get()]] - `calls` [EXTRACTED]
 - [[writing.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/opener_graphic
+#graphify/code #graphify/EXTRACTED #community/extra_sourcespy

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/short_render.py"
 type: "rationale"
-community: "pathlib"
+community: "render"
 location: "L78"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/pathlib
+  - community/render
 ---
 
 # A drawn Short's picture choices: none (Blender draws every scene).
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[drawn_choices()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/pathlib
+#graphify/rationale #graphify/EXTRACTED #community/render

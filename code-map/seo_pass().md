@@ -2,7 +2,7 @@
 source_file: "shortsmaker/seo.py"
 type: "code"
 community: "fake_ai"
-location: "L21"
+location: "L81"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -13,13 +13,13 @@ tags:
 
 ## Connections
 - [[Rewrite titledescriptiontags around real YouTube search phrases; add a pinned…]] - `rationale_for` [EXTRACTED]
+- [[apply_metadata()]] - `calls` [EXTRACTED]
 - [[ask_ai()]] - `calls` [EXTRACTED]
 - [[first_sentence()]] - `calls` [EXTRACTED]
 - [[json]] - `calls` [EXTRACTED]
 - [[load_channel()]] - `calls` [EXTRACTED]
 - [[logbook_results()]] - `calls` [EXTRACTED]
-- [[main()_3]] - `calls` [EXTRACTED]
-- [[re]] - `calls` [EXTRACTED]
+- [[main()_4]] - `calls` [EXTRACTED]
 - [[resume_runs()]] - `calls` [EXTRACTED]
 - [[search_suggestions()]] - `calls` [EXTRACTED]
 - [[seo.py]] - `contains` [EXTRACTED]

@@ -12,6 +12,6 @@ tags:
 # A cold reader's reading (writing.cold_read) that finds nothing wrong, with…
 
 ## Connections
-- [[read()]] - `rationale_for` [EXTRACTED]
+- [[read()_1]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/story_problems

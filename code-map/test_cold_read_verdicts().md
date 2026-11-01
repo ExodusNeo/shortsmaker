@@ -12,7 +12,7 @@ tags:
 # test_cold_read_verdicts()
 
 ## Connections
-- [[read()]] - `calls` [EXTRACTED]
+- [[read()_1]] - `calls` [EXTRACTED]
 - [[story_problems()]] - `calls` [EXTRACTED]
 - [[test_story.py]] - `contains` [EXTRACTED]
 

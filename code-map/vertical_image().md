@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/photo_prep.py"
 type: "code"
-community: "trim_borders"
+community: "io"
 location: "L86"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/trim_borders
+  - community/io
 ---
 
 # vertical_image()
@@ -18,4 +18,4 @@ tags:
 - [[photo_prep.py]] - `contains` [EXTRACTED]
 - [[to_vertical()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/trim_borders
+#graphify/code #graphify/EXTRACTED #community/io

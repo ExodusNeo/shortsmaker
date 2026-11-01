@@ -2,7 +2,7 @@
 source_file: "shortsmaker/seo.py"
 type: "code"
 community: "render"
-location: "L86"
+location: "L148"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -13,8 +13,9 @@ tags:
 
 ## Connections
 - [[Exact-narration caption file to upload in YouTube Studio (searchable, unlike…]] - `rationale_for` [EXTRACTED]
-- [[Path_5]] - `references` [EXTRACTED]
-- [[render()]] - `calls` [EXTRACTED]
+- [[Path_11]] - `references` [EXTRACTED]
+- [[re]] - `calls` [EXTRACTED]
+- [[render()_2]] - `calls` [EXTRACTED]
 - [[seo.py]] - `contains` [EXTRACTED]
 - [[ts()]] - `contains` [EXTRACTED]
 

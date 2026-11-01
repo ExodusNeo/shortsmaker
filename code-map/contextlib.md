@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "__init__.py"
+community: "subprocess"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/__init__py
+  - community/subprocess
 ---
 
 # contextlib
@@ -14,4 +14,4 @@ tags:
 - [[test_ai_modes.py]] - `imports_from` [EXTRACTED]
 - [[test_render_resume.py]] - `imports_from` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/__init__py
+#graphify/concept #graphify/EXTRACTED #community/subprocess

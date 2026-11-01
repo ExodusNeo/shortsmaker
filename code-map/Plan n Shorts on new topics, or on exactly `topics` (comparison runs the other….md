@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/writing.py"
 type: "rationale"
-community: "test_style.py"
+community: "write_scripts"
 location: "L36"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/test_stylepy
+  - community/write_scripts
 ---
 
 # Plan n Shorts on new topics, or on exactly `topics` (comparison runs: the other…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[write_scripts()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/test_stylepy
+#graphify/rationale #graphify/EXTRACTED #community/write_scripts

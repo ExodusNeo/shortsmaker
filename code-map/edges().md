@@ -1,12 +1,12 @@
 ---
 source_file: "blender/look.py"
 type: "code"
-community: "look.py"
+community: "math"
 location: "L53"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/lookpy
+  - community/math
 ---
 
 # edges()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[ink_lines()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/lookpy
+#graphify/code #graphify/EXTRACTED #community/math

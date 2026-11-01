@@ -1,12 +1,12 @@
 ---
 source_file: "blender/look.py"
 type: "code"
-community: "look.py"
+community: "math"
 location: "L11"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/lookpy
+  - community/math
 ---
 
 # linear()
@@ -18,4 +18,4 @@ tags:
 - [[sRGB hex to the linear colour Blender's shaders use (the Standard view…]] - `rationale_for` [EXTRACTED]
 - [[setup()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/lookpy
+#graphify/code #graphify/EXTRACTED #community/math

@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_ai_modes.py"
 type: "code"
-community: "test_every_mode_can_continue_through_two_exhausted_ais"
+community: "other_ai"
 location: "L26"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_every_mode_can_continue_through_two_exhausted_ais
+  - community/other_ai
 ---
 
 # reply()
@@ -15,4 +15,4 @@ tags:
 - [[claude()]] - `calls` [EXTRACTED]
 - [[fake_providers()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_every_mode_can_continue_through_two_exhausted_ais
+#graphify/code #graphify/EXTRACTED #community/other_ai

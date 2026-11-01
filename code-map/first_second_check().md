@@ -2,7 +2,7 @@
 source_file: "shortsmaker/review.py"
 type: "code"
 community: "test_first_second.py"
-location: "L158"
+location: "L193"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,7 +12,7 @@ tags:
 # first_second_check()
 
 ## Connections
-- [[Path_7]] - `references` [EXTRACTED]
+- [[Path_3]] - `references` [EXTRACTED]
 - [[Would a stranger scrolling the Shorts feed stop here Stayed-to-watch is…]] - `rationale_for` [EXTRACTED]
 - [[ask_ai()]] - `calls` [EXTRACTED]
 - [[capture_prompts()]] - `calls` [EXTRACTED]

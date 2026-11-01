@@ -2,7 +2,7 @@
 source_file: "tests/test_story.py"
 type: "code"
 community: "edit_scripts"
-location: "L251"
+location: "L253"
 tags:
   - graphify/code
   - graphify/INFERRED

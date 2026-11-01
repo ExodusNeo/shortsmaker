@@ -14,11 +14,11 @@ tags:
 ## Connections
 - [[The engineer's plan with every value checked unknown values get the default,…]] - `rationale_for` [EXTRACTED]
 - [[blender_plan.py]] - `contains` [EXTRACTED]
-- [[clamp()]] - `calls` [EXTRACTED]
+- [[clamp()_1]] - `calls` [EXTRACTED]
 - [[default_build()]] - `calls` [EXTRACTED]
 - [[ending()]] - `calls` [EXTRACTED]
 - [[panels()]] - `calls` [EXTRACTED]
-- [[pick()]] - `calls` [EXTRACTED]
+- [[pick()_1]] - `calls` [EXTRACTED]
 - [[plan_builds()]] - `calls` [EXTRACTED]
 - [[test_a_failure_in_scene_one_becomes_the_hook()]] - `calls` [EXTRACTED]
 - [[test_bad_values_get_defaults()]] - `calls` [EXTRACTED]

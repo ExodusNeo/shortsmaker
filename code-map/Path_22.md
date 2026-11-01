@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "shutil"
+community: "scene_repair.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/shutil
+  - community/scene_repairpy
 ---
 
 # Path
 
 ## Connections
-- [[analyze()]] - `references` [EXTRACTED]
+- [[apply()]] - `references` [EXTRACTED]
+- [[preview()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/shutil
+#graphify/code #graphify/EXTRACTED #community/scene_repairpy

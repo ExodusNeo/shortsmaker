@@ -1,18 +1,17 @@
 ---
-source_file: "tests/test_rules.py"
+source_file: "tests/test_full_scenes.py"
 type: "code"
-community: "test_rules.py"
-location: "L72"
+community: "rewrite_paint_prompts"
+location: "L705"
 tags:
   - graphify/code
-  - graphify/INFERRED
-  - community/test_rulespy
+  - graphify/EXTRACTED
+  - community/rewrite_paint_prompts
 ---
 
 # ask()
 
 ## Connections
-- [[capture_prompts()]] - `indirect_call` [INFERRED]
-- [[run_draft()]] - `indirect_call` [INFERRED]
+- [[test_look_check_fixes_code()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/test_rulespy
+#graphify/code #graphify/EXTRACTED #community/rewrite_paint_prompts

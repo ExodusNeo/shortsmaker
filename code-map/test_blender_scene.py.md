@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_blender_scene.py"
 type: "code"
-community: "test_blender_scene.py"
+community: "subprocess"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_blender_scenepy
+  - community/subprocess
 ---
 
 # test_blender_scene.py
@@ -23,7 +23,7 @@ tags:
 - [[near()]] - `contains` [EXTRACTED]
 - [[pathlib]] - `imports_from` [EXTRACTED]
 - [[pil]] - `imports_from` [EXTRACTED]
-- [[plan_with()_1]] - `contains` [EXTRACTED]
+- [[plan_with()]] - `contains` [EXTRACTED]
 - [[render()_3]] - `contains` [EXTRACTED]
 - [[subprocess]] - `imports` [EXTRACTED]
 - [[sys]] - `imports` [EXTRACTED]
@@ -41,4 +41,4 @@ tags:
 - [[test_zoom_after_the_collapse_finds_the_fallen_part()]] - `contains` [EXTRACTED]
 - [[traceback]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_blender_scenepy
+#graphify/code #graphify/EXTRACTED #community/subprocess

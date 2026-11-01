@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/gpu.py"
 type: "rationale"
-community: "gpu.py"
+community: "local_clips"
 location: "L397"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/gpupy
+  - community/local_clips
 ---
 
 # Detailed prompts for the owner-made clips (Colab H3 or Flow), written by the AI…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[h3_prompts()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/gpupy
+#graphify/rationale #graphify/EXTRACTED #community/local_clips

@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "prepare_topic"
+community: "direct_scripts"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/prepare_topic
+  - community/direct_scripts
 ---
 
 # Path
@@ -19,4 +19,4 @@ tags:
 - [[prepare_topic()]] - `references` [EXTRACTED]
 - [[save_pool()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/prepare_topic
+#graphify/code #graphify/EXTRACTED #community/direct_scripts

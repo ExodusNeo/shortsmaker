@@ -1,17 +1,17 @@
 ---
-source_file: "tests/test_full_scenes.py"
+source_file: "tests/test_story.py"
 type: "code"
-community: "rewrite_paint_prompts"
-location: "L705"
+community: "cold_read"
+location: "L88"
 tags:
   - graphify/code
-  - graphify/EXTRACTED
-  - community/rewrite_paint_prompts
+  - graphify/INFERRED
+  - community/cold_read
 ---
 
 # ask()
 
 ## Connections
-- [[test_look_check_fixes_code()]] - `contains` [EXTRACTED]
+- [[test_cold_read_uses_other_ai_in_solo_and_collaborative_modes()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/rewrite_paint_prompts
+#graphify/code #graphify/INFERRED #community/cold_read

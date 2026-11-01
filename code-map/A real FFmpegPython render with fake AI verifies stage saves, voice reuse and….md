@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_render_resume.py"
 type: "rationale"
-community: "__init__.py"
+community: "subprocess"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/__init__py
+  - community/subprocess
 ---
 
 # A real FFmpeg/Python render with fake AI verifies stage saves, voice reuse and…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[test_render_resume.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/__init__py
+#graphify/rationale #graphify/EXTRACTED #community/subprocess

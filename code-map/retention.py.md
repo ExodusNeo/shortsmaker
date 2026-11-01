@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/retention.py"
 type: "code"
-community: "shutil"
+community: "retention.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/shutil
+  - community/retentionpy
 ---
 
 # retention.py
@@ -22,6 +22,7 @@ tags:
 - [[datetime]] - `imports_from` [EXTRACTED]
 - [[json]] - `imports` [EXTRACTED]
 - [[llm.py]] - `imports_from` [EXTRACTED]
+- [[logbook.py]] - `imports_from` [EXTRACTED]
 - [[math]] - `imports` [EXTRACTED]
 - [[normalize_reply()]] - `contains` [EXTRACTED]
 - [[pathlib]] - `imports_from` [EXTRACTED]
@@ -35,4 +36,4 @@ tags:
 - [[tempfile]] - `imports` [EXTRACTED]
 - [[test_retention.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/shutil
+#graphify/code #graphify/EXTRACTED #community/retentionpy

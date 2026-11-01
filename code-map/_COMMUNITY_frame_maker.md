@@ -1,11 +1,11 @@
 ---
 type: community
-members: 30
+members: 34
 ---
 
 # frame_maker
 
-**Members:** 30 nodes
+**Members:** 34 nodes
 
 ## Members
 - [[(style, text) for the built-in renderer, which draws only dates, places and…]] - rationale - shortsmaker/plan_rules.py
@@ -15,9 +15,11 @@ members: 30
 - [[Animate the callout in, hold it, fade it out before the scene ends.]] - rationale - shortsmaker/frame_render.py
 - [[ClipReader]] - code - shortsmaker/frame_render.py
 - [[Frame at fraction p (0..1) of the clip; p never goes backwards within a scene.]] - rationale - shortsmaker/frame_render.py
+- [[FreeTypeFont]] - code
 - [[Image]] - code
 - [[Image_1]] - code
 - [[One frame of slow Ken Burns motion; affine sampling is sub-pixel so it never…]] - rationale - shortsmaker/frame_render.py
+- [[Path_13]] - code
 - [[Pop the card in with a slight overshoot over a dimmed background, then shrink…]] - rationale - shortsmaker/frame_render.py
 - [[Pre-render a callout as a small transparent image (animated per frame later).]] - rationale - shortsmaker/frame_render.py
 - [[Returns frame(i, t) scene i at time t with camera move and graphics applied.…]] - rationale - shortsmaker/frame_render.py
@@ -29,6 +31,7 @@ members: 30
 - [[draw_card()]] - code - shortsmaker/frame_render.py
 - [[draw_graphic()]] - code - shortsmaker/frame_render.py
 - [[fallback_graphic()]] - code - shortsmaker/plan_rules.py
+- [[fit_font()]] - code - shortsmaker/frame_render.py
 - [[flash_alpha()]] - code - shortsmaker/frame_render.py
 - [[frame()]] - code - shortsmaker/frame_render.py
 - [[frame()_1]] - code - tests/test_blender_plan.py
@@ -36,6 +39,7 @@ members: 30
 - [[graphic_overlay()]] - code - shortsmaker/frame_render.py
 - [[shot()]] - code - shortsmaker/frame_render.py
 - [[test_hard_cuts_never_blend_scenes()]] - code - tests/test_blender_plan.py
+- [[thumbnail()]] - code - shortsmaker/frame_render.py
 - [[write()]] - code - tests/test_blender_plan.py
 - [[write_frames()]] - code - shortsmaker/frame_render.py
 
@@ -47,15 +51,19 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 9 edges to [[_COMMUNITY_pathlib]]
-- 4 edges to [[_COMMUNITY_fills_frame]]
-- 3 edges to [[_COMMUNITY_render]]
-- 1 edge to [[_COMMUNITY_test_full_scenes.py]]
+- 11 edges to [[_COMMUNITY_test_full_scenes.py]]
+- 2 edges to [[_COMMUNITY_render]]
+- 2 edges to [[_COMMUNITY_io]]
+- 1 edge to [[_COMMUNITY_math]]
+- 1 edge to [[_COMMUNITY_finish_render]]
+- 1 edge to [[_COMMUNITY_image_sources.py]]
 - 1 edge to [[_COMMUNITY_test_blender_plan.py]]
+- 1 edge to [[_COMMUNITY_subprocess]]
+- 1 edge to [[_COMMUNITY_words_of]]
 
 ## Top bridge nodes
-- [[frame_maker()]] - degree 8, connects to 3 communities
+- [[frame_maker()]] - degree 8, connects to 2 communities
 - [[write_frames()]] - degree 6, connects to 2 communities
-- [[graphic_overlay()]] - degree 5, connects to 2 communities
+- [[fit_font()]] - degree 5, connects to 2 communities
+- [[Path_13]] - degree 5, connects to 2 communities
 - [[flash_alpha()]] - degree 4, connects to 2 communities
-- [[ClipReader]] - degree 6, connects to 1 community

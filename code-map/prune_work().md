@@ -13,8 +13,8 @@ tags:
 
 ## Connections
 - [[fix_short()]] - `calls` [EXTRACTED]
-- [[main()_3]] - `calls` [EXTRACTED]
-- [[read()_1]] - `calls` [EXTRACTED]
+- [[main()_4]] - `calls` [EXTRACTED]
+- [[read()]] - `calls` [EXTRACTED]
 - [[short_render.py]] - `contains` [EXTRACTED]
 - [[shutil]] - `calls` [EXTRACTED]
 - [[time]] - `calls` [EXTRACTED]

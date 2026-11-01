@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_blender_scene.py"
 type: "rationale"
-community: "test_blender_scene.py"
+community: "plan_with"
 location: "L166"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/test_blender_scenepy
+  - community/plan_with
 ---
 
 # What build_scene built (objects.json next to the frames).
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[manifest()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/test_blender_scenepy
+#graphify/rationale #graphify/EXTRACTED #community/plan_with

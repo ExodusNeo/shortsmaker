@@ -1,20 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "fills_frame"
+community: "vault_page"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/fills_frame
+  - community/vault_page
 ---
 
 # Path
 
 ## Connections
-- [[dot-__init__()_1]] - `references` [EXTRACTED]
-- [[fills_frame()]] - `references` [EXTRACTED]
-- [[frame_maker()]] - `references` [EXTRACTED]
-- [[graphic_low()]] - `references` [EXTRACTED]
-- [[thumbnail()]] - `references` [EXTRACTED]
+- [[log_short()]] - `references` [EXTRACTED]
+- [[vault_page()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/fills_frame
+#graphify/code #graphify/EXTRACTED #community/vault_page

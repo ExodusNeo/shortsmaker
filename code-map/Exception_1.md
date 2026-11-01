@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "main"
+community: "write_json"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/main
+  - community/write_json
 ---
 
 # Exception
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[record_failure()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/main
+#graphify/code #graphify/EXTRACTED #community/write_json

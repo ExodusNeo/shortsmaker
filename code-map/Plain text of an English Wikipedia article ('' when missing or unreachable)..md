@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/writing.py"
 type: "rationale"
-community: "opener_graphic"
-location: "L624"
+community: "extra_sources.py"
+location: "L653"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/opener_graphic
+  - community/extra_sourcespy
 ---
 
 # Plain text of an English Wikipedia article ('' when missing or unreachable).
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[article_text()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/opener_graphic
+#graphify/rationale #graphify/EXTRACTED #community/extra_sourcespy

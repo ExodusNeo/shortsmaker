@@ -1,17 +1,17 @@
 ---
-source_file: "tests/test_ai_modes.py"
+source_file: "tests/test_style.py"
 type: "code"
-community: "test_every_mode_can_continue_through_two_exhausted_ais"
-location: "L48"
+community: "plan_with"
+location: "L202"
 tags:
   - graphify/code
-  - graphify/INFERRED
-  - community/test_every_mode_can_continue_through_two_exhausted_ais
+  - graphify/EXTRACTED
+  - community/plan_with
 ---
 
 # ask()
 
 ## Connections
-- [[test_all_modes_route_writer_editor_and_reader()]] - `indirect_call` [INFERRED]
+- [[test_fact_check_sees_new_graphics()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/test_every_mode_can_continue_through_two_exhausted_ais
+#graphify/code #graphify/EXTRACTED #community/plan_with
