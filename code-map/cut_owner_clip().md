@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/gpu.py"
 type: "code"
-community: "local_clips"
+community: "gpu.py"
 location: "L542"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/local_clips
+  - community/gpupy
 ---
 
 # cut_owner_clip()
@@ -20,4 +20,4 @@ tags:
 - [[veo_handoff()]] - `calls` [EXTRACTED]
 - [[video_encoder()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/local_clips
+#graphify/code #graphify/EXTRACTED #community/gpupy

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/scene_repair.py"
 type: "rationale"
-community: "test_style.py"
+community: "llm.py"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/test_stylepy
+  - community/llmpy
 ---
 
 # Preview and apply a callout repair using existing video/audio, without new AI…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[scene_repair.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/test_stylepy
+#graphify/rationale #graphify/EXTRACTED #community/llmpy

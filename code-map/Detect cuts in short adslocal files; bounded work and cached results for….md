@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/footage.py"
 type: "rationale"
-community: "film_piece"
+community: "hashlib"
 location: "L193"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/film_piece
+  - community/hashlib
 ---
 
 # Detect cuts in short ads/local files; bounded work and cached results for…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[shot_moments()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/film_piece
+#graphify/rationale #graphify/EXTRACTED #community/hashlib

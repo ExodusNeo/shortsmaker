@@ -1,19 +1,17 @@
 ---
-source_file: "tests/test_h3_handoff.py"
+source_file: "tests/test_style.py"
 type: "code"
-community: "test_h3_handoff.py"
-location: "L69"
+community: "invent_component"
+location: "L321"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_h3_handoffpy
+  - community/invent_component
 ---
 
 # run()
 
 ## Connections
-- [[fake_ai()]] - `calls` [EXTRACTED]
-- [[short_with()]] - `calls` [EXTRACTED]
-- [[test_missing_scene_is_asked_again()]] - `contains` [EXTRACTED]
+- [[test_failed_invention_keeps_the_others()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_h3_handoffpy
+#graphify/code #graphify/EXTRACTED #community/invent_component

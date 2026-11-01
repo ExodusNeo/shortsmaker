@@ -1,23 +1,23 @@
 ---
 source_file: "shortsmaker/audio_library.py"
 type: "code"
-community: "media_command"
-location: "L148"
+community: "audio_library.py"
+location: "L222"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/media_command
+  - community/audio_librarypy
 ---
 
 # sound_profile()
 
 ## Connections
 - [[Measure once duration and strongest 10-ms window, with explicit owner…]] - `rationale_for` [EXTRACTED]
-- [[Path_24]] - `references` [EXTRACTED]
+- [[Path_23]] - `references` [EXTRACTED]
 - [[audio_library.py]] - `contains` [EXTRACTED]
 - [[audio_metadata()]] - `calls` [EXTRACTED]
 - [[schedule_sounds()]] - `calls` [EXTRACTED]
 - [[set_audio_metadata()]] - `calls` [EXTRACTED]
 - [[subprocess]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/media_command
+#graphify/code #graphify/EXTRACTED #community/audio_librarypy

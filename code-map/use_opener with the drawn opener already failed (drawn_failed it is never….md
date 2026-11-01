@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_opener_graphic.py"
 type: "rationale"
-community: "use_opener"
+community: "use"
 location: "L71"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/use_opener
+  - community/use
 ---
 
 # use_opener with the drawn opener already failed (drawn_failed: it is never…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[use()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/use_opener
+#graphify/rationale #graphify/EXTRACTED #community/use

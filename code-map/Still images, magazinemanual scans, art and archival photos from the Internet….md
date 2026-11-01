@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/image_sources.py"
 type: "rationale"
-community: "extra_sources.py"
+community: "fetch"
 location: "L292"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/extra_sourcespy
+  - community/fetch
 ---
 
 # Still images, magazine/manual scans, art and archival photos from the Internet…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[archive_images()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/extra_sourcespy
+#graphify/rationale #graphify/EXTRACTED #community/fetch

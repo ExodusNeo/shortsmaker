@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "finish_render"
+community: "srt"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/finish_render
+  - community/srt
 ---
 
 # Path
 
 ## Connections
-- [[drawn_short()]] - `references` [EXTRACTED]
+- [[srt()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/finish_render
+#graphify/code #graphify/EXTRACTED #community/srt

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/image_sources.py"
 type: "rationale"
-community: "extra_sources.py"
+community: "fetch"
 location: "L86"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/extra_sourcespy
+  - community/fetch
 ---
 
 # (ok, credit). Public domain/CC0 need no credit; all other Wikimedia/Wikipedia…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[usable_license()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/extra_sourcespy
+#graphify/rationale #graphify/EXTRACTED #community/fetch

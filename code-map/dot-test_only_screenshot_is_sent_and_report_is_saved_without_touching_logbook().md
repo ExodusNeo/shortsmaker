@@ -13,6 +13,6 @@ tags:
 
 ## Connections
 - [[RetentionTests]] - `method` [EXTRACTED]
-- [[read()_1]] - `indirect_call` [INFERRED]
+- [[read()_2]] - `indirect_call` [INFERRED]
 
 #graphify/code #graphify/EXTRACTED #community/RetentionTests

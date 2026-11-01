@@ -1,20 +1,20 @@
 ---
 source_file: "shortsmaker/frame_render.py"
 type: "code"
-community: "ClipReader"
+community: "frame_render.py"
 location: "L26"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ClipReader
+  - community/frame_renderpy
 ---
 
 # shot()
 
 ## Connections
-- [[Image_3]] - `references` [EXTRACTED]
+- [[Image]] - `references` [EXTRACTED]
 - [[One frame of slow Ken Burns motion; affine sampling is sub-pixel so it never…]] - `rationale_for` [EXTRACTED]
-- [[frame()_2]] - `calls` [EXTRACTED]
+- [[frame()_1]] - `calls` [EXTRACTED]
 - [[frame_render.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ClipReader
+#graphify/code #graphify/EXTRACTED #community/frame_renderpy

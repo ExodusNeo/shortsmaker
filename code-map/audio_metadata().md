@@ -1,18 +1,18 @@
 ---
 source_file: "shortsmaker/audio_library.py"
 type: "code"
-community: "media_command"
+community: "audio_library.py"
 location: "L21"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/media_command
+  - community/audio_librarypy
 ---
 
 # audio_metadata()
 
 ## Connections
-- [[Path_24]] - `references` [EXTRACTED]
+- [[Path_23]] - `references` [EXTRACTED]
 - [[approved_sound()]] - `calls` [EXTRACTED]
 - [[audio_library.py]] - `contains` [EXTRACTED]
 - [[json]] - `calls` [EXTRACTED]
@@ -20,7 +20,8 @@ tags:
 - [[score()]] - `calls` [EXTRACTED]
 - [[set_audio_metadata()]] - `calls` [EXTRACTED]
 - [[sound_profile()]] - `calls` [EXTRACTED]
+- [[source_music()]] - `calls` [EXTRACTED]
 - [[track_start()]] - `calls` [EXTRACTED]
 - [[usable_audio()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/media_command
+#graphify/code #graphify/EXTRACTED #community/audio_librarypy

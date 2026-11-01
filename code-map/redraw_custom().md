@@ -1,18 +1,18 @@
 ---
 source_file: "shortsmaker/remotion_render.py"
 type: "code"
-community: "redraw_custom"
+community: "motion.py"
 location: "L39"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/redraw_custom
+  - community/motionpy
 ---
 
 # redraw_custom()
 
 ## Connections
-- [[Path_2]] - `references` [EXTRACTED]
+- [[Path_29]] - `references` [EXTRACTED]
 - [[The review saw custom scene i look wrong its coder gets the complaint and its…]] - `rationale_for` [EXTRACTED]
 - [[apply_review_fixes()]] - `calls` [EXTRACTED]
 - [[ask_ai()]] - `calls` [EXTRACTED]
@@ -23,4 +23,4 @@ tags:
 - [[remotion_render.py]] - `contains` [EXTRACTED]
 - [[tsc_check()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/redraw_custom
+#graphify/code #graphify/EXTRACTED #community/motionpy

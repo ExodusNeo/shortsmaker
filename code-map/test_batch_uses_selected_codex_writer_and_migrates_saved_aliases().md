@@ -12,7 +12,7 @@ tags:
 # test_batch_uses_selected_codex_writer_and_migrates_saved_aliases()
 
 ## Connections
-- [[main()_3]] - `calls` [EXTRACTED]
+- [[main()_5]] - `calls` [EXTRACTED]
 - [[normalize_brain()]] - `calls` [EXTRACTED]
 - [[saved_session()]] - `calls` [EXTRACTED]
 - [[test_ai_modes.py]] - `contains` [EXTRACTED]

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/audio_library.py"
 type: "code"
-community: "re"
+community: "audio_library.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/re
+  - community/audio_librarypy
 ---
 
 # audio_library.py
@@ -37,10 +37,11 @@ tags:
 - [[short_render.py]] - `imports_from` [EXTRACTED]
 - [[shutil]] - `imports` [EXTRACTED]
 - [[sound_profile()]] - `contains` [EXTRACTED]
+- [[source_music()]] - `contains` [EXTRACTED]
 - [[subprocess]] - `imports` [EXTRACTED]
 - [[test_media.py]] - `imports_from` [EXTRACTED]
 - [[test_render_resume.py]] - `imports_from` [EXTRACTED]
 - [[track_start()]] - `contains` [EXTRACTED]
 - [[usable_audio()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/re
+#graphify/code #graphify/EXTRACTED #community/audio_librarypy

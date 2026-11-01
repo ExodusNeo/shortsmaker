@@ -1,11 +1,11 @@
 ---
 type: community
-members: 25
+members: 33
 ---
 
 # MediaTests
 
-**Members:** 25 nodes
+**Members:** 33 nodes
 
 ## Members
 - [[dot-blob()_1]] - code - tests/test_media.py
@@ -22,6 +22,14 @@ members: 25
 - [[dot-test_later_sources_get_space_and_limit_is_respected()]] - code - tests/test_media.py
 - [[dot-test_music_avoids_pending_repeats_and_matches_intensity()]] - code - tests/test_media.py
 - [[dot-test_new_downloads_wait_for_review_and_keep_credit()]] - code - tests/test_media.py
+- [[dot-test_on_demand_music_can_be_disabled_and_skips_unrecognized_mood()]] - code - tests/test_media.py
+- [[dot-test_on_demand_music_downloads_only_selected_track_and_is_immediately_usable()]] - code - tests/test_media.py
+- [[dot-test_on_demand_music_failed_search_keeps_local_fallback()]] - code - tests/test_media.py
+- [[dot-test_on_demand_music_invalid_selected_audio_falls_back_without_bulk_retry()]] - code - tests/test_media.py
+- [[dot-test_on_demand_music_prefers_fresh_local_track_when_online_matches_are_recent()]] - code - tests/test_media.py
+- [[dot-test_on_demand_music_respects_rejection_and_avoids_recent_tracks()]] - code - tests/test_media.py
+- [[dot-test_on_demand_music_reuses_cached_search_result_without_download()]] - code - tests/test_media.py
+- [[dot-test_on_demand_music_reuses_saved_track_without_search()]] - code - tests/test_media.py
 - [[dot-test_owner_audio_import_preserves_original_and_waits_for_approval()]] - code - tests/test_media.py
 - [[dot-test_portrait_ads_are_not_mistaken_for_nine_by_sixteen()]] - code - tests/test_media.py
 - [[dot-test_preflight_rejects_broken_original_and_recovers_later()]] - code - tests/test_media.py
@@ -42,7 +50,7 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 1 edge to [[_COMMUNITY_test_full_scenes.py]]
+- 1 edge to [[_COMMUNITY___init__.py]]
 
 ## Top bridge nodes
-- [[MediaTests]] - degree 25, connects to 1 community
+- [[MediaTests]] - degree 33, connects to 1 community

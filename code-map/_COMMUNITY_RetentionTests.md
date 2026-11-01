@@ -20,7 +20,7 @@ members: 13
 - [[dot-test_report_matches_cross_scene_interval_and_includes_uncertainty()]] - code - tests/test_retention.py
 - [[dot-test_unreadable_graph_never_uses_claimed_drops()]] - code - tests/test_retention.py
 - [[RetentionTests]] - code - tests/test_retention.py
-- [[read()_1]] - code - tests/test_retention.py
+- [[read()_2]] - code - tests/test_retention.py
 
 ## Live Query (requires Dataview plugin)
 
@@ -30,7 +30,7 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 1 edge to [[_COMMUNITY_test_full_scenes.py]]
+- 1 edge to [[_COMMUNITY_llm.py]]
 
 ## Top bridge nodes
 - [[RetentionTests]] - degree 12, connects to 1 community

@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "code_custom_scenes"
+community: "motion.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/code_custom_scenes
+  - community/motionpy
 ---
 
 # Path
@@ -17,4 +17,4 @@ tags:
 - [[preview_custom()]] - `references` [EXTRACTED]
 - [[preview_sheet()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/code_custom_scenes
+#graphify/code #graphify/EXTRACTED #community/motionpy

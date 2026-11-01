@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_drawn_opener.py"
 type: "code"
-community: "test_full_scenes.py"
+community: "pathlib"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_full_scenespy
+  - community/pathlib
 ---
 
 # test_drawn_opener.py
@@ -15,7 +15,7 @@ tags:
 - [[Tests for the drawn opener (drawn_opener.py + drawn, 2026-10-30) the lint on…]] - `rationale_for` [EXTRACTED]
 - [[__init__.py]] - `imports_from` [EXTRACTED]
 - [[drawn_opener.py]] - `imports_from` [EXTRACTED]
-- [[fake_ai()_1]] - `contains` [EXTRACTED]
+- [[fake_ai()]] - `contains` [EXTRACTED]
 - [[llm.py]] - `imports_from` [EXTRACTED]
 - [[look()]] - `contains` [EXTRACTED]
 - [[media_tools.py]] - `imports_from` [EXTRACTED]
@@ -34,4 +34,4 @@ tags:
 - [[test_use_opener_plays_the_drawn_opener()]] - `contains` [EXTRACTED]
 - [[traceback]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_full_scenespy
+#graphify/code #graphify/EXTRACTED #community/pathlib

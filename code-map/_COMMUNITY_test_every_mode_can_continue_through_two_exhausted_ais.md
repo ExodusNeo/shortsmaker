@@ -8,7 +8,7 @@ members: 8
 **Members:** 8 nodes
 
 ## Members
-- [[ask()_12]] - code - tests/test_ai_modes.py
+- [[ask()_13]] - code - tests/test_ai_modes.py
 - [[claude()]] - code - tests/test_ai_modes.py
 - [[fake_providers()]] - code - tests/test_ai_modes.py
 - [[reply()_1]] - code - tests/test_ai_modes.py
@@ -25,7 +25,7 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 5 edges to [[_COMMUNITY_subprocess]]
+- 5 edges to [[_COMMUNITY_llm.py]]
 - 3 edges to [[_COMMUNITY_main_1]]
 - 2 edges to [[_COMMUNITY_edit_scripts]]
 - 2 edges to [[_COMMUNITY_ask_ai]]

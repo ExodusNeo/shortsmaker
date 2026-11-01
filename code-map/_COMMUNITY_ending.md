@@ -20,7 +20,7 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 1 edge to [[_COMMUNITY_test_blender_plan.py]]
-- 1 edge to [[_COMMUNITY_test_full_scenes.py]]
+- 1 edge to [[_COMMUNITY___init__.py]]
 
 ## Top bridge nodes
 - [[ending()]] - degree 3, connects to 2 communities

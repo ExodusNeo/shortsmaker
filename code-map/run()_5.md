@@ -1,17 +1,19 @@
 ---
-source_file: "tests/test_style.py"
+source_file: "tests/test_h3_handoff.py"
 type: "code"
-community: "style_placeholders"
-location: "L321"
+community: "short_with"
+location: "L95"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/style_placeholders
+  - community/short_with
 ---
 
 # run()
 
 ## Connections
-- [[test_failed_invention_keeps_the_others()]] - `contains` [EXTRACTED]
+- [[fake_ai()_1]] - `calls` [EXTRACTED]
+- [[short_with()]] - `calls` [EXTRACTED]
+- [[test_tells_owner_after_five_failed_rounds()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/style_placeholders
+#graphify/code #graphify/EXTRACTED #community/short_with

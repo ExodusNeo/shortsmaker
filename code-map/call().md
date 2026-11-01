@@ -1,12 +1,12 @@
 ---
 source_file: "colab/h3_run.py"
 type: "code"
-community: "time"
+community: "json"
 location: "L69"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/time
+  - community/json
 ---
 
 # call()
@@ -14,6 +14,6 @@ tags:
 ## Connections
 - [[h3_run.py]] - `contains` [EXTRACTED]
 - [[json]] - `calls` [EXTRACTED]
-- [[main()_1]] - `calls` [EXTRACTED]
+- [[main()_2]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/time
+#graphify/code #graphify/EXTRACTED #community/json

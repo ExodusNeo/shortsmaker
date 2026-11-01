@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/motion.py"
 type: "code"
-community: "redraw_custom"
+community: "motion.py"
 location: "L85"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/redraw_custom
+  - community/motionpy
 ---
 
 # fallback_custom_tsx()
@@ -19,4 +19,4 @@ tags:
 - [[re]] - `calls` [EXTRACTED]
 - [[test_fallback_custom_is_clean()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/redraw_custom
+#graphify/code #graphify/EXTRACTED #community/motionpy

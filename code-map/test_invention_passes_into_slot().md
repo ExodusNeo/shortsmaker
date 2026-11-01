@@ -1,21 +1,21 @@
 ---
 source_file: "tests/test_style.py"
 type: "code"
-community: "style_placeholders"
+community: "invent_component"
 location: "L252"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/style_placeholders
+  - community/invent_component
 ---
 
 # test_invention_passes_into_slot()
 
 ## Connections
 - [[invent_component()]] - `calls` [EXTRACTED]
-- [[run()_6]] - `indirect_call` [INFERRED]
+- [[run()_1]] - `indirect_call` [INFERRED]
 - [[style_placeholders()]] - `calls` [EXTRACTED]
 - [[test_style.py]] - `contains` [EXTRACTED]
-- [[with_fakes()_1]] - `calls` [EXTRACTED]
+- [[with_fakes()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/style_placeholders
+#graphify/code #graphify/EXTRACTED #community/invent_component

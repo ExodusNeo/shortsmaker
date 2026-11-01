@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "test_style.py"
+community: "llm.py"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/test_stylepy
+  - community/llmpy
 ---
 
 # datetime
@@ -16,4 +16,4 @@ tags:
 - [[retention.py]] - `imports_from` [EXTRACTED]
 - [[scene_repair.py]] - `imports_from` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/test_stylepy
+#graphify/concept #graphify/EXTRACTED #community/llmpy

@@ -2,7 +2,7 @@
 source_file: "shortsmaker/short_render.py"
 type: "code"
 community: "finish_render"
-location: "L459"
+location: "L467"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[Finish reportsreviews from a committed video; resume reaches here without…]] - `rationale_for` [EXTRACTED]
-- [[Path_30]] - `references` [EXTRACTED]
+- [[Path_11]] - `references` [EXTRACTED]
 - [[apply_review_fixes()]] - `calls` [EXTRACTED]
 - [[drawn_thumbnail()]] - `calls` [EXTRACTED]
 - [[edit_plan()]] - `calls` [EXTRACTED]
@@ -24,7 +24,7 @@ tags:
 - [[quality_check()]] - `calls` [EXTRACTED]
 - [[re]] - `calls` [EXTRACTED]
 - [[remove()]] - `calls` [EXTRACTED]
-- [[render()_2]] - `calls` [EXTRACTED]
+- [[render()_3]] - `calls` [EXTRACTED]
 - [[render_remotion()]] - `calls` [EXTRACTED]
 - [[resume_runs()]] - `calls` [EXTRACTED]
 - [[save_state()]] - `calls` [EXTRACTED]

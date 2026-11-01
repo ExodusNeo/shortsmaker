@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/motion.py"
 type: "code"
-community: "code_custom_scenes"
+community: "motion.py"
 location: "L279"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/code_custom_scenes
+  - community/motionpy
 ---
 
 # look_and_fix()
@@ -23,4 +23,4 @@ tags:
 - [[preview_custom()]] - `calls` [EXTRACTED]
 - [[test_look_check_fixes_code()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/code_custom_scenes
+#graphify/code #graphify/EXTRACTED #community/motionpy

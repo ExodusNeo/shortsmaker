@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_style.py"
 type: "code"
-community: "article_text"
+community: "plan_with"
 location: "L134"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/article_text
+  - community/plan_with
 ---
 
 # test_director_prompt_lists_library()
@@ -16,4 +16,4 @@ tags:
 - [[style_library()]] - `calls` [EXTRACTED]
 - [[test_style.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/article_text
+#graphify/code #graphify/EXTRACTED #community/plan_with

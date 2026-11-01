@@ -37,10 +37,11 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 10 edges to [[_COMMUNITY_subprocess]]
-- 4 edges to [[_COMMUNITY_write_json]]
+- 10 edges to [[_COMMUNITY_pathlib]]
+- 3 edges to [[_COMMUNITY_render]]
 - 2 edges to [[_COMMUNITY_finish_render]]
 - 2 edges to [[_COMMUNITY_re]]
+- 1 edge to [[_COMMUNITY_duration]]
 
 ## Top bridge nodes
 - [[remove()]] - degree 6, connects to 3 communities

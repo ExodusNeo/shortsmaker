@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/media_library.py"
 type: "code"
-community: "re"
+community: "extra_sources.py"
 location: "L109"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/re
+  - community/extra_sourcespy
 ---
 
 # media_search_words()
@@ -16,4 +16,4 @@ tags:
 - [[media_library.py]] - `contains` [EXTRACTED]
 - [[re]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/re
+#graphify/code #graphify/EXTRACTED #community/extra_sourcespy

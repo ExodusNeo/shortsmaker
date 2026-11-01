@@ -1,17 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "time"
+community: "render"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/time
+  - community/render
 ---
 
 # Path
 
 ## Connections
-- [[fit_start()]] - `references` [EXTRACTED]
-- [[saved_file()]] - `references` [EXTRACTED]
+- [[apply()]] - `references` [EXTRACTED]
+- [[preview()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/time
+#graphify/code #graphify/EXTRACTED #community/render

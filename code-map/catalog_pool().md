@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/picture_pool.py"
 type: "code"
-community: "catalog_pool"
+community: "test_pictures_first.py"
 location: "L282"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/catalog_pool
+  - community/test_pictures_firstpy
 ---
 
 # catalog_pool()
@@ -32,4 +32,4 @@ tags:
 - [[test_corrupt_pool_and_catalog_redone()]] - `calls` [EXTRACTED]
 - [[write_json()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/catalog_pool
+#graphify/code #graphify/EXTRACTED #community/test_pictures_firstpy

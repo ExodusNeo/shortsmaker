@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_render_resume.py"
 type: "code"
-community: "make_opener"
+community: "drawn_opener.py"
 location: "L23"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/make_opener
+  - community/drawn_openerpy
 ---
 
 # .render_fixture()
@@ -18,4 +18,4 @@ tags:
 - [[review()]] - `indirect_call` [INFERRED]
 - [[voice()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/make_opener
+#graphify/code #graphify/EXTRACTED #community/drawn_openerpy

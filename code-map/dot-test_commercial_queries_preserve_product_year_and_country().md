@@ -2,7 +2,7 @@
 source_file: "tests/test_media.py"
 type: "code"
 community: "MediaTests"
-location: "L206"
+location: "L305"
 tags:
   - graphify/code
   - graphify/EXTRACTED

@@ -1,18 +1,18 @@
 ---
 source_file: "shortsmaker/motion.py"
 type: "code"
-community: "render"
+community: "motion.py"
 location: "L15"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/render
+  - community/motionpy
 ---
 
 # graphics_count()
 
 ## Connections
 - [[motion.py]] - `contains` [EXTRACTED]
-- [[render()_2]] - `calls` [EXTRACTED]
+- [[render()_3]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/render
+#graphify/code #graphify/EXTRACTED #community/motionpy

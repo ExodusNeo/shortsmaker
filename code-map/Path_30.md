@@ -1,21 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "finish_render"
+community: "scene_frames"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/finish_render
+  - community/scene_frames
 ---
 
 # Path
 
 ## Connections
-- [[drawn_thumbnail()]] - `references` [EXTRACTED]
-- [[finish_render()]] - `references` [EXTRACTED]
-- [[load_state()]] - `references` [EXTRACTED]
-- [[render()_2]] - `references` [EXTRACTED]
-- [[save_state()]] - `references` [EXTRACTED]
-- [[use_opener()]] - `references` [EXTRACTED]
+- [[drawn_short()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/finish_render
+#graphify/code #graphify/EXTRACTED #community/scene_frames

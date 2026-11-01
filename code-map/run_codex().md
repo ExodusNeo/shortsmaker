@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[A read-only task through the signed-in ChatGPT subscription, with no API-key…]] - `rationale_for` [EXTRACTED]
-- [[Path_17]] - `references` [EXTRACTED]
+- [[Path_18]] - `references` [EXTRACTED]
 - [[ask_ai()]] - `calls` [EXTRACTED]
 - [[llm.py]] - `contains` [EXTRACTED]
 - [[test_codex_failure_is_bounded()]] - `calls` [EXTRACTED]

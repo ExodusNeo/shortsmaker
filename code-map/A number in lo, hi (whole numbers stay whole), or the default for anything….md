@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/blender_plan.py"
 type: "rationale"
-community: "retention.py"
+community: "test_blender_plan.py"
 location: "L34"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/retentionpy
+  - community/test_blender_planpy
 ---
 
 # A number in [lo, hi] (whole numbers stay whole), or the default for anything…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[clamp()_1]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/retentionpy
+#graphify/rationale #graphify/EXTRACTED #community/test_blender_planpy

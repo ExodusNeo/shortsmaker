@@ -12,7 +12,7 @@ tags:
 # apply_review_fixes()
 
 ## Connections
-- [[Path_14]] - `references` [EXTRACTED]
+- [[Path_20]] - `references` [EXTRACTED]
 - [[The automatic fixes after a render's review (up to AUTO_REPAINT_MAX scenes per…]] - `rationale_for` [EXTRACTED]
 - [[finish_render()]] - `calls` [EXTRACTED]
 - [[paint_new()]] - `calls` [EXTRACTED]

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/audio_mix.py"
 type: "code"
-community: "freesound_results"
+community: "media_command"
 location: "L126"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/freesound_results
+  - community/media_command
 ---
 
 # rank()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[freesound_results()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/INFERRED #community/freesound_results
+#graphify/code #graphify/INFERRED #community/media_command

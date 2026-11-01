@@ -1,22 +1,26 @@
 ---
 type: community
-members: 10
+members: 14
 ---
 
 # edit_plan
 
-**Members:** 10 nodes
+**Members:** 14 nodes
 
 ## Members
-- [[Path_27]] - code
+- [[Path_25]] - code
 - [[Plain-English name of the Short's photo look for edit_plan.txt.]] - rationale - shortsmaker/editplan.py
 - [[Plain-English scene change for edit_plan.txt.]] - rationale - shortsmaker/editplan.py
 - [[Timestamped edit decision list of exactly what was rendered, plus the sound-…]] - rationale - shortsmaker/editplan.py
+- [[ask()_12]] - code - tests/test_story.py
+- [[cold_read_line()]] - code - shortsmaker/editplan.py
 - [[cut_text()]] - code - shortsmaker/editplan.py
 - [[edit_plan()]] - code - shortsmaker/editplan.py
+- [[edit_plan.txt how the cold reader (writing.cold_read) heard the final script.]] - rationale - shortsmaker/editplan.py
 - [[edit_plan.txt what the pictures-first check found (None for a plan made before…]] - rationale - shortsmaker/editplan.py
 - [[look_text()]] - code - shortsmaker/editplan.py
 - [[picture_line()]] - code - shortsmaker/editplan.py
+- [[test_cold_read_uses_other_ai_in_solo_and_collaborative_modes()]] - code - tests/test_story.py
 - [[test_edit_plan_picture_line()]] - code - tests/test_pictures_first.py
 
 ## Live Query (requires Dataview plugin)
@@ -27,16 +31,17 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 4 edges to [[_COMMUNITY_test_full_scenes.py]]
+- 5 edges to [[_COMMUNITY_pathlib]]
 - 2 edges to [[_COMMUNITY_style_library]]
+- 1 edge to [[_COMMUNITY_edit_scripts]]
 - 1 edge to [[_COMMUNITY_visual_review]]
-- 1 edge to [[_COMMUNITY_cold_read_line]]
 - 1 edge to [[_COMMUNITY_finish_render]]
 - 1 edge to [[_COMMUNITY_test_pictures_first.py]]
+- 1 edge to [[_COMMUNITY_test_story.py]]
 
 ## Top bridge nodes
-- [[edit_plan()]] - degree 9, connects to 4 communities
+- [[edit_plan()]] - degree 9, connects to 3 communities
 - [[cut_text()]] - degree 4, connects to 2 communities
 - [[look_text()]] - degree 4, connects to 2 communities
-- [[picture_line()]] - degree 4, connects to 1 community
-- [[test_edit_plan_picture_line()]] - degree 2, connects to 1 community
+- [[test_cold_read_uses_other_ai_in_solo_and_collaborative_modes()]] - degree 4, connects to 2 communities
+- [[cold_read_line()]] - degree 4, connects to 1 community

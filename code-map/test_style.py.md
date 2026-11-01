@@ -66,7 +66,7 @@ tags:
 - [[test_unknown_names_fall_back()]] - `contains` [EXTRACTED]
 - [[test_write_style_index_is_deterministic()]] - `contains` [EXTRACTED]
 - [[topic_ideas.py]] - `imports_from` [EXTRACTED]
-- [[with_fakes()_1]] - `contains` [EXTRACTED]
+- [[with_fakes()]] - `contains` [EXTRACTED]
 - [[writing.py]] - `imports_from` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/test_stylepy
