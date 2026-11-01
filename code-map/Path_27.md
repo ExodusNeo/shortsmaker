@@ -1,17 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "hashlib"
+community: "log_short"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/hashlib
+  - community/log_short
 ---
 
 # Path
 
 ## Connections
-- [[load()_1]] - `references` [EXTRACTED]
-- [[save()]] - `references` [EXTRACTED]
+- [[log_short()]] - `references` [EXTRACTED]
+- [[vault_page()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/hashlib
+#graphify/code #graphify/EXTRACTED #community/log_short

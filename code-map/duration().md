@@ -1,25 +1,25 @@
 ---
 source_file: "shortsmaker/media_tools.py"
 type: "code"
-community: "duration"
+community: "ffmpeg"
 location: "L22"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/duration
+  - community/ffmpeg
 ---
 
 # duration()
 
 ## Connections
-- [[Path_24]] - `references` [EXTRACTED]
+- [[Path_22]] - `references` [EXTRACTED]
 - [[apply()]] - `calls` [EXTRACTED]
 - [[brand_films()]] - `calls` [EXTRACTED]
 - [[local_assets()]] - `calls` [EXTRACTED]
 - [[log_short()]] - `calls` [EXTRACTED]
 - [[media_tools.py]] - `contains` [EXTRACTED]
 - [[nasa_films()]] - `calls` [EXTRACTED]
-- [[render()_3]] - `calls` [EXTRACTED]
+- [[render()]] - `calls` [EXTRACTED]
 - [[render_remotion()]] - `calls` [EXTRACTED]
 - [[review_audio_files()]] - `calls` [EXTRACTED]
 - [[shot_span()]] - `calls` [EXTRACTED]
@@ -32,4 +32,4 @@ tags:
 - [[test_render_clips_makes_one_clip_per_scene()]] - `calls` [EXTRACTED]
 - [[track_start()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/duration
+#graphify/code #graphify/EXTRACTED #community/ffmpeg

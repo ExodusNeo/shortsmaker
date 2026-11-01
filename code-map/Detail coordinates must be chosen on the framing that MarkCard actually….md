@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_marks.py"
 type: "rationale"
-community: "llm.py"
+community: "test_full_scenes.py"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/llmpy
+  - community/test_full_scenespy
 ---
 
 # Detail coordinates must be chosen on the framing that MarkCard actually…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[test_marks.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/llmpy
+#graphify/rationale #graphify/EXTRACTED #community/test_full_scenespy

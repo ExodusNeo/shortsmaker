@@ -12,7 +12,7 @@ tags:
 # test_fact_check_rewrites_get_the_story_rules_again()
 
 ## Connections
-- [[fact_check()_1]] - `indirect_call` [INFERRED]
+- [[fact_check()]] - `indirect_call` [INFERRED]
 - [[passing()]] - `calls` [EXTRACTED]
 - [[planning]] - `calls` [EXTRACTED]
 - [[test_pictures_first.py]] - `contains` [EXTRACTED]

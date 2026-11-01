@@ -1,20 +1,20 @@
 ---
 source_file: "colab/h3_run.py"
 type: "code"
-community: "json"
+community: "time"
 location: "L34"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/json
+  - community/time
 ---
 
 # fit_start()
 
 ## Connections
 - [[Centre-crop the start picture to 768x1344 the H3 node stretches off-aspect…]] - `rationale_for` [EXTRACTED]
-- [[Path_8]] - `references` [EXTRACTED]
+- [[Path_10]] - `references` [EXTRACTED]
 - [[h3_run.py]] - `contains` [EXTRACTED]
-- [[main()_2]] - `calls` [EXTRACTED]
+- [[main()_1]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/json
+#graphify/code #graphify/EXTRACTED #community/time

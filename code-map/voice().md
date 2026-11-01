@@ -2,7 +2,7 @@
 source_file: "tests/test_render_resume.py"
 type: "code"
 community: "drawn_opener.py"
-location: "L53"
+location: "L58"
 tags:
   - graphify/code
   - graphify/INFERRED

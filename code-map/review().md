@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[dot-render_fixture()]] - `indirect_call` [INFERRED]
-- [[Path_9]] - `references` [EXTRACTED]
+- [[Path_12]] - `references` [EXTRACTED]
 - [[The art director's score (1-10) of a draft's preview sheet and what to fix.…]] - `rationale_for` [EXTRACTED]
 - [[ask_ai()]] - `calls` [EXTRACTED]
 - [[drawn_opener.py]] - `contains` [EXTRACTED]

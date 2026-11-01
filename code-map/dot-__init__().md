@@ -1,17 +1,17 @@
 ---
 source_file: "tests/test_pictures_first.py"
 type: "code"
-community: "owner"
-location: "L38"
+community: "write_scripts"
+location: "L205"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/owner
+  - community/write_scripts
 ---
 
 # .__init__()
 
 ## Connections
-- [[stubbed]] - `method` [EXTRACTED]
+- [[planning]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/owner
+#graphify/code #graphify/EXTRACTED #community/write_scripts

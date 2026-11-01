@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_topic_ideas.py"
 type: "code"
-community: "fetch_ideas"
+community: "pick_ideas"
 location: "L50"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/fetch_ideas
+  - community/pick_ideas
 ---
 
 # test_pages_setting()
@@ -15,4 +15,4 @@ tags:
 - [[pages()]] - `calls` [EXTRACTED]
 - [[test_topic_ideas.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/fetch_ideas
+#graphify/code #graphify/EXTRACTED #community/pick_ideas

@@ -1,15 +1,16 @@
 ---
 type: community
-members: 17
+members: 19
 ---
 
 # ReliabilityTests
 
-**Members:** 17 nodes
+**Members:** 19 nodes
 
 ## Members
 - [[dot-setUp()_1]] - code - tests/test_reliability.py
 - [[dot-test_batch_keeps_failed_folder_and_queues_all_scripts_before_rendering()]] - code - tests/test_reliability.py
+- [[dot-test_checkpoint_image_marker_rejects_non_png_payload()]] - code - tests/test_reliability.py
 - [[dot-test_download_retry_is_bounded_and_preserves_wikimedia_backoff()]] - code - tests/test_reliability.py
 - [[dot-test_duplicate_finalization_does_not_duplicate_logbook_entries()]] - code - tests/test_reliability.py
 - [[dot-test_long_node_errors_keep_the_actual_error_headline()]] - code - tests/test_reliability.py
@@ -17,6 +18,7 @@ members: 17
 - [[dot-test_preview_failure_does_not_call_reviewer()]] - code - tests/test_reliability.py
 - [[dot-test_recovery_uses_only_reviewed_unused_candidates_and_retains_credit()]] - code - tests/test_reliability.py
 - [[dot-test_render_context_restores_photos_paths_and_integer_clip_keys()]] - code - tests/test_reliability.py
+- [[dot-test_render_context_restores_real_person_card_image_and_transparency()]] - code - tests/test_reliability.py
 - [[dot-test_resume_rendered_stage_does_not_render_or_generate_voice()]] - code - tests/test_reliability.py
 - [[dot-test_stale_repair_preview_cannot_overwrite_video()]] - code - tests/test_reliability.py
 - [[dot-test_unfinished_files_survive_normal_pruning()]] - code - tests/test_reliability.py
@@ -34,7 +36,7 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 1 edge to [[_COMMUNITY_llm.py]]
+- 1 edge to [[_COMMUNITY_test_full_scenes.py]]
 
 ## Top bridge nodes
-- [[ReliabilityTests]] - degree 15, connects to 1 community
+- [[ReliabilityTests]] - degree 17, connects to 1 community

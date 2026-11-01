@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[audio_mix.py]] - `contains` [EXTRACTED]
 - [[download_audio_choices()]] - `calls` [EXTRACTED]
-- [[fetch()_1]] - `calls` [EXTRACTED]
+- [[fetch()]] - `calls` [EXTRACTED]
 - [[freesound_fetch()]] - `calls` [EXTRACTED]
 - [[source_music()]] - `calls` [EXTRACTED]
 

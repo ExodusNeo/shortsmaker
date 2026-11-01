@@ -2,7 +2,7 @@
 source_file: "shortsmaker/checkpoints.py"
 type: "code"
 community: "main"
-location: "L49"
+location: "L62"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,14 +12,14 @@ tags:
 # update()
 
 ## Connections
-- [[Path_13]] - `references` [EXTRACTED]
+- [[Path_16]] - `references` [EXTRACTED]
 - [[checkpoints.py]] - `contains` [EXTRACTED]
 - [[finish_short()]] - `calls` [EXTRACTED]
-- [[main()_5]] - `calls` [EXTRACTED]
+- [[main()_3]] - `calls` [EXTRACTED]
 - [[pack()]] - `calls` [EXTRACTED]
 - [[read()_1]] - `calls` [EXTRACTED]
 - [[record_failure()]] - `calls` [EXTRACTED]
-- [[render()_3]] - `calls` [EXTRACTED]
+- [[render()]] - `calls` [EXTRACTED]
 - [[resume_runs()]] - `calls` [EXTRACTED]
 - [[write_json()]] - `calls` [EXTRACTED]
 

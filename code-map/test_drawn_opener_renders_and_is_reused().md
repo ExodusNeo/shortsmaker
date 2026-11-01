@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[A draft that passes coded, previewed (6 frames), approved, rendered as scene 1…]] - `rationale_for` [EXTRACTED]
 - [[duration()]] - `calls` [EXTRACTED]
-- [[fake_ai()]] - `calls` [EXTRACTED]
+- [[fake_ai()_1]] - `calls` [EXTRACTED]
 - [[make_opener()]] - `calls` [EXTRACTED]
 - [[short()]] - `calls` [EXTRACTED]
 - [[test_drawn_opener.py]] - `contains` [EXTRACTED]

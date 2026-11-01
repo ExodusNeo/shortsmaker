@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/audio_mix.py"
 type: "code"
-community: "render"
+community: "captions"
 location: "L410"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/render
+  - community/captions
 ---
 
 # music_gain()
@@ -17,8 +17,8 @@ tags:
 - [[audio_mix.py]] - `contains` [EXTRACTED]
 - [[preview_mix()]] - `calls` [EXTRACTED]
 - [[re]] - `calls` [EXTRACTED]
-- [[render()_3]] - `calls` [EXTRACTED]
+- [[render()]] - `calls` [EXTRACTED]
 - [[subprocess]] - `calls` [EXTRACTED]
 - [[test_music_gain_evens_out_tracks()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/render
+#graphify/code #graphify/EXTRACTED #community/captions

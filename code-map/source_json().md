@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[europeana_images()]] - `calls` [EXTRACTED]
 - [[extra_sources.py]] - `contains` [EXTRACTED]
-- [[fetch()_1]] - `calls` [EXTRACTED]
+- [[fetch()]] - `calls` [EXTRACTED]
 - [[hashlib]] - `calls` [EXTRACTED]
 - [[json]] - `calls` [EXTRACTED]
 - [[loc_images()]] - `calls` [EXTRACTED]

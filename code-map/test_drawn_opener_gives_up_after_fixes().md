@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[The art director scores every draft below PASS FIXES rewrites (each told the…]] - `rationale_for` [EXTRACTED]
-- [[fake_ai()]] - `calls` [EXTRACTED]
+- [[fake_ai()_1]] - `calls` [EXTRACTED]
 - [[make_opener()]] - `calls` [EXTRACTED]
 - [[short()]] - `calls` [EXTRACTED]
 - [[test_drawn_opener.py]] - `contains` [EXTRACTED]

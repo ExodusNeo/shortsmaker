@@ -25,7 +25,7 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 5 edges to [[_COMMUNITY_llm.py]]
+- 5 edges to [[_COMMUNITY_pathlib]]
 - 3 edges to [[_COMMUNITY_main_1]]
 - 2 edges to [[_COMMUNITY_edit_scripts]]
 - 2 edges to [[_COMMUNITY_ask_ai]]

@@ -15,7 +15,7 @@ tags:
 - [[Tests for the drawn opener (drawn_opener.py + drawn, 2026-10-30) the lint on…]] - `rationale_for` [EXTRACTED]
 - [[__init__.py]] - `imports_from` [EXTRACTED]
 - [[drawn_opener.py]] - `imports_from` [EXTRACTED]
-- [[fake_ai()]] - `contains` [EXTRACTED]
+- [[fake_ai()_1]] - `contains` [EXTRACTED]
 - [[llm.py]] - `imports_from` [EXTRACTED]
 - [[look()]] - `contains` [EXTRACTED]
 - [[media_tools.py]] - `imports_from` [EXTRACTED]

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/plan_rules.py"
 type: "code"
-community: "words_of"
+community: "is_loop_short"
 location: "L302"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/words_of
+  - community/is_loop_short
 ---
 
 # fill_money_graphics()
@@ -19,4 +19,4 @@ tags:
 - [[words_of()]] - `calls` [EXTRACTED]
 - [[write_scripts()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/words_of
+#graphify/code #graphify/EXTRACTED #community/is_loop_short

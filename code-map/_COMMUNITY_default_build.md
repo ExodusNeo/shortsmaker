@@ -25,9 +25,9 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 5 edges to [[_COMMUNITY_test_blender_plan.py]]
-- 2 edges to [[_COMMUNITY___init__.py]]
+- 2 edges to [[_COMMUNITY_pathlib]]
 - 1 edge to [[_COMMUNITY_test_blender_render.py]]
-- 1 edge to [[_COMMUNITY_scene_frames]]
+- 1 edge to [[_COMMUNITY_drawn_thumbnail]]
 - 1 edge to [[_COMMUNITY_test_blender_scene.py]]
 - 1 edge to [[_COMMUNITY_write_scripts]]
 

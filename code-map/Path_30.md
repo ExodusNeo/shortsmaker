@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "scene_frames"
+community: "json"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/scene_frames
+  - community/json
 ---
 
 # Path
 
 ## Connections
-- [[drawn_short()]] - `references` [EXTRACTED]
+- [[load()_1]] - `references` [EXTRACTED]
+- [[save()_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/scene_frames
+#graphify/code #graphify/EXTRACTED #community/json

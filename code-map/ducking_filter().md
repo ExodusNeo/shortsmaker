@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/audio_library.py"
 type: "code"
-community: "render"
+community: "audio_library.py"
 location: "L191"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/render
+  - community/audio_librarypy
 ---
 
 # ducking_filter()
@@ -15,7 +15,7 @@ tags:
 - [[audio_library.py]] - `contains` [EXTRACTED]
 - [[math]] - `calls` [EXTRACTED]
 - [[preview_mix()]] - `calls` [EXTRACTED]
-- [[render()_3]] - `calls` [EXTRACTED]
+- [[render()]] - `calls` [EXTRACTED]
 - [[settings()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/render
+#graphify/code #graphify/EXTRACTED #community/audio_librarypy

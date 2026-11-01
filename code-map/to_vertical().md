@@ -16,7 +16,7 @@ tags:
 - [[Path_34]] - `references` [EXTRACTED]
 - [[paint_instead()]] - `calls` [EXTRACTED]
 - [[photo_prep.py]] - `contains` [EXTRACTED]
-- [[render()_3]] - `calls` [EXTRACTED]
+- [[render()]] - `calls` [EXTRACTED]
 - [[vertical_image()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/clean_photo

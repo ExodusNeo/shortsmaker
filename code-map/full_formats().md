@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/picker.py"
 type: "code"
-community: "test_full_scenes.py"
+community: "render"
 location: "L307"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_full_scenespy
+  - community/render
 ---
 
 # full_formats()
@@ -17,4 +17,4 @@ tags:
 - [[picker.py]] - `contains` [EXTRACTED]
 - [[rescue_graphics()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_full_scenespy
+#graphify/code #graphify/EXTRACTED #community/render

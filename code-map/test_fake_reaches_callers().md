@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_package.py"
 type: "code"
-community: "ask_ai"
+community: "code_custom_scenes"
 location: "L36"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ask_ai
+  - community/code_custom_scenes
 ---
 
 # test_fake_reaches_callers()
@@ -15,4 +15,4 @@ tags:
 - [[code_custom_scenes()]] - `calls` [EXTRACTED]
 - [[test_package.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ask_ai
+#graphify/code #graphify/EXTRACTED #community/code_custom_scenes

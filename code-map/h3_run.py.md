@@ -1,12 +1,12 @@
 ---
 source_file: "colab/h3_run.py"
 type: "code"
-community: "json"
+community: "time"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/json
+  - community/time
 ---
 
 # h3_run.py
@@ -18,7 +18,7 @@ tags:
 - [[frames()]] - `contains` [EXTRACTED]
 - [[graph()]] - `contains` [EXTRACTED]
 - [[json]] - `imports` [EXTRACTED]
-- [[main()_2]] - `contains` [EXTRACTED]
+- [[main()_1]] - `contains` [EXTRACTED]
 - [[pathlib]] - `imports_from` [EXTRACTED]
 - [[pil]] - `imports_from` [EXTRACTED]
 - [[saved_file()]] - `contains` [EXTRACTED]
@@ -29,4 +29,4 @@ tags:
 - [[urllib_request]] - `imports` [EXTRACTED]
 - [[zipfile]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/json
+#graphify/code #graphify/EXTRACTED #community/time

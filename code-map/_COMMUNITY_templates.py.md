@@ -9,7 +9,7 @@ members: 28
 
 ## Members
 - [[(part, exact) the part the Short is about, by the plan's spot; the gusset at…]] - rationale - blender/templates.py
-- [[dot-__init__()_3]] - code - blender/templates.py
+- [[dot-__init__()_5]] - code - blender/templates.py
 - [[dot-add()]] - code - blender/templates.py
 - [[dot-center()]] - code - blender/templates.py
 - [[dot-node()]] - code - blender/templates.py
@@ -28,7 +28,7 @@ members: 28
 - [[_sag_points()]] - code - blender/templates.py
 - [[_towers()]] - code - blender/templates.py
 - [[_truss_panel_members()]] - code - blender/templates.py
-- [[build()_1]] - code - blender/templates.py
+- [[build()]] - code - blender/templates.py
 - [[cable_stayed_bridge()]] - code - blender/templates.py
 - [[eyebar_chain_bridge()]] - code - blender/templates.py
 - [[focus_object()]] - code - blender/templates.py

@@ -25,8 +25,8 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 4 edges to [[_COMMUNITY_pathlib]]
+- 1 edge to [[_COMMUNITY_paint_opener_start]]
 - 1 edge to [[_COMMUNITY_finish_render]]
-- 1 edge to [[_COMMUNITY_render]]
 
 ## Top bridge nodes
 - [[use()]] - degree 5, connects to 2 communities

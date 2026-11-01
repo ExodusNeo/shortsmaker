@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_reliability.py"
 type: "code"
-community: "llm.py"
+community: "test_full_scenes.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/llmpy
+  - community/test_full_scenespy
 ---
 
 # test_reliability.py
@@ -18,7 +18,9 @@ tags:
 - [[checkpoints.py]] - `imports_from` [EXTRACTED]
 - [[cli.py]] - `imports_from` [EXTRACTED]
 - [[drawn_opener.py]] - `imports_from` [EXTRACTED]
+- [[frame_render.py]] - `imports_from` [EXTRACTED]
 - [[gpu.py]] - `imports_from` [EXTRACTED]
+- [[io]] - `imports` [EXTRACTED]
 - [[json]] - `imports` [EXTRACTED]
 - [[llm.py]] - `imports_from` [EXTRACTED]
 - [[logbook.py]] - `imports_from` [EXTRACTED]
@@ -26,6 +28,7 @@ tags:
 - [[os]] - `imports` [EXTRACTED]
 - [[pathlib]] - `imports_from` [EXTRACTED]
 - [[picker.py]] - `imports_from` [EXTRACTED]
+- [[pil]] - `imports_from` [EXTRACTED]
 - [[review.py]] - `imports_from` [EXTRACTED]
 - [[scene_repair.py]] - `imports_from` [EXTRACTED]
 - [[session.py]] - `imports_from` [EXTRACTED]
@@ -37,4 +40,4 @@ tags:
 - [[unittest_mock]] - `imports_from` [EXTRACTED]
 - [[voice_cache.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/llmpy
+#graphify/code #graphify/EXTRACTED #community/test_full_scenespy

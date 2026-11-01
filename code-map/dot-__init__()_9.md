@@ -1,17 +1,17 @@
 ---
-source_file: "tests/test_pictures_first.py"
+source_file: "tools/split_make_shorts.py"
 type: "code"
-community: "choose_images"
-location: "L341"
+community: "split_make_shorts.py"
+location: "L385"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/choose_images
+  - community/split_make_shortspy
 ---
 
 # .__init__()
 
 ## Connections
-- [[picking]] - `method` [EXTRACTED]
+- [[Unqualify]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/choose_images
+#graphify/code #graphify/EXTRACTED #community/split_make_shortspy

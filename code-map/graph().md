@@ -1,12 +1,12 @@
 ---
 source_file: "colab/h3_run.py"
 type: "code"
-community: "json"
+community: "time"
 location: "L39"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/json
+  - community/time
 ---
 
 # graph()
@@ -14,6 +14,6 @@ tags:
 ## Connections
 - [[ComfyUI API graph for one first-frame clip. No negative prompt H3's graph uses…]] - `rationale_for` [EXTRACTED]
 - [[h3_run.py]] - `contains` [EXTRACTED]
-- [[main()_2]] - `calls` [EXTRACTED]
+- [[main()_1]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/json
+#graphify/code #graphify/EXTRACTED #community/time

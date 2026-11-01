@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/extra_sources.py"
 type: "code"
-community: "extra_sources.py"
+community: "brand_images"
 location: "L168"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/extra_sourcespy
+  - community/brand_images
 ---
 
 # brand_page()
@@ -16,7 +16,7 @@ tags:
 - [[brand_films()]] - `calls` [EXTRACTED]
 - [[brand_images()]] - `calls` [EXTRACTED]
 - [[extra_sources.py]] - `contains` [EXTRACTED]
-- [[fetch()_1]] - `calls` [EXTRACTED]
+- [[fetch()]] - `calls` [EXTRACTED]
 - [[source_status()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/extra_sourcespy
+#graphify/code #graphify/EXTRACTED #community/brand_images

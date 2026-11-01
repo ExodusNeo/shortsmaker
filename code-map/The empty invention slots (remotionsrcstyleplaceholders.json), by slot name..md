@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/style_lab.py"
 type: "rationale"
-community: "invent_component"
+community: "style_placeholders"
 location: "L89"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/invent_component
+  - community/style_placeholders
 ---
 
 # The empty invention slots (remotion/src/style/placeholders.json), by slot name.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[style_placeholders()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/invent_component
+#graphify/rationale #graphify/EXTRACTED #community/style_placeholders

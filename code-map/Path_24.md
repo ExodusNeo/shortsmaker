@@ -1,18 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "duration"
+community: "first_second_check"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/duration
+  - community/first_second_check
 ---
 
 # Path
 
 ## Connections
-- [[duration()]] - `references` [EXTRACTED]
-- [[ffmpeg()]] - `references` [EXTRACTED]
-- [[write_json()]] - `references` [EXTRACTED]
+- [[_review_state()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/duration
+#graphify/code #graphify/EXTRACTED #community/first_second_check

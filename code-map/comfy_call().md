@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/gpu.py"
 type: "code"
-community: "gpu.py"
+community: "test_full_scenes.py"
 location: "L260"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/gpupy
+  - community/test_full_scenespy
 ---
 
 # comfy_call()
@@ -16,4 +16,4 @@ tags:
 - [[json]] - `calls` [EXTRACTED]
 - [[moss_images()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/gpupy
+#graphify/code #graphify/EXTRACTED #community/test_full_scenespy

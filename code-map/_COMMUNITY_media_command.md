@@ -30,20 +30,18 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 8 edges to [[_COMMUNITY_pathlib]]
-- 8 edges to [[_COMMUNITY_audio_library.py]]
+- 9 edges to [[_COMMUNITY_audio_library.py]]
+- 7 edges to [[_COMMUNITY_config.py]]
+- 3 edges to [[_COMMUNITY_test_full_scenes.py]]
 - 2 edges to [[_COMMUNITY_json]]
-- 2 edges to [[_COMMUNITY_render]]
-- 2 edges to [[_COMMUNITY_extra_sources.py]]
-- 2 edges to [[_COMMUNITY_hashlib]]
+- 2 edges to [[_COMMUNITY_ffmpeg]]
+- 2 edges to [[_COMMUNITY_main_1]]
+- 2 edges to [[_COMMUNITY_brand_images]]
 - 1 edge to [[_COMMUNITY_fetch]]
-- 1 edge to [[_COMMUNITY_llm.py]]
 - 1 edge to [[_COMMUNITY_re]]
-- 1 edge to [[_COMMUNITY_main_1]]
-- 1 edge to [[_COMMUNITY_duration]]
 
 ## Top bridge nodes
-- [[media_command()]] - degree 14, connects to 6 communities
+- [[media_command()]] - degree 14, connects to 4 communities
 - [[download_audio_choices()]] - degree 10, connects to 4 communities
 - [[review_audio_files()]] - degree 8, connects to 4 communities
 - [[freesound_results()]] - degree 7, connects to 3 communities

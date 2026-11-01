@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/topic_ideas.py"
 type: "code"
-community: "fetch_ideas"
+community: "pick_ideas"
 location: "L35"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/fetch_ideas
+  - community/pick_ideas
 ---
 
 # _words()
@@ -16,4 +16,4 @@ tags:
 - [[re]] - `calls` [EXTRACTED]
 - [[topic_ideas.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/fetch_ideas
+#graphify/code #graphify/EXTRACTED #community/pick_ideas

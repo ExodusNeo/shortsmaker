@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/frame_render.py"
 type: "code"
-community: "frame_render.py"
+community: "write_frames"
 location: "L286"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/frame_renderpy
+  - community/write_frames
 ---
 
 # write_frames()
@@ -16,7 +16,7 @@ tags:
 - [[flash_alpha()]] - `calls` [EXTRACTED]
 - [[frame()_1]] - `calls` [EXTRACTED]
 - [[frame_render.py]] - `contains` [EXTRACTED]
-- [[render()_3]] - `calls` [EXTRACTED]
+- [[render()]] - `calls` [EXTRACTED]
 - [[test_hard_cuts_never_blend_scenes()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/frame_renderpy
+#graphify/code #graphify/EXTRACTED #community/write_frames

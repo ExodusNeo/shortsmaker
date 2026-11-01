@@ -1,19 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "main"
+community: "re"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/main
+  - community/re
 ---
 
 # Path
 
 ## Connections
-- [[finish_short()]] - `references` [EXTRACTED]
-- [[record_failure()]] - `references` [EXTRACTED]
-- [[resume_runs()]] - `references` [EXTRACTED]
-- [[use_picture_from()]] - `references` [EXTRACTED]
+- [[mark_details()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/main
+#graphify/code #graphify/EXTRACTED #community/re

@@ -1,17 +1,17 @@
 ---
-source_file: "tests/test_story.py"
+source_file: "tests/test_full_scenes.py"
 type: "code"
-community: "edit_plan"
-location: "L86"
+community: "first_second_check"
+location: "L477"
 tags:
   - graphify/code
-  - graphify/INFERRED
-  - community/edit_plan
+  - graphify/EXTRACTED
+  - community/first_second_check
 ---
 
 # ask()
 
 ## Connections
-- [[test_cold_read_uses_other_ai_in_solo_and_collaborative_modes()]] - `indirect_call` [INFERRED]
+- [[test_rewrite_paint_prompts()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/edit_plan
+#graphify/code #graphify/EXTRACTED #community/first_second_check

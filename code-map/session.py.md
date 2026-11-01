@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/session.py"
 type: "code"
-community: "llm.py"
+community: "pathlib"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/llmpy
+  - community/pathlib
 ---
 
 # session.py
@@ -51,4 +51,4 @@ tags:
 - [[topic_ideas.py]] - `imports_from` [EXTRACTED]
 - [[writing.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/llmpy
+#graphify/code #graphify/EXTRACTED #community/pathlib

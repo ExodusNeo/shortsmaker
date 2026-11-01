@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_blender_plan.py"
 type: "code"
-community: "test_hard_cuts_never_blend_scenes"
+community: "write_frames"
 location: "L110"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_hard_cuts_never_blend_scenes
+  - community/write_frames
 ---
 
 # test_hard_cuts_never_blend_scenes()
@@ -17,4 +17,4 @@ tags:
 - [[write()]] - `contains` [EXTRACTED]
 - [[write_frames()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_hard_cuts_never_blend_scenes
+#graphify/code #graphify/EXTRACTED #community/write_frames

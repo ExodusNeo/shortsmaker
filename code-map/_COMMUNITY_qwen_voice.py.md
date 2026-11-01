@@ -1,11 +1,11 @@
 ---
 type: community
-members: 23
+members: 24
 ---
 
 # qwen_voice.py
 
-**Members:** 23 nodes
+**Members:** 24 nodes
 
 ## Members
 - [[Caption words (as written, punctuation attached) with the a-z words the aligner…]] - rationale - local_ai/qwen_voice.py
@@ -17,8 +17,8 @@ members: 23
 - [[Word matching for the Qwen voice's captions (no GPU, no models). Run…]] - rationale - tests/test_qwen_voice.py
 - [[align()]] - code - local_ai/qwen_voice.py
 - [[align_words()]] - code - local_ai/qwen_voice.py
-- [[main()_6]] - code - local_ai/qwen_voice.py
-- [[one()_1]] - code - local_ai/qwen_voice.py
+- [[main()_5]] - code - local_ai/qwen_voice.py
+- [[one()]] - code - local_ai/qwen_voice.py
 - [[qwen_voice.py]] - code - local_ai/qwen_voice.py
 - [[say_number()]] - code - local_ai/qwen_voice.py
 - [[speak()]] - code - local_ai/qwen_voice.py
@@ -31,6 +31,7 @@ members: 23
 - [[test_every_aligned_word_is_in_the_aligner_alphabet()]] - code - tests/test_qwen_voice.py
 - [[test_numbers()]] - code - tests/test_qwen_voice.py
 - [[test_qwen_voice.py]] - code - tests/test_qwen_voice.py
+- [[unicodedata]] - concept
 
 ## Live Query (requires Dataview plugin)
 
@@ -40,15 +41,19 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 6 edges to [[_COMMUNITY_re]]
-- 4 edges to [[_COMMUNITY_json]]
+- 4 edges to [[_COMMUNITY_re]]
 - 4 edges to [[_COMMUNITY_pathlib]]
-- 3 edges to [[_COMMUNITY_llm.py]]
+- 3 edges to [[_COMMUNITY_test_full_scenes.py]]
+- 2 edges to [[_COMMUNITY_plan_rules.py]]
+- 2 edges to [[_COMMUNITY_json]]
+- 2 edges to [[_COMMUNITY_time]]
+- 1 edge to [[_COMMUNITY_ffmpeg]]
 - 1 edge to [[_COMMUNITY_test_story.py]]
+- 1 edge to [[_COMMUNITY_config.py]]
 
 ## Top bridge nodes
-- [[qwen_voice.py]] - degree 18, connects to 4 communities
-- [[test_qwen_voice.py]] - degree 10, connects to 3 communities
+- [[qwen_voice.py]] - degree 18, connects to 6 communities
+- [[unicodedata]] - degree 6, connects to 3 communities
+- [[test_qwen_voice.py]] - degree 10, connects to 2 communities
+- [[main()_5]] - degree 4, connects to 2 communities
 - [[align_words()]] - degree 10, connects to 1 community
-- [[spoken_sentence()]] - degree 7, connects to 1 community
-- [[spoken_tokens()]] - degree 6, connects to 1 community

@@ -12,7 +12,7 @@ tags:
 # test_blender_failure_is_reported_and_the_batch_goes_on()
 
 ## Connections
-- [[main()_5]] - `calls` [EXTRACTED]
+- [[main()_3]] - `calls` [EXTRACTED]
 - [[render()_4]] - `indirect_call` [INFERRED]
 - [[test_blender_run.py]] - `contains` [EXTRACTED]
 

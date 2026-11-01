@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/footage.py"
 type: "code"
-community: "hashlib"
+community: "json"
 location: "L188"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/hashlib
+  - community/json
 ---
 
 # crop_filter()
@@ -16,4 +16,4 @@ tags:
 - [[film_piece()]] - `calls` [EXTRACTED]
 - [[footage.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/hashlib
+#graphify/code #graphify/EXTRACTED #community/json

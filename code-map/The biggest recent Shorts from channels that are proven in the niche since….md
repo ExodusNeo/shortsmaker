@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/channel_profiles.py"
 type: "rationale"
-community: "llm.py"
+community: "trend_research"
 location: "L169"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/llmpy
+  - community/trend_research
 ---
 
 # The biggest recent Shorts from channels that are proven in the niche: since…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[trend_research()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/llmpy
+#graphify/rationale #graphify/EXTRACTED #community/trend_research

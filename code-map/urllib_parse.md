@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "__init__.py"
+community: "pathlib"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/__init__py
+  - community/pathlib
 ---
 
 # urllib_parse
@@ -20,4 +20,4 @@ tags:
 - [[topic_ideas.py]] - `imports` [EXTRACTED]
 - [[writing.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/__init__py
+#graphify/concept #graphify/EXTRACTED #community/pathlib

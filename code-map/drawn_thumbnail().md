@@ -1,19 +1,19 @@
 ---
 source_file: "shortsmaker/short_render.py"
 type: "code"
-community: "finish_render"
+community: "drawn_thumbnail"
 location: "L82"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/finish_render
+  - community/drawn_thumbnail
 ---
 
 # drawn_thumbnail()
 
 ## Connections
 - [[(picture, credit line, CHECK line) for a drawn Short's thumbnail the real…]] - `rationale_for` [EXTRACTED]
-- [[Path_11]] - `references` [EXTRACTED]
+- [[Path_13]] - `references` [EXTRACTED]
 - [[finish_render()]] - `calls` [EXTRACTED]
 - [[get_image()]] - `calls` [EXTRACTED]
 - [[io]] - `calls` [EXTRACTED]
@@ -26,4 +26,4 @@ tags:
 - [[test_thumbnail_uses_the_real_photo()]] - `calls` [EXTRACTED]
 - [[thumbnail_order()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/finish_render
+#graphify/code #graphify/EXTRACTED #community/drawn_thumbnail

@@ -2,7 +2,7 @@
 source_file: "shortsmaker/checkpoints.py"
 type: "code"
 community: "main"
-location: "L10"
+location: "L13"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -15,6 +15,7 @@ tags:
 - [[base64]] - `calls` [EXTRACTED]
 - [[begin()]] - `calls` [EXTRACTED]
 - [[checkpoints.py]] - `contains` [EXTRACTED]
+- [[io]] - `calls` [EXTRACTED]
 - [[pack()]] - `calls` [EXTRACTED]
 - [[save_context()]] - `calls` [EXTRACTED]
 - [[update()]] - `calls` [EXTRACTED]

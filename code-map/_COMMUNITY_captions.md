@@ -1,21 +1,31 @@
 ---
 type: community
-members: 8
+members: 18
 ---
 
 # captions
 
-**Members:** 8 nodes
+**Members:** 18 nodes
 
 ## Members
 - [[ASS captions, one caption_lines() line at a time; the spoken word turns yellow.…]] - rationale - shortsmaker/audio_mix.py
 - [[ASS subtitle colour (&H00BBGGRR&), optionally darkened (for an outline).]] - rationale - shortsmaker/config.py
 - [[Caption lines of up to 3 words and about 16 letters a long word (SIXTY-THREE-…]] - rationale - shortsmaker/audio_mix.py
+- [[Mike's Thinking Music (-22 LUFS) vanished under the voice with the old fixed…]] - rationale - tests/test_full_scenes.py
+- [[Path_28]] - code
+- [[TTS with retries Microsoft's free Edge voice service drops a request now and…]] - rationale - shortsmaker/audio_mix.py
+- [[Volume factor that brings this track's loudness (first 60 s) to MUSIC_LUFS;…]] - rationale - shortsmaker/audio_mix.py
 - [[ass_colour()]] - code - shortsmaker/config.py
 - [[ass_time()]] - code - shortsmaker/audio_mix.py
+- [[asyncio]] - concept
 - [[caption_lines()]] - code - shortsmaker/audio_mix.py
 - [[captions()_1]] - code - shortsmaker/audio_mix.py
+- [[edge_tts]] - concept
+- [[music_gain()]] - code - shortsmaker/audio_mix.py
+- [[speak()_1]] - code - shortsmaker/audio_mix.py
 - [[styled()]] - code - shortsmaker/audio_mix.py
+- [[test_music_gain_evens_out_tracks()]] - code - tests/test_full_scenes.py
+- [[tts()_1]] - code - shortsmaker/audio_mix.py
 
 ## Live Query (requires Dataview plugin)
 
@@ -25,13 +35,17 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 5 edges to [[_COMMUNITY_pathlib]]
+- 11 edges to [[_COMMUNITY_test_full_scenes.py]]
+- 3 edges to [[_COMMUNITY_render]]
+- 2 edges to [[_COMMUNITY_audio_library.py]]
 - 1 edge to [[_COMMUNITY_render_remotion]]
-- 1 edge to [[_COMMUNITY_render]]
-- 1 edge to [[_COMMUNITY_speak]]
+- 1 edge to [[_COMMUNITY_re]]
+- 1 edge to [[_COMMUNITY_time]]
+- 1 edge to [[_COMMUNITY_config.py]]
 
 ## Top bridge nodes
-- [[captions()_1]] - degree 8, connects to 3 communities
+- [[music_gain()]] - degree 8, connects to 4 communities
+- [[speak()_1]] - degree 7, connects to 3 communities
+- [[captions()_1]] - degree 8, connects to 2 communities
+- [[ass_colour()]] - degree 5, connects to 2 communities
 - [[caption_lines()]] - degree 4, connects to 2 communities
-- [[ass_colour()]] - degree 5, connects to 1 community
-- [[ass_time()]] - degree 2, connects to 1 community

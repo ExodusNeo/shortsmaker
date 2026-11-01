@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "llm.py"
+community: "pathlib"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/llmpy
+  - community/pathlib
 ---
 
 # sys
@@ -51,4 +51,4 @@ tags:
 - [[test_style.py]] - `imports` [EXTRACTED]
 - [[test_topic_ideas.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/llmpy
+#graphify/concept #graphify/EXTRACTED #community/pathlib

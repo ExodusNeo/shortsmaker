@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "hashlib"
+community: "json"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/hashlib
+  - community/json
 ---
 
 # CompletedProcess
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[film_ffmpeg()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/hashlib
+#graphify/code #graphify/EXTRACTED #community/json

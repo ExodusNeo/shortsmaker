@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "tempfile"
+community: "pathlib"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/tempfile
+  - community/pathlib
 ---
 
 # tempfile
@@ -36,4 +36,4 @@ tags:
 - [[test_story.py]] - `imports` [EXTRACTED]
 - [[test_topic_ideas.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/tempfile
+#graphify/concept #graphify/EXTRACTED #community/pathlib

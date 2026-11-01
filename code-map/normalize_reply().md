@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/retention.py"
 type: "code"
-community: "tempfile"
+community: "shutil"
 location: "L40"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/tempfile
+  - community/shutil
 ---
 
 # normalize_reply()
@@ -16,4 +16,4 @@ tags:
 - [[math]] - `calls` [EXTRACTED]
 - [[retention.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/tempfile
+#graphify/code #graphify/EXTRACTED #community/shutil

@@ -1,17 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "json"
+community: "edit_project.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/json
+  - community/edit_projectpy
 ---
 
 # Path
 
 ## Connections
-- [[fit_start()]] - `references` [EXTRACTED]
-- [[saved_file()]] - `references` [EXTRACTED]
+- [[short_folder()]] - `references` [EXTRACTED]
+- [[videos()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/json
+#graphify/code #graphify/EXTRACTED #community/edit_projectpy

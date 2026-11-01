@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/retention.py"
 type: "code"
-community: "tempfile"
+community: "shutil"
 location: "L22"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/tempfile
+  - community/shutil
 ---
 
 # scenes_from_plan()
@@ -17,4 +17,4 @@ tags:
 - [[retention.py]] - `contains` [EXTRACTED]
 - [[seconds()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/tempfile
+#graphify/code #graphify/EXTRACTED #community/shutil

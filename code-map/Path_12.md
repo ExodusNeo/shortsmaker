@@ -1,20 +1,19 @@
 ---
 source_file: ""
 type: "code"
-community: "invent_component"
+community: "drawn_opener.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/invent_component
+  - community/drawn_openerpy
 ---
 
 # Path
 
 ## Connections
-- [[approve_candidate()]] - `references` [EXTRACTED]
-- [[invent_component()]] - `references` [EXTRACTED]
-- [[invent_styles()]] - `references` [EXTRACTED]
-- [[reject_candidate()]] - `references` [EXTRACTED]
-- [[save_candidate()]] - `references` [EXTRACTED]
+- [[make_opener()]] - `references` [EXTRACTED]
+- [[node_run()]] - `references` [EXTRACTED]
+- [[review()]] - `references` [EXTRACTED]
+- [[write()_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/invent_component
+#graphify/code #graphify/EXTRACTED #community/drawn_openerpy

@@ -13,7 +13,7 @@ members: 38
 - [[dot-test_real_video_with_music_offset_and_story_sound_keeps_mix_and_resume()]] - code - tests/test_render_resume.py
 - [[A draft that passes coded, previewed (6 frames), approved, rendered as scene 1…]] - rationale - tests/test_drawn_opener.py
 - [[Drawn openers (owner, 2026-10-30) scene 1 of an `opener animated` Short as a…]] - rationale - shortsmaker/drawn_opener.py
-- [[Path_9]] - code
+- [[Path_12]] - code
 - [[RenderResumeTests]] - code - tests/test_render_resume.py
 - [[Renders drawnoutsheet.png every kit part, one page per second (look at it…]] - rationale - tests/test_drawn_opener.py
 - [[Rule breaks in an AI-written scene (KIT.md's code rules). Empty = clean.]] - rationale - shortsmaker/drawn_opener.py
@@ -29,7 +29,7 @@ members: 38
 - [[clean_code()]] - code - shortsmaker/drawn_opener.py
 - [[drawn_opener.py]] - code - shortsmaker/drawn_opener.py
 - [[fail()]] - code - shortsmaker/drawn_opener.py
-- [[fake_ai()]] - code - tests/test_drawn_opener.py
+- [[fake_ai()_1]] - code - tests/test_drawn_opener.py
 - [[fingerprint()]] - code - shortsmaker/drawn_opener.py
 - [[lint()]] - code - shortsmaker/drawn_opener.py
 - [[look()]] - code - tests/test_drawn_opener.py
@@ -55,19 +55,19 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 15 edges to [[_COMMUNITY_pathlib]]
+- 13 edges to [[_COMMUNITY_pathlib]]
+- 5 edges to [[_COMMUNITY_test_full_scenes.py]]
 - 5 edges to [[_COMMUNITY_json]]
 - 4 edges to [[_COMMUNITY_re]]
-- 3 edges to [[_COMMUNITY_llm.py]]
-- 2 edges to [[_COMMUNITY___init__.py]]
-- 2 edges to [[_COMMUNITY_hashlib]]
-- 2 edges to [[_COMMUNITY_render]]
+- 2 edges to [[_COMMUNITY_shutil]]
+- 2 edges to [[_COMMUNITY_finish_render]]
 - 2 edges to [[_COMMUNITY_ask_ai]]
-- 1 edge to [[_COMMUNITY_clean_full]]
-- 1 edge to [[_COMMUNITY_duration]]
+- 2 edges to [[_COMMUNITY_plan_rules.py]]
+- 1 edge to [[_COMMUNITY_ffmpeg]]
+- 1 edge to [[_COMMUNITY_config.py]]
 
 ## Top bridge nodes
-- [[drawn_opener.py]] - degree 24, connects to 6 communities
+- [[drawn_opener.py]] - degree 24, connects to 7 communities
 - [[node_run()]] - degree 8, connects to 3 communities
 - [[review()]] - degree 8, connects to 2 communities
 - [[write()_1]] - degree 7, connects to 2 communities

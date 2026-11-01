@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/channel_profiles.py"
 type: "code"
-community: "llm.py"
+community: "main"
 location: "L132"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/llmpy
+  - community/main
 ---
 
 # save_channel()
@@ -19,4 +19,4 @@ tags:
 - [[trend_research()]] - `calls` [EXTRACTED]
 - [[write_scripts()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/llmpy
+#graphify/code #graphify/EXTRACTED #community/main
