@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/picture_pool.py"
 type: "rationale"
-community: "shutil"
+community: "main"
 location: "L272"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/shutil
+  - community/main
 ---
 
 # Drop cached downloads and topic pools older than 30 days.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[prune_cache()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/shutil
+#graphify/rationale #graphify/EXTRACTED #community/main

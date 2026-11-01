@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/short_render.py"
 type: "code"
-community: "test_full_scenes.py"
+community: "pathlib"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_full_scenespy
+  - community/pathlib
 ---
 
 # short_render.py
@@ -60,6 +60,7 @@ tags:
 - [[test_first_second.py]] - `imports_from` [EXTRACTED]
 - [[test_full_scenes.py]] - `imports_from` [EXTRACTED]
 - [[test_opener_graphic.py]] - `imports_from` [EXTRACTED]
+- [[test_opening_rules.py]] - `imports_from` [EXTRACTED]
 - [[test_reliability.py]] - `imports_from` [EXTRACTED]
 - [[test_render_resume.py]] - `imports_from` [EXTRACTED]
 - [[test_rules.py]] - `imports_from` [EXTRACTED]
@@ -67,4 +68,4 @@ tags:
 - [[use_opener()]] - `contains` [EXTRACTED]
 - [[voice_cache.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_full_scenespy
+#graphify/code #graphify/EXTRACTED #community/pathlib

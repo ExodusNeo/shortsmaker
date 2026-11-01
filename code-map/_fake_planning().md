@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_full_scenes.py"
 type: "code"
-community: "first_second_check"
+community: "rewrite_paint_prompts"
 location: "L143"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/first_second_check
+  - community/rewrite_paint_prompts
 ---
 
 # _fake_planning()
@@ -19,4 +19,4 @@ tags:
 - [[test_full_scenes.py]] - `contains` [EXTRACTED]
 - [[write_scripts()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/first_second_check
+#graphify/code #graphify/EXTRACTED #community/rewrite_paint_prompts

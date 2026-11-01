@@ -8,7 +8,7 @@ members: 19
 **Members:** 19 nodes
 
 ## Members
-- [[dot-setUp()_1]] - code - tests/test_reliability.py
+- [[dot-setUp()_2]] - code - tests/test_reliability.py
 - [[dot-test_batch_keeps_failed_folder_and_queues_all_scripts_before_rendering()]] - code - tests/test_reliability.py
 - [[dot-test_checkpoint_image_marker_rejects_non_png_payload()]] - code - tests/test_reliability.py
 - [[dot-test_download_retry_is_bounded_and_preserves_wikimedia_backoff()]] - code - tests/test_reliability.py
@@ -36,7 +36,7 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 1 edge to [[_COMMUNITY_test_full_scenes.py]]
+- 1 edge to [[_COMMUNITY_pathlib]]
 
 ## Top bridge nodes
 - [[ReliabilityTests]] - degree 17, connects to 1 community

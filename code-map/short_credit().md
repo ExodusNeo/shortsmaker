@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/image_sources.py"
 type: "code"
-community: "image_sources.py"
+community: "render"
 location: "L242"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/image_sourcespy
+  - community/render
 ---
 
 # short_credit()
@@ -16,4 +16,4 @@ tags:
 - [[image_sources.py]] - `contains` [EXTRACTED]
 - [[render()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/image_sourcespy
+#graphify/code #graphify/EXTRACTED #community/render

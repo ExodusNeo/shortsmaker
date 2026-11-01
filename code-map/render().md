@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[Make one Short. With `state` (fix.bat or an automatic fix round), reuse its…]] - `rationale_for` [EXTRACTED]
-- [[Path_13]] - `references` [EXTRACTED]
+- [[Path_6]] - `references` [EXTRACTED]
 - [[captions()_1]] - `calls` [EXTRACTED]
 - [[choose_images()]] - `calls` [EXTRACTED]
 - [[clean_photo()]] - `calls` [EXTRACTED]
@@ -62,7 +62,7 @@ tags:
 - [[short_render.py]] - `contains` [EXTRACTED]
 - [[shutil]] - `calls` [EXTRACTED]
 - [[source_music()]] - `calls` [EXTRACTED]
-- [[speak()_1]] - `calls` [EXTRACTED]
+- [[speak()]] - `calls` [EXTRACTED]
 - [[srt()]] - `calls` [EXTRACTED]
 - [[story_sound()]] - `calls` [EXTRACTED]
 - [[subprocess]] - `calls` [EXTRACTED]

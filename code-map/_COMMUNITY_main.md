@@ -8,7 +8,7 @@ members: 16
 **Members:** 16 nodes
 
 ## Members
-- [[dot-__init__()_6]] - code - blender/failures.py
+- [[dot-__init__()_3]] - code - blender/failures.py
 - [[dot-_crack()]] - code - blender/failures.py
 - [[dot-fallen()]] - code - blender/failures.py
 - [[dot-falls()]] - code - blender/failures.py
@@ -34,9 +34,9 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 7 edges to [[_COMMUNITY_build_scene.py]]
-- 3 edges to [[_COMMUNITY_parts.py]]
-- 2 edges to [[_COMMUNITY_look.py]]
+- 4 edges to [[_COMMUNITY_parts.py]]
 - 2 edges to [[_COMMUNITY_templates.py]]
+- 1 edge to [[_COMMUNITY_look.py]]
 - 1 edge to [[_COMMUNITY_json]]
 
 ## Top bridge nodes

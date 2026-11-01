@@ -13,6 +13,6 @@ tags:
 
 ## Connections
 - [[camera_1]] - `contains` [EXTRACTED]
-- [[scene()_3]] - `contains` [EXTRACTED]
+- [[scene()_2]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/kit_partsmjs

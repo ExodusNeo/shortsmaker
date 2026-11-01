@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/media_menu.py"
 type: "code"
-community: "brand_images"
+community: "media_menu.py"
 location: "L129"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/brand_images
+  - community/media_menupy
 ---
 
 # print_source_status()
@@ -18,4 +18,4 @@ tags:
 - [[optional_key()]] - `calls` [EXTRACTED]
 - [[settings()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/brand_images
+#graphify/code #graphify/EXTRACTED #community/media_menupy

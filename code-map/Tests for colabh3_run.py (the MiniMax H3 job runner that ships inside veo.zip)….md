@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_h3_run.py"
 type: "rationale"
-community: "time"
+community: "test_story.py"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/time
+  - community/test_storypy
 ---
 
 # Tests for colab/h3_run.py (the MiniMax H3 job runner that ships inside veo.zip)…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[test_h3_run.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/time
+#graphify/rationale #graphify/EXTRACTED #community/test_storypy

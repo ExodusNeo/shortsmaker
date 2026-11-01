@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "time"
+community: "extra_sources.py"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/time
+  - community/extra_sourcespy
 ---
 
 # time
@@ -35,11 +35,11 @@ tags:
 - [[short_render.py]] - `imports` [EXTRACTED]
 - [[source_json()]] - `calls` [EXTRACTED]
 - [[source_status()]] - `calls` [EXTRACTED]
-- [[speak()_1]] - `calls` [EXTRACTED]
+- [[speak()]] - `calls` [EXTRACTED]
 - [[style_lab.py]] - `imports` [EXTRACTED]
 - [[test_pictures_first.py]] - `imports` [EXTRACTED]
 - [[topic_ideas.py]] - `imports` [EXTRACTED]
 - [[trend_research()]] - `calls` [EXTRACTED]
 - [[voicestudio_up()]] - `calls` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/time
+#graphify/concept #graphify/EXTRACTED #community/extra_sourcespy

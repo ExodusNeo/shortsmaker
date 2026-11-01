@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "media_command"
+community: "media_menu.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/media_command
+  - community/media_menupy
 ---
 
 # Path
@@ -15,4 +15,4 @@ tags:
 - [[download_audio_choices()]] - `references` [EXTRACTED]
 - [[review_audio_files()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/media_command
+#graphify/code #graphify/EXTRACTED #community/media_menupy

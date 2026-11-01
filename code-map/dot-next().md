@@ -13,6 +13,6 @@ tags:
 
 ## Connections
 - [[Pen]] - `method` [EXTRACTED]
-- [[clamp()]] - `calls` [EXTRACTED]
+- [[clamp()_1]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/makeKit

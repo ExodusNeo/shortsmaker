@@ -15,7 +15,7 @@ tags:
 - [[Full spoken string for TTS synthesis, with punctuation attached cleanly.]] - `rationale_for` [EXTRACTED]
 - [[qwen_voice.py]] - `contains` [EXTRACTED]
 - [[re]] - `calls` [EXTRACTED]
-- [[speak()]] - `calls` [EXTRACTED]
+- [[speak()_1]] - `calls` [EXTRACTED]
 - [[spoken_tokens()]] - `calls` [EXTRACTED]
 - [[studio_speak()]] - `calls` [EXTRACTED]
 - [[test_dollar_scale_word_order()]] - `calls` [INFERRED]

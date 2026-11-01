@@ -1,21 +1,20 @@
 ---
 source_file: ""
 type: "code"
-community: "finish_render"
+community: "paint_instead"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/finish_render
+  - community/paint_instead
 ---
 
 # Path
 
 ## Connections
-- [[drawn_thumbnail()]] - `references` [EXTRACTED]
-- [[finish_render()]] - `references` [EXTRACTED]
-- [[load_state()]] - `references` [EXTRACTED]
-- [[render()]] - `references` [EXTRACTED]
-- [[save_state()]] - `references` [EXTRACTED]
-- [[use_opener()]] - `references` [EXTRACTED]
+- [[ink_silhouette()]] - `references` [EXTRACTED]
+- [[make_paper()]] - `references` [EXTRACTED]
+- [[paint_instead()]] - `references` [EXTRACTED]
+- [[redraw_custom()]] - `references` [EXTRACTED]
+- [[render_remotion()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/finish_render
+#graphify/code #graphify/EXTRACTED #community/paint_instead

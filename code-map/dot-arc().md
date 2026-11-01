@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[dot-snowfall()]] - `calls` [EXTRACTED]
-- [[clamp()]] - `calls` [EXTRACTED]
+- [[clamp()_1]] - `calls` [EXTRACTED]
 - [[k]] - `method` [EXTRACTED]
 - [[lerp()]] - `calls` [EXTRACTED]
 

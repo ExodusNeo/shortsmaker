@@ -1,17 +1,17 @@
 ---
-source_file: "tests/test_media.py"
+source_file: "tests/test_reliability.py"
 type: "code"
-community: "MediaTests"
-location: "L22"
+community: "ReliabilityTests"
+location: "L19"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/MediaTests
+  - community/ReliabilityTests
 ---
 
 # .setUp()
 
 ## Connections
-- [[MediaTests]] - `method` [EXTRACTED]
+- [[ReliabilityTests]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/MediaTests
+#graphify/code #graphify/EXTRACTED #community/ReliabilityTests

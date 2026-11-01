@@ -1,20 +1,28 @@
 ---
 source_file: ""
 type: "code"
-community: "paint_instead"
+community: "gpu.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/paint_instead
+  - community/gpupy
 ---
 
 # Path
 
 ## Connections
-- [[ink_silhouette()]] - `references` [EXTRACTED]
-- [[make_paper()]] - `references` [EXTRACTED]
-- [[paint_instead()]] - `references` [EXTRACTED]
-- [[redraw_custom()]] - `references` [EXTRACTED]
-- [[render_remotion()]] - `references` [EXTRACTED]
+- [[cover_crop()]] - `references` [EXTRACTED]
+- [[cut_owner_clip()]] - `references` [EXTRACTED]
+- [[gemini_images()]] - `references` [EXTRACTED]
+- [[h3_prompts()]] - `references` [EXTRACTED]
+- [[local_clips()]] - `references` [EXTRACTED]
+- [[local_job()]] - `references` [EXTRACTED]
+- [[local_voice()]] - `references` [EXTRACTED]
+- [[moss_images()]] - `references` [EXTRACTED]
+- [[split_takes()]] - `references` [EXTRACTED]
+- [[start_picture()]] - `references` [EXTRACTED]
+- [[start_picture_problems()]] - `references` [EXTRACTED]
+- [[unpack_clips()]] - `references` [EXTRACTED]
+- [[veo_handoff()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/paint_instead
+#graphify/code #graphify/EXTRACTED #community/gpupy

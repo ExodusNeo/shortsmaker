@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/picker.py"
 type: "code"
-community: "render"
-location: "L363"
+community: "opener_graphic"
+location: "L364"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/render
+  - community/opener_graphic
 ---
 
 # opener_graphic()
@@ -16,12 +16,14 @@ tags:
 - [[article_text()]] - `calls` [EXTRACTED]
 - [[ask_ai()]] - `calls` [EXTRACTED]
 - [[clean_full()]] - `calls` [EXTRACTED]
+- [[fix_drawn_answer()]] - `calls` [EXTRACTED]
 - [[fix_opener_graphic()]] - `calls` [EXTRACTED]
 - [[full_formats()]] - `calls` [EXTRACTED]
 - [[full_summary()]] - `calls` [EXTRACTED]
 - [[json]] - `calls` [EXTRACTED]
+- [[opening_brief()]] - `calls` [EXTRACTED]
 - [[picker.py]] - `contains` [EXTRACTED]
 - [[render()]] - `calls` [EXTRACTED]
 - [[test_opener_graphic()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/render
+#graphify/code #graphify/EXTRACTED #community/opener_graphic

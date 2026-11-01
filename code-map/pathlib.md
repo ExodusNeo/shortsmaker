@@ -66,6 +66,7 @@ tags:
 - [[test_marks.py]] - `imports_from` [EXTRACTED]
 - [[test_media.py]] - `imports_from` [EXTRACTED]
 - [[test_opener_graphic.py]] - `imports_from` [EXTRACTED]
+- [[test_opening_rules.py]] - `imports_from` [EXTRACTED]
 - [[test_package.py]] - `imports_from` [EXTRACTED]
 - [[test_pictures_first.py]] - `imports_from` [EXTRACTED]
 - [[test_qwen_voice.py]] - `imports_from` [EXTRACTED]

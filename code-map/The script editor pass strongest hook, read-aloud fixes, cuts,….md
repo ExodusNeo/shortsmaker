@@ -2,7 +2,7 @@
 source_file: "shortsmaker/writing.py"
 type: "rationale"
 community: "edit_scripts"
-location: "L288"
+location: "L289"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED

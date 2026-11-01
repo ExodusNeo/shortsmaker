@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/writing.py"
 type: "code"
-community: "write_scripts"
+community: "test_style.py"
 location: "L35"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/write_scripts
+  - community/test_stylepy
 ---
 
 # write_scripts()
@@ -26,7 +26,7 @@ tags:
 - [[contains()]] - `calls` [EXTRACTED]
 - [[direct_scripts()]] - `calls` [EXTRACTED]
 - [[edit_scripts()]] - `calls` [EXTRACTED]
-- [[fact_check()_1]] - `calls` [EXTRACTED]
+- [[fact_check()]] - `calls` [EXTRACTED]
 - [[fill_money_graphics()]] - `calls` [EXTRACTED]
 - [[is_person_portrait()]] - `calls` [EXTRACTED]
 - [[json]] - `calls` [EXTRACTED]
@@ -64,4 +64,4 @@ tags:
 - [[words_of()]] - `calls` [EXTRACTED]
 - [[writing.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/write_scripts
+#graphify/code #graphify/EXTRACTED #community/test_stylepy

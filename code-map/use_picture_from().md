@@ -1,18 +1,18 @@
 ---
 source_file: "shortsmaker/cli.py"
 type: "code"
-community: "first_second_check"
+community: "main"
 location: "L181"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/first_second_check
+  - community/main
 ---
 
 # use_picture_from()
 
 ## Connections
-- [[Path_17]] - `references` [EXTRACTED]
+- [[Path_20]] - `references` [EXTRACTED]
 - [[cli.py]] - `contains` [EXTRACTED]
 - [[fix scene i shows scene k's picture. A real photofilm is a picture choice; an…]] - `rationale_for` [EXTRACTED]
 - [[fix_short()]] - `calls` [EXTRACTED]
@@ -20,4 +20,4 @@ tags:
 - [[test_new_picture_drops_mark()]] - `calls` [EXTRACTED]
 - [[test_paint_new_clears_full()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/first_second_check
+#graphify/code #graphify/EXTRACTED #community/main

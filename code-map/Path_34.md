@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "clean_photo"
+community: "test_blender_render.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/clean_photo
+  - community/test_blender_renderpy
 ---
 
 # Path
 
 ## Connections
-- [[to_vertical()]] - `references` [EXTRACTED]
+- [[fake_blender()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/clean_photo
+#graphify/code #graphify/EXTRACTED #community/test_blender_renderpy

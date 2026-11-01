@@ -10,7 +10,7 @@ members: 3
 ## Members
 - [[camera]] - code - drawn/examples/dexter.mjs
 - [[dexter.mjs]] - code - drawn/examples/dexter.mjs
-- [[scene()_2]] - code - drawn/examples/dexter.mjs
+- [[scene()_1]] - code - drawn/examples/dexter.mjs
 
 ## Live Query (requires Dataview plugin)
 

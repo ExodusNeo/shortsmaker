@@ -1,12 +1,12 @@
 ---
 source_file: "colab/h3_run.py"
 type: "rationale"
-community: "time"
+community: "h3_run.py"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/time
+  - community/h3_runpy
 ---
 
 # MiniMax H3 image-to-video jobs for a ShortsMaker Short, run on Colab next to…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[h3_run.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/time
+#graphify/rationale #graphify/EXTRACTED #community/h3_runpy

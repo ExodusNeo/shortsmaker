@@ -1,12 +1,12 @@
 ---
 source_file: "tests/render_style.py"
 type: "code"
-community: "log_short"
+community: "build"
 location: "L22"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/log_short
+  - community/build
 ---
 
 # add()
@@ -15,4 +15,4 @@ tags:
 - [[build()_1]] - `contains` [EXTRACTED]
 - [[scenes()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/log_short
+#graphify/code #graphify/EXTRACTED #community/build

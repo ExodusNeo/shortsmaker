@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/writing.py"
 type: "rationale"
-community: "style_lab.py"
-location: "L471"
+community: "test_style.py"
+location: "L472"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/style_labpy
+  - community/test_stylepy
 ---
 
 # The planner plans the edit (footage searches, shots, camera, graphics, person…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[direct_scripts()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/style_labpy
+#graphify/rationale #graphify/EXTRACTED #community/test_stylepy

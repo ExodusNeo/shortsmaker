@@ -1,19 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "main"
+community: "clean_photo"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/main
+  - community/clean_photo
 ---
 
 # Path
 
 ## Connections
-- [[finish_short()]] - `references` [EXTRACTED]
-- [[record_failure()]] - `references` [EXTRACTED]
-- [[resume_runs()]] - `references` [EXTRACTED]
-- [[use_picture_from()]] - `references` [EXTRACTED]
+- [[mark_details()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/main
+#graphify/code #graphify/EXTRACTED #community/clean_photo

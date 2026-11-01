@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "shutil"
+community: "json"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/shutil
+  - community/json
 ---
 
 # copy
@@ -14,4 +14,4 @@ tags:
 - [[preview()]] - `calls` [EXTRACTED]
 - [[scene_repair.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/shutil
+#graphify/concept #graphify/EXTRACTED #community/json

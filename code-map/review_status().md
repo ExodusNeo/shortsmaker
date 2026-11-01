@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/review.py"
 type: "code"
-community: "shutil"
+community: "finish_render"
 location: "L23"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/shutil
+  - community/finish_render
 ---
 
 # review_status()
@@ -17,4 +17,4 @@ tags:
 - [[review.py]] - `contains` [EXTRACTED]
 - [[visual_review()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/shutil
+#graphify/code #graphify/EXTRACTED #community/finish_render

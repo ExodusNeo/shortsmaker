@@ -1,17 +1,20 @@
 ---
 source_file: ""
 type: "code"
-community: "time"
+community: "edit_project.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/time
+  - community/edit_projectpy
 ---
 
 # Path
 
 ## Connections
-- [[fit_start()]] - `references` [EXTRACTED]
-- [[saved_file()]] - `references` [EXTRACTED]
+- [[caption_layer()]] - `references` [EXTRACTED]
+- [[make()_1]] - `references` [EXTRACTED]
+- [[master_gain()]] - `references` [EXTRACTED]
+- [[project_xml()]] - `references` [EXTRACTED]
+- [[remove()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/time
+#graphify/code #graphify/EXTRACTED #community/edit_projectpy

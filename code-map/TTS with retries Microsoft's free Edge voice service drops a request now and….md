@@ -1,17 +1,17 @@
 ---
 source_file: "shortsmaker/audio_mix.py"
 type: "rationale"
-community: "captions"
+community: "speak"
 location: "L24"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/captions
+  - community/speak
 ---
 
 # TTS with retries: Microsoft's free Edge voice service drops a request now and…
 
 ## Connections
-- [[speak()_1]] - `rationale_for` [EXTRACTED]
+- [[speak()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/captions
+#graphify/rationale #graphify/EXTRACTED #community/speak

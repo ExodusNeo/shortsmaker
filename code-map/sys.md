@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "pathlib"
+community: "__init__.py"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/pathlib
+  - community/__init__py
 ---
 
 # sys
@@ -40,6 +40,7 @@ tags:
 - [[test_marks.py]] - `imports` [EXTRACTED]
 - [[test_media.py]] - `imports` [EXTRACTED]
 - [[test_opener_graphic.py]] - `imports` [EXTRACTED]
+- [[test_opening_rules.py]] - `imports` [EXTRACTED]
 - [[test_package.py]] - `imports` [EXTRACTED]
 - [[test_pictures_first.py]] - `imports` [EXTRACTED]
 - [[test_qwen_voice.py]] - `imports` [EXTRACTED]
@@ -51,4 +52,4 @@ tags:
 - [[test_style.py]] - `imports` [EXTRACTED]
 - [[test_topic_ideas.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/pathlib
+#graphify/concept #graphify/EXTRACTED #community/__init__py

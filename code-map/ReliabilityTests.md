@@ -12,7 +12,7 @@ tags:
 # ReliabilityTests
 
 ## Connections
-- [[dot-setUp()_1]] - `method` [EXTRACTED]
+- [[dot-setUp()_2]] - `method` [EXTRACTED]
 - [[dot-test_batch_keeps_failed_folder_and_queues_all_scripts_before_rendering()]] - `method` [EXTRACTED]
 - [[dot-test_checkpoint_image_marker_rejects_non_png_payload()]] - `method` [EXTRACTED]
 - [[dot-test_download_retry_is_bounded_and_preserves_wikimedia_backoff()]] - `method` [EXTRACTED]

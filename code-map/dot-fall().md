@@ -12,7 +12,7 @@ tags:
 # .fall()
 
 ## Connections
-- [[clamp()]] - `calls` [EXTRACTED]
+- [[clamp()_1]] - `calls` [EXTRACTED]
 - [[k]] - `method` [EXTRACTED]
 - [[lerp()]] - `calls` [EXTRACTED]
 

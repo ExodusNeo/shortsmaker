@@ -1,17 +1,17 @@
 ---
-source_file: "tests/test_retention.py"
+source_file: "tests/test_opening_rules.py"
 type: "code"
-community: "RetentionTests"
-location: "L30"
+community: "OpeningRulesTests"
+location: "L27"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/RetentionTests
+  - community/OpeningRulesTests
 ---
 
 # .setUp()
 
 ## Connections
-- [[RetentionTests]] - `method` [EXTRACTED]
+- [[OpeningRulesTests]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/RetentionTests
+#graphify/code #graphify/EXTRACTED #community/OpeningRulesTests

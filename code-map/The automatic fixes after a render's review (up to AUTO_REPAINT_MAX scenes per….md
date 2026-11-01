@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/review.py"
 type: "rationale"
-community: "first_second_check"
-location: "L238"
+community: "apply_review_fixes"
+location: "L248"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/first_second_check
+  - community/apply_review_fixes
 ---
 
 # The automatic fixes after a render's review (up to AUTO_REPAINT_MAX scenes per…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[apply_review_fixes()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/first_second_check
+#graphify/rationale #graphify/EXTRACTED #community/apply_review_fixes

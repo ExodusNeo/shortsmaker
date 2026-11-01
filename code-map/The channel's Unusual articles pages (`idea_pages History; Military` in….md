@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/topic_ideas.py"
 type: "rationale"
-community: "pick_ideas"
+community: "re"
 location: "L50"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/pick_ideas
+  - community/re
 ---
 
 # The channel's Unusual articles pages (`idea_pages: History; Military` in…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[pages()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/pick_ideas
+#graphify/rationale #graphify/EXTRACTED #community/re

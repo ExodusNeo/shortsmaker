@@ -1,17 +1,17 @@
 ---
-source_file: "drawn/examples/dexter.mjs"
+source_file: "drawn/examples/kit_parts.mjs"
 type: "code"
-community: "dexter.mjs"
+community: "kit_parts.mjs"
 location: "L3"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/dextermjs
+  - community/kit_partsmjs
 ---
 
 # scene()
 
 ## Connections
-- [[dexter.mjs]] - `contains` [EXTRACTED]
+- [[kit_parts.mjs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/dextermjs
+#graphify/code #graphify/EXTRACTED #community/kit_partsmjs

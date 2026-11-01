@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/plan_rules.py"
 type: "code"
-community: "full_cues"
+community: "test_full_scenes.py"
 location: "L470"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/full_cues
+  - community/test_full_scenespy
 ---
 
 # spoken_at()
@@ -19,4 +19,4 @@ tags:
 - [[scene_cues()]] - `calls` [EXTRACTED]
 - [[spoken_span()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/full_cues
+#graphify/code #graphify/EXTRACTED #community/test_full_scenespy

@@ -8,7 +8,7 @@ members: 13
 **Members:** 13 nodes
 
 ## Members
-- [[dot-setUp()]] - code - tests/test_retention.py
+- [[dot-setUp()_1]] - code - tests/test_retention.py
 - [[dot-test_cli_routes_retention_before_normal_batch()]] - code - tests/test_retention.py
 - [[dot-test_command_reads_profile_mode_without_updating_profile()]] - code - tests/test_retention.py
 - [[dot-test_corrupt_screenshot_never_calls_ai()]] - code - tests/test_retention.py
@@ -30,7 +30,7 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 1 edge to [[_COMMUNITY_pathlib]]
+- 1 edge to [[_COMMUNITY___init__.py]]
 
 ## Top bridge nodes
 - [[RetentionTests]] - degree 12, connects to 1 community

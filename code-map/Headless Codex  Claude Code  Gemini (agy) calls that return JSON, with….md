@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/llm.py"
 type: "rationale"
-community: "pathlib"
+community: "__init__.py"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/pathlib
+  - community/__init__py
 ---
 
 # Headless Codex / Claude Code / Gemini (agy) calls that return JSON, with…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[llm.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/pathlib
+#graphify/rationale #graphify/EXTRACTED #community/__init__py

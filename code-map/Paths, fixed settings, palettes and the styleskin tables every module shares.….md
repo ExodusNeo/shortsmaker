@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/config.py"
 type: "rationale"
-community: "config.py"
+community: "pathlib"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/configpy
+  - community/pathlib
 ---
 
 # Paths, fixed settings, palettes and the style/skin tables every module shares.…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[config.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/configpy
+#graphify/rationale #graphify/EXTRACTED #community/pathlib

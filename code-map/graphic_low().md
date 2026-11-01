@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/frame_render.py"
 type: "code"
-community: "is_loop_short"
+community: "test_full_scenes.py"
 location: "L107"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/is_loop_short
+  - community/test_full_scenespy
 ---
 
 # graphic_low()
@@ -20,4 +20,4 @@ tags:
 - [[test_fill_money_graphics_and_caps()]] - `calls` [EXTRACTED]
 - [[words_of()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/is_loop_short
+#graphify/code #graphify/EXTRACTED #community/test_full_scenespy

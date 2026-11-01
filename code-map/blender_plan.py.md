@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/blender_plan.py"
 type: "code"
-community: "pathlib"
+community: "blender_plan.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/pathlib
+  - community/blender_planpy
 ---
 
 # blender_plan.py
@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[Blender build plans (2026-10-22) for channels with `visuals blender`, the…]] - `rationale_for` [EXTRACTED]
 - [[__init__.py]] - `imports_from` [EXTRACTED]
-- [[clamp()_1]] - `contains` [EXTRACTED]
+- [[clamp()]] - `contains` [EXTRACTED]
 - [[clean_build()]] - `contains` [EXTRACTED]
 - [[default_build()]] - `contains` [EXTRACTED]
 - [[ending()]] - `contains` [EXTRACTED]
@@ -34,4 +34,4 @@ tags:
 - [[thumbnail_order()]] - `contains` [EXTRACTED]
 - [[writing.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/pathlib
+#graphify/code #graphify/EXTRACTED #community/blender_planpy

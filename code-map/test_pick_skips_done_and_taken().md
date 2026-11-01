@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_topic_ideas.py"
 type: "code"
-community: "pick_ideas"
+community: "re"
 location: "L81"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/pick_ideas
+  - community/re
 ---
 
 # test_pick_skips_done_and_taken()
@@ -15,4 +15,4 @@ tags:
 - [[pick_ideas()]] - `calls` [EXTRACTED]
 - [[test_topic_ideas.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/pick_ideas
+#graphify/code #graphify/EXTRACTED #community/re

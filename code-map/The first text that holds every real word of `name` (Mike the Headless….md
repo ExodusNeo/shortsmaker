@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/topic_ideas.py"
 type: "rationale"
-community: "pick_ideas"
+community: "re"
 location: "L40"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/pick_ideas
+  - community/re
 ---
 
 # The first text that holds every real word of `name` ("Mike the Headless…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[clash()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/pick_ideas
+#graphify/rationale #graphify/EXTRACTED #community/re

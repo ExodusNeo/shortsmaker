@@ -1,17 +1,17 @@
 ---
-source_file: "blender/templates.py"
+source_file: "shortsmaker/extra_sources.py"
 type: "code"
-community: "templates.py"
-location: "L14"
+community: "extra_sources.py"
+location: "L148"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/templatespy
+  - community/extra_sourcespy
 ---
 
 # .__init__()
 
 ## Connections
-- [[Bridge]] - `method` [EXTRACTED]
+- [[BrandImages]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/templatespy
+#graphify/code #graphify/EXTRACTED #community/extra_sourcespy

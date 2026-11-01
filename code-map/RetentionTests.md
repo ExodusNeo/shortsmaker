@@ -12,7 +12,7 @@ tags:
 # RetentionTests
 
 ## Connections
-- [[dot-setUp()]] - `method` [EXTRACTED]
+- [[dot-setUp()_1]] - `method` [EXTRACTED]
 - [[dot-test_cli_routes_retention_before_normal_batch()]] - `method` [EXTRACTED]
 - [[dot-test_command_reads_profile_mode_without_updating_profile()]] - `method` [EXTRACTED]
 - [[dot-test_corrupt_screenshot_never_calls_ai()]] - `method` [EXTRACTED]

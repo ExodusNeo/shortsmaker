@@ -1,18 +1,18 @@
 ---
 source_file: "shortsmaker/scene_repair.py"
 type: "code"
-community: "shutil"
+community: "json"
 location: "L74"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/shutil
+  - community/json
 ---
 
 # apply()
 
 ## Connections
-- [[Path_19]] - `references` [EXTRACTED]
+- [[Path_29]] - `references` [EXTRACTED]
 - [[duration()]] - `calls` [EXTRACTED]
 - [[ffmpeg()]] - `calls` [EXTRACTED]
 - [[fix_short()]] - `calls` [EXTRACTED]
@@ -26,4 +26,4 @@ tags:
 - [[video_encoder()]] - `calls` [EXTRACTED]
 - [[write_json()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/shutil
+#graphify/code #graphify/EXTRACTED #community/json

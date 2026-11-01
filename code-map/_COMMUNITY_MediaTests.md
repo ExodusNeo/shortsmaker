@@ -10,7 +10,7 @@ members: 33
 ## Members
 - [[dot-blob()_1]] - code - tests/test_media.py
 - [[dot-picture()]] - code - tests/test_media.py
-- [[dot-setUp()_2]] - code - tests/test_media.py
+- [[dot-setUp()_3]] - code - tests/test_media.py
 - [[dot-test_brand_parser_keeps_genuine_brand_images()]] - code - tests/test_media.py
 - [[dot-test_collection_parsers_preserve_item_rights_and_source_page()]] - code - tests/test_media.py
 - [[dot-test_commercial_queries_preserve_product_year_and_country()]] - code - tests/test_media.py
@@ -50,7 +50,7 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 1 edge to [[_COMMUNITY_test_full_scenes.py]]
+- 1 edge to [[_COMMUNITY_pathlib]]
 
 ## Top bridge nodes
 - [[MediaTests]] - degree 33, connects to 1 community

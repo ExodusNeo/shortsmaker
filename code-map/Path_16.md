@@ -1,21 +1,19 @@
 ---
 source_file: ""
 type: "code"
-community: "main"
+community: "OpeningRulesTests"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/main
+  - community/OpeningRulesTests
 ---
 
 # Path
 
 ## Connections
-- [[begin()]] - `references` [EXTRACTED]
-- [[context()]] - `references` [EXTRACTED]
-- [[pending()]] - `references` [EXTRACTED]
-- [[read()_1]] - `references` [EXTRACTED]
-- [[save_context()]] - `references` [EXTRACTED]
-- [[update()]] - `references` [EXTRACTED]
+- [[make_opener()]] - `references` [EXTRACTED]
+- [[node_run()]] - `references` [EXTRACTED]
+- [[review()]] - `references` [EXTRACTED]
+- [[write()_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/main
+#graphify/code #graphify/EXTRACTED #community/OpeningRulesTests

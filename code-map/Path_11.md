@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "config.py"
+community: "edit_project.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/configpy
+  - community/edit_projectpy
 ---
 
 # Path
 
 ## Connections
-- [[import_media()]] - `references` [EXTRACTED]
+- [[short_folder()]] - `references` [EXTRACTED]
+- [[videos()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/configpy
+#graphify/code #graphify/EXTRACTED #community/edit_projectpy

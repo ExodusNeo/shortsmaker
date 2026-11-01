@@ -1,48 +1,44 @@
 ---
 type: community
-members: 35
+members: 31
 ---
 
 # json
 
-**Members:** 35 nodes
+**Members:** 31 nodes
 
 ## Members
 - [[A fingerprint of the drawing code (blender.py) frames drawn by older code…]] - rationale - shortsmaker/blender_render.py
-- [[Camera-shot samples for short adslocal videos; otherwise spread samples or…]] - rationale - shortsmaker/footage.py
-- [[Check every line against the story's Wikipedia articles and rewrite what they…]] - rationale - shortsmaker/writing.py
-- [[CompletedProcess]] - code
+- [[Comfy-Org's official MOSS-Image text-to-image template (25 steps, CFG 2.5,…]] - rationale - shortsmaker/gpu.py
+- [[Copy into the library; never movemodify the owner's original. Sidecars also…]] - rationale - shortsmaker/media_library.py
 - [[Detect cuts in short adslocal files; bounded work and cached results for…]] - rationale - shortsmaker/footage.py
-- [[Download ~14s around the chosen moment with original framing and muted source…]] - rationale - shortsmaker/footage.py
-- [[Draw a Short in Blender (2026-10-22) after the voice sets every scene's…]] - rationale - shortsmaker/blender_render.py
-- [[Match FILM_CROP on downloaded thumbnail JPEGs (cut top 6%, bottom 20%, and 4%…]] - rationale - shortsmaker/footage.py
+- [[Fast path for a mark card on a still, with hard cuts on both sides. Preserve…]] - rationale - shortsmaker/scene_repair.py
+- [[Paint on this PC with MOSS-Image in ComfyUI (owner's pick 2026-10-20 over SDXL-…]] - rationale - shortsmaker/gpu.py
+- [[Path_28]] - code
+- [[Path_29]] - code
 - [[Path_30]] - code
 - [[Pixabay stock video free to use in videos, no credit needed (Pixabay Content…]] - rationale - shortsmaker/footage.py
-- [[Plain text of an English Wikipedia article ('' when missing or unreachable).]] - rationale - shortsmaker/writing.py
-- [[Real film clips (Commons, Internet Archive, NASA, Pixabay) and their ffmpeg…]] - rationale - shortsmaker/footage.py
 - [[Reuse completed narration only when text, voice settings and source files still…]] - rationale - shortsmaker/voice_cache.py
-- [[What people actually type into YouTube search (free autocomplete endpoint, no…]] - rationale - shortsmaker/seo.py
-- [[article_text()]] - code - shortsmaker/writing.py
-- [[blender_render.py]] - code - shortsmaker/blender_render.py
+- [[What a fix re-render needs to reproduce this Short without new AI picks the…]] - rationale - shortsmaker/short_render.py
+- [[Write via a temp file, so an interrupted run never leaves a half-written file…]] - rationale - shortsmaker/media_tools.py
+- [[apply()]] - code - shortsmaker/scene_repair.py
 - [[code_version()]] - code - shortsmaker/blender_render.py
-- [[crop_film_bytes()]] - code - shortsmaker/footage.py
-- [[crop_filter()]] - code - shortsmaker/footage.py
-- [[fact_check()_1]] - code - shortsmaker/writing.py
-- [[ffmpeg reading a film over HTTP. Wikimedia gets the contact User-Agent, the…]] - rationale - shortsmaker/image_sources.py
-- [[film_ffmpeg()]] - code - shortsmaker/image_sources.py
-- [[film_frames()]] - code - shortsmaker/footage.py
-- [[film_piece()]] - code - shortsmaker/footage.py
-- [[footage.py]] - code - shortsmaker/footage.py
+- [[comfy_call()]] - code - shortsmaker/gpu.py
+- [[copy]] - concept
 - [[hashlib]] - concept
+- [[import_media()]] - code - shortsmaker/media_library.py
 - [[json]] - concept
 - [[load()_1]] - code - shortsmaker/voice_cache.py
+- [[moss_graph()]] - code - shortsmaker/gpu.py
+- [[moss_images()]] - code - shortsmaker/gpu.py
 - [[pixabay_films()]] - code - shortsmaker/footage.py
+- [[preview()]] - code - shortsmaker/scene_repair.py
 - [[save()_1]] - code - shortsmaker/voice_cache.py
-- [[search_suggestions()]] - code - shortsmaker/seo.py
+- [[save_state()]] - code - shortsmaker/short_render.py
 - [[shot_moments()]] - code - shortsmaker/footage.py
 - [[signature()]] - code - shortsmaker/voice_cache.py
-- [[test_fact_check_drops_full()]] - code - tests/test_full_scenes.py
 - [[voice_cache.py]] - code - shortsmaker/voice_cache.py
+- [[write_json()]] - code - shortsmaker/media_tools.py
 
 ## Live Query (requires Dataview plugin)
 
@@ -52,54 +48,55 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 32 edges to [[_COMMUNITY_test_full_scenes.py]]
-- 27 edges to [[_COMMUNITY_pathlib]]
-- 11 edges to [[_COMMUNITY_main_1]]
-- 10 edges to [[_COMMUNITY_test_pictures_first.py]]
-- 10 edges to [[_COMMUNITY_fetch]]
+- 32 edges to [[_COMMUNITY_pathlib]]
+- 16 edges to [[_COMMUNITY_main_1]]
+- 14 edges to [[_COMMUNITY_extra_sources.py]]
+- 13 edges to [[_COMMUNITY_gpu.py]]
+- 12 edges to [[_COMMUNITY___init__.py]]
+- 11 edges to [[_COMMUNITY_render]]
 - 9 edges to [[_COMMUNITY_shutil]]
-- 8 edges to [[_COMMUNITY_config.py]]
-- 7 edges to [[_COMMUNITY_image_sources.py]]
-- 7 edges to [[_COMMUNITY_test_blender_render.py]]
-- 6 edges to [[_COMMUNITY_style_lab.py]]
-- 6 edges to [[_COMMUNITY_time]]
-- 5 edges to [[_COMMUNITY_drawn_opener.py]]
-- 5 edges to [[_COMMUNITY_plan_rules.py]]
-- 5 edges to [[_COMMUNITY_audio_library.py]]
-- 4 edges to [[_COMMUNITY_render]]
-- 4 edges to [[_COMMUNITY_extra_sources.py]]
-- 3 edges to [[_COMMUNITY_test_rules.py]]
-- 3 edges to [[_COMMUNITY_brand_images]]
-- 3 edges to [[_COMMUNITY_ffmpeg]]
-- 3 edges to [[_COMMUNITY_first_second_check]]
+- 7 edges to [[_COMMUNITY_audio_library.py]]
+- 6 edges to [[_COMMUNITY_media_menu.py]]
+- 6 edges to [[_COMMUNITY_re]]
+- 5 edges to [[_COMMUNITY_opener_graphic]]
+- 4 edges to [[_COMMUNITY_test_style.py]]
+- 4 edges to [[_COMMUNITY_test_pictures_first.py]]
+- 4 edges to [[_COMMUNITY_prepare_topic]]
+- 3 edges to [[_COMMUNITY_h3_run.py]]
+- 3 edges to [[_COMMUNITY_OpeningRulesTests]]
+- 3 edges to [[_COMMUNITY_on_topic]]
+- 3 edges to [[_COMMUNITY_finish_render]]
 - 3 edges to [[_COMMUNITY_code_custom_scenes]]
-- 2 edges to [[_COMMUNITY_media_command]]
-- 2 edges to [[_COMMUNITY_test_style.py]]
-- 2 edges to [[_COMMUNITY_write_scripts]]
-- 2 edges to [[_COMMUNITY_local_clips]]
+- 3 edges to [[_COMMUNITY_test_blender_render.py]]
+- 3 edges to [[_COMMUNITY_style_library]]
 - 2 edges to [[_COMMUNITY_test_story.py]]
-- 2 edges to [[_COMMUNITY_finish_render]]
-- 2 edges to [[_COMMUNITY_gather_pool]]
+- 2 edges to [[_COMMUNITY_fetch]]
+- 2 edges to [[_COMMUNITY_film_piece]]
 - 2 edges to [[_COMMUNITY_edit_scripts]]
 - 2 edges to [[_COMMUNITY_qwen_voice.py]]
-- 2 edges to [[_COMMUNITY_re]]
-- 1 edge to [[_COMMUNITY_BlenderFailed]]
+- 2 edges to [[_COMMUNITY_choose_images]]
+- 2 edges to [[_COMMUNITY_test_full_scenes.py]]
+- 1 edge to [[_COMMUNITY_apply_review_fixes]]
+- 1 edge to [[_COMMUNITY_edit_project.py]]
+- 1 edge to [[_COMMUNITY_paint_instead]]
+- 1 edge to [[_COMMUNITY_rewrite_paint_prompts]]
 - 1 edge to [[_COMMUNITY_main]]
+- 1 edge to [[_COMMUNITY_wm_files]]
 - 1 edge to [[_COMMUNITY_invent_component]]
+- 1 edge to [[_COMMUNITY_fake_ai]]
 - 1 edge to [[_COMMUNITY_style_placeholders]]
 - 1 edge to [[_COMMUNITY_trend_research]]
-- 1 edge to [[_COMMUNITY_ask_ai]]
-- 1 edge to [[_COMMUNITY_is_loop_short]]
-- 1 edge to [[_COMMUNITY_drawn_thumbnail]]
-- 1 edge to [[_COMMUNITY_save_candidate]]
+- 1 edge to [[_COMMUNITY_blender_plan.py]]
+- 1 edge to [[_COMMUNITY_test_rules.py]]
 - 1 edge to [[_COMMUNITY_Local GPU Worker]]
 - 1 edge to [[_COMMUNITY_test_blender_plan.py]]
 - 1 edge to [[_COMMUNITY_test_blender_scene.py]]
 - 1 edge to [[_COMMUNITY_build_scene.py]]
+- 1 edge to [[_COMMUNITY_audio_mix.py]]
 
 ## Top bridge nodes
-- [[json]] - degree 119, connects to 39 communities
-- [[footage.py]] - degree 36, connects to 11 communities
-- [[hashlib]] - degree 22, connects to 8 communities
-- [[blender_render.py]] - degree 19, connects to 7 communities
-- [[article_text()]] - degree 8, connects to 5 communities
+- [[json]] - degree 121, connects to 41 communities
+- [[write_json()]] - degree 21, connects to 8 communities
+- [[hashlib]] - degree 22, connects to 7 communities
+- [[apply()]] - degree 13, connects to 7 communities
+- [[moss_images()]] - degree 13, connects to 6 communities

@@ -1,12 +1,12 @@
 ---
 source_file: "colab/h3_run.py"
 type: "code"
-community: "time"
+community: "h3_run.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/time
+  - community/h3_runpy
 ---
 
 # h3_run.py
@@ -29,4 +29,4 @@ tags:
 - [[urllib_request]] - `imports` [EXTRACTED]
 - [[zipfile]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/time
+#graphify/code #graphify/EXTRACTED #community/h3_runpy

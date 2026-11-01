@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/rules.py"
 type: "rationale"
-community: "test_rules.py"
+community: "main"
 location: "L137"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/test_rulespy
+  - community/main
 ---
 
 # load_rules, but a channel with no rules file yet (a failed draft, a profile…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[require_rules()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/test_rulespy
+#graphify/rationale #graphify/EXTRACTED #community/main

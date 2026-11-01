@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/__init__.py"
 type: "code"
-community: "pathlib"
+community: "__init__.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/pathlib
+  - community/__init__py
 ---
 
 # __init__.py
@@ -33,6 +33,7 @@ tags:
 - [[media_library.py]] - `imports_from` [EXTRACTED]
 - [[media_menu.py]] - `imports_from` [EXTRACTED]
 - [[motion.py]] - `imports_from` [EXTRACTED]
+- [[opening_rules.py]] - `imports_from` [EXTRACTED]
 - [[patching.py]] - `imports` [EXTRACTED]
 - [[picker.py]] - `imports_from` [EXTRACTED]
 - [[picture_pool.py]] - `imports_from` [EXTRACTED]
@@ -60,6 +61,7 @@ tags:
 - [[test_marks.py]] - `imports_from` [EXTRACTED]
 - [[test_media.py]] - `imports_from` [EXTRACTED]
 - [[test_opener_graphic.py]] - `imports_from` [EXTRACTED]
+- [[test_opening_rules.py]] - `imports_from` [EXTRACTED]
 - [[test_package.py]] - `imports_from` [EXTRACTED]
 - [[test_pictures_first.py]] - `imports_from` [EXTRACTED]
 - [[test_reliability.py]] - `imports_from` [EXTRACTED]
@@ -73,4 +75,4 @@ tags:
 - [[voice_cache.py]] - `imports_from` [EXTRACTED]
 - [[writing.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/pathlib
+#graphify/code #graphify/EXTRACTED #community/__init__py

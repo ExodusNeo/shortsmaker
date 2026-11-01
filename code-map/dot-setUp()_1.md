@@ -1,17 +1,17 @@
 ---
-source_file: "tests/test_reliability.py"
+source_file: "tests/test_retention.py"
 type: "code"
-community: "ReliabilityTests"
-location: "L19"
+community: "RetentionTests"
+location: "L30"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ReliabilityTests
+  - community/RetentionTests
 ---
 
 # .setUp()
 
 ## Connections
-- [[ReliabilityTests]] - `method` [EXTRACTED]
+- [[RetentionTests]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ReliabilityTests
+#graphify/code #graphify/EXTRACTED #community/RetentionTests

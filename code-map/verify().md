@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/picture_pool.py"
 type: "code"
-community: "test_pictures_first.py"
+community: "prepare_topic"
 location: "L233"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/test_pictures_firstpy
+  - community/prepare_topic
 ---
 
 # verify()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[preflight_pictures()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/INFERRED #community/test_pictures_firstpy
+#graphify/code #graphify/INFERRED #community/prepare_topic

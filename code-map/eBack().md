@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[dot-dot()]] - `calls` [EXTRACTED]
-- [[clamp()]] - `calls` [EXTRACTED]
+- [[clamp()_1]] - `calls` [EXTRACTED]
 - [[core.mjs]] - `contains` [EXTRACTED]
 - [[kit.mjs]] - `imports` [EXTRACTED]
 - [[pen.mjs]] - `imports` [EXTRACTED]

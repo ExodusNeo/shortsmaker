@@ -1,18 +1,18 @@
 ---
 source_file: "shortsmaker/short_render.py"
 type: "code"
-community: "finish_render"
+community: "render"
 location: "L105"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/finish_render
+  - community/render
 ---
 
 # use_opener()
 
 ## Connections
-- [[Path_13]] - `references` [EXTRACTED]
+- [[Path_6]] - `references` [EXTRACTED]
 - [[Scene 1 on an `opener animated` channel plays the first opener that works…]] - `rationale_for` [EXTRACTED]
 - [[ffmpeg()]] - `calls` [EXTRACTED]
 - [[make_opener()]] - `calls` [EXTRACTED]
@@ -21,4 +21,4 @@ tags:
 - [[test_use_opener_plays_the_drawn_opener()]] - `calls` [EXTRACTED]
 - [[use()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/finish_render
+#graphify/code #graphify/EXTRACTED #community/render

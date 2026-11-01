@@ -1,12 +1,12 @@
 ---
 source_file: "blender/parts.py"
 type: "code"
-community: "look.py"
+community: "parts.py"
 location: "L15"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/lookpy
+  - community/partspy
 ---
 
 # _mesh()
@@ -16,4 +16,4 @@ tags:
 - [[material()]] - `calls` [EXTRACTED]
 - [[parts.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/lookpy
+#graphify/code #graphify/EXTRACTED #community/partspy

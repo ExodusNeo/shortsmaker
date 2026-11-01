@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/media_menu.py"
 type: "code"
-community: "config.py"
+community: "media_menu.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/configpy
+  - community/media_menupy
 ---
 
 # media_menu.py
@@ -33,4 +33,4 @@ tags:
 - [[subprocess]] - `imports` [EXTRACTED]
 - [[test_media.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/configpy
+#graphify/code #graphify/EXTRACTED #community/media_menupy

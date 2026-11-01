@@ -1,16 +1,20 @@
 ---
 source_file: ""
 type: "code"
-community: "shutil"
+community: "invent_component"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/shutil
+  - community/invent_component
 ---
 
 # Path
 
 ## Connections
-- [[analyze()]] - `references` [EXTRACTED]
+- [[approve_candidate()]] - `references` [EXTRACTED]
+- [[invent_component()]] - `references` [EXTRACTED]
+- [[invent_styles()]] - `references` [EXTRACTED]
+- [[reject_candidate()]] - `references` [EXTRACTED]
+- [[save_candidate()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/shutil
+#graphify/code #graphify/EXTRACTED #community/invent_component

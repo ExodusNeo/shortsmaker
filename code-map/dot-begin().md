@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[Pen]] - `method` [EXTRACTED]
-- [[clamp()]] - `calls` [EXTRACTED]
+- [[clamp()_1]] - `calls` [EXTRACTED]
 - [[idHash()]] - `calls` [EXTRACTED]
 - [[makeKit()]] - `calls` [INFERRED]
 

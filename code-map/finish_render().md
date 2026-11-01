@@ -13,11 +13,13 @@ tags:
 
 ## Connections
 - [[Finish reportsreviews from a committed video; resume reaches here without…]] - `rationale_for` [EXTRACTED]
-- [[Path_13]] - `references` [EXTRACTED]
+- [[Path_6]] - `references` [EXTRACTED]
 - [[apply_review_fixes()]] - `calls` [EXTRACTED]
+- [[drawn_answer_problem()]] - `calls` [EXTRACTED]
 - [[drawn_thumbnail()]] - `calls` [EXTRACTED]
 - [[edit_plan()]] - `calls` [EXTRACTED]
 - [[first_second_check()]] - `calls` [EXTRACTED]
+- [[fix_drawn_answer()]] - `calls` [EXTRACTED]
 - [[fix_opener_graphic()]] - `calls` [EXTRACTED]
 - [[load_state()]] - `calls` [EXTRACTED]
 - [[make()_1]] - `calls` [EXTRACTED]

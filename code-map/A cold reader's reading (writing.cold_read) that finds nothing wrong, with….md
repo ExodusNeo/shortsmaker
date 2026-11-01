@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_story.py"
 type: "rationale"
-community: "test_story.py"
+community: "story_problems"
 location: "L24"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/test_storypy
+  - community/story_problems
 ---
 
 # A cold reader's reading (writing.cold_read) that finds nothing wrong, with…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[read()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/test_storypy
+#graphify/rationale #graphify/EXTRACTED #community/story_problems

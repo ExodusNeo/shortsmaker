@@ -1,17 +1,18 @@
 ---
-source_file: "tests/test_pictures_first.py"
+source_file: "shortsmaker/frame_render.py"
 type: "code"
-community: "test_pictures_first.py"
-location: "L120"
+community: "frame_maker"
+location: "L214"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_pictures_firstpy
+  - community/frame_maker
 ---
 
 # .__init__()
 
 ## Connections
-- [[fake_ai]] - `method` [EXTRACTED]
+- [[ClipReader]] - `method` [EXTRACTED]
+- [[Path_35]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_pictures_firstpy
+#graphify/code #graphify/EXTRACTED #community/frame_maker

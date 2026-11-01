@@ -12,7 +12,7 @@ tags:
 # eExpo()
 
 ## Connections
-- [[clamp()]] - `calls` [EXTRACTED]
+- [[clamp()_1]] - `calls` [EXTRACTED]
 - [[core.mjs]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/coremjs

@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "config.py"
+community: "pathlib"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/configpy
+  - community/pathlib
 ---
 
 # warnings
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[config.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/configpy
+#graphify/concept #graphify/EXTRACTED #community/pathlib

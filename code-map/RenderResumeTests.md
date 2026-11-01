@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_render_resume.py"
 type: "code"
-community: "drawn_opener.py"
+community: "OpeningRulesTests"
 location: "L16"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/drawn_openerpy
+  - community/OpeningRulesTests
 ---
 
 # RenderResumeTests
@@ -17,4 +17,4 @@ tags:
 - [[dot-test_real_video_with_music_offset_and_story_sound_keeps_mix_and_resume()]] - `method` [EXTRACTED]
 - [[test_render_resume.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/drawn_openerpy
+#graphify/code #graphify/EXTRACTED #community/OpeningRulesTests

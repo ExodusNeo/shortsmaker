@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_full_scenes.py"
 type: "code"
-community: "first_second_check"
+community: "main"
 location: "L496"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/first_second_check
+  - community/main
 ---
 
 # test_paint_new_clears_full()
@@ -16,4 +16,4 @@ tags:
 - [[test_full_scenes.py]] - `contains` [EXTRACTED]
 - [[use_picture_from()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/first_second_check
+#graphify/code #graphify/EXTRACTED #community/main

@@ -1,18 +1,18 @@
 ---
 source_file: "shortsmaker/drawn_opener.py"
 type: "code"
-community: "drawn_opener.py"
+community: "OpeningRulesTests"
 location: "L67"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/drawn_openerpy
+  - community/OpeningRulesTests
 ---
 
 # node_run()
 
 ## Connections
-- [[Path_12]] - `references` [EXTRACTED]
+- [[Path_16]] - `references` [EXTRACTED]
 - [[Runs drawnrun.mjs on one job; None when it worked, else what went wrong…]] - `rationale_for` [EXTRACTED]
 - [[drawn_opener.py]] - `contains` [EXTRACTED]
 - [[json]] - `calls` [EXTRACTED]
@@ -21,4 +21,4 @@ tags:
 - [[re]] - `calls` [EXTRACTED]
 - [[subprocess]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/drawn_openerpy
+#graphify/code #graphify/EXTRACTED #community/OpeningRulesTests

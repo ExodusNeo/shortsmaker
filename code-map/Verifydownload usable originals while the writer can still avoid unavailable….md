@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/picture_pool.py"
 type: "rationale"
-community: "test_pictures_first.py"
+community: "prepare_topic"
 location: "L225"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/test_pictures_firstpy
+  - community/prepare_topic
 ---
 
 # Verify/download usable originals while the writer can still avoid unavailable…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[preflight_pictures()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/test_pictures_firstpy
+#graphify/rationale #graphify/EXTRACTED #community/prepare_topic

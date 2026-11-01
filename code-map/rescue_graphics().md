@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/picker.py"
 type: "code"
-community: "plan_rules.py"
-location: "L322"
+community: "opener_graphic"
+location: "L323"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/plan_rulespy
+  - community/opener_graphic
 ---
 
 # rescue_graphics()
@@ -26,4 +26,4 @@ tags:
 - [[test_rescue_respects_caps()]] - `calls` [EXTRACTED]
 - [[words_of()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/plan_rulespy
+#graphify/code #graphify/EXTRACTED #community/opener_graphic

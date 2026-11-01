@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/media_library.py"
 type: "code"
-community: "config.py"
+community: "extra_sources.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/configpy
+  - community/extra_sourcespy
 ---
 
 # media_library.py
@@ -40,4 +40,4 @@ tags:
 - [[threading]] - `imports` [EXTRACTED]
 - [[time]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/configpy
+#graphify/code #graphify/EXTRACTED #community/extra_sourcespy

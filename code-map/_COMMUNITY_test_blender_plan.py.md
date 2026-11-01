@@ -1,23 +1,17 @@
 ---
 type: community
-members: 22
+members: 17
 ---
 
 # test_blender_plan.py
 
-**Members:** 22 nodes
+**Members:** 17 nodes
 
 ## Members
-- [[A number in lo, hi (whole numbers stay whole), or the default for anything…]] - rationale - shortsmaker/blender_plan.py
 - [[Tests for Blender build plans (blender_plan.py, 2026-10-22) the engineer AI's…]] - rationale - tests/test_blender_plan.py
 - [[The engineer's plan with every value checked unknown values get the default,…]] - rationale - shortsmaker/blender_plan.py
-- [[The last part of every Short zoom in, the failure, what it left behind.]] - rationale - shortsmaker/blender_plan.py
-- [[Truss panels per span about square panels, 4-16 of them.]] - rationale - shortsmaker/blender_plan.py
-- [[clamp()_1]] - code - shortsmaker/blender_plan.py
+- [[ask()_7]] - code - tests/test_blender_plan.py
 - [[clean_build()]] - code - shortsmaker/blender_plan.py
-- [[ending()]] - code - shortsmaker/blender_plan.py
-- [[panels()]] - code - shortsmaker/blender_plan.py
-- [[pick()]] - code - shortsmaker/blender_plan.py
 - [[plan()]] - code - tests/test_blender_plan.py
 - [[test_a_failure_in_scene_one_becomes_the_hook()]] - code - tests/test_blender_plan.py
 - [[test_bad_values_get_defaults()]] - code - tests/test_blender_plan.py
@@ -26,6 +20,7 @@ members: 22
 - [[test_default_build_shape()]] - code - tests/test_blender_plan.py
 - [[test_label_is_short_and_upper()]] - code - tests/test_blender_plan.py
 - [[test_nan_and_infinity_get_defaults()]] - code - tests/test_blender_plan.py
+- [[test_plan_builds_retries_then_defaults()]] - code - tests/test_blender_plan.py
 - [[test_tiny_shorts_get_one_beat_per_scene()]] - code - tests/test_blender_plan.py
 - [[test_unlisted_and_bad_scenes_copy_the_previous_beat()]] - code - tests/test_blender_plan.py
 - [[test_unusable_plan_is_none()]] - code - tests/test_blender_plan.py
@@ -39,17 +34,15 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 12 edges to [[_COMMUNITY_pathlib]]
-- 5 edges to [[_COMMUNITY_default_build]]
-- 1 edge to [[_COMMUNITY_write_frames]]
-- 1 edge to [[_COMMUNITY_audio_library.py]]
-- 1 edge to [[_COMMUNITY_drawn_thumbnail]]
+- 11 edges to [[_COMMUNITY_blender_plan.py]]
+- 4 edges to [[_COMMUNITY___init__.py]]
+- 2 edges to [[_COMMUNITY_pathlib]]
+- 1 edge to [[_COMMUNITY_frame_maker]]
 - 1 edge to [[_COMMUNITY_json]]
-- 1 edge to [[_COMMUNITY_test_full_scenes.py]]
+- 1 edge to [[_COMMUNITY_test_story.py]]
 
 ## Top bridge nodes
 - [[test_blender_plan.py]] - degree 24, connects to 6 communities
-- [[clean_build()]] - degree 18, connects to 2 communities
-- [[clamp()_1]] - degree 4, connects to 2 communities
-- [[plan()]] - degree 10, connects to 1 community
-- [[ending()]] - degree 3, connects to 1 community
+- [[clean_build()]] - degree 18, connects to 1 community
+- [[test_default_build_shape()]] - degree 3, connects to 1 community
+- [[test_plan_builds_retries_then_defaults()]] - degree 3, connects to 1 community

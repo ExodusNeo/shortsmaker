@@ -1,20 +1,22 @@
 ---
 source_file: ""
 type: "code"
-community: "invent_component"
+community: "prepare_topic"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/invent_component
+  - community/prepare_topic
 ---
 
 # Path
 
 ## Connections
-- [[approve_candidate()]] - `references` [EXTRACTED]
-- [[invent_component()]] - `references` [EXTRACTED]
-- [[invent_styles()]] - `references` [EXTRACTED]
-- [[reject_candidate()]] - `references` [EXTRACTED]
-- [[save_candidate()]] - `references` [EXTRACTED]
+- [[catalog_pool()]] - `references` [EXTRACTED]
+- [[contact_sheets()]] - `references` [EXTRACTED]
+- [[load_pool()]] - `references` [EXTRACTED]
+- [[pool_folder()]] - `references` [EXTRACTED]
+- [[preflight_pictures()]] - `references` [EXTRACTED]
+- [[prepare_topic()]] - `references` [EXTRACTED]
+- [[save_pool()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/invent_component
+#graphify/code #graphify/EXTRACTED #community/prepare_topic

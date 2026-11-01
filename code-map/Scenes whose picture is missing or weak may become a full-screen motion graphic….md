@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/picker.py"
 type: "rationale"
-community: "plan_rules.py"
-location: "L323"
+community: "opener_graphic"
+location: "L324"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/plan_rulespy
+  - community/opener_graphic
 ---
 
 # Scenes whose picture is missing or weak may become a full-screen motion graphic…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[rescue_graphics()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/plan_rulespy
+#graphify/rationale #graphify/EXTRACTED #community/opener_graphic

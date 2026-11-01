@@ -10,7 +10,7 @@ members: 3
 ## Members
 - [[camera_1]] - code - drawn/examples/kit_parts.mjs
 - [[kit_parts.mjs]] - code - drawn/examples/kit_parts.mjs
-- [[scene()_3]] - code - drawn/examples/kit_parts.mjs
+- [[scene()_2]] - code - drawn/examples/kit_parts.mjs
 
 ## Live Query (requires Dataview plugin)
 

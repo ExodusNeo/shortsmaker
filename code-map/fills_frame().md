@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/frame_render.py"
 type: "code"
-community: "is_loop_short"
+community: "fills_frame"
 location: "L14"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/is_loop_short
+  - community/fills_frame
 ---
 
 # fills_frame()
@@ -19,4 +19,4 @@ tags:
 - [[local_clips()]] - `calls` [EXTRACTED]
 - [[subprocess]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/is_loop_short
+#graphify/code #graphify/EXTRACTED #community/fills_frame

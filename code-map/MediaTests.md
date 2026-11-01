@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[dot-blob()_1]] - `method` [EXTRACTED]
 - [[dot-picture()]] - `method` [EXTRACTED]
-- [[dot-setUp()_2]] - `method` [EXTRACTED]
+- [[dot-setUp()_3]] - `method` [EXTRACTED]
 - [[dot-test_brand_parser_keeps_genuine_brand_images()]] - `method` [EXTRACTED]
 - [[dot-test_collection_parsers_preserve_item_rights_and_source_page()]] - `method` [EXTRACTED]
 - [[dot-test_commercial_queries_preserve_product_year_and_country()]] - `method` [EXTRACTED]

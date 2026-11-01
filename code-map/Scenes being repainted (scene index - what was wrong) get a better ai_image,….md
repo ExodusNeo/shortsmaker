@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/review.py"
 type: "rationale"
-community: "first_second_check"
-location: "L431"
+community: "rewrite_paint_prompts"
+location: "L462"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/first_second_check
+  - community/rewrite_paint_prompts
 ---
 
 # Scenes being repainted (scene index -> what was wrong) get a better ai_image,…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[rewrite_paint_prompts()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/first_second_check
+#graphify/rationale #graphify/EXTRACTED #community/rewrite_paint_prompts

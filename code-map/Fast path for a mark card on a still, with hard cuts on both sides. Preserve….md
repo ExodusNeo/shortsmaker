@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/scene_repair.py"
 type: "rationale"
-community: "shutil"
+community: "json"
 location: "L15"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/shutil
+  - community/json
 ---
 
 # Fast path for a mark card on a still, with hard cuts on both sides. Preserve…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[preview()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/shutil
+#graphify/rationale #graphify/EXTRACTED #community/json

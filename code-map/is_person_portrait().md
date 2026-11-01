@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/plan_rules.py"
 type: "code"
-community: "is_loop_short"
+community: "test_full_scenes.py"
 location: "L344"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/is_loop_short
+  - community/test_full_scenespy
 ---
 
 # is_person_portrait()
@@ -21,4 +21,4 @@ tags:
 - [[words_of()]] - `calls` [EXTRACTED]
 - [[write_scripts()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/is_loop_short
+#graphify/code #graphify/EXTRACTED #community/test_full_scenespy

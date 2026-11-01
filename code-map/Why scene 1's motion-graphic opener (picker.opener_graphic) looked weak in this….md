@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/review.py"
 type: "rationale"
-community: "finish_render"
-location: "L281"
+community: "test_weak_opener_graphic_fixes_then_handoff"
+location: "L311"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/finish_render
+  - community/test_weak_opener_graphic_fixes_then_handoff
 ---
 
 # Why scene 1's motion-graphic opener (picker.opener_graphic) looked weak in this…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[weak_opener_graphic()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/finish_render
+#graphify/rationale #graphify/EXTRACTED #community/test_weak_opener_graphic_fixes_then_handoff

@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_pictures_first.py"
 type: "code"
-community: "owner"
+community: "planning"
 location: "L222"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/owner
+  - community/planning
 ---
 
 # .__exit__()
@@ -15,4 +15,4 @@ tags:
 - [[owner()]] - `calls` [EXTRACTED]
 - [[planning]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/owner
+#graphify/code #graphify/EXTRACTED #community/planning

@@ -1,17 +1,18 @@
 ---
-source_file: "tests/test_style.py"
+source_file: "tests/test_rules.py"
 type: "code"
-community: "test_style.py"
-location: "L202"
+community: "test_rules.py"
+location: "L72"
 tags:
   - graphify/code
-  - graphify/EXTRACTED
-  - community/test_stylepy
+  - graphify/INFERRED
+  - community/test_rulespy
 ---
 
 # ask()
 
 ## Connections
-- [[test_fact_check_sees_new_graphics()]] - `contains` [EXTRACTED]
+- [[capture_prompts()]] - `indirect_call` [INFERRED]
+- [[run_draft()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/test_stylepy
+#graphify/code #graphify/INFERRED #community/test_rulespy

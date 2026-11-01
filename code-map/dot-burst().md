@@ -12,7 +12,7 @@ tags:
 # .burst()
 
 ## Connections
-- [[clamp()]] - `calls` [EXTRACTED]
+- [[clamp()_1]] - `calls` [EXTRACTED]
 - [[k]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/k

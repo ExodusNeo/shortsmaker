@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "config.py"
+community: "__init__.py"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/configpy
+  - community/__init__py
 ---
 
 # os
@@ -27,4 +27,4 @@ tags:
 - [[test_reliability.py]] - `imports` [EXTRACTED]
 - [[veo_handoff()]] - `calls` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/configpy
+#graphify/concept #graphify/EXTRACTED #community/__init__py

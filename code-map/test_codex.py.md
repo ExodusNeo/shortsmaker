@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_codex.py"
 type: "code"
-community: "pathlib"
+community: "__init__.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/pathlib
+  - community/__init__py
 ---
 
 # test_codex.py
@@ -30,4 +30,4 @@ tags:
 - [[unittest_mock]] - `imports_from` [EXTRACTED]
 - [[writing.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/pathlib
+#graphify/code #graphify/EXTRACTED #community/__init__py
