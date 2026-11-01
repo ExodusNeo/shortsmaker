@@ -68,6 +68,7 @@ def edit_plan(short: dict, bounds: list[float], sources: list[str], cues: list[d
              + (f" | {short['opening_note']}" if short.get("opening_note") else "")
              + (f" | hook lines considered: {' / '.join(short['hook_options'])}" if short["hook_options"] else ""),
              "Script editor: " + ("\n  ".join([""] + short["editor_notes"]) if short.get("editor_notes") else "none"),
+             *(["Metadata review: " + "; ".join(short["seo_notes"])] if short.get("seo_notes") else []),
              *([cold_read_line(short["story_read"])] if short.get("story_read") else []),
              *([f"Topic pitch: {short['pitch']}"] if short.get("pitch") else []),
              *([f"Twist check (topic against Wikipedia, before writing): {short['twist_check']}"]

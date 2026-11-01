@@ -475,6 +475,7 @@ def finish_render(short: dict, ch: dict, folder: Path, state=None, fix_round: in
               f"{'Remotion' if renderer == 'remotion' else 'built-in (Python)'}, {n_graphics} motion graphics",
               clips)
     issues = review.quality_check(folder / "short.mp4", bounds, sources, work / "voice.wav")
+    issues += review.pacing_check(short, bounds, cues)
     issues += [opener_check] if opener_check else []
     print(f"  {session.BRAIN.capitalize()} is watching the finished Short for problems...")
     found, fixes = review.visual_review(folder / "short.mp4", short, bounds, sources, work, drawn=drawn, cues=cues)

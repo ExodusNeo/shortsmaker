@@ -20,6 +20,41 @@ from shortsmaker.config import FONT, GRAPHIC_STYLES
 PAUSE_MAX = 0.8  # seconds of narration silence worth a look: sentence pauses ran 0.4-0.56 s; the Nobel bacteria Short had 1.06 s at 2.6 s
 
 
+def pacing_check(short: dict, bounds: list[float], cues: list[dict]) -> list[str]:
+    """Measured reading holds and final-script detours. Editorial defaults, not YouTube ranking rules."""
+    scenes = short.get("scenes") or []
+    if len(bounds) != len(scenes) + 1:
+        return ["pacing could not be checked: scene timings do not match the script"]
+    issues = []
+    read = short.get("story_read") or {}
+    fresh = read.get("new") or []
+    if len(fresh) == len(scenes):
+        stale = [i for i, value in enumerate(fresh) if value is False]
+        held = sum(bounds[i + 1] - bounds[i] for i in stale)
+        if len(stale) >= 3:
+            issues.append(f"cold reader found no new information across {held:.1f}s in scenes "
+                          + ", ".join(str(i + 1) for i in stale) + "; review those detours")
+    swipe = read.get("swipe")
+    if type(swipe) is int and 1 <= swipe < len(scenes) - 1:
+        issues.append(f"cold reader predicts a swipe at {media_tools.clock(bounds[swipe - 1])} "
+                      f"(scene {swipe}): {read.get('swipe_why') or 'the story loses momentum'}")
+    for i, (scene, cue) in enumerate(zip(scenes, cues)):
+        graphic = scene.get("graphic")
+        if not graphic or cue.get("graphic") is None:
+            continue
+        text = str(graphic.get("text") or "")
+        # Match the repo's motion-design reading-hold guidance. Allow 0.35s for an ordinary entrance.
+        needed = 1.0 + max(0, len(text.split()) - 3) * 0.25
+        held = bounds[i + 1] - 0.25 - cue["graphic"] - 0.35
+        if text and held < needed:
+            issues.append(f'scene {i + 1} callout "{text}" has about {max(0, held):.1f}s to read after its '
+                          f'entrance; allow about {needed:.1f}s or simplify it')
+    issues += [str(note) for note in short.get("editor_notes", []) if str(note).startswith(("STILL", "NOT REVIEWED"))]
+    issues += [str(note) for note in short.get("fact_check", []) if str(note).startswith("NOT CHECKED")]
+    issues += [f"metadata: {note}" for note in short.get("seo_notes", [])]
+    return list(dict.fromkeys(issues))
+
+
 def review_status(short: dict, name: str, status: str, why: str = "") -> None:
     short.setdefault("review_status", {})[name] = {"status": status, "why": why}
 

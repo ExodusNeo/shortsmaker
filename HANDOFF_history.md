@@ -1748,3 +1748,41 @@ updating their fixture. compileall and git diff --check passed. A live Codex art
 Leach preview returned 4/10 and explicitly identified the visible peel and ORANGE PEEL pavement label as the
 answer reveal. The existing Short was only read; its video, state and reports were not rewritten. These checks
 improve the workflow but do not guarantee an AI will detect every giveaway. No retention outcome is claimed.
+
+### 2026-11-01 — quality research, final-script checks and retention feedback
+
+Owner requested a codebase review and researched improvements to Shorts quality, including SEO, pacing,
+scriptwriting and suitable GitHub repositories. Read current pipeline, channel rules, prior competitor
+research, latest Bobby Leach plan/storyboard and the local motion-design/review-loop skills. Checked official
+YouTube discovery, tags, retention and creator guidance, autocomplete documentation and upstream repositories.
+Findings, links, repository fit and remaining priorities are in docs/short-quality-research.md. Previously
+recorded competitor views are explicitly historical; direct YouTube page retrieval failed here. No fresh
+competitor transcript or audience-performance evidence was fabricated.
+
+Implemented: existing editorial retry now covers swipe points before the final two scenes, 3+ separated
+empty beats and unanswered openings. Narration changed by fact checking gets one batched final cold read;
+a failed read clears the earlier verdict and records NOT REVIEWED. Malformed fact-check replies are
+NOT CHECKED rather than a pass. Rendered CHECK lines include actual time spent in empty beats, predicted
+swipe timestamps, short callout reading holds, unresolved script notes and metadata/fact-review fallbacks.
+
+SEO no longer treats autocomplete order as volume data or tags as audience assignment. Metadata fields
+are validated independently, malformed batch/row/field replies preserve draft values, titles are cleaned
+without truncating replacement promises and tags stay whole within the upload budget. Descriptions and
+comments emphasize supported specifics rather than generic hype or mandatory controversy. Upload SRT blocks
+now break on sentences, pauses, width and duration without changing spoken words or burned-in caption style.
+
+Part 3.2 implemented: logbook_results adds posting age (explicitly not the unknown metrics collection age)
+and reads approximate retention drop records only for the current channel's active-logbook entries with
+100+ views. Counts each type once per distinct Short and reports overlaps only after 3+ Shorts. AI prose,
+archived entries, unlisted folders and other channels are excluded. Counts are not failure rates or causes.
+Active logbook files/columns, existing generated Shorts, user profile/research edits and branding were kept.
+No runtime dependencies, keys, models or paid API access added. Only changed narration adds a review call.
+
+Verification: 274 tests passed across 15 suites: quality (21), story (20), pictures first (40), topic ideas
+(10), first second (13), retention (10), real FFmpeg render/resume (2), reliability (15), package (19), channel
+rules/golden prompts (29), opening rules (12), AI modes (4), Codex (4), full scenes (46), style (29).
+Inspected the intentional topic/writer golden-prompt changes before updating the fixture. Updated old story
+expectations for late swipes/separated filler and supplied the explicit verdict in a valid style fact-check
+fixture. compileall, Remotion TypeScript compilation and git diff --check passed. Read-only audit of Bobby
+Leach's saved state/context flags 7.6s across scenes 7/9/12 and a predicted swipe at 22.7s; no saved video or
+reports were changed. No full live AI-generated Short or audience uplift test completed in this session.

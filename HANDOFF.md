@@ -167,7 +167,10 @@ Rules that keep it working:
    emphasis, transition, `ai_image`, animate/motion, sound, optional `full`; per Short palette, music mood, look,
    thumbnail, SEO drafts) -> fact check against the Wikipedia text (rewrites unsupported lines, drops wrong graphics,
    myths go to the profile). When the fact check rewrote lines, the text rules (`story_problems` without a cold
-   read) and the word total are checked again; leftovers are `STILL (after the fact check):` notes.
+   read) and the word total are checked again; leftovers are `STILL (after the fact check):` notes. Changed
+   narrations get one batched cold read of the final words; stale verdicts are cleared on failure. Missing
+   payoffs, swipe points before the final two scenes and 3+ separated empty beats enter the bounded edit
+   retry. A malformed fact-check verdict is explicitly NOT CHECKED, including in the finished CHECK lines.
    Lengths: 95-125 words in 11-16 scenes (~40-50 s), or `SHORT_FORM` 60-72 words in 8-10: `writing.length_plan()` is
    the only length target (the strange-history rules file no longer repeats one; weird-economics' rules still say
    110-135); `writing.max_seconds()` is quality_check's limit. Scenes of 4-10 words
@@ -179,6 +182,9 @@ Rules that keep it working:
    results and the fact check's corrections. Title < 60 chars, first 40 work alone, no emoji, never repeats the hook.
    Then description, tags, pinned comment. Title/hashtag/pinned-comment examples come from the channel's optional
    `## SEO` rules section (the prompt in `seo.py` holds no niche's examples).
+   Autocomplete is wording research, never a volume ranking; tags are specific hints, not audience targeting.
+   Metadata fields are validated independently, preserving drafts on bad replies. Whole tags fit a 450-character
+   budget. SRT blocks respect sentences, pauses, width and duration. CHECK lines include metadata fallbacks.
 6. **Pictures** (`choose_images()`): keeps each director `pic` unless it doesn't fit; new searches only for scenes
    without one and for portraits. The AI looks at numbered contact sheets; rejects violence, uploader overlays and
    look-alikes from another culture or era. Genuine brand marks, prices, packaging and original ad text are allowed.
@@ -340,7 +346,10 @@ were backed up under `vault/Archive/Logbooks/2026-10-31_200433/` and cleared fro
 `Lessons from our numbers` sections were archived there and replaced with fresh-baseline instructions; old
 performance claims were removed from the editor prompt. Archives are not read by `logbook_results()`. Videos
 and `done_topics` were preserved. Retention reports live in each output folder, not in the logbook; the owner
-may copy the suggested summary into the existing My notes line. No automatic report ingestion until Part 3.2.
+may copy the suggested summary into the existing My notes line. Planning now reads approximate saved drop
+timings only for current-channel active entries with 100+ views, counts each scene type once per Short and
+reports overlaps repeated in 3+ Shorts (observations, not causes/failure rates). Posting age is included;
+metrics collection age remains unknown. No logbook columns or contents are changed automatically.
 
 One entry per Short; the owner's YouTube Studio numbers (Views, Comments, Subscribers gained, Stayed to watch,
 Average % viewed, likes, a note). When the owner names a channel, read Studio with Claude in Chrome (already logged
@@ -374,7 +383,7 @@ strangest moment. Same story, other channel: Voggle's Mike 2M views vs ours 1.2K
 - **Audit improvements (2026-10-31)**: Parts 1 and 2.1/2.3-2.5 were already on master and pushed at
   `beaae733`; the previous branch/wait notes were stale. Part 2.2 supports all three AIs. Owner clarified: three true solo modes and all six ordered writer/editor
   pairs; quota handover can use the third AI within the same run. Part 3.1 (retention reader) is implemented;
-  3.2 (automatic use of reports), 3.3 and 3.4 remain open.
+  3.2 (automatic use of reports) is implemented; 3.3 and 3.4 remain open.
   Plan: `docs/superpowers/plans/2026-10-31-audit-improvements.md` (git-ignored on purpose).
   Malformed cold reads now count as no review; a failed second read removes the old draft's verdict. A failed
   opener preview also clears the old render's score. A live Codex cold read passed. Owner completed the Mary Toft Short (2026-10-31); its 19-21 s callout
@@ -393,6 +402,9 @@ strangest moment. Same story, other channel: Voggle's Mike 2M views vs ours 1.2K
   McDonald's/LoC blocked automated requests here, Smithsonian demo key hit its rate limit. Europeana's owner-
   supplied key is configured locally and a live image search succeeded. Duke AdViews works; Duke's separate Ad*Access print site has no working connector
   here (local import available). No new keys acquired. New film preserves its frame; legacy crop is opt-in.
+- Quality audit (2026-11-01): `docs/short-quality-research.md` records evidence, GitHub options and next priorities.
+  Rendered CHECK lines now include measured seconds of cold-reader detours, mid-story swipe timestamps,
+  short callout reading holds and unresolved script/metadata/fact-review notes. No new runtime dependencies.
 
 ## Ideas offered, not built
 - Voice cloning of the owner, SFX on the music's beat, YouTube Audio Library tracks for somber/epic.
@@ -408,6 +420,7 @@ strangest moment. Same story, other channel: Voggle's Mike 2M views vs ours 1.2K
   `test_topic_ideas`, `test_h3_handoff`, `test_h3_run`, `test_edit_project`, `test_blender_plan`,
   `test_blender_render`, `test_opener_graphic`, `test_drawn_opener` (real node, ~1 min);
   `tests\run_ts_tests.py` (TypeScript); `local_ai\qwen_venv\Scripts\python.exe tests\test_qwen_voice.py`.
+- Quality changes: `tests/test_quality.py` (metadata validation, final-script reviews, pacing and retention feedback).
 - With real headless Blender (engineering-failures): `test_blender_run`, `test_blender_scene`.
 - One full-screen scene: `tests\render_full.py remotion\test_props\<name>.json [--still SECONDS]`.
 - Prompt changes without AI usage: fake `llm.ask_ai` (and `writing.article_text`, `channel_profiles.trend_research`,

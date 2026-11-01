@@ -62,10 +62,12 @@ HOW OUR OWN POSTED SHORTS DID (the owner's numbers from YouTube Studio, oldest f
 {results}
 Learn from these before choosing topics and writing. "Stayed to watch" shows whether the first second
 (topic, hook line, opening picture) stopped the scroll; "Average % viewed" shows whether the story held
-to the end (over 100% means rewatches). Do more of what the best ones share (kinds of topic, hook
-patterns, story shapes) and less of what the weakest share; read the owner's notes too. With only a
-few Shorts, treat this as hints, not rules. Judge only entries with enough views (the ones marked "Too few
-views to judge" say little). {session.RULES["Lessons from our numbers"]}
+to the end (over 100% can include rewatches). Read the owner's notes. Treat a pattern as a candidate lesson
+only when it repeats in at least 3 Shorts with enough views; one hit or flop is not a rule. Compare similar
+lengths and posting ages, preferably 7 days after posting. Posting age is not the metrics collection date;
+unknown ages or collection dates limit comparisons. Saved retention drops are approximate observations,
+not proof of a cause. Judge only entries with enough views ("Too few views to judge" says little).
+{session.RULES["Lessons from our numbers"]}
 """
     if topics:
         what = f"Use exactly these {len(topics)} topics, in this order: {topics}"
@@ -201,10 +203,11 @@ Reply with ONLY JSON: {{"shorts": [{{"index": 0, "shape": "...", "title": "...",
     assert shorts, f"no usable scripts: {data}"
     edit_scripts(shorts, ch)
     direct_scripts(shorts, ch)
-    kept = []
+    kept, changed_scripts = [], []
     for s in shorts:  # LLM output is untrusted: check required fields, normalize the edit plan
         assert s.get("title") and s.get("scenes") and all(
             sc.get("narration") and sc.get("image_search") for sc in s["scenes"]), f"bad short: {s}"
+        before_facts = [sc["narration"] for sc in s["scenes"]]
         if not fact_check(s):
             print(f'  Dropped "{s["title"]}": its central claim didn\'t hold up against the sources')
             myth = f"{s.get('topic') or s['title']}: {s.get('myth_note') or 'not true as told'}"[:300]
@@ -212,6 +215,8 @@ Reply with ONLY JSON: {{"shorts": [{{"index": 0, "shape": "...", "title": "...",
             channel_profiles.save_channel(ch)
             continue
         kept.append(s)
+        if before_facts != [sc["narration"] for sc in s["scenes"]]:
+            changed_scripts.append(s)
         if s.get("fact_check"):  # its rewrites come after the story checks: the text rules again, as edit_plan notes
             lines, notes = [sc["narration"] for sc in s["scenes"]], s.get("editor_notes") or []
             left = story_problems(lines)
@@ -274,6 +279,7 @@ Reply with ONLY JSON: {{"shorts": [{{"index": 0, "shape": "...", "title": "...",
         plan_rules.settle_style(s, ch)
         plan_rules.limit_style(s["scenes"])
         audio_mix.limit_sounds(s["scenes"])
+    recheck_final_scripts(changed_scripts)
     if kept and session.RULE_SETTINGS.get("visuals") == "blender":  # every scene is drawn: the engineer plans it
         blender_plan.plan_builds(kept, ch)
     return kept
@@ -283,6 +289,25 @@ def narration_lines(v) -> list[str]:
     """Scene narrations from an AI reply: a list of strings (or of {"narration": ...})."""
     items = v if isinstance(v, list) else []
     return [t for t in (str((x.get("narration") if isinstance(x, dict) else x) or "").strip() for x in items) if t]
+
+
+def recheck_final_scripts(shorts: list[dict]) -> None:
+    """A changed, fact-checked script needs its own verdict. Never rewrite verified facts here."""
+    if not shorts:
+        return
+    for short in shorts:
+        short.pop("story_read", None)
+        short["lines"] = [scene["narration"] for scene in short["scenes"]]
+    reads = cold_read(shorts)
+    for i, short in enumerate(shorts):
+        notes = short.setdefault("editor_notes", [])
+        if i in reads:
+            short["story_read"] = reads[i]
+            notes.append("cold reader rechecked the final narration after the fact check")
+            notes.extend(f"STILL (after the fact check): {issue}" for issue in story_problems(short["lines"], reads[i])
+                         if f"STILL (after the fact check): {issue}" not in notes)
+        else:
+            notes.append("NOT REVIEWED: final narration changed during the fact check; the cold reader didn't answer")
 
 
 def edit_scripts(shorts: list[dict], ch: dict, problems: dict[int, list[str]] | None = None) -> None:
@@ -428,6 +453,8 @@ def story_problems(lines: list[str], read: dict | None = None) -> list[str]:
                      "last scene or the last two, and the Short ends there")
     if read.get("question", "").lower().strip(" .") == "none":
         found.append("the first sentence leaves a stranger nothing to wonder about: open a question only the ending answers")
+    elif read.get("question") and read.get("answer") is None:
+        found.append("the opening question is never answered: the ending must deliver the promised payoff")
     new, k = read.get("new") or [], 0
     while k < len(new):  # runs of 2+ scenes that add nothing
         end = k
@@ -437,9 +464,11 @@ def story_problems(lines: list[str], read: dict | None = None) -> list[str]:
             found.append(f"scenes {k + 1}-{end} add nothing new for a viewer (a recap, filler or background too early): "
                          "cut them or turn them into the next question")
         k = end + 1
-    if (swipe := read.get("swipe")) and swipe <= 4:
+    if (swipe := read.get("swipe")) and swipe < len(lines) - 1:
         found.append(f"a stranger would likely swipe at scene {swipe} ({read.get('swipe_why') or 'no reason given'}): "
                      "make it raise the stakes or open the next question")
+    if sum(value is False for value in new) >= 3:
+        found.append("at least 3 scenes add nothing new, even if separated: cut the detours and connect the story's consequences")
     for k, line in enumerate(lines):
         if DATE_FIRST.match(line):
             found.append(f'scene {k + 1} starts with a date ("{line}"): bring the year in mid-sentence, or leave it out')
@@ -703,8 +732,9 @@ hook_text: {s.get("hook_text")!r} | thumbnail_text: {s.get("thumbnail_text")!r}
 Wikipedia articles: {json.dumps(texts, ensure_ascii=False)}
 Reply with ONLY JSON: {{"story_holds": true, "fixes": [{{"scene": 3, "narration": "...", "drop_graphic": false, "drop_full": false, "full_fix": null,
 "shot": null, "ai_image": null, "image_search": null, "video_search": null, "why": "..."}}], "hook_text": null, "thumbnail_text": null, "myth_note": null}}""", fatal=False)
-    if not isinstance(data, dict):
-        s["fact_check"] = ["NOT CHECKED (the AI didn't reply): check the facts yourself before posting"]
+    if not (isinstance(data, dict) and type(data.get("story_holds")) is bool
+            and isinstance(data.get("fixes"), list)):
+        s["fact_check"] = ["NOT CHECKED (the AI didn't return a usable verdict): check the facts yourself before posting"]
         return True
     s["fact_check"] = []
     for f in data.get("fixes") or []:

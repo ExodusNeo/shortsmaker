@@ -201,7 +201,7 @@ def test_fact_check_sees_new_graphics():
 
     def ask(prompt, fatal=True, read_dir=None, brain=None, bulk=False):
         seen["p"] = prompt
-        return {"fixes": [{"scene": 2, "drop_graphic": True, "why": "it was two soldiers"}]}
+        return {"story_holds": True, "fixes": [{"scene": 2, "drop_graphic": True, "why": "it was two soldiers"}]}
 
     saved, llm.ask_ai = llm.ask_ai, ask
     try:

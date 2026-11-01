@@ -14,8 +14,14 @@ or establish why viewers left. If the graph cannot be read, it records that rath
 An unusable AI reply leaves any previous report intact.
 
 The last section suggests a short line you may paste into the logbook's existing **My notes** field.
-The command does not edit the logbook automatically. Part 3.2 will add automatic use of the reports in future
-planning; this command only creates the reports.
+The command does not edit the logbook automatically. Future planning now reads these reports for Shorts
+listed in the active channel's logbook with at least 100 views. Only approximate drop timings are matched
+to saved scene types; patterns are reported when they repeat across at least three distinct Shorts.
+Reports absent from the active logbook and other channels' reports are excluded. Overlap counts do not
+establish causes or failure rates. No reliable repeated observation means no inferred lesson.
+
+Use YYYY-MM-DD for **Posted on**. Planning includes age since posting and explicitly notes that the date
+the metrics were collected is unknown. Compare results at similar ages and lengths before changing strategy.
 
 For command-line use:
 

@@ -42,11 +42,13 @@ def test_cold_read_verdicts():
     assert any("answered in scene 4 of 10" in p for p in found), found
     found = writing.story_problems(JACK, read(new=[True, True, False, False, False, True, True, True, True, True]))
     assert any("scenes 3-5 add nothing new" in p for p in found), found
-    assert not writing.story_problems(JACK, read(new=[True, False] * 5))  # one quiet scene at a time is fine
+    assert any("at least 3 scenes" in p for p in writing.story_problems(JACK, read(answer=n, new=[True, False] * 5)))
+    assert not writing.story_problems(JACK, read(answer=n, new=[True, False] + [True] * 8))
     assert any("nothing to wonder about" in p for p in writing.story_problems(JACK, read(question="None.")))
     found = writing.story_problems(JACK, read(swipe=3, swipe_why="backstory before stakes"))
     assert any("swipe at scene 3 (backstory before stakes)" in p for p in found), found
-    assert not writing.story_problems(JACK, read(swipe=8))  # a late swipe point is a note in the read, not a send-back
+    assert any("swipe at scene 8" in p for p in writing.story_problems(JACK, read(answer=n, swipe=8)))
+    assert not writing.story_problems(JACK, read(answer=n, swipe=9))  # the ending itself is not delayed
     assert any("list of facts" in p for p in writing.story_problems(JACK, read(list_like=True)))
 
 
