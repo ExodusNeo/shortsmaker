@@ -37,6 +37,8 @@ class RenderResumeTests(unittest.TestCase):
                 media_tools.ffmpeg('-f', 'lavfi', '-i', 'sine=frequency=900:duration=4', str(track), cwd=work)
                 audio_library.set_audio_metadata(track, start=.5)
                 media_tools.ffmpeg('-f', 'lavfi', '-i', 'sine=frequency=1400:duration=0.4', str(sfx / 'bell.wav'), cwd=work)
+                for name in ('shutter0.wav', 'shutter1.wav'):
+                    (sfx / name).write_bytes((sfx / 'bell.wav').read_bytes())
             short = {'title': 'Test', 'topic': 'Door', 'palette': 'parchment', 'hook_text': 'THE DOOR',
                      'hook_options': [], 'thumbnail_prompt': '', 'scenes': [
                          {'narration': 'A door opened.', 'shot': 'A door', 'image_search': 'door', 'ai_image': '',
@@ -49,9 +51,12 @@ class RenderResumeTests(unittest.TestCase):
             picture = io.BytesIO()
             Image.new('RGB', (320, 600), (70, 90, 130)).save(picture, 'JPEG')
             choices = [{'bg': (picture.getvalue(), 'Photo', None), 'person': None}]
+            if with_audio:
+                short['scenes'][0]['person'] = {'name': 'Door', 'trigger': 'door', 'image_search': 'fixture'}
+                choices[0]['person'] = (picture.getvalue(), 'Portrait', None)
 
             def voice(*args):
-                media_tools.ffmpeg('-f', 'lavfi', '-i', 'sine=frequency=440:duration=1.2', '0.wav', cwd=work)
+                media_tools.ffmpeg('-f', 'lavfi', '-i', f'sine=frequency=440:duration={4 if with_audio else 1.2}', '0.wav', cwd=work)
                 return [(work / '0.wav', [(.05, .3, 'A'), (.3, .7, 'door'), (.7, 1.1, 'opened.')])]
 
             with ExitStack() as stack:
@@ -85,6 +90,9 @@ patch.object(session, 'RULE_SETTINGS', {}), patch.object(session, 'RULES', {}),
                 self.assertEqual(checkpoints.read(work / 'progress.json')['stage'], 'rendered')
                 self.assertTrue((work / 'render-context.json').is_file())
                 if with_audio:
+                    saved_card = checkpoints.context(work)['cues'][0]['card']
+                    self.assertIsInstance(saved_card, Image.Image)
+                    self.assertEqual(saved_card.mode, 'RGBA')
                     self.assertTrue((folder / 'music_preview.wav').is_file())
                     self.assertTrue((work / 'music.wav').is_file())
                     self.assertTrue((work / 'sfx.wav').is_file())

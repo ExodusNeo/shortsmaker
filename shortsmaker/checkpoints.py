@@ -1,13 +1,20 @@
 """Atomic progress records for unfinished Shorts; no executable serialized state."""
 import base64
+import io
 import json
 from pathlib import Path
+
+from PIL import Image
 
 from shortsmaker import media_tools, session
 from shortsmaker.config import OUTPUT
 
 
 def pack(value):
+    if isinstance(value, Image.Image):
+        stream = io.BytesIO()
+        value.save(stream, format="PNG")
+        return {"_image_png": base64.b64encode(stream.getvalue()).decode("ascii")}
     if isinstance(value, bytes):
         return {"_bytes": base64.b64encode(value).decode("ascii")}
     if isinstance(value, Path):
@@ -23,6 +30,12 @@ def unpack(value):
     if isinstance(value, list):
         return [unpack(item) for item in value]
     if isinstance(value, dict):
+        if set(value) == {"_image_png"}:
+            with Image.open(io.BytesIO(base64.b64decode(value["_image_png"], validate=True))) as picture:
+                if picture.format != "PNG":
+                    raise ValueError("Checkpoint image must be PNG")
+                picture.load()
+                return picture.copy()
         if set(value) == {"_bytes"}:
             return base64.b64decode(value["_bytes"])
         if set(value) == {"_path"}:

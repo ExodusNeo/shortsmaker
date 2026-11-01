@@ -466,7 +466,7 @@ def render(short: dict, ch: dict, folder: Path, state: dict | None = None, fix_r
 
 def finish_render(short: dict, ch: dict, folder: Path, state=None, fix_round: int = 0, *,
                   bounds, sources, cues, events, music, n_graphics, clips, opener_check, drawn,
-                  total, emphasis, flashes, by_gemini, renderer) -> None:
+                  total, emphasis, flashes, by_gemini, renderer, build_timeline: bool = True) -> None:
     """Finish reports/reviews from a committed video; resume reaches here without rerendering or revoicing."""
     work = folder / "work"
     choices = load_state(work)["choices"]
@@ -561,6 +561,8 @@ def finish_render(short: dict, ch: dict, folder: Path, state=None, fix_round: in
     if not issues:
         edit_project.remove(folder)  # an older timeline would no longer match this video
         return
+    if not build_timeline:
+        return  # reports/reviews can finish on an existing video without another Remotion layer render
     try:  # what the fix rounds left: a Shotcut timeline to fix it by hand
         videos = [("V1", work / "clean.mp4")]  # Python renderer: pictures and graphics stay one video
         if renderer == "remotion":  # same props from the cached code: pictures and graphics apart, no captions

@@ -11,6 +11,10 @@ An interrupted video encode writes to a temporary video and keeps the last succe
 Once encoding is committed, resume can finish the reports and reviews without re-encoding the video.
 Finalization checks the output-folder entry so it does not add duplicate logbook rows.
 
+Portrait-card images in the render context are saved as lossless PNG data and restored as images. This fixes
+the post-encode `Object of type Image is not JSON serializable` failure on Shorts with a person card. Image
+dimensions, pixels and transparency survive the round trip; the saved video does not need to change.
+
 Saved narration is reused when its text, voice settings and reference sample match. Changes to a visual
 callout do not require another voice job. Changed narration or voice settings invalidate the voice cache;
 missing or altered cached audio is regenerated. Unfinished checkpoints are excluded from the normal

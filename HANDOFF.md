@@ -106,6 +106,7 @@ are stored LF (`.gitattributes`).
 | `editplan.py` | `edit_plan()`, `scene_cues()` (graphic timing) |
 | `short_render.py` | `render()`, saved render context, resumable `finish_render()`, work state, `use_opener()` |
 | `checkpoints.py`, `voice_cache.py` | Atomic per-Short progress; preserved unfinished work; narration cache matched to text/voice/reference and file hashes |
+| Checkpoint images | Person-card PIL images use tagged lossless PNG data in JSON; restored with pixels/alpha intact. Fixes the post-encode Image serialization failure |
 | `scene_repair.py` | Isolated circle/arrow preview and apply, original audio retained, backups and state/report updates |
 | `drawn_opener.py` | Drawn opener: AI scene code, lint, preview, art-director review and fixes, render |
 | `blender_plan.py`, `blender_render.py` | Blender-drawn channels: build plans, headless render |
@@ -229,6 +230,12 @@ Rules that keep it working:
     Rendering writes a temporary video before replacing short.mp4; a rendered-stage resume finishes reports
     and reviews without another encode. Finalization does not duplicate logbook entries. Incomplete work is not
     pruned by the seven-day cleanup. Legacy outputs have no batch checkpoints.
+    JSON render contexts support real person-card images (PNG + base64), not just paths/photo bytes. Existing-video
+    report recovery may call finish_render(build_timeline=False) to run reviews/reports without rerendering Shotcut
+    layers. The 2026-11-01 Bobby Leach Short was recovered this way; original video/audio hashes are unchanged,
+    progress is complete, and upload/thumbnail/storyboard/edit-plan files exist. Visual review passed; opening
+    review scored 3/10 because the orange-peel label reveals the ending immediately. This is a quality note,
+    not a broken-file error. The original randomized SFX event list was unavailable and is noted in the report.
 12. **Outputs**: edit_plan.txt (Opening line, fact-check changes, per-scene edit list, sound cues, checks),
     upload.txt (credits for every non-PD source and CC-BY 3D model; "altered or synthetic content: Yes" when AI was
     used), storyboard, thumbnail, captions.srt, logbook entry, vault page, `work/state.json` for fix.bat.

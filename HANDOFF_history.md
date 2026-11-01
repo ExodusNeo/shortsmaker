@@ -1698,3 +1698,29 @@ is configurable. Save the music decision/offset before encoding; fixes and retri
 Verification: 109 tests in five affected suites passed (29 media, 2 real render/resume, 13 reliability, 46 full-scene,
 19 package); compileall and diff check passed. Live Freesound metadata-only query returned two music candidates.
 No real music/SFX files downloaded for this follow-up. No AI quota spent, no new keys, no existing videos changed.
+
+### 2026-11-01 — repair portrait-card checkpoint serialization and recover Bobby Leach
+
+Owner's Bobby Leach Short encoded successfully, then failed saving its render context: scene 4's person card
+was a PIL Image, which checkpoints.pack did not support. Added tagged PNG/base64 image encoding and restoration
+without pickle or stringifying the image. Regression coverage checks a real decorated portrait card, exact
+pixels/mode/alpha, and rejects non-PNG data under the image tag. Extended the real FFmpeg render/resume fixture
+to contain a person card, so the complete post-encode path exercises the original failure.
+
+Recovered the existing Short from work/state.json, Remotion props and cached narration alignment. Saved context
+now round-trips the actual portrait card. Recovered review/report finalization can skip optional Shotcut-layer
+rendering via finish_render(build_timeline=False). No source video rerender or new speech/images/clips occurred.
+Original short.mp4 SHA256 verified identical before/after; strict full video+audio decode completed with exit 0.
+Generated missing upload.txt, thumbnail, storyboard and edit plan; finished logbook/vault/profile bookkeeping and
+marked progress complete. Snapshot metadata and original hash: .superpowers/bobby-leach-checkpoint-recovery.
+
+Codex final visual review passed. Opening review: 3/10, because the visible orange-peel label gives away the ending
+immediately. This does not prevent posting a technically valid file, but it is recorded as a quality issue.
+The original randomized SFX cue list was not recoverable, so the recovery note explicitly says it is unavailable;
+existing mixed sound was kept and no replacement cue list was invented. Source credits and synthetic-content
+instructions are in upload.txt. Owner's runtime profile/research changes and generated vault files stay uncommitted.
+
+Verification completed: 83 tests across reliability (15), real render/resume with and without portrait cards (2),
+full scenes (46), package wiring (19) and callout repair (1) passed. compileall and git diff --check passed.
+Posting check saved beside the Short as posting_check.txt: 37.97 seconds, 1080x1920 at 30 fps, H.264/AAC;
+automatic black/freeze/loudness/pause checks had no findings. No automatic upload was attempted.

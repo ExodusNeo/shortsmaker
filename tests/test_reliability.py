@@ -1,5 +1,6 @@
 """Interruption recovery, narration reuse, honest review failures and bounded media recovery."""
 import json
+import io
 import os
 import subprocess
 import sys
@@ -8,8 +9,10 @@ import unittest
 from pathlib import Path
 from unittest.mock import patch
 
+from PIL import Image
+
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from shortsmaker import checkpoints, cli, drawn_opener, gpu, llm, logbook, media_tools, picker, review, scene_repair, session, short_render, voice_cache
+from shortsmaker import checkpoints, cli, drawn_opener, frame_render, gpu, llm, logbook, media_tools, picker, review, scene_repair, session, short_render, voice_cache
 
 
 class ReliabilityTests(unittest.TestCase):
@@ -47,6 +50,28 @@ class ReliabilityTests(unittest.TestCase):
         with patch.object(short_render, 'OUTPUT', self.root):
             short_render.prune_work()
         self.assertTrue(self.work.exists())
+
+    def test_render_context_restores_real_person_card_image_and_transparency(self):
+        stream = io.BytesIO()
+        Image.new('RGB', (400, 500), (50, 80, 110)).save(stream, 'JPEG')
+        card = frame_render.person_card(stream.getvalue(), 'Bobby Leach')
+        data = {'clips': {}, 'emphasis': set(), 'flashes': set(),
+                'cues': [{'card': card, 'photo': stream.getvalue(), 'on': 9.6, 'off': 11.4}]}
+        checkpoints.save_context(self.work, data)
+        restored = checkpoints.context(self.work)['cues'][0]
+        self.assertIsInstance(restored['card'], Image.Image)
+        self.assertEqual(restored['card'].mode, card.mode)
+        self.assertEqual(restored['card'].size, card.size)
+        self.assertEqual(restored['card'].tobytes(), card.tobytes())
+        self.assertEqual(restored['photo'], stream.getvalue())
+        self.assertEqual(restored['card'].getpixel((0, 0))[3], 0)
+
+    def test_checkpoint_image_marker_rejects_non_png_payload(self):
+        import base64
+        stream = io.BytesIO()
+        Image.new('RGB', (2, 2), 'red').save(stream, 'JPEG')
+        with self.assertRaisesRegex(ValueError, 'must be PNG'):
+            checkpoints.unpack({'_image_png': base64.b64encode(stream.getvalue()).decode('ascii')})
 
     def test_voice_cache_reuses_audio_but_invalidates_changed_text_voice_or_files(self):
         sound = self.work / '0.wav'
