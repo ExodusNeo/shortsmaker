@@ -18,7 +18,7 @@ everything (voice, paintings, video). Real archival/online pictures and film are
 ## Owner's standing rules
 - **Install everything on D:** (C: is nearly full).
 - **Subscription access only: Google AI Pro and signed-in ChatGPT/Codex; Claude Pro currently has no credits.** No paid per-use APIs. Free keys allowed: Pixabay, vidIQ (chat use
-  only), Freesound (`freesound_key.txt`). Never print a key. Ask before adding another. Sounds only from the
+  only), Freesound (`freesound_key.txt`) and Europeana (`europeana_key.txt`, owner supplied 2026-11-01). Never print a key. Ask before adding another. Sounds only from the
   Freesound API or the owner's own files (Pixabay forbids scraping).
 - **No other creators' YouTube videos as footage** (YouTube cuts reach for re-uploads). Other sourcing is the owner's
   choice and stays open: all of Internet Archive, Openverse incl. Flickr/BY-SA/NC, all Wikimedia licences, each
@@ -32,6 +32,9 @@ everything (voice, paintings, video). Real archival/online pictures and film are
 - Gemini: **Argon (Gemini 4) at high effort when the account has it, else Flash, high effort.** Claude: Opus, high
   effort (the plan can't afford xhigh/max).
 - Sound: no sub-bass thumps (SFX high-passed at 220 Hz), no loud repetitive whooshes, no "pop" punch-ins.
+- Media work should expand source options for the automation to download as needed for a Short. Do not bulk
+  download songs/SFX to preload a library unless explicitly requested. The owner approved all existing media on
+  2026-11-01 (28 music tracks and 61 sound effects); nothing is currently pending.
 - **No 2.5D parallax** (it bent pictures). Stills get a plain zoom/pan.
 - **Code map**: after every commit that changes code, refresh `code-map/` + `graphify-out/` as its own commit
   ("docs: refresh code map"); commands in Layout.
@@ -202,8 +205,8 @@ Rules that keep it working:
 9. **Audio**: voice + music (loudness-matched to `MUSIC_LUFS`, ducked) + SFX cue sheet + story sounds; loudnorm
    -14 LUFS + limiter; h264_nvenc.
    Music avoids recent repeats, uses mood/intensity/instrument tags and a saved start offset; empty moods stay
-   silent. New music/variant downloads wait for approval in media.bat (20 music candidates + 8 SFX variants were
-   seeded 2026-11-01). A narration/music preview is saved beside the video. Story sounds align their measured or
+   silent. New manually requested music/variant downloads wait for approval in media.bat; the owner approved all
+   existing media on 2026-11-01. A narration/music preview is saved beside the video. Story sounds align their measured or
    owner-adjusted impact to the spoken word; effects compete over full durations, with at most one quiet texture
    underneath. Freesound uses the current `/apiv2/search/` endpoint. Details: `docs/media-library.md`.
 10. **Checks and fixes**: Visual/opening review status is explicitly Passed / Problems found / Not reviewed;
@@ -367,8 +370,8 @@ strangest moment. Same story, other channel: Voggle's Mike 2M views vs ours 1.2K
 - Never seen in a real run: style inventions, question beats, wipes, the Shotcut timeline.
 - `channels/gaming.rules.md` is drafted and waiting for the owner's review.
 - Media sources/audio expansion implemented 2026-11-01. Source status and local import fallback in media.bat;
-  McDonald's/LoC blocked automated requests here, Smithsonian demo key hit its rate limit, Europeana needs an
-  optional owner-supplied key. Duke AdViews works; Duke's separate Ad*Access print site has no working connector
+  McDonald's/LoC blocked automated requests here, Smithsonian demo key hit its rate limit. Europeana's owner-
+  supplied key is configured locally and a live image search succeeded. Duke AdViews works; Duke's separate Ad*Access print site has no working connector
   here (local import available). No new keys acquired. New film preserves its frame; legacy crop is opt-in.
 
 ## Ideas offered, not built

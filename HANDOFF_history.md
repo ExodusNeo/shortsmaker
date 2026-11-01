@@ -1675,3 +1675,11 @@ Owner approved the source expansion and the preceding image/SFX/music recommenda
   Owner's profile/research edits and untracked vault pages are excluded from the implementation commits.
 
 Usage and source limitations: docs/media-library.md. Scope: docs/media-improvements.md.
+
+### 2026-11-01 — owner clarified media scope; approvals and Europeana
+
+The owner wanted expanded sources so the automation has more download choices, rather than bulk downloading
+music/SFX ahead of time. Recorded this as a standing preference. At their explicit request, approved every current
+audio-library file (28 music tracks and 61 sound effects); verified zero pending items. No further media downloaded.
+Saved the owner-supplied Europeana key only in ignored europeana_key.txt; a live advertising-image search returned
+two usable candidates. No key printed or committed. Existing source integration code needed no changes.
