@@ -62,6 +62,7 @@ patch.object(session, 'RULE_SETTINGS', {}), patch.object(session, 'RULES', {}),
                  patch.object(short_render, 'SFX', sfx), patch.object(audio_mix, 'SFX', sfx),
                  patch.object(audio_library, 'MUSIC', music), patch.object(audio_library, 'MUSIC_HISTORY', music / 'recent.json'),
                  patch.object(audio_library, 'SOUND_HISTORY', sfx / 'recent.json'),
+                 patch.object(audio_mix, 'freesound_results', return_value=[]),
                  patch.object(short_render.remotion_render, 'wants_remotion', return_value=False), 
                  patch.object(picker, 'choose_images', return_value=choices), patch.object(picker, 'rescue_graphics'), 
                  patch.object(short_render.plan_rules, 'mark_details'), 
@@ -90,6 +91,7 @@ patch.object(session, 'RULE_SETTINGS', {}), patch.object(session, 'RULES', {}),
                     self.assertEqual(short['music_start'], .5)
                 short_render.render(short, ch, folder, short_render.load_state(work))
                 self.assertEqual(make_voice.call_count, 1)
+                self.assertEqual(audio_mix.freesound_results.call_count, 1 if with_audio else 0)
                 self.assertGreater(media_tools.duration(folder / 'short.mp4'), 1)
                 # Simulate a crash after encoding, before the batch finalized the Short.
                 with patch.object(cli.rules, 'require_rules'), patch.object(cli.channel_profiles, 'use_channel'), \

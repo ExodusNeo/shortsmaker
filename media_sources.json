@@ -19,5 +19,6 @@
       ]
     }
   ],
+  "music_online": true,
   "music_ducking": {"threshold": 0.03, "ratio": 4, "attack": 15, "release": 350}
 }

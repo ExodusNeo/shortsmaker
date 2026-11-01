@@ -2,6 +2,15 @@
 
 Double-click **media.bat** to manage the library. **run.bat** automatically uses these improvements on new Shorts.
 
+Normal generation searches the connected image/footage sources for the story and fetches selected assets. For
+music, each new Short now searches Freesound by mood and preferred instruments, chooses one track and downloads
+only that track when it is not already cached. At most two metadata searches and one music download are allowed
+per Short. The track is ready to use automatically, with its source/credit saved. If online sourcing fails, the
+Short uses fitting local music; if neither is available, it stays silent. Fixes/resumes keep their saved choice.
+Missing story sound effects already use a named Freesound search and download only the needed effect. No bulk
+discovery or approval menu runs during normal generation. Set `music_online` to false in media_sources.json for
+local-only music; the manual library commands below remain optional.
+
 ## Import a commercial or picture
 
 Choose **1**, drag a saved picture/video file into the window, then enter its title, search tags, original source link and credit/rights note. Include the brand, product, year and country when known. The original file is copied, never moved. Imported files live in `media_library/images/` or `media_library/videos/` and participate in the same picture selection as online sources.
@@ -16,7 +25,7 @@ Files dropped directly into `media_library/` also work: their filenames are sear
 - **6** makes a 12-second music preview with the most recent saved narration. A normal render also writes `music_preview.wav` beside the finished video.
 - **9** copies in your own music or sound effect, retaining its credit note and source link, for the same preview/approval workflow.
 
-Music stays in `music/<mood>/`. Selection avoids the most recent five tracks when the mood has enough choices; a smaller library reuses its least recent track. An empty/unrecognized mood stays silent and is explained in the edit plan. Intensity and instrument tags help choose among fitting tracks. An optional start time skips an intro; it is saved with the Short for fixes/resume.
+Music stays in `music/<mood>/`. Selection avoids the most recent five tracks when possible; fitting local tracks cover recently used online matches. An unrecognized mood or lack of fitting online/local music stays silent and is explained in the edit plan. Intensity and instrument tags help choose local fallback music; instrument preferences also guide the online search. An optional start time skips an intro; it is saved with the Short for fixes/resume.
 
 For a story sound, **E** can adjust its main impact time (seconds into the file) and search aliases. The strongest measured 10-ms window supplies the initial impact; this is a timing aid, not a guarantee that it is the perceptually right moment. The effect is offset so that impact meets the spoken word, trimming its beginning when necessary. Effects compete over their actual durations; a single quiet texture may remain underneath a more important effect. Every mixed effect is high-passed at 220 Hz.
 

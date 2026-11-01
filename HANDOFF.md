@@ -64,7 +64,7 @@ everything (voice, paintings, video). Real archival/online pictures and film are
 | `remotion/test_props/` | Test scenes for full-screen graphics (+ `media/`); `tests/render_full.py` renders them into `test_renders/` |
 | `local_ai/` | GPU worker `gen.py` (own venv: Kokoro, SDXL-Lightning, LTX-Video 0.9.8); voice worker `qwen_voice.py` (`qwen_venv`: Qwen3-TTS, MMS aligner, VoiceStudio client); models in `hf/` |
 | `colab/` | `h3_clips.ipynb` + `h3_run.py` + `README.md`: AI video clips the owner makes on Colab Pro (gutierrezdishann@gmail.com, A100) |
-| `music/<mood>/`, `sfx/`, `sfx/story/` | Music by mood (audio + `.txt` credit and `.json` metadata), synthesized SFX, story sounds. New downloaded variants stay pending until approved in media.bat; existing assets keep working. Empty moods stay silent |
+| `music/<mood>/`, `sfx/`, `sfx/story/` | Music by mood (audio + `.txt` credit and `.json` metadata), synthesized SFX, story sounds. Per-Short source downloads are automatic; optional manual discovery/imports use media.bat approval. Silence when no fitting music is available |
 | `media_library/`, `media_sources.json` | Owner-imported assets + source/credit sidecars (local, ignored); provider switches, official brand-page registry and music ducking settings |
 | `branding/` | Profile picture, banner, channel text |
 | `cache/` | Downloads (30-day prune), `pools/` (a topic's pictures + AI picture list), `ideas/` (Wikipedia idea pages) |
@@ -204,8 +204,12 @@ Rules that keep it working:
    (`short_credit()`), 2.8 s. Loop Shorts (weird-economics) end straight into frame 0.
 9. **Audio**: voice + music (loudness-matched to `MUSIC_LUFS`, ducked) + SFX cue sheet + story sounds; loudnorm
    -14 LUFS + limiter; h264_nvenc.
-   Music avoids recent repeats, uses mood/intensity/instrument tags and a saved start offset; empty moods stay
-   silent. New manually requested music/variant downloads wait for approval in media.bat; the owner approved all
+   Each new Short searches Freesound music metadata for its mood/instruments and downloads only the selected
+   track (at most one), ready to use without an approval pause. Cached matches are reused; failures or recently
+   used online matches fall back to fitting local music, else silence. `music_online` in media_sources.json can
+   disable online music. Music choices/offsets are saved before encoding, so interrupted/fix renders reuse them.
+   Music avoids recent repeats and uses a saved start offset. New manually requested music/variant downloads
+   wait for approval in media.bat; the owner approved all
    existing media on 2026-11-01. A narration/music preview is saved beside the video. Story sounds align their measured or
    owner-adjusted impact to the spoken word; effects compete over full durations, with at most one quiet texture
    underneath. Freesound uses the current `/apiv2/search/` endpoint. Details: `docs/media-library.md`.

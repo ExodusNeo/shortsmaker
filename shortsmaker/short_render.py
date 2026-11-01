@@ -372,11 +372,19 @@ def render(short: dict, ch: dict, folder: Path, state: dict | None = None, fix_r
 
     # Audio: voice + music ducked under the voice + the sound-design cue sheet.
     prior_track = MUSIC / state["music"] if state and state.get("music") else None
-    music = None if state and not state.get("music") else audio_library.select_music(short, prior_track)
+    music_decided = bool(state and (short.get("music_selection_done") or (folder / "short.mp4").exists()
+                                   or (work / "render-context.json").exists()))
+    if music_decided:
+        music = audio_library.select_music(short, prior_track) if prior_track else None
+    else:
+        music = audio_library.source_music(short, prior_track)
+    short["music_selection_done"] = True
     if music:
         if music != prior_track:
             short.pop("music_start", None)
         short["music_start"] = audio_library.track_start(music, short)
+    save_state(work, short, choices, music, by_gemini)  # an interrupted encode must not source another track
+    if music:
         try:
             audio_library.preview_mix(work / "voice.wav", music, folder / "music_preview.wav", short["music_start"])
         except (OSError, subprocess.SubprocessError):

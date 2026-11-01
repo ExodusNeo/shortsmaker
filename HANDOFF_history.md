@@ -1683,3 +1683,18 @@ music/SFX ahead of time. Recorded this as a standing preference. At their explic
 audio-library file (28 music tracks and 61 sound effects); verified zero pending items. No further media downloaded.
 Saved the owner-supplied Europeana key only in ignored europeana_key.txt; a live advertising-image search returned
 two usable candidates. No key printed or committed. Existing source integration code needed no changes.
+
+### 2026-11-01 — make music sourcing part of ordinary generation
+
+Owner asked whether the source-on-demand preference was actually implemented. Images/video and missing story
+effects were already sourced as needed, but music still selected only local files. Added audio_library.source_music
+to normal render: query existing Freesound CC0 metadata by mood/instruments (up to two searches), select a track,
+reuse its cached copy or download just that one track. Per-Short downloads are usable automatically and retain
+source/credit; no bulk preloading or approval pause. Manual library discovery/import commands remain optional.
+Pending/rejected files remain excluded, recent matches prefer a fitting local alternative, invalid downloads
+fall back locally without downloading a second candidate, and no fitting music means silence. music_online=true
+is configurable. Save the music decision/offset before encoding; fixes and retries preserve it, including silence.
+
+Verification: 109 tests in five affected suites passed (29 media, 2 real render/resume, 13 reliability, 46 full-scene,
+19 package); compileall and diff check passed. Live Freesound metadata-only query returned two music candidates.
+No real music/SFX files downloaded for this follow-up. No AI quota spent, no new keys, no existing videos changed.

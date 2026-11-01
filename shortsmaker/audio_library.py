@@ -104,6 +104,80 @@ def select_music(short: dict, prior: Path | None = None) -> Path | None:
     return random.choice(choices)
 
 
+def source_music(short: dict, prior: Path | None = None) -> Path | None:
+    """For one Short, search metadata and fetch only its selected track. Saved/local music is the fallback."""
+    if prior and usable_audio(prior):
+        return prior
+    mood = short.get("music_mood")
+    if mood not in MOODS:
+        return select_music(short)
+    fallback = select_music(short)
+    if media_library.settings().get("music_online", True) is False:
+        return fallback
+    from shortsmaker import audio_mix
+    base = {"mysterious": "mysterious music", "tense": "suspense music", "playful": "playful music",
+            "somber": "sad music", "epic": "epic music"}[mood]
+    instruments = [v.lower().strip() for v in short.get("music_instruments", []) if isinstance(v, str) and v.strip()][:2]
+    queries = list(dict.fromkeys([" ".join([base, *instruments]), base]))
+    recent = {row.get("file") for row in history_read(MUSIC_HISTORY)[-5:]}
+    candidates = []
+    for query in queries:
+        # Avoid singing/speech competing with the narrator. These are metadata searches, not downloads.
+        rows = audio_mix.freesound_results(query + " -vocals -speech -singing", music=True, limit=10)
+        for row in rows:
+            if type(row.get("id")) is not int or row["id"] <= 0:
+                continue
+            license_name = str(row.get("license", "")).lower()
+            if "creativecommons.org/publicdomain/zero/" not in license_name and license_name not in ("cc0", "creative commons 0"):
+                continue
+            path = MUSIC / mood / f"fs_{row['id']}.mp3"
+            if audio_metadata(path).get("approved") is False:
+                continue  # explicit pending/rejected choices remain the owner's decision
+            candidates.append((path, row))
+        if candidates:
+            break
+    fresh = [(path, row) for path, row in candidates if path.relative_to(MUSIC).as_posix() not in recent]
+    if candidates and not fresh and fallback:
+        short["music_note"] = "Online matches were used recently; using the local library"
+        return fallback
+    choices = fresh or candidates
+    if not choices:
+        short["music_note"] = ("Online search found no fitting music; using the local library" if fallback else
+                               f"No fitting online or local {mood} music; left silent")
+        return fallback
+    path, row = choices[0]  # the source ranks query matches before popularity
+    if usable_audio(path):
+        short["music_note"] = "Reused the selected online track from the local cache"
+        return path
+    print(f"  sourcing one {mood} music track for this Short...")
+    blob = audio_mix.freesound_preview(row)
+    if not blob:
+        short["music_note"] = "Selected online music unavailable; using the local library" if fallback else "Selected online music unavailable; left silent"
+        return fallback
+    path.parent.mkdir(parents=True, exist_ok=True)
+    temp = path.with_suffix(".part.mp3")
+    try:
+        temp.write_bytes(blob)
+        length = media_tools.duration(temp)
+        if not math.isfinite(length) or length < 10:
+            raise ValueError("Music preview is too short or invalid")
+        source = f"https://freesound.org/s/{row['id']}/"
+        set_audio_metadata(path, approved=True, review_status="automatic", title=row.get("name"),
+                           source_url=source, license=row.get("license"), tags=row.get("tags") or [],
+                           description=str(row.get("description") or "")[:2000], start=0,
+                           instruments=[v for v in instruments if v in (row.get("tags") or [])])
+        path.with_suffix(".mp3.txt").write_text(
+            f"{row.get('name')} — Freesound #{row['id']} — {row.get('license')}\n{source}\n", encoding="utf-8")
+        temp.replace(path)
+        short["music_note"] = "Selected and downloaded for this Short from Freesound (CC0)"
+        return path
+    except (OSError, ValueError, subprocess.SubprocessError):
+        short["music_note"] = "Selected online music failed validation; using the local library" if fallback else "Selected online music failed validation; left silent"
+        return fallback
+    finally:
+        temp.unlink(missing_ok=True)
+
+
 def track_start(path: Path, short: dict) -> float:
     meta = audio_metadata(path)
     raw = short.get("music_start", meta.get("start", 0))

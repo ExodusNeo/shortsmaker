@@ -162,6 +162,105 @@ class MediaTests(unittest.TestCase):
             audio_library.record_audio(paths[2], music, history, "short-one")
             self.assertEqual(len(audio_library.history_read(history)), 1)
 
+    def test_on_demand_music_downloads_only_selected_track_and_is_immediately_usable(self):
+        rows = [{'id': 101, 'name': 'Soft piano', 'license': 'CC0', 'tags': ['piano']},
+                {'id': 102, 'name': 'Another piano', 'license': 'CC0'}]
+        short = {'music_mood': 'somber', 'music_instruments': ['piano']}
+        with patch.object(audio_library, 'MUSIC', self.root), patch.object(audio_library, 'MUSIC_HISTORY', self.root / 'recent.json'), \
+             patch.object(media_library, 'settings', return_value={}), patch.object(audio_mix, 'freesound_results', return_value=rows) as search, \
+             patch.object(audio_mix, 'freesound_preview', return_value=b'fixture audio') as download, \
+             patch.object(media_tools, 'duration', return_value=40):
+            selected = audio_library.source_music(short)
+        self.assertEqual(selected, self.root / 'somber' / 'fs_101.mp3')
+        self.assertEqual(download.call_count, 1)
+        self.assertEqual(search.call_count, 1)
+        self.assertIn('piano', search.call_args.args[0])
+        self.assertTrue(audio_library.usable_audio(selected))
+        self.assertEqual(audio_library.audio_metadata(selected)['review_status'], 'automatic')
+        self.assertIn('https://freesound.org/s/101/', selected.with_suffix('.mp3.txt').read_text(encoding='utf-8'))
+        self.assertFalse((selected.parent / 'fs_102.mp3').exists())
+
+    def test_on_demand_music_reuses_saved_track_without_search(self):
+        prior = self.root / 'saved.mp3'
+        prior.write_bytes(b'fixture')
+        with patch.object(audio_mix, 'freesound_results') as search:
+            self.assertEqual(audio_library.source_music({'music_mood': 'tense'}, prior), prior)
+        search.assert_not_called()
+
+    def test_on_demand_music_reuses_cached_search_result_without_download(self):
+        cached = self.root / 'tense' / 'fs_101.mp3'
+        cached.parent.mkdir()
+        cached.write_bytes(b'fixture')
+        with patch.object(audio_library, 'MUSIC', self.root), patch.object(audio_library, 'MUSIC_HISTORY', self.root / 'recent.json'), \
+             patch.object(media_library, 'settings', return_value={}), \
+             patch.object(audio_mix, 'freesound_results', return_value=[{'id': 101, 'license': 'CC0'}]), \
+             patch.object(audio_mix, 'freesound_preview') as download:
+            self.assertEqual(audio_library.source_music({'music_mood': 'tense'}), cached)
+        download.assert_not_called()
+
+    def test_on_demand_music_failed_search_keeps_local_fallback(self):
+        local = self.root / 'playful' / 'owner.mp3'
+        local.parent.mkdir()
+        local.write_bytes(b'fixture')
+        with patch.object(audio_library, 'MUSIC', self.root), patch.object(audio_library, 'MUSIC_HISTORY', self.root / 'recent.json'), \
+             patch.object(media_library, 'settings', return_value={}), patch.object(audio_mix, 'freesound_results', return_value=[]), \
+             patch.object(audio_mix, 'freesound_preview') as download:
+            self.assertEqual(audio_library.source_music({'music_mood': 'playful'}), local)
+        download.assert_not_called()
+
+    def test_on_demand_music_invalid_selected_audio_falls_back_without_bulk_retry(self):
+        local = self.root / 'epic' / 'owner.mp3'
+        local.parent.mkdir()
+        local.write_bytes(b'fixture')
+        with patch.object(audio_library, 'MUSIC', self.root), patch.object(audio_library, 'MUSIC_HISTORY', self.root / 'recent.json'), \
+             patch.object(media_library, 'settings', return_value={}), \
+             patch.object(audio_mix, 'freesound_results', return_value=[{'id': 101, 'license': 'CC0'}, {'id': 102, 'license': 'CC0'}]), \
+             patch.object(audio_mix, 'freesound_preview', return_value=b'bad audio') as download, \
+             patch.object(media_tools, 'duration', return_value=1):
+            self.assertEqual(audio_library.source_music({'music_mood': 'epic'}), local)
+        self.assertEqual(download.call_count, 1)
+        self.assertFalse((local.parent / 'fs_101.part.mp3').exists())
+        self.assertFalse((local.parent / 'fs_101.mp3').exists())
+
+    def test_on_demand_music_respects_rejection_and_avoids_recent_tracks(self):
+        mood = self.root / 'mysterious'
+        mood.mkdir()
+        rejected = mood / 'fs_101.mp3'
+        rejected.write_bytes(b'fixture')
+        audio_library.set_audio_metadata(rejected, approved=False)
+        recent = mood / 'fs_102.mp3'
+        recent.write_bytes(b'fixture')
+        history = self.root / 'recent.json'
+        audio_library.record_audio(recent, self.root, history, 'previous-short')
+        rows = [{'id': 101, 'license': 'CC0'}, {'id': 102, 'license': 'CC0'}, {'id': 103, 'license': 'CC0'}]
+        with patch.object(audio_library, 'MUSIC', self.root), patch.object(audio_library, 'MUSIC_HISTORY', history), \
+             patch.object(media_library, 'settings', return_value={}), patch.object(audio_mix, 'freesound_results', return_value=rows), \
+             patch.object(audio_mix, 'freesound_preview', return_value=b'fixture audio'), patch.object(media_tools, 'duration', return_value=40):
+            self.assertEqual(audio_library.source_music({'music_mood': 'mysterious'}), mood / 'fs_103.mp3')
+        self.assertFalse(audio_library.usable_audio(rejected))
+
+    def test_on_demand_music_can_be_disabled_and_skips_unrecognized_mood(self):
+        with patch.object(audio_library, 'MUSIC', self.root), patch.object(media_library, 'settings', return_value={'music_online': False}), \
+             patch.object(audio_mix, 'freesound_results') as search:
+            self.assertIsNone(audio_library.source_music({'music_mood': 'somber'}))
+            self.assertIsNone(audio_library.source_music({'music_mood': 'unknown'}))
+        search.assert_not_called()
+
+    def test_on_demand_music_prefers_fresh_local_track_when_online_matches_are_recent(self):
+        mood = self.root / 'tense'
+        mood.mkdir()
+        recent, fresh = mood / 'fs_101.mp3', mood / 'owner.mp3'
+        recent.write_bytes(b'fixture')
+        fresh.write_bytes(b'fixture')
+        history = self.root / 'recent.json'
+        audio_library.record_audio(recent, self.root, history, 'previous-short')
+        with patch.object(audio_library, 'MUSIC', self.root), patch.object(audio_library, 'MUSIC_HISTORY', history), \
+             patch.object(media_library, 'settings', return_value={}), \
+             patch.object(audio_mix, 'freesound_results', return_value=[{'id': 101, 'license': 'CC0'}]), \
+             patch.object(audio_mix, 'freesound_preview') as download:
+            self.assertEqual(audio_library.source_music({'music_mood': 'tense'}), fresh)
+        download.assert_not_called()
+
     def test_sound_main_impact_is_aligned_and_long_overlap_loses(self):
         for name in ("story.wav", "stamp.wav"):
             (self.root / name).write_bytes(b"fixture")
