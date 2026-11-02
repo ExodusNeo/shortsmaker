@@ -380,6 +380,9 @@ def opener_graphic(short: dict, weak: str = "") -> str:
 The channel opens every Short on an animation of the story's strangest moment. Pick the FULL-SCREEN motion graphic
 that shows this hook's strangest moment most strongly from its first frame (always one: it is the opener).
 {opening_rules.opening_brief(short)}
+For a physical event, prefer a custom action scene: one large subject and one readable action from frame 0.
+Avoid a small schematic with labels explaining the mechanism. Use a number/map/document only when that object
+itself is the immediately recognizable opening premise, with enough size and contrast to read on a phone.
 Real facts only, from the articles below. Leave out "word"/"words": the opener moves from its first frame.
 {"Not a document: the Short already has one. " if has_doc else ""}Not a board. {retry}Formats:
 {full_formats()}

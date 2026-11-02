@@ -73,3 +73,14 @@ Springs for physical things (cards, photos, stamps). Bezier tweens for type and 
 - A weak or empty first frame: Shorts autoplay and frame 0 is the first impression.
 
 When done, run the `review-loop` skill.
+
+## Custom opener exception
+
+Scene 1's custom opener uses `custom_rules(opener=True)`: one dominant subject and one physical action,
+visible from frame 0. Use portrait coordinates with `cam={{x: 540, y: 960, scale: 1}}`; backgrounds can bleed,
+but keep essential action around x 90..930, y 520..1100. Tall hook headlines can reach y 480; inspect the actual
+overlay before approving a face position. TitleBanner is optional because the real hook is overlaid. Aim for
+about 60-75% subject width when appropriate, solid shapes and strong contrast. This is a composition default,
+not a fixed template. Physical action may use eased 0.2-0.6s interpolate; the 0.9s minimum still applies to reading
+cards. Preserve reading holds. Share opening_rules.opening_brief with coder and judge. Render repairs with real
+hook/captions and compare reviewed versions; compiling alone does not establish visual quality.

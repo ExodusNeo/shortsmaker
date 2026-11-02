@@ -52,6 +52,11 @@ def pacing_check(short: dict, bounds: list[float], cues: list[dict]) -> list[str
     issues += [str(note) for note in short.get("editor_notes", []) if str(note).startswith(("STILL", "NOT REVIEWED"))]
     issues += [str(note) for note in short.get("fact_check", []) if str(note).startswith("NOT CHECKED")]
     issues += [f"metadata: {note}" for note in short.get("seo_notes", [])]
+    preflight = short.get("opener_preflight") or {}
+    if (scenes and scenes[0].get("full_rescued") == "motion-graphic opener"
+            and scenes[0].get("full") and not short.get("opener_used") and not scenes[0].get("opener_clip")
+            and preflight.get("status") in ("Not reviewed", "Problems found")):
+        issues.append(f"opener preview: {preflight['status']}: {preflight.get('reason', '')}")
     return list(dict.fromkeys(issues))
 
 
@@ -246,12 +251,19 @@ An attractive opening still fails when it gives away that answer. Known facts al
 are allowed. For an animated opener use open_with_scene=null: it needs a rewrite, not a photo swap.
 Reply with ONLY JSON: {{"score": 6, "why": "one short reason", "reveals_answer": false, "answer_why": "", "open_with_scene": 4}}""", fatal=False, read_dir=folder)
     score = data.get("score") if isinstance(data, dict) else None
-    why = str((data or {}).get("why") or "weak opening").strip()[:160] if isinstance(data, dict) else ""
+    why = str((data or {}).get("why") or "weak opening").strip() if isinstance(data, dict) else ""
+    history = work / "opening-reviews"
+    history.mkdir(exist_ok=True)
+    record = history / f"{len(list(history.glob('*.json'))) + 1:03d}.json"
+    record.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
+    for name in ("first.jpg", "storyboard.jpg"):
+        if (folder / name).exists():
+            shutil.copy(folder / name, history / f"{record.stem}-{name}")
     if plan_rules.is_num(score) and 1 <= score <= 10:  # every score is kept, to set against Stayed to watch later
         if data.get("reveals_answer") is True:
-            short["opening_answer_reveal"] = str(data.get("answer_why") or why)[:240]
+            short["opening_answer_reveal"] = str(data.get("answer_why") or why)
             score = min(score, HOOK_MIN_SCORE - 1)
-            why = ("opening reveals the answer: " + short["opening_answer_reveal"])[:160]
+            why = "opening reveals the answer: " + short["opening_answer_reveal"]
         short["first_second"] = f"{score:g}/10: {why}"
         review_status(short, "Opening review", "Problems found" if score < HOOK_MIN_SCORE else "Passed", why)
     else:
@@ -353,7 +365,7 @@ def weak_opener_graphic(short: dict, fixes: dict[int, tuple[str, str]], first_se
     why += [f.removeprefix("FIRST SECOND: ") for f in first_second]
     if not why or (short.get("opener_fixes", 0) >= OPENER_GRAPHIC_FIXES and not session.VEO_HANDOFF):
         return None  # nothing left to try: the CHECK lines stay
-    return "; ".join(why)[:300]
+    return "; ".join(why)
 
 
 def fix_opener_graphic(st: dict, work: Path, why: str) -> list[str]:

@@ -51,4 +51,11 @@ Sound (whole Short)
 
 ## Report
 
+Custom openers use `opener_preflight()` before the full encode: actual render props include headline and captions,
+with first-frame/early-action/end samples. One local repair is compiled, rendered and independently reviewed
+again; the strongest reviewed candidate is kept. External redraws are checked on the next render before encoding.
+Sources/previews/full verdicts live in `work/opener-attempts/`; final reviews and frames in `work/opening-reviews/`.
+Missing previews/verdicts remain Not reviewed. Archives follow normal work-folder retention.
+`tests/render_opener_preview.py` renders the composition study safely.
+
 Say what you checked, what you fixed, and which sheet shows it. Don't claim a fix you haven't re-rendered and looked at.

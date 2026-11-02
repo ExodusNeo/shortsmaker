@@ -23,4 +23,10 @@ def opening_brief(short: dict) -> str:
     question = read.get("question", "") if isinstance(read, dict) else ""
     return (GUIDANCE + "\nOpening narration: " + json.dumps(plan_rules.first_sentence(lines), ensure_ascii=False)
             + "\nUnanswered question: " + json.dumps(question or "Infer it from the opening and ending", ensure_ascii=False)
+            + "\nHook headline (must support that same question, not create a second mystery): "
+            + json.dumps(short.get("hook_text", ""), ensure_ascii=False)
+            + "\nKnown premise (allowed): facts explicitly spoken in the opening narration."
+            + "\nProtected answer: later narration answering the unanswered question above; do not confuse it with the known premise."
+            + "\nLater narration (context only; protect each new fact until spoken): "
+            + json.dumps(lines[1:], ensure_ascii=False)
             + "\nEnding narration (context only; protect its new answer): " + json.dumps(lines[-2:], ensure_ascii=False))

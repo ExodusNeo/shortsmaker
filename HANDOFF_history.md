@@ -1786,3 +1786,13 @@ expectations for late swipes/separated filler and supplied the explicit verdict 
 fixture. compileall, Remotion TypeScript compilation and git diff --check passed. Read-only audit of Bobby
 Leach's saved state/context flags 7.6s across scenes 7/9/12 and a predicted swipe at 22.7s; no saved video or
 reports were changed. No full live AI-generated Short or audience uplift test completed in this session.
+# 2026-11-02: custom motion-graphic opener previews and repairs
+
+The Stapp Short's graphic scored 5, 6, 6 and fell through to the clip handoff. Repairs inherited explanatory
+diagram rules and were only compile-checked. Added opener-specific action rules and a compiling composition
+study, shared question/known-premise/later-narration context, actual hook/caption previews, one bounded local
+repair with independent re-review, and preservation of the strongest reviewed candidate. External redraws are
+previewed before full encoding; full-video findings supersede an older preview pass. Source/preview/verdict
+archives and untruncated final feedback make failures inspectable. Kept subscription-only calls, existing outer
+repair limit and clip fallback. Work archives follow normal retention. The rendered study caught headline/head
+overlap and dark-on-dark face/effects; fixed and re-rendered by eye.

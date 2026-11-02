@@ -282,6 +282,18 @@ Order (owner, 2026-10-30): drawn opener -> motion graphic (2 fixes) -> AI clip o
   (the motion graphic still looked weak after 2 fixes: ...)`). Without the hand-off it stays a CHECK line. Only a
   Short with no graphic at all hands scene 1 off on the first render. The hand-off sends close-ups too.
 
+  Custom openers use dedicated portrait/action rules (optional banner, large solid subject, immediate action;
+  physical motion can be faster than reading cards). `motion.opener_preflight()` renders the actual headline and
+  captions before the full encode, grades it, and allows one local compiled-and-rendered repair. It keeps the
+  strongest reviewed candidate; outer redraws get the same check before encoding and can restore the prior winner.
+  Full-video complaints supersede an earlier preview pass. Content fingerprints cover narration, brief, shared
+  question context, hook and caption timings. Sources/previews/full verdicts are saved under
+  `work/opener-attempts/`; final reviews and frames under `work/opening-reviews/` (normal seven-day work retention).
+  Opening repair feedback is no longer truncated. Missing previews/verdicts stay Not reviewed; full-video review
+  and the existing two outer repairs/clip fallback remain authoritative. Number/map/document openers still use
+  their existing templates and final-video review. Visual fixture:
+  `.venv\Scripts\python.exe tests\render_opener_preview.py` (restores the generated slot).
+
 - Scene 1's clip starts from a painting of the strangest moment (`review.paint_opener_start` ->
   `work/opener_start.jpg`, `gpu.start_picture`; same painters and `AI paintings` rules), not scene 1's own picture:
   the Dexter Short (2026-10-30) sent Flow the woodcut of Dexter walking, so the clip couldn't show the bed warmers.

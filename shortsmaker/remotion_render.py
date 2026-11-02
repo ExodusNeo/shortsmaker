@@ -8,7 +8,7 @@ from pathlib import Path
 
 from PIL import Image, ImageDraw, ImageFilter, ImageOps
 
-from shortsmaker import audio_mix, gpu, llm, media_tools, motion, photo_prep, session, style_lab
+from shortsmaker import audio_mix, gpu, llm, media_tools, motion, opening_rules, photo_prep, session, style_lab
 from shortsmaker.config import FPS, PALETTES, REMOTION, REMOTION_MIN_GRAPHICS, REMOTION_ONLY, XFADE, hex_rgb, short_skin
 
 
@@ -43,17 +43,24 @@ def redraw_custom(short: dict, i: int, slot: int, why: str, work: Path) -> bool:
     if not cached.exists():
         return False
     sig, _, code = cached.read_text(encoding="utf-8").partition("\n")
+    opener = i == 0 and short["scenes"][i].get("full_rescued") == "motion-graphic opener"
+    context = opening_rules.opening_brief(short) if opener else ""
+    preview = (short.get("opener_preflight") or {}).get("attempt") if opener else None
+    preview_context = f"Rejected preview and full review: {preview}. Open its look/sheet.jpg and review.json." if preview else ""
     print(f"    redrawing the motion graphic of scene {i + 1} ({why[:80]})...")
     data = llm.ask_ai(f"""You wrote the Remotion component `Custom{slot}` below for scene {i + 1} of the YouTube Short
 "{short['title']}" (narration: {short['scenes'][i]['narration']!r}). The finished video was reviewed and this scene
 looked wrong: {why!r}
 Rewrite the component to fix exactly that.
-{motion.custom_rules(slot)}
+{preview_context}
+{context}
+{motion.custom_rules(slot, opener=opener)}
 Current code:
 {code}
-Reply with ONLY JSON: {{"code": "import React from 'react';\\n..."}}""", fatal=False)
+Reply with ONLY JSON: {{"code": "import React from 'react';\\n..."}}""", fatal=False,
+                       read_dir=Path(preview) / "look" if preview else None)
     new = motion.clean_tsx_code((data or {}).get("code"), slot)
-    if not new or motion.lint_custom_code(new):
+    if not new or motion.lint_custom_code(new, opener=opener):
         return False
     target = REMOTION / "src" / "full" / "generated" / f"Custom{slot}.tsx"
     before = target.read_text(encoding="utf-8") if target.exists() else None
@@ -65,6 +72,15 @@ Reply with ONLY JSON: {{"code": "import React from 'react';\\n..."}}""", fatal=F
         if before is not None:
             target.write_text(before, encoding="utf-8")
     cached.write_text(sig + "\n" + new, encoding="utf-8")
+    if opener:
+        previous = short.get("opener_preflight") or {}
+        # A failed full-video review supersedes an earlier preview pass. Do not let its old 8/10
+        # prevent a genuinely fixed 7/10 candidate from being adopted.
+        short["opener_preflight_baseline"] = {**previous, "status": "Problems found",
+            "score": min(previous.get("score") or 6, 6),
+            "rank_score": -1 if short.get("opening_answer_reveal") else min(previous.get("rank_score", 6), 6),
+            "reason": why}
+        short["opener_preflight_pending"] = True
     return True
 
 
@@ -207,7 +223,7 @@ def render_remotion(short: dict, cues: list[dict], bounds: list[float], total: f
         remotion({**p, "words": [], "layer": "graphics"}, work / "graphics.mov",  # ProRes 4444 keeps the alpha
                  ("--codec=prores", "--prores-profile=4444", "--pixel-format=yuva444p10le", "--image-format=png"))
     try:
-        motion.code_custom_scenes(short, scenes, work)
+        motion.code_custom_scenes(short, scenes, work, props=props)
         # AI-invented looks/overlays/transitions; a broken one falls back to its library preset
         short["inventions"] = run_remotion_with_fallback(render, props, style_lab.invent_styles(short, props, work))
     finally:
