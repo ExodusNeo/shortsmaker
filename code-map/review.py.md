@@ -58,6 +58,7 @@ tags:
 - [[test_first_second.py]] - `imports_from` [EXTRACTED]
 - [[test_full_scenes.py]] - `imports_from` [EXTRACTED]
 - [[test_opener_graphic.py]] - `imports_from` [EXTRACTED]
+- [[test_opener_preflight.py]] - `imports_from` [EXTRACTED]
 - [[test_opening_rules.py]] - `imports_from` [EXTRACTED]
 - [[test_quality.py]] - `imports_from` [EXTRACTED]
 - [[test_reliability.py]] - `imports_from` [EXTRACTED]

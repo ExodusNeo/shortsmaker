@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "re"
+community: "retention.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/re
+  - community/retentionpy
 ---
 
 # Path
 
 ## Connections
-- [[import_media()]] - `references` [EXTRACTED]
+- [[analyze()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/re
+#graphify/code #graphify/EXTRACTED #community/retentionpy

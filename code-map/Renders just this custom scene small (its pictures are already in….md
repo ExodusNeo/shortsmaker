@@ -2,7 +2,7 @@
 source_file: "shortsmaker/motion.py"
 type: "rationale"
 community: "code_custom_scenes"
-location: "L250"
+location: "L293"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED

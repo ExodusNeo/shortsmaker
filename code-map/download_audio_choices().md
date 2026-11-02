@@ -1,19 +1,19 @@
 ---
 source_file: "shortsmaker/media_menu.py"
 type: "code"
-community: "media_command"
+community: "audio_library.py"
 location: "L13"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/media_command
+  - community/audio_librarypy
 ---
 
 # download_audio_choices()
 
 ## Connections
 - [[New library downloads wait for the owner's ears; existing approved files are…]] - `rationale_for` [EXTRACTED]
-- [[Path]] - `references` [EXTRACTED]
+- [[Path_28]] - `references` [EXTRACTED]
 - [[ffmpeg()]] - `calls` [EXTRACTED]
 - [[freesound_preview()]] - `calls` [EXTRACTED]
 - [[freesound_results()]] - `calls` [EXTRACTED]
@@ -23,4 +23,4 @@ tags:
 - [[seed_audio_library()]] - `calls` [EXTRACTED]
 - [[set_audio_metadata()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/media_command
+#graphify/code #graphify/EXTRACTED #community/audio_librarypy

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/review.py"
 type: "rationale"
-community: "scene_repair.py"
-location: "L464"
+community: "test_full_scenes.py"
+location: "L476"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/scene_repairpy
+  - community/test_full_scenespy
 ---
 
 # One mid-scene frame per scene from the finished video, labeled with its…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[storyboard()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/scene_repairpy
+#graphify/rationale #graphify/EXTRACTED #community/test_full_scenespy

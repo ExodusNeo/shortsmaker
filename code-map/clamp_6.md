@@ -1,21 +1,17 @@
 ---
-source_file: "remotion/src/full/toolkit.tsx"
+source_file: "remotion/src/full/BigNumber.tsx"
 type: "code"
-community: "toolkit.tsx"
-location: "L10"
+community: "full/types.ts"
+location: "L7"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/toolkittsx
+  - community/full/typests
 ---
 
 # clamp
 
 ## Connections
-- [[Custom0.tsx]] - `imports` [EXTRACTED]
-- [[Custom1.tsx]] - `imports` [EXTRACTED]
-- [[Custom2.tsx]] - `imports` [EXTRACTED]
-- [[Custom3.tsx]] - `imports` [EXTRACTED]
-- [[toolkit.tsx]] - `contains` [EXTRACTED]
+- [[BigNumber.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/toolkittsx
+#graphify/code #graphify/EXTRACTED #community/full/typests

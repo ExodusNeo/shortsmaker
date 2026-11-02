@@ -1,19 +1,19 @@
 ---
 source_file: "shortsmaker/review.py"
 type: "code"
-community: "finish_render"
-location: "L67"
+community: "visual_review"
+location: "L72"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/finish_render
+  - community/visual_review
 ---
 
 # quality_check()
 
 ## Connections
 - [[Automatic checks on the finished Short, using ffmpeg's own detectors in one…]] - `rationale_for` [EXTRACTED]
-- [[Path_3]] - `references` [EXTRACTED]
+- [[Path_31]] - `references` [EXTRACTED]
 - [[clock()_1]] - `calls` [EXTRACTED]
 - [[finish_render()]] - `calls` [EXTRACTED]
 - [[length_plan()]] - `calls` [EXTRACTED]
@@ -24,4 +24,4 @@ tags:
 - [[test_quality_check_reads_ffmpeg_and_flags_reused_pictures()]] - `calls` [EXTRACTED]
 - [[where()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/finish_render
+#graphify/code #graphify/EXTRACTED #community/visual_review

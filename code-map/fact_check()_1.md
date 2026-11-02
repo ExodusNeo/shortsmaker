@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/writing.py"
 type: "code"
-community: "extra_sources.py"
+community: "owner"
 location: "L698"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/extra_sourcespy
+  - community/owner
 ---
 
 # fact_check()
@@ -21,4 +21,4 @@ tags:
 - [[write_scripts()]] - `calls` [EXTRACTED]
 - [[writing.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/extra_sourcespy
+#graphify/code #graphify/EXTRACTED #community/owner

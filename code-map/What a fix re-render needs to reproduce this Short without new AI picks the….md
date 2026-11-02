@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/short_render.py"
 type: "rationale"
-community: "scene_repair.py"
+community: "finish_render"
 location: "L27"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/scene_repairpy
+  - community/finish_render
 ---
 
 # What a fix re-render needs to reproduce this Short without new AI picks: the…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[save_state()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/scene_repairpy
+#graphify/rationale #graphify/EXTRACTED #community/finish_render

@@ -1,39 +1,45 @@
 ---
 type: community
-members: 26
+members: 32
 ---
 
 # test_pictures_first.py
 
-**Members:** 26 nodes
+**Members:** 32 nodes
 
 ## Members
-- [[dot-__exit__()_3]] - code - tests/test_pictures_first.py
-- [[dot-__init__()_9]] - code - tests/test_pictures_first.py
-- [[Bounded retry; Wikimedia already handles its own rate limits and retries.]] - rationale - shortsmaker/picker.py
-- [[Build a broad multi-source pool of images and real video footage (per-scene…]] - rationale - shortsmaker/picker.py
-- [[One text selection from already-reviewed pool entries before missing scenes…]] - rationale - shortsmaker/picker.py
-- [[Path_30]] - code
 - [[Tests for pictures-first planning (gather the pool, the AI picture list, topic…]] - rationale - tests/test_pictures_first.py
-- [[The Oxford pool (2026-10-26) got stock videos that only shared a first name or…]] - rationale - tests/test_pictures_first.py
-- [[choose_images()]] - code - shortsmaker/picker.py
-- [[choose_images() with network stubbed; gather_pool returns `extra` (and records…]] - rationale - tests/test_pictures_first.py
-- [[download_picture()]] - code - shortsmaker/picker.py
-- [[picking]] - code - tests/test_pictures_first.py
-- [[planned_short()]] - code - tests/test_pictures_first.py
-- [[recover_downloads()]] - code - shortsmaker/picker.py
-- [[scene()_3]] - code - tests/test_pictures_first.py
-- [[still()]] - code - tests/test_pictures_first.py
-- [[test_choose_extra_gather_is_bounded()]] - code - tests/test_pictures_first.py
-- [[test_choose_falls_back_to_plan()]] - code - tests/test_pictures_first.py
-- [[test_choose_keeps_plan_and_appends()]] - code - tests/test_pictures_first.py
-- [[test_choose_old_path_unchanged()]] - code - tests/test_pictures_first.py
-- [[test_choose_swap_note()]] - code - tests/test_pictures_first.py
-- [[test_on_topic_ignores_a_lone_shared_name()]] - code - tests/test_pictures_first.py
+- [[The director's `pic` numbers (scenes and evidence-board items), checked a…]] - rationale - shortsmaker/picture_pool.py
+- [[The picture list the writer, editor and director plan with the AI looks at the…]] - rationale - shortsmaker/picture_pool.py
+- [[The valid entries of a picture-list reply (LLM output is untrusted).]] - rationale - shortsmaker/picture_pool.py
+- [[catalog_entries()]] - code - shortsmaker/picture_pool.py
+- [[catalog_pool()]] - code - shortsmaker/picture_pool.py
+- [[check()]] - code - shortsmaker/picture_pool.py
+- [[clean_pics()]] - code - shortsmaker/picture_pool.py
+- [[entry()]] - code - tests/test_pictures_first.py
+- [[film()]] - code - tests/test_pictures_first.py
+- [[no_gather()]] - code - tests/test_pictures_first.py
+- [[pic_short()]] - code - tests/test_pictures_first.py
+- [[pool.json (the candidates without bytes) + thumbk.jpg; list positions are the…]] - rationale - shortsmaker/picture_pool.py
+- [[pool_of()]] - code - tests/test_pictures_first.py
+- [[prepare()_5]] - code - tests/test_pictures_first.py
+- [[save_pool()]] - code - shortsmaker/picture_pool.py
+- [[test_board_item_pics_cleaned()]] - code - tests/test_pictures_first.py
+- [[test_board_item_refuses_film()]] - code - tests/test_pictures_first.py
+- [[test_both_mode_reuses_pools()]] - code - tests/test_pictures_first.py
+- [[test_catalog_both_empty_stops_uncached()]] - code - tests/test_pictures_first.py
+- [[test_catalog_empty_pool_no_ai()]] - code - tests/test_pictures_first.py
+- [[test_catalog_empty_reply_asks_other_ai()]] - code - tests/test_pictures_first.py
+- [[test_catalog_failure_stops()]] - code - tests/test_pictures_first.py
+- [[test_catalog_junk()]] - code - tests/test_pictures_first.py
+- [[test_catalog_redone_when_missing()]] - code - tests/test_pictures_first.py
+- [[test_catalog_text()]] - code - tests/test_pictures_first.py
+- [[test_clean_pics()]] - code - tests/test_pictures_first.py
+- [[test_corrupt_pool_and_catalog_redone()]] - code - tests/test_pictures_first.py
 - [[test_pictures_first.py]] - code - tests/test_pictures_first.py
-- [[test_pixabay_keeps_only_on_topic_videos()]] - code - tests/test_pictures_first.py
-- [[test_plan_note_already_used()]] - code - tests/test_pictures_first.py
-- [[test_planned_full_pictures_not_sent_when_empty()]] - code - tests/test_pictures_first.py
+- [[test_pool_rows_without_thumbs()]] - code - tests/test_pictures_first.py
+- [[test_prompts_carry_picture_list()]] - code - tests/test_pictures_first.py
+- [[test_usable_counts_film_once()]] - code - tests/test_pictures_first.py
 
 ## Live Query (requires Dataview plugin)
 
@@ -43,33 +49,30 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 21 edges to [[_COMMUNITY_catalog_pool]]
-- 16 edges to [[_COMMUNITY_test_full_scenes.py]]
-- 11 edges to [[_COMMUNITY_write_scripts]]
-- 7 edges to [[_COMMUNITY_gather_pool]]
-- 5 edges to [[_COMMUNITY_json]]
-- 4 edges to [[_COMMUNITY_fake_ai]]
-- 4 edges to [[_COMMUNITY_owner]]
-- 4 edges to [[_COMMUNITY_image_sources.py]]
-- 4 edges to [[_COMMUNITY_subprocess]]
-- 3 edges to [[_COMMUNITY_extra_sources.py]]
-- 3 edges to [[_COMMUNITY_re]]
-- 2 edges to [[_COMMUNITY_words_of]]
-- 2 edges to [[_COMMUNITY_ask_ai]]
+- 22 edges to [[_COMMUNITY_test_full_scenes.py]]
+- 16 edges to [[_COMMUNITY_write_scripts]]
+- 15 edges to [[_COMMUNITY_choose_images]]
+- 14 edges to [[_COMMUNITY_prepare_topic]]
+- 9 edges to [[_COMMUNITY_fake_ai]]
+- 5 edges to [[_COMMUNITY_owner]]
+- 2 edges to [[_COMMUNITY_json]]
+- 2 edges to [[_COMMUNITY_write_json]]
+- 2 edges to [[_COMMUNITY_fetch]]
+- 2 edges to [[_COMMUNITY_channel_profiles.py]]
+- 2 edges to [[_COMMUNITY_test_style.py]]
+- 2 edges to [[_COMMUNITY_test_topic_ideas.py]]
 - 1 edge to [[_COMMUNITY_prune_cache]]
-- 1 edge to [[_COMMUNITY_style_library]]
-- 1 edge to [[_COMMUNITY_render]]
-- 1 edge to [[_COMMUNITY_io]]
-- 1 edge to [[_COMMUNITY_main_1]]
-- 1 edge to [[_COMMUNITY_make_opener]]
-- 1 edge to [[_COMMUNITY_clean_full]]
+- 1 edge to [[_COMMUNITY_test_rules.py]]
+- 1 edge to [[_COMMUNITY_ask_ai]]
+- 1 edge to [[_COMMUNITY_edit_scripts]]
+- 1 edge to [[_COMMUNITY_words_of]]
 - 1 edge to [[_COMMUNITY_edit_plan]]
-- 1 edge to [[_COMMUNITY_capture_prompts]]
-- 1 edge to [[_COMMUNITY_test_style.py]]
+- 1 edge to [[_COMMUNITY_extra_sources.py]]
+- 1 edge to [[_COMMUNITY_re]]
 
 ## Top bridge nodes
-- [[test_pictures_first.py]] - degree 81, connects to 14 communities
-- [[choose_images()]] - degree 26, connects to 14 communities
-- [[recover_downloads()]] - degree 7, connects to 4 communities
-- [[download_picture()]] - degree 5, connects to 2 communities
-- [[still()]] - degree 5, connects to 2 communities
+- [[test_pictures_first.py]] - degree 81, connects to 16 communities
+- [[catalog_pool()]] - degree 19, connects to 7 communities
+- [[save_pool()]] - degree 13, connects to 4 communities
+- [[clean_pics()]] - degree 8, connects to 3 communities
+- [[pool_of()]] - degree 19, connects to 2 communities

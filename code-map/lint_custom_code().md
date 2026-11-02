@@ -2,7 +2,7 @@
 source_file: "shortsmaker/motion.py"
 type: "code"
 community: "code_custom_scenes"
-location: "L234"
+location: "L277"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -16,6 +16,7 @@ tags:
 - [[code_custom_scenes()]] - `calls` [EXTRACTED]
 - [[look_and_fix()]] - `calls` [EXTRACTED]
 - [[motion.py]] - `contains` [EXTRACTED]
+- [[opener_preflight()]] - `calls` [EXTRACTED]
 - [[re]] - `calls` [EXTRACTED]
 - [[redraw_custom()]] - `calls` [EXTRACTED]
 - [[test_fallback_custom_is_clean()]] - `calls` [EXTRACTED]

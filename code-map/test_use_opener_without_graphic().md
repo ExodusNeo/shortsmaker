@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_opener_graphic.py"
 type: "code"
-community: "use"
+community: "use_opener"
 location: "L94"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/use
+  - community/use_opener
 ---
 
 # test_use_opener_without_graphic()
@@ -17,4 +17,4 @@ tags:
 - [[test_opener_graphic.py]] - `contains` [EXTRACTED]
 - [[use()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/use
+#graphify/code #graphify/EXTRACTED #community/use_opener

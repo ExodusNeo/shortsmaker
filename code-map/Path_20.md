@@ -1,16 +1,19 @@
 ---
 source_file: ""
 type: "code"
-community: "retention.py"
+community: "make_opener"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/retentionpy
+  - community/make_opener
 ---
 
 # Path
 
 ## Connections
-- [[analyze()]] - `references` [EXTRACTED]
+- [[make_opener()]] - `references` [EXTRACTED]
+- [[node_run()]] - `references` [EXTRACTED]
+- [[review()]] - `references` [EXTRACTED]
+- [[write()_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/retentionpy
+#graphify/code #graphify/EXTRACTED #community/make_opener

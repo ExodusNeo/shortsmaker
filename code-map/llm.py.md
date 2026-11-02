@@ -53,6 +53,7 @@ tags:
 - [[test_h3_handoff.py]] - `imports_from` [EXTRACTED]
 - [[test_marks.py]] - `imports_from` [EXTRACTED]
 - [[test_opener_graphic.py]] - `imports_from` [EXTRACTED]
+- [[test_opener_preflight.py]] - `imports_from` [EXTRACTED]
 - [[test_opening_rules.py]] - `imports_from` [EXTRACTED]
 - [[test_package.py]] - `imports_from` [EXTRACTED]
 - [[test_pictures_first.py]] - `imports_from` [EXTRACTED]

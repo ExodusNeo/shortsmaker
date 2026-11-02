@@ -2,7 +2,7 @@
 source_file: "shortsmaker/motion.py"
 type: "code"
 community: "code_custom_scenes"
-location: "L279"
+location: "L408"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,7 +12,7 @@ tags:
 # look_and_fix()
 
 ## Connections
-- [[Path_25]] - `references` [EXTRACTED]
+- [[Path_26]] - `references` [EXTRACTED]
 - [[The coder looks at 8 frames of its own scene before the real render and…]] - `rationale_for` [EXTRACTED]
 - [[ask_ai()]] - `calls` [EXTRACTED]
 - [[clean_tsx_code()]] - `calls` [EXTRACTED]

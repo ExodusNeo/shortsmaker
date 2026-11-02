@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_drawn_opener.py"
 type: "code"
-community: "test_drawn_opener_renders_and_is_reused"
+community: "make_opener"
 location: "L22"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_drawn_opener_renders_and_is_reused
+  - community/make_opener
 ---
 
 # short()
@@ -18,4 +18,4 @@ tags:
 - [[test_no_verdict_is_not_a_pass()]] - `calls` [EXTRACTED]
 - [[test_use_opener_plays_the_drawn_opener()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_drawn_opener_renders_and_is_reused
+#graphify/code #graphify/EXTRACTED #community/make_opener

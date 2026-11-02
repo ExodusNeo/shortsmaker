@@ -12,8 +12,8 @@ tags:
 # fake_ai
 
 ## Connections
-- [[dot-__enter__()_3]] - `calls` [EXTRACTED]
 - [[dot-__enter__()_1]] - `calls` [EXTRACTED]
+- [[dot-__enter__()_2]] - `calls` [EXTRACTED]
 - [[dot-__enter__()]] - `method` [EXTRACTED]
 - [[dot-__exit__()_2]] - `method` [EXTRACTED]
 - [[dot-__init__()_7]] - `method` [EXTRACTED]

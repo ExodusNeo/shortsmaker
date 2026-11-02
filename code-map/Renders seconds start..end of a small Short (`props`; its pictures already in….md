@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/motion.py"
 type: "rationale"
-community: "json"
-location: "L258"
+community: "subprocess"
+location: "L301"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/json
+  - community/subprocess
 ---
 
 # Renders seconds start..end of a small Short (`props`; its pictures already in…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[preview_sheet()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/json
+#graphify/rationale #graphify/EXTRACTED #community/subprocess

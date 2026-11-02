@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/full/types.ts"
 type: "code"
-community: "guarded.tsx"
+community: "Custom3.tsx"
 location: "L12"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/guardedtsx
+  - community/Custom3tsx
 ---
 
 # FullProps
@@ -22,9 +22,10 @@ tags:
 - [[Document.tsx]] - `imports` [EXTRACTED]
 - [[ExampleChain.tsx]] - `imports` [EXTRACTED]
 - [[ExampleEvidence.tsx]] - `imports` [EXTRACTED]
+- [[ExampleOpenerAction.tsx]] - `imports` [EXTRACTED]
 - [[FullScene.tsx]] - `imports` [EXTRACTED]
 - [[Journey.tsx]] - `imports` [EXTRACTED]
 - [[fulltypes.ts]] - `contains` [EXTRACTED]
 - [[toolkit.tsx]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/guardedtsx
+#graphify/code #graphify/EXTRACTED #community/Custom3tsx

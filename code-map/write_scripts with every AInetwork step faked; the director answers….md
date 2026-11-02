@@ -1,17 +1,17 @@
 ---
 source_file: "tests/test_style.py"
 type: "rationale"
-community: "plan_with"
+community: "owner"
 location: "L108"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/plan_with
+  - community/owner
 ---
 
 # write_scripts with every AI/network step faked; the director answers…
 
 ## Connections
-- [[plan_with()_1]] - `rationale_for` [EXTRACTED]
+- [[plan_with()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/plan_with
+#graphify/rationale #graphify/EXTRACTED #community/owner

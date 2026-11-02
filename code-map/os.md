@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "subprocess"
+community: "test_style.py"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/subprocess
+  - community/test_stylepy
 ---
 
 # os
@@ -27,4 +27,4 @@ tags:
 - [[test_reliability.py]] - `imports` [EXTRACTED]
 - [[veo_handoff()]] - `calls` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/subprocess
+#graphify/concept #graphify/EXTRACTED #community/test_stylepy

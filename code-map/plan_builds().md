@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/blender_plan.py"
 type: "code"
-community: "test_blender_plan.py"
+community: "blender_plan.py"
 location: "L110"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_blender_planpy
+  - community/blender_planpy
 ---
 
 # plan_builds()
@@ -20,4 +20,4 @@ tags:
 - [[test_plan_builds_retries_then_defaults()]] - `calls` [EXTRACTED]
 - [[write_scripts()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_blender_planpy
+#graphify/code #graphify/EXTRACTED #community/blender_planpy

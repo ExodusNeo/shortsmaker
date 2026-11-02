@@ -1,20 +1,19 @@
 ---
 source_file: ""
 type: "code"
-community: "make"
+community: "resume_runs"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/make
+  - community/resume_runs
 ---
 
 # Path
 
 ## Connections
-- [[caption_layer()]] - `references` [EXTRACTED]
-- [[make()_1]] - `references` [EXTRACTED]
-- [[master_gain()]] - `references` [EXTRACTED]
-- [[project_xml()]] - `references` [EXTRACTED]
-- [[remove()]] - `references` [EXTRACTED]
+- [[finish_short()]] - `references` [EXTRACTED]
+- [[record_failure()]] - `references` [EXTRACTED]
+- [[resume_runs()]] - `references` [EXTRACTED]
+- [[use_picture_from()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/make
+#graphify/code #graphify/EXTRACTED #community/resume_runs

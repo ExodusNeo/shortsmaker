@@ -2,7 +2,7 @@
 source_file: "shortsmaker/review.py"
 type: "code"
 community: "apply_review_fixes"
-location: "L281"
+location: "L293"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,7 +12,7 @@ tags:
 # apply_review_fixes()
 
 ## Connections
-- [[Path_3]] - `references` [EXTRACTED]
+- [[Path_31]] - `references` [EXTRACTED]
 - [[The automatic fixes after a render's review (up to AUTO_REPAINT_MAX scenes per…]] - `rationale_for` [EXTRACTED]
 - [[finish_render()]] - `calls` [EXTRACTED]
 - [[paint_new()]] - `calls` [EXTRACTED]

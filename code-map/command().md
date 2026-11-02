@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/retention.py"
 type: "code"
-community: "main"
+community: "retention.py"
 location: "L135"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/main
+  - community/retentionpy
 ---
 
 # command()
@@ -17,9 +17,9 @@ tags:
 - [[ask_number()]] - `calls` [EXTRACTED]
 - [[configure_brain()]] - `calls` [EXTRACTED]
 - [[json]] - `calls` [EXTRACTED]
-- [[main()_4]] - `calls` [EXTRACTED]
+- [[main()_7]] - `calls` [EXTRACTED]
 - [[normalize_brain()]] - `calls` [EXTRACTED]
 - [[retention.bat, or make_shorts.py retention Short folder screenshot AI…]] - `rationale_for` [EXTRACTED]
 - [[retention.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/main
+#graphify/code #graphify/EXTRACTED #community/retentionpy

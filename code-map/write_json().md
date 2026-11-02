@@ -12,7 +12,7 @@ tags:
 # write_json()
 
 ## Connections
-- [[Path_2]] - `references` [EXTRACTED]
+- [[Path_22]] - `references` [EXTRACTED]
 - [[Write via a temp file, so an interrupted run never leaves a half-written file…]] - `rationale_for` [EXTRACTED]
 - [[apply()]] - `calls` [EXTRACTED]
 - [[begin()]] - `calls` [EXTRACTED]

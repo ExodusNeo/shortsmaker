@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[A re-render with nothing left to fix an old timeline would no longer match the…]] - `rationale_for` [EXTRACTED]
-- [[Path_6]] - `references` [EXTRACTED]
+- [[Path_3]] - `references` [EXTRACTED]
 - [[apply()]] - `calls` [EXTRACTED]
 - [[edit_project.py]] - `contains` [EXTRACTED]
 - [[finish_render()]] - `calls` [EXTRACTED]

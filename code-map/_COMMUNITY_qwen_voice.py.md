@@ -40,16 +40,19 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 5 edges to [[_COMMUNITY_json]]
-- 5 edges to [[_COMMUNITY_subprocess]]
+- 6 edges to [[_COMMUNITY_test_full_scenes.py]]
 - 4 edges to [[_COMMUNITY_re]]
-- 4 edges to [[_COMMUNITY_test_full_scenes.py]]
+- 3 edges to [[_COMMUNITY_channel_profiles.py]]
+- 2 edges to [[_COMMUNITY_subprocess]]
 - 1 edge to [[_COMMUNITY_spoken_count]]
 - 1 edge to [[_COMMUNITY_words_of]]
+- 1 edge to [[_COMMUNITY_test_story.py]]
+- 1 edge to [[_COMMUNITY_test_style.py]]
+- 1 edge to [[_COMMUNITY_json]]
 
 ## Top bridge nodes
-- [[qwen_voice.py]] - degree 18, connects to 4 communities
-- [[unicodedata]] - degree 6, connects to 4 communities
+- [[qwen_voice.py]] - degree 18, connects to 6 communities
+- [[unicodedata]] - degree 6, connects to 3 communities
 - [[test_qwen_voice.py]] - degree 10, connects to 2 communities
 - [[align_words()]] - degree 10, connects to 1 community
 - [[spoken_sentence()]] - degree 7, connects to 1 community

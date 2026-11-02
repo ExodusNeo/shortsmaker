@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/remotion_render.py"
 type: "code"
-community: "test_full_scenes.py"
+community: "subprocess"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_full_scenespy
+  - community/subprocess
 ---
 
 # remotion_render.py
@@ -25,11 +25,13 @@ tags:
 - [[make_paper()]] - `contains` [EXTRACTED]
 - [[media_tools.py]] - `imports_from` [EXTRACTED]
 - [[motion.py]] - `imports_from` [EXTRACTED]
+- [[opening_rules.py]] - `imports_from` [EXTRACTED]
 - [[paint_instead()]] - `contains` [EXTRACTED]
 - [[pathlib]] - `imports_from` [EXTRACTED]
 - [[photo_prep.py]] - `imports_from` [EXTRACTED]
 - [[pil]] - `imports_from` [EXTRACTED]
 - [[redraw_custom()]] - `contains` [EXTRACTED]
+- [[render_opener_preview.py]] - `imports_from` [EXTRACTED]
 - [[render_remotion()]] - `contains` [EXTRACTED]
 - [[review.py]] - `imports_from` [EXTRACTED]
 - [[run_remotion_with_fallback()]] - `contains` [EXTRACTED]
@@ -40,7 +42,8 @@ tags:
 - [[style_lab.py]] - `imports_from` [EXTRACTED]
 - [[subprocess]] - `imports` [EXTRACTED]
 - [[test_full_scenes.py]] - `imports_from` [EXTRACTED]
+- [[test_opener_preflight.py]] - `imports_from` [EXTRACTED]
 - [[test_style.py]] - `imports_from` [EXTRACTED]
 - [[wants_remotion()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_full_scenespy
+#graphify/code #graphify/EXTRACTED #community/subprocess

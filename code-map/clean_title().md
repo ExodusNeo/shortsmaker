@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/seo.py"
 type: "code"
-community: "apply_metadata"
+community: "re"
 location: "L22"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/apply_metadata
+  - community/re
 ---
 
 # clean_title()
@@ -17,4 +17,4 @@ tags:
 - [[re]] - `calls` [EXTRACTED]
 - [[seo.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/apply_metadata
+#graphify/code #graphify/EXTRACTED #community/re

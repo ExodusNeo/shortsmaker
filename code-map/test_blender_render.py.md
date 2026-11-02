@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_blender_render.py"
 type: "code"
-community: "test_blender_plan.py"
+community: "test_blender_render.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_blender_planpy
+  - community/test_blender_renderpy
 ---
 
 # test_blender_render.py
@@ -33,4 +33,4 @@ tags:
 - [[test_scene_frames_cover_every_frame_once()]] - `contains` [EXTRACTED]
 - [[traceback]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_blender_planpy
+#graphify/code #graphify/EXTRACTED #community/test_blender_renderpy

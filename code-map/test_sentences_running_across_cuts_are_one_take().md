@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_story.py"
 type: "code"
-community: "ffmpeg"
+community: "log_short"
 location: "L136"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ffmpeg
+  - community/log_short
 ---
 
 # test_sentences_running_across_cuts_are_one_take()
@@ -16,4 +16,4 @@ tags:
 - [[sentence_groups()]] - `calls` [EXTRACTED]
 - [[test_story.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ffmpeg
+#graphify/code #graphify/EXTRACTED #community/log_short

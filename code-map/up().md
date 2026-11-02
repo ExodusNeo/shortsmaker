@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/gpu.py"
 type: "code"
-community: "json"
+community: "channel_profiles.py"
 location: "L105"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/json
+  - community/channel_profilespy
 ---
 
 # up()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[voicestudio_up()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/json
+#graphify/code #graphify/EXTRACTED #community/channel_profilespy

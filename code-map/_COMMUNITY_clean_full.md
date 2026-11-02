@@ -1,11 +1,11 @@
 ---
 type: community
-members: 23
+members: 22
 ---
 
 # clean_full
 
-**Members:** 23 nodes
+**Members:** 22 nodes
 
 ## Members
 - [[(what one ink figure stands for, how many to draw) the planner's `each` when…]] - rationale - shortsmaker/plan_rules.py
@@ -23,7 +23,6 @@ members: 23
 - [[test_clean_full_board()]] - code - tests/test_full_scenes.py
 - [[test_clean_full_document()]] - code - tests/test_full_scenes.py
 - [[test_clean_full_journey()]] - code - tests/test_full_scenes.py
-- [[test_clean_full_keeps_board_pic()]] - code - tests/test_pictures_first.py
 - [[test_clean_full_keeps_thing()]] - code - tests/test_full_scenes.py
 - [[test_clean_full_limits()]] - code - tests/test_full_scenes.py
 - [[test_clean_question_and_kinetic()]] - code - tests/test_style.py
@@ -41,22 +40,21 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 14 edges to [[_COMMUNITY_test_full_scenes.py]]
-- 6 edges to [[_COMMUNITY_words_of]]
+- 7 edges to [[_COMMUNITY_words_of]]
 - 3 edges to [[_COMMUNITY_write_scripts]]
 - 2 edges to [[_COMMUNITY_re]]
-- 1 edge to [[_COMMUNITY_rescue_graphics]]
 - 1 edge to [[_COMMUNITY_render_remotion]]
 - 1 edge to [[_COMMUNITY_make_opener]]
 - 1 edge to [[_COMMUNITY_gather_pool]]
-- 1 edge to [[_COMMUNITY_test_first_second.py]]
-- 1 edge to [[_COMMUNITY_opener_graphic]]
 - 1 edge to [[_COMMUNITY_visual_review]]
-- 1 edge to [[_COMMUNITY_test_pictures_first.py]]
+- 1 edge to [[_COMMUNITY_first_second_check]]
+- 1 edge to [[_COMMUNITY_code_custom_scenes]]
+- 1 edge to [[_COMMUNITY_finish_render]]
 - 1 edge to [[_COMMUNITY_test_style.py]]
 
 ## Top bridge nodes
-- [[clean_full()]] - degree 23, connects to 7 communities
+- [[clean_full()]] - degree 23, connects to 6 communities
+- [[is_num()]] - degree 9, connects to 5 communities
 - [[clean_graphic()]] - degree 10, connects to 4 communities
-- [[is_num()]] - degree 8, connects to 4 communities
 - [[contains()]] - degree 7, connects to 4 communities
-- [[test_clean_full_keeps_board_pic()]] - degree 3, connects to 2 communities
+- [[number_figures()]] - degree 5, connects to 1 community

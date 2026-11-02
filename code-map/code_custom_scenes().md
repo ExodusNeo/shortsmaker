@@ -2,7 +2,7 @@
 source_file: "shortsmaker/motion.py"
 type: "code"
 community: "code_custom_scenes"
-location: "L128"
+location: "L129"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -13,15 +13,18 @@ tags:
 
 ## Connections
 - [[Motion Graphics Agent writes bespoke ReactSVG Remotion code for each `type…]] - `rationale_for` [EXTRACTED]
-- [[Path_25]] - `references` [EXTRACTED]
+- [[Path_26]] - `references` [EXTRACTED]
 - [[ask_ai()]] - `calls` [EXTRACTED]
 - [[clean_tsx_code()]] - `calls` [EXTRACTED]
 - [[custom_rules()]] - `calls` [EXTRACTED]
 - [[fallback_custom_tsx()]] - `calls` [EXTRACTED]
+- [[hashlib]] - `calls` [EXTRACTED]
 - [[json]] - `calls` [EXTRACTED]
 - [[lint_custom_code()]] - `calls` [EXTRACTED]
 - [[look_and_fix()]] - `calls` [EXTRACTED]
 - [[motion.py]] - `contains` [EXTRACTED]
+- [[opener_preflight()]] - `calls` [EXTRACTED]
+- [[opening_brief()]] - `calls` [EXTRACTED]
 - [[render_remotion()]] - `calls` [EXTRACTED]
 - [[shutil]] - `calls` [EXTRACTED]
 - [[test_code_custom_scenes_fallback()]] - `calls` [EXTRACTED]

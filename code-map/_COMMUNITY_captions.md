@@ -25,10 +25,10 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 4 edges to [[_COMMUNITY_subprocess]]
+- 4 edges to [[_COMMUNITY_re]]
 - 1 edge to [[_COMMUNITY_render_remotion]]
 - 1 edge to [[_COMMUNITY_render]]
-- 1 edge to [[_COMMUNITY_story_sound]]
+- 1 edge to [[_COMMUNITY_music_gain]]
 - 1 edge to [[_COMMUNITY_test_full_scenes.py]]
 
 ## Top bridge nodes

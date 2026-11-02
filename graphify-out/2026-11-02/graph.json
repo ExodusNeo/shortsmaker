@@ -9354,7 +9354,7 @@
       "file_type": "code",
       "norm_label": "command()",
       "source_file": "shortsmaker/retention.py",
-      "source_location": "L131"
+      "source_location": "L135"
     },
     {
       "id": "shortsmaker_short_render_prune_work",
@@ -20520,7 +20520,7 @@
       "source_location": "L198"
     },
     {
-      "id": "shortsmaker_retention_rationale_132",
+      "id": "shortsmaker_retention_rationale_136",
       "label": "retention.bat, or make_shorts.py retention [Short folder] [screenshot] [AI\u2026",
       "_origin": "ast",
       "community": 51,
@@ -20528,7 +20528,7 @@
       "file_type": "rationale",
       "norm_label": "retention.bat, or make_shorts.py retention [short folder] [screenshot] [ai...",
       "source_file": "shortsmaker/retention.py",
-      "source_location": "L132"
+      "source_location": "L136"
     },
     {
       "id": "shortsmaker_style_lab_rationale_117",
@@ -40061,18 +40061,6 @@
     },
     {
       "source": "shortsmaker_retention_analyze",
-      "target": "tempfile",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "shortsmaker/retention.py",
-      "source_location": "L104",
-      "weight": 1.0
-    },
-    {
-      "source": "shortsmaker_retention_analyze",
       "target": "shutil",
       "relation": "calls",
       "_origin": "ast",
@@ -40085,7 +40073,7 @@
     },
     {
       "source": "shortsmaker_retention_analyze",
-      "target": "shortsmaker_llm_ask_ai",
+      "target": "tempfile",
       "relation": "calls",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -40097,19 +40085,19 @@
     },
     {
       "source": "shortsmaker_retention_analyze",
-      "target": "json",
+      "target": "shortsmaker_llm_ask_ai",
       "relation": "calls",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "shortsmaker/retention.py",
-      "source_location": "L116",
+      "source_location": "L112",
       "weight": 1.0
     },
     {
       "source": "shortsmaker_retention_analyze",
-      "target": "shortsmaker_retention_normalize_reply",
+      "target": "json",
       "relation": "calls",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -40121,6 +40109,18 @@
     },
     {
       "source": "shortsmaker_retention_analyze",
+      "target": "shortsmaker_retention_normalize_reply",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "shortsmaker/retention.py",
+      "source_location": "L124",
+      "weight": 1.0
+    },
+    {
+      "source": "shortsmaker_retention_analyze",
       "target": "shortsmaker_retention_report_text",
       "relation": "calls",
       "_origin": "ast",
@@ -40128,7 +40128,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "shortsmaker/retention.py",
-      "source_location": "L125",
+      "source_location": "L129",
       "weight": 1.0
     },
     {
@@ -40152,7 +40152,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "shortsmaker/retention.py",
-      "source_location": "L144",
+      "source_location": "L148",
       "weight": 1.0
     },
     {
@@ -40164,7 +40164,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "shortsmaker/retention.py",
-      "source_location": "L150",
+      "source_location": "L154",
       "weight": 1.0
     },
     {
@@ -40176,7 +40176,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "shortsmaker/retention.py",
-      "source_location": "L151",
+      "source_location": "L155",
       "weight": 1.0
     },
     {
@@ -40188,7 +40188,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "shortsmaker/retention.py",
-      "source_location": "L152",
+      "source_location": "L156",
       "weight": 1.0
     },
     {
@@ -40200,7 +40200,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "shortsmaker/retention.py",
-      "source_location": "L154",
+      "source_location": "L158",
       "weight": 1.0
     },
     {
@@ -40212,7 +40212,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "shortsmaker/retention.py",
-      "source_location": "L155",
+      "source_location": "L159",
       "weight": 1.0
     },
     {
@@ -80197,7 +80197,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "shortsmaker/retention.py",
-      "source_location": "L131",
+      "source_location": "L135",
       "weight": 1.0
     },
     {
@@ -91245,14 +91245,14 @@
       "weight": 1.0
     },
     {
-      "source": "shortsmaker_retention_rationale_132",
+      "source": "shortsmaker_retention_rationale_136",
       "target": "shortsmaker_retention_command",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "shortsmaker/retention.py",
-      "source_location": "L132",
+      "source_location": "L136",
       "weight": 1.0
     },
     {
@@ -94658,5 +94658,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "4fc8ceb6e28d93e1cee591bea72fcaac11720cf5"
+  "built_at_commit": "d18e43a60c67eed35b5b911a3d40ef1ad6f59570"
 }

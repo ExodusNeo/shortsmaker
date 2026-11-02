@@ -2,7 +2,7 @@
 source_file: "shortsmaker/remotion_render.py"
 type: "code"
 community: "render_remotion"
-location: "L149"
+location: "L165"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,7 +12,7 @@ tags:
 # render_remotion()
 
 ## Connections
-- [[Path_31]] - `references` [EXTRACTED]
+- [[Path_8]] - `references` [EXTRACTED]
 - [[Render the silent video (with captions) through the Remotion project; returns…]] - `rationale_for` [EXTRACTED]
 - [[caption_lines()]] - `calls` [EXTRACTED]
 - [[code_custom_scenes()]] - `calls` [EXTRACTED]

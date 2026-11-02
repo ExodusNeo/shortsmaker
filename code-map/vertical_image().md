@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/photo_prep.py"
 type: "code"
-community: "io"
+community: "clean_photo"
 location: "L86"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/io
+  - community/clean_photo
 ---
 
 # vertical_image()
@@ -18,4 +18,4 @@ tags:
 - [[photo_prep.py]] - `contains` [EXTRACTED]
 - [[to_vertical()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/io
+#graphify/code #graphify/EXTRACTED #community/clean_photo

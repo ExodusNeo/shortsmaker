@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[Halftone()]] - `calls` [EXTRACTED]
 - [[Halftone.tsx]] - `contains` [EXTRACTED]
-- [[luminance()]] - `calls` [EXTRACTED]
+- [[luminance()_1]] - `calls` [EXTRACTED]
 - [[noise()_1]] - `calls` [EXTRACTED]
 - [[rgb()]] - `calls` [EXTRACTED]
 - [[screen()]] - `calls` [EXTRACTED]

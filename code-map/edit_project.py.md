@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/edit_project.py"
 type: "code"
-community: "scene_repair.py"
+community: "re"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/scene_repairpy
+  - community/re
 ---
 
 # edit_project.py
@@ -29,4 +29,4 @@ tags:
 - [[test_edit_project.py]] - `imports_from` [EXTRACTED]
 - [[xml_sax_saxutils]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/scene_repairpy
+#graphify/code #graphify/EXTRACTED #community/re

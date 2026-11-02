@@ -1,17 +1,17 @@
 ---
-source_file: "shortsmaker/extra_sources.py"
+source_file: "blender/build_scene.py"
 type: "code"
-community: "extra_sources.py"
-location: "L148"
+community: "Shots"
+location: "L44"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/extra_sourcespy
+  - community/Shots
 ---
 
 # .__init__()
 
 ## Connections
-- [[BrandImages]] - `method` [EXTRACTED]
+- [[Shots]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/extra_sourcespy
+#graphify/code #graphify/EXTRACTED #community/Shots

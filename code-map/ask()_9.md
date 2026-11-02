@@ -1,17 +1,17 @@
 ---
-source_file: "tests/test_story.py"
+source_file: "tests/test_style.py"
 type: "code"
-community: "cold_read"
-location: "L88"
+community: "owner"
+location: "L202"
 tags:
   - graphify/code
-  - graphify/INFERRED
-  - community/cold_read
+  - graphify/EXTRACTED
+  - community/owner
 ---
 
 # ask()
 
 ## Connections
-- [[test_cold_read_uses_other_ai_in_solo_and_collaborative_modes()]] - `indirect_call` [INFERRED]
+- [[test_fact_check_sees_new_graphics()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/cold_read
+#graphify/code #graphify/EXTRACTED #community/owner

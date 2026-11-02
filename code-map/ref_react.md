@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "style/index.ts"
+community: "Custom3.tsx"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/style/indexts
+  - community/Custom3tsx
 ---
 
 # ref_react
@@ -19,6 +19,7 @@ tags:
 - [[Engraving.tsx]] - `imports_from` [EXTRACTED]
 - [[ExampleChain.tsx]] - `imports_from` [EXTRACTED]
 - [[ExampleEvidence.tsx]] - `imports_from` [EXTRACTED]
+- [[ExampleOpenerAction.tsx]] - `imports_from` [EXTRACTED]
 - [[Halftone.tsx]] - `imports_from` [EXTRACTED]
 - [[InventedLook.tsx]] - `imports_from` [EXTRACTED]
 - [[KineticTitle.tsx]] - `imports_from` [EXTRACTED]
@@ -36,4 +37,4 @@ tags:
 - [[styletypes.ts]] - `imports_from` [EXTRACTED]
 - [[toolkit.tsx]] - `imports_from` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/style/indexts
+#graphify/concept #graphify/EXTRACTED #community/Custom3tsx

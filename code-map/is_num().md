@@ -17,6 +17,7 @@ tags:
 - [[coords()]] - `calls` [EXTRACTED]
 - [[first_second_check()]] - `calls` [EXTRACTED]
 - [[number_figures()]] - `calls` [EXTRACTED]
+- [[opener_preflight()]] - `calls` [EXTRACTED]
 - [[plan_rules.py]] - `contains` [EXTRACTED]
 - [[review()]] - `calls` [EXTRACTED]
 - [[review_fixes()]] - `calls` [EXTRACTED]

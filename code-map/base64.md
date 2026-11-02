@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "io"
+community: "write_json"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/io
+  - community/write_json
 ---
 
 # base64
@@ -15,4 +15,4 @@ tags:
 - [[pack()]] - `calls` [EXTRACTED]
 - [[unpack()]] - `calls` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/io
+#graphify/concept #graphify/EXTRACTED #community/write_json

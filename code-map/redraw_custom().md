@@ -12,7 +12,7 @@ tags:
 # redraw_custom()
 
 ## Connections
-- [[Path_31]] - `references` [EXTRACTED]
+- [[Path_8]] - `references` [EXTRACTED]
 - [[The review saw custom scene i look wrong its coder gets the complaint and its…]] - `rationale_for` [EXTRACTED]
 - [[apply_review_fixes()]] - `calls` [EXTRACTED]
 - [[ask_ai()]] - `calls` [EXTRACTED]
@@ -20,6 +20,7 @@ tags:
 - [[custom_rules()]] - `calls` [EXTRACTED]
 - [[fix_opener_graphic()]] - `calls` [EXTRACTED]
 - [[lint_custom_code()]] - `calls` [EXTRACTED]
+- [[opening_brief()]] - `calls` [EXTRACTED]
 - [[remotion_render.py]] - `contains` [EXTRACTED]
 - [[tsc_check()]] - `calls` [EXTRACTED]
 

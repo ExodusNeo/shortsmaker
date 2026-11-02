@@ -1,17 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: "scene_repair.py"
+community: "ffmpeg"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/scene_repairpy
+  - community/ffmpeg
 ---
 
 # Path
 
 ## Connections
-- [[apply()]] - `references` [EXTRACTED]
-- [[preview()]] - `references` [EXTRACTED]
+- [[duration()]] - `references` [EXTRACTED]
+- [[ffmpeg()]] - `references` [EXTRACTED]
+- [[write_json()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/scene_repairpy
+#graphify/code #graphify/EXTRACTED #community/ffmpeg

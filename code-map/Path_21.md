@@ -1,19 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "make_opener"
+community: "ffmpeg"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/make_opener
+  - community/ffmpeg
 ---
 
 # Path
 
 ## Connections
-- [[make_opener()]] - `references` [EXTRACTED]
-- [[node_run()]] - `references` [EXTRACTED]
-- [[review()]] - `references` [EXTRACTED]
-- [[write()_1]] - `references` [EXTRACTED]
+- [[film_piece()]] - `references` [EXTRACTED]
+- [[shot_span()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/make_opener
+#graphify/code #graphify/EXTRACTED #community/ffmpeg

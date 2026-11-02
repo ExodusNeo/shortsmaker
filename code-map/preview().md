@@ -1,19 +1,19 @@
 ---
 source_file: "shortsmaker/scene_repair.py"
 type: "code"
-community: "scene_repair.py"
+community: "ffmpeg"
 location: "L14"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/scene_repairpy
+  - community/ffmpeg
 ---
 
 # preview()
 
 ## Connections
 - [[Fast path for a mark card on a still, with hard cuts on both sides. Preserve…]] - `rationale_for` [EXTRACTED]
-- [[Path_22]] - `references` [EXTRACTED]
+- [[Path_23]] - `references` [EXTRACTED]
 - [[copy]] - `calls` [EXTRACTED]
 - [[ffmpeg()]] - `calls` [EXTRACTED]
 - [[fix_short()]] - `calls` [EXTRACTED]
@@ -25,4 +25,4 @@ tags:
 - [[video_encoder()]] - `calls` [EXTRACTED]
 - [[write_json()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/scene_repairpy
+#graphify/code #graphify/EXTRACTED #community/ffmpeg

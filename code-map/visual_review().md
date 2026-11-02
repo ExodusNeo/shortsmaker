@@ -2,7 +2,7 @@
 source_file: "shortsmaker/review.py"
 type: "code"
 community: "visual_review"
-location: "L120"
+location: "L125"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,7 +12,7 @@ tags:
 # visual_review()
 
 ## Connections
-- [[Path_3]] - `references` [EXTRACTED]
+- [[Path_31]] - `references` [EXTRACTED]
 - [[The AI watches the finished Short as sheets of one frame per second and reports…]] - `rationale_for` [EXTRACTED]
 - [[ask_ai()]] - `calls` [EXTRACTED]
 - [[clock()_1]] - `calls` [EXTRACTED]

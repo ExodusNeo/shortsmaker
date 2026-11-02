@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/checkpoints.py"
 type: "rationale"
-community: "io"
+community: "test_full_scenes.py"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/io
+  - community/test_full_scenespy
 ---
 
 # Atomic progress records for unfinished Shorts; no executable serialized state.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[checkpoints.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/io
+#graphify/rationale #graphify/EXTRACTED #community/test_full_scenespy

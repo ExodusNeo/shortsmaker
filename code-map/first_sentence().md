@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/plan_rules.py"
 type: "code"
-community: "story_problems"
+community: "test_story.py"
 location: "L448"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/story_problems
+  - community/test_storypy
 ---
 
 # first_sentence()
@@ -22,4 +22,4 @@ tags:
 - [[story_problems()]] - `calls` [EXTRACTED]
 - [[test_first_sentence_reads_across_the_cut()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/story_problems
+#graphify/code #graphify/EXTRACTED #community/test_storypy

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/review.py"
 type: "code"
-community: "scene_repair.py"
-location: "L58"
+community: "visual_review"
+location: "L63"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/scene_repairpy
+  - community/visual_review
 ---
 
 # review_status()
@@ -17,4 +17,4 @@ tags:
 - [[review.py]] - `contains` [EXTRACTED]
 - [[visual_review()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/scene_repairpy
+#graphify/code #graphify/EXTRACTED #community/visual_review

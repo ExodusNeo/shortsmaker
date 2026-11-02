@@ -1,12 +1,12 @@
 ---
 source_file: "tests/render_style.py"
 type: "code"
-community: "json"
+community: "channel_profiles.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/json
+  - community/channel_profilespy
 ---
 
 # render_style.py
@@ -17,7 +17,7 @@ tags:
 - [[build()]] - `contains` [EXTRACTED]
 - [[config.py]] - `imports_from` [EXTRACTED]
 - [[json]] - `imports` [EXTRACTED]
-- [[main()]] - `contains` [EXTRACTED]
+- [[main()_1]] - `contains` [EXTRACTED]
 - [[pathlib]] - `imports_from` [EXTRACTED]
 - [[shutil]] - `imports` [EXTRACTED]
 - [[style_lab.py]] - `imports_from` [EXTRACTED]
@@ -25,4 +25,4 @@ tags:
 - [[sys]] - `imports` [EXTRACTED]
 - [[time]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/json
+#graphify/code #graphify/EXTRACTED #community/channel_profilespy

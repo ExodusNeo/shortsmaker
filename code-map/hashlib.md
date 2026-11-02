@@ -13,6 +13,7 @@ tags:
 ## Connections
 - [[audio_library.py]] - `imports` [EXTRACTED]
 - [[blender_render.py]] - `imports` [EXTRACTED]
+- [[code_custom_scenes()]] - `calls` [EXTRACTED]
 - [[code_version()]] - `calls` [EXTRACTED]
 - [[drawn_opener.py]] - `imports` [EXTRACTED]
 - [[extra_sources.py]] - `imports` [EXTRACTED]
@@ -25,6 +26,8 @@ tags:
 - [[load()_1]] - `calls` [EXTRACTED]
 - [[media_library.py]] - `imports` [EXTRACTED]
 - [[moss_images()]] - `calls` [EXTRACTED]
+- [[motion.py]] - `imports` [EXTRACTED]
+- [[opener_preflight()]] - `calls` [EXTRACTED]
 - [[picture_pool.py]] - `imports` [EXTRACTED]
 - [[pixabay_films()]] - `calls` [EXTRACTED]
 - [[pool_folder()]] - `calls` [EXTRACTED]

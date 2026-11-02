@@ -12,7 +12,7 @@ tags:
 # local_voice()
 
 ## Connections
-- [[Path_5]] - `references` [EXTRACTED]
+- [[Path_2]] - `references` [EXTRACTED]
 - [[Voice every scene on the GPU CosyVoice (Mark Nelson, documentary) for the…]] - `rationale_for` [EXTRACTED]
 - [[cosy_instruct()]] - `calls` [EXTRACTED]
 - [[gpu.py]] - `contains` [EXTRACTED]

@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[Make one Short. With `state` (fix.bat or an automatic fix round), reuse its…]] - `rationale_for` [EXTRACTED]
-- [[Path_12]] - `references` [EXTRACTED]
+- [[Path_32]] - `references` [EXTRACTED]
 - [[captions()_1]] - `calls` [EXTRACTED]
 - [[choose_images()]] - `calls` [EXTRACTED]
 - [[clean_photo()]] - `calls` [EXTRACTED]
@@ -36,7 +36,7 @@ tags:
 - [[local_clips()]] - `calls` [EXTRACTED]
 - [[local_job()]] - `calls` [EXTRACTED]
 - [[local_voice()]] - `calls` [EXTRACTED]
-- [[main()_4]] - `calls` [EXTRACTED]
+- [[main()_7]] - `calls` [EXTRACTED]
 - [[make_sfx()]] - `calls` [EXTRACTED]
 - [[mark_details()]] - `calls` [EXTRACTED]
 - [[moss_images()]] - `calls` [EXTRACTED]

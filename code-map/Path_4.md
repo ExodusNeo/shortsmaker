@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "apply_review_fixes"
+community: "make"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/apply_review_fixes
+  - community/make
 ---
 
 # Path
 
 ## Connections
-- [[_review_state()]] - `references` [EXTRACTED]
+- [[short_folder()]] - `references` [EXTRACTED]
+- [[videos()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/apply_review_fixes
+#graphify/code #graphify/EXTRACTED #community/make

@@ -24,8 +24,8 @@ SORT file.name ASC
 - 1 edge to [[_COMMUNITY_ffmpeg]]
 - 1 edge to [[_COMMUNITY_re]]
 - 1 edge to [[_COMMUNITY_qwen_voice.py]]
-- 1 edge to [[_COMMUNITY_json]]
 - 1 edge to [[_COMMUNITY_test_full_scenes.py]]
+- 1 edge to [[_COMMUNITY_test_story.py]]
 
 ## Top bridge nodes
 - [[spoken_count()]] - degree 7, connects to 5 communities

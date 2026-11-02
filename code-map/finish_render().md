@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[Finish reportsreviews from a committed video; resume reaches here without…]] - `rationale_for` [EXTRACTED]
-- [[Path_12]] - `references` [EXTRACTED]
+- [[Path_32]] - `references` [EXTRACTED]
 - [[apply_review_fixes()]] - `calls` [EXTRACTED]
 - [[drawn_answer_problem()]] - `calls` [EXTRACTED]
 - [[drawn_thumbnail()]] - `calls` [EXTRACTED]

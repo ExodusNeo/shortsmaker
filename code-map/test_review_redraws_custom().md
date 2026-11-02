@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[_review_state()]] - `calls` [EXTRACTED]
 - [[apply_review_fixes()]] - `calls` [EXTRACTED]
-- [[ask()_2]] - `contains` [EXTRACTED]
+- [[ask()_5]] - `contains` [EXTRACTED]
 - [[ask()_3]] - `indirect_call` [INFERRED]
 - [[test_full_scenes.py]] - `contains` [EXTRACTED]
 

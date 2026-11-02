@@ -1,17 +1,17 @@
 ---
-source_file: "tests/test_full_scenes.py"
+source_file: "tests/test_rules.py"
 type: "code"
-community: "apply_review_fixes"
-location: "L610"
+community: "test_rules.py"
+location: "L257"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/apply_review_fixes
+  - community/test_rulespy
 ---
 
 # ask()
 
 ## Connections
-- [[test_review_redraws_custom()]] - `contains` [EXTRACTED]
+- [[run_draft()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/apply_review_fixes
+#graphify/code #graphify/EXTRACTED #community/test_rulespy

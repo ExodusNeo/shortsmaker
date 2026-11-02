@@ -9,7 +9,7 @@ members: 8
 
 ## Members
 - [[dot-entry()]] - code - tests/test_quality.py
-- [[dot-setUp()_4]] - code - tests/test_quality.py
+- [[dot-setUp()_5]] - code - tests/test_quality.py
 - [[dot-test_logbook_is_never_modified_and_summary_is_returned()]] - code - tests/test_quality.py
 - [[dot-test_other_channels_low_views_and_absent_active_entries_are_excluded()]] - code - tests/test_quality.py
 - [[dot-test_posting_age_does_not_claim_metrics_age()]] - code - tests/test_quality.py
@@ -25,7 +25,7 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 1 edge to [[_COMMUNITY_subprocess]]
+- 1 edge to [[_COMMUNITY_test_full_scenes.py]]
 
 ## Top bridge nodes
 - [[FeedbackTests]] - degree 8, connects to 1 community

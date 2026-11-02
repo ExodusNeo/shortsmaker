@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/seo.py"
 type: "code"
-community: "apply_metadata"
+community: "fake_ai"
 location: "L54"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/apply_metadata
+  - community/fake_ai
 ---
 
 # apply_metadata()
@@ -18,4 +18,4 @@ tags:
 - [[seo.py]] - `contains` [EXTRACTED]
 - [[seo_pass()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/apply_metadata
+#graphify/code #graphify/EXTRACTED #community/fake_ai

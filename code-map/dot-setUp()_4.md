@@ -1,17 +1,17 @@
 ---
-source_file: "tests/test_quality.py"
+source_file: "tests/test_opener_preflight.py"
 type: "code"
-community: "FeedbackTests"
-location: "L159"
+community: "PreflightTests"
+location: "L21"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/FeedbackTests
+  - community/PreflightTests
 ---
 
 # .setUp()
 
 ## Connections
-- [[FeedbackTests]] - `method` [EXTRACTED]
+- [[PreflightTests]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/FeedbackTests
+#graphify/code #graphify/EXTRACTED #community/PreflightTests

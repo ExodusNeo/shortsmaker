@@ -1,19 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "write_json"
+community: "render"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/write_json
+  - community/render
 ---
 
 # Path
 
 ## Connections
-- [[finish_short()]] - `references` [EXTRACTED]
-- [[record_failure()]] - `references` [EXTRACTED]
-- [[resume_runs()]] - `references` [EXTRACTED]
-- [[use_picture_from()]] - `references` [EXTRACTED]
+- [[srt()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/write_json
+#graphify/code #graphify/EXTRACTED #community/render

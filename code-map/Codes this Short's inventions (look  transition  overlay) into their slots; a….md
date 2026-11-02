@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/style_lab.py"
 type: "rationale"
-community: "render_remotion"
+community: "test_style.py"
 location: "L223"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/render_remotion
+  - community/test_stylepy
 ---
 
 # Codes this Short's inventions (look / transition / overlay) into their slots; a…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[invent_styles()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/render_remotion
+#graphify/rationale #graphify/EXTRACTED #community/test_stylepy
