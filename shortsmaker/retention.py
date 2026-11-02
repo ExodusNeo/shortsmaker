@@ -101,7 +101,11 @@ def analyze(folder: Path, screenshot: Path) -> Path:
     title_line = plan.read_text(encoding="utf-8-sig").splitlines()[0]
     title = title_line.removeprefix("EDIT PLAN: ")
     # Isolate the screenshot: review providers must not attach unrelated pictures from this Short.
-    with tempfile.TemporaryDirectory(prefix="retention-review-", dir=folder) as temporary:
+    # After an agy turn Windows can keep the emptied folder locked (WinError 32); that must not discard the reply,
+    # so a leftover folder is skipped now and removed on a later run.
+    for stale in folder.glob("retention-review-*"):
+        shutil.rmtree(stale, ignore_errors=True)
+    with tempfile.TemporaryDirectory(prefix="retention-review-", dir=folder, ignore_cleanup_errors=True) as temporary:
         review_dir = Path(temporary)
         picture = review_dir / ("graph" + screenshot.suffix.lower())
         shutil.copy2(screenshot, picture)
