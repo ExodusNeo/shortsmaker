@@ -2,7 +2,7 @@
 source_file: "shortsmaker/retention.py"
 type: "code"
 community: "main"
-location: "L131"
+location: "L135"
 tags:
   - graphify/code
   - graphify/EXTRACTED

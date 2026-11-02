@@ -29,8 +29,8 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 9 edges to [[_COMMUNITY_test_full_scenes.py]]
-- 4 edges to [[_COMMUNITY_subprocess]]
 - 4 edges to [[_COMMUNITY_json]]
+- 4 edges to [[_COMMUNITY_subprocess]]
 - 3 edges to [[_COMMUNITY_re]]
 - 2 edges to [[_COMMUNITY_main_1]]
 - 2 edges to [[_COMMUNITY_math]]

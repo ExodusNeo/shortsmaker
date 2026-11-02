@@ -2,7 +2,7 @@
 source_file: "shortsmaker/retention.py"
 type: "rationale"
 community: "main"
-location: "L132"
+location: "L136"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
