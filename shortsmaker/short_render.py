@@ -140,6 +140,22 @@ def use_opener(short: dict, bounds: list[float], all_words: list, work: Path, cl
     return None if first.get("full") else f"opener: {short['opener_graphic']}"
 
 
+def drop_unreadable_kinetic(sc: dict, cue: dict, scene_end: float, i: int) -> bool:
+    """A kinetic title repeats the spoken words the captions already show; with too little time to read it is only
+    clutter, so it goes (Clever Hans "MATH ANSWERS" had 0.9 s and "GOT THEM RIGHT" 0.8 s, 2026-11-03). Other
+    callouts carry their own information and stay, with the pacing check's CHECK line. True when dropped."""
+    g = sc.get("graphic")
+    if not g or g.get("style") != "kinetic" or cue.get("graphic") is None:
+        return False
+    held, needed = review.callout_hold(str(g.get("text") or ""), cue["graphic"], scene_end)
+    if held >= needed:
+        return False
+    print(f"    scene {i + 1}: kinetic title \"{g.get('text')}\" would hold {max(0, held):.1f}s of {needed:.1f}s, dropped")
+    sc["graphic"] = None
+    cue.pop("graphic")
+    return True
+
+
 def plan_gap_paintings(short: dict, choices: list[dict]) -> list[int]:
     """Scenes after the first with no picture, no graphic and no planned painting get a painting prompt, so they
     are painted instead of repeating an earlier picture (Clever Hans scenes 8 and 10, 2026-11-03). Scene 1 is
@@ -335,6 +351,7 @@ def render(short: dict, ch: dict, folder: Path, state: dict | None = None, fix_r
         bounds.append(bounds[-1] + media_tools.duration(sound))
         images.append(Image.open(img).convert("RGB"))
         cues.append(editplan.scene_cues(sc, words, bounds[-2], bounds[-1], i, choices[i]["person"]))
+        drop_unreadable_kinetic(sc, cues[-1], bounds[-1], i)
     total = bounds[-1] + (0.04 if loop_short else 0.6)  # loop shorts cut immediately after the bridge word; others keep 0.6s tail
     bounds[-1] = total
     cues[-1]["cta"] = max(bounds[-2] + 0.3, total - 3.0)  # silent subscribe button: keeps the rewatch loop

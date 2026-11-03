@@ -20,6 +20,12 @@ from shortsmaker.config import FONT, GRAPHIC_STYLES
 PAUSE_MAX = 0.8  # seconds of narration silence worth a look: sentence pauses ran 0.4-0.56 s; the Nobel bacteria Short had 1.06 s at 2.6 s
 
 
+def callout_hold(text: str, appear: float, scene_end: float) -> tuple[float, float]:
+    """(seconds a callout can be read after its entrance, seconds it needs): the repo's motion-design reading-hold
+    guidance (1 s, +0.25 s per word past three), allowing 0.35 s for an ordinary entrance and 0.25 s before the cut."""
+    return scene_end - 0.25 - appear - 0.35, 1.0 + max(0, len(text.split()) - 3) * 0.25
+
+
 def pacing_check(short: dict, bounds: list[float], cues: list[dict]) -> list[str]:
     """Measured reading holds and final-script detours. Editorial defaults, not YouTube ranking rules."""
     scenes = short.get("scenes") or []
@@ -43,9 +49,7 @@ def pacing_check(short: dict, bounds: list[float], cues: list[dict]) -> list[str
         if not graphic or cue.get("graphic") is None:
             continue
         text = str(graphic.get("text") or "")
-        # Match the repo's motion-design reading-hold guidance. Allow 0.35s for an ordinary entrance.
-        needed = 1.0 + max(0, len(text.split()) - 3) * 0.25
-        held = bounds[i + 1] - 0.25 - cue["graphic"] - 0.35
+        held, needed = callout_hold(text, cue["graphic"], bounds[i + 1])
         if text and held < needed:
             issues.append(f'scene {i + 1} callout "{text}" has about {max(0, held):.1f}s to read after its '
                           f'entrance; allow about {needed:.1f}s or simplify it')

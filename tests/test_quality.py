@@ -161,6 +161,19 @@ class StoryPacingTests(unittest.TestCase):
         short = {"scenes": [{"graphic": {"text": "ONE FACT"}}]}
         self.assertEqual(review.pacing_check(short, [0, 3], [{"graphic": .2}]), [])
 
+    def test_unreadable_kinetic_title_is_dropped_other_callouts_stay(self):
+        from shortsmaker import short_render
+        kinetic = {"graphic": {"style": "kinetic", "text": "MATH ANSWERS"}}
+        cue = {"graphic": 2.4}  # Clever Hans scene 2: 2.2-3.9 s, about 0.9 s to read
+        self.assertTrue(short_render.drop_unreadable_kinetic(kinetic, cue, 3.9, 1))
+        self.assertIsNone(kinetic["graphic"])
+        self.assertNotIn("graphic", cue)
+        stamp = {"graphic": {"style": "stamp", "text": "WRONG"}}
+        self.assertFalse(short_render.drop_unreadable_kinetic(stamp, {"graphic": 2.4}, 3.9, 1))
+        roomy = {"graphic": {"style": "kinetic", "text": "MATH ANSWERS"}}
+        self.assertFalse(short_render.drop_unreadable_kinetic(roomy, {"graphic": 2.4}, 4.2, 1))
+        self.assertIsNotNone(roomy["graphic"])
+
 
 class FeedbackTests(unittest.TestCase):
     def setUp(self):

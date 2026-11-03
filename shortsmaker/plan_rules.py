@@ -411,7 +411,9 @@ def mark_details(short: dict, choices: list[dict], work: Path) -> None:
 these pictures; each has a 10x10 grid, columns A-J left to right, rows 1-10 top to bottom.
 {lines}
 For at most 2 scenes, choose ONE specific detail that the narration is about and a viewer could
-miss (a face in a crowd, a sign, a crack, a small object), clearly visible in the picture. Give the
+miss (a face in a crowd, a sign, a crack, a small object), clearly visible in the picture and big enough
+to recognise on a phone: it fills at least 2x2 grid cells (the picture is shown as a small card, so a
+one-cell figure becomes an unreadable speck; Clever Hans circled such a figure as "A STRANGER"). Give the
 grid cell of its centre, shape "circle" (an object or face) or "arrow" (a spot in a wide view), and
 a label of 1-3 words. If no picture has such a detail, reply with an empty list.
 Reply with ONLY JSON: {{"marks": [{{"scene": 3, "cell": "D4", "shape": "circle", "label": "THE CRACK"}}]}}""",
