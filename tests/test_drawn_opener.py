@@ -123,6 +123,47 @@ def test_use_opener_plays_the_drawn_opener():
             drawn_opener.make_opener = saved
 
 
+def test_reveal_scene_is_drawn_with_its_own_rules():
+    """A reveal (one of the last two scenes) planned as a custom diagram is drawn: the coder gets PAYOFF_RULES and the
+    story so far (not the opener's hook rules), the art director judges the reveal, words are timed from the scene's
+    start, and the scene's diagram gives way to the clip. A re-render reuses the drawing; a fix-round repaint retires it."""
+    saved_ask, saved_rules, prompts = llm.ask_ai, dict(session.RULE_SETTINGS), []
+    llm.ask_ai = fake_ai([{"moment": "the questioner relaxes as the hoof stops", "code": EXAMPLE},
+                          {"score": 8, "problems": []}], prompts)
+    session.RULE_SETTINGS["opener"] = "animated"
+    try:
+        with tempfile.TemporaryDirectory() as d:
+            work = Path(d)
+            s = short()
+            s["scenes"].append({"narration": "so their own bodies told Hans when to stop.", "full": {"type": "custom"}})
+            bounds = [0.0, 3.5, 6.0, 9.0]
+            words = WORDS + [(6.1, 6.4, "so"), (8.2, 8.6, "stop.")]
+            clips, images, sources = {}, [None, None, Image.new("RGB", (8, 8))], ["a", "b", "custom diagram"]
+            assert short_render.drawn_payoff(s, bounds, words, work, clips, images, sources) == [2]
+            assert "This scene is the REVEAL" in prompts[0] and "OPEN INSIDE" not in prompts[0]
+            assert "so 0.10s" in prompts[0] and "stop. 2.20s" in prompts[0]  # timed from the scene's start
+            assert "The story the viewer has heard so far" in prompts[0] and "brass bed warmers" in prompts[0]
+            assert "hand-drawn reveal (scene 3" in prompts[1] and "reveals_answer is false here" in prompts[1]
+            assert clips[2] == work / "drawn_2" / "opener.mp4" and s["scenes"][2]["full"] is None
+            assert sources[2].startswith("drawn reveal") and images[2].size != (8, 8) and "drawn" not in s
+            clips = {}  # a fix round: the diagram is gone from the saved plan, the drawing is reused without the AI
+            assert short_render.drawn_payoff(s, bounds, words, work, clips, images, sources) == [2] and len(prompts) == 2
+            from shortsmaker import review
+            state = {"short": s, "choices": [{"bg": None, "person": None}] * 3, "by_gemini": []}
+            review.paint_new(work, state, 2)
+            assert "drawn_2" not in s and short_render.drawn_payoff(s, bounds, words, work, {}, images, sources) == []
+            mid = short()  # scene 2 of 5 isn't a reveal (no AI call); a channel without openers draws nothing
+            mid["scenes"][1:1] = [{"narration": "x", "full": {"type": "custom"}}, {"narration": "y"}, {"narration": "z"}]
+            assert short_render.drawn_payoff(mid, bounds + [10.0, 11.0], words, work, {}, images, sources) == []
+            assert len(prompts) == 2
+            session.RULE_SETTINGS["opener"] = None
+            assert short_render.drawn_payoff(short(), bounds, words, work, {}, images, sources) == []
+    finally:
+        llm.ask_ai = saved_ask
+        session.RULE_SETTINGS.clear()
+        session.RULE_SETTINGS.update(saved_rules)
+
+
 def look():
     """Renders drawn/out/sheet.png: every kit part, one page per second (look at it after changing kit.mjs)."""
     out = ROOT / "drawn" / "out"

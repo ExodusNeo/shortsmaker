@@ -498,6 +498,8 @@ def paint_new(work: Path, state: dict, i: int) -> None:
     on this PC) from its ai_image prompt, or one built from its shot note, in the same never-a-photo style."""
     sc = state["short"]["scenes"][i]
     sc["full"] = None  # a painting replaces whatever the scene showed, motion graphic included
+    if i and state["short"].pop(f"drawn_{i}", None):  # a drawn reveal too: never redrawn for this Short
+        state["short"][f"drawn_failed_{i}"] = "replaced by a painting in a fix round"
     if (sc.get("graphic") or {}).get("style") == "mark":  # it circled a detail of the old picture
         sc["graphic"] = None
     state["choices"][i] = {"bg": None, "person": state["choices"][i]["person"]}

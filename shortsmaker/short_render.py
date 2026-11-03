@@ -140,6 +140,38 @@ def use_opener(short: dict, bounds: list[float], all_words: list, work: Path, cl
     return None if first.get("full") else f"opener: {short['opener_graphic']}"
 
 
+def drawn_payoff(short: dict, bounds: list[float], all_words: list, work: Path, clips: dict, images: list,
+                 sources: list) -> list[int]:
+    """On `opener: animated` channels, a reveal scene (motion.is_payoff) planned as a custom diagram is drawn with the
+    opener's kit instead (Clever Hans's reveal was two small outlines, 2026-11-03). Same coder, art director (PASS)
+    and fixes as the opener; when it fails, the custom diagram stays. Returns the scenes that got a drawn clip."""
+    if session.RULE_SETTINGS.get("opener") != "animated":
+        return []
+    done = []
+    for i, sc in enumerate(short["scenes"]):
+        planned = (sc.get("full") or {}).get("type") == "custom" or short.get(f"drawn_{i}")  # a re-render reuses its drawing
+        if not (motion.is_payoff(short, i) and planned and i not in clips):
+            continue
+        words = [(s - bounds[i], e - bounds[i], w) for s, e, w in all_words if bounds[i] <= s < bounds[i + 1]]
+        try:  # a reveal drawing never stops a run
+            clip, why = drawn_opener.make_opener(short, words, bounds[i + 1] - bounds[i], work, i=i)
+        except Exception as e:
+            clip, why = None, f"{type(e).__name__}: {e}"
+            short[f"drawn_failed_{i}"] = why
+        if not clip:
+            print(f"    scene {i + 1}: the drawn reveal failed ({str(why)[:120]}); its motion graphic stays")
+            continue
+        media_tools.ffmpeg("-y", "-i", str(clip), "-frames:v", "1", f"drawn_{i}.jpg", cwd=work)
+        images[i] = Image.open(work / f"drawn_{i}.jpg").convert("RGB")
+        clips[i] = clip
+        sc.update(full=None, graphic=None, credit_tag=None)
+        plan = short[f"drawn_{i}"]
+        sources[i] = (f"drawn reveal (hand-drawn animation): {plan['moment']}"
+                      + (" (its art director gave no verdict: look at this scene yourself)" if plan.get("unreviewed") else ""))
+        done.append(i)
+    return done
+
+
 def drop_unreadable_kinetic(sc: dict, cue: dict, scene_end: float, i: int) -> bool:
     """A kinetic title repeats the spoken words the captions already show; with too little time to read it is only
     clutter, so it goes (Clever Hans "MATH ANSWERS" had 0.9 s and "GOT THEM RIGHT" 0.8 s, 2026-11-03). Other
@@ -371,6 +403,8 @@ def render(short: dict, ch: dict, folder: Path, state: dict | None = None, fix_r
         clips = gpu.local_clips(short, work, sources, bounds, {i: c["film"] for i, c in enumerate(choices)
                                                              if c.get("film") and not short["scenes"][i].get("full")})
     opener_check = None if drawn else use_opener(short, bounds, all_words, work, clips, images, sources)
+    if not drawn:
+        drawn_payoff(short, bounds, all_words, work, clips, images, sources)
     for i, sc in enumerate(short["scenes"]):  # keep text callouts off the subject's face (maps and marks are full cards)
         if sc["graphic"] and sc["graphic"]["style"] != "mark":
             film = choices[i]["film"]["path"] if clips.get(i) == work / f"film{i}.mp4" else None

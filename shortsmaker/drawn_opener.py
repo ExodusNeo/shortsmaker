@@ -3,7 +3,8 @@ animation of the strangest moment, coded by the AI against the kit in drawn/ (KI
 MIT, vendored in drawn/lib). The coder writes the scene, a preview sheet is rendered, the AI looks at it as an art
 director and the coder fixes what it found, up to FIXES times; then the clip is rendered. Anything that fails returns
 (None, why): the motion-graphic opener plays instead (short_render.use_opener). The owner approved the look on the
-Dexter test (test_renders/drawn_opener_dexter)."""
+Dexter test (test_renders/drawn_opener_dexter). Since 2026-11-03 the same machinery can draw the reveal (scene i > 0,
+PAYOFF_RULES) in place of a custom diagram (short_render.drawn_payoff): Clever Hans's reveal was two small outlines."""
 
 import hashlib
 import json
@@ -33,6 +34,11 @@ moves: a stranger scrolling past must understand what is strange from the first 
 Real facts only: the people, things, place and era of the story (period clothes and hats; nothing modern in an old
 story). No gore, no blood, no weapons hurting anyone; a death is shown by what is left behind, never the act.
 Faces stay simple (the kit's dot eyes). At most 3 people, unless a crowd IS the strange thing."""
+PAYOFF_RULES = """This scene is the REVEAL: show the answer the whole Short has been building to, exactly as its narration
+says it, happening in front of the viewer. One big clear subject doing the one change the reveal is about (the
+questioner's shoulders dropping as the hoof stops; the trap springing shut), on its spoken word, then held so it
+lands. The viewer has heard the story so far: no need to set it up again. Real facts only, the story's era; no gore.
+Faces stay simple (the kit's dot eyes). At most 3 people. The hook title band is empty in this scene."""
 
 
 def available() -> str | None:
@@ -106,9 +112,10 @@ def sheet_times(seconds: float) -> list[float]:
 
 
 def write(short: dict, words: list, seconds: float, old: dict | None = None, problems: list[str] | None = None,
-          sheet: Path | None = None) -> dict | None:
+          sheet: Path | None = None, i: int = 0) -> dict | None:
     """The coder's scene: {"moment": what it shows, "code": the module}; with `old` and `problems`, the fix of the
-    last draft (it may look at that draft's preview `sheet`). None when the reply is unusable."""
+    last draft (it may look at that draft's preview `sheet`). `i` > 0 draws that scene as the reveal. None when the
+    reply is unusable."""
     scenes = short["scenes"]
     timing = ", ".join(f"{w} {s:.2f}s" for s, _, w in words) or "not known"
     fix = ""
@@ -116,13 +123,24 @@ def write(short: dict, words: list, seconds: float, old: dict | None = None, pro
         fix = (f"\nYour last draft (below) had these problems:\n- " + "\n- ".join(problems or []) +
                (f"\nIts preview: open {sheet} (6 frames left to right, times on each)." if sheet else "") +
                f"\nRewrite it to fix every one of them. Last draft:\n{old['code']}\n")
-    data = llm.ask_ai(f"""You animate the opener of a YouTube Short: "{short['title']}" (story: {short.get('topic') or short['title']}).
+    if i == 0:
+        role = f"""You animate the opener of a YouTube Short: "{short['title']}" (story: {short.get('topic') or short['title']}).
 Scene 1 is the hook. Its voice plays over your animation: "{scenes[0]['narration']}"
 It lasts {seconds:.2f} s; each spoken word starts at: {timing}.
 The rest of the story, for context only (don't show it): {json.dumps([sc['narration'] for sc in scenes[1:]], ensure_ascii=False)}
 Main character: {short.get('character') or 'not named'}.
 {session.RULES.get("Opener") or DEFAULT_RULES}
-{opening_rules.opening_brief(short)}
+{opening_rules.opening_brief(short)}"""
+    else:
+        look = f" ({short['character_look']})" if short.get("character_look") else ""
+        role = f"""You animate scene {i + 1} of a YouTube Short: "{short['title']}" (story: {short.get('topic') or short['title']}).
+Its voice plays over your animation: "{scenes[i]['narration']}"
+It lasts {seconds:.2f} s; each spoken word starts at: {timing}.
+The story the viewer has heard so far: {json.dumps([sc['narration'] for sc in scenes[:i]], ensure_ascii=False)}
+After this scene: {json.dumps([sc['narration'] for sc in scenes[i + 1:]], ensure_ascii=False)}
+Main character: {short.get('character') or 'not named'}{look}.
+{PAYOFF_RULES}"""
+    data = llm.ask_ai(f"""{role}
 Write the scene with the kit below.
 {(DRAWN / "KIT.md").read_text(encoding="utf-8")}{fix}
 Reply with ONLY JSON: {{"moment": "one sentence: what the animation shows", "code": "export const camera = ...\\nexport default function scene(k, t) {{ ... }}"}}""",
@@ -133,15 +151,31 @@ Reply with ONLY JSON: {{"moment": "one sentence: what the animation shows", "cod
     return {"moment": str(data.get("moment") or "the strangest moment").strip()[:200], "code": code}
 
 
-def review(short: dict, plan: dict, sheet: Path, seconds: float) -> tuple[float | None, list[str]]:
+def review(short: dict, plan: dict, sheet: Path, seconds: float, i: int = 0) -> tuple[float | None, list[str]]:
     """The art director's score (1-10) of a draft's preview sheet and what to fix. None = no verdict (a failed call):
-    make_opener keeps the draft and the final check says it was never judged."""
+    make_opener keeps the draft and the final check says it was never judged. `i` > 0: the scene is the reveal."""
+    opener = i == 0
+    what = "hand-drawn opener" if opener else f"hand-drawn reveal (scene {i + 1}, near the end)"
+    if opener:
+        first = ("A stranger scrolling the Shorts feed sees the first frame for one second. Look for these problems:\n"
+                 "- frame 0 doesn't already show the subject and what is strange about it, or you can't tell what is happening;")
+        answer = "\n- an answer object or any visible label/sign gives away the ending before the narrator reveals it;"
+        verdict = f"""Score it 1-10: would that stranger understand the strange moment at a glance and stop scrolling? {PASS} = good
+enough to post: small flaws are fine. Below {PASS}, list the problems that stop it working, the worst first.
+Also return reveals_answer=true if any frame identifies the withheld answer; give the exact visible object/text
+in answer_why. An opening that reveals the answer cannot pass, even if the drawing and animation look excellent."""
+    else:
+        first = ("The viewer has heard the story up to here and waits for the answer. Look for these problems:\n"
+                 "- the reveal's change isn't big and unmistakable on a phone (a subtle shift, a tiny figure), or it "
+                 "happens off its spoken word, or you can't tell what is happening;")
+        answer = ""
+        verdict = f"""Score it 1-10: does the viewer SEE the answer happen, at a glance, on a phone? {PASS} = good enough to post:
+small flaws are fine. Below {PASS}, list the problems that stop it working, the worst first. reveals_answer is false here."""
     data = llm.ask_ai(f"""You are the art director of a YouTube Short: "{short['title']}". Open {sheet}: six frames of its
-hand-drawn opener across {seconds:.1f} s, left to right (the time is on each). The voice over it says:
-"{short['scenes'][0]['narration']}". The animator meant it to show: {plan['moment']}.
-{opening_rules.opening_brief(short)}
-A stranger scrolling the Shorts feed sees the first frame for one second. Look for these problems:
-- frame 0 doesn't already show the subject and what is strange about it, or you can't tell what is happening;
+{what} across {seconds:.1f} s, left to right (the time is on each). The voice over it says:
+"{short['scenes'][i]['narration']}". The animator meant it to show: {plan['moment']}.
+{opening_rules.opening_brief(short) if opener else ""}
+{first}
 - the main thing is too small to read on a phone, or crowded out by background;
 - something doesn't look like what it should be (name it), or looks wrong for the story's era or place; an
   animal or person assembled from plain boxes and blocks counts (a horse must read as a horse at a glance);
@@ -150,21 +184,17 @@ A stranger scrolling the Shorts feed sees the first frame for one second. Look f
   or something important is cut off by the frame edge;
 - a face or a word sits behind the title band (y 74-170, first 1.8 s) or the captions (y 1170-1300); bodies,
   limbs and props crossing those bands are fine;
-- text is misspelled, unreadable or not something the story says;
-- an answer object or any visible label/sign gives away the ending before the narrator reveals it;
+- text is misspelled, unreadable or not something the story says;{answer}
 - nothing moves, or the moving parts glitch or jump between frames;
 - gore, blood or a weapon hurting someone.
 The hand-drawn cartoon look itself (dot eyes, stick limbs, brush lines, watercolour) is intended: don't report it.
-Score it 1-10: would that stranger understand the strange moment at a glance and stop scrolling? {PASS} = good
-enough to post: small flaws are fine. Below {PASS}, list the problems that stop it working, the worst first.
-Also return reveals_answer=true if any frame identifies the withheld answer; give the exact visible object/text
-in answer_why. An opening that reveals the answer cannot pass, even if the drawing and animation look excellent.
+{verdict}
 Reply with ONLY JSON: {{"score": 7, "reveals_answer": false, "answer_why": "", "problems": ["...", "..."]}}""", fatal=False, read_dir=sheet.parent)
     score = data.get("score") if isinstance(data, dict) else None
     if not plan_rules.is_num(score) or not 1 <= score <= 10:
         return None, []
     found = [str(p).strip()[:240] for p in data.get("problems") or [] if str(p).strip()]
-    if data.get("reveals_answer") is True:
+    if opener and data.get("reveals_answer") is True:
         score = min(score, PASS - 1)
         found.insert(0, "Opening reveals the answer: " + str(data.get("answer_why") or "withhold the ending's answer object and labels")[:200])
     return float(score), found[:8] or ([] if score >= PASS else ["the art director gave a low score without saying why"])
@@ -175,38 +205,42 @@ def fingerprint(code: str, seconds: float) -> str:
     return hashlib.sha1(f"{code}|{seconds:.3f}|{kit}".encode()).hexdigest()
 
 
-def make_opener(short: dict, words: list, seconds: float, work: Path) -> tuple[Path | None, str | None]:
+def make_opener(short: dict, words: list, seconds: float, work: Path, i: int = 0) -> tuple[Path | None, str | None]:
     """Scene 1's drawn opener clip (work/drawn/opener.mp4, scene 1 + the crossfade long), or (None, why). The plan
     is kept in short["drawn"] (state.json), so fix rounds and fix.bat reuse the clip; a failure is kept in
-    short["drawn_failed"] and never retried for this Short."""
-    if short.get("drawn_failed"):
-        return None, short["drawn_failed"]
+    short["drawn_failed"] and never retried for this Short. `i` > 0 draws that scene as the reveal instead
+    (work/drawn_{i}/, short["drawn_{i}"], short["drawn_failed_{i}"]); `words` are timed from that scene's start."""
+    key, failed = ("drawn", "drawn_failed") if i == 0 else (f"drawn_{i}", f"drawn_failed_{i}")
+    if short.get(failed):
+        return None, short[failed]
     why = available()
     if why:
         return None, why
-    folder = work / "drawn"
+    folder = work / ("drawn" if i == 0 else f"drawn_{i}")
     folder.mkdir(parents=True, exist_ok=True)
     seconds = round((seconds + XFADE) * FPS) / FPS
     scene, clip, done = folder / "scene.mjs", folder / "opener.mp4", folder / "done.txt"
-    plan = short.get("drawn")
+    plan = short.get(key)
     base = {"scene": str(scene), "seconds": seconds, "words": words, "out": str(folder), "name": "opener"}
 
     def fail(why: str) -> tuple[None, str]:
-        short["drawn_failed"] = why
+        short[failed] = why
         return None, why
 
-    repair = short.pop("drawn_repair", None)
+    name = "opener" if i == 0 else "reveal"
+    repair = short.pop("drawn_repair", None) if i == 0 else None
     if not plan or repair:
-        print("  drawing the opener: the strangest moment as a hand-drawn animation...")
+        print("  drawing the opener: the strangest moment as a hand-drawn animation..." if i == 0 else
+              f"  drawing scene {i + 1}, the reveal, as a hand-drawn animation...")
         problems, sheet, score = ([repair] if repair else []), None, 0.0
         for attempt in range(FIXES + 1):
-            draft = write(short, words, seconds, plan, problems, sheet)
+            draft = write(short, words, seconds, plan, problems, sheet, i=i)
             if not draft:
                 if plan is None:
                     return fail("the AI wrote no usable scene")
                 break  # keep the last draft's problems
             plan, sheet, score = draft, None, 0.0
-            problems = lint(plan["code"]) + missing_parts(plan, short["scenes"][0]["narration"])
+            problems = lint(plan["code"]) + missing_parts(plan, short["scenes"][i]["narration"])
             if not problems:
                 scene.write_text(plan["code"], encoding="utf-8")
                 err = node_run({**base, "mode": "sheet", "times": sheet_times(seconds), "scale": 0.3}, folder)
@@ -215,22 +249,22 @@ def make_opener(short: dict, words: list, seconds: float, work: Path) -> tuple[P
                 else:
                     sheet = folder / f"sheet{attempt + 1}.png"
                     (folder / "sheet.png").replace(sheet)
-                    score, problems = review(short, plan, sheet, seconds)
+                    score, problems = review(short, plan, sheet, seconds, i=i)
                     if score is None:  # no verdict: kept as it is, flagged (audit 2026-10-31: it used to pass silently)
                         score, plan["unreviewed"] = PASS, True
             if score >= PASS:
                 break
-            print(f"    opener draft {attempt + 1} ({score:g}/10): " + "; ".join(problems)[:300])
+            print(f"    {name} draft {attempt + 1} ({score:g}/10): " + "; ".join(problems)[:300])
         if score < PASS:
-            return fail(f"the drawn opener's last draft scored {score:g}/10 after {FIXES} fixes: "
+            return fail(f"the drawn {name}'s last draft scored {score:g}/10 after {FIXES} fixes: "
                         f"{'; '.join(problems)[:300]}")
-        short["drawn"] = plan
+        short[key] = plan
     scene.write_text(plan["code"], encoding="utf-8")
     mark = fingerprint(plan["code"], seconds)
     if clip.exists() and done.exists() and done.read_text(encoding="utf-8") == mark:
         return clip, None
     err = node_run({**base, "mode": "render"}, folder)
     if err or not clip.exists():
-        return fail(f"the drawn opener didn't render: {err or 'no clip came out'}")
+        return fail(f"the drawn {name} didn't render: {err or 'no clip came out'}")
     done.write_text(mark, encoding="utf-8")
     return clip, None
