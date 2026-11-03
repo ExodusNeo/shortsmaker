@@ -1838,3 +1838,25 @@ Verification: 72 tests passed (retention 18, quality 25, rules/golden prompts 29
 git diff --check. Covered Studio number formats, invalid inputs, zero vs unknown, date arithmetic, editing/
 clearing/retry persistence, details-only with no AI, skipping details in the normal menu, latest-context
 planning, corrupt optional context and preservation on failed AI replies. No live AI request was needed.
+
+### 2026-11-03 - Clever Hans review fixes
+The owner asked for a review of the Clever Hans Short and then for every fix to be built ("go through it slowly but
+do it all"). Evidence beyond our own Short: vidIQ transcripts of two English Clever Hans Shorts that did well,
+Bis!qit (3.25M subs, 34 s, 32k views in 3 days) and Wobbly Tales (26 subs, 1:07, 15k views, outlier 6.7). Both say a
+concrete sum in the first 5 s ("four plus five... nine times"), use one test, and stage the reveal (people
+relaxing/raising their heads as the hoof stops). Ours said "math answers", used three tests (blinders, questioners
+who didn't know, Pfungst imitating) and ran 44 s; 5 of 16 lines opened with "So".
+Defects seen in the render: caption lines across sentence ends ("ANSWERS. SO", "THEMSELVES. HANS" over the next
+scene); scenes 8 and 10 reused earlier pictures (no `ai_image` planned, the shot asked for a scan of Pfungst's
+results); the horse painted grey, bay and chestnut; three custom diagrams of small outlines, the reveal weakest
+(also flagged on Mary Toft and Bobby Leach); the drawn opener's AI built its horse from boxes (kit horse was crude,
+no tap) and the "OWNER" label sat at size 33 above the captions; kinetic titles with 0.8-0.9 s to read; a circle on a
+tiny figure; "MATH WHIZ OR HOAX?" thumbnail named the twist; the fact check flattened "stepped aside" to "wasn't asking".
+Built (commits 690798ae..215455ce, code map 72965309): see HANDOFF Pipeline 4/6/8, Openers ("Drawn reveal", kit
+animals) and Full-screen motion graphics (rules 10/11). Tests added in test_quality, test_story, test_pictures_first,
+test_style, test_full_scenes, test_drawn_opener.
+Live check (Gemini, one Short: Wilmer McLean, 43.5 s): captions never crossed a sentence end; no linking word opened
+more than 2 sentences; no reused pictures; the drawn opener passed on a later draft; `character_look` was empty (no real
+photo of McLean); the drawn reveal didn't trigger. New defects: Lee/Grant photo cards covered the same men in the
+background pictures, and the engraving look washed out the faded last picture. Fixed in 625f4d0a (code map 6e0cfab5).
+The cold reader's swipe warning at scene 5 (the general's lost dinner) stayed after the editor's one retry.

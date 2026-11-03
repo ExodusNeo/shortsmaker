@@ -164,11 +164,12 @@ Rules that keep it working:
    sees only the final scenes and reports the
    question line 1 opens, the scene that answers it, `new` per scene, list_like, first swipe scene, hook_kind; the
    editor no longer supplies its own grades) -> `story_problems()` sends a failing script back once (answer before the
-   last two scenes, no question, 2+ scenes with nothing new, swipe in scenes 1-4, list, summary hook, plus the text
-   rules); edit_plan "Cold read" line (including the AI that actually answered) -> the director
+   last two scenes, no question, 2+ scenes with nothing new, swipe in scenes 1-4, list, summary hook, 3+ new
+   sentences opening with the same link word (`LINK_WORDS`; Clever Hans opened 5 with "So"), plus the text rules); edit_plan "Cold read" line (including the AI that actually answered) -> the director
    (`direct_scripts()`, can't change narration: per scene `pic`, image/video search, shot, move, graphic, person,
    emphasis, transition, `ai_image`, animate/motion, sound, optional `full`; per Short palette, music mood, look,
-   thumbnail, SEO drafts) -> fact check against the Wikipedia text (rewrites unsupported lines, drops wrong graphics,
+   thumbnail, SEO drafts, `character_look` = the main character's look from the real pictures, reused word for word
+   in every painting and repaint) -> fact check (a fix keeps the line as vivid as before) against the Wikipedia text (rewrites unsupported lines, drops wrong graphics,
    myths go to the profile). When the fact check rewrote lines, the text rules (`story_problems` without a cold
    read) and the word total are checked again; leftovers are `STILL (after the fact check):` notes. Changed
    narrations get one batched cold read of the final words; stale verdicts are cleared on failure. Missing
@@ -179,8 +180,11 @@ Rules that keep it working:
    110-135); `writing.max_seconds()` is quality_check's limit. Scenes of 4-10 words
    (`SCENE_WORDS`), up to 16 where one picture needs time; sentences may run across cuts (`SCENE_CUTS`), but the first
    sentence ends by scene 2 (checked). `plan_rules.first_sentence()` reads it across the cut for the logbook, the
-   first-second check and SEO. The hook opens inside the strangest moment; story rules (but / so / you see, answer
-   last) live in each rules file.
+   first-second check and SEO. The hook opens inside the strangest moment; story rules (but / so / you see, varied;
+   answer last) live in each rules file. strange-history also asks for one real instance of the strange ability in
+   the first 3 scenes and ONE proof of the twist (Clever Hans review, 2026-11-03: two Shorts that held viewers did
+   both; ours gave no example, three tests and ran 44 s). The editor cuts a second proof of the same result and keeps
+   twist words ("hoax", "fake", "trick") out of hook text, thumbnail and title.
 5. **SEO** (`seo_pass()`): YouTube autocomplete for the subject + variants + `search_terms` + profile seeds, the logbook
    results and the fact check's corrections. Title < 60 chars, first 40 work alone, no emoji, never repeats the hook.
    Then description, tags, pinned comment. Title/hashtag/pinned-comment examples come from the channel's optional
@@ -194,7 +198,9 @@ Rules that keep it working:
    Sources share candidate space; visual duplicates are removed before numbering. Contact sheets include vertical
    crop previews; the picker saves a focal point and the selected crop as `work/crop_preview_<scene>.jpg`.
    One solo portrait of a person per Short; portraits never under that
-   person's own card. Scenes with nothing fitting go to `rescue_graphics()` (full-screen graphic) or a painting.
+   person's own card. Scenes with nothing fitting go to `rescue_graphics()` (full-screen graphic) or a painting;
+   a scene with no planned painting gets a prompt from `short_render.plan_gap_paintings()` (one AI call through
+   `rewrite_paint_prompts`) instead of repeating an earlier picture.
 7. **Media**: voice = **CosyVoice 3 through VoiceStudio** (`D:\VoiceStudio`, backend 127.0.0.1:3900, started by
    `voicestudio_up()`), cloned Mark Nelson (`local_ai/voices/nelson_ref.wav` with `aiden_ref.wav` fallback; brisk
    investigative storyteller, CC0/PD), story-arc delivery (`cosy_instruct`: urgent hook -> suspenseful middle -> punchline payoff),
@@ -210,8 +216,9 @@ Rules that keep it working:
    the cleaned `_raw.jpg` shown by MarkCard; the downloaded scan can have different borders or stereo framing.
    Remotion when there are >= 3 graphics, any look/special cut, or any full-screen scene; else the Python
    renderer. Graphic styles: date, place (map), fact, stat, timeline, mark, headline, quote, compare, stamp, question,
-   kinetic; card overlays hold >= 1.8 s and start early when their word comes late (`editplan.py`); person cards pop
-   on the spoken name. Palettes (9) drive all graphics and map to a full-scene skin. Credit tag bottom-left
+   kinetic; card overlays hold >= 1.8 s and start early when their word comes late (`editplan.py`); a kinetic title
+   with less than its reading hold (`review.callout_hold`) is dropped (it only repeats the captions); circled details
+   must fill 2x2 grid cells; person cards pop on the spoken name. Caption lines (`caption_lines`) end at a sentence end. Palettes (9) drive all graphics and map to a full-scene skin. Credit tag bottom-left
    (`short_credit()`), 2.8 s. Loop Shorts (weird-economics) end straight into frame 0.
 9. **Audio**: voice + music (loudness-matched to `MUSIC_LUFS`, ducked) + SFX cue sheet + story sounds; loudnorm
    -14 LUFS + limiter; h264_nvenc.
@@ -300,6 +307,17 @@ Order (owner, 2026-10-30): drawn opener -> motion graphic (2 fixes) -> AI clip o
 - Scene 1's clip starts from a painting of the strangest moment (`review.paint_opener_start` ->
   `work/opener_start.jpg`, `gpu.start_picture`; same painters and `AI paintings` rules), not scene 1's own picture:
   the Dexter Short (2026-10-30) sent Flow the woodcut of Dexter walking, so the clip couldn't show the bed warmers.
+- **Drawn reveal** (2026-11-03): on these channels, a reveal scene (`motion.is_payoff`: one of the last two) planned
+  as a `custom` diagram is drawn with the same kit and loop (`make_opener(..., i=i)`, `PAYOFF_RULES`, the art
+  director asks "do you SEE the answer happen?"; no spoiler check) by `short_render.drawn_payoff`. Files in
+  `work/drawn_{i}/`, plan in `short["drawn_{i}"]`; a failure keeps the diagram; fix rounds reuse the drawing and a
+  `paint_new` repaint retires it. Not yet seen in a full live run (see Open items).
+- **Person cards and the reveal picture** (2026-11-03): no PersonCard when the scene's picture already names that
+  person (`plan_rules.shows_person`, surname in the title or catalog note; the card would cover their face), and the
+  photo look never goes on the last two scenes (`style_lab.apply_look_scenes`), so the reveal keeps a plain picture.
+- Kit animals: `k.horse` has jointed legs, hooves, mane, `tap: [times]` (a counting/pawing horse) and returns
+  `{hoof, head}`. `missing_parts()` rejects a draft whose moment or narration names a kit animal it doesn't call
+  (the Clever Hans opener built a boxy horse from shapes and passed 7/10). Labels: size 48+, clear of y 1120-1320.
 ## Full-screen motion graphics (`remotion/src/full/`)
 - 4 skins (`parchment`, `blueprint`, `dossier`, `hud`) chosen from the palette/mood (`short_skin()`).
 - Templates: map `journey`, big `number` (counter + figures, painted silhouette or icons, or `compare` bars),
@@ -309,7 +327,9 @@ Order (owner, 2026-10-30): drawn opener -> motion graphic (2 fixes) -> AI clip o
   `tsc` (one repair) + a small preview the coder fixes once (`look_and_fix()`); fallback scene if it still fails.
   The owner wants these varied, not bland: they declined turning custom scenes into fixed templates. Rule 9
   "TASTE" in `custom_rules()` mirrors the repo's `.claude/skills/motion-design` (from claude-motion, MIT): keep the
-  two in step.
+  two in step. Rule 10 "SIZE": one main drawing at least half the stage height, solid shapes (Clever Hans's tiny
+  outlines read as blank paper); reveal scenes also get rule 11 (`PAYOFF_RULES` in motion.py: one big subject,
+  an unmistakable change). The cache fingerprint carries "size-v1" so older cached scenes are recoded.
 - Max planned per Short: 2 (`max_full_planned`), total 3 (`max_full`), never scene 1 (except the opener graphic),
   never adjacent, a scene of >= 8 words (6 on channels that raise `max_full`, e.g. weird-economics: 4/5);
   one `document` per Short. Last beat 1.6 s before the cut (`FULL_SETTLE`).
@@ -415,8 +435,10 @@ strangest moment. Same story, other channel: Voggle's Mike 2M views vs ours 1.2K
   Reliability follow-up is implemented: resume checkpoints, narration reuse, explicit review statuses, circle/arrow
   scene repairs, and reviewed-pool download recovery. Plan: `docs/superpowers/plans/2026-10-31-reliability-improvements.md`.
   Separate open question: weird-economics' 110-135 words vs the code's 95-125.
-- **Openers**: the drawn opener has only run on past Shorts (`test_renders\drawn_samples\`), not inside a full run;
-  the motion-graphic fix rounds have no live run yet. More kit parts as stories need them.
+- **Openers**: the drawn opener ran inside a full run for the first time on 2026-11-03 (Wilmer McLean,
+  `output\strange-history6-11-03_he-fled-120-miles-then-came-the-knock`): draft 1 scored 5/10 (figures too
+  small), a later draft passed, first-second score 8/10. The drawn reveal did not trigger (no reveal was planned as a
+  custom diagram), so it still has no live run; the motion-graphic fix rounds have no live run yet. More kit parts as stories need them.
 - run.bat's "press any key" at the end doesn't close the window for the owner: not found in the code; waiting for
   the window's last line.
 - Never seen in a real run: style inventions, question beats, wipes, the Shotcut timeline.
