@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/drawn_opener.py"
 type: "code"
-community: "drawn_opener.py"
+community: "test_full_scenes.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/drawn_openerpy
+  - community/test_full_scenespy
 ---
 
 # drawn_opener.py
@@ -23,6 +23,7 @@ tags:
 - [[lint()]] - `contains` [EXTRACTED]
 - [[llm.py]] - `imports_from` [EXTRACTED]
 - [[make_opener()]] - `contains` [EXTRACTED]
+- [[missing_parts()]] - `contains` [EXTRACTED]
 - [[node_run()]] - `contains` [EXTRACTED]
 - [[opening_rules.py]] - `imports_from` [EXTRACTED]
 - [[pathlib]] - `imports_from` [EXTRACTED]
@@ -39,4 +40,4 @@ tags:
 - [[test_reliability.py]] - `imports_from` [EXTRACTED]
 - [[write()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/drawn_openerpy
+#graphify/code #graphify/EXTRACTED #community/test_full_scenespy

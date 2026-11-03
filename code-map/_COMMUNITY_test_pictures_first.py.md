@@ -1,11 +1,11 @@
 ---
 type: community
-members: 33
+members: 35
 ---
 
 # test_pictures_first.py
 
-**Members:** 33 nodes
+**Members:** 35 nodes
 
 ## Members
 - [[Tests for pictures-first planning (gather the pool, the AI picture list, topic…]] - rationale - tests/test_pictures_first.py
@@ -40,6 +40,8 @@ members: 33
 - [[test_pixabay_keeps_only_on_topic_videos()]] - code - tests/test_pictures_first.py
 - [[test_pool_rows_without_thumbs()]] - code - tests/test_pictures_first.py
 - [[test_prompts_carry_picture_list()]] - code - tests/test_pictures_first.py
+- [[test_prune_cache_handles_pools()]] - code - tests/test_pictures_first.py
+- [[test_small_pool_skips_ai()]] - code - tests/test_pictures_first.py
 - [[test_usable_counts_film_once()]] - code - tests/test_pictures_first.py
 
 ## Live Query (requires Dataview plugin)
@@ -50,29 +52,30 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 20 edges to [[_COMMUNITY_write_scripts]]
-- 16 edges to [[_COMMUNITY_test_full_scenes.py]]
-- 15 edges to [[_COMMUNITY_choose_images]]
-- 10 edges to [[_COMMUNITY_load_pool]]
+- 17 edges to [[_COMMUNITY_gather_pool]]
+- 16 edges to [[_COMMUNITY_write_scripts]]
+- 16 edges to [[_COMMUNITY_choose_images]]
+- 14 edges to [[_COMMUNITY_test_full_scenes.py]]
+- 10 edges to [[_COMMUNITY_writing.py]]
 - 9 edges to [[_COMMUNITY_fake_ai]]
-- 7 edges to [[_COMMUNITY_writing.py]]
-- 6 edges to [[_COMMUNITY_json]]
-- 5 edges to [[_COMMUNITY_owner]]
-- 3 edges to [[_COMMUNITY_main_1]]
+- 4 edges to [[_COMMUNITY_json]]
+- 3 edges to [[_COMMUNITY_subprocess]]
+- 2 edges to [[_COMMUNITY_main_1]]
+- 2 edges to [[_COMMUNITY_extra_sources.py]]
 - 1 edge to [[_COMMUNITY_test_rules.py]]
+- 1 edge to [[_COMMUNITY_shutil]]
 - 1 edge to [[_COMMUNITY_ask_ai]]
 - 1 edge to [[_COMMUNITY_edit_scripts]]
-- 1 edge to [[_COMMUNITY_gather_pool]]
-- 1 edge to [[_COMMUNITY_fetch]]
+- 1 edge to [[_COMMUNITY_owner]]
+- 1 edge to [[_COMMUNITY_rewrite_paint_prompts]]
 - 1 edge to [[_COMMUNITY_clean_full]]
 - 1 edge to [[_COMMUNITY_edit_plan]]
-- 1 edge to [[_COMMUNITY_test_story.py]]
-- 1 edge to [[_COMMUNITY_extra_sources.py]]
+- 1 edge to [[_COMMUNITY_re]]
 - 1 edge to [[_COMMUNITY_footage.py]]
 
 ## Top bridge nodes
-- [[test_pictures_first.py]] - degree 81, connects to 16 communities
+- [[test_pictures_first.py]] - degree 83, connects to 15 communities
 - [[catalog_pool()]] - degree 19, connects to 8 communities
-- [[save_pool()]] - degree 13, connects to 5 communities
+- [[save_pool()]] - degree 13, connects to 4 communities
 - [[clean_pics()]] - degree 8, connects to 3 communities
-- [[pool_of()]] - degree 19, connects to 2 communities
+- [[test_corrupt_pool_and_catalog_redone()]] - degree 7, connects to 2 communities

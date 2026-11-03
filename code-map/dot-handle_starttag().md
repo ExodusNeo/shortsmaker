@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/extra_sources.py"
 type: "code"
-community: "brand_images"
+community: "extra_sources.py"
 location: "L154"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/brand_images
+  - community/extra_sourcespy
 ---
 
 # .handle_starttag()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[BrandImages]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/brand_images
+#graphify/code #graphify/EXTRACTED #community/extra_sourcespy

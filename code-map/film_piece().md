@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[Download ~14s around the chosen moment with original framing and muted source…]] - `rationale_for` [EXTRACTED]
-- [[Path_17]] - `references` [EXTRACTED]
+- [[Path_22]] - `references` [EXTRACTED]
 - [[choose_images()]] - `calls` [EXTRACTED]
 - [[crop_filter()]] - `calls` [EXTRACTED]
 - [[film_ffmpeg()]] - `calls` [EXTRACTED]

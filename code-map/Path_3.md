@@ -1,17 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "json"
+community: "re"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/json
+  - community/re
 ---
 
 # Path
 
 ## Connections
-- [[load()]] - `references` [EXTRACTED]
-- [[save()_1]] - `references` [EXTRACTED]
+- [[mark_details()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/json
+#graphify/code #graphify/EXTRACTED #community/re

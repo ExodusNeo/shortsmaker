@@ -16,6 +16,7 @@ tags:
 - [[dot-crowd()]] - `calls` [EXTRACTED]
 - [[dot-fall()]] - `calls` [EXTRACTED]
 - [[dot-flood()]] - `calls` [EXTRACTED]
+- [[dot-horse()]] - `calls` [EXTRACTED]
 - [[dot-palm()]] - `calls` [EXTRACTED]
 - [[dot-shimmer()]] - `calls` [EXTRACTED]
 - [[dot-stroke()]] - `calls` [EXTRACTED]

@@ -2,7 +2,7 @@
 source_file: "tests/test_story.py"
 type: "code"
 community: "qwen_voice.py"
-location: "L131"
+location: "L136"
 tags:
   - graphify/code
   - graphify/EXTRACTED

@@ -14,6 +14,7 @@ tags:
 ## Connections
 - [[dot-draft()]] - `method` [EXTRACTED]
 - [[dot-test_autocomplete_is_not_claimed_to_measure_demand()]] - `method` [EXTRACTED]
+- [[dot-test_burned_in_caption_lines_end_at_sentence_ends()]] - `method` [EXTRACTED]
 - [[dot-test_fields_are_validated_independently()]] - `method` [EXTRACTED]
 - [[dot-test_malformed_batch_preserves_all_draft_fields()]] - `method` [EXTRACTED]
 - [[dot-test_srt_breaks_at_sentence_pause_duration_and_width()]] - `method` [EXTRACTED]

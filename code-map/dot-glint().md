@@ -1,12 +1,12 @@
 ---
 source_file: "drawn/kit.mjs"
 type: "code"
-community: "popS"
-location: "L364"
+community: "textures.mjs"
+location: "L403"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/popS
+  - community/texturesmjs
 ---
 
 # .glint()
@@ -17,4 +17,4 @@ tags:
 - [[popS()]] - `calls` [EXTRACTED]
 - [[star4()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/popS
+#graphify/code #graphify/EXTRACTED #community/texturesmjs

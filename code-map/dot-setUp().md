@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_opening_rules.py"
 type: "code"
-community: "OpeningRulesTests"
+community: "test_drawn_opener.py"
 location: "L27"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/OpeningRulesTests
+  - community/test_drawn_openerpy
 ---
 
 # .setUp()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[OpeningRulesTests]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/OpeningRulesTests
+#graphify/code #graphify/EXTRACTED #community/test_drawn_openerpy

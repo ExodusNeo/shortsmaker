@@ -19,7 +19,7 @@ tags:
 - [[The module that defines function `name` (KeyError for anything else).]] - `rationale_for` [EXTRACTED]
 - [[_fake_planning()]] - `calls` [EXTRACTED]
 - [[patching.py]] - `contains` [EXTRACTED]
-- [[plan_with()]] - `calls` [EXTRACTED]
+- [[plan_with()_1]] - `calls` [EXTRACTED]
 - [[test_full_scenes.py]] - `imports` [EXTRACTED]
 - [[test_good_look_check_skips_the_extra_compile()]] - `calls` [EXTRACTED]
 - [[test_pictures_first.py]] - `imports` [EXTRACTED]

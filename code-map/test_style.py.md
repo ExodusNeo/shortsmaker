@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_style.py"
 type: "code"
-community: "test_style.py"
+community: "re"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_stylepy
+  - community/re
 ---
 
 # test_style.py
@@ -29,7 +29,7 @@ tags:
 - [[pathlib]] - `imports_from` [EXTRACTED]
 - [[picture_pool.py]] - `imports_from` [EXTRACTED]
 - [[plan_rules.py]] - `imports_from` [EXTRACTED]
-- [[plan_with()]] - `contains` [EXTRACTED]
+- [[plan_with()_1]] - `contains` [EXTRACTED]
 - [[re]] - `imports` [EXTRACTED]
 - [[remotion_render.py]] - `imports_from` [EXTRACTED]
 - [[restore_library()]] - `contains` [EXTRACTED]
@@ -42,6 +42,7 @@ tags:
 - [[test_approve_rolls_back_when_the_check_crashes()]] - `contains` [EXTRACTED]
 - [[test_candidate_names_unique_across_kinds()]] - `contains` [EXTRACTED]
 - [[test_clean_question_and_kinetic()]] - `contains` [EXTRACTED]
+- [[test_director_character_look_is_kept_short_or_dropped()]] - `contains` [EXTRACTED]
 - [[test_director_inventions_are_kept_with_a_spec()]] - `contains` [EXTRACTED]
 - [[test_director_prompt_lists_library()]] - `contains` [EXTRACTED]
 - [[test_fact_check_sees_new_graphics()]] - `contains` [EXTRACTED]
@@ -69,4 +70,4 @@ tags:
 - [[with_fakes()_1]] - `contains` [EXTRACTED]
 - [[writing.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_stylepy
+#graphify/code #graphify/EXTRACTED #community/re

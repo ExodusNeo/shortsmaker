@@ -30,13 +30,14 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 7 edges to [[_COMMUNITY_test_full_scenes.py]]
-- 1 edge to [[_COMMUNITY_render]]
+- 5 edges to [[_COMMUNITY_test_full_scenes.py]]
+- 2 edges to [[_COMMUNITY_subprocess]]
 - 1 edge to [[_COMMUNITY_audio_library.py]]
+- 1 edge to [[_COMMUNITY_render]]
 - 1 edge to [[_COMMUNITY_choose_images]]
-- 1 edge to [[_COMMUNITY_fetch]]
+- 1 edge to [[_COMMUNITY_extra_sources.py]]
 - 1 edge to [[_COMMUNITY_full_props]]
-- 1 edge to [[_COMMUNITY_test_style.py]]
+- 1 edge to [[_COMMUNITY_re]]
 
 ## Top bridge nodes
 - [[full_pictures()]] - degree 5, connects to 3 communities

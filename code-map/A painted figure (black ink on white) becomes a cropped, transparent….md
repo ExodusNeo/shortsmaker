@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_full_scenes.py"
 type: "rationale"
-community: "render"
-location: "L781"
+community: "make_paper"
+location: "L792"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/render
+  - community/make_paper
 ---
 
 # A painted figure (black ink on white) becomes a cropped, transparent…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[test_ink_silhouette()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/render
+#graphify/rationale #graphify/EXTRACTED #community/make_paper

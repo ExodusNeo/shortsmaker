@@ -1,11 +1,11 @@
 ---
 type: community
-members: 70
+members: 74
 ---
 
 # k
 
-**Members:** 70 nodes
+**Members:** 74 nodes
 
 ## Members
 - [[dot-at()_1]] - code - drawn/kit.mjs
@@ -32,6 +32,7 @@ members: 70
 - [[dot-dog()]] - code - drawn/kit.mjs
 - [[dot-dot()_1]] - code - drawn/kit.mjs
 - [[dot-ease()]] - code - drawn/kit.mjs
+- [[dot-exclaim()]] - code - drawn/kit.mjs
 - [[dot-factory()]] - code - drawn/kit.mjs
 - [[dot-fade()]] - code - drawn/kit.mjs
 - [[dot-fire()]] - code - drawn/kit.mjs
@@ -51,7 +52,9 @@ members: 70
 - [[dot-person()]] - code - drawn/kit.mjs
 - [[dot-pig()]] - code - drawn/kit.mjs
 - [[dot-pine()]] - code - drawn/kit.mjs
+- [[dot-pop()]] - code - drawn/kit.mjs
 - [[dot-puff()]] - code - drawn/kit.mjs
+- [[dot-question()]] - code - drawn/kit.mjs
 - [[dot-rain()]] - code - drawn/kit.mjs
 - [[dot-rect()]] - code - drawn/kit.mjs
 - [[dot-ring()_1]] - code - drawn/kit.mjs
@@ -78,6 +81,7 @@ members: 70
 - [[dot-word()]] - code - drawn/kit.mjs
 - [[ellPts()]] - code - drawn/lib/core.mjs
 - [[k]] - code - drawn/kit.mjs
+- [[popS()]] - code - drawn/lib/core.mjs
 
 ## Live Query (requires Dataview plugin)
 
@@ -87,16 +91,15 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 17 edges to [[_COMMUNITY_core.mjs]]
-- 10 edges to [[_COMMUNITY_popS]]
-- 7 edges to [[_COMMUNITY_makeKit]]
+- 21 edges to [[_COMMUNITY_core.mjs]]
+- 8 edges to [[_COMMUNITY_makeKit]]
 - 5 edges to [[_COMMUNITY_bean.mjs]]
-- 1 edge to [[_COMMUNITY_kit.mjs]]
-- 1 edge to [[_COMMUNITY_textures.mjs]]
+- 4 edges to [[_COMMUNITY_textures.mjs]]
+- 2 edges to [[_COMMUNITY_kit.mjs]]
 
 ## Top bridge nodes
 - [[ellPts()]] - degree 26, connects to 4 communities
+- [[popS()]] - degree 9, connects to 4 communities
 - [[k]] - degree 81, connects to 3 communities
 - [[dot-paint()]] - degree 44, connects to 2 communities
 - [[dot-ease()]] - degree 3, connects to 2 communities
-- [[dot-text()_1]] - degree 16, connects to 1 community

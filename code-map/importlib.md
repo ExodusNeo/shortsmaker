@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "owner"
+community: "re"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/owner
+  - community/re
 ---
 
 # importlib
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[patching.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/owner
+#graphify/concept #graphify/EXTRACTED #community/re

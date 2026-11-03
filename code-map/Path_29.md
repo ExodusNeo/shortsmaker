@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "render_clips"
+community: "test_blender_render.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/render_clips
+  - community/test_blender_renderpy
 ---
 
 # Path
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[fake_blender()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/render_clips
+#graphify/code #graphify/EXTRACTED #community/test_blender_renderpy

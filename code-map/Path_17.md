@@ -1,17 +1,19 @@
 ---
 source_file: ""
 type: "code"
-community: "footage.py"
+community: "test_drawn_opener.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/footagepy
+  - community/test_drawn_openerpy
 ---
 
 # Path
 
 ## Connections
-- [[film_piece()]] - `references` [EXTRACTED]
-- [[shot_span()]] - `references` [EXTRACTED]
+- [[make_opener()]] - `references` [EXTRACTED]
+- [[node_run()]] - `references` [EXTRACTED]
+- [[review()]] - `references` [EXTRACTED]
+- [[write()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/footagepy
+#graphify/code #graphify/EXTRACTED #community/test_drawn_openerpy

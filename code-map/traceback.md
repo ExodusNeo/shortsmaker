@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "test_story.py"
+community: "writing.py"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/test_storypy
+  - community/writingpy
 ---
 
 # traceback
@@ -30,4 +30,4 @@ tags:
 - [[test_story.py]] - `imports` [EXTRACTED]
 - [[test_topic_ideas.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/test_storypy
+#graphify/concept #graphify/EXTRACTED #community/writingpy

@@ -2,7 +2,7 @@
 source_file: "tests/test_style.py"
 type: "code"
 community: "sfx_events"
-location: "L180"
+location: "L187"
 tags:
   - graphify/code
   - graphify/EXTRACTED

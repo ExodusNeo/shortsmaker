@@ -18,6 +18,7 @@ tags:
 - [[dot-ease()]] - `calls` [EXTRACTED]
 - [[dot-fade()]] - `calls` [EXTRACTED]
 - [[dot-fall()]] - `calls` [EXTRACTED]
+- [[dot-horse()]] - `calls` [EXTRACTED]
 - [[dot-next()]] - `calls` [EXTRACTED]
 - [[dot-puff()]] - `calls` [EXTRACTED]
 - [[dot-splash()]] - `calls` [EXTRACTED]

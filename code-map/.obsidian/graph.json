@@ -22,7 +22,7 @@
       }
     },
     {
-      "query": "tag:#community/load_pool",
+      "query": "tag:#community/gather_pool",
       "color": {
         "a": 1,
         "rgb": 7780274
@@ -43,7 +43,7 @@
       }
     },
     {
-      "query": "tag:#community/ffmpeg",
+      "query": "tag:#community/duration",
       "color": {
         "a": 1,
         "rgb": 11565729
@@ -57,7 +57,7 @@
       }
     },
     {
-      "query": "tag:#community/render_clips",
+      "query": "tag:#community/test_blender_renderpy",
       "color": {
         "a": 1,
         "rgb": 10253663
@@ -85,7 +85,7 @@
       }
     },
     {
-      "query": "tag:#community/test_stylepy",
+      "query": "tag:#community/re",
       "color": {
         "a": 1,
         "rgb": 14767961
@@ -99,7 +99,7 @@
       }
     },
     {
-      "query": "tag:#community/drawn_openerpy",
+      "query": "tag:#community/subprocess",
       "color": {
         "a": 1,
         "rgb": 5873999
@@ -127,7 +127,7 @@
       }
     },
     {
-      "query": "tag:#community/apply_review_fixes",
+      "query": "tag:#community/shutil",
       "color": {
         "a": 1,
         "rgb": 10253663
@@ -162,7 +162,7 @@
       }
     },
     {
-      "query": "tag:#community/edit_projectpy",
+      "query": "tag:#community/make",
       "color": {
         "a": 1,
         "rgb": 7780274
@@ -176,14 +176,14 @@
       }
     },
     {
-      "query": "tag:#community/drawn_thumbnail",
+      "query": "tag:#community/test_blender_runpy",
       "color": {
         "a": 1,
         "rgb": 15583560
       }
     },
     {
-      "query": "tag:#community/render",
+      "query": "tag:#community/paint_instead",
       "color": {
         "a": 1,
         "rgb": 11565729
@@ -197,21 +197,21 @@
       }
     },
     {
-      "query": "tag:#community/rewrite_paint_prompts",
+      "query": "tag:#community/apply_review_fixes",
       "color": {
         "a": 1,
         "rgb": 10253663
       }
     },
     {
-      "query": "tag:#community/h3_runpy",
+      "query": "tag:#community/test_h3_runpy",
       "color": {
         "a": 1,
         "rgb": 12234924
       }
     },
     {
-      "query": "tag:#community/math",
+      "query": "tag:#community/lookpy",
       "color": {
         "a": 1,
         "rgb": 5142951
@@ -225,7 +225,7 @@
       }
     },
     {
-      "query": "tag:#community/OpeningRulesTests",
+      "query": "tag:#community/test_drawn_openerpy",
       "color": {
         "a": 1,
         "rgb": 14767961
@@ -288,7 +288,7 @@
       }
     },
     {
-      "query": "tag:#community/Shots",
+      "query": "tag:#community/build_scenepy",
       "color": {
         "a": 1,
         "rgb": 15896107
@@ -323,7 +323,7 @@
       }
     },
     {
-      "query": "tag:#community/brand_images",
+      "query": "tag:#community/invent_component",
       "color": {
         "a": 1,
         "rgb": 11565729
@@ -337,14 +337,14 @@
       }
     },
     {
-      "query": "tag:#community/clean_photo",
+      "query": "tag:#community/trim_borders",
       "color": {
         "a": 1,
         "rgb": 10253663
       }
     },
     {
-      "query": "tag:#community/extra_sourcespy",
+      "query": "tag:#community/style_library",
       "color": {
         "a": 1,
         "rgb": 12234924
@@ -365,7 +365,7 @@
       }
     },
     {
-      "query": "tag:#community/invent_component",
+      "query": "tag:#community/style_placeholders",
       "color": {
         "a": 1,
         "rgb": 14767961
@@ -393,14 +393,14 @@
       }
     },
     {
-      "query": "tag:#community/re",
+      "query": "tag:#community/retentionpy",
       "color": {
         "a": 1,
         "rgb": 11565729
       }
     },
     {
-      "query": "tag:#community/finish_render",
+      "query": "tag:#community/render",
       "color": {
         "a": 1,
         "rgb": 16752039
@@ -414,14 +414,14 @@
       }
     },
     {
-      "query": "tag:#community/gather_pool",
+      "query": "tag:#community/approve_candidate",
       "color": {
         "a": 1,
         "rgb": 12234924
       }
     },
     {
-      "query": "tag:#community/run_agy",
+      "query": "tag:#community/ask_ai",
       "color": {
         "a": 1,
         "rgb": 5142951
@@ -435,28 +435,28 @@
       }
     },
     {
-      "query": "tag:#community/style_library",
+      "query": "tag:#community/clean_look",
       "color": {
         "a": 1,
         "rgb": 14767961
       }
     },
     {
-      "query": "tag:#community/popS",
+      "query": "tag:#community/make_paper",
       "color": {
         "a": 1,
         "rgb": 7780274
       }
     },
     {
-      "query": "tag:#community/fetch",
+      "query": "tag:#community/extra_sourcespy",
       "color": {
         "a": 1,
         "rgb": 5873999
       }
     },
     {
-      "query": "tag:#community/download_audio_choices",
+      "query": "tag:#community/media_command",
       "color": {
         "a": 1,
         "rgb": 15583560
@@ -491,7 +491,7 @@
       }
     },
     {
-      "query": "tag:#community/review",
+      "query": "tag:#community/rewrite_paint_prompts",
       "color": {
         "a": 1,
         "rgb": 5142951
@@ -512,7 +512,7 @@
       }
     },
     {
-      "query": "tag:#community/ask_ai",
+      "query": "tag:#community/test_packagepy",
       "color": {
         "a": 1,
         "rgb": 7780274
@@ -547,7 +547,7 @@
       }
     },
     {
-      "query": "tag:#community/article_text",
+      "query": "tag:#community/test_every_mode_can_continue_through_two_exhausted_ais",
       "color": {
         "a": 1,
         "rgb": 10253663
@@ -568,7 +568,7 @@
       }
     },
     {
-      "query": "tag:#community/test_drawn_opener_renders_and_is_reused",
+      "query": "tag:#community/plan_with",
       "color": {
         "a": 1,
         "rgb": 15896107
@@ -596,7 +596,7 @@
       }
     },
     {
-      "query": "tag:#community/opener_graphic",
+      "query": "tag:#community/finish_render",
       "color": {
         "a": 1,
         "rgb": 15583560
@@ -631,7 +631,7 @@
       }
     },
     {
-      "query": "tag:#community/first_second_check",
+      "query": "tag:#community/write_frames",
       "color": {
         "a": 1,
         "rgb": 5142951
@@ -659,7 +659,7 @@
       }
     },
     {
-      "query": "tag:#community/default_build",
+      "query": "tag:#community/speak",
       "color": {
         "a": 1,
         "rgb": 5873999
@@ -680,14 +680,14 @@
       }
     },
     {
-      "query": "tag:#community/wants_remotion",
+      "query": "tag:#community/gemini_model",
       "color": {
         "a": 1,
         "rgb": 16752039
       }
     },
     {
-      "query": "tag:#community/test_review_redraws_custom",
+      "query": "tag:#community/pacing_check",
       "color": {
         "a": 1,
         "rgb": 10253663
@@ -708,7 +708,7 @@
       }
     },
     {
-      "query": "tag:#community/max_full",
+      "query": "tag:#community/rescue_graphics",
       "color": {
         "a": 1,
         "rgb": 15896107
@@ -729,10 +729,24 @@
       }
     },
     {
-      "query": "tag:#community/min_real_pictures",
+      "query": "tag:#community/cold_read_line",
       "color": {
         "a": 1,
         "rgb": 5873999
+      }
+    },
+    {
+      "query": "tag:#community/srt",
+      "color": {
+        "a": 1,
+        "rgb": 15583560
+      }
+    },
+    {
+      "query": "tag:#community/peaks",
+      "color": {
+        "a": 1,
+        "rgb": 11565729
       }
     },
     {
@@ -740,6 +754,27 @@
       "color": {
         "a": 1,
         "rgb": 16752039
+      }
+    },
+    {
+      "query": "tag:#community/_run",
+      "color": {
+        "a": 1,
+        "rgb": 10253663
+      }
+    },
+    {
+      "query": "tag:#community/swap_inventions",
+      "color": {
+        "a": 1,
+        "rgb": 12234924
+      }
+    },
+    {
+      "query": "tag:#community/style_props",
+      "color": {
+        "a": 1,
+        "rgb": 5142951
       }
     }
   ]

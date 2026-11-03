@@ -2,7 +2,7 @@
 source_file: "tests/test_full_scenes.py"
 type: "rationale"
 community: "test_short_credit"
-location: "L725"
+location: "L736"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED

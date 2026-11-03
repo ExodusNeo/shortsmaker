@@ -23,6 +23,7 @@ tags:
 - [[full_summary()]] - `contains` [EXTRACTED]
 - [[graphics_count()]] - `contains` [EXTRACTED]
 - [[hashlib]] - `imports` [EXTRACTED]
+- [[is_payoff()]] - `contains` [EXTRACTED]
 - [[json]] - `imports` [EXTRACTED]
 - [[lint_custom_code()]] - `contains` [EXTRACTED]
 - [[llm.py]] - `imports_from` [EXTRACTED]

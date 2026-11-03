@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_opening_rules.py"
 type: "code"
-community: "OpeningRulesTests"
+community: "test_drawn_opener.py"
 location: "L26"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/OpeningRulesTests
+  - community/test_drawn_openerpy
 ---
 
 # OpeningRulesTests
@@ -28,4 +28,4 @@ tags:
 - [[dot-test_new_review_clears_previous_spoiler_verdict()]] - `method` [EXTRACTED]
 - [[test_opening_rules.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/OpeningRulesTests
+#graphify/code #graphify/EXTRACTED #community/test_drawn_openerpy

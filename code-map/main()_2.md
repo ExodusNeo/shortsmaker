@@ -1,20 +1,21 @@
 ---
-source_file: "tests/render_opener_preview.py"
+source_file: "local_ai/gen.py"
 type: "code"
-community: "json"
-location: "L10"
+community: "Local GPU Worker"
+location: "L200"
 tags:
   - graphify/code
-  - graphify/EXTRACTED
-  - community/json
+  - graphify/INFERRED
+  - community/Local_GPU_Worker
 ---
 
 # main()
 
 ## Connections
-- [[make_paper()]] - `calls` [EXTRACTED]
-- [[preview_custom()]] - `calls` [EXTRACTED]
-- [[render_opener_preview.py]] - `contains` [EXTRACTED]
-- [[tsc_check()]] - `calls` [EXTRACTED]
+- [[gen.py]] - `contains` [EXTRACTED]
+- [[images()]] - `indirect_call` [INFERRED]
+- [[parallax()]] - `indirect_call` [INFERRED]
+- [[tts()]] - `indirect_call` [INFERRED]
+- [[video()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/json
+#graphify/code #graphify/INFERRED #community/Local_GPU_Worker

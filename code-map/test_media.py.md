@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_media.py"
 type: "code"
-community: "test_full_scenes.py"
+community: "subprocess"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_full_scenespy
+  - community/subprocess
 ---
 
 # test_media.py
@@ -39,4 +39,4 @@ tags:
 - [[unittest_mock]] - `imports_from` [EXTRACTED]
 - [[urllib_error]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_full_scenespy
+#graphify/code #graphify/EXTRACTED #community/subprocess

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/edit_project.py"
 type: "code"
-community: "edit_project.py"
+community: "subprocess"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/edit_projectpy
+  - community/subprocess
 ---
 
 # edit_project.py
@@ -29,4 +29,4 @@ tags:
 - [[test_edit_project.py]] - `imports_from` [EXTRACTED]
 - [[xml_sax_saxutils]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/edit_projectpy
+#graphify/code #graphify/EXTRACTED #community/subprocess

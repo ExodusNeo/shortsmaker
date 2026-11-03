@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/media_menu.py"
 type: "code"
-community: "audio_library.py"
+community: "media_command"
 location: "L81"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/audio_librarypy
+  - community/media_command
 ---
 
 # review_audio_files()
@@ -21,4 +21,4 @@ tags:
 - [[media_menu.py]] - `contains` [EXTRACTED]
 - [[set_audio_metadata()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/audio_librarypy
+#graphify/code #graphify/EXTRACTED #community/media_command

@@ -16,7 +16,7 @@ tags:
 - [[True when the picture's subject would land under the top callouts (y ~180-680…]] - `rationale_for` [EXTRACTED]
 - [[fills_frame()]] - `calls` [EXTRACTED]
 - [[frame_render.py]] - `contains` [EXTRACTED]
-- [[render()]] - `calls` [EXTRACTED]
+- [[render()_1]] - `calls` [EXTRACTED]
 - [[test_fill_money_graphics_and_caps()]] - `calls` [EXTRACTED]
 - [[words_of()]] - `calls` [EXTRACTED]
 

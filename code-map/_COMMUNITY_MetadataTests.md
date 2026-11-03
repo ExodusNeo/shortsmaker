@@ -1,15 +1,16 @@
 ---
 type: community
-members: 10
+members: 11
 ---
 
 # MetadataTests
 
-**Members:** 10 nodes
+**Members:** 11 nodes
 
 ## Members
 - [[dot-draft()]] - code - tests/test_quality.py
 - [[dot-test_autocomplete_is_not_claimed_to_measure_demand()]] - code - tests/test_quality.py
+- [[dot-test_burned_in_caption_lines_end_at_sentence_ends()]] - code - tests/test_quality.py
 - [[dot-test_fields_are_validated_independently()]] - code - tests/test_quality.py
 - [[dot-test_malformed_batch_preserves_all_draft_fields()]] - code - tests/test_quality.py
 - [[dot-test_srt_breaks_at_sentence_pause_duration_and_width()]] - code - tests/test_quality.py
@@ -30,4 +31,4 @@ SORT file.name ASC
 - 1 edge to [[_COMMUNITY_writing.py]]
 
 ## Top bridge nodes
-- [[MetadataTests]] - degree 10, connects to 1 community
+- [[MetadataTests]] - degree 11, connects to 1 community

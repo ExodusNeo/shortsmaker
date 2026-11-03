@@ -12,6 +12,7 @@ tags:
 # .oval()
 
 ## Connections
+- [[dot-horse()]] - `calls` [EXTRACTED]
 - [[ellPts()]] - `calls` [EXTRACTED]
 - [[k]] - `method` [EXTRACTED]
 

@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "brand_images"
+community: "extra_sources.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/brand_images
+  - community/extra_sourcespy
 ---
 
 # HTMLParser
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[BrandImages]] - `inherits` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/brand_images
+#graphify/code #graphify/EXTRACTED #community/extra_sourcespy

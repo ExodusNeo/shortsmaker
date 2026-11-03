@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/channel_profiles.py"
 type: "code"
-community: "writing.py"
+community: "json"
 location: "L140"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/writingpy
+  - community/json
 ---
 
 # yt_list()
@@ -16,4 +16,4 @@ tags:
 - [[channel_profiles.py]] - `contains` [EXTRACTED]
 - [[trend_research()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/writingpy
+#graphify/code #graphify/EXTRACTED #community/json

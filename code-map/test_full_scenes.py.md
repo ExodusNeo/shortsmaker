@@ -61,6 +61,7 @@ tags:
 - [[test_code_custom_scenes_fallback()]] - `contains` [EXTRACTED]
 - [[test_counter_finishes_before_it_leaves()]] - `contains` [EXTRACTED]
 - [[test_custom_cues_props_and_pictures()]] - `contains` [EXTRACTED]
+- [[test_custom_scenes_are_big_and_the_reveal_bigger()]] - `contains` [EXTRACTED]
 - [[test_director_prompt_mentions_full()]] - `contains` [EXTRACTED]
 - [[test_fact_check_drops_full()]] - `contains` [EXTRACTED]
 - [[test_fallback_custom_is_clean()]] - `contains` [EXTRACTED]

@@ -1,12 +1,12 @@
 ---
 source_file: "tests/render_full.py"
 type: "code"
-community: "json"
+community: "shutil"
 location: "L16"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/json
+  - community/shutil
 ---
 
 # props_for()
@@ -15,4 +15,4 @@ tags:
 - [[main()_1]] - `calls` [EXTRACTED]
 - [[render_full.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/json
+#graphify/code #graphify/EXTRACTED #community/shutil

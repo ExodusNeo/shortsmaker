@@ -2,7 +2,7 @@
 source_file: "shortsmaker/audio_mix.py"
 type: "rationale"
 community: "sfx_events"
-location: "L293"
+location: "L295"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED

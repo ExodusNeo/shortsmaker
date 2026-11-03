@@ -1,12 +1,12 @@
 ---
 source_file: "blender/look.py"
 type: "rationale"
-community: "math"
+community: "look.py"
 location: "L86"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/math
+  - community/lookpy
 ---
 
 # A flat (emission-only) material in one of COLORS, made once.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[material()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/math
+#graphify/rationale #graphify/EXTRACTED #community/lookpy

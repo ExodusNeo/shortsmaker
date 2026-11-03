@@ -36,17 +36,17 @@ SORT file.name ASC
 - 7 edges to [[_COMMUNITY_test_full_scenes.py]]
 - 3 edges to [[_COMMUNITY_local_clips]]
 - 3 edges to [[_COMMUNITY_render]]
-- 2 edges to [[_COMMUNITY_json]]
-- 2 edges to [[_COMMUNITY_opener_graphic]]
+- 3 edges to [[_COMMUNITY_finish_render]]
+- 1 edge to [[_COMMUNITY_json]]
+- 1 edge to [[_COMMUNITY_paint_instead]]
 - 1 edge to [[_COMMUNITY_rewrite_paint_prompts]]
 - 1 edge to [[_COMMUNITY_code_custom_scenes]]
+- 1 edge to [[_COMMUNITY_shutil]]
 - 1 edge to [[_COMMUNITY_apply_review_fixes]]
-- 1 edge to [[_COMMUNITY_finish_render]]
-- 1 edge to [[_COMMUNITY_ffmpeg]]
 
 ## Top bridge nodes
-- [[paint_opener_start()]] - degree 12, connects to 8 communities
-- [[test_weak_opener_graphic_fixes_then_handoff()]] - degree 9, connects to 4 communities
-- [[gemini_images()]] - degree 7, connects to 3 communities
+- [[paint_opener_start()]] - degree 12, connects to 9 communities
+- [[gemini_images()]] - degree 7, connects to 4 communities
+- [[test_weak_opener_graphic_fixes_then_handoff()]] - degree 9, connects to 3 communities
 - [[use()]] - degree 5, connects to 2 communities
 - [[fresh()]] - degree 4, connects to 1 community

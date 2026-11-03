@@ -2,7 +2,7 @@
 source_file: "shortsmaker/writing.py"
 type: "code"
 community: "story_problems"
-location: "L448"
+location: "L451"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -15,6 +15,7 @@ tags:
 - [[The checkable story rules (STORY_RULES) the text rules (no line opens with a…]] - `rationale_for` [EXTRACTED]
 - [[edit_scripts()]] - `calls` [EXTRACTED]
 - [[first_sentence()]] - `calls` [EXTRACTED]
+- [[re]] - `calls` [EXTRACTED]
 - [[recheck_final_scripts()]] - `calls` [EXTRACTED]
 - [[test_cold_read_verdicts()]] - `calls` [EXTRACTED]
 - [[test_first_sentence_reads_across_the_cut()]] - `calls` [EXTRACTED]

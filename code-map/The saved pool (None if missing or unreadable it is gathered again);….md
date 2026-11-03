@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/picture_pool.py"
 type: "rationale"
-community: "load_pool"
+community: "gather_pool"
 location: "L263"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/load_pool
+  - community/gather_pool
 ---
 
 # The saved pool (None if missing or unreadable: it is gathered again);…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[load_pool()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/load_pool
+#graphify/rationale #graphify/EXTRACTED #community/gather_pool

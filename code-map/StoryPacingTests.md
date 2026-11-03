@@ -2,7 +2,7 @@
 source_file: "tests/test_quality.py"
 type: "code"
 community: "StoryPacingTests"
-location: "L94"
+location: "L101"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -20,6 +20,7 @@ tags:
 - [[dot-test_no_extra_call_when_no_narration_changed()]] - `method` [EXTRACTED]
 - [[dot-test_pacing_uses_actual_seconds_and_surfaces_unresolved_notes()]] - `method` [EXTRACTED]
 - [[dot-test_unanswered_opening_cannot_pass_as_good_story()]] - `method` [EXTRACTED]
+- [[dot-test_unreadable_kinetic_title_is_dropped_other_callouts_stay()]] - `method` [EXTRACTED]
 - [[test_quality.py]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/StoryPacingTests

@@ -2,7 +2,7 @@
 source_file: "shortsmaker/motion.py"
 type: "code"
 community: "code_custom_scenes"
-location: "L327"
+location: "L346"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,7 +12,7 @@ tags:
 # opener_preflight()
 
 ## Connections
-- [[Path_23]] - `references` [EXTRACTED]
+- [[Path_26]] - `references` [EXTRACTED]
 - [[Render and grade every candidate, including repairs; keep the strongest…]] - `rationale_for` [EXTRACTED]
 - [[ask_ai()]] - `calls` [EXTRACTED]
 - [[clean_tsx_code()]] - `calls` [EXTRACTED]

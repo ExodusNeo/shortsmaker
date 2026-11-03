@@ -2,7 +2,7 @@
 source_file: "shortsmaker/audio_mix.py"
 type: "code"
 community: "sfx_events"
-location: "L375"
+location: "L377"
 tags:
   - graphify/code
   - graphify/EXTRACTED

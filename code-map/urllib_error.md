@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "writing.py"
+community: "subprocess"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/writingpy
+  - community/subprocess
 ---
 
 # urllib_error
@@ -17,4 +17,4 @@ tags:
 - [[image_sources.py]] - `imports` [EXTRACTED]
 - [[test_media.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/writingpy
+#graphify/concept #graphify/EXTRACTED #community/subprocess

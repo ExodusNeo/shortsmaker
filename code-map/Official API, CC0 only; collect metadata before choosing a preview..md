@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/audio_mix.py"
 type: "rationale"
-community: "download_audio_choices"
-location: "L112"
+community: "media_command"
+location: "L114"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/download_audio_choices
+  - community/media_command
 ---
 
 # Official API, CC0 only; collect metadata before choosing a preview.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[freesound_results()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/download_audio_choices
+#graphify/rationale #graphify/EXTRACTED #community/media_command

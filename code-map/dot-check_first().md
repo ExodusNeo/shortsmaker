@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_opening_rules.py"
 type: "code"
-community: "OpeningRulesTests"
+community: "test_drawn_opener.py"
 location: "L34"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/OpeningRulesTests
+  - community/test_drawn_openerpy
 ---
 
 # .check_first()
@@ -17,4 +17,4 @@ tags:
 - [[OpeningRulesTests]] - `method` [EXTRACTED]
 - [[fake_ffmpeg()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/OpeningRulesTests
+#graphify/code #graphify/EXTRACTED #community/test_drawn_openerpy

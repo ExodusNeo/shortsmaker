@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/blender_render.py"
 type: "rationale"
-community: "render_clips"
+community: "_run"
 location: "L52"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/render_clips
+  - community/_run
 ---
 
 # when Blender finished, else why not.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[_run()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/render_clips
+#graphify/rationale #graphify/EXTRACTED #community/_run

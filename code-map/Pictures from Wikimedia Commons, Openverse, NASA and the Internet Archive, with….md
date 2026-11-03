@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/image_sources.py"
 type: "rationale"
-community: "writing.py"
+community: "subprocess"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/writingpy
+  - community/subprocess
 ---
 
 # Pictures from Wikimedia Commons, Openverse, NASA and the Internet Archive, with…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[image_sources.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/writingpy
+#graphify/rationale #graphify/EXTRACTED #community/subprocess

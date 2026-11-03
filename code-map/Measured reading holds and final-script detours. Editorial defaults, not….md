@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/review.py"
 type: "rationale"
-community: "visual_review"
-location: "L24"
+community: "pacing_check"
+location: "L30"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/visual_review
+  - community/pacing_check
 ---
 
 # Measured reading holds and final-script detours. Editorial defaults, not…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[pacing_check()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/visual_review
+#graphify/rationale #graphify/EXTRACTED #community/pacing_check

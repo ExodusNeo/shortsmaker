@@ -1,18 +1,17 @@
 ---
-source_file: "tests/test_style.py"
+source_file: "tests/test_h3_handoff.py"
 type: "code"
-community: "test_style.py"
-location: "L111"
+community: "test_h3_handoff.py"
+location: "L24"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/test_stylepy
+  - community/test_h3_handoffpy
 ---
 
 # ask()
 
 ## Connections
-- [[plan_with()]] - `indirect_call` [INFERRED]
-- [[test_fact_check_sees_new_graphics()]] - `indirect_call` [INFERRED]
+- [[fake_ai()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/INFERRED #community/test_stylepy
+#graphify/code #graphify/INFERRED #community/test_h3_handoffpy

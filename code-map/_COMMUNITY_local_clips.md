@@ -1,18 +1,17 @@
 ---
 type: community
-members: 25
+members: 22
 ---
 
 # local_clips
 
-**Members:** 25 nodes
+**Members:** 22 nodes
 
 ## Members
 - [[Detailed prompts for the owner-made clips (Colab H3 or Flow), written by the AI…]] - rationale - shortsmaker/gpu.py
 - [[Fill a 916 frame with the picture (centre crop), for the AI video model's…]] - rationale - shortsmaker/gpu.py
-- [[Final H.264 encode NVENC on the GPU when available (frees the CPU), else x264.]] - rationale - shortsmaker/media_tools.py
 - [[Mike the Headless Chicken, fix round 3 the LTX worker died without writing…]] - rationale - tests/test_full_scenes.py
-- [[Path_6]] - code
+- [[Path_8]] - code
 - [[Pause the batch write each animate scene's start picture + detailed prompt to…]] - rationale - shortsmaker/gpu.py
 - [[Real motion for every scene with a picture scenes Claude matched to archival…]] - rationale - shortsmaker/gpu.py
 - [[Run a batch on this PC's GPU through a local_ai worker (gen.py, or…]] - rationale - shortsmaker/gpu.py
@@ -29,10 +28,8 @@ members: 25
 - [[motion_prompt()]] - code - shortsmaker/gpu.py
 - [[start_picture()]] - code - shortsmaker/gpu.py
 - [[start_picture_problems()]] - code - shortsmaker/gpu.py
-- [[test_encoder_cache_lives_with_video_encoder()]] - code - tests/test_package.py
 - [[test_local_job_retries_a_hard_crash()]] - code - tests/test_full_scenes.py
 - [[veo_handoff()]] - code - shortsmaker/gpu.py
-- [[video_encoder()]] - code - shortsmaker/media_tools.py
 
 ## Live Query (requires Dataview plugin)
 
@@ -42,22 +39,20 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 11 edges to [[_COMMUNITY_test_full_scenes.py]]
+- 10 edges to [[_COMMUNITY_test_full_scenes.py]]
 - 6 edges to [[_COMMUNITY_test_h3_handoff.py]]
-- 6 edges to [[_COMMUNITY_json]]
-- 5 edges to [[_COMMUNITY_ffmpeg]]
-- 4 edges to [[_COMMUNITY_render]]
-- 3 edges to [[_COMMUNITY_ask_ai]]
+- 6 edges to [[_COMMUNITY_render]]
+- 4 edges to [[_COMMUNITY_json]]
+- 4 edges to [[_COMMUNITY_duration]]
 - 3 edges to [[_COMMUNITY_paint_opener_start]]
-- 2 edges to [[_COMMUNITY_main_1]]
-- 1 edge to [[_COMMUNITY_footage.py]]
+- 2 edges to [[_COMMUNITY_ask_ai]]
+- 2 edges to [[_COMMUNITY_subprocess]]
 - 1 edge to [[_COMMUNITY_frame_maker]]
-- 1 edge to [[_COMMUNITY_h3_run.py]]
-- 1 edge to [[_COMMUNITY_render_clips]]
+- 1 edge to [[_COMMUNITY_paint_instead]]
 
 ## Top bridge nodes
-- [[local_clips()]] - degree 15, connects to 6 communities
-- [[local_job()]] - degree 11, connects to 5 communities
-- [[video_encoder()]] - degree 10, connects to 5 communities
+- [[local_job()]] - degree 11, connects to 7 communities
+- [[local_clips()]] - degree 15, connects to 5 communities
 - [[veo_handoff()]] - degree 14, connects to 4 communities
-- [[Path_6]] - degree 13, connects to 4 communities
+- [[Path_8]] - degree 13, connects to 4 communities
+- [[h3_prompts()]] - degree 7, connects to 3 communities

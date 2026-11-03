@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "test_review_redraws_custom"
+community: "choose_images"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_review_redraws_custom
+  - community/choose_images
 ---
 
 # Path
 
 ## Connections
-- [[_review_state()]] - `references` [EXTRACTED]
+- [[choose_images()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_review_redraws_custom
+#graphify/code #graphify/EXTRACTED #community/choose_images

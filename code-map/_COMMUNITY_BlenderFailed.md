@@ -20,8 +20,8 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 1 edge to [[_COMMUNITY_render_clips]]
-- 1 edge to [[_COMMUNITY_test_full_scenes.py]]
+- 1 edge to [[_COMMUNITY_test_blender_render.py]]
+- 1 edge to [[_COMMUNITY_subprocess]]
 
 ## Top bridge nodes
 - [[BlenderFailed]] - degree 4, connects to 2 communities

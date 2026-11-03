@@ -2,7 +2,7 @@
 source_file: "shortsmaker/review.py"
 type: "code"
 community: "rewrite_paint_prompts"
-location: "L508"
+location: "L514"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -19,6 +19,7 @@ tags:
 - [[fix_short()]] - `calls` [EXTRACTED]
 - [[json]] - `calls` [EXTRACTED]
 - [[paint_opener_start()]] - `calls` [EXTRACTED]
+- [[plan_gap_paintings()]] - `calls` [EXTRACTED]
 - [[review.py]] - `contains` [EXTRACTED]
 - [[test_rewrite_paint_prompts()]] - `calls` [EXTRACTED]
 

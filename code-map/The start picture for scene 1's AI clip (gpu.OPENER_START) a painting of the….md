@@ -2,7 +2,7 @@
 source_file: "shortsmaker/review.py"
 type: "rationale"
 community: "paint_opener_start"
-location: "L398"
+location: "L402"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED

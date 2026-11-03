@@ -2,7 +2,7 @@
 source_file: "shortsmaker/motion.py"
 type: "code"
 community: "code_custom_scenes"
-location: "L277"
+location: "L296"
 tags:
   - graphify/code
   - graphify/EXTRACTED

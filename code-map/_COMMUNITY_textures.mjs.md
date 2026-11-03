@@ -1,13 +1,15 @@
 ---
 type: community
-members: 20
+members: 22
 ---
 
 # textures.mjs
 
-**Members:** 20 nodes
+**Members:** 22 nodes
 
 ## Members
+- [[dot-glint()]] - code - drawn/kit.mjs
+- [[dot-ss()]] - code - drawn/kit.mjs
 - [[ellipse()]] - code - drawn/lib/core.mjs
 - [[fibre()]] - code - drawn/lib/core.mjs
 - [[fibrePaper()]] - code - drawn/lib/textures.mjs
@@ -41,12 +43,11 @@ SORT file.name ASC
 - 8 edges to [[_COMMUNITY_kit.mjs]]
 - 6 edges to [[_COMMUNITY_makeKit]]
 - 5 edges to [[_COMMUNITY_bean.mjs]]
-- 1 edge to [[_COMMUNITY_popS]]
-- 1 edge to [[_COMMUNITY_k]]
+- 4 edges to [[_COMMUNITY_k]]
 
 ## Top bridge nodes
 - [[textures.mjs]] - degree 27, connects to 4 communities
-- [[star4()]] - degree 6, connects to 4 communities
 - [[hash()]] - degree 7, connects to 3 communities
+- [[star4()]] - degree 6, connects to 3 communities
 - [[grainCanvas()]] - degree 10, connects to 2 communities
 - [[sun()]] - degree 7, connects to 2 communities

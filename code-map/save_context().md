@@ -15,7 +15,7 @@ tags:
 - [[Path_30]] - `references` [EXTRACTED]
 - [[checkpoints.py]] - `contains` [EXTRACTED]
 - [[pack()]] - `calls` [EXTRACTED]
-- [[render()]] - `calls` [EXTRACTED]
+- [[render()_1]] - `calls` [EXTRACTED]
 - [[write_json()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/main

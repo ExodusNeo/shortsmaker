@@ -19,6 +19,6 @@ tags:
 - [[frame()]] - `indirect_call` [INFERRED]
 - [[frame_render.py]] - `contains` [EXTRACTED]
 - [[graphic_overlay()]] - `calls` [EXTRACTED]
-- [[render()]] - `calls` [EXTRACTED]
+- [[render()_1]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/frame_maker

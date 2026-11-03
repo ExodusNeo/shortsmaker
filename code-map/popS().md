@@ -1,12 +1,12 @@
 ---
 source_file: "drawn/lib/core.mjs"
 type: "code"
-community: "popS"
+community: "k"
 location: "L26"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/popS
+  - community/k
 ---
 
 # popS()
@@ -22,4 +22,4 @@ tags:
 - [[kit.mjs]] - `imports` [EXTRACTED]
 - [[makeKit()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/popS
+#graphify/code #graphify/EXTRACTED #community/k

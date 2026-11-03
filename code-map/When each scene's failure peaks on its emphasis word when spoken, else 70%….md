@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/blender_render.py"
 type: "rationale"
-community: "render_clips"
+community: "peaks"
 location: "L41"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/render_clips
+  - community/peaks
 ---
 
 # When each scene's failure peaks: on its emphasis word when spoken, else 70%…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[peaks()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/render_clips
+#graphify/rationale #graphify/EXTRACTED #community/peaks

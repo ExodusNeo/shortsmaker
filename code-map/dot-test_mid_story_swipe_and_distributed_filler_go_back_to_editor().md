@@ -2,7 +2,7 @@
 source_file: "tests/test_quality.py"
 type: "code"
 community: "StoryPacingTests"
-location: "L95"
+location: "L102"
 tags:
   - graphify/code
   - graphify/EXTRACTED

@@ -43,14 +43,13 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 21 edges to [[_COMMUNITY_core.mjs]]
+- 8 edges to [[_COMMUNITY_k]]
 - 7 edges to [[_COMMUNITY_kit.mjs]]
-- 7 edges to [[_COMMUNITY_k]]
 - 6 edges to [[_COMMUNITY_textures.mjs]]
 - 2 edges to [[_COMMUNITY_bean.mjs]]
-- 1 edge to [[_COMMUNITY_popS]]
 
 ## Top bridge nodes
-- [[makeKit()]] - degree 21, connects to 6 communities
+- [[makeKit()]] - degree 21, connects to 5 communities
 - [[pen.mjs]] - degree 16, connects to 3 communities
 - [[noise1()]] - degree 9, connects to 3 communities
 - [[eOut()]] - degree 7, connects to 3 communities
