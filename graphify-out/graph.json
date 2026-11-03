@@ -1618,7 +1618,7 @@
       "file_type": "code",
       "norm_label": "fingerprint()",
       "source_file": "shortsmaker/drawn_opener.py",
-      "source_location": "L203"
+      "source_location": "L206"
     },
     {
       "id": "shortsmaker_drawn_opener_lint",
@@ -1642,7 +1642,7 @@
       "file_type": "code",
       "norm_label": "make_opener()",
       "source_file": "shortsmaker/drawn_opener.py",
-      "source_location": "L208"
+      "source_location": "L211"
     },
     {
       "id": "shortsmaker_drawn_opener_make_opener_fail",
@@ -1654,7 +1654,7 @@
       "file_type": "code",
       "norm_label": "fail()",
       "source_file": "shortsmaker/drawn_opener.py",
-      "source_location": "L226"
+      "source_location": "L229"
     },
     {
       "id": "shortsmaker_drawn_opener_missing_parts",
@@ -16745,7 +16745,7 @@
       "file_type": "code",
       "norm_label": ".bank()",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L308"
+      "source_location": "L319"
     },
     {
       "id": "drawn_kit_makekit_k_banknote",
@@ -16756,7 +16756,7 @@
       "file_type": "code",
       "norm_label": ".banknote()",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L375"
+      "source_location": "L386"
     },
     {
       "id": "drawn_kit_makekit_k_barrel",
@@ -16767,7 +16767,7 @@
       "file_type": "code",
       "norm_label": ".barrel()",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L364"
+      "source_location": "L375"
     },
     {
       "id": "drawn_kit_makekit_k_bird",
@@ -16778,7 +16778,7 @@
       "file_type": "code",
       "norm_label": ".bird()",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L246"
+      "source_location": "L257"
     },
     {
       "id": "drawn_kit_makekit_k_blob",
@@ -16800,7 +16800,7 @@
       "file_type": "code",
       "norm_label": ".boat()",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L282"
+      "source_location": "L293"
     },
     {
       "id": "drawn_kit_makekit_k_bottle",
@@ -16811,7 +16811,7 @@
       "file_type": "code",
       "norm_label": ".bottle()",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L386"
+      "source_location": "L397"
     },
     {
       "id": "drawn_kit_makekit_k_bubble",
@@ -16822,7 +16822,7 @@
       "file_type": "code",
       "norm_label": ".bubble()",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L420"
+      "source_location": "L431"
     },
     {
       "id": "drawn_kit_makekit_k_burst",
@@ -16833,7 +16833,7 @@
       "file_type": "code",
       "norm_label": ".burst()",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L410"
+      "source_location": "L421"
     },
     {
       "id": "drawn_kit_makekit_k_cart",
@@ -16844,7 +16844,7 @@
       "file_type": "code",
       "norm_label": ".cart()",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L285"
+      "source_location": "L296"
     },
     {
       "id": "drawn_kit_makekit_k_chair",
@@ -16855,7 +16855,7 @@
       "file_type": "code",
       "norm_label": ".chair()",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L390"
+      "source_location": "L401"
     },
     {
       "id": "drawn_kit_makekit_k_chicken",
@@ -16866,7 +16866,7 @@
       "file_type": "code",
       "norm_label": ".chicken()",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L186"
+      "source_location": "L197"
     },
     {
       "id": "drawn_kit_makekit_k_clock",
@@ -16877,7 +16877,7 @@
       "file_type": "code",
       "norm_label": ".clock()",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L395"
+      "source_location": "L406"
     },
     {
       "id": "drawn_kit_makekit_k_cloud",
@@ -16899,7 +16899,7 @@
       "file_type": "code",
       "norm_label": ".coin()",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L371"
+      "source_location": "L382"
     },
     {
       "id": "drawn_kit_makekit_k_coins",
@@ -16910,7 +16910,7 @@
       "file_type": "code",
       "norm_label": ".coins()",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L369"
+      "source_location": "L380"
     },
     {
       "id": "drawn_kit_makekit_k_cow",
@@ -16921,7 +16921,7 @@
       "file_type": "code",
       "norm_label": ".cow()",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L256"
+      "source_location": "L267"
     },
     {
       "id": "drawn_kit_makekit_k_crate",
@@ -16932,7 +16932,7 @@
       "file_type": "code",
       "norm_label": ".crate()",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L360"
+      "source_location": "L371"
     },
     {
       "id": "drawn_kit_makekit_k_cup",
@@ -16943,7 +16943,7 @@
       "file_type": "code",
       "norm_label": ".cup()",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L382"
+      "source_location": "L393"
     },
     {
       "id": "drawn_kit_makekit_k_disc",
@@ -16965,7 +16965,7 @@
       "file_type": "code",
       "norm_label": ".dog()",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L177"
+      "source_location": "L188"
     },
     {
       "id": "drawn_kit_makekit_k_dot",
@@ -16998,7 +16998,7 @@
       "file_type": "code",
       "norm_label": ".exclaim()",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L419"
+      "source_location": "L430"
     },
     {
       "id": "drawn_kit_makekit_k_factory",
@@ -17009,7 +17009,7 @@
       "file_type": "code",
       "norm_label": ".factory()",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L316"
+      "source_location": "L327"
     },
     {
       "id": "drawn_kit_makekit_k_fade",
@@ -17031,7 +17031,7 @@
       "file_type": "code",
       "norm_label": ".fire()",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L398"
+      "source_location": "L409"
     },
     {
       "id": "drawn_kit_makekit_k_ground",
@@ -17064,7 +17064,7 @@
       "file_type": "code",
       "norm_label": ".horse()",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L213"
+      "source_location": "L224"
     },
     {
       "id": "drawn_kit_makekit_k_house",
@@ -17075,7 +17075,7 @@
       "file_type": "code",
       "norm_label": ".house()",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L291"
+      "source_location": "L302"
     },
     {
       "id": "drawn_kit_makekit_k_ink",
@@ -17097,7 +17097,7 @@
       "file_type": "code",
       "norm_label": ".island()",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L356"
+      "source_location": "L367"
     },
     {
       "id": "drawn_kit_makekit_k_moneybag",
@@ -17108,7 +17108,7 @@
       "file_type": "code",
       "norm_label": ".moneybag()",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L372"
+      "source_location": "L383"
     },
     {
       "id": "drawn_kit_makekit_k_moon",
@@ -17174,7 +17174,7 @@
       "file_type": "code",
       "norm_label": ".paper()",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L377"
+      "source_location": "L388"
     },
     {
       "id": "drawn_kit_makekit_k_person",
@@ -17196,7 +17196,7 @@
       "file_type": "code",
       "norm_label": ".pig()",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L250"
+      "source_location": "L261"
     },
     {
       "id": "drawn_kit_makekit_k_pine",
@@ -17207,7 +17207,7 @@
       "file_type": "code",
       "norm_label": ".pine()",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L354"
+      "source_location": "L365"
     },
     {
       "id": "drawn_kit_makekit_k_pop",
@@ -17229,7 +17229,7 @@
       "file_type": "code",
       "norm_label": ".puff()",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L412"
+      "source_location": "L423"
     },
     {
       "id": "drawn_kit_makekit_k_question",
@@ -17240,7 +17240,7 @@
       "file_type": "code",
       "norm_label": ".question()",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L418"
+      "source_location": "L429"
     },
     {
       "id": "drawn_kit_makekit_k_rain",
@@ -17251,7 +17251,7 @@
       "file_type": "code",
       "norm_label": ".rain()",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L423"
+      "source_location": "L434"
     },
     {
       "id": "drawn_kit_makekit_k_rect",
@@ -17306,7 +17306,7 @@
       "file_type": "code",
       "norm_label": ".sack()",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L366"
+      "source_location": "L377"
     },
     {
       "id": "drawn_kit_makekit_k_sea",
@@ -17339,7 +17339,7 @@
       "file_type": "code",
       "norm_label": ".ship()",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L265"
+      "source_location": "L276"
     },
     {
       "id": "drawn_kit_makekit_k_shop",
@@ -17350,7 +17350,7 @@
       "file_type": "code",
       "norm_label": ".shop()",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L299"
+      "source_location": "L310"
     },
     {
       "id": "drawn_kit_makekit_k_sign",
@@ -17361,7 +17361,7 @@
       "file_type": "code",
       "norm_label": ".sign()",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L392"
+      "source_location": "L403"
     },
     {
       "id": "drawn_kit_makekit_k_sky",
@@ -17383,7 +17383,7 @@
       "file_type": "code",
       "norm_label": ".smoke()",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L414"
+      "source_location": "L425"
     },
     {
       "id": "drawn_kit_makekit_k_speed",
@@ -17394,7 +17394,7 @@
       "file_type": "code",
       "norm_label": ".speed()",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L409"
+      "source_location": "L420"
     },
     {
       "id": "drawn_kit_makekit_k_splash",
@@ -17405,7 +17405,7 @@
       "file_type": "code",
       "norm_label": ".splash()",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L416"
+      "source_location": "L427"
     },
     {
       "id": "drawn_kit_makekit_k_sun",
@@ -17427,7 +17427,7 @@
       "file_type": "code",
       "norm_label": ".sweat()",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L404"
+      "source_location": "L415"
     },
     {
       "id": "drawn_kit_makekit_k_table",
@@ -17438,7 +17438,7 @@
       "file_type": "code",
       "norm_label": ".table()",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L388"
+      "source_location": "L399"
     },
     {
       "id": "drawn_kit_makekit_k_tank",
@@ -17449,7 +17449,7 @@
       "file_type": "code",
       "norm_label": ".tank()",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L324"
+      "source_location": "L335"
     },
     {
       "id": "drawn_kit_makekit_k_text",
@@ -17471,7 +17471,7 @@
       "file_type": "code",
       "norm_label": ".tower()",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L334"
+      "source_location": "L345"
     },
     {
       "id": "drawn_kit_makekit_k_tree",
@@ -17482,7 +17482,7 @@
       "file_type": "code",
       "norm_label": ".tree()",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L351"
+      "source_location": "L362"
     },
     {
       "id": "drawn_kit_makekit_k_wave",
@@ -17749,7 +17749,7 @@
       "source_location": "L155"
     },
     {
-      "id": "shortsmaker_drawn_opener_rationale_209",
+      "id": "shortsmaker_drawn_opener_rationale_212",
       "label": "Scene 1's drawn opener clip (work/drawn/opener.mp4, scene 1 + the crossfade\u2026",
       "_origin": "ast",
       "community": 12,
@@ -17757,7 +17757,7 @@
       "file_type": "rationale",
       "norm_label": "scene 1's drawn opener clip (work/drawn/opener.mp4, scene 1 + the crossfade...",
       "source_file": "shortsmaker/drawn_opener.py",
-      "source_location": "L209"
+      "source_location": "L212"
     },
     {
       "id": "shortsmaker_drawn_opener_rationale_45",
@@ -18670,7 +18670,7 @@
       "file_type": "code",
       "norm_label": ".arc()",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L433"
+      "source_location": "L444"
     },
     {
       "id": "drawn_kit_makekit_k_crowd",
@@ -18681,7 +18681,7 @@
       "file_type": "code",
       "norm_label": ".crowd()",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L161"
+      "source_location": "L172"
     },
     {
       "id": "drawn_kit_makekit_k_fall",
@@ -18692,7 +18692,7 @@
       "file_type": "code",
       "norm_label": ".fall()",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L432"
+      "source_location": "L443"
     },
     {
       "id": "drawn_kit_makekit_k_flood",
@@ -18703,7 +18703,7 @@
       "file_type": "code",
       "norm_label": ".flood()",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L427"
+      "source_location": "L438"
     },
     {
       "id": "drawn_kit_makekit_k_palm",
@@ -18714,7 +18714,7 @@
       "file_type": "code",
       "norm_label": ".palm()",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L345"
+      "source_location": "L356"
     },
     {
       "id": "drawn_kit_makekit_k_shimmer",
@@ -18725,7 +18725,7 @@
       "file_type": "code",
       "norm_label": ".shimmer()",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L406"
+      "source_location": "L417"
     },
     {
       "id": "drawn_kit_makekit_k_snowfall",
@@ -18736,7 +18736,7 @@
       "file_type": "code",
       "norm_label": ".snowfall()",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L425"
+      "source_location": "L436"
     },
     {
       "id": "drawn_lib_core",
@@ -20573,7 +20573,7 @@
       "file_type": "code",
       "norm_label": ".glint()",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L403"
+      "source_location": "L414"
     },
     {
       "id": "drawn_kit_makekit_k_ss",
@@ -27144,7 +27144,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L148",
+      "source_location": "L159",
       "weight": 1.0
     },
     {
@@ -27156,7 +27156,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L164",
+      "source_location": "L175",
       "weight": 1.0
     },
     {
@@ -27288,7 +27288,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L433",
+      "source_location": "L444",
       "weight": 1.0
     },
     {
@@ -27300,7 +27300,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L433",
+      "source_location": "L444",
       "weight": 1.0
     },
     {
@@ -27312,7 +27312,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L309",
+      "source_location": "L320",
       "weight": 1.0
     },
     {
@@ -27324,7 +27324,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L310",
+      "source_location": "L321",
       "weight": 1.0
     },
     {
@@ -27336,7 +27336,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L313",
+      "source_location": "L324",
       "weight": 1.0
     },
     {
@@ -27348,7 +27348,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L375",
+      "source_location": "L386",
       "weight": 1.0
     },
     {
@@ -27360,7 +27360,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L375",
+      "source_location": "L386",
       "weight": 1.0
     },
     {
@@ -27372,7 +27372,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L376",
+      "source_location": "L387",
       "weight": 1.0
     },
     {
@@ -27384,7 +27384,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L376",
+      "source_location": "L387",
       "weight": 1.0
     },
     {
@@ -27396,7 +27396,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L376",
+      "source_location": "L387",
       "weight": 1.0
     },
     {
@@ -27408,7 +27408,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L365",
+      "source_location": "L376",
       "weight": 1.0
     },
     {
@@ -27420,7 +27420,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L365",
+      "source_location": "L376",
       "weight": 1.0
     },
     {
@@ -27444,7 +27444,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L284",
+      "source_location": "L295",
       "weight": 1.0
     },
     {
@@ -27456,7 +27456,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L387",
+      "source_location": "L398",
       "weight": 1.0
     },
     {
@@ -27468,7 +27468,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L387",
+      "source_location": "L398",
       "weight": 1.0
     },
     {
@@ -27480,7 +27480,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L420",
+      "source_location": "L431",
       "weight": 1.0
     },
     {
@@ -27492,7 +27492,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L421",
+      "source_location": "L432",
       "weight": 1.0
     },
     {
@@ -27504,7 +27504,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L421",
+      "source_location": "L432",
       "weight": 1.0
     },
     {
@@ -27516,7 +27516,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L422",
+      "source_location": "L433",
       "weight": 1.0
     },
     {
@@ -27528,7 +27528,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L422",
+      "source_location": "L433",
       "weight": 1.0
     },
     {
@@ -27540,7 +27540,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L410",
+      "source_location": "L421",
       "weight": 1.0
     },
     {
@@ -27552,7 +27552,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L286",
+      "source_location": "L297",
       "weight": 1.0
     },
     {
@@ -27564,7 +27564,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L286",
+      "source_location": "L297",
       "weight": 1.0
     },
     {
@@ -27576,7 +27576,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L287",
+      "source_location": "L298",
       "weight": 1.0
     },
     {
@@ -27588,7 +27588,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L188",
+      "source_location": "L199",
       "weight": 1.0
     },
     {
@@ -27600,7 +27600,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L188",
+      "source_location": "L199",
       "weight": 1.0
     },
     {
@@ -27612,7 +27612,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L188",
+      "source_location": "L199",
       "weight": 1.0
     },
     {
@@ -27624,7 +27624,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L193",
+      "source_location": "L204",
       "weight": 1.0
     },
     {
@@ -27636,7 +27636,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L395",
+      "source_location": "L406",
       "weight": 1.0
     },
     {
@@ -27648,7 +27648,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L395",
+      "source_location": "L406",
       "weight": 1.0
     },
     {
@@ -27660,7 +27660,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L395",
+      "source_location": "L406",
       "weight": 1.0
     },
     {
@@ -27696,7 +27696,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L371",
+      "source_location": "L382",
       "weight": 1.0
     },
     {
@@ -27708,7 +27708,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L371",
+      "source_location": "L382",
       "weight": 1.0
     },
     {
@@ -27720,7 +27720,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L371",
+      "source_location": "L382",
       "weight": 1.0
     },
     {
@@ -27732,7 +27732,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L370",
+      "source_location": "L381",
       "weight": 1.0
     },
     {
@@ -27744,7 +27744,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L370",
+      "source_location": "L381",
       "weight": 1.0
     },
     {
@@ -27756,7 +27756,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L370",
+      "source_location": "L381",
       "weight": 1.0
     },
     {
@@ -27768,7 +27768,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L258",
+      "source_location": "L269",
       "weight": 1.0
     },
     {
@@ -27780,7 +27780,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L258",
+      "source_location": "L269",
       "weight": 1.0
     },
     {
@@ -27792,7 +27792,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L259",
+      "source_location": "L270",
       "weight": 1.0
     },
     {
@@ -27804,7 +27804,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L260",
+      "source_location": "L271",
       "weight": 1.0
     },
     {
@@ -27816,7 +27816,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L260",
+      "source_location": "L271",
       "weight": 1.0
     },
     {
@@ -27828,7 +27828,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L360",
+      "source_location": "L371",
       "weight": 1.0
     },
     {
@@ -27840,7 +27840,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L361",
+      "source_location": "L372",
       "weight": 1.0
     },
     {
@@ -27852,7 +27852,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L362",
+      "source_location": "L373",
       "weight": 1.0
     },
     {
@@ -27864,7 +27864,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L164",
+      "source_location": "L175",
       "weight": 1.0
     },
     {
@@ -27876,7 +27876,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L165",
+      "source_location": "L176",
       "weight": 1.0
     },
     {
@@ -27888,7 +27888,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L383",
+      "source_location": "L394",
       "weight": 1.0
     },
     {
@@ -27900,7 +27900,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L383",
+      "source_location": "L394",
       "weight": 1.0
     },
     {
@@ -27948,7 +27948,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L180",
+      "source_location": "L191",
       "weight": 1.0
     },
     {
@@ -27960,7 +27960,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L180",
+      "source_location": "L191",
       "weight": 1.0
     },
     {
@@ -27972,7 +27972,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L181",
+      "source_location": "L192",
       "weight": 1.0
     },
     {
@@ -27984,7 +27984,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L181",
+      "source_location": "L192",
       "weight": 1.0
     },
     {
@@ -27996,7 +27996,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L183",
+      "source_location": "L194",
       "weight": 1.0
     },
     {
@@ -28044,7 +28044,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L419",
+      "source_location": "L430",
       "weight": 1.0
     },
     {
@@ -28056,7 +28056,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L419",
+      "source_location": "L430",
       "weight": 1.0
     },
     {
@@ -28068,7 +28068,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L419",
+      "source_location": "L430",
       "weight": 1.0
     },
     {
@@ -28080,7 +28080,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L317",
+      "source_location": "L328",
       "weight": 1.0
     },
     {
@@ -28092,7 +28092,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L320",
+      "source_location": "L331",
       "weight": 1.0
     },
     {
@@ -28104,7 +28104,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L321",
+      "source_location": "L332",
       "weight": 1.0
     },
     {
@@ -28128,7 +28128,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L432",
+      "source_location": "L443",
       "weight": 1.0
     },
     {
@@ -28140,7 +28140,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L432",
+      "source_location": "L443",
       "weight": 1.0
     },
     {
@@ -28152,7 +28152,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L400",
+      "source_location": "L411",
       "weight": 1.0
     },
     {
@@ -28164,7 +28164,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L428",
+      "source_location": "L439",
       "weight": 1.0
     },
     {
@@ -28176,7 +28176,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L430",
+      "source_location": "L441",
       "weight": 1.0
     },
     {
@@ -28188,7 +28188,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L403",
+      "source_location": "L414",
       "weight": 1.0
     },
     {
@@ -28200,7 +28200,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L403",
+      "source_location": "L414",
       "weight": 1.0
     },
     {
@@ -28212,7 +28212,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L403",
+      "source_location": "L414",
       "weight": 1.0
     },
     {
@@ -28284,7 +28284,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L215",
+      "source_location": "L226",
       "weight": 1.0
     },
     {
@@ -28296,7 +28296,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L224",
+      "source_location": "L235",
       "weight": 1.0
     },
     {
@@ -28308,7 +28308,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L224",
+      "source_location": "L235",
       "weight": 1.0
     },
     {
@@ -28320,7 +28320,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L229",
+      "source_location": "L240",
       "weight": 1.0
     },
     {
@@ -28332,7 +28332,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L233",
+      "source_location": "L244",
       "weight": 1.0
     },
     {
@@ -28344,7 +28344,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L236",
+      "source_location": "L247",
       "weight": 1.0
     },
     {
@@ -28356,7 +28356,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L292",
+      "source_location": "L303",
       "weight": 1.0
     },
     {
@@ -28368,7 +28368,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L293",
+      "source_location": "L304",
       "weight": 1.0
     },
     {
@@ -28380,7 +28380,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L357",
+      "source_location": "L368",
       "weight": 1.0
     },
     {
@@ -28392,7 +28392,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L357",
+      "source_location": "L368",
       "weight": 1.0
     },
     {
@@ -28404,7 +28404,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L373",
+      "source_location": "L384",
       "weight": 1.0
     },
     {
@@ -28416,7 +28416,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L373",
+      "source_location": "L384",
       "weight": 1.0
     },
     {
@@ -28428,7 +28428,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L374",
+      "source_location": "L385",
       "weight": 1.0
     },
     {
@@ -28500,7 +28500,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L346",
+      "source_location": "L357",
       "weight": 1.0
     },
     {
@@ -28512,7 +28512,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L349",
+      "source_location": "L360",
       "weight": 1.0
     },
     {
@@ -28524,7 +28524,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L377",
+      "source_location": "L388",
       "weight": 1.0
     },
     {
@@ -28536,7 +28536,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L377",
+      "source_location": "L388",
       "weight": 1.0
     },
     {
@@ -28548,7 +28548,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L378",
+      "source_location": "L389",
       "weight": 1.0
     },
     {
@@ -28560,7 +28560,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L379",
+      "source_location": "L390",
       "weight": 1.0
     },
     {
@@ -28572,7 +28572,31 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L381",
+      "source_location": "L392",
+      "weight": 1.0
+    },
+    {
+      "source": "drawn_kit_makekit_k_person",
+      "target": "drawn_lib_core_clamp",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "drawn/kit.mjs",
+      "source_location": "L144",
+      "weight": 1.0
+    },
+    {
+      "source": "drawn_kit_makekit_k_person",
+      "target": "drawn_lib_core_ik",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "drawn/kit.mjs",
+      "source_location": "L149",
       "weight": 1.0
     },
     {
@@ -28584,7 +28608,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L150",
+      "source_location": "L161",
       "weight": 1.0
     },
     {
@@ -28596,7 +28620,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L151",
+      "source_location": "L162",
       "weight": 1.0
     },
     {
@@ -28608,7 +28632,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L252",
+      "source_location": "L263",
       "weight": 1.0
     },
     {
@@ -28620,7 +28644,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L252",
+      "source_location": "L263",
       "weight": 1.0
     },
     {
@@ -28632,7 +28656,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L252",
+      "source_location": "L263",
       "weight": 1.0
     },
     {
@@ -28644,7 +28668,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L253",
+      "source_location": "L264",
       "weight": 1.0
     },
     {
@@ -28656,7 +28680,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L355",
+      "source_location": "L366",
       "weight": 1.0
     },
     {
@@ -28680,7 +28704,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L412",
+      "source_location": "L423",
       "weight": 1.0
     },
     {
@@ -28692,7 +28716,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L413",
+      "source_location": "L424",
       "weight": 1.0
     },
     {
@@ -28704,7 +28728,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L418",
+      "source_location": "L429",
       "weight": 1.0
     },
     {
@@ -28716,7 +28740,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L418",
+      "source_location": "L429",
       "weight": 1.0
     },
     {
@@ -28728,7 +28752,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L418",
+      "source_location": "L429",
       "weight": 1.0
     },
     {
@@ -28800,7 +28824,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L367",
+      "source_location": "L378",
       "weight": 1.0
     },
     {
@@ -28812,7 +28836,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L367",
+      "source_location": "L378",
       "weight": 1.0
     },
     {
@@ -28824,7 +28848,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L368",
+      "source_location": "L379",
       "weight": 1.0
     },
     {
@@ -28872,7 +28896,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L407",
+      "source_location": "L418",
       "weight": 1.0
     },
     {
@@ -28884,7 +28908,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L269",
+      "source_location": "L280",
       "weight": 1.0
     },
     {
@@ -28896,7 +28920,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L300",
+      "source_location": "L311",
       "weight": 1.0
     },
     {
@@ -28908,7 +28932,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L301",
+      "source_location": "L312",
       "weight": 1.0
     },
     {
@@ -28920,7 +28944,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L303",
+      "source_location": "L314",
       "weight": 1.0
     },
     {
@@ -28932,7 +28956,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L392",
+      "source_location": "L403",
       "weight": 1.0
     },
     {
@@ -28944,7 +28968,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L393",
+      "source_location": "L404",
       "weight": 1.0
     },
     {
@@ -28956,7 +28980,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L394",
+      "source_location": "L405",
       "weight": 1.0
     },
     {
@@ -28992,7 +29016,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L415",
+      "source_location": "L426",
       "weight": 1.0
     },
     {
@@ -29004,7 +29028,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L426",
+      "source_location": "L437",
       "weight": 1.0
     },
     {
@@ -29016,7 +29040,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L416",
+      "source_location": "L427",
       "weight": 1.0
     },
     {
@@ -29028,7 +29052,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L417",
+      "source_location": "L428",
       "weight": 1.0
     },
     {
@@ -29088,7 +29112,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L404",
+      "source_location": "L415",
       "weight": 1.0
     },
     {
@@ -29100,7 +29124,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L405",
+      "source_location": "L416",
       "weight": 1.0
     },
     {
@@ -29112,7 +29136,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L388",
+      "source_location": "L399",
       "weight": 1.0
     },
     {
@@ -29124,7 +29148,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L389",
+      "source_location": "L400",
       "weight": 1.0
     },
     {
@@ -29136,7 +29160,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L325",
+      "source_location": "L336",
       "weight": 1.0
     },
     {
@@ -29148,7 +29172,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L326",
+      "source_location": "L337",
       "weight": 1.0
     },
     {
@@ -29160,7 +29184,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L328",
+      "source_location": "L339",
       "weight": 1.0
     },
     {
@@ -29172,7 +29196,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L328",
+      "source_location": "L339",
       "weight": 1.0
     },
     {
@@ -29184,7 +29208,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L329",
+      "source_location": "L340",
       "weight": 1.0
     },
     {
@@ -29208,7 +29232,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L352",
+      "source_location": "L363",
       "weight": 1.0
     },
     {
@@ -29220,7 +29244,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L353",
+      "source_location": "L364",
       "weight": 1.0
     },
     {
@@ -29232,7 +29256,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "drawn/kit.mjs",
-      "source_location": "L353",
+      "source_location": "L364",
       "weight": 1.0
     },
     {
@@ -35508,7 +35532,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "shortsmaker/drawn_opener.py",
-      "source_location": "L205",
+      "source_location": "L208",
       "weight": 1.0
     },
     {
@@ -35532,7 +35556,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "shortsmaker/drawn_opener.py",
-      "source_location": "L216",
+      "source_location": "L219",
       "weight": 1.0
     },
     {
@@ -35544,7 +35568,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "shortsmaker/drawn_opener.py",
-      "source_location": "L237",
+      "source_location": "L240",
       "weight": 1.0
     },
     {
@@ -35556,7 +35580,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "shortsmaker/drawn_opener.py",
-      "source_location": "L243",
+      "source_location": "L246",
       "weight": 1.0
     },
     {
@@ -35568,7 +35592,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "shortsmaker/drawn_opener.py",
-      "source_location": "L243",
+      "source_location": "L246",
       "weight": 1.0
     },
     {
@@ -35580,7 +35604,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "shortsmaker/drawn_opener.py",
-      "source_location": "L246",
+      "source_location": "L249",
       "weight": 1.0
     },
     {
@@ -35592,7 +35616,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "shortsmaker/drawn_opener.py",
-      "source_location": "L246",
+      "source_location": "L249",
       "weight": 1.0
     },
     {
@@ -35604,7 +35628,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "shortsmaker/drawn_opener.py",
-      "source_location": "L252",
+      "source_location": "L255",
       "weight": 1.0
     },
     {
@@ -35616,7 +35640,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "shortsmaker/drawn_opener.py",
-      "source_location": "L263",
+      "source_location": "L266",
       "weight": 1.0
     },
     {
@@ -35700,7 +35724,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "shortsmaker/drawn_opener.py",
-      "source_location": "L194",
+      "source_location": "L197",
       "weight": 1.0
     },
     {
@@ -54144,7 +54168,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "shortsmaker/drawn_opener.py",
-      "source_location": "L226",
+      "source_location": "L229",
       "weight": 1.0
     },
     {
@@ -54685,7 +54709,7 @@
       "confidence_score": 1.0,
       "context": "generic_arg",
       "source_file": "shortsmaker/drawn_opener.py",
-      "source_location": "L208",
+      "source_location": "L211",
       "weight": 1.0
     },
     {
@@ -80432,7 +80456,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "shortsmaker/drawn_opener.py",
-      "source_location": "L203",
+      "source_location": "L206",
       "weight": 1.0
     },
     {
@@ -80443,7 +80467,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "shortsmaker/drawn_opener.py",
-      "source_location": "L208",
+      "source_location": "L211",
       "weight": 1.0
     },
     {
@@ -88539,7 +88563,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "drawn/kit.mjs",
-      "source_location": "L161",
+      "source_location": "L172",
       "weight": 1.0
     },
     {
@@ -88550,7 +88574,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "drawn/kit.mjs",
-      "source_location": "L177",
+      "source_location": "L188",
       "weight": 1.0
     },
     {
@@ -88561,7 +88585,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "drawn/kit.mjs",
-      "source_location": "L186",
+      "source_location": "L197",
       "weight": 1.0
     },
     {
@@ -88572,7 +88596,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "drawn/kit.mjs",
-      "source_location": "L213",
+      "source_location": "L224",
       "weight": 1.0
     },
     {
@@ -88583,7 +88607,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "drawn/kit.mjs",
-      "source_location": "L246",
+      "source_location": "L257",
       "weight": 1.0
     },
     {
@@ -88594,7 +88618,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "drawn/kit.mjs",
-      "source_location": "L250",
+      "source_location": "L261",
       "weight": 1.0
     },
     {
@@ -88605,18 +88629,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "drawn/kit.mjs",
-      "source_location": "L256",
-      "weight": 1.0
-    },
-    {
-      "source": "drawn_kit_makekit_k",
-      "target": "drawn_kit_makekit_k_ship",
-      "relation": "method",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "drawn/kit.mjs",
-      "source_location": "L265",
+      "source_location": "L267",
       "weight": 1.0
     },
     {
@@ -88632,6 +88645,17 @@
     },
     {
       "source": "drawn_kit_makekit_k",
+      "target": "drawn_kit_makekit_k_ship",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "drawn/kit.mjs",
+      "source_location": "L276",
+      "weight": 1.0
+    },
+    {
+      "source": "drawn_kit_makekit_k",
       "target": "drawn_kit_makekit_k_ease",
       "relation": "method",
       "_origin": "ast",
@@ -88639,28 +88663,6 @@
       "confidence_score": 1.0,
       "source_file": "drawn/kit.mjs",
       "source_location": "L28",
-      "weight": 1.0
-    },
-    {
-      "source": "drawn_kit_makekit_k",
-      "target": "drawn_kit_makekit_k_boat",
-      "relation": "method",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "drawn/kit.mjs",
-      "source_location": "L282",
-      "weight": 1.0
-    },
-    {
-      "source": "drawn_kit_makekit_k",
-      "target": "drawn_kit_makekit_k_cart",
-      "relation": "method",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "drawn/kit.mjs",
-      "source_location": "L285",
       "weight": 1.0
     },
     {
@@ -88676,35 +88678,35 @@
     },
     {
       "source": "drawn_kit_makekit_k",
+      "target": "drawn_kit_makekit_k_boat",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "drawn/kit.mjs",
+      "source_location": "L293",
+      "weight": 1.0
+    },
+    {
+      "source": "drawn_kit_makekit_k",
+      "target": "drawn_kit_makekit_k_cart",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "drawn/kit.mjs",
+      "source_location": "L296",
+      "weight": 1.0
+    },
+    {
+      "source": "drawn_kit_makekit_k",
       "target": "drawn_kit_makekit_k_house",
       "relation": "method",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "drawn/kit.mjs",
-      "source_location": "L291",
-      "weight": 1.0
-    },
-    {
-      "source": "drawn_kit_makekit_k",
-      "target": "drawn_kit_makekit_k_shop",
-      "relation": "method",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "drawn/kit.mjs",
-      "source_location": "L299",
-      "weight": 1.0
-    },
-    {
-      "source": "drawn_kit_makekit_k",
-      "target": "drawn_kit_makekit_k_bank",
-      "relation": "method",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "drawn/kit.mjs",
-      "source_location": "L308",
+      "source_location": "L302",
       "weight": 1.0
     },
     {
@@ -88720,13 +88722,24 @@
     },
     {
       "source": "drawn_kit_makekit_k",
-      "target": "drawn_kit_makekit_k_factory",
+      "target": "drawn_kit_makekit_k_shop",
       "relation": "method",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "drawn/kit.mjs",
-      "source_location": "L316",
+      "source_location": "L310",
+      "weight": 1.0
+    },
+    {
+      "source": "drawn_kit_makekit_k",
+      "target": "drawn_kit_makekit_k_bank",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "drawn/kit.mjs",
+      "source_location": "L319",
       "weight": 1.0
     },
     {
@@ -88742,13 +88755,13 @@
     },
     {
       "source": "drawn_kit_makekit_k",
-      "target": "drawn_kit_makekit_k_tank",
+      "target": "drawn_kit_makekit_k_factory",
       "relation": "method",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "drawn/kit.mjs",
-      "source_location": "L324",
+      "source_location": "L327",
       "weight": 1.0
     },
     {
@@ -88764,18 +88777,18 @@
     },
     {
       "source": "drawn_kit_makekit_k",
-      "target": "drawn_kit_makekit_k_tower",
+      "target": "drawn_kit_makekit_k_tank",
       "relation": "method",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "drawn/kit.mjs",
-      "source_location": "L334",
+      "source_location": "L335",
       "weight": 1.0
     },
     {
       "source": "drawn_kit_makekit_k",
-      "target": "drawn_kit_makekit_k_palm",
+      "target": "drawn_kit_makekit_k_tower",
       "relation": "method",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -88786,29 +88799,7 @@
     },
     {
       "source": "drawn_kit_makekit_k",
-      "target": "drawn_kit_makekit_k_tree",
-      "relation": "method",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "drawn/kit.mjs",
-      "source_location": "L351",
-      "weight": 1.0
-    },
-    {
-      "source": "drawn_kit_makekit_k",
-      "target": "drawn_kit_makekit_k_pine",
-      "relation": "method",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "drawn/kit.mjs",
-      "source_location": "L354",
-      "weight": 1.0
-    },
-    {
-      "source": "drawn_kit_makekit_k",
-      "target": "drawn_kit_makekit_k_island",
+      "target": "drawn_kit_makekit_k_palm",
       "relation": "method",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -88819,51 +88810,40 @@
     },
     {
       "source": "drawn_kit_makekit_k",
+      "target": "drawn_kit_makekit_k_tree",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "drawn/kit.mjs",
+      "source_location": "L362",
+      "weight": 1.0
+    },
+    {
+      "source": "drawn_kit_makekit_k",
+      "target": "drawn_kit_makekit_k_pine",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "drawn/kit.mjs",
+      "source_location": "L365",
+      "weight": 1.0
+    },
+    {
+      "source": "drawn_kit_makekit_k",
+      "target": "drawn_kit_makekit_k_island",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "drawn/kit.mjs",
+      "source_location": "L367",
+      "weight": 1.0
+    },
+    {
+      "source": "drawn_kit_makekit_k",
       "target": "drawn_kit_makekit_k_crate",
-      "relation": "method",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "drawn/kit.mjs",
-      "source_location": "L360",
-      "weight": 1.0
-    },
-    {
-      "source": "drawn_kit_makekit_k",
-      "target": "drawn_kit_makekit_k_barrel",
-      "relation": "method",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "drawn/kit.mjs",
-      "source_location": "L364",
-      "weight": 1.0
-    },
-    {
-      "source": "drawn_kit_makekit_k",
-      "target": "drawn_kit_makekit_k_sack",
-      "relation": "method",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "drawn/kit.mjs",
-      "source_location": "L366",
-      "weight": 1.0
-    },
-    {
-      "source": "drawn_kit_makekit_k",
-      "target": "drawn_kit_makekit_k_coins",
-      "relation": "method",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "drawn/kit.mjs",
-      "source_location": "L369",
-      "weight": 1.0
-    },
-    {
-      "source": "drawn_kit_makekit_k",
-      "target": "drawn_kit_makekit_k_coin",
       "relation": "method",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -88874,18 +88854,7 @@
     },
     {
       "source": "drawn_kit_makekit_k",
-      "target": "drawn_kit_makekit_k_moneybag",
-      "relation": "method",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "drawn/kit.mjs",
-      "source_location": "L372",
-      "weight": 1.0
-    },
-    {
-      "source": "drawn_kit_makekit_k",
-      "target": "drawn_kit_makekit_k_banknote",
+      "target": "drawn_kit_makekit_k_barrel",
       "relation": "method",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -88896,7 +88865,7 @@
     },
     {
       "source": "drawn_kit_makekit_k",
-      "target": "drawn_kit_makekit_k_paper",
+      "target": "drawn_kit_makekit_k_sack",
       "relation": "method",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -88907,7 +88876,18 @@
     },
     {
       "source": "drawn_kit_makekit_k",
-      "target": "drawn_kit_makekit_k_cup",
+      "target": "drawn_kit_makekit_k_coins",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "drawn/kit.mjs",
+      "source_location": "L380",
+      "weight": 1.0
+    },
+    {
+      "source": "drawn_kit_makekit_k",
+      "target": "drawn_kit_makekit_k_coin",
       "relation": "method",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -88918,7 +88898,18 @@
     },
     {
       "source": "drawn_kit_makekit_k",
-      "target": "drawn_kit_makekit_k_bottle",
+      "target": "drawn_kit_makekit_k_moneybag",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "drawn/kit.mjs",
+      "source_location": "L383",
+      "weight": 1.0
+    },
+    {
+      "source": "drawn_kit_makekit_k",
+      "target": "drawn_kit_makekit_k_banknote",
       "relation": "method",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -88929,7 +88920,7 @@
     },
     {
       "source": "drawn_kit_makekit_k",
-      "target": "drawn_kit_makekit_k_table",
+      "target": "drawn_kit_makekit_k_paper",
       "relation": "method",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -88940,13 +88931,46 @@
     },
     {
       "source": "drawn_kit_makekit_k",
+      "target": "drawn_kit_makekit_k_cup",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "drawn/kit.mjs",
+      "source_location": "L393",
+      "weight": 1.0
+    },
+    {
+      "source": "drawn_kit_makekit_k",
+      "target": "drawn_kit_makekit_k_bottle",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "drawn/kit.mjs",
+      "source_location": "L397",
+      "weight": 1.0
+    },
+    {
+      "source": "drawn_kit_makekit_k",
+      "target": "drawn_kit_makekit_k_table",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "drawn/kit.mjs",
+      "source_location": "L399",
+      "weight": 1.0
+    },
+    {
+      "source": "drawn_kit_makekit_k",
       "target": "drawn_kit_makekit_k_chair",
       "relation": "method",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "drawn/kit.mjs",
-      "source_location": "L390",
+      "source_location": "L401",
       "weight": 1.0
     },
     {
@@ -88957,7 +88981,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "drawn/kit.mjs",
-      "source_location": "L392",
+      "source_location": "L403",
       "weight": 1.0
     },
     {
@@ -88968,56 +88992,12 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "drawn/kit.mjs",
-      "source_location": "L395",
-      "weight": 1.0
-    },
-    {
-      "source": "drawn_kit_makekit_k",
-      "target": "drawn_kit_makekit_k_fire",
-      "relation": "method",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "drawn/kit.mjs",
-      "source_location": "L398",
-      "weight": 1.0
-    },
-    {
-      "source": "drawn_kit_makekit_k",
-      "target": "drawn_kit_makekit_k_glint",
-      "relation": "method",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "drawn/kit.mjs",
-      "source_location": "L403",
-      "weight": 1.0
-    },
-    {
-      "source": "drawn_kit_makekit_k",
-      "target": "drawn_kit_makekit_k_sweat",
-      "relation": "method",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "drawn/kit.mjs",
-      "source_location": "L404",
-      "weight": 1.0
-    },
-    {
-      "source": "drawn_kit_makekit_k",
-      "target": "drawn_kit_makekit_k_shimmer",
-      "relation": "method",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "drawn/kit.mjs",
       "source_location": "L406",
       "weight": 1.0
     },
     {
       "source": "drawn_kit_makekit_k",
-      "target": "drawn_kit_makekit_k_speed",
+      "target": "drawn_kit_makekit_k_fire",
       "relation": "method",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -89039,29 +89019,7 @@
     },
     {
       "source": "drawn_kit_makekit_k",
-      "target": "drawn_kit_makekit_k_burst",
-      "relation": "method",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "drawn/kit.mjs",
-      "source_location": "L410",
-      "weight": 1.0
-    },
-    {
-      "source": "drawn_kit_makekit_k",
-      "target": "drawn_kit_makekit_k_puff",
-      "relation": "method",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "drawn/kit.mjs",
-      "source_location": "L412",
-      "weight": 1.0
-    },
-    {
-      "source": "drawn_kit_makekit_k",
-      "target": "drawn_kit_makekit_k_smoke",
+      "target": "drawn_kit_makekit_k_glint",
       "relation": "method",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -89072,35 +89030,24 @@
     },
     {
       "source": "drawn_kit_makekit_k",
-      "target": "drawn_kit_makekit_k_splash",
+      "target": "drawn_kit_makekit_k_sweat",
       "relation": "method",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "drawn/kit.mjs",
-      "source_location": "L416",
+      "source_location": "L415",
       "weight": 1.0
     },
     {
       "source": "drawn_kit_makekit_k",
-      "target": "drawn_kit_makekit_k_question",
+      "target": "drawn_kit_makekit_k_shimmer",
       "relation": "method",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "drawn/kit.mjs",
-      "source_location": "L418",
-      "weight": 1.0
-    },
-    {
-      "source": "drawn_kit_makekit_k",
-      "target": "drawn_kit_makekit_k_exclaim",
-      "relation": "method",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "drawn/kit.mjs",
-      "source_location": "L419",
+      "source_location": "L417",
       "weight": 1.0
     },
     {
@@ -89116,7 +89063,7 @@
     },
     {
       "source": "drawn_kit_makekit_k",
-      "target": "drawn_kit_makekit_k_bubble",
+      "target": "drawn_kit_makekit_k_speed",
       "relation": "method",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -89127,7 +89074,18 @@
     },
     {
       "source": "drawn_kit_makekit_k",
-      "target": "drawn_kit_makekit_k_rain",
+      "target": "drawn_kit_makekit_k_burst",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "drawn/kit.mjs",
+      "source_location": "L421",
+      "weight": 1.0
+    },
+    {
+      "source": "drawn_kit_makekit_k",
+      "target": "drawn_kit_makekit_k_puff",
       "relation": "method",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -89138,7 +89096,7 @@
     },
     {
       "source": "drawn_kit_makekit_k",
-      "target": "drawn_kit_makekit_k_snowfall",
+      "target": "drawn_kit_makekit_k_smoke",
       "relation": "method",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -89149,7 +89107,7 @@
     },
     {
       "source": "drawn_kit_makekit_k",
-      "target": "drawn_kit_makekit_k_flood",
+      "target": "drawn_kit_makekit_k_splash",
       "relation": "method",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -89160,13 +89118,79 @@
     },
     {
       "source": "drawn_kit_makekit_k",
+      "target": "drawn_kit_makekit_k_question",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "drawn/kit.mjs",
+      "source_location": "L429",
+      "weight": 1.0
+    },
+    {
+      "source": "drawn_kit_makekit_k",
+      "target": "drawn_kit_makekit_k_exclaim",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "drawn/kit.mjs",
+      "source_location": "L430",
+      "weight": 1.0
+    },
+    {
+      "source": "drawn_kit_makekit_k",
+      "target": "drawn_kit_makekit_k_bubble",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "drawn/kit.mjs",
+      "source_location": "L431",
+      "weight": 1.0
+    },
+    {
+      "source": "drawn_kit_makekit_k",
+      "target": "drawn_kit_makekit_k_rain",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "drawn/kit.mjs",
+      "source_location": "L434",
+      "weight": 1.0
+    },
+    {
+      "source": "drawn_kit_makekit_k",
+      "target": "drawn_kit_makekit_k_snowfall",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "drawn/kit.mjs",
+      "source_location": "L436",
+      "weight": 1.0
+    },
+    {
+      "source": "drawn_kit_makekit_k",
+      "target": "drawn_kit_makekit_k_flood",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "drawn/kit.mjs",
+      "source_location": "L438",
+      "weight": 1.0
+    },
+    {
+      "source": "drawn_kit_makekit_k",
       "target": "drawn_kit_makekit_k_fall",
       "relation": "method",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "drawn/kit.mjs",
-      "source_location": "L432",
+      "source_location": "L443",
       "weight": 1.0
     },
     {
@@ -89177,7 +89201,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "drawn/kit.mjs",
-      "source_location": "L433",
+      "source_location": "L444",
       "weight": 1.0
     },
     {
@@ -92239,14 +92263,14 @@
       "weight": 1.0
     },
     {
-      "source": "shortsmaker_drawn_opener_rationale_209",
+      "source": "shortsmaker_drawn_opener_rationale_212",
       "target": "shortsmaker_drawn_opener_make_opener",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "shortsmaker/drawn_opener.py",
-      "source_location": "L209",
+      "source_location": "L212",
       "weight": 1.0
     },
     {
@@ -97798,5 +97822,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "625f4d0a392781e98a0c1bd6b2617ec5d753f3d4"
+  "built_at_commit": "f215f7d0e8bdc6f3dd519c11dc30ad7619cc8288"
 }

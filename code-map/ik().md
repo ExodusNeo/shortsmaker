@@ -12,6 +12,7 @@ tags:
 # ik()
 
 ## Connections
+- [[dot-person()]] - `calls` [EXTRACTED]
 - [[clamp()]] - `calls` [EXTRACTED]
 - [[core.mjs]] - `contains` [EXTRACTED]
 

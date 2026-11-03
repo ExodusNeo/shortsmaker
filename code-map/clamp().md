@@ -20,6 +20,7 @@ tags:
 - [[dot-fall()]] - `calls` [EXTRACTED]
 - [[dot-horse()]] - `calls` [EXTRACTED]
 - [[dot-next()]] - `calls` [EXTRACTED]
+- [[dot-person()]] - `calls` [EXTRACTED]
 - [[dot-puff()]] - `calls` [EXTRACTED]
 - [[dot-splash()]] - `calls` [EXTRACTED]
 - [[dot-sweat()]] - `calls` [EXTRACTED]

@@ -91,7 +91,7 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 21 edges to [[_COMMUNITY_core.mjs]]
+- 23 edges to [[_COMMUNITY_core.mjs]]
 - 8 edges to [[_COMMUNITY_makeKit]]
 - 5 edges to [[_COMMUNITY_bean.mjs]]
 - 4 edges to [[_COMMUNITY_textures.mjs]]

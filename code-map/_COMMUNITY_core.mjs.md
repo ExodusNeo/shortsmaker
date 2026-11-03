@@ -48,7 +48,7 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 21 edges to [[_COMMUNITY_k]]
+- 23 edges to [[_COMMUNITY_k]]
 - 21 edges to [[_COMMUNITY_makeKit]]
 - 15 edges to [[_COMMUNITY_textures.mjs]]
 - 6 edges to [[_COMMUNITY_kit.mjs]]
@@ -57,6 +57,6 @@ SORT file.name ASC
 ## Top bridge nodes
 - [[core.mjs]] - degree 46, connects to 5 communities
 - [[lerp()]] - degree 18, connects to 5 communities
-- [[clamp()]] - degree 28, connects to 3 communities
+- [[clamp()]] - degree 29, connects to 3 communities
 - [[eBack()]] - degree 6, connects to 3 communities
 - [[ss()]] - degree 4, connects to 2 communities
