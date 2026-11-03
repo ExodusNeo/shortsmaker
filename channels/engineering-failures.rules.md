@@ -37,7 +37,7 @@ Engineering has its own myths (Tacoma Narrows "was resonance", engineers' iron r
   - If the disaster is famous (Tacoma Narrows), open on its least-known moment.
   - Tell it through the main_character ("He...", "This inspector...", then their name once they act).
   - Draft 3 first sentences in hook_options, each from a different hook family (in-the-moment scene, result first, stakes, contrarian claim, before/after), then open scene 1 with the strongest.
-  ONE STORY, NOT A LIST OF FACTS: link every beat to the one before with "but", "so" or "you see" (a complication or a consequence), never "and then". If the beats could be put in another order without breaking anything, it is a list: rewrite it. Never a "top 5 disasters" Short.
+  ONE STORY, NOT A LIST OF FACTS: link every beat to the one before with "but", "so" or "you see" (a complication or a consequence), never "and then". Vary the links: never start more than 2 sentences with the same one. If the beats could be put in another order without breaking anything, it is a list: rewrite it. Never a "top 5 disasters" Short.
   scene 2 deepens the mystery or promises something bigger ("But he wasn't there to cross it. He was there to film it."). Never a date, a death toll or a recap.
   background:
   - Give background only as the answer to a question the viewer already has. Bring it in with "you see" right when it explains something ("You see, the deck sat on steel girders only eight feet deep...").

@@ -41,8 +41,14 @@ George Hull who carved it). Choose an event with nobody to follow only when noth
   hook_options, each from a different hook family (in-the-moment scene, result first, stakes, contrarian
   claim, before/after), then open scene 1 with the strongest.
   ONE STORY, NOT A LIST OF FACTS: link every beat to the one before with "but", "so" or "you see" (a
-  complication or a consequence), never "and then". If the beats could be reordered without breaking
-  anything, it is a list: rewrite it.
+  complication or a consequence), never "and then". Vary the links: never start more than 2 sentences with the
+  same one (5 of 16 Clever Hans lines began "So"); often the cleanest link is running the sentence on across the cut.
+  If the beats could be reordered without breaking anything, it is a list: rewrite it.
+  SHOW IT ONCE, WITH REAL NUMBERS: when the strange thing is an ability, a number or a feat, show one real
+  instance in the first 3 scenes ("Ask him four plus five, and he'd tap his hoof nine times" — both Clever Hans
+  Shorts that held viewers, 2026-11, did this in their first 5 seconds; ours said only "math answers").
+  ONE PROOF, NOT A SERIES: prove the twist with the single clearest test or moment. A second test that shows the
+  same result is a recap: cut it (the hits used one test and ran 34 s; ours used three and ran 44 s).
   scene 2: immediate escalation, complication or stakes ("But the baboon had a very good reason to be
   there." / "If the navy found out, the crew faced treason."), never a date, setup or recap. Zero backstory yet.
   scene 3 and 4: context and backstory arrive ONLY AFTER the curiosity is hooked, brought in with "you see"

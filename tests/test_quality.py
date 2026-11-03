@@ -90,6 +90,13 @@ class MetadataTests(unittest.TestCase):
         self.assertEqual(" ".join(b.splitlines()[-1] for b in blocks), " ".join(w[2] for w in words))
         self.assertIn("00:00:03,000 --> 00:00:03,400\nBut", text)
 
+    def test_burned_in_caption_lines_end_at_sentence_ends(self):
+        from shortsmaker import audio_mix
+        words = [(0, .3, "math"), (.3, .6, "answers."), (.6, .8, "So"), (.8, 1, "how"), (1, 1.2, "did"),
+                 (1.2, 1.4, "he?"), (1.4, 1.6, "Hans"), (1.6, 1.8, "said"), (1.8, 2, "\"no.\""), (2, 2.2, "Then")]
+        lines = [" ".join(w[2] for w in line) for line in audio_mix.caption_lines(words)]
+        self.assertEqual(lines, ["math answers.", "So how did", "he?", "Hans said \"no.\"", "Then"])
+
 
 class StoryPacingTests(unittest.TestCase):
     def test_mid_story_swipe_and_distributed_filler_go_back_to_editor(self):

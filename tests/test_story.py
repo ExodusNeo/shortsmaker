@@ -50,6 +50,11 @@ def test_cold_read_verdicts():
     assert any("swipe at scene 8" in p for p in writing.story_problems(JACK, read(answer=n, swipe=8)))
     assert not writing.story_problems(JACK, read(answer=n, swipe=9))  # the ending itself is not delayed
     assert any("list of facts" in p for p in writing.story_problems(JACK, read(list_like=True)))
+    # JACK opens 2 scenes with "So" (allowed); a 3rd is a tic (Clever Hans opened 5 of 16)
+    so3 = JACK[:6] + ["So the officials gave Jack an exam."] + JACK[7:]
+    assert writing.story_problems(so3, read(answer=n, new=[True] * n)) == ['3 scenes start with "So": at most 2; vary the '
+                                                                           'link (but, you see, until, which meant) or run the sentence on from the scene before']
+    assert not writing.story_problems(["He ran.", "He fell.", "He won.", "So it ended."], read(answer=4, new=[True] * 4))
 
 
 def test_cold_read_keeps_only_valid_answers():

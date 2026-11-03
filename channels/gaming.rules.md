@@ -33,7 +33,7 @@ Gaming is full of fake facts. Pick only what developers, interviews, datamines o
   - If the story is famous (Missingno., the Konami Code), open on its least-known moment.
   - Tell it through the main_character ("He...", "This player...", then their name once they act).
   - Draft 3 first sentences in hook_options, each from a different hook family (in-the-moment scene, result first, stakes, contrarian claim, before/after), then open scene 1 with the strongest.
-  ONE STORY, NOT A LIST OF FACTS: link every beat to the one before with "but", "so" or "you see" (a complication or a consequence), never "and then". If the beats could be put in another order without breaking anything, it is a list: rewrite it. Never a "top 5" or "3 secrets in..." Short.
+  ONE STORY, NOT A LIST OF FACTS: link every beat to the one before with "but", "so" or "you see" (a complication or a consequence), never "and then". Vary the links: never start more than 2 sentences with the same one. If the beats could be put in another order without breaking anything, it is a list: rewrite it. Never a "top 5" or "3 secrets in..." Short.
   scene 2 deepens the mystery or promises something bigger ("But nobody had ever programmed it to speed up."). Never a release date or a recap.
   background:
   - Give background only as the answer to a question the viewer already has. Bring it in with "you see" right when it explains something ("You see, the chip could barely draw 55 aliens at once...").

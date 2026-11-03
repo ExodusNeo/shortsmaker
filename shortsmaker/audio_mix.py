@@ -50,10 +50,12 @@ def ass_time(t: float) -> str:
 
 def caption_lines(words: list[tuple[float, float, str]]) -> list[list[tuple[float, float, str]]]:
     """Caption lines of up to 3 words and about 16 letters: a long word ("SIXTY-THREE-YEAR-OLD") gets a
-    shorter line instead of shrinking the whole line to a tiny size. Both renderers use these lines."""
+    shorter line instead of shrinking the whole line to a tiny size. A sentence end closes its line, so "ANSWERS. SO"
+    never shows (Clever Hans, 2026-11-03: the next sentence's first word sat over the next scene). Both renderers use these lines."""
     lines: list[list[tuple[float, float, str]]] = []
     for w in words:
-        if lines and len(lines[-1]) < 3 and len(" ".join(x[2] for x in lines[-1] + [w])) <= 16:
+        if lines and len(lines[-1]) < 3 and not lines[-1][-1][2].rstrip("\"')”’").endswith((".", "?", "!")) \
+                and len(" ".join(x[2] for x in lines[-1] + [w])) <= 16:
             lines[-1].append(w)
         else:
             lines.append([w])

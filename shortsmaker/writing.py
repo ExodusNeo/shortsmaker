@@ -347,13 +347,16 @@ For each script:
    about 20 words, stacked numbers, awkward words for a text-to-speech voice, anything a 5th grader
    wouldn't get. The narration should flow as one story; choppy fragments read like a list.
 3. Cut filler and empty lines ("this changed everything", "little did they know"): every scene adds
-   something new a camera could show. No phrase of 3+ words twice.
+   something new a camera could show. No phrase of 3+ words twice. When two tests or moments prove the same
+   point, keep the clearest one and cut the other: a second proof of the same result is a recap.
 4. Make it follow these rules; reorder and rephrase as much as needed. Avoid recaps, a rewind to a timeline,
    or answering the opening question before the ending:
 {session.RULES["Story rules"]}
 5. hook_text (big words over the first second), thumbnail_text and title must tease the same story
    without repeating each other's words or the hook sentence; hook_text sharpens the same question as
-   the hook sentence (sound-off viewers read it instead), never a separate idea. Fix whichever fails.
+   the hook sentence (sound-off viewers read it instead), never a separate idea. None of them may give the
+   twist away, by name or by a word like "hoax", "fake", "trick", "secret" or "explained" when the twist is
+   that it was one ("MATH WHIZ OR HOAX?" told viewers the answer). Fix whichever fails.
 Each script's "pictures" lists the real pictures found for it: keep lines built on them showable.
 Change wording, never claims: add no fact that isn't already in the script. Keep {s_lo}-{s_hi} scenes of 4-{channel_profiles.SCENE_WORDS}
 words each (a new picture every ~3 seconds; only a scene that needs time on one picture may run up to
@@ -482,6 +485,11 @@ def story_problems(lines: list[str], read: dict | None = None) -> list[str]:
         found.append(f'the first sentence ("{first}") runs past scene 2: it must end in scene 1 or scene 2')
     if read.get("list_like"):
         found.append('the beats read as a list of facts: link each one to the one before with "but", "so" or "you see"')
+    openers = [re.sub(r"\W", "", t.split()[0]).lower() for k, t in enumerate(lines)  # new sentences only: "and" carrying
+               if t.split() and (k == 0 or lines[k - 1].rstrip(" \"')”’").endswith((".", "?", "!")))]  # one across a cut is fine
+    for word in dict.fromkeys(w for w in openers if w in LINK_WORDS and openers.count(w) > 2):
+        found.append(f'{openers.count(word)} scenes start with "{word.capitalize()}": at most 2; vary the link '
+                     '(but, you see, until, which meant) or run the sentence on from the scene before')
     want, hook_kind = session.RULE_SETTINGS.get("hook"), read.get("hook_kind")
     if want == "moment" and hook_kind == "summary":
         found.append('the first line sums up the story: open inside the strangest moment, told as it happens '
@@ -492,6 +500,8 @@ def story_problems(lines: list[str], read: dict | None = None) -> list[str]:
     return found
 
 
+# Link words the story rules ask for; the editor leaned on one ("So" opened 5 of 16 Clever Hans scenes, 2026-11-03)
+LINK_WORDS = {"so", "but", "and", "then", "because", "now"}
 # "In 1932, ...", "By the 1850s", "1974:", "On 16 October", "In October" (STORY_RULES: no line starts with a date)
 DATE_FIRST = re.compile(r"^\W*(?:(?:in|on|by|from|until|since|during|around)\s+(?:the\s+)?)?(?:(?:early|late|mid)[\s-]+)?"
                         r"(?:\d{3,4}s?\b|\d{1,2}(?:st|nd|rd|th)?\s+(?:jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)|"
@@ -718,6 +728,9 @@ this script and its on-screen text against the Wikipedia articles below.
   with a supported fact.
 - A legend stays a legend in every line: when one line tells it as "legend says", fix every later line that
   tells the same legend (or what follows from it) as fact. When the Short's ending is the legend, story_holds = false.
+- A fix keeps the line as vivid as it was: swap an unsupported action for a supported action someone could
+  see, never for a vaguer statement ("His owner stepped aside" became "His owner wasn't asking": true, but flat;
+  "Strangers asked the questions" was supported and kept the picture).
 Rewrite only the scenes that need it. Keep each about as long as it was (at most {channel_profiles.LONG_SCENE_WORDS} words) with the same role in the story, scene
 1's first sentence at most 12 words, and every word a graphic or person card pops up on ("trigger")
 when it is still correct. A scene may be part of a sentence that runs on into the next scene: keep the
