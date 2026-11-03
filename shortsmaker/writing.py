@@ -584,6 +584,9 @@ The narration below is final: never change a word of it. Plan the edit of every 
   most 2 scenes, only where it shows the moment better than any picture or footage could: a trip between
   places, a number too big to picture, a document that matters, several people/things that connect, or a
   story-specific mechanism/diagram/cause-and-effect chain.
+  THE REVEAL (the last scene or two) gets the Short's strongest visual: its best real picture or footage of the
+  answer, an animate clip of it, or a custom scene of ONE big subject making the reveal's change. Plan it first,
+  before the middle scenes take the best pictures; never leave the payoff to a weak or repeated picture.
   Rules: never scene 1 (its opening is planned on its own), never two in a row, only on a scene of at least
   {channel_profiles.FULL_MIN_WORDS} words (it needs ~3 seconds), real facts only (they are
   fact-checked), labels at most 3 words, "word" = a word or name spoken in that scene's narration when that

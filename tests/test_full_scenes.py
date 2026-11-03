@@ -519,6 +519,17 @@ def test_clean_full_custom_and_skin():
     assert config.short_skin({"palette": "parchment", "music_mood": "calm"}) == "parchment"
 
 
+def test_custom_scenes_are_big_and_the_reveal_bigger():
+    from shortsmaker import motion
+    short = {"scenes": [{}] * 16}
+    assert [i for i in range(16) if motion.is_payoff(short, i)] == [14, 15]
+    assert not motion.is_payoff({"scenes": [{}]}, 0)  # a one-scene Short's scene 1 is the opener, not a payoff
+    middle, reveal = motion.custom_rules(2), motion.custom_rules(2, payoff=True)
+    assert "10. SIZE" in middle and "THIS SCENE IS THE REVEAL" not in middle
+    assert "10. SIZE" in reveal and "THIS SCENE IS THE REVEAL" in reveal
+    assert "10. SIZE" not in motion.custom_rules(0, opener=True)  # the opener has its own scale rules
+
+
 def test_custom_cues_props_and_pictures():
     full = {"type": "custom", "kind": "collage", "title": "JACK", "brief": "Archival collage",
             "words": ["Port Elizabeth", "Uitenhage", "baboon"],

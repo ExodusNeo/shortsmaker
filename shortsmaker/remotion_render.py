@@ -54,7 +54,7 @@ looked wrong: {why!r}
 Rewrite the component to fix exactly that.
 {preview_context}
 {context}
-{motion.custom_rules(slot, opener=opener)}
+{motion.custom_rules(slot, opener=opener, payoff=motion.is_payoff(short, i))}
 Current code:
 {code}
 Reply with ONLY JSON: {{"code": "import React from 'react';\\n..."}}""", fatal=False,

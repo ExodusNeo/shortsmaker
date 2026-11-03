@@ -142,9 +142,11 @@ def code_custom_scenes(short: dict, scenes: list[dict], work: Path, props: dict 
         narration = short["scenes"][i]["narration"]
         brief = short["scenes"][i]["full"].get("brief", "")
         opener = i == 0 and short["scenes"][i].get("full_rescued") == "motion-graphic opener"
+        payoff = is_payoff(short, i)
         context = opening_rules.opening_brief(short) if opener else ""
         fingerprint = hashlib.sha256(json.dumps([f, narration, context, (props or {}).get("words"),
-                                                  (props or {}).get("hook"), "opener-v1"], sort_keys=True).encode()).hexdigest()[:16]
+                                                  (props or {}).get("hook"), "opener-v1", "size-v1", payoff],
+                                                 sort_keys=True).encode()).hexdigest()[:16]
         sig = f"// Custom{slot}: scene {i + 1} {fingerprint}"
         if cached.exists() and cached.read_text(encoding="utf-8", errors="ignore").startswith(sig):
             saved = cached.read_text(encoding="utf-8")
@@ -167,7 +169,7 @@ Write a bespoke Remotion React/TypeScript component `Custom{slot}` for Scene {i 
 - Available real photos in `full.photos`: {json.dumps(f.get('photos') or [], ensure_ascii=False)}
 
 {context}
-{custom_rules(slot, opener=opener)}
+{custom_rules(slot, opener=opener, payoff=payoff)}
 Reply with ONLY JSON: {{"code": "import React from 'react';\\n..."}}"""
         data = llm.ask_ai(prompt, fatal=False)
         code = clean_tsx_code((data or {}).get("code"), slot)
@@ -186,7 +188,7 @@ Reply with ONLY JSON: {{"code": "import React from 'react';\\n..."}}"""
                 fix_data = llm.ask_ai(f"""Fix the problems in `Custom{slot}.tsx` below (compiler errors or broken scene rules).
 Keep the same imports from `'../toolkit'` and export `Custom{slot}`.
 {context}
-{custom_rules(slot, opener=opener)}
+{custom_rules(slot, opener=opener, payoff=payoff)}
 Problems:
 {err}
 
@@ -201,7 +203,7 @@ Reply with ONLY JSON: {{"code": "import React from 'react';\\n..."}}""", fatal=F
             code = opener_preflight(short, sc, slot, code, work, props=props)
             target.write_text(sig + "\n" + code, encoding="utf-8")
         elif ok and npx:  # look at the scene before the real render, fix it once if it looks wrong
-            better = look_and_fix(short, sc, slot, code, work)
+            better = look_and_fix(short, sc, slot, code, work, payoff=payoff)
             if better != code:
                 target.write_text(sig + "\n" + better, encoding="utf-8")
                 if tsc_check() is not None:  # the fix broke the build: keep the version that compiled
@@ -214,9 +216,16 @@ Reply with ONLY JSON: {{"code": "import React from 'react';\\n..."}}""", fatal=F
         cached.write_text(target.read_text(encoding="utf-8"), encoding="utf-8")
 
 
-def custom_rules(slot: int, opener: bool = False) -> str:
+def is_payoff(short: dict, i: int) -> bool:
+    """Scene i is one of the last two: the story rules put the reveal there, so it gets the Short's strongest visual."""
+    return 0 < i >= len(short.get("scenes") or []) - 2
+
+
+def custom_rules(slot: int, opener: bool = False, payoff: bool = False) -> str:
     """The rules every custom motion-graphic scene follows, plus two worked examples (real, compiling scenes in
-    remotion/src/full/examples/). Shared by the coder, its repair, the look check and the review's redraw."""
+    remotion/src/full/examples/). Shared by the coder, its repair, the look check and the review's redraw. `payoff`:
+    the scene carries the reveal (is_payoff) and must be big and unmistakable (Clever Hans's reveal was two small
+    outlines, 2026-11-03)."""
     if opener:
         example = (REMOTION / "src/full/examples/ExampleOpenerAction.tsx").read_text(encoding="utf-8")
         return f"""OPENER RULES (bespoke action scene, 1080x1920):
@@ -270,8 +279,18 @@ WORKED COMPOSITION STUDY (copy its scale, immediate subject and camera setup, no
    stiffness: 200}} per scene. Stagger words ~0.09 s, list items ~0.2 s; never everything at once with one duration.
    One focal point per frame; the skin's accent colour marks the point, not decoration. Text never moves while it is
    read: it settles and holds >= 1 s (+0.25 s per word past three).
+10. SIZE: one main drawing carries the scene and fills at least half the stage height (380+ px tall), built from
+   solid filled shapes with inner detail. Never small thin-outline figures floating in empty paper: on a phone they
+   read as a blank page (Clever Hans's tapping hand and questioner filled a third of the stage).{PAYOFF_RULES if payoff else ""}
 TWO WORKED EXAMPLES (copy their care, not their content):
 {examples}"""
+
+
+PAYOFF_RULES = """
+11. THIS SCENE IS THE REVEAL (one of the Short's last two scenes): it gets the Short's strongest visual. ONE dominant
+   recognizable subject doing ONE action, a solid silhouette with inner detail spanning roughly 60-75% of the stage
+   width. The change the narration reveals (the stop, the fall, the swap, the hidden hand) is big and unmistakable at
+   phone size, never a subtle shift of an outline; hold the changed state so it lands."""
 
 
 def lint_custom_code(code: str, opener: bool = False) -> list[str]:
@@ -405,7 +424,7 @@ Reply ONLY JSON: {{"code": "..."}}""", fatal=False, read_dir=sheet.parent)
     return best
 
 
-def look_and_fix(short: dict, sc: dict, slot: int, code: str, work: Path) -> str:
+def look_and_fix(short: dict, sc: dict, slot: int, code: str, work: Path, payoff: bool = False) -> str:
     """The coder looks at 8 frames of its own scene before the real render and rewrites it once if something is wrong
     (overlaps, an arrow through a box, off the stage, unreadable, too fast). Returns the code to use: the rewrite
     only when it follows the rules (the caller compile-checks it), else the original."""
@@ -419,9 +438,11 @@ Check, as a strict art director: does anything overlap anything else? does an ar
 text? is anything outside the stage (x 110..970, y 260..1020) or cut off? is any text too small to read on a phone?
 does anything jump or move so fast it looks like a glitch between frames? is the stage badly balanced (all crammed
 in one corner, big empty areas)? do two things compete for attention in one frame? is text still sliding or growing
-in a frame where it should be read? does everything appear at once instead of one after another? If it is clean, reply {{"ok": true}}. If not, list the problems and give the fixed
+in a frame where it should be read? does everything appear at once instead of one after another? is the main drawing
+small, or thin outlines on a mostly empty stage (rule 10){" or is the reveal's change hard to see (rule 11)" if payoff else ""}?
+If it is clean, reply {{"ok": true}}. If not, list the problems and give the fixed
 code that still follows every rule.
-{custom_rules(slot)}
+{custom_rules(slot, payoff=payoff)}
 Current code:
 {code}
 Reply with ONLY JSON: {{"ok": false, "problems": ["..."], "code": "import React from 'react';\\n..."}}""",
