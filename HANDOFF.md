@@ -318,6 +318,10 @@ Order (owner, 2026-10-30): drawn opener -> motion graphic (2 fixes) -> AI clip o
 - Kit animals: `k.horse` has jointed legs, hooves, mane, `tap: [times]` (a counting/pawing horse) and returns
   `{hoof, head}`. `missing_parts()` rejects a draft whose moment or narration names a kit animal it doesn't call
   (the Clever Hans opener built a boxy horse from shapes and passed 7/10). Labels: size 48+, clear of y 1120-1320.
+- Solid things (2026-11-03, McLean opener: the knocking fist went through the door, the beard read as a mask):
+  `k.person` `reach: [[x, y] | null, ...]` puts a hand exactly on a point (two-bone IK; a knock moves the target);
+  the beard is a jaw beard around the mouth; KIT.md asks for a cutaway wall between inside and outside; the art
+  director counts limbs through solid things, covered faces and missing walls as real flaws. Not yet seen live.
 ## Full-screen motion graphics (`remotion/src/full/`)
 - 4 skins (`parchment`, `blueprint`, `dossier`, `hud`) chosen from the palette/mood (`short_skin()`).
 - Templates: map `journey`, big `number` (counter + figures, painted silhouette or icons, or `compare` bars),

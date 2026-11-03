@@ -179,7 +179,10 @@ small flaws are fine. Below {PASS}, list the problems that stop it working, the 
 - the main thing is too small to read on a phone, or crowded out by background;
 - something doesn't look like what it should be (name it), or looks wrong for the story's era or place; an
   animal or person assembled from plain boxes and blocks counts (a horse must read as a horse at a glance);
-- things float, sink into each other or overlap wrongly (a person inside a wall, a held thing away from the hand);
+- things float, sink into each other or overlap wrongly (a person inside a wall, a held thing away from the hand):
+  a hand, arm or body passing through a door, wall or another person is never a small flaw (the McLean messenger's
+  fist went through the door it knocked on); nor is a beard, prop or label covering a face like a mask, or people
+  inside and outside a building with no wall between them;
 - the picture doesn't fill the vertical frame (a big empty band, the main things drawn small in one part of it),
   or something important is cut off by the frame edge;
 - a face or a word sits behind the title band (y 74-170, first 1.8 s) or the captions (y 1170-1300); bodies,

@@ -28,6 +28,11 @@ Rules for the code:
   outside y 1120-1320 (the Clever Hans "OWNER" label was size 33, right above the captions, and nobody could read it).
 - Animals and people come from the kit (`k.horse`, `k.dog`, `k.person`...), never assembled from your own shapes:
   a hand-built horse of boxes read as a cardboard donkey. Pose them with the part's options (`tap`, `walk`, `arms`).
+- Solid things stay solid. A hand that touches something (knocks on a door, shakes a hand, holds what another holds)
+  uses `reach` to the point on its surface, never arm angles guessed by eye: the McLean messenger's fist went through
+  the door. Knock = move the target out and back: `reach: [null, [doorX - 30 * Math.abs(k.wave(3, 1)), 930]]`.
+  Inside and outside in one picture = a cutaway: draw the wall between them (a thick edge with the doorway in it),
+  and each person stays on their own side of it.
 
 ## Timing helpers
 - `k.word(w, fallback)` start time of the first spoken word that begins with `w` (seconds), else `fallback`.
@@ -50,7 +55,8 @@ hands: [[lx, ly], [rx, ry]]}` in screen space, for held props, sweat and bubbles
 o: `hat` (tricorn | top | bowler | crown | bonnet | cap | helmet | pith | fez | turban | peci | none), `coat`
 (colour), `dress` (colour: a skirt), `skin` (`k.SKIN[0..5]`), `beard` (true | colour), `mustache`, `glasses`
 ("round" | "sun"), `face` ("smile" | "open" | "sad" | "flat"), `arms: [left, right]` (degrees from hanging
-down, outward positive: 160 = raised overhead), `bend: [l, r]` (elbow degrees), `walk` (phase: `t * 9` walks),
+down, outward positive: 160 = raised overhead), `bend: [l, r]` (elbow degrees), `reach: [[x, y] | null, [x, y] | null]`
+(left, right: that hand lands exactly on the point, overriding arms/bend; out of reach it points at it), `walk` (phase: `t * 9` walks),
 `flip` (face left), `still`, `look` (eye shift px).
 `k.crowd(x0, x1, y, count, s, {hats: [...], face, arms})` a row of people; returns their positions.
 

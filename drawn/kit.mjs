@@ -138,6 +138,17 @@ export function makeKit(ctx, t, words = []) {
     const flip = o.flip ? -1 : 1, hy = -212 + (o.dip || 0);
     let bob = o.still ? 0 : Math.sin(t * 4.2 + x * .013) * 2.2;
     if (o.walk != null) bob = -Math.abs(Math.cos(o.walk)) * 7;
+    if (o.reach) {  // two-bone IK: the hand lands ON the point (a knock stops at the door; McLean's fist went through it)
+      const ik = (tg, sg) => { if (!tg) return null;
+        const lx = (tg[0] - x) / (s * flip) - sg * 22, ly = (tg[1] - y - bob * s) / s + 166;
+        const D = clamp(Math.hypot(lx, ly), 3, 81.9), th = Math.atan2(sg * lx, ly);
+        const al = Math.acos(clamp((42 * 42 + D * D - 40 * 40) / (2 * 42 * D), -1, 1));
+        const ga = Math.acos(clamp((42 * 42 + 40 * 40 - D * D) / (2 * 42 * 40), -1, 1));
+        return [(th - al) * 180 / Math.PI, (Math.PI - ga) * 180 / Math.PI]; };
+      const arms = [...(o.arms || [18, 18])], bend = [...(o.bend || [0, 0])];
+      [[-1, 0], [1, 1]].forEach(([sg, j]) => { const r = ik(o.reach[j], sg); if (r) [arms[j], bend[j]] = r; });
+      o = { ...o, arms, bend };
+    }
     const bean = { ...o, shirt: o.coat || o.shirt, hat: HATS.includes(o.hat) && ["cap", "helmet", "pith", "fez", "turban", "peci"].includes(o.hat) ? o.hat : undefined };
     // the rig paints with see-through washes: an opaque paper underlay keeps a coat and face their own colour over
     // a sea or sky (the first live drafts turned people green over the teal sea)
@@ -148,7 +159,7 @@ export function makeKit(ctx, t, words = []) {
     part(); beanPerson(p, x, y, s, bean, t);
     ctx.save(); ctx.translate(x, y + bob * s); ctx.scale(s * flip, s);
     if (o.dress) { const D = [[-26, -120], [26, -120], [52, -20], [-52, -20]]; k.paint(D, o.dress, { sharp: true }); p.poly(D, { w: 4 }); }
-    if (o.beard) { const B = [[-26, hy + 8], [26, hy + 8], [16, hy + 44], [0, hy + 54], [-16, hy + 44]]; k.paint(B, o.beard === true ? "#5A4636" : o.beard); p.blob(B, { w: 3 }); }
+    if (o.beard) { const B = [[-31, hy + 2], [-22, hy + 8], [-12, hy + 26], [0, hy + 30], [12, hy + 26], [22, hy + 8], [31, hy + 2], [24, hy + 40], [0, hy + 56], [-24, hy + 40]]; k.paint(B, o.beard === true ? "#5A4636" : o.beard); p.blob(B, { w: 3 }); }
     ownHat(o.hat, hy, o);
     ctx.restore();
     // world positions of the head and both hands (for held props, bubbles, sweat)
