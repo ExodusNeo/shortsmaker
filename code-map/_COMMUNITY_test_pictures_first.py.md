@@ -52,30 +52,30 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
+- 24 edges to [[_COMMUNITY_test_full_scenes.py]]
 - 17 edges to [[_COMMUNITY_gather_pool]]
-- 16 edges to [[_COMMUNITY_write_scripts]]
-- 16 edges to [[_COMMUNITY_choose_images]]
-- 14 edges to [[_COMMUNITY_test_full_scenes.py]]
-- 10 edges to [[_COMMUNITY_writing.py]]
+- 15 edges to [[_COMMUNITY_choose_images]]
+- 13 edges to [[_COMMUNITY_planning]]
 - 9 edges to [[_COMMUNITY_fake_ai]]
-- 4 edges to [[_COMMUNITY_json]]
-- 3 edges to [[_COMMUNITY_subprocess]]
-- 2 edges to [[_COMMUNITY_main_1]]
+- 4 edges to [[_COMMUNITY_write_scripts]]
+- 3 edges to [[_COMMUNITY_owner]]
+- 2 edges to [[_COMMUNITY_json]]
+- 2 edges to [[_COMMUNITY_write_json]]
+- 2 edges to [[_COMMUNITY_footage.py]]
 - 2 edges to [[_COMMUNITY_extra_sources.py]]
+- 2 edges to [[_COMMUNITY_style_lab.py]]
 - 1 edge to [[_COMMUNITY_test_rules.py]]
-- 1 edge to [[_COMMUNITY_shutil]]
+- 1 edge to [[_COMMUNITY_gpu.py]]
 - 1 edge to [[_COMMUNITY_ask_ai]]
-- 1 edge to [[_COMMUNITY_edit_scripts]]
-- 1 edge to [[_COMMUNITY_owner]]
+- 1 edge to [[_COMMUNITY_cold_read]]
 - 1 edge to [[_COMMUNITY_rewrite_paint_prompts]]
-- 1 edge to [[_COMMUNITY_clean_full]]
 - 1 edge to [[_COMMUNITY_edit_plan]]
-- 1 edge to [[_COMMUNITY_re]]
-- 1 edge to [[_COMMUNITY_footage.py]]
+- 1 edge to [[_COMMUNITY_subprocess]]
+- 1 edge to [[_COMMUNITY_topic_ideas.py]]
 
 ## Top bridge nodes
 - [[test_pictures_first.py]] - degree 83, connects to 15 communities
-- [[catalog_pool()]] - degree 19, connects to 8 communities
+- [[catalog_pool()]] - degree 19, connects to 7 communities
 - [[save_pool()]] - degree 13, connects to 4 communities
 - [[clean_pics()]] - degree 8, connects to 3 communities
-- [[test_corrupt_pool_and_catalog_redone()]] - degree 7, connects to 2 communities
+- [[test_prompts_carry_picture_list()]] - degree 8, connects to 2 communities

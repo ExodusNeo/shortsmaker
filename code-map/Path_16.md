@@ -1,22 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "gather_pool"
+community: "clean_photo"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/gather_pool
+  - community/clean_photo
 ---
 
 # Path
 
 ## Connections
-- [[catalog_pool()]] - `references` [EXTRACTED]
-- [[contact_sheets()]] - `references` [EXTRACTED]
-- [[load_pool()]] - `references` [EXTRACTED]
-- [[pool_folder()]] - `references` [EXTRACTED]
-- [[preflight_pictures()]] - `references` [EXTRACTED]
-- [[prepare_topic()]] - `references` [EXTRACTED]
-- [[save_pool()]] - `references` [EXTRACTED]
+- [[mark_details()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/gather_pool
+#graphify/code #graphify/EXTRACTED #community/clean_photo

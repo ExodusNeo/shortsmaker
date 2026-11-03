@@ -1,17 +1,17 @@
 ---
-source_file: "tests/test_ai_modes.py"
+source_file: "tests/test_full_scenes.py"
 type: "code"
-community: "test_every_mode_can_continue_through_two_exhausted_ais"
-location: "L48"
+community: "rewrite_paint_prompts"
+location: "L477"
 tags:
   - graphify/code
-  - graphify/INFERRED
-  - community/test_every_mode_can_continue_through_two_exhausted_ais
+  - graphify/EXTRACTED
+  - community/rewrite_paint_prompts
 ---
 
 # ask()
 
 ## Connections
-- [[test_all_modes_route_writer_editor_and_reader()]] - `indirect_call` [INFERRED]
+- [[test_rewrite_paint_prompts()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/test_every_mode_can_continue_through_two_exhausted_ais
+#graphify/code #graphify/EXTRACTED #community/rewrite_paint_prompts

@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_drawn_opener.py"
 type: "code"
-community: "test_drawn_opener.py"
+community: "duration"
 location: "L61"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_drawn_openerpy
+  - community/duration
 ---
 
 # test_drawn_opener_renders_and_is_reused()
@@ -14,9 +14,9 @@ tags:
 ## Connections
 - [[A draft that passes coded, previewed (6 frames), approved, rendered as scene 1…]] - `rationale_for` [EXTRACTED]
 - [[duration()]] - `calls` [EXTRACTED]
-- [[fake_ai()_1]] - `calls` [EXTRACTED]
+- [[fake_ai()_2]] - `calls` [EXTRACTED]
 - [[make_opener()]] - `calls` [EXTRACTED]
-- [[short()]] - `calls` [EXTRACTED]
+- [[short()_1]] - `calls` [EXTRACTED]
 - [[test_drawn_opener.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_drawn_openerpy
+#graphify/code #graphify/EXTRACTED #community/duration

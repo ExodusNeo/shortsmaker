@@ -1,11 +1,11 @@
 ---
 type: community
-members: 61
+members: 58
 ---
 
 # extra_sources.py
 
-**Members:** 61 nodes
+**Members:** 58 nodes
 
 ## Members
 - [[(ok, credit). Public domainCC0 need no credit; all other WikimediaWikipedia…]] - rationale - shortsmaker/image_sources.py
@@ -25,7 +25,6 @@ members: 61
 - [[One record per source, no URLsexception messages that could contain…]] - rationale - shortsmaker/media_library.py
 - [[Public collection adapters. Returned records retain the source page and stated…]] - rationale - shortsmaker/extra_sources.py
 - [[Read each configured official page once per run, including a failedblocked…]] - rationale - shortsmaker/extra_sources.py
-- [[Retain productyearcountry details from the director; also search the…]] - rationale - shortsmaker/footage.py
 - [[Still images, magazinemanual scans, art and archival photos from the Internet…]] - rationale - shortsmaker/image_sources.py
 - [[The Oxford pool (2026-10-26) got stock videos that only shared a first name or…]] - rationale - tests/test_pictures_first.py
 - [[URL of a standard-size Wikimedia thumbnail the largest allowed step that fits…]] - rationale - shortsmaker/image_sources.py
@@ -39,7 +38,6 @@ members: 61
 - [[brand_page()]] - code - shortsmaker/extra_sources.py
 - [[candidate()]] - code - shortsmaker/extra_sources.py
 - [[collection_images()]] - code - shortsmaker/extra_sources.py
-- [[commercial_queries()]] - code - shortsmaker/footage.py
 - [[commons_films()]] - code - shortsmaker/footage.py
 - [[commons_search()]] - code - shortsmaker/image_sources.py
 - [[europeana_images()]] - code - shortsmaker/extra_sources.py
@@ -57,7 +55,6 @@ members: 61
 - [[optional_key()]] - code - shortsmaker/media_library.py
 - [[ov_get()]] - code - shortsmaker/image_sources.py
 - [[pixabay_images()]] - code - shortsmaker/extra_sources.py
-- [[print_source_status()]] - code - shortsmaker/media_menu.py
 - [[settings()]] - code - shortsmaker/media_library.py
 - [[smithsonian_images()]] - code - shortsmaker/extra_sources.py
 - [[source_enabled()]] - code - shortsmaker/media_library.py
@@ -78,29 +75,30 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 26 edges to [[_COMMUNITY_subprocess]]
-- 14 edges to [[_COMMUNITY_json]]
-- 8 edges to [[_COMMUNITY_gather_pool]]
-- 7 edges to [[_COMMUNITY_footage.py]]
-- 3 edges to [[_COMMUNITY_re]]
-- 3 edges to [[_COMMUNITY_clean_full]]
-- 3 edges to [[_COMMUNITY_media_command]]
-- 3 edges to [[_COMMUNITY_test_full_scenes.py]]
-- 2 edges to [[_COMMUNITY_writing.py]]
+- 16 edges to [[_COMMUNITY_test_full_scenes.py]]
+- 10 edges to [[_COMMUNITY_subprocess]]
+- 9 edges to [[_COMMUNITY_footage.py]]
+- 7 edges to [[_COMMUNITY_gather_pool]]
+- 7 edges to [[_COMMUNITY_json]]
+- 4 edges to [[_COMMUNITY_gpu.py]]
+- 4 edges to [[_COMMUNITY_media_command]]
+- 3 edges to [[_COMMUNITY_style_lab.py]]
+- 3 edges to [[_COMMUNITY_write_scripts]]
+- 2 edges to [[_COMMUNITY_topic_ideas.py]]
+- 2 edges to [[_COMMUNITY_write_json]]
 - 2 edges to [[_COMMUNITY_duration]]
-- 2 edges to [[_COMMUNITY_shutil]]
-- 2 edges to [[_COMMUNITY_main_1]]
+- 2 edges to [[_COMMUNITY_re]]
+- 2 edges to [[_COMMUNITY_audio_library.py]]
 - 2 edges to [[_COMMUNITY_test_pictures_first.py]]
-- 1 edge to [[_COMMUNITY_test_blender_run.py]]
+- 1 edge to [[_COMMUNITY_rescue_graphics]]
+- 1 edge to [[_COMMUNITY_drawn_thumbnail]]
 - 1 edge to [[_COMMUNITY_apply_review_fixes]]
-- 1 edge to [[_COMMUNITY_sfx_events]]
-- 1 edge to [[_COMMUNITY_render]]
+- 1 edge to [[_COMMUNITY_full_cues]]
 - 1 edge to [[_COMMUNITY_choose_images]]
-- 1 edge to [[_COMMUNITY_audio_library.py]]
 
 ## Top bridge nodes
-- [[extra_sources.py]] - degree 30, connects to 7 communities
+- [[extra_sources.py]] - degree 30, connects to 8 communities
 - [[settings()]] - degree 10, connects to 5 communities
 - [[get_image()]] - degree 9, connects to 5 communities
 - [[fetch()]] - degree 14, connects to 4 communities
-- [[on_topic()]] - degree 11, connects to 4 communities
+- [[source_json()]] - degree 13, connects to 4 communities

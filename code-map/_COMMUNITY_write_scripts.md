@@ -1,43 +1,55 @@
 ---
 type: community
-members: 30
+members: 42
 ---
 
 # write_scripts
 
-**Members:** 30 nodes
+**Members:** 42 nodes
 
 ## Members
-- [[dot-__enter__()]] - code - tests/test_pictures_first.py
-- [[dot-__init__()]] - code - tests/test_pictures_first.py
-- [[Canned replies for every planning step of write_scripts().]] - rationale - tests/test_pictures_first.py
+- [[(what one ink figure stands for, how many to draw) the planner's `each` when…]] - rationale - shortsmaker/plan_rules.py
+- [[A planned story sound {word, sound}, validated the word must be spoken in…]] - rationale - shortsmaker/audio_mix.py
+- [[At most MAX_STORY_SOUNDS story sounds per Short (the first ones), so each one…]] - rationale - shortsmaker/audio_mix.py
+- [[Ensure money beats in economicsfinance Shorts don't go bare when the LLM omits…]] - rationale - shortsmaker/plan_rules.py
+- [[How the big-number scene prints a value 30,000  1.5 MILLION  2 BILLION  0.3.]] - rationale - shortsmaker/plan_rules.py
+- [[Lowercase, accent-free word tokens, for matching names against spoken words.]] - rationale - shortsmaker/plan_rules.py
 - [[Never scene 1 (real footage keeps the hook), never two in a row, never a scene…]] - rationale - shortsmaker/plan_rules.py
+- [[One planned callout, validated (LLM output is untrusted); None drops it.]] - rationale - shortsmaker/plan_rules.py
+- [[One planned full-screen motion graphic, validated (AI output is untrusted);…]] - rationale - shortsmaker/plan_rules.py
 - [[Plan n Shorts on new topics, or on exactly `topics` (comparison runs the other…]] - rationale - shortsmaker/writing.py
-- [[ai()]] - code - tests/test_topic_ideas.py
-- [[ai()_1]] - code - tests/test_topic_ideas.py
-- [[fact_check()_1]] - code - tests/test_pictures_first.py
+- [[The three.js model graphic left with Blender (2026-10-30) a planned one is…]] - rationale - tests/test_opener_graphic.py
+- [[True when `cand` is a solo portraitheadshot of `person_name` (so a scene that…]] - rationale - shortsmaker/plan_rules.py
+- [[True when the picture's title or catalog note names the person (their surname)…]] - rationale - shortsmaker/plan_rules.py
+- [[clean_full()]] - code - shortsmaker/plan_rules.py
+- [[clean_graphic()]] - code - shortsmaker/plan_rules.py
+- [[clean_sound()]] - code - shortsmaker/audio_mix.py
+- [[contains()]] - code - shortsmaker/plan_rules.py
+- [[coords()]] - code - shortsmaker/plan_rules.py
+- [[fill_money_graphics()]] - code - shortsmaker/plan_rules.py
+- [[is_num()]] - code - shortsmaker/plan_rules.py
+- [[is_person_portrait()]] - code - shortsmaker/plan_rules.py
 - [[limit_full()]] - code - shortsmaker/plan_rules.py
-- [[passing()]] - code - tests/test_pictures_first.py
-- [[planning]] - code - tests/test_pictures_first.py
-- [[planning_ai()]] - code - tests/test_pictures_first.py
-- [[prepare()_1]] - code - tests/test_pictures_first.py
-- [[prepare()_2]] - code - tests/test_pictures_first.py
-- [[prepare()_3]] - code - tests/test_pictures_first.py
-- [[prepare()_4]] - code - tests/test_pictures_first.py
-- [[reply()]] - code - tests/test_pictures_first.py
-- [[test_all_weak_returns_empty()]] - code - tests/test_pictures_first.py
-- [[test_both_mode_pools_follow_reply_position()]] - code - tests/test_pictures_first.py
-- [[test_dropped_topic_pool_removed()]] - code - tests/test_pictures_first.py
-- [[test_fact_check_rewrites_get_the_story_rules_again()]] - code - tests/test_pictures_first.py
+- [[limit_sounds()]] - code - shortsmaker/audio_mix.py
+- [[number_figures()]] - code - shortsmaker/plan_rules.py
+- [[show_number()]] - code - shortsmaker/plan_rules.py
+- [[shows_person()]] - code - shortsmaker/plan_rules.py
+- [[test_clean_full_board()]] - code - tests/test_full_scenes.py
+- [[test_clean_full_document()]] - code - tests/test_full_scenes.py
+- [[test_clean_full_journey()]] - code - tests/test_full_scenes.py
+- [[test_clean_full_keeps_board_pic()]] - code - tests/test_pictures_first.py
+- [[test_clean_full_keeps_thing()]] - code - tests/test_full_scenes.py
+- [[test_clean_full_limits()]] - code - tests/test_full_scenes.py
+- [[test_clean_question_and_kinetic()]] - code - tests/test_style.py
+- [[test_clean_sound()]] - code - tests/test_full_scenes.py
+- [[test_fill_money_graphics_and_caps()]] - code - tests/test_full_scenes.py
 - [[test_limit_full()]] - code - tests/test_full_scenes.py
-- [[test_topic_a_proven_channel_just_posted_is_dropped()]] - code - tests/test_topic_ideas.py
-- [[test_topic_prompt_asks_backups_and_visuals()]] - code - tests/test_pictures_first.py
-- [[test_topic_prompt_uses_our_ideas_and_lists_taken_stories()]] - code - tests/test_topic_ideas.py
-- [[test_topic_we_already_made_is_dropped()]] - code - tests/test_topic_ideas.py
-- [[test_weak_topic_swapped_for_backup()]] - code - tests/test_pictures_first.py
-- [[topic_prompt()]] - code - tests/test_topic_ideas.py
+- [[test_model_graphic_is_gone()]] - code - tests/test_opener_graphic.py
+- [[test_number_scaling()]] - code - tests/test_full_scenes.py
+- [[text()]] - code - shortsmaker/plan_rules.py
+- [[word()]] - code - shortsmaker/plan_rules.py
+- [[words_of()]] - code - shortsmaker/plan_rules.py
 - [[write_scripts()]] - code - shortsmaker/writing.py
-- [[write_scripts() with every AI step canned and `prepare` standing in for…]] - rationale - tests/test_pictures_first.py
 
 ## Live Query (requires Dataview plugin)
 
@@ -47,33 +59,46 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 16 edges to [[_COMMUNITY_test_pictures_first.py]]
-- 10 edges to [[_COMMUNITY_writing.py]]
-- 8 edges to [[_COMMUNITY_clean_full]]
-- 4 edges to [[_COMMUNITY_gather_pool]]
-- 4 edges to [[_COMMUNITY_owner]]
-- 3 edges to [[_COMMUNITY_json]]
-- 2 edges to [[_COMMUNITY_fake_ai]]
-- 2 edges to [[_COMMUNITY_test_full_scenes.py]]
-- 2 edges to [[_COMMUNITY_main_1]]
-- 2 edges to [[_COMMUNITY_edit_scripts]]
-- 2 edges to [[_COMMUNITY_ask_ai]]
-- 2 edges to [[_COMMUNITY_story_problems]]
+- 23 edges to [[_COMMUNITY_test_full_scenes.py]]
+- 9 edges to [[_COMMUNITY_planning]]
+- 9 edges to [[_COMMUNITY_re]]
+- 5 edges to [[_COMMUNITY_gather_pool]]
+- 4 edges to [[_COMMUNITY_test_pictures_first.py]]
+- 4 edges to [[_COMMUNITY_json]]
+- 3 edges to [[_COMMUNITY_rescue_graphics]]
+- 3 edges to [[_COMMUNITY_extra_sources.py]]
+- 3 edges to [[_COMMUNITY_choose_images]]
+- 3 edges to [[_COMMUNITY_edit_scripts]]
+- 2 edges to [[_COMMUNITY_frame_maker]]
+- 2 edges to [[_COMMUNITY_topic_ideas.py]]
+- 2 edges to [[_COMMUNITY_pick_channel]]
 - 2 edges to [[_COMMUNITY_clean_look]]
-- 1 edge to [[_COMMUNITY_rescue_graphics]]
+- 2 edges to [[_COMMUNITY_subprocess]]
+- 2 edges to [[_COMMUNITY_test_style.py]]
 - 1 edge to [[_COMMUNITY_limit_style]]
+- 1 edge to [[_COMMUNITY_drawn_opener.py]]
 - 1 edge to [[_COMMUNITY_test_rules.py]]
-- 1 edge to [[_COMMUNITY_shutil]]
+- 1 edge to [[_COMMUNITY_ffmpeg]]
+- 1 edge to [[_COMMUNITY_blender_plan.py]]
+- 1 edge to [[_COMMUNITY_owner]]
+- 1 edge to [[_COMMUNITY_cold_read]]
+- 1 edge to [[_COMMUNITY_check_twists]]
+- 1 edge to [[_COMMUNITY_full_cues]]
+- 1 edge to [[_COMMUNITY_clean_photo]]
+- 1 edge to [[_COMMUNITY_fake_ai]]
 - 1 edge to [[_COMMUNITY_test_story.py]]
-- 1 edge to [[_COMMUNITY_quality_check]]
-- 1 edge to [[_COMMUNITY_re]]
-- 1 edge to [[_COMMUNITY_test_blender_plan.py]]
-- 1 edge to [[_COMMUNITY_retention.py]]
-- 1 edge to [[_COMMUNITY_plan_with]]
+- 1 edge to [[_COMMUNITY_footage.py]]
+- 1 edge to [[_COMMUNITY_visual_review]]
+- 1 edge to [[_COMMUNITY_test_first_second.py]]
+- 1 edge to [[_COMMUNITY_finish_render]]
+- 1 edge to [[_COMMUNITY_style_lab.py]]
+- 1 edge to [[_COMMUNITY_main_1]]
+- 1 edge to [[_COMMUNITY_gpu.py]]
+- 1 edge to [[_COMMUNITY_ask_ai]]
 
 ## Top bridge nodes
-- [[write_scripts()]] - degree 53, connects to 22 communities
-- [[planning]] - degree 19, connects to 4 communities
-- [[planning_ai()]] - degree 9, connects to 3 communities
-- [[passing()]] - degree 12, connects to 2 communities
-- [[test_topic_we_already_made_is_dropped()]] - degree 7, connects to 1 community
+- [[write_scripts()]] - degree 53, connects to 23 communities
+- [[words_of()]] - degree 23, connects to 9 communities
+- [[clean_full()]] - degree 23, connects to 5 communities
+- [[is_num()]] - degree 9, connects to 5 communities
+- [[test_fill_money_graphics_and_caps()]] - degree 9, connects to 4 communities

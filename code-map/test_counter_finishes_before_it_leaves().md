@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_full_scenes.py"
 type: "code"
-community: "test_package.py"
+community: "ask_ai"
 location: "L888"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_packagepy
+  - community/ask_ai
 ---
 
 # test_counter_finishes_before_it_leaves()
@@ -15,4 +15,4 @@ tags:
 - [[scene_cues()]] - `calls` [EXTRACTED]
 - [[test_full_scenes.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_packagepy
+#graphify/code #graphify/EXTRACTED #community/ask_ai

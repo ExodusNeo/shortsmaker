@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "retention.py"
+community: "re"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/retentionpy
+  - community/re
 ---
 
 # Path
@@ -15,4 +15,4 @@ tags:
 - [[edit_metrics()]] - `references` [EXTRACTED]
 - [[load_metrics()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/retentionpy
+#graphify/code #graphify/EXTRACTED #community/re

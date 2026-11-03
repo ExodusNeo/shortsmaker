@@ -1,17 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "duration"
+community: "style_library"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/duration
+  - community/style_library
 ---
 
 # Path
 
 ## Connections
-- [[film_piece()]] - `references` [EXTRACTED]
-- [[shot_span()]] - `references` [EXTRACTED]
+- [[candidate_in()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/duration
+#graphify/code #graphify/EXTRACTED #community/style_library

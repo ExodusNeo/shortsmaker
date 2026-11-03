@@ -1,19 +1,17 @@
 ---
-source_file: "drawn/run.mjs"
+source_file: "tests/test_blender_plan.py"
 type: "code"
-community: "kit.mjs"
-location: "L22"
+community: "frame_maker"
+location: "L120"
 tags:
   - graphify/code
-  - graphify/EXTRACTED
-  - community/kitmjs
+  - graphify/INFERRED
+  - community/frame_maker
 ---
 
 # frame()
 
 ## Connections
-- [[exposure()]] - `calls` [EXTRACTED]
-- [[makeKit()]] - `calls` [EXTRACTED]
-- [[run.mjs]] - `contains` [EXTRACTED]
+- [[test_hard_cuts_never_blend_scenes()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/kitmjs
+#graphify/code #graphify/INFERRED #community/frame_maker

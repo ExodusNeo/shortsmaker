@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "ask_ai"
+community: "run_agy"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ask_ai
+  - community/run_agy
 ---
 
 # Path
@@ -15,4 +15,4 @@ tags:
 - [[run_agy()]] - `references` [EXTRACTED]
 - [[run_codex()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ask_ai
+#graphify/code #graphify/EXTRACTED #community/run_agy

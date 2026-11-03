@@ -1,33 +1,24 @@
 ---
 type: community
-members: 20
+members: 11
 ---
 
 # duration
 
-**Members:** 20 nodes
+**Members:** 11 nodes
 
 ## Members
-- [[Add a finished Short to this channel's logbook, with empty lines for its…]] - rationale - shortsmaker/logbook.py
-- [[Cut each take into its scenes halfway through the pause between their words…]] - rationale - shortsmaker/gpu.py
-- [[Path_22]] - code
-- [[Runs of scenes that together make whole sentences. A sentence may run across…]] - rationale - shortsmaker/gpu.py
-- [[Start and end of the camera shot containing time `at` (newsreels cut to title…]] - rationale - shortsmaker/footage.py
-- [[Story arc delivery hook urgency - suspenseful investigation - payoff reveal.]] - rationale - shortsmaker/gpu.py
-- [[True when the Short's final scene is an open grammatical loop bridge into scene…]] - rationale - shortsmaker/plan_rules.py
-- [[Voice every scene on the GPU CosyVoice (Mark Nelson, documentary) for the…]] - rationale - shortsmaker/gpu.py
-- [[cosy_instruct()]] - code - shortsmaker/gpu.py
+- [[A draft that passes coded, previewed (6 frames), approved, rendered as scene 1…]] - rationale - tests/test_drawn_opener.py
+- [[A reveal (one of the last two scenes) planned as a custom diagram is drawn the…]] - rationale - tests/test_drawn_opener.py
+- [[The art director scores every draft below PASS FIXES rewrites (each told the…]] - rationale - tests/test_drawn_opener.py
 - [[duration()]] - code - shortsmaker/media_tools.py
-- [[is_loop_short()]] - code - shortsmaker/plan_rules.py
-- [[local_voice()]] - code - shortsmaker/gpu.py
-- [[log_short()]] - code - shortsmaker/logbook.py
-- [[scenes()]] - code - tests/test_story.py
-- [[sentence_groups()]] - code - shortsmaker/gpu.py
-- [[shot_span()]] - code - shortsmaker/footage.py
-- [[split_takes()]] - code - shortsmaker/gpu.py
-- [[test_a_take_is_cut_between_the_scenes_words()]] - code - tests/test_story.py
-- [[test_logbook_hook_line_is_the_whole_first_sentence()]] - code - tests/test_story.py
-- [[test_sentences_running_across_cuts_are_one_take()]] - code - tests/test_story.py
+- [[fake_ai()_2]] - code - tests/test_drawn_opener.py
+- [[short()_1]] - code - tests/test_drawn_opener.py
+- [[test_drawn_opener_gives_up_after_fixes()]] - code - tests/test_drawn_opener.py
+- [[test_drawn_opener_renders_and_is_reused()]] - code - tests/test_drawn_opener.py
+- [[test_reveal_scene_is_drawn_with_its_own_rules()]] - code - tests/test_drawn_opener.py
+- [[test_use_opener_plays_the_drawn_opener()]] - code - tests/test_drawn_opener.py
+- [[use_opener puts the drawn clip on scene 1 (its first frame as the still, no…]] - rationale - tests/test_drawn_opener.py
 
 ## Live Query (requires Dataview plugin)
 
@@ -37,34 +28,25 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 6 edges to [[_COMMUNITY_render]]
-- 5 edges to [[_COMMUNITY_test_full_scenes.py]]
-- 4 edges to [[_COMMUNITY_subprocess]]
-- 4 edges to [[_COMMUNITY_local_clips]]
-- 4 edges to [[_COMMUNITY_re]]
-- 4 edges to [[_COMMUNITY_test_story.py]]
-- 3 edges to [[_COMMUNITY_main_1]]
-- 2 edges to [[_COMMUNITY_json]]
-- 2 edges to [[_COMMUNITY_footage.py]]
-- 2 edges to [[_COMMUNITY_qwen_voice.py]]
-- 2 edges to [[_COMMUNITY_audio_library.py]]
+- 6 edges to [[_COMMUNITY_test_full_scenes.py]]
+- 3 edges to [[_COMMUNITY_drawn_opener.py]]
+- 3 edges to [[_COMMUNITY_subprocess]]
+- 3 edges to [[_COMMUNITY_render]]
+- 2 edges to [[_COMMUNITY_log_short]]
+- 2 edges to [[_COMMUNITY_write_json]]
 - 2 edges to [[_COMMUNITY_extra_sources.py]]
-- 1 edge to [[_COMMUNITY_test_h3_handoff.py]]
-- 1 edge to [[_COMMUNITY_shutil]]
+- 2 edges to [[_COMMUNITY_audio_library.py]]
+- 1 edge to [[_COMMUNITY_ffmpeg]]
 - 1 edge to [[_COMMUNITY_make]]
-- 1 edge to [[_COMMUNITY_test_drawn_opener.py]]
-- 1 edge to [[_COMMUNITY_style_library]]
-- 1 edge to [[_COMMUNITY_story_problems]]
-- 1 edge to [[_COMMUNITY_visual_review]]
-- 1 edge to [[_COMMUNITY_writing.py]]
+- 1 edge to [[_COMMUNITY_apply_review_fixes]]
+- 1 edge to [[_COMMUNITY_footage.py]]
 - 1 edge to [[_COMMUNITY_media_command]]
 - 1 edge to [[_COMMUNITY_render_remotion]]
 - 1 edge to [[_COMMUNITY_test_blender_render.py]]
-- 1 edge to [[_COMMUNITY_clean_full]]
 
 ## Top bridge nodes
-- [[duration()]] - degree 19, connects to 10 communities
-- [[local_voice()]] - degree 13, connects to 6 communities
-- [[is_loop_short()]] - degree 8, connects to 5 communities
-- [[split_takes()]] - degree 9, connects to 4 communities
-- [[log_short()]] - degree 8, connects to 4 communities
+- [[duration()]] - degree 19, connects to 12 communities
+- [[test_reveal_scene_is_drawn_with_its_own_rules()]] - degree 6, connects to 3 communities
+- [[short()_1]] - degree 6, connects to 2 communities
+- [[test_drawn_opener_renders_and_is_reused()]] - degree 6, connects to 2 communities
+- [[test_drawn_opener_gives_up_after_fixes()]] - degree 5, connects to 2 communities

@@ -12,7 +12,7 @@ tags:
 # thumbnail()
 
 ## Connections
-- [[Path_13]] - `references` [EXTRACTED]
+- [[Path_11]] - `references` [EXTRACTED]
 - [[finish_render()]] - `calls` [EXTRACTED]
 - [[fit_font()]] - `calls` [EXTRACTED]
 - [[frame_render.py]] - `contains` [EXTRACTED]

@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_package.py"
 type: "code"
-community: "test_package.py"
+community: "ask_ai"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_packagepy
+  - community/ask_ai
 ---
 
 # test_package.py
@@ -51,4 +51,4 @@ tags:
 - [[traceback]] - `imports` [EXTRACTED]
 - [[writing.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_packagepy
+#graphify/code #graphify/EXTRACTED #community/ask_ai

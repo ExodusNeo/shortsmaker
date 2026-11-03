@@ -1,25 +1,22 @@
 ---
 source_file: ""
 type: "code"
-community: "apply_review_fixes"
+community: "gather_pool"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/apply_review_fixes
+  - community/gather_pool
 ---
 
 # Path
 
 ## Connections
-- [[apply_review_fixes()]] - `references` [EXTRACTED]
-- [[first_second_check()]] - `references` [EXTRACTED]
-- [[fix_drawn_answer()]] - `references` [EXTRACTED]
-- [[fix_opener_graphic()]] - `references` [EXTRACTED]
-- [[paint_new()]] - `references` [EXTRACTED]
-- [[paint_opener_start()]] - `references` [EXTRACTED]
-- [[pool_pictures()]] - `references` [EXTRACTED]
-- [[quality_check()]] - `references` [EXTRACTED]
-- [[storyboard()]] - `references` [EXTRACTED]
-- [[visual_review()]] - `references` [EXTRACTED]
+- [[catalog_pool()]] - `references` [EXTRACTED]
+- [[contact_sheets()]] - `references` [EXTRACTED]
+- [[load_pool()]] - `references` [EXTRACTED]
+- [[pool_folder()]] - `references` [EXTRACTED]
+- [[preflight_pictures()]] - `references` [EXTRACTED]
+- [[prepare_topic()]] - `references` [EXTRACTED]
+- [[save_pool()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/apply_review_fixes
+#graphify/code #graphify/EXTRACTED #community/gather_pool

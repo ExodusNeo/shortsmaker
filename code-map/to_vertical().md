@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[Fill the 916 frame with the picture (centre crop) for the slow zoompan. This…]] - `rationale_for` [EXTRACTED]
-- [[Path_12]] - `references` [EXTRACTED]
+- [[Path_9]] - `references` [EXTRACTED]
 - [[paint_instead()]] - `calls` [EXTRACTED]
 - [[photo_prep.py]] - `contains` [EXTRACTED]
 - [[render()_1]] - `calls` [EXTRACTED]

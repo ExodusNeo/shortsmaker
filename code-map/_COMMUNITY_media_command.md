@@ -1,23 +1,24 @@
 ---
 type: community
-members: 13
+members: 14
 ---
 
 # media_command
 
-**Members:** 13 nodes
+**Members:** 14 nodes
 
 ## Members
 - [[New library downloads wait for the owner's ears; existing approved files are…]] - rationale - shortsmaker/media_menu.py
 - [[Official API, CC0 only; collect metadata before choosing a preview.]] - rationale - shortsmaker/audio_mix.py
 - [[One CC0 (no credit, any use) sound for `name` from Freesound's official API…]] - rationale - shortsmaker/audio_mix.py
-- [[Path_25]] - code
+- [[Path_26]] - code
 - [[audition_audio()]] - code - shortsmaker/media_menu.py
 - [[download_audio_choices()]] - code - shortsmaker/media_menu.py
 - [[freesound_fetch()]] - code - shortsmaker/audio_mix.py
 - [[freesound_preview()]] - code - shortsmaker/audio_mix.py
 - [[freesound_results()]] - code - shortsmaker/audio_mix.py
 - [[media_command()]] - code - shortsmaker/media_menu.py
+- [[print_source_status()]] - code - shortsmaker/media_menu.py
 - [[rank()]] - code - shortsmaker/audio_mix.py
 - [[review_audio_files()]] - code - shortsmaker/media_menu.py
 - [[seed_audio_library()]] - code - shortsmaker/media_menu.py
@@ -31,14 +32,16 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 9 edges to [[_COMMUNITY_subprocess]]
-- 8 edges to [[_COMMUNITY_audio_library.py]]
-- 3 edges to [[_COMMUNITY_extra_sources.py]]
-- 2 edges to [[_COMMUNITY_render]]
-- 2 edges to [[_COMMUNITY_json]]
-- 2 edges to [[_COMMUNITY_main_1]]
-- 1 edge to [[_COMMUNITY_shutil]]
-- 1 edge to [[_COMMUNITY_duration]]
+- 9 edges to [[_COMMUNITY_audio_library.py]]
+- 4 edges to [[_COMMUNITY_extra_sources.py]]
+- 3 edges to [[_COMMUNITY_json]]
+- 1 edge to [[_COMMUNITY_gpu.py]]
+- 1 edge to [[_COMMUNITY_ffmpeg]]
+- 1 edge to [[_COMMUNITY_write_json]]
+- 1 edge to [[_COMMUNITY_style_lab.py]]
 - 1 edge to [[_COMMUNITY_re]]
+- 1 edge to [[_COMMUNITY_main_1]]
+- 1 edge to [[_COMMUNITY_duration]]
 
 ## Top bridge nodes
 - [[media_command()]] - degree 14, connects to 6 communities

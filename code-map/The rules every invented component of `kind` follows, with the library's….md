@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/style_lab.py"
 type: "rationale"
-community: "style_library"
-location: "L100"
+community: "invent_component"
+location: "L101"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/style_library
+  - community/invent_component
 ---
 
 # The rules every invented component of `kind` follows, with the library's…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[style_rules()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/style_library
+#graphify/rationale #graphify/EXTRACTED #community/invent_component

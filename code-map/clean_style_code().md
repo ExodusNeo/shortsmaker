@@ -2,7 +2,7 @@
 source_file: "shortsmaker/style_lab.py"
 type: "code"
 community: "re"
-location: "L130"
+location: "L131"
 tags:
   - graphify/code
   - graphify/EXTRACTED

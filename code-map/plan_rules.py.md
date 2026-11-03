@@ -60,6 +60,7 @@ tags:
 - [[settle_style()]] - `contains` [EXTRACTED]
 - [[short_render.py]] - `imports_from` [EXTRACTED]
 - [[show_number()]] - `contains` [EXTRACTED]
+- [[shows_person()]] - `contains` [EXTRACTED]
 - [[spoken_at()]] - `contains` [EXTRACTED]
 - [[spoken_span()]] - `contains` [EXTRACTED]
 - [[style_lab.py]] - `imports_from` [EXTRACTED]

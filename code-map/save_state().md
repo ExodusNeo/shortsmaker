@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/short_render.py"
 type: "code"
-community: "render"
+community: "write_json"
 location: "L26"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/render
+  - community/write_json
 ---
 
 # save_state()
@@ -22,4 +22,4 @@ tags:
 - [[test_state_roundtrip_full_pics()]] - `calls` [EXTRACTED]
 - [[write_json()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/render
+#graphify/code #graphify/EXTRACTED #community/write_json

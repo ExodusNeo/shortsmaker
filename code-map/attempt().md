@@ -2,7 +2,7 @@
 source_file: "shortsmaker/style_lab.py"
 type: "code"
 community: "invent_component"
-location: "L157"
+location: "L158"
 tags:
   - graphify/code
   - graphify/EXTRACTED

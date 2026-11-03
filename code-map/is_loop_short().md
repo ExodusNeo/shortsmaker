@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/plan_rules.py"
 type: "code"
-community: "duration"
-location: "L368"
+community: "ffmpeg"
+location: "L378"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/duration
+  - community/ffmpeg
 ---
 
 # is_loop_short()
@@ -21,4 +21,4 @@ tags:
 - [[split_takes()]] - `calls` [EXTRACTED]
 - [[test_fill_money_graphics_and_caps()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/duration
+#graphify/code #graphify/EXTRACTED #community/ffmpeg

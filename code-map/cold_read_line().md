@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/editplan.py"
 type: "code"
-community: "cold_read_line"
+community: "edit_plan"
 location: "L40"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/cold_read_line
+  - community/edit_plan
 ---
 
 # cold_read_line()
@@ -17,4 +17,4 @@ tags:
 - [[editplan.py]] - `contains` [EXTRACTED]
 - [[test_cold_read_uses_other_ai_in_solo_and_collaborative_modes()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/cold_read_line
+#graphify/code #graphify/EXTRACTED #community/edit_plan

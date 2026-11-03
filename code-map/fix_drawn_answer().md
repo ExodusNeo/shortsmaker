@@ -12,7 +12,7 @@ tags:
 # fix_drawn_answer()
 
 ## Connections
-- [[Path_14]] - `references` [EXTRACTED]
+- [[Path_12]] - `references` [EXTRACTED]
 - [[finish_render()]] - `calls` [EXTRACTED]
 - [[opener_graphic()]] - `calls` [EXTRACTED]
 - [[review.py]] - `contains` [EXTRACTED]

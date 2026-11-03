@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/gpu.py"
 type: "code"
-community: "duration"
+community: "ffmpeg"
 location: "L185"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/duration
+  - community/ffmpeg
 ---
 
 # cosy_instruct()
@@ -16,4 +16,4 @@ tags:
 - [[gpu.py]] - `contains` [EXTRACTED]
 - [[local_voice()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/duration
+#graphify/code #graphify/EXTRACTED #community/ffmpeg

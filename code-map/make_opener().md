@@ -1,18 +1,18 @@
 ---
 source_file: "shortsmaker/drawn_opener.py"
 type: "code"
-community: "test_drawn_opener.py"
+community: "drawn_opener.py"
 location: "L208"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_drawn_openerpy
+  - community/drawn_openerpy
 ---
 
 # make_opener()
 
 ## Connections
-- [[Path_17]] - `references` [EXTRACTED]
+- [[Path_1]] - `references` [EXTRACTED]
 - [[Scene 1's drawn opener clip (workdrawnopener.mp4, scene 1 + the crossfade…]] - `rationale_for` [EXTRACTED]
 - [[available()]] - `calls` [EXTRACTED]
 - [[drawn_opener.py]] - `contains` [EXTRACTED]
@@ -29,4 +29,4 @@ tags:
 - [[use_opener()]] - `calls` [EXTRACTED]
 - [[write()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_drawn_openerpy
+#graphify/code #graphify/EXTRACTED #community/drawn_openerpy

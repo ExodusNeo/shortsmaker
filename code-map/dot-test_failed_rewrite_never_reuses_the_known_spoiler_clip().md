@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_opening_rules.py"
 type: "code"
-community: "test_drawn_opener.py"
+community: "OpeningRulesTests"
 location: "L148"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_drawn_openerpy
+  - community/OpeningRulesTests
 ---
 
 # .test_failed_rewrite_never_reuses_the_known_spoiler_clip()
@@ -15,4 +15,4 @@ tags:
 - [[OpeningRulesTests]] - `method` [EXTRACTED]
 - [[bobby()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_drawn_openerpy
+#graphify/code #graphify/EXTRACTED #community/OpeningRulesTests

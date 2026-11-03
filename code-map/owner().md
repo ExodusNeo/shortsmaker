@@ -12,7 +12,7 @@ tags:
 # owner()
 
 ## Connections
-- [[dot-__enter__()_2]] - `calls` [EXTRACTED]
+- [[dot-__enter__()_1]] - `calls` [EXTRACTED]
 - [[dot-__enter__()_3]] - `calls` [EXTRACTED]
 - [[dot-__exit__()]] - `calls` [EXTRACTED]
 - [[dot-__exit__()_1]] - `calls` [EXTRACTED]

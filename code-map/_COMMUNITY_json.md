@@ -1,55 +1,65 @@
 ---
 type: community
-members: 42
+members: 52
 ---
 
 # json
 
-**Members:** 42 nodes
+**Members:** 52 nodes
 
 ## Members
-- [[Centre-crop the start picture to 768x1344 the H3 node stretches off-aspect…]] - rationale - colab/h3_run.py
-- [[Check every line against the story's Wikipedia articles and rewrite what they…]] - rationale - shortsmaker/writing.py
-- [[Comfy-Org's official MOSS-Image text-to-image template (25 steps, CFG 2.5,…]] - rationale - shortsmaker/gpu.py
-- [[ComfyUI API graph for one first-frame clip. No negative prompt H3's graph uses…]] - rationale - colab/h3_run.py
-- [[Flat listing (title, views, duration, url) of a YouTube search, channel tab or…]] - rationale - shortsmaker/channel_profiles.py
-- [[Free VoiceStudio's GPU memory the 8 GB card is needed next for SDXL, LTX and…]] - rationale - shortsmaker/gpu.py
-- [[MiniMax H3 image-to-video jobs for a ShortsMaker Short, run on Colab next to…]] - rationale - colab/h3_run.py
-- [[Paint on this PC with MOSS-Image in ComfyUI (owner's pick 2026-10-20 over SDXL-…]] - rationale - shortsmaker/gpu.py
-- [[Path_5]] - code
-- [[Pixabay stock video free to use in videos, no credit needed (Pixabay Content…]] - rationale - shortsmaker/footage.py
-- [[Plain text of an English Wikipedia article ('' when missing or unreachable).]] - rationale - shortsmaker/writing.py
-- [[Preview of every style-library preset for the owner each look on two real…]] - rationale - tests/render_style.py
-- [[Seconds - a valid H3 length, snapped up to its 17k+5 frame grid (the…]] - rationale - colab/h3_run.py
-- [[The biggest recent Shorts from channels that are proven in the niche since…]] - rationale - shortsmaker/channel_profiles.py
-- [[The video SaveVideo wrote, found by scanning the job's outputs (the key name…]] - rationale - colab/h3_run.py
-- [[VoiceStudio's backend answers, starting the app (and waiting up to 2 min) if it…]] - rationale - shortsmaker/gpu.py
+- [[Extract clean TypeScriptReact code exporting Custom{slot} from an AI reply.]] - rationale - shortsmaker/motion.py
+- [[Full-screen motion-graphic scenes and the AI-coded Custom scenes (with their…]] - rationale - shortsmaker/motion.py
+- [[Guaranteed-valid Remotion component for slot 0..3 if the AI coder fails or…]] - rationale - shortsmaker/motion.py
+- [[Motion Graphics Agent writes bespoke ReactSVG Remotion code for each `type…]] - rationale - shortsmaker/motion.py
+- [[Path_27]] - code
+- [[Render and grade every candidate, including repairs; keep the strongest…]] - rationale - shortsmaker/motion.py
+- [[Render the opener composition study with the real hookcaptions; restore the…]] - rationale - tests/render_opener_preview.py
+- [[Rendering a Short with Remotion (with the Python renderer as fallback),…]] - rationale - shortsmaker/remotion_render.py
+- [[Renders just this custom scene small (its pictures are already in…]] - rationale - shortsmaker/motion.py
+- [[Renders seconds start..end of a small Short (`props`; its pictures already in…]] - rationale - shortsmaker/motion.py
+- [[Rule breaks a compiler can't see in an AI-coded custom scene (see…]] - rationale - shortsmaker/motion.py
+- [[Scene i is one of the last two the story rules put the reveal there, so it…]] - rationale - shortsmaker/motion.py
+- [[Shared opening instructions show the hook while protecting what the narration…]] - rationale - shortsmaker/opening_rules.py
+- [[The aged-paper texture and film-grain frames the full-screen motion graphics…]] - rationale - shortsmaker/remotion_render.py
+- [[The coder looks at 8 frames of its own scene before the real render and…]] - rationale - shortsmaker/motion.py
+- [[The planner plans the edit (footage searches, shots, camera, graphics, person…]] - rationale - shortsmaker/writing.py
+- [[The review saw custom scene i look wrong its coder gets the complaint and its…]] - rationale - shortsmaker/remotion_render.py
+- [[The rules every custom motion-graphic scene follows, plus two worked examples…]] - rationale - shortsmaker/motion.py
+- [[Type-checks the Remotion project; None when it compiles, else the compiler's…]] - rationale - shortsmaker/motion.py
+- [[Visual skin for a Short's full-screen motion graphics (parchment, blueprint,…]] - rationale - shortsmaker/config.py
 - [[YouTube query predictions (not search volumes or a popularity ranking).]] - rationale - shortsmaker/seo.py
-- [[article_text()]] - code - shortsmaker/writing.py
-- [[call()]] - code - colab/h3_run.py
-- [[channel_url()]] - code - shortsmaker/channel_profiles.py
-- [[comfy_call()]] - code - shortsmaker/gpu.py
-- [[fact_check()]] - code - shortsmaker/writing.py
-- [[fit_start()]] - code - colab/h3_run.py
-- [[frames()]] - code - colab/h3_run.py
-- [[graph()]] - code - colab/h3_run.py
-- [[h3_run.py]] - code - colab/h3_run.py
+- [[clean_tsx_code()]] - code - shortsmaker/motion.py
+- [[code_custom_scenes()]] - code - shortsmaker/motion.py
+- [[custom_rules()]] - code - shortsmaker/motion.py
+- [[direct_scripts()]] - code - shortsmaker/writing.py
+- [[fallback_custom_tsx()]] - code - shortsmaker/motion.py
+- [[hex_rgb()]] - code - shortsmaker/config.py
+- [[is_payoff()]] - code - shortsmaker/motion.py
 - [[json]] - concept
-- [[main()]] - code - colab/h3_run.py
-- [[moss_graph()]] - code - shortsmaker/gpu.py
-- [[moss_images()]] - code - shortsmaker/gpu.py
-- [[pixabay_films()]] - code - shortsmaker/footage.py
-- [[render_style.py]] - code - tests/render_style.py
-- [[saved_file()]] - code - colab/h3_run.py
+- [[lint_custom_code()]] - code - shortsmaker/motion.py
+- [[look_and_fix()]] - code - shortsmaker/motion.py
+- [[luminance()_1]] - code - shortsmaker/config.py
+- [[main()_5]] - code - tests/render_opener_preview.py
+- [[make_paper()]] - code - shortsmaker/remotion_render.py
+- [[motion.py]] - code - shortsmaker/motion.py
+- [[opener_preflight()]] - code - shortsmaker/motion.py
+- [[opening_brief()]] - code - shortsmaker/opening_rules.py
+- [[opening_rules.py]] - code - shortsmaker/opening_rules.py
+- [[preview_custom()]] - code - shortsmaker/motion.py
+- [[preview_sheet()]] - code - shortsmaker/motion.py
+- [[redraw_custom()]] - code - shortsmaker/remotion_render.py
+- [[remotion_render.py]] - code - shortsmaker/remotion_render.py
+- [[render_opener_preview.py]] - code - tests/render_opener_preview.py
 - [[search_suggestions()]] - code - shortsmaker/seo.py
-- [[test_fact_check_drops_full()]] - code - tests/test_full_scenes.py
-- [[time]] - concept
-- [[trend_research()]] - code - shortsmaker/channel_profiles.py
-- [[up()]] - code - shortsmaker/gpu.py
-- [[voicestudio_unload()]] - code - shortsmaker/gpu.py
-- [[voicestudio_up()]] - code - shortsmaker/gpu.py
-- [[yt_list()]] - code - shortsmaker/channel_profiles.py
-- [[zipfile]] - concept
+- [[short_skin()]] - code - shortsmaker/config.py
+- [[test_clean_full_custom_and_skin()]] - code - tests/test_full_scenes.py
+- [[test_code_custom_scenes_fallback()]] - code - tests/test_full_scenes.py
+- [[test_custom_scenes_are_big_and_the_reveal_bigger()]] - code - tests/test_full_scenes.py
+- [[test_fallback_custom_is_clean()]] - code - tests/test_full_scenes.py
+- [[test_lint_custom_code()]] - code - tests/test_full_scenes.py
+- [[test_make_paper()]] - code - tests/test_full_scenes.py
+- [[tsc_check()]] - code - shortsmaker/motion.py
 
 ## Live Query (requires Dataview plugin)
 
@@ -59,58 +69,57 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 33 edges to [[_COMMUNITY_test_full_scenes.py]]
-- 18 edges to [[_COMMUNITY_subprocess]]
-- 17 edges to [[_COMMUNITY_writing.py]]
-- 14 edges to [[_COMMUNITY_extra_sources.py]]
-- 12 edges to [[_COMMUNITY_main_1]]
-- 11 edges to [[_COMMUNITY_shutil]]
-- 8 edges to [[_COMMUNITY_re]]
-- 5 edges to [[_COMMUNITY_footage.py]]
-- 5 edges to [[_COMMUNITY_retention.py]]
-- 4 edges to [[_COMMUNITY_test_pictures_first.py]]
-- 4 edges to [[_COMMUNITY_render]]
-- 4 edges to [[_COMMUNITY_local_clips]]
-- 4 edges to [[_COMMUNITY_style_library]]
-- 4 edges to [[_COMMUNITY_code_custom_scenes]]
-- 4 edges to [[_COMMUNITY_qwen_voice.py]]
-- 3 edges to [[_COMMUNITY_ask_ai]]
-- 3 edges to [[_COMMUNITY_write_scripts]]
+- 63 edges to [[_COMMUNITY_test_full_scenes.py]]
+- 19 edges to [[_COMMUNITY_gpu.py]]
+- 13 edges to [[_COMMUNITY_subprocess]]
+- 9 edges to [[_COMMUNITY_re]]
+- 8 edges to [[_COMMUNITY_style_lab.py]]
+- 7 edges to [[_COMMUNITY_extra_sources.py]]
+- 7 edges to [[_COMMUNITY_ask_ai]]
+- 6 edges to [[_COMMUNITY_drawn_opener.py]]
+- 6 edges to [[_COMMUNITY_main_1]]
+- 5 edges to [[_COMMUNITY_style_library]]
+- 5 edges to [[_COMMUNITY_render_remotion]]
+- 4 edges to [[_COMMUNITY_paint_instead]]
+- 4 edges to [[_COMMUNITY_pick_channel]]
+- 4 edges to [[_COMMUNITY_footage.py]]
+- 4 edges to [[_COMMUNITY_write_json]]
+- 4 edges to [[_COMMUNITY_write_scripts]]
+- 4 edges to [[_COMMUNITY_finish_render]]
+- 4 edges to [[_COMMUNITY_test_style.py]]
+- 3 edges to [[_COMMUNITY_rescue_graphics]]
+- 3 edges to [[_COMMUNITY_h3_run.py]]
+- 3 edges to [[_COMMUNITY_ffmpeg]]
+- 3 edges to [[_COMMUNITY_topic_ideas.py]]
+- 3 edges to [[_COMMUNITY_render]]
+- 3 edges to [[_COMMUNITY_media_command]]
+- 3 edges to [[_COMMUNITY_choose_images]]
 - 3 edges to [[_COMMUNITY_audio_library.py]]
-- 2 edges to [[_COMMUNITY_rescue_graphics]]
-- 2 edges to [[_COMMUNITY_duration]]
-- 2 edges to [[_COMMUNITY_fake_ai]]
-- 2 edges to [[_COMMUNITY_finish_render]]
+- 2 edges to [[_COMMUNITY_test_pictures_first.py]]
+- 2 edges to [[_COMMUNITY_apply_review_fixes]]
 - 2 edges to [[_COMMUNITY_gather_pool]]
-- 2 edges to [[_COMMUNITY_edit_scripts]]
+- 2 edges to [[_COMMUNITY_full_cues]]
+- 2 edges to [[_COMMUNITY_invent_component]]
+- 2 edges to [[_COMMUNITY_fake_ai]]
 - 2 edges to [[_COMMUNITY_test_story.py]]
-- 2 edges to [[_COMMUNITY_media_command]]
+- 2 edges to [[_COMMUNITY_test_first_second.py]]
+- 2 edges to [[_COMMUNITY_rewrite_paint_prompts]]
 - 2 edges to [[_COMMUNITY_test_blender_render.py]]
-- 2 edges to [[_COMMUNITY_choose_images]]
-- 2 edges to [[_COMMUNITY_Local GPU Worker]]
-- 1 edge to [[_COMMUNITY_test_h3_handoff.py]]
-- 1 edge to [[_COMMUNITY_paint_instead]]
-- 1 edge to [[_COMMUNITY_paint_opener_start]]
-- 1 edge to [[_COMMUNITY_plan_with]]
-- 1 edge to [[_COMMUNITY_apply_review_fixes]]
-- 1 edge to [[_COMMUNITY_test_drawn_opener.py]]
+- 1 edge to [[_COMMUNITY_cold_read]]
 - 1 edge to [[_COMMUNITY_main]]
-- 1 edge to [[_COMMUNITY_invent_component]]
+- 1 edge to [[_COMMUNITY_check_twists]]
 - 1 edge to [[_COMMUNITY_style_placeholders]]
-- 1 edge to [[_COMMUNITY_approve_candidate]]
-- 1 edge to [[_COMMUNITY_test_first_second.py]]
-- 1 edge to [[_COMMUNITY_rewrite_paint_prompts]]
-- 1 edge to [[_COMMUNITY_speak]]
-- 1 edge to [[_COMMUNITY_test_h3_run.py]]
+- 1 edge to [[_COMMUNITY_edit_scripts]]
 - 1 edge to [[_COMMUNITY_test_rules.py]]
-- 1 edge to [[_COMMUNITY_test_blender_run.py]]
+- 1 edge to [[_COMMUNITY_Local GPU Worker]]
+- 1 edge to [[_COMMUNITY_blender_plan.py]]
 - 1 edge to [[_COMMUNITY_test_blender_scene.py]]
 - 1 edge to [[_COMMUNITY_build_scene.py]]
 - 1 edge to [[_COMMUNITY_test_blender_plan.py]]
 
 ## Top bridge nodes
-- [[json]] - degree 128, connects to 41 communities
-- [[time]] - degree 30, connects to 12 communities
-- [[moss_images()]] - degree 13, connects to 7 communities
-- [[render_style.py]] - degree 12, connects to 6 communities
-- [[article_text()]] - degree 8, connects to 5 communities
+- [[json]] - degree 128, connects to 42 communities
+- [[motion.py]] - degree 38, connects to 10 communities
+- [[remotion_render.py]] - degree 33, connects to 8 communities
+- [[opening_brief()]] - degree 13, connects to 6 communities
+- [[direct_scripts()]] - degree 8, connects to 5 communities

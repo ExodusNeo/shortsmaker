@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "choose_images"
+community: "main"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/choose_images
+  - community/main
 ---
 
 # Path
 
 ## Connections
-- [[choose_images()]] - `references` [EXTRACTED]
+- [[log_short()]] - `references` [EXTRACTED]
+- [[vault_page()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/choose_images
+#graphify/code #graphify/EXTRACTED #community/main

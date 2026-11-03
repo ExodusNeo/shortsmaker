@@ -12,7 +12,7 @@ tags:
 # vault_page()
 
 ## Connections
-- [[Path_32]] - `references` [EXTRACTED]
+- [[Path_35]] - `references` [EXTRACTED]
 - [[The Short's page in the Obsidian vault thumbnail, storyboard, its logbook…]] - `rationale_for` [EXTRACTED]
 - [[finish_short()]] - `calls` [EXTRACTED]
 - [[logbook.py]] - `contains` [EXTRACTED]

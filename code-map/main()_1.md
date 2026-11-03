@@ -1,12 +1,12 @@
 ---
 source_file: "tests/render_full.py"
 type: "code"
-community: "shutil"
+community: "gpu.py"
 location: "L28"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/shutil
+  - community/gpupy
 ---
 
 # main()
@@ -18,4 +18,4 @@ tags:
 - [[shutil]] - `calls` [EXTRACTED]
 - [[subprocess]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/shutil
+#graphify/code #graphify/EXTRACTED #community/gpupy

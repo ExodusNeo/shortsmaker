@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_full_scenes.py"
 type: "code"
-community: "clean_full"
+community: "write_scripts"
 location: "L899"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/clean_full
+  - community/write_scripts
 ---
 
 # test_fill_money_graphics_and_caps()
@@ -17,8 +17,9 @@ tags:
 - [[graphic_low()]] - `calls` [EXTRACTED]
 - [[is_loop_short()]] - `calls` [EXTRACTED]
 - [[is_person_portrait()]] - `calls` [EXTRACTED]
+- [[shows_person()]] - `calls` [EXTRACTED]
 - [[test_full_scenes.py]] - `contains` [EXTRACTED]
 - [[trim_borders()]] - `calls` [EXTRACTED]
 - [[words_of()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/clean_full
+#graphify/code #graphify/EXTRACTED #community/write_scripts

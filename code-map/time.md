@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "json"
+community: "style_lab.py"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/json
+  - community/style_labpy
 ---
 
 # time
@@ -42,4 +42,4 @@ tags:
 - [[trend_research()]] - `calls` [EXTRACTED]
 - [[voicestudio_up()]] - `calls` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/json
+#graphify/concept #graphify/EXTRACTED #community/style_labpy

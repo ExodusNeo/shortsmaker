@@ -23,11 +23,11 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 3 edges to [[_COMMUNITY_ask_ai]]
-- 2 edges to [[_COMMUNITY_test_package.py]]
+- 4 edges to [[_COMMUNITY_ask_ai]]
+- 1 edge to [[_COMMUNITY_run_agy]]
 - 1 edge to [[_COMMUNITY_test_full_scenes.py]]
 
 ## Top bridge nodes
 - [[gemini_model()]] - degree 5, connects to 2 communities
-- [[test_gemini_timeout_switches_to_flash()]] - degree 5, connects to 2 communities
-- [[test_argon_out_of_quota_switches_to_flash()]] - degree 4, connects to 2 communities
+- [[test_gemini_timeout_switches_to_flash()]] - degree 5, connects to 1 community
+- [[test_argon_out_of_quota_switches_to_flash()]] - degree 4, connects to 1 community

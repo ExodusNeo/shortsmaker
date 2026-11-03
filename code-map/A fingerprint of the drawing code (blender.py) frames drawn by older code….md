@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/blender_render.py"
 type: "rationale"
-community: "shutil"
+community: "gpu.py"
 location: "L23"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/shutil
+  - community/gpupy
 ---
 
 # A fingerprint of the drawing code (blender/*.py): frames drawn by older code…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[code_version()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/shutil
+#graphify/rationale #graphify/EXTRACTED #community/gpupy

@@ -1,20 +1,20 @@
 ---
 source_file: "tests/test_story.py"
 type: "code"
-community: "cold_read_line"
+community: "cold_read"
 location: "L86"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/cold_read_line
+  - community/cold_read
 ---
 
 # test_cold_read_uses_other_ai_in_solo_and_collaborative_modes()
 
 ## Connections
-- [[ask()]] - `indirect_call` [INFERRED]
+- [[ask()_5]] - `indirect_call` [INFERRED]
 - [[cold_read()]] - `calls` [EXTRACTED]
 - [[cold_read_line()]] - `calls` [EXTRACTED]
 - [[test_story.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/cold_read_line
+#graphify/code #graphify/EXTRACTED #community/cold_read

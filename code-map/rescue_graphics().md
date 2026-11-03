@@ -2,7 +2,7 @@
 source_file: "shortsmaker/picker.py"
 type: "code"
 community: "rescue_graphics"
-location: "L323"
+location: "L327"
 tags:
   - graphify/code
   - graphify/EXTRACTED

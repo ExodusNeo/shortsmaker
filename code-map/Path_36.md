@@ -1,20 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "speak"
+community: "choose_images"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/speak
+  - community/choose_images
 ---
 
 # Path
 
 ## Connections
-- [[captions()_1]] - `references` [EXTRACTED]
-- [[music_gain()]] - `references` [EXTRACTED]
-- [[speak()_1]] - `references` [EXTRACTED]
-- [[story_sound()]] - `references` [EXTRACTED]
-- [[tts()_1]] - `references` [EXTRACTED]
+- [[choose_images()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/speak
+#graphify/code #graphify/EXTRACTED #community/choose_images

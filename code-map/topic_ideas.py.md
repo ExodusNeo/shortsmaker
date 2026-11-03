@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/topic_ideas.py"
 type: "code"
-community: "writing.py"
+community: "topic_ideas.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/writingpy
+  - community/topic_ideaspy
 ---
 
 # topic_ideas.py
@@ -36,4 +36,4 @@ tags:
 - [[urllib_parse]] - `imports` [EXTRACTED]
 - [[writing.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/writingpy
+#graphify/code #graphify/EXTRACTED #community/topic_ideaspy

@@ -1,17 +1,17 @@
 ---
-source_file: "shortsmaker/blender_plan.py"
+source_file: "tests/test_ai_modes.py"
 type: "code"
-community: "test_blender_plan.py"
-location: "L114"
+community: "main"
+location: "L48"
 tags:
   - graphify/code
-  - graphify/EXTRACTED
-  - community/test_blender_planpy
+  - graphify/INFERRED
+  - community/main
 ---
 
 # ask()
 
 ## Connections
-- [[plan_builds()]] - `contains` [EXTRACTED]
+- [[test_all_modes_route_writer_editor_and_reader()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/test_blender_planpy
+#graphify/code #graphify/INFERRED #community/main

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/gpu.py"
 type: "rationale"
-community: "duration"
+community: "ffmpeg"
 location: "L186"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/duration
+  - community/ffmpeg
 ---
 
 # Story arc delivery: hook urgency -> suspenseful investigation -> payoff reveal.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[cosy_instruct()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/duration
+#graphify/rationale #graphify/EXTRACTED #community/ffmpeg

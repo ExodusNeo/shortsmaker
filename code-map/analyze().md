@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/retention.py"
 type: "code"
-community: "retention.py"
+community: "re"
 location: "L280"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/retentionpy
+  - community/re
 ---
 
 # analyze()
@@ -25,4 +25,4 @@ tags:
 - [[shutil]] - `calls` [EXTRACTED]
 - [[tempfile]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/retentionpy
+#graphify/code #graphify/EXTRACTED #community/re

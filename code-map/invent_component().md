@@ -2,7 +2,7 @@
 source_file: "shortsmaker/style_lab.py"
 type: "code"
 community: "invent_component"
-location: "L140"
+location: "L141"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,7 +12,7 @@ tags:
 # invent_component()
 
 ## Connections
-- [[Path_18]] - `references` [EXTRACTED]
+- [[Path_15]] - `references` [EXTRACTED]
 - [[The AI invents a new style component (`spec` = {title, brief, fallback}) for…]] - `rationale_for` [EXTRACTED]
 - [[ask_ai()]] - `calls` [EXTRACTED]
 - [[attempt()]] - `contains` [EXTRACTED]

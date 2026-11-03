@@ -1,18 +1,18 @@
 ---
 source_file: "shortsmaker/motion.py"
 type: "code"
-community: "code_custom_scenes"
+community: "json"
 location: "L346"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/code_custom_scenes
+  - community/json
 ---
 
 # opener_preflight()
 
 ## Connections
-- [[Path_26]] - `references` [EXTRACTED]
+- [[Path_27]] - `references` [EXTRACTED]
 - [[Render and grade every candidate, including repairs; keep the strongest…]] - `rationale_for` [EXTRACTED]
 - [[ask_ai()]] - `calls` [EXTRACTED]
 - [[clean_tsx_code()]] - `calls` [EXTRACTED]
@@ -27,4 +27,4 @@ tags:
 - [[preview_custom()]] - `calls` [EXTRACTED]
 - [[tsc_check()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/code_custom_scenes
+#graphify/code #graphify/EXTRACTED #community/json

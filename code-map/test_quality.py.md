@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_quality.py"
 type: "code"
-community: "writing.py"
+community: "test_full_scenes.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/writingpy
+  - community/test_full_scenespy
 ---
 
 # test_quality.py
@@ -36,4 +36,4 @@ tags:
 - [[unittest_mock]] - `imports_from` [EXTRACTED]
 - [[writing.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/writingpy
+#graphify/code #graphify/EXTRACTED #community/test_full_scenespy

@@ -1,17 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "shutil"
+community: "make"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/shutil
+  - community/make
 ---
 
 # Path
 
 ## Connections
-- [[load()_1]] - `references` [EXTRACTED]
-- [[save()_1]] - `references` [EXTRACTED]
+- [[short_folder()]] - `references` [EXTRACTED]
+- [[videos()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/shutil
+#graphify/code #graphify/EXTRACTED #community/make

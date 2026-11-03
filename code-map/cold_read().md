@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/writing.py"
 type: "code"
-community: "edit_scripts"
+community: "cold_read"
 location: "L405"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/edit_scripts
+  - community/cold_read
 ---
 
 # cold_read()
@@ -24,4 +24,4 @@ tags:
 - [[test_cold_read_uses_other_ai_in_solo_and_collaborative_modes()]] - `calls` [EXTRACTED]
 - [[writing.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/edit_scripts
+#graphify/code #graphify/EXTRACTED #community/cold_read

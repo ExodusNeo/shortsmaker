@@ -1,12 +1,12 @@
 ---
 source_file: "tests/render_full.py"
 type: "code"
-community: "shutil"
+community: "gpu.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/shutil
+  - community/gpupy
 ---
 
 # render_full.py
@@ -21,4 +21,4 @@ tags:
 - [[subprocess]] - `imports` [EXTRACTED]
 - [[sys]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/shutil
+#graphify/code #graphify/EXTRACTED #community/gpupy
