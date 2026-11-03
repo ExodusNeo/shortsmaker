@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "pick_channel"
+community: "test_story.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/pick_channel
+  - community/test_storypy
 ---
 
 # Path
 
 ## Connections
-- [[draft_rules()]] - `references` [EXTRACTED]
+- [[log_short()]] - `references` [EXTRACTED]
+- [[vault_page()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/pick_channel
+#graphify/code #graphify/EXTRACTED #community/test_storypy

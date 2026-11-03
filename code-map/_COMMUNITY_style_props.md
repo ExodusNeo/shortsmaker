@@ -20,8 +20,9 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 2 edges to [[_COMMUNITY_test_style.py]]
 - 1 edge to [[_COMMUNITY_render_remotion]]
+- 1 edge to [[_COMMUNITY_json]]
+- 1 edge to [[_COMMUNITY_test_style.py]]
 
 ## Top bridge nodes
 - [[style_props()]] - degree 4, connects to 2 communities

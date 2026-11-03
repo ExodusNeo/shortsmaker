@@ -1,11 +1,11 @@
 ---
 type: community
-members: 40
+members: 38
 ---
 
 # frame_maker
 
-**Members:** 40 nodes
+**Members:** 38 nodes
 
 ## Members
 - [[(style, text) for the built-in renderer, which draws only dates, places and…]] - rationale - shortsmaker/plan_rules.py
@@ -19,7 +19,7 @@ members: 40
 - [[Image]] - code
 - [[Image_1]] - code
 - [[One frame of slow Ken Burns motion; affine sampling is sub-pixel so it never…]] - rationale - shortsmaker/frame_render.py
-- [[Path_10]] - code
+- [[Path_11]] - code
 - [[Pop the card in with a slight overshoot over a dimmed background, then shrink…]] - rationale - shortsmaker/frame_render.py
 - [[Pre-render a callout as a small transparent image (animated per frame later).]] - rationale - shortsmaker/frame_render.py
 - [[Returns frame(i, t) scene i at time t with camera move and graphics applied.…]] - rationale - shortsmaker/frame_render.py
@@ -28,7 +28,6 @@ members: 40
 - [[Streams a clip's frames in order. Decoding a whole 1080x1920 clip up front…]] - rationale - shortsmaker/frame_render.py
 - [[Tilted photo card with a white border, drop shadow and a yellow name banner.]] - rationale - shortsmaker/frame_render.py
 - [[True only when a video is already vertical (916-ish, 720p+); horizontal videos…]] - rationale - shortsmaker/frame_render.py
-- [[True when the picture's subject would land under the top callouts (y ~180-680…]] - rationale - shortsmaker/frame_render.py
 - [[White camera-flash curve snaps up over the 2 frames before the cut, then…]] - rationale - shortsmaker/frame_render.py
 - [[credit_tag_image()]] - code - shortsmaker/image_sources.py
 - [[draw_card()]] - code - shortsmaker/frame_render.py
@@ -40,7 +39,6 @@ members: 40
 - [[frame()]] - code - shortsmaker/frame_render.py
 - [[frame()_1]] - code - tests/test_blender_plan.py
 - [[frame_maker()]] - code - shortsmaker/frame_render.py
-- [[graphic_low()]] - code - shortsmaker/frame_render.py
 - [[graphic_overlay()]] - code - shortsmaker/frame_render.py
 - [[person_card()]] - code - shortsmaker/frame_render.py
 - [[shot()]] - code - shortsmaker/frame_render.py
@@ -57,19 +55,19 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 16 edges to [[_COMMUNITY_test_full_scenes.py]]
-- 3 edges to [[_COMMUNITY_render]]
+- 15 edges to [[_COMMUNITY_test_full_scenes.py]]
+- 2 edges to [[_COMMUNITY_render]]
 - 2 edges to [[_COMMUNITY_words_of]]
 - 1 edge to [[_COMMUNITY_local_clips]]
 - 1 edge to [[_COMMUNITY_subprocess]]
-- 1 edge to [[_COMMUNITY_math]]
-- 1 edge to [[_COMMUNITY_ask_ai]]
+- 1 edge to [[_COMMUNITY_audio_library.py]]
+- 1 edge to [[_COMMUNITY_full_cues]]
 - 1 edge to [[_COMMUNITY_finish_render]]
 - 1 edge to [[_COMMUNITY_test_blender_plan.py]]
 
 ## Top bridge nodes
-- [[graphic_low()]] - degree 7, connects to 3 communities
-- [[fills_frame()]] - degree 6, connects to 3 communities
+- [[fills_frame()]] - degree 6, connects to 4 communities
 - [[frame_maker()]] - degree 8, connects to 2 communities
 - [[person_card()]] - degree 6, connects to 2 communities
 - [[write_frames()]] - degree 6, connects to 2 communities
+- [[flash_alpha()]] - degree 4, connects to 2 communities

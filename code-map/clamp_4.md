@@ -1,17 +1,17 @@
 ---
-source_file: "remotion/src/MapCard.tsx"
+source_file: "remotion/src/full/BigNumber.tsx"
 type: "code"
-community: "Graphics.tsx"
-location: "L16"
+community: "BigNumber.tsx"
+location: "L7"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Graphicstsx
+  - community/BigNumbertsx
 ---
 
 # clamp
 
 ## Connections
-- [[MapCard.tsx]] - `contains` [EXTRACTED]
+- [[BigNumber.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Graphicstsx
+#graphify/code #graphify/EXTRACTED #community/BigNumbertsx

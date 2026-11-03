@@ -2,7 +2,7 @@
 source_file: "tests/test_retention.py"
 type: "code"
 community: "RetentionTests"
-location: "L75"
+location: "L77"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -13,6 +13,6 @@ tags:
 
 ## Connections
 - [[RetentionTests]] - `method` [EXTRACTED]
-- [[read()_2]] - `indirect_call` [INFERRED]
+- [[read()_1]] - `indirect_call` [INFERRED]
 
 #graphify/code #graphify/EXTRACTED #community/RetentionTests

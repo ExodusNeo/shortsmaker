@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/channel_profiles.py"
 type: "rationale"
-community: "configure_brain"
+community: "main"
 location: "L92"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/configure_brain
+  - community/main
 ---
 
 # Three solo choices and every ordered writer/editor pairing; Enter preserves the…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[ask_brain()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/configure_brain
+#graphify/rationale #graphify/EXTRACTED #community/main

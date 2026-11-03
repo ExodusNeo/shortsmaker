@@ -1,20 +1,20 @@
 ---
-source_file: "tests/render_opener_preview.py"
+source_file: "local_ai/qwen_voice.py"
 type: "code"
-community: "subprocess"
-location: "L10"
+community: "time"
+location: "L181"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/subprocess
+  - community/time
 ---
 
 # main()
 
 ## Connections
-- [[make_paper()]] - `calls` [EXTRACTED]
-- [[preview_custom()]] - `calls` [EXTRACTED]
-- [[render_opener_preview.py]] - `contains` [EXTRACTED]
-- [[tsc_check()]] - `calls` [EXTRACTED]
+- [[align()]] - `calls` [EXTRACTED]
+- [[json]] - `calls` [EXTRACTED]
+- [[qwen_voice.py]] - `contains` [EXTRACTED]
+- [[time]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/subprocess
+#graphify/code #graphify/EXTRACTED #community/time

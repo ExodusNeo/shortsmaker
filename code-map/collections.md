@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "concept"
-community: "test_full_scenes.py"
+community: "writing.py"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/test_full_scenespy
+  - community/writingpy
 ---
 
 # collections
 
 ## Connections
-- [[logbook.py]] - `imports_from` [EXTRACTED]
+- [[retention.py]] - `imports_from` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/test_full_scenespy
+#graphify/concept #graphify/EXTRACTED #community/writingpy

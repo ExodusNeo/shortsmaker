@@ -39,6 +39,7 @@ tags:
 - [[main()_7]] - `calls` [EXTRACTED]
 - [[max_full_planned()]] - `calls` [EXTRACTED]
 - [[narration_lines()]] - `calls` [EXTRACTED]
+- [[observations()]] - `calls` [EXTRACTED]
 - [[pick_ideas()]] - `calls` [EXTRACTED]
 - [[pictures_of()]] - `calls` [EXTRACTED]
 - [[plan_builds()]] - `calls` [EXTRACTED]

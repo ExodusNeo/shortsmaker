@@ -1,12 +1,12 @@
 ---
 source_file: "blender/look.py"
 type: "code"
-community: "math"
+community: "look.py"
 location: "L42"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/math
+  - community/lookpy
 ---
 
 # ink_lines()
@@ -19,4 +19,4 @@ tags:
 - [[look.py]] - `contains` [EXTRACTED]
 - [[setup()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/math
+#graphify/code #graphify/EXTRACTED #community/lookpy

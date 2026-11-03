@@ -20,6 +20,7 @@ tags:
 - [[load_channel()]] - `calls` [EXTRACTED]
 - [[logbook_results()]] - `calls` [EXTRACTED]
 - [[main()_7]] - `calls` [EXTRACTED]
+- [[observations()]] - `calls` [EXTRACTED]
 - [[resume_runs()]] - `calls` [EXTRACTED]
 - [[search_suggestions()]] - `calls` [EXTRACTED]
 - [[seo.py]] - `contains` [EXTRACTED]

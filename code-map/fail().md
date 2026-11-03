@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/drawn_opener.py"
 type: "code"
-community: "make_opener"
+community: "OpeningRulesTests"
 location: "L176"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/make_opener
+  - community/OpeningRulesTests
 ---
 
 # fail()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[make_opener()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/make_opener
+#graphify/code #graphify/EXTRACTED #community/OpeningRulesTests

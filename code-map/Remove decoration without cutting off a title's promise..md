@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/seo.py"
 type: "rationale"
-community: "re"
+community: "writing.py"
 location: "L23"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/re
+  - community/writingpy
 ---
 
 # Remove decoration without cutting off a title's promise.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[clean_title()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/re
+#graphify/rationale #graphify/EXTRACTED #community/writingpy

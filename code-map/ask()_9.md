@@ -1,17 +1,17 @@
 ---
-source_file: "tests/test_style.py"
+source_file: "tests/test_full_scenes.py"
 type: "code"
-community: "owner"
-location: "L202"
+community: "rewrite_paint_prompts"
+location: "L477"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/owner
+  - community/rewrite_paint_prompts
 ---
 
 # ask()
 
 ## Connections
-- [[test_fact_check_sees_new_graphics()]] - `contains` [EXTRACTED]
+- [[test_rewrite_paint_prompts()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/owner
+#graphify/code #graphify/EXTRACTED #community/rewrite_paint_prompts

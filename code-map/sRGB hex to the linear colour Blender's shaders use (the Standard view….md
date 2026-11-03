@@ -1,12 +1,12 @@
 ---
 source_file: "blender/look.py"
 type: "rationale"
-community: "math"
+community: "look.py"
 location: "L12"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/math
+  - community/lookpy
 ---
 
 # sRGB hex to the linear colour Blender's shaders use (the Standard view…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[linear()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/math
+#graphify/rationale #graphify/EXTRACTED #community/lookpy

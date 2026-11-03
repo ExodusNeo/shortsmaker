@@ -1,17 +1,27 @@
 ---
-source_file: "tests/test_retention.py"
+source_file: "shortsmaker/checkpoints.py"
 type: "code"
-community: "RetentionTests"
-location: "L78"
+community: "main"
+location: "L47"
 tags:
   - graphify/code
-  - graphify/INFERRED
-  - community/RetentionTests
+  - graphify/EXTRACTED
+  - community/main
 ---
 
 # read()
 
 ## Connections
-- [[dot-test_only_screenshot_is_sent_and_report_is_saved_without_touching_logbook()]] - `indirect_call` [INFERRED]
+- [[Path_31]] - `references` [EXTRACTED]
+- [[begin()]] - `calls` [EXTRACTED]
+- [[checkpoints.py]] - `contains` [EXTRACTED]
+- [[context()]] - `calls` [EXTRACTED]
+- [[json]] - `calls` [EXTRACTED]
+- [[pending()]] - `calls` [EXTRACTED]
+- [[prune_work()]] - `calls` [EXTRACTED]
+- [[record_failure()]] - `calls` [EXTRACTED]
+- [[resume_runs()]] - `calls` [EXTRACTED]
+- [[unpack()]] - `calls` [EXTRACTED]
+- [[update()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/RetentionTests
+#graphify/code #graphify/EXTRACTED #community/main

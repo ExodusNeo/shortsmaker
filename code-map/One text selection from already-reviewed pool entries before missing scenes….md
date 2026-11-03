@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/picker.py"
 type: "rationale"
-community: "is_person_portrait"
+community: "recover_downloads"
 location: "L24"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/is_person_portrait
+  - community/recover_downloads
 ---
 
 # One text selection from already-reviewed pool entries before missing scenes…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[recover_downloads()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/is_person_portrait
+#graphify/rationale #graphify/EXTRACTED #community/recover_downloads

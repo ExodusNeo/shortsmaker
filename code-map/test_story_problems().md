@@ -12,7 +12,7 @@ tags:
 # test_story_problems()
 
 ## Connections
-- [[read()_1]] - `calls` [EXTRACTED]
+- [[read()]] - `calls` [EXTRACTED]
 - [[story_problems()]] - `calls` [EXTRACTED]
 - [[test_story.py]] - `contains` [EXTRACTED]
 

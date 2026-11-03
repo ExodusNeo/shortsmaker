@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/style_lab.py"
 type: "rationale"
-community: "test_style.py"
+community: "invent_component"
 location: "L94"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/test_stylepy
+  - community/invent_component
 ---
 
 # Puts the empty placeholders back into remotion/src/style/generated/ (after a…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[restore_style_slots()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/test_stylepy
+#graphify/rationale #graphify/EXTRACTED #community/invent_component

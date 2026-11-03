@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/seo.py"
 type: "code"
-community: "test_full_scenes.py"
+community: "writing.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_full_scenespy
+  - community/writingpy
 ---
 
 # seo.py
@@ -26,6 +26,7 @@ tags:
 - [[pathlib]] - `imports_from` [EXTRACTED]
 - [[plan_rules.py]] - `imports_from` [EXTRACTED]
 - [[re]] - `imports` [EXTRACTED]
+- [[retention.py]] - `imports_from` [EXTRACTED]
 - [[search_suggestions()]] - `contains` [EXTRACTED]
 - [[seo_pass()]] - `contains` [EXTRACTED]
 - [[session.py]] - `imports_from` [EXTRACTED]
@@ -37,4 +38,4 @@ tags:
 - [[test_topic_ideas.py]] - `imports_from` [EXTRACTED]
 - [[urllib_parse]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_full_scenespy
+#graphify/code #graphify/EXTRACTED #community/writingpy

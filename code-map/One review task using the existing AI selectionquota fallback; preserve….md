@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/retention.py"
 type: "rationale"
-community: "retention.py"
-location: "L94"
+community: "writing.py"
+location: "L140"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/retentionpy
+  - community/writingpy
 ---
 
 # One review task using the existing AI selection/quota fallback; preserve…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[analyze()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/retentionpy
+#graphify/rationale #graphify/EXTRACTED #community/writingpy

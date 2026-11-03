@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/motion.py"
 type: "code"
-community: "subprocess"
+community: "code_custom_scenes"
 location: "L438"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/subprocess
+  - community/code_custom_scenes
 ---
 
 # tsc_check()
@@ -15,11 +15,11 @@ tags:
 - [[Type-checks the Remotion project; None when it compiles, else the compiler's…]] - `rationale_for` [EXTRACTED]
 - [[approve_candidate()]] - `calls` [EXTRACTED]
 - [[code_custom_scenes()]] - `calls` [EXTRACTED]
-- [[main()_6]] - `calls` [EXTRACTED]
+- [[main()_5]] - `calls` [EXTRACTED]
 - [[motion.py]] - `contains` [EXTRACTED]
 - [[opener_preflight()]] - `calls` [EXTRACTED]
 - [[redraw_custom()]] - `calls` [EXTRACTED]
 - [[shutil]] - `calls` [EXTRACTED]
 - [[subprocess]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/subprocess
+#graphify/code #graphify/EXTRACTED #community/code_custom_scenes

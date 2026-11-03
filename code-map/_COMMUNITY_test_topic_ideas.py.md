@@ -38,23 +38,24 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 19 edges to [[_COMMUNITY_test_full_scenes.py]]
+- 11 edges to [[_COMMUNITY_test_full_scenes.py]]
 - 9 edges to [[_COMMUNITY_write_scripts]]
-- 5 edges to [[_COMMUNITY_re]]
+- 9 edges to [[_COMMUNITY_writing.py]]
+- 4 edges to [[_COMMUNITY_re]]
+- 4 edges to [[_COMMUNITY_json]]
 - 3 edges to [[_COMMUNITY_fake_ai]]
-- 3 edges to [[_COMMUNITY_json]]
-- 3 edges to [[_COMMUNITY_channel_profiles.py]]
+- 3 edges to [[_COMMUNITY_subprocess]]
+- 2 edges to [[_COMMUNITY_time]]
 - 2 edges to [[_COMMUNITY_test_pictures_first.py]]
-- 2 edges to [[_COMMUNITY_subprocess]]
-- 1 edge to [[_COMMUNITY_gather_pool]]
-- 1 edge to [[_COMMUNITY_test_rules.py]]
-- 1 edge to [[_COMMUNITY_math]]
-- 1 edge to [[_COMMUNITY_audio_library.py]]
+- 1 edge to [[_COMMUNITY_fetch]]
 - 1 edge to [[_COMMUNITY_test_style.py]]
+- 1 edge to [[_COMMUNITY_test_rules.py]]
+- 1 edge to [[_COMMUNITY_build_scene.py]]
+- 1 edge to [[_COMMUNITY_audio_library.py]]
 
 ## Top bridge nodes
+- [[topic_ideas.py]] - degree 23, connects to 8 communities
 - [[test_topic_ideas.py]] - degree 32, connects to 7 communities
-- [[topic_ideas.py]] - degree 22, connects to 7 communities
-- [[Random]] - degree 9, connects to 5 communities
 - [[fetch_ideas()]] - degree 9, connects to 4 communities
+- [[Random]] - degree 9, connects to 3 communities
 - [[pick_ideas()]] - degree 8, connects to 1 community

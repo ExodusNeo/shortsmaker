@@ -12,10 +12,10 @@ tags:
 # save_context()
 
 ## Connections
-- [[Path_5]] - `references` [EXTRACTED]
+- [[Path_31]] - `references` [EXTRACTED]
 - [[checkpoints.py]] - `contains` [EXTRACTED]
 - [[pack()]] - `calls` [EXTRACTED]
-- [[render()_2]] - `calls` [EXTRACTED]
+- [[render()_1]] - `calls` [EXTRACTED]
 - [[write_json()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/write_json

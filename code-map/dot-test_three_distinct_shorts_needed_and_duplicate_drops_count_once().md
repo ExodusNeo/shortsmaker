@@ -2,7 +2,7 @@
 source_file: "tests/test_quality.py"
 type: "code"
 community: "FeedbackTests"
-location: "L193"
+location: "L194"
 tags:
   - graphify/code
   - graphify/EXTRACTED

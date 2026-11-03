@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/style_lab.py"
 type: "code"
-community: "swap_inventions"
+community: "run_remotion_with_fallback"
 location: "L211"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/swap_inventions
+  - community/run_remotion_with_fallback
 ---
 
 # swap_inventions()
@@ -18,4 +18,4 @@ tags:
 - [[style_lab.py]] - `contains` [EXTRACTED]
 - [[test_swap_inventions()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/swap_inventions
+#graphify/code #graphify/EXTRACTED #community/run_remotion_with_fallback

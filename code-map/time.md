@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "channel_profiles.py"
+community: "time"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/channel_profilespy
+  - community/time
 ---
 
 # time
@@ -21,8 +21,8 @@ tags:
 - [[h3_run.py]] - `imports` [EXTRACTED]
 - [[image_sources.py]] - `imports` [EXTRACTED]
 - [[llm.py]] - `imports` [EXTRACTED]
-- [[main()_3]] - `calls` [EXTRACTED]
-- [[main()]] - `calls` [EXTRACTED]
+- [[main()_1]] - `calls` [EXTRACTED]
+- [[main()_6]] - `calls` [EXTRACTED]
 - [[media_library.py]] - `imports` [EXTRACTED]
 - [[moss_images()]] - `calls` [EXTRACTED]
 - [[picture_pool.py]] - `imports` [EXTRACTED]
@@ -35,11 +35,11 @@ tags:
 - [[short_render.py]] - `imports` [EXTRACTED]
 - [[source_json()]] - `calls` [EXTRACTED]
 - [[source_status()]] - `calls` [EXTRACTED]
-- [[speak()]] - `calls` [EXTRACTED]
+- [[speak()_1]] - `calls` [EXTRACTED]
 - [[style_lab.py]] - `imports` [EXTRACTED]
 - [[test_pictures_first.py]] - `imports` [EXTRACTED]
 - [[topic_ideas.py]] - `imports` [EXTRACTED]
 - [[trend_research()]] - `calls` [EXTRACTED]
 - [[voicestudio_up()]] - `calls` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/channel_profilespy
+#graphify/concept #graphify/EXTRACTED #community/time

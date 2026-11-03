@@ -1,15 +1,14 @@
 ---
 type: community
-members: 25
+members: 24
 ---
 
 # guarded.tsx
 
-**Members:** 25 nodes
+**Members:** 24 nodes
 
 ## Members
 - [[Box]] - code - remotion/src/full/guarded.tsx
-- [[Connect()]] - code - remotion/src/full/guarded.tsx
 - [[MIN_MOVE]] - code - remotion/src/full/guarded.tsx
 - [[NORMAL]] - code - remotion/src/full/guarded.tsx
 - [[Pt]] - code - remotion/src/full/guarded.tsx
@@ -42,15 +41,14 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 18 edges to [[_COMMUNITY_toolkit.tsx]]
-- 4 edges to [[_COMMUNITY_Paper]]
-- 3 edges to [[_COMMUNITY_fulltypes.ts]]
+- 14 edges to [[_COMMUNITY_skinOf]]
+- 8 edges to [[_COMMUNITY_toolkit.tsx]]
 - 1 edge to [[_COMMUNITY_Custom3.tsx]]
-- 1 edge to [[_COMMUNITY_Short.tsx]]
+- 1 edge to [[_COMMUNITY_MapCard.tsx]]
 
 ## Top bridge nodes
-- [[guarded.tsx]] - degree 32, connects to 5 communities
+- [[guarded.tsx]] - degree 32, connects to 4 communities
 - [[boxAt()]] - degree 7, connects to 1 community
-- [[Connect()]] - degree 7, connects to 1 community
 - [[layoutColumn()]] - degree 5, connects to 1 community
 - [[layoutRow()]] - degree 5, connects to 1 community
+- [[routeArrow()]] - degree 5, connects to 1 community

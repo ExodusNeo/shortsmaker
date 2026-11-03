@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_retention.py"
 type: "code"
-community: "test_full_scenes.py"
+community: "writing.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_full_scenespy
+  - community/writingpy
 ---
 
 # test_retention.py
@@ -27,4 +27,4 @@ tags:
 - [[unittest]] - `imports` [EXTRACTED]
 - [[unittest_mock]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_full_scenespy
+#graphify/code #graphify/EXTRACTED #community/writingpy

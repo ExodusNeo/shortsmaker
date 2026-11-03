@@ -1,17 +1,17 @@
 ---
-source_file: "shortsmaker/extra_sources.py"
+source_file: "tests/test_pictures_first.py"
 type: "code"
-community: "BrandImages"
-location: "L148"
+community: "choose_images"
+location: "L341"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/BrandImages
+  - community/choose_images
 ---
 
 # .__init__()
 
 ## Connections
-- [[BrandImages]] - `method` [EXTRACTED]
+- [[picking]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/BrandImages
+#graphify/code #graphify/EXTRACTED #community/choose_images

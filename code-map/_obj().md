@@ -1,12 +1,12 @@
 ---
 source_file: "blender/parts.py"
 type: "code"
-community: "parts.py"
+community: "look.py"
 location: "L30"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/partspy
+  - community/lookpy
 ---
 
 # _obj()
@@ -21,4 +21,4 @@ tags:
 - [[member()]] - `calls` [EXTRACTED]
 - [[parts.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/partspy
+#graphify/code #graphify/EXTRACTED #community/lookpy

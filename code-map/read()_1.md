@@ -1,23 +1,17 @@
 ---
-source_file: "tests/test_story.py"
+source_file: "tests/test_retention.py"
 type: "code"
-community: "test_story.py"
-location: "L23"
+community: "RetentionTests"
+location: "L80"
 tags:
   - graphify/code
-  - graphify/EXTRACTED
-  - community/test_storypy
+  - graphify/INFERRED
+  - community/RetentionTests
 ---
 
 # read()
 
 ## Connections
-- [[A cold reader's reading (writing.cold_read) that finds nothing wrong, with…]] - `rationale_for` [EXTRACTED]
-- [[test_cold_read_verdicts()]] - `calls` [EXTRACTED]
-- [[test_no_hook_setting_no_hook_check()]] - `calls` [EXTRACTED]
-- [[test_story.py]] - `contains` [EXTRACTED]
-- [[test_story_problems()]] - `calls` [EXTRACTED]
-- [[test_story_problems_flags_summary_hook()]] - `calls` [EXTRACTED]
-- [[test_story_problems_money_claim()]] - `calls` [EXTRACTED]
+- [[dot-test_only_screenshot_is_sent_and_report_is_saved_without_touching_logbook()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/test_storypy
+#graphify/code #graphify/INFERRED #community/RetentionTests

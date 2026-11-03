@@ -1,13 +1,14 @@
 ---
 type: community
-members: 18
+members: 21
 ---
 
 # Custom3.tsx
 
-**Members:** 18 nodes
+**Members:** 21 nodes
 
 ## Members
+- [[CalloutTag()]] - code - remotion/src/full/toolkit.tsx
 - [[Custom0.tsx]] - code - remotion/src/full/generated/Custom0.tsx
 - [[Custom1.tsx]] - code - remotion/src/full/generated/Custom1.tsx
 - [[Custom2.tsx]] - code - remotion/src/full/generated/Custom2.tsx
@@ -15,7 +16,9 @@ members: 18
 - [[CustomFull]] - code - remotion/src/full/types.ts
 - [[CustomScene.tsx]] - code - remotion/src/full/CustomScene.tsx
 - [[ExampleOpenerAction.tsx]] - code - remotion/src/full/examples/ExampleOpenerAction.tsx
+- [[FlowArrow()]] - code - remotion/src/full/toolkit.tsx
 - [[FullProps]] - code - remotion/src/full/types.ts
+- [[appear()]] - code - remotion/src/full/toolkit.tsx
 - [[clamp_9]] - code - remotion/src/full/toolkit.tsx
 - [[ref_react]] - concept
 - [[remotion_src_full_toolkit_customfull]] - concept
@@ -35,18 +38,19 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 64 edges to [[_COMMUNITY_toolkit.tsx]]
-- 11 edges to [[_COMMUNITY_Paper]]
-- 9 edges to [[_COMMUNITY_fulltypes.ts]]
-- 6 edges to [[_COMMUNITY_styleindex.ts]]
-- 6 edges to [[_COMMUNITY_Halftone.tsx]]
+- 63 edges to [[_COMMUNITY_skinOf]]
+- 24 edges to [[_COMMUNITY_toolkit.tsx]]
+- 7 edges to [[_COMMUNITY_kit.ts]]
+- 3 edges to [[_COMMUNITY_styleindex.ts]]
+- 2 edges to [[_COMMUNITY_BigNumber.tsx]]
+- 2 edges to [[_COMMUNITY_QuestionBeat.tsx]]
 - 1 edge to [[_COMMUNITY_Journey.tsx]]
-- 1 edge to [[_COMMUNITY_Graphics.tsx]]
+- 1 edge to [[_COMMUNITY_MapCard.tsx]]
 - 1 edge to [[_COMMUNITY_guarded.tsx]]
 
 ## Top bridge nodes
-- [[ref_react]] - degree 25, connects to 7 communities
+- [[ref_react]] - degree 25, connects to 8 communities
 - [[FullProps]] - degree 15, connects to 4 communities
-- [[Custom3.tsx]] - degree 26, connects to 3 communities
-- [[Custom0.tsx]] - degree 25, connects to 3 communities
+- [[Custom3.tsx]] - degree 26, connects to 2 communities
+- [[Custom0.tsx]] - degree 25, connects to 2 communities
 - [[Custom1.tsx]] - degree 22, connects to 2 communities

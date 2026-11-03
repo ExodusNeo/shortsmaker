@@ -2,7 +2,7 @@
 source_file: "shortsmaker/logbook.py"
 type: "code"
 community: "fake_ai"
-location: "L101"
+location: "L100"
 tags:
   - graphify/code
   - graphify/EXTRACTED

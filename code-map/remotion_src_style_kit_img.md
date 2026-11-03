@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "Halftone.tsx"
+community: "kit.ts"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Halftonetsx
+  - community/kitts
 ---
 
 # remotion_src_style_kit_img
@@ -18,4 +18,4 @@ tags:
 - [[Riso.tsx]] - `imports` [EXTRACTED]
 - [[Silent.tsx]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Halftonetsx
+#graphify/concept #graphify/EXTRACTED #community/kitts

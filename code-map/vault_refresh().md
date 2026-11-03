@@ -2,7 +2,7 @@
 source_file: "shortsmaker/logbook.py"
 type: "code"
 community: "re"
-location: "L88"
+location: "L87"
 tags:
   - graphify/code
   - graphify/EXTRACTED

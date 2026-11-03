@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_full_scenes.py"
 type: "code"
-community: "subprocess"
+community: "render_remotion"
 location: "L25"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/subprocess
+  - community/render_remotion
 ---
 
 # test_make_paper()
@@ -15,4 +15,4 @@ tags:
 - [[make_paper()]] - `calls` [EXTRACTED]
 - [[test_full_scenes.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/subprocess
+#graphify/code #graphify/EXTRACTED #community/render_remotion

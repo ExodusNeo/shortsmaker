@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/drawn_opener.py"
 type: "rationale"
-community: "make_opener"
+community: "OpeningRulesTests"
 location: "L87"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/make_opener
+  - community/OpeningRulesTests
 ---
 
 # Six frames across the opener for the preview, the first and the last included.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[sheet_times()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/make_opener
+#graphify/rationale #graphify/EXTRACTED #community/OpeningRulesTests

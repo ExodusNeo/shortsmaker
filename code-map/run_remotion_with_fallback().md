@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/remotion_render.py"
 type: "code"
-community: "render_remotion"
+community: "run_remotion_with_fallback"
 location: "L23"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/render_remotion
+  - community/run_remotion_with_fallback
 ---
 
 # run_remotion_with_fallback()
@@ -20,4 +20,4 @@ tags:
 - [[swap_inventions()]] - `calls` [EXTRACTED]
 - [[test_invention_runtime_failure_uses_fallback()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/render_remotion
+#graphify/code #graphify/EXTRACTED #community/run_remotion_with_fallback

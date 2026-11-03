@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[One mid-scene frame per scene from the finished video, labeled with its…]] - `rationale_for` [EXTRACTED]
-- [[Path_31]] - `references` [EXTRACTED]
+- [[Path_3]] - `references` [EXTRACTED]
 - [[apply()]] - `calls` [EXTRACTED]
 - [[clock()_1]] - `calls` [EXTRACTED]
 - [[finish_render()]] - `calls` [EXTRACTED]

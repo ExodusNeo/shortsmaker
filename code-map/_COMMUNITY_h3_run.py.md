@@ -20,7 +20,7 @@ members: 23
 - [[frames()]] - code - colab/h3_run.py
 - [[graph()]] - code - colab/h3_run.py
 - [[h3_run.py]] - code - colab/h3_run.py
-- [[main()_3]] - code - colab/h3_run.py
+- [[main()_1]] - code - colab/h3_run.py
 - [[saved_file()]] - code - colab/h3_run.py
 - [[test_fit_start_is_768x1344()]] - code - tests/test_h3_run.py
 - [[test_frames_snap_to_17k_plus_5()]] - code - tests/test_h3_run.py
@@ -40,17 +40,17 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 9 edges to [[_COMMUNITY_test_full_scenes.py]]
+- 7 edges to [[_COMMUNITY_test_full_scenes.py]]
+- 4 edges to [[_COMMUNITY_subprocess]]
 - 3 edges to [[_COMMUNITY_json]]
-- 2 edges to [[_COMMUNITY_channel_profiles.py]]
-- 2 edges to [[_COMMUNITY_subprocess]]
+- 2 edges to [[_COMMUNITY_time]]
 - 1 edge to [[_COMMUNITY_test_h3_handoff.py]]
 - 1 edge to [[_COMMUNITY_local_clips]]
-- 1 edge to [[_COMMUNITY_re]]
+- 1 edge to [[_COMMUNITY_writing.py]]
 
 ## Top bridge nodes
-- [[h3_run.py]] - degree 16, connects to 5 communities
-- [[main()_3]] - degree 10, connects to 3 communities
+- [[h3_run.py]] - degree 16, connects to 4 communities
+- [[test_h3_run.py]] - degree 14, connects to 3 communities
+- [[main()_1]] - degree 10, connects to 3 communities
 - [[zipfile]] - degree 5, connects to 3 communities
-- [[test_h3_run.py]] - degree 14, connects to 1 community
 - [[call()]] - degree 3, connects to 1 community

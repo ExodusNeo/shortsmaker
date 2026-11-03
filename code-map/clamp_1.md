@@ -1,17 +1,17 @@
 ---
-source_file: "remotion/src/Cards.tsx"
+source_file: "remotion/src/Extras.tsx"
 type: "code"
-community: "Graphics.tsx"
+community: "Cards.tsx"
 location: "L5"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Graphicstsx
+  - community/Cardstsx
 ---
 
 # clamp
 
 ## Connections
-- [[Cards.tsx]] - `contains` [EXTRACTED]
+- [[Extras.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Graphicstsx
+#graphify/code #graphify/EXTRACTED #community/Cardstsx

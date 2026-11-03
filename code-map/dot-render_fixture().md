@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_render_resume.py"
 type: "code"
-community: ".render_fixture"
+community: "OpeningRulesTests"
 location: "L23"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/render_fixture
+  - community/OpeningRulesTests
 ---
 
 # .render_fixture()
@@ -18,4 +18,4 @@ tags:
 - [[review()]] - `indirect_call` [INFERRED]
 - [[voice()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/render_fixture
+#graphify/code #graphify/EXTRACTED #community/OpeningRulesTests

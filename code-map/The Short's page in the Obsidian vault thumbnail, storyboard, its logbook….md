@@ -2,7 +2,7 @@
 source_file: "shortsmaker/logbook.py"
 type: "rationale"
 community: "re"
-location: "L63"
+location: "L62"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED

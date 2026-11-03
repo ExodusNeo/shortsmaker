@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/blender_plan.py"
 type: "rationale"
-community: "blender_plan.py"
+community: "writing.py"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/blender_planpy
+  - community/writingpy
 ---
 
 # Blender build plans (2026-10-22): for channels with `visuals: blender`, the…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[blender_plan.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/blender_planpy
+#graphify/rationale #graphify/EXTRACTED #community/writingpy

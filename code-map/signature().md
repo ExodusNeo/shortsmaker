@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/voice_cache.py"
 type: "code"
-community: "json"
+community: "render"
 location: "L10"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/json
+  - community/render
 ---
 
 # signature()
@@ -19,4 +19,4 @@ tags:
 - [[save()_1]] - `calls` [EXTRACTED]
 - [[voice_cache.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/json
+#graphify/code #graphify/EXTRACTED #community/render
