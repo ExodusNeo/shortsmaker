@@ -436,7 +436,7 @@ strangest moment. Same story, other channel: Voggle's Mike 2M views vs ours 1.2K
   scene repairs, and reviewed-pool download recovery. Plan: `docs/superpowers/plans/2026-10-31-reliability-improvements.md`.
   Separate open question: weird-economics' 110-135 words vs the code's 95-125.
 - **Openers**: the drawn opener ran inside a full run for the first time on 2026-11-03 (Wilmer McLean,
-  `output\strange-history6-11-03_he-fled-120-miles-then-came-the-knock`): draft 1 scored 5/10 (figures too
+  `output\strange-history\2026-11-03_he-fled-120-miles-then-came-the-knock`): draft 1 scored 5/10 (figures too
   small), a later draft passed, first-second score 8/10. The drawn reveal did not trigger (no reveal was planned as a
   custom diagram), so it still has no live run; the motion-graphic fix rounds have no live run yet. More kit parts as stories need them.
 - run.bat's "press any key" at the end doesn't close the window for the owner: not found in the code; waiting for
