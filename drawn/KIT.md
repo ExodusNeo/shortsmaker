@@ -24,7 +24,10 @@ Rules for the code:
   pops in from an empty frame). Lock each beat to its spoken word with `k.word("brass")` (that word's start time).
 - Big and few: 1-3 main things, large enough to read on a phone (a person at s 1.6-2.4, about 400-590 px tall;
   a ship at s 1.5-1.7). A thing a stranger might not recognise (a bed warmer, a match, a bond) gets a short label
-  with the narration's own word (a crate or sign: "BED WARMERS").
+  with the narration's own word (a crate or sign: "BED WARMERS"). A label is at least size 48 in ink and sits
+  outside y 1120-1320 (the Clever Hans "OWNER" label was size 33, right above the captions, and nobody could read it).
+- Animals and people come from the kit (`k.horse`, `k.dog`, `k.person`...), never assembled from your own shapes:
+  a hand-built horse of boxes read as a cardboard donkey. Pose them with the part's options (`tap`, `walk`, `arms`).
 
 ## Timing helpers
 - `k.word(w, fallback)` start time of the first spoken word that begins with `w` (seconds), else `fallback`.
@@ -52,7 +55,10 @@ down, outward positive: 160 = raised overhead), `bend: [l, r]` (elbow degrees), 
 `k.crowd(x0, x1, y, count, s, {hats: [...], face, arms})` a row of people; returns their positions.
 
 ## Animals (stand on (x, y); face right, `flip: true` faces left; `walk: t * 9` walks)
-`k.dog`, `k.chicken` (`headless: true`, `flap: true`), `k.horse`, `k.cow`, `k.pig` (x, y, s, o);
+`k.dog`, `k.chicken` (`headless: true`, `flap: true`), `k.cow`, `k.pig` (x, y, s, o);
+`const h = k.horse(x, y, s, o)` about 350*s px tall, 370*s long; o: `color`, `mane`, `walk`, `tap: [k.word("four"),
+...]` (the near forehoof lifts and strikes the ground at each time: a counting horse, a pawing horse). Returns
+`{hoof, head}` in screen space: `k.puff(h.hoof[0], h.hoof[1], .6, strikeTime)` for dust where it lands;
 `k.bird(x, y, s)` a flying gull shape (move x/y yourself).
 
 ## Vehicles and buildings (stand on (x, y))

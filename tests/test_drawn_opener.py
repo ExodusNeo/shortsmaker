@@ -48,6 +48,16 @@ def test_lint():
     assert drawn_opener.lint("function scene(k, t) {}") == ["missing `export default function scene(k, t)`"]
 
 
+def test_kit_animals_must_be_used():
+    moment = "Clever Hans taps a hoof while his owner stands aside"
+    boxes = {"moment": moment.replace("Clever Hans", "the horse Hans"), "code": "k.shape(k.rect(1, 2, 3, 4), '#A7784D'); // k.horse( in a comment"}
+    assert len(drawn_opener.missing_parts(boxes)) == 1 and "k.horse" in drawn_opener.missing_parts(boxes)[0]
+    assert drawn_opener.missing_parts({"moment": "a stallion taps", "code": "const h = k.horse(560, 1600, 2, {tap: [1]});"}) == []
+    assert drawn_opener.missing_parts({"moment": moment, "code": ""}) == []  # no animal word: nothing to require
+    assert drawn_opener.missing_parts({"moment": moment, "code": ""}, "His owner wasn't asking, but this horse")  # the real case
+    assert drawn_opener.missing_parts({"moment": "horseradish ships", "code": ""}) == []  # whole words only
+
+
 def test_drawn_opener_renders_and_is_reused():
     """A draft that passes: coded, previewed (6 frames), approved, rendered as scene 1 + the crossfade; a second call
     (a fix round) reuses the clip without asking the AI."""

@@ -194,16 +194,55 @@ export function makeKit(ctx, t, words = []) {
       p.stroke([[36, -104], [42, -114]], { w: 3.6 }); }
     else { p.stroke([[34, -110], [44, -130]], { w: 6 }); p.wash(ellPts(44, -130, 8, 5, 8), C.red, { solid: true, over: true }); }
   });
-  k.horse = (x, y, s = 1, o = {}) => animal(x, y, s, o, () => {
-    const col = o.color || "#8C5A33";
-    legs([[-80, -120], [-60, -120], [60, -120], [80, -120]], o.walk, 120, 6);
-    const B = [[-110, -130], [-96, -190], [80, -196], [112, -150], [92, -118], [-96, -112]]; k.paint(B, col, { round: true }); p.blob(B, { w: 4.4 });
-    const N = [[70, -186], [96, -262], [120, -292], [150, -300], [196, -262], [206, -240], [186, -228], [146, -246], [126, -206], [112, -150]];
-    k.paint(N, col, { sharp: true }); p.poly(N, { w: 4.4 });
-    p.wash([[118, -300], [126, -326], [136, -298]], col, { solid: true, over: true }); p.stroke([[118, -300], [126, -326], [136, -298]], { w: 3.4 });
-    p.stroke([[112, -296], [86, -240], [74, -190]], { w: 9, color: "#3A2A1C" }); p.dot(150, -276, 5.5); p.dot(198, -246, 3);
-    p.stroke([[-108, -170], [-140, -120 + Math.sin(t * 6) * 8], [-150, -80]], { w: 8, color: "#3A2A1C", taper: .5 });
-  });
+  // a horse with jointed legs, hooves, mane and tail (2026-11-03: the stick-leg one was replaced by hand-built boxes in
+  // the Clever Hans opener). o: color, mane, walk (phase), tap: [times] the near forehoof strikes the ground at.
+  // Returns {hoof, head} in screen space (dust at the hoof, a bubble or question at the head).
+  const limb = (a, b, wa, wb, col) => {            // a tapered leg segment from a to b, painted with an ink outline
+    const dx = b[0] - a[0], dy = b[1] - a[1], L = Math.hypot(dx, dy) || 1, nx = -dy / L, ny = dx / L;
+    const Q = [[a[0] + nx * wa, a[1] + ny * wa], [b[0] + nx * wb, b[1] + ny * wb], [b[0] - nx * wb, b[1] - ny * wb], [a[0] - nx * wa, a[1] - ny * wa]];
+    k.paint(Q, col, { sharp: true }); p.poly(Q, { w: 3.2 });
+  };
+  const horseLeg = (hx, up, low, col, hoofCol) => { // up/low: degrees from straight down, positive = forward
+    const r = (d) => d * Math.PI / 180, knee = [hx + Math.sin(r(up)) * 62, -125 + Math.cos(r(up)) * 62];
+    const hoof = [knee[0] + Math.sin(r(low)) * 56, knee[1] + Math.cos(r(low)) * 56];
+    limb([hx, -125], knee, 13, 8, col); limb(knee, hoof, 8, 7, col);
+    const tip = [hoof[0] + Math.sin(r(low)) * 9, hoof[1] + Math.cos(r(low)) * 9];
+    limb(hoof, tip, 9, 10, hoofCol);
+    return tip;
+  };
+  k.horse = (x, y, s = 1, o = {}) => {
+    const col = o.color || "#8C5A33", dark = o.mane || "#2E2219", far = o.color ? o.color : "#6E4628";
+    const lift = (o.tap || []).reduce((m, t0) => Math.max(m, Math.sin(clamp((t - (t0 - .34)) / .34) * Math.PI)), 0);
+    const gait = (i) => o.walk == null ? [0, 0] : [Math.sin(o.walk + i * Math.PI / 2) * 24, -Math.max(0, Math.sin(o.walk + i * Math.PI / 2)) * 34];
+    let hoof = [0, 0];
+    animal(x, y, s, o, () => {
+      const [b0, b1] = gait(0), [f0, f1] = gait(1);
+      horseLeg(-92, b0, b0 + b1, far, dark); horseLeg(70, f0, f0 + f1, far, dark);     // far legs, behind the body
+      p.stroke([[-112, -184], [-150, -128 + Math.sin(t * 5) * 7], [-146, -64]], { w: 16, color: dark, taper: .6 });  // tail
+      p.stroke([[-114, -176], [-136, -120 + Math.sin(t * 5 + 1) * 6], [-124, -76]], { w: 8, color: dark, taper: .6 });
+      const B = [[-118, -150], [-104, -196], [-20, -208], [84, -204], [116, -168], [104, -124], [20, -112], [-96, -116]];
+      k.paint(B, col); p.blob(B, { w: 4.4 });
+      const N = [[64, -200], [104, -276], [126, -312], [158, -300], [150, -262], [128, -214], [112, -146]];
+      k.paint(N, col, { sharp: false }); p.blob(N, { w: 4.4 });                          // neck
+      const Hd = [[118, -300], [140, -330], [172, -318], [216, -268], [224, -244], [204, -230], [170, -244], [136, -270]];
+      k.paint(Hd, col); p.blob(Hd, { w: 4.4 });                                           // head, long muzzle
+      p.wash(k.oval(212, -248, 13, 10, 12), "#5A3A26", { solid: true, over: true });      // dark muzzle
+      [[128, -318, 132, -350, 146, -322], [142, -322, 150, -352, 160, -318]].forEach(([a, b, c2, d, e, f]) => {
+        const E = [[a, b], [c2, d], [e, f]]; k.paint(E, col, { sharp: true }); p.poly(E, { w: 3.4 }); });  // ears
+      for (let i = 0; i < 7; i++) {                                                       // mane along the neck's crest
+        const f = i / 6, mx = lerp(124, 70, f), my = lerp(-318, -200, f);
+        p.stroke([[mx, my], [mx - 22, my + 26 + Math.sin(t * 4 + i) * 3]], { w: 9, color: dark, taper: .7 });
+      }
+      p.dot(164, -290, 5.5); p.stroke([[158, -297], [170, -298]], { w: 2.4 });            // eye and lid
+      p.dot(214, -252, 3.2); p.stroke([[204, -233], [218, -236]], { w: 2.2 });            // nostril, mouth
+      const [bn0, bn1] = gait(2), [fn0, fn1] = gait(3);
+      horseLeg(-70, bn0, bn0 + bn1, col, dark);                                            // near hind leg
+      const up = o.tap ? 40 * lift : fn0, low = o.tap ? up - 105 * lift : fn0 + fn1;     // tapping: knee up, hoof tucked
+      hoof = horseLeg(92, up, low, col, dark);                                            // near foreleg
+    });
+    const f = o.flip ? -1 : 1;
+    return { hoof: [x + hoof[0] * s * f, y + hoof[1] * s], head: [x + 170 * s * f, y - 290 * s] };
+  };
   k.bird = (x, y, s = 1, o = {}) => animal(x, y, s, o, () => {
     const f = Math.sin(t * 14 + x) * 18;
     p.stroke([[-40, -f], [-14, 4], [0, 8], [14, 4], [40, -f]], { w: 4.2, color: o.color || C.ink });

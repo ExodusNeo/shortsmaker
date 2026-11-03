@@ -56,6 +56,23 @@ def lint(code: str) -> list[str]:
     return found
 
 
+# The kit's animals and the words that name them. The Clever Hans opener (2026-11-03) built its horse from boxes
+# instead of k.horse, and the art director passed it at 7/10.
+KIT_ANIMALS = {"horse": ("horse", "stallion", "mare", "pony", "colt"), "dog": ("dog", "hound", "puppy"),
+               "chicken": ("chicken", "hen", "rooster", "cockerel"), "cow": ("cow", "bull", "ox", "cattle"),
+               "pig": ("pig", "hog", "sow", "boar")}
+
+
+def missing_parts(plan: dict, narration: str = "") -> list[str]:
+    """Animals the planned moment or the opener's narration names that the code doesn't draw with the kit's own part
+    (the Clever Hans plan said only "Clever Hans taps a hoof"; its narration said "this horse")."""
+    said = set(re.findall(r"[a-z]+", f"{plan.get('moment') or ''} {narration}".lower()))
+    live = INERT.sub('""', plan.get("code") or "")
+    return [f"the moment shows a {part} but the code never calls k.{part}(...): draw it with the kit's part "
+            f"(KIT.md, Animals), never from your own shapes" for part, names in KIT_ANIMALS.items()
+            if said & set(names) and f"k.{part}(" not in live]
+
+
 def clean_code(raw) -> str | None:
     """The scene module from an AI reply (fences stripped), or None."""
     if not isinstance(raw, str) or not raw.strip():
@@ -126,7 +143,8 @@ hand-drawn opener across {seconds:.1f} s, left to right (the time is on each). T
 A stranger scrolling the Shorts feed sees the first frame for one second. Look for these problems:
 - frame 0 doesn't already show the subject and what is strange about it, or you can't tell what is happening;
 - the main thing is too small to read on a phone, or crowded out by background;
-- something doesn't look like what it should be (name it), or looks wrong for the story's era or place;
+- something doesn't look like what it should be (name it), or looks wrong for the story's era or place; an
+  animal or person assembled from plain boxes and blocks counts (a horse must read as a horse at a glance);
 - things float, sink into each other or overlap wrongly (a person inside a wall, a held thing away from the hand);
 - the picture doesn't fill the vertical frame (a big empty band, the main things drawn small in one part of it),
   or something important is cut off by the frame edge;
@@ -188,7 +206,7 @@ def make_opener(short: dict, words: list, seconds: float, work: Path) -> tuple[P
                     return fail("the AI wrote no usable scene")
                 break  # keep the last draft's problems
             plan, sheet, score = draft, None, 0.0
-            problems = lint(plan["code"])
+            problems = lint(plan["code"]) + missing_parts(plan, short["scenes"][0]["narration"])
             if not problems:
                 scene.write_text(plan["code"], encoding="utf-8")
                 err = node_run({**base, "mode": "sheet", "times": sheet_times(seconds), "scale": 0.3}, folder)

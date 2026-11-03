@@ -15,7 +15,7 @@ export default function scene(k, t) {
   } else if (page === 2) {     // animals
     k.sky("day"); k.ground(1400, "dirt");
     k.dog(220, 650, 1, { walk: t * 10 }); k.chicken(640, 650, 1.2, {}); k.chicken(900, 650, 1.2, { headless: true, flip: true, walk: t * 10 });
-    k.horse(300, 1100, 1, { walk: t * 8 }); k.cow(780, 1100, .9, { flip: true });
+    k.horse(300, 1100, 1, { tap: [2.6] }); k.cow(780, 1100, .9, { flip: true });
     k.pig(300, 1400, 1, {}); k.bird(700, 1300, 1.2); k.bird(850, 1250, .8);
   } else if (page === 3) {     // buildings
     k.sky("dusk"); k.hills(1200); k.ground(1500, "street");
