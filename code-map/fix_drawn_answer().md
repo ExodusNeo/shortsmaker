@@ -1,20 +1,20 @@
 ---
 source_file: "shortsmaker/review.py"
 type: "code"
-community: "finish_render"
+community: "opener_graphic"
 location: "L345"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/finish_render
+  - community/opener_graphic
 ---
 
 # fix_drawn_answer()
 
 ## Connections
-- [[Path_3]] - `references` [EXTRACTED]
+- [[Path_5]] - `references` [EXTRACTED]
 - [[finish_render()]] - `calls` [EXTRACTED]
 - [[opener_graphic()]] - `calls` [EXTRACTED]
 - [[review.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/finish_render
+#graphify/code #graphify/EXTRACTED #community/opener_graphic

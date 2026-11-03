@@ -1,12 +1,12 @@
 ---
 source_file: "blender/look.py"
 type: "code"
-community: "look.py"
+community: "math"
 location: "L77"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/lookpy
+  - community/math
 ---
 
 # collection()
@@ -16,4 +16,4 @@ tags:
 - [[look.py]] - `contains` [EXTRACTED]
 - [[setup()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/lookpy
+#graphify/code #graphify/EXTRACTED #community/math

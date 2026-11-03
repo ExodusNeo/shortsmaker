@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/full/Document.tsx"
 type: "code"
-community: "toolkit.tsx"
+community: "Paper"
 location: "L19"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/toolkittsx
+  - community/Paper
 ---
 
 # Filler()
@@ -16,4 +16,4 @@ tags:
 - [[DocumentScene()]] - `calls` [EXTRACTED]
 - [[rng()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/toolkittsx
+#graphify/code #graphify/EXTRACTED #community/Paper

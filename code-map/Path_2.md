@@ -1,20 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "render_remotion"
+community: "json"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/render_remotion
+  - community/json
 ---
 
 # Path
 
 ## Connections
-- [[ink_silhouette()]] - `references` [EXTRACTED]
-- [[make_paper()]] - `references` [EXTRACTED]
-- [[paint_instead()]] - `references` [EXTRACTED]
-- [[redraw_custom()]] - `references` [EXTRACTED]
-- [[render_remotion()]] - `references` [EXTRACTED]
+- [[import_media()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/render_remotion
+#graphify/code #graphify/EXTRACTED #community/json

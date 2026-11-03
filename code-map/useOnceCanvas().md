@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/style/kit.ts"
 type: "code"
-community: "kit.ts"
+community: "Halftone.tsx"
 location: "L63"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/kitts
+  - community/Halftonetsx
 ---
 
 # useOnceCanvas()
@@ -24,4 +24,4 @@ tags:
 - [[Silent.tsx]] - `imports` [EXTRACTED]
 - [[kit.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/kitts
+#graphify/code #graphify/EXTRACTED #community/Halftonetsx

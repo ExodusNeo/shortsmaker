@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/topic_ideas.py"
 type: "code"
-community: "test_topic_ideas.py"
+community: "writing.py"
 location: "L39"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_topic_ideaspy
+  - community/writingpy
 ---
 
 # clash()
@@ -19,4 +19,4 @@ tags:
 - [[topic_ideas.py]] - `contains` [EXTRACTED]
 - [[write_scripts()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_topic_ideaspy
+#graphify/code #graphify/EXTRACTED #community/writingpy

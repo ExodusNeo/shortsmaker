@@ -12,13 +12,13 @@ tags:
 # frame_maker()
 
 ## Connections
-- [[Path_11]] - `references` [EXTRACTED]
+- [[Path_13]] - `references` [EXTRACTED]
 - [[Returns frame(i, t) scene i at time t with camera move and graphics applied.…]] - `rationale_for` [EXTRACTED]
 - [[credit_tag_image()]] - `calls` [EXTRACTED]
 - [[fallback_graphic()]] - `calls` [EXTRACTED]
 - [[frame()]] - `indirect_call` [INFERRED]
 - [[frame_render.py]] - `contains` [EXTRACTED]
 - [[graphic_overlay()]] - `calls` [EXTRACTED]
-- [[render()_1]] - `calls` [EXTRACTED]
+- [[render()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/frame_maker

@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/style/looks/Riso.tsx"
 type: "code"
-community: "kit.ts"
+community: "Halftone.tsx"
 location: "L13"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/kitts
+  - community/Halftonetsx
 ---
 
 # draw()
@@ -18,4 +18,4 @@ tags:
 - [[noise()_1]] - `calls` [EXTRACTED]
 - [[rgb()_1]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/kitts
+#graphify/code #graphify/EXTRACTED #community/Halftonetsx

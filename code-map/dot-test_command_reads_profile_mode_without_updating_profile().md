@@ -2,7 +2,7 @@
 source_file: "tests/test_retention.py"
 type: "code"
 community: "RetentionTests"
-location: "L111"
+location: "L207"
 tags:
   - graphify/code
   - graphify/EXTRACTED

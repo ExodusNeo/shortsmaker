@@ -11,9 +11,7 @@ tags:
 # Path
 
 ## Connections
-- [[finish_short()]] - `references` [EXTRACTED]
-- [[record_failure()]] - `references` [EXTRACTED]
-- [[resume_runs()]] - `references` [EXTRACTED]
-- [[use_picture_from()]] - `references` [EXTRACTED]
+- [[log_short()]] - `references` [EXTRACTED]
+- [[vault_page()]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/main

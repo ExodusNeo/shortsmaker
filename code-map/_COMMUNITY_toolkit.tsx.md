@@ -1,49 +1,44 @@
 ---
 type: community
-members: 36
+members: 31
 ---
 
 # toolkit.tsx
 
-**Members:** 36 nodes
+**Members:** 31 nodes
 
 ## Members
-- [[AnyFull]] - code - remotion/src/full/types.ts
-- [[Board()]] - code - remotion/src/full/Board.tsx
-- [[Board.tsx]] - code - remotion/src/full/Board.tsx
-- [[BoardFull]] - code - remotion/src/full/types.ts
-- [[Cam]] - code - remotion/src/full/Paper.tsx
-- [[CamContext]] - code - remotion/src/full/Paper.tsx
-- [[CustomPhoto]] - code - remotion/src/full/types.ts
-- [[Document.tsx]] - code - remotion/src/full/Document.tsx
-- [[DocumentFull]] - code - remotion/src/full/types.ts
-- [[DocumentScene()]] - code - remotion/src/full/Document.tsx
-- [[FONTS]] - code - remotion/src/full/Paper.tsx
-- [[Filler()]] - code - remotion/src/full/Document.tsx
-- [[FullBase]] - code - remotion/src/full/types.ts
-- [[FullScene()]] - code - remotion/src/full/FullScene.tsx
-- [[FullScene.tsx]] - code - remotion/src/full/FullScene.tsx
-- [[INK_1]] - code - remotion/src/full/Paper.tsx
-- [[JourneyFull]] - code - remotion/src/full/types.ts
-- [[LAYOUTS]] - code - remotion/src/full/Board.tsx
-- [[NumberFull]] - code - remotion/src/full/types.ts
-- [[Paper.tsx]] - code - remotion/src/full/Paper.tsx
-- [[Print]] - code - remotion/src/full/Board.tsx
-- [[RED]] - code - remotion/src/full/Paper.tsx
-- [[SERIF]] - code - remotion/src/full/Paper.tsx
-- [[SKINS]] - code - remotion/src/full/Paper.tsx
-- [[Skin]] - code - remotion/src/full/Paper.tsx
-- [[SkinName]] - code - remotion/src/full/types.ts
-- [[TYPE]] - code - remotion/src/full/Paper.tsx
-- [[clamp_5]] - code - remotion/src/full/Board.tsx
-- [[clamp_6]] - code - remotion/src/full/Document.tsx
-- [[fulltypes.ts]] - code - remotion/src/full/types.ts
-- [[layout()]] - code - remotion/src/full/Board.tsx
-- [[lerp()_1]] - code - remotion/src/full/Board.tsx
-- [[rng()]] - code - remotion/src/full/Paper.tsx
+- [[CalloutTag()]] - code - remotion/src/full/toolkit.tsx
+- [[Card()]] - code - remotion/src/full/guarded.tsx
+- [[ClockDial()]] - code - remotion/src/full/toolkit.tsx
+- [[Custom0()]] - code - remotion/src/full/generated/Custom0.tsx
+- [[Custom1()]] - code - remotion/src/full/generated/Custom1.tsx
+- [[Custom2()]] - code - remotion/src/full/generated/Custom2.tsx
+- [[Custom3()]] - code - remotion/src/full/generated/Custom3.tsx
+- [[CustomScene()]] - code - remotion/src/full/CustomScene.tsx
+- [[ExampleChain()]] - code - remotion/src/full/examples/ExampleChain.tsx
+- [[ExampleChain.tsx]] - code - remotion/src/full/examples/ExampleChain.tsx
+- [[ExampleEvidence()]] - code - remotion/src/full/examples/ExampleEvidence.tsx
+- [[ExampleEvidence.tsx]] - code - remotion/src/full/examples/ExampleEvidence.tsx
+- [[FlowArrow()]] - code - remotion/src/full/toolkit.tsx
+- [[FlowCard()]] - code - remotion/src/full/toolkit.tsx
+- [[PhotoCutout()]] - code - remotion/src/full/toolkit.tsx
+- [[StampBadge()]] - code - remotion/src/full/toolkit.tsx
+- [[TitleBanner()]] - code - remotion/src/full/toolkit.tsx
+- [[appear()]] - code - remotion/src/full/toolkit.tsx
+- [[cueAt()]] - code - remotion/src/full/toolkit.tsx
+- [[focusCam()]] - code - remotion/src/full/toolkit.tsx
+- [[photoBox()]] - code - remotion/src/full/guarded.tsx
+- [[popIn()]] - code - remotion/src/full/toolkit.tsx
+- [[remotion_src_full_toolkit_boxat]] - concept
+- [[remotion_src_full_toolkit_card]] - concept
+- [[remotion_src_full_toolkit_connect]] - concept
+- [[remotion_src_full_toolkit_layoutcolumn]] - concept
+- [[remotion_src_full_toolkit_layoutrow]] - concept
+- [[remotion_src_full_toolkit_photobox]] - concept
+- [[remotion_src_full_toolkit_travel]] - concept
+- [[skinOf()]] - code - remotion/src/full/Paper.tsx
 - [[toolkit.tsx]] - code - remotion/src/full/toolkit.tsx
-- [[useFonts()]] - code - remotion/src/full/Paper.tsx
-- [[wrapText()]] - code - remotion/src/full/Document.tsx
 
 ## Live Query (requires Dataview plugin)
 
@@ -53,17 +48,16 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 24 edges to [[_COMMUNITY_Custom3.tsx]]
-- 24 edges to [[_COMMUNITY_skinOf]]
-- 11 edges to [[_COMMUNITY_BigNumber.tsx]]
-- 8 edges to [[_COMMUNITY_guarded.tsx]]
-- 7 edges to [[_COMMUNITY_Journey.tsx]]
-- 5 edges to [[_COMMUNITY_Short.tsx]]
-- 4 edges to [[_COMMUNITY_MapCard.tsx]]
+- 64 edges to [[_COMMUNITY_Custom3.tsx]]
+- 20 edges to [[_COMMUNITY_Paper]]
+- 18 edges to [[_COMMUNITY_guarded.tsx]]
+- 9 edges to [[_COMMUNITY_fulltypes.ts]]
+- 2 edges to [[_COMMUNITY_Journey.tsx]]
+- 1 edge to [[_COMMUNITY_Short.tsx]]
 
 ## Top bridge nodes
-- [[Paper.tsx]] - degree 23, connects to 6 communities
-- [[fulltypes.ts]] - degree 22, connects to 5 communities
-- [[FullScene.tsx]] - degree 15, connects to 5 communities
-- [[toolkit.tsx]] - degree 37, connects to 4 communities
-- [[Board.tsx]] - degree 20, connects to 4 communities
+- [[toolkit.tsx]] - degree 37, connects to 5 communities
+- [[skinOf()]] - degree 31, connects to 5 communities
+- [[ExampleEvidence.tsx]] - degree 26, connects to 3 communities
+- [[ExampleChain.tsx]] - degree 23, connects to 3 communities
+- [[ExampleEvidence()]] - degree 13, connects to 2 communities

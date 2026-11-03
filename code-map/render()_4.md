@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_style.py"
 type: "code"
-community: "run_remotion_with_fallback"
+community: "render_remotion"
 location: "L297"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/run_remotion_with_fallback
+  - community/render_remotion
 ---
 
 # render()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[test_invention_runtime_failure_uses_fallback()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/INFERRED #community/run_remotion_with_fallback
+#graphify/code #graphify/INFERRED #community/render_remotion

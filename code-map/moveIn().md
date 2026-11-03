@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/Graphics.tsx"
 type: "code"
-community: "Cards.tsx"
+community: "Graphics.tsx"
 location: "L30"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Cardstsx
+  - community/Graphicstsx
 ---
 
 # moveIn()
@@ -24,4 +24,4 @@ tags:
 - [[StatCard()]] - `calls` [EXTRACTED]
 - [[TimelineCard()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Cardstsx
+#graphify/code #graphify/EXTRACTED #community/Graphicstsx

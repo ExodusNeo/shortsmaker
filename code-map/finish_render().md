@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[Finish reportsreviews from a committed video; resume reaches here without…]] - `rationale_for` [EXTRACTED]
-- [[Path_9]] - `references` [EXTRACTED]
+- [[Path_20]] - `references` [EXTRACTED]
 - [[apply_review_fixes()]] - `calls` [EXTRACTED]
 - [[drawn_answer_problem()]] - `calls` [EXTRACTED]
 - [[drawn_thumbnail()]] - `calls` [EXTRACTED]
@@ -27,7 +27,7 @@ tags:
 - [[quality_check()]] - `calls` [EXTRACTED]
 - [[re]] - `calls` [EXTRACTED]
 - [[remove()]] - `calls` [EXTRACTED]
-- [[render()_1]] - `calls` [EXTRACTED]
+- [[render()]] - `calls` [EXTRACTED]
 - [[render_remotion()]] - `calls` [EXTRACTED]
 - [[resume_runs()]] - `calls` [EXTRACTED]
 - [[save_state()]] - `calls` [EXTRACTED]

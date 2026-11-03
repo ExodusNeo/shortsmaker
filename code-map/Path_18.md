@@ -11,7 +11,8 @@ tags:
 # Path
 
 ## Connections
-- [[film_piece()]] - `references` [EXTRACTED]
-- [[shot_span()]] - `references` [EXTRACTED]
+- [[analyze()]] - `references` [EXTRACTED]
+- [[edit_metrics()]] - `references` [EXTRACTED]
+- [[load_metrics()]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/re

@@ -2,7 +2,7 @@
 source_file: "shortsmaker/retention.py"
 type: "code"
 community: "main"
-location: "L181"
+location: "L326"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -15,7 +15,9 @@ tags:
 - [[analyze()]] - `calls` [EXTRACTED]
 - [[ask_brain()]] - `calls` [EXTRACTED]
 - [[ask_number()]] - `calls` [EXTRACTED]
+- [[ask_yes()]] - `calls` [EXTRACTED]
 - [[configure_brain()]] - `calls` [EXTRACTED]
+- [[edit_metrics()]] - `calls` [EXTRACTED]
 - [[json]] - `calls` [EXTRACTED]
 - [[main()_7]] - `calls` [EXTRACTED]
 - [[normalize_brain()]] - `calls` [EXTRACTED]

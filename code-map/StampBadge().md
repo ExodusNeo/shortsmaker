@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/full/toolkit.tsx"
 type: "code"
-community: "skinOf"
+community: "toolkit.tsx"
 location: "L283"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/skinOf
+  - community/toolkittsx
 ---
 
 # StampBadge()
@@ -26,4 +26,4 @@ tags:
 - [[ExampleEvidence.tsx]] - `imports` [EXTRACTED]
 - [[toolkit.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/skinOf
+#graphify/code #graphify/EXTRACTED #community/toolkittsx

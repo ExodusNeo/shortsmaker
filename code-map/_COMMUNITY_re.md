@@ -1,66 +1,42 @@
 ---
 type: community
-members: 53
+members: 29
 ---
 
 # re
 
-**Members:** 53 nodes
+**Members:** 29 nodes
 
 ## Members
-- [[Camera-shot samples for short adslocal videos; otherwise spread samples or…]] - rationale - shortsmaker/footage.py
-- [[CompletedProcess]] - code
-- [[Copy into the library; never movemodify the owner's original. Sidecars also…]] - rationale - shortsmaker/media_library.py
-- [[Detect cuts in short adslocal files; bounded work and cached results for…]] - rationale - shortsmaker/footage.py
-- [[Download ~14s around the chosen moment with original framing and muted source…]] - rationale - shortsmaker/footage.py
-- [[Drawn openers (owner, 2026-10-30) scene 1 of an `opener animated` Short as a…]] - rationale - shortsmaker/drawn_opener.py
+- [[Ask which channel this batch is for (Enter = the one used last time), or set up…]] - rationale - shortsmaker/channel_profiles.py
+- [[Draft channelsname.rules.md for a new channel the AI copies the sections of…]] - rationale - shortsmaker/rules.py
 - [[Extract (numeric_value, compact_display, short_label, trigger_phrase) from a…]] - rationale - shortsmaker/plan_rules.py
-- [[Match FILM_CROP on downloaded thumbnail JPEGs (cut top 6%, bottom 20%, and 4%…]] - rationale - shortsmaker/footage.py
-- [[Owner media imports, source settings and provenance. No credentials are bundled.]] - rationale - shortsmaker/media_library.py
+- [[One review task using the existing AI selectionquota fallback; preserve…]] - rationale - shortsmaker/retention.py
+- [[Optional manual entry, also available without a graph or an AI call.]] - rationale - shortsmaker/retention.py
 - [[Path_18]] - code
 - [[Path_19]] - code
-- [[Pixabay stock video free to use in videos, no credit needed (Pixabay Content…]] - rationale - shortsmaker/footage.py
-- [[Planned full-screen motion graphics allowed per Short (default MAX_FULL_PLANNED…]] - rationale - shortsmaker/rules.py
-- [[Real film clips (Commons, Internet Archive, NASA, Pixabay) and their ffmpeg…]] - rationale - shortsmaker/footage.py
-- [[Rule breaks in an AI-written scene (KIT.md's code rules). Empty = clean.]] - rationale - shortsmaker/drawn_opener.py
-- [[Start and end of the camera shot containing time `at` (newsreels cut to title…]] - rationale - shortsmaker/footage.py
-- [[The Short's page in the Obsidian vault thumbnail, storyboard, its logbook…]] - rationale - shortsmaker/logbook.py
-- [[The scene module from an AI reply (fences stripped), or None.]] - rationale - shortsmaker/drawn_opener.py
-- [[Total full-screen motion graphics (planned + rescued) allowed per Short…]] - rationale - shortsmaker/rules.py
-- [[Videos across the entire Internet Archive (historical film, retro gaming,…]] - rationale - shortsmaker/footage.py
-- [[Why a drawn opener can't be made on this PC, or None.]] - rationale - shortsmaker/drawn_opener.py
-- [[archive_ad_films()]] - code - shortsmaker/footage.py
-- [[archive_films()]] - code - shortsmaker/footage.py
-- [[available()]] - code - shortsmaker/drawn_opener.py
-- [[clean_code()]] - code - shortsmaker/drawn_opener.py
-- [[crop_film_bytes()]] - code - shortsmaker/footage.py
-- [[crop_filter()]] - code - shortsmaker/footage.py
-- [[drawn_opener.py]] - code - shortsmaker/drawn_opener.py
-- [[duke_films()]] - code - shortsmaker/footage.py
-- [[ffmpeg reading a film over HTTP. Wikimedia gets the contact User-Agent, the…]] - rationale - shortsmaker/image_sources.py
-- [[film_ffmpeg()]] - code - shortsmaker/image_sources.py
-- [[film_frames()]] - code - shortsmaker/footage.py
-- [[film_piece()]] - code - shortsmaker/footage.py
-- [[fingerprint()]] - code - shortsmaker/drawn_opener.py
-- [[footage.py]] - code - shortsmaker/footage.py
-- [[hashlib]] - concept
-- [[import_media()]] - code - shortsmaker/media_library.py
-- [[lint()]] - code - shortsmaker/drawn_opener.py
-- [[local_assets()]] - code - shortsmaker/media_library.py
-- [[make_shorts.py notes rebuild every Short's vault page from the logbooks (each…]] - rationale - shortsmaker/logbook.py
-- [[max_full()]] - code - shortsmaker/rules.py
-- [[max_full_planned()]] - code - shortsmaker/rules.py
-- [[media_library.py]] - code - shortsmaker/media_library.py
-- [[media_search_words()]] - code - shortsmaker/media_library.py
+- [[Read a Studio retention screenshot approximately and map drops to the saved…]] - rationale - shortsmaker/retention.py
+- [[Summarize saved reviews and optional Studio context without logbook or minimum-…]] - rationale - shortsmaker/retention.py
+- [[The code from an AI reply (code fences removed); None unless it exports the…]] - rationale - shortsmaker/style_lab.py
+- [[Validate a manual Studio value; blank means unknown, never zero.]] - rationale - shortsmaker/retention.py
+- [[analyze()]] - code - shortsmaker/retention.py
+- [[clean_style_code()]] - code - shortsmaker/style_lab.py
+- [[collections]] - concept
+- [[draft_rules()]] - code - shortsmaker/rules.py
+- [[edit_metrics()]] - code - shortsmaker/retention.py
+- [[load_metrics()]] - code - shortsmaker/retention.py
+- [[metrics_text()]] - code - shortsmaker/retention.py
+- [[normalize_metrics()]] - code - shortsmaker/retention.py
+- [[normalize_reply()]] - code - shortsmaker/retention.py
+- [[observations()]] - code - shortsmaker/retention.py
+- [[parse_metric()]] - code - shortsmaker/retention.py
 - [[parse_scene_money()]] - code - shortsmaker/plan_rules.py
-- [[pixabay_films()]] - code - shortsmaker/footage.py
+- [[pick_channel()]] - code - shortsmaker/channel_profiles.py
 - [[re]] - concept
-- [[shot_moments()]] - code - shortsmaker/footage.py
-- [[shot_span()]] - code - shortsmaker/footage.py
-- [[test_lint()]] - code - tests/test_drawn_opener.py
-- [[threading]] - concept
-- [[vault_page()]] - code - shortsmaker/logbook.py
-- [[vault_refresh()]] - code - shortsmaker/logbook.py
+- [[report_text()]] - code - shortsmaker/retention.py
+- [[retention.py]] - code - shortsmaker/retention.py
+- [[scenes_from_plan()]] - code - shortsmaker/retention.py
+- [[seconds()]] - code - shortsmaker/retention.py
 
 ## Live Query (requires Dataview plugin)
 
@@ -70,48 +46,46 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 47 edges to [[_COMMUNITY_test_full_scenes.py]]
-- 17 edges to [[_COMMUNITY_subprocess]]
-- 15 edges to [[_COMMUNITY_writing.py]]
-- 14 edges to [[_COMMUNITY_json]]
-- 10 edges to [[_COMMUNITY_extra_sources.py]]
-- 10 edges to [[_COMMUNITY_audio_library.py]]
-- 8 edges to [[_COMMUNITY_OpeningRulesTests]]
-- 7 edges to [[_COMMUNITY_fetch]]
-- 7 edges to [[_COMMUNITY_time]]
-- 6 edges to [[_COMMUNITY_words_of]]
-- 5 edges to [[_COMMUNITY_render]]
-- 5 edges to [[_COMMUNITY_write_json]]
-- 5 edges to [[_COMMUNITY_code_custom_scenes]]
-- 4 edges to [[_COMMUNITY_test_topic_ideas.py]]
-- 3 edges to [[_COMMUNITY_test_pictures_first.py]]
-- 3 edges to [[_COMMUNITY_test_story.py]]
-- 3 edges to [[_COMMUNITY_main_1]]
-- 3 edges to [[_COMMUNITY_gather_pool]]
+- 21 edges to [[_COMMUNITY_test_full_scenes.py]]
+- 17 edges to [[_COMMUNITY_writing.py]]
+- 15 edges to [[_COMMUNITY_json]]
+- 9 edges to [[_COMMUNITY_main_1]]
+- 5 edges to [[_COMMUNITY_clean_full]]
+- 5 edges to [[_COMMUNITY_qwen_voice.py]]
+- 4 edges to [[_COMMUNITY_drawn_opener.py]]
+- 4 edges to [[_COMMUNITY_test_rules.py]]
+- 4 edges to [[_COMMUNITY_audio_library.py]]
+- 3 edges to [[_COMMUNITY_edit_project.py]]
+- 3 edges to [[_COMMUNITY_fake_ai]]
+- 3 edges to [[_COMMUNITY_footage.py]]
+- 3 edges to [[_COMMUNITY_math]]
+- 3 edges to [[_COMMUNITY_ffmpeg]]
+- 3 edges to [[_COMMUNITY_code_custom_scenes]]
+- 2 edges to [[_COMMUNITY_max_full]]
+- 2 edges to [[_COMMUNITY_test_style.py]]
 - 2 edges to [[_COMMUNITY_write_scripts]]
-- 2 edges to [[_COMMUNITY_local_clips]]
-- 2 edges to [[_COMMUNITY_make]]
-- 2 edges to [[_COMMUNITY_fake_ai]]
+- 2 edges to [[_COMMUNITY_brand_images]]
 - 2 edges to [[_COMMUNITY_invent_component]]
-- 2 edges to [[_COMMUNITY_blender_render.py]]
+- 2 edges to [[_COMMUNITY_ask_ai]]
 - 1 edge to [[_COMMUNITY_test_h3_handoff.py]]
-- 1 edge to [[_COMMUNITY_test_rules.py]]
-- 1 edge to [[_COMMUNITY_apply_review_fixes]]
-- 1 edge to [[_COMMUNITY_prepare_topic]]
-- 1 edge to [[_COMMUNITY_choose_images]]
-- 1 edge to [[_COMMUNITY_rescue_graphics]]
-- 1 edge to [[_COMMUNITY_clean_full]]
+- 1 edge to [[_COMMUNITY_drawn_thumbnail]]
+- 1 edge to [[_COMMUNITY_render]]
 - 1 edge to [[_COMMUNITY_clean_photo]]
+- 1 edge to [[_COMMUNITY_story_problems]]
 - 1 edge to [[_COMMUNITY_finish_render]]
+- 1 edge to [[_COMMUNITY_fetch]]
+- 1 edge to [[_COMMUNITY_download_audio_choices]]
+- 1 edge to [[_COMMUNITY_captions]]
+- 1 edge to [[_COMMUNITY_choose_images]]
 - 1 edge to [[_COMMUNITY_quality_check]]
-- 1 edge to [[_COMMUNITY_test_blender_plan.py]]
-- 1 edge to [[_COMMUNITY_test_style.py]]
 - 1 edge to [[_COMMUNITY_Local GPU Worker]]
+- 1 edge to [[_COMMUNITY_test_story.py]]
+- 1 edge to [[_COMMUNITY_extra_sources.py]]
 - 1 edge to [[_COMMUNITY_split_make_shorts.py]]
 
 ## Top bridge nodes
-- [[re]] - degree 88, connects to 30 communities
-- [[footage.py]] - degree 36, connects to 8 communities
-- [[hashlib]] - degree 25, connects to 8 communities
-- [[media_library.py]] - degree 27, connects to 7 communities
-- [[drawn_opener.py]] - degree 26, connects to 5 communities
+- [[re]] - degree 89, connects to 34 communities
+- [[retention.py]] - degree 33, connects to 6 communities
+- [[pick_channel()]] - degree 10, connects to 5 communities
+- [[draft_rules()]] - degree 9, connects to 5 communities
+- [[analyze()]] - degree 12, connects to 4 communities

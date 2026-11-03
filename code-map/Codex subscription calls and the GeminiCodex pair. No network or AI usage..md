@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_codex.py"
 type: "rationale"
-community: "subprocess"
+community: "test_story.py"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/subprocess
+  - community/test_storypy
 ---
 
 # Codex subscription calls and the Gemini/Codex pair. No network or AI usage.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[test_codex.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/subprocess
+#graphify/rationale #graphify/EXTRACTED #community/test_storypy

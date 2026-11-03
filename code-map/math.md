@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "audio_library.py"
+community: "math"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/audio_librarypy
+  - community/math
 ---
 
 # math
@@ -23,6 +23,7 @@ tags:
 - [[frame_render.py]] - `imports` [EXTRACTED]
 - [[make_sfx()]] - `calls` [EXTRACTED]
 - [[normalize_reply()]] - `calls` [EXTRACTED]
+- [[parse_metric()]] - `calls` [EXTRACTED]
 - [[parts.py]] - `imports` [EXTRACTED]
 - [[preview()]] - `calls` [EXTRACTED]
 - [[radians()]] - `calls` [EXTRACTED]
@@ -31,4 +32,4 @@ tags:
 - [[source_music()]] - `calls` [EXTRACTED]
 - [[track_start()]] - `calls` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/audio_librarypy
+#graphify/concept #graphify/EXTRACTED #community/math

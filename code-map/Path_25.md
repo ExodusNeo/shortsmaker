@@ -1,21 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: "code_custom_scenes"
+community: "audio_library.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/code_custom_scenes
+  - community/audio_librarypy
 ---
 
 # Path
 
 ## Connections
-- [[code_custom_scenes()]] - `references` [EXTRACTED]
-- [[full_props()]] - `references` [EXTRACTED]
-- [[look_and_fix()]] - `references` [EXTRACTED]
-- [[opener_preflight()]] - `references` [EXTRACTED]
-- [[preview_custom()]] - `references` [EXTRACTED]
-- [[preview_sheet()]] - `references` [EXTRACTED]
+- [[audition_audio()]] - `references` [EXTRACTED]
+- [[download_audio_choices()]] - `references` [EXTRACTED]
+- [[review_audio_files()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/code_custom_scenes
+#graphify/code #graphify/EXTRACTED #community/audio_librarypy

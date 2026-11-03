@@ -1,15 +1,16 @@
 ---
 type: community
-members: 32
+members: 34
 ---
 
 # write_scripts
 
-**Members:** 32 nodes
+**Members:** 34 nodes
 
 ## Members
 - [[dot-__enter__()]] - code - tests/test_pictures_first.py
 - [[dot-__init__()]] - code - tests/test_pictures_first.py
+- [[Before writing the topic's Wikipedia research (`_texts`; fact_check() reuses…]] - rationale - shortsmaker/picture_pool.py
 - [[Canned replies for every planning step of write_scripts().]] - rationale - tests/test_pictures_first.py
 - [[Never scene 1 (real footage keeps the hook), never two in a row, never a scene…]] - rationale - shortsmaker/plan_rules.py
 - [[Plan n Shorts on new topics, or on exactly `topics` (comparison runs the other…]] - rationale - shortsmaker/writing.py
@@ -24,6 +25,7 @@ members: 32
 - [[prepare()_2]] - code - tests/test_pictures_first.py
 - [[prepare()_3]] - code - tests/test_pictures_first.py
 - [[prepare()_4]] - code - tests/test_pictures_first.py
+- [[prepare_topic()]] - code - shortsmaker/picture_pool.py
 - [[reply()]] - code - tests/test_pictures_first.py
 - [[test_all_weak_returns_empty()]] - code - tests/test_pictures_first.py
 - [[test_both_mode_pools_follow_reply_position()]] - code - tests/test_pictures_first.py
@@ -49,31 +51,35 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 18 edges to [[_COMMUNITY_test_pictures_first.py]]
-- 9 edges to [[_COMMUNITY_test_topic_ideas.py]]
-- 7 edges to [[_COMMUNITY_words_of]]
-- 6 edges to [[_COMMUNITY_prepare_topic]]
-- 6 edges to [[_COMMUNITY_test_story.py]]
+- 20 edges to [[_COMMUNITY_test_pictures_first.py]]
+- 12 edges to [[_COMMUNITY_writing.py]]
+- 7 edges to [[_COMMUNITY_load_pool]]
+- 7 edges to [[_COMMUNITY_clean_full]]
 - 4 edges to [[_COMMUNITY_owner]]
 - 3 edges to [[_COMMUNITY_json]]
+- 3 edges to [[_COMMUNITY_test_full_scenes.py]]
+- 3 edges to [[_COMMUNITY_edit_scripts]]
 - 2 edges to [[_COMMUNITY_fake_ai]]
-- 2 edges to [[_COMMUNITY_test_full_scenes.py]]
-- 2 edges to [[_COMMUNITY_clean_look]]
+- 2 edges to [[_COMMUNITY_test_rules.py]]
+- 2 edges to [[_COMMUNITY_article_text]]
+- 2 edges to [[_COMMUNITY_style_library]]
 - 2 edges to [[_COMMUNITY_re]]
-- 2 edges to [[_COMMUNITY_writing.py]]
+- 1 edge to [[_COMMUNITY_max_full]]
 - 1 edge to [[_COMMUNITY_limit_style]]
+- 1 edge to [[_COMMUNITY_min_real_pictures]]
 - 1 edge to [[_COMMUNITY_test_style.py]]
-- 1 edge to [[_COMMUNITY_test_rules.py]]
+- 1 edge to [[_COMMUNITY_gather_pool]]
 - 1 edge to [[_COMMUNITY_main_1]]
-- 1 edge to [[_COMMUNITY_subprocess]]
-- 1 edge to [[_COMMUNITY_rescue_graphics]]
-- 1 edge to [[_COMMUNITY_clean_full]]
-- 1 edge to [[_COMMUNITY_test_blender_plan.py]]
+- 1 edge to [[_COMMUNITY_test_story.py]]
+- 1 edge to [[_COMMUNITY_quality_check]]
+- 1 edge to [[_COMMUNITY_story_problems]]
+- 1 edge to [[_COMMUNITY_choose_images]]
+- 1 edge to [[_COMMUNITY_default_build]]
 - 1 edge to [[_COMMUNITY_ask_ai]]
 
 ## Top bridge nodes
-- [[write_scripts()]] - degree 53, connects to 20 communities
+- [[write_scripts()]] - degree 53, connects to 22 communities
+- [[prepare_topic()]] - degree 16, connects to 7 communities
 - [[planning]] - degree 19, connects to 3 communities
 - [[planning_ai()]] - degree 9, connects to 3 communities
 - [[passing()]] - degree 12, connects to 2 communities
-- [[test_small_pool_skips_ai()]] - degree 4, connects to 2 communities

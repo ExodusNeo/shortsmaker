@@ -1,16 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: "paint_instead"
+community: "ffmpeg"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/paint_instead
+  - community/ffmpeg
 ---
 
 # Path
 
 ## Connections
-- [[to_vertical()]] - `references` [EXTRACTED]
+- [[duration()]] - `references` [EXTRACTED]
+- [[ffmpeg()]] - `references` [EXTRACTED]
+- [[write_json()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/paint_instead
+#graphify/code #graphify/EXTRACTED #community/ffmpeg

@@ -1,18 +1,19 @@
 ---
 source_file: "shortsmaker/retention.py"
 type: "code"
-community: "writing.py"
-location: "L18"
+community: "re"
+location: "L131"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/writingpy
+  - community/re
 ---
 
 # seconds()
 
 ## Connections
+- [[parse_metric()]] - `calls` [EXTRACTED]
 - [[retention.py]] - `contains` [EXTRACTED]
 - [[scenes_from_plan()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/writingpy
+#graphify/code #graphify/EXTRACTED #community/re

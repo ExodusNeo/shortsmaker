@@ -12,11 +12,11 @@ tags:
 # speak()
 
 ## Connections
-- [[Path_28]] - `references` [EXTRACTED]
+- [[Path_26]] - `references` [EXTRACTED]
 - [[TTS with retries Microsoft's free Edge voice service drops a request now and…]] - `rationale_for` [EXTRACTED]
 - [[asyncio]] - `calls` [EXTRACTED]
 - [[audio_mix.py]] - `contains` [EXTRACTED]
-- [[render()_1]] - `calls` [EXTRACTED]
+- [[render()]] - `calls` [EXTRACTED]
 - [[time]] - `calls` [EXTRACTED]
 - [[tts()_1]] - `calls` [EXTRACTED]
 

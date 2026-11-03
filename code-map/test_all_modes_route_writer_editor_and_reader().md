@@ -12,7 +12,7 @@ tags:
 # test_all_modes_route_writer_editor_and_reader()
 
 ## Connections
-- [[ask()_11]] - `indirect_call` [INFERRED]
+- [[ask()_10]] - `indirect_call` [INFERRED]
 - [[configure_brain()]] - `calls` [EXTRACTED]
 - [[edit_scripts()]] - `calls` [EXTRACTED]
 - [[saved_session()]] - `calls` [EXTRACTED]

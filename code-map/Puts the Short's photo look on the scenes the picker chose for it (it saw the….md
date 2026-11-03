@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/style_lab.py"
 type: "rationale"
-community: "test_style.py"
+community: "wants_remotion"
 location: "L48"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/test_stylepy
+  - community/wants_remotion
 ---
 
 # Puts the Short's photo look on the scenes the picker chose for it (it saw the…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[apply_look_scenes()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/test_stylepy
+#graphify/rationale #graphify/EXTRACTED #community/wants_remotion

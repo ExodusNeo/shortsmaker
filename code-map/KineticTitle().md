@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/style/overlays/KineticTitle.tsx"
 type: "code"
-community: "QuestionBeat.tsx"
+community: "Graphics.tsx"
 location: "L10"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/QuestionBeattsx
+  - community/Graphicstsx
 ---
 
 # KineticTitle()
@@ -16,4 +16,4 @@ tags:
 - [[slot()]] - `calls` [EXTRACTED]
 - [[styleindex.ts]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/QuestionBeattsx
+#graphify/code #graphify/EXTRACTED #community/Graphicstsx

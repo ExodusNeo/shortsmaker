@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "subprocess"
+community: "json"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/subprocess
+  - community/json
 ---
 
 # shutil
@@ -28,8 +28,8 @@ tags:
 - [[invent_component()]] - `calls` [EXTRACTED]
 - [[llm.py]] - `imports` [EXTRACTED]
 - [[logbook.py]] - `imports` [EXTRACTED]
+- [[main()_4]] - `calls` [EXTRACTED]
 - [[main()_1]] - `calls` [EXTRACTED]
-- [[main()_3]] - `calls` [EXTRACTED]
 - [[media_library.py]] - `imports` [EXTRACTED]
 - [[motion.py]] - `imports` [EXTRACTED]
 - [[paint_instead()]] - `calls` [EXTRACTED]
@@ -41,7 +41,7 @@ tags:
 - [[prune_work()]] - `calls` [EXTRACTED]
 - [[reject_candidate()]] - `calls` [EXTRACTED]
 - [[remotion_render.py]] - `imports` [EXTRACTED]
-- [[render()_1]] - `calls` [EXTRACTED]
+- [[render()]] - `calls` [EXTRACTED]
 - [[render_full.py]] - `imports` [EXTRACTED]
 - [[render_remotion()]] - `calls` [EXTRACTED]
 - [[render_style.py]] - `imports` [EXTRACTED]
@@ -64,4 +64,4 @@ tags:
 - [[write_scripts()]] - `calls` [EXTRACTED]
 - [[writing.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/subprocess
+#graphify/concept #graphify/EXTRACTED #community/json

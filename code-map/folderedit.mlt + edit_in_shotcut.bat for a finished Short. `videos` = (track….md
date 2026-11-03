@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/edit_project.py"
 type: "rationale"
-community: "make"
+community: "edit_project.py"
 location: "L94"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/make
+  - community/edit_projectpy
 ---
 
 # folder/edit.mlt + edit_in_shotcut.bat for a finished Short. `videos` = (track…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[make()_1]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/make
+#graphify/rationale #graphify/EXTRACTED #community/edit_projectpy

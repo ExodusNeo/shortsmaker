@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/full/Board.tsx"
 type: "code"
-community: "toolkit.tsx"
+community: "Paper"
 location: "L9"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/toolkittsx
+  - community/Paper
 ---
 
 # LAYOUTS
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[Board.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/toolkittsx
+#graphify/code #graphify/EXTRACTED #community/Paper

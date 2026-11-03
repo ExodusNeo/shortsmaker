@@ -1,16 +1,15 @@
 ---
 type: community
-members: 19
+members: 17
 ---
 
 # full_cues
 
-**Members:** 19 nodes
+**Members:** 17 nodes
 
 ## Members
 - [[(start, end) of the first time `phrase` is spoken, from TTS word timings.]] - rationale - shortsmaker/plan_rules.py
 - [[Mike's 'WHY MIKE DIED' (2.7 s scene, last word 1 s before the cut) its stamp…]] - rationale - tests/test_full_scenes.py
-- [[Scene 1's motion-graphic opener set outside the scene-1 and two-in-a-row…]] - rationale - tests/test_full_scenes.py
 - [[Start time of the first time `phrase` is spoken, from TTS word timings.]] - rationale - shortsmaker/plan_rules.py
 - [[Timed extras for one scene a person card (photo `found`) when their name is…]] - rationale - shortsmaker/editplan.py
 - [[When each element of a full-screen motion graphic appears (absolute seconds)…]] - rationale - shortsmaker/plan_rules.py
@@ -24,7 +23,6 @@ members: 19
 - [[test_full_cues_fallback()]] - code - tests/test_full_scenes.py
 - [[test_full_cues_leave_time_to_finish()]] - code - tests/test_full_scenes.py
 - [[test_graphic_card_hold_duration()]] - code - tests/test_package.py
-- [[test_opener_graphic()]] - code - tests/test_full_scenes.py
 - [[test_person_card_hold_and_exit_gap()]] - code - tests/test_package.py
 - [[test_scene_hold_padding()]] - code - tests/test_package.py
 
@@ -36,18 +34,18 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 9 edges to [[_COMMUNITY_test_full_scenes.py]]
+- 8 edges to [[_COMMUNITY_test_full_scenes.py]]
 - 3 edges to [[_COMMUNITY_ask_ai]]
 - 1 edge to [[_COMMUNITY_render]]
 - 1 edge to [[_COMMUNITY_frame_maker]]
-- 1 edge to [[_COMMUNITY_words_of]]
+- 1 edge to [[_COMMUNITY_clean_full]]
+- 1 edge to [[_COMMUNITY_render_clips]]
 - 1 edge to [[_COMMUNITY_full_props]]
-- 1 edge to [[_COMMUNITY_test_blender_plan.py]]
-- 1 edge to [[_COMMUNITY_finish_render]]
+- 1 edge to [[_COMMUNITY_opener_graphic]]
 
 ## Top bridge nodes
+- [[full_cues()]] - degree 11, connects to 3 communities
 - [[scene_cues()]] - degree 10, connects to 3 communities
-- [[full_cues()]] - degree 11, connects to 2 communities
 - [[spoken_at()]] - degree 6, connects to 2 communities
 - [[spoken_span()]] - degree 5, connects to 2 communities
-- [[test_opener_graphic()]] - degree 4, connects to 2 communities
+- [[test_full_cues_leave_time_to_finish()]] - degree 3, connects to 1 community

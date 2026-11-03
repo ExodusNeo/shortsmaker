@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "json"
+community: "writing.py"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/json
+  - community/writingpy
 ---
 
 # logging
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[channel_profiles.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/json
+#graphify/concept #graphify/EXTRACTED #community/writingpy

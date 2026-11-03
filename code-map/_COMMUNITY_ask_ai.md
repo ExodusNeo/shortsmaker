@@ -1,11 +1,11 @@
 ---
 type: community
-members: 25
+members: 24
 ---
 
 # ask_ai
 
-**Members:** 25 nodes
+**Members:** 24 nodes
 
 ## Members
 - [[Claude's picks of channels to study (plus a few search queries viewers use) for…]] - rationale - shortsmaker/channel_profiles.py
@@ -32,7 +32,6 @@ members: 25
 - [[test_session_shared()]] - code - tests/test_package.py
 - [[test_solo_ask_ai_hands_over_when_out_of_credits()]] - code - tests/test_package.py
 - [[test_solo_ask_ai_never_falls_back()]] - code - tests/test_package.py
-- [[test_solo_brain_selection_options()]] - code - tests/test_package.py
 
 ## Live Query (requires Dataview plugin)
 
@@ -42,36 +41,36 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 12 edges to [[_COMMUNITY_test_full_scenes.py]]
-- 6 edges to [[_COMMUNITY_json]]
+- 16 edges to [[_COMMUNITY_test_full_scenes.py]]
 - 6 edges to [[_COMMUNITY_run_agy]]
 - 5 edges to [[_COMMUNITY_writing.py]]
-- 4 edges to [[_COMMUNITY_test_story.py]]
-- 4 edges to [[_COMMUNITY_code_custom_scenes]]
-- 4 edges to [[_COMMUNITY_main_1]]
+- 5 edges to [[_COMMUNITY_code_custom_scenes]]
+- 4 edges to [[_COMMUNITY_edit_scripts]]
+- 3 edges to [[_COMMUNITY_json]]
+- 3 edges to [[_COMMUNITY_local_clips]]
+- 3 edges to [[_COMMUNITY_main_1]]
 - 3 edges to [[_COMMUNITY_full_cues]]
-- 3 edges to [[_COMMUNITY_subprocess]]
-- 2 edges to [[_COMMUNITY_local_clips]]
-- 2 edges to [[_COMMUNITY_OpeningRulesTests]]
-- 2 edges to [[_COMMUNITY_finish_render]]
-- 2 edges to [[_COMMUNITY_rescue_graphics]]
+- 2 edges to [[_COMMUNITY_test_story.py]]
+- 2 edges to [[_COMMUNITY_re]]
+- 2 edges to [[_COMMUNITY_choose_images]]
+- 1 edge to [[_COMMUNITY_drawn_opener.py]]
 - 1 edge to [[_COMMUNITY_apply_review_fixes]]
 - 1 edge to [[_COMMUNITY_write_scripts]]
 - 1 edge to [[_COMMUNITY_test_pictures_first.py]]
 - 1 edge to [[_COMMUNITY_rewrite_paint_prompts]]
-- 1 edge to [[_COMMUNITY_prepare_topic]]
+- 1 edge to [[_COMMUNITY_clean_photo]]
 - 1 edge to [[_COMMUNITY_fake_ai]]
 - 1 edge to [[_COMMUNITY_invent_component]]
-- 1 edge to [[_COMMUNITY_write_json]]
 - 1 edge to [[_COMMUNITY_visual_review]]
-- 1 edge to [[_COMMUNITY_choose_images]]
-- 1 edge to [[_COMMUNITY_recover_downloads]]
-- 1 edge to [[_COMMUNITY_clean_photo]]
+- 1 edge to [[_COMMUNITY_review]]
+- 1 edge to [[_COMMUNITY_clean_full]]
+- 1 edge to [[_COMMUNITY_opener_graphic]]
 - 1 edge to [[_COMMUNITY_first_second_check]]
+- 1 edge to [[_COMMUNITY_article_text]]
 
 ## Top bridge nodes
-- [[ask_ai()]] - degree 48, connects to 23 communities
-- [[test_package.py]] - degree 38, connects to 8 communities
+- [[ask_ai()]] - degree 48, connects to 25 communities
+- [[test_package.py]] - degree 38, connects to 9 communities
 - [[gemini_model()]] - degree 5, connects to 2 communities
 - [[seed_ideas()]] - degree 4, connects to 1 community
 - [[test_quota_fallback_both_ways()]] - degree 3, connects to 1 community

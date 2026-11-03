@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/full/examples/ExampleEvidence.tsx"
 type: "code"
-community: "skinOf"
+community: "toolkit.tsx"
 location: "L7"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/skinOf
+  - community/toolkittsx
 ---
 
 # ExampleEvidence()
@@ -26,4 +26,4 @@ tags:
 - [[photoBox()]] - `calls` [EXTRACTED]
 - [[skinOf()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/skinOf
+#graphify/code #graphify/EXTRACTED #community/toolkittsx

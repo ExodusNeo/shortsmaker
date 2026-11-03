@@ -1,17 +1,22 @@
 ---
 source_file: ""
 type: "code"
-community: "test_story.py"
+community: "load_pool"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_storypy
+  - community/load_pool
 ---
 
 # Path
 
 ## Connections
-- [[log_short()]] - `references` [EXTRACTED]
-- [[vault_page()]] - `references` [EXTRACTED]
+- [[catalog_pool()]] - `references` [EXTRACTED]
+- [[contact_sheets()]] - `references` [EXTRACTED]
+- [[load_pool()]] - `references` [EXTRACTED]
+- [[pool_folder()]] - `references` [EXTRACTED]
+- [[preflight_pictures()]] - `references` [EXTRACTED]
+- [[prepare_topic()]] - `references` [EXTRACTED]
+- [[save_pool()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_storypy
+#graphify/code #graphify/EXTRACTED #community/load_pool

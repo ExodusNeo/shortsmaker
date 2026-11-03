@@ -1,18 +1,18 @@
 ---
 source_file: "shortsmaker/media_tools.py"
 type: "code"
-community: "write_json"
+community: "main"
 location: "L15"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/write_json
+  - community/main
 ---
 
 # write_json()
 
 ## Connections
-- [[Path_22]] - `references` [EXTRACTED]
+- [[Path_21]] - `references` [EXTRACTED]
 - [[Write via a temp file, so an interrupted run never leaves a half-written file…]] - `rationale_for` [EXTRACTED]
 - [[apply()]] - `calls` [EXTRACTED]
 - [[begin()]] - `calls` [EXTRACTED]
@@ -34,4 +34,4 @@ tags:
 - [[source_status()]] - `calls` [EXTRACTED]
 - [[update()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/write_json
+#graphify/code #graphify/EXTRACTED #community/main

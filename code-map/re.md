@@ -66,6 +66,7 @@ tags:
 - [[node_run()]] - `calls` [EXTRACTED]
 - [[observations()]] - `calls` [EXTRACTED]
 - [[parse_ideas()]] - `calls` [EXTRACTED]
+- [[parse_metric()]] - `calls` [EXTRACTED]
 - [[parse_rules()]] - `calls` [EXTRACTED]
 - [[parse_scene_money()]] - `calls` [EXTRACTED]
 - [[pick_channel()]] - `calls` [EXTRACTED]

@@ -1,21 +1,21 @@
 ---
 source_file: "tests/test_drawn_opener.py"
 type: "code"
-community: "OpeningRulesTests"
+community: "test_drawn_opener_renders_and_is_reused"
 location: "L69"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/OpeningRulesTests
+  - community/test_drawn_opener_renders_and_is_reused
 ---
 
 # test_drawn_opener_gives_up_after_fixes()
 
 ## Connections
 - [[The art director scores every draft below PASS FIXES rewrites (each told the…]] - `rationale_for` [EXTRACTED]
-- [[fake_ai()_1]] - `calls` [EXTRACTED]
+- [[fake_ai()_2]] - `calls` [EXTRACTED]
 - [[make_opener()]] - `calls` [EXTRACTED]
-- [[short()]] - `calls` [EXTRACTED]
+- [[short()_2]] - `calls` [EXTRACTED]
 - [[test_drawn_opener.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/OpeningRulesTests
+#graphify/code #graphify/EXTRACTED #community/test_drawn_opener_renders_and_is_reused

@@ -1,28 +1,25 @@
 ---
 source_file: ""
 type: "code"
-community: "local_clips"
+community: "apply_review_fixes"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/local_clips
+  - community/apply_review_fixes
 ---
 
 # Path
 
 ## Connections
-- [[cover_crop()]] - `references` [EXTRACTED]
-- [[cut_owner_clip()]] - `references` [EXTRACTED]
-- [[gemini_images()]] - `references` [EXTRACTED]
-- [[h3_prompts()]] - `references` [EXTRACTED]
-- [[local_clips()]] - `references` [EXTRACTED]
-- [[local_job()]] - `references` [EXTRACTED]
-- [[local_voice()]] - `references` [EXTRACTED]
-- [[moss_images()]] - `references` [EXTRACTED]
-- [[split_takes()]] - `references` [EXTRACTED]
-- [[start_picture()]] - `references` [EXTRACTED]
-- [[start_picture_problems()]] - `references` [EXTRACTED]
-- [[unpack_clips()]] - `references` [EXTRACTED]
-- [[veo_handoff()]] - `references` [EXTRACTED]
+- [[apply_review_fixes()]] - `references` [EXTRACTED]
+- [[first_second_check()]] - `references` [EXTRACTED]
+- [[fix_drawn_answer()]] - `references` [EXTRACTED]
+- [[fix_opener_graphic()]] - `references` [EXTRACTED]
+- [[paint_new()]] - `references` [EXTRACTED]
+- [[paint_opener_start()]] - `references` [EXTRACTED]
+- [[pool_pictures()]] - `references` [EXTRACTED]
+- [[quality_check()]] - `references` [EXTRACTED]
+- [[storyboard()]] - `references` [EXTRACTED]
+- [[visual_review()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/local_clips
+#graphify/code #graphify/EXTRACTED #community/apply_review_fixes

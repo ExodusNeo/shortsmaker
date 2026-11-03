@@ -1,16 +1,18 @@
 ---
 type: community
-members: 31
+members: 33
 ---
 
 # test_pictures_first.py
 
-**Members:** 31 nodes
+**Members:** 33 nodes
 
 ## Members
 - [[Tests for pictures-first planning (gather the pool, the AI picture list, topic…]] - rationale - tests/test_pictures_first.py
 - [[The director's `pic` numbers (scenes and evidence-board items), checked a…]] - rationale - shortsmaker/picture_pool.py
 - [[The picture list the writer, editor and director plan with the AI looks at the…]] - rationale - shortsmaker/picture_pool.py
+- [[The valid entries of a picture-list reply (LLM output is untrusted).]] - rationale - shortsmaker/picture_pool.py
+- [[catalog_entries()]] - code - shortsmaker/picture_pool.py
 - [[catalog_pool()]] - code - shortsmaker/picture_pool.py
 - [[check()]] - code - shortsmaker/picture_pool.py
 - [[clean_pics()]] - code - shortsmaker/picture_pool.py
@@ -48,32 +50,29 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 18 edges to [[_COMMUNITY_write_scripts]]
+- 20 edges to [[_COMMUNITY_write_scripts]]
+- 16 edges to [[_COMMUNITY_test_full_scenes.py]]
 - 15 edges to [[_COMMUNITY_choose_images]]
-- 11 edges to [[_COMMUNITY_test_full_scenes.py]]
+- 10 edges to [[_COMMUNITY_load_pool]]
 - 9 edges to [[_COMMUNITY_fake_ai]]
-- 9 edges to [[_COMMUNITY_prepare_topic]]
-- 8 edges to [[_COMMUNITY_owner]]
-- 6 edges to [[_COMMUNITY_writing.py]]
-- 4 edges to [[_COMMUNITY_json]]
-- 3 edges to [[_COMMUNITY_subprocess]]
-- 3 edges to [[_COMMUNITY_re]]
-- 2 edges to [[_COMMUNITY_main_1]]
-- 2 edges to [[_COMMUNITY_write_json]]
-- 2 edges to [[_COMMUNITY_test_topic_ideas.py]]
+- 7 edges to [[_COMMUNITY_writing.py]]
+- 6 edges to [[_COMMUNITY_json]]
+- 5 edges to [[_COMMUNITY_owner]]
+- 3 edges to [[_COMMUNITY_main_1]]
 - 1 edge to [[_COMMUNITY_test_rules.py]]
-- 1 edge to [[_COMMUNITY_clean_photo]]
 - 1 edge to [[_COMMUNITY_ask_ai]]
-- 1 edge to [[_COMMUNITY_catalog_entries]]
+- 1 edge to [[_COMMUNITY_edit_scripts]]
+- 1 edge to [[_COMMUNITY_gather_pool]]
 - 1 edge to [[_COMMUNITY_fetch]]
-- 1 edge to [[_COMMUNITY_words_of]]
+- 1 edge to [[_COMMUNITY_clean_full]]
 - 1 edge to [[_COMMUNITY_edit_plan]]
-- 1 edge to [[_COMMUNITY_time]]
+- 1 edge to [[_COMMUNITY_test_story.py]]
 - 1 edge to [[_COMMUNITY_extra_sources.py]]
+- 1 edge to [[_COMMUNITY_footage.py]]
 
 ## Top bridge nodes
 - [[test_pictures_first.py]] - degree 81, connects to 16 communities
-- [[catalog_pool()]] - degree 19, connects to 10 communities
+- [[catalog_pool()]] - degree 19, connects to 8 communities
 - [[save_pool()]] - degree 13, connects to 5 communities
 - [[clean_pics()]] - degree 8, connects to 3 communities
 - [[pool_of()]] - degree 19, connects to 2 communities

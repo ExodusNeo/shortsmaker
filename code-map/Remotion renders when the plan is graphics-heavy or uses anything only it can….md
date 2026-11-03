@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/remotion_render.py"
 type: "rationale"
-community: "test_style.py"
+community: "wants_remotion"
 location: "L16"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/test_stylepy
+  - community/wants_remotion
 ---
 
 # Remotion renders when the plan is graphics-heavy or uses anything only it can…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[wants_remotion()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/test_stylepy
+#graphify/rationale #graphify/EXTRACTED #community/wants_remotion

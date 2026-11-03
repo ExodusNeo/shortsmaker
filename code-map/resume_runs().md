@@ -12,7 +12,7 @@ tags:
 # resume_runs()
 
 ## Connections
-- [[Path_32]] - `references` [EXTRACTED]
+- [[Path_31]] - `references` [EXTRACTED]
 - [[cli.py]] - `contains` [EXTRACTED]
 - [[configure_brain()]] - `calls` [EXTRACTED]
 - [[context()]] - `calls` [EXTRACTED]
@@ -24,7 +24,7 @@ tags:
 - [[pending()]] - `calls` [EXTRACTED]
 - [[read()_2]] - `calls` [EXTRACTED]
 - [[record_failure()]] - `calls` [EXTRACTED]
-- [[render()_1]] - `calls` [EXTRACTED]
+- [[render()]] - `calls` [EXTRACTED]
 - [[require_rules()]] - `calls` [EXTRACTED]
 - [[seo_pass()]] - `calls` [EXTRACTED]
 - [[update()]] - `calls` [EXTRACTED]

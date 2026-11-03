@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/retention.py"
 type: "code"
-community: "writing.py"
+community: "re"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/writingpy
+  - community/re
 ---
 
 # retention.py
@@ -21,11 +21,16 @@ tags:
 - [[command()]] - `contains` [EXTRACTED]
 - [[config.py]] - `imports_from` [EXTRACTED]
 - [[datetime]] - `imports_from` [EXTRACTED]
+- [[edit_metrics()]] - `contains` [EXTRACTED]
 - [[json]] - `imports` [EXTRACTED]
 - [[llm.py]] - `imports_from` [EXTRACTED]
+- [[load_metrics()]] - `contains` [EXTRACTED]
 - [[math]] - `imports` [EXTRACTED]
+- [[metrics_text()]] - `contains` [EXTRACTED]
+- [[normalize_metrics()]] - `contains` [EXTRACTED]
 - [[normalize_reply()]] - `contains` [EXTRACTED]
 - [[observations()]] - `contains` [EXTRACTED]
+- [[parse_metric()]] - `contains` [EXTRACTED]
 - [[pathlib]] - `imports_from` [EXTRACTED]
 - [[pil]] - `imports_from` [EXTRACTED]
 - [[re]] - `imports` [EXTRACTED]
@@ -41,4 +46,4 @@ tags:
 - [[test_rules.py]] - `imports_from` [EXTRACTED]
 - [[writing.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/writingpy
+#graphify/code #graphify/EXTRACTED #community/re

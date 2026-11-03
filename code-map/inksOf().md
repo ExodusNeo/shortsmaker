@@ -12,7 +12,7 @@ tags:
 # inksOf()
 
 ## Connections
-- [[Short()_1]] - `calls` [EXTRACTED]
+- [[Short()]] - `calls` [EXTRACTED]
 - [[Short.tsx]] - `imports` [EXTRACTED]
 - [[kit.ts]] - `contains` [EXTRACTED]
 - [[style.test.ts]] - `imports` [EXTRACTED]

@@ -13,12 +13,12 @@ tags:
 
 ## Connections
 - [[ASS captions, one caption_lines() line at a time; the spoken word turns yellow.…]] - `rationale_for` [EXTRACTED]
-- [[Path_28]] - `references` [EXTRACTED]
+- [[Path_26]] - `references` [EXTRACTED]
 - [[ass_colour()]] - `calls` [EXTRACTED]
 - [[ass_time()]] - `calls` [EXTRACTED]
 - [[audio_mix.py]] - `contains` [EXTRACTED]
 - [[caption_lines()]] - `calls` [EXTRACTED]
-- [[render()_1]] - `calls` [EXTRACTED]
+- [[render()]] - `calls` [EXTRACTED]
 - [[styled()]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/captions

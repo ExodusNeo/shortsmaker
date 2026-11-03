@@ -1,17 +1,21 @@
 ---
 source_file: ""
 type: "code"
-community: "write_json"
+community: "code_custom_scenes"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/write_json
+  - community/code_custom_scenes
 ---
 
 # Path
 
 ## Connections
-- [[apply()]] - `references` [EXTRACTED]
-- [[preview()]] - `references` [EXTRACTED]
+- [[code_custom_scenes()]] - `references` [EXTRACTED]
+- [[full_props()]] - `references` [EXTRACTED]
+- [[look_and_fix()]] - `references` [EXTRACTED]
+- [[opener_preflight()]] - `references` [EXTRACTED]
+- [[preview_custom()]] - `references` [EXTRACTED]
+- [[preview_sheet()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/write_json
+#graphify/code #graphify/EXTRACTED #community/code_custom_scenes

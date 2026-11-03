@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/picker.py"
 type: "code"
-community: "rescue_graphics"
+community: "clean_full"
 location: "L323"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/rescue_graphics
+  - community/clean_full
 ---
 
 # rescue_graphics()
@@ -22,8 +22,8 @@ tags:
 - [[json]] - `calls` [EXTRACTED]
 - [[max_full()]] - `calls` [EXTRACTED]
 - [[picker.py]] - `contains` [EXTRACTED]
-- [[render()_1]] - `calls` [EXTRACTED]
+- [[render()]] - `calls` [EXTRACTED]
 - [[test_rescue_respects_caps()]] - `calls` [EXTRACTED]
 - [[words_of()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/rescue_graphics
+#graphify/code #graphify/EXTRACTED #community/clean_full

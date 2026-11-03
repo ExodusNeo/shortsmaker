@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[frame()_1]] - `indirect_call` [INFERRED]
 - [[test_blender_plan.py]] - `contains` [EXTRACTED]
-- [[write()]] - `contains` [EXTRACTED]
+- [[write()_1]] - `contains` [EXTRACTED]
 - [[write_frames()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/frame_maker

@@ -1,16 +1,21 @@
 ---
 source_file: ""
 type: "code"
-community: "writing.py"
+community: "finish_render"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/writingpy
+  - community/finish_render
 ---
 
 # Path
 
 ## Connections
-- [[analyze()]] - `references` [EXTRACTED]
+- [[drawn_thumbnail()]] - `references` [EXTRACTED]
+- [[finish_render()]] - `references` [EXTRACTED]
+- [[load_state()]] - `references` [EXTRACTED]
+- [[render()]] - `references` [EXTRACTED]
+- [[save_state()]] - `references` [EXTRACTED]
+- [[use_opener()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/writingpy
+#graphify/code #graphify/EXTRACTED #community/finish_render

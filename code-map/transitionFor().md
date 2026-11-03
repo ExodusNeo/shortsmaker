@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[Background()]] - `calls` [EXTRACTED]
-- [[Short()_1]] - `calls` [EXTRACTED]
+- [[Short()]] - `calls` [EXTRACTED]
 - [[Short.tsx]] - `imports` [EXTRACTED]
 - [[has()]] - `calls` [EXTRACTED]
 - [[style.test.ts]] - `imports` [EXTRACTED]

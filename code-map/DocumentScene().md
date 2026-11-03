@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/full/Document.tsx"
 type: "code"
-community: "toolkit.tsx"
+community: "Paper"
 location: "L36"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/toolkittsx
+  - community/Paper
 ---
 
 # DocumentScene()
@@ -20,4 +20,4 @@ tags:
 - [[rng()]] - `calls` [EXTRACTED]
 - [[wrapText()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/toolkittsx
+#graphify/code #graphify/EXTRACTED #community/Paper

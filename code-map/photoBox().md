@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/full/guarded.tsx"
 type: "code"
-community: "skinOf"
+community: "toolkit.tsx"
 location: "L33"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/skinOf
+  - community/toolkittsx
 ---
 
 # photoBox()
@@ -16,4 +16,4 @@ tags:
 - [[ExampleEvidence.tsx]] - `imports` [EXTRACTED]
 - [[guarded.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/skinOf
+#graphify/code #graphify/EXTRACTED #community/toolkittsx

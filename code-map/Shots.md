@@ -1,12 +1,12 @@
 ---
 source_file: "blender/build_scene.py"
 type: "code"
-community: "build_scene.py"
+community: "Shots"
 location: "L41"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/build_scenepy
+  - community/Shots
 ---
 
 # Shots
@@ -18,6 +18,6 @@ tags:
 - [[dot-wide()]] - `method` [EXTRACTED]
 - [[Camera poses (eye, target) for each beat, sized from the bridge and the focus…]] - `rationale_for` [EXTRACTED]
 - [[build_scene.py]] - `contains` [EXTRACTED]
-- [[main()_2]] - `calls` [EXTRACTED]
+- [[main()_5]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/build_scenepy
+#graphify/code #graphify/EXTRACTED #community/Shots

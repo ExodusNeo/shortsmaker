@@ -13,6 +13,7 @@ tags:
 
 ## Connections
 - [[channel_profiles.py]] - `contains` [EXTRACTED]
+- [[command()]] - `calls` [EXTRACTED]
 - [[fix_short()]] - `calls` [EXTRACTED]
 - [[main()_7]] - `calls` [EXTRACTED]
 

@@ -1,29 +1,29 @@
 ---
 type: community
-members: 29
+members: 31
 ---
 
 # Short.tsx
 
-**Members:** 29 nodes
+**Members:** 31 nodes
 
 ## Members
 - [[Background()]] - code - remotion/src/Short.tsx
 - [[Captions()]] - code - remotion/src/Captions.tsx
-- [[Card]] - code - remotion/src/Short.tsx
-- [[Graphic]] - code - remotion/src/Short.tsx
+- [[Captions.tsx]] - code - remotion/src/Captions.tsx
 - [[GraphicFor()]] - code - remotion/src/Short.tsx
-- [[Graphics.tsx]] - code - remotion/src/Graphics.tsx
-- [[HookTitle()]] - code - remotion/src/Graphics.tsx
 - [[INKS_1]] - code - tests/style.test.ts
 - [[Move]] - code - remotion/src/Short.tsx
 - [[PersonCard()]] - code - remotion/src/Graphics.tsx
+- [[Root()]] - code - remotion/src/Root.tsx
+- [[Root.tsx]] - code - remotion/src/Root.tsx
 - [[Scene]] - code - remotion/src/Short.tsx
-- [[Short()_1]] - code - remotion/src/Short.tsx
+- [[Short()]] - code - remotion/src/Short.tsx
 - [[Short.tsx]] - code - remotion/src/Short.tsx
-- [[SubscribeCta()]] - code - remotion/src/Graphics.tsx
+- [[ShortProps]] - code - remotion/src/Short.tsx
 - [[TRANSITIONS]] - code - remotion/src/style/index.ts
-- [[clamp_7]] - code - remotion/src/Graphics.tsx
+- [[Word]] - code - remotion/src/Short.tsx
+- [[calculateMetadata()]] - code - remotion/src/Root.tsx
 - [[flashAlpha()]] - code - remotion/src/Short.tsx
 - [[has()]] - code - remotion/src/style/index.ts
 - [[hidden()]] - code - tests/style.test.ts
@@ -31,7 +31,9 @@ members: 29
 - [[lookFor()]] - code - remotion/src/style/index.ts
 - [[ok()]] - code - tests/style.test.ts
 - [[overlayFor()]] - code - remotion/src/style/index.ts
+- [[ref_remotion]] - concept
 - [[shown()]] - code - tests/style.test.ts
+- [[srcindex.ts]] - code - remotion/src/index.ts
 - [[style.test.ts]] - code - tests/style.test.ts
 - [[test()]] - code - tests/style.test.ts
 - [[transitionFor()]] - code - remotion/src/style/index.ts
@@ -46,16 +48,18 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 25 edges to [[_COMMUNITY_Cards.tsx]]
-- 11 edges to [[_COMMUNITY_styleindex.ts]]
-- 10 edges to [[_COMMUNITY_MapCard.tsx]]
-- 7 edges to [[_COMMUNITY_kit.ts]]
-- 7 edges to [[_COMMUNITY_QuestionBeat.tsx]]
-- 5 edges to [[_COMMUNITY_toolkit.tsx]]
+- 29 edges to [[_COMMUNITY_Graphics.tsx]]
+- 17 edges to [[_COMMUNITY_styleindex.ts]]
+- 6 edges to [[_COMMUNITY_fulltypes.ts]]
+- 4 edges to [[_COMMUNITY_Halftone.tsx]]
+- 3 edges to [[_COMMUNITY_Paper]]
+- 1 edge to [[_COMMUNITY_Journey.tsx]]
+- 1 edge to [[_COMMUNITY_toolkit.tsx]]
+- 1 edge to [[_COMMUNITY_guarded.tsx]]
 
 ## Top bridge nodes
-- [[Short.tsx]] - degree 46, connects to 6 communities
-- [[Graphics.tsx]] - degree 21, connects to 4 communities
-- [[Graphic]] - degree 6, connects to 3 communities
+- [[ref_remotion]] - degree 17, connects to 8 communities
+- [[Short.tsx]] - degree 46, connects to 4 communities
 - [[style.test.ts]] - degree 15, connects to 2 communities
+- [[Captions.tsx]] - degree 8, connects to 2 communities
 - [[Background()]] - degree 7, connects to 2 communities

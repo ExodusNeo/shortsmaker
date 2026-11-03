@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/full/guarded.tsx"
 type: "code"
-community: "skinOf"
+community: "guarded.tsx"
 location: "L233"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/skinOf
+  - community/guardedtsx
 ---
 
 # Connect()
@@ -20,4 +20,4 @@ tags:
 - [[routeArrow()]] - `calls` [EXTRACTED]
 - [[skinOf()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/skinOf
+#graphify/code #graphify/EXTRACTED #community/guardedtsx

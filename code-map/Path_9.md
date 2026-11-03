@@ -1,21 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "render"
+community: "drawn_thumbnail"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/render
+  - community/drawn_thumbnail
 ---
 
 # Path
 
 ## Connections
-- [[drawn_thumbnail()]] - `references` [EXTRACTED]
-- [[finish_render()]] - `references` [EXTRACTED]
-- [[load_state()]] - `references` [EXTRACTED]
-- [[render()_1]] - `references` [EXTRACTED]
-- [[save_state()]] - `references` [EXTRACTED]
-- [[use_opener()]] - `references` [EXTRACTED]
+- [[drawn_short()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/render
+#graphify/code #graphify/EXTRACTED #community/drawn_thumbnail
