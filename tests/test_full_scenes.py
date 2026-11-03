@@ -929,6 +929,11 @@ def test_fill_money_graphics_and_caps():
     assert plan_rules.is_person_portrait({"title": "File:Clarence Saunders.jpg"}, "Clarence Saunders", cat, 1) is True
     assert plan_rules.is_person_portrait({"title": "File:Clarence Saunders LCCN2014715807.jpg"}, "Clarence Saunders", cat, 1) is True
     assert plan_rules.is_person_portrait({"title": "File:Interior of Piggly Wiggly store.jpg"}, "Clarence Saunders", cat, 2) is False
+    # A background that already shows the card's person gets no card over them
+    cat = [{"n": 61, "what": "Color artwork depicting Robert E. Lee surrendering to Ulysses S. Grant"}]
+    assert plan_rules.shows_person({"title": "File:General Robert E. Lee surrenders.jpg"}, "Ulysses S. Grant", cat, 61)
+    assert plan_rules.shows_person({"title": "File:General Robert E. Lee on 'Traveler'.jpg"}, "Robert E. Lee", [], 45)
+    assert not plan_rules.shows_person({"title": "File:McLean house LOC.jpg"}, "Robert E. Lee", cat, 3)
     # Loop bridge detection
     assert plan_rules.is_loop_short([{"narration": "One grocer borrowed $10 million."},
                                      {"narration": "so Saunders lost $9 million, all because"}]) is True

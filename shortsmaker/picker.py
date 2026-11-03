@@ -108,7 +108,8 @@ def choose_images(short: dict, work: Path, ch: dict | None = None) -> list[dict]
         what = look.get("brief") or next((e["description"] for e in style_lab.style_library("look") if e["name"] == look["name"]), "")
         look_rule = (f'LOOK: this Short uses the photo look "{look.get("title") or look["name"]}" ({what}). Also give '
                      f'look_scenes = the numbers of 2-{STYLE_CAPS["look_scenes"]} scenes whose chosen STILL picture suits this '
-                     "look best (never scene 1, never a REAL FILM pick, never a motion-graphic scene); [] if none suits it.\n")
+                     f"look best (never scene 1, never scene {max(1, len(short['scenes']) - 1)} or later (the reveal keeps its plain picture), "
+                     "never a REAL FILM pick, never a motion-graphic scene); [] if none suits it.\n")
     plan_rule = ("""A scene with planned_picture was written around that candidate before the script: keep it as bg unless it
 clearly doesn't fit the final narration; if you pick another (or null), give swap_why in a few words. Use
 planned_full_pictures as full_pictures the same way (null for a planned photo that doesn't fit).
@@ -207,6 +208,9 @@ For reference, their file titles: {json.dumps(titles, ensure_ascii=False)}""",
             isinstance(bg_num, int) and 1 <= bg_num <= len(cands)
             and any(plan_rules.is_person_portrait(cands[bg_num - 1], name, catalog, bg_num) for name in main_people)
         )
+        if (sc.get("person") and isinstance(bg_num, int) and 1 <= bg_num <= len(cands)
+                and plan_rules.shows_person(cands[bg_num - 1], sc["person"]["name"], catalog, bg_num)):
+            sc["person"], per_num = None, None  # the picture already shows them: no card over their face
         if is_main_portrait and (portrait_bg_used or (i > 0 and sc.get("graphic"))):
             bg_num = None
             is_main_portrait = False

@@ -46,7 +46,8 @@ def style_props(sc: dict, i: int) -> dict:
 
 def apply_look_scenes(short: dict, choices: list[dict], look_scenes) -> None:
     """Puts the Short's photo look on the scenes the picker chose for it (it saw the pictures): at most
-    STYLE_CAPS["look_scenes"], never scene 1 (the hook), a real film clip, an AI motion clip (Short.tsx draws no
+    STYLE_CAPS["look_scenes"], never scene 1 (the hook), the last two
+    (the reveal keeps its sharpest, plain picture: the McLean Short's engraving washed it out, 2026-11-03), a real film clip, an AI motion clip (Short.tsx draws no
     look on any clip) or a full-screen motion graphic. Every other scene, and every scene of a Short without a look, shows the plain picture."""
     for sc in short["scenes"]:
         sc["look"] = None
@@ -56,7 +57,7 @@ def apply_look_scenes(short: dict, choices: list[dict], look_scenes) -> None:
     picked: list[int] = []
     for n in look_scenes:
         i = n - 1 if isinstance(n, int) and not isinstance(n, bool) else -1
-        if 0 < i < len(short["scenes"]) and i not in picked and not choices[i].get("film") \
+        if 0 < i < len(short["scenes"]) - 2 and i not in picked and not choices[i].get("film") \
                 and not short["scenes"][i].get("full") and not short["scenes"][i].get("animate") \
                 and len(picked) < STYLE_CAPS["look_scenes"]:
             picked.append(i)

@@ -169,7 +169,7 @@ def test_apply_look_scenes():
     short["scenes"][5]["animate"] = True  # an AI motion clip: Short.tsx draws no look on clips
     style_lab.apply_look_scenes(short, choices, [1, 2, 3, 4, 5, 6, 7, 8, "x", 99])
     looked = [i for i, sc in enumerate(short["scenes"]) if sc.get("look")]
-    assert looked == [1, 4, 6, 7]  # scene 1, the film and AI-clip scenes, the motion-graphic scene and anything past 4 are refused
+    assert looked == [1, 4]  # scene 1, the film and AI-clip scenes, the motion-graphic scene and the reveal (last two) are refused
     assert all(short["scenes"][i]["look"] == "silent" and short["scenes"][i]["look_seed"] == i for i in looked)
     style_lab.apply_look_scenes({"look": None, "scenes": short["scenes"]}, choices, [2])
     assert not any(sc.get("look") for sc in short["scenes"])  # no look: every scene plain again

@@ -365,6 +365,16 @@ def is_person_portrait(cand: dict, person_name: str, catalog: list[dict] | None 
     return False
 
 
+def shows_person(cand: dict, person_name: str, catalog: list[dict] | None = None, cand_num: int | None = None) -> bool:
+    """True when the picture's title or catalog note names the person (their surname): a PersonCard would only cover
+    them (McLean Short 2026-11-03: a Lee card over "Lee mounted on Traveller", a Grant card over the surrender painting)."""
+    names = words_of(person_name)
+    if not cand or not names or len(names[-1]) < 3:
+        return False
+    what = next((str(e.get("what") or "") for e in (catalog or []) if isinstance(e, dict) and e.get("n") == cand_num), "")
+    return names[-1] in set(words_of(f"{cand.get('title', '')} {what}"))
+
+
 def is_loop_short(scenes: list[dict]) -> bool:
     """True when the Short's final scene is an open grammatical loop bridge into scene 1 (either configured via
     channel rules or ending without sentence-closing punctuation)."""
