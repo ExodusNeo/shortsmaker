@@ -640,6 +640,37 @@ def test_fact_check_rewrites_get_the_story_rules_again():
     assert any("words, planned" in n for n in notes), notes  # three short lines are far below the planned length
 
 
+def test_scene_without_picture_or_prompt_gets_painted_not_reused():
+    from shortsmaker import short_render
+    short = {"topic": "Clever Hans", "character_look": "a dark Orlov trotter stallion with a black mane", "scenes": [
+        {"narration": "His owner wasn't asking,", "ai_image": ""},          # scene 1: left to the opener
+        {"narration": "and Hans got every answer wrong.", "shot": "DETAIL: a scan of the results", "ai_image": ""},
+        {"narration": "Crowds packed in.", "ai_image": "a crowd, charcoal"},  # planned already
+        {"narration": "A diagram.", "ai_image": "", "full": {"type": "custom"}},
+        {"narration": "A photo.", "ai_image": ""}]}
+    choices = [{"bg": None}, {"bg": None}, {"bg": None}, {"bg": None}, {"bg": (b"x", "File:A.jpg", None)}]
+    prompts, old = [], llm.ask_ai
+    llm.ask_ai = lambda p, **k: prompts.append(p) or {"prompts": [{"scene": 2, "ai_image": "Men in wool suits groan "
+                                                                     "as a horse taps; charcoal on toned paper."}]}
+    try:
+        got = short_render.plan_gap_paintings(short, choices)
+    finally:
+        llm.ask_ai = old
+    assert got == [1], got
+    assert short["scenes"][1]["ai_image"].startswith("Men in wool suits"), short["scenes"][1]
+    assert "never a document" in prompts[0] and len(prompts) == 1
+    assert "real photos: a dark Orlov trotter stallion with a black mane." in prompts[0]  # paintings agree on the horse
+    assert [sc["ai_image"] for k, sc in enumerate(short["scenes"]) if k != 1] == ["", "a crowd, charcoal", "", ""]
+    llm.ask_ai = lambda p, **k: None  # the AI is out: the base prompt still paints, with a new angle
+    try:
+        short["scenes"][1]["ai_image"] = ""
+        short_render.plan_gap_paintings(short, choices)
+    finally:
+        llm.ask_ai = old
+    painted = short["scenes"][1]["ai_image"]
+    assert painted.startswith("and Hans got every answer wrong.") and "scan" not in painted and "different angle" in painted
+
+
 if __name__ == "__main__":
     names = [n for n in sorted(globals()) if n.startswith("test_") and (len(sys.argv) < 2 or n in sys.argv[1:])]
     failed = 0

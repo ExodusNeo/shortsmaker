@@ -140,6 +140,24 @@ def use_opener(short: dict, bounds: list[float], all_words: list, work: Path, cl
     return None if first.get("full") else f"opener: {short['opener_graphic']}"
 
 
+def plan_gap_paintings(short: dict, choices: list[dict]) -> list[int]:
+    """Scenes after the first with no picture, no graphic and no planned painting get a painting prompt, so they
+    are painted instead of repeating an earlier picture (Clever Hans scenes 8 and 10, 2026-11-03). Scene 1 is
+    left to the opener and its own picture rules. Returns the scenes that got one."""
+    unplanned = [i for i, sc in enumerate(short["scenes"])
+                 if i and not choices[i]["bg"] and not sc.get("full") and not sc.get("ai_image")]
+    for i in unplanned:  # the base rewrite_paint_prompts improves, or keeps with a new angle
+        sc = short["scenes"][i]
+        shot = sc.get("shot") or ""  # a shot of a document/scan would be painted as gibberish print
+        base = sc["narration"] if not shot or re.search(r"(?i)\b(scan|document|chart|table|page|letter)s?\b", shot) else shot
+        sc["ai_image"] = f"{base} {gpu.PAINT_FALLBACK}"
+    if unplanned:
+        review.rewrite_paint_prompts(short, {i: "no real picture fit this line and none was planned: paint what the "
+                                                "narration says is happening (people, place, action), never a document "
+                                                "or scan" for i in unplanned})
+    return unplanned
+
+
 def render(short: dict, ch: dict, folder: Path, state: dict | None = None, fix_round: int = 0) -> None:
     """Make one Short. With `state` (fix.bat or an automatic fix round), reuse its pictures and music instead of
     new AI picks. `fix_round` counts the automatic review-and-fix re-renders (up to AUTO_FIX_ROUNDS)."""
@@ -166,6 +184,8 @@ def render(short: dict, ch: dict, folder: Path, state: dict | None = None, fix_r
     for i, sc in enumerate(short["scenes"]):  # an evidence board needs its real photos (3 or more)
         if (sc.get("full") or {}).get("type") == "board" and len(choices[i].get("full_pics") or []) < 3:
             sc["full"] = None
+    if not drawn:
+        plan_gap_paintings(short, choices)
     print("  voice, gap images and thumbnail art on this PC...")
     prior_music = MUSIC / state["music"] if state and state.get("music") else None
     save_state(work, short, choices, prior_music, set(state.get("by_gemini", [])) if state else set())

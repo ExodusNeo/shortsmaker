@@ -154,6 +154,13 @@ def test_director_inventions_are_kept_with_a_spec():
     assert short["scenes"][1]["transition"] == "invented"
 
 
+def test_director_character_look_is_kept_short_or_dropped():
+    short, prompt = plan_with({"character_look": "  a dark Orlov trotter stallion  ", "scenes": [{"image_search": "horse"}]})
+    assert "character_look" in prompt and short["character_look"] == "a dark Orlov trotter stallion"
+    for bad in (None, "", ["a horse"], 7):
+        assert plan_with({"character_look": bad, "scenes": [{"image_search": "horse"}]})[0]["character_look"] is None
+
+
 def test_apply_look_scenes():
     short = {"look": {"name": "silent"}, "scenes": [{} for _ in range(8)]}
     short["scenes"][3]["full"] = {"type": "number"}

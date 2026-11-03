@@ -631,6 +631,11 @@ The narration below is final: never change a word of it. Plan the edit of every 
   tiny from the story); one real element of the story shown oversized; a lone small figure in a vast setting; a map
   or aerial view with one route or spot marked; a before/after split of one subject; many copies of one object.
   Clothing, buildings, tech and objects must match the story's era and niche.
+- character_look: how the main character looks, in one short phrase taken from the real pictures listed for the
+  Short ("a dark Orlov trotter stallion with a black mane", "a stocky man in a long grey coat and white beard"),
+  or null when no picture shows them. Every ai_image and the thumbnail_prompt that shows the main character uses
+  these exact words, so the paintings agree with each other and with the photos (Clever Hans was painted grey,
+  bay and chestnut in one Short). Body, coat, colours, clothes: never a real person's face.
 - Draft description (2-3 sentences plus 3 hashtags) and 10-15 tags (refined later with real search data).
 - look: ONE photo look for this Short's still pictures, or null (null is a good answer: use a look only when
   it adds to the story). {{"name": "<a library look>"}}, never {recent_looks} (used on the channel's last
@@ -645,7 +650,7 @@ STYLE LIBRARY (name (kind): what it is; fits):
 {style_text}
 Shorts: {json.dumps(final, ensure_ascii=False)}
 Reply with ONLY JSON, one entry in "scenes" per scene, in order: {{"shorts": [{{"index": 0, "palette": "...",
-"music_mood": "...", "music_intensity": "low", "music_instruments": [], "thumbnail_prompt": "...", "description": "...", "tags": ["..."], "look": null,
+"music_mood": "...", "music_intensity": "low", "music_instruments": [], "thumbnail_prompt": "...", "character_look": null, "description": "...", "tags": ["..."], "look": null,
 "invented_transition": null, "invented_overlay": null,
 "scenes": [{{"pic": null, "image_search": "...", "video_search": "...", "shot": "...", "move": "in", "graphic": null,
 "person": null, "emphasis": "...", "transition": "fade", "ai_image": "...", "animate": false,
@@ -655,6 +660,8 @@ Reply with ONLY JSON, one entry in "scenes" per scene, in order: {{"shorts": [{{
         r = plans.get(i, {})
         s.update({k: r[k] for k in ("palette", "music_mood", "music_intensity", "music_instruments", "thumbnail_prompt", "description", "tags") if r.get(k)})
         s.update({k: r.get(k) for k in ("look", "invented_transition", "invented_overlay")})  # validated in write_scripts
+        look = r.get("character_look")  # untrusted: a short phrase or nothing
+        s["character_look"] = look.strip()[:160] if isinstance(look, str) and look.strip() else None
         scenes = r.get("scenes") if isinstance(r.get("scenes"), list) else []
         s["scenes"] = [{**(scenes[k] if k < len(scenes) and isinstance(scenes[k], dict) else {}), "narration": t}
                        for k, t in enumerate(s.pop("lines"))]  # the final words win over anything the director echoed

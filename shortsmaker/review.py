@@ -513,11 +513,13 @@ def rewrite_paint_prompts(short: dict, why: dict[int, str]) -> list[int]:
     scenes = short["scenes"]
     rows = [{"scene": i + 1, "narration": scenes[i]["narration"], "shot": scenes[i].get("shot"),
              "old_prompt": scenes[i].get("ai_image"), "problem": why[i]} for i in why]
+    look = (f"\nThe main character looks like this in the real photos: {short['character_look']}. A prompt that shows "
+            "them uses these exact words, so every painting agrees.") if short.get("character_look") else ""
     data = llm.ask_ai(f"""Some AI paintings in a YouTube Short were rejected and will be painted again. Story: {short.get('topic') or short.get('title')}
 For each scene write a NEW painting prompt that fixes its problem and is better than the old prompt. Don't repeat
 what failed: if the old subject can't work (it shows what must not be shown, or the painter keeps getting it wrong),
 pick another subject that still shows the narration. Rules for a prompt:
-{session.RULES["AI paintings"]}
+{session.RULES["AI paintings"]}{look}
 Scenes: {json.dumps(rows, ensure_ascii=False)}
 Reply with ONLY JSON: {{"prompts": [{{"scene": 3, "ai_image": "..."}}]}}""", fatal=False) or {}
     done = []
