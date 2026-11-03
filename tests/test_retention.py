@@ -108,6 +108,102 @@ class RetentionTests(unittest.TestCase):
             retention.analyze(self.folder, self.picture)
         ask.assert_not_called()
 
+    def save_details(self, data):
+        saved = self.folder / 'retention'
+        saved.mkdir(exist_ok=True)
+        (saved / 'metrics.json').write_text(json.dumps(data), encoding='utf-8')
+
+    def test_manual_metrics_accept_studio_formats_and_keep_unknowns_distinct_from_zero(self):
+        data = retention.normalize_metrics({'views': '1,234', 'stayed_to_watch_percentage': '72.5%',
+            'average_percentage_viewed': '125.3%', 'average_view_duration_seconds': '0:24.5',
+            'likes': 0, 'comments': '', 'posted_on': '2026-11-01', 'collected_on': '2026-11-03'})
+        self.assertEqual(data['views'], 1234)
+        self.assertEqual(data['stayed_to_watch_percentage'], 72.5)
+        self.assertEqual(data['average_percentage_viewed'], 125.3)
+        self.assertEqual(data['average_view_duration_seconds'], 24.5)
+        self.assertEqual(data['likes'], 0)
+        self.assertNotIn('comments', data)
+        self.assertIn('Age when numbers were collected: 2 day(s)', retention.metrics_text(data))
+
+    def test_invalid_metrics_and_reversed_dates_are_rejected(self):
+        for data in ({'views': True}, {'views': '1,2'}, {'views': -1}, {'views': 2.5},
+                     {'stayed_to_watch_percentage': 101}, {'average_percentage_viewed': 'NaN'},
+                     {'average_view_duration_seconds': '0:99'}, {'likes': float('inf')},
+                     {'posted_on': '2026-02-30'}, {'notes': 'x' * 1001},
+                     {'posted_on': '2026-11-03', 'collected_on': '2026-11-01'}):
+            with self.subTest(data=data), self.assertRaises(ValueError):
+                retention.normalize_metrics(data)
+
+    def test_editor_keeps_skipped_values_clears_selected_fields_and_retries_bad_input(self):
+        self.save_details({'views': 1200, 'likes': 5, 'notes': 'Old note'})
+        with patch('builtins.input', side_effect=['', '101', '72%', '', '', '', '', '', '-', '', '', 'New note']), \
+             patch.object(llm, 'ask_ai') as ask:
+            data = retention.edit_metrics(self.folder)
+        self.assertEqual(data, {'views': 1200, 'stayed_to_watch_percentage': 72.0, 'notes': 'New note'})
+        self.assertEqual(retention.load_metrics(self.folder), data)
+        self.assertFalse((self.folder / 'retention/metrics.json.tmp').exists())
+        ask.assert_not_called()
+
+    def test_details_only_menu_needs_no_graph_ai_or_logbook(self):
+        with patch.object(retention.channel_profiles, 'ask_number', return_value=2), \
+             patch('builtins.input', side_effect=['1200', '70%', '110%', '0:11', '', '', '', '', '', '', '']), \
+             patch.object(llm, 'ask_ai') as ask, patch.object(retention, 'analyze') as analyze:
+            retention.command([str(self.folder)])
+        self.assertEqual(retention.load_metrics(self.folder)['views'], 1200)
+        ask.assert_not_called()
+        analyze.assert_not_called()
+        self.assertFalse((self.folder / 'retention.txt').exists())
+        with patch.object(retention, 'OUTPUT', self.root):
+            self.assertIn('"views": 1200', retention.observations('test-channel'))
+
+    def test_interactive_graph_review_can_skip_optional_details(self):
+        (self.folder / 'retention.txt').write_text('saved review', encoding='utf-8')
+        with patch.object(retention, 'OUTPUT', self.root), \
+             patch.object(retention.channel_profiles, 'ask_number', side_effect=[1, 1]), \
+             patch.object(retention.channel_profiles, 'ask_yes', return_value=False), \
+             patch.object(retention.channel_profiles, 'ask_brain', return_value='codex-only'), \
+             patch.object(retention.channel_profiles, 'configure_brain'), \
+             patch('builtins.input', return_value=str(self.picture)), \
+             patch.object(retention, 'analyze', return_value=self.folder / 'retention.txt') as analyze:
+            retention.command([])
+        analyze.assert_called_once_with(self.folder, self.picture)
+        self.assertFalse((self.folder / 'retention/metrics.json').exists())
+
+    def test_saved_details_reach_ai_report_and_future_planning(self):
+        self.save_details({'views': 1500, 'average_percentage_viewed': 115.5,
+                           'notes': 'I changed the opening captions.',
+                           'posted_on': '2026-11-01', 'collected_on': '2026-11-03'})
+        reply = {'readable': True, 'drops': [{'start': 4, 'end': 7, 'reason': 'visible decline'}]}
+        with patch.object(llm, 'ask_ai', return_value=reply) as ask:
+            path = retention.analyze(self.folder, self.picture)
+        self.assertIn('"views": 1500', ask.call_args.args[0])
+        self.assertIn('Views: 1500', path.read_text(encoding='utf-8'))
+        self.assertIn('Average percentage viewed (can exceed 100%): 115.5', path.read_text(encoding='utf-8'))
+        with patch.object(retention, 'OUTPUT', self.root):
+            self.assertIn('"age_days_at_collection": 2', retention.observations('test-channel'))
+        # Updating details is picked up without regenerating the graph report.
+        self.save_details({'views': 2000, 'reporting_period': 'Since published'})
+        with patch.object(retention, 'OUTPUT', self.root):
+            summary = retention.observations('test-channel')
+        self.assertIn('"views": 2000', summary)
+        self.assertNotIn('"views": 1500', summary)
+        self.assertIn('Since published', summary)
+
+    def test_bad_details_do_not_remove_valid_drop_observations(self):
+        self.save_details({'views': 'wrong'})
+        (self.folder / 'retention.txt').write_text('Drop 1: about 4-7s | scene(s) 2\n', encoding='utf-8')
+        with patch.object(retention, 'OUTPUT', self.root):
+            summary = retention.observations('test-channel')
+        self.assertIn('1 Shorts with saved reviews', summary)
+        self.assertNotIn('wrong', summary)
+
+    def test_failed_ai_reply_preserves_manual_details(self):
+        self.save_details({'views': 1500, 'notes': 'Keep this'})
+        original = (self.folder / 'retention/metrics.json').read_bytes()
+        with patch.object(llm, 'ask_ai', return_value=None), self.assertRaises(ValueError):
+            retention.analyze(self.folder, self.picture)
+        self.assertEqual((self.folder / 'retention/metrics.json').read_bytes(), original)
+
     def test_command_reads_profile_mode_without_updating_profile(self):
         profiles = self.root / 'channels'
         profiles.mkdir()

@@ -1816,3 +1816,25 @@ results without retention summaries, and actual planner/SEO prompts receiving re
 results. Inspected topic/writer prompt changes before refreshing the golden fixture; refresh also includes
 three stale opener-context expectations from the already committed 2026-11-02 opening_rules changes.
 No live AI request or audience-performance experiment was needed for this change.
+
+### 2026-11-03 - optional manual context inside the retention helper
+
+Owner asked to supply more information manually while keeping retention independent of the logbook.
+Added an optional Studio-details editor to retention.bat: graph reviews offer it, and a second menu action
+adds/updates details without a screenshot or an AI call. Fields: views, stayed-to-watch percentage, average
+percentage viewed (can exceed 100), average duration (seconds or M:SS), posted/collected dates, reporting
+period, likes, comments, subscribers gained and notes. Enter keeps/skips and '-' clears. Validate finite,
+nonnegative numbers, whole counts, 0-100 stayed-to-watch, real ISO dates and their ordering; blank is unknown.
+Save atomically to each Short's retention/metrics.json. Saved values are loaded for later edits.
+
+AI graph reviews receive manual details as labeled context and include a snapshot in retention.txt. Future
+planning/SEO read the latest sidecar directly, including for details-only Shorts, bounded to 30 context
+records. Include saved length and computed age at metrics collection when both dates exist. Old screenshot
+reports without details still work. Bad optional sidecars cannot erase valid drop observations. Notes remain
+observations/hypotheses rather than instructions or causes. No view-count gate or logbook dependency added;
+no generated Short, existing saved report, logbook or profile was changed.
+
+Verification: 72 tests passed (retention 18, quality 25, rules/golden prompts 29), plus compileall and
+git diff --check. Covered Studio number formats, invalid inputs, zero vs unknown, date arithmetic, editing/
+clearing/retry persistence, details-only with no AI, skipping details in the normal menu, latest-context
+planning, corrupt optional context and preservation on failed AI replies. No live AI request was needed.

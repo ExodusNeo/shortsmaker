@@ -31,6 +31,7 @@ everything (voice, paintings, video). Real archival/online pictures and film are
 - **Don't narrow the niche**; **don't add logbook columns**.
 - **Retention is independent of the logbook** (owner, 2026-11-03). The owner submits graphs for videos with
   100+ views; never require a logbook entry, recorded views, dates or copied notes to use a retention review.
+  Optional manual Studio details are supported inside the retention helper and saved beside the Short.
 - Gemini: **Argon (Gemini 4) at high effort when the account has it, else Flash, high effort.** Claude: Opus, high
   effort (the plan can't afford xhigh/max).
 - Sound: no sub-bass thumps (SFX high-passed at 220 Hz), no loud repetitive whooshes, no "pop" punch-ins.
@@ -52,7 +53,7 @@ everything (voice, paintings, video). Real archival/online pictures and film are
 | `run.bat` | Asks channel, count, then nine AI choices: 1 Codex solo, 2 Claude solo, 3 Gemini solo; 4 Codex/Claude, 5 Codex/Gemini, 6 Claude/Codex, 7 Claude/Gemini, 8 Gemini/Codex, 9 Gemini/Claude (writer/editor). Then clip handoff and short-form questions. Saved per profile. CLI uses `codex-only`, `claude-only`, `gemini-only`, or `<writer>-<editor>` |
 | `fix.bat` | Repair a recent Short: reuse narration when unchanged; option 6 previews circle/arrow target/label changes, option 3 can preview their removal |
 | `resume.bat` | Continue unfinished Shorts; run.bat also offers resume before starting a new batch. See `docs/reliability.md` |
-| `retention.bat` | Pick a finished Short and a Studio retention screenshot; writes `retention.txt` plus `retention/graph.<ext>` in that output folder. Same AI modes/quota fallback; see `docs/retention.md` |
+| `retention.bat` | Pick a Short, then review a graph or add/update optional Studio details without AI. Saves `retention.txt`, `retention/graph.<ext>` and optional `retention/metrics.json`. Same AI modes/quota fallback; see `docs/retention.md` |
 | `library.bat` | `make_shorts.py library`: approve or throw away looks/overlays/cuts the AI invented (`style_candidates/`) |
 | `media.bat` | Import pictures/videos/audio; listen, approve or reject music/SFX; adjust timing/tags; narration previews; source status and official brand pages. See `docs/media-library.md` |
 | `make_shorts.py` | Entry point only; the pipeline is `shortsmaker/` |
@@ -361,10 +362,17 @@ were backed up under `vault/Archive/Logbooks/2026-10-31_200433/` and cleared fro
 performance claims were removed from the editor prompt. Archives are not read by `logbook_results()`. Videos
 and `done_topics` were preserved. Retention is separate: planning and SEO call `retention.observations()`
 directly on the active channel's saved output reports, even with no logbook. The owner chooses graphs for
-videos with 100+ views; the reader does not check views, logbook entries or dates. It counts each scene type
+videos with 100+ views; the reader does not require recorded views, logbook entries or dates. It counts each scene type
 once per Short and reports overlaps repeated in 3+ Shorts (observations, not causes/failure rates).
 No copy-to-logbook suggestion remains. Posting age in the separate numbers log is included;
 metrics collection age remains unknown. No logbook columns or contents are changed automatically.
+
+The retention menu also offers optional manual Studio details: views, stayed-to-watch, average percentage
+viewed, average view duration, posting/collection dates, reporting period, likes/comments/subscribers and
+notes. Enter skips/keeps, `-` clears; validated values are saved atomically to `retention/metrics.json`.
+Graph reviews receive these details and include a snapshot in their report. Planning/SEO read the latest
+details directly (including details-only Shorts) as bounded per-Short context with saved length, without
+view gates or any logbook access. Missing details remain unknown; notes are not instructions or proven causes.
 
 One entry per Short; the owner's YouTube Studio numbers (Views, Comments, Subscribers gained, Stayed to watch,
 Average % viewed, likes, a note). When the owner names a channel, read Studio with Claude in Chrome (already logged
