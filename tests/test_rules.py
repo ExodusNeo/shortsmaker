@@ -10,7 +10,7 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE.parent))
 from shortsmaker import (  # noqa: E402
-    channel_profiles, llm, logbook, media_tools, picker, picture_pool, review, rules, session, style_lab, topic_ideas, writing,
+    channel_profiles, llm, logbook, media_tools, picker, picture_pool, retention, review, rules, session, style_lab, topic_ideas, writing,
 )
 
 # a frozen copy of the strange-history profile: the live file's done_topics grow with every run
@@ -82,11 +82,12 @@ def capture_prompts() -> dict[str, str]:
 
     saved = (llm.ask_ai, channel_profiles.trend_research, logbook.logbook_results, picture_pool.prepare_topic,
              style_lab.style_library, picture_pool.contact_sheets, media_tools.ffmpeg, picture_pool.gather_pool,
-             topic_ideas.pick_ideas)
+             topic_ideas.pick_ideas, retention.observations)
     llm.ask_ai = ask
     topic_ideas.pick_ideas = lambda ch, taken, k=60, rng=None: [{"title": "Roland the Farter", "why": "a jester's fart"}]
     channel_profiles.trend_research = lambda ch: [{"title": "T", "views": 1000, "channel": "C"}]
     logbook.logbook_results = lambda: "- Example Short | 1,000 views"
+    retention.observations = lambda channel: ""
     picture_pool.prepare_topic = prepare
     style_lab.style_library = lambda kind=None: [{"name": "silent", "kind": "look", "description": "silent film", "fits": "old stories"}]
     picture_pool.contact_sheets = lambda cands, folder: [Path(tmp) / "sheet1.jpg"]
@@ -112,7 +113,7 @@ def capture_prompts() -> dict[str, str]:
     finally:
         (llm.ask_ai, channel_profiles.trend_research, logbook.logbook_results, picture_pool.prepare_topic,
          style_lab.style_library, picture_pool.contact_sheets, media_tools.ffmpeg, picture_pool.gather_pool,
-         topic_ideas.pick_ideas) = saved
+         topic_ideas.pick_ideas, retention.observations) = saved
     return got
 
 

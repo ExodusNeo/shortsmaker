@@ -5,6 +5,7 @@ import math
 import re
 import shutil
 import tempfile
+from collections import Counter
 from datetime import datetime
 from pathlib import Path
 
@@ -71,7 +72,6 @@ def report_text(title: str, result: dict, scenes: list[dict], source: str, revie
              f"Screenshot: {source}", f"Reviewed by: {reviewer.capitalize()}", "",
              "Timings are approximate (+/- 1-2 seconds). No exact retention percentages are inferred.",
              "Scene overlap is a timing match, not proof that a scene caused viewers to leave.", ""]
-    notes = []
     for index, drop in enumerate(result["drops"], 1):
         matched = [scene for scene in scenes if scene["start"] < drop["end"] and scene["end"] > drop["start"]]
         labels = ", ".join(str(scene["scene"]) for scene in matched) or "no matching scene"
@@ -80,14 +80,60 @@ def report_text(title: str, result: dict, scenes: list[dict], source: str, revie
         for scene in matched:
             lines.append(f"  Scene {scene['scene']} ({scene['start']:g}-{scene['end']:g}s): {scene['narration']}")
             lines.extend(f"    {visual}" for visual in scene["visuals"])
-        notes.append(f"~{drop['start']:g}-{drop['end']:g}s (scene(s) {labels})")
     if not result["drops"]:
         lines.append("No reliable drop timings recorded.")
     lines += ["", "Limitations:", *[f"- {item}" for item in result["limitations"]], "",
-              "Suggested My notes: " + ("Approximate retention drops: " + "; ".join(notes) + ". Causes unconfirmed."
-                                         if notes else "Retention screenshot could not establish reliable drop timings."),
-              "", "Saved beside this Short. The logbook has not been edited."]
+              "Saved beside this Short. Future planning reads saved retention reviews directly."]
     return "\n".join(lines) + "\n"
+
+
+def observations(channel: str) -> str:
+    """Summarize this channel's saved reviews independently of logbook entries or view counts.
+
+    The owner chooses which graphs to submit. Count each scene type once per distinct Short.
+    """
+    if not channel or Path(channel).name != channel:
+        return ""
+    counts, reviewed, seen = Counter(), 0, set()
+    channel_root = (OUTPUT / channel).resolve()
+    for path in sorted(channel_root.glob("*/retention.txt")):
+        folder = path.parent.resolve()
+        if not folder.is_relative_to(channel_root) or folder == channel_root or folder in seen:
+            continue
+        seen.add(folder)
+        try:
+            report = path.read_text(encoding="utf-8-sig")
+            scenes = scenes_from_plan((folder / "edit_plan.txt").read_text(encoding="utf-8-sig"))
+        except (OSError, ValueError):
+            continue
+        # Only our report's timing records are inputs. Ignore AI explanations and suggested actions.
+        drops = [(float(a), float(b)) for a, b in re.findall(
+            r"^Drop \d+: about (\d+(?:\.\d+)?)-(\d+(?:\.\d+)?)s \| scene\(s\)", report, re.M)]
+        drops = [(a, b) for a, b in drops if 0 <= a < b <= scenes[-1]["end"]]
+        if not drops:
+            continue
+        reviewed += 1
+        types = set()
+        for scene in scenes:
+            if not any(scene["start"] < b and scene["end"] > a for a, b in drops):
+                continue
+            types.add("opening" if scene["scene"] == 1 else "ending" if scene == scenes[-1] else "middle")
+            for marker, label in (("MOTION GRAPHIC:", "full-screen graphic"), ("GRAPHIC:", "callout"),
+                                  ("PERSON:", "person card")):
+                if any(line.startswith(marker) for line in scene["visuals"]):
+                    types.add(label)
+        counts.update(types)
+    if not reviewed:
+        return ""
+    repeated = [f"{kind}: {count}/{reviewed} Shorts" for kind, count in sorted(counts.items()) if count >= 3]
+    return (f"SAVED RETENTION OBSERVATIONS ({reviewed} Shorts with saved reviews):\n"
+            + ("Approximate drops overlap " + "; ".join(repeated) + "." if repeated else
+               "No scene-type overlap repeats across at least 3 Shorts yet.")
+            + "\nReviews are selected by the owner independently of the logbook. View counts, posting ages "
+            "and metrics collection dates are not checked here. Timing uncertainty +/- 1-2 seconds; overlapping "
+            "types are not mutually exclusive. These are counts of drop overlaps, not failure rates or proven "
+            "causes. Compare exposure and similar lengths before testing a change; do not ban a scene type "
+            "on this evidence.")
 
 
 def analyze(folder: Path, screenshot: Path) -> Path:

@@ -8,7 +8,7 @@ from pathlib import Path
 
 from shortsmaker import (
     audio_mix, blender_plan, channel_profiles, image_sources, llm, logbook, opening_rules, picture_pool, plan_rules, rules,
-    session, style_lab, topic_ideas,
+    retention, session, style_lab, topic_ideas,
 )
 from shortsmaker.config import (
     CUSTOM_KINDS, DOC_KINDS, FULL_TYPES, ICONS, MAX_FULL_PLANNED, MOODS, MOVES, MOVE_NAMES, PALETTES, SHAPES,
@@ -65,10 +65,13 @@ Learn from these before choosing topics and writing. "Stayed to watch" shows whe
 to the end (over 100% can include rewatches). Read the owner's notes. Treat a pattern as a candidate lesson
 only when it repeats in at least 3 Shorts with enough views; one hit or flop is not a rule. Compare similar
 lengths and posting ages, preferably 7 days after posting. Posting age is not the metrics collection date;
-unknown ages or collection dates limit comparisons. Saved retention drops are approximate observations,
-not proof of a cause. Judge only entries with enough views ("Too few views to judge" says little).
+unknown ages or collection dates limit comparisons. Judge only entries with enough views
+("Too few views to judge" says little).
 {session.RULES["Lessons from our numbers"]}
 """
+    observations = retention.observations(session.CHANNEL.stem)
+    if observations:
+        trend_text += f"\n{observations}\n"
     if topics:
         what = f"Use exactly these {len(topics)} topics, in this order: {topics}"
     else:

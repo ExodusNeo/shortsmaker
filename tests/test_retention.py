@@ -69,7 +69,9 @@ class RetentionTests(unittest.TestCase):
         self.assertIn('scene(s) 1, 2', text)
         self.assertIn('Then the wall fell.', text)
         self.assertIn('+/- 1-2 seconds', text)
-        self.assertIn('Suggested My notes:', text)
+        self.assertIn('Future planning reads saved retention reviews directly.', text)
+        self.assertNotIn('My notes', text)
+        self.assertNotIn('logbook', text.lower())
         self.assertNotIn('Scene 3 (', text)
 
     def test_only_screenshot_is_sent_and_report_is_saved_without_touching_logbook(self):

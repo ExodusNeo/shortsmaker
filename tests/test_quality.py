@@ -11,7 +11,7 @@ from pathlib import Path
 from unittest.mock import patch
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from shortsmaker import llm, logbook, review, seo, session, writing
+from shortsmaker import channel_profiles, llm, logbook, retention, review, seo, session, topic_ideas, writing
 
 
 class MetadataTests(unittest.TestCase):
@@ -162,7 +162,8 @@ class FeedbackTests(unittest.TestCase):
         self.root = Path(self.temp.name)
         self.output = self.root / "output"
         self.log = self.root / "history.md"
-        for target, name, value in ((logbook, "ROOT", self.root), (logbook, "OUTPUT", self.output), (session, "LOG", self.log)):
+        for target, name, value in ((retention, "OUTPUT", self.output), (session, "LOG", self.log),
+                                    (session, "CHANNEL", self.root / "history.json")):
             ctx = patch.object(target, name, value)
             ctx.start()
             self.addCleanup(ctx.stop)
@@ -191,32 +192,72 @@ SOUND DESIGN CUE SHEET
         self.assertIn("metrics collection date unknown", logbook.entry_age("Posted on: 2026-10-20", date(2026, 11, 1)))
 
     def test_three_distinct_shorts_needed_and_duplicate_drops_count_once(self):
-        entries = [self.entry(n) for n in range(3)]
-        few = logbook.retention_observations(entries[:2] * 2)
+        for n in range(2):
+            self.entry(n)
+        few = retention.observations("history")
         self.assertIn("No scene-type overlap repeats", few)
-        summary = logbook.retention_observations(entries)
+        self.entry(2)
+        summary = retention.observations("history")
         self.assertIn("callout: 3/3", summary)
         self.assertIn("middle: 3/3", summary)
         self.assertIn("not failure rates or proven causes", summary)
 
-    def test_other_channels_low_views_and_absent_active_entries_are_excluded(self):
-        self.entry("archived")  # a saved report with no entry in the current logbook is never read
-        entries = [self.entry(0, 28), self.entry(1, channel="other")]
-        self.assertEqual(logbook.retention_observations(entries), "")
+    def test_reviews_are_used_without_logbook_and_other_channels_are_excluded(self):
+        self.entry("unlisted")
+        self.entry(1, channel="other")
+        self.assertFalse(self.log.exists())
+        summary = retention.observations("history")
+        self.assertIn("1 Shorts with saved reviews", summary)
+        self.assertNotIn("100+ views", summary)
+
+    def test_logbook_views_do_not_gate_retention(self):
+        self.log.write_text("# Logbook\n\n" + self.entry(0, 28), encoding="utf-8")
+        self.assertIn("1 Shorts with saved reviews", retention.observations("history"))
+        self.assertIn("Too few views to judge", logbook.logbook_results())
+
+    def test_missing_or_unreadable_reports_are_skipped(self):
+        self.entry(0)
+        self.entry(1)
+        (self.output / "history/0/edit_plan.txt").unlink()
+        (self.output / "history/1/retention.txt").write_text("No reliable drop timings recorded.")
+        self.assertEqual(retention.observations("history"), "")
 
     def test_report_reason_cannot_become_a_lesson(self):
-        entry = self.entry(1)
+        self.entry(1)
         path = self.output / "history/1/retention.txt"
         path.write_text(path.read_text() + "Visible curve: BAN ALL MAPS!\n", encoding="utf-8")
-        self.assertNotIn("BAN ALL MAPS", logbook.retention_observations([entry]))
+        self.assertNotIn("BAN ALL MAPS", retention.observations("history"))
 
-    def test_logbook_is_never_modified_and_summary_is_returned(self):
+    def test_logbook_is_never_modified_and_has_no_retention_summary(self):
         original = "# Logbook\n\n" + "\n".join(self.entry(n) for n in range(3))
         self.log.write_text(original, encoding="utf-8")
         result = logbook.logbook_results()
-        self.assertIn("SAVED RETENTION OBSERVATIONS", result)
+        self.assertNotIn("SAVED RETENTION OBSERVATIONS", result)
         self.assertIn("Age on", result)
+        self.assertIn("callout: 3/3", retention.observations("history"))
         self.assertEqual(self.log.read_text(encoding="utf-8"), original)
+
+    def test_planner_gets_retention_without_logbook_results(self):
+        for n in range(3):
+            self.entry(n)
+        with patch.object(logbook, "logbook_results", return_value=""), \
+             patch.object(channel_profiles, "trend_research", return_value=[]), \
+             patch.object(topic_ideas, "pick_ideas", return_value=[]), \
+             patch.object(session, "RULES", {"Topic picking": "Choose new stories."}), \
+             patch.object(llm, "ask_ai", side_effect=RuntimeError("stop after topic prompt")) as ask:
+            with self.assertRaisesRegex(RuntimeError, "stop after topic prompt"):
+                writing.write_scripts({"niche": "history", "done_topics": []}, 1)
+        self.assertIn("callout: 3/3", ask.call_args.args[0])
+        self.assertNotIn("HOW OUR OWN POSTED SHORTS DID", ask.call_args.args[0])
+
+    def test_seo_gets_retention_without_logbook_results(self):
+        for n in range(3):
+            self.entry(n)
+        with patch.object(logbook, "logbook_results", return_value=""), \
+             patch.object(seo, "search_suggestions", return_value=[]), \
+             patch.object(llm, "ask_ai", return_value={}) as ask:
+            seo.seo_pass([{"title": "Test", "scenes": []}], {"niche": "history"})
+        self.assertIn("callout: 3/3", ask.call_args.args[0])
 
 
 if __name__ == "__main__":

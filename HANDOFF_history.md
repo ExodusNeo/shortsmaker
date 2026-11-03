@@ -1796,3 +1796,23 @@ previewed before full encoding; full-video findings supersede an older preview p
 archives and untruncated final feedback make failures inspectable. Kept subscription-only calls, existing outer
 repair limit and clip fallback. Work archives follow normal retention. The rendered study caught headline/head
 overlap and dark-on-dark face/effects; fixed and re-rendered by eye.
+
+### 2026-11-03 - retention reviews independent of the logbook
+
+Owner found maintaining logbook entries for retention too tedious and will choose videos with 100+ views
+before submitting their graphs. Moved saved-review aggregation out of logbook.py into
+retention.observations(channel). Topic/script planning and SEO read the active channel's output reports
+directly, including with a missing/empty logbook or blank/low recorded views. No view/date checks or copied
+My notes are required for retention. Removed the report's suggested logbook note. The separate numbers log
+keeps its own existing view-count checks; no user logbook, profile, generated video or saved report was edited.
+
+Kept grounded approximate timing parsing, distinct-Short counts, at least three Shorts before reporting a
+repeated overlap, channel isolation and the distinction between overlap observations and proven causes.
+Unreadable reviews or missing/invalid scene plans are skipped. Updated current handoff and retention docs.
+
+Verification: 64 tests passed (quality 25, retention 10, channel rules/golden prompts 29), plus compileall
+and git diff --check. Regression coverage includes missing logbooks, low recorded views, separate logbook
+results without retention summaries, and actual planner/SEO prompts receiving reviews without logbook
+results. Inspected topic/writer prompt changes before refreshing the golden fixture; refresh also includes
+three stale opener-context expectations from the already committed 2026-11-02 opening_rules changes.
+No live AI request or audience-performance experiment was needed for this change.

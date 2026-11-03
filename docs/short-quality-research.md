@@ -98,8 +98,10 @@ already implemented here.
 Compare Shorts at the same age where possible (for example 7 days), with enough views and similar lengths.
 Use stayed-to-watch for the opening and average duration/percentage plus retention curves for delivery.
 Look for repeated patterns across at least three Shorts; a larger sample is preferable. Fill the existing
-Posted on field using YYYY-MM-DD. Save new screenshots with `retention.bat`; future planning now uses the
-reports automatically when matching active entries have sufficient views.
+Posted on field using YYYY-MM-DD if keeping the separate numbers log. Save new screenshots with
+`retention.bat`; future planning uses the active channel's saved reports directly, independently of the
+logbook (owner clarification, 2026-11-03). The owner selects videos with 100+ views before submitting graphs;
+the retention reader does not check logbook entries, views or dates.
 
 The new checks are covered by `tests/test_quality.py`, with existing story, rules, SEO/pictures-first,
 retention and real FFmpeg render/resume regressions. Final verification results are recorded in

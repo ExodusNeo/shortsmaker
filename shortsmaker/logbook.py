@@ -2,12 +2,11 @@
 
 import re
 import shutil
-from collections import Counter
 from datetime import date
 from pathlib import Path
 
-from shortsmaker import media_tools, plan_rules, retention, session
-from shortsmaker.config import LOGBOOK, OUTPUT, ROOT, VAULT
+from shortsmaker import media_tools, plan_rules, session
+from shortsmaker.config import LOGBOOK, ROOT, VAULT
 
 
 LOG_HEADER = """# Logbook: {name}
@@ -109,55 +108,6 @@ def entry_age(entry: str, today: date) -> str:
             if days >= 0 else "Posting age unknown (Posted on needs YYYY-MM-DD); metrics collection date unknown.")
 
 
-def retention_observations(entries: list[str]) -> str:
-    """Read only active-logbook Shorts, matching approximate saved drops to current edit-plan scenes.
-
-    Count each scene type once per Short. No screenshot causes or old archived performance are inferred.
-    """
-    counts, reviewed, seen = Counter(), 0, set()
-    channel_root = (OUTPUT / session.LOG.stem).resolve()
-    for entry in entries:
-        views = re.search(r"^Views:[ \t]*(\d[\d,]*)", entry, re.M)
-        folder_line = re.search(r"Folder:[ \t]*([^|\n]+)", entry)
-        if not views or int(views[1].replace(",", "")) < JUDGE_MIN_VIEWS or not folder_line:
-            continue
-        folder = (ROOT / folder_line[1].strip()).resolve()
-        if not folder.is_relative_to(channel_root) or folder == channel_root or folder in seen:
-            continue
-        seen.add(folder)
-        try:
-            report = (folder / "retention.txt").read_text(encoding="utf-8-sig")
-            scenes = retention.scenes_from_plan((folder / "edit_plan.txt").read_text(encoding="utf-8-sig"))
-        except (OSError, ValueError):
-            continue
-        # Only our report's timing records are inputs. Ignore AI explanations and suggested actions.
-        drops = [(float(a), float(b)) for a, b in re.findall(
-            r"^Drop \d+: about (\d+(?:\.\d+)?)-(\d+(?:\.\d+)?)s \| scene\(s\)", report, re.M)]
-        drops = [(a, b) for a, b in drops if 0 <= a < b <= scenes[-1]["end"]]
-        if not drops:
-            continue
-        reviewed += 1
-        types = set()
-        for scene in scenes:
-            if not any(scene["start"] < b and scene["end"] > a for a, b in drops):
-                continue
-            types.add("opening" if scene["scene"] == 1 else "ending" if scene == scenes[-1] else "middle")
-            for marker, label in (("MOTION GRAPHIC:", "full-screen graphic"), ("GRAPHIC:", "callout"),
-                                  ("PERSON:", "person card")):
-                if any(line.startswith(marker) for line in scene["visuals"]):
-                    types.add(label)
-        counts.update(types)
-    if not reviewed:
-        return ""
-    repeated = [f"{kind}: {count}/{reviewed} Shorts" for kind, count in sorted(counts.items()) if count >= 3]
-    return (f"SAVED RETENTION OBSERVATIONS ({reviewed} active-logbook Shorts with 100+ views):\n"
-            + ("Approximate drops overlap " + "; ".join(repeated) + "." if repeated else
-               "No scene-type overlap repeats across at least 3 Shorts yet.")
-            + "\nTiming uncertainty +/- 1-2 seconds; overlapping types are not mutually exclusive. These are counts "
-            "of drop overlaps, not failure rates or proven causes. Compare exposure and similar lengths before "
-            "testing a change; do not ban a scene type on this evidence.")
-
-
 def logbook_results() -> str:
     """The logbook entries the owner has filled in (Views written down), at most the last 30. Entries under
     JUDGE_MIN_VIEWS get a note, or the planner learns from noise (Cardiff's 81% stayed-to-watch was 28 views)."""
@@ -172,6 +122,4 @@ def logbook_results() -> str:
         if int(views.group(1).replace(",", "")) < JUDGE_MIN_VIEWS:
             entry += "\n(Too few views to judge: its Stayed to watch and Average % viewed come from a handful of viewers.)"
         out.append(entry)
-    latest = out[-30:]
-    observations = retention_observations(latest)
-    return "\n\n".join(latest + ([observations] if observations else []))
+    return "\n\n".join(out[-30:])

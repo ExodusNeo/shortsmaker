@@ -5,7 +5,7 @@ import re
 import urllib.parse
 from pathlib import Path
 
-from shortsmaker import channel_profiles, llm, logbook, media_tools, plan_rules, session
+from shortsmaker import channel_profiles, llm, logbook, media_tools, plan_rules, retention, session
 
 
 def search_suggestions(query: str) -> list[str]:
@@ -86,6 +86,7 @@ def seo_pass(shorts: list[dict], ch: dict | None = None) -> None:
     ch = ch or (channel_profiles.load_channel() if session.CHANNEL.is_file() else {})
     niche = ch.get("niche", "")
     results = logbook.logbook_results()
+    observations = retention.observations(session.CHANNEL.stem)
     research = []
     rseeds = ch.get("research_seeds") or {}
     ch_queries = (rseeds.get("queries", []) if isinstance(rseeds, dict)
@@ -110,7 +111,7 @@ spoken, hook_text big on screen, thumbnail_text), and YouTube autocomplete predi
 was typed. These are wording ideas, NOT measured search volumes or a ranking of the most-searched terms.
 Ignore unrelated songs, films, namesakes or queries the script does not answer. If predictions are absent,
 use the script's own language; never invent keyword research or claim high traffic.
-{f"How our own posted Shorts did (title, views, notes):{chr(10)}{results}{chr(10)}" if results else ""}For each Short write:
+{f"How our own posted Shorts did (title, views, notes):{chr(10)}{results}{chr(10)}" if results else ""}{f"{observations}{chr(10)}" if observations else ""}For each Short write:
 - title: under 60 characters, and its first 40 characters must work alone (the Shorts player and shelf cut
   the rest). Lead with the scroll-stopping anomaly or a broadly famous anchor (a place, institution, event
   or thing casual viewers already know)—NEVER start the title with an obscure person's or company's name

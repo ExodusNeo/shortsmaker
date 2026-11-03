@@ -29,6 +29,8 @@ everything (voice, paintings, video). Real archival/online pictures and film are
 - **Strategy advice needs evidence**: before recommending a change to what the Shorts say or how, look at other
   channels' successful Shorts (vidIQ transcripts, view counts), not only ours.
 - **Don't narrow the niche**; **don't add logbook columns**.
+- **Retention is independent of the logbook** (owner, 2026-11-03). The owner submits graphs for videos with
+  100+ views; never require a logbook entry, recorded views, dates or copied notes to use a retention review.
 - Gemini: **Argon (Gemini 4) at high effort when the account has it, else Flash, high effort.** Claude: Opus, high
   effort (the plan can't afford xhigh/max).
 - Sound: no sub-bass thumps (SFX high-passed at 220 Hz), no loud repetitive whooshes, no "pop" punch-ins.
@@ -112,7 +114,7 @@ are stored LF (`.gitattributes`).
 | `opening_rules.py` | Shared hook/ending context and answer-protection instructions for planning, sourcing and opening reviews |
 | `blender_plan.py`, `blender_render.py` | Blender-drawn channels: build plans, headless render |
 | `edit_project.py` | Shotcut timeline for hand fixes |
-| `retention.py` | Approximate retention screenshot reading, code-based matching to saved scene timings; no automatic logbook writes |
+| `retention.py` | Approximate retention screenshot reading and saved-review observations for planning, matched to saved scene timings; independent of the logbook |
 | `logbook.py` | Logbook entries, vault pages |
 | `cli.py` | `main()`, `fix_short()`, `fix` / `library` / `notes` |
 | `media_tools.py` | `fetch()`, `ffmpeg()`, `video_encoder()`, `duration()`, `write_json()` |
@@ -357,10 +359,11 @@ Fresh performance baseline started 2026-10-31 at the owner's request: all 38 old
 were backed up under `vault/Archive/Logbooks/2026-10-31_200433/` and cleared from active logbooks. Earlier numerical
 `Lessons from our numbers` sections were archived there and replaced with fresh-baseline instructions; old
 performance claims were removed from the editor prompt. Archives are not read by `logbook_results()`. Videos
-and `done_topics` were preserved. Retention reports live in each output folder, not in the logbook; the owner
-may copy the suggested summary into the existing My notes line. Planning now reads approximate saved drop
-timings only for current-channel active entries with 100+ views, counts each scene type once per Short and
-reports overlaps repeated in 3+ Shorts (observations, not causes/failure rates). Posting age is included;
+and `done_topics` were preserved. Retention is separate: planning and SEO call `retention.observations()`
+directly on the active channel's saved output reports, even with no logbook. The owner chooses graphs for
+videos with 100+ views; the reader does not check views, logbook entries or dates. It counts each scene type
+once per Short and reports overlaps repeated in 3+ Shorts (observations, not causes/failure rates).
+No copy-to-logbook suggestion remains. Posting age in the separate numbers log is included;
 metrics collection age remains unknown. No logbook columns or contents are changed automatically.
 
 One entry per Short; the owner's YouTube Studio numbers (Views, Comments, Subscribers gained, Stayed to watch,
@@ -395,7 +398,7 @@ strangest moment. Same story, other channel: Voggle's Mike 2M views vs ours 1.2K
 - **Audit improvements (2026-10-31)**: Parts 1 and 2.1/2.3-2.5 were already on master and pushed at
   `beaae733`; the previous branch/wait notes were stale. Part 2.2 supports all three AIs. Owner clarified: three true solo modes and all six ordered writer/editor
   pairs; quota handover can use the third AI within the same run. Part 3.1 (retention reader) is implemented;
-  3.2 (automatic use of reports) is implemented; 3.3 and 3.4 remain open.
+  3.2 (automatic use of reports) is implemented independently of the logbook; 3.3 and 3.4 remain open.
   Plan: `docs/superpowers/plans/2026-10-31-audit-improvements.md` (git-ignored on purpose).
   Malformed cold reads now count as no review; a failed second read removes the old draft's verdict. A failed
   opener preview also clears the old render's score. A live Codex cold read passed. Owner completed the Mary Toft Short (2026-10-31); its 19-21 s callout
