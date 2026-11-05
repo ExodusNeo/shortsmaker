@@ -14,6 +14,7 @@ tags:
 ## Connections
 - [[The checkable story rules (STORY_RULES) the text rules (no line opens with a…]] - `rationale_for` [EXTRACTED]
 - [[edit_scripts()]] - `calls` [EXTRACTED]
+- [[ends_sentence()]] - `calls` [EXTRACTED]
 - [[first_sentence()]] - `calls` [EXTRACTED]
 - [[re]] - `calls` [EXTRACTED]
 - [[recheck_final_scripts()]] - `calls` [EXTRACTED]

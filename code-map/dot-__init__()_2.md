@@ -1,18 +1,17 @@
 ---
-source_file: "shortsmaker/frame_render.py"
+source_file: "tests/test_pictures_first.py"
 type: "code"
-community: "frame_maker"
-location: "L214"
+community: "owner"
+location: "L38"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/frame_maker
+  - community/owner
 ---
 
 # .__init__()
 
 ## Connections
-- [[ClipReader]] - `method` [EXTRACTED]
-- [[Path_11]] - `references` [EXTRACTED]
+- [[stubbed]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/frame_maker
+#graphify/code #graphify/EXTRACTED #community/owner

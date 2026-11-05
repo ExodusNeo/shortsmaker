@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/motion.py"
 type: "rationale"
-community: "json"
-location: "L428"
+community: "code_custom_scenes"
+location: "L435"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/json
+  - community/code_custom_scenes
 ---
 
 # The coder looks at 8 frames of its own scene before the real render and…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[look_and_fix()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/json
+#graphify/rationale #graphify/EXTRACTED #community/code_custom_scenes

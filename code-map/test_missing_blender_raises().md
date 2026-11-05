@@ -2,7 +2,7 @@
 source_file: "tests/test_blender_render.py"
 type: "code"
 community: "test_blender_render.py"
-location: "L97"
+location: "L128"
 tags:
   - graphify/code
   - graphify/EXTRACTED

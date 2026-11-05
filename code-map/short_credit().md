@@ -2,7 +2,7 @@
 source_file: "shortsmaker/image_sources.py"
 type: "code"
 community: "render"
-location: "L242"
+location: "L250"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -14,6 +14,6 @@ tags:
 ## Connections
 - [[The on-screen credit tag kind, a short name and the licence (Photo E. Mariz…]] - `rationale_for` [EXTRACTED]
 - [[image_sources.py]] - `contains` [EXTRACTED]
-- [[render()_3]] - `calls` [EXTRACTED]
+- [[render()_1]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/render

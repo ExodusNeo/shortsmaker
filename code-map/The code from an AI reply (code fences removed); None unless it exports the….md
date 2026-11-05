@@ -2,7 +2,7 @@
 source_file: "shortsmaker/style_lab.py"
 type: "rationale"
 community: "re"
-location: "L132"
+location: "L130"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED

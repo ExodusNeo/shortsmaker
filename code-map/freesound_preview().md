@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/audio_mix.py"
 type: "code"
-community: "download_audio_choices"
+community: "media_command"
 location: "L139"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/download_audio_choices
+  - community/media_command
 ---
 
 # freesound_preview()
@@ -18,4 +18,4 @@ tags:
 - [[freesound_fetch()]] - `calls` [EXTRACTED]
 - [[source_music()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/download_audio_choices
+#graphify/code #graphify/EXTRACTED #community/media_command

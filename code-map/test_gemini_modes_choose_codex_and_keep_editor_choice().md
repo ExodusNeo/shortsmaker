@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_codex.py"
 type: "code"
-community: "fix_short"
+community: "test_story.py"
 location: "L44"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/fix_short
+  - community/test_storypy
 ---
 
 # test_gemini_modes_choose_codex_and_keep_editor_choice()
@@ -16,4 +16,4 @@ tags:
 - [[other_ai()]] - `calls` [EXTRACTED]
 - [[test_codex.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/fix_short
+#graphify/code #graphify/EXTRACTED #community/test_storypy

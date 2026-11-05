@@ -1,12 +1,12 @@
 ---
 source_file: "local_ai/gen.py"
 type: "rationale"
-community: "Local GPU Worker"
+community: "gen.py"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Local_GPU_Worker
+  - community/genpy
 ---
 
 # Local GPU worker for ShortsMaker: voice (Kokoro), images (SDXL-Lightning),…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[gen.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Local_GPU_Worker
+#graphify/rationale #graphify/EXTRACTED #community/genpy

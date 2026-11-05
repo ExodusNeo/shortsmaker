@@ -2,7 +2,7 @@
 source_file: "shortsmaker/image_sources.py"
 type: "rationale"
 community: "render"
-location: "L243"
+location: "L251"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED

@@ -12,11 +12,11 @@ tags:
 # select_music()
 
 ## Connections
-- [[Path_29]] - `references` [EXTRACTED]
+- [[Path_27]] - `references` [EXTRACTED]
 - [[audio_library.py]] - `contains` [EXTRACTED]
 - [[history_read()]] - `calls` [EXTRACTED]
 - [[media_command()]] - `calls` [EXTRACTED]
-- [[render()_3]] - `calls` [EXTRACTED]
+- [[render()_1]] - `calls` [EXTRACTED]
 - [[score()]] - `indirect_call` [INFERRED]
 - [[source_music()]] - `calls` [EXTRACTED]
 - [[usable_audio()]] - `calls` [EXTRACTED]

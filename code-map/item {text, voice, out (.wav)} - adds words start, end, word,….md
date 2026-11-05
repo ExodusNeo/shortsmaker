@@ -1,12 +1,12 @@
 ---
 source_file: "local_ai/gen.py"
 type: "rationale"
-community: "Local GPU Worker"
-location: "L29"
+community: "gen.py"
+location: "L28"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Local_GPU_Worker
+  - community/genpy
 ---
 
 # item: {"text", "voice", "out" (.wav)} -> adds "words": [[start, end, word],…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[tts()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Local_GPU_Worker
+#graphify/rationale #graphify/EXTRACTED #community/genpy

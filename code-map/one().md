@@ -2,7 +2,7 @@
 source_file: "shortsmaker/gpu.py"
 type: "code"
 community: "paint_instead"
-location: "L233"
+location: "L235"
 tags:
   - graphify/code
   - graphify/INFERRED

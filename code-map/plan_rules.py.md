@@ -27,6 +27,7 @@ tags:
 - [[coords()]] - `contains` [EXTRACTED]
 - [[drawn_opener.py]] - `imports_from` [EXTRACTED]
 - [[editplan.py]] - `imports_from` [EXTRACTED]
+- [[ends_sentence()]] - `contains` [EXTRACTED]
 - [[fallback_graphic()]] - `contains` [EXTRACTED]
 - [[fill_money_graphics()]] - `contains` [EXTRACTED]
 - [[first_sentence()]] - `contains` [EXTRACTED]

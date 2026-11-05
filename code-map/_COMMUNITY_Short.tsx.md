@@ -9,7 +9,7 @@ members: 31
 
 ## Members
 - [[Background()]] - code - remotion/src/Short.tsx
-- [[Captions()]] - code - remotion/src/Captions.tsx
+- [[Captions()_1]] - code - remotion/src/Captions.tsx
 - [[Captions.tsx]] - code - remotion/src/Captions.tsx
 - [[GraphicFor()]] - code - remotion/src/Short.tsx
 - [[INKS_1]] - code - tests/style.test.ts
@@ -18,7 +18,7 @@ members: 31
 - [[Root()]] - code - remotion/src/Root.tsx
 - [[Root.tsx]] - code - remotion/src/Root.tsx
 - [[Scene]] - code - remotion/src/Short.tsx
-- [[Short()]] - code - remotion/src/Short.tsx
+- [[Short()_1]] - code - remotion/src/Short.tsx
 - [[Short.tsx]] - code - remotion/src/Short.tsx
 - [[ShortProps]] - code - remotion/src/Short.tsx
 - [[TRANSITIONS]] - code - remotion/src/style/index.ts

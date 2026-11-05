@@ -1,17 +1,17 @@
 ---
-source_file: "tests/test_story.py"
+source_file: "tests/test_full_scenes.py"
 type: "code"
-community: "cold_read"
-location: "L93"
+community: "apply_review_fixes"
+location: "L741"
 tags:
   - graphify/code
-  - graphify/INFERRED
-  - community/cold_read
+  - graphify/EXTRACTED
+  - community/apply_review_fixes
 ---
 
 # ask()
 
 ## Connections
-- [[test_cold_read_uses_other_ai_in_solo_and_collaborative_modes()]] - `indirect_call` [INFERRED]
+- [[test_look_check_fixes_code()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/cold_read
+#graphify/code #graphify/EXTRACTED #community/apply_review_fixes

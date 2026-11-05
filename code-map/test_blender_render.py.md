@@ -29,6 +29,7 @@ tags:
 - [[test_missing_blender_raises()]] - `contains` [EXTRACTED]
 - [[test_peak_on_the_emphasis_word()]] - `contains` [EXTRACTED]
 - [[test_render_clips_makes_one_clip_per_scene()]] - `contains` [EXTRACTED]
+- [[test_retry_redraws_only_missing_frames()]] - `contains` [EXTRACTED]
 - [[test_same_build_json_reuses_frames()]] - `contains` [EXTRACTED]
 - [[test_scene_frames_cover_every_frame_once()]] - `contains` [EXTRACTED]
 - [[traceback]] - `imports` [EXTRACTED]

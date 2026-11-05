@@ -1,17 +1,24 @@
 ---
-source_file: "tests/test_blender_plan.py"
+source_file: "shortsmaker/drawn_opener.py"
 type: "code"
-community: "frame_maker"
-location: "L117"
+community: "drawn_opener.py"
+location: "L114"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/frame_maker
+  - community/drawn_openerpy
 ---
 
 # write()
 
 ## Connections
-- [[test_hard_cuts_never_blend_scenes()]] - `contains` [EXTRACTED]
+- [[Path_3]] - `references` [EXTRACTED]
+- [[The coder's scene {moment what it shows, code the module}; with `old`…]] - `rationale_for` [EXTRACTED]
+- [[ask_ai()]] - `calls` [EXTRACTED]
+- [[clean_code()]] - `calls` [EXTRACTED]
+- [[drawn_opener.py]] - `contains` [EXTRACTED]
+- [[json]] - `calls` [EXTRACTED]
+- [[make_opener()]] - `calls` [EXTRACTED]
+- [[opening_brief()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/frame_maker
+#graphify/code #graphify/EXTRACTED #community/drawn_openerpy

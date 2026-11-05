@@ -12,7 +12,7 @@ tags:
 # studio_speak()
 
 ## Connections
-- [[CosyVoice 3 in VoiceStudio (owner's pick 2026-10-20) aiden's voice cloned from…]] - `rationale_for` [EXTRACTED]
+- [[CosyVoice 3 in VoiceStudio (owner's pick 2026-10-20) the item's reference…]] - `rationale_for` [EXTRACTED]
 - [[qwen_voice.py]] - `contains` [EXTRACTED]
 - [[spoken_sentence()]] - `calls` [EXTRACTED]
 - [[subprocess]] - `calls` [EXTRACTED]

@@ -28,6 +28,7 @@ tags:
 - [[io]] - `imports` [EXTRACTED]
 - [[json]] - `imports` [EXTRACTED]
 - [[media_tools.py]] - `imports_from` [EXTRACTED]
+- [[nasa_credit()]] - `contains` [EXTRACTED]
 - [[nasa_images()]] - `contains` [EXTRACTED]
 - [[nasa_search()]] - `contains` [EXTRACTED]
 - [[on_topic()]] - `contains` [EXTRACTED]

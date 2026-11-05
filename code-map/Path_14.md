@@ -1,22 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "prepare_topic"
+community: "test_story.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/prepare_topic
+  - community/test_storypy
 ---
 
 # Path
 
 ## Connections
-- [[catalog_pool()]] - `references` [EXTRACTED]
-- [[contact_sheets()]] - `references` [EXTRACTED]
-- [[load_pool()]] - `references` [EXTRACTED]
-- [[pool_folder()]] - `references` [EXTRACTED]
-- [[preflight_pictures()]] - `references` [EXTRACTED]
-- [[prepare_topic()]] - `references` [EXTRACTED]
-- [[save_pool()]] - `references` [EXTRACTED]
+- [[log_short()]] - `references` [EXTRACTED]
+- [[vault_page()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/prepare_topic
+#graphify/code #graphify/EXTRACTED #community/test_storypy

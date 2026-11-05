@@ -2,7 +2,7 @@
 source_file: "shortsmaker/image_sources.py"
 type: "code"
 community: "fetch"
-location: "L223"
+location: "L231"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -15,6 +15,7 @@ tags:
 - [[NASA photos (public domain), when the story touches space, flight or science.]] - `rationale_for` [EXTRACTED]
 - [[gather_pool()]] - `calls` [EXTRACTED]
 - [[image_sources.py]] - `contains` [EXTRACTED]
+- [[nasa_credit()]] - `calls` [EXTRACTED]
 - [[nasa_search()]] - `calls` [EXTRACTED]
 - [[on_topic()]] - `calls` [EXTRACTED]
 

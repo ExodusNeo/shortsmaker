@@ -1,11 +1,11 @@
 ---
 type: community
-members: 20
+members: 22
 ---
 
 # ReliabilityTests
 
-**Members:** 20 nodes
+**Members:** 22 nodes
 
 ## Members
 - [[dot-setUp()_2]] - code - tests/test_reliability.py
@@ -13,6 +13,7 @@ members: 20
 - [[dot-test_checkpoint_image_marker_rejects_non_png_payload()]] - code - tests/test_reliability.py
 - [[dot-test_download_retry_is_bounded_and_preserves_wikimedia_backoff()]] - code - tests/test_reliability.py
 - [[dot-test_duplicate_finalization_does_not_duplicate_logbook_entries()]] - code - tests/test_reliability.py
+- [[dot-test_kokoro_partial_success_never_mixes_voices()]] - code - tests/test_reliability.py
 - [[dot-test_long_node_errors_keep_the_actual_error_headline()]] - code - tests/test_reliability.py
 - [[dot-test_pending_progress_is_atomic_and_completed_work_is_not_offered()]] - code - tests/test_reliability.py
 - [[dot-test_preview_failure_does_not_call_reviewer()]] - code - tests/test_reliability.py
@@ -27,6 +28,7 @@ members: 20
 - [[dot-test_voice_cache_reuses_audio_but_invalidates_changed_text_voice_or_files()]] - code - tests/test_reliability.py
 - [[ReliabilityTests]] - code - tests/test_reliability.py
 - [[fail()_1]] - code - tests/test_reliability.py
+- [[job()]] - code - tests/test_reliability.py
 - [[sheet()]] - code - tests/test_reliability.py
 
 ## Live Query (requires Dataview plugin)
@@ -40,4 +42,4 @@ SORT file.name ASC
 - 1 edge to [[_COMMUNITY_pathlib]]
 
 ## Top bridge nodes
-- [[ReliabilityTests]] - degree 18, connects to 1 community
+- [[ReliabilityTests]] - degree 19, connects to 1 community

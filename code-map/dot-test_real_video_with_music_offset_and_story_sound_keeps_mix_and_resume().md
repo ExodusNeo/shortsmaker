@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_render_resume.py"
 type: "code"
-community: ".render_fixture"
+community: "drawn_opener.py"
 location: "L20"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/render_fixture
+  - community/drawn_openerpy
 ---
 
 # .test_real_video_with_music_offset_and_story_sound_keeps_mix_and_resume()
@@ -15,4 +15,4 @@ tags:
 - [[dot-render_fixture()]] - `calls` [EXTRACTED]
 - [[RenderResumeTests]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/render_fixture
+#graphify/code #graphify/EXTRACTED #community/drawn_openerpy

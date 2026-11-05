@@ -12,7 +12,7 @@ tags:
 # make_opener()
 
 ## Connections
-- [[Path_2]] - `references` [EXTRACTED]
+- [[Path_3]] - `references` [EXTRACTED]
 - [[Scene 1's drawn opener clip (workdrawnopener.mp4, scene 1 + the crossfade…]] - `rationale_for` [EXTRACTED]
 - [[available()]] - `calls` [EXTRACTED]
 - [[drawn_opener.py]] - `contains` [EXTRACTED]
@@ -27,6 +27,6 @@ tags:
 - [[test_drawn_opener_gives_up_after_fixes()]] - `calls` [EXTRACTED]
 - [[test_drawn_opener_renders_and_is_reused()]] - `calls` [EXTRACTED]
 - [[use_opener()]] - `calls` [EXTRACTED]
-- [[write()]] - `calls` [EXTRACTED]
+- [[write()_1]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/drawn_openerpy

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/channel_profiles.py"
 type: "rationale"
-community: "fix_short"
+community: "main"
 location: "L80"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/fix_short
+  - community/main
 ---
 
 # Select the writer and editor, shared by run.bat and fix.bat.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[configure_brain()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/fix_short
+#graphify/rationale #graphify/EXTRACTED #community/main

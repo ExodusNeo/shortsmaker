@@ -20,6 +20,7 @@ tags:
 - [[test_missing_blender_raises()]] - `calls` [EXTRACTED]
 - [[test_peak_on_the_emphasis_word()]] - `calls` [EXTRACTED]
 - [[test_render_clips_makes_one_clip_per_scene()]] - `calls` [EXTRACTED]
+- [[test_retry_redraws_only_missing_frames()]] - `calls` [EXTRACTED]
 - [[test_same_build_json_reuses_frames()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/test_blender_renderpy

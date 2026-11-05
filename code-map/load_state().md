@@ -1,18 +1,18 @@
 ---
 source_file: "shortsmaker/short_render.py"
 type: "code"
-community: "test_full_scenes.py"
+community: "main"
 location: "L49"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_full_scenespy
+  - community/main
 ---
 
 # load_state()
 
 ## Connections
-- [[Path_21]] - `references` [EXTRACTED]
+- [[Path_17]] - `references` [EXTRACTED]
 - [[finish_render()]] - `calls` [EXTRACTED]
 - [[fix_short()]] - `calls` [EXTRACTED]
 - [[json]] - `calls` [EXTRACTED]
@@ -20,4 +20,4 @@ tags:
 - [[short_render.py]] - `contains` [EXTRACTED]
 - [[test_state_roundtrip_full_pics()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_full_scenespy
+#graphify/code #graphify/EXTRACTED #community/main

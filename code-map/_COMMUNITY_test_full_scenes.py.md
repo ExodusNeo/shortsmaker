@@ -1,49 +1,71 @@
 ---
 type: community
-members: 36
+members: 58
 ---
 
 # test_full_scenes.py
 
-**Members:** 36 nodes
+**Members:** 58 nodes
 
 ## Members
+- [[(start, end) of the first time `phrase` is spoken, from TTS word timings.]] - rationale - shortsmaker/plan_rules.py
+- [[(what one ink figure stands for, how many to draw) the planner's `each` when…]] - rationale - shortsmaker/plan_rules.py
+- [[A planned story sound {word, sound}, validated the word must be spoken in…]] - rationale - shortsmaker/audio_mix.py
+- [[Check every line against the story's Wikipedia articles and rewrite what they…]] - rationale - shortsmaker/writing.py
 - [[Cleaning and validating the planner's JSON (graphics, full-screen scenes,…]] - rationale - shortsmaker/plan_rules.py
-- [[Cleaning found photos stereograph cards, scanner borders, vertical crops.]] - rationale - shortsmaker/photo_prep.py
-- [[Comfy-Org's official MOSS-Image text-to-image template (25 steps, CFG 2.5,…]] - rationale - shortsmaker/gpu.py
-- [[Local AI on the owner's GPU and helpers ComfyUIMOSS, VoiceStudio, Gemini…]] - rationale - shortsmaker/gpu.py
+- [[Ensure money beats in economicsfinance Shorts don't go bare when the LLM omits…]] - rationale - shortsmaker/plan_rules.py
+- [[Extract (numeric_value, compact_display, short_label, trigger_phrase) from a…]] - rationale - shortsmaker/plan_rules.py
+- [[How the big-number scene prints a value 30,000  1.5 MILLION  2 BILLION  0.3.]] - rationale - shortsmaker/plan_rules.py
+- [[Lowercase, accent-free word tokens, for matching names against spoken words.]] - rationale - shortsmaker/plan_rules.py
 - [[On-screen credit tags are short (Emu War review the long tag covered the emus…]] - rationale - tests/test_full_scenes.py
-- [[Paths, fixed settings, palettes and the styleskin tables every module shares.…]] - rationale - shortsmaker/config.py
-- [[Rendering a Short with Remotion (with the Python renderer as fallback),…]] - rationale - shortsmaker/remotion_render.py
+- [[One planned callout, validated (LLM output is untrusted); None drops it.]] - rationale - shortsmaker/plan_rules.py
+- [[One planned full-screen motion graphic, validated (AI output is untrusted);…]] - rationale - shortsmaker/plan_rules.py
+- [[Plain text of an English Wikipedia article ('' when missing or unreachable).]] - rationale - shortsmaker/writing.py
+- [[Scenes whose picture is missing or weak may become a full-screen motion graphic…]] - rationale - shortsmaker/picker.py
 - [[Tests for the full-screen motion graphic scenes. No AI usage, no rendering.…]] - rationale - tests/test_full_scenes.py
-- [[The Python renderer camera moves, graphic overlays, person cards, clip…]] - rationale - shortsmaker/frame_render.py
-- [[The aged-paper texture and film-grain frames the full-screen motion graphics…]] - rationale - shortsmaker/remotion_render.py
-- [[The style library invented looks, overlays and scene changes, candidates and…]] - rationale - shortsmaker/style_lab.py
-- [[concurrent_futures]] - concept
-- [[config.py]] - code - shortsmaker/config.py
-- [[edit_plan.txt (the timestamped edit list) and per-scene cue timing.]] - rationale - shortsmaker/editplan.py
-- [[editplan.py]] - code - shortsmaker/editplan.py
-- [[frame_render.py]] - code - shortsmaker/frame_render.py
-- [[gpu.py]] - code - shortsmaker/gpu.py
-- [[hex_rgb()]] - code - shortsmaker/config.py
-- [[library.bat the owner watches each invention the AI made for a Short and adds…]] - rationale - shortsmaker/style_lab.py
-- [[library_menu()]] - code - shortsmaker/style_lab.py
-- [[load_state()]] - code - shortsmaker/short_render.py
-- [[luminance()]] - code - shortsmaker/config.py
-- [[make_paper()]] - code - shortsmaker/remotion_render.py
-- [[moss_graph()]] - code - shortsmaker/gpu.py
-- [[os]] - concept
-- [[photo_prep.py]] - code - shortsmaker/photo_prep.py
-- [[pil]] - concept
+- [[The three.js model graphic left with Blender (2026-10-30) a planned one is…]] - rationale - tests/test_opener_graphic.py
+- [[True when `cand` is a solo portraitheadshot of `person_name` (so a scene that…]] - rationale - shortsmaker/plan_rules.py
+- [[True when the channel's rules set `loop yes` the final scene is an open…]] - rationale - shortsmaker/plan_rules.py
+- [[True when the picture's title or catalog note names the person (their surname)…]] - rationale - shortsmaker/plan_rules.py
+- [[Visual skin for a Short's full-screen motion graphics (parchment, blueprint,…]] - rationale - shortsmaker/config.py
+- [[article_text()]] - code - shortsmaker/writing.py
+- [[clean_full()]] - code - shortsmaker/plan_rules.py
+- [[clean_graphic()]] - code - shortsmaker/plan_rules.py
+- [[clean_sound()]] - code - shortsmaker/audio_mix.py
+- [[contains()]] - code - shortsmaker/plan_rules.py
+- [[coords()]] - code - shortsmaker/plan_rules.py
+- [[fact_check()_1]] - code - shortsmaker/writing.py
+- [[fill_money_graphics()]] - code - shortsmaker/plan_rules.py
+- [[is_loop_short()]] - code - shortsmaker/plan_rules.py
+- [[is_num()]] - code - shortsmaker/plan_rules.py
+- [[is_person_portrait()]] - code - shortsmaker/plan_rules.py
+- [[number_figures()]] - code - shortsmaker/plan_rules.py
+- [[parse_scene_money()]] - code - shortsmaker/plan_rules.py
 - [[plan_rules.py]] - code - shortsmaker/plan_rules.py
-- [[reject_candidate()]] - code - shortsmaker/style_lab.py
-- [[remotion_render.py]] - code - shortsmaker/remotion_render.py
-- [[style_lab.py]] - code - shortsmaker/style_lab.py
+- [[rescue_graphics()]] - code - shortsmaker/picker.py
+- [[short_skin()]] - code - shortsmaker/config.py
+- [[show_number()]] - code - shortsmaker/plan_rules.py
+- [[shows_person()]] - code - shortsmaker/plan_rules.py
+- [[spoken_span()]] - code - shortsmaker/plan_rules.py
+- [[test_clean_full_board()]] - code - tests/test_full_scenes.py
+- [[test_clean_full_custom_and_skin()]] - code - tests/test_full_scenes.py
+- [[test_clean_full_document()]] - code - tests/test_full_scenes.py
+- [[test_clean_full_journey()]] - code - tests/test_full_scenes.py
+- [[test_clean_full_keeps_board_pic()]] - code - tests/test_pictures_first.py
+- [[test_clean_full_keeps_thing()]] - code - tests/test_full_scenes.py
+- [[test_clean_full_limits()]] - code - tests/test_full_scenes.py
+- [[test_clean_sound()]] - code - tests/test_full_scenes.py
+- [[test_fact_check_drops_full()]] - code - tests/test_full_scenes.py
+- [[test_fill_money_graphics_and_caps()]] - code - tests/test_full_scenes.py
 - [[test_full_scenes.py]] - code - tests/test_full_scenes.py
-- [[test_make_paper()]] - code - tests/test_full_scenes.py
+- [[test_model_graphic_is_gone()]] - code - tests/test_opener_graphic.py
+- [[test_number_scaling()]] - code - tests/test_full_scenes.py
+- [[test_rescue_respects_caps()]] - code - tests/test_full_scenes.py
 - [[test_short_credit()]] - code - tests/test_full_scenes.py
-- [[test_state_roundtrip_full_pics()]] - code - tests/test_full_scenes.py
-- [[warnings]] - concept
+- [[text()]] - code - shortsmaker/plan_rules.py
+- [[unicodedata]] - concept
+- [[word()]] - code - shortsmaker/plan_rules.py
+- [[words_of()]] - code - shortsmaker/plan_rules.py
 
 ## Live Query (requires Dataview plugin)
 
@@ -53,55 +75,48 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 123 edges to [[_COMMUNITY_pathlib]]
-- 33 edges to [[_COMMUNITY_json]]
-- 25 edges to [[_COMMUNITY_re]]
-- 17 edges to [[_COMMUNITY_render_remotion]]
-- 15 edges to [[_COMMUNITY_test_style.py]]
-- 14 edges to [[_COMMUNITY_full_cues]]
-- 13 edges to [[_COMMUNITY_frame_maker]]
-- 13 edges to [[_COMMUNITY_clean_full]]
-- 11 edges to [[_COMMUNITY_local_clips]]
-- 7 edges to [[_COMMUNITY_paint_instead]]
-- 7 edges to [[_COMMUNITY_words_of]]
-- 7 edges to [[_COMMUNITY_ask_ai]]
-- 6 edges to [[_COMMUNITY_apply_review_fixes]]
-- 6 edges to [[_COMMUNITY_clean_photo]]
-- 6 edges to [[_COMMUNITY_test_story.py]]
-- 6 edges to [[_COMMUNITY_local_voice]]
-- 5 edges to [[_COMMUNITY_edit_plan]]
-- 5 edges to [[_COMMUNITY_h3_run.py]]
-- 4 edges to [[_COMMUNITY_test_h3_handoff.py]]
-- 4 edges to [[_COMMUNITY_render]]
-- 3 edges to [[_COMMUNITY_finish_render]]
-- 3 edges to [[_COMMUNITY_owner]]
-- 3 edges to [[_COMMUNITY_rewrite_paint_prompts]]
-- 3 edges to [[_COMMUNITY_audio_library.py]]
-- 3 edges to [[_COMMUNITY_test_pictures_first.py]]
-- 3 edges to [[_COMMUNITY_qwen_voice.py]]
-- 2 edges to [[_COMMUNITY_limit_full]]
-- 2 edges to [[_COMMUNITY_main_1]]
-- 2 edges to [[_COMMUNITY_test_story_sound_library]]
+- 49 edges to [[_COMMUNITY_pathlib]]
+- 13 edges to [[_COMMUNITY_re]]
+- 12 edges to [[_COMMUNITY_gpu.py]]
+- 11 edges to [[_COMMUNITY_write_scripts]]
+- 9 edges to [[_COMMUNITY_json]]
+- 9 edges to [[_COMMUNITY_full_cues]]
+- 8 edges to [[_COMMUNITY_apply_review_fixes]]
+- 4 edges to [[_COMMUNITY_gather_pool]]
+- 4 edges to [[_COMMUNITY_owner]]
+- 4 edges to [[_COMMUNITY_test_story.py]]
+- 4 edges to [[_COMMUNITY_audio_mix.py]]
+- 4 edges to [[_COMMUNITY_fetch]]
+- 4 edges to [[_COMMUNITY_style_library]]
+- 4 edges to [[_COMMUNITY_main_1]]
+- 4 edges to [[_COMMUNITY_ask_ai]]
+- 4 edges to [[_COMMUNITY_finish_render]]
+- 4 edges to [[_COMMUNITY_full_props]]
+- 3 edges to [[_COMMUNITY_lint_custom_code]]
+- 3 edges to [[_COMMUNITY_render]]
+- 3 edges to [[_COMMUNITY_code_custom_scenes]]
+- 3 edges to [[_COMMUNITY_test_style.py]]
+- 3 edges to [[_COMMUNITY_get_image]]
 - 2 edges to [[_COMMUNITY_drawn_opener.py]]
-- 2 edges to [[_COMMUNITY_retention.py]]
-- 2 edges to [[_COMMUNITY_render_style.py]]
-- 2 edges to [[_COMMUNITY_test_blender_scene.py]]
-- 1 edge to [[_COMMUNITY_rescue_graphics]]
+- 2 edges to [[_COMMUNITY_make_paper]]
+- 2 edges to [[_COMMUNITY_visual_review]]
+- 2 edges to [[_COMMUNITY_choose_images]]
+- 2 edges to [[_COMMUNITY_test_pictures_first.py]]
+- 2 edges to [[_COMMUNITY_qwen_voice.py]]
+- 2 edges to [[_COMMUNITY_test_story_sound_library]]
 - 1 edge to [[_COMMUNITY_limit_style]]
-- 1 edge to [[_COMMUNITY_fix_short]]
-- 1 edge to [[_COMMUNITY_write_json]]
-- 1 edge to [[_COMMUNITY_visual_review]]
-- 1 edge to [[_COMMUNITY_music_gain]]
-- 1 edge to [[_COMMUNITY_article_text]]
-- 1 edge to [[_COMMUNITY_choose_images]]
-- 1 edge to [[_COMMUNITY_test_rules.py]]
-- 1 edge to [[_COMMUNITY_test_blender_plan.py]]
-- 1 edge to [[_COMMUNITY_Local GPU Worker]]
-- 1 edge to [[_COMMUNITY_extra_sources.py]]
+- 1 edge to [[_COMMUNITY_test_h3_handoff.py]]
+- 1 edge to [[_COMMUNITY_paint_instead]]
+- 1 edge to [[_COMMUNITY_frame_maker]]
+- 1 edge to [[_COMMUNITY_sfx_events]]
+- 1 edge to [[_COMMUNITY_trim_borders]]
+- 1 edge to [[_COMMUNITY_render_remotion]]
+- 1 edge to [[_COMMUNITY_test_first_second.py]]
+- 1 edge to [[_COMMUNITY_ffmpeg]]
 
 ## Top bridge nodes
-- [[test_full_scenes.py]] - degree 87, connects to 21 communities
-- [[plan_rules.py]] - degree 63, connects to 17 communities
-- [[config.py]] - degree 49, connects to 12 communities
-- [[gpu.py]] - degree 58, connects to 10 communities
-- [[style_lab.py]] - degree 39, connects to 8 communities
+- [[test_full_scenes.py]] - degree 90, connects to 25 communities
+- [[plan_rules.py]] - degree 64, connects to 15 communities
+- [[rescue_graphics()]] - degree 13, connects to 8 communities
+- [[words_of()]] - degree 23, connects to 5 communities
+- [[article_text()]] - degree 8, connects to 5 communities

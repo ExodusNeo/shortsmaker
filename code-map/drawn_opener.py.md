@@ -38,6 +38,6 @@ tags:
 - [[test_drawn_opener.py]] - `imports_from` [EXTRACTED]
 - [[test_opening_rules.py]] - `imports_from` [EXTRACTED]
 - [[test_reliability.py]] - `imports_from` [EXTRACTED]
-- [[write()]] - `contains` [EXTRACTED]
+- [[write()_1]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/drawn_openerpy

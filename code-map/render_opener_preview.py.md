@@ -1,12 +1,12 @@
 ---
 source_file: "tests/render_opener_preview.py"
 type: "code"
-community: "json"
+community: "pathlib"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/json
+  - community/pathlib
 ---
 
 # render_opener_preview.py
@@ -21,4 +21,4 @@ tags:
 - [[remotion_render.py]] - `imports_from` [EXTRACTED]
 - [[sys]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/json
+#graphify/code #graphify/EXTRACTED #community/pathlib

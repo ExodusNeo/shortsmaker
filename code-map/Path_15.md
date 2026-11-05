@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "re"
+community: "test_story.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/re
+  - community/test_storypy
 ---
 
 # Path
 
 ## Connections
-- [[import_media()]] - `references` [EXTRACTED]
+- [[srt()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/re
+#graphify/code #graphify/EXTRACTED #community/test_storypy

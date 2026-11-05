@@ -12,7 +12,7 @@ tags:
 # edit_plan()
 
 ## Connections
-- [[Path_33]] - `references` [EXTRACTED]
+- [[Path_31]] - `references` [EXTRACTED]
 - [[Timestamped edit decision list of exactly what was rendered, plus the sound-…]] - `rationale_for` [EXTRACTED]
 - [[clock()_1]] - `calls` [EXTRACTED]
 - [[cold_read_line()]] - `calls` [EXTRACTED]

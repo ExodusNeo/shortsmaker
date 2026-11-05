@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/motion.py"
 type: "code"
-community: "json"
+community: "code_custom_scenes"
 location: "L116"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/json
+  - community/code_custom_scenes
 ---
 
 # clean_tsx_code()
@@ -20,4 +20,4 @@ tags:
 - [[re]] - `calls` [EXTRACTED]
 - [[redraw_custom()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/json
+#graphify/code #graphify/EXTRACTED #community/code_custom_scenes

@@ -10,7 +10,7 @@ members: 10
 ## Members
 - [[A read-only task through the signed-in ChatGPT subscription, with no API-key…]] - rationale - shortsmaker/llm.py
 - [[One headless Gemini turn. agy only takes the prompt inline on its command line…]] - rationale - shortsmaker/llm.py
-- [[Path_23]] - code
+- [[Path_18]] - code
 - [[True when a CLI reply is an account quota  credit  rate-limit error rather…]] - rationale - shortsmaker/llm.py
 - [[quota_exhausted()]] - code - shortsmaker/llm.py
 - [[run_agy()]] - code - shortsmaker/llm.py
@@ -27,13 +27,12 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 5 edges to [[_COMMUNITY_ask_ai]]
+- 6 edges to [[_COMMUNITY_ask_ai]]
 - 5 edges to [[_COMMUNITY_pathlib]]
-- 1 edge to [[_COMMUNITY_gemini_model]]
 
 ## Top bridge nodes
-- [[run_agy()]] - degree 9, connects to 3 communities
+- [[run_agy()]] - degree 9, connects to 2 communities
 - [[run_codex()]] - degree 6, connects to 2 communities
 - [[quota_exhausted()]] - degree 5, connects to 2 communities
 - [[test_codex_failure_is_bounded()]] - degree 3, connects to 1 community
-- [[Path_23]] - degree 3, connects to 1 community
+- [[Path_18]] - degree 3, connects to 1 community

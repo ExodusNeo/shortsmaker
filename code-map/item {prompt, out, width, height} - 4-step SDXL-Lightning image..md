@@ -1,12 +1,12 @@
 ---
 source_file: "local_ai/gen.py"
 type: "rationale"
-community: "Local GPU Worker"
-location: "L53"
+community: "gen.py"
+location: "L52"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Local_GPU_Worker
+  - community/genpy
 ---
 
 # item: {"prompt", "out", "width", "height"} -> 4-step SDXL-Lightning image.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[images()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Local_GPU_Worker
+#graphify/rationale #graphify/EXTRACTED #community/genpy

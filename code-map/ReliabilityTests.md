@@ -17,6 +17,7 @@ tags:
 - [[dot-test_checkpoint_image_marker_rejects_non_png_payload()]] - `method` [EXTRACTED]
 - [[dot-test_download_retry_is_bounded_and_preserves_wikimedia_backoff()]] - `method` [EXTRACTED]
 - [[dot-test_duplicate_finalization_does_not_duplicate_logbook_entries()]] - `method` [EXTRACTED]
+- [[dot-test_kokoro_partial_success_never_mixes_voices()]] - `method` [EXTRACTED]
 - [[dot-test_long_node_errors_keep_the_actual_error_headline()]] - `method` [EXTRACTED]
 - [[dot-test_pending_progress_is_atomic_and_completed_work_is_not_offered()]] - `method` [EXTRACTED]
 - [[dot-test_preview_failure_does_not_call_reviewer()]] - `method` [EXTRACTED]

@@ -2,7 +2,7 @@
 source_file: "shortsmaker/style_lab.py"
 type: "code"
 community: "render_remotion"
-location: "L212"
+location: "L210"
 tags:
   - graphify/code
   - graphify/EXTRACTED

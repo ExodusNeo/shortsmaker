@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/motion.py"
 type: "code"
-community: "json"
+community: "code_custom_scenes"
 location: "L219"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/json
+  - community/code_custom_scenes
 ---
 
 # is_payoff()
@@ -19,4 +19,4 @@ tags:
 - [[redraw_custom()]] - `calls` [EXTRACTED]
 - [[test_custom_scenes_are_big_and_the_reveal_bigger()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/json
+#graphify/code #graphify/EXTRACTED #community/code_custom_scenes

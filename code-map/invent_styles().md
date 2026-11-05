@@ -2,7 +2,7 @@
 source_file: "shortsmaker/style_lab.py"
 type: "code"
 community: "render_remotion"
-location: "L223"
+location: "L221"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[Codes this Short's inventions (look  transition  overlay) into their slots; a…]] - `rationale_for` [EXTRACTED]
-- [[Path_16]] - `references` [EXTRACTED]
+- [[Path_5]] - `references` [EXTRACTED]
 - [[invent_component()]] - `calls` [EXTRACTED]
 - [[render_remotion()]] - `calls` [EXTRACTED]
 - [[style_lab.py]] - `contains` [EXTRACTED]

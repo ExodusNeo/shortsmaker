@@ -1,29 +1,37 @@
 ---
 type: community
-members: 16
+members: 24
 ---
 
 # fetch
 
-**Members:** 16 nodes
+**Members:** 24 nodes
 
 ## Members
 - [[Keep titles that share a meaningful word with the query (including 2-3 letter…]] - rationale - shortsmaker/image_sources.py
 - [[NASA photos (public domain), when the story touches space, flight or science.]] - rationale - shortsmaker/image_sources.py
 - [[NASA videos (public domain), as their mediumsmall MP4 renditions.]] - rationale - shortsmaker/footage.py
+- [[NASA's own media is public domain, but its library also holds partner and…]] - rationale - shortsmaker/image_sources.py
+- [[Pixabay stock video free to use in videos, no credit needed (Pixabay Content…]] - rationale - shortsmaker/footage.py
 - [[Still images, magazinemanual scans, art and archival photos from the Internet…]] - rationale - shortsmaker/image_sources.py
 - [[The Oxford pool (2026-10-26) got stock videos that only shared a first name or…]] - rationale - tests/test_pictures_first.py
 - [[Videos across the entire Internet Archive (historical film, retro gaming,…]] - rationale - shortsmaker/footage.py
+- [[YouTube query predictions (not search volumes or a popularity ranking).]] - rationale - shortsmaker/seo.py
 - [[archive_ad_films()]] - code - shortsmaker/footage.py
 - [[archive_films()]] - code - shortsmaker/footage.py
 - [[archive_images()]] - code - shortsmaker/image_sources.py
 - [[duke_films()]] - code - shortsmaker/footage.py
 - [[fetch()]] - code - shortsmaker/media_tools.py
+- [[nasa_credit()]] - code - shortsmaker/image_sources.py
 - [[nasa_films()]] - code - shortsmaker/footage.py
 - [[nasa_images()]] - code - shortsmaker/image_sources.py
 - [[nasa_search()]] - code - shortsmaker/image_sources.py
 - [[on_topic()]] - code - shortsmaker/image_sources.py
+- [[pixabay_films()]] - code - shortsmaker/footage.py
+- [[search_suggestions()]] - code - shortsmaker/seo.py
+- [[test_nasa_partner_media_is_credited()]] - code - tests/test_full_scenes.py
 - [[test_on_topic_ignores_a_lone_shared_name()]] - code - tests/test_pictures_first.py
+- [[test_pixabay_keeps_only_on_topic_videos()]] - code - tests/test_pictures_first.py
 
 ## Live Query (requires Dataview plugin)
 
@@ -33,20 +41,22 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 10 edges to [[_COMMUNITY_re]]
+- 13 edges to [[_COMMUNITY_re]]
 - 5 edges to [[_COMMUNITY_json]]
 - 4 edges to [[_COMMUNITY_gather_pool]]
-- 4 edges to [[_COMMUNITY_extra_sources.py]]
-- 3 edges to [[_COMMUNITY_words_of]]
+- 4 edges to [[_COMMUNITY_test_full_scenes.py]]
+- 2 edges to [[_COMMUNITY_extra_sources.py]]
+- 2 edges to [[_COMMUNITY_brand_images]]
 - 2 edges to [[_COMMUNITY_get_image]]
-- 1 edge to [[_COMMUNITY_duration]]
-- 1 edge to [[_COMMUNITY_download_audio_choices]]
-- 1 edge to [[_COMMUNITY_pathlib]]
-- 1 edge to [[_COMMUNITY_test_pictures_first.py]]
+- 2 edges to [[_COMMUNITY_pathlib]]
+- 2 edges to [[_COMMUNITY_test_pictures_first.py]]
+- 1 edge to [[_COMMUNITY_fake_ai]]
+- 1 edge to [[_COMMUNITY_ffmpeg]]
+- 1 edge to [[_COMMUNITY_media_command]]
 
 ## Top bridge nodes
 - [[fetch()]] - degree 14, connects to 7 communities
-- [[on_topic()]] - degree 11, connects to 5 communities
+- [[on_topic()]] - degree 11, connects to 4 communities
 - [[archive_films()]] - degree 9, connects to 3 communities
-- [[nasa_films()]] - degree 7, connects to 3 communities
+- [[nasa_films()]] - degree 8, connects to 3 communities
 - [[archive_images()]] - degree 6, connects to 3 communities

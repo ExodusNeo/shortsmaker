@@ -1,22 +1,19 @@
 ---
 source_file: ""
 type: "code"
-community: "render"
+community: "main"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/render
+  - community/main
 ---
 
 # Path
 
 ## Connections
-- [[drawn_payoff()]] - `references` [EXTRACTED]
-- [[drawn_thumbnail()]] - `references` [EXTRACTED]
-- [[finish_render()]] - `references` [EXTRACTED]
-- [[load_state()]] - `references` [EXTRACTED]
-- [[render()_3]] - `references` [EXTRACTED]
-- [[save_state()]] - `references` [EXTRACTED]
-- [[use_opener()]] - `references` [EXTRACTED]
+- [[finish_short()]] - `references` [EXTRACTED]
+- [[record_failure()]] - `references` [EXTRACTED]
+- [[resume_runs()]] - `references` [EXTRACTED]
+- [[use_picture_from()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/render
+#graphify/code #graphify/EXTRACTED #community/main

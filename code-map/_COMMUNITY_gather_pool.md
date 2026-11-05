@@ -36,23 +36,23 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 10 edges to [[_COMMUNITY_re]]
+- 9 edges to [[_COMMUNITY_re]]
 - 4 edges to [[_COMMUNITY_fetch]]
-- 2 edges to [[_COMMUNITY_words_of]]
+- 4 edges to [[_COMMUNITY_test_full_scenes.py]]
+- 2 edges to [[_COMMUNITY_json]]
 - 2 edges to [[_COMMUNITY_get_image]]
 - 2 edges to [[_COMMUNITY_pathlib]]
-- 2 edges to [[_COMMUNITY_extra_sources.py]]
-- 2 edges to [[_COMMUNITY_prepare_topic]]
 - 2 edges to [[_COMMUNITY_owner]]
-- 1 edge to [[_COMMUNITY_json]]
-- 1 edge to [[_COMMUNITY_article_text]]
 - 1 edge to [[_COMMUNITY_choose_images]]
-- 1 edge to [[_COMMUNITY_clean_full]]
-- 1 edge to [[_COMMUNITY_clean_photo]]
+- 1 edge to [[_COMMUNITY_extra_sources.py]]
+- 1 edge to [[_COMMUNITY_gpu.py]]
+- 1 edge to [[_COMMUNITY_brand_images]]
 - 1 edge to [[_COMMUNITY_visual_review]]
+- 1 edge to [[_COMMUNITY_write_scripts]]
+- 1 edge to [[_COMMUNITY_load_pool]]
 
 ## Top bridge nodes
-- [[gather_pool()]] - degree 23, connects to 12 communities
+- [[gather_pool()]] - degree 23, connects to 14 communities
 - [[wm_get()]] - degree 8, connects to 4 communities
 - [[commons_films()]] - degree 6, connects to 3 communities
 - [[wm_files()]] - degree 8, connects to 2 communities

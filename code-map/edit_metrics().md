@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[Optional manual entry, also available without a graph or an AI call.]] - `rationale_for` [EXTRACTED]
-- [[Path_18]] - `references` [EXTRACTED]
+- [[Path_16]] - `references` [EXTRACTED]
 - [[command()]] - `calls` [EXTRACTED]
 - [[json]] - `calls` [EXTRACTED]
 - [[load_metrics()]] - `calls` [EXTRACTED]

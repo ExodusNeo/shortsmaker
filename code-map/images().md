@@ -1,12 +1,12 @@
 ---
 source_file: "local_ai/gen.py"
 type: "code"
-community: "Local GPU Worker"
-location: "L52"
+community: "gen.py"
+location: "L51"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Local_GPU_Worker
+  - community/genpy
 ---
 
 # images()
@@ -14,6 +14,6 @@ tags:
 ## Connections
 - [[gen.py]] - `contains` [EXTRACTED]
 - [[item {prompt, out, width, height} - 4-step SDXL-Lightning image.]] - `rationale_for` [EXTRACTED]
-- [[main()_1]] - `indirect_call` [INFERRED]
+- [[main()_2]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/Local_GPU_Worker
+#graphify/code #graphify/EXTRACTED #community/genpy

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/scene_repair.py"
 type: "rationale"
-community: "render"
+community: "ffmpeg"
 location: "L15"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/render
+  - community/ffmpeg
 ---
 
 # Fast path for a mark card on a still, with hard cuts on both sides. Preserve…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[preview()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/render
+#graphify/rationale #graphify/EXTRACTED #community/ffmpeg

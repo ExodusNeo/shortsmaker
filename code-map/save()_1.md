@@ -12,9 +12,9 @@ tags:
 # save()
 
 ## Connections
-- [[Path_28]] - `references` [EXTRACTED]
+- [[Path_6]] - `references` [EXTRACTED]
 - [[hashlib]] - `calls` [EXTRACTED]
-- [[render()_3]] - `calls` [EXTRACTED]
+- [[render()_1]] - `calls` [EXTRACTED]
 - [[shutil]] - `calls` [EXTRACTED]
 - [[signature()]] - `calls` [EXTRACTED]
 - [[voice_cache.py]] - `contains` [EXTRACTED]

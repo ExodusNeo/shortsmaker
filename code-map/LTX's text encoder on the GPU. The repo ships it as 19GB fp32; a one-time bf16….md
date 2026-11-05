@@ -1,12 +1,12 @@
 ---
 source_file: "local_ai/gen.py"
 type: "rationale"
-community: "Local GPU Worker"
-location: "L73"
+community: "gen.py"
+location: "L72"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Local_GPU_Worker
+  - community/genpy
 ---
 
 # LTX's text encoder on the GPU. The repo ships it as 19GB fp32; a one-time bf16…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[t5_encoder()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Local_GPU_Worker
+#graphify/rationale #graphify/EXTRACTED #community/genpy

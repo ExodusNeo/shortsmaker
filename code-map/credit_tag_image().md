@@ -2,7 +2,7 @@
 source_file: "shortsmaker/image_sources.py"
 type: "code"
 community: "frame_maker"
-location: "L262"
+location: "L270"
 tags:
   - graphify/code
   - graphify/EXTRACTED

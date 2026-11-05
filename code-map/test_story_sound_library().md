@@ -2,7 +2,7 @@
 source_file: "tests/test_full_scenes.py"
 type: "code"
 community: "test_story_sound_library"
-location: "L857"
+location: "L882"
 tags:
   - graphify/code
   - graphify/EXTRACTED

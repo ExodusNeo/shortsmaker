@@ -1,17 +1,17 @@
 ---
-source_file: "tests/test_rules.py"
+source_file: "tests/test_story.py"
 type: "code"
-community: "test_rules.py"
-location: "L265"
+community: "test_story.py"
+location: "L93"
 tags:
   - graphify/code
-  - graphify/EXTRACTED
-  - community/test_rulespy
+  - graphify/INFERRED
+  - community/test_storypy
 ---
 
 # ask()
 
 ## Connections
-- [[run_draft()]] - `contains` [EXTRACTED]
+- [[test_cold_read_uses_other_ai_in_solo_and_collaborative_modes()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/test_rulespy
+#graphify/code #graphify/INFERRED #community/test_storypy

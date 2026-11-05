@@ -1,25 +1,23 @@
 ---
 source_file: "local_ai/gen.py"
 type: "code"
-community: "Local GPU Worker"
+community: "gen.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Local_GPU_Worker
+  - community/genpy
 ---
 
 # gen.py
 
 ## Connections
 - [[Local GPU worker for ShortsMaker voice (Kokoro), images (SDXL-Lightning),…]] - `rationale_for` [EXTRACTED]
-- [[encoder_args()]] - `contains` [EXTRACTED]
 - [[gc]] - `imports` [EXTRACTED]
 - [[images()]] - `contains` [EXTRACTED]
 - [[json]] - `imports` [EXTRACTED]
-- [[main()_1]] - `contains` [EXTRACTED]
+- [[main()_2]] - `contains` [EXTRACTED]
 - [[numpy]] - `imports` [EXTRACTED]
-- [[parallax()]] - `contains` [EXTRACTED]
 - [[pathlib]] - `imports_from` [EXTRACTED]
 - [[pil]] - `imports_from` [EXTRACTED]
 - [[re]] - `imports` [EXTRACTED]
@@ -30,4 +28,4 @@ tags:
 - [[tts()]] - `contains` [EXTRACTED]
 - [[video()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Local_GPU_Worker
+#graphify/code #graphify/EXTRACTED #community/genpy

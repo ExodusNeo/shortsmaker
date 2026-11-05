@@ -2,7 +2,7 @@
 source_file: "tests/test_pictures_first.py"
 type: "code"
 community: "owner"
-location: "L344"
+location: "L208"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -13,7 +13,8 @@ tags:
 
 ## Connections
 - [[fake_ai]] - `calls` [EXTRACTED]
-- [[picking]] - `method` [EXTRACTED]
-- [[stubbed]] - `calls` [EXTRACTED]
+- [[owner()]] - `calls` [EXTRACTED]
+- [[planning]] - `method` [EXTRACTED]
+- [[planning_ai()]] - `indirect_call` [INFERRED]
 
 #graphify/code #graphify/EXTRACTED #community/owner

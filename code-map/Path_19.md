@@ -1,17 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "render"
+community: "gpu.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/render
+  - community/gpupy
 ---
 
 # Path
 
 ## Connections
-- [[apply()]] - `references` [EXTRACTED]
-- [[preview()]] - `references` [EXTRACTED]
+- [[mark_details()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/render
+#graphify/code #graphify/EXTRACTED #community/gpupy

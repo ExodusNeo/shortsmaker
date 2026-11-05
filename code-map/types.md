@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "pathlib"
+community: "gpu.py"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/pathlib
+  - community/gpupy
 ---
 
 # types
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[test_media.py]] - `imports_from` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/pathlib
+#graphify/concept #graphify/EXTRACTED #community/gpupy

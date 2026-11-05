@@ -1,0 +1,20 @@
+---
+source_file: "tests/test_full_scenes.py"
+type: "code"
+community: "test_story.py"
+location: "L709"
+tags:
+  - graphify/code
+  - graphify/EXTRACTED
+  - community/test_storypy
+---
+
+# test_sentence_ends_include_curly_quotes_and_ellipsis()
+
+## Connections
+- [[ends_sentence()]] - `calls` [EXTRACTED]
+- [[first_sentence()]] - `calls` [EXTRACTED]
+- [[sentence_groups()]] - `calls` [EXTRACTED]
+- [[test_full_scenes.py]] - `contains` [EXTRACTED]
+
+#graphify/code #graphify/EXTRACTED #community/test_storypy

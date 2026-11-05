@@ -1,12 +1,12 @@
 ---
 source_file: "tests/render_style.py"
 type: "code"
-community: "render_style.py"
+community: "style_library"
 location: "L49"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/render_stylepy
+  - community/style_library
 ---
 
 # main()
@@ -15,4 +15,4 @@ tags:
 - [[build()_1]] - `calls` [EXTRACTED]
 - [[render_style.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/render_stylepy
+#graphify/code #graphify/EXTRACTED #community/style_library

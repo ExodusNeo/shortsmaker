@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_drawn_opener.py"
 type: "code"
-community: "duration"
+community: "drawn_opener.py"
 location: "L126"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/duration
+  - community/drawn_openerpy
 ---
 
 # test_reveal_scene_is_drawn_with_its_own_rules()
@@ -14,9 +14,9 @@ tags:
 ## Connections
 - [[A reveal (one of the last two scenes) planned as a custom diagram is drawn the…]] - `rationale_for` [EXTRACTED]
 - [[drawn_payoff()]] - `calls` [EXTRACTED]
-- [[fake_ai()_2]] - `calls` [EXTRACTED]
+- [[fake_ai()_1]] - `calls` [EXTRACTED]
 - [[paint_new()]] - `calls` [EXTRACTED]
-- [[short()_1]] - `calls` [EXTRACTED]
+- [[short()]] - `calls` [EXTRACTED]
 - [[test_drawn_opener.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/duration
+#graphify/code #graphify/EXTRACTED #community/drawn_openerpy

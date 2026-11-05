@@ -13,20 +13,21 @@ tags:
 
 ## Connections
 - [[BlenderFailed]] - `calls` [EXTRACTED]
-- [[Path_34]] - `references` [EXTRACTED]
+- [[Path_32]] - `references` [EXTRACTED]
 - [[_run()]] - `calls` [EXTRACTED]
 - [[blender_render.py]] - `contains` [EXTRACTED]
 - [[code_version()]] - `calls` [EXTRACTED]
 - [[ffmpeg()]] - `calls` [EXTRACTED]
 - [[json]] - `calls` [EXTRACTED]
 - [[peaks()]] - `calls` [EXTRACTED]
-- [[render()_3]] - `calls` [EXTRACTED]
+- [[render()_1]] - `calls` [EXTRACTED]
 - [[scene_frames()]] - `calls` [EXTRACTED]
 - [[test_changed_blender_code_redraws()]] - `calls` [EXTRACTED]
 - [[test_crash_retries_then_raises()]] - `calls` [EXTRACTED]
 - [[test_frames_are_trimmed_after_the_clips_are_cut()]] - `calls` [EXTRACTED]
 - [[test_missing_blender_raises()]] - `calls` [EXTRACTED]
 - [[test_render_clips_makes_one_clip_per_scene()]] - `calls` [EXTRACTED]
+- [[test_retry_redraws_only_missing_frames()]] - `calls` [EXTRACTED]
 - [[test_same_build_json_reuses_frames()]] - `calls` [EXTRACTED]
 - [[video_encoder()]] - `calls` [EXTRACTED]
 

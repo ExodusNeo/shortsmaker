@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/media_library.py"
 type: "code"
-community: "extra_sources.py"
+community: "brand_images"
 location: "L45"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/extra_sourcespy
+  - community/brand_images
 ---
 
 # source_status()
@@ -22,4 +22,4 @@ tags:
 - [[time]] - `calls` [EXTRACTED]
 - [[write_json()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/extra_sourcespy
+#graphify/code #graphify/EXTRACTED #community/brand_images

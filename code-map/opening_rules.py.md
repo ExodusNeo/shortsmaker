@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/opening_rules.py"
 type: "code"
-community: "json"
+community: "pathlib"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/json
+  - community/pathlib
 ---
 
 # opening_rules.py
@@ -25,4 +25,4 @@ tags:
 - [[test_opening_rules.py]] - `imports_from` [EXTRACTED]
 - [[writing.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/json
+#graphify/code #graphify/EXTRACTED #community/pathlib

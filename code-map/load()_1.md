@@ -12,10 +12,10 @@ tags:
 # load()
 
 ## Connections
-- [[Path_28]] - `references` [EXTRACTED]
+- [[Path_6]] - `references` [EXTRACTED]
 - [[hashlib]] - `calls` [EXTRACTED]
 - [[json]] - `calls` [EXTRACTED]
-- [[render()_3]] - `calls` [EXTRACTED]
+- [[render()_1]] - `calls` [EXTRACTED]
 - [[signature()]] - `calls` [EXTRACTED]
 - [[voice_cache.py]] - `contains` [EXTRACTED]
 

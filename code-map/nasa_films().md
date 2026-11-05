@@ -17,6 +17,7 @@ tags:
 - [[fetch()]] - `calls` [EXTRACTED]
 - [[footage.py]] - `contains` [EXTRACTED]
 - [[json]] - `calls` [EXTRACTED]
+- [[nasa_credit()]] - `calls` [EXTRACTED]
 - [[nasa_search()]] - `calls` [EXTRACTED]
 - [[on_topic()]] - `calls` [EXTRACTED]
 

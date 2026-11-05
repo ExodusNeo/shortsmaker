@@ -10,7 +10,7 @@ members: 19
 ## Members
 - [[One review task using the existing AI selectionquota fallback; preserve…]] - rationale - shortsmaker/retention.py
 - [[Optional manual entry, also available without a graph or an AI call.]] - rationale - shortsmaker/retention.py
-- [[Path_18]] - code
+- [[Path_16]] - code
 - [[Read a Studio retention screenshot approximately and map drops to the saved…]] - rationale - shortsmaker/retention.py
 - [[Summarize saved reviews and optional Studio context without logbook or minimum-…]] - rationale - shortsmaker/retention.py
 - [[Validate a manual Studio value; blank means unknown, never zero.]] - rationale - shortsmaker/retention.py
@@ -36,19 +36,18 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 13 edges to [[_COMMUNITY_pathlib]]
+- 15 edges to [[_COMMUNITY_pathlib]]
 - 7 edges to [[_COMMUNITY_json]]
 - 4 edges to [[_COMMUNITY_re]]
 - 3 edges to [[_COMMUNITY_main_1]]
-- 3 edges to [[_COMMUNITY_audio_library.py]]
-- 2 edges to [[_COMMUNITY_test_full_scenes.py]]
+- 3 edges to [[_COMMUNITY_math]]
 - 1 edge to [[_COMMUNITY_write_scripts]]
+- 1 edge to [[_COMMUNITY_fake_ai]]
 - 1 edge to [[_COMMUNITY_ask_ai]]
-- 1 edge to [[_COMMUNITY_seo_pass]]
 - 1 edge to [[_COMMUNITY_test_rules.py]]
 
 ## Top bridge nodes
-- [[retention.py]] - degree 33, connects to 7 communities
+- [[retention.py]] - degree 33, connects to 6 communities
 - [[analyze()]] - degree 12, connects to 4 communities
 - [[observations()]] - degree 8, connects to 4 communities
 - [[edit_metrics()]] - degree 9, connects to 2 communities

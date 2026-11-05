@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[Callout()]] - `calls` [EXTRACTED]
-- [[Captions()]] - `calls` [EXTRACTED]
+- [[Captions()_1]] - `calls` [EXTRACTED]
 - [[Captions.tsx]] - `imports` [EXTRACTED]
 - [[Cards.tsx]] - `imports` [EXTRACTED]
 - [[CompareCard()]] - `calls` [EXTRACTED]

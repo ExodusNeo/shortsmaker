@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[(picture, credit line, CHECK line) for a drawn Short's thumbnail the real…]] - `rationale_for` [EXTRACTED]
-- [[Path_21]] - `references` [EXTRACTED]
+- [[Path_17]] - `references` [EXTRACTED]
 - [[finish_render()]] - `calls` [EXTRACTED]
 - [[get_image()]] - `calls` [EXTRACTED]
 - [[io]] - `calls` [EXTRACTED]

@@ -1,18 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "run_agy"
+community: "media_command"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/run_agy
+  - community/media_command
 ---
 
 # Path
 
 ## Connections
-- [[ask_ai()]] - `references` [EXTRACTED]
-- [[run_agy()]] - `references` [EXTRACTED]
-- [[run_codex()]] - `references` [EXTRACTED]
+- [[import_media()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/run_agy
+#graphify/code #graphify/EXTRACTED #community/media_command

@@ -1,22 +1,22 @@
 ---
 source_file: "shortsmaker/seo.py"
 type: "code"
-community: "render"
+community: "test_story.py"
 location: "L149"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/render
+  - community/test_storypy
 ---
 
 # srt()
 
 ## Connections
 - [[Exact-narration caption file to upload in YouTube Studio (searchable, unlike…]] - `rationale_for` [EXTRACTED]
-- [[Path_20]] - `references` [EXTRACTED]
-- [[re]] - `calls` [EXTRACTED]
-- [[render()_3]] - `calls` [EXTRACTED]
+- [[Path_15]] - `references` [EXTRACTED]
+- [[ends_sentence()]] - `calls` [EXTRACTED]
+- [[render()_1]] - `calls` [EXTRACTED]
 - [[seo.py]] - `contains` [EXTRACTED]
 - [[ts()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/render
+#graphify/code #graphify/EXTRACTED #community/test_storypy

@@ -2,7 +2,7 @@
 source_file: "shortsmaker/plan_rules.py"
 type: "code"
 community: "test_story.py"
-location: "L454"
+location: "L463"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -21,5 +21,6 @@ tags:
 - [[seo_pass()]] - `calls` [EXTRACTED]
 - [[story_problems()]] - `calls` [EXTRACTED]
 - [[test_first_sentence_reads_across_the_cut()]] - `calls` [EXTRACTED]
+- [[test_sentence_ends_include_curly_quotes_and_ellipsis()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/test_storypy

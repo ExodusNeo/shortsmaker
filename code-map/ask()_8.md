@@ -1,17 +1,17 @@
 ---
 source_file: "tests/test_full_scenes.py"
 type: "code"
-community: "rewrite_paint_prompts"
-location: "L716"
+community: "apply_review_fixes"
+location: "L448"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/rewrite_paint_prompts
+  - community/apply_review_fixes
 ---
 
 # ask()
 
 ## Connections
-- [[test_look_check_fixes_code()]] - `contains` [EXTRACTED]
+- [[test_review_uses_unused_pool_pictures_before_painting()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/rewrite_paint_prompts
+#graphify/code #graphify/EXTRACTED #community/apply_review_fixes

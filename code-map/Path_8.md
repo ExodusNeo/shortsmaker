@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "drawn_thumbnail"
+community: "make"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/drawn_thumbnail
+  - community/make
 ---
 
 # Path
 
 ## Connections
-- [[drawn_short()]] - `references` [EXTRACTED]
+- [[short_folder()]] - `references` [EXTRACTED]
+- [[videos()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/drawn_thumbnail
+#graphify/code #graphify/EXTRACTED #community/make

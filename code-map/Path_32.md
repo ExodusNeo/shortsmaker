@@ -1,17 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "duration"
+community: "test_blender_render.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/duration
+  - community/test_blender_renderpy
 ---
 
 # Path
 
 ## Connections
-- [[film_piece()]] - `references` [EXTRACTED]
-- [[shot_span()]] - `references` [EXTRACTED]
+- [[_run()]] - `references` [EXTRACTED]
+- [[render_clips()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/duration
+#graphify/code #graphify/EXTRACTED #community/test_blender_renderpy

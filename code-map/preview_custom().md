@@ -1,18 +1,18 @@
 ---
 source_file: "shortsmaker/motion.py"
 type: "code"
-community: "json"
-location: "L311"
+community: "code_custom_scenes"
+location: "L318"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/json
+  - community/code_custom_scenes
 ---
 
 # preview_custom()
 
 ## Connections
-- [[Path_27]] - `references` [EXTRACTED]
+- [[Path_25]] - `references` [EXTRACTED]
 - [[Renders just this custom scene small (its pictures are already in…]] - `rationale_for` [EXTRACTED]
 - [[look_and_fix()]] - `calls` [EXTRACTED]
 - [[main()_6]] - `calls` [EXTRACTED]
@@ -20,4 +20,4 @@ tags:
 - [[opener_preflight()]] - `calls` [EXTRACTED]
 - [[preview_sheet()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/json
+#graphify/code #graphify/EXTRACTED #community/code_custom_scenes

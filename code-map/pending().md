@@ -1,22 +1,22 @@
 ---
 source_file: "shortsmaker/checkpoints.py"
 type: "code"
-community: "write_json"
+community: "main"
 location: "L76"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/write_json
+  - community/main
 ---
 
 # pending()
 
 ## Connections
-- [[Path_24]] - `references` [EXTRACTED]
+- [[Path_20]] - `references` [EXTRACTED]
 - [[checkpoints.py]] - `contains` [EXTRACTED]
-- [[main()_7]] - `calls` [EXTRACTED]
+- [[main()_5]] - `calls` [EXTRACTED]
 - [[pending_topics()]] - `calls` [EXTRACTED]
 - [[read()_2]] - `calls` [EXTRACTED]
 - [[resume_runs()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/write_json
+#graphify/code #graphify/EXTRACTED #community/main

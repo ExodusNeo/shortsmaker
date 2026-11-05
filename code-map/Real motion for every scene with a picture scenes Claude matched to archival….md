@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/gpu.py"
 type: "rationale"
-community: "local_clips"
-location: "L584"
+community: "test_h3_handoff.py"
+location: "L586"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/local_clips
+  - community/test_h3_handoffpy
 ---
 
 # Real motion for every scene with a picture: scenes Claude matched to archival…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[local_clips()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/local_clips
+#graphify/rationale #graphify/EXTRACTED #community/test_h3_handoffpy
