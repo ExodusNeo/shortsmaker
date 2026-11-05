@@ -32,6 +32,29 @@ def test_codex_uses_subscription_stdin_and_read_only_images():
         assert str(folder / "sheet.png") in cmd and str(folder / "private.txt") not in cmd
 
 
+def test_every_ai_gets_the_pipeline_preamble_once():
+    old = session.BRAIN, session.SOLO, session.PARTNER, session.NO_QUOTA
+    seen = {}
+    try:
+        session.SOLO, session.PARTNER, session.NO_QUOTA = True, "codex", set()
+
+        def claude(cmd, input=None, **kw):
+            seen["claude"] = input
+            return subprocess.CompletedProcess(cmd, 0, '{"ok": true}', "")
+
+        with patch.object(llm.shutil, "which", side_effect=lambda name: name), \
+             patch.object(llm.subprocess, "run", side_effect=claude), \
+             patch.object(llm, "run_codex", side_effect=lambda p, *a, **kw: seen.setdefault("codex", p) and '{"ok": 1}'), \
+             patch.object(llm, "run_agy", side_effect=lambda p, *a, **kw: seen.setdefault("gemini", p) and '{"ok": 1}'):
+            for who in ("claude", "codex", "gemini"):
+                session.BRAIN = who
+                assert llm.ask_ai("Do the step.") is not None
+        for who in ("claude", "codex", "gemini"):
+            assert seen[who].count(llm.PIPELINE_PREAMBLE) == 1 and seen[who].endswith("Do the step."), who
+    finally:
+        session.BRAIN, session.SOLO, session.PARTNER, session.NO_QUOTA = old
+
+
 def test_codex_failure_is_bounded():
     with patch.object(llm.shutil, "which", return_value="codex"):
         for failure in (subprocess.TimeoutExpired("codex", 900), OSError("missing executable")):
