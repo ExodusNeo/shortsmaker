@@ -70,14 +70,34 @@ KIT_ANIMALS = {"horse": ("horse", "stallion", "mare", "pony", "colt"), "dog": ("
                "rabbit": ("rabbit", "rabbits", "bunny", "hare"), "bear": ("bear", "bears", "cub")}
 
 
-def missing_parts(plan: dict, narration: str = "") -> list[str]:
-    """Animals the planned moment or the opener's narration names that the code doesn't draw with the kit's own part
-    (the Clever Hans plan said only "Clever Hans taps a hoof"; its narration said "this horse")."""
+# Story objects: words in the moment/narration that need a kit part on screen. The 3D McLean opener (2026-11-05)
+# showed a messenger with nothing in his hands, knocking on an open door; the owner caught both.
+KIT_OBJECTS = {"letter": ("letter", "telegram", "envelope", "messenger", "courier", "postman", "mailman",
+                          "dispatch"),
+               "door": ("knock", "knocks", "knocked", "knocking"),  # a knock needs its door; a house already has one
+               "phone": ("phone", "telephone", "telephoned"), "radio": ("radio", "wireless")}
+KNOCK = {"knock", "knocks", "knocked", "knocking"}
+OPEN_DOOR = re.compile(r"k\.door\([^;]*?\bopen\s*:\s*(0?\.\d+|1(?:\.0+)?)")
+
+
+def missing_parts(plan: dict, narration: str = "", props: set[str] = frozenset(), open_doors: list[float] = ()) -> list[str]:
+    """Animals and story objects the planned moment or the opener's narration names that the code doesn't draw with
+    the kit's own part (the Clever Hans plan said only "Clever Hans taps a hoof"; its narration said "this horse"),
+    plus a knock on an open door. `props` / `open_doors`: a 3D stage's prop types and its 3D doors' `open` values."""
     said = set(re.findall(r"[a-z]+", f"{plan.get('moment') or ''} {narration}".lower()))
     live = INERT.sub('""', plan.get("code") or "")
-    return [f"the moment shows a {part} but the code never calls k.{part}(...): draw it with the kit's part "
-            f"(KIT.md, Animals), never from your own shapes" for part, names in KIT_ANIMALS.items()
-            if said & set(names) and f"k.{part}(" not in live]
+    found = [f"the moment shows a {part} but the code never calls k.{part}(...): draw it with the kit's part "
+             f"(KIT.md, Animals), never from your own shapes" for part, names in KIT_ANIMALS.items()
+             if said & set(names) and f"k.{part}(" not in live]
+    found += [f"the story needs a {part} on screen ({', '.join(sorted(said & set(names)))}) but nothing draws one: "
+              f"call k.{part}(...) (held in the hand the kit returns{', or a 3D door prop' if part == 'door' else ''})"
+              for part, names in KIT_OBJECTS.items() if said & set(names) and f"k.{part}(" not in live and part not in props
+              and not (part == "door" and "k.knock(" in live)
+              and not re.search(rf"""hold\s*:\s*\[[^\]]*['"]{part}['"]""", plan.get("code") or "")]
+    if said & KNOCK and (any(float(v) > .15 for v in OPEN_DOOR.findall(live)) or any(v > .15 for v in open_doors)):
+        found.append("someone knocks on an OPEN door: a knock needs a closed door (open: 0), the knocker on one side "
+                     "and the person answering on the other")
+    return found
 
 
 def clean_code(raw) -> str | None:
@@ -194,11 +214,18 @@ small flaws are fine. Below {PASS}, list the problems that stop it working, the 
   a hand, arm or body passing through a door, wall or another person is never a small flaw (the McLean messenger's
   fist went through the door it knocked on); nor is a beard, prop or label covering a face like a mask, or people
   inside and outside a building with no wall between them;
+- an action that makes no physical sense or misses the thing the story needs: knocking on an open door or on air,
+  a messenger or delivery with nothing in hand, someone answering a door that isn't there, a rider with no horse.
+  Name what is missing or wrong; this is never a small flaw;
+- the subject blends into what is behind it (a brown coat on a brown wall, a dark figure in a dark room): it must
+  stand out by colour and brightness;
+- circles, rings or bursts lying over the picture like an on-screen overlay, covering faces;
 - the picture doesn't fill the vertical frame (a big empty band, the main things drawn small in one part of it),
   or something important is cut off by the frame edge;
 - a face sits behind the captions (y 1170-1300) in any frame; bodies, limbs and props crossing that band are fine;
 - text is misspelled, unreadable or not something the story says;{answer}
-- nothing moves, or the moving parts glitch or jump between frames;
+- nothing moves, or the moving parts glitch or jump between frames (a 3D opener's people cycle 2-6 drawings several
+  times a second: a pose that differs between frames IS moving; call it frozen only when frames are identical);
 - gore, blood or a weapon hurting someone.
 The hand-drawn cartoon look itself (dot eyes, stick limbs, brush lines, watercolour; or flat drawn cut-outs standing
 in a simple 3D set), a soft hazy background, the light grade and the motion blur of a fast camera swing are

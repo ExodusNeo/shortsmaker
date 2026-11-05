@@ -44,6 +44,12 @@ Rules for the code:
   the door. Knock = move the target out and back: `reach: [null, [doorX - 30 * Math.abs(k.wave(3, 1)), 930]]`.
   Inside and outside in one picture = a cutaway: draw the wall between them (a thick edge with the doorway in it),
   and each person stays on their own side of it.
+- It must make sense. Draw every thing the story needs: a messenger or courier holds his letter (`hold: [null, 'letter']`
+  on `k.person`), a rider has a horse, a caller a phone. A knock is on a CLOSED door (`k.door` with no
+  `open`, or `open: 0`); nobody knocks on an open door, a wall or air (the 3D McLean draft did both: an empty-handed
+  messenger at a half-open door). The checker rejects a missing letter or an open door on a knock.
+- The subject stands out from what is behind it by colour AND brightness (a navy coat on a warm wall, never brown
+  on brown).
 
 ## Camera
 `export const camera = (k) => [shot, ...]`: 2-3 shots for an opener (a new framing every 1-1.5 s, like a real edit).
@@ -88,7 +94,7 @@ boater | cowboy | ranger (campaign hat) | kepi | officer (peaked cap) | bobby (p
 hardhat | none; `hatColor` recolours most, `band` the fedora/boater/officer band), `coat`
 (colour), `dress` (colour: a skirt), `skin` (`k.SKIN[0..5]`), `beard` (true | colour), `mustache`, `glasses`
 ("round" | "sun"), `face` ("smile" | "open" | "sad" | "flat"), `arms: [left, right]` (degrees from hanging
-down, outward positive: 160 = raised overhead), `bend: [l, r]` (elbow degrees), `reach: [[x, y] | null, [x, y] | null]`
+down, outward positive: 160 = raised overhead), `bend: [l, r]` (elbow degrees), `hold: [left, right]` (a thing gripped in that hand, the hand over it: 'letter', 'paper', 'cup', 'bottle', 'coin', 'moneybag'), `reach: [[x, y] | null, [x, y] | null]`
 (left, right: that hand lands exactly on the point, overriding arms/bend; out of reach it points at it), `walk` (phase: `t * 9` walks),
 `flip` (face left), `still`, `look` (eye shift px).
 Arms that read: one arm doing the action (pointing, knocking, raised while speaking) and the other either on the hip
@@ -116,7 +122,7 @@ Never cross an arm in front of the body (negative arms): on a stick figure it re
 
 ## Rooms and furniture (stand on (x, y) unless said)
 `const d = k.door(x, y, s, {open: 0..1, color, inside})` 290*s tall; returns `{knob, top, left, right}` (a knock:
-`reach` to `d.knob` or the panel). `const b = k.bed(x, y, s, {canopy: true | colour, sheet, blanket})` 450*s long,
+`reach` to `d.knob` or the panel). `k.knock(x, y, s, {person: {...k.person options, hold: ['letter', null]}, door: {color}, phase})` = a person knocking on a CLOSED door centred on x: the fist lands on the panel with impact lines, 2.5 knocks a second (or `phase` 0..1); use it for every knock. `const b = k.bed(x, y, s, {canopy: true | colour, sheet, blanket})` 450*s long,
 headboard left; returns `{top, pillow}`. `k.rug(cx, cy, width, {color, trim})` flat on the floor.
 `k.shelf(x, y, s)` a bookcase (380*s tall). `const l = k.lamp(x, y, s, {kind: "desk" | "oil" | "floor", lit, shade})`
 glows when lit; returns `{light}` (use it as `light.from`). `k.window(cx, cy, w, h, {outside, curtains})` and

@@ -7,6 +7,7 @@ opener is made instead. Lesson from the removed Blender openers (2026-10-30): th
 inconsistent, so it only places and frames fixed parts here."""
 
 import json
+import math
 import re
 import shutil
 import subprocess
@@ -24,8 +25,11 @@ TIMEOUT = 900
 PLACES, MOODS = ("room", "street", "outdoors"), ("day", "golden", "dusk", "night", "interior")
 PROPS = {"desk", "table", "chair", "door", "window", "frame", "shelf", "lamp", "bed", "rug", "crate", "barrel", "cabinet",
          "counter", "fireplace", "house", "shopfront", "tree", "rock", "fence", "lamppost"}
-EFFECTS = {"rings", "dust", "shafts", "burst", "shake", "rain", "snow"}
+EFFECTS = {"rings", "dust", "shafts", "burst", "shake", "rain", "snow", "jolt", "puff"}
+SPREAD = 1.5  # the widest shot stands at least this many times farther back than the closest (McLean: 1.95-2.35 m)
 MOVES = {"cut", "whip", "push"}
+SCENERY = ("house", "shop", "bank", "factory", "tower", "room", "sky", "ground", "hills", "sea", "island", "window",
+           "shelf", "bed", "rug", "palm", "pine", "tree")
 NAME = re.compile(r"^[a-z][a-z0-9_]{0,19}$")
 COLOR = re.compile(r"^#[0-9a-fA-F]{6}$")
 DRAW = re.compile(r"export\s+default\s+function\s+draw\s*\(\s*k\s*,\s*f\s*\)")
@@ -55,9 +59,36 @@ def xz(v, default=(0.0, -1.5)) -> list[float]:
     return [num(v[0], -40, 40, default[0]), num(v[1], -60, 10, default[1])] if isinstance(v, list) and len(v) == 2 else list(default)
 
 
+HOUSE_UNIT = 2.4  # one town-kit wall module of a `house` / `shopfront` prop (Opener3D.tsx), in metres at size 1
+
+
+def front_door(p: dict, i: int) -> tuple[float, float]:
+    """Where a cut-out stands flush against prop `p` (number i in the stage): a house or shopfront's own front door
+    (Opener3D.tsx's Building puts it at module seed % 3), or a 3D door's face."""
+    u = HOUSE_UNIT * p["size"]
+    dx, dz = (((i + (1 if p["type"] == "house" else 7)) % 3 - 1) * u, .5 * u + .04) if p["type"] != "door" else (0, .1)
+    a = math.radians(p["turn"])  # three.js turns about y: x' = x cos + z sin, z' = -x sin + z cos
+    return round(p["at"][0] + dx * math.cos(a) + dz * math.sin(a), 3), round(p["at"][1] - dx * math.sin(a) + dz * math.cos(a), 3)
+
+
+def inside(c: dict, props: list[dict]) -> str | None:
+    """The house or shop a floor cut-out stands inside of (a live McLean draft put the messenger in the wall)."""
+    for p in props:
+        if p["type"] in ("house", "shopfront") and abs(p["turn"]) < 20:
+            u = HOUSE_UNIT * p["size"]
+            if abs(c["at"][0] - p["at"][0]) < 1.5 * u and p["at"][1] - .6 * u < c["at"][1] < p["at"][1] + .5 * u:
+                return p.get("id") or p["type"]
+    return None
+
+
 def lint_cutout(code: str) -> list[str]:
     """Rule breaks in an AI-written cut-out module (the drawn opener's code rules, with draw(k, f))."""
     found = [p for p in drawn_opener.lint(code) if "export default function scene" not in p]
+    live = drawn_opener.INERT.sub('""', code)
+    scenery = sorted(set(re.findall(r"\bk\.(" + "|".join(SCENERY) + r")\(", live)))
+    if scenery:  # a live draft painted the house, its door frame and the street into one flat board (2026-11-06)
+        found.append(f"draws scenery in a cut-out ({', '.join('k.' + n for n in scenery)}): buildings, rooms, ground "
+                     f"and sky are the 3D place and props; a cut-out is one person or animal and what it holds or touches")
     if not DRAW.search(code):
         found.append("missing `export default function draw(k, f)`")
     return found
@@ -103,13 +134,25 @@ def clean(raw, words: list, seconds: float) -> tuple[dict | None, list[str]]:
             bad += [f"cut-out {c['name']}: {p}" for p in problems]
             continue
         w, h = int(num(c.get("w"), 100, 1400, 700)), int(num(c.get("h"), 100, 1400, 1100))
-        q = {"name": c["name"], "w": w, "h": h, "aspect": w / h, "frames": int(num(c.get("frames"), 1, 4, 1)),
+        q = {"name": c["name"], "w": w, "h": h, "aspect": w / h, "frames": int(num(c.get("frames"), 1, 6, 1)),
              "height": num(c.get("height"), 0.1, 6, 1.75), "at": xz(c.get("at")), "y": num(c.get("y"), 0, 4, 0),
              "flip": c.get("flip") is True, "wall": c.get("wall") is True, "fps": num(c.get("fps"), 2, 12, 7), "code": code}
         if q["wall"]:
             q["at"] = [num((c.get("at") or [0, 2])[0], -3.8, 3.8, 0), num((c.get("at") or [0, 2])[1], 0.3, 4.2, 2)]
         if isinstance(c.get("talk"), list) and len(c["talk"]) == 2:
             q["talk"] = [word_time(words, c["talk"][0], 0), word_time(words, c["talk"][1], seconds)]
+        if isinstance(c.get("against"), str):  # flush against a house's front door (a knock), or a 3D door
+            k = next((j for j, p in enumerate(props) if p.get("id") == c["against"] and p["type"] in ("house", "shopfront", "door")), None)
+            if k is None:
+                bad.append(f"cut-out {c['name']} stands against {c['against']!r}: give a house, shopfront or door prop that id")
+            else:
+                q["at"], q["against"] = list(front_door(props[k], k)), c["against"]
+        elif not q["wall"] and (hit := inside(q, props)):
+            bad.append(f"cut-out {c['name']} stands inside {hit}: move it in front of the building, or use `against` to put it at its door")
+        if "k.knock(" in code:  # shots aim at the knocker and his fist, left of the door at the canvas centre
+            q["focus"] = round(-.36 * q["height"] * 1100 / h, 3)
+        if isinstance(c.get("hits"), list):  # a squash on each hit (a knock, a stamp): seconds or spoken words
+            q["hits"] = sorted(word_time(words, x, 0) for x in c["hits"][:8])
         if isinstance(c.get("path"), list):
             q["path"] = sorted([[word_time(words, k[0], 0), num(k[1], -40, 40, 0), num(k[2], -60, 10, -1.5)]
                                 for k in c["path"] if isinstance(k, list) and len(k) == 3])
@@ -125,16 +168,27 @@ def clean(raw, words: list, seconds: float) -> tuple[dict | None, list[str]]:
         if not names or len(names) > 4 or any(not isinstance(n, str) or n not in ids for n in names):
             bad.append(f"a shot aims at {tg!r}: use cut-out names or prop ids (a list of up to 4 frames them all)")
             continue
-        shots.append({"at": num(word_time(words, sh.get("at", 0), 0), 0, seconds, 0), "target": tg,
-                      "distance": num(sh.get("distance"), 0.6, 14, 3.5), "height": num(sh.get("height"), -3, 6, 0),
-                      "turn": num(sh.get("turn"), -170, 170, 0), "fov": num(sh.get("fov"), 28, 72, 50),
-                      "move": sh.get("move") if sh.get("move") in MOVES else "cut"})
+        shot = {"at": num(word_time(words, sh.get("at", 0), 0), 0, seconds, 0), "target": tg,
+                "distance": num(sh.get("distance"), 0.6, 14, 3.5), "height": num(sh.get("height"), -3, 6, 0),
+                "turn": num(sh.get("turn"), -170, 170, 0), "fov": num(sh.get("fov"), 28, 72, 50),
+                "move": sh.get("move") if sh.get("move") in MOVES else "cut"}
+        if sh.get("over") is not None:  # over the shoulder of another thing than its target
+            if sh["over"] in ids and sh["over"] not in names:
+                shot["over"] = sh["over"]
+            else:
+                bad.append(f"a shot looks over {sh['over']!r}: use another cut-out name or prop id than its target")
+        shots.append(shot)
     shots.sort(key=lambda s: s["at"])
     if not shots:
         bad.append("no usable shot")
+    near = [sh["distance"] for sh in shots if not sh.get("over")]
+    if len(shots) == 1 or (len(shots) > 1 and not any(sh.get("over") for sh in shots) and max(near) < SPREAD * min(near)):
+        bad.append(f"the shots are all the same size ({', '.join(f'{d:g}' for d in near)} m): cut from a wide shot to a "
+                   f"close-up at least {SPREAD:g}x nearer on the strange word, or look over someone's shoulder (`over`)")
     effects = [{"type": e["type"], "at": word_time(words, e.get("at", 0), 0), **({"on": e["on"]} if e.get("on") in ids else {})}
                for e in raw.get("effects") or [] if isinstance(e, dict) and e.get("type") in EFFECTS]
-    stage = {"moment": str(raw.get("moment") or "the strangest moment").strip()[:200], "place": place, "mood": mood,
+    needs = [str(x).strip()[:40] for x in raw.get("needs") or [] if str(x).strip()][:8] if isinstance(raw.get("needs"), list) else []
+    stage = {"moment": str(raw.get("moment") or "the strangest moment").strip()[:200], "needs": needs, "place": place, "mood": mood,
              "colors": colors, "props": props[:24], "cutouts": cutouts[:6], "shots": shots[:5], "effects": effects[:8]}
     return stage, bad
 
@@ -175,7 +229,7 @@ def render(stage: dict, seconds: float, folder: Path) -> str | None:
                                                               if line.strip() and "node:internal" not in line)[:500]
     shutil.rmtree(PUBLIC, ignore_errors=True)
     shutil.copytree(folder / "cutouts", PUBLIC)
-    props = {"fps": FPS, "seconds": seconds, "dir": "opener3d/job", **{k: v for k, v in stage.items() if k != "moment"},
+    props = {"fps": FPS, "seconds": seconds, "dir": "opener3d/job", **{k: v for k, v in stage.items() if k not in ("moment", "needs")},
              "cutouts": [{k: v for k, v in c.items() if k not in ("code", "w", "h")} for c in stage["cutouts"]]}
     (folder / "props.json").write_text(json.dumps(props), encoding="utf-8")
     try:
@@ -191,10 +245,49 @@ def render(stage: dict, seconds: float, folder: Path) -> str | None:
     return None
 
 
-def sheet(clip: Path, seconds: float, out: Path) -> Path:
+def sheet_times(seconds: float, shots: list | None = None) -> list[float]:
+    """Six preview times: the first and last frame, just after each camera cut (the art director must see every
+    framing, not six evenly spaced frames that can all land in one shot), then even spacing for the rest."""
+    base = drawn_opener.sheet_times(seconds)
+    picked = [base[0], base[-1]] + [round(sh["at"] + .35, 2) for sh in (shots or [])[1:4] if sh["at"] + .35 < seconds - .15]
+    for t in base[1:-1]:
+        if len(picked) < 6 and all(abs(t - q) > .4 for q in picked):
+            picked.append(t)
+    return sorted(picked)[:6]
+
+
+def blends(stage: dict, folder: Path) -> list[str]:
+    """Cut-outs whose main colour melts into the room's wall behind them (McLean, 2026-11-05: the grocer's brown coat
+    on a brown wall). Compares each painted cut-out's most common non-ink colour with the wall colour."""
+    if stage["place"] != "room":
+        return []
+    wall = stage["colors"].get("wall") or "#7E5A40"
+    wr, wg, wb = (int(wall[i:i + 2], 16) for i in (1, 3, 5))
+    found = []
+    for c in stage["cutouts"]:
+        png = folder / "cutouts" / f"{c['name']}_0.png"
+        if c.get("wall") or not png.exists():
+            continue
+        im = Image.open(png).convert("RGBA").resize((120, 120 * c["h"] // max(1, c["w"])))
+        buckets: dict[tuple, list] = {}
+        for r, g, b, a in im.getdata():
+            if a > 200 and r + g + b > 120:  # opaque, not the ink lines
+                buckets.setdefault((r // 32, g // 32, b // 32), []).append((r, g, b))
+        if not buckets:
+            continue
+        main = max(buckets.values(), key=len)
+        r, g, b = (sum(px[i] for px in main) / len(main) for i in range(3))
+        lum = lambda r, g, b: .2126 * r + .7152 * g + .0722 * b  # noqa: E731
+        if ((r - wr) ** 2 + (g - wg) ** 2 + (b - wb) ** 2) ** .5 < 70 and abs(lum(r, g, b) - lum(wr, wg, wb)) < 40:
+            found.append(f"{c['name']}'s main colour (#{int(r):02X}{int(g):02X}{int(b):02X}) melts into the wall ({wall}): "
+                         f"give it a coat or wall colour that stands out in hue and brightness")
+    return found
+
+
+def sheet(clip: Path, seconds: float, out: Path, shots: list | None = None) -> Path:
     """Six frames of the clip side by side, the time on each (the art director's preview)."""
     tiles = []
-    for k, t in enumerate(drawn_opener.sheet_times(seconds)):
+    for k, t in enumerate(sheet_times(seconds, shots)):
         media_tools.ffmpeg("-y", "-ss", f"{t:.2f}", "-i", str(clip), "-frames:v", "1", "-vf", "scale=324:576", f"f{k}.png", cwd=out.parent)
         im = Image.open(out.parent / f"f{k}.png").convert("RGB")
         d = ImageDraw.Draw(im)
@@ -217,17 +310,19 @@ def plan(short: dict, words: list, seconds: float, folder: Path, repair: str | N
     for attempt in range(drawn_opener.FIXES + 1):
         raw = write(short, words, seconds, old, problems, preview)
         stage, problems = clean(raw, words, seconds)
-        if stage:  # an animal the moment names must be the kit's own part, as in the drawn opener
-            problems += drawn_opener.missing_parts({"moment": stage["moment"], "code": "\n".join(c["code"] for c in stage["cutouts"])},
-                                                   short["scenes"][0]["narration"])
+        if stage:  # animals and story objects the moment names must be the kit's own parts, as in the drawn opener
+            problems += drawn_opener.missing_parts(
+                {"moment": " ".join([stage["moment"], *stage["needs"]]), "code": "\n".join(c["code"] for c in stage["cutouts"])},
+                short["scenes"][0]["narration"], {p["type"] for p in stage["props"]},
+                [p.get("open", 0) for p in stage["props"] if p["type"] == "door"])
         old, preview, score = raw if isinstance(raw, dict) else old, None, 0.0
         if stage and not problems:
             err = render(stage, seconds, folder)
-            if err:
-                problems = [err]
-            else:
-                preview = sheet(folder / "opener.mp4", seconds, folder / f"sheet3d{attempt + 1}.png")
-                score, problems = drawn_opener.review(short, {"moment": stage["moment"]}, preview, seconds)
+            problems = [err] if err else blends(stage, folder)  # a measured blend goes back without an AI review
+            if not problems:
+                preview = sheet(folder / "opener.mp4", seconds, folder / f"sheet3d{attempt + 1}.png", stage["shots"])
+                needs = f" It must show: {', '.join(stage['needs'])}." if stage["needs"] else ""
+                score, problems = drawn_opener.review(short, {"moment": stage["moment"] + needs}, preview, seconds)
                 if score is None:
                     score, stage["unreviewed"] = drawn_opener.PASS, True
         if score >= drawn_opener.PASS:

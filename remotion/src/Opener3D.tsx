@@ -9,14 +9,17 @@ import {useThree} from '@react-three/fiber';
 import {useEffect, useMemo, useState} from 'react';
 import {AbsoluteFill, CalculateMetadataFunction, continueRender, delayRender, staticFile, useCurrentFrame, useVideoConfig} from 'remotion';
 import * as THREE from 'three';
+import {GLTFLoader} from 'three/examples/jsm/loaders/GLTFLoader.js';
+import {Bloom, DepthOfField, EffectComposer} from '@react-three/postprocessing';
 
 type XZ = [number, number];
 export type Cutout = {name: string; frames: number; height: number; aspect: number; at: XZ; y?: number; wall?: boolean;
-	flip?: boolean; talk?: [number, number]; fps?: number; path?: [number, number, number][]};
+	flip?: boolean; talk?: [number, number]; fps?: number; path?: [number, number, number][]; hits?: number[]; focus?: number};
 export type Prop = {type: string; id?: string; at: XZ; y?: number; wall?: boolean; turn?: number; size?: number; color?: string;
 	lit?: boolean; open?: number; length?: number};
-export type Shot = {at: number; target: string | string[]; distance: number; height?: number; turn?: number; fov?: number; move?: 'cut' | 'whip' | 'push'};
-export type Effect = {type: 'rings' | 'dust' | 'shafts' | 'burst' | 'shake' | 'rain' | 'snow'; at?: number; on?: string};
+export type Shot = {at: number; target: string | string[]; distance: number; height?: number; turn?: number; fov?: number; move?: 'cut' | 'whip' | 'push';
+	over?: string};
+export type Effect = {type: 'rings' | 'dust' | 'shafts' | 'burst' | 'shake' | 'rain' | 'snow' | 'jolt' | 'puff'; at?: number; on?: string};
 export type StageProps = {fps: number; seconds: number; dir: string; place: 'room' | 'street' | 'outdoors';
 	mood: 'day' | 'golden' | 'dusk' | 'night' | 'interior'; colors?: {wall?: string; floor?: string; ground?: string; sky?: string; trim?: string};
 	props: Prop[]; cutouts: Cutout[]; shots: Shot[]; effects: Effect[]};
@@ -26,11 +29,13 @@ export const calculateOpener3D: CalculateMetadataFunction<StageProps> = ({props}
 });
 
 const MOODS = {
-	day: {sky: '#BFD8FF', ground: '#6A5A40', hemi: 1.6, sun: '#FFF1D6', sunI: 2.6, sunPos: [-6, 9, 4], fill: 0.6, fog: '#C9DCEA', bg: '#9CC8F0', glow: 'rgba(255,240,200,0.10)'},
-	golden: {sky: '#FFD9A8', ground: '#5A3A28', hemi: 1.3, sun: '#FFB46A', sunI: 2.8, sunPos: [-8, 3.5, 2], fill: 0.5, fog: '#E8B88A', bg: '#F2B577', glow: 'rgba(255,190,110,0.16)'},
-	dusk: {sky: '#C88AA0', ground: '#3A2440', hemi: 1.0, sun: '#FF8A5A', sunI: 2.0, sunPos: [-8, 2, -4], fill: 0.4, fog: '#7A5A78', bg: '#E07A5A', glow: 'rgba(255,140,90,0.14)'},
-	night: {sky: '#5A6A9A', ground: '#141020', hemi: 0.6, sun: '#9EB6FF', sunI: 0.9, sunPos: [-5, 8, 2], fill: 0.25, fog: '#1A2040', bg: '#0E1430', glow: 'rgba(140,170,255,0.08)'},
-	interior: {sky: '#9DB4D8', ground: '#4A2C18', hemi: 1.8, sun: '#FFD49A', sunI: 2.6, sunPos: [-6, 4.6, -0.6], fill: 1.3, fog: '#3a2618', bg: '#120c08', glow: 'rgba(255,200,130,0.10)'},
+	// rim = a cool light from behind that separates things from the warm key light; card = the unlit cut-outs' tint
+	// (they stay bright and clean, never muddy; interior was one orange-brown wash on the McLean test, 2026-11-05)
+	day: {sky: '#BFD8FF', ground: '#6A5A40', hemi: 1.6, sun: '#FFF1D6', sunI: 2.6, sunPos: [-6, 9, 4], fill: 0.6, fog: '#C9DCEA', bg: '#9CC8F0', glow: 'rgba(255,240,200,0.10)', rim: '#CFE0FF', rimI: 0.8, card: '#FFFFFF'},
+	golden: {sky: '#FFD9A8', ground: '#5A3A28', hemi: 1.3, sun: '#FFB46A', sunI: 2.8, sunPos: [-8, 3.5, 2], fill: 0.5, fog: '#E8B88A', bg: '#F2B577', glow: 'rgba(255,190,110,0.16)', rim: '#8FB4FF', rimI: 1.0, card: '#FFF1E0'},
+	dusk: {sky: '#C88AA0', ground: '#3A2440', hemi: 1.0, sun: '#FF8A5A', sunI: 2.0, sunPos: [-8, 2, -4], fill: 0.4, fog: '#7A5A78', bg: '#E07A5A', glow: 'rgba(255,140,90,0.14)', rim: '#7A9CFF', rimI: 1.0, card: '#F2DCD8'},
+	night: {sky: '#5A6A9A', ground: '#141020', hemi: 0.6, sun: '#9EB6FF', sunI: 0.9, sunPos: [-5, 8, 2], fill: 0.25, fog: '#1A2040', bg: '#0E1430', glow: 'rgba(140,170,255,0.08)', rim: '#9EB6FF', rimI: 1.2, card: '#B8C2E0'},
+	interior: {sky: '#B4C6E8', ground: '#4A2C18', hemi: 1.5, sun: '#FFD49A', sunI: 2.6, sunPos: [-6, 4.6, -0.6], fill: 0.85, fog: '#2A2430', bg: '#120c08', glow: 'rgba(255,200,130,0.10)', rim: '#8FB0FF', rimI: 1.4, card: '#FFF4E6'},
 } as const;
 
 const BACK = -3.92; // the room's back wall (things with wall: true hang on it)
@@ -55,7 +60,7 @@ function cutPos(c: Cutout, t: number): THREE.Vector3 {
 /** The point a shot aims at: a cut-out's upper body / centre, or a prop's centre. */
 function targetOf(s: StageProps, name: string, t: number): THREE.Vector3 {
 	const c = s.cutouts.find((q) => q.name === name);
-	if (c) { const p = cutPos(c, t); return c.wall ? p : p.add(new THREE.Vector3(0, c.height * 0.62, 0)); }
+	if (c) { const p = cutPos(c, t); return c.wall ? p : p.add(new THREE.Vector3(c.focus || 0, c.height * 0.62, 0)); } // focus: an off-centre subject (k.knock)
 	const p = s.props.find((q) => q.id === name);
 	if (p) return p.wall ? new THREE.Vector3(p.at[0], p.at[1], BACK) : new THREE.Vector3(p.at[0], (p.y || 0) + 0.8 * (p.size || 1), p.at[1]);
 	return new THREE.Vector3(0, 1.4, -2);
@@ -76,10 +81,17 @@ function aim(s: StageProps, target: string | string[], fov: number, t: number) {
 function framing(s: StageProps, t: number) {
 	const shots = s.shots.length ? s.shots : [{at: 0, target: '', distance: 5}];
 	const one = (sh: Shot, at: number) => {
-		const fov = clamp(sh.fov || 50, 28, 72), {tg, fit} = aim(s, sh.target, fov, at);
-		const d = Math.max(sh.distance, fit) * (1 - 0.035 * Math.max(0, at - sh.at)); // every shot drifts in
-		const a = ((sh.turn || 0) * Math.PI) / 180;
-		const pos = new THREE.Vector3(tg.x + Math.sin(a) * d, tg.y + (sh.height || 0), tg.z + Math.cos(a) * d);
+		const fov = clamp(sh.fov || 50, 28, 72), {tg, fit} = aim(s, sh.target, fov, at), held = Math.max(0, at - sh.at);
+		const d = Math.max(sh.distance, fit) * (1 - 0.035 * held); // every shot drifts in...
+		const a = ((sh.turn || 0) * Math.PI) / 180 + 0.035 * held * ((sh.turn || 0) < 0 ? -1 : 1); // ...and orbits a little
+		let pos = new THREE.Vector3(tg.x + Math.sin(a) * d, tg.y + (sh.height || 0), tg.z + Math.cos(a) * d);
+		if (sh.over) { // over the shoulder: the camera stands just behind `over`, which fills the near side of the frame
+			const o = targetOf(s, sh.over, at), back = o.clone().sub(tg).setY(0).normalize();
+			const side = new THREE.Vector3(-back.z, 0, back.x).multiplyScalar((sh.turn || 0) < 0 ? -0.22 : 0.22);
+			pos = o.clone().add(back.multiplyScalar(1.15 - 0.03 * held)).add(side).add(new THREE.Vector3(0, 0.1 + (sh.height || 0), 0));
+			if (s.place === 'room') { pos.x = clamp(pos.x, -3.7, 3.7); pos.z = Math.min(pos.z, 4.4); pos.y = clamp(pos.y, 0.3, 4.1); }
+			return {pos, look: tg.clone().lerp(o, 0.1), fov};
+		}
 		if (s.place === 'room') { pos.x = clamp(pos.x, -3.7, 3.7); pos.z = Math.min(pos.z, 4.4); pos.y = clamp(pos.y, 0.3, 4.1); } else pos.y = Math.max(0.3, pos.y);
 		return {pos, look: tg, fov};
 	};
@@ -105,6 +117,98 @@ const CameraRig: React.FC<{s: StageProps; t: number}> = ({s, t}) => {
 	return null;
 };
 
+// The model library (Kenney, CC0; remotion/public/opener3d/models). Each one is scaled so its `fit` side matches the
+// prop's size in STAGE3D.md (x = width, y = height, z = depth), centred on its spot with its base on the floor, and
+// turned by `face` degrees so it fronts +z like every prop. Props not listed keep their box-built shape.
+const MODELS: Record<string, {file: string; fit: ['x' | 'y' | 'z', number]; face?: number}> = {
+	desk: {file: 'furniture/desk', fit: ['y', 0.86]}, table: {file: 'furniture/tableCloth', fit: ['y', 0.8]},
+	chair: {file: 'furniture/chair', fit: ['y', 1.0]},
+	cabinet: {file: 'furniture/bookcaseClosedDoors', fit: ['y', 1.8]}, bed: {file: 'furniture/bedDouble', fit: ['z', 2.0]},
+	lamp: {file: 'furniture/lampRoundTable', fit: ['y', 0.5]}, tree: {file: 'nature/tree_oak', fit: ['y', 4.6]},
+	rock: {file: 'nature/rock_largeA', fit: ['x', 1.1]}, lamppost: {file: 'town/lantern', fit: ['y', 3.3]},
+};
+const TOWN = ['wall-wood', 'wall-wood-door', 'wall-wood-window-shutters', 'wall-wood-window-glass', 'wall', 'wall-door',
+	'wall-window-shutters', 'wall-window-glass', 'roof-gable', 'overhang'].map((n) => `town/${n}`);
+type Library = Record<string, THREE.Object3D>;
+
+function useModels(s: StageProps): Library | null {
+	const files = useMemo(() => [...new Set([...s.props.map((p) => MODELS[p.type]?.file).filter(Boolean) as string[],
+		...(s.place === 'street' || s.props.some((p) => p.type === 'house' || p.type === 'shopfront') ? TOWN : [])])], []); // eslint-disable-line react-hooks/exhaustive-deps
+	const [lib, setLib] = useState<Library | null>(files.length ? null : {});
+	const [handle] = useState(() => (files.length ? delayRender('opener3d models') : 0));
+	useEffect(() => {
+		if (!files.length) return;
+		const loader = new GLTFLoader();
+		Promise.all(files.map((f) => loader.loadAsync(staticFile(`opener3d/models/${f}.glb`)).then((g) => [f, g.scene] as const).catch(() => [f, null] as const)))
+			.then((list) => { // a missing model leaves that prop box-built: never a failed render
+				const out: Library = {};
+				for (const [f, o] of list) if (o) { o.traverse((m) => { if ((m as THREE.Mesh).isMesh) { m.castShadow = true; m.receiveShadow = true; } }); out[f] = o; }
+				setLib(out);
+			});
+	}, []); // eslint-disable-line react-hooks/exhaustive-deps
+	useCommitted(lib && files.length ? lib : null, handle);
+	return lib;
+}
+
+/** A library model, scaled to fit and standing on its spot. */
+const RECOLOUR: Record<string, string> = {wood: '#6E4426', woodDark: '#4A2C18', metal: '#B08A3A'};
+const Model: React.FC<{src: THREE.Object3D; fit: ['x' | 'y' | 'z', number]; face?: number; color?: string}> = ({src, fit, face, color}) => {
+	const obj = useMemo(() => {
+		const o = src.clone(true), g = new THREE.Group();
+		o.traverse((m) => {
+			const mesh = m as THREE.Mesh;
+			if (!mesh.isMesh) return;
+			const one = (mat: THREE.Material) => {
+				const want = mat.name === 'wood' && color ? color : RECOLOUR[mat.name];
+				if (!want) return mat;
+				const c = (mat as THREE.MeshStandardMaterial).clone();
+				c.color = new THREE.Color(want);
+				return c;
+			};
+			mesh.material = Array.isArray(mesh.material) ? mesh.material.map(one) : one(mesh.material);
+		});
+		o.rotation.y = ((face || 0) * Math.PI) / 180;
+		g.add(o);
+		const box = new THREE.Box3().setFromObject(g), size = box.getSize(new THREE.Vector3()), c = box.getCenter(new THREE.Vector3());
+		o.position.set(-c.x, -box.min.y, -c.z);
+		const outer = new THREE.Group();
+		outer.add(g);
+		outer.scale.setScalar(fit[1] / Math.max(1e-3, size[fit[0]]));
+		return outer;
+	}, [src, fit, face, color]);
+	return <primitive object={obj} />;
+};
+
+/** A town building from the fantasy-town kit: `wide` wall modules across, two floors, a gable roof; fronts +z.
+ * `seed` varies doors, windows and timber vs plaster, so a street of them doesn't repeat. */
+const Building: React.FC<{lib: Library; wide: number; seed: number; unit?: number}> = ({lib, wide, seed, unit = 1.45}) => {
+	const pick = (k: number, list: string[]) => list[Math.floor(rand(seed * 13 + k) * list.length)];
+	const pre = rand(seed) > 0.45 ? 'town/wall-wood' : 'town/wall', door = seed % wide; // opener3d.py puts `against` cut-outs at this door
+	const cells: [string, number, number][] = [];
+	for (let x = 0; x < wide; x++) {
+		cells.push([x === door ? `${pre}-door` : pick(x, [`${pre}-window-shutters`, `${pre}-window-glass`, pre]), x, 0]);
+		cells.push([pick(x + 9, [`${pre}-window-shutters`, `${pre}-window-glass`, `${pre}-window-shutters`]), x, 1]);
+	}
+	if (!cells.every(([f]) => lib[f]) || !lib['town/roof-gable']) return null;
+	return <group scale={unit}>
+		{cells.map(([f, x, y], i) => <group key={i} position={[x - (wide - 1) / 2, y, 0]} rotation={[0, WALL_FACE, 0]}><primitive object={lib[f].clone(true)} /></group>)}
+		{Array.from({length: wide}, (_, x) => <group key={`r${x}`} position={[x - (wide - 1) / 2, 2, -0.05]} rotation={[0, ROOF_FACE, 0]}><primitive object={lib['town/roof-gable'].clone(true)} /></group>)}
+		<mesh position={[0, 1, -0.05]} castShadow receiveShadow><boxGeometry args={[wide, 2, 0.9]} /><meshStandardMaterial color="#6A5A48" /></mesh>
+	</group>;
+};
+// one wall module = one storey: 2.4 m, so a person and a door fit it (at 1.35 m a 2.2 m door covered the upstairs window)
+const HOUSE = 2.4; // = opener3d.HOUSE_UNIT
+const WALL_FACE = -Math.PI / 2, ROOF_FACE = 0; // the kit's wall modules face +x; turned to front +z
+
+/** Lets the render go on once `ready` has reached the three.js scene: the frame after the React commit, not the
+ * moment the files load (frame 0 of a live 2026-11-06 draft was captured before its set existed: empty sky). */
+function useCommitted(ready: unknown, handle: number) {
+	useEffect(() => {
+		if (!ready) return;
+		requestAnimationFrame(() => requestAnimationFrame(() => continueRender(handle)));
+	}, [ready]); // eslint-disable-line react-hooks/exhaustive-deps
+}
+
 function useTextures(dir: string, cutouts: Cutout[]): Record<string, THREE.Texture[]> | null {
 	const [tex, setTex] = useState<Record<string, THREE.Texture[]> | null>(null);
 	const [handle] = useState(() => delayRender('opener3d cut-outs'));
@@ -115,21 +219,30 @@ function useTextures(dir: string, cutouts: Cutout[]): Record<string, THREE.Textu
 				const out: Record<string, THREE.Texture[]> = {};
 				lists.forEach((l, i) => { l.forEach((x) => { x.colorSpace = THREE.SRGBColorSpace; x.anisotropy = 8; }); out[cutouts[i].name] = l; });
 				setTex(out);
-				continueRender(handle);
 			});
 	}, []); // eslint-disable-line react-hooks/exhaustive-deps
+	useCommitted(tex, handle);
 	return tex;
 }
 
 /** A flat drawn cut-out standing in the set: lit by the scene, casting a shadow in its own shape. */
-const Card: React.FC<{map: THREE.Texture; w: number; h: number; pos: THREE.Vector3; flip?: boolean; wall?: boolean}> = ({map, w, h, pos, flip, wall}) => {
+const Card: React.FC<{map: THREE.Texture; w: number; h: number; pos: THREE.Vector3; flip?: boolean; wall?: boolean; tint: string; squash: number}> = ({map, w, h, pos, flip, wall, tint, squash}) => {
 	const depth = useMemo(() => new THREE.MeshDepthMaterial({depthPacking: THREE.RGBADepthPacking, map, alphaTest: 0.5}), [map]);
-	return (
-		<mesh position={[pos.x, wall ? pos.y : pos.y + h / 2, pos.z]} scale={[flip ? -1 : 1, 1, 1]} castShadow={!wall} customDepthMaterial={depth}>
+	const sy = 1 - 0.07 * squash, sx = 1 + 0.05 * squash; // squashed from the feet: the base stays on the floor
+	return ( // unlit: the drawing keeps its own clean colours in any light (lit, the McLean grocer went brown on brown)
+		<mesh position={[pos.x, wall ? pos.y : pos.y + (h * sy) / 2, pos.z]} scale={[(flip ? -1 : 1) * sx, sy, 1]} castShadow={!wall} customDepthMaterial={depth}>
 			<planeGeometry args={[w, h]} />
-			<meshStandardMaterial map={map} transparent alphaTest={0.5} roughness={0.9} side={THREE.DoubleSide} />
+			<meshBasicMaterial map={map} color={tint} transparent alphaTest={0.5} side={THREE.DoubleSide} />
 		</mesh>
 	);
+};
+
+/** 0..1 over a short hit (a knock, a stamp) at each of `times`: up fast, down slower. */
+const hitAt = (t: number, times: number[] = [], d = 0.22) => times.reduce((m, h) => { const u = (t - h) / d; return u < 0 || u > 1 ? m : Math.max(m, u < 0.25 ? u / 0.25 : (1 - u) / 0.75); }, 0);
+/** A thing's sideways jolt (a door that's knocked on), from the stage's `jolt` effects aimed at it. */
+const joltOf = (s: StageProps, name: string, t: number) => {
+	const k = hitAt(t, s.effects.filter((e) => e.type === 'jolt' && e.on === name).map((e) => e.at || 0), 0.3);
+	return k ? Math.sin(t * 90) * 0.025 * k : 0;
 };
 
 const Box: React.FC<{size: [number, number, number]; position: [number, number, number]; color: string; rough?: number; glow?: string}> = ({size, position, color, rough = 0.8, glow}) => (
@@ -142,8 +255,13 @@ const Box: React.FC<{size: [number, number, number]; position: [number, number, 
 const WOOD = '#6A3E1E', DARK = '#2A1A10', BOOKS = ['#7A2E22', '#2E4A3A', '#8A6A3A', '#3A3550', '#5A2A2A', '#2A3A4A'];
 
 /** The prop library: each type built from boxes, cylinders and spheres, origin on the floor at its centre, facing +z. */
-const PropMesh: React.FC<{p: Prop; night: boolean; i: number}> = ({p, night, i}) => {
-	const c = p.color, lit = p.lit ?? night;
+const PropMesh: React.FC<{p: Prop; night: boolean; i: number; lib: Library}> = ({p, night, i, lib}) => {
+	const c = p.color, lit = p.lit ?? night, model = MODELS[p.type];
+	if (model && lib[model.file]) {
+		const glow = p.type === 'lamp' && lit ? <pointLight position={[0, 0.42, 0.1]} intensity={6} distance={6} decay={1.5} color="#FFB060" />
+			: p.type === 'lamppost' && lit ? <pointLight position={[0, 3.0, 0.2]} intensity={8} distance={9} decay={1.5} color="#FFC870" /> : null;
+		return <><Model src={lib[model.file]} fit={model.fit} face={model.face} color={c} />{glow}</>;
+	}
 	switch (p.type) {
 		case 'desk': return <><Box size={[2.3, 0.08, 1.0]} position={[0, 0.82, 0]} color={c || WOOD} rough={0.4} /><Box size={[2.2, 0.78, 0.9]} position={[0, 0.4, 0]} color={c || '#6A3E1E'} rough={0.5} /></>;
 		case 'table': return <><Box size={[1.6, 0.07, 0.9]} position={[0, 0.76, 0]} color={c || WOOD} rough={0.4} />{[[-0.7, -0.35], [0.7, -0.35], [-0.7, 0.35], [0.7, 0.35]].map(([x, z], k) => <Box key={k} size={[0.07, 0.74, 0.07]} position={[x, 0.37, z]} color={c || WOOD} />)}</>;
@@ -165,12 +283,13 @@ const PropMesh: React.FC<{p: Prop; night: boolean; i: number}> = ({p, night, i})
 		case 'cabinet': return <><Box size={[1.0, 1.8, 0.5]} position={[0, 0.9, 0]} color={c || '#3B2418'} /><Box size={[0.02, 1.6, 0.02]} position={[0, 0.9, 0.26]} color={DARK} /></>;
 		case 'counter': return <><Box size={[3, 1.0, 0.7]} position={[0, 0.5, 0]} color={c || '#5A3820'} /><Box size={[3.1, 0.06, 0.8]} position={[0, 1.03, 0]} color={WOOD} rough={0.35} /></>;
 		case 'fireplace': return <><Box size={[1.6, 1.3, 0.45]} position={[0, 0.65, 0]} color={c || '#8A8070'} /><Box size={[0.9, 0.7, 0.05]} position={[0, 0.45, 0.21]} color="#120a06" glow="#FF7A2A" /><pointLight position={[0, 0.5, 0.6]} intensity={4} distance={5} decay={1.5} color="#FF8A3A" /></>;
-		case 'house': {
+		case 'house': if (lib['town/roof-gable']) return <Building lib={lib} wide={3} seed={i + 1} unit={HOUSE} />; {
 			const h = 3.2, col = c || ['#B5563C', '#C9A878', '#7A8A6A', '#8A6A5A', '#D9C7A0'][i % 5];
 			return <><Box size={[4, h, 4]} position={[0, h / 2, 0]} color={col} /><mesh position={[0, h + 0.7, 0]} castShadow><cylinderGeometry args={[2.9, 2.9, 4.1, 3, 1, false, Math.PI / 2]} /><meshStandardMaterial color="#5A2E22" roughness={0.8} /></mesh>
 				<Box size={[0.9, 1.8, 0.06]} position={[0, 0.9, 2.02]} color="#3A200F" />{[-1.2, 1.2].map((x) => <Box key={x} size={[0.8, 0.8, 0.05]} position={[x, 2.1, 2.02]} color={lit ? '#FFD27A' : '#9CB8C8'} glow={lit ? '#FFB050' : undefined} />)}</>;
 		}
-		case 'shopfront': return <><Box size={[4, 3.6, 3]} position={[0, 1.8, 0]} color={c || '#2E4A3A'} /><Box size={[3, 1.6, 0.06]} position={[0, 1.4, 1.52]} color={lit ? '#FFD27A' : '#B8CCD8'} glow={lit ? '#FFB050' : undefined} /><Box size={[4.2, 0.12, 1.1]} position={[0, 2.6, 1.9]} color="#8A2E22" /></>;
+		case 'shopfront': if (lib['town/roof-gable']) return <><Building lib={lib} wide={3} seed={i + 7} unit={HOUSE} /><Box size={[3 * HOUSE + 0.2, 0.1, 1.2]} position={[0, HOUSE * 0.95, HOUSE * 0.5 + 0.6]} color={c || '#8A2E22'} /></>;
+			return <><Box size={[4, 3.6, 3]} position={[0, 1.8, 0]} color={c || '#2E4A3A'} /><Box size={[3, 1.6, 0.06]} position={[0, 1.4, 1.52]} color={lit ? '#FFD27A' : '#B8CCD8'} glow={lit ? '#FFB050' : undefined} /><Box size={[4.2, 0.12, 1.1]} position={[0, 2.6, 1.9]} color="#8A2E22" /></>;
 		case 'tree': return <><mesh position={[0, 1.1, 0]} castShadow><cylinderGeometry args={[0.15, 0.22, 2.2, 10]} /><meshStandardMaterial color="#5A3A22" /></mesh>{[[0, 2.6, 0, 1.1], [-0.6, 2.2, 0.2, 0.8], [0.6, 2.3, -0.1, 0.85]].map(([x, y, z, r], k) => <mesh key={k} position={[x, y, z]} castShadow><icosahedronGeometry args={[r, 1]} /><meshStandardMaterial color={c || '#4E7A3A'} roughness={0.9} flatShading /></mesh>)}</>;
 		case 'rock': return <mesh position={[0, 0.3, 0]} castShadow receiveShadow><dodecahedronGeometry args={[0.5, 0]} /><meshStandardMaterial color={c || '#8A8478'} flatShading /></mesh>;
 		case 'fence': { const L = p.length || 4; return <>{Array.from({length: Math.floor(L / 0.8) + 1}, (_, k) => <Box key={k} size={[0.08, 1.0, 0.08]} position={[-L / 2 + k * 0.8, 0.5, 0]} color={c || '#8A6A44'} />)}<Box size={[L, 0.07, 0.05]} position={[0, 0.75, 0]} color={c || '#8A6A44'} /><Box size={[L, 0.07, 0.05]} position={[0, 0.4, 0]} color={c || '#8A6A44'} /></>; }
@@ -179,7 +298,7 @@ const PropMesh: React.FC<{p: Prop; night: boolean; i: number}> = ({p, night, i})
 	}
 };
 
-const Place: React.FC<{s: StageProps; bg: string}> = ({s, bg}) => {
+const Place: React.FC<{s: StageProps; bg: string; lib: Library}> = ({s, bg, lib}) => {
 	const col = s.colors || {};
 	if (s.place === 'room') {
 		const wall = col.wall || '#7E5A40', trim = col.trim || '#3B2418';
@@ -195,7 +314,10 @@ const Place: React.FC<{s: StageProps; bg: string}> = ({s, bg}) => {
 	const ground = col.ground || (s.place === 'street' ? '#9A8A70' : '#6F8A4A'), night = s.mood === 'night';
 	return <>
 		<mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, 0, -20]} receiveShadow><planeGeometry args={[80, 80]} /><meshStandardMaterial color={ground} roughness={1} /></mesh>
-		{s.place === 'street'
+		{s.place === 'street' && lib['town/roof-gable'] // rows of town buildings, each different
+			? Array.from({length: 12}, (_, k) => { const side = k % 2 ? 1 : -1, z = 1 - Math.floor(k / 2) * 7.8, wide = 2 + Math.floor(rand(k + 40) * 2);
+				return <group key={k} position={[side * 5.4, 0, z]} rotation={[0, -side * Math.PI / 2, 0]}><Building lib={lib} wide={wide} seed={k + 20} unit={2.5} /></group>; })
+			: s.place === 'street'
 			? Array.from({length: 12}, (_, k) => { const side = k % 2 ? 1 : -1, z = 1 - Math.floor(k / 2) * 4.6, h = 2.8 + rand(k) * 1.6;
 				return <group key={k} position={[side * 5.2, 0, z]} rotation={[0, -side * Math.PI / 2, 0]}><Box size={[4.4, h, 3]} position={[0, h / 2, 0]} color={['#B5563C', '#C9A878', '#7A8A6A', '#8A6A5A', '#5A6A8A', '#D9C7A0'][k % 6]} />
 					<Box size={[4.6, 0.25, 3.2]} position={[0, h + 0.12, 0]} color="#3A2418" />{[-1.2, 0, 1.2].map((x) => <Box key={x} size={[0.7, 0.9, 0.05]} position={[x, h * 0.62, 1.52]} color={night ? '#FFD27A' : '#9CB8C8'} glow={night ? '#FFB050' : undefined} />)}
@@ -235,7 +357,7 @@ const Particles: React.FC<{kind: 'dust' | 'rain' | 'snow'; t: number; centre: TH
 		pts[i * 3 + 2] = centre.z - 4 + rand(i + 99) * 7;
 	}
 	geo.setAttribute('position', new THREE.BufferAttribute(pts, 3));
-	const look = {dust: ['#FFD9A0', 0.014, 0.6], rain: ['#B8C8E0', 0.02, 0.55], snow: ['#FFFFFF', 0.04, 0.9]}[kind] as [string, number, number];
+	const look = {dust: ['#FFD9A0', 0.009, 0.45], rain: ['#B8C8E0', 0.02, 0.55], snow: ['#FFFFFF', 0.04, 0.9]}[kind] as [string, number, number];
 	return <points geometry={geo}><pointsMaterial color={look[0]} size={look[1]} transparent opacity={look[2]} blending={THREE.AdditiveBlending} depthWrite={false} fog={false} /></points>;
 };
 
@@ -265,17 +387,37 @@ const Burst: React.FC<{at: number; pos: THREE.Vector3; t: number}> = ({at, pos, 
 		return <mesh key={i} position={[Math.cos(a) * r, Math.sin(a) * r, 0]} rotation={[0, 0, a]}><boxGeometry args={[0.28 * (1 - u) + 0.05, 0.03, 0.01]} /><meshBasicMaterial color="#FFE7A0" transparent opacity={1 - u} blending={THREE.AdditiveBlending} depthWrite={false} fog={false} /></mesh>; })}</group>;
 };
 
+/** A puff of dust rolling out of a point (a knock on a door, a landing, a stamp): soft sprites, in the world. */
+const Puff: React.FC<{at: number; pos: THREE.Vector3; t: number; color: string}> = ({at, pos, t, color}) => {
+	const sprite = useMemo(() => {
+		const c = document.createElement('canvas'); c.width = c.height = 64;
+		const g = c.getContext('2d')!, rg = g.createRadialGradient(32, 32, 0, 32, 32, 32);
+		rg.addColorStop(0, 'rgba(255,255,255,0.9)'); rg.addColorStop(1, 'rgba(255,255,255,0)');
+		g.fillStyle = rg; g.fillRect(0, 0, 64, 64);
+		return new THREE.CanvasTexture(c);
+	}, []);
+	const u = (t - at) / 0.8;
+	if (u < 0 || u > 1) return null;
+	return <group position={[pos.x, pos.y, pos.z + 0.15]}>{Array.from({length: 12}, (_, i) => {
+		const a = rand(i + 3) * Math.PI * 2, r = (0.06 + rand(i + 7) * 0.18) * Math.sqrt(u), z = (0.1 + rand(i + 11) * 0.14) * (0.6 + u); // small: it must not hide a face
+		return <sprite key={i} position={[Math.cos(a) * r, Math.sin(a) * r * 0.6 + u * 0.15, rand(i) * 0.1]} scale={[z, z, 1]}>
+			<spriteMaterial map={sprite} color={color} transparent opacity={(1 - u) * 0.45} depthWrite={false} fog={false} /></sprite>; })}</group>;
+};
+
 export const Opener3D: React.FC<StageProps> = (s) => {
 	const frame = useCurrentFrame();
 	const {fps, width, height} = useVideoConfig();
 	const t = frame / fps, m = MOODS[s.mood] || MOODS.interior, night = s.mood === 'night';
-	const tex = useTextures(s.dir, s.cutouts);
+	const tex = useTextures(s.dir, s.cutouts), lib = useModels(s);
 	const win = s.props.find((p) => p.type === 'window');
 	const outdoors = s.place !== 'room';
 	const first = s.shots[0]?.target || '', centre = targetOf(s, Array.isArray(first) ? first[0] : first, t);
+	const focus = framing(s, t).look; // the lens focuses on what the shot aims at; the rest goes soft
 	return (
 		<AbsoluteFill style={{background: m.bg}}>
-			<ThreeCanvas width={width} height={height} shadows gl={{antialias: true}} camera={{fov: 50, near: 0.05, far: 200}}>
+			{/* the canvas mounts only when every model and drawing is loaded: it draws on mount and on frame changes,
+			    so pieces arriving later were missing from the first frames (frame 0 of the live tests: empty sky) */}
+			{lib && tex ? <ThreeCanvas width={width} height={height} shadows gl={{antialias: true}} camera={{fov: 50, near: 0.05, far: 200}}>
 				<CameraRig s={s} t={t} />
 				<fog attach="fog" args={[m.fog, outdoors ? 14 : 7, outdoors ? 70 : 20]} />
 				<hemisphereLight args={[m.sky, m.ground, m.hemi]} />
@@ -283,27 +425,38 @@ export const Opener3D: React.FC<StageProps> = (s) => {
 					shadow-mapSize-width={2048} shadow-mapSize-height={2048} shadow-camera-left={-8} shadow-camera-right={8}
 					shadow-camera-top={8} shadow-camera-bottom={-8} shadow-camera-far={40} shadow-bias={-0.0004} />
 				<directionalLight position={[1.5, 2.5, 6]} intensity={m.fill} color="#FFE2C4" />
-				<Place s={s} bg={m.bg} />
-				{s.props.map((p, i) => (
-					<group key={i} position={p.wall ? [p.at[0], p.at[1], BACK] : [p.at[0], p.y || 0, p.at[1]]} rotation={[0, ((p.turn || 0) * Math.PI) / 180, 0]} scale={p.size || 1}>
-						<PropMesh p={p} night={night} i={i} />
-					</group>
-				))}
+				<directionalLight position={[3, 5, -8]} intensity={m.rimI} color={m.rim} />
+				<Place s={s} bg={m.bg} lib={lib} />
+				{s.props.map((p, i) => {
+					const j = p.id ? joltOf(s, p.id, t) : 0;
+					return <group key={i} position={p.wall ? [p.at[0] + j, p.at[1], BACK] : [p.at[0] + j, p.y || 0, p.at[1]]} rotation={[0, ((p.turn || 0) * Math.PI) / 180, 0]} scale={p.size || 1}>
+						<PropMesh p={p} night={night} i={i} lib={lib} />
+					</group>;
+				})}
 				{s.cutouts.filter((c) => c.wall).map((c) => <PictureLight key={`pl-${c.name}`} at={cutPos(c, 0)} />)}
-				{tex ? s.cutouts.map((c) => {
-					const list = tex[c.name], talking = c.talk && t >= c.talk[0] && t < c.talk[1];
+				{s.cutouts.map((c) => {
+					const list = tex[c.name], talking = c.talk ? t >= c.talk[0] && t < c.talk[1] : list.length > 1; // drawings cycle all the time unless `talk` limits them (a live knock froze: no talk set)
 					const f = talking ? Math.floor(t * (c.fps || 7)) % list.length : 0;
-					return <Card key={c.name} map={list[f]} w={c.height * c.aspect} h={c.height} pos={cutPos(c, t)} flip={c.flip} wall={c.wall} />;
-				}) : null}
+					const pos = cutPos(c, t);
+					pos.x += joltOf(s, c.name, t);
+					return <Card key={c.name} map={list[f]} w={c.height * c.aspect} h={c.height} pos={pos} flip={c.flip} wall={c.wall} tint={m.card} squash={hitAt(t, c.hits)} />;
+				})}
 				{s.effects.map((e, i) => {
 					const pos = targetOf(s, e.on || '', t);
 					if (e.type === 'rings') return <Rings key={i} at={e.at || 0} pos={pos} t={t} />;
 					if (e.type === 'burst') return <Burst key={i} at={e.at || 0} pos={pos} t={t} />;
+					if (e.type === 'puff') return <Puff key={i} at={e.at || 0} pos={pos} t={t} color={night ? '#8A90A8' : '#E8DCC8'} />;
 					if (e.type === 'shafts' && win) return <Shafts key={i} from={new THREE.Vector3(win.at[0], win.wall ? win.at[1] : 2.3, win.wall ? BACK : win.at[1])} t={t} />;
 					if (e.type === 'dust' || e.type === 'rain' || e.type === 'snow') return <Particles key={i} kind={e.type} t={t} centre={centre} />;
 					return null;
 				})}
-			</ThreeCanvas>
+				{/* the lens: depth of field (the reference's close-ups blur the set behind the subject) and a soft
+					    glow on lamps, windows and fire */}
+					<EffectComposer multisampling={4}>
+						<DepthOfField target={[focus.x, focus.y, focus.z]} worldFocusRange={outdoors ? 3.5 : 1.6} bokehScale={outdoors ? 3 : 4} />
+						<Bloom luminanceThreshold={0.82} luminanceSmoothing={0.2} intensity={0.45} mipmapBlur />
+					</EffectComposer>
+			</ThreeCanvas> : null}
 			{/* grade: the mood's glow from the light side, a vignette */}
 			<AbsoluteFill style={{background: `radial-gradient(ellipse at 20% 25%, ${m.glow}, rgba(0,0,0,0) 55%), radial-gradient(ellipse at 50% 50%, rgba(0,0,0,0) 55%, rgba(0,0,0,0.5) 100%)`}} />
 		</AbsoluteFill>

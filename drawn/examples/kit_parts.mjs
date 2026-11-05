@@ -38,6 +38,7 @@ export default function scene(k, t) {
     k.crate(160, 900, 180, 130, { label: "TEA" }); k.barrel(400, 900); k.sack(600, 900, 1, { label: "FLOUR" }); k.bottle(800, 900); k.banknote(940, 820, .8, .3);
     k.paper(200, 500, .8, { title: "DEED", seal: true, rot: -.1 }); k.clock(480, 450, 90); k.sign(800, 650, "FOR SALE"); k.fire(980, 1100, .8);
     k.bubble(540, 220, "WHAT?!", { size: 50 }); k.question(900, 260, 100); k.exclaim(140, 230, 100);
+    k.knock(780, 1880, .95, { person: { hat: "kepi", coat: k.C.navy, hold: ["letter", null] } });
     k.glint(400, 1250, 50, page + .1); k.burst(540, 700, 120, page + .1); k.puff(940, 1060, 1, page); k.splash(300, 1150, page + .1); k.sweat(560, 380, page + .05);
   }
 }

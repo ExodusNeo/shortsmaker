@@ -342,6 +342,30 @@ Order (owner, 2026-11-05): 3D opener -> drawn opener -> motion graphic (2 fixes)
   light; a portrait frame needs a wide vertical fov (~60) for a set to read. Tests: `tests	est_opener3d.py`
   (`--look` renders the manual's example to `test_renders/opener3d/example/`); `test_drawn_opener.py` switches
   3D off.
+  **Closer to the reference (owner, 2026-11-06, after the McLean test knocked on an open door with no letter):**
+  story sense: the stage lists `needs`; `drawn_opener.missing_parts` (both openers) also rejects a story object the
+  moment/narration names but nothing draws (`KIT_OBJECTS`: a messenger's letter, a knock's door, phone, radio) and a
+  knock on an open door (kit `open` or a 3D door's); the art director counts nonsense actions, a subject melting into
+  its background and overlay-like rings as real flaws. `opener3d.blends` measures each cut-out's main colour against
+  the room wall and sends a blend back before any review. Shots: sizes must differ `SPREAD` (1.5x) unless one looks
+  `over` someone's shoulder; the camera also orbits slowly; the preview sheet takes a frame just after each cut
+  (`opener3d.sheet_times`). Look: real CC0 models (Kenney furniture / nature / fantasy-town kits, copied into
+  `remotion/public/opener3d/models/`, sources in git-ignored `assets_src/`; `MODELS` in Opener3D.tsx scales each to
+  the manual's size, recolours pale pine to dark wood), streets and houses built from town wall/roof modules
+  (`Building`), cut-outs unlit with a mood tint and no paper grain (`cutouts.mjs`), a cool rim light, a less brown
+  interior, depth of field on the shot's target and bloom (@react-three/postprocessing 3.0.4 + postprocessing 6.37.8).
+  Motion: cut-out `hits` (squash on a knock/stamp), `jolt` and `puff` effects (a knocked door shakes and puffs dust),
+  rings only for real broadcasts/bells, up to 6 drawings at up to 12 fps. Kit `k.person` `hold: [left, right]`
+  ('letter', 'paper', 'cup', 'bottle', 'coin', 'moneybag': the hand drawn over it; counts for `missing_parts`).
+  A cut-out may not draw scenery (`opener3d.SCENERY`: k.house, k.room, k.window...): a live draft painted the house
+  front onto one 3 m board. Kit `k.knock(x, y, s, {person, door, phase})`: a knocker beside a closed door, the fist
+  landing on the panel with impact lines (live drafts knocked on air or froze the arm); cut-outs with 2+ drawings
+  cycle all the time unless `talk` limits them. A knock at a house: the cut-out draws `k.knock` (door at the canvas
+  centre) and stands
+  `"against": "<house id>"`, which `opener3d.front_door` puts flush on the house's own door (Building's door module is
+  `seed % 3`); a floor cut-out inside a house's walls is rejected (`opener3d.inside`). Recipe in STAGE3D.md. Fixed: the 3D canvas mounts only once models and drawings are loaded (it draws on mount
+  and frame changes, so frames 0-5 rendered empty sky and every live draft lost points for it). Not built: jointed puppets (parts posed at
+  30 fps) and golden reference frames for the reviewer (no approved 3D opener to anchor on yet).
   Live runs 2026-11-05: Claude 5/6/6 on the eagle (desk front filled the frame, a paper floated) -> manual rules;
   Gemini passed the eagle first draft (it copied the example: same story); McLean failed 4/4/4 (fist through the 3D
   door, grocer cut off) -> things that touch go in ONE cut-out (kit `reach`), shots may aim at a list of names (the

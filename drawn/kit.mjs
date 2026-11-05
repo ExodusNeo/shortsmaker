@@ -229,9 +229,15 @@ export function makeKit(ctx, t, words = [], light = lightOf()) {
       const [ux, uy] = d(a), [fx, fy] = d(a + b), lx = sx + ux * 42 + fx * 40, ly = -166 + uy * 42 + fy * 40;
       return [x + flip * s * lx, y + bob * s + s * ly]; };
     const hands = [hand(la, lb, -1, -22), hand(ra, rb, 1, 22)];
+    // `hold: [left, right]`: a thing gripped in that hand, the hand drawn over it (a live 3D draft's letter floated
+    // beside the messenger's empty hand, 2026-11-06)
+    (o.hold || []).forEach((thing, j) => { if (HOLD[thing]) HOLD[thing](hands[j][0], hands[j][1], s); });
     for (const [hx, hy2] of hands) { k.paint(ellPts(hx, hy2, 7 * s, 7 * s, 10), o.skin || SKIN[0]); p.ring(hx, hy2, 7 * s, 7 * s, { w: 2.4 }); }   // opaque: washed hands went muddy on dark coats
     return { head: [x, y + bob * s + s * hy], top: [x, y + bob * s + s * (hy - 50)], hands };
   };
+  const HOLD = { letter: (hx, hy, s) => k.letter(hx, hy + 6 * s, s * .26, -.12), paper: (hx, hy, s) => k.paper(hx, hy + 22 * s, s * .28),
+    cup: (hx, hy, s) => k.cup(hx, hy + 18 * s, s * .35), bottle: (hx, hy, s) => k.bottle(hx, hy + 30 * s, s * .35),
+    coin: (hx, hy, s) => k.coin(hx, hy - 6 * s, 9 * s), moneybag: (hx, hy, s) => k.moneybag(hx, hy + 52 * s, s * .4) };
   k.crowd = (x0, x1, y, count = 5, s = .8, o = {}) => {
     const out = [];
     for (let i = 0; i < count; i++) {
@@ -501,6 +507,19 @@ export function makeKit(ctx, t, words = [], light = lightOf()) {
     if (op < .7) for (const [py, ph] of [[-h + 24, 110], [-140, 110]]) p.poly(at(x, y, s, [[-w / 2 + 18, py], [-w / 2 + 18, py + ph], [r - 18, py + ph], [r - 18, py]]), { w: 2.6 });
     const knob = [x + (r - 20) * s, y - 140 * s]; k.disc(knob[0], knob[1], 8 * s, C.brass, { w: 2.4 });
     return { knob, top: y - (h + 14) * s, left: x - (w / 2 + 14) * s, right: x + (w / 2 + 14) * s };
+  };
+  // a person knocking on a CLOSED door, the fist landing ON its panel with impact lines (door centred on x, floor y).
+  // Live McLean drafts (2026-11-06) knocked on air, on open doors, froze the arm or hid the letter: this does it right.
+  // o.phase 0..1 = where in the knock (0 = fist on the door; default: 2.5 knocks a second from t); o.person = the
+  // knocker's k.person options (hat, coat, hold: ['letter', null]...); o.door = k.door options (never `open`).
+  k.knock = (x, y, s = 1, o = {}) => {
+    const d = k.door(x, y, s, { ...(o.door || {}), open: 0 });
+    const ph = o.phase ?? ((t * 2.5) % 1), out = 36 * s * Math.sin(ph * Math.PI);  // a clear swing: a small one read as a frozen arm
+    const cx = x - 40 * s, cy = y - 150 * s;                            // the contact point on the door's left panel
+    const pp = k.person(x - 112 * s, y, s * .88, { still: true, ...(o.person || {}), flip: false, reach: [null, [cx - out, cy]] });
+    if (out < 6 * s) for (const [dx, dy] of [[14, -20], [18, 0], [14, 20]])  // the hit: ink lines off the fist
+      k.ink([[cx + dx * s * .5, cy + dy * s * .5], [cx + dx * s * 1.3, cy + dy * s * 1.3]], { w: 2.4 * s, color: C.ink });
+    return { door: d, person: pp, contact: [cx, cy] };
   };
   k.bed = (x, y, s = 1, o = {}) => {                                   // stands on (x, y), headboard on the left
     part(); if (o.canopy) for (const px of [-215, 215]) p.stroke(at(x, y, s, [[px, 0], [px, -420]]), { w: 10, color: C.wood });

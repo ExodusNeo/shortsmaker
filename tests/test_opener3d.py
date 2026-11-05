@@ -60,7 +60,92 @@ def test_numbers_are_clamped():
     raw["cutouts"][0].update(frames=40, w=99999)
     stage, _ = opener3d.clean(raw, WORDS, SECONDS)
     assert stage["shots"][0]["distance"] == 14 and stage["shots"][0]["fov"] == 28
-    assert stage["cutouts"][0]["frames"] == 4 and stage["cutouts"][0]["w"] == 1400
+    assert stage["cutouts"][0]["frames"] == 6 and stage["cutouts"][0]["w"] == 1400
+
+
+def test_shot_sizes_must_change():
+    raw = example()
+    raw["shots"][1]["distance"] = 3.5  # 3.9 vs 3.5: one framing twice (the McLean draft used 1.95-2.35 m)
+    assert any("same size" in p for p in opener3d.clean(raw, WORDS, SECONDS)[1])
+    raw["shots"][1]["over"] = "amb"  # looking past the ambassador at the eagle is a new size
+    stage, bad = opener3d.clean(raw, WORDS, SECONDS)
+    assert bad == [] and stage["shots"][1]["over"] == "amb", bad
+    raw["shots"][1]["over"] = "eagle"  # over its own target: no
+    assert any("looks over" in p for p in opener3d.clean(raw, WORDS, SECONDS)[1])
+
+
+def test_hits_and_world_effects():
+    raw = example()
+    raw["cutouts"][0]["hits"] = ["eagle", 1.0]
+    raw["effects"] += [{"type": "puff", "at": "eagle", "on": "amb"}, {"type": "jolt", "at": 1.0, "on": "amb"}]
+    stage, bad = opener3d.clean(raw, WORDS, SECONDS)
+    assert bad == [] and stage["cutouts"][0]["hits"] == [1.0, 2.311], bad
+    assert [e["type"] for e in stage["effects"]][-2:] == ["puff", "jolt"]
+
+
+KNOCK = "export default function draw(k, f) { const d = k.door(390, 1170, 3.8, {open: %s}); k.person(540, 1170, 3, {reach: [[d.knob[0], d.knob[1] - 135], null]}); }"
+
+
+def test_a_knock_needs_a_closed_door_and_a_messenger_his_letter():
+    """The 3D McLean opener (2026-11-05): a messenger with empty hands knocking on a half-open door."""
+    narration = "A messenger knocked on his door."
+    found = drawn_opener.missing_parts({"moment": "the messenger knocks", "code": KNOCK % "0.56"}, narration)
+    assert any("OPEN door" in p for p in found) and any("letter" in p for p in found), found
+    ok = KNOCK % "0" + " k.letter(1, 2, 1);"
+    assert drawn_opener.missing_parts({"moment": "the messenger knocks", "code": ok}, narration) == []
+    # a 3D door prop counts as the door, and its own `open` is checked too
+    code = "export default function draw(k, f) { k.person(1, 2, 3, {}); k.letter(1, 2, 1); }"
+    assert drawn_opener.missing_parts({"moment": "he knocks", "code": code}, "", {"door"}, [0]) == []
+    assert any("OPEN" in p for p in drawn_opener.missing_parts({"moment": "he knocks", "code": code}, "", {"door"}, [0.6]))
+
+
+def test_hold_counts_as_drawing_the_letter_and_scenery_stays_3d():
+    code = "export default function draw(k, f) { k.person(1, 2, 3, {hold: [null, 'letter']}); }"
+    assert drawn_opener.missing_parts({"moment": "the messenger waits", "code": code}) == []
+    assert any("letter" in p for p in drawn_opener.missing_parts({"moment": "the messenger waits", "code": code.replace("letter", "cup")}))
+    assert any("scenery" in p and "k.house" in p for p in opener3d.lint_cutout(
+        "export default function draw(k, f) { k.house(1, 2, 3); k.person(1, 2, 3, {}); }"))
+    assert opener3d.lint_cutout("export default function draw(k, f) { const d = k.door(1, 2, 3); k.person(1, 2, 3, {}); }") == []
+    knock = "export default function draw(k, f) { k.knock(600, 1080, 3.4, {person: {hold: ['letter', null]}}); }"
+    assert drawn_opener.missing_parts({"moment": "the messenger knocks", "code": knock}) == []
+
+
+def test_against_puts_a_cutout_at_the_house_door_and_inside_is_rejected():
+    raw = example()
+    raw["place"] = "street"
+    raw["props"] = [{"type": "house", "id": "home", "at": [0.4, -2.6]}]
+    raw["cutouts"][0]["at"] = [0, -2.42]  # inside the house's walls (live McLean draft, 2026-11-06)
+    raw["cutouts"] = raw["cutouts"][:1]
+    raw["shots"] = [{"at": 0, "target": "amb", "distance": 4}, {"at": 1, "target": "amb", "distance": 2}]
+    raw["effects"] = []
+    assert any("inside home" in p for p in opener3d.clean(raw, WORDS, SECONDS)[1])
+    raw["cutouts"][0]["against"] = "home"
+    stage, bad = opener3d.clean(raw, WORDS, SECONDS)
+    assert bad == [] and stage["cutouts"][0]["at"] == [0.4, -1.36], bad  # house 0: its door is module 1 (the middle)
+    raw["cutouts"][0]["against"] = "nowhere"
+    assert any("against" in p for p in opener3d.clean(raw, WORDS, SECONDS)[1])
+
+
+def test_a_cutout_that_melts_into_the_wall_goes_back():
+    from PIL import Image
+    tmp = ROOT / "test_renders" / "opener3d" / "blend_test"
+    (tmp / "cutouts").mkdir(parents=True, exist_ok=True)
+    for name, colour in (("grocer", (122, 78, 44)), ("messenger", (40, 52, 96))):
+        im = Image.new("RGBA", (100, 200), (0, 0, 0, 0))
+        im.paste((*colour, 255), (20, 20, 80, 190))
+        im.save(tmp / "cutouts" / f"{name}_0.png")
+    stage = {"place": "room", "colors": {"wall": "#7E5A40"},
+             "cutouts": [{"name": "grocer", "w": 100, "h": 200}, {"name": "messenger", "w": 100, "h": 200}]}
+    found = opener3d.blends(stage, tmp)
+    assert len(found) == 1 and found[0].startswith("grocer"), found
+    assert opener3d.blends({**stage, "place": "street"}, tmp) == []
+
+
+def test_the_preview_sees_every_shot():
+    shots = [{"at": 0}, {"at": 1.409}, {"at": 2.396}]
+    times = opener3d.sheet_times(4.47, shots)
+    assert len(times) == 6 and times[0] == 0 and 1.76 in times and 2.75 in times, times
+    assert len(opener3d.sheet_times(4.47)) == 6
 
 
 def look():
