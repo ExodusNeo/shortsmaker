@@ -267,8 +267,8 @@ def test_editor_gets_one_second_pass_for_broken_rules():
         writing.edit_scripts([s], {"niche": "history", "tone": "friend at a bar"})
     finally:
         llm.ask_ai, session.BRAIN, writing.length_plan = old_ask, old_brain, old_plan
-    assert len(prompts) == 4 and "SECOND PASS" in prompts[2] and "answered in scene 3 of 10" in prompts[2]
-    assert "OPEN INSIDE THE STORY'S STRANGEST MOMENT" in prompts[0] and "SECOND PASS" not in prompts[0]
+    assert len(prompts) == 4 and "PASS 2 OF 3" in prompts[2] and "answered in scene 3 of 10" in prompts[2]
+    assert "OPEN INSIDE THE STORY'S STRANGEST MOMENT" in prompts[0] and "PASS 2 OF 3" not in prompts[0]
     assert "payoff_scene" not in prompts[0] and "stranger scrolling" in prompts[1]  # the editor no longer grades itself
     assert s["lines"] == good and s["story_read"]["answer"] == 10
     assert not any(n.startswith("STILL") for n in s["editor_notes"]), s["editor_notes"]

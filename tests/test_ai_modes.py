@@ -73,6 +73,31 @@ def test_only_the_second_edit_pass_gets_the_research():
     assert 'research' not in first.split('Scripts:')[1] and 'or its research' not in first
 
 
+def test_script_rounds_stop_when_fixed_or_after_three():
+    long13 = [f'Scene number {k} says one more thing here.' for k in range(13)]
+    short8 = [f'Scene {k} is short and new, nine words long now.' for k in range(8)]  # 8 scenes, 80 words
+    for fixed_in, edits in ((2, 2), (None, 3)):
+        calls, rounds = [], []
+
+        def ask(prompt, **kw):
+            calls.append(prompt)
+            return {'shorts': [{'index': 0, 'scenes': short8, 'notes': ['cut the detours']}]}
+
+        def problems(lines, read=None):
+            rounds.append(1)
+            return [] if fixed_in and len(rounds) >= fixed_in else ['scenes 8-10 add nothing new']
+
+        s = {'topic': 'Topic', 'title': 'Title', 'lines': list(long13)}
+        with saved_session(), patch.object(llm, 'ask_ai', side_effect=ask), patch.object(writing, 'cold_read', return_value={}), \
+             patch.object(writing, 'story_problems', side_effect=problems), patch.object(session, 'SHORT_FORM', False), \
+             patch.dict(session.RULES, {'Story rules': 'One story.'}):
+            writing.edit_scripts([s], {'niche': 'history'})
+        assert len(calls) == edits, (fixed_in, len(calls))
+        assert s['lines'] == short8  # a shorter edit (8 scenes, 80 words) is accepted, not refused for length
+        still = [n for n in s['editor_notes'] if n.startswith('STILL')]
+        assert still == ([] if fixed_in else ['STILL: scenes 8-10 add nothing new']), still
+
+
 def test_every_mode_can_continue_through_two_exhausted_ais():
     for mode in channel_profiles.BRAINS:
         with saved_session():

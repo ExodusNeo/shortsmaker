@@ -165,7 +165,7 @@ Rules that keep it working:
    the cold reader (`cold_read()`, the planner in solo mode, selected editor with fallback in hybrid mode; one call per batch:
    sees only the final scenes and reports the
    question line 1 opens, the scene that answers it, `new` per scene, list_like, first swipe scene, hook_kind; the
-   editor no longer supplies its own grades) -> `story_problems()` sends a failing script back once, with its Wikipedia research (4000 characters per
+   editor no longer supplies its own grades) -> `story_problems()` sends a failing script back, up to `SCRIPT_ROUNDS` (3) rounds in all, with its Wikipedia research (4000 characters per
    article) so a scene that adds nothing can become a real new fact (answer before the
    last two scenes, no question, 2+ scenes with nothing new, swipe in scenes 1-4, list, summary hook, 3+ new
    sentences opening with the same link word (`LINK_WORDS`; Clever Hans opened 5 with "So"), plus the text rules); edit_plan "Cold read" line (including the AI that actually answered) -> the director
@@ -178,7 +178,8 @@ Rules that keep it working:
    narrations get one batched cold read of the final words; stale verdicts are cleared on failure. Missing
    payoffs, swipe points before the final two scenes and 3+ separated empty beats enter the bounded edit
    retry. A malformed fact-check verdict is explicitly NOT CHECKED, including in the finished CHECK lines.
-   Lengths: 95-125 words in 11-16 scenes (~40-50 s), or `SHORT_FORM` 60-72 words in 8-10: `writing.length_plan()` is
+   Lengths: the story decides (owner 2026-11-05): at most 125 words in up to 16 scenes (~50 s), or `SHORT_FORM` at most
+   72 words in up to 10 (~30 s); a 40-word / 6-scene floor only stops a broken script, never padded to. `writing.length_plan()` is
    the only length target (no rules file repeats one); `writing.max_seconds()` is quality_check's limit. Scenes of 4-10 words
    (`SCENE_WORDS`), up to 16 where one picture needs time; sentences may run across cuts (`SCENE_CUTS`), but the first
    sentence ends by scene 2 (checked). `plan_rules.first_sentence()` reads it across the cut for the logbook, the

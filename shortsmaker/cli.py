@@ -50,7 +50,7 @@ def main() -> None:
                               "until you've saved them", ch.get("veo", False))
         ch["veo"] = session.VEO_HANDOFF
     if len(sys.argv) < 2:  # run.bat: ask; scripted runs never pause
-        session.SHORT_FORM = channel_profiles.ask_yes("Make shorter Shorts, about 25-30 seconds instead of 40-50 (a test)?", ch.get("short_form", False))
+        session.SHORT_FORM = channel_profiles.ask_yes("Make shorter Shorts, at most about 30 seconds instead of 50?", ch.get("short_form", False))
         ch["short_form"] = session.SHORT_FORM
     channel_profiles.configure_brain(choice)
     print(f"{session.BRAIN.capitalize()} writes and plans; "

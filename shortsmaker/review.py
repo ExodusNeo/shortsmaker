@@ -103,7 +103,7 @@ def quality_check(video: Path, bounds: list[float], sources: list[str], voice: P
     issues += [f"scene {k + 1} shows another scene's picture again (nothing fit its line)"
                for k, src in enumerate(sources) if src.startswith("reused from scene")]
     if bounds[-1] > writing.max_seconds():
-        issues.append(f"{media_tools.clock(bounds[-1])} long, past the planned {writing.length_plan()[4]} seconds")
+        issues.append(f"{media_tools.clock(bounds[-1])} long, longer than planned ({writing.length_plan()[4]} seconds)")
     if voice and voice.exists():
         quiet = subprocess.run(["ffmpeg", "-hide_banner", "-nostats", "-i", str(voice), "-af",
                                 f"silencedetect=n=-35dB:d={PAUSE_MAX}", "-f", "null", "-"],

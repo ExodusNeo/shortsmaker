@@ -23,8 +23,13 @@ SCENE_CUTS = """Cut where the picture would change, even in the middle of a
 
 
 def length_plan() -> tuple[int, int, int, int, str]:
-    """(min words, max words, min scenes, max scenes, seconds) for this batch's scripts."""
-    return (60, 72, 8, 10, "25-30") if session.SHORT_FORM else (95, 125, 11, 16, "40-50")
+    """(floor words, max words, floor scenes, max scenes, seconds) for this batch's scripts. The story decides the length
+    (owner 2026-11-05: the 95-word / 11-scene minimum forced filler like the wooden eagle's scenes 8-10); the floor only
+    stops a broken two-line script and is never something to pad towards."""
+    return (40, 72, 6, 10, "up to 30") if session.SHORT_FORM else (40, 125, 6, 16, "up to 50")
+
+
+SCRIPT_ROUNDS = 3  # edit -> cold read rounds before the voice; text only, so cheap next to a render's fix round
 
 
 def max_seconds() -> float:
@@ -178,7 +183,8 @@ Reply with ONLY JSON: {{"shorts": [{{"topic": "...", "character": "...", "subjec
 {trend_text}
 Write one Short on each topic below, using the Wikipedia research given with it.
 Rules for each Short:
-- {lo}-{hi} spoken words (about {secs} seconds), simple words a 5th grader understands.
+- At most {hi} spoken words ({secs} seconds): as long as this story needs and no longer. A tight 20-second story
+  beats a padded 45-second one; never add a line just to reach a length. Simple words a 5th grader understands.
 {session.RULES["Story rules"]}
 - Never repeat yourself: every line adds something new; no phrase of 3+ words may appear twice.
 {session.RULES["Writing for the picture"]}
@@ -186,7 +192,7 @@ Rules for each Short:
   is well documented. No made-up statistics or quotes.
 - shape: the story's shape, one of {SHAPES}. Not one of the channel's last ones
   ({ch.get('recent_shapes', [])}), and a different one for each Short in this batch.
-- scenes: the narration split into {s_lo}-{s_hi} short scenes of 4-{channel_profiles.SCENE_WORDS} words (about 3 seconds: each
+- scenes: the narration split into up to {s_hi} short scenes of 4-{channel_profiles.SCENE_WORDS} words (about 3 seconds: each
   scene gets its own picture, and a new picture every ~3 seconds keeps viewers watching). {SCENE_CUTS}
   Only a scene that needs time on one picture (a trip between places, a big number, a document, several
   things that connect) may run up to {channel_profiles.LONG_SCENE_WORDS} words.
@@ -225,8 +231,8 @@ Reply with ONLY JSON: {{"shorts": [{{"index": 0, "shape": "...", "title": "...",
         if s.get("fact_check"):  # its rewrites come after the story checks: the text rules again, as edit_plan notes
             lines, notes = [sc["narration"] for sc in s["scenes"]], s.get("editor_notes") or []
             left = story_problems(lines)
-            if not lo - 15 <= (words := sum(len(t.split()) for t in lines)) <= hi + 15:  # the editor's own slack
-                left.append(f"the script has {words} words, planned {lo}-{hi}")
+            if not lo <= (words := sum(len(t.split()) for t in lines)) <= hi + 15:  # the editor's own slack
+                left.append(f"the script has {words} words, planned at most {hi}")
             s["editor_notes"] = notes + [f"STILL (after the fact check): {p}" for p in left if f"STILL: {p}" not in notes]
         s["shape"] = s.get("shape") if s.get("shape") in SHAPES else ""
         s["thumbnail_prompt"] = str(s.get("thumbnail_prompt") or "").strip()[:400]
@@ -314,23 +320,22 @@ def recheck_final_scripts(shorts: list[dict]) -> None:
             notes.append("NOT REVIEWED: final narration changed during the fact check; the cold reader didn't answer")
 
 
-def edit_scripts(shorts: list[dict], ch: dict, problems: dict[int, list[str]] | None = None) -> None:
+def edit_scripts(shorts: list[dict], ch: dict, problems: dict[int, list[str]] | None = None, round_: int = 1) -> None:
     """The script editor pass: strongest hook, read-aloud fixes, cuts, hook/thumbnail/title consistency,
     the story rules. In collaborative mode, the OTHER AI edits the drafts; in solo mode, the same AI
     critiques and refines its own drafts. A failed or malformed reply keeps the draft. A script that still breaks
-    a checkable story rule (story_problems) goes back once with `problems` ({index: [problem]}); whatever is left
-    becomes a STILL: line in the editor notes."""
+    a checkable story rule (story_problems) goes back with `problems` ({index: [problem]}) and its research, up to
+    SCRIPT_ROUNDS rounds in all; whatever is left becomes a STILL: line in the editor notes."""
     editor = session.BRAIN if session.SOLO else llm.other_ai(session.BRAIN)
     lo, hi, s_lo, s_hi, _ = length_plan()
     mode_str = " (solo)" if session.SOLO else ""
     print(f"{editor.capitalize()}{mode_str} is editing the script(s)...")
     # Second pass: the research too. With only the script's own facts, a detour can't be cut without breaking the scene
     # count, so the wooden-eagle Short (2026-11-05) kept "31 grams / wooden beak / stayed dead" through both passes.
-    retry = (f"""SECOND PASS: these scripts still break the story rules. Fix exactly these problems:
+    retry = (f"""PASS {round_} OF {SCRIPT_ROUNDS}: these scripts still break the story rules. Fix exactly these problems:
 {json.dumps(problems, ensure_ascii=False)}
 Here each script also lists its Wikipedia research: you MAY replace a scene that adds nothing with a new fact from it
-(the fact check verifies every line afterwards). To keep {s_lo} scenes after a cut, split a longer scene at a natural
-pause or add the next research fact; never pad.
+(the fact check verifies every line afterwards), or simply cut it: a shorter Short is fine; never pad.
 """ if problems else "")
     drafts = [{"index": i, "topic": s["topic"], "shape": s.get("shape"), "title": s["title"],
                "hook_text": s.get("hook_text"), "thumbnail_text": s.get("thumbnail_text"),
@@ -365,9 +370,10 @@ For each script:
    twist away, by name or by a word like "hoax", "fake", "trick", "secret" or "explained" when the twist is
    that it was one ("MATH WHIZ OR HOAX?" told viewers the answer). Fix whichever fails.
 Each script's "pictures" lists the real pictures found for it: keep lines built on them showable.
-Change wording, never claims: add no fact that isn't already in the script{" or its research" if problems else ""}. Keep {s_lo}-{s_hi} scenes of 4-{channel_profiles.SCENE_WORDS}
+Change wording, never claims: add no fact that isn't already in the script{" or its research" if problems else ""}. Up to {s_hi} scenes of 4-{channel_profiles.SCENE_WORDS}
 words each (a new picture every ~3 seconds; only a scene that needs time on one picture may run up to
-{channel_profiles.LONG_SCENE_WORDS}), {lo}-{hi} words in total. {SCENE_CUTS} Return every scene, changed or not.
+{channel_profiles.LONG_SCENE_WORDS}), at most {hi} words in total; cutting a scene that adds nothing is always allowed.
+{SCENE_CUTS} Return every scene you keep.
 notes: 1-4 short lines: the hook scores and what you changed and why.
 {retry}Scripts: {json.dumps(drafts, ensure_ascii=False)}
 Reply with ONLY JSON: {{"shorts": [{{"index": 0, "scenes": ["...", "..."], "title": "...", "hook_text": "...",
@@ -381,7 +387,7 @@ Reply with ONLY JSON: {{"shorts": [{{"index": 0, "scenes": ["...", "..."], "titl
         words = [len(t.split()) for t in lines]
         notes = [str(x).strip()[:300] for x in r.get("notes") or [] if str(x).strip()][:4] \
             if isinstance(r.get("notes"), list) else []
-        if s_lo <= len(lines) <= s_hi and max(words) <= channel_profiles.LONG_SCENE_WORDS + 2 and lo - 15 <= sum(words) <= hi + 15:
+        if s_lo <= len(lines) <= s_hi and max(words) <= channel_profiles.LONG_SCENE_WORDS + 2 and lo <= sum(words) <= hi + 15:
             s["lines"] = lines
         else:
             notes.append("its scene edit broke the length rules, so the writer's scenes were kept")
@@ -398,9 +404,10 @@ Reply with ONLY JSON: {{"shorts": [{{"index": 0, "scenes": ["...", "..."], "titl
             s["editor_notes"] = (s.get("editor_notes") or []) + ["the cold reader didn't answer: only the text rules were checked"]
         s["_problems"] = story_problems(s["lines"], reads.get(i))
     failing = [s for s in shorts if s.get("_problems")]
-    if problems is None and failing:  # once: the editor gets the problems and fixes its version
-        print(f"  {len(failing)} script(s) broke the story rules, sending back to the editor once...")
-        edit_scripts(failing, ch, {i: s["_problems"] for i, s in enumerate(failing)})
+    if failing and round_ < SCRIPT_ROUNDS:  # the editor gets the problems and the research, and fixes its version
+        print(f"  {len(failing)} script(s) broke the story rules, sending back to the editor "
+              f"(round {round_ + 1}/{SCRIPT_ROUNDS})...")
+        edit_scripts(failing, ch, {i: s["_problems"] for i, s in enumerate(failing)}, round_ + 1)
     for s in shorts:
         if left := s.pop("_problems", None):
             s["editor_notes"] = (s.get("editor_notes") or []) + [f"STILL: {p}" for p in left]

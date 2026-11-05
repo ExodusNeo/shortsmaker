@@ -24,7 +24,7 @@ def test_quality_check_reads_ffmpeg_and_flags_reused_pictures():
         review.subprocess.run = saved
     assert any("black screen" in i and "scene 2" in i for i in issues), issues
     assert any("scene 2 shows another scene's picture again" in i for i in issues), issues
-    assert any("past the planned" in i for i in issues), issues  # 70 s against writing.max_seconds() 62
+    assert any("longer than planned" in i for i in issues), issues  # 70 s against writing.max_seconds() 62
     assert not any("loudness" in i or "peaks" in i for i in issues), issues
 
 

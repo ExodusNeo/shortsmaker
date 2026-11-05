@@ -22,7 +22,7 @@ NO_QUOTA: set[str] = set()  # agents ("claude" / "gemini") that ran out of credi
 LAST_AI = "claude"  # who answered the last ask_ai() call
 
 
-SHORT_FORM = False  # run.bat question: shorter Shorts (~25-30 s), a test against the usual 40-50 s
+SHORT_FORM = False  # run.bat question: shorter Shorts (at most ~30 s instead of ~50 s)
 
 
 VEO_HANDOFF = False  # run.bat question: the owner makes the AI clips in Google Flow (Veo, AI Pro credits)

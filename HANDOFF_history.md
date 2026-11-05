@@ -1924,3 +1924,17 @@ the narration.
   voice for 0.5 s+). On this Short's stems it flags 0:30.0 and 0:31.2; with the new mix, nothing.
 - Tests: `test_blender_run`'s batch-failure test still assumed render made the folder and a failed Short was
   deleted; checkpoints now make it first and keep it for resume (test updated).
+
+## 2026-11-05 — the story decides the length; 3 script rounds before the voice
+
+- Owner: fine with very short Shorts; picked "no minimum, max ~50 s". `length_plan()` is now a 40-word / 6-scene floor
+  (only against a broken script) and a maximum: 125 words / 16 scenes (~50 s), or with run.bat's shorter option 72 / 10
+  (~30 s). Writer and editor are told "as long as this story needs and no longer; never pad", and the editor may always
+  cut a scene that adds nothing. The old 95-word / 11-scene minimum is what kept the wooden eagle's filler scenes.
+- The script editor now gets up to 3 rounds (`SCRIPT_ROUNDS`), each with the problems and the research, before any
+  picture or voice exists; what is left after round 3 is a STILL note. The fix rounds after rendering still only change
+  pictures (changing words then would mean a new voice and new pictures).
+- Golden prompts re-saved: only the length lines of the writer and editor prompts changed.
+- VoiceStudio: the app is in `C:\Program Files\VoiceStudio`, but `%APPDATA%\VoiceStudio\runtime-location.json` points it
+  at `D:\VoiceStudio\runtime`, and models/data stay in `D:\VoiceStudio`. Keep the D: folder.
+- To compare short and long Shorts, fill in Views / Stayed to watch in `vault/Logbook/strange-history.md`.
