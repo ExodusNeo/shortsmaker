@@ -2,7 +2,7 @@
 source_file: "tests/test_reliability.py"
 type: "code"
 community: "ReliabilityTests"
-location: "L47"
+location: "L56"
 tags:
   - graphify/code
   - graphify/EXTRACTED

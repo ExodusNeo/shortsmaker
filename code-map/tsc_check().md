@@ -15,7 +15,7 @@ tags:
 - [[Type-checks the Remotion project; None when it compiles, else the compiler's…]] - `rationale_for` [EXTRACTED]
 - [[approve_candidate()]] - `calls` [EXTRACTED]
 - [[code_custom_scenes()]] - `calls` [EXTRACTED]
-- [[main()_5]] - `calls` [EXTRACTED]
+- [[main()_6]] - `calls` [EXTRACTED]
 - [[motion.py]] - `contains` [EXTRACTED]
 - [[opener_preflight()]] - `calls` [EXTRACTED]
 - [[redraw_custom()]] - `calls` [EXTRACTED]

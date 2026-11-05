@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/seo.py"
 type: "rationale"
-community: "re"
+community: "seo_pass"
 location: "L55"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/re
+  - community/seo_pass
 ---
 
 # Accept each usable field independently; malformed metadata cannot erase a draft.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[apply_metadata()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/re
+#graphify/rationale #graphify/EXTRACTED #community/seo_pass

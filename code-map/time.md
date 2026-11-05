@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "style_lab.py"
+community: "re"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/style_labpy
+  - community/re
 ---
 
 # time
@@ -22,7 +22,7 @@ tags:
 - [[image_sources.py]] - `imports` [EXTRACTED]
 - [[llm.py]] - `imports` [EXTRACTED]
 - [[main()]] - `calls` [EXTRACTED]
-- [[main()_6]] - `calls` [EXTRACTED]
+- [[main()_3]] - `calls` [EXTRACTED]
 - [[media_library.py]] - `imports` [EXTRACTED]
 - [[moss_images()]] - `calls` [EXTRACTED]
 - [[picture_pool.py]] - `imports` [EXTRACTED]
@@ -42,4 +42,4 @@ tags:
 - [[trend_research()]] - `calls` [EXTRACTED]
 - [[voicestudio_up()]] - `calls` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/style_labpy
+#graphify/concept #graphify/EXTRACTED #community/re

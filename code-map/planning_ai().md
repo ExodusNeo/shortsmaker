@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_pictures_first.py"
 type: "code"
-community: "planning"
+community: "write_scripts"
 location: "L190"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/planning
+  - community/write_scripts
 ---
 
 # planning_ai()
@@ -16,10 +16,10 @@ tags:
 - [[Canned replies for every planning step of write_scripts().]] - `rationale_for` [EXTRACTED]
 - [[ai()]] - `calls` [EXTRACTED]
 - [[ai()_1]] - `calls` [EXTRACTED]
-- [[reply()]] - `calls` [EXTRACTED]
+- [[reply()_1]] - `calls` [EXTRACTED]
 - [[test_pictures_first.py]] - `contains` [EXTRACTED]
 - [[test_topic_a_proven_channel_just_posted_is_dropped()]] - `calls` [EXTRACTED]
 - [[test_topic_ideas.py]] - `imports` [EXTRACTED]
 - [[test_topic_we_already_made_is_dropped()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/planning
+#graphify/code #graphify/EXTRACTED #community/write_scripts

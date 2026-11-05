@@ -2,7 +2,7 @@
 source_file: "shortsmaker/writing.py"
 type: "code"
 community: "cold_read"
-location: "L405"
+location: "L406"
 tags:
   - graphify/code
   - graphify/EXTRACTED

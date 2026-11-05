@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/picture_pool.py"
 type: "code"
-community: "gather_pool"
+community: "prepare_topic"
 location: "L71"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/gather_pool
+  - community/prepare_topic
 ---
 
 # contact_sheets()
@@ -21,4 +21,4 @@ tags:
 - [[picture_pool.py]] - `contains` [EXTRACTED]
 - [[vertical_image()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/gather_pool
+#graphify/code #graphify/EXTRACTED #community/prepare_topic

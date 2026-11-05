@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_topic_ideas.py"
 type: "code"
-community: "topic_ideas.py"
+community: "re"
 location: "L64"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/topic_ideaspy
+  - community/re
 ---
 
 # test_fetch_is_cached()
@@ -15,4 +15,4 @@ tags:
 - [[fetch_ideas()]] - `calls` [EXTRACTED]
 - [[test_topic_ideas.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/topic_ideaspy
+#graphify/code #graphify/EXTRACTED #community/re

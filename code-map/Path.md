@@ -1,17 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "test_h3_handoff.py"
+community: "finish_short"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_h3_handoffpy
+  - community/finish_short
 ---
 
 # Path
 
 ## Connections
-- [[handoff()]] - `references` [EXTRACTED]
-- [[zip_of()]] - `references` [EXTRACTED]
+- [[log_short()]] - `references` [EXTRACTED]
+- [[vault_page()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_h3_handoffpy
+#graphify/code #graphify/EXTRACTED #community/finish_short

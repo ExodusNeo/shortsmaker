@@ -1,11 +1,11 @@
 ---
 type: community
-members: 33
+members: 32
 ---
 
 # full_cues
 
-**Members:** 33 nodes
+**Members:** 32 nodes
 
 ## Members
 - [[(start, end) of the first time `phrase` is spoken, from TTS word timings.]] - rationale - shortsmaker/plan_rules.py
@@ -35,7 +35,6 @@ members: 33
 - [[test_full_cues_document()]] - code - tests/test_full_scenes.py
 - [[test_full_cues_fallback()]] - code - tests/test_full_scenes.py
 - [[test_full_cues_leave_time_to_finish()]] - code - tests/test_full_scenes.py
-- [[test_full_props_figure()]] - code - tests/test_full_scenes.py
 - [[test_opener_graphic()]] - code - tests/test_full_scenes.py
 - [[test_remotion_props_full()]] - code - tests/test_full_scenes.py
 - [[test_sfx_full()]] - code - tests/test_full_scenes.py
@@ -50,19 +49,18 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 16 edges to [[_COMMUNITY_test_full_scenes.py]]
-- 2 edges to [[_COMMUNITY_subprocess]]
-- 2 edges to [[_COMMUNITY_json]]
-- 2 edges to [[_COMMUNITY_ask_ai]]
+- 14 edges to [[_COMMUNITY_test_full_scenes.py]]
+- 3 edges to [[_COMMUNITY_pathlib]]
+- 3 edges to [[_COMMUNITY_json]]
 - 2 edges to [[_COMMUNITY_finish_render]]
+- 2 edges to [[_COMMUNITY_ask_ai]]
 - 1 edge to [[_COMMUNITY_audio_library.py]]
 - 1 edge to [[_COMMUNITY_render]]
-- 1 edge to [[_COMMUNITY_gpu.py]]
 - 1 edge to [[_COMMUNITY_render_remotion]]
 - 1 edge to [[_COMMUNITY_choose_images]]
-- 1 edge to [[_COMMUNITY_extra_sources.py]]
+- 1 edge to [[_COMMUNITY_get_image]]
 - 1 edge to [[_COMMUNITY_test_blender_render.py]]
-- 1 edge to [[_COMMUNITY_write_scripts]]
+- 1 edge to [[_COMMUNITY_words_of]]
 - 1 edge to [[_COMMUNITY_test_style.py]]
 
 ## Top bridge nodes

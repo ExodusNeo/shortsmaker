@@ -33,17 +33,16 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 4 edges to [[_COMMUNITY_gpu.py]]
-- 4 edges to [[_COMMUNITY_render]]
+- 7 edges to [[_COMMUNITY_test_full_scenes.py]]
 - 4 edges to [[_COMMUNITY_json]]
-- 3 edges to [[_COMMUNITY_test_full_scenes.py]]
-- 2 edges to [[_COMMUNITY_ffmpeg]]
+- 4 edges to [[_COMMUNITY_render]]
+- 2 edges to [[_COMMUNITY_local_clips]]
 - 1 edge to [[_COMMUNITY_clean_photo]]
 - 1 edge to [[_COMMUNITY_render_remotion]]
 
 ## Top bridge nodes
 - [[paint_instead()]] - degree 10, connects to 4 communities
-- [[gemini_images()]] - degree 7, connects to 3 communities
+- [[gemini_images()]] - degree 7, connects to 4 communities
 - [[to_vertical()]] - degree 6, connects to 3 communities
+- [[Path_10]] - degree 5, connects to 3 communities
 - [[ink_silhouette()]] - degree 5, connects to 2 communities
-- [[Path_10]] - degree 5, connects to 2 communities

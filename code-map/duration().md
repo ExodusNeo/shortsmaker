@@ -12,14 +12,14 @@ tags:
 # duration()
 
 ## Connections
-- [[Path_24]] - `references` [EXTRACTED]
+- [[Path_26]] - `references` [EXTRACTED]
 - [[apply()]] - `calls` [EXTRACTED]
 - [[brand_films()]] - `calls` [EXTRACTED]
 - [[local_assets()]] - `calls` [EXTRACTED]
 - [[log_short()]] - `calls` [EXTRACTED]
 - [[media_tools.py]] - `contains` [EXTRACTED]
 - [[nasa_films()]] - `calls` [EXTRACTED]
-- [[render()_1]] - `calls` [EXTRACTED]
+- [[render()_3]] - `calls` [EXTRACTED]
 - [[render_remotion()]] - `calls` [EXTRACTED]
 - [[review_audio_files()]] - `calls` [EXTRACTED]
 - [[shot_span()]] - `calls` [EXTRACTED]

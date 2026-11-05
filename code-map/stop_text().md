@@ -19,6 +19,7 @@ tags:
 - [[test_draft_writes_tagged_draft_file()]] - `calls` [EXTRACTED]
 - [[test_duplicate_heading_stops()]] - `calls` [EXTRACTED]
 - [[test_empty_heading_stops()]] - `calls` [EXTRACTED]
+- [[test_loop_setting_is_checked()]] - `calls` [EXTRACTED]
 - [[test_missing_heading_stops()]] - `calls` [EXTRACTED]
 - [[test_odd_min_pictures_stop_cleanly()]] - `calls` [EXTRACTED]
 - [[test_opening_picture_needs_its_fields()]] - `calls` [EXTRACTED]

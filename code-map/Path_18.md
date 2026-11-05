@@ -1,17 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: "footage.py"
+community: "retention.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/footagepy
+  - community/retentionpy
 ---
 
 # Path
 
 ## Connections
-- [[film_piece()]] - `references` [EXTRACTED]
-- [[shot_span()]] - `references` [EXTRACTED]
+- [[analyze()]] - `references` [EXTRACTED]
+- [[edit_metrics()]] - `references` [EXTRACTED]
+- [[load_metrics()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/footagepy
+#graphify/code #graphify/EXTRACTED #community/retentionpy

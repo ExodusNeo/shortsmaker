@@ -2,7 +2,7 @@
 source_file: "shortsmaker/writing.py"
 type: "code"
 community: "check_twists"
-location: "L687"
+location: "L688"
 tags:
   - graphify/code
   - graphify/EXTRACTED

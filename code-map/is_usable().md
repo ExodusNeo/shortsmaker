@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/picture_pool.py"
 type: "code"
-community: "gather_pool"
+community: "prepare_topic"
 location: "L346"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/gather_pool
+  - community/prepare_topic
 ---
 
 # is_usable()
@@ -20,4 +20,4 @@ tags:
 - [[thumbnail_order()]] - `calls` [EXTRACTED]
 - [[usable()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/gather_pool
+#graphify/code #graphify/EXTRACTED #community/prepare_topic

@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "subprocess"
+community: "re"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/subprocess
+  - community/re
 ---
 
 # threading
@@ -14,4 +14,4 @@ tags:
 - [[image_sources.py]] - `imports` [EXTRACTED]
 - [[media_library.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/subprocess
+#graphify/concept #graphify/EXTRACTED #community/re

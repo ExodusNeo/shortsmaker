@@ -1,11 +1,11 @@
 ---
 type: community
-members: 19
+members: 20
 ---
 
 # ReliabilityTests
 
-**Members:** 19 nodes
+**Members:** 20 nodes
 
 ## Members
 - [[dot-setUp()_2]] - code - tests/test_reliability.py
@@ -22,6 +22,7 @@ members: 19
 - [[dot-test_resume_rendered_stage_does_not_render_or_generate_voice()]] - code - tests/test_reliability.py
 - [[dot-test_stale_repair_preview_cannot_overwrite_video()]] - code - tests/test_reliability.py
 - [[dot-test_unfinished_files_survive_normal_pruning()]] - code - tests/test_reliability.py
+- [[dot-test_unfinished_shorts_count_as_made_topics()]] - code - tests/test_reliability.py
 - [[dot-test_visual_review_failure_is_not_a_pass_and_success_replaces_status()]] - code - tests/test_reliability.py
 - [[dot-test_voice_cache_reuses_audio_but_invalidates_changed_text_voice_or_files()]] - code - tests/test_reliability.py
 - [[ReliabilityTests]] - code - tests/test_reliability.py
@@ -36,7 +37,7 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 1 edge to [[_COMMUNITY_test_full_scenes.py]]
+- 1 edge to [[_COMMUNITY_pathlib]]
 
 ## Top bridge nodes
-- [[ReliabilityTests]] - degree 17, connects to 1 community
+- [[ReliabilityTests]] - degree 18, connects to 1 community

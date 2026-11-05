@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/writing.py"
 type: "code"
-community: "test_full_scenes.py"
+community: "pathlib"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_full_scenespy
+  - community/pathlib
 ---
 
 # writing.py
@@ -19,12 +19,13 @@ tags:
 - [[blender_plan.py]] - `imports_from` [EXTRACTED]
 - [[channel_profiles.py]] - `imports_from` [EXTRACTED]
 - [[check_twists()]] - `contains` [EXTRACTED]
+- [[checkpoints.py]] - `imports_from` [EXTRACTED]
 - [[cli.py]] - `imports_from` [EXTRACTED]
 - [[cold_read()]] - `contains` [EXTRACTED]
 - [[config.py]] - `imports_from` [EXTRACTED]
 - [[direct_scripts()]] - `contains` [EXTRACTED]
 - [[edit_scripts()]] - `contains` [EXTRACTED]
-- [[fact_check()]] - `contains` [EXTRACTED]
+- [[fact_check()_1]] - `contains` [EXTRACTED]
 - [[image_sources.py]] - `imports_from` [EXTRACTED]
 - [[json]] - `imports` [EXTRACTED]
 - [[length_plan()]] - `contains` [EXTRACTED]
@@ -61,4 +62,4 @@ tags:
 - [[urllib_parse]] - `imports` [EXTRACTED]
 - [[write_scripts()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_full_scenespy
+#graphify/code #graphify/EXTRACTED #community/pathlib

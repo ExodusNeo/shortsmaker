@@ -24,6 +24,7 @@ tags:
 - [[test_equals_sign_works_like_a_colon()]] - `calls` [EXTRACTED]
 - [[test_heading_case_and_spaces()]] - `calls` [EXTRACTED]
 - [[test_level3_heading_stays_inside()]] - `calls` [EXTRACTED]
+- [[test_loop_setting_is_checked()]] - `calls` [EXTRACTED]
 - [[test_parses_sections_and_settings()]] - `calls` [EXTRACTED]
 - [[test_photo_channels_dont_need_a_build_plan()]] - `calls` [EXTRACTED]
 - [[test_rules_accept_opener_setting()]] - `calls` [EXTRACTED]

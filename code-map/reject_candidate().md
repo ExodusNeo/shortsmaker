@@ -1,21 +1,21 @@
 ---
 source_file: "shortsmaker/style_lab.py"
 type: "code"
-community: "style_lab.py"
+community: "test_full_scenes.py"
 location: "L296"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/style_labpy
+  - community/test_full_scenespy
 ---
 
 # reject_candidate()
 
 ## Connections
-- [[Path_15]] - `references` [EXTRACTED]
+- [[Path_16]] - `references` [EXTRACTED]
 - [[library_menu()]] - `calls` [EXTRACTED]
 - [[shutil]] - `calls` [EXTRACTED]
 - [[style_lab.py]] - `contains` [EXTRACTED]
 - [[test_reject_deletes()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/style_labpy
+#graphify/code #graphify/EXTRACTED #community/test_full_scenespy

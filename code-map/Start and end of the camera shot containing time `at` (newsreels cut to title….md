@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/footage.py"
 type: "rationale"
-community: "footage.py"
+community: "duration"
 location: "L303"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/footagepy
+  - community/duration
 ---
 
 # Start and end of the camera shot containing time `at` (newsreels cut to title…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[shot_span()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/footagepy
+#graphify/rationale #graphify/EXTRACTED #community/duration

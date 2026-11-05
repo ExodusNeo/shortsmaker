@@ -1,19 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "main"
+community: "test_blender_render.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/main
+  - community/test_blender_renderpy
 ---
 
 # Path
 
 ## Connections
-- [[finish_short()]] - `references` [EXTRACTED]
-- [[record_failure()]] - `references` [EXTRACTED]
-- [[resume_runs()]] - `references` [EXTRACTED]
-- [[use_picture_from()]] - `references` [EXTRACTED]
+- [[_run()]] - `references` [EXTRACTED]
+- [[render_clips()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/main
+#graphify/code #graphify/EXTRACTED #community/test_blender_renderpy

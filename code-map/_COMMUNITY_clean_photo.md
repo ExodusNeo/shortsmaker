@@ -15,7 +15,7 @@ members: 18
 - [[Cut plain strips (white mounts, black plate edges) off the sides, at most 15%…]] - rationale - shortsmaker/photo_prep.py
 - [[Image_3]] - code
 - [[Let the AI circle (or point an arrow at) a detail in up to 2 chosen pictures.…]] - rationale - shortsmaker/plan_rules.py
-- [[Path_16]] - code
+- [[Path_17]] - code
 - [[border()]] - code - shortsmaker/photo_prep.py
 - [[clean_photo()]] - code - shortsmaker/photo_prep.py
 - [[detail()]] - code - shortsmaker/photo_prep.py
@@ -35,17 +35,19 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 10 edges to [[_COMMUNITY_test_full_scenes.py]]
-- 3 edges to [[_COMMUNITY_gather_pool]]
+- 6 edges to [[_COMMUNITY_test_full_scenes.py]]
+- 4 edges to [[_COMMUNITY_pathlib]]
+- 2 edges to [[_COMMUNITY_prepare_topic]]
 - 2 edges to [[_COMMUNITY_render]]
+- 1 edge to [[_COMMUNITY_gather_pool]]
 - 1 edge to [[_COMMUNITY_paint_instead]]
-- 1 edge to [[_COMMUNITY_write_scripts]]
+- 1 edge to [[_COMMUNITY_words_of]]
 - 1 edge to [[_COMMUNITY_ask_ai]]
 - 1 edge to [[_COMMUNITY_re]]
 
 ## Top bridge nodes
-- [[mark_details()]] - degree 8, connects to 4 communities
-- [[clean_photo()]] - degree 9, connects to 3 communities
+- [[mark_details()]] - degree 8, connects to 5 communities
+- [[clean_photo()]] - degree 9, connects to 4 communities
 - [[vertical_image()]] - degree 5, connects to 3 communities
 - [[trim_borders()]] - degree 7, connects to 2 communities
 - [[visual_unique()]] - degree 5, connects to 2 communities

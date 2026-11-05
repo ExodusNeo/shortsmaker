@@ -11,7 +11,9 @@ tags:
 # Path
 
 ## Connections
-- [[apply()]] - `references` [EXTRACTED]
-- [[preview()]] - `references` [EXTRACTED]
+- [[finish_short()]] - `references` [EXTRACTED]
+- [[record_failure()]] - `references` [EXTRACTED]
+- [[resume_runs()]] - `references` [EXTRACTED]
+- [[use_picture_from()]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/write_json

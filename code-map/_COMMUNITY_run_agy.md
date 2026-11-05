@@ -28,7 +28,7 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 5 edges to [[_COMMUNITY_ask_ai]]
-- 5 edges to [[_COMMUNITY_test_full_scenes.py]]
+- 5 edges to [[_COMMUNITY_pathlib]]
 - 1 edge to [[_COMMUNITY_gemini_model]]
 
 ## Top bridge nodes

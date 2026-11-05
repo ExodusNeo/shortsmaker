@@ -1,45 +1,32 @@
 ---
 type: community
-members: 32
+members: 19
 ---
 
 # gather_pool
 
-**Members:** 32 nodes
+**Members:** 19 nodes
 
 ## Members
-- [[dot-__enter__()_2]] - code - tests/test_pictures_first.py
-- [[dot-__init__()_2]] - code - tests/test_pictures_first.py
-- [[Before writing the topic's Wikipedia research (`_texts`; fact_check() reuses…]] - rationale - shortsmaker/picture_pool.py
+- [[(ok, credit). Public domainCC0 need no credit; all other WikimediaWikipedia…]] - rationale - shortsmaker/image_sources.py
 - [[Candidate pictures (with preview `thumb` bytes) and sampled real-film frames…]] - rationale - shortsmaker/picture_pool.py
-- [[Numbered thumbnail grids (6x4) so Claude can look at every candidate at once.]] - rationale - shortsmaker/picture_pool.py
-- [[Path_14]] - code
-- [[Replaces the network functions for one test; `calls` records the search queries.]] - rationale - tests/test_pictures_first.py
+- [[GET from Wikimedia, spaced `gap` seconds apart, with a short backoff on rate…]] - rationale - shortsmaker/image_sources.py
+- [[Images used in an English Wikipedia article chosen by editors, so almost…]] - rationale - shortsmaker/image_sources.py
 - [[Round-robin sources rather than letting the first provider consume the whole…]] - rationale - shortsmaker/picture_pool.py
-- [[The saved pool (None if missing or unreadable it is gathered again);…]] - rationale - shortsmaker/picture_pool.py
-- [[The topic's usable pictures as prompt lines ( without a picture list).]] - rationale - shortsmaker/picture_pool.py
-- [[The usable pictures as prompt lines 12 film 1944 newsreel of rubber tanks…]] - rationale - shortsmaker/picture_pool.py
-- [[Usable list entries for the topic check all frames of one video count once…]] - rationale - shortsmaker/picture_pool.py
-- [[Verifydownload usable originals while the writer can still avoid unavailable…]] - rationale - shortsmaker/picture_pool.py
+- [[URL of a standard-size Wikimedia thumbnail the largest allowed step that fits…]] - rationale - shortsmaker/image_sources.py
+- [[Usable images from a WikimediaWikipedia API query photos, screenshots,…]] - rationale - shortsmaker/image_sources.py
+- [[Videos on Wikimedia Commons, as their 480p-720p WebM transcodes (seekable).]] - rationale - shortsmaker/footage.py
 - [[add()]] - code - shortsmaker/picture_pool.py
+- [[article_images()]] - code - shortsmaker/image_sources.py
 - [[balanced_candidates()]] - code - shortsmaker/picture_pool.py
-- [[catalog_text()]] - code - shortsmaker/picture_pool.py
-- [[contact_sheets()]] - code - shortsmaker/picture_pool.py
+- [[commons_films()]] - code - shortsmaker/footage.py
+- [[commons_search()]] - code - shortsmaker/image_sources.py
 - [[gather_pool()]] - code - shortsmaker/picture_pool.py
-- [[is_usable()]] - code - shortsmaker/picture_pool.py
-- [[load_pool()]] - code - shortsmaker/picture_pool.py
 - [[load_thumb()]] - code - shortsmaker/picture_pool.py
-- [[pictures_of()]] - code - shortsmaker/picture_pool.py
-- [[pool_folder()]] - code - shortsmaker/picture_pool.py
-- [[preflight_pictures()]] - code - shortsmaker/picture_pool.py
-- [[prepare_topic()]] - code - shortsmaker/picture_pool.py
-- [[stubbed]] - code - tests/test_pictures_first.py
-- [[test_empty_pool_drops_topic_without_ai()]] - code - tests/test_pictures_first.py
-- [[test_gather_pool_shape()]] - code - tests/test_pictures_first.py
-- [[test_gather_pool_skip_and_limits()]] - code - tests/test_pictures_first.py
-- [[test_pool_roundtrip()]] - code - tests/test_pictures_first.py
-- [[usable()]] - code - shortsmaker/picture_pool.py
-- [[verify()]] - code - shortsmaker/picture_pool.py
+- [[thumb_url()]] - code - shortsmaker/image_sources.py
+- [[usable_license()]] - code - shortsmaker/image_sources.py
+- [[wm_files()]] - code - shortsmaker/image_sources.py
+- [[wm_get()]] - code - shortsmaker/image_sources.py
 
 ## Live Query (requires Dataview plugin)
 
@@ -49,32 +36,24 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 17 edges to [[_COMMUNITY_test_pictures_first.py]]
-- 12 edges to [[_COMMUNITY_test_full_scenes.py]]
-- 7 edges to [[_COMMUNITY_extra_sources.py]]
-- 5 edges to [[_COMMUNITY_write_scripts]]
-- 4 edges to [[_COMMUNITY_choose_images]]
-- 3 edges to [[_COMMUNITY_clean_photo]]
+- 10 edges to [[_COMMUNITY_re]]
+- 4 edges to [[_COMMUNITY_fetch]]
+- 2 edges to [[_COMMUNITY_words_of]]
+- 2 edges to [[_COMMUNITY_get_image]]
+- 2 edges to [[_COMMUNITY_pathlib]]
+- 2 edges to [[_COMMUNITY_extra_sources.py]]
+- 2 edges to [[_COMMUNITY_prepare_topic]]
 - 2 edges to [[_COMMUNITY_owner]]
-- 2 edges to [[_COMMUNITY_test_rules.py]]
-- 2 edges to [[_COMMUNITY_apply_review_fixes]]
-- 2 edges to [[_COMMUNITY_json]]
-- 1 edge to [[_COMMUNITY_planning]]
-- 1 edge to [[_COMMUNITY_fake_ai]]
-- 1 edge to [[_COMMUNITY_rescue_graphics]]
-- 1 edge to [[_COMMUNITY_subprocess]]
-- 1 edge to [[_COMMUNITY_drawn_thumbnail]]
-- 1 edge to [[_COMMUNITY_blender_plan.py]]
-- 1 edge to [[_COMMUNITY_footage.py]]
+- 1 edge to [[_COMMUNITY_json]]
+- 1 edge to [[_COMMUNITY_article_text]]
+- 1 edge to [[_COMMUNITY_choose_images]]
+- 1 edge to [[_COMMUNITY_clean_full]]
+- 1 edge to [[_COMMUNITY_clean_photo]]
 - 1 edge to [[_COMMUNITY_visual_review]]
-- 1 edge to [[_COMMUNITY_test_first_second.py]]
-- 1 edge to [[_COMMUNITY_edit_scripts]]
-- 1 edge to [[_COMMUNITY_gpu.py]]
-- 1 edge to [[_COMMUNITY_write_json]]
 
 ## Top bridge nodes
-- [[gather_pool()]] - degree 23, connects to 8 communities
-- [[load_pool()]] - degree 14, connects to 8 communities
-- [[prepare_topic()]] - degree 16, connects to 5 communities
-- [[contact_sheets()]] - degree 8, connects to 4 communities
-- [[is_usable()]] - degree 7, connects to 4 communities
+- [[gather_pool()]] - degree 23, connects to 12 communities
+- [[wm_get()]] - degree 8, connects to 4 communities
+- [[commons_films()]] - degree 6, connects to 3 communities
+- [[wm_files()]] - degree 8, connects to 2 communities
+- [[article_images()]] - degree 4, connects to 1 community

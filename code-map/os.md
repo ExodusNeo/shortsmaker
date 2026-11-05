@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "style_lab.py"
+community: "test_full_scenes.py"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/style_labpy
+  - community/test_full_scenespy
 ---
 
 # os
@@ -27,4 +27,4 @@ tags:
 - [[test_reliability.py]] - `imports` [EXTRACTED]
 - [[veo_handoff()]] - `calls` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/style_labpy
+#graphify/concept #graphify/EXTRACTED #community/test_full_scenespy

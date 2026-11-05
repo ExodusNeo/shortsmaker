@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/footage.py"
 type: "rationale"
-community: "footage.py"
+community: "re"
 location: "L284"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/footagepy
+  - community/re
 ---
 
 # Download ~14s around the chosen moment with original framing and muted source…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[film_piece()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/footagepy
+#graphify/rationale #graphify/EXTRACTED #community/re

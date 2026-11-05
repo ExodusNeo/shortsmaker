@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/review.py"
 type: "code"
-community: "gpu.py"
+community: "json"
 location: "L401"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/gpupy
+  - community/json
 ---
 
 # paint_opener_start()
@@ -19,10 +19,10 @@ tags:
 - [[local_job()]] - `calls` [EXTRACTED]
 - [[moss_images()]] - `calls` [EXTRACTED]
 - [[opening_brief()]] - `calls` [EXTRACTED]
-- [[render()_1]] - `calls` [EXTRACTED]
+- [[render()_3]] - `calls` [EXTRACTED]
 - [[review.py]] - `contains` [EXTRACTED]
 - [[rewrite_paint_prompts()]] - `calls` [EXTRACTED]
 - [[shutil]] - `calls` [EXTRACTED]
 - [[test_weak_opener_graphic_fixes_then_handoff()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/gpupy
+#graphify/code #graphify/EXTRACTED #community/json

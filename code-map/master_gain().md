@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/edit_project.py"
 type: "code"
-community: "subprocess"
+community: "make"
 location: "L23"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/subprocess
+  - community/make
 ---
 
 # master_gain()
@@ -19,4 +19,4 @@ tags:
 - [[re]] - `calls` [EXTRACTED]
 - [[subprocess]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/subprocess
+#graphify/code #graphify/EXTRACTED #community/make

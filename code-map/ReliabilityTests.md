@@ -26,6 +26,7 @@ tags:
 - [[dot-test_resume_rendered_stage_does_not_render_or_generate_voice()]] - `method` [EXTRACTED]
 - [[dot-test_stale_repair_preview_cannot_overwrite_video()]] - `method` [EXTRACTED]
 - [[dot-test_unfinished_files_survive_normal_pruning()]] - `method` [EXTRACTED]
+- [[dot-test_unfinished_shorts_count_as_made_topics()]] - `method` [EXTRACTED]
 - [[dot-test_visual_review_failure_is_not_a_pass_and_success_replaces_status()]] - `method` [EXTRACTED]
 - [[dot-test_voice_cache_reuses_audio_but_invalidates_changed_text_voice_or_files()]] - `method` [EXTRACTED]
 - [[test_reliability.py]] - `contains` [EXTRACTED]

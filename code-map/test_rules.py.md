@@ -55,6 +55,7 @@ tags:
 - [[test_heading_case_and_spaces()]] - `contains` [EXTRACTED]
 - [[test_level3_heading_stays_inside()]] - `contains` [EXTRACTED]
 - [[test_load_rules_sets_session()]] - `contains` [EXTRACTED]
+- [[test_loop_setting_is_checked()]] - `contains` [EXTRACTED]
 - [[test_min_pictures_from_settings()]] - `contains` [EXTRACTED]
 - [[test_missing_heading_stops()]] - `contains` [EXTRACTED]
 - [[test_missing_rules_file_is_drafted()]] - `contains` [EXTRACTED]

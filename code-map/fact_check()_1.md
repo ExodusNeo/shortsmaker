@@ -1,17 +1,24 @@
 ---
-source_file: "tests/test_pictures_first.py"
+source_file: "shortsmaker/writing.py"
 type: "code"
-community: "planning"
-location: "L632"
+community: "article_text"
+location: "L722"
 tags:
   - graphify/code
-  - graphify/INFERRED
-  - community/planning
+  - graphify/EXTRACTED
+  - community/article_text
 ---
 
 # fact_check()
 
 ## Connections
-- [[test_fact_check_rewrites_get_the_story_rules_again()]] - `indirect_call` [INFERRED]
+- [[Check every line against the story's Wikipedia articles and rewrite what they…]] - `rationale_for` [EXTRACTED]
+- [[article_text()]] - `calls` [EXTRACTED]
+- [[ask_ai()]] - `calls` [EXTRACTED]
+- [[json]] - `calls` [EXTRACTED]
+- [[test_fact_check_drops_full()]] - `calls` [EXTRACTED]
+- [[test_fact_check_sees_new_graphics()]] - `calls` [EXTRACTED]
+- [[write_scripts()]] - `calls` [EXTRACTED]
+- [[writing.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/planning
+#graphify/code #graphify/EXTRACTED #community/article_text

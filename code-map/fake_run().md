@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_full_scenes.py"
 type: "code"
-community: "ffmpeg"
+community: "local_clips"
 location: "L756"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/ffmpeg
+  - community/local_clips
 ---
 
 # fake_run()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[test_local_job_retries_a_hard_crash()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/INFERRED #community/ffmpeg
+#graphify/code #graphify/INFERRED #community/local_clips

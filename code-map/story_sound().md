@@ -12,13 +12,13 @@ tags:
 # story_sound()
 
 ## Connections
-- [[Path_29]] - `references` [EXTRACTED]
+- [[Path_31]] - `references` [EXTRACTED]
 - [[The sound file for a story sound the owner's own file in…]] - `rationale_for` [EXTRACTED]
 - [[approved_sound()]] - `calls` [EXTRACTED]
 - [[audio_mix.py]] - `contains` [EXTRACTED]
 - [[ffmpeg()]] - `calls` [EXTRACTED]
 - [[re]] - `calls` [EXTRACTED]
-- [[render()_1]] - `calls` [EXTRACTED]
+- [[render()_3]] - `calls` [EXTRACTED]
 - [[set_audio_metadata()]] - `calls` [EXTRACTED]
 - [[test_story_sound_library()]] - `calls` [EXTRACTED]
 - [[usable_audio()]] - `calls` [EXTRACTED]

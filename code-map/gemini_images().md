@@ -18,6 +18,6 @@ tags:
 - [[one()]] - `indirect_call` [INFERRED]
 - [[paint_instead()]] - `calls` [EXTRACTED]
 - [[paint_opener_start()]] - `calls` [EXTRACTED]
-- [[render()_1]] - `calls` [EXTRACTED]
+- [[render()_3]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/paint_instead

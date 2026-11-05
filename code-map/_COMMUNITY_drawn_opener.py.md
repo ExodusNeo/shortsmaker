@@ -10,7 +10,7 @@ members: 28
 ## Members
 - [[Animals the planned moment or the opener's narration names that the code…]] - rationale - shortsmaker/drawn_opener.py
 - [[Drawn openers (owner, 2026-10-30) scene 1 of an `opener animated` Short as a…]] - rationale - shortsmaker/drawn_opener.py
-- [[Path_1]] - code
+- [[Path_2]] - code
 - [[Renders drawnoutsheet.png every kit part, one page per second (look at it…]] - rationale - tests/test_drawn_opener.py
 - [[Rule breaks in an AI-written scene (KIT.md's code rules). Empty = clean.]] - rationale - shortsmaker/drawn_opener.py
 - [[Runs drawnrun.mjs on one job; None when it worked, else what went wrong…]] - rationale - shortsmaker/drawn_opener.py
@@ -45,21 +45,20 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 14 edges to [[_COMMUNITY_test_full_scenes.py]]
-- 6 edges to [[_COMMUNITY_json]]
+- 14 edges to [[_COMMUNITY_pathlib]]
+- 10 edges to [[_COMMUNITY_json]]
 - 5 edges to [[_COMMUNITY_re]]
-- 4 edges to [[_COMMUNITY_gpu.py]]
 - 3 edges to [[_COMMUNITY_duration]]
 - 2 edges to [[_COMMUNITY_render]]
-- 2 edges to [[_COMMUNITY_subprocess]]
 - 2 edges to [[_COMMUNITY_ask_ai]]
-- 1 edge to [[_COMMUNITY_write_scripts]]
+- 2 edges to [[_COMMUNITY_test_full_scenes.py]]
+- 1 edge to [[_COMMUNITY_clean_full]]
 - 1 edge to [[_COMMUNITY_OpeningRulesTests]]
 - 1 edge to [[_COMMUNITY_dot-render_fixture]]
 
 ## Top bridge nodes
-- [[drawn_opener.py]] - degree 27, connects to 5 communities
 - [[review()]] - degree 10, connects to 5 communities
+- [[drawn_opener.py]] - degree 27, connects to 4 communities
 - [[node_run()]] - degree 8, connects to 3 communities
 - [[make_opener()]] - degree 16, connects to 2 communities
 - [[write()]] - degree 8, connects to 2 communities

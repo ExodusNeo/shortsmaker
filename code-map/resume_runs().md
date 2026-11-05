@@ -1,18 +1,18 @@
 ---
 source_file: "shortsmaker/cli.py"
 type: "code"
-community: "main"
+community: "write_json"
 location: "L142"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/main
+  - community/write_json
 ---
 
 # resume_runs()
 
 ## Connections
-- [[Path_34]] - `references` [EXTRACTED]
+- [[Path_25]] - `references` [EXTRACTED]
 - [[cli.py]] - `contains` [EXTRACTED]
 - [[configure_brain()]] - `calls` [EXTRACTED]
 - [[context()]] - `calls` [EXTRACTED]
@@ -24,10 +24,10 @@ tags:
 - [[pending()]] - `calls` [EXTRACTED]
 - [[read()_2]] - `calls` [EXTRACTED]
 - [[record_failure()]] - `calls` [EXTRACTED]
-- [[render()_1]] - `calls` [EXTRACTED]
+- [[render()_3]] - `calls` [EXTRACTED]
 - [[require_rules()]] - `calls` [EXTRACTED]
 - [[seo_pass()]] - `calls` [EXTRACTED]
 - [[update()]] - `calls` [EXTRACTED]
 - [[use_channel()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/main
+#graphify/code #graphify/EXTRACTED #community/write_json

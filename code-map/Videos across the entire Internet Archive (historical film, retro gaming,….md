@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/footage.py"
 type: "rationale"
-community: "footage.py"
+community: "fetch"
 location: "L106"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/footagepy
+  - community/fetch
 ---
 
 # Videos across the entire Internet Archive (historical film, retro gaming,…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[archive_films()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/footagepy
+#graphify/rationale #graphify/EXTRACTED #community/fetch

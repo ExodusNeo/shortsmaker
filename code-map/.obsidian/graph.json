@@ -22,7 +22,7 @@
       }
     },
     {
-      "query": "tag:#community/gather_pool",
+      "query": "tag:#community/prepare_topic",
       "color": {
         "a": 1,
         "rgb": 7780274
@@ -43,7 +43,7 @@
       }
     },
     {
-      "query": "tag:#community/log_short",
+      "query": "tag:#community/render_stylepy",
       "color": {
         "a": 1,
         "rgb": 11565729
@@ -99,7 +99,7 @@
       }
     },
     {
-      "query": "tag:#community/subprocess",
+      "query": "tag:#community/gather_pool",
       "color": {
         "a": 1,
         "rgb": 5873999
@@ -127,14 +127,14 @@
       }
     },
     {
-      "query": "tag:#community/gpupy",
+      "query": "tag:#community/test_full_scenespy",
       "color": {
         "a": 1,
         "rgb": 10253663
       }
     },
     {
-      "query": "tag:#community/planning",
+      "query": "tag:#community/write_scripts",
       "color": {
         "a": 1,
         "rgb": 12234924
@@ -155,7 +155,7 @@
       }
     },
     {
-      "query": "tag:#community/ffmpeg",
+      "query": "tag:#community/local_clips",
       "color": {
         "a": 1,
         "rgb": 14767961
@@ -246,7 +246,7 @@
       }
     },
     {
-      "query": "tag:#community/test_weak_opener_graphic_fixes_then_handoff",
+      "query": "tag:#community/use",
       "color": {
         "a": 1,
         "rgb": 15583560
@@ -316,14 +316,14 @@
       }
     },
     {
-      "query": "tag:#community/topic_ideaspy",
+      "query": "tag:#community/re",
       "color": {
         "a": 1,
         "rgb": 15583560
       }
     },
     {
-      "query": "tag:#community/invent_component",
+      "query": "tag:#community/render_remotion",
       "color": {
         "a": 1,
         "rgb": 11565729
@@ -351,7 +351,7 @@
       }
     },
     {
-      "query": "tag:#community/fake_ai",
+      "query": "tag:#community/logbook_results",
       "color": {
         "a": 1,
         "rgb": 5142951
@@ -365,14 +365,14 @@
       }
     },
     {
-      "query": "tag:#community/style_placeholders",
+      "query": "tag:#community/words_of",
       "color": {
         "a": 1,
         "rgb": 14767961
       }
     },
     {
-      "query": "tag:#community/footagepy",
+      "query": "tag:#community/fetch",
       "color": {
         "a": 1,
         "rgb": 7780274
@@ -393,7 +393,7 @@
       }
     },
     {
-      "query": "tag:#community/re",
+      "query": "tag:#community/retentionpy",
       "color": {
         "a": 1,
         "rgb": 11565729
@@ -414,7 +414,7 @@
       }
     },
     {
-      "query": "tag:#community/style_library",
+      "query": "tag:#community/test_stylepy",
       "color": {
         "a": 1,
         "rgb": 12234924
@@ -435,7 +435,7 @@
       }
     },
     {
-      "query": "tag:#community/clean_look",
+      "query": "tag:#community/local_voice",
       "color": {
         "a": 1,
         "rgb": 14767961
@@ -456,7 +456,7 @@
       }
     },
     {
-      "query": "tag:#community/media_command",
+      "query": "tag:#community/download_audio_choices",
       "color": {
         "a": 1,
         "rgb": 15583560
@@ -498,14 +498,14 @@
       }
     },
     {
-      "query": "tag:#community/write_scripts",
+      "query": "tag:#community/clean_full",
       "color": {
         "a": 1,
         "rgb": 15896107
       }
     },
     {
-      "query": "tag:#community/style_labpy",
+      "query": "tag:#community/qwen_voicepy",
       "color": {
         "a": 1,
         "rgb": 14767961
@@ -519,7 +519,7 @@
       }
     },
     {
-      "query": "tag:#community/test_full_scenespy",
+      "query": "tag:#community/pathlib",
       "color": {
         "a": 1,
         "rgb": 5873999
@@ -540,7 +540,7 @@
       }
     },
     {
-      "query": "tag:#community/captions",
+      "query": "tag:#community/music_gain",
       "color": {
         "a": 1,
         "rgb": 16752039
@@ -568,7 +568,7 @@
       }
     },
     {
-      "query": "tag:#community/test_stylepy",
+      "query": "tag:#community/article_text",
       "color": {
         "a": 1,
         "rgb": 15896107
@@ -659,6 +659,20 @@
       }
     },
     {
+      "query": "tag:#community/get_image",
+      "color": {
+        "a": 1,
+        "rgb": 5873999
+      }
+    },
+    {
+      "query": "tag:#community/seo_pass",
+      "color": {
+        "a": 1,
+        "rgb": 15583560
+      }
+    },
+    {
       "query": "tag:#community/test_story_sound_library",
       "color": {
         "a": 1,
@@ -680,10 +694,17 @@
       }
     },
     {
-      "query": "tag:#community/render_remotion",
+      "query": "tag:#community/fix_short",
       "color": {
         "a": 1,
         "rgb": 12234924
+      }
+    },
+    {
+      "query": "tag:#community/test_every_mode_can_continue_through_two_exhausted_ais",
+      "color": {
+        "a": 1,
+        "rgb": 5142951
       }
     },
     {
@@ -708,10 +729,24 @@
       }
     },
     {
-      "query": "tag:#community/test_short_credit",
+      "query": "tag:#community/finish_short",
       "color": {
         "a": 1,
-        "rgb": 16752039
+        "rgb": 5873999
+      }
+    },
+    {
+      "query": "tag:#community/make_sfx",
+      "color": {
+        "a": 1,
+        "rgb": 15583560
+      }
+    },
+    {
+      "query": "tag:#community/limit_full",
+      "color": {
+        "a": 1,
+        "rgb": 11565729
       }
     }
   ]

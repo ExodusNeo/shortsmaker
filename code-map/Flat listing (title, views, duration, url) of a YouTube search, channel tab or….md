@@ -2,7 +2,7 @@
 source_file: "shortsmaker/channel_profiles.py"
 type: "rationale"
 community: "pick_channel"
-location: "L141"
+location: "L143"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED

@@ -1,12 +1,12 @@
 ---
 source_file: "local_ai/qwen_voice.py"
 type: "code"
-community: "style_lab.py"
+community: "qwen_voice.py"
 location: "L105"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/style_labpy
+  - community/qwen_voicepy
 ---
 
 # speak()
@@ -15,4 +15,4 @@ tags:
 - [[qwen_voice.py]] - `contains` [EXTRACTED]
 - [[spoken_sentence()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/style_labpy
+#graphify/code #graphify/EXTRACTED #community/qwen_voicepy

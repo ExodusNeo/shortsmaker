@@ -1,12 +1,12 @@
 ---
 source_file: "local_ai/qwen_voice.py"
 type: "code"
-community: "style_lab.py"
+community: "qwen_voice.py"
 location: "L34"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/style_labpy
+  - community/qwen_voicepy
 ---
 
 # one()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[say_number()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/style_labpy
+#graphify/code #graphify/EXTRACTED #community/qwen_voicepy

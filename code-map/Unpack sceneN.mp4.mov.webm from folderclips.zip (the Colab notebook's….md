@@ -2,7 +2,7 @@
 source_file: "shortsmaker/gpu.py"
 type: "rationale"
 community: "test_h3_handoff.py"
-location: "L455"
+location: "L456"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED

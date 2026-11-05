@@ -1,22 +1,21 @@
 ---
 type: community
-members: 42
+members: 41
 ---
 
 # test_h3_handoff.py
 
-**Members:** 42 nodes
+**Members:** 41 nodes
 
 ## Members
 - [[After an opener swap moved scene 4's clip to scene 1, the re-render cuts it…]] - rationale - tests/test_h3_handoff.py
 - [[Join checked fields into one image-to-video prompt. H3 has no negative prompt,…]] - rationale - shortsmaker/gpu.py
-- [[Path]] - code
+- [[Path_1]] - code
 - [[Run fn with llm.ask_ai and input restored afterwards.]] - rationale - tests/test_h3_handoff.py
 - [[Tests for the Colab H3  Flow hand-off frame-checked video prompts, veo.zip,…]] - rationale - tests/test_h3_handoff.py
 - [[Unpack sceneN.mp4.mov.webm from folderclips.zip (the Colab notebook's…]] - rationale - shortsmaker/gpu.py
 - [[What is missing from the AI's prompt fields for one scene (empty list = usable).]] - rationale - shortsmaker/gpu.py
-- [[ask()]] - code - tests/test_h3_handoff.py
-- [[builtins]] - concept
+- [[ask()_1]] - code - tests/test_h3_handoff.py
 - [[fake_ai()]] - code - tests/test_h3_handoff.py
 - [[h3_problems()]] - code - shortsmaker/gpu.py
 - [[h3_prompt()]] - code - shortsmaker/gpu.py
@@ -59,17 +58,17 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 6 edges to [[_COMMUNITY_ffmpeg]]
-- 6 edges to [[_COMMUNITY_test_full_scenes.py]]
-- 4 edges to [[_COMMUNITY_gpu.py]]
+- 6 edges to [[_COMMUNITY_local_clips]]
+- 6 edges to [[_COMMUNITY_pathlib]]
+- 4 edges to [[_COMMUNITY_test_full_scenes.py]]
 - 1 edge to [[_COMMUNITY_h3_run.py]]
 - 1 edge to [[_COMMUNITY_re]]
-- 1 edge to [[_COMMUNITY_log_short]]
+- 1 edge to [[_COMMUNITY_test_story.py]]
 - 1 edge to [[_COMMUNITY_split_make_shorts.py]]
 
 ## Top bridge nodes
 - [[unpack_clips()]] - degree 10, connects to 4 communities
-- [[test_h3_handoff.py]] - degree 32, connects to 2 communities
+- [[test_h3_handoff.py]] - degree 32, connects to 3 communities
 - [[handoff()]] - degree 12, connects to 2 communities
 - [[h3_problems()]] - degree 4, connects to 2 communities
 - [[h3_prompt()]] - degree 4, connects to 2 communities

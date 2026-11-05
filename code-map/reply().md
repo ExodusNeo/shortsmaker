@@ -1,19 +1,18 @@
 ---
-source_file: "tests/test_pictures_first.py"
+source_file: "tests/test_ai_modes.py"
 type: "code"
-community: "planning"
-location: "L515"
+community: "test_every_mode_can_continue_through_two_exhausted_ais"
+location: "L26"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/planning
+  - community/test_every_mode_can_continue_through_two_exhausted_ais
 ---
 
 # reply()
 
 ## Connections
-- [[dot-__enter__()]] - `calls` [EXTRACTED]
-- [[planning_ai()]] - `calls` [EXTRACTED]
-- [[test_both_mode_pools_follow_reply_position()]] - `indirect_call` [INFERRED]
+- [[claude()]] - `calls` [EXTRACTED]
+- [[fake_providers()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/planning
+#graphify/code #graphify/EXTRACTED #community/test_every_mode_can_continue_through_two_exhausted_ais

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/seo.py"
 type: "rationale"
-community: "re"
+community: "seo_pass"
 location: "L35"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/re
+  - community/seo_pass
 ---
 
 # Whole, unique tags within the upload budget; never slice through a tag.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[clean_tags()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/re
+#graphify/rationale #graphify/EXTRACTED #community/seo_pass

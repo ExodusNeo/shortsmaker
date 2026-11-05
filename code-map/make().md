@@ -24,6 +24,7 @@ tags:
 - [[test_heading_case_and_spaces()]] - `calls` [EXTRACTED]
 - [[test_level3_heading_stays_inside()]] - `calls` [EXTRACTED]
 - [[test_load_rules_sets_session()]] - `calls` [EXTRACTED]
+- [[test_loop_setting_is_checked()]] - `calls` [EXTRACTED]
 - [[test_missing_heading_stops()]] - `calls` [EXTRACTED]
 - [[test_odd_min_pictures_stop_cleanly()]] - `calls` [EXTRACTED]
 - [[test_opening_picture_needs_its_fields()]] - `calls` [EXTRACTED]

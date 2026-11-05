@@ -2,7 +2,7 @@
 source_file: "tests/test_reliability.py"
 type: "code"
 community: "ReliabilityTests"
-location: "L94"
+location: "L103"
 tags:
   - graphify/code
   - graphify/INFERRED

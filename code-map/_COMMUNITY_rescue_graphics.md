@@ -1,20 +1,17 @@
 ---
 type: community
-members: 8
+members: 5
 ---
 
 # rescue_graphics
 
-**Members:** 8 nodes
+**Members:** 5 nodes
 
 ## Members
-- [[Check every line against the story's Wikipedia articles and rewrite what they…]] - rationale - shortsmaker/writing.py
-- [[Plain text of an English Wikipedia article ('' when missing or unreachable).]] - rationale - shortsmaker/writing.py
 - [[Scenes whose picture is missing or weak may become a full-screen motion graphic…]] - rationale - shortsmaker/picker.py
-- [[article_text()]] - code - shortsmaker/writing.py
-- [[fact_check()]] - code - shortsmaker/writing.py
+- [[The full-screen motion graphic formats the AI may pick from (rescue_graphics,…]] - rationale - shortsmaker/picker.py
+- [[full_formats()]] - code - shortsmaker/picker.py
 - [[rescue_graphics()]] - code - shortsmaker/picker.py
-- [[test_fact_check_drops_full()]] - code - tests/test_full_scenes.py
 - [[test_rescue_respects_caps()]] - code - tests/test_full_scenes.py
 
 ## Live Query (requires Dataview plugin)
@@ -25,22 +22,20 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 5 edges to [[_COMMUNITY_test_full_scenes.py]]
-- 3 edges to [[_COMMUNITY_json]]
-- 3 edges to [[_COMMUNITY_write_scripts]]
-- 2 edges to [[_COMMUNITY_ask_ai]]
-- 2 edges to [[_COMMUNITY_finish_render]]
-- 1 edge to [[_COMMUNITY_main_1]]
+- 2 edges to [[_COMMUNITY_pathlib]]
+- 1 edge to [[_COMMUNITY_finish_render]]
+- 1 edge to [[_COMMUNITY_fix_short]]
 - 1 edge to [[_COMMUNITY_re]]
+- 1 edge to [[_COMMUNITY_article_text]]
+- 1 edge to [[_COMMUNITY_ask_ai]]
+- 1 edge to [[_COMMUNITY_json]]
+- 1 edge to [[_COMMUNITY_clean_full]]
+- 1 edge to [[_COMMUNITY_words_of]]
 - 1 edge to [[_COMMUNITY_apply_review_fixes]]
 - 1 edge to [[_COMMUNITY_render]]
-- 1 edge to [[_COMMUNITY_gather_pool]]
-- 1 edge to [[_COMMUNITY_extra_sources.py]]
-- 1 edge to [[_COMMUNITY_test_style.py]]
+- 1 edge to [[_COMMUNITY_test_full_scenes.py]]
 
 ## Top bridge nodes
-- [[rescue_graphics()]] - degree 13, connects to 9 communities
-- [[article_text()]] - degree 8, connects to 5 communities
-- [[fact_check()]] - degree 8, connects to 5 communities
-- [[test_fact_check_drops_full()]] - degree 2, connects to 1 community
+- [[rescue_graphics()]] - degree 13, connects to 10 communities
+- [[full_formats()]] - degree 4, connects to 2 communities
 - [[test_rescue_respects_caps()]] - degree 2, connects to 1 community

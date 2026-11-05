@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/footage.py"
 type: "code"
-community: "footage.py"
+community: "re"
 location: "L176"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/footagepy
+  - community/re
 ---
 
 # commercial_queries()
@@ -18,4 +18,4 @@ tags:
 - [[re]] - `calls` [EXTRACTED]
 - [[settings()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/footagepy
+#graphify/code #graphify/EXTRACTED #community/re

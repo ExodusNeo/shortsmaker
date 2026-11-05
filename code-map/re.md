@@ -45,7 +45,6 @@ tags:
 - [[image_sources.py]] - `imports` [EXTRACTED]
 - [[import_audio_file()]] - `calls` [EXTRACTED]
 - [[import_media()]] - `calls` [EXTRACTED]
-- [[is_loop_short()]] - `calls` [EXTRACTED]
 - [[is_person_portrait()]] - `calls` [EXTRACTED]
 - [[lint()]] - `calls` [EXTRACTED]
 - [[lint_custom_code()]] - `calls` [EXTRACTED]

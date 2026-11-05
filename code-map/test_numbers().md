@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_qwen_voice.py"
 type: "code"
-community: "style_lab.py"
+community: "qwen_voice.py"
 location: "L10"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/style_labpy
+  - community/qwen_voicepy
 ---
 
 # test_numbers()
@@ -15,4 +15,4 @@ tags:
 - [[say_number()]] - `calls` [INFERRED]
 - [[test_qwen_voice.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/style_labpy
+#graphify/code #graphify/EXTRACTED #community/qwen_voicepy

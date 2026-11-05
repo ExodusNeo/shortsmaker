@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/media_library.py"
 type: "rationale"
-community: "subprocess"
+community: "re"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/subprocess
+  - community/re
 ---
 
 # Owner media imports, source settings and provenance. No credentials are bundled.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[media_library.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/subprocess
+#graphify/rationale #graphify/EXTRACTED #community/re

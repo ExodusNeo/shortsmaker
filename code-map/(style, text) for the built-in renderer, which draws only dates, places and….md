@@ -2,7 +2,7 @@
 source_file: "shortsmaker/plan_rules.py"
 type: "rationale"
 community: "frame_maker"
-location: "L443"
+location: "L437"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED

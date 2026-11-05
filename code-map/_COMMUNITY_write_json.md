@@ -1,26 +1,31 @@
 ---
 type: community
-members: 14
+members: 19
 ---
 
 # write_json
 
-**Members:** 14 nodes
+**Members:** 19 nodes
 
 ## Members
-- [[Fast path for a mark card on a still, with hard cuts on both sides. Preserve…]] - rationale - shortsmaker/scene_repair.py
-- [[Final H.264 encode NVENC on the GPU when available (frees the CPU), else x264.]] - rationale - shortsmaker/media_tools.py
+- [[Exception_1]] - code
 - [[Path_24]] - code
 - [[Path_25]] - code
-- [[What a fix re-render needs to reproduce this Short without new AI picks the…]] - rationale - shortsmaker/short_render.py
+- [[Path_26]] - code
+- [[Topics of this channel's unfinished Shorts not in done_topics yet, but already…]] - rationale - shortsmaker/checkpoints.py
 - [[Write via a temp file, so an interrupted run never leaves a half-written file…]] - rationale - shortsmaker/media_tools.py
-- [[apply()]] - code - shortsmaker/scene_repair.py
-- [[copy]] - concept
-- [[preview()]] - code - shortsmaker/scene_repair.py
-- [[save_state()]] - code - shortsmaker/short_render.py
-- [[test_encoder_cache_lives_with_video_encoder()]] - code - tests/test_package.py
-- [[test_state_roundtrip_full_pics()]] - code - tests/test_full_scenes.py
-- [[video_encoder()]] - code - shortsmaker/media_tools.py
+- [[base64]] - concept
+- [[begin()]] - code - shortsmaker/checkpoints.py
+- [[context()]] - code - shortsmaker/checkpoints.py
+- [[pack()]] - code - shortsmaker/checkpoints.py
+- [[pending()]] - code - shortsmaker/checkpoints.py
+- [[pending_topics()]] - code - shortsmaker/checkpoints.py
+- [[read()_2]] - code - shortsmaker/checkpoints.py
+- [[record_failure()]] - code - shortsmaker/cli.py
+- [[resume_runs()]] - code - shortsmaker/cli.py
+- [[save_context()]] - code - shortsmaker/checkpoints.py
+- [[unpack()]] - code - shortsmaker/checkpoints.py
+- [[update()]] - code - shortsmaker/checkpoints.py
 - [[write_json()]] - code - shortsmaker/media_tools.py
 
 ## Live Query (requires Dataview plugin)
@@ -31,29 +36,29 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 6 edges to [[_COMMUNITY_main_1]]
-- 5 edges to [[_COMMUNITY_subprocess]]
-- 5 edges to [[_COMMUNITY_ffmpeg]]
-- 5 edges to [[_COMMUNITY_test_full_scenes.py]]
-- 4 edges to [[_COMMUNITY_gpu.py]]
+- 15 edges to [[_COMMUNITY_pathlib]]
+- 7 edges to [[_COMMUNITY_render]]
+- 5 edges to [[_COMMUNITY_main_1]]
 - 4 edges to [[_COMMUNITY_json]]
-- 3 edges to [[_COMMUNITY_render]]
+- 3 edges to [[_COMMUNITY_finish_short]]
 - 3 edges to [[_COMMUNITY_audio_library.py]]
-- 2 edges to [[_COMMUNITY_test_pictures_first.py]]
+- 2 edges to [[_COMMUNITY_prepare_topic]]
+- 2 edges to [[_COMMUNITY_re]]
+- 2 edges to [[_COMMUNITY_seo_pass]]
 - 2 edges to [[_COMMUNITY_extra_sources.py]]
-- 2 edges to [[_COMMUNITY_duration]]
-- 1 edge to [[_COMMUNITY_make]]
-- 1 edge to [[_COMMUNITY_gather_pool]]
-- 1 edge to [[_COMMUNITY_footage.py]]
-- 1 edge to [[_COMMUNITY_test_blender_render.py]]
-- 1 edge to [[_COMMUNITY_media_command]]
-- 1 edge to [[_COMMUNITY_test_first_second.py]]
+- 1 edge to [[_COMMUNITY_test_rules.py]]
+- 1 edge to [[_COMMUNITY_test_full_scenes.py]]
+- 1 edge to [[_COMMUNITY_write_scripts]]
+- 1 edge to [[_COMMUNITY_test_pictures_first.py]]
+- 1 edge to [[_COMMUNITY_apply_review_fixes]]
+- 1 edge to [[_COMMUNITY_pick_channel]]
+- 1 edge to [[_COMMUNITY_fix_short]]
 - 1 edge to [[_COMMUNITY_finish_render]]
-- 1 edge to [[_COMMUNITY_ask_ai]]
+- 1 edge to [[_COMMUNITY_duration]]
 
 ## Top bridge nodes
-- [[write_json()]] - degree 21, connects to 10 communities
-- [[apply()]] - degree 13, connects to 9 communities
-- [[preview()]] - degree 12, connects to 7 communities
-- [[video_encoder()]] - degree 10, connects to 4 communities
-- [[save_state()]] - degree 9, connects to 4 communities
+- [[resume_runs()]] - degree 17, connects to 10 communities
+- [[write_json()]] - degree 21, connects to 8 communities
+- [[update()]] - degree 10, connects to 4 communities
+- [[read()_2]] - degree 12, connects to 2 communities
+- [[record_failure()]] - degree 7, connects to 2 communities

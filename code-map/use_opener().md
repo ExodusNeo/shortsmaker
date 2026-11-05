@@ -16,7 +16,7 @@ tags:
 - [[Scene 1 on an `opener animated` channel plays the first opener that works…]] - `rationale_for` [EXTRACTED]
 - [[ffmpeg()]] - `calls` [EXTRACTED]
 - [[make_opener()]] - `calls` [EXTRACTED]
-- [[render()_1]] - `calls` [EXTRACTED]
+- [[render()_3]] - `calls` [EXTRACTED]
 - [[short_render.py]] - `contains` [EXTRACTED]
 - [[test_use_opener_plays_the_drawn_opener()]] - `calls` [EXTRACTED]
 - [[use()]] - `calls` [EXTRACTED]

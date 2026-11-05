@@ -27,14 +27,14 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 3 edges to [[_COMMUNITY_test_story.py]]
 - 3 edges to [[_COMMUNITY_write_scripts]]
-- 3 edges to [[_COMMUNITY_test_full_scenes.py]]
+- 3 edges to [[_COMMUNITY_test_story.py]]
+- 3 edges to [[_COMMUNITY_pathlib]]
 - 2 edges to [[_COMMUNITY_cold_read]]
 - 2 edges to [[_COMMUNITY_ask_ai]]
-- 1 edge to [[_COMMUNITY_gather_pool]]
+- 1 edge to [[_COMMUNITY_test_every_mode_can_continue_through_two_exhausted_ais]]
+- 1 edge to [[_COMMUNITY_prepare_topic]]
 - 1 edge to [[_COMMUNITY_json]]
-- 1 edge to [[_COMMUNITY_main_1]]
 - 1 edge to [[_COMMUNITY_quality_check]]
 
 ## Top bridge nodes

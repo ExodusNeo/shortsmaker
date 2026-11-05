@@ -1,12 +1,12 @@
 ---
 source_file: "local_ai/qwen_voice.py"
 type: "rationale"
-community: "style_lab.py"
+community: "qwen_voice.py"
 location: "L58"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/style_labpy
+  - community/qwen_voicepy
 ---
 
 # Pair each whitespace token in `text` with how the narrator says it, moving…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[spoken_tokens()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/style_labpy
+#graphify/rationale #graphify/EXTRACTED #community/qwen_voicepy

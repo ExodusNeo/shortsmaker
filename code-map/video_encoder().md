@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/media_tools.py"
 type: "code"
-community: "write_json"
+community: "render"
 location: "L30"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/write_json
+  - community/render
 ---
 
 # video_encoder()
@@ -18,9 +18,9 @@ tags:
 - [[local_clips()]] - `calls` [EXTRACTED]
 - [[media_tools.py]] - `contains` [EXTRACTED]
 - [[preview()]] - `calls` [EXTRACTED]
-- [[render()_1]] - `calls` [EXTRACTED]
+- [[render()_3]] - `calls` [EXTRACTED]
 - [[render_clips()]] - `calls` [EXTRACTED]
 - [[subprocess]] - `calls` [EXTRACTED]
 - [[test_encoder_cache_lives_with_video_encoder()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/write_json
+#graphify/code #graphify/EXTRACTED #community/render

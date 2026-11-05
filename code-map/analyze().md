@@ -1,19 +1,19 @@
 ---
 source_file: "shortsmaker/retention.py"
 type: "code"
-community: "re"
+community: "retention.py"
 location: "L280"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/re
+  - community/retentionpy
 ---
 
 # analyze()
 
 ## Connections
 - [[One review task using the existing AI selectionquota fallback; preserve…]] - `rationale_for` [EXTRACTED]
-- [[Path_19]] - `references` [EXTRACTED]
+- [[Path_18]] - `references` [EXTRACTED]
 - [[ask_ai()]] - `calls` [EXTRACTED]
 - [[command()]] - `calls` [EXTRACTED]
 - [[json]] - `calls` [EXTRACTED]
@@ -25,4 +25,4 @@ tags:
 - [[shutil]] - `calls` [EXTRACTED]
 - [[tempfile]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/re
+#graphify/code #graphify/EXTRACTED #community/retentionpy
