@@ -335,6 +335,29 @@ class MediaTests(unittest.TestCase):
         media_tools.write_json(voice.with_suffix(".wav.json"), meta)
         self.assertAlmostEqual(audio_library.sound_profile(voice)["impact"], .2)
 
+    def test_steady_sound_has_no_impact_but_a_hit_keeps_it(self):
+        static, hit = self.root / "static.wav", self.root / "hit.wav"
+        media_tools.ffmpeg("-f", "lavfi", "-i", "anoisesrc=d=3:a=0.3:seed=7", str(static), cwd=self.root)
+        media_tools.ffmpeg("-f", "lavfi", "-i", "anoisesrc=d=2:a=0.02:seed=7", "-f", "lavfi", "-i", "sine=f=800:d=0.05",
+                           "-filter_complex", "[1]adelay=1200,apad[b];[0][b]amix=inputs=2:normalize=0:duration=first",
+                           str(hit), cwd=self.root)
+        self.assertEqual(audio_library.sound_profile(static)["impact"], 0)
+        self.assertAlmostEqual(audio_library.sound_profile(hit)["impact"], 1.2, delta=0.05)
+
+    def test_sound_masking_flags_noise_under_the_voice_not_a_short_hit(self):
+        from shortsmaker import review
+        voice, noise, tap = self.root / "voice.wav", self.root / "noise.wav", self.root / "tap.wav"
+        media_tools.ffmpeg("-f", "lavfi", "-i", "sine=f=300:d=6", "-af", "volume=0.5", str(voice), cwd=self.root)
+        media_tools.ffmpeg("-f", "lavfi", "-i", "anoisesrc=d=2:a=0.2:seed=3", "-af", "adelay=2000,apad=whole_dur=6",
+                           str(noise), cwd=self.root)
+        media_tools.ffmpeg("-f", "lavfi", "-i", "anoisesrc=d=0.3:a=0.2:seed=3", "-af", "adelay=2000,apad=whole_dur=6",
+                           str(tap), cwd=self.root)
+        found = review.sound_masking(voice, noise, [0, 3, 6])
+        self.assertEqual(len(found), 1, found)
+        self.assertIn("at 0:02.0 (scene 1)", found[0])
+        self.assertEqual(review.sound_masking(voice, tap, [0, 3, 6]), [])
+        self.assertEqual(review.sound_masking(voice, self.root / "none.wav", [0, 6]), [])
+
 
 if __name__ == "__main__":
     unittest.main()

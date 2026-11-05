@@ -86,8 +86,7 @@ def test_blender_failure_is_reported_and_the_batch_goes_on():
     made = []
 
     def render(short, ch, folder, state=None, fix_round=0):
-        folder.mkdir(parents=True)
-        (folder / "work").mkdir()
+        (folder / "work").mkdir(parents=True, exist_ok=True)  # checkpoints.begin made it already
         made.append(folder)
         if short["title"] == "First":
             raise blender_render.BlenderFailed("exit code 1: boom")
@@ -113,7 +112,8 @@ def test_blender_failure_is_reported_and_the_batch_goes_on():
             (sys.argv, writing.write_scripts, seo.seo_pass, short_render.render, short_render.prune_work,
              picture_pool.prune_cache, channel_profiles.save_channel, channel_profiles.use_channel, logbook.log_short,
              logbook.vault_page, cli.OUTPUT, rules.require_rules, channel_profiles.load_channel) = saved
-        assert len(made) == 2 and not made[0].exists() and made[1].exists()  # nothing half-made is left behind
+        assert len(made) == 2 and made[1].exists()
+        assert (made[0] / "work" / "progress.json").exists()  # the failed one is kept for resume, the batch went on
 
 
 def test_film_opener_is_skipped_and_bad_bytes_fall_back():

@@ -324,12 +324,18 @@ def edit_scripts(shorts: list[dict], ch: dict, problems: dict[int, list[str]] | 
     lo, hi, s_lo, s_hi, _ = length_plan()
     mode_str = " (solo)" if session.SOLO else ""
     print(f"{editor.capitalize()}{mode_str} is editing the script(s)...")
+    # Second pass: the research too. With only the script's own facts, a detour can't be cut without breaking the scene
+    # count, so the wooden-eagle Short (2026-11-05) kept "31 grams / wooden beak / stayed dead" through both passes.
     retry = (f"""SECOND PASS: these scripts still break the story rules. Fix exactly these problems:
 {json.dumps(problems, ensure_ascii=False)}
+Here each script also lists its Wikipedia research: you MAY replace a scene that adds nothing with a new fact from it
+(the fact check verifies every line afterwards). To keep {s_lo} scenes after a cut, split a longer scene at a natural
+pause or add the next research fact; never pad.
 """ if problems else "")
     drafts = [{"index": i, "topic": s["topic"], "shape": s.get("shape"), "title": s["title"],
                "hook_text": s.get("hook_text"), "thumbnail_text": s.get("thumbnail_text"),
-               "hook_options": s.get("hook_options"), "scenes": s["lines"], "pictures": picture_pool.pictures_of(s) or "none listed"}
+               "hook_options": s.get("hook_options"), "scenes": s["lines"], "pictures": picture_pool.pictures_of(s) or "none listed",
+               **({"research": {t: x[:4000] for t, x in (s.get("_texts") or {}).items() if x} or "none"} if problems else {})}
               for i, s in enumerate(shorts)]
     role_desc = ("You drafted the scripts below; refine and edit each one to make it as gripping as possible."
                  if session.SOLO else
@@ -359,7 +365,7 @@ For each script:
    twist away, by name or by a word like "hoax", "fake", "trick", "secret" or "explained" when the twist is
    that it was one ("MATH WHIZ OR HOAX?" told viewers the answer). Fix whichever fails.
 Each script's "pictures" lists the real pictures found for it: keep lines built on them showable.
-Change wording, never claims: add no fact that isn't already in the script. Keep {s_lo}-{s_hi} scenes of 4-{channel_profiles.SCENE_WORDS}
+Change wording, never claims: add no fact that isn't already in the script{" or its research" if problems else ""}. Keep {s_lo}-{s_hi} scenes of 4-{channel_profiles.SCENE_WORDS}
 words each (a new picture every ~3 seconds; only a scene that needs time on one picture may run up to
 {channel_profiles.LONG_SCENE_WORDS}), {lo}-{hi} words in total. {SCENE_CUTS} Return every scene, changed or not.
 notes: 1-4 short lines: the hook scores and what you changed and why.

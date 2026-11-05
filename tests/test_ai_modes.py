@@ -55,6 +55,24 @@ def test_all_modes_route_writer_editor_and_reader():
             assert calls == [editor, editor], (mode, calls)
 
 
+def test_only_the_second_edit_pass_gets_the_research():
+    prompts = []
+
+    def ask(prompt, **kw):
+        prompts.append(prompt)
+        return {}
+
+    short = {'topic': 'Topic', 'title': 'Title', 'lines': ['He stopped.', 'She won.'], '_texts': {'The Thing': 'Fact A. ' * 900}}
+    with saved_session(), patch.object(llm, 'ask_ai', side_effect=ask), patch.object(writing, 'cold_read', return_value={}), \
+         patch.dict(session.RULES, {'Story rules': 'One story.'}):
+        writing.edit_scripts([dict(short)], {'niche': 'history'}, {0: ['scenes 8-10 add nothing new']})
+        writing.edit_scripts([dict(short)], {'niche': 'history'}, None)
+    second, first = prompts[0], prompts[1]
+    assert '"research": {"The Thing": "Fact A.' in second and 'or its research' in second
+    assert second.count('Fact A.') <= 4000 // len('Fact A. ') + 1  # capped per article
+    assert 'research' not in first.split('Scripts:')[1] and 'or its research' not in first
+
+
 def test_every_mode_can_continue_through_two_exhausted_ais():
     for mode in channel_profiles.BRAINS:
         with saved_session():

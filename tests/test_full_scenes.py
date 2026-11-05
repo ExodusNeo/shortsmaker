@@ -918,7 +918,18 @@ def test_counter_finishes_before_it_leaves():
     at = editplan.scene_cues(sc, words, 10.0, 14.0, 4, None)["graphic"]
     assert at + editplan.GRAPHIC_BUILD["stat"] + 0.87 <= 14.0  # counted up, held, then the exit
     sc["graphic"] = {"style": "fact", "text": "FAKE", "trigger": "fifteen"}
-    assert editplan.scene_cues(sc, words, 10.0, 14.0, 4, None)["graphic"] == 12.5  # a plain callout still waits for its word
+    # a plain callout waits for its word, but no later than review.callout_hold allows (12.5 left 0.9 s of 1.0)
+    assert abs(editplan.scene_cues(sc, words, 10.0, 14.0, 4, None)["graphic"] - 12.4) < 1e-9
+
+
+def test_short_scene_callout_is_placed_so_the_check_passes():
+    # wooden eagle: "7 YEARS LISTENING" in a 1.9 s scene was placed on its word and then flagged "allow about 1.0s"
+    from shortsmaker import review
+    words = [(0.0, 0.2, "It"), (0.2, 0.5, "keeps"), (0.5, 0.9, "listening"), (0.9, 1.0, "for"), (1.0, 1.2, "7"), (1.2, 1.6, "years")]
+    sc = {"graphic": {"style": "fact", "text": "7 YEARS LISTENING", "trigger": "7 years"}, "emphasis": None, "person": None}
+    at = editplan.scene_cues(sc, words, 6.6, 8.5, 2, None)["graphic"]
+    held, needed = review.callout_hold("7 YEARS LISTENING", at, 8.5)
+    assert held >= needed - 1e-9 and at < 6.6 + 1.0, (at, held, needed)
 
 
 def test_fill_money_graphics_and_caps():

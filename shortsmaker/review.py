@@ -1,8 +1,10 @@
 """Automatic checks on a finished Short, the AI visual review and its fixes (incl. repainting a scene, also used by
 fix.bat), the storyboard."""
 
+import array
 import io
 import json
+import math
 import re
 import shutil
 import subprocess
@@ -23,7 +25,7 @@ PAUSE_MAX = 0.8  # seconds of narration silence worth a look: sentence pauses ra
 def callout_hold(text: str, appear: float, scene_end: float) -> tuple[float, float]:
     """(seconds a callout can be read after its entrance, seconds it needs): the repo's motion-design reading-hold
     guidance (1 s, +0.25 s per word past three), allowing 0.35 s for an ordinary entrance and 0.25 s before the cut."""
-    return scene_end - 0.25 - appear - 0.35, 1.0 + max(0, len(text.split()) - 3) * 0.25
+    return scene_end - 0.25 - appear - plan_rules.READ_ENTRANCE, plan_rules.read_need(text)
 
 
 def pacing_check(short: dict, bounds: list[float], cues: list[dict]) -> list[str]:
@@ -53,7 +55,8 @@ def pacing_check(short: dict, bounds: list[float], cues: list[dict]) -> list[str
         if text and held < needed:
             issues.append(f'scene {i + 1} callout "{text}" has about {max(0, held):.1f}s to read after its '
                           f'entrance; allow about {needed:.1f}s or simplify it')
-    issues += [str(note) for note in short.get("editor_notes", []) if str(note).startswith(("STILL", "NOT REVIEWED"))]
+    issues += [f"script (set before the voice; fix rounds only change pictures): {note}"
+               for note in short.get("editor_notes", []) if str(note).startswith(("STILL", "NOT REVIEWED"))]
     issues += [str(note) for note in short.get("fact_check", []) if str(note).startswith("NOT CHECKED")]
     issues += [f"metadata: {note}" for note in short.get("seo_notes", [])]
     preflight = short.get("opener_preflight") or {}
@@ -108,6 +111,40 @@ def quality_check(video: Path, bounds: list[float], sources: list[str], voice: P
         # a silence with no end is the tail after the last word
         issues += [f"the narration goes quiet for {float(b) - float(a):.1f}s at {where(float(a))}"
                    for a, b in re.findall(r"silence_start:\s*([\d.]+).*?silence_end:\s*([\d.]+)", quiet, re.S)]
+    return issues
+
+
+MASK_DB, MASK_SECONDS = 12, 0.5  # effects closer than 12 dB to the speaking voice for 0.5 s+ cover words (static sat at 8)
+
+
+def sound_masking(voice: Path, sfx: Path, bounds: list[float]) -> list[str]:
+    """Sound effects loud enough under the narration to cover words: the voice and effects stems (render() writes both
+    in work/, before the final loudness pass, so their difference is what the viewer hears), in 100 ms windows."""
+    def levels(path: Path) -> list[float]:
+        if not path.exists():
+            return []
+        r = subprocess.run(["ffmpeg", "-v", "error", "-i", str(path), "-f", "s16le", "-ac", "1", "-ar", "8000", "-"],
+                           capture_output=True, timeout=120)
+        s = array.array("h", r.stdout[:len(r.stdout) // 2 * 2]) if not r.returncode else []
+        return [10 * math.log10(sum(x * x for x in s[i:i + 800]) / 800 + 1) for i in range(0, len(s) - 799, 800)]
+
+    v, f = levels(voice), levels(sfx)
+    if not v or not f:
+        return []
+    speaking = max(v) - 20
+    masked = [i < len(f) and v[i] > speaking and f[i] > v[i] - MASK_DB for i in range(len(v))] + [False]
+    issues, start = [], None
+    for i, m in enumerate(masked):
+        if m and start is None:
+            start = i
+        elif not m and start is not None:
+            if (i - start) * 0.1 >= MASK_SECONDS:
+                gap = sum(v[k] - f[k] for k in range(start, i)) / (i - start)
+                t = start * 0.1
+                scene = next((k for k in range(len(bounds) - 1) if bounds[k] <= t < bounds[k + 1]), len(bounds) - 2)
+                issues.append(f"a sound effect is only {gap:.0f} dB under the voice for {(i - start) * 0.1:.1f}s at "
+                              f"{media_tools.clock(t)} (scene {scene + 1}): it may cover the words")
+            start = None
     return issues
 
 

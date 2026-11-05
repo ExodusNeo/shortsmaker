@@ -179,7 +179,8 @@ def scene_cues(sc: dict, words: list[tuple[float, float, str]], start: float, en
             t = plan_rules.spoken_at(words, g["trigger"]) if "trigger" in g else None
             is_card = g.get("style") in ("kinetic", "stamp", "headline", "quote", "question",
                                          "stat", "timeline", "compare", "mark", "date")
-            need_time = max(1.8 if is_card else 1.1, build + (1.0 if is_card else 0.7))
+            need_time = max(1.8 if is_card else 1.1, build + (1.0 if is_card else 0.7),
+                            plan_rules.READ_ENTRANCE + plan_rules.read_need(str(g.get("text") or "")))
             latest = end - 0.25 - need_time
             if t is not None:
                 # Start on trigger word, or shift earlier if late in the scene so the graphic has readable hold time

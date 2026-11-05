@@ -220,9 +220,10 @@ def approved_sound(name: str, lib: Path = STORY_SFX) -> Path | None:
 
 
 def sound_profile(path: Path) -> dict:
-    """Measure once: duration and strongest 10-ms window, with explicit owner overrides."""
+    """Measure once: duration and strongest 10-ms window (the impact: where the hit lands), with explicit owner
+    overrides. A steady sound (static, rain, a crowd) has no hit: impact 0, so it starts on its word."""
     meta = audio_metadata(path)
-    stamp = [path.stat().st_size, path.stat().st_mtime_ns]
+    stamp = [path.stat().st_size, path.stat().st_mtime_ns, 2]  # 2: steady sounds get impact 0 (2026-11-05)
     if meta.get("profile_stamp") == stamp and "duration" in meta and "impact" in meta:
         return meta
     result = subprocess.run(["ffmpeg", "-v", "error", "-i", str(path), "-t", "30", "-f", "s16le", "-ac", "1",
@@ -232,7 +233,11 @@ def sound_profile(path: Path) -> dict:
     import array
     samples = array.array("h", result.stdout[:len(result.stdout) // 2 * 2])
     windows = [sum(v * v for v in samples[i:i + 80]) for i in range(0, len(samples), 80)]
-    measured = windows.index(max(windows)) * 0.01 if windows and max(windows) else 0.0
+    loud = sorted(w for w in windows if w)
+    # A hit stands out (4x the median energy, +6 dB); radio static's "loudest" 10 ms fell at 3.2 s of 3.5 s, so it
+    # started 3.2 s early and ran under the whole sentence (wooden-eagle Short, 2026-11-05)
+    hit = bool(loud) and max(windows) >= 4 * loud[len(loud) // 2]
+    measured = windows.index(max(windows)) * 0.01 if hit else 0.0
     set_audio_metadata(path, duration=len(samples) / 8000, impact=meta.get("impact_override", measured), profile_stamp=stamp)
     return audio_metadata(path)
 

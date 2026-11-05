@@ -54,7 +54,10 @@ PAINT_TEXT_RULE = ("Any writing in the picture must be exactly the words in doub
 # Main voice (owner's pick 2026-10-30): CosyVoice 3 in VoiceStudio, cloning Mark Nelson (investigative
 # storyteller, crisp cadence, CC0/PD). Fallback to aiden_ref.wav if nelson_ref.wav is missing.
 VOICESTUDIO = "http://127.0.0.1:3900"
-VOICESTUDIO_EXE = Path(r"D:\VoiceStudio\app\VoiceStudio.exe")
+# Its installer moved the app to Program Files (found 2026-11-05: D:\VoiceStudio\app was empty, so it never started)
+VOICESTUDIO_EXE = next((p for p in (Path(r"D:\VoiceStudio\app\VoiceStudio.exe"),
+                                    Path(r"C:\Program Files\VoiceStudio\VoiceStudio.exe")) if p.exists()),
+                       Path(r"C:\Program Files\VoiceStudio\VoiceStudio.exe"))
 COSY_REF = LOCAL_AI / "voices" / "nelson_ref.wav" if (LOCAL_AI / "voices" / "nelson_ref.wav").exists() else LOCAL_AI / "voices" / "aiden_ref.wav"
 COSY_INSTRUCT = "Speak with dry wit, curiosity, and building suspense, like a storyteller sharing an incredible secret."
 # Mark Nelson's natural pace is ~2.8 wps; speed 1.10 keeps it brisk with zero audio stretching artifacts (the
@@ -204,7 +207,17 @@ def local_voice(short: dict, ch: dict, work: Path) -> list[tuple[Path, list] | N
         if tail_n > 0:
             items[-1]["text"] = re.sub(r"[.;…]+$", "", items[-1]["text"].strip()) + " " + tail_words
             items[-1]["loop_tail"] = tail_n
-    if COSY_REF.exists() and voicestudio_up():
+    cosy = COSY_REF.exists() and voicestudio_up()
+    while COSY_REF.exists() and not cosy:  # the wooden-eagle Short (2026-11-05) got aiden with no word said
+        try:
+            ans = input("  >> VoiceStudio isn't running, so the Mark Nelson voice can't be made. Open VoiceStudio and "
+                        "press Enter, or type 'aiden' to use the backup voice: ").strip().lower()
+        except (EOFError, KeyboardInterrupt):
+            ans = "aiden"
+        if ans == "aiden":
+            break
+        cosy = voicestudio_up()
+    if cosy:
         ref_text = COSY_REF.with_suffix(".txt").read_text(encoding="utf-8").strip()
         done = local_job("tts", [{**it, "engine": "cosyvoice", "ref": str(COSY_REF), "ref_text": ref_text,
                                   "instruct": cosy_instruct(idx, len(items)), "speed": COSY_SPEED}

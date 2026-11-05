@@ -471,8 +471,12 @@ def render(short: dict, ch: dict, folder: Path, state: dict | None = None, fix_r
     events = audio_mix.sfx_events(short, cues, bounds, renderer == "remotion")
     fmt = "aformat=sample_rates=44100:channel_layouts=stereo"
     # Remotion draws its own captions; the Python video is also kept without them (clean.mp4) for edit_project
+    # Story sounds dip under the narrator like the music (radio static sat 8 dB under the voice, 2026-11-05);
+    # graphic hits stay as they are
+    story = [e for e in events if e["what"].startswith("story sound:")]
+    keys = (["[key]"] if music else []) + (["[skey]"] if story else [])
     graph = ["[0:v]null[v]" if renderer == "remotion" else "[0:v]split[raw][clean];[raw]subtitles=captions.ass[v]",
-             f"[1:a]{fmt},asplit=2[voice][key]" if music else f"[1:a]{fmt}[voice]"]
+             f"[1:a]{fmt},asplit={1 + len(keys)}[voice]{''.join(keys)}" if keys else f"[1:a]{fmt}[voice]"]
     mix = ["[voice]"]
     inputs = ["-i", "voice.wav"]
     if music:
@@ -481,14 +485,18 @@ def render(short: dict, ch: dict, folder: Path, state: dict | None = None, fix_r
         graph += [f"[2:a]{fmt},volume={audio_mix.music_gain(music):.4f},afade=t=in:d=0.1,afade=t=out:st={max(0.0, total - fade_out):.2f}:d={fade_out:.2f}[m]",
                   f"[m][key]{audio_library.ducking_filter()},asplit[music][music_stem]"]
         mix.append("[music]")
-    fx = []
+    fx, story_fx = [], []
     for e in events:
         k = 1 + inputs.count("-i")  # ffmpeg input index; input 0 is the video
         src = SFX / e["sound"]
         inputs += ["-ss", str(e.get("trim", 0)), "-t", str(e.get("duration", total)),
                    "-i", str(src if src.suffix else src.with_suffix(".wav"))]
         graph.append(f"[{k}:a]{fmt},highpass=f=220,volume={e['gain']},adelay={int(e['t'] * 1000)}:all=1[s{k}]")
-        fx.append(f"[s{k}]")
+        (story_fx if e in story else fx).append(f"[s{k}]")
+    if story_fx:
+        graph.append("".join(story_fx) + f"amix=inputs={len(story_fx)}:normalize=0[story_dry]")
+        graph.append(f"[story_dry][skey]{audio_library.ducking_filter()}[story]")
+        fx.append("[story]")
     if fx:  # summed apart first (same total: amix with normalize=0 only adds) so they can be saved as one track
         graph.append("".join(fx) + f"amix=inputs={len(fx)}:normalize=0,asplit[fx][fx_stem]")
         mix.append("[fx]")
@@ -546,6 +554,7 @@ def finish_render(short: dict, ch: dict, folder: Path, state=None, fix_round: in
               f"{'Remotion' if renderer == 'remotion' else 'built-in (Python)'}, {n_graphics} motion graphics",
               clips)
     issues = review.quality_check(folder / "short.mp4", bounds, sources, work / "voice.wav")
+    issues += review.sound_masking(work / "voice.wav", work / "sfx.wav", bounds)
     issues += review.pacing_check(short, bounds, cues)
     issues += [opener_check] if opener_check else []
     print(f"  {session.BRAIN.capitalize()} is watching the finished Short for problems...")

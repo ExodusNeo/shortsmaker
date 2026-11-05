@@ -153,7 +153,7 @@ class StoryPacingTests(unittest.TestCase):
         self.assertTrue(any("6.0s" in s for s in issues))
         self.assertTrue(any("0:06.0" in s and "swipe" in s for s in issues))
         self.assertTrue(any("callout" in s and "1.2s" in s for s in issues))
-        self.assertIn("STILL: unresolved", issues)
+        self.assertIn("script (set before the voice; fix rounds only change pictures): STILL: unresolved", issues)
         self.assertNotIn("An ordinary note", issues)
         self.assertIn("metadata: draft retained", issues)
 

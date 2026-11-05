@@ -451,6 +451,15 @@ def words_of(text: str) -> list[str]:
     return re.findall(r"[a-z0-9]+", plain.lower())
 
 
+# How long a callout needs on screen: a 0.35 s entrance, then 1 s to read, +0.25 s per word past three (the repo's
+# motion-design reading-hold guidance). One rule for editplan.scene_cues (placing) and review.callout_hold (checking).
+READ_ENTRANCE = 0.35
+
+
+def read_need(text: str) -> float:
+    return 1.0 + max(0, len(text.split()) - 3) * 0.25
+
+
 # A sentence end: . ! ? or …, then any closing quotes/brackets (straight or curly). The one rule for voice takes,
 # the first sentence, caption lines, SRT blocks and link words (audit 2026-11-05: three copies disagreed on '."').
 SENTENCE_END = r"[.!?\u2026][\"'\u201d\u2019)\]]*"

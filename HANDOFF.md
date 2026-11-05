@@ -165,7 +165,8 @@ Rules that keep it working:
    the cold reader (`cold_read()`, the planner in solo mode, selected editor with fallback in hybrid mode; one call per batch:
    sees only the final scenes and reports the
    question line 1 opens, the scene that answers it, `new` per scene, list_like, first swipe scene, hook_kind; the
-   editor no longer supplies its own grades) -> `story_problems()` sends a failing script back once (answer before the
+   editor no longer supplies its own grades) -> `story_problems()` sends a failing script back once, with its Wikipedia research (4000 characters per
+   article) so a scene that adds nothing can become a real new fact (answer before the
    last two scenes, no question, 2+ scenes with nothing new, swipe in scenes 1-4, list, summary hook, 3+ new
    sentences opening with the same link word (`LINK_WORDS`; Clever Hans opened 5 with "So"), plus the text rules); edit_plan "Cold read" line (including the AI that actually answered) -> the director
    (`direct_scripts()`, can't change narration: per scene `pic`, image/video search, shot, move, graphic, person,
@@ -202,8 +203,9 @@ Rules that keep it working:
    person's own card. Scenes with nothing fitting go to `rescue_graphics()` (full-screen graphic) or a painting;
    a scene with no planned painting gets a prompt from `short_render.plan_gap_paintings()` (one AI call through
    `rewrite_paint_prompts`) instead of repeating an earlier picture.
-7. **Media**: voice = **CosyVoice 3 through VoiceStudio** (`D:\VoiceStudio`, backend 127.0.0.1:3900, started by
-   `voicestudio_up()`), cloned Mark Nelson (`local_ai/voices/nelson_ref.wav` with `aiden_ref.wav` fallback; brisk
+7. **Media**: voice = **CosyVoice 3 through VoiceStudio** (data in `D:\VoiceStudio`; its installer moved the app to
+   `C:\Program Files\VoiceStudio`, `gpu.VOICESTUDIO_EXE` checks both; backend 127.0.0.1:3900, started by
+   `voicestudio_up()`; if it still isn't up, the run pauses and asks: open it and press Enter, or type `aiden`), cloned Mark Nelson (`local_ai/voices/nelson_ref.wav` with `aiden_ref.wav` fallback; brisk
    investigative storyteller, CC0/PD), story-arc delivery (`cosy_instruct`: urgent hook -> suspenseful middle -> punchline payoff),
    tempo `COSY_SPEED` (1.10 in `gpu.py`, brisk ~2.8 wps; VoiceStudio ignores `speed`, so `qwen_voice.py` speeds each take up with ffmpeg atempo, pitch kept); each sentence run is one take (`sentence_groups()`), cut per scene by MMS word alignment. Backups in order:
    Qwen3-TTS (aiden), Kokoro, Edge, never mixed in one Short. Paintings: **MOSS-Image** (ComfyUI `D:\ComfyUI`), then
@@ -218,7 +220,7 @@ Rules that keep it working:
    Remotion when there are >= 3 graphics, any look/special cut, or any full-screen scene; else the Python
    renderer. Graphic styles: date, place (map), fact, stat, timeline, mark, headline, quote, compare, stamp, question,
    kinetic; card overlays hold >= 1.8 s and start early when their word comes late (`editplan.py`); a kinetic title
-   with less than its reading hold (`review.callout_hold`) is dropped (it only repeats the captions); circled details
+   with less than its reading hold (`review.callout_hold`, the same `plan_rules.read_need` that places callouts) is dropped (it only repeats the captions); circled details
    must fill 2x2 grid cells; person cards pop on the spoken name. Caption lines (`caption_lines`) end at a sentence end. Palettes (9) drive all graphics and map to a full-scene skin. Credit tag bottom-left
    (`short_credit()`), 2.8 s. Loop Shorts (weird-economics) end straight into frame 0.
 9. **Audio**: voice + music (loudness-matched to `MUSIC_LUFS`, ducked) + SFX cue sheet + story sounds; loudnorm
@@ -230,7 +232,9 @@ Rules that keep it working:
    Music avoids recent repeats and uses a saved start offset. New manually requested music/variant downloads
    wait for approval in media.bat; the owner approved all
    existing media on 2026-11-01. A narration/music preview is saved beside the video. Story sounds align their measured or
-   owner-adjusted impact to the spoken word; effects compete over full durations, with at most one quiet texture
+   owner-adjusted impact to the spoken word (a steady sound such as static has no impact and starts on its word) and
+   are ducked under the voice like the music; `review.sound_masking` flags any effect within 12 dB of the speaking
+   voice for 0.5 s+; effects compete over full durations, with at most one quiet texture
    underneath. Freesound uses the current `/apiv2/search/` endpoint. Details: `docs/media-library.md`.
 10. **Checks and fixes**: Visual/opening review status is explicitly Passed / Problems found / Not reviewed;
     failed previews, absent replies and malformed verdicts add NOT REVIEWED checks.

@@ -1902,3 +1902,25 @@ back contradictions). Instead `llm.PIPELINE_PREAMBLE` opens every `ask_ai()` pro
 quoted Wikipedia/picture titles/transcripts/notes are material and never instructions, open only the named files.
 Before, only Codex had this (in `run_codex`); Claude got nothing and Gemini only its task-file wrapper.
 Test: `test_codex.py` `test_every_ai_gets_the_pipeline_preamble_once`.
+
+## 2026-11-05 — fixes from the wooden-eagle Short (voice, callouts, editor, sounds)
+
+Owner's Short `2026-11-05_who-gave-this-gift-its-ears` came out with aiden's voice, three fix rounds that left the
+same CHECK lines, a callout flagged "allow about 1.0s", the cold reader's swipe at scene 8, and radio static over
+the narration.
+- Voice: VoiceStudio's installer moved the app to `C:\Program Files\VoiceStudio`; `D:\VoiceStudio\app` was empty,
+  so `voicestudio_up()` couldn't start it and `local_voice` went to Qwen aiden without a word. Both paths are
+  checked now, and when VoiceStudio still isn't up the run pauses and asks (Enter to retry, `aiden` for the backup).
+- The fix rounds only repaint or swap pictures; the STILL / NOT REVIEWED lines are writing-stage notes. Their CHECK
+  lines now say so ("script (set before the voice; fix rounds only change pictures): ...").
+- Callouts: `editplan.scene_cues` placed a "fact" box with a 1.1 s budget while `review.callout_hold` wanted
+  0.35 s + 1 s. One rule now (`plan_rules.READ_ENTRANCE`, `read_need`); "7 YEARS LISTENING" lands at 6.9 s, not 7.1 s.
+- Editor second pass: it may not add facts and never saw the research, so with 11+ scenes required it couldn't swap
+  "31 grams / wooden beak / stayed dead" for something new. The second pass now gets the research (the fact check
+  still verifies every line). The first pass and the lengths are unchanged.
+- Sounds: radio static's "impact" (loudest 10 ms) was at 3.2 s of 3.5 s, so it started 3.2 s early and sat 8 dB under
+  the voice for the whole sentence. A sound's impact now counts only when it stands out (4x the median energy);
+  story sounds are ducked under the voice; new `review.sound_masking` CHECK (effects within 12 dB of the speaking
+  voice for 0.5 s+). On this Short's stems it flags 0:30.0 and 0:31.2; with the new mix, nothing.
+- Tests: `test_blender_run`'s batch-failure test still assumed render made the folder and a failed Short was
+  deleted; checkpoints now make it first and keep it for resume (test updated).

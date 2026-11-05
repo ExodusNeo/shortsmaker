@@ -55,9 +55,24 @@ class ReliabilityTests(unittest.TestCase):
                 return None  # Qwen unavailable
             return [{**items[0], 'ok': True, 'words': [[0, 0.5, 'A']]}, {**items[1], 'ok': False}]
 
-        with patch.object(gpu, 'voicestudio_up', return_value=False), patch.object(gpu, 'local_job', side_effect=job):
+        with patch.object(gpu, 'voicestudio_up', return_value=False), patch.object(gpu, 'local_job', side_effect=job), \
+             patch('builtins.input', return_value='aiden'):
             voices = gpu.local_voice({'scenes': scenes}, {'voice': 'en-US-AndrewNeural'}, self.work)
         self.assertEqual(voices, [None, None])
+
+    def test_no_voicestudio_asks_before_the_backup_voice(self):
+        scenes = [{'narration': 'A door opened.'}]
+        jobs, asked = [], []
+
+        def job(task, items, work, timeout, worker='gen.py', venv='.venv'):
+            jobs.append(items[0].get('engine') or items[0].get('speaker') or 'kokoro')
+            return None
+
+        with patch.object(gpu, 'voicestudio_up', side_effect=[False, True]), patch.object(gpu, 'voicestudio_unload'), \
+             patch.object(gpu, 'local_job', side_effect=job), patch('builtins.input', side_effect=lambda q: asked.append(q) or ''):
+            gpu.local_voice({'scenes': scenes}, {'voice': 'en-US-AndrewNeural'}, self.work)
+        self.assertEqual(len(asked), 1)  # owner opened VoiceStudio and pressed Enter
+        self.assertEqual(jobs[0], 'cosyvoice')  # the Nelson voice was tried, not a silent aiden
 
     def test_render_context_restores_photos_paths_and_integer_clip_keys(self):
         data = {'clips': {3: Path('clip.mp4')}, 'emphasis': {1.2}, 'flashes': {2.3},
