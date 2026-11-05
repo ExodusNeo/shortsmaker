@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/writing.py"
 type: "code"
-community: "llm.py"
+community: "check_twists"
 location: "L701"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/llmpy
+  - community/check_twists
 ---
 
 # check_twists()
@@ -21,4 +21,4 @@ tags:
 - [[write_scripts()]] - `calls` [EXTRACTED]
 - [[writing.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/llmpy
+#graphify/code #graphify/EXTRACTED #community/check_twists

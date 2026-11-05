@@ -1,18 +1,18 @@
 ---
 source_file: "shortsmaker/retention.py"
 type: "code"
-community: "analyze"
+community: "retention.py"
 location: "L81"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/analyze
+  - community/retentionpy
 ---
 
 # load_metrics()
 
 ## Connections
-- [[Path_17]] - `references` [EXTRACTED]
+- [[Path_15]] - `references` [EXTRACTED]
 - [[analyze()]] - `calls` [EXTRACTED]
 - [[edit_metrics()]] - `calls` [EXTRACTED]
 - [[json]] - `calls` [EXTRACTED]
@@ -20,4 +20,4 @@ tags:
 - [[observations()]] - `calls` [EXTRACTED]
 - [[retention.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/analyze
+#graphify/code #graphify/EXTRACTED #community/retentionpy

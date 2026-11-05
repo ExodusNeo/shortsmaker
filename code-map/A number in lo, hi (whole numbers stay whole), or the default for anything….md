@@ -12,6 +12,6 @@ tags:
 # A number in [lo, hi] (whole numbers stay whole), or the default for anything…
 
 ## Connections
-- [[clamp()_1]] - `rationale_for` [EXTRACTED]
+- [[clamp()_2]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/test_blender_planpy

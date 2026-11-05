@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/retention.py"
 type: "rationale"
-community: "analyze"
+community: "retention.py"
 location: "L98"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/analyze
+  - community/retentionpy
 ---
 
 # Optional manual entry, also available without a graph or an AI call.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[edit_metrics()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/analyze
+#graphify/rationale #graphify/EXTRACTED #community/retentionpy

@@ -39,17 +39,18 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 8 edges to [[_COMMUNITY_test_full_scenes.py]]
-- 8 edges to [[_COMMUNITY_pathlib]]
+- 14 edges to [[_COMMUNITY_test_full_scenes.py]]
 - 6 edges to [[_COMMUNITY_words_of]]
 - 3 edges to [[_COMMUNITY_write_scripts]]
 - 2 edges to [[_COMMUNITY_re]]
-- 1 edge to [[_COMMUNITY_opening_brief]]
 - 1 edge to [[_COMMUNITY_rescue_graphics]]
-- 1 edge to [[_COMMUNITY_visual_review]]
+- 1 edge to [[_COMMUNITY_finish_render]]
 - 1 edge to [[_COMMUNITY_opener_graphic]]
+- 1 edge to [[_COMMUNITY_render_remotion]]
+- 1 edge to [[_COMMUNITY_test_first_second.py]]
+- 1 edge to [[_COMMUNITY_code_custom_scenes]]
 - 1 edge to [[_COMMUNITY_gather_pool]]
-- 1 edge to [[_COMMUNITY_first_second_check]]
+- 1 edge to [[_COMMUNITY_review]]
 - 1 edge to [[_COMMUNITY_test_style.py]]
 
 ## Top bridge nodes

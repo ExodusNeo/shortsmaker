@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/review.py"
 type: "rationale"
-community: "paint_new"
+community: "apply_review_fixes"
 location: "L534"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/paint_new
+  - community/apply_review_fixes
 ---
 
 # fix / auto-fix: scene i drops its picture and gets a freshly painted one…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[paint_new()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/paint_new
+#graphify/rationale #graphify/EXTRACTED #community/apply_review_fixes

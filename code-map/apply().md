@@ -1,18 +1,18 @@
 ---
 source_file: "shortsmaker/scene_repair.py"
 type: "code"
-community: "json"
+community: "logbook.py"
 location: "L74"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/json
+  - community/logbookpy
 ---
 
 # apply()
 
 ## Connections
-- [[Path_27]] - `references` [EXTRACTED]
+- [[Path_28]] - `references` [EXTRACTED]
 - [[duration()]] - `calls` [EXTRACTED]
 - [[ffmpeg()]] - `calls` [EXTRACTED]
 - [[fix_short()]] - `calls` [EXTRACTED]
@@ -26,4 +26,4 @@ tags:
 - [[video_encoder()]] - `calls` [EXTRACTED]
 - [[write_json()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/json
+#graphify/code #graphify/EXTRACTED #community/logbookpy

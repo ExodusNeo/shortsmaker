@@ -12,7 +12,7 @@ tags:
 # save_candidate()
 
 ## Connections
-- [[Path_35]] - `references` [EXTRACTED]
+- [[Path_19]] - `references` [EXTRACTED]
 - [[Saves an invention that made it into a finished Short as a candidate for the…]] - `rationale_for` [EXTRACTED]
 - [[candidate_in()]] - `calls` [EXTRACTED]
 - [[json]] - `calls` [EXTRACTED]

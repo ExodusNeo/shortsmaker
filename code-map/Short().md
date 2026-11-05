@@ -2,7 +2,7 @@
 source_file: "remotion/src/Short.tsx"
 type: "code"
 community: "Short.tsx"
-location: "L143"
+location: "L142"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -15,7 +15,6 @@ tags:
 - [[Background()]] - `calls` [EXTRACTED]
 - [[Captions()]] - `calls` [EXTRACTED]
 - [[GraphicFor()]] - `calls` [EXTRACTED]
-- [[HookTitle()]] - `calls` [EXTRACTED]
 - [[PersonCard()]] - `calls` [EXTRACTED]
 - [[Root.tsx]] - `imports` [EXTRACTED]
 - [[Short.tsx]] - `contains` [EXTRACTED]

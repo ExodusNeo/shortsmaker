@@ -2,7 +2,7 @@
 source_file: "shortsmaker/short_render.py"
 type: "code"
 community: "rewrite_paint_prompts"
-location: "L191"
+location: "L193"
 tags:
   - graphify/code
   - graphify/EXTRACTED

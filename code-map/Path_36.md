@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "drawn_thumbnail"
+community: "test_blender_plan.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/drawn_thumbnail
+  - community/test_blender_planpy
 ---
 
 # Path
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[drawn_short()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/drawn_thumbnail
+#graphify/code #graphify/EXTRACTED #community/test_blender_planpy

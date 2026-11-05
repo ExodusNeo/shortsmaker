@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_drawn_opener.py"
 type: "code"
-community: "pathlib"
+community: "test_full_scenes.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/pathlib
+  - community/test_full_scenespy
 ---
 
 # test_drawn_opener.py
@@ -17,13 +17,14 @@ tags:
 - [[drawn_opener.py]] - `imports_from` [EXTRACTED]
 - [[fake_ai()_2]] - `contains` [EXTRACTED]
 - [[llm.py]] - `imports_from` [EXTRACTED]
-- [[look()]] - `contains` [EXTRACTED]
+- [[look()_1]] - `contains` [EXTRACTED]
 - [[media_tools.py]] - `imports_from` [EXTRACTED]
+- [[opener3d.py]] - `imports_from` [EXTRACTED]
 - [[pathlib]] - `imports_from` [EXTRACTED]
 - [[pil]] - `imports_from` [EXTRACTED]
 - [[review.py]] - `imports_from` [EXTRACTED]
 - [[session.py]] - `imports_from` [EXTRACTED]
-- [[short()_2]] - `contains` [EXTRACTED]
+- [[short()_1]] - `contains` [EXTRACTED]
 - [[short_render.py]] - `imports_from` [EXTRACTED]
 - [[subprocess]] - `imports` [EXTRACTED]
 - [[sys]] - `imports` [EXTRACTED]
@@ -37,4 +38,4 @@ tags:
 - [[test_use_opener_plays_the_drawn_opener()]] - `contains` [EXTRACTED]
 - [[traceback]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/pathlib
+#graphify/code #graphify/EXTRACTED #community/test_full_scenespy

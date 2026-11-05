@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/gpu.py"
 type: "code"
-community: "re"
+community: "duration"
 location: "L154"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/re
+  - community/duration
 ---
 
 # spoken_count()
@@ -20,4 +20,4 @@ tags:
 - [[test_word_counts_match_the_aligner()]] - `calls` [EXTRACTED]
 - [[unicodedata]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/re
+#graphify/code #graphify/EXTRACTED #community/duration

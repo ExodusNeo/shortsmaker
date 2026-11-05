@@ -14,6 +14,7 @@ tags:
 ## Connections
 - [[Rule breaks in an AI-written scene (KIT.md's code rules). Empty = clean.]] - `rationale_for` [EXTRACTED]
 - [[drawn_opener.py]] - `contains` [EXTRACTED]
+- [[lint_cutout()]] - `calls` [EXTRACTED]
 - [[make_opener()]] - `calls` [EXTRACTED]
 - [[re]] - `calls` [EXTRACTED]
 - [[test_lint()]] - `calls` [EXTRACTED]

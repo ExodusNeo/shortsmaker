@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/short_render.py"
 type: "code"
-community: "callout_hold"
-location: "L175"
+community: "scene_cues"
+location: "L177"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/callout_hold
+  - community/scene_cues
 ---
 
 # drop_unreadable_kinetic()
@@ -17,4 +17,4 @@ tags:
 - [[render()_2]] - `calls` [EXTRACTED]
 - [[short_render.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/callout_hold
+#graphify/code #graphify/EXTRACTED #community/scene_cues

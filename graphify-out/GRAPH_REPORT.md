@@ -1,17 +1,17 @@
 # Graph Report - ShortsMaker  (2026-11-05)
 
 ## Corpus Check
-- 140 files · ~168,032 words
+- 144 files · ~177,978 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 7 file(s) not represented in the graph (top: (none) 5, .canvas 1, .ipynb 1)
 
 ## Summary
-- 2250 nodes · 6207 edges · 116 communities (96 shown, 20 thin omitted)
+- 2340 nodes · 6456 edges · 111 communities (92 shown, 19 thin omitted)
 - Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 140 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `8ab2a93f`
+- Built from commit: `c99de969`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -23,82 +23,82 @@
 - test_blender_scene.py
 - split_make_shorts.py
 - render_remotion
-- test_full_scenes.py
-- test_blender_render.py
+- code_custom_scenes
+- re
 - guarded.tsx
 - k
 - test_h3_handoff.py
 - make_opener
 - h3_run.py
-- visual_review
+- finish_render
 - test_rules.py
 - Journey.tsx
 - toolkit.tsx
 - json
 - write_scripts
 - gen.py
-- core.mjs
-- extra_sources.py
-- edit_project.py
+- clamp
+- source_json
+- make
 - makeKit
 - test_topic_ideas.py
-- ffmpeg
+- local_clips
 - frame_maker
 - opener_graphic
-- scene_cues
+- full_cues
 - look.py
 - parts.py
 - OpeningRulesTests
-- gather_pool
+- owner
 - templates.py
-- use
-- resume_runs
+- paint_opener_start
+- main
 - BigNumber.tsx
 - main
 - Paper
-- apply_review_fixes
+- ask
 - build_scene.py
 - Short.tsx
-- textures.mjs
-- callout_hold
-- llm.py
-- style_placeholders
+- core.mjs
+- scene_cues
+- check_twists
+- fetch
 - Halftone.tsx
 - clean_photo
-- trend_research
+- .at
 - fake_ai
-- story_problems
-- main
+- test_story.py
+- wm_files
 - words_of
 - kit.mjs
 - RetentionTests
-- analyze
+- retention.py
 - render
 - ReliabilityTests
 - style_library
 - run_agy
-- bean.mjs
-- image_sources.py
-- configure_brain
-- rewrite_paint_prompts
+- test_opener3d.py
 - write_json
-- vault_page
+- ends_sentence
+- rewrite_paint_prompts
+- download_audio_choices
+- logbook.py
 - dexter.mjs
 - kit_parts.mjs
-- first_second_check
-- paint_new
+- test_first_second.py
+- apply_review_fixes
 - clean_full
-- re
+- time
 - ask_ai
-- pathlib
+- test_full_scenes.py
 - audio_library.py
-- ref_remotion
+- Opener3D.tsx
 - music_gain
 - preview
-- edit_plan
+- first_sentence
 - quality_check
 - test_style.py
-- edit_scripts
+- full_props
 - MediaTests
 - MetadataTests
 - paint_instead
@@ -106,44 +106,38 @@
 - MarkTests
 - StoryPacingTests
 - choose_images
-- plan_with
+- fact_check
 - short
 - test_blender_plan.py
 - FeedbackTests
-- get_image
-- .render_fixture
+- gather_pool
+- review
 - test_story_sound_library
-- invent_component
+- plan
 - cold_read
-- drawn_thumbnail
-- opening_brief
+- other_ai
+- write
 - duration
 - rescue_graphics
 - limit_style
-- finish_render
-- test_ai_modes.py
+- edit_scripts
 - sfx_events
 - write_frames
-- logbook_results
+- test_short_credit
 - lint
-- gemini_model
 - apply_metadata
-- BlenderFailed
-- wants_remotion
-- apply_look_scenes
-- test_local_job_retries_a_hard_crash
 
 ## God Nodes (most connected - your core abstractions)
-1. `k` - 81 edges
+1. `k` - 98 edges
 2. `render()` - 64 edges
 3. `write_scripts()` - 54 edges
-4. `ask_ai()` - 49 edges
-5. `MediaTests` - 35 edges
-6. `main()` - 32 edges
-7. `skinOf()` - 31 edges
-8. `clamp()` - 29 edges
-9. `Paper()` - 27 edges
-10. `choose_images()` - 27 edges
+4. `ask_ai()` - 50 edges
+5. `clamp()` - 35 edges
+6. `MediaTests` - 35 edges
+7. `main()` - 32 edges
+8. `skinOf()` - 31 edges
+9. `ellPts()` - 30 edges
+10. `makeKit()` - 29 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `test_numbers()` --calls--> `say_number()`  [INFERRED]
@@ -154,75 +148,71 @@
   tests/test_qwen_voice.py → local_ai/qwen_voice.py
 - `test_every_aligned_word_is_in_the_aligner_alphabet()` --calls--> `align_words()`  [INFERRED]
   tests/test_qwen_voice.py → local_ai/qwen_voice.py
-- `test_solo_brain_selection_options()` --calls--> `ask_brain()`  [EXTRACTED]
-  tests/test_package.py → shortsmaker/channel_profiles.py
+- `test_new_channel_stops_for_review()` --calls--> `pick_channel()`  [EXTRACTED]
+  tests/test_rules.py → shortsmaker/channel_profiles.py
 
 ## Import Cycles
 - 3-file cycle: `shortsmaker/blender_plan.py -> shortsmaker/picture_pool.py -> shortsmaker/writing.py -> shortsmaker/blender_plan.py`
 - 3-file cycle: `shortsmaker/motion.py -> shortsmaker/plan_rules.py -> shortsmaker/style_lab.py -> shortsmaker/motion.py`
 - 4-file cycle: `shortsmaker/motion.py -> shortsmaker/opening_rules.py -> shortsmaker/plan_rules.py -> shortsmaker/style_lab.py -> shortsmaker/motion.py`
 
-## Communities (116 total, 20 thin omitted)
+## Communities (111 total, 19 thin omitted)
 
 ### Community 0 - "style/index.ts"
 Cohesion: 0.13
-Nodes (21): InventedOverlay(), InventedTransition, LOOKS, OVERLAYS, CAPTION_TOP, CLAMP, clamp01(), H (+13 more)
+Nodes (23): FONT, theme, InventedOverlay(), InventedTransition, LOOKS, OVERLAYS, CAPTION_TOP, CLAMP (+15 more)
 
 ### Community 1 - "Graphics.tsx"
 Cohesion: 0.15
-Nodes (32): card, clamp, DotGrid(), formatStat(), MarkCard(), Props, StatCard(), TimelineCard() (+24 more)
+Nodes (30): card, clamp, DotGrid(), formatStat(), MarkCard(), Props, StatCard(), TimelineCard() (+22 more)
 
 ### Community 2 - "test_pictures_first.py"
-Cohesion: 0.15
-Nodes (23): catalog_entries(), catalog_pool(), clean_pics(), save_pool(), entry(), film(), pic_short(), pool_of() (+15 more)
+Cohesion: 0.14
+Nodes (24): catalog_entries(), catalog_pool(), clean_pics(), save_pool(), entry(), film(), pic_short(), pool_of() (+16 more)
 
 ### Community 3 - "prepare_topic"
-Cohesion: 0.10
-Nodes (14): catalog_text(), contact_sheets(), is_usable(), load_pool(), pictures_of(), pool_folder(), preflight_pictures(), prepare_topic() (+6 more)
+Cohesion: 0.11
+Nodes (13): catalog_text(), contact_sheets(), is_usable(), load_pool(), pictures_of(), pool_folder(), preflight_pictures(), prepare_topic() (+5 more)
 
 ### Community 4 - "test_blender_scene.py"
 Cohesion: 0.18
 Nodes (20): changed(), count(), manifest(), near(), plan_with(), render(), test_a_failing_pier_falls_with_its_red_copy(), test_bridge_stands_until_the_build_starts_over() (+12 more)
 
 ### Community 5 - "split_make_shorts.py"
-Cohesion: 0.08
+Cohesion: 0.09
 Nodes (20): arg_names(), chunks_of(), defined_names(), global_names(), visit(), identifiers(), import_lines(), is_main_guard() (+12 more)
 
 ### Community 6 - "render_remotion"
-Cohesion: 0.16
-Nodes (9): render_remotion(), remotion(), render(), run_remotion_with_fallback(), style_props(), swap_inventions(), test_invention_runtime_failure_uses_fallback(), test_old_state_renders_plain() (+1 more)
+Cohesion: 0.05
+Nodes (32): short_skin(), ink_silhouette(), make_paper(), render_remotion(), remotion(), render(), run_remotion_with_fallback(), invent_component() (+24 more)
 
-### Community 7 - "test_full_scenes.py"
+### Community 7 - "code_custom_scenes"
+Cohesion: 0.10
+Nodes (19): clean_tsx_code(), code_custom_scenes(), custom_rules(), fallback_custom_tsx(), is_payoff(), lint_custom_code(), look_and_fix(), opener_preflight() (+11 more)
+
+### Community 8 - "re"
 Cohesion: 0.07
-Nodes (31): short_skin(), clean_tsx_code(), code_custom_scenes(), custom_rules(), fallback_custom_tsx(), full_props(), is_payoff(), lint_custom_code() (+23 more)
-
-### Community 8 - "test_blender_render.py"
-Cohesion: 0.18
-Nodes (15): peaks(), render_clips(), _run(), scene_frames(), fake_blender(), short(), test_changed_blender_code_redraws(), test_crash_retries_then_raises() (+7 more)
+Nodes (11): hex_rgb(), luminance(), node_run(), import_media(), local_assets(), media_search_words(), word_time(), parse_scene_money() (+3 more)
 
 ### Community 9 - "guarded.tsx"
 Cohesion: 0.10
 Nodes (22): ExampleChain(), ExampleEvidence(), Box, boxAt(), Card(), clamp, Connect(), fitCard() (+14 more)
-
-### Community 10 - "k"
-Cohesion: 0.07
-Nodes (3): k, ellPts(), popS()
 
 ### Community 11 - "test_h3_handoff.py"
 Cohesion: 0.09
 Nodes (31): h3_problems(), h3_prompt(), unpack_clips(), fake_ai(), handoff(), short_with(), test_all_start_pictures_flagged_skips_pause(), test_duplicate_clip_names_deduplicated() (+23 more)
 
 ### Community 12 - "make_opener"
-Cohesion: 0.14
-Nodes (7): available(), make_opener(), missing_parts(), node_run(), sheet_times(), look(), test_kit_animals_must_be_used()
+Cohesion: 0.18
+Nodes (6): available(), make_opener(), missing_parts(), sheet_times(), available(), test_kit_animals_must_be_used()
 
 ### Community 13 - "h3_run.py"
 Cohesion: 0.11
 Nodes (6): call(), fit_start(), frames(), graph(), main(), saved_file()
 
-### Community 14 - "visual_review"
-Cohesion: 0.24
-Nodes (7): clock(), overlay_notes(), review_fixes(), visual_review(), test_review_is_told_the_drawings_are_deliberate(), test_review_knows_what_dims_a_picture_on_purpose(), test_review_fix_kinds()
+### Community 14 - "finish_render"
+Cohesion: 0.11
+Nodes (13): clock(), drawn_answer_problem(), overlay_notes(), pacing_check(), review_fixes(), sound_masking(), status_lines(), visual_review() (+5 more)
 
 ### Community 15 - "test_rules.py"
 Cohesion: 0.08
@@ -237,52 +227,52 @@ Cohesion: 0.26
 Nodes (20): CustomScene(), ExampleOpenerAction(), Custom0(), Custom1(), Custom2(), Custom3(), skinOf(), appear() (+12 more)
 
 ### Community 18 - "json"
-Cohesion: 0.06
-Nodes (25): main(), code_version(), fingerprint(), comfy_call(), moss_graph(), moss_images(), voicestudio_unload(), voicestudio_up() (+17 more)
+Cohesion: 0.09
+Nodes (17): channel_url(), new_channel(), pick_channel(), save_channel(), trend_research(), yt_list(), fingerprint(), pixabay_films() (+9 more)
 
 ### Community 19 - "write_scripts"
-Cohesion: 0.08
-Nodes (26): limit_full(), write_scripts(), owner(), _fake_planning(), test_director_prompt_mentions_full(), test_limit_full(), passing(), prepare() (+18 more)
+Cohesion: 0.12
+Nodes (23): limit_full(), write_scripts(), test_limit_full(), passing(), prepare(), planning, planning_ai(), test_all_weak_returns_empty() (+15 more)
 
 ### Community 20 - "gen.py"
 Cohesion: 0.22
 Nodes (5): images(), main(), t5_encoder(), tts(), video()
 
-### Community 21 - "core.mjs"
-Cohesion: 0.11
-Nodes (21): burst(), clamp(), eBack(), eBounce(), eElastic(), eExpo(), eIn(), eIO() (+13 more)
+### Community 21 - "clamp"
+Cohesion: 0.09
+Nodes (9): clamp(), eElastic(), eIn(), eIO(), eOut(), ik(), lerp(), lerpColor() (+1 more)
 
-### Community 22 - "extra_sources.py"
-Cohesion: 0.08
-Nodes (31): brand_films(), brand_images(), brand_page(), BrandImages, candidate(), collection_images(), europeana_images(), loc_images() (+23 more)
+### Community 22 - "source_json"
+Cohesion: 0.16
+Nodes (15): brand_films(), brand_images(), brand_page(), BrandImages, candidate(), collection_images(), europeana_images(), loc_images() (+7 more)
 
-### Community 23 - "edit_project.py"
-Cohesion: 0.12
+### Community 23 - "make"
+Cohesion: 0.14
 Nodes (9): caption_layer(), make(), master_gain(), project_xml(), remove(), short_folder(), test_melt_plays_it_with_the_captions_on_top(), test_timeline_has_scenes_captions_sound_and_markers() (+1 more)
 
 ### Community 24 - "makeKit"
-Cohesion: 0.16
-Nodes (9): makeKit(), catmull(), centroid(), densify(), eOut(), INK, noise1(), idHash() (+1 more)
+Cohesion: 0.20
+Nodes (8): makeKit(), catmull(), centroid(), densify(), INK, noise1(), idHash(), Pen
 
 ### Community 25 - "test_topic_ideas.py"
 Cohesion: 0.15
 Nodes (11): clash(), fetch_ideas(), pages(), parse_ideas(), pick_ideas(), _words(), test_clash_needs_every_name_word(), test_fetch_is_cached() (+3 more)
 
-### Community 26 - "ffmpeg"
-Cohesion: 0.11
-Nodes (15): cosy_instruct(), cover_crop(), cut_owner_clip(), h3_prompts(), local_clips(), local_job(), local_voice(), motion_prompt() (+7 more)
+### Community 26 - "local_clips"
+Cohesion: 0.12
+Nodes (12): cover_crop(), cut_owner_clip(), h3_prompts(), local_clips(), local_job(), motion_prompt(), start_picture(), start_picture_problems() (+4 more)
 
 ### Community 27 - "frame_maker"
-Cohesion: 0.09
-Nodes (12): ClipReader, draw_card(), draw_graphic(), fit_font(), frame_maker(), frame(), graphic_overlay(), person_card() (+4 more)
+Cohesion: 0.08
+Nodes (14): ClipReader, draw_card(), draw_graphic(), fills_frame(), fit_font(), frame_maker(), frame(), graphic_low() (+6 more)
 
 ### Community 28 - "opener_graphic"
-Cohesion: 0.15
-Nodes (8): full_summary(), opener_graphic(), fix_drawn_answer(), fix_opener_graphic(), paint_opener_start(), test_full_summary(), test_opener_graphic(), test_weak_opener_graphic_fixes_then_handoff()
+Cohesion: 0.25
+Nodes (6): full_summary(), opener_graphic(), fix_drawn_answer(), fix_opener_graphic(), test_full_props_figure(), test_full_summary()
 
-### Community 29 - "scene_cues"
-Cohesion: 0.13
-Nodes (11): scene_cues(), full_cues(), spoken_at(), spoken_span(), test_counter_finishes_before_it_leaves(), test_full_cues_document(), test_full_cues_fallback(), test_full_cues_leave_time_to_finish() (+3 more)
+### Community 29 - "full_cues"
+Cohesion: 0.17
+Nodes (7): full_cues(), spoken_at(), spoken_span(), test_full_cues_document(), test_full_cues_fallback(), test_full_cues_leave_time_to_finish(), test_opener_graphic()
 
 ### Community 30 - "look.py"
 Cohesion: 0.21
@@ -292,21 +282,21 @@ Nodes (7): collection(), ink_lines(), linear(), material(), setup(), _mesh(), _o
 Cohesion: 0.15
 Nodes (21): bbox_size(), box(), car(), cylinder(), deck(), eyebar(), fastener(), gusset_plate() (+13 more)
 
-### Community 33 - "gather_pool"
-Cohesion: 0.10
-Nodes (9): article_images(), commons_search(), thumb_url(), wm_files(), balanced_candidates(), gather_pool(), stubbed, test_gather_pool_shape() (+1 more)
+### Community 33 - "owner"
+Cohesion: 0.14
+Nodes (6): owner(), _fake_planning(), test_director_prompt_mentions_full(), stubbed, test_gather_pool_shape(), test_gather_pool_skip_and_limits()
 
 ### Community 34 - "templates.py"
 Cohesion: 0.19
 Nodes (14): Bridge, build(), cable_stayed_bridge(), _edge_girders(), eyebar_chain_bridge(), focus_object(), girder_bridge(), _hung_deck() (+6 more)
 
-### Community 35 - "use"
-Cohesion: 0.33
-Nodes (4): fresh(), test_use_opener_ai_clip_replaces_graphic(), test_use_opener_without_graphic(), use()
+### Community 35 - "paint_opener_start"
+Cohesion: 0.13
+Nodes (7): gemini_images(), paint_opener_start(), fresh(), test_use_opener_ai_clip_replaces_graphic(), test_use_opener_without_graphic(), test_weak_opener_graphic_fixes_then_handoff(), use()
 
-### Community 36 - "resume_runs"
-Cohesion: 0.24
-Nodes (12): begin(), context(), pack(), pending(), pending_topics(), read(), save_context(), unpack() (+4 more)
+### Community 36 - "main"
+Cohesion: 0.08
+Nodes (31): ask_brain(), ask_count(), ask_number(), ask_yes(), configure_brain(), load_channel(), normalize_brain(), use_channel() (+23 more)
 
 ### Community 37 - "BigNumber.tsx"
 Cohesion: 0.22
@@ -320,9 +310,9 @@ Nodes (3): main(), Failure, key()
 Cohesion: 0.12
 Nodes (29): Board(), clamp, layout(), LAYOUTS, lerp(), Print, clamp, DocumentScene() (+21 more)
 
-### Community 40 - "apply_review_fixes"
-Cohesion: 0.15
-Nodes (8): apply_review_fixes(), ask(), _review_state(), test_auto_fix_graphic(), test_look_check_fixes_code(), test_redraw_failure_paints(), test_review_redraws_custom(), test_review_uses_unused_pool_pictures_before_painting()
+### Community 40 - "ask"
+Cohesion: 0.18
+Nodes (6): ask(), _review_state(), test_look_check_fixes_code(), test_redraw_failure_paints(), test_review_redraws_custom(), test_review_uses_unused_pool_pictures_before_painting()
 
 ### Community 41 - "build_scene.py"
 Cohesion: 0.16
@@ -330,203 +320,195 @@ Nodes (4): direction(), keyloc(), keyvis(), Shots
 
 ### Community 42 - "Short.tsx"
 Cohesion: 0.16
-Nodes (18): Captions(), HookTitle(), PersonCard(), SubscribeCta(), Background(), flashAlpha(), GraphicFor(), Move (+10 more)
+Nodes (17): Captions(), PersonCard(), Background(), Card, flashAlpha(), GraphicFor(), Move, Scene (+9 more)
 
-### Community 43 - "textures.mjs"
-Cohesion: 0.22
-Nodes (19): ellipse(), fibre(), fill(), grainCanvas(), hash(), hatch(), rng(), stroke() (+11 more)
+### Community 43 - "core.mjs"
+Cohesion: 0.13
+Nodes (30): burst(), eBounce(), eExpo(), ellipse(), fibre(), fill(), _grain, grainCanvas() (+22 more)
 
-### Community 44 - "callout_hold"
-Cohesion: 0.25
-Nodes (5): read_need(), callout_hold(), pacing_check(), drop_unreadable_kinetic(), test_short_scene_callout_is_placed_so_the_check_passes()
+### Community 44 - "scene_cues"
+Cohesion: 0.18
+Nodes (9): scene_cues(), read_need(), callout_hold(), drop_unreadable_kinetic(), test_counter_finishes_before_it_leaves(), test_short_scene_callout_is_placed_so_the_check_passes(), test_graphic_card_hold_duration(), test_person_card_hold_and_exit_gap() (+1 more)
 
-### Community 45 - "llm.py"
-Cohesion: 0.11
+### Community 45 - "check_twists"
+Cohesion: 0.47
 Nodes (5): check_twists(), test_twist_check_keeps_topics_on_null_or_bad_replies(), test_twist_check_needs_wikipedia_text(), test_twist_check_rewrites_a_legend_before_writing(), twist_short()
 
-### Community 46 - "style_placeholders"
-Cohesion: 0.19
-Nodes (10): restore_style_slots(), style_placeholders(), test_failed_invention_keeps_the_others(), test_good_look_check_skips_the_extra_compile(), test_invention_compile_failure_uses_fallback(), test_invention_passes_into_slot(), run(), test_placeholders_match_the_slots() (+2 more)
+### Community 46 - "fetch"
+Cohesion: 0.12
+Nodes (13): archive_ad_films(), archive_films(), duke_films(), nasa_films(), archive_images(), nasa_credit(), nasa_images(), nasa_search() (+5 more)
 
 ### Community 47 - "Halftone.tsx"
 Cohesion: 0.17
 Nodes (23): InventedLook(), drawCover(), FILL, luminance(), noise(), stretch(), useOnceCanvas(), draw() (+15 more)
 
 ### Community 48 - "clean_photo"
-Cohesion: 0.12
-Nodes (8): clean_photo(), is_stereo(), trim_borders(), border(), plain(), vertical_image(), visual_unique(), mark_details()
-
-### Community 49 - "trend_research"
-Cohesion: 0.20
-Nodes (6): channel_url(), new_channel(), save_channel(), seed_ideas(), trend_research(), yt_list()
+Cohesion: 0.14
+Nodes (7): clean_photo(), is_stereo(), trim_borders(), border(), plain(), vertical_image(), mark_details()
 
 ### Community 50 - "fake_ai"
+Cohesion: 0.15
+Nodes (9): entry_age(), logbook_results(), seo_pass(), test_logbook_marks_tiny_samples(), fake_ai, test_seo_pass_empty_no_ai(), test_seo_pass_research_seeds_dict_and_list(), test_seo_examples_come_from_the_channel() (+1 more)
+
+### Community 51 - "test_story.py"
 Cohesion: 0.27
-Nodes (6): seo_pass(), fake_ai, test_seo_pass_empty_no_ai(), test_seo_pass_research_seeds_dict_and_list(), test_seo_examples_come_from_the_channel(), test_seo_never_sees_competitor_titles()
+Nodes (8): story_problems(), read(), test_cold_read_verdicts(), test_no_hook_setting_no_hook_check(), test_rules_accept_opener_setting(), test_story_problems(), test_story_problems_flags_summary_hook(), test_story_problems_money_claim()
 
-### Community 51 - "story_problems"
-Cohesion: 0.09
-Nodes (19): ass_time(), caption_lines(), captions(), styled(), ass_colour(), sentence_groups(), ends_sentence(), first_sentence() (+11 more)
-
-### Community 52 - "main"
-Cohesion: 0.12
-Nodes (13): ask_count(), load_channel(), pick_channel(), use_channel(), fix_short(), main(), draft_rules(), require_rules() (+5 more)
+### Community 52 - "wm_files"
+Cohesion: 0.14
+Nodes (8): commons_films(), article_images(), commons_search(), thumb_url(), usable_license(), wm_files(), wm_get(), article_text()
 
 ### Community 53 - "words_of"
-Cohesion: 0.13
-Nodes (11): clean_sound(), limit_sounds(), graphic_low(), fill_money_graphics(), is_person_portrait(), parse_scene_money(), shows_person(), words_of() (+3 more)
+Cohesion: 0.19
+Nodes (8): clean_sound(), limit_sounds(), fill_money_graphics(), shows_person(), words_of(), test_clean_sound(), test_fill_money_graphics_and_caps(), test_clean_full_keeps_board_pic()
 
 ### Community 54 - "kit.mjs"
-Cohesion: 0.15
-Nodes (10): C, H, W, args(), exposure(), run(), SKIN, cam (+2 more)
+Cohesion: 0.10
+Nodes (26): job, C, H, lightOf(), MOODS, W, rad(), rrect() (+18 more)
 
-### Community 56 - "analyze"
-Cohesion: 0.18
+### Community 56 - "retention.py"
+Cohesion: 0.20
 Nodes (11): analyze(), edit_metrics(), load_metrics(), metrics_text(), normalize_metrics(), normalize_reply(), observations(), parse_metric() (+3 more)
 
 ### Community 57 - "render"
-Cohesion: 0.13
-Nodes (8): make_sfx(), short_credit(), graphics_count(), drawn_choices(), drawn_payoff(), render(), use_opener(), test_drawn_choices_have_no_pictures()
+Cohesion: 0.10
+Nodes (13): make_sfx(), short_credit(), ffmpeg(), graphics_count(), wants_remotion(), drawn_choices(), drawn_payoff(), render() (+5 more)
 
 ### Community 59 - "style_library"
-Cohesion: 0.11
-Nodes (15): clean_invention(), clean_look(), clean_transition(), settle_style(), style_library(), style_rules(), write_style_index(), build() (+7 more)
+Cohesion: 0.09
+Nodes (15): cold_read_line(), cut_text(), edit_plan(), look_text(), picture_line(), clean_invention(), clean_look(), clean_transition() (+7 more)
 
 ### Community 60 - "run_agy"
 Cohesion: 0.22
 Nodes (6): quota_exhausted(), run_agy(), run_codex(), test_codex_failure_is_bounded(), test_codex_uses_subscription_stdin_and_read_only_images(), test_run_agy_flags_and_boundaries()
 
-### Community 61 - "bean.mjs"
-Cohesion: 0.40
-Nodes (8): rad(), rrect(), arm(), bubble(), bust(), hat(), person(), lightBands()
+### Community 61 - "test_opener3d.py"
+Cohesion: 0.28
+Nodes (9): clean(), num(), xz(), example(), look(), test_a_shot_can_frame_several_things(), test_bad_parts_go_back_to_the_coder(), test_example_is_clean() (+1 more)
 
-### Community 62 - "image_sources.py"
-Cohesion: 0.11
-Nodes (8): commons_films(), crop_film_bytes(), crop_filter(), film_frames(), film_piece(), shot_moments(), film_ffmpeg(), usable_license()
+### Community 62 - "write_json"
+Cohesion: 0.15
+Nodes (7): crop_film_bytes(), crop_filter(), film_frames(), film_piece(), shot_moments(), film_ffmpeg(), write_json()
 
-### Community 63 - "configure_brain"
-Cohesion: 0.27
-Nodes (6): ask_brain(), ask_number(), ask_yes(), configure_brain(), normalize_brain(), command()
+### Community 63 - "ends_sentence"
+Cohesion: 0.20
+Nodes (6): caption_lines(), sentence_groups(), ends_sentence(), srt(), test_sentence_ends_include_curly_quotes_and_ellipsis(), test_sentences_running_across_cuts_are_one_take()
 
 ### Community 64 - "rewrite_paint_prompts"
 Cohesion: 0.25
 Nodes (4): rewrite_paint_prompts(), plan_gap_paintings(), test_rewrite_paint_prompts(), test_scene_without_picture_or_prompt_gets_painted_not_reused()
 
-### Community 65 - "write_json"
-Cohesion: 0.14
-Nodes (10): freesound_fetch(), freesound_preview(), freesound_results(), import_media(), audition_audio(), download_audio_choices(), media_command(), review_audio_files() (+2 more)
+### Community 65 - "download_audio_choices"
+Cohesion: 0.25
+Nodes (5): freesound_fetch(), freesound_preview(), freesound_results(), download_audio_choices(), seed_audio_library()
 
-### Community 69 - "first_second_check"
-Cohesion: 0.15
+### Community 66 - "logbook.py"
+Cohesion: 0.17
+Nodes (5): vault_page(), vault_refresh(), review_status(), storyboard(), apply()
+
+### Community 69 - "test_first_second.py"
+Cohesion: 0.18
 Nodes (14): first_second_check(), swap_pictures(), real(), run_check(), state(), test_failed_preview_clears_previous_opener_score(), test_good_opening_or_no_reply_changes_nothing(), test_low_score_opens_on_a_better_real_picture() (+6 more)
 
-### Community 70 - "paint_new"
-Cohesion: 0.33
-Nodes (4): use_picture_from(), paint_new(), test_new_picture_drops_mark(), test_paint_new_clears_full()
+### Community 70 - "apply_review_fixes"
+Cohesion: 0.18
+Nodes (7): use_picture_from(), apply_review_fixes(), paint_new(), pool_pictures(), test_auto_fix_graphic(), test_new_picture_drops_mark(), test_paint_new_clears_full()
 
 ### Community 71 - "clean_full"
 Cohesion: 0.12
 Nodes (16): clean_full(), word(), clean_graphic(), contains(), coords(), is_num(), number_figures(), show_number() (+8 more)
 
-### Community 72 - "re"
+### Community 72 - "time"
 Cohesion: 0.11
-Nodes (15): align(), align_words(), say_number(), speak(), spoken_sentence(), spoken_tokens(), studio_speak(), commercial_queries() (+7 more)
+Nodes (14): align(), align_words(), main(), say_number(), speak(), spoken_sentence(), spoken_tokens(), studio_speak() (+6 more)
 
 ### Community 73 - "ask_ai"
-Cohesion: 0.14
-Nodes (10): ask_ai(), test_every_ai_gets_the_pipeline_preamble_once(), test_quota_fallback_both_ways(), test_claude_pinned_to_opus_high(), test_gemini_reviews_get_the_main_model_bulk_pictures_flash(), test_independent_review_falls_back_without_changing_solo_mode(), test_session_shared(), test_solo_ask_ai_hands_over_when_out_of_credits() (+2 more)
-
-### Community 74 - "pathlib"
-Cohesion: 0.11
-Nodes (4): hex_rgb(), luminance(), fills_frame(), storyboard()
+Cohesion: 0.10
+Nodes (16): seed_ideas(), ask_ai(), gemini_model(), test_every_ai_gets_the_pipeline_preamble_once(), test_quota_fallback_both_ways(), test_argon_out_of_quota_switches_to_flash(), fake_run(), test_claude_pinned_to_opus_high() (+8 more)
 
 ### Community 75 - "audio_library.py"
-Cohesion: 0.24
-Nodes (15): approved_sound(), audio_metadata(), ducking_filter(), history_read(), import_audio_file(), preview_mix(), record_audio(), select_music() (+7 more)
+Cohesion: 0.19
+Nodes (20): approved_sound(), audio_metadata(), ducking_filter(), history_read(), import_audio_file(), preview_mix(), record_audio(), select_music() (+12 more)
+
+### Community 76 - "Opener3D.tsx"
+Cohesion: 0.10
+Nodes (30): aim(), BOOKS, Box(), Burst(), calculateOpener3D(), CameraRig(), Card(), clamp() (+22 more)
 
 ### Community 77 - "music_gain"
-Cohesion: 0.22
-Nodes (4): music_gain(), speak(), tts(), test_music_gain_evens_out_tracks()
-
-### Community 78 - "preview"
-Cohesion: 0.29
-Nodes (3): video_encoder(), preview(), test_encoder_cache_lives_with_video_encoder()
-
-### Community 79 - "edit_plan"
 Cohesion: 0.14
-Nodes (7): cold_read_line(), cut_text(), edit_plan(), look_text(), picture_line(), test_edit_plan_picture_line(), test_cold_read_uses_other_ai_in_solo_and_collaborative_modes()
+Nodes (7): ass_time(), caption_size(), captions(), music_gain(), speak(), tts(), test_music_gain_evens_out_tracks()
+
+### Community 79 - "first_sentence"
+Cohesion: 0.18
+Nodes (8): log_short(), first_sentence(), build(), add(), main(), scenes(), test_first_sentence_reads_across_the_cut(), test_logbook_hook_line_is_the_whole_first_sentence()
 
 ### Community 80 - "quality_check"
 Cohesion: 0.25
 Nodes (4): quality_check(), length_plan(), max_seconds(), test_quality_check_reads_ffmpeg_and_flags_reused_pictures()
 
 ### Community 81 - "test_style.py"
-Cohesion: 0.21
-Nodes (10): save_candidate(), candidate_in(), library_snapshot(), restore_library(), test_approve_adds_to_library(), test_approve_rolls_back_on_tsc_failure(), test_approve_rolls_back_when_the_check_crashes(), test_candidate_names_unique_across_kinds() (+2 more)
+Cohesion: 0.09
+Nodes (16): approve_candidate(), clean_style_code(), library_menu(), reject_candidate(), save_candidate(), write_style_index(), candidate_in(), library_snapshot() (+8 more)
 
-### Community 82 - "edit_scripts"
-Cohesion: 0.25
-Nodes (5): edit_scripts(), narration_lines(), test_solo_edit_scripts_uses_same_ai(), test_editor_gets_one_second_pass_for_broken_rules(), test_failed_second_read_clears_old_verdict()
+### Community 82 - "full_props"
+Cohesion: 0.20
+Nodes (8): full_props(), full_pictures(), _board(), _jpg(), test_board_pictures_attached(), test_custom_cues_props_and_pictures(), test_remotion_props_full(), test_sfx_full()
 
 ### Community 85 - "paint_instead"
-Cohesion: 0.12
-Nodes (6): gemini_images(), to_vertical(), ink_silhouette(), paint_instead(), test_ink_silhouette(), test_remotion_failure_paints()
+Cohesion: 0.25
+Nodes (3): to_vertical(), paint_instead(), test_remotion_failure_paints()
 
 ### Community 89 - "choose_images"
-Cohesion: 0.19
-Nodes (14): choose_images(), download_picture(), recover_downloads(), picking, planned_short(), scene(), still(), test_choose_extra_gather_is_bounded() (+6 more)
+Cohesion: 0.14
+Nodes (17): choose_images(), download_picture(), recover_downloads(), is_person_portrait(), apply_look_scenes(), picking, planned_short(), scene() (+9 more)
 
-### Community 90 - "plan_with"
-Cohesion: 0.25
-Nodes (6): plan_with(), ask(), test_director_character_look_is_kept_short_or_dropped(), test_director_inventions_are_kept_with_a_spec(), test_director_prompt_lists_library(), test_fact_check_sees_new_graphics()
+### Community 90 - "fact_check"
+Cohesion: 0.18
+Nodes (8): fact_check(), test_fact_check_drops_full(), plan_with(), ask(), test_director_character_look_is_kept_short_or_dropped(), test_director_inventions_are_kept_with_a_spec(), test_director_prompt_lists_library(), test_fact_check_sees_new_graphics()
 
 ### Community 91 - "short"
 Cohesion: 0.22
 Nodes (7): fake_ai(), short(), test_drawn_opener_gives_up_after_fixes(), test_drawn_opener_renders_and_is_reused(), test_no_verdict_is_not_a_pass(), test_reveal_scene_is_drawn_with_its_own_rules(), test_use_opener_plays_the_drawn_opener()
 
 ### Community 92 - "test_blender_plan.py"
-Cohesion: 0.12
-Nodes (20): clamp(), clean_build(), default_build(), ending(), panels(), pick(), plan_builds(), plan() (+12 more)
+Cohesion: 0.05
+Nodes (46): clamp(), clean_build(), default_build(), ending(), panels(), pick(), plan_builds(), thumbnail_order() (+38 more)
 
-### Community 94 - "get_image"
-Cohesion: 0.12
-Nodes (9): get_image(), openverse_images(), ov_get(), wm_get(), full_pictures(), article_text(), fact_check(), test_board_pictures_attached() (+1 more)
+### Community 94 - "gather_pool"
+Cohesion: 0.14
+Nodes (6): commercial_queries(), get_image(), openverse_images(), ov_get(), balanced_candidates(), gather_pool()
 
 ### Community 96 - "test_story_sound_library"
 Cohesion: 0.67
 Nodes (3): test_story_sound_library(), fetch(), _tone_wav()
 
-### Community 97 - "invent_component"
-Cohesion: 0.18
-Nodes (7): clean_style_code(), invent_component(), attempt(), invent_styles(), lint_style_code(), style_preview(), test_invention_lint_failure_uses_fallback()
+### Community 97 - "plan"
+Cohesion: 0.31
+Nodes (4): plan(), render(), sheet(), write()
 
 ### Community 98 - "cold_read"
 Cohesion: 0.22
-Nodes (7): other_ai(), cold_read(), test_every_mode_can_continue_through_two_exhausted_ais(), test_codex_cold_reader_and_quota_fallback_never_call_claude(), test_gemini_modes_choose_codex_and_keep_editor_choice(), test_cold_read_handles_malformed_reply(), test_cold_read_keeps_only_valid_answers()
+Nodes (6): cold_read(), recheck_final_scripts(), test_codex_cold_reader_and_quota_fallback_never_call_claude(), test_cold_read_handles_malformed_reply(), test_cold_read_keeps_only_valid_answers(), test_cold_read_uses_other_ai_in_solo_and_collaborative_modes()
 
-### Community 99 - "drawn_thumbnail"
-Cohesion: 0.21
-Nodes (9): thumbnail_order(), drawn_thumbnail(), test_thumbnail_order_skips_film_and_puts_openers_first(), drawn_short(), jpeg(), test_film_opener_is_skipped_and_bad_bytes_fall_back(), get(), test_no_photo_uses_a_drawing_and_says_so() (+1 more)
+### Community 99 - "other_ai"
+Cohesion: 0.33
+Nodes (6): other_ai(), fake_providers(), claude(), reply(), test_every_mode_can_continue_through_two_exhausted_ais(), test_gemini_modes_choose_codex_and_keep_editor_choice()
 
-### Community 100 - "opening_brief"
-Cohesion: 0.22
-Nodes (4): clean_code(), review(), write(), opening_brief()
+### Community 100 - "write"
+Cohesion: 0.29
+Nodes (3): clean_code(), opener_role(), write()
 
 ### Community 101 - "duration"
-Cohesion: 0.22
-Nodes (6): shot_span(), log_short(), duration(), scenes(), test_logbook_hook_line_is_the_whole_first_sentence(), test_sentences_running_across_cuts_are_one_take()
+Cohesion: 0.13
+Nodes (10): shot_span(), cosy_instruct(), local_voice(), split_takes(), spoken_count(), voicestudio_unload(), duration(), is_loop_short() (+2 more)
 
 ### Community 102 - "rescue_graphics"
-Cohesion: 0.22
-Nodes (5): full_formats(), rescue_graphics(), max_full(), max_full_planned(), test_rescue_respects_caps()
+Cohesion: 0.40
+Nodes (3): full_formats(), rescue_graphics(), test_rescue_respects_caps()
 
-### Community 104 - "finish_render"
-Cohesion: 0.22
-Nodes (5): drawn_answer_problem(), sound_masking(), status_lines(), weak_opener_graphic(), finish_render()
-
-### Community 105 - "test_ai_modes.py"
-Cohesion: 0.20
-Nodes (10): fake_providers(), claude(), reply(), saved_session(), test_all_modes_route_writer_editor_and_reader(), ask(), test_batch_uses_selected_codex_writer_and_migrates_saved_aliases(), test_exhausted_accounts_are_not_retried_when_all_three_are_empty() (+2 more)
+### Community 105 - "edit_scripts"
+Cohesion: 0.15
+Nodes (11): edit_scripts(), narration_lines(), saved_session(), test_all_modes_route_writer_editor_and_reader(), ask(), test_exhausted_accounts_are_not_retried_when_all_three_are_empty(), test_only_the_second_edit_pass_gets_the_research(), test_script_rounds_stop_when_fixed_or_after_three() (+3 more)
 
 ### Community 106 - "sfx_events"
 Cohesion: 0.25
@@ -536,35 +518,31 @@ Nodes (4): schedule_sounds(), sfx_events(), test_story_sound_wins_its_moment(), 
 Cohesion: 0.29
 Nodes (3): flash_alpha(), write_frames(), test_hard_cuts_never_blend_scenes()
 
-### Community 108 - "logbook_results"
+### Community 109 - "lint"
 Cohesion: 0.33
-Nodes (3): entry_age(), logbook_results(), test_logbook_marks_tiny_samples()
-
-### Community 110 - "gemini_model"
-Cohesion: 0.40
-Nodes (4): gemini_model(), test_argon_out_of_quota_switches_to_flash(), fake_run(), test_gemini_timeout_switches_to_flash()
+Nodes (4): lint(), lint_cutout(), test_lint(), test_lint_needs_draw()
 
 ### Community 111 - "apply_metadata"
 Cohesion: 0.33
 Nodes (3): apply_metadata(), clean_tags(), clean_title()
 
 ## Knowledge Gaps
-- **20 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **19 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `render()` connect `render` to `render_remotion`, `test_blender_render.py`, `visual_review`, `json`, `ffmpeg`, `frame_maker`, `opener_graphic`, `scene_cues`, `resume_runs`, `callout_hold`, `clean_photo`, `story_problems`, `main`, `words_of`, `rewrite_paint_prompts`, `pathlib`, `audio_library.py`, `music_gain`, `preview`, `test_style.py`, `paint_instead`, `choose_images`, `duration`, `rescue_graphics`, `finish_render`, `sfx_events`, `write_frames`, `wants_remotion`?**
-  _High betweenness centrality (0.024) - this node is a cross-community bridge._
+- **Why does `render()` connect `render` to `render_remotion`, `re`, `finish_render`, `json`, `local_clips`, `frame_maker`, `opener_graphic`, `paint_opener_start`, `main`, `scene_cues`, `clean_photo`, `ends_sentence`, `rewrite_paint_prompts`, `test_full_scenes.py`, `audio_library.py`, `music_gain`, `test_style.py`, `paint_instead`, `choose_images`, `test_blender_plan.py`, `duration`, `rescue_graphics`, `sfx_events`, `write_frames`?**
+  _High betweenness centrality (0.017) - this node is a cross-community bridge._
 - **Should `style/index.ts` be split into smaller, more focused modules?**
-  _Cohesion score 0.13086770981507823 - nodes in this community are weakly interconnected._
-- **Why does `MediaTests` connect `MediaTests` to `image_sources.py`?**
-  _High betweenness centrality (0.019) - this node is a cross-community bridge._
+  _Cohesion score 0.12564102564102564 - nodes in this community are weakly interconnected._
+- **Why does `write_scripts()` connect `write_scripts` to `test_pictures_first.py`, `prepare_topic`, `re`, `test_rules.py`, `json`, `test_topic_ideas.py`, `owner`, `main`, `check_twists`, `fake_ai`, `test_story.py`, `words_of`, `retention.py`, `style_library`, `clean_full`, `ask_ai`, `test_full_scenes.py`, `quality_check`, `test_style.py`, `choose_images`, `fact_check`, `test_blender_plan.py`, `cold_read`, `limit_style`, `edit_scripts`?**
+  _High betweenness centrality (0.017) - this node is a cross-community bridge._
 - **Should `test_pictures_first.py` be split into smaller, more focused modules?**
-  _Cohesion score 0.14919354838709678 - nodes in this community are weakly interconnected._
-- **Why does `gather_pool()` connect `gather_pool` to `prepare_topic`, `clean_full`, `re`, `visual_review`, `clean_photo`, `json`, `words_of`, `extra_sources.py`, `choose_images`, `get_image`?**
-  _High betweenness centrality (0.019) - this node is a cross-community bridge._
+  _Cohesion score 0.14204545454545456 - nodes in this community are weakly interconnected._
 - **Should `prepare_topic` be split into smaller, more focused modules?**
-  _Cohesion score 0.1 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.1067193675889328 - nodes in this community are weakly interconnected._
 - **Should `split_make_shorts.py` be split into smaller, more focused modules?**
-  _Cohesion score 0.08362369337979095 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.08658536585365853 - nodes in this community are weakly interconnected._
+- **Should `render_remotion` be split into smaller, more focused modules?**
+  _Cohesion score 0.05128205128205128 - nodes in this community are weakly interconnected._

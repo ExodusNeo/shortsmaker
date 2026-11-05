@@ -41,9 +41,8 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 10 edges to [[_COMMUNITY_Paper]]
-- 4 edges to [[_COMMUNITY_Graphics.tsx]]
+- 5 edges to [[_COMMUNITY_Graphics.tsx]]
 - 2 edges to [[_COMMUNITY_toolkit.tsx]]
-- 1 edge to [[_COMMUNITY_ref_remotion]]
 
 ## Top bridge nodes
 - [[Journey.tsx]] - degree 30, connects to 3 communities

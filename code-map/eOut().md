@@ -1,12 +1,12 @@
 ---
 source_file: "drawn/lib/core.mjs"
 type: "code"
-community: "makeKit"
+community: "clamp"
 location: "L16"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/makeKit
+  - community/clamp
 ---
 
 # eOut()
@@ -20,4 +20,4 @@ tags:
 - [[makeKit()]] - `calls` [EXTRACTED]
 - [[pen.mjs]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/makeKit
+#graphify/code #graphify/EXTRACTED #community/clamp

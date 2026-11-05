@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "json"
+community: "test_style.py"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/json
+  - community/test_stylepy
 ---
 
 # shutil
@@ -16,6 +16,7 @@ tags:
 - [[approve_candidate()]] - `calls` [EXTRACTED]
 - [[audio_library.py]] - `imports` [EXTRACTED]
 - [[available()]] - `calls` [EXTRACTED]
+- [[available()_1]] - `calls` [EXTRACTED]
 - [[cli.py]] - `imports` [EXTRACTED]
 - [[code_custom_scenes()]] - `calls` [EXTRACTED]
 - [[drawn_opener.py]] - `imports` [EXTRACTED]
@@ -29,9 +30,10 @@ tags:
 - [[llm.py]] - `imports` [EXTRACTED]
 - [[logbook.py]] - `imports` [EXTRACTED]
 - [[main()]] - `calls` [EXTRACTED]
-- [[main()_2]] - `calls` [EXTRACTED]
+- [[main()_1]] - `calls` [EXTRACTED]
 - [[media_library.py]] - `imports` [EXTRACTED]
 - [[motion.py]] - `imports` [EXTRACTED]
+- [[opener3d.py]] - `imports` [EXTRACTED]
 - [[paint_instead()]] - `calls` [EXTRACTED]
 - [[paint_opener_start()]] - `calls` [EXTRACTED]
 - [[picture_pool.py]] - `imports` [EXTRACTED]
@@ -41,6 +43,7 @@ tags:
 - [[prune_work()]] - `calls` [EXTRACTED]
 - [[reject_candidate()]] - `calls` [EXTRACTED]
 - [[remotion_render.py]] - `imports` [EXTRACTED]
+- [[render()_5]] - `calls` [EXTRACTED]
 - [[render()_2]] - `calls` [EXTRACTED]
 - [[render_full.py]] - `imports` [EXTRACTED]
 - [[render_remotion()]] - `calls` [EXTRACTED]
@@ -64,4 +67,4 @@ tags:
 - [[write_scripts()]] - `calls` [EXTRACTED]
 - [[writing.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/json
+#graphify/concept #graphify/EXTRACTED #community/test_stylepy

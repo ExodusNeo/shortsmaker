@@ -15,7 +15,7 @@ tags:
 - [[gc]] - `calls` [EXTRACTED]
 - [[gen.py]] - `contains` [EXTRACTED]
 - [[item {image, prompt, out (.mp4), frames} - image-to-video clip at…]] - `rationale_for` [EXTRACTED]
-- [[main()_3]] - `indirect_call` [INFERRED]
+- [[main()_2]] - `indirect_call` [INFERRED]
 - [[t5_encoder()]] - `calls` [EXTRACTED]
 - [[torch]] - `calls` [EXTRACTED]
 

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/media_library.py"
 type: "code"
-community: "extra_sources.py"
+community: "source_json"
 location: "L33"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/extra_sourcespy
+  - community/source_json
 ---
 
 # source_enabled()
@@ -21,4 +21,4 @@ tags:
 - [[settings()]] - `calls` [EXTRACTED]
 - [[source_json()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/extra_sourcespy
+#graphify/code #graphify/EXTRACTED #community/source_json

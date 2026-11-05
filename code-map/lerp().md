@@ -1,12 +1,12 @@
 ---
 source_file: "drawn/lib/core.mjs"
 type: "code"
-community: "core.mjs"
+community: "clamp"
 location: "L8"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/coremjs
+  - community/clamp
 ---
 
 # lerp()
@@ -24,11 +24,13 @@ tags:
 - [[core.mjs]] - `contains` [EXTRACTED]
 - [[densify()]] - `calls` [EXTRACTED]
 - [[fibre()]] - `calls` [EXTRACTED]
+- [[frameAt()]] - `calls` [EXTRACTED]
 - [[kit.mjs]] - `imports` [EXTRACTED]
 - [[lerpColor()]] - `calls` [EXTRACTED]
 - [[makeKit()]] - `calls` [EXTRACTED]
 - [[pen.mjs]] - `imports` [EXTRACTED]
+- [[run.mjs]] - `imports` [EXTRACTED]
 - [[taper()]] - `calls` [EXTRACTED]
 - [[textures.mjs]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/coremjs
+#graphify/code #graphify/EXTRACTED #community/clamp

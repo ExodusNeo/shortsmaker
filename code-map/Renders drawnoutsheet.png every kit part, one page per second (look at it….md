@@ -1,17 +1,17 @@
 ---
 source_file: "tests/test_drawn_opener.py"
 type: "rationale"
-community: "make_opener"
-location: "L168"
+community: "re"
+location: "L171"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/make_opener
+  - community/re
 ---
 
 # Renders drawn/out/sheet.png: every kit part, one page per second (look at it…
 
 ## Connections
-- [[look()]] - `rationale_for` [EXTRACTED]
+- [[look()_1]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/make_opener
+#graphify/rationale #graphify/EXTRACTED #community/re

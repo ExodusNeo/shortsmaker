@@ -2,7 +2,7 @@
 source_file: "tests/test_drawn_opener.py"
 type: "code"
 community: "short"
-location: "L126"
+location: "L129"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -16,7 +16,7 @@ tags:
 - [[drawn_payoff()]] - `calls` [EXTRACTED]
 - [[fake_ai()_2]] - `calls` [EXTRACTED]
 - [[paint_new()]] - `calls` [EXTRACTED]
-- [[short()_2]] - `calls` [EXTRACTED]
+- [[short()_1]] - `calls` [EXTRACTED]
 - [[test_drawn_opener.py]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/short

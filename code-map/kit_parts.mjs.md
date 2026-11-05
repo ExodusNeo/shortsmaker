@@ -12,7 +12,7 @@ tags:
 # kit_parts.mjs
 
 ## Connections
-- [[camera_1]] - `contains` [EXTRACTED]
+- [[camera]] - `contains` [EXTRACTED]
 - [[scene()_2]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/kit_partsmjs

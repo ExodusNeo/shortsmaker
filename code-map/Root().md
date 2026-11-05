@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/Root.tsx"
 type: "code"
-community: "ref_remotion"
-location: "L10"
+community: "Opener3D.tsx"
+location: "L11"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ref_remotion
+  - community/Opener3Dtsx
 ---
 
 # Root()
@@ -15,4 +15,4 @@ tags:
 - [[Root.tsx]] - `contains` [EXTRACTED]
 - [[srcindex.ts]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/ref_remotion
+#graphify/code #graphify/EXTRACTED #community/Opener3Dtsx

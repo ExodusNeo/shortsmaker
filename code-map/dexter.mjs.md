@@ -12,7 +12,8 @@ tags:
 # dexter.mjs
 
 ## Connections
-- [[camera]] - `contains` [EXTRACTED]
+- [[camera()]] - `contains` [EXTRACTED]
+- [[light_1]] - `contains` [EXTRACTED]
 - [[scene()_1]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/dextermjs

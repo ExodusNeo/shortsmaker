@@ -12,7 +12,7 @@ tags:
 # ExampleEvidence()
 
 ## Connections
-- [[Card()]] - `calls` [EXTRACTED]
+- [[Card()_1]] - `calls` [EXTRACTED]
 - [[Connect()]] - `calls` [EXTRACTED]
 - [[ExampleEvidence.tsx]] - `contains` [EXTRACTED]
 - [[Paper()]] - `calls` [EXTRACTED]

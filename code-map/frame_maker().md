@@ -2,7 +2,7 @@
 source_file: "shortsmaker/frame_render.py"
 type: "code"
 community: "frame_maker"
-location: "L240"
+location: "L224"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,7 +12,7 @@ tags:
 # frame_maker()
 
 ## Connections
-- [[Path_8]] - `references` [EXTRACTED]
+- [[Path_9]] - `references` [EXTRACTED]
 - [[Returns frame(i, t) scene i at time t with camera move and graphics applied.…]] - `rationale_for` [EXTRACTED]
 - [[credit_tag_image()]] - `calls` [EXTRACTED]
 - [[fallback_graphic()]] - `calls` [EXTRACTED]

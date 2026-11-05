@@ -2,7 +2,7 @@
 source_file: "remotion/src/Captions.tsx"
 type: "code"
 community: "Short.tsx"
-location: "L8"
+location: "L10"
 tags:
   - graphify/code
   - graphify/EXTRACTED

@@ -34,7 +34,7 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 2 edges to [[_COMMUNITY_llm.py]]
+- 2 edges to [[_COMMUNITY_test_full_scenes.py]]
 
 ## Top bridge nodes
 - [[PreflightTests]] - degree 15, connects to 1 community

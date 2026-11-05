@@ -28,7 +28,6 @@ tags:
 - [[GraphicFor()]] - `contains` [EXTRACTED]
 - [[Graphics.tsx]] - `imports_from` [EXTRACTED]
 - [[HeadlineCard()]] - `imports` [EXTRACTED]
-- [[HookTitle()]] - `imports` [EXTRACTED]
 - [[Inks]] - `imports` [EXTRACTED]
 - [[MapCard()]] - `imports` [EXTRACTED]
 - [[MapCard.tsx]] - `imports_from` [EXTRACTED]

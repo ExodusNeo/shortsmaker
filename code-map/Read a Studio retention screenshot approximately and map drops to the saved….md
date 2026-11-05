@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/retention.py"
 type: "rationale"
-community: "llm.py"
+community: "retention.py"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/llmpy
+  - community/retentionpy
 ---
 
 # Read a Studio retention screenshot approximately and map drops to the saved…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[retention.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/llmpy
+#graphify/rationale #graphify/EXTRACTED #community/retentionpy

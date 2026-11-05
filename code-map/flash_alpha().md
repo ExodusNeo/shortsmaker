@@ -2,7 +2,7 @@
 source_file: "shortsmaker/frame_render.py"
 type: "code"
 community: "write_frames"
-location: "L279"
+location: "L260"
 tags:
   - graphify/code
   - graphify/EXTRACTED

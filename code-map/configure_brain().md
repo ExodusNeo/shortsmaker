@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/channel_profiles.py"
 type: "code"
-community: "configure_brain"
+community: "main"
 location: "L79"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/configure_brain
+  - community/main
 ---
 
 # configure_brain()
@@ -16,7 +16,7 @@ tags:
 - [[channel_profiles.py]] - `contains` [EXTRACTED]
 - [[command()]] - `calls` [EXTRACTED]
 - [[fix_short()]] - `calls` [EXTRACTED]
-- [[main()_5]] - `calls` [EXTRACTED]
+- [[main()_3]] - `calls` [EXTRACTED]
 - [[normalize_brain()]] - `calls` [EXTRACTED]
 - [[resume_runs()]] - `calls` [EXTRACTED]
 - [[test_all_modes_route_writer_editor_and_reader()]] - `calls` [EXTRACTED]
@@ -24,4 +24,4 @@ tags:
 - [[test_every_mode_can_continue_through_two_exhausted_ais()]] - `calls` [EXTRACTED]
 - [[test_gemini_modes_choose_codex_and_keep_editor_choice()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/configure_brain
+#graphify/code #graphify/EXTRACTED #community/main

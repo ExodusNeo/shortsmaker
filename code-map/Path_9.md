@@ -1,26 +1,20 @@
 ---
 source_file: ""
 type: "code"
-community: "opener_graphic"
+community: "frame_maker"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/opener_graphic
+  - community/frame_maker
 ---
 
 # Path
 
 ## Connections
-- [[apply_review_fixes()]] - `references` [EXTRACTED]
-- [[first_second_check()]] - `references` [EXTRACTED]
-- [[fix_drawn_answer()]] - `references` [EXTRACTED]
-- [[fix_opener_graphic()]] - `references` [EXTRACTED]
-- [[paint_new()]] - `references` [EXTRACTED]
-- [[paint_opener_start()]] - `references` [EXTRACTED]
-- [[pool_pictures()]] - `references` [EXTRACTED]
-- [[quality_check()]] - `references` [EXTRACTED]
-- [[sound_masking()]] - `references` [EXTRACTED]
-- [[storyboard()]] - `references` [EXTRACTED]
-- [[visual_review()]] - `references` [EXTRACTED]
+- [[dot-__init__()_2]] - `references` [EXTRACTED]
+- [[fills_frame()]] - `references` [EXTRACTED]
+- [[frame_maker()]] - `references` [EXTRACTED]
+- [[graphic_low()]] - `references` [EXTRACTED]
+- [[thumbnail()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/opener_graphic
+#graphify/code #graphify/EXTRACTED #community/frame_maker

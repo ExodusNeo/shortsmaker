@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/opening_rules.py"
 type: "code"
-community: "opening_brief"
+community: "code_custom_scenes"
 location: "L19"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/opening_brief
+  - community/code_custom_scenes
 ---
 
 # opening_brief()
@@ -20,10 +20,10 @@ tags:
 - [[json]] - `calls` [EXTRACTED]
 - [[opener_graphic()]] - `calls` [EXTRACTED]
 - [[opener_preflight()]] - `calls` [EXTRACTED]
+- [[opener_role()]] - `calls` [EXTRACTED]
 - [[opening_rules.py]] - `contains` [EXTRACTED]
 - [[paint_opener_start()]] - `calls` [EXTRACTED]
 - [[redraw_custom()]] - `calls` [EXTRACTED]
 - [[review()]] - `calls` [EXTRACTED]
-- [[write()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/opening_brief
+#graphify/code #graphify/EXTRACTED #community/code_custom_scenes

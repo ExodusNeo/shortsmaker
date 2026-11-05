@@ -19,7 +19,6 @@ tags:
 - [[CompareCard()]] - `calls` [EXTRACTED]
 - [[Extras.tsx]] - `imports` [EXTRACTED]
 - [[Graphics.tsx]] - `contains` [EXTRACTED]
-- [[HookTitle()]] - `calls` [EXTRACTED]
 - [[QuestionBeat()]] - `calls` [EXTRACTED]
 - [[QuestionBeat.tsx]] - `imports` [EXTRACTED]
 - [[StatCard()]] - `calls` [EXTRACTED]

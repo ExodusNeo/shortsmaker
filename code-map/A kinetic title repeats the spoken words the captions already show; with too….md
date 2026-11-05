@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/short_render.py"
 type: "rationale"
-community: "callout_hold"
-location: "L176"
+community: "scene_cues"
+location: "L178"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/callout_hold
+  - community/scene_cues
 ---
 
 # A kinetic title repeats the spoken words the captions already show; with too…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[drop_unreadable_kinetic()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/callout_hold
+#graphify/rationale #graphify/EXTRACTED #community/scene_cues

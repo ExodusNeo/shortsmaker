@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "resume_runs"
+community: "main"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/resume_runs
+  - community/main
 ---
 
 # Path
@@ -16,4 +16,4 @@ tags:
 - [[resume_runs()]] - `references` [EXTRACTED]
 - [[use_picture_from()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/resume_runs
+#graphify/code #graphify/EXTRACTED #community/main

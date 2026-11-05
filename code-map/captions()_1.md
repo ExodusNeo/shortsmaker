@@ -1,24 +1,23 @@
 ---
 source_file: "shortsmaker/audio_mix.py"
 type: "code"
-community: "story_problems"
-location: "L65"
+community: "music_gain"
+location: "L73"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/story_problems
+  - community/music_gain
 ---
 
 # captions()
 
 ## Connections
-- [[ASS captions, one caption_lines() line at a time; the spoken word turns yellow.…]] - `rationale_for` [EXTRACTED]
-- [[Path_26]] - `references` [EXTRACTED]
-- [[ass_colour()]] - `calls` [EXTRACTED]
+- [[ASS captions, one caption_lines() line at a time white with a black outline,…]] - `rationale_for` [EXTRACTED]
+- [[Path_27]] - `references` [EXTRACTED]
 - [[ass_time()]] - `calls` [EXTRACTED]
 - [[audio_mix.py]] - `contains` [EXTRACTED]
 - [[caption_lines()]] - `calls` [EXTRACTED]
+- [[caption_size()]] - `calls` [EXTRACTED]
 - [[render()_2]] - `calls` [EXTRACTED]
-- [[styled()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/story_problems
+#graphify/code #graphify/EXTRACTED #community/music_gain

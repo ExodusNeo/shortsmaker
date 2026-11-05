@@ -1,19 +1,18 @@
 ---
 source_file: "shortsmaker/session.py"
 type: "code"
-community: "llm.py"
+community: "test_full_scenes.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/llmpy
+  - community/test_full_scenespy
 ---
 
 # session.py
 
 ## Connections
 - [[Settings that change during a run (who plans, quota-out agents, the channel's…]] - `rationale_for` [EXTRACTED]
-- [[audio_mix.py]] - `imports_from` [EXTRACTED]
 - [[blender_plan.py]] - `imports_from` [EXTRACTED]
 - [[channel_profiles.py]] - `imports_from` [EXTRACTED]
 - [[checkpoints.py]] - `imports_from` [EXTRACTED]
@@ -53,4 +52,4 @@ tags:
 - [[topic_ideas.py]] - `imports_from` [EXTRACTED]
 - [[writing.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/llmpy
+#graphify/code #graphify/EXTRACTED #community/test_full_scenespy

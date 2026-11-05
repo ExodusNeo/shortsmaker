@@ -1,12 +1,12 @@
 ---
 source_file: "drawn/lib/core.mjs"
 type: "code"
-community: "core.mjs"
+community: "clamp"
 location: "L116"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/coremjs
+  - community/clamp
 ---
 
 # lerpColor()
@@ -16,4 +16,4 @@ tags:
 - [[core.mjs]] - `contains` [EXTRACTED]
 - [[lerp()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/coremjs
+#graphify/code #graphify/EXTRACTED #community/clamp

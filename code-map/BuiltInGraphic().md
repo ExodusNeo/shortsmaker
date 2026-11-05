@@ -2,7 +2,7 @@
 source_file: "remotion/src/Short.tsx"
 type: "code"
 community: "Graphics.tsx"
-location: "L132"
+location: "L131"
 tags:
   - graphify/code
   - graphify/EXTRACTED

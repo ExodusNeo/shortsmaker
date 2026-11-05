@@ -11,7 +11,10 @@ tags:
 # drawn_lib_core_createcanvas
 
 ## Connections
+- [[cutouts.mjs]] - `imports` [EXTRACTED]
 - [[film.mjs]] - `imports` [EXTRACTED]
+- [[kit.mjs]] - `imports` [EXTRACTED]
+- [[run.mjs]] - `imports` [EXTRACTED]
 - [[textures.mjs]] - `imports` [EXTRACTED]
 
 #graphify/concept #graphify/EXTRACTED #community/kitmjs

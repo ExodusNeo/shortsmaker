@@ -8,7 +8,7 @@ members: 3
 **Members:** 3 nodes
 
 ## Members
-- [[camera_1]] - code - drawn/examples/kit_parts.mjs
+- [[camera]] - code - drawn/examples/kit_parts.mjs
 - [[kit_parts.mjs]] - code - drawn/examples/kit_parts.mjs
 - [[scene()_2]] - code - drawn/examples/kit_parts.mjs
 

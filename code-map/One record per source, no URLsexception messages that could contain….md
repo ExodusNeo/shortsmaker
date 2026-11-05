@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/media_library.py"
 type: "rationale"
-community: "extra_sources.py"
+community: "source_json"
 location: "L46"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/extra_sourcespy
+  - community/source_json
 ---
 
 # One record per source, no URLs/exception messages that could contain…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[source_status()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/extra_sourcespy
+#graphify/rationale #graphify/EXTRACTED #community/source_json

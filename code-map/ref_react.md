@@ -26,6 +26,7 @@ tags:
 - [[Leak.tsx]] - `imports_from` [EXTRACTED]
 - [[MapCard.tsx]] - `imports_from` [EXTRACTED]
 - [[Miniature.tsx]] - `imports_from` [EXTRACTED]
+- [[Opener3D.tsx]] - `imports_from` [EXTRACTED]
 - [[Paper.tsx]] - `imports_from` [EXTRACTED]
 - [[QuestionBeat.tsx]] - `imports_from` [EXTRACTED]
 - [[Riso.tsx]] - `imports_from` [EXTRACTED]

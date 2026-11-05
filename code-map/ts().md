@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/seo.py"
 type: "code"
-community: "story_problems"
+community: "ends_sentence"
 location: "L151"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/story_problems
+  - community/ends_sentence
 ---
 
 # ts()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[srt()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/story_problems
+#graphify/code #graphify/EXTRACTED #community/ends_sentence

@@ -19,7 +19,6 @@ tags:
 - [[Extras.tsx]] - `imports_from` [EXTRACTED]
 - [[FONT]] - `contains` [EXTRACTED]
 - [[Graphic]] - `imports` [EXTRACTED]
-- [[HookTitle()]] - `contains` [EXTRACTED]
 - [[MapCard.tsx]] - `imports_from` [EXTRACTED]
 - [[PersonCard()]] - `contains` [EXTRACTED]
 - [[Pin()]] - `contains` [EXTRACTED]

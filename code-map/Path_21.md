@@ -11,8 +11,8 @@ tags:
 # Path
 
 ## Connections
-- [[audition_audio()]] - `references` [EXTRACTED]
-- [[download_audio_choices()]] - `references` [EXTRACTED]
-- [[review_audio_files()]] - `references` [EXTRACTED]
+- [[duration()]] - `references` [EXTRACTED]
+- [[ffmpeg()]] - `references` [EXTRACTED]
+- [[write_json()]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/write_json

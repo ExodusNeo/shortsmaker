@@ -1,12 +1,12 @@
 ---
 source_file: "drawn/lib/core.mjs"
 type: "code"
-community: "core.mjs"
+community: "clamp"
 location: "L7"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/coremjs
+  - community/clamp
 ---
 
 # clamp()
@@ -15,6 +15,8 @@ tags:
 - [[dot-arc()]] - `calls` [EXTRACTED]
 - [[dot-begin()]] - `calls` [EXTRACTED]
 - [[dot-burst()]] - `calls` [EXTRACTED]
+- [[dot-depth()]] - `calls` [EXTRACTED]
+- [[dot-door()]] - `calls` [EXTRACTED]
 - [[dot-ease()]] - `calls` [EXTRACTED]
 - [[dot-fade()]] - `calls` [EXTRACTED]
 - [[dot-fall()]] - `calls` [EXTRACTED]
@@ -22,6 +24,7 @@ tags:
 - [[dot-next()]] - `calls` [EXTRACTED]
 - [[dot-person()]] - `calls` [EXTRACTED]
 - [[dot-puff()]] - `calls` [EXTRACTED]
+- [[dot-shadow()]] - `calls` [EXTRACTED]
 - [[dot-splash()]] - `calls` [EXTRACTED]
 - [[dot-sweat()]] - `calls` [EXTRACTED]
 - [[catmull()]] - `calls` [EXTRACTED]
@@ -33,13 +36,16 @@ tags:
 - [[eIO()]] - `calls` [EXTRACTED]
 - [[eIn()]] - `calls` [EXTRACTED]
 - [[eOut()]] - `calls` [EXTRACTED]
+- [[frameAt()]] - `calls` [EXTRACTED]
 - [[ik()]] - `calls` [EXTRACTED]
 - [[kit.mjs]] - `imports` [EXTRACTED]
 - [[lerpColor()]] - `calls` [EXTRACTED]
 - [[makeKit()]] - `calls` [EXTRACTED]
 - [[pathOf()]] - `calls` [EXTRACTED]
 - [[pen.mjs]] - `imports` [EXTRACTED]
+- [[run.mjs]] - `imports` [EXTRACTED]
+- [[shots_1]] - `calls` [EXTRACTED]
 - [[smooth()]] - `calls` [EXTRACTED]
 - [[ss()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/coremjs
+#graphify/code #graphify/EXTRACTED #community/clamp

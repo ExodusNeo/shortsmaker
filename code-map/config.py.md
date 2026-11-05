@@ -1,19 +1,18 @@
 ---
 source_file: "shortsmaker/config.py"
 type: "code"
-community: "pathlib"
+community: "re"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/pathlib
+  - community/re
 ---
 
 # config.py
 
 ## Connections
 - [[Paths, fixed settings, palettes and the styleskin tables every module shares.…]] - `rationale_for` [EXTRACTED]
-- [[ass_colour()]] - `contains` [EXTRACTED]
 - [[audio_library.py]] - `imports_from` [EXTRACTED]
 - [[audio_mix.py]] - `imports_from` [EXTRACTED]
 - [[blender_render.py]] - `imports_from` [EXTRACTED]
@@ -34,6 +33,7 @@ tags:
 - [[media_library.py]] - `imports_from` [EXTRACTED]
 - [[media_menu.py]] - `imports_from` [EXTRACTED]
 - [[motion.py]] - `imports_from` [EXTRACTED]
+- [[opener3d.py]] - `imports_from` [EXTRACTED]
 - [[os]] - `imports` [EXTRACTED]
 - [[pathlib]] - `imports_from` [EXTRACTED]
 - [[photo_prep.py]] - `imports_from` [EXTRACTED]
@@ -62,4 +62,4 @@ tags:
 - [[warnings]] - `imports` [EXTRACTED]
 - [[writing.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/pathlib
+#graphify/code #graphify/EXTRACTED #community/re

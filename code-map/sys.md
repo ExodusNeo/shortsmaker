@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "llm.py"
+community: "test_full_scenes.py"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/llmpy
+  - community/test_full_scenespy
 ---
 
 # sys
@@ -40,6 +40,7 @@ tags:
 - [[test_h3_run.py]] - `imports` [EXTRACTED]
 - [[test_marks.py]] - `imports` [EXTRACTED]
 - [[test_media.py]] - `imports` [EXTRACTED]
+- [[test_opener3d.py]] - `imports` [EXTRACTED]
 - [[test_opener_graphic.py]] - `imports` [EXTRACTED]
 - [[test_opener_preflight.py]] - `imports` [EXTRACTED]
 - [[test_opening_rules.py]] - `imports` [EXTRACTED]
@@ -55,4 +56,4 @@ tags:
 - [[test_style.py]] - `imports` [EXTRACTED]
 - [[test_topic_ideas.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/llmpy
+#graphify/concept #graphify/EXTRACTED #community/test_full_scenespy

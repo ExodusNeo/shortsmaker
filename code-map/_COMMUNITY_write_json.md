@@ -1,31 +1,27 @@
 ---
 type: community
-members: 19
+members: 15
 ---
 
 # write_json
 
-**Members:** 19 nodes
+**Members:** 15 nodes
 
 ## Members
-- [[Copy into the library; never movemodify the owner's original. Sidecars also…]] - rationale - shortsmaker/media_library.py
-- [[New library downloads wait for the owner's ears; existing approved files are…]] - rationale - shortsmaker/media_menu.py
-- [[Official API, CC0 only; collect metadata before choosing a preview.]] - rationale - shortsmaker/audio_mix.py
-- [[One CC0 (no credit, any use) sound for `name` from Freesound's official API…]] - rationale - shortsmaker/audio_mix.py
-- [[Path_20]] - code
+- [[Camera-shot samples for short adslocal videos; otherwise spread samples or…]] - rationale - shortsmaker/footage.py
+- [[CompletedProcess]] - code
+- [[Detect cuts in short adslocal files; bounded work and cached results for…]] - rationale - shortsmaker/footage.py
+- [[Download ~14s around the chosen moment with original framing and muted source…]] - rationale - shortsmaker/footage.py
+- [[Match FILM_CROP on downloaded thumbnail JPEGs (cut top 6%, bottom 20%, and 4%…]] - rationale - shortsmaker/footage.py
 - [[Path_21]] - code
-- [[Path_22]] - code
 - [[Write via a temp file, so an interrupted run never leaves a half-written file…]] - rationale - shortsmaker/media_tools.py
-- [[audition_audio()]] - code - shortsmaker/media_menu.py
-- [[download_audio_choices()]] - code - shortsmaker/media_menu.py
-- [[freesound_fetch()]] - code - shortsmaker/audio_mix.py
-- [[freesound_preview()]] - code - shortsmaker/audio_mix.py
-- [[freesound_results()]] - code - shortsmaker/audio_mix.py
-- [[import_media()]] - code - shortsmaker/media_library.py
-- [[media_command()]] - code - shortsmaker/media_menu.py
-- [[rank()]] - code - shortsmaker/audio_mix.py
-- [[review_audio_files()]] - code - shortsmaker/media_menu.py
-- [[seed_audio_library()]] - code - shortsmaker/media_menu.py
+- [[crop_film_bytes()]] - code - shortsmaker/footage.py
+- [[crop_filter()]] - code - shortsmaker/footage.py
+- [[ffmpeg reading a film over HTTP. Wikimedia gets the contact User-Agent, the…]] - rationale - shortsmaker/image_sources.py
+- [[film_ffmpeg()]] - code - shortsmaker/image_sources.py
+- [[film_frames()]] - code - shortsmaker/footage.py
+- [[film_piece()]] - code - shortsmaker/footage.py
+- [[shot_moments()]] - code - shortsmaker/footage.py
 - [[write_json()]] - code - shortsmaker/media_tools.py
 
 ## Live Query (requires Dataview plugin)
@@ -36,23 +32,25 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 11 edges to [[_COMMUNITY_audio_library.py]]
-- 10 edges to [[_COMMUNITY_json]]
-- 9 edges to [[_COMMUNITY_pathlib]]
-- 5 edges to [[_COMMUNITY_extra_sources.py]]
-- 3 edges to [[_COMMUNITY_resume_runs]]
+- 10 edges to [[_COMMUNITY_re]]
+- 4 edges to [[_COMMUNITY_json]]
+- 3 edges to [[_COMMUNITY_main_1]]
+- 3 edges to [[_COMMUNITY_audio_library.py]]
 - 2 edges to [[_COMMUNITY_duration]]
 - 2 edges to [[_COMMUNITY_test_pictures_first.py]]
-- 2 edges to [[_COMMUNITY_ffmpeg]]
-- 2 edges to [[_COMMUNITY_re]]
+- 2 edges to [[_COMMUNITY_source_json]]
+- 2 edges to [[_COMMUNITY_render]]
 - 1 edge to [[_COMMUNITY_prepare_topic]]
-- 1 edge to [[_COMMUNITY_main_1]]
-- 1 edge to [[_COMMUNITY_image_sources.py]]
+- 1 edge to [[_COMMUNITY_fetch]]
+- 1 edge to [[_COMMUNITY_test_full_scenes.py]]
+- 1 edge to [[_COMMUNITY_choose_images]]
+- 1 edge to [[_COMMUNITY_apply_review_fixes]]
+- 1 edge to [[_COMMUNITY_logbook.py]]
 - 1 edge to [[_COMMUNITY_preview]]
 
 ## Top bridge nodes
-- [[write_json()]] - degree 21, connects to 9 communities
-- [[media_command()]] - degree 14, connects to 4 communities
-- [[download_audio_choices()]] - degree 10, connects to 4 communities
-- [[review_audio_files()]] - degree 8, connects to 4 communities
-- [[freesound_results()]] - degree 7, connects to 3 communities
+- [[write_json()]] - degree 21, connects to 10 communities
+- [[film_piece()]] - degree 8, connects to 4 communities
+- [[shot_moments()]] - degree 8, connects to 2 communities
+- [[film_frames()]] - degree 7, connects to 2 communities
+- [[crop_film_bytes()]] - degree 4, connects to 2 communities

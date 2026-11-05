@@ -1,12 +1,12 @@
 ---
 source_file: "drawn/lib/core.mjs"
 type: "code"
-community: "bean.mjs"
+community: "kit.mjs"
 location: "L9"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/beanmjs
+  - community/kitmjs
 ---
 
 # rad()
@@ -23,4 +23,4 @@ tags:
 - [[sun()]] - `calls` [EXTRACTED]
 - [[textures.mjs]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/beanmjs
+#graphify/code #graphify/EXTRACTED #community/kitmjs

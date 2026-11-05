@@ -12,7 +12,7 @@ tags:
 # test_plan_builds_retries_then_defaults()
 
 ## Connections
-- [[ask()_15]] - `indirect_call` [INFERRED]
+- [[ask()_14]] - `indirect_call` [INFERRED]
 - [[plan_builds()]] - `calls` [EXTRACTED]
 - [[test_blender_plan.py]] - `contains` [EXTRACTED]
 

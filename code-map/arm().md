@@ -1,12 +1,12 @@
 ---
 source_file: "drawn/lib/rigs/bean.mjs"
 type: "code"
-community: "bean.mjs"
+community: "kit.mjs"
 location: "L60"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/beanmjs
+  - community/kitmjs
 ---
 
 # arm()
@@ -17,4 +17,4 @@ tags:
 - [[person()_1]] - `calls` [EXTRACTED]
 - [[rad()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/beanmjs
+#graphify/code #graphify/EXTRACTED #community/kitmjs

@@ -34,7 +34,7 @@ SORT file.name ASC
 ## Connections to other communities
 - 14 edges to [[_COMMUNITY_Paper]]
 - 3 edges to [[_COMMUNITY_toolkit.tsx]]
-- 1 edge to [[_COMMUNITY_ref_remotion]]
+- 1 edge to [[_COMMUNITY_Graphics.tsx]]
 - 1 edge to [[_COMMUNITY_styleindex.ts]]
 
 ## Top bridge nodes

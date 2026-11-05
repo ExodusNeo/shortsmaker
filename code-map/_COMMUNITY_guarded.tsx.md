@@ -9,7 +9,7 @@ members: 38
 
 ## Members
 - [[Box]] - code - remotion/src/full/guarded.tsx
-- [[Card()]] - code - remotion/src/full/guarded.tsx
+- [[Card()_1]] - code - remotion/src/full/guarded.tsx
 - [[Connect()]] - code - remotion/src/full/guarded.tsx
 - [[ExampleChain()]] - code - remotion/src/full/examples/ExampleChain.tsx
 - [[ExampleChain.tsx]] - code - remotion/src/full/examples/ExampleChain.tsx
@@ -58,7 +58,7 @@ SORT file.name ASC
 - 38 edges to [[_COMMUNITY_toolkit.tsx]]
 - 13 edges to [[_COMMUNITY_Paper]]
 - 3 edges to [[_COMMUNITY_styleindex.ts]]
-- 1 edge to [[_COMMUNITY_ref_remotion]]
+- 1 edge to [[_COMMUNITY_Graphics.tsx]]
 
 ## Top bridge nodes
 - [[guarded.tsx]] - degree 32, connects to 4 communities

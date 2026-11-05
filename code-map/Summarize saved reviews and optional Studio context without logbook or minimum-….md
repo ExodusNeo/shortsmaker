@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/retention.py"
 type: "rationale"
-community: "analyze"
+community: "retention.py"
 location: "L208"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/analyze
+  - community/retentionpy
 ---
 
 # Summarize saved reviews and optional Studio context without logbook or minimum-…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[observations()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/analyze
+#graphify/rationale #graphify/EXTRACTED #community/retentionpy

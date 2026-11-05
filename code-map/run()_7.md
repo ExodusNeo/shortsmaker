@@ -1,19 +1,18 @@
 ---
-source_file: "drawn/lib/film.mjs"
+source_file: "tests/test_style.py"
 type: "code"
-community: "kit.mjs"
-location: "L29"
+community: "render_remotion"
+location: "L266"
 tags:
   - graphify/code
-  - graphify/EXTRACTED
-  - community/kitmjs
+  - graphify/INFERRED
+  - community/render_remotion
 ---
 
 # run()
 
 ## Connections
-- [[args()]] - `calls` [EXTRACTED]
-- [[film.mjs]] - `contains` [EXTRACTED]
-- [[run.mjs]] - `imports` [EXTRACTED]
+- [[test_failed_invention_keeps_the_others()]] - `indirect_call` [INFERRED]
+- [[test_invention_passes_into_slot()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/kitmjs
+#graphify/code #graphify/INFERRED #community/render_remotion

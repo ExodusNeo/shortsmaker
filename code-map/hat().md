@@ -1,12 +1,12 @@
 ---
 source_file: "drawn/lib/rigs/bean.mjs"
 type: "code"
-community: "bean.mjs"
+community: "kit.mjs"
 location: "L66"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/beanmjs
+  - community/kitmjs
 ---
 
 # hat()
@@ -15,6 +15,7 @@ tags:
 - [[bean.mjs]] - `contains` [EXTRACTED]
 - [[bust()]] - `calls` [EXTRACTED]
 - [[ellPts()]] - `calls` [EXTRACTED]
+- [[makeKit()]] - `calls` [EXTRACTED]
 - [[person()_1]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/beanmjs
+#graphify/code #graphify/EXTRACTED #community/kitmjs

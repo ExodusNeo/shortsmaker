@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[ask_ai()]] - `calls` [EXTRACTED]
-- [[claude()_1]] - `indirect_call` [INFERRED]
+- [[claude()]] - `indirect_call` [INFERRED]
 - [[test_codex.py]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/ask_ai

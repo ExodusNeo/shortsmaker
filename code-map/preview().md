@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[Fast path for a mark card on a still, with hard cuts on both sides. Preserve…]] - `rationale_for` [EXTRACTED]
-- [[Path_27]] - `references` [EXTRACTED]
+- [[Path_28]] - `references` [EXTRACTED]
 - [[copy]] - `calls` [EXTRACTED]
 - [[ffmpeg()]] - `calls` [EXTRACTED]
 - [[fix_short()]] - `calls` [EXTRACTED]

@@ -50,14 +50,14 @@
       }
     },
     {
-      "query": "tag:#community/test_full_scenespy",
+      "query": "tag:#community/code_custom_scenes",
       "color": {
         "a": 1,
         "rgb": 16752039
       }
     },
     {
-      "query": "tag:#community/test_blender_renderpy",
+      "query": "tag:#community/re",
       "color": {
         "a": 1,
         "rgb": 10253663
@@ -99,7 +99,7 @@
       }
     },
     {
-      "query": "tag:#community/visual_review",
+      "query": "tag:#community/finish_render",
       "color": {
         "a": 1,
         "rgb": 5873999
@@ -148,21 +148,21 @@
       }
     },
     {
-      "query": "tag:#community/coremjs",
+      "query": "tag:#community/clamp",
       "color": {
         "a": 1,
         "rgb": 15896107
       }
     },
     {
-      "query": "tag:#community/extra_sourcespy",
+      "query": "tag:#community/source_json",
       "color": {
         "a": 1,
         "rgb": 14767961
       }
     },
     {
-      "query": "tag:#community/edit_projectpy",
+      "query": "tag:#community/make",
       "color": {
         "a": 1,
         "rgb": 7780274
@@ -183,7 +183,7 @@
       }
     },
     {
-      "query": "tag:#community/ffmpeg",
+      "query": "tag:#community/local_clips",
       "color": {
         "a": 1,
         "rgb": 11565729
@@ -204,7 +204,7 @@
       }
     },
     {
-      "query": "tag:#community/scene_cues",
+      "query": "tag:#community/full_cues",
       "color": {
         "a": 1,
         "rgb": 12234924
@@ -232,7 +232,7 @@
       }
     },
     {
-      "query": "tag:#community/gather_pool",
+      "query": "tag:#community/owner",
       "color": {
         "a": 1,
         "rgb": 7780274
@@ -246,14 +246,14 @@
       }
     },
     {
-      "query": "tag:#community/use",
+      "query": "tag:#community/paint_opener_start",
       "color": {
         "a": 1,
         "rgb": 15583560
       }
     },
     {
-      "query": "tag:#community/resume_runs",
+      "query": "tag:#community/main",
       "color": {
         "a": 1,
         "rgb": 11565729
@@ -281,7 +281,7 @@
       }
     },
     {
-      "query": "tag:#community/apply_review_fixes",
+      "query": "tag:#community/ask",
       "color": {
         "a": 1,
         "rgb": 5142951
@@ -302,28 +302,28 @@
       }
     },
     {
-      "query": "tag:#community/texturesmjs",
+      "query": "tag:#community/coremjs",
       "color": {
         "a": 1,
         "rgb": 7780274
       }
     },
     {
-      "query": "tag:#community/callout_hold",
+      "query": "tag:#community/scene_cues",
       "color": {
         "a": 1,
         "rgb": 5873999
       }
     },
     {
-      "query": "tag:#community/llmpy",
+      "query": "tag:#community/check_twists",
       "color": {
         "a": 1,
         "rgb": 15583560
       }
     },
     {
-      "query": "tag:#community/style_placeholders",
+      "query": "tag:#community/fetch",
       "color": {
         "a": 1,
         "rgb": 11565729
@@ -344,7 +344,7 @@
       }
     },
     {
-      "query": "tag:#community/trend_research",
+      "query": "tag:#community/at",
       "color": {
         "a": 1,
         "rgb": 12234924
@@ -358,14 +358,14 @@
       }
     },
     {
-      "query": "tag:#community/story_problems",
+      "query": "tag:#community/test_storypy",
       "color": {
         "a": 1,
         "rgb": 15896107
       }
     },
     {
-      "query": "tag:#community/main",
+      "query": "tag:#community/wm_files",
       "color": {
         "a": 1,
         "rgb": 14767961
@@ -393,7 +393,7 @@
       }
     },
     {
-      "query": "tag:#community/analyze",
+      "query": "tag:#community/retentionpy",
       "color": {
         "a": 1,
         "rgb": 11565729
@@ -428,21 +428,21 @@
       }
     },
     {
-      "query": "tag:#community/beanmjs",
+      "query": "tag:#community/test_opener3dpy",
       "color": {
         "a": 1,
         "rgb": 15896107
       }
     },
     {
-      "query": "tag:#community/image_sourcespy",
+      "query": "tag:#community/write_json",
       "color": {
         "a": 1,
         "rgb": 14767961
       }
     },
     {
-      "query": "tag:#community/configure_brain",
+      "query": "tag:#community/ends_sentence",
       "color": {
         "a": 1,
         "rgb": 7780274
@@ -456,14 +456,14 @@
       }
     },
     {
-      "query": "tag:#community/write_json",
+      "query": "tag:#community/download_audio_choices",
       "color": {
         "a": 1,
         "rgb": 15583560
       }
     },
     {
-      "query": "tag:#community/vault_page",
+      "query": "tag:#community/logbookpy",
       "color": {
         "a": 1,
         "rgb": 11565729
@@ -484,14 +484,14 @@
       }
     },
     {
-      "query": "tag:#community/first_second_check",
+      "query": "tag:#community/test_first_secondpy",
       "color": {
         "a": 1,
         "rgb": 12234924
       }
     },
     {
-      "query": "tag:#community/paint_new",
+      "query": "tag:#community/apply_review_fixes",
       "color": {
         "a": 1,
         "rgb": 5142951
@@ -505,7 +505,7 @@
       }
     },
     {
-      "query": "tag:#community/re",
+      "query": "tag:#community/time",
       "color": {
         "a": 1,
         "rgb": 14767961
@@ -519,7 +519,7 @@
       }
     },
     {
-      "query": "tag:#community/pathlib",
+      "query": "tag:#community/test_full_scenespy",
       "color": {
         "a": 1,
         "rgb": 5873999
@@ -533,7 +533,7 @@
       }
     },
     {
-      "query": "tag:#community/ref_remotion",
+      "query": "tag:#community/Opener3Dtsx",
       "color": {
         "a": 1,
         "rgb": 11565729
@@ -554,7 +554,7 @@
       }
     },
     {
-      "query": "tag:#community/edit_plan",
+      "query": "tag:#community/first_sentence",
       "color": {
         "a": 1,
         "rgb": 12234924
@@ -575,7 +575,7 @@
       }
     },
     {
-      "query": "tag:#community/edit_scripts",
+      "query": "tag:#community/full_props",
       "color": {
         "a": 1,
         "rgb": 14767961
@@ -631,7 +631,7 @@
       }
     },
     {
-      "query": "tag:#community/plan_with",
+      "query": "tag:#community/fact_check",
       "color": {
         "a": 1,
         "rgb": 5142951
@@ -659,14 +659,14 @@
       }
     },
     {
-      "query": "tag:#community/get_image",
+      "query": "tag:#community/gather_pool",
       "color": {
         "a": 1,
         "rgb": 5873999
       }
     },
     {
-      "query": "tag:#community/render_fixture",
+      "query": "tag:#community/review",
       "color": {
         "a": 1,
         "rgb": 15583560
@@ -680,7 +680,7 @@
       }
     },
     {
-      "query": "tag:#community/invent_component",
+      "query": "tag:#community/plan",
       "color": {
         "a": 1,
         "rgb": 16752039
@@ -694,14 +694,14 @@
       }
     },
     {
-      "query": "tag:#community/drawn_thumbnail",
+      "query": "tag:#community/other_ai",
       "color": {
         "a": 1,
         "rgb": 12234924
       }
     },
     {
-      "query": "tag:#community/opening_brief",
+      "query": "tag:#community/write",
       "color": {
         "a": 1,
         "rgb": 5142951
@@ -729,14 +729,14 @@
       }
     },
     {
-      "query": "tag:#community/finish_render",
+      "query": "tag:#community/patchingpy",
       "color": {
         "a": 1,
         "rgb": 5873999
       }
     },
     {
-      "query": "tag:#community/test_ai_modespy",
+      "query": "tag:#community/edit_scripts",
       "color": {
         "a": 1,
         "rgb": 15583560
@@ -757,7 +757,7 @@
       }
     },
     {
-      "query": "tag:#community/logbook_results",
+      "query": "tag:#community/test_short_credit",
       "color": {
         "a": 1,
         "rgb": 10253663
@@ -771,45 +771,10 @@
       }
     },
     {
-      "query": "tag:#community/gemini_model",
-      "color": {
-        "a": 1,
-        "rgb": 5142951
-      }
-    },
-    {
       "query": "tag:#community/apply_metadata",
       "color": {
         "a": 1,
         "rgb": 15896107
-      }
-    },
-    {
-      "query": "tag:#community/BlenderFailed",
-      "color": {
-        "a": 1,
-        "rgb": 14767961
-      }
-    },
-    {
-      "query": "tag:#community/wants_remotion",
-      "color": {
-        "a": 1,
-        "rgb": 7780274
-      }
-    },
-    {
-      "query": "tag:#community/apply_look_scenes",
-      "color": {
-        "a": 1,
-        "rgb": 5873999
-      }
-    },
-    {
-      "query": "tag:#community/test_local_job_retries_a_hard_crash",
-      "color": {
-        "a": 1,
-        "rgb": 15583560
       }
     }
   ]

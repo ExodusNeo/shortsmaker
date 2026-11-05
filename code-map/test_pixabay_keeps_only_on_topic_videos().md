@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_pictures_first.py"
 type: "code"
-community: "extra_sources.py"
+community: "test_pictures_first.py"
 location: "L611"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/extra_sourcespy
+  - community/test_pictures_firstpy
 ---
 
 # test_pixabay_keeps_only_on_topic_videos()
@@ -15,4 +15,4 @@ tags:
 - [[pixabay_films()]] - `calls` [EXTRACTED]
 - [[test_pictures_first.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/extra_sourcespy
+#graphify/code #graphify/EXTRACTED #community/test_pictures_firstpy

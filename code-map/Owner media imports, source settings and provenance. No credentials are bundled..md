@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/media_library.py"
 type: "rationale"
-community: "json"
+community: "re"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/json
+  - community/re
 ---
 
 # Owner media imports, source settings and provenance. No credentials are bundled.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[media_library.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/json
+#graphify/rationale #graphify/EXTRACTED #community/re

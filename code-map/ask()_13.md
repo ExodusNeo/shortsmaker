@@ -1,17 +1,17 @@
 ---
-source_file: "tests/test_style.py"
+source_file: "shortsmaker/blender_plan.py"
 type: "code"
-community: "plan_with"
-location: "L209"
+community: "test_blender_plan.py"
+location: "L114"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/plan_with
+  - community/test_blender_planpy
 ---
 
 # ask()
 
 ## Connections
-- [[test_fact_check_sees_new_graphics()]] - `contains` [EXTRACTED]
+- [[plan_builds()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/plan_with
+#graphify/code #graphify/EXTRACTED #community/test_blender_planpy

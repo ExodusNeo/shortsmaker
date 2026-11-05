@@ -2,7 +2,7 @@
 source_file: "drawn/kit.mjs"
 type: "code"
 community: "makeKit"
-location: "L22"
+location: "L34"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,17 +12,24 @@ tags:
 # makeKit()
 
 ## Connections
+- [[dot-at()_1]] - `calls` [EXTRACTED]
 - [[dot-begin()]] - `calls` [INFERRED]
+- [[dot-disc()]] - `calls` [EXTRACTED]
 - [[dot-dot()_1]] - `calls` [EXTRACTED]
 - [[dot-paint()]] - `calls` [EXTRACTED]
 - [[dot-poly()]] - `calls` [INFERRED]
+- [[dot-rect()]] - `calls` [EXTRACTED]
+- [[dot-ring()_1]] - `calls` [EXTRACTED]
+- [[dot-shadow()]] - `calls` [EXTRACTED]
 - [[dot-stroke()]] - `calls` [INFERRED]
 - [[Pen]] - `calls` [EXTRACTED]
 - [[clamp()]] - `calls` [EXTRACTED]
+- [[cutouts.mjs]] - `imports` [EXTRACTED]
 - [[eOut()]] - `calls` [EXTRACTED]
 - [[ellPts()]] - `calls` [EXTRACTED]
 - [[frame()_2]] - `calls` [EXTRACTED]
 - [[hash()]] - `calls` [EXTRACTED]
+- [[hat()]] - `calls` [EXTRACTED]
 - [[k]] - `contains` [EXTRACTED]
 - [[kit.mjs]] - `contains` [EXTRACTED]
 - [[lerp()]] - `calls` [EXTRACTED]
@@ -31,6 +38,7 @@ tags:
 - [[popS()]] - `calls` [EXTRACTED]
 - [[rrect()]] - `calls` [EXTRACTED]
 - [[run.mjs]] - `imports` [EXTRACTED]
+- [[shots_1]] - `calls` [EXTRACTED]
 - [[ss()]] - `calls` [EXTRACTED]
 - [[star4()]] - `calls` [EXTRACTED]
 

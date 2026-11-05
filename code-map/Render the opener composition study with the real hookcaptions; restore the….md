@@ -1,12 +1,12 @@
 ---
 source_file: "tests/render_opener_preview.py"
 type: "rationale"
-community: "test_full_scenes.py"
+community: "test_style.py"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/test_full_scenespy
+  - community/test_stylepy
 ---
 
 # Render the opener composition study with the real hook/captions; restore the…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[render_opener_preview.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/test_full_scenespy
+#graphify/rationale #graphify/EXTRACTED #community/test_stylepy

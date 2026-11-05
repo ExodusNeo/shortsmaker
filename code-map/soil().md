@@ -1,12 +1,12 @@
 ---
 source_file: "drawn/lib/textures.mjs"
 type: "code"
-community: "textures.mjs"
+community: "core.mjs"
 location: "L49"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/texturesmjs
+  - community/coremjs
 ---
 
 # soil()
@@ -21,4 +21,4 @@ tags:
 - [[stroke()]] - `calls` [EXTRACTED]
 - [[textures.mjs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/texturesmjs
+#graphify/code #graphify/EXTRACTED #community/coremjs

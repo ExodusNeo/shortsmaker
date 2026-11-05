@@ -57,7 +57,7 @@ SORT file.name ASC
 - 7 edges to [[_COMMUNITY_styleindex.ts]]
 - 3 edges to [[_COMMUNITY_BigNumber.tsx]]
 - 2 edges to [[_COMMUNITY_Journey.tsx]]
-- 1 edge to [[_COMMUNITY_ref_remotion]]
+- 1 edge to [[_COMMUNITY_Graphics.tsx]]
 
 ## Top bridge nodes
 - [[toolkit.tsx]] - degree 37, connects to 5 communities

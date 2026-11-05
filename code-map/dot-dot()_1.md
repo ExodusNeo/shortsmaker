@@ -2,7 +2,7 @@
 source_file: "drawn/kit.mjs"
 type: "code"
 community: "k"
-location: "L50"
+location: "L62"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,6 +12,8 @@ tags:
 # .dot()
 
 ## Connections
+- [[dot-bear()]] - `calls` [EXTRACTED]
+- [[dot-cat()]] - `calls` [EXTRACTED]
 - [[dot-chicken()]] - `calls` [EXTRACTED]
 - [[dot-cow()]] - `calls` [EXTRACTED]
 - [[dot-dog()]] - `calls` [EXTRACTED]
@@ -19,6 +21,7 @@ tags:
 - [[dot-ground()]] - `calls` [EXTRACTED]
 - [[dot-horse()]] - `calls` [EXTRACTED]
 - [[dot-pig()]] - `calls` [EXTRACTED]
+- [[dot-rabbit()]] - `calls` [EXTRACTED]
 - [[k]] - `method` [EXTRACTED]
 - [[makeKit()]] - `calls` [EXTRACTED]
 

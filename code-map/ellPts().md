@@ -12,6 +12,8 @@ tags:
 # ellPts()
 
 ## Connections
+- [[dot-bear()]] - `calls` [EXTRACTED]
+- [[dot-cat()]] - `calls` [EXTRACTED]
 - [[dot-chicken()]] - `calls` [EXTRACTED]
 - [[dot-clock()]] - `calls` [EXTRACTED]
 - [[dot-coin()]] - `calls` [EXTRACTED]
@@ -22,8 +24,10 @@ tags:
 - [[dot-moon()]] - `calls` [EXTRACTED]
 - [[dot-oval()]] - `calls` [EXTRACTED]
 - [[dot-paper()]] - `calls` [EXTRACTED]
+- [[dot-person()]] - `calls` [EXTRACTED]
 - [[dot-pig()]] - `calls` [EXTRACTED]
 - [[dot-puff()]] - `calls` [EXTRACTED]
+- [[dot-rabbit()]] - `calls` [EXTRACTED]
 - [[dot-smoke()]] - `calls` [EXTRACTED]
 - [[dot-splash()]] - `calls` [EXTRACTED]
 - [[dot-sun()]] - `calls` [EXTRACTED]

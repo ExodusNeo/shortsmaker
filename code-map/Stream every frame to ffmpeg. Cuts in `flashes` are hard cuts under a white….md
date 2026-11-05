@@ -2,7 +2,7 @@
 source_file: "shortsmaker/frame_render.py"
 type: "rationale"
 community: "write_frames"
-location: "L288"
+location: "L269"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED

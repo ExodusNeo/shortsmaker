@@ -50,12 +50,12 @@ members: 51
 - [[test_min_pictures_from_settings()]] - code - tests/test_rules.py
 - [[test_missing_heading_stops()]] - code - tests/test_rules.py
 - [[test_missing_rules_file_is_drafted()]] - code - tests/test_rules.py
+- [[test_new_channel_stops_for_review()]] - code - tests/test_rules.py
 - [[test_odd_min_pictures_stop_cleanly()]] - code - tests/test_rules.py
 - [[test_opening_picture_needs_its_fields()]] - code - tests/test_rules.py
 - [[test_parses_sections_and_settings()]] - code - tests/test_rules.py
 - [[test_photo_channels_dont_need_a_build_plan()]] - code - tests/test_rules.py
 - [[test_rules.py]] - code - tests/test_rules.py
-- [[test_rules_accept_opener_setting()]] - code - tests/test_story.py
 - [[test_strange_history_prompts_unchanged()]] - code - tests/test_rules.py
 - [[test_strips_tag_comments()]] - code - tests/test_rules.py
 - [[test_unknown_visuals_stop()]] - code - tests/test_rules.py
@@ -68,22 +68,25 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 15 edges to [[_COMMUNITY_llm.py]]
-- 6 edges to [[_COMMUNITY_main_1]]
-- 6 edges to [[_COMMUNITY_pathlib]]
+- 18 edges to [[_COMMUNITY_test_full_scenes.py]]
+- 4 edges to [[_COMMUNITY_main_1]]
 - 3 edges to [[_COMMUNITY_json]]
 - 2 edges to [[_COMMUNITY_prepare_topic]]
-- 1 edge to [[_COMMUNITY_re]]
-- 1 edge to [[_COMMUNITY_first_second_check]]
+- 2 edges to [[_COMMUNITY_re]]
+- 1 edge to [[_COMMUNITY_test_story.py]]
+- 1 edge to [[_COMMUNITY_test_first_second.py]]
 - 1 edge to [[_COMMUNITY_rewrite_paint_prompts]]
 - 1 edge to [[_COMMUNITY_choose_images]]
 - 1 edge to [[_COMMUNITY_write_scripts]]
 - 1 edge to [[_COMMUNITY_test_pictures_first.py]]
+- 1 edge to [[_COMMUNITY_logbook.py]]
+- 1 edge to [[_COMMUNITY_retention.py]]
+- 1 edge to [[_COMMUNITY_test_style.py]]
 - 1 edge to [[_COMMUNITY_test_topic_ideas.py]]
 
 ## Top bridge nodes
-- [[test_rules.py]] - degree 58, connects to 5 communities
+- [[test_rules.py]] - degree 58, connects to 7 communities
 - [[capture_prompts()]] - degree 11, connects to 5 communities
-- [[parse_rules()]] - degree 17, connects to 2 communities
+- [[parse_rules()]] - degree 17, connects to 3 communities
 - [[load_rules()]] - degree 6, connects to 2 communities
 - [[min_real_pictures()]] - degree 4, connects to 2 communities

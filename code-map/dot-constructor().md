@@ -1,12 +1,12 @@
 ---
 source_file: "drawn/lib/pen.mjs"
 type: "code"
-community: "makeKit"
+community: "core.mjs"
 location: "L16"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/makeKit
+  - community/coremjs
 ---
 
 # .constructor()
@@ -15,4 +15,4 @@ tags:
 - [[Pen]] - `method` [EXTRACTED]
 - [[grainCanvas()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/makeKit
+#graphify/code #graphify/EXTRACTED #community/coremjs

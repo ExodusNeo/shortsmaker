@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/motion.py"
 type: "code"
-community: "test_full_scenes.py"
+community: "code_custom_scenes"
 location: "L303"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_full_scenespy
+  - community/code_custom_scenes
 ---
 
 # lint_custom_code()
@@ -23,4 +23,4 @@ tags:
 - [[test_fallback_custom_is_clean()]] - `calls` [EXTRACTED]
 - [[test_lint_custom_code()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_full_scenespy
+#graphify/code #graphify/EXTRACTED #community/code_custom_scenes

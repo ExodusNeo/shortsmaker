@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/retention.py"
 type: "code"
-community: "analyze"
+community: "retention.py"
 location: "L65"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/analyze
+  - community/retentionpy
 ---
 
 # normalize_metrics()
@@ -17,4 +17,4 @@ tags:
 - [[parse_metric()]] - `calls` [EXTRACTED]
 - [[retention.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/analyze
+#graphify/code #graphify/EXTRACTED #community/retentionpy

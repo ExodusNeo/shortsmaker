@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/drawn_opener.py"
 type: "code"
-community: "pathlib"
+community: "re"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/pathlib
+  - community/re
 ---
 
 # drawn_opener.py
@@ -25,6 +25,8 @@ tags:
 - [[make_opener()]] - `contains` [EXTRACTED]
 - [[missing_parts()]] - `contains` [EXTRACTED]
 - [[node_run()]] - `contains` [EXTRACTED]
+- [[opener3d.py]] - `imports_from` [EXTRACTED]
+- [[opener_role()]] - `contains` [EXTRACTED]
 - [[opening_rules.py]] - `imports_from` [EXTRACTED]
 - [[pathlib]] - `imports_from` [EXTRACTED]
 - [[plan_rules.py]] - `imports_from` [EXTRACTED]
@@ -36,8 +38,9 @@ tags:
 - [[shutil]] - `imports` [EXTRACTED]
 - [[subprocess]] - `imports` [EXTRACTED]
 - [[test_drawn_opener.py]] - `imports_from` [EXTRACTED]
+- [[test_opener3d.py]] - `imports_from` [EXTRACTED]
 - [[test_opening_rules.py]] - `imports_from` [EXTRACTED]
 - [[test_reliability.py]] - `imports_from` [EXTRACTED]
 - [[write()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/pathlib
+#graphify/code #graphify/EXTRACTED #community/re

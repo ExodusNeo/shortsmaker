@@ -1,17 +1,19 @@
 ---
 source_file: ""
 type: "code"
-community: "duration"
+community: "write"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/duration
+  - community/write
 ---
 
 # Path
 
 ## Connections
-- [[film_piece()]] - `references` [EXTRACTED]
-- [[shot_span()]] - `references` [EXTRACTED]
+- [[make_opener()]] - `references` [EXTRACTED]
+- [[node_run()]] - `references` [EXTRACTED]
+- [[review()]] - `references` [EXTRACTED]
+- [[write()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/duration
+#graphify/code #graphify/EXTRACTED #community/write

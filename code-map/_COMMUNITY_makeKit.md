@@ -1,21 +1,18 @@
 ---
 type: community
-members: 25
+members: 21
 ---
 
 # makeKit
 
-**Members:** 25 nodes
+**Members:** 21 nodes
 
 ## Members
 - [[dot-J()]] - code - drawn/lib/pen.mjs
 - [[dot-begin()]] - code - drawn/lib/pen.mjs
 - [[dot-blob()]] - code - drawn/lib/pen.mjs
-- [[dot-box()]] - code - drawn/lib/pen.mjs
-- [[dot-constructor()]] - code - drawn/lib/pen.mjs
 - [[dot-dot()]] - code - drawn/lib/pen.mjs
 - [[dot-end()]] - code - drawn/lib/pen.mjs
-- [[dot-next()]] - code - drawn/lib/pen.mjs
 - [[dot-pencil()]] - code - drawn/lib/pen.mjs
 - [[dot-poly()]] - code - drawn/lib/pen.mjs
 - [[dot-ring()]] - code - drawn/lib/pen.mjs
@@ -28,7 +25,6 @@ members: 25
 - [[centroid()]] - code - drawn/lib/core.mjs
 - [[densify()]] - code - drawn/lib/core.mjs
 - [[drawn_lib_core_path2d]] - concept
-- [[eOut()]] - code - drawn/lib/core.mjs
 - [[idHash()]] - code - drawn/lib/pen.mjs
 - [[makeKit()]] - code - drawn/kit.mjs
 - [[noise1()]] - code - drawn/lib/core.mjs
@@ -42,15 +38,15 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 21 edges to [[_COMMUNITY_core.mjs]]
+- 14 edges to [[_COMMUNITY_clamp]]
+- 12 edges to [[_COMMUNITY_kit.mjs]]
+- 12 edges to [[_COMMUNITY_core.mjs]]
 - 8 edges to [[_COMMUNITY_k]]
-- 7 edges to [[_COMMUNITY_kit.mjs]]
-- 6 edges to [[_COMMUNITY_textures.mjs]]
-- 2 edges to [[_COMMUNITY_bean.mjs]]
+- 7 edges to [[_COMMUNITY_dot-at]]
 
 ## Top bridge nodes
-- [[makeKit()]] - degree 21, connects to 5 communities
-- [[pen.mjs]] - degree 16, connects to 3 communities
+- [[makeKit()]] - degree 29, connects to 5 communities
+- [[Pen]] - degree 17, connects to 4 communities
+- [[pen.mjs]] - degree 16, connects to 4 communities
 - [[noise1()]] - degree 9, connects to 3 communities
-- [[eOut()]] - degree 7, connects to 3 communities
-- [[INK]] - degree 3, connects to 2 communities
+- [[dot-stroke()]] - degree 13, connects to 2 communities

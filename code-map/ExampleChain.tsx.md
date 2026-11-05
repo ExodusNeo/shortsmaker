@@ -12,7 +12,7 @@ tags:
 # ExampleChain.tsx
 
 ## Connections
-- [[Card()]] - `imports` [EXTRACTED]
+- [[Card()_1]] - `imports` [EXTRACTED]
 - [[Connect()]] - `imports` [EXTRACTED]
 - [[CustomFull]] - `imports` [EXTRACTED]
 - [[ExampleChain()]] - `contains` [EXTRACTED]

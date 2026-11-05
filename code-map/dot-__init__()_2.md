@@ -2,7 +2,7 @@
 source_file: "shortsmaker/frame_render.py"
 type: "code"
 community: "frame_maker"
-location: "L214"
+location: "L198"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -13,6 +13,6 @@ tags:
 
 ## Connections
 - [[ClipReader]] - `method` [EXTRACTED]
-- [[Path_8]] - `references` [EXTRACTED]
+- [[Path_9]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/frame_maker

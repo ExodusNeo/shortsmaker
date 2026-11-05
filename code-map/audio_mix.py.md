@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/audio_mix.py"
 type: "code"
-community: "pathlib"
+community: "re"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/pathlib
+  - community/re
 ---
 
 # audio_mix.py
@@ -15,11 +15,11 @@ tags:
 - [[Random]] - `imports` [EXTRACTED]
 - [[Voice, captions, sound effects, story sounds and music levels.]] - `rationale_for` [EXTRACTED]
 - [[__init__.py]] - `imports_from` [EXTRACTED]
-- [[ass_colour()]] - `imports` [EXTRACTED]
 - [[ass_time()]] - `contains` [EXTRACTED]
 - [[asyncio]] - `imports` [EXTRACTED]
 - [[audio_library.py]] - `imports_from` [EXTRACTED]
 - [[caption_lines()]] - `contains` [EXTRACTED]
+- [[caption_size()]] - `contains` [EXTRACTED]
 - [[captions()_1]] - `contains` [EXTRACTED]
 - [[clean_sound()]] - `contains` [EXTRACTED]
 - [[config.py]] - `imports_from` [EXTRACTED]
@@ -39,7 +39,6 @@ tags:
 - [[re]] - `imports` [EXTRACTED]
 - [[remotion_render.py]] - `imports_from` [EXTRACTED]
 - [[schedule_sounds()]] - `contains` [EXTRACTED]
-- [[session.py]] - `imports_from` [EXTRACTED]
 - [[sfx_events()]] - `contains` [EXTRACTED]
 - [[short_render.py]] - `imports_from` [EXTRACTED]
 - [[speak()_1]] - `contains` [EXTRACTED]
@@ -58,4 +57,4 @@ tags:
 - [[wave]] - `imports` [EXTRACTED]
 - [[writing.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/pathlib
+#graphify/code #graphify/EXTRACTED #community/re

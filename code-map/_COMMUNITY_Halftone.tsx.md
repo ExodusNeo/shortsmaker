@@ -49,7 +49,7 @@ SORT file.name ASC
 ## Connections to other communities
 - 42 edges to [[_COMMUNITY_styleindex.ts]]
 - 3 edges to [[_COMMUNITY_Short.tsx]]
-- 1 edge to [[_COMMUNITY_ref_remotion]]
+- 1 edge to [[_COMMUNITY_Graphics.tsx]]
 
 ## Top bridge nodes
 - [[Silent.tsx]] - degree 13, connects to 2 communities

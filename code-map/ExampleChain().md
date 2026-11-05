@@ -12,7 +12,7 @@ tags:
 # ExampleChain()
 
 ## Connections
-- [[Card()]] - `calls` [EXTRACTED]
+- [[Card()_1]] - `calls` [EXTRACTED]
 - [[Connect()]] - `calls` [EXTRACTED]
 - [[ExampleChain.tsx]] - `contains` [EXTRACTED]
 - [[Paper()]] - `calls` [EXTRACTED]

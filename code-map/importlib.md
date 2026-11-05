@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "write_scripts"
+community: "patching.py"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/write_scripts
+  - community/patchingpy
 ---
 
 # importlib
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[patching.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/write_scripts
+#graphify/concept #graphify/EXTRACTED #community/patchingpy

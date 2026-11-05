@@ -1,18 +1,17 @@
 ---
 source_file: "tests/test_style.py"
 type: "code"
-community: "plan_with"
-location: "L111"
+community: "fact_check"
+location: "L209"
 tags:
   - graphify/code
-  - graphify/INFERRED
-  - community/plan_with
+  - graphify/EXTRACTED
+  - community/fact_check
 ---
 
 # ask()
 
 ## Connections
-- [[plan_with()_1]] - `indirect_call` [INFERRED]
-- [[test_fact_check_sees_new_graphics()]] - `indirect_call` [INFERRED]
+- [[test_fact_check_sees_new_graphics()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/plan_with
+#graphify/code #graphify/EXTRACTED #community/fact_check

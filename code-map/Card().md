@@ -1,23 +1,18 @@
 ---
-source_file: "remotion/src/full/guarded.tsx"
+source_file: "remotion/src/Opener3D.tsx"
 type: "code"
-community: "guarded.tsx"
-location: "L103"
+community: "Opener3D.tsx"
+location: "L125"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/guardedtsx
+  - community/Opener3Dtsx
 ---
 
 # Card()
 
 ## Connections
-- [[ExampleChain()]] - `calls` [EXTRACTED]
-- [[ExampleChain.tsx]] - `imports` [EXTRACTED]
-- [[ExampleEvidence()]] - `calls` [EXTRACTED]
-- [[ExampleEvidence.tsx]] - `imports` [EXTRACTED]
-- [[fitCard()]] - `calls` [EXTRACTED]
-- [[guarded.tsx]] - `contains` [EXTRACTED]
-- [[skinOf()]] - `calls` [EXTRACTED]
+- [[Opener3D()]] - `calls` [EXTRACTED]
+- [[Opener3D.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/guardedtsx
+#graphify/code #graphify/EXTRACTED #community/Opener3Dtsx

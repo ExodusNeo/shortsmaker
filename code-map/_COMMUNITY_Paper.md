@@ -56,7 +56,7 @@ SORT file.name ASC
 - 13 edges to [[_COMMUNITY_guarded.tsx]]
 - 10 edges to [[_COMMUNITY_Journey.tsx]]
 - 5 edges to [[_COMMUNITY_Short.tsx]]
-- 3 edges to [[_COMMUNITY_ref_remotion]]
+- 3 edges to [[_COMMUNITY_Graphics.tsx]]
 - 1 edge to [[_COMMUNITY_styleindex.ts]]
 
 ## Top bridge nodes

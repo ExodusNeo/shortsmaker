@@ -2,7 +2,7 @@
 source_file: "drawn/kit.mjs"
 type: "code"
 community: "k"
-location: "L45"
+location: "L57"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -15,9 +15,11 @@ tags:
 - [[dot-bank()]] - `calls` [EXTRACTED]
 - [[dot-banknote()]] - `calls` [EXTRACTED]
 - [[dot-barrel()]] - `calls` [EXTRACTED]
+- [[dot-bear()]] - `calls` [EXTRACTED]
 - [[dot-boat()]] - `calls` [EXTRACTED]
 - [[dot-bottle()]] - `calls` [EXTRACTED]
 - [[dot-cart()]] - `calls` [EXTRACTED]
+- [[dot-cat()]] - `calls` [EXTRACTED]
 - [[dot-chicken()]] - `calls` [EXTRACTED]
 - [[dot-clock()]] - `calls` [EXTRACTED]
 - [[dot-cloud()]] - `calls` [EXTRACTED]
@@ -31,11 +33,13 @@ tags:
 - [[dot-factory()]] - `calls` [EXTRACTED]
 - [[dot-fire()]] - `calls` [EXTRACTED]
 - [[dot-flood()]] - `calls` [EXTRACTED]
+- [[dot-frame()]] - `calls` [EXTRACTED]
 - [[dot-ground()]] - `calls` [EXTRACTED]
 - [[dot-hills()]] - `calls` [EXTRACTED]
 - [[dot-horse()]] - `calls` [EXTRACTED]
 - [[dot-house()]] - `calls` [EXTRACTED]
 - [[dot-island()]] - `calls` [EXTRACTED]
+- [[dot-letter()]] - `calls` [EXTRACTED]
 - [[dot-moneybag()]] - `calls` [EXTRACTED]
 - [[dot-moon()]] - `calls` [EXTRACTED]
 - [[dot-palm()]] - `calls` [EXTRACTED]
@@ -43,7 +47,9 @@ tags:
 - [[dot-person()]] - `calls` [EXTRACTED]
 - [[dot-pig()]] - `calls` [EXTRACTED]
 - [[dot-pine()]] - `calls` [EXTRACTED]
+- [[dot-rabbit()]] - `calls` [EXTRACTED]
 - [[dot-room()]] - `calls` [EXTRACTED]
+- [[dot-rug()]] - `calls` [EXTRACTED]
 - [[dot-sack()]] - `calls` [EXTRACTED]
 - [[dot-sea()]] - `calls` [EXTRACTED]
 - [[dot-shape()]] - `calls` [EXTRACTED]
@@ -54,6 +60,7 @@ tags:
 - [[dot-table()]] - `calls` [EXTRACTED]
 - [[dot-tank()]] - `calls` [EXTRACTED]
 - [[dot-tree()]] - `calls` [EXTRACTED]
+- [[dot-window()]] - `calls` [EXTRACTED]
 - [[k]] - `method` [EXTRACTED]
 - [[makeKit()]] - `calls` [EXTRACTED]
 

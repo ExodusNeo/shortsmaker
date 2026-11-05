@@ -2,7 +2,7 @@
 source_file: "tests/test_drawn_opener.py"
 type: "code"
 community: "short"
-location: "L37"
+location: "L40"
 tags:
   - graphify/code
   - graphify/EXTRACTED

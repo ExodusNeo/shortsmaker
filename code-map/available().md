@@ -13,6 +13,7 @@ tags:
 
 ## Connections
 - [[Why a drawn opener can't be made on this PC, or None.]] - `rationale_for` [EXTRACTED]
+- [[available()_1]] - `calls` [EXTRACTED]
 - [[drawn_opener.py]] - `contains` [EXTRACTED]
 - [[make_opener()]] - `calls` [EXTRACTED]
 - [[shutil]] - `calls` [EXTRACTED]
