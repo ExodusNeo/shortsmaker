@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/picker.py"
 type: "code"
-community: "finish_render"
+community: "apply_review_fixes"
 location: "L312"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/finish_render
+  - community/apply_review_fixes
 ---
 
 # full_formats()
@@ -17,4 +17,4 @@ tags:
 - [[picker.py]] - `contains` [EXTRACTED]
 - [[rescue_graphics()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/finish_render
+#graphify/code #graphify/EXTRACTED #community/apply_review_fixes

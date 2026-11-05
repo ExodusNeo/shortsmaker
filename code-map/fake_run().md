@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_full_scenes.py"
 type: "code"
-community: "test_h3_handoff.py"
+community: "local_clips"
 location: "L781"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/test_h3_handoffpy
+  - community/local_clips
 ---
 
 # fake_run()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[test_local_job_retries_a_hard_crash()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/INFERRED #community/test_h3_handoffpy
+#graphify/code #graphify/INFERRED #community/local_clips

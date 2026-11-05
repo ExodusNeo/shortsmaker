@@ -39,7 +39,7 @@ SORT file.name ASC
 ## Connections to other communities
 - 9 edges to [[_COMMUNITY_pathlib]]
 - 4 edges to [[_COMMUNITY_ffmpeg]]
-- 2 edges to [[_COMMUNITY_finish_render]]
+- 2 edges to [[_COMMUNITY_render]]
 - 2 edges to [[_COMMUNITY_re]]
 - 1 edge to [[_COMMUNITY_gpu.py]]
 

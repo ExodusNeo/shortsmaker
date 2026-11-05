@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/motion.py"
 type: "code"
-community: "finish_render"
+community: "paint_opener_start"
 location: "L21"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/finish_render
+  - community/paint_opener_start
 ---
 
 # full_summary()
@@ -21,4 +21,4 @@ tags:
 - [[test_full_props_figure()]] - `calls` [EXTRACTED]
 - [[test_full_summary()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/finish_render
+#graphify/code #graphify/EXTRACTED #community/paint_opener_start

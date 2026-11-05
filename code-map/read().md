@@ -1,23 +1,28 @@
 ---
-source_file: "tests/test_story.py"
+source_file: "shortsmaker/checkpoints.py"
 type: "code"
-community: "test_story.py"
-location: "L23"
+community: "resume_runs"
+location: "L47"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_storypy
+  - community/resume_runs
 ---
 
 # read()
 
 ## Connections
-- [[A cold reader's reading (writing.cold_read) that finds nothing wrong, with…]] - `rationale_for` [EXTRACTED]
-- [[test_cold_read_verdicts()]] - `calls` [EXTRACTED]
-- [[test_no_hook_setting_no_hook_check()]] - `calls` [EXTRACTED]
-- [[test_story.py]] - `contains` [EXTRACTED]
-- [[test_story_problems()]] - `calls` [EXTRACTED]
-- [[test_story_problems_flags_summary_hook()]] - `calls` [EXTRACTED]
-- [[test_story_problems_money_claim()]] - `calls` [EXTRACTED]
+- [[Path_12]] - `references` [EXTRACTED]
+- [[begin()]] - `calls` [EXTRACTED]
+- [[checkpoints.py]] - `contains` [EXTRACTED]
+- [[context()]] - `calls` [EXTRACTED]
+- [[json]] - `calls` [EXTRACTED]
+- [[pending()]] - `calls` [EXTRACTED]
+- [[pending_topics()]] - `calls` [EXTRACTED]
+- [[prune_work()]] - `calls` [EXTRACTED]
+- [[record_failure()]] - `calls` [EXTRACTED]
+- [[resume_runs()]] - `calls` [EXTRACTED]
+- [[unpack()]] - `calls` [EXTRACTED]
+- [[update()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_storypy
+#graphify/code #graphify/EXTRACTED #community/resume_runs

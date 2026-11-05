@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/media_library.py"
 type: "rationale"
-community: "media_command"
+community: "gpu.py"
 location: "L58"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/media_command
+  - community/gpupy
 ---
 
 # Copy into the library; never move/modify the owner's original. Sidecars also…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[import_media()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/media_command
+#graphify/rationale #graphify/EXTRACTED #community/gpupy

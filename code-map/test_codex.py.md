@@ -25,6 +25,7 @@ tags:
 - [[test_codex_cold_reader_and_quota_fallback_never_call_claude()]] - `contains` [EXTRACTED]
 - [[test_codex_failure_is_bounded()]] - `contains` [EXTRACTED]
 - [[test_codex_uses_subscription_stdin_and_read_only_images()]] - `contains` [EXTRACTED]
+- [[test_every_ai_gets_the_pipeline_preamble_once()]] - `contains` [EXTRACTED]
 - [[test_gemini_modes_choose_codex_and_keep_editor_choice()]] - `contains` [EXTRACTED]
 - [[traceback]] - `imports` [EXTRACTED]
 - [[unittest_mock]] - `imports_from` [EXTRACTED]

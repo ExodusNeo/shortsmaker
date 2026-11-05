@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/review.py"
 type: "code"
-community: "visual_review"
+community: "render"
 location: "L23"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/visual_review
+  - community/render
 ---
 
 # callout_hold()
@@ -17,4 +17,4 @@ tags:
 - [[pacing_check()]] - `calls` [EXTRACTED]
 - [[review.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/visual_review
+#graphify/code #graphify/EXTRACTED #community/render

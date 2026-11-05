@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/plan_rules.py"
 type: "rationale"
-community: "test_full_scenes.py"
+community: "re"
 location: "L345"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/test_full_scenespy
+  - community/re
 ---
 
 # True when `cand` is a solo portrait/headshot of `person_name` (so a scene that…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[is_person_portrait()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/test_full_scenespy
+#graphify/rationale #graphify/EXTRACTED #community/re

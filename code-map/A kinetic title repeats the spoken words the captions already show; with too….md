@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/short_render.py"
 type: "rationale"
-community: "visual_review"
+community: "render"
 location: "L176"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/visual_review
+  - community/render
 ---
 
 # A kinetic title repeats the spoken words the captions already show; with too…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[drop_unreadable_kinetic()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/visual_review
+#graphify/rationale #graphify/EXTRACTED #community/render

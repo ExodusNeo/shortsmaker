@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/media_menu.py"
 type: "code"
-community: "media_command"
+community: "audio_library.py"
 location: "L143"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/media_command
+  - community/audio_librarypy
 ---
 
 # media_command()
@@ -16,7 +16,7 @@ tags:
 - [[download_audio_choices()]] - `calls` [EXTRACTED]
 - [[import_audio_file()]] - `calls` [EXTRACTED]
 - [[import_media()]] - `calls` [EXTRACTED]
-- [[main()_5]] - `calls` [EXTRACTED]
+- [[main()_6]] - `calls` [EXTRACTED]
 - [[media_menu.py]] - `contains` [EXTRACTED]
 - [[preview_mix()]] - `calls` [EXTRACTED]
 - [[print_source_status()]] - `calls` [EXTRACTED]
@@ -27,4 +27,4 @@ tags:
 - [[track_start()]] - `calls` [EXTRACTED]
 - [[write_json()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/media_command
+#graphify/code #graphify/EXTRACTED #community/audio_librarypy

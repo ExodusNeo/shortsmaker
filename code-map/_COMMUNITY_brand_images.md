@@ -1,11 +1,11 @@
 ---
 type: community
-members: 15
+members: 12
 ---
 
 # brand_images
 
-**Members:** 15 nodes
+**Members:** 12 nodes
 
 ## Members
 - [[dot-__init__()_8]] - code - shortsmaker/extra_sources.py
@@ -19,9 +19,6 @@ members: 15
 - [[brand_images()]] - code - shortsmaker/extra_sources.py
 - [[brand_page()]] - code - shortsmaker/extra_sources.py
 - [[html]] - concept
-- [[print_source_status()]] - code - shortsmaker/media_menu.py
-- [[settings()]] - code - shortsmaker/media_library.py
-- [[source_enabled()]] - code - shortsmaker/media_library.py
 - [[source_status()]] - code - shortsmaker/media_library.py
 
 ## Live Query (requires Dataview plugin)
@@ -32,19 +29,17 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 12 edges to [[_COMMUNITY_extra_sources.py]]
-- 7 edges to [[_COMMUNITY_json]]
-- 3 edges to [[_COMMUNITY_re]]
-- 2 edges to [[_COMMUNITY_fetch]]
+- 9 edges to [[_COMMUNITY_extra_sources.py]]
+- 4 edges to [[_COMMUNITY_settings]]
 - 2 edges to [[_COMMUNITY_ffmpeg]]
-- 2 edges to [[_COMMUNITY_media_command]]
-- 1 edge to [[_COMMUNITY_gather_pool]]
-- 1 edge to [[_COMMUNITY_render]]
-- 1 edge to [[_COMMUNITY_audio_library.py]]
+- 2 edges to [[_COMMUNITY_gpu.py]]
+- 1 edge to [[_COMMUNITY_fetch]]
+- 1 edge to [[_COMMUNITY_re]]
+- 1 edge to [[_COMMUNITY_json]]
 
 ## Top bridge nodes
-- [[settings()]] - degree 10, connects to 5 communities
 - [[source_status()]] - degree 9, connects to 4 communities
-- [[source_enabled()]] - degree 8, connects to 4 communities
-- [[print_source_status()]] - degree 5, connects to 3 communities
-- [[brand_images()]] - degree 10, connects to 2 communities
+- [[brand_images()]] - degree 10, connects to 3 communities
+- [[brand_films()]] - degree 8, connects to 3 communities
+- [[brand_page()]] - degree 6, connects to 2 communities
+- [[BrandImages]] - degree 6, connects to 1 community

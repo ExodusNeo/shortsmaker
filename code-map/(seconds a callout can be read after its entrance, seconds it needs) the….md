@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/review.py"
 type: "rationale"
-community: "visual_review"
+community: "render"
 location: "L24"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/visual_review
+  - community/render
 ---
 
 # (seconds a callout can be read after its entrance, seconds it needs): the…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[callout_hold()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/visual_review
+#graphify/rationale #graphify/EXTRACTED #community/render

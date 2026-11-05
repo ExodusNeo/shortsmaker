@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/footage.py"
 type: "code"
-community: "fetch"
+community: "on_topic"
 location: "L54"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/fetch
+  - community/on_topic
 ---
 
 # pixabay_films()
@@ -21,4 +21,4 @@ tags:
 - [[test_pixabay_keeps_only_on_topic_videos()]] - `calls` [EXTRACTED]
 - [[time]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/fetch
+#graphify/code #graphify/EXTRACTED #community/on_topic

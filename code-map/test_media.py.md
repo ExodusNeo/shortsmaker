@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_media.py"
 type: "code"
-community: "gpu.py"
+community: "picture_pool.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/gpupy
+  - community/picture_poolpy
 ---
 
 # test_media.py
@@ -39,4 +39,4 @@ tags:
 - [[unittest_mock]] - `imports_from` [EXTRACTED]
 - [[urllib_error]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/gpupy
+#graphify/code #graphify/EXTRACTED #community/picture_poolpy

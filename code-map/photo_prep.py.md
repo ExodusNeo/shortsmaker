@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/photo_prep.py"
 type: "code"
-community: "pathlib"
+community: "picture_pool.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/pathlib
+  - community/picture_poolpy
 ---
 
 # photo_prep.py
@@ -31,4 +31,4 @@ tags:
 - [[trim_borders()]] - `contains` [EXTRACTED]
 - [[vertical_image()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/pathlib
+#graphify/code #graphify/EXTRACTED #community/picture_poolpy

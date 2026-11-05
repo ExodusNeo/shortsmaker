@@ -1,17 +1,23 @@
 ---
-source_file: "shortsmaker/audio_mix.py"
+source_file: "shortsmaker/voice_cache.py"
 type: "code"
-community: "math"
-location: "L196"
+community: "gpu.py"
+location: "L38"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/math
+  - community/gpupy
 ---
 
 # save()
 
 ## Connections
-- [[make_sfx()]] - `contains` [EXTRACTED]
+- [[Path_6]] - `references` [EXTRACTED]
+- [[hashlib]] - `calls` [EXTRACTED]
+- [[render()_1]] - `calls` [EXTRACTED]
+- [[shutil]] - `calls` [EXTRACTED]
+- [[signature()]] - `calls` [EXTRACTED]
+- [[voice_cache.py]] - `contains` [EXTRACTED]
+- [[write_json()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/math
+#graphify/code #graphify/EXTRACTED #community/gpupy

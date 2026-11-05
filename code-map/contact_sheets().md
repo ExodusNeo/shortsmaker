@@ -1,19 +1,19 @@
 ---
 source_file: "shortsmaker/picture_pool.py"
 type: "code"
-community: "load_pool"
+community: "picture_pool.py"
 location: "L71"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/load_pool
+  - community/picture_poolpy
 ---
 
 # contact_sheets()
 
 ## Connections
 - [[Numbered thumbnail grids (6x4) so Claude can look at every candidate at once.]] - `rationale_for` [EXTRACTED]
-- [[Path_12]] - `references` [EXTRACTED]
+- [[Path_11]] - `references` [EXTRACTED]
 - [[catalog_pool()]] - `calls` [EXTRACTED]
 - [[choose_images()]] - `calls` [EXTRACTED]
 - [[clean_photo()]] - `calls` [EXTRACTED]
@@ -21,4 +21,4 @@ tags:
 - [[picture_pool.py]] - `contains` [EXTRACTED]
 - [[vertical_image()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/load_pool
+#graphify/code #graphify/EXTRACTED #community/picture_poolpy

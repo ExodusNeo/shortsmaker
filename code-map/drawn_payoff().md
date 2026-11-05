@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[On `opener animated` channels, a reveal scene (motion.is_payoff) planned as a…]] - `rationale_for` [EXTRACTED]
-- [[Path_17]] - `references` [EXTRACTED]
+- [[Path_16]] - `references` [EXTRACTED]
 - [[ffmpeg()]] - `calls` [EXTRACTED]
 - [[is_payoff()]] - `calls` [EXTRACTED]
 - [[make_opener()]] - `calls` [EXTRACTED]

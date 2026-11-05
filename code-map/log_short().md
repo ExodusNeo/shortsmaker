@@ -1,19 +1,19 @@
 ---
 source_file: "shortsmaker/logbook.py"
 type: "code"
-community: "test_story.py"
+community: "first_sentence"
 location: "L25"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_storypy
+  - community/first_sentence
 ---
 
 # log_short()
 
 ## Connections
 - [[Add a finished Short to this channel's logbook, with empty lines for its…]] - `rationale_for` [EXTRACTED]
-- [[Path_14]] - `references` [EXTRACTED]
+- [[Path_21]] - `references` [EXTRACTED]
 - [[clock()_1]] - `calls` [EXTRACTED]
 - [[duration()]] - `calls` [EXTRACTED]
 - [[finish_short()]] - `calls` [EXTRACTED]
@@ -21,4 +21,4 @@ tags:
 - [[logbook.py]] - `contains` [EXTRACTED]
 - [[test_logbook_hook_line_is_the_whole_first_sentence()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_storypy
+#graphify/code #graphify/EXTRACTED #community/first_sentence

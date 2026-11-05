@@ -1,21 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "main"
+community: "picture_pool.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/main
+  - community/picture_poolpy
 ---
 
 # Path
 
 ## Connections
-- [[begin()]] - `references` [EXTRACTED]
-- [[context()]] - `references` [EXTRACTED]
-- [[pending()]] - `references` [EXTRACTED]
-- [[read()_2]] - `references` [EXTRACTED]
-- [[save_context()]] - `references` [EXTRACTED]
-- [[update()]] - `references` [EXTRACTED]
+- [[mark_details()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/main
+#graphify/code #graphify/EXTRACTED #community/picture_poolpy

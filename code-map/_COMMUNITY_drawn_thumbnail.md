@@ -31,16 +31,15 @@ SORT file.name ASC
 ## Connections to other communities
 - 6 edges to [[_COMMUNITY_pathlib]]
 - 3 edges to [[_COMMUNITY_test_blender_plan.py]]
-- 2 edges to [[_COMMUNITY_load_pool]]
+- 2 edges to [[_COMMUNITY_prepare_topic]]
 - 2 edges to [[_COMMUNITY_test_blender_render.py]]
+- 2 edges to [[_COMMUNITY_render]]
 - 1 edge to [[_COMMUNITY_get_image]]
-- 1 edge to [[_COMMUNITY_gpu.py]]
+- 1 edge to [[_COMMUNITY_picture_pool.py]]
 - 1 edge to [[_COMMUNITY_re]]
-- 1 edge to [[_COMMUNITY_finish_render]]
-- 1 edge to [[_COMMUNITY_render]]
 
 ## Top bridge nodes
-- [[drawn_thumbnail()]] - degree 13, connects to 8 communities
+- [[drawn_thumbnail()]] - degree 13, connects to 7 communities
 - [[drawn_short()]] - degree 6, connects to 2 communities
 - [[thumbnail_order()]] - degree 5, connects to 2 communities
 - [[test_no_photo_uses_a_drawing_and_says_so()]] - degree 4, connects to 2 communities

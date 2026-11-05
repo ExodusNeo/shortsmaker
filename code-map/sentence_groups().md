@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/gpu.py"
 type: "code"
-community: "test_story.py"
+community: "first_sentence"
 location: "L139"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_storypy
+  - community/first_sentence
 ---
 
 # sentence_groups()
@@ -19,4 +19,4 @@ tags:
 - [[test_sentence_ends_include_curly_quotes_and_ellipsis()]] - `calls` [EXTRACTED]
 - [[test_sentences_running_across_cuts_are_one_take()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_storypy
+#graphify/code #graphify/EXTRACTED #community/first_sentence

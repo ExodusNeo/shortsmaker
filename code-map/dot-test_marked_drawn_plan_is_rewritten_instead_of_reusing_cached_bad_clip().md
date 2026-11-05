@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[OpeningRulesTests]] - `method` [EXTRACTED]
 - [[bobby()]] - `calls` [EXTRACTED]
-- [[fake_ai()_2]] - `indirect_call` [INFERRED]
+- [[fake_ai()_1]] - `indirect_call` [INFERRED]
 - [[fake_node()]] - `indirect_call` [INFERRED]
 
 #graphify/code #graphify/EXTRACTED #community/OpeningRulesTests

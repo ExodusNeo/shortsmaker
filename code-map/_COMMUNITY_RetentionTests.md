@@ -29,7 +29,7 @@ members: 22
 - [[dot-test_saved_details_reach_ai_report_and_future_planning()]] - code - tests/test_retention.py
 - [[dot-test_unreadable_graph_never_uses_claimed_drops()]] - code - tests/test_retention.py
 - [[RetentionTests]] - code - tests/test_retention.py
-- [[read()_1]] - code - tests/test_retention.py
+- [[read()_2]] - code - tests/test_retention.py
 
 ## Live Query (requires Dataview plugin)
 
@@ -39,7 +39,7 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 1 edge to [[_COMMUNITY_pathlib]]
+- 1 edge to [[_COMMUNITY_json]]
 
 ## Top bridge nodes
 - [[RetentionTests]] - degree 21, connects to 1 community

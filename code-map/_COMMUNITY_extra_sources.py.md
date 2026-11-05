@@ -1,11 +1,11 @@
 ---
 type: community
-members: 13
+members: 12
 ---
 
 # extra_sources.py
 
-**Members:** 13 nodes
+**Members:** 12 nodes
 
 ## Members
 - [[Budgeted queries keep the expanded pool usable on a home PC.]] - rationale - shortsmaker/extra_sources.py
@@ -17,7 +17,6 @@ members: 13
 - [[html_parser]] - concept
 - [[loc_images()]] - code - shortsmaker/extra_sources.py
 - [[optional_key()]] - code - shortsmaker/media_library.py
-- [[pixabay_images()]] - code - shortsmaker/extra_sources.py
 - [[smithsonian_images()]] - code - shortsmaker/extra_sources.py
 - [[source_json()]] - code - shortsmaker/extra_sources.py
 - [[wellcome_images()]] - code - shortsmaker/extra_sources.py
@@ -30,19 +29,23 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 12 edges to [[_COMMUNITY_brand_images]]
-- 7 edges to [[_COMMUNITY_json]]
-- 5 edges to [[_COMMUNITY_re]]
-- 4 edges to [[_COMMUNITY_gpu.py]]
-- 3 edges to [[_COMMUNITY_pathlib]]
-- 2 edges to [[_COMMUNITY_fetch]]
+- 9 edges to [[_COMMUNITY_brand_images]]
+- 9 edges to [[_COMMUNITY_gpu.py]]
+- 5 edges to [[_COMMUNITY_on_topic]]
+- 4 edges to [[_COMMUNITY_picture_pool.py]]
+- 3 edges to [[_COMMUNITY_settings]]
+- 2 edges to [[_COMMUNITY_json]]
+- 2 edges to [[_COMMUNITY_pathlib]]
 - 1 edge to [[_COMMUNITY_gather_pool]]
+- 1 edge to [[_COMMUNITY_fetch]]
 - 1 edge to [[_COMMUNITY_ffmpeg]]
 - 1 edge to [[_COMMUNITY_test_pictures_first.py]]
+- 1 edge to [[_COMMUNITY_re]]
+- 1 edge to [[_COMMUNITY_test_topic_ideas.py]]
 
 ## Top bridge nodes
-- [[extra_sources.py]] - degree 30, connects to 6 communities
-- [[source_json()]] - degree 13, connects to 5 communities
-- [[collection_images()]] - degree 11, connects to 3 communities
-- [[optional_key()]] - degree 5, connects to 2 communities
-- [[candidate()]] - degree 7, connects to 1 community
+- [[extra_sources.py]] - degree 30, connects to 9 communities
+- [[source_json()]] - degree 13, connects to 7 communities
+- [[collection_images()]] - degree 11, connects to 5 communities
+- [[optional_key()]] - degree 5, connects to 3 communities
+- [[candidate()]] - degree 7, connects to 2 communities

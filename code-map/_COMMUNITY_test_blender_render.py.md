@@ -21,7 +21,7 @@ members: 25
 - [[peaks()]] - code - shortsmaker/blender_render.py
 - [[render_clips()]] - code - shortsmaker/blender_render.py
 - [[scene_frames()]] - code - shortsmaker/blender_render.py
-- [[short()_2]] - code - tests/test_blender_render.py
+- [[short()_1]] - code - tests/test_blender_render.py
 - [[test_blender_render.py]] - code - tests/test_blender_render.py
 - [[test_changed_blender_code_redraws()]] - code - tests/test_blender_render.py
 - [[test_crash_retries_then_raises()]] - code - tests/test_blender_render.py
@@ -42,15 +42,15 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 12 edges to [[_COMMUNITY_pathlib]]
+- 11 edges to [[_COMMUNITY_pathlib]]
 - 3 edges to [[_COMMUNITY_ffmpeg]]
 - 3 edges to [[_COMMUNITY_json]]
 - 2 edges to [[_COMMUNITY_drawn_thumbnail]]
 - 2 edges to [[_COMMUNITY_render]]
+- 2 edges to [[_COMMUNITY_gpu.py]]
 - 2 edges to [[_COMMUNITY_test_blender_plan.py]]
 - 1 edge to [[_COMMUNITY_BlenderFailed]]
 - 1 edge to [[_COMMUNITY_full_cues]]
-- 1 edge to [[_COMMUNITY_gpu.py]]
 
 ## Top bridge nodes
 - [[render_clips()]] - degree 18, connects to 5 communities

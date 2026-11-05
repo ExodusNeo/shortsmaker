@@ -1,17 +1,17 @@
 ---
-source_file: "tests/test_ai_modes.py"
+source_file: "tests/test_full_scenes.py"
 type: "code"
-community: "main"
-location: "L48"
+community: "test_rules.py"
+location: "L448"
 tags:
   - graphify/code
-  - graphify/INFERRED
-  - community/main
+  - graphify/EXTRACTED
+  - community/test_rulespy
 ---
 
 # ask()
 
 ## Connections
-- [[test_all_modes_route_writer_editor_and_reader()]] - `indirect_call` [INFERRED]
+- [[test_review_uses_unused_pool_pictures_before_painting()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/main
+#graphify/code #graphify/EXTRACTED #community/test_rulespy

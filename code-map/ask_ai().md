@@ -2,7 +2,7 @@
 source_file: "shortsmaker/llm.py"
 type: "code"
 community: "ask_ai"
-location: "L133"
+location: "L139"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -48,6 +48,7 @@ tags:
 - [[start_picture_problems()]] - `calls` [EXTRACTED]
 - [[test_argon_out_of_quota_switches_to_flash()]] - `calls` [EXTRACTED]
 - [[test_claude_pinned_to_opus_high()]] - `calls` [EXTRACTED]
+- [[test_every_ai_gets_the_pipeline_preamble_once()]] - `calls` [EXTRACTED]
 - [[test_every_mode_can_continue_through_two_exhausted_ais()]] - `calls` [EXTRACTED]
 - [[test_exhausted_accounts_are_not_retried_when_all_three_are_empty()]] - `calls` [EXTRACTED]
 - [[test_gemini_reviews_get_the_main_model_bulk_pictures_flash()]] - `calls` [EXTRACTED]
@@ -58,7 +59,7 @@ tags:
 - [[test_solo_ask_ai_hands_over_when_out_of_credits()]] - `calls` [EXTRACTED]
 - [[test_solo_ask_ai_never_falls_back()]] - `calls` [EXTRACTED]
 - [[visual_review()]] - `calls` [EXTRACTED]
-- [[write()_1]] - `calls` [EXTRACTED]
+- [[write()]] - `calls` [EXTRACTED]
 - [[write_scripts()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/ask_ai

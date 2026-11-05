@@ -25,15 +25,14 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 4 edges to [[_COMMUNITY_audio_mix.py]]
-- 1 edge to [[_COMMUNITY_test_story.py]]
+- 5 edges to [[_COMMUNITY_pathlib]]
+- 1 edge to [[_COMMUNITY_first_sentence]]
 - 1 edge to [[_COMMUNITY_render_remotion]]
 - 1 edge to [[_COMMUNITY_render]]
 - 1 edge to [[_COMMUNITY_speak]]
-- 1 edge to [[_COMMUNITY_pathlib]]
 
 ## Top bridge nodes
 - [[captions()]] - degree 8, connects to 3 communities
 - [[caption_lines()]] - degree 5, connects to 3 communities
-- [[ass_colour()]] - degree 5, connects to 2 communities
+- [[ass_colour()]] - degree 5, connects to 1 community
 - [[ass_time()]] - degree 2, connects to 1 community

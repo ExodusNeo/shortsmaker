@@ -31,7 +31,7 @@ members: 30
 - [[drawCover()]] - code - remotion/src/style/kit.ts
 - [[hatch()_1]] - code - remotion/src/style/looks/Engraving.tsx
 - [[luminance()]] - code - remotion/src/style/kit.ts
-- [[noise()_1]] - code - remotion/src/style/kit.ts
+- [[noise()]] - code - remotion/src/style/kit.ts
 - [[remotion_src_style_kit_img]] - concept
 - [[rgb()]] - code - remotion/src/style/looks/Halftone.tsx
 - [[rgb()_1]] - code - remotion/src/style/looks/Riso.tsx

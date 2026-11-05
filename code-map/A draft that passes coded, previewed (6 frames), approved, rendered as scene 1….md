@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_drawn_opener.py"
 type: "rationale"
-community: "drawn_opener.py"
+community: "short"
 location: "L62"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/drawn_openerpy
+  - community/short
 ---
 
 # A draft that passes: coded, previewed (6 frames), approved, rendered as scene 1…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[test_drawn_opener_renders_and_is_reused()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/drawn_openerpy
+#graphify/rationale #graphify/EXTRACTED #community/short

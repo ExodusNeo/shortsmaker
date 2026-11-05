@@ -28,8 +28,8 @@ SORT file.name ASC
 - 1 edge to [[_COMMUNITY_write_scripts]]
 - 1 edge to [[_COMMUNITY_ask_ai]]
 - 1 edge to [[_COMMUNITY_json]]
-- 1 edge to [[_COMMUNITY_main_1]]
-- 1 edge to [[_COMMUNITY_re]]
+- 1 edge to [[_COMMUNITY_pick_channel]]
+- 1 edge to [[_COMMUNITY_gpu.py]]
 
 ## Top bridge nodes
 - [[trend_research()]] - degree 9, connects to 5 communities

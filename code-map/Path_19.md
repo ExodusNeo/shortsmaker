@@ -1,16 +1,20 @@
 ---
 source_file: ""
 type: "code"
-community: "gpu.py"
+community: "picture_pool.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/gpupy
+  - community/picture_poolpy
 ---
 
 # Path
 
 ## Connections
-- [[mark_details()]] - `references` [EXTRACTED]
+- [[dot-__init__()_1]] - `references` [EXTRACTED]
+- [[fills_frame()]] - `references` [EXTRACTED]
+- [[frame_maker()]] - `references` [EXTRACTED]
+- [[graphic_low()]] - `references` [EXTRACTED]
+- [[thumbnail()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/gpupy
+#graphify/code #graphify/EXTRACTED #community/picture_poolpy

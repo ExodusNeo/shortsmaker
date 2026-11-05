@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "re"
+community: "picture_pool.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/re
+  - community/picture_poolpy
 ---
 
 # CompletedProcess
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[film_ffmpeg()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/re
+#graphify/code #graphify/EXTRACTED #community/picture_poolpy

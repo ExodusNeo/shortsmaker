@@ -12,7 +12,7 @@ tags:
 # test_story_problems_flags_summary_hook()
 
 ## Connections
-- [[read()]] - `calls` [EXTRACTED]
+- [[read()_1]] - `calls` [EXTRACTED]
 - [[story_problems()]] - `calls` [EXTRACTED]
 - [[test_story.py]] - `contains` [EXTRACTED]
 

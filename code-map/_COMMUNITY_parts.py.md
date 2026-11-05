@@ -51,7 +51,7 @@ SORT file.name ASC
 - 8 edges to [[_COMMUNITY_look.py]]
 - 4 edges to [[_COMMUNITY_build_scene.py]]
 - 3 edges to [[_COMMUNITY_main]]
-- 2 edges to [[_COMMUNITY_math]]
+- 2 edges to [[_COMMUNITY_audio_library.py]]
 
 ## Top bridge nodes
 - [[parts.py]] - degree 30, connects to 4 communities

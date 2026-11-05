@@ -1,23 +1,31 @@
 ---
 type: community
-members: 50
+members: 62
 ---
 
 # test_rules.py
 
-**Members:** 50 nodes
+**Members:** 62 nodes
 
 ## Members
 - [[(sections by canonical heading, settings) of a rules file; `label` names the…]] - rationale - shortsmaker/rules.py
 - [[A valid rules file; override={Directing None} leaves that heading out, a…]] - rationale - tests/test_rules.py
 - [[Every prompt strange-history's writer, editor, director, fact check, picture…]] - rationale - tests/test_rules.py
 - [[Exception]] - code
+- [[Mike's newsstand a repaint from the unchanged prompt painted the identical…]] - rationale - tests/test_full_scenes.py
 - [[Read and check channelsname.rules.md into session.RULES …]] - rationale - shortsmaker/rules.py
+- [[Scenes after the first with no picture, no graphic and no planned painting get…]] - rationale - shortsmaker/short_render.py
+- [[Scenes being repainted (scene index - what was wrong) get a better ai_image,…]] - rationale - shortsmaker/review.py
 - [[StopPicker]] - code - tests/test_rules.py
 - [[Tests for per-channel rules files (channelsname.rules.md, 2026-10-22). The…]] - rationale - tests/test_rules.py
+- [[Togo vs Balto 4 real pictures the review rejected became paintings while ~20…]] - rationale - tests/test_full_scenes.py
 - [[Usable real picturesclips a topic needs, else a backup topic replaces it.]] - rationale - shortsmaker/rules.py
-- [[ask()_1]] - code - tests/test_rules.py
-- [[ask()_2]] - code - tests/test_rules.py
+- [[ask()_2]] - code - tests/test_full_scenes.py
+- [[ask()_3]] - code - tests/test_full_scenes.py
+- [[ask()_4]] - code - tests/test_full_scenes.py
+- [[ask()_5]] - code - tests/test_full_scenes.py
+- [[ask()_6]] - code - tests/test_rules.py
+- [[ask()_7]] - code - tests/test_rules.py
 - [[capture_prompts()]] - code - tests/test_rules.py
 - [[draft_reply()]] - code - tests/test_rules.py
 - [[draft_rules in a temp channels folder holding strange-history's rules; returns…]] - rationale - tests/test_rules.py
@@ -25,10 +33,11 @@ members: 50
 - [[make()]] - code - tests/test_rules.py
 - [[min_real_pictures()]] - code - shortsmaker/rules.py
 - [[parse_rules()]] - code - shortsmaker/rules.py
+- [[plan_gap_paintings()]] - code - shortsmaker/short_render.py
 - [[prepare()]] - code - tests/test_rules.py
+- [[rewrite_paint_prompts()]] - code - shortsmaker/review.py
 - [[run_draft()]] - code - tests/test_rules.py
 - [[stop_text()]] - code - tests/test_rules.py
-- [[test_a_stopped_run_keeps_the_default_channel()]] - code - tests/test_rules.py
 - [[test_bad_min_pictures_stops()]] - code - tests/test_rules.py
 - [[test_blender_needs_a_build_plan_section()]] - code - tests/test_rules.py
 - [[test_bom_and_crlf_load_the_same()]] - code - tests/test_rules.py
@@ -42,10 +51,10 @@ members: 50
 - [[test_duplicate_heading_stops()]] - code - tests/test_rules.py
 - [[test_empty_heading_stops()]] - code - tests/test_rules.py
 - [[test_equals_sign_works_like_a_colon()]] - code - tests/test_rules.py
-- [[test_fix_checks_rules_before_asking_for_a_scene()]] - code - tests/test_rules.py
 - [[test_heading_case_and_spaces()]] - code - tests/test_rules.py
 - [[test_level3_heading_stays_inside()]] - code - tests/test_rules.py
 - [[test_load_rules_sets_session()]] - code - tests/test_rules.py
+- [[test_look_check_fixes_code()]] - code - tests/test_full_scenes.py
 - [[test_loop_setting_is_checked()]] - code - tests/test_rules.py
 - [[test_min_pictures_from_settings()]] - code - tests/test_rules.py
 - [[test_missing_heading_stops()]] - code - tests/test_rules.py
@@ -54,7 +63,10 @@ members: 50
 - [[test_opening_picture_needs_its_fields()]] - code - tests/test_rules.py
 - [[test_parses_sections_and_settings()]] - code - tests/test_rules.py
 - [[test_photo_channels_dont_need_a_build_plan()]] - code - tests/test_rules.py
+- [[test_review_uses_unused_pool_pictures_before_painting()]] - code - tests/test_full_scenes.py
+- [[test_rewrite_paint_prompts()]] - code - tests/test_full_scenes.py
 - [[test_rules.py]] - code - tests/test_rules.py
+- [[test_scene_without_picture_or_prompt_gets_painted_not_reused()]] - code - tests/test_pictures_first.py
 - [[test_strange_history_prompts_unchanged()]] - code - tests/test_rules.py
 - [[test_strips_tag_comments()]] - code - tests/test_rules.py
 - [[test_unknown_visuals_stop()]] - code - tests/test_rules.py
@@ -67,21 +79,30 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 20 edges to [[_COMMUNITY_pathlib]]
-- 6 edges to [[_COMMUNITY_main_1]]
-- 3 edges to [[_COMMUNITY_write_scripts]]
-- 2 edges to [[_COMMUNITY_re]]
-- 2 edges to [[_COMMUNITY_json]]
+- 21 edges to [[_COMMUNITY_pathlib]]
+- 6 edges to [[_COMMUNITY_re]]
+- 4 edges to [[_COMMUNITY_json]]
+- 4 edges to [[_COMMUNITY_pick_channel]]
+- 2 edges to [[_COMMUNITY_fix_short]]
+- 2 edges to [[_COMMUNITY_apply_review_fixes]]
+- 2 edges to [[_COMMUNITY_prepare_topic]]
+- 2 edges to [[_COMMUNITY_test_pictures_first.py]]
+- 1 edge to [[_COMMUNITY_paint_opener_start]]
+- 1 edge to [[_COMMUNITY_ask_ai]]
 - 1 edge to [[_COMMUNITY_test_story.py]]
+- 1 edge to [[_COMMUNITY_render]]
+- 1 edge to [[_COMMUNITY_owner]]
+- 1 edge to [[_COMMUNITY_code_custom_scenes]]
 - 1 edge to [[_COMMUNITY_test_first_second.py]]
-- 1 edge to [[_COMMUNITY_apply_review_fixes]]
 - 1 edge to [[_COMMUNITY_choose_images]]
-- 1 edge to [[_COMMUNITY_test_pictures_first.py]]
-- 1 edge to [[_COMMUNITY_retention.py]]
+- 1 edge to [[_COMMUNITY_write_scripts]]
+- 1 edge to [[_COMMUNITY_main_1]]
+- 1 edge to [[_COMMUNITY_picture_pool.py]]
+- 1 edge to [[_COMMUNITY_test_topic_ideas.py]]
 
 ## Top bridge nodes
-- [[test_rules.py]] - degree 58, connects to 5 communities
-- [[capture_prompts()]] - degree 11, connects to 5 communities
+- [[test_rules.py]] - degree 58, connects to 7 communities
+- [[rewrite_paint_prompts()]] - degree 10, connects to 6 communities
+- [[capture_prompts()]] - degree 11, connects to 4 communities
 - [[parse_rules()]] - degree 17, connects to 3 communities
-- [[load_rules()]] - degree 6, connects to 2 communities
-- [[min_real_pictures()]] - degree 4, connects to 2 communities
+- [[plan_gap_paintings()]] - degree 6, connects to 3 communities

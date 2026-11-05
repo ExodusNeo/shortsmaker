@@ -1,18 +1,18 @@
 ---
 source_file: "shortsmaker/footage.py"
 type: "code"
-community: "test_h3_handoff.py"
+community: "ffmpeg"
 location: "L302"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_h3_handoffpy
+  - community/ffmpeg
 ---
 
 # shot_span()
 
 ## Connections
-- [[Path]] - `references` [EXTRACTED]
+- [[Path_28]] - `references` [EXTRACTED]
 - [[Start and end of the camera shot containing time `at` (newsreels cut to title…]] - `rationale_for` [EXTRACTED]
 - [[duration()]] - `calls` [EXTRACTED]
 - [[footage.py]] - `contains` [EXTRACTED]
@@ -20,4 +20,4 @@ tags:
 - [[re]] - `calls` [EXTRACTED]
 - [[subprocess]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_h3_handoffpy
+#graphify/code #graphify/EXTRACTED #community/ffmpeg

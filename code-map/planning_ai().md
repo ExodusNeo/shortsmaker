@@ -16,7 +16,7 @@ tags:
 - [[Canned replies for every planning step of write_scripts().]] - `rationale_for` [EXTRACTED]
 - [[ai()]] - `calls` [EXTRACTED]
 - [[ai()_1]] - `calls` [EXTRACTED]
-- [[reply()]] - `calls` [EXTRACTED]
+- [[reply()_1]] - `calls` [EXTRACTED]
 - [[test_pictures_first.py]] - `contains` [EXTRACTED]
 - [[test_topic_a_proven_channel_just_posted_is_dropped()]] - `calls` [EXTRACTED]
 - [[test_topic_ideas.py]] - `imports` [EXTRACTED]

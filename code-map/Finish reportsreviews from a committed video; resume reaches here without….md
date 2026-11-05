@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/short_render.py"
 type: "rationale"
-community: "finish_render"
+community: "render"
 location: "L541"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/finish_render
+  - community/render
 ---
 
 # Finish reports/reviews from a committed video; resume reaches here without…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[finish_render()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/finish_render
+#graphify/rationale #graphify/EXTRACTED #community/render

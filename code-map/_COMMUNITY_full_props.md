@@ -24,14 +24,14 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 4 edges to [[_COMMUNITY_test_full_scenes.py]]
+- 4 edges to [[_COMMUNITY_re]]
+- 1 edge to [[_COMMUNITY_sfx_events]]
 - 1 edge to [[_COMMUNITY_full_cues]]
 - 1 edge to [[_COMMUNITY_render_remotion]]
-- 1 edge to [[_COMMUNITY_json]]
+- 1 edge to [[_COMMUNITY_gpu.py]]
 - 1 edge to [[_COMMUNITY_code_custom_scenes]]
 - 1 edge to [[_COMMUNITY_pathlib]]
-- 1 edge to [[_COMMUNITY_finish_render]]
-- 1 edge to [[_COMMUNITY_get_image]]
+- 1 edge to [[_COMMUNITY_paint_opener_start]]
 
 ## Top bridge nodes
 - [[full_props()]] - degree 9, connects to 4 communities

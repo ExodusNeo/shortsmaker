@@ -1,18 +1,18 @@
 ---
 source_file: "shortsmaker/picture_pool.py"
 type: "code"
-community: "load_pool"
+community: "prepare_topic"
 location: "L224"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/load_pool
+  - community/prepare_topic
 ---
 
 # preflight_pictures()
 
 ## Connections
-- [[Path_12]] - `references` [EXTRACTED]
+- [[Path_11]] - `references` [EXTRACTED]
 - [[Verifydownload usable originals while the writer can still avoid unavailable…]] - `rationale_for` [EXTRACTED]
 - [[is_usable()]] - `calls` [EXTRACTED]
 - [[picture_pool.py]] - `contains` [EXTRACTED]
@@ -20,4 +20,4 @@ tags:
 - [[verify()]] - `indirect_call` [INFERRED]
 - [[write_json()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/load_pool
+#graphify/code #graphify/EXTRACTED #community/prepare_topic

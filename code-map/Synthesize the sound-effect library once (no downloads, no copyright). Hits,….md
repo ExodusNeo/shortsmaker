@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/audio_mix.py"
 type: "rationale"
-community: "math"
+community: "render"
 location: "L191"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/math
+  - community/render
 ---
 
 # Synthesize the sound-effect library once (no downloads, no copyright). Hits,…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[make_sfx()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/math
+#graphify/rationale #graphify/EXTRACTED #community/render

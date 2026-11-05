@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_render_resume.py"
 type: "code"
-community: "drawn_opener.py"
+community: "review"
 location: "L58"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/drawn_openerpy
+  - community/review
 ---
 
 # voice()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[dot-render_fixture()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/INFERRED #community/drawn_openerpy
+#graphify/code #graphify/INFERRED #community/review

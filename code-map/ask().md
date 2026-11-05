@@ -1,17 +1,17 @@
 ---
-source_file: "tests/test_h3_handoff.py"
+source_file: "tests/test_ai_modes.py"
 type: "code"
-community: "test_h3_handoff.py"
-location: "L24"
+community: "test_every_mode_can_continue_through_two_exhausted_ais"
+location: "L48"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/test_h3_handoffpy
+  - community/test_every_mode_can_continue_through_two_exhausted_ais
 ---
 
 # ask()
 
 ## Connections
-- [[fake_ai()]] - `indirect_call` [INFERRED]
+- [[test_all_modes_route_writer_editor_and_reader()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/INFERRED #community/test_h3_handoffpy
+#graphify/code #graphify/INFERRED #community/test_every_mode_can_continue_through_two_exhausted_ais

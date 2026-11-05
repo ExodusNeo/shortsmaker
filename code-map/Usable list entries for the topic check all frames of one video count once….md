@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/picture_pool.py"
 type: "rationale"
-community: "load_pool"
+community: "prepare_topic"
 location: "L351"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/load_pool
+  - community/prepare_topic
 ---
 
 # Usable list entries for the topic check: all frames of one video count once…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[usable()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/load_pool
+#graphify/rationale #graphify/EXTRACTED #community/prepare_topic

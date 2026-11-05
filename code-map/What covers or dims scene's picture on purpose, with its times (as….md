@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/review.py"
 type: "rationale"
-community: "visual_review"
+community: "test_first_second.py"
 location: "L119"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/visual_review
+  - community/test_first_secondpy
 ---
 
 # What covers or dims scene's picture on purpose, with its times (as…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[overlay_notes()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/visual_review
+#graphify/rationale #graphify/EXTRACTED #community/test_first_secondpy

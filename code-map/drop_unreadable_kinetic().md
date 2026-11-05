@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/short_render.py"
 type: "code"
-community: "visual_review"
+community: "render"
 location: "L175"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/visual_review
+  - community/render
 ---
 
 # drop_unreadable_kinetic()
@@ -17,4 +17,4 @@ tags:
 - [[render()_1]] - `calls` [EXTRACTED]
 - [[short_render.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/visual_review
+#graphify/code #graphify/EXTRACTED #community/render

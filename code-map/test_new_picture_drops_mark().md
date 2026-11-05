@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_full_scenes.py"
 type: "code"
-community: "main"
+community: "apply_review_fixes"
 location: "L658"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/main
+  - community/apply_review_fixes
 ---
 
 # test_new_picture_drops_mark()
@@ -17,4 +17,4 @@ tags:
 - [[test_full_scenes.py]] - `contains` [EXTRACTED]
 - [[use_picture_from()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/main
+#graphify/code #graphify/EXTRACTED #community/apply_review_fixes

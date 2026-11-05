@@ -13,6 +13,6 @@ tags:
 
 ## Connections
 - [[fake_ai]] - `method` [EXTRACTED]
-- [[reply()]] - `calls` [EXTRACTED]
+- [[reply()_1]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/write_scripts

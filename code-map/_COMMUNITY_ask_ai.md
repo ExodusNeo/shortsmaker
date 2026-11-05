@@ -1,11 +1,11 @@
 ---
 type: community
-members: 22
+members: 24
 ---
 
 # ask_ai
 
-**Members:** 22 nodes
+**Members:** 24 nodes
 
 ## Members
 - [[Gemini 4 Argon once the owner's account has it (owner's wish), else Gemini 3.8…]] - rationale - shortsmaker/llm.py
@@ -13,12 +13,14 @@ members: 22
 - [[Tests for the shortsmaker package wiring (one owner per setting, fakes reach…]] - rationale - tests/test_package.py
 - [[__init__()]] - code - tests/test_full_scenes.py
 - [[ask_ai()]] - code - shortsmaker/llm.py
+- [[claude()_1]] - code - tests/test_codex.py
 - [[fake_run()_1]] - code - tests/test_package.py
 - [[fake_run()_2]] - code - tests/test_package.py
 - [[gemini_model()]] - code - shortsmaker/llm.py
 - [[test_argon_out_of_quota_switches_to_flash()]] - code - tests/test_package.py
 - [[test_claude_pinned_to_opus_high()]] - code - tests/test_package.py
 - [[test_entry_point()]] - code - tests/test_package.py
+- [[test_every_ai_gets_the_pipeline_preamble_once()]] - code - tests/test_codex.py
 - [[test_ffmpeg_on_path()]] - code - tests/test_package.py
 - [[test_gemini_reviews_get_the_main_model_bulk_pictures_flash()]] - code - tests/test_package.py
 - [[test_gemini_timeout_switches_to_flash()]] - code - tests/test_package.py
@@ -39,35 +41,38 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 16 edges to [[_COMMUNITY_pathlib]]
+- 18 edges to [[_COMMUNITY_pathlib]]
 - 6 edges to [[_COMMUNITY_run_agy]]
-- 5 edges to [[_COMMUNITY_test_story.py]]
-- 5 edges to [[_COMMUNITY_main_1]]
-- 5 edges to [[_COMMUNITY_code_custom_scenes]]
-- 4 edges to [[_COMMUNITY_test_full_scenes.py]]
-- 3 edges to [[_COMMUNITY_json]]
+- 6 edges to [[_COMMUNITY_code_custom_scenes]]
 - 3 edges to [[_COMMUNITY_full_cues]]
-- 2 edges to [[_COMMUNITY_test_h3_handoff.py]]
-- 2 edges to [[_COMMUNITY_drawn_opener.py]]
-- 2 edges to [[_COMMUNITY_load_pool]]
+- 3 edges to [[_COMMUNITY_json]]
+- 3 edges to [[_COMMUNITY_re]]
+- 3 edges to [[_COMMUNITY_edit_scripts]]
+- 2 edges to [[_COMMUNITY_test_every_mode_can_continue_through_two_exhausted_ais]]
+- 2 edges to [[_COMMUNITY_local_clips]]
+- 2 edges to [[_COMMUNITY_pick_channel]]
+- 2 edges to [[_COMMUNITY_test_first_second.py]]
+- 2 edges to [[_COMMUNITY_apply_review_fixes]]
+- 1 edge to [[_COMMUNITY_check_twists]]
+- 1 edge to [[_COMMUNITY_make_opener]]
+- 1 edge to [[_COMMUNITY_test_rules.py]]
 - 1 edge to [[_COMMUNITY_write_scripts]]
 - 1 edge to [[_COMMUNITY_test_pictures_first.py]]
 - 1 edge to [[_COMMUNITY_invent_component]]
 - 1 edge to [[_COMMUNITY_trend_research]]
 - 1 edge to [[_COMMUNITY_fake_ai]]
-- 1 edge to [[_COMMUNITY_retention.py]]
-- 1 edge to [[_COMMUNITY_gpu.py]]
-- 1 edge to [[_COMMUNITY_visual_review]]
-- 1 edge to [[_COMMUNITY_test_first_second.py]]
-- 1 edge to [[_COMMUNITY_apply_review_fixes]]
+- 1 edge to [[_COMMUNITY_picture_pool.py]]
+- 1 edge to [[_COMMUNITY_main_1]]
+- 1 edge to [[_COMMUNITY_review]]
 - 1 edge to [[_COMMUNITY_choose_images]]
-- 1 edge to [[_COMMUNITY_finish_render]]
+- 1 edge to [[_COMMUNITY_cold_read]]
+- 1 edge to [[_COMMUNITY_fact_check]]
 - 1 edge to [[_COMMUNITY_ffmpeg]]
-- 1 edge to [[_COMMUNITY_audio_mix.py]]
+- 1 edge to [[_COMMUNITY_gpu.py]]
 
 ## Top bridge nodes
-- [[ask_ai()]] - degree 48, connects to 22 communities
+- [[ask_ai()]] - degree 49, connects to 24 communities
 - [[test_package.py]] - degree 38, connects to 9 communities
 - [[gemini_model()]] - degree 5, connects to 2 communities
+- [[test_every_ai_gets_the_pipeline_preamble_once()]] - degree 3, connects to 1 community
 - [[test_quota_fallback_both_ways()]] - degree 3, connects to 1 community
-- [[test_solo_brain_selection_options()]] - degree 2, connects to 1 community

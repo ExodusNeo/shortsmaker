@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_retention.py"
 type: "code"
-community: "pathlib"
+community: "json"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/pathlib
+  - community/json
 ---
 
 # test_retention.py
@@ -27,4 +27,4 @@ tags:
 - [[unittest]] - `imports` [EXTRACTED]
 - [[unittest_mock]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/pathlib
+#graphify/code #graphify/EXTRACTED #community/json

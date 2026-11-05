@@ -20,7 +20,7 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 2 edges to [[_COMMUNITY_test_full_scenes.py]]
+- 2 edges to [[_COMMUNITY_re]]
 - 1 edge to [[_COMMUNITY_audio_library.py]]
 
 ## Top bridge nodes

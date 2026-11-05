@@ -2,7 +2,7 @@
 source_file: "tests/test_codex.py"
 type: "code"
 community: "run_agy"
-location: "L35"
+location: "L58"
 tags:
   - graphify/code
   - graphify/EXTRACTED

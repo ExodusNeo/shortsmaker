@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/voice_cache.py"
 type: "code"
-community: "json"
+community: "gpu.py"
 location: "L10"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/json
+  - community/gpupy
 ---
 
 # signature()
@@ -16,7 +16,7 @@ tags:
 - [[is_loop_short()]] - `calls` [EXTRACTED]
 - [[json]] - `calls` [EXTRACTED]
 - [[load()_1]] - `calls` [EXTRACTED]
-- [[save()_1]] - `calls` [EXTRACTED]
+- [[save()]] - `calls` [EXTRACTED]
 - [[voice_cache.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/json
+#graphify/code #graphify/EXTRACTED #community/gpupy

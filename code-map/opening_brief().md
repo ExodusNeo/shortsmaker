@@ -24,6 +24,6 @@ tags:
 - [[paint_opener_start()]] - `calls` [EXTRACTED]
 - [[redraw_custom()]] - `calls` [EXTRACTED]
 - [[review()]] - `calls` [EXTRACTED]
-- [[write()_1]] - `calls` [EXTRACTED]
+- [[write()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/code_custom_scenes
