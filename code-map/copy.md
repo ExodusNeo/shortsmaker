@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "preview"
+community: "render"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/preview
+  - community/render
 ---
 
 # copy
@@ -14,4 +14,4 @@ tags:
 - [[preview()]] - `calls` [EXTRACTED]
 - [[scene_repair.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/preview
+#graphify/concept #graphify/EXTRACTED #community/render

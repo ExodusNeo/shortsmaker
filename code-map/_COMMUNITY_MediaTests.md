@@ -52,7 +52,7 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 1 edge to [[_COMMUNITY_re]]
+- 1 edge to [[_COMMUNITY_pathlib]]
 
 ## Top bridge nodes
 - [[MediaTests]] - degree 35, connects to 1 community

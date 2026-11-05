@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/voice_cache.py"
 type: "code"
-community: "json"
+community: "gpu.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/json
+  - community/gpupy
 ---
 
 # voice_cache.py
@@ -21,10 +21,10 @@ tags:
 - [[media_tools.py]] - `imports_from` [EXTRACTED]
 - [[pathlib]] - `imports_from` [EXTRACTED]
 - [[plan_rules.py]] - `imports_from` [EXTRACTED]
-- [[save()]] - `contains` [EXTRACTED]
+- [[save()_1]] - `contains` [EXTRACTED]
 - [[short_render.py]] - `imports_from` [EXTRACTED]
 - [[shutil]] - `imports` [EXTRACTED]
 - [[signature()]] - `contains` [EXTRACTED]
 - [[test_reliability.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/json
+#graphify/code #graphify/EXTRACTED #community/gpupy

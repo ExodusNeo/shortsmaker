@@ -24,17 +24,15 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 1 edge to [[_COMMUNITY_test_full_scenes.py]]
-- 1 edge to [[_COMMUNITY_make_opener]]
+- 3 edges to [[_COMMUNITY_drawn_opener.py]]
+- 1 edge to [[_COMMUNITY_pathlib]]
+- 1 edge to [[_COMMUNITY_clean_graphic]]
 - 1 edge to [[_COMMUNITY_OpeningRulesTests]]
 - 1 edge to [[_COMMUNITY_code_custom_scenes]]
-- 1 edge to [[_COMMUNITY_clean_full]]
 - 1 edge to [[_COMMUNITY_ask_ai]]
-- 1 edge to [[_COMMUNITY_short]]
+- 1 edge to [[_COMMUNITY_test_drawn_opener.py]]
 - 1 edge to [[_COMMUNITY_plan]]
-- 1 edge to [[_COMMUNITY_write]]
-- 1 edge to [[_COMMUNITY_re]]
 
 ## Top bridge nodes
-- [[review()]] - degree 11, connects to 9 communities
+- [[review()]] - degree 11, connects to 7 communities
 - [[RenderResumeTests]] - degree 4, connects to 1 community

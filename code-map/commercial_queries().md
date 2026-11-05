@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/footage.py"
 type: "code"
-community: "gather_pool"
+community: "media_command"
 location: "L176"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/gather_pool
+  - community/media_command
 ---
 
 # commercial_queries()
@@ -18,4 +18,4 @@ tags:
 - [[re]] - `calls` [EXTRACTED]
 - [[settings()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/gather_pool
+#graphify/code #graphify/EXTRACTED #community/media_command

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/photo_prep.py"
 type: "code"
-community: "clean_photo"
+community: "paint_instead"
 location: "L68"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/clean_photo
+  - community/paint_instead
 ---
 
 # clean_photo()
@@ -18,8 +18,8 @@ tags:
 - [[is_stereo()]] - `calls` [EXTRACTED]
 - [[mark_details()]] - `calls` [EXTRACTED]
 - [[photo_prep.py]] - `contains` [EXTRACTED]
-- [[render()_2]] - `calls` [EXTRACTED]
+- [[render()_3]] - `calls` [EXTRACTED]
 - [[trim_borders()]] - `calls` [EXTRACTED]
 - [[visual_unique()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/clean_photo
+#graphify/code #graphify/EXTRACTED #community/paint_instead

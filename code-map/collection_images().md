@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/extra_sources.py"
 type: "code"
-community: "source_json"
+community: "extra_sources.py"
 location: "L240"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/source_json
+  - community/extra_sourcespy
 ---
 
 # collection_images()
@@ -24,4 +24,4 @@ tags:
 - [[source_enabled()]] - `calls` [EXTRACTED]
 - [[wellcome_images()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/INFERRED #community/source_json
+#graphify/code #graphify/INFERRED #community/extra_sourcespy

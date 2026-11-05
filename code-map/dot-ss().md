@@ -1,12 +1,12 @@
 ---
 source_file: "drawn/kit.mjs"
 type: "code"
-community: ".at"
+community: "makeKit"
 location: "L39"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/at
+  - community/makeKit
 ---
 
 # .ss()
@@ -16,4 +16,4 @@ tags:
 - [[dot-ss()]] - `calls` [EXTRACTED]
 - [[k]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/at
+#graphify/code #graphify/EXTRACTED #community/makeKit

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/media_library.py"
 type: "code"
-community: "re"
+community: "pathlib"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/re
+  - community/pathlib
 ---
 
 # media_library.py
@@ -40,4 +40,4 @@ tags:
 - [[threading]] - `imports` [EXTRACTED]
 - [[time]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/re
+#graphify/code #graphify/EXTRACTED #community/pathlib

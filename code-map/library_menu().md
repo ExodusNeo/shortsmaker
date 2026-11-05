@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/style_lab.py"
 type: "code"
-community: "test_style.py"
+community: "shutil"
 location: "L298"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_stylepy
+  - community/shutil
 ---
 
 # library_menu()
@@ -16,9 +16,9 @@ tags:
 - [[ask_number()]] - `calls` [EXTRACTED]
 - [[json]] - `calls` [EXTRACTED]
 - [[library.bat the owner watches each invention the AI made for a Short and adds…]] - `rationale_for` [EXTRACTED]
-- [[main()_3]] - `calls` [EXTRACTED]
+- [[main()_2]] - `calls` [EXTRACTED]
 - [[os]] - `calls` [EXTRACTED]
 - [[reject_candidate()]] - `calls` [EXTRACTED]
 - [[style_lab.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_stylepy
+#graphify/code #graphify/EXTRACTED #community/shutil

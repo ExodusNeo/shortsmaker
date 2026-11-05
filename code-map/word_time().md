@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/opener3d.py"
 type: "code"
-community: "re"
-location: "L41"
+community: "drawn_opener.py"
+location: "L45"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/re
+  - community/drawn_openerpy
 ---
 
 # word_time()
@@ -17,4 +17,4 @@ tags:
 - [[opener3d.py]] - `contains` [EXTRACTED]
 - [[re]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/re
+#graphify/code #graphify/EXTRACTED #community/drawn_openerpy

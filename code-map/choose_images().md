@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[Build a broad multi-source pool of images and real video footage (per-scene…]] - `rationale_for` [EXTRACTED]
-- [[Path_33]] - `references` [EXTRACTED]
+- [[Path_32]] - `references` [EXTRACTED]
 - [[apply_look_scenes()]] - `calls` [EXTRACTED]
 - [[ask_ai()]] - `calls` [EXTRACTED]
 - [[capture_prompts()]] - `calls` [EXTRACTED]
@@ -29,7 +29,7 @@ tags:
 - [[opening_brief()]] - `calls` [EXTRACTED]
 - [[picker.py]] - `contains` [EXTRACTED]
 - [[recover_downloads()]] - `calls` [EXTRACTED]
-- [[render()_2]] - `calls` [EXTRACTED]
+- [[render()_3]] - `calls` [EXTRACTED]
 - [[shows_person()]] - `calls` [EXTRACTED]
 - [[style_library()]] - `calls` [EXTRACTED]
 - [[test_choose_extra_gather_is_bounded()]] - `calls` [EXTRACTED]

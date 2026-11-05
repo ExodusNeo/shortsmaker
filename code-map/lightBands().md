@@ -1,12 +1,12 @@
 ---
 source_file: "drawn/lib/textures.mjs"
 type: "code"
-community: "kit.mjs"
+community: "core.mjs"
 location: "L27"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/kitmjs
+  - community/coremjs
 ---
 
 # lightBands()
@@ -15,4 +15,4 @@ tags:
 - [[rad()]] - `calls` [EXTRACTED]
 - [[textures.mjs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/kitmjs
+#graphify/code #graphify/EXTRACTED #community/coremjs

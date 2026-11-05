@@ -32,7 +32,7 @@ SORT file.name ASC
 ## Connections to other communities
 - 7 edges to [[_COMMUNITY_test_full_scenes.py]]
 - 2 edges to [[_COMMUNITY_scene_cues]]
-- 1 edge to [[_COMMUNITY_opener_graphic]]
+- 1 edge to [[_COMMUNITY_finish_render]]
 - 1 edge to [[_COMMUNITY_full_props]]
 - 1 edge to [[_COMMUNITY_test_blender_plan.py]]
 - 1 edge to [[_COMMUNITY_words_of]]

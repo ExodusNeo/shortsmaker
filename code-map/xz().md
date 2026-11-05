@@ -2,7 +2,7 @@
 source_file: "shortsmaker/opener3d.py"
 type: "code"
 community: "test_opener3d.py"
-location: "L54"
+location: "L58"
 tags:
   - graphify/code
   - graphify/EXTRACTED

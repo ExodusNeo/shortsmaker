@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_drawn_opener.py"
 type: "rationale"
-community: "re"
+community: "test_drawn_opener.py"
 location: "L171"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/re
+  - community/test_drawn_openerpy
 ---
 
 # Renders drawn/out/sheet.png: every kit part, one page per second (look at it…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[look()_1]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/re
+#graphify/rationale #graphify/EXTRACTED #community/test_drawn_openerpy

@@ -1,11 +1,11 @@
 ---
 type: community
-members: 28
+members: 25
 ---
 
 # time
 
-**Members:** 28 nodes
+**Members:** 25 nodes
 
 ## Members
 - [[Caption words (as written, punctuation attached) with the a-z words the aligner…]] - rationale - local_ai/qwen_voice.py
@@ -14,7 +14,6 @@ members: 28
 - [[How a narrator reads a number token 1932 - nineteen thirty-two, 20,000 -…]] - rationale - local_ai/qwen_voice.py
 - [[Local voice worker for ShortsMaker CosyVoice 3 through VoiceStudio (items with…]] - rationale - local_ai/qwen_voice.py
 - [[Pair each whitespace token in `text` with how the narrator says it, moving…]] - rationale - local_ai/qwen_voice.py
-- [[VoiceStudio's backend answers, starting the app (and waiting up to 2 min) if it…]] - rationale - shortsmaker/gpu.py
 - [[Word matching for the Qwen voice's captions (no GPU, no models). Run…]] - rationale - tests/test_qwen_voice.py
 - [[align()]] - code - local_ai/qwen_voice.py
 - [[align_words()]] - code - local_ai/qwen_voice.py
@@ -34,8 +33,6 @@ members: 28
 - [[test_qwen_voice.py]] - code - tests/test_qwen_voice.py
 - [[time]] - concept
 - [[unicodedata]] - concept
-- [[up()]] - code - shortsmaker/gpu.py
-- [[voicestudio_up()]] - code - shortsmaker/gpu.py
 
 ## Live Query (requires Dataview plugin)
 
@@ -45,24 +42,25 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 12 edges to [[_COMMUNITY_re]]
-- 9 edges to [[_COMMUNITY_test_full_scenes.py]]
-- 8 edges to [[_COMMUNITY_json]]
-- 4 edges to [[_COMMUNITY_test_style.py]]
-- 2 edges to [[_COMMUNITY_duration]]
+- 9 edges to [[_COMMUNITY_pathlib]]
+- 7 edges to [[_COMMUNITY_test_full_scenes.py]]
+- 6 edges to [[_COMMUNITY_gpu.py]]
+- 5 edges to [[_COMMUNITY_re]]
+- 4 edges to [[_COMMUNITY_json]]
+- 3 edges to [[_COMMUNITY_extra_sources.py]]
+- 3 edges to [[_COMMUNITY_shutil]]
 - 2 edges to [[_COMMUNITY_h3_run.py]]
 - 2 edges to [[_COMMUNITY_gen.py]]
-- 2 edges to [[_COMMUNITY_source_json]]
-- 2 edges to [[_COMMUNITY_test_topic_ideas.py]]
-- 2 edges to [[_COMMUNITY_main_1]]
+- 1 edge to [[_COMMUNITY_test_h3_handoff.py]]
+- 1 edge to [[_COMMUNITY_main_1]]
 - 1 edge to [[_COMMUNITY_words_of]]
-- 1 edge to [[_COMMUNITY_music_gain]]
+- 1 edge to [[_COMMUNITY_captions]]
 - 1 edge to [[_COMMUNITY_test_pictures_first.py]]
 - 1 edge to [[_COMMUNITY_test_story.py]]
 
 ## Top bridge nodes
-- [[time]] - degree 31, connects to 11 communities
-- [[qwen_voice.py]] - degree 18, connects to 4 communities
+- [[time]] - degree 31, connects to 12 communities
 - [[unicodedata]] - degree 6, connects to 4 communities
-- [[voicestudio_up()]] - degree 6, connects to 3 communities
+- [[qwen_voice.py]] - degree 18, connects to 3 communities
 - [[test_qwen_voice.py]] - degree 10, connects to 2 communities
+- [[align_words()]] - degree 10, connects to 1 community

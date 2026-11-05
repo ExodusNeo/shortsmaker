@@ -1,16 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: "ends_sentence"
+community: "run_agy"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ends_sentence
+  - community/run_agy
 ---
 
 # Path
 
 ## Connections
-- [[srt()]] - `references` [EXTRACTED]
+- [[ask_ai()]] - `references` [EXTRACTED]
+- [[run_agy()]] - `references` [EXTRACTED]
+- [[run_codex()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ends_sentence
+#graphify/code #graphify/EXTRACTED #community/run_agy

@@ -1,21 +1,21 @@
 ---
 source_file: "shortsmaker/gpu.py"
 type: "code"
-community: "local_clips"
+community: "test_h3_handoff.py"
 location: "L570"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/local_clips
+  - community/test_h3_handoffpy
 ---
 
 # start_picture_problems()
 
 ## Connections
-- [[Path_8]] - `references` [EXTRACTED]
+- [[Path]] - `references` [EXTRACTED]
 - [[Start pictures (folderstartN.jpg) the owner shouldn't spend a clip on a…]] - `rationale_for` [EXTRACTED]
 - [[ask_ai()]] - `calls` [EXTRACTED]
 - [[gpu.py]] - `contains` [EXTRACTED]
 - [[veo_handoff()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/local_clips
+#graphify/code #graphify/EXTRACTED #community/test_h3_handoffpy

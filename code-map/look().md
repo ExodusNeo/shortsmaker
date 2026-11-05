@@ -2,7 +2,7 @@
 source_file: "tests/test_opener3d.py"
 type: "code"
 community: "test_opener3d.py"
-location: "L66"
+location: "L151"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -15,7 +15,7 @@ tags:
 - [[Renders the manual's example through the real path (cut-outs, Remotion) and its…]] - `rationale_for` [EXTRACTED]
 - [[clean()]] - `calls` [EXTRACTED]
 - [[example()]] - `calls` [EXTRACTED]
-- [[render()_5]] - `calls` [EXTRACTED]
+- [[render()]] - `calls` [EXTRACTED]
 - [[sheet()_1]] - `calls` [EXTRACTED]
 - [[test_opener3d.py]] - `contains` [EXTRACTED]
 

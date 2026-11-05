@@ -1,17 +1,25 @@
 ---
-source_file: "tests/test_blender_run.py"
+source_file: "shortsmaker/opener3d.py"
 type: "code"
-community: "main"
-location: "L88"
+community: "drawn_opener.py"
+location: "L214"
 tags:
   - graphify/code
-  - graphify/INFERRED
-  - community/main
+  - graphify/EXTRACTED
+  - community/drawn_openerpy
 ---
 
 # render()
 
 ## Connections
-- [[test_blender_failure_is_reported_and_the_batch_goes_on()]] - `indirect_call` [INFERRED]
+- [[Paints the cut-outs and renders folderopener.mp4; None when it worked, else…]] - `rationale_for` [EXTRACTED]
+- [[Path_37]] - `references` [EXTRACTED]
+- [[json]] - `calls` [EXTRACTED]
+- [[look()]] - `calls` [EXTRACTED]
+- [[make_opener()]] - `calls` [EXTRACTED]
+- [[opener3d.py]] - `contains` [EXTRACTED]
+- [[plan()_1]] - `calls` [EXTRACTED]
+- [[shutil]] - `calls` [EXTRACTED]
+- [[subprocess]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/main
+#graphify/code #graphify/EXTRACTED #community/drawn_openerpy

@@ -1,24 +1,23 @@
 ---
 type: community
-members: 69
+members: 67
 ---
 
 # test_blender_plan.py
 
-**Members:** 69 nodes
+**Members:** 67 nodes
 
 ## Members
 - [[(first, last) frame of every scene, 1-based and back to back; even a very short…]] - rationale - shortsmaker/blender_render.py
 - [[(picture, credit line, CHECK line) for a drawn Short's thumbnail the real…]] - rationale - shortsmaker/short_render.py
 - [[A .cmd that behaves like blender.exe for build_scene.py; returns (exe, run log).]] - rationale - tests/test_blender_render.py
-- [[A fingerprint of the drawing code (blender.py) frames drawn by older code…]] - rationale - shortsmaker/blender_render.py
 - [[A number in lo, hi (whole numbers stay whole), or the default for anything…]] - rationale - shortsmaker/blender_plan.py
 - [[A plan that always works a truss bridge whose mid-span gusset plate bends.]] - rationale - shortsmaker/blender_plan.py
 - [[Blender couldn't draw the Short (missing, crashed or timed out twice).]] - rationale - shortsmaker/blender_render.py
 - [[BlenderFailed]] - code - shortsmaker/blender_render.py
+- [[Path_33]] - code
 - [[Path_34]] - code
 - [[Path_35]] - code
-- [[Path_36]] - code
 - [[Pool indexes to try for the thumbnail's real photo, best first usable pictures…]] - rationale - shortsmaker/blender_plan.py
 - [[RuntimeError]] - code
 - [[Tests for Blender build plans (blender_plan.py, 2026-10-22) the engineer AI's…]] - rationale - tests/test_blender_plan.py
@@ -33,7 +32,6 @@ members: 69
 - [[ask()_14]] - code - tests/test_blender_plan.py
 - [[clamp()_2]] - code - shortsmaker/blender_plan.py
 - [[clean_build()]] - code - shortsmaker/blender_plan.py
-- [[code_version()]] - code - shortsmaker/blender_render.py
 - [[default_build()]] - code - shortsmaker/blender_plan.py
 - [[drawn_short()]] - code - tests/test_blender_run.py
 - [[drawn_thumbnail()]] - code - shortsmaker/short_render.py
@@ -86,24 +84,26 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 36 edges to [[_COMMUNITY_test_full_scenes.py]]
-- 4 edges to [[_COMMUNITY_render]]
-- 4 edges to [[_COMMUNITY_json]]
-- 3 edges to [[_COMMUNITY_re]]
-- 2 edges to [[_COMMUNITY_prepare_topic]]
-- 1 edge to [[_COMMUNITY_duration]]
-- 1 edge to [[_COMMUNITY_write_frames]]
-- 1 edge to [[_COMMUNITY_finish_render]]
+- 21 edges to [[_COMMUNITY_test_full_scenes.py]]
+- 13 edges to [[_COMMUNITY_pathlib]]
+- 6 edges to [[_COMMUNITY_render]]
+- 3 edges to [[_COMMUNITY_json]]
+- 2 edges to [[_COMMUNITY_gpu.py]]
+- 2 edges to [[_COMMUNITY_test_topic_ideas.py]]
 - 1 edge to [[_COMMUNITY_write_scripts]]
-- 1 edge to [[_COMMUNITY_local_clips]]
+- 1 edge to [[_COMMUNITY_extra_sources.py]]
+- 1 edge to [[_COMMUNITY_frame_maker]]
+- 1 edge to [[_COMMUNITY_finish_render]]
 - 1 edge to [[_COMMUNITY_full_cues]]
-- 1 edge to [[_COMMUNITY_test_blender_scene.py]]
-- 1 edge to [[_COMMUNITY_audio_library.py]]
 - 1 edge to [[_COMMUNITY_gather_pool]]
+- 1 edge to [[_COMMUNITY_test_blender_scene.py]]
+- 1 edge to [[_COMMUNITY_clean_pics]]
+- 1 edge to [[_COMMUNITY_audio_library.py]]
+- 1 edge to [[_COMMUNITY_re]]
 
 ## Top bridge nodes
-- [[drawn_thumbnail()]] - degree 13, connects to 6 communities
+- [[drawn_thumbnail()]] - degree 13, connects to 7 communities
+- [[test_blender_plan.py]] - degree 24, connects to 5 communities
+- [[test_blender_render.py]] - degree 21, connects to 4 communities
 - [[render_clips()]] - degree 18, connects to 4 communities
-- [[test_blender_plan.py]] - degree 24, connects to 3 communities
-- [[test_blender_render.py]] - degree 21, connects to 3 communities
 - [[scene_frames()]] - degree 9, connects to 2 communities

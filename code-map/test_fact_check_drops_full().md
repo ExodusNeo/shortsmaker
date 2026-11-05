@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_full_scenes.py"
 type: "code"
-community: "fact_check"
+community: "prepare_topic"
 location: "L185"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/fact_check
+  - community/prepare_topic
 ---
 
 # test_fact_check_drops_full()
@@ -15,4 +15,4 @@ tags:
 - [[fact_check()_1]] - `calls` [EXTRACTED]
 - [[test_full_scenes.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/fact_check
+#graphify/code #graphify/EXTRACTED #community/prepare_topic

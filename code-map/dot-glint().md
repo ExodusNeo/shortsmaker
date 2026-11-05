@@ -1,12 +1,12 @@
 ---
 source_file: "drawn/kit.mjs"
 type: "code"
-community: ".at"
-location: "L579"
+community: "makeKit"
+location: "L598"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/at
+  - community/makeKit
 ---
 
 # .glint()
@@ -17,4 +17,4 @@ tags:
 - [[popS()]] - `calls` [EXTRACTED]
 - [[star4()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/at
+#graphify/code #graphify/EXTRACTED #community/makeKit

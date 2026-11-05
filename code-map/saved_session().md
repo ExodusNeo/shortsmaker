@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_ai_modes.py"
 type: "code"
-community: "edit_scripts"
+community: "configure_brain"
 location: "L13"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/edit_scripts
+  - community/configure_brain
 ---
 
 # saved_session()
@@ -20,4 +20,4 @@ tags:
 - [[test_only_the_second_edit_pass_gets_the_research()]] - `calls` [EXTRACTED]
 - [[test_script_rounds_stop_when_fixed_or_after_three()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/edit_scripts
+#graphify/code #graphify/EXTRACTED #community/configure_brain

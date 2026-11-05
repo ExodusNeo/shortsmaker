@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "write_json"
+community: "gpu.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/write_json
+  - community/gpupy
 ---
 
 # CompletedProcess
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[film_ffmpeg()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/write_json
+#graphify/code #graphify/EXTRACTED #community/gpupy

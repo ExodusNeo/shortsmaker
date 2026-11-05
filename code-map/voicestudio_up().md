@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/gpu.py"
 type: "code"
-community: "time"
+community: "gpu.py"
 location: "L106"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/time
+  - community/gpupy
 ---
 
 # voicestudio_up()
@@ -19,4 +19,4 @@ tags:
 - [[time]] - `calls` [EXTRACTED]
 - [[up()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/time
+#graphify/code #graphify/EXTRACTED #community/gpupy

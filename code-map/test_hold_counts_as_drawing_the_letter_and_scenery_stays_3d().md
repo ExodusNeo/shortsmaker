@@ -1,0 +1,19 @@
+---
+source_file: "tests/test_opener3d.py"
+type: "code"
+community: "missing_parts"
+location: "L102"
+tags:
+  - graphify/code
+  - graphify/EXTRACTED
+  - community/missing_parts
+---
+
+# test_hold_counts_as_drawing_the_letter_and_scenery_stays_3d()
+
+## Connections
+- [[lint_cutout()]] - `calls` [EXTRACTED]
+- [[missing_parts()]] - `calls` [EXTRACTED]
+- [[test_opener3d.py]] - `contains` [EXTRACTED]
+
+#graphify/code #graphify/EXTRACTED #community/missing_parts

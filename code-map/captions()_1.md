@@ -1,23 +1,23 @@
 ---
 source_file: "shortsmaker/audio_mix.py"
 type: "code"
-community: "music_gain"
+community: "captions"
 location: "L73"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/music_gain
+  - community/captions
 ---
 
 # captions()
 
 ## Connections
 - [[ASS captions, one caption_lines() line at a time white with a black outline,…]] - `rationale_for` [EXTRACTED]
-- [[Path_27]] - `references` [EXTRACTED]
+- [[Path_29]] - `references` [EXTRACTED]
 - [[ass_time()]] - `calls` [EXTRACTED]
 - [[audio_mix.py]] - `contains` [EXTRACTED]
 - [[caption_lines()]] - `calls` [EXTRACTED]
 - [[caption_size()]] - `calls` [EXTRACTED]
-- [[render()_2]] - `calls` [EXTRACTED]
+- [[render()_3]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/music_gain
+#graphify/code #graphify/EXTRACTED #community/captions

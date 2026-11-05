@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "ask"
+community: "main"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ask
+  - community/main
 ---
 
 # Path
 
 ## Connections
-- [[_review_state()]] - `references` [EXTRACTED]
+- [[draft_rules()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ask
+#graphify/code #graphify/EXTRACTED #community/main

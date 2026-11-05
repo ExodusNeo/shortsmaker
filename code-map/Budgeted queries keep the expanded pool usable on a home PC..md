@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/extra_sources.py"
 type: "rationale"
-community: "source_json"
+community: "extra_sources.py"
 location: "L241"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/source_json
+  - community/extra_sourcespy
 ---
 
 # Budgeted queries keep the expanded pool usable on a home PC.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[collection_images()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/source_json
+#graphify/rationale #graphify/EXTRACTED #community/extra_sourcespy

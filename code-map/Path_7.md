@@ -1,17 +1,20 @@
 ---
 source_file: ""
 type: "code"
-community: "make"
+community: "test_edit_project.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/make
+  - community/test_edit_projectpy
 ---
 
 # Path
 
 ## Connections
-- [[short_folder()]] - `references` [EXTRACTED]
-- [[videos()]] - `references` [EXTRACTED]
+- [[caption_layer()]] - `references` [EXTRACTED]
+- [[make()_1]] - `references` [EXTRACTED]
+- [[master_gain()]] - `references` [EXTRACTED]
+- [[project_xml()]] - `references` [EXTRACTED]
+- [[remove()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/make
+#graphify/code #graphify/EXTRACTED #community/test_edit_projectpy

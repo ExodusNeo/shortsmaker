@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/retention.py"
 type: "code"
-community: "retention.py"
+community: "json"
 location: "L33"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/retentionpy
+  - community/json
 ---
 
 # parse_metric()
@@ -20,4 +20,4 @@ tags:
 - [[retention.py]] - `contains` [EXTRACTED]
 - [[seconds()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/retentionpy
+#graphify/code #graphify/EXTRACTED #community/json

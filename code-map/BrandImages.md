@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/extra_sources.py"
 type: "code"
-community: "source_json"
+community: "extra_sources.py"
 location: "L147"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/source_json
+  - community/extra_sourcespy
 ---
 
 # BrandImages
@@ -19,4 +19,4 @@ tags:
 - [[brand_images()]] - `calls` [EXTRACTED]
 - [[extra_sources.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/source_json
+#graphify/code #graphify/EXTRACTED #community/extra_sourcespy

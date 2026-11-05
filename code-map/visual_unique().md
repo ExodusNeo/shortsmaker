@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/picture_pool.py"
 type: "code"
-community: "test_full_scenes.py"
+community: "gpu.py"
 location: "L205"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_full_scenespy
+  - community/gpupy
 ---
 
 # visual_unique()
@@ -18,4 +18,4 @@ tags:
 - [[io]] - `calls` [EXTRACTED]
 - [[picture_pool.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_full_scenespy
+#graphify/code #graphify/EXTRACTED #community/gpupy

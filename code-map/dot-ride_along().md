@@ -15,6 +15,6 @@ tags:
 - [[dot-falls()]] - `calls` [EXTRACTED]
 - [[Failure]] - `method` [EXTRACTED]
 - [[Objects that fall with the span (the label on the failing part).]] - `rationale_for` [EXTRACTED]
-- [[main()_4]] - `calls` [INFERRED]
+- [[main()_3]] - `calls` [INFERRED]
 
 #graphify/code #graphify/EXTRACTED #community/main

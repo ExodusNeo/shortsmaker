@@ -41,7 +41,7 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 1 edge to [[_COMMUNITY_test_full_scenes.py]]
+- 1 edge to [[_COMMUNITY_pathlib]]
 
 ## Top bridge nodes
 - [[ReliabilityTests]] - degree 20, connects to 1 community

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/opener3d.py"
 type: "rationale"
-community: "lint"
-location: "L59"
+community: "lint_cutout"
+location: "L85"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/lint
+  - community/lint_cutout
 ---
 
 # Rule breaks in an AI-written cut-out module (the drawn opener's code rules,…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[lint_cutout()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/lint
+#graphify/rationale #graphify/EXTRACTED #community/lint_cutout

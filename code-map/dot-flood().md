@@ -1,12 +1,12 @@
 ---
 source_file: "drawn/kit.mjs"
 type: "code"
-community: "clamp"
-location: "L603"
+community: "k"
+location: "L622"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/clamp
+  - community/k
 ---
 
 # .flood()
@@ -16,4 +16,4 @@ tags:
 - [[k]] - `method` [EXTRACTED]
 - [[lerp()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/clamp
+#graphify/code #graphify/EXTRACTED #community/k

@@ -30,21 +30,24 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 12 edges to [[_COMMUNITY_test_full_scenes.py]]
+- 10 edges to [[_COMMUNITY_test_full_scenes.py]]
 - 5 edges to [[_COMMUNITY_first_sentence]]
 - 4 edges to [[_COMMUNITY_check_twists]]
 - 4 edges to [[_COMMUNITY_cold_read]]
+- 4 edges to [[_COMMUNITY_pathlib]]
 - 3 edges to [[_COMMUNITY_edit_scripts]]
-- 3 edges to [[_COMMUNITY_re]]
-- 2 edges to [[_COMMUNITY_duration]]
 - 2 edges to [[_COMMUNITY_ends_sentence]]
-- 2 edges to [[_COMMUNITY_json]]
+- 1 edge to [[_COMMUNITY_test_h3_handoff.py]]
 - 1 edge to [[_COMMUNITY_test_rules.py]]
 - 1 edge to [[_COMMUNITY_write_scripts]]
+- 1 edge to [[_COMMUNITY_re]]
+- 1 edge to [[_COMMUNITY_render]]
+- 1 edge to [[_COMMUNITY_gpu.py]]
+- 1 edge to [[_COMMUNITY_json]]
+- 1 edge to [[_COMMUNITY_test_topic_ideas.py]]
 - 1 edge to [[_COMMUNITY_time]]
-- 1 edge to [[_COMMUNITY_logbook.py]]
 
 ## Top bridge nodes
-- [[test_story.py]] - degree 41, connects to 11 communities
+- [[test_story.py]] - degree 41, connects to 13 communities
 - [[story_problems()]] - degree 14, connects to 7 communities
 - [[test_rules_accept_opener_setting()]] - degree 2, connects to 1 community

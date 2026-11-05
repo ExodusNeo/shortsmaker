@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/drawn_opener.py"
 type: "code"
-community: "make_opener"
-location: "L110"
+community: "drawn_opener.py"
+location: "L130"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/make_opener
+  - community/drawn_openerpy
 ---
 
 # sheet_times()
@@ -15,6 +15,6 @@ tags:
 - [[Six frames across the opener for the preview, the first and the last included.]] - `rationale_for` [EXTRACTED]
 - [[drawn_opener.py]] - `contains` [EXTRACTED]
 - [[make_opener()]] - `calls` [EXTRACTED]
-- [[sheet()_1]] - `calls` [EXTRACTED]
+- [[sheet_times()_1]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/make_opener
+#graphify/code #graphify/EXTRACTED #community/drawn_openerpy

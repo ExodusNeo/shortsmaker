@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/logbook.py"
 type: "code"
-community: "logbook.py"
+community: "test_full_scenes.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/logbookpy
+  - community/test_full_scenespy
 ---
 
 # logbook.py
@@ -41,4 +41,4 @@ tags:
 - [[vault_refresh()]] - `contains` [EXTRACTED]
 - [[writing.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/logbookpy
+#graphify/code #graphify/EXTRACTED #community/test_full_scenespy

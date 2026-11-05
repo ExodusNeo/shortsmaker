@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/gpu.py"
 type: "rationale"
-community: "local_clips"
+community: "test_h3_handoff.py"
 location: "L376"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/local_clips
+  - community/test_h3_handoffpy
 ---
 
 # Short image-to-video prompt for an animate scene made by LTX on this PC.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[motion_prompt()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/local_clips
+#graphify/rationale #graphify/EXTRACTED #community/test_h3_handoffpy

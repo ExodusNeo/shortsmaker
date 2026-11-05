@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/gpu.py"
 type: "code"
-community: "duration"
+community: "test_h3_handoff.py"
 location: "L188"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/duration
+  - community/test_h3_handoffpy
 ---
 
 # cosy_instruct()
@@ -16,4 +16,4 @@ tags:
 - [[gpu.py]] - `contains` [EXTRACTED]
 - [[local_voice()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/duration
+#graphify/code #graphify/EXTRACTED #community/test_h3_handoffpy

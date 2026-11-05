@@ -1,54 +1,31 @@
 ---
 type: community
-members: 41
+members: 18
 ---
 
 # test_style.py
 
-**Members:** 41 nodes
+**Members:** 18 nodes
 
 ## Members
-- [[Adds a candidate to the library (component file, library.json entry,…]] - rationale - shortsmaker/style_lab.py
-- [[Full-screen motion-graphic scenes and the AI-coded Custom scenes (with their…]] - rationale - shortsmaker/motion.py
-- [[Path_31]] - code
-- [[Preview of every style-library preset for the owner each look on two real…]] - rationale - tests/render_style.py
-- [[Regenerates remotionsrcstyleindex.ts from library.json Remotion's bundle…]] - rationale - shortsmaker/style_lab.py
-- [[Render the opener composition study with the real hookcaptions; restore the…]] - rationale - tests/render_opener_preview.py
-- [[Rendering a Short with Remotion (with the Python renderer as fallback),…]] - rationale - shortsmaker/remotion_render.py
-- [[Saves an invention that made it into a finished Short as a candidate for the…]] - rationale - shortsmaker/style_lab.py
-- [[Shared opening instructions show the hook while protecting what the narration…]] - rationale - shortsmaker/opening_rules.py
+- [[Puts the Short's photo look on the scenes the picker chose for it (it saw the…]] - rationale - shortsmaker/style_lab.py
+- [[Remotion renders when the plan is graphics-heavy or uses anything only it can…]] - rationale - shortsmaker/remotion_render.py
 - [[Tests for the style library looks, overlays, transitions, inventions (plain…]] - rationale - tests/test_style.py
-- [[The code from an AI reply (code fences removed); None unless it exports the…]] - rationale - shortsmaker/style_lab.py
-- [[The library files a candidate test may touch, to put back afterwards.]] - rationale - tests/test_style.py
-- [[The style library invented looks, overlays and scene changes, candidates and…]] - rationale - shortsmaker/style_lab.py
-- [[approve_candidate()]] - code - shortsmaker/style_lab.py
-- [[candidate_in()]] - code - tests/test_style.py
-- [[clean_style_code()]] - code - shortsmaker/style_lab.py
+- [[apply_look_scenes()]] - code - shortsmaker/style_lab.py
+- [[ask()_11]] - code - tests/test_style.py
+- [[ask()_12]] - code - tests/test_style.py
 - [[inspect]] - concept
-- [[library.bat the owner watches each invention the AI made for a Short and adds…]] - rationale - shortsmaker/style_lab.py
-- [[library_menu()]] - code - shortsmaker/style_lab.py
-- [[library_snapshot()]] - code - tests/test_style.py
-- [[motion.py]] - code - shortsmaker/motion.py
-- [[opening_rules.py]] - code - shortsmaker/opening_rules.py
-- [[os]] - concept
-- [[reject_candidate()]] - code - shortsmaker/style_lab.py
-- [[remotion_render.py]] - code - shortsmaker/remotion_render.py
-- [[render_opener_preview.py]] - code - tests/render_opener_preview.py
-- [[render_style.py]] - code - tests/render_style.py
-- [[restore_library()]] - code - tests/test_style.py
-- [[save_candidate()]] - code - shortsmaker/style_lab.py
-- [[shutil]] - concept
-- [[style_lab.py]] - code - shortsmaker/style_lab.py
-- [[test_approve_adds_to_library()]] - code - tests/test_style.py
-- [[test_approve_rolls_back_on_tsc_failure()]] - code - tests/test_style.py
-- [[test_approve_rolls_back_when_the_check_crashes()]] - code - tests/test_style.py
-- [[test_candidate_names_unique_across_kinds()]] - code - tests/test_style.py
-- [[test_reject_deletes()]] - code - tests/test_style.py
+- [[plan_with()_1]] - code - tests/test_style.py
+- [[test_apply_look_scenes()]] - code - tests/test_style.py
+- [[test_director_character_look_is_kept_short_or_dropped()]] - code - tests/test_style.py
+- [[test_director_inventions_are_kept_with_a_spec()]] - code - tests/test_style.py
+- [[test_director_prompt_lists_library()]] - code - tests/test_style.py
+- [[test_fact_check_sees_new_graphics()]] - code - tests/test_style.py
+- [[test_remotion_forced_by_look()]] - code - tests/test_style.py
 - [[test_save_candidate_unique_slug()]] - code - tests/test_style.py
 - [[test_style.py]] - code - tests/test_style.py
-- [[test_write_style_index_is_deterministic()]] - code - tests/test_style.py
-- [[timeout()]] - code - tests/test_style.py
-- [[write_style_index()]] - code - shortsmaker/style_lab.py
+- [[wants_remotion()]] - code - shortsmaker/remotion_render.py
+- [[write_scripts with every AInetwork step faked; the director answers…]] - rationale - tests/test_style.py
 
 ## Live Query (requires Dataview plugin)
 
@@ -58,47 +35,28 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 63 edges to [[_COMMUNITY_test_full_scenes.py]]
-- 32 edges to [[_COMMUNITY_render_remotion]]
-- 27 edges to [[_COMMUNITY_re]]
-- 18 edges to [[_COMMUNITY_json]]
-- 18 edges to [[_COMMUNITY_code_custom_scenes]]
-- 10 edges to [[_COMMUNITY_style_library]]
-- 5 edges to [[_COMMUNITY_render]]
-- 5 edges to [[_COMMUNITY_logbook.py]]
-- 5 edges to [[_COMMUNITY_fact_check]]
-- 4 edges to [[_COMMUNITY_main_1]]
-- 4 edges to [[_COMMUNITY_time]]
-- 3 edges to [[_COMMUNITY_audio_library.py]]
-- 3 edges to [[_COMMUNITY_test_topic_ideas.py]]
-- 3 edges to [[_COMMUNITY_ask_ai]]
-- 2 edges to [[_COMMUNITY_make_opener]]
-- 2 edges to [[_COMMUNITY_h3_run.py]]
-- 2 edges to [[_COMMUNITY_retention.py]]
-- 2 edges to [[_COMMUNITY_first_sentence]]
-- 2 edges to [[_COMMUNITY_full_props]]
-- 2 edges to [[_COMMUNITY_paint_instead]]
-- 2 edges to [[_COMMUNITY_choose_images]]
+- 13 edges to [[_COMMUNITY_test_full_scenes.py]]
+- 11 edges to [[_COMMUNITY_style_library]]
+- 5 edges to [[_COMMUNITY_style_placeholders]]
+- 4 edges to [[_COMMUNITY_owner]]
+- 3 edges to [[_COMMUNITY_shutil]]
+- 3 edges to [[_COMMUNITY_render_remotion]]
+- 3 edges to [[_COMMUNITY_clean_look]]
+- 2 edges to [[_COMMUNITY_invent_component]]
+- 2 edges to [[_COMMUNITY_json]]
+- 2 edges to [[_COMMUNITY_pathlib]]
 - 1 edge to [[_COMMUNITY_limit_style]]
-- 1 edge to [[_COMMUNITY_sfx_events]]
-- 1 edge to [[_COMMUNITY_finish_render]]
+- 1 edge to [[_COMMUNITY_clean_graphic]]
 - 1 edge to [[_COMMUNITY_write_scripts]]
-- 1 edge to [[_COMMUNITY_local_clips]]
-- 1 edge to [[_COMMUNITY_opener_graphic]]
-- 1 edge to [[_COMMUNITY_owner]]
-- 1 edge to [[_COMMUNITY_paint_opener_start]]
-- 1 edge to [[_COMMUNITY_test_first_second.py]]
-- 1 edge to [[_COMMUNITY_apply_review_fixes]]
-- 1 edge to [[_COMMUNITY_clean_full]]
-- 1 edge to [[_COMMUNITY_preview]]
-- 1 edge to [[_COMMUNITY_plan]]
-- 1 edge to [[_COMMUNITY_patching.py]]
-- 1 edge to [[_COMMUNITY_test_rules.py]]
-- 1 edge to [[_COMMUNITY_test_pictures_first.py]]
+- 1 edge to [[_COMMUNITY_prepare_topic]]
+- 1 edge to [[_COMMUNITY_render]]
+- 1 edge to [[_COMMUNITY_full_props]]
+- 1 edge to [[_COMMUNITY_choose_images]]
+- 1 edge to [[_COMMUNITY_re]]
 
 ## Top bridge nodes
-- [[shutil]] - degree 55, connects to 23 communities
-- [[test_style.py]] - degree 57, connects to 15 communities
-- [[style_lab.py]] - degree 39, connects to 8 communities
-- [[motion.py]] - degree 38, connects to 8 communities
-- [[remotion_render.py]] - degree 33, connects to 8 communities
+- [[test_style.py]] - degree 57, connects to 14 communities
+- [[plan_with()_1]] - degree 8, connects to 2 communities
+- [[wants_remotion()]] - degree 4, connects to 2 communities
+- [[apply_look_scenes()]] - degree 4, connects to 2 communities
+- [[test_fact_check_sees_new_graphics()]] - degree 4, connects to 1 community

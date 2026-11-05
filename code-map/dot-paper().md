@@ -2,7 +2,7 @@
 source_file: "drawn/kit.mjs"
 type: "code"
 community: "k"
-location: "L477"
+location: "L483"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -18,5 +18,6 @@ tags:
 - [[dot-text()_1]] - `calls` [EXTRACTED]
 - [[ellPts()]] - `calls` [EXTRACTED]
 - [[k]] - `method` [EXTRACTED]
+- [[makeKit()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/k

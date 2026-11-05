@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "re"
+community: "extra_sources.py"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/re
+  - community/extra_sourcespy
 ---
 
 # html_parser
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[extra_sources.py]] - `imports_from` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/re
+#graphify/concept #graphify/EXTRACTED #community/extra_sourcespy

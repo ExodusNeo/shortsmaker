@@ -16,7 +16,6 @@ members: 68
 - [[dot-blob()_2]] - code - drawn/kit.mjs
 - [[dot-boat()]] - code - drawn/kit.mjs
 - [[dot-bottle()]] - code - drawn/kit.mjs
-- [[dot-bubble()]] - code - drawn/kit.mjs
 - [[dot-cart()]] - code - drawn/kit.mjs
 - [[dot-cat()]] - code - drawn/kit.mjs
 - [[dot-chair()]] - code - drawn/kit.mjs
@@ -30,31 +29,32 @@ members: 68
 - [[dot-cup()]] - code - drawn/kit.mjs
 - [[dot-dog()]] - code - drawn/kit.mjs
 - [[dot-dot()_1]] - code - drawn/kit.mjs
+- [[dot-exclaim()]] - code - drawn/kit.mjs
 - [[dot-factory()]] - code - drawn/kit.mjs
 - [[dot-fire()]] - code - drawn/kit.mjs
+- [[dot-flood()]] - code - drawn/kit.mjs
 - [[dot-frame()]] - code - drawn/kit.mjs
 - [[dot-ground()]] - code - drawn/kit.mjs
 - [[dot-hills()]] - code - drawn/kit.mjs
 - [[dot-horse()]] - code - drawn/kit.mjs
 - [[dot-house()]] - code - drawn/kit.mjs
-- [[dot-ink()]] - code - drawn/kit.mjs
 - [[dot-island()]] - code - drawn/kit.mjs
 - [[dot-moneybag()]] - code - drawn/kit.mjs
 - [[dot-moon()]] - code - drawn/kit.mjs
-- [[dot-noise()]] - code - drawn/kit.mjs
 - [[dot-outline()]] - code - drawn/kit.mjs
 - [[dot-oval()]] - code - drawn/kit.mjs
 - [[dot-paint()]] - code - drawn/kit.mjs
+- [[dot-palm()]] - code - drawn/kit.mjs
 - [[dot-paper()]] - code - drawn/kit.mjs
 - [[dot-pig()]] - code - drawn/kit.mjs
 - [[dot-pine()]] - code - drawn/kit.mjs
+- [[dot-question()]] - code - drawn/kit.mjs
 - [[dot-rabbit()]] - code - drawn/kit.mjs
 - [[dot-rain()]] - code - drawn/kit.mjs
 - [[dot-rays()]] - code - drawn/kit.mjs
 - [[dot-rect()]] - code - drawn/kit.mjs
 - [[dot-ring()_1]] - code - drawn/kit.mjs
 - [[dot-room()]] - code - drawn/kit.mjs
-- [[dot-rrect()]] - code - drawn/kit.mjs
 - [[dot-rug()]] - code - drawn/kit.mjs
 - [[dot-sack()]] - code - drawn/kit.mjs
 - [[dot-sea()]] - code - drawn/kit.mjs
@@ -85,15 +85,16 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 28 edges to [[_COMMUNITY_dot-at]]
-- 28 edges to [[_COMMUNITY_clamp]]
-- 8 edges to [[_COMMUNITY_makeKit]]
-- 6 edges to [[_COMMUNITY_kit.mjs]]
+- 26 edges to [[_COMMUNITY_clamp]]
+- 23 edges to [[_COMMUNITY_dot-at]]
+- 22 edges to [[_COMMUNITY_makeKit]]
+- 5 edges to [[_COMMUNITY_bean.mjs]]
 - 2 edges to [[_COMMUNITY_core.mjs]]
+- 1 edge to [[_COMMUNITY_kit.mjs]]
 
 ## Top bridge nodes
-- [[ellPts()]] - degree 30, connects to 5 communities
-- [[k]] - degree 98, connects to 3 communities
+- [[ellPts()]] - degree 30, connects to 6 communities
+- [[k]] - degree 99, connects to 3 communities
 - [[dot-paint()]] - degree 51, connects to 3 communities
 - [[dot-ring()_1]] - degree 23, connects to 3 communities
 - [[dot-rect()]] - degree 20, connects to 2 communities

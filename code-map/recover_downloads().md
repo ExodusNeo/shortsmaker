@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/picker.py"
 type: "code"
-community: "choose_images"
+community: "re"
 location: "L22"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/choose_images
+  - community/re
 ---
 
 # recover_downloads()
@@ -20,4 +20,4 @@ tags:
 - [[json]] - `calls` [EXTRACTED]
 - [[picker.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/choose_images
+#graphify/code #graphify/EXTRACTED #community/re

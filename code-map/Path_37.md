@@ -11,8 +11,9 @@ tags:
 # Path
 
 ## Connections
+- [[blends()]] - `references` [EXTRACTED]
 - [[plan()_1]] - `references` [EXTRACTED]
-- [[render()_5]] - `references` [EXTRACTED]
+- [[render()]] - `references` [EXTRACTED]
 - [[sheet()_1]] - `references` [EXTRACTED]
 - [[write()_2]] - `references` [EXTRACTED]
 

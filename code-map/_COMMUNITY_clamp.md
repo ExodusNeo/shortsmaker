@@ -1,11 +1,11 @@
 ---
 type: community
-members: 27
+members: 25
 ---
 
 # clamp
 
-**Members:** 27 nodes
+**Members:** 25 nodes
 
 ## Members
 - [[dot-arc()]] - code - drawn/kit.mjs
@@ -16,9 +16,7 @@ members: 27
 - [[dot-ease()]] - code - drawn/kit.mjs
 - [[dot-fade()]] - code - drawn/kit.mjs
 - [[dot-fall()]] - code - drawn/kit.mjs
-- [[dot-flood()]] - code - drawn/kit.mjs
 - [[dot-next()]] - code - drawn/lib/pen.mjs
-- [[dot-palm()]] - code - drawn/kit.mjs
 - [[dot-person()]] - code - drawn/kit.mjs
 - [[dot-puff()]] - code - drawn/kit.mjs
 - [[dot-shadow()]] - code - drawn/kit.mjs
@@ -27,7 +25,7 @@ members: 27
 - [[dot-splash()]] - code - drawn/kit.mjs
 - [[dot-sweat()]] - code - drawn/kit.mjs
 - [[clamp()]] - code - drawn/lib/core.mjs
-- [[eElastic()]] - code - drawn/lib/core.mjs
+- [[eExpo()]] - code - drawn/lib/core.mjs
 - [[eIO()]] - code - drawn/lib/core.mjs
 - [[eIn()]] - code - drawn/lib/core.mjs
 - [[eOut()]] - code - drawn/lib/core.mjs
@@ -44,15 +42,16 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 28 edges to [[_COMMUNITY_k]]
+- 26 edges to [[_COMMUNITY_k]]
+- 15 edges to [[_COMMUNITY_makeKit]]
 - 15 edges to [[_COMMUNITY_core.mjs]]
-- 14 edges to [[_COMMUNITY_makeKit]]
-- 10 edges to [[_COMMUNITY_kit.mjs]]
+- 9 edges to [[_COMMUNITY_kit.mjs]]
 - 2 edges to [[_COMMUNITY_dot-at]]
+- 1 edge to [[_COMMUNITY_bean.mjs]]
 
 ## Top bridge nodes
 - [[clamp()]] - degree 35, connects to 5 communities
-- [[lerp()]] - degree 20, connects to 4 communities
+- [[lerp()]] - degree 20, connects to 5 communities
 - [[eOut()]] - degree 7, connects to 3 communities
+- [[dot-person()]] - degree 10, connects to 2 communities
 - [[dot-shadow()]] - degree 4, connects to 2 communities
-- [[pathOf()]] - degree 3, connects to 2 communities

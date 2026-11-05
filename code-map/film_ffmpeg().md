@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/image_sources.py"
 type: "code"
-community: "write_json"
+community: "gpu.py"
 location: "L332"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/write_json
+  - community/gpupy
 ---
 
 # film_ffmpeg()
@@ -19,4 +19,4 @@ tags:
 - [[image_sources.py]] - `contains` [EXTRACTED]
 - [[shot_moments()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/write_json
+#graphify/code #graphify/EXTRACTED #community/gpupy

@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "logbook.py"
+community: "json"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/logbookpy
+  - community/json
 ---
 
 # datetime
@@ -18,4 +18,4 @@ tags:
 - [[scene_repair.py]] - `imports_from` [EXTRACTED]
 - [[test_quality.py]] - `imports_from` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/logbookpy
+#graphify/concept #graphify/EXTRACTED #community/json

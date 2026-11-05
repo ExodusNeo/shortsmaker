@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "re"
+community: "first_sentence"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/re
+  - community/first_sentence
 ---
 
 # Path
 
 ## Connections
-- [[import_media()]] - `references` [EXTRACTED]
+- [[log_short()]] - `references` [EXTRACTED]
+- [[vault_page()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/re
+#graphify/code #graphify/EXTRACTED #community/first_sentence

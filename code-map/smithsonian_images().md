@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/extra_sources.py"
 type: "code"
-community: "source_json"
+community: "extra_sources.py"
 location: "L89"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/source_json
+  - community/extra_sourcespy
 ---
 
 # smithsonian_images()
@@ -18,4 +18,4 @@ tags:
 - [[optional_key()]] - `calls` [EXTRACTED]
 - [[source_json()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/source_json
+#graphify/code #graphify/EXTRACTED #community/extra_sourcespy

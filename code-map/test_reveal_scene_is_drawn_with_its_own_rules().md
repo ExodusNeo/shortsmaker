@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_drawn_opener.py"
 type: "code"
-community: "short"
+community: "test_drawn_opener.py"
 location: "L129"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/short
+  - community/test_drawn_openerpy
 ---
 
 # test_reveal_scene_is_drawn_with_its_own_rules()
@@ -19,4 +19,4 @@ tags:
 - [[short()_1]] - `calls` [EXTRACTED]
 - [[test_drawn_opener.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/short
+#graphify/code #graphify/EXTRACTED #community/test_drawn_openerpy

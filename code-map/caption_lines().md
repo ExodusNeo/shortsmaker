@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/audio_mix.py"
 type: "code"
-community: "ends_sentence"
+community: "captions"
 location: "L59"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ends_sentence
+  - community/captions
 ---
 
 # caption_lines()
@@ -18,4 +18,4 @@ tags:
 - [[ends_sentence()]] - `calls` [EXTRACTED]
 - [[render_remotion()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ends_sentence
+#graphify/code #graphify/EXTRACTED #community/captions

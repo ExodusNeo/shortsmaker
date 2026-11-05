@@ -1,12 +1,12 @@
 ---
 source_file: "drawn/kit.mjs"
 type: "code"
-community: "k"
+community: "makeKit"
 location: "L44"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/k
+  - community/makeKit
 ---
 
 # .noise()
@@ -15,4 +15,4 @@ tags:
 - [[k]] - `method` [EXTRACTED]
 - [[noise1()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/k
+#graphify/code #graphify/EXTRACTED #community/makeKit

@@ -58,6 +58,7 @@ tags:
 - [[dot-house()]] - `method` [EXTRACTED]
 - [[dot-ink()]] - `method` [EXTRACTED]
 - [[dot-island()]] - `method` [EXTRACTED]
+- [[dot-knock()]] - `method` [EXTRACTED]
 - [[dot-lamp()]] - `method` [EXTRACTED]
 - [[dot-letter()]] - `method` [EXTRACTED]
 - [[dot-moneybag()]] - `method` [EXTRACTED]

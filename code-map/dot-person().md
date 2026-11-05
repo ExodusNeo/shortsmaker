@@ -14,6 +14,7 @@ tags:
 ## Connections
 - [[dot-blob()_2]] - `calls` [EXTRACTED]
 - [[dot-crowd()]] - `calls` [EXTRACTED]
+- [[dot-knock()]] - `calls` [EXTRACTED]
 - [[dot-paint()]] - `calls` [EXTRACTED]
 - [[dot-ring()_1]] - `calls` [EXTRACTED]
 - [[dot-shadow()]] - `calls` [EXTRACTED]

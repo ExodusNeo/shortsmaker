@@ -1,11 +1,11 @@
 ---
 type: community
-members: 35
+members: 37
 ---
 
 # core.mjs
 
-**Members:** 35 nodes
+**Members:** 37 nodes
 
 ## Members
 - [[dot-constructor()]] - code - drawn/lib/pen.mjs
@@ -14,7 +14,7 @@ members: 35
 - [[burst()]] - code - drawn/lib/core.mjs
 - [[core.mjs]] - code - drawn/lib/core.mjs
 - [[eBounce()]] - code - drawn/lib/core.mjs
-- [[eExpo()]] - code - drawn/lib/core.mjs
+- [[eElastic()]] - code - drawn/lib/core.mjs
 - [[ellipse()]] - code - drawn/lib/core.mjs
 - [[fibre()]] - code - drawn/lib/core.mjs
 - [[fibrePaper()]] - code - drawn/lib/textures.mjs
@@ -26,12 +26,14 @@ members: 35
 - [[grass()]] - code - drawn/lib/textures.mjs
 - [[hash()]] - code - drawn/lib/core.mjs
 - [[hatch()]] - code - drawn/lib/core.mjs
+- [[lightBands()]] - code - drawn/lib/textures.mjs
 - [[line()]] - code - drawn/lib/core.mjs
 - [[mid()]] - code - drawn/lib/core.mjs
 - [[moon()]] - code - drawn/lib/textures.mjs
 - [[nightSky()]] - code - drawn/lib/textures.mjs
 - [[paper()_1]] - code - drawn/lib/textures.mjs
 - [[poly()]] - code - drawn/lib/core.mjs
+- [[rad()]] - code - drawn/lib/core.mjs
 - [[ref_napi_rs_canvas]] - concept
 - [[rng()_1]] - code - drawn/lib/core.mjs
 - [[setup()_1]] - code - drawn/run.mjs
@@ -52,15 +54,15 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 21 edges to [[_COMMUNITY_kit.mjs]]
+- 15 edges to [[_COMMUNITY_makeKit]]
 - 15 edges to [[_COMMUNITY_clamp]]
-- 12 edges to [[_COMMUNITY_makeKit]]
-- 3 edges to [[_COMMUNITY_dot-at]]
+- 13 edges to [[_COMMUNITY_kit.mjs]]
+- 6 edges to [[_COMMUNITY_bean.mjs]]
 - 2 edges to [[_COMMUNITY_k]]
 
 ## Top bridge nodes
 - [[core.mjs]] - degree 48, connects to 5 communities
-- [[star4()]] - degree 6, connects to 4 communities
 - [[textures.mjs]] - degree 27, connects to 3 communities
+- [[star4()]] - degree 6, connects to 3 communities
 - [[hash()]] - degree 7, connects to 2 communities
 - [[grainCanvas()]] - degree 10, connects to 1 community

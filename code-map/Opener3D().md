@@ -2,7 +2,7 @@
 source_file: "remotion/src/Opener3D.tsx"
 type: "code"
 community: "Opener3D.tsx"
-location: "L268"
+location: "L407"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -20,11 +20,16 @@ tags:
 - [[PictureLight()]] - `calls` [EXTRACTED]
 - [[Place()]] - `calls` [EXTRACTED]
 - [[PropMesh()]] - `calls` [EXTRACTED]
+- [[Puff()]] - `calls` [EXTRACTED]
 - [[Rings()]] - `calls` [EXTRACTED]
 - [[Root.tsx]] - `imports` [EXTRACTED]
 - [[Shafts()]] - `calls` [EXTRACTED]
 - [[cutPos()]] - `calls` [EXTRACTED]
+- [[framing()]] - `calls` [EXTRACTED]
+- [[hitAt()]] - `calls` [EXTRACTED]
+- [[joltOf()]] - `calls` [EXTRACTED]
 - [[targetOf()]] - `calls` [EXTRACTED]
+- [[useModels()]] - `calls` [EXTRACTED]
 - [[useTextures()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Opener3Dtsx

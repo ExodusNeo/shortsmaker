@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_ai_modes.py"
 type: "code"
-community: "other_ai"
+community: "configure_brain"
 location: "L26"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/other_ai
+  - community/configure_brain
 ---
 
 # reply()
@@ -15,4 +15,4 @@ tags:
 - [[claude()_1]] - `calls` [EXTRACTED]
 - [[fake_providers()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/other_ai
+#graphify/code #graphify/EXTRACTED #community/configure_brain

@@ -1,12 +1,12 @@
 ---
 source_file: "drawn/kit.mjs"
 type: "code"
-community: "clamp"
-location: "L445"
+community: "k"
+location: "L451"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/clamp
+  - community/k
 ---
 
 # .palm()
@@ -16,4 +16,4 @@ tags:
 - [[k]] - `method` [EXTRACTED]
 - [[lerp()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/clamp
+#graphify/code #graphify/EXTRACTED #community/k

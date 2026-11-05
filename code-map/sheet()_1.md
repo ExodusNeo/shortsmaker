@@ -2,7 +2,7 @@
 source_file: "shortsmaker/opener3d.py"
 type: "code"
 community: "plan"
-location: "L194"
+location: "L287"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -18,6 +18,6 @@ tags:
 - [[look()]] - `calls` [EXTRACTED]
 - [[opener3d.py]] - `contains` [EXTRACTED]
 - [[plan()_1]] - `calls` [EXTRACTED]
-- [[sheet_times()]] - `calls` [EXTRACTED]
+- [[sheet_times()_1]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/plan

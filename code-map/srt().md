@@ -13,9 +13,9 @@ tags:
 
 ## Connections
 - [[Exact-narration caption file to upload in YouTube Studio (searchable, unlike…]] - `rationale_for` [EXTRACTED]
-- [[Path_22]] - `references` [EXTRACTED]
+- [[Path_23]] - `references` [EXTRACTED]
 - [[ends_sentence()]] - `calls` [EXTRACTED]
-- [[render()_2]] - `calls` [EXTRACTED]
+- [[render()_3]] - `calls` [EXTRACTED]
 - [[seo.py]] - `contains` [EXTRACTED]
 - [[ts()]] - `contains` [EXTRACTED]
 

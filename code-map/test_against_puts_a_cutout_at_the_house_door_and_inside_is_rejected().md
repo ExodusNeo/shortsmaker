@@ -1,0 +1,19 @@
+---
+source_file: "tests/test_opener3d.py"
+type: "code"
+community: "test_opener3d.py"
+location: "L113"
+tags:
+  - graphify/code
+  - graphify/EXTRACTED
+  - community/test_opener3dpy
+---
+
+# test_against_puts_a_cutout_at_the_house_door_and_inside_is_rejected()
+
+## Connections
+- [[clean()]] - `calls` [EXTRACTED]
+- [[example()]] - `calls` [EXTRACTED]
+- [[test_opener3d.py]] - `contains` [EXTRACTED]
+
+#graphify/code #graphify/EXTRACTED #community/test_opener3dpy

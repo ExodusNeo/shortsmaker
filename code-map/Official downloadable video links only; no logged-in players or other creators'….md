@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/extra_sources.py"
 type: "rationale"
-community: "source_json"
+community: "extra_sources.py"
 location: "L209"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/source_json
+  - community/extra_sourcespy
 ---
 
 # Official downloadable video links only; no logged-in players or other creators'…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[brand_films()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/source_json
+#graphify/rationale #graphify/EXTRACTED #community/extra_sourcespy

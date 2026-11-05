@@ -1,18 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "write_json"
+community: "edit_plan"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/write_json
+  - community/edit_plan
 ---
 
 # Path
 
 ## Connections
-- [[duration()]] - `references` [EXTRACTED]
-- [[ffmpeg()]] - `references` [EXTRACTED]
-- [[write_json()]] - `references` [EXTRACTED]
+- [[edit_plan()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/write_json
+#graphify/code #graphify/EXTRACTED #community/edit_plan

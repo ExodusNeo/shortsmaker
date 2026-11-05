@@ -14,6 +14,8 @@ tags:
 ## Connections
 - [[core.mjs]] - `imports_from` [EXTRACTED]
 - [[drawn_lib_core_createcanvas]] - `imports` [EXTRACTED]
+- [[flat]] - `contains` [EXTRACTED]
+- [[fx]] - `contains` [EXTRACTED]
 - [[job]] - `contains` [EXTRACTED]
 - [[kit.mjs]] - `imports_from` [EXTRACTED]
 - [[makeKit()]] - `imports` [EXTRACTED]

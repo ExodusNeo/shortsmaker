@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/drawn_opener.py"
 type: "code"
-community: "write"
-location: "L83"
+community: "drawn_opener.py"
+location: "L103"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/write
+  - community/drawn_openerpy
 ---
 
 # clean_code()
@@ -18,4 +18,4 @@ tags:
 - [[re]] - `calls` [EXTRACTED]
 - [[write()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/write
+#graphify/code #graphify/EXTRACTED #community/drawn_openerpy

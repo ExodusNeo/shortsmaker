@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/review.py"
 type: "code"
-community: "finish_render"
+community: "paint_opener_start"
 location: "L398"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/finish_render
+  - community/paint_opener_start
 ---
 
 # weak_opener_graphic()
@@ -17,4 +17,4 @@ tags:
 - [[review.py]] - `contains` [EXTRACTED]
 - [[test_weak_opener_graphic_fixes_then_handoff()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/finish_render
+#graphify/code #graphify/EXTRACTED #community/paint_opener_start

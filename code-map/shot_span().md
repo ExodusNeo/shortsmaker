@@ -1,18 +1,18 @@
 ---
 source_file: "shortsmaker/footage.py"
 type: "code"
-community: "duration"
+community: "gpu.py"
 location: "L302"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/duration
+  - community/gpupy
 ---
 
 # shot_span()
 
 ## Connections
-- [[Path_1]] - `references` [EXTRACTED]
+- [[Path_5]] - `references` [EXTRACTED]
 - [[Start and end of the camera shot containing time `at` (newsreels cut to title…]] - `rationale_for` [EXTRACTED]
 - [[duration()]] - `calls` [EXTRACTED]
 - [[footage.py]] - `contains` [EXTRACTED]
@@ -20,4 +20,4 @@ tags:
 - [[re]] - `calls` [EXTRACTED]
 - [[subprocess]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/duration
+#graphify/code #graphify/EXTRACTED #community/gpupy

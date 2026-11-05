@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/photo_prep.py"
 type: "code"
-community: "clean_photo"
+community: "paint_instead"
 location: "L47"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/clean_photo
+  - community/paint_instead
 ---
 
 # border()
@@ -15,4 +15,4 @@ tags:
 - [[plain()]] - `calls` [EXTRACTED]
 - [[trim_borders()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/clean_photo
+#graphify/code #graphify/EXTRACTED #community/paint_instead

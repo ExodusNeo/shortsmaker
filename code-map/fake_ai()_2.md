@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_drawn_opener.py"
 type: "code"
-community: "short"
+community: "test_drawn_opener.py"
 location: "L40"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/short
+  - community/test_drawn_openerpy
 ---
 
 # fake_ai()
@@ -17,4 +17,4 @@ tags:
 - [[test_drawn_opener_renders_and_is_reused()]] - `calls` [EXTRACTED]
 - [[test_reveal_scene_is_drawn_with_its_own_rules()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/short
+#graphify/code #graphify/EXTRACTED #community/test_drawn_openerpy

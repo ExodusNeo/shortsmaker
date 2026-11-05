@@ -1,18 +1,18 @@
 ---
 source_file: "shortsmaker/drawn_opener.py"
 type: "code"
-community: "write"
-location: "L128"
+community: "drawn_opener.py"
+location: "L148"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/write
+  - community/drawn_openerpy
 ---
 
 # write()
 
 ## Connections
-- [[Path]] - `references` [EXTRACTED]
+- [[Path_3]] - `references` [EXTRACTED]
 - [[The coder's scene {moment what it shows, code the module}; with `old`…]] - `rationale_for` [EXTRACTED]
 - [[ask_ai()]] - `calls` [EXTRACTED]
 - [[clean_code()]] - `calls` [EXTRACTED]
@@ -21,4 +21,4 @@ tags:
 - [[make_opener()]] - `calls` [EXTRACTED]
 - [[opener_role()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/write
+#graphify/code #graphify/EXTRACTED #community/drawn_openerpy

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/drawn_opener.py"
 type: "rationale"
-community: "json"
-location: "L219"
+community: "drawn_opener.py"
+location: "L246"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/json
+  - community/drawn_openerpy
 ---
 
 # Changes when the plan or the code that renders it changes (a 3D plan also…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[fingerprint()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/json
+#graphify/rationale #graphify/EXTRACTED #community/drawn_openerpy

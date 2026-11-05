@@ -1,18 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "retention.py"
+community: "paint_instead"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/retentionpy
+  - community/paint_instead
 ---
 
 # Path
 
 ## Connections
-- [[analyze()]] - `references` [EXTRACTED]
-- [[edit_metrics()]] - `references` [EXTRACTED]
-- [[load_metrics()]] - `references` [EXTRACTED]
+- [[mark_details()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/retentionpy
+#graphify/code #graphify/EXTRACTED #community/paint_instead

@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_opener_graphic.py"
 type: "code"
-community: "paint_opener_start"
+community: "use"
 location: "L70"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/paint_opener_start
+  - community/use
 ---
 
 # use()
@@ -18,4 +18,4 @@ tags:
 - [[use_opener with the drawn opener already failed (drawn_failed it is never…]] - `rationale_for` [EXTRACTED]
 - [[use_opener()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/paint_opener_start
+#graphify/code #graphify/EXTRACTED #community/use
