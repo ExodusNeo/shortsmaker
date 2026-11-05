@@ -110,12 +110,6 @@ def short_skin(short: dict, full: dict | None = None) -> str:
     return PALETTE_SKINS.get(pal, "parchment")
 
 
-def ass_colour(rgb: tuple[int, int, int], dim: float = 1.0) -> str:
-    """ASS subtitle colour (&H00BBGGRR&), optionally darkened (for an outline)."""
-    r, g, b = (int(v * dim) for v in rgb)
-    return f"&H00{b:02X}{g:02X}{r:02X}&"
-
-
 # Story shapes rotated between Shorts so the channel doesn't read as one template.
 SHAPES = ["mystery solved", "rise and fall", "countdown to disaster", "myth vs truth",
           "one person against the odds", "the hidden reason", "chain of unlikely events"]

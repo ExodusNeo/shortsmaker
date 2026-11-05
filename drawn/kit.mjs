@@ -5,7 +5,7 @@
 // Every part is placed by its GROUND point (x = centre, y = where it stands) and a scale s (1 = normal size), so
 // things stand on the ground without arithmetic. Marks are seeded from the call order (k.part names each call), so
 // a held drawing keeps its marks and every render of the same code is identical.
-import { clamp, lerp, ss, eOut, eBack, popS, ellPts, rrect, noise1, hash } from "./lib/core.mjs";
+import { clamp, lerp, ss, eOut, eBack, popS, ellPts, rrect, noise1, hash, createCanvas } from "./lib/core.mjs";
 import { Pen } from "./lib/pen.mjs";
 import { star4 } from "./lib/textures.mjs";
 import { person as beanPerson, SKIN } from "./lib/rigs/bean.mjs";
@@ -19,7 +19,19 @@ export const C = {
   money: "#8DB872", skin: SKIN,
 };
 
-export function makeKit(ctx, t, words = []) {
+// Light moods (owner, 2026-11-05: clean openers like the "Second Draw" Short, one light mood per scene). run.mjs
+// grades the finished frame with key/shade; haze tints what k.depth() pushes back.
+export const MOODS = {
+  day: { key: "#FFF2CF", keyA: .22, shade: "#2E4A7A", shadeA: .16, haze: "#DCE8F0" },
+  golden: { key: "#FFC06A", keyA: .30, shade: "#4A2E6A", shadeA: .22, haze: "#F6D2A0" },
+  dusk: { key: "#FF9A5A", keyA: .28, shade: "#2A2350", shadeA: .32, haze: "#E8A27A" },
+  night: { key: "#9EB6FF", keyA: .18, shade: "#0E1438", shadeA: .50, haze: "#2A3466" },
+  interior: { key: "#FFB25C", keyA: .32, shade: "#24140C", shadeA: .42, haze: "#5A3A24" },
+};
+export const lightOf = (l = {}) => ({ mood: MOODS[l.mood] ? l.mood : "day", from: Array.isArray(l.from) ? l.from : [880, 260] });
+let depthTmp = null;   // one scratch canvas for k.depth, reused every frame
+
+export function makeKit(ctx, t, words = [], light = lightOf()) {
   const p = new Pen(ctx);
   let n = 0;
   const k = { ctx, t, W, H, C, SKIN, pen: p };
@@ -122,8 +134,33 @@ export function makeKit(ctx, t, words = []) {
       p.poly(k.rect(wx - 110, wy - 140, 220, 280), { w: 6, color: C.wood }); p.stroke([[wx, wy - 140], [wx, wy + 140]], { w: 5, color: C.wood }); p.stroke([[wx - 110, wy], [wx + 110, wy]], { w: 5, color: C.wood }); }
   };
 
+  // ---- light and depth ------------------------------------------------------------------------------------------
+  // a soft ground shadow cast away from the light (people and animals get one by themselves)
+  k.shadow = (x, y, w = 40) => { const dir = x >= light.from[0] ? 1 : -1, a = MOODS[light.mood].shadeA;
+    ctx.save(); ctx.globalCompositeOperation = "multiply"; ctx.globalAlpha = clamp(.2 + a * .6); ctx.fillStyle = MOODS[light.mood].shade;
+    ctx.beginPath(); ctx.ellipse(x + dir * w * .7, y + 2, w * 1.5, w * .22, 0, 0, Math.PI * 2); ctx.fill(); ctx.restore(); };
+  // everything drawn so far becomes the far background: softly out of focus and hazed, so what comes next pops
+  k.depth = (amount = 1) => { const c = ctx.canvas;
+    if (!depthTmp || depthTmp.width !== c.width) depthTmp = createCanvas(c.width, c.height);
+    const tx = depthTmp.getContext("2d"); tx.clearRect(0, 0, c.width, c.height); tx.drawImage(c, 0, 0);
+    ctx.save(); ctx.setTransform(1, 0, 0, 1, 0, 0); ctx.filter = `blur(${(7 * clamp(amount, 0, 2)).toFixed(1)}px)`; ctx.drawImage(depthTmp, 0, 0); ctx.filter = "none";
+    ctx.globalAlpha = .2 * clamp(amount, 0, 2); ctx.fillStyle = MOODS[light.mood].haze; ctx.fillRect(0, 0, c.width, c.height); ctx.restore(); };
+  k.dust = (strength = 1) => { ctx.save(); ctx.globalCompositeOperation = "screen";   // slow floating motes in the light
+    for (let i = 0; i < 34 * strength; i++) { const x = (hash(i * 5.1) * 1160 + t * (14 + hash(i) * 22)) % 1160 - 40, y = (hash(i * 2.3) * 1900 - t * (8 + hash(i * 9) * 14) + 1900) % 1900;
+      ctx.globalAlpha = .35 + .35 * Math.sin(t * 1.7 + i); ctx.fillStyle = MOODS[light.mood].key; ctx.beginPath(); ctx.arc(x, y, 2 + hash(i * 4.4) * 4, 0, Math.PI * 2); ctx.fill(); }
+    ctx.restore(); };
+  k.rays = (x, y, o = {}) => { const ang = (o.angle ?? 120) * Math.PI / 180, n = o.count || 4, len = o.length || 1500, wide = o.width || 90;   // light shafts from a window or gap
+    ctx.save(); ctx.globalCompositeOperation = "screen";
+    for (let i = 0; i < n; i++) { const off = (i - (n - 1) / 2) * wide * 1.3, w = wide * (.6 + .5 * hash(i * 3.3)), sx = x + Math.cos(ang + Math.PI / 2) * off, sy = y + Math.sin(ang + Math.PI / 2) * off;
+      const ex = sx + Math.cos(ang) * len, ey = sy + Math.sin(ang) * len, g = ctx.createLinearGradient(sx, sy, ex, ey);
+      g.addColorStop(0, MOODS[light.mood].key); g.addColorStop(1, "rgba(0,0,0,0)"); ctx.globalAlpha = (o.strength ?? .35) * (.8 + .2 * Math.sin(t * 1.3 + i)); ctx.fillStyle = g;
+      const nx = Math.cos(ang + Math.PI / 2), ny = Math.sin(ang + Math.PI / 2);
+      ctx.beginPath(); ctx.moveTo(sx - nx * w * .3, sy - ny * w * .3); ctx.lineTo(sx + nx * w * .3, sy + ny * w * .3); ctx.lineTo(ex + nx * w, ey + ny * w); ctx.lineTo(ex - nx * w, ey - ny * w); ctx.fill(); }
+    ctx.restore(); };
+
   // ---- people ---------------------------------------------------------------------------------------------------
-  const HATS = ["tricorn", "top", "bowler", "crown", "bonnet", "cap", "helmet", "pith", "fez", "turban", "peci", "none"];
+  const HATS = ["tricorn", "top", "bowler", "crown", "bonnet", "cap", "helmet", "pith", "fez", "turban", "peci", "fedora", "flatcap",
+                "boater", "cowboy", "ranger", "kepi", "officer", "bobby", "bicorne", "nurse", "hardhat", "none"];
   k.HATS = HATS;
   // hats the bean rig doesn't have, in the person's local space (head centre at hy)
   const ownHat = (kind, hy, o) => {
@@ -132,6 +169,29 @@ export function makeKit(ctx, t, words = []) {
     if (kind === "top") { const P = [[-24, hy - 26], [-24, hy - 92], [24, hy - 92], [24, hy - 26]]; k.paint(P, col, { sharp: true }); p.poly(P, { w: 3.4 }); p.stroke([[-42, hy - 24], [42, hy - 24]], { w: 6 }); }
     if (kind === "bowler") { const P = ellPts(0, hy - 34, 30, 26, 16).filter(([, y]) => y <= hy - 30); k.paint([...P, [30, hy - 30], [-30, hy - 30]], col); p.stroke([[-44, hy - 26], [44, hy - 26]], { w: 6 }); }
     if (kind === "crown") { const P = [[-30, hy - 22], [-34, hy - 66], [-17, hy - 46], [0, hy - 72], [17, hy - 46], [34, hy - 66], [30, hy - 22]]; k.paint(P, col, { sharp: true }); p.poly(P, { w: 3.4 }); p.dot(0, hy - 40, 5, C.red); }
+    // 2026-11-05: hats for the eras the stories visit (1600s-1980s: officers, police, rangers, workers, businessmen)
+    const hat = (P, c, o2 = {}) => { k.paint(P, c, { sharp: P.length <= 6, ...o2 }); p.poly(P, { w: 3.4 }); };
+    if (kind === "fedora") { const c = o.hatColor || "#4A4038";
+      hat([[-56, hy - 15], [-40, hy - 24], [40, hy - 24], [56, hy - 15], [40, hy - 11], [-40, hy - 11]], c);
+      hat([[-26, hy - 20], [-22, hy - 58], [0, hy - 50], [22, hy - 58], [26, hy - 20]], c); p.stroke([[-26, hy - 28], [26, hy - 28]], { w: 6, color: o.band || "#2A2420" }); }
+    if (kind === "flatcap") hat([[-33, hy - 14], [-30, hy - 34], [-8, hy - 42], [24, hy - 40], [42, hy - 26], [52, hy - 14], [30, hy - 13]], o.hatColor || "#7A6A55");
+    if (kind === "boater") { hat(k.rect(-54, hy - 22, 108, 8), "#E3C77A"); hat(k.rect(-27, hy - 46, 54, 24), "#E3C77A"); p.stroke([[-27, hy - 30], [27, hy - 30]], { w: 7, color: o.band || C.navy }); }
+    if (kind === "cowboy") { const c = o.hatColor || "#8A5A33";
+      hat([[-24, hy - 22], [-26, hy - 56], [-10, hy - 62], [0, hy - 54], [10, hy - 62], [26, hy - 56], [24, hy - 22]], c, { round: true });
+      hat([[-64, hy - 36], [-48, hy - 20], [0, hy - 15], [48, hy - 20], [64, hy - 36], [46, hy - 25], [0, hy - 23], [-46, hy - 25]], c, { round: true }); }
+    if (kind === "ranger") { const c = o.hatColor || "#B08A50"; hat(k.rect(-62, hy - 21, 124, 8), c);
+      hat([[-26, hy - 20], [-20, hy - 48], [0, hy - 68], [20, hy - 48], [26, hy - 20]], c); p.stroke([[0, hy - 64], [0, hy - 40]], { w: 2.6 }); p.stroke([[-26, hy - 26], [26, hy - 26]], { w: 6, color: C.wood }); }
+    if (kind === "kepi") { hat([[-28, hy - 18], [-25, hy - 62], [24, hy - 54], [28, hy - 18]], o.hatColor || C.navy); p.stroke([[-30, hy - 16], [34, hy - 14]], { w: 7 }); }
+    if (kind === "officer") { const c = o.hatColor || "#4E5A3A";
+      k.paint(ellPts(0, hy - 42, 46, 13, 16), c); p.ring(0, hy - 42, 46, 13, { w: 3.4 }); hat(k.rect(-30, hy - 40, 60, 18), o.band || C.red);
+      hat([[-32, hy - 22], [32, hy - 22], [24, hy - 12], [-24, hy - 12]], "#1E1A18"); k.disc(0, hy - 42, 7, C.gold, { w: 2 }); }
+    if (kind === "bobby") { hat([[-30, hy - 18], [-30, hy - 50], [-18, hy - 78], [0, hy - 88], [18, hy - 78], [30, hy - 50], [30, hy - 18]], o.hatColor || "#1F2740", { round: true });
+      p.stroke([[-38, hy - 16], [38, hy - 16]], { w: 6 }); k.disc(0, hy - 46, 9, C.gold, { w: 2 }); p.dot(0, hy - 90, 5); }
+    if (kind === "bicorne") { hat([[-70, hy - 22], [-40, hy - 50], [0, hy - 62], [40, hy - 50], [70, hy - 22], [40, hy - 34], [0, hy - 38], [-40, hy - 34]], o.hatColor || "#1E1A18", { round: true });
+      k.disc(0, hy - 44, 9, o.cockade || C.red, { w: 2 }); }
+    if (kind === "nurse") { hat([[-24, hy - 24], [-20, hy - 46], [20, hy - 46], [24, hy - 24]], C.white); p.stroke([[0, hy - 42], [0, hy - 28]], { w: 5, color: C.red }); p.stroke([[-7, hy - 35], [7, hy - 35]], { w: 5, color: C.red }); }
+    if (kind === "hardhat") { hat([[-32, hy - 16], [-30, hy - 40], [-14, hy - 56], [14, hy - 56], [30, hy - 40], [32, hy - 16]], o.hatColor || "#F2C230", { round: true });
+      p.stroke([[-44, hy - 15], [44, hy - 15]], { w: 7 }); p.stroke([[0, hy - 56], [0, hy - 20]], { w: 3 }); }
     if (kind === "bonnet") { const P = ellPts(0, hy - 6, 42, 40, 16).filter(([, y]) => y <= hy + 6); k.paint([...P], o.hatColor || "#E8D9B0"); p.stroke(P, { w: 3.4 }); p.stroke([[-30, hy + 10], [-8, hy + 34]], { w: 2.6, color: C.red }); }
   };
   k.person = (x, y, s = 1, o = {}) => {
@@ -149,6 +209,7 @@ export function makeKit(ctx, t, words = []) {
       [[-1, 0], [1, 1]].forEach(([sg, j]) => { const r = ik(o.reach[j], sg); if (r) [arms[j], bend[j]] = r; });
       o = { ...o, arms, bend };
     }
+    k.shadow(x, y, 46 * s);
     const bean = { ...o, shirt: o.coat || o.shirt, hat: HATS.includes(o.hat) && ["cap", "helmet", "pith", "fez", "turban", "peci"].includes(o.hat) ? o.hat : undefined };
     // the rig paints with see-through washes: an opaque paper underlay keeps a coat and face their own colour over
     // a sea or sky (the first live drafts turned people green over the teal sea)
@@ -167,7 +228,9 @@ export function makeKit(ctx, t, words = []) {
     const hand = (a, b, sg, sx) => { const d = (ang) => [sg * Math.sin(ang * Math.PI / 180), Math.cos(ang * Math.PI / 180)];
       const [ux, uy] = d(a), [fx, fy] = d(a + b), lx = sx + ux * 42 + fx * 40, ly = -166 + uy * 42 + fy * 40;
       return [x + flip * s * lx, y + bob * s + s * ly]; };
-    return { head: [x, y + bob * s + s * hy], top: [x, y + bob * s + s * (hy - 50)], hands: [hand(la, lb, -1, -22), hand(ra, rb, 1, 22)] };
+    const hands = [hand(la, lb, -1, -22), hand(ra, rb, 1, 22)];
+    for (const [hx, hy2] of hands) { k.paint(ellPts(hx, hy2, 7 * s, 7 * s, 10), o.skin || SKIN[0]); p.ring(hx, hy2, 7 * s, 7 * s, { w: 2.4 }); }   // opaque: washed hands went muddy on dark coats
+    return { head: [x, y + bob * s + s * hy], top: [x, y + bob * s + s * (hy - 50)], hands };
   };
   k.crowd = (x0, x1, y, count = 5, s = .8, o = {}) => {
     const out = [];
@@ -184,7 +247,7 @@ export function makeKit(ctx, t, words = []) {
     const a = walk == null ? 0 : Math.sin(walk + i * Math.PI / 2) * .45;
     p.stroke([[lx, ly], [lx + Math.sin(a) * len, ly + Math.cos(a) * len]], { w, taper: .3 });
   });
-  const animal = (x, y, s, o, draw) => { part(); ctx.save(); ctx.translate(x, y); ctx.scale(s * (o.flip ? -1 : 1), s); draw(); ctx.restore(); };
+  const animal = (x, y, s, o, draw, w = 70) => { if (w) k.shadow(x, y, w * s); part(); ctx.save(); ctx.translate(x, y); ctx.scale(s * (o.flip ? -1 : 1), s); draw(); ctx.restore(); };
   k.dog = (x, y, s = 1, o = {}) => animal(x, y, s, o, () => {
     const col = o.color || "#B98A55";
     legs([[-50, -40], [-34, -40], [34, -40], [50, -40]], o.walk, 40);
@@ -193,7 +256,7 @@ export function makeKit(ctx, t, words = []) {
     p.wash([[96, -98], [124, -92], [120, -80], [98, -84]], col, { solid: true, over: true }); p.stroke([[96, -98], [124, -92], [120, -80], [98, -84]], { w: 3.4 });
     p.wash([[62, -118], [52, -86], [70, -96]], "#7A5A3A", { solid: true, over: true }); p.dot(122, -92, 4.5); p.dot(84, -106, 4);
     p.stroke([[-68, -70], [-96, -96 + Math.sin(t * 12) * 10]], { w: 4.4, taper: .5 });
-  });
+  }, 70);
   k.chicken = (x, y, s = 1, o = {}) => animal(x, y, s, o, () => {
     legs([[-10, -40], [12, -40]], o.walk, 40, 3.6);
     const B = ellPts(0, -80, 52, 42, 18); k.paint(B, o.color || C.white); p.ring(0, -80, 52, 42, { w: 4 });
@@ -204,7 +267,7 @@ export function makeKit(ctx, t, words = []) {
       p.wash([[40, -152], [48, -168], [56, -152]], C.red, { solid: true, over: true }); p.wash([[66, -134], [84, -128], [66, -122]], C.gold, { solid: true, over: true }); p.dot(52, -136, 3.6);
       p.stroke([[36, -104], [42, -114]], { w: 3.6 }); }
     else { p.stroke([[34, -110], [44, -130]], { w: 6 }); p.wash(ellPts(44, -130, 8, 5, 8), C.red, { solid: true, over: true }); }
-  });
+  }, 42);
   // a horse with jointed legs, hooves, mane and tail (2026-11-03: the stick-leg one was replaced by hand-built boxes in
   // the Clever Hans opener). o: color, mane, walk (phase), tap: [times] the near forehoof strikes the ground at.
   // Returns {hoof, head} in screen space (dust at the hoof, a bubble or question at the head).
@@ -250,27 +313,53 @@ export function makeKit(ctx, t, words = []) {
       horseLeg(-70, bn0, bn0 + bn1, col, dark);                                            // near hind leg
       const up = o.tap ? 40 * lift : fn0, low = o.tap ? up - 105 * lift : fn0 + fn1;     // tapping: knee up, hoof tucked
       hoof = horseLeg(92, up, low, col, dark);                                            // near foreleg
-    });
+    }, 150);
     const f = o.flip ? -1 : 1;
     return { hoof: [x + hoof[0] * s * f, y + hoof[1] * s], head: [x + 170 * s * f, y - 290 * s] };
   };
   k.bird = (x, y, s = 1, o = {}) => animal(x, y, s, o, () => {
     const f = Math.sin(t * 14 + x) * 18;
     p.stroke([[-40, -f], [-14, 4], [0, 8], [14, 4], [40, -f]], { w: 4.2, color: o.color || C.ink });
-  });
+  }, 0);
   k.pig = (x, y, s = 1, o = {}) => animal(x, y, s, o, () => {
     legs([[-40, -36], [-22, -36], [22, -36], [40, -36]], o.walk, 32, 5);
     const B = ellPts(0, -76, 74, 48, 18); k.paint(B, o.color || "#E9A9A0"); p.ring(0, -76, 74, 48, { w: 4 });
     k.paint(ellPts(78, -84, 18, 16, 10), "#D98A82"); p.ring(78, -84, 18, 16, { w: 3.4 }); p.dot(74, -84, 3); p.dot(84, -84, 3); p.dot(54, -98, 4);
     p.stroke([[-72, -84], [-88, -94], [-80, -104]], { w: 3.4 });
-  });
+  }, 85);
   k.cow = (x, y, s = 1, o = {}) => animal(x, y, s, o, () => {
     legs([[-80, -110], [-60, -110], [60, -110], [80, -110]], o.walk, 100, 6);
     const B = [[-110, -116], [-104, -190], [90, -196], [112, -150], [96, -110]]; k.paint(B, o.color || C.white, { round: true }); p.blob(B, { w: 4.4 });
     p.wash(ellPts(-30, -160, 30, 22, 12), C.ink, { alpha: .85 }); p.wash(ellPts(40, -140, 22, 16, 10), C.ink, { alpha: .85 });
     k.paint(ellPts(130, -186, 34, 30, 14), o.color || C.white); p.ring(130, -186, 34, 30, { w: 4 }); p.dot(140, -192, 4.5);
     p.stroke([[112, -214], [100, -236]], { w: 4 }); p.stroke([[148, -214], [160, -236]], { w: 4 });
-  });
+  }, 140);
+  k.cat = (x, y, s = 1, o = {}) => animal(x, y, s, o, () => {         // about 120*s tall
+    const col = o.color || "#E0A060";
+    legs([[-36, -30], [-22, -30], [26, -30], [40, -30]], o.walk, 30, 3.8);
+    const B = [[-52, -36], [-46, -64], [30, -68], [50, -50], [42, -30], [-46, -28]]; k.paint(B, col, { round: true }); p.blob(B, { w: 4 });
+    p.stroke([[-50, -52], [-78, -72], [-82, -104 + Math.sin(t * 3) * 6], [-66, -118 + Math.sin(t * 3) * 8]], { w: 5, taper: .5 });
+    k.paint([[44, -90], [48, -116], [60, -96]], col, { sharp: true }); p.poly([[44, -90], [48, -116], [60, -96]], { w: 3 });
+    k.paint([[66, -98], [80, -114], [82, -90]], col, { sharp: true }); p.poly([[66, -98], [80, -114], [82, -90]], { w: 3 });
+    k.paint(ellPts(64, -80, 26, 22, 14), col); p.ring(64, -80, 26, 22, { w: 4 }); p.dot(74, -84, 4); p.dot(88, -76, 3, "#C86A6A");
+  }, 50);
+  k.rabbit = (x, y, s = 1, o = {}) => animal(x, y, s, o, () => {      // sitting, about 175*s tall with ears
+    const col = o.color || "#C9B8A6", tw = Math.sin(t * 2.4) * 4;
+    k.paint(ellPts(-46, -42, 13, 13, 10), C.white); p.ring(-46, -42, 13, 13, { w: 3 });
+    k.paint(ellPts(0, -50, 48, 46, 18), col); p.ring(0, -50, 48, 46, { w: 4 });
+    k.paint(ellPts(30, -6, 24, 8, 12), col); p.ring(30, -6, 24, 8, { w: 3 });
+    for (const E of [[[30, -108], [24 + tw, -172], [38 + tw, -176], [42, -112]], [[46, -108], [56 + tw, -168], [66 + tw, -162], [54, -104]]]) { k.paint(E, col, { round: true }); p.blob(E, { w: 3.4 }); }
+    k.paint(ellPts(42, -92, 28, 25, 14), col); p.ring(42, -92, 28, 25, { w: 4 }); p.dot(52, -96, 4); p.dot(68, -88, 3, "#C86A6A");
+  }, 55);
+  k.bear = (x, y, s = 1, o = {}) => animal(x, y, s, o, () => {        // on all fours, about 230*s tall, 340*s long
+    const col = o.color || "#6B4A32";
+    legs([[-88, -64], [-60, -64], [56, -64], [86, -64]], o.walk, 64, 22);
+    const B = [[-128, -74], [-122, -138], [-70, -168], [20, -176], [62, -204], [104, -178], [124, -118], [106, -66], [0, -58], [-100, -60]];
+    k.paint(B, col, { round: true }); p.blob(B, { w: 4.4 });
+    k.disc(126, -192, 15, col); k.disc(170, -194, 15, col);
+    k.paint(ellPts(150, -152, 50, 44, 18), col); p.ring(150, -152, 50, 44, { w: 4.4 });
+    k.paint(ellPts(188, -138, 24, 17, 12), "#B08A68"); p.ring(188, -138, 24, 17, { w: 3 }); p.dot(208, -144, 7); p.dot(160, -164, 5);
+  }, 160);
 
   // ---- vehicles and buildings -----------------------------------------------------------------------------------
   k.ship = (x, y, s = 1, o = {}) => {                       // y = waterline; returns the deck's y and ends
@@ -400,6 +489,82 @@ export function makeKit(ctx, t, words = []) {
     part(); k.paint(top, o.color || C.wood, { sharp: true }); p.poly(top, { w: 4 }); for (const lx of [-w / 2 + 30, w / 2 - 30]) p.stroke([[x + lx, y - 154], [x + lx, y]], { w: 10, color: C.wood }); return { top: y - 180 }; };
   k.chair = (x, y, s = 1) => { part(); p.stroke([[x - 40 * s, y], [x - 40 * s, y - 220 * s]], { w: 8, color: C.wood }); p.stroke([[x + 40 * s, y], [x + 40 * s, y - 110 * s]], { w: 8, color: C.wood });
     p.stroke([[x - 44 * s, y - 110 * s], [x + 44 * s, y - 110 * s]], { w: 10, color: C.wood }); };
+  // 2026-11-05: things past openers had to build from shapes (doors, beds, room furniture) and period devices
+  const at = (x, y, s, P) => P.map(([a, b]) => [x + a * s, y + b * s]);
+  const box = (x, y, s, P, c) => { const Q = at(x, y, s, P); k.paint(Q, c, { sharp: Q.length <= 6 }); p.poly(Q, { w: 4 }); return Q; };
+  k.door = (x, y, s = 1, o = {}) => {                                  // stands on (x, y); open 0..1 swings it inward
+    const w = 130, h = 290, op = clamp(o.open || 0), c = o.color || C.wood; part();
+    box(x, y, s, [[-w / 2 - 14, 0], [-w / 2 - 14, -h - 14], [w / 2 + 14, -h - 14], [w / 2 + 14, 0]], "#4A2E1C");
+    box(x, y, s, [[-w / 2, 0], [-w / 2, -h], [w / 2, -h], [w / 2, 0]], o.inside || "#2A2018");
+    const r = w / 2 - w * .85 * op;                                    // the free edge moves toward the hinge as it opens
+    box(x, y, s, [[-w / 2, 0], [-w / 2, -h], [r, -h + 14 * op], [r, -14 * op]], c);
+    if (op < .7) for (const [py, ph] of [[-h + 24, 110], [-140, 110]]) p.poly(at(x, y, s, [[-w / 2 + 18, py], [-w / 2 + 18, py + ph], [r - 18, py + ph], [r - 18, py]]), { w: 2.6 });
+    const knob = [x + (r - 20) * s, y - 140 * s]; k.disc(knob[0], knob[1], 8 * s, C.brass, { w: 2.4 });
+    return { knob, top: y - (h + 14) * s, left: x - (w / 2 + 14) * s, right: x + (w / 2 + 14) * s };
+  };
+  k.bed = (x, y, s = 1, o = {}) => {                                   // stands on (x, y), headboard on the left
+    part(); if (o.canopy) for (const px of [-215, 215]) p.stroke(at(x, y, s, [[px, 0], [px, -420]]), { w: 10, color: C.wood });
+    if (o.canopy) box(x, y, s, [[-230, -420], [-230, -450], [230, -450], [230, -420]], o.canopy === true ? "#8A2E2A" : o.canopy);
+    box(x, y, s, [[-225, 0], [-225, -230], [-195, -230], [-195, 0]], C.wood);
+    box(x, y, s, [[-200, -70], [-200, -140], [210, -140], [210, -70]], o.sheet || C.white);
+    box(x, y, s, [[-60, -70], [-70, -150], [205, -150], [215, -70]], o.blanket || "#5A7AA8");
+    box(x, y, s, [[-190, -140], [-185, -175], [-100, -178], [-95, -142]], C.white);
+    box(x, y, s, [[205, 0], [205, -150], [228, -150], [228, 0]], C.wood);
+    for (const lx of [-195, 205]) p.stroke(at(x, y, s, [[lx, -70], [lx, 0]]), { w: 9, color: C.wood });
+    return { top: y - 150 * s, pillow: [x - 142 * s, y - 165 * s] };
+  };
+  k.rug = (x, y, w = 600, o = {}) => {                                 // flat on the floor, centred at (x, y)
+    const P = [[x - w / 2, y + w * .09], [x - w * .42, y - w * .09], [x + w * .42, y - w * .09], [x + w / 2, y + w * .09]];
+    part(); k.paint(P, o.color || "#8A2E2A", { sharp: true }); p.poly(P, { w: 3.4 });
+    const I = P.map(([a, b]) => [x + (a - x) * .82, y + (b - y) * .6]); p.poly(I, { w: 3, color: o.trim || C.gold });
+  };
+  k.shelf = (x, y, s = 1, o = {}) => {                                 // a bookcase standing on (x, y)
+    const w = 240, h = 380, cols = ["#8A2E2A", "#2E5A3A", "#B08A3A", "#3A3A5A", "#6A3A2A", "#2A4A5A"]; part();
+    box(x, y, s, [[-w / 2, 0], [-w / 2, -h], [w / 2, -h], [w / 2, 0]], o.color || "#5C3A1B");
+    for (let r = 0; r < 4; r++) { const fy = -20 - r * 90; p.stroke(at(x, y, s, [[-w / 2, fy], [w / 2, fy]]), { w: 5 });
+      for (let i = 0, bx = -w / 2 + 12; bx < w / 2 - 24; i++) { const bw = 16 + hash(r * 31 + i) * 12, bh = 52 + hash(r * 7 + i * 3) * 22;
+        box(x, y, s, [[bx, fy], [bx, fy - bh], [bx + bw, fy - bh], [bx + bw, fy]], cols[Math.floor(hash(r * 13 + i * 5) * cols.length)]); bx += bw + 3; } }
+    return { top: y - h * s };
+  };
+  k.lamp = (x, y, s = 1, o = {}) => {                                  // stands on (x, y): "desk" | "oil" | "floor"
+    const kind = o.kind || "desk", lit = o.lit !== false; part(); let L;
+    if (kind === "oil") { box(x, y, s, [[-30, 0], [-36, -40], [36, -40], [30, 0]], C.brass); box(x, y, s, [[-22, -40], [-30, -110], [-14, -140], [14, -140], [30, -110], [22, -40]], "#EDE4C8"); L = [x, y - 95 * s]; }
+    else { const hgt = kind === "floor" ? 440 : 150; box(x, y, s, [[-34, 0], [-28, -14], [28, -14], [34, 0]], C.brass); p.stroke(at(x, y, s, [[0, -14], [0, -hgt]]), { w: 6, color: C.brass });
+      box(x, y, s, [[-50, -hgt + 10], [-30, -hgt - 50], [30, -hgt - 50], [50, -hgt + 10]], o.shade || "#2E5A3A"); L = [x, y - (hgt - 6) * s]; }
+    if (lit) { ctx.save(); ctx.globalCompositeOperation = "screen"; const g = ctx.createRadialGradient(L[0], L[1], 0, L[0], L[1], 260 * s);
+      g.addColorStop(0, "rgba(255,190,110,.55)"); g.addColorStop(1, "rgba(255,190,110,0)"); ctx.fillStyle = g; ctx.fillRect(L[0] - 260 * s, L[1] - 260 * s, 520 * s, 520 * s); ctx.restore(); }
+    return { light: L };
+  };
+  k.window = (x, y, w = 260, h = 340, o = {}) => {                     // centred on (x, y), on a wall
+    part(); const B = k.rect(x - w / 2, y - h / 2, w, h); k.paint(B, o.outside || "#CFE3EA", { sharp: true });
+    p.poly(B, { w: 7, color: C.wood }); p.stroke([[x, y - h / 2], [x, y + h / 2]], { w: 5, color: C.wood }); p.stroke([[x - w / 2, y], [x + w / 2, y]], { w: 5, color: C.wood });
+    if (o.curtains) for (const sg of [-1, 1]) { const cx = x + sg * (w / 2 + 6), P = [[cx - sg * 4, y - h / 2 - 30], [cx + sg * 50, y - h / 2 - 30], [cx + sg * 60, y + h / 2 + 40], [cx - sg * 30, y + h / 2 + 40]];
+      k.paint(P, o.curtains === true ? "#8A2E2A" : o.curtains, { sharp: true }); p.poly(P, { w: 3.4 }); }
+  };
+  k.frame = (x, y, w = 200, h = 250, o = {}) => {                      // a framed picture on a wall, centred
+    part(); const B = k.rect(x - w / 2, y - h / 2, w, h), I = k.rect(x - w / 2 + 18, y - h / 2 + 18, w - 36, h - 36);
+    k.paint(B, o.color || C.gold, { sharp: true }); p.poly(B, { w: 4 }); k.paint(I, o.kind === "portrait" ? "#3A3428" : "#BFD9E6", { sharp: true }); p.poly(I, { w: 2.6 });
+    if (o.kind === "portrait") { k.disc(x, y - h * .1, w * .16, SKIN[2], { w: 2.6 }); k.paint([[x - w * .3, y + h / 2 - 18], [x - w * .22, y + h * .1], [x + w * .22, y + h * .1], [x + w * .3, y + h / 2 - 18]], "#2A2420", { sharp: true }); }
+    else { k.paint([[x - w / 2 + 18, y + h / 2 - 18], [x - w * .1, y], [x + w * .1, y + h * .12], [x + w / 2 - 18, y + h * .02], [x + w / 2 - 18, y + h / 2 - 18]], C.grass); }
+  };
+  k.phone = (x, y, s = 1) => {                                         // a candlestick telephone standing on (x, y)
+    part(); box(x, y, s, [[-36, 0], [-30, -16], [30, -16], [36, 0]], "#1E1A18"); p.stroke(at(x, y, s, [[0, -16], [0, -150]]), { w: 10 });
+    k.disc(x, y - 168 * s, 24 * s, "#1E1A18", { w: 3 }); p.ring(x, y - 168 * s, 12 * s, 12 * s, { w: 2.4, color: "#8A8070" });
+    p.stroke(at(x, y, s, [[-4, -128], [-38, -128], [-38, -118]]), { w: 5 });
+    box(x, y, s, [[-48, -118], [-48, -60], [-28, -60], [-28, -118]], "#1E1A18");
+    p.stroke(at(x, y, s, [[-38, -60], [-60, -30], [-30, -6]]), { w: 3 });
+    return { mouth: [x, y - 168 * s], ear: [x - 38 * s, y - 90 * s] };
+  };
+  k.radio = (x, y, s = 1, o = {}) => {                                 // a 1930s cathedral radio standing on (x, y)
+    part(); box(x, y, s, [[-90, 0], [-90, -150], [-70, -210], [0, -235], [70, -210], [90, -150], [90, 0]], o.color || C.wood);
+    box(x, y, s, [[-60, -40], [-60, -150], [-40, -190], [0, -205], [40, -190], [60, -150], [60, -40]], "#C9A878");
+    for (let i = -2; i <= 2; i++) p.stroke(at(x, y, s, [[i * 20, -50], [i * 20, -180 + Math.abs(i) * 8]]), { w: 3 });
+    for (const dx of [-36, 0, 36]) k.disc(x + dx * s, y - 22 * s, 9 * s, C.brass, { w: 2 });
+    return { top: y - 235 * s, speaker: [x, y - 120 * s] };
+  };
+  k.letter = (x, y, s = 1, rot = 0) => k.at(x, y, s, rot, () => {     // a sealed envelope, centred
+    const B = k.rect(-110, -70, 220, 140); part(); k.paint(B, C.white, { sharp: true }); p.poly(B, { w: 3.4 });
+    p.stroke([[-110, -70], [0, 10], [110, -70]], { w: 3 }); k.disc(0, 10, 16, C.red, { w: 2.4 }); });
   k.sign = (x, y, str, o = {}) => { const w = Math.max(160, str.length * (o.size || 40) * .62 + 40), Bd = k.rect(x - w / 2, y - 260, w, 90);
     part(); if (o.post !== false) p.stroke([[x, y], [x, y - 170]], { w: 10, color: C.wood }); k.paint(Bd, o.color || C.plank, { sharp: true }); p.poly(Bd, { w: 4 });
     p.text(str, x, y - 202, { size: o.size || 40, font: "sans-serif" }); };

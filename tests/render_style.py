@@ -42,7 +42,7 @@ def build() -> dict:
         if e["name"] == "flash":
             flashes.append(scenes[-1]["start"])
     palette = config.PALETTES[next(iter(config.PALETTES))]
-    return {"fps": 30, "total": round(t, 3), "xfade": 0.3, "hook": "", "palette": palette, "scenes": scenes,
+    return {"fps": 30, "total": round(t, 3), "xfade": 0.3, "palette": palette, "scenes": scenes,
             "flashes": flashes, "words": words, "cta": None, "ctaLine": ""}
 
 

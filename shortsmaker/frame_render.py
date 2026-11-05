@@ -46,19 +46,6 @@ def fit_font(text: str, size: int, max_w: int) -> ImageFont.FreeTypeFont:
 
 def graphic_overlay(style: str, text: str) -> Image.Image:
     """Pre-render a callout as a small transparent image (animated per frame later)."""
-    if style == "hook":  # title over the opening, up to two lines; also makes frame 0 thumbnail-ready
-        words = text.upper().split()
-        lines = [" ".join(words)]
-        if len(words) > 1 and len(lines[0]) > 12:  # two lines, split where they're most even in length
-            k = min(range(1, len(words)), key=lambda k: max(len(" ".join(words[:k])), len(" ".join(words[k:]))))
-            lines = [" ".join(words[:k]), " ".join(words[k:])]
-        font = fit_font(max(lines, key=len), 120, W - 140)
-        img = Image.new("RGBA", (W, 150 * len(lines) + 40))
-        d = ImageDraw.Draw(img)
-        for k, line in enumerate(lines):
-            d.text(((W - font.getlength(line)) / 2, 20 + k * 150), line, font=font, fill=session.YELLOW,
-                   stroke_width=10, stroke_fill="black")
-        return img
     if style == "cta":  # red subscribe button with a small line under it
         big, small = ImageFont.truetype(FONT, 80), ImageFont.truetype(FONT, 50)
         bw = int(big.getlength("SUBSCRIBE")) + 120
@@ -136,18 +123,15 @@ LOW_BOTTOM = 1110  # a lowered callout ends here, just above the captions (~1175
 def draw_graphic(frame: Image.Image, style: str, ov: Image.Image, t: float, start: float, end: float,
                  low: bool = False) -> None:
     """Animate the callout in, hold it, fade it out before the scene ends."""
-    if style == "hook":  # fully visible on the first frame, fades out by 1.8s
-        k, dx, dy, scale = min(1.0, max(0.0, (1.8 - t) / 0.3)), 0, 0, 1.0
-    else:
-        t_in, t_out = start, end - 0.25  # start = when the callout appears
-        if not t_in <= t <= t_out:
-            return
-        e = min(1.0, (t - t_in) / 0.35)
-        e = 1 - (1 - e) ** 3  # ease-out
-        k = e * min(1.0, (t_out - t) / 0.3)
-        dx = -60 * (1 - e) if style == "place" else 0
-        dy = -40 * (1 - e) if style == "date" else 40 * (1 - e) if style == "cta" else 0
-        scale = 0.7 + 0.3 * e if style == "fact" else 1.0
+    t_in, t_out = start, end - 0.25  # start = when the callout appears
+    if not t_in <= t <= t_out:
+        return
+    e = min(1.0, (t - t_in) / 0.35)
+    e = 1 - (1 - e) ** 3  # ease-out
+    k = e * min(1.0, (t_out - t) / 0.3)
+    dx = -60 * (1 - e) if style == "place" else 0
+    dy = -40 * (1 - e) if style == "date" else 40 * (1 - e) if style == "cta" else 0
+    scale = 0.7 + 0.3 * e if style == "fact" else 1.0
     if k <= 0:
         return
     img = ov if scale == 1.0 else ov.resize((max(1, int(ov.width * scale)), max(1, int(ov.height * scale))))
@@ -155,7 +139,7 @@ def draw_graphic(frame: Image.Image, style: str, ov: Image.Image, t: float, star
         img = img.copy()
         img.putalpha(img.getchannel("A").point(lambda v: int(v * k)))
     # clear of YouTube's top icons and the captions; the subscribe button sits just under the captions
-    top = LOW_BOTTOM - ov.height if low else {"hook": 220, "cta": 1330}.get(style, 300)
+    top = LOW_BOTTOM - ov.height if low else {"cta": 1330}.get(style, 300)
     frame.paste(img, (int((W - img.width) / 2 + dx), int(top + (ov.height - img.height) / 2 + dy)), img)
 
 
@@ -237,13 +221,12 @@ class ClipReader:
         self.proc.kill()
 
 
-def frame_maker(images, scenes, hook_text, cta_line, bounds, cues, clips: dict[int, Path]):
+def frame_maker(images, scenes, cta_line, bounds, cues, clips: dict[int, Path]):
     """Returns frame(i, t): scene i at time t with camera move and graphics applied.
     cues[i] holds the timed extras for scene i, e.g. "card" (+ "on"/"off"). Scenes in `clips` play
     their clip (AI motion, archival film or the owner's clips) stretched over the whole scene,
     instead of the CPU Ken Burns move. Readers are opened lazily: at most two stream at a time."""
     overlays = [graphic_overlay(*plan_rules.fallback_graphic(sc["graphic"])) if sc["graphic"] else None for sc in scenes]
-    hook = graphic_overlay("hook", hook_text) if hook_text else None
     cta = graphic_overlay("cta", cta_line)
     tags = [image_sources.credit_tag_image(sc["credit_tag"]) if sc.get("credit_tag") else None for sc in scenes]
     readers: dict[int, ClipReader] = {}
@@ -263,8 +246,6 @@ def frame_maker(images, scenes, hook_text, cta_line, bounds, cues, clips: dict[i
         if overlays[i]:
             draw_graphic(img, scenes[i]["graphic"]["style"], overlays[i], t, cue["graphic"], end,
                          scenes[i]["graphic"].get("low", False))
-        if i == 0 and hook:
-            draw_graphic(img, "hook", hook, t, start, end)
         if cue.get("cta") is not None:
             draw_graphic(img, "cta", cta, t, cue["cta"], end)
         if cue.get("card"):

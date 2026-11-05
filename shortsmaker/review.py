@@ -263,7 +263,7 @@ def first_second_check(video: Path, short: dict, choices: list[dict], board: Pat
     what = {cands[e["n"] - 1]["title"]: e.get("what") for e in short.get("catalog") or []
             if cands and isinstance(e, dict) and isinstance(e.get("n"), int) and 1 <= e["n"] <= len(cands)}
     # the drawn opener replaced scene 1's photo, which the judge must not be told it sees (audit 2026-10-31)
-    rows = ([f"scene 1 says \"{scenes[0]['narration']}\" | it opens on a hand-drawn animation: {short['drawn']['moment']}"]
+    rows = ([f"scene 1 says \"{scenes[0]['narration']}\" | it opens on an animation: {short['drawn']['moment']}"]
             if short.get("opener_used") else
             [f"scene 1 says \"{scenes[0]['narration']}\" | it opens on a full-screen motion graphic: "
              f"{motion.full_summary(scenes[0]['full'])}"] if scenes[0].get("full") else [])
@@ -271,7 +271,7 @@ def first_second_check(video: Path, short: dict, choices: list[dict], board: Pat
              + (f" ({what[choices[j]['bg'][1]]})" if what.get(choices[j]["bg"][1]) else "") for j in ([] if rows else [0]) + real
              if choices[j].get("bg")]
     data = llm.ask_ai(f"""You judge the first two seconds of a YouTube Short the way a stranger scrolling the Shorts feed would.
-Open {folder / 'first.jpg'}: frames at 0, 0.5, 1 and 1.5 seconds, left to right (the big title on them is the hook title).
+Open {folder / 'first.jpg'}: frames at 0, 0.5, 1 and 1.5 seconds, left to right.
 The narrator's first sentence: "{first}". The Short: "{short['title']}"; its main character: {short.get('character') or 'not named'};
 how it ends: "{scenes[-1]['narration']}".
 {opening_rules.opening_brief(short)}
@@ -286,7 +286,7 @@ a line about someone else (the editor's portrait under "He mailed ten thousand l
 them). A picture of a place or object with no recognizable person fits whenever the place or object is right.
 The scenes and their pictures:
 {chr(10).join(rows)}
-Explicitly check whether the visible objects, labels, signs, hook title or opening action identify the answer
+Explicitly check whether the visible objects, labels, signs or opening action identify the answer
 that the narration saves for later. Set reveals_answer=true and quote/name the giveaway in answer_why.
 An attractive opening still fails when it gives away that answer. Known facts already stated in the opening
 are allowed. For an animated opener use open_with_scene=null: it needs a rewrite, not a photo swap.

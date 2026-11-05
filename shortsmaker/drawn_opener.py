@@ -38,7 +38,7 @@ PAYOFF_RULES = """This scene is the REVEAL: show the answer the whole Short has 
 says it, happening in front of the viewer. One big clear subject doing the one change the reveal is about (the
 questioner's shoulders dropping as the hoof stops; the trap springing shut), on its spoken word, then held so it
 lands. The viewer has heard the story so far: no need to set it up again. Real facts only, the story's era; no gore.
-Faces stay simple (the kit's dot eyes). At most 3 people. The hook title band is empty in this scene."""
+Faces stay simple (the kit's dot eyes). At most 3 people."""
 
 
 def available() -> str | None:
@@ -66,7 +66,8 @@ def lint(code: str) -> list[str]:
 # instead of k.horse, and the art director passed it at 7/10.
 KIT_ANIMALS = {"horse": ("horse", "stallion", "mare", "pony", "colt"), "dog": ("dog", "hound", "puppy"),
                "chicken": ("chicken", "hen", "rooster", "cockerel"), "cow": ("cow", "bull", "ox", "cattle"),
-               "pig": ("pig", "hog", "sow", "boar")}
+               "pig": ("pig", "hog", "sow", "boar"), "cat": ("cat", "kitten", "tomcat"),
+               "rabbit": ("rabbit", "rabbits", "bunny", "hare"), "bear": ("bear", "bears", "cub")}
 
 
 def missing_parts(plan: dict, narration: str = "") -> list[str]:
@@ -111,6 +112,19 @@ def sheet_times(seconds: float) -> list[float]:
     return [round(seconds * k / 5 - (0.05 if k == 5 else 0), 2) for k in range(6)]
 
 
+def opener_role(short: dict, words: list, seconds: float) -> str:
+    """The opener brief both opener coders get (this drawn one and opener3d): the hook, its timing, the rules."""
+    scenes = short["scenes"]
+    timing = ", ".join(f"{w} {s:.2f}s" for s, _, w in words) or "not known"
+    return f"""You animate the opener of a YouTube Short: "{short['title']}" (story: {short.get('topic') or short['title']}).
+Scene 1 is the hook. Its voice plays over your animation: "{scenes[0]['narration']}"
+It lasts {seconds:.2f} s; each spoken word starts at: {timing}.
+The rest of the story, for context only (don't show it): {json.dumps([sc['narration'] for sc in scenes[1:]], ensure_ascii=False)}
+Main character: {short.get('character') or 'not named'}.
+{session.RULES.get("Opener") or DEFAULT_RULES}
+{opening_rules.opening_brief(short)}"""
+
+
 def write(short: dict, words: list, seconds: float, old: dict | None = None, problems: list[str] | None = None,
           sheet: Path | None = None, i: int = 0) -> dict | None:
     """The coder's scene: {"moment": what it shows, "code": the module}; with `old` and `problems`, the fix of the
@@ -124,13 +138,7 @@ def write(short: dict, words: list, seconds: float, old: dict | None = None, pro
                (f"\nIts preview: open {sheet} (6 frames left to right, times on each)." if sheet else "") +
                f"\nRewrite it to fix every one of them. Last draft:\n{old['code']}\n")
     if i == 0:
-        role = f"""You animate the opener of a YouTube Short: "{short['title']}" (story: {short.get('topic') or short['title']}).
-Scene 1 is the hook. Its voice plays over your animation: "{scenes[0]['narration']}"
-It lasts {seconds:.2f} s; each spoken word starts at: {timing}.
-The rest of the story, for context only (don't show it): {json.dumps([sc['narration'] for sc in scenes[1:]], ensure_ascii=False)}
-Main character: {short.get('character') or 'not named'}.
-{session.RULES.get("Opener") or DEFAULT_RULES}
-{opening_rules.opening_brief(short)}"""
+        role = opener_role(short, words, seconds)
     else:
         look = f" ({short['character_look']})" if short.get("character_look") else ""
         role = f"""You animate scene {i + 1} of a YouTube Short: "{short['title']}" (story: {short.get('topic') or short['title']}).
@@ -155,7 +163,7 @@ def review(short: dict, plan: dict, sheet: Path, seconds: float, i: int = 0) -> 
     """The art director's score (1-10) of a draft's preview sheet and what to fix. None = no verdict (a failed call):
     make_opener keeps the draft and the final check says it was never judged. `i` > 0: the scene is the reveal."""
     opener = i == 0
-    what = "hand-drawn opener" if opener else f"hand-drawn reveal (scene {i + 1}, near the end)"
+    what = "animated opener" if opener else f"hand-drawn reveal (scene {i + 1}, near the end)"
     if opener:
         first = ("A stranger scrolling the Shorts feed sees the first frame for one second. Look for these problems:\n"
                  "- frame 0 doesn't already show the subject and what is strange about it, or you can't tell what is happening;")
@@ -176,7 +184,10 @@ small flaws are fine. Below {PASS}, list the problems that stop it working, the 
 "{short['scenes'][i]['narration']}". The animator meant it to show: {plan['moment']}.
 {opening_rules.opening_brief(short) if opener else ""}
 {first}
-- the main thing is too small to read on a phone, or crowded out by background;
+- the main thing is too small to read on a phone, or crowded out by background; or one wide shot stays the whole
+  time with the subject small (the camera should cut close to the strange detail on its word);
+- a label, sign, speech bubble or caption-like word in the picture names or explains a thing ("WOODEN EAGLE",
+  "GROCER", "BORROW ROOM?"): the picture must explain itself; this is never a small flaw;
 - something doesn't look like what it should be (name it), or looks wrong for the story's era or place; an
   animal or person assembled from plain boxes and blocks counts (a horse must read as a horse at a glance);
 - things float, sink into each other or overlap wrongly (a person inside a wall, a held thing away from the hand):
@@ -185,12 +196,13 @@ small flaws are fine. Below {PASS}, list the problems that stop it working, the 
   inside and outside a building with no wall between them;
 - the picture doesn't fill the vertical frame (a big empty band, the main things drawn small in one part of it),
   or something important is cut off by the frame edge;
-- a face or a word sits behind the title band (y 74-170, first 1.8 s) or the captions (y 1170-1300); bodies,
-  limbs and props crossing those bands are fine;
+- a face sits behind the captions (y 1170-1300) in any frame; bodies, limbs and props crossing that band are fine;
 - text is misspelled, unreadable or not something the story says;{answer}
 - nothing moves, or the moving parts glitch or jump between frames;
 - gore, blood or a weapon hurting someone.
-The hand-drawn cartoon look itself (dot eyes, stick limbs, brush lines, watercolour) is intended: don't report it.
+The hand-drawn cartoon look itself (dot eyes, stick limbs, brush lines, watercolour; or flat drawn cut-outs standing
+in a simple 3D set), a soft hazy background, the light grade and the motion blur of a fast camera swing are
+intended: don't report them.
 {verdict}
 Reply with ONLY JSON: {{"score": 7, "reveals_answer": false, "answer_why": "", "problems": ["...", "..."]}}""", fatal=False, read_dir=sheet.parent)
     score = data.get("score") if isinstance(data, dict) else None
@@ -203,13 +215,16 @@ Reply with ONLY JSON: {{"score": 7, "reveals_answer": false, "answer_why": "", "
     return float(score), found[:8] or ([] if score >= PASS else ["the art director gave a low score without saying why"])
 
 
-def fingerprint(code: str, seconds: float) -> str:
-    kit = "".join((DRAWN / f).read_text(encoding="utf-8") for f in ("kit.mjs", "run.mjs"))
+def fingerprint(code: str, seconds: float, three: bool = False) -> str:
+    """Changes when the plan or the code that renders it changes (a 3D plan also depends on its stage and cut-outs)."""
+    files = [DRAWN / "kit.mjs"] + ([DRAWN / "cutouts.mjs", ROOT / "remotion" / "src" / "Opener3D.tsx"] if three else [DRAWN / "run.mjs"])
+    kit = "".join(f.read_text(encoding="utf-8") for f in files)
     return hashlib.sha1(f"{code}|{seconds:.3f}|{kit}".encode()).hexdigest()
 
 
 def make_opener(short: dict, words: list, seconds: float, work: Path, i: int = 0) -> tuple[Path | None, str | None]:
-    """Scene 1's drawn opener clip (work/drawn/opener.mp4, scene 1 + the crossfade long), or (None, why). The plan
+    """Scene 1's opener clip (work/drawn/opener.mp4, scene 1 + the crossfade long), or (None, why): a 3D opener
+    (opener3d, owner 2026-11-05) when one passes its review, else the hand-drawn one. The plan
     is kept in short["drawn"] (state.json), so fix rounds and fix.bat reuse the clip; a failure is kept in
     short["drawn_failed"] and never retried for this Short. `i` > 0 draws that scene as the reveal instead
     (work/drawn_{i}/, short["drawn_{i}"], short["drawn_failed_{i}"]); `words` are timed from that scene's start."""
@@ -232,6 +247,17 @@ def make_opener(short: dict, words: list, seconds: float, work: Path, i: int = 0
 
     name = "opener" if i == 0 else "reveal"
     repair = short.pop("drawn_repair", None) if i == 0 else None
+    if (not plan or repair) and i == 0:
+        from shortsmaker import opener3d  # it uses this module's review and coder brief
+        why3d = opener3d.available()
+        made, why3d = opener3d.plan(short, words, seconds, folder, repair) if not why3d else (None, why3d)
+        if made:  # its clip was rendered for the review: remember that it is current
+            plan, repair, short[key] = made, None, made
+            done.write_text(fingerprint(json.dumps(made, sort_keys=True), seconds, three=True), encoding="utf-8")
+        else:
+            short["opener3d_failed"] = why3d
+            print(f"    no 3D opener ({why3d}): drawing it instead")
+            plan = None if (plan or {}).get("kind") == "3d" else plan
     if not plan or repair:
         print("  drawing the opener: the strangest moment as a hand-drawn animation..." if i == 0 else
               f"  drawing scene {i + 1}, the reveal, as a hand-drawn animation...")
@@ -262,6 +288,16 @@ def make_opener(short: dict, words: list, seconds: float, work: Path, i: int = 0
             return fail(f"the drawn {name}'s last draft scored {score:g}/10 after {FIXES} fixes: "
                         f"{'; '.join(problems)[:300]}")
         short[key] = plan
+    if plan.get("kind") == "3d":
+        from shortsmaker import opener3d
+        mark = fingerprint(json.dumps(plan, sort_keys=True), seconds, three=True)
+        if clip.exists() and done.exists() and done.read_text(encoding="utf-8") == mark:
+            return clip, None
+        err = opener3d.render(plan, seconds, folder)
+        if err or not clip.exists():
+            return fail(f"the 3D opener didn't render: {err or 'no clip came out'}")
+        done.write_text(mark, encoding="utf-8")
+        return clip, None
     scene.write_text(plan["code"], encoding="utf-8")
     mark = fingerprint(plan["code"], seconds)
     if clip.exists() and done.exists() and done.read_text(encoding="utf-8") == mark:

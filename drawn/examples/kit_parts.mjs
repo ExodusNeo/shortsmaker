@@ -1,10 +1,10 @@
 // Every kit part, one page per second (tests/test_drawn_opener.py --look renders a sheet of it).
 export const camera = { zoom: [1, 1] };
 export default function scene(k, t) {
-  const page = Math.floor(t);
+  const page = t >= 6 ? 6 : Math.floor(t) === 5 ? 5 : Math.floor(t);
   if (page === 0) {            // people and hats
     k.sky("day"); k.ground(1500, "grass");
-    k.HATS.forEach((hat, i) => k.person(140 + (i % 4) * 270, 600 + Math.floor(i / 4) * 450, .8, { hat, coat: [k.C.navy, k.C.red, "#5E7A5A", "#7A5A3A"][i % 4], skin: k.SKIN[i % 6], still: true }));
+    k.HATS.forEach((hat, i) => k.person(130 + (i % 5) * 205, 470 + Math.floor(i / 5) * 290, .6, { hat, coat: [k.C.navy, k.C.red, "#5E7A5A", "#7A5A3A"][i % 4], skin: k.SKIN[i % 6], still: true, arms: [35, 12], bend: [-75, 6] }));
     k.text("hats", 540, 120, { size: 50 });
   } else if (page === 1) {     // more people options and a crowd
     k.room(1350);
@@ -25,6 +25,13 @@ export default function scene(k, t) {
     k.sky("hot"); k.sun(820, 330, 100, { heat: 1 }); k.sea(1000, { glare: 820 });
     k.island(830, 1000, 380); k.palm(800, 960, .9); k.ship(380, 1160, 1, { masts: 2 }); k.boat(800, 1400, 1);
     k.tank(180, 700, .5, { label: "MOLASSES" }); k.tower(520, 950, .5); k.cloud(300, 240, 1);
+  } else if (page === 6) {     // rooms, furniture, devices and the newer animals
+    k.room(1500, { window: false });
+    k.window(260, 380, 240, 300, { curtains: true }); k.frame(620, 360, 180, 220, { kind: "portrait" }); k.frame(880, 360, 200, 160);
+    k.door(140, 1000, .9, { open: .5, inside: "#F3D9A0" }); k.shelf(420, 1000, .8); k.lamp(620, 1000, .9, { kind: "floor" });
+    k.table(860, 1000, 320); k.phone(790, 820, .9); k.radio(920, 820, .5);
+    k.bed(330, 1500, .7, { canopy: true }); k.rug(800, 1440, 380); k.letter(800, 1250, .6, -.2); k.lamp(980, 1500, .9, { kind: "oil" });
+    k.cat(620, 1780, 1.2); k.rabbit(160, 1820, 1); k.bear(900, 1820, .7, { flip: true });
   } else {                     // props and effects
     k.room(1500, { window: false });
     k.table(540, 1500, 700); k.coins(300, 1300, 10); k.moneybag(540, 1310, .9); k.cup(740, 1320, 1, { steam: true, drink: k.C.molasses });

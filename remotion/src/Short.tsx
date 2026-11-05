@@ -2,7 +2,7 @@ import {AbsoluteFill, Img, OffthreadVideo, Sequence, interpolate, staticFile, us
 import {MarkCard, StatCard, TimelineCard} from './Cards';
 import {Captions} from './Captions';
 import {CompareCard, HeadlineCard, QuoteCard, StampCard} from './Extras';
-import {Callout, HookTitle, PersonCard, SubscribeCta, theme} from './Graphics';
+import {Callout, PersonCard, SubscribeCta, theme} from './Graphics';
 import {MapCard} from './MapCard';
 import {FullScene} from './full/FullScene';
 import type {AnyFull} from './full/types';
@@ -64,7 +64,6 @@ export type ShortProps = {
 	fps: number;
 	total: number;
 	xfade: number;
-	hook: string;
 	scenes: Scene[];
 	flashes: number[];
 	words: Word[];
@@ -140,7 +139,7 @@ const BuiltInGraphic: React.FC<{graphic: Graphic; t: number; start: number; end:
 		: p.graphic.style === 'stamp' ? <StampCard {...p} />
 		: <Callout {...p} />;
 
-export const Short: React.FC<ShortProps> = ({total, xfade, hook, scenes, flashes, words, cta, ctaLine, palette, layer}) => {
+export const Short: React.FC<ShortProps> = ({total, xfade, scenes, flashes, words, cta, ctaLine, palette, layer}) => {
 	if (palette) Object.assign(theme, palette); // before any child draws: every card reads `theme`
 	const frame = useCurrentFrame();
 	const {fps} = useVideoConfig();
@@ -171,7 +170,6 @@ export const Short: React.FC<ShortProps> = ({total, xfade, hook, scenes, flashes
 			{pictures && cover ? <AbsoluteFill>{cover}</AbsoluteFill> : null}
 			{graphics && g ? <GraphicFor graphic={g} t={t} start={g.at} end={current.end} variant={variant} /> : null}
 			{graphics && current?.card ? <PersonCard card={current.card} t={t} /> : null}
-			{graphics && hook ? <HookTitle text={hook} t={t} /> : null}
 			<Captions words={words} t={t} />
 			{graphics && current?.credit && t < current.start + 3.1 && (cta == null || t < cta) ? (
 				// shown for the first ~2.8 s of the scene, then it fades out of the picture's way

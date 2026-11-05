@@ -64,8 +64,7 @@ def edit_plan(short: dict, bounds: list[float], sources: list[str], cues: list[d
              "Photo look: " + (f"{look_text(short)} on scenes "
                                + ", ".join(str(k + 1) for k, sc in enumerate(short["scenes"]) if sc.get("look"))
                                if any(sc.get("look") for sc in short["scenes"]) else "none (plain pictures)"),
-             f"Opening: hook title \"{short['hook_text']}\" 0:00.0-0:01.8"
-             + (f" | {short['opening_note']}" if short.get("opening_note") else "")
+             "Opening: " + (short.get("opening_note") or "no note")
              + (f" | hook lines considered: {' / '.join(short['hook_options'])}" if short["hook_options"] else ""),
              "Script editor: " + ("\n  ".join([""] + short["editor_notes"]) if short.get("editor_notes") else "none"),
              *(["Metadata review: " + "; ".join(short["seo_notes"])] if short.get("seo_notes") else []),
@@ -203,7 +202,7 @@ def scene_cues(sc: dict, words: list[tuple[float, float, str]], start: float, en
         latest_on = end - 0.25 - need_card
         on = max(start + 0.2, min(start + t - 0.1, latest_on))
         if i == 0:
-            on = max(on, 1.9)  # don't cover the hook title
+            on = max(on, 1.9)  # the opener's first seconds stay clean
         off = min(on + 2.5, end - 0.25)
         if off - on < 1.4:
             on = max(start + 0.15, off - 1.4)

@@ -201,7 +201,7 @@ def render_remotion(short: dict, cues: list[dict], bounds: list[float], total: f
             shutil.copy(work / f"{i}_raw.jpg", job / f"raw{i}.jpg")
             with Image.open(job / f"raw{i}.jpg") as im:
                 scenes[-1]["graphic"].update(image=f"job/raw{i}.jpg", aspect=im.width / im.height)
-    props = {"fps": FPS, "total": total, "xfade": XFADE, "hook": short["hook_text"], "palette": PALETTES[short["palette"]],
+    props = {"fps": FPS, "total": total, "xfade": XFADE, "palette": PALETTES[short["palette"]],
              "scenes": scenes, "flashes": sorted(flashes), "cta": cues[-1].get("cta"), "ctaLine": short["cta_line"],
              "words": [{"start": s, "end": e, "text": t, "emphasis": s in emphasis, "line": g}
                        for g, line in enumerate(audio_mix.caption_lines(words)) for s, e, t in line]}

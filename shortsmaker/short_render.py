@@ -131,9 +131,11 @@ def use_opener(short: dict, bounds: list[float], all_words: list, work: Path, cl
     if clip:
         clips[0] = clip
         first.update(full=None, graphic=None, credit_tag=None)  # the replaced photo's credit must not show on it
-        sources[0] = f"drawn opener (hand-drawn animation): {short['drawn']['moment']}"
-        short["opening_note"], short["opener_used"] = f"drawn opener: {short['drawn']['moment']}", True
-        return ("drawn opener: its art director gave no verdict, so nobody judged it: look at scene 1 yourself"
+        kind = "3D opener" if short["drawn"].get("kind") == "3d" else "drawn opener"
+        tried = f" (no 3D opener: {short['opener3d_failed']})" if kind == "drawn opener" and short.get("opener3d_failed") else ""
+        sources[0] = f"{kind} ({'drawn cut-outs in a 3D set' if kind == '3D opener' else 'hand-drawn animation'}): {short['drawn']['moment']}"
+        short["opening_note"], short["opener_used"] = f"{kind}: {short['drawn']['moment']}{tried}", True
+        return (f"{kind}: its art director gave no verdict, so nobody judged it: look at scene 1 yourself"
                 if short["drawn"].get("unreviewed") else None)
     short["opening_note"] = (f"drawn opener failed ({why}) -> " if why else "") + short["opener_graphic"] + (
         "" if first.get("full") else "; scene 1 opens on its picture")
@@ -523,7 +525,7 @@ def render(short: dict, ch: dict, folder: Path, state: dict | None = None, fix_r
                             "clean.mp4"] if renderer == "python" else []), *stems],
         stdin=subprocess.PIPE if renderer == "python" else None, cwd=work)
     if renderer == "python":
-        frame = frame_render.frame_maker(images, short["scenes"], short["hook_text"], short["cta_line"], bounds, cues, clips)
+        frame = frame_render.frame_maker(images, short["scenes"], short["cta_line"], bounds, cues, clips)
         # a drawn Short is one continuous Blender camera: crossfades would show it twice
         frame_render.write_frames(frame, len(images), bounds, total, proc.stdin, flashes, set(bounds[1:-1]) if drawn else set())
         frame.close()

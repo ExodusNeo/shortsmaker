@@ -40,22 +40,6 @@ export const moveIn = (enter: number, leave: number, variant: number): React.CSS
  * is up there (`low`), ending at y=1110 just above the captions so it doesn't cover a face. */
 export const slot = (graphic: Graphic, top: number): React.CSSProperties => (graphic.low ? {bottom: 1920 - 1110} : {top});
 
-export const HookTitle: React.FC<{text: string; t: number}> = ({text, t}) => {
-	if (t > 1.8) return null;
-	const opacity = interpolate(t, [1.5, 1.8], [1, 0], clamp); // fully visible on frame 0: thumbnail-ready
-	return (
-		<div
-			style={{
-				position: 'absolute', top: 220, left: 70, right: 70, textAlign: 'center', opacity, // high and compact: clear of faces
-				transform: `scale(${1 + 0.03 * t})`, fontFamily: FONT, fontSize: 120, lineHeight: 1.12,
-				color: theme.accent, textTransform: 'uppercase', textShadow: outline(9),
-			}}
-		>
-			{text}
-		</div>
-	);
-};
-
 /** Silent subscribe reminder for the last seconds, just under the captions (clear of YouTube's buttons). */
 export const SubscribeCta: React.FC<{line: string; t: number; start: number; end: number}> = ({line, t, start, end}) => {
 	const {visible, enter, exit} = useWindow(t, start, end);

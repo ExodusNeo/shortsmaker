@@ -13,6 +13,9 @@ sys.path.insert(0, str(ROOT))
 from PIL import Image  # noqa: E402
 
 from shortsmaker import drawn_opener, llm, media_tools, session, short_render  # noqa: E402
+from shortsmaker import opener3d  # noqa: E402
+
+opener3d.available = lambda: "switched off: these tests are about the drawn opener (tests/test_opener3d.py covers 3D)"
 
 EXAMPLE = (ROOT / "drawn" / "examples" / "dexter.mjs").read_text(encoding="utf-8")
 WORDS = [(0.06, 0.2, "He"), (0.25, 0.6, "shipped"), (0.7, 1.0, "brass"), (1.05, 1.2, "bed"), (1.25, 1.6, "warmers"),
@@ -168,8 +171,8 @@ def look():
     """Renders drawn/out/sheet.png: every kit part, one page per second (look at it after changing kit.mjs)."""
     out = ROOT / "drawn" / "out"
     out.mkdir(exist_ok=True)
-    job = {"scene": str(ROOT / "drawn" / "examples" / "kit_parts.mjs"), "seconds": 6, "mode": "sheet",
-           "times": [0.5, 1.5, 2.5, 3.5, 4.5, 5.5], "out": str(out), "name": "kit", "scale": 0.3}
+    job = {"scene": str(ROOT / "drawn" / "examples" / "kit_parts.mjs"), "seconds": 7, "mode": "sheet",
+           "times": [0.5, 1.5, 2.5, 3.5, 4.5, 5.5, 6.5], "out": str(out), "name": "kit", "scale": 0.3}
     print(drawn_opener.node_run(job, out) or f"wrote {out / 'sheet.png'}")
 
 

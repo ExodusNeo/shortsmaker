@@ -17,7 +17,7 @@ def props_for(test: dict) -> dict:
     words = test.get("narration", "").split()
     total = test["total"]
     step = total / max(1, len(words))
-    return {"fps": 30, "total": total, "xfade": 0.3, "hook": "", "flashes": [], "cta": None, "ctaLine": "",
+    return {"fps": 30, "total": total, "xfade": 0.3, "flashes": [], "cta": None, "ctaLine": "",
             "palette": test.get("palette"),
             "scenes": [{"image": "", "move": "in", "transition": "fade", "graphic": None, "card": None, "clip": None,
                         **sc} for sc in test["scenes"]],

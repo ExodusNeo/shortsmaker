@@ -14,9 +14,9 @@ from pathlib import Path
 
 import edge_tts
 
-from shortsmaker import audio_library, media_tools, plan_rules, session
+from shortsmaker import audio_library, media_tools, plan_rules
 from shortsmaker.config import (
-    FREESOUND_KEY, GRAPHIC_STYLES, H, MAX_STORY_SOUNDS, SFX, STORY_SFX, STORY_SOUND_GAIN, W, ass_colour,
+    FREESOUND_KEY, GRAPHIC_STYLES, H, MAX_STORY_SOUNDS, SFX, STORY_SFX, STORY_SOUND_GAIN, W,
 )
 
 
@@ -48,14 +48,22 @@ def ass_time(t: float) -> str:
     return f"{int(t // 3600)}:{int(t % 3600 // 60):02}:{t % 60:05.2f}"
 
 
+CAPTION_FONT = "Segoe UI Black"  # owner, 2026-11-05: clean white word-at-a-time captions (the "Second Draw" Short)
+
+
+def caption_size(text: str) -> int:
+    """Caption font size: 110, smaller for a long line so it never runs off the 960 px it has."""
+    return int(min(110, 960 / (len(text) * 0.62)))
+
+
 def caption_lines(words: list[tuple[float, float, str]]) -> list[list[tuple[float, float, str]]]:
-    """Caption lines of up to 3 words and about 16 letters: a long word ("SIXTY-THREE-YEAR-OLD") gets a
-    shorter line instead of shrinking the whole line to a tiny size. A sentence end closes its line, so "ANSWERS. SO"
-    never shows (Clever Hans, 2026-11-03: the next sentence's first word sat over the next scene). Both renderers use these lines."""
+    """Caption lines of one word, or two short ones ("at noon", "the street": 10 letters at most). A sentence end
+    closes its line, so "answers. So" never shows (Clever Hans, 2026-11-03: the next sentence's first word sat over
+    the next scene). Both renderers use these lines."""
     lines: list[list[tuple[float, float, str]]] = []
     for w in words:
-        if lines and len(lines[-1]) < 3 and not plan_rules.ends_sentence(lines[-1][-1][2]) \
-                and len(" ".join(x[2] for x in lines[-1] + [w])) <= 16:
+        if lines and len(lines[-1]) < 2 and not plan_rules.ends_sentence(lines[-1][-1][2]) \
+                and len(" ".join(x[2] for x in lines[-1] + [w])) <= 10:
             lines[-1].append(w)
         else:
             lines.append([w])
@@ -63,28 +71,20 @@ def caption_lines(words: list[tuple[float, float, str]]) -> list[list[tuple[floa
 
 
 def captions(words: list[tuple[float, float, str]], path: Path, emphasis: set[float]) -> None:
-    """ASS captions, one caption_lines() line at a time; the spoken word turns yellow. Emphasis words (by start
-    time) turn orange, grow and stay lit for the rest of their line."""
+    """ASS captions, one caption_lines() line at a time: white with a black outline, as spoken (no capitals, no
+    colours; owner, 2026-11-05), each line popping in slightly. `emphasis` is no longer drawn (kept for the callers)."""
     lines = ["[Script Info]", "ScriptType: v4.00+", f"PlayResX: {W}", f"PlayResY: {H}", "",
              "[V4+ Styles]",
              "Format: Name, Fontname, Fontsize, PrimaryColour, OutlineColour, BackColour, Bold, "
              "BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV",
-             "Style: Default,Impact,120,&H00FFFFFF,&H00000000,&H90000000,0,1,8,4,2,60,60,620", "",
+             f"Style: Default,{CAPTION_FONT},110,&H00FFFFFF,&H00000000,&H80000000,0,1,7,3,2,60,60,620", "",
              "[Events]", "Format: Layer, Start, End, Style, Text"]
     groups = caption_lines(words)
     for g, chunk in enumerate(groups):
-        chunk_end = groups[g + 1][0][0] if g + 1 < len(groups) else chunk[-1][1]
-        for j, (start, _, _) in enumerate(chunk):
-            end = chunk[j + 1][0] if j + 1 < len(chunk) else chunk_end
-
-            def styled(k: int, w: tuple[float, float, str]) -> str:
-                if w[0] in emphasis and k <= j:  # emphasis colour, 15% bigger, from when it's said to line end
-                    return f"{{\\c{ass_colour(session.EMPHASIS)}\\3c{ass_colour(session.EMPHASIS, 0.4)}\\fscx115\\fscy115}}" + w[2].upper() + \
-                        "{\\c&H00FFFFFF&\\3c&H00000000&\\fscx100\\fscy100}"
-                return (f"{{\\c{ass_colour(session.YELLOW)}}}" + w[2].upper() + "{\\c&H00FFFFFF&}") if k == j else w[2].upper()
-            text = " ".join(styled(k, w) for k, w in enumerate(chunk))
-            pop = "{\\fscx80\\fscy80\\t(0,90,\\fscx100\\fscy100)}" if j == 0 else ""
-            lines.append(f"Dialogue: 0,{ass_time(start)},{ass_time(end)},Default,{pop}{text}")
+        end = groups[g + 1][0][0] if g + 1 < len(groups) else chunk[-1][1]
+        text = " ".join(w[2] for w in chunk)
+        pop = f"{{\\fs{caption_size(text)}\\fscx86\\fscy86\\t(0,80,\\fscx100\\fscy100)}}"
+        lines.append(f"Dialogue: 0,{ass_time(chunk[0][0])},{ass_time(end)},Default,{pop}{text}")
     path.write_text("\n".join(lines), encoding="utf-8")
 
 

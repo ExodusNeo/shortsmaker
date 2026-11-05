@@ -17,7 +17,7 @@ everything (voice, paintings, video). Real archival/online pictures and film are
 
 ## Owner's standing rules
 - **Install everything on D:** (C: is nearly full).
-- **Subscription access only: Google AI Pro and signed-in ChatGPT/Codex; Claude Pro currently has no credits.** No paid per-use APIs. Free keys allowed: Pixabay, vidIQ (chat use
+- **Subscription access only: Google AI Pro, signed-in ChatGPT/Codex and Claude (usage back, owner 2026-11-05; it shares the owner's Claude plan limit: a long test run on 2026-11-05 hit it and the run switched AIs by itself).** No paid per-use APIs. Free keys allowed: Pixabay, vidIQ (chat use
   only), Freesound (`freesound_key.txt`) and Europeana (`europeana_key.txt`, owner supplied 2026-11-01). Never print a key. Ask before adding another. Sounds only from the
   Freesound API or the owner's own files (Pixabay forbids scraping).
 - **No other creators' YouTube videos as footage** (YouTube cuts reach for re-uploads). Other sourcing is the owner's
@@ -222,7 +222,7 @@ Rules that keep it working:
    renderer. Graphic styles: date, place (map), fact, stat, timeline, mark, headline, quote, compare, stamp, question,
    kinetic; card overlays hold >= 1.8 s and start early when their word comes late (`editplan.py`); a kinetic title
    with less than its reading hold (`review.callout_hold`, the same `plan_rules.read_need` that places callouts) is dropped (it only repeats the captions); circled details
-   must fill 2x2 grid cells; person cards pop on the spoken name. Caption lines (`caption_lines`) end at a sentence end. Palettes (9) drive all graphics and map to a full-scene skin. Credit tag bottom-left
+   must fill 2x2 grid cells; person cards pop on the spoken name. Captions (owner, 2026-11-05, after the "Second Draw" Short): one word or two short ones (`caption_lines`, <= 10 letters, a sentence end closes a line), white Segoe UI Black with a black outline, as spoken, no colours; same in both renderers (`audio_mix.captions`, `Captions.tsx`). No hook title is drawn any more (`hook_text` is still written and used by SEO/logbook/spoiler checks). Palettes (9) drive all graphics and map to a full-scene skin. Credit tag bottom-left
    (`short_credit()`), 2.8 s. Loop Shorts (weird-economics) end straight into frame 0.
 9. **Audio**: voice + music (loudness-matched to `MUSIC_LUFS`, ducked) + SFX cue sheet + story sounds; loudnorm
    -14 LUFS + limiter; h264_nvenc.
@@ -264,7 +264,8 @@ Rules that keep it working:
     used), storyboard, thumbnail, captions.srt, logbook entry, vault page, `work/state.json` for fix.bat.
 
 ## Openers (scene 1 of every Short on `opener: animated` channels)
-Order (owner, 2026-10-30): drawn opener -> motion graphic (2 fixes) -> AI clip of the strangest moment (`use_opener`).
+Order (owner, 2026-11-05): 3D opener -> drawn opener -> motion graphic (2 fixes) -> AI clip of the strangest moment
+(`use_opener`).
 - **Protect the unanswered question** (`opening_rules.py`, all channels): planning, hook text, picture selection,
   motion-graphic planning, drawn coding/review, clip starting-image rewrites and final opening review must withhold
   new answers saved for later narration. Check recognizable objects as well as labels, signs, diagrams and titles;
@@ -321,6 +322,36 @@ Order (owner, 2026-10-30): drawn opener -> motion graphic (2 fixes) -> AI clip o
 - **Person cards and the reveal picture** (2026-11-03): no PersonCard when the scene's picture already names that
   person (`plan_rules.shows_person`, surname in the title or catalog note; the card would cover their face), and the
   photo look never goes on the last two scenes (`style_lab.apply_look_scenes`), so the reveal keeps a plain picture.
+- **Clean look** (owner, 2026-11-05, reference: Ricks Clips' "Why the Second Draw Always Wins", 8.2M views: flat
+  characters in a lit 3D set, a moving camera, no labels): KIT.md now forbids labels/signs/bubbles (the art director
+  counts one as a real flaw) and gives the coder `camera = (k) => [shots]` (cut / whip with motion blur / push; every
+  shot drifts in), `light = {mood, from}` (day/golden/dusk/night/interior grade, ground shadows under people and
+  animals cast away from it), `k.depth()` (blurs and hazes everything drawn so far), `k.dust`, `k.rays`, `k.shadow`.
+  The Dexter example uses all of it. Old `camera = {zoom, focus}` modules still render.
+- **3D opener** (owner, 2026-11-05, after liking the wooden-eagle 3D test): `opener3d.py`, tried first by
+  `drawn_opener.make_opener` (i == 0). The AI writes only a stage JSON against `drawn/STAGE3D.md`: a fixed place
+  (room / street / outdoors), a mood, props from a fixed library, cut-outs drawn with the kit (`export default
+  function draw(k, f)`, 1-4 drawings, painted by `drawn/cutouts.mjs` under the same locked-down node) and shots aimed
+  at named things (distance/height/turn/fov; cut/whip/push). `opener3d.clean` validates and clamps it and resolves
+  word times; `render` paints the cut-outs into `remotion/public/opener3d/job/` and renders composition `Opener3D`
+  (`remotion/src/Opener3D.tsx`, @remotion/three + three + @react-three/fiber) to `work/drawn/opener.mp4` (~15 s);
+  the art director (`drawn_opener.review`) judges a 6-frame sheet; FIXES rounds as usual. The passed plan is
+  `short["drawn"]` with `kind: "3d"` (fix rounds reuse it by fingerprint); a failure sets
+  `short["opener3d_failed"]` and the drawn opener is made instead (Opening line says so). Lesson kept from the
+  removed Blender openers: fixed sets and parts, the AI only places and frames. Wall-hung cut-outs get a picture
+  light; a portrait frame needs a wide vertical fov (~60) for a set to read. Tests: `tests	est_opener3d.py`
+  (`--look` renders the manual's example to `test_renders/opener3d/example/`); `test_drawn_opener.py` switches
+  3D off.
+  Live runs 2026-11-05: Claude 5/6/6 on the eagle (desk front filled the frame, a paper floated) -> manual rules;
+  Gemini passed the eagle first draft (it copied the example: same story); McLean failed 4/4/4 (fist through the 3D
+  door, grocer cut off) -> things that touch go in ONE cut-out (kit `reach`), shots may aim at a list of names (the
+  camera backs off to fit them all); McLean then passed on draft 2. Clips: `test_renders/opener3d/`. A failing 3D
+  attempt costs 3 drafts + reviews before the drawn opener starts.
+- Kit expansion (2026-11-05): 11 more hats (fedora, flatcap, boater, cowboy, ranger, kepi, officer, bobby, bicorne,
+  nurse, hardhat), rooms/furniture (`k.door` with `open` + knob, `k.bed`, `k.rug`, `k.shelf`, `k.lamp`, `k.window`,
+  `k.frame`), devices (`k.phone`, `k.radio`, `k.letter`), animals `k.cat`, `k.rabbit`, `k.bear` (also in
+  `missing_parts`). Hands are painted opaque (washed hands went muddy on dark coats). KIT.md asks for one action arm
+  + hand on hip or hanging, never an arm across the body (it read as a line on the coat). `--look` has a 7th page.
 - Kit animals: `k.horse` has jointed legs, hooves, mane, `tap: [times]` (a counting/pawing horse) and returns
   `{hoof, head}`. `missing_parts()` rejects a draft whose moment or narration names a kit animal it doesn't call
   (the Clever Hans opener built a boxy horse from shapes and passed 7/10). Labels: size 48+, clear of y 1120-1320.
@@ -477,7 +508,7 @@ strangest moment. Same story, other channel: Voggle's Mike 2M views vs ours 1.2K
 - Tests, no AI usage (`.venv\Scripts\python.exe tests\<name>.py`): `test_reliability`, `test_render_resume` (real FFmpeg, fake AI), `test_package`, `test_codex`, `test_ai_modes`, `test_marks`, `test_retention`, `test_pictures_first`,
   `test_full_scenes`, `test_style`, `test_rules` (golden prompts), `test_story`, `test_first_second`,
   `test_topic_ideas`, `test_h3_handoff`, `test_h3_run`, `test_edit_project`, `test_blender_plan`,
-  `test_blender_render`, `test_opener_graphic`, `test_drawn_opener` (real node, ~1 min);
+  `test_blender_render`, `test_opener_graphic`, `test_drawn_opener` (real node, ~1 min), `test_opener3d`;
   `tests\run_ts_tests.py` (TypeScript); `local_ai\qwen_venv\Scripts\python.exe tests\test_qwen_voice.py`.
 - Quality changes: `tests/test_quality.py` (metadata validation, final-script reviews, pacing and retention feedback).
 - With real headless Blender (engineering-failures): `test_blender_run`, `test_blender_scene`.
