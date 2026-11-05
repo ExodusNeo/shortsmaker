@@ -54,7 +54,7 @@ def caption_lines(words: list[tuple[float, float, str]]) -> list[list[tuple[floa
     never shows (Clever Hans, 2026-11-03: the next sentence's first word sat over the next scene). Both renderers use these lines."""
     lines: list[list[tuple[float, float, str]]] = []
     for w in words:
-        if lines and len(lines[-1]) < 3 and not lines[-1][-1][2].rstrip("\"')”’").endswith((".", "?", "!")) \
+        if lines and len(lines[-1]) < 3 and not plan_rules.ends_sentence(lines[-1][-1][2]) \
                 and len(" ".join(x[2] for x in lines[-1] + [w])) <= 16:
             lines[-1].append(w)
         else:

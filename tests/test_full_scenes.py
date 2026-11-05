@@ -700,6 +700,31 @@ def test_lint_custom_code():
         assert motion.lint_custom_code(code), code[:200]
 
 
+def test_custom_code_cannot_load_code_or_use_network():
+    for unsafe in ("fetch('https://x.y')", "setTimeout(() => {}, 10)", "import('./x')", "require('fs')", "eval('1')"):
+        code = GOOD_TSX.replace("const b = layoutColumn(2);", f"const b = layoutColumn(2); {unsafe};")
+        assert motion.lint_custom_code(code), unsafe
+
+
+def test_sentence_ends_include_curly_quotes_and_ellipsis():
+    from shortsmaker import gpu
+    lines = ["He whispered, \u201cNine.\u201d", "But the horse kept going."]
+    assert plan_rules.first_sentence(lines) == "He whispered, \u201cNine.\u201d"
+    assert plan_rules.first_sentence(["One horse tapped.", "Then more."]) == "One horse tapped."
+    assert plan_rules.first_sentence(["no end here"]) == "no end here"
+    assert all(plan_rules.ends_sentence(t) for t in ("stop.\u201d", "there\u2026", "ok!", "(so.)", "why?'"))
+    assert not plan_rules.ends_sentence("wait,")
+    scenes = [{"narration": t} for t in (lines + ["and stopped", "at nine."])]
+    assert gpu.sentence_groups(scenes) == [[0], [1], [2, 3]]
+
+
+def test_nasa_partner_media_is_credited():
+    from shortsmaker import image_sources
+    assert image_sources.nasa_credit({"center": "GSFC"}) is None  # NASA's own: public domain
+    assert image_sources.nasa_credit({"secondary_creator": " ESA/Hubble  & NASA "}) == "ESA/Hubble & NASA, via NASA"
+    assert image_sources.nasa_credit({"photographer": "NASA/Bill Ingalls"}) == "NASA/Bill Ingalls, via NASA"
+
+
 def test_fallback_custom_is_clean():
     code = motion.fallback_custom_tsx(2, "San Diego hired Hatfield, then the dam burst, and he was never paid.", "rain deal")
     assert motion.lint_custom_code(code) == [] and "export const Custom2" in code

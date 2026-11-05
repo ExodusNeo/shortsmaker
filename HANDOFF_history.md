@@ -1878,3 +1878,18 @@ A whole-repo audit (all no-AI tests passed before and after) found these, all fi
 - The H3 prompt writer's "Press Enter to try again" now really retries every AI (clears NO_QUOTA).
 - HANDOFF had gaming and engineering-failures the wrong way round; engineering-failures stays draft (owner).
 - Not changed: the Remotion skill folders (installed by the skills tool, with internal links; not duplicates).
+
+## 2026-11-05 — second audit fixes (voice, sentences, credits, safety)
+
+- Kokoro (third voice backup) now counts only when every scene worked, else Edge for the whole Short: a single
+  failed scene used to put two voices in one Short.
+- One sentence-end rule (`plan_rules.SENTENCE_END` / `ends_sentence()`: . ! ? or …, then straight or curly closing
+  quotes/brackets) for voice takes, the first sentence, caption lines, SRT blocks and the link-word check. Before,
+  `He whispered, “Nine.”` didn't end the first sentence, so a good hook was flagged as too long.
+- NASA pictures/videos: a named creator (`secondary_creator` / `photographer`, e.g. ESA, JPL-Caltech) is credited
+  ("..., via NASA"); NASA's own media stays credit-free.
+- The unused 2.5D parallax task (`local_ai/gen.py`) and its stale notes are gone.
+- AI-written custom scenes get the style inventions' checks (no run-time imports, timers, network or eval):
+  `motion.UNSAFE_CODE`, shared by both linters.
+- A Blender retry draws only the frames the crash left missing (plus the last one written).
+- Docs: CosyVoice's 1.10 tempo is an ffmpeg atempo stretch in the voice worker (VoiceStudio ignores `speed`).

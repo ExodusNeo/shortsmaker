@@ -94,6 +94,37 @@ def test_crash_retries_then_raises():
         assert log.read_text().count("run") == 2
 
 
+HALF = '''import json, sys
+from pathlib import Path
+from PIL import Image
+args = sys.argv[1:]
+log = Path(r"{log}")
+job = json.loads(Path(args[args.index("--") + 1]).read_text(encoding="utf-8"))
+log.write_text((log.read_text() if log.exists() else "") + json.dumps(job["only_frames"]) + "\\n")
+out = Path(job["frames_dir"]); out.mkdir(parents=True, exist_ok=True)
+frames = job["only_frames"] or range(1, job["scenes"][-1]["last"] + 1)
+for f in frames:
+    if not job["only_frames"] and f > 40:
+        sys.exit(1)  # first run: crash after frame 40
+    Image.new("RGB", (216, 384), (f % 255, 80, 80)).save(out / f"f_{{f:04d}}.png")
+'''
+
+
+def test_retry_redraws_only_missing_frames():
+    with tempfile.TemporaryDirectory() as d:
+        d = Path(d)
+        log = d / "runs.txt"
+        (d / "half.py").write_text(HALF.format(log=log), encoding="utf-8")
+        exe = d / "blender.cmd"
+        exe.write_text(f'@"{sys.executable}" "{d / "half.py"}" %*\n', encoding="utf-8")
+        bounds = [0.0, 1.0, 2.0, 3.0]
+        clips = blender_render.render_clips(short(3), bounds, [], d / "work", exe)
+        runs = [json.loads(line) for line in log.read_text().splitlines()]
+        last = blender_render.scene_frames(bounds)[-1][1]
+        assert runs[0] is None and runs[1] == list(range(40, last + 1)), runs  # frame 40 again: it may be cut off
+        assert all(c.exists() for c in clips.values())
+
+
 def test_missing_blender_raises():
     with tempfile.TemporaryDirectory() as d:
         try:

@@ -47,7 +47,7 @@ def nasa_films(query: str, limit: int = 2, names=()) -> list[dict]:
         except Exception:
             continue
         if 3 <= dur <= 1800:
-            found.append({"title": f"{d.get('title')} (NASA {d['nasa_id']})", "credit": None, "src": src, "dur": dur, "site": "NASA"})
+            found.append({"title": f"{d.get('title')} (NASA {d['nasa_id']})", "credit": image_sources.nasa_credit(d), "src": src, "dur": dur, "site": "NASA"})
     return found
 
 

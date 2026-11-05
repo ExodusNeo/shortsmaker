@@ -487,7 +487,7 @@ def story_problems(lines: list[str], read: dict | None = None) -> list[str]:
     if read.get("list_like"):
         found.append('the beats read as a list of facts: link each one to the one before with "but", "so" or "you see"')
     openers = [re.sub(r"\W", "", t.split()[0]).lower() for k, t in enumerate(lines)  # new sentences only: "and" carrying
-               if t.split() and (k == 0 or lines[k - 1].rstrip(" \"')”’").endswith((".", "?", "!")))]  # one across a cut is fine
+               if t.split() and (k == 0 or plan_rules.ends_sentence(lines[k - 1]))]  # one across a cut is fine
     for word in dict.fromkeys(w for w in openers if w in LINK_WORDS and openers.count(w) > 2):
         found.append(f'{openers.count(word)} scenes start with "{word.capitalize()}": at most 2; vary the link '
                      '(but, you see, until, which meant) or run the sentence on from the scene before')

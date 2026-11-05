@@ -107,7 +107,7 @@ PEOPLE_WORDS = {"man", "men", "woman", "women", "brother", "brothers", "person",
 def graphic_low(choice: dict, raw: Path, film: Path | None, sc: dict | None = None) -> bool:
     """True when the picture's subject would land under the top callouts (y ~180-680 of the frame):
     the callout then sits just above the captions instead, so it doesn't cover a face. Maps the photo
-    editor's subject row through how the picture is framed: cover crop for photos, parallax, AI clips
+    editor's subject row through how the picture is framed: cover crop for photos, AI clips
     and widescreen film, or the whole film centred (FILM_VF)."""
     y = choice.get("subject_y")
     if y is None:
@@ -240,7 +240,7 @@ class ClipReader:
 def frame_maker(images, scenes, hook_text, cta_line, bounds, cues, clips: dict[int, Path]):
     """Returns frame(i, t): scene i at time t with camera move and graphics applied.
     cues[i] holds the timed extras for scene i, e.g. "card" (+ "on"/"off"). Scenes in `clips` play
-    their clip (AI motion or 2.5D parallax, made on the GPU) stretched over the whole scene,
+    their clip (AI motion, archival film or the owner's clips) stretched over the whole scene,
     instead of the CPU Ken Burns move. Readers are opened lazily: at most two stream at a time."""
     overlays = [graphic_overlay(*plan_rules.fallback_graphic(sc["graphic"])) if sc["graphic"] else None for sc in scenes]
     hook = graphic_overlay("hook", hook_text) if hook_text else None

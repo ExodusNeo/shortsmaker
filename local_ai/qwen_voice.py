@@ -123,7 +123,7 @@ def speak(items: list[dict]) -> None:
 
 
 def studio_speak(items: list[dict]) -> None:
-    """CosyVoice 3 in VoiceStudio (owner's pick 2026-10-20): aiden's voice cloned from a reference clip, read
+    """CosyVoice 3 in VoiceStudio (owner's pick 2026-10-20): the item's reference voice (gpu.COSY_REF) cloned, read
     with the item's `instruct`. Numbers go in already spelled out so the voice says exactly what align() expects."""
     import urllib.request
     import uuid

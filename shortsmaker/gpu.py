@@ -122,7 +122,7 @@ def voicestudio_up() -> bool:
 
 
 def voicestudio_unload() -> None:
-    """Free VoiceStudio's GPU memory: the 8 GB card is needed next for SDXL, LTX and parallax."""
+    """Free VoiceStudio's GPU memory: the 8 GB card is needed next for SDXL and LTX."""
     try:
         loaded = json.loads(urllib.request.urlopen(VOICESTUDIO + "/model/loaded", timeout=10).read())["models"]
         for model_id in [m["id"] for m in loaded] + ["sidecars"]:
@@ -142,7 +142,7 @@ def sentence_groups(scenes: list[dict]) -> list[list[int]]:
     groups, run = [], []
     for i, sc in enumerate(scenes):
         run.append(i)
-        if re.search(r"[.!?][\"')\]]*$", sc["narration"].strip()) or i == len(scenes) - 1:
+        if plan_rules.ends_sentence(sc["narration"]) or i == len(scenes) - 1:
             groups.append(run)
             run = []
     return groups
@@ -223,8 +223,10 @@ def local_voice(short: dict, ch: dict, work: Path) -> list[tuple[Path, list] | N
     items = [{"text": sc["narration"], "voice": voice, "speed": 1.1, "out": str(work / f"{i}.wav")}
              for i, sc in enumerate(short["scenes"])]
     done = local_job("tts", items, work, timeout=600) or []
-    return [(Path(it["out"]), [tuple(w) for w in it["words"]]) if it.get("ok") and it.get("words") else None
-            for it in done] or [None] * len(items)
+    if done and all(it.get("ok") and it.get("words") for it in done):
+        return [(Path(it["out"]), [tuple(w) for w in it["words"]]) for it in done]
+    print("    Kokoro voice failed: using Edge for the whole Short")  # never a mix of two voices in one Short
+    return [None] * len(items)
 
 
 def gemini_images(items: list[dict], work: Path) -> set[str]:

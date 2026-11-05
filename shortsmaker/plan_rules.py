@@ -451,10 +451,21 @@ def words_of(text: str) -> list[str]:
     return re.findall(r"[a-z0-9]+", plain.lower())
 
 
+# A sentence end: . ! ? or …, then any closing quotes/brackets (straight or curly). The one rule for voice takes,
+# the first sentence, caption lines, SRT blocks and link words (audit 2026-11-05: three copies disagreed on '."').
+SENTENCE_END = r"[.!?\u2026][\"'\u201d\u2019)\]]*"
+
+
+def ends_sentence(text: str) -> bool:
+    return bool(re.search(SENTENCE_END + r"\s*$", text))
+
+
 def first_sentence(lines: list[str]) -> str:
     """The narration's first sentence, read across scene cuts: scene 1 may end mid-sentence (writing.SCENE_CUTS), and
     reading scene 1 alone logged hooks like "Germany's star London spy sat in Lisbon," (audit 2026-10-31)."""
-    return re.split(r"(?<=[.!?])\s+", " ".join(t.strip() for t in lines).strip())[0]
+    text = " ".join(t.strip() for t in lines).strip()
+    m = re.search(SENTENCE_END + r"(?=\s)", text)
+    return text[:m.end()] if m else text
 
 
 def contains(words: list[str], phrase: list[str]) -> bool:

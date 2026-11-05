@@ -203,7 +203,7 @@ Rules that keep it working:
 7. **Media**: voice = **CosyVoice 3 through VoiceStudio** (`D:\VoiceStudio`, backend 127.0.0.1:3900, started by
    `voicestudio_up()`), cloned Mark Nelson (`local_ai/voices/nelson_ref.wav` with `aiden_ref.wav` fallback; brisk
    investigative storyteller, CC0/PD), story-arc delivery (`cosy_instruct`: urgent hook -> suspenseful middle -> punchline payoff),
-   tempo `COSY_SPEED` (1.10 in `gpu.py`, brisk ~2.8 wps base pace with zero audio stretching); each sentence run is one take (`sentence_groups()`), cut per scene by MMS word alignment. Backups in order:
+   tempo `COSY_SPEED` (1.10 in `gpu.py`, brisk ~2.8 wps; VoiceStudio ignores `speed`, so `qwen_voice.py` speeds each take up with ffmpeg atempo, pitch kept); each sentence run is one take (`sentence_groups()`), cut per scene by MMS word alignment. Backups in order:
    Qwen3-TTS (aiden), Kokoro, Edge, never mixed in one Short. Paintings: **MOSS-Image** (ComfyUI `D:\ComfyUI`), then
    Gemini, then SDXL. Paintings may show only words quoted in `ai_image`; a hand-made period medium, never "concept
    art"/"cinematic". Real stills -> `clean_photo()` -> focal-point 9:16 crop; film -> complete source frame fitted

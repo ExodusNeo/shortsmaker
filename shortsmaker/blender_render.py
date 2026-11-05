@@ -90,6 +90,11 @@ def render_clips(short: dict, bounds: list[float], all_words: list, work: Path, 
             break
         why = why or f"{len(missing)} frames missing"
         print(f"    Blender failed ({why}){', trying once more' if not attempt else ''}")
+        last = ranges[-1][1]
+        if 0 < len(missing) < last:  # ~0.3 s a frame: don't draw the finished ones again
+            written = [f for f in range(1, last + 1) if f not in missing]
+            (work / "build.json").write_text(json.dumps({**job, "only_frames": sorted(missing + [written[-1]])},
+                                                        ensure_ascii=False, sort_keys=True), encoding="utf-8")
     else:
         raise BlenderFailed(why)
     for i, (a, b) in enumerate(ranges):

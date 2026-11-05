@@ -1,5 +1,4 @@
-"""Local GPU worker for ShortsMaker: voice (Kokoro), images (SDXL-Lightning), video (LTX-Video),
-2.5D parallax camera moves (Depth Anything V2 + GPU warping, NVENC encoding).
+"""Local GPU worker for ShortsMaker: voice (Kokoro), images (SDXL-Lightning), video (LTX-Video).
 
 Runs in its own venv (CUDA PyTorch). Usage: python gen.py job.json -> writes job.json's "result".
 A job is {"task": "tts" | "images" | "video", "items": [...]}; each item gets an "ok" flag so one
@@ -128,81 +127,12 @@ def video(items: list[dict]) -> None:
         it["ok"] = True
 
 
-def encoder_args() -> list[str]:
-    """NVENC (the GPU's video encoder) when ffmpeg has it, else CPU x264."""
-    import subprocess
-    out = subprocess.run(["ffmpeg", "-hide_banner", "-encoders"], capture_output=True, text=True).stdout
-    return (["-c:v", "h264_nvenc", "-preset", "p5", "-cq", "19"] if "h264_nvenc" in out
-            else ["-c:v", "libx264", "-preset", "veryfast", "-crf", "19"])
-
-
-def parallax(items: list[dict]) -> None:
-    """item: {"image", "out" (.mp4), "seconds", "move", "fps", "width", "height"} -> 2.5D clip.
-    A depth map splits the photo into near and far; every frame is a GPU warp where near pixels move
-    more than far ones, so a still feels like a camera gliding through the scene."""
-    import subprocess
-    import torch.nn.functional as F
-    from transformers import AutoImageProcessor, AutoModelForDepthEstimation
-    repo = "depth-anything/Depth-Anything-V2-Small-hf"
-    proc = AutoImageProcessor.from_pretrained(repo)
-    model = AutoModelForDepthEstimation.from_pretrained(repo).to("cuda").eval()
-    enc = encoder_args()
-    for it in items:
-        src = Image.open(it["image"]).convert("RGB")
-        with torch.no_grad():
-            depth = model(**proc(images=src, return_tensors="pt").to("cuda")).predicted_depth[None]
-        lo, hi = torch.quantile(depth.flatten().float(), torch.tensor([0.02, 0.98], device="cuda"))
-        depth = ((depth - lo) / (hi - lo + 1e-6)).clamp(0, 1)  # 1 = nearest
-        depth = F.avg_pool2d(depth, 9, stride=1, padding=4)  # soften edges so warps don't tear
-        img = torch.from_numpy(np.array(src)).to("cuda").permute(2, 0, 1)[None].half() / 255
-        w, h, fps = it.get("width", 1080), it.get("height", 1920), it.get("fps", 30)
-        depth = F.interpolate(depth, size=img.shape[-2:], mode="bilinear", align_corners=False).half()
-        sw, sh = src.size
-        cover = max(w / sw, h / sh)  # the photo always fills the whole vertical frame
-        vs, us = torch.meshgrid(torch.arange(h, device="cuda") - h / 2, torch.arange(w, device="cuda") - w / 2,
-                                indexing="ij")
-        n = max(2, round(it["seconds"] * fps))
-        move = it.get("move", "in")
-        win_w, win_h = w / cover, h / cover  # visible part of the photo, in photo pixels
-        horizontal = (sw - win_w) / win_w >= (sh - win_h) / win_h  # glide along the photo's long side
-        travel = min((sw - win_w) if horizontal else (sh - win_h), 1.2 * (win_w if horizontal else win_h))
-        sign = -1 if move in ("left", "up") else 1
-        ff = subprocess.Popen(["ffmpeg", "-y", "-loglevel", "error", "-f", "rawvideo", "-pix_fmt", "rgb24",
-                               "-s", f"{w}x{h}", "-r", str(fps), "-i", "-", *enc, "-pix_fmt", "yuv420p", it["out"]],
-                              stdin=subprocess.PIPE)
-        with torch.no_grad():
-            for k in range(n):
-                p = k / (n - 1)
-                e = p * p * (3 - 2 * p)  # smoothstep: eases in and out, no sudden starts
-                z = {"in": 1.0 + 0.10 * e, "out": 1.10 - 0.10 * e}.get(move, 1.04)
-                # Zoom moves glide only half as far, so the zoom stays the main motion.
-                shift = sign * travel * (e - 0.5) * (0.5 if move in ("in", "out") else 1.0)
-                cx = sw / 2 + (shift if horizontal else 0)
-                cy = sh / 2 + (0 if horizontal else shift)
-
-                def to_grid(x, y):  # photo pixels -> grid_sample's [-1, 1] coordinates
-                    return torch.stack(((x + 0.5) / sw * 2 - 1, (y + 0.5) / sh * 2 - 1), -1)[None].half()
-                x, y = cx + us / (cover * z), cy + vs / (cover * z)
-                near = F.grid_sample(depth, to_grid(x, y), align_corners=False, padding_mode="border")[0, 0] - 0.5
-                if move in ("in", "out"):  # near layers grow/shrink faster than the background
-                    grow = 1 + 0.08 * near * (e if move == "in" else 1 - e)
-                    x, y = cx + us / (cover * z * grow), cy + vs / (cover * z * grow)
-                lag = 0.05 * sign * near * (2 * e - 1) * (win_w if horizontal else win_h)  # near layers slide further
-                x, y = (x + lag, y) if horizontal else (x, y + lag)
-                frame = F.grid_sample(img, to_grid(x, y), mode="bilinear", align_corners=False, padding_mode="border")
-                ff.stdin.write((frame[0].clamp(0, 1) * 255).byte().permute(1, 2, 0).contiguous().cpu().numpy().tobytes())
-        ff.stdin.close()
-        if ff.wait() != 0:
-            raise RuntimeError(f"ffmpeg failed encoding {it['out']}")
-        it["ok"] = True
-
-
 def main() -> None:
     path = Path(sys.argv[1])
     job = json.loads(path.read_text(encoding="utf-8"))
     t = time.time()
     try:
-        {"tts": tts, "images": images, "video": video, "parallax": parallax}[job["task"]](job["items"])
+        {"tts": tts, "images": images, "video": video}[job["task"]](job["items"])
     except Exception as e:  # keep whatever finished; the caller falls back for the rest
         job["error"] = f"{type(e).__name__}: {e}"
     job["seconds"] = round(time.time() - t, 1)

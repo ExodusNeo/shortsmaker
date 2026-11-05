@@ -293,6 +293,13 @@ PAYOFF_RULES = """
    phone size, never a subtle shift of an outline; hold the changed state so it lands."""
 
 
+# AI-written TSX (custom scenes and style inventions) runs in the render browser: no run-time code loading, timers
+# or network. Shared with style_lab.lint_style_code (audit 2026-11-05: custom scenes lacked these checks).
+UNSAFE_CODE = [(r"\brequire\s*\(|\bimport\s*\(", "loads code at run time (require/import()): use static imports only"),
+               (r"\bsetTimeout\b|\bsetInterval\b|\brequestAnimationFrame\b", "timers don't render in Remotion: animate from t/p"),
+               (r"\bfetch\s*\(|XMLHttpRequest|WebSocket|\beval\s*\(|new\s+Function\b", "no network access or eval")]
+
+
 def lint_custom_code(code: str, opener: bool = False) -> list[str]:
     """Rule breaks a compiler can't see in an AI-coded custom scene (see custom_rules). Empty = clean."""
     found = []
@@ -303,7 +310,7 @@ def lint_custom_code(code: str, opener: bool = False) -> list[str]:
               (r"<FlowCard\b", "uses FlowCard (it grows and overlaps): use <Card box={...}> with a box from layoutRow/layoutColumn/layoutGrid/boxAt"),
               (r"<marker\b|markerEnd|marker-end", "hand-made arrowheads: use <Connect>"),
               (r"\btransition\s*:|\banimation\s*:|@keyframes", "CSS transition/animation doesn't render in Remotion: animate with interpolate/travel")]
-    found += [why for pattern, why in checks if re.search(pattern, code)]
+    found += [why for pattern, why in checks + UNSAFE_CODE if re.search(pattern, code)]
     found += [f"missing <{tag}>" for tag in (("Paper",) if opener else ("Paper", "TitleBanner")) if f"<{tag}" not in code]
     return found
 

@@ -220,6 +220,14 @@ def nasa_search(query: str, media: str) -> list[dict]:
         return []
 
 
+def nasa_credit(d: dict) -> str | None:
+    """NASA's own media is public domain, but its library also holds partner and photographer work that must be
+    credited: any named creator is credited (crediting a public-domain picture costs nothing)."""
+    who = next((" ".join(str(d[k]).split()) for k in ("secondary_creator", "photographer")
+                if " ".join(str(d.get(k) or "").split())), "")
+    return f"{who[:55]}, via NASA" if who else None
+
+
 def nasa_images(query: str, limit: int = 3, names=()) -> list[dict]:
     """NASA photos (public domain), when the story touches space, flight or science."""
     found = []
@@ -228,7 +236,7 @@ def nasa_images(query: str, limit: int = 3, names=()) -> list[dict]:
         preview = next((l["href"] for l in it.get("links", []) if l.get("render") == "image"), None)
         if preview and on_topic(f"{d.get('title', '')} {str(d.get('description', ''))[:300]}", query, names):
             found.append({"title": f"{d.get('title')} (NASA {d.get('nasa_id')})", "url": preview.replace("~thumb", "~large"),
-                          "small": preview, "credit": None, "source": "NASA", "site": "NASA"})
+                          "small": preview, "credit": nasa_credit(d), "source": "NASA", "site": "NASA"})
     return found[:limit]
 
 

@@ -118,10 +118,8 @@ def lint_style_code(code: str, kind: str) -> list[str]:
     """Rule breaks a compiler can't see in an AI-invented style component (see style_rules). Empty = clean."""
     found = [f"imports from '{mod}': import only from 'react', '../kit' and '../types'"
              for mod in re.findall(r"""\bfrom\s+['"]([^'"]+)['"]""", code) if mod not in ("react", "../kit", "../types")]
-    checks = [(r"\brequire\s*\(|\bimport\s*\(", "loads code at run time (require/import()): use static imports from '../kit'"),
-              (r"\btransition\s*:|\banimation\s*:|@keyframes", "CSS transition/animation doesn't render in Remotion: animate from t/p"),
-              (r"\bsetTimeout\b|\bsetInterval\b|\brequestAnimationFrame\b", "timers don't render in Remotion: animate from t/p"),
-              (r"\bfetch\s*\(|XMLHttpRequest|WebSocket|\beval\s*\(|new\s+Function\b", "no network access or eval")]
+    checks = [(r"\btransition\s*:|\banimation\s*:|@keyframes", "CSS transition/animation doesn't render in Remotion: animate from t/p"),
+              *motion.UNSAFE_CODE]
     found += [why for pattern, why in checks if re.search(pattern, code)]
     if not re.search(rf"export\s+const\s+{STYLE_SLOTS[kind]}\s*:\s*{STYLE_TYPES[kind]}\b", code):
         found.append(f"must export `export const {STYLE_SLOTS[kind]}: {STYLE_TYPES[kind]} = ...`")

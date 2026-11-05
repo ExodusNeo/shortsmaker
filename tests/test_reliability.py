@@ -47,6 +47,18 @@ class ReliabilityTests(unittest.TestCase):
             checkpoints.update(self.work, 'complete')
             self.assertEqual(checkpoints.pending_topics('test'), [])
 
+    def test_kokoro_partial_success_never_mixes_voices(self):
+        scenes = [{'narration': 'A door opened.'}, {'narration': 'Nobody came in.'}]
+
+        def job(task, items, work, timeout, worker='gen.py', venv='.venv'):
+            if worker != 'gen.py':
+                return None  # Qwen unavailable
+            return [{**items[0], 'ok': True, 'words': [[0, 0.5, 'A']]}, {**items[1], 'ok': False}]
+
+        with patch.object(gpu, 'voicestudio_up', return_value=False), patch.object(gpu, 'local_job', side_effect=job):
+            voices = gpu.local_voice({'scenes': scenes}, {'voice': 'en-US-AndrewNeural'}, self.work)
+        self.assertEqual(voices, [None, None])
+
     def test_render_context_restores_photos_paths_and_integer_clip_keys(self):
         data = {'clips': {3: Path('clip.mp4')}, 'emphasis': {1.2}, 'flashes': {2.3},
                 'cues': [{'photo': b'photo bytes'}]}

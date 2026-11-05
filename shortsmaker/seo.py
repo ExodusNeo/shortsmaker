@@ -156,7 +156,7 @@ def srt(words: list[tuple[float, float, str]], path: Path) -> None:
         chunk = chunks[-1] if chunks else []
         if chunk and (len(chunk) >= 7 or len(" ".join(w[2] for w in chunk + [word])) > 42
                       or word[1] - chunk[0][0] > 3.0 or word[0] - chunk[-1][1] > 0.5
-                      or re.search(r'[.!?]["\u201d\u2019\']?$', chunk[-1][2])):
+                      or plan_rules.ends_sentence(chunk[-1][2])):
             chunk = []
         if not chunk:
             chunks.append(chunk)
