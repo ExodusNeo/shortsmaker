@@ -427,7 +427,8 @@ For each scene give:
 Reply with ONLY JSON: {{"scenes": [{{"scene": 1, "subject": "...", "motion": "...", "camera": "...", "look": "...",
 "avoid": ["...", "...", "..."]}}]}}""", fatal=False, read_dir=folder)
         if reply is None:
-            input("  >> Neither Claude nor Gemini answered (quota or network). Press Enter to try again. ")
+            input("  >> No AI answered (quota or network). Press Enter to try again. ")
+            session.NO_QUOTA.clear()  # else every account stays skipped and Enter could never work
             continue
         got = {}
         for e in reply.get("scenes") if isinstance(reply.get("scenes"), list) else []:

@@ -934,11 +934,19 @@ def test_fill_money_graphics_and_caps():
     assert plan_rules.shows_person({"title": "File:General Robert E. Lee surrenders.jpg"}, "Ulysses S. Grant", cat, 61)
     assert plan_rules.shows_person({"title": "File:General Robert E. Lee on 'Traveler'.jpg"}, "Robert E. Lee", [], 45)
     assert not plan_rules.shows_person({"title": "File:McLean house LOC.jpg"}, "Robert E. Lee", cat, 3)
-    # Loop bridge detection
-    assert plan_rules.is_loop_short([{"narration": "One grocer borrowed $10 million."},
-                                     {"narration": "so Saunders lost $9 million, all because"}]) is True
-    assert plan_rules.is_loop_short([{"narration": "A passenger looked out."},
-                                     {"narration": "and half a bottle of beer every week."}]) is False
+    # Loop Shorts: only the rules setting `loop: yes` decides, never the last line's punctuation
+    saved = session.RULE_SETTINGS
+    try:
+        session.RULE_SETTINGS = {"loop": "yes"}
+        assert plan_rules.is_loop_short([{"narration": "One grocer borrowed $10 million."},
+                                         {"narration": "so Saunders lost $9 million, all because"}]) is True
+        assert plan_rules.is_loop_short([]) is False
+        session.RULE_SETTINGS = {}
+        for last in ("and half a bottle of beer every week.", "He said, \u201cNever again.\u201d",
+                     "And the horse just stood there\u2026", "so Saunders lost $9 million, all because"):
+            assert plan_rules.is_loop_short([{"narration": "A passenger looked out."}, {"narration": last}]) is False, last
+    finally:
+        session.RULE_SETTINGS = saved
     # Glass-plate negative mount border trimming (noisy outer negative strip + flat inner mount border)
     from shortsmaker import photo_prep
     im = Image.new("RGB", (400, 400), (120, 110, 100))

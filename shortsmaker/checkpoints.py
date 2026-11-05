@@ -84,6 +84,21 @@ def pending() -> list[Path]:
     return folders
 
 
+def pending_topics(channel: str) -> list[str]:
+    """Topics of this channel's unfinished Shorts: not in done_topics yet, but already being made."""
+    topics = []
+    for folder in pending():
+        if folder.parent.name != channel:
+            continue
+        try:
+            topic = read(folder / "work" / "progress.json")["short"].get("topic")
+        except (ValueError, OSError, KeyError, AttributeError):
+            continue
+        if isinstance(topic, str) and topic.strip():
+            topics.append(topic)
+    return topics
+
+
 def save_context(work: Path, context: dict) -> None:
     media_tools.write_json(work / "render-context.json", pack(context))
 

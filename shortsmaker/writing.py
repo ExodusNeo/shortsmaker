@@ -7,11 +7,11 @@ import urllib.parse
 from pathlib import Path
 
 from shortsmaker import (
-    audio_mix, blender_plan, channel_profiles, image_sources, llm, logbook, opening_rules, picture_pool, plan_rules, rules,
+    audio_mix, blender_plan, channel_profiles, checkpoints, image_sources, llm, logbook, opening_rules, picture_pool, plan_rules, rules,
     retention, session, style_lab, topic_ideas,
 )
 from shortsmaker.config import (
-    CUSTOM_KINDS, DOC_KINDS, FULL_TYPES, ICONS, MAX_FULL_PLANNED, MOODS, MOVES, MOVE_NAMES, PALETTES, SHAPES,
+    CUSTOM_KINDS, DOC_KINDS, FULL_TYPES, ICONS, MOODS, MOVES, MOVE_NAMES, PALETTES, SHAPES,
 )
 
 
@@ -72,10 +72,12 @@ unknown ages or collection dates limit comparisons. Judge only entries with enou
     observations = retention.observations(session.CHANNEL.stem)
     if observations:
         trend_text += f"\n{observations}\n"
+    # an unfinished Short's topic counts as made: declining resume mustn't let the picker choose it again
+    done = (ch.get("done_topics") or []) + checkpoints.pending_topics(session.CHANNEL.stem)
     if topics:
         what = f"Use exactly these {len(topics)} topics, in this order: {topics}"
     else:
-        what = (f"Pick {n + picture_pool.TOPIC_BACKUPS} NEW topics, none of these already-used ones: {ch['done_topics'][-200:]}\n"
+        what = (f"Pick {n + picture_pool.TOPIC_BACKUPS} NEW topics, none of these already-used ones: {done[-200:]}\n"
                 f"The last {picture_pool.TOPIC_BACKUPS} are backups, used only if an earlier topic has too few real pictures or footage.")
         if ch.get("myths"):  # stories the fact check caught: worth telling as the real story behind the myth
             what += ("\nMyths our fact check caught earlier, each good for a \"myth vs truth\" Short that tells "
@@ -147,7 +149,7 @@ Reply with ONLY JSON: {{"shorts": [{{"topic": "...", "character": "...", "subjec
             print(f"  Skipped {dropped[-1]}")
             continue
         # by the main character's name (a subject like "Royal Navy" would match many of our stories)
-        if not topics and (hit := topic_ideas.clash(s.get("character") or s["subject"], ch.get("done_topics") or [])):
+        if not topics and (hit := topic_ideas.clash(s.get("character") or s["subject"], done)):
             dropped.append(f'"{s["topic"]}": we already made it ("{hit[:80]}")')  # the prompt alone let repeats through
             print(f"  Skipped {dropped[-1]}")
             continue
@@ -267,12 +269,11 @@ Reply with ONLY JSON: {{"shorts": [{{"index": 0, "shape": "...", "title": "...",
             em = sc.get("emphasis")
             sc["emphasis"] = em.strip() if isinstance(em, str) and plan_rules.contains(said, plan_rules.words_of(em)) else None
             sc["transition"] = plan_rules.clean_transition(sc.get("transition")) if i else "fade"
-        max_full_p = rules.max_full_planned()
-        plan_rules.limit_full(s["scenes"], max_full_p)
-        if max_full_p > MAX_FULL_PLANNED:
+        plan_rules.limit_full(s["scenes"], rules.max_full_planned())
+        if session.RULE_SETTINGS.get("hook") == "money_claim":  # money beats never go bare
             plan_rules.fill_money_graphics(s["scenes"])
-            if s["scenes"]:
-                s["scenes"][-1]["narration"] = re.sub(r"[.;…]+$", "", s["scenes"][-1]["narration"].strip())
+        if session.RULE_SETTINGS.get("loop") == "yes" and s["scenes"]:  # the last line runs on into scene 1
+            s["scenes"][-1]["narration"] = re.sub(r"[.;…]+$", "", s["scenes"][-1]["narration"].strip())
         pool_cands = (picture_pool.load_pool(Path(s["pool_dir"]), thumbs=False) or []) if s.get("pool_dir") else []
         picture_pool.clean_pics(s, pool_cands)
         for sc in s["scenes"]:
@@ -529,7 +530,7 @@ The narration below is final: never change a word of it. Plan the edit of every 
   move = camera move that suits the image: "in" (faces, details, tension), "out" (reveals),
   "left"/"right" (wide places, crowds, landscapes), "up"/"down" (tall buildings, full-length
   portraits). Vary them; never the same move twice in a row.
-  graphic = on-screen callout or null. Use on 4-7 scenes, mixing at least 3 different styles,
+  graphic = on-screen callout or null. Use on 4-7 scenes (unless the rules above give another count), mixing at least 3 different styles,
   never scene 1 (it gets the hook title):
   {{"style": "question", "text": "WHY DIDN'T THE GUNS WORK?"}} at most once, at a cliffhanger the script
   answers LATER (the picture dims and the question holds; up to 6 words, ends with "?"),

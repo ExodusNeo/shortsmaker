@@ -11,6 +11,7 @@ max_full_planned: 4
 max_full: 5
 opener: animated
 hook: money_claim
+loop: yes
 idea_pages: Society, economy and law; Technology, inventions and products; History; Food
 
 ## Topic picking
@@ -41,7 +42,7 @@ How Money Works' hits do: "This man effectively created a free money machine and
 thousand dollars" (3.5M views); "Walmart truck drivers are now making the same as entry-level investment bankers"
 (1.9M). Our Match King opened on a crime fact with nothing for the viewer to want (29.7% stayed).
 
-Pacing & Structure (35–50s Shorts, 110–135 spoken words across 11–16 scenes):
+Pacing & Structure:
 1. Zero Intro Fluff (Scene 1): Open mid-tension on frame 0. Start directly with a staggering dollar figure, an absurd financial contradiction, or a catastrophic calculation error. Never say "Have you ever wondered", "In business history", or "Imagine a world". Scene 1 must be a punchy stand-alone sentence of 12 words or fewer.
 2. Hard Data Density: The script MUST include at least 4 concrete numbers (dollar amounts, profit margins, loss totals, percentages, unit costs, or exact years) that directly drive on-screen Remotion cards and bar charts.
 3. Fast Micro-Beats (6–8 words on money/mechanism beats): Keep individual scenes to 5–8 words (~1.8–2.5 seconds each), and make sure every scene that explains a contract clause, money comparison, or financial mechanism has at least 6–8 words so full-screen Remotion motion graphics have time to animate cleanly.

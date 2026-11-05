@@ -56,8 +56,8 @@ George Hull who carved it). Choose an event with nobody to follow only when noth
   he...", "Japan declared him dead in 1959."). No line starts with a date; a year only when it matters,
   mid-sentence. Names only for people who act in the story.
   Pronunciation for VoiceStudio TTS: write out words phonetically where TTS might stumble: spaced acronyms
-  like "H M S" or "U S S", full words like "World War One", "World War Two", and write years out as spoken words
-  where needed (e.g. "nineteen-oh-six" instead of "1906") so narration never stumbles or reads dates mechanically.
+  like "H M S" or "U S S" and full words like "World War One", "World War Two". Keep years and numbers as
+  digits ("1906"): the voice reads them aloud, and date graphics and captions need the digits.
   escalate: each beat stranger or bigger than the last. Concrete, physical details (what people saw, heard,
   held), told like a friend at a bar, with one or two dry, wry asides that make it fun (never about death or
   suffering).
@@ -66,9 +66,6 @@ George Hull who carved it). Choose an event with nobody to follow only when noth
   pinned comment handle that). Where it fits, the reveal echoes the hook so the ending loops into a rewatch.
   Where it fits, ask the hook's question again out loud just before the answer ("So why would a railway keep a
   baboon?"), so the viewer stays for it.
-  CIRCULAR LOOP ENDING: write the very last sentence so it connects grammatically or conceptually right back into
-  scene 1's opening line (e.g. ending on "...all because..." or echoing scene 1's hook subject so the replay begins
-  seamlessly before the viewer realizes the video ended). This circular loop drives average percentage viewed over 100%.
   hook_text: 2-4 punchy, high-contrast words highlighting the core anomaly or stakes (e.g. "IMPOSTORS ON A WARSHIP",
   "NOBODY FIRED HIM", "DEAD JOCKEY WINS"), never a generic label.
   Example of the style (a story we already covered; never reuse its wording), one picture per scene:

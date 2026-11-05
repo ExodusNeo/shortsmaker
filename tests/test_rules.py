@@ -167,6 +167,13 @@ def test_missing_heading_stops():
     assert stop_text(make(Directing=None)) == 'Stopped: channels/x.rules.md has no "## Directing" section.'
 
 
+def test_loop_setting_is_checked():
+    base = "status: ready\nvisuals: photos\nmin_real_pictures: 6"
+    assert stop_text(make(Settings=base + "\nloop: maybe")) == \
+        """Stopped: channels/x.rules.md: loop must be 'yes' or 'no', not "maybe"."""
+    assert rules.parse_rules(make(Settings=base + "\nloop: yes"), LABEL)[1]["loop"] == "yes"
+
+
 def test_empty_heading_stops():
     assert stop_text(make(Directing="<!-- new -->\n\n")) == 'Stopped: channels/x.rules.md has no "## Directing" section.'
 

@@ -7,8 +7,8 @@ here that describes it (current state, a line or two of why); put long stories i
 
 ## What this is
 A faceless YouTube Shorts generator for **several channels** (profiles in `channels/`): `strange-history` (main,
-"Plot Twist Archive"), `weird-economics`, `engineering-failures` (drawn in Blender) and `gaming` (rules drafted,
-waiting for the owner). Goal: YouTube Partner Program monetization from a fresh account. The owner runs `run.bat`,
+"Plot Twist Archive"), `weird-economics`, `gaming` and `engineering-failures` (drawn in Blender; its rules are still `status: draft`,
+waiting for the owner's review, so choosing it stops the run). Goal: YouTube Partner Program monetization from a fresh account. The owner runs `run.bat`,
 reviews each Short and **uploads manually** in YouTube Studio (no API uploads: an unaudited API project locks videos
 to private). The owner is **not a programmer**: explain in plain words.
 
@@ -176,8 +176,7 @@ Rules that keep it working:
    payoffs, swipe points before the final two scenes and 3+ separated empty beats enter the bounded edit
    retry. A malformed fact-check verdict is explicitly NOT CHECKED, including in the finished CHECK lines.
    Lengths: 95-125 words in 11-16 scenes (~40-50 s), or `SHORT_FORM` 60-72 words in 8-10: `writing.length_plan()` is
-   the only length target (the strange-history rules file no longer repeats one; weird-economics' rules still say
-   110-135); `writing.max_seconds()` is quality_check's limit. Scenes of 4-10 words
+   the only length target (no rules file repeats one); `writing.max_seconds()` is quality_check's limit. Scenes of 4-10 words
    (`SCENE_WORDS`), up to 16 where one picture needs time; sentences may run across cuts (`SCENE_CUTS`), but the first
    sentence ends by scene 2 (checked). `plan_rules.first_sentence()` reads it across the cut for the logbook, the
    first-second check and SEO. The hook opens inside the strangest moment; story rules (but / so / you see, varied;
@@ -348,11 +347,15 @@ ones wait in `library.bat`. The invention path has never run in a real Short.
 
 ## Rules per channel (`channels/<name>.rules.md`)
 Read by `##` heading: `Settings` (`status: draft|ready`, `visuals: photos|blender`, `min_real_pictures`,
-`max_full_planned`, `max_full`, `opener: animated|none`, `hook: moment|money_claim`, `idea_pages`), `Topic picking`,
+`max_full_planned`, `max_full`, `opener: animated|none`, `hook: moment|money_claim`, `loop: yes|no`, `idea_pages`),
+`Topic picking`,
 `Story rules`, `Writing for the picture`, `Lessons from our numbers`, `Opening picture` (must define `- era_ok:`,
 `- sharp:`, `- hook:`), `Picture picking`, `Directing`, `First-second check`, `AI paintings`,
 `Build plan` (Blender channels); optional: `Opener`, `SEO`. A missing section or `status: draft` stops the run;
-never another channel's rules.
+never another channel's rules. `loop: yes` (weird-economics) is the only switch for loop Shorts (last line runs
+into scene 1, no tail, short music fade); `hook: money_claim` adds money charts (`fill_money_graphics`). Rules
+files give no word/second targets (`writing.length_plan()` owns them) and keep years as digits (the voice
+worker speaks them; date graphics and captions need them).
 A new profile gets drafted rules (`rules.draft_rules()`) and waits for the owner to set `status: ready`.
 `tests/golden/prompts.json` holds strange-history's prompts; re-save (`tests\test_rules.py --save-golden`) only for
 an intended prompt change, and diff it per prompt first.
@@ -446,7 +449,7 @@ strangest moment. Same story, other channel: Voggle's Mike 2M views vs ours 1.2K
 - run.bat's "press any key" at the end doesn't close the window for the owner: not found in the code; waiting for
   the window's last line.
 - Never seen in a real run: style inventions, question beats, wipes, the Shotcut timeline.
-- `channels/gaming.rules.md` is drafted and waiting for the owner's review.
+- `channels/engineering-failures.rules.md` is drafted (`status: draft`) and waiting for the owner's review; gaming is ready.
 - Media sources/audio expansion implemented 2026-11-01. Source status and local import fallback in media.bat;
   McDonald's/LoC blocked automated requests here, Smithsonian demo key hit its rate limit. Europeana's owner-
   supplied key is configured locally and a live image search succeeded. Duke AdViews works; Duke's separate Ad*Access print site has no working connector

@@ -38,6 +38,15 @@ class ReliabilityTests(unittest.TestCase):
             checkpoints.update(self.work, 'complete')
             self.assertEqual(checkpoints.pending(), [])
 
+    def test_unfinished_shorts_count_as_made_topics(self):
+        other = self.root / 'other' / 'short'
+        with patch.object(checkpoints, 'OUTPUT', self.root):
+            checkpoints.begin(self.folder, self.short, 'codex-only')
+            checkpoints.begin(other, {**self.short, 'topic': 'Another channel'}, 'codex-only')
+            self.assertEqual(checkpoints.pending_topics('test'), ['A topic'])
+            checkpoints.update(self.work, 'complete')
+            self.assertEqual(checkpoints.pending_topics('test'), [])
+
     def test_render_context_restores_photos_paths_and_integer_clip_keys(self):
         data = {'clips': {3: Path('clip.mp4')}, 'emphasis': {1.2}, 'flashes': {2.3},
                 'cues': [{'photo': b'photo bytes'}]}

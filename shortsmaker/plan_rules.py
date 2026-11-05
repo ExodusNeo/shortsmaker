@@ -376,16 +376,10 @@ def shows_person(cand: dict, person_name: str, catalog: list[dict] | None = None
 
 
 def is_loop_short(scenes: list[dict]) -> bool:
-    """True when the Short's final scene is an open grammatical loop bridge into scene 1 (either configured via
-    channel rules or ending without sentence-closing punctuation)."""
-    if not scenes:
-        return False
-    last = str(scenes[-1].get("narration") or "").strip()
-    if not last:
-        return False
-    if not re.search(r"[.!?][\"')\]]*$", last):
-        return True
-    return "infinite loop" in (session.RULES.get("Story rules") or "").lower()
+    """True when the channel's rules set `loop: yes`: the final scene is an open bridge back into scene 1.
+    Only the setting decides (audit 2026-11-05: guessing from the last line's punctuation turned Shorts ending on a
+    curly quote or "…" into loops, with the narrator reading scene 1's first words and the music cut short)."""
+    return bool(scenes) and session.RULE_SETTINGS.get("loop") == "yes"
 
 
 def mark_details(short: dict, choices: list[dict], work: Path) -> None:

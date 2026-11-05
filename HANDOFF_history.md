@@ -1860,3 +1860,21 @@ more than 2 sentences; no reused pictures; the drawn opener passed on a later dr
 photo of McLean); the drawn reveal didn't trigger. New defects: Lee/Grant photo cards covered the same men in the
 background pictures, and the engraving look washed out the faded last picture. Fixed in 625f4d0a (code map 6e0cfab5).
 The cold reader's swipe warning at scene 5 (the general's lost dinner) stayed after the editor's one retry.
+
+## 2026-11-05 — code audit fixes (rules and reliability)
+
+A whole-repo audit (all no-AI tests passed before and after) found these, all fixed:
+- Loop Shorts were guessed from the last line's punctuation: a strange-history line ending on a curly quote or "…"
+  became a loop (narrator read scene 1's first words, audio cut 0.04 s after, music faded in 0.12 s). Now only the
+  rules setting `loop: yes` (weird-economics) decides. The last-period strip and the money charts were tied to
+  `max_full_planned > 2`; now to `loop: yes` and `hook: money_claim`.
+- `save_channel()` wrote the profile in place; a crash mid-write could cut off done_topics/myths. Now temp + replace.
+- Rules contradictions: weird-economics said 110-135 words / 35-50 s next to the code's own target (removed);
+  the director's "graphics on 4-7 scenes" now yields to a channel's own count (weird-economics: 6-8);
+  strange-history's CIRCULAR LOOP ENDING ("end on ...all because...") fought "payoff LAST" (removed; the reveal
+  still echoes the hook); its "write years as words" broke date-graphic timing and the no-date-first check, and the
+  voice worker already speaks digits (removed). Golden prompts re-saved for these intended changes.
+- Unfinished Shorts' topics now count as made (`checkpoints.pending_topics`), so declining resume can't repeat one.
+- The H3 prompt writer's "Press Enter to try again" now really retries every AI (clears NO_QUOTA).
+- HANDOFF had gaming and engineering-failures the wrong way round; engineering-failures stays draft (owner).
+- Not changed: the Remotion skill folders (installed by the skills tool, with internal links; not duplicates).

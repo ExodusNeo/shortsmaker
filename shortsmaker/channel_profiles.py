@@ -130,7 +130,9 @@ Reply with ONLY JSON: {{"niche": "...", "channel_name_ideas": ["..."], "audience
 
 
 def save_channel(ch: dict) -> None:
-    session.CHANNEL.write_text(json.dumps(ch, indent=2, ensure_ascii=False), encoding="utf-8")
+    tmp = session.CHANNEL.with_suffix(".tmp")  # a crash mid-write must not leave a cut-off profile
+    tmp.write_text(json.dumps(ch, indent=2, ensure_ascii=False), encoding="utf-8")
+    tmp.replace(session.CHANNEL)
 
 
 QUIET_LOG = logging.getLogger("yt-dlp")
