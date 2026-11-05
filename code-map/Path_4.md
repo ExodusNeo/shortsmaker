@@ -1,17 +1,20 @@
 ---
 source_file: ""
 type: "code"
-community: "h3_run.py"
+community: "make"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/h3_runpy
+  - community/make
 ---
 
 # Path
 
 ## Connections
-- [[fit_start()]] - `references` [EXTRACTED]
-- [[saved_file()]] - `references` [EXTRACTED]
+- [[caption_layer()]] - `references` [EXTRACTED]
+- [[make()_1]] - `references` [EXTRACTED]
+- [[master_gain()]] - `references` [EXTRACTED]
+- [[project_xml()]] - `references` [EXTRACTED]
+- [[remove()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/h3_runpy
+#graphify/code #graphify/EXTRACTED #community/make

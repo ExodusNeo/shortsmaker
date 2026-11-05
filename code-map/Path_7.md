@@ -1,20 +1,20 @@
 ---
 source_file: ""
 type: "code"
-community: "make"
+community: "frame_maker"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/make
+  - community/frame_maker
 ---
 
 # Path
 
 ## Connections
-- [[caption_layer()]] - `references` [EXTRACTED]
-- [[make()_1]] - `references` [EXTRACTED]
-- [[master_gain()]] - `references` [EXTRACTED]
-- [[project_xml()]] - `references` [EXTRACTED]
-- [[remove()]] - `references` [EXTRACTED]
+- [[dot-__init__()_2]] - `references` [EXTRACTED]
+- [[fills_frame()]] - `references` [EXTRACTED]
+- [[frame_maker()]] - `references` [EXTRACTED]
+- [[graphic_low()]] - `references` [EXTRACTED]
+- [[thumbnail()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/make
+#graphify/code #graphify/EXTRACTED #community/frame_maker

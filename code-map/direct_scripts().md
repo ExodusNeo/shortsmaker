@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/writing.py"
 type: "code"
-community: "code_custom_scenes"
-location: "L514"
+community: "prepare_topic"
+location: "L520"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/code_custom_scenes
+  - community/prepare_topic
 ---
 
 # direct_scripts()
@@ -21,4 +21,4 @@ tags:
 - [[write_scripts()]] - `calls` [EXTRACTED]
 - [[writing.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/code_custom_scenes
+#graphify/code #graphify/EXTRACTED #community/prepare_topic

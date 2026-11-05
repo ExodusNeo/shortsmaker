@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_pictures_first.py"
 type: "code"
-community: "re"
+community: "write_scripts"
 location: "L327"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/re
+  - community/write_scripts
 ---
 
 # test_clean_full_keeps_board_pic()
@@ -16,4 +16,4 @@ tags:
 - [[test_pictures_first.py]] - `contains` [EXTRACTED]
 - [[words_of()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/re
+#graphify/code #graphify/EXTRACTED #community/write_scripts

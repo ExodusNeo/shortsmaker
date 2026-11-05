@@ -12,7 +12,7 @@ tags:
 # audio_metadata()
 
 ## Connections
-- [[Path_25]] - `references` [EXTRACTED]
+- [[Path_24]] - `references` [EXTRACTED]
 - [[approved_sound()]] - `calls` [EXTRACTED]
 - [[audio_library.py]] - `contains` [EXTRACTED]
 - [[json]] - `calls` [EXTRACTED]

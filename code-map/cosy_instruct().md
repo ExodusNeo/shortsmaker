@@ -2,7 +2,7 @@
 source_file: "shortsmaker/gpu.py"
 type: "code"
 community: "local_clips"
-location: "L185"
+location: "L188"
 tags:
   - graphify/code
   - graphify/EXTRACTED

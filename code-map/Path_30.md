@@ -1,17 +1,20 @@
 ---
 source_file: ""
 type: "code"
-community: "ffmpeg"
+community: "approve_candidate"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ffmpeg
+  - community/approve_candidate
 ---
 
 # Path
 
 ## Connections
-- [[apply()]] - `references` [EXTRACTED]
-- [[preview()]] - `references` [EXTRACTED]
+- [[approve_candidate()]] - `references` [EXTRACTED]
+- [[invent_component()]] - `references` [EXTRACTED]
+- [[invent_styles()]] - `references` [EXTRACTED]
+- [[reject_candidate()]] - `references` [EXTRACTED]
+- [[save_candidate()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ffmpeg
+#graphify/code #graphify/EXTRACTED #community/approve_candidate

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/media_tools.py"
 type: "code"
-community: "pathlib"
+community: "image_sources.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/pathlib
+  - community/image_sourcespy
 ---
 
 # media_tools.py
@@ -17,7 +17,7 @@ tags:
 - [[audio_mix.py]] - `imports_from` [EXTRACTED]
 - [[blender_render.py]] - `imports_from` [EXTRACTED]
 - [[checkpoints.py]] - `imports_from` [EXTRACTED]
-- [[clock()_1]] - `contains` [EXTRACTED]
+- [[clock()]] - `contains` [EXTRACTED]
 - [[duration()]] - `contains` [EXTRACTED]
 - [[edit_project.py]] - `imports_from` [EXTRACTED]
 - [[editplan.py]] - `imports_from` [EXTRACTED]
@@ -57,4 +57,4 @@ tags:
 - [[voice_cache.py]] - `imports_from` [EXTRACTED]
 - [[write_json()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/pathlib
+#graphify/code #graphify/EXTRACTED #community/image_sourcespy

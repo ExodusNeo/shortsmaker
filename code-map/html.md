@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "brand_images"
+community: "extra_sources.py"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/brand_images
+  - community/extra_sourcespy
 ---
 
 # html
@@ -15,4 +15,4 @@ tags:
 - [[brand_images()]] - `calls` [EXTRACTED]
 - [[extra_sources.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/brand_images
+#graphify/concept #graphify/EXTRACTED #community/extra_sourcespy

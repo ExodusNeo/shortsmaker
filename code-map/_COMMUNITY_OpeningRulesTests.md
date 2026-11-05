@@ -1,11 +1,11 @@
 ---
 type: community
-members: 19
+members: 21
 ---
 
 # OpeningRulesTests
 
-**Members:** 19 nodes
+**Members:** 21 nodes
 
 ## Members
 - [[dot-check_first()]] - code - tests/test_opening_rules.py
@@ -17,6 +17,7 @@ members: 19
 - [[dot-test_drawn_repair_is_bounded_and_restores_graphic_fallback()]] - code - tests/test_opening_rules.py
 - [[dot-test_failed_preview_clears_previous_spoiler_verdict()]] - code - tests/test_opening_rules.py
 - [[dot-test_failed_rewrite_never_reuses_the_known_spoiler_clip()]] - code - tests/test_opening_rules.py
+- [[dot-test_final_render_routes_drawn_spoiler_into_fix_flow()]] - code - tests/test_opening_rules.py
 - [[dot-test_final_review_cannot_pass_a_high_scoring_spoiler()]] - code - tests/test_opening_rules.py
 - [[dot-test_marked_drawn_plan_is_rewritten_instead_of_reusing_cached_bad_clip()]] - code - tests/test_opening_rules.py
 - [[dot-test_motion_graphic_planning_receives_ending_protection()]] - code - tests/test_opening_rules.py
@@ -27,6 +28,7 @@ members: 19
 - [[fake_ffmpeg()]] - code - tests/test_opening_rules.py
 - [[fake_node()]] - code - tests/test_opening_rules.py
 - [[fallback()]] - code - tests/test_opening_rules.py
+- [[judge()]] - code - tests/test_opening_rules.py
 
 ## Live Query (requires Dataview plugin)
 
@@ -36,9 +38,10 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 2 edges to [[_COMMUNITY_pathlib]]
-- 2 edges to [[_COMMUNITY_review]]
+- 2 edges to [[_COMMUNITY_test_full_scenes.py]]
+- 1 edge to [[_COMMUNITY_make_opener]]
 
 ## Top bridge nodes
-- [[OpeningRulesTests]] - degree 15, connects to 2 communities
-- [[bobby()]] - degree 12, connects to 2 communities
+- [[OpeningRulesTests]] - degree 15, connects to 1 community
+- [[bobby()]] - degree 12, connects to 1 community
+- [[dot-test_final_render_routes_drawn_spoiler_into_fix_flow()]] - degree 4, connects to 1 community

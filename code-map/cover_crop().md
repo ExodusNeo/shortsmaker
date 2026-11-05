@@ -2,7 +2,7 @@
 source_file: "shortsmaker/gpu.py"
 type: "code"
 community: "local_clips"
-location: "L348"
+location: "L361"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[Fill a 916 frame with the picture (centre crop), for the AI video model's…]] - `rationale_for` [EXTRACTED]
-- [[Path_10]] - `references` [EXTRACTED]
+- [[Path_6]] - `references` [EXTRACTED]
 - [[gpu.py]] - `contains` [EXTRACTED]
 - [[local_clips()]] - `calls` [EXTRACTED]
 - [[veo_handoff()]] - `calls` [EXTRACTED]

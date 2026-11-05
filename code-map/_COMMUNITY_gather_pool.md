@@ -1,21 +1,41 @@
 ---
 type: community
-members: 8
+members: 28
 ---
 
 # gather_pool
 
-**Members:** 8 nodes
+**Members:** 28 nodes
 
 ## Members
+- [[dot-__enter__()_1]] - code - tests/test_pictures_first.py
+- [[dot-__enter__()_2]] - code - tests/test_pictures_first.py
+- [[dot-__enter__()_3]] - code - tests/test_pictures_first.py
+- [[dot-__exit__()]] - code - tests/test_pictures_first.py
+- [[dot-__exit__()_1]] - code - tests/test_pictures_first.py
+- [[dot-__init__()_3]] - code - tests/test_pictures_first.py
 - [[Candidate pictures (with preview `thumb` bytes) and sampled real-film frames…]] - rationale - shortsmaker/picture_pool.py
+- [[Images used in an English Wikipedia article chosen by editors, so almost…]] - rationale - shortsmaker/image_sources.py
+- [[Replaces the network functions for one test; `calls` records the search queries.]] - rationale - tests/test_pictures_first.py
 - [[Round-robin sources rather than letting the first provider consume the whole…]] - rationale - shortsmaker/picture_pool.py
-- [[Still images, magazinemanual scans, art and archival photos from the Internet…]] - rationale - shortsmaker/image_sources.py
+- [[Runs write_scripts with every AInetwork step replaced by canned answers;…]] - rationale - tests/test_full_scenes.py
+- [[The module that defines function `name` (KeyError for anything else).]] - rationale - tests/patching.py
+- [[URL of a standard-size Wikimedia thumbnail the largest allowed step that fits…]] - rationale - shortsmaker/image_sources.py
+- [[Usable images from a WikimediaWikipedia API query photos, screenshots,…]] - rationale - shortsmaker/image_sources.py
+- [[_fake_planning()]] - code - tests/test_full_scenes.py
 - [[add()]] - code - shortsmaker/picture_pool.py
-- [[archive_images()]] - code - shortsmaker/image_sources.py
+- [[article_images()]] - code - shortsmaker/image_sources.py
 - [[balanced_candidates()]] - code - shortsmaker/picture_pool.py
+- [[commons_search()]] - code - shortsmaker/image_sources.py
 - [[gather_pool()]] - code - shortsmaker/picture_pool.py
 - [[load_thumb()]] - code - shortsmaker/picture_pool.py
+- [[owner()]] - code - tests/patching.py
+- [[stubbed]] - code - tests/test_pictures_first.py
+- [[test_director_prompt_mentions_full()]] - code - tests/test_full_scenes.py
+- [[test_gather_pool_shape()]] - code - tests/test_pictures_first.py
+- [[test_gather_pool_skip_and_limits()]] - code - tests/test_pictures_first.py
+- [[thumb_url()]] - code - shortsmaker/image_sources.py
+- [[wm_files()]] - code - shortsmaker/image_sources.py
 
 ## Live Query (requires Dataview plugin)
 
@@ -25,21 +45,25 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 4 edges to [[_COMMUNITY_picture_pool.py]]
-- 3 edges to [[_COMMUNITY_re]]
-- 2 edges to [[_COMMUNITY_fetch]]
-- 2 edges to [[_COMMUNITY_wm_files]]
-- 2 edges to [[_COMMUNITY_settings]]
-- 2 edges to [[_COMMUNITY_prepare_topic]]
-- 2 edges to [[_COMMUNITY_owner]]
-- 1 edge to [[_COMMUNITY_on_topic]]
-- 1 edge to [[_COMMUNITY_choose_images]]
-- 1 edge to [[_COMMUNITY_get_image]]
-- 1 edge to [[_COMMUNITY_extra_sources.py]]
-- 1 edge to [[_COMMUNITY_gpu.py]]
-- 1 edge to [[_COMMUNITY_test_first_second.py]]
+- 7 edges to [[_COMMUNITY_extra_sources.py]]
+- 7 edges to [[_COMMUNITY_test_full_scenes.py]]
+- 5 edges to [[_COMMUNITY_test_pictures_first.py]]
+- 5 edges to [[_COMMUNITY_image_sources.py]]
+- 4 edges to [[_COMMUNITY_write_scripts]]
+- 3 edges to [[_COMMUNITY_planning]]
+- 3 edges to [[_COMMUNITY_prepare_topic]]
+- 3 edges to [[_COMMUNITY_choose_images]]
+- 2 edges to [[_COMMUNITY_fake_ai]]
+- 2 edges to [[_COMMUNITY_invent_component]]
+- 1 edge to [[_COMMUNITY_finish_render]]
+- 1 edge to [[_COMMUNITY_footage.py]]
+- 1 edge to [[_COMMUNITY_clean_photo]]
+- 1 edge to [[_COMMUNITY_plan_with]]
+- 1 edge to [[_COMMUNITY_ask]]
 
 ## Top bridge nodes
-- [[gather_pool()]] - degree 23, connects to 12 communities
-- [[archive_images()]] - degree 6, connects to 4 communities
-- [[balanced_candidates()]] - degree 3, connects to 1 community
+- [[gather_pool()]] - degree 23, connects to 8 communities
+- [[owner()]] - degree 13, connects to 4 communities
+- [[wm_files()]] - degree 8, connects to 4 communities
+- [[_fake_planning()]] - degree 6, connects to 3 communities
+- [[stubbed]] - degree 9, connects to 2 communities

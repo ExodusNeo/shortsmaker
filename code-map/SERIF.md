@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/full/Paper.tsx"
 type: "code"
-community: "full/types.ts"
+community: "Paper"
 location: "L8"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/full/typests
+  - community/Paper
 ---
 
 # SERIF
@@ -21,4 +21,4 @@ tags:
 - [[guarded.tsx]] - `imports` [EXTRACTED]
 - [[toolkit.tsx]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/full/typests
+#graphify/code #graphify/EXTRACTED #community/Paper

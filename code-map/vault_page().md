@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/logbook.py"
 type: "code"
-community: "re"
+community: "log_short"
 location: "L61"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/re
+  - community/log_short
 ---
 
 # vault_page()
@@ -20,4 +20,4 @@ tags:
 - [[shutil]] - `calls` [EXTRACTED]
 - [[vault_refresh()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/re
+#graphify/code #graphify/EXTRACTED #community/log_short

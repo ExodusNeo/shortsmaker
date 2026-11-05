@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_full_scenes.py"
 type: "code"
-community: "re"
+community: "test_full_scenes.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/re
+  - community/test_full_scenespy
 ---
 
 # test_full_scenes.py
@@ -96,6 +96,7 @@ tags:
 - [[test_sentence_ends_include_curly_quotes_and_ellipsis()]] - `contains` [EXTRACTED]
 - [[test_sfx_full()]] - `contains` [EXTRACTED]
 - [[test_short_credit()]] - `contains` [EXTRACTED]
+- [[test_short_scene_callout_is_placed_so_the_check_passes()]] - `contains` [EXTRACTED]
 - [[test_state_roundtrip_full_pics()]] - `contains` [EXTRACTED]
 - [[test_story_sound_library()]] - `contains` [EXTRACTED]
 - [[test_story_sound_wins_its_moment()]] - `contains` [EXTRACTED]
@@ -103,4 +104,4 @@ tags:
 - [[traceback]] - `imports` [EXTRACTED]
 - [[writing.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/re
+#graphify/code #graphify/EXTRACTED #community/test_full_scenespy

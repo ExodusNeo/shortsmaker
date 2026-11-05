@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/short_render.py"
 type: "code"
-community: "test_rules.py"
+community: "rewrite_paint_prompts"
 location: "L191"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_rulespy
+  - community/rewrite_paint_prompts
 ---
 
 # plan_gap_paintings()
@@ -19,4 +19,4 @@ tags:
 - [[short_render.py]] - `contains` [EXTRACTED]
 - [[test_scene_without_picture_or_prompt_gets_painted_not_reused()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_rulespy
+#graphify/code #graphify/EXTRACTED #community/rewrite_paint_prompts

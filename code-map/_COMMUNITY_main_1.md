@@ -1,11 +1,11 @@
 ---
 type: community
-members: 20
+members: 18
 ---
 
 # main
 
-**Members:** 20 nodes
+**Members:** 18 nodes
 
 ## Members
 - [[Ask for a number 1..n (Enter = default, when there is one).]] - rationale - shortsmaker/channel_profiles.py
@@ -18,9 +18,7 @@ members: 20
 - [[ask_yes()]] - code - shortsmaker/channel_profiles.py
 - [[command()]] - code - shortsmaker/retention.py
 - [[configure_brain()]] - code - shortsmaker/channel_profiles.py
-- [[library.bat the owner watches each invention the AI made for a Short and adds…]] - rationale - shortsmaker/style_lab.py
-- [[library_menu()]] - code - shortsmaker/style_lab.py
-- [[main()_6]] - code - shortsmaker/cli.py
+- [[main()_5]] - code - shortsmaker/cli.py
 - [[make_shorts.py]] - code - make_shorts.py
 - [[normalize_brain()]] - code - shortsmaker/channel_profiles.py
 - [[render()_4]] - code - tests/test_blender_run.py
@@ -37,28 +35,28 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 12 edges to [[_COMMUNITY_pathlib]]
+- 11 edges to [[_COMMUNITY_re]]
 - 7 edges to [[_COMMUNITY_resume_runs]]
 - 6 edges to [[_COMMUNITY_fix_short]]
-- 5 edges to [[_COMMUNITY_json]]
-- 3 edges to [[_COMMUNITY_test_every_mode_can_continue_through_two_exhausted_ais]]
 - 3 edges to [[_COMMUNITY_pick_channel]]
-- 2 edges to [[_COMMUNITY_re]]
-- 2 edges to [[_COMMUNITY_style_library]]
-- 1 edge to [[_COMMUNITY_invent_styles]]
-- 1 edge to [[_COMMUNITY_prune_cache]]
-- 1 edge to [[_COMMUNITY_write_scripts]]
+- 3 edges to [[_COMMUNITY_retention.py]]
+- 2 edges to [[_COMMUNITY_saved_session]]
+- 2 edges to [[_COMMUNITY_json]]
+- 2 edges to [[_COMMUNITY_approve_candidate]]
+- 2 edges to [[_COMMUNITY_cold_read]]
 - 1 edge to [[_COMMUNITY_fake_ai]]
 - 1 edge to [[_COMMUNITY_render]]
+- 1 edge to [[_COMMUNITY_style_library]]
 - 1 edge to [[_COMMUNITY_ask_ai]]
-- 1 edge to [[_COMMUNITY_cold_read]]
 - 1 edge to [[_COMMUNITY_edit_scripts]]
-- 1 edge to [[_COMMUNITY_audio_library.py]]
+- 1 edge to [[_COMMUNITY_media_command]]
+- 1 edge to [[_COMMUNITY_log_short]]
+- 1 edge to [[_COMMUNITY_write_scripts]]
 - 1 edge to [[_COMMUNITY_test_rules.py]]
 
 ## Top bridge nodes
-- [[main()_6]] - degree 32, connects to 11 communities
+- [[main()_5]] - degree 32, connects to 12 communities
 - [[configure_brain()]] - degree 11, connects to 6 communities
-- [[library_menu()]] - degree 8, connects to 4 communities
+- [[ask_number()]] - degree 6, connects to 3 communities
+- [[command()]] - degree 11, connects to 2 communities
 - [[ask_brain()]] - degree 7, connects to 2 communities
-- [[ask_number()]] - degree 6, connects to 2 communities

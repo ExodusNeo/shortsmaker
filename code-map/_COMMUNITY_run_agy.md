@@ -28,7 +28,8 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 6 edges to [[_COMMUNITY_ask_ai]]
-- 5 edges to [[_COMMUNITY_pathlib]]
+- 3 edges to [[_COMMUNITY_test_full_scenes.py]]
+- 2 edges to [[_COMMUNITY_re]]
 
 ## Top bridge nodes
 - [[run_agy()]] - degree 9, connects to 2 communities

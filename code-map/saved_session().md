@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_ai_modes.py"
 type: "code"
-community: "test_every_mode_can_continue_through_two_exhausted_ais"
+community: "saved_session"
 location: "L13"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_every_mode_can_continue_through_two_exhausted_ais
+  - community/saved_session
 ---
 
 # saved_session()
@@ -17,5 +17,6 @@ tags:
 - [[test_batch_uses_selected_codex_writer_and_migrates_saved_aliases()]] - `calls` [EXTRACTED]
 - [[test_every_mode_can_continue_through_two_exhausted_ais()]] - `calls` [EXTRACTED]
 - [[test_exhausted_accounts_are_not_retried_when_all_three_are_empty()]] - `calls` [EXTRACTED]
+- [[test_only_the_second_edit_pass_gets_the_research()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_every_mode_can_continue_through_two_exhausted_ais
+#graphify/code #graphify/EXTRACTED #community/saved_session

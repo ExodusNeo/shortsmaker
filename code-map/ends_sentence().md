@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/plan_rules.py"
 type: "code"
-community: "first_sentence"
-location: "L459"
+community: "story_problems"
+location: "L468"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/first_sentence
+  - community/story_problems
 ---
 
 # ends_sentence()
@@ -20,4 +20,4 @@ tags:
 - [[story_problems()]] - `calls` [EXTRACTED]
 - [[test_sentence_ends_include_curly_quotes_and_ellipsis()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/first_sentence
+#graphify/code #graphify/EXTRACTED #community/story_problems

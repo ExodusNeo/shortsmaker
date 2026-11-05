@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "choose_images"
+community: "test_blender_plan.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/choose_images
+  - community/test_blender_planpy
 ---
 
 # Path
 
 ## Connections
-- [[choose_images()]] - `references` [EXTRACTED]
+- [[drawn_short()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/choose_images
+#graphify/code #graphify/EXTRACTED #community/test_blender_planpy

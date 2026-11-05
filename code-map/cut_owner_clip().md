@@ -2,7 +2,7 @@
 source_file: "shortsmaker/gpu.py"
 type: "code"
 community: "local_clips"
-location: "L545"
+location: "L558"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,7 +12,7 @@ tags:
 # cut_owner_clip()
 
 ## Connections
-- [[Path_10]] - `references` [EXTRACTED]
+- [[Path_6]] - `references` [EXTRACTED]
 - [[The owner's clip `src` cut to scene i's length fills the vertical frame, drops…]] - `rationale_for` [EXTRACTED]
 - [[ffmpeg()]] - `calls` [EXTRACTED]
 - [[gpu.py]] - `contains` [EXTRACTED]

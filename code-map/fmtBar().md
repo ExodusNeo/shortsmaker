@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/full/BigNumber.tsx"
 type: "code"
-community: "full/types.ts"
+community: "BigNumber.tsx"
 location: "L43"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/full/typests
+  - community/BigNumbertsx
 ---
 
 # fmtBar()
@@ -16,4 +16,4 @@ tags:
 - [[BigNumber.tsx]] - `contains` [EXTRACTED]
 - [[fmt()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/full/typests
+#graphify/code #graphify/EXTRACTED #community/BigNumbertsx

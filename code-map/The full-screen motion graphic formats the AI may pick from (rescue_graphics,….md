@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/picker.py"
 type: "rationale"
-community: "apply_review_fixes"
+community: "opener_graphic"
 location: "L313"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/apply_review_fixes
+  - community/opener_graphic
 ---
 
 # The full-screen motion graphic formats the AI may pick from (rescue_graphics,…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[full_formats()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/apply_review_fixes
+#graphify/rationale #graphify/EXTRACTED #community/opener_graphic

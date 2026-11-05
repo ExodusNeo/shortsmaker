@@ -12,10 +12,10 @@ tags:
 # finish_short()
 
 ## Connections
-- [[Path_13]] - `references` [EXTRACTED]
+- [[Path_10]] - `references` [EXTRACTED]
 - [[cli.py]] - `contains` [EXTRACTED]
 - [[log_short()]] - `calls` [EXTRACTED]
-- [[main()_6]] - `calls` [EXTRACTED]
+- [[main()_5]] - `calls` [EXTRACTED]
 - [[resume_runs()]] - `calls` [EXTRACTED]
 - [[save_channel()]] - `calls` [EXTRACTED]
 - [[update()]] - `calls` [EXTRACTED]

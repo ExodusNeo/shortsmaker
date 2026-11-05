@@ -12,9 +12,9 @@ tags:
 # pending()
 
 ## Connections
-- [[Path_12]] - `references` [EXTRACTED]
+- [[Path_9]] - `references` [EXTRACTED]
 - [[checkpoints.py]] - `contains` [EXTRACTED]
-- [[main()_6]] - `calls` [EXTRACTED]
+- [[main()_5]] - `calls` [EXTRACTED]
 - [[pending_topics()]] - `calls` [EXTRACTED]
 - [[read()]] - `calls` [EXTRACTED]
 - [[resume_runs()]] - `calls` [EXTRACTED]

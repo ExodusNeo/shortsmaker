@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/picture_pool.py"
 type: "rationale"
-community: "picture_pool.py"
+community: "clean_photo"
 location: "L206"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/picture_poolpy
+  - community/clean_photo
 ---
 
 # Conservative 256-bit difference hashes catch copies from different websites,…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[visual_unique()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/picture_poolpy
+#graphify/rationale #graphify/EXTRACTED #community/clean_photo

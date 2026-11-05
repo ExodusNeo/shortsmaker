@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_media.py"
 type: "code"
-community: "picture_pool.py"
+community: "image_sources.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/picture_poolpy
+  - community/image_sourcespy
 ---
 
 # test_media.py
@@ -31,6 +31,7 @@ tags:
 - [[photo_prep.py]] - `imports_from` [EXTRACTED]
 - [[picture_pool.py]] - `imports_from` [EXTRACTED]
 - [[pil]] - `imports_from` [EXTRACTED]
+- [[review.py]] - `imports_from` [EXTRACTED]
 - [[subprocess]] - `imports` [EXTRACTED]
 - [[sys]] - `imports` [EXTRACTED]
 - [[tempfile]] - `imports` [EXTRACTED]
@@ -39,4 +40,4 @@ tags:
 - [[unittest_mock]] - `imports_from` [EXTRACTED]
 - [[urllib_error]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/picture_poolpy
+#graphify/code #graphify/EXTRACTED #community/image_sourcespy

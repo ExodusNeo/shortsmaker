@@ -25,6 +25,7 @@ tags:
 - [[test_all_modes_route_writer_editor_and_reader()]] - `calls` [EXTRACTED]
 - [[test_editor_gets_one_second_pass_for_broken_rules()]] - `calls` [EXTRACTED]
 - [[test_failed_second_read_clears_old_verdict()]] - `calls` [EXTRACTED]
+- [[test_only_the_second_edit_pass_gets_the_research()]] - `calls` [EXTRACTED]
 - [[test_solo_edit_scripts_uses_same_ai()]] - `calls` [EXTRACTED]
 - [[write_scripts()]] - `calls` [EXTRACTED]
 - [[writing.py]] - `contains` [EXTRACTED]

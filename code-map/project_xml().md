@@ -12,10 +12,10 @@ tags:
 # project_xml()
 
 ## Connections
-- [[Path_7]] - `references` [EXTRACTED]
+- [[Path_4]] - `references` [EXTRACTED]
 - [[The video tracks bottom-up (pictures, then graphics drawn over them), each cut…]] - `rationale_for` [EXTRACTED]
 - [[chain()]] - `contains` [EXTRACTED]
-- [[clock()]] - `contains` [EXTRACTED]
+- [[clock()_1]] - `contains` [EXTRACTED]
 - [[edit_project.py]] - `contains` [EXTRACTED]
 - [[make()_1]] - `calls` [EXTRACTED]
 - [[prop()]] - `contains` [EXTRACTED]

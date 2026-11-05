@@ -1,18 +1,17 @@
 ---
-source_file: "tests/test_rules.py"
+source_file: "tests/test_full_scenes.py"
 type: "code"
-community: "test_rules.py"
-location: "L72"
+community: "ask"
+location: "L448"
 tags:
   - graphify/code
-  - graphify/INFERRED
-  - community/test_rulespy
+  - graphify/EXTRACTED
+  - community/ask
 ---
 
 # ask()
 
 ## Connections
-- [[capture_prompts()]] - `indirect_call` [INFERRED]
-- [[run_draft()]] - `indirect_call` [INFERRED]
+- [[test_review_uses_unused_pool_pictures_before_painting()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/test_rulespy
+#graphify/code #graphify/EXTRACTED #community/ask

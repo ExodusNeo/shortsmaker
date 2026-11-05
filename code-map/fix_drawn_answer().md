@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/review.py"
 type: "code"
-community: "apply_review_fixes"
-location: "L349"
+community: "opener_graphic"
+location: "L386"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/apply_review_fixes
+  - community/opener_graphic
 ---
 
 # fix_drawn_answer()
@@ -17,4 +17,4 @@ tags:
 - [[opener_graphic()]] - `calls` [EXTRACTED]
 - [[review.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/apply_review_fixes
+#graphify/code #graphify/EXTRACTED #community/opener_graphic

@@ -1,18 +1,18 @@
 ---
 source_file: "shortsmaker/audio_mix.py"
 type: "code"
-community: "captions"
+community: "story_problems"
 location: "L80"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/captions
+  - community/story_problems
 ---
 
 # styled()
 
 ## Connections
 - [[ass_colour()]] - `calls` [EXTRACTED]
-- [[captions()]] - `contains` [EXTRACTED]
+- [[captions()_1]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/captions
+#graphify/code #graphify/EXTRACTED #community/story_problems

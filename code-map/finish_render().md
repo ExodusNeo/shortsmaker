@@ -1,19 +1,19 @@
 ---
 source_file: "shortsmaker/short_render.py"
 type: "code"
-community: "render"
-location: "L538"
+community: "finish_render"
+location: "L546"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/render
+  - community/finish_render
 ---
 
 # finish_render()
 
 ## Connections
 - [[Finish reportsreviews from a committed video; resume reaches here without…]] - `rationale_for` [EXTRACTED]
-- [[Path_16]] - `references` [EXTRACTED]
+- [[Path_17]] - `references` [EXTRACTED]
 - [[apply_review_fixes()]] - `calls` [EXTRACTED]
 - [[drawn_answer_problem()]] - `calls` [EXTRACTED]
 - [[drawn_thumbnail()]] - `calls` [EXTRACTED]
@@ -32,10 +32,11 @@ tags:
 - [[resume_runs()]] - `calls` [EXTRACTED]
 - [[save_state()]] - `calls` [EXTRACTED]
 - [[short_render.py]] - `contains` [EXTRACTED]
+- [[sound_masking()]] - `calls` [EXTRACTED]
 - [[status_lines()]] - `calls` [EXTRACTED]
 - [[storyboard()]] - `calls` [EXTRACTED]
 - [[thumbnail()]] - `calls` [EXTRACTED]
 - [[visual_review()]] - `calls` [EXTRACTED]
 - [[weak_opener_graphic()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/render
+#graphify/code #graphify/EXTRACTED #community/finish_render

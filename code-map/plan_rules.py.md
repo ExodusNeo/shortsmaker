@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/plan_rules.py"
 type: "code"
-community: "re"
+community: "test_full_scenes.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/re
+  - community/test_full_scenespy
 ---
 
 # plan_rules.py
@@ -55,6 +55,7 @@ tags:
 - [[picture_pool.py]] - `imports_from` [EXTRACTED]
 - [[pil]] - `imports_from` [EXTRACTED]
 - [[re]] - `imports` [EXTRACTED]
+- [[read_need()]] - `contains` [EXTRACTED]
 - [[review.py]] - `imports_from` [EXTRACTED]
 - [[seo.py]] - `imports_from` [EXTRACTED]
 - [[session.py]] - `imports_from` [EXTRACTED]
@@ -77,4 +78,4 @@ tags:
 - [[words_of()]] - `contains` [EXTRACTED]
 - [[writing.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/re
+#graphify/code #graphify/EXTRACTED #community/test_full_scenespy

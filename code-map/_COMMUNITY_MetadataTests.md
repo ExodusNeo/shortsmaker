@@ -28,7 +28,7 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 1 edge to [[_COMMUNITY_pathlib]]
+- 1 edge to [[_COMMUNITY_re]]
 
 ## Top bridge nodes
 - [[MetadataTests]] - degree 11, connects to 1 community

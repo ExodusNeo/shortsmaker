@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/voice_cache.py"
 type: "rationale"
-community: "gpu.py"
+community: "json"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/gpupy
+  - community/json
 ---
 
 # Reuse completed narration only when text, voice settings and source files still…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[voice_cache.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/gpupy
+#graphify/rationale #graphify/EXTRACTED #community/json

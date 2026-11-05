@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/review.py"
 type: "code"
-community: "render"
-location: "L71"
+community: "finish_render"
+location: "L74"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/render
+  - community/finish_render
 ---
 
 # status_lines()
@@ -15,4 +15,4 @@ tags:
 - [[finish_render()]] - `calls` [EXTRACTED]
 - [[review.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/render
+#graphify/code #graphify/EXTRACTED #community/finish_render

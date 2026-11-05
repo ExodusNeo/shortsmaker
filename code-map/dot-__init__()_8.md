@@ -1,17 +1,17 @@
 ---
-source_file: "shortsmaker/extra_sources.py"
+source_file: "tests/test_pictures_first.py"
 type: "code"
-community: "brand_images"
-location: "L148"
+community: "fake_ai"
+location: "L120"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/brand_images
+  - community/fake_ai
 ---
 
 # .__init__()
 
 ## Connections
-- [[BrandImages]] - `method` [EXTRACTED]
+- [[fake_ai]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/brand_images
+#graphify/code #graphify/EXTRACTED #community/fake_ai

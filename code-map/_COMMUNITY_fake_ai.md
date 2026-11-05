@@ -1,23 +1,19 @@
 ---
 type: community
-members: 20
+members: 16
 ---
 
 # fake_ai
 
-**Members:** 20 nodes
+**Members:** 16 nodes
 
 ## Members
 - [[dot-__exit__()_2]] - code - tests/test_pictures_first.py
-- [[dot-__init__()_7]] - code - tests/test_pictures_first.py
-- [[Accept each usable field independently; malformed metadata cannot erase a draft.]] - rationale - shortsmaker/seo.py
+- [[dot-__init__()_8]] - code - tests/test_pictures_first.py
 - [[Age at planning time, explicitly distinct from the unknown metrics collection…]] - rationale - shortsmaker/logbook.py
 - [[Rewrite titledescriptiontags around real YouTube search phrases; add a pinned…]] - rationale - shortsmaker/seo.py
 - [[The logbook entries the owner has filled in (Views written down), at most the…]] - rationale - shortsmaker/logbook.py
-- [[Whole, unique tags within the upload budget; never slice through a tag.]] - rationale - shortsmaker/seo.py
-- [[apply_metadata()]] - code - shortsmaker/seo.py
 - [[ask_ai replaced by `reply` (a dict, None, or a function of the prompt);…]] - rationale - tests/test_pictures_first.py
-- [[clean_tags()]] - code - shortsmaker/seo.py
 - [[date]] - code
 - [[entry_age()]] - code - shortsmaker/logbook.py
 - [[fake_ai]] - code - tests/test_pictures_first.py
@@ -38,23 +34,22 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 9 edges to [[_COMMUNITY_test_pictures_first.py]]
-- 5 edges to [[_COMMUNITY_pathlib]]
-- 3 edges to [[_COMMUNITY_test_topic_ideas.py]]
-- 3 edges to [[_COMMUNITY_re]]
-- 2 edges to [[_COMMUNITY_owner]]
-- 2 edges to [[_COMMUNITY_write_scripts]]
+- 9 edges to [[_COMMUNITY_re]]
+- 2 edges to [[_COMMUNITY_gather_pool]]
 - 2 edges to [[_COMMUNITY_json]]
+- 1 edge to [[_COMMUNITY_planning]]
 - 1 edge to [[_COMMUNITY_resume_runs]]
+- 1 edge to [[_COMMUNITY_write_scripts]]
 - 1 edge to [[_COMMUNITY_main_1]]
-- 1 edge to [[_COMMUNITY_fetch]]
-- 1 edge to [[_COMMUNITY_first_sentence]]
+- 1 edge to [[_COMMUNITY_story_problems]]
 - 1 edge to [[_COMMUNITY_ask_ai]]
 - 1 edge to [[_COMMUNITY_fix_short]]
+- 1 edge to [[_COMMUNITY_retention.py]]
 - 1 edge to [[_COMMUNITY_test_first_second.py]]
 
 ## Top bridge nodes
 - [[seo_pass()]] - degree 16, connects to 8 communities
 - [[fake_ai]] - degree 18, connects to 4 communities
-- [[logbook_results()]] - degree 7, connects to 3 communities
-- [[entry_age()]] - degree 5, connects to 2 communities
-- [[apply_metadata()]] - degree 5, connects to 2 communities
+- [[logbook_results()]] - degree 7, connects to 2 communities
+- [[entry_age()]] - degree 5, connects to 1 community
+- [[test_seo_pass_empty_no_ai()]] - degree 3, connects to 1 community

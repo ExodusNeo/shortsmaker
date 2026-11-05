@@ -2,7 +2,7 @@
 source_file: "shortsmaker/review.py"
 type: "code"
 community: "paint_opener_start"
-location: "L401"
+location: "L438"
 tags:
   - graphify/code
   - graphify/EXTRACTED

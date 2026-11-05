@@ -1,17 +1,17 @@
 ---
 type: community
-members: 28
+members: 26
 ---
 
 # local_clips
 
-**Members:** 28 nodes
+**Members:** 26 nodes
 
 ## Members
 - [[Detailed prompts for the owner-made clips (Colab H3 or Flow), written by the AI…]] - rationale - shortsmaker/gpu.py
 - [[Fill a 916 frame with the picture (centre crop), for the AI video model's…]] - rationale - shortsmaker/gpu.py
 - [[Mike the Headless Chicken, fix round 3 the LTX worker died without writing…]] - rationale - tests/test_full_scenes.py
-- [[Path_10]] - code
+- [[Path_6]] - code
 - [[Pause the batch write each animate scene's start picture + detailed prompt to…]] - rationale - shortsmaker/gpu.py
 - [[Real motion for every scene with a picture scenes Claude matched to archival…]] - rationale - shortsmaker/gpu.py
 - [[Run a batch on this PC's GPU through a local_ai worker (gen.py, or…]] - rationale - shortsmaker/gpu.py
@@ -20,14 +20,12 @@ members: 28
 - [[Story arc delivery hook urgency - suspenseful investigation - payoff reveal.]] - rationale - shortsmaker/gpu.py
 - [[The owner's clip `src` cut to scene i's length fills the vertical frame, drops…]] - rationale - shortsmaker/gpu.py
 - [[The picture scene i's AI clip starts from scene 1's painted strangest moment…]] - rationale - shortsmaker/gpu.py
-- [[True when the channel's rules set `loop yes` the final scene is an open…]] - rationale - shortsmaker/plan_rules.py
 - [[Voice every scene on the GPU CosyVoice (Mark Nelson, documentary) for the…]] - rationale - shortsmaker/gpu.py
 - [[cosy_instruct()]] - code - shortsmaker/gpu.py
 - [[cover_crop()]] - code - shortsmaker/gpu.py
 - [[cut_owner_clip()]] - code - shortsmaker/gpu.py
 - [[fake_run()]] - code - tests/test_full_scenes.py
 - [[h3_prompts()]] - code - shortsmaker/gpu.py
-- [[is_loop_short()]] - code - shortsmaker/plan_rules.py
 - [[local_clips()]] - code - shortsmaker/gpu.py
 - [[local_job()]] - code - shortsmaker/gpu.py
 - [[local_voice()]] - code - shortsmaker/gpu.py
@@ -45,22 +43,25 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 16 edges to [[_COMMUNITY_gpu.py]]
-- 9 edges to [[_COMMUNITY_ffmpeg]]
+- 16 edges to [[_COMMUNITY_json]]
 - 6 edges to [[_COMMUNITY_test_h3_handoff.py]]
+- 6 edges to [[_COMMUNITY_ffmpeg]]
 - 4 edges to [[_COMMUNITY_render]]
-- 4 edges to [[_COMMUNITY_paint_opener_start]]
-- 4 edges to [[_COMMUNITY_re]]
+- 3 edges to [[_COMMUNITY_paint_opener_start]]
 - 2 edges to [[_COMMUNITY_ask_ai]]
-- 2 edges to [[_COMMUNITY_json]]
-- 1 edge to [[_COMMUNITY_picture_pool.py]]
-- 1 edge to [[_COMMUNITY_first_sentence]]
+- 2 edges to [[_COMMUNITY_subprocess]]
+- 1 edge to [[_COMMUNITY_footage.py]]
+- 1 edge to [[_COMMUNITY_paint_instead]]
+- 1 edge to [[_COMMUNITY_story_problems]]
+- 1 edge to [[_COMMUNITY_qwen_voice.py]]
+- 1 edge to [[_COMMUNITY_re]]
 - 1 edge to [[_COMMUNITY_h3_run.py]]
-- 1 edge to [[_COMMUNITY_pathlib]]
+- 1 edge to [[_COMMUNITY_image_sources.py]]
+- 1 edge to [[_COMMUNITY_test_full_scenes.py]]
 
 ## Top bridge nodes
-- [[local_clips()]] - degree 15, connects to 5 communities
-- [[veo_handoff()]] - degree 14, connects to 5 communities
-- [[local_voice()]] - degree 13, connects to 5 communities
-- [[Path_10]] - degree 13, connects to 4 communities
-- [[local_job()]] - degree 11, connects to 4 communities
+- [[local_clips()]] - degree 15, connects to 6 communities
+- [[local_voice()]] - degree 13, connects to 6 communities
+- [[local_job()]] - degree 11, connects to 5 communities
+- [[veo_handoff()]] - degree 14, connects to 4 communities
+- [[Path_6]] - degree 13, connects to 4 communities

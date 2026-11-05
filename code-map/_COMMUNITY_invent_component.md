@@ -39,20 +39,20 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 13 edges to [[_COMMUNITY_pathlib]]
-- 2 edges to [[_COMMUNITY_invent_styles]]
-- 2 edges to [[_COMMUNITY_owner]]
-- 2 edges to [[_COMMUNITY_json]]
-- 2 edges to [[_COMMUNITY_style_library]]
+- 13 edges to [[_COMMUNITY_test_full_scenes.py]]
+- 3 edges to [[_COMMUNITY_json]]
+- 3 edges to [[_COMMUNITY_render_remotion]]
+- 2 edges to [[_COMMUNITY_gather_pool]]
 - 2 edges to [[_COMMUNITY_re]]
-- 2 edges to [[_COMMUNITY_render_remotion]]
+- 1 edge to [[_COMMUNITY_style_library]]
 - 1 edge to [[_COMMUNITY_ask_ai]]
 - 1 edge to [[_COMMUNITY_code_custom_scenes]]
-- 1 edge to [[_COMMUNITY_gpu.py]]
+- 1 edge to [[_COMMUNITY_subprocess]]
+- 1 edge to [[_COMMUNITY_approve_candidate]]
 
 ## Top bridge nodes
-- [[invent_component()]] - degree 17, connects to 8 communities
-- [[style_placeholders()]] - degree 10, connects to 3 communities
+- [[invent_component()]] - degree 17, connects to 9 communities
+- [[style_placeholders()]] - degree 10, connects to 2 communities
 - [[restore_style_slots()]] - degree 8, connects to 2 communities
 - [[with_fakes()_1]] - degree 8, connects to 2 communities
 - [[lint_style_code()]] - degree 6, connects to 2 communities

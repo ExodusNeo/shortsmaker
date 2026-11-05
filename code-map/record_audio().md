@@ -12,7 +12,7 @@ tags:
 # record_audio()
 
 ## Connections
-- [[Path_25]] - `references` [EXTRACTED]
+- [[Path_24]] - `references` [EXTRACTED]
 - [[audio_library.py]] - `contains` [EXTRACTED]
 - [[history_read()]] - `calls` [EXTRACTED]
 - [[render()_1]] - `calls` [EXTRACTED]

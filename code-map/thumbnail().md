@@ -1,20 +1,20 @@
 ---
 source_file: "shortsmaker/frame_render.py"
 type: "code"
-community: "picture_pool.py"
+community: "frame_maker"
 location: "L308"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/picture_poolpy
+  - community/frame_maker
 ---
 
 # thumbnail()
 
 ## Connections
-- [[Path_19]] - `references` [EXTRACTED]
+- [[Path_7]] - `references` [EXTRACTED]
 - [[finish_render()]] - `calls` [EXTRACTED]
 - [[fit_font()]] - `calls` [EXTRACTED]
 - [[frame_render.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/picture_poolpy
+#graphify/code #graphify/EXTRACTED #community/frame_maker

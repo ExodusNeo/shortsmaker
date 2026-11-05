@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/footage.py"
 type: "code"
-community: "wm_files"
+community: "footage.py"
 location: "L86"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/wm_files
+  - community/footagepy
 ---
 
 # commons_films()
@@ -19,4 +19,4 @@ tags:
 - [[usable_license()]] - `calls` [EXTRACTED]
 - [[wm_get()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/wm_files
+#graphify/code #graphify/EXTRACTED #community/footagepy

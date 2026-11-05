@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/gpu.py"
 type: "rationale"
-community: "first_sentence"
-location: "L140"
+community: "story_problems"
+location: "L143"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/first_sentence
+  - community/story_problems
 ---
 
 # Runs of scenes that together make whole sentences. A sentence may run across…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[sentence_groups()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/first_sentence
+#graphify/rationale #graphify/EXTRACTED #community/story_problems

@@ -1,17 +1,17 @@
 ---
 source_file: "shortsmaker/audio_mix.py"
 type: "rationale"
-community: "captions"
+community: "story_problems"
 location: "L66"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/captions
+  - community/story_problems
 ---
 
 # ASS captions, one caption_lines() line at a time; the spoken word turns yellow.…
 
 ## Connections
-- [[captions()]] - `rationale_for` [EXTRACTED]
+- [[captions()_1]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/captions
+#graphify/rationale #graphify/EXTRACTED #community/story_problems

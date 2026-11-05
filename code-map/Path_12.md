@@ -1,21 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "resume_runs"
+community: "clean_photo"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/resume_runs
+  - community/clean_photo
 ---
 
 # Path
 
 ## Connections
-- [[begin()]] - `references` [EXTRACTED]
-- [[context()]] - `references` [EXTRACTED]
-- [[pending()]] - `references` [EXTRACTED]
-- [[read()]] - `references` [EXTRACTED]
-- [[save_context()]] - `references` [EXTRACTED]
-- [[update()]] - `references` [EXTRACTED]
+- [[mark_details()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/resume_runs
+#graphify/code #graphify/EXTRACTED #community/clean_photo

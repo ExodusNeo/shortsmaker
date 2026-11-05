@@ -1,19 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "make_opener"
+community: "json"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/make_opener
+  - community/json
 ---
 
 # Path
 
 ## Connections
-- [[make_opener()]] - `references` [EXTRACTED]
-- [[node_run()]] - `references` [EXTRACTED]
-- [[review()]] - `references` [EXTRACTED]
-- [[write()]] - `references` [EXTRACTED]
+- [[load()_1]] - `references` [EXTRACTED]
+- [[save()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/make_opener
+#graphify/code #graphify/EXTRACTED #community/json

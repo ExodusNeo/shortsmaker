@@ -1,17 +1,28 @@
 ---
-source_file: "shortsmaker/edit_project.py"
+source_file: "shortsmaker/media_tools.py"
 type: "code"
-community: "make"
-location: "L52"
+community: "finish_render"
+location: "L43"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/make
+  - community/finish_render
 ---
 
 # clock()
 
 ## Connections
-- [[project_xml()]] - `contains` [EXTRACTED]
+- [[edit_plan()]] - `calls` [EXTRACTED]
+- [[gather_pool()]] - `calls` [EXTRACTED]
+- [[log_short()]] - `calls` [EXTRACTED]
+- [[media_tools.py]] - `contains` [EXTRACTED]
+- [[overlay_notes()]] - `calls` [EXTRACTED]
+- [[pacing_check()]] - `calls` [EXTRACTED]
+- [[quality_check()]] - `calls` [EXTRACTED]
+- [[render()_1]] - `calls` [EXTRACTED]
+- [[review_fixes()]] - `calls` [EXTRACTED]
+- [[sound_masking()]] - `calls` [EXTRACTED]
+- [[storyboard()]] - `calls` [EXTRACTED]
+- [[visual_review()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/make
+#graphify/code #graphify/EXTRACTED #community/finish_render

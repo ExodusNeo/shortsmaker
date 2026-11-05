@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "style_library"
+community: "test_blender_plan.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/style_library
+  - community/test_blender_planpy
 ---
 
 # Path
 
 ## Connections
-- [[candidate_in()]] - `references` [EXTRACTED]
+- [[_run()]] - `references` [EXTRACTED]
+- [[render_clips()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/style_library
+#graphify/code #graphify/EXTRACTED #community/test_blender_planpy

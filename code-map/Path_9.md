@@ -1,16 +1,21 @@
 ---
 source_file: ""
 type: "code"
-community: "drawn_thumbnail"
+community: "resume_runs"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/drawn_thumbnail
+  - community/resume_runs
 ---
 
 # Path
 
 ## Connections
-- [[drawn_short()]] - `references` [EXTRACTED]
+- [[begin()]] - `references` [EXTRACTED]
+- [[context()]] - `references` [EXTRACTED]
+- [[pending()]] - `references` [EXTRACTED]
+- [[read()]] - `references` [EXTRACTED]
+- [[save_context()]] - `references` [EXTRACTED]
+- [[update()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/drawn_thumbnail
+#graphify/code #graphify/EXTRACTED #community/resume_runs

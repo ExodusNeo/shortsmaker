@@ -1,12 +1,12 @@
 ---
 source_file: "tests/run_ts_tests.py"
 type: "rationale"
-community: "gpu.py"
+community: "subprocess"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/gpupy
+  - community/subprocess
 ---
 
 # Runs the TypeScript tests (tests/*.test.ts): bundles each with Remotion's own…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[run_ts_tests.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/gpupy
+#graphify/rationale #graphify/EXTRACTED #community/subprocess

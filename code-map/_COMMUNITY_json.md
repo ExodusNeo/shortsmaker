@@ -1,38 +1,52 @@
 ---
 type: community
-members: 25
+members: 39
 ---
 
 # json
 
-**Members:** 25 nodes
+**Members:** 39 nodes
 
 ## Members
-- [[One review task using the existing AI selectionquota fallback; preserve…]] - rationale - shortsmaker/retention.py
-- [[One text selection from already-reviewed pool entries before missing scenes…]] - rationale - shortsmaker/picker.py
-- [[Optional manual entry, also available without a graph or an AI call.]] - rationale - shortsmaker/retention.py
-- [[Path_15]] - code
-- [[Read a Studio retention screenshot approximately and map drops to the saved…]] - rationale - shortsmaker/retention.py
-- [[Retention screenshot handling, grounded scene timing, and no automatic logbook…]] - rationale - tests/test_retention.py
-- [[Summarize saved reviews and optional Studio context without logbook or minimum-…]] - rationale - shortsmaker/retention.py
-- [[Validate a manual Studio value; blank means unknown, never zero.]] - rationale - shortsmaker/retention.py
-- [[analyze()]] - code - shortsmaker/retention.py
-- [[collections]] - concept
-- [[edit_metrics()]] - code - shortsmaker/retention.py
+- [[A fingerprint of the drawing code (blender.py) frames drawn by older code…]] - rationale - shortsmaker/blender_render.py
+- [[Comfy-Org's official MOSS-Image text-to-image template (25 steps, CFG 2.5,…]] - rationale - shortsmaker/gpu.py
+- [[Draw a Short in Blender (2026-10-22) after the voice sets every scene's…]] - rationale - shortsmaker/blender_render.py
+- [[Drop cached downloads and topic pools older than 30 days.]] - rationale - shortsmaker/picture_pool.py
+- [[Free VoiceStudio's GPU memory the 8 GB card is needed next for SDXL and LTX.]] - rationale - shortsmaker/gpu.py
+- [[Local AI on the owner's GPU and helpers ComfyUIMOSS, VoiceStudio, Gemini…]] - rationale - shortsmaker/gpu.py
+- [[Paint on this PC with MOSS-Image in ComfyUI (owner's pick 2026-10-20 over SDXL-…]] - rationale - shortsmaker/gpu.py
+- [[Path_3]] - code
+- [[Pixabay stock video free to use in videos, no credit needed (Pixabay Content…]] - rationale - shortsmaker/footage.py
+- [[Reuse completed narration only when text, voice settings and source files still…]] - rationale - shortsmaker/voice_cache.py
+- [[Saves an invention that made it into a finished Short as a candidate for the…]] - rationale - shortsmaker/style_lab.py
+- [[VoiceStudio's backend answers, starting the app (and waiting up to 2 min) if it…]] - rationale - shortsmaker/gpu.py
+- [[YouTube query predictions (not search volumes or a popularity ranking).]] - rationale - shortsmaker/seo.py
+- [[blender_render.py]] - code - shortsmaker/blender_render.py
+- [[code_version()]] - code - shortsmaker/blender_render.py
+- [[comfy_call()]] - code - shortsmaker/gpu.py
+- [[concurrent_futures]] - concept
+- [[fingerprint()]] - code - shortsmaker/drawn_opener.py
+- [[gpu.py]] - code - shortsmaker/gpu.py
+- [[hashlib]] - concept
 - [[json]] - concept
-- [[load_metrics()]] - code - shortsmaker/retention.py
-- [[metrics_text()]] - code - shortsmaker/retention.py
-- [[normalize_metrics()]] - code - shortsmaker/retention.py
-- [[normalize_reply()]] - code - shortsmaker/retention.py
-- [[observations()]] - code - shortsmaker/retention.py
-- [[parse_metric()]] - code - shortsmaker/retention.py
-- [[recover_downloads()]] - code - shortsmaker/picker.py
-- [[report_text()]] - code - shortsmaker/retention.py
-- [[retention.py]] - code - shortsmaker/retention.py
-- [[scenes_from_plan()]] - code - shortsmaker/retention.py
-- [[seconds()]] - code - shortsmaker/retention.py
-- [[tempfile]] - concept
-- [[test_retention.py]] - code - tests/test_retention.py
+- [[load()_1]] - code - shortsmaker/voice_cache.py
+- [[main()_1]] - code - local_ai/qwen_voice.py
+- [[moss_graph()]] - code - shortsmaker/gpu.py
+- [[moss_images()]] - code - shortsmaker/gpu.py
+- [[pixabay_films()]] - code - shortsmaker/footage.py
+- [[prune_cache()]] - code - shortsmaker/picture_pool.py
+- [[save()]] - code - shortsmaker/voice_cache.py
+- [[save_candidate()]] - code - shortsmaker/style_lab.py
+- [[search_suggestions()]] - code - shortsmaker/seo.py
+- [[signature()]] - code - shortsmaker/voice_cache.py
+- [[test_candidate_names_unique_across_kinds()]] - code - tests/test_style.py
+- [[test_prune_cache_handles_pools()]] - code - tests/test_pictures_first.py
+- [[test_save_candidate_unique_slug()]] - code - tests/test_style.py
+- [[time]] - concept
+- [[up()]] - code - shortsmaker/gpu.py
+- [[voice_cache.py]] - code - shortsmaker/voice_cache.py
+- [[voicestudio_unload()]] - code - shortsmaker/gpu.py
+- [[voicestudio_up()]] - code - shortsmaker/gpu.py
 
 ## Live Query (requires Dataview plugin)
 
@@ -42,60 +56,57 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 55 edges to [[_COMMUNITY_pathlib]]
-- 17 edges to [[_COMMUNITY_gpu.py]]
-- 9 edges to [[_COMMUNITY_picture_pool.py]]
-- 8 edges to [[_COMMUNITY_re]]
-- 7 edges to [[_COMMUNITY_audio_library.py]]
-- 5 edges to [[_COMMUNITY_main_1]]
-- 5 edges to [[_COMMUNITY_code_custom_scenes]]
-- 4 edges to [[_COMMUNITY_h3_run.py]]
-- 4 edges to [[_COMMUNITY_test_rules.py]]
-- 4 edges to [[_COMMUNITY_test_topic_ideas.py]]
-- 4 edges to [[_COMMUNITY_pick_channel]]
-- 3 edges to [[_COMMUNITY_test_pictures_first.py]]
-- 3 edges to [[_COMMUNITY_ask_ai]]
-- 3 edges to [[_COMMUNITY_apply_review_fixes]]
-- 3 edges to [[_COMMUNITY_ffmpeg]]
-- 3 edges to [[_COMMUNITY_test_blender_render.py]]
+- 57 edges to [[_COMMUNITY_test_full_scenes.py]]
+- 20 edges to [[_COMMUNITY_re]]
+- 18 edges to [[_COMMUNITY_image_sources.py]]
+- 16 edges to [[_COMMUNITY_extra_sources.py]]
+- 16 edges to [[_COMMUNITY_local_clips]]
+- 13 edges to [[_COMMUNITY_subprocess]]
+- 10 edges to [[_COMMUNITY_test_blender_plan.py]]
+- 8 edges to [[_COMMUNITY_footage.py]]
+- 7 edges to [[_COMMUNITY_code_custom_scenes]]
+- 6 edges to [[_COMMUNITY_h3_run.py]]
+- 6 edges to [[_COMMUNITY_qwen_voice.py]]
+- 6 edges to [[_COMMUNITY_ffmpeg]]
+- 5 edges to [[_COMMUNITY_test_pictures_first.py]]
+- 5 edges to [[_COMMUNITY_render]]
+- 5 edges to [[_COMMUNITY_approve_candidate]]
+- 5 edges to [[_COMMUNITY_retention.py]]
+- 5 edges to [[_COMMUNITY_audio_library.py]]
+- 4 edges to [[_COMMUNITY_test_h3_handoff.py]]
+- 4 edges to [[_COMMUNITY_gen.py]]
+- 4 edges to [[_COMMUNITY_opener_graphic]]
+- 3 edges to [[_COMMUNITY_test_story.py]]
+- 3 edges to [[_COMMUNITY_make_opener]]
 - 3 edges to [[_COMMUNITY_style_library]]
-- 3 edges to [[_COMMUNITY_settings]]
-- 2 edges to [[_COMMUNITY_make_opener]]
-- 2 edges to [[_COMMUNITY_write_scripts]]
-- 2 edges to [[_COMMUNITY_gen.py]]
-- 2 edges to [[_COMMUNITY_extra_sources.py]]
-- 2 edges to [[_COMMUNITY_local_clips]]
-- 2 edges to [[_COMMUNITY_invent_component]]
+- 3 edges to [[_COMMUNITY_invent_component]]
+- 3 edges to [[_COMMUNITY_prepare_topic]]
+- 3 edges to [[_COMMUNITY_trend_research]]
+- 3 edges to [[_COMMUNITY_pick_channel]]
+- 3 edges to [[_COMMUNITY_fix_short]]
+- 2 edges to [[_COMMUNITY_paint_opener_start]]
+- 2 edges to [[_COMMUNITY_main_1]]
 - 2 edges to [[_COMMUNITY_fake_ai]]
-- 2 edges to [[_COMMUNITY_fetch]]
+- 2 edges to [[_COMMUNITY_media_command]]
 - 2 edges to [[_COMMUNITY_choose_images]]
-- 2 edges to [[_COMMUNITY_test_first_second.py]]
-- 2 edges to [[_COMMUNITY_fix_short]]
-- 2 edges to [[_COMMUNITY_test_blender_scene.py]]
-- 2 edges to [[_COMMUNITY_test_story.py]]
-- 2 edges to [[_COMMUNITY_test_blender_plan.py]]
-- 1 edge to [[_COMMUNITY_RetentionTests]]
-- 1 edge to [[_COMMUNITY_on_topic]]
-- 1 edge to [[_COMMUNITY_check_twists]]
-- 1 edge to [[_COMMUNITY_wm_files]]
-- 1 edge to [[_COMMUNITY_prepare_topic]]
+- 1 edge to [[_COMMUNITY_paint_instead]]
 - 1 edge to [[_COMMUNITY_resume_runs]]
 - 1 edge to [[_COMMUNITY_main]]
-- 1 edge to [[_COMMUNITY_lint_custom_code]]
-- 1 edge to [[_COMMUNITY_trend_research]]
-- 1 edge to [[_COMMUNITY_get_image]]
-- 1 edge to [[_COMMUNITY_render]]
-- 1 edge to [[_COMMUNITY_brand_images]]
-- 1 edge to [[_COMMUNITY_download_audio_choices]]
+- 1 edge to [[_COMMUNITY_story_problems]]
+- 1 edge to [[_COMMUNITY_rewrite_paint_prompts]]
+- 1 edge to [[_COMMUNITY_test_first_second.py]]
+- 1 edge to [[_COMMUNITY_apply_review_fixes]]
+- 1 edge to [[_COMMUNITY_write_scripts]]
+- 1 edge to [[_COMMUNITY_music_gain]]
 - 1 edge to [[_COMMUNITY_edit_scripts]]
-- 1 edge to [[_COMMUNITY_fact_check]]
 - 1 edge to [[_COMMUNITY_cold_read]]
-- 1 edge to [[_COMMUNITY_test_h3_handoff.py]]
+- 1 edge to [[_COMMUNITY_test_rules.py]]
+- 1 edge to [[_COMMUNITY_test_blender_scene.py]]
 - 1 edge to [[_COMMUNITY_build_scene.py]]
 
 ## Top bridge nodes
-- [[json]] - degree 129, connects to 46 communities
-- [[tempfile]] - degree 27, connects to 14 communities
-- [[retention.py]] - degree 33, connects to 7 communities
-- [[recover_downloads()]] - degree 7, connects to 5 communities
-- [[test_retention.py]] - degree 14, connects to 3 communities
+- [[json]] - degree 129, connects to 41 communities
+- [[gpu.py]] - degree 58, connects to 13 communities
+- [[time]] - degree 31, connects to 12 communities
+- [[hashlib]] - degree 25, connects to 8 communities
+- [[moss_images()]] - degree 13, connects to 6 communities

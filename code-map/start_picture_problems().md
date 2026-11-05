@@ -2,7 +2,7 @@
 source_file: "shortsmaker/gpu.py"
 type: "code"
 community: "local_clips"
-location: "L557"
+location: "L570"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,7 +12,7 @@ tags:
 # start_picture_problems()
 
 ## Connections
-- [[Path_10]] - `references` [EXTRACTED]
+- [[Path_6]] - `references` [EXTRACTED]
 - [[Start pictures (folderstartN.jpg) the owner shouldn't spend a clip on a…]] - `rationale_for` [EXTRACTED]
 - [[ask_ai()]] - `calls` [EXTRACTED]
 - [[gpu.py]] - `contains` [EXTRACTED]

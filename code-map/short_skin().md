@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/config.py"
 type: "code"
-community: "re"
+community: "test_full_scenes.py"
 location: "L101"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/re
+  - community/test_full_scenespy
 ---
 
 # short_skin()
@@ -18,4 +18,4 @@ tags:
 - [[render_remotion()]] - `calls` [EXTRACTED]
 - [[test_clean_full_custom_and_skin()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/re
+#graphify/code #graphify/EXTRACTED #community/test_full_scenespy

@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "gpu.py"
+community: "make"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/gpupy
+  - community/make
 ---
 
 # Path
 
 ## Connections
-- [[import_media()]] - `references` [EXTRACTED]
+- [[short_folder()]] - `references` [EXTRACTED]
+- [[videos()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/gpupy
+#graphify/code #graphify/EXTRACTED #community/make

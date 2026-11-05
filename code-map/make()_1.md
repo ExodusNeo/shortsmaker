@@ -12,7 +12,7 @@ tags:
 # make()
 
 ## Connections
-- [[Path_7]] - `references` [EXTRACTED]
+- [[Path_4]] - `references` [EXTRACTED]
 - [[caption_layer()]] - `calls` [EXTRACTED]
 - [[edit_project.py]] - `contains` [EXTRACTED]
 - [[finish_render()]] - `calls` [EXTRACTED]

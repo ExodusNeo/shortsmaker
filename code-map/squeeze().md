@@ -2,7 +2,7 @@
 source_file: "shortsmaker/plan_rules.py"
 type: "code"
 community: "full_cues"
-location: "L507"
+location: "L516"
 tags:
   - graphify/code
   - graphify/EXTRACTED

@@ -1,18 +1,18 @@
 ---
-source_file: "tests/test_style.py"
+source_file: "tests/test_ai_modes.py"
 type: "code"
-community: "fact_check"
-location: "L111"
+community: "edit_scripts"
+location: "L48"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/fact_check
+  - community/edit_scripts
 ---
 
 # ask()
 
 ## Connections
-- [[plan_with()_1]] - `indirect_call` [INFERRED]
-- [[test_fact_check_sees_new_graphics()]] - `indirect_call` [INFERRED]
+- [[test_all_modes_route_writer_editor_and_reader()]] - `indirect_call` [INFERRED]
+- [[test_only_the_second_edit_pass_gets_the_research()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/INFERRED #community/fact_check
+#graphify/code #graphify/INFERRED #community/edit_scripts

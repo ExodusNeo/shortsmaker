@@ -1,16 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: "picture_pool.py"
+community: "media_command"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/picture_poolpy
+  - community/media_command
 ---
 
 # Path
 
 ## Connections
-- [[mark_details()]] - `references` [EXTRACTED]
+- [[audition_audio()]] - `references` [EXTRACTED]
+- [[download_audio_choices()]] - `references` [EXTRACTED]
+- [[review_audio_files()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/picture_poolpy
+#graphify/code #graphify/EXTRACTED #community/media_command

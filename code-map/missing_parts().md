@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/drawn_opener.py"
 type: "code"
-community: "make_opener"
+community: "missing_parts"
 location: "L72"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/make_opener
+  - community/missing_parts
 ---
 
 # missing_parts()
@@ -18,4 +18,4 @@ tags:
 - [[re]] - `calls` [EXTRACTED]
 - [[test_kit_animals_must_be_used()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/make_opener
+#graphify/code #graphify/EXTRACTED #community/missing_parts

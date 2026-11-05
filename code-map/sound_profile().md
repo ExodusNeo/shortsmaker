@@ -12,8 +12,8 @@ tags:
 # sound_profile()
 
 ## Connections
-- [[Measure once duration and strongest 10-ms window, with explicit owner…]] - `rationale_for` [EXTRACTED]
-- [[Path_25]] - `references` [EXTRACTED]
+- [[Measure once duration and strongest 10-ms window (the impact where the hit…]] - `rationale_for` [EXTRACTED]
+- [[Path_24]] - `references` [EXTRACTED]
 - [[audio_library.py]] - `contains` [EXTRACTED]
 - [[audio_metadata()]] - `calls` [EXTRACTED]
 - [[schedule_sounds()]] - `calls` [EXTRACTED]

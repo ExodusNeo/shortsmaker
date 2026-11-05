@@ -19,6 +19,7 @@ tags:
 - [[paint_opener_start()]] - `references` [EXTRACTED]
 - [[pool_pictures()]] - `references` [EXTRACTED]
 - [[quality_check()]] - `references` [EXTRACTED]
+- [[sound_masking()]] - `references` [EXTRACTED]
 - [[storyboard()]] - `references` [EXTRACTED]
 - [[visual_review()]] - `references` [EXTRACTED]
 

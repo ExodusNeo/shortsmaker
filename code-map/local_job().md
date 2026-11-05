@@ -2,7 +2,7 @@
 source_file: "shortsmaker/gpu.py"
 type: "code"
 community: "local_clips"
-location: "L72"
+location: "L75"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,7 +12,7 @@ tags:
 # local_job()
 
 ## Connections
-- [[Path_10]] - `references` [EXTRACTED]
+- [[Path_6]] - `references` [EXTRACTED]
 - [[Run a batch on this PC's GPU through a local_ai worker (gen.py, or…]] - `rationale_for` [EXTRACTED]
 - [[gpu.py]] - `contains` [EXTRACTED]
 - [[json]] - `calls` [EXTRACTED]

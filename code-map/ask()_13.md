@@ -1,17 +1,17 @@
 ---
-source_file: "tests/test_story.py"
+source_file: "shortsmaker/blender_plan.py"
 type: "code"
-community: "cold_read"
-location: "L93"
+community: "test_blender_plan.py"
+location: "L114"
 tags:
   - graphify/code
-  - graphify/INFERRED
-  - community/cold_read
+  - graphify/EXTRACTED
+  - community/test_blender_planpy
 ---
 
 # ask()
 
 ## Connections
-- [[test_cold_read_uses_other_ai_in_solo_and_collaborative_modes()]] - `indirect_call` [INFERRED]
+- [[plan_builds()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/cold_read
+#graphify/code #graphify/EXTRACTED #community/test_blender_planpy

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/plan_rules.py"
 type: "rationale"
-community: "re"
+community: "write_scripts"
 location: "L369"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/re
+  - community/write_scripts
 ---
 
 # True when the picture's title or catalog note names the person (their surname):…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[shows_person()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/re
+#graphify/rationale #graphify/EXTRACTED #community/write_scripts

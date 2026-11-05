@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "picture_pool.py"
+community: "test_full_scenes.py"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/picture_poolpy
+  - community/test_full_scenespy
 ---
 
 # pil
@@ -37,4 +37,4 @@ tags:
 - [[test_render_resume.py]] - `imports_from` [EXTRACTED]
 - [[test_retention.py]] - `imports_from` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/picture_poolpy
+#graphify/concept #graphify/EXTRACTED #community/test_full_scenespy

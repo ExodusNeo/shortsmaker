@@ -2,7 +2,7 @@
 source_file: "shortsmaker/review.py"
 type: "code"
 community: "test_first_second.py"
-location: "L67"
+location: "L70"
 tags:
   - graphify/code
   - graphify/EXTRACTED

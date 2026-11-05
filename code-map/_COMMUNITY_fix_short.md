@@ -26,22 +26,25 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 6 edges to [[_COMMUNITY_main_1]]
-- 5 edges to [[_COMMUNITY_pathlib]]
-- 4 edges to [[_COMMUNITY_render]]
 - 3 edges to [[_COMMUNITY_resume_runs]]
-- 2 edges to [[_COMMUNITY_test_rules.py]]
+- 3 edges to [[_COMMUNITY_ffmpeg]]
+- 3 edges to [[_COMMUNITY_json]]
+- 3 edges to [[_COMMUNITY_re]]
+- 3 edges to [[_COMMUNITY_test_full_scenes.py]]
 - 2 edges to [[_COMMUNITY_pick_channel]]
+- 2 edges to [[_COMMUNITY_render]]
 - 2 edges to [[_COMMUNITY_apply_review_fixes]]
-- 2 edges to [[_COMMUNITY_re]]
-- 2 edges to [[_COMMUNITY_ffmpeg]]
-- 2 edges to [[_COMMUNITY_json]]
-- 2 edges to [[_COMMUNITY_gpu.py]]
+- 1 edge to [[_COMMUNITY_finish_render]]
+- 1 edge to [[_COMMUNITY_opener_graphic]]
 - 1 edge to [[_COMMUNITY_fake_ai]]
+- 1 edge to [[_COMMUNITY_rewrite_paint_prompts]]
 - 1 edge to [[_COMMUNITY_choose_images]]
+- 1 edge to [[_COMMUNITY_subprocess]]
+- 1 edge to [[_COMMUNITY_test_rules.py]]
 
 ## Top bridge nodes
 - [[fix_short()]] - degree 20, connects to 8 communities
 - [[load_channel()]] - degree 7, connects to 6 communities
-- [[load_state()]] - degree 7, connects to 4 communities
-- [[prune_work()]] - degree 6, connects to 4 communities
+- [[load_state()]] - degree 7, connects to 5 communities
+- [[prune_work()]] - degree 6, connects to 5 communities
 - [[test_state_roundtrip_full_pics()]] - degree 3, connects to 2 communities

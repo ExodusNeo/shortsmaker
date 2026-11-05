@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_media.py"
 type: "rationale"
-community: "picture_pool.py"
+community: "image_sources.py"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/picture_poolpy
+  - community/image_sourcespy
 ---
 
 # Media adapters and selection invariants, plus small real FFmpeg checks. No…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[test_media.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/picture_poolpy
+#graphify/rationale #graphify/EXTRACTED #community/image_sourcespy

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/plan_rules.py"
 type: "code"
-community: "re"
+community: "write_scripts"
 location: "L17"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/re
+  - community/write_scripts
 ---
 
 # is_num()
@@ -22,4 +22,4 @@ tags:
 - [[review()]] - `calls` [EXTRACTED]
 - [[review_fixes()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/re
+#graphify/code #graphify/EXTRACTED #community/write_scripts

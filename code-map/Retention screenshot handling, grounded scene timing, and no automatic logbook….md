@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_retention.py"
 type: "rationale"
-community: "json"
+community: "test_full_scenes.py"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/json
+  - community/test_full_scenespy
 ---
 
 # Retention screenshot handling, grounded scene timing, and no automatic logbook…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[test_retention.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/json
+#graphify/rationale #graphify/EXTRACTED #community/test_full_scenespy

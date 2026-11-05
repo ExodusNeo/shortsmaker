@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/plan_rules.py"
 type: "rationale"
-community: "picture_pool.py"
+community: "clean_photo"
 location: "L386"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/picture_poolpy
+  - community/clean_photo
 ---
 
 # Let the AI circle (or point an arrow at) a detail in up to 2 chosen pictures.…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[mark_details()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/picture_poolpy
+#graphify/rationale #graphify/EXTRACTED #community/clean_photo

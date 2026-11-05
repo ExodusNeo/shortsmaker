@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "picture_pool.py"
+community: "image_sources.py"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/picture_poolpy
+  - community/image_sourcespy
 ---
 
 # urllib_error
@@ -17,4 +17,4 @@ tags:
 - [[image_sources.py]] - `imports` [EXTRACTED]
 - [[test_media.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/picture_poolpy
+#graphify/concept #graphify/EXTRACTED #community/image_sourcespy

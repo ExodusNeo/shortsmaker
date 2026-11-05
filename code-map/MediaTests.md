@@ -43,6 +43,8 @@ tags:
 - [[dot-test_smithsonian_uses_image_rights_not_metadata_rights()]] - `method` [EXTRACTED]
 - [[dot-test_sound_early_impact_uses_trim_instead_of_delaying_word()]] - `method` [EXTRACTED]
 - [[dot-test_sound_main_impact_is_aligned_and_long_overlap_loses()]] - `method` [EXTRACTED]
+- [[dot-test_sound_masking_flags_noise_under_the_voice_not_a_short_hit()]] - `method` [EXTRACTED]
+- [[dot-test_steady_sound_has_no_impact_but_a_hit_keeps_it()]] - `method` [EXTRACTED]
 - [[dot-test_visual_copies_from_two_websites_are_one_candidate()]] - `method` [EXTRACTED]
 - [[test_media.py]] - `contains` [EXTRACTED]
 

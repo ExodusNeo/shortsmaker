@@ -13,11 +13,11 @@ tags:
 
 ## Connections
 - [[Make one Short. With `state` (fix.bat or an automatic fix round), reuse its…]] - `rationale_for` [EXTRACTED]
-- [[Path_16]] - `references` [EXTRACTED]
-- [[captions()]] - `calls` [EXTRACTED]
+- [[Path_17]] - `references` [EXTRACTED]
+- [[captions()_1]] - `calls` [EXTRACTED]
 - [[choose_images()]] - `calls` [EXTRACTED]
 - [[clean_photo()]] - `calls` [EXTRACTED]
-- [[clock()_1]] - `calls` [EXTRACTED]
+- [[clock()]] - `calls` [EXTRACTED]
 - [[drawn_choices()]] - `calls` [EXTRACTED]
 - [[drawn_payoff()]] - `calls` [EXTRACTED]
 - [[drop_unreadable_kinetic()]] - `calls` [EXTRACTED]
@@ -38,7 +38,7 @@ tags:
 - [[local_clips()]] - `calls` [EXTRACTED]
 - [[local_job()]] - `calls` [EXTRACTED]
 - [[local_voice()]] - `calls` [EXTRACTED]
-- [[main()_6]] - `calls` [EXTRACTED]
+- [[main()_5]] - `calls` [EXTRACTED]
 - [[make_sfx()]] - `calls` [EXTRACTED]
 - [[mark_details()]] - `calls` [EXTRACTED]
 - [[moss_images()]] - `calls` [EXTRACTED]

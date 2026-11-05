@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/review.py"
 type: "rationale"
-community: "test_rules.py"
-location: "L515"
+community: "rewrite_paint_prompts"
+location: "L552"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/test_rulespy
+  - community/rewrite_paint_prompts
 ---
 
 # Scenes being repainted (scene index -> what was wrong) get a better ai_image,…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[rewrite_paint_prompts()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/test_rulespy
+#graphify/rationale #graphify/EXTRACTED #community/rewrite_paint_prompts

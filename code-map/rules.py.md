@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/rules.py"
 type: "code"
-community: "pathlib"
+community: "re"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/pathlib
+  - community/re
 ---
 
 # rules.py
@@ -40,4 +40,4 @@ tags:
 - [[test_style.py]] - `imports_from` [EXTRACTED]
 - [[writing.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/pathlib
+#graphify/code #graphify/EXTRACTED #community/re

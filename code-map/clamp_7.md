@@ -1,17 +1,17 @@
 ---
-source_file: "remotion/src/full/Board.tsx"
+source_file: "remotion/src/full/BigNumber.tsx"
 type: "code"
-community: "Paper"
-location: "L6"
+community: "BigNumber.tsx"
+location: "L7"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Paper
+  - community/BigNumbertsx
 ---
 
 # clamp
 
 ## Connections
-- [[Board.tsx]] - `contains` [EXTRACTED]
+- [[BigNumber.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Paper
+#graphify/code #graphify/EXTRACTED #community/BigNumbertsx

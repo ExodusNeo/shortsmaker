@@ -1,23 +1,27 @@
 ---
 type: community
-members: 20
+members: 24
 ---
 
 # choose_images
 
-**Members:** 20 nodes
+**Members:** 24 nodes
 
 ## Members
 - [[dot-__exit__()_3]] - code - tests/test_pictures_first.py
 - [[dot-__init__()_9]] - code - tests/test_pictures_first.py
+- [[Bounded retry; Wikimedia already handles its own rate limits and retries.]] - rationale - shortsmaker/picker.py
 - [[Build a broad multi-source pool of images and real video footage (per-scene…]] - rationale - shortsmaker/picker.py
-- [[Path_36]] - code
+- [[One text selection from already-reviewed pool entries before missing scenes…]] - rationale - shortsmaker/picker.py
+- [[Path_33]] - code
 - [[Puts the Short's photo look on the scenes the picker chose for it (it saw the…]] - rationale - shortsmaker/style_lab.py
 - [[apply_look_scenes()]] - code - shortsmaker/style_lab.py
 - [[choose_images()]] - code - shortsmaker/picker.py
 - [[choose_images() with network stubbed; gather_pool returns `extra` (and records…]] - rationale - tests/test_pictures_first.py
+- [[download_picture()]] - code - shortsmaker/picker.py
 - [[picking]] - code - tests/test_pictures_first.py
 - [[planned_short()]] - code - tests/test_pictures_first.py
+- [[recover_downloads()]] - code - shortsmaker/picker.py
 - [[scene()_3]] - code - tests/test_pictures_first.py
 - [[still()]] - code - tests/test_pictures_first.py
 - [[test_apply_look_scenes()]] - code - tests/test_style.py
@@ -38,25 +42,23 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 15 edges to [[_COMMUNITY_test_pictures_first.py]]
-- 3 edges to [[_COMMUNITY_pathlib]]
-- 2 edges to [[_COMMUNITY_owner]]
+- 5 edges to [[_COMMUNITY_test_full_scenes.py]]
+- 3 edges to [[_COMMUNITY_gather_pool]]
+- 3 edges to [[_COMMUNITY_write_scripts]]
+- 2 edges to [[_COMMUNITY_extra_sources.py]]
+- 2 edges to [[_COMMUNITY_prepare_topic]]
+- 2 edges to [[_COMMUNITY_ask_ai]]
 - 2 edges to [[_COMMUNITY_json]]
-- 2 edges to [[_COMMUNITY_picture_pool.py]]
-- 2 edges to [[_COMMUNITY_re]]
-- 1 edge to [[_COMMUNITY_gather_pool]]
 - 1 edge to [[_COMMUNITY_test_rules.py]]
-- 1 edge to [[_COMMUNITY_sfx_events]]
-- 1 edge to [[_COMMUNITY_prepare_topic]]
 - 1 edge to [[_COMMUNITY_render]]
-- 1 edge to [[_COMMUNITY_code_custom_scenes]]
-- 1 edge to [[_COMMUNITY_ask_ai]]
 - 1 edge to [[_COMMUNITY_style_library]]
-- 1 edge to [[_COMMUNITY_get_image]]
+- 1 edge to [[_COMMUNITY_footage.py]]
+- 1 edge to [[_COMMUNITY_code_custom_scenes]]
 - 1 edge to [[_COMMUNITY_fix_short]]
 
 ## Top bridge nodes
-- [[choose_images()]] - degree 27, connects to 14 communities
+- [[choose_images()]] - degree 27, connects to 13 communities
+- [[recover_downloads()]] - degree 7, connects to 4 communities
 - [[picking]] - degree 12, connects to 2 communities
+- [[download_picture()]] - degree 5, connects to 2 communities
 - [[still()]] - degree 5, connects to 2 communities
-- [[planned_short()]] - degree 10, connects to 1 community
-- [[scene()_3]] - degree 8, connects to 1 community

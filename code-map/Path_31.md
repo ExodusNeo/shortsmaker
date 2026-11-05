@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "edit_plan"
+community: "approve_candidate"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/edit_plan
+  - community/approve_candidate
 ---
 
 # Path
 
 ## Connections
-- [[edit_plan()]] - `references` [EXTRACTED]
+- [[candidate_in()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/edit_plan
+#graphify/code #graphify/EXTRACTED #community/approve_candidate

@@ -1,11 +1,11 @@
 ---
 type: community
-members: 22
+members: 24
 ---
 
 # ReliabilityTests
 
-**Members:** 22 nodes
+**Members:** 24 nodes
 
 ## Members
 - [[dot-setUp()_2]] - code - tests/test_reliability.py
@@ -15,6 +15,7 @@ members: 22
 - [[dot-test_duplicate_finalization_does_not_duplicate_logbook_entries()]] - code - tests/test_reliability.py
 - [[dot-test_kokoro_partial_success_never_mixes_voices()]] - code - tests/test_reliability.py
 - [[dot-test_long_node_errors_keep_the_actual_error_headline()]] - code - tests/test_reliability.py
+- [[dot-test_no_voicestudio_asks_before_the_backup_voice()]] - code - tests/test_reliability.py
 - [[dot-test_pending_progress_is_atomic_and_completed_work_is_not_offered()]] - code - tests/test_reliability.py
 - [[dot-test_preview_failure_does_not_call_reviewer()]] - code - tests/test_reliability.py
 - [[dot-test_recovery_uses_only_reviewed_unused_candidates_and_retains_credit()]] - code - tests/test_reliability.py
@@ -29,6 +30,7 @@ members: 22
 - [[ReliabilityTests]] - code - tests/test_reliability.py
 - [[fail()_1]] - code - tests/test_reliability.py
 - [[job()]] - code - tests/test_reliability.py
+- [[job()_1]] - code - tests/test_reliability.py
 - [[sheet()]] - code - tests/test_reliability.py
 
 ## Live Query (requires Dataview plugin)
@@ -39,7 +41,7 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 1 edge to [[_COMMUNITY_pathlib]]
+- 1 edge to [[_COMMUNITY_test_full_scenes.py]]
 
 ## Top bridge nodes
-- [[ReliabilityTests]] - degree 19, connects to 1 community
+- [[ReliabilityTests]] - degree 20, connects to 1 community

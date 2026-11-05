@@ -1,11 +1,11 @@
 ---
 type: community
-members: 33
+members: 35
 ---
 
 # MediaTests
 
-**Members:** 33 nodes
+**Members:** 35 nodes
 
 ## Members
 - [[dot-blob()_1]] - code - tests/test_media.py
@@ -39,6 +39,8 @@ members: 33
 - [[dot-test_smithsonian_uses_image_rights_not_metadata_rights()]] - code - tests/test_media.py
 - [[dot-test_sound_early_impact_uses_trim_instead_of_delaying_word()]] - code - tests/test_media.py
 - [[dot-test_sound_main_impact_is_aligned_and_long_overlap_loses()]] - code - tests/test_media.py
+- [[dot-test_sound_masking_flags_noise_under_the_voice_not_a_short_hit()]] - code - tests/test_media.py
+- [[dot-test_steady_sound_has_no_impact_but_a_hit_keeps_it()]] - code - tests/test_media.py
 - [[dot-test_visual_copies_from_two_websites_are_one_candidate()]] - code - tests/test_media.py
 - [[MediaTests]] - code - tests/test_media.py
 
@@ -50,7 +52,7 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 1 edge to [[_COMMUNITY_picture_pool.py]]
+- 1 edge to [[_COMMUNITY_image_sources.py]]
 
 ## Top bridge nodes
-- [[MediaTests]] - degree 33, connects to 1 community
+- [[MediaTests]] - degree 35, connects to 1 community

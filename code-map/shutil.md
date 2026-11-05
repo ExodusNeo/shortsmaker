@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "gpu.py"
+community: "subprocess"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/gpupy
+  - community/subprocess
 ---
 
 # shutil
@@ -28,8 +28,8 @@ tags:
 - [[invent_component()]] - `calls` [EXTRACTED]
 - [[llm.py]] - `imports` [EXTRACTED]
 - [[logbook.py]] - `imports` [EXTRACTED]
-- [[main()_1]] - `calls` [EXTRACTED]
-- [[main()_3]] - `calls` [EXTRACTED]
+- [[main()]] - `calls` [EXTRACTED]
+- [[main()_7]] - `calls` [EXTRACTED]
 - [[media_library.py]] - `imports` [EXTRACTED]
 - [[motion.py]] - `imports` [EXTRACTED]
 - [[paint_instead()]] - `calls` [EXTRACTED]
@@ -64,4 +64,4 @@ tags:
 - [[write_scripts()]] - `calls` [EXTRACTED]
 - [[writing.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/gpupy
+#graphify/concept #graphify/EXTRACTED #community/subprocess

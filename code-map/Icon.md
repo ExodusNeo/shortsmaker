@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/full/types.ts"
 type: "code"
-community: "full/types.ts"
+community: "BigNumber.tsx"
 location: "L21"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/full/typests
+  - community/BigNumbertsx
 ---
 
 # Icon
@@ -15,4 +15,4 @@ tags:
 - [[fulltypes.ts]] - `contains` [EXTRACTED]
 - [[icons.tsx]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/full/typests
+#graphify/code #graphify/EXTRACTED #community/BigNumbertsx

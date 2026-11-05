@@ -1,17 +1,17 @@
 ---
-source_file: "tests/test_rules.py"
+source_file: "tests/test_full_scenes.py"
 type: "code"
-community: "test_rules.py"
-location: "L265"
+community: "rewrite_paint_prompts"
+location: "L477"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_rulespy
+  - community/rewrite_paint_prompts
 ---
 
 # ask()
 
 ## Connections
-- [[run_draft()]] - `contains` [EXTRACTED]
+- [[test_rewrite_paint_prompts()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_rulespy
+#graphify/code #graphify/EXTRACTED #community/rewrite_paint_prompts

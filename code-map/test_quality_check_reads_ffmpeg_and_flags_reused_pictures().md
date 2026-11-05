@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_first_second.py"
 type: "code"
-community: "test_first_second.py"
+community: "quality_check"
 location: "L15"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_first_secondpy
+  - community/quality_check
 ---
 
 # test_quality_check_reads_ffmpeg_and_flags_reused_pictures()
@@ -15,4 +15,4 @@ tags:
 - [[quality_check()]] - `calls` [EXTRACTED]
 - [[test_first_second.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_first_secondpy
+#graphify/code #graphify/EXTRACTED #community/quality_check

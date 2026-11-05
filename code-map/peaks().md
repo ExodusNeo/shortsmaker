@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/blender_render.py"
 type: "code"
-community: "test_blender_render.py"
+community: "test_blender_plan.py"
 location: "L40"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_blender_renderpy
+  - community/test_blender_planpy
 ---
 
 # peaks()
@@ -18,4 +18,4 @@ tags:
 - [[spoken_at()]] - `calls` [EXTRACTED]
 - [[test_peak_on_the_emphasis_word()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_blender_renderpy
+#graphify/code #graphify/EXTRACTED #community/test_blender_planpy

@@ -2,7 +2,7 @@
 source_file: "shortsmaker/gpu.py"
 type: "code"
 community: "local_clips"
-location: "L194"
+location: "L197"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,7 +12,7 @@ tags:
 # local_voice()
 
 ## Connections
-- [[Path_10]] - `references` [EXTRACTED]
+- [[Path_6]] - `references` [EXTRACTED]
 - [[Voice every scene on the GPU CosyVoice (Mark Nelson, documentary) for the…]] - `rationale_for` [EXTRACTED]
 - [[cosy_instruct()]] - `calls` [EXTRACTED]
 - [[gpu.py]] - `contains` [EXTRACTED]

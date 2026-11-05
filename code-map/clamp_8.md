@@ -1,8 +1,8 @@
 ---
-source_file: "remotion/src/full/Document.tsx"
+source_file: "remotion/src/full/Board.tsx"
 type: "code"
 community: "Paper"
-location: "L5"
+location: "L6"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,6 +12,6 @@ tags:
 # clamp
 
 ## Connections
-- [[Document.tsx]] - `contains` [EXTRACTED]
+- [[Board.tsx]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Paper

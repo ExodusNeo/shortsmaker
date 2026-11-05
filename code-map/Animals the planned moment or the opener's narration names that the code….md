@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/drawn_opener.py"
 type: "rationale"
-community: "make_opener"
+community: "missing_parts"
 location: "L73"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/make_opener
+  - community/missing_parts
 ---
 
 # Animals the planned moment or the opener's narration names that the code…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[missing_parts()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/make_opener
+#graphify/rationale #graphify/EXTRACTED #community/missing_parts

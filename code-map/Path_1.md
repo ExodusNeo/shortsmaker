@@ -1,16 +1,19 @@
 ---
 source_file: ""
 type: "code"
-community: "srt"
+community: "make_opener"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/srt
+  - community/make_opener
 ---
 
 # Path
 
 ## Connections
-- [[srt()]] - `references` [EXTRACTED]
+- [[make_opener()]] - `references` [EXTRACTED]
+- [[node_run()]] - `references` [EXTRACTED]
+- [[review()]] - `references` [EXTRACTED]
+- [[write()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/srt
+#graphify/code #graphify/EXTRACTED #community/make_opener
