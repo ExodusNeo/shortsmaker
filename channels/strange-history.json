@@ -42,7 +42,13 @@
     "While confined in an asylum, former army surgeon William Chester Minor volunteered for the new Oxford English Dictionary and sent in over ten thousand historical citations, becoming the project's single most prolific contributor. The twist is that editor James Murray spent twenty years believing Minor was a wealthy gentleman scholar, only to discover upon visiting in person that his greatest researcher was an inmate in Broadmoor Criminal Lunatic Asylum.",
     "In 1944 at the Battle of Arnhem, British paratrooper Major Digby Tatham-Warter led his men into combat carrying a bowler hat and an umbrella because he could never remember passwords and claimed only an Englishman would bring an umbrella to a war. The twist is that after disabling a German armored car by jamming his umbrella through the driver's slit, he deadpanned that he only brought it because the weather forecast called for rain.",
     "Frustrated that medical experts dismissed his theory that bacteria caused stomach ulcers, Australian doctor Barry Marshall cultured a beaker of lethal broth and drank it himself. The twist is that after suffering severe vomiting and agonizing gastritis to prove his point, his reckless self-experiment cured millions of patients and won him the Nobel Prize.",
-    "In the 1790s, rivals tricked eccentric merchant Timothy Dexter into suicidal investments like shipping warming pans to the tropical Caribbean and coal to Newcastle. The twist is that freak coincidences—like islanders buying the pans as molasses ladles and a sudden British coal strike—made him fabulously wealthy every single time."
+    "In the 1790s, rivals tricked eccentric merchant Timothy Dexter into suicidal investments like shipping warming pans to the tropical Caribbean and coal to Newcastle. The twist is that freak coincidences—like islanders buying the pans as molasses ladles and a sudden British coal strike—made him fabulously wealthy every single time.",
+    "In 1726, Mary Toft convinced several doctors, including a royal surgeon, that she was giving birth to rabbits. The miracle unraveled when a porter admitted obtaining a rabbit for her, and Toft eventually confessed that the deliveries were staged.",
+    "In 1911 Bobby Leach, an English-born stuntman, became the second person to go over Niagara's Horseshoe Falls in a barrel, and the first man to do it. He survived with broken kneecaps and a broken jaw, then toured the world with the barrel telling the story. The twist is that the falls didn't kill him: on a 1926 publicity tour of New Zealand he slipped on an orange peel in the street and broke his leg, and he died of the complications.",
+    "In 1954 US Air Force flight surgeon John Stapp strapped himself to the rocket sled Sonic Wind No. 1 and hit 632 mph, then stopped dead in just over a second. He took 46 g, more than any human had chosen to endure, and the blood vessels in his eyes burst. He was temporarily blinded, but he survived and went on to push for car seat belts. The twist is that an earlier sled project of his gave the world 'Murphy's Law': Stapp himself made the phrase famous at a press conference.",
+    "Clever Hans drew crowds in early-1900s Berlin by tapping out answers to arithmetic questions, even when his owner stepped aside. Psychologist Oskar Pfungst discovered that Hans could succeed only when he could see someone who knew the answer: the horse was reading tiny, unconscious changes in human posture.",
+    "In 1861, the First Battle of Bull Run erupted on Virginia grocer Wilmer McLean's farm, and a Union cannonball crashed straight into his kitchen fireplace while Confederate General P. G. T. Beauregard was inside having dinner. The twist is that after McLean moved his family 120 miles south to the quiet village of Appomattox Court House to escape the fighting, General Robert E. Lee walked into his new parlor four years later to surrender to Ulysses S. Grant—meaning the Civil War literally began in McLean's front yard and ended in his living room.",
+    "In 1945, Soviet schoolchildren gifted U.S. Ambassador Averell Harriman a carved wooden Great Seal of the United States, which hung in his Moscow study for seven years secretly transmitting every conversation despite having no batteries, wires, or electronic components inside. The twist is that the microscopic passive bug hidden inside the wooden eagle was engineered in a secret Soviet prison lab by Léon Theremin—the very same inventor who created the eerie electronic musical instrument used in sci-fi soundtracks."
   ],
   "research_seeds": {
     "handles": [
@@ -74,15 +80,15 @@
   },
   "cta_line": "for more strange history",
   "recent_shapes": [
-    "one person against the odds",
     "myth vs truth",
-    "chain of unlikely events"
+    "chain of unlikely events",
+    "mystery solved"
   ],
-  "brain": "gemini-only",
+  "brain": "gemini-codex",
   "veo": true,
   "short_form": false,
   "recent_looks": [
-    "riso",
-    "engraving"
+    "engraving",
+    "halftone"
   ]
 }
