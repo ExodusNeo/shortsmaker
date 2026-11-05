@@ -9,7 +9,7 @@ members: 10
 
 ## Members
 - [[Mike's Thinking Music (-22 LUFS) vanished under the voice with the old fixed…]] - rationale - tests/test_full_scenes.py
-- [[Path_25]] - code
+- [[Path_26]] - code
 - [[TTS with retries Microsoft's free Edge voice service drops a request now and…]] - rationale - shortsmaker/audio_mix.py
 - [[Volume factor that brings this track's loudness (first 60 s) to MUSIC_LUFS;…]] - rationale - shortsmaker/audio_mix.py
 - [[asyncio]] - concept
@@ -27,18 +27,17 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 5 edges to [[_COMMUNITY_image_sources.py]]
+- 6 edges to [[_COMMUNITY_pathlib]]
 - 2 edges to [[_COMMUNITY_render]]
 - 2 edges to [[_COMMUNITY_audio_library.py]]
 - 1 edge to [[_COMMUNITY_story_problems]]
-- 1 edge to [[_COMMUNITY_subprocess]]
 - 1 edge to [[_COMMUNITY_re]]
 - 1 edge to [[_COMMUNITY_json]]
 - 1 edge to [[_COMMUNITY_test_full_scenes.py]]
 
 ## Top bridge nodes
-- [[music_gain()]] - degree 8, connects to 5 communities
+- [[music_gain()]] - degree 8, connects to 4 communities
 - [[speak()_1]] - degree 7, connects to 3 communities
-- [[Path_25]] - degree 5, connects to 2 communities
+- [[Path_26]] - degree 5, connects to 2 communities
 - [[tts()_1]] - degree 4, connects to 1 community
 - [[test_music_gain_evens_out_tracks()]] - degree 3, connects to 1 community

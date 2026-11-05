@@ -1,18 +1,21 @@
 ---
 type: community
-members: 31
+members: 32
 ---
 
 # test_pictures_first.py
 
-**Members:** 31 nodes
+**Members:** 32 nodes
 
 ## Members
 - [[Tests for pictures-first planning (gather the pool, the AI picture list, topic…]] - rationale - tests/test_pictures_first.py
+- [[The director's `pic` numbers (scenes and evidence-board items), checked a…]] - rationale - shortsmaker/picture_pool.py
 - [[The picture list the writer, editor and director plan with the AI looks at the…]] - rationale - shortsmaker/picture_pool.py
 - [[The valid entries of a picture-list reply (LLM output is untrusted).]] - rationale - shortsmaker/picture_pool.py
 - [[catalog_entries()]] - code - shortsmaker/picture_pool.py
 - [[catalog_pool()]] - code - shortsmaker/picture_pool.py
+- [[check()]] - code - shortsmaker/picture_pool.py
+- [[clean_pics()]] - code - shortsmaker/picture_pool.py
 - [[entry()]] - code - tests/test_pictures_first.py
 - [[film()]] - code - tests/test_pictures_first.py
 - [[no_gather()]] - code - tests/test_pictures_first.py
@@ -34,10 +37,8 @@ members: 31
 - [[test_clean_pics()]] - code - tests/test_pictures_first.py
 - [[test_corrupt_pool_and_catalog_redone()]] - code - tests/test_pictures_first.py
 - [[test_pictures_first.py]] - code - tests/test_pictures_first.py
-- [[test_pixabay_keeps_only_on_topic_videos()]] - code - tests/test_pictures_first.py
 - [[test_pool_rows_without_thumbs()]] - code - tests/test_pictures_first.py
 - [[test_prompts_carry_picture_list()]] - code - tests/test_pictures_first.py
-- [[test_small_pool_skips_ai()]] - code - tests/test_pictures_first.py
 - [[test_usable_counts_film_once()]] - code - tests/test_pictures_first.py
 
 ## Live Query (requires Dataview plugin)
@@ -48,28 +49,28 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 16 edges to [[_COMMUNITY_prepare_topic]]
+- 17 edges to [[_COMMUNITY_write_scripts]]
 - 15 edges to [[_COMMUNITY_choose_images]]
-- 15 edges to [[_COMMUNITY_test_full_scenes.py]]
-- 13 edges to [[_COMMUNITY_planning]]
+- 15 edges to [[_COMMUNITY_prepare_topic]]
+- 11 edges to [[_COMMUNITY_json]]
+- 11 edges to [[_COMMUNITY_llm.py]]
 - 9 edges to [[_COMMUNITY_fake_ai]]
-- 9 edges to [[_COMMUNITY_re]]
-- 5 edges to [[_COMMUNITY_gather_pool]]
-- 5 edges to [[_COMMUNITY_json]]
-- 3 edges to [[_COMMUNITY_write_scripts]]
-- 3 edges to [[_COMMUNITY_image_sources.py]]
-- 2 edges to [[_COMMUNITY_ffmpeg]]
-- 2 edges to [[_COMMUNITY_extra_sources.py]]
+- 6 edges to [[_COMMUNITY_pathlib]]
+- 4 edges to [[_COMMUNITY_gather_pool]]
+- 3 edges to [[_COMMUNITY_extra_sources.py]]
+- 2 edges to [[_COMMUNITY_write_json]]
+- 2 edges to [[_COMMUNITY_test_topic_ideas.py]]
+- 2 edges to [[_COMMUNITY_image_sources.py]]
 - 1 edge to [[_COMMUNITY_test_rules.py]]
 - 1 edge to [[_COMMUNITY_ask_ai]]
 - 1 edge to [[_COMMUNITY_cold_read]]
+- 1 edge to [[_COMMUNITY_words_of]]
 - 1 edge to [[_COMMUNITY_rewrite_paint_prompts]]
 - 1 edge to [[_COMMUNITY_edit_plan]]
-- 1 edge to [[_COMMUNITY_footage.py]]
 
 ## Top bridge nodes
 - [[test_pictures_first.py]] - degree 83, connects to 14 communities
 - [[catalog_pool()]] - degree 19, connects to 7 communities
 - [[save_pool()]] - degree 13, connects to 4 communities
-- [[test_prompts_carry_picture_list()]] - degree 8, connects to 2 communities
-- [[test_both_mode_reuses_pools()]] - degree 7, connects to 2 communities
+- [[clean_pics()]] - degree 8, connects to 3 communities
+- [[pool_of()]] - degree 19, connects to 2 communities

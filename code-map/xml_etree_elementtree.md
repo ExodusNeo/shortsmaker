@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "subprocess"
+community: "edit_project.py"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/subprocess
+  - community/edit_projectpy
 ---
 
 # xml_etree_elementtree
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[test_edit_project.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/subprocess
+#graphify/concept #graphify/EXTRACTED #community/edit_projectpy

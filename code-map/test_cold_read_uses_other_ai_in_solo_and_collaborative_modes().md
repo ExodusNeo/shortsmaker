@@ -12,7 +12,7 @@ tags:
 # test_cold_read_uses_other_ai_in_solo_and_collaborative_modes()
 
 ## Connections
-- [[ask()_8]] - `indirect_call` [INFERRED]
+- [[ask()_11]] - `indirect_call` [INFERRED]
 - [[cold_read()]] - `calls` [EXTRACTED]
 - [[cold_read_line()]] - `calls` [EXTRACTED]
 - [[test_story.py]] - `contains` [EXTRACTED]

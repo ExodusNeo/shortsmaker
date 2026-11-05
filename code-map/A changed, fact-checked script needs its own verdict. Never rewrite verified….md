@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/writing.py"
 type: "rationale"
-community: "cold_read"
-location: "L299"
+community: "story_problems"
+location: "L305"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/cold_read
+  - community/story_problems
 ---
 
 # A changed, fact-checked script needs its own verdict. Never rewrite verified…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[recheck_final_scripts()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/cold_read
+#graphify/rationale #graphify/EXTRACTED #community/story_problems

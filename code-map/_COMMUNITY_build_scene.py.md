@@ -40,12 +40,13 @@ SORT file.name ASC
 - 3 edges to [[_COMMUNITY_audio_library.py]]
 - 3 edges to [[_COMMUNITY_look.py]]
 - 2 edges to [[_COMMUNITY_templates.py]]
-- 2 edges to [[_COMMUNITY_test_full_scenes.py]]
+- 1 edge to [[_COMMUNITY_test_topic_ideas.py]]
+- 1 edge to [[_COMMUNITY_llm.py]]
 - 1 edge to [[_COMMUNITY_json]]
-- 1 edge to [[_COMMUNITY_re]]
+- 1 edge to [[_COMMUNITY_pathlib]]
 
 ## Top bridge nodes
-- [[build_scene.py]] - degree 16, connects to 7 communities
+- [[build_scene.py]] - degree 16, connects to 8 communities
 - [[failures.py]] - degree 10, connects to 5 communities
 - [[bpy]] - degree 4, connects to 2 communities
 - [[mathutils]] - degree 4, connects to 2 communities

@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "ffmpeg"
+community: "preview"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ffmpeg
+  - community/preview
 ---
 
 # Path
@@ -14,4 +14,4 @@ tags:
 - [[apply()]] - `references` [EXTRACTED]
 - [[preview()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ffmpeg
+#graphify/code #graphify/EXTRACTED #community/preview

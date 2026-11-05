@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "test_full_scenes.py"
+community: "llm.py"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/test_full_scenespy
+  - community/llmpy
 ---
 
 # unittest
@@ -20,4 +20,4 @@ tags:
 - [[test_render_resume.py]] - `imports` [EXTRACTED]
 - [[test_retention.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/test_full_scenespy
+#graphify/concept #graphify/EXTRACTED #community/llmpy

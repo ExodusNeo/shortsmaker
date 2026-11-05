@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/footage.py"
 type: "code"
-community: "footage.py"
+community: "image_sources.py"
 location: "L192"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/footagepy
+  - community/image_sourcespy
 ---
 
 # shot_moments()
@@ -21,4 +21,4 @@ tags:
 - [[re]] - `calls` [EXTRACTED]
 - [[write_json()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/footagepy
+#graphify/code #graphify/EXTRACTED #community/image_sourcespy

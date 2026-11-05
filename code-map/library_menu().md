@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/style_lab.py"
 type: "code"
-community: "approve_candidate"
+community: "json"
 location: "L298"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/approve_candidate
+  - community/json
 ---
 
 # library_menu()
@@ -21,4 +21,4 @@ tags:
 - [[reject_candidate()]] - `calls` [EXTRACTED]
 - [[style_lab.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/approve_candidate
+#graphify/code #graphify/EXTRACTED #community/json

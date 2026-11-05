@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/channel_profiles.py"
 type: "code"
-community: "fix_short"
+community: "main"
 location: "L104"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/fix_short
+  - community/main
 ---
 
 # load_channel()
@@ -20,4 +20,4 @@ tags:
 - [[resume_runs()]] - `calls` [EXTRACTED]
 - [[seo_pass()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/fix_short
+#graphify/code #graphify/EXTRACTED #community/main

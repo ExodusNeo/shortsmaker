@@ -12,7 +12,7 @@ tags:
 # ffmpeg()
 
 ## Connections
-- [[Path_26]] - `references` [EXTRACTED]
+- [[Path_22]] - `references` [EXTRACTED]
 - [[apply()]] - `calls` [EXTRACTED]
 - [[caption_layer()]] - `calls` [EXTRACTED]
 - [[cut_owner_clip()]] - `calls` [EXTRACTED]
@@ -24,7 +24,7 @@ tags:
 - [[preview()]] - `calls` [EXTRACTED]
 - [[preview_mix()]] - `calls` [EXTRACTED]
 - [[preview_sheet()]] - `calls` [EXTRACTED]
-- [[render()_1]] - `calls` [EXTRACTED]
+- [[render()_2]] - `calls` [EXTRACTED]
 - [[render_clips()]] - `calls` [EXTRACTED]
 - [[short_folder()]] - `calls` [EXTRACTED]
 - [[split_takes()]] - `calls` [EXTRACTED]

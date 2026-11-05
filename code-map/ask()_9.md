@@ -1,18 +1,17 @@
 ---
-source_file: "tests/test_ai_modes.py"
+source_file: "tests/test_full_scenes.py"
 type: "code"
-community: "edit_scripts"
-location: "L48"
+community: "apply_review_fixes"
+location: "L448"
 tags:
   - graphify/code
-  - graphify/INFERRED
-  - community/edit_scripts
+  - graphify/EXTRACTED
+  - community/apply_review_fixes
 ---
 
 # ask()
 
 ## Connections
-- [[test_all_modes_route_writer_editor_and_reader()]] - `indirect_call` [INFERRED]
-- [[test_only_the_second_edit_pass_gets_the_research()]] - `indirect_call` [INFERRED]
+- [[test_review_uses_unused_pool_pictures_before_painting()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/edit_scripts
+#graphify/code #graphify/EXTRACTED #community/apply_review_fixes

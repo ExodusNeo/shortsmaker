@@ -2,7 +2,7 @@
 source_file: "shortsmaker/writing.py"
 type: "code"
 community: "edit_scripts"
-location: "L317"
+location: "L323"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -26,6 +26,7 @@ tags:
 - [[test_editor_gets_one_second_pass_for_broken_rules()]] - `calls` [EXTRACTED]
 - [[test_failed_second_read_clears_old_verdict()]] - `calls` [EXTRACTED]
 - [[test_only_the_second_edit_pass_gets_the_research()]] - `calls` [EXTRACTED]
+- [[test_script_rounds_stop_when_fixed_or_after_three()]] - `calls` [EXTRACTED]
 - [[test_solo_edit_scripts_uses_same_ai()]] - `calls` [EXTRACTED]
 - [[write_scripts()]] - `calls` [EXTRACTED]
 - [[writing.py]] - `contains` [EXTRACTED]

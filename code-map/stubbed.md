@@ -12,7 +12,7 @@ tags:
 # stubbed
 
 ## Connections
-- [[dot-__enter__()_1]] - `calls` [EXTRACTED]
+- [[dot-__enter__()_2]] - `calls` [EXTRACTED]
 - [[dot-__enter__()_3]] - `method` [EXTRACTED]
 - [[dot-__exit__()_1]] - `method` [EXTRACTED]
 - [[dot-__init__()_3]] - `method` [EXTRACTED]

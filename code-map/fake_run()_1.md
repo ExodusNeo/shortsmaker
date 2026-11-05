@@ -1,18 +1,17 @@
 ---
 source_file: "tests/test_package.py"
 type: "code"
-community: "ask_ai"
-location: "L90"
+community: "gemini_model"
+location: "L136"
 tags:
   - graphify/code
-  - graphify/INFERRED
-  - community/ask_ai
+  - graphify/EXTRACTED
+  - community/gemini_model
 ---
 
 # fake_run()
 
 ## Connections
-- [[test_argon_out_of_quota_switches_to_flash()]] - `indirect_call` [INFERRED]
-- [[test_gemini_timeout_switches_to_flash()]] - `indirect_call` [INFERRED]
+- [[test_gemini_timeout_switches_to_flash()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/ask_ai
+#graphify/code #graphify/EXTRACTED #community/gemini_model

@@ -12,7 +12,7 @@ members: 14
 - [[Plain-English name of the Short's photo look for edit_plan.txt.]] - rationale - shortsmaker/editplan.py
 - [[Plain-English scene change for edit_plan.txt.]] - rationale - shortsmaker/editplan.py
 - [[Timestamped edit decision list of exactly what was rendered, plus the sound-…]] - rationale - shortsmaker/editplan.py
-- [[ask()_8]] - code - tests/test_story.py
+- [[ask()_11]] - code - tests/test_story.py
 - [[cold_read_line()]] - code - shortsmaker/editplan.py
 - [[cut_text()]] - code - shortsmaker/editplan.py
 - [[edit_plan()]] - code - shortsmaker/editplan.py
@@ -31,15 +31,16 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 5 edges to [[_COMMUNITY_test_full_scenes.py]]
-- 2 edges to [[_COMMUNITY_finish_render]]
+- 5 edges to [[_COMMUNITY_pathlib]]
 - 2 edges to [[_COMMUNITY_style_library]]
+- 1 edge to [[_COMMUNITY_finish_render]]
+- 1 edge to [[_COMMUNITY_visual_review]]
 - 1 edge to [[_COMMUNITY_test_pictures_first.py]]
 - 1 edge to [[_COMMUNITY_cold_read]]
-- 1 edge to [[_COMMUNITY_test_story.py]]
+- 1 edge to [[_COMMUNITY_llm.py]]
 
 ## Top bridge nodes
-- [[edit_plan()]] - degree 9, connects to 2 communities
+- [[edit_plan()]] - degree 9, connects to 3 communities
 - [[cut_text()]] - degree 4, connects to 2 communities
 - [[look_text()]] - degree 4, connects to 2 communities
 - [[test_cold_read_uses_other_ai_in_solo_and_collaborative_modes()]] - degree 4, connects to 2 communities

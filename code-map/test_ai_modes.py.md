@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_ai_modes.py"
 type: "code"
-community: "re"
+community: "test_ai_modes.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/re
+  - community/test_ai_modespy
 ---
 
 # test_ai_modes.py
@@ -28,8 +28,9 @@ tags:
 - [[test_every_mode_can_continue_through_two_exhausted_ais()]] - `contains` [EXTRACTED]
 - [[test_exhausted_accounts_are_not_retried_when_all_three_are_empty()]] - `contains` [EXTRACTED]
 - [[test_only_the_second_edit_pass_gets_the_research()]] - `contains` [EXTRACTED]
+- [[test_script_rounds_stop_when_fixed_or_after_three()]] - `contains` [EXTRACTED]
 - [[traceback]] - `imports` [EXTRACTED]
 - [[unittest_mock]] - `imports_from` [EXTRACTED]
 - [[writing.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/re
+#graphify/code #graphify/EXTRACTED #community/test_ai_modespy

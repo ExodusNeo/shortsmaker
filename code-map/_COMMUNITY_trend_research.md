@@ -27,12 +27,12 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 6 edges to [[_COMMUNITY_re]]
+- 6 edges to [[_COMMUNITY_llm.py]]
 - 3 edges to [[_COMMUNITY_json]]
-- 2 edges to [[_COMMUNITY_ask_ai]]
 - 2 edges to [[_COMMUNITY_write_scripts]]
+- 2 edges to [[_COMMUNITY_ask_ai]]
 - 1 edge to [[_COMMUNITY_resume_runs]]
-- 1 edge to [[_COMMUNITY_pick_channel]]
+- 1 edge to [[_COMMUNITY_main_1]]
 
 ## Top bridge nodes
 - [[save_channel()]] - degree 6, connects to 4 communities

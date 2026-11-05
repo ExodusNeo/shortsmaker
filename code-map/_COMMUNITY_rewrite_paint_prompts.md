@@ -11,7 +11,7 @@ members: 8
 - [[Mike's newsstand a repaint from the unchanged prompt painted the identical…]] - rationale - tests/test_full_scenes.py
 - [[Scenes after the first with no picture, no graphic and no planned painting get…]] - rationale - shortsmaker/short_render.py
 - [[Scenes being repainted (scene index - what was wrong) get a better ai_image,…]] - rationale - shortsmaker/review.py
-- [[ask()_7]] - code - tests/test_full_scenes.py
+- [[ask()_10]] - code - tests/test_full_scenes.py
 - [[plan_gap_paintings()]] - code - shortsmaker/short_render.py
 - [[rewrite_paint_prompts()]] - code - shortsmaker/review.py
 - [[test_rewrite_paint_prompts()]] - code - tests/test_full_scenes.py
@@ -25,16 +25,16 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 3 edges to [[_COMMUNITY_test_full_scenes.py]]
+- 2 edges to [[_COMMUNITY_apply_review_fixes]]
+- 2 edges to [[_COMMUNITY_pathlib]]
 - 1 edge to [[_COMMUNITY_test_rules.py]]
-- 1 edge to [[_COMMUNITY_paint_opener_start]]
-- 1 edge to [[_COMMUNITY_ask]]
+- 1 edge to [[_COMMUNITY_opener_graphic]]
+- 1 edge to [[_COMMUNITY_main_1]]
 - 1 edge to [[_COMMUNITY_render]]
-- 1 edge to [[_COMMUNITY_fix_short]]
-- 1 edge to [[_COMMUNITY_apply_review_fixes]]
 - 1 edge to [[_COMMUNITY_ask_ai]]
 - 1 edge to [[_COMMUNITY_json]]
 - 1 edge to [[_COMMUNITY_re]]
+- 1 edge to [[_COMMUNITY_test_full_scenes.py]]
 - 1 edge to [[_COMMUNITY_test_pictures_first.py]]
 
 ## Top bridge nodes

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/retention.py"
 type: "code"
-community: "retention.py"
+community: "analyze"
 location: "L136"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/retentionpy
+  - community/analyze
 ---
 
 # scenes_from_plan()
@@ -18,4 +18,4 @@ tags:
 - [[retention.py]] - `contains` [EXTRACTED]
 - [[seconds()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/retentionpy
+#graphify/code #graphify/EXTRACTED #community/analyze

@@ -1,27 +1,21 @@
 ---
 source_file: ""
 type: "code"
-community: "audio_library.py"
+community: "test_full_scenes.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/audio_librarypy
+  - community/test_full_scenespy
 ---
 
 # Path
 
 ## Connections
-- [[approved_sound()]] - `references` [EXTRACTED]
-- [[audio_metadata()]] - `references` [EXTRACTED]
-- [[history_read()]] - `references` [EXTRACTED]
-- [[import_audio_file()]] - `references` [EXTRACTED]
-- [[preview_mix()]] - `references` [EXTRACTED]
-- [[record_audio()]] - `references` [EXTRACTED]
-- [[select_music()]] - `references` [EXTRACTED]
-- [[set_audio_metadata()]] - `references` [EXTRACTED]
-- [[sound_profile()]] - `references` [EXTRACTED]
-- [[source_music()]] - `references` [EXTRACTED]
-- [[track_start()]] - `references` [EXTRACTED]
-- [[usable_audio()]] - `references` [EXTRACTED]
+- [[code_custom_scenes()]] - `references` [EXTRACTED]
+- [[full_props()]] - `references` [EXTRACTED]
+- [[look_and_fix()]] - `references` [EXTRACTED]
+- [[opener_preflight()]] - `references` [EXTRACTED]
+- [[preview_custom()]] - `references` [EXTRACTED]
+- [[preview_sheet()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/audio_librarypy
+#graphify/code #graphify/EXTRACTED #community/test_full_scenespy

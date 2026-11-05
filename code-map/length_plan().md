@@ -1,21 +1,21 @@
 ---
 source_file: "shortsmaker/writing.py"
 type: "code"
-community: "edit_scripts"
+community: "quality_check"
 location: "L25"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/edit_scripts
+  - community/quality_check
 ---
 
 # length_plan()
 
 ## Connections
-- [[(min words, max words, min scenes, max scenes, seconds) for this batch's…]] - `rationale_for` [EXTRACTED]
+- [[(floor words, max words, floor scenes, max scenes, seconds) for this batch's…]] - `rationale_for` [EXTRACTED]
 - [[edit_scripts()]] - `calls` [EXTRACTED]
 - [[quality_check()]] - `calls` [EXTRACTED]
 - [[write_scripts()]] - `calls` [EXTRACTED]
 - [[writing.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/edit_scripts
+#graphify/code #graphify/EXTRACTED #community/quality_check

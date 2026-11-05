@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "image_sources.py"
+community: "json"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/image_sourcespy
+  - community/json
 ---
 
 # os
@@ -27,4 +27,4 @@ tags:
 - [[test_reliability.py]] - `imports` [EXTRACTED]
 - [[veo_handoff()]] - `calls` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/image_sourcespy
+#graphify/concept #graphify/EXTRACTED #community/json

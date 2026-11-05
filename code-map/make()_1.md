@@ -1,18 +1,18 @@
 ---
 source_file: "shortsmaker/edit_project.py"
 type: "code"
-community: "make"
+community: "edit_project.py"
 location: "L93"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/make
+  - community/edit_projectpy
 ---
 
 # make()
 
 ## Connections
-- [[Path_4]] - `references` [EXTRACTED]
+- [[Path_5]] - `references` [EXTRACTED]
 - [[caption_layer()]] - `calls` [EXTRACTED]
 - [[edit_project.py]] - `contains` [EXTRACTED]
 - [[finish_render()]] - `calls` [EXTRACTED]
@@ -22,4 +22,4 @@ tags:
 - [[test_melt_plays_it_with_the_captions_on_top()]] - `calls` [EXTRACTED]
 - [[test_timeline_has_scenes_captions_sound_and_markers()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/make
+#graphify/code #graphify/EXTRACTED #community/edit_projectpy

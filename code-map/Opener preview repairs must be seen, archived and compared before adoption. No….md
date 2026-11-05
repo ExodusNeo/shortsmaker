@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_opener_preflight.py"
 type: "rationale"
-community: "test_full_scenes.py"
+community: "llm.py"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/test_full_scenespy
+  - community/llmpy
 ---
 
 # Opener preview repairs must be seen, archived and compared before adoption. No…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[test_opener_preflight.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/test_full_scenespy
+#graphify/rationale #graphify/EXTRACTED #community/llmpy

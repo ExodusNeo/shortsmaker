@@ -12,12 +12,12 @@ tags:
 # music_gain()
 
 ## Connections
-- [[Path_25]] - `references` [EXTRACTED]
+- [[Path_26]] - `references` [EXTRACTED]
 - [[Volume factor that brings this track's loudness (first 60 s) to MUSIC_LUFS;…]] - `rationale_for` [EXTRACTED]
 - [[audio_mix.py]] - `contains` [EXTRACTED]
 - [[preview_mix()]] - `calls` [EXTRACTED]
 - [[re]] - `calls` [EXTRACTED]
-- [[render()_1]] - `calls` [EXTRACTED]
+- [[render()_2]] - `calls` [EXTRACTED]
 - [[subprocess]] - `calls` [EXTRACTED]
 - [[test_music_gain_evens_out_tracks()]] - `calls` [EXTRACTED]
 

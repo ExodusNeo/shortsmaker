@@ -1,17 +1,17 @@
 ---
-source_file: "tests/test_rules.py"
+source_file: "tests/test_ai_modes.py"
 type: "code"
-community: "test_rules.py"
-location: "L265"
+community: "test_ai_modes.py"
+location: "L82"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_rulespy
+  - community/test_ai_modespy
 ---
 
 # ask()
 
 ## Connections
-- [[run_draft()]] - `contains` [EXTRACTED]
+- [[test_script_rounds_stop_when_fixed_or_after_three()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_rulespy
+#graphify/code #graphify/EXTRACTED #community/test_ai_modespy

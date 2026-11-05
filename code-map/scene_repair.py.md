@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/scene_repair.py"
 type: "code"
-community: "subprocess"
+community: "pathlib"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/subprocess
+  - community/pathlib
 ---
 
 # scene_repair.py
@@ -32,4 +32,4 @@ tags:
 - [[subprocess]] - `imports` [EXTRACTED]
 - [[test_reliability.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/subprocess
+#graphify/code #graphify/EXTRACTED #community/pathlib

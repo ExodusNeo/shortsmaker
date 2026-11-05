@@ -1,18 +1,22 @@
 ---
 source_file: ""
 type: "code"
-community: "run_agy"
+community: "render"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/run_agy
+  - community/render
 ---
 
 # Path
 
 ## Connections
-- [[ask_ai()]] - `references` [EXTRACTED]
-- [[run_agy()]] - `references` [EXTRACTED]
-- [[run_codex()]] - `references` [EXTRACTED]
+- [[drawn_payoff()]] - `references` [EXTRACTED]
+- [[drawn_thumbnail()]] - `references` [EXTRACTED]
+- [[finish_render()]] - `references` [EXTRACTED]
+- [[load_state()]] - `references` [EXTRACTED]
+- [[render()_2]] - `references` [EXTRACTED]
+- [[save_state()]] - `references` [EXTRACTED]
+- [[use_opener()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/run_agy
+#graphify/code #graphify/EXTRACTED #community/render

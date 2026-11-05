@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/writing.py"
 type: "rationale"
-community: "opener_graphic"
-location: "L729"
+community: "get_image"
+location: "L736"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/opener_graphic
+  - community/get_image
 ---
 
 # Check every line against the story's Wikipedia articles and rewrite what they…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[fact_check()_1]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/opener_graphic
+#graphify/rationale #graphify/EXTRACTED #community/get_image

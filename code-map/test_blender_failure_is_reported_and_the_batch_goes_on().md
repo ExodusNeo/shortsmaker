@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[main()_5]] - `calls` [EXTRACTED]
-- [[render()_4]] - `indirect_call` [INFERRED]
+- [[render()_1]] - `indirect_call` [INFERRED]
 - [[test_blender_run.py]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/main

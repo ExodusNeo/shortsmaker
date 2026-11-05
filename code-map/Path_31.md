@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "approve_candidate"
+community: "test_style.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/approve_candidate
+  - community/test_stylepy
 ---
 
 # Path
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[candidate_in()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/approve_candidate
+#graphify/code #graphify/EXTRACTED #community/test_stylepy

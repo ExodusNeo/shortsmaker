@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/footage.py"
 type: "code"
-community: "footage.py"
+community: "image_sources.py"
 location: "L188"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/footagepy
+  - community/image_sourcespy
 ---
 
 # crop_filter()
@@ -16,4 +16,4 @@ tags:
 - [[film_piece()]] - `calls` [EXTRACTED]
 - [[footage.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/footagepy
+#graphify/code #graphify/EXTRACTED #community/image_sourcespy

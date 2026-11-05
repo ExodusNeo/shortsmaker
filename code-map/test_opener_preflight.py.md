@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_opener_preflight.py"
 type: "code"
-community: "test_full_scenes.py"
+community: "llm.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_full_scenespy
+  - community/llmpy
 ---
 
 # test_opener_preflight.py
@@ -27,4 +27,4 @@ tags:
 - [[unittest_mock]] - `imports_from` [EXTRACTED]
 - [[verdict()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_full_scenespy
+#graphify/code #graphify/EXTRACTED #community/llmpy

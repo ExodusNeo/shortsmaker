@@ -1,21 +1,21 @@
 ---
 source_file: "shortsmaker/media_menu.py"
 type: "code"
-community: "media_command"
+community: "write_json"
 location: "L76"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/media_command
+  - community/write_json
 ---
 
 # audition_audio()
 
 ## Connections
-- [[Path_20]] - `references` [EXTRACTED]
+- [[Path_21]] - `references` [EXTRACTED]
 - [[media_command()]] - `calls` [EXTRACTED]
 - [[media_menu.py]] - `contains` [EXTRACTED]
 - [[os]] - `calls` [EXTRACTED]
 - [[review_audio_files()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/media_command
+#graphify/code #graphify/EXTRACTED #community/write_json

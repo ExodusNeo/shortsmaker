@@ -1,12 +1,12 @@
 ---
 source_file: "local_ai/qwen_voice.py"
 type: "rationale"
-community: "qwen_voice.py"
+community: "re"
 location: "L91"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/qwen_voicepy
+  - community/re
 ---
 
 # Caption words (as written, punctuation attached) with the a-z words the aligner…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[align_words()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/qwen_voicepy
+#graphify/rationale #graphify/EXTRACTED #community/re

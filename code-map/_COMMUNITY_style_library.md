@@ -1,11 +1,11 @@
 ---
 type: community
-members: 19
+members: 22
 ---
 
 # style_library
 
-**Members:** 19 nodes
+**Members:** 22 nodes
 
 ## Members
 - [[A planned invention {title, brief, fallback library name of that…]] - rationale - shortsmaker/plan_rules.py
@@ -15,9 +15,12 @@ members: 19
 - [[The rules every invented component of `kind` follows, with the library's…]] - rationale - shortsmaker/style_lab.py
 - [[The style library (remotionsrcstylelibrary.json) {name, kind, description,…]] - rationale - shortsmaker/style_lab.py
 - [[Validates the Short's style plan (look, invented transitionoverlay); an…]] - rationale - shortsmaker/plan_rules.py
+- [[add()_1]] - code - tests/render_style.py
+- [[build()_1]] - code - tests/render_style.py
 - [[clean_invention()]] - code - shortsmaker/plan_rules.py
 - [[clean_look()]] - code - shortsmaker/plan_rules.py
 - [[clean_transition()]] - code - shortsmaker/plan_rules.py
+- [[main()_6]] - code - tests/render_style.py
 - [[settle_style()]] - code - shortsmaker/plan_rules.py
 - [[style_library()]] - code - shortsmaker/style_lab.py
 - [[style_rules()]] - code - shortsmaker/style_lab.py
@@ -36,21 +39,21 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 12 edges to [[_COMMUNITY_test_full_scenes.py]]
-- 3 edges to [[_COMMUNITY_json]]
-- 3 edges to [[_COMMUNITY_approve_candidate]]
+- 9 edges to [[_COMMUNITY_json]]
+- 7 edges to [[_COMMUNITY_test_style.py]]
+- 4 edges to [[_COMMUNITY_pathlib]]
 - 2 edges to [[_COMMUNITY_write_scripts]]
 - 2 edges to [[_COMMUNITY_edit_plan]]
+- 1 edge to [[_COMMUNITY_duration]]
 - 1 edge to [[_COMMUNITY_prepare_topic]]
-- 1 edge to [[_COMMUNITY_invent_component]]
-- 1 edge to [[_COMMUNITY_story_problems]]
 - 1 edge to [[_COMMUNITY_main_1]]
 - 1 edge to [[_COMMUNITY_choose_images]]
 - 1 edge to [[_COMMUNITY_plan_with]]
+- 1 edge to [[_COMMUNITY_invent_component]]
 
 ## Top bridge nodes
-- [[style_library()]] - degree 20, connects to 9 communities
-- [[write_style_index()]] - degree 6, connects to 3 communities
+- [[style_library()]] - degree 20, connects to 7 communities
 - [[clean_transition()]] - degree 5, connects to 2 communities
 - [[settle_style()]] - degree 5, connects to 2 communities
 - [[style_rules()]] - degree 4, connects to 2 communities
+- [[clean_look()]] - degree 8, connects to 1 community

@@ -1,18 +1,17 @@
 ---
-source_file: "tests/test_rules.py"
+source_file: "tests/test_ai_modes.py"
 type: "code"
-community: "test_rules.py"
-location: "L72"
+community: "test_ai_modes.py"
+location: "L61"
 tags:
   - graphify/code
-  - graphify/INFERRED
-  - community/test_rulespy
+  - graphify/EXTRACTED
+  - community/test_ai_modespy
 ---
 
 # ask()
 
 ## Connections
-- [[capture_prompts()]] - `indirect_call` [INFERRED]
-- [[run_draft()]] - `indirect_call` [INFERRED]
+- [[test_only_the_second_edit_pass_gets_the_research()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/test_rulespy
+#graphify/code #graphify/EXTRACTED #community/test_ai_modespy

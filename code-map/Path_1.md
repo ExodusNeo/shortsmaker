@@ -1,19 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "make_opener"
+community: "test_h3_handoff.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/make_opener
+  - community/test_h3_handoffpy
 ---
 
 # Path
 
 ## Connections
-- [[make_opener()]] - `references` [EXTRACTED]
-- [[node_run()]] - `references` [EXTRACTED]
-- [[review()]] - `references` [EXTRACTED]
-- [[write()]] - `references` [EXTRACTED]
+- [[handoff()]] - `references` [EXTRACTED]
+- [[zip_of()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/make_opener
+#graphify/code #graphify/EXTRACTED #community/test_h3_handoffpy

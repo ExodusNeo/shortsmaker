@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/review.py"
 type: "code"
-community: "scene_cues"
+community: "callout_hold"
 location: "L25"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/scene_cues
+  - community/callout_hold
 ---
 
 # callout_hold()
@@ -19,4 +19,4 @@ tags:
 - [[review.py]] - `contains` [EXTRACTED]
 - [[test_short_scene_callout_is_placed_so_the_check_passes()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/scene_cues
+#graphify/code #graphify/EXTRACTED #community/callout_hold

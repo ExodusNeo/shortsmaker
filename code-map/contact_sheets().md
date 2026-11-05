@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[Numbered thumbnail grids (6x4) so Claude can look at every candidate at once.]] - `rationale_for` [EXTRACTED]
-- [[Path_8]] - `references` [EXTRACTED]
+- [[Path_10]] - `references` [EXTRACTED]
 - [[catalog_pool()]] - `calls` [EXTRACTED]
 - [[choose_images()]] - `calls` [EXTRACTED]
 - [[clean_photo()]] - `calls` [EXTRACTED]

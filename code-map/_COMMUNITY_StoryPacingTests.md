@@ -27,7 +27,7 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 1 edge to [[_COMMUNITY_re]]
+- 1 edge to [[_COMMUNITY_llm.py]]
 
 ## Top bridge nodes
 - [[StoryPacingTests]] - degree 10, connects to 1 community

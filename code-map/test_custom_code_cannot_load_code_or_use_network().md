@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_full_scenes.py"
 type: "code"
-community: "code_custom_scenes"
+community: "test_full_scenes.py"
 location: "L703"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/code_custom_scenes
+  - community/test_full_scenespy
 ---
 
 # test_custom_code_cannot_load_code_or_use_network()
@@ -15,4 +15,4 @@ tags:
 - [[lint_custom_code()]] - `calls` [EXTRACTED]
 - [[test_full_scenes.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/code_custom_scenes
+#graphify/code #graphify/EXTRACTED #community/test_full_scenespy

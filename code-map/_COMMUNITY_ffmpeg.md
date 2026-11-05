@@ -1,31 +1,42 @@
 ---
 type: community
-members: 18
+members: 29
 ---
 
 # ffmpeg
 
-**Members:** 18 nodes
+**Members:** 29 nodes
 
 ## Members
 - [[Cut each take into its scenes halfway through the pause between their words…]] - rationale - shortsmaker/gpu.py
-- [[Fast path for a mark card on a still, with hard cuts on both sides. Preserve…]] - rationale - shortsmaker/scene_repair.py
-- [[Final H.264 encode NVENC on the GPU when available (frees the CPU), else x264.]] - rationale - shortsmaker/media_tools.py
-- [[Path_26]] - code
-- [[Path_27]] - code
-- [[What a fix re-render needs to reproduce this Short without new AI picks the…]] - rationale - shortsmaker/short_render.py
-- [[Write via a temp file, so an interrupted run never leaves a half-written file…]] - rationale - shortsmaker/media_tools.py
-- [[apply()]] - code - shortsmaker/scene_repair.py
-- [[copy]] - concept
-- [[duration()]] - code - shortsmaker/media_tools.py
+- [[Detailed prompts for the owner-made clips (Colab H3 or Flow), written by the AI…]] - rationale - shortsmaker/gpu.py
+- [[Fill a 916 frame with the picture (centre crop), for the AI video model's…]] - rationale - shortsmaker/gpu.py
+- [[Path_7]] - code
+- [[Pause the batch write each animate scene's start picture + detailed prompt to…]] - rationale - shortsmaker/gpu.py
+- [[Real motion for every scene with a picture scenes Claude matched to archival…]] - rationale - shortsmaker/gpu.py
+- [[Run a batch on this PC's GPU through a local_ai worker (gen.py, or…]] - rationale - shortsmaker/gpu.py
+- [[Short image-to-video prompt for an animate scene made by LTX on this PC.]] - rationale - shortsmaker/gpu.py
+- [[Start pictures (folderstartN.jpg) the owner shouldn't spend a clip on a…]] - rationale - shortsmaker/gpu.py
+- [[Story arc delivery hook urgency - suspenseful investigation - payoff reveal.]] - rationale - shortsmaker/gpu.py
+- [[The owner's clip `src` cut to scene i's length fills the vertical frame, drops…]] - rationale - shortsmaker/gpu.py
+- [[The picture scene i's AI clip starts from scene 1's painted strangest moment…]] - rationale - shortsmaker/gpu.py
+- [[True when the channel's rules set `loop yes` the final scene is an open…]] - rationale - shortsmaker/plan_rules.py
+- [[Voice every scene on the GPU CosyVoice (Mark Nelson, documentary) for the…]] - rationale - shortsmaker/gpu.py
+- [[cosy_instruct()]] - code - shortsmaker/gpu.py
+- [[cover_crop()]] - code - shortsmaker/gpu.py
+- [[cut_owner_clip()]] - code - shortsmaker/gpu.py
 - [[ffmpeg()]] - code - shortsmaker/media_tools.py
-- [[preview()]] - code - shortsmaker/scene_repair.py
-- [[save_state()]] - code - shortsmaker/short_render.py
+- [[h3_prompts()]] - code - shortsmaker/gpu.py
+- [[is_loop_short()]] - code - shortsmaker/plan_rules.py
+- [[local_clips()]] - code - shortsmaker/gpu.py
+- [[local_job()]] - code - shortsmaker/gpu.py
+- [[local_voice()]] - code - shortsmaker/gpu.py
+- [[motion_prompt()]] - code - shortsmaker/gpu.py
 - [[split_takes()]] - code - shortsmaker/gpu.py
+- [[start_picture()]] - code - shortsmaker/gpu.py
+- [[start_picture_problems()]] - code - shortsmaker/gpu.py
 - [[test_a_take_is_cut_between_the_scenes_words()]] - code - tests/test_story.py
-- [[test_encoder_cache_lives_with_video_encoder()]] - code - tests/test_package.py
-- [[video_encoder()]] - code - shortsmaker/media_tools.py
-- [[write_json()]] - code - shortsmaker/media_tools.py
+- [[veo_handoff()]] - code - shortsmaker/gpu.py
 
 ## Live Query (requires Dataview plugin)
 
@@ -35,37 +46,32 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 11 edges to [[_COMMUNITY_subprocess]]
-- 8 edges to [[_COMMUNITY_render]]
-- 7 edges to [[_COMMUNITY_audio_library.py]]
-- 6 edges to [[_COMMUNITY_json]]
-- 6 edges to [[_COMMUNITY_local_clips]]
-- 5 edges to [[_COMMUNITY_image_sources.py]]
-- 4 edges to [[_COMMUNITY_extra_sources.py]]
-- 4 edges to [[_COMMUNITY_make]]
-- 3 edges to [[_COMMUNITY_media_command]]
-- 3 edges to [[_COMMUNITY_test_blender_plan.py]]
-- 3 edges to [[_COMMUNITY_fix_short]]
-- 2 edges to [[_COMMUNITY_finish_render]]
-- 2 edges to [[_COMMUNITY_test_pictures_first.py]]
-- 2 edges to [[_COMMUNITY_resume_runs]]
-- 2 edges to [[_COMMUNITY_footage.py]]
-- 2 edges to [[_COMMUNITY_test_first_second.py]]
-- 1 edge to [[_COMMUNITY_prepare_topic]]
+- 17 edges to [[_COMMUNITY_pathlib]]
+- 8 edges to [[_COMMUNITY_json]]
+- 7 edges to [[_COMMUNITY_render]]
+- 6 edges to [[_COMMUNITY_test_h3_handoff.py]]
+- 4 edges to [[_COMMUNITY_duration]]
+- 3 edges to [[_COMMUNITY_preview]]
+- 3 edges to [[_COMMUNITY_re]]
+- 2 edges to [[_COMMUNITY_edit_project.py]]
+- 2 edges to [[_COMMUNITY_ask_ai]]
+- 2 edges to [[_COMMUNITY_paint_instead]]
+- 2 edges to [[_COMMUNITY_opener_graphic]]
+- 2 edges to [[_COMMUNITY_audio_library.py]]
+- 2 edges to [[_COMMUNITY_write_json]]
+- 1 edge to [[_COMMUNITY_test_local_job_retries_a_hard_crash]]
+- 1 edge to [[_COMMUNITY_visual_review]]
 - 1 edge to [[_COMMUNITY_story_problems]]
-- 1 edge to [[_COMMUNITY_render_remotion]]
-- 1 edge to [[_COMMUNITY_log_short]]
-- 1 edge to [[_COMMUNITY_code_custom_scenes]]
-- 1 edge to [[_COMMUNITY_qwen_voice.py]]
-- 1 edge to [[_COMMUNITY_test_drawn_opener.py]]
-- 1 edge to [[_COMMUNITY_pack]]
+- 1 edge to [[_COMMUNITY_h3_run.py]]
+- 1 edge to [[_COMMUNITY_test_blender_render.py]]
 - 1 edge to [[_COMMUNITY_test_full_scenes.py]]
-- 1 edge to [[_COMMUNITY_ask_ai]]
-- 1 edge to [[_COMMUNITY_test_story.py]]
+- 1 edge to [[_COMMUNITY_first_second_check]]
+- 1 edge to [[_COMMUNITY_words_of]]
+- 1 edge to [[_COMMUNITY_llm.py]]
 
 ## Top bridge nodes
-- [[duration()]] - degree 19, connects to 12 communities
 - [[ffmpeg()]] - degree 21, connects to 11 communities
-- [[write_json()]] - degree 21, connects to 11 communities
-- [[apply()]] - degree 13, connects to 5 communities
-- [[video_encoder()]] - degree 10, connects to 5 communities
+- [[local_job()]] - degree 11, connects to 6 communities
+- [[local_clips()]] - degree 15, connects to 5 communities
+- [[local_voice()]] - degree 13, connects to 5 communities
+- [[veo_handoff()]] - degree 14, connects to 4 communities

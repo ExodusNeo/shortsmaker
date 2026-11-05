@@ -12,7 +12,7 @@ tags:
 # plan_with()
 
 ## Connections
-- [[ask()_11]] - `indirect_call` [INFERRED]
+- [[ask()_12]] - `indirect_call` [INFERRED]
 - [[owner()]] - `calls` [EXTRACTED]
 - [[test_director_character_look_is_kept_short_or_dropped()]] - `calls` [EXTRACTED]
 - [[test_director_inventions_are_kept_with_a_spec()]] - `calls` [EXTRACTED]

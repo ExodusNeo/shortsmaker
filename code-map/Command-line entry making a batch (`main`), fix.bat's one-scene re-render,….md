@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/cli.py"
 type: "rationale"
-community: "re"
+community: "llm.py"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/re
+  - community/llmpy
 ---
 
 # Command-line entry: making a batch (`main`), fix.bat's one-scene re-render,…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[cli.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/re
+#graphify/rationale #graphify/EXTRACTED #community/llmpy

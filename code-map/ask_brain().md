@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/channel_profiles.py"
 type: "code"
-community: "main"
+community: "configure_brain"
 location: "L91"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/main
+  - community/configure_brain
 ---
 
 # ask_brain()
@@ -20,4 +20,4 @@ tags:
 - [[normalize_brain()]] - `calls` [EXTRACTED]
 - [[test_solo_brain_selection_options()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/main
+#graphify/code #graphify/EXTRACTED #community/configure_brain

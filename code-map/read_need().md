@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/plan_rules.py"
 type: "code"
-community: "scene_cues"
+community: "callout_hold"
 location: "L459"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/scene_cues
+  - community/callout_hold
 ---
 
 # read_need()
@@ -16,4 +16,4 @@ tags:
 - [[plan_rules.py]] - `contains` [EXTRACTED]
 - [[scene_cues()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/scene_cues
+#graphify/code #graphify/EXTRACTED #community/callout_hold

@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "re"
+community: "llm.py"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/re
+  - community/llmpy
 ---
 
 # traceback
@@ -30,4 +30,4 @@ tags:
 - [[test_story.py]] - `imports` [EXTRACTED]
 - [[test_topic_ideas.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/re
+#graphify/concept #graphify/EXTRACTED #community/llmpy

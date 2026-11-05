@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_ai_modes.py"
 type: "code"
-community: "saved_session"
+community: "test_ai_modes.py"
 location: "L13"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/saved_session
+  - community/test_ai_modespy
 ---
 
 # saved_session()
@@ -18,5 +18,6 @@ tags:
 - [[test_every_mode_can_continue_through_two_exhausted_ais()]] - `calls` [EXTRACTED]
 - [[test_exhausted_accounts_are_not_retried_when_all_three_are_empty()]] - `calls` [EXTRACTED]
 - [[test_only_the_second_edit_pass_gets_the_research()]] - `calls` [EXTRACTED]
+- [[test_script_rounds_stop_when_fixed_or_after_three()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/saved_session
+#graphify/code #graphify/EXTRACTED #community/test_ai_modespy

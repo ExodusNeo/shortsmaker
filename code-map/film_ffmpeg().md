@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/image_sources.py"
 type: "code"
-community: "footage.py"
+community: "image_sources.py"
 location: "L332"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/footagepy
+  - community/image_sourcespy
 ---
 
 # film_ffmpeg()
@@ -19,4 +19,4 @@ tags:
 - [[image_sources.py]] - `contains` [EXTRACTED]
 - [[shot_moments()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/footagepy
+#graphify/code #graphify/EXTRACTED #community/image_sourcespy

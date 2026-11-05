@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "story_problems"
+community: "apply_review_fixes"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/story_problems
+  - community/apply_review_fixes
 ---
 
 # Path
 
 ## Connections
-- [[srt()]] - `references` [EXTRACTED]
+- [[_review_state()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/story_problems
+#graphify/code #graphify/EXTRACTED #community/apply_review_fixes

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/review.py"
 type: "rationale"
-community: "finish_render"
+community: "callout_hold"
 location: "L32"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/finish_render
+  - community/callout_hold
 ---
 
 # Measured reading holds and final-script detours. Editorial defaults, not…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[pacing_check()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/finish_render
+#graphify/rationale #graphify/EXTRACTED #community/callout_hold

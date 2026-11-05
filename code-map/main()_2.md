@@ -1,22 +1,21 @@
 ---
-source_file: "local_ai/gen.py"
+source_file: "tests/render_full.py"
 type: "code"
-community: "gen.py"
-location: "L130"
+community: "json"
+location: "L28"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/genpy
+  - community/json
 ---
 
 # main()
 
 ## Connections
-- [[gen.py]] - `contains` [EXTRACTED]
-- [[images()]] - `indirect_call` [INFERRED]
 - [[json]] - `calls` [EXTRACTED]
-- [[time]] - `calls` [EXTRACTED]
-- [[tts()]] - `indirect_call` [INFERRED]
-- [[video()]] - `indirect_call` [INFERRED]
+- [[props_for()]] - `calls` [EXTRACTED]
+- [[render_full.py]] - `contains` [EXTRACTED]
+- [[shutil]] - `calls` [EXTRACTED]
+- [[subprocess]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/genpy
+#graphify/code #graphify/EXTRACTED #community/json

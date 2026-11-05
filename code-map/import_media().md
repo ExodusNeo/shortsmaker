@@ -1,19 +1,19 @@
 ---
 source_file: "shortsmaker/media_library.py"
 type: "code"
-community: "subprocess"
+community: "write_json"
 location: "L57"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/subprocess
+  - community/write_json
 ---
 
 # import_media()
 
 ## Connections
 - [[Copy into the library; never movemodify the owner's original. Sidecars also…]] - `rationale_for` [EXTRACTED]
-- [[Path_29]] - `references` [EXTRACTED]
+- [[Path_20]] - `references` [EXTRACTED]
 - [[hashlib]] - `calls` [EXTRACTED]
 - [[media_command()]] - `calls` [EXTRACTED]
 - [[media_library.py]] - `contains` [EXTRACTED]
@@ -21,4 +21,4 @@ tags:
 - [[shutil]] - `calls` [EXTRACTED]
 - [[write_json()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/subprocess
+#graphify/code #graphify/EXTRACTED #community/write_json

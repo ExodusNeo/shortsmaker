@@ -1,20 +1,18 @@
 ---
-source_file: "tests/render_opener_preview.py"
+source_file: "tests/render_style.py"
 type: "code"
-community: "code_custom_scenes"
-location: "L10"
+community: "style_library"
+location: "L49"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/code_custom_scenes
+  - community/style_library
 ---
 
 # main()
 
 ## Connections
-- [[make_paper()]] - `calls` [EXTRACTED]
-- [[preview_custom()]] - `calls` [EXTRACTED]
-- [[render_opener_preview.py]] - `contains` [EXTRACTED]
-- [[tsc_check()]] - `calls` [EXTRACTED]
+- [[build()_1]] - `calls` [EXTRACTED]
+- [[render_style.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/code_custom_scenes
+#graphify/code #graphify/EXTRACTED #community/style_library

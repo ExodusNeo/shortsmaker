@@ -12,14 +12,14 @@ tags:
 # update()
 
 ## Connections
-- [[Path_9]] - `references` [EXTRACTED]
+- [[Path_11]] - `references` [EXTRACTED]
 - [[checkpoints.py]] - `contains` [EXTRACTED]
 - [[finish_short()]] - `calls` [EXTRACTED]
 - [[main()_5]] - `calls` [EXTRACTED]
 - [[pack()]] - `calls` [EXTRACTED]
 - [[read()]] - `calls` [EXTRACTED]
 - [[record_failure()]] - `calls` [EXTRACTED]
-- [[render()_1]] - `calls` [EXTRACTED]
+- [[render()_2]] - `calls` [EXTRACTED]
 - [[resume_runs()]] - `calls` [EXTRACTED]
 - [[write_json()]] - `calls` [EXTRACTED]
 

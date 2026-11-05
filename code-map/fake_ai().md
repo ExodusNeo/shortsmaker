@@ -12,7 +12,7 @@ tags:
 # fake_ai()
 
 ## Connections
-- [[ask()]] - `indirect_call` [INFERRED]
+- [[ask()_3]] - `indirect_call` [INFERRED]
 - [[run()]] - `calls` [EXTRACTED]
 - [[run()_1]] - `calls` [EXTRACTED]
 - [[run()_2]] - `calls` [EXTRACTED]
