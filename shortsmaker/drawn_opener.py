@@ -275,7 +275,48 @@ Reply with ONLY JSON: {{"score": 7, "reveals_answer": false, "answer_why": "", "
     if opener and data.get("reveals_answer") is True:
         score = min(score, PASS - 1)
         found.insert(0, "Opening reveals the answer: " + str(data.get("answer_why") or "withhold the ending's answer object and labels")[:200])
+    blind = blind_read(short, plan, sheet, rows, owners) if opener else None
+    if blind:  # never passes, never kept: the owner watched a draft and couldn't tell what it was (2026-11-06)
+        score = min(score, KEEP - 1)
+        found.insert(0, blind)
     return float(score), found[:8] or ([] if score >= PASS else ["the art director gave a low score without saying why"])
+
+
+def blind_read(short: dict, plan: dict, sheet: Path, rows: str, owners: dict[str, str] | None) -> str | None:
+    """The sound-off test: an AI that knows nothing of the story says what the frames show (with only the hook title
+    that's on screen in the first second), and a second call judges whether that stranger got the strange thing.
+    The problem (tagged with its owner when there are owners), or None when they got it or a call failed. The art
+    director is told the story, so it read a blue box as the battery the plan said; a viewer can't (2026-11-06)."""
+    look = look_dir(sheet)
+    title = f' In the first second, big words on screen read: "{short["hook_text"]}".' if short.get("hook_text") else ""
+    seen = llm.ask_ai(f"""Open {look / sheet.name}: frames of a short silent cartoon clip, left to right (the time is on each).{rows}{title}
+You know nothing else about it: no sound, no captions. Say what you see happening, as a stranger scrolling past would:
+where it is, who is there, what they are doing, and anything strange or surprising. Name a thing only if you
+recognise it; say what it looks like when you don't ("a blue box with an orange frame"), never guess from context.
+Reply with ONLY JSON: {{"sees": "2-3 plain sentences"}}""", fatal=False, read_dir=look, allow_fallback=True)
+    sees = str(seen.get("sees") or "").strip()[:400] if isinstance(seen, dict) else ""
+    if not sees:
+        return None
+    strange = (short.get("opener_staging") or {}).get("strange") or {}
+    must = (f"{strange['what']} (seen through: {'; '.join(strange.get('shows') or [])})" if strange.get("what")
+            else plan.get("moment") or "the strangest moment of the narration")
+    tags = (" Start `fix` with who must fix it, one of: " + "; ".join(f"{k} ({v})" for k, v in owners.items()) + "."
+            if owners else "")
+    verdict = llm.ask_ai(f"""A stranger watched the silent opener of a YouTube Short ("{short['title']}") with the sound off and said:
+"{sees}"
+The opener must show, without sound: {must}. The narration they did NOT hear: "{short['scenes'][0]['narration']}".
+Did they get the point: what is happening AND what is strange about it, close enough that the narration would make
+sense the moment they hear it? Be lenient on names, dates and wording; be strict on the point: "a man stands next
+to a machine" misses "the machine keeps working with its battery unplugged". If they missed it, say in `fix` what
+they missed or misread and what on screen would make it unmistakable.{tags}
+Reply with ONLY JSON: {{"gets_it": false, "fix": "..."}}""", fatal=False, allow_fallback=True)
+    if not isinstance(verdict, dict) or verdict.get("gets_it") is not False:
+        return None
+    fix = str(verdict.get("fix") or "show the strange thing so it reads without sound").strip()[:240]
+    tag = next((k for k in owners or {} if fix.startswith(k + ":")), None)  # tags hold colons: person:operator
+    if tag:
+        return f'{tag}: sound-off test failed: a stranger saw "{sees[:160]}". {fix[len(tag) + 1:].strip()}'
+    return f'{"placement: " if owners else ""}sound-off test failed: a stranger saw "{sees[:160]}". {fix}'
 
 
 def spoils(problems: list[str]) -> bool:

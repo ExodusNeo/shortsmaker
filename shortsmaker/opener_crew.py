@@ -167,6 +167,21 @@ def check_staging(raw, words: list) -> tuple[dict | None, list[str]]:
         bad.append(f"{', '.join(unseen)} {'is' if len(unseen) == 1 else 'are'} in no beat: show every person in at least one shot, or leave them out")
     st["beats"] = beats
     st["moment"] = str(raw.get("moment") or "").strip()[:200]
+    odd = raw.get("strange") if isinstance(raw.get("strange"), dict) else {}
+    shows = [str(x).strip()[:160] for x in odd.get("shows") or [] if str(x).strip()][:4] if isinstance(odd.get("shows"), list) else []
+    signs = []
+    for e in (odd.get("effects") if isinstance(odd.get("effects"), list) else [])[:2]:
+        kind, on = (e.get("type"), e.get("on")) if isinstance(e, dict) else (None, None)
+        if kind not in opener3d.SIGN_EFFECTS or (kind != "aurora" and on not in ids):
+            bad.append(f"strange effect {e!r}: type is one of {', '.join(opener3d.SIGN_EFFECTS)}, `on` an id above (not for aurora)")
+        else:
+            signs.append({"type": kind, **({"on": on} if kind != "aurora" else {})})
+    st["strange"] = {"what": str(odd.get("what") or "").strip()[:160], "shows": shows, "effects": signs}
+    if not st["strange"]["what"] or not shows:
+        # the owner couldn't tell what a live Carrington opener was without the captions: nothing on screen said
+        # "the battery is unplugged and it still works" (2026-11-06)
+        bad.append("give `strange`: what (the one thing that makes this story strange) and shows (1-4 things a viewer "
+                   "SEES with the sound off that make it unmistakable: an effect, a prop, a pose, a detail on a cut-out)")
     return st, bad
 
 
@@ -200,12 +215,20 @@ them in a 3D set and film them. Plan ONE clear picture of the strangest moment s
 - beats (2-4): at (0 or a spoken word), shot ({', '.join(opener3d.SHOT_SIZES)}), on (the ids it shows). The first
   beat (at 0) is medium, close or low on the main subject (one or two ids): it must read at a glance on a phone.
   Cut close to the strange detail on its word; a wide shot, if any, comes later.
+- strange: what (one line: the ONE thing that makes this story strange) and shows (1-4 things a viewer SEES with
+  the sound off that make it unmistakable). A viewer watches muted with no captions: if the strange part is invisible
+  (electricity, a disease, a law, a sound), show its visible signs: sparks ({', '.join(opener3d.SIGN_EFFECTS)} are
+  effects in the set), a glowing or smoking thing, loose cut wires hanging from a held thing, a reaction pose, a
+  telling object. "a man stands at a desk" is never enough. Every cue must be a person, thing, part or effect here.
+  effects (0-2): {{"type": one of {', '.join(opener3d.SIGN_EFFECTS)}, "on": an id above (not for aurora)}}: they run
+  from frame 0. Electricity, heat, fire, a sky event or any other invisible force MUST get one: a small moving part
+  (a lever tapping, a needle twitching) can't be seen on a phone; sparks crackling off the machine can.
 - new_parts (0-3): ONLY when the story needs a hat or a held/standing thing the lists don't have (a pith helmet is
   there; a samurai helmet is not): kind ("hat" | "thing"), name (lowercase_id, used above as the hat/holds/kind),
   looks (one line: how it looks), instead (the nearest listed one, used if it can't be made).
 Real facts only: the people, things, clothes and era of the story.{fix}
-Reply with ONLY JSON: {{"moment": "one sentence", "place": "...", "light": "...", "people": [...], "animals": [...],
-"things": [...], "action": {{...}}, "beats": [...], "new_parts": [...]}}""", fatal=False, brain=strong())
+Reply with ONLY JSON: {{"moment": "one sentence", "strange": {{"what": "...", "shows": ["..."], "effects": [...]}}, "place": "...", "light": "...",
+"people": [...], "animals": [...], "things": [...], "action": {{...}}, "beats": [...], "new_parts": [...]}}""", fatal=False, brain=strong())
         st, problems = check_staging(raw, words)
         if st and not problems:
             short["opener_staging"] = st
@@ -222,8 +245,10 @@ def staging_text(st: dict | None) -> str:
     rest = ", ".join([f"{a['kind']} ({a.get('does', 'stands')})" for a in st.get("animals", [])] + [t["kind"] for t in st.get("things", [])])
     act = st.get("action") or {}
     beats = " / ".join(f"{b['shot']} on {'+'.join(b['on'])} at {b['at']}" for b in st.get("beats", []))
+    odd = st.get("strange") or {}
     return (f"{st.get('place')}, {st.get('light')} light | {who}{' | ' + rest if rest else ''} | "
-            f"{act.get('who')} {act.get('does')}{' ' + act['on'] if act.get('on') else ''} | shots: {beats}")
+            f"{act.get('who')} {act.get('does')}{' ' + act['on'] if act.get('on') else ''} | shots: {beats}"
+            + (f" | strange: {odd['what']} (shows: {'; '.join(odd.get('shows') or [])})" if odd.get("what") else ""))
 
 
 # ---- parts -----------------------------------------------------------------------------------------------------
@@ -354,6 +379,10 @@ def paint(who: dict, st: dict, short: dict, folder: Path, problems: list[str] | 
             if not thing and act["does"] == "knocks" and act["who"] == who["id"] else
             f"In the moment: {act['who']} {act['does']}{' ' + act['on'] if act.get('on') else ''}."
             + (f" Draw that with {POSES[act['does']]}." if act["who"] == who["id"] and act["does"] in POSES else ""))
+    odd = st.get("strange") or {}
+    if odd.get("what"):  # a painter drew a generic box for the unplugged battery: its loose wires are the story
+        role += (f"\nThe story's strange thing: {odd['what']}. A viewer watches muted: whatever of these is yours to "
+                 f"draw must be big and unmistakable in your cut-out: {'; '.join(odd.get('shows') or [])}.")
     keep = (f" Keep everything the staging asks: {'the ' + who['hat'] + ' hat, ' if who.get('hat') not in (None, 'none') else ''}"
             f"{'holding the ' + who['holds'] + ', ' if who.get('holds') not in (None, 'none') else ''}the same clothes and colours."
             if not thing else "")
@@ -414,7 +443,10 @@ def assemble(raw, cuts: list[dict], st: dict, words: list, seconds: float, narra
             bad.append(f"placement: the cut-out {name} is missing: give it a place")
         merged.append({**{k: v for k, v in spot.items() if k not in ("code", "w", "h", "frames", "height")},
                        **{k: v for k, v in c.items() if k != "what" and v is not None}})
-    stage, found = opener3d.clean({**raw, "cutouts": merged}, words, seconds)
+    # the stager's sign effects are put in by code: the live placer left the sparks out (Carrington, 2026-11-06)
+    have = {(e.get("type"), e.get("on")) for e in raw.get("effects") or [] if isinstance(e, dict)}
+    signs = [{**e, "at": 0} for e in (st.get("strange") or {}).get("effects") or [] if (e["type"], e.get("on")) not in have]
+    stage, found = opener3d.clean({**raw, "cutouts": merged, "effects": list(raw.get("effects") or []) + signs}, words, seconds)
     # a painter owns only its drawing code's faults (the same lint clean ran); everything else is where the placer
     # put things (routing by wording sent placement errors to painters twice in live runs, 2026-11-06)
     code = {f"cut-out {n}: {p}" for n, c in by.items() for p in (opener3d.lint_cutout(c["code"]) if c.get("code") else ["no code"])}

@@ -88,6 +88,20 @@ def test_marks_beside_front_and_wall():
     assert any("no mark" in p for p in opener3d.clean(raw, WORDS, SECONDS)[1])
 
 
+def test_signs_of_the_strange_thing():
+    """Sparks, smoke and glow come off a named thing; an aurora in a room needs a window to be seen (2026-11-06:
+    the unplugged Carrington telegraph showed nothing electric)."""
+    raw = room(("keeper", {"mark": "left"}))
+    raw["effects"] = [{"type": "sparks", "at": 0, "on": "keeper"}, {"type": "glow", "on": "desk", "color": "#7FB8FF"},
+                      {"type": "smoke", "at": 1}, {"type": "aurora"}]
+    stage, bad = opener3d.clean(raw, WORDS, SECONDS)
+    assert any("smoke effect needs `on`" in p for p in bad) and any("aurora shows through a window" in p for p in bad), bad
+    assert len(bad) == 2 and {"type": "glow", "at": 0, "on": "desk", "color": "#7FB8FF"} in stage["effects"], bad
+    raw["effects"][2]["on"] = "desk"
+    raw["props"].append({"type": "window", "place": {"wall": "right"}})
+    assert opener3d.clean(raw, WORDS, SECONDS)[1] == []
+
+
 def test_nobody_hides_in_furniture_or_inside_another_person():
     raw = room(("keeper", {"mark": "centre"}), ("clerk", {"mark": "centre"}))  # both on the desk's own spot
     stage, bad = opener3d.clean(raw, WORDS, SECONDS)

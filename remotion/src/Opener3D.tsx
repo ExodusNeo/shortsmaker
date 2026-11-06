@@ -21,7 +21,8 @@ export type Prop = {type: string; id?: string; at: XZ; y?: number; wall?: boolea
 	lit?: boolean; open?: number; length?: number};
 export type Shot = {at: number; target: string | string[]; distance: number; height?: number; turn?: number; fov?: number; move?: 'cut' | 'whip' | 'push';
 	over?: string; size?: 'wide' | 'medium' | 'close' | 'low' | 'top' | 'over'};
-export type Effect = {type: 'rings' | 'dust' | 'shafts' | 'burst' | 'shake' | 'rain' | 'snow' | 'jolt' | 'puff'; at?: number; on?: string};
+export type Effect = {type: 'rings' | 'dust' | 'shafts' | 'burst' | 'shake' | 'rain' | 'snow' | 'jolt' | 'puff' | 'sparks' | 'smoke' | 'glow' | 'aurora';
+	at?: number; on?: string; color?: string};
 export type StageProps = {fps: number; seconds: number; dir: string; place: 'room' | 'street' | 'outdoors';
 	mood: 'day' | 'golden' | 'dusk' | 'night' | 'interior'; colors?: {wall?: string; floor?: string; ground?: string; sky?: string; trim?: string};
 	props: Prop[]; cutouts: Cutout[]; shots: Shot[]; effects: Effect[]};
@@ -322,7 +323,7 @@ const Box: React.FC<{size: [number, number, number]; position: [number, number, 
 const WOOD = '#6A3E1E', DARK = '#2A1A10', BOOKS = ['#7A2E22', '#2E4A3A', '#8A6A3A', '#3A3550', '#5A2A2A', '#2A3A4A'];
 
 /** The prop library: each type built from boxes, cylinders and spheres, origin on the floor at its centre, facing +z. */
-const PropMesh: React.FC<{p: Prop; night: boolean; i: number; lib: Library}> = ({p, night, i, lib}) => {
+const PropMesh: React.FC<{p: Prop; night: boolean; i: number; lib: Library; sky?: THREE.Texture | null}> = ({p, night, i, lib, sky}) => {
 	const c = p.color, lit = p.lit ?? night, model = MODELS[p.type];
 	if (model && lib[model.file]) {
 		const glow = p.type === 'walllamp' && lit ? <pointLight position={[0, 0.2, 0.35]} intensity={2.5} distance={5} decay={1.5} color="#FFB060" />
@@ -339,7 +340,8 @@ const PropMesh: React.FC<{p: Prop; night: boolean; i: number; lib: Library}> = (
 			return <><Box size={[1.3, 2.45, 0.1]} position={[0, 1.22, -0.06]} color={DARK} /><Box size={[1.0, 2.2, 0.04]} position={[0, 1.1, -0.02]} color="#120a06" glow={p.open ? '#3a2a18' : undefined} />
 				<group position={[-0.5, 0, 0.02]} rotation={[0, a, 0]}><Box size={[1.0, 2.2, 0.06]} position={[0.5, 1.1, 0]} color={c || '#6A3E1E'} rough={0.5} /><mesh position={[0.88, 1.05, 0.06]}><sphereGeometry args={[0.04, 12, 12]} /><meshStandardMaterial color="#D9A23A" metalness={0.6} roughness={0.3} /></mesh></group></>;
 		}
-		case 'window': return <><mesh position={[0, 0, 0.01]}><planeGeometry args={[1.1, 1.6]} /><meshBasicMaterial color={night ? '#22305A' : '#FFE6B8'} fog={false} /></mesh>
+		case 'window': return <><mesh position={[0, 0, 0.01]}><planeGeometry args={[1.1, 1.6]} /><meshBasicMaterial color={sky ? '#060C1E' : night ? '#22305A' : '#FFE6B8'} fog={false} /></mesh>
+			{sky ? <mesh position={[0, 0, 0.015]}><planeGeometry args={[1.1, 1.6]} /><meshBasicMaterial map={sky} transparent blending={THREE.AdditiveBlending} depthWrite={false} fog={false} /></mesh> : null}
 			<Box size={[1.24, 0.08, 0.08]} position={[0, 0.8, 0.04]} color={DARK} /><Box size={[1.24, 0.08, 0.08]} position={[0, -0.8, 0.04]} color={DARK} /><Box size={[0.07, 1.7, 0.06]} position={[0, 0, 0.04]} color={DARK} /><Box size={[1.2, 0.06, 0.06]} position={[0, 0.15, 0.04]} color={DARK} /></>;
 		case 'frame': return <><Box size={[0.9, 1.1, 0.05]} position={[0, 0, 0.02]} color={c || '#C9A050'} rough={0.35} /><mesh position={[0, 0, 0.05]}><planeGeometry args={[0.7, 0.9]} /><meshStandardMaterial color="#3A3428" /></mesh></>;
 		case 'shelf': return <><Box size={[1.3, 2.3, 0.45]} position={[0, 1.15, 0]} color={c || '#3B2418'} />{[0.45, 1.0, 1.55, 2.05].map((y, r) => Array.from({length: 9}, (_, k) => { const h = 0.3 + rand(r * 20 + k + i) * 0.15; return <Box key={`${r}-${k}`} size={[0.11, h, 0.3]} position={[-0.52 + k * 0.13, y + h / 2 - 0.12, 0.05]} color={BOOKS[Math.floor(rand(r * 7 + k * 3 + i) * BOOKS.length)]} />; }))}</>;
@@ -475,6 +477,79 @@ const Puff: React.FC<{at: number; pos: THREE.Vector3; t: number; color: string}>
 			<spriteMaterial map={sprite} color={color} transparent opacity={(1 - u) * 0.45} depthWrite={false} fog={false} /></sprite>; })}</group>;
 };
 
+/** A soft round sprite (smoke, glows). */
+const useSoft = () => useMemo(() => {
+	const c = document.createElement('canvas'); c.width = c.height = 64;
+	const g = c.getContext('2d')!, rg = g.createRadialGradient(32, 32, 0, 32, 32, 32);
+	rg.addColorStop(0, 'rgba(255,255,255,0.9)'); rg.addColorStop(1, 'rgba(255,255,255,0)');
+	g.fillStyle = rg; g.fillRect(0, 0, 64, 64);
+	return new THREE.CanvasTexture(c);
+}, []);
+
+/** Electric sparks crackling off a point: jagged bolts that change every frame, flying sparks and a flickering
+ *  blue-white light (electricity where there should be none: the Carrington telegraphs, 2026-11-06). */
+const Sparks: React.FC<{at: number; pos: THREE.Vector3; t: number}> = ({at, pos, t}) => {
+	if (t < at) return null;
+	const k = Math.floor(t * 30), on = rand(k * 3.1) > 0.25; // crackles: most frames, not all
+	const bolts: React.ReactNode[] = [];
+	if (on) for (let b = 0; b < 3; b++) {
+		let x = 0, y = 0, a = rand(k * 7 + b) * Math.PI * 2;
+		for (let sg = 0; sg < 4; sg++) {
+			const len = 0.06 + rand(k * 13 + b * 5 + sg) * 0.08, nx = x + Math.cos(a) * len, ny = y + Math.sin(a) * len;
+			bolts.push(<mesh key={`${b}-${sg}`} position={[(x + nx) / 2, (y + ny) / 2, 0]} rotation={[0, 0, a]}><boxGeometry args={[len, 0.012, 0.005]} />
+				<meshBasicMaterial color="#DDEBFF" transparent opacity={0.95} blending={THREE.AdditiveBlending} depthWrite={false} fog={false} /></mesh>);
+			x = nx; y = ny; a += (rand(k * 17 + b * 3 + sg) - 0.5) * 1.6;
+		}
+	}
+	const flying = Array.from({length: 10}, (_, i) => {
+		const run = (t - at) * 1.6 + i / 10, u = run % 1, a = rand(i * 4.3 + Math.floor(run)) * Math.PI * 2, v = 0.5 + rand(i) * 0.4;
+		return <mesh key={`f${i}`} position={[Math.cos(a) * v * u, Math.abs(Math.sin(a)) * v * u - 1.6 * u * u, 0]}><sphereGeometry args={[0.009, 6, 6]} />
+			<meshBasicMaterial color="#FFE9A8" transparent opacity={1 - u} blending={THREE.AdditiveBlending} depthWrite={false} fog={false} /></mesh>;
+	});
+	return <group position={[pos.x, pos.y, pos.z + 0.15]}>{bolts}{flying}
+		<pointLight intensity={on ? 3 + rand(k) * 4 : 0.6} distance={3.5} decay={1.5} color="#B8D4FF" /></group>;
+};
+
+/** Smoke rising from a point, from its time on (scorching, burning). */
+const Smoke: React.FC<{at: number; pos: THREE.Vector3; t: number; night: boolean}> = ({at, pos, t, night}) => {
+	const soft = useSoft();
+	if (t < at) return null;
+	return <group position={[pos.x, pos.y, pos.z + 0.1]}>{Array.from({length: 14}, (_, i) => {
+		const u = ((t - at) * 0.45 + i / 14) % 1, z = 0.15 + u * 0.6;
+		return <sprite key={i} position={[Math.sin(i * 2.1 + t * 0.8) * 0.06 + u * 0.25, u * 1.5, rand(i) * 0.05]} scale={[z, z, 1]}>
+			<spriteMaterial map={soft} color={night ? '#4A4E5C' : '#5E5850'} transparent opacity={Math.min(1, (t - at) * 2) * (1 - u) * 0.85} depthWrite={false} fog={false} /></sprite>;
+	})}</group>;
+};
+
+/** A thing glowing and pulsing (hot, charged or lit): a soft halo and a coloured light. */
+const Glow: React.FC<{at: number; pos: THREE.Vector3; t: number; color: string}> = ({at, pos, t, color}) => {
+	const soft = useSoft();
+	if (t < at) return null;
+	const k = Math.min(1, (t - at) * 3) * (0.8 + 0.2 * Math.sin(t * 6));
+	return <group position={[pos.x, pos.y, pos.z + 0.12]}>
+		<sprite scale={[0.9 * k, 0.9 * k, 1]}><spriteMaterial map={soft} color={color} transparent opacity={0.7 * k} blending={THREE.AdditiveBlending} depthWrite={false} fog={false} /></sprite>
+		<pointLight intensity={4 * k} distance={4} decay={1.5} color={color} /></group>;
+};
+
+/** Northern lights: green and red curtains rippling, redrawn each frame (outdoors the sky, in a room the windows). */
+const useAurora = (on: boolean, t: number) => {
+	const tex = useMemo(() => { if (!on) return null; const c = document.createElement('canvas'); c.width = 512; c.height = 256; return new THREE.CanvasTexture(c); }, [on]);
+	if (!tex) return null;
+	const g = (tex.image as HTMLCanvasElement).getContext('2d')!;
+	g.globalCompositeOperation = 'source-over'; g.fillStyle = '#000'; g.fillRect(0, 0, 512, 256);
+	for (let i = 0; i < 40; i++) { g.fillStyle = `rgba(240,240,220,${0.4 + 0.4 * rand(i + 3)})`; g.fillRect(rand(i) * 512, rand(i + 70) * 256, 2, 2); }
+	g.globalCompositeOperation = 'lighter';
+	for (let b = 0; b < 3; b++) for (let x = 0; x < 512; x += 4) {
+		const y = 90 + b * 35 + Math.sin(x * 0.014 + t * (0.7 + b * 0.25) + b * 2) * 34 + Math.sin(x * 0.045 - t * 1.2) * 9;
+		const h = 70 + 45 * Math.sin(x * 0.021 + t * 0.9 + b), col = b === 1 ? '255,70,120' : '70,255,150';
+		const lg = g.createLinearGradient(0, y - h, 0, y + 16);
+		lg.addColorStop(0, `rgba(${col},0)`); lg.addColorStop(0.75, `rgba(${col},${b === 1 ? 0.35 : 0.55})`); lg.addColorStop(1, `rgba(${col},0)`);
+		g.fillStyle = lg; g.fillRect(x, y - h, 4, h + 16);
+	}
+	tex.needsUpdate = true;
+	return tex;
+};
+
 export const Opener3D: React.FC<StageProps> = (s) => {
 	const frame = useCurrentFrame();
 	const {fps, width, height} = useVideoConfig();
@@ -484,6 +559,7 @@ export const Opener3D: React.FC<StageProps> = (s) => {
 	const outdoors = s.place !== 'room';
 	const first = s.shots[0]?.target || '', centre = targetOf(s, Array.isArray(first) ? first[0] : first, t);
 	const focus = framing(s, t).look; // the lens focuses on what the shot aims at; the rest goes soft
+	const aurora = useAurora(s.effects.some((e) => e.type === 'aurora'), t);
 	return (
 		<AbsoluteFill style={{background: m.bg}}>
 			{/* the canvas mounts only when every model and drawing is loaded: it draws on mount and on frame changes,
@@ -501,7 +577,7 @@ export const Opener3D: React.FC<StageProps> = (s) => {
 				{s.props.map((p, i) => {
 					const j = p.id ? joltOf(s, p.id, t) : 0;
 					return <group key={i} position={p.wall ? [p.at[0] + j, p.at[1], BACK] : [p.at[0] + j, p.y || 0, p.at[1]]} rotation={[0, ((p.turn || 0) * Math.PI) / 180, 0]} scale={p.size || 1}>
-						<PropMesh p={p} night={night} i={i} lib={lib} />
+						<PropMesh p={p} night={night} i={i} lib={lib} sky={aurora} />
 					</group>;
 				})}
 				{s.cutouts.filter((c) => c.wall).map((c) => <PictureLight key={`pl-${c.name}`} at={cutPos(c, 0)} />)}
@@ -525,6 +601,11 @@ export const Opener3D: React.FC<StageProps> = (s) => {
 					if (e.type === 'puff') return <Puff key={i} at={e.at || 0} pos={pos} t={t} color={night ? '#8A90A8' : '#E8DCC8'} />;
 					if (e.type === 'shafts' && win) return <Shafts key={i} from={new THREE.Vector3(win.at[0], win.wall ? win.at[1] : 2.3, win.wall ? BACK : win.at[1])} t={t} />;
 					if (e.type === 'dust' || e.type === 'rain' || e.type === 'snow') return <Particles key={i} kind={e.type} t={t} centre={centre} />;
+						if (e.type === 'sparks') return <Sparks key={i} at={e.at || 0} pos={pos} t={t} />;
+						if (e.type === 'smoke') return <Smoke key={i} at={e.at || 0} pos={pos} t={t} night={night} />;
+						if (e.type === 'glow') return <Glow key={i} at={e.at || 0} pos={pos} t={t} color={e.color || '#FF9A3A'} />;
+						if (e.type === 'aurora' && outdoors && aurora) return <mesh key={i} position={[0, 17, -57]}><planeGeometry args={[150, 36]} />
+							<meshBasicMaterial map={aurora} transparent blending={THREE.AdditiveBlending} depthWrite={false} fog={false} /></mesh>;
 					return null;
 				})}
 				{/* the lens: depth of field (the reference's close-ups blur the set behind the subject) and a soft

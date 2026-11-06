@@ -612,6 +612,7 @@ export function makeKit(ctx, t, words = [], light = lightOf()) {
   };
   k.window = (x, y, w = 260, h = 340, o = {}) => {                     // centred on (x, y), on a wall
     part(); const B = k.rect(x - w / 2, y - h / 2, w, h); k.paint(B, o.outside || "#CFE3EA", { sharp: true });
+    if (o.aurora) { k.aurora(x - w / 2, y - h / 2, w, h); part(); }   // northern lights through the glass, under the frame
     p.poly(B, { w: 7, color: C.wood }); p.stroke([[x, y - h / 2], [x, y + h / 2]], { w: 5, color: C.wood }); p.stroke([[x - w / 2, y], [x + w / 2, y]], { w: 5, color: C.wood });
     if (o.curtains) for (const sg of [-1, 1]) { const cx = x + sg * (w / 2 + 6), P = [[cx - sg * 4, y - h / 2 - 30], [cx + sg * 50, y - h / 2 - 30], [cx + sg * 60, y + h / 2 + 40], [cx - sg * 30, y + h / 2 + 40]];
       k.paint(P, o.curtains === true ? "#8A2E2A" : o.curtains, { sharp: true }); p.poly(P, { w: 3.4 }); }
@@ -653,6 +654,22 @@ export function makeKit(ctx, t, words = [], light = lightOf()) {
     k.paint(F, ["#E8552A", C.fire, "#F6C46A"][i], { round: true }); } };
 
   // ---- effects (t0 = when it starts; they are drawn only while they play) ---------------------------------------
+  // electric sparks crackling off (x, y) from t0 on: jagged bolts that change every frame (2026-11-06: an unplugged
+  // telegraph that still worked showed nothing electric)
+  k.sparks = (x, y, s = 1, t0 = 0) => { if (t < t0) return; const f = Math.floor(t * 30); if (hash(f * 3.1) < .25) return; part();
+    for (let b = 0; b < 3; b++) { let px = x, py = y, a = hash(f * 7 + b) * Math.PI * 2; const P = [[px, py]];
+      for (let i = 0; i < 4; i++) { const len = (28 + hash(f * 13 + b * 5 + i) * 40) * s; px += Math.cos(a) * len; py += Math.sin(a) * len; P.push([px, py]); a += (hash(f * 17 + b * 3 + i) - .5) * 1.6; }
+      p.stroke(P, { w: 13 * s, color: "#3A6BFF", alpha: .6, smooth: false }); p.stroke(P, { w: 4.5 * s, color: "#FFFFFF", smooth: false }); }
+    star4(ctx, x, y, 34 * s, "#FFFFFF"); };
+  // northern lights: green and red curtains rippling in the rectangle (x, y, w, h): a night sky or a window's glass
+  k.aurora = (x, y, w = W, h = 900) => { ctx.save(); ctx.beginPath(); ctx.rect(x, y, w, h); ctx.clip();
+    ctx.fillStyle = "#0A1430"; ctx.fillRect(x, y, w, h); ctx.globalCompositeOperation = "lighter";
+    for (let b = 0; b < 3; b++) for (let i = 0; i < w; i += 6) {
+      const yy = y + h * (.35 + b * .14) + Math.sin(i * .012 + t * (.7 + b * .25) + b * 2) * h * .12, hh = h * (.28 + .16 * Math.sin(i * .02 + t * .9 + b));
+      const col = b === 1 ? "255,70,120" : "70,255,150", g = ctx.createLinearGradient(0, yy - hh, 0, yy + 16);
+      g.addColorStop(0, `rgba(${col},0)`); g.addColorStop(.75, `rgba(${col},${b === 1 ? .35 : .55})`); g.addColorStop(1, `rgba(${col},0)`);
+      ctx.fillStyle = g; ctx.fillRect(x + i, yy - hh, 6, hh + 16); }
+    ctx.restore(); };
   k.glint = (x, y, size = 40, t0 = 0) => { const g = popS(t, t0, .18, 2.5) * (1 - ss(t0 + .25, t0 + .5, t)); if (g > .01) star4(ctx, x, y, size * g, "#FFF6C8"); };
   k.sweat = (x, y, t0 = 0, s = 1) => { for (let i = 0; i < 3; i++) { const st = t0 + i * .28, a = clamp((t - st) / .5);
     if (a > 0 && a < 1) { part(); p.wash(ellPts(x + (i - 1) * 34 * s + a * 36 * (i - 1) * s, y - a * 26 * s + a * a * 80 * s, 7 * s, 11 * s, 8), "#5FB4E0", { solid: true, over: true, alpha: 1 - a }); } } };

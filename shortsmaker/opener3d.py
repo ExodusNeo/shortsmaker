@@ -26,7 +26,9 @@ PLACES, MOODS = ("room", "street", "outdoors"), ("day", "golden", "dusk", "night
 PROPS = {"desk", "table", "chair", "door", "window", "frame", "shelf", "lamp", "bed", "rug", "crate", "barrel", "cabinet",
          "counter", "fireplace", "house", "shopfront", "cabin", "garden", "field", "tree", "rock", "fence", "lamppost",
          "stall", "cart", "fountain", "bookcase", "coatrack", "hedge", "walllamp", "sidetable"}
-EFFECTS = {"rings", "dust", "shafts", "burst", "shake", "rain", "snow", "jolt", "puff"}
+# the visible signs of an invisible strange thing (electricity, heat, a sky event): a muted viewer must see it
+SIGN_EFFECTS = ("sparks", "smoke", "glow", "aurora")
+EFFECTS = {"rings", "dust", "shafts", "burst", "shake", "rain", "snow", "jolt", "puff", *SIGN_EFFECTS}
 SPREAD = 1.5  # the widest shot stands at least this many times farther back than the closest (McLean: 1.95-2.35 m)
 MOVES = {"cut", "whip", "push"}
 SCENERY = ("house", "shop", "bank", "factory", "tower", "room", "sky", "ground", "hills", "sea", "island", "window",
@@ -442,8 +444,13 @@ def clean(raw, words: list, seconds: float) -> tuple[dict | None, list[str]]:
     elif len(shots) == 1 or (len(shots) > 1 and not any(sh.get("over") for sh in shots) and max(near) < SPREAD * min(near)):
         bad.append(f"the shots are all the same size ({', '.join(f'{d:g}' for d in near)} m): cut from a wide shot to a "
                    f"close-up at least {SPREAD:g}x nearer on the strange word, or look over someone's shoulder (`over`)")
-    effects = [{"type": e["type"], "at": word_time(words, e.get("at", 0), 0), **({"on": e["on"]} if e.get("on") in ids else {})}
+    effects = [{"type": e["type"], "at": word_time(words, e.get("at", 0), 0), **({"on": e["on"]} if e.get("on") in ids else {}),
+                **({"color": e["color"]} if COLOR.match(str(e.get("color") or "")) else {})}
                for e in raw.get("effects") or [] if isinstance(e, dict) and e.get("type") in EFFECTS]
+    bad += [f"the {e['type']} effect needs `on`: the id or cut-out name it comes from" for e in effects
+            if e["type"] in ("sparks", "smoke", "glow") and "on" not in e]
+    if place == "room" and any(e["type"] == "aurora" for e in effects) and not any(p["type"] == "window" for p in props):
+        bad.append("the aurora shows through a window in a room: hang a `window` prop on the back wall and aim a shot past it")
     needs = [str(x).strip()[:40] for x in raw.get("needs") or [] if str(x).strip()][:8] if isinstance(raw.get("needs"), list) else []
     stage = {"moment": str(raw.get("moment") or "the strangest moment").strip()[:200], "needs": needs, "place": place, "mood": mood,
              "colors": colors, "props": props[:24] + dress(place, props[:24], cutouts[:6]), "cutouts": cutouts[:6],

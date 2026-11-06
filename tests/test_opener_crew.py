@@ -20,6 +20,7 @@ HAT = "export default function draw(k, hy, o) { k.shape([[-30, hy - 18], [-30, h
 
 def staging(**over) -> dict:
     st = {"moment": "a ferryman knocks at midnight", "place": "outdoors", "light": "night",
+          "strange": {"what": "a ferryman knocks at a house at midnight", "shows": ["the ferryman's fist on the closed door"]},
           "people": [{"id": "ferryman", "who": "a ferryman", "hat": "cap", "coat": "#3C4A6B", "holds": "letter", "doing": "knocks"}],
           "things": [{"id": "cottage", "kind": "house"}],
           "action": {"who": "ferryman", "does": "knocks", "on": "cottage"},
@@ -33,9 +34,18 @@ def short() -> dict:
             "scenes": [{"narration": "A ferryman knocks at midnight.", "full": None}, {"narration": "Nobody answers.", "full": None}]}
 
 
+def blind_ok(prompt):
+    """The sound-off test's two calls (drawn_opener.blind_read) pass, so these tests count only the crew's calls."""
+    if "You know nothing else about it" in prompt:
+        return {"sees": "a man knocks on a cottage door at night holding a letter"}
+    if "with the sound off and said" in prompt:
+        return {"gets_it": True}
+    return None
+
+
 def fake(replies, prompts):
     it = iter(replies)
-    return lambda prompt, **k: prompts.append(prompt) or next(it)
+    return lambda prompt, **k: blind_ok(prompt) or prompts.append(prompt) or next(it)
 
 
 def test_staging_is_checked_against_the_kit():
@@ -56,6 +66,31 @@ def test_staging_is_checked_against_the_kit():
     assert any("first beat" in p for p in opener_crew.check_staging(wide_first, WORDS)[1])  # frame 0 must read on a phone
     two = staging(people=staging()["people"] + [{"id": "keeper", "hat": "none", "holds": "none"}])
     assert any("keeper is in no beat" in p for p in opener_crew.check_staging(two, WORDS)[1])  # nobody planned and never filmed
+    # the strange thing and what a muted viewer sees of it are required (owner, 2026-11-06: the Carrington opener)
+    for odd in (None, {"what": "the wires work unplugged"}, {"what": "", "shows": ["sparks"]}):
+        assert any("give `strange`" in p for p in opener_crew.check_staging(staging(strange=odd), WORDS)[1]), odd
+    st = opener_crew.check_staging(staging(strange={"what": "x", "shows": ["sparks on the key", " ", "loose wires"]}), WORDS)[0]
+    assert st["strange"]["shows"] == ["sparks on the key", "loose wires"] and "strange: x" in opener_crew.staging_text(st)
+    signs = [{"type": "sparks", "on": "cottage"}, {"type": "aurora", "on": "moon"}]
+    st, bad = opener_crew.check_staging(staging(strange={"what": "x", "shows": ["y"], "effects": signs}), WORDS)
+    assert bad == [] and st["strange"]["effects"] == [{"type": "sparks", "on": "cottage"}, {"type": "aurora"}], bad
+    for wrong in ({"type": "sparks", "on": "nobody"}, {"type": "lightning", "on": "cottage"}):
+        assert any("strange effect" in p for p in opener_crew.check_staging(staging(strange={"what": "x", "shows": ["y"], "effects": [wrong]}), WORDS)[1])
+
+
+def test_the_stagers_sign_effects_are_put_in_by_code():
+    """Carrington, 2026-11-06: the stager's strange thing was electric but the placer added no effect at all."""
+    st = opener_crew.check_staging(staging(strange={"what": "x", "shows": ["y"], "effects": [{"type": "sparks", "on": "ferryman"}]}), WORDS)[0]
+    cut = {"name": "ferryman", "what": "a ferryman", "w": 1200, "h": 1100, "height": 2.3, "frames": 2,
+           "code": "export default function draw(k, f) { k.knock(600, 1080, 3.4, {phase: f / 2, person: {hat: 'cap', hold: ['letter', null]}}); }"}
+    raw = {"place": "outdoors", "mood": "night", "props": [{"type": "house", "id": "cottage", "place": {"mark": "centre"}}],
+           "cutouts": [{"name": "ferryman", "place": {"door": "cottage"}}],
+           "shots": [{"at": 0, "target": "ferryman", "shot": "wide"}, {"at": "knocks", "target": "ferryman", "shot": "close"}]}
+    stage, _ = opener_crew.assemble(raw, [cut], st, WORDS, 2.6, "A ferryman knocks at midnight.")
+    assert {"type": "sparks", "at": 0, "on": "ferryman"} in stage["effects"], stage["effects"]
+    raw["effects"] = [{"type": "sparks", "at": 1, "on": "ferryman"}]  # the placer timed it itself: not doubled
+    stage, _ = opener_crew.assemble(raw, [cut], st, WORDS, 2.6, "A ferryman knocks at midnight.")
+    assert [e["type"] for e in stage["effects"]] == ["sparks"] and stage["effects"][0]["at"] == 1
 
 
 def test_a_made_part_is_kept_and_reused_with_no_ai():

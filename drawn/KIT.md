@@ -150,6 +150,11 @@ strength)` heat haze, `k.speed(x, y, dir, count, len)` motion lines (dir -1 = li
 `k.splash(x, y, t0, s, colour)`, `k.question(x, y, size, t0)`, `k.exclaim(x, y, size, t0)`,
 `k.bubble(x, y, text, {size, t0, tail: -1 | 1})` a speech bubble (only words the narration says),
 `k.rain(strength)`, `k.snowfall(strength)`, `k.flood(frontX, surfaceY, {color})` a liquid mass from the left edge.
+`k.sparks(x, y, s, t0)` electric sparks crackling off a point from t0 on (electricity where there should be none),
+`k.aurora(x, y, w, h)` northern lights rippling in that rectangle (a night sky: `k.aurora(0, 0, 1080, horizon)`
+after `k.sky("night")`; or through a window: `k.window(cx, cy, w, h, {aurora: true})`).
+When the story's strange thing is invisible (electricity, heat, a sky event), these, `k.smoke` and `k.fire` are how
+a viewer with the sound off sees it.
 
 ## Made parts (hats and things added for earlier stories)
 The task lists the made hats and things, if there are any. A made hat works like any other: `hat: '<name>'`. A

@@ -426,6 +426,36 @@ Order (owner, 2026-11-05): 3D opener -> drawn opener -> motion graphic (2 fixes)
     `short["opener3d_best"]`; when the drawn opener doesn't pass either, `make_opener` uses the higher of the two if
     it reached KEEP (`short["drawn"]["kept"]`, a CHECK line "kept at N/10"), else the motion graphic as before.
     Never a draft that reveals the answer (`spoils`), never on a final-review repair (`repairing`), scene 1 only.
+- **Opener round 3: it must read with the sound off** (owner, 2026-11-06: "i dont know what it is exactly without
+  subs" about the Carrington 3D opener; the art director had been told the story, so it read a blue box as the
+  battery the plan named):
+  - Sound-off test `drawn_opener.blind_read`, inside `review()` for every opener (3D and drawn; not reveals): one
+    call describes the sheet knowing only the hook title (on screen in the first second), a second judges that
+    description against the staging's `strange` (else the moment) and the narration. Missed = score capped at
+    KEEP - 1 (never passes, never kept) and the problem goes first, tagged to its owner (`person:x` / `placement`).
+    Either call failing = no verdict (the art director's score stands). +2 AI calls per opener review.
+  - Stager `strange`: `{what, shows: [1-4 things seen muted]}`, required by `check_staging`; printed in
+    `staging_text`, given to every painter (the battery's painter must draw its loose wires), and to the placer
+    through `staged()`; STAGE3D.md "The strange thing" asks for every cue on screen, one in frame 0.
+  - Sign effects (`opener3d.SIGN_EFFECTS`): 3D `sparks` (jagged bolts redrawn per frame + a flickering blue light),
+    `smoke`, `glow` (`color`), `aurora` (outdoors the sky; in a room through every `window`, which `clean` requires).
+    sparks/smoke/glow need `on`. 2D kit: `k.sparks(x, y, s, t0)`, `k.aurora(x, y, w, h)`, `k.window(..., {aurora})`.
+    Effects test render (no AI): `test_renders/opener3d/fx_test/opener.mp4`.
+  - Codex as brain: `run_codex` already covered every crew call (BRAIN = "codex", SOLO). Carrington with Codex
+    before round 3: 5/10 in 5.3 min (Gemini/Claude round 2: 3-4/10 in 18.6 min); clip in
+    `test_renders/opener3d/crew_codex/`. Its new parts `telegraph_register` (8/10) and `telegraph_workbench`
+    (7/10) in `drawn/parts/thing/` are kept (plain kit calls, read before committing).
+  - Stager sign effects: `strange.effects` (0-2 `{type, on}` from SIGN_EFFECTS, checked against the ids) are added
+    to the stage at 0 by `assemble` when the placer left them out (round 3 live run 1: the placer used no effect).
+  - Live runs round 3, Codex only (harness `crew_live.py` copy with BRAIN/PARTNER "codex", SOLO):
+    `crew_codex2/` 5/10 in 6.4 min: the battery now reads ("a wooden rack of tubes with loose wires dangling"), but
+    the sound-off test failed (nobody can tell the telegraph still works). `crew_codex3/` best 5/10 in 8.4 min:
+    the stager chose a faint `glow`, not sparks; sound-off failed again. Neither passed.
+  - Open: (1) the placer keeps putting the two subjects of a shot metres apart: `spread_out` rejects it before
+    render and the fix round often repeats it (both round 3 runs lost a draft to it): placing the second subject
+    `beside` the first in code, like the sign effects, is the next step. (2) the stager picks weak signs (glow,
+    a tapping lever) over sparks for electricity.
+  - Not built: per-moment recipes (owner: the moments named were ones already posted).
 - Kit expansion (2026-11-05): 11 more hats (fedora, flatcap, boater, cowboy, ranger, kepi, officer, bobby, bicorne,
   nurse, hardhat), rooms/furniture (`k.door` with `open` + knob, `k.bed`, `k.rug`, `k.shelf`, `k.lamp`, `k.window`,
   `k.frame`), devices (`k.phone`, `k.radio`, `k.letter`), animals `k.cat`, `k.rabbit`, `k.bear` (also in

@@ -37,9 +37,51 @@ def test_no_verdict_is_not_a_pass():
         llm.ask_ai = saved
 
 
-def fake_ai(replies, prompts):
+def blind_ok(prompt):
+    """The sound-off test's two calls (drawn_opener.blind_read): the stranger gets it, unless a test says otherwise."""
+    if "You know nothing else about it" in prompt:
+        return {"sees": "a ship full of bed warmers sails into a hot tropical port"}
+    if "with the sound off and said" in prompt:
+        return {"gets_it": True}
+    return None
+
+
+def fake_ai(replies, prompts, blind=blind_ok):
     it = iter(replies)
-    return lambda prompt, **k: prompts.append(prompt) or next(it)
+    return lambda prompt, **k: blind(prompt) or prompts.append(prompt) or next(it)
+
+
+def test_sound_off_test_fails_a_draft_the_art_director_liked():
+    """Owner, 2026-11-06: a Carrington opener couldn't be understood without the captions. A stranger told nothing of
+    the story describes the frames; when that misses the strange thing, the draft can neither pass nor be kept."""
+    saved, prompts = llm.ask_ai, []
+
+    def missed(prompt):
+        if "You know nothing else about it" in prompt:
+            prompts.append(prompt)
+            return {"sees": "a man stands beside a desk holding a blue box"}
+        if "with the sound off and said" in prompt:
+            prompts.append(prompt)
+            return {"gets_it": False, "fix": "person:operator: show loose wires hanging from the battery and sparks"}
+        return None
+
+    try:
+        s = {**short(), "hook_text": "WIRES WITH NO POWER",
+             "opener_staging": {"strange": {"what": "the telegraph works with its battery unplugged", "shows": ["sparks at the key"]}}}
+        llm.ask_ai = fake_ai([{"score": 9, "problems": []}], prompts, blind=missed)
+        score, found = drawn_opener.review(s, {"moment": "m"}, Path("sheet") / "sheet1.png", 2.0,
+                                           owners={"placement": "where things stand", "person:operator": "how he is drawn"})
+        assert score == drawn_opener.KEEP - 1 and found[0].startswith("person:operator: sound-off test failed"), (score, found)
+        assert "a blue box" in found[0] and "loose wires" in found[0]
+        blind, judge = prompts[1], prompts[2]
+        assert "WIRES WITH NO POWER" in blind and "bed warmers" not in blind and "Timothy" not in blind  # told nothing else
+        assert "battery unplugged" in judge and "sparks at the key" in judge
+        llm.ask_ai = fake_ai([{"score": 8, "problems": []}], [])  # the stranger gets it: the score stands
+        assert drawn_opener.review(s, {"moment": "m"}, Path("sheet") / "sheet1.png", 2.0) == (8.0, [])
+        llm.ask_ai = fake_ai([{"score": 8, "problems": []}, {"score": 8, "problems": []}], [], blind=missed)
+        assert drawn_opener.review(s, {"moment": "m"}, Path("sheet") / "sheet1.png", 2.0, i=1) == (8.0, [])  # a reveal: heard the story
+    finally:
+        llm.ask_ai = saved
 
 
 def test_lint():

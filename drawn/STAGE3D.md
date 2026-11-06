@@ -107,6 +107,15 @@ a moment (a knocked door: put it `on` the knocker's cut-out, which holds the doo
 room's window; `"rain"`, `"snow"`. `"rings"` (radio or sound rings rolling out of a thing `on`): ONLY for a real
 broadcast, a radio, a phone or a bell ringing, never for a knock, a shout or a footstep.
 A knock: the knocker's `hits` + a `jolt` and a `puff` on the knocker, on each knock word.
+Signs of something invisible (they run from `at` to the end, so start the strange one at 0):
+`"sparks"` electric sparks crackling and jumping off the thing it is `on`, with a flickering blue-white light
+(electricity where there should be none); `"smoke"` smoke rising from the thing it is `on` (scorching, burning);
+`"glow"` the thing it is `on` glows and pulses (`"color": "#RRGGBB"`, default hot orange); `"aurora"` green and red
+northern lights rippling across the sky: outdoors the whole sky, in a room through every `window` (hang one).
+
+## The strange thing
+The staging's `strange.shows` lists what a viewer must SEE with the sound off. Put every one on screen: an effect
+on the right thing, a prop, a window for a sky, and aim a shot at it. Frame 0 shows at least one of them.
 
 ## Example (invented, to show the format): "At midnight a ferryman knocks on the lighthouse keeper's door, a sealed letter in his hand."
 Painted cut-outs given: `ferryman` (the ferryman knocking on a closed door, letter in his other hand; 2.3 m board).
