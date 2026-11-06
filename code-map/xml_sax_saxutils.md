@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "edit_project.py"
+community: "checkpoints.py"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/edit_projectpy
+  - community/checkpointspy
 ---
 
 # xml_sax_saxutils
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[edit_project.py]] - `imports_from` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/edit_projectpy
+#graphify/concept #graphify/EXTRACTED #community/checkpointspy

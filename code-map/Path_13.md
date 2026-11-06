@@ -1,19 +1,26 @@
 ---
 source_file: ""
 type: "code"
-community: "checkpoints.py"
+community: "finish_render"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/checkpointspy
+  - community/finish_render
 ---
 
 # Path
 
 ## Connections
-- [[finish_short()]] - `references` [EXTRACTED]
-- [[record_failure()]] - `references` [EXTRACTED]
-- [[resume_runs()]] - `references` [EXTRACTED]
-- [[use_picture_from()]] - `references` [EXTRACTED]
+- [[apply_review_fixes()]] - `references` [EXTRACTED]
+- [[first_second_check()]] - `references` [EXTRACTED]
+- [[fix_drawn_answer()]] - `references` [EXTRACTED]
+- [[fix_opener_graphic()]] - `references` [EXTRACTED]
+- [[paint_new()]] - `references` [EXTRACTED]
+- [[paint_opener_start()]] - `references` [EXTRACTED]
+- [[pool_pictures()]] - `references` [EXTRACTED]
+- [[quality_check()]] - `references` [EXTRACTED]
+- [[sound_masking()]] - `references` [EXTRACTED]
+- [[storyboard()]] - `references` [EXTRACTED]
+- [[visual_review()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/checkpointspy
+#graphify/code #graphify/EXTRACTED #community/finish_render

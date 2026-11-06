@@ -1,12 +1,12 @@
 ---
 source_file: "drawn/kit.mjs"
 type: "code"
-community: "Pen"
+community: "core.mjs"
 location: "L63"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pen
+  - community/coremjs
 ---
 
 # .ease()
@@ -16,4 +16,4 @@ tags:
 - [[eOut()]] - `calls` [EXTRACTED]
 - [[k]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pen
+#graphify/code #graphify/EXTRACTED #community/coremjs

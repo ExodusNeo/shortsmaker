@@ -1,18 +1,17 @@
 ---
-source_file: "tests/test_ai_modes.py"
+source_file: "tests/test_codex.py"
 type: "code"
-community: "other_ai"
-location: "L30"
+community: "ask_ai"
+location: "L41"
 tags:
   - graphify/code
-  - graphify/EXTRACTED
-  - community/other_ai
+  - graphify/INFERRED
+  - community/ask_ai
 ---
 
 # claude()
 
 ## Connections
-- [[fake_providers()]] - `indirect_call` [INFERRED]
-- [[reply()_1]] - `calls` [EXTRACTED]
+- [[test_every_ai_gets_the_pipeline_preamble_once()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/other_ai
+#graphify/code #graphify/INFERRED #community/ask_ai

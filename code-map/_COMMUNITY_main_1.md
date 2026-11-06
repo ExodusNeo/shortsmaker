@@ -1,11 +1,11 @@
 ---
 type: community
-members: 25
+members: 20
 ---
 
 # main
 
-**Members:** 25 nodes
+**Members:** 20 nodes
 
 ## Members
 - [[Ask for a number 1..n (Enter = default, when there is one).]] - rationale - shortsmaker/channel_profiles.py
@@ -18,21 +18,16 @@ members: 25
 - [[ask_yes()]] - code - shortsmaker/channel_profiles.py
 - [[command()]] - code - shortsmaker/retention.py
 - [[configure_brain()]] - code - shortsmaker/channel_profiles.py
-- [[fix.bat re-render a recent Short with one scene changed, keeping its pictures,…]] - rationale - shortsmaker/cli.py
-- [[fix_short()]] - code - shortsmaker/cli.py
-- [[load_channel()]] - code - shortsmaker/channel_profiles.py
-- [[load_rules, but a channel with no rules file yet (a failed draft, a profile…]] - rationale - shortsmaker/rules.py
-- [[main()_4]] - code - shortsmaker/cli.py
+- [[main()_1]] - code - shortsmaker/cli.py
 - [[make_shorts.py]] - code - make_shorts.py
 - [[normalize_brain()]] - code - shortsmaker/channel_profiles.py
-- [[prune_work()]] - code - shortsmaker/short_render.py
 - [[render()_1]] - code - tests/test_blender_run.py
-- [[require_rules()]] - code - shortsmaker/rules.py
 - [[retention.bat, or make_shorts.py retention Short folder screenshot AI…]] - rationale - shortsmaker/retention.py
+- [[test_a_stopped_run_keeps_the_default_channel()]] - code - tests/test_rules.py
 - [[test_batch_uses_selected_codex_writer_and_migrates_saved_aliases()]] - code - tests/test_ai_modes.py
 - [[test_blender_failure_is_reported_and_the_batch_goes_on()]] - code - tests/test_blender_run.py
-- [[test_fix_bat_explains_a_drawn_short()]] - code - tests/test_blender_run.py
-- [[use_channel()]] - code - shortsmaker/channel_profiles.py
+- [[test_codex_cold_reader_and_quota_fallback_never_call_claude()]] - code - tests/test_codex.py
+- [[test_solo_brain_selection_options()]] - code - tests/test_package.py
 
 ## Live Query (requires Dataview plugin)
 
@@ -42,34 +37,31 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 15 edges to [[_COMMUNITY_pathlib]]
-- 11 edges to [[_COMMUNITY_checkpoints.py]]
-- 6 edges to [[_COMMUNITY_json]]
-- 4 edges to [[_COMMUNITY_test_rules.py]]
-- 4 edges to [[_COMMUNITY_gpu.py]]
-- 3 edges to [[_COMMUNITY_render]]
+- 10 edges to [[_COMMUNITY_pathlib]]
+- 7 edges to [[_COMMUNITY_resume_runs]]
+- 5 edges to [[_COMMUNITY_fix_short]]
+- 3 edges to [[_COMMUNITY_edit_scripts]]
 - 3 edges to [[_COMMUNITY_retention.py]]
-- 2 edges to [[_COMMUNITY_edit_scripts]]
-- 2 edges to [[_COMMUNITY_other_ai]]
-- 2 edges to [[_COMMUNITY_fake_ai]]
-- 2 edges to [[_COMMUNITY_paint_new]]
-- 2 edges to [[_COMMUNITY_ffmpeg]]
-- 1 edge to [[_COMMUNITY_log_short]]
-- 1 edge to [[_COMMUNITY_draft_rules]]
-- 1 edge to [[_COMMUNITY_finish_render]]
+- 2 edges to [[_COMMUNITY_short_render.py]]
+- 2 edges to [[_COMMUNITY_save_candidate]]
+- 2 edges to [[_COMMUNITY_cold_read]]
+- 2 edges to [[_COMMUNITY_pick_channel]]
+- 1 edge to [[_COMMUNITY_vault_page]]
+- 1 edge to [[_COMMUNITY_run_draft]]
 - 1 edge to [[_COMMUNITY_write_scripts]]
-- 1 edge to [[_COMMUNITY_ask_ai]]
-- 1 edge to [[_COMMUNITY_cold_read]]
 - 1 edge to [[_COMMUNITY_test_pictures_first.py]]
+- 1 edge to [[_COMMUNITY_render]]
 - 1 edge to [[_COMMUNITY_media_menu.py]]
 - 1 edge to [[_COMMUNITY_re]]
 - 1 edge to [[_COMMUNITY_style_library]]
-- 1 edge to [[_COMMUNITY_test_full_scenes.py]]
-- 1 edge to [[_COMMUNITY_short_render.py]]
+- 1 edge to [[_COMMUNITY_json]]
+- 1 edge to [[_COMMUNITY_test_blender_run.py]]
+- 1 edge to [[_COMMUNITY_ask_ai]]
+- 1 edge to [[_COMMUNITY_test_rules.py]]
 
 ## Top bridge nodes
-- [[main()_4]] - degree 32, connects to 12 communities
-- [[fix_short()]] - degree 20, connects to 7 communities
+- [[main()_1]] - degree 32, connects to 14 communities
 - [[configure_brain()]] - degree 11, connects to 5 communities
-- [[require_rules()]] - degree 9, connects to 5 communities
-- [[load_channel()]] - degree 7, connects to 5 communities
+- [[ask_number()]] - degree 6, connects to 3 communities
+- [[command()]] - degree 11, connects to 2 communities
+- [[ask_yes()]] - degree 4, connects to 2 communities

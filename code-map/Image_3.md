@@ -1,18 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: "clean_photo"
+community: "test_blender_scene.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/clean_photo
+  - community/test_blender_scenepy
 ---
 
 # Image
 
 ## Connections
-- [[is_stereo()]] - `references` [EXTRACTED]
-- [[trim_borders()]] - `references` [EXTRACTED]
-- [[vertical_image()]] - `references` [EXTRACTED]
+- [[changed()]] - `references` [EXTRACTED]
+- [[count()]] - `references` [EXTRACTED]
+- [[render()_4]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/clean_photo
+#graphify/code #graphify/EXTRACTED #community/test_blender_scenepy

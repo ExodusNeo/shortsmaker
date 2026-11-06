@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/image_sources.py"
 type: "rationale"
-community: "footage.py"
+community: "fetch"
 location: "L43"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/footagepy
+  - community/fetch
 ---
 
 # GET from Wikimedia, spaced `gap` seconds apart, with a short backoff on rate…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[wm_get()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/footagepy
+#graphify/rationale #graphify/EXTRACTED #community/fetch

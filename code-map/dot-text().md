@@ -1,12 +1,12 @@
 ---
 source_file: "drawn/lib/pen.mjs"
 type: "code"
-community: "Pen"
+community: "core.mjs"
 location: "L97"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pen
+  - community/coremjs
 ---
 
 # .text()
@@ -15,4 +15,4 @@ tags:
 - [[dot-J()]] - `calls` [EXTRACTED]
 - [[Pen]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pen
+#graphify/code #graphify/EXTRACTED #community/coremjs

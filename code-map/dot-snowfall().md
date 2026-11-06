@@ -1,12 +1,12 @@
 ---
 source_file: "drawn/kit.mjs"
 type: "code"
-community: "clamp"
-location: "L657"
+community: "k"
+location: "L678"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/clamp
+  - community/k
 ---
 
 # .snowfall()
@@ -15,4 +15,4 @@ tags:
 - [[dot-arc()]] - `calls` [EXTRACTED]
 - [[k]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/clamp
+#graphify/code #graphify/EXTRACTED #community/k

@@ -1,5 +1,5 @@
 ---
-source_file: "remotion/src/style/looks/Halftone.tsx"
+source_file: "remotion/src/style/looks/Engraving.tsx"
 type: "code"
 community: "Halftone.tsx"
 location: "L36"
@@ -12,12 +12,9 @@ tags:
 # draw()
 
 ## Connections
-- [[Halftone()]] - `calls` [EXTRACTED]
-- [[Halftone.tsx]] - `contains` [EXTRACTED]
-- [[luminance()]] - `calls` [EXTRACTED]
-- [[noise()_1]] - `calls` [EXTRACTED]
-- [[rgb()]] - `calls` [EXTRACTED]
-- [[screen()]] - `calls` [EXTRACTED]
-- [[stretch()]] - `calls` [EXTRACTED]
+- [[Engraving()]] - `calls` [EXTRACTED]
+- [[Engraving.tsx]] - `contains` [EXTRACTED]
+- [[hatch()_1]] - `calls` [EXTRACTED]
+- [[luminance()_1]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Halftonetsx

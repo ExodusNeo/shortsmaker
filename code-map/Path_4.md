@@ -11,6 +11,6 @@ tags:
 # Path
 
 ## Connections
-- [[import_media()]] - `references` [EXTRACTED]
+- [[mark_details()]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/re

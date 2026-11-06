@@ -1,12 +1,12 @@
 ---
 source_file: "drawn/lib/core.mjs"
 type: "code"
-community: "Pen"
+community: "core.mjs"
 location: "L13"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pen
+  - community/coremjs
 ---
 
 # noise1()
@@ -22,4 +22,4 @@ tags:
 - [[makeKit()]] - `calls` [EXTRACTED]
 - [[pen.mjs]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pen
+#graphify/code #graphify/EXTRACTED #community/coremjs

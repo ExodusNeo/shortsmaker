@@ -1,12 +1,12 @@
 ---
 source_file: "drawn/lib/core.mjs"
 type: "code"
-community: "Pen"
+community: "core.mjs"
 location: "L66"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pen
+  - community/coremjs
 ---
 
 # INK
@@ -16,4 +16,4 @@ tags:
 - [[pen.mjs]] - `imports` [EXTRACTED]
 - [[textures.mjs]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pen
+#graphify/code #graphify/EXTRACTED #community/coremjs

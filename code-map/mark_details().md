@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[Let the AI circle (or point an arrow at) a detail in up to 2 chosen pictures.…]] - `rationale_for` [EXTRACTED]
-- [[Path_5]] - `references` [EXTRACTED]
+- [[Path_4]] - `references` [EXTRACTED]
 - [[ask_ai()]] - `calls` [EXTRACTED]
 - [[clean_photo()]] - `calls` [EXTRACTED]
 - [[io]] - `calls` [EXTRACTED]

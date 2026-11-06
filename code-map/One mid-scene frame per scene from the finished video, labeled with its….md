@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/review.py"
 type: "rationale"
-community: "finish_render"
+community: "plan_rules.py"
 location: "L517"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/finish_render
+  - community/plan_rulespy
 ---
 
 # One mid-scene frame per scene from the finished video, labeled with its…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[storyboard()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/finish_render
+#graphify/rationale #graphify/EXTRACTED #community/plan_rulespy

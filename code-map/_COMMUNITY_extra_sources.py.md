@@ -1,14 +1,14 @@
 ---
 type: community
-members: 26
+members: 27
 ---
 
 # extra_sources.py
 
-**Members:** 26 nodes
+**Members:** 27 nodes
 
 ## Members
-- [[dot-__init__()_6]] - code - shortsmaker/extra_sources.py
+- [[dot-__init__()_7]] - code - shortsmaker/extra_sources.py
 - [[dot-handle_starttag()]] - code - shortsmaker/extra_sources.py
 - [[BrandImages]] - code - shortsmaker/extra_sources.py
 - [[Budgeted queries keep the expanded pool usable on a home PC.]] - rationale - shortsmaker/extra_sources.py
@@ -29,6 +29,7 @@ members: 26
 - [[loc_images()]] - code - shortsmaker/extra_sources.py
 - [[optional_key()]] - code - shortsmaker/media_library.py
 - [[pixabay_images()]] - code - shortsmaker/extra_sources.py
+- [[settings()]] - code - shortsmaker/media_library.py
 - [[smithsonian_images()]] - code - shortsmaker/extra_sources.py
 - [[source_enabled()]] - code - shortsmaker/media_library.py
 - [[source_json()]] - code - shortsmaker/extra_sources.py
@@ -43,22 +44,22 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 9 edges to [[_COMMUNITY_short_render.py]]
-- 4 edges to [[_COMMUNITY_footage.py]]
-- 4 edges to [[_COMMUNITY_media_menu.py]]
-- 4 edges to [[_COMMUNITY_gpu.py]]
-- 3 edges to [[_COMMUNITY_re]]
-- 3 edges to [[_COMMUNITY_ffmpeg]]
-- 3 edges to [[_COMMUNITY_json]]
+- 9 edges to [[_COMMUNITY_re]]
+- 8 edges to [[_COMMUNITY_plan_rules.py]]
+- 4 edges to [[_COMMUNITY_fetch]]
+- 4 edges to [[_COMMUNITY_json]]
+- 3 edges to [[_COMMUNITY_render]]
+- 3 edges to [[_COMMUNITY_short_render.py]]
+- 3 edges to [[_COMMUNITY_media_menu.py]]
 - 2 edges to [[_COMMUNITY_gather_pool]]
 - 2 edges to [[_COMMUNITY_hashlib]]
-- 2 edges to [[_COMMUNITY_pathlib]]
-- 1 edge to [[_COMMUNITY_test_topic_ideas.py]]
+- 2 edges to [[_COMMUNITY_audio_library.py]]
 - 1 edge to [[_COMMUNITY_test_pictures_first.py]]
+- 1 edge to [[_COMMUNITY_pathlib]]
 
 ## Top bridge nodes
-- [[extra_sources.py]] - degree 30, connects to 8 communities
+- [[extra_sources.py]] - degree 30, connects to 7 communities
 - [[source_json()]] - degree 13, connects to 5 communities
+- [[settings()]] - degree 10, connects to 4 communities
 - [[source_status()]] - degree 9, connects to 4 communities
-- [[source_enabled()]] - degree 8, connects to 4 communities
-- [[collection_images()]] - degree 11, connects to 2 communities
+- [[source_enabled()]] - degree 8, connects to 3 communities

@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "ends_sentence"
+community: "hashlib"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ends_sentence
+  - community/hashlib
 ---
 
 # Path
 
 ## Connections
-- [[srt()]] - `references` [EXTRACTED]
+- [[load()_1]] - `references` [EXTRACTED]
+- [[save()_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ends_sentence
+#graphify/code #graphify/EXTRACTED #community/hashlib

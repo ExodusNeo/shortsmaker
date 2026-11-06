@@ -1,8 +1,8 @@
 ---
-source_file: "drawn/cutouts.mjs"
+source_file: "drawn/partsheet.mjs"
 type: "code"
 community: "kit.mjs"
-location: "L16"
+location: "L11"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,6 +12,6 @@ tags:
 # job
 
 ## Connections
-- [[cutouts.mjs]] - `contains` [EXTRACTED]
+- [[partsheet.mjs]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/kitmjs

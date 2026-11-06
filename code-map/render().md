@@ -2,7 +2,7 @@
 source_file: "shortsmaker/short_render.py"
 type: "code"
 community: "render"
-location: "L211"
+location: "L214"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[Make one Short. With `state` (fix.bat or an automatic fix round), reuse its…]] - `rationale_for` [EXTRACTED]
-- [[Path_18]] - `references` [EXTRACTED]
+- [[Path_17]] - `references` [EXTRACTED]
 - [[captions()_1]] - `calls` [EXTRACTED]
 - [[choose_images()]] - `calls` [EXTRACTED]
 - [[clean_photo()]] - `calls` [EXTRACTED]
@@ -38,7 +38,7 @@ tags:
 - [[local_clips()]] - `calls` [EXTRACTED]
 - [[local_job()]] - `calls` [EXTRACTED]
 - [[local_voice()]] - `calls` [EXTRACTED]
-- [[main()_4]] - `calls` [EXTRACTED]
+- [[main()_1]] - `calls` [EXTRACTED]
 - [[make_sfx()]] - `calls` [EXTRACTED]
 - [[mark_details()]] - `calls` [EXTRACTED]
 - [[moss_images()]] - `calls` [EXTRACTED]

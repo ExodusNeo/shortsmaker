@@ -12,7 +12,7 @@ tags:
 # test_director_character_look_is_kept_short_or_dropped()
 
 ## Connections
-- [[plan_with()_1]] - `calls` [EXTRACTED]
+- [[plan_with()]] - `calls` [EXTRACTED]
 - [[test_style.py]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/test_stylepy

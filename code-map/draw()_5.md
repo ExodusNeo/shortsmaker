@@ -1,8 +1,8 @@
 ---
-source_file: "remotion/src/style/looks/Riso.tsx"
+source_file: "remotion/src/style/looks/Miniature.tsx"
 type: "code"
 community: "Halftone.tsx"
-location: "L13"
+location: "L9"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,10 +12,8 @@ tags:
 # draw()
 
 ## Connections
-- [[Riso()]] - `calls` [EXTRACTED]
-- [[Riso.tsx]] - `contains` [EXTRACTED]
-- [[luminance()]] - `calls` [EXTRACTED]
-- [[noise()_1]] - `calls` [EXTRACTED]
-- [[rgb()_1]] - `calls` [EXTRACTED]
+- [[Miniature()]] - `indirect_call` [INFERRED]
+- [[Miniature.tsx]] - `contains` [EXTRACTED]
+- [[drawCover()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Halftonetsx

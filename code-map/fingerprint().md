@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/drawn_opener.py"
 type: "code"
-community: "drawn_opener.py"
-location: "L278"
+community: "test_drawn_opener.py"
+location: "L286"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/drawn_openerpy
+  - community/test_drawn_openerpy
 ---
 
 # fingerprint()
@@ -17,4 +17,4 @@ tags:
 - [[hashlib]] - `calls` [EXTRACTED]
 - [[make_opener()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/drawn_openerpy
+#graphify/code #graphify/EXTRACTED #community/test_drawn_openerpy

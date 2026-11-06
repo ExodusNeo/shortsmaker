@@ -1,18 +1,18 @@
 ---
 source_file: "shortsmaker/media_tools.py"
 type: "code"
-community: "ffmpeg"
+community: "render"
 location: "L22"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ffmpeg
+  - community/render
 ---
 
 # duration()
 
 ## Connections
-- [[Path_24]] - `references` [EXTRACTED]
+- [[Path_15]] - `references` [EXTRACTED]
 - [[apply()]] - `calls` [EXTRACTED]
 - [[brand_films()]] - `calls` [EXTRACTED]
 - [[local_assets()]] - `calls` [EXTRACTED]
@@ -32,4 +32,4 @@ tags:
 - [[test_render_clips_makes_one_clip_per_scene()]] - `calls` [EXTRACTED]
 - [[track_start()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ffmpeg
+#graphify/code #graphify/EXTRACTED #community/render

@@ -31,16 +31,16 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 8 edges to [[_COMMUNITY_opener3d.py]]
-- 3 edges to [[_COMMUNITY_drawn_opener.py]]
 - 3 edges to [[_COMMUNITY_opener_crew.py]]
-- 1 edge to [[_COMMUNITY_ffmpeg]]
-- 1 edge to [[_COMMUNITY_json]]
-- 1 edge to [[_COMMUNITY_short_render.py]]
-- 1 edge to [[_COMMUNITY_test_full_scenes.py]]
+- 2 edges to [[_COMMUNITY_test_drawn_opener.py]]
+- 2 edges to [[_COMMUNITY_short_render.py]]
+- 2 edges to [[_COMMUNITY_json]]
+- 1 edge to [[_COMMUNITY_render]]
+- 1 edge to [[_COMMUNITY_plan_rules.py]]
 
 ## Top bridge nodes
 - [[render()_5]] - degree 9, connects to 6 communities
-- [[sheet()_1]] - degree 7, connects to 3 communities
+- [[sheet()_1]] - degree 8, connects to 4 communities
 - [[blends()]] - degree 5, connects to 2 communities
+- [[sheet_times()]] - degree 4, connects to 2 communities
 - [[sheet_times()_1]] - degree 5, connects to 1 community
-- [[sheet_times()]] - degree 4, connects to 1 community

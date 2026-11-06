@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "short_render.py"
+community: "plan_rules.py"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/short_renderpy
+  - community/plan_rulespy
 ---
 
 # urllib_error
@@ -17,4 +17,4 @@ tags:
 - [[image_sources.py]] - `imports` [EXTRACTED]
 - [[test_media.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/short_renderpy
+#graphify/concept #graphify/EXTRACTED #community/plan_rulespy

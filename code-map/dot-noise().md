@@ -1,12 +1,12 @@
 ---
 source_file: "drawn/kit.mjs"
 type: "code"
-community: "Pen"
+community: "core.mjs"
 location: "L67"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pen
+  - community/coremjs
 ---
 
 # .noise()
@@ -15,4 +15,4 @@ tags:
 - [[k]] - `method` [EXTRACTED]
 - [[noise1()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pen
+#graphify/code #graphify/EXTRACTED #community/coremjs

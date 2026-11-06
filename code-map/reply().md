@@ -1,19 +1,18 @@
 ---
-source_file: "tests/test_pictures_first.py"
+source_file: "tests/test_ai_modes.py"
 type: "code"
-community: "write_scripts"
-location: "L515"
+community: "edit_scripts"
+location: "L26"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/write_scripts
+  - community/edit_scripts
 ---
 
 # reply()
 
 ## Connections
-- [[dot-__enter__()_1]] - `calls` [EXTRACTED]
-- [[planning_ai()]] - `calls` [EXTRACTED]
-- [[test_both_mode_pools_follow_reply_position()]] - `indirect_call` [INFERRED]
+- [[claude()]] - `calls` [EXTRACTED]
+- [[fake_providers()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/write_scripts
+#graphify/code #graphify/EXTRACTED #community/edit_scripts

@@ -1,12 +1,12 @@
 ---
 source_file: "drawn/lib/core.mjs"
 type: "code"
-community: "clamp"
+community: "core.mjs"
 location: "L18"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/clamp
+  - community/coremjs
 ---
 
 # eIO()
@@ -15,4 +15,4 @@ tags:
 - [[clamp()]] - `calls` [EXTRACTED]
 - [[core.mjs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/clamp
+#graphify/code #graphify/EXTRACTED #community/coremjs

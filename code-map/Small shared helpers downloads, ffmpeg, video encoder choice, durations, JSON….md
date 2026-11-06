@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/media_tools.py"
 type: "rationale"
-community: "short_render.py"
+community: "plan_rules.py"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/short_renderpy
+  - community/plan_rulespy
 ---
 
 # Small shared helpers: downloads, ffmpeg, video encoder choice, durations, JSON…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[media_tools.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/short_renderpy
+#graphify/rationale #graphify/EXTRACTED #community/plan_rulespy

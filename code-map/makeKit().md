@@ -1,12 +1,12 @@
 ---
 source_file: "drawn/kit.mjs"
 type: "code"
-community: "makeKit"
+community: "core.mjs"
 location: "L57"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/makeKit
+  - community/coremjs
 ---
 
 # makeKit()
@@ -40,6 +40,7 @@ tags:
 - [[kit.mjs]] - `contains` [EXTRACTED]
 - [[lerp()]] - `calls` [EXTRACTED]
 - [[noise1()]] - `calls` [EXTRACTED]
+- [[paintAll()]] - `calls` [EXTRACTED]
 - [[partsheet.mjs]] - `imports` [EXTRACTED]
 - [[person()_1]] - `calls` [EXTRACTED]
 - [[popS()]] - `calls` [EXTRACTED]
@@ -49,4 +50,4 @@ tags:
 - [[ss()]] - `calls` [EXTRACTED]
 - [[star4()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/makeKit
+#graphify/code #graphify/EXTRACTED #community/coremjs

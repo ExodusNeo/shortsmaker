@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/audio_mix.py"
 type: "rationale"
-community: "media_menu.py"
+community: "audio_mix.py"
 location: "L147"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/media_menupy
+  - community/audio_mixpy
 ---
 
 # One CC0 (no credit, any use) sound for `name` from Freesound's official API:…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[freesound_fetch()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/media_menupy
+#graphify/rationale #graphify/EXTRACTED #community/audio_mixpy

@@ -1,18 +1,18 @@
 ---
 source_file: "shortsmaker/review.py"
 type: "code"
-community: "finish_render"
+community: "test_first_second.py"
 location: "L166"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/finish_render
+  - community/test_first_secondpy
 ---
 
 # visual_review()
 
 ## Connections
-- [[Path_9]] - `references` [EXTRACTED]
+- [[Path_13]] - `references` [EXTRACTED]
 - [[The AI watches the finished Short as sheets of one frame per second and reports…]] - `rationale_for` [EXTRACTED]
 - [[ask_ai()]] - `calls` [EXTRACTED]
 - [[clock()]] - `calls` [EXTRACTED]
@@ -26,4 +26,4 @@ tags:
 - [[test_review_is_told_the_drawings_are_deliberate()]] - `calls` [EXTRACTED]
 - [[test_review_knows_what_dims_a_picture_on_purpose()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/finish_render
+#graphify/code #graphify/EXTRACTED #community/test_first_secondpy

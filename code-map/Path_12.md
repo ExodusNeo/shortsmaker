@@ -1,21 +1,20 @@
 ---
 source_file: ""
 type: "code"
-community: "checkpoints.py"
+community: "frame_maker"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/checkpointspy
+  - community/frame_maker
 ---
 
 # Path
 
 ## Connections
-- [[begin()]] - `references` [EXTRACTED]
-- [[context()]] - `references` [EXTRACTED]
-- [[pending()]] - `references` [EXTRACTED]
-- [[read()]] - `references` [EXTRACTED]
-- [[save_context()]] - `references` [EXTRACTED]
-- [[update()]] - `references` [EXTRACTED]
+- [[dot-__init__()_2]] - `references` [EXTRACTED]
+- [[fills_frame()]] - `references` [EXTRACTED]
+- [[frame_maker()]] - `references` [EXTRACTED]
+- [[graphic_low()]] - `references` [EXTRACTED]
+- [[thumbnail()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/checkpointspy
+#graphify/code #graphify/EXTRACTED #community/frame_maker

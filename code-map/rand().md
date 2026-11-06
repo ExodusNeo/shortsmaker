@@ -2,7 +2,7 @@
 source_file: "remotion/src/Opener3D.tsx"
 type: "code"
 community: "Opener3D.tsx"
-location: "L45"
+location: "L46"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -18,5 +18,6 @@ tags:
 - [[Place()_1]] - `calls` [EXTRACTED]
 - [[PropMesh()]] - `calls` [EXTRACTED]
 - [[Puff()]] - `calls` [EXTRACTED]
+- [[cobbles()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Opener3Dtsx

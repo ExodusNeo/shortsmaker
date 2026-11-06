@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/footage.py"
 type: "code"
-community: "film_piece"
+community: "plan_rules.py"
 location: "L228"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/film_piece
+  - community/plan_rulespy
 ---
 
 # crop_film_bytes()
@@ -17,4 +17,4 @@ tags:
 - [[footage.py]] - `contains` [EXTRACTED]
 - [[io]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/film_piece
+#graphify/code #graphify/EXTRACTED #community/plan_rulespy

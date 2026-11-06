@@ -1,13 +1,14 @@
 ---
 type: community
-members: 76
+members: 86
 ---
 
 # k
 
-**Members:** 76 nodes
+**Members:** 86 nodes
 
 ## Members
+- [[dot-arc()]] - code - drawn/kit.mjs
 - [[dot-at()_1]] - code - drawn/kit.mjs
 - [[dot-bank()]] - code - drawn/kit.mjs
 - [[dot-banknote()]] - code - drawn/kit.mjs
@@ -26,17 +27,23 @@ members: 76
 - [[dot-chicken()]] - code - drawn/kit.mjs
 - [[dot-clock()]] - code - drawn/kit.mjs
 - [[dot-cloud()]] - code - drawn/kit.mjs
+- [[dot-coin()]] - code - drawn/kit.mjs
 - [[dot-coins()]] - code - drawn/kit.mjs
 - [[dot-cow()]] - code - drawn/kit.mjs
 - [[dot-crate()]] - code - drawn/kit.mjs
+- [[dot-cup()]] - code - drawn/kit.mjs
 - [[dot-disc()]] - code - drawn/kit.mjs
 - [[dot-dog()]] - code - drawn/kit.mjs
 - [[dot-door()]] - code - drawn/kit.mjs
 - [[dot-dot()_1]] - code - drawn/kit.mjs
+- [[dot-dust()]] - code - drawn/kit.mjs
+- [[dot-exclaim()]] - code - drawn/kit.mjs
 - [[dot-factory()]] - code - drawn/kit.mjs
 - [[dot-fire()]] - code - drawn/kit.mjs
+- [[dot-flood()]] - code - drawn/kit.mjs
 - [[dot-frame()]] - code - drawn/kit.mjs
 - [[dot-ground()]] - code - drawn/kit.mjs
+- [[dot-hills()]] - code - drawn/kit.mjs
 - [[dot-horse()]] - code - drawn/kit.mjs
 - [[dot-house()]] - code - drawn/kit.mjs
 - [[dot-ink()]] - code - drawn/kit.mjs
@@ -49,10 +56,12 @@ members: 76
 - [[dot-outline()]] - code - drawn/kit.mjs
 - [[dot-oval()]] - code - drawn/kit.mjs
 - [[dot-paint()]] - code - drawn/kit.mjs
+- [[dot-palm()]] - code - drawn/kit.mjs
 - [[dot-paper()]] - code - drawn/kit.mjs
 - [[dot-phone()]] - code - drawn/kit.mjs
 - [[dot-pig()]] - code - drawn/kit.mjs
 - [[dot-pine()]] - code - drawn/kit.mjs
+- [[dot-question()]] - code - drawn/kit.mjs
 - [[dot-rabbit()]] - code - drawn/kit.mjs
 - [[dot-radio()]] - code - drawn/kit.mjs
 - [[dot-rain()]] - code - drawn/kit.mjs
@@ -69,9 +78,10 @@ members: 76
 - [[dot-ship()]] - code - drawn/kit.mjs
 - [[dot-shop()]] - code - drawn/kit.mjs
 - [[dot-sign()]] - code - drawn/kit.mjs
+- [[dot-sky()]] - code - drawn/kit.mjs
 - [[dot-smoke()]] - code - drawn/kit.mjs
+- [[dot-snowfall()]] - code - drawn/kit.mjs
 - [[dot-speed()]] - code - drawn/kit.mjs
-- [[dot-splash()]] - code - drawn/kit.mjs
 - [[dot-sun()]] - code - drawn/kit.mjs
 - [[dot-table()]] - code - drawn/kit.mjs
 - [[dot-tank()]] - code - drawn/kit.mjs
@@ -93,16 +103,14 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 29 edges to [[_COMMUNITY_clamp]]
-- 24 edges to [[_COMMUNITY_makeKit]]
-- 10 edges to [[_COMMUNITY_popS]]
-- 6 edges to [[_COMMUNITY_Pen]]
-- 3 edges to [[_COMMUNITY_core.mjs]]
+- 51 edges to [[_COMMUNITY_core.mjs]]
+- 5 edges to [[_COMMUNITY_bean.mjs]]
+- 3 edges to [[_COMMUNITY_textures.mjs]]
 - 1 edge to [[_COMMUNITY_kit.mjs]]
 
 ## Top bridge nodes
-- [[k]] - degree 100, connects to 5 communities
-- [[ellPts()]] - degree 30, connects to 4 communities
-- [[dot-paint()]] - degree 51, connects to 3 communities
-- [[dot-at()_1]] - degree 16, connects to 3 communities
-- [[dot-ring()_1]] - degree 23, connects to 2 communities
+- [[ellPts()]] - degree 30, connects to 3 communities
+- [[k]] - degree 100, connects to 2 communities
+- [[dot-paint()]] - degree 51, connects to 1 community
+- [[dot-ring()_1]] - degree 23, connects to 1 community
+- [[dot-rect()]] - degree 20, connects to 1 community

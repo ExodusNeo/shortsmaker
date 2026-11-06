@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/blender_render.py"
 type: "rationale"
-community: "BlenderFailed"
+community: "test_blender_render.py"
 location: "L19"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/BlenderFailed
+  - community/test_blender_renderpy
 ---
 
 # Blender couldn't draw the Short (missing, crashed or timed out twice).
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[BlenderFailed]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/BlenderFailed
+#graphify/rationale #graphify/EXTRACTED #community/test_blender_renderpy

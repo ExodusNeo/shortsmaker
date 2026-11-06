@@ -1,12 +1,12 @@
 ---
 source_file: "drawn/kit.mjs"
 type: "code"
-community: "k"
-location: "L648"
+community: "core.mjs"
+location: "L669"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/k
+  - community/coremjs
 ---
 
 # .splash()
@@ -16,4 +16,4 @@ tags:
 - [[ellPts()]] - `calls` [EXTRACTED]
 - [[k]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/k
+#graphify/code #graphify/EXTRACTED #community/coremjs

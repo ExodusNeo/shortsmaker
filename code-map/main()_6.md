@@ -1,12 +1,12 @@
 ---
 source_file: "tests/render_opener_preview.py"
 type: "code"
-community: "test_full_scenes.py"
+community: "code_custom_scenes"
 location: "L10"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_full_scenespy
+  - community/code_custom_scenes
 ---
 
 # main()
@@ -17,4 +17,4 @@ tags:
 - [[render_opener_preview.py]] - `contains` [EXTRACTED]
 - [[tsc_check()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_full_scenespy
+#graphify/code #graphify/EXTRACTED #community/code_custom_scenes

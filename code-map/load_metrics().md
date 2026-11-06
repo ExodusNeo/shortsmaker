@@ -12,7 +12,7 @@ tags:
 # load_metrics()
 
 ## Connections
-- [[Path_23]] - `references` [EXTRACTED]
+- [[Path_24]] - `references` [EXTRACTED]
 - [[analyze()]] - `calls` [EXTRACTED]
 - [[edit_metrics()]] - `calls` [EXTRACTED]
 - [[json]] - `calls` [EXTRACTED]

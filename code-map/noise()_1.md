@@ -16,8 +16,8 @@ tags:
 - [[Riso.tsx]] - `imports` [EXTRACTED]
 - [[Silent()]] - `calls` [EXTRACTED]
 - [[Silent.tsx]] - `imports` [EXTRACTED]
-- [[draw()_3]] - `calls` [EXTRACTED]
-- [[draw()_5]] - `calls` [EXTRACTED]
+- [[draw()_4]] - `calls` [EXTRACTED]
+- [[draw()_6]] - `calls` [EXTRACTED]
 - [[kit.ts]] - `contains` [EXTRACTED]
 - [[style.test.ts]] - `imports` [EXTRACTED]
 

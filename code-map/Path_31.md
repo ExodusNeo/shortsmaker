@@ -1,18 +1,20 @@
 ---
 source_file: ""
 type: "code"
-community: "media_menu.py"
+community: "audio_mix.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/media_menupy
+  - community/audio_mixpy
 ---
 
 # Path
 
 ## Connections
-- [[audition_audio()]] - `references` [EXTRACTED]
-- [[download_audio_choices()]] - `references` [EXTRACTED]
-- [[review_audio_files()]] - `references` [EXTRACTED]
+- [[captions()_1]] - `references` [EXTRACTED]
+- [[music_gain()]] - `references` [EXTRACTED]
+- [[speak()]] - `references` [EXTRACTED]
+- [[story_sound()]] - `references` [EXTRACTED]
+- [[tts()_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/media_menupy
+#graphify/code #graphify/EXTRACTED #community/audio_mixpy

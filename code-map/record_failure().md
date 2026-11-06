@@ -1,23 +1,23 @@
 ---
 source_file: "shortsmaker/cli.py"
 type: "code"
-community: "checkpoints.py"
+community: "resume_runs"
 location: "L116"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/checkpointspy
+  - community/resume_runs
 ---
 
 # record_failure()
 
 ## Connections
 - [[Exception_1]] - `references` [EXTRACTED]
-- [[Path_13]] - `references` [EXTRACTED]
+- [[Path_11]] - `references` [EXTRACTED]
 - [[cli.py]] - `contains` [EXTRACTED]
-- [[main()_4]] - `calls` [EXTRACTED]
+- [[main()_1]] - `calls` [EXTRACTED]
 - [[read()]] - `calls` [EXTRACTED]
 - [[resume_runs()]] - `calls` [EXTRACTED]
 - [[update()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/checkpointspy
+#graphify/code #graphify/EXTRACTED #community/resume_runs

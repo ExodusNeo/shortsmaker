@@ -24,7 +24,7 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 3 edges to [[_COMMUNITY_pathlib]]
-- 1 edge to [[_COMMUNITY_fake_ai]]
+- 1 edge to [[_COMMUNITY_test_pictures_first.py]]
 - 1 edge to [[_COMMUNITY_re]]
 
 ## Top bridge nodes

@@ -1,12 +1,12 @@
 ---
 source_file: "drawn/run.mjs"
 type: "code"
-community: "kit.mjs"
+community: "core.mjs"
 location: "L25"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/kitmjs
+  - community/coremjs
 ---
 
 # shots
@@ -16,4 +16,4 @@ tags:
 - [[makeKit()]] - `calls` [EXTRACTED]
 - [[run.mjs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/kitmjs
+#graphify/code #graphify/EXTRACTED #community/coremjs

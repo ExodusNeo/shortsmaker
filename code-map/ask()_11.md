@@ -12,7 +12,7 @@ tags:
 # ask()
 
 ## Connections
-- [[plan_with()_1]] - `indirect_call` [INFERRED]
+- [[plan_with()]] - `indirect_call` [INFERRED]
 - [[test_fact_check_sees_new_graphics()]] - `indirect_call` [INFERRED]
 
 #graphify/code #graphify/INFERRED #community/test_stylepy

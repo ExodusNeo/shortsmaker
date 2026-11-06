@@ -1,20 +1,20 @@
 ---
 source_file: "shortsmaker/image_sources.py"
 type: "code"
-community: "footage.py"
+community: "fetch"
 location: "L214"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/footagepy
+  - community/fetch
 ---
 
 # nasa_search()
 
 ## Connections
-- [[fetch()]] - `calls` [EXTRACTED]
+- [[fetch()_1]] - `calls` [EXTRACTED]
 - [[image_sources.py]] - `contains` [EXTRACTED]
 - [[nasa_films()]] - `calls` [EXTRACTED]
 - [[nasa_images()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/footagepy
+#graphify/code #graphify/EXTRACTED #community/fetch

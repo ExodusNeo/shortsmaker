@@ -1,12 +1,12 @@
 ---
 source_file: "drawn/lib/core.mjs"
 type: "code"
-community: "core.mjs"
+community: "textures.mjs"
 location: "L74"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/coremjs
+  - community/texturesmjs
 ---
 
 # ellipse()
@@ -20,4 +20,4 @@ tags:
 - [[sun()]] - `calls` [EXTRACTED]
 - [[textures.mjs]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/coremjs
+#graphify/code #graphify/EXTRACTED #community/texturesmjs

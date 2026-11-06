@@ -1,20 +1,21 @@
 ---
 source_file: ""
 type: "code"
-community: "edit_project.py"
+community: "resume_runs"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/edit_projectpy
+  - community/resume_runs
 ---
 
 # Path
 
 ## Connections
-- [[caption_layer()]] - `references` [EXTRACTED]
-- [[make()_1]] - `references` [EXTRACTED]
-- [[master_gain()]] - `references` [EXTRACTED]
-- [[project_xml()]] - `references` [EXTRACTED]
-- [[remove()]] - `references` [EXTRACTED]
+- [[begin()]] - `references` [EXTRACTED]
+- [[context()]] - `references` [EXTRACTED]
+- [[pending()]] - `references` [EXTRACTED]
+- [[read()]] - `references` [EXTRACTED]
+- [[save_context()]] - `references` [EXTRACTED]
+- [[update()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/edit_projectpy
+#graphify/code #graphify/EXTRACTED #community/resume_runs

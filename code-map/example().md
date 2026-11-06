@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[The manual's placer JSON, with the painter's cut-out added (the crew merges…]] - `rationale_for` [EXTRACTED]
-- [[look()_1]] - `calls` [EXTRACTED]
+- [[look()]] - `calls` [EXTRACTED]
 - [[test_a_cabin_has_its_own_door()]] - `calls` [EXTRACTED]
 - [[test_bad_parts_go_back()]] - `calls` [EXTRACTED]
 - [[test_example_is_clean_and_the_knocker_stands_on_the_door()]] - `calls` [EXTRACTED]

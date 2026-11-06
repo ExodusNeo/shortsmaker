@@ -2,7 +2,7 @@
 source_file: "remotion/src/Opener3D.tsx"
 type: "code"
 community: "Opener3D.tsx"
-location: "L44"
+location: "L45"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,6 +12,7 @@ tags:
 # clamp()
 
 ## Connections
+- [[Card()]] - `calls` [EXTRACTED]
 - [[Opener3D.tsx]] - `contains` [EXTRACTED]
 - [[PropMesh()]] - `calls` [EXTRACTED]
 - [[framing()]] - `calls` [EXTRACTED]

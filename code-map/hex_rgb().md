@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[config.py]] - `contains` [EXTRACTED]
-- [[luminance()_1]] - `calls` [EXTRACTED]
+- [[luminance()]] - `calls` [EXTRACTED]
 - [[make_paper()]] - `calls` [EXTRACTED]
 - [[remotion_render.py]] - `imports` [EXTRACTED]
 - [[render()]] - `calls` [EXTRACTED]

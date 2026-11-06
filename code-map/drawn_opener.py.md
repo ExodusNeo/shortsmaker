@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/drawn_opener.py"
 type: "code"
-community: "drawn_opener.py"
+community: "short_render.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/drawn_openerpy
+  - community/short_renderpy
 ---
 
 # drawn_opener.py
@@ -39,6 +39,7 @@ tags:
 - [[sheet_times()]] - `contains` [EXTRACTED]
 - [[short_render.py]] - `imports_from` [EXTRACTED]
 - [[shutil]] - `imports` [EXTRACTED]
+- [[spoils()]] - `contains` [EXTRACTED]
 - [[staged()]] - `contains` [EXTRACTED]
 - [[subprocess]] - `imports` [EXTRACTED]
 - [[test_drawn_opener.py]] - `imports_from` [EXTRACTED]
@@ -47,6 +48,6 @@ tags:
 - [[test_opening_rules.py]] - `imports_from` [EXTRACTED]
 - [[test_reliability.py]] - `imports_from` [EXTRACTED]
 - [[time]] - `imports` [EXTRACTED]
-- [[write()_1]] - `contains` [EXTRACTED]
+- [[write()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/drawn_openerpy
+#graphify/code #graphify/EXTRACTED #community/short_renderpy

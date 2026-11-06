@@ -1,18 +1,18 @@
 ---
 source_file: "shortsmaker/edit_project.py"
 type: "code"
-community: "edit_project.py"
+community: "make"
 location: "L33"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/edit_projectpy
+  - community/make
 ---
 
 # project_xml()
 
 ## Connections
-- [[Path_10]] - `references` [EXTRACTED]
+- [[Path_8]] - `references` [EXTRACTED]
 - [[The video tracks bottom-up (pictures, then graphics drawn over them), each cut…]] - `rationale_for` [EXTRACTED]
 - [[chain()]] - `contains` [EXTRACTED]
 - [[clock()_1]] - `contains` [EXTRACTED]
@@ -21,4 +21,4 @@ tags:
 - [[prop()]] - `contains` [EXTRACTED]
 - [[re]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/edit_projectpy
+#graphify/code #graphify/EXTRACTED #community/make

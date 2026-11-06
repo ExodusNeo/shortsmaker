@@ -2,7 +2,7 @@
 source_file: "tests/test_pictures_first.py"
 type: "code"
 community: "gather_pool"
-location: "L60"
+location: "L222"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -13,6 +13,6 @@ tags:
 
 ## Connections
 - [[owner()_1]] - `calls` [EXTRACTED]
-- [[stubbed]] - `method` [EXTRACTED]
+- [[planning]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/gather_pool

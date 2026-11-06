@@ -1,18 +1,20 @@
 ---
 source_file: ""
 type: "code"
-community: "retention.py"
+community: "invent_component"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/retentionpy
+  - community/invent_component
 ---
 
 # Path
 
 ## Connections
-- [[analyze()]] - `references` [EXTRACTED]
-- [[edit_metrics()]] - `references` [EXTRACTED]
-- [[load_metrics()]] - `references` [EXTRACTED]
+- [[approve_candidate()]] - `references` [EXTRACTED]
+- [[invent_component()]] - `references` [EXTRACTED]
+- [[invent_styles()]] - `references` [EXTRACTED]
+- [[reject_candidate()]] - `references` [EXTRACTED]
+- [[save_candidate()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/retentionpy
+#graphify/code #graphify/EXTRACTED #community/invent_component

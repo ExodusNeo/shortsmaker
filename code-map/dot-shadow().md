@@ -1,12 +1,12 @@
 ---
 source_file: "drawn/kit.mjs"
 type: "code"
-community: "clamp"
+community: "core.mjs"
 location: "L162"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/clamp
+  - community/coremjs
 ---
 
 # .shadow()
@@ -17,4 +17,4 @@ tags:
 - [[k]] - `method` [EXTRACTED]
 - [[makeKit()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/clamp
+#graphify/code #graphify/EXTRACTED #community/coremjs

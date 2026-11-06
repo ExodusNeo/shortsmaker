@@ -1,17 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: "hashlib"
+community: "media_menu.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/hashlib
+  - community/media_menupy
 ---
 
 # Path
 
 ## Connections
-- [[load()_1]] - `references` [EXTRACTED]
-- [[save()_1]] - `references` [EXTRACTED]
+- [[audition_audio()]] - `references` [EXTRACTED]
+- [[download_audio_choices()]] - `references` [EXTRACTED]
+- [[review_audio_files()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/hashlib
+#graphify/code #graphify/EXTRACTED #community/media_menupy

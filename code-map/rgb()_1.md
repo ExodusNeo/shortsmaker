@@ -13,6 +13,6 @@ tags:
 
 ## Connections
 - [[Riso.tsx]] - `contains` [EXTRACTED]
-- [[draw()_5]] - `calls` [EXTRACTED]
+- [[draw()_6]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Halftonetsx

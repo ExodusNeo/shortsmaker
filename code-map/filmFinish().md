@@ -1,12 +1,12 @@
 ---
 source_file: "drawn/lib/textures.mjs"
 type: "code"
-community: "core.mjs"
+community: "textures.mjs"
 location: "L81"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/coremjs
+  - community/texturesmjs
 ---
 
 # filmFinish()
@@ -18,4 +18,4 @@ tags:
 - [[setup()_1]] - `calls` [EXTRACTED]
 - [[textures.mjs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/coremjs
+#graphify/code #graphify/EXTRACTED #community/texturesmjs

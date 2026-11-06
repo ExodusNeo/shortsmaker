@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "re"
+community: "run_draft"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/re
+  - community/run_draft
 ---
 
 # Path
 
 ## Connections
-- [[mark_details()]] - `references` [EXTRACTED]
+- [[draft_rules()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/re
+#graphify/code #graphify/EXTRACTED #community/run_draft

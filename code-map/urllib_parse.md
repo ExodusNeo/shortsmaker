@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "test_topic_ideas.py"
+community: "plan_rules.py"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/test_topic_ideaspy
+  - community/plan_rulespy
 ---
 
 # urllib_parse
@@ -20,4 +20,4 @@ tags:
 - [[topic_ideas.py]] - `imports` [EXTRACTED]
 - [[writing.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/test_topic_ideaspy
+#graphify/concept #graphify/EXTRACTED #community/plan_rulespy

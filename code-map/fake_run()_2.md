@@ -1,17 +1,17 @@
 ---
-source_file: "tests/test_full_scenes.py"
+source_file: "tests/test_package.py"
 type: "code"
-community: "local_clips"
-location: "L781"
+community: "ask_ai"
+location: "L143"
 tags:
   - graphify/code
-  - graphify/INFERRED
-  - community/local_clips
+  - graphify/EXTRACTED
+  - community/ask_ai
 ---
 
 # fake_run()
 
 ## Connections
-- [[test_local_job_retries_a_hard_crash()]] - `indirect_call` [INFERRED]
+- [[test_gemini_timeout_switches_to_flash()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/local_clips
+#graphify/code #graphify/EXTRACTED #community/ask_ai

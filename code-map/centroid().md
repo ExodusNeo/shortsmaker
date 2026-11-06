@@ -1,12 +1,12 @@
 ---
 source_file: "drawn/lib/core.mjs"
 type: "code"
-community: "Pen"
+community: "core.mjs"
 location: "L30"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pen
+  - community/coremjs
 ---
 
 # centroid()
@@ -16,4 +16,4 @@ tags:
 - [[core.mjs]] - `contains` [EXTRACTED]
 - [[pen.mjs]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pen
+#graphify/code #graphify/EXTRACTED #community/coremjs

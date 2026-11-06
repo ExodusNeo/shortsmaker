@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/review.py"
 type: "rationale"
-community: "finish_render"
+community: "test_first_second.py"
 location: "L168"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/finish_render
+  - community/test_first_secondpy
 ---
 
 # The AI watches the finished Short as sheets of one frame per second and reports…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[visual_review()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/finish_render
+#graphify/rationale #graphify/EXTRACTED #community/test_first_secondpy

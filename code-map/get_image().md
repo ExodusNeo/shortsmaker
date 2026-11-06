@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/image_sources.py"
 type: "code"
-community: "footage.py"
+community: "fetch"
 location: "L147"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/footagepy
+  - community/fetch
 ---
 
 # get_image()
@@ -15,11 +15,11 @@ tags:
 - [[Wikimedia files via wm_get() (contact User-Agent, spacing, cache), Openverse…]] - `rationale_for` [EXTRACTED]
 - [[download_picture()]] - `calls` [EXTRACTED]
 - [[drawn_thumbnail()]] - `calls` [EXTRACTED]
-- [[fetch()]] - `calls` [EXTRACTED]
+- [[fetch()_1]] - `calls` [EXTRACTED]
 - [[full_pictures()]] - `calls` [EXTRACTED]
 - [[image_sources.py]] - `contains` [EXTRACTED]
 - [[ov_get()]] - `calls` [EXTRACTED]
 - [[pool_pictures()]] - `calls` [EXTRACTED]
 - [[wm_get()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/footagepy
+#graphify/code #graphify/EXTRACTED #community/fetch

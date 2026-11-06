@@ -2,7 +2,7 @@
 source_file: "shortsmaker/short_render.py"
 type: "code"
 community: "render"
-location: "L145"
+location: "L148"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[On `opener animated` channels, a reveal scene (motion.is_payoff) planned as a…]] - `rationale_for` [EXTRACTED]
-- [[Path_18]] - `references` [EXTRACTED]
+- [[Path_17]] - `references` [EXTRACTED]
 - [[ffmpeg()]] - `calls` [EXTRACTED]
 - [[is_payoff()]] - `calls` [EXTRACTED]
 - [[make_opener()]] - `calls` [EXTRACTED]

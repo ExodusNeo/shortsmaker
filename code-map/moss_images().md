@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/gpu.py"
 type: "code"
-community: "gpu.py"
+community: "plan_rules.py"
 location: "L304"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/gpupy
+  - community/plan_rulespy
 ---
 
 # moss_images()
@@ -26,4 +26,4 @@ tags:
 - [[subprocess]] - `calls` [EXTRACTED]
 - [[time]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/gpupy
+#graphify/code #graphify/EXTRACTED #community/plan_rulespy

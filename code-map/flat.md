@@ -2,7 +2,7 @@
 source_file: "drawn/cutouts.mjs"
 type: "code"
 community: "kit.mjs"
-location: "L13"
+location: "L22"
 tags:
   - graphify/code
   - graphify/EXTRACTED

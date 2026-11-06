@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[Riso.tsx]] - `contains` [EXTRACTED]
-- [[draw()_5]] - `calls` [EXTRACTED]
+- [[draw()_6]] - `calls` [EXTRACTED]
 - [[styleindex.ts]] - `indirect_call` [INFERRED]
 - [[useOnceCanvas()]] - `calls` [EXTRACTED]
 

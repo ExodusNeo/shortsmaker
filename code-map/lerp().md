@@ -1,12 +1,12 @@
 ---
 source_file: "drawn/lib/core.mjs"
 type: "code"
-community: "clamp"
+community: "core.mjs"
 location: "L8"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/clamp
+  - community/coremjs
 ---
 
 # lerp()
@@ -33,4 +33,4 @@ tags:
 - [[taper()]] - `calls` [EXTRACTED]
 - [[textures.mjs]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/clamp
+#graphify/code #graphify/EXTRACTED #community/coremjs

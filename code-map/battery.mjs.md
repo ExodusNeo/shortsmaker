@@ -12,7 +12,7 @@ tags:
 # battery.mjs
 
 ## Connections
-- [[draw()]] - `contains` [EXTRACTED]
+- [[draw()_1]] - `contains` [EXTRACTED]
 - [[grip]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/batterymjs

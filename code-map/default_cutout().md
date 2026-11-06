@@ -2,7 +2,7 @@
 source_file: "shortsmaker/opener_crew.py"
 type: "code"
 community: "opener_crew.py"
-location: "L314"
+location: "L325"
 tags:
   - graphify/code
   - graphify/EXTRACTED

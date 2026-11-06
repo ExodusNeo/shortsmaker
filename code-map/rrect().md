@@ -1,12 +1,12 @@
 ---
 source_file: "drawn/lib/core.mjs"
 type: "code"
-community: "makeKit"
+community: "bean.mjs"
 location: "L32"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/makeKit
+  - community/beanmjs
 ---
 
 # rrect()
@@ -21,4 +21,4 @@ tags:
 - [[person()_1]] - `calls` [EXTRACTED]
 - [[rad()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/makeKit
+#graphify/code #graphify/EXTRACTED #community/beanmjs

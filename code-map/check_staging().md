@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/opener_crew.py"
 type: "code"
-community: "test_opener_crew.py"
-location: "L91"
+community: "opener_crew.py"
+location: "L95"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_opener_crewpy
+  - community/opener_crewpy
 ---
 
 # check_staging()
@@ -24,4 +24,4 @@ tags:
 - [[test_a_painter_with_unusable_code_gets_the_plain_kit_cutout()]] - `calls` [EXTRACTED]
 - [[test_staging_is_checked_against_the_kit()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_opener_crewpy
+#graphify/code #graphify/EXTRACTED #community/opener_crewpy

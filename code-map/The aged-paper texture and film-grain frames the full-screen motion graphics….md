@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/remotion_render.py"
 type: "rationale"
-community: "short_render.py"
+community: "make_paper"
 location: "L138"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/short_renderpy
+  - community/make_paper
 ---
 
 # The aged-paper texture and film-grain frames the full-screen motion graphics…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[make_paper()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/short_renderpy
+#graphify/rationale #graphify/EXTRACTED #community/make_paper

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/opening_rules.py"
 type: "code"
-community: "json"
+community: "finish_render"
 location: "L20"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/json
+  - community/finish_render
 ---
 
 # opening_brief()
@@ -26,4 +26,4 @@ tags:
 - [[redraw_custom()]] - `calls` [EXTRACTED]
 - [[review()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/json
+#graphify/code #graphify/EXTRACTED #community/finish_render

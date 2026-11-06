@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[Mike the Headless Chicken, fix round 3 the LTX worker died without writing…]] - `rationale_for` [EXTRACTED]
-- [[fake_run()_2]] - `indirect_call` [INFERRED]
+- [[fake_run()]] - `indirect_call` [INFERRED]
 - [[local_job()]] - `calls` [EXTRACTED]
 - [[test_full_scenes.py]] - `contains` [EXTRACTED]
 

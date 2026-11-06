@@ -12,7 +12,7 @@ tags:
 # telegraph_sounder.mjs
 
 ## Connections
-- [[draw()_1]] - `contains` [EXTRACTED]
+- [[draw()_2]] - `contains` [EXTRACTED]
 - [[grip_1]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/telegraph_soundermjs

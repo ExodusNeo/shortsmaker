@@ -39,7 +39,7 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 2 edges to [[_COMMUNITY_pathlib]]
-- 1 edge to [[_COMMUNITY_drawn_opener.py]]
+- 1 edge to [[_COMMUNITY_review]]
 
 ## Top bridge nodes
 - [[OpeningRulesTests]] - degree 15, connects to 1 community

@@ -2,7 +2,7 @@
 source_file: "shortsmaker/drawn_opener.py"
 type: "rationale"
 community: "opener_crew.py"
-location: "L133"
+location: "L134"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/seo.py"
 type: "rationale"
-community: "footage.py"
+community: "json"
 location: "L12"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/footagepy
+  - community/json
 ---
 
 # YouTube query predictions (not search volumes or a popularity ranking).
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[search_suggestions()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/footagepy
+#graphify/rationale #graphify/EXTRACTED #community/json

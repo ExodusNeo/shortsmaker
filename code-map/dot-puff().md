@@ -1,12 +1,12 @@
 ---
 source_file: "drawn/kit.mjs"
 type: "code"
-community: "clamp"
-location: "L644"
+community: "core.mjs"
+location: "L665"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/clamp
+  - community/coremjs
 ---
 
 # .puff()
@@ -16,4 +16,4 @@ tags:
 - [[ellPts()]] - `calls` [EXTRACTED]
 - [[k]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/clamp
+#graphify/code #graphify/EXTRACTED #community/coremjs

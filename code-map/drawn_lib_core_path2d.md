@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "Pen"
+community: "core.mjs"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Pen
+  - community/coremjs
 ---
 
 # drawn_lib_core_path2d
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[pen.mjs]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Pen
+#graphify/concept #graphify/EXTRACTED #community/coremjs

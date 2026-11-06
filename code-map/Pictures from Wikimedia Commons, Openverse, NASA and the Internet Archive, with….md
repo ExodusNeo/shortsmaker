@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/image_sources.py"
 type: "rationale"
-community: "short_render.py"
+community: "plan_rules.py"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/short_renderpy
+  - community/plan_rulespy
 ---
 
 # Pictures from Wikimedia Commons, Openverse, NASA and the Internet Archive, with…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[image_sources.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/short_renderpy
+#graphify/rationale #graphify/EXTRACTED #community/plan_rulespy

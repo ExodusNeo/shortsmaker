@@ -2,7 +2,7 @@
 source_file: "shortsmaker/drawn_opener.py"
 type: "code"
 community: "render"
-location: "L148"
+location: "L149"
 tags:
   - graphify/code
   - graphify/EXTRACTED

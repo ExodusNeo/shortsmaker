@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/image_sources.py"
 type: "rationale"
-community: "footage.py"
+community: "fetch"
 location: "L148"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/footagepy
+  - community/fetch
 ---
 
 # Wikimedia files via wm_get() (contact User-Agent, spacing, cache), Openverse…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[get_image()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/footagepy
+#graphify/rationale #graphify/EXTRACTED #community/fetch

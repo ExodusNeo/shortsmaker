@@ -1,12 +1,12 @@
 ---
 source_file: "drawn/lib/core.mjs"
 type: "code"
-community: "clamp"
+community: "core.mjs"
 location: "L7"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/clamp
+  - community/coremjs
 ---
 
 # clamp()
@@ -48,4 +48,4 @@ tags:
 - [[smooth()]] - `calls` [EXTRACTED]
 - [[ss()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/clamp
+#graphify/code #graphify/EXTRACTED #community/coremjs

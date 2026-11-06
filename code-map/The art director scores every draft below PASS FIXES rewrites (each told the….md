@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_drawn_opener.py"
 type: "rationale"
-community: "short"
+community: "test_drawn_opener.py"
 location: "L83"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/short
+  - community/test_drawn_openerpy
 ---
 
 # The art director scores every draft below PASS: FIXES rewrites (each told the…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[test_drawn_opener_gives_up_after_fixes()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/short
+#graphify/rationale #graphify/EXTRACTED #community/test_drawn_openerpy

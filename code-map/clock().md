@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/media_tools.py"
 type: "code"
-community: "finish_render"
+community: "test_first_second.py"
 location: "L43"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/finish_render
+  - community/test_first_secondpy
 ---
 
 # clock()
@@ -25,4 +25,4 @@ tags:
 - [[storyboard()]] - `calls` [EXTRACTED]
 - [[visual_review()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/finish_render
+#graphify/code #graphify/EXTRACTED #community/test_first_secondpy

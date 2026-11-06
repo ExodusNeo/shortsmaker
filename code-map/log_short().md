@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/logbook.py"
 type: "code"
-community: "log_short"
+community: "test_story.py"
 location: "L25"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/log_short
+  - community/test_storypy
 ---
 
 # log_short()
@@ -21,4 +21,4 @@ tags:
 - [[logbook.py]] - `contains` [EXTRACTED]
 - [[test_logbook_hook_line_is_the_whole_first_sentence()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/log_short
+#graphify/code #graphify/EXTRACTED #community/test_storypy

@@ -1,18 +1,24 @@
 ---
-source_file: "shortsmaker/config.py"
+source_file: "remotion/src/style/kit.ts"
 type: "code"
-community: "short_render.py"
-location: "L74"
+community: "Halftone.tsx"
+location: "L43"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/short_renderpy
+  - community/Halftonetsx
 ---
 
 # luminance()
 
 ## Connections
-- [[config.py]] - `contains` [EXTRACTED]
-- [[hex_rgb()]] - `calls` [EXTRACTED]
+- [[Engraving.tsx]] - `imports` [EXTRACTED]
+- [[Halftone.tsx]] - `imports` [EXTRACTED]
+- [[Riso.tsx]] - `imports` [EXTRACTED]
+- [[draw()_3]] - `calls` [EXTRACTED]
+- [[draw()_4]] - `calls` [EXTRACTED]
+- [[draw()_6]] - `calls` [EXTRACTED]
+- [[drawCover()]] - `calls` [EXTRACTED]
+- [[kit.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/short_renderpy
+#graphify/code #graphify/EXTRACTED #community/Halftonetsx

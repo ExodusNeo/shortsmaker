@@ -1,12 +1,12 @@
 ---
 source_file: "drawn/lib/rigs/bean.mjs"
 type: "code"
-community: "makeKit"
-location: "L101"
+community: "bean.mjs"
+location: "L108"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/makeKit
+  - community/beanmjs
 ---
 
 # flagCloth()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[bean.mjs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/makeKit
+#graphify/code #graphify/EXTRACTED #community/beanmjs

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/opener3d.py"
 type: "rationale"
-community: "drawn_opener.py"
-location: "L39"
+community: "short_render.py"
+location: "L40"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/drawn_openerpy
+  - community/short_renderpy
 ---
 
 # Why a 3D opener can't be made on this PC, or None.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[available()_1]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/drawn_openerpy
+#graphify/rationale #graphify/EXTRACTED #community/short_renderpy

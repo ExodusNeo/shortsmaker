@@ -8,7 +8,7 @@ members: 3
 **Members:** 3 nodes
 
 ## Members
-- [[draw()_1]] - code - drawn/parts/thing/telegraph_sounder.mjs
+- [[draw()_2]] - code - drawn/parts/thing/telegraph_sounder.mjs
 - [[grip_1]] - code - drawn/parts/thing/telegraph_sounder.mjs
 - [[telegraph_sounder.mjs]] - code - drawn/parts/thing/telegraph_sounder.mjs
 

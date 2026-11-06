@@ -1,12 +1,12 @@
 ---
 source_file: "drawn/lib/pen.mjs"
 type: "code"
-community: "Pen"
+community: "core.mjs"
 location: "L106"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pen
+  - community/coremjs
 ---
 
 # .poly()
@@ -16,4 +16,4 @@ tags:
 - [[Pen]] - `method` [EXTRACTED]
 - [[makeKit()]] - `calls` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/Pen
+#graphify/code #graphify/EXTRACTED #community/coremjs

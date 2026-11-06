@@ -1,17 +1,17 @@
 ---
-source_file: "drawn/parts/thing/telegraph_sounder.mjs"
+source_file: "drawn/parts/thing/battery.mjs"
 type: "code"
-community: "telegraph_sounder.mjs"
-location: "L2"
+community: "battery.mjs"
+location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/telegraph_soundermjs
+  - community/batterymjs
 ---
 
 # draw()
 
 ## Connections
-- [[telegraph_sounder.mjs]] - `contains` [EXTRACTED]
+- [[battery.mjs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/telegraph_soundermjs
+#graphify/code #graphify/EXTRACTED #community/batterymjs

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/writing.py"
 type: "code"
-community: "finish_render"
+community: "test_first_second.py"
 location: "L35"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/finish_render
+  - community/test_first_secondpy
 ---
 
 # max_seconds()
@@ -16,4 +16,4 @@ tags:
 - [[quality_check()]] - `calls` [EXTRACTED]
 - [[writing.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/finish_render
+#graphify/code #graphify/EXTRACTED #community/test_first_secondpy

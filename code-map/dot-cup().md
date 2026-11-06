@@ -1,12 +1,12 @@
 ---
 source_file: "drawn/kit.mjs"
 type: "code"
-community: "makeKit"
-location: "L523"
+community: "k"
+location: "L544"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/makeKit
+  - community/k
 ---
 
 # .cup()
@@ -17,4 +17,4 @@ tags:
 - [[k]] - `method` [EXTRACTED]
 - [[makeKit()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/makeKit
+#graphify/code #graphify/EXTRACTED #community/k

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/review.py"
 type: "code"
-community: "clean_full"
+community: "test_first_second.py"
 location: "L220"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/clean_full
+  - community/test_first_secondpy
 ---
 
 # review_fixes()
@@ -19,4 +19,4 @@ tags:
 - [[test_review_fix_kinds()]] - `calls` [EXTRACTED]
 - [[visual_review()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/clean_full
+#graphify/code #graphify/EXTRACTED #community/test_first_secondpy

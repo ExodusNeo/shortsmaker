@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/checkpoints.py"
 type: "rationale"
-community: "checkpoints.py"
+community: "resume_runs"
 location: "L88"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/checkpointspy
+  - community/resume_runs
 ---
 
 # Topics of this channel's unfinished Shorts: not in done_topics yet, but already…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[pending_topics()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/checkpointspy
+#graphify/rationale #graphify/EXTRACTED #community/resume_runs

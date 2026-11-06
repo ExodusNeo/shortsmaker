@@ -32,14 +32,14 @@ SORT file.name ASC
 ## Connections to other communities
 - 7 edges to [[_COMMUNITY_opener3d.py]]
 - 5 edges to [[_COMMUNITY_opener_crew.py]]
-- 3 edges to [[_COMMUNITY_drawn_opener.py]]
+- 3 edges to [[_COMMUNITY_test_drawn_opener.py]]
 - 3 edges to [[_COMMUNITY_re]]
 - 2 edges to [[_COMMUNITY_test_opener_crew.py]]
 - 1 edge to [[_COMMUNITY_short_render.py]]
 
 ## Top bridge nodes
 - [[lint_cutout()]] - degree 10, connects to 5 communities
+- [[missing_parts()]] - degree 8, connects to 3 communities
 - [[owner()]] - degree 6, connects to 3 communities
-- [[missing_parts()]] - degree 8, connects to 2 communities
 - [[assemble()]] - degree 7, connects to 2 communities
 - [[test_hold_counts_as_drawing_the_letter_and_scenery_stays_3d()]] - degree 3, connects to 1 community

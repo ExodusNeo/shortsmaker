@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/audio_mix.py"
 type: "rationale"
-community: "captions"
+community: "audio_mix.py"
 location: "L55"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/captions
+  - community/audio_mixpy
 ---
 
 # Caption font size: 110, smaller for a long line so it never runs off the 960 px…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[caption_size()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/captions
+#graphify/rationale #graphify/EXTRACTED #community/audio_mixpy

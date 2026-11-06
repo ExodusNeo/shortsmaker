@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/frame_render.py"
 type: "code"
-community: "short_render.py"
+community: "plan_rules.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/short_renderpy
+  - community/plan_rulespy
 ---
 
 # frame_render.py
@@ -46,4 +46,4 @@ tags:
 - [[thumbnail()]] - `contains` [EXTRACTED]
 - [[write_frames()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/short_renderpy
+#graphify/code #graphify/EXTRACTED #community/plan_rulespy

@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[One review task using the existing AI selectionquota fallback; preserve…]] - `rationale_for` [EXTRACTED]
-- [[Path_23]] - `references` [EXTRACTED]
+- [[Path_24]] - `references` [EXTRACTED]
 - [[ask_ai()]] - `calls` [EXTRACTED]
 - [[command()]] - `calls` [EXTRACTED]
 - [[json]] - `calls` [EXTRACTED]

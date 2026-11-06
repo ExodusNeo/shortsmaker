@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/footage.py"
 type: "code"
-community: "footage.py"
+community: "fetch"
 location: "L170"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/footagepy
+  - community/fetch
 ---
 
 # duke_films()
@@ -16,4 +16,4 @@ tags:
 - [[footage.py]] - `contains` [EXTRACTED]
 - [[source_enabled()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/footagepy
+#graphify/code #graphify/EXTRACTED #community/fetch

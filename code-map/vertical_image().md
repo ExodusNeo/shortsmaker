@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[Cover crop around a chosen subject, clamped to real image bounds.]] - `rationale_for` [EXTRACTED]
-- [[Image_3]] - `references` [EXTRACTED]
+- [[Image_2]] - `references` [EXTRACTED]
 - [[contact_sheets()]] - `calls` [EXTRACTED]
 - [[photo_prep.py]] - `contains` [EXTRACTED]
 - [[to_vertical()]] - `calls` [EXTRACTED]

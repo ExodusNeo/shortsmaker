@@ -1,12 +1,12 @@
 ---
 source_file: "drawn/lib/core.mjs"
 type: "code"
-community: "core.mjs"
+community: "textures.mjs"
 location: "L11"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/coremjs
+  - community/texturesmjs
 ---
 
 # hash()
@@ -20,4 +20,4 @@ tags:
 - [[pen.mjs]] - `imports` [EXTRACTED]
 - [[textures.mjs]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/coremjs
+#graphify/code #graphify/EXTRACTED #community/texturesmjs

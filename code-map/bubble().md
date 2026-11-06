@@ -1,12 +1,12 @@
 ---
 source_file: "drawn/lib/rigs/bean.mjs"
 type: "code"
-community: "makeKit"
-location: "L92"
+community: "bean.mjs"
+location: "L99"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/makeKit
+  - community/beanmjs
 ---
 
 # bubble()
@@ -15,4 +15,4 @@ tags:
 - [[bean.mjs]] - `contains` [EXTRACTED]
 - [[rrect()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/makeKit
+#graphify/code #graphify/EXTRACTED #community/beanmjs

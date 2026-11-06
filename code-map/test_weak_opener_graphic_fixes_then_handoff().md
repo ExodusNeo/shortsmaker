@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[Owner, 2026-10-30 a weak motion-graphic opener is fixed OPENER_GRAPHIC_FIXES…]] - `rationale_for` [EXTRACTED]
-- [[fake_moss()]] - `indirect_call` [INFERRED]
+- [[fake_moss()_1]] - `indirect_call` [INFERRED]
 - [[fake_pick()]] - `indirect_call` [INFERRED]
 - [[fix_opener_graphic()]] - `calls` [EXTRACTED]
 - [[fresh()]] - `calls` [EXTRACTED]

@@ -1,12 +1,12 @@
 ---
 source_file: "drawn/lib/core.mjs"
 type: "code"
-community: "popS"
+community: "core.mjs"
 location: "L20"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/popS
+  - community/coremjs
 ---
 
 # eBack()
@@ -19,4 +19,4 @@ tags:
 - [[pen.mjs]] - `imports` [EXTRACTED]
 - [[popS()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/popS
+#graphify/code #graphify/EXTRACTED #community/coremjs

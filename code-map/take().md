@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/opener_crew.py"
 type: "code"
-community: "test_opener_crew.py"
-location: "L106"
+community: "opener_crew.py"
+location: "L110"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_opener_crewpy
+  - community/opener_crewpy
 ---
 
 # take()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[check_staging()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_opener_crewpy
+#graphify/code #graphify/EXTRACTED #community/opener_crewpy

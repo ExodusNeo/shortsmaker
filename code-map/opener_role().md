@@ -2,7 +2,7 @@
 source_file: "shortsmaker/drawn_opener.py"
 type: "code"
 community: "opener_crew.py"
-location: "L153"
+location: "L154"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -19,6 +19,6 @@ tags:
 - [[place()]] - `calls` [EXTRACTED]
 - [[stage()]] - `calls` [EXTRACTED]
 - [[staged()]] - `calls` [EXTRACTED]
-- [[write()_1]] - `calls` [EXTRACTED]
+- [[write()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/opener_crewpy

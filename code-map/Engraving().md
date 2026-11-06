@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[Engraving.tsx]] - `contains` [EXTRACTED]
-- [[draw()_2]] - `calls` [EXTRACTED]
+- [[draw()_3]] - `calls` [EXTRACTED]
 - [[styleindex.ts]] - `indirect_call` [INFERRED]
 - [[useOnceCanvas()]] - `calls` [EXTRACTED]
 

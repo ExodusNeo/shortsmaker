@@ -11,6 +11,7 @@ tags:
 # Path
 
 ## Connections
-- [[to_vertical()]] - `references` [EXTRACTED]
+- [[apply()]] - `references` [EXTRACTED]
+- [[preview()]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/render

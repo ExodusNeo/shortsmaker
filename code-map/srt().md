@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[Exact-narration caption file to upload in YouTube Studio (searchable, unlike…]] - `rationale_for` [EXTRACTED]
-- [[Path_29]] - `references` [EXTRACTED]
+- [[Path_28]] - `references` [EXTRACTED]
 - [[ends_sentence()]] - `calls` [EXTRACTED]
 - [[render()]] - `calls` [EXTRACTED]
 - [[seo.py]] - `contains` [EXTRACTED]

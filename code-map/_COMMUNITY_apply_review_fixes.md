@@ -9,7 +9,7 @@ members: 18
 
 ## Members
 - [[Mike's newsstand a repaint from the unchanged prompt painted the identical…]] - rationale - tests/test_full_scenes.py
-- [[Path_34]] - code
+- [[Path_33]] - code
 - [[The automatic fixes after a render's review (up to AUTO_REPAINT_MAX scenes per…]] - rationale - shortsmaker/review.py
 - [[Togo vs Balto 4 real pictures the review rejected became paintings while ~20…]] - rationale - tests/test_full_scenes.py
 - [[_review_state()]] - code - tests/test_full_scenes.py
@@ -35,19 +35,19 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 9 edges to [[_COMMUNITY_test_full_scenes.py]]
-- 2 edges to [[_COMMUNITY_finish_render]]
-- 2 edges to [[_COMMUNITY_render]]
-- 2 edges to [[_COMMUNITY_test_first_second.py]]
-- 1 edge to [[_COMMUNITY_owner]]
-- 1 edge to [[_COMMUNITY_json]]
-- 1 edge to [[_COMMUNITY_prepare_topic]]
-- 1 edge to [[_COMMUNITY_paint_new]]
-- 1 edge to [[_COMMUNITY_pathlib]]
+- 7 edges to [[_COMMUNITY_test_full_scenes.py]]
+- 4 edges to [[_COMMUNITY_finish_render]]
+- 2 edges to [[_COMMUNITY_state]]
+- 2 edges to [[_COMMUNITY_code_custom_scenes]]
+- 1 edge to [[_COMMUNITY_fetch]]
+- 1 edge to [[_COMMUNITY_gather_pool]]
+- 1 edge to [[_COMMUNITY_clean_full]]
+- 1 edge to [[_COMMUNITY_fix_short]]
+- 1 edge to [[_COMMUNITY_plan_rules.py]]
 
 ## Top bridge nodes
-- [[apply_review_fixes()]] - degree 15, connects to 8 communities
+- [[apply_review_fixes()]] - degree 15, connects to 7 communities
 - [[test_rewrite_paint_prompts()]] - degree 5, connects to 2 communities
+- [[test_look_check_fixes_code()]] - degree 4, connects to 2 communities
 - [[ask()_6]] - degree 5, connects to 1 community
 - [[test_review_redraws_custom()]] - degree 5, connects to 1 community
-- [[test_review_uses_unused_pool_pictures_before_painting()]] - degree 5, connects to 1 community
