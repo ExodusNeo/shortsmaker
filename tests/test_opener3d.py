@@ -122,7 +122,7 @@ def test_bad_parts_go_back():
 
 def test_lint_needs_draw():
     assert opener3d.lint_cutout("export default function draw(k, f) { k.person(1, 2, 3, {}); }") == []
-    assert any("draw(k, f)" in p for p in opener3d.lint_cutout("export default function scene(k, t) {}"))
+    assert any("draw(k, f" in p for p in opener3d.lint_cutout("export default function scene(k, t) {}"))
     assert any("process" in p for p in opener3d.lint_cutout("export default function draw(k, f) { process.exit(); }"))
 
 
@@ -203,6 +203,73 @@ def test_the_preview_sees_every_shot():
     assert len(opener3d.sheet_times(4.47)) == 6
 
 
+def test_an_arm_past_the_canvas_edge_is_kept():
+    """cutouts.mjs paints with room to spare and crops round the drawing (owner, 2026-11-06: a waving arm was cut off
+    at its widest, "like an invisible wall"): nothing touches the edge, the board grows, the feet stay put."""
+    import subprocess, tempfile
+    from PIL import Image
+    with tempfile.TemporaryDirectory() as d:
+        d = Path(d)
+        (d / "wave.mjs").write_text("export default function draw(k, f, u) { k.person(150, 1080, 4, {arms: [100, 100 + 60 * u], "
+                                    "bend: [0, 0], dance: u * 2 * Math.PI}); }", encoding="utf-8")
+        job = {"out": str(d / "out"), "cutouts": [{"name": "w", "w": 300, "h": 1100, "frames": 2, "fps": 6, "module": str(d / "wave.mjs")}]}
+        (d / "job.json").write_text(json.dumps(job), encoding="utf-8")
+        r = subprocess.run(["node", str(ROOT / "drawn" / "cutouts.mjs"), str(d / "job.json")], cwd=ROOT / "drawn",
+                           capture_output=True, text=True)
+        assert r.returncode == 0, r.stderr
+        size = json.loads((d / "out" / "sizes.json").read_text())["w"]
+        assert size["wide"] > 1.5 and size["steps"] == 12, size
+        pngs = sorted((d / "out").glob("w_*.png"))
+        assert len(pngs) == 12
+        for png in pngs:
+            a = Image.open(png).getchannel("A")
+            w, h = a.size
+            for edge in (a.crop((0, 0, 1, h)), a.crop((w - 1, 0, w, h)), a.crop((0, 0, w, 1))):
+                assert edge.getextrema()[1] <= 8, png.name
+            assert a.crop((0, h - 150, w, h)).getextrema()[1] > 8  # the feet (hop + walk bounce lift them) stay near the bottom
+
+
+def test_an_animal_in_the_garden_stays_in_it():
+    """The live Pig War pig was placed in the potato patch and the furniture nudge pushed it out to the front edge."""
+    raw = {"place": "outdoors", "props": [{"type": "garden", "id": "garden", "place": {"mark": "centre"}}],
+           "cutouts": [{"name": "pig", "place": {"in": "garden"}, **PERSON}, {"name": "b", "place": {"mark": "back"}, **PERSON}],
+           "shots": [{"at": 0, "target": "pig", "shot": "wide"}, {"at": 1, "target": "pig", "shot": "close"}]}
+    stage, bad = opener3d.clean(raw, [], 2)
+    x0, x1, z0, z1 = opener3d.box_of(stage["props"][0])
+    assert not bad and x0 < stage["cutouts"][0]["at"][0] < x1 and z0 < stage["cutouts"][0]["at"][1] < z1, (bad, stage["cutouts"][0])
+    raw["cutouts"][0]["place"] = {"in": "b"}
+    assert any("in 'b'" in p for p in opener3d.clean(raw, [], 2)[1])
+
+
+def test_a_close_shot_on_people_far_apart_goes_back_to_the_placer():
+    """All three live stories (2026-11-06) opened on a 'medium' of two people at opposite sides of the set: the
+    camera backed off to fit both and they read tiny. clean() sends that back before anything renders."""
+    raw = {"place": "room", "props": [], "cutouts": [{"name": "a", "place": {"mark": "back-left"}, **PERSON},
+                                                    {"name": "b", "place": {"mark": "back-right"}, **PERSON}],
+           "shots": [{"at": 0, "target": ["a", "b"], "shot": "medium"}, {"at": 1, "target": "a", "shot": "close"}]}
+    bad = opener3d.clean(raw, [], 2)[1]
+    assert any(p.startswith("camera: the medium shot") and "a + b" in p for p in bad), bad
+    raw["cutouts"][1]["place"] = {"beside": "a", "side": "right"}
+    assert not opener3d.clean(raw, [], 2)[1]
+
+
+def test_set_dressing_keeps_clear_of_what_was_placed():
+    """opener3d.dress: edge pieces on every place, none touching a prop, a cut-out's spot or a picture on the wall."""
+    for place in opener3d.PLACES:
+        stage, bad = opener3d.clean({"place": place, "props": [], "cutouts": [{"name": "a", "place": {"mark": "centre"}, **PERSON}],
+                                     "shots": [{"at": 0, "target": "a", "shot": "wide"}, {"at": 1, "target": "a", "shot": "close"}]}, [], 2)
+        assert not bad and sum(p.get("dressing", False) for p in stage["props"]) >= 3, (place, stage["props"])
+        assert all(not p.get("id") for p in stage["props"] if p.get("dressing"))  # no shot can aim at dressing
+    # a stall the placer put where the street's stall would go: the street's own stall is left out
+    mine = {"type": "stall", "id": "mine", "at": [-3.1, -5.2], "turn": 0, "size": 1}
+    out = opener3d.dress("street", [mine], [])
+    assert all(not (p["type"] == "stall") for p in out), out
+    # someone standing by the bookcase: no bookcase; a picture on the wall: no lamp beside it
+    out = opener3d.dress("room", [{"type": "frame", "at": [-1.5, 2.4], "turn": 0, "size": 1, "wall": True}],
+                         [{"name": "b", "at": [3.0, -3.2], "height": 1.75, "aspect": .64}])
+    assert "bookcase" not in [p["type"] for p in out] and "walllamp" not in [p["type"] for p in out], out
+
+
 def look():
     """Renders the manual's example through the real path (cut-outs, Remotion) and its review sheet."""
     out = ROOT / "test_renders" / "opener3d" / "example"
@@ -210,7 +277,7 @@ def look():
     stage, bad = opener3d.clean(example(), WORDS, SECONDS)
     assert not bad, bad
     print(opener3d.render(stage, SECONDS, out) or f"wrote {out / 'opener.mp4'}")
-    print(f"wrote {opener3d.sheet(out / 'opener.mp4', SECONDS, out / 'sheet.png', stage['shots'])}")
+    print(f"wrote {opener3d.sheet(out / 'opener.mp4', SECONDS, out / 'sheet.png', stage['shots'], out / 'cutouts')}")
 
 
 if __name__ == "__main__":

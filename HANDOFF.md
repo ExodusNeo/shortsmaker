@@ -384,6 +384,48 @@ Order (owner, 2026-11-05): 3D opener -> drawn opener -> motion graphic (2 fixes)
   reviews' complaints: wide frames still a little empty, animals with no action poses (a pig can't eat), plain
   set dressing (no cobbles, timbered fronts), and stills that can't show a dance. Time per run is now mostly Gemini
   Flash's thinking per call (1-6 min, sometimes 10).
+- **Opener crew round 2** (owner, 2026-11-06: "apply" the six ideas above, plus "the stick humans ... have an
+  invisible border": at the widest point of a wave part of the arm disappeared):
+  - Invisible wall = the painter's fixed `w` x `h` canvas cut off whatever went past its edge (4 of the 7 live
+    cut-outs touched it). `drawn/cutouts.mjs` now paints with room to spare (`PAD_X` .5 each side, `PAD_TOP` .4)
+    and crops to the union of what all drawings cover, the same distance either side of the centre line and the
+    bottom kept, so spots, feet and knock `contact` don't move; `sizes.json` gives `wide`/`tall` (board / canvas)
+    and `steps`; `opener3d.render` puts them in props.json and `Card` sizes the board by them (`height`/`aspect`
+    still mean the figure: aiming, `half_width`, `nudge` unchanged). Test: `test_an_arm_past_the_canvas_edge_is_kept`.
+  - Smooth motion: painters write `draw(k, f, u)`; a cycle (`frames`/`fps` s) is painted as `steps` = 12+
+    drawings, `u` 0..1 is the place in it (body motion on `u`, `f` = floor(u * frames) for switches like a mouth).
+    Old `draw(k, f)` code still works (each drawing repeats). POSES, CUTOUT.md, the knock recipe use `u`.
+  - Knees: `drawn/lib/rigs/bean.mjs` legs are thigh + shin (local patch, noted in `drawn/lib/VERSION`); walking and
+    dancing bend them; `legs: [[hip, knee], [hip, knee]]` sets them; POSES has "kneels".
+  - Animal actions: every kit animal takes `does: 'eat' | 'run' | 'jump'` (kit.mjs `bow`: the head bows round the
+    neck, a pig's snout to the ground with a head joining it); the stager gives each animal `does`
+    (`ANIMAL_DOES`: stands/walks/runs/eats/jumps) and `animal_cutout` draws it.
+  - Set dressing: cobblestone street (a canvas texture in the ground colour: Kenney's road tile is plain stone),
+    timbered fronts (`*-detail-cross`/`-diagonal` modules), new props `stall`, `cart`, `fountain`, `bookcase`,
+    `coatrack`, `hedge` (nature bush), `walllamp`, `sidetable` (CC0 Kenney, copied from `assets_src/kenney`), and
+    `opener3d.dress()`: fixed edge pieces per place (`DRESS`) added in `clean` wherever nothing placed touches them,
+    marked `dressing`, no id (no shot aims at them). STAGE3D.md tells the placer not to dress the set itself.
+  - `{"in": garden | field | rug id}` places someone inside a flat patch (`PATCHES`), and `nudge` no longer pushes
+    people out of patches (the first live run's pig was put in the potatoes and nudged to the front edge).
+  - Camera fixes from the live runs: floor boards turn toward the camera up to 60 degrees (`Card` `face`, the
+    camera from `framing`, not `useThree`: Remotion renders frames in parallel) so a side-on shot is never a
+    paper-thin stripe (a knocker and wall pictures stay flat); `opener3d.spread_out` sends back a medium/close/low
+    shot on cut-outs so far apart the camera must stand > 2.6x the size's distance (all three live stories opened
+    on people at opposite ends of the set, tiny); no wall lamps in the room dressing (they glared through bloom).
+  - Live runs 2026-11-06 round 2 (Flash painters/reviewer, Claude stager/placer; clips in
+    `test_renders/opener3d/crew2/`, the best failing draft as `<story>_best3d_<score>.mp4`): Pig War 4-5/10,
+    dancing 4/10, Carrington 3-4/10: none passed and none reached KEEP. A story now takes 5-8 min (stager 20 s on
+    Claude). The complaints moved from drawings to the camera (fixed above, after those runs) and the painters'
+    poses (the farmer waves instead of pointing at the pig). Not yet re-run after the camera fixes.
+  - Reviewer and motion: agy can't watch video (tested 2026-11-06: a moving square, it answered can_view=false), and
+    the camera drifts in every shot, so onion-skin ghosts would smear the frame. The review sheet's third row
+    (`opener3d.sheet(..., cutouts)`) shows each cycling cut-out's drawings 1-2-3-4; `review()` explains it.
+  - Stronger planner: `opener_crew.strong()` sends the stager and placer to Claude when the run's brain is Gemini
+    and Argon is out (`llm.gemini_model()` = Flash); else the run's own brain.
+  - Keep the best (owner chose 6): `drawn_opener.KEEP` = 6. The crew keeps its best failing, non-spoiler draft in
+    `short["opener3d_best"]`; when the drawn opener doesn't pass either, `make_opener` uses the higher of the two if
+    it reached KEEP (`short["drawn"]["kept"]`, a CHECK line "kept at N/10"), else the motion graphic as before.
+    Never a draft that reveals the answer (`spoils`), never on a final-review repair (`repairing`), scene 1 only.
 - Kit expansion (2026-11-05): 11 more hats (fedora, flatcap, boater, cowboy, ranger, kepi, officer, bobby, bicorne,
   nurse, hardhat), rooms/furniture (`k.door` with `open` + knob, `k.bed`, `k.rug`, `k.shelf`, `k.lamp`, `k.window`,
   `k.frame`), devices (`k.phone`, `k.radio`, `k.letter`), animals `k.cat`, `k.rabbit`, `k.bear` (also in

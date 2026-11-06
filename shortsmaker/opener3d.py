@@ -24,7 +24,8 @@ PUBLIC = REMOTION / "public" / "opener3d" / "job"  # Remotion loads images only 
 TIMEOUT = 900
 PLACES, MOODS = ("room", "street", "outdoors"), ("day", "golden", "dusk", "night", "interior")
 PROPS = {"desk", "table", "chair", "door", "window", "frame", "shelf", "lamp", "bed", "rug", "crate", "barrel", "cabinet",
-         "counter", "fireplace", "house", "shopfront", "cabin", "garden", "field", "tree", "rock", "fence", "lamppost"}
+         "counter", "fireplace", "house", "shopfront", "cabin", "garden", "field", "tree", "rock", "fence", "lamppost",
+         "stall", "cart", "fountain", "bookcase", "coatrack", "hedge", "walllamp", "sidetable"}
 EFFECTS = {"rings", "dust", "shafts", "burst", "shake", "rain", "snow", "jolt", "puff"}
 SPREAD = 1.5  # the widest shot stands at least this many times farther back than the closest (McLean: 1.95-2.35 m)
 MOVES = {"cut", "whip", "push"}
@@ -32,7 +33,7 @@ SCENERY = ("house", "shop", "bank", "factory", "tower", "room", "sky", "ground",
            "shelf", "bed", "rug", "palm", "pine", "tree")
 NAME = re.compile(r"^[a-z][a-z0-9_]{0,19}$")
 COLOR = re.compile(r"^#[0-9a-fA-F]{6}$")
-DRAW = re.compile(r"export\s+default\s+function\s+draw\s*\(\s*k\s*,\s*f\s*\)")
+DRAW = re.compile(r"export\s+default\s+function\s+draw\s*\(\s*k\s*,\s*f\s*(,\s*u\s*)?\)")
 
 
 def available() -> str | None:
@@ -59,6 +60,7 @@ def xz(v, default=(0.0, -1.5)) -> list[float]:
     return [num(v[0], -40, 40, default[0]), num(v[1], -60, 10, default[1])] if isinstance(v, list) and len(v) == 2 else list(default)
 
 
+PATCHES = {"garden", "field", "rug"}  # flat: people and animals stand IN them (`{"in": id}`), never nudged out
 HOUSE_UNIT = 2.4  # one town-kit wall module of a `house` / `shopfront` prop (Opener3D.tsx), in metres at size 1
 
 # Named spots on each place (x, z): `{"mark": "left"}`. Room: the back wall is at z -4; street/outdoors run to -z.
@@ -74,7 +76,17 @@ FOOT = {"desk": (2.3, 1.0, .86), "table": (1.6, .9, .8), "chair": (.5, .5, 1.0),
         "shelf": (1.3, .45, 2.3), "lamp": (.3, .3, .5), "bed": (1.1, 2.1, 1.1), "cabinet": (1.0, .5, 1.8),
         "counter": (3.0, .7, 1.05), "fireplace": (1.6, .45, 1.3), "crate": (.7, .7, .7), "barrel": (.6, .6, .9),
         "rock": (1.1, 1.0, .6), "tree": (1.4, 1.4, 4.6), "lamppost": (.3, .3, 3.3), "house": (7.2, 2.6, 6.0),
-        "shopfront": (7.2, 2.6, 6.0), "cabin": (4.8, 2.6, 3.6), "garden": (3.0, 3.0, .4), "field": (4.0, 3.2, .9), "fence": (4.0, .1, 1.0)}
+        "shopfront": (7.2, 2.6, 6.0), "cabin": (4.8, 2.6, 3.6), "garden": (3.0, 3.0, .4), "field": (4.0, 3.2, .9), "fence": (4.0, .1, 1.0),
+        "stall": (2.4, 1.6, 2.4), "cart": (2.0, 1.1, 1.3), "fountain": (2.6, 2.6, 1.2), "bookcase": (1.1, .45, 2.0),
+        "coatrack": (.5, .5, 1.8), "hedge": (2.0, .8, 1.1), "sidetable": (.6, .5, .6)}
+# Set dressing (2026-11-06: reviews kept calling the sets plain): period pieces the code adds at the edges of each
+# place, (type, x, z, turn), skipped where they would touch anything placed. They have no id, so no shot aims at them.
+# (no wall lamps: lit ones glared through the bloom and pulled the eye off the people, live 2026-11-06)
+DRESS = {"room": [("bookcase", 3.2, -3.7, 0), ("coatrack", -3.4, -3.5, 0), ("sidetable", -3.55, -1.4, 90)],
+         "street": [("stall", -3.1, -5.2, 90), ("cart", 3.2, -3.4, -70), ("barrel", -3.5, -1.6, 0), ("barrel", -3.6, -2.7, 0),
+                    ("lamppost", 3.6, -7.0, 0), ("crate", 3.4, -9.5, 20)],
+         "outdoors": [("hedge", -3.6, -4.2, 10), ("rock", 3.3, -3.2, 30), ("tree", -5.2, -7.5, 0), ("tree", 5.6, -9.0, 0),
+                      ("fence", 0, -12.5, 0)]}
 BUILDINGS = {"house": (3, 1), "shopfront": (3, 7), "cabin": (2, 13)}  # wall modules across, door seed offset (Opener3D.tsx)
 # A shot by size: distance and camera height for a 1.75 m person (scaled to the target's height), and the lens.
 # Sized for a 9:16 frame, where the vertical view decides how big a person reads (2026-11-06: the first presets showed
@@ -82,7 +94,8 @@ BUILDINGS = {"house": (3, 1), "shopfront": (3, 7), "cabin": (2, 13)}  # wall mod
 # wide = whole body (~2.6 m of view), medium = knees up (~1.5 m), close = head and shoulders (~0.8 m, aimed at the face).
 SHOT_SIZES = {"wide": (2.4, .45, 58), "medium": (1.55, .15, 52), "close": (.9, .05, 48), "low": (2.0, -.8, 56),
               "top": (2.6, 1.9, 56), "over": (1.8, .1, 50)}
-TOPS = {"desk": .86, "table": .8, "counter": 1.05, "crate": .7, "barrel": .9, "cabinet": 1.8, "fireplace": 1.3, "bed": .7}  # top heights
+TOPS = {"desk": .86, "table": .8, "counter": 1.05, "crate": .7, "barrel": .9, "cabinet": 1.8, "fireplace": 1.3, "bed": .7,
+        "sidetable": .6, "cart": .9}  # top heights
 KNOCK_CALL = re.compile(r"k\.knock\(\s*([\d.]+)\s*,\s*([\d.]+)\s*,\s*([\d.]+)")
 
 
@@ -100,6 +113,53 @@ def box_of(p: dict) -> tuple[float, float, float, float] | None:
     return x - w / 2, x + w / 2, z - d / 2, z + d / 2
 
 
+def dress(place: str, props: list[dict], cutouts: list[dict]) -> list[dict]:
+    """The DRESS pieces for this place that touch nothing placed (a prop's footprint, a cut-out's spot or walk,
+    a wall lamp where a window or picture hangs), as props marked `dressing`."""
+    taken = [b for p in props if (b := box_of(p))]
+    spots = [c["at"] for c in cutouts if not c.get("wall")] + [st[1:] for c in cutouts for st in c.get("path") or []]
+    hung = [p["at"][0] for p in props if p.get("wall")] + [c["at"][0] for c in cutouts if c.get("wall")]
+    out = []
+    for kind, x, z, turn in DRESS[place]:
+        q = {"type": kind, "at": [x, z], "turn": turn, "size": 1, "dressing": True}
+        if kind == "walllamp":  # on the back wall, at head height
+            if all(abs(x - h) > 1.0 for h in hung):
+                out.append({**q, "at": [x, 2.5], "wall": True, "lit": True})
+            continue
+        b = box_of(q)
+        if kind == "fence":
+            q["length"] = 6
+            b = (x - 3, x + 3, z - .1, z + .1)
+        if any(b[0] - .3 < t[1] and t[0] < b[1] + .3 and b[2] - .3 < t[3] and t[2] < b[3] + .3 for t in taken):
+            continue
+        if any(b[0] - .6 < sx < b[1] + .6 and b[2] - .6 < sz < b[3] + .6 for sx, sz in spots):
+            continue
+        taken.append(b)
+        out.append(q)
+    return out
+
+
+def spread_out(shots: list[dict], cutouts: list[dict], props: list[dict]) -> list[str]:
+    """Medium/close/low shots on a list of cut-outs standing so far apart that the camera must back off well past the
+    size's distance to fit them (Opener3D.tsx `aim`), so everyone reads tiny: all three live stories opened that way
+    (2026-11-06, "far too wide, pushed to the screen edges"). Worded for the placer."""
+    found = []
+    for sh in shots:
+        names = sh["target"] if isinstance(sh["target"], list) else []
+        cuts = [c for c in cutouts if c["name"] in names and not c.get("wall")]
+        if sh.get("size") not in ("medium", "close", "low") or len(cuts) < 2:
+            continue
+        others = [p["at"][0] for p in props if p.get("id") in names]
+        cx = (sum(c["at"][0] for c in cuts) + .3 * sum(others)) / (len(cuts) + .3 * len(others))
+        half = max(abs(c["at"][0] - cx) + .42 * c["height"] * c["aspect"] + .1 for c in cuts)
+        fit = half / math.tan(math.atan(math.tan(math.radians(sh["fov"]) / 2) * 9 / 16))
+        if fit > 2.6 * sh["distance"]:  # side by side needs ~2.5x in a 9:16 frame; the live openers were 4-5x
+            found.append(f"camera: the {sh['size']} shot at {sh['at']:g}s on {' + '.join(c['name'] for c in cuts)} has to stand "
+                         f"{fit:.1f} m back to fit them all, so they read tiny on a phone: stand them side by side "
+                         f"(`beside`, within about 1 m) or give each its own shot")
+    return found
+
+
 def half_width(c: dict) -> float:
     """Half of what a cut-out's drawing really covers (its canvas has a margin round the person)."""
     return .4 * c["height"] * c["aspect"]
@@ -112,9 +172,9 @@ def resolve(spec, named: dict, place: str, size: float = 1) -> tuple[list[float]
     if "mark" in spec:
         m = MARKS[place].get(str(spec["mark"]))
         return (list(m), None) if m else (None, f"no mark {spec['mark']!r}: use {', '.join(MARKS[place])}")
-    key = next((k for k in ("beside", "front") if k in spec), None)
+    key = next((k for k in ("beside", "front", "in") if k in spec), None)
     if not key:
-        return None, f"unknown relation {', '.join(map(str, spec))}: use mark, door, beside, front or wall"
+        return None, f"unknown relation {', '.join(map(str, spec))}: use mark, door, beside, front, in or wall"
     other = named.get(spec[key])
     if other is None:
         return None, f"{key} {spec[key]!r}: nothing placed before it has that id or name"
@@ -124,6 +184,10 @@ def resolve(spec, named: dict, place: str, size: float = 1) -> tuple[list[float]
         hw = half_width(other)
         b = (other["at"][0] - hw, other["at"][0] + hw, other["at"][1] - .1, other["at"][1] + .1)
     cx, cz = (b[0] + b[1]) / 2, (b[2] + b[3]) / 2
+    if key == "in":  # standing in a garden or field patch: a little in front of its middle, so it reads as inside
+        if other.get("type") not in PATCHES:
+            return None, f"in {spec['in']!r}: things stand `in` a {', '.join(sorted(PATCHES))}; use beside or front for anything else"
+        return [round(cx + {"left": -.25, "right": .25}.get(str(spec.get("side")), 0) * (b[1] - b[0]), 3), round(cz + .2 * (b[3] - b[2]), 3)], None
     if key == "front":
         return [round(cx, 3), round(b[3] + .45, 3)], None
     side = -1 if spec.get("side") == "left" else 1
@@ -144,7 +208,7 @@ def in_order(cutouts: list) -> list:
     """Cut-outs ordered so each one comes after the cut-out its `place` names (a live draft put the battery beside
     a telegraph listed after it, 2026-11-06). Unknown names and loops keep their order; resolve reports them."""
     left, out, placed = list(cutouts), [], set()
-    ref = lambda c: next((v for k, v in (c.get("place") or {}).items() if k in ("beside", "front")), None) if isinstance(c, dict) and isinstance(c.get("place"), dict) else None  # noqa: E731
+    ref = lambda c: next((v for k, v in (c.get("place") or {}).items() if k in ("beside", "front", "in")), None) if isinstance(c, dict) and isinstance(c.get("place"), dict) else None  # noqa: E731
     names = {c.get("name") for c in cutouts if isinstance(c, dict)}
     while left:
         ready = [c for c in left if ref(c) not in names or ref(c) in placed]
@@ -163,7 +227,7 @@ def nudge(cutouts: list[dict], props: list[dict], place: str) -> None:
     floor = [c for c in cutouts if not c.get("wall") and not c.get("against") and not c.get("path") and not c.get("on")]
     for c in floor:
         for p in props:
-            b = box_of(p)  # inside furniture or a building's walls: step out in front of it (a live placer put a
+            b = box_of(p) if p["type"] not in PATCHES else None  # a pig in the potato patch stays in it (2026-11-06)  # inside furniture or a building's walls: step out in front of it (a live placer put a
             if b and b[0] < c["at"][0] < b[1] and b[2] - .15 < c["at"][1] < b[3] + .15:  # bystander in a house, 2026-11-06)
                 c["at"][1] = round(b[3] + .35, 3)
     for _ in range(3):
@@ -207,7 +271,7 @@ def lint_cutout(code: str) -> list[str]:
         found.append(f"draws scenery in a cut-out ({', '.join('k.' + n for n in scenery)}): buildings, rooms, ground "
                      f"and sky are the 3D place and props; a cut-out is one person or animal and what it holds or touches")
     if not DRAW.search(code):
-        found.append("missing `export default function draw(k, f)`")
+        found.append("missing `export default function draw(k, f, u)`")
     return found
 
 
@@ -367,6 +431,7 @@ def clean(raw, words: list, seconds: float) -> tuple[dict | None, list[str]]:
             bad.append("an `over` shot needs `over`: the name of the person or thing the camera looks past")
         shots.append(shot)
     shots.sort(key=lambda s: s["at"])
+    bad += spread_out(shots, cutouts, props)
     if not shots:
         bad.append("no usable shot")
     near = [sh["distance"] for sh in shots if not sh.get("over")]
@@ -381,16 +446,18 @@ def clean(raw, words: list, seconds: float) -> tuple[dict | None, list[str]]:
                for e in raw.get("effects") or [] if isinstance(e, dict) and e.get("type") in EFFECTS]
     needs = [str(x).strip()[:40] for x in raw.get("needs") or [] if str(x).strip()][:8] if isinstance(raw.get("needs"), list) else []
     stage = {"moment": str(raw.get("moment") or "the strangest moment").strip()[:200], "needs": needs, "place": place, "mood": mood,
-             "colors": colors, "props": props[:24], "cutouts": cutouts[:6], "shots": shots[:5], "effects": effects[:8]}
+             "colors": colors, "props": props[:24] + dress(place, props[:24], cutouts[:6]), "cutouts": cutouts[:6],
+             "shots": shots[:5], "effects": effects[:8]}
     return stage, bad
 
 
 def render(stage: dict, seconds: float, folder: Path) -> str | None:
     """Paints the cut-outs and renders folder/opener.mp4; None when it worked, else what went wrong."""
     folder = folder.resolve()  # node and Remotion run in other folders
+    folder.mkdir(parents=True, exist_ok=True)
     for c in stage["cutouts"]:
         (folder / f"cut_{c['name']}.mjs").write_text(c["code"], encoding="utf-8")
-    job = {"out": str(folder / "cutouts"), "cutouts": [{**{k: c[k] for k in ("name", "w", "h", "frames")},
+    job = {"out": str(folder / "cutouts"), "cutouts": [{**{k: c.get(k) for k in ("name", "w", "h", "frames", "fps")},
                                                          "module": str(folder / f"cut_{c['name']}.mjs")} for c in stage["cutouts"]]}
     (folder / "cutouts.json").write_text(json.dumps(job), encoding="utf-8")
     try:  # the cut-outs' code was written by the AI: same locked-down node as the drawn opener
@@ -402,10 +469,12 @@ def render(stage: dict, seconds: float, folder: Path) -> str | None:
     if r.returncode:
         return "a cut-out crashed when it ran: " + " | ".join(line.strip() for line in (r.stderr or r.stdout).splitlines()
                                                               if line.strip() and "node:internal" not in line)[:500]
+    sizes = json.loads((folder / "cutouts" / "sizes.json").read_text(encoding="utf-8"))  # the cropped boards (cutouts.mjs)
     shutil.rmtree(PUBLIC, ignore_errors=True)
     shutil.copytree(folder / "cutouts", PUBLIC)
     props = {"fps": FPS, "seconds": seconds, "dir": "opener3d/job", **{k: v for k, v in stage.items() if k not in ("moment", "needs")},
-             "cutouts": [{k: v for k, v in c.items() if k not in ("code", "w", "h")} for c in stage["cutouts"]]}
+             "cutouts": [{**{k: v for k, v in c.items() if k not in ("code", "w", "h")}, **sizes.get(c["name"], {})}
+                         for c in stage["cutouts"]]}
     (folder / "props.json").write_text(json.dumps(props), encoding="utf-8")
     try:
         r = subprocess.run([shutil.which("npx") or "npx", "remotion", "render", "src/index.ts", "Opener3D", str(folder / "opener.mp4"),
@@ -443,7 +512,8 @@ def blends(stage: dict, folder: Path) -> list[str]:
         png = folder / "cutouts" / f"{c['name']}_0.png"
         if c.get("wall") or c.get("on") or not png.exists():  # a thing on a desk is seen against the desk
             continue
-        im = Image.open(png).convert("RGBA").resize((120, 120 * c["h"] // max(1, c["w"])))
+        im = Image.open(png).convert("RGBA")
+        im = im.resize((120, max(1, 120 * im.height // max(1, im.width))))
         buckets: dict[tuple, list] = {}
         for r, g, b, a in im.getdata():
             if a > 200 and r + g + b > 120:  # opaque, not the ink lines
@@ -462,11 +532,16 @@ def blends(stage: dict, folder: Path) -> list[str]:
 PAIR = .2  # the review sheet's second row: the same moments this much later, so the reviewer sees what moves
 
 
-def sheet(clip: Path, seconds: float, out: Path, shots: list | None = None) -> Path:
+def sheet(clip: Path, seconds: float, out: Path, shots: list | None = None, cutouts: Path | None = None) -> Path:
     """The art director's preview: six moments left to right (the time on each), and under each the same moment
-    PAIR s later. Live reviewers called a cycling knock "frozen" from single stills (2026-11-05); a pair shows it."""
+    PAIR s later. Live reviewers called a cycling knock "frozen" from single stills (2026-11-05); a pair shows it.
+    With `cutouts` (the painted folder), a third row shows each cut-out's cycle as 4 of its drawings: reviewers kept
+    calling a dance "floating" and a clattering sounder "static" from stills (2026-11-06), and the agy reviewer can't
+    watch video (tested 2026-11-06); the camera drifts in every shot, so onion-skin ghosts would smear the frame."""
     times, clip, out = sheet_times(seconds, shots), clip.resolve(), out.resolve()  # ffmpeg runs in out.parent
-    S = Image.new("RGB", (324 * len(times), 576 * 2))
+    sizes = json.loads((cutouts / "sizes.json").read_text(encoding="utf-8")) if cutouts and (cutouts / "sizes.json").exists() else {}
+    cycling = [n for n, z in sizes.items() if z.get("steps", 1) > 1][:len(times)]
+    S = Image.new("RGB", (324 * len(times), 576 * (2 + bool(cycling))), (40, 40, 44))
     for row, dt in enumerate((0, PAIR)):
         for k, t0 in enumerate(times):
             t = min(t0 + dt, seconds - .05)
@@ -476,5 +551,15 @@ def sheet(clip: Path, seconds: float, out: Path, shots: list | None = None) -> P
             d.rectangle((0, 0, 86, 26), fill=(0, 0, 0))
             d.text((6, 6), f"{t:.2f}s", fill="white")
             S.paste(im, (324 * k, 576 * row))
+    for k, name in enumerate(cycling):  # 2 x 2 drawings of its cycle, in order
+        n, tile = sizes[name]["steps"], Image.new("RGB", (324, 576), (205, 205, 200))
+        for j in range(4):
+            im = Image.open(cutouts / f"{name}_{j * n // 4}.png").convert("RGBA")
+            im.thumbnail((158, 262))
+            tile.paste(im, (4 + 162 * (j % 2) + (158 - im.width) // 2, 34 + 270 * (j // 2) + 262 - im.height), im)
+        d = ImageDraw.Draw(tile)
+        d.rectangle((0, 0, 324, 26), fill=(0, 0, 0))
+        d.text((6, 6), f"{name}: its drawings cycle 1-2-3-4", fill="white")
+        S.paste(tile, (324 * k, 576 * 2))
     S.save(out)
     return out

@@ -4,7 +4,7 @@
 //   pen.begin("hero", reveal); person(pen, x, groundY, scale, { hat: "peci", shirt: "#F2C230", walk: t * 9 }, t);
 // options: skin, shirt, hair, hat (peci|pith|helmet|turban|fez|cap), glasses (sun|round), arms [l, r]
 // (degrees from straight down, outward positive), bend [l, r], face (smile|open|flat|sad), walk (phase),
-// look (eye shift px), mustache, sash, medals, jacketLine, mask, flip, still, dip.
+// legs [[hip, knee], [hip, knee]], look (eye shift px), mustache, sash, medals, jacketLine, mask, flip, still, dip.
 import { lerp, rad, ellPts, rrect } from "../core.mjs";
 const INK = "#2A2420", RED = "#D0312D", WHITE = "#FBF7EE", GOLD = "#E3B64B", NAVY = "#3C4A6B", SAND = "#D8C7A0";
 export const SKIN = ["#D9A273", "#C68A5A", "#E9C29C", "#A8704A", "#F0CDB0", "#8E5B3A"];
@@ -49,10 +49,17 @@ export function person(p, x, y, s, o, t) {
   // arms
   const [la, ra] = o.arms || [18, 18], [lb, rb] = o.bend || [0, 0];
   arm(p, -22, -166, la, lb, -1, sk); arm(p, 22, -166, ra, rb, 1, sk);
-  // legs
-  for (const [hx, a, sg] of [[-13, lg[0], -1], [13, lg[1], 1]]) {
-    const fx = hx + Math.sin(rad(a)) * 80, fy = -82 + Math.cos(rad(a)) * 80;
-    p.stroke([[hx, -84], [fx, fy]], { w: 5.2, taper: .3 });
+  // legs: thigh + shin with a knee (ShortsMaker patch 2026-11-06, see ../VERSION). `legs: [[hip, knee], [hip, knee]]`
+  // in degrees like arms/bend (hip from straight down, outward positive; knee bends the shin back in); walking bends
+  // the knee of the leg that swings out, so steps, runs and dance kicks lift the foot instead of swinging a stick.
+  const ph = o.walk;
+  for (const [i, hx, sg] of [[0, -13, -1], [1, 13, 1]]) {
+    let a, b;
+    if (o.legs && o.legs[i]) [a, b] = [sg * o.legs[i][0], -sg * (o.legs[i][1] || 0)];
+    else { a = lg[i]; const lift = ph == null ? 0 : Math.max(0, Math.sin(ph + i * Math.PI)); b = -Math.sign(a || sg) * lift * 55; }
+    const kx = hx + Math.sin(rad(a)) * 41, ky = -84 + Math.cos(rad(a)) * 41;
+    const fx = kx + Math.sin(rad(a + b)) * 41, fy = ky + Math.cos(rad(a + b)) * 41;
+    p.stroke([[hx, -84], [kx, ky], [fx, fy]], { w: 5.2, taper: .3, smooth: false });
     p.stroke([[fx - (sg < 0 ? 12 : 0), fy], [fx + (sg > 0 ? 12 : 0), fy]], { w: 6, taper: .2 });
   }
   ctx.restore();

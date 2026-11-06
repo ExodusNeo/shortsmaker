@@ -154,7 +154,9 @@ def test_the_whole_crew_passes_and_only_the_faulted_painter_repaints():
             assert "k.C.red" in made["cutouts"][0]["code"] and s["opener_staging"]["action"]["does"] == "knocks"
             assert "STAGER" in prompts[0] and "PAINTER" in prompts[1] and "PLACER" in prompts[2]
             assert "his coat is too dark" in prompts[4] and "PAINTER" in prompts[4] and len(prompts) == 6  # no second placer call
-            assert "bottom row shows the same moments 0.2 s later" in prompts[3] and "person:ferryman (" in prompts[3]
+            assert "second row shows the same moments 0.2 s later" in prompts[3] and "person:ferryman (" in prompts[3]
+            assert "cycle of drawings" in prompts[3] and (Path(d) / "sheet3d1.png").exists()
+            assert s["opener3d_best"]["score"] == 5 and s["opener3d_best"]["plan"]["kind"] == "3d"  # kept for drawn_opener.KEEP
             assert any(line.startswith("draft 2: 8/10") for line in s["opener_crew"]), s["opener_crew"]
     finally:
         llm.ask_ai = saved

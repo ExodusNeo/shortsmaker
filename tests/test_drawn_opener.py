@@ -115,6 +115,31 @@ def test_drawn_opener_stops_when_a_fix_does_not_help():
         llm.ask_ai = saved
 
 
+def test_neither_passes_so_the_best_draft_at_keep_is_used():
+    """Owner, 2026-11-06: when neither the 3D nor the drawn opener reaches PASS, the better one is kept from KEEP (6).
+    A draft that gives the answer away is never kept, however it scored; below KEEP the motion graphic takes over."""
+    saved, prompts = llm.ask_ai, []
+    spoil = {"score": 9, "reveals_answer": True, "answer_why": "the bankrupt sign", "problems": []}
+    try:
+        llm.ask_ai = fake_ai([{"moment": "m", "code": EXAMPLE}, {"score": 6, "problems": ["the ship is small"]},
+                              {"moment": "m", "code": EXAMPLE}, {"score": 5, "problems": ["still small"]}], prompts)
+        with tempfile.TemporaryDirectory() as d:
+            s = {**short(), "opener3d_best": {"score": 5, "plan": {"kind": "3d", "moment": "3d"}}}
+            clip, why = drawn_opener.make_opener(s, WORDS, 3.5, Path(d))
+            assert clip and clip.exists() and why is None and s["drawn"]["kept"] == 6 and "kind" not in s["drawn"], why
+        llm.ask_ai = fake_ai([{"moment": "m", "code": EXAMPLE}, spoil, {"moment": "m", "code": EXAMPLE}, spoil], [])
+        with tempfile.TemporaryDirectory() as d:
+            clip, why = drawn_opener.make_opener(short(), WORDS, 3.5, Path(d))  # the spoiler is capped at 6: still not kept
+            assert clip is None and "reveals the answer" in why, why
+        llm.ask_ai = fake_ai([{"moment": "m", "code": EXAMPLE}, {"score": 5, "problems": ["small"]},
+                              {"moment": "m", "code": EXAMPLE}, {"score": 4, "problems": ["small"]}], [])
+        with tempfile.TemporaryDirectory() as d:
+            clip, why = drawn_opener.make_opener(short(), WORDS, 3.5, Path(d))
+            assert clip is None and "scored 4/10" in why, why
+    finally:
+        llm.ask_ai = saved
+
+
 def test_use_opener_plays_the_drawn_opener():
     """use_opener puts the drawn clip on scene 1 (its first frame as the still, no graphic, no photo credit tag);
     when it fails, the motion graphic plays and the Opening line says why."""

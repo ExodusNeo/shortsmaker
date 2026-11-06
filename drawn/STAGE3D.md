@@ -32,7 +32,8 @@ When an effect IS the strange thing (the shaking, the rain), start it at 0 and l
 
 ## Places
 - `"room"`: an interior with a back wall and two side walls; the open side faces the camera. `colors`: wall, floor, trim.
-- `"street"`: a town street running away from the camera, rows of town houses on both sides (don't add more).
+- `"street"`: a cobbled town street running away from the camera, rows of timbered town houses on both sides
+  (don't add more).
   `colors`: ground, sky.
 - `"outdoors"`: open ground with far hills and sky. `colors`: ground, sky.
 `mood`: "day" | "golden" | "dusk" | "night" | "interior" (a lamp-lit room). It sets the light, shadows, fog and grade.
@@ -43,6 +44,8 @@ Every prop and cut-out gets a `place`, one relation:
   `front-right` (nearer the camera), `back-left`, `back`, `back-right` (farther away).
 - `{"beside": "<id or name>", "side": "left" | "right"}`: next to something already placed (side as seen from the camera).
 - `{"front": "<id or name>"}`: just in front of it (toward the camera).
+- `{"in": "<garden, field or rug id>", "side": "left" | "centre" | "right"}`: standing inside the patch (a pig in
+  the potatoes, a reaper in the wheat).
 - `{"door": "<house, shopfront or door id>"}`: flush on its front door (a knock, someone at the door).
 - `{"on": "<desk, table, counter, crate, barrel, cabinet, fireplace or bed id>", "side": "left" | "centre" | "right"}`:
   standing on top of it: a small drawn thing (a machine on the desk, a cup on the table) or a prop (a `lamp` on the
@@ -61,14 +64,18 @@ fireplace, frame, window). Each faces the camera; `turn` spins it (90 = faces ri
 relation, shot or effect names it. `"lit": true` lights a lamp, lamppost or a house's windows.
 - room: `desk` (2.3 m wide), `table`, `chair`, `door` (`open`: 0..1, set in the back wall), `window` (wall),
   `frame` (a picture, wall), `shelf` (bookcase), `lamp` (desk lamp: `"y": 0.86` stands it on a desk), `bed`, `rug`,
-  `cabinet`, `counter` (3 m shop or bar counter), `fireplace` (glowing).
-- anywhere: `crate`, `barrel`, `rock`, `tree`, `fence` (`length`), `lamppost`.
+  `cabinet`, `counter` (3 m shop or bar counter), `fireplace` (glowing), `bookcase` (open, with books), `coatrack`,
+  `sidetable`, `walllamp` (wall, lit).
+- anywhere: `crate`, `barrel`, `rock`, `tree`, `fence` (`length`), `lamppost`, `hedge`, `cart` (a wooden hand cart),
+  `stall` (a market stall with an awning, 2.4 m), `fountain` (a round stone fountain, 2.6 m).
 - outdoors: `garden` (a 3 x 3 m vegetable patch in dirt rows: potatoes, cabbages, turnips), `field` (a 4 x 3 m patch
   of wheat). People and animals can stand `front` of them or `beside` them.
 - street / outdoors: `house` (a two-storey European town house with plaster or timber walls, 7.2 m wide),
   `shopfront` (one with an awning), `cabin` (a one-storey timber cabin, 4.8 m wide: farms, frontier, villages,
   huts). On a mark, its FRONT wall stands just behind the mark; `{"door": id}` works on all three.
-Keep it to the few props the moment needs: a clean set, not a cluttered one.
+Keep it to the few props the moment needs: a clean set, not a cluttered one. The edges of the set (a bookcase and
+wall lamps in a room, a market stall, cart and barrels along a street, bushes, rocks and trees outdoors) are dressed
+for you wherever nothing of yours stands: don't place set dressing yourself.
 
 ## Cut-outs (already painted: you only place and time them)
 You get the list of painted cut-outs: each `name`, what it is and how tall it stands. Give each one:

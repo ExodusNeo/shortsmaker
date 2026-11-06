@@ -15,7 +15,8 @@ import {Bloom, DepthOfField, EffectComposer} from '@react-three/postprocessing';
 type XZ = [number, number];
 export type Cutout = {name: string; frames: number; height: number; aspect: number; at: XZ; y?: number; wall?: boolean;
 	flip?: boolean; talk?: [number, number]; fps?: number; path?: [number, number, number][]; hits?: number[]; focus?: number;
-	contact?: [number, number]}; // a knocker: where his fist meets the door (x from the board's centre, height), in metres
+	contact?: [number, number]; // a knocker: where his fist meets the door (x from the board's centre, height), in metres
+	wide?: number; tall?: number; steps?: number}; // the board cropped round the drawing / the painter's canvas; drawings per cycle (cutouts.mjs)
 export type Prop = {type: string; id?: string; at: XZ; y?: number; wall?: boolean; turn?: number; size?: number; color?: string;
 	lit?: boolean; open?: number; length?: number};
 export type Shot = {at: number; target: string | string[]; distance: number; height?: number; turn?: number; fov?: number; move?: 'cut' | 'whip' | 'push';
@@ -142,9 +143,15 @@ const MODELS: Record<string, {file: string; fit: ['x' | 'y' | 'z', number]; face
 	cabinet: {file: 'furniture/bookcaseClosedDoors', fit: ['y', 1.8]}, bed: {file: 'furniture/bedDouble', fit: ['z', 2.0]},
 	lamp: {file: 'furniture/lampRoundTable', fit: ['y', 0.5]}, tree: {file: 'nature/tree_oak', fit: ['y', 4.6]},
 	rock: {file: 'nature/rock_largeA', fit: ['x', 1.1]}, lamppost: {file: 'town/lantern', fit: ['y', 3.3]},
+	// set dressing and market/town pieces (2026-11-06: reviews called the sets plain); sizes = opener3d.FOOT
+	stall: {file: 'town/stall', fit: ['x', 2.4]}, cart: {file: 'town/cart', fit: ['x', 2.0]}, fountain: {file: 'town/fountain-round', fit: ['x', 2.6]},
+	hedge: {file: 'nature/plant_bushLarge', fit: ['x', 2.0]}, bookcase: {file: 'furniture/bookcaseOpen', fit: ['y', 2.0]},
+	coatrack: {file: 'furniture/coatRackStanding', fit: ['y', 1.8]}, walllamp: {file: 'furniture/lampWall', fit: ['y', 0.3]},
+	sidetable: {file: 'furniture/sideTable', fit: ['y', 0.6]},
 };
 const TOWN = ['wall-wood', 'wall-wood-door', 'wall-wood-window-shutters', 'wall-wood-window-glass', 'wall', 'wall-door',
-	'wall-window-shutters', 'wall-window-glass', 'roof-gable', 'overhang'].map((n) => `town/${n}`);
+	'wall-window-shutters', 'wall-window-glass', 'roof-gable', 'overhang', 'wall-wood-detail-cross', 'wall-wood-detail-diagonal',
+	'wall-detail-cross', 'wall-detail-diagonal'].map((n) => `town/${n}`);
 type Library = Record<string, THREE.Object3D>;
 
 // patches built from several small CC0 nature-kit models (2026-11-06: a farm story had no garden for its pig to raid)
@@ -211,6 +218,26 @@ const Model: React.FC<{src: THREE.Object3D; fit: ['x' | 'y' | 'z', number]; face
 	return <primitive object={obj} />;
 };
 
+/** A cobblestone texture in the street's ground colour (2026-11-06: reviews called the flat street plain; the
+ * Kenney road tile is plain stone): rounded stones in staggered rows, each a little lighter or darker, dark joints. */
+const cobbleCache: Record<string, THREE.Texture> = {};
+function cobbles(base: string): THREE.Texture {
+	if (cobbleCache[base]) return cobbleCache[base];
+	const n = 512, c = document.createElement('canvas'); c.width = c.height = n;
+	const g = c.getContext('2d')!, col = new THREE.Color(base);
+	g.fillStyle = `#${col.clone().multiplyScalar(0.45).getHexString()}`; g.fillRect(0, 0, n, n);
+	const rows = 8, cols = 6, h = n / rows, w = n / cols;
+	for (let r = 0; r < rows; r++) for (let k = -1; k <= cols; k++) {
+		const x = k * w + (r % 2 ? w / 2 : 0), y = r * h, v = 0.82 + rand(r * 31 + k * 7) * 0.32;
+		g.fillStyle = `#${col.clone().multiplyScalar(v).getHexString()}`;
+		g.beginPath(); g.roundRect(x + 4, y + 4, w - 8, h - 8, 18); g.fill();
+		g.fillStyle = 'rgba(255,255,255,0.10)'; g.beginPath(); g.roundRect(x + 10, y + 8, w - 26, (h - 8) * 0.35, 12); g.fill();
+	}
+	const t = new THREE.CanvasTexture(c);
+	t.wrapS = t.wrapT = THREE.RepeatWrapping; t.repeat.set(40, 40); t.colorSpace = THREE.SRGBColorSpace; t.anisotropy = 8;
+	return (cobbleCache[base] = t);
+}
+
 /** A town building from the fantasy-town kit: `wide` wall modules across, two floors, a gable roof; fronts +z.
  * `seed` varies doors, windows and timber vs plaster, so a street of them doesn't repeat. */
 const Building: React.FC<{lib: Library; wide: number; seed: number; unit?: number; floors?: number; wood?: boolean}> = ({lib, wide, seed, unit = 1.45, floors = 2, wood}) => {
@@ -218,8 +245,9 @@ const Building: React.FC<{lib: Library; wide: number; seed: number; unit?: numbe
 	const pre = wood || rand(seed) > 0.45 ? 'town/wall-wood' : 'town/wall', door = seed % wide; // opener3d.front_door puts `door` cut-outs at this door
 	const cells: [string, number, number][] = [];
 	for (let x = 0; x < wide; x++) {
-		cells.push([x === door ? `${pre}-door` : pick(x, wood ? [`${pre}-window-shutters`, pre] : [`${pre}-window-shutters`, `${pre}-window-glass`, pre]), x, 0]);
-		for (let y = 1; y < floors; y++) cells.push([pick(x + 9 * y, [`${pre}-window-shutters`, `${pre}-window-glass`, `${pre}-window-shutters`]), x, y]);
+		cells.push([x === door ? `${pre}-door` : pick(x, wood ? [`${pre}-window-shutters`, `${pre}-detail-diagonal`] : [`${pre}-window-shutters`, `${pre}-window-glass`, `${pre}-detail-diagonal`]), x, 0]);
+		// timbered upper floors: cross beams between the windows (2026-11-06: reviews wanted timbered fronts)
+		for (let y = 1; y < floors; y++) cells.push([pick(x + 9 * y, [`${pre}-window-shutters`, `${pre}-window-glass`, `${pre}-detail-cross`]), x, y]);
 	}
 	if (!cells.every(([f]) => lib[f]) || !lib['town/roof-gable']) return null;
 	return <group scale={unit}>
@@ -246,7 +274,7 @@ function useTextures(dir: string, cutouts: Cutout[]): Record<string, THREE.Textu
 	const [handle] = useState(() => delayRender('opener3d cut-outs'));
 	useEffect(() => {
 		const loader = new THREE.TextureLoader();
-		Promise.all(cutouts.map((c) => Promise.all(Array.from({length: c.frames}, (_, f) => loader.loadAsync(staticFile(`${dir}/${c.name}_${f}.png`))))))
+		Promise.all(cutouts.map((c) => Promise.all(Array.from({length: c.steps || c.frames}, (_, f) => loader.loadAsync(staticFile(`${dir}/${c.name}_${f}.png`))))))
 			.then((lists) => {
 				const out: Record<string, THREE.Texture[]> = {};
 				lists.forEach((l, i) => { l.forEach((x) => { x.colorSpace = THREE.SRGBColorSpace; x.anisotropy = 8; }); out[cutouts[i].name] = l; });
@@ -258,14 +286,17 @@ function useTextures(dir: string, cutouts: Cutout[]): Record<string, THREE.Textu
 }
 
 /** A flat drawn cut-out standing in the set: lit by the scene, casting a shadow in its own shape. */
-const Card: React.FC<{map: THREE.Texture; w: number; h: number; pos: THREE.Vector3; flip?: boolean; wall?: boolean; tint: string; squash: number; t: number; seed: number}> = ({map, w, h, pos, flip, wall, tint, squash, t, seed}) => {
+const Card: React.FC<{map: THREE.Texture; w: number; h: number; lift?: number; pos: THREE.Vector3; flip?: boolean; wall?: boolean; face?: THREE.Vector3 | null; tint: string; squash: number; t: number; seed: number}> = ({map, w, h, lift = 0, pos, flip, wall, face, tint, squash, t, seed}) => {
+	// `face`: the board turns toward the camera (up to 60 degrees) so a side-on shot never shows a paper-thin stripe
+	// (live dancing plague, 2026-11-06); a knocker stays flush with his door, a wall picture with its wall
+	const yaw = face ? clamp(Math.atan2(face.x - pos.x, face.z - pos.z), -1.05, 1.05) : 0; // face = this frame's camera (framing)
 	const depth = useMemo(() => new THREE.MeshDepthMaterial({depthPacking: THREE.RGBADepthPacking, map, alphaTest: 0.5}), [map]);
 	// idle life: a slow breath and sway from the feet, so no standing figure is ever a still board (2026-11-06)
 	const breath = wall ? 0 : 0.012 * Math.sin(t * 2.4 + seed), sway = wall ? 0 : 0.018 * Math.sin(t * 1.6 + seed * 2.1);
 	const sy = 1 - 0.07 * squash + breath, sx = 1 + 0.05 * squash; // squashed from the feet: the base stays on the floor
 	return ( // unlit: the drawing keeps its own clean colours in any light (lit, figures went brown on a brown wall)
-		<group position={[pos.x, pos.y, pos.z]} rotation={[0, 0, sway]}>
-			<mesh position={[0, wall ? 0 : (h * sy) / 2, 0]} scale={[(flip ? -1 : 1) * sx, sy, 1]} castShadow={!wall} customDepthMaterial={depth}>
+		<group position={[pos.x, pos.y, pos.z]} rotation={[0, yaw, sway]}>
+			<mesh position={[0, wall ? lift : (h * sy) / 2, 0]} scale={[(flip ? -1 : 1) * sx, sy, 1]} castShadow={!wall} customDepthMaterial={depth}>
 				<planeGeometry args={[w, h]} />
 				<meshBasicMaterial map={map} color={tint} transparent alphaTest={0.5} side={THREE.DoubleSide} />
 			</mesh>
@@ -294,7 +325,8 @@ const WOOD = '#6A3E1E', DARK = '#2A1A10', BOOKS = ['#7A2E22', '#2E4A3A', '#8A6A3
 const PropMesh: React.FC<{p: Prop; night: boolean; i: number; lib: Library}> = ({p, night, i, lib}) => {
 	const c = p.color, lit = p.lit ?? night, model = MODELS[p.type];
 	if (model && lib[model.file]) {
-		const glow = p.type === 'lamp' && lit ? <pointLight position={[0, 0.42, 0.1]} intensity={6} distance={6} decay={1.5} color="#FFB060" />
+		const glow = p.type === 'walllamp' && lit ? <pointLight position={[0, 0.2, 0.35]} intensity={2.5} distance={5} decay={1.5} color="#FFB060" />
+			: p.type === 'lamp' && lit ? <pointLight position={[0, 0.42, 0.1]} intensity={6} distance={6} decay={1.5} color="#FFB060" />
 			: p.type === 'lamppost' && lit ? <pointLight position={[0, 3.0, 0.2]} intensity={8} distance={9} decay={1.5} color="#FFC870" /> : null;
 		return <><Model src={lib[model.file]} fit={model.fit} face={model.face} color={c} />{glow}</>;
 	}
@@ -352,7 +384,7 @@ const Place: React.FC<{s: StageProps; bg: string; lib: Library}> = ({s, bg, lib}
 	}
 	const ground = col.ground || (s.place === 'street' ? '#9A8A70' : '#6F8A4A'), night = s.mood === 'night';
 	return <>
-		<mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, 0, -20]} receiveShadow><planeGeometry args={[80, 80]} /><meshStandardMaterial color={ground} roughness={1} /></mesh>
+		<mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, 0, -20]} receiveShadow><planeGeometry args={[80, 80]} /><meshStandardMaterial color={s.place === 'street' ? '#FFFFFF' : ground} map={s.place === 'street' ? cobbles(ground) : null} roughness={1} /></mesh>
 		{s.place === 'street' && lib['town/roof-gable'] // rows of town buildings, each different
 			? Array.from({length: 12}, (_, k) => { const side = k % 2 ? 1 : -1, z = 1 - Math.floor(k / 2) * 7.8, wide = 2 + Math.floor(rand(k + 40) * 2);
 				return <group key={k} position={[side * 5.4, 0, z]} rotation={[0, -side * Math.PI / 2, 0]}><Building lib={lib} wide={wide} seed={k + 20} unit={2.5} /></group>; })
@@ -473,14 +505,15 @@ export const Opener3D: React.FC<StageProps> = (s) => {
 					</group>;
 				})}
 				{s.cutouts.filter((c) => c.wall).map((c) => <PictureLight key={`pl-${c.name}`} at={cutPos(c, 0)} />)}
-				{s.cutouts.map((c, ci) => {
+				{(() => { const cam = framing(s, t).pos; return s.cutouts.map((c, ci) => {
 					// drawings cycle all the time unless `talk` limits them; a knock (focus set) never stops: a live knock froze
 					const list = tex[c.name], talking = c.talk && c.focus == null ? t >= c.talk[0] && t < c.talk[1] : list.length > 1;
-					const f = talking ? Math.floor(t * (c.fps || 7)) % list.length : 0;
+					const f = talking ? Math.floor((t * (c.fps || 7) * list.length) / c.frames) % list.length : 0; // list = steps drawings per cycle of c.frames
 					const pos = cutPos(c, t);
 					pos.x += joltOf(s, c.name, t);
-					return <Card key={c.name} map={list[f]} w={c.height * c.aspect} h={c.height} pos={pos} flip={c.flip} wall={c.wall} tint={m.card} squash={hitAt(t, c.hits)} t={t} seed={ci * 1.7 + 0.4} />;
-				})}
+					const bw = c.height * c.aspect * (c.wide || 1), bh = c.height * (c.tall || 1); // a wall board keeps its bottom edge
+					return <Card key={c.name} map={list[f]} w={bw} h={bh} lift={(bh - c.height) / 2} pos={pos} face={!c.wall && c.focus == null && !c.contact ? cam : null} flip={c.flip} wall={c.wall} tint={m.card} squash={hitAt(t, c.hits)} t={t} seed={ci * 1.7 + 0.4} />;
+				}); })()}
 				{s.effects.map((e, i) => {
 					const hit = s.cutouts.find((c) => c.name === e.on && c.contact); // a puff or burst on a knock lands at the fist, not the face
 					// on a person, dust and bursts come up from the feet (on the chest they read as smoke, 2026-11-06)

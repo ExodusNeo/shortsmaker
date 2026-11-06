@@ -26,7 +26,7 @@ import time
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
-from shortsmaker import drawn_opener, llm, opener3d
+from shortsmaker import drawn_opener, llm, opener3d, session
 
 DRAWN = drawn_opener.DRAWN
 PARTS = Path(os.environ.get("SHORTSMAKER_PARTS") or DRAWN / "parts")
@@ -35,11 +35,15 @@ VERBS = ("knocks", "hands", "holds", "shows", "points", "talks", "shouts", "read
          "runs", "rides", "falls", "looks", "listens", "waves", "drinks", "eats", "sleeps", "works", "digs", "throws",
          "dances", "jumps", "climbs", "carries", "pulls", "pushes", "fights", "sits", "kneels", "cries", "laughs")
 # the kit pose a painter should use for the action (a live "dancing" plan said "walks": no dance verb, 2026-11-06)
-POSES = {"dances": "`dance: f * Math.PI / 2` (hops, sways, kicks, arms flung up), in every frame",
-         "walks": "`walk: f * Math.PI / 2` (the placer moves the board)", "runs": "`walk: f * Math.PI / 2` with the arms swinging high",
-         "jumps": "`dance: f * Math.PI / 2` with both arms up", "waves": "one arm waving `arms: [12, [150, 110, 150, 110][f]]`",
+POSES = {"dances": "`dance: u * 2 * Math.PI` (hops, sways, kicks, arms flung up), in every drawing",
+         "walks": "`walk: u * 2 * Math.PI` (the placer moves the board)", "runs": "`walk: u * 2 * Math.PI` with the arms swinging high",
+         "jumps": "`dance: u * 2 * Math.PI` with both arms up", "waves": "one arm waving `arms: [12, 130 + 22 * Math.cos(u * 4 * Math.PI)], bend: [6, 30]`",
          "points": "one arm pointing `arms: [12, 95], bend: [6, 0]`", "shouts": "`face: 'open'` with an arm thrown up",
-         "talks": "`face: f % 2 ? 'open' : 'flat'`", "knocks": "`k.knock` (the recipe)"}
+         "talks": "`face: f % 2 ? 'open' : 'flat'`", "knocks": "`k.knock` (the recipe)",
+         "kneels": "`legs: [[10, 0], [-5, 100]], dip: 0` drawn 60 px lower (`k.person(w / 2, h - 20 + 60 * s / 4, ...)`): one knee on the ground"}
+# what an animal can do in the kit (kit.mjs `does`); the stager picks one per animal (2026-11-06: the pig couldn't eat)
+ANIMAL_DOES = {"stands": "", "walks": "walk: u * 2 * Math.PI", "runs": "walk: u * 2 * Math.PI, does: 'run'",
+               "eats": "does: 'eat'", "jumps": "walk: u * 2 * Math.PI, does: 'jump'"}
 HOLDABLE = ("letter", "paper", "cup", "bottle", "coin", "moneybag")  # kit.mjs HOLD: a hand grips them
 DRAWN_THINGS = ("phone", "radio", "sack", "bottle", "cup", "moneybag", "coins", "clock", "fire", "letter", "paper")
 ANIMALS = {  # kit animal: canvas w, h, metres tall, the call standing on the canvas's bottom centre
@@ -126,7 +130,8 @@ def check_staging(raw, words: list) -> tuple[dict | None, list[str]]:
     for a in (raw.get("animals") or [])[:2]:
         n = take(a, "animal")
         if n and a.get("kind") in ANIMALS:
-            st["animals"].append({"id": n, "kind": a["kind"], "color": a["color"] if opener3d.COLOR.match(str(a.get("color") or "")) else None})
+            st["animals"].append({"id": n, "kind": a["kind"], "color": a["color"] if opener3d.COLOR.match(str(a.get("color") or "")) else None,
+                                  "does": a["does"] if a.get("does") in ANIMAL_DOES else "stands"})
         elif n:
             bad.append(f"animal {n}: the kit's animals are {', '.join(ANIMALS)}")
     for t in (raw.get("things") or [])[:6]:
@@ -165,6 +170,12 @@ def check_staging(raw, words: list) -> tuple[dict | None, list[str]]:
     return st, bad
 
 
+def strong() -> str | None:
+    """Who plans the stager's and placer's jobs: on a Gemini run whose Argon is out, Claude (Opus) instead of Flash
+    (2026-11-06: Flash thought 1-10 min per call and its plans needed every fix round); else the run's own brain."""
+    return "claude" if session.BRAIN == "gemini" and "claude" not in session.NO_QUOTA and llm.gemini_model() == llm.GEMINI_FALLBACK else None
+
+
 def stage(short: dict, words: list, seconds: float, folder: Path, avoid: list[str] | None = None) -> tuple[dict | None, str | None]:
     """The stager's plan (short["opener_staging"], reused when there is one), or (None, why)."""
     if isinstance(short.get("opener_staging"), dict) and not avoid:
@@ -182,7 +193,7 @@ them in a 3D set and film them. Plan ONE clear picture of the strangest moment s
 - people (1-3; at most 3): id, who (one line: the person and their era), hat (one of: {', '.join(kit_hats())}),
   coat (a "#RRGGBB" that stands out from the place), holds (one of: {', '.join(sorted(set(HOLDABLE) | set(made('thing'))))}, or "none"),
   doing (one line: their pose and action).
-- animals (0-2): id, kind ({', '.join(ANIMALS)}), color.
+- animals (0-2): id, kind ({', '.join(ANIMALS)}), color, does ({' | '.join(ANIMAL_DOES)}: what it is doing in the moment).
 - things (0-6): id, kind: set props ({', '.join(sorted(opener3d.PROPS))}) or drawn things ({', '.join(DRAWN_THINGS)}),
   what (one line), height (metres, drawn things only).
 - action: who (an id), does ({', '.join(VERBS)}), on (an id or null). A knock needs a "house", "shopfront" or "cabin" thing.
@@ -194,7 +205,7 @@ them in a 3D set and film them. Plan ONE clear picture of the strangest moment s
   looks (one line: how it looks), instead (the nearest listed one, used if it can't be made).
 Real facts only: the people, things, clothes and era of the story.{fix}
 Reply with ONLY JSON: {{"moment": "one sentence", "place": "...", "light": "...", "people": [...], "animals": [...],
-"things": [...], "action": {{...}}, "beats": [...], "new_parts": [...]}}""", fatal=False)
+"things": [...], "action": {{...}}, "beats": [...], "new_parts": [...]}}""", fatal=False, brain=strong())
         st, problems = check_staging(raw, words)
         if st and not problems:
             short["opener_staging"] = st
@@ -208,7 +219,7 @@ def staging_text(st: dict | None) -> str:
         return "none"
     who = "; ".join(f"{p['id']} ({p['who']}, {p['hat']} hat{', holding ' + p['holds'] if p['holds'] != 'none' else ''})"
                     for p in st.get("people", []))
-    rest = ", ".join([a["kind"] for a in st.get("animals", [])] + [t["kind"] for t in st.get("things", [])])
+    rest = ", ".join([f"{a['kind']} ({a.get('does', 'stands')})" for a in st.get("animals", [])] + [t["kind"] for t in st.get("things", [])])
     act = st.get("action") or {}
     beats = " / ".join(f"{b['shot']} on {'+'.join(b['on'])} at {b['at']}" for b in st.get("beats", []))
     return (f"{st.get('place')}, {st.get('light')} light | {who}{' | ' + rest if rest else ''} | "
@@ -318,18 +329,18 @@ def default_cutout(p: dict, st: dict) -> dict:
     if st["action"]["does"] == "knocks" and st["action"]["who"] == p["id"]:
         hold = f"['{p['holds']}', null]" if p["holds"] != "none" else "[null, null]"
         return {"name": p["id"], "w": 1200, "h": 1100, "height": 2.3, "frames": 4, "fps": 8,
-                "code": f"export default function draw(k, f) {{ k.knock(600, 1080, 3.4, {{phase: f / 4, person: {{hat: '{p['hat']}', "
+                "code": f"export default function draw(k, f, u) {{ k.knock(600, 1080, 3.4, {{phase: u, person: {{hat: '{p['hat']}', "
                         f"coat: {coat}, skin: k.SKIN[1], face: f % 2 ? 'open' : 'flat', hold: {hold}}}}}); }}"}
     return {"name": p["id"], "w": 700, "h": 1100, "height": 1.75, "frames": 2, "fps": 6,
-            "code": f"export default function draw(k, f) {{ k.person(350, 1080, 4, {{hat: '{p['hat']}', coat: {coat}, "
-                    f"skin: k.SKIN[1], face: f % 2 ? 'open' : 'flat', hold: {hold}, arms: [35, f % 2 ? 48 : 38], bend: [-75, 30]}}); }}"}
+            "code": f"export default function draw(k, f, u) {{ k.person(350, 1080, 4, {{hat: '{p['hat']}', coat: {coat}, "
+                    f"skin: k.SKIN[1], face: f % 2 ? 'open' : 'flat', hold: {hold}, arms: [35, 43 + 5 * Math.sin(u * 2 * Math.PI)], bend: [-75, 30]}}); }}"}
 
 
 def animal_cutout(a: dict) -> dict:
     w, h, height, call = ANIMALS[a["kind"]]
-    o = "{" + (f"color: '{a['color']}', " if a.get("color") else "") + "walk: f * 1.6}"
+    o = "{" + ", ".join(x for x in (f"color: '{a['color']}'" if a.get("color") else "", ANIMAL_DOES[a.get("does") or "stands"]) if x) + "}"
     return {"name": a["id"], "w": w, "h": h, "height": height, "frames": 4, "fps": 6,
-            "code": f"export default function draw(k, f) {{ const o = {o}; {call}; }}"}
+            "code": f"export default function draw(k, f, u) {{ const o = {o}; {call}; }}"}
 
 
 def paint(who: dict, st: dict, short: dict, folder: Path, problems: list[str] | None = None, old: dict | None = None) -> dict:
@@ -356,7 +367,7 @@ The set: {st['place']}, {st['light']} light. Story era: {short.get('topic') or s
 {(DRAWN / 'CUTOUT.md').read_text(encoding='utf-8')}
 --- The drawing kit (only these sections apply to a cut-out) ---
 {kit_text('People', 'Animals', 'Rooms and furniture', 'Props', 'Made parts', 'Drawing your own thing')}{made_note()}{fix}
-Reply with ONLY JSON: {{"w": ..., "h": ..., "height": ..., "frames": ..., "fps": ..., "code": "export default function draw(k, f) {{ ... }}"}}""",
+Reply with ONLY JSON: {{"w": ..., "h": ..., "height": ..., "frames": ..., "fps": ..., "code": "export default function draw(k, f, u) {{ ... }}"}}""",
                           fatal=False)
         cut = {"name": who["id"], **{k: data.get(k) for k in ("w", "h", "height", "frames", "fps")},
                "code": drawn_opener.clean_code(data.get("code"))} if isinstance(data, dict) else None
@@ -367,7 +378,7 @@ Reply with ONLY JSON: {{"w": ..., "h": ..., "height": ..., "frames": ..., "fps":
     print(f"    painter {who['id']}: no usable code, drawing the plain kit version")
     return default_cutout(who, st) if not thing else {
         "name": who["id"], "w": 600, "h": 600, "height": who["height"], "frames": 1,
-        "code": f"export default function draw(k, f) {{ {'k.thing(' + repr(who['kind']) + ', 300, 580, 3)' if who['kind'] in made('thing') else 'k.' + who['kind'] + '(300, 580, 2)'}; }}"}
+        "code": f"export default function draw(k, f, u) {{ {'k.thing(' + repr(who['kind']) + ', 300, 580, 3)' if who['kind'] in made('thing') else 'k.' + who['kind'] + '(300, 580, 2)'}; }}"}
 
 
 # ---- placer ----------------------------------------------------------------------------------------------------
@@ -386,7 +397,7 @@ def place(st: dict, cuts: list[dict], short: dict, words: list, seconds: float, 
 You are the PLACER. The painted cut-outs (place and time each one; you cannot change their drawings):
 {listing}
 {(DRAWN / 'STAGE3D.md').read_text(encoding='utf-8')}{fix}
-Reply with ONLY the stage JSON.""", fatal=False)
+Reply with ONLY the stage JSON.""", fatal=False, brain=strong())
 
 
 def assemble(raw, cuts: list[dict], st: dict, words: list, seconds: float, narration: str) -> tuple[dict | None, list[str]]:
@@ -478,7 +489,7 @@ def plan(short: dict, words: list, seconds: float, folder: Path, repair: str | N
             err = opener3d.render(stage_, seconds, folder)
             problems = [f"placement: {err}"] if err else opener3d.blends(stage_, folder)
             if not problems:
-                preview = opener3d.sheet(folder / "opener.mp4", seconds, folder / f"sheet3d{attempt + 1}.png", stage_["shots"])
+                preview = opener3d.sheet(folder / "opener.mp4", seconds, folder / f"sheet3d{attempt + 1}.png", stage_["shots"], folder / "cutouts")
                 needs = f" It must show: {', '.join(stage_['needs'])}." if stage_["needs"] else ""
                 score, problems = drawn_opener.review(short, {"moment": stage_["moment"] + needs}, preview, seconds,
                                                       pairs=True, owners=owners)
@@ -488,6 +499,8 @@ def plan(short: dict, words: list, seconds: float, folder: Path, repair: str | N
         else:
             score = 0.0
         log.append(f"draft {attempt + 1}: {score:g}/10 ({drawn_opener.minutes(t)})")
+        if reviewed and score < drawn_opener.PASS and not drawn_opener.spoils(problems) and score > (short.get("opener3d_best") or {}).get("score", 0):
+            short["opener3d_best"] = {"score": score, "plan": {**stage_, "kind": "3d"}}  # drawn_opener.make_opener may keep it
         if score >= drawn_opener.PASS:
             log.append(f"total {drawn_opener.minutes(began)}")
             print(f"    3D opener passed ({score:g}/10, crew total {drawn_opener.minutes(began)})")

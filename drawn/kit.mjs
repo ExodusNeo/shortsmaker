@@ -284,18 +284,36 @@ export function makeKit(ctx, t, words = [], light = lightOf()) {
   };
 
   // ---- animals (bean style: body, stick legs, dot eye; local space faces right, flip faces left) -----------------
+  // `does` (2026-11-06: a pig that couldn't eat cost the Pig War opener points in every run): "eat" bows the head to
+  // the ground with a chewing nod (a chicken pecks), "run" strides wider with a bob and a lean, "jump" hops; the
+  // phase is `walk` (give it, e.g. walk: u * 2 * Math.PI), else the clock.
+  let cur = {};
+  const phase = () => cur.walk ?? t * 6;
   const legs = (pts, walk, len, w = 4.6) => pts.forEach(([lx, ly], i) => {
-    const a = walk == null ? 0 : Math.sin(walk + i * Math.PI / 2) * .45;
+    const run = cur.does === "run" || cur.does === "jump" ? 1.7 : 1;
+    const a = walk == null ? 0 : Math.sin(walk + i * Math.PI / 2) * .45 * run;
     p.stroke([[lx, ly], [lx + Math.sin(a) * len, ly + Math.cos(a) * len]], { w, taper: .3 });
   });
-  const animal = (x, y, s, o, draw, w = 70) => { if (w) k.shadow(x, y, w * s); part(); ctx.save(); ctx.translate(x, y); ctx.scale(s * (o.flip ? -1 : 1), s); draw(); ctx.restore(); };
+  // the head (and whatever is drawn in fn) bows round the neck at (px, py), up to `deg` while eating
+  const bow = (px, py, deg, fn, drop = 0) => {  // drop: how far the head also sinks (a pig's snout to the ground)
+    const e = cur.does === "eat", a = e ? deg * (.82 + .18 * Math.sin(t * 10)) * Math.PI / 180 : 0;
+    ctx.save(); ctx.translate(px, py + (e ? drop : 0)); ctx.rotate(a); ctx.translate(-px, -py); fn(); ctx.restore();
+  };
+  const animal = (x, y, s, o, draw, w = 70) => {
+    if (w) k.shadow(x, y, w * s);
+    part(); cur = o; ctx.save(); ctx.translate(x, y); ctx.scale(s * (o.flip ? -1 : 1), s);
+    if (o.does === "run") { ctx.translate(0, -Math.abs(Math.sin(phase())) * 10); ctx.rotate(.05); }
+    if (o.does === "jump") { const h = Math.max(0, Math.sin(phase())); ctx.translate(0, -h * 70); ctx.rotate(-.12 * h); }
+    if (o.does === "eat") ctx.rotate(.05);  // leaning into the food
+    draw(); ctx.restore(); cur = {};
+  };
   k.dog = (x, y, s = 1, o = {}) => animal(x, y, s, o, () => {
     const col = o.color || "#B98A55";
     legs([[-50, -40], [-34, -40], [34, -40], [50, -40]], o.walk, 40);
     const B = [[-70, -50], [-60, -82], [40, -86], [62, -60], [50, -40], [-60, -38]]; k.paint(B, col, { round: true }); p.blob(B, { w: 4 });
-    const Hd = ellPts(78, -100, 30, 25, 14); k.paint(Hd, col); p.ring(78, -100, 30, 25, { w: 4 });
+    bow(56, -78, 62, () => { const Hd = ellPts(78, -100, 30, 25, 14); k.paint(Hd, col); p.ring(78, -100, 30, 25, { w: 4 });
     p.wash([[96, -98], [124, -92], [120, -80], [98, -84]], col, { solid: true, over: true }); p.stroke([[96, -98], [124, -92], [120, -80], [98, -84]], { w: 3.4 });
-    p.wash([[62, -118], [52, -86], [70, -96]], "#7A5A3A", { solid: true, over: true }); p.dot(122, -92, 4.5); p.dot(84, -106, 4);
+    p.wash([[62, -118], [52, -86], [70, -96]], "#7A5A3A", { solid: true, over: true }); p.dot(122, -92, 4.5); p.dot(84, -106, 4); });
     p.stroke([[-68, -70], [-96, -96 + Math.sin(t * 12) * 10]], { w: 4.4, taper: .5 });
   }, 70);
   k.chicken = (x, y, s = 1, o = {}) => animal(x, y, s, o, () => {
@@ -304,9 +322,9 @@ export function makeKit(ctx, t, words = [], light = lightOf()) {
     const wing = o.flap ? Math.sin(t * 20) * 22 : 0;
     p.stroke([[-20, -86], [10, -92 - wing], [26, -76]], { w: 3.4 });
     p.stroke([[-50, -92], [-74, -126], [-62, -96], [-80, -104]], { w: 3.6 });
-    if (!o.headless) { k.paint(ellPts(46, -132, 22, 22, 12), o.color || C.white); p.ring(46, -132, 22, 22, { w: 4 });
+    if (!o.headless) bow(30, -96, 95, () => { k.paint(ellPts(46, -132, 22, 22, 12), o.color || C.white); p.ring(46, -132, 22, 22, { w: 4 });
       p.wash([[40, -152], [48, -168], [56, -152]], C.red, { solid: true, over: true }); p.wash([[66, -134], [84, -128], [66, -122]], C.gold, { solid: true, over: true }); p.dot(52, -136, 3.6);
-      p.stroke([[36, -104], [42, -114]], { w: 3.6 }); }
+      p.stroke([[36, -104], [42, -114]], { w: 3.6 }); });
     else { p.stroke([[34, -110], [44, -130]], { w: 6 }); p.wash(ellPts(44, -130, 8, 5, 8), C.red, { solid: true, over: true }); }
   }, 42);
   // a horse with jointed legs, hooves, mane and tail (2026-11-03: the stick-leg one was replaced by hand-built boxes in
@@ -337,6 +355,7 @@ export function makeKit(ctx, t, words = [], light = lightOf()) {
       p.stroke([[-114, -176], [-136, -120 + Math.sin(t * 5 + 1) * 6], [-124, -76]], { w: 8, color: dark, taper: .6 });
       const B = [[-118, -150], [-104, -196], [-20, -208], [84, -204], [116, -168], [104, -124], [20, -112], [-96, -116]];
       k.paint(B, col); p.blob(B, { w: 4.4 });
+      bow(96, -168, 72, () => {                                                          // neck and head bow to graze
       const N = [[64, -200], [104, -276], [126, -312], [158, -300], [150, -262], [128, -214], [112, -146]];
       k.paint(N, col, { sharp: false }); p.blob(N, { w: 4.4 });                          // neck
       const Hd = [[118, -300], [140, -330], [172, -318], [216, -268], [224, -244], [204, -230], [170, -244], [136, -270]];
@@ -350,6 +369,7 @@ export function makeKit(ctx, t, words = [], light = lightOf()) {
       }
       p.dot(164, -290, 5.5); p.stroke([[158, -297], [170, -298]], { w: 2.4 });            // eye and lid
       p.dot(214, -252, 3.2); p.stroke([[204, -233], [218, -236]], { w: 2.2 });            // nostril, mouth
+      });
       const [bn0, bn1] = gait(2), [fn0, fn1] = gait(3);
       horseLeg(-70, bn0, bn0 + bn1, col, dark);                                            // near hind leg
       const up = o.tap ? 40 * lift : fn0, low = o.tap ? up - 105 * lift : fn0 + fn1;     // tapping: knee up, hoof tucked
@@ -365,41 +385,42 @@ export function makeKit(ctx, t, words = [], light = lightOf()) {
   k.pig = (x, y, s = 1, o = {}) => animal(x, y, s, o, () => {
     legs([[-40, -36], [-22, -36], [22, -36], [40, -36]], o.walk, 32, 5);
     const B = ellPts(0, -76, 74, 48, 18); k.paint(B, o.color || "#E9A9A0"); p.ring(0, -76, 74, 48, { w: 4 });
-    k.paint(ellPts(78, -84, 18, 16, 10), "#D98A82"); p.ring(78, -84, 18, 16, { w: 3.4 }); p.dot(74, -84, 3); p.dot(84, -84, 3); p.dot(54, -98, 4);
+    bow(50, -70, 70, () => { if (o.does === "eat") { k.paint(ellPts(52, -84, 34, 28, 14), o.color || "#E9A9A0"); p.ring(52, -84, 34, 28, { w: 4 }); }  // a head joining the bowed snout to the body
+      k.paint(ellPts(78, -84, 18, 16, 10), "#D98A82"); p.ring(78, -84, 18, 16, { w: 3.4 }); p.dot(74, -84, 3); p.dot(84, -84, 3); p.dot(54, -98, 4); }, 26);
     p.stroke([[-72, -84], [-88, -94], [-80, -104]], { w: 3.4 });
   }, 85);
   k.cow = (x, y, s = 1, o = {}) => animal(x, y, s, o, () => {
     legs([[-80, -110], [-60, -110], [60, -110], [80, -110]], o.walk, 100, 6);
     const B = [[-110, -116], [-104, -190], [90, -196], [112, -150], [96, -110]]; k.paint(B, o.color || C.white, { round: true }); p.blob(B, { w: 4.4 });
     p.wash(ellPts(-30, -160, 30, 22, 12), C.ink, { alpha: .85 }); p.wash(ellPts(40, -140, 22, 16, 10), C.ink, { alpha: .85 });
-    k.paint(ellPts(130, -186, 34, 30, 14), o.color || C.white); p.ring(130, -186, 34, 30, { w: 4 }); p.dot(140, -192, 4.5);
-    p.stroke([[112, -214], [100, -236]], { w: 4 }); p.stroke([[148, -214], [160, -236]], { w: 4 });
+    bow(100, -160, 88, () => { k.paint(ellPts(130, -186, 34, 30, 14), o.color || C.white); p.ring(130, -186, 34, 30, { w: 4 }); p.dot(140, -192, 4.5);
+    p.stroke([[112, -214], [100, -236]], { w: 4 }); p.stroke([[148, -214], [160, -236]], { w: 4 }); });
   }, 140);
   k.cat = (x, y, s = 1, o = {}) => animal(x, y, s, o, () => {         // about 120*s tall
     const col = o.color || "#E0A060";
     legs([[-36, -30], [-22, -30], [26, -30], [40, -30]], o.walk, 30, 3.8);
     const B = [[-52, -36], [-46, -64], [30, -68], [50, -50], [42, -30], [-46, -28]]; k.paint(B, col, { round: true }); p.blob(B, { w: 4 });
     p.stroke([[-50, -52], [-78, -72], [-82, -104 + Math.sin(t * 3) * 6], [-66, -118 + Math.sin(t * 3) * 8]], { w: 5, taper: .5 });
-    k.paint([[44, -90], [48, -116], [60, -96]], col, { sharp: true }); p.poly([[44, -90], [48, -116], [60, -96]], { w: 3 });
+    bow(44, -58, 55, () => { k.paint([[44, -90], [48, -116], [60, -96]], col, { sharp: true }); p.poly([[44, -90], [48, -116], [60, -96]], { w: 3 });
     k.paint([[66, -98], [80, -114], [82, -90]], col, { sharp: true }); p.poly([[66, -98], [80, -114], [82, -90]], { w: 3 });
-    k.paint(ellPts(64, -80, 26, 22, 14), col); p.ring(64, -80, 26, 22, { w: 4 }); p.dot(74, -84, 4); p.dot(88, -76, 3, "#C86A6A");
+    k.paint(ellPts(64, -80, 26, 22, 14), col); p.ring(64, -80, 26, 22, { w: 4 }); p.dot(74, -84, 4); p.dot(88, -76, 3, "#C86A6A"); });
   }, 50);
   k.rabbit = (x, y, s = 1, o = {}) => animal(x, y, s, o, () => {      // sitting, about 175*s tall with ears
     const col = o.color || "#C9B8A6", tw = Math.sin(t * 2.4) * 4;
     k.paint(ellPts(-46, -42, 13, 13, 10), C.white); p.ring(-46, -42, 13, 13, { w: 3 });
     k.paint(ellPts(0, -50, 48, 46, 18), col); p.ring(0, -50, 48, 46, { w: 4 });
     k.paint(ellPts(30, -6, 24, 8, 12), col); p.ring(30, -6, 24, 8, { w: 3 });
-    for (const E of [[[30, -108], [24 + tw, -172], [38 + tw, -176], [42, -112]], [[46, -108], [56 + tw, -168], [66 + tw, -162], [54, -104]]]) { k.paint(E, col, { round: true }); p.blob(E, { w: 3.4 }); }
-    k.paint(ellPts(42, -92, 28, 25, 14), col); p.ring(42, -92, 28, 25, { w: 4 }); p.dot(52, -96, 4); p.dot(68, -88, 3, "#C86A6A");
+    bow(24, -70, 50, () => { for (const E of [[[30, -108], [24 + tw, -172], [38 + tw, -176], [42, -112]], [[46, -108], [56 + tw, -168], [66 + tw, -162], [54, -104]]]) { k.paint(E, col, { round: true }); p.blob(E, { w: 3.4 }); }
+    k.paint(ellPts(42, -92, 28, 25, 14), col); p.ring(42, -92, 28, 25, { w: 4 }); p.dot(52, -96, 4); p.dot(68, -88, 3, "#C86A6A"); });
   }, 55);
   k.bear = (x, y, s = 1, o = {}) => animal(x, y, s, o, () => {        // on all fours, about 230*s tall, 340*s long
     const col = o.color || "#6B4A32";
     legs([[-88, -64], [-60, -64], [56, -64], [86, -64]], o.walk, 64, 22);
     const B = [[-128, -74], [-122, -138], [-70, -168], [20, -176], [62, -204], [104, -178], [124, -118], [106, -66], [0, -58], [-100, -60]];
     k.paint(B, col, { round: true }); p.blob(B, { w: 4.4 });
-    k.disc(126, -192, 15, col); k.disc(170, -194, 15, col);
+    bow(104, -140, 45, () => { k.disc(126, -192, 15, col); k.disc(170, -194, 15, col);
     k.paint(ellPts(150, -152, 50, 44, 18), col); p.ring(150, -152, 50, 44, { w: 4.4 });
-    k.paint(ellPts(188, -138, 24, 17, 12), "#B08A68"); p.ring(188, -138, 24, 17, { w: 3 }); p.dot(208, -144, 7); p.dot(160, -164, 5);
+    k.paint(ellPts(188, -138, 24, 17, 12), "#B08A68"); p.ring(188, -138, 24, 17, { w: 3 }); p.dot(208, -144, 7); p.dot(160, -164, 5); });
   }, 160);
 
   // ---- vehicles and buildings -----------------------------------------------------------------------------------

@@ -97,6 +97,8 @@ hardhat | none; `hatColor` recolours most, `band` the fedora/boater/officer band
 down, outward positive: 160 = raised overhead), `bend: [l, r]` (elbow degrees), `hold: [left, right]` (a thing gripped in that hand, the hand over it: 'letter', 'paper', 'cup', 'bottle', 'coin', 'moneybag'), `reach: [[x, y] | null, [x, y] | null]`
 (left, right: that hand lands exactly on the point, overriding arms/bend; out of reach it points at it), `walk` (phase: `t * 9` walks),
 `dance` (phase: `t * 8` dances wildly: hops, sways, kicks, arms flung up; give `arms`/`bend` to choose them yourself),
+`legs: [[hip, knee], [hip, knee]]` (left, right, degrees like `arms`/`bend`: hip from straight down, outward
+positive; knee bends the shin back in; a kick `[[4, 0], [55, 80]]`; walking and dancing bend the knees themselves),
 `flip` (face left), `still`, `look` (eye shift px).
 Arms that read: one arm doing the action (pointing, knocking, raised while speaking) and the other either on the hip
 (`arms: [35, ...], bend: [-75, ...]`: the elbow sticks out, it reads as attitude) or hanging (`[12, ...], [6, ...]`).
@@ -104,6 +106,9 @@ Never cross an arm in front of the body (negative arms): on a stick figure it re
 `k.crowd(x0, x1, y, count, s, {hats: [...], face, arms})` a row of people; returns their positions.
 
 ## Animals (stand on (x, y); face right, `flip: true` faces left; `walk: t * 9` walks)
+Every animal also takes `does`: `'eat'` (the head bows to the ground with a chewing nod; a chicken pecks),
+`'run'` (a wider stride, bob and lean; give `walk`), `'jump'` (a hop; give `walk`). A pig raiding a garden:
+`k.pig(x, y, s, {does: 'eat'})`.
 `k.dog`, `k.chicken` (`headless: true`, `flap: true`), `k.cow`, `k.pig`, `k.cat` (about 120*s tall), `k.rabbit`
 (sitting, 175*s with ears), `k.bear` (on all fours, 230*s tall, 340*s long) (x, y, s, o; `color`);
 `const h = k.horse(x, y, s, o)` about 350*s px tall, 370*s long; o: `color`, `mane`, `walk`, `tap: [k.word("four"),

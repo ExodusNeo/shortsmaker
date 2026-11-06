@@ -23,6 +23,7 @@ FIXES = 2  # look-and-fix rounds after the first draft (owner: a few fixes, then
 # The art director's score (1-10) a draft needs. A list of flaws alone never passed: on the first live runs
 # (2026-10-31) it found some in every draft, good ones included, and all 6 Shorts fell back to the motion graphic.
 PASS = 7
+KEEP = 6  # neither opener passed: the better of the 3D and drawn drafts is kept from this score (owner, 2026-11-06)
 TIMEOUT = 600  # one node run (a 4 s render takes ~20 s)
 # The scene runs as code on this PC and its writer has read Wikipedia text: only kit calls and plain JavaScript.
 # node also runs with --disallow-code-generation-from-strings (no eval / Function at run time).
@@ -228,8 +229,10 @@ in answer_why. An opening that reveals the answer cannot pass, even if the drawi
         verdict = f"""Score it 1-10: does the viewer SEE the answer happen, at a glance, on a phone? {PASS} = good enough to post:
 small flaws are fine. Below {PASS}, list the problems that stop it working, the worst first. reveals_answer is false here."""
     look = look_dir(sheet)
-    rows = (" The bottom row shows the same moments 0.2 s later: whatever differs between a frame and the one under it"
-            " is moving." if pairs else "")
+    rows = (" The second row shows the same moments 0.2 s later: whatever differs between a frame and the one under it"
+            " is moving. A third row, when there is one, shows each drawn person or animal's cycle of drawings in order"
+            " (1-2-3-4, left to right then down): it plays them over and over the whole time, smoothly, so that is how"
+            " it moves." if pairs else "")
     tags = ("\nEach problem starts with who must fix it, one of: " + "; ".join(f"{k} ({v})" for k, v in owners.items()) +
             '. Example: "placement: the knocker stands half inside the wall".' if owners else "")
     data = llm.ask_ai(f"""You are the art director of a YouTube Short: "{short['title']}". Open {look / sheet.name}: six frames of its
@@ -275,6 +278,11 @@ Reply with ONLY JSON: {{"score": 7, "reveals_answer": false, "answer_why": "", "
     return float(score), found[:8] or ([] if score >= PASS else ["the art director gave a low score without saying why"])
 
 
+def spoils(problems: list[str]) -> bool:
+    """The art director found the draft gives the answer away (review() puts that problem first)."""
+    return any(p.startswith("Opening reveals the answer") for p in problems)
+
+
 def fingerprint(code: str, seconds: float, three: bool = False) -> str:
     """Changes when the plan or the code that renders it changes (a 3D plan also depends on its stage and cut-outs)."""
     files = [DRAWN / "kit.mjs"] + ([DRAWN / "cutouts.mjs", ROOT / "remotion" / "src" / "Opener3D.tsx"] if three else [DRAWN / "run.mjs"])
@@ -308,6 +316,7 @@ def make_opener(short: dict, words: list, seconds: float, work: Path, i: int = 0
 
     name = "opener" if i == 0 else "reveal"
     repair = short.pop("drawn_repair", None) if i == 0 else None
+    repairing = bool(repair)  # sent back by the final review: never fall back to an earlier, unrepaired draft
     # a fix round that sends the opener back retries 3D only if 3D is what passed before (a failed 3D stays failed)
     if (not plan or repair) and i == 0 and not short.get("opener3d_failed"):
         from shortsmaker import opener3d, opener_crew  # they use this module's review and coder brief
@@ -324,12 +333,16 @@ def make_opener(short: dict, words: list, seconds: float, work: Path, i: int = 0
         print("  drawing the opener: the strangest moment as a hand-drawn animation..." if i == 0 else
               f"  drawing scene {i + 1}, the reveal, as a hand-drawn animation...")
         problems, sheet, score, best = ([repair] if repair else []), None, 0.0, None
+        kept = None  # the best reviewed drawn draft that doesn't give the answer away: (score, plan)
         for attempt in range(FIXES + 1):
             began = time.monotonic()
             draft = write(short, words, seconds, plan, problems, sheet, i=i)
             if not draft:
                 if plan is None:
-                    return fail("the AI wrote no usable scene")
+                    best3 = short.get("opener3d_best") if i == 0 and not repairing else None
+                    if not best3 or best3["score"] < KEEP:
+                        return fail("the AI wrote no usable scene")
+                    problems = ["the AI wrote no usable scene"]  # the best 3D draft may still be kept below
                 break  # keep the last draft's problems
             plan, sheet, score = draft, None, 0.0
             problems = lint(plan["code"]) + missing_parts(plan, short["scenes"][i]["narration"])
@@ -346,14 +359,22 @@ def make_opener(short: dict, words: list, seconds: float, work: Path, i: int = 0
                         score, plan["unreviewed"] = PASS, True
             if score >= PASS:
                 break
+            if sheet and not spoils(problems) and score > (kept or (0, None))[0]:
+                kept = (score, dict(plan))
             print(f"    {name} draft {attempt + 1} ({score:g}/10, {minutes(began)}): " + "; ".join(problems)[:300])
             if sheet and best is not None and score <= best:  # a fix that didn't help: more of them rarely do
                 print(f"    {name}: no better than the last reviewed draft, stopping here")
                 break
             best = score if sheet else best
         if score < PASS:
-            return fail(f"the drawn {name}'s last draft scored {score:g}/10 after {FIXES} fixes: "
-                        f"{'; '.join(problems)[:300]}")
+            # neither passed: keep the better of the best 3D and drawn drafts when it reached KEEP (opener only)
+            three = short.get("opener3d_best") if i == 0 and not repairing else None
+            pick = max([c for c in (kept, three and (three["score"], three["plan"])) if c and i == 0], key=lambda c: c[0], default=None)
+            if not pick or pick[0] < KEEP:
+                return fail(f"the drawn {name}'s last draft scored {score:g}/10 after {FIXES} fixes: "
+                            f"{'; '.join(problems)[:300]}")
+            plan = {**pick[1], "kept": pick[0]}
+            print(f"    {name}: none passed {PASS}/10; keeping the best draft ({'3D' if plan.get('kind') == '3d' else 'drawn'}, {pick[0]:g}/10)")
         short[key] = plan
     if plan.get("kind") == "3d":
         from shortsmaker import opener3d

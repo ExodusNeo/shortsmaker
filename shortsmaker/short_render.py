@@ -135,6 +135,9 @@ def use_opener(short: dict, bounds: list[float], all_words: list, work: Path, cl
         tried = f" (no 3D opener: {short['opener3d_failed']})" if kind == "drawn opener" and short.get("opener3d_failed") else ""
         sources[0] = f"{kind} ({'drawn cut-outs in a 3D set' if kind == '3D opener' else 'hand-drawn animation'}): {short['drawn']['moment']}"
         short["opening_note"], short["opener_used"] = f"{kind}: {short['drawn']['moment']}{tried}", True
+        if short["drawn"].get("kept"):
+            return (f"{kind}: kept at {short['drawn']['kept']:g}/10, the best of the 3D and drawn openers (neither reached "
+                    f"{drawn_opener.PASS}): look at scene 1 yourself")
         return (f"{kind}: its art director gave no verdict, so nobody judged it: look at scene 1 yourself"
                 if short["drawn"].get("unreviewed") else None)
     short["opening_note"] = (f"drawn opener failed ({why}) -> " if why else "") + short["opener_graphic"] + (

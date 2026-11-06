@@ -9,14 +9,14 @@ export default function scene(k, t) {
   } else if (page === 1) {     // more people options and a crowd
     k.room(1350);
     k.person(200, 900, 1, { hat: "bonnet", dress: "#8A5A9A", face: "open", arms: [150, 20], bend: [30, 0] });
-    k.person(520, 900, 1, { hat: "top", beard: true, coat: "#2B2622", mustache: true, arms: [20, 160], bend: [0, -40] });
+    k.person(520, 900, 1, { hat: "top", beard: true, coat: "#2B2622", mustache: true, arms: [20, 160], bend: [0, -40], legs: [[4, 0], [55, 80]] });
     const p = k.person(850, 900, 1, { hat: "crown", coat: k.C.red, walk: t * 9, flip: true }); k.cup(p.hands[1][0], p.hands[1][1] + 40, .5, { steam: true });
     k.crowd(120, 960, 1300, 6, .7, { hats: ["bowler", "cap", "none"] });
   } else if (page === 2) {     // animals
     k.sky("day"); k.ground(1400, "dirt");
-    k.dog(220, 650, 1, { walk: t * 10 }); k.chicken(640, 650, 1.2, {}); k.chicken(900, 650, 1.2, { headless: true, flip: true, walk: t * 10 });
-    k.horse(300, 1100, 1, { tap: [2.6] }); k.cow(780, 1100, .9, { flip: true });
-    k.pig(300, 1400, 1, {}); k.bird(700, 1300, 1.2); k.bird(850, 1250, .8);
+    k.dog(220, 650, 1, { walk: t * 10, does: "run" }); k.chicken(640, 650, 1.2, { does: "eat" }); k.chicken(900, 650, 1.2, { headless: true, flip: true, walk: t * 10 });
+    k.horse(300, 1100, 1, { tap: [2.6] }); k.cow(780, 1100, .9, { flip: true, does: "eat" });
+    k.pig(300, 1400, 1, { does: "eat" }); k.horse(760, 1550, .55, { does: "eat" }); k.bird(700, 1300, 1.2); k.bird(850, 1250, .8);
   } else if (page === 3) {     // buildings
     k.sky("dusk"); k.hills(1200); k.ground(1500, "street");
     k.house(250, 800, .9, { lit: true }); k.shop(760, 800, .9, { sign: "GROCER" });
@@ -31,7 +31,7 @@ export default function scene(k, t) {
     k.door(140, 1000, .9, { open: .5, inside: "#F3D9A0" }); k.shelf(420, 1000, .8); k.lamp(620, 1000, .9, { kind: "floor" });
     k.table(860, 1000, 320); k.phone(790, 820, .9); k.radio(920, 820, .5);
     k.bed(330, 1500, .7, { canopy: true }); k.rug(800, 1440, 380); k.letter(800, 1250, .6, -.2); k.lamp(980, 1500, .9, { kind: "oil" });
-    k.cat(620, 1780, 1.2); k.rabbit(160, 1820, 1); k.bear(900, 1820, .7, { flip: true });
+    k.cat(620, 1780, 1.2, { does: "jump", walk: t * 4 }); k.rabbit(160, 1820, 1); k.bear(900, 1820, .7, { flip: true });
   } else {                     // props and effects
     k.room(1500, { window: false });
     k.table(540, 1500, 700); k.coins(300, 1300, 10); k.moneybag(540, 1310, .9); k.cup(740, 1320, 1, { steam: true, drink: k.C.molasses });
