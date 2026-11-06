@@ -11,6 +11,8 @@ REPO = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(REPO))
 from shortsmaker import audio_mix, cli, config, llm, media_tools, motion, session  # noqa: E402
 
+llm.ARGON_OUT = Path(tempfile.mkdtemp(prefix="argon_")) / "argon_out.txt"  # faked quota errors never reach real runs
+
 
 def test_root():
     assert config.ROOT == REPO, config.ROOT
@@ -100,8 +102,13 @@ def test_argon_out_of_quota_switches_to_flash():
             assert llm.ask_ai("review these frames", read_dir=Path(d)) == {"ok": 1}  # a review picture job, on Argon first
         assert asked == ["gemini-4-argon-high", llm.GEMINI_FALLBACK], asked
         assert llm.gemini_model() == llm.GEMINI_FALLBACK  # the rest of the run stays on Flash
+        llm._argon_exhausted = False  # the next run (a new process) remembers it for ARGON_REST...
+        assert llm.ARGON_OUT.exists() and llm.gemini_model() == llm.GEMINI_FALLBACK
+        os.utime(llm.ARGON_OUT, (0, 0))  # ...and tries Argon again once that has passed
+        assert llm.gemini_model() == "gemini-4-argon-high"
     finally:
         llm._gemini_model, llm._argon_exhausted, subprocess.run, shutil.which, session.BRAIN, session.NO_QUOTA = old
+        llm.ARGON_OUT.unlink(missing_ok=True)
 
 
 def test_run_agy_flags_and_boundaries():

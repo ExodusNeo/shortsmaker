@@ -17,7 +17,7 @@ from shortsmaker import opener3d  # noqa: E402
 
 opener3d.available = lambda: "switched off: these tests are about the drawn opener (tests/test_opener3d.py covers 3D)"
 
-EXAMPLE = (ROOT / "drawn" / "examples" / "dexter.mjs").read_text(encoding="utf-8")
+EXAMPLE = (ROOT / "drawn" / "examples" / "umbrellas.mjs").read_text(encoding="utf-8")
 WORDS = [(0.06, 0.2, "He"), (0.25, 0.6, "shipped"), (0.7, 1.0, "brass"), (1.05, 1.2, "bed"), (1.25, 1.6, "warmers"),
          (2.2, 2.7, "tropical"), (2.75, 3.4, "Caribbean")]
 
@@ -97,6 +97,20 @@ def test_drawn_opener_gives_up_after_fixes():
             assert "Math.random" in prompts[2] and "Last draft" in prompts[2]
             assert len(prompts) == 4 and "drawn" not in s
             assert drawn_opener.make_opener(s, WORDS, 3.5, Path(d)) == (None, why) and len(prompts) == 4
+    finally:
+        llm.ask_ai = saved
+
+
+def test_drawn_opener_stops_when_a_fix_does_not_help():
+    """Two reviewed drafts and the second scored no better: no third draft (each one cost ~4-9 minutes, 2026-11-05)."""
+    saved, prompts = llm.ask_ai, []
+    replies = [{"moment": "m", "code": EXAMPLE}, {"score": 5, "problems": ["the ship is too small"]},
+               {"moment": "m", "code": EXAMPLE}, {"score": 4, "problems": ["the ship is still small"]}]
+    llm.ask_ai = fake_ai(replies, prompts)
+    try:
+        with tempfile.TemporaryDirectory() as d:
+            clip, why = drawn_opener.make_opener(short(), WORDS, 3.5, Path(d))
+            assert clip is None and "scored 4/10" in why and len(prompts) == 4, (why, len(prompts))
     finally:
         llm.ask_ai = saved
 

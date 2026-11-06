@@ -1,140 +1,118 @@
-# 3D opener stage
+# 3D opener stage (the placer's manual)
 
-You stage scene 1 of a YouTube Short as a short 3D shot: flat hand-drawn cut-outs (people, animals, the strange
-object) standing inside a lit 3D set, filmed by a moving camera. You do not model anything: you pick the place, put
-furniture from the prop list in it, draw the cut-outs with the drawing kit, and aim the camera. The look we want is
-CLEAN: one big subject, a camera that keeps moving and cuts closer on the strange detail, one light mood, NO words.
+You stage scene 1 of a YouTube Short as a short 3D shot: flat hand-drawn cut-outs (the people, animals and the
+strange object, already painted by the crew's painters) standing inside a lit 3D set, filmed by a moving camera.
+You do not draw and you do not type coordinates. You choose the place, the furniture from the prop list, WHERE
+each thing stands (by relation: a mark on the set, at a house's door, beside the desk) and the camera shots (by
+size: wide, close...). The code turns that into positions and lenses. The look we want is CLEAN: one big subject,
+a camera that keeps moving and cuts closer on the strange detail, one light mood, NO words.
 
-Reply with ONE JSON object:
+Stage exactly the staging you are given (its place, light, people, things and action). Reply with ONE JSON object:
 ```json
 {"moment": "one sentence: what the shot shows",
- "needs": ["the things the story needs on screen: a letter, a closed door, a horse"],
- "place": "room", "mood": "interior", "colors": {"wall": "#7E5A40", "floor": "#5A3820"},
+ "needs": ["every thing the story needs on screen: a letter, a closed door, a horse"],
+ "place": "street", "mood": "dusk", "colors": {"ground": "#8A7A60"},
  "props": [...], "cutouts": [...], "shots": [...], "effects": [...]}
 ```
 
 **Frame 0 must already show what is strange**, in the middle of the moment: a stranger decides in the first second.
-When an effect IS the strange thing (the rings out of the eagle, the shaking, the rain), start it at 0, and let its
-spoken word make it stronger (a second effect, a whip in close). Nothing waits for its word to appear.
+When an effect IS the strange thing (the shaking, the rain), start it at 0 and let its spoken word make it stronger
+(a second effect, a whip in close). Nothing waits for its word to appear.
 
-## It must make sense (read before you stage anything)
-List in `needs` every thing the moment and its narration name or imply, then make sure each one is drawn: a
-messenger or courier carries his letter (`k.person(..., {hold: [null, 'letter']})`), a rider has a horse, a caller has a phone.
-Actions must work in the real world. A knock is on a CLOSED door (`open: 0`): the knocker stands on one side and
-the person answering is on the other, or opens it a crack. Nobody knocks on an open door, on air or on a wall
-(a live McLean draft knocked on a half-open door and its messenger had no letter: both are failures). A held thing
-is in the hand; a sitting person has a chair.
-Film one side of a wall. A knock is seen from OUTSIDE (place `street` or `outdoors` with a `house`, or a cut-out of the
-door with the knocker at it) or from INSIDE (the shut door, the listener in the room turning toward it): never the
-knocker and the listener in one room with the door between them hanging in the air.
-**A knock at a house (the recipe).** Props: `{"type": "house", "id": "home", "at": [0, -3]}`. One cut-out draws the
-closed door and the knocker with the kit's `k.knock` (the fist lands on the panel, impact lines on each hit) and
-stands flush on the house's own front door: `"against": "home"` (it ignores `at`).
-`{"name": "caller", "w": 1200, "h": 1100, "height": 2.3, "against": "home", "frames": 4, "fps": 8,
-"code": "export default function draw(k, f) { k.knock(600, 1080, 3.4, {phase: f / 4, person: {hat: 'kepi',
-coat: k.C.navy, skin: k.SKIN[1], face: f % 2 ? 'open' : 'flat', hold: ['letter', null]}}); }"}`
-Keep the door at the canvas centre (x = w / 2): that is where `against` puts the house's door. Close-ups aim at the
-knocker's name; a `jolt` on the caller at the knock word shakes door and fist together. A cut-out standing inside a
-house's walls is rejected.
-Make the subject stand out from what is behind it, by colour AND brightness: a navy coat on a warm wall, a red shirt
-on sand. Never a brown coat on a brown wall or a dark figure on a dark wall (the checker measures this).
+## It must make sense
+- Every thing in `needs` is on screen: a painted cut-out, or a prop.
+- A knock is on a CLOSED door. The knocker's cut-out already holds the door, closed, with his fist on it: stand it
+  `{"door": "<house id>"}` on a `house` or `shopfront` prop and the door lines up with the building's own doorway.
+  Never put a 3D `door` prop in front of a knocker as well.
+- Film one side of a wall: a knock is seen from OUTSIDE (street or outdoors, with a house).
+- Nobody stands hidden behind furniture: people stand in front of or beside a desk or counter. The code moves
+  anyone it finds inside furniture to stand in front of it.
+- The subject stands out from what is behind it by colour AND brightness (a navy coat on a warm wall, a red coat on
+  sand). In a room, pick the `wall` colour so the painted people pop.
 
-## Places (units are metres; y is up; the camera looks toward -z)
-- `"room"`: an interior 8 m wide (x -4..4), 4.4 m high. The back wall is at z = -4, side walls at x = -4 and 4,
-  the open side faces the camera (+z). Put the action between z = -3 and z = 0. `colors`: wall, floor, trim.
-- `"street"`: a town street running away from the camera, rows of plain buildings on both sides (x = +-5.2).
-  The road is x -3..3. `colors`: ground, sky.
+## Places
+- `"room"`: an interior with a back wall and two side walls; the open side faces the camera. `colors`: wall, floor, trim.
+- `"street"`: a town street running away from the camera, rows of town houses on both sides (don't add more).
+  `colors`: ground, sky.
 - `"outdoors"`: open ground with far hills and sky. `colors`: ground, sky.
 `mood`: "day" | "golden" | "dusk" | "night" | "interior" (a lamp-lit room). It sets the light, shadows, fog and grade.
 
-## Props (`{"type", "at": [x, z], "turn": degrees, "size": 1, "color": "#RRGGBB", "id": "name"}`)
+## Where things stand: `place`
+Every prop and cut-out gets a `place`, one relation:
+- `{"mark": "centre"}`: a fixed spot. Marks: `left`, `centre`, `right` (the action line), `front-left`,
+  `front-right` (nearer the camera), `back-left`, `back`, `back-right` (farther away).
+- `{"beside": "<id or name>", "side": "left" | "right"}`: next to something already placed (side as seen from the camera).
+- `{"front": "<id or name>"}`: just in front of it (toward the camera).
+- `{"door": "<house, shopfront or door id>"}`: flush on its front door (a knock, someone at the door).
+- `{"on": "<desk, table, counter, crate, barrel, cabinet, fireplace or bed id>", "side": "left" | "centre" | "right"}`:
+  standing on top of it: a small drawn thing (a machine on the desk, a cup on the table) or a prop (a `lamp` on the
+  desk). Never put a thing that belongs on a desk on the floor beside it.
+- `{"wall": "left" | "centre" | "right"}` (room only): hung on the back wall: a window, a picture, a carved seal,
+  a clock. Add `"height": 2.6` (metres) to hang it higher.
+Things one shot shows together stand together: put the second one `beside` the first, never on marks metres
+apart (a 9:16 frame is narrow: two people 2.5 m apart can only be filmed small).
+Props come before cut-outs; a relation may name anything placed before it.
+Two people on the same mark are moved apart automatically; still, give each their own mark or relation.
+
+## Props (`{"type", "id": "name", "place": {...}, "turn": degrees, "size": 1, "color": "#RRGGBB"}`)
 Most are real 3D models (furniture, trees, rocks, town buildings with timber walls, shutters and gable roofs);
 their own colours are fixed, so `color` only changes the simple ones (door, rug, counter, crate, barrel, fence,
-fireplace, frame, window). Each stands on the floor at `at`, facing the camera; `turn` spins it (90 = faces +x); `y` lifts it (a lamp on a desk:
-`"y": 0.86`). `"wall": true` hangs it on the room's back wall with `at` = [x, height of its centre].
-Give a prop an `id` when a shot or effect aims at it.
-- room: `desk` (2.3 x 1 m, top at 0.86), `table` (1.6 x 0.9, top 0.8), `chair`, `door` (`open`: 0..1; put it on the
-  back wall line: `at: [x, -3.95]`), `window` (use `"wall": true`, e.g. `at: [-2.2, 2.4]`), `frame` (a picture,
-  wall), `shelf` (bookcase 1.3 x 2.3 m), `lamp` (desk lamp, `lit`), `bed` (2 m long, headboard at the back),
-  `rug`, `cabinet`, `counter` (3 m shop/bar counter), `fireplace` (glowing).
-- anywhere: `crate`, `barrel`, `rock`, `tree`, `fence` (`length`), `lamppost` (`lit`).
-- street / outdoors: `house` (a two-storey town house, 7.2 m wide, 2.4 m storeys, gable roof), `shopfront` (one with an awning).
-  The `street` place already has rows of town houses on both sides: don't add more there.
+fireplace, frame, window). Each faces the camera; `turn` spins it (90 = faces right). Give a prop an `id` when a
+relation, shot or effect names it. `"lit": true` lights a lamp, lamppost or a house's windows.
+- room: `desk` (2.3 m wide), `table`, `chair`, `door` (`open`: 0..1, set in the back wall), `window` (wall),
+  `frame` (a picture, wall), `shelf` (bookcase), `lamp` (desk lamp: `"y": 0.86` stands it on a desk), `bed`, `rug`,
+  `cabinet`, `counter` (3 m shop or bar counter), `fireplace` (glowing).
+- anywhere: `crate`, `barrel`, `rock`, `tree`, `fence` (`length`), `lamppost`.
+- outdoors: `garden` (a 3 x 3 m vegetable patch in dirt rows: potatoes, cabbages, turnips), `field` (a 4 x 3 m patch
+  of wheat). People and animals can stand `front` of them or `beside` them.
+- street / outdoors: `house` (a two-storey European town house with plaster or timber walls, 7.2 m wide),
+  `shopfront` (one with an awning), `cabin` (a one-storey timber cabin, 4.8 m wide: farms, frontier, villages,
+  huts). On a mark, its FRONT wall stands just behind the mark; `{"door": id}` works on all three.
 Keep it to the few props the moment needs: a clean set, not a cluttered one.
 
-## Cut-outs (the people, animals and the strange object)
-```json
-{"name": "amb", "w": 700, "h": 1100, "frames": 4, "height": 1.75, "at": [0, -1.75],
- "talk": ["ambassador", "word"], "code": "export default function draw(k, f) { ... }"}
-```
-- `code` draws the cut-out with the drawing kit (the manual below) on a transparent `w` x `h` pixel canvas, the
-  thing standing on the bottom centre (a person: `k.person(w / 2, h - 20, s, {...})`; s = 4 fills 1100 px).
-  `f` = which drawing (0..frames-1). Use only the kit's parts and plain shapes: no backgrounds, sky, ground, room,
-  camera, light or depth calls (the 3D set does those), and no words.
-- `height` = how tall it stands in the set, in metres (a person 1.75, a dog 0.6, a horse 1.7); its width follows
-  the canvas shape. `at` = [x, z] where it stands. `"wall": true` hangs it on the back wall (`at` = [x, centre height]):
-  a painting, a carved seal, a clock.
-- Moving: `frames` 2-6 drawings that differ (mouth open/shut, arm up/down, the fist out and back) cycle at `fps`
-  (default 7, up to 12) the whole time; `talk` = [from, to] (a spoken word or seconds) limits the cycling to then.
-  Something must visibly move in every second: a live knock whose 4 drawings never cycled scored 4/10 as "frozen". `hits`: [times or words] squashes
-  the cut-out for a moment on each hit (a knock, a stamp, a landing): the impact reads as a body moving, not a slide. `path`: [[time, x, z], ...] slides it
-  across the set (a walk, a run, a fall forward). `flip: true` mirrors it.
-- People: one arm doing the action, the other on the hip (`arms: [35, ...], bend: [-75, ...]`) or hanging.
-- **Things that touch go in ONE cut-out.** A thing someone holds (a letter, a cup, a lamp) is drawn inside that
-  person's cut-out, at the hand the kit returns (`const pp = k.person(...); k.letter(pp.hands[1][0], pp.hands[1][1], ...)`).
-  A hand on something (knocking on a door, a hand on a horse, two people shaking hands) = draw both in the same
-  cut-out with the kit's `reach` (`const d = k.door(...); k.person(..., {reach: [null, d.knob]})`): a flat cut-out
-  never touches a 3D prop exactly (a live McLean draft's fist went straight through the 3D door). Use 3D props for
-  the room around the action, not for what the action touches. A separate cut-out is a board standing on the floor
-  or hanging on the wall: never a thing in mid-air (a live draft's sheet of paper floated before the ambassador).
-- A cut-out is ONE person or animal and what it holds or touches (a door it knocks on). Never paint the scenery
-  into a cut-out: houses, shops, rooms, windows, trees, ground and sky are the 3D place and props (a live draft drew a
-  whole house front, its door and the street on one 3 m board, and the 3D set vanished behind it; the checker
-  rejects k.house, k.room, k.window and the rest in a cut-out). Keep a person's cut-out about their own height.
-- Nobody stands hidden behind furniture: a desk or counter in front of a person turns half the frame into a dark
-  wooden wall (a live draft's wide shot was one third desk front). Put furniture beside or behind people, or have
-  them stand in front of it.
+## Cut-outs (already painted: you only place and time them)
+You get the list of painted cut-outs: each `name`, what it is and how tall it stands. Give each one:
+`{"name": "<its name>", "place": {...}}` plus, when needed:
+- `"talk": [from, to]` (spoken words or seconds): its drawings cycle (mouth open/shut, arm moving) only then.
+  Leave it out and they cycle the whole time: something must visibly move in every second.
+- `"hits": ["knocks", 2.1]`: a squash on each hit (a knock, a stamp, a landing): the impact reads as a body moving.
+- `"path": [[time, "<mark>"], ...]`: walks or runs it from mark to mark (time = a spoken word or seconds).
+- `"flip": true` mirrors it (to face the other person).
 
 ## Shots (2-3; a new framing every 1-1.5 s)
-`{"at": 0 | "word", "target": "<cut-out name or prop id>", "distance": 3.5, "height": 0.2, "turn": 15, "fov": 55, "move": "whip"}`
-Shot SIZES must change: the widest shot stands at least 1.5x farther back than the closest (a live McLean draft used
-1.95-2.35 m for all three and looked like one shot; the checker rejects this). Think wide (4-6 m: who and where), then
-close (1.2-2.5 m: the strange detail). `"over": "<another name>"` puts the camera just behind that person or thing,
-looking past their shoulder at the target (big and near in the frame: depth); it counts as a change of size. A
-`height` near -1 is a low camera at knee height looking up (power, size); 0.6-1.2 looks down on the set.
-The target sits in the middle of the frame. A list (`"target": ["messenger", "grocer"]`) aims between them and
-stands back far enough to keep all of them inside the frame: use it whenever a shot must show two things, or one
-gets cut off at the edge (a live McLean draft lost the grocer off the right side). `distance` metres from it, `height` above it, `turn` degrees around it
-(positive = from the right). `fov` 45-62 (portrait frames need a wide one to show the set). `move` = how this shot
-arrives: "cut", "whip" (fast swing: the energetic default), "push" (slow glide). Every shot also creeps in.
-Shot 1 (at 0) wide enough to show who and where (distance 3-5); on the strange word, whip in close to the strange
-detail (distance 1.2-2.5). Aim at people, not at their feet: the captions sit a little below the middle.
-Fill the tall frame: the subject and what is strange about it span most of its height in every shot. A wide shot
-taken a little from above (`height` 0.6-1.2) shows floor and tabletops instead of a band of empty front; a
-person plus a thing on the wall above them fits when the camera stands back (distance 3.5-4.5, fov 58-62).
+`{"at": 0 | "word", "target": "<name or id>" | ["<name>", "<name>"], "shot": "wide", "turn": 15, "move": "whip"}`
+- `shot` sizes: `wide` (who and where, whole bodies), `medium` (waist up), `close` (the face, the hand, the strange
+  detail), `low` (knee height looking up: power, size), `top` (from above: a crowd, a table), `over` (over the
+  shoulder of `"over": "<another name>"`, looking at the target: depth). The code picks distance, height and lens
+  from the target's size and keeps the target inside the frame.
+- Sizes must change: never the same size twice in a row. The usual pattern: shot 1 (at 0) `wide` or `medium` on
+  the subject and what is strange; on the strange word, whip in `close` to the strange detail.
+- `target` a list frames them all (two people talking, a knocker and the house).
+- `turn` degrees around the target (positive = from the right, 10-30 gives depth; 0 is flat and dull).
+- `move` = how this shot arrives: "cut", "whip" (fast swing: the energetic default), "push" (slow glide).
+  Every shot also creeps in by itself.
 
 ## Effects
 Effects belong in the world, never lying over the picture like an on-screen graphic.
-`"puff"` a puff of dust (`at`, `on`: a knocked door, a landing, a stamp); `"jolt"` the thing it is `on` (a prop
-with an `id` or a cut-out) shakes for a moment (a door that is knocked on, a table that is slammed); `"burst"` a
-small impact flash (`at`, `on`); `"shake"` the camera jolts (`at`); `"dust"` motes in the light; `"shafts"` light
-beams from the room's window; `"rain"`, `"snow"`. `{"type": "rings", "at": "broadcasts", "on": "eagle"}` radio /
-sound rings rolling out of a thing: ONLY for a real broadcast, a radio, a phone or a bell ringing, never for a knock,
-a shout or a footstep. A knock: the knocker's `hits` + a `jolt` and a `puff` on the door, on each knock word.
+`"puff"` a puff of dust (`at`, `on`: a knocked door, a landing, a stamp); `"jolt"` the thing it is `on` shakes for
+a moment (a knocked door: put it `on` the knocker's cut-out, which holds the door); `"burst"` a small impact flash
+(`at`, `on`); `"shake"` the camera jolts (`at`); `"dust"` motes in the light; `"shafts"` light beams from the
+room's window; `"rain"`, `"snow"`. `"rings"` (radio or sound rings rolling out of a thing `on`): ONLY for a real
+broadcast, a radio, a phone or a bell ringing, never for a knock, a shout or a footstep.
+A knock: the knocker's `hits` + a `jolt` and a `puff` on the knocker, on each knock word.
 
-## Example: "The ambassador speaks, and his wooden eagle broadcasts every word."
+## Example (invented, to show the format): "At midnight a ferryman knocks on the lighthouse keeper's door, a sealed letter in his hand."
+Painted cut-outs given: `ferryman` (the ferryman knocking on a closed door, letter in his other hand; 2.3 m board).
 ```json
-{"moment": "The ambassador talks at his desk while the carved eagle on the wall above him sends out radio rings",
- "needs": ["the carved eagle on the wall", "the ambassador"], "place": "room", "mood": "interior", "colors": {"wall": "#7E5A40", "floor": "#5A3820"},
- "props": [{"type": "desk", "at": [1.4, -2.6], "turn": -20}, {"type": "lamp", "at": [2.0, -2.6], "y": 0.86, "lit": true},
-   {"type": "window", "wall": true, "at": [-2.2, 2.4]}, {"type": "shelf", "at": [3.2, -3.5], "turn": -90},
-   {"type": "rug", "at": [0, -1.4]}],
- "cutouts": [
-   {"name": "amb", "w": 700, "h": 1100, "frames": 4, "height": 1.76, "at": [-0.3, -1.6], "talk": ["ambassador", 4.4],
-    "code": "export default function draw(k, f) { k.person(350, 1080, 4, { coat: k.C.navy, skin: k.SKIN[1], face: f % 2 ? 'smile' : 'open', arms: [35, [110, 128, 140, 118][f]], bend: [-75, 46], still: true }); }"},
-   {"name": "eagle", "w": 760, "h": 640, "frames": 1, "height": 1.47, "wall": true, "at": [0, 2.67],
-    "code": "export default function draw(k, f) { k.at(380, 300, 1.15, 0, () => { k.shape([[-42, -18], [-295, -135], [-275, -66], [-230, -20], [-175, 20], [-60, 40]], k.C.wood); k.shape([[42, -18], [295, -135], [275, -66], [230, -20], [175, 20], [60, 40]], k.C.wood); k.shape([[-64, -26], [64, -26], [58, 64], [0, 112], [-58, 64]], k.C.plank); k.shape([[-30, -24], [30, -24], [24, -108], [-16, -122], [-42, -90]], k.C.wood); k.shape([[-32, -104], [-74, -88], [-62, -70], [-30, -76]], k.C.brass); k.disc(-18, -98, 5.5, k.C.ink); }); }"}],
- "shots": [{"at": 0, "target": "amb", "distance": 3.9, "height": 0.9, "turn": 12, "fov": 60},
-   {"at": "eagle", "target": "eagle", "distance": 2.2, "height": -0.2, "turn": 8, "fov": 48, "move": "whip"}],
- "effects": [{"type": "rings", "at": 0, "on": "eagle"}, {"type": "rings", "at": "broadcasts", "on": "eagle"}, {"type": "dust"}, {"type": "shafts"}]}
+{"moment": "A ferryman knocks on the lighthouse keeper's cottage door at night, a sealed letter in his hand",
+ "needs": ["the ferryman", "a closed door", "the sealed letter"], "place": "outdoors", "mood": "night",
+ "colors": {"ground": "#4A5A44"},
+ "props": [{"type": "house", "id": "cottage", "place": {"mark": "centre"}, "lit": true},
+   {"type": "lamppost", "lit": true, "place": {"mark": "left"}}],
+ "cutouts": [{"name": "ferryman", "place": {"door": "cottage"}, "hits": ["knocks", "door"]}],
+ "shots": [{"at": 0, "target": "ferryman", "shot": "wide", "turn": 18},
+   {"at": "knocks", "target": "ferryman", "shot": "close", "turn": -15, "move": "whip"},
+   {"at": "letter", "target": "ferryman", "shot": "low", "turn": 12, "move": "push"}],
+ "effects": [{"type": "jolt", "at": "knocks", "on": "ferryman"}, {"type": "puff", "at": "knocks", "on": "ferryman"},
+   {"type": "jolt", "at": "door", "on": "ferryman"}, {"type": "dust"}]}
 ```

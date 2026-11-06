@@ -327,50 +327,63 @@ Order (owner, 2026-11-05): 3D opener -> drawn opener -> motion graphic (2 fixes)
   counts one as a real flaw) and gives the coder `camera = (k) => [shots]` (cut / whip with motion blur / push; every
   shot drifts in), `light = {mood, from}` (day/golden/dusk/night/interior grade, ground shadows under people and
   animals cast away from it), `k.depth()` (blurs and hazes everything drawn so far), `k.dust`, `k.rays`, `k.shadow`.
-  The Dexter example uses all of it. Old `camera = {zoom, focus}` modules still render.
-- **3D opener** (owner, 2026-11-05, after liking the wooden-eagle 3D test): `opener3d.py`, tried first by
-  `drawn_opener.make_opener` (i == 0). The AI writes only a stage JSON against `drawn/STAGE3D.md`: a fixed place
-  (room / street / outdoors), a mood, props from a fixed library, cut-outs drawn with the kit (`export default
-  function draw(k, f)`, 1-4 drawings, painted by `drawn/cutouts.mjs` under the same locked-down node) and shots aimed
-  at named things (distance/height/turn/fov; cut/whip/push). `opener3d.clean` validates and clamps it and resolves
-  word times; `render` paints the cut-outs into `remotion/public/opener3d/job/` and renders composition `Opener3D`
-  (`remotion/src/Opener3D.tsx`, @remotion/three + three + @react-three/fiber) to `work/drawn/opener.mp4` (~15 s);
-  the art director (`drawn_opener.review`) judges a 6-frame sheet; FIXES rounds as usual. The passed plan is
-  `short["drawn"]` with `kind: "3d"` (fix rounds reuse it by fingerprint); a failure sets
-  `short["opener3d_failed"]` and the drawn opener is made instead (Opening line says so). Lesson kept from the
-  removed Blender openers: fixed sets and parts, the AI only places and frames. Wall-hung cut-outs get a picture
-  light; a portrait frame needs a wide vertical fov (~60) for a set to read. Tests: `tests	est_opener3d.py`
-  (`--look` renders the manual's example to `test_renders/opener3d/example/`); `test_drawn_opener.py` switches
-  3D off.
-  **Closer to the reference (owner, 2026-11-06, after the McLean test knocked on an open door with no letter):**
-  story sense: the stage lists `needs`; `drawn_opener.missing_parts` (both openers) also rejects a story object the
-  moment/narration names but nothing draws (`KIT_OBJECTS`: a messenger's letter, a knock's door, phone, radio) and a
-  knock on an open door (kit `open` or a 3D door's); the art director counts nonsense actions, a subject melting into
-  its background and overlay-like rings as real flaws. `opener3d.blends` measures each cut-out's main colour against
-  the room wall and sends a blend back before any review. Shots: sizes must differ `SPREAD` (1.5x) unless one looks
-  `over` someone's shoulder; the camera also orbits slowly; the preview sheet takes a frame just after each cut
-  (`opener3d.sheet_times`). Look: real CC0 models (Kenney furniture / nature / fantasy-town kits, copied into
-  `remotion/public/opener3d/models/`, sources in git-ignored `assets_src/`; `MODELS` in Opener3D.tsx scales each to
-  the manual's size, recolours pale pine to dark wood), streets and houses built from town wall/roof modules
-  (`Building`), cut-outs unlit with a mood tint and no paper grain (`cutouts.mjs`), a cool rim light, a less brown
-  interior, depth of field on the shot's target and bloom (@react-three/postprocessing 3.0.4 + postprocessing 6.37.8).
-  Motion: cut-out `hits` (squash on a knock/stamp), `jolt` and `puff` effects (a knocked door shakes and puffs dust),
-  rings only for real broadcasts/bells, up to 6 drawings at up to 12 fps. Kit `k.person` `hold: [left, right]`
-  ('letter', 'paper', 'cup', 'bottle', 'coin', 'moneybag': the hand drawn over it; counts for `missing_parts`).
-  A cut-out may not draw scenery (`opener3d.SCENERY`: k.house, k.room, k.window...): a live draft painted the house
-  front onto one 3 m board. Kit `k.knock(x, y, s, {person, door, phase})`: a knocker beside a closed door, the fist
-  landing on the panel with impact lines (live drafts knocked on air or froze the arm); cut-outs with 2+ drawings
-  cycle all the time unless `talk` limits them. A knock at a house: the cut-out draws `k.knock` (door at the canvas
-  centre) and stands
-  `"against": "<house id>"`, which `opener3d.front_door` puts flush on the house's own door (Building's door module is
-  `seed % 3`); a floor cut-out inside a house's walls is rejected (`opener3d.inside`). Recipe in STAGE3D.md. Fixed: the 3D canvas mounts only once models and drawings are loaded (it draws on mount
-  and frame changes, so frames 0-5 rendered empty sky and every live draft lost points for it). Not built: jointed puppets (parts posed at
-  30 fps) and golden reference frames for the reviewer (no approved 3D opener to anchor on yet).
-  Live runs 2026-11-05: Claude 5/6/6 on the eagle (desk front filled the frame, a paper floated) -> manual rules;
-  Gemini passed the eagle first draft (it copied the example: same story); McLean failed 4/4/4 (fist through the 3D
-  door, grocer cut off) -> things that touch go in ONE cut-out (kit `reach`), shots may aim at a list of names (the
-  camera backs off to fit them all); McLean then passed on draft 2. Clips: `test_renders/opener3d/`. A failing 3D
-  attempt costs 3 drafts + reviews before the drawn opener starts.
+  The example (an invented umbrella cargo since 2026-11-06) uses all of it. Old `camera = {zoom, focus}` modules still render.
+- **3D opener = the opener crew** (owner, 2026-11-06; first version 2026-11-05, history in HANDOFF_history.md):
+  `shortsmaker/opener_crew.py`, tried first by `drawn_opener.make_opener` (i == 0, and only if 3D hasn't already
+  failed for this Short). One focused AI call per job instead of one ~100K-token call that did everything (the
+  McLean live runs took 36-51 min each and never passed: 76% of it was agy thinking 4-9 min per draft):
+  stager (plans place/light/people/hats/held things/animals/things/action/beats; `check_staging` holds it to the
+  kit; kept in `short["opener_staging"]`, printed in edit_plan.txt as "Opener staging") -> kit scout (code) ->
+  part makers (one per missing hat or thing, in parallel; `drawn/partsheet.mjs` shows it on people; the part
+  checker passes it at 7/10; passed parts are kept in `drawn/parts/<hat|thing>/<name>.mjs` and the kit loads them
+  for every later Short; a failed one is swapped for the stager's `instead`) -> painters (one per person or drawn
+  thing, in parallel, `drawn/CUTOUT.md` + only the People/Animals/Rooms/Props sections of KIT.md; animals come
+  straight from the kit, `ANIMALS`; unusable code twice -> `default_cutout`, the plain kit person or knock) ->
+  placer (`drawn/STAGE3D.md`) -> render (`opener3d.clean/render/sheet`) -> art director with `owners`: every
+  problem starts with `placement:`, `camera:` or `person:<id>:` and only that member redoes its part
+  (`opener_crew.owner`); an "Opening reveals the answer" sends it back to the stager. Up to FIXES rounds,
+  stopping when a reviewed draft is no better than the last (the drawn opener stops the same way). Log in
+  `short["opener_crew"]` (edit_plan "Opener crew": per-role minutes). At most `MAX_PARALLEL` = 3 AI calls at once.
+  **No AI types coordinates any more.** `place` relations (`opener3d.resolve`): `{"mark": "left"}` (fixed spots per
+  place, `MARKS`), `{"beside": id, "side"}`, `{"front": id}`, `{"door": house id}` (the old `against`),
+  `{"wall": "left"}`, `{"on": desk id, "side"}` (a drawn thing or a lamp standing on a desk/table/counter/crate...,
+  `TOPS` heights; `on_top`); walks are `path: [[time, "mark"], ...]`; relations resolve in dependency order
+  (`in_order`); `opener3d.nudge` moves people out of furniture and buildings (to stand in front) and apart from each
+  other (`FOOT` footprints). Props `cabin` (one-storey timber, `BUILDINGS`: modules across + door seed), `garden`
+  (dirt rows of leafy crops) and `field` (wheat) from the Kenney nature kit (`PATCHES` in Opener3D.tsx).
+  Shots by size (`SHOT_SIZES`, sized for 9:16: wide = whole body ~2.6 m of view, medium = knees up, close = head and
+  shoulders aimed at the face; scaled to the target's height, small things down to 0.2x; a knocker counts as
+  1.75 m, not his 2.3 m board; things up on furniture are filmed a little from above); no size twice in a row;
+  `Opener3D.tsx` `aim` backs a single-target shot off until the cut-out is inside the frame (whole body for
+  wide/low/top), and a list of people + props aims mostly at the people and fits only them (a desk may run off
+  the edge). The stager's first beat must be medium/close/low on one or two ids; every person must be in a beat
+  and in a shot. Kit `k.person` `dance: phase` (hops, sways, kicks, arms flung); stager verbs include dances/jumps/
+  climbs...; `POSES` tells a painter the kit pose for its action. A painter's fix keeps its hat/held thing/clothes.
+  Routing: a painter gets only its own drawing-code faults (the lint); every other checker problem is the placer's;
+  `blends` problems go to the placer (it picks the wall colour; things standing `on` furniture aren't checked). Puffs
+  and bursts on a person come from the feet. A fix round runs the faulted painters and the placer in parallel. Knock cut-outs get `contact` (fist on the door, from the
+  `k.knock(x, y, s)` call): a puff or burst on the knocker lands there, not on his face; their drawings never stop
+  cycling. Every floor cut-out breathes and sways a little (`Card`). The review sheet has a second row 0.2 s
+  later (`opener3d.sheet`, `PAIR`) so the reviewer sees what moves. AI image calls get a folder with only that
+  image (`drawn_opener.look_dir`: Codex attaches every picture under the folder it's given).
+  Kept from 2026-11-05: real CC0 Kenney models, town `Building`s, unlit cut-outs with a mood tint, rim light, depth
+  of field + bloom, `hits`/`jolt`/`puff`, rings only for broadcasts, `blends`, `missing_parts`, `k.knock`, `hold`,
+  no scenery in a cut-out, the canvas mounting only once everything has loaded.
+  **No posted Short is an example in anything the AI reads** (owner, 2026-11-06: they are already posted):
+  STAGE3D.md's example is an invented ferryman knock, KIT.md's an invented umbrella cargo
+  (`drawn/examples/umbrellas.mjs`), the reviewer and opening-rule examples are invented. Live tests use stories the
+  channel hasn't posted (check `vault/Shorts/<channel>/`).
+  Tests: `tests\test_opener_crew.py` (fake AI, real node/Remotion, ~25 s), `tests\test_opener3d.py` (`--look`
+  renders the manual's example to `test_renders/opener3d/example/`); `test_drawn_opener.py` switches 3D off.
+  Live runs 2026-11-06 (Gemini Flash; Argon's week was spent; harness in the session scratchpad, clips in
+  `test_renders/opener3d/crew/<story>_3d.mp4`), three unposted stories: Carrington telegraphs (room), the 1518
+  dancing plague (street), the 1859 Pig War (farm). **No 3D opener passed yet** (PASS is 7/10). Over five runs the
+  best scores rose from 3 to 5/10 and a story took 12-30 min (the old single coder: 36-51 min). Each run turned up
+  a fixable gap, now fixed: relation order, problems sent to the wrong member, things on desks, shot sizes far too
+  wide for 9:16, a dance pose, every person filmed, cabin/garden/field props, typed camera numbers. The last
+  reviews' complaints: wide frames still a little empty, animals with no action poses (a pig can't eat), plain
+  set dressing (no cobbles, timbered fronts), and stills that can't show a dance. Time per run is now mostly Gemini
+  Flash's thinking per call (1-6 min, sometimes 10).
 - Kit expansion (2026-11-05): 11 more hats (fedora, flatcap, boater, cowboy, ranger, kepi, officer, bobby, bicorne,
   nurse, hardhat), rooms/furniture (`k.door` with `open` + knob, `k.bed`, `k.rug`, `k.shelf`, `k.lamp`, `k.window`,
   `k.frame`), devices (`k.phone`, `k.radio`, `k.letter`), animals `k.cat`, `k.rabbit`, `k.bear` (also in
@@ -532,7 +545,7 @@ strangest moment. Same story, other channel: Voggle's Mike 2M views vs ours 1.2K
 - Tests, no AI usage (`.venv\Scripts\python.exe tests\<name>.py`): `test_reliability`, `test_render_resume` (real FFmpeg, fake AI), `test_package`, `test_codex`, `test_ai_modes`, `test_marks`, `test_retention`, `test_pictures_first`,
   `test_full_scenes`, `test_style`, `test_rules` (golden prompts), `test_story`, `test_first_second`,
   `test_topic_ideas`, `test_h3_handoff`, `test_h3_run`, `test_edit_project`, `test_blender_plan`,
-  `test_blender_render`, `test_opener_graphic`, `test_drawn_opener` (real node, ~1 min), `test_opener3d`;
+  `test_blender_render`, `test_opener_graphic`, `test_drawn_opener` (real node, ~1 min), `test_opener3d`, `test_opener_crew`;
   `tests\run_ts_tests.py` (TypeScript); `local_ai\qwen_venv\Scripts\python.exe tests\test_qwen_voice.py`.
 - Quality changes: `tests/test_quality.py` (metadata validation, final-script reviews, pacing and retention feedback).
 - With real headless Blender (engineering-failures): `test_blender_run`, `test_blender_scene`.

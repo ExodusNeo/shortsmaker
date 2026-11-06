@@ -10,8 +10,9 @@ Show the strange situation promised by the opening narration, but withhold the n
 reveals. Check the actual picture, animation, props, document text, signs, labels, arrows and hook title together.
 An unlabelled but unmistakable answer object can spoil it too. Reveal each withheld fact only when its narration
 reveals it. Do not hide the person, place, object or fact that the opening already states.
-Example: when the hook says a Niagara survivor slips and the ending says an orange peel tripped him, show the
-loss of balance or reaction with the cause outside the frame. Do not draw the peel or label it ORANGE PEEL early.
+Example: when the hook says a ship's bell rang by itself all night and the ending says a gull was tugging its
+rope, show the bell swinging and the crew's reaction with the cause outside the frame. Do not draw the gull or
+label it GULL early.
 Do not replace it with a different invented cause. Show danger/action clearly from frame 0 without a quiet setup.
 Use only facts from the story; a whole-story diagram, answer label or ending montage is not an opening."""
 

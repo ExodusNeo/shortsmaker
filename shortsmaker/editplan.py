@@ -47,6 +47,11 @@ def cold_read_line(read: dict) -> str:
             + (f" | reviewed by {read['reviewer'].capitalize()}" if read.get("reviewer") else ""))
 
 
+def staging_line(st: dict) -> str:
+    from shortsmaker import opener_crew  # the opener's own module (it needs the drawing kit's paths)
+    return opener_crew.staging_text(st)
+
+
 def edit_plan(short: dict, bounds: list[float], sources: list[str], cues: list[dict],
               events: list[dict], music: Path | None, path: Path, renderer: str,
               clips: dict[int, Path]) -> None:
@@ -66,6 +71,9 @@ def edit_plan(short: dict, bounds: list[float], sources: list[str], cues: list[d
                                if any(sc.get("look") for sc in short["scenes"]) else "none (plain pictures)"),
              "Opening: " + (short.get("opening_note") or "no note")
              + (f" | hook lines considered: {' / '.join(short['hook_options'])}" if short["hook_options"] else ""),
+             *([f"Opener staging (what the 3D opener crew planned): {staging_line(short['opener_staging'])}"]
+               if short.get("opener_staging") else []),
+             *([f"Opener crew: {', '.join(short['opener_crew'])}"] if short.get("opener_crew") else []),
              "Script editor: " + ("\n  ".join([""] + short["editor_notes"]) if short.get("editor_notes") else "none"),
              *(["Metadata review: " + "; ".join(short["seo_notes"])] if short.get("seo_notes") else []),
              *([cold_read_line(short["story_read"])] if short.get("story_read") else []),

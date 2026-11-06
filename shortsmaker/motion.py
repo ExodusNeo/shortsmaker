@@ -281,7 +281,7 @@ WORKED COMPOSITION STUDY (copy its scale, immediate subject and camera setup, no
    read: it settles and holds >= 1 s (+0.25 s per word past three).
 10. SIZE: one main drawing carries the scene and fills at least half the stage height (380+ px tall), built from
    solid filled shapes with inner detail. Never small thin-outline figures floating in empty paper: on a phone they
-   read as a blank page (Clever Hans's tapping hand and questioner filled a third of the stage).{PAYOFF_RULES if payoff else ""}
+   read as a blank page (a figure filling only a third of the stage read as empty).{PAYOFF_RULES if payoff else ""}
 TWO WORKED EXAMPLES (copy their care, not their content):
 {examples}"""
 

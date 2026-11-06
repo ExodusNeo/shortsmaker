@@ -33,21 +33,21 @@ Rules for the code:
 - Big and few: 1-3 main things, large enough to read on a phone (a person at s 1.6-2.4, about 400-590 px tall;
   a ship at s 1.5-1.7).
 - **No labels, signs, captions or speech bubbles.** The captions already say the words; a label naming a thing
-  ("WOODEN EAGLE", "AMBASSADOR", "GROCER", "BORROW ROOM?") makes the picture look like a diagram. A thing a stranger
+  ("TREASURE", "THE KING", "STOLEN MAP?") makes the picture look like a diagram. A thing a stranger
   might not recognise is made clear by drawing it BIG and cutting the camera close to it on its spoken word, by its
   shape and by what the person does with it. Leave out `label`, `title`, `k.sign`, `k.text` and `k.bubble`
   unless the writing itself is the strange thing (a forged letter's one line) and the story says it.
 - Animals and people come from the kit (`k.horse`, `k.dog`, `k.person`...), never assembled from your own shapes:
   a hand-built horse of boxes read as a cardboard donkey. Pose them with the part's options (`tap`, `walk`, `arms`).
 - Solid things stay solid. A hand that touches something (knocks on a door, shakes a hand, holds what another holds)
-  uses `reach` to the point on its surface, never arm angles guessed by eye: the McLean messenger's fist went through
-  the door. Knock = move the target out and back: `reach: [null, [doorX - 30 * Math.abs(k.wave(3, 1)), 930]]`.
+  uses `reach` to the point on its surface, never arm angles guessed by eye (a guessed fist goes through the
+  door). A knock is `k.knock` (below), which does all of this for you.
   Inside and outside in one picture = a cutaway: draw the wall between them (a thick edge with the doorway in it),
   and each person stays on their own side of it.
 - It must make sense. Draw every thing the story needs: a messenger or courier holds his letter (`hold: [null, 'letter']`
-  on `k.person`), a rider has a horse, a caller a phone. A knock is on a CLOSED door (`k.door` with no
-  `open`, or `open: 0`); nobody knocks on an open door, a wall or air (the 3D McLean draft did both: an empty-handed
-  messenger at a half-open door). The checker rejects a missing letter or an open door on a knock.
+  on `k.person`), a rider has a horse, a caller a phone. A knock is on a CLOSED door (`k.knock`, or `k.door`
+  with no `open`); nobody knocks on an open door, a wall or air. The checker rejects a missing letter or an open
+  door on a knock.
 - The subject stands out from what is behind it by colour AND brightness (a navy coat on a warm wall, never brown
   on brown).
 
@@ -96,6 +96,7 @@ hardhat | none; `hatColor` recolours most, `band` the fedora/boater/officer band
 ("round" | "sun"), `face` ("smile" | "open" | "sad" | "flat"), `arms: [left, right]` (degrees from hanging
 down, outward positive: 160 = raised overhead), `bend: [l, r]` (elbow degrees), `hold: [left, right]` (a thing gripped in that hand, the hand over it: 'letter', 'paper', 'cup', 'bottle', 'coin', 'moneybag'), `reach: [[x, y] | null, [x, y] | null]`
 (left, right: that hand lands exactly on the point, overriding arms/bend; out of reach it points at it), `walk` (phase: `t * 9` walks),
+`dance` (phase: `t * 8` dances wildly: hops, sways, kicks, arms flung up; give `arms`/`bend` to choose them yourself),
 `flip` (face left), `still`, `look` (eye shift px).
 Arms that read: one arm doing the action (pointing, knocking, raised while speaking) and the other either on the hip
 (`arms: [35, ...], bend: [-75, ...]`: the elbow sticks out, it reads as attitude) or hanging (`[12, ...], [6, ...]`).
@@ -145,6 +146,11 @@ strength)` heat haze, `k.speed(x, y, dir, count, len)` motion lines (dir -1 = li
 `k.bubble(x, y, text, {size, t0, tail: -1 | 1})` a speech bubble (only words the narration says),
 `k.rain(strength)`, `k.snowfall(strength)`, `k.flood(frontX, surfaceY, {color})` a liquid mass from the left edge.
 
+## Made parts (hats and things added for earlier stories)
+The task lists the made hats and things, if there are any. A made hat works like any other: `hat: '<name>'`. A
+made thing is held with `hold: [null, '<name>']` or stands on (x, y) with `k.thing('<name>', x, y, s)` (s = the
+scale of the people beside it; returns `{grip}`, the point a hand holds it by).
+
 ## Drawing your own thing (when no part fits)
 `k.shape(points, colour)` a painted shape with an ink outline (points = [[x, y], ...]; up to 6 points stay
 sharp-cornered, more are smoothed). `k.disc(x, y, r, colour)`. `k.ink(points, {w, color})` a brush line.
@@ -155,31 +161,32 @@ frame (for spinning, tipping or growing a group of parts). `k.fade(alpha, () => 
 sail, sea, deep, sand, grass, leaf, brick, roof, stone, navy, red, white, sky, snow, molasses, water, fire, smoke,
 money`, or any "#RRGGBB".
 
-## Example (the approved look: "He shipped brass bed warmers straight to the tropical Caribbean.")
+## Example (an invented story, to show the format and the look: "A captain sailed a whole cargo of umbrellas into a
+desert port where it never rains.")
 ```js
 export const light = { mood: "golden", from: [860, 380] };
 export const camera = (k) => [
-  { at: 0, zoom: 1, focus: [540, 1150] },                                     // wide: the ship in the tropics
-  { at: k.word("brass", .7), zoom: 1.8, focus: [560, 1180], move: "whip" },   // close: the brass pans glint
-  { at: k.word("tropical", 2.1), zoom: 1.2, focus: [640, 900], move: "push" }, // back out to the blazing sun
+  { at: 0, zoom: 1, focus: [540, 1150] },                                        // wide: the ship in the scorching port
+  { at: k.word("umbrellas", .9), zoom: 1.8, focus: [520, 1180], move: "whip" },  // close: the open umbrellas on deck
+  { at: k.word("never", 2.4), zoom: 1.2, focus: [640, 900], move: "push" },      // back out to the blazing sun
 ];
 export default function scene(k, t) {
-  const hot = k.word("tropical", 2.1), heat = k.ss(hot - .1, hot + .6);
+  const dry = k.word("never", 2.4), heat = k.ss(dry - .1, dry + .6);
   k.sky("hot", 900); k.sun(860, 380, 110, { heat });
   k.sea(900, { glare: 860 });
-  k.island(930, 905, 300); k.palm(900, 860, .55); k.palm(990, 865, .45);   // far away on the horizon
+  k.island(930, 905, 300); k.palm(900, 860, .55);                          // the dry port on the horizon
   k.depth(.8);                                                             // ...and out of focus
   const x = k.lerp(470, 520, t / 3.8), ship = k.ship(x, 1600, 1.6);
-  const glint = k.word("brass", .7);
-  [-300, -200, -40, 80, 250, 340].forEach((dx, i) => {               // bed warmers: long handles, round brass pans
-    const px = x + dx, py = ship.deck - 330 - (i % 2) * 40;
-    k.ink([[px, py], [px - 40, ship.deck]], { w: 12, color: k.C.wood });
-    k.disc(px, py, 62, k.C.brass); k.ring(px, py, 40, 40, { w: 2.4, color: "#8A5A1A" });
-    k.glint(px - 20, py - 22, 60, glint + i * .08);
+  const pop = k.word("umbrellas", .9);
+  [-300, -170, -40, 90, 220, 340].forEach((dx, i) => {                     // open umbrellas fill the deck from frame 0...
+    const ux = x + dx, uy = ship.deck - 300 - (i % 2) * 50, at = pop + i * .07;
+    const g = 1 + .25 * (k.ss(at, at + .12) - k.ss(at + .12, at + .3));    // ...and bounce one by one on their word
+    k.ink([[ux, uy], [ux, ship.deck]], { w: 8, color: k.C.ink });
+    k.at(ux, uy, g, 0, () => k.shape([[-90, 20], [-70, -30], [0, -60], [70, -30], [90, 20]], [k.C.red, k.C.navy, "#E3B64B"][i % 3]));
   });
-  const sailor = k.person(x - 330, ship.deck, 1.7, { hat: "tricorn", coat: k.C.navy, face: heat > .4 ? "open" : "smile",
-    arms: [20, 150 + k.wave(2.5, 15) * heat], bend: [0, 30] });
-  k.sweat(sailor.head[0], sailor.head[1] - 40, hot + .2, 1.6);
+  const captain = k.person(x - 330, ship.deck, 1.7, { hat: "tricorn", coat: k.C.navy, face: heat > .4 ? "open" : "smile",
+    arms: [35, 150 + k.wave(2.5, 15) * heat], bend: [-75, 30] });
+  k.sweat(captain.head[0], captain.head[1] - 40, dry + .2, 1.6);
   k.crate(x + 60, ship.deck + 6, 330, 170);
   k.shimmer(80, 1000, 890, heat);
   k.dust(.7);

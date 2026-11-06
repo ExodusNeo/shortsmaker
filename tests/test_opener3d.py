@@ -1,4 +1,4 @@
-"""3D opener checks (shortsmaker/opener3d.py).
+"""3D opener checks (shortsmaker/opener3d.py): the placer's relations, named shots and the stage rules.
 Run: .venv\\Scripts\\python.exe tests\\test_opener3d.py   (--look renders STAGE3D.md's example to test_renders/opener3d)"""
 import json
 import re
@@ -7,45 +7,117 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
-from shortsmaker import drawn_opener, opener3d  # noqa: E402
+from shortsmaker import drawn_opener, opener3d, opener_crew  # noqa: E402
 
-WORDS = [[0.1, 0.181, "The"], [0.221, 0.723, "ambassador"], [0.784, 1.206, "speaks,"], [1.648, 1.728, "and"],
-         [1.769, 1.869, "his"], [1.949, 2.211, "wooden"], [2.311, 2.572, "eagle"], [2.653, 3.416, "broadcasts"],
-         [3.497, 3.698, "every"], [3.778, 4.08, "word."]]
-SECONDS = 4.47
+# STAGE3D.md's invented example: "At midnight a ferryman knocks on the lighthouse keeper's door, a sealed letter in his hand."
+WORDS = [[0.1, 0.3, "At"], [0.32, 0.8, "midnight"], [0.85, 0.9, "a"], [0.92, 1.4, "ferryman"], [1.45, 1.8, "knocks"],
+         [1.85, 1.95, "on"], [1.98, 2.1, "the"], [2.12, 2.6, "keeper's"], [2.62, 2.9, "door,"], [3.0, 3.1, "a"],
+         [3.12, 3.5, "sealed"], [3.52, 3.9, "letter"], [3.95, 4.05, "in"], [4.08, 4.2, "his"], [4.22, 4.5, "hand."]]
+SECONDS = 4.8
+KNOCKER = {"w": 1200, "h": 1100, "height": 2.3, "frames": 4, "fps": 8,
+           "code": "export default function draw(k, f) { k.knock(600, 1080, 3.4, {phase: f / 4, person: {hat: 'cap', "
+                   "coat: k.C.navy, skin: k.SKIN[1], face: f % 2 ? 'open' : 'flat', hold: ['letter', null]}}); }"}
+PERSON = {"w": 700, "h": 1100, "height": 1.75, "frames": 2,
+          "code": "export default function draw(k, f) { k.person(350, 1080, 4, {hat: 'none', coat: k.C.red}); }"}
 
 
 def example() -> dict:
+    """The manual's placer JSON, with the painter's cut-out added (the crew merges them the same way)."""
     text = (ROOT / "drawn" / "STAGE3D.md").read_text(encoding="utf-8")
-    return json.loads(re.search(r"## Example.*?```json\n(.*?)```", text, re.S).group(1))
+    raw = json.loads(re.search(r"## Example.*?```json\n(.*?)```", text, re.S).group(1))
+    raw["cutouts"] = [{**c, **KNOCKER} for c in raw["cutouts"]]
+    return raw
 
 
-def test_example_is_clean():
+def room(*people) -> dict:
+    """A small room stage: a desk, and each named person on the given relation."""
+    return {"place": "room", "mood": "interior", "props": [{"type": "desk", "id": "desk", "place": {"mark": "centre"}}],
+            "cutouts": [{"name": n, "place": spec, **PERSON} for n, spec in people],
+            "shots": [{"at": 0, "target": people[0][0], "shot": "wide"}, {"at": 1, "target": people[0][0], "shot": "close"}]}
+
+
+def test_example_is_clean_and_the_knocker_stands_on_the_door():
     stage, bad = opener3d.clean(example(), WORDS, SECONDS)
     assert bad == [], bad
-    assert stage["shots"][1]["at"] == 2.311  # "eagle" resolved to its spoken time
-    assert stage["effects"][0]["at"] == 0 and stage["effects"][1]["at"] == 2.653 and stage["effects"][1]["on"] == "eagle"
-    assert stage["cutouts"][0]["talk"] == [0.221, 4.4]
+    house = stage["props"][0]
+    assert stage["cutouts"][0]["at"] == list(opener3d.front_door(house, 0)) and stage["cutouts"][0]["against"] == "cottage"
+    assert stage["shots"][1]["at"] == 1.45 and stage["shots"][1]["size"] == "close"  # "knocks" resolved to its time
+    assert stage["cutouts"][0]["hits"] == [1.45, 2.62] and stage["cutouts"][0]["focus"] < 0  # aims at the knocker
+    # the house's FRONT stands on its mark: the knocker is on the action line, not inside the walls
+    assert -3.2 < stage["cutouts"][0]["at"][1] < -2.2, stage["cutouts"][0]["at"]
 
 
-def test_bad_parts_go_back_to_the_coder():
+def test_named_shots_change_size_and_scale_with_the_target():
+    stage, _ = opener3d.clean(example(), WORDS, SECONDS)
+    wide, close = stage["shots"][0], stage["shots"][1]
+    assert wide["distance"] >= opener3d.SPREAD * close["distance"], (wide, close)
+    # a knocker's board is 2.3 m because of its door: his shots are sized for the man (1.75 m), not the door
+    assert wide["distance"] == opener3d.SHOT_SIZES["wide"][0] and stage["cutouts"][0]["contact"][0] < 0
+    raw = room(("keeper", {"mark": "left"}))
+    raw["cutouts"][0]["height"] = 3.5  # a giant: every shot stands twice as far back
+    assert opener3d.clean(raw, WORDS, SECONDS)[0]["shots"][0]["distance"] == round(2 * opener3d.SHOT_SIZES["wide"][0], 2)
     raw = example()
-    raw["props"].append({"type": "spaceship", "at": [0, 0]})
+    raw["shots"] = [{"at": 0, "target": "ferryman", "shot": "medium"}, {"at": 1, "target": "ferryman", "shot": "medium"}]
+    assert any("repeat a size" in p for p in opener3d.clean(raw, WORDS, SECONDS)[1])
+    raw["shots"][1] = {"at": 1, "target": "ferryman", "shot": "over"}
+    assert any("needs `over`" in p for p in opener3d.clean(raw, WORDS, SECONDS)[1])
+
+
+def test_marks_beside_front_and_wall():
+    raw = room(("keeper", {"mark": "left"}), ("clerk", {"beside": "desk", "side": "right"}), ("boy", {"front": "desk"}))
+    raw["props"].append({"type": "window", "place": {"wall": "left"}})
+    stage, bad = opener3d.clean(raw, WORDS, SECONDS)
+    assert bad == [], bad
+    at = {c["name"]: c["at"] for c in stage["cutouts"]}
+    desk = opener3d.box_of(stage["props"][0])
+    assert at["keeper"] == list(opener3d.MARKS["room"]["left"])
+    assert at["clerk"][0] > desk[1] and at["boy"][1] > desk[3], (at, desk)  # beside it on the right; in front of it
+    assert stage["props"][1]["wall"] and stage["props"][1]["at"][0] == opener3d.WALL_SPOTS["left"]
+    raw = room(("keeper", {"mark": "left"}), ("sounder", {"on": "desk", "side": "right"}))  # a machine on the desk
+    stage, bad = opener3d.clean(raw, WORDS, SECONDS)
+    sounder, desk = stage["cutouts"][1], opener3d.box_of(stage["props"][0])
+    assert bad == [] and sounder["y"] == .86 and desk[0] < sounder["at"][0] < desk[1] and desk[2] < sounder["at"][1] < desk[3], (bad, sounder)
+    raw["cutouts"][1]["place"] = {"on": "keeper"}
+    assert any("things stand on a prop" in p for p in opener3d.clean(raw, WORDS, SECONDS)[1])
+    raw = room(("clerk", {"beside": "keeper", "side": "left"}), ("keeper", {"mark": "right"}))  # names one listed after it
+    stage, bad = opener3d.clean(raw, WORDS, SECONDS)
+    assert bad == [] and {c["name"]: c["at"] for c in stage["cutouts"]}["clerk"][0] < opener3d.MARKS["room"]["right"][0], bad
+    raw["cutouts"][0]["place"] = {"beside": "nobody"}
+    assert any("nobody" in p for p in opener3d.clean(raw, WORDS, SECONDS)[1])
+    raw["cutouts"][0]["place"] = {"mark": "moon"}
+    assert any("no mark" in p for p in opener3d.clean(raw, WORDS, SECONDS)[1])
+
+
+def test_nobody_hides_in_furniture_or_inside_another_person():
+    raw = room(("keeper", {"mark": "centre"}), ("clerk", {"mark": "centre"}))  # both on the desk's own spot
+    stage, bad = opener3d.clean(raw, WORDS, SECONDS)
+    assert bad == [], bad
+    desk, (a, b) = opener3d.box_of(stage["props"][0]), stage["cutouts"]
+    assert a["at"][1] > desk[3] and b["at"][1] > desk[3], (a["at"], b["at"], desk)  # moved to stand in front of the desk
+    assert abs(a["at"][0] - b["at"][0]) >= opener3d.half_width(a) + opener3d.half_width(b), (a["at"], b["at"])
+
+
+def test_a_walk_goes_from_mark_to_mark():
+    raw = room(("keeper", {"mark": "left"}))
+    raw["cutouts"][0]["path"] = [[0, "left"], ["midnight", "right"]]
+    stage, bad = opener3d.clean(raw, WORDS, SECONDS)
+    assert bad == [] and stage["cutouts"][0]["path"] == [[0, -1.5, -1.7], [0.32, 1.5, -1.7]], (bad, stage["cutouts"][0].get("path"))
+    raw["cutouts"][0]["path"] = [{"at": 0, "mark": "left"}, ["midnight", {"mark": "right"}]]  # the other ways placers write it
+    assert opener3d.clean(raw, WORDS, SECONDS)[0]["cutouts"][0]["path"] == [[0, -1.5, -1.7], [0.32, 1.5, -1.7]]
+    raw["cutouts"][0]["path"] = [[0, "moon"]]
+    bad = opener3d.clean(raw, WORDS, SECONDS)[1]
+    assert any("path step" in p for p in bad) and all(opener_crew.owner(p, ["keeper"]) == "placement" for p in bad), bad
+
+
+def test_bad_parts_go_back():
+    raw = example()
+    raw["props"].append({"type": "spaceship", "place": {"mark": "left"}})
     raw["cutouts"][0]["code"] += "\nconst x = Math.random();"
-    raw["shots"].append({"at": 1, "target": "nobody", "distance": 2})
+    raw["shots"].append({"at": 1, "target": "nobody", "shot": "close"})
     stage, bad = opener3d.clean(raw, WORDS, SECONDS)
     text = " ".join(bad)
     assert "spaceship" in text and "Math.random" in text and "nobody" in text, bad
     assert all(p["type"] in opener3d.PROPS for p in stage["props"])
-
-
-def test_a_shot_can_frame_several_things():
-    raw = example()
-    raw["shots"][0]["target"] = ["amb", "eagle"]
-    stage, bad = opener3d.clean(raw, WORDS, SECONDS)
-    assert bad == [] and stage["shots"][0]["target"] == ["amb", "eagle"], bad
-    raw["shots"][0]["target"] = ["amb", "ghost"]
-    assert any("ghost" in p for p in opener3d.clean(raw, WORDS, SECONDS)[1])
 
 
 def test_lint_needs_draw():
@@ -56,44 +128,25 @@ def test_lint_needs_draw():
 
 def test_numbers_are_clamped():
     raw = example()
-    raw["shots"][0].update(distance=999, fov=5)
+    raw["shots"][0].update(distance=999, fov=5)  # a named size ignores typed numbers...
     raw["cutouts"][0].update(frames=40, w=99999)
+    stage, _ = opener3d.clean(raw, WORDS, SECONDS)
+    assert stage["shots"][0]["distance"] == opener3d.SHOT_SIZES["wide"][0] and stage["shots"][0]["fov"] == opener3d.SHOT_SIZES["wide"][2]
+    raw["shots"][0].pop("shot")  # ...an unnamed (older) shot keeps them, clamped
     stage, _ = opener3d.clean(raw, WORDS, SECONDS)
     assert stage["shots"][0]["distance"] == 14 and stage["shots"][0]["fov"] == 28
     assert stage["cutouts"][0]["frames"] == 6 and stage["cutouts"][0]["w"] == 1400
-
-
-def test_shot_sizes_must_change():
-    raw = example()
-    raw["shots"][1]["distance"] = 3.5  # 3.9 vs 3.5: one framing twice (the McLean draft used 1.95-2.35 m)
-    assert any("same size" in p for p in opener3d.clean(raw, WORDS, SECONDS)[1])
-    raw["shots"][1]["over"] = "amb"  # looking past the ambassador at the eagle is a new size
-    stage, bad = opener3d.clean(raw, WORDS, SECONDS)
-    assert bad == [] and stage["shots"][1]["over"] == "amb", bad
-    raw["shots"][1]["over"] = "eagle"  # over its own target: no
-    assert any("looks over" in p for p in opener3d.clean(raw, WORDS, SECONDS)[1])
-
-
-def test_hits_and_world_effects():
-    raw = example()
-    raw["cutouts"][0]["hits"] = ["eagle", 1.0]
-    raw["effects"] += [{"type": "puff", "at": "eagle", "on": "amb"}, {"type": "jolt", "at": 1.0, "on": "amb"}]
-    stage, bad = opener3d.clean(raw, WORDS, SECONDS)
-    assert bad == [] and stage["cutouts"][0]["hits"] == [1.0, 2.311], bad
-    assert [e["type"] for e in stage["effects"]][-2:] == ["puff", "jolt"]
 
 
 KNOCK = "export default function draw(k, f) { const d = k.door(390, 1170, 3.8, {open: %s}); k.person(540, 1170, 3, {reach: [[d.knob[0], d.knob[1] - 135], null]}); }"
 
 
 def test_a_knock_needs_a_closed_door_and_a_messenger_his_letter():
-    """The 3D McLean opener (2026-11-05): a messenger with empty hands knocking on a half-open door."""
     narration = "A messenger knocked on his door."
     found = drawn_opener.missing_parts({"moment": "the messenger knocks", "code": KNOCK % "0.56"}, narration)
     assert any("OPEN door" in p for p in found) and any("letter" in p for p in found), found
     ok = KNOCK % "0" + " k.letter(1, 2, 1);"
     assert drawn_opener.missing_parts({"moment": "the messenger knocks", "code": ok}, narration) == []
-    # a 3D door prop counts as the door, and its own `open` is checked too
     code = "export default function draw(k, f) { k.person(1, 2, 3, {}); k.letter(1, 2, 1); }"
     assert drawn_opener.missing_parts({"moment": "he knocks", "code": code}, "", {"door"}, [0]) == []
     assert any("OPEN" in p for p in drawn_opener.missing_parts({"moment": "he knocks", "code": code}, "", {"door"}, [0.6]))
@@ -105,39 +158,41 @@ def test_hold_counts_as_drawing_the_letter_and_scenery_stays_3d():
     assert any("letter" in p for p in drawn_opener.missing_parts({"moment": "the messenger waits", "code": code.replace("letter", "cup")}))
     assert any("scenery" in p and "k.house" in p for p in opener3d.lint_cutout(
         "export default function draw(k, f) { k.house(1, 2, 3); k.person(1, 2, 3, {}); }"))
-    assert opener3d.lint_cutout("export default function draw(k, f) { const d = k.door(1, 2, 3); k.person(1, 2, 3, {}); }") == []
     knock = "export default function draw(k, f) { k.knock(600, 1080, 3.4, {person: {hold: ['letter', null]}}); }"
     assert drawn_opener.missing_parts({"moment": "the messenger knocks", "code": knock}) == []
 
 
-def test_against_puts_a_cutout_at_the_house_door_and_inside_is_rejected():
+def test_a_cabin_has_its_own_door():
     raw = example()
-    raw["place"] = "street"
-    raw["props"] = [{"type": "house", "id": "home", "at": [0.4, -2.6]}]
-    raw["cutouts"][0]["at"] = [0, -2.42]  # inside the house's walls (live McLean draft, 2026-11-06)
-    raw["cutouts"] = raw["cutouts"][:1]
-    raw["shots"] = [{"at": 0, "target": "amb", "distance": 4}, {"at": 1, "target": "amb", "distance": 2}]
-    raw["effects"] = []
-    assert any("inside home" in p for p in opener3d.clean(raw, WORDS, SECONDS)[1])
-    raw["cutouts"][0]["against"] = "home"
+    raw["props"][0]["type"] = "cabin"  # two wall modules: its door is one of them, half a module off the centre
     stage, bad = opener3d.clean(raw, WORDS, SECONDS)
-    assert bad == [] and stage["cutouts"][0]["at"] == [0.4, -1.36], bad  # house 0: its door is module 1 (the middle)
-    raw["cutouts"][0]["against"] = "nowhere"
-    assert any("against" in p for p in opener3d.clean(raw, WORDS, SECONDS)[1])
+    cabin, knocker = stage["props"][0], stage["cutouts"][0]
+    assert bad == [] and abs(abs(knocker["at"][0] - cabin["at"][0]) - opener3d.HOUSE_UNIT / 2) < 1e-6, (bad, knocker["at"], cabin["at"])
+
+
+def test_someone_inside_a_house_steps_out_and_a_door_needs_a_real_id():
+    raw = example()
+    raw["cutouts"][0].pop("place")
+    raw["cutouts"][0]["at"] = [0, -3.2]  # within the house's walls
+    stage, bad = opener3d.clean(raw, WORDS, SECONDS)
+    front = opener3d.box_of(stage["props"][0])[3]
+    assert bad == [] and stage["cutouts"][0]["at"][1] > front, (bad, stage["cutouts"][0]["at"], front)  # moved in front
+    raw["cutouts"][0]["place"] = {"door": "nowhere"}
+    assert any("door of 'nowhere'" in p for p in opener3d.clean(raw, WORDS, SECONDS)[1])
 
 
 def test_a_cutout_that_melts_into_the_wall_goes_back():
     from PIL import Image
     tmp = ROOT / "test_renders" / "opener3d" / "blend_test"
     (tmp / "cutouts").mkdir(parents=True, exist_ok=True)
-    for name, colour in (("grocer", (122, 78, 44)), ("messenger", (40, 52, 96))):
+    for name, colour in (("brown", (122, 78, 44)), ("navy", (40, 52, 96))):
         im = Image.new("RGBA", (100, 200), (0, 0, 0, 0))
         im.paste((*colour, 255), (20, 20, 80, 190))
         im.save(tmp / "cutouts" / f"{name}_0.png")
     stage = {"place": "room", "colors": {"wall": "#7E5A40"},
-             "cutouts": [{"name": "grocer", "w": 100, "h": 200}, {"name": "messenger", "w": 100, "h": 200}]}
+             "cutouts": [{"name": "brown", "w": 100, "h": 200}, {"name": "navy", "w": 100, "h": 200}]}
     found = opener3d.blends(stage, tmp)
-    assert len(found) == 1 and found[0].startswith("grocer"), found
+    assert len(found) == 1 and found[0].startswith("brown"), found
     assert opener3d.blends({**stage, "place": "street"}, tmp) == []
 
 
@@ -155,7 +210,7 @@ def look():
     stage, bad = opener3d.clean(example(), WORDS, SECONDS)
     assert not bad, bad
     print(opener3d.render(stage, SECONDS, out) or f"wrote {out / 'opener.mp4'}")
-    print(f"wrote {opener3d.sheet(out / 'opener.mp4', SECONDS, out / 'sheet.png')}")
+    print(f"wrote {opener3d.sheet(out / 'opener.mp4', SECONDS, out / 'sheet.png', stage['shots'])}")
 
 
 if __name__ == "__main__":

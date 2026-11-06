@@ -22,11 +22,26 @@ _gemini_model: str | None = None
 _argon_exhausted: bool = False  # set True for the rest of this run if Argon returns RESOURCE_EXHAUSTED
 
 
+ARGON_OUT = ROOT / "agy_tasks" / "argon_out.txt"  # when Argon last ran out: remembered across runs
+ARGON_REST = 6 * 3600  # seconds to keep using Flash after that (each new run used to spend a call finding out again)
+
+
+def argon_out() -> None:
+    """Notes that Argon's quota ran out, for this run and the next few hours of runs."""
+    global _argon_exhausted
+    _argon_exhausted = True
+    try:
+        ARGON_OUT.parent.mkdir(parents=True, exist_ok=True)
+        ARGON_OUT.write_text(time.strftime("%Y-%m-%d %H:%M"), encoding="utf-8")
+    except OSError:
+        pass
+
+
 def gemini_model() -> str:
     """Gemini 4 Argon once the owner's account has it (owner's wish), else Gemini 3.8 Flash; always high effort.
-    If Argon hits its quota during this run (_argon_exhausted), uses Flash for the rest of the run."""
+    If Argon hit its quota during this run (_argon_exhausted) or in the last ARGON_REST seconds, uses Flash."""
     global _gemini_model
-    if _argon_exhausted:
+    if _argon_exhausted or (ARGON_OUT.exists() and time.time() - ARGON_OUT.stat().st_mtime < ARGON_REST):
         return GEMINI_FALLBACK
     if _gemini_model is None:
         try:
@@ -97,8 +112,8 @@ def run_agy(prompt: str, folder: Path, timeout: int = 900, model: str | None = N
         task.unlink(missing_ok=True)
     said = f"{r.stdout}\n{r.stderr}"
     if ("RESOURCE_EXHAUSTED" in said or quota_exhausted(said)) and model != GEMINI_FALLBACK:
-        _argon_exhausted = True
-        print(f"  {model}'s quota is used up: using {GEMINI_FALLBACK} for the rest of this run")
+        argon_out()
+        print(f"  {model}'s quota is used up: using {GEMINI_FALLBACK} for this run and the next {ARGON_REST // 3600} hours")
         return run_agy(prompt, folder, timeout, GEMINI_FALLBACK)
     if "RESOURCE_EXHAUSTED" in said or (not (r.stdout or "").strip() and quota_exhausted(said)):
         return said

@@ -9,6 +9,9 @@ import { clamp, lerp, ss, eOut, eBack, popS, ellPts, rrect, noise1, hash, create
 import { Pen } from "./lib/pen.mjs";
 import { star4 } from "./lib/textures.mjs";
 import { person as beanPerson, SKIN } from "./lib/rigs/bean.mjs";
+import fs from "node:fs";
+import path from "node:path";
+import { fileURLToPath, pathToFileURL } from "node:url";
 
 export const W = 1080, H = 1920;
 export const C = {
@@ -30,6 +33,26 @@ export const MOODS = {
 };
 export const lightOf = (l = {}) => ({ mood: MOODS[l.mood] ? l.mood : "day", from: Array.isArray(l.from) ? l.from : [880, 260] });
 let depthTmp = null;   // one scratch canvas for k.depth, reused every frame
+
+// Made parts (owner, 2026-11-06: "a subagent for that specific hat"): hats and things the kit lacked, each drawn once by
+// the opener crew's part maker (shortsmaker/opener_crew.py), checked by eye by its part checker, then kept in
+// drawn/parts/<kind>/<name>.mjs so every later Short draws the same one with no AI. They were linted like any AI
+// code before they were saved. A hat module: `export default function draw(k, hy, o)` in the person's head space
+// (head centre (0, hy)); a thing: `export const grip = [x, y]` + `export default function draw(k, o)` standing on (0, 0).
+export const MADE = { hat: {}, thing: {} };
+export async function loadMade(dir) {
+  for (const kind of Object.keys(MADE)) {
+    const folder = path.join(dir, kind);
+    if (!fs.existsSync(folder)) continue;
+    for (const f of fs.readdirSync(folder).filter((n) => n.endsWith(".mjs")).sort()) {
+      try {
+        const m = await import(pathToFileURL(path.join(folder, f)).href);
+        if (typeof m.default === "function") MADE[kind][f.slice(0, -4)] = { draw: m.default, grip: Array.isArray(m.grip) ? m.grip : [0, -40] };
+      } catch (e) { console.error(`made ${kind} ${f} didn't load: ${e.message}`); }   // a broken part is skipped, never a failed render
+    }
+  }
+}
+await loadMade(process.env.SHORTSMAKER_PARTS || path.join(path.dirname(fileURLToPath(import.meta.url)), "parts"));
 
 export function makeKit(ctx, t, words = [], light = lightOf()) {
   const p = new Pen(ctx);
@@ -192,9 +215,20 @@ export function makeKit(ctx, t, words = [], light = lightOf()) {
     if (kind === "nurse") { hat([[-24, hy - 24], [-20, hy - 46], [20, hy - 46], [24, hy - 24]], C.white); p.stroke([[0, hy - 42], [0, hy - 28]], { w: 5, color: C.red }); p.stroke([[-7, hy - 35], [7, hy - 35]], { w: 5, color: C.red }); }
     if (kind === "hardhat") { hat([[-32, hy - 16], [-30, hy - 40], [-14, hy - 56], [14, hy - 56], [30, hy - 40], [32, hy - 16]], o.hatColor || "#F2C230", { round: true });
       p.stroke([[-44, hy - 15], [44, hy - 15]], { w: 7 }); p.stroke([[0, hy - 56], [0, hy - 20]], { w: 3 }); }
-    if (kind === "bonnet") { const P = ellPts(0, hy - 6, 42, 40, 16).filter(([, y]) => y <= hy + 6); k.paint([...P], o.hatColor || "#E8D9B0"); p.stroke(P, { w: 3.4 }); p.stroke([[-30, hy + 10], [-8, hy + 34]], { w: 2.6, color: C.red }); }
+    if (kind === "bonnet") { const P = ellPts(0, hy - 6, 42, 40, 16).filter(([, y]) => y <= hy + 6); k.paint([...P], o.hatColor || "#E8D9B0"); p.stroke(P, { w: 3.4 }); p.stroke([[-38, hy + 4], [-40, hy + 34]], { w: 3, color: C.red }); }   // the tie hangs beside the face (across the jaw it read as a cut, 2026-11-06)
+    if (!HATS.includes(kind) && MADE.hat[kind]) { part(); MADE.hat[kind].draw(k, hy, o); }   // a made hat (drawn/parts/hat)
   };
   k.person = (x, y, s = 1, o = {}) => {
+    if (o.dance != null) {   // `dance: phase` (2026-11-06: a live "dancing plague" opener stood stiffly with waving arms):
+      const ph = o.dance, up = Math.abs(Math.sin(ph)) * 12 * s, tilt = Math.sin(ph) * .15;   // small hops (a 30 px hop read as floating), sways,
+      ctx.save(); ctx.translate(x, y); ctx.rotate(tilt); ctx.translate(-x, -y - up);         // kicks its legs, arms flung
+      const r = k.person(x, y, s, { ...o, dance: undefined, still: true, walk: ph * 1.5,
+        arms: o.arms || [140 + 30 * Math.sin(ph), 50 + 100 * Math.max(0, -Math.sin(ph))], bend: o.bend || [25, -35] });
+      ctx.restore();
+      const at = ([px, py]) => { const dx = px - x, dy = py - y - up;   // where a drawn point really landed
+        return [x + dx * Math.cos(tilt) - dy * Math.sin(tilt), y + dx * Math.sin(tilt) + dy * Math.cos(tilt)]; };
+      return { head: at(r.head), top: at(r.top), hands: r.hands.map(at) };
+    }
     const flip = o.flip ? -1 : 1, hy = -212 + (o.dip || 0);
     let bob = o.still ? 0 : Math.sin(t * 4.2 + x * .013) * 2.2;
     if (o.walk != null) bob = -Math.abs(Math.cos(o.walk)) * 7;
@@ -231,7 +265,8 @@ export function makeKit(ctx, t, words = [], light = lightOf()) {
     const hands = [hand(la, lb, -1, -22), hand(ra, rb, 1, 22)];
     // `hold: [left, right]`: a thing gripped in that hand, the hand drawn over it (a live 3D draft's letter floated
     // beside the messenger's empty hand, 2026-11-06)
-    (o.hold || []).forEach((thing, j) => { if (HOLD[thing]) HOLD[thing](hands[j][0], hands[j][1], s); });
+    (o.hold || []).forEach((thing, j) => { if (HOLD[thing]) HOLD[thing](hands[j][0], hands[j][1], s);
+      else if (MADE.thing[thing]) { const m = MADE.thing[thing]; part(); k.at(hands[j][0], hands[j][1], s, 0, () => k.at(-m.grip[0], -m.grip[1], 1, 0, () => m.draw(k, {}))); } });
     for (const [hx, hy2] of hands) { k.paint(ellPts(hx, hy2, 7 * s, 7 * s, 10), o.skin || SKIN[0]); p.ring(hx, hy2, 7 * s, 7 * s, { w: 2.4 }); }   // opaque: washed hands went muddy on dark coats
     return { head: [x, y + bob * s + s * hy], top: [x, y + bob * s + s * (hy - 50)], hands };
   };
@@ -581,6 +616,8 @@ export function makeKit(ctx, t, words = [], light = lightOf()) {
     for (const dx of [-36, 0, 36]) k.disc(x + dx * s, y - 22 * s, 9 * s, C.brass, { w: 2 });
     return { top: y - 235 * s, speaker: [x, y - 120 * s] };
   };
+  // a made thing (drawn/parts/thing) standing on (x, y), at the scale of the people next to it
+  k.thing = (name, x, y, s = 1, o = {}) => { const m = MADE.thing[name]; if (!m) return null; part(); k.at(x, y, s, 0, () => m.draw(k, o)); return { grip: [x + m.grip[0] * s, y + m.grip[1] * s] }; };
   k.letter = (x, y, s = 1, rot = 0) => k.at(x, y, s, rot, () => {     // a sealed envelope, centred
     const B = k.rect(-110, -70, 220, 140); part(); k.paint(B, C.white, { sharp: true }); p.poly(B, { w: 3.4 });
     p.stroke([[-110, -70], [0, 10], [110, -70]], { w: 3 }); k.disc(0, 10, 16, C.red, { w: 2.4 }); });
