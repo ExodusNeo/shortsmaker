@@ -1,20 +1,17 @@
 ---
-source_file: "remotion/src/style/looks/Engraving.tsx"
+source_file: "drawn/parts/thing/battery.mjs"
 type: "code"
-community: "Halftone.tsx"
-location: "L36"
+community: "battery.mjs"
+location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Halftonetsx
+  - community/batterymjs
 ---
 
 # draw()
 
 ## Connections
-- [[Engraving()]] - `calls` [EXTRACTED]
-- [[Engraving.tsx]] - `contains` [EXTRACTED]
-- [[hatch()_1]] - `calls` [EXTRACTED]
-- [[luminance()]] - `calls` [EXTRACTED]
+- [[battery.mjs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Halftonetsx
+#graphify/code #graphify/EXTRACTED #community/batterymjs

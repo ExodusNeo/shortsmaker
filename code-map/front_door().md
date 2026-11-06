@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/opener3d.py"
 type: "code"
-community: "front_door"
-location: "L65"
+community: "opener3d.py"
+location: "L181"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/front_door
+  - community/opener3dpy
 ---
 
 # front_door()
@@ -16,5 +16,6 @@ tags:
 - [[clean()]] - `calls` [EXTRACTED]
 - [[math]] - `calls` [EXTRACTED]
 - [[opener3d.py]] - `contains` [EXTRACTED]
+- [[test_example_is_clean_and_the_knocker_stands_on_the_door()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/front_door
+#graphify/code #graphify/EXTRACTED #community/opener3dpy

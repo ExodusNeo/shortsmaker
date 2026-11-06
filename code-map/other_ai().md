@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/llm.py"
 type: "code"
-community: "configure_brain"
-location: "L108"
+community: "other_ai"
+location: "L123"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/configure_brain
+  - community/other_ai
 ---
 
 # other_ai()
@@ -21,4 +21,4 @@ tags:
 - [[test_every_mode_can_continue_through_two_exhausted_ais()]] - `calls` [EXTRACTED]
 - [[test_gemini_modes_choose_codex_and_keep_editor_choice()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/configure_brain
+#graphify/code #graphify/EXTRACTED #community/other_ai

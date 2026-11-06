@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[For one Short, search metadata and fetch only its selected track. Savedlocal…]] - `rationale_for` [EXTRACTED]
-- [[Path_28]] - `references` [EXTRACTED]
+- [[Path_35]] - `references` [EXTRACTED]
 - [[audio_library.py]] - `contains` [EXTRACTED]
 - [[audio_metadata()]] - `calls` [EXTRACTED]
 - [[duration()]] - `calls` [EXTRACTED]
@@ -21,7 +21,7 @@ tags:
 - [[freesound_results()]] - `calls` [EXTRACTED]
 - [[history_read()]] - `calls` [EXTRACTED]
 - [[math]] - `calls` [EXTRACTED]
-- [[render()_3]] - `calls` [EXTRACTED]
+- [[render()]] - `calls` [EXTRACTED]
 - [[select_music()]] - `calls` [EXTRACTED]
 - [[set_audio_metadata()]] - `calls` [EXTRACTED]
 - [[settings()]] - `calls` [EXTRACTED]

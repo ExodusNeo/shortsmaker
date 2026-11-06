@@ -1,17 +1,18 @@
 ---
 source_file: "tests/test_style.py"
 type: "code"
-community: "style_placeholders"
-location: "L328"
+community: "invent_component"
+location: "L266"
 tags:
   - graphify/code
-  - graphify/EXTRACTED
-  - community/style_placeholders
+  - graphify/INFERRED
+  - community/invent_component
 ---
 
 # run()
 
 ## Connections
-- [[test_failed_invention_keeps_the_others()]] - `contains` [EXTRACTED]
+- [[test_failed_invention_keeps_the_others()]] - `indirect_call` [INFERRED]
+- [[test_invention_passes_into_slot()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/style_placeholders
+#graphify/code #graphify/INFERRED #community/invent_component

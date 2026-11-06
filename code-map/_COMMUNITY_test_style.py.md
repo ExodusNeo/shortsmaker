@@ -1,11 +1,11 @@
 ---
 type: community
-members: 18
+members: 17
 ---
 
 # test_style.py
 
-**Members:** 18 nodes
+**Members:** 17 nodes
 
 ## Members
 - [[Puts the Short's photo look on the scenes the picker chose for it (it saw the…]] - rationale - shortsmaker/style_lab.py
@@ -22,7 +22,6 @@ members: 18
 - [[test_director_prompt_lists_library()]] - code - tests/test_style.py
 - [[test_fact_check_sees_new_graphics()]] - code - tests/test_style.py
 - [[test_remotion_forced_by_look()]] - code - tests/test_style.py
-- [[test_save_candidate_unique_slug()]] - code - tests/test_style.py
 - [[test_style.py]] - code - tests/test_style.py
 - [[wants_remotion()]] - code - shortsmaker/remotion_render.py
 - [[write_scripts with every AInetwork step faked; the director answers…]] - rationale - tests/test_style.py
@@ -35,27 +34,27 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 13 edges to [[_COMMUNITY_test_full_scenes.py]]
-- 11 edges to [[_COMMUNITY_style_library]]
-- 5 edges to [[_COMMUNITY_style_placeholders]]
+- 11 edges to [[_COMMUNITY_pathlib]]
+- 9 edges to [[_COMMUNITY_approve_candidate]]
+- 7 edges to [[_COMMUNITY_invent_component]]
+- 6 edges to [[_COMMUNITY_style_library]]
 - 4 edges to [[_COMMUNITY_owner]]
-- 3 edges to [[_COMMUNITY_shutil]]
 - 3 edges to [[_COMMUNITY_render_remotion]]
-- 3 edges to [[_COMMUNITY_clean_look]]
-- 2 edges to [[_COMMUNITY_invent_component]]
+- 3 edges to [[_COMMUNITY_short_render.py]]
 - 2 edges to [[_COMMUNITY_json]]
-- 2 edges to [[_COMMUNITY_pathlib]]
+- 2 edges to [[_COMMUNITY_gpu.py]]
 - 1 edge to [[_COMMUNITY_limit_style]]
-- 1 edge to [[_COMMUNITY_clean_graphic]]
 - 1 edge to [[_COMMUNITY_write_scripts]]
-- 1 edge to [[_COMMUNITY_prepare_topic]]
 - 1 edge to [[_COMMUNITY_render]]
-- 1 edge to [[_COMMUNITY_full_props]]
-- 1 edge to [[_COMMUNITY_choose_images]]
+- 1 edge to [[_COMMUNITY_clean_full]]
+- 1 edge to [[_COMMUNITY_sfx_events]]
+- 1 edge to [[_COMMUNITY_test_pictures_first.py]]
+- 1 edge to [[_COMMUNITY_test_topic_ideas.py]]
+- 1 edge to [[_COMMUNITY_test_full_scenes.py]]
 - 1 edge to [[_COMMUNITY_re]]
 
 ## Top bridge nodes
-- [[test_style.py]] - degree 57, connects to 14 communities
+- [[test_style.py]] - degree 57, connects to 15 communities
 - [[plan_with()_1]] - degree 8, connects to 2 communities
 - [[wants_remotion()]] - degree 4, connects to 2 communities
 - [[apply_look_scenes()]] - degree 4, connects to 2 communities

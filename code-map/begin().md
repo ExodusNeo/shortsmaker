@@ -1,22 +1,22 @@
 ---
 source_file: "shortsmaker/checkpoints.py"
 type: "code"
-community: "resume_runs"
+community: "checkpoints.py"
 location: "L51"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/resume_runs
+  - community/checkpointspy
 ---
 
 # begin()
 
 ## Connections
-- [[Path_9]] - `references` [EXTRACTED]
+- [[Path_12]] - `references` [EXTRACTED]
 - [[checkpoints.py]] - `contains` [EXTRACTED]
-- [[main()_2]] - `calls` [EXTRACTED]
+- [[main()_4]] - `calls` [EXTRACTED]
 - [[pack()]] - `calls` [EXTRACTED]
 - [[read()]] - `calls` [EXTRACTED]
 - [[write_json()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/resume_runs
+#graphify/code #graphify/EXTRACTED #community/checkpointspy

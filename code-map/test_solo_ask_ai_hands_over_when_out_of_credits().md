@@ -2,7 +2,7 @@
 source_file: "tests/test_package.py"
 type: "code"
 community: "ask_ai"
-location: "L311"
+location: "L318"
 tags:
   - graphify/code
   - graphify/EXTRACTED

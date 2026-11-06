@@ -1,12 +1,12 @@
 ---
 source_file: "drawn/kit.mjs"
 type: "code"
-community: "clamp"
-location: "L40"
+community: "Pen"
+location: "L63"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/clamp
+  - community/Pen
 ---
 
 # .ease()
@@ -16,4 +16,4 @@ tags:
 - [[eOut()]] - `calls` [EXTRACTED]
 - [[k]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/clamp
+#graphify/code #graphify/EXTRACTED #community/Pen

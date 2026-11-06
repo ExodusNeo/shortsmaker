@@ -2,7 +2,7 @@
 source_file: "shortsmaker/opener3d.py"
 type: "rationale"
 community: "lint_cutout"
-location: "L85"
+location: "L202"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED

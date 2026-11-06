@@ -1,12 +1,12 @@
 ---
 source_file: "drawn/kit.mjs"
 type: "code"
-community: "k"
-location: "L614"
+community: "popS"
+location: "L651"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/k
+  - community/popS
 ---
 
 # .exclaim()
@@ -17,4 +17,4 @@ tags:
 - [[k]] - `method` [EXTRACTED]
 - [[popS()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/k
+#graphify/code #graphify/EXTRACTED #community/popS

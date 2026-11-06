@@ -1,28 +1,37 @@
 ---
 type: community
-members: 16
+members: 25
 ---
 
 # prepare_topic
 
-**Members:** 16 nodes
+**Members:** 25 nodes
 
 ## Members
 - [[Before writing the topic's Wikipedia research (`_texts`; fact_check() reuses…]] - rationale - shortsmaker/picture_pool.py
-- [[Check every line against the story's Wikipedia articles and rewrite what they…]] - rationale - shortsmaker/writing.py
-- [[Numbered thumbnail grids (6x4) so Claude can look at every candidate at once.]] - rationale - shortsmaker/picture_pool.py
-- [[Path_12]] - code
-- [[Plain text of an English Wikipedia article ('' when missing or unreachable).]] - rationale - shortsmaker/writing.py
+- [[Path_15]] - code
+- [[Rejected scenes (index - the review's complaint) that get a real picture from…]] - rationale - shortsmaker/review.py
+- [[The saved pool (None if missing or unreadable it is gathered again);…]] - rationale - shortsmaker/picture_pool.py
+- [[The topic's usable pictures as prompt lines ( without a picture list).]] - rationale - shortsmaker/picture_pool.py
+- [[The usable pictures as prompt lines 12 film 1944 newsreel of rubber tanks…]] - rationale - shortsmaker/picture_pool.py
+- [[Usable list entries for the topic check all frames of one video count once…]] - rationale - shortsmaker/picture_pool.py
 - [[Verifydownload usable originals while the writer can still avoid unavailable…]] - rationale - shortsmaker/picture_pool.py
-- [[article_text()]] - code - shortsmaker/writing.py
-- [[contact_sheets()]] - code - shortsmaker/picture_pool.py
-- [[fact_check()_1]] - code - shortsmaker/writing.py
+- [[catalog_text()]] - code - shortsmaker/picture_pool.py
+- [[is_usable()]] - code - shortsmaker/picture_pool.py
+- [[load_pool()]] - code - shortsmaker/picture_pool.py
+- [[pictures_of()]] - code - shortsmaker/picture_pool.py
+- [[pool.json (the candidates without bytes) + thumbk.jpg; list positions are the…]] - rationale - shortsmaker/picture_pool.py
 - [[pool_folder()]] - code - shortsmaker/picture_pool.py
+- [[pool_pictures()]] - code - shortsmaker/review.py
 - [[preflight_pictures()]] - code - shortsmaker/picture_pool.py
 - [[prepare_topic()]] - code - shortsmaker/picture_pool.py
+- [[save_pool()]] - code - shortsmaker/picture_pool.py
 - [[test_empty_pool_drops_topic_without_ai()]] - code - tests/test_pictures_first.py
-- [[test_fact_check_drops_full()]] - code - tests/test_full_scenes.py
+- [[test_min_pictures_from_settings()]] - code - tests/test_rules.py
+- [[test_pool_roundtrip()]] - code - tests/test_pictures_first.py
+- [[test_pool_rows_without_thumbs()]] - code - tests/test_pictures_first.py
 - [[test_small_pool_skips_ai()]] - code - tests/test_pictures_first.py
+- [[usable()]] - code - shortsmaker/picture_pool.py
 - [[verify()]] - code - shortsmaker/picture_pool.py
 
 ## Live Query (requires Dataview plugin)
@@ -33,26 +42,28 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 8 edges to [[_COMMUNITY_test_pictures_first.py]]
-- 7 edges to [[_COMMUNITY_test_full_scenes.py]]
-- 4 edges to [[_COMMUNITY_write_scripts]]
+- 11 edges to [[_COMMUNITY_catalog_pool]]
+- 10 edges to [[_COMMUNITY_pathlib]]
+- 7 edges to [[_COMMUNITY_write_scripts]]
+- 6 edges to [[_COMMUNITY_test_pictures_first.py]]
+- 4 edges to [[_COMMUNITY_json]]
 - 3 edges to [[_COMMUNITY_gather_pool]]
 - 2 edges to [[_COMMUNITY_test_rules.py]]
-- 2 edges to [[_COMMUNITY_paint_instead]]
-- 2 edges to [[_COMMUNITY_gpu.py]]
-- 2 edges to [[_COMMUNITY_clean_pics]]
-- 2 edges to [[_COMMUNITY_json]]
-- 1 edge to [[_COMMUNITY_extra_sources.py]]
-- 1 edge to [[_COMMUNITY_finish_render]]
-- 1 edge to [[_COMMUNITY_choose_images]]
-- 1 edge to [[_COMMUNITY_render]]
-- 1 edge to [[_COMMUNITY_words_of]]
+- 2 edges to [[_COMMUNITY_drawn_thumbnail]]
+- 2 edges to [[_COMMUNITY_ffmpeg]]
+- 1 edge to [[_COMMUNITY_edit_scripts]]
+- 1 edge to [[_COMMUNITY_footage.py]]
+- 1 edge to [[_COMMUNITY_test_first_second.py]]
+- 1 edge to [[_COMMUNITY_hashlib]]
+- 1 edge to [[_COMMUNITY_apply_review_fixes]]
 - 1 edge to [[_COMMUNITY_ask_ai]]
-- 1 edge to [[_COMMUNITY_test_style.py]]
+- 1 edge to [[_COMMUNITY_film_piece]]
+- 1 edge to [[_COMMUNITY_finish_render]]
+- 1 edge to [[_COMMUNITY_clean_photo]]
 
 ## Top bridge nodes
+- [[load_pool()]] - degree 14, connects to 7 communities
+- [[pool_pictures()]] - degree 10, connects to 7 communities
 - [[prepare_topic()]] - degree 16, connects to 6 communities
-- [[contact_sheets()]] - degree 8, connects to 5 communities
-- [[article_text()]] - degree 8, connects to 5 communities
-- [[fact_check()_1]] - degree 8, connects to 5 communities
-- [[preflight_pictures()]] - degree 7, connects to 3 communities
+- [[save_pool()]] - degree 13, connects to 5 communities
+- [[pictures_of()]] - degree 7, connects to 4 communities

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/logbook.py"
 type: "code"
-community: "logbook_results"
+community: "fake_ai"
 location: "L100"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/logbook_results
+  - community/fake_ai
 ---
 
 # entry_age()
@@ -18,4 +18,4 @@ tags:
 - [[logbook_results()]] - `calls` [EXTRACTED]
 - [[re]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/logbook_results
+#graphify/code #graphify/EXTRACTED #community/fake_ai

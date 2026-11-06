@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/editplan.py"
 type: "code"
-community: "test_full_scenes.py"
+community: "short_render.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_full_scenespy
+  - community/short_renderpy
 ---
 
 # editplan.py
@@ -21,15 +21,17 @@ tags:
 - [[frame_render.py]] - `imports_from` [EXTRACTED]
 - [[look_text()]] - `contains` [EXTRACTED]
 - [[media_tools.py]] - `imports_from` [EXTRACTED]
+- [[opener_crew.py]] - `imports_from` [EXTRACTED]
 - [[pathlib]] - `imports_from` [EXTRACTED]
 - [[picture_line()]] - `contains` [EXTRACTED]
 - [[plan_rules.py]] - `imports_from` [EXTRACTED]
 - [[scene_cues()]] - `contains` [EXTRACTED]
 - [[short_render.py]] - `imports_from` [EXTRACTED]
+- [[staging_line()]] - `contains` [EXTRACTED]
 - [[style_lab.py]] - `imports_from` [EXTRACTED]
 - [[test_full_scenes.py]] - `imports_from` [EXTRACTED]
 - [[test_package.py]] - `imports_from` [EXTRACTED]
 - [[test_pictures_first.py]] - `imports_from` [EXTRACTED]
 - [[test_story.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_full_scenespy
+#graphify/code #graphify/EXTRACTED #community/short_renderpy

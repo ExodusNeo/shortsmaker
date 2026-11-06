@@ -1,12 +1,12 @@
 ---
 source_file: "drawn/lib/rigs/bean.mjs"
 type: "code"
-community: "kit.mjs"
+community: "makeKit"
 location: "L10"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/kitmjs
+  - community/makeKit
 ---
 
 # SKIN
@@ -15,4 +15,4 @@ tags:
 - [[bean.mjs]] - `contains` [EXTRACTED]
 - [[kit.mjs]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/kitmjs
+#graphify/code #graphify/EXTRACTED #community/makeKit

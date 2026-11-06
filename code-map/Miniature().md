@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[Miniature.tsx]] - `contains` [EXTRACTED]
-- [[draw()_2]] - `indirect_call` [INFERRED]
+- [[draw()_4]] - `indirect_call` [INFERRED]
 - [[styleindex.ts]] - `indirect_call` [INFERRED]
 - [[useOnceCanvas()]] - `calls` [EXTRACTED]
 

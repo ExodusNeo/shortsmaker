@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "json"
+community: "pathlib"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/json
+  - community/pathlib
 ---
 
 # datetime
@@ -18,4 +18,4 @@ tags:
 - [[scene_repair.py]] - `imports_from` [EXTRACTED]
 - [[test_quality.py]] - `imports_from` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/json
+#graphify/concept #graphify/EXTRACTED #community/pathlib

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/gpu.py"
 type: "rationale"
-community: "test_h3_handoff.py"
+community: "qwen_voice.py"
 location: "L155"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/test_h3_handoffpy
+  - community/qwen_voicepy
 ---
 
 # Caption words the aligner gives for `text` (qwen_voice.align_words: a token…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[spoken_count()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/test_h3_handoffpy
+#graphify/rationale #graphify/EXTRACTED #community/qwen_voicepy

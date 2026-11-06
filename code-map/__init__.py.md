@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/__init__.py"
 type: "code"
-community: "test_full_scenes.py"
+community: "pathlib"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_full_scenespy
+  - community/pathlib
 ---
 
 # __init__.py
@@ -34,6 +34,7 @@ tags:
 - [[media_menu.py]] - `imports_from` [EXTRACTED]
 - [[motion.py]] - `imports_from` [EXTRACTED]
 - [[opener3d.py]] - `imports_from` [EXTRACTED]
+- [[opener_crew.py]] - `imports_from` [EXTRACTED]
 - [[opening_rules.py]] - `imports_from` [EXTRACTED]
 - [[patching.py]] - `imports` [EXTRACTED]
 - [[picker.py]] - `imports_from` [EXTRACTED]
@@ -63,6 +64,7 @@ tags:
 - [[test_marks.py]] - `imports_from` [EXTRACTED]
 - [[test_media.py]] - `imports_from` [EXTRACTED]
 - [[test_opener3d.py]] - `imports_from` [EXTRACTED]
+- [[test_opener_crew.py]] - `imports_from` [EXTRACTED]
 - [[test_opener_graphic.py]] - `imports_from` [EXTRACTED]
 - [[test_opener_preflight.py]] - `imports_from` [EXTRACTED]
 - [[test_opening_rules.py]] - `imports_from` [EXTRACTED]
@@ -80,4 +82,4 @@ tags:
 - [[voice_cache.py]] - `imports_from` [EXTRACTED]
 - [[writing.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_full_scenespy
+#graphify/code #graphify/EXTRACTED #community/pathlib

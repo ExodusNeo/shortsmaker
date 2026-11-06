@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/checkpoints.py"
 type: "code"
-community: "resume_runs"
+community: "checkpoints.py"
 location: "L13"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/resume_runs
+  - community/checkpointspy
 ---
 
 # pack()
@@ -20,4 +20,4 @@ tags:
 - [[save_context()]] - `calls` [EXTRACTED]
 - [[update()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/resume_runs
+#graphify/code #graphify/EXTRACTED #community/checkpointspy

@@ -1,12 +1,12 @@
 ---
 source_file: "tests/render_style.py"
 type: "code"
-community: "first_sentence"
+community: "scenes"
 location: "L19"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/first_sentence
+  - community/scenes
 ---
 
 # build()
@@ -17,4 +17,4 @@ tags:
 - [[render_style.py]] - `contains` [EXTRACTED]
 - [[style_library()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/first_sentence
+#graphify/code #graphify/EXTRACTED #community/scenes

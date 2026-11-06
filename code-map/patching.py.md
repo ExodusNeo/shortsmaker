@@ -15,7 +15,7 @@ tags:
 - [[For tests that swap shortsmaker functions by name which module owns each one.]] - `rationale_for` [EXTRACTED]
 - [[__init__.py]] - `imports` [EXTRACTED]
 - [[importlib]] - `imports` [EXTRACTED]
-- [[owner()]] - `contains` [EXTRACTED]
+- [[owner()_1]] - `contains` [EXTRACTED]
 - [[pathlib]] - `imports_from` [EXTRACTED]
 - [[pkgutil]] - `imports` [EXTRACTED]
 - [[sys]] - `imports` [EXTRACTED]

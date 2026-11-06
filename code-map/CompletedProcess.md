@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "gpu.py"
+community: "film_piece"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/gpupy
+  - community/film_piece
 ---
 
 # CompletedProcess
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[film_ffmpeg()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/gpupy
+#graphify/code #graphify/EXTRACTED #community/film_piece

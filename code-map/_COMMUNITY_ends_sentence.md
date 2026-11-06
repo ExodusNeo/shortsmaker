@@ -9,7 +9,7 @@ members: 9
 
 ## Members
 - [[Exact-narration caption file to upload in YouTube Studio (searchable, unlike…]] - rationale - shortsmaker/seo.py
-- [[Path_23]] - code
+- [[Path_29]] - code
 - [[Runs of scenes that together make whole sentences. A sentence may run across…]] - rationale - shortsmaker/gpu.py
 - [[ends_sentence()]] - code - shortsmaker/plan_rules.py
 - [[sentence_groups()]] - code - shortsmaker/gpu.py
@@ -26,14 +26,15 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 3 edges to [[_COMMUNITY_test_full_scenes.py]]
-- 2 edges to [[_COMMUNITY_test_story.py]]
-- 2 edges to [[_COMMUNITY_first_sentence]]
-- 1 edge to [[_COMMUNITY_test_h3_handoff.py]]
+- 3 edges to [[_COMMUNITY_test_story.py]]
+- 2 edges to [[_COMMUNITY_pathlib]]
 - 1 edge to [[_COMMUNITY_render]]
+- 1 edge to [[_COMMUNITY_local_clips]]
 - 1 edge to [[_COMMUNITY_gpu.py]]
 - 1 edge to [[_COMMUNITY_captions]]
 - 1 edge to [[_COMMUNITY_re]]
+- 1 edge to [[_COMMUNITY_test_full_scenes.py]]
+- 1 edge to [[_COMMUNITY_scenes]]
 
 ## Top bridge nodes
 - [[ends_sentence()]] - degree 7, connects to 4 communities

@@ -1,17 +1,18 @@
 ---
-source_file: "shortsmaker/extra_sources.py"
+source_file: "shortsmaker/frame_render.py"
 type: "code"
-community: "extra_sources.py"
-location: "L148"
+community: "frame_maker"
+location: "L198"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/extra_sourcespy
+  - community/frame_maker
 ---
 
 # .__init__()
 
 ## Connections
-- [[BrandImages]] - `method` [EXTRACTED]
+- [[ClipReader]] - `method` [EXTRACTED]
+- [[Path_14]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/extra_sourcespy
+#graphify/code #graphify/EXTRACTED #community/frame_maker

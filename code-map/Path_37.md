@@ -1,20 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "plan"
+community: "test_pictures_first.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/plan
+  - community/test_pictures_firstpy
 ---
 
 # Path
 
 ## Connections
-- [[blends()]] - `references` [EXTRACTED]
-- [[plan()_1]] - `references` [EXTRACTED]
-- [[render()]] - `references` [EXTRACTED]
-- [[sheet()_1]] - `references` [EXTRACTED]
-- [[write()_2]] - `references` [EXTRACTED]
+- [[choose_images()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/plan
+#graphify/code #graphify/EXTRACTED #community/test_pictures_firstpy

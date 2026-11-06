@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "gpu.py"
+community: "pathlib"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/gpupy
+  - community/pathlib
 ---
 
 # io
@@ -38,4 +38,4 @@ tags:
 - [[unpack()]] - `calls` [EXTRACTED]
 - [[visual_unique()]] - `calls` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/gpupy
+#graphify/concept #graphify/EXTRACTED #community/pathlib

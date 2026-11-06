@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "resume_runs"
+community: "checkpoints.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/resume_runs
+  - community/checkpointspy
 ---
 
 # Exception
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[record_failure()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/resume_runs
+#graphify/code #graphify/EXTRACTED #community/checkpointspy

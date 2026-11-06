@@ -1,12 +1,12 @@
 ---
 source_file: "drawn/lib/pen.mjs"
 type: "code"
-community: "makeKit"
+community: "Pen"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/makeKit
+  - community/Pen
 ---
 
 # pen.mjs
@@ -29,4 +29,4 @@ tags:
 - [[lerp()]] - `imports` [EXTRACTED]
 - [[noise1()]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/makeKit
+#graphify/code #graphify/EXTRACTED #community/Pen

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/voice_cache.py"
 type: "code"
-community: "gpu.py"
+community: "hashlib"
 location: "L10"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/gpupy
+  - community/hashlib
 ---
 
 # signature()
@@ -19,4 +19,4 @@ tags:
 - [[save()_1]] - `calls` [EXTRACTED]
 - [[voice_cache.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/gpupy
+#graphify/code #graphify/EXTRACTED #community/hashlib

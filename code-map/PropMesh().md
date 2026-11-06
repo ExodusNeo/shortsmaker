@@ -2,7 +2,7 @@
 source_file: "remotion/src/Opener3D.tsx"
 type: "code"
 community: "Opener3D.tsx"
-location: "L258"
+location: "L294"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -17,6 +17,7 @@ tags:
 - [[Model()]] - `calls` [EXTRACTED]
 - [[Opener3D()]] - `calls` [EXTRACTED]
 - [[Opener3D.tsx]] - `contains` [EXTRACTED]
+- [[Patch()]] - `calls` [EXTRACTED]
 - [[clamp()_1]] - `calls` [EXTRACTED]
 - [[rand()]] - `calls` [EXTRACTED]
 

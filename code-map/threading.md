@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "pathlib"
+community: "short_render.py"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/pathlib
+  - community/short_renderpy
 ---
 
 # threading
@@ -13,5 +13,6 @@ tags:
 ## Connections
 - [[image_sources.py]] - `imports` [EXTRACTED]
 - [[media_library.py]] - `imports` [EXTRACTED]
+- [[test_opener_crew.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/pathlib
+#graphify/concept #graphify/EXTRACTED #community/short_renderpy

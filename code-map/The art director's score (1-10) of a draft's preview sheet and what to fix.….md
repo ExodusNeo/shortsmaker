@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/drawn_opener.py"
 type: "rationale"
-community: "review"
-location: "L183"
+community: "drawn_opener.py"
+location: "L209"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/review
+  - community/drawn_openerpy
 ---
 
 # The art director's score (1-10) of a draft's preview sheet and what to fix.…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[review()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/review
+#graphify/rationale #graphify/EXTRACTED #community/drawn_openerpy

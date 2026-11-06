@@ -1,17 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "gpu.py"
+community: "draft_rules"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/gpupy
+  - community/draft_rules
 ---
 
 # Path
 
 ## Connections
-- [[load()_1]] - `references` [EXTRACTED]
-- [[save()_1]] - `references` [EXTRACTED]
+- [[draft_rules()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/gpupy
+#graphify/code #graphify/EXTRACTED #community/draft_rules

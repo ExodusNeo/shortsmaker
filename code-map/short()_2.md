@@ -1,26 +1,19 @@
 ---
-source_file: "tests/test_blender_render.py"
+source_file: "tests/test_opener_crew.py"
 type: "code"
-community: "test_blender_plan.py"
-location: "L40"
+community: "test_opener_crew.py"
+location: "L31"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_blender_planpy
+  - community/test_opener_crewpy
 ---
 
 # short()
 
 ## Connections
-- [[default_build()]] - `calls` [EXTRACTED]
-- [[test_blender_render.py]] - `contains` [EXTRACTED]
-- [[test_changed_blender_code_redraws()]] - `calls` [EXTRACTED]
-- [[test_crash_retries_then_raises()]] - `calls` [EXTRACTED]
-- [[test_frames_are_trimmed_after_the_clips_are_cut()]] - `calls` [EXTRACTED]
-- [[test_missing_blender_raises()]] - `calls` [EXTRACTED]
-- [[test_peak_on_the_emphasis_word()]] - `calls` [EXTRACTED]
-- [[test_render_clips_makes_one_clip_per_scene()]] - `calls` [EXTRACTED]
-- [[test_retry_redraws_only_missing_frames()]] - `calls` [EXTRACTED]
-- [[test_same_build_json_reuses_frames()]] - `calls` [EXTRACTED]
+- [[test_a_painter_with_unusable_code_gets_the_plain_kit_cutout()]] - `calls` [EXTRACTED]
+- [[test_opener_crew.py]] - `contains` [EXTRACTED]
+- [[test_the_whole_crew_passes_and_only_the_faulted_painter_repaints()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_blender_planpy
+#graphify/code #graphify/EXTRACTED #community/test_opener_crewpy

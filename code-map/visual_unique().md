@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/picture_pool.py"
 type: "code"
-community: "gpu.py"
+community: "pathlib"
 location: "L205"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/gpupy
+  - community/pathlib
 ---
 
 # visual_unique()
@@ -18,4 +18,4 @@ tags:
 - [[io]] - `calls` [EXTRACTED]
 - [[picture_pool.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/gpupy
+#graphify/code #graphify/EXTRACTED #community/pathlib

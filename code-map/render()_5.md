@@ -1,17 +1,25 @@
 ---
-source_file: "tests/test_style.py"
+source_file: "shortsmaker/opener3d.py"
 type: "code"
-community: "render_remotion"
-location: "L304"
+community: "render"
+location: "L388"
 tags:
   - graphify/code
-  - graphify/INFERRED
-  - community/render_remotion
+  - graphify/EXTRACTED
+  - community/render
 ---
 
 # render()
 
 ## Connections
-- [[test_invention_runtime_failure_uses_fallback()]] - `indirect_call` [INFERRED]
+- [[Paints the cut-outs and renders folderopener.mp4; None when it worked, else…]] - `rationale_for` [EXTRACTED]
+- [[Path_38]] - `references` [EXTRACTED]
+- [[json]] - `calls` [EXTRACTED]
+- [[look()_1]] - `calls` [EXTRACTED]
+- [[make_opener()]] - `calls` [EXTRACTED]
+- [[opener3d.py]] - `contains` [EXTRACTED]
+- [[plan()]] - `calls` [EXTRACTED]
+- [[shutil]] - `calls` [EXTRACTED]
+- [[subprocess]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/render_remotion
+#graphify/code #graphify/EXTRACTED #community/render

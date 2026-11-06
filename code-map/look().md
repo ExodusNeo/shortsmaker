@@ -1,22 +1,19 @@
 ---
-source_file: "tests/test_opener3d.py"
+source_file: "tests/test_drawn_opener.py"
 type: "code"
-community: "test_opener3d.py"
-location: "L151"
+community: "drawn_opener.py"
+location: "L184"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_opener3dpy
+  - community/drawn_openerpy
 ---
 
 # look()
 
 ## Connections
-- [[Renders the manual's example through the real path (cut-outs, Remotion) and its…]] - `rationale_for` [EXTRACTED]
-- [[clean()]] - `calls` [EXTRACTED]
-- [[example()]] - `calls` [EXTRACTED]
-- [[render()]] - `calls` [EXTRACTED]
-- [[sheet()_1]] - `calls` [EXTRACTED]
-- [[test_opener3d.py]] - `contains` [EXTRACTED]
+- [[Renders drawnoutsheet.png every kit part, one page per second (look at it…]] - `rationale_for` [EXTRACTED]
+- [[node_run()]] - `calls` [EXTRACTED]
+- [[test_drawn_opener.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_opener3dpy
+#graphify/code #graphify/EXTRACTED #community/drawn_openerpy

@@ -1,12 +1,12 @@
 ---
 source_file: "drawn/lib/pen.mjs"
 type: "code"
-community: "makeKit"
+community: "Pen"
 location: "L107"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/makeKit
+  - community/Pen
 ---
 
 # .blob()
@@ -15,4 +15,4 @@ tags:
 - [[dot-stroke()]] - `calls` [EXTRACTED]
 - [[Pen]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/makeKit
+#graphify/code #graphify/EXTRACTED #community/Pen

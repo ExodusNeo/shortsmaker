@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/motion.py"
 type: "rationale"
-community: "finish_render"
+community: "test_full_scenes.py"
 location: "L22"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/finish_render
+  - community/test_full_scenespy
 ---
 
 # One plain line for edit_plan.txt saying what a full-screen motion graphic shows.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[full_summary()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/finish_render
+#graphify/rationale #graphify/EXTRACTED #community/test_full_scenespy

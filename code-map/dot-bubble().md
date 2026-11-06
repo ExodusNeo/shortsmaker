@@ -1,12 +1,12 @@
 ---
 source_file: "drawn/kit.mjs"
 type: "code"
-community: "makeKit"
-location: "L615"
+community: "k"
+location: "L652"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/makeKit
+  - community/k
 ---
 
 # .bubble()
@@ -19,4 +19,4 @@ tags:
 - [[k]] - `method` [EXTRACTED]
 - [[popS()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/makeKit
+#graphify/code #graphify/EXTRACTED #community/k

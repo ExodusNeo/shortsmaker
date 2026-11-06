@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[ReliabilityTests]] - `method` [EXTRACTED]
-- [[job()_1]] - `contains` [EXTRACTED]
-- [[job()]] - `indirect_call` [INFERRED]
+- [[job()_2]] - `contains` [EXTRACTED]
+- [[job()_1]] - `indirect_call` [INFERRED]
 
 #graphify/code #graphify/EXTRACTED #community/ReliabilityTests

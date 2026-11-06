@@ -12,10 +12,10 @@ tags:
 # record_audio()
 
 ## Connections
-- [[Path_28]] - `references` [EXTRACTED]
+- [[Path_35]] - `references` [EXTRACTED]
 - [[audio_library.py]] - `contains` [EXTRACTED]
 - [[history_read()]] - `calls` [EXTRACTED]
-- [[render()_3]] - `calls` [EXTRACTED]
+- [[render()]] - `calls` [EXTRACTED]
 - [[write_json()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/audio_librarypy

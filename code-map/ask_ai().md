@@ -2,7 +2,7 @@
 source_file: "shortsmaker/llm.py"
 type: "code"
 community: "ask_ai"
-location: "L139"
+location: "L154"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[Headless planner call (BRAIN, or `brain` Codex, Claude or Gemini) that returns…]] - `rationale_for` [EXTRACTED]
-- [[Path_22]] - `references` [EXTRACTED]
+- [[Path_27]] - `references` [EXTRACTED]
 - [[analyze()]] - `calls` [EXTRACTED]
 - [[catalog_pool()]] - `calls` [EXTRACTED]
 - [[check_twists()]] - `calls` [EXTRACTED]
@@ -29,11 +29,14 @@ tags:
 - [[invent_component()]] - `calls` [EXTRACTED]
 - [[llm.py]] - `contains` [EXTRACTED]
 - [[look_and_fix()]] - `calls` [EXTRACTED]
+- [[make_part()]] - `calls` [EXTRACTED]
 - [[mark_details()]] - `calls` [EXTRACTED]
 - [[new_channel()]] - `calls` [EXTRACTED]
 - [[opener_graphic()]] - `calls` [EXTRACTED]
 - [[opener_preflight()]] - `calls` [EXTRACTED]
 - [[other_ai()]] - `calls` [EXTRACTED]
+- [[paint()]] - `calls` [EXTRACTED]
+- [[place()]] - `calls` [EXTRACTED]
 - [[pool_pictures()]] - `calls` [EXTRACTED]
 - [[quota_exhausted()]] - `calls` [EXTRACTED]
 - [[recover_downloads()]] - `calls` [EXTRACTED]
@@ -45,6 +48,7 @@ tags:
 - [[run_codex()]] - `calls` [EXTRACTED]
 - [[seed_ideas()]] - `calls` [EXTRACTED]
 - [[seo_pass()]] - `calls` [EXTRACTED]
+- [[stage()]] - `calls` [EXTRACTED]
 - [[start_picture_problems()]] - `calls` [EXTRACTED]
 - [[test_argon_out_of_quota_switches_to_flash()]] - `calls` [EXTRACTED]
 - [[test_claude_pinned_to_opus_high()]] - `calls` [EXTRACTED]
@@ -59,8 +63,7 @@ tags:
 - [[test_solo_ask_ai_hands_over_when_out_of_credits()]] - `calls` [EXTRACTED]
 - [[test_solo_ask_ai_never_falls_back()]] - `calls` [EXTRACTED]
 - [[visual_review()]] - `calls` [EXTRACTED]
-- [[write()]] - `calls` [EXTRACTED]
-- [[write()_2]] - `calls` [EXTRACTED]
+- [[write()_1]] - `calls` [EXTRACTED]
 - [[write_scripts()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/ask_ai

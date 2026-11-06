@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/review.py"
 type: "rationale"
-community: "visual_review"
+community: "finish_render"
 location: "L121"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/visual_review
+  - community/finish_render
 ---
 
 # Sound effects loud enough under the narration to cover words: the voice and…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[sound_masking()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/visual_review
+#graphify/rationale #graphify/EXTRACTED #community/finish_render

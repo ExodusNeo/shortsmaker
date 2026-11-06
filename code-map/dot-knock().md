@@ -1,12 +1,12 @@
 ---
 source_file: "drawn/kit.mjs"
 type: "code"
-community: ".at"
-location: "L515"
+community: "k"
+location: "L550"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/at
+  - community/k
 ---
 
 # .knock()
@@ -17,4 +17,4 @@ tags:
 - [[dot-person()]] - `calls` [EXTRACTED]
 - [[k]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/at
+#graphify/code #graphify/EXTRACTED #community/k

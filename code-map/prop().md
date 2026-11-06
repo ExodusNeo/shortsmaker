@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/edit_project.py"
 type: "code"
-community: "test_edit_project.py"
+community: "edit_project.py"
 location: "L49"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_edit_projectpy
+  - community/edit_projectpy
 ---
 
 # prop()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[project_xml()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_edit_projectpy
+#graphify/code #graphify/EXTRACTED #community/edit_projectpy

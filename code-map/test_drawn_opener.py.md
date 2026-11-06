@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_drawn_opener.py"
 type: "code"
-community: "test_drawn_opener.py"
+community: "short_render.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_drawn_openerpy
+  - community/short_renderpy
 ---
 
 # test_drawn_opener.py
@@ -17,20 +17,21 @@ tags:
 - [[drawn_opener.py]] - `imports_from` [EXTRACTED]
 - [[fake_ai()_2]] - `contains` [EXTRACTED]
 - [[llm.py]] - `imports_from` [EXTRACTED]
-- [[look()_1]] - `contains` [EXTRACTED]
+- [[look()]] - `contains` [EXTRACTED]
 - [[media_tools.py]] - `imports_from` [EXTRACTED]
 - [[opener3d.py]] - `imports_from` [EXTRACTED]
 - [[pathlib]] - `imports_from` [EXTRACTED]
 - [[pil]] - `imports_from` [EXTRACTED]
 - [[review.py]] - `imports_from` [EXTRACTED]
 - [[session.py]] - `imports_from` [EXTRACTED]
-- [[short()_1]] - `contains` [EXTRACTED]
+- [[short()_3]] - `contains` [EXTRACTED]
 - [[short_render.py]] - `imports_from` [EXTRACTED]
 - [[subprocess]] - `imports` [EXTRACTED]
 - [[sys]] - `imports` [EXTRACTED]
 - [[tempfile]] - `imports` [EXTRACTED]
 - [[test_drawn_opener_gives_up_after_fixes()]] - `contains` [EXTRACTED]
 - [[test_drawn_opener_renders_and_is_reused()]] - `contains` [EXTRACTED]
+- [[test_drawn_opener_stops_when_a_fix_does_not_help()]] - `contains` [EXTRACTED]
 - [[test_kit_animals_must_be_used()]] - `contains` [EXTRACTED]
 - [[test_lint()]] - `contains` [EXTRACTED]
 - [[test_no_verdict_is_not_a_pass()]] - `contains` [EXTRACTED]
@@ -38,4 +39,4 @@ tags:
 - [[test_use_opener_plays_the_drawn_opener()]] - `contains` [EXTRACTED]
 - [[traceback]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_drawn_openerpy
+#graphify/code #graphify/EXTRACTED #community/short_renderpy

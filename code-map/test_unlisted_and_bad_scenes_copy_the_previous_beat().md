@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[clean_build()]] - `calls` [EXTRACTED]
-- [[plan()]] - `calls` [EXTRACTED]
+- [[plan()_1]] - `calls` [EXTRACTED]
 - [[test_blender_plan.py]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/test_blender_planpy

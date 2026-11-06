@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "gpu.py"
+community: "hashlib"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/gpupy
+  - community/hashlib
 ---
 
 # hashlib
@@ -37,4 +37,4 @@ tags:
 - [[source_json()]] - `calls` [EXTRACTED]
 - [[voice_cache.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/gpupy
+#graphify/concept #graphify/EXTRACTED #community/hashlib

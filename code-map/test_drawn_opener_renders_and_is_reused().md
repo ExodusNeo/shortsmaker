@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_drawn_opener.py"
 type: "code"
-community: "test_drawn_opener.py"
+community: "short"
 location: "L64"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_drawn_openerpy
+  - community/short
 ---
 
 # test_drawn_opener_renders_and_is_reused()
@@ -16,7 +16,7 @@ tags:
 - [[duration()]] - `calls` [EXTRACTED]
 - [[fake_ai()_2]] - `calls` [EXTRACTED]
 - [[make_opener()]] - `calls` [EXTRACTED]
-- [[short()_1]] - `calls` [EXTRACTED]
+- [[short()_3]] - `calls` [EXTRACTED]
 - [[test_drawn_opener.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_drawn_openerpy
+#graphify/code #graphify/EXTRACTED #community/short

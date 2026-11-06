@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "pathlib"
+community: "gpu.py"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/pathlib
+  - community/gpupy
 ---
 
 # os
@@ -19,12 +19,14 @@ tags:
 - [[llm.py]] - `imports` [EXTRACTED]
 - [[media_library.py]] - `imports` [EXTRACTED]
 - [[media_menu.py]] - `imports` [EXTRACTED]
+- [[opener_crew.py]] - `imports` [EXTRACTED]
 - [[qwen_voice.py]] - `imports` [EXTRACTED]
 - [[style_lab.py]] - `imports` [EXTRACTED]
 - [[test_codex.py]] - `imports` [EXTRACTED]
+- [[test_opener_crew.py]] - `imports` [EXTRACTED]
 - [[test_package.py]] - `imports` [EXTRACTED]
 - [[test_pictures_first.py]] - `imports` [EXTRACTED]
 - [[test_reliability.py]] - `imports` [EXTRACTED]
 - [[veo_handoff()]] - `calls` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/pathlib
+#graphify/concept #graphify/EXTRACTED #community/gpupy

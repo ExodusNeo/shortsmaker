@@ -1,26 +1,37 @@
 ---
-source_file: "tests/test_blender_plan.py"
+source_file: "shortsmaker/opener_crew.py"
 type: "code"
-community: "test_blender_plan.py"
-location: "L23"
+community: "opener_crew.py"
+location: "L443"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_blender_planpy
+  - community/opener_crewpy
 ---
 
 # plan()
 
 ## Connections
-- [[ask()_14]] - `calls` [EXTRACTED]
-- [[test_a_failure_in_scene_one_becomes_the_hook()]] - `calls` [EXTRACTED]
-- [[test_bad_values_get_defaults()]] - `calls` [EXTRACTED]
-- [[test_blender_plan.py]] - `contains` [EXTRACTED]
-- [[test_clean_build_keeps_a_good_plan()]] - `calls` [EXTRACTED]
-- [[test_label_is_short_and_upper()]] - `calls` [EXTRACTED]
-- [[test_nan_and_infinity_get_defaults()]] - `calls` [EXTRACTED]
-- [[test_tiny_shorts_get_one_beat_per_scene()]] - `calls` [EXTRACTED]
-- [[test_unlisted_and_bad_scenes_copy_the_previous_beat()]] - `calls` [EXTRACTED]
-- [[test_zoom_and_failure_are_guaranteed()]] - `calls` [EXTRACTED]
+- [[Path_8]] - `references` [EXTRACTED]
+- [[Stage, make parts, paint, place, render, review and route fixes. (the passed…]] - `rationale_for` [EXTRACTED]
+- [[animal_cutout()]] - `calls` [EXTRACTED]
+- [[assemble()]] - `calls` [EXTRACTED]
+- [[blends()]] - `calls` [EXTRACTED]
+- [[make_opener()]] - `calls` [EXTRACTED]
+- [[make_parts()]] - `calls` [EXTRACTED]
+- [[minutes()]] - `calls` [EXTRACTED]
+- [[num()]] - `calls` [EXTRACTED]
+- [[opener_crew.py]] - `contains` [EXTRACTED]
+- [[owner()]] - `calls` [EXTRACTED]
+- [[paint()]] - `calls` [EXTRACTED]
+- [[parallel()]] - `calls` [EXTRACTED]
+- [[place()]] - `calls` [EXTRACTED]
+- [[render()_5]] - `calls` [EXTRACTED]
+- [[review()]] - `calls` [EXTRACTED]
+- [[sheet()_1]] - `calls` [EXTRACTED]
+- [[stage()]] - `calls` [EXTRACTED]
+- [[staging_text()]] - `calls` [EXTRACTED]
+- [[test_the_whole_crew_passes_and_only_the_faulted_painter_repaints()]] - `calls` [EXTRACTED]
+- [[time]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_blender_planpy
+#graphify/code #graphify/EXTRACTED #community/opener_crewpy

@@ -1,17 +1,17 @@
 ---
 source_file: "shortsmaker/opener3d.py"
 type: "rationale"
-community: "drawn_opener.py"
-location: "L215"
+community: "render"
+location: "L389"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/drawn_openerpy
+  - community/render
 ---
 
 # Paints the cut-outs and renders folder/opener.mp4; None when it worked, else…
 
 ## Connections
-- [[render()]] - `rationale_for` [EXTRACTED]
+- [[render()_5]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/drawn_openerpy
+#graphify/rationale #graphify/EXTRACTED #community/render

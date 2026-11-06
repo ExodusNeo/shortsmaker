@@ -14,8 +14,8 @@ tags:
 ## Connections
 - [[Miniature.tsx]] - `imports` [EXTRACTED]
 - [[Silent.tsx]] - `imports` [EXTRACTED]
-- [[draw()_2]] - `calls` [EXTRACTED]
 - [[draw()_4]] - `calls` [EXTRACTED]
+- [[draw()_6]] - `calls` [EXTRACTED]
 - [[kit.ts]] - `contains` [EXTRACTED]
 - [[luminance()]] - `calls` [EXTRACTED]
 

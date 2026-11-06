@@ -1,20 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "invent_component"
+community: "render"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/invent_component
+  - community/render
 ---
 
 # Path
 
 ## Connections
-- [[approve_candidate()]] - `references` [EXTRACTED]
-- [[invent_component()]] - `references` [EXTRACTED]
-- [[invent_styles()]] - `references` [EXTRACTED]
-- [[reject_candidate()]] - `references` [EXTRACTED]
-- [[save_candidate()]] - `references` [EXTRACTED]
+- [[to_vertical()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/invent_component
+#graphify/code #graphify/EXTRACTED #community/render

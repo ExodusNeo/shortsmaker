@@ -1,23 +1,23 @@
 ---
 source_file: "shortsmaker/opener3d.py"
 type: "code"
-community: "plan"
-location: "L287"
+community: "render"
+location: "L465"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/plan
+  - community/render
 ---
 
 # sheet()
 
 ## Connections
-- [[Path_37]] - `references` [EXTRACTED]
-- [[Six frames of the clip side by side, the time on each (the art director's…]] - `rationale_for` [EXTRACTED]
+- [[Path_38]] - `references` [EXTRACTED]
+- [[The art director's preview six moments left to right (the time on each), and…]] - `rationale_for` [EXTRACTED]
 - [[ffmpeg()]] - `calls` [EXTRACTED]
-- [[look()]] - `calls` [EXTRACTED]
+- [[look()_1]] - `calls` [EXTRACTED]
 - [[opener3d.py]] - `contains` [EXTRACTED]
-- [[plan()_1]] - `calls` [EXTRACTED]
+- [[plan()]] - `calls` [EXTRACTED]
 - [[sheet_times()_1]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/plan
+#graphify/code #graphify/EXTRACTED #community/render

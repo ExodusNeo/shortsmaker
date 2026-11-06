@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[ask()_11]] - `indirect_call` [INFERRED]
-- [[owner()]] - `calls` [EXTRACTED]
+- [[owner()_1]] - `calls` [EXTRACTED]
 - [[test_director_character_look_is_kept_short_or_dropped()]] - `calls` [EXTRACTED]
 - [[test_director_inventions_are_kept_with_a_spec()]] - `calls` [EXTRACTED]
 - [[test_director_prompt_lists_library()]] - `calls` [EXTRACTED]

@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[Halftone.tsx]] - `imports` [EXTRACTED]
 - [[clamp01()]] - `calls` [EXTRACTED]
-- [[draw()_1]] - `calls` [EXTRACTED]
+- [[draw()_3]] - `calls` [EXTRACTED]
 - [[kit.ts]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Halftonetsx

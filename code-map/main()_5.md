@@ -1,20 +1,35 @@
 ---
-source_file: "tests/render_opener_preview.py"
+source_file: "blender/build_scene.py"
 type: "code"
-community: "code_custom_scenes"
-location: "L10"
+community: "main"
+location: "L70"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/code_custom_scenes
+  - community/main
 ---
 
 # main()
 
 ## Connections
-- [[make_paper()]] - `calls` [EXTRACTED]
-- [[preview_custom()]] - `calls` [EXTRACTED]
-- [[render_opener_preview.py]] - `contains` [EXTRACTED]
-- [[tsc_check()]] - `calls` [EXTRACTED]
+- [[dot-beat()]] - `calls` [INFERRED]
+- [[dot-fallen()]] - `calls` [INFERRED]
+- [[dot-falls()]] - `calls` [INFERRED]
+- [[dot-play()]] - `calls` [INFERRED]
+- [[dot-reset()]] - `calls` [INFERRED]
+- [[dot-ride_along()]] - `calls` [INFERRED]
+- [[Failure]] - `calls` [EXTRACTED]
+- [[Shots]] - `calls` [EXTRACTED]
+- [[build()]] - `calls` [EXTRACTED]
+- [[build_scene.py]] - `contains` [EXTRACTED]
+- [[dress()]] - `calls` [EXTRACTED]
+- [[fastener()]] - `calls` [EXTRACTED]
+- [[focus_object()]] - `calls` [EXTRACTED]
+- [[json]] - `calls` [EXTRACTED]
+- [[keyloc()]] - `calls` [EXTRACTED]
+- [[keyvis()]] - `calls` [EXTRACTED]
+- [[label()]] - `calls` [EXTRACTED]
+- [[material()]] - `calls` [EXTRACTED]
+- [[setup()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/code_custom_scenes
+#graphify/code #graphify/EXTRACTED #community/main

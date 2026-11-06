@@ -1,18 +1,18 @@
 ---
 source_file: "shortsmaker/media_tools.py"
 type: "code"
-community: "render"
+community: "ffmpeg"
 location: "L39"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/render
+  - community/ffmpeg
 ---
 
 # ffmpeg()
 
 ## Connections
-- [[Path_18]] - `references` [EXTRACTED]
+- [[Path_24]] - `references` [EXTRACTED]
 - [[apply()]] - `calls` [EXTRACTED]
 - [[caption_layer()]] - `calls` [EXTRACTED]
 - [[cut_owner_clip()]] - `calls` [EXTRACTED]
@@ -24,7 +24,7 @@ tags:
 - [[preview()]] - `calls` [EXTRACTED]
 - [[preview_mix()]] - `calls` [EXTRACTED]
 - [[preview_sheet()]] - `calls` [EXTRACTED]
-- [[render()_3]] - `calls` [EXTRACTED]
+- [[render()]] - `calls` [EXTRACTED]
 - [[render_clips()]] - `calls` [EXTRACTED]
 - [[sheet()_1]] - `calls` [EXTRACTED]
 - [[short_folder()]] - `calls` [EXTRACTED]
@@ -35,4 +35,4 @@ tags:
 - [[use_opener()]] - `calls` [EXTRACTED]
 - [[visual_review()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/render
+#graphify/code #graphify/EXTRACTED #community/ffmpeg

@@ -1,18 +1,17 @@
 ---
-source_file: "blender/failures.py"
+source_file: "shortsmaker/extra_sources.py"
 type: "code"
-community: "main"
-location: "L26"
+community: "extra_sources.py"
+location: "L148"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/main
+  - community/extra_sourcespy
 ---
 
 # .__init__()
 
 ## Connections
-- [[dot-_crack()]] - `calls` [EXTRACTED]
-- [[Failure]] - `method` [EXTRACTED]
+- [[BrandImages]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/main
+#graphify/code #graphify/EXTRACTED #community/extra_sourcespy

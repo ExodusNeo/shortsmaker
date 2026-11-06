@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/media_tools.py"
 type: "code"
-community: "visual_review"
+community: "finish_render"
 location: "L43"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/visual_review
+  - community/finish_render
 ---
 
 # clock()
@@ -19,10 +19,10 @@ tags:
 - [[overlay_notes()]] - `calls` [EXTRACTED]
 - [[pacing_check()]] - `calls` [EXTRACTED]
 - [[quality_check()]] - `calls` [EXTRACTED]
-- [[render()_3]] - `calls` [EXTRACTED]
+- [[render()]] - `calls` [EXTRACTED]
 - [[review_fixes()]] - `calls` [EXTRACTED]
 - [[sound_masking()]] - `calls` [EXTRACTED]
 - [[storyboard()]] - `calls` [EXTRACTED]
 - [[visual_review()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/visual_review
+#graphify/code #graphify/EXTRACTED #community/finish_render

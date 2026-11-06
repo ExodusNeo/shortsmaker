@@ -1,17 +1,18 @@
 ---
 source_file: "tests/test_pictures_first.py"
 type: "code"
-community: "test_topic_ideas.py"
-location: "L129"
+community: "gather_pool"
+location: "L60"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_topic_ideaspy
+  - community/gather_pool
 ---
 
 # .__exit__()
 
 ## Connections
-- [[fake_ai]] - `method` [EXTRACTED]
+- [[owner()_1]] - `calls` [EXTRACTED]
+- [[stubbed]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_topic_ideaspy
+#graphify/code #graphify/EXTRACTED #community/gather_pool

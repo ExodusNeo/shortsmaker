@@ -1,20 +1,22 @@
 ---
 type: community
-members: 30
+members: 35
 ---
 
 # kit.mjs
 
-**Members:** 30 nodes
+**Members:** 35 nodes
 
 ## Members
 - [[C]] - code - drawn/kit.mjs
 - [[H_1]] - code - drawn/kit.mjs
+- [[MADE]] - code - drawn/kit.mjs
 - [[MOODS]] - code - drawn/kit.mjs
-- [[SKIN_1]] - code - drawn/lib/rigs/bean.mjs
 - [[W_1]] - code - drawn/kit.mjs
 - [[args()]] - code - drawn/lib/film.mjs
+- [[ctx]] - code - drawn/partsheet.mjs
 - [[cutouts.mjs]] - code - drawn/cutouts.mjs
+- [[cv]] - code - drawn/partsheet.mjs
 - [[drawn_lib_core_createcanvas]] - concept
 - [[exposure()]] - code - drawn/lib/film.mjs
 - [[film.mjs]] - code - drawn/lib/film.mjs
@@ -25,19 +27,22 @@ members: 30
 - [[grade()]] - code - drawn/run.mjs
 - [[held()]] - code - drawn/run.mjs
 - [[job]] - code - drawn/cutouts.mjs
-- [[job_1]] - code - drawn/run.mjs
+- [[job_1]] - code - drawn/partsheet.mjs
+- [[job_2]] - code - drawn/run.mjs
+- [[k_1]] - code - drawn/partsheet.mjs
 - [[kit.mjs]] - code - drawn/kit.mjs
-- [[light]] - code - drawn/run.mjs
+- [[light_1]] - code - drawn/run.mjs
 - [[lightOf()]] - code - drawn/kit.mjs
+- [[loadMade()]] - code - drawn/kit.mjs
+- [[partsheet.mjs]] - code - drawn/partsheet.mjs
 - [[ref_node_child_process]] - concept
 - [[ref_node_crypto]] - concept
 - [[ref_node_fs]] - concept
 - [[ref_node_path]] - concept
 - [[ref_node_url]] - concept
-- [[run()_5]] - code - drawn/lib/film.mjs
+- [[run()_7]] - code - drawn/lib/film.mjs
 - [[run.mjs]] - code - drawn/run.mjs
 - [[shots_1]] - code - drawn/run.mjs
-- [[ss()]] - code - drawn/lib/core.mjs
 
 ## Live Query (requires Dataview plugin)
 
@@ -49,13 +54,14 @@ SORT file.name ASC
 ## Connections to other communities
 - 13 edges to [[_COMMUNITY_core.mjs]]
 - 11 edges to [[_COMMUNITY_makeKit]]
-- 9 edges to [[_COMMUNITY_clamp]]
-- 4 edges to [[_COMMUNITY_bean.mjs]]
+- 7 edges to [[_COMMUNITY_clamp]]
+- 4 edges to [[_COMMUNITY_Pen]]
+- 2 edges to [[_COMMUNITY_popS]]
 - 1 edge to [[_COMMUNITY_k]]
 
 ## Top bridge nodes
-- [[kit.mjs]] - degree 27, connects to 5 communities
+- [[kit.mjs]] - degree 33, connects to 6 communities
 - [[run.mjs]] - degree 27, connects to 3 communities
-- [[ss()]] - degree 4, connects to 3 communities
+- [[partsheet.mjs]] - degree 12, connects to 2 communities
 - [[cutouts.mjs]] - degree 10, connects to 2 communities
 - [[shots_1]] - degree 3, connects to 2 communities

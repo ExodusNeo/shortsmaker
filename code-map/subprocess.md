@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "pathlib"
+community: "short_render.py"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/pathlib
+  - community/short_renderpy
 ---
 
 # subprocess
@@ -29,7 +29,8 @@ tags:
 - [[image_sources.py]] - `imports` [EXTRACTED]
 - [[llm.py]] - `imports` [EXTRACTED]
 - [[local_job()]] - `calls` [EXTRACTED]
-- [[main()_4]] - `calls` [EXTRACTED]
+- [[main()_3]] - `calls` [EXTRACTED]
+- [[make_part()]] - `calls` [EXTRACTED]
 - [[master_gain()]] - `calls` [EXTRACTED]
 - [[media_library.py]] - `imports` [EXTRACTED]
 - [[media_menu.py]] - `imports` [EXTRACTED]
@@ -39,13 +40,14 @@ tags:
 - [[music_gain()]] - `calls` [EXTRACTED]
 - [[node_run()]] - `calls` [EXTRACTED]
 - [[opener3d.py]] - `imports` [EXTRACTED]
+- [[opener_crew.py]] - `imports` [EXTRACTED]
 - [[preview()]] - `calls` [EXTRACTED]
 - [[preview_sheet()]] - `calls` [EXTRACTED]
 - [[quality_check()]] - `calls` [EXTRACTED]
 - [[qwen_voice.py]] - `imports` [EXTRACTED]
 - [[remotion_render.py]] - `imports` [EXTRACTED]
+- [[render()_5]] - `calls` [EXTRACTED]
 - [[render()]] - `calls` [EXTRACTED]
-- [[render()_3]] - `calls` [EXTRACTED]
 - [[render_full.py]] - `imports` [EXTRACTED]
 - [[render_style.py]] - `imports` [EXTRACTED]
 - [[review.py]] - `imports` [EXTRACTED]
@@ -68,4 +70,4 @@ tags:
 - [[video_encoder()]] - `calls` [EXTRACTED]
 - [[voicestudio_up()]] - `calls` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/pathlib
+#graphify/concept #graphify/EXTRACTED #community/short_renderpy

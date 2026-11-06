@@ -2,7 +2,7 @@
 source_file: "shortsmaker/llm.py"
 type: "code"
 community: "run_agy"
-location: "L113"
+location: "L128"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[A read-only task through the signed-in ChatGPT subscription, with no API-key…]] - `rationale_for` [EXTRACTED]
-- [[Path_22]] - `references` [EXTRACTED]
+- [[Path_27]] - `references` [EXTRACTED]
 - [[ask_ai()]] - `calls` [EXTRACTED]
 - [[llm.py]] - `contains` [EXTRACTED]
 - [[test_codex_failure_is_bounded()]] - `calls` [EXTRACTED]

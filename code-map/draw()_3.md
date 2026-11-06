@@ -1,8 +1,8 @@
 ---
-source_file: "remotion/src/style/looks/Riso.tsx"
+source_file: "remotion/src/style/looks/Halftone.tsx"
 type: "code"
 community: "Halftone.tsx"
-location: "L13"
+location: "L36"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,10 +12,12 @@ tags:
 # draw()
 
 ## Connections
-- [[Riso()]] - `calls` [EXTRACTED]
-- [[Riso.tsx]] - `contains` [EXTRACTED]
+- [[Halftone()]] - `calls` [EXTRACTED]
+- [[Halftone.tsx]] - `contains` [EXTRACTED]
 - [[luminance()]] - `calls` [EXTRACTED]
 - [[noise()_1]] - `calls` [EXTRACTED]
-- [[rgb()_1]] - `calls` [EXTRACTED]
+- [[rgb()]] - `calls` [EXTRACTED]
+- [[screen()]] - `calls` [EXTRACTED]
+- [[stretch()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Halftonetsx

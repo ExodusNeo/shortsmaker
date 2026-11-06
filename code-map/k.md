@@ -2,7 +2,7 @@
 source_file: "drawn/kit.mjs"
 type: "code"
 community: "k"
-location: "L37"
+location: "L60"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -105,6 +105,7 @@ tags:
 - [[dot-table()]] - `method` [EXTRACTED]
 - [[dot-tank()]] - `method` [EXTRACTED]
 - [[dot-text()_1]] - `method` [EXTRACTED]
+- [[dot-thing()]] - `method` [EXTRACTED]
 - [[dot-tower()]] - `method` [EXTRACTED]
 - [[dot-tree()]] - `method` [EXTRACTED]
 - [[dot-wave()]] - `method` [EXTRACTED]

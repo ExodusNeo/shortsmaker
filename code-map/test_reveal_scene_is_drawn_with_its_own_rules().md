@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_drawn_opener.py"
 type: "code"
-community: "test_drawn_opener.py"
-location: "L129"
+community: "short"
+location: "L143"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_drawn_openerpy
+  - community/short
 ---
 
 # test_reveal_scene_is_drawn_with_its_own_rules()
@@ -16,7 +16,7 @@ tags:
 - [[drawn_payoff()]] - `calls` [EXTRACTED]
 - [[fake_ai()_2]] - `calls` [EXTRACTED]
 - [[paint_new()]] - `calls` [EXTRACTED]
-- [[short()_1]] - `calls` [EXTRACTED]
+- [[short()_3]] - `calls` [EXTRACTED]
 - [[test_drawn_opener.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_drawn_openerpy
+#graphify/code #graphify/EXTRACTED #community/short

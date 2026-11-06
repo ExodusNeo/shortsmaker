@@ -12,7 +12,7 @@ tags:
 # ask()
 
 ## Connections
-- [[plan()]] - `calls` [EXTRACTED]
+- [[plan()_1]] - `calls` [EXTRACTED]
 - [[test_plan_builds_retries_then_defaults()]] - `indirect_call` [INFERRED]
 
 #graphify/code #graphify/EXTRACTED #community/test_blender_planpy

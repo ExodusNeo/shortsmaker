@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "paint_instead"
+community: "clean_photo"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/paint_instead
+  - community/clean_photo
 ---
 
 # Image
@@ -15,4 +15,4 @@ tags:
 - [[trim_borders()]] - `references` [EXTRACTED]
 - [[vertical_image()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/paint_instead
+#graphify/code #graphify/EXTRACTED #community/clean_photo

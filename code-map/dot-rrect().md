@@ -1,12 +1,12 @@
 ---
 source_file: "drawn/kit.mjs"
 type: "code"
-community: "makeKit"
-location: "L65"
+community: "k"
+location: "L88"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/makeKit
+  - community/k
 ---
 
 # .rrect()
@@ -16,4 +16,4 @@ tags:
 - [[dot-rrect()]] - `calls` [EXTRACTED]
 - [[k]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/makeKit
+#graphify/code #graphify/EXTRACTED #community/k

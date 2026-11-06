@@ -1,12 +1,12 @@
 ---
 source_file: "drawn/lib/pen.mjs"
 type: "code"
-community: "makeKit"
+community: "Pen"
 location: "L32"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/makeKit
+  - community/Pen
 ---
 
 # .stroke()
@@ -26,4 +26,4 @@ tags:
 - [[makeKit()]] - `calls` [INFERRED]
 - [[noise1()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/makeKit
+#graphify/code #graphify/EXTRACTED #community/Pen

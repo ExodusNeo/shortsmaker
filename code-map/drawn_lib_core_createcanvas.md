@@ -14,6 +14,7 @@ tags:
 - [[cutouts.mjs]] - `imports` [EXTRACTED]
 - [[film.mjs]] - `imports` [EXTRACTED]
 - [[kit.mjs]] - `imports` [EXTRACTED]
+- [[partsheet.mjs]] - `imports` [EXTRACTED]
 - [[run.mjs]] - `imports` [EXTRACTED]
 - [[textures.mjs]] - `imports` [EXTRACTED]
 

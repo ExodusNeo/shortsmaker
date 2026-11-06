@@ -114,14 +114,14 @@
     "semantic_hash": "8ad5a82c8d8fe87803e31639a21555ff"
   },
   "remotion/src/full/generated/Custom0.tsx": {
-    "mtime": 1793914454.4448314,
-    "seen": 1793914623.1442204,
+    "mtime": 1793956849.0812893,
+    "seen": 1793956879.5180616,
     "ast_hash": "ecf374479fafb0d21fe1bb55a662eb6e",
     "semantic_hash": "ecf374479fafb0d21fe1bb55a662eb6e"
   },
   "remotion/src/full/generated/Custom1.tsx": {
-    "mtime": 1793914458.8508713,
-    "seen": 1793914623.1442215,
+    "mtime": 1793956847.686826,
+    "seen": 1793956879.5180626,
     "ast_hash": "aaa6edae899d3139d0b191d722a092db",
     "semantic_hash": "aaa6edae899d3139d0b191d722a092db"
   },
@@ -372,9 +372,9 @@
     "semantic_hash": ""
   },
   "shortsmaker/editplan.py": {
-    "mtime": 1793885745.3196175,
-    "seen": 1793892789.8929522,
-    "ast_hash": "a798c4a138f49adf876979a97a6898dc",
+    "mtime": 1793941295.8422136,
+    "seen": 1793956879.5181105,
+    "ast_hash": "186649625f781d14046532d3e71cddf9",
     "semantic_hash": ""
   },
   "shortsmaker/footage.py": {
@@ -402,9 +402,9 @@
     "semantic_hash": ""
   },
   "shortsmaker/llm.py": {
-    "mtime": 1793854163.6305249,
-    "seen": 1793854347.686192,
-    "ast_hash": "1008f0d6fba83bd01e682ecd1f303eef",
+    "mtime": 1793941304.759756,
+    "seen": 1793956879.518118,
+    "ast_hash": "07f4e5b92c60ea7a7aa2a561b04ce8de",
     "semantic_hash": ""
   },
   "shortsmaker/logbook.py": {
@@ -420,9 +420,9 @@
     "semantic_hash": ""
   },
   "shortsmaker/motion.py": {
-    "mtime": 1793853637.1587882,
-    "seen": 1793853882.5739362,
-    "ast_hash": "292f75d9f30968e1db7482f048ae6b4e",
+    "mtime": 1793941618.8356347,
+    "seen": 1793956879.518124,
+    "ast_hash": "08f4fed2bc119712e80ab0a2ea29bfa0",
     "semantic_hash": ""
   },
   "shortsmaker/photo_prep.py": {
@@ -498,9 +498,9 @@
     "semantic_hash": "0235c45070741ca2bc59581a406b0d80"
   },
   "tests/test_package.py": {
-    "mtime": 1793443986.890202,
-    "seen": 1793444099.2084718,
-    "ast_hash": "78a4f0fc696f3bf6e901cd37c29409c7",
+    "mtime": 1793941989.758921,
+    "seen": 1793956879.5181808,
+    "ast_hash": "8c0aa012ba54fdf1ae940b8143ef81cd",
     "semantic_hash": ""
   },
   "tools/split_make_shorts.py": {
@@ -647,12 +647,6 @@
     "ast_hash": "de7aa85d1cc468f776d797680f02bd01",
     "semantic_hash": ""
   },
-  "drawn/examples/dexter.mjs": {
-    "mtime": 1793886008.250472,
-    "seen": 1793892789.8928676,
-    "ast_hash": "de7026f47e8815980899098a72891ad5",
-    "semantic_hash": ""
-  },
   "drawn/examples/kit_parts.mjs": {
     "mtime": 1793908648.6044,
     "seen": 1793914623.1441844,
@@ -660,9 +654,9 @@
     "semantic_hash": ""
   },
   "drawn/kit.mjs": {
-    "mtime": 1793911267.6998968,
-    "seen": 1793914623.1441855,
-    "ast_hash": "5af08dcffbe10b19743ecb7ffccccc9c",
+    "mtime": 1793955221.6705418,
+    "seen": 1793956879.518022,
+    "ast_hash": "5d3b3021ee7045ee3a57ae467509536d",
     "semantic_hash": ""
   },
   "drawn/lib/core.mjs": {
@@ -702,15 +696,15 @@
     "semantic_hash": ""
   },
   "shortsmaker/drawn_opener.py": {
-    "mtime": 1793911267.7014303,
-    "seen": 1793914623.1442833,
-    "ast_hash": "e26e376d163090ad726c7c097a2f14b1",
+    "mtime": 1793941062.5974984,
+    "seen": 1793956879.518108,
+    "ast_hash": "ad7e62a95d21c6ebe6a78d8951b46282",
     "semantic_hash": ""
   },
   "tests/test_drawn_opener.py": {
-    "mtime": 1793888799.978516,
-    "seen": 1793892789.8930056,
-    "ast_hash": "a8defcd805aebbf5908637f4ef3f7028",
+    "mtime": 1793941826.332533,
+    "seen": 1793956879.5181649,
+    "ast_hash": "a0088c956fe269f7442a63f7b4b17fd0",
     "semantic_hash": ""
   },
   "tests/test_codex.py": {
@@ -804,9 +798,9 @@
     "semantic_hash": ""
   },
   "shortsmaker/opening_rules.py": {
-    "mtime": 1793609174.870355,
-    "seen": 1793609952.6736367,
-    "ast_hash": "0bddf0e2983af5dac796d2e3560a2c3b",
+    "mtime": 1793941600.7269835,
+    "seen": 1793956879.5181277,
+    "ast_hash": "b6cbf5897047c2e61d75c03abe77666b",
     "semantic_hash": ""
   },
   "tests/test_opening_rules.py": {
@@ -846,21 +840,57 @@
     "semantic_hash": ""
   },
   "remotion/src/Opener3D.tsx": {
-    "mtime": 1793914411.4910476,
-    "seen": 1793914623.1442044,
-    "ast_hash": "38469ca336784eedb8024b43d81ffcb7",
+    "mtime": 1793952734.8730888,
+    "seen": 1793956879.5180454,
+    "ast_hash": "84162507b4376261a0dc0ccba6ed04a0",
     "semantic_hash": ""
   },
   "shortsmaker/opener3d.py": {
-    "mtime": 1793914411.4915588,
-    "seen": 1793914623.144301,
-    "ast_hash": "83f08a624ef92700f724e88effadf627",
+    "mtime": 1793955322.5015788,
+    "seen": 1793956879.518125,
+    "ast_hash": "a89f4380de34270ede70d788e27dbad4",
     "semantic_hash": ""
   },
   "tests/test_opener3d.py": {
-    "mtime": 1793914411.492581,
-    "seen": 1793914623.144349,
-    "ast_hash": "98c7426e5671d862172c4aeb4e4aee02",
+    "mtime": 1793954014.0302908,
+    "seen": 1793956879.5181746,
+    "ast_hash": "5a302e9902a575d2bd5e5a0183d46c01",
+    "semantic_hash": ""
+  },
+  "drawn/examples/umbrellas.mjs": {
+    "mtime": 1793940957.175934,
+    "seen": 1793956879.5180202,
+    "ast_hash": "2dee85b8284d8a3053e445669896a07d",
+    "semantic_hash": ""
+  },
+  "drawn/parts/thing/battery.mjs": {
+    "mtime": 1793942419.9866555,
+    "seen": 1793956879.5180304,
+    "ast_hash": "dc9200fd486da69f5a70235d7d2d79c0",
+    "semantic_hash": ""
+  },
+  "drawn/parts/thing/telegraph_sounder.mjs": {
+    "mtime": 1793943398.813639,
+    "seen": 1793956879.5180316,
+    "ast_hash": "c72d5c2bc69abf531d6eff86a27bf8b0",
+    "semantic_hash": ""
+  },
+  "drawn/partsheet.mjs": {
+    "mtime": 1793940634.397093,
+    "seen": 1793956879.5180326,
+    "ast_hash": "9e275723e7334feeb5481000fa0bce66",
+    "semantic_hash": ""
+  },
+  "shortsmaker/opener_crew.py": {
+    "mtime": 1793951871.7944367,
+    "seen": 1793956879.518126,
+    "ast_hash": "7aef4b265e059515d9f961bcf17eb316",
+    "semantic_hash": ""
+  },
+  "tests/test_opener_crew.py": {
+    "mtime": 1793949546.2127414,
+    "seen": 1793956879.518176,
+    "ast_hash": "803b015aab70ff825901eee02f052459",
     "semantic_hash": ""
   }
 }

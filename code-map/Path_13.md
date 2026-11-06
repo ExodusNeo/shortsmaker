@@ -1,16 +1,19 @@
 ---
 source_file: ""
 type: "code"
-community: "main"
+community: "checkpoints.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/main
+  - community/checkpointspy
 ---
 
 # Path
 
 ## Connections
-- [[draft_rules()]] - `references` [EXTRACTED]
+- [[finish_short()]] - `references` [EXTRACTED]
+- [[record_failure()]] - `references` [EXTRACTED]
+- [[resume_runs()]] - `references` [EXTRACTED]
+- [[use_picture_from()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/main
+#graphify/code #graphify/EXTRACTED #community/checkpointspy

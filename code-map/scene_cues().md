@@ -2,7 +2,7 @@
 source_file: "shortsmaker/editplan.py"
 type: "code"
 community: "scene_cues"
-location: "L162"
+location: "L170"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -17,7 +17,7 @@ tags:
 - [[full_cues()]] - `calls` [EXTRACTED]
 - [[person_card()]] - `calls` [EXTRACTED]
 - [[read_need()]] - `calls` [EXTRACTED]
-- [[render()_3]] - `calls` [EXTRACTED]
+- [[render()]] - `calls` [EXTRACTED]
 - [[spoken_at()]] - `calls` [EXTRACTED]
 - [[test_counter_finishes_before_it_leaves()]] - `calls` [EXTRACTED]
 - [[test_graphic_card_hold_duration()]] - `calls` [EXTRACTED]

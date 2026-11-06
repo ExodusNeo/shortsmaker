@@ -13,6 +13,6 @@ tags:
 
 ## Connections
 - [[Engraving.tsx]] - `contains` [EXTRACTED]
-- [[draw()]] - `calls` [EXTRACTED]
+- [[draw()_2]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Halftonetsx

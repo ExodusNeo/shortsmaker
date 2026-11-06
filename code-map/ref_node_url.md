@@ -12,6 +12,8 @@ tags:
 
 ## Connections
 - [[cutouts.mjs]] - `imports_from` [EXTRACTED]
+- [[kit.mjs]] - `imports_from` [EXTRACTED]
+- [[partsheet.mjs]] - `imports_from` [EXTRACTED]
 - [[run.mjs]] - `imports_from` [EXTRACTED]
 
 #graphify/concept #graphify/EXTRACTED #community/kitmjs

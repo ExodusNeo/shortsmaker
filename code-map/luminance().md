@@ -15,9 +15,9 @@ tags:
 - [[Engraving.tsx]] - `imports` [EXTRACTED]
 - [[Halftone.tsx]] - `imports` [EXTRACTED]
 - [[Riso.tsx]] - `imports` [EXTRACTED]
-- [[draw()]] - `calls` [EXTRACTED]
-- [[draw()_1]] - `calls` [EXTRACTED]
+- [[draw()_2]] - `calls` [EXTRACTED]
 - [[draw()_3]] - `calls` [EXTRACTED]
+- [[draw()_5]] - `calls` [EXTRACTED]
 - [[drawCover()]] - `calls` [EXTRACTED]
 - [[kit.ts]] - `contains` [EXTRACTED]
 

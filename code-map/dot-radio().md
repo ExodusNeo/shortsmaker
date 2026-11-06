@@ -1,12 +1,12 @@
 ---
 source_file: "drawn/kit.mjs"
 type: "code"
-community: ".at"
-location: "L577"
+community: "k"
+location: "L612"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/at
+  - community/k
 ---
 
 # .radio()
@@ -17,4 +17,4 @@ tags:
 - [[dot-disc()]] - `calls` [EXTRACTED]
 - [[k]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/at
+#graphify/code #graphify/EXTRACTED #community/k

@@ -2,7 +2,7 @@
 source_file: "drawn/kit.mjs"
 type: "code"
 community: "makeKit"
-location: "L34"
+location: "L57"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -40,6 +40,7 @@ tags:
 - [[kit.mjs]] - `contains` [EXTRACTED]
 - [[lerp()]] - `calls` [EXTRACTED]
 - [[noise1()]] - `calls` [EXTRACTED]
+- [[partsheet.mjs]] - `imports` [EXTRACTED]
 - [[person()_1]] - `calls` [EXTRACTED]
 - [[popS()]] - `calls` [EXTRACTED]
 - [[rrect()]] - `calls` [EXTRACTED]

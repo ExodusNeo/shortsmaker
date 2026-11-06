@@ -2,7 +2,7 @@
 source_file: "tests/test_package.py"
 type: "code"
 community: "scene_cues"
-location: "L165"
+location: "L172"
 tags:
   - graphify/code
   - graphify/EXTRACTED

@@ -1,12 +1,12 @@
 ---
 source_file: "drawn/kit.mjs"
 type: "code"
-community: ".at"
-location: "L501"
+community: "k"
+location: "L536"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/at
+  - community/k
 ---
 
 # .door()
@@ -19,4 +19,4 @@ tags:
 - [[clamp()]] - `calls` [EXTRACTED]
 - [[k]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/at
+#graphify/code #graphify/EXTRACTED #community/k

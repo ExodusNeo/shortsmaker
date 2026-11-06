@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "shutil"
+community: "test_full_scenes.py"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/shutil
+  - community/test_full_scenespy
 ---
 
 # shutil
@@ -29,11 +29,14 @@ tags:
 - [[invent_component()]] - `calls` [EXTRACTED]
 - [[llm.py]] - `imports` [EXTRACTED]
 - [[logbook.py]] - `imports` [EXTRACTED]
+- [[look_dir()]] - `calls` [EXTRACTED]
 - [[main()]] - `calls` [EXTRACTED]
-- [[main()_4]] - `calls` [EXTRACTED]
+- [[main()_3]] - `calls` [EXTRACTED]
+- [[make_part()]] - `calls` [EXTRACTED]
 - [[media_library.py]] - `imports` [EXTRACTED]
 - [[motion.py]] - `imports` [EXTRACTED]
 - [[opener3d.py]] - `imports` [EXTRACTED]
+- [[opener_crew.py]] - `imports` [EXTRACTED]
 - [[paint_instead()]] - `calls` [EXTRACTED]
 - [[paint_opener_start()]] - `calls` [EXTRACTED]
 - [[picture_pool.py]] - `imports` [EXTRACTED]
@@ -43,8 +46,8 @@ tags:
 - [[prune_work()]] - `calls` [EXTRACTED]
 - [[reject_candidate()]] - `calls` [EXTRACTED]
 - [[remotion_render.py]] - `imports` [EXTRACTED]
+- [[render()_5]] - `calls` [EXTRACTED]
 - [[render()]] - `calls` [EXTRACTED]
-- [[render()_3]] - `calls` [EXTRACTED]
 - [[render_full.py]] - `imports` [EXTRACTED]
 - [[render_remotion()]] - `calls` [EXTRACTED]
 - [[render_style.py]] - `imports` [EXTRACTED]
@@ -67,4 +70,4 @@ tags:
 - [[write_scripts()]] - `calls` [EXTRACTED]
 - [[writing.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/shutil
+#graphify/concept #graphify/EXTRACTED #community/test_full_scenespy

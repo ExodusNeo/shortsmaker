@@ -12,7 +12,7 @@ tags:
 # .__exit__()
 
 ## Connections
-- [[owner()]] - `calls` [EXTRACTED]
+- [[owner()_1]] - `calls` [EXTRACTED]
 - [[planning]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/owner

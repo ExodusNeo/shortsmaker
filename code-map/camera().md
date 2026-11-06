@@ -1,17 +1,17 @@
 ---
-source_file: "drawn/examples/dexter.mjs"
+source_file: "drawn/examples/umbrellas.mjs"
 type: "code"
-community: "dexter.mjs"
-location: "L3"
+community: "umbrellas.mjs"
+location: "L4"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/dextermjs
+  - community/umbrellasmjs
 ---
 
 # camera()
 
 ## Connections
-- [[dexter.mjs]] - `contains` [EXTRACTED]
+- [[umbrellas.mjs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/dextermjs
+#graphify/code #graphify/EXTRACTED #community/umbrellasmjs

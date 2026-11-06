@@ -1,20 +1,19 @@
 ---
 type: community
-members: 37
+members: 36
 ---
 
 # core.mjs
 
-**Members:** 37 nodes
+**Members:** 36 nodes
 
 ## Members
 - [[dot-constructor()]] - code - drawn/lib/pen.mjs
+- [[dot-sky()]] - code - drawn/kit.mjs
 - [[_grain]] - code - drawn/lib/core.mjs
 - [[at()]] - code - drawn/lib/core.mjs
 - [[burst()]] - code - drawn/lib/core.mjs
 - [[core.mjs]] - code - drawn/lib/core.mjs
-- [[eBounce()]] - code - drawn/lib/core.mjs
-- [[eElastic()]] - code - drawn/lib/core.mjs
 - [[ellipse()]] - code - drawn/lib/core.mjs
 - [[fibre()]] - code - drawn/lib/core.mjs
 - [[fibrePaper()]] - code - drawn/lib/textures.mjs
@@ -54,15 +53,16 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 15 edges to [[_COMMUNITY_makeKit]]
-- 15 edges to [[_COMMUNITY_clamp]]
+- 13 edges to [[_COMMUNITY_clamp]]
 - 13 edges to [[_COMMUNITY_kit.mjs]]
-- 6 edges to [[_COMMUNITY_bean.mjs]]
-- 2 edges to [[_COMMUNITY_k]]
+- 12 edges to [[_COMMUNITY_Pen]]
+- 9 edges to [[_COMMUNITY_makeKit]]
+- 3 edges to [[_COMMUNITY_k]]
+- 3 edges to [[_COMMUNITY_popS]]
 
 ## Top bridge nodes
-- [[core.mjs]] - degree 48, connects to 5 communities
+- [[core.mjs]] - degree 49, connects to 6 communities
 - [[textures.mjs]] - degree 27, connects to 3 communities
+- [[hash()]] - degree 7, connects to 3 communities
 - [[star4()]] - degree 6, connects to 3 communities
-- [[hash()]] - degree 7, connects to 2 communities
 - [[grainCanvas()]] - degree 10, connects to 1 community

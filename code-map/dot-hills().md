@@ -1,12 +1,12 @@
 ---
 source_file: "drawn/kit.mjs"
 type: "code"
-community: "k"
-location: "L99"
+community: "Pen"
+location: "L122"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/k
+  - community/Pen
 ---
 
 # .hills()
@@ -16,4 +16,4 @@ tags:
 - [[k]] - `method` [EXTRACTED]
 - [[noise1()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/k
+#graphify/code #graphify/EXTRACTED #community/Pen

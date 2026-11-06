@@ -1,17 +1,19 @@
 ---
 type: community
-members: 19
+members: 21
 ---
 
 # test_first_second.py
 
-**Members:** 19 nodes
+**Members:** 21 nodes
 
 ## Members
 - [[Scenes i and k trade their real photosfilms (paintings and motion graphics are…]] - rationale - shortsmaker/review.py
 - [[Tests for the first-second check (would a scroller stop) and the honest…]] - rationale - tests/test_first_second.py
+- [[Would a stranger scrolling the Shorts feed stop here Stayed-to-watch is…]] - rationale - shortsmaker/review.py
 - [[failed_preview()]] - code - tests/test_first_second.py
 - [[first_second_check with ffmpeg and the AI faked; returns its result.]] - rationale - tests/test_first_second.py
+- [[first_second_check()]] - code - shortsmaker/review.py
 - [[real()]] - code - tests/test_first_second.py
 - [[run_check()]] - code - tests/test_first_second.py
 - [[state()]] - code - tests/test_first_second.py
@@ -36,18 +38,22 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 8 edges to [[_COMMUNITY_test_full_scenes.py]]
-- 4 edges to [[_COMMUNITY_pathlib]]
-- 3 edges to [[_COMMUNITY_finish_render]]
+- 12 edges to [[_COMMUNITY_pathlib]]
+- 5 edges to [[_COMMUNITY_finish_render]]
+- 2 edges to [[_COMMUNITY_json]]
+- 2 edges to [[_COMMUNITY_test_full_scenes.py]]
 - 2 edges to [[_COMMUNITY_apply_review_fixes]]
-- 1 edge to [[_COMMUNITY_visual_review]]
-- 1 edge to [[_COMMUNITY_logbook_results]]
-- 1 edge to [[_COMMUNITY_quality_check]]
-- 1 edge to [[_COMMUNITY_test_topic_ideas.py]]
+- 2 edges to [[_COMMUNITY_short_render.py]]
+- 1 edge to [[_COMMUNITY_test_rules.py]]
+- 1 edge to [[_COMMUNITY_prepare_topic]]
+- 1 edge to [[_COMMUNITY_fake_ai]]
+- 1 edge to [[_COMMUNITY_test_story.py]]
+- 1 edge to [[_COMMUNITY_ffmpeg]]
+- 1 edge to [[_COMMUNITY_ask_ai]]
+- 1 edge to [[_COMMUNITY_clean_full]]
 
 ## Top bridge nodes
-- [[test_first_second.py]] - degree 29, connects to 6 communities
+- [[first_second_check()]] - degree 18, connects to 10 communities
+- [[test_first_second.py]] - degree 29, connects to 4 communities
 - [[swap_pictures()]] - degree 6, connects to 2 communities
-- [[run_check()]] - degree 7, connects to 1 community
-- [[test_failed_preview_clears_previous_opener_score()]] - degree 4, connects to 1 community
 - [[test_opener_fix_swaps_once()]] - degree 4, connects to 1 community

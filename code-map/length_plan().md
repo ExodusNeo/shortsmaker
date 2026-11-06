@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/writing.py"
 type: "code"
-community: "quality_check"
+community: "finish_render"
 location: "L25"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/quality_check
+  - community/finish_render
 ---
 
 # length_plan()
@@ -18,4 +18,4 @@ tags:
 - [[write_scripts()]] - `calls` [EXTRACTED]
 - [[writing.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/quality_check
+#graphify/code #graphify/EXTRACTED #community/finish_render

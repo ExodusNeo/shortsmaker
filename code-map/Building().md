@@ -2,7 +2,7 @@
 source_file: "remotion/src/Opener3D.tsx"
 type: "code"
 community: "Opener3D.tsx"
-location: "L184"
+location: "L216"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[Opener3D.tsx]] - `contains` [EXTRACTED]
-- [[Place()]] - `calls` [EXTRACTED]
+- [[Place()_1]] - `calls` [EXTRACTED]
 - [[PropMesh()]] - `calls` [EXTRACTED]
 - [[rand()]] - `calls` [EXTRACTED]
 

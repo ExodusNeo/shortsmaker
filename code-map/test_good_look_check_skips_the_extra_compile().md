@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[invent_component()]] - `calls` [EXTRACTED]
-- [[owner()]] - `calls` [EXTRACTED]
+- [[owner()_1]] - `calls` [EXTRACTED]
 - [[restore_style_slots()]] - `calls` [EXTRACTED]
 - [[test_style.py]] - `contains` [EXTRACTED]
 

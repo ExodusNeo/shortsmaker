@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/drawn_opener.py"
 type: "rationale"
-community: "lint_cutout"
-location: "L54"
+community: "drawn_opener.py"
+location: "L56"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/lint_cutout
+  - community/drawn_openerpy
 ---
 
 # Rule breaks in an AI-written scene (KIT.md's code rules). Empty = clean.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[lint()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/lint_cutout
+#graphify/rationale #graphify/EXTRACTED #community/drawn_openerpy

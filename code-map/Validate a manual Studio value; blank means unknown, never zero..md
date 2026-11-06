@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/retention.py"
 type: "rationale"
-community: "json"
+community: "retention.py"
 location: "L34"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/json
+  - community/retentionpy
 ---
 
 # Validate a manual Studio value; blank means unknown, never zero.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[parse_metric()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/json
+#graphify/rationale #graphify/EXTRACTED #community/retentionpy

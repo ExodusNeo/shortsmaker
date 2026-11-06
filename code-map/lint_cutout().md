@@ -2,7 +2,7 @@
 source_file: "shortsmaker/opener3d.py"
 type: "code"
 community: "lint_cutout"
-location: "L84"
+location: "L201"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -13,10 +13,13 @@ tags:
 
 ## Connections
 - [[Rule breaks in an AI-written cut-out module (the drawn opener's code rules,…]] - `rationale_for` [EXTRACTED]
+- [[assemble()]] - `calls` [EXTRACTED]
 - [[clean()]] - `calls` [EXTRACTED]
 - [[lint()]] - `calls` [EXTRACTED]
 - [[opener3d.py]] - `contains` [EXTRACTED]
+- [[paint()]] - `calls` [EXTRACTED]
 - [[re]] - `calls` [EXTRACTED]
+- [[test_a_painter_with_unusable_code_gets_the_plain_kit_cutout()]] - `calls` [EXTRACTED]
 - [[test_hold_counts_as_drawing_the_letter_and_scenery_stays_3d()]] - `calls` [EXTRACTED]
 - [[test_lint_needs_draw()]] - `calls` [EXTRACTED]
 

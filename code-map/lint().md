@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/drawn_opener.py"
 type: "code"
-community: "lint_cutout"
-location: "L53"
+community: "drawn_opener.py"
+location: "L55"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/lint_cutout
+  - community/drawn_openerpy
 ---
 
 # lint()
@@ -19,4 +19,4 @@ tags:
 - [[re]] - `calls` [EXTRACTED]
 - [[test_lint()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/lint_cutout
+#graphify/code #graphify/EXTRACTED #community/drawn_openerpy

@@ -1,12 +1,12 @@
 ---
 source_file: "drawn/lib/core.mjs"
 type: "code"
-community: "kit.mjs"
+community: "makeKit"
 location: "L10"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/kitmjs
+  - community/makeKit
 ---
 
 # ss()
@@ -17,4 +17,4 @@ tags:
 - [[kit.mjs]] - `imports` [EXTRACTED]
 - [[makeKit()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/kitmjs
+#graphify/code #graphify/EXTRACTED #community/makeKit

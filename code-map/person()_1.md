@@ -1,12 +1,12 @@
 ---
 source_file: "drawn/lib/rigs/bean.mjs"
 type: "code"
-community: "bean.mjs"
+community: "makeKit"
 location: "L13"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/beanmjs
+  - community/makeKit
 ---
 
 # person()
@@ -21,4 +21,4 @@ tags:
 - [[rad()]] - `calls` [EXTRACTED]
 - [[rrect()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/beanmjs
+#graphify/code #graphify/EXTRACTED #community/makeKit

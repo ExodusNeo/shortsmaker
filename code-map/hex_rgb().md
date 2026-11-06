@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/config.py"
 type: "code"
-community: "test_full_scenes.py"
+community: "short_render.py"
 location: "L70"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_full_scenespy
+  - community/short_renderpy
 ---
 
 # hex_rgb()
@@ -16,7 +16,7 @@ tags:
 - [[luminance()_1]] - `calls` [EXTRACTED]
 - [[make_paper()]] - `calls` [EXTRACTED]
 - [[remotion_render.py]] - `imports` [EXTRACTED]
-- [[render()_3]] - `calls` [EXTRACTED]
+- [[render()]] - `calls` [EXTRACTED]
 - [[short_render.py]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_full_scenespy
+#graphify/code #graphify/EXTRACTED #community/short_renderpy

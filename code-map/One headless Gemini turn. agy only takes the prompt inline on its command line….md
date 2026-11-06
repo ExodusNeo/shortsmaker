@@ -2,7 +2,7 @@
 source_file: "shortsmaker/llm.py"
 type: "rationale"
 community: "run_agy"
-location: "L73"
+location: "L88"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED

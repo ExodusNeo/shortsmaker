@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/opener3d.py"
 type: "rationale"
-community: "inside"
-location: "L75"
+community: "opener3d.py"
+location: "L192"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/inside
+  - community/opener3dpy
 ---
 
 # The house or shop a floor cut-out stands inside of (a live McLean draft put the…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[inside()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/inside
+#graphify/rationale #graphify/EXTRACTED #community/opener3dpy

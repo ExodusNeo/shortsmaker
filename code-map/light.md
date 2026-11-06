@@ -1,17 +1,17 @@
 ---
-source_file: "drawn/run.mjs"
+source_file: "drawn/examples/umbrellas.mjs"
 type: "code"
-community: "kit.mjs"
-location: "L20"
+community: "umbrellas.mjs"
+location: "L3"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/kitmjs
+  - community/umbrellasmjs
 ---
 
 # light
 
 ## Connections
-- [[run.mjs]] - `contains` [EXTRACTED]
+- [[umbrellas.mjs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/kitmjs
+#graphify/code #graphify/EXTRACTED #community/umbrellasmjs

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/llm.py"
 type: "code"
-community: "test_full_scenes.py"
+community: "pathlib"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_full_scenespy
+  - community/pathlib
 ---
 
 # llm.py
@@ -14,6 +14,7 @@ tags:
 ## Connections
 - [[Headless Codex  Claude Code  Gemini (agy) calls that return JSON, with…]] - `rationale_for` [EXTRACTED]
 - [[__init__.py]] - `imports_from` [EXTRACTED]
+- [[argon_out()]] - `contains` [EXTRACTED]
 - [[ask_ai()]] - `contains` [EXTRACTED]
 - [[blender_plan.py]] - `imports_from` [EXTRACTED]
 - [[channel_profiles.py]] - `imports_from` [EXTRACTED]
@@ -24,7 +25,7 @@ tags:
 - [[gpu.py]] - `imports_from` [EXTRACTED]
 - [[json]] - `imports` [EXTRACTED]
 - [[motion.py]] - `imports_from` [EXTRACTED]
-- [[opener3d.py]] - `imports_from` [EXTRACTED]
+- [[opener_crew.py]] - `imports_from` [EXTRACTED]
 - [[os]] - `imports` [EXTRACTED]
 - [[other_ai()]] - `contains` [EXTRACTED]
 - [[pathlib]] - `imports_from` [EXTRACTED]
@@ -53,6 +54,7 @@ tags:
 - [[test_full_scenes.py]] - `imports_from` [EXTRACTED]
 - [[test_h3_handoff.py]] - `imports_from` [EXTRACTED]
 - [[test_marks.py]] - `imports_from` [EXTRACTED]
+- [[test_opener_crew.py]] - `imports_from` [EXTRACTED]
 - [[test_opener_graphic.py]] - `imports_from` [EXTRACTED]
 - [[test_opener_preflight.py]] - `imports_from` [EXTRACTED]
 - [[test_opening_rules.py]] - `imports_from` [EXTRACTED]
@@ -68,4 +70,4 @@ tags:
 - [[time]] - `imports` [EXTRACTED]
 - [[writing.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_full_scenespy
+#graphify/code #graphify/EXTRACTED #community/pathlib

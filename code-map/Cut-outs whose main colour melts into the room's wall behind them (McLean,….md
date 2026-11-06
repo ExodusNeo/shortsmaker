@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/opener3d.py"
 type: "rationale"
-community: "plan"
-location: "L260"
+community: "render"
+location: "L435"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/plan
+  - community/render
 ---
 
 # Cut-outs whose main colour melts into the room's wall behind them (McLean,…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[blends()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/plan
+#graphify/rationale #graphify/EXTRACTED #community/render

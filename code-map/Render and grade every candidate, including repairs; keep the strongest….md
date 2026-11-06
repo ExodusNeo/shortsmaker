@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/motion.py"
 type: "rationale"
-community: "code_custom_scenes"
+community: "test_full_scenes.py"
 location: "L355"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/code_custom_scenes
+  - community/test_full_scenespy
 ---
 
 # Render and grade every candidate, including repairs; keep the strongest…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[opener_preflight()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/code_custom_scenes
+#graphify/rationale #graphify/EXTRACTED #community/test_full_scenespy

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/writing.py"
 type: "rationale"
-community: "quality_check"
+community: "finish_render"
 location: "L26"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/quality_check
+  - community/finish_render
 ---
 
 # (floor words, max words, floor scenes, max scenes, seconds) for this batch's…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[length_plan()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/quality_check
+#graphify/rationale #graphify/EXTRACTED #community/finish_render

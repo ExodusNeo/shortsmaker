@@ -12,6 +12,6 @@ tags:
 # The module that defines function `name` (KeyError for anything else).
 
 ## Connections
-- [[owner()]] - `rationale_for` [EXTRACTED]
+- [[owner()_1]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/owner

@@ -2,7 +2,7 @@
 source_file: "shortsmaker/drawn_opener.py"
 type: "code"
 community: "drawn_opener.py"
-location: "L252"
+location: "L286"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,7 +12,7 @@ tags:
 # make_opener()
 
 ## Connections
-- [[Path_3]] - `references` [EXTRACTED]
+- [[Path_7]] - `references` [EXTRACTED]
 - [[Scene 1's opener clip (workdrawnopener.mp4, scene 1 + the crossfade long), or…]] - `rationale_for` [EXTRACTED]
 - [[available()]] - `calls` [EXTRACTED]
 - [[available()_1]] - `calls` [EXTRACTED]
@@ -22,15 +22,18 @@ tags:
 - [[fingerprint()]] - `calls` [EXTRACTED]
 - [[json]] - `calls` [EXTRACTED]
 - [[lint()]] - `calls` [EXTRACTED]
+- [[minutes()]] - `calls` [EXTRACTED]
 - [[missing_parts()]] - `calls` [EXTRACTED]
 - [[node_run()]] - `calls` [EXTRACTED]
-- [[plan()_1]] - `calls` [EXTRACTED]
-- [[render()]] - `calls` [EXTRACTED]
+- [[plan()]] - `calls` [EXTRACTED]
+- [[render()_5]] - `calls` [EXTRACTED]
 - [[review()]] - `calls` [EXTRACTED]
 - [[sheet_times()]] - `calls` [EXTRACTED]
 - [[test_drawn_opener_gives_up_after_fixes()]] - `calls` [EXTRACTED]
 - [[test_drawn_opener_renders_and_is_reused()]] - `calls` [EXTRACTED]
+- [[test_drawn_opener_stops_when_a_fix_does_not_help()]] - `calls` [EXTRACTED]
+- [[time]] - `calls` [EXTRACTED]
 - [[use_opener()]] - `calls` [EXTRACTED]
-- [[write()]] - `calls` [EXTRACTED]
+- [[write()_1]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/drawn_openerpy

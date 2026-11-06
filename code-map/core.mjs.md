@@ -45,6 +45,7 @@ tags:
 - [[line()]] - `contains` [EXTRACTED]
 - [[mid()]] - `contains` [EXTRACTED]
 - [[noise1()]] - `contains` [EXTRACTED]
+- [[partsheet.mjs]] - `imports_from` [EXTRACTED]
 - [[pathOf()]] - `contains` [EXTRACTED]
 - [[pen.mjs]] - `imports_from` [EXTRACTED]
 - [[poly()]] - `contains` [EXTRACTED]

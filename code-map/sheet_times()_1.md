@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/opener3d.py"
 type: "code"
-community: "plan"
-location: "L248"
+community: "render"
+location: "L423"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/plan
+  - community/render
 ---
 
 # sheet_times()
@@ -18,4 +18,4 @@ tags:
 - [[sheet_times()]] - `calls` [EXTRACTED]
 - [[test_the_preview_sees_every_shot()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/plan
+#graphify/code #graphify/EXTRACTED #community/render

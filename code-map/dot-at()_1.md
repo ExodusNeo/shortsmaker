@@ -1,12 +1,12 @@
 ---
 source_file: "drawn/kit.mjs"
 type: "code"
-community: ".at"
-location: "L54"
+community: "k"
+location: "L77"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/at
+  - community/k
 ---
 
 # .at()
@@ -20,11 +20,13 @@ tags:
 - [[dot-lamp()]] - `calls` [EXTRACTED]
 - [[dot-letter()]] - `calls` [EXTRACTED]
 - [[dot-paper()]] - `calls` [EXTRACTED]
+- [[dot-person()]] - `calls` [EXTRACTED]
 - [[dot-phone()]] - `calls` [EXTRACTED]
 - [[dot-question()]] - `calls` [EXTRACTED]
 - [[dot-radio()]] - `calls` [EXTRACTED]
 - [[dot-shelf()]] - `calls` [EXTRACTED]
+- [[dot-thing()]] - `calls` [EXTRACTED]
 - [[k]] - `method` [EXTRACTED]
 - [[makeKit()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/at
+#graphify/code #graphify/EXTRACTED #community/k

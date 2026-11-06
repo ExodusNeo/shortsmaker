@@ -26,6 +26,7 @@ tags:
 - [[test_h3_run.py]] - `imports` [EXTRACTED]
 - [[test_marks.py]] - `imports` [EXTRACTED]
 - [[test_media.py]] - `imports` [EXTRACTED]
+- [[test_opener_crew.py]] - `imports` [EXTRACTED]
 - [[test_opener_graphic.py]] - `imports` [EXTRACTED]
 - [[test_opener_preflight.py]] - `imports` [EXTRACTED]
 - [[test_opening_rules.py]] - `imports` [EXTRACTED]

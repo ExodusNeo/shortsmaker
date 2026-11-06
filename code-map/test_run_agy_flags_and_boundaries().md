@@ -2,7 +2,7 @@
 source_file: "tests/test_package.py"
 type: "code"
 community: "run_agy"
-location: "L107"
+location: "L114"
 tags:
   - graphify/code
   - graphify/EXTRACTED

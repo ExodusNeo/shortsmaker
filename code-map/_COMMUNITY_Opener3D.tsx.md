@@ -1,11 +1,11 @@
 ---
 type: community
-members: 49
+members: 51
 ---
 
 # Opener3D.tsx
 
-**Members:** 49 nodes
+**Members:** 51 nodes
 
 ## Members
 - [[BOOKS]] - code - remotion/src/Opener3D.tsx
@@ -22,9 +22,11 @@ members: 49
 - [[Model()]] - code - remotion/src/Opener3D.tsx
 - [[Opener3D()]] - code - remotion/src/Opener3D.tsx
 - [[Opener3D.tsx]] - code - remotion/src/Opener3D.tsx
+- [[PATCHES]] - code - remotion/src/Opener3D.tsx
 - [[Particles()]] - code - remotion/src/Opener3D.tsx
+- [[Patch()]] - code - remotion/src/Opener3D.tsx
 - [[PictureLight()]] - code - remotion/src/Opener3D.tsx
-- [[Place()]] - code - remotion/src/Opener3D.tsx
+- [[Place()_1]] - code - remotion/src/Opener3D.tsx
 - [[Prop]] - code - remotion/src/Opener3D.tsx
 - [[PropMesh()]] - code - remotion/src/Opener3D.tsx
 - [[Puff()]] - code - remotion/src/Opener3D.tsx
@@ -71,7 +73,7 @@ SORT file.name ASC
 - 1 edge to [[_COMMUNITY_styleindex.ts]]
 
 ## Top bridge nodes
-- [[Opener3D.tsx]] - degree 46, connects to 2 communities
+- [[Opener3D.tsx]] - degree 48, connects to 2 communities
 - [[Root.tsx]] - degree 11, connects to 2 communities
 - [[srcindex.ts]] - degree 3, connects to 1 community
 - [[ShortProps]] - degree 2, connects to 1 community

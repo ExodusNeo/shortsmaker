@@ -1,12 +1,12 @@
 ---
 source_file: "drawn/lib/pen.mjs"
 type: "code"
-community: "clamp"
+community: "Pen"
 location: "L25"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/clamp
+  - community/Pen
 ---
 
 # .next()
@@ -15,4 +15,4 @@ tags:
 - [[Pen]] - `method` [EXTRACTED]
 - [[clamp()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/clamp
+#graphify/code #graphify/EXTRACTED #community/Pen

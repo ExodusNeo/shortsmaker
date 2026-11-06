@@ -29,8 +29,8 @@ members: 24
 - [[dot-test_voice_cache_reuses_audio_but_invalidates_changed_text_voice_or_files()]] - code - tests/test_reliability.py
 - [[ReliabilityTests]] - code - tests/test_reliability.py
 - [[fail()_1]] - code - tests/test_reliability.py
-- [[job()]] - code - tests/test_reliability.py
 - [[job()_1]] - code - tests/test_reliability.py
+- [[job()_2]] - code - tests/test_reliability.py
 - [[sheet()]] - code - tests/test_reliability.py
 
 ## Live Query (requires Dataview plugin)

@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_drawn_opener.py"
 type: "code"
-community: "test_drawn_opener.py"
+community: "short"
 location: "L82"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_drawn_openerpy
+  - community/short
 ---
 
 # test_drawn_opener_gives_up_after_fixes()
@@ -15,7 +15,7 @@ tags:
 - [[The art director scores every draft below PASS FIXES rewrites (each told the…]] - `rationale_for` [EXTRACTED]
 - [[fake_ai()_2]] - `calls` [EXTRACTED]
 - [[make_opener()]] - `calls` [EXTRACTED]
-- [[short()_1]] - `calls` [EXTRACTED]
+- [[short()_3]] - `calls` [EXTRACTED]
 - [[test_drawn_opener.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_drawn_openerpy
+#graphify/code #graphify/EXTRACTED #community/short
