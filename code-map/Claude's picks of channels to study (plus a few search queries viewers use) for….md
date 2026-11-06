@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/channel_profiles.py"
 type: "rationale"
-community: "test_full_scenes.py"
+community: "pick_channel"
 location: "L160"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/test_full_scenespy
+  - community/pick_channel
 ---
 
 # Claude's picks of channels to study (plus a few search queries viewers use) for…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[seed_ideas()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/test_full_scenespy
+#graphify/rationale #graphify/EXTRACTED #community/pick_channel

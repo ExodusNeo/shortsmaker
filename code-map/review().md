@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/drawn_opener.py"
 type: "code"
-community: "test_drawn_opener.py"
+community: "drawn_opener.py"
 location: "L208"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_drawn_openerpy
+  - community/drawn_openerpy
 ---
 
 # review()
@@ -27,4 +27,4 @@ tags:
 - [[test_no_verdict_is_not_a_pass()]] - `calls` [EXTRACTED]
 - [[test_sound_off_test_fails_a_draft_the_art_director_liked()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_drawn_openerpy
+#graphify/code #graphify/EXTRACTED #community/drawn_openerpy

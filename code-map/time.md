@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "drawn_opener.py"
+community: "time"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/drawn_openerpy
+  - community/time
 ---
 
 # time
@@ -13,6 +13,7 @@ tags:
 ## Connections
 - [[audio_mix.py]] - `imports` [EXTRACTED]
 - [[channel_profiles.py]] - `imports` [EXTRACTED]
+- [[crew()]] - `calls` [EXTRACTED]
 - [[drawn_opener.py]] - `imports` [EXTRACTED]
 - [[extra_sources.py]] - `imports` [EXTRACTED]
 - [[fetch_ideas()]] - `calls` [EXTRACTED]
@@ -22,9 +23,9 @@ tags:
 - [[h3_run.py]] - `imports` [EXTRACTED]
 - [[image_sources.py]] - `imports` [EXTRACTED]
 - [[llm.py]] - `imports` [EXTRACTED]
-- [[main()]] - `calls` [EXTRACTED]
-- [[main()_2]] - `calls` [EXTRACTED]
+- [[main()_4]] - `calls` [EXTRACTED]
 - [[main()_1]] - `calls` [EXTRACTED]
+- [[main()_6]] - `calls` [EXTRACTED]
 - [[make_opener()]] - `calls` [EXTRACTED]
 - [[make_part()]] - `calls` [EXTRACTED]
 - [[media_library.py]] - `imports` [EXTRACTED]
@@ -50,4 +51,4 @@ tags:
 - [[trend_research()]] - `calls` [EXTRACTED]
 - [[voicestudio_up()]] - `calls` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/drawn_openerpy
+#graphify/concept #graphify/EXTRACTED #community/time

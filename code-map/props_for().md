@@ -12,7 +12,7 @@ tags:
 # props_for()
 
 ## Connections
-- [[main()_6]] - `calls` [EXTRACTED]
+- [[main()]] - `calls` [EXTRACTED]
 - [[render_full.py]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/shutil

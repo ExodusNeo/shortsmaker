@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "main"
+community: "StopPicker"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/main
+  - community/StopPicker
 ---
 
 # Exception
 
 ## Connections
-- [[record_failure()]] - `references` [EXTRACTED]
+- [[StopPicker]] - `inherits` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/main
+#graphify/code #graphify/EXTRACTED #community/StopPicker

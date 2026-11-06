@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[Cut-outs whose main colour melts into the room's wall behind them (McLean,…]] - `rationale_for` [EXTRACTED]
-- [[Path_38]] - `references` [EXTRACTED]
+- [[Path_37]] - `references` [EXTRACTED]
 - [[opener3d.py]] - `contains` [EXTRACTED]
 - [[plan()]] - `calls` [EXTRACTED]
 - [[test_a_cutout_that_melts_into_the_wall_goes_back()]] - `calls` [EXTRACTED]

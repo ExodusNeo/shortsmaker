@@ -1,18 +1,20 @@
 ---
 source_file: ""
 type: "code"
-community: "ffmpeg"
+community: "frame_maker"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ffmpeg
+  - community/frame_maker
 ---
 
 # Path
 
 ## Connections
-- [[duration()]] - `references` [EXTRACTED]
-- [[ffmpeg()]] - `references` [EXTRACTED]
-- [[write_json()]] - `references` [EXTRACTED]
+- [[dot-__init__()_1]] - `references` [EXTRACTED]
+- [[fills_frame()]] - `references` [EXTRACTED]
+- [[frame_maker()]] - `references` [EXTRACTED]
+- [[graphic_low()]] - `references` [EXTRACTED]
+- [[thumbnail()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ffmpeg
+#graphify/code #graphify/EXTRACTED #community/frame_maker

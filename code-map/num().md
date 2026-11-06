@@ -14,6 +14,7 @@ tags:
 ## Connections
 - [[check_staging()]] - `calls` [EXTRACTED]
 - [[clean()]] - `calls` [EXTRACTED]
+- [[crew()]] - `calls` [EXTRACTED]
 - [[opener3d.py]] - `contains` [EXTRACTED]
 - [[plan()]] - `calls` [EXTRACTED]
 - [[xz()]] - `calls` [EXTRACTED]

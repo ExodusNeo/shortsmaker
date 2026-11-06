@@ -1,16 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: "shutil"
+community: "render"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/shutil
+  - community/render
 ---
 
 # Path
 
 ## Connections
-- [[candidate_in()]] - `references` [EXTRACTED]
+- [[duration()]] - `references` [EXTRACTED]
+- [[ffmpeg()]] - `references` [EXTRACTED]
+- [[write_json()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/shutil
+#graphify/code #graphify/EXTRACTED #community/render

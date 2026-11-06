@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[Opener3D.tsx]] - `contains` [EXTRACTED]
-- [[Place()_1]] - `calls` [EXTRACTED]
+- [[Place()]] - `calls` [EXTRACTED]
 - [[rand()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Opener3Dtsx

@@ -1,22 +1,22 @@
 ---
 source_file: "shortsmaker/photo_prep.py"
 type: "code"
-community: "clean_photo"
+community: "trim_borders"
 location: "L100"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/clean_photo
+  - community/trim_borders
 ---
 
 # to_vertical()
 
 ## Connections
 - [[Fill the 916 frame with the picture (centre crop) for the slow zoompan. This…]] - `rationale_for` [EXTRACTED]
-- [[Path_15]] - `references` [EXTRACTED]
+- [[Path_17]] - `references` [EXTRACTED]
 - [[paint_instead()]] - `calls` [EXTRACTED]
 - [[photo_prep.py]] - `contains` [EXTRACTED]
-- [[render()_2]] - `calls` [EXTRACTED]
+- [[render()_3]] - `calls` [EXTRACTED]
 - [[vertical_image()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/clean_photo
+#graphify/code #graphify/EXTRACTED #community/trim_borders

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/frame_render.py"
 type: "rationale"
-community: "audio_library.py"
+community: "render"
 location: "L261"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/audio_librarypy
+  - community/render
 ---
 
 # White camera-flash curve: snaps up over the 2 frames before the cut, then…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[flash_alpha()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/audio_librarypy
+#graphify/rationale #graphify/EXTRACTED #community/render

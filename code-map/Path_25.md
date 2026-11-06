@@ -1,18 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "media_command"
+community: "test_story.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/media_command
+  - community/test_storypy
 ---
 
 # Path
 
 ## Connections
-- [[audition_audio()]] - `references` [EXTRACTED]
-- [[download_audio_choices()]] - `references` [EXTRACTED]
-- [[review_audio_files()]] - `references` [EXTRACTED]
+- [[srt()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/media_command
+#graphify/code #graphify/EXTRACTED #community/test_storypy

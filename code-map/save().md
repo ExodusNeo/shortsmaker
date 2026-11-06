@@ -1,17 +1,23 @@
 ---
-source_file: "shortsmaker/audio_mix.py"
+source_file: "shortsmaker/voice_cache.py"
 type: "code"
-community: "make_sfx"
-location: "L196"
+community: "shutil"
+location: "L38"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/make_sfx
+  - community/shutil
 ---
 
 # save()
 
 ## Connections
-- [[make_sfx()]] - `contains` [EXTRACTED]
+- [[Path_5]] - `references` [EXTRACTED]
+- [[hashlib]] - `calls` [EXTRACTED]
+- [[render()_3]] - `calls` [EXTRACTED]
+- [[shutil]] - `calls` [EXTRACTED]
+- [[signature()]] - `calls` [EXTRACTED]
+- [[voice_cache.py]] - `contains` [EXTRACTED]
+- [[write_json()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/make_sfx
+#graphify/code #graphify/EXTRACTED #community/shutil

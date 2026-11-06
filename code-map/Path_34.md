@@ -1,20 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "graphic_low"
+community: "test_style.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/graphic_low
+  - community/test_stylepy
 ---
 
 # Path
 
 ## Connections
-- [[dot-__init__()_8]] - `references` [EXTRACTED]
-- [[fills_frame()]] - `references` [EXTRACTED]
-- [[frame_maker()]] - `references` [EXTRACTED]
-- [[graphic_low()]] - `references` [EXTRACTED]
-- [[thumbnail()]] - `references` [EXTRACTED]
+- [[candidate_in()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/graphic_low
+#graphify/code #graphify/EXTRACTED #community/test_stylepy

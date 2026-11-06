@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/picker.py"
 type: "rationale"
-community: "gather_pool"
+community: "full_cues"
 location: "L270"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/gather_pool
+  - community/full_cues
 ---
 
 # Downloads the real photos the picker chose for evidence boards, custom scenes…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[full_pictures()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/gather_pool
+#graphify/rationale #graphify/EXTRACTED #community/full_cues

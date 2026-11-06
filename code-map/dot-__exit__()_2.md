@@ -1,18 +1,17 @@
 ---
 source_file: "tests/test_pictures_first.py"
 type: "code"
-community: "owner"
-location: "L222"
+community: "fake_ai"
+location: "L129"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/owner
+  - community/fake_ai
 ---
 
 # .__exit__()
 
 ## Connections
-- [[owner()_1]] - `calls` [EXTRACTED]
-- [[planning]] - `method` [EXTRACTED]
+- [[fake_ai]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/owner
+#graphify/code #graphify/EXTRACTED #community/fake_ai

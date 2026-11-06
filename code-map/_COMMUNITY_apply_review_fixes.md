@@ -9,8 +9,8 @@ members: 16
 
 ## Members
 - [[A mark card circles a detail of the old picture it must go when the picture…]] - rationale - tests/test_full_scenes.py
+- [[Path_27]] - code
 - [[Path_28]] - code
-- [[Path_29]] - code
 - [[Rejected scenes (index - the review's complaint) that get a real picture from…]] - rationale - shortsmaker/review.py
 - [[The automatic fixes after a render's review (up to AUTO_REPAINT_MAX scenes per…]] - rationale - shortsmaker/review.py
 - [[_review_state()]] - code - tests/test_full_scenes.py
@@ -33,26 +33,28 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 5 edges to [[_COMMUNITY_test_full_scenes.py]]
-- 4 edges to [[_COMMUNITY_pathlib]]
-- 3 edges to [[_COMMUNITY_finish_render]]
-- 3 edges to [[_COMMUNITY_main_1]]
-- 3 edges to [[_COMMUNITY_opener_graphic]]
+- 8 edges to [[_COMMUNITY_test_full_scenes.py]]
+- 4 edges to [[_COMMUNITY_finish_render]]
 - 3 edges to [[_COMMUNITY_rewrite_paint_prompts]]
-- 3 edges to [[_COMMUNITY_test_first_second.py]]
+- 2 edges to [[_COMMUNITY_visual_review]]
+- 2 edges to [[_COMMUNITY_resume_runs]]
 - 2 edges to [[_COMMUNITY_prepare_topic]]
-- 1 edge to [[_COMMUNITY_footage.py]]
-- 1 edge to [[_COMMUNITY_gather_pool]]
+- 2 edges to [[_COMMUNITY_test_first_second.py]]
+- 1 edge to [[_COMMUNITY_film_piece]]
+- 1 edge to [[_COMMUNITY_main_1]]
+- 1 edge to [[_COMMUNITY_gpu.py]]
+- 1 edge to [[_COMMUNITY_extra_sources.py]]
 - 1 edge to [[_COMMUNITY_code_custom_scenes]]
 - 1 edge to [[_COMMUNITY_rescue_graphics]]
-- 1 edge to [[_COMMUNITY_test_drawn_opener.py]]
+- 1 edge to [[_COMMUNITY_drawn_opener.py]]
 - 1 edge to [[_COMMUNITY_ask_ai]]
 - 1 edge to [[_COMMUNITY_json]]
+- 1 edge to [[_COMMUNITY_render]]
 - 1 edge to [[_COMMUNITY_quality_check]]
 
 ## Top bridge nodes
 - [[apply_review_fixes()]] - degree 15, connects to 6 communities
 - [[pool_pictures()]] - degree 10, connects to 6 communities
-- [[Path_28]] - degree 11, connects to 5 communities
-- [[paint_new()]] - degree 8, connects to 3 communities
+- [[Path_27]] - degree 11, connects to 5 communities
+- [[paint_new()]] - degree 8, connects to 4 communities
 - [[test_review_redraws_custom()]] - degree 5, connects to 2 communities

@@ -1,22 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: "test_drawn_opener.py"
+community: "render"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_drawn_openerpy
+  - community/render
 ---
 
 # Path
 
 ## Connections
-- [[drawn_payoff()]] - `references` [EXTRACTED]
-- [[drawn_thumbnail()]] - `references` [EXTRACTED]
-- [[finish_render()]] - `references` [EXTRACTED]
-- [[load_state()]] - `references` [EXTRACTED]
-- [[render()_2]] - `references` [EXTRACTED]
-- [[save_state()]] - `references` [EXTRACTED]
-- [[use_opener()]] - `references` [EXTRACTED]
+- [[blends()]] - `references` [EXTRACTED]
+- [[render()_5]] - `references` [EXTRACTED]
+- [[sheet()_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_drawn_openerpy
+#graphify/code #graphify/EXTRACTED #community/render

@@ -696,9 +696,9 @@
     "semantic_hash": ""
   },
   "shortsmaker/drawn_opener.py": {
-    "mtime": 1793969330.6302695,
-    "seen": 1793970788.9434404,
-    "ast_hash": "1fb3e9ee887a354a684b86ff12236b4f",
+    "mtime": 1793971976.0331576,
+    "seen": 1793976409.9629927,
+    "ast_hash": "2ecd65a3c058bd4aa1a389b52496f0c5",
     "semantic_hash": ""
   },
   "tests/test_drawn_opener.py": {
@@ -846,15 +846,15 @@
     "semantic_hash": ""
   },
   "shortsmaker/opener3d.py": {
-    "mtime": 1793968524.0599637,
-    "seen": 1793970788.9434607,
-    "ast_hash": "848635f7703a5af9ff0b2693f99c9e8d",
+    "mtime": 1793971968.0777886,
+    "seen": 1793976409.9630268,
+    "ast_hash": "6611d88fc311e8e6f15e4e1f684ecfac",
     "semantic_hash": ""
   },
   "tests/test_opener3d.py": {
-    "mtime": 1793969089.5606208,
-    "seen": 1793970788.9435203,
-    "ast_hash": "74ea295199b923beafa4e75cb4d13a2b",
+    "mtime": 1793972268.22974,
+    "seen": 1793976409.963126,
+    "ast_hash": "c58dc77589bd642aecc1d3ee936a4b27",
     "semantic_hash": ""
   },
   "drawn/examples/umbrellas.mjs": {
@@ -882,15 +882,15 @@
     "semantic_hash": ""
   },
   "shortsmaker/opener_crew.py": {
-    "mtime": 1793969975.4491045,
-    "seen": 1793970788.943462,
-    "ast_hash": "96d7372de2adf74c95d181e233b35418",
+    "mtime": 1793973538.6957831,
+    "seen": 1793976409.963029,
+    "ast_hash": "18c5dddfd8d5abb97708fe9d9c146c76",
     "semantic_hash": ""
   },
   "tests/test_opener_crew.py": {
-    "mtime": 1793969990.4625952,
-    "seen": 1793970788.9435213,
-    "ast_hash": "4a190c31f653e4620aa5d863fcf42ddd",
+    "mtime": 1793973784.6141543,
+    "seen": 1793976409.9631283,
+    "ast_hash": "1430322187c607f7ec8f8911eb2a1cae",
     "semantic_hash": ""
   },
   "drawn/parts/hat/slouch_hat.mjs": {
@@ -915,6 +915,18 @@
     "mtime": 1793970405.92794,
     "seen": 1793970788.9433444,
     "ast_hash": "03a74c4fdf20ace05b890a1a5da92ae6",
+    "semantic_hash": ""
+  },
+  "drawn/parts/thing/telegraph_station.mjs": {
+    "mtime": 1793972439.2316356,
+    "seen": 1793976409.962841,
+    "ast_hash": "6b61b29f0a24ec7850a70b90f9a9d55b",
+    "semantic_hash": ""
+  },
+  "drawn/parts/thing/uprooted_potatoes.mjs": {
+    "mtime": 1793974463.9722977,
+    "seen": 1793976409.9628465,
+    "ast_hash": "ce05941b7a7e4165c246f04f3073015b",
     "semantic_hash": ""
   }
 }

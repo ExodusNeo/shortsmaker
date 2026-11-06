@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_opener3d.py"
 type: "code"
-community: "test_opener3d.py"
+community: "opener3d.py"
 location: "L32"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_opener3dpy
+  - community/opener3dpy
 ---
 
 # room()
@@ -20,4 +20,4 @@ tags:
 - [[test_opener3d.py]] - `contains` [EXTRACTED]
 - [[test_signs_of_the_strange_thing()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_opener3dpy
+#graphify/code #graphify/EXTRACTED #community/opener3dpy

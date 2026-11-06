@@ -1,18 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "render"
+community: "edit_plan"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/render
+  - community/edit_plan
 ---
 
 # Path
 
 ## Connections
-- [[blends()]] - `references` [EXTRACTED]
-- [[render()_5]] - `references` [EXTRACTED]
-- [[sheet()_1]] - `references` [EXTRACTED]
+- [[edit_plan()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/render
+#graphify/code #graphify/EXTRACTED #community/edit_plan

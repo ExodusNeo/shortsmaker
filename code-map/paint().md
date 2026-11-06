@@ -2,7 +2,7 @@
 source_file: "shortsmaker/opener_crew.py"
 type: "code"
 community: "opener_crew.py"
-location: "L371"
+location: "L378"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -13,9 +13,10 @@ tags:
 
 ## Connections
 - [[One painter a person's or drawn thing's cut-out ({name, w, h, height, frames,…]] - `rationale_for` [EXTRACTED]
-- [[Path_4]] - `references` [EXTRACTED]
+- [[Path_6]] - `references` [EXTRACTED]
 - [[ask_ai()]] - `calls` [EXTRACTED]
 - [[clean_code()]] - `calls` [EXTRACTED]
+- [[crew()]] - `calls` [EXTRACTED]
 - [[default_cutout()]] - `calls` [EXTRACTED]
 - [[json]] - `calls` [EXTRACTED]
 - [[kit_text()]] - `calls` [EXTRACTED]

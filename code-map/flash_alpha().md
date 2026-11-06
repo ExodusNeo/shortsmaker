@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/frame_render.py"
 type: "code"
-community: "audio_library.py"
+community: "render"
 location: "L260"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/audio_librarypy
+  - community/render
 ---
 
 # flash_alpha()
@@ -17,4 +17,4 @@ tags:
 - [[math]] - `calls` [EXTRACTED]
 - [[write_frames()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/audio_librarypy
+#graphify/code #graphify/EXTRACTED #community/render

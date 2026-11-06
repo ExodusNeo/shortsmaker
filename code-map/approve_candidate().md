@@ -1,19 +1,19 @@
 ---
 source_file: "shortsmaker/style_lab.py"
 type: "code"
-community: "shutil"
+community: "json"
 location: "L266"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/shutil
+  - community/json
 ---
 
 # approve_candidate()
 
 ## Connections
 - [[Adds a candidate to the library (component file, library.json entry,…]] - `rationale_for` [EXTRACTED]
-- [[Path_21]] - `references` [EXTRACTED]
+- [[Path_4]] - `references` [EXTRACTED]
 - [[json]] - `calls` [EXTRACTED]
 - [[library_menu()]] - `calls` [EXTRACTED]
 - [[shutil]] - `calls` [EXTRACTED]
@@ -25,4 +25,4 @@ tags:
 - [[tsc_check()]] - `calls` [EXTRACTED]
 - [[write_style_index()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/shutil
+#graphify/code #graphify/EXTRACTED #community/json

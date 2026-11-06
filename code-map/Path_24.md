@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "ends_sentence"
+community: "test_story.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ends_sentence
+  - community/test_storypy
 ---
 
 # Path
 
 ## Connections
-- [[srt()]] - `references` [EXTRACTED]
+- [[log_short()]] - `references` [EXTRACTED]
+- [[vault_page()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ends_sentence
+#graphify/code #graphify/EXTRACTED #community/test_storypy

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/audio_mix.py"
 type: "rationale"
-community: "audio_library.py"
+community: "render"
 location: "L157"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/audio_librarypy
+  - community/render
 ---
 
 # The sound file for a story sound: the owner's own file in…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[story_sound()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/audio_librarypy
+#graphify/rationale #graphify/EXTRACTED #community/render

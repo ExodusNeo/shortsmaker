@@ -12,7 +12,7 @@ tags:
 # make_paper()
 
 ## Connections
-- [[Path_20]] - `references` [EXTRACTED]
+- [[Path_22]] - `references` [EXTRACTED]
 - [[The aged-paper texture and film-grain frames the full-screen motion graphics…]] - `rationale_for` [EXTRACTED]
 - [[hex_rgb()]] - `calls` [EXTRACTED]
 - [[main()_5]] - `calls` [EXTRACTED]

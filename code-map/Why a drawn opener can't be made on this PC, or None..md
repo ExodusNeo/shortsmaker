@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/drawn_opener.py"
 type: "rationale"
-community: "shutil"
+community: "drawn_opener.py"
 location: "L48"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/shutil
+  - community/drawn_openerpy
 ---
 
 # Why a drawn opener can't be made on this PC, or None.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[available()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/shutil
+#graphify/rationale #graphify/EXTRACTED #community/drawn_openerpy

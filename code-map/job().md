@@ -2,7 +2,7 @@
 source_file: "tests/test_opener_crew.py"
 type: "code"
 community: "test_opener_crew.py"
-location: "L159"
+location: "L233"
 tags:
   - graphify/code
   - graphify/INFERRED

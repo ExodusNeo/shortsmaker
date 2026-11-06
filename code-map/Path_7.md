@@ -1,17 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "make"
+community: "run_draft"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/make
+  - community/run_draft
 ---
 
 # Path
 
 ## Connections
-- [[short_folder()]] - `references` [EXTRACTED]
-- [[videos()]] - `references` [EXTRACTED]
+- [[draft_rules()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/make
+#graphify/code #graphify/EXTRACTED #community/run_draft

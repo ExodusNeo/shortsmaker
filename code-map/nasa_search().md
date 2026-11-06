@@ -12,7 +12,7 @@ tags:
 # nasa_search()
 
 ## Connections
-- [[fetch()_1]] - `calls` [EXTRACTED]
+- [[fetch()]] - `calls` [EXTRACTED]
 - [[image_sources.py]] - `contains` [EXTRACTED]
 - [[nasa_films()]] - `calls` [EXTRACTED]
 - [[nasa_images()]] - `calls` [EXTRACTED]

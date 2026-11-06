@@ -15,7 +15,7 @@ tags:
 - [[audio_library.py]] - `contains` [EXTRACTED]
 - [[math]] - `calls` [EXTRACTED]
 - [[preview_mix()]] - `calls` [EXTRACTED]
-- [[render()_2]] - `calls` [EXTRACTED]
+- [[render()_3]] - `calls` [EXTRACTED]
 - [[settings()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/render

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/opener3d.py"
 type: "rationale"
-community: "opener3d.py"
+community: "test_opener_crew.py"
 location: "L145"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/opener3dpy
+  - community/test_opener_crewpy
 ---
 
 # Medium/close/low shots on a list of cut-outs standing so far apart that the…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[spread_out()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/opener3dpy
+#graphify/rationale #graphify/EXTRACTED #community/test_opener_crewpy

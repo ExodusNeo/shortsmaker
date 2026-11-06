@@ -1,12 +1,12 @@
 ---
 source_file: "local_ai/qwen_voice.py"
 type: "code"
-community: "align_words"
+community: "qwen_voice.py"
 location: "L90"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/align_words
+  - community/qwen_voicepy
 ---
 
 # align_words()
@@ -23,4 +23,4 @@ tags:
 - [[test_every_aligned_word_is_in_the_aligner_alphabet()]] - `calls` [INFERRED]
 - [[unicodedata]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/align_words
+#graphify/code #graphify/EXTRACTED #community/qwen_voicepy

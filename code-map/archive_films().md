@@ -15,7 +15,7 @@ tags:
 - [[Videos across the entire Internet Archive (historical film, retro gaming,…]] - `rationale_for` [EXTRACTED]
 - [[archive_ad_films()]] - `calls` [EXTRACTED]
 - [[duke_films()]] - `calls` [EXTRACTED]
-- [[fetch()_1]] - `calls` [EXTRACTED]
+- [[fetch()]] - `calls` [EXTRACTED]
 - [[footage.py]] - `contains` [EXTRACTED]
 - [[json]] - `calls` [EXTRACTED]
 - [[on_topic()]] - `calls` [EXTRACTED]

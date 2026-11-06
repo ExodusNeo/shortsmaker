@@ -16,7 +16,7 @@ tags:
 - [[brand_films()]] - `calls` [EXTRACTED]
 - [[brand_images()]] - `calls` [EXTRACTED]
 - [[extra_sources.py]] - `contains` [EXTRACTED]
-- [[fetch()_1]] - `calls` [EXTRACTED]
+- [[fetch()]] - `calls` [EXTRACTED]
 - [[source_status()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/extra_sourcespy

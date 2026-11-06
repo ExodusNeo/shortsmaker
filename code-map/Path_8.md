@@ -1,21 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "main"
+community: "film_piece"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/main
+  - community/film_piece
 ---
 
 # Path
 
 ## Connections
-- [[begin()]] - `references` [EXTRACTED]
-- [[context()]] - `references` [EXTRACTED]
-- [[pending()]] - `references` [EXTRACTED]
-- [[read()]] - `references` [EXTRACTED]
-- [[save_context()]] - `references` [EXTRACTED]
-- [[update()]] - `references` [EXTRACTED]
+- [[film_piece()]] - `references` [EXTRACTED]
+- [[shot_span()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/main
+#graphify/code #graphify/EXTRACTED #community/film_piece

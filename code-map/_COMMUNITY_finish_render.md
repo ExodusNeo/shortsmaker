@@ -1,32 +1,28 @@
 ---
 type: community
-members: 19
+members: 15
 ---
 
 # finish_render
 
-**Members:** 19 nodes
+**Members:** 15 nodes
 
 ## Members
 - [[Finish reportsreviews from a committed video; resume reaches here without…]] - rationale - shortsmaker/short_render.py
-- [[Measured reading holds and final-script detours. Editorial defaults, not…]] - rationale - shortsmaker/review.py
-- [[Sound effects loud enough under the narration to cover words the voice and…]] - rationale - shortsmaker/review.py
-- [[The AI watches the finished Short as sheets of one frame per second and reports…]] - rationale - shortsmaker/review.py
-- [[The review's reply - (CHECK lines, scene - (repaint  graphic, why)).…]] - rationale - shortsmaker/review.py
-- [[What covers or dims scene's picture on purpose, with its times (as…]] - rationale - shortsmaker/review.py
-- [[clock()]] - code - shortsmaker/media_tools.py
+- [[One plain line for edit_plan.txt saying what a full-screen motion graphic shows.]] - rationale - shortsmaker/motion.py
+- [[Owner, 2026-10-30 the motion-graphic opener goes first and gets…]] - rationale - shortsmaker/review.py
+- [[The motion-graphic opener (owner, 2026-10-28) on a channel with `opener…]] - rationale - shortsmaker/picker.py
+- [[Would a stranger scrolling the Shorts feed stop here Stayed-to-watch is…]] - rationale - shortsmaker/review.py
 - [[drawn_answer_problem()]] - code - shortsmaker/review.py
 - [[finish_render()]] - code - shortsmaker/short_render.py
-- [[levels()]] - code - shortsmaker/review.py
-- [[overlay_notes()]] - code - shortsmaker/review.py
-- [[pacing_check()]] - code - shortsmaker/review.py
-- [[review_fixes()]] - code - shortsmaker/review.py
-- [[sound_masking()]] - code - shortsmaker/review.py
+- [[first_second_check()]] - code - shortsmaker/review.py
+- [[fix_drawn_answer()]] - code - shortsmaker/review.py
+- [[fix_opener_graphic()]] - code - shortsmaker/review.py
+- [[full_summary()]] - code - shortsmaker/motion.py
+- [[opener_graphic()]] - code - shortsmaker/picker.py
+- [[review_status()]] - code - shortsmaker/review.py
 - [[status_lines()]] - code - shortsmaker/review.py
-- [[test_review_fix_kinds()]] - code - tests/test_full_scenes.py
-- [[test_review_is_told_the_drawings_are_deliberate()]] - code - tests/test_blender_run.py
-- [[test_review_knows_what_dims_a_picture_on_purpose()]] - code - tests/test_first_second.py
-- [[visual_review()]] - code - shortsmaker/review.py
+- [[test_full_summary()]] - code - tests/test_full_scenes.py
 
 ## Live Query (requires Dataview plugin)
 
@@ -36,32 +32,34 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 13 edges to [[_COMMUNITY_pathlib]]
-- 3 edges to [[_COMMUNITY_apply_review_fixes]]
+- 10 edges to [[_COMMUNITY_test_full_scenes.py]]
+- 9 edges to [[_COMMUNITY_render]]
+- 4 edges to [[_COMMUNITY_visual_review]]
+- 4 edges to [[_COMMUNITY_apply_review_fixes]]
+- 3 edges to [[_COMMUNITY_code_custom_scenes]]
+- 3 edges to [[_COMMUNITY_json]]
 - 3 edges to [[_COMMUNITY_test_first_second.py]]
-- 3 edges to [[_COMMUNITY_opener_graphic]]
-- 2 edges to [[_COMMUNITY_style_library]]
-- 2 edges to [[_COMMUNITY_quality_check]]
-- 2 edges to [[_COMMUNITY_render]]
-- 2 edges to [[_COMMUNITY_main_1]]
-- 2 edges to [[_COMMUNITY_make]]
-- 1 edge to [[_COMMUNITY_first_sentence]]
-- 1 edge to [[_COMMUNITY_gather_pool]]
-- 1 edge to [[_COMMUNITY_scene_cues]]
-- 1 edge to [[_COMMUNITY_clean_full]]
+- 2 edges to [[_COMMUNITY_test_weak_opener_graphic_fixes_then_handoff]]
+- 2 edges to [[_COMMUNITY_test_edit_project.py]]
+- 2 edges to [[_COMMUNITY_full_cues]]
+- 2 edges to [[_COMMUNITY_rescue_graphics]]
+- 2 edges to [[_COMMUNITY_ask_ai]]
+- 2 edges to [[_COMMUNITY_clean_full]]
+- 1 edge to [[_COMMUNITY_resume_runs]]
+- 1 edge to [[_COMMUNITY_frame_maker]]
 - 1 edge to [[_COMMUNITY_shutil]]
-- 1 edge to [[_COMMUNITY_ffmpeg]]
-- 1 edge to [[_COMMUNITY_ask_ai]]
-- 1 edge to [[_COMMUNITY_drawn_thumbnail]]
-- 1 edge to [[_COMMUNITY_person_card]]
-- 1 edge to [[_COMMUNITY_re]]
+- 1 edge to [[_COMMUNITY_story_problems]]
+- 1 edge to [[_COMMUNITY_prepare_topic]]
+- 1 edge to [[_COMMUNITY_capture_prompts]]
+- 1 edge to [[_COMMUNITY_gpu.py]]
+- 1 edge to [[_COMMUNITY_edit_plan]]
+- 1 edge to [[_COMMUNITY_quality_check]]
+- 1 edge to [[_COMMUNITY_test_blender_render.py]]
 - 1 edge to [[_COMMUNITY_render_remotion]]
-- 1 edge to [[_COMMUNITY_test_drawn_opener.py]]
-- 1 edge to [[_COMMUNITY_test_full_scenes.py]]
 
 ## Top bridge nodes
-- [[finish_render()]] - degree 26, connects to 14 communities
-- [[visual_review()]] - degree 13, connects to 6 communities
-- [[clock()]] - degree 12, connects to 6 communities
-- [[review_fixes()]] - degree 6, connects to 2 communities
-- [[sound_masking()]] - degree 6, connects to 2 communities
+- [[finish_render()]] - degree 26, connects to 13 communities
+- [[first_second_check()]] - degree 18, connects to 12 communities
+- [[opener_graphic()]] - degree 13, connects to 8 communities
+- [[fix_opener_graphic()]] - degree 9, connects to 5 communities
+- [[full_summary()]] - degree 8, connects to 3 communities

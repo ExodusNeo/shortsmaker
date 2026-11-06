@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/audio_library.py"
 type: "rationale"
-community: "audio_library.py"
+community: "render"
 location: "L108"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/audio_librarypy
+  - community/render
 ---
 
 # For one Short, search metadata and fetch only its selected track. Saved/local…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[source_music()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/audio_librarypy
+#graphify/rationale #graphify/EXTRACTED #community/render

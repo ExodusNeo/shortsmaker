@@ -1,19 +1,19 @@
 ---
 source_file: "shortsmaker/audio_library.py"
 type: "code"
-community: "audio_library.py"
+community: "render"
 location: "L107"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/audio_librarypy
+  - community/render
 ---
 
 # source_music()
 
 ## Connections
 - [[For one Short, search metadata and fetch only its selected track. Savedlocal…]] - `rationale_for` [EXTRACTED]
-- [[Path_30]] - `references` [EXTRACTED]
+- [[Path_29]] - `references` [EXTRACTED]
 - [[audio_library.py]] - `contains` [EXTRACTED]
 - [[audio_metadata()]] - `calls` [EXTRACTED]
 - [[duration()]] - `calls` [EXTRACTED]
@@ -21,10 +21,10 @@ tags:
 - [[freesound_results()]] - `calls` [EXTRACTED]
 - [[history_read()]] - `calls` [EXTRACTED]
 - [[math]] - `calls` [EXTRACTED]
-- [[render()_2]] - `calls` [EXTRACTED]
+- [[render()_3]] - `calls` [EXTRACTED]
 - [[select_music()]] - `calls` [EXTRACTED]
 - [[set_audio_metadata()]] - `calls` [EXTRACTED]
 - [[settings()]] - `calls` [EXTRACTED]
 - [[usable_audio()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/audio_librarypy
+#graphify/code #graphify/EXTRACTED #community/render

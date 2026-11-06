@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_ai_modes.py"
 type: "code"
-community: "test_ai_modes.py"
+community: "saved_session"
 location: "L40"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_ai_modespy
+  - community/saved_session
 ---
 
 # test_all_modes_route_writer_editor_and_reader()
@@ -18,4 +18,4 @@ tags:
 - [[saved_session()]] - `calls` [EXTRACTED]
 - [[test_ai_modes.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_ai_modespy
+#graphify/code #graphify/EXTRACTED #community/saved_session

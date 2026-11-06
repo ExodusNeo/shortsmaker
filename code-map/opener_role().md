@@ -16,7 +16,6 @@ tags:
 - [[drawn_opener.py]] - `contains` [EXTRACTED]
 - [[json]] - `calls` [EXTRACTED]
 - [[opening_brief()]] - `calls` [EXTRACTED]
-- [[place()]] - `calls` [EXTRACTED]
 - [[stage()]] - `calls` [EXTRACTED]
 - [[staged()]] - `calls` [EXTRACTED]
 - [[write()]] - `calls` [EXTRACTED]

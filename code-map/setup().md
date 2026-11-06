@@ -17,6 +17,6 @@ tags:
 - [[ink_lines()]] - `calls` [EXTRACTED]
 - [[linear()]] - `calls` [EXTRACTED]
 - [[look.py]] - `contains` [EXTRACTED]
-- [[main()_4]] - `calls` [EXTRACTED]
+- [[main()_3]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/lookpy

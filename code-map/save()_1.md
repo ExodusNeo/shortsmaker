@@ -1,23 +1,17 @@
 ---
-source_file: "shortsmaker/voice_cache.py"
+source_file: "shortsmaker/audio_mix.py"
 type: "code"
-community: "footage.py"
-location: "L38"
+community: "audio_mix.py"
+location: "L196"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/footagepy
+  - community/audio_mixpy
 ---
 
 # save()
 
 ## Connections
-- [[Path_5]] - `references` [EXTRACTED]
-- [[hashlib]] - `calls` [EXTRACTED]
-- [[render()_2]] - `calls` [EXTRACTED]
-- [[shutil]] - `calls` [EXTRACTED]
-- [[signature()]] - `calls` [EXTRACTED]
-- [[voice_cache.py]] - `contains` [EXTRACTED]
-- [[write_json()]] - `calls` [EXTRACTED]
+- [[make_sfx()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/footagepy
+#graphify/code #graphify/EXTRACTED #community/audio_mixpy

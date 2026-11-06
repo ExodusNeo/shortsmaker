@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/audio_library.py"
 type: "rationale"
-community: "audio_library.py"
+community: "render"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/audio_librarypy
+  - community/render
 ---
 
 # Music/SFX metadata, recent choices, approval and short mix previews.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[audio_library.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/audio_librarypy
+#graphify/rationale #graphify/EXTRACTED #community/render

@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_style.py"
 type: "code"
-community: "owner"
+community: "test_style.py"
 location: "L209"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/owner
+  - community/test_stylepy
 ---
 
 # ask()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[test_fact_check_sees_new_graphics()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/owner
+#graphify/code #graphify/EXTRACTED #community/test_stylepy

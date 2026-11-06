@@ -1,19 +1,19 @@
 ---
 source_file: "shortsmaker/opener_crew.py"
 type: "code"
-community: "drawn_opener.py"
-location: "L280"
+community: "opener_crew.py"
+location: "L287"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/drawn_openerpy
+  - community/opener_crewpy
 ---
 
 # make_part()
 
 ## Connections
 - [[Draws one new hat or thing, checks it by eye, keeps it in drawnparts. (made,…]] - `rationale_for` [EXTRACTED]
-- [[Path_4]] - `references` [EXTRACTED]
+- [[Path_6]] - `references` [EXTRACTED]
 - [[ask_ai()]] - `calls` [EXTRACTED]
 - [[clean_code()]] - `calls` [EXTRACTED]
 - [[json]] - `calls` [EXTRACTED]
@@ -26,4 +26,4 @@ tags:
 - [[subprocess]] - `calls` [EXTRACTED]
 - [[time]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/drawn_openerpy
+#graphify/code #graphify/EXTRACTED #community/opener_crewpy

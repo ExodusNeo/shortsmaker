@@ -1,17 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "test_blender_render.py"
+community: "trim_borders"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_blender_renderpy
+  - community/trim_borders
 ---
 
 # Path
 
 ## Connections
-- [[_run()]] - `references` [EXTRACTED]
-- [[render_clips()]] - `references` [EXTRACTED]
+- [[to_vertical()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_blender_renderpy
+#graphify/code #graphify/EXTRACTED #community/trim_borders

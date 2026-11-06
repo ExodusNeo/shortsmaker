@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_story.py"
 type: "code"
-community: "cold_read"
+community: "edit_plan"
 location: "L93"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/cold_read
+  - community/edit_plan
 ---
 
 # ask()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[test_cold_read_uses_other_ai_in_solo_and_collaborative_modes()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/INFERRED #community/cold_read
+#graphify/code #graphify/INFERRED #community/edit_plan

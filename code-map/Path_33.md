@@ -1,17 +1,22 @@
 ---
 source_file: ""
 type: "code"
-community: "pathlib"
+community: "render"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/pathlib
+  - community/render
 ---
 
 # Path
 
 ## Connections
-- [[apply()]] - `references` [EXTRACTED]
-- [[preview()]] - `references` [EXTRACTED]
+- [[drawn_payoff()]] - `references` [EXTRACTED]
+- [[drawn_thumbnail()]] - `references` [EXTRACTED]
+- [[finish_render()]] - `references` [EXTRACTED]
+- [[load_state()]] - `references` [EXTRACTED]
+- [[render()_3]] - `references` [EXTRACTED]
+- [[save_state()]] - `references` [EXTRACTED]
+- [[use_opener()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/pathlib
+#graphify/code #graphify/EXTRACTED #community/render

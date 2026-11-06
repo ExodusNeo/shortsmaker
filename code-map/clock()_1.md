@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/edit_project.py"
 type: "code"
-community: "make"
+community: "test_edit_project.py"
 location: "L52"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/make
+  - community/test_edit_projectpy
 ---
 
 # clock()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[project_xml()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/make
+#graphify/code #graphify/EXTRACTED #community/test_edit_projectpy

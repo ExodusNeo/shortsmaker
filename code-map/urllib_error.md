@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "pathlib"
+community: "gpu.py"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/pathlib
+  - community/gpupy
 ---
 
 # urllib_error
@@ -17,4 +17,4 @@ tags:
 - [[image_sources.py]] - `imports` [EXTRACTED]
 - [[test_media.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/pathlib
+#graphify/concept #graphify/EXTRACTED #community/gpupy

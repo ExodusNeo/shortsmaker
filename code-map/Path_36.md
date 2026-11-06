@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "test_drawn_opener.py"
+community: "drawn_opener.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_drawn_openerpy
+  - community/drawn_openerpy
 ---
 
 # Path
@@ -18,4 +18,4 @@ tags:
 - [[review()]] - `references` [EXTRACTED]
 - [[write()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_drawn_openerpy
+#graphify/code #graphify/EXTRACTED #community/drawn_openerpy

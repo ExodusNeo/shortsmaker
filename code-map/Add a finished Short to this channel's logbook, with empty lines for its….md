@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/logbook.py"
 type: "rationale"
-community: "first_sentence"
+community: "test_story.py"
 location: "L26"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/first_sentence
+  - community/test_storypy
 ---
 
 # Add a finished Short to this channel's logbook, with empty lines for its…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[log_short()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/first_sentence
+#graphify/rationale #graphify/EXTRACTED #community/test_storypy

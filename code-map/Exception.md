@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "test_rules.py"
+community: "resume_runs"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_rulespy
+  - community/resume_runs
 ---
 
 # Exception
 
 ## Connections
-- [[StopPicker]] - `inherits` [EXTRACTED]
+- [[record_failure()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_rulespy
+#graphify/code #graphify/EXTRACTED #community/resume_runs

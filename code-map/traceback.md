@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "test_ai_modes.py"
+community: "test_full_scenes.py"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/test_ai_modespy
+  - community/test_full_scenespy
 ---
 
 # traceback
@@ -30,4 +30,4 @@ tags:
 - [[test_story.py]] - `imports` [EXTRACTED]
 - [[test_topic_ideas.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/test_ai_modespy
+#graphify/concept #graphify/EXTRACTED #community/test_full_scenespy

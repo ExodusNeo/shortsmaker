@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "logbook_results"
+community: "fake_ai"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/logbook_results
+  - community/fake_ai
 ---
 
 # date
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[entry_age()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/logbook_results
+#graphify/code #graphify/EXTRACTED #community/fake_ai

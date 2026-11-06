@@ -1,18 +1,18 @@
 ---
 source_file: "tests/test_rules.py"
 type: "code"
-community: "test_rules.py"
+community: "StopPicker"
 location: "L61"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_rulespy
+  - community/StopPicker
 ---
 
 # StopPicker
 
 ## Connections
-- [[Exception]] - `inherits` [EXTRACTED]
+- [[Exception_1]] - `inherits` [EXTRACTED]
 - [[test_rules.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_rulespy
+#graphify/code #graphify/EXTRACTED #community/StopPicker

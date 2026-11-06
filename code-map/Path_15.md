@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "clean_photo"
+community: "gpu.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/clean_photo
+  - community/gpupy
 ---
 
 # Path
 
 ## Connections
-- [[to_vertical()]] - `references` [EXTRACTED]
+- [[fit_start()]] - `references` [EXTRACTED]
+- [[saved_file()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/clean_photo
+#graphify/code #graphify/EXTRACTED #community/gpupy

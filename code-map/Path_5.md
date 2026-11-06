@@ -1,17 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "footage.py"
+community: "shutil"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/footagepy
+  - community/shutil
 ---
 
 # Path
 
 ## Connections
-- [[load()_1]] - `references` [EXTRACTED]
-- [[save()_1]] - `references` [EXTRACTED]
+- [[load()]] - `references` [EXTRACTED]
+- [[save()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/footagepy
+#graphify/code #graphify/EXTRACTED #community/shutil

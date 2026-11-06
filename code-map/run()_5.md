@@ -1,19 +1,17 @@
 ---
-source_file: "drawn/lib/film.mjs"
+source_file: "tests/test_style.py"
 type: "code"
-community: "kit.mjs"
-location: "L29"
+community: "invent_component"
+location: "L328"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/kitmjs
+  - community/invent_component
 ---
 
 # run()
 
 ## Connections
-- [[args()]] - `calls` [EXTRACTED]
-- [[film.mjs]] - `contains` [EXTRACTED]
-- [[run.mjs]] - `imports` [EXTRACTED]
+- [[test_failed_invention_keeps_the_others()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/kitmjs
+#graphify/code #graphify/EXTRACTED #community/invent_component

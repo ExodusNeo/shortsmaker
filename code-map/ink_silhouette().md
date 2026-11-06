@@ -13,9 +13,9 @@ tags:
 
 ## Connections
 - [[A painted figure (dark ink on light paper) - a cropped RGBA silhouette (dark…]] - `rationale_for` [EXTRACTED]
-- [[Path_20]] - `references` [EXTRACTED]
+- [[Path_22]] - `references` [EXTRACTED]
 - [[remotion_render.py]] - `contains` [EXTRACTED]
-- [[render()_2]] - `calls` [EXTRACTED]
+- [[render()_3]] - `calls` [EXTRACTED]
 - [[test_ink_silhouette()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/render_remotion

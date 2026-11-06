@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "json"
+community: "retention.py"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/json
+  - community/retentionpy
 ---
 
 # collections
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[retention.py]] - `imports_from` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/json
+#graphify/concept #graphify/EXTRACTED #community/retentionpy

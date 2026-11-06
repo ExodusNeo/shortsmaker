@@ -1,0 +1,18 @@
+---
+source_file: "shortsmaker/opener_crew.py"
+type: "code"
+community: "layout"
+location: "L466"
+tags:
+  - graphify/code
+  - graphify/EXTRACTED
+  - community/layout
+---
+
+# put()
+
+## Connections
+- [[layout()_1]] - `contains` [EXTRACTED]
+- [[place_thing()]] - `calls` [EXTRACTED]
+
+#graphify/code #graphify/EXTRACTED #community/layout

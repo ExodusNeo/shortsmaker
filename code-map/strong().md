@@ -2,7 +2,7 @@
 source_file: "shortsmaker/opener_crew.py"
 type: "code"
 community: "opener_crew.py"
-location: "L188"
+location: "L190"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,10 +12,9 @@ tags:
 # strong()
 
 ## Connections
-- [[Who plans the stager's and placer's jobs on a Gemini run whose Argon is out,…]] - `rationale_for` [EXTRACTED]
+- [[Who does the stager's job on a Gemini run whose Argon is out, Claude (Opus)…]] - `rationale_for` [EXTRACTED]
 - [[gemini_model()]] - `calls` [EXTRACTED]
 - [[opener_crew.py]] - `contains` [EXTRACTED]
-- [[place()]] - `calls` [EXTRACTED]
 - [[stage()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/opener_crewpy

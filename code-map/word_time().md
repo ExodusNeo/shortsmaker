@@ -14,6 +14,7 @@ tags:
 ## Connections
 - [[A time given as seconds or as a spoken word (its start; the same rule as the…]] - `rationale_for` [EXTRACTED]
 - [[clean()]] - `calls` [EXTRACTED]
+- [[layout()_1]] - `calls` [EXTRACTED]
 - [[opener3d.py]] - `contains` [EXTRACTED]
 - [[re]] - `calls` [EXTRACTED]
 

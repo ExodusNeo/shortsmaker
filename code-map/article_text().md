@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/writing.py"
 type: "code"
-community: "owner"
+community: "rescue_graphics"
 location: "L689"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/owner
+  - community/rescue_graphics
 ---
 
 # article_text()
@@ -21,4 +21,4 @@ tags:
 - [[wm_get()]] - `calls` [EXTRACTED]
 - [[writing.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/owner
+#graphify/code #graphify/EXTRACTED #community/rescue_graphics

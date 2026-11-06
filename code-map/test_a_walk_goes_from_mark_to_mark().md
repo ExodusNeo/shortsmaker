@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_opener3d.py"
 type: "code"
-community: "test_opener3d.py"
+community: "opener3d.py"
 location: "L114"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_opener3dpy
+  - community/opener3dpy
 ---
 
 # test_a_walk_goes_from_mark_to_mark()
@@ -17,4 +17,4 @@ tags:
 - [[room()]] - `calls` [EXTRACTED]
 - [[test_opener3d.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_opener3dpy
+#graphify/code #graphify/EXTRACTED #community/opener3dpy

@@ -2,7 +2,7 @@
 source_file: "shortsmaker/opener_crew.py"
 type: "code"
 community: "opener_crew.py"
-location: "L194"
+location: "L196"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,7 +12,7 @@ tags:
 # stage()
 
 ## Connections
-- [[Path_4]] - `references` [EXTRACTED]
+- [[Path_6]] - `references` [EXTRACTED]
 - [[The stager's plan (shortopener_staging, reused when there is one), or…]] - `rationale_for` [EXTRACTED]
 - [[ask_ai()]] - `calls` [EXTRACTED]
 - [[check_staging()]] - `calls` [EXTRACTED]

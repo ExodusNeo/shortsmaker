@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_drawn_opener.py"
 type: "code"
-community: "test_drawn_opener.py"
+community: "drawn_opener.py"
 location: "L49"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_drawn_openerpy
+  - community/drawn_openerpy
 ---
 
 # fake_ai()
@@ -20,4 +20,4 @@ tags:
 - [[test_reveal_scene_is_drawn_with_its_own_rules()]] - `calls` [EXTRACTED]
 - [[test_sound_off_test_fails_a_draft_the_art_director_liked()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_drawn_openerpy
+#graphify/code #graphify/EXTRACTED #community/drawn_openerpy

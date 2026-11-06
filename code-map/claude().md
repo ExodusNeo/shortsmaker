@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_ai_modes.py"
 type: "code"
-community: "fake_providers"
+community: "saved_session"
 location: "L30"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/fake_providers
+  - community/saved_session
 ---
 
 # claude()
@@ -15,4 +15,4 @@ tags:
 - [[fake_providers()]] - `indirect_call` [INFERRED]
 - [[reply()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/fake_providers
+#graphify/code #graphify/EXTRACTED #community/saved_session

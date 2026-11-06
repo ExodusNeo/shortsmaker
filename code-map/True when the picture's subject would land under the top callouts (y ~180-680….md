@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/frame_render.py"
 type: "rationale"
-community: "graphic_low"
+community: "render"
 location: "L95"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/graphic_low
+  - community/render
 ---
 
 # True when the picture's subject would land under the top callouts (y ~180-680…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[graphic_low()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/graphic_low
+#graphify/rationale #graphify/EXTRACTED #community/render

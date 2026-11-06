@@ -12,7 +12,7 @@ tags:
 # preview_custom()
 
 ## Connections
-- [[Path_27]] - `references` [EXTRACTED]
+- [[Path_26]] - `references` [EXTRACTED]
 - [[Renders just this custom scene small (its pictures are already in…]] - `rationale_for` [EXTRACTED]
 - [[look_and_fix()]] - `calls` [EXTRACTED]
 - [[main()_5]] - `calls` [EXTRACTED]

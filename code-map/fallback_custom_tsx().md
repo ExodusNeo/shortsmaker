@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/motion.py"
 type: "code"
-community: "lint_custom_code"
+community: "json"
 location: "L86"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/lint_custom_code
+  - community/json
 ---
 
 # fallback_custom_tsx()
@@ -19,4 +19,4 @@ tags:
 - [[re]] - `calls` [EXTRACTED]
 - [[test_fallback_custom_is_clean()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/lint_custom_code
+#graphify/code #graphify/EXTRACTED #community/json
