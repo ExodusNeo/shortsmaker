@@ -284,7 +284,9 @@ Reply with ONLY JSON: {{"score": 7, "reveals_answer": false, "answer_why": "", "
 
 def blind_read(short: dict, plan: dict, sheet: Path, rows: str, owners: dict[str, str] | None) -> str | None:
     """The sound-off test: an AI that knows nothing of the story says what the frames show (with only the hook title
-    that's on screen in the first second), and a second call judges whether that stranger got the strange thing.
+    that's on screen in the first second), and a second call judges whether that stranger recognised WHAT the
+    narration is about (owner chose this softer bar, 2026-11-06: asking for WHY it is strange failed every opener
+    of both kinds on three stories; the voice and captions give the why from frame 0).
     The problem (tagged with its owner when there are owners), or None when they got it or a call failed. The art
     director is told the story, so it read a blue box as the battery the plan said; a viewer can't (2026-11-06)."""
     look = look_dir(sheet)
@@ -305,10 +307,14 @@ Reply with ONLY JSON: {{"sees": "2-3 plain sentences"}}""", fatal=False, read_di
     verdict = llm.ask_ai(f"""A stranger watched the silent opener of a YouTube Short ("{short['title']}") with the sound off and said:
 "{sees}"
 The opener must show, without sound: {must}. The narration they did NOT hear: "{short['scenes'][0]['narration']}".
-Did they get the point: what is happening AND what is strange about it, close enough that the narration would make
-sense the moment they hear it? Be lenient on names, dates and wording; be strict on the point: "a man stands next
-to a machine" misses "the machine keeps working with its battery unplugged". If they missed it, say in `fix` what
-they missed or misread and what on screen would make it unmistakable.{tags}
+In the finished Short the narration and captions play from the first second and explain WHY it is strange; the
+picture's job is to show WHAT the narration is about. Did they recognise that: the place, who is there, and the
+key thing or action the narration names (the battery and the machine; a pig in the potato patch; a woman dancing
+in a street), so the narration would make sense the moment they hear it? They need NOT guess why it is strange.
+Be lenient on names, dates and wording. They missed it only if the key thing or action isn't recognisable or is
+misread: "a man stands in a room" with no machine seen; "a blue box with an orange frame" for the battery; "a
+person falling over" for a dancer. If they missed it, say in `fix` what they missed or misread and what on screen
+would make it unmistakable.{tags}
 Reply with ONLY JSON: {{"gets_it": false, "fix": "..."}}""", fatal=False, allow_fallback=True)
     if not isinstance(verdict, dict) or verdict.get("gets_it") is not False:
         return None

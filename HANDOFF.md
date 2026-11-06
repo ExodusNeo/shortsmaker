@@ -478,10 +478,17 @@ Order (owner, 2026-11-05): 3D opener -> drawn opener -> motion graphic (2 fixes)
   - The drawn opener on the same stories (3D off, Codex, `test_renders/opener3d/drawn_codex/`, harness
     `drawn_live.py` in the session scratchpad): also 0/3, best 5, 5, 5/10, every miss the sound-off test; slower
     (2-4 min a draft). So switching to the drawn opener doesn't help.
-  - **Open, owner to decide**: with the sound-off cap at KEEP - 1, no opener of either kind passed or was kept on
-    these stories, so a full run would fall back to the motion graphic on them. The judge asks the muted viewer
-    to get WHY it is strange ("the battery is unplugged"); the finished Short has the voice and captions from frame
-    0, so asking only for WHAT is happening would be a softer bar.
+  - Softer sound-off bar (owner chose, 2026-11-06, "go with the softer bar"): the judge asks only whether the muted
+    viewer recognised WHAT the narration is about (place, who, the key thing or action); the voice and captions
+    give the WHY from frame 0. A miss is still capped at KEEP - 1.
+  - Framing fixes after `crew_codex6/` (Dancing PASSED 7/10, the first 3D pass; Pig War 5, Carrington 4: tiny
+    subjects): the one acting stands `front` of a desk/table/counter main prop; beats aim at the cut-outs they name,
+    not props (a shot on a man + a 2.3 m desk backed off until he was tiny); a shot failing `spread_out` films its
+    first subject alone at the planned size (or the person it would otherwise leave in no shot), wide only if that
+    repeats the shot before.
+  - `crew_codex7/` (Pig War, Carrington): subjects now big; both 5/10, the sound-off viewer misreading drawings
+    (the potato read as a loaf, a made potato part floating; Carrington's battery as "blue containers" in one draft).
+    Next if needed: those are painter/part problems (the stager's re-plan can't fix a drawing).
   - Not built: per-moment recipes (owner: the moments named were ones already posted).
 - Kit expansion (2026-11-05): 11 more hats (fedora, flatcap, boater, cowboy, ranger, kepi, officer, bobby, bicorne,
   nurse, hardhat), rooms/furniture (`k.door` with `open` + knob, `k.bed`, `k.rug`, `k.shelf`, `k.lamp`, `k.window`,

@@ -193,7 +193,8 @@ def test_the_one_acting_stands_by_what_they_act_on():
     st = opener_crew.check_staging(raw, WORDS)[0]
     cuts = [{"name": "farmer", "what": "a farmer", **cut}, {"name": "bench", "what": "a bench", **wide}]
     stage, bad = opener_crew.assemble(opener_crew.layout(st, cuts, WORDS), cuts, st, WORDS, 2.6, "")
-    assert bad == [] and stage["shots"][0]["size"] == "wide", (bad, stage["shots"])  # too wide for a medium
+    shot = stage["shots"][0]  # too wide for a medium on both: the medium films one subject alone, the farmer, since
+    assert bad == [] and shot["size"] == "medium" and shot["target"] == "farmer", (bad, stage["shots"])  # no other shot shows him
 
 
 def test_a_plan_problem_sends_the_stager_back_with_its_last_plan():

@@ -497,7 +497,9 @@ def layout(st: dict, cuts: list[dict], words: list) -> dict:
             effects += [{"type": kind, "at": h, "on": lead} for h in hits for kind in ("jolt", "puff")]
         elif target:
             put(lead, {"beside": target, "side": "left"})
-        elif main and main["kind"] in opener3d.BUILDINGS:  # in front of the house: beside it she went behind its walls
+        elif main and (main["kind"] in opener3d.BUILDINGS or main in surfaces):
+            # in front of a house (beside it she went behind its walls) or of the desk he works at (beside a 2.3 m
+            # desk he stood 2 m from its middle, and a shot on both filmed him tiny, live 2026-11-06)
             put(lead, {"front": main["id"]})
         elif main:
             put(lead, {"beside": main["id"], "side": "left"})
@@ -512,7 +514,10 @@ def layout(st: dict, cuts: list[dict], words: list) -> dict:
     # in spoken order, as clean sorts them: assemble matches its shots to these by position
     beats = sorted(st["beats"], key=lambda b: opener3d.word_time(words, b["at"], 0))
     for i, b in enumerate(beats):
-        target = b["on"] if len(b["on"]) > 1 else b["on"][0]
+        # aim at the people and drawn things a beat names, not the furniture or garden around them (a shot on the
+        # operator and a 2.3 m desk, or on a pig and its 3 m garden, backed off until both were tiny, 2026-11-06)
+        on = [x for x in b["on"] if x in names] or b["on"]
+        target = on if len(on) > 1 else on[0]
         size = b["shot"]
         if shots and shots[-1]["shot"] == size and shots[-1]["target"] == target:  # never the same framing twice
             size = "close" if size != "close" else "medium"
@@ -548,10 +553,23 @@ def assemble(raw, cuts: list[dict], st: dict, words: list, seconds: float, narra
     stage, found = opener3d.clean(raw, words, seconds)
     if stage and len(stage["shots"]) == len(raw.get("shots") or []):
         # a close or medium shot whose subjects can't fit side by side (a wide drawn workbench, live 2026-11-06)
-        # becomes a wide shot instead of losing the whole draft before it is ever seen
+        # films its first subject alone, at the size planned (turning it wide made everyone tiny, 2026-11-06);
+        # wide only when that would repeat the shot before it
         tight = {i for i, sh in enumerate(stage["shots"]) if opener3d.spread_out([sh], stage["cutouts"], stage["props"])}
         if tight:
-            raw["shots"] = [{**sh, "shot": "wide"} if i in tight else sh for i, sh in enumerate(raw["shots"])]
+            first = lambda sh: sh["target"][0] if isinstance(sh["target"], list) else sh["target"]  # noqa: E731
+            shots = [{**sh, "target": first(sh)} if i in tight else sh for i, sh in enumerate(raw["shots"])]
+            shown = {x for sh in shots for x in (sh["target"] if isinstance(sh["target"], list) else [sh["target"]])}
+            for i in sorted(tight):  # never narrow a person out of every shot: then this shot films them
+                orig = raw["shots"][i]["target"] if isinstance(raw["shots"][i]["target"], list) else []
+                lost = [x for x in orig if x not in shown and any(p["id"] == x for p in st.get("people", []))]
+                if lost:
+                    shots[i]["target"] = lost[0]
+                    shown.add(lost[0])
+            for i in sorted(tight):
+                if i and shots[i - 1]["shot"] == shots[i]["shot"] and shots[i - 1]["target"] == shots[i]["target"]:
+                    shots[i] = {**raw["shots"][i], "shot": "wide"}
+            raw["shots"] = shots
             stage, found = opener3d.clean(raw, words, seconds)
     # a painter owns only its drawing code's faults (the same lint clean ran); everything else goes to the stager
     # (routing by wording sent placement errors to painters twice in live runs, 2026-11-06)
