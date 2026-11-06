@@ -120,7 +120,7 @@ def test_a_walk_goes_from_mark_to_mark():
     assert opener3d.clean(raw, WORDS, SECONDS)[0]["cutouts"][0]["path"] == [[0, -1.5, -1.7], [0.32, 1.5, -1.7]]
     raw["cutouts"][0]["path"] = [[0, "moon"]]
     bad = opener3d.clean(raw, WORDS, SECONDS)[1]
-    assert any("path step" in p for p in bad) and all(opener_crew.owner(p, ["keeper"]) == "placement" for p in bad), bad
+    assert any("path step" in p for p in bad) and all(opener_crew.owner(p, ["keeper"]) == "stager" for p in bad), bad
 
 
 def test_bad_parts_go_back():

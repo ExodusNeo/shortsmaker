@@ -1,6 +1,6 @@
 """3D openers (owner, 2026-11-05): scene 1 as flat drawn cut-outs standing in a lit three.js set
-(remotion/src/Opener3D.tsx), filmed by a moving camera. The opener crew (opener_crew.py) writes the stage: its placer
-names WHERE things go by relation (`place`: a mark on the set, at a house's door, beside the desk) and which shot
+(remotion/src/Opener3D.tsx), filmed by a moving camera. The opener crew (opener_crew.py) writes the stage: its layout
+(code since 2026-11-06; the placer AI before) names WHERE things go by relation (`place`: a mark on the set, at a house's door, beside the desk) and which shot
 sizes to use (`shot`: wide / medium / close / over / low / top); this file turns that into positions and camera
 numbers, checks it, paints the cut-outs and renders it. Since 2026-11-06 no AI types 3D coordinates: every live
 failure before that was a guessed position (doors off the house, a fist short of the door, people cut off at the

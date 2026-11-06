@@ -234,7 +234,7 @@ small flaws are fine. Below {PASS}, list the problems that stop it working, the 
             " (1-2-3-4, left to right then down): it plays them over and over the whole time, smoothly, so that is how"
             " it moves." if pairs else "")
     tags = ("\nEach problem starts with who must fix it, one of: " + "; ".join(f"{k} ({v})" for k, v in owners.items()) +
-            '. Example: "placement: the knocker stands half inside the wall".' if owners else "")
+            '. Example: "stager: the shot never shows what is strange about the machine".' if owners else "")
     data = llm.ask_ai(f"""You are the art director of a YouTube Short: "{short['title']}". Open {look / sheet.name}: six frames of its
 {what} across {seconds:.1f} s, left to right (the time is on each).{rows} The voice over it says:
 "{short['scenes'][i]['narration']}". The animator meant it to show: {plan['moment']}.
@@ -316,7 +316,7 @@ Reply with ONLY JSON: {{"gets_it": false, "fix": "..."}}""", fatal=False, allow_
     tag = next((k for k in owners or {} if fix.startswith(k + ":")), None)  # tags hold colons: person:operator
     if tag:
         return f'{tag}: sound-off test failed: a stranger saw "{sees[:160]}". {fix[len(tag) + 1:].strip()}'
-    return f'{"placement: " if owners else ""}sound-off test failed: a stranger saw "{sees[:160]}". {fix}'
+    return f'{"stager: " if owners else ""}sound-off test failed: a stranger saw "{sees[:160]}". {fix}'
 
 
 def spoils(problems: list[str]) -> bool:

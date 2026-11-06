@@ -1,4 +1,7 @@
-# 3D opener stage (the placer's manual)
+# 3D opener stage (the format; no AI reads this since 2026-11-06)
+
+`opener_crew.layout` writes this stage from the staging by fixed rules (the placer AI it replaced kept spreading the
+subjects of a shot metres apart). This manual stays as the reference of the stage format; tests render its example.
 
 You stage scene 1 of a YouTube Short as a short 3D shot: flat hand-drawn cut-outs (the people, animals and the
 strange object, already painted by the crew's painters) standing inside a lit 3D set, filmed by a moving camera.

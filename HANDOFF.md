@@ -451,10 +451,30 @@ Order (owner, 2026-11-05): 3D opener -> drawn opener -> motion graphic (2 fixes)
     `crew_codex2/` 5/10 in 6.4 min: the battery now reads ("a wooden rack of tubes with loose wires dangling"), but
     the sound-off test failed (nobody can tell the telegraph still works). `crew_codex3/` best 5/10 in 8.4 min:
     the stager chose a faint `glow`, not sparks; sound-off failed again. Neither passed.
-  - Open: (1) the placer keeps putting the two subjects of a shot metres apart: `spread_out` rejects it before
-    render and the fix round often repeats it (both round 3 runs lost a draft to it): placing the second subject
-    `beside` the first in code, like the sign effects, is the next step. (2) the stager picks weak signs (glow,
-    a tapping lever) over sparks for electricity.
+  - The placer kept putting the two subjects of a shot metres apart (both round 3 runs lost a draft to
+    `spread_out`) and the stager picked weak signs (glow, a tapping lever) for electricity. Fixed in round 4.
+- **Opener round 4: no placer AI** (owner, 2026-11-06, "okay" to: the code lays out the scene, plan problems go back
+  to the stager):
+  - `opener_crew.layout(st, cuts, words)` writes the stage JSON the placer wrote: the main prop (the action's
+    `on`, else a building / surface / patch) on `centre`; the one acting `beside` it on the left (a knocker
+    `{"door": building}` with `hits` + jolt/puff on the words starting "knock"); small drawn things (<= 1.2 m) `on`
+    the surface, `clock` on the wall, others beside the one acting; second person / animals beside the one acting
+    (animals `in` a garden or field); other props on back marks; a window on the wall for an aurora in a room. Shots =
+    the stager's beats in order (turn 15/-15/12/-12, cut then whips), a repeated framing switched close/medium.
+    Room wall light (#E3D3B0) or dark (#4A3A2E) against the one acting's coat (`lum`). STAGE3D.md is now only the
+    format reference (tests render its example).
+  - Routing: `owner()` = `person:<name>` (that painter redraws) or `stager` for everything else. Any stager problem
+    (the sound-off test, a spoiler, the art director's scene notes, layout/clean errors, kit animals) re-plans:
+    `stage(..., problems, last=st)` sees its last plan, then `crew()` makes parts and repaints all. The "no better
+    than the last reviewed draft, stop" rule spans re-plans.
+  - Layout fixes after the first round 4 run (`crew_codex4/`: 4 of 8 drafts lost to `spread_out`): the thing or
+    animal the action is `on` stands first and the one acting `beside` it (the farmer stood at the garden's edge,
+    the pig in its middle); the one acting stands `front` of a building (beside a 7 m house she went behind its
+    walls); `assemble` turns a shot that still fails `spread_out` into `wide` (a wide drawn workbench) instead of
+    losing the draft. Beats are laid out in spoken order so assemble can match shots by position.
+  - Live `crew_codex5/` (Codex, all three stories): 7 of 8 drafts rendered, subjects big and together, but 0/3
+    passed: every miss is the sound-off test on content (Carrington's re-plan dropped the machine; "a pig nosing
+    plants", not eating them; "an unhappy woman dancing", not one who can't stop). Best 4, 5, 5/10; 6-8.5 min each.
   - Not built: per-moment recipes (owner: the moments named were ones already posted).
 - Kit expansion (2026-11-05): 11 more hats (fedora, flatcap, boater, cowboy, ranger, kepi, officer, bobby, bicorne,
   nurse, hardhat), rooms/furniture (`k.door` with `open` + knob, `k.bed`, `k.rug`, `k.shelf`, `k.lamp`, `k.window`,
