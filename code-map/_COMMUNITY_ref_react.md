@@ -38,15 +38,20 @@ SORT file.name ASC
 - 64 edges to [[_COMMUNITY_toolkit.tsx]]
 - 11 edges to [[_COMMUNITY_Paper]]
 - 9 edges to [[_COMMUNITY_fulltypes.ts]]
-- 6 edges to [[_COMMUNITY_styleindex.ts]]
-- 6 edges to [[_COMMUNITY_Halftone.tsx]]
+- 6 edges to [[_COMMUNITY_kit.ts]]
+- 4 edges to [[_COMMUNITY_styleindex.ts]]
+- 3 edges to [[_COMMUNITY_remotion-best-practicesremotion-mapstechniquesmaptilerassetsRiverReveal.tsx]]
+- 3 edges to [[_COMMUNITY_remotion-markupremotion-mapstechniquesmaptilerassetsRiverReveal.tsx]]
+- 2 edges to [[_COMMUNITY_QuestionBeat.tsx]]
+- 2 edges to [[_COMMUNITY_remotion-best-practicesremotion-mapstechniquescesiumassetsCesiumFlythrough.tsx]]
+- 2 edges to [[_COMMUNITY_remotion-markupremotion-mapstechniquescesiumassetsCesiumFlythrough.tsx]]
 - 1 edge to [[_COMMUNITY_Journey.tsx]]
-- 1 edge to [[_COMMUNITY_Graphics.tsx]]
+- 1 edge to [[_COMMUNITY_Short.tsx]]
 - 1 edge to [[_COMMUNITY_Opener3D.tsx]]
 - 1 edge to [[_COMMUNITY_guarded.tsx]]
 
 ## Top bridge nodes
-- [[ref_react]] - degree 26, connects to 8 communities
+- [[ref_react]] - degree 36, connects to 13 communities
 - [[FullProps]] - degree 15, connects to 4 communities
 - [[Custom3.tsx]] - degree 26, connects to 3 communities
 - [[Custom0.tsx]] - degree 25, connects to 3 communities

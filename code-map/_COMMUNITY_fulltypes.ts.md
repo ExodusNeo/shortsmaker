@@ -46,13 +46,14 @@ SORT file.name ASC
 - 19 edges to [[_COMMUNITY_Paper]]
 - 9 edges to [[_COMMUNITY_ref_react]]
 - 9 edges to [[_COMMUNITY_toolkit.tsx]]
-- 6 edges to [[_COMMUNITY_Short.tsx]]
 - 6 edges to [[_COMMUNITY_Journey.tsx]]
+- 5 edges to [[_COMMUNITY_Short.tsx]]
 - 3 edges to [[_COMMUNITY_guarded.tsx]]
+- 1 edge to [[_COMMUNITY_style.test.ts]]
 
 ## Top bridge nodes
 - [[fulltypes.ts]] - degree 22, connects to 6 communities
 - [[FullScene.tsx]] - degree 15, connects to 5 communities
+- [[FullScene()]] - degree 8, connects to 5 communities
 - [[SERIF]] - degree 8, connects to 5 communities
 - [[BigNumber.tsx]] - degree 21, connects to 4 communities
-- [[FullScene()]] - degree 8, connects to 4 communities

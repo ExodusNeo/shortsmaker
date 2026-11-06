@@ -12,6 +12,7 @@ tags:
 # is_num()
 
 ## Connections
+- [[ai_review()]] - `calls` [EXTRACTED]
 - [[clean_full()]] - `calls` [EXTRACTED]
 - [[clean_graphic()]] - `calls` [EXTRACTED]
 - [[coords()]] - `calls` [EXTRACTED]
@@ -19,7 +20,6 @@ tags:
 - [[number_figures()]] - `calls` [EXTRACTED]
 - [[opener_preflight()]] - `calls` [EXTRACTED]
 - [[plan_rules.py]] - `contains` [EXTRACTED]
-- [[review()]] - `calls` [EXTRACTED]
 - [[review_fixes()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/clean_full

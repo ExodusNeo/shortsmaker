@@ -1,20 +1,18 @@
 ---
-source_file: "remotion/src/Opener3D.tsx"
+source_file: ".claude/skills/remotion-best-practices/remotion-maps/techniques/cesium/assets/CesiumFlythrough.tsx"
 type: "code"
-community: "Opener3D.tsx"
-location: "L53"
+community: "remotion-best-practices/remotion-maps/techniques/cesium/assets/CesiumFlythrough.tsx"
+location: "L80"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Opener3Dtsx
+  - community/remotion-best-practices/remotion-maps/techniques/cesium/assets/CesiumFlythroughtsx
 ---
 
 # clamp()
 
 ## Connections
-- [[Card()_1]] - `calls` [EXTRACTED]
-- [[Opener3D.tsx]] - `contains` [EXTRACTED]
-- [[PropMesh()]] - `calls` [EXTRACTED]
-- [[framing()]] - `calls` [EXTRACTED]
+- [[CesiumFlythrough()]] - `calls` [EXTRACTED]
+- [[remotion-best-practicesremotion-mapstechniquescesiumassetsCesiumFlythrough.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Opener3Dtsx
+#graphify/code #graphify/EXTRACTED #community/remotion-best-practices/remotion-maps/techniques/cesium/assets/CesiumFlythroughtsx

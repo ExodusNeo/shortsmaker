@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_opener3d.py"
 type: "code"
-community: "opener3d.py"
+community: "clean"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/opener3dpy
+  - community/clean
 ---
 
 # test_opener3d.py
@@ -17,7 +17,7 @@ tags:
 - [[drawn_opener.py]] - `imports_from` [EXTRACTED]
 - [[example()]] - `contains` [EXTRACTED]
 - [[json]] - `imports` [EXTRACTED]
-- [[look()]] - `contains` [EXTRACTED]
+- [[look()_1]] - `contains` [EXTRACTED]
 - [[opener3d.py]] - `imports_from` [EXTRACTED]
 - [[opener_crew.py]] - `imports_from` [EXTRACTED]
 - [[pathlib]] - `imports_from` [EXTRACTED]
@@ -44,4 +44,4 @@ tags:
 - [[test_someone_inside_a_house_steps_out_and_a_door_needs_a_real_id()]] - `contains` [EXTRACTED]
 - [[test_the_preview_sees_every_shot()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/opener3dpy
+#graphify/code #graphify/EXTRACTED #community/clean

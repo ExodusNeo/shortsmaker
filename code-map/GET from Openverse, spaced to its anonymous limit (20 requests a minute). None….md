@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/image_sources.py"
 type: "rationale"
-community: "ov_get"
+community: "fetch"
 location: "L135"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/ov_get
+  - community/fetch
 ---
 
 # GET from Openverse, spaced to its anonymous limit (20 requests a minute). None…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[ov_get()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/ov_get
+#graphify/rationale #graphify/EXTRACTED #community/fetch

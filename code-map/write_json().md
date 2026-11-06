@@ -12,7 +12,7 @@ tags:
 # write_json()
 
 ## Connections
-- [[Path_12]] - `references` [EXTRACTED]
+- [[Path_1]] - `references` [EXTRACTED]
 - [[Write via a temp file, so an interrupted run never leaves a half-written file…]] - `rationale_for` [EXTRACTED]
 - [[apply()]] - `calls` [EXTRACTED]
 - [[begin()]] - `calls` [EXTRACTED]
@@ -24,7 +24,7 @@ tags:
 - [[preflight_pictures()]] - `calls` [EXTRACTED]
 - [[preview()]] - `calls` [EXTRACTED]
 - [[record_audio()]] - `calls` [EXTRACTED]
-- [[save()]] - `calls` [EXTRACTED]
+- [[save()_1]] - `calls` [EXTRACTED]
 - [[save_context()]] - `calls` [EXTRACTED]
 - [[save_pool()]] - `calls` [EXTRACTED]
 - [[save_state()]] - `calls` [EXTRACTED]

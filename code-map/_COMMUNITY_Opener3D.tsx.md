@@ -1,11 +1,11 @@
 ---
 type: community
-members: 55
+members: 62
 ---
 
 # Opener3D.tsx
 
-**Members:** 55 nodes
+**Members:** 62 nodes
 
 ## Members
 - [[Assembly()]] - code - remotion/src/Opener3D.tsx
@@ -36,15 +36,21 @@ members: 55
 - [[Puff()]] - code - remotion/src/Opener3D.tsx
 - [[RECOLOUR]] - code - remotion/src/Opener3D.tsx
 - [[Rings()]] - code - remotion/src/Opener3D.tsx
+- [[Root()]] - code - remotion/src/Root.tsx
+- [[Root.tsx]] - code - remotion/src/Root.tsx
 - [[Shafts()]] - code - remotion/src/Opener3D.tsx
 - [[Shape]] - code - remotion/src/Opener3D.tsx
+- [[ShortProps]] - code - remotion/src/Short.tsx
 - [[Shot]] - code - remotion/src/Opener3D.tsx
 - [[Smoke()]] - code - remotion/src/Opener3D.tsx
 - [[Sparks()]] - code - remotion/src/Opener3D.tsx
+- [[StageProps]] - code - remotion/src/Opener3D.tsx
 - [[TOWN]] - code - remotion/src/Opener3D.tsx
 - [[XZ]] - code - remotion/src/Opener3D.tsx
 - [[aim()]] - code - remotion/src/Opener3D.tsx
-- [[clamp()_2]] - code - remotion/src/Opener3D.tsx
+- [[calculateMetadata()]] - code - remotion/src/Root.tsx
+- [[calculateOpener3D()]] - code - remotion/src/Opener3D.tsx
+- [[clamp()_1]] - code - remotion/src/Opener3D.tsx
 - [[cobbleCache]] - code - remotion/src/Opener3D.tsx
 - [[cobbles()]] - code - remotion/src/Opener3D.tsx
 - [[cutPos()]] - code - remotion/src/Opener3D.tsx
@@ -57,6 +63,7 @@ members: 55
 - [[ref_react_three_postprocessing]] - concept
 - [[ref_remotion_three]] - concept
 - [[ref_three]] - concept
+- [[srcindex.ts]] - code - remotion/src/index.ts
 - [[targetOf()]] - code - remotion/src/Opener3D.tsx
 - [[useAurora()]] - code - remotion/src/Opener3D.tsx
 - [[useCommitted()]] - code - remotion/src/Opener3D.tsx
@@ -72,9 +79,11 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 5 edges to [[_COMMUNITY_Short.tsx]]
+- 6 edges to [[_COMMUNITY_Short.tsx]]
 - 1 edge to [[_COMMUNITY_ref_react]]
 
 ## Top bridge nodes
 - [[Opener3D.tsx]] - degree 59, connects to 2 communities
-- [[Opener3D()]] - degree 25, connects to 1 community
+- [[Root.tsx]] - degree 11, connects to 1 community
+- [[srcindex.ts]] - degree 3, connects to 1 community
+- [[ShortProps]] - degree 2, connects to 1 community

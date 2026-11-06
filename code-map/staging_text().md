@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/opener_crew.py"
 type: "code"
-community: "opener_crew.py"
+community: "plan"
 location: "L255"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/opener_crewpy
+  - community/plan
 ---
 
 # staging_text()
@@ -18,4 +18,4 @@ tags:
 - [[staging_line()]] - `calls` [EXTRACTED]
 - [[test_staging_is_checked_against_the_kit()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/opener_crewpy
+#graphify/code #graphify/EXTRACTED #community/plan

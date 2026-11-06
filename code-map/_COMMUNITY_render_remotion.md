@@ -12,8 +12,8 @@ members: 14
 - [[Render the silent video (with captions) through the Remotion project; returns…]] - rationale - shortsmaker/remotion_render.py
 - [[Replaces every use of an invention in the Remotion props by its library…]] - rationale - shortsmaker/style_lab.py
 - [[remotion()]] - code - shortsmaker/remotion_render.py
-- [[render()_2]] - code - shortsmaker/remotion_render.py
-- [[render()_3]] - code - tests/test_style.py
+- [[render()_3]] - code - shortsmaker/remotion_render.py
+- [[render()_4]] - code - tests/test_style.py
 - [[render(props); if it fails while AI inventions are in use, they are swapped for…]] - rationale - shortsmaker/remotion_render.py
 - [[render_remotion()]] - code - shortsmaker/remotion_render.py
 - [[run_remotion_with_fallback()]] - code - shortsmaker/remotion_render.py
@@ -32,20 +32,18 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 6 edges to [[_COMMUNITY_shutil]]
+- 4 edges to [[_COMMUNITY_invent_component]]
+- 3 edges to [[_COMMUNITY_test_style.py]]
 - 2 edges to [[_COMMUNITY_render]]
-- 2 edges to [[_COMMUNITY_style_placeholders]]
-- 2 edges to [[_COMMUNITY_invent_component]]
-- 2 edges to [[_COMMUNITY_test_full_scenes.py]]
-- 1 edge to [[_COMMUNITY_finish_render]]
 - 1 edge to [[_COMMUNITY_ffmpeg]]
 - 1 edge to [[_COMMUNITY_full_props]]
-- 1 edge to [[_COMMUNITY_make_paper]]
-- 1 edge to [[_COMMUNITY_short_skin]]
-- 1 edge to [[_COMMUNITY_audio_mix.py]]
+- 1 edge to [[_COMMUNITY_finish_render]]
+- 1 edge to [[_COMMUNITY_test_full_scenes.py]]
+- 1 edge to [[_COMMUNITY_music_gain]]
 - 1 edge to [[_COMMUNITY_code_custom_scenes]]
 
 ## Top bridge nodes
-- [[render_remotion()]] - degree 18, connects to 12 communities
+- [[render_remotion()]] - degree 18, connects to 9 communities
 - [[run_remotion_with_fallback()]] - degree 7, connects to 2 communities
 - [[swap_inventions()]] - degree 5, connects to 2 communities
 - [[style_props()]] - degree 4, connects to 1 community

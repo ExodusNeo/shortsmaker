@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/opener3d.py"
 type: "rationale"
-community: "opener3d.py"
+community: "clean"
 location: "L241"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/opener3dpy
+  - community/clean
 ---
 
 # [x, z] for a `place` relation, or (None, what's wrong). `named` maps ids/names…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[resolve()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/opener3dpy
+#graphify/rationale #graphify/EXTRACTED #community/clean

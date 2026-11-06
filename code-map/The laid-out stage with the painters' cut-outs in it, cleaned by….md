@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/opener_crew.py"
 type: "rationale"
-community: "test_opener_crew.py"
+community: "assemble"
 location: "L610"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/test_opener_crewpy
+  - community/assemble
 ---
 
 # The laid-out stage with the painters' cut-outs in it, cleaned by…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[assemble()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/test_opener_crewpy
+#graphify/rationale #graphify/EXTRACTED #community/assemble

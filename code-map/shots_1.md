@@ -12,7 +12,7 @@ tags:
 # shots
 
 ## Connections
-- [[clamp()_1]] - `calls` [EXTRACTED]
+- [[clamp()]] - `calls` [EXTRACTED]
 - [[makeKit()]] - `calls` [EXTRACTED]
 - [[run.mjs]] - `contains` [EXTRACTED]
 

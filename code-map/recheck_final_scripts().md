@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/writing.py"
 type: "code"
-community: "writing.py"
+community: "cold_read"
 location: "L309"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/writingpy
+  - community/cold_read
 ---
 
 # recheck_final_scripts()
@@ -18,4 +18,4 @@ tags:
 - [[write_scripts()]] - `calls` [EXTRACTED]
 - [[writing.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/writingpy
+#graphify/code #graphify/EXTRACTED #community/cold_read

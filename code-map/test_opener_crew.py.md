@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[The opener crew (shortsmakeropener_crew.py) the stager's plan checked against…]] - `rationale_for` [EXTRACTED]
 - [[__init__.py]] - `imports_from` [EXTRACTED]
-- [[blind_ok()]] - `contains` [EXTRACTED]
+- [[blind_ok()_1]] - `contains` [EXTRACTED]
 - [[drawn_opener.py]] - `imports_from` [EXTRACTED]
 - [[fake()_1]] - `contains` [EXTRACTED]
 - [[json]] - `imports` [EXTRACTED]

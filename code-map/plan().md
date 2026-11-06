@@ -1,18 +1,18 @@
 ---
 source_file: "shortsmaker/opener_crew.py"
 type: "code"
-community: "opener_crew.py"
+community: "plan"
 location: "L696"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/opener_crewpy
+  - community/plan
 ---
 
 # plan()
 
 ## Connections
-- [[Path_13]] - `references` [EXTRACTED]
+- [[Path_12]] - `references` [EXTRACTED]
 - [[Stage, make parts, paint, lay out (code), render, review and route fixes a…]] - `rationale_for` [EXTRACTED]
 - [[assemble()]] - `calls` [EXTRACTED]
 - [[blends()]] - `calls` [EXTRACTED]
@@ -26,7 +26,7 @@ tags:
 - [[owner()]] - `calls` [EXTRACTED]
 - [[paint()]] - `calls` [EXTRACTED]
 - [[parallel()]] - `calls` [EXTRACTED]
-- [[render()_5]] - `calls` [EXTRACTED]
+- [[render()_1]] - `calls` [EXTRACTED]
 - [[review()]] - `calls` [EXTRACTED]
 - [[sheet()_1]] - `calls` [EXTRACTED]
 - [[spoils()]] - `calls` [EXTRACTED]
@@ -36,4 +36,4 @@ tags:
 - [[test_the_whole_crew_passes_and_only_the_faulted_painter_repaints()]] - `calls` [EXTRACTED]
 - [[time]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/opener_crewpy
+#graphify/code #graphify/EXTRACTED #community/plan

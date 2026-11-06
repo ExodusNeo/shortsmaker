@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/drawn_opener.py"
 type: "rationale"
-community: "time"
-location: "L174"
+community: "shutil"
+location: "L176"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/time
+  - community/shutil
 ---
 
 # The opener crew's staging (opener_crew.stage), when there is one: every opener…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[staged()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/time
+#graphify/rationale #graphify/EXTRACTED #community/shutil

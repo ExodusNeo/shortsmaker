@@ -11,8 +11,8 @@ members: 11
 - [[A stereograph card two near-identical photos side by side. Compares the…]] - rationale - shortsmaker/photo_prep.py
 - [[Cover crop around a chosen subject, clamped to real image bounds.]] - rationale - shortsmaker/photo_prep.py
 - [[Cut plain strips (white mounts, black plate edges) off the sides, at most 15%…]] - rationale - shortsmaker/photo_prep.py
-- [[Image_1]] - code
-- [[border()]] - code - shortsmaker/photo_prep.py
+- [[Image_2]] - code
+- [[border()_2]] - code - shortsmaker/photo_prep.py
 - [[detail()]] - code - shortsmaker/photo_prep.py
 - [[is_stereo()]] - code - shortsmaker/photo_prep.py
 - [[plain()]] - code - shortsmaker/photo_prep.py
@@ -30,7 +30,7 @@ SORT file.name ASC
 ## Connections to other communities
 - 6 edges to [[_COMMUNITY_test_full_scenes.py]]
 - 1 edge to [[_COMMUNITY_render]]
-- 1 edge to [[_COMMUNITY_contact_sheets]]
+- 1 edge to [[_COMMUNITY_prepare_topic]]
 - 1 edge to [[_COMMUNITY_clean_full]]
 
 ## Top bridge nodes

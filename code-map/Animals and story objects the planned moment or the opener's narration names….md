@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/drawn_opener.py"
 type: "rationale"
-community: "lint_cutout"
-location: "L87"
+community: "assemble"
+location: "L89"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/lint_cutout
+  - community/assemble
 ---
 
 # Animals and story objects the planned moment or the opener's narration names…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[missing_parts()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/lint_cutout
+#graphify/rationale #graphify/EXTRACTED #community/assemble

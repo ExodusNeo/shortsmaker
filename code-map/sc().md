@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_style.py"
 type: "code"
-community: "audio_library.py"
+community: "sfx_events"
 location: "L188"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/audio_librarypy
+  - community/sfx_events
 ---
 
 # sc()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[test_style_sounds()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/audio_librarypy
+#graphify/code #graphify/EXTRACTED #community/sfx_events

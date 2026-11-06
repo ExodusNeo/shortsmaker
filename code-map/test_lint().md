@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_drawn_opener.py"
 type: "code"
-community: "lint_cutout"
-location: "L87"
+community: "make_opener"
+location: "L112"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/lint_cutout
+  - community/make_opener
 ---
 
 # test_lint()
@@ -15,4 +15,4 @@ tags:
 - [[lint()]] - `calls` [EXTRACTED]
 - [[test_drawn_opener.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/lint_cutout
+#graphify/code #graphify/EXTRACTED #community/make_opener

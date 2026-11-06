@@ -1,15 +1,13 @@
 ---
 type: community
-members: 37
+members: 29
 ---
 
 # style/index.ts
 
-**Members:** 37 nodes
+**Members:** 29 nodes
 
 ## Members
-- [[CAPTION_TOP]] - code - remotion/src/style/kit.ts
-- [[CLAMP]] - code - remotion/src/style/kit.ts
 - [[Cut]] - code - remotion/src/style/transitions/Cut.tsx
 - [[Cut.tsx]] - code - remotion/src/style/transitions/Cut.tsx
 - [[Fade]] - code - remotion/src/style/transitions/Fade.tsx
@@ -17,20 +15,18 @@ members: 37
 - [[Flash]] - code - remotion/src/style/transitions/Flash.tsx
 - [[Flash.tsx]] - code - remotion/src/style/transitions/Flash.tsx
 - [[H]] - code - remotion/src/style/kit.ts
+- [[InventedLook()]] - code - remotion/src/style/generated/InventedLook.tsx
+- [[InventedLook.tsx]] - code - remotion/src/style/generated/InventedLook.tsx
 - [[InventedOverlay()]] - code - remotion/src/style/generated/InventedOverlay.tsx
 - [[InventedOverlay.tsx]] - code - remotion/src/style/generated/InventedOverlay.tsx
 - [[InventedTransition]] - code - remotion/src/style/generated/InventedTransition.tsx
 - [[InventedTransition.tsx]] - code - remotion/src/style/generated/InventedTransition.tsx
-- [[KineticTitle()]] - code - remotion/src/style/overlays/KineticTitle.tsx
-- [[KineticTitle.tsx]] - code - remotion/src/style/overlays/KineticTitle.tsx
 - [[LOOKS]] - code - remotion/src/style/index.ts
 - [[Leak]] - code - remotion/src/style/transitions/Leak.tsx
 - [[Leak.tsx]] - code - remotion/src/style/transitions/Leak.tsx
 - [[LookProps]] - code - remotion/src/style/types.ts
 - [[OVERLAYS]] - code - remotion/src/style/index.ts
-- [[Overlay]] - code - remotion/src/style/types.ts
 - [[OverlayProps]] - code - remotion/src/style/types.ts
-- [[QuestionBeat.tsx]] - code - remotion/src/style/overlays/QuestionBeat.tsx
 - [[Transition]] - code - remotion/src/style/types.ts
 - [[TransitionFrame]] - code - remotion/src/style/types.ts
 - [[W]] - code - remotion/src/style/kit.ts
@@ -39,10 +35,6 @@ members: 37
 - [[Wipe]] - code - remotion/src/style/transitions/Wipe.tsx
 - [[Wipe.tsx]] - code - remotion/src/style/transitions/Wipe.tsx
 - [[clamp01()]] - code - remotion/src/style/kit.ts
-- [[kit.ts]] - code - remotion/src/style/kit.ts
-- [[remotion_src_style_kit_absolutefill]] - concept
-- [[remotion_src_style_kit_easing]] - concept
-- [[remotion_src_style_kit_interpolate]] - concept
 - [[styleindex.ts]] - code - remotion/src/style/index.ts
 - [[styletypes.ts]] - code - remotion/src/style/types.ts
 
@@ -54,14 +46,15 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 36 edges to [[_COMMUNITY_Halftone.tsx]]
-- 16 edges to [[_COMMUNITY_Graphics.tsx]]
-- 14 edges to [[_COMMUNITY_Short.tsx]]
-- 6 edges to [[_COMMUNITY_ref_react]]
+- 33 edges to [[_COMMUNITY_kit.ts]]
+- 9 edges to [[_COMMUNITY_QuestionBeat.tsx]]
+- 7 edges to [[_COMMUNITY_style.test.ts]]
+- 4 edges to [[_COMMUNITY_ref_react]]
+- 3 edges to [[_COMMUNITY_Short.tsx]]
 
 ## Top bridge nodes
-- [[kit.ts]] - degree 40, connects to 4 communities
+- [[styleindex.ts]] - degree 46, connects to 4 communities
 - [[styletypes.ts]] - degree 28, connects to 4 communities
-- [[styleindex.ts]] - degree 46, connects to 3 communities
-- [[QuestionBeat.tsx]] - degree 14, connects to 2 communities
-- [[KineticTitle.tsx]] - degree 12, connects to 2 communities
+- [[Wipe.tsx]] - degree 9, connects to 2 communities
+- [[InventedLook.tsx]] - degree 7, connects to 2 communities
+- [[Leak.tsx]] - degree 7, connects to 2 communities

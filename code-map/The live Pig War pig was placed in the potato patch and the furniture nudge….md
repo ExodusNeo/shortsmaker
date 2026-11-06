@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_opener3d.py"
 type: "rationale"
-community: "opener3d.py"
+community: "clean"
 location: "L247"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/opener3dpy
+  - community/clean
 ---
 
 # The live Pig War pig was placed in the potato patch and the furniture nudge…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[test_an_animal_in_the_garden_stays_in_it()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/opener3dpy
+#graphify/rationale #graphify/EXTRACTED #community/clean

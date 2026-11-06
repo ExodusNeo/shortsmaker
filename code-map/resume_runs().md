@@ -2,7 +2,7 @@
 source_file: "shortsmaker/cli.py"
 type: "code"
 community: "main"
-location: "L142"
+location: "L146"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,7 +12,7 @@ tags:
 # resume_runs()
 
 ## Connections
-- [[Path_21]] - `references` [EXTRACTED]
+- [[Path_22]] - `references` [EXTRACTED]
 - [[cli.py]] - `contains` [EXTRACTED]
 - [[configure_brain()]] - `calls` [EXTRACTED]
 - [[context()]] - `calls` [EXTRACTED]
@@ -20,9 +20,9 @@ tags:
 - [[finish_short()]] - `calls` [EXTRACTED]
 - [[load_channel()]] - `calls` [EXTRACTED]
 - [[load_state()]] - `calls` [EXTRACTED]
-- [[main()_2]] - `calls` [EXTRACTED]
+- [[main()_1]] - `calls` [EXTRACTED]
 - [[pending()]] - `calls` [EXTRACTED]
-- [[read()]] - `calls` [EXTRACTED]
+- [[read()_1]] - `calls` [EXTRACTED]
 - [[record_failure()]] - `calls` [EXTRACTED]
 - [[render()]] - `calls` [EXTRACTED]
 - [[require_rules()]] - `calls` [EXTRACTED]

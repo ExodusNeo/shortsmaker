@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/short_render.py"
 type: "rationale"
-community: "test_weak_opener_graphic_fixes_then_handoff"
+community: "drawn_payoff"
 location: "L107"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/test_weak_opener_graphic_fixes_then_handoff
+  - community/drawn_payoff
 ---
 
 # Scene 1 on an `opener: animated` channel plays the first opener that works…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[use_opener()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/test_weak_opener_graphic_fixes_then_handoff
+#graphify/rationale #graphify/EXTRACTED #community/drawn_payoff

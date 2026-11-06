@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/style/looks/Silent.tsx"
 type: "code"
-community: "Halftone.tsx"
+community: "kit.ts"
 location: "L8"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Halftonetsx
+  - community/kitts
 ---
 
 # draw()
@@ -16,4 +16,4 @@ tags:
 - [[Silent.tsx]] - `contains` [EXTRACTED]
 - [[drawCover()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Halftonetsx
+#graphify/code #graphify/EXTRACTED #community/kitts

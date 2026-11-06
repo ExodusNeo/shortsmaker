@@ -1,19 +1,19 @@
 ---
 source_file: "shortsmaker/short_render.py"
 type: "code"
-community: "finish_render"
+community: "drawn_payoff"
 location: "L148"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/finish_render
+  - community/drawn_payoff
 ---
 
 # drawn_payoff()
 
 ## Connections
 - [[On `opener animated` channels, a reveal scene (motion.is_payoff) planned as a…]] - `rationale_for` [EXTRACTED]
-- [[Path_1]] - `references` [EXTRACTED]
+- [[Path_14]] - `references` [EXTRACTED]
 - [[ffmpeg()]] - `calls` [EXTRACTED]
 - [[is_payoff()]] - `calls` [EXTRACTED]
 - [[make_opener()]] - `calls` [EXTRACTED]
@@ -21,4 +21,4 @@ tags:
 - [[short_render.py]] - `contains` [EXTRACTED]
 - [[test_reveal_scene_is_drawn_with_its_own_rules()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/finish_render
+#graphify/code #graphify/EXTRACTED #community/drawn_payoff

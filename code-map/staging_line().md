@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/editplan.py"
 type: "code"
-community: "opener_crew.py"
+community: "plan"
 location: "L50"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/opener_crewpy
+  - community/plan
 ---
 
 # staging_line()
@@ -16,4 +16,4 @@ tags:
 - [[editplan.py]] - `contains` [EXTRACTED]
 - [[staging_text()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/opener_crewpy
+#graphify/code #graphify/EXTRACTED #community/plan

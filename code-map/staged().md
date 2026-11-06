@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/drawn_opener.py"
 type: "code"
-community: "time"
-location: "L173"
+community: "shutil"
+location: "L175"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/time
+  - community/shutil
 ---
 
 # staged()
@@ -17,4 +17,4 @@ tags:
 - [[json]] - `calls` [EXTRACTED]
 - [[opener_role()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/time
+#graphify/code #graphify/EXTRACTED #community/shutil

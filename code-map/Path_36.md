@@ -1,21 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: "time"
+community: "audio_library.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/time
+  - community/audio_librarypy
 ---
 
 # Path
 
 ## Connections
-- [[blind_read()]] - `references` [EXTRACTED]
-- [[look_dir()]] - `references` [EXTRACTED]
-- [[make_opener()]] - `references` [EXTRACTED]
-- [[node_run()]] - `references` [EXTRACTED]
-- [[review()]] - `references` [EXTRACTED]
-- [[write()_1]] - `references` [EXTRACTED]
+- [[audition_audio()]] - `references` [EXTRACTED]
+- [[download_audio_choices()]] - `references` [EXTRACTED]
+- [[review_audio_files()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/time
+#graphify/code #graphify/EXTRACTED #community/audio_librarypy

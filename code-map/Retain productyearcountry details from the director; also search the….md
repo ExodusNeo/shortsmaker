@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/footage.py"
 type: "rationale"
-community: "re"
+community: "brand_images"
 location: "L177"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/re
+  - community/brand_images
 ---
 
 # Retain product/year/country details from the director; also search the…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[commercial_queries()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/re
+#graphify/rationale #graphify/EXTRACTED #community/brand_images

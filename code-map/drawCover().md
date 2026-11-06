@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/style/kit.ts"
 type: "code"
-community: "Halftone.tsx"
+community: "kit.ts"
 location: "L35"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Halftonetsx
+  - community/kitts
 ---
 
 # drawCover()
@@ -19,4 +19,4 @@ tags:
 - [[kit.ts]] - `contains` [EXTRACTED]
 - [[luminance()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Halftonetsx
+#graphify/code #graphify/EXTRACTED #community/kitts

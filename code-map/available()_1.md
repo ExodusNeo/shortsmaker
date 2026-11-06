@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/opener3d.py"
 type: "code"
-community: "time"
+community: "shutil"
 location: "L53"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/time
+  - community/shutil
 ---
 
 # available()
@@ -18,4 +18,4 @@ tags:
 - [[opener3d.py]] - `contains` [EXTRACTED]
 - [[shutil]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/time
+#graphify/code #graphify/EXTRACTED #community/shutil

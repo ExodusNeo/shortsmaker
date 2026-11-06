@@ -15,6 +15,6 @@ tags:
 - [[channel_profiles.py]] - `contains` [EXTRACTED]
 - [[command()]] - `calls` [EXTRACTED]
 - [[fix_short()]] - `calls` [EXTRACTED]
-- [[main()_2]] - `calls` [EXTRACTED]
+- [[main()_1]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/main

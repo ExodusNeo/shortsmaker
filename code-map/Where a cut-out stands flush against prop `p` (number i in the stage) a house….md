@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/opener3d.py"
 type: "rationale"
-community: "opener3d.py"
+community: "clean"
 location: "L318"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/opener3dpy
+  - community/clean
 ---
 
 # Where a cut-out stands flush against prop `p` (number i in the stage): a house…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[front_door()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/opener3dpy
+#graphify/rationale #graphify/EXTRACTED #community/clean

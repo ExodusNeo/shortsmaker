@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/drawn_opener.py"
 type: "code"
-community: "time"
-location: "L149"
+community: "make_opener"
+location: "L151"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/time
+  - community/make_opener
 ---
 
 # sheet_times()
@@ -17,4 +17,4 @@ tags:
 - [[make_opener()]] - `calls` [EXTRACTED]
 - [[sheet_times()_1]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/time
+#graphify/code #graphify/EXTRACTED #community/make_opener

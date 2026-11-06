@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/opener3d.py"
 type: "code"
-community: "lint_cutout"
+community: "assemble"
 location: "L337"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/lint_cutout
+  - community/assemble
 ---
 
 # lint_cutout()
@@ -23,4 +23,4 @@ tags:
 - [[test_hold_counts_as_drawing_the_letter_and_scenery_stays_3d()]] - `calls` [EXTRACTED]
 - [[test_lint_needs_draw()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/lint_cutout
+#graphify/code #graphify/EXTRACTED #community/assemble

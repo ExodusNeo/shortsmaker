@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/opener3d.py"
 type: "rationale"
-community: "opener3d.py"
+community: "clean"
 location: "L351"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/opener3dpy
+  - community/clean
 ---
 
 # The AI's stage, checked and made safe for Remotion (word times resolved,…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[clean()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/opener3dpy
+#graphify/rationale #graphify/EXTRACTED #community/clean

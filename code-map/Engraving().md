@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/style/looks/Engraving.tsx"
 type: "code"
-community: "Halftone.tsx"
+community: "kit.ts"
 location: "L44"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Halftonetsx
+  - community/kitts
 ---
 
 # Engraving()
@@ -17,4 +17,4 @@ tags:
 - [[styleindex.ts]] - `indirect_call` [INFERRED]
 - [[useOnceCanvas()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Halftonetsx
+#graphify/code #graphify/EXTRACTED #community/kitts

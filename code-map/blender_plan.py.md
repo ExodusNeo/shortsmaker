@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/blender_plan.py"
 type: "code"
-community: "test_full_scenes.py"
+community: "test_blender_plan.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_full_scenespy
+  - community/test_blender_planpy
 ---
 
 # blender_plan.py
@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[Blender build plans (2026-10-22) for channels with `visuals blender`, the…]] - `rationale_for` [EXTRACTED]
 - [[__init__.py]] - `imports_from` [EXTRACTED]
-- [[clamp()]] - `contains` [EXTRACTED]
+- [[clamp()_4]] - `contains` [EXTRACTED]
 - [[clean_build()]] - `contains` [EXTRACTED]
 - [[default_build()]] - `contains` [EXTRACTED]
 - [[ending()]] - `contains` [EXTRACTED]
@@ -34,4 +34,4 @@ tags:
 - [[thumbnail_order()]] - `contains` [EXTRACTED]
 - [[writing.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_full_scenespy
+#graphify/code #graphify/EXTRACTED #community/test_blender_planpy

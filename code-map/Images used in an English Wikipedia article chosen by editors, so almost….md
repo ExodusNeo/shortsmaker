@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/image_sources.py"
 type: "rationale"
-community: "get_image"
+community: "wm_files"
 location: "L124"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/get_image
+  - community/wm_files
 ---
 
 # Images used in an English Wikipedia article: chosen by editors, so almost…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[article_images()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/get_image
+#graphify/rationale #graphify/EXTRACTED #community/wm_files

@@ -1,51 +1,20 @@
 ---
-source_file: "drawn/lib/core.mjs"
+source_file: "remotion/src/Opener3D.tsx"
 type: "code"
-community: "core.mjs"
-location: "L7"
+community: "Opener3D.tsx"
+location: "L53"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/coremjs
+  - community/Opener3Dtsx
 ---
 
 # clamp()
 
 ## Connections
-- [[dot-arc()]] - `calls` [EXTRACTED]
-- [[dot-begin()]] - `calls` [EXTRACTED]
-- [[dot-burst()]] - `calls` [EXTRACTED]
-- [[dot-depth()]] - `calls` [EXTRACTED]
-- [[dot-door()]] - `calls` [EXTRACTED]
-- [[dot-ease()]] - `calls` [EXTRACTED]
-- [[dot-fade()]] - `calls` [EXTRACTED]
-- [[dot-fall()]] - `calls` [EXTRACTED]
-- [[dot-horse()]] - `calls` [EXTRACTED]
-- [[dot-next()]] - `calls` [EXTRACTED]
-- [[dot-person()]] - `calls` [EXTRACTED]
-- [[dot-puff()]] - `calls` [EXTRACTED]
-- [[dot-shadow()]] - `calls` [EXTRACTED]
-- [[dot-splash()]] - `calls` [EXTRACTED]
-- [[dot-sweat()]] - `calls` [EXTRACTED]
-- [[catmull()]] - `calls` [EXTRACTED]
-- [[core.mjs]] - `contains` [EXTRACTED]
-- [[eBack()]] - `calls` [EXTRACTED]
-- [[eBounce()]] - `calls` [EXTRACTED]
-- [[eElastic()]] - `calls` [EXTRACTED]
-- [[eExpo()]] - `calls` [EXTRACTED]
-- [[eIO()]] - `calls` [EXTRACTED]
-- [[eIn()]] - `calls` [EXTRACTED]
-- [[eOut()]] - `calls` [EXTRACTED]
-- [[frameAt()]] - `calls` [EXTRACTED]
-- [[ik()]] - `calls` [EXTRACTED]
-- [[kit.mjs]] - `imports` [EXTRACTED]
-- [[lerpColor()]] - `calls` [EXTRACTED]
-- [[makeKit()]] - `calls` [EXTRACTED]
-- [[pathOf()]] - `calls` [EXTRACTED]
-- [[pen.mjs]] - `imports` [EXTRACTED]
-- [[run.mjs]] - `imports` [EXTRACTED]
-- [[shots_1]] - `calls` [EXTRACTED]
-- [[smooth()]] - `calls` [EXTRACTED]
-- [[ss()]] - `calls` [EXTRACTED]
+- [[Card()_1]] - `calls` [EXTRACTED]
+- [[Opener3D.tsx]] - `contains` [EXTRACTED]
+- [[PropMesh()]] - `calls` [EXTRACTED]
+- [[framing()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/coremjs
+#graphify/code #graphify/EXTRACTED #community/Opener3Dtsx

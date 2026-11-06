@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/checkpoints.py"
 type: "rationale"
-community: "main"
+community: "pathlib"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/main
+  - community/pathlib
 ---
 
 # Atomic progress records for unfinished Shorts; no executable serialized state.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[checkpoints.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/main
+#graphify/rationale #graphify/EXTRACTED #community/pathlib

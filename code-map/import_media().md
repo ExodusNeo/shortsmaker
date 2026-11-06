@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[Copy into the library; never movemodify the owner's original. Sidecars also…]] - `rationale_for` [EXTRACTED]
-- [[Path_8]] - `references` [EXTRACTED]
+- [[Path_7]] - `references` [EXTRACTED]
 - [[hashlib]] - `calls` [EXTRACTED]
 - [[media_command()]] - `calls` [EXTRACTED]
 - [[media_library.py]] - `contains` [EXTRACTED]

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/opener_crew.py"
 type: "code"
-community: "opener_crew.py"
+community: "ask_ai"
 location: "L194"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/opener_crewpy
+  - community/ask_ai
 ---
 
 # strong()
@@ -17,4 +17,4 @@ tags:
 - [[opener_crew.py]] - `contains` [EXTRACTED]
 - [[stage()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/opener_crewpy
+#graphify/code #graphify/EXTRACTED #community/ask_ai

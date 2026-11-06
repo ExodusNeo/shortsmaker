@@ -1,24 +1,24 @@
 ---
 source_file: "shortsmaker/drawn_opener.py"
 type: "code"
-community: "time"
-location: "L347"
+community: "make_opener"
+location: "L383"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/time
+  - community/make_opener
 ---
 
 # make_opener()
 
 ## Connections
-- [[Path_36]] - `references` [EXTRACTED]
+- [[Path_38]] - `references` [EXTRACTED]
 - [[Scene 1's opener clip (workdrawnopener.mp4, scene 1 + the crossfade long), or…]] - `rationale_for` [EXTRACTED]
 - [[available()]] - `calls` [EXTRACTED]
 - [[available()_1]] - `calls` [EXTRACTED]
 - [[drawn_opener.py]] - `contains` [EXTRACTED]
 - [[drawn_payoff()]] - `calls` [EXTRACTED]
-- [[fail()_1]] - `contains` [EXTRACTED]
+- [[fail()]] - `contains` [EXTRACTED]
 - [[fingerprint()]] - `calls` [EXTRACTED]
 - [[json]] - `calls` [EXTRACTED]
 - [[lint()]] - `calls` [EXTRACTED]
@@ -26,7 +26,7 @@ tags:
 - [[missing_parts()]] - `calls` [EXTRACTED]
 - [[node_run()]] - `calls` [EXTRACTED]
 - [[plan()]] - `calls` [EXTRACTED]
-- [[render()_5]] - `calls` [EXTRACTED]
+- [[render()_1]] - `calls` [EXTRACTED]
 - [[review()]] - `calls` [EXTRACTED]
 - [[sheet_times()]] - `calls` [EXTRACTED]
 - [[spoils()]] - `calls` [EXTRACTED]
@@ -38,4 +38,4 @@ tags:
 - [[use_opener()]] - `calls` [EXTRACTED]
 - [[write()_1]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/time
+#graphify/code #graphify/EXTRACTED #community/make_opener

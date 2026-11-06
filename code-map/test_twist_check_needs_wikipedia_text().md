@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_story.py"
 type: "code"
-community: "writing.py"
+community: "test_story.py"
 location: "L316"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/writingpy
+  - community/test_storypy
 ---
 
 # test_twist_check_needs_wikipedia_text()
@@ -16,4 +16,4 @@ tags:
 - [[test_story.py]] - `contains` [EXTRACTED]
 - [[twist_short()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/writingpy
+#graphify/code #graphify/EXTRACTED #community/test_storypy

@@ -13,7 +13,8 @@ tags:
 
 ## Connections
 - [[Headless planner call (BRAIN, or `brain` Codex, Claude or Gemini) that returns…]] - `rationale_for` [EXTRACTED]
-- [[Path_27]] - `references` [EXTRACTED]
+- [[Path_34]] - `references` [EXTRACTED]
+- [[ai_review()]] - `calls` [EXTRACTED]
 - [[analyze()]] - `calls` [EXTRACTED]
 - [[blind_read()]] - `calls` [EXTRACTED]
 - [[catalog_pool()]] - `calls` [EXTRACTED]
@@ -24,7 +25,7 @@ tags:
 - [[direct_scripts()]] - `calls` [EXTRACTED]
 - [[draft_rules()]] - `calls` [EXTRACTED]
 - [[edit_scripts()]] - `calls` [EXTRACTED]
-- [[fact_check()_1]] - `calls` [EXTRACTED]
+- [[fact_check()]] - `calls` [EXTRACTED]
 - [[first_second_check()]] - `calls` [EXTRACTED]
 - [[h3_prompts()]] - `calls` [EXTRACTED]
 - [[invent_component()]] - `calls` [EXTRACTED]
@@ -43,7 +44,6 @@ tags:
 - [[recover_downloads()]] - `calls` [EXTRACTED]
 - [[redraw_custom()]] - `calls` [EXTRACTED]
 - [[rescue_graphics()]] - `calls` [EXTRACTED]
-- [[review()]] - `calls` [EXTRACTED]
 - [[rewrite_paint_prompts()]] - `calls` [EXTRACTED]
 - [[run_agy()]] - `calls` [EXTRACTED]
 - [[run_codex()]] - `calls` [EXTRACTED]

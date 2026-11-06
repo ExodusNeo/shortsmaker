@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_style.py"
 type: "code"
-community: "shutil"
+community: "save_candidate"
 location: "L417"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/shutil
+  - community/save_candidate
 ---
 
 # test_approve_adds_to_library()
@@ -19,4 +19,4 @@ tags:
 - [[style_library()]] - `calls` [EXTRACTED]
 - [[test_style.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/shutil
+#graphify/code #graphify/EXTRACTED #community/save_candidate

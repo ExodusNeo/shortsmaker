@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/audio_mix.py"
 type: "code"
-community: "audio_library.py"
+community: "sfx_events"
 location: "L377"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/audio_librarypy
+  - community/sfx_events
 ---
 
 # schedule_sounds()
@@ -17,4 +17,4 @@ tags:
 - [[sfx_events()]] - `calls` [EXTRACTED]
 - [[sound_profile()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/audio_librarypy
+#graphify/code #graphify/EXTRACTED #community/sfx_events

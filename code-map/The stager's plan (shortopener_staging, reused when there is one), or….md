@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/opener_crew.py"
 type: "rationale"
-community: "opener_crew.py"
+community: "plan"
 location: "L202"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/opener_crewpy
+  - community/plan
 ---
 
 # The stager's plan (short["opener_staging"], reused when there is one), or…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[stage()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/opener_crewpy
+#graphify/rationale #graphify/EXTRACTED #community/plan

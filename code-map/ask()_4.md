@@ -1,18 +1,17 @@
 ---
-source_file: "tests/test_rules.py"
+source_file: "tests/test_story.py"
 type: "code"
-community: "test_rules.py"
-location: "L72"
+community: "cold_read"
+location: "L93"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/test_rulespy
+  - community/cold_read
 ---
 
 # ask()
 
 ## Connections
-- [[capture_prompts()]] - `indirect_call` [INFERRED]
-- [[run_draft()]] - `indirect_call` [INFERRED]
+- [[test_cold_read_uses_other_ai_in_solo_and_collaborative_modes()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/INFERRED #community/test_rulespy
+#graphify/code #graphify/INFERRED #community/cold_read

@@ -1,20 +1,20 @@
 ---
 source_file: "tests/test_style.py"
 type: "code"
-community: "owner"
+community: "test_style.py"
 location: "L203"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/owner
+  - community/test_stylepy
 ---
 
 # test_fact_check_sees_new_graphics()
 
 ## Connections
-- [[ask()_14]] - `contains` [EXTRACTED]
-- [[ask()_13]] - `indirect_call` [INFERRED]
-- [[fact_check()_1]] - `calls` [EXTRACTED]
+- [[ask()_13]] - `contains` [EXTRACTED]
+- [[ask()_12]] - `indirect_call` [INFERRED]
+- [[fact_check()]] - `calls` [EXTRACTED]
 - [[test_style.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/owner
+#graphify/code #graphify/EXTRACTED #community/test_stylepy

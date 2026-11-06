@@ -12,6 +12,7 @@ tags:
 # opening_brief()
 
 ## Connections
+- [[ai_review()]] - `calls` [EXTRACTED]
 - [[choose_images()]] - `calls` [EXTRACTED]
 - [[code_custom_scenes()]] - `calls` [EXTRACTED]
 - [[direct_scripts()]] - `calls` [EXTRACTED]
@@ -24,6 +25,5 @@ tags:
 - [[opening_rules.py]] - `contains` [EXTRACTED]
 - [[paint_opener_start()]] - `calls` [EXTRACTED]
 - [[redraw_custom()]] - `calls` [EXTRACTED]
-- [[review()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/code_custom_scenes

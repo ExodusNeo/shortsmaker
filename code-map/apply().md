@@ -1,18 +1,18 @@
 ---
 source_file: "shortsmaker/scene_repair.py"
 type: "code"
-community: "finish_render"
+community: "ffmpeg"
 location: "L74"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/finish_render
+  - community/ffmpeg
 ---
 
 # apply()
 
 ## Connections
-- [[Path]] - `references` [EXTRACTED]
+- [[Path_2]] - `references` [EXTRACTED]
 - [[duration()]] - `calls` [EXTRACTED]
 - [[ffmpeg()]] - `calls` [EXTRACTED]
 - [[fix_short()]] - `calls` [EXTRACTED]
@@ -26,4 +26,4 @@ tags:
 - [[video_encoder()]] - `calls` [EXTRACTED]
 - [[write_json()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/finish_render
+#graphify/code #graphify/EXTRACTED #community/ffmpeg

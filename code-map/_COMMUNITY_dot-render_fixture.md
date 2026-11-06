@@ -22,8 +22,8 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 1 edge to [[_COMMUNITY_test_full_scenes.py]]
-- 1 edge to [[_COMMUNITY_time]]
+- 1 edge to [[_COMMUNITY_pathlib]]
+- 1 edge to [[_COMMUNITY_review]]
 
 ## Top bridge nodes
 - [[dot-render_fixture()]] - degree 5, connects to 1 community

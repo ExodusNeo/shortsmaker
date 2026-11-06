@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/index.ts"
 type: "code"
-community: "Short.tsx"
+community: "Opener3D.tsx"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Shorttsx
+  - community/Opener3Dtsx
 ---
 
 # src/index.ts
@@ -16,4 +16,4 @@ tags:
 - [[Root.tsx]] - `imports_from` [EXTRACTED]
 - [[ref_remotion]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Shorttsx
+#graphify/code #graphify/EXTRACTED #community/Opener3Dtsx

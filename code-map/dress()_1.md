@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/opener3d.py"
 type: "code"
-community: "opener3d.py"
+community: "clean"
 location: "L188"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/opener3dpy
+  - community/clean
 ---
 
 # dress()
@@ -18,4 +18,4 @@ tags:
 - [[opener3d.py]] - `contains` [EXTRACTED]
 - [[test_set_dressing_keeps_clear_of_what_was_placed()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/opener3dpy
+#graphify/code #graphify/EXTRACTED #community/clean

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/drawn_opener.py"
 type: "rationale"
-community: "time"
-location: "L107"
+community: "shutil"
+location: "L109"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/time
+  - community/shutil
 ---
 
 # The scene module from an AI reply (fences stripped), or None.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[clean_code()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/time
+#graphify/rationale #graphify/EXTRACTED #community/shutil

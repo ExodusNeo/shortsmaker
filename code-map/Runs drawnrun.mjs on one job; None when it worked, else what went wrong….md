@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/drawn_opener.py"
 type: "rationale"
-community: "time"
-location: "L115"
+community: "node_run"
+location: "L117"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/time
+  - community/node_run
 ---
 
 # Runs drawn/run.mjs on one job; None when it worked, else what went wrong…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[node_run()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/time
+#graphify/rationale #graphify/EXTRACTED #community/node_run

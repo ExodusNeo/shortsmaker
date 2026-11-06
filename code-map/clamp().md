@@ -1,20 +1,51 @@
 ---
-source_file: "shortsmaker/blender_plan.py"
+source_file: "drawn/lib/core.mjs"
 type: "code"
-community: "clamp"
-location: "L33"
+community: "core.mjs"
+location: "L7"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/clamp
+  - community/coremjs
 ---
 
 # clamp()
 
 ## Connections
-- [[A number in lo, hi (whole numbers stay whole), or the default for anything…]] - `rationale_for` [EXTRACTED]
-- [[blender_plan.py]] - `contains` [EXTRACTED]
-- [[clean_build()]] - `calls` [EXTRACTED]
-- [[math]] - `calls` [EXTRACTED]
+- [[dot-arc()]] - `calls` [EXTRACTED]
+- [[dot-begin()]] - `calls` [EXTRACTED]
+- [[dot-burst()]] - `calls` [EXTRACTED]
+- [[dot-depth()]] - `calls` [EXTRACTED]
+- [[dot-door()]] - `calls` [EXTRACTED]
+- [[dot-ease()]] - `calls` [EXTRACTED]
+- [[dot-fade()]] - `calls` [EXTRACTED]
+- [[dot-fall()]] - `calls` [EXTRACTED]
+- [[dot-horse()]] - `calls` [EXTRACTED]
+- [[dot-next()]] - `calls` [EXTRACTED]
+- [[dot-person()]] - `calls` [EXTRACTED]
+- [[dot-puff()]] - `calls` [EXTRACTED]
+- [[dot-shadow()]] - `calls` [EXTRACTED]
+- [[dot-splash()]] - `calls` [EXTRACTED]
+- [[dot-sweat()]] - `calls` [EXTRACTED]
+- [[catmull()]] - `calls` [EXTRACTED]
+- [[core.mjs]] - `contains` [EXTRACTED]
+- [[eBack()]] - `calls` [EXTRACTED]
+- [[eBounce()]] - `calls` [EXTRACTED]
+- [[eElastic()]] - `calls` [EXTRACTED]
+- [[eExpo()]] - `calls` [EXTRACTED]
+- [[eIO()]] - `calls` [EXTRACTED]
+- [[eIn()]] - `calls` [EXTRACTED]
+- [[eOut()]] - `calls` [EXTRACTED]
+- [[frameAt()]] - `calls` [EXTRACTED]
+- [[ik()]] - `calls` [EXTRACTED]
+- [[kit.mjs]] - `imports` [EXTRACTED]
+- [[lerpColor()]] - `calls` [EXTRACTED]
+- [[makeKit()]] - `calls` [EXTRACTED]
+- [[pathOf()]] - `calls` [EXTRACTED]
+- [[pen.mjs]] - `imports` [EXTRACTED]
+- [[run.mjs]] - `imports` [EXTRACTED]
+- [[shots_1]] - `calls` [EXTRACTED]
+- [[smooth()]] - `calls` [EXTRACTED]
+- [[ss()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/clamp
+#graphify/code #graphify/EXTRACTED #community/coremjs

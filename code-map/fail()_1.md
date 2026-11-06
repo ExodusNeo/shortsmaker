@@ -1,17 +1,17 @@
 ---
-source_file: "shortsmaker/drawn_opener.py"
+source_file: "tests/test_reliability.py"
 type: "code"
-community: "time"
-location: "L366"
+community: "ReliabilityTests"
+location: "L130"
 tags:
   - graphify/code
-  - graphify/EXTRACTED
-  - community/time
+  - graphify/INFERRED
+  - community/ReliabilityTests
 ---
 
 # fail()
 
 ## Connections
-- [[make_opener()]] - `contains` [EXTRACTED]
+- [[dot-test_batch_keeps_failed_folder_and_queues_all_scripts_before_rendering()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/time
+#graphify/code #graphify/INFERRED #community/ReliabilityTests

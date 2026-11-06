@@ -1,17 +1,17 @@
 ---
-source_file: "tests/test_retention.py"
+source_file: ".claude/skills/remotion-best-practices/remotion-maps/techniques/maptiler/scripts/prep-geo.mjs"
 type: "code"
-community: "RetentionTests"
-location: "L80"
+community: "remotion-best-practices/remotion-maps/techniques/maptiler/scripts/prep-geo.mjs"
+location: "L30"
 tags:
   - graphify/code
-  - graphify/INFERRED
-  - community/RetentionTests
+  - graphify/EXTRACTED
+  - community/remotion-best-practices/remotion-maps/techniques/maptiler/scripts/prep-geomjs
 ---
 
 # read()
 
 ## Connections
-- [[dot-test_only_screenshot_is_sent_and_report_is_saved_without_touching_logbook()]] - `indirect_call` [INFERRED]
+- [[remotion-best-practicesremotion-mapstechniquesmaptilerscriptsprep-geo.mjs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/RetentionTests
+#graphify/code #graphify/EXTRACTED #community/remotion-best-practices/remotion-maps/techniques/maptiler/scripts/prep-geomjs

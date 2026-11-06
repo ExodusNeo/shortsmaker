@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/opener_crew.py"
 type: "rationale"
-community: "opener_crew.py"
+community: "plan"
 location: "L81"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/opener_crewpy
+  - community/plan
 ---
 
 # Runs the zero-argument callables in `jobs`, MAX_PARALLEL at a time; their…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[parallel()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/opener_crewpy
+#graphify/rationale #graphify/EXTRACTED #community/plan

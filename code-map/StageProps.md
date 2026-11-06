@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/Opener3D.tsx"
 type: "code"
-community: "Short.tsx"
+community: "Opener3D.tsx"
 location: "L33"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Shorttsx
+  - community/Opener3Dtsx
 ---
 
 # StageProps
@@ -15,4 +15,4 @@ tags:
 - [[Opener3D.tsx]] - `contains` [EXTRACTED]
 - [[Root.tsx]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Shorttsx
+#graphify/code #graphify/EXTRACTED #community/Opener3Dtsx

@@ -2,7 +2,7 @@
 source_file: "shortsmaker/checkpoints.py"
 type: "rationale"
 community: "main"
-location: "L88"
+location: "L89"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED

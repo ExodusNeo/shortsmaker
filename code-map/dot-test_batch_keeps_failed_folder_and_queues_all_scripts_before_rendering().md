@@ -13,6 +13,6 @@ tags:
 
 ## Connections
 - [[ReliabilityTests]] - `method` [EXTRACTED]
-- [[fail()]] - `indirect_call` [INFERRED]
+- [[fail()_1]] - `indirect_call` [INFERRED]
 
 #graphify/code #graphify/EXTRACTED #community/ReliabilityTests

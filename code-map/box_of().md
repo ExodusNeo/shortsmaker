@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/opener3d.py"
 type: "code"
-community: "opener3d.py"
+community: "clean"
 location: "L174"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/opener3dpy
+  - community/clean
 ---
 
 # box_of()
@@ -24,4 +24,4 @@ tags:
 - [[test_someone_inside_a_house_steps_out_and_a_door_needs_a_real_id()]] - `calls` [EXTRACTED]
 - [[test_the_one_acting_stands_by_what_they_act_on_and_holds_3d_objects()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/opener3dpy
+#graphify/code #graphify/EXTRACTED #community/clean

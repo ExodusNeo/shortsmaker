@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/opener3d.py"
 type: "code"
-community: "opener3d.py"
+community: "clean"
 location: "L235"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/opener3dpy
+  - community/clean
 ---
 
 # half_width()
@@ -19,4 +19,4 @@ tags:
 - [[resolve()]] - `calls` [EXTRACTED]
 - [[test_nobody_hides_in_furniture_or_inside_another_person()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/opener3dpy
+#graphify/code #graphify/EXTRACTED #community/clean

@@ -12,7 +12,7 @@ tags:
 # lerpColor()
 
 ## Connections
-- [[clamp()_1]] - `calls` [EXTRACTED]
+- [[clamp()]] - `calls` [EXTRACTED]
 - [[core.mjs]] - `contains` [EXTRACTED]
 - [[lerp()]] - `calls` [EXTRACTED]
 

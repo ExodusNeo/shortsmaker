@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/opener_crew.py"
 type: "rationale"
-community: "opener_crew.py"
+community: "plan"
 location: "L679"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/opener_crewpy
+  - community/plan
 ---
 
 # The part makers and the painters for a staging: (the painted people, every cut-…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[crew()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/opener_crewpy
+#graphify/rationale #graphify/EXTRACTED #community/plan

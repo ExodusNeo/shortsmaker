@@ -2,7 +2,7 @@
 source_file: "shortsmaker/cli.py"
 type: "code"
 community: "main"
-location: "L197"
+location: "L202"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -20,7 +20,7 @@ tags:
 - [[fix.bat re-render a recent Short with one scene changed, keeping its pictures,…]] - `rationale_for` [EXTRACTED]
 - [[load_channel()]] - `calls` [EXTRACTED]
 - [[load_state()]] - `calls` [EXTRACTED]
-- [[main()_2]] - `calls` [EXTRACTED]
+- [[main()_1]] - `calls` [EXTRACTED]
 - [[paint_new()]] - `calls` [EXTRACTED]
 - [[preview()]] - `calls` [EXTRACTED]
 - [[prune_work()]] - `calls` [EXTRACTED]

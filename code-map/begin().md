@@ -12,11 +12,11 @@ tags:
 # begin()
 
 ## Connections
-- [[Path_20]] - `references` [EXTRACTED]
+- [[Path_21]] - `references` [EXTRACTED]
 - [[checkpoints.py]] - `contains` [EXTRACTED]
-- [[main()_2]] - `calls` [EXTRACTED]
+- [[main()_1]] - `calls` [EXTRACTED]
 - [[pack()]] - `calls` [EXTRACTED]
-- [[read()]] - `calls` [EXTRACTED]
+- [[read()_1]] - `calls` [EXTRACTED]
 - [[write_json()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/main

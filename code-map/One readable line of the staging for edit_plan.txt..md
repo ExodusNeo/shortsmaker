@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/opener_crew.py"
 type: "rationale"
-community: "opener_crew.py"
+community: "plan"
 location: "L256"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/opener_crewpy
+  - community/plan
 ---
 
 # One readable line of the staging for edit_plan.txt.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[staging_text()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/opener_crewpy
+#graphify/rationale #graphify/EXTRACTED #community/plan

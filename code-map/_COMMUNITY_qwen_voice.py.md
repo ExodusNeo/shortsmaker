@@ -17,7 +17,7 @@ members: 24
 - [[Word matching for the Qwen voice's captions (no GPU, no models). Run…]] - rationale - tests/test_qwen_voice.py
 - [[align()]] - code - local_ai/qwen_voice.py
 - [[align_words()]] - code - local_ai/qwen_voice.py
-- [[main()_5]] - code - local_ai/qwen_voice.py
+- [[main()_4]] - code - local_ai/qwen_voice.py
 - [[one()_1]] - code - local_ai/qwen_voice.py
 - [[qwen_voice.py]] - code - local_ai/qwen_voice.py
 - [[say_number()]] - code - local_ai/qwen_voice.py
@@ -41,18 +41,18 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 6 edges to [[_COMMUNITY_test_full_scenes.py]]
+- 5 edges to [[_COMMUNITY_shutil]]
 - 4 edges to [[_COMMUNITY_re]]
-- 3 edges to [[_COMMUNITY_shutil]]
-- 2 edges to [[_COMMUNITY_json]]
-- 2 edges to [[_COMMUNITY_time]]
+- 4 edges to [[_COMMUNITY_pathlib]]
+- 3 edges to [[_COMMUNITY_json]]
 - 1 edge to [[_COMMUNITY_ffmpeg]]
 - 1 edge to [[_COMMUNITY_clean_full]]
-- 1 edge to [[_COMMUNITY_writing.py]]
+- 1 edge to [[_COMMUNITY_test_story.py]]
+- 1 edge to [[_COMMUNITY_test_full_scenes.py]]
 
 ## Top bridge nodes
-- [[qwen_voice.py]] - degree 18, connects to 5 communities
-- [[test_qwen_voice.py]] - degree 10, connects to 3 communities
-- [[unicodedata]] - degree 6, connects to 3 communities
-- [[main()_5]] - degree 4, connects to 2 communities
+- [[qwen_voice.py]] - degree 18, connects to 4 communities
+- [[unicodedata]] - degree 6, connects to 4 communities
+- [[test_qwen_voice.py]] - degree 10, connects to 2 communities
+- [[main()_4]] - degree 4, connects to 2 communities
 - [[align_words()]] - degree 10, connects to 1 community

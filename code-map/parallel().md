@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/opener_crew.py"
 type: "code"
-community: "opener_crew.py"
+community: "plan"
 location: "L80"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/opener_crewpy
+  - community/plan
 ---
 
 # parallel()
@@ -19,4 +19,4 @@ tags:
 - [[plan()]] - `calls` [EXTRACTED]
 - [[test_parallel_calls_are_capped()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/opener_crewpy
+#graphify/code #graphify/EXTRACTED #community/plan

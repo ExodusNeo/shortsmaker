@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/llm.py"
 type: "code"
-community: "run_agy"
+community: "ask_ai"
 location: "L29"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/run_agy
+  - community/ask_ai
 ---
 
 # argon_out()
@@ -16,4 +16,4 @@ tags:
 - [[llm.py]] - `contains` [EXTRACTED]
 - [[run_agy()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/run_agy
+#graphify/code #graphify/EXTRACTED #community/ask_ai

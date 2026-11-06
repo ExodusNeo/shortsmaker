@@ -12,7 +12,7 @@ tags:
 # plain()
 
 ## Connections
-- [[border()]] - `calls` [EXTRACTED]
+- [[border()_2]] - `calls` [EXTRACTED]
 - [[trim_borders()]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/trim_borders

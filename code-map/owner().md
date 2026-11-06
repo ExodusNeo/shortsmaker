@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/opener_crew.py"
 type: "code"
-community: "opener_crew.py"
+community: "assemble"
 location: "L669"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/opener_crewpy
+  - community/assemble
 ---
 
 # owner()
@@ -19,4 +19,4 @@ tags:
 - [[test_a_walk_goes_from_mark_to_mark()]] - `calls` [EXTRACTED]
 - [[test_problems_go_to_the_member_at_fault()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/opener_crewpy
+#graphify/code #graphify/EXTRACTED #community/assemble

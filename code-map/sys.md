@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "shutil"
+community: "pathlib"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/shutil
+  - community/pathlib
 ---
 
 # sys
@@ -15,6 +15,7 @@ tags:
 - [[catalog_pool()]] - `calls` [EXTRACTED]
 - [[channel_profiles.py]] - `imports` [EXTRACTED]
 - [[cli.py]] - `imports` [EXTRACTED]
+- [[drawn_opener.py]] - `imports` [EXTRACTED]
 - [[gen.py]] - `imports` [EXTRACTED]
 - [[llm.py]] - `imports` [EXTRACTED]
 - [[patching.py]] - `imports` [EXTRACTED]
@@ -57,4 +58,4 @@ tags:
 - [[test_style.py]] - `imports` [EXTRACTED]
 - [[test_topic_ideas.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/shutil
+#graphify/concept #graphify/EXTRACTED #community/pathlib

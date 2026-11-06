@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_quality.py"
 type: "code"
-community: "channel_profiles.py"
+community: "pathlib"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/channel_profilespy
+  - community/pathlib
 ---
 
 # test_quality.py
@@ -36,4 +36,4 @@ tags:
 - [[unittest_mock]] - `imports_from` [EXTRACTED]
 - [[writing.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/channel_profilespy
+#graphify/code #graphify/EXTRACTED #community/pathlib

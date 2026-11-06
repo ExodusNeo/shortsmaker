@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_opener_crew.py"
 type: "rationale"
-community: "test_opener_crew.py"
+community: "lint_person"
 location: "L206"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/test_opener_crewpy
+  - community/lint_person
 ---
 
 # Owner, 2026-11-06: a painter's own skirt polygon read as "a weird red box" and…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[test_a_person_is_the_kits_person_only()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/test_opener_crewpy
+#graphify/rationale #graphify/EXTRACTED #community/lint_person

@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_ai_modes.py"
 type: "rationale"
-community: "writing.py"
+community: "pathlib"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/writingpy
+  - community/pathlib
 ---
 
 # The nine menu choices and quota handover, using fake CLI replies only.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[test_ai_modes.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/writingpy
+#graphify/rationale #graphify/EXTRACTED #community/pathlib

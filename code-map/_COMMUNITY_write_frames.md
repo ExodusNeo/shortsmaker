@@ -27,7 +27,7 @@ SORT file.name ASC
 - 2 edges to [[_COMMUNITY_test_full_scenes.py]]
 - 1 edge to [[_COMMUNITY_render]]
 - 1 edge to [[_COMMUNITY_audio_library.py]]
-- 1 edge to [[_COMMUNITY_ClipReader]]
+- 1 edge to [[_COMMUNITY_frame_maker]]
 - 1 edge to [[_COMMUNITY_test_blender_plan.py]]
 
 ## Top bridge nodes

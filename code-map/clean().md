@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/opener3d.py"
 type: "code"
-community: "opener3d.py"
+community: "clean"
 location: "L350"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/opener3dpy
+  - community/clean
 ---
 
 # clean()
@@ -21,10 +21,10 @@ tags:
 - [[half_width()]] - `calls` [EXTRACTED]
 - [[held_of()]] - `calls` [EXTRACTED]
 - [[in_order()]] - `calls` [EXTRACTED]
-- [[inside()]] - `calls` [EXTRACTED]
+- [[inside()_1]] - `calls` [EXTRACTED]
 - [[lint_cutout()]] - `calls` [EXTRACTED]
 - [[load_part()]] - `calls` [EXTRACTED]
-- [[look()]] - `calls` [EXTRACTED]
+- [[look()_1]] - `calls` [EXTRACTED]
 - [[nudge()]] - `calls` [EXTRACTED]
 - [[num()]] - `calls` [EXTRACTED]
 - [[on_top()]] - `calls` [EXTRACTED]
@@ -49,4 +49,4 @@ tags:
 - [[word_time()]] - `calls` [EXTRACTED]
 - [[xz()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/opener3dpy
+#graphify/code #graphify/EXTRACTED #community/clean

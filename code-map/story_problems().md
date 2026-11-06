@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/writing.py"
 type: "code"
-community: "writing.py"
+community: "story_problems"
 location: "L470"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/writingpy
+  - community/story_problems
 ---
 
 # story_problems()
@@ -27,4 +27,4 @@ tags:
 - [[write_scripts()]] - `calls` [EXTRACTED]
 - [[writing.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/writingpy
+#graphify/code #graphify/EXTRACTED #community/story_problems

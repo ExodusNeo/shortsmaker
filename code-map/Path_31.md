@@ -1,18 +1,20 @@
 ---
 source_file: ""
 type: "code"
-community: "audio_library.py"
+community: "music_gain"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/audio_librarypy
+  - community/music_gain
 ---
 
 # Path
 
 ## Connections
-- [[audition_audio()]] - `references` [EXTRACTED]
-- [[download_audio_choices()]] - `references` [EXTRACTED]
-- [[review_audio_files()]] - `references` [EXTRACTED]
+- [[captions()_1]] - `references` [EXTRACTED]
+- [[music_gain()]] - `references` [EXTRACTED]
+- [[speak()]] - `references` [EXTRACTED]
+- [[story_sound()]] - `references` [EXTRACTED]
+- [[tts()_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/audio_librarypy
+#graphify/code #graphify/EXTRACTED #community/music_gain

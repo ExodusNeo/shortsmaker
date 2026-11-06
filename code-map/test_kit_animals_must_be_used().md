@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_drawn_opener.py"
 type: "code"
-community: "lint_cutout"
-location: "L96"
+community: "assemble"
+location: "L121"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/lint_cutout
+  - community/assemble
 ---
 
 # test_kit_animals_must_be_used()
@@ -15,4 +15,4 @@ tags:
 - [[missing_parts()]] - `calls` [EXTRACTED]
 - [[test_drawn_opener.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/lint_cutout
+#graphify/code #graphify/EXTRACTED #community/assemble

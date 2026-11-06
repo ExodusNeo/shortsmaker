@@ -27,13 +27,15 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 4 edges to [[_COMMUNITY_opener_crew.py]]
-- 3 edges to [[_COMMUNITY_opener3d.py]]
+- 3 edges to [[_COMMUNITY_shutil]]
 - 2 edges to [[_COMMUNITY_test_opener_crew.py]]
+- 2 edges to [[_COMMUNITY_opener3d.py]]
+- 1 edge to [[_COMMUNITY_plan]]
+- 1 edge to [[_COMMUNITY_clean]]
 - 1 edge to [[_COMMUNITY_re]]
 
 ## Top bridge nodes
-- [[layout()_1]] - degree 10, connects to 2 communities
-- [[word_time()]] - degree 5, connects to 2 communities
+- [[layout()_1]] - degree 10, connects to 3 communities
+- [[word_time()]] - degree 5, connects to 3 communities
 - [[foot_of()]] - degree 4, connects to 2 communities
 - [[lum()]] - degree 3, connects to 1 community

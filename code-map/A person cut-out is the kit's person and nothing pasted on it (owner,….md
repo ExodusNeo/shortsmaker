@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/opener_crew.py"
 type: "rationale"
-community: "opener_crew.py"
+community: "lint_person"
 location: "L434"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/opener_crewpy
+  - community/lint_person
 ---
 
 # A person cut-out is the kit's person and nothing pasted on it (owner,…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[lint_person()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/opener_crewpy
+#graphify/rationale #graphify/EXTRACTED #community/lint_person

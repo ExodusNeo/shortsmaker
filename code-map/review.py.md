@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/review.py"
 type: "code"
-community: "test_full_scenes.py"
+community: "pathlib"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_full_scenespy
+  - community/pathlib
 ---
 
 # review.py
@@ -20,6 +20,7 @@ tags:
 - [[cli.py]] - `imports_from` [EXTRACTED]
 - [[config.py]] - `imports_from` [EXTRACTED]
 - [[drawn_answer_problem()]] - `contains` [EXTRACTED]
+- [[drawn_opener.py]] - `imports_from` [EXTRACTED]
 - [[first_second_check()]] - `contains` [EXTRACTED]
 - [[fix_drawn_answer()]] - `contains` [EXTRACTED]
 - [[fix_opener_graphic()]] - `contains` [EXTRACTED]
@@ -74,4 +75,4 @@ tags:
 - [[weak_opener_graphic()]] - `contains` [EXTRACTED]
 - [[writing.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_full_scenespy
+#graphify/code #graphify/EXTRACTED #community/pathlib

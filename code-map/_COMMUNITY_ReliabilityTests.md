@@ -28,7 +28,7 @@ members: 24
 - [[dot-test_visual_review_failure_is_not_a_pass_and_success_replaces_status()]] - code - tests/test_reliability.py
 - [[dot-test_voice_cache_reuses_audio_but_invalidates_changed_text_voice_or_files()]] - code - tests/test_reliability.py
 - [[ReliabilityTests]] - code - tests/test_reliability.py
-- [[fail()]] - code - tests/test_reliability.py
+- [[fail()_1]] - code - tests/test_reliability.py
 - [[job()_1]] - code - tests/test_reliability.py
 - [[job()_2]] - code - tests/test_reliability.py
 - [[sheet()]] - code - tests/test_reliability.py
@@ -41,7 +41,7 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 1 edge to [[_COMMUNITY_test_full_scenes.py]]
+- 1 edge to [[_COMMUNITY_pathlib]]
 
 ## Top bridge nodes
 - [[ReliabilityTests]] - degree 20, connects to 1 community

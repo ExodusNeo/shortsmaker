@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[gen.py]] - `contains` [EXTRACTED]
 - [[item {text, voice, out (.wav)} - adds words start, end, word,…]] - `rationale_for` [EXTRACTED]
-- [[main()_1]] - `indirect_call` [INFERRED]
+- [[main()]] - `indirect_call` [INFERRED]
 - [[numpy]] - `calls` [EXTRACTED]
 - [[re]] - `calls` [EXTRACTED]
 

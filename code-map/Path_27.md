@@ -1,18 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: "run_agy"
+community: "retention.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/run_agy
+  - community/retentionpy
 ---
 
 # Path
 
 ## Connections
-- [[ask_ai()]] - `references` [EXTRACTED]
-- [[run_agy()]] - `references` [EXTRACTED]
-- [[run_codex()]] - `references` [EXTRACTED]
+- [[analyze()]] - `references` [EXTRACTED]
+- [[edit_metrics()]] - `references` [EXTRACTED]
+- [[load_metrics()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/run_agy
+#graphify/code #graphify/EXTRACTED #community/retentionpy

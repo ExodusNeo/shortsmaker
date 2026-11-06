@@ -12,7 +12,7 @@ tags:
 # .depth()
 
 ## Connections
-- [[clamp()_1]] - `calls` [EXTRACTED]
+- [[clamp()]] - `calls` [EXTRACTED]
 - [[k]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/coremjs

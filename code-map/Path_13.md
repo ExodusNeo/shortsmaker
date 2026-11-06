@@ -1,22 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "opener_crew.py"
+community: "first_sentence"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/opener_crewpy
+  - community/first_sentence
 ---
 
 # Path
 
 ## Connections
-- [[crew()]] - `references` [EXTRACTED]
-- [[make_part()]] - `references` [EXTRACTED]
-- [[make_part3d()]] - `references` [EXTRACTED]
-- [[make_parts()]] - `references` [EXTRACTED]
-- [[paint()]] - `references` [EXTRACTED]
-- [[plan()]] - `references` [EXTRACTED]
-- [[stage()]] - `references` [EXTRACTED]
+- [[log_short()]] - `references` [EXTRACTED]
+- [[vault_page()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/opener_crewpy
+#graphify/code #graphify/EXTRACTED #community/first_sentence

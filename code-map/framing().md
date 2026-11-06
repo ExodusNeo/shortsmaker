@@ -16,7 +16,7 @@ tags:
 - [[Opener3D()]] - `calls` [EXTRACTED]
 - [[Opener3D.tsx]] - `contains` [EXTRACTED]
 - [[aim()]] - `calls` [EXTRACTED]
-- [[clamp()_2]] - `calls` [EXTRACTED]
+- [[clamp()_1]] - `calls` [EXTRACTED]
 - [[ease()]] - `calls` [EXTRACTED]
 - [[targetOf()]] - `calls` [EXTRACTED]
 

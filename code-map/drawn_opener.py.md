@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/drawn_opener.py"
 type: "code"
-community: "time"
+community: "shutil"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/time
+  - community/shutil
 ---
 
 # drawn_opener.py
@@ -14,6 +14,7 @@ tags:
 ## Connections
 - [[Drawn openers (owner, 2026-10-30) scene 1 of an `opener animated` Short as a…]] - `rationale_for` [EXTRACTED]
 - [[__init__.py]] - `imports_from` [EXTRACTED]
+- [[ai_review()]] - `contains` [EXTRACTED]
 - [[available()]] - `contains` [EXTRACTED]
 - [[blind_read()]] - `contains` [EXTRACTED]
 - [[clean_code()]] - `contains` [EXTRACTED]
@@ -32,11 +33,14 @@ tags:
 - [[opener_crew.py]] - `imports_from` [EXTRACTED]
 - [[opener_role()]] - `contains` [EXTRACTED]
 - [[opening_rules.py]] - `imports_from` [EXTRACTED]
+- [[os]] - `imports` [EXTRACTED]
+- [[owner_check()]] - `contains` [EXTRACTED]
 - [[pathlib]] - `imports_from` [EXTRACTED]
 - [[picture()]] - `contains` [EXTRACTED]
 - [[plan_rules.py]] - `imports_from` [EXTRACTED]
 - [[re]] - `imports` [EXTRACTED]
 - [[review()]] - `contains` [EXTRACTED]
+- [[review.py]] - `imports_from` [EXTRACTED]
 - [[session.py]] - `imports_from` [EXTRACTED]
 - [[sheet_times()]] - `contains` [EXTRACTED]
 - [[short_render.py]] - `imports_from` [EXTRACTED]
@@ -44,6 +48,7 @@ tags:
 - [[spoils()]] - `contains` [EXTRACTED]
 - [[staged()]] - `contains` [EXTRACTED]
 - [[subprocess]] - `imports` [EXTRACTED]
+- [[sys]] - `imports` [EXTRACTED]
 - [[test_drawn_opener.py]] - `imports_from` [EXTRACTED]
 - [[test_opener3d.py]] - `imports_from` [EXTRACTED]
 - [[test_opener_crew.py]] - `imports_from` [EXTRACTED]
@@ -52,4 +57,4 @@ tags:
 - [[time]] - `imports` [EXTRACTED]
 - [[write()_1]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/time
+#graphify/code #graphify/EXTRACTED #community/shutil

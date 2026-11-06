@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/opener_crew.py"
 type: "rationale"
-community: "opener_crew.py"
+community: "assemble"
 location: "L670"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/opener_crewpy
+  - community/assemble
 ---
 
 # Which crew member a problem goes to: person:<name> (that painter, for how it is…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[owner()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/opener_crewpy
+#graphify/rationale #graphify/EXTRACTED #community/assemble

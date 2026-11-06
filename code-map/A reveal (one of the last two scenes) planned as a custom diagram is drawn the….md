@@ -2,7 +2,7 @@
 source_file: "tests/test_drawn_opener.py"
 type: "rationale"
 community: "test_drawn_opener.py"
-location: "L211"
+location: "L236"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED

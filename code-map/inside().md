@@ -1,19 +1,17 @@
 ---
-source_file: "shortsmaker/opener3d.py"
+source_file: "tests/guarded.test.ts"
 type: "code"
-community: "opener3d.py"
-location: "L327"
+community: "guarded.tsx"
+location: "L33"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/opener3dpy
+  - community/guardedtsx
 ---
 
 # inside()
 
 ## Connections
-- [[The house or shop a floor cut-out stands inside of (a live McLean draft put the…]] - `rationale_for` [EXTRACTED]
-- [[clean()]] - `calls` [EXTRACTED]
-- [[opener3d.py]] - `contains` [EXTRACTED]
+- [[guarded.test.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/opener3dpy
+#graphify/code #graphify/EXTRACTED #community/guardedtsx

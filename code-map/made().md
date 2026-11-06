@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/opener_crew.py"
 type: "code"
-community: "opener_crew.py"
+community: "plan"
 location: "L69"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/opener_crewpy
+  - community/plan
 ---
 
 # made()
@@ -16,4 +16,4 @@ tags:
 - [[make_parts()]] - `calls` [EXTRACTED]
 - [[opener_crew.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/opener_crewpy
+#graphify/code #graphify/EXTRACTED #community/plan

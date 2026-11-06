@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/drawn_opener.py"
 type: "code"
-community: "lint_cutout"
-location: "L86"
+community: "assemble"
+location: "L88"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/lint_cutout
+  - community/assemble
 ---
 
 # missing_parts()
@@ -21,4 +21,4 @@ tags:
 - [[test_hold_counts_as_drawing_the_letter_and_scenery_stays_3d()]] - `calls` [EXTRACTED]
 - [[test_kit_animals_must_be_used()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/lint_cutout
+#graphify/code #graphify/EXTRACTED #community/assemble

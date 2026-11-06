@@ -12,6 +12,6 @@ tags:
 # The sound-off test's two calls (drawn_opener.blind_read) pass, so these tests…
 
 ## Connections
-- [[blind_ok()]] - `rationale_for` [EXTRACTED]
+- [[blind_ok()_1]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/test_opener_crewpy

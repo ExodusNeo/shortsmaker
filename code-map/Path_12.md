@@ -1,18 +1,22 @@
 ---
 source_file: ""
 type: "code"
-community: "ffmpeg"
+community: "plan"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ffmpeg
+  - community/plan
 ---
 
 # Path
 
 ## Connections
-- [[duration()]] - `references` [EXTRACTED]
-- [[ffmpeg()]] - `references` [EXTRACTED]
-- [[write_json()]] - `references` [EXTRACTED]
+- [[crew()]] - `references` [EXTRACTED]
+- [[make_part()]] - `references` [EXTRACTED]
+- [[make_part3d()]] - `references` [EXTRACTED]
+- [[make_parts()]] - `references` [EXTRACTED]
+- [[paint()]] - `references` [EXTRACTED]
+- [[plan()]] - `references` [EXTRACTED]
+- [[stage()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ffmpeg
+#graphify/code #graphify/EXTRACTED #community/plan

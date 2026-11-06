@@ -12,7 +12,7 @@ tags:
 # fake()
 
 ## Connections
-- [[blind_ok()]] - `calls` [EXTRACTED]
+- [[blind_ok()_1]] - `calls` [EXTRACTED]
 - [[test_a_failed_part_falls_back_to_its_substitute()]] - `calls` [EXTRACTED]
 - [[test_a_made_part_is_kept_and_reused_with_no_ai()]] - `calls` [EXTRACTED]
 - [[test_a_new_3d_thing_is_built_checked_and_kept()]] - `calls` [EXTRACTED]

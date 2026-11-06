@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_opener3d.py"
 type: "rationale"
-community: "opener3d.py"
+community: "clean"
 location: "L33"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/opener3dpy
+  - community/clean
 ---
 
 # A small room stage: a desk, and each named person on the given relation.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[room()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/opener3dpy
+#graphify/rationale #graphify/EXTRACTED #community/clean

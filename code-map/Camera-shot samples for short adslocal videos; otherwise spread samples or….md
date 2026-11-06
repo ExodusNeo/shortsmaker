@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/footage.py"
 type: "rationale"
-community: "hashlib"
+community: "json"
 location: "L242"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/hashlib
+  - community/json
 ---
 
 # Camera-shot samples for short ads/local videos; otherwise spread samples or…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[film_frames()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/hashlib
+#graphify/rationale #graphify/EXTRACTED #community/json

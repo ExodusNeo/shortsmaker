@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/writing.py"
 type: "rationale"
-community: "contact_sheets"
+community: "code_custom_scenes"
 location: "L533"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/contact_sheets
+  - community/code_custom_scenes
 ---
 
 # The planner plans the edit (footage searches, shots, camera, graphics, person…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[direct_scripts()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/contact_sheets
+#graphify/rationale #graphify/EXTRACTED #community/code_custom_scenes

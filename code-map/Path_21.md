@@ -11,9 +11,11 @@ tags:
 # Path
 
 ## Connections
-- [[finish_short()]] - `references` [EXTRACTED]
-- [[record_failure()]] - `references` [EXTRACTED]
-- [[resume_runs()]] - `references` [EXTRACTED]
-- [[use_picture_from()]] - `references` [EXTRACTED]
+- [[begin()]] - `references` [EXTRACTED]
+- [[context()]] - `references` [EXTRACTED]
+- [[pending()]] - `references` [EXTRACTED]
+- [[read()_1]] - `references` [EXTRACTED]
+- [[save_context()]] - `references` [EXTRACTED]
+- [[update()]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/main

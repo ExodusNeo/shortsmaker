@@ -13,6 +13,6 @@ tags:
 
 ## Connections
 - [[Pen]] - `method` [EXTRACTED]
-- [[clamp()_1]] - `calls` [EXTRACTED]
+- [[clamp()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/coremjs

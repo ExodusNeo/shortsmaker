@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_story.py"
 type: "code"
-community: "writing.py"
+community: "test_story.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/writingpy
+  - community/test_storypy
 ---
 
 # test_story.py
@@ -23,7 +23,7 @@ tags:
 - [[media_tools.py]] - `imports_from` [EXTRACTED]
 - [[pathlib]] - `imports_from` [EXTRACTED]
 - [[plan_rules.py]] - `imports_from` [EXTRACTED]
-- [[read()_1]] - `contains` [EXTRACTED]
+- [[read()]] - `contains` [EXTRACTED]
 - [[rules.py]] - `imports_from` [EXTRACTED]
 - [[scenes()]] - `contains` [EXTRACTED]
 - [[session.py]] - `imports_from` [EXTRACTED]
@@ -54,4 +54,4 @@ tags:
 - [[twist_short()]] - `contains` [EXTRACTED]
 - [[writing.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/writingpy
+#graphify/code #graphify/EXTRACTED #community/test_storypy

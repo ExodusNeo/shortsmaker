@@ -2,7 +2,7 @@
 source_file: "tests/test_pictures_first.py"
 type: "code"
 community: "gather_pool"
-location: "L41"
+location: "L344"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,9 +12,8 @@ tags:
 # .__enter__()
 
 ## Connections
-- [[film()]] - `calls` [EXTRACTED]
-- [[owner()_1]] - `calls` [EXTRACTED]
-- [[still()]] - `calls` [EXTRACTED]
-- [[stubbed]] - `method` [EXTRACTED]
+- [[fake_ai]] - `calls` [EXTRACTED]
+- [[picking]] - `method` [EXTRACTED]
+- [[stubbed]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/gather_pool

@@ -1,35 +1,24 @@
 ---
 type: community
-members: 22
+members: 11
 ---
 
 # fetch
 
-**Members:** 22 nodes
+**Members:** 11 nodes
 
 ## Members
-- [[Keep titles that share a meaningful word with the query (including 2-3 letter…]] - rationale - shortsmaker/image_sources.py
-- [[NASA photos (public domain), when the story touches space, flight or science.]] - rationale - shortsmaker/image_sources.py
-- [[NASA videos (public domain), as their mediumsmall MP4 renditions.]] - rationale - shortsmaker/footage.py
-- [[NASA's own media is public domain, but its library also holds partner and…]] - rationale - shortsmaker/image_sources.py
-- [[Pixabay stock video free to use in videos, no credit needed (Pixabay Content…]] - rationale - shortsmaker/footage.py
+- [[GET from Openverse, spaced to its anonymous limit (20 requests a minute). None…]] - rationale - shortsmaker/image_sources.py
+- [[GET from Wikimedia, spaced `gap` seconds apart, with a short backoff on rate…]] - rationale - shortsmaker/image_sources.py
+- [[Images from museums, archives and photographers through Openverse (no key),…]] - rationale - shortsmaker/image_sources.py
 - [[Still images, magazinemanual scans, art and archival photos from the Internet…]] - rationale - shortsmaker/image_sources.py
-- [[The Oxford pool (2026-10-26) got stock videos that only shared a first name or…]] - rationale - tests/test_pictures_first.py
-- [[Videos across the entire Internet Archive (historical film, retro gaming,…]] - rationale - shortsmaker/footage.py
-- [[archive_ad_films()]] - code - shortsmaker/footage.py
-- [[archive_films()]] - code - shortsmaker/footage.py
+- [[Wikimedia files via wm_get() (contact User-Agent, spacing, cache), Openverse…]] - rationale - shortsmaker/image_sources.py
 - [[archive_images()]] - code - shortsmaker/image_sources.py
-- [[duke_films()]] - code - shortsmaker/footage.py
 - [[fetch()]] - code - shortsmaker/media_tools.py
-- [[nasa_credit()]] - code - shortsmaker/image_sources.py
-- [[nasa_films()]] - code - shortsmaker/footage.py
-- [[nasa_images()]] - code - shortsmaker/image_sources.py
-- [[nasa_search()]] - code - shortsmaker/image_sources.py
-- [[on_topic()]] - code - shortsmaker/image_sources.py
-- [[pixabay_films()]] - code - shortsmaker/footage.py
-- [[test_nasa_partner_media_is_credited()]] - code - tests/test_full_scenes.py
-- [[test_on_topic_ignores_a_lone_shared_name()]] - code - tests/test_pictures_first.py
-- [[test_pixabay_keeps_only_on_topic_videos()]] - code - tests/test_pictures_first.py
+- [[get_image()]] - code - shortsmaker/image_sources.py
+- [[openverse_images()]] - code - shortsmaker/image_sources.py
+- [[ov_get()]] - code - shortsmaker/image_sources.py
+- [[wm_get()]] - code - shortsmaker/image_sources.py
 
 ## Live Query (requires Dataview plugin)
 
@@ -39,25 +28,27 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 12 edges to [[_COMMUNITY_test_full_scenes.py]]
-- 3 edges to [[_COMMUNITY_clean_full]]
+- 5 edges to [[_COMMUNITY_test_full_scenes.py]]
+- 3 edges to [[_COMMUNITY_on_topic]]
 - 3 edges to [[_COMMUNITY_json]]
-- 3 edges to [[_COMMUNITY_get_image]]
-- 2 edges to [[_COMMUNITY_hashlib]]
-- 2 edges to [[_COMMUNITY_brand_images]]
 - 2 edges to [[_COMMUNITY_gather_pool]]
-- 2 edges to [[_COMMUNITY_extra_sources.py]]
-- 2 edges to [[_COMMUNITY_test_pictures_first.py]]
-- 1 edge to [[_COMMUNITY_ov_get]]
-- 1 edge to [[_COMMUNITY_ffmpeg]]
-- 1 edge to [[_COMMUNITY_channel_profiles.py]]
-- 1 edge to [[_COMMUNITY_re]]
-- 1 edge to [[_COMMUNITY_time]]
-- 1 edge to [[_COMMUNITY_audio_library.py]]
+- 2 edges to [[_COMMUNITY_wm_files]]
+- 1 edge to [[_COMMUNITY_drawn_thumbnail]]
+- 1 edge to [[_COMMUNITY_clean_full]]
+- 1 edge to [[_COMMUNITY_choose_images]]
+- 1 edge to [[_COMMUNITY_full_props]]
+- 1 edge to [[_COMMUNITY_prepare_topic]]
+- 1 edge to [[_COMMUNITY_audio_mix.py]]
+- 1 edge to [[_COMMUNITY_article_text]]
+- 1 edge to [[_COMMUNITY_download_audio_choices]]
+- 1 edge to [[_COMMUNITY_brand_images]]
+- 1 edge to [[_COMMUNITY_extra_sources.py]]
+- 1 edge to [[_COMMUNITY_archive_films]]
+- 1 edge to [[_COMMUNITY_pathlib]]
 
 ## Top bridge nodes
-- [[fetch()]] - degree 14, connects to 8 communities
-- [[on_topic()]] - degree 11, connects to 4 communities
-- [[archive_films()]] - degree 9, connects to 4 communities
-- [[pixabay_films()]] - degree 8, connects to 4 communities
-- [[nasa_films()]] - degree 8, connects to 3 communities
+- [[fetch()]] - degree 14, connects to 7 communities
+- [[get_image()]] - degree 9, connects to 5 communities
+- [[wm_get()]] - degree 8, connects to 4 communities
+- [[archive_images()]] - degree 6, connects to 4 communities
+- [[openverse_images()]] - degree 4, connects to 2 communities

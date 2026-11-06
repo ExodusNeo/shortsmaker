@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[dot-person()]] - `calls` [EXTRACTED]
-- [[clamp()_1]] - `calls` [EXTRACTED]
+- [[clamp()]] - `calls` [EXTRACTED]
 - [[k]] - `method` [EXTRACTED]
 - [[makeKit()]] - `calls` [EXTRACTED]
 

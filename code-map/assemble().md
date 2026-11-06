@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/opener_crew.py"
 type: "code"
-community: "test_opener_crew.py"
+community: "assemble"
 location: "L609"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_opener_crewpy
+  - community/assemble
 ---
 
 # assemble()
@@ -24,4 +24,4 @@ tags:
 - [[test_the_one_acting_stands_by_what_they_act_on_and_holds_3d_objects()]] - `calls` [EXTRACTED]
 - [[test_the_stagers_sign_effects_are_put_in_by_code()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_opener_crewpy
+#graphify/code #graphify/EXTRACTED #community/assemble

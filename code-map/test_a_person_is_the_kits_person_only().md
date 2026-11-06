@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_opener_crew.py"
 type: "code"
-community: "test_opener_crew.py"
+community: "lint_person"
 location: "L205"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_opener_crewpy
+  - community/lint_person
 ---
 
 # test_a_person_is_the_kits_person_only()
@@ -16,4 +16,4 @@ tags:
 - [[lint_person()]] - `calls` [EXTRACTED]
 - [[test_opener_crew.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_opener_crewpy
+#graphify/code #graphify/EXTRACTED #community/lint_person

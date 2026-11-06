@@ -1,35 +1,26 @@
 ---
-source_file: "blender/build_scene.py"
+source_file: "colab/h3_run.py"
 type: "code"
-community: "main"
-location: "L70"
+community: "h3_run.py"
+location: "L89"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/main
+  - community/h3_runpy
 ---
 
 # main()
 
 ## Connections
-- [[dot-beat()]] - `calls` [INFERRED]
-- [[dot-fallen()]] - `calls` [INFERRED]
-- [[dot-falls()]] - `calls` [INFERRED]
-- [[dot-play()]] - `calls` [INFERRED]
-- [[dot-reset()]] - `calls` [INFERRED]
-- [[dot-ride_along()]] - `calls` [INFERRED]
-- [[Failure]] - `calls` [EXTRACTED]
-- [[Shots]] - `calls` [EXTRACTED]
-- [[build()]] - `calls` [EXTRACTED]
-- [[build_scene.py]] - `contains` [EXTRACTED]
-- [[dress()]] - `calls` [EXTRACTED]
-- [[fastener()]] - `calls` [EXTRACTED]
-- [[focus_object()]] - `calls` [EXTRACTED]
+- [[call()]] - `calls` [EXTRACTED]
+- [[fit_start()]] - `calls` [EXTRACTED]
+- [[frames()]] - `calls` [EXTRACTED]
+- [[graph()]] - `calls` [EXTRACTED]
+- [[h3_run.py]] - `contains` [EXTRACTED]
 - [[json]] - `calls` [EXTRACTED]
-- [[keyloc()]] - `calls` [EXTRACTED]
-- [[keyvis()]] - `calls` [EXTRACTED]
-- [[label()]] - `calls` [EXTRACTED]
-- [[material()]] - `calls` [EXTRACTED]
-- [[setup()]] - `calls` [EXTRACTED]
+- [[saved_file()]] - `calls` [EXTRACTED]
+- [[shutil]] - `calls` [EXTRACTED]
+- [[time]] - `calls` [EXTRACTED]
+- [[zipfile]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/main
+#graphify/code #graphify/EXTRACTED #community/h3_runpy

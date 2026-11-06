@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/writing.py"
 type: "code"
-community: "writing.py"
+community: "pathlib"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/writingpy
+  - community/pathlib
 ---
 
 # writing.py
@@ -25,7 +25,7 @@ tags:
 - [[config.py]] - `imports_from` [EXTRACTED]
 - [[direct_scripts()]] - `contains` [EXTRACTED]
 - [[edit_scripts()]] - `contains` [EXTRACTED]
-- [[fact_check()_1]] - `contains` [EXTRACTED]
+- [[fact_check()]] - `contains` [EXTRACTED]
 - [[image_sources.py]] - `imports_from` [EXTRACTED]
 - [[json]] - `imports` [EXTRACTED]
 - [[length_plan()]] - `contains` [EXTRACTED]
@@ -62,4 +62,4 @@ tags:
 - [[urllib_parse]] - `imports` [EXTRACTED]
 - [[write_scripts()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/writingpy
+#graphify/code #graphify/EXTRACTED #community/pathlib

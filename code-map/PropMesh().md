@@ -18,7 +18,7 @@ tags:
 - [[Opener3D()]] - `calls` [EXTRACTED]
 - [[Opener3D.tsx]] - `contains` [EXTRACTED]
 - [[Patch()]] - `calls` [EXTRACTED]
-- [[clamp()_2]] - `calls` [EXTRACTED]
+- [[clamp()_1]] - `calls` [EXTRACTED]
 - [[rand()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Opener3Dtsx

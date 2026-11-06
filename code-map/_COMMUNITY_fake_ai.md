@@ -8,7 +8,7 @@ members: 16
 **Members:** 16 nodes
 
 ## Members
-- [[dot-__exit__()]] - code - tests/test_pictures_first.py
+- [[dot-__exit__()_2]] - code - tests/test_pictures_first.py
 - [[dot-__init__()_8]] - code - tests/test_pictures_first.py
 - [[Age at planning time, explicitly distinct from the unknown metrics collection…]] - rationale - shortsmaker/logbook.py
 - [[Rewrite titledescriptiontags around real YouTube search phrases; add a pinned…]] - rationale - shortsmaker/seo.py
@@ -34,21 +34,20 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 9 edges to [[_COMMUNITY_test_pictures_first.py]]
-- 5 edges to [[_COMMUNITY_channel_profiles.py]]
-- 3 edges to [[_COMMUNITY_test_topic_ideas.py]]
+- 4 edges to [[_COMMUNITY_pathlib]]
+- 3 edges to [[_COMMUNITY_write_scripts]]
+- 3 edges to [[_COMMUNITY_audio_mix.py]]
+- 3 edges to [[_COMMUNITY_re]]
 - 3 edges to [[_COMMUNITY_main_1]]
-- 2 edges to [[_COMMUNITY_write_scripts]]
-- 2 edges to [[_COMMUNITY_re]]
 - 2 edges to [[_COMMUNITY_json]]
 - 1 edge to [[_COMMUNITY_gather_pool]]
-- 1 edge to [[_COMMUNITY_owner]]
-- 1 edge to [[_COMMUNITY_writing.py]]
+- 1 edge to [[_COMMUNITY_first_sentence]]
 - 1 edge to [[_COMMUNITY_ask_ai]]
-- 1 edge to [[_COMMUNITY_test_first_second.py]]
+- 1 edge to [[_COMMUNITY_retention.py]]
 
 ## Top bridge nodes
-- [[fake_ai]] - degree 18, connects to 5 communities
-- [[seo_pass()]] - degree 16, connects to 5 communities
+- [[seo_pass()]] - degree 16, connects to 7 communities
+- [[fake_ai]] - degree 18, connects to 4 communities
 - [[logbook_results()]] - degree 7, connects to 3 communities
 - [[entry_age()]] - degree 5, connects to 2 communities
 - [[test_seo_pass_empty_no_ai()]] - degree 3, connects to 1 community

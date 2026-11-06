@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "channel_profiles.py"
+community: "pathlib"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/channel_profilespy
+  - community/pathlib
 ---
 
 # logging
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[channel_profiles.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/channel_profilespy
+#graphify/concept #graphify/EXTRACTED #community/pathlib
