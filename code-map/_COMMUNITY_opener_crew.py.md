@@ -13,7 +13,7 @@ members: 38
 - [[How long since `began` (time.monotonic()), as 4m12s.]] - rationale - shortsmaker/drawn_opener.py
 - [[One painter a person's or drawn thing's cut-out ({name, w, h, height, frames,…]] - rationale - shortsmaker/opener_crew.py
 - [[One readable line of the staging for edit_plan.txt.]] - rationale - shortsmaker/opener_crew.py
-- [[Path_6]] - code
+- [[Path_8]] - code
 - [[Runs the zero-argument callables in `jobs`, MAX_PARALLEL at a time; their…]] - rationale - shortsmaker/opener_crew.py
 - [[Stage, make parts, paint, lay out (code), render, review and route fixes a…]] - rationale - shortsmaker/opener_crew.py
 - [[The KIT.md sections whose headings start with these words (a painter needs…]] - rationale - shortsmaker/opener_crew.py
@@ -56,23 +56,23 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 17 edges to [[_COMMUNITY_test_opener_crew.py]]
-- 11 edges to [[_COMMUNITY_json]]
 - 10 edges to [[_COMMUNITY_drawn_opener.py]]
+- 10 edges to [[_COMMUNITY_json]]
+- 6 edges to [[_COMMUNITY_re]]
 - 6 edges to [[_COMMUNITY_opener3d.py]]
-- 6 edges to [[_COMMUNITY_test_full_scenes.py]]
-- 5 edges to [[_COMMUNITY_time]]
+- 6 edges to [[_COMMUNITY_pathlib]]
 - 4 edges to [[_COMMUNITY_ask_ai]]
 - 3 edges to [[_COMMUNITY_layout]]
 - 3 edges to [[_COMMUNITY_render_1]]
-- 2 edges to [[_COMMUNITY_render]]
+- 2 edges to [[_COMMUNITY_test_full_scenes.py]]
 - 2 edges to [[_COMMUNITY_shutil]]
 - 1 edge to [[_COMMUNITY_lint_cutout]]
 - 1 edge to [[_COMMUNITY_edit_plan]]
-- 1 edge to [[_COMMUNITY_gpu.py]]
+- 1 edge to [[_COMMUNITY_config.py]]
 
 ## Top bridge nodes
 - [[opener_crew.py]] - degree 38, connects to 10 communities
 - [[plan()]] - degree 22, connects to 6 communities
-- [[make_part()]] - degree 13, connects to 6 communities
+- [[make_part()]] - degree 13, connects to 5 communities
 - [[paint()]] - degree 14, connects to 4 communities
 - [[stage()]] - degree 11, connects to 4 communities

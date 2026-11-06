@@ -12,7 +12,7 @@ tags:
 # grade()
 
 ## Connections
-- [[frame()_1]] - `calls` [EXTRACTED]
+- [[frame()_2]] - `calls` [EXTRACTED]
 - [[run.mjs]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/kitmjs

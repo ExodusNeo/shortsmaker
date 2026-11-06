@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/audio_library.py"
 type: "code"
-community: "render"
+community: "audio_library.py"
 location: "L21"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/render
+  - community/audio_librarypy
 ---
 
 # audio_metadata()
@@ -24,4 +24,4 @@ tags:
 - [[track_start()]] - `calls` [EXTRACTED]
 - [[usable_audio()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/render
+#graphify/code #graphify/EXTRACTED #community/audio_librarypy

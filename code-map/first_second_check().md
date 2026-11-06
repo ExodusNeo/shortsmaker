@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/review.py"
 type: "code"
-community: "finish_render"
+community: "test_first_second.py"
 location: "L239"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/finish_render
+  - community/test_first_secondpy
 ---
 
 # first_second_check()
@@ -16,7 +16,7 @@ tags:
 - [[Would a stranger scrolling the Shorts feed stop here Stayed-to-watch is…]] - `rationale_for` [EXTRACTED]
 - [[ask_ai()]] - `calls` [EXTRACTED]
 - [[capture_prompts()]] - `calls` [EXTRACTED]
-- [[ffmpeg()]] - `calls` [EXTRACTED]
+- [[ffmpeg()_1]] - `calls` [EXTRACTED]
 - [[finish_render()]] - `calls` [EXTRACTED]
 - [[first_sentence()]] - `calls` [EXTRACTED]
 - [[full_summary()]] - `calls` [EXTRACTED]
@@ -31,4 +31,4 @@ tags:
 - [[test_failed_preview_clears_previous_opener_score()]] - `calls` [EXTRACTED]
 - [[test_opener_prompt_shows_each_scenes_line_and_picture()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/finish_render
+#graphify/code #graphify/EXTRACTED #community/test_first_secondpy

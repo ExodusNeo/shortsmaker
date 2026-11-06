@@ -49,6 +49,6 @@ tags:
 - [[test_opening_rules.py]] - `imports_from` [EXTRACTED]
 - [[test_reliability.py]] - `imports_from` [EXTRACTED]
 - [[time]] - `imports` [EXTRACTED]
-- [[write()]] - `contains` [EXTRACTED]
+- [[write()_1]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/drawn_openerpy

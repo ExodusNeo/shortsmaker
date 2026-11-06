@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/audio_library.py"
 type: "code"
-community: "render"
+community: "audio_library.py"
 location: "L66"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/render
+  - community/audio_librarypy
 ---
 
 # record_audio()
@@ -15,7 +15,7 @@ tags:
 - [[Path_29]] - `references` [EXTRACTED]
 - [[audio_library.py]] - `contains` [EXTRACTED]
 - [[history_read()]] - `calls` [EXTRACTED]
-- [[render()_3]] - `calls` [EXTRACTED]
+- [[render()]] - `calls` [EXTRACTED]
 - [[write_json()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/render
+#graphify/code #graphify/EXTRACTED #community/audio_librarypy

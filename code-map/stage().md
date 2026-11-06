@@ -12,7 +12,7 @@ tags:
 # stage()
 
 ## Connections
-- [[Path_6]] - `references` [EXTRACTED]
+- [[Path_8]] - `references` [EXTRACTED]
 - [[The stager's plan (shortopener_staging, reused when there is one), or…]] - `rationale_for` [EXTRACTED]
 - [[ask_ai()]] - `calls` [EXTRACTED]
 - [[check_staging()]] - `calls` [EXTRACTED]

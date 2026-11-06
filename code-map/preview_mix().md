@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/audio_library.py"
 type: "code"
-community: "render"
+community: "audio_library.py"
 location: "L245"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/render
+  - community/audio_librarypy
 ---
 
 # preview_mix()
@@ -15,9 +15,9 @@ tags:
 - [[Path_29]] - `references` [EXTRACTED]
 - [[audio_library.py]] - `contains` [EXTRACTED]
 - [[ducking_filter()]] - `calls` [EXTRACTED]
-- [[ffmpeg()]] - `calls` [EXTRACTED]
+- [[ffmpeg()_1]] - `calls` [EXTRACTED]
 - [[media_command()]] - `calls` [EXTRACTED]
 - [[music_gain()]] - `calls` [EXTRACTED]
-- [[render()_3]] - `calls` [EXTRACTED]
+- [[render()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/render
+#graphify/code #graphify/EXTRACTED #community/audio_librarypy

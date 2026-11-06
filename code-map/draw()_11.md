@@ -1,17 +1,19 @@
 ---
-source_file: "drawn/parts/thing/uprooted_potatoes.mjs"
+source_file: "remotion/src/style/looks/Silent.tsx"
 type: "code"
-community: "uprooted_potatoes.mjs"
-location: "L2"
+community: "Halftone.tsx"
+location: "L8"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/uprooted_potatoesmjs
+  - community/Halftonetsx
 ---
 
 # draw()
 
 ## Connections
-- [[uprooted_potatoes.mjs]] - `contains` [EXTRACTED]
+- [[Silent()]] - `indirect_call` [INFERRED]
+- [[Silent.tsx]] - `contains` [EXTRACTED]
+- [[drawCover()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/uprooted_potatoesmjs
+#graphify/code #graphify/EXTRACTED #community/Halftonetsx

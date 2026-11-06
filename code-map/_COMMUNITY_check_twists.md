@@ -27,7 +27,7 @@ SORT file.name ASC
 - 1 edge to [[_COMMUNITY_write_scripts]]
 - 1 edge to [[_COMMUNITY_ask_ai]]
 - 1 edge to [[_COMMUNITY_json]]
-- 1 edge to [[_COMMUNITY_test_full_scenes.py]]
+- 1 edge to [[_COMMUNITY_config.py]]
 
 ## Top bridge nodes
 - [[check_twists()]] - degree 8, connects to 4 communities

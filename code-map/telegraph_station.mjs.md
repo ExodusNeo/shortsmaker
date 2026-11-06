@@ -12,7 +12,7 @@ tags:
 # telegraph_station.mjs
 
 ## Connections
-- [[draw()_10]] - `contains` [EXTRACTED]
-- [[grip_4]] - `contains` [EXTRACTED]
+- [[draw()_12]] - `contains` [EXTRACTED]
+- [[grip_6]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/telegraph_stationmjs

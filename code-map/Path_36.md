@@ -1,21 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: "drawn_opener.py"
+community: "ffmpeg"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/drawn_openerpy
+  - community/ffmpeg
 ---
 
 # Path
 
 ## Connections
-- [[blind_read()]] - `references` [EXTRACTED]
-- [[look_dir()]] - `references` [EXTRACTED]
-- [[make_opener()]] - `references` [EXTRACTED]
-- [[node_run()]] - `references` [EXTRACTED]
-- [[review()]] - `references` [EXTRACTED]
-- [[write()]] - `references` [EXTRACTED]
+- [[duration()]] - `references` [EXTRACTED]
+- [[ffmpeg()_1]] - `references` [EXTRACTED]
+- [[write_json()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/drawn_openerpy
+#graphify/code #graphify/EXTRACTED #community/ffmpeg

@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "json"
+community: "shutil"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/json
+  - community/shutil
 ---
 
 # threading
@@ -15,4 +15,4 @@ tags:
 - [[media_library.py]] - `imports` [EXTRACTED]
 - [[test_opener_crew.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/json
+#graphify/concept #graphify/EXTRACTED #community/shutil

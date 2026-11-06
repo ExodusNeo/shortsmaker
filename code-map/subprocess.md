@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "render"
+community: "pathlib"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/render
+  - community/pathlib
 ---
 
 # subprocess
@@ -20,7 +20,7 @@ tags:
 - [[duration()]] - `calls` [EXTRACTED]
 - [[edit_project.py]] - `imports` [EXTRACTED]
 - [[extra_sources.py]] - `imports` [EXTRACTED]
-- [[ffmpeg()]] - `calls` [EXTRACTED]
+- [[ffmpeg()_1]] - `calls` [EXTRACTED]
 - [[fills_frame()]] - `calls` [EXTRACTED]
 - [[film_piece()]] - `calls` [EXTRACTED]
 - [[footage.py]] - `imports` [EXTRACTED]
@@ -47,7 +47,7 @@ tags:
 - [[qwen_voice.py]] - `imports` [EXTRACTED]
 - [[remotion_render.py]] - `imports` [EXTRACTED]
 - [[render()_5]] - `calls` [EXTRACTED]
-- [[render()_3]] - `calls` [EXTRACTED]
+- [[render()]] - `calls` [EXTRACTED]
 - [[render_full.py]] - `imports` [EXTRACTED]
 - [[render_style.py]] - `imports` [EXTRACTED]
 - [[review.py]] - `imports` [EXTRACTED]
@@ -70,4 +70,4 @@ tags:
 - [[video_encoder()]] - `calls` [EXTRACTED]
 - [[voicestudio_up()]] - `calls` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/render
+#graphify/concept #graphify/EXTRACTED #community/pathlib

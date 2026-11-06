@@ -1,20 +1,20 @@
 ---
-source_file: "local_ai/qwen_voice.py"
+source_file: "tests/render_opener_preview.py"
 type: "code"
-community: "qwen_voice.py"
-location: "L181"
+community: "code_custom_scenes"
+location: "L10"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/qwen_voicepy
+  - community/code_custom_scenes
 ---
 
 # main()
 
 ## Connections
-- [[align()]] - `calls` [EXTRACTED]
-- [[json]] - `calls` [EXTRACTED]
-- [[qwen_voice.py]] - `contains` [EXTRACTED]
-- [[time]] - `calls` [EXTRACTED]
+- [[make_paper()]] - `calls` [EXTRACTED]
+- [[preview_custom()]] - `calls` [EXTRACTED]
+- [[render_opener_preview.py]] - `contains` [EXTRACTED]
+- [[tsc_check()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/qwen_voicepy
+#graphify/code #graphify/EXTRACTED #community/code_custom_scenes

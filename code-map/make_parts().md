@@ -12,7 +12,7 @@ tags:
 # make_parts()
 
 ## Connections
-- [[Path_6]] - `references` [EXTRACTED]
+- [[Path_8]] - `references` [EXTRACTED]
 - [[The kit scout and part makers draws each new part the staging needs (in…]] - `rationale_for` [EXTRACTED]
 - [[crew()]] - `calls` [EXTRACTED]
 - [[kit_hats()]] - `calls` [EXTRACTED]

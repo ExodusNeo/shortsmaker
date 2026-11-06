@@ -1,17 +1,17 @@
 ---
-source_file: "drawn/parts/thing/uprooted_potatoes.mjs"
+source_file: "drawn/parts/thing/potato_mouthful.mjs"
 type: "code"
-community: "uprooted_potatoes.mjs"
+community: "potato_mouthful.mjs"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/uprooted_potatoesmjs
+  - community/potato_mouthfulmjs
 ---
 
 # grip
 
 ## Connections
-- [[uprooted_potatoes.mjs]] - `contains` [EXTRACTED]
+- [[potato_mouthful.mjs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/uprooted_potatoesmjs
+#graphify/code #graphify/EXTRACTED #community/potato_mouthfulmjs

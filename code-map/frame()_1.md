@@ -1,21 +1,22 @@
 ---
-source_file: "drawn/run.mjs"
+source_file: "shortsmaker/frame_render.py"
 type: "code"
-community: "kit.mjs"
-location: "L65"
+community: "frame_maker"
+location: "L234"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/kitmjs
+  - community/frame_maker
 ---
 
 # frame()
 
 ## Connections
-- [[exposure()]] - `calls` [EXTRACTED]
-- [[frameAt()]] - `calls` [EXTRACTED]
-- [[grade()]] - `calls` [EXTRACTED]
-- [[makeKit()]] - `calls` [EXTRACTED]
-- [[run.mjs]] - `contains` [EXTRACTED]
+- [[ClipReader]] - `calls` [EXTRACTED]
+- [[draw_card()]] - `calls` [EXTRACTED]
+- [[draw_graphic()]] - `calls` [EXTRACTED]
+- [[frame_maker()]] - `indirect_call` [INFERRED]
+- [[shot()]] - `calls` [EXTRACTED]
+- [[write_frames()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/kitmjs
+#graphify/code #graphify/EXTRACTED #community/frame_maker

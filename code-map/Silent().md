@@ -13,8 +13,8 @@ tags:
 
 ## Connections
 - [[Silent.tsx]] - `contains` [EXTRACTED]
-- [[draw()_9]] - `indirect_call` [INFERRED]
-- [[noise()]] - `calls` [EXTRACTED]
+- [[draw()_11]] - `indirect_call` [INFERRED]
+- [[noise()_1]] - `calls` [EXTRACTED]
 - [[styleindex.ts]] - `indirect_call` [INFERRED]
 - [[useOnceCanvas()]] - `calls` [EXTRACTED]
 

@@ -23,15 +23,15 @@ members: 30
 - [[Riso.tsx]] - code - remotion/src/style/looks/Riso.tsx
 - [[Silent()]] - code - remotion/src/style/looks/Silent.tsx
 - [[Silent.tsx]] - code - remotion/src/style/looks/Silent.tsx
-- [[draw()_5]] - code - remotion/src/style/looks/Engraving.tsx
-- [[draw()_6]] - code - remotion/src/style/looks/Halftone.tsx
-- [[draw()_7]] - code - remotion/src/style/looks/Miniature.tsx
-- [[draw()_8]] - code - remotion/src/style/looks/Riso.tsx
-- [[draw()_9]] - code - remotion/src/style/looks/Silent.tsx
+- [[draw()_7]] - code - remotion/src/style/looks/Engraving.tsx
+- [[draw()_8]] - code - remotion/src/style/looks/Halftone.tsx
+- [[draw()_9]] - code - remotion/src/style/looks/Miniature.tsx
+- [[draw()_10]] - code - remotion/src/style/looks/Riso.tsx
+- [[draw()_11]] - code - remotion/src/style/looks/Silent.tsx
 - [[drawCover()]] - code - remotion/src/style/kit.ts
 - [[hatch()_1]] - code - remotion/src/style/looks/Engraving.tsx
-- [[luminance()]] - code - remotion/src/style/kit.ts
-- [[noise()]] - code - remotion/src/style/kit.ts
+- [[luminance()_1]] - code - remotion/src/style/kit.ts
+- [[noise()_1]] - code - remotion/src/style/kit.ts
 - [[remotion_src_style_kit_img]] - concept
 - [[rgb()]] - code - remotion/src/style/looks/Halftone.tsx
 - [[rgb()_1]] - code - remotion/src/style/looks/Riso.tsx
@@ -54,6 +54,6 @@ SORT file.name ASC
 ## Top bridge nodes
 - [[Silent.tsx]] - degree 13, connects to 2 communities
 - [[Look]] - degree 10, connects to 2 communities
-- [[noise()]] - degree 8, connects to 2 communities
+- [[noise()_1]] - degree 8, connects to 2 communities
 - [[Inks]] - degree 6, connects to 2 communities
 - [[Halftone.tsx]] - degree 16, connects to 1 community

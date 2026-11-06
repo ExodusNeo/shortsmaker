@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/motion.py"
 type: "code"
-community: "render"
+community: "code_custom_scenes"
 location: "L326"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/render
+  - community/code_custom_scenes
 ---
 
 # preview_sheet()
@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[Path_26]] - `references` [EXTRACTED]
 - [[Renders seconds start..end of a small Short (`props`; its pictures already in…]] - `rationale_for` [EXTRACTED]
-- [[ffmpeg()]] - `calls` [EXTRACTED]
+- [[ffmpeg()_1]] - `calls` [EXTRACTED]
 - [[invent_component()]] - `calls` [EXTRACTED]
 - [[json]] - `calls` [EXTRACTED]
 - [[motion.py]] - `contains` [EXTRACTED]
@@ -22,4 +22,4 @@ tags:
 - [[shutil]] - `calls` [EXTRACTED]
 - [[subprocess]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/render
+#graphify/code #graphify/EXTRACTED #community/code_custom_scenes

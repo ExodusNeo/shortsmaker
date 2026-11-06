@@ -12,7 +12,7 @@ tags:
 # node_run()
 
 ## Connections
-- [[Path_36]] - `references` [EXTRACTED]
+- [[Path_33]] - `references` [EXTRACTED]
 - [[Runs drawnrun.mjs on one job; None when it worked, else what went wrong…]] - `rationale_for` [EXTRACTED]
 - [[drawn_opener.py]] - `contains` [EXTRACTED]
 - [[json]] - `calls` [EXTRACTED]

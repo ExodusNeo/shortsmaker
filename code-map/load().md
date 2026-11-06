@@ -1,22 +1,17 @@
 ---
-source_file: "shortsmaker/voice_cache.py"
+source_file: "remotion/src/full/Journey.tsx"
 type: "code"
-community: "shutil"
-location: "L20"
+community: "Journey.tsx"
+location: "L14"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/shutil
+  - community/Journeytsx
 ---
 
 # load()
 
 ## Connections
-- [[Path_5]] - `references` [EXTRACTED]
-- [[hashlib]] - `calls` [EXTRACTED]
-- [[json]] - `calls` [EXTRACTED]
-- [[render()_3]] - `calls` [EXTRACTED]
-- [[signature()]] - `calls` [EXTRACTED]
-- [[voice_cache.py]] - `contains` [EXTRACTED]
+- [[Journey.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/shutil
+#graphify/code #graphify/EXTRACTED #community/Journeytsx

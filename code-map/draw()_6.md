@@ -1,23 +1,17 @@
 ---
-source_file: "remotion/src/style/looks/Halftone.tsx"
+source_file: "drawn/parts/thing/potato_mouthful.mjs"
 type: "code"
-community: "Halftone.tsx"
-location: "L36"
+community: "potato_mouthful.mjs"
+location: "L2"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Halftonetsx
+  - community/potato_mouthfulmjs
 ---
 
 # draw()
 
 ## Connections
-- [[Halftone()]] - `calls` [EXTRACTED]
-- [[Halftone.tsx]] - `contains` [EXTRACTED]
-- [[luminance()]] - `calls` [EXTRACTED]
-- [[noise()]] - `calls` [EXTRACTED]
-- [[rgb()]] - `calls` [EXTRACTED]
-- [[screen()]] - `calls` [EXTRACTED]
-- [[stretch()]] - `calls` [EXTRACTED]
+- [[potato_mouthful.mjs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Halftonetsx
+#graphify/code #graphify/EXTRACTED #community/potato_mouthfulmjs

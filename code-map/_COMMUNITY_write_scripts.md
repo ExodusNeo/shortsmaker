@@ -48,33 +48,37 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 15 edges to [[_COMMUNITY_test_pictures_first.py]]
-- 9 edges to [[_COMMUNITY_time]]
-- 8 edges to [[_COMMUNITY_clean_full]]
-- 5 edges to [[_COMMUNITY_prepare_topic]]
-- 4 edges to [[_COMMUNITY_edit_scripts]]
+- 9 edges to [[_COMMUNITY_test_topic_ideas.py]]
+- 9 edges to [[_COMMUNITY_test_pictures_first.py]]
+- 6 edges to [[_COMMUNITY_catalog_pool]]
+- 6 edges to [[_COMMUNITY_prepare_topic]]
+- 5 edges to [[_COMMUNITY_words_of]]
+- 4 edges to [[_COMMUNITY_re]]
 - 3 edges to [[_COMMUNITY_gather_pool]]
-- 3 edges to [[_COMMUNITY_fake_ai]]
-- 3 edges to [[_COMMUNITY_json]]
-- 3 edges to [[_COMMUNITY_test_full_scenes.py]]
-- 2 edges to [[_COMMUNITY_ask_ai]]
-- 2 edges to [[_COMMUNITY_pick_channel]]
+- 3 edges to [[_COMMUNITY_edit_scripts]]
+- 3 edges to [[_COMMUNITY_clean_full]]
+- 2 edges to [[_COMMUNITY_fake_ai]]
+- 2 edges to [[_COMMUNITY_test_full_scenes.py]]
 - 2 edges to [[_COMMUNITY_style_library]]
+- 2 edges to [[_COMMUNITY_config.py]]
 - 1 edge to [[_COMMUNITY_limit_style]]
+- 1 edge to [[_COMMUNITY_cold_read]]
+- 1 edge to [[_COMMUNITY_pick_channel]]
 - 1 edge to [[_COMMUNITY_main_1]]
 - 1 edge to [[_COMMUNITY_shutil]]
 - 1 edge to [[_COMMUNITY_check_twists]]
-- 1 edge to [[_COMMUNITY_rescue_graphics]]
-- 1 edge to [[_COMMUNITY_story_problems]]
-- 1 edge to [[_COMMUNITY_test_blender_scene.py]]
-- 1 edge to [[_COMMUNITY_retention.py]]
-- 1 edge to [[_COMMUNITY_resume_runs]]
+- 1 edge to [[_COMMUNITY_json]]
+- 1 edge to [[_COMMUNITY_wm_files]]
+- 1 edge to [[_COMMUNITY_test_story.py]]
+- 1 edge to [[_COMMUNITY_test_blender_plan.py]]
+- 1 edge to [[_COMMUNITY_write_json]]
+- 1 edge to [[_COMMUNITY_ask_ai]]
 - 1 edge to [[_COMMUNITY_capture_prompts]]
 - 1 edge to [[_COMMUNITY_test_style.py]]
 
 ## Top bridge nodes
-- [[write_scripts()]] - degree 54, connects to 23 communities
-- [[planning]] - degree 19, connects to 4 communities
+- [[write_scripts()]] - degree 54, connects to 24 communities
+- [[planning]] - degree 19, connects to 5 communities
 - [[passing()]] - degree 12, connects to 2 communities
 - [[planning_ai()]] - degree 9, connects to 2 communities
 - [[dot-__enter__()_1]] - degree 4, connects to 2 communities

@@ -1,18 +1,17 @@
 ---
 type: community
-members: 53
+members: 51
 ---
 
 # opener3d.py
 
-**Members:** 53 nodes
+**Members:** 51 nodes
 
 ## Members
 - [[3D opener checks (shortsmakeropener3d.py) the placer's relations, named shots…]] - rationale - tests/test_opener3d.py
 - [[3D openers (owner, 2026-11-05) scene 1 as flat drawn cut-outs standing in a…]] - rationale - shortsmaker/opener3d.py
 - [[A floor prop's footprint (x0, x1, z0, z1) in the set, or None (rugs and things…]] - rationale - shortsmaker/opener3d.py
 - [[A small room stage a desk, and each named person on the given relation.]] - rationale - tests/test_opener3d.py
-- [[A time given as seconds or as a spoken word (its start; the same rule as the…]] - rationale - shortsmaker/opener3d.py
 - [[All three live stories (2026-11-06) opened on a 'medium' of two people at…]] - rationale - tests/test_opener3d.py
 - [[Cut-outs ordered so each one comes after the cut-out its `place` names (a live…]] - rationale - shortsmaker/opener3d.py
 - [[Half of what a cut-out's drawing really covers (its canvas has a margin round…]] - rationale - shortsmaker/opener3d.py
@@ -59,7 +58,6 @@ members: 53
 - [[test_set_dressing_keeps_clear_of_what_was_placed()]] - code - tests/test_opener3d.py
 - [[test_signs_of_the_strange_thing()]] - code - tests/test_opener3d.py
 - [[test_someone_inside_a_house_steps_out_and_a_door_needs_a_real_id()]] - code - tests/test_opener3d.py
-- [[word_time()]] - code - shortsmaker/opener3d.py
 - [[xz()]] - code - shortsmaker/opener3d.py
 
 ## Live Query (requires Dataview plugin)
@@ -71,19 +69,22 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 8 edges to [[_COMMUNITY_render_1]]
-- 8 edges to [[_COMMUNITY_test_full_scenes.py]]
+- 8 edges to [[_COMMUNITY_pathlib]]
 - 6 edges to [[_COMMUNITY_opener_crew.py]]
 - 5 edges to [[_COMMUNITY_lint_cutout]]
 - 5 edges to [[_COMMUNITY_test_opener_crew.py]]
-- 5 edges to [[_COMMUNITY_json]]
-- 4 edges to [[_COMMUNITY_drawn_opener.py]]
-- 3 edges to [[_COMMUNITY_render]]
-- 1 edge to [[_COMMUNITY_layout]]
+- 3 edges to [[_COMMUNITY_drawn_opener.py]]
+- 2 edges to [[_COMMUNITY_layout]]
+- 2 edges to [[_COMMUNITY_audio_library.py]]
+- 2 edges to [[_COMMUNITY_re]]
+- 2 edges to [[_COMMUNITY_json]]
+- 1 edge to [[_COMMUNITY_config.py]]
 - 1 edge to [[_COMMUNITY_shutil]]
+- 1 edge to [[_COMMUNITY_test_full_scenes.py]]
 
 ## Top bridge nodes
-- [[opener3d.py]] - degree 36, connects to 9 communities
-- [[test_opener3d.py]] - degree 31, connects to 6 communities
-- [[clean()]] - degree 31, connects to 3 communities
+- [[opener3d.py]] - degree 36, connects to 13 communities
+- [[test_opener3d.py]] - degree 31, connects to 7 communities
+- [[clean()]] - degree 31, connects to 4 communities
 - [[num()]] - degree 6, connects to 2 communities
-- [[word_time()]] - degree 5, connects to 2 communities
+- [[look()]] - degree 6, connects to 1 community

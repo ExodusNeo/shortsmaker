@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "shutil"
+community: "json"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/shutil
+  - community/json
 ---
 
 # hashlib
@@ -23,7 +23,7 @@ tags:
 - [[image_sources.py]] - `imports` [EXTRACTED]
 - [[import_audio_file()]] - `calls` [EXTRACTED]
 - [[import_media()]] - `calls` [EXTRACTED]
-- [[load()]] - `calls` [EXTRACTED]
+- [[load()_1]] - `calls` [EXTRACTED]
 - [[media_library.py]] - `imports` [EXTRACTED]
 - [[moss_images()]] - `calls` [EXTRACTED]
 - [[motion.py]] - `imports` [EXTRACTED]
@@ -31,10 +31,10 @@ tags:
 - [[picture_pool.py]] - `imports` [EXTRACTED]
 - [[pixabay_films()]] - `calls` [EXTRACTED]
 - [[pool_folder()]] - `calls` [EXTRACTED]
-- [[save()]] - `calls` [EXTRACTED]
+- [[save()_1]] - `calls` [EXTRACTED]
 - [[shot_moments()]] - `calls` [EXTRACTED]
 - [[signature()]] - `calls` [EXTRACTED]
 - [[source_json()]] - `calls` [EXTRACTED]
 - [[voice_cache.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/shutil
+#graphify/concept #graphify/EXTRACTED #community/json

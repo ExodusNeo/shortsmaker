@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/plan_rules.py"
 type: "rationale"
-community: "json"
+community: "test_full_scenes.py"
 location: "L386"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/json
+  - community/test_full_scenespy
 ---
 
 # Let the AI circle (or point an arrow at) a detail in up to 2 chosen pictures.…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[mark_details()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/json
+#graphify/rationale #graphify/EXTRACTED #community/test_full_scenespy

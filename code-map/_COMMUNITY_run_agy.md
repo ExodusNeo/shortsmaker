@@ -29,7 +29,7 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 6 edges to [[_COMMUNITY_test_full_scenes.py]]
+- 6 edges to [[_COMMUNITY_pathlib]]
 - 6 edges to [[_COMMUNITY_ask_ai]]
 
 ## Top bridge nodes

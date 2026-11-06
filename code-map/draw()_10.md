@@ -1,17 +1,21 @@
 ---
-source_file: "drawn/parts/thing/telegraph_station.mjs"
+source_file: "remotion/src/style/looks/Riso.tsx"
 type: "code"
-community: "telegraph_station.mjs"
-location: "L2"
+community: "Halftone.tsx"
+location: "L13"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/telegraph_stationmjs
+  - community/Halftonetsx
 ---
 
 # draw()
 
 ## Connections
-- [[telegraph_station.mjs]] - `contains` [EXTRACTED]
+- [[Riso()]] - `calls` [EXTRACTED]
+- [[Riso.tsx]] - `contains` [EXTRACTED]
+- [[luminance()_1]] - `calls` [EXTRACTED]
+- [[noise()_1]] - `calls` [EXTRACTED]
+- [[rgb()_1]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/telegraph_stationmjs
+#graphify/code #graphify/EXTRACTED #community/Halftonetsx

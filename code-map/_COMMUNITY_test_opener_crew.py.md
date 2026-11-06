@@ -18,7 +18,7 @@ members: 31
 - [[The sound-off test's two calls (drawn_opener.blind_read) pass, so these tests…]] - rationale - tests/test_opener_crew.py
 - [[The stager's plan, checked against what the kit and the 3D set can show; and…]] - rationale - shortsmaker/opener_crew.py
 - [[assemble()]] - code - shortsmaker/opener_crew.py
-- [[blind_ok()]] - code - tests/test_opener_crew.py
+- [[blind_ok()_1]] - code - tests/test_opener_crew.py
 - [[check_staging()]] - code - shortsmaker/opener_crew.py
 - [[fake()_1]] - code - tests/test_opener_crew.py
 - [[job()]] - code - tests/test_opener_crew.py
@@ -50,16 +50,17 @@ SORT file.name ASC
 ## Connections to other communities
 - 17 edges to [[_COMMUNITY_opener_crew.py]]
 - 5 edges to [[_COMMUNITY_opener3d.py]]
-- 5 edges to [[_COMMUNITY_test_full_scenes.py]]
+- 5 edges to [[_COMMUNITY_pathlib]]
 - 3 edges to [[_COMMUNITY_lint_cutout]]
 - 2 edges to [[_COMMUNITY_layout]]
-- 2 edges to [[_COMMUNITY_json]]
-- 1 edge to [[_COMMUNITY_render]]
-- 1 edge to [[_COMMUNITY_time]]
+- 1 edge to [[_COMMUNITY_audio_library.py]]
+- 1 edge to [[_COMMUNITY_config.py]]
+- 1 edge to [[_COMMUNITY_shutil]]
+- 1 edge to [[_COMMUNITY_json]]
 - 1 edge to [[_COMMUNITY_drawn_opener.py]]
 
 ## Top bridge nodes
-- [[test_opener_crew.py]] - degree 27, connects to 6 communities
+- [[test_opener_crew.py]] - degree 27, connects to 7 communities
 - [[assemble()]] - degree 11, connects to 3 communities
 - [[check_staging()]] - degree 14, connects to 2 communities
 - [[test_a_painter_with_unusable_code_gets_the_plain_kit_cutout()]] - degree 7, connects to 2 communities

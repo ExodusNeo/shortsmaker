@@ -18,6 +18,6 @@ tags:
 - [[opening_brief()]] - `calls` [EXTRACTED]
 - [[stage()]] - `calls` [EXTRACTED]
 - [[staged()]] - `calls` [EXTRACTED]
-- [[write()]] - `calls` [EXTRACTED]
+- [[write()_1]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/drawn_openerpy

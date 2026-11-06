@@ -11,7 +11,7 @@ members: 10
 - [[Every prompt strange-history's writer, editor, director, fact check, picture…]] - rationale - tests/test_rules.py
 - [[Read and check channelsname.rules.md into session.RULES …]] - rationale - shortsmaker/rules.py
 - [[Usable real picturesclips a topic needs, else a backup topic replaces it.]] - rationale - shortsmaker/rules.py
-- [[ask()_5]] - code - tests/test_rules.py
+- [[ask()_6]] - code - tests/test_rules.py
 - [[capture_prompts()]] - code - tests/test_rules.py
 - [[load_rules()]] - code - shortsmaker/rules.py
 - [[min_real_pictures()]] - code - shortsmaker/rules.py
@@ -27,19 +27,19 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 5 edges to [[_COMMUNITY_test_rules.py]]
-- 2 edges to [[_COMMUNITY_run_draft]]
-- 2 edges to [[_COMMUNITY_test_full_scenes.py]]
+- 6 edges to [[_COMMUNITY_test_rules.py]]
+- 2 edges to [[_COMMUNITY_config.py]]
+- 1 edge to [[_COMMUNITY_pick_channel]]
 - 1 edge to [[_COMMUNITY_write_scripts]]
-- 1 edge to [[_COMMUNITY_test_pictures_first.py]]
-- 1 edge to [[_COMMUNITY_finish_render]]
+- 1 edge to [[_COMMUNITY_catalog_pool]]
 - 1 edge to [[_COMMUNITY_prepare_topic]]
+- 1 edge to [[_COMMUNITY_test_first_second.py]]
 - 1 edge to [[_COMMUNITY_rewrite_paint_prompts]]
-- 1 edge to [[_COMMUNITY_choose_images]]
+- 1 edge to [[_COMMUNITY_test_pictures_first.py]]
 
 ## Top bridge nodes
 - [[capture_prompts()]] - degree 11, connects to 6 communities
 - [[load_rules()]] - degree 6, connects to 3 communities
 - [[min_real_pictures()]] - degree 4, connects to 2 communities
 - [[test_load_rules_sets_session()]] - degree 4, connects to 1 community
-- [[ask()_5]] - degree 2, connects to 1 community
+- [[ask()_6]] - degree 2, connects to 1 community

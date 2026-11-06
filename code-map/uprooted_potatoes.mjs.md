@@ -12,7 +12,7 @@ tags:
 # uprooted_potatoes.mjs
 
 ## Connections
-- [[draw()_11]] - `contains` [EXTRACTED]
-- [[grip_5]] - `contains` [EXTRACTED]
+- [[draw()_13]] - `contains` [EXTRACTED]
+- [[grip_7]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/uprooted_potatoesmjs

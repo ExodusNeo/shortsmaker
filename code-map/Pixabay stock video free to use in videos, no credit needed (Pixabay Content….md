@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/footage.py"
 type: "rationale"
-community: "shutil"
+community: "json"
 location: "L55"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/shutil
+  - community/json
 ---
 
 # Pixabay stock video: free to use in videos, no credit needed (Pixabay Content…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[pixabay_films()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/shutil
+#graphify/rationale #graphify/EXTRACTED #community/json

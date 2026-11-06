@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "trim_borders"
+community: "test_full_scenes.py"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/trim_borders
+  - community/test_full_scenespy
 ---
 
 # statistics
@@ -14,4 +14,4 @@ tags:
 - [[is_stereo()]] - `calls` [EXTRACTED]
 - [[photo_prep.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/trim_borders
+#graphify/concept #graphify/EXTRACTED #community/test_full_scenespy

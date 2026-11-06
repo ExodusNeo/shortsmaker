@@ -19,7 +19,7 @@ tags:
 - [[configure_brain()]] - `calls` [EXTRACTED]
 - [[edit_metrics()]] - `calls` [EXTRACTED]
 - [[json]] - `calls` [EXTRACTED]
-- [[main()_2]] - `calls` [EXTRACTED]
+- [[main()_3]] - `calls` [EXTRACTED]
 - [[normalize_brain()]] - `calls` [EXTRACTED]
 - [[retention.bat, or make_shorts.py retention Short folder screenshot AI…]] - `rationale_for` [EXTRACTED]
 - [[retention.py]] - `contains` [EXTRACTED]

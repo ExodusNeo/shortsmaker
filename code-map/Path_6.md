@@ -1,21 +1,28 @@
 ---
 source_file: ""
 type: "code"
-community: "opener_crew.py"
+community: "local_clips"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/opener_crewpy
+  - community/local_clips
 ---
 
 # Path
 
 ## Connections
-- [[crew()]] - `references` [EXTRACTED]
-- [[make_part()]] - `references` [EXTRACTED]
-- [[make_parts()]] - `references` [EXTRACTED]
-- [[paint()]] - `references` [EXTRACTED]
-- [[plan()]] - `references` [EXTRACTED]
-- [[stage()]] - `references` [EXTRACTED]
+- [[cover_crop()]] - `references` [EXTRACTED]
+- [[cut_owner_clip()]] - `references` [EXTRACTED]
+- [[gemini_images()]] - `references` [EXTRACTED]
+- [[h3_prompts()]] - `references` [EXTRACTED]
+- [[local_clips()]] - `references` [EXTRACTED]
+- [[local_job()]] - `references` [EXTRACTED]
+- [[local_voice()]] - `references` [EXTRACTED]
+- [[moss_images()]] - `references` [EXTRACTED]
+- [[split_takes()]] - `references` [EXTRACTED]
+- [[start_picture()]] - `references` [EXTRACTED]
+- [[start_picture_problems()]] - `references` [EXTRACTED]
+- [[unpack_clips()]] - `references` [EXTRACTED]
+- [[veo_handoff()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/opener_crewpy
+#graphify/code #graphify/EXTRACTED #community/local_clips

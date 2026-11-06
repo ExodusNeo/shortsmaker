@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[YouTube query predictions (not search volumes or a popularity ranking).]] - `rationale_for` [EXTRACTED]
-- [[fetch()]] - `calls` [EXTRACTED]
+- [[fetch()_1]] - `calls` [EXTRACTED]
 - [[json]] - `calls` [EXTRACTED]
 - [[seo.py]] - `contains` [EXTRACTED]
 - [[seo_pass()]] - `calls` [EXTRACTED]

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/opener3d.py"
 type: "rationale"
-community: "opener3d.py"
+community: "layout"
 location: "L49"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/opener3dpy
+  - community/layout
 ---
 
 # A time given as seconds or as a spoken word (its start; the same rule as the…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[word_time()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/opener3dpy
+#graphify/rationale #graphify/EXTRACTED #community/layout

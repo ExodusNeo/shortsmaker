@@ -696,9 +696,9 @@
     "semantic_hash": ""
   },
   "shortsmaker/drawn_opener.py": {
-    "mtime": 1793971976.0331576,
-    "seen": 1793976409.9629927,
-    "ast_hash": "2ecd65a3c058bd4aa1a389b52496f0c5",
+    "mtime": 1793976605.000425,
+    "seen": 1793980127.369155,
+    "ast_hash": "296ec39cc81d9477c8b53dac1e6bc3ed",
     "semantic_hash": ""
   },
   "tests/test_drawn_opener.py": {
@@ -882,15 +882,15 @@
     "semantic_hash": ""
   },
   "shortsmaker/opener_crew.py": {
-    "mtime": 1793973538.6957831,
-    "seen": 1793976409.963029,
-    "ast_hash": "18c5dddfd8d5abb97708fe9d9c146c76",
+    "mtime": 1793978816.6683946,
+    "seen": 1793980127.3691735,
+    "ast_hash": "d57cf6f7e74acde27053b71e7220b981",
     "semantic_hash": ""
   },
   "tests/test_opener_crew.py": {
-    "mtime": 1793973784.6141543,
-    "seen": 1793976409.9631283,
-    "ast_hash": "1430322187c607f7ec8f8911eb2a1cae",
+    "mtime": 1793978817.4365075,
+    "seen": 1793980127.3692224,
+    "ast_hash": "83e347895d9fb3fa65f81959fb3ba40a",
     "semantic_hash": ""
   },
   "drawn/parts/hat/slouch_hat.mjs": {
@@ -927,6 +927,18 @@
     "mtime": 1793974463.9722977,
     "seen": 1793976409.9628465,
     "ast_hash": "ce05941b7a7e4165c246f04f3073015b",
+    "semantic_hash": ""
+  },
+  "drawn/parts/thing/bitten_potato.mjs": {
+    "mtime": 1793978010.3124642,
+    "seen": 1793980127.3690677,
+    "ast_hash": "5d84d9df93df14e9972eb3adab46990f",
+    "semantic_hash": ""
+  },
+  "drawn/parts/thing/potato_mouthful.mjs": {
+    "mtime": 1793979251.4408026,
+    "seen": 1793980127.3690696,
+    "ast_hash": "61e0ffd159859ce241ada6773a80510d",
     "semantic_hash": ""
   }
 }

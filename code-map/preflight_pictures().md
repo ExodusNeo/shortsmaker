@@ -12,7 +12,7 @@ tags:
 # preflight_pictures()
 
 ## Connections
-- [[Path_14]] - `references` [EXTRACTED]
+- [[Path_15]] - `references` [EXTRACTED]
 - [[Verifydownload usable originals while the writer can still avoid unavailable…]] - `rationale_for` [EXTRACTED]
 - [[is_usable()]] - `calls` [EXTRACTED]
 - [[picture_pool.py]] - `contains` [EXTRACTED]

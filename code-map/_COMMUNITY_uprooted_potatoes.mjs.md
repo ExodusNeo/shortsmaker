@@ -8,8 +8,8 @@ members: 3
 **Members:** 3 nodes
 
 ## Members
-- [[draw()_11]] - code - drawn/parts/thing/uprooted_potatoes.mjs
-- [[grip_5]] - code - drawn/parts/thing/uprooted_potatoes.mjs
+- [[draw()_13]] - code - drawn/parts/thing/uprooted_potatoes.mjs
+- [[grip_7]] - code - drawn/parts/thing/uprooted_potatoes.mjs
 - [[uprooted_potatoes.mjs]] - code - drawn/parts/thing/uprooted_potatoes.mjs
 
 ## Live Query (requires Dataview plugin)

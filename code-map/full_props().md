@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/motion.py"
 type: "code"
-community: "full_cues"
+community: "full_props"
 location: "L39"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/full_cues
+  - community/full_props
 ---
 
 # full_props()
@@ -22,4 +22,4 @@ tags:
 - [[test_full_props_figure()]] - `calls` [EXTRACTED]
 - [[test_remotion_props_full()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/full_cues
+#graphify/code #graphify/EXTRACTED #community/full_props

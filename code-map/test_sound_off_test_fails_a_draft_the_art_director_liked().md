@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_drawn_opener.py"
 type: "code"
-community: "drawn_opener.py"
+community: "short"
 location: "L54"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/drawn_openerpy
+  - community/short
 ---
 
 # test_sound_off_test_fails_a_draft_the_art_director_liked()
@@ -19,4 +19,4 @@ tags:
 - [[short()_3]] - `calls` [EXTRACTED]
 - [[test_drawn_opener.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/drawn_openerpy
+#graphify/code #graphify/EXTRACTED #community/short

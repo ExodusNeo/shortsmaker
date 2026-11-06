@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/blender_plan.py"
 type: "rationale"
-community: "test_blender_scene.py"
+community: "test_blender_plan.py"
 location: "L41"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/test_blender_scenepy
+  - community/test_blender_planpy
 ---
 
 # Truss panels per span: about square panels, 4-16 of them.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[panels()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/test_blender_scenepy
+#graphify/rationale #graphify/EXTRACTED #community/test_blender_planpy

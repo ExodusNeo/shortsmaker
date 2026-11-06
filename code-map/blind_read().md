@@ -12,7 +12,7 @@ tags:
 # blind_read()
 
 ## Connections
-- [[Path_36]] - `references` [EXTRACTED]
+- [[Path_33]] - `references` [EXTRACTED]
 - [[The sound-off test an AI that knows nothing of the story says what the frames…]] - `rationale_for` [EXTRACTED]
 - [[ask_ai()]] - `calls` [EXTRACTED]
 - [[drawn_opener.py]] - `contains` [EXTRACTED]

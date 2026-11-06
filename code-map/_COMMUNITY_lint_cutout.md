@@ -26,10 +26,11 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 5 edges to [[_COMMUNITY_opener3d.py]]
-- 4 edges to [[_COMMUNITY_drawn_opener.py]]
+- 3 edges to [[_COMMUNITY_drawn_opener.py]]
 - 3 edges to [[_COMMUNITY_test_opener_crew.py]]
-- 2 edges to [[_COMMUNITY_json]]
+- 2 edges to [[_COMMUNITY_re]]
 - 1 edge to [[_COMMUNITY_opener_crew.py]]
+- 1 edge to [[_COMMUNITY_pathlib]]
 
 ## Top bridge nodes
 - [[lint_cutout()]] - degree 10, connects to 5 communities

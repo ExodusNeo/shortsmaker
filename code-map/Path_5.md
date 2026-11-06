@@ -1,17 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "shutil"
+community: "log_short"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/shutil
+  - community/log_short
 ---
 
 # Path
 
 ## Connections
-- [[load()]] - `references` [EXTRACTED]
-- [[save()]] - `references` [EXTRACTED]
+- [[log_short()]] - `references` [EXTRACTED]
+- [[vault_page()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/shutil
+#graphify/code #graphify/EXTRACTED #community/log_short

@@ -1,22 +1,24 @@
 ---
 type: community
-members: 40
+members: 42
 ---
 
 # test_h3_handoff.py
 
-**Members:** 40 nodes
+**Members:** 42 nodes
 
 ## Members
 - [[After an opener swap moved scene 4's clip to scene 1, the re-render cuts it…]] - rationale - tests/test_h3_handoff.py
 - [[Join checked fields into one image-to-video prompt. H3 has no negative prompt,…]] - rationale - shortsmaker/gpu.py
-- [[Path]] - code
+- [[Path_2]] - code
 - [[Run fn with llm.ask_ai and input restored afterwards.]] - rationale - tests/test_h3_handoff.py
 - [[Tests for the Colab H3  Flow hand-off frame-checked video prompts, veo.zip,…]] - rationale - tests/test_h3_handoff.py
 - [[Unpack sceneN.mp4.mov.webm from folderclips.zip (the Colab notebook's…]] - rationale - shortsmaker/gpu.py
+- [[What is missing from the AI's prompt fields for one scene (empty list = usable).]] - rationale - shortsmaker/gpu.py
 - [[ask()_3]] - code - tests/test_h3_handoff.py
 - [[builtins]] - concept
 - [[fake_ai()]] - code - tests/test_h3_handoff.py
+- [[h3_problems()]] - code - shortsmaker/gpu.py
 - [[h3_prompt()]] - code - shortsmaker/gpu.py
 - [[handoff()]] - code - tests/test_h3_handoff.py
 - [[run()]] - code - tests/test_h3_handoff.py
@@ -57,15 +59,16 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 10 edges to [[_COMMUNITY_gpu.py]]
-- 6 edges to [[_COMMUNITY_test_full_scenes.py]]
-- 1 edge to [[_COMMUNITY_json]]
-- 1 edge to [[_COMMUNITY_test_story.py]]
+- 6 edges to [[_COMMUNITY_local_clips]]
+- 6 edges to [[_COMMUNITY_pathlib]]
+- 5 edges to [[_COMMUNITY_json]]
+- 1 edge to [[_COMMUNITY_re]]
+- 1 edge to [[_COMMUNITY_log_short]]
 - 1 edge to [[_COMMUNITY_split_make_shorts.py]]
 
 ## Top bridge nodes
+- [[unpack_clips()]] - degree 10, connects to 3 communities
 - [[test_h3_handoff.py]] - degree 32, connects to 2 communities
 - [[handoff()]] - degree 12, connects to 2 communities
-- [[unpack_clips()]] - degree 10, connects to 2 communities
-- [[h3_prompt()]] - degree 4, connects to 1 community
-- [[test_owner_clip_is_cut_again_for_the_scene_it_now_sits_in()]] - degree 4, connects to 1 community
+- [[h3_problems()]] - degree 4, connects to 2 communities
+- [[h3_prompt()]] - degree 4, connects to 2 communities

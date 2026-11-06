@@ -1,17 +1,21 @@
 ---
 source_file: ""
 type: "code"
-community: "film_piece"
+community: "opener_crew.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/film_piece
+  - community/opener_crewpy
 ---
 
 # Path
 
 ## Connections
-- [[film_piece()]] - `references` [EXTRACTED]
-- [[shot_span()]] - `references` [EXTRACTED]
+- [[crew()]] - `references` [EXTRACTED]
+- [[make_part()]] - `references` [EXTRACTED]
+- [[make_parts()]] - `references` [EXTRACTED]
+- [[paint()]] - `references` [EXTRACTED]
+- [[plan()]] - `references` [EXTRACTED]
+- [[stage()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/film_piece
+#graphify/code #graphify/EXTRACTED #community/opener_crewpy

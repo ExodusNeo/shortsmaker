@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/checkpoints.py"
 type: "code"
-community: "render"
+community: "write_json"
 location: "L13"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/render
+  - community/write_json
 ---
 
 # pack()
@@ -20,4 +20,4 @@ tags:
 - [[save_context()]] - `calls` [EXTRACTED]
 - [[update()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/render
+#graphify/code #graphify/EXTRACTED #community/write_json

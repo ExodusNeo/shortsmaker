@@ -13,6 +13,6 @@ tags:
 
 ## Connections
 - [[PreflightTests]] - `method` [EXTRACTED]
-- [[ffmpeg()_1]] - `indirect_call` [INFERRED]
+- [[ffmpeg()]] - `indirect_call` [INFERRED]
 
 #graphify/code #graphify/EXTRACTED #community/PreflightTests

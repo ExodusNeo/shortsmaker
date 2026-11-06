@@ -2,7 +2,7 @@
 source_file: "shortsmaker/drawn_opener.py"
 type: "code"
 community: "drawn_opener.py"
-location: "L335"
+location: "L341"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,7 +12,7 @@ tags:
 # make_opener()
 
 ## Connections
-- [[Path_36]] - `references` [EXTRACTED]
+- [[Path_33]] - `references` [EXTRACTED]
 - [[Scene 1's opener clip (workdrawnopener.mp4, scene 1 + the crossfade long), or…]] - `rationale_for` [EXTRACTED]
 - [[available()]] - `calls` [EXTRACTED]
 - [[available()_1]] - `calls` [EXTRACTED]
@@ -36,6 +36,6 @@ tags:
 - [[test_neither_passes_so_the_best_draft_at_keep_is_used()]] - `calls` [EXTRACTED]
 - [[time]] - `calls` [EXTRACTED]
 - [[use_opener()]] - `calls` [EXTRACTED]
-- [[write()]] - `calls` [EXTRACTED]
+- [[write()_1]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/drawn_openerpy

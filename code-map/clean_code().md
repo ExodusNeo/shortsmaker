@@ -18,6 +18,6 @@ tags:
 - [[make_part()]] - `calls` [EXTRACTED]
 - [[paint()]] - `calls` [EXTRACTED]
 - [[re]] - `calls` [EXTRACTED]
-- [[write()]] - `calls` [EXTRACTED]
+- [[write()_1]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/opener_crewpy

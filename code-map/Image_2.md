@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "trim_borders"
+community: "test_full_scenes.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/trim_borders
+  - community/test_full_scenespy
 ---
 
 # Image
@@ -15,4 +15,4 @@ tags:
 - [[trim_borders()]] - `references` [EXTRACTED]
 - [[vertical_image()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/trim_borders
+#graphify/code #graphify/EXTRACTED #community/test_full_scenespy

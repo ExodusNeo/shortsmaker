@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[Draws one new hat or thing, checks it by eye, keeps it in drawnparts. (made,…]] - `rationale_for` [EXTRACTED]
-- [[Path_6]] - `references` [EXTRACTED]
+- [[Path_8]] - `references` [EXTRACTED]
 - [[ask_ai()]] - `calls` [EXTRACTED]
 - [[clean_code()]] - `calls` [EXTRACTED]
 - [[json]] - `calls` [EXTRACTED]
