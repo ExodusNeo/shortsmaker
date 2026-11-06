@@ -1,6 +1,7 @@
 """The opener crew (shortsmaker/opener_crew.py): the stager's plan checked against the kit, made parts kept and
 reused, a failed part swapped for its substitute, fixes routed to the one member at fault, and parallel calls capped.
 The AI is faked. Run: .venv\\Scripts\\python.exe tests\\test_opener_crew.py   (real node for the part sheets, ~30 s)"""
+import json
 import os
 import sys
 import tempfile
@@ -143,27 +144,29 @@ def test_problems_go_to_the_member_at_fault():
     assert bad and all(opener_crew.owner(p, ["keeper"]) == "stager" for p in bad), bad
 
 
-def test_the_layout_keeps_a_shots_subjects_together():
-    """Carrington, 2026-11-06: the placer AI stood the operator metres from his telegraph in every live run, and
-    `spread_out` threw away a draft each time. The code stands him beside the desk and the machine on it."""
-    cut = {"w": 700, "h": 1100, "height": 1.75, "frames": 2, "code": "export default function draw(k, f) { k.person(350, 1080, 4, {}); }"}
-    thing = {"w": 600, "h": 500, "height": .3, "frames": 2, "code": "export default function draw(k, f) { k.radio(300, 480, 2); }"}
+PERSON = {"w": 700, "h": 1100, "height": 1.75, "frames": 2, "code": "export default function draw(k, f) { k.person(350, 1080, 4, {}); }"}
+
+
+def test_the_layout_puts_3d_objects_on_the_desk_and_the_operator_at_it():
+    """Owner, 2026-11-06: people stay drawn, every object is 3D. The radio stands on the desk as a 3D object, the one
+    acting on it stands at the desk, both fit the first shot; the aurora gets a window, the sparks come off the radio."""
     raw = staging(place="room", light="interior", moment="an operator stares at his telegraph register",
                   people=[{"id": "operator", "who": "an operator", "hat": "none", "coat": "#285B83", "holds": "none", "doing": "stares"},
                           {"id": "clerk", "who": "a clerk", "hat": "bowler", "holds": "paper", "doing": "reads"}],
-                  things=[{"id": "desk", "kind": "desk"}, {"id": "register", "kind": "radio", "height": .3}, {"id": "clock", "kind": "clock"}],
+                  things=[{"id": "desk", "kind": "desk"}, {"id": "register", "kind": "radio"}, {"id": "logs", "kind": "logs"}],
                   action={"who": "operator", "does": "looks", "on": "register"},
                   beats=[{"at": 0, "shot": "medium", "on": ["operator", "register"]}, {"at": "knocks", "shot": "close", "on": ["register"]},
                          {"at": "midnight", "shot": "close", "on": ["register"]}, {"at": 2.0, "shot": "medium", "on": ["clerk"]}],
                   strange={"what": "it works unplugged", "shows": ["sparks"], "effects": [{"type": "sparks", "on": "register"}, {"type": "aurora"}]})
     st, bad = opener_crew.check_staging(raw, WORDS)
     assert bad == [], bad
-    cuts = [{"name": "operator", "what": "an operator", **cut}, {"name": "clerk", "what": "a clerk", **cut},
-            {"name": "register", "what": "a register", **thing}, {"name": "clock", "what": "a clock", **thing}]
+    cuts = [{"name": "operator", "what": "an operator", **PERSON}, {"name": "clerk", "what": "a clerk", **PERSON}]
     stage, bad = opener_crew.assemble(opener_crew.layout(st, cuts, WORDS), cuts, st, WORDS, 2.6, "")
     assert bad == [], bad
-    at = {c["name"]: c for c in stage["cutouts"]}
-    assert at["register"].get("on") == "desk" and at["clock"]["wall"] and abs(at["operator"]["at"][0] - at["register"]["at"][0]) < 1.4, at
+    props = {p.get("id"): p for p in stage["props"]}
+    op = next(c for c in stage["cutouts"] if c["name"] == "operator")
+    assert props["register"]["y"] > .8 and abs(op["at"][0] - props["register"]["at"][0]) < 1.4, (props["register"], op)
+    assert props["logs"]["at"][1] < -2.5 and props["register"]["h"] == .32  # big things go back; a shot aims mid-object
     assert opener3d.spread_out(stage["shots"], stage["cutouts"], stage["props"]) == []  # the first shot frames both, big
     sizes = [(s["size"], s["target"]) for s in stage["shots"]]
     assert sizes[1] != sizes[2] and stage["shots"][0]["at"] == 0, sizes  # a repeated framing is changed
@@ -171,30 +174,73 @@ def test_the_layout_keeps_a_shots_subjects_together():
     assert {"type": "sparks", "at": 0, "on": "register"} in stage["effects"] and stage["colors"]["wall"] == "#E3D3B0"
 
 
-def test_the_one_acting_stands_by_what_they_act_on():
-    """Pig War, 2026-11-06: the farmer stood at the garden's edge and the pig in its middle (5.8 m apart for one
-    shot). Now the pig goes in the garden and the farmer right beside it; a board too wide for a close shot turns
-    the shot wide instead of losing the draft."""
-    cut = {"w": 700, "h": 1100, "height": 1.75, "frames": 2, "code": "export default function draw(k, f) { k.person(350, 1080, 4, {}); }"}
+def test_the_one_acting_stands_by_what_they_act_on_and_holds_3d_objects():
+    """Pig War, 2026-11-06: the farmer stood at the garden's edge and the pig in its middle (5.8 m apart), and a pig
+    eating the potatoes stood beside the garden. Now the pig is in the garden with the farmer beside it, in the kit's
+    own pink. A held 3D object goes in the hand, and a beat on it frames the one holding it."""
     pig = opener_crew.animal_cutout({"id": "pig", "kind": "pig", "does": "eats"})
-    raw = staging(moment="a pig eats a farmer's potatoes", people=[{"id": "farmer", "who": "a farmer", "hat": "none", "holds": "none", "doing": "points"}],
-                  animals=[{"id": "pig", "kind": "pig", "does": "eats"}], things=[{"id": "garden", "kind": "garden"}],
+    raw = staging(moment="a pig eats a farmer's potatoes", people=[{"id": "farmer", "who": "a farmer", "hat": "none", "holds": "pumpkin", "doing": "points"}],
+                  animals=[{"id": "pig", "kind": "pig", "color": "#34302D", "does": "eats"}],
+                  things=[{"id": "garden", "kind": "garden"}, {"id": "gourd", "kind": "pumpkin"}],
                   action={"who": "farmer", "does": "points", "on": "pig"},
-                  beats=[{"at": 0, "shot": "medium", "on": ["pig", "farmer"]}, {"at": "knocks", "shot": "close", "on": ["pig"]}])
+                  beats=[{"at": 0, "shot": "medium", "on": ["pig", "farmer"]}, {"at": "knocks", "shot": "close", "on": ["gourd"]}])
     st, bad = opener_crew.check_staging(raw, WORDS)
-    cuts = [{"name": "farmer", "what": "a farmer", **cut}, {**pig, "what": "a pig"}]
+    assert bad == [] and st["animals"][0]["color"] is None and not any(t["kind"] == "pumpkin" for t in st["things"]), (bad, st)
+    cuts = [{"name": "farmer", "what": "a farmer", **PERSON}, {**pig, "what": "a pig"}]
     stage, bad = opener_crew.assemble(opener_crew.layout(st, cuts, WORDS), cuts, st, WORDS, 2.6, "")
     assert bad == [] and stage["shots"][0]["size"] == "medium", (bad, stage["shots"])
-    at = {c["name"]: c["at"] for c in stage["cutouts"]}
-    assert abs(at["farmer"][0] - at["pig"][0]) < 1.2, at
-    wide = {"w": 1400, "h": 300, "height": 1.2, "frames": 1, "code": "export default function draw(k, f) { k.radio(700, 290, 2); }"}
-    raw["animals"], raw["things"], raw["moment"] = [], [{"id": "bench", "kind": "radio", "height": 1.2}], "a farmer at his bench"
-    raw["action"]["on"], raw["beats"][0]["on"], raw["beats"][1]["on"] = "bench", ["bench", "farmer"], ["bench"]
-    st = opener_crew.check_staging(raw, WORDS)[0]
-    cuts = [{"name": "farmer", "what": "a farmer", **cut}, {"name": "bench", "what": "a bench", **wide}]
-    stage, bad = opener_crew.assemble(opener_crew.layout(st, cuts, WORDS), cuts, st, WORDS, 2.6, "")
-    shot = stage["shots"][0]  # too wide for a medium on both: the medium films one subject alone, the farmer, since
-    assert bad == [] and shot["size"] == "medium" and shot["target"] == "farmer", (bad, stage["shots"])  # no other shot shows him
+    at = {c["name"]: c for c in stage["cutouts"]}
+    assert abs(at["farmer"]["at"][0] - at["pig"]["at"][0]) < 1.2, at
+    assert at["farmer"]["held"] == {"type": "pumpkin", "height": .35, "hand": 1} and stage["shots"][1]["target"] == "farmer"
+    raw2 = staging(moment="a pig eats the potatoes", people=[], animals=[{"id": "pig", "kind": "pig", "does": "eats"}],
+                   things=[{"id": "garden", "kind": "garden"}], action={"who": "pig", "does": "eats", "on": "garden"},
+                   beats=[{"at": 0, "shot": "medium", "on": ["pig"]}, {"at": 1, "shot": "close", "on": ["pig"]}])
+    st = opener_crew.check_staging(raw2, WORDS)[0]
+    one = [{**pig, "what": "a pig"}]
+    stage, bad = opener_crew.assemble(opener_crew.layout(st, one, WORDS), one, st, WORDS, 2.6, "")
+    garden, x, z = opener3d.box_of(stage["props"][0]), *stage["cutouts"][0]["at"]
+    assert bad == [] and garden[0] < x < garden[1] and garden[2] < z < garden[3], (bad, garden, x, z)
+
+
+def test_a_person_is_the_kits_person_only():
+    """Owner, 2026-11-06: a painter's own skirt polygon read as "a weird red box" and its fingers as weird hands."""
+    assert opener_crew.lint_person("export default function draw(k, f, u) { k.person(350, 1080, 4, {dress: '#B74732'}); }") == []
+    assert opener_crew.lint_person("export default function draw(k, f) { k.knock(600, 1080, 3.4, {phase: f / 2}); }") == []
+    bad = opener_crew.lint_person("export default function draw(k, f, u) { const p = k.person(350, 1080, 4, {}); k.shape([[1, 2]], '#B74732'); k.ink([[1, 2]]); }")
+    assert bad and "k.shape" in bad[0] and "k.ink" in bad[0], bad
+
+
+def test_a_replan_keeps_unchanged_people_and_adds_no_parts():
+    saved, prompts = llm.ask_ai, []
+    llm.ask_ai = fake([], prompts)  # no AI call may happen: the person is unchanged, no part is made
+    try:
+        st = opener_crew.check_staging(staging(), WORDS)[0]
+        painted = {"name": "ferryman", "w": 700, "h": 1100, "height": 1.75, "frames": 2, "code": "x"}
+        people, cuts, _ = opener_crew.crew(st, short(), Path("."), [], {json.dumps(st["people"][0], sort_keys=True): painted})
+        assert cuts[0]["code"] == "x" and prompts == []
+        new = [{"kind": "thing", "name": "anvil2", "looks": "an anvil", "instead": "none"}]
+        st, bad = opener_crew.check_staging(staging(things=[{"id": "cottage", "kind": "house"}, {"id": "a", "kind": "anvil2"}],
+                                                    new_parts=new), WORDS, allow_new=False)
+        assert st["new_parts"] == [] and any("no new parts" in p for p in bad), bad
+    finally:
+        llm.ask_ai = saved
+
+
+def test_a_new_3d_thing_is_built_checked_and_kept():
+    """A thing the library lacks is built from primitives, rendered beside a person (real Remotion, ~30 s), checked
+    and kept in drawn/parts/thing3d for every later Short; then a staging can hold it."""
+    saved, prompts = llm.ask_ai, []
+    shapes = [{"shape": "box", "size": [.4, .2, .2], "at": [0, .1, 0], "color": "#5A5A60", "metal": True},
+              {"shape": "box", "size": [.2, .1, .15], "at": [0, .25, 0], "color": "#5A5A60", "metal": True}]
+    llm.ask_ai = fake([{"shapes": shapes}, {"score": 8, "problems": []}], prompts)
+    try:
+        with tempfile.TemporaryDirectory() as d:
+            ok, note = opener_crew.make_part3d({"kind": "thing", "name": "anvil", "looks": "a blacksmith's anvil", "instead": "none"}, Path(d))
+            assert ok and "made the 3D thing anvil" in note and "anvil" in opener3d.made3d() and "anvil.png" in prompts[1], note
+        st, bad = opener_crew.check_staging(staging(people=[{"id": "ferryman", "hat": "cap", "holds": "anvil"}]), WORDS)
+        assert bad == [] and opener3d.held_of("anvil")["shapes"][0]["shape"] == "box", bad
+    finally:
+        llm.ask_ai = saved
 
 
 def test_a_plan_problem_sends_the_stager_back_with_its_last_plan():

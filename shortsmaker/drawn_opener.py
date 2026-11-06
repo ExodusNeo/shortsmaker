@@ -161,7 +161,13 @@ It lasts {seconds:.2f} s; each spoken word starts at: {timing}.
 The rest of the story, for context only (don't show it): {json.dumps([sc['narration'] for sc in scenes[1:]], ensure_ascii=False)}
 Main character: {short.get('character') or 'not named'}{f" ({short['character_look']})" if short.get('character_look') else ''}.
 {session.RULES.get("Opener") or DEFAULT_RULES}
-{opening_rules.opening_brief(short)}{staged(short)}"""
+{opening_rules.opening_brief(short)}{picture(short)}{staged(short)}"""
+
+
+def picture(short: dict) -> str:
+    """The opener picture the script writer planned with the hook line (writing.py `opener_picture`), if any."""
+    pic = str(short.get("opener_picture") or "").strip()
+    return f"\nThe script planned this opener picture (show it): {pic}" if pic else ""
 
 
 def staged(short: dict) -> str:

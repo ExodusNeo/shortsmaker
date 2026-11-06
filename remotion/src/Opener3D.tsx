@@ -16,9 +16,16 @@ type XZ = [number, number];
 export type Cutout = {name: string; frames: number; height: number; aspect: number; at: XZ; y?: number; wall?: boolean;
 	flip?: boolean; talk?: [number, number]; fps?: number; path?: [number, number, number][]; hits?: number[]; focus?: number;
 	contact?: [number, number]; // a knocker: where his fist meets the door (x from the board's centre, height), in metres
-	wide?: number; tall?: number; steps?: number}; // the board cropped round the drawing / the painter's canvas; drawings per cycle (cutouts.mjs)
+	wide?: number; tall?: number; steps?: number; // the board cropped round the drawing / the painter's canvas; drawings per cycle (cutouts.mjs)
+	held?: Held; // a 3D object in one hand (owner, 2026-11-06: people stay drawn, every object is 3D)
+	hands?: [number, number][][]}; // per drawing, both hands on the board (0..1 across from the left, 0..1 up from the feet)
+/** A 3D object a cut-out holds: a library model (`type`) or an AI-made part (`shapes`), `height` metres tall. */
+export type Held = {type: string; shapes?: Shape[]; height: number; hand?: number};
+/** One primitive of an AI-made 3D part (opener_crew.make_part3d): metres, origin on the floor at the part's centre. */
+export type Shape = {shape: 'box' | 'cylinder' | 'sphere' | 'cone' | 'torus'; size: [number, number, number];
+	at: [number, number, number]; turn?: [number, number, number]; color: string; metal?: boolean; glow?: boolean};
 export type Prop = {type: string; id?: string; at: XZ; y?: number; wall?: boolean; turn?: number; size?: number; color?: string;
-	lit?: boolean; open?: number; length?: number};
+	lit?: boolean; open?: number; length?: number; shapes?: Shape[]; h?: number}; // h: an object's height (shots aim at its middle) // shapes: type 'made', an AI-made 3D part
 export type Shot = {at: number; target: string | string[]; distance: number; height?: number; turn?: number; fov?: number; move?: 'cut' | 'whip' | 'push';
 	over?: string; size?: 'wide' | 'medium' | 'close' | 'low' | 'top' | 'over'};
 export type Effect = {type: 'rings' | 'dust' | 'shafts' | 'burst' | 'shake' | 'rain' | 'snow' | 'jolt' | 'puff' | 'sparks' | 'smoke' | 'glow' | 'aurora';
@@ -68,7 +75,7 @@ function targetOf(s: StageProps, name: string, t: number, size?: Shot['size']): 
 	const up = c?.focus != null ? (size === 'close' ? 0.6 : size === 'medium' ? 0.55 : 0.5) : (size === 'close' ? 0.8 : size === 'medium' ? 0.68 : 0.62);
 	if (c) { const p = cutPos(c, t); return c.wall ? p : p.add(new THREE.Vector3(c.focus || 0, c.height * up, 0)); } // focus: an off-centre subject (k.knock)
 	const p = s.props.find((q) => q.id === name);
-	if (p) return p.wall ? new THREE.Vector3(p.at[0], p.at[1], BACK) : new THREE.Vector3(p.at[0], (p.y || 0) + 0.8 * (p.size || 1), p.at[1]);
+	if (p) return p.wall ? new THREE.Vector3(p.at[0], p.at[1], BACK) : new THREE.Vector3(p.at[0], (p.y || 0) + (p.h != null ? p.h / 2 : 0.8 * (p.size || 1)), p.at[1]);
 	return new THREE.Vector3(0, 1.4, -2);
 }
 
@@ -149,6 +156,16 @@ const MODELS: Record<string, {file: string; fit: ['x' | 'y' | 'z', number]; face
 	hedge: {file: 'nature/plant_bushLarge', fit: ['x', 2.0]}, bookcase: {file: 'furniture/bookcaseOpen', fit: ['y', 2.0]},
 	coatrack: {file: 'furniture/coatRackStanding', fit: ['y', 1.8]}, walllamp: {file: 'furniture/lampWall', fit: ['y', 0.3]},
 	sidetable: {file: 'furniture/sideTable', fit: ['y', 0.6]},
+	// objects (owner, 2026-11-06: "for objects make it 3d"); sizes = opener3d.FOOT
+	books: {file: 'furniture/books', fit: ['y', 0.22]}, radio: {file: 'furniture/radio', fit: ['y', 0.32]},
+	box: {file: 'furniture/cardboardBoxClosed', fit: ['x', 0.5]}, plant: {file: 'furniture/pottedPlant', fit: ['y', 0.8]},
+	bench: {file: 'furniture/bench', fit: ['x', 1.6]}, roundtable: {file: 'furniture/tableRound', fit: ['y', 0.75]},
+	stool: {file: 'town/stall-stool', fit: ['y', 0.5]}, wheel: {file: 'town/wheel', fit: ['y', 1.0]},
+	pumpkin: {file: 'nature/crop_pumpkin', fit: ['x', 0.45]}, turnip: {file: 'nature/crop_turnip', fit: ['y', 0.3]},
+	carrot: {file: 'nature/crop_carrot', fit: ['y', 0.3]}, logs: {file: 'nature/log_stack', fit: ['x', 1.2]},
+	campfire: {file: 'nature/campfire_logs', fit: ['x', 0.9]}, pot: {file: 'nature/pot_large', fit: ['y', 0.6]},
+	canoe: {file: 'nature/canoe', fit: ['x', 3.0]}, tent: {file: 'nature/tent_detailedOpen', fit: ['x', 2.4]},
+	statue: {file: 'nature/statue_head', fit: ['y', 1.2]}, stump: {file: 'nature/stump_round', fit: ['y', 0.5]},
 };
 const TOWN = ['wall-wood', 'wall-wood-door', 'wall-wood-window-shutters', 'wall-wood-window-glass', 'wall', 'wall-door',
 	'wall-window-shutters', 'wall-window-glass', 'roof-gable', 'overhang', 'wall-wood-detail-cross', 'wall-wood-detail-diagonal',
@@ -166,12 +183,13 @@ const Patch: React.FC<{lib: Library; kind: string}> = ({lib, kind}) => {
 	const cells = Array.from({length: pt.cols * pt.rows}, (_, k) => [(k % pt.cols - (pt.cols - 1) / 2) * pt.cell, (Math.floor(k / pt.cols) - (pt.rows - 1) / 2) * pt.cell]);
 	return <>{cells.map(([x, z], k) => <group key={k} position={[x, 0, z]}>
 		<Model src={lib[ground]} fit={['x', pt.cell]} />
-		{plant && lib[plant] ? <group position={[0, 0.12, 0]}><Model src={lib[plant]} fit={['y', 0.38]} /></group> : null}
+		{/* planted in the 5 cm dirt row (crops_dirtDoubleRow is 0.05 tall): at 0.12 every plant floated (owner, 2026-11-07) */}
+		{plant && lib[plant] ? <group position={[0, 0.03, 0]}><Model src={lib[plant]} fit={['y', 0.38]} /></group> : null}
 	</group>)}</>;
 };
 
 function useModels(s: StageProps): Library | null {
-	const files = useMemo(() => [...new Set([...s.props.map((p) => MODELS[p.type]?.file).filter(Boolean) as string[],
+	const files = useMemo(() => [...new Set([...[...s.props.map((p) => p.type), ...s.cutouts.map((c) => c.held?.type || '')].map((k) => MODELS[k]?.file).filter(Boolean) as string[],
 		...s.props.flatMap((p) => PATCHES[p.type]?.files || []),
 		...(s.place === 'street' || s.props.some((p) => p.type === 'house' || p.type === 'shopfront' || p.type === 'cabin') ? TOWN : [])])], []); // eslint-disable-line react-hooks/exhaustive-deps
 	const [lib, setLib] = useState<Library | null>(files.length ? null : {});
@@ -217,6 +235,24 @@ const Model: React.FC<{src: THREE.Object3D; fit: ['x' | 'y' | 'z', number]; face
 		return outer;
 	}, [src, fit, face, color]);
 	return <primitive object={obj} />;
+};
+
+/** An AI-made 3D part: its primitives in the flat-shaded, Kenney-like look of the library. */
+const Assembly: React.FC<{shapes: Shape[]}> = ({shapes}) => <>{shapes.map((p, i) => (
+	<mesh key={i} position={p.at} rotation={(p.turn || [0, 0, 0]).map((d) => (d * Math.PI) / 180) as unknown as THREE.Euler} scale={p.size} castShadow receiveShadow>
+		{p.shape === 'box' ? <boxGeometry args={[1, 1, 1]} /> : p.shape === 'cylinder' ? <cylinderGeometry args={[0.5, 0.5, 1, 24]} />
+			: p.shape === 'sphere' ? <sphereGeometry args={[0.5, 24, 16]} /> : p.shape === 'cone' ? <coneGeometry args={[0.5, 1, 24]} />
+			: <torusGeometry args={[0.35, 0.15, 12, 32]} />}
+		<meshStandardMaterial color={p.color} roughness={p.metal ? 0.35 : 0.75} metalness={p.metal ? 0.6 : 0} flatShading
+			emissive={p.glow ? p.color : '#000'} emissiveIntensity={p.glow ? 0.9 : 0} />
+	</mesh>))}</>;
+
+/** A held 3D object, centred on the hand point (Card puts it there). */
+const HeldThing: React.FC<{held: Held; lib: Library}> = ({held, lib}) => {
+	const m = MODELS[held.type];
+	return <group position={[0, -held.height / 2, 0.06]}>
+		{held.shapes ? <Assembly shapes={held.shapes} /> : m && lib[m.file] ? <Model src={lib[m.file]} fit={m.fit} face={m.face} /> : null}
+	</group>;
 };
 
 /** A cobblestone texture in the street's ground colour (2026-11-06: reviews called the flat street plain; the
@@ -287,7 +323,8 @@ function useTextures(dir: string, cutouts: Cutout[]): Record<string, THREE.Textu
 }
 
 /** A flat drawn cut-out standing in the set: lit by the scene, casting a shadow in its own shape. */
-const Card: React.FC<{map: THREE.Texture; w: number; h: number; lift?: number; pos: THREE.Vector3; flip?: boolean; wall?: boolean; face?: THREE.Vector3 | null; tint: string; squash: number; t: number; seed: number}> = ({map, w, h, lift = 0, pos, flip, wall, face, tint, squash, t, seed}) => {
+const Card: React.FC<{map: THREE.Texture; w: number; h: number; lift?: number; pos: THREE.Vector3; flip?: boolean; wall?: boolean; face?: THREE.Vector3 | null; tint: string; squash: number; t: number; seed: number;
+	hold?: React.ReactNode; hand?: [number, number]}> = ({map, w, h, lift = 0, pos, flip, wall, face, tint, squash, t, seed, hold, hand}) => {
 	// `face`: the board turns toward the camera (up to 60 degrees) so a side-on shot never shows a paper-thin stripe
 	// (live dancing plague, 2026-11-06); a knocker stays flush with his door, a wall picture with its wall
 	const yaw = face ? clamp(Math.atan2(face.x - pos.x, face.z - pos.z), -1.05, 1.05) : 0; // face = this frame's camera (framing)
@@ -301,6 +338,7 @@ const Card: React.FC<{map: THREE.Texture; w: number; h: number; lift?: number; p
 				<planeGeometry args={[w, h]} />
 				<meshBasicMaterial map={map} color={tint} transparent alphaTest={0.5} side={THREE.DoubleSide} />
 			</mesh>
+			{hold && hand ? <group position={[(hand[0] - 0.5) * w * sx * (flip ? -1 : 1), hand[1] * h * sy, 0]}>{hold}</group> : null}
 		</group>
 	);
 };
@@ -577,7 +615,7 @@ export const Opener3D: React.FC<StageProps> = (s) => {
 				{s.props.map((p, i) => {
 					const j = p.id ? joltOf(s, p.id, t) : 0;
 					return <group key={i} position={p.wall ? [p.at[0] + j, p.at[1], BACK] : [p.at[0] + j, p.y || 0, p.at[1]]} rotation={[0, ((p.turn || 0) * Math.PI) / 180, 0]} scale={p.size || 1}>
-						<PropMesh p={p} night={night} i={i} lib={lib} sky={aurora} />
+						{p.type === 'made' && p.shapes ? <Assembly shapes={p.shapes} /> : <PropMesh p={p} night={night} i={i} lib={lib} sky={aurora} />}
 					</group>;
 				})}
 				{s.cutouts.filter((c) => c.wall).map((c) => <PictureLight key={`pl-${c.name}`} at={cutPos(c, 0)} />)}
@@ -588,7 +626,8 @@ export const Opener3D: React.FC<StageProps> = (s) => {
 					const pos = cutPos(c, t);
 					pos.x += joltOf(s, c.name, t);
 					const bw = c.height * c.aspect * (c.wide || 1), bh = c.height * (c.tall || 1); // a wall board keeps its bottom edge
-					return <Card key={c.name} map={list[f]} w={bw} h={bh} lift={(bh - c.height) / 2} pos={pos} face={!c.wall && c.focus == null && !c.contact ? cam : null} flip={c.flip} wall={c.wall} tint={m.card} squash={hitAt(t, c.hits)} t={t} seed={ci * 1.7 + 0.4} />;
+					return <Card key={c.name} map={list[f]} w={bw} h={bh} lift={(bh - c.height) / 2} pos={pos} face={!c.wall && c.focus == null && !c.contact ? cam : null} flip={c.flip} wall={c.wall} tint={m.card} squash={hitAt(t, c.hits)} t={t} seed={ci * 1.7 + 0.4}
+							hold={c.held ? <HeldThing held={c.held} lib={lib} /> : null} hand={c.held && c.hands ? c.hands[f % c.hands.length]?.[c.held.hand ?? 1] : undefined} />;
 				}); })()}
 				{s.effects.map((e, i) => {
 					const hit = s.cutouts.find((c) => c.name === e.on && c.contact); // a puff or burst on a knock lands at the fist, not the face

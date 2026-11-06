@@ -202,13 +202,17 @@ Rules for each Short:
   sharpens the SAME question the first sentence opens, in other words (e.g. "NOBODY FIRED HIM"),
   never a separate idea, not a repeat of the title or thumbnail_text.
   Never name or show a new answer that the narration saves for the ending in hook_text.
+- opener_picture: one sentence, planned WITH the first sentence: what scene 1's opener shows a viewer with the sound
+  off: the place, who is there, the key real object (how it looks) and what makes the moment strange, readable at a
+  glance. People are simple drawn stick figures, objects are 3D models; no words or labels on screen. Never show
+  the answer the narration saves for the ending.
 Topics and research: {json.dumps(research, ensure_ascii=False)}
 Reply with ONLY JSON: {{"shorts": [{{"index": 0, "shape": "...", "title": "...", "hook_options": ["...", "...", "..."],
-"hook_text": "...", "thumbnail_text": "...", "scenes": ["narration of scene 1", "narration of scene 2", "..."]}}]}}""")
+"hook_text": "...", "thumbnail_text": "...", "opener_picture": "...", "scenes": ["narration of scene 1", "narration of scene 2", "..."]}}]}}""")
     for k, r in enumerate(data.get("shorts", [])):
         i = r.get("index") if isinstance(r, dict) and isinstance(r.get("index"), int) else k
         if isinstance(r, dict) and 0 <= i < len(shorts) and str(r.get("title") or "").strip():
-            shorts[i].update({f: r[f] for f in ("shape", "hook_options", "hook_text", "thumbnail_text") if r.get(f)},
+            shorts[i].update({f: r[f] for f in ("shape", "hook_options", "hook_text", "thumbnail_text", "opener_picture") if r.get(f)},
                              title=str(r["title"]).strip(), lines=narration_lines(r.get("scenes")))
     shorts = [s for s in shorts if s.get("lines")]
     assert shorts, f"no usable scripts: {data}"
@@ -241,6 +245,7 @@ Reply with ONLY JSON: {{"shorts": [{{"index": 0, "shape": "...", "title": "...",
         s["music_instruments"] = [v.strip().lower()[:30] for v in s.get("music_instruments", []) if isinstance(v, str)][:6] if isinstance(s.get("music_instruments"), list) else []
         s["palette"] = s.get("palette") if s.get("palette") in PALETTES else ""
         s["hook_text"] = str(s.get("hook_text") or s.get("thumbnail_text") or "").strip().upper()[:40]
+        s["opener_picture"] = str(s.get("opener_picture") or "").strip()[:300]  # opener_crew.stage shows it (2026-11-06)
         opts = s.get("hook_options")
         s["hook_options"] = [str(o).strip() for o in opts if str(o).strip()][:3] if isinstance(opts, list) else []
         for i, sc in enumerate(s["scenes"]):
@@ -338,7 +343,7 @@ Here each script also lists its Wikipedia research: you MAY replace a scene that
 (the fact check verifies every line afterwards), or simply cut it: a shorter Short is fine; never pad.
 """ if problems else "")
     drafts = [{"index": i, "topic": s["topic"], "shape": s.get("shape"), "title": s["title"],
-               "hook_text": s.get("hook_text"), "thumbnail_text": s.get("thumbnail_text"),
+               "hook_text": s.get("hook_text"), "thumbnail_text": s.get("thumbnail_text"), "opener_picture": s.get("opener_picture"),
                "hook_options": s.get("hook_options"), "scenes": s["lines"], "pictures": picture_pool.pictures_of(s) or "none listed",
                **({"research": {t: x[:4000] for t, x in (s.get("_texts") or {}).items() if x} or "none"} if problems else {})}
               for i, s in enumerate(shorts)]
@@ -377,7 +382,7 @@ words each (a new picture every ~3 seconds; only a scene that needs time on one 
 notes: 1-4 short lines: the hook scores and what you changed and why.
 {retry}Scripts: {json.dumps(drafts, ensure_ascii=False)}
 Reply with ONLY JSON: {{"shorts": [{{"index": 0, "scenes": ["...", "..."], "title": "...", "hook_text": "...",
-"thumbnail_text": "...", "notes": ["..."]}}]}}""", fatal=False, brain=editor) or {}
+"thumbnail_text": "...", "opener_picture": "... (rewrite it only when scene 1 changed; else the same)", "notes": ["..."]}}]}}""", fatal=False, brain=editor) or {}
     who = session.LAST_AI.capitalize()  # Claude steps in when Gemini fails
     for r in data.get("shorts", []) if isinstance(data.get("shorts"), list) else []:
         i = r.get("index") if isinstance(r, dict) else None
@@ -391,7 +396,7 @@ Reply with ONLY JSON: {{"shorts": [{{"index": 0, "scenes": ["...", "..."], "titl
             s["lines"] = lines
         else:
             notes.append("its scene edit broke the length rules, so the writer's scenes were kept")
-        for k in ("title", "hook_text", "thumbnail_text"):
+        for k in ("title", "hook_text", "thumbnail_text", "opener_picture"):
             if isinstance(r.get(k), str) and r[k].strip():
                 s[k] = r[k].strip()
         s["editor_notes"] = (s.get("editor_notes") or [] if problems else []) + ([f"{who}: {x}" for x in notes] or [f"{who}: no changes"])

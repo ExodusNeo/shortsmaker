@@ -41,7 +41,7 @@ export async function paintAll(job) {
     if (typeof draw !== "function") throw new Error(`cut-out ${c.name}: the module must export default function draw(k, f, u)`);
     const px = Math.round(c.w * PAD_X), pt = Math.round(c.h * PAD_TOP), W = c.w + 2 * px, H = c.h + pt;
     const steps = c.frames > 1 ? Math.max(STEPS, c.frames) : 1, cycle = c.frames / (c.fps || 7);
-    const drawn = [];
+    const drawn = [], hands = [];
     let box = null;
     for (let j = 0; j < steps; j++) {
       const u = j / steps, f = Math.floor(u * c.frames);
@@ -50,7 +50,13 @@ export async function paintAll(job) {
       const k = makeKit(ctx, u * cycle, []);
       k.shadow = () => {};
       k.pen.grain = FLAT;
+      // the person's hands in this drawing (the outermost k.person call: a dance calls it again inside), for a 3D
+      // object held in the hand (owner, 2026-11-06: objects are 3D)
+      const person = k.person;
+      let depth = 0, hand = null;
+      k.person = (...a) => { depth++; const r = person(...a); depth--; if (!depth && !hand && r && r.hands) hand = r.hands; return r; };
       draw(k, f, u);
+      hands.push(hand);
       drawn.push(cv);
       const b = bounds(cv);
       if (b) box = box ? [Math.min(box[0], b[0]), Math.min(box[1], b[1]), Math.max(box[2], b[2]), Math.max(box[3], b[3])] : b;
@@ -65,6 +71,8 @@ export async function paintAll(job) {
       fs.writeFileSync(path.join(job.out, `${c.name}_${j}.png`), out.toBuffer("image/png"));
     });
     sizes[c.name] = { wide: +(cw / c.w).toFixed(4), tall: +(ch / c.h).toFixed(4), steps };
+    if (hands.every(Boolean))  // on the cropped board: 0..1 across from its left edge, 0..1 up from its bottom
+      sizes[c.name].hands = hands.map((hs) => hs.map(([hx, hy]) => [+((hx + px - (mid - half)) / cw).toFixed(4), +((bottom - (hy + pt)) / ch).toFixed(4)]));
   }
   fs.writeFileSync(path.join(job.out, "sizes.json"), JSON.stringify(sizes));
   return sizes;

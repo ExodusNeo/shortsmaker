@@ -490,6 +490,31 @@ Order (owner, 2026-11-05): 3D opener -> drawn opener -> motion graphic (2 fixes)
     (the potato read as a loaf, a made potato part floating; Carrington's battery as "blue containers" in one draft).
     Next if needed: those are painter/part problems (the stager's re-plan can't fix a drawing).
   - Not built: per-moment recipes (owner: the moments named were ones already posted).
+- **Opener round 5: people drawn, every object 3D** (owner, 2026-11-06, after "all of it looks worse": a painter's own
+  skirt polygon "a weird red box", a black pig behind a flat potato board; rule: "for persons the stick is fine but
+  for objects make it 3d"; judge by the frames, memory `shortsmaker-judge-openers-by-frames`):
+  - Library objects (`opener3d.OBJECTS`, Opener3D.tsx `MODELS`, CC0 Kenney copied to `remotion/public/opener3d/models`):
+    books, radio, box, plant, bench, roundtable, stool, wheel, pumpkin, turnip, carrot, logs, campfire, pot, canoe,
+    tent, statue, stump (+ the earlier props).
+  - Made 3D parts: a `new_parts` thing is built by `opener_crew.make_part3d`: the AI writes primitives
+    (box/cylinder/sphere/cone/torus, metres, `opener3d.clean_shapes`), `opener3d.part_sheet` renders it beside a 1.75 m
+    person + a close-up, the part checker scores it, kept in `drawn/parts/thing3d/<name>.json` (`made3d`, `load_part`);
+    Opener3D `Assembly` builds it. A stage prop of a made part is `type "made"` with `part`, `shapes`, `foot`.
+  - Held 3D objects: a person's `holds` that isn't a kit hand item (`HOLDABLE`) goes in the right hand:
+    `drawn/cutouts.mjs` records the outermost `k.person` call's hands per drawing (sizes.json `hands`, 0..1 on the
+    cropped board), `opener3d.held_of` -> cut-out `held`, Opener3D `Card` draws `HeldThing` inside its own group.
+    A beat naming the held object frames its holder; held things aren't also props.
+  - Painters: people only, `lint_person` allows only `k.person` / `k.knock` calls (clothes via options: `dress`...);
+    CUTOUT.md says so. Animals: the kit's colours (the stager's `color` is dropped). A pig acting on a garden stands
+    `in` it. Layout: table-top objects (<= 0.5 m tall, <= 0.7 m wide) go `on` the desk/table, else by the main prop.
+    Shots on small objects aim at their middle (`h`) and frame at least 6x their width.
+  - Re-plans: `crew(..., old)` keeps a person whose staging entry didn't change; `check_staging(allow_new=False)`.
+  - Script: `writing.py` writes `opener_picture` (one sentence, with the first line; the editor may rewrite it when
+    scene 1 changes); `drawn_opener.opener_role` passes it to the stager and the drawn opener; edit_plan prints it.
+    Golden prompts updated. Not yet seen in a live run (the crew harness skips the script).
+  - Garden plants were 7 cm above the 5 cm dirt rows (Patch y .12 -> .03): "levitating" (owner, 2026-11-07).
+  - Live `crew_codex8/` (Codex): Carrington 4, Pig War 5, Dancing 6/10, 4-6 min each; owner: Carrington looked the
+    best, Dancing focusing on one person is right for its hook; compare sheets `crew_codex8/compare_<story>.png`.
 - Kit expansion (2026-11-05): 11 more hats (fedora, flatcap, boater, cowboy, ranger, kepi, officer, bobby, bicorne,
   nurse, hardhat), rooms/furniture (`k.door` with `open` + knob, `k.bed`, `k.rug`, `k.shelf`, `k.lamp`, `k.window`,
   `k.frame`), devices (`k.phone`, `k.radio`, `k.letter`), animals `k.cat`, `k.rabbit`, `k.bear` (also in

@@ -71,6 +71,7 @@ def edit_plan(short: dict, bounds: list[float], sources: list[str], cues: list[d
                                if any(sc.get("look") for sc in short["scenes"]) else "none (plain pictures)"),
              "Opening: " + (short.get("opening_note") or "no note")
              + (f" | hook lines considered: {' / '.join(short['hook_options'])}" if short["hook_options"] else ""),
+             *([f"Opener picture (planned with the script): {short['opener_picture']}"] if short.get("opener_picture") else []),
              *([f"Opener staging (what the 3D opener crew planned): {staging_line(short['opener_staging'])}"]
                if short.get("opener_staging") else []),
              *([f"Opener crew: {', '.join(short['opener_crew'])}"] if short.get("opener_crew") else []),

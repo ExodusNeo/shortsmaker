@@ -65,7 +65,8 @@ class OpeningRulesTests(unittest.TestCase):
             score, problems = drawn_opener.review(bobby(), bobby()['drawn'], self.root / 'sheet.png', 2)
         self.assertLess(score, drawn_opener.PASS)
         self.assertIn('ORANGE PEEL', problems[0])
-        self.assertIn('An orange peel under his foot.', ask.call_args.args[0])
+        # the art director's prompt (the first call; the sound-off test's stranger is asked after it)
+        self.assertIn('An orange peel under his foot.', ask.call_args_list[0].args[0])
 
     def test_drawn_known_subject_can_still_pass(self):
         with patch.object(llm, 'ask_ai', return_value={'score': 9, 'reveals_answer': False, 'problems': []}):

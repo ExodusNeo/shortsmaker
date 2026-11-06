@@ -47,7 +47,6 @@ POSES = {"dances": "`dance: u * 2 * Math.PI` (hops, sways, kicks, arms flung up)
 ANIMAL_DOES = {"stands": "", "walks": "walk: u * 2 * Math.PI", "runs": "walk: u * 2 * Math.PI, does: 'run'",
                "eats": "does: 'eat'", "jumps": "walk: u * 2 * Math.PI, does: 'jump'"}
 HOLDABLE = ("letter", "paper", "cup", "bottle", "coin", "moneybag")  # kit.mjs HOLD: a hand grips them
-DRAWN_THINGS = ("phone", "radio", "sack", "bottle", "cup", "moneybag", "coins", "clock", "fire", "letter", "paper")
 ANIMALS = {  # kit animal: canvas w, h, metres tall, the call standing on the canvas's bottom centre
     "horse": (1300, 1100, 1.7, "k.horse(650, 1080, 2.8, o)"), "dog": (800, 620, .6, "k.dog(400, 600, 4.2, o)"),
     "cow": (1300, 1000, 1.5, "k.cow(650, 980, 2.6, o)"), "pig": (900, 640, .7, "k.pig(450, 620, 3.4, o)"),
@@ -78,12 +77,6 @@ def kit_text(*heads: str) -> str:
     return "\n".join(p for p in parts if any(p.startswith("## " + h) for h in heads)).strip()
 
 
-def made_note() -> str:
-    hats, things = made("hat"), made("thing")
-    return (f"\nMade parts you can use: hats {', '.join(hats) or 'none'}; things {', '.join(things) or 'none'}."
-            if hats or things else "")
-
-
 def parallel(jobs: list) -> list:
     """Runs the zero-argument callables in `jobs`, MAX_PARALLEL at a time; their results in order."""
     if len(jobs) < 2:
@@ -94,14 +87,21 @@ def parallel(jobs: list) -> list:
 
 # ---- stager ----------------------------------------------------------------------------------------------------
 
-def check_staging(raw, words: list) -> tuple[dict | None, list[str]]:
-    """The stager's plan, checked against what the kit and the 3D set can show; and what's wrong with it."""
+def objects3d() -> list[str]:
+    """Every 3D object a staging can use: the library's and the made 3D parts (owner, 2026-11-06: objects are 3D)."""
+    return sorted(set(opener3d.OBJECTS) | set(opener3d.made3d()))
+
+
+def check_staging(raw, words: list, allow_new: bool = True) -> tuple[dict | None, list[str]]:
+    """The stager's plan, checked against what the kit and the 3D set can show; and what's wrong with it. A re-plan
+    (`allow_new` False) can't add new parts: every bad potato part of the live runs came from a re-plan (2026-11-06)."""
     if not isinstance(raw, dict):
         return None, ["the reply was not a JSON object"]
     bad: list[str] = []
     new = [n for n in raw.get("new_parts") or [] if isinstance(n, dict) and n.get("kind") in ("hat", "thing")
            and isinstance(n.get("name"), str) and NAME.match(n["name"]) and str(n.get("looks") or "").strip()][:4]
-    hats, things = set(kit_hats()), set(HOLDABLE) | set(made("thing"))
+    new = new if allow_new else []
+    hats, things = set(kit_hats()), set(HOLDABLE) | set(objects3d())
     new_hats = {n["name"] for n in new if n["kind"] == "hat"}
     new_things = {n["name"] for n in new if n["kind"] == "thing"}
     st = {"place": raw.get("place") if raw.get("place") in opener3d.PLACES else "room",
@@ -125,28 +125,32 @@ def check_staging(raw, words: list) -> tuple[dict | None, list[str]]:
         if hat not in hats | new_hats:
             bad.append(f"{n}'s hat {hat!r} isn't in the kit: use one of the hats listed, or add it to new_parts")
         if holds not in things | new_things | {"none"}:
-            bad.append(f"{n} holds {holds!r}: a hand can hold {', '.join(sorted(things))}, or add it to new_parts as a thing")
+            bad.append(f"{n} holds {holds!r}: a hand can hold {', '.join(sorted(things))}"
+                       + (", or add it to new_parts as a thing" if allow_new else " (no new parts when planning again)"))
         st["people"].append({"id": n, "who": str(p.get("who") or n)[:80], "hat": hat, "holds": holds,
                              "coat": p["coat"] if opener3d.COLOR.match(str(p.get("coat") or "")) else None,
                              "doing": str(p.get("doing") or "")[:100]})
     for a in (raw.get("animals") or [])[:2]:
         n = take(a, "animal")
         if n and a.get("kind") in ANIMALS:
-            st["animals"].append({"id": n, "kind": a["kind"], "color": a["color"] if opener3d.COLOR.match(str(a.get("color") or "")) else None,
+            # the kit's own colours: a live staging's historically black pig read as a dark blob (owner, 2026-11-06)
+            st["animals"].append({"id": n, "kind": a["kind"], "color": None,
                                   "does": a["does"] if a.get("does") in ANIMAL_DOES else "stands"})
         elif n:
             bad.append(f"animal {n}: the kit's animals are {', '.join(ANIMALS)}")
     for t in (raw.get("things") or [])[:6]:
         n = take(t, "thing")
         kind = str((t or {}).get("kind") or "")
-        if n and (kind in opener3d.PROPS or kind in DRAWN_THINGS or kind in new_things or kind in made("thing")):
-            st["things"].append({"id": n, "kind": kind, "what": str(t.get("what") or kind)[:80],
-                                 "height": opener3d.num(t.get("height"), .1, 3, .6)})
+        if n and (kind in opener3d.PROPS or kind in new_things or kind in opener3d.made3d()):
+            st["things"].append({"id": n, "kind": kind, "what": str(t.get("what") or kind)[:80]})
         elif n:
-            bad.append(f"thing {n} ({kind!r}): use a set prop ({', '.join(sorted(opener3d.PROPS))}), a drawn thing "
-                       f"({', '.join(DRAWN_THINGS)}), or add it to new_parts")
+            bad.append(f"thing {n} ({kind!r}): use a 3D prop or object ({', '.join(sorted(set(opener3d.PROPS) | set(objects3d())))})"
+                       + (", or add it to new_parts as a thing" if allow_new else " (no new parts when planning again)"))
     if not st["people"] and not st["animals"]:
         bad.append("the staging needs at least one person or animal: the subject is a drawn cut-out")
+    held = {p["holds"] for p in st["people"]} - {"none"}
+    for x in [x for x in st["things"] if x["kind"] in held]:  # held in a hand: not also standing in the set
+        st["things"].remove(x)
     act = raw.get("action") if isinstance(raw.get("action"), dict) else {}
     st["action"] = {"who": act.get("who") if act.get("who") in ids else (st["people"] or st["animals"] or [{"id": None}])[0]["id"],
                     "does": act.get("does") if act.get("does") in VERBS else "stands",
@@ -205,19 +209,22 @@ def stage(short: dict, words: list, seconds: float, folder: Path, avoid: list[st
         fix = ("\nYour last plan had these problems:\n- " + "\n- ".join(problems) +
                f"\nLast plan:\n{json.dumps(raw, ensure_ascii=False)}" if raw else
                ("\nThe last opener was sent back. Avoid this:\n- " + "\n- ".join(problems) +
+                ("\nUse only the hats and objects listed: no new_parts this time." if last else "") +
                 (f"\nYour last plan (change what these problems need; keep what works):\n{json.dumps(last, ensure_ascii=False)}"
                  if last else "") if problems else ""))
         raw = llm.ask_ai(f"""{drawn_opener.opener_role(short, words, seconds)}
-You are the STAGER: you decide what the opener shows. Painters will draw the people and things; the code stands
-them in a 3D set (the one acting beside the main prop, small things on its top, everyone else beside the one acting)
-and films your beats. Plan ONE clear picture of the strangest moment scene 1's narration says.
+You are the STAGER: you decide what the opener shows. The people are flat drawn stick figures (painters draw them);
+every object is a 3D model in a 3D set. The code stands them in it (the one acting beside the main prop, small
+objects on its top, everyone else beside the one acting) and films your beats. Plan ONE clear picture of the
+strangest moment scene 1's narration says.
 - place: "room" (an interior) | "street" (a town street) | "outdoors" (open ground, hills). light: "day" | "golden" | "dusk" | "night" | "interior".
 - people (1-3; at most 3): id, who (one line: the person and their era), hat (one of: {', '.join(kit_hats())}),
-  coat (a "#RRGGBB" that stands out from the place), holds (one of: {', '.join(sorted(set(HOLDABLE) | set(made('thing'))))}, or "none"),
+  coat (a "#RRGGBB" that stands out from the place), holds (a drawn hand item: {', '.join(HOLDABLE)}; or a 3D
+  object: {', '.join(objects3d())}; or "none"),
   doing (one line: their pose and action).
-- animals (0-2): id, kind ({', '.join(ANIMALS)}), color, does ({' | '.join(ANIMAL_DOES)}: what it is doing in the moment).
-- things (0-6): id, kind: set props ({', '.join(sorted(opener3d.PROPS))}) or drawn things ({', '.join(DRAWN_THINGS)}),
-  what (one line), height (metres, drawn things only).
+- animals (0-2): id, kind ({', '.join(ANIMALS)}), does ({' | '.join(ANIMAL_DOES)}: what it is doing in the moment).
+- things (0-6): id, kind (a 3D prop or object: {', '.join(sorted(set(opener3d.PROPS) | set(objects3d())))}),
+  what (one line). A held object is the person's `holds`, not a thing too.
 - action: who (an id), does ({', '.join(VERBS)}), on (an id or null). A knock needs a "house", "shopfront" or "cabin" thing.
 - beats (2-4): at (0 or a spoken word), shot ({', '.join(opener3d.SHOT_SIZES)}), on (the ids it shows). The first
   beat (at 0) is medium, close or low on the main subject (one or two ids): it must read at a glance on a phone.
@@ -230,13 +237,15 @@ and films your beats. Plan ONE clear picture of the strangest moment scene 1's n
   effects (0-2): {{"type": one of {', '.join(opener3d.SIGN_EFFECTS)}, "on": an id above (not for aurora)}}: they run
   from frame 0. Electricity, heat, fire, a sky event or any other invisible force MUST get one: a small moving part
   (a lever tapping, a needle twitching) can't be seen on a phone; sparks crackling off the machine can.
-- new_parts (0-3): ONLY when the story needs a hat or a held/standing thing the lists don't have (a pith helmet is
-  there; a samurai helmet is not): kind ("hat" | "thing"), name (lowercase_id, used above as the hat/holds/kind),
-  looks (one line: how it looks), instead (the nearest listed one, used if it can't be made).
+- new_parts (0-3): ONLY when the story needs a hat or an object the lists don't have (a pith helmet is there; a
+  samurai helmet is not): kind ("hat": drawn on a person | "thing": a 3D object built from simple shapes), name
+  (lowercase_id, used above as the hat/holds/kind), looks (one line: its telling shapes, colours and real size),
+  instead (the nearest listed one, used if it can't be made). One object, never something "in a mouth" or "in a
+  hand" (a hand holds through `holds`).
 Real facts only: the people, things, clothes and era of the story.{fix}
 Reply with ONLY JSON: {{"moment": "one sentence", "strange": {{"what": "...", "shows": ["..."], "effects": [...]}}, "place": "...", "light": "...",
 "people": [...], "animals": [...], "things": [...], "action": {{...}}, "beats": [...], "new_parts": [...]}}""", fatal=False, brain=strong())
-        st, problems = check_staging(raw, words)
+        st, problems = check_staging(raw, words, allow_new=last is None)
         if st and not problems:
             short["opener_staging"] = st
             return st, None
@@ -332,11 +341,57 @@ Reply with ONLY JSON: {{"score": 7, "problems": ["..."]}}""", fatal=False, read_
     return False, f"couldn't make the {kind} {name} ({'; '.join(problems)[:160]}): using {spec.get('instead') or 'none'}"
 
 
+def make_part3d(spec: dict, folder: Path) -> tuple[bool, str]:
+    """Builds one new 3D object from primitives, checks it by eye beside a person, keeps it in drawn/parts/thing3d.
+    (made, note for the log)."""
+    name, began = spec["name"], time.monotonic()
+    out = folder / "parts3d"
+    out.mkdir(parents=True, exist_ok=True)
+    shapes, problems = None, []
+    for attempt in range(2):
+        fix = (f"\nYour last build had these problems:\n- " + "\n- ".join(problems) +
+               f"\nLast build:\n{json.dumps({'shapes': shapes})}") if shapes else ""
+        data = llm.ask_ai(f"""You build ONE object for a 3D cartoon set out of simple primitives, in a clean flat-shaded low-poly
+style (like a toy model): a {name}: {spec['looks']}.
+Metres; the origin is on the floor at the object's centre; y is up; its front faces +z (the camera). Real size: a
+lantern about 0.35 tall, a 19th-century battery tray about 0.3 wide, a chair about 0.9 tall, a cart about 2 long.
+Each primitive: {{"shape": "box" | "cylinder" | "sphere" | "cone" | "torus", "size": [x, y, z] (box: its sides;
+cylinder and cone: [diameter, height, diameter], standing up; sphere: [diameter, diameter, diameter]; torus: a ring
+standing up and facing the camera, [outer diameter, outer diameter, thickness]), "at": [x, y, z] (its centre),
+"turn": [x, y, z] degrees (optional), "color": "#RRGGBB", "metal": true (brass, iron, copper; optional),
+"glow": true (a lit lamp, a hot coal; optional)}}.
+6-30 primitives: first the one or two telling shapes, big and clear, then a few details. Every piece touches
+another; the lowest rests on y 0. No words or labels. Clear, saturated colours that read on a phone.{fix}
+Reply with ONLY JSON: {{"shapes": [...]}}""", fatal=False)
+        shapes, problems = opener3d.clean_shapes((data or {}).get("shapes") if isinstance(data, dict) else None)
+        if problems or not shapes:
+            problems = problems or ["no shapes came back"]
+            continue
+        png = out / f"{name}.png"
+        err = opener3d.part_sheet(shapes, png)
+        if err:
+            problems = [err]
+            continue
+        look = drawn_opener.look_dir(png)
+        verdict = llm.ask_ai(f"""You check one new 3D object for a cartoon set. Open {look / png.name}: left, the object (a {name}:
+{spec['looks']}) on the floor beside a 1.75 m cartoon person; right, a close-up of it.
+Score 1-10: does it read as a {name} at a glance, at a believable size next to the person? 7 = good enough.
+Problems that matter: it doesn't look like a {name}; pieces floating apart; far too big or small; a mess of shapes.
+Reply with ONLY JSON: {{"score": 7, "problems": ["..."]}}""", fatal=False, read_dir=look)
+        score = verdict.get("score") if isinstance(verdict, dict) else None
+        if not isinstance(score, (int, float)) or score >= drawn_opener.PASS:  # no verdict: kept, as with openers
+            opener3d.PARTS3D.mkdir(parents=True, exist_ok=True)
+            (opener3d.PARTS3D / f"{name}.json").write_text(json.dumps({"looks": spec["looks"], "shapes": shapes}), encoding="utf-8")
+            return True, f"made the 3D thing {name} ({drawn_opener.minutes(began)}{', unreviewed' if score is None else f', {score:g}/10'})"
+        problems = [str(x)[:200] for x in verdict.get("problems") or []] or [f"scored {score}/10"]
+    return False, f"couldn't make the 3D thing {name} ({'; '.join(problems)[:160]}): using {spec.get('instead') or 'none'}"
+
+
 def make_parts(st: dict, folder: Path, log: list[str]) -> None:
     """The kit scout and part makers: draws each new part the staging needs (in parallel); a part that fails is
     swapped for its substitute in the staging. In place."""
-    todo = [n for n in st["new_parts"] if n["name"] not in made(n["kind"]) and not (n["kind"] == "hat" and n["name"] in kit_hats())]
-    results = parallel([lambda n=n: make_part(n, folder) for n in todo])
+    todo = [n for n in st["new_parts"] if n["name"] not in (made("hat") + kit_hats() if n["kind"] == "hat" else objects3d())]
+    results = parallel([lambda n=n: (make_part if n["kind"] == "hat" else make_part3d)(n, folder) for n in todo])
     for n, (ok, note) in zip(todo, results):
         log.append(note)
         print(f"    {note}")
@@ -347,19 +402,19 @@ def make_parts(st: dict, folder: Path, log: list[str]) -> None:
             if n["kind"] == "hat" and p["hat"] == n["name"]:
                 p["hat"] = sub if sub in kit_hats() else "none"
             if n["kind"] == "thing" and p["holds"] == n["name"]:
-                p["holds"] = sub if sub in HOLDABLE or sub in made("thing") else "none"
+                p["holds"] = sub if sub in HOLDABLE or sub in objects3d() else "none"
         st["things"] = [t if t["kind"] != n["name"] else {**t, "kind": sub} for t in st["things"]
-                        if t["kind"] != n["name"] or sub in DRAWN_THINGS or sub in made("thing")]
+                        if t["kind"] != n["name"] or sub in opener3d.PROPS or sub in objects3d()]
 
 
 # ---- painters --------------------------------------------------------------------------------------------------
 
 def default_cutout(p: dict, st: dict) -> dict:
     """A person's cut-out with no AI: the kit's person (or its knock) in the staging's hat, coat and held thing."""
-    hold = f"[null, '{p['holds']}']" if p["holds"] != "none" else "[null, null]"
+    hold = f"[null, '{p['holds']}']" if p["holds"] in HOLDABLE else "[null, null]"  # a 3D object: the code puts it in the hand
     coat = f"'{p['coat']}'" if p.get("coat") else "k.C.navy"
     if st["action"]["does"] == "knocks" and st["action"]["who"] == p["id"]:
-        hold = f"['{p['holds']}', null]" if p["holds"] != "none" else "[null, null]"
+        hold = f"['{p['holds']}', null]" if p["holds"] in HOLDABLE else "[null, null]"
         return {"name": p["id"], "w": 1200, "h": 1100, "height": 2.3, "frames": 4, "fps": 8,
                 "code": f"export default function draw(k, f, u) {{ k.knock(600, 1080, 3.4, {{phase: u, person: {{hat: '{p['hat']}', "
                         f"coat: {coat}, skin: k.SKIN[1], face: f % 2 ? 'open' : 'flat', hold: {hold}}}}}); }}"}
@@ -375,51 +430,60 @@ def animal_cutout(a: dict) -> dict:
             "code": f"export default function draw(k, f, u) {{ const o = {o}; {call}; }}"}
 
 
+def lint_person(code: str) -> list[str]:
+    """A person cut-out is the kit's person and nothing pasted on it (owner, 2026-11-06: a painter's own skirt
+    polygon read as "a weird red box", its hand-drawn fingers as weird hands): k.person / k.knock calls only."""
+    calls = set(re.findall(r"\bk\.(\w+)\(", drawn_opener.INERT.sub('""', code)))
+    other = sorted(calls - {"person", "knock"})
+    return [f"draws its own shapes ({', '.join('k.' + c for c in other)}): a person is ONE k.person (or k.knock) call; "
+            f"clothes are its options (`dress` for a skirt, `coat`, `hat`, `beard`), objects are 3D and not drawn"] if other else []
+
+
 def paint(who: dict, st: dict, short: dict, folder: Path, problems: list[str] | None = None, old: dict | None = None) -> dict:
-    """One painter: a person's or drawn thing's cut-out ({name, w, h, height, frames, fps, code}). Falls back to the
-    plain kit version (default_cutout) when the AI's code is unusable twice."""
-    thing = "kind" in who
-    brief = (f"the {who['what']} ({who['kind']}), standing about {who['height']} m tall" if thing else
-             f"{who['who']}: hat {who['hat']}, coat {who.get('coat') or 'your choice'}, holding {who['holds']}; {who['doing']}")
+    """One painter: a person's cut-out ({name, w, h, height, frames, fps, code}), the kit's person only (every
+    object is 3D). Falls back to the plain kit version (default_cutout) when the AI's code is unusable twice."""
+    brief = f"{who['who']}: hat {who['hat']}, coat {who.get('coat') or 'your choice'}; {who['doing']}"
+    held3d = who.get("holds") not in (None, "none") and who["holds"] not in HOLDABLE
+    if held3d:  # the code puts the 3D object on the right hand (cutouts.mjs records it, Opener3D.tsx draws it there)
+        brief += (f". Their RIGHT hand holds a 3D {who['holds']} that the code puts into that hand: pose the right arm to "
+                  f"hold it where the story needs it (raised up to show it, held out, carried low); no `hold` for it")
+    elif who.get("holds") not in (None, "none"):
+        brief += f", holding the {who['holds']} (`hold: [null, '{who['holds']}']`)"
     act = st["action"]
-    role = (f"THE KNOCKER: use k.knock (the recipe), the door closed, {who.get('holds', 'nothing')} in the other hand."
-            if not thing and act["does"] == "knocks" and act["who"] == who["id"] else
+    role = ("THE KNOCKER: use k.knock (the recipe), the door closed." if act["does"] == "knocks" and act["who"] == who["id"] else
             f"In the moment: {act['who']} {act['does']}{' ' + act['on'] if act.get('on') else ''}."
             + (f" Draw that with {POSES[act['does']]}." if act["who"] == who["id"] and act["does"] in POSES else ""))
     odd = st.get("strange") or {}
-    if odd.get("what"):  # a painter drew a generic box for the unplugged battery: its loose wires are the story
-        role += (f"\nThe story's strange thing: {odd['what']}. A viewer watches muted: whatever of these is yours to "
-                 f"draw must be big and unmistakable in your cut-out: {'; '.join(odd.get('shows') or [])}.")
+    if odd.get("what"):
+        role += f"\nThe story's strange thing: {odd['what']}. Their pose and face must show it (a reaction, a gesture)."
     keep = (f" Keep everything the staging asks: {'the ' + who['hat'] + ' hat, ' if who.get('hat') not in (None, 'none') else ''}"
-            f"{'holding the ' + who['holds'] + ', ' if who.get('holds') not in (None, 'none') else ''}the same clothes and colours."
-            if not thing else "")
+            f"the same clothes and colours.")
     fix = (f"\nYour last cut-out had these problems:\n- " + "\n- ".join(problems or []) +
-           f"\nFix only those.{keep} (a live fix dropped the thing the person was holding, 2026-11-06)"
-           f"\nLast one:\n{json.dumps(old, ensure_ascii=False)}") if old else ""
+           f"\nFix only those.{keep}\nLast one:\n{json.dumps(old, ensure_ascii=False)}") if old else ""
     for attempt in range(2):
         data = llm.ask_ai(f"""You are a PAINTER for the 3D opener of a YouTube Short: "{short['title']}".
-Paint the cut-out "{who['id']}": {brief}. {role}
+Paint the person "{who['id']}": {brief}. {role}
 The set: {st['place']}, {st['light']} light. Story era: {short.get('topic') or short['title']}.
+A person is ONE k.person call (or k.knock for a knock) with its options, nothing else: no k.shape, k.ink, k.disc or
+other drawing on top of it. Clothes are options (`dress` for a skirt or gown, `coat`, `hat`, `beard`); every object
+in the scene is a 3D model the code adds.
 {(DRAWN / 'CUTOUT.md').read_text(encoding='utf-8')}
 --- The drawing kit (only these sections apply to a cut-out) ---
-{kit_text('People', 'Animals', 'Rooms and furniture', 'Props', 'Made parts', 'Drawing your own thing')}{made_note()}{fix}
+{kit_text('People')}{fix}
 Reply with ONLY JSON: {{"w": ..., "h": ..., "height": ..., "frames": ..., "fps": ..., "code": "export default function draw(k, f, u) {{ ... }}"}}""",
                           fatal=False)
         cut = {"name": who["id"], **{k: data.get(k) for k in ("w", "h", "height", "frames", "fps")},
                "code": drawn_opener.clean_code(data.get("code"))} if isinstance(data, dict) else None
-        bad = opener3d.lint_cutout(cut["code"]) if cut and cut["code"] else ["no code"]
+        bad = (opener3d.lint_cutout(cut["code"]) + lint_person(cut["code"])) if cut and cut["code"] else ["no code"]
         if not bad:
             return cut
         fix = "\nYour last cut-out broke these rules:\n- " + "\n- ".join(bad)
     print(f"    painter {who['id']}: no usable code, drawing the plain kit version")
-    return default_cutout(who, st) if not thing else {
-        "name": who["id"], "w": 600, "h": 600, "height": who["height"], "frames": 1,
-        "code": f"export default function draw(k, f, u) {{ {'k.thing(' + repr(who['kind']) + ', 300, 580, 3)' if who['kind'] in made('thing') else 'k.' + who['kind'] + '(300, 580, 2)'}; }}"}
+    return default_cutout(who, st)
 
 
 # ---- layout (code; was the placer AI) ---------------------------------------------------------------------------
 
-WALL_THINGS = {"clock"}  # drawn things that hang on a room's back wall
 SURFACES = ("desk", "table", "counter", "crate", "barrel", "cabinet", "fireplace", "bed")  # opener3d.TOPS kinds
 
 
@@ -431,18 +495,24 @@ def lum(color: str | None) -> float:
     return .2126 * r + .7152 * g + .0722 * b
 
 
+def foot_of(kind: str) -> tuple[float, float, float] | None:
+    """(width, depth, height) of a 3D prop, library object or made 3D part."""
+    return opener3d.FOOT.get(kind) or (opener3d.load_part(kind) or {}).get("foot")
+
+
 def layout(st: dict, cuts: list[dict], words: list) -> dict:
     """The stage the placer AI used to write, built from the staging by fixed rules (owner, 2026-11-06: the placer
-    put the two subjects of a shot metres apart in every live run, and left the sign effects out). The main prop
-    stands in the middle; the one acting stands beside it (or at its door, for a knock); a small drawn thing stands
-    on its surface; everyone else stands beside the one acting; animals stand in a garden or field. The shots are
-    the stager's beats in order, alternating sides."""
+    put the two subjects of a shot metres apart in every live run, and left the sign effects out). Every object is a
+    3D prop: the main prop stands in the middle, small objects on its top (or by it), the one acting beside what they
+    act on (at the door for a knock, in front of a desk or house), everyone else beside the one acting, animals in a
+    garden or field; a person's 3D `holds` goes in their hand. The shots are the stager's beats in spoken order."""
     place, act = st["place"], st["action"]
     who, on = act.get("who"), act.get("on")
     names = {c["name"] for c in cuts}
-    floor = [t for t in st["things"] if t["kind"] in opener3d.PROPS and t["kind"] not in ("window", "frame", "walllamp")]
     hung = [t for t in st["things"] if t["kind"] in ("window", "frame", "walllamp")]
-    drawn = [t for t in st["things"] if t["id"] in names]
+    objs = [t for t in st["things"] if t not in hung and (f := foot_of(t["kind"])) and f[2] <= .5 and f[0] <= .7  # table-top size
+            and t["kind"] not in SURFACES and t["kind"] not in opener3d.PATCHES]
+    floor = [t for t in st["things"] if t not in hung and t not in objs]
     buildings = [t for t in floor if t["kind"] in opener3d.BUILDINGS]
     surfaces = [t for t in floor if t["kind"] in SURFACES]
     patches = [t for t in floor if t["kind"] in opener3d.PATCHES - {"rug"}]
@@ -452,6 +522,12 @@ def layout(st: dict, cuts: list[dict], words: list) -> dict:
         props.append({"type": main["kind"], "id": main["id"], "place": {"mark": "centre"}})
     for i, t in enumerate(x for x in floor if x is not main):  # the rest behind, out of the way of the action
         props.append({"type": t["kind"], "id": t["id"], "place": {"mark": ("back-right", "back-left", "back")[i % 3]}})
+    surface = main if main in surfaces else next(iter(surfaces), None)
+    for i, t in enumerate(objs):  # small objects: on the desk or table (toward the one acting), else by the main prop
+        spec = ({"on": surface["id"], "side": ("left", "right", "centre")[i % 3]} if surface else
+                {"beside": main["id"], "side": ("right", "left")[i % 2]} if main else
+                {"mark": ("centre", "front-right", "front-left")[i % 3]})
+        props.append({"type": t["kind"], "id": t["id"], "place": spec})
     sides = iter(("right", "left") * 3)
     for t in hung:
         if place == "room":
@@ -461,35 +537,25 @@ def layout(st: dict, cuts: list[dict], words: list) -> dict:
         props.append({"type": "window", "id": "window", "place": {"wall": "left"}})  # the sky shows through it
     knocker = act.get("does") == "knocks"
     lead = who if who in names else next(iter(names), None)
+    held = {p["id"]: p["holds"] for p in st["people"] if p["holds"] not in ("none", *HOLDABLE)}
     cutouts, effects, placed = [], [], set()
 
     def put(name: str, spec: dict, **more) -> None:
-        cutouts.append({"name": name, "place": spec, **more})
+        cutouts.append({"name": name, "place": spec, **({"held": held[name]} if name in held else {}), **more})
         placed.add(name)
 
-    surface = main if main in surfaces else next(iter(surfaces), None)
     animals = {a["id"] for a in st["animals"]}
-    hanging = {t["id"] for t in drawn if t["kind"] in WALL_THINGS and place == "room"}
+    obj = next((t for t in objs if t["id"] == on), None)  # the small object the action is on
 
-    def place_thing(n: str, near: str | None) -> None:
-        """A drawn thing or an animal: on the wall, on the surface, in the patch, else beside `near` / at the centre."""
-        t = next((x for x in drawn if x["id"] == n), None)
-        if n in hanging:
-            put(n, {"wall": next(sides)})
-        elif t and surface and t["height"] <= 1.2:
-            put(n, {"on": surface["id"], "side": "left"})
-        elif n in animals and patches:
-            put(n, {"in": patches[0]["id"], "side": "centre"})
-        elif near:
-            put(n, {"beside": near, "side": "right"})
-        else:
-            put(n, {"front": main["id"]} if main else {"mark": "centre"})
+    def place_animal(n: str, near: str | None) -> None:
+        put(n, {"in": patches[0]["id"], "side": "centre"} if patches else {"beside": near, "side": "right"} if near
+            else {"front": main["id"]} if main else {"mark": "centre"})
 
-    # the thing or animal acted on stands first and the one acting right beside it (live 2026-11-06: the farmer
+    # the person or animal acted on stands first and the one acting right beside it (live 2026-11-06: the farmer
     # stood at the garden's edge, the pig in its middle, too far apart for one shot)
-    target = on if on in names and on != lead and on not in hanging else None
+    target = on if on in names and on != lead else None
     if target:
-        place_thing(target, None)
+        place_animal(target, None) if target in animals else put(target, {"mark": "centre"})
     if lead:
         if knocker and buildings:
             hits = [w[0] for w in words if str(w[2]).lower().startswith("knock")][:2] or [.6, 1.4]
@@ -497,6 +563,10 @@ def layout(st: dict, cuts: list[dict], words: list) -> dict:
             effects += [{"type": kind, "at": h, "on": lead} for h in hits for kind in ("jolt", "puff")]
         elif target:
             put(lead, {"beside": target, "side": "left"})
+        elif lead in animals and main in patches:  # a pig eating the potatoes stands IN the garden (2026-11-06)
+            place_animal(lead, None)
+        elif obj and not surface:
+            put(lead, {"beside": obj["id"], "side": "left"})
         elif main and (main["kind"] in opener3d.BUILDINGS or main in surfaces):
             # in front of a house (beside it she went behind its walls) or of the desk he works at (beside a 2.3 m
             # desk he stood 2 m from its middle, and a shot on both filmed him tiny, live 2026-11-06)
@@ -506,17 +576,21 @@ def layout(st: dict, cuts: list[dict], words: list) -> dict:
         else:
             put(lead, {"mark": "centre"})
     for i, n in enumerate(c["name"] for c in cuts if c["name"] not in placed):  # the rest: next to the one acting
-        if n in animals or any(t["id"] == n for t in drawn):
-            place_thing(n, lead)
+        if n in animals:
+            place_animal(n, lead)
         else:
             put(n, {"beside": lead, "side": "right" if i % 2 == 0 else "left"} if lead else {"mark": ("left", "right")[i % 2]})
+    # a beat may name an object someone holds (it isn't a prop): it frames the one holding it
+    holder = next(iter(held), None)
+    known = names | {t["id"] for t in st["things"]} | ({"window"} if any(x["id"] == "window" for x in props) else set())
     shots = []
     # in spoken order, as clean sorts them: assemble matches its shots to these by position
     beats = sorted(st["beats"], key=lambda b: opener3d.word_time(words, b["at"], 0))
     for i, b in enumerate(beats):
-        # aim at the people and drawn things a beat names, not the furniture or garden around them (a shot on the
+        # aim at the people and small objects a beat names, not the furniture or garden around them (a shot on the
         # operator and a 2.3 m desk, or on a pig and its 3 m garden, backed off until both were tiny, 2026-11-06)
-        on = [x for x in b["on"] if x in names] or b["on"]
+        ids = list(dict.fromkeys(x if x in known else holder for x in b["on"] if x in known or holder))
+        on = [x for x in ids if x in names or any(o["id"] == x for o in objs)] or ids
         target = on if len(on) > 1 else on[0]
         size = b["shot"]
         if shots and shots[-1]["shot"] == size and shots[-1]["target"] == target:  # never the same framing twice
@@ -579,7 +653,8 @@ def assemble(raw, cuts: list[dict], st: dict, words: list, seconds: float, narra
         shown = {n for sh in stage["shots"] for n in (sh["target"] if isinstance(sh["target"], list) else [sh["target"]]) + [sh.get("over")]}
         bad += [f"stager: {p['id']} is in no beat: show every person in at least one beat"
                 for p in st.get("people", []) if p["id"] in by and p["id"] not in shown]
-        types = {p["type"] for p in stage["props"]}
+        types = {p.get("part") or p["type"] for p in stage["props"]} | {
+            c["held"].get("part") or c["held"]["type"] for c in stage["cutouts"] if c.get("held")}
         # only the prop the action happens on is required (a live reviewer called a town house wrong for a frontier
         # farm, the placer removed it and was rejected for it, 2026-11-06)
         on = (st.get("action") or {}).get("on")
@@ -600,16 +675,21 @@ def owner(problem: str, names: list[str]) -> str:
 
 # ---- the crew --------------------------------------------------------------------------------------------------
 
-def crew(st: dict, short: dict, folder: Path, log: list[str]) -> tuple[list[dict], list[dict], dict]:
-    """The part makers and the painters for a staging: (the painted people and things, every cut-out, id -> what)."""
+def crew(st: dict, short: dict, folder: Path, log: list[str], old: dict | None = None) -> tuple[list[dict], list[dict], dict]:
+    """The part makers and the painters for a staging: (the painted people, every cut-out, id -> what). `old` maps a
+    person's staging entry (as JSON) to its earlier painting: an unchanged person keeps it across a re-plan (each
+    re-plan used to re-roll every drawing, 2026-11-06)."""
     make_parts(st, folder, log)
-    people = st["people"] + [x for x in st["things"] if x["kind"] not in opener3d.PROPS]
+    people = st["people"]
     t = time.monotonic()
-    cuts = parallel([lambda p=p: paint(p, st, short, folder) for p in people]) + [animal_cutout(a) for a in st["animals"]]
-    what = {p["id"]: (p.get("what") or p.get("who")) for p in people} | {a["id"]: f"a {a['kind']}" for a in st["animals"]}
+    key = lambda p: json.dumps(p, sort_keys=True)  # noqa: E731
+    todo = [p for p in people if key(p) not in (old or {})]
+    fresh = dict(zip([key(p) for p in todo], parallel([lambda p=p: paint(p, st, short, folder) for p in todo])))
+    cuts = [dict((old or {}).get(key(p)) or fresh[key(p)]) for p in people] + [animal_cutout(a) for a in st["animals"]]
+    what = {p["id"]: p["who"] for p in people} | {a["id"]: f"a {a['kind']}" for a in st["animals"]}
     for c in cuts:
         c["what"], c["height"] = what.get(c["name"], c["name"]), opener3d.num(c.get("height"), .1, 6, 1.75)
-    log.append(f"painters x{len(people)} {drawn_opener.minutes(t)}")
+    log.append(f"painters x{len(todo)} {drawn_opener.minutes(t)}")
     return people, cuts, what
 
 
@@ -669,12 +749,14 @@ def plan(short: dict, words: list, seconds: float, folder: Path, repair: str | N
         if any(owner(p, names) == "stager" or owner(p, names)[7:] not in painted for p in problems):
             # the plan itself is wrong (the sound-off test, a spoiler, the scene): the stager plans again, seeing
             # its last plan and every problem, and the painters paint the new plan
+            redone = {owner(p, names)[7:] for p in problems if owner(p, names).startswith("person:")}
+            kept = {json.dumps(p, sort_keys=True): c for p, c in zip(people, cuts) if p["id"] not in redone}
             st, why = stage(short, words, seconds, folder, problems, last=st)
             if not st:
                 return None, why
             log.append(f"fix: stager {drawn_opener.minutes(t)}")
             print(f"    stager again: {staging_text(st)}")
-            people, cuts, what = crew(st, short, folder, log)
+            people, cuts, what = crew(st, short, folder, log, kept)
             continue
         redo = [c for c in cuts if any(owner(p, names) == f"person:{c['name']}" for p in problems)]
         done = parallel([lambda c=c: paint(next(p for p in people if p["id"] == c["name"]), st, short, folder,

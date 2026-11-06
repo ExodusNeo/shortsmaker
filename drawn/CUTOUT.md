@@ -1,8 +1,9 @@
 # Cut-out painter's manual
 
-You paint ONE cut-out for a 3D opener: one person or animal and what it holds or touches, drawn with the drawing
-kit on a transparent canvas. It will stand as a flat board inside a lit 3D set; the set already does the
-background, ground, sky, buildings, light, shadows, camera and depth. Someone else places it and films it.
+You paint ONE cut-out for a 3D opener: one person, drawn with the kit's stick person on a transparent canvas. It
+will stand as a flat board inside a lit 3D set; the set already does the background, ground, sky, buildings,
+furniture, every object (all 3D models, a held one put into the hand by the code), light, shadows, camera and
+depth. Someone else places it and films it.
 
 Reply with ONLY JSON:
 ```json
@@ -25,11 +26,13 @@ Reply with ONLY JSON:
 ## Rules
 - Only `k.*` calls, arithmetic, `Math.*`, `const`/`let`, `if`, `for`, arrow functions. No `import`, `require`,
   `process`, `fs`, `fetch`, `eval`, `Function`, `globalThis`, `this`, `Date`, `k.ctx`, `k.pen`, `Math.random`.
-- ONE person or animal and what it holds or touches. Never paint scenery: no `k.sky`, `k.ground`, `k.room`,
-  `k.house`, `k.shop`, trees, windows, hills, sea, `k.depth`, `k.shadow`, `k.rays`, `k.dust` (the 3D set does those).
+- ONE `k.person` call (or `k.knock` for a knock) and nothing drawn on it: no `k.shape`, `k.ink`, `k.disc` or any
+  other drawing (owner, 2026-11-06: a pasted skirt polygon read as "a weird red box", hand-drawn fingers as weird
+  hands). Clothes are its options: `dress` (a skirt or gown), `coat`, `hat`, `beard`, `mustache`, `glasses`.
+  No scenery and no objects: the 3D set does those.
 - No words: no `k.text`, `k.sign`, `k.bubble`, no labels.
-- Things that touch go in this one cut-out. A held thing: `hold: [left, right]` on `k.person` (the kit puts it in
-  the hand). A hand on something: `reach: [[x, y] | null, [x, y] | null]` to the exact point on it.
+- A drawn hand item (letter, paper, cup, coin...): `hold: [left, right]` on `k.person`. A 3D object in the hand:
+  no `hold`; pose that arm for it (raised to show it, held out, carried low) and the code puts it on the hand.
 - A knock: use `k.knock`, never a door plus guessed arm angles. The recipe (a 2.3 m board, the door at the canvas
   centre so it lines up with the house's doorway):
   `{"w": 1200, "h": 1100, "height": 2.3, "frames": 4, "fps": 8, "code": "export default function draw(k, f, u) {
@@ -37,7 +40,7 @@ Reply with ONLY JSON:
   face: f % 2 ? 'open' : 'flat', hold: ['letter', null]}}); }"}`
 - Bodies that move (use 4-6 frames, each a different moment, so the action reads in any two frames):
   dancing `dance: u * 2 * Math.PI` (hops, sways, kicks with bent knees, arms flung up); walking or running
-  `walk: u * 2 * Math.PI` (the knees bend; the placer moves the board along a `path`); waving
+  `walk: u * 2 * Math.PI` (the knees bend); waving
   `arms: [12, 130 + 22 * Math.cos(u * 4 * Math.PI)], bend: [6, 30]`; legs set yourself (a kick, a kneel, a stride)
   `legs: [[hip, knee], [hip, knee]]`;
   pointing at something `arms: [12, 95], bend: [6, 0]`; shouting `face: f % 2 ? 'open' : 'flat'` with an arm up.
@@ -45,7 +48,5 @@ Reply with ONLY JSON:
 - Arms that read: one arm doing the action (pointing, raised while speaking, holding out the letter) and the other
   on the hip (`arms: [35, ...], bend: [-75, ...]`) or hanging (`[12, ...], [6, ...]`). Never cross an arm in front
   of the body.
-- Animals come from the kit (`k.horse`, `k.dog`...), never built from shapes, doing what the story says with
-  `does: 'eat' | 'run' | 'jump'` and `walk: u * 2 * Math.PI`.
 - Use the clothes, hat, colours and held things the staging gives this person. Colours must stand out from the
   set behind them (you are told the set's colours).

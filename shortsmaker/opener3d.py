@@ -8,6 +8,7 @@ edge). Lesson from the removed Blender openers (2026-10-30): fixed sets and part
 
 import json
 import math
+import os
 import re
 import shutil
 import subprocess
@@ -26,6 +27,17 @@ PLACES, MOODS = ("room", "street", "outdoors"), ("day", "golden", "dusk", "night
 PROPS = {"desk", "table", "chair", "door", "window", "frame", "shelf", "lamp", "bed", "rug", "crate", "barrel", "cabinet",
          "counter", "fireplace", "house", "shopfront", "cabin", "garden", "field", "tree", "rock", "fence", "lamppost",
          "stall", "cart", "fountain", "bookcase", "coatrack", "hedge", "walllamp", "sidetable"}
+# Objects: every object in an opener is 3D (owner, 2026-11-06: "for persons the stick is fine but for objects make it
+# 3d"). CC0 Kenney models (Opener3D.tsx MODELS); (width x, depth z, height) at size 1. Anything else is an AI-made
+# 3D part (`made3d`, opener_crew.make_part3d).
+OBJECTS = {"books": (.3, .22, .22), "radio": (.4, .25, .32), "box": (.5, .5, .4), "plant": (.5, .5, .8),
+           "bench": (1.6, .5, .5), "roundtable": (1.0, 1.0, .75), "stool": (.45, .45, .5), "wheel": (.25, 1.0, 1.0),
+           "pumpkin": (.45, .45, .35), "turnip": (.2, .2, .3), "carrot": (.12, .12, .3), "logs": (1.2, .8, .6),
+           "campfire": (.9, .9, .4), "pot": (.5, .5, .6), "canoe": (3.0, .8, .5), "tent": (2.4, 2.4, 1.8),
+           "statue": (.8, .8, 1.2), "stump": (.6, .6, .5)}
+PROPS |= set(OBJECTS)
+PARTS3D = Path(os.environ.get("SHORTSMAKER_PARTS") or ROOT / "drawn" / "parts") / "thing3d"  # made 3D parts, one JSON each
+SHAPES = ("box", "cylinder", "sphere", "cone", "torus")
 # the visible signs of an invisible strange thing (electricity, heat, a sky event): a muted viewer must see it
 SIGN_EFFECTS = ("sparks", "smoke", "glow", "aurora")
 EFFECTS = {"rings", "dust", "shafts", "burst", "shake", "rain", "snow", "jolt", "puff", *SIGN_EFFECTS}
@@ -98,14 +110,72 @@ SHOT_SIZES = {"wide": (2.4, .45, 58), "medium": (1.55, .15, 52), "close": (.9, .
               "top": (2.6, 1.9, 56), "over": (1.8, .1, 50)}
 TOPS = {"desk": .86, "table": .8, "counter": 1.05, "crate": .7, "barrel": .9, "cabinet": 1.8, "fireplace": 1.3, "bed": .7,
         "sidetable": .6, "cart": .9}  # top heights
+FOOT.update(OBJECTS)
+TOPS.update({"roundtable": .75, "stool": .5, "stump": .5, "bench": .5})  # objects people stand things on
+
+
+def made3d() -> list[str]:
+    """The AI-made 3D parts kept for every Short (drawn/parts/thing3d/<name>.json)."""
+    return sorted(f.stem for f in PARTS3D.glob("*.json"))
+
+
+def clean_shapes(raw) -> tuple[list[dict], list[str]]:
+    """An AI-made 3D part's primitives, checked and clamped: (shapes, problems). Metres, origin on the floor at the
+    part's centre, y up, the front facing +z (the camera)."""
+    if not isinstance(raw, list) or not raw:
+        return [], ["`shapes` must be a list of primitives"]
+    out, bad = [], []
+    for s in raw[:40]:
+        if not isinstance(s, dict) or s.get("shape") not in SHAPES:
+            bad.append(f"each primitive's shape is one of {', '.join(SHAPES)}")
+            continue
+        vec = lambda v, lo, hi, d: [num(x, lo, hi, d) for x in (v if isinstance(v, list) and len(v) == 3 else [d] * 3)]  # noqa: E731
+        q = {"shape": s["shape"], "size": vec(s.get("size"), .004, 3, .1), "at": vec(s.get("at"), -2, 3, 0),
+             "color": s["color"] if COLOR.match(str(s.get("color") or "")) else "#8A7A6A"}
+        if isinstance(s.get("turn"), list):
+            q["turn"] = vec(s["turn"], -360, 360, 0)
+        for k in ("metal", "glow"):
+            if s.get(k) is True:
+                q[k] = True
+        out.append(q)
+    if len(raw) > 40:
+        bad.append("at most 40 primitives: a part is a few telling shapes")
+    return out, bad
+
+
+def shapes_foot(shapes: list[dict]) -> tuple[float, float, float]:
+    """(width, depth, height) a made part takes up, from its primitives' boxes (rotation ignored)."""
+    lo = [min(s["at"][i] - s["size"][i] / 2 for s in shapes) for i in range(3)]
+    hi = [max(s["at"][i] + s["size"][i] / 2 for s in shapes) for i in range(3)]
+    return round(hi[0] - lo[0], 3), round(hi[2] - lo[2], 3), round(max(hi[1], .05), 3)
+
+
+def load_part(name: str) -> dict | None:
+    """A made 3D part: {"shapes", "foot"}, or None."""
+    f = PARTS3D / f"{name}.json"
+    try:
+        shapes, _ = clean_shapes(json.loads(f.read_text(encoding="utf-8")).get("shapes"))
+    except (OSError, ValueError, AttributeError):
+        return None
+    return {"shapes": shapes, "foot": shapes_foot(shapes)} if shapes else None
+
+
+def held_of(name: str) -> dict | None:
+    """What Opener3D needs to put a 3D object in a hand: a library object or a made part (Opener3D.tsx `Held`)."""
+    if name in OBJECTS:
+        return {"type": name, "height": OBJECTS[name][2], "hand": 1}
+    made = load_part(name)
+    return {"type": "made", "part": name, "shapes": made["shapes"], "height": made["foot"][2], "hand": 1} if made else None
+
+
 KNOCK_CALL = re.compile(r"k\.knock\(\s*([\d.]+)\s*,\s*([\d.]+)\s*,\s*([\d.]+)")
 
 
 def box_of(p: dict) -> tuple[float, float, float, float] | None:
     """A floor prop's footprint (x0, x1, z0, z1) in the set, or None (rugs and things on the wall take no floor)."""
-    if p["type"] not in FOOT or p.get("wall"):
+    if (p["type"] not in FOOT and not p.get("foot")) or p.get("wall"):
         return None
-    w, d, _ = FOOT[p["type"]]
+    w, d, _ = p.get("foot") or FOOT[p["type"]]
     w, d = (p.get("length") or w if p["type"] == "fence" else w) * p["size"], d * p["size"]
     if 45 < abs(p["turn"]) % 180 < 135:
         w, d = d, w
@@ -289,10 +359,16 @@ def clean(raw, words: list, seconds: float) -> tuple[dict | None, list[str]]:
               and isinstance(v, str) and COLOR.match(v)} if isinstance(raw.get("colors"), dict) else {}
     props, named = [], {}
     for p in raw.get("props") or []:
-        if not isinstance(p, dict) or p.get("type") not in PROPS:
+        made = load_part(p["type"]) if isinstance(p, dict) and isinstance(p.get("type"), str) and p["type"] not in PROPS else None
+        if isinstance(p, dict) and isinstance(p.get("shapes"), list):  # a part being checked (part_sheet): no AI writes stages
+            shapes, _ = clean_shapes(p["shapes"])
+            made = {"shapes": shapes, "foot": shapes_foot(shapes)} if shapes else None
+        if not isinstance(p, dict) or (p.get("type") not in PROPS and not made):
             bad.append(f"unknown prop {p.get('type') if isinstance(p, dict) else p!r}: use only the listed props")
             continue
         q = {"type": p["type"], "at": xz(p.get("at")), "turn": num(p.get("turn"), -360, 360, 0), "size": num(p.get("size"), 0.2, 4, 1)}
+        if made:  # an AI-made 3D part (opener_crew.make_part3d)
+            q.update(type="made", part=p["type"], shapes=made["shapes"], foot=made["foot"])
         for k in ("wall", "lit"):
             if isinstance(p.get(k), bool):
                 q[k] = p[k]
@@ -375,6 +451,12 @@ def clean(raw, words: list, seconds: float) -> tuple[dict | None, list[str]]:
             if m:  # where the fist meets the door (kit.mjs k.knock: x - 40 s, y - 150 s), in metres from the board's foot
                 kx, ky, ks = (float(v) for v in m.groups())
                 q["contact"] = [round(((kx - 40 * ks) / w - .5) * q["height"] * q["aspect"], 3), round((1 - (ky - 150 * ks) / h) * q["height"], 3)]
+        if c.get("held"):  # a 3D object in the hand (Opener3D.tsx puts it on cutouts.mjs's hand point)
+            held = held_of(str(c["held"]))
+            if held:
+                q["held"] = held
+            else:
+                bad.append(f"cut-out {c['name']} holds {c['held']!r}: no 3D object or made part has that name")
         if isinstance(c.get("hits"), list):  # a squash on each hit (a knock, a stamp): seconds or spoken words
             q["hits"] = sorted(word_time(words, x, 0) for x in c["hits"][:8])
         if isinstance(c.get("path"), list):  # [[time, "mark"], ...] (or [time, x, z]): a walk from spot to spot
@@ -402,7 +484,13 @@ def clean(raw, words: list, seconds: float) -> tuple[dict | None, list[str]]:
     ids = names | {p["id"] for p in props if p.get("id")}
     # how big a shot's target is: a knocker's board is 2.3 m because of its door, but the shot is about the man
     tall = {**{c["name"]: 1.75 if c.get("focus") else c["height"] for c in cutouts},
-            **{p["id"]: FOOT.get(p["type"], (0, 0, 1.2))[2] * p["size"] for p in props if p.get("id")}}
+            **{p["id"]: (p.get("foot") or FOOT.get(p["type"], (0, 0, 1.2)))[2] * p["size"] for p in props if p.get("id")}}
+    for p in props:  # a small object: the camera aims at its middle (Opener3D targetOf), not 0.8 m up (a wall)
+        if p["type"] in OBJECTS or p["type"] == "made":
+            p["h"] = round((p.get("foot") or FOOT[p["type"]])[2] * p["size"], 3)
+            if p.get("id"):  # framed whole, with some surroundings: the narrow 9:16 frame is filled by WIDTH (a 34 cm
+                # battery's close-up showed only its jars); 6x its width puts it at about 2/3 of the frame
+                tall[p["id"]] = max(tall[p["id"]], .6, 6 * (p.get("foot") or FOOT[p["type"]])[0] * p["size"])
     shots = []
     for sh in raw.get("shots") or []:
         tg = sh.get("target") if isinstance(sh, dict) else None
@@ -493,6 +581,39 @@ def render(stage: dict, seconds: float, folder: Path) -> str | None:
         shutil.rmtree(PUBLIC, ignore_errors=True)
     if r.returncode or not (folder / "opener.mp4").exists():
         return "the 3D render failed: " + (r.stderr or r.stdout or "no message").strip()[-500:]
+    return None
+
+
+PART_REF = {"w": 700, "h": 1100, "height": 1.75, "frames": 1,
+            "code": "export default function draw(k, f, u) { k.person(350, 1080, 4, {coat: '#2E5A8A', face: 'flat'}); }"}
+
+
+def part_sheet(shapes: list[dict], out: Path) -> str | None:
+    """The part checker's picture of a new 3D part: on the floor beside a 1.75 m person (left) and close up
+    (right). None when it worked, else what went wrong."""
+    folder = out.parent / f"render_{out.stem}"
+    raw = {"place": "room", "mood": "interior", "colors": {"wall": "#E3D3B0", "floor": "#6A4A32", "trim": "#3A2A1C"},
+           "props": [{"type": "part", "id": "part", "shapes": shapes, "place": {"mark": "centre"}}],
+           "cutouts": [{"name": "ref", "place": {"beside": "part", "side": "left"}, **PART_REF}],
+           "shots": [{"at": 0, "target": ["ref", "part"], "shot": "wide", "turn": 20},
+                     {"at": .5, "target": "part", "shot": "close", "turn": -20, "move": "cut"}], "effects": []}
+    stage, bad = clean(raw, [], 1.0)
+    if not stage:
+        return "; ".join(bad)[:300] or "the part didn't make a stage"
+    err = render(stage, 1.0, folder)
+    if err:
+        return err
+    frames = []
+    for k, sec in enumerate((.3, .85)):
+        media_tools.ffmpeg("-y", "-ss", f"{sec:.2f}", "-i", str((folder / "opener.mp4").resolve()), "-frames:v", "1",
+                           "-vf", "scale=540:960", f"part{k}.png", cwd=folder)
+        frames.append(folder / f"part{k}.png")
+    if not all(f.exists() for f in frames):
+        return "the part's preview frames didn't come out"
+    S = Image.new("RGB", (1080, 960))
+    for k, f in enumerate(frames):
+        S.paste(Image.open(f).convert("RGB"), (540 * k, 0))
+    S.save(out)
     return None
 
 
