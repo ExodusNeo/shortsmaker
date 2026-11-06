@@ -35,7 +35,7 @@ SORT file.name ASC
 - 1 edge to [[_COMMUNITY_full_props]]
 - 1 edge to [[_COMMUNITY_opener_graphic]]
 - 1 edge to [[_COMMUNITY_test_blender_render.py]]
-- 1 edge to [[_COMMUNITY_words_of]]
+- 1 edge to [[_COMMUNITY_clean_full]]
 
 ## Top bridge nodes
 - [[full_cues()]] - degree 11, connects to 3 communities

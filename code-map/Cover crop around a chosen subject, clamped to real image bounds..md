@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/photo_prep.py"
 type: "rationale"
-community: "test_full_scenes.py"
+community: "trim_borders"
 location: "L87"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/test_full_scenespy
+  - community/trim_borders
 ---
 
 # Cover crop around a chosen subject, clamped to real image bounds.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[vertical_image()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/test_full_scenespy
+#graphify/rationale #graphify/EXTRACTED #community/trim_borders

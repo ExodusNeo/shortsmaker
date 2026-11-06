@@ -13,9 +13,9 @@ tags:
 
 ## Connections
 - [[Cut each take into its scenes halfway through the pause between their words…]] - `rationale_for` [EXTRACTED]
-- [[Path_6]] - `references` [EXTRACTED]
+- [[Path_11]] - `references` [EXTRACTED]
 - [[duration()]] - `calls` [EXTRACTED]
-- [[ffmpeg()_1]] - `calls` [EXTRACTED]
+- [[ffmpeg()]] - `calls` [EXTRACTED]
 - [[gpu.py]] - `contains` [EXTRACTED]
 - [[is_loop_short()]] - `calls` [EXTRACTED]
 - [[local_voice()]] - `calls` [EXTRACTED]

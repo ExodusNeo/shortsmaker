@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_pictures_first.py"
 type: "code"
-community: "rewrite_paint_prompts"
+community: "apply_review_fixes"
 location: "L643"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/rewrite_paint_prompts
+  - community/apply_review_fixes
 ---
 
 # test_scene_without_picture_or_prompt_gets_painted_not_reused()
@@ -15,4 +15,4 @@ tags:
 - [[plan_gap_paintings()]] - `calls` [EXTRACTED]
 - [[test_pictures_first.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/rewrite_paint_prompts
+#graphify/code #graphify/EXTRACTED #community/apply_review_fixes

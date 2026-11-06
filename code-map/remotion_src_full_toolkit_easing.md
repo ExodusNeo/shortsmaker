@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "toolkit.tsx"
+community: "ref_react"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/toolkittsx
+  - community/ref_react
 ---
 
 # remotion_src_full_toolkit_easing
@@ -17,4 +17,4 @@ tags:
 - [[Custom3.tsx]] - `imports` [EXTRACTED]
 - [[ExampleOpenerAction.tsx]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/toolkittsx
+#graphify/concept #graphify/EXTRACTED #community/ref_react

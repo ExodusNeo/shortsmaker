@@ -2,7 +2,7 @@
 source_file: "shortsmaker/opener_crew.py"
 type: "code"
 community: "opener_crew.py"
-location: "L603"
+location: "L678"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,9 +12,10 @@ tags:
 # crew()
 
 ## Connections
-- [[Path_8]] - `references` [EXTRACTED]
-- [[The part makers and the painters for a staging (the painted people and things,…]] - `rationale_for` [EXTRACTED]
+- [[Path_13]] - `references` [EXTRACTED]
+- [[The part makers and the painters for a staging (the painted people, every cut-…]] - `rationale_for` [EXTRACTED]
 - [[animal_cutout()]] - `calls` [EXTRACTED]
+- [[json]] - `calls` [EXTRACTED]
 - [[make_parts()]] - `calls` [EXTRACTED]
 - [[minutes()]] - `calls` [EXTRACTED]
 - [[num()]] - `calls` [EXTRACTED]
@@ -22,6 +23,7 @@ tags:
 - [[paint()]] - `calls` [EXTRACTED]
 - [[parallel()]] - `calls` [EXTRACTED]
 - [[plan()]] - `calls` [EXTRACTED]
+- [[test_a_replan_keeps_unchanged_people_and_adds_no_parts()]] - `calls` [EXTRACTED]
 - [[time]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/opener_crewpy

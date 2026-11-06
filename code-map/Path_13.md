@@ -1,19 +1,22 @@
 ---
 source_file: ""
 type: "code"
-community: "write_json"
+community: "opener_crew.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/write_json
+  - community/opener_crewpy
 ---
 
 # Path
 
 ## Connections
-- [[finish_short()]] - `references` [EXTRACTED]
-- [[record_failure()]] - `references` [EXTRACTED]
-- [[resume_runs()]] - `references` [EXTRACTED]
-- [[use_picture_from()]] - `references` [EXTRACTED]
+- [[crew()]] - `references` [EXTRACTED]
+- [[make_part()]] - `references` [EXTRACTED]
+- [[make_part3d()]] - `references` [EXTRACTED]
+- [[make_parts()]] - `references` [EXTRACTED]
+- [[paint()]] - `references` [EXTRACTED]
+- [[plan()]] - `references` [EXTRACTED]
+- [[stage()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/write_json
+#graphify/code #graphify/EXTRACTED #community/opener_crewpy

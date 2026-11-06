@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "shutil"
+community: "re"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/shutil
+  - community/re
 ---
 
 # threading
@@ -15,4 +15,4 @@ tags:
 - [[media_library.py]] - `imports` [EXTRACTED]
 - [[test_opener_crew.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/shutil
+#graphify/concept #graphify/EXTRACTED #community/re

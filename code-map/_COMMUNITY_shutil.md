@@ -1,41 +1,52 @@
 ---
 type: community
-members: 28
+members: 39
 ---
 
 # shutil
 
-**Members:** 28 nodes
+**Members:** 39 nodes
 
 ## Members
-- [[Copy into the library; never movemodify the owner's original. Sidecars also…]] - rationale - shortsmaker/media_library.py
-- [[Drop cached downloads and topic pools older than 30 days.]] - rationale - shortsmaker/picture_pool.py
-- [[Fast path for a mark card on a still, with hard cuts on both sides. Preserve…]] - rationale - shortsmaker/scene_repair.py
-- [[One mid-scene frame per scene from the finished video, labeled with its…]] - rationale - shortsmaker/review.py
-- [[Owner media imports, source settings and provenance. No credentials are bundled.]] - rationale - shortsmaker/media_library.py
-- [[Path_3]] - code
-- [[Path_4]] - code
+- [[Adds a candidate to the library (component file, library.json entry,…]] - rationale - shortsmaker/style_lab.py
+- [[For tests that swap shortsmaker functions by name which module owns each one.]] - rationale - tests/patching.py
+- [[Path_34]] - code
+- [[Preview of every style-library preset for the owner each look on two real…]] - rationale - tests/render_style.py
 - [[Render one full-screen motion graphic test scene through the real Short…]] - rationale - tests/render_full.py
-- [[The Short's page in the Obsidian vault thumbnail, storyboard, its logbook…]] - rationale - shortsmaker/logbook.py
-- [[apply()]] - code - shortsmaker/scene_repair.py
-- [[copy]] - concept
-- [[import_media()]] - code - shortsmaker/media_library.py
-- [[local_assets()]] - code - shortsmaker/media_library.py
-- [[main()]] - code - tests/render_full.py
-- [[make_shorts.py notes rebuild every Short's vault page from the logbooks (each…]] - rationale - shortsmaker/logbook.py
-- [[media_library.py]] - code - shortsmaker/media_library.py
-- [[media_search_words()]] - code - shortsmaker/media_library.py
-- [[preview()]] - code - shortsmaker/scene_repair.py
+- [[Runs the TypeScript tests (tests.test.ts) bundles each with Remotion's own…]] - rationale - tests/run_ts_tests.py
+- [[Saves an invention that made it into a finished Short as a candidate for the…]] - rationale - shortsmaker/style_lab.py
+- [[Tests for the style library looks, overlays, transitions, inventions (plain…]] - rationale - tests/test_style.py
+- [[The library files a candidate test may touch, to put back afterwards.]] - rationale - tests/test_style.py
+- [[The style library invented looks, overlays and scene changes, candidates and…]] - rationale - shortsmaker/style_lab.py
+- [[approve_candidate()]] - code - shortsmaker/style_lab.py
+- [[candidate_in()]] - code - tests/test_style.py
+- [[importlib]] - concept
+- [[inspect]] - concept
+- [[library.bat the owner watches each invention the AI made for a Short and adds…]] - rationale - shortsmaker/style_lab.py
+- [[library_menu()]] - code - shortsmaker/style_lab.py
+- [[library_snapshot()]] - code - tests/test_style.py
+- [[main()_7]] - code - tests/render_full.py
+- [[os]] - concept
+- [[patching.py]] - code - tests/patching.py
+- [[pkgutil]] - concept
 - [[props_for()]] - code - tests/render_full.py
-- [[prune_cache()]] - code - shortsmaker/picture_pool.py
+- [[reject_candidate()]] - code - shortsmaker/style_lab.py
 - [[render_full.py]] - code - tests/render_full.py
-- [[review_status()]] - code - shortsmaker/review.py
+- [[render_style.py]] - code - tests/render_style.py
+- [[restore_library()]] - code - tests/test_style.py
+- [[run_ts_tests.py]] - code - tests/run_ts_tests.py
+- [[save_candidate()]] - code - shortsmaker/style_lab.py
 - [[shutil]] - concept
-- [[storyboard()]] - code - shortsmaker/review.py
-- [[test_prune_cache_handles_pools()]] - code - tests/test_pictures_first.py
-- [[threading]] - concept
-- [[vault_page()]] - code - shortsmaker/logbook.py
-- [[vault_refresh()]] - code - shortsmaker/logbook.py
+- [[style_lab.py]] - code - shortsmaker/style_lab.py
+- [[sys]] - concept
+- [[test_approve_adds_to_library()]] - code - tests/test_style.py
+- [[test_approve_rolls_back_on_tsc_failure()]] - code - tests/test_style.py
+- [[test_approve_rolls_back_when_the_check_crashes()]] - code - tests/test_style.py
+- [[test_candidate_names_unique_across_kinds()]] - code - tests/test_style.py
+- [[test_reject_deletes()]] - code - tests/test_style.py
+- [[test_save_candidate_unique_slug()]] - code - tests/test_style.py
+- [[test_style.py]] - code - tests/test_style.py
+- [[timeout()]] - code - tests/test_style.py
 
 ## Live Query (requires Dataview plugin)
 
@@ -45,47 +56,53 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 27 edges to [[_COMMUNITY_pathlib]]
-- 16 edges to [[_COMMUNITY_json]]
-- 7 edges to [[_COMMUNITY_test_full_scenes.py]]
-- 6 edges to [[_COMMUNITY_extra_sources.py]]
-- 5 edges to [[_COMMUNITY_re]]
+- 63 edges to [[_COMMUNITY_test_full_scenes.py]]
+- 13 edges to [[_COMMUNITY_style_library]]
+- 11 edges to [[_COMMUNITY_invent_component]]
+- 10 edges to [[_COMMUNITY_json]]
+- 9 edges to [[_COMMUNITY_re]]
+- 9 edges to [[_COMMUNITY_style_placeholders]]
+- 8 edges to [[_COMMUNITY_owner]]
+- 8 edges to [[_COMMUNITY_time]]
+- 7 edges to [[_COMMUNITY_writing.py]]
+- 6 edges to [[_COMMUNITY_render_remotion]]
+- 6 edges to [[_COMMUNITY_channel_profiles.py]]
+- 5 edges to [[_COMMUNITY_render]]
 - 5 edges to [[_COMMUNITY_main_1]]
-- 5 edges to [[_COMMUNITY_audio_library.py]]
-- 5 edges to [[_COMMUNITY_config.py]]
-- 4 edges to [[_COMMUNITY_write_json]]
-- 4 edges to [[_COMMUNITY_ffmpeg]]
-- 4 edges to [[_COMMUNITY_drawn_opener.py]]
-- 3 edges to [[_COMMUNITY_visual_review]]
-- 3 edges to [[_COMMUNITY_code_custom_scenes]]
+- 4 edges to [[_COMMUNITY_test_h3_handoff.py]]
+- 4 edges to [[_COMMUNITY_test_pictures_first.py]]
+- 4 edges to [[_COMMUNITY_code_custom_scenes]]
+- 4 edges to [[_COMMUNITY_audio_library.py]]
+- 3 edges to [[_COMMUNITY_opener3d.py]]
+- 3 edges to [[_COMMUNITY_qwen_voice.py]]
+- 3 edges to [[_COMMUNITY_ask_ai]]
+- 3 edges to [[_COMMUNITY_test_topic_ideas.py]]
 - 2 edges to [[_COMMUNITY_finish_render]]
+- 2 edges to [[_COMMUNITY_hashlib]]
 - 2 edges to [[_COMMUNITY_test_first_second.py]]
-- 2 edges to [[_COMMUNITY_apply_review_fixes]]
-- 2 edges to [[_COMMUNITY_local_clips]]
-- 2 edges to [[_COMMUNITY_test_pictures_first.py]]
+- 2 edges to [[_COMMUNITY_choose_images]]
 - 2 edges to [[_COMMUNITY_opener_crew.py]]
-- 2 edges to [[_COMMUNITY_retention.py]]
-- 2 edges to [[_COMMUNITY_approve_candidate]]
-- 1 edge to [[_COMMUNITY_render]]
-- 1 edge to [[_COMMUNITY_log_short]]
-- 1 edge to [[_COMMUNITY_gather_pool]]
-- 1 edge to [[_COMMUNITY_make]]
+- 2 edges to [[_COMMUNITY_test_rules.py]]
+- 2 edges to [[_COMMUNITY_test_opener_crew.py]]
+- 1 edge to [[_COMMUNITY_limit_style]]
+- 1 edge to [[_COMMUNITY_ffmpeg]]
 - 1 edge to [[_COMMUNITY_full_props]]
-- 1 edge to [[_COMMUNITY_paint_instead]]
+- 1 edge to [[_COMMUNITY_visual_review]]
 - 1 edge to [[_COMMUNITY_write_scripts]]
-- 1 edge to [[_COMMUNITY_opener_graphic]]
-- 1 edge to [[_COMMUNITY_render_remotion]]
-- 1 edge to [[_COMMUNITY_invent_component]]
+- 1 edge to [[_COMMUNITY_clean_full]]
 - 1 edge to [[_COMMUNITY_render_1]]
-- 1 edge to [[_COMMUNITY_footage.py]]
-- 1 edge to [[_COMMUNITY_test_opener_crew.py]]
-- 1 edge to [[_COMMUNITY_opener3d.py]]
-- 1 edge to [[_COMMUNITY_ask_ai]]
-- 1 edge to [[_COMMUNITY_test_topic_ideas.py]]
+- 1 edge to [[_COMMUNITY_gen.py]]
+- 1 edge to [[_COMMUNITY_build_scene.py]]
+- 1 edge to [[_COMMUNITY_test_blender_render.py]]
+- 1 edge to [[_COMMUNITY_split_make_shorts.py]]
+- 1 edge to [[_COMMUNITY_audio_mix.py]]
+- 1 edge to [[_COMMUNITY_test_blender_scene.py]]
+- 1 edge to [[_COMMUNITY_test_drawn_opener.py]]
+- 1 edge to [[_COMMUNITY_test_blender_plan.py]]
 
 ## Top bridge nodes
-- [[shutil]] - degree 58, connects to 25 communities
-- [[media_library.py]] - degree 27, connects to 9 communities
-- [[apply()]] - degree 13, connects to 8 communities
-- [[preview()]] - degree 12, connects to 7 communities
-- [[storyboard()]] - degree 8, connects to 5 communities
+- [[shutil]] - degree 58, connects to 24 communities
+- [[sys]] - degree 45, connects to 20 communities
+- [[test_style.py]] - degree 57, connects to 17 communities
+- [[style_lab.py]] - degree 39, connects to 12 communities
+- [[os]] - degree 18, connects to 11 communities

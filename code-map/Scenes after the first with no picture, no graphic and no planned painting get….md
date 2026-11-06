@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/short_render.py"
 type: "rationale"
-community: "rewrite_paint_prompts"
+community: "apply_review_fixes"
 location: "L197"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/rewrite_paint_prompts
+  - community/apply_review_fixes
 ---
 
 # Scenes after the first with no picture, no graphic and no planned painting get…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[plan_gap_paintings()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/rewrite_paint_prompts
+#graphify/rationale #graphify/EXTRACTED #community/apply_review_fixes

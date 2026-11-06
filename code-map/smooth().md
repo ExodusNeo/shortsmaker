@@ -12,7 +12,7 @@ tags:
 # smooth()
 
 ## Connections
-- [[clamp()]] - `calls` [EXTRACTED]
+- [[clamp()_1]] - `calls` [EXTRACTED]
 - [[core.mjs]] - `contains` [EXTRACTED]
 - [[mid()]] - `calls` [EXTRACTED]
 

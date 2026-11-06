@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/drawn_opener.py"
 type: "rationale"
-community: "drawn_opener.py"
+community: "time"
 location: "L155"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/drawn_openerpy
+  - community/time
 ---
 
 # The opener brief both opener coders get (this drawn one and opener3d): the…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[opener_role()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/drawn_openerpy
+#graphify/rationale #graphify/EXTRACTED #community/time

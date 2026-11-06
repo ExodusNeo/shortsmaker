@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/audio_mix.py"
 type: "rationale"
-community: "music_gain"
+community: "audio_mix.py"
 location: "L74"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/music_gain
+  - community/audio_mixpy
 ---
 
 # ASS captions, one caption_lines() line at a time: white with a black outline,…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[captions()_1]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/music_gain
+#graphify/rationale #graphify/EXTRACTED #community/audio_mixpy

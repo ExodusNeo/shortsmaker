@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_drawn_opener.py"
 type: "code"
-community: "short"
+community: "test_drawn_opener.py"
 location: "L160"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/short
+  - community/test_drawn_openerpy
 ---
 
 # test_neither_passes_so_the_best_draft_at_keep_is_used()
@@ -18,4 +18,4 @@ tags:
 - [[short()_3]] - `calls` [EXTRACTED]
 - [[test_drawn_opener.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/short
+#graphify/code #graphify/EXTRACTED #community/test_drawn_openerpy

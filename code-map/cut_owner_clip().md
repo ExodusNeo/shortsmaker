@@ -1,23 +1,23 @@
 ---
 source_file: "shortsmaker/gpu.py"
 type: "code"
-community: "local_clips"
+community: "ffmpeg"
 location: "L558"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/local_clips
+  - community/ffmpeg
 ---
 
 # cut_owner_clip()
 
 ## Connections
-- [[Path_6]] - `references` [EXTRACTED]
+- [[Path_11]] - `references` [EXTRACTED]
 - [[The owner's clip `src` cut to scene i's length fills the vertical frame, drops…]] - `rationale_for` [EXTRACTED]
-- [[ffmpeg()_1]] - `calls` [EXTRACTED]
+- [[ffmpeg()]] - `calls` [EXTRACTED]
 - [[gpu.py]] - `contains` [EXTRACTED]
 - [[local_clips()]] - `calls` [EXTRACTED]
 - [[veo_handoff()]] - `calls` [EXTRACTED]
 - [[video_encoder()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/local_clips
+#graphify/code #graphify/EXTRACTED #community/ffmpeg

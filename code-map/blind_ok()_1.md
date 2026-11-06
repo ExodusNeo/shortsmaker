@@ -1,19 +1,18 @@
 ---
-source_file: "tests/test_opener_crew.py"
+source_file: "tests/test_drawn_opener.py"
 type: "code"
-community: "test_opener_crew.py"
-location: "L37"
+community: "test_drawn_opener.py"
+location: "L40"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_opener_crewpy
+  - community/test_drawn_openerpy
 ---
 
 # blind_ok()
 
 ## Connections
-- [[The sound-off test's two calls (drawn_opener.blind_read) pass, so these tests…]] - `rationale_for` [EXTRACTED]
-- [[fake()_1]] - `calls` [EXTRACTED]
-- [[test_opener_crew.py]] - `contains` [EXTRACTED]
+- [[The sound-off test's two calls (drawn_opener.blind_read) the stranger gets it,…]] - `rationale_for` [EXTRACTED]
+- [[test_drawn_opener.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_opener_crewpy
+#graphify/code #graphify/EXTRACTED #community/test_drawn_openerpy

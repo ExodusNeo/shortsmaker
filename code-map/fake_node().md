@@ -2,7 +2,7 @@
 source_file: "tests/test_opening_rules.py"
 type: "code"
 community: "OpeningRulesTests"
-location: "L126"
+location: "L127"
 tags:
   - graphify/code
   - graphify/INFERRED

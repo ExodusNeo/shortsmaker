@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[Board.tsx]] - `imports_from` [EXTRACTED]
 - [[Box]] - `contains` [EXTRACTED]
-- [[Card()_1]] - `contains` [EXTRACTED]
+- [[Card()]] - `contains` [EXTRACTED]
 - [[Connect()]] - `contains` [EXTRACTED]
 - [[MIN_MOVE]] - `contains` [EXTRACTED]
 - [[NORMAL]] - `contains` [EXTRACTED]

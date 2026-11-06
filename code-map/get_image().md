@@ -15,7 +15,7 @@ tags:
 - [[Wikimedia files via wm_get() (contact User-Agent, spacing, cache), Openverse…]] - `rationale_for` [EXTRACTED]
 - [[download_picture()]] - `calls` [EXTRACTED]
 - [[drawn_thumbnail()]] - `calls` [EXTRACTED]
-- [[fetch()_1]] - `calls` [EXTRACTED]
+- [[fetch()]] - `calls` [EXTRACTED]
 - [[full_pictures()]] - `calls` [EXTRACTED]
 - [[image_sources.py]] - `contains` [EXTRACTED]
 - [[ov_get()]] - `calls` [EXTRACTED]

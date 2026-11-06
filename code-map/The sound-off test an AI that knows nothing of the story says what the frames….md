@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/drawn_opener.py"
 type: "rationale"
-community: "drawn_opener.py"
-location: "L286"
+community: "time"
+location: "L292"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/drawn_openerpy
+  - community/time
 ---
 
 # The sound-off test: an AI that knows nothing of the story says what the frames…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[blind_read()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/drawn_openerpy
+#graphify/rationale #graphify/EXTRACTED #community/time

@@ -2,7 +2,7 @@
 source_file: "shortsmaker/opener3d.py"
 type: "code"
 community: "opener3d.py"
-location: "L104"
+location: "L174"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -22,5 +22,6 @@ tags:
 - [[test_marks_beside_front_and_wall()]] - `calls` [EXTRACTED]
 - [[test_nobody_hides_in_furniture_or_inside_another_person()]] - `calls` [EXTRACTED]
 - [[test_someone_inside_a_house_steps_out_and_a_door_needs_a_real_id()]] - `calls` [EXTRACTED]
+- [[test_the_one_acting_stands_by_what_they_act_on_and_holds_3d_objects()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/opener3dpy

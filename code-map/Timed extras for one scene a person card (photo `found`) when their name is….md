@@ -2,7 +2,7 @@
 source_file: "shortsmaker/editplan.py"
 type: "rationale"
 community: "scene_cues"
-location: "L172"
+location: "L173"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED

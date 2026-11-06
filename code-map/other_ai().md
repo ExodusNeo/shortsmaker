@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/llm.py"
 type: "code"
-community: "test_ai_modes.py"
+community: "cold_read"
 location: "L123"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_ai_modespy
+  - community/cold_read
 ---
 
 # other_ai()
@@ -21,4 +21,4 @@ tags:
 - [[test_every_mode_can_continue_through_two_exhausted_ais()]] - `calls` [EXTRACTED]
 - [[test_gemini_modes_choose_codex_and_keep_editor_choice()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_ai_modespy
+#graphify/code #graphify/EXTRACTED #community/cold_read

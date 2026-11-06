@@ -12,11 +12,11 @@ tags:
 # visual_review()
 
 ## Connections
-- [[Path_27]] - `references` [EXTRACTED]
+- [[Path_25]] - `references` [EXTRACTED]
 - [[The AI watches the finished Short as sheets of one frame per second and reports…]] - `rationale_for` [EXTRACTED]
 - [[ask_ai()]] - `calls` [EXTRACTED]
 - [[clock()]] - `calls` [EXTRACTED]
-- [[ffmpeg()_1]] - `calls` [EXTRACTED]
+- [[ffmpeg()]] - `calls` [EXTRACTED]
 - [[finish_render()]] - `calls` [EXTRACTED]
 - [[overlay_notes()]] - `calls` [EXTRACTED]
 - [[review.py]] - `contains` [EXTRACTED]

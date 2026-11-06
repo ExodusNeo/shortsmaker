@@ -1,20 +1,20 @@
 ---
-source_file: "shortsmaker/blender_plan.py"
+source_file: "remotion/src/Opener3D.tsx"
 type: "code"
-community: "test_blender_plan.py"
-location: "L33"
+community: "Opener3D.tsx"
+location: "L53"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_blender_planpy
+  - community/Opener3Dtsx
 ---
 
 # clamp()
 
 ## Connections
-- [[A number in lo, hi (whole numbers stay whole), or the default for anything…]] - `rationale_for` [EXTRACTED]
-- [[blender_plan.py]] - `contains` [EXTRACTED]
-- [[clean_build()]] - `calls` [EXTRACTED]
-- [[math]] - `calls` [EXTRACTED]
+- [[Card()_1]] - `calls` [EXTRACTED]
+- [[Opener3D.tsx]] - `contains` [EXTRACTED]
+- [[PropMesh()]] - `calls` [EXTRACTED]
+- [[framing()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_blender_planpy
+#graphify/code #graphify/EXTRACTED #community/Opener3Dtsx

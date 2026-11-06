@@ -16,7 +16,7 @@ tags:
 - [[dot-dot()_1]] - `calls` [EXTRACTED]
 - [[dot-oval()]] - `calls` [EXTRACTED]
 - [[dot-paint()]] - `calls` [EXTRACTED]
-- [[clamp()]] - `calls` [EXTRACTED]
+- [[clamp()_1]] - `calls` [EXTRACTED]
 - [[k]] - `method` [EXTRACTED]
 - [[lerp()]] - `calls` [EXTRACTED]
 

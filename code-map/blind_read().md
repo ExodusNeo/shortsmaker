@@ -1,22 +1,22 @@
 ---
 source_file: "shortsmaker/drawn_opener.py"
 type: "code"
-community: "drawn_opener.py"
-location: "L285"
+community: "time"
+location: "L291"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/drawn_openerpy
+  - community/time
 ---
 
 # blind_read()
 
 ## Connections
-- [[Path_33]] - `references` [EXTRACTED]
+- [[Path_36]] - `references` [EXTRACTED]
 - [[The sound-off test an AI that knows nothing of the story says what the frames…]] - `rationale_for` [EXTRACTED]
 - [[ask_ai()]] - `calls` [EXTRACTED]
 - [[drawn_opener.py]] - `contains` [EXTRACTED]
 - [[look_dir()]] - `calls` [EXTRACTED]
 - [[review()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/drawn_openerpy
+#graphify/code #graphify/EXTRACTED #community/time

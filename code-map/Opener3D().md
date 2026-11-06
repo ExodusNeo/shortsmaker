@@ -2,7 +2,7 @@
 source_file: "remotion/src/Opener3D.tsx"
 type: "code"
 community: "Opener3D.tsx"
-location: "L553"
+location: "L591"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,10 +12,12 @@ tags:
 # Opener3D()
 
 ## Connections
+- [[Assembly()]] - `calls` [EXTRACTED]
 - [[Burst()_1]] - `calls` [EXTRACTED]
 - [[CameraRig()]] - `calls` [EXTRACTED]
-- [[Card()]] - `calls` [EXTRACTED]
+- [[Card()_1]] - `calls` [EXTRACTED]
 - [[Glow()]] - `calls` [EXTRACTED]
+- [[HeldThing()]] - `calls` [EXTRACTED]
 - [[Opener3D.tsx]] - `contains` [EXTRACTED]
 - [[Particles()]] - `calls` [EXTRACTED]
 - [[PictureLight()]] - `calls` [EXTRACTED]

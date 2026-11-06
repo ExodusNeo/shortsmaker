@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/drawn_opener.py"
 type: "code"
-community: "drawn_opener.py"
+community: "time"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/drawn_openerpy
+  - community/time
 ---
 
 # drawn_opener.py
@@ -33,6 +33,7 @@ tags:
 - [[opener_role()]] - `contains` [EXTRACTED]
 - [[opening_rules.py]] - `imports_from` [EXTRACTED]
 - [[pathlib]] - `imports_from` [EXTRACTED]
+- [[picture()]] - `contains` [EXTRACTED]
 - [[plan_rules.py]] - `imports_from` [EXTRACTED]
 - [[re]] - `imports` [EXTRACTED]
 - [[review()]] - `contains` [EXTRACTED]
@@ -51,4 +52,4 @@ tags:
 - [[time]] - `imports` [EXTRACTED]
 - [[write()_1]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/drawn_openerpy
+#graphify/code #graphify/EXTRACTED #community/time

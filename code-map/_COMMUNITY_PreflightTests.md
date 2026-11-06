@@ -23,7 +23,7 @@ members: 17
 - [[dot-test_repair_is_rendered_and_complete_reviews_are_saved()]] - code - tests/test_opener_preflight.py
 - [[dot-test_worse_repair_restores_best_source_and_status()]] - code - tests/test_opener_preflight.py
 - [[PreflightTests]] - code - tests/test_opener_preflight.py
-- [[ffmpeg()]] - code - tests/test_opener_preflight.py
+- [[ffmpeg()_1]] - code - tests/test_opener_preflight.py
 - [[verdict()]] - code - tests/test_opener_preflight.py
 
 ## Live Query (requires Dataview plugin)
@@ -34,7 +34,7 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 2 edges to [[_COMMUNITY_pathlib]]
+- 2 edges to [[_COMMUNITY_test_full_scenes.py]]
 
 ## Top bridge nodes
 - [[PreflightTests]] - degree 15, connects to 1 community

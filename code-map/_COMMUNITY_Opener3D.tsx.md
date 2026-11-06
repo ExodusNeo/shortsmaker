@@ -1,22 +1,25 @@
 ---
 type: community
-members: 58
+members: 55
 ---
 
 # Opener3D.tsx
 
-**Members:** 58 nodes
+**Members:** 55 nodes
 
 ## Members
+- [[Assembly()]] - code - remotion/src/Opener3D.tsx
 - [[BOOKS]] - code - remotion/src/Opener3D.tsx
 - [[Box()_1]] - code - remotion/src/Opener3D.tsx
 - [[Building()]] - code - remotion/src/Opener3D.tsx
 - [[Burst()_1]] - code - remotion/src/Opener3D.tsx
 - [[CameraRig()]] - code - remotion/src/Opener3D.tsx
-- [[Card()]] - code - remotion/src/Opener3D.tsx
+- [[Card()_1]] - code - remotion/src/Opener3D.tsx
 - [[Cutout]] - code - remotion/src/Opener3D.tsx
 - [[Effect]] - code - remotion/src/Opener3D.tsx
 - [[Glow()]] - code - remotion/src/Opener3D.tsx
+- [[Held]] - code - remotion/src/Opener3D.tsx
+- [[HeldThing()]] - code - remotion/src/Opener3D.tsx
 - [[Library]] - code - remotion/src/Opener3D.tsx
 - [[MODELS]] - code - remotion/src/Opener3D.tsx
 - [[MOODS_1]] - code - remotion/src/Opener3D.tsx
@@ -33,20 +36,15 @@ members: 58
 - [[Puff()]] - code - remotion/src/Opener3D.tsx
 - [[RECOLOUR]] - code - remotion/src/Opener3D.tsx
 - [[Rings()]] - code - remotion/src/Opener3D.tsx
-- [[Root()]] - code - remotion/src/Root.tsx
-- [[Root.tsx]] - code - remotion/src/Root.tsx
 - [[Shafts()]] - code - remotion/src/Opener3D.tsx
-- [[ShortProps]] - code - remotion/src/Short.tsx
+- [[Shape]] - code - remotion/src/Opener3D.tsx
 - [[Shot]] - code - remotion/src/Opener3D.tsx
 - [[Smoke()]] - code - remotion/src/Opener3D.tsx
 - [[Sparks()]] - code - remotion/src/Opener3D.tsx
-- [[StageProps]] - code - remotion/src/Opener3D.tsx
 - [[TOWN]] - code - remotion/src/Opener3D.tsx
 - [[XZ]] - code - remotion/src/Opener3D.tsx
 - [[aim()]] - code - remotion/src/Opener3D.tsx
-- [[calculateMetadata()]] - code - remotion/src/Root.tsx
-- [[calculateOpener3D()]] - code - remotion/src/Opener3D.tsx
-- [[clamp()_1]] - code - remotion/src/Opener3D.tsx
+- [[clamp()_2]] - code - remotion/src/Opener3D.tsx
 - [[cobbleCache]] - code - remotion/src/Opener3D.tsx
 - [[cobbles()]] - code - remotion/src/Opener3D.tsx
 - [[cutPos()]] - code - remotion/src/Opener3D.tsx
@@ -59,7 +57,6 @@ members: 58
 - [[ref_react_three_postprocessing]] - concept
 - [[ref_remotion_three]] - concept
 - [[ref_three]] - concept
-- [[srcindex.ts]] - code - remotion/src/index.ts
 - [[targetOf()]] - code - remotion/src/Opener3D.tsx
 - [[useAurora()]] - code - remotion/src/Opener3D.tsx
 - [[useCommitted()]] - code - remotion/src/Opener3D.tsx
@@ -75,12 +72,9 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 3 edges to [[_COMMUNITY_Short.tsx]]
-- 3 edges to [[_COMMUNITY_Graphics.tsx]]
-- 1 edge to [[_COMMUNITY_styleindex.ts]]
+- 5 edges to [[_COMMUNITY_Short.tsx]]
+- 1 edge to [[_COMMUNITY_ref_react]]
 
 ## Top bridge nodes
-- [[Opener3D.tsx]] - degree 55, connects to 2 communities
-- [[Root.tsx]] - degree 11, connects to 2 communities
-- [[srcindex.ts]] - degree 3, connects to 1 community
-- [[ShortProps]] - degree 2, connects to 1 community
+- [[Opener3D.tsx]] - degree 59, connects to 2 communities
+- [[Opener3D()]] - degree 25, connects to 1 community

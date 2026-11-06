@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/full/examples/ExampleOpenerAction.tsx"
 type: "code"
-community: "toolkit.tsx"
+community: "Paper"
 location: "L6"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/toolkittsx
+  - community/Paper
 ---
 
 # ExampleOpenerAction()
@@ -16,4 +16,4 @@ tags:
 - [[Paper()]] - `calls` [EXTRACTED]
 - [[skinOf()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/toolkittsx
+#graphify/code #graphify/EXTRACTED #community/Paper

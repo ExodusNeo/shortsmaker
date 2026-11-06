@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[ask()_5]] - `contains` [EXTRACTED]
-- [[ask()_6]] - `indirect_call` [INFERRED]
+- [[ask()_4]] - `indirect_call` [INFERRED]
 - [[draft_rules in a temp channels folder holding strange-history's rules; returns…]] - `rationale_for` [EXTRACTED]
 - [[draft_rules()]] - `calls` [EXTRACTED]
 - [[make()]] - `calls` [EXTRACTED]

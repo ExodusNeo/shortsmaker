@@ -16,7 +16,7 @@ tags:
 - [[dot-box()]] - `calls` [EXTRACTED]
 - [[dot-disc()]] - `calls` [EXTRACTED]
 - [[dot-knock()]] - `calls` [EXTRACTED]
-- [[clamp()]] - `calls` [EXTRACTED]
+- [[clamp()_1]] - `calls` [EXTRACTED]
 - [[k]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/at

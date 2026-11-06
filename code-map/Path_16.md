@@ -1,17 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "json"
+community: "hashlib"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/json
+  - community/hashlib
 ---
 
 # Path
 
 ## Connections
-- [[fit_start()]] - `references` [EXTRACTED]
-- [[saved_file()]] - `references` [EXTRACTED]
+- [[load()_1]] - `references` [EXTRACTED]
+- [[save()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/json
+#graphify/code #graphify/EXTRACTED #community/hashlib

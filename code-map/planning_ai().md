@@ -12,7 +12,7 @@ tags:
 # planning_ai()
 
 ## Connections
-- [[dot-__enter__()_1]] - `indirect_call` [INFERRED]
+- [[dot-__enter__()_3]] - `indirect_call` [INFERRED]
 - [[Canned replies for every planning step of write_scripts().]] - `rationale_for` [EXTRACTED]
 - [[ai()]] - `calls` [EXTRACTED]
 - [[ai()_1]] - `calls` [EXTRACTED]

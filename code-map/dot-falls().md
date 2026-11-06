@@ -14,6 +14,6 @@ tags:
 ## Connections
 - [[dot-ride_along()]] - `calls` [EXTRACTED]
 - [[Failure]] - `method` [EXTRACTED]
-- [[main()_4]] - `calls` [INFERRED]
+- [[main()_3]] - `calls` [INFERRED]
 
 #graphify/code #graphify/EXTRACTED #community/main

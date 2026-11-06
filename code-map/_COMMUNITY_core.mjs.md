@@ -29,7 +29,7 @@ members: 42
 - [[_grain]] - code - drawn/lib/core.mjs
 - [[at()]] - code - drawn/lib/core.mjs
 - [[burst()]] - code - drawn/lib/core.mjs
-- [[clamp()]] - code - drawn/lib/core.mjs
+- [[clamp()_1]] - code - drawn/lib/core.mjs
 - [[core.mjs]] - code - drawn/lib/core.mjs
 - [[eBounce()]] - code - drawn/lib/core.mjs
 - [[eElastic()]] - code - drawn/lib/core.mjs
@@ -61,14 +61,14 @@ SORT file.name ASC
 ## Connections to other communities
 - 35 edges to [[_COMMUNITY_k]]
 - 16 edges to [[_COMMUNITY_Pen]]
+- 15 edges to [[_COMMUNITY_kit.mjs]]
 - 15 edges to [[_COMMUNITY_textures.mjs]]
-- 14 edges to [[_COMMUNITY_kit.mjs]]
 - 6 edges to [[_COMMUNITY_dot-at]]
 - 4 edges to [[_COMMUNITY_bean.mjs]]
 
 ## Top bridge nodes
 - [[core.mjs]] - degree 49, connects to 6 communities
 - [[lerp()]] - degree 20, connects to 5 communities
-- [[clamp()]] - degree 35, connects to 4 communities
+- [[clamp()_1]] - degree 35, connects to 4 communities
+- [[dot-person()]] - degree 14, connects to 3 communities
 - [[eOut()]] - degree 7, connects to 3 communities
-- [[dot-person()]] - degree 13, connects to 2 communities

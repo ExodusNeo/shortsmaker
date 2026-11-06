@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/drawn_opener.py"
 type: "code"
-community: "drawn_opener.py"
-location: "L208"
+community: "time"
+location: "L214"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/drawn_openerpy
+  - community/time
 ---
 
 # review()
@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[dot-render_fixture()]] - `indirect_call` [INFERRED]
 - [[dot-test_final_render_routes_drawn_spoiler_into_fix_flow()]] - `indirect_call` [INFERRED]
-- [[Path_33]] - `references` [EXTRACTED]
+- [[Path_36]] - `references` [EXTRACTED]
 - [[The art director's score (1-10) of a draft's preview sheet and what to fix.…]] - `rationale_for` [EXTRACTED]
 - [[ask_ai()]] - `calls` [EXTRACTED]
 - [[blind_read()]] - `calls` [EXTRACTED]
@@ -27,4 +27,4 @@ tags:
 - [[test_no_verdict_is_not_a_pass()]] - `calls` [EXTRACTED]
 - [[test_sound_off_test_fails_a_draft_the_art_director_liked()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/drawn_openerpy
+#graphify/code #graphify/EXTRACTED #community/time

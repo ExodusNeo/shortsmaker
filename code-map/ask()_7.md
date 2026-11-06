@@ -1,21 +1,18 @@
 ---
-source_file: "tests/test_full_scenes.py"
+source_file: "tests/test_blender_plan.py"
 type: "code"
-community: "rewrite_paint_prompts"
-location: "L151"
+community: "default_build"
+location: "L87"
 tags:
   - graphify/code
-  - graphify/INFERRED
-  - community/rewrite_paint_prompts
+  - graphify/EXTRACTED
+  - community/default_build
 ---
 
 # ask()
 
 ## Connections
-- [[_fake_planning()]] - `indirect_call` [INFERRED]
-- [[test_look_check_fixes_code()]] - `indirect_call` [INFERRED]
-- [[test_review_redraws_custom()]] - `indirect_call` [INFERRED]
-- [[test_review_uses_unused_pool_pictures_before_painting()]] - `indirect_call` [INFERRED]
-- [[test_rewrite_paint_prompts()]] - `indirect_call` [INFERRED]
+- [[plan()_1]] - `calls` [EXTRACTED]
+- [[test_plan_builds_retries_then_defaults()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/INFERRED #community/rewrite_paint_prompts
+#graphify/code #graphify/EXTRACTED #community/default_build

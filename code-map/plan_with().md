@@ -1,18 +1,18 @@
 ---
 source_file: "tests/test_style.py"
 type: "code"
-community: "test_style.py"
+community: "owner"
 location: "L107"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_stylepy
+  - community/owner
 ---
 
 # plan_with()
 
 ## Connections
-- [[ask()_12]] - `indirect_call` [INFERRED]
+- [[ask()_13]] - `indirect_call` [INFERRED]
 - [[owner()_1]] - `calls` [EXTRACTED]
 - [[test_director_character_look_is_kept_short_or_dropped()]] - `calls` [EXTRACTED]
 - [[test_director_inventions_are_kept_with_a_spec()]] - `calls` [EXTRACTED]
@@ -21,4 +21,4 @@ tags:
 - [[write_scripts with every AInetwork step faked; the director answers…]] - `rationale_for` [EXTRACTED]
 - [[write_scripts()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_stylepy
+#graphify/code #graphify/EXTRACTED #community/owner

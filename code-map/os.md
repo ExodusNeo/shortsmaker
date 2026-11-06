@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "config.py"
+community: "shutil"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/configpy
+  - community/shutil
 ---
 
 # os
@@ -19,6 +19,7 @@ tags:
 - [[llm.py]] - `imports` [EXTRACTED]
 - [[media_library.py]] - `imports` [EXTRACTED]
 - [[media_menu.py]] - `imports` [EXTRACTED]
+- [[opener3d.py]] - `imports` [EXTRACTED]
 - [[opener_crew.py]] - `imports` [EXTRACTED]
 - [[qwen_voice.py]] - `imports` [EXTRACTED]
 - [[style_lab.py]] - `imports` [EXTRACTED]
@@ -29,4 +30,4 @@ tags:
 - [[test_reliability.py]] - `imports` [EXTRACTED]
 - [[veo_handoff()]] - `calls` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/configpy
+#graphify/concept #graphify/EXTRACTED #community/shutil

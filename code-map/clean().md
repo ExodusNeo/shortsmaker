@@ -2,7 +2,7 @@
 source_file: "shortsmaker/opener3d.py"
 type: "code"
 community: "opener3d.py"
-location: "L280"
+location: "L350"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -15,18 +15,23 @@ tags:
 - [[The AI's stage, checked and made safe for Remotion (word times resolved,…]] - `rationale_for` [EXTRACTED]
 - [[assemble()]] - `calls` [EXTRACTED]
 - [[clean_code()]] - `calls` [EXTRACTED]
+- [[clean_shapes()]] - `calls` [EXTRACTED]
 - [[dress()_1]] - `calls` [EXTRACTED]
 - [[front_door()]] - `calls` [EXTRACTED]
 - [[half_width()]] - `calls` [EXTRACTED]
+- [[held_of()]] - `calls` [EXTRACTED]
 - [[in_order()]] - `calls` [EXTRACTED]
 - [[inside()]] - `calls` [EXTRACTED]
 - [[lint_cutout()]] - `calls` [EXTRACTED]
+- [[load_part()]] - `calls` [EXTRACTED]
 - [[look()]] - `calls` [EXTRACTED]
 - [[nudge()]] - `calls` [EXTRACTED]
 - [[num()]] - `calls` [EXTRACTED]
 - [[on_top()]] - `calls` [EXTRACTED]
 - [[opener3d.py]] - `contains` [EXTRACTED]
+- [[part_sheet()]] - `calls` [EXTRACTED]
 - [[resolve()]] - `calls` [EXTRACTED]
+- [[shapes_foot()]] - `calls` [EXTRACTED]
 - [[spread_out()]] - `calls` [EXTRACTED]
 - [[test_a_cabin_has_its_own_door()]] - `calls` [EXTRACTED]
 - [[test_a_close_shot_on_people_far_apart_goes_back_to_the_placer()]] - `calls` [EXTRACTED]

@@ -12,7 +12,7 @@ tags:
 # fitCard()
 
 ## Connections
-- [[Card()_1]] - `calls` [EXTRACTED]
+- [[Card()]] - `calls` [EXTRACTED]
 - [[guarded.test.ts]] - `imports` [EXTRACTED]
 - [[guarded.tsx]] - `contains` [EXTRACTED]
 

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/picture_pool.py"
 type: "rationale"
-community: "test_full_scenes.py"
+community: "contact_sheets"
 location: "L72"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/test_full_scenespy
+  - community/contact_sheets
 ---
 
 # Numbered thumbnail grids (6x4) so Claude can look at every candidate at once.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[contact_sheets()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/test_full_scenespy
+#graphify/rationale #graphify/EXTRACTED #community/contact_sheets

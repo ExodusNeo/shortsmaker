@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/channel_profiles.py"
 type: "rationale"
-community: "config.py"
+community: "channel_profiles.py"
 location: "L171"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/configpy
+  - community/channel_profilespy
 ---
 
 # The biggest recent Shorts from channels that are proven in the niche: since…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[trend_research()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/configpy
+#graphify/rationale #graphify/EXTRACTED #community/channel_profilespy

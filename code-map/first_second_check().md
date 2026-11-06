@@ -12,11 +12,11 @@ tags:
 # first_second_check()
 
 ## Connections
-- [[Path_27]] - `references` [EXTRACTED]
+- [[Path_25]] - `references` [EXTRACTED]
 - [[Would a stranger scrolling the Shorts feed stop here Stayed-to-watch is…]] - `rationale_for` [EXTRACTED]
 - [[ask_ai()]] - `calls` [EXTRACTED]
 - [[capture_prompts()]] - `calls` [EXTRACTED]
-- [[ffmpeg()_1]] - `calls` [EXTRACTED]
+- [[ffmpeg()]] - `calls` [EXTRACTED]
 - [[finish_render()]] - `calls` [EXTRACTED]
 - [[first_sentence()]] - `calls` [EXTRACTED]
 - [[full_summary()]] - `calls` [EXTRACTED]

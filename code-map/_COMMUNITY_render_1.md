@@ -1,19 +1,21 @@
 ---
 type: community
-members: 11
+members: 13
 ---
 
 # render
 
-**Members:** 11 nodes
+**Members:** 13 nodes
 
 ## Members
 - [[Cut-outs whose main colour melts into the room's wall behind them (McLean,…]] - rationale - shortsmaker/opener3d.py
 - [[Paints the cut-outs and renders folderopener.mp4; None when it worked, else…]] - rationale - shortsmaker/opener3d.py
-- [[Path_37]] - code
+- [[Path_38]] - code
 - [[Six preview times the first and last frame, just after each camera cut (the…]] - rationale - shortsmaker/opener3d.py
 - [[The art director's preview six moments left to right (the time on each), and…]] - rationale - shortsmaker/opener3d.py
+- [[The part checker's picture of a new 3D part on the floor beside a 1.75 m…]] - rationale - shortsmaker/opener3d.py
 - [[blends()]] - code - shortsmaker/opener3d.py
+- [[part_sheet()]] - code - shortsmaker/opener3d.py
 - [[render()_5]] - code - shortsmaker/opener3d.py
 - [[sheet()_1]] - code - shortsmaker/opener3d.py
 - [[sheet_times()_1]] - code - shortsmaker/opener3d.py
@@ -28,17 +30,17 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 8 edges to [[_COMMUNITY_opener3d.py]]
+- 10 edges to [[_COMMUNITY_opener3d.py]]
 - 3 edges to [[_COMMUNITY_opener_crew.py]]
-- 2 edges to [[_COMMUNITY_drawn_opener.py]]
+- 3 edges to [[_COMMUNITY_time]]
+- 2 edges to [[_COMMUNITY_ffmpeg]]
 - 2 edges to [[_COMMUNITY_json]]
-- 1 edge to [[_COMMUNITY_ffmpeg]]
-- 1 edge to [[_COMMUNITY_pathlib]]
+- 1 edge to [[_COMMUNITY_test_full_scenes.py]]
 - 1 edge to [[_COMMUNITY_shutil]]
 
 ## Top bridge nodes
-- [[render()_5]] - degree 9, connects to 6 communities
+- [[render()_5]] - degree 10, connects to 6 communities
 - [[sheet()_1]] - degree 8, connects to 4 communities
+- [[part_sheet()]] - degree 7, connects to 3 communities
 - [[blends()]] - degree 5, connects to 2 communities
 - [[sheet_times()_1]] - degree 5, connects to 2 communities
-- [[test_a_cutout_that_melts_into_the_wall_goes_back()]] - degree 2, connects to 1 community

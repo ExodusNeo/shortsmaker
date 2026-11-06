@@ -12,7 +12,7 @@ tags:
 # sound_masking()
 
 ## Connections
-- [[Path_27]] - `references` [EXTRACTED]
+- [[Path_25]] - `references` [EXTRACTED]
 - [[Sound effects loud enough under the narration to cover words the voice and…]] - `rationale_for` [EXTRACTED]
 - [[clock()]] - `calls` [EXTRACTED]
 - [[finish_render()]] - `calls` [EXTRACTED]

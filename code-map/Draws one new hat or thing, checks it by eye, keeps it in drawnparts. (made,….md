@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/opener_crew.py"
 type: "rationale"
-community: "opener_crew.py"
-location: "L288"
+community: "time"
+location: "L297"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/opener_crewpy
+  - community/time
 ---
 
 # Draws one new hat or thing, checks it by eye, keeps it in drawn/parts. (made,…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[make_part()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/opener_crewpy
+#graphify/rationale #graphify/EXTRACTED #community/time

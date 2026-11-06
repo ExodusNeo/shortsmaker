@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/channel_profiles.py"
 type: "rationale"
-community: "config.py"
+community: "channel_profiles.py"
 location: "L143"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/configpy
+  - community/channel_profilespy
 ---
 
 # Flat listing (title, views, duration, url) of a YouTube search, channel tab or…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[yt_list()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/configpy
+#graphify/rationale #graphify/EXTRACTED #community/channel_profilespy

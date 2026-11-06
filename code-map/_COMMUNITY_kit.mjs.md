@@ -56,7 +56,7 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 14 edges to [[_COMMUNITY_core.mjs]]
+- 15 edges to [[_COMMUNITY_core.mjs]]
 - 8 edges to [[_COMMUNITY_textures.mjs]]
 - 7 edges to [[_COMMUNITY_k]]
 - 4 edges to [[_COMMUNITY_bean.mjs]]
@@ -68,4 +68,4 @@ SORT file.name ASC
 - [[run.mjs]] - degree 27, connects to 3 communities
 - [[cutouts.mjs]] - degree 15, connects to 2 communities
 - [[partsheet.mjs]] - degree 12, connects to 2 communities
-- [[film.mjs]] - degree 10, connects to 1 community
+- [[paintAll()]] - degree 4, connects to 2 communities

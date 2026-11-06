@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/audio_mix.py"
 type: "code"
-community: "music_gain"
+community: "audio_mix.py"
 location: "L54"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/music_gain
+  - community/audio_mixpy
 ---
 
 # caption_size()
@@ -16,4 +16,4 @@ tags:
 - [[audio_mix.py]] - `contains` [EXTRACTED]
 - [[captions()_1]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/music_gain
+#graphify/code #graphify/EXTRACTED #community/audio_mixpy

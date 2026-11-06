@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_marks.py"
 type: "code"
-community: "test_full_scenes.py"
+community: "MarkTests"
 location: "L16"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_full_scenespy
+  - community/MarkTests
 ---
 
 # .test_grid_uses_cleaned_framing_without_replacing_source()
@@ -15,4 +15,4 @@ tags:
 - [[MarkTests]] - `method` [EXTRACTED]
 - [[choose()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/test_full_scenespy
+#graphify/code #graphify/EXTRACTED #community/MarkTests

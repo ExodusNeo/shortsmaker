@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_codex.py"
 type: "code"
-community: "test_ai_modes.py"
+community: "cold_read"
 location: "L67"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_ai_modespy
+  - community/cold_read
 ---
 
 # test_gemini_modes_choose_codex_and_keep_editor_choice()
@@ -16,4 +16,4 @@ tags:
 - [[other_ai()]] - `calls` [EXTRACTED]
 - [[test_codex.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_ai_modespy
+#graphify/code #graphify/EXTRACTED #community/cold_read

@@ -1,18 +1,18 @@
 ---
 source_file: "remotion/src/full/examples/ExampleChain.tsx"
 type: "code"
-community: "guarded.tsx"
+community: "toolkit.tsx"
 location: "L7"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/guardedtsx
+  - community/toolkittsx
 ---
 
 # ExampleChain()
 
 ## Connections
-- [[Card()_1]] - `calls` [EXTRACTED]
+- [[Card()]] - `calls` [EXTRACTED]
 - [[Connect()]] - `calls` [EXTRACTED]
 - [[ExampleChain.tsx]] - `contains` [EXTRACTED]
 - [[Paper()]] - `calls` [EXTRACTED]
@@ -24,4 +24,4 @@ tags:
 - [[skinOf()]] - `calls` [EXTRACTED]
 - [[travel()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/guardedtsx
+#graphify/code #graphify/EXTRACTED #community/toolkittsx

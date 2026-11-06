@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[dot-dust()]] - `calls` [EXTRACTED]
 - [[dot-snowfall()]] - `calls` [EXTRACTED]
-- [[clamp()]] - `calls` [EXTRACTED]
+- [[clamp()_1]] - `calls` [EXTRACTED]
 - [[k]] - `method` [EXTRACTED]
 - [[lerp()]] - `calls` [EXTRACTED]
 

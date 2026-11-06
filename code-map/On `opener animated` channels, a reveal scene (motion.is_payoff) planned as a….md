@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/short_render.py"
 type: "rationale"
-community: "ffmpeg"
+community: "finish_render"
 location: "L150"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/ffmpeg
+  - community/finish_render
 ---
 
 # On `opener: animated` channels, a reveal scene (motion.is_payoff) planned as a…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[drawn_payoff()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/ffmpeg
+#graphify/rationale #graphify/EXTRACTED #community/finish_render

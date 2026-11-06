@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/photo_prep.py"
 type: "rationale"
-community: "test_full_scenes.py"
+community: "trim_borders"
 location: "L13"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/test_full_scenespy
+  - community/trim_borders
 ---
 
 # A stereograph card: two near-identical photos side by side. Compares the…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[is_stereo()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/test_full_scenespy
+#graphify/rationale #graphify/EXTRACTED #community/trim_borders

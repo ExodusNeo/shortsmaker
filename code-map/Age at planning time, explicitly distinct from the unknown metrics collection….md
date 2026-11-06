@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/logbook.py"
 type: "rationale"
-community: "re"
+community: "fake_ai"
 location: "L101"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/re
+  - community/fake_ai
 ---
 
 # Age at planning time, explicitly distinct from the unknown metrics collection…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[entry_age()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/re
+#graphify/rationale #graphify/EXTRACTED #community/fake_ai

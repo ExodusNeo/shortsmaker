@@ -12,7 +12,7 @@ tags:
 # credit_tag_image()
 
 ## Connections
-- [[Image_1]] - `references` [EXTRACTED]
+- [[Image_2]] - `references` [EXTRACTED]
 - [[Small credit label (bottom-left, CREDIT_Y) while credited material (YouTube…]] - `rationale_for` [EXTRACTED]
 - [[frame_maker()]] - `calls` [EXTRACTED]
 - [[image_sources.py]] - `contains` [EXTRACTED]

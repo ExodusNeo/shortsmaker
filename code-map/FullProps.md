@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/full/types.ts"
 type: "code"
-community: "Paper"
+community: "ref_react"
 location: "L12"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Paper
+  - community/ref_react
 ---
 
 # FullProps
@@ -28,4 +28,4 @@ tags:
 - [[fulltypes.ts]] - `contains` [EXTRACTED]
 - [[toolkit.tsx]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Paper
+#graphify/code #graphify/EXTRACTED #community/ref_react

@@ -17,6 +17,6 @@ tags:
 - [[draw()_9]] - `calls` [EXTRACTED]
 - [[draw()_11]] - `calls` [EXTRACTED]
 - [[kit.ts]] - `contains` [EXTRACTED]
-- [[luminance()_1]] - `calls` [EXTRACTED]
+- [[luminance()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Halftonetsx

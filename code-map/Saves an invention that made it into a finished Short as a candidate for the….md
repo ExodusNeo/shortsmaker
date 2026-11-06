@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/style_lab.py"
 type: "rationale"
-community: "approve_candidate"
+community: "shutil"
 location: "L245"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/approve_candidate
+  - community/shutil
 ---
 
 # Saves an invention that made it into a finished Short as a candidate for the…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[save_candidate()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/approve_candidate
+#graphify/rationale #graphify/EXTRACTED #community/shutil

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/llm.py"
 type: "rationale"
-community: "test_ai_modes.py"
+community: "cold_read"
 location: "L124"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/test_ai_modespy
+  - community/cold_read
 ---
 
 # Preferred alternative, keeping the configured hybrid partner when possible.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[other_ai()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/test_ai_modespy
+#graphify/rationale #graphify/EXTRACTED #community/cold_read

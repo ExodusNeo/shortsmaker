@@ -2,7 +2,7 @@
 source_file: "shortsmaker/opener_crew.py"
 type: "code"
 community: "opener_crew.py"
-location: "L616"
+location: "L696"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,11 +12,12 @@ tags:
 # plan()
 
 ## Connections
-- [[Path_8]] - `references` [EXTRACTED]
+- [[Path_13]] - `references` [EXTRACTED]
 - [[Stage, make parts, paint, lay out (code), render, review and route fixes a…]] - `rationale_for` [EXTRACTED]
 - [[assemble()]] - `calls` [EXTRACTED]
 - [[blends()]] - `calls` [EXTRACTED]
 - [[crew()]] - `calls` [EXTRACTED]
+- [[json]] - `calls` [EXTRACTED]
 - [[layout()_1]] - `calls` [EXTRACTED]
 - [[make_opener()]] - `calls` [EXTRACTED]
 - [[minutes()]] - `calls` [EXTRACTED]

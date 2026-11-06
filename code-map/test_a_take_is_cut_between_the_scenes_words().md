@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[duration()]] - `calls` [EXTRACTED]
-- [[ffmpeg()_1]] - `calls` [EXTRACTED]
+- [[ffmpeg()]] - `calls` [EXTRACTED]
 - [[scenes()]] - `calls` [EXTRACTED]
 - [[split_takes()]] - `calls` [EXTRACTED]
 - [[test_story.py]] - `contains` [EXTRACTED]

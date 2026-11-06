@@ -12,7 +12,7 @@ tags:
 # frameAt()
 
 ## Connections
-- [[clamp()]] - `calls` [EXTRACTED]
+- [[clamp()_1]] - `calls` [EXTRACTED]
 - [[frame()_2]] - `calls` [EXTRACTED]
 - [[held()]] - `calls` [EXTRACTED]
 - [[lerp()]] - `calls` [EXTRACTED]

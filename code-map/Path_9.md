@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "pick_channel"
+community: "re"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/pick_channel
+  - community/re
 ---
 
 # Path
 
 ## Connections
-- [[draft_rules()]] - `references` [EXTRACTED]
+- [[mark_details()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/pick_channel
+#graphify/code #graphify/EXTRACTED #community/re

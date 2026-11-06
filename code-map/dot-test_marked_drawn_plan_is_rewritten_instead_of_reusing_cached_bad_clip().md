@@ -2,7 +2,7 @@
 source_file: "tests/test_opening_rules.py"
 type: "code"
 community: "OpeningRulesTests"
-location: "L114"
+location: "L115"
 tags:
   - graphify/code
   - graphify/EXTRACTED

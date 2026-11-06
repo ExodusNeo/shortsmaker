@@ -2,7 +2,7 @@
 source_file: "shortsmaker/opener3d.py"
 type: "code"
 community: "render"
-location: "L461"
+location: "L549"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -13,11 +13,12 @@ tags:
 
 ## Connections
 - [[Paints the cut-outs and renders folderopener.mp4; None when it worked, else…]] - `rationale_for` [EXTRACTED]
-- [[Path_37]] - `references` [EXTRACTED]
+- [[Path_38]] - `references` [EXTRACTED]
 - [[json]] - `calls` [EXTRACTED]
 - [[look()]] - `calls` [EXTRACTED]
 - [[make_opener()]] - `calls` [EXTRACTED]
 - [[opener3d.py]] - `contains` [EXTRACTED]
+- [[part_sheet()]] - `calls` [EXTRACTED]
 - [[plan()]] - `calls` [EXTRACTED]
 - [[shutil]] - `calls` [EXTRACTED]
 - [[subprocess]] - `calls` [EXTRACTED]

@@ -12,6 +12,7 @@ tags:
 # paintAll()
 
 ## Connections
+- [[dot-person()]] - `calls` [EXTRACTED]
 - [[bounds()]] - `calls` [EXTRACTED]
 - [[cutouts.mjs]] - `contains` [EXTRACTED]
 - [[makeKit()]] - `calls` [EXTRACTED]

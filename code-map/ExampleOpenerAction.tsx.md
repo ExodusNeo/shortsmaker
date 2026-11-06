@@ -1,12 +1,12 @@
 ---
 source_file: "remotion/src/full/examples/ExampleOpenerAction.tsx"
 type: "code"
-community: "toolkit.tsx"
+community: "ref_react"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/toolkittsx
+  - community/ref_react
 ---
 
 # ExampleOpenerAction.tsx
@@ -26,4 +26,4 @@ tags:
 - [[skinOf()]] - `imports` [EXTRACTED]
 - [[toolkit.tsx]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/toolkittsx
+#graphify/code #graphify/EXTRACTED #community/ref_react

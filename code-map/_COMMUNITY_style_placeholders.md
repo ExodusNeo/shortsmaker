@@ -16,9 +16,9 @@ members: 13
 - [[run()_6]] - code - tests/test_style.py
 - [[style_placeholders()]] - code - shortsmaker/style_lab.py
 - [[test_failed_invention_keeps_the_others()]] - code - tests/test_style.py
-- [[test_good_look_check_skips_the_extra_compile()]] - code - tests/test_style.py
 - [[test_invention_compile_failure_uses_fallback()]] - code - tests/test_style.py
 - [[test_invention_passes_into_slot()]] - code - tests/test_style.py
+- [[test_placeholders_match_the_slots()]] - code - tests/test_style.py
 - [[test_slots_restored_after_render()]] - code - tests/test_style.py
 - [[with_fakes()_1]] - code - tests/test_style.py
 
@@ -30,17 +30,15 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 6 edges to [[_COMMUNITY_invent_component]]
-- 6 edges to [[_COMMUNITY_test_style.py]]
-- 2 edges to [[_COMMUNITY_gather_pool]]
+- 9 edges to [[_COMMUNITY_shutil]]
+- 5 edges to [[_COMMUNITY_invent_component]]
 - 2 edges to [[_COMMUNITY_render_remotion]]
-- 2 edges to [[_COMMUNITY_config.py]]
+- 2 edges to [[_COMMUNITY_owner]]
 - 1 edge to [[_COMMUNITY_json]]
-- 1 edge to [[_COMMUNITY_approve_candidate]]
 
 ## Top bridge nodes
-- [[style_placeholders()]] - degree 10, connects to 4 communities
+- [[style_placeholders()]] - degree 10, connects to 3 communities
+- [[restore_style_slots()]] - degree 8, connects to 3 communities
 - [[with_fakes()_1]] - degree 8, connects to 3 communities
-- [[test_good_look_check_skips_the_extra_compile()]] - degree 4, connects to 3 communities
-- [[restore_style_slots()]] - degree 8, connects to 2 communities
 - [[test_invention_passes_into_slot()]] - degree 5, connects to 2 communities
+- [[test_invention_compile_failure_uses_fallback()]] - degree 3, connects to 2 communities

@@ -20,9 +20,10 @@ tags:
 - [[dot-person()]] - `calls` [EXTRACTED]
 - [[dot-ring()_1]] - `calls` [EXTRACTED]
 - [[dot-shadow()]] - `calls` [EXTRACTED]
-- [[clamp()]] - `calls` [EXTRACTED]
+- [[clamp()_1]] - `calls` [EXTRACTED]
 - [[ellPts()]] - `calls` [EXTRACTED]
 - [[ik()]] - `calls` [EXTRACTED]
 - [[k]] - `method` [EXTRACTED]
+- [[paintAll()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/coremjs

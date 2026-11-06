@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "json"
+community: "hashlib"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/json
+  - community/hashlib
 ---
 
 # hashlib
@@ -31,10 +31,10 @@ tags:
 - [[picture_pool.py]] - `imports` [EXTRACTED]
 - [[pixabay_films()]] - `calls` [EXTRACTED]
 - [[pool_folder()]] - `calls` [EXTRACTED]
-- [[save()_1]] - `calls` [EXTRACTED]
+- [[save()]] - `calls` [EXTRACTED]
 - [[shot_moments()]] - `calls` [EXTRACTED]
 - [[signature()]] - `calls` [EXTRACTED]
 - [[source_json()]] - `calls` [EXTRACTED]
 - [[voice_cache.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/json
+#graphify/concept #graphify/EXTRACTED #community/hashlib

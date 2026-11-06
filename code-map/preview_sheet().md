@@ -12,9 +12,9 @@ tags:
 # preview_sheet()
 
 ## Connections
-- [[Path_26]] - `references` [EXTRACTED]
+- [[Path_29]] - `references` [EXTRACTED]
 - [[Renders seconds start..end of a small Short (`props`; its pictures already in…]] - `rationale_for` [EXTRACTED]
-- [[ffmpeg()_1]] - `calls` [EXTRACTED]
+- [[ffmpeg()]] - `calls` [EXTRACTED]
 - [[invent_component()]] - `calls` [EXTRACTED]
 - [[json]] - `calls` [EXTRACTED]
 - [[motion.py]] - `contains` [EXTRACTED]
