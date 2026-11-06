@@ -475,6 +475,13 @@ Order (owner, 2026-11-05): 3D opener -> drawn opener -> motion graphic (2 fixes)
   - Live `crew_codex5/` (Codex, all three stories): 7 of 8 drafts rendered, subjects big and together, but 0/3
     passed: every miss is the sound-off test on content (Carrington's re-plan dropped the machine; "a pig nosing
     plants", not eating them; "an unhappy woman dancing", not one who can't stop). Best 4, 5, 5/10; 6-8.5 min each.
+  - The drawn opener on the same stories (3D off, Codex, `test_renders/opener3d/drawn_codex/`, harness
+    `drawn_live.py` in the session scratchpad): also 0/3, best 5, 5, 5/10, every miss the sound-off test; slower
+    (2-4 min a draft). So switching to the drawn opener doesn't help.
+  - **Open, owner to decide**: with the sound-off cap at KEEP - 1, no opener of either kind passed or was kept on
+    these stories, so a full run would fall back to the motion graphic on them. The judge asks the muted viewer
+    to get WHY it is strange ("the battery is unplugged"); the finished Short has the voice and captions from frame
+    0, so asking only for WHAT is happening would be a softer bar.
   - Not built: per-moment recipes (owner: the moments named were ones already posted).
 - Kit expansion (2026-11-05): 11 more hats (fedora, flatcap, boater, cowboy, ranger, kepi, officer, bobby, bicorne,
   nurse, hardhat), rooms/furniture (`k.door` with `open` + knob, `k.bed`, `k.rug`, `k.shelf`, `k.lamp`, `k.window`,
