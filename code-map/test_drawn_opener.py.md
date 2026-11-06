@@ -14,6 +14,7 @@ tags:
 ## Connections
 - [[Tests for the drawn opener (drawn_opener.py + drawn, 2026-10-30) the lint on…]] - `rationale_for` [EXTRACTED]
 - [[__init__.py]] - `imports_from` [EXTRACTED]
+- [[blind_ok()_1]] - `contains` [EXTRACTED]
 - [[drawn_opener.py]] - `imports_from` [EXTRACTED]
 - [[fake_ai()_2]] - `contains` [EXTRACTED]
 - [[llm.py]] - `imports_from` [EXTRACTED]
@@ -37,6 +38,7 @@ tags:
 - [[test_neither_passes_so_the_best_draft_at_keep_is_used()]] - `contains` [EXTRACTED]
 - [[test_no_verdict_is_not_a_pass()]] - `contains` [EXTRACTED]
 - [[test_reveal_scene_is_drawn_with_its_own_rules()]] - `contains` [EXTRACTED]
+- [[test_sound_off_test_fails_a_draft_the_art_director_liked()]] - `contains` [EXTRACTED]
 - [[test_use_opener_plays_the_drawn_opener()]] - `contains` [EXTRACTED]
 - [[traceback]] - `imports` [EXTRACTED]
 

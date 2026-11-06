@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_opener3d.py"
 type: "code"
-community: "opener3d.py"
+community: "test_opener3d.py"
 location: "L32"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/opener3dpy
+  - community/test_opener3dpy
 ---
 
 # room()
@@ -18,5 +18,6 @@ tags:
 - [[test_named_shots_change_size_and_scale_with_the_target()]] - `calls` [EXTRACTED]
 - [[test_nobody_hides_in_furniture_or_inside_another_person()]] - `calls` [EXTRACTED]
 - [[test_opener3d.py]] - `contains` [EXTRACTED]
+- [[test_signs_of_the_strange_thing()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/opener3dpy
+#graphify/code #graphify/EXTRACTED #community/test_opener3dpy

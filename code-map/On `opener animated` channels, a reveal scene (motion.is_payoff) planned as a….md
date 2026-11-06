@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/short_render.py"
 type: "rationale"
-community: "render"
+community: "test_drawn_opener.py"
 location: "L150"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/render
+  - community/test_drawn_openerpy
 ---
 
 # On `opener: animated` channels, a reveal scene (motion.is_payoff) planned as a…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[drawn_payoff()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/render
+#graphify/rationale #graphify/EXTRACTED #community/test_drawn_openerpy

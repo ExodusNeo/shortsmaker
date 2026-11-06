@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/rules.py"
 type: "rationale"
-community: "run_draft"
+community: "main"
 location: "L88"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/run_draft
+  - community/main
 ---
 
 # Draft channels/<name>.rules.md for a new channel: the AI copies the sections of…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[draft_rules()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/run_draft
+#graphify/rationale #graphify/EXTRACTED #community/main

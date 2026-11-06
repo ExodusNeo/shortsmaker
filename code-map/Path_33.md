@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "apply_review_fixes"
+community: "pathlib"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/apply_review_fixes
+  - community/pathlib
 ---
 
 # Path
 
 ## Connections
-- [[_review_state()]] - `references` [EXTRACTED]
+- [[apply()]] - `references` [EXTRACTED]
+- [[preview()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/apply_review_fixes
+#graphify/code #graphify/EXTRACTED #community/pathlib

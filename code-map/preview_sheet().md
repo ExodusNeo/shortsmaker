@@ -12,7 +12,7 @@ tags:
 # preview_sheet()
 
 ## Connections
-- [[Path_32]] - `references` [EXTRACTED]
+- [[Path_27]] - `references` [EXTRACTED]
 - [[Renders seconds start..end of a small Short (`props`; its pictures already in…]] - `rationale_for` [EXTRACTED]
 - [[ffmpeg()]] - `calls` [EXTRACTED]
 - [[invent_component()]] - `calls` [EXTRACTED]

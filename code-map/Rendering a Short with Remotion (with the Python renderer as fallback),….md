@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/remotion_render.py"
 type: "rationale"
-community: "short_render.py"
+community: "pathlib"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/short_renderpy
+  - community/pathlib
 ---
 
 # Rendering a Short with Remotion (with the Python renderer as fallback),…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[remotion_render.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/short_renderpy
+#graphify/rationale #graphify/EXTRACTED #community/pathlib

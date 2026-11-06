@@ -1,12 +1,12 @@
 ---
 source_file: "tests/render_style.py"
 type: "code"
-community: "short_render.py"
+community: "pathlib"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/short_renderpy
+  - community/pathlib
 ---
 
 # render_style.py
@@ -17,7 +17,7 @@ tags:
 - [[build()_1]] - `contains` [EXTRACTED]
 - [[config.py]] - `imports_from` [EXTRACTED]
 - [[json]] - `imports` [EXTRACTED]
-- [[main()_5]] - `contains` [EXTRACTED]
+- [[main()_7]] - `contains` [EXTRACTED]
 - [[pathlib]] - `imports_from` [EXTRACTED]
 - [[shutil]] - `imports` [EXTRACTED]
 - [[style_lab.py]] - `imports_from` [EXTRACTED]
@@ -25,4 +25,4 @@ tags:
 - [[sys]] - `imports` [EXTRACTED]
 - [[time]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/short_renderpy
+#graphify/code #graphify/EXTRACTED #community/pathlib

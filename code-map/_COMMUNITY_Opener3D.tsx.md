@@ -1,11 +1,11 @@
 ---
 type: community
-members: 53
+members: 58
 ---
 
 # Opener3D.tsx
 
-**Members:** 53 nodes
+**Members:** 58 nodes
 
 ## Members
 - [[BOOKS]] - code - remotion/src/Opener3D.tsx
@@ -16,6 +16,7 @@ members: 53
 - [[Card()]] - code - remotion/src/Opener3D.tsx
 - [[Cutout]] - code - remotion/src/Opener3D.tsx
 - [[Effect]] - code - remotion/src/Opener3D.tsx
+- [[Glow()]] - code - remotion/src/Opener3D.tsx
 - [[Library]] - code - remotion/src/Opener3D.tsx
 - [[MODELS]] - code - remotion/src/Opener3D.tsx
 - [[MOODS_1]] - code - remotion/src/Opener3D.tsx
@@ -37,6 +38,8 @@ members: 53
 - [[Shafts()]] - code - remotion/src/Opener3D.tsx
 - [[ShortProps]] - code - remotion/src/Short.tsx
 - [[Shot]] - code - remotion/src/Opener3D.tsx
+- [[Smoke()]] - code - remotion/src/Opener3D.tsx
+- [[Sparks()]] - code - remotion/src/Opener3D.tsx
 - [[StageProps]] - code - remotion/src/Opener3D.tsx
 - [[TOWN]] - code - remotion/src/Opener3D.tsx
 - [[XZ]] - code - remotion/src/Opener3D.tsx
@@ -58,8 +61,10 @@ members: 53
 - [[ref_three]] - concept
 - [[srcindex.ts]] - code - remotion/src/index.ts
 - [[targetOf()]] - code - remotion/src/Opener3D.tsx
+- [[useAurora()]] - code - remotion/src/Opener3D.tsx
 - [[useCommitted()]] - code - remotion/src/Opener3D.tsx
 - [[useModels()]] - code - remotion/src/Opener3D.tsx
+- [[useSoft()]] - code - remotion/src/Opener3D.tsx
 - [[useTextures()]] - code - remotion/src/Opener3D.tsx
 
 ## Live Query (requires Dataview plugin)
@@ -75,7 +80,7 @@ SORT file.name ASC
 - 1 edge to [[_COMMUNITY_styleindex.ts]]
 
 ## Top bridge nodes
-- [[Opener3D.tsx]] - degree 50, connects to 2 communities
+- [[Opener3D.tsx]] - degree 55, connects to 2 communities
 - [[Root.tsx]] - degree 11, connects to 2 communities
 - [[srcindex.ts]] - degree 3, connects to 1 community
 - [[ShortProps]] - degree 2, connects to 1 community

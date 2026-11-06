@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/gpu.py"
 type: "rationale"
-community: "plan_rules.py"
+community: "drawn_opener.py"
 location: "L107"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/plan_rulespy
+  - community/drawn_openerpy
 ---
 
 # VoiceStudio's backend answers, starting the app (and waiting up to 2 min) if it…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[voicestudio_up()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/plan_rulespy
+#graphify/rationale #graphify/EXTRACTED #community/drawn_openerpy

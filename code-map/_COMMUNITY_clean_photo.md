@@ -1,11 +1,11 @@
 ---
 type: community
-members: 16
+members: 19
 ---
 
 # clean_photo
 
-**Members:** 16 nodes
+**Members:** 19 nodes
 
 ## Members
 - [[A stereograph card two near-identical photos side by side. Compares the…]] - rationale - shortsmaker/photo_prep.py
@@ -14,11 +14,14 @@ members: 16
 - [[Cut plain strips (white mounts, black plate edges) off the sides, at most 15%…]] - rationale - shortsmaker/photo_prep.py
 - [[Fill the 916 frame with the picture (centre crop) for the slow zoompan. This…]] - rationale - shortsmaker/photo_prep.py
 - [[Image_2]] - code
-- [[Path_20]] - code
+- [[Let the AI circle (or point an arrow at) a detail in up to 2 chosen pictures.…]] - rationale - shortsmaker/plan_rules.py
+- [[Path_15]] - code
+- [[Path_16]] - code
 - [[border()]] - code - shortsmaker/photo_prep.py
 - [[clean_photo()]] - code - shortsmaker/photo_prep.py
 - [[detail()]] - code - shortsmaker/photo_prep.py
 - [[is_stereo()]] - code - shortsmaker/photo_prep.py
+- [[mark_details()]] - code - shortsmaker/plan_rules.py
 - [[plain()]] - code - shortsmaker/photo_prep.py
 - [[statistics]] - concept
 - [[to_vertical()]] - code - shortsmaker/photo_prep.py
@@ -33,16 +36,17 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 8 edges to [[_COMMUNITY_plan_rules.py]]
+- 10 edges to [[_COMMUNITY_pathlib]]
+- 3 edges to [[_COMMUNITY_render]]
 - 2 edges to [[_COMMUNITY_prepare_topic]]
-- 2 edges to [[_COMMUNITY_render]]
+- 1 edge to [[_COMMUNITY_paint_instead]]
+- 1 edge to [[_COMMUNITY_words_of]]
+- 1 edge to [[_COMMUNITY_ask_ai]]
 - 1 edge to [[_COMMUNITY_re]]
-- 1 edge to [[_COMMUNITY_short_render.py]]
-- 1 edge to [[_COMMUNITY_clean_full]]
 
 ## Top bridge nodes
-- [[clean_photo()]] - degree 9, connects to 4 communities
+- [[mark_details()]] - degree 8, connects to 4 communities
+- [[clean_photo()]] - degree 9, connects to 3 communities
 - [[to_vertical()]] - degree 6, connects to 3 communities
 - [[trim_borders()]] - degree 7, connects to 2 communities
 - [[vertical_image()]] - degree 5, connects to 2 communities
-- [[is_stereo()]] - degree 6, connects to 1 community

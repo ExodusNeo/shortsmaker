@@ -1,17 +1,21 @@
 ---
-source_file: "drawn/parts/thing/potato_pile.mjs"
+source_file: "remotion/src/style/looks/Riso.tsx"
 type: "code"
-community: "potato_pile.mjs"
-location: "L1"
+community: "Halftone.tsx"
+location: "L13"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/potato_pilemjs
+  - community/Halftonetsx
 ---
 
 # draw()
 
 ## Connections
-- [[potato_pile.mjs]] - `contains` [EXTRACTED]
+- [[Riso()]] - `calls` [EXTRACTED]
+- [[Riso.tsx]] - `contains` [EXTRACTED]
+- [[luminance()]] - `calls` [EXTRACTED]
+- [[noise()_1]] - `calls` [EXTRACTED]
+- [[rgb()_1]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/potato_pilemjs
+#graphify/code #graphify/EXTRACTED #community/Halftonetsx

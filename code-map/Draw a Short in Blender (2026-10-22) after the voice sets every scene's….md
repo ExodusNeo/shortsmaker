@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/blender_render.py"
 type: "rationale"
-community: "test_blender_run.py"
+community: "pathlib"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/test_blender_runpy
+  - community/pathlib
 ---
 
 # Draw a Short in Blender (2026-10-22): after the voice sets every scene's…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[blender_render.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/test_blender_runpy
+#graphify/rationale #graphify/EXTRACTED #community/pathlib

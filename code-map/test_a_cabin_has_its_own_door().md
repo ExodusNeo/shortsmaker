@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_opener3d.py"
 type: "code"
-community: "opener3d.py"
-location: "L165"
+community: "test_opener3d.py"
+location: "L179"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/opener3dpy
+  - community/test_opener3dpy
 ---
 
 # test_a_cabin_has_its_own_door()
@@ -16,4 +16,4 @@ tags:
 - [[example()]] - `calls` [EXTRACTED]
 - [[test_opener3d.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/opener3dpy
+#graphify/code #graphify/EXTRACTED #community/test_opener3dpy

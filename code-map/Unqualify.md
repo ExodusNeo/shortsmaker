@@ -12,7 +12,7 @@ tags:
 # Unqualify
 
 ## Connections
-- [[dot-__init__()_8]] - `method` [EXTRACTED]
+- [[dot-__init__()_7]] - `method` [EXTRACTED]
 - [[dot-visit_Attribute()]] - `method` [EXTRACTED]
 - [[dot-visit_Global()]] - `method` [EXTRACTED]
 - [[`module.name` - `name` for package modules, and no `global` statements…]] - `rationale_for` [EXTRACTED]

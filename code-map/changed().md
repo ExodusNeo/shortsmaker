@@ -12,7 +12,7 @@ tags:
 # changed()
 
 ## Connections
-- [[Image_3]] - `references` [EXTRACTED]
+- [[Image_1]] - `references` [EXTRACTED]
 - [[Share of pixels that differ clearly between two frames.]] - `rationale_for` [EXTRACTED]
 - [[test_blender_scene.py]] - `contains` [EXTRACTED]
 - [[test_each_failure_changes_the_focus()]] - `calls` [EXTRACTED]

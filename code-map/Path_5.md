@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "run_draft"
+community: "footage.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/run_draft
+  - community/footagepy
 ---
 
 # Path
 
 ## Connections
-- [[draft_rules()]] - `references` [EXTRACTED]
+- [[load()_1]] - `references` [EXTRACTED]
+- [[save()_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/run_draft
+#graphify/code #graphify/EXTRACTED #community/footagepy

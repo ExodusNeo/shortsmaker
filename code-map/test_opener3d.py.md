@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_opener3d.py"
 type: "code"
-community: "opener3d.py"
+community: "test_opener3d.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/opener3dpy
+  - community/test_opener3dpy
 ---
 
 # test_opener3d.py
@@ -40,7 +40,8 @@ tags:
 - [[test_nobody_hides_in_furniture_or_inside_another_person()]] - `contains` [EXTRACTED]
 - [[test_numbers_are_clamped()]] - `contains` [EXTRACTED]
 - [[test_set_dressing_keeps_clear_of_what_was_placed()]] - `contains` [EXTRACTED]
+- [[test_signs_of_the_strange_thing()]] - `contains` [EXTRACTED]
 - [[test_someone_inside_a_house_steps_out_and_a_door_needs_a_real_id()]] - `contains` [EXTRACTED]
 - [[test_the_preview_sees_every_shot()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/opener3dpy
+#graphify/code #graphify/EXTRACTED #community/test_opener3dpy

@@ -1,20 +1,17 @@
 ---
-source_file: "remotion/src/style/looks/Engraving.tsx"
+source_file: "drawn/parts/thing/telegraph_register.mjs"
 type: "code"
-community: "Halftone.tsx"
-location: "L36"
+community: "telegraph_register.mjs"
+location: "L2"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Halftonetsx
+  - community/telegraph_registermjs
 ---
 
 # draw()
 
 ## Connections
-- [[Engraving()]] - `calls` [EXTRACTED]
-- [[Engraving.tsx]] - `contains` [EXTRACTED]
-- [[hatch()_1]] - `calls` [EXTRACTED]
-- [[luminance()_1]] - `calls` [EXTRACTED]
+- [[telegraph_register.mjs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Halftonetsx
+#graphify/code #graphify/EXTRACTED #community/telegraph_registermjs

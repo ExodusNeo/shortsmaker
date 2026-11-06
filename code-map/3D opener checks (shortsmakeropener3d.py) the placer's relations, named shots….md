@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_opener3d.py"
 type: "rationale"
-community: "opener3d.py"
+community: "test_opener3d.py"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/opener3dpy
+  - community/test_opener3dpy
 ---
 
 # 3D opener checks (shortsmaker/opener3d.py): the placer's relations, named shots…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[test_opener3d.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/opener3dpy
+#graphify/rationale #graphify/EXTRACTED #community/test_opener3dpy

@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "plan_rules.py"
+community: "pathlib"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/plan_rulespy
+  - community/pathlib
 ---
 
 # subprocess
@@ -29,7 +29,7 @@ tags:
 - [[image_sources.py]] - `imports` [EXTRACTED]
 - [[llm.py]] - `imports` [EXTRACTED]
 - [[local_job()]] - `calls` [EXTRACTED]
-- [[main()_4]] - `calls` [EXTRACTED]
+- [[main()_6]] - `calls` [EXTRACTED]
 - [[make_part()]] - `calls` [EXTRACTED]
 - [[master_gain()]] - `calls` [EXTRACTED]
 - [[media_library.py]] - `imports` [EXTRACTED]
@@ -47,7 +47,7 @@ tags:
 - [[qwen_voice.py]] - `imports` [EXTRACTED]
 - [[remotion_render.py]] - `imports` [EXTRACTED]
 - [[render()_5]] - `calls` [EXTRACTED]
-- [[render()]] - `calls` [EXTRACTED]
+- [[render()_2]] - `calls` [EXTRACTED]
 - [[render_full.py]] - `imports` [EXTRACTED]
 - [[render_style.py]] - `imports` [EXTRACTED]
 - [[review.py]] - `imports` [EXTRACTED]
@@ -70,4 +70,4 @@ tags:
 - [[video_encoder()]] - `calls` [EXTRACTED]
 - [[voicestudio_up()]] - `calls` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/plan_rulespy
+#graphify/concept #graphify/EXTRACTED #community/pathlib

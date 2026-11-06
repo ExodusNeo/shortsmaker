@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/drawn_opener.py"
 type: "rationale"
-community: "opener_crew.py"
+community: "drawn_opener.py"
 location: "L134"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/opener_crewpy
+  - community/drawn_openerpy
 ---
 
 # How long since `began` (time.monotonic()), as 4m12s.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[minutes()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/opener_crewpy
+#graphify/rationale #graphify/EXTRACTED #community/drawn_openerpy

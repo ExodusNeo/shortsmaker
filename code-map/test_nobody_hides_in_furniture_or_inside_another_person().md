@@ -2,7 +2,7 @@
 source_file: "tests/test_opener3d.py"
 type: "code"
 community: "opener3d.py"
-location: "L91"
+location: "L105"
 tags:
   - graphify/code
   - graphify/EXTRACTED

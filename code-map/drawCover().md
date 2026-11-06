@@ -14,9 +14,9 @@ tags:
 ## Connections
 - [[Miniature.tsx]] - `imports` [EXTRACTED]
 - [[Silent.tsx]] - `imports` [EXTRACTED]
-- [[draw()_5]] - `calls` [EXTRACTED]
 - [[draw()_7]] - `calls` [EXTRACTED]
+- [[draw()_9]] - `calls` [EXTRACTED]
 - [[kit.ts]] - `contains` [EXTRACTED]
-- [[luminance()_1]] - `calls` [EXTRACTED]
+- [[luminance()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Halftonetsx

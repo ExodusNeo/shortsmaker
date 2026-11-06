@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/motion.py"
 type: "code"
-community: "short_render.py"
+community: "pathlib"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/short_renderpy
+  - community/pathlib
 ---
 
 # motion.py
@@ -51,4 +51,4 @@ tags:
 - [[test_style.py]] - `imports_from` [EXTRACTED]
 - [[tsc_check()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/short_renderpy
+#graphify/code #graphify/EXTRACTED #community/pathlib

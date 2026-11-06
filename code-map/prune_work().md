@@ -1,22 +1,22 @@
 ---
 source_file: "shortsmaker/short_render.py"
 type: "code"
-community: "short_render.py"
+community: "main"
 location: "L62"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/short_renderpy
+  - community/main
 ---
 
 # prune_work()
 
 ## Connections
 - [[fix_short()]] - `calls` [EXTRACTED]
-- [[main()_1]] - `calls` [EXTRACTED]
+- [[main()_3]] - `calls` [EXTRACTED]
 - [[read()]] - `calls` [EXTRACTED]
 - [[short_render.py]] - `contains` [EXTRACTED]
 - [[shutil]] - `calls` [EXTRACTED]
 - [[time]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/short_renderpy
+#graphify/code #graphify/EXTRACTED #community/main

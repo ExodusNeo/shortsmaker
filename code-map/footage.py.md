@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/footage.py"
 type: "code"
-community: "plan_rules.py"
+community: "footage.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/plan_rulespy
+  - community/footagepy
 ---
 
 # footage.py
@@ -49,4 +49,4 @@ tags:
 - [[time]] - `imports` [EXTRACTED]
 - [[urllib_parse]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/plan_rulespy
+#graphify/code #graphify/EXTRACTED #community/footagepy

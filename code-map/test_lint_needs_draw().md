@@ -2,7 +2,7 @@
 source_file: "tests/test_opener3d.py"
 type: "code"
 community: "lint_cutout"
-location: "L123"
+location: "L137"
 tags:
   - graphify/code
   - graphify/EXTRACTED

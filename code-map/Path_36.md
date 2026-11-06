@@ -1,20 +1,21 @@
 ---
 source_file: ""
 type: "code"
-community: "make_paper"
+community: "test_drawn_opener.py"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/make_paper
+  - community/test_drawn_openerpy
 ---
 
 # Path
 
 ## Connections
-- [[ink_silhouette()]] - `references` [EXTRACTED]
-- [[make_paper()]] - `references` [EXTRACTED]
-- [[paint_instead()]] - `references` [EXTRACTED]
-- [[redraw_custom()]] - `references` [EXTRACTED]
-- [[render_remotion()]] - `references` [EXTRACTED]
+- [[blind_read()]] - `references` [EXTRACTED]
+- [[look_dir()]] - `references` [EXTRACTED]
+- [[make_opener()]] - `references` [EXTRACTED]
+- [[node_run()]] - `references` [EXTRACTED]
+- [[review()]] - `references` [EXTRACTED]
+- [[write()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/make_paper
+#graphify/code #graphify/EXTRACTED #community/test_drawn_openerpy

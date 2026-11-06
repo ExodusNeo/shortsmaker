@@ -1,19 +1,19 @@
 ---
 source_file: "shortsmaker/gpu.py"
 type: "code"
-community: "plan_rules.py"
+community: "json"
 location: "L304"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/plan_rulespy
+  - community/json
 ---
 
 # moss_images()
 
 ## Connections
 - [[Paint on this PC with MOSS-Image in ComfyUI (owner's pick 2026-10-20 over SDXL-…]] - `rationale_for` [EXTRACTED]
-- [[Path_19]] - `references` [EXTRACTED]
+- [[Path_14]] - `references` [EXTRACTED]
 - [[comfy_call()]] - `calls` [EXTRACTED]
 - [[gpu.py]] - `contains` [EXTRACTED]
 - [[hashlib]] - `calls` [EXTRACTED]
@@ -22,8 +22,8 @@ tags:
 - [[moss_graph()]] - `calls` [EXTRACTED]
 - [[paint_instead()]] - `calls` [EXTRACTED]
 - [[paint_opener_start()]] - `calls` [EXTRACTED]
-- [[render()]] - `calls` [EXTRACTED]
+- [[render()_2]] - `calls` [EXTRACTED]
 - [[subprocess]] - `calls` [EXTRACTED]
 - [[time]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/plan_rulespy
+#graphify/code #graphify/EXTRACTED #community/json

@@ -2,7 +2,7 @@
 source_file: "tests/test_drawn_opener.py"
 type: "code"
 community: "test_drawn_opener.py"
-location: "L143"
+location: "L185"
 tags:
   - graphify/code
   - graphify/EXTRACTED

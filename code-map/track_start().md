@@ -12,12 +12,12 @@ tags:
 # track_start()
 
 ## Connections
-- [[Path_34]] - `references` [EXTRACTED]
+- [[Path_30]] - `references` [EXTRACTED]
 - [[audio_library.py]] - `contains` [EXTRACTED]
 - [[audio_metadata()]] - `calls` [EXTRACTED]
 - [[duration()]] - `calls` [EXTRACTED]
 - [[math]] - `calls` [EXTRACTED]
 - [[media_command()]] - `calls` [EXTRACTED]
-- [[render()]] - `calls` [EXTRACTED]
+- [[render()_2]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/audio_librarypy

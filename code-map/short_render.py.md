@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/short_render.py"
 type: "code"
-community: "short_render.py"
+community: "pathlib"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/short_renderpy
+  - community/pathlib
 ---
 
 # short_render.py
@@ -49,7 +49,7 @@ tags:
 - [[prune_work()]] - `contains` [EXTRACTED]
 - [[re]] - `imports` [EXTRACTED]
 - [[remotion_render.py]] - `imports_from` [EXTRACTED]
-- [[render()]] - `contains` [EXTRACTED]
+- [[render()_2]] - `contains` [EXTRACTED]
 - [[review.py]] - `imports_from` [EXTRACTED]
 - [[save_state()]] - `contains` [EXTRACTED]
 - [[scene_repair.py]] - `imports_from` [EXTRACTED]
@@ -73,4 +73,4 @@ tags:
 - [[use_opener()]] - `contains` [EXTRACTED]
 - [[voice_cache.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/short_renderpy
+#graphify/code #graphify/EXTRACTED #community/pathlib

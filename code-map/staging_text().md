@@ -2,7 +2,7 @@
 source_file: "shortsmaker/opener_crew.py"
 type: "code"
 community: "opener_crew.py"
-location: "L216"
+location: "L239"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -16,5 +16,6 @@ tags:
 - [[opener_crew.py]] - `contains` [EXTRACTED]
 - [[plan()]] - `calls` [EXTRACTED]
 - [[staging_line()]] - `calls` [EXTRACTED]
+- [[test_staging_is_checked_against_the_kit()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/opener_crewpy

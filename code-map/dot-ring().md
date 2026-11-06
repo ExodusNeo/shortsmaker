@@ -1,12 +1,12 @@
 ---
 source_file: "drawn/lib/pen.mjs"
 type: "code"
-community: "core.mjs"
+community: "Pen"
 location: "L67"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/coremjs
+  - community/Pen
 ---
 
 # .ring()
@@ -15,4 +15,4 @@ tags:
 - [[dot-stroke()]] - `calls` [EXTRACTED]
 - [[Pen]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/coremjs
+#graphify/code #graphify/EXTRACTED #community/Pen

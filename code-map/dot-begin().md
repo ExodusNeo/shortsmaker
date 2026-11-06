@@ -1,12 +1,12 @@
 ---
 source_file: "drawn/lib/pen.mjs"
 type: "code"
-community: "core.mjs"
+community: "Pen"
 location: "L18"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/coremjs
+  - community/Pen
 ---
 
 # .begin()
@@ -17,4 +17,4 @@ tags:
 - [[idHash()]] - `calls` [EXTRACTED]
 - [[makeKit()]] - `calls` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/coremjs
+#graphify/code #graphify/EXTRACTED #community/Pen

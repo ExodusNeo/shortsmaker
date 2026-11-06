@@ -1,12 +1,12 @@
 ---
 source_file: "drawn/kit.mjs"
 type: "code"
-community: "textures.mjs"
+community: ".at"
 location: "L62"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/texturesmjs
+  - community/at
 ---
 
 # .ss()
@@ -16,4 +16,4 @@ tags:
 - [[dot-ss()]] - `calls` [EXTRACTED]
 - [[k]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/texturesmjs
+#graphify/code #graphify/EXTRACTED #community/at

@@ -8,8 +8,8 @@ members: 3
 **Members:** 3 nodes
 
 ## Members
-- [[draw()_8]] - code - drawn/parts/thing/potato_pile.mjs
-- [[grip_2]] - code - drawn/parts/thing/potato_pile.mjs
+- [[draw()_10]] - code - drawn/parts/thing/potato_pile.mjs
+- [[grip_4]] - code - drawn/parts/thing/potato_pile.mjs
 - [[potato_pile.mjs]] - code - drawn/parts/thing/potato_pile.mjs
 
 ## Live Query (requires Dataview plugin)

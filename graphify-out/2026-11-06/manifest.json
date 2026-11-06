@@ -474,9 +474,9 @@
     "semantic_hash": ""
   },
   "shortsmaker/short_render.py": {
-    "mtime": 1793888634.598285,
-    "seen": 1793892789.892984,
-    "ast_hash": "f4885dc246f0613ba75ac5356fa4c6c8",
+    "mtime": 1793959144.3156202,
+    "seen": 1793963643.2346249,
+    "ast_hash": "94f02f6da4bcfe40c02f089b58f7f674",
     "semantic_hash": ""
   },
   "shortsmaker/style_lab.py": {
@@ -648,15 +648,15 @@
     "semantic_hash": ""
   },
   "drawn/examples/kit_parts.mjs": {
-    "mtime": 1793908648.6044,
-    "seen": 1793914623.1441844,
-    "ast_hash": "8e50520dc2e989e407e920c319a183f9",
+    "mtime": 1793959144.3104575,
+    "seen": 1793963643.2344906,
+    "ast_hash": "9f4041ba36ad2581b41d4bc5840d9f1c",
     "semantic_hash": ""
   },
   "drawn/kit.mjs": {
-    "mtime": 1793955221.6705418,
-    "seen": 1793956879.518022,
-    "ast_hash": "5d3b3021ee7045ee3a57ae467509536d",
+    "mtime": 1793959144.3114853,
+    "seen": 1793963643.2344937,
+    "ast_hash": "85a0a00aa1fcc7f5cd3d9accd6c326ce",
     "semantic_hash": ""
   },
   "drawn/lib/core.mjs": {
@@ -678,9 +678,9 @@
     "semantic_hash": ""
   },
   "drawn/lib/rigs/bean.mjs": {
-    "mtime": 1793364802.9366384,
-    "seen": 1793380331.004566,
-    "ast_hash": "be11847f04603a4cd595e5e8d8802221",
+    "mtime": 1793959144.312505,
+    "seen": 1793963643.2345,
+    "ast_hash": "e4e6bf3d03f22cfc0716ba42bbb33c77",
     "semantic_hash": ""
   },
   "drawn/lib/textures.mjs": {
@@ -696,15 +696,15 @@
     "semantic_hash": ""
   },
   "shortsmaker/drawn_opener.py": {
-    "mtime": 1793941062.5974984,
-    "seen": 1793956879.518108,
-    "ast_hash": "ad7e62a95d21c6ebe6a78d8951b46282",
+    "mtime": 1793959144.3135731,
+    "seen": 1793963643.234589,
+    "ast_hash": "aae755533dbd08124d9c0152c49691b0",
     "semantic_hash": ""
   },
   "tests/test_drawn_opener.py": {
-    "mtime": 1793941826.332533,
-    "seen": 1793956879.5181649,
-    "ast_hash": "a0088c956fe269f7442a63f7b4b17fd0",
+    "mtime": 1793959144.3161316,
+    "seen": 1793963643.2346475,
+    "ast_hash": "593c36ed10e9f1eaf75a0c79dffb4596",
     "semantic_hash": ""
   },
   "tests/test_codex.py": {
@@ -834,27 +834,27 @@
     "semantic_hash": ""
   },
   "drawn/cutouts.mjs": {
-    "mtime": 1793895127.9035957,
-    "seen": 1793914623.144181,
-    "ast_hash": "c051b2d7a04b19743e3d77808eec9e9c",
+    "mtime": 1793959144.3099442,
+    "seen": 1793963643.2344885,
+    "ast_hash": "fdb8248a4f15d2c3779e1d001f89005c",
     "semantic_hash": ""
   },
   "remotion/src/Opener3D.tsx": {
-    "mtime": 1793952734.8730888,
-    "seen": 1793956879.5180454,
-    "ast_hash": "84162507b4376261a0dc0ccba6ed04a0",
+    "mtime": 1793963006.227964,
+    "seen": 1793963643.2345212,
+    "ast_hash": "98d1778cac7e7e4806ee0bd662a7faad",
     "semantic_hash": ""
   },
   "shortsmaker/opener3d.py": {
-    "mtime": 1793955322.5015788,
-    "seen": 1793956879.518125,
-    "ast_hash": "a89f4380de34270ede70d788e27dbad4",
+    "mtime": 1793963275.7368312,
+    "seen": 1793963643.2346075,
+    "ast_hash": "c56874ae07157852da2991fb9a018e13",
     "semantic_hash": ""
   },
   "tests/test_opener3d.py": {
-    "mtime": 1793954014.0302908,
-    "seen": 1793956879.5181746,
-    "ast_hash": "5a302e9902a575d2bd5e5a0183d46c01",
+    "mtime": 1793963023.3994043,
+    "seen": 1793963643.2346575,
+    "ast_hash": "55c647d31448c8738c145a55977ee4ad",
     "semantic_hash": ""
   },
   "drawn/examples/umbrellas.mjs": {
@@ -882,15 +882,27 @@
     "semantic_hash": ""
   },
   "shortsmaker/opener_crew.py": {
-    "mtime": 1793951871.7944367,
-    "seen": 1793956879.518126,
-    "ast_hash": "7aef4b265e059515d9f961bcf17eb316",
+    "mtime": 1793959144.3151085,
+    "seen": 1793963643.2346084,
+    "ast_hash": "b46c0383fe809d1885b51b25b0335ef0",
     "semantic_hash": ""
   },
   "tests/test_opener_crew.py": {
-    "mtime": 1793949546.2127414,
-    "seen": 1793956879.518176,
-    "ast_hash": "803b015aab70ff825901eee02f052459",
+    "mtime": 1793959144.317155,
+    "seen": 1793963643.2346587,
+    "ast_hash": "2c8d99f01ba92a88c34008e303881d1b",
+    "semantic_hash": ""
+  },
+  "drawn/parts/hat/slouch_hat.mjs": {
+    "mtime": 1793960511.887937,
+    "seen": 1793963643.2345026,
+    "ast_hash": "efc7c52e14c3296f56b619f3b1c2d6f1",
+    "semantic_hash": ""
+  },
+  "drawn/parts/thing/potato_pile.mjs": {
+    "mtime": 1793960304.846932,
+    "seen": 1793963643.2345057,
+    "ast_hash": "8b07e16879268a43ba5eb43ab1b7d467",
     "semantic_hash": ""
   }
 }

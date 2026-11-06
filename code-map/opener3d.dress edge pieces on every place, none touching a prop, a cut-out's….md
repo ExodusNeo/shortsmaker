@@ -2,7 +2,7 @@
 source_file: "tests/test_opener3d.py"
 type: "rationale"
 community: "opener3d.py"
-location: "L257"
+location: "L271"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED

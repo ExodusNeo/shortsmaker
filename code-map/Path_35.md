@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "save_candidate"
+community: "choose_images"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/save_candidate
+  - community/choose_images
 ---
 
 # Path
 
 ## Connections
-- [[candidate_in()]] - `references` [EXTRACTED]
+- [[choose_images()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/save_candidate
+#graphify/code #graphify/EXTRACTED #community/choose_images

@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "vault_page"
+community: "first_sentence"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/vault_page
+  - community/first_sentence
 ---
 
 # Path
@@ -14,4 +14,4 @@ tags:
 - [[log_short()]] - `references` [EXTRACTED]
 - [[vault_page()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/vault_page
+#graphify/code #graphify/EXTRACTED #community/first_sentence

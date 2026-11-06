@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "frame_maker"
+community: "ClipReader"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/frame_maker
+  - community/ClipReader
 ---
 
 # Image
@@ -18,4 +18,4 @@ tags:
 - [[person_card()]] - `references` [EXTRACTED]
 - [[shot()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/frame_maker
+#graphify/code #graphify/EXTRACTED #community/ClipReader

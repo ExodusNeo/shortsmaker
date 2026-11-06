@@ -2,7 +2,7 @@
 source_file: "shortsmaker/opener_crew.py"
 type: "code"
 community: "lint_cutout"
-location: "L438"
+location: "L470"
 tags:
   - graphify/code
   - graphify/EXTRACTED

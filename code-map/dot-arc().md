@@ -1,12 +1,12 @@
 ---
 source_file: "drawn/kit.mjs"
 type: "code"
-community: "k"
-location: "L686"
+community: "core.mjs"
+location: "L703"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/k
+  - community/coremjs
 ---
 
 # .arc()
@@ -18,4 +18,4 @@ tags:
 - [[k]] - `method` [EXTRACTED]
 - [[lerp()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/k
+#graphify/code #graphify/EXTRACTED #community/coremjs

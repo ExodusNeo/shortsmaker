@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "short_render.py"
+community: "shutil"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/short_renderpy
+  - community/shutil
 ---
 
 # shutil
@@ -30,8 +30,8 @@ tags:
 - [[llm.py]] - `imports` [EXTRACTED]
 - [[logbook.py]] - `imports` [EXTRACTED]
 - [[look_dir()]] - `calls` [EXTRACTED]
-- [[main()_3]] - `calls` [EXTRACTED]
-- [[main()_4]] - `calls` [EXTRACTED]
+- [[main()]] - `calls` [EXTRACTED]
+- [[main()_6]] - `calls` [EXTRACTED]
 - [[make_part()]] - `calls` [EXTRACTED]
 - [[media_library.py]] - `imports` [EXTRACTED]
 - [[motion.py]] - `imports` [EXTRACTED]
@@ -47,7 +47,7 @@ tags:
 - [[reject_candidate()]] - `calls` [EXTRACTED]
 - [[remotion_render.py]] - `imports` [EXTRACTED]
 - [[render()_5]] - `calls` [EXTRACTED]
-- [[render()]] - `calls` [EXTRACTED]
+- [[render()_2]] - `calls` [EXTRACTED]
 - [[render_full.py]] - `imports` [EXTRACTED]
 - [[render_remotion()]] - `calls` [EXTRACTED]
 - [[render_style.py]] - `imports` [EXTRACTED]
@@ -70,4 +70,4 @@ tags:
 - [[write_scripts()]] - `calls` [EXTRACTED]
 - [[writing.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/short_renderpy
+#graphify/concept #graphify/EXTRACTED #community/shutil

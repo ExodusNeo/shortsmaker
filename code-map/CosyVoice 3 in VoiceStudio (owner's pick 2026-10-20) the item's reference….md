@@ -1,12 +1,12 @@
 ---
 source_file: "local_ai/qwen_voice.py"
 type: "rationale"
-community: "qwen_voice.py"
+community: "drawn_opener.py"
 location: "L126"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/qwen_voicepy
+  - community/drawn_openerpy
 ---
 
 # CosyVoice 3 in VoiceStudio (owner's pick 2026-10-20): the item's reference…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[studio_speak()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/qwen_voicepy
+#graphify/rationale #graphify/EXTRACTED #community/drawn_openerpy

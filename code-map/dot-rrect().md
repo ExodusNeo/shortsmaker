@@ -1,12 +1,12 @@
 ---
 source_file: "drawn/kit.mjs"
 type: "code"
-community: "k"
+community: ".at"
 location: "L88"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/k
+  - community/at
 ---
 
 # .rrect()
@@ -16,4 +16,4 @@ tags:
 - [[dot-rrect()]] - `calls` [EXTRACTED]
 - [[k]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/k
+#graphify/code #graphify/EXTRACTED #community/at

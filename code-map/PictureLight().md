@@ -2,7 +2,7 @@
 source_file: "remotion/src/Opener3D.tsx"
 type: "code"
 community: "Opener3D.tsx"
-location: "L436"
+location: "L438"
 tags:
   - graphify/code
   - graphify/EXTRACTED

@@ -2,7 +2,7 @@
 source_file: "shortsmaker/drawn_opener.py"
 type: "code"
 community: "test_drawn_opener.py"
-location: "L294"
+location: "L335"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,7 +12,7 @@ tags:
 # make_opener()
 
 ## Connections
-- [[Path_6]] - `references` [EXTRACTED]
+- [[Path_36]] - `references` [EXTRACTED]
 - [[Scene 1's opener clip (workdrawnopener.mp4, scene 1 + the crossfade long), or…]] - `rationale_for` [EXTRACTED]
 - [[available()]] - `calls` [EXTRACTED]
 - [[available()_1]] - `calls` [EXTRACTED]

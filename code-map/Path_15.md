@@ -1,18 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "render"
+community: "clean_photo"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/render
+  - community/clean_photo
 ---
 
 # Path
 
 ## Connections
-- [[duration()]] - `references` [EXTRACTED]
-- [[ffmpeg()]] - `references` [EXTRACTED]
-- [[write_json()]] - `references` [EXTRACTED]
+- [[to_vertical()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/render
+#graphify/code #graphify/EXTRACTED #community/clean_photo

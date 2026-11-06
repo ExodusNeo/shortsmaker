@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/checkpoints.py"
 type: "code"
-community: "checkpoints.py"
+community: "main"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/checkpointspy
+  - community/main
 ---
 
 # checkpoints.py
@@ -38,4 +38,4 @@ tags:
 - [[update()]] - `contains` [EXTRACTED]
 - [[writing.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/checkpointspy
+#graphify/code #graphify/EXTRACTED #community/main

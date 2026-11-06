@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[Bridge]] - `references` [EXTRACTED]
-- [[main()_2]] - `calls` [EXTRACTED]
+- [[main()_4]] - `calls` [EXTRACTED]
 - [[templates.py]] - `contains` [EXTRACTED]
 - [[truss_bridge()]] - `indirect_call` [INFERRED]
 

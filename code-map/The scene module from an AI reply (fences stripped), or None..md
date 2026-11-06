@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/drawn_opener.py"
 type: "rationale"
-community: "review"
+community: "drawn_opener.py"
 location: "L107"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/review
+  - community/drawn_openerpy
 ---
 
 # The scene module from an AI reply (fences stripped), or None.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[clean_code()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/review
+#graphify/rationale #graphify/EXTRACTED #community/drawn_openerpy

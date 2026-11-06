@@ -2,7 +2,7 @@
 source_file: "shortsmaker/opener3d.py"
 type: "code"
 community: "opener3d.py"
-location: "L278"
+location: "L280"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -39,6 +39,7 @@ tags:
 - [[test_nobody_hides_in_furniture_or_inside_another_person()]] - `calls` [EXTRACTED]
 - [[test_numbers_are_clamped()]] - `calls` [EXTRACTED]
 - [[test_set_dressing_keeps_clear_of_what_was_placed()]] - `calls` [EXTRACTED]
+- [[test_signs_of_the_strange_thing()]] - `calls` [EXTRACTED]
 - [[test_someone_inside_a_house_steps_out_and_a_door_needs_a_real_id()]] - `calls` [EXTRACTED]
 - [[word_time()]] - `calls` [EXTRACTED]
 - [[xz()]] - `calls` [EXTRACTED]

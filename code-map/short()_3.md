@@ -19,6 +19,7 @@ tags:
 - [[test_neither_passes_so_the_best_draft_at_keep_is_used()]] - `calls` [EXTRACTED]
 - [[test_no_verdict_is_not_a_pass()]] - `calls` [EXTRACTED]
 - [[test_reveal_scene_is_drawn_with_its_own_rules()]] - `calls` [EXTRACTED]
+- [[test_sound_off_test_fails_a_draft_the_art_director_liked()]] - `calls` [EXTRACTED]
 - [[test_use_opener_plays_the_drawn_opener()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/test_drawn_openerpy

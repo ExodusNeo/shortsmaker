@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "short_render.py"
+community: "drawn_opener.py"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/short_renderpy
+  - community/drawn_openerpy
 ---
 
 # time
@@ -22,9 +22,9 @@ tags:
 - [[h3_run.py]] - `imports` [EXTRACTED]
 - [[image_sources.py]] - `imports` [EXTRACTED]
 - [[llm.py]] - `imports` [EXTRACTED]
-- [[main()_3]] - `calls` [EXTRACTED]
 - [[main()]] - `calls` [EXTRACTED]
-- [[main()_7]] - `calls` [EXTRACTED]
+- [[main()_2]] - `calls` [EXTRACTED]
+- [[main()_1]] - `calls` [EXTRACTED]
 - [[make_opener()]] - `calls` [EXTRACTED]
 - [[make_part()]] - `calls` [EXTRACTED]
 - [[media_library.py]] - `imports` [EXTRACTED]
@@ -50,4 +50,4 @@ tags:
 - [[trend_research()]] - `calls` [EXTRACTED]
 - [[voicestudio_up()]] - `calls` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/short_renderpy
+#graphify/concept #graphify/EXTRACTED #community/drawn_openerpy

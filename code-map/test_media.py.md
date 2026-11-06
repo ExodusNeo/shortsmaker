@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_media.py"
 type: "code"
-community: "plan_rules.py"
+community: "pathlib"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/plan_rulespy
+  - community/pathlib
 ---
 
 # test_media.py
@@ -40,4 +40,4 @@ tags:
 - [[unittest_mock]] - `imports_from` [EXTRACTED]
 - [[urllib_error]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/plan_rulespy
+#graphify/code #graphify/EXTRACTED #community/pathlib

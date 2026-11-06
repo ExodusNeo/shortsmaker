@@ -1,12 +1,12 @@
 ---
 source_file: "drawn/kit.mjs"
 type: "code"
-community: "k"
+community: "textures.mjs"
 location: "L97"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/k
+  - community/texturesmjs
 ---
 
 # .sky()
@@ -16,4 +16,4 @@ tags:
 - [[k]] - `method` [EXTRACTED]
 - [[star4()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/k
+#graphify/code #graphify/EXTRACTED #community/texturesmjs

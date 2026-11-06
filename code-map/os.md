@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "pathlib"
+community: "shutil"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/pathlib
+  - community/shutil
 ---
 
 # os
@@ -29,4 +29,4 @@ tags:
 - [[test_reliability.py]] - `imports` [EXTRACTED]
 - [[veo_handoff()]] - `calls` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/pathlib
+#graphify/concept #graphify/EXTRACTED #community/shutil

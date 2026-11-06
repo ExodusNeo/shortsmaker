@@ -28,14 +28,14 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 7 edges to [[_COMMUNITY_core.mjs]]
-- 5 edges to [[_COMMUNITY_k]]
+- 8 edges to [[_COMMUNITY_k]]
 - 5 edges to [[_COMMUNITY_textures.mjs]]
+- 4 edges to [[_COMMUNITY_core.mjs]]
 - 4 edges to [[_COMMUNITY_kit.mjs]]
 
 ## Top bridge nodes
 - [[bean.mjs]] - degree 13, connects to 3 communities
-- [[person()_1]] - degree 8, connects to 3 communities
+- [[rrect()]] - degree 8, connects to 3 communities
 - [[rad()]] - degree 10, connects to 2 communities
-- [[rrect()]] - degree 8, connects to 2 communities
-- [[hat()]] - degree 5, connects to 2 communities
+- [[person()_1]] - degree 8, connects to 2 communities
+- [[hat()]] - degree 5, connects to 1 community

@@ -12,7 +12,7 @@ tags:
 # BrandImages
 
 ## Connections
-- [[dot-__init__()_7]] - `method` [EXTRACTED]
+- [[dot-__init__()_6]] - `method` [EXTRACTED]
 - [[dot-handle_starttag()]] - `method` [EXTRACTED]
 - [[HTMLParser]] - `inherits` [EXTRACTED]
 - [[brand_films()]] - `calls` [EXTRACTED]

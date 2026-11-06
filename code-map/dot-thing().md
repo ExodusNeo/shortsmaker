@@ -1,12 +1,12 @@
 ---
 source_file: "drawn/kit.mjs"
 type: "code"
-community: "k"
-location: "L641"
+community: ".at"
+location: "L642"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/k
+  - community/at
 ---
 
 # .thing()
@@ -15,4 +15,4 @@ tags:
 - [[dot-at()_1]] - `calls` [EXTRACTED]
 - [[k]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/k
+#graphify/code #graphify/EXTRACTED #community/at

@@ -26,7 +26,7 @@ members: 39
 - [[exposure()]] - code - drawn/lib/film.mjs
 - [[film.mjs]] - code - drawn/lib/film.mjs
 - [[flat]] - code - drawn/cutouts.mjs
-- [[frame()_2]] - code - drawn/run.mjs
+- [[frame()_1]] - code - drawn/run.mjs
 - [[frameAt()]] - code - drawn/run.mjs
 - [[fx]] - code - drawn/cutouts.mjs
 - [[grade()]] - code - drawn/run.mjs
@@ -45,7 +45,7 @@ members: 39
 - [[ref_node_fs]] - concept
 - [[ref_node_path]] - concept
 - [[ref_node_url]] - concept
-- [[run()_7]] - code - drawn/lib/film.mjs
+- [[run()_5]] - code - drawn/lib/film.mjs
 - [[run.mjs]] - code - drawn/run.mjs
 
 ## Live Query (requires Dataview plugin)
@@ -56,14 +56,16 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 25 edges to [[_COMMUNITY_core.mjs]]
+- 14 edges to [[_COMMUNITY_core.mjs]]
 - 8 edges to [[_COMMUNITY_textures.mjs]]
+- 7 edges to [[_COMMUNITY_k]]
 - 4 edges to [[_COMMUNITY_bean.mjs]]
-- 1 edge to [[_COMMUNITY_k]]
+- 3 edges to [[_COMMUNITY_Pen]]
+- 2 edges to [[_COMMUNITY_dot-at]]
 
 ## Top bridge nodes
-- [[kit.mjs]] - degree 33, connects to 4 communities
-- [[run.mjs]] - degree 27, connects to 2 communities
-- [[cutouts.mjs]] - degree 15, connects to 1 community
-- [[partsheet.mjs]] - degree 12, connects to 1 community
+- [[kit.mjs]] - degree 33, connects to 6 communities
+- [[run.mjs]] - degree 27, connects to 3 communities
+- [[cutouts.mjs]] - degree 15, connects to 2 communities
+- [[partsheet.mjs]] - degree 12, connects to 2 communities
 - [[film.mjs]] - degree 10, connects to 1 community

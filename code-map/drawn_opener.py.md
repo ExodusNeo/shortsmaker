@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/drawn_opener.py"
 type: "code"
-community: "short_render.py"
+community: "drawn_opener.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/short_renderpy
+  - community/drawn_openerpy
 ---
 
 # drawn_opener.py
@@ -15,6 +15,7 @@ tags:
 - [[Drawn openers (owner, 2026-10-30) scene 1 of an `opener animated` Short as a…]] - `rationale_for` [EXTRACTED]
 - [[__init__.py]] - `imports_from` [EXTRACTED]
 - [[available()]] - `contains` [EXTRACTED]
+- [[blind_read()]] - `contains` [EXTRACTED]
 - [[clean_code()]] - `contains` [EXTRACTED]
 - [[config.py]] - `imports_from` [EXTRACTED]
 - [[fingerprint()]] - `contains` [EXTRACTED]
@@ -50,4 +51,4 @@ tags:
 - [[time]] - `imports` [EXTRACTED]
 - [[write()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/short_renderpy
+#graphify/code #graphify/EXTRACTED #community/drawn_openerpy

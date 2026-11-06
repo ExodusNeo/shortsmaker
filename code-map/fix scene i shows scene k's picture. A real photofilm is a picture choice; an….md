@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/cli.py"
 type: "rationale"
-community: "fix_short"
+community: "main"
 location: "L182"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/fix_short
+  - community/main
 ---
 
 # fix: scene i shows scene k's picture. A real photo/film is a picture choice; an…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[use_picture_from()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/fix_short
+#graphify/rationale #graphify/EXTRACTED #community/main

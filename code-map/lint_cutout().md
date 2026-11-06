@@ -2,7 +2,7 @@
 source_file: "shortsmaker/opener3d.py"
 type: "code"
 community: "lint_cutout"
-location: "L265"
+location: "L267"
 tags:
   - graphify/code
   - graphify/EXTRACTED

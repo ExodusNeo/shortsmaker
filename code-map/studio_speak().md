@@ -1,12 +1,12 @@
 ---
 source_file: "local_ai/qwen_voice.py"
 type: "code"
-community: "qwen_voice.py"
+community: "drawn_opener.py"
 location: "L125"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/qwen_voicepy
+  - community/drawn_openerpy
 ---
 
 # studio_speak()
@@ -17,4 +17,4 @@ tags:
 - [[spoken_sentence()]] - `calls` [EXTRACTED]
 - [[subprocess]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/qwen_voicepy
+#graphify/code #graphify/EXTRACTED #community/drawn_openerpy

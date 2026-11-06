@@ -9,8 +9,8 @@ members: 24
 
 ## Members
 - [[dot-constructor()]] - code - drawn/lib/pen.mjs
-- [[dot-glint()]] - code - drawn/kit.mjs
-- [[dot-ss()]] - code - drawn/kit.mjs
+- [[dot-sky()]] - code - drawn/kit.mjs
+- [[dot-sparks()]] - code - drawn/kit.mjs
 - [[ellipse()]] - code - drawn/lib/core.mjs
 - [[fibre()]] - code - drawn/lib/core.mjs
 - [[fibrePaper()]] - code - drawn/lib/textures.mjs
@@ -41,14 +41,16 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 22 edges to [[_COMMUNITY_core.mjs]]
+- 15 edges to [[_COMMUNITY_core.mjs]]
 - 8 edges to [[_COMMUNITY_kit.mjs]]
+- 5 edges to [[_COMMUNITY_k]]
 - 5 edges to [[_COMMUNITY_bean.mjs]]
-- 3 edges to [[_COMMUNITY_k]]
+- 4 edges to [[_COMMUNITY_Pen]]
+- 1 edge to [[_COMMUNITY_dot-at]]
 
 ## Top bridge nodes
-- [[textures.mjs]] - degree 27, connects to 3 communities
-- [[star4()]] - degree 6, connects to 3 communities
-- [[hash()]] - degree 7, connects to 2 communities
+- [[textures.mjs]] - degree 27, connects to 4 communities
+- [[hash()]] - degree 7, connects to 4 communities
+- [[star4()]] - degree 7, connects to 3 communities
+- [[grainCanvas()]] - degree 10, connects to 2 communities
 - [[sun()]] - degree 7, connects to 2 communities
-- [[dot-glint()]] - degree 4, connects to 2 communities

@@ -12,6 +12,7 @@ tags:
 # .window()
 
 ## Connections
+- [[dot-aurora()]] - `calls` [EXTRACTED]
 - [[dot-paint()]] - `calls` [EXTRACTED]
 - [[dot-rect()]] - `calls` [EXTRACTED]
 - [[k]] - `method` [EXTRACTED]

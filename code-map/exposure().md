@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[film.mjs]] - `contains` [EXTRACTED]
-- [[frame()_2]] - `calls` [EXTRACTED]
+- [[frame()_1]] - `calls` [EXTRACTED]
 - [[run.mjs]] - `imports` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/kitmjs

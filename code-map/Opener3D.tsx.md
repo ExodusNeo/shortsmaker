@@ -20,6 +20,7 @@ tags:
 - [[Card()]] - `contains` [EXTRACTED]
 - [[Cutout]] - `contains` [EXTRACTED]
 - [[Effect]] - `contains` [EXTRACTED]
+- [[Glow()]] - `contains` [EXTRACTED]
 - [[Library]] - `contains` [EXTRACTED]
 - [[MODELS]] - `contains` [EXTRACTED]
 - [[MOODS_1]] - `contains` [EXTRACTED]
@@ -38,6 +39,8 @@ tags:
 - [[Root.tsx]] - `imports_from` [EXTRACTED]
 - [[Shafts()]] - `contains` [EXTRACTED]
 - [[Shot]] - `contains` [EXTRACTED]
+- [[Smoke()]] - `contains` [EXTRACTED]
+- [[Sparks()]] - `contains` [EXTRACTED]
 - [[StageProps]] - `contains` [EXTRACTED]
 - [[TOWN]] - `contains` [EXTRACTED]
 - [[XZ]] - `contains` [EXTRACTED]
@@ -59,8 +62,10 @@ tags:
 - [[ref_remotion_three]] - `imports_from` [EXTRACTED]
 - [[ref_three]] - `imports_from` [EXTRACTED]
 - [[targetOf()]] - `contains` [EXTRACTED]
+- [[useAurora()]] - `contains` [EXTRACTED]
 - [[useCommitted()]] - `contains` [EXTRACTED]
 - [[useModels()]] - `contains` [EXTRACTED]
+- [[useSoft()]] - `contains` [EXTRACTED]
 - [[useTextures()]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Opener3Dtsx

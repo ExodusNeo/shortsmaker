@@ -1,21 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "opener_crew.py"
+community: "make"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/opener_crewpy
+  - community/make
 ---
 
 # Path
 
 ## Connections
-- [[make_part()]] - `references` [EXTRACTED]
-- [[make_parts()]] - `references` [EXTRACTED]
-- [[paint()]] - `references` [EXTRACTED]
-- [[place()]] - `references` [EXTRACTED]
-- [[plan()]] - `references` [EXTRACTED]
-- [[stage()]] - `references` [EXTRACTED]
+- [[short_folder()]] - `references` [EXTRACTED]
+- [[videos()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/opener_crewpy
+#graphify/code #graphify/EXTRACTED #community/make

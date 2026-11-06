@@ -1,18 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "retention.py"
+community: "ends_sentence"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/retentionpy
+  - community/ends_sentence
 ---
 
 # Path
 
 ## Connections
-- [[analyze()]] - `references` [EXTRACTED]
-- [[edit_metrics()]] - `references` [EXTRACTED]
-- [[load_metrics()]] - `references` [EXTRACTED]
+- [[srt()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/retentionpy
+#graphify/code #graphify/EXTRACTED #community/ends_sentence

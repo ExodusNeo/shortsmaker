@@ -1,18 +1,18 @@
 ---
 source_file: "shortsmaker/review.py"
 type: "code"
-community: "fix_short"
+community: "apply_review_fixes"
 location: "L533"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/fix_short
+  - community/apply_review_fixes
 ---
 
 # paint_new()
 
 ## Connections
-- [[Path_13]] - `references` [EXTRACTED]
+- [[Path_28]] - `references` [EXTRACTED]
 - [[apply_review_fixes()]] - `calls` [EXTRACTED]
 - [[fix  auto-fix scene i drops its picture and gets a freshly painted one…]] - `rationale_for` [EXTRACTED]
 - [[fix_short()]] - `calls` [EXTRACTED]
@@ -21,4 +21,4 @@ tags:
 - [[test_paint_new_clears_full()]] - `calls` [EXTRACTED]
 - [[test_reveal_scene_is_drawn_with_its_own_rules()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/fix_short
+#graphify/code #graphify/EXTRACTED #community/apply_review_fixes

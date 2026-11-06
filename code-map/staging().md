@@ -17,6 +17,7 @@ tags:
 - [[test_a_painter_with_unusable_code_gets_the_plain_kit_cutout()]] - `calls` [EXTRACTED]
 - [[test_opener_crew.py]] - `contains` [EXTRACTED]
 - [[test_staging_is_checked_against_the_kit()]] - `calls` [EXTRACTED]
+- [[test_the_stagers_sign_effects_are_put_in_by_code()]] - `calls` [EXTRACTED]
 - [[test_the_whole_crew_passes_and_only_the_faulted_painter_repaints()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/test_opener_crewpy

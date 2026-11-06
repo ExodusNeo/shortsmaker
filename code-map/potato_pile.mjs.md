@@ -12,7 +12,7 @@ tags:
 # potato_pile.mjs
 
 ## Connections
-- [[draw()_8]] - `contains` [EXTRACTED]
-- [[grip_2]] - `contains` [EXTRACTED]
+- [[draw()_10]] - `contains` [EXTRACTED]
+- [[grip_4]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/potato_pilemjs

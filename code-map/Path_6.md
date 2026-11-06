@@ -1,20 +1,20 @@
 ---
 source_file: ""
 type: "code"
-community: "review"
+community: "make"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/review
+  - community/make
 ---
 
 # Path
 
 ## Connections
-- [[look_dir()]] - `references` [EXTRACTED]
-- [[make_opener()]] - `references` [EXTRACTED]
-- [[node_run()]] - `references` [EXTRACTED]
-- [[review()]] - `references` [EXTRACTED]
-- [[write()]] - `references` [EXTRACTED]
+- [[caption_layer()]] - `references` [EXTRACTED]
+- [[make()_1]] - `references` [EXTRACTED]
+- [[master_gain()]] - `references` [EXTRACTED]
+- [[project_xml()]] - `references` [EXTRACTED]
+- [[remove()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/review
+#graphify/code #graphify/EXTRACTED #community/make

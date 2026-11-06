@@ -1,18 +1,20 @@
 ---
 source_file: ""
 type: "code"
-community: "run_agy"
+community: "captions"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/run_agy
+  - community/captions
 ---
 
 # Path
 
 ## Connections
-- [[ask_ai()]] - `references` [EXTRACTED]
-- [[run_agy()]] - `references` [EXTRACTED]
-- [[run_codex()]] - `references` [EXTRACTED]
+- [[captions()_1]] - `references` [EXTRACTED]
+- [[music_gain()]] - `references` [EXTRACTED]
+- [[speak()]] - `references` [EXTRACTED]
+- [[story_sound()]] - `references` [EXTRACTED]
+- [[tts()_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/run_agy
+#graphify/code #graphify/EXTRACTED #community/captions

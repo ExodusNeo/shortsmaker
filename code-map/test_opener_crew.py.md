@@ -14,6 +14,7 @@ tags:
 ## Connections
 - [[The opener crew (shortsmakeropener_crew.py) the stager's plan checked against…]] - `rationale_for` [EXTRACTED]
 - [[__init__.py]] - `imports_from` [EXTRACTED]
+- [[blind_ok()]] - `contains` [EXTRACTED]
 - [[drawn_opener.py]] - `imports_from` [EXTRACTED]
 - [[fake()_1]] - `contains` [EXTRACTED]
 - [[llm.py]] - `imports_from` [EXTRACTED]
@@ -31,6 +32,7 @@ tags:
 - [[test_parallel_calls_are_capped()]] - `contains` [EXTRACTED]
 - [[test_problems_go_to_the_member_at_fault()]] - `contains` [EXTRACTED]
 - [[test_staging_is_checked_against_the_kit()]] - `contains` [EXTRACTED]
+- [[test_the_stagers_sign_effects_are_put_in_by_code()]] - `contains` [EXTRACTED]
 - [[test_the_whole_crew_passes_and_only_the_faulted_painter_repaints()]] - `contains` [EXTRACTED]
 - [[threading]] - `imports` [EXTRACTED]
 - [[time]] - `imports` [EXTRACTED]

@@ -1,12 +1,12 @@
 ---
 source_file: "tests/render_opener_preview.py"
 type: "code"
-community: "short_render.py"
+community: "pathlib"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/short_renderpy
+  - community/pathlib
 ---
 
 # render_opener_preview.py
@@ -15,10 +15,10 @@ tags:
 - [[Render the opener composition study with the real hookcaptions; restore the…]] - `rationale_for` [EXTRACTED]
 - [[__init__.py]] - `imports_from` [EXTRACTED]
 - [[config.py]] - `imports_from` [EXTRACTED]
-- [[main()_6]] - `contains` [EXTRACTED]
+- [[main()_5]] - `contains` [EXTRACTED]
 - [[motion.py]] - `imports_from` [EXTRACTED]
 - [[pathlib]] - `imports_from` [EXTRACTED]
 - [[remotion_render.py]] - `imports_from` [EXTRACTED]
 - [[sys]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/short_renderpy
+#graphify/code #graphify/EXTRACTED #community/pathlib

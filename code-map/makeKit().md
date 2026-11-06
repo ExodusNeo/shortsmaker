@@ -1,12 +1,12 @@
 ---
 source_file: "drawn/kit.mjs"
 type: "code"
-community: "core.mjs"
+community: "k"
 location: "L57"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/coremjs
+  - community/k
 ---
 
 # makeKit()
@@ -33,7 +33,7 @@ tags:
 - [[cutouts.mjs]] - `imports` [EXTRACTED]
 - [[eOut()]] - `calls` [EXTRACTED]
 - [[ellPts()]] - `calls` [EXTRACTED]
-- [[frame()_2]] - `calls` [EXTRACTED]
+- [[frame()_1]] - `calls` [EXTRACTED]
 - [[hash()]] - `calls` [EXTRACTED]
 - [[hat()]] - `calls` [EXTRACTED]
 - [[k]] - `contains` [EXTRACTED]
@@ -50,4 +50,4 @@ tags:
 - [[ss()]] - `calls` [EXTRACTED]
 - [[star4()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/coremjs
+#graphify/code #graphify/EXTRACTED #community/k

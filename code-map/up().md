@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/gpu.py"
 type: "code"
-community: "plan_rules.py"
+community: "drawn_opener.py"
 location: "L108"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/plan_rulespy
+  - community/drawn_openerpy
 ---
 
 # up()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[voicestudio_up()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/plan_rulespy
+#graphify/code #graphify/EXTRACTED #community/drawn_openerpy

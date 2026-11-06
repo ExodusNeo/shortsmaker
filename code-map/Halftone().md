@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[Halftone.tsx]] - `contains` [EXTRACTED]
-- [[draw()_4]] - `calls` [EXTRACTED]
+- [[draw()_6]] - `calls` [EXTRACTED]
 - [[styleindex.ts]] - `indirect_call` [INFERRED]
 - [[useOnceCanvas()]] - `calls` [EXTRACTED]
 

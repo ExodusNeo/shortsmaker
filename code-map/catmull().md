@@ -1,12 +1,12 @@
 ---
 source_file: "drawn/lib/core.mjs"
 type: "code"
-community: "core.mjs"
+community: "Pen"
 location: "L34"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/coremjs
+  - community/Pen
 ---
 
 # catmull()
@@ -20,4 +20,4 @@ tags:
 - [[pathOf()]] - `calls` [EXTRACTED]
 - [[pen.mjs]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/coremjs
+#graphify/code #graphify/EXTRACTED #community/Pen

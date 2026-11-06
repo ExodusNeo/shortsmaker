@@ -1,12 +1,12 @@
 ---
 source_file: "tests/render_opener_preview.py"
 type: "rationale"
-community: "short_render.py"
+community: "pathlib"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/short_renderpy
+  - community/pathlib
 ---
 
 # Render the opener composition study with the real hook/captions; restore the…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[render_opener_preview.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/short_renderpy
+#graphify/rationale #graphify/EXTRACTED #community/pathlib

@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_opener_graphic.py"
 type: "code"
-community: "test_weak_opener_graphic_fixes_then_handoff"
+community: "use"
 location: "L76"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_weak_opener_graphic_fixes_then_handoff
+  - community/use
 ---
 
 # test_use_opener_ai_clip_replaces_graphic()
@@ -17,4 +17,4 @@ tags:
 - [[test_opener_graphic.py]] - `contains` [EXTRACTED]
 - [[use()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_weak_opener_graphic_fixes_then_handoff
+#graphify/code #graphify/EXTRACTED #community/use

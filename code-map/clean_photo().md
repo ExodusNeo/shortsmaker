@@ -18,7 +18,7 @@ tags:
 - [[is_stereo()]] - `calls` [EXTRACTED]
 - [[mark_details()]] - `calls` [EXTRACTED]
 - [[photo_prep.py]] - `contains` [EXTRACTED]
-- [[render()]] - `calls` [EXTRACTED]
+- [[render()_2]] - `calls` [EXTRACTED]
 - [[trim_borders()]] - `calls` [EXTRACTED]
 - [[visual_unique()]] - `calls` [EXTRACTED]
 

@@ -1,12 +1,12 @@
 ---
 source_file: "drawn/kit.mjs"
 type: "code"
-community: "k"
-location: "L678"
+community: "core.mjs"
+location: "L695"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/k
+  - community/coremjs
 ---
 
 # .snowfall()
@@ -15,4 +15,4 @@ tags:
 - [[dot-arc()]] - `calls` [EXTRACTED]
 - [[k]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/k
+#graphify/code #graphify/EXTRACTED #community/coremjs

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/drawn_opener.py"
 type: "rationale"
-community: "review"
+community: "drawn_opener.py"
 location: "L140"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/review
+  - community/drawn_openerpy
 ---
 
 # A folder holding only this image, for the AI to open: Codex attaches every…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[look_dir()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/review
+#graphify/rationale #graphify/EXTRACTED #community/drawn_openerpy

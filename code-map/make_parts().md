@@ -2,7 +2,7 @@
 source_file: "shortsmaker/opener_crew.py"
 type: "code"
 community: "opener_crew.py"
-location: "L303"
+location: "L328"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,7 +12,7 @@ tags:
 # make_parts()
 
 ## Connections
-- [[Path_7]] - `references` [EXTRACTED]
+- [[Path_4]] - `references` [EXTRACTED]
 - [[The kit scout and part makers draws each new part the staging needs (in…]] - `rationale_for` [EXTRACTED]
 - [[kit_hats()]] - `calls` [EXTRACTED]
 - [[made()]] - `calls` [EXTRACTED]

@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/seo.py"
 type: "rationale"
-community: "apply_metadata"
+community: "test_full_scenes.py"
 location: "L35"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/apply_metadata
+  - community/test_full_scenespy
 ---
 
 # Whole, unique tags within the upload budget; never slice through a tag.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[clean_tags()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/apply_metadata
+#graphify/rationale #graphify/EXTRACTED #community/test_full_scenespy

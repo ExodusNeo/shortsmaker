@@ -29,13 +29,13 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 3 edges to [[_COMMUNITY_plan_rules.py]]
+- 4 edges to [[_COMMUNITY_pathlib]]
 - 3 edges to [[_COMMUNITY_ask_ai]]
 - 2 edges to [[_COMMUNITY_full_cues]]
 - 2 edges to [[_COMMUNITY_render]]
-- 2 edges to [[_COMMUNITY_short_render.py]]
 - 2 edges to [[_COMMUNITY_test_full_scenes.py]]
-- 1 edge to [[_COMMUNITY_test_first_second.py]]
+- 1 edge to [[_COMMUNITY_finish_render]]
+- 1 edge to [[_COMMUNITY_person_card]]
 
 ## Top bridge nodes
 - [[scene_cues()]] - degree 12, connects to 4 communities

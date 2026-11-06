@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "audio_mix.py"
+community: "test_full_scenes.py"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/audio_mixpy
+  - community/test_full_scenespy
 ---
 
 # wave
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[audio_mix.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/audio_mixpy
+#graphify/concept #graphify/EXTRACTED #community/test_full_scenespy

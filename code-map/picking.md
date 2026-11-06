@@ -12,8 +12,8 @@ tags:
 # picking
 
 ## Connections
-- [[dot-__enter__()_2]] - `method` [EXTRACTED]
-- [[dot-__exit__()_3]] - `method` [EXTRACTED]
+- [[dot-__enter__()_1]] - `method` [EXTRACTED]
+- [[dot-__exit__()_1]] - `method` [EXTRACTED]
 - [[dot-__init__()_9]] - `method` [EXTRACTED]
 - [[choose_images() with network stubbed; gather_pool returns `extra` (and records…]] - `rationale_for` [EXTRACTED]
 - [[test_choose_extra_gather_is_bounded()]] - `calls` [EXTRACTED]

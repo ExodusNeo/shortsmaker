@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "pathlib"
+community: "test_full_scenes.py"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/pathlib
+  - community/test_full_scenespy
 ---
 
 # datetime
@@ -18,4 +18,4 @@ tags:
 - [[scene_repair.py]] - `imports_from` [EXTRACTED]
 - [[test_quality.py]] - `imports_from` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/pathlib
+#graphify/concept #graphify/EXTRACTED #community/test_full_scenespy

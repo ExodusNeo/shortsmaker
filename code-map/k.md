@@ -14,6 +14,7 @@ tags:
 ## Connections
 - [[dot-arc()]] - `method` [EXTRACTED]
 - [[dot-at()_1]] - `method` [EXTRACTED]
+- [[dot-aurora()]] - `method` [EXTRACTED]
 - [[dot-bank()]] - `method` [EXTRACTED]
 - [[dot-banknote()]] - `method` [EXTRACTED]
 - [[dot-barrel()]] - `method` [EXTRACTED]
@@ -97,6 +98,7 @@ tags:
 - [[dot-sky()]] - `method` [EXTRACTED]
 - [[dot-smoke()]] - `method` [EXTRACTED]
 - [[dot-snowfall()]] - `method` [EXTRACTED]
+- [[dot-sparks()]] - `method` [EXTRACTED]
 - [[dot-speed()]] - `method` [EXTRACTED]
 - [[dot-splash()]] - `method` [EXTRACTED]
 - [[dot-ss()]] - `method` [EXTRACTED]

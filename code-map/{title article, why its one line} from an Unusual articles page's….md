@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/topic_ideas.py"
 type: "rationale"
-community: "topic_ideas.py"
+community: "test_full_scenes.py"
 location: "L23"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/topic_ideaspy
+  - community/test_full_scenespy
 ---
 
 # [{"title": article, "why": its one line}] from an Unusual articles page's…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[parse_ideas()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/topic_ideaspy
+#graphify/rationale #graphify/EXTRACTED #community/test_full_scenespy

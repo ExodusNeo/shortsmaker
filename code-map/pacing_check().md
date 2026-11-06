@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/review.py"
 type: "code"
-community: "test_first_second.py"
+community: "finish_render"
 location: "L31"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_first_secondpy
+  - community/finish_render
 ---
 
 # pacing_check()
@@ -18,4 +18,4 @@ tags:
 - [[finish_render()]] - `calls` [EXTRACTED]
 - [[review.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_first_secondpy
+#graphify/code #graphify/EXTRACTED #community/finish_render

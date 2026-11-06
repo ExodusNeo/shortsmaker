@@ -1,17 +1,17 @@
 ---
-source_file: "drawn/parts/thing/potato_pile.mjs"
+source_file: "drawn/parts/thing/telegraph_register.mjs"
 type: "code"
-community: "potato_pile.mjs"
+community: "telegraph_register.mjs"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/potato_pilemjs
+  - community/telegraph_registermjs
 ---
 
 # grip
 
 ## Connections
-- [[potato_pile.mjs]] - `contains` [EXTRACTED]
+- [[telegraph_register.mjs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/potato_pilemjs
+#graphify/code #graphify/EXTRACTED #community/telegraph_registermjs

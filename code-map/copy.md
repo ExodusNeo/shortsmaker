@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "render"
+community: "pathlib"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/render
+  - community/pathlib
 ---
 
 # copy
@@ -14,4 +14,4 @@ tags:
 - [[preview()]] - `calls` [EXTRACTED]
 - [[scene_repair.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/render
+#graphify/concept #graphify/EXTRACTED #community/pathlib

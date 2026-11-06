@@ -1,12 +1,12 @@
 ---
 source_file: "drawn/kit.mjs"
 type: "code"
-community: "k"
-location: "L680"
+community: "core.mjs"
+location: "L697"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/k
+  - community/coremjs
 ---
 
 # .flood()
@@ -16,4 +16,4 @@ tags:
 - [[k]] - `method` [EXTRACTED]
 - [[lerp()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/k
+#graphify/code #graphify/EXTRACTED #community/coremjs

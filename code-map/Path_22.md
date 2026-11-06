@@ -1,16 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: "test_blender_render.py"
+community: "run_agy"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/test_blender_renderpy
+  - community/run_agy
 ---
 
 # Path
 
 ## Connections
-- [[fake_blender()]] - `references` [EXTRACTED]
+- [[ask_ai()]] - `references` [EXTRACTED]
+- [[run_agy()]] - `references` [EXTRACTED]
+- [[run_codex()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/test_blender_renderpy
+#graphify/code #graphify/EXTRACTED #community/run_agy

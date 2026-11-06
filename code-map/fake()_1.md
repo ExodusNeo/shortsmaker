@@ -2,7 +2,7 @@
 source_file: "tests/test_opener_crew.py"
 type: "code"
 community: "test_opener_crew.py"
-location: "L36"
+location: "L46"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,6 +12,7 @@ tags:
 # fake()
 
 ## Connections
+- [[blind_ok()]] - `calls` [EXTRACTED]
 - [[test_a_failed_part_falls_back_to_its_substitute()]] - `calls` [EXTRACTED]
 - [[test_a_made_part_is_kept_and_reused_with_no_ai()]] - `calls` [EXTRACTED]
 - [[test_a_painter_with_unusable_code_gets_the_plain_kit_cutout()]] - `calls` [EXTRACTED]

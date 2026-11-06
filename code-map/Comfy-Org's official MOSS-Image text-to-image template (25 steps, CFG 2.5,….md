@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/gpu.py"
 type: "rationale"
-community: "plan_rules.py"
+community: "json"
 location: "L283"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/plan_rulespy
+  - community/json
 ---
 
 # Comfy-Org's official MOSS-Image text-to-image template (25 steps, CFG 2.5,…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[moss_graph()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/plan_rulespy
+#graphify/rationale #graphify/EXTRACTED #community/json

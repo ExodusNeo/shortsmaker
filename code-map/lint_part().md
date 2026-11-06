@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/opener_crew.py"
 type: "code"
-community: "opener_crew.py"
-location: "L243"
+community: "drawn_opener.py"
+location: "L268"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/opener_crewpy
+  - community/drawn_openerpy
 ---
 
 # lint_part()
@@ -16,4 +16,4 @@ tags:
 - [[opener_crew.py]] - `contains` [EXTRACTED]
 - [[re]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/opener_crewpy
+#graphify/code #graphify/EXTRACTED #community/drawn_openerpy

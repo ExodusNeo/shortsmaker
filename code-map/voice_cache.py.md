@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/voice_cache.py"
 type: "code"
-community: "short_render.py"
+community: "footage.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/short_renderpy
+  - community/footagepy
 ---
 
 # voice_cache.py
@@ -27,4 +27,4 @@ tags:
 - [[signature()]] - `contains` [EXTRACTED]
 - [[test_reliability.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/short_renderpy
+#graphify/code #graphify/EXTRACTED #community/footagepy

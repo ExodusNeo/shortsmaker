@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/short_render.py"
 type: "rationale"
-community: "test_blender_run.py"
+community: "render"
 location: "L78"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/test_blender_runpy
+  - community/render
 ---
 
 # A drawn Short's picture choices: none (Blender draws every scene).
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[drawn_choices()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/test_blender_runpy
+#graphify/rationale #graphify/EXTRACTED #community/render

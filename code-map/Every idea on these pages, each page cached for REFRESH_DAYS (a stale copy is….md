@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/topic_ideas.py"
 type: "rationale"
-community: "topic_ideas.py"
+community: "test_full_scenes.py"
 location: "L58"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/topic_ideaspy
+  - community/test_full_scenespy
 ---
 
 # Every idea on these pages, each page cached for REFRESH_DAYS (a stale copy is…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[fetch_ideas()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/topic_ideaspy
+#graphify/rationale #graphify/EXTRACTED #community/test_full_scenespy

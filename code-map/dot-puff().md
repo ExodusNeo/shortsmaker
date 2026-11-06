@@ -2,7 +2,7 @@
 source_file: "drawn/kit.mjs"
 type: "code"
 community: "core.mjs"
-location: "L665"
+location: "L682"
 tags:
   - graphify/code
   - graphify/EXTRACTED

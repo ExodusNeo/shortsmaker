@@ -14,6 +14,7 @@ tags:
 ## Connections
 - [[dot-glint()]] - `calls` [EXTRACTED]
 - [[dot-sky()]] - `calls` [EXTRACTED]
+- [[dot-sparks()]] - `calls` [EXTRACTED]
 - [[kit.mjs]] - `imports` [EXTRACTED]
 - [[makeKit()]] - `calls` [EXTRACTED]
 - [[nightSky()]] - `calls` [EXTRACTED]

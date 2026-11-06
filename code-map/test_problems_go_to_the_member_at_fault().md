@@ -2,7 +2,7 @@
 source_file: "tests/test_opener_crew.py"
 type: "code"
 community: "lint_cutout"
-location: "L94"
+location: "L129"
 tags:
   - graphify/code
   - graphify/EXTRACTED

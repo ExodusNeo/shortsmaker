@@ -12,6 +12,7 @@ tags:
 # .rect()
 
 ## Connections
+- [[dot-aurora()]] - `calls` [EXTRACTED]
 - [[dot-bank()]] - `calls` [EXTRACTED]
 - [[dot-banknote()]] - `calls` [EXTRACTED]
 - [[dot-cart()]] - `calls` [EXTRACTED]

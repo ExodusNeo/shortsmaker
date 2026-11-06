@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/remotion_render.py"
 type: "code"
-community: "short_render.py"
+community: "pathlib"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/short_renderpy
+  - community/pathlib
 ---
 
 # remotion_render.py
@@ -46,4 +46,4 @@ tags:
 - [[test_style.py]] - `imports_from` [EXTRACTED]
 - [[wants_remotion()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/short_renderpy
+#graphify/code #graphify/EXTRACTED #community/pathlib

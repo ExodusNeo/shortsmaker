@@ -1,20 +1,21 @@
 ---
-source_file: "tests/render_opener_preview.py"
+source_file: "tests/render_full.py"
 type: "code"
-community: "code_custom_scenes"
-location: "L10"
+community: "shutil"
+location: "L28"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/code_custom_scenes
+  - community/shutil
 ---
 
 # main()
 
 ## Connections
-- [[make_paper()]] - `calls` [EXTRACTED]
-- [[preview_custom()]] - `calls` [EXTRACTED]
-- [[render_opener_preview.py]] - `contains` [EXTRACTED]
-- [[tsc_check()]] - `calls` [EXTRACTED]
+- [[json]] - `calls` [EXTRACTED]
+- [[props_for()]] - `calls` [EXTRACTED]
+- [[render_full.py]] - `contains` [EXTRACTED]
+- [[shutil]] - `calls` [EXTRACTED]
+- [[subprocess]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/code_custom_scenes
+#graphify/code #graphify/EXTRACTED #community/shutil

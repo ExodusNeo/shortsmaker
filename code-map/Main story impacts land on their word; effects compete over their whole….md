@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/audio_mix.py"
 type: "rationale"
-community: "audio_mix.py"
+community: "sfx_events"
 location: "L378"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/audio_mixpy
+  - community/sfx_events
 ---
 
 # Main story impacts land on their word; effects compete over their whole…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[schedule_sounds()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/audio_mixpy
+#graphify/rationale #graphify/EXTRACTED #community/sfx_events

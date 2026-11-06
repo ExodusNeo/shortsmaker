@@ -1,33 +1,62 @@
 ---
 type: community
-members: 20
+members: 49
 ---
 
 # main
 
-**Members:** 20 nodes
+**Members:** 49 nodes
 
 ## Members
-- [[Ask for a number 1..n (Enter = default, when there is one).]] - rationale - shortsmaker/channel_profiles.py
+- [[Ask which channel this batch is for (Enter = the one used last time), or set up…]] - rationale - shortsmaker/channel_profiles.py
+- [[Atomic progress records for unfinished Shorts; no executable serialized state.]] - rationale - shortsmaker/checkpoints.py
+- [[Create this channel's profile the owner's niche (or one Claude picks), with…]] - rationale - shortsmaker/channel_profiles.py
+- [[Draft channelsname.rules.md for a new channel the AI copies the sections of…]] - rationale - shortsmaker/rules.py
+- [[Exception_1]] - code
 - [[Make ready-to-upload YouTube Shorts with no API keys. Claude Code (headless)…]] - rationale - make_shorts.py
-- [[Select the writer and editor, shared by run.bat and fix.bat.]] - rationale - shortsmaker/channel_profiles.py
-- [[Three solo choices and every ordered writereditor pairing; Enter preserves the…]] - rationale - shortsmaker/channel_profiles.py
-- [[ask_brain()]] - code - shortsmaker/channel_profiles.py
+- [[Path_8]] - code
+- [[Path_9]] - code
+- [[Path_10]] - code
+- [[Topics of this channel's unfinished Shorts not in done_topics yet, but already…]] - rationale - shortsmaker/checkpoints.py
+- [[Write via a temp file, so an interrupted run never leaves a half-written file…]] - rationale - shortsmaker/media_tools.py
 - [[ask_count()]] - code - shortsmaker/channel_profiles.py
-- [[ask_number()]] - code - shortsmaker/channel_profiles.py
 - [[ask_yes()]] - code - shortsmaker/channel_profiles.py
-- [[command()]] - code - shortsmaker/retention.py
-- [[configure_brain()]] - code - shortsmaker/channel_profiles.py
-- [[main()_1]] - code - shortsmaker/cli.py
+- [[base64]] - concept
+- [[begin()]] - code - shortsmaker/checkpoints.py
+- [[checkpoints.py]] - code - shortsmaker/checkpoints.py
+- [[context()]] - code - shortsmaker/checkpoints.py
+- [[draft_rules()]] - code - shortsmaker/rules.py
+- [[finish_short()]] - code - shortsmaker/cli.py
+- [[fix.bat re-render a recent Short with one scene changed, keeping its pictures,…]] - rationale - shortsmaker/cli.py
+- [[fix scene i shows scene k's picture. A real photofilm is a picture choice; an…]] - rationale - shortsmaker/cli.py
+- [[fix_short()]] - code - shortsmaker/cli.py
+- [[load_channel()]] - code - shortsmaker/channel_profiles.py
+- [[load_rules, but a channel with no rules file yet (a failed draft, a profile…]] - rationale - shortsmaker/rules.py
+- [[load_state()]] - code - shortsmaker/short_render.py
+- [[main()_3]] - code - shortsmaker/cli.py
 - [[make_shorts.py]] - code - make_shorts.py
-- [[normalize_brain()]] - code - shortsmaker/channel_profiles.py
-- [[render()_1]] - code - tests/test_blender_run.py
-- [[retention.bat, or make_shorts.py retention Short folder screenshot AI…]] - rationale - shortsmaker/retention.py
-- [[test_a_stopped_run_keeps_the_default_channel()]] - code - tests/test_rules.py
-- [[test_batch_uses_selected_codex_writer_and_migrates_saved_aliases()]] - code - tests/test_ai_modes.py
+- [[new_channel()]] - code - shortsmaker/channel_profiles.py
+- [[pack()]] - code - shortsmaker/checkpoints.py
+- [[pending()]] - code - shortsmaker/checkpoints.py
+- [[pending_topics()]] - code - shortsmaker/checkpoints.py
+- [[pick_channel()]] - code - shortsmaker/channel_profiles.py
+- [[prune_work()]] - code - shortsmaker/short_render.py
+- [[read()]] - code - shortsmaker/checkpoints.py
+- [[record_failure()]] - code - shortsmaker/cli.py
+- [[render()]] - code - tests/test_blender_run.py
+- [[require_rules()]] - code - shortsmaker/rules.py
+- [[resume_runs()]] - code - shortsmaker/cli.py
+- [[save_channel()]] - code - shortsmaker/channel_profiles.py
+- [[save_context()]] - code - shortsmaker/checkpoints.py
 - [[test_blender_failure_is_reported_and_the_batch_goes_on()]] - code - tests/test_blender_run.py
-- [[test_codex_cold_reader_and_quota_fallback_never_call_claude()]] - code - tests/test_codex.py
-- [[test_solo_brain_selection_options()]] - code - tests/test_package.py
+- [[test_fix_bat_explains_a_drawn_short()]] - code - tests/test_blender_run.py
+- [[test_paint_new_clears_full()]] - code - tests/test_full_scenes.py
+- [[test_state_roundtrip_full_pics()]] - code - tests/test_full_scenes.py
+- [[unpack()]] - code - shortsmaker/checkpoints.py
+- [[update()]] - code - shortsmaker/checkpoints.py
+- [[use_channel()]] - code - shortsmaker/channel_profiles.py
+- [[use_picture_from()]] - code - shortsmaker/cli.py
+- [[write_json()]] - code - shortsmaker/media_tools.py
 
 ## Live Query (requires Dataview plugin)
 
@@ -37,31 +66,36 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 10 edges to [[_COMMUNITY_pathlib]]
-- 7 edges to [[_COMMUNITY_resume_runs]]
-- 5 edges to [[_COMMUNITY_fix_short]]
-- 3 edges to [[_COMMUNITY_edit_scripts]]
-- 3 edges to [[_COMMUNITY_retention.py]]
-- 2 edges to [[_COMMUNITY_short_render.py]]
-- 2 edges to [[_COMMUNITY_save_candidate]]
-- 2 edges to [[_COMMUNITY_cold_read]]
-- 2 edges to [[_COMMUNITY_pick_channel]]
-- 1 edge to [[_COMMUNITY_vault_page]]
-- 1 edge to [[_COMMUNITY_run_draft]]
-- 1 edge to [[_COMMUNITY_write_scripts]]
-- 1 edge to [[_COMMUNITY_test_pictures_first.py]]
-- 1 edge to [[_COMMUNITY_render]]
-- 1 edge to [[_COMMUNITY_media_menu.py]]
-- 1 edge to [[_COMMUNITY_re]]
+- 23 edges to [[_COMMUNITY_test_full_scenes.py]]
+- 23 edges to [[_COMMUNITY_pathlib]]
+- 14 edges to [[_COMMUNITY_json]]
+- 6 edges to [[_COMMUNITY_re]]
+- 6 edges to [[_COMMUNITY_test_rules.py]]
+- 5 edges to [[_COMMUNITY_render]]
+- 4 edges to [[_COMMUNITY_test_pictures_first.py]]
+- 4 edges to [[_COMMUNITY_test_ai_modes.py]]
+- 3 edges to [[_COMMUNITY_write_scripts]]
+- 3 edges to [[_COMMUNITY_apply_review_fixes]]
+- 3 edges to [[_COMMUNITY_shutil]]
+- 2 edges to [[_COMMUNITY_drawn_opener.py]]
+- 2 edges to [[_COMMUNITY_finish_render]]
+- 2 edges to [[_COMMUNITY_footage.py]]
+- 2 edges to [[_COMMUNITY_ask_ai]]
+- 2 edges to [[_COMMUNITY_media_command]]
+- 2 edges to [[_COMMUNITY_audio_library.py]]
+- 2 edges to [[_COMMUNITY_extra_sources.py]]
+- 2 edges to [[_COMMUNITY_prepare_topic]]
+- 1 edge to [[_COMMUNITY_first_sentence]]
+- 1 edge to [[_COMMUNITY_choose_images]]
+- 1 edge to [[_COMMUNITY_rewrite_paint_prompts]]
+- 1 edge to [[_COMMUNITY_rescue_graphics]]
 - 1 edge to [[_COMMUNITY_style_library]]
-- 1 edge to [[_COMMUNITY_json]]
-- 1 edge to [[_COMMUNITY_test_blender_run.py]]
-- 1 edge to [[_COMMUNITY_ask_ai]]
-- 1 edge to [[_COMMUNITY_test_rules.py]]
+- 1 edge to [[_COMMUNITY_ffmpeg]]
+- 1 edge to [[_COMMUNITY_test_drawn_opener.py]]
 
 ## Top bridge nodes
-- [[main()_1]] - degree 32, connects to 14 communities
-- [[configure_brain()]] - degree 11, connects to 5 communities
-- [[ask_number()]] - degree 6, connects to 3 communities
-- [[command()]] - degree 11, connects to 2 communities
-- [[ask_yes()]] - degree 4, connects to 2 communities
+- [[main()_3]] - degree 32, connects to 12 communities
+- [[write_json()]] - degree 21, connects to 10 communities
+- [[fix_short()]] - degree 20, connects to 9 communities
+- [[resume_runs()]] - degree 17, connects to 5 communities
+- [[pick_channel()]] - degree 10, connects to 5 communities

@@ -1,22 +1,22 @@
 ---
 source_file: "shortsmaker/voice_cache.py"
 type: "code"
-community: "hashlib"
+community: "footage.py"
 location: "L20"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/hashlib
+  - community/footagepy
 ---
 
 # load()
 
 ## Connections
-- [[Path_29]] - `references` [EXTRACTED]
+- [[Path_5]] - `references` [EXTRACTED]
 - [[hashlib]] - `calls` [EXTRACTED]
 - [[json]] - `calls` [EXTRACTED]
-- [[render()]] - `calls` [EXTRACTED]
+- [[render()_2]] - `calls` [EXTRACTED]
 - [[signature()]] - `calls` [EXTRACTED]
 - [[voice_cache.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/hashlib
+#graphify/code #graphify/EXTRACTED #community/footagepy

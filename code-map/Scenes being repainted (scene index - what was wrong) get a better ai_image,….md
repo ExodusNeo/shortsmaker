@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/review.py"
 type: "rationale"
-community: "finish_render"
+community: "rewrite_paint_prompts"
 location: "L552"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/finish_render
+  - community/rewrite_paint_prompts
 ---
 
 # Scenes being repainted (scene index -> what was wrong) get a better ai_image,…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[rewrite_paint_prompts()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/finish_render
+#graphify/rationale #graphify/EXTRACTED #community/rewrite_paint_prompts

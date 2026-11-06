@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/drawn_opener.py"
 type: "code"
-community: "opener_crew.py"
+community: "drawn_opener.py"
 location: "L133"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/opener_crewpy
+  - community/drawn_openerpy
 ---
 
 # minutes()
@@ -19,4 +19,4 @@ tags:
 - [[plan()]] - `calls` [EXTRACTED]
 - [[time]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/opener_crewpy
+#graphify/code #graphify/EXTRACTED #community/drawn_openerpy

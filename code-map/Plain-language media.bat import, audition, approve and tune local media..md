@@ -1,12 +1,12 @@
 ---
 source_file: "shortsmaker/media_menu.py"
 type: "rationale"
-community: "media_menu.py"
+community: "re"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/media_menupy
+  - community/re
 ---
 
 # Plain-language media.bat: import, audition, approve and tune local media.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[media_menu.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/media_menupy
+#graphify/rationale #graphify/EXTRACTED #community/re

@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_opener3d.py"
 type: "code"
-community: "opener3d.py"
+community: "test_opener3d.py"
 location: "L50"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/opener3dpy
+  - community/test_opener3dpy
 ---
 
 # test_named_shots_change_size_and_scale_with_the_target()
@@ -17,4 +17,4 @@ tags:
 - [[room()]] - `calls` [EXTRACTED]
 - [[test_opener3d.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/opener3dpy
+#graphify/code #graphify/EXTRACTED #community/test_opener3dpy

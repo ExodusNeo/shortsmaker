@@ -1,23 +1,23 @@
 ---
 source_file: "shortsmaker/style_lab.py"
 type: "code"
-community: "save_candidate"
+community: "shutil"
 location: "L244"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/save_candidate
+  - community/shutil
 ---
 
 # save_candidate()
 
 ## Connections
-- [[Path_23]] - `references` [EXTRACTED]
+- [[Path_21]] - `references` [EXTRACTED]
 - [[Saves an invention that made it into a finished Short as a candidate for the…]] - `rationale_for` [EXTRACTED]
 - [[candidate_in()]] - `calls` [EXTRACTED]
 - [[json]] - `calls` [EXTRACTED]
 - [[re]] - `calls` [EXTRACTED]
-- [[render()]] - `calls` [EXTRACTED]
+- [[render()_2]] - `calls` [EXTRACTED]
 - [[shutil]] - `calls` [EXTRACTED]
 - [[style_lab.py]] - `contains` [EXTRACTED]
 - [[style_library()]] - `calls` [EXTRACTED]
@@ -25,4 +25,4 @@ tags:
 - [[test_save_candidate_unique_slug()]] - `calls` [EXTRACTED]
 - [[time]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/save_candidate
+#graphify/code #graphify/EXTRACTED #community/shutil

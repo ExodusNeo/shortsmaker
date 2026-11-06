@@ -1,22 +1,22 @@
 ---
 source_file: "shortsmaker/config.py"
 type: "code"
-community: "short_render.py"
+community: "pathlib"
 location: "L70"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/short_renderpy
+  - community/pathlib
 ---
 
 # hex_rgb()
 
 ## Connections
 - [[config.py]] - `contains` [EXTRACTED]
-- [[luminance()]] - `calls` [EXTRACTED]
+- [[luminance()_1]] - `calls` [EXTRACTED]
 - [[make_paper()]] - `calls` [EXTRACTED]
 - [[remotion_render.py]] - `imports` [EXTRACTED]
-- [[render()]] - `calls` [EXTRACTED]
+- [[render()_2]] - `calls` [EXTRACTED]
 - [[short_render.py]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/short_renderpy
+#graphify/code #graphify/EXTRACTED #community/pathlib
