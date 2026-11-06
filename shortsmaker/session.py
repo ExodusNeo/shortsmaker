@@ -26,3 +26,4 @@ SHORT_FORM = False  # run.bat question: shorter Shorts (at most ~30 s instead of
 
 
 VEO_HANDOFF = False  # run.bat question: the owner makes the AI clips in Google Flow (Veo, AI Pro credits)
+OPENER_CHECK = False  # run.bat question: the owner scores each opener draft (drawn_opener.owner_check)

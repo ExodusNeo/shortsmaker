@@ -51,6 +51,31 @@ def fake_ai(replies, prompts, blind=blind_ok):
     return lambda prompt, **k: blind(prompt) or prompts.append(prompt) or next(it)
 
 
+def test_owner_score_replaces_the_ai():
+    """Owner, 2026-11-07: on "check the openers yourself" runs their score replaces the AI's both ways."""
+    import builtins
+    saved = llm.ask_ai, builtins.input, drawn_opener.os.startfile, sys.stdin
+    llm.ask_ai = lambda prompt, **k: blind_ok(prompt) or {"score": 9, "problems": []}
+    drawn_opener.os.startfile = lambda p: None
+    sys.stdin = type("Tty", (), {"isatty": lambda self: True})()
+    answers = []
+    builtins.input = lambda q="": answers.pop(0)
+    session.OPENER_CHECK = True
+    try:
+        s, sheet = short(), Path("sheet") / "sheet1.png"
+        answers[:] = ["3", "the pig reads as a loaf"]  # the AI liked it, the owner didn't
+        assert drawn_opener.review(s, {"moment": "m"}, sheet, 2.0) == (3.0, ["the pig reads as a loaf"])
+        answers[:] = ["8"]  # the owner passes it: the final review may not send it back
+        assert drawn_opener.review(s, {"moment": "m"}, sheet, 2.0) == (8.0, []) and s["opener_owner_score"] == 8
+        answers[:] = [""]  # Enter: the AI's verdict stands
+        assert drawn_opener.review(s, {"moment": "m"}, sheet, 2.0)[0] == 9 and "opener_owner_score" not in s
+        assert drawn_opener.review(s, {"moment": "m"}, sheet, 2.0, i=1)[0] == 9  # a reveal: AI only, no question
+        assert not answers
+    finally:
+        llm.ask_ai, builtins.input, drawn_opener.os.startfile, sys.stdin = saved
+        session.OPENER_CHECK = False
+
+
 def test_sound_off_test_fails_a_draft_the_art_director_liked():
     """Owner, 2026-11-06: a Carrington opener couldn't be understood without the captions. A stranger told nothing of
     the story describes the frames; when that misses the strange thing, the draft can neither pass nor be kept."""

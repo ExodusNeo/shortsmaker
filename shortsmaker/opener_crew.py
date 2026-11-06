@@ -724,7 +724,7 @@ def plan(short: dict, words: list, seconds: float, folder: Path, repair: str | N
                 preview = opener3d.sheet(folder / "opener.mp4", seconds, folder / f"sheet3d{attempt + 1}.png", stage_["shots"], folder / "cutouts")
                 needs = f" It must show: {', '.join(stage_['needs'])}." if stage_["needs"] else ""
                 score, problems = drawn_opener.review(short, {"moment": stage_["moment"] + needs}, preview, seconds,
-                                                      pairs=True, owners=owners)
+                                                      pairs=True, owners=owners, clip=folder / "opener.mp4")
                 reviewed = True
                 if score is None:
                     score, stage_["unreviewed"] = drawn_opener.PASS, True

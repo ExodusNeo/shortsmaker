@@ -10,3 +10,5 @@ you change something (current state here, the story there).
 - **Blender openers and people** (`blender/*.py`, people clips, props, looks): load the Blender skills first,
   `blender-core` then the specialist one for the job. See the agent rule in HANDOFF.md's "Owner's standing rules" and "Openers".
   Check every change by eye before calling it done.
+- **3D openers** (`remotion/src/Opener3D.tsx`, `@remotion/three`): load `remotion-best-practices` (its 3D rule) and the
+  matching `threejs-*` skill from `.claude/skills` first.

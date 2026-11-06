@@ -56,7 +56,8 @@ def begin(folder: Path, short: dict, mode: str) -> None:
         raise RuntimeError(f"Unfinished work already exists: {folder}. Use resume instead.")
     media_tools.write_json(path, pack({"stage": "scripted", "short": short, "mode": mode,
                                      "brain": session.BRAIN, "partner": session.PARTNER,
-                                     "short_form": session.SHORT_FORM, "veo": session.VEO_HANDOFF}))
+                                     "short_form": session.SHORT_FORM, "veo": session.VEO_HANDOFF,
+                                     "opener_check": session.OPENER_CHECK}))
 
 
 def update(work: Path, stage: str, short: dict | None = None, error: str | None = None) -> None:

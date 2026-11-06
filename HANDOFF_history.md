@@ -1983,3 +1983,9 @@ the narration.
   door, grocer cut off) -> things that touch go in ONE cut-out (kit `reach`), shots may aim at a list of names (the
   camera backs off to fit them all); McLean then passed on draft 2. Clips: `test_renders/opener3d/`. A failing 3D
   attempt costs 3 drafts + reviews before the drawn opener starts.
+
+## 2026-11-07: owner opener check, Remotion/three.js skills
+Owner: "the ai that judges the short sometimes is stupid ... sometimes good openers are bad and sometimes bad
+openers are good so add a human check (me)". Added run.bat's "Check the openers yourself?" (`drawn_opener.owner_check`):
+the owner's 1-10 score replaces the AI's for every 3D and drawn opener draft. Installed project skills
+remotion-best-practices + six cloudai-x threejs-* skills for 3D opener work; Opener3D.tsx already met the Remotion 3D rules.

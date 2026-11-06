@@ -9,9 +9,11 @@ example in anything the AI reads (owner: they are already posted)."""
 
 import hashlib
 import json
+import os
 import re
 import shutil
 import subprocess
+import sys
 import time
 from pathlib import Path
 
@@ -212,7 +214,41 @@ Reply with ONLY JSON: {{"moment": "one sentence: what the animation shows", "cod
 
 
 def review(short: dict, plan: dict, sheet: Path, seconds: float, i: int = 0, pairs: bool = False,
-           owners: dict[str, str] | None = None) -> tuple[float | None, list[str]]:
+           owners: dict[str, str] | None = None, clip: Path | None = None) -> tuple[float | None, list[str]]:
+    """The AI's verdict (ai_review); on "check the openers yourself" runs the owner then watches the opener draft
+    (`clip`, else the sheet) and their score replaces it (owner, 2026-11-07: the AI judge failed good openers and
+    passed bad ones). Reveals (`i` > 0) stay with the AI."""
+    score, found = ai_review(short, plan, sheet, seconds, i, pairs, owners)
+    if i or not session.OPENER_CHECK or not sys.stdin.isatty():
+        return score, found
+    return owner_check(short, clip if clip and clip.exists() else sheet, score, found)
+
+
+def owner_check(short: dict, show: Path, score: float | None, found: list[str]) -> tuple[float | None, list[str]]:
+    """Opens the draft and asks the owner for a score. Enter = the AI's verdict stands. An owner score at PASS or
+    above is also remembered so the final review can't send that opener back (review.drawn_answer_problem)."""
+    try:
+        os.startfile(show)  # Windows: the default video player / image viewer
+    except OSError:
+        pass
+    ai = f"{score:g}/10" if score is not None else "no score (the AI didn't answer)"
+    print(f"\n  >> Opener draft to check: {show}\n     The AI gave it {ai}" +(": " + "; ".join(found)[:500] if found else ""))
+    while True:
+        ans = input(f"     Your score 1-10 ({PASS} or more = use it), or Enter to go with the AI: ").strip()
+        if not ans:
+            short.pop("opener_owner_score", None)
+            return score, found
+        if ans.isdigit() and 1 <= int(ans) <= 10:
+            break
+    mine = short["opener_owner_score"] = float(ans)
+    if mine >= PASS:
+        return mine, []
+    why = input("     What's wrong with it? (Enter = use the AI's list): ").strip()
+    return mine, [why] if why else (found or ["the owner scored it low without saying why"])
+
+
+def ai_review(short: dict, plan: dict, sheet: Path, seconds: float, i: int = 0, pairs: bool = False,
+              owners: dict[str, str] | None = None) -> tuple[float | None, list[str]]:
     """The art director's score (1-10) of a draft's preview sheet and what to fix. None = no verdict (a failed call):
     make_opener keeps the draft and the final check says it was never judged. `i` > 0: the scene is the reveal.
     `pairs`: the sheet has a second row 0.2 s after the first (opener3d.sheet). `owners` ({tag: what that crew

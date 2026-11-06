@@ -13,7 +13,7 @@ from pathlib import Path
 from PIL import Image, ImageDraw, ImageFont
 
 from shortsmaker import (
-    footage, gpu, image_sources, llm, media_tools, motion, opening_rules, picker, picture_pool, plan_rules, remotion_render, session, short_render,
+    drawn_opener, footage, gpu, image_sources, llm, media_tools, motion, opening_rules, picker, picture_pool, plan_rules, remotion_render, session, short_render,
     writing,
 )
 from shortsmaker.config import FONT, GRAPHIC_STYLES
@@ -378,7 +378,8 @@ DRAWN_ANSWER_FIXES = 1  # a final-render spoiler finding can send a drawn opener
 
 def drawn_answer_problem(short: dict) -> str | None:
     if (short.get("opener_used") and short.get("drawn") and short.get("opening_answer_reveal")
-            and short.get("drawn_answer_fixes", 0) < DRAWN_ANSWER_FIXES):
+            and short.get("drawn_answer_fixes", 0) < DRAWN_ANSWER_FIXES
+            and short.get("opener_owner_score", 0) < drawn_opener.PASS):  # the owner passed it: their call stands
         return short["opening_answer_reveal"]
     return None
 

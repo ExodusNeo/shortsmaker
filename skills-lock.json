@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "skills": {
+    "remotion-best-practices": {
+      "source": "remotion-dev/skills",
+      "sourceType": "github",
+      "skillPath": "skills/remotion-best-practices/SKILL.md",
+      "computedHash": "9a4c0a0f9e3cc4613cbe351bb6be48568eb1cca0b06995aeae9e91292102aa16"
+    },
+    "threejs-animation": {
+      "source": "cloudai-x/threejs-skills",
+      "sourceType": "github",
+      "skillPath": "skills/threejs-animation/SKILL.md",
+      "computedHash": "cb27ed7b9ef4eb1f1f45a616b776f1f3390edd9ea17f9ddbde26b4f621f2d2ae"
+    },
+    "threejs-fundamentals": {
+      "source": "cloudai-x/threejs-skills",
+      "sourceType": "github",
+      "skillPath": "skills/threejs-fundamentals/SKILL.md",
+      "computedHash": "01b18e381a820a257d2a2ecdaedac3ec36e8f2cac87810e8cc1b42800e3d2bb3"
+    },
+    "threejs-geometry": {
+      "source": "cloudai-x/threejs-skills",
+      "sourceType": "github",
+      "skillPath": "skills/threejs-geometry/SKILL.md",
+      "computedHash": "67e6fa98e6c951e164f2e17df73cd5cfc53fc655693b4cef006d67a1f5edffe6"
+    },
+    "threejs-lighting": {
+      "source": "cloudai-x/threejs-skills",
+      "sourceType": "github",
+      "skillPath": "skills/threejs-lighting/SKILL.md",
+      "computedHash": "566dd1ef94b4881141153f6a7e9ce1a46c643819f2975b520f0a4ad4d8cdf0ba"
+    },
+    "threejs-materials": {
+      "source": "cloudai-x/threejs-skills",
+      "sourceType": "github",
+      "skillPath": "skills/threejs-materials/SKILL.md",
+      "computedHash": "7ec26e865fc849bb5e454b80b19296ba34d8e915539fb100971570da31270c96"
+    },
+    "threejs-react-three-fiber": {
+      "source": "cloudai-x/threejs-skills",
+      "sourceType": "github",
+      "skillPath": "skills/threejs-react-three-fiber/SKILL.md",
+      "computedHash": "1eb7de8f600b96e2bbefe0d2a9fdce45b60e5811b165e384d853ad9b6a0c5f70"
+    }
+  }
+}

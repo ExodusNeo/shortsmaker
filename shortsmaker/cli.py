@@ -52,6 +52,10 @@ def main() -> None:
     if len(sys.argv) < 2:  # run.bat: ask; scripted runs never pause
         session.SHORT_FORM = channel_profiles.ask_yes("Make shorter Shorts, at most about 30 seconds instead of 50?", ch.get("short_form", False))
         ch["short_form"] = session.SHORT_FORM
+        if session.RULE_SETTINGS.get("opener") == "animated":
+            session.OPENER_CHECK = channel_profiles.ask_yes("Check the openers yourself? Each opener draft opens on screen and "
+                                                            "your score replaces the AI's", ch.get("opener_check", False))
+            ch["opener_check"] = session.OPENER_CHECK
     channel_profiles.configure_brain(choice)
     print(f"{session.BRAIN.capitalize()} writes and plans; "
           + ("solo editing and reviews." if session.SOLO else f"{session.PARTNER.capitalize()} edits and checks."))
@@ -155,6 +159,7 @@ def resume_runs(folder: Path | None = None) -> None:
             channel_profiles.configure_brain(job["mode"])
             session.BRAIN, session.PARTNER = job["brain"], job["partner"]
             session.SHORT_FORM, session.VEO_HANDOFF = job["short_form"], job["veo"]
+            session.OPENER_CHECK = job.get("opener_check", False)
             short = job["short"]
             print(f"Resuming {folder.name}: {job['stage']}")
             if job["stage"] == "scripted":

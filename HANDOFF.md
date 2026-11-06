@@ -44,6 +44,12 @@ everything (voice, paintings, video). Real archival/online pictures and film are
 - **Blender work** (`blender/*.py`, engineering-failures only): load the Blender skills first (`blender-core`, then
   the one for the job). The Blender openers, people and model library were removed 2026-10-30 (owner: the drawn and
   motion-graphic openers are more consistent); `git log -- shortsmaker/opener_render.py` has them.
+- **3D opener work** (`remotion/src/Opener3D.tsx`, `opener3d.py`, anything with `@remotion/three`): load the project
+  skills first: `remotion-best-practices` (its `remotion-markup/3d.md`: everything in `<ThreeCanvas>` with width/height,
+  animation only from `useCurrentFrame()`, never `useFrame()`, `<Sequence layout="none">` inside the canvas), then
+  the `threejs-*` one for the job (react-three-fiber, lighting, materials, animation, geometry, fundamentals).
+  Installed 2026-11-07 from remotion-dev/skills and cloudai-x/threejs-skills (`skills-lock.json`; `npx skills update`).
+  Opener3D.tsx already follows the Remotion rules (checked 2026-11-07).
 - Hardware: RTX 5060 8 GB, 32 GB RAM, Ryzen 7 5700X3D, Windows 11; Roblox, Wallpaper Engine, Discord and Chrome are
   often open (VRAM/RAM). Page file is only 2 GB.
 
@@ -266,6 +272,14 @@ Rules that keep it working:
 ## Openers (scene 1 of every Short on `opener: animated` channels)
 Order (owner, 2026-11-05): 3D opener -> drawn opener -> motion graphic (2 fixes) -> AI clip of the strangest moment
 (`use_opener`).
+- **The owner checks the openers** (owner, 2026-11-07: the AI judge failed good openers and passed bad ones):
+  run.bat asks "Check the openers yourself?" on `opener: animated` channels (saved as `opener_check` in the profile,
+  kept by resume; scripted runs never ask). When on, `drawn_opener.review` (used by the 3D crew and the drawn opener)
+  still gets the AI's verdict, then `owner_check` opens the draft (3D: the rendered `opener.mp4`; drawn: its 6-frame
+  sheet) and asks for a score 1-10: Enter = the AI's verdict stands; 7+ = use it; lower asks what's wrong (Enter = the
+  AI's list), which becomes the fix instructions. The owner's score replaces the AI's in PASS/KEEP/stop rules; a
+  passing owner score (`short["opener_owner_score"]`) also stops the final review's spoiler rewrite
+  (`review.drawn_answer_problem`). Reveals and the motion-graphic fallback stay AI-judged.
 - **Protect the unanswered question** (`opening_rules.py`, all channels): planning, hook text, picture selection,
   motion-graphic planning, drawn coding/review, clip starting-image rewrites and final opening review must withhold
   new answers saved for later narration. Check recognizable objects as well as labels, signs, diagrams and titles;
